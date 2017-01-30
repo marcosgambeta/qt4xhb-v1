@@ -1,2 +1,2 @@
 # Qt4xHb
-Qt Framework 4 for Harbour and xHarbour
+Bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
