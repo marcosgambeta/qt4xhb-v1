@@ -1,0 +1,40 @@
+/*
+
+  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+
+  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+
+*/
+
+#ifndef SLOTSQSQLTABLEMODEL_H
+#define SLOTSQSQLTABLEMODEL_H
+#include <QObject>
+#include <QCoreApplication>
+#include <QList>
+#include <QSqlTableModel>
+#include "hbapi.h"
+#include "hbapiitm.h"
+#include "hbvm.h"
+#include "hbstack.h"
+#ifndef __XHARBOUR__
+#include "hbapicls.h"
+#endif
+
+void QSqlTableModel_release_codeblocks ();
+class SlotsQSqlTableModel: public QObject
+{
+  Q_OBJECT
+  public:
+  SlotsQSqlTableModel(QObject *parent = 0);
+  ~SlotsQSqlTableModel();
+  QList<QObject*> list1;
+  QList<QString> list2;
+  QList<PHB_ITEM> list3;
+  QList<bool> list4;
+  public slots:
+  void beforeDelete ( int row );
+  void beforeInsert ( QSqlRecord & record );
+  void beforeUpdate ( int row, QSqlRecord & record );
+  void primeInsert ( int row, QSqlRecord & record );
+};
+#endif

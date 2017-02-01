@@ -1,0 +1,34 @@
+/*
+
+  Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+
+  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+
+*/
+
+#include "hbclass.ch"
+#include "qt4xhb_clsid.ch"
+
+
+REQUEST QERRORMESSAGE
+
+CLASS QErrorMessage INHERIT QDialog
+
+   DATA class_id INIT Class_Id_QErrorMessage
+   DATA self_destruction INIT .f.
+
+   METHOD new
+   METHOD delete
+   METHOD showMessage1
+   METHOD showMessage2
+   METHOD showMessage
+   METHOD qtHandler
+   DESTRUCTOR destroyObject
+
+END CLASS
+
+PROCEDURE destroyObject () CLASS QErrorMessage
+   IF ::self_destruction
+      ::delete()
+   ENDIF
+RETURN
