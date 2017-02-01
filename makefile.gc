@@ -1,0 +1,206 @@
+#
+# Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+#
+# Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+#
+# Makefile para compilação com Harbour/xHarbour e MinGW
+#
+
+# Atenção! A compilação do código-fonte do projeto Qt4xHb requer o SDK do Qt
+# Framework, que está disponível no site oficial do projeto.
+
+HB_BIN_DIR = $(HBDIR)/bin
+HB_INC_DIR = $(HBDIR)/include
+
+QT4XHB_INC_DIR = include
+QT4XHB_OBJ_DIR = obj
+QT4XHB_LIB_DIR = lib
+QT4XHB_SRC_DIR = source
+
+OBJEXT = .o
+LIBEXT = .a
+
+CFLAGS = -c -O2 -frtti -fexceptions -mthreads -Wall -DUNICODE -DQT_DLL -DQT_NO_DEBUG -DQT_THREAD_SUPPORT
+CFLAGS += -DQT_ACTIVEQT_LIB
+CFLAGS += -DQT_AXCONTAINER_LIB
+CFLAGS += -DQT_AXSERVER_LIB
+CFLAGS += -DQT_CORE_LIB
+CFLAGS += -DQT_DECLARATIVE_LIB
+CFLAGS += -DQT_DESIGNER_LIB
+CFLAGS += -DQT_GUI_LIB
+CFLAGS += -DQT_HELP_LIB
+CFLAGS += -DQT_MULTIMEDIA_LIB
+CFLAGS += -DQT_NETWORK_LIB
+CFLAGS += -DQT_OPENGL_LIB
+CFLAGS += -DQT_SCRIPT_LIB
+CFLAGS += -DQT_SCRIPTTOOLS_LIB
+CFLAGS += -DQT_SQL_LIB
+CFLAGS += -DQT_SVG_LIB
+CFLAGS += -DQT_TEST_LIB
+CFLAGS += -DQT_UITOOLS_LIB
+CFLAGS += -DQT_WEBKIT_LIB
+CFLAGS += -DQT_XML_LIB
+CFLAGS += -DQT_XMLPATTERNS_LIB
+
+CINCLUDES =
+CINCLUDES += -I$(QTDIR)/include
+CINCLUDES += -I$(QTDIR)/include/ActiveQt
+CINCLUDES += -I$(QTDIR)/include/Qt
+CINCLUDES += -I$(QTDIR)/include/QtCore
+CINCLUDES += -I$(QTDIR)/include/QtDeclarative
+CINCLUDES += -I$(QTDIR)/include/QtDesigner
+CINCLUDES += -I$(QTDIR)/include/QtGui
+CINCLUDES += -I$(QTDIR)/include/QtHelp
+CINCLUDES += -I$(QTDIR)/include/QtMultimedia
+CINCLUDES += -I$(QTDIR)/include/QtNetwork
+CINCLUDES += -I$(QTDIR)/include/QtOpenGL
+CINCLUDES += -I$(QTDIR)/include/QtScript
+CINCLUDES += -I$(QTDIR)/include/QtScriptTools
+CINCLUDES += -I$(QTDIR)/include/QtSql
+CINCLUDES += -I$(QTDIR)/include/QtSvg
+CINCLUDES += -I$(QTDIR)/include/QtTest
+CINCLUDES += -I$(QTDIR)/include/QtUiTools
+CINCLUDES += -I$(QTDIR)/include/QtWebKit
+CINCLUDES += -I$(QTDIR)/include/QtXml
+CINCLUDES += -I$(QTDIR)/include/QtXmlPatterns
+CINCLUDES += -I$(QT4XHB_INC_DIR)
+CINCLUDES += -I$(QT4XHB_SRC_DIR)
+CINCLUDES += -I$(HB_INC_DIR)
+
+OBJECTS = $(QT4XHB_OBJ_DIR)/events$(OBJEXT) \
+          $(QT4XHB_OBJ_DIR)/dummy$(OBJEXT) \
+          $(QT4XHB_OBJ_DIR)/version$(OBJEXT) \
+          $(QT4XHB_OBJ_DIR)/qt4xhb_utils$(OBJEXT) \
+          $(QT4XHB_OBJ_DIR)/habstractlistmodel$(OBJEXT) \
+          $(QT4XHB_OBJ_DIR)/habstractlistmodelMoc$(OBJEXT) \
+          $(QT4XHB_OBJ_DIR)/habstractlistmodelbin$(OBJEXT) \
+          $(QT4XHB_OBJ_DIR)/habstractlistmodelcls$(OBJEXT) \
+          $(QT4XHB_OBJ_DIR)/habstracttablemodel$(OBJEXT) \
+          $(QT4XHB_OBJ_DIR)/habstracttablemodelMoc$(OBJEXT) \
+          $(QT4XHB_OBJ_DIR)/habstracttablemodelbin$(OBJEXT) \
+          $(QT4XHB_OBJ_DIR)/habstracttablemodelcls$(OBJEXT)
+
+include mak/QAxContainer.mak
+include mak/QAxServer.mak
+include mak/QtCore.mak
+include mak/QtDeclarative.mak
+include mak/QtDesigner.mak
+include mak/QtGui.mak
+include mak/QtHelp.mak
+include mak/QtMultimedia.mak
+include mak/QtNetwork.mak
+include mak/QtOpenGL.mak
+include mak/QtScript.mak
+include mak/QtScriptTools.mak
+include mak/QtSql.mak
+include mak/QtSvg.mak
+include mak/QtTest.mak
+include mak/QtUiTools.mak
+include mak/QtWebKit.mak
+include mak/QtXml.mak
+include mak/QtXmlPatterns.mak
+
+all: \
+   $(QT4XHB_LIB_DIR)/libhbqaxcontainer4$(LIBEXT) \
+   $(QT4XHB_LIB_DIR)/libhbqaxserver4$(LIBEXT) \
+   $(QT4XHB_LIB_DIR)/libhbqtcore4$(LIBEXT) \
+   $(QT4XHB_LIB_DIR)/libhbqtdeclarative4$(LIBEXT) \
+   $(QT4XHB_LIB_DIR)/libhbqtdesigner4$(LIBEXT) \
+   $(QT4XHB_LIB_DIR)/libhbqtgui4$(LIBEXT) \
+   $(QT4XHB_LIB_DIR)/libhbqthelp4$(LIBEXT) \
+   $(QT4XHB_LIB_DIR)/libhbqtmultimedia4$(LIBEXT) \
+   $(QT4XHB_LIB_DIR)/libhbqtnetwork4$(LIBEXT) \
+   $(QT4XHB_LIB_DIR)/libhbqtopengl4$(LIBEXT) \
+   $(QT4XHB_LIB_DIR)/libhbqtscript4$(LIBEXT) \
+   $(QT4XHB_LIB_DIR)/libhbqtscripttools4$(LIBEXT) \
+   $(QT4XHB_LIB_DIR)/libhbqtsql4$(LIBEXT) \
+   $(QT4XHB_LIB_DIR)/libhbqtsvg4$(LIBEXT) \
+   $(QT4XHB_LIB_DIR)/libhbqttest4$(LIBEXT) \
+   $(QT4XHB_LIB_DIR)/libhbqtuitools4$(LIBEXT) \
+   $(QT4XHB_LIB_DIR)/libhbqtwebkit4$(LIBEXT) \
+   $(QT4XHB_LIB_DIR)/libhbqtxml4$(LIBEXT) \
+   $(QT4XHB_LIB_DIR)/libhbqtxmlpatterns4$(LIBEXT)
+
+$(QT4XHB_LIB_DIR)/libhbqaxcontainer4$(LIBEXT)        : $(OBJECTS_QAXCONTAINER)
+	ar rc $@ $^
+$(QT4XHB_LIB_DIR)/libhbqaxserver4$(LIBEXT)           : $(OBJECTS_QAXSERVER)
+	ar rc $@ $^
+$(QT4XHB_LIB_DIR)/libhbqtcore4$(LIBEXT)              : $(OBJECTS) $(OBJECTS_QTCORE)
+	ar rc $@ $^
+$(QT4XHB_LIB_DIR)/libhbqtdeclarative4$(LIBEXT)       : $(OBJECTS_QTDECLARATIVE)
+	ar rc $@ $^
+$(QT4XHB_LIB_DIR)/libhbqtdesigner4$(LIBEXT)          : $(OBJECTS_QTDESIGNER)
+	ar rc $@ $^
+$(QT4XHB_LIB_DIR)/libhbqtgui4$(LIBEXT)               : $(OBJECTS_QTGUI)
+	ar rc $@ $^
+$(QT4XHB_LIB_DIR)/libhbqthelp4$(LIBEXT)              : $(OBJECTS_QTHELP)
+	ar rc $@ $^
+$(QT4XHB_LIB_DIR)/libhbqtmultimedia4$(LIBEXT)        : $(OBJECTS_QTMULTIMEDIA)
+	ar rc $@ $^
+$(QT4XHB_LIB_DIR)/libhbqtnetwork4$(LIBEXT)           : $(OBJECTS_QTNETWORK)
+	ar rc $@ $^
+$(QT4XHB_LIB_DIR)/libhbqtopengl4$(LIBEXT)            : $(OBJECTS_QTOPENGL)
+	ar rc $@ $^
+$(QT4XHB_LIB_DIR)/libhbqtscript4$(LIBEXT)            : $(OBJECTS_QTSCRIPT)
+	ar rc $@ $^
+$(QT4XHB_LIB_DIR)/libhbqtscripttools4$(LIBEXT)       : $(OBJECTS_QTSCRIPTTOOLS)
+	ar rc $@ $^
+$(QT4XHB_LIB_DIR)/libhbqtsql4$(LIBEXT)               : $(OBJECTS_QTSQL)
+	ar rc $@ $^
+$(QT4XHB_LIB_DIR)/libhbqtsvg4$(LIBEXT)               : $(OBJECTS_QTSVG)
+	ar rc $@ $^
+$(QT4XHB_LIB_DIR)/libhbqttest4$(LIBEXT)              : $(OBJECTS_QTTEST)
+	ar rc $@ $^
+$(QT4XHB_LIB_DIR)/libhbqtuitools4$(LIBEXT)           : $(OBJECTS_QTUITOOLS)
+	ar rc $@ $^
+$(QT4XHB_LIB_DIR)/libhbqtwebkit4$(LIBEXT)            : $(OBJECTS_QTWEBKIT)
+	ar rc $@ $^
+$(QT4XHB_LIB_DIR)/libhbqtxml4$(LIBEXT)               : $(OBJECTS_QTXML)
+	ar rc $@ $^
+$(QT4XHB_LIB_DIR)/libhbqtxmlpatterns4$(LIBEXT)       : $(OBJECTS_QTXMLPATTERNS)
+	ar rc $@ $^
+
+.prg.c:
+	$(HB_BIN_DIR)/harbour $^ -n -w3 -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+
+.c.obj:
+	g++ $(CFLAGS) $(CINCLUDES) -o $@ $^
+
+.cpp.obj:
+	g++ $(CFLAGS) $(CINCLUDE) -o $@ $^
+
+$(QT4XHB_OBJ_DIR)/%.c : $(QT4XHB_SRC_DIR)/%.prg
+	$(HB_BIN_DIR)/harbour $^ -n -w3 -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+
+$(QT4XHB_OBJ_DIR)/%.o : $(QT4XHB_OBJ_DIR)/%.c
+	g++ $(CFLAGS) $(CINCLUDES) -o $@ $^
+
+$(QT4XHB_OBJ_DIR)/%.o : $(QT4XHB_SRC_DIR)/%.cpp
+	g++ $(CFLAGS) $(CINCLUDES) -o $@ $^
+
+$(QT4XHB_OBJ_DIR)/%.o : $(QT4XHB_OBJ_DIR)/%.cpp
+	g++ $(CFLAGS) $(CINCLUDES) -o $@ $^
+
+include mak/QAxContainerMocs.mak
+include mak/QAxServerMocs.mak
+include mak/QtCoreMocs.mak
+include mak/QtDeclarativeMocs.mak
+include mak/QtDesignerMocs.mak
+include mak/QtGuiMocs.mak
+include mak/QtHelpMocs.mak
+include mak/QtMultimediaMocs.mak
+include mak/QtNetworkMocs.mak
+include mak/QtOpenGLMocs.mak
+include mak/QtScriptMocs.mak
+include mak/QtScriptToolsMocs.mak
+include mak/QtSqlMocs.mak
+include mak/QtSvgMocs.mak
+include mak/QtUiToolsMocs.mak
+include mak/QtWebKitMocs.mak
+include mak/QtXmlMocs.mak
+include mak/QtXmlPatternsMocs.mak
+
+$(QT4XHB_OBJ_DIR)/habstracttablemodelMoc.cpp : $(QT4XHB_SRC_DIR)/habstracttablemodel.h
+	moc $^ -o $@
+$(QT4XHB_OBJ_DIR)/habstractlistmodelMoc.cpp  : $(QT4XHB_SRC_DIR)/habstractlistmodel.h
+	moc $^ -o $@
