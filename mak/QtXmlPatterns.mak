@@ -1,0 +1,35 @@
+# QtXmlPatterns
+OBJECTS_QTXMLPATTERNS = \
+   $(QT4XHB_OBJ_DIR)/QAbstractMessageHandler$(OBJEXT) \
+   $(QT4XHB_OBJ_DIR)/QAbstractMessageHandlerClass$(OBJEXT) \
+   $(QT4XHB_OBJ_DIR)/QAbstractUriResolver$(OBJEXT) \
+   $(QT4XHB_OBJ_DIR)/QAbstractUriResolverClass$(OBJEXT) \
+   $(QT4XHB_OBJ_DIR)/QAbstractXmlNodeModel$(OBJEXT) \
+   $(QT4XHB_OBJ_DIR)/QAbstractXmlNodeModelClass$(OBJEXT) \
+   $(QT4XHB_OBJ_DIR)/QAbstractXmlReceiver$(OBJEXT) \
+   $(QT4XHB_OBJ_DIR)/QAbstractXmlReceiverClass$(OBJEXT) \
+   $(QT4XHB_OBJ_DIR)/QSimpleXmlNodeModel$(OBJEXT) \
+   $(QT4XHB_OBJ_DIR)/QSimpleXmlNodeModelClass$(OBJEXT) \
+   $(QT4XHB_OBJ_DIR)/QSourceLocation$(OBJEXT) \
+   $(QT4XHB_OBJ_DIR)/QSourceLocationClass$(OBJEXT) \
+   $(QT4XHB_OBJ_DIR)/QXmlFormatter$(OBJEXT) \
+   $(QT4XHB_OBJ_DIR)/QXmlFormatterClass$(OBJEXT) \
+   $(QT4XHB_OBJ_DIR)/QXmlItem$(OBJEXT) \
+   $(QT4XHB_OBJ_DIR)/QXmlItemClass$(OBJEXT) \
+   $(QT4XHB_OBJ_DIR)/QXmlName$(OBJEXT) \
+   $(QT4XHB_OBJ_DIR)/QXmlNameClass$(OBJEXT) \
+   $(QT4XHB_OBJ_DIR)/QXmlNamePool$(OBJEXT) \
+   $(QT4XHB_OBJ_DIR)/QXmlNamePoolClass$(OBJEXT) \
+   $(QT4XHB_OBJ_DIR)/QXmlNodeModelIndex$(OBJEXT) \
+   $(QT4XHB_OBJ_DIR)/QXmlNodeModelIndexClass$(OBJEXT) \
+   $(QT4XHB_OBJ_DIR)/QXmlQuery$(OBJEXT) \
+   $(QT4XHB_OBJ_DIR)/QXmlQueryClass$(OBJEXT) \
+   $(QT4XHB_OBJ_DIR)/QXmlResultItems$(OBJEXT) \
+   $(QT4XHB_OBJ_DIR)/QXmlResultItemsClass$(OBJEXT) \
+   $(QT4XHB_OBJ_DIR)/QXmlSchema$(OBJEXT) \
+   $(QT4XHB_OBJ_DIR)/QXmlSchemaClass$(OBJEXT) \
+   $(QT4XHB_OBJ_DIR)/QXmlSchemaValidator$(OBJEXT) \
+   $(QT4XHB_OBJ_DIR)/QXmlSchemaValidatorClass$(OBJEXT) \
+   $(QT4XHB_OBJ_DIR)/QXmlSerializer$(OBJEXT) \
+   $(QT4XHB_OBJ_DIR)/QXmlSerializerClass$(OBJEXT) \
+
