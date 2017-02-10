@@ -171,13 +171,16 @@ $(QT4XHB_LIB_DIR)/libhbqtxmlpatterns4$(LIBEXT)       : $(OBJECTS_QTXMLPATTERNS)
 
 $(QT4XHB_OBJ_DIR)/%.c : $(QT4XHB_SRC_DIR)/%.prg
 	$(HB_BIN_DIR)/harbour $^ -n -w3 -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%.o : $(QT4XHB_SRC_DIR)/%.cpp
+	g++ $(CFLAGS) $(CINCLUDES) -o $@ $^
+# ActiveQt
+$(QT4XHB_OBJ_DIR)/%.c : $(QT4XHB_SRC_DIR)/ActiveQt/%.prg
+	$(HB_BIN_DIR)/harbour $^ -n -w3 -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%.o : $(QT4XHB_SRC_DIR)/ActiveQt/%.cpp
+	g++ $(CFLAGS) $(CINCLUDES) -o $@ $^
 
 $(QT4XHB_OBJ_DIR)/%.o : $(QT4XHB_OBJ_DIR)/%.c
 	g++ $(CFLAGS) $(CINCLUDES) -o $@ $^
-
-$(QT4XHB_OBJ_DIR)/%.o : $(QT4XHB_SRC_DIR)/%.cpp
-	g++ $(CFLAGS) $(CINCLUDES) -o $@ $^
-
 $(QT4XHB_OBJ_DIR)/%.o : $(QT4XHB_OBJ_DIR)/%.cpp
 	g++ $(CFLAGS) $(CINCLUDES) -o $@ $^
 

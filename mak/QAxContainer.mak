@@ -22,4 +22,3 @@ OBJECTS_QAXCONTAINER = \
    $(QT4XHB_OBJ_DIR)/QAxWidgetClass$(OBJEXT) \
    $(QT4XHB_OBJ_DIR)/QAxWidgetSlots$(OBJEXT) \
    $(QT4XHB_OBJ_DIR)/QAxWidgetSlotsMoc$(OBJEXT) \
-
