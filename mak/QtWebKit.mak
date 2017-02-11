@@ -1,4 +1,4 @@
-# QtWebkit
+# QtWebKit
 OBJECTS_QTWEBKIT = \
    $(QT4XHB_OBJ_DIR)/QGraphicsWebView$(OBJEXT) \
    $(QT4XHB_OBJ_DIR)/QGraphicsWebViewClass$(OBJEXT) \
@@ -38,4 +38,3 @@ OBJECTS_QTWEBKIT = \
    $(QT4XHB_OBJ_DIR)/QWebViewClass$(OBJEXT) \
    $(QT4XHB_OBJ_DIR)/QWebViewSlots$(OBJEXT) \
    $(QT4XHB_OBJ_DIR)/QWebViewSlotsMoc$(OBJEXT) \
-
