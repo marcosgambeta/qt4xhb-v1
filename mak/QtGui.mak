@@ -836,4 +836,3 @@ OBJECTS_QTGUI = \
    $(QT4XHB_OBJ_DIR)/QWorkspaceClass$(OBJEXT) \
    $(QT4XHB_OBJ_DIR)/QWorkspaceSlots$(OBJEXT) \
    $(QT4XHB_OBJ_DIR)/QWorkspaceSlotsMoc$(OBJEXT) \
-
