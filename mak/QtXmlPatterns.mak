@@ -32,4 +32,3 @@ OBJECTS_QTXMLPATTERNS = \
    $(QT4XHB_OBJ_DIR)/QXmlSchemaValidatorClass$(OBJEXT) \
    $(QT4XHB_OBJ_DIR)/QXmlSerializer$(OBJEXT) \
    $(QT4XHB_OBJ_DIR)/QXmlSerializerClass$(OBJEXT) \
-
