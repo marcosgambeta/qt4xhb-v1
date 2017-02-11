@@ -1,3 +1,2 @@
-$(QT4XHB_OBJ_DIR)/QScriptEngineSlotsMoc.cpp : $(QT4XHB_SRC_DIR)/QScriptEngineSlots.h
+$(QT4XHB_OBJ_DIR)/QScriptEngineSlotsMoc.cpp : $(QT4XHB_SRC_DIR)/QtScript/QScriptEngineSlots.h
 	moc $^ -o $@
-

@@ -28,4 +28,3 @@ OBJECTS_QTSCRIPT = \
    $(QT4XHB_OBJ_DIR)/QScriptValueIteratorClass$(OBJEXT) \
    $(QT4XHB_OBJ_DIR)/QScriptable$(OBJEXT) \
    $(QT4XHB_OBJ_DIR)/QScriptableClass$(OBJEXT) \
-

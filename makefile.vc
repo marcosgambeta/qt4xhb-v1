@@ -218,6 +218,11 @@ $(QT4XHB_OBJ_DIR)/%.c : $(QT4XHB_SRC_DIR)/QtOpenGL/%.prg
 	$(HB_BIN_DIR)/harbour $^ -n -w -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
 $(QT4XHB_OBJ_DIR)/%.obj : $(QT4XHB_SRC_DIR)/QtOpenGL/%.cpp
 	cl $(CFLAGS) $(CINCLUDES) -Fo$@ $^
+# QtScript
+$(QT4XHB_OBJ_DIR)/%.c : $(QT4XHB_SRC_DIR)/QtScript/%.prg
+	$(HB_BIN_DIR)/harbour $^ -n -w -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%.obj : $(QT4XHB_SRC_DIR)/QtScript/%.cpp
+	cl $(CFLAGS) $(CINCLUDES) -Fo$@ $^
 
 $(QT4XHB_OBJ_DIR)/%.obj : $(QT4XHB_OBJ_DIR)/%.c
 	cl $(CFLAGS) $(CINCLUDES) -Fo$@ $^
