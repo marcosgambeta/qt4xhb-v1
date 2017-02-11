@@ -278,4 +278,3 @@ OBJECTS_QTCORE = \
    $(QT4XHB_OBJ_DIR)/QXmlStreamReaderClass$(OBJEXT) \
    $(QT4XHB_OBJ_DIR)/QXmlStreamWriter$(OBJEXT) \
    $(QT4XHB_OBJ_DIR)/QXmlStreamWriterClass$(OBJEXT) \
-
