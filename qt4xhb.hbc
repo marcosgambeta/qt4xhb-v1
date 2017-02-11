@@ -1,0 +1,74 @@
+#
+# Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
+#
+# Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+#
+# Arquivo de configuração para Qt4xHb e HBMK2
+#
+
+description=Qt4xHb
+
+# pasta include do Qt4xHb
+{allwin}incpaths=${QT4XHB_INC_DIR}
+
+# pasta lib do Qt4xHb
+{allwin}libpaths=${QT4XHB_LIB_DIR}
+
+# bibliotecas do Qt4xHb
+{allwin}libs=hbqaxcontainer4
+{allwin}libs=hbqaxserver4
+{allwin}libs=hbqtcore4
+{allwin}libs=hbqtdeclarative4
+{allwin}libs=hbqtdesigner4
+{allwin}libs=hbqtgui4
+{allwin}libs=hbqthelp4
+{allwin}libs=hbqtmultimedia4
+{allwin}libs=hbqtnetwork4
+{allwin}libs=hbqtopengl4
+{allwin}libs=hbqtscript4
+{allwin}libs=hbqtscripttools4
+{allwin}libs=hbqtsql4
+{allwin}libs=hbqtsvg4
+{allwin}libs=hbqttest4
+{allwin}libs=hbqtuitools4
+{allwin}libs=hbqtwebkit4
+{allwin}libs=hbqtxml4
+{allwin}libs=hbqtxmlpatterns4
+
+# pasta include do Qt Framework
+{allwin}incpaths=${QTDIR}/include
+
+# pasta lib do Qt Framework
+{allwin}libpaths=${QTDIR}/lib
+
+# bibliotecas do Qt Framework
+{allwin}libs=phonon4
+{allwin}libs=QAxContainer
+{allwin}libs=QAxServer
+{allwin}libs=Qt3Support4
+{allwin}libs=QtCLucene4
+{allwin}libs=QtCore4
+{allwin}libs=QtDeclarative4
+{allwin}libs=QtDesigner4
+{allwin}libs=QtDesignerComponents4
+{allwin}libs=QtGui4
+{allwin}libs=QtHelp4
+{allwin}libs=qtmain
+{allwin}libs=QtMultimedia4
+{allwin}libs=QtNetwork4
+{allwin}libs=QtOpenGL4
+{allwin}libs=QtScript4
+{allwin}libs=QtScriptTools4
+{allwin}libs=QtSql4
+{allwin}libs=QtSvg4
+{allwin}libs=QtTest4
+{allwin}libs=QtUiTools
+{allwin}libs=QtWebKit4
+{allwin}libs=QtXml4
+{allwin}libs=QtXmlPatterns4
+
+# outros parâmetros
+cpp=yes
+gui=yes
+
+{msvc}ldflags=/NODEFAULTLIB:msvcrt.lib
