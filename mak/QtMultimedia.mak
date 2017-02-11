@@ -22,4 +22,3 @@ OBJECTS_QTMULTIMEDIA = \
    $(QT4XHB_OBJ_DIR)/QVideoFrameClass$(OBJEXT) \
    $(QT4XHB_OBJ_DIR)/QVideoSurfaceFormat$(OBJEXT) \
    $(QT4XHB_OBJ_DIR)/QVideoSurfaceFormatClass$(OBJEXT) \
-

@@ -203,6 +203,11 @@ $(QT4XHB_OBJ_DIR)/%.c : $(QT4XHB_SRC_DIR)/QtHelp/%.prg
 	$(HB_BIN_DIR)/harbour $^ -n -w -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
 $(QT4XHB_OBJ_DIR)/%.obj : $(QT4XHB_SRC_DIR)/QtHelp/%.cpp
 	cl $(CFLAGS) $(CINCLUDES) -Fo$@ $^
+# QtMultimedia
+$(QT4XHB_OBJ_DIR)/%.c : $(QT4XHB_SRC_DIR)/QtMultimedia/%.prg
+	$(HB_BIN_DIR)/harbour $^ -n -w -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%.obj : $(QT4XHB_SRC_DIR)/QtMultimedia/%.cpp
+	cl $(CFLAGS) $(CINCLUDES) -Fo$@ $^
 
 $(QT4XHB_OBJ_DIR)/%.obj : $(QT4XHB_OBJ_DIR)/%.c
 	cl $(CFLAGS) $(CINCLUDES) -Fo$@ $^
