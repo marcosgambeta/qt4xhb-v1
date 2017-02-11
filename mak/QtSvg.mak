@@ -10,4 +10,3 @@ OBJECTS_QTSVG = \
    $(QT4XHB_OBJ_DIR)/QSvgRendererSlotsMoc$(OBJEXT) \
    $(QT4XHB_OBJ_DIR)/QSvgWidget$(OBJEXT) \
    $(QT4XHB_OBJ_DIR)/QSvgWidgetClass$(OBJEXT) \
-

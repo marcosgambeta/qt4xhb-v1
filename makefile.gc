@@ -233,6 +233,11 @@ $(QT4XHB_OBJ_DIR)/%.c : $(QT4XHB_SRC_DIR)/QtSql/%.prg
 	$(HB_BIN_DIR)/harbour $^ -n -w3 -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
 $(QT4XHB_OBJ_DIR)/%.o : $(QT4XHB_SRC_DIR)/QtSql/%.cpp
 	g++ $(CFLAGS) $(CINCLUDES) -o $@ $^
+# QtSvg
+$(QT4XHB_OBJ_DIR)/%.c : $(QT4XHB_SRC_DIR)/QtSvg/%.prg
+	$(HB_BIN_DIR)/harbour $^ -n -w3 -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%.o : $(QT4XHB_SRC_DIR)/QtSvg/%.cpp
+	g++ $(CFLAGS) $(CINCLUDES) -o $@ $^
 
 $(QT4XHB_OBJ_DIR)/%.o : $(QT4XHB_OBJ_DIR)/%.c
 	g++ $(CFLAGS) $(CINCLUDES) -o $@ $^
