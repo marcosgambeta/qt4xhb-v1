@@ -62,4 +62,3 @@ OBJECTS_QTXML = \
    $(QT4XHB_OBJ_DIR)/QXmlReaderClass$(OBJEXT) \
    $(QT4XHB_OBJ_DIR)/QXmlSimpleReader$(OBJEXT) \
    $(QT4XHB_OBJ_DIR)/QXmlSimpleReaderClass$(OBJEXT) \
-

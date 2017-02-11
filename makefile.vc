@@ -253,6 +253,11 @@ $(QT4XHB_OBJ_DIR)/%.c : $(QT4XHB_SRC_DIR)/QtWebKit/%.prg
 	$(HB_BIN_DIR)/harbour $^ -n -w -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
 $(QT4XHB_OBJ_DIR)/%.obj : $(QT4XHB_SRC_DIR)/QtWebKit/%.cpp
 	cl $(CFLAGS) $(CINCLUDES) -Fo$@ $^
+# QtXml
+$(QT4XHB_OBJ_DIR)/%.c : $(QT4XHB_SRC_DIR)/QtXml/%.prg
+	$(HB_BIN_DIR)/harbour $^ -n -w -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%.obj : $(QT4XHB_SRC_DIR)/QtXml/%.cpp
+	cl $(CFLAGS) $(CINCLUDES) -Fo$@ $^
 
 $(QT4XHB_OBJ_DIR)/%.obj : $(QT4XHB_OBJ_DIR)/%.c
 	cl $(CFLAGS) $(CINCLUDES) -Fo$@ $^
