@@ -36,4 +36,3 @@ OBJECTS_QTSQL = \
    $(QT4XHB_OBJ_DIR)/QSqlTableModelClass$(OBJEXT) \
    $(QT4XHB_OBJ_DIR)/QSqlTableModelSlots$(OBJEXT) \
    $(QT4XHB_OBJ_DIR)/QSqlTableModelSlotsMoc$(OBJEXT) \
-
