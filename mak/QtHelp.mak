@@ -38,4 +38,3 @@ OBJECTS_QTHELP = \
    $(QT4XHB_OBJ_DIR)/QHelpSearchResultWidgetClass$(OBJEXT) \
    $(QT4XHB_OBJ_DIR)/QHelpSearchResultWidgetSlots$(OBJEXT) \
    $(QT4XHB_OBJ_DIR)/QHelpSearchResultWidgetSlotsMoc$(OBJEXT) \
-
