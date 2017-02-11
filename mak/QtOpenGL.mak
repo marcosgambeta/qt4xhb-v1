@@ -22,4 +22,3 @@ OBJECTS_QTOPENGL = \
    $(QT4XHB_OBJ_DIR)/QGLShaderProgramClass$(OBJEXT) \
    $(QT4XHB_OBJ_DIR)/QGLWidget$(OBJEXT) \
    $(QT4XHB_OBJ_DIR)/QGLWidgetClass$(OBJEXT) \
-
