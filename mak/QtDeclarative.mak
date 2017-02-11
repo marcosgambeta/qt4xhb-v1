@@ -42,4 +42,3 @@ OBJECTS_QTDECLARATIVE = \
    $(QT4XHB_OBJ_DIR)/QDeclarativeViewClass$(OBJEXT) \
    $(QT4XHB_OBJ_DIR)/QDeclarativeViewSlots$(OBJEXT) \
    $(QT4XHB_OBJ_DIR)/QDeclarativeViewSlotsMoc$(OBJEXT) \
-
