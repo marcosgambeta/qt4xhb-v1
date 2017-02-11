@@ -90,4 +90,3 @@ OBJECTS_QTNETWORK = \
    $(QT4XHB_OBJ_DIR)/QUdpSocketClass$(OBJEXT) \
    $(QT4XHB_OBJ_DIR)/QUrlInfo$(OBJEXT) \
    $(QT4XHB_OBJ_DIR)/QUrlInfoClass$(OBJEXT) \
-
