@@ -243,6 +243,11 @@ $(QT4XHB_OBJ_DIR)/%.c : $(QT4XHB_SRC_DIR)/QtTest/%.prg
 	$(HB_BIN_DIR)/harbour $^ -n -w3 -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
 $(QT4XHB_OBJ_DIR)/%.o : $(QT4XHB_SRC_DIR)/QtTest/%.cpp
 	g++ $(CFLAGS) $(CINCLUDES) -o $@ $^
+# QtUiTools
+$(QT4XHB_OBJ_DIR)/%.c : $(QT4XHB_SRC_DIR)/QtUiTools/%.prg
+	$(HB_BIN_DIR)/harbour $^ -n -w3 -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%.o : $(QT4XHB_SRC_DIR)/QtUiTools/%.cpp
+	g++ $(CFLAGS) $(CINCLUDES) -o $@ $^
 
 $(QT4XHB_OBJ_DIR)/%.o : $(QT4XHB_OBJ_DIR)/%.c
 	g++ $(CFLAGS) $(CINCLUDES) -o $@ $^
