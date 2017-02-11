@@ -1,12 +1,12 @@
 # QtSvg
-OBJECTS_QTSVG = \
-   $(QT4XHB_OBJ_DIR)/QGraphicsSvgItem$(OBJEXT) \
-   $(QT4XHB_OBJ_DIR)/QGraphicsSvgItemClass$(OBJEXT) \
-   $(QT4XHB_OBJ_DIR)/QSvgGenerator$(OBJEXT) \
-   $(QT4XHB_OBJ_DIR)/QSvgGeneratorClass$(OBJEXT) \
-   $(QT4XHB_OBJ_DIR)/QSvgRenderer$(OBJEXT) \
-   $(QT4XHB_OBJ_DIR)/QSvgRendererClass$(OBJEXT) \
-   $(QT4XHB_OBJ_DIR)/QSvgRendererSlots$(OBJEXT) \
-   $(QT4XHB_OBJ_DIR)/QSvgRendererSlotsMoc$(OBJEXT) \
-   $(QT4XHB_OBJ_DIR)/QSvgWidget$(OBJEXT) \
-   $(QT4XHB_OBJ_DIR)/QSvgWidgetClass$(OBJEXT) \
+OBJECTS_QTSVG =
+OBJECTS_QTSVG += $(QT4XHB_OBJ_DIR)/QGraphicsSvgItem$(OBJEXT)
+OBJECTS_QTSVG += $(QT4XHB_OBJ_DIR)/QGraphicsSvgItemClass$(OBJEXT)
+OBJECTS_QTSVG += $(QT4XHB_OBJ_DIR)/QSvgGenerator$(OBJEXT)
+OBJECTS_QTSVG += $(QT4XHB_OBJ_DIR)/QSvgGeneratorClass$(OBJEXT)
+OBJECTS_QTSVG += $(QT4XHB_OBJ_DIR)/QSvgRenderer$(OBJEXT)
+OBJECTS_QTSVG += $(QT4XHB_OBJ_DIR)/QSvgRendererClass$(OBJEXT)
+OBJECTS_QTSVG += $(QT4XHB_OBJ_DIR)/QSvgRendererSlots$(OBJEXT)
+OBJECTS_QTSVG += $(QT4XHB_OBJ_DIR)/QSvgRendererSlotsMoc$(OBJEXT)
+OBJECTS_QTSVG += $(QT4XHB_OBJ_DIR)/QSvgWidget$(OBJEXT)
+OBJECTS_QTSVG += $(QT4XHB_OBJ_DIR)/QSvgWidgetClass$(OBJEXT)
