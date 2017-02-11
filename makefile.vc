@@ -188,6 +188,11 @@ $(QT4XHB_OBJ_DIR)/%.c : $(QT4XHB_SRC_DIR)/QtDeclarative/%.prg
 	$(HB_BIN_DIR)/harbour $^ -n -w -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
 $(QT4XHB_OBJ_DIR)/%.obj : $(QT4XHB_SRC_DIR)/QtDeclarative/%.cpp
 	cl $(CFLAGS) $(CINCLUDES) -Fo$@ $^
+# QtDesigner
+$(QT4XHB_OBJ_DIR)/%.c : $(QT4XHB_SRC_DIR)/QtDesigner/%.prg
+	$(HB_BIN_DIR)/harbour $^ -n -w -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^
+$(QT4XHB_OBJ_DIR)/%.obj : $(QT4XHB_SRC_DIR)/QtDesigner/%.cpp
+	cl $(CFLAGS) $(CINCLUDES) -Fo$@ $^
 # QtGui
 $(QT4XHB_OBJ_DIR)/%.c : $(QT4XHB_SRC_DIR)/QtGui/%.prg
 	$(HB_BIN_DIR)/harbour $^ -n -w -I$(HB_INC_DIR) -I$(QT4XHB_INC_DIR) -o$@ $^

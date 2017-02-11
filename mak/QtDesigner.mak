@@ -48,4 +48,3 @@ OBJECTS_QTDESIGNER = \
    $(QT4XHB_OBJ_DIR)/QExtensionManagerClass$(OBJEXT) \
    $(QT4XHB_OBJ_DIR)/QFormBuilder$(OBJEXT) \
    $(QT4XHB_OBJ_DIR)/QFormBuilderClass$(OBJEXT) \
-
