@@ -74,7 +74,7 @@ RETURN
 /*
 QGraphicsSvgItem ( QGraphicsItem * parent = 0 )
 */
-HB_FUNC( QGRAPHICSSVGITEM_NEW1 )
+HB_FUNC_STATIC( QGRAPHICSSVGITEM_NEW1 )
 {
   QGraphicsSvgItem * o = NULL;
   QGraphicsItem * par1 = ISNIL(1)? 0 : (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -90,7 +90,7 @@ HB_FUNC( QGRAPHICSSVGITEM_NEW1 )
 /*
 QGraphicsSvgItem ( const QString & fileName, QGraphicsItem * parent = 0 )
 */
-HB_FUNC( QGRAPHICSSVGITEM_NEW2 )
+HB_FUNC_STATIC( QGRAPHICSSVGITEM_NEW2 )
 {
   QGraphicsSvgItem * o = NULL;
   QString par1 = hb_parc(1);
@@ -107,7 +107,7 @@ HB_FUNC( QGRAPHICSSVGITEM_NEW2 )
 //[1]QGraphicsSvgItem ( QGraphicsItem * parent = 0 )
 //[2]QGraphicsSvgItem ( const QString & fileName, QGraphicsItem * parent = 0 )
 
-HB_FUNC( QGRAPHICSSVGITEM_NEW )
+HB_FUNC_STATIC( QGRAPHICSSVGITEM_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQGRAPHICSITEM(1)||ISNIL(1)) )
   {
@@ -127,7 +127,7 @@ HB_FUNC( QGRAPHICSSVGITEM_NEW )
 /*
 QString elementId () const
 */
-HB_FUNC( QGRAPHICSSVGITEM_ELEMENTID )
+HB_FUNC_STATIC( QGRAPHICSSVGITEM_ELEMENTID )
 {
   QGraphicsSvgItem * obj = (QGraphicsSvgItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -141,7 +141,7 @@ HB_FUNC( QGRAPHICSSVGITEM_ELEMENTID )
 /*
 QSize maximumCacheSize () const
 */
-HB_FUNC( QGRAPHICSSVGITEM_MAXIMUMCACHESIZE )
+HB_FUNC_STATIC( QGRAPHICSSVGITEM_MAXIMUMCACHESIZE )
 {
   QGraphicsSvgItem * obj = (QGraphicsSvgItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -154,7 +154,7 @@ HB_FUNC( QGRAPHICSSVGITEM_MAXIMUMCACHESIZE )
 /*
 QSvgRenderer * renderer () const
 */
-HB_FUNC( QGRAPHICSSVGITEM_RENDERER )
+HB_FUNC_STATIC( QGRAPHICSSVGITEM_RENDERER )
 {
   QGraphicsSvgItem * obj = (QGraphicsSvgItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -167,7 +167,7 @@ HB_FUNC( QGRAPHICSSVGITEM_RENDERER )
 /*
 void setElementId ( const QString & id )
 */
-HB_FUNC( QGRAPHICSSVGITEM_SETELEMENTID )
+HB_FUNC_STATIC( QGRAPHICSSVGITEM_SETELEMENTID )
 {
   QGraphicsSvgItem * obj = (QGraphicsSvgItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -182,7 +182,7 @@ HB_FUNC( QGRAPHICSSVGITEM_SETELEMENTID )
 /*
 void setMaximumCacheSize ( const QSize & size )
 */
-HB_FUNC( QGRAPHICSSVGITEM_SETMAXIMUMCACHESIZE )
+HB_FUNC_STATIC( QGRAPHICSSVGITEM_SETMAXIMUMCACHESIZE )
 {
   QGraphicsSvgItem * obj = (QGraphicsSvgItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -197,7 +197,7 @@ HB_FUNC( QGRAPHICSSVGITEM_SETMAXIMUMCACHESIZE )
 /*
 void setSharedRenderer ( QSvgRenderer * renderer )
 */
-HB_FUNC( QGRAPHICSSVGITEM_SETSHAREDRENDERER )
+HB_FUNC_STATIC( QGRAPHICSSVGITEM_SETSHAREDRENDERER )
 {
   QGraphicsSvgItem * obj = (QGraphicsSvgItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -212,7 +212,7 @@ HB_FUNC( QGRAPHICSSVGITEM_SETSHAREDRENDERER )
 /*
 virtual QRectF boundingRect () const
 */
-HB_FUNC( QGRAPHICSSVGITEM_BOUNDINGRECT )
+HB_FUNC_STATIC( QGRAPHICSSVGITEM_BOUNDINGRECT )
 {
   QGraphicsSvgItem * obj = (QGraphicsSvgItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -225,7 +225,7 @@ HB_FUNC( QGRAPHICSSVGITEM_BOUNDINGRECT )
 /*
 virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
 */
-HB_FUNC( QGRAPHICSSVGITEM_PAINT )
+HB_FUNC_STATIC( QGRAPHICSSVGITEM_PAINT )
 {
   QGraphicsSvgItem * obj = (QGraphicsSvgItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -242,7 +242,7 @@ HB_FUNC( QGRAPHICSSVGITEM_PAINT )
 /*
 virtual int type () const
 */
-HB_FUNC( QGRAPHICSSVGITEM_TYPE )
+HB_FUNC_STATIC( QGRAPHICSSVGITEM_TYPE )
 {
   QGraphicsSvgItem * obj = (QGraphicsSvgItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

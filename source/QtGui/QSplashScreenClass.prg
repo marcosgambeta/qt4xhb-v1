@@ -71,7 +71,7 @@ RETURN
 /*
 QSplashScreen ( const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
 */
-HB_FUNC( QSPLASHSCREEN_NEW1 )
+HB_FUNC_STATIC( QSPLASHSCREEN_NEW1 )
 {
   QSplashScreen * o = NULL;
   QPixmap par1 = ISNIL(1)? QPixmap() : *(QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -88,7 +88,7 @@ HB_FUNC( QSPLASHSCREEN_NEW1 )
 /*
 QSplashScreen ( QWidget * parent, const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
 */
-HB_FUNC( QSPLASHSCREEN_NEW2 )
+HB_FUNC_STATIC( QSPLASHSCREEN_NEW2 )
 {
   QSplashScreen * o = NULL;
   QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -106,7 +106,7 @@ HB_FUNC( QSPLASHSCREEN_NEW2 )
 //[1]QSplashScreen ( const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
 //[2]QSplashScreen ( QWidget * parent, const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
 
-HB_FUNC( QSPLASHSCREEN_NEW )
+HB_FUNC_STATIC( QSPLASHSCREEN_NEW )
 {
   if( ISBETWEEN(0,2) && (ISQPIXMAP(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
   {
@@ -122,7 +122,7 @@ HB_FUNC( QSPLASHSCREEN_NEW )
   }
 }
 
-HB_FUNC( QSPLASHSCREEN_DELETE )
+HB_FUNC_STATIC( QSPLASHSCREEN_DELETE )
 {
   QSplashScreen * obj = (QSplashScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -141,7 +141,7 @@ HB_FUNC( QSPLASHSCREEN_DELETE )
 /*
 void finish ( QWidget * mainWin )
 */
-HB_FUNC( QSPLASHSCREEN_FINISH )
+HB_FUNC_STATIC( QSPLASHSCREEN_FINISH )
 {
   QSplashScreen * obj = (QSplashScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -156,7 +156,7 @@ HB_FUNC( QSPLASHSCREEN_FINISH )
 /*
 const QPixmap pixmap () const
 */
-HB_FUNC( QSPLASHSCREEN_PIXMAP )
+HB_FUNC_STATIC( QSPLASHSCREEN_PIXMAP )
 {
   QSplashScreen * obj = (QSplashScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -169,7 +169,7 @@ HB_FUNC( QSPLASHSCREEN_PIXMAP )
 /*
 void repaint ()
 */
-HB_FUNC( QSPLASHSCREEN_REPAINT )
+HB_FUNC_STATIC( QSPLASHSCREEN_REPAINT )
 {
   QSplashScreen * obj = (QSplashScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -183,7 +183,7 @@ HB_FUNC( QSPLASHSCREEN_REPAINT )
 /*
 void setPixmap ( const QPixmap & pixmap )
 */
-HB_FUNC( QSPLASHSCREEN_SETPIXMAP )
+HB_FUNC_STATIC( QSPLASHSCREEN_SETPIXMAP )
 {
   QSplashScreen * obj = (QSplashScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -198,7 +198,7 @@ HB_FUNC( QSPLASHSCREEN_SETPIXMAP )
 /*
 void clearMessage ()
 */
-HB_FUNC( QSPLASHSCREEN_CLEARMESSAGE )
+HB_FUNC_STATIC( QSPLASHSCREEN_CLEARMESSAGE )
 {
   QSplashScreen * obj = (QSplashScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -212,7 +212,7 @@ HB_FUNC( QSPLASHSCREEN_CLEARMESSAGE )
 /*
 void showMessage ( const QString & message, int alignment = Qt::AlignLeft, const QColor & color = Qt::black )
 */
-HB_FUNC( QSPLASHSCREEN_SHOWMESSAGE )
+HB_FUNC_STATIC( QSPLASHSCREEN_SHOWMESSAGE )
 {
   QSplashScreen * obj = (QSplashScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

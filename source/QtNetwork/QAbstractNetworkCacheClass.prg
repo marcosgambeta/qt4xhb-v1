@@ -67,7 +67,7 @@ RETURN
 #include "qt4xhb_clsid.h"
 #include "qt4xhb_utils.h"
 
-HB_FUNC( QABSTRACTNETWORKCACHE_DELETE )
+HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_DELETE )
 {
   QAbstractNetworkCache * obj = (QAbstractNetworkCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -86,7 +86,7 @@ HB_FUNC( QABSTRACTNETWORKCACHE_DELETE )
 /*
 virtual qint64 cacheSize () const = 0
 */
-HB_FUNC( QABSTRACTNETWORKCACHE_CACHESIZE )
+HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_CACHESIZE )
 {
   QAbstractNetworkCache * obj = (QAbstractNetworkCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -100,7 +100,7 @@ HB_FUNC( QABSTRACTNETWORKCACHE_CACHESIZE )
 /*
 virtual QIODevice * data ( const QUrl & url ) = 0
 */
-HB_FUNC( QABSTRACTNETWORKCACHE_DATA )
+HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_DATA )
 {
   QAbstractNetworkCache * obj = (QAbstractNetworkCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -114,7 +114,7 @@ HB_FUNC( QABSTRACTNETWORKCACHE_DATA )
 /*
 virtual void insert ( QIODevice * device ) = 0
 */
-HB_FUNC( QABSTRACTNETWORKCACHE_INSERT )
+HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_INSERT )
 {
   QAbstractNetworkCache * obj = (QAbstractNetworkCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -129,7 +129,7 @@ HB_FUNC( QABSTRACTNETWORKCACHE_INSERT )
 /*
 virtual QNetworkCacheMetaData metaData ( const QUrl & url ) = 0
 */
-HB_FUNC( QABSTRACTNETWORKCACHE_METADATA )
+HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_METADATA )
 {
   QAbstractNetworkCache * obj = (QAbstractNetworkCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -143,7 +143,7 @@ HB_FUNC( QABSTRACTNETWORKCACHE_METADATA )
 /*
 virtual QIODevice * prepare ( const QNetworkCacheMetaData & metaData ) = 0
 */
-HB_FUNC( QABSTRACTNETWORKCACHE_PREPARE )
+HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_PREPARE )
 {
   QAbstractNetworkCache * obj = (QAbstractNetworkCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -157,7 +157,7 @@ HB_FUNC( QABSTRACTNETWORKCACHE_PREPARE )
 /*
 virtual bool remove ( const QUrl & url ) = 0
 */
-HB_FUNC( QABSTRACTNETWORKCACHE_REMOVE )
+HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_REMOVE )
 {
   QAbstractNetworkCache * obj = (QAbstractNetworkCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -172,7 +172,7 @@ HB_FUNC( QABSTRACTNETWORKCACHE_REMOVE )
 /*
 virtual void updateMetaData ( const QNetworkCacheMetaData & metaData ) = 0
 */
-HB_FUNC( QABSTRACTNETWORKCACHE_UPDATEMETADATA )
+HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_UPDATEMETADATA )
 {
   QAbstractNetworkCache * obj = (QAbstractNetworkCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -187,7 +187,7 @@ HB_FUNC( QABSTRACTNETWORKCACHE_UPDATEMETADATA )
 /*
 virtual void clear () = 0
 */
-HB_FUNC( QABSTRACTNETWORKCACHE_CLEAR )
+HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_CLEAR )
 {
   QAbstractNetworkCache * obj = (QAbstractNetworkCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

@@ -80,7 +80,7 @@ RETURN
 /*
 QDeclarativeContext ( QDeclarativeEngine * engine, QObject * parent = 0 )
 */
-HB_FUNC( QDECLARATIVECONTEXT_NEW1 )
+HB_FUNC_STATIC( QDECLARATIVECONTEXT_NEW1 )
 {
   QDeclarativeContext * o = NULL;
   QDeclarativeEngine * par1 = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -97,7 +97,7 @@ HB_FUNC( QDECLARATIVECONTEXT_NEW1 )
 /*
 QDeclarativeContext ( QDeclarativeContext * parentContext, QObject * parent = 0 )
 */
-HB_FUNC( QDECLARATIVECONTEXT_NEW2 )
+HB_FUNC_STATIC( QDECLARATIVECONTEXT_NEW2 )
 {
   QDeclarativeContext * o = NULL;
   QDeclarativeContext * par1 = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -114,7 +114,7 @@ HB_FUNC( QDECLARATIVECONTEXT_NEW2 )
 //[1]QDeclarativeContext ( QDeclarativeEngine * engine, QObject * parent = 0 )
 //[2]QDeclarativeContext ( QDeclarativeContext * parentContext, QObject * parent = 0 )
 
-HB_FUNC( QDECLARATIVECONTEXT_NEW )
+HB_FUNC_STATIC( QDECLARATIVECONTEXT_NEW )
 {
   if( ISBETWEEN(1,2) && ISQDECLARATIVEENGINE(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
@@ -130,7 +130,7 @@ HB_FUNC( QDECLARATIVECONTEXT_NEW )
   }
 }
 
-HB_FUNC( QDECLARATIVECONTEXT_DELETE )
+HB_FUNC_STATIC( QDECLARATIVECONTEXT_DELETE )
 {
   QDeclarativeContext * obj = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -149,7 +149,7 @@ HB_FUNC( QDECLARATIVECONTEXT_DELETE )
 /*
 QUrl baseUrl () const
 */
-HB_FUNC( QDECLARATIVECONTEXT_BASEURL )
+HB_FUNC_STATIC( QDECLARATIVECONTEXT_BASEURL )
 {
   QDeclarativeContext * obj = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -162,7 +162,7 @@ HB_FUNC( QDECLARATIVECONTEXT_BASEURL )
 /*
 QObject * contextObject () const
 */
-HB_FUNC( QDECLARATIVECONTEXT_CONTEXTOBJECT )
+HB_FUNC_STATIC( QDECLARATIVECONTEXT_CONTEXTOBJECT )
 {
   QDeclarativeContext * obj = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -175,7 +175,7 @@ HB_FUNC( QDECLARATIVECONTEXT_CONTEXTOBJECT )
 /*
 QVariant contextProperty ( const QString & name ) const
 */
-HB_FUNC( QDECLARATIVECONTEXT_CONTEXTPROPERTY )
+HB_FUNC_STATIC( QDECLARATIVECONTEXT_CONTEXTPROPERTY )
 {
   QDeclarativeContext * obj = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -189,7 +189,7 @@ HB_FUNC( QDECLARATIVECONTEXT_CONTEXTPROPERTY )
 /*
 QDeclarativeEngine * engine () const
 */
-HB_FUNC( QDECLARATIVECONTEXT_ENGINE )
+HB_FUNC_STATIC( QDECLARATIVECONTEXT_ENGINE )
 {
   QDeclarativeContext * obj = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -202,7 +202,7 @@ HB_FUNC( QDECLARATIVECONTEXT_ENGINE )
 /*
 bool isValid () const
 */
-HB_FUNC( QDECLARATIVECONTEXT_ISVALID )
+HB_FUNC_STATIC( QDECLARATIVECONTEXT_ISVALID )
 {
   QDeclarativeContext * obj = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -216,7 +216,7 @@ HB_FUNC( QDECLARATIVECONTEXT_ISVALID )
 /*
 QDeclarativeContext * parentContext () const
 */
-HB_FUNC( QDECLARATIVECONTEXT_PARENTCONTEXT )
+HB_FUNC_STATIC( QDECLARATIVECONTEXT_PARENTCONTEXT )
 {
   QDeclarativeContext * obj = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -229,7 +229,7 @@ HB_FUNC( QDECLARATIVECONTEXT_PARENTCONTEXT )
 /*
 QUrl resolvedUrl ( const QUrl & src )
 */
-HB_FUNC( QDECLARATIVECONTEXT_RESOLVEDURL )
+HB_FUNC_STATIC( QDECLARATIVECONTEXT_RESOLVEDURL )
 {
   QDeclarativeContext * obj = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -243,7 +243,7 @@ HB_FUNC( QDECLARATIVECONTEXT_RESOLVEDURL )
 /*
 void setBaseUrl ( const QUrl & baseUrl )
 */
-HB_FUNC( QDECLARATIVECONTEXT_SETBASEURL )
+HB_FUNC_STATIC( QDECLARATIVECONTEXT_SETBASEURL )
 {
   QDeclarativeContext * obj = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -258,7 +258,7 @@ HB_FUNC( QDECLARATIVECONTEXT_SETBASEURL )
 /*
 void setContextObject ( QObject * object )
 */
-HB_FUNC( QDECLARATIVECONTEXT_SETCONTEXTOBJECT )
+HB_FUNC_STATIC( QDECLARATIVECONTEXT_SETCONTEXTOBJECT )
 {
   QDeclarativeContext * obj = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -273,7 +273,7 @@ HB_FUNC( QDECLARATIVECONTEXT_SETCONTEXTOBJECT )
 /*
 void setContextProperty ( const QString & name, QObject * value )
 */
-HB_FUNC( QDECLARATIVECONTEXT_SETCONTEXTPROPERTY1 )
+HB_FUNC_STATIC( QDECLARATIVECONTEXT_SETCONTEXTPROPERTY1 )
 {
   QDeclarativeContext * obj = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -289,7 +289,7 @@ HB_FUNC( QDECLARATIVECONTEXT_SETCONTEXTPROPERTY1 )
 /*
 void setContextProperty ( const QString & name, const QVariant & value )
 */
-HB_FUNC( QDECLARATIVECONTEXT_SETCONTEXTPROPERTY2 )
+HB_FUNC_STATIC( QDECLARATIVECONTEXT_SETCONTEXTPROPERTY2 )
 {
   QDeclarativeContext * obj = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -305,7 +305,7 @@ HB_FUNC( QDECLARATIVECONTEXT_SETCONTEXTPROPERTY2 )
 //[1]void setContextProperty ( const QString & name, QObject * value )
 //[2]void setContextProperty ( const QString & name, const QVariant & value )
 
-HB_FUNC( QDECLARATIVECONTEXT_SETCONTEXTPROPERTY )
+HB_FUNC_STATIC( QDECLARATIVECONTEXT_SETCONTEXTPROPERTY )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISQOBJECT(2) )
   {

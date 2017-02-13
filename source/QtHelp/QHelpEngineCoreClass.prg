@@ -97,7 +97,7 @@ RETURN
 /*
 QHelpEngineCore ( const QString & collectionFile, QObject * parent = 0 )
 */
-HB_FUNC( QHELPENGINECORE_NEW )
+HB_FUNC_STATIC( QHELPENGINECORE_NEW )
 {
   QHelpEngineCore * o = NULL;
   QString par1 = hb_parc(1);
@@ -111,7 +111,7 @@ HB_FUNC( QHELPENGINECORE_NEW )
 }
 
 
-HB_FUNC( QHELPENGINECORE_DELETE )
+HB_FUNC_STATIC( QHELPENGINECORE_DELETE )
 {
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -130,7 +130,7 @@ HB_FUNC( QHELPENGINECORE_DELETE )
 /*
 bool addCustomFilter ( const QString & filterName, const QStringList & attributes )
 */
-HB_FUNC( QHELPENGINECORE_ADDCUSTOMFILTER )
+HB_FUNC_STATIC( QHELPENGINECORE_ADDCUSTOMFILTER )
 {
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -154,7 +154,7 @@ par2 << temp;
 /*
 bool autoSaveFilter () const
 */
-HB_FUNC( QHELPENGINECORE_AUTOSAVEFILTER )
+HB_FUNC_STATIC( QHELPENGINECORE_AUTOSAVEFILTER )
 {
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -168,7 +168,7 @@ HB_FUNC( QHELPENGINECORE_AUTOSAVEFILTER )
 /*
 QString collectionFile () const
 */
-HB_FUNC( QHELPENGINECORE_COLLECTIONFILE )
+HB_FUNC_STATIC( QHELPENGINECORE_COLLECTIONFILE )
 {
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -182,7 +182,7 @@ HB_FUNC( QHELPENGINECORE_COLLECTIONFILE )
 /*
 bool copyCollectionFile ( const QString & fileName )
 */
-HB_FUNC( QHELPENGINECORE_COPYCOLLECTIONFILE )
+HB_FUNC_STATIC( QHELPENGINECORE_COPYCOLLECTIONFILE )
 {
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -197,7 +197,7 @@ HB_FUNC( QHELPENGINECORE_COPYCOLLECTIONFILE )
 /*
 QString currentFilter () const
 */
-HB_FUNC( QHELPENGINECORE_CURRENTFILTER )
+HB_FUNC_STATIC( QHELPENGINECORE_CURRENTFILTER )
 {
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -211,7 +211,7 @@ HB_FUNC( QHELPENGINECORE_CURRENTFILTER )
 /*
 QStringList customFilters () const
 */
-HB_FUNC( QHELPENGINECORE_CUSTOMFILTERS )
+HB_FUNC_STATIC( QHELPENGINECORE_CUSTOMFILTERS )
 {
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -234,7 +234,7 @@ HB_FUNC( QHELPENGINECORE_CUSTOMFILTERS )
 /*
 QVariant customValue ( const QString & key, const QVariant & defaultValue = QVariant() ) const
 */
-HB_FUNC( QHELPENGINECORE_CUSTOMVALUE )
+HB_FUNC_STATIC( QHELPENGINECORE_CUSTOMVALUE )
 {
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -249,7 +249,7 @@ HB_FUNC( QHELPENGINECORE_CUSTOMVALUE )
 /*
 QString documentationFileName ( const QString & namespaceName )
 */
-HB_FUNC( QHELPENGINECORE_DOCUMENTATIONFILENAME )
+HB_FUNC_STATIC( QHELPENGINECORE_DOCUMENTATIONFILENAME )
 {
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -264,7 +264,7 @@ HB_FUNC( QHELPENGINECORE_DOCUMENTATIONFILENAME )
 /*
 QString error () const
 */
-HB_FUNC( QHELPENGINECORE_ERROR )
+HB_FUNC_STATIC( QHELPENGINECORE_ERROR )
 {
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -278,7 +278,7 @@ HB_FUNC( QHELPENGINECORE_ERROR )
 /*
 QByteArray fileData ( const QUrl & url ) const
 */
-HB_FUNC( QHELPENGINECORE_FILEDATA )
+HB_FUNC_STATIC( QHELPENGINECORE_FILEDATA )
 {
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -292,7 +292,7 @@ HB_FUNC( QHELPENGINECORE_FILEDATA )
 /*
 QList<QUrl> files ( const QString namespaceName, const QStringList & filterAttributes, const QString & extensionFilter = QString() )
 */
-HB_FUNC( QHELPENGINECORE_FILES )
+HB_FUNC_STATIC( QHELPENGINECORE_FILES )
 {
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -352,7 +352,7 @@ par2 << temp;
 /*
 QStringList filterAttributes () const
 */
-HB_FUNC( QHELPENGINECORE_FILTERATTRIBUTES1 )
+HB_FUNC_STATIC( QHELPENGINECORE_FILTERATTRIBUTES1 )
 {
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -375,7 +375,7 @@ HB_FUNC( QHELPENGINECORE_FILTERATTRIBUTES1 )
 /*
 QStringList filterAttributes ( const QString & filterName ) const
 */
-HB_FUNC( QHELPENGINECORE_FILTERATTRIBUTES2 )
+HB_FUNC_STATIC( QHELPENGINECORE_FILTERATTRIBUTES2 )
 {
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -399,7 +399,7 @@ HB_FUNC( QHELPENGINECORE_FILTERATTRIBUTES2 )
 //[1]QStringList filterAttributes () const
 //[2]QStringList filterAttributes ( const QString & filterName ) const
 
-HB_FUNC( QHELPENGINECORE_FILTERATTRIBUTES )
+HB_FUNC_STATIC( QHELPENGINECORE_FILTERATTRIBUTES )
 {
   if( ISNUMPAR(0) )
   {
@@ -414,7 +414,7 @@ HB_FUNC( QHELPENGINECORE_FILTERATTRIBUTES )
 /*
 QUrl findFile ( const QUrl & url ) const
 */
-HB_FUNC( QHELPENGINECORE_FINDFILE )
+HB_FUNC_STATIC( QHELPENGINECORE_FINDFILE )
 {
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -429,7 +429,7 @@ HB_FUNC( QHELPENGINECORE_FINDFILE )
 /*
 bool registerDocumentation ( const QString & documentationFileName )
 */
-HB_FUNC( QHELPENGINECORE_REGISTERDOCUMENTATION )
+HB_FUNC_STATIC( QHELPENGINECORE_REGISTERDOCUMENTATION )
 {
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -444,7 +444,7 @@ HB_FUNC( QHELPENGINECORE_REGISTERDOCUMENTATION )
 /*
 QStringList registeredDocumentations () const
 */
-HB_FUNC( QHELPENGINECORE_REGISTEREDDOCUMENTATIONS )
+HB_FUNC_STATIC( QHELPENGINECORE_REGISTEREDDOCUMENTATIONS )
 {
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -467,7 +467,7 @@ HB_FUNC( QHELPENGINECORE_REGISTEREDDOCUMENTATIONS )
 /*
 bool removeCustomFilter ( const QString & filterName )
 */
-HB_FUNC( QHELPENGINECORE_REMOVECUSTOMFILTER )
+HB_FUNC_STATIC( QHELPENGINECORE_REMOVECUSTOMFILTER )
 {
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -482,7 +482,7 @@ HB_FUNC( QHELPENGINECORE_REMOVECUSTOMFILTER )
 /*
 bool removeCustomValue ( const QString & key )
 */
-HB_FUNC( QHELPENGINECORE_REMOVECUSTOMVALUE )
+HB_FUNC_STATIC( QHELPENGINECORE_REMOVECUSTOMVALUE )
 {
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -497,7 +497,7 @@ HB_FUNC( QHELPENGINECORE_REMOVECUSTOMVALUE )
 /*
 void setAutoSaveFilter ( bool save )
 */
-HB_FUNC( QHELPENGINECORE_SETAUTOSAVEFILTER )
+HB_FUNC_STATIC( QHELPENGINECORE_SETAUTOSAVEFILTER )
 {
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -512,7 +512,7 @@ HB_FUNC( QHELPENGINECORE_SETAUTOSAVEFILTER )
 /*
 void setCollectionFile ( const QString & fileName )
 */
-HB_FUNC( QHELPENGINECORE_SETCOLLECTIONFILE )
+HB_FUNC_STATIC( QHELPENGINECORE_SETCOLLECTIONFILE )
 {
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -527,7 +527,7 @@ HB_FUNC( QHELPENGINECORE_SETCOLLECTIONFILE )
 /*
 void setCurrentFilter ( const QString & filterName )
 */
-HB_FUNC( QHELPENGINECORE_SETCURRENTFILTER )
+HB_FUNC_STATIC( QHELPENGINECORE_SETCURRENTFILTER )
 {
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -542,7 +542,7 @@ HB_FUNC( QHELPENGINECORE_SETCURRENTFILTER )
 /*
 bool setCustomValue ( const QString & key, const QVariant & value )
 */
-HB_FUNC( QHELPENGINECORE_SETCUSTOMVALUE )
+HB_FUNC_STATIC( QHELPENGINECORE_SETCUSTOMVALUE )
 {
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -558,7 +558,7 @@ HB_FUNC( QHELPENGINECORE_SETCUSTOMVALUE )
 /*
 bool setupData ()
 */
-HB_FUNC( QHELPENGINECORE_SETUPDATA )
+HB_FUNC_STATIC( QHELPENGINECORE_SETUPDATA )
 {
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -572,7 +572,7 @@ HB_FUNC( QHELPENGINECORE_SETUPDATA )
 /*
 bool unregisterDocumentation ( const QString & namespaceName )
 */
-HB_FUNC( QHELPENGINECORE_UNREGISTERDOCUMENTATION )
+HB_FUNC_STATIC( QHELPENGINECORE_UNREGISTERDOCUMENTATION )
 {
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -588,7 +588,7 @@ HB_FUNC( QHELPENGINECORE_UNREGISTERDOCUMENTATION )
 /*
 QVariant metaData ( const QString & documentationFileName, const QString & name )
 */
-HB_FUNC( QHELPENGINECORE_METADATA )
+HB_FUNC_STATIC( QHELPENGINECORE_METADATA )
 {
   QString par1 = hb_parc(1);
   QString par2 = hb_parc(2);
@@ -599,7 +599,7 @@ HB_FUNC( QHELPENGINECORE_METADATA )
 /*
 QString namespaceName ( const QString & documentationFileName )
 */
-HB_FUNC( QHELPENGINECORE_NAMESPACENAME )
+HB_FUNC_STATIC( QHELPENGINECORE_NAMESPACENAME )
 {
   QString par1 = hb_parc(1);
   QString str1 = QHelpEngineCore::namespaceName ( par1 );

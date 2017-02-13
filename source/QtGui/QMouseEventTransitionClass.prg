@@ -72,7 +72,7 @@ RETURN
 /*
 QMouseEventTransition ( QState * sourceState = 0 )
 */
-HB_FUNC( QMOUSEEVENTTRANSITION_NEW1 )
+HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_NEW1 )
 {
   QMouseEventTransition * o = NULL;
   QState * par1 = ISNIL(1)? 0 : (QState *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -88,7 +88,7 @@ HB_FUNC( QMOUSEEVENTTRANSITION_NEW1 )
 /*
 QMouseEventTransition ( QObject * object, QEvent::Type type, Qt::MouseButton button, QState * sourceState = 0 )
 */
-HB_FUNC( QMOUSEEVENTTRANSITION_NEW2 )
+HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_NEW2 )
 {
   QMouseEventTransition * o = NULL;
   QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -107,7 +107,7 @@ HB_FUNC( QMOUSEEVENTTRANSITION_NEW2 )
 //[1]QMouseEventTransition ( QState * sourceState = 0 )
 //[2]QMouseEventTransition ( QObject * object, QEvent::Type type, Qt::MouseButton button, QState * sourceState = 0 )
 
-HB_FUNC( QMOUSEEVENTTRANSITION_NEW )
+HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQSTATE(1)||ISNIL(1)) )
   {
@@ -123,7 +123,7 @@ HB_FUNC( QMOUSEEVENTTRANSITION_NEW )
   }
 }
 
-HB_FUNC( QMOUSEEVENTTRANSITION_DELETE )
+HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_DELETE )
 {
   QMouseEventTransition * obj = (QMouseEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -142,7 +142,7 @@ HB_FUNC( QMOUSEEVENTTRANSITION_DELETE )
 /*
 Qt::MouseButton button () const
 */
-HB_FUNC( QMOUSEEVENTTRANSITION_BUTTON )
+HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_BUTTON )
 {
   QMouseEventTransition * obj = (QMouseEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -156,7 +156,7 @@ HB_FUNC( QMOUSEEVENTTRANSITION_BUTTON )
 /*
 QPainterPath hitTestPath () const
 */
-HB_FUNC( QMOUSEEVENTTRANSITION_HITTESTPATH )
+HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_HITTESTPATH )
 {
   QMouseEventTransition * obj = (QMouseEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -169,7 +169,7 @@ HB_FUNC( QMOUSEEVENTTRANSITION_HITTESTPATH )
 /*
 Qt::KeyboardModifiers modifierMask () const
 */
-HB_FUNC( QMOUSEEVENTTRANSITION_MODIFIERMASK )
+HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_MODIFIERMASK )
 {
   QMouseEventTransition * obj = (QMouseEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -183,7 +183,7 @@ HB_FUNC( QMOUSEEVENTTRANSITION_MODIFIERMASK )
 /*
 void setButton ( Qt::MouseButton button )
 */
-HB_FUNC( QMOUSEEVENTTRANSITION_SETBUTTON )
+HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_SETBUTTON )
 {
   QMouseEventTransition * obj = (QMouseEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -198,7 +198,7 @@ HB_FUNC( QMOUSEEVENTTRANSITION_SETBUTTON )
 /*
 void setHitTestPath ( const QPainterPath & path )
 */
-HB_FUNC( QMOUSEEVENTTRANSITION_SETHITTESTPATH )
+HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_SETHITTESTPATH )
 {
   QMouseEventTransition * obj = (QMouseEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -213,7 +213,7 @@ HB_FUNC( QMOUSEEVENTTRANSITION_SETHITTESTPATH )
 /*
 void setModifierMask ( Qt::KeyboardModifiers modifierMask )
 */
-HB_FUNC( QMOUSEEVENTTRANSITION_SETMODIFIERMASK )
+HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_SETMODIFIERMASK )
 {
   QMouseEventTransition * obj = (QMouseEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

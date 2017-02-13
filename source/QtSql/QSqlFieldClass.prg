@@ -124,7 +124,7 @@ RETURN
 /*
 QSqlField ( const QString & fieldName = QString(), QVariant::Type type = QVariant::Invalid )
 */
-HB_FUNC( QSQLFIELD_NEW1 )
+HB_FUNC_STATIC( QSQLFIELD_NEW1 )
 {
   QSqlField * o = NULL;
   QString par1 = ISNIL(1)? QString() : hb_parc(1);
@@ -144,7 +144,7 @@ HB_FUNC( QSQLFIELD_NEW1 )
 /*
 QSqlField ( const QSqlField & other )
 */
-HB_FUNC( QSQLFIELD_NEW2 )
+HB_FUNC_STATIC( QSQLFIELD_NEW2 )
 {
   QSqlField * o = NULL;
   QSqlField * par1 = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -163,7 +163,7 @@ HB_FUNC( QSQLFIELD_NEW2 )
 //[1]QSqlField ( const QString & fieldName = QString(), QVariant::Type type = QVariant::Invalid )
 //[2]QSqlField ( const QSqlField & other )
 
-HB_FUNC( QSQLFIELD_NEW )
+HB_FUNC_STATIC( QSQLFIELD_NEW )
 {
   if( ISBETWEEN(0,2) && (ISCHAR(1)||ISNIL(1)) && (ISNUM(1)||ISNIL(1)) )
   {
@@ -179,7 +179,7 @@ HB_FUNC( QSQLFIELD_NEW )
   }
 }
 
-HB_FUNC( QSQLFIELD_DELETE )
+HB_FUNC_STATIC( QSQLFIELD_DELETE )
 {
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -198,7 +198,7 @@ HB_FUNC( QSQLFIELD_DELETE )
 /*
 void clear ()
 */
-HB_FUNC( QSQLFIELD_CLEAR )
+HB_FUNC_STATIC( QSQLFIELD_CLEAR )
 {
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -212,7 +212,7 @@ HB_FUNC( QSQLFIELD_CLEAR )
 /*
 QVariant defaultValue () const
 */
-HB_FUNC( QSQLFIELD_DEFAULTVALUE )
+HB_FUNC_STATIC( QSQLFIELD_DEFAULTVALUE )
 {
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -225,7 +225,7 @@ HB_FUNC( QSQLFIELD_DEFAULTVALUE )
 /*
 bool isAutoValue () const
 */
-HB_FUNC( QSQLFIELD_ISAUTOVALUE )
+HB_FUNC_STATIC( QSQLFIELD_ISAUTOVALUE )
 {
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -239,7 +239,7 @@ HB_FUNC( QSQLFIELD_ISAUTOVALUE )
 /*
 bool isGenerated () const
 */
-HB_FUNC( QSQLFIELD_ISGENERATED )
+HB_FUNC_STATIC( QSQLFIELD_ISGENERATED )
 {
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -253,7 +253,7 @@ HB_FUNC( QSQLFIELD_ISGENERATED )
 /*
 bool isNull () const
 */
-HB_FUNC( QSQLFIELD_ISNULL )
+HB_FUNC_STATIC( QSQLFIELD_ISNULL )
 {
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -267,7 +267,7 @@ HB_FUNC( QSQLFIELD_ISNULL )
 /*
 bool isReadOnly () const
 */
-HB_FUNC( QSQLFIELD_ISREADONLY )
+HB_FUNC_STATIC( QSQLFIELD_ISREADONLY )
 {
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -281,7 +281,7 @@ HB_FUNC( QSQLFIELD_ISREADONLY )
 /*
 bool isValid () const
 */
-HB_FUNC( QSQLFIELD_ISVALID )
+HB_FUNC_STATIC( QSQLFIELD_ISVALID )
 {
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -295,7 +295,7 @@ HB_FUNC( QSQLFIELD_ISVALID )
 /*
 int length () const
 */
-HB_FUNC( QSQLFIELD_LENGTH )
+HB_FUNC_STATIC( QSQLFIELD_LENGTH )
 {
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -309,7 +309,7 @@ HB_FUNC( QSQLFIELD_LENGTH )
 /*
 QString name () const
 */
-HB_FUNC( QSQLFIELD_NAME )
+HB_FUNC_STATIC( QSQLFIELD_NAME )
 {
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -323,7 +323,7 @@ HB_FUNC( QSQLFIELD_NAME )
 /*
 int precision () const
 */
-HB_FUNC( QSQLFIELD_PRECISION )
+HB_FUNC_STATIC( QSQLFIELD_PRECISION )
 {
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -337,7 +337,7 @@ HB_FUNC( QSQLFIELD_PRECISION )
 /*
 RequiredStatus requiredStatus () const
 */
-HB_FUNC( QSQLFIELD_REQUIREDSTATUS )
+HB_FUNC_STATIC( QSQLFIELD_REQUIREDSTATUS )
 {
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -351,7 +351,7 @@ HB_FUNC( QSQLFIELD_REQUIREDSTATUS )
 /*
 void setAutoValue ( bool autoVal )
 */
-HB_FUNC( QSQLFIELD_SETAUTOVALUE )
+HB_FUNC_STATIC( QSQLFIELD_SETAUTOVALUE )
 {
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -366,7 +366,7 @@ HB_FUNC( QSQLFIELD_SETAUTOVALUE )
 /*
 void setDefaultValue ( const QVariant & value )
 */
-HB_FUNC( QSQLFIELD_SETDEFAULTVALUE )
+HB_FUNC_STATIC( QSQLFIELD_SETDEFAULTVALUE )
 {
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -381,7 +381,7 @@ HB_FUNC( QSQLFIELD_SETDEFAULTVALUE )
 /*
 void setGenerated ( bool gen )
 */
-HB_FUNC( QSQLFIELD_SETGENERATED )
+HB_FUNC_STATIC( QSQLFIELD_SETGENERATED )
 {
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -396,7 +396,7 @@ HB_FUNC( QSQLFIELD_SETGENERATED )
 /*
 void setLength ( int fieldLength )
 */
-HB_FUNC( QSQLFIELD_SETLENGTH )
+HB_FUNC_STATIC( QSQLFIELD_SETLENGTH )
 {
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -411,7 +411,7 @@ HB_FUNC( QSQLFIELD_SETLENGTH )
 /*
 void setName ( const QString & name )
 */
-HB_FUNC( QSQLFIELD_SETNAME )
+HB_FUNC_STATIC( QSQLFIELD_SETNAME )
 {
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -426,7 +426,7 @@ HB_FUNC( QSQLFIELD_SETNAME )
 /*
 void setPrecision ( int precision )
 */
-HB_FUNC( QSQLFIELD_SETPRECISION )
+HB_FUNC_STATIC( QSQLFIELD_SETPRECISION )
 {
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -441,7 +441,7 @@ HB_FUNC( QSQLFIELD_SETPRECISION )
 /*
 void setReadOnly ( bool readOnly )
 */
-HB_FUNC( QSQLFIELD_SETREADONLY )
+HB_FUNC_STATIC( QSQLFIELD_SETREADONLY )
 {
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -456,7 +456,7 @@ HB_FUNC( QSQLFIELD_SETREADONLY )
 /*
 void setRequired ( bool required )
 */
-HB_FUNC( QSQLFIELD_SETREQUIRED )
+HB_FUNC_STATIC( QSQLFIELD_SETREQUIRED )
 {
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -471,7 +471,7 @@ HB_FUNC( QSQLFIELD_SETREQUIRED )
 /*
 void setRequiredStatus ( RequiredStatus required )
 */
-HB_FUNC( QSQLFIELD_SETREQUIREDSTATUS )
+HB_FUNC_STATIC( QSQLFIELD_SETREQUIREDSTATUS )
 {
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -486,7 +486,7 @@ HB_FUNC( QSQLFIELD_SETREQUIREDSTATUS )
 /*
 void setType ( QVariant::Type type )
 */
-HB_FUNC( QSQLFIELD_SETTYPE )
+HB_FUNC_STATIC( QSQLFIELD_SETTYPE )
 {
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -501,7 +501,7 @@ HB_FUNC( QSQLFIELD_SETTYPE )
 /*
 void setValue ( const QVariant & value )
 */
-HB_FUNC( QSQLFIELD_SETVALUE )
+HB_FUNC_STATIC( QSQLFIELD_SETVALUE )
 {
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -516,7 +516,7 @@ HB_FUNC( QSQLFIELD_SETVALUE )
 /*
 QVariant::Type type () const
 */
-HB_FUNC( QSQLFIELD_TYPE )
+HB_FUNC_STATIC( QSQLFIELD_TYPE )
 {
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -530,7 +530,7 @@ HB_FUNC( QSQLFIELD_TYPE )
 /*
 QVariant value () const
 */
-HB_FUNC( QSQLFIELD_VALUE )
+HB_FUNC_STATIC( QSQLFIELD_VALUE )
 {
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

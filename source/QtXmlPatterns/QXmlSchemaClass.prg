@@ -117,7 +117,7 @@ RETURN
 /*
 QXmlSchema ()
 */
-HB_FUNC( QXMLSCHEMA_NEW1 )
+HB_FUNC_STATIC( QXMLSCHEMA_NEW1 )
 {
   QXmlSchema * o = NULL;
   o = new QXmlSchema (  );
@@ -135,7 +135,7 @@ HB_FUNC( QXMLSCHEMA_NEW1 )
 /*
 QXmlSchema ( const QXmlSchema & other )
 */
-HB_FUNC( QXMLSCHEMA_NEW2 )
+HB_FUNC_STATIC( QXMLSCHEMA_NEW2 )
 {
   QXmlSchema * o = NULL;
   QXmlSchema * par1 = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -154,7 +154,7 @@ HB_FUNC( QXMLSCHEMA_NEW2 )
 //[1]QXmlSchema ()
 //[2]QXmlSchema ( const QXmlSchema & other )
 
-HB_FUNC( QXMLSCHEMA_NEW )
+HB_FUNC_STATIC( QXMLSCHEMA_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -170,7 +170,7 @@ HB_FUNC( QXMLSCHEMA_NEW )
   }
 }
 
-HB_FUNC( QXMLSCHEMA_DELETE )
+HB_FUNC_STATIC( QXMLSCHEMA_DELETE )
 {
   QXmlSchema * obj = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -189,7 +189,7 @@ HB_FUNC( QXMLSCHEMA_DELETE )
 /*
 QUrl documentUri () const
 */
-HB_FUNC( QXMLSCHEMA_DOCUMENTURI )
+HB_FUNC_STATIC( QXMLSCHEMA_DOCUMENTURI )
 {
   QXmlSchema * obj = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -202,7 +202,7 @@ HB_FUNC( QXMLSCHEMA_DOCUMENTURI )
 /*
 bool isValid () const
 */
-HB_FUNC( QXMLSCHEMA_ISVALID )
+HB_FUNC_STATIC( QXMLSCHEMA_ISVALID )
 {
   QXmlSchema * obj = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -216,7 +216,7 @@ HB_FUNC( QXMLSCHEMA_ISVALID )
 /*
 bool load ( const QUrl & source )
 */
-HB_FUNC( QXMLSCHEMA_LOAD1 )
+HB_FUNC_STATIC( QXMLSCHEMA_LOAD1 )
 {
   QXmlSchema * obj = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -231,7 +231,7 @@ HB_FUNC( QXMLSCHEMA_LOAD1 )
 /*
 bool load ( QIODevice * source, const QUrl & documentUri = QUrl() )
 */
-HB_FUNC( QXMLSCHEMA_LOAD2 )
+HB_FUNC_STATIC( QXMLSCHEMA_LOAD2 )
 {
   QXmlSchema * obj = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -247,7 +247,7 @@ HB_FUNC( QXMLSCHEMA_LOAD2 )
 /*
 bool load ( const QByteArray & data, const QUrl & documentUri = QUrl() )
 */
-HB_FUNC( QXMLSCHEMA_LOAD3 )
+HB_FUNC_STATIC( QXMLSCHEMA_LOAD3 )
 {
   QXmlSchema * obj = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -264,7 +264,7 @@ HB_FUNC( QXMLSCHEMA_LOAD3 )
 //[2]bool load ( QIODevice * source, const QUrl & documentUri = QUrl() )
 //[3]bool load ( const QByteArray & data, const QUrl & documentUri = QUrl() )
 
-HB_FUNC( QXMLSCHEMA_LOAD )
+HB_FUNC_STATIC( QXMLSCHEMA_LOAD )
 {
   if( ISNUMPAR(1) && ISQURL(1) )
   {
@@ -283,7 +283,7 @@ HB_FUNC( QXMLSCHEMA_LOAD )
 /*
 QAbstractMessageHandler * messageHandler () const
 */
-HB_FUNC( QXMLSCHEMA_MESSAGEHANDLER )
+HB_FUNC_STATIC( QXMLSCHEMA_MESSAGEHANDLER )
 {
   QXmlSchema * obj = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -296,7 +296,7 @@ HB_FUNC( QXMLSCHEMA_MESSAGEHANDLER )
 /*
 QXmlNamePool namePool () const
 */
-HB_FUNC( QXMLSCHEMA_NAMEPOOL )
+HB_FUNC_STATIC( QXMLSCHEMA_NAMEPOOL )
 {
   QXmlSchema * obj = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -309,7 +309,7 @@ HB_FUNC( QXMLSCHEMA_NAMEPOOL )
 /*
 QNetworkAccessManager * networkAccessManager () const
 */
-HB_FUNC( QXMLSCHEMA_NETWORKACCESSMANAGER )
+HB_FUNC_STATIC( QXMLSCHEMA_NETWORKACCESSMANAGER )
 {
   QXmlSchema * obj = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -322,7 +322,7 @@ HB_FUNC( QXMLSCHEMA_NETWORKACCESSMANAGER )
 /*
 void setMessageHandler ( QAbstractMessageHandler * handler )
 */
-HB_FUNC( QXMLSCHEMA_SETMESSAGEHANDLER )
+HB_FUNC_STATIC( QXMLSCHEMA_SETMESSAGEHANDLER )
 {
   QXmlSchema * obj = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -337,7 +337,7 @@ HB_FUNC( QXMLSCHEMA_SETMESSAGEHANDLER )
 /*
 void setNetworkAccessManager ( QNetworkAccessManager * manager )
 */
-HB_FUNC( QXMLSCHEMA_SETNETWORKACCESSMANAGER )
+HB_FUNC_STATIC( QXMLSCHEMA_SETNETWORKACCESSMANAGER )
 {
   QXmlSchema * obj = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -352,7 +352,7 @@ HB_FUNC( QXMLSCHEMA_SETNETWORKACCESSMANAGER )
 /*
 void setUriResolver ( const QAbstractUriResolver * resolver )
 */
-HB_FUNC( QXMLSCHEMA_SETURIRESOLVER )
+HB_FUNC_STATIC( QXMLSCHEMA_SETURIRESOLVER )
 {
   QXmlSchema * obj = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -367,7 +367,7 @@ HB_FUNC( QXMLSCHEMA_SETURIRESOLVER )
 /*
 const QAbstractUriResolver * uriResolver () const
 */
-HB_FUNC( QXMLSCHEMA_URIRESOLVER )
+HB_FUNC_STATIC( QXMLSCHEMA_URIRESOLVER )
 {
   QXmlSchema * obj = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

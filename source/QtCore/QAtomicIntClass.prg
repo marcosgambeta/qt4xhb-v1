@@ -119,7 +119,7 @@ RETURN
 /*
 QAtomicInt ( int value = 0 )
 */
-HB_FUNC( QATOMICINT_NEW1 )
+HB_FUNC_STATIC( QATOMICINT_NEW1 )
 {
   QAtomicInt * o = NULL;
   int par1 = ISNIL(1)? 0 : hb_parni(1);
@@ -135,7 +135,7 @@ HB_FUNC( QATOMICINT_NEW1 )
 /*
 QAtomicInt ( const QAtomicInt & other )
 */
-HB_FUNC( QATOMICINT_NEW2 )
+HB_FUNC_STATIC( QATOMICINT_NEW2 )
 {
   QAtomicInt * o = NULL;
   QAtomicInt * par1 = (QAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -151,7 +151,7 @@ HB_FUNC( QATOMICINT_NEW2 )
 //[1]QAtomicInt ( int value = 0 )
 //[2]QAtomicInt ( const QAtomicInt & other )
 
-HB_FUNC( QATOMICINT_NEW )
+HB_FUNC_STATIC( QATOMICINT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
@@ -167,7 +167,7 @@ HB_FUNC( QATOMICINT_NEW )
   }
 }
 
-HB_FUNC( QATOMICINT_DELETE )
+HB_FUNC_STATIC( QATOMICINT_DELETE )
 {
   QAtomicInt * obj = (QAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -186,7 +186,7 @@ HB_FUNC( QATOMICINT_DELETE )
 /*
 bool deref ()
 */
-HB_FUNC( QATOMICINT_DEREF )
+HB_FUNC_STATIC( QATOMICINT_DEREF )
 {
   QAtomicInt * obj = (QAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -200,7 +200,7 @@ HB_FUNC( QATOMICINT_DEREF )
 /*
 int fetchAndAddAcquire ( int valueToAdd )
 */
-HB_FUNC( QATOMICINT_FETCHANDADDACQUIRE )
+HB_FUNC_STATIC( QATOMICINT_FETCHANDADDACQUIRE )
 {
   QAtomicInt * obj = (QAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -215,7 +215,7 @@ HB_FUNC( QATOMICINT_FETCHANDADDACQUIRE )
 /*
 int fetchAndAddOrdered ( int valueToAdd )
 */
-HB_FUNC( QATOMICINT_FETCHANDADDORDERED )
+HB_FUNC_STATIC( QATOMICINT_FETCHANDADDORDERED )
 {
   QAtomicInt * obj = (QAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -230,7 +230,7 @@ HB_FUNC( QATOMICINT_FETCHANDADDORDERED )
 /*
 int fetchAndAddRelaxed ( int valueToAdd )
 */
-HB_FUNC( QATOMICINT_FETCHANDADDRELAXED )
+HB_FUNC_STATIC( QATOMICINT_FETCHANDADDRELAXED )
 {
   QAtomicInt * obj = (QAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -245,7 +245,7 @@ HB_FUNC( QATOMICINT_FETCHANDADDRELAXED )
 /*
 int fetchAndAddRelease ( int valueToAdd )
 */
-HB_FUNC( QATOMICINT_FETCHANDADDRELEASE )
+HB_FUNC_STATIC( QATOMICINT_FETCHANDADDRELEASE )
 {
   QAtomicInt * obj = (QAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -260,7 +260,7 @@ HB_FUNC( QATOMICINT_FETCHANDADDRELEASE )
 /*
 int fetchAndStoreAcquire ( int newValue )
 */
-HB_FUNC( QATOMICINT_FETCHANDSTOREACQUIRE )
+HB_FUNC_STATIC( QATOMICINT_FETCHANDSTOREACQUIRE )
 {
   QAtomicInt * obj = (QAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -275,7 +275,7 @@ HB_FUNC( QATOMICINT_FETCHANDSTOREACQUIRE )
 /*
 int fetchAndStoreOrdered ( int newValue )
 */
-HB_FUNC( QATOMICINT_FETCHANDSTOREORDERED )
+HB_FUNC_STATIC( QATOMICINT_FETCHANDSTOREORDERED )
 {
   QAtomicInt * obj = (QAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -290,7 +290,7 @@ HB_FUNC( QATOMICINT_FETCHANDSTOREORDERED )
 /*
 int fetchAndStoreRelaxed ( int newValue )
 */
-HB_FUNC( QATOMICINT_FETCHANDSTORERELAXED )
+HB_FUNC_STATIC( QATOMICINT_FETCHANDSTORERELAXED )
 {
   QAtomicInt * obj = (QAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -305,7 +305,7 @@ HB_FUNC( QATOMICINT_FETCHANDSTORERELAXED )
 /*
 int fetchAndStoreRelease ( int newValue )
 */
-HB_FUNC( QATOMICINT_FETCHANDSTORERELEASE )
+HB_FUNC_STATIC( QATOMICINT_FETCHANDSTORERELEASE )
 {
   QAtomicInt * obj = (QAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -320,7 +320,7 @@ HB_FUNC( QATOMICINT_FETCHANDSTORERELEASE )
 /*
 bool ref ()
 */
-HB_FUNC( QATOMICINT_REF )
+HB_FUNC_STATIC( QATOMICINT_REF )
 {
   QAtomicInt * obj = (QAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -334,7 +334,7 @@ HB_FUNC( QATOMICINT_REF )
 /*
 bool testAndSetAcquire ( int expectedValue, int newValue )
 */
-HB_FUNC( QATOMICINT_TESTANDSETACQUIRE )
+HB_FUNC_STATIC( QATOMICINT_TESTANDSETACQUIRE )
 {
   QAtomicInt * obj = (QAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -350,7 +350,7 @@ HB_FUNC( QATOMICINT_TESTANDSETACQUIRE )
 /*
 bool testAndSetOrdered ( int expectedValue, int newValue )
 */
-HB_FUNC( QATOMICINT_TESTANDSETORDERED )
+HB_FUNC_STATIC( QATOMICINT_TESTANDSETORDERED )
 {
   QAtomicInt * obj = (QAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -366,7 +366,7 @@ HB_FUNC( QATOMICINT_TESTANDSETORDERED )
 /*
 bool testAndSetRelaxed ( int expectedValue, int newValue )
 */
-HB_FUNC( QATOMICINT_TESTANDSETRELAXED )
+HB_FUNC_STATIC( QATOMICINT_TESTANDSETRELAXED )
 {
   QAtomicInt * obj = (QAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -382,7 +382,7 @@ HB_FUNC( QATOMICINT_TESTANDSETRELAXED )
 /*
 bool testAndSetRelease ( int expectedValue, int newValue )
 */
-HB_FUNC( QATOMICINT_TESTANDSETRELEASE )
+HB_FUNC_STATIC( QATOMICINT_TESTANDSETRELEASE )
 {
   QAtomicInt * obj = (QAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -399,7 +399,7 @@ HB_FUNC( QATOMICINT_TESTANDSETRELEASE )
 /*
 bool isFetchAndAddNative ()
 */
-HB_FUNC( QATOMICINT_ISFETCHANDADDNATIVE )
+HB_FUNC_STATIC( QATOMICINT_ISFETCHANDADDNATIVE )
 {
   bool b = QAtomicInt::isFetchAndAddNative (  );
   hb_retl( b );
@@ -409,7 +409,7 @@ HB_FUNC( QATOMICINT_ISFETCHANDADDNATIVE )
 /*
 bool isFetchAndAddWaitFree ()
 */
-HB_FUNC( QATOMICINT_ISFETCHANDADDWAITFREE )
+HB_FUNC_STATIC( QATOMICINT_ISFETCHANDADDWAITFREE )
 {
   bool b = QAtomicInt::isFetchAndAddWaitFree (  );
   hb_retl( b );
@@ -419,7 +419,7 @@ HB_FUNC( QATOMICINT_ISFETCHANDADDWAITFREE )
 /*
 bool isFetchAndStoreNative ()
 */
-HB_FUNC( QATOMICINT_ISFETCHANDSTORENATIVE )
+HB_FUNC_STATIC( QATOMICINT_ISFETCHANDSTORENATIVE )
 {
   bool b = QAtomicInt::isFetchAndStoreNative (  );
   hb_retl( b );
@@ -429,7 +429,7 @@ HB_FUNC( QATOMICINT_ISFETCHANDSTORENATIVE )
 /*
 bool isFetchAndStoreWaitFree ()
 */
-HB_FUNC( QATOMICINT_ISFETCHANDSTOREWAITFREE )
+HB_FUNC_STATIC( QATOMICINT_ISFETCHANDSTOREWAITFREE )
 {
   bool b = QAtomicInt::isFetchAndStoreWaitFree (  );
   hb_retl( b );
@@ -439,7 +439,7 @@ HB_FUNC( QATOMICINT_ISFETCHANDSTOREWAITFREE )
 /*
 bool isReferenceCountingNative ()
 */
-HB_FUNC( QATOMICINT_ISREFERENCECOUNTINGNATIVE )
+HB_FUNC_STATIC( QATOMICINT_ISREFERENCECOUNTINGNATIVE )
 {
   bool b = QAtomicInt::isReferenceCountingNative (  );
   hb_retl( b );
@@ -449,7 +449,7 @@ HB_FUNC( QATOMICINT_ISREFERENCECOUNTINGNATIVE )
 /*
 bool isReferenceCountingWaitFree ()
 */
-HB_FUNC( QATOMICINT_ISREFERENCECOUNTINGWAITFREE )
+HB_FUNC_STATIC( QATOMICINT_ISREFERENCECOUNTINGWAITFREE )
 {
   bool b = QAtomicInt::isReferenceCountingWaitFree (  );
   hb_retl( b );
@@ -459,7 +459,7 @@ HB_FUNC( QATOMICINT_ISREFERENCECOUNTINGWAITFREE )
 /*
 bool isTestAndSetNative ()
 */
-HB_FUNC( QATOMICINT_ISTESTANDSETNATIVE )
+HB_FUNC_STATIC( QATOMICINT_ISTESTANDSETNATIVE )
 {
   bool b = QAtomicInt::isTestAndSetNative (  );
   hb_retl( b );
@@ -469,7 +469,7 @@ HB_FUNC( QATOMICINT_ISTESTANDSETNATIVE )
 /*
 bool isTestAndSetWaitFree ()
 */
-HB_FUNC( QATOMICINT_ISTESTANDSETWAITFREE )
+HB_FUNC_STATIC( QATOMICINT_ISTESTANDSETWAITFREE )
 {
   bool b = QAtomicInt::isTestAndSetWaitFree (  );
   hb_retl( b );

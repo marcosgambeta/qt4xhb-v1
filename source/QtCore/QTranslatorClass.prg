@@ -67,7 +67,7 @@ RETURN
 /*
 QTranslator(QObject * parent = 0)
 */
-HB_FUNC( QTRANSLATOR_NEW )
+HB_FUNC_STATIC( QTRANSLATOR_NEW )
 {
   QTranslator * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -80,7 +80,7 @@ HB_FUNC( QTRANSLATOR_NEW )
 }
 
 
-HB_FUNC( QTRANSLATOR_DELETE )
+HB_FUNC_STATIC( QTRANSLATOR_DELETE )
 {
   QTranslator * obj = (QTranslator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -99,7 +99,7 @@ HB_FUNC( QTRANSLATOR_DELETE )
 /*
 virtual bool isEmpty() const
 */
-HB_FUNC( QTRANSLATOR_ISEMPTY )
+HB_FUNC_STATIC( QTRANSLATOR_ISEMPTY )
 {
   QTranslator * obj = (QTranslator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -113,7 +113,7 @@ HB_FUNC( QTRANSLATOR_ISEMPTY )
 /*
 bool load(const QString & filename, const QString & directory = QString(), const QString & search_delimiters = QString(), const QString & suffix = QString())
 */
-HB_FUNC( QTRANSLATOR_LOAD1 )
+HB_FUNC_STATIC( QTRANSLATOR_LOAD1 )
 {
   QTranslator * obj = (QTranslator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -131,7 +131,7 @@ HB_FUNC( QTRANSLATOR_LOAD1 )
 /*
 bool load(const QLocale & locale, const QString & filename, const QString & prefix = QString(), const QString & directory = QString(), const QString & suffix = QString())
 */
-HB_FUNC( QTRANSLATOR_LOAD2 )
+HB_FUNC_STATIC( QTRANSLATOR_LOAD2 )
 {
   QTranslator * obj = (QTranslator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -152,7 +152,7 @@ HB_FUNC( QTRANSLATOR_LOAD2 )
 //[2]bool load(const QLocale & locale, const QString & filename, const QString & prefix = QString(), const QString & directory = QString(), const QString & suffix = QString())
 //[3]bool load(const uchar * data, int len, const QString & directory = QString())
 
-HB_FUNC( QTRANSLATOR_LOAD )
+HB_FUNC_STATIC( QTRANSLATOR_LOAD )
 {
   if( ISBETWEEN(1,4) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) && (ISCHAR(3)||ISNIL(3)) && (ISCHAR(4)||ISNIL(4)) )
   {
@@ -175,7 +175,7 @@ HB_FUNC( QTRANSLATOR_LOAD )
 /*
 virtual QString translate(const char * context, const char * sourceText, const char * disambiguation = 0, int n = -1) const
 */
-HB_FUNC( QTRANSLATOR_TRANSLATE )
+HB_FUNC_STATIC( QTRANSLATOR_TRANSLATE )
 {
   QTranslator * obj = (QTranslator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

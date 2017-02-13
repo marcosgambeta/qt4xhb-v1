@@ -87,7 +87,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QABSTRACTSLIDER_DELETE )
+HB_FUNC_STATIC( QABSTRACTSLIDER_DELETE )
 {
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -106,7 +106,7 @@ HB_FUNC( QABSTRACTSLIDER_DELETE )
 /*
 bool hasTracking () const
 */
-HB_FUNC( QABSTRACTSLIDER_HASTRACKING )
+HB_FUNC_STATIC( QABSTRACTSLIDER_HASTRACKING )
 {
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -120,7 +120,7 @@ HB_FUNC( QABSTRACTSLIDER_HASTRACKING )
 /*
 bool invertedAppearance () const
 */
-HB_FUNC( QABSTRACTSLIDER_INVERTEDAPPEARANCE )
+HB_FUNC_STATIC( QABSTRACTSLIDER_INVERTEDAPPEARANCE )
 {
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -134,7 +134,7 @@ HB_FUNC( QABSTRACTSLIDER_INVERTEDAPPEARANCE )
 /*
 bool invertedControls () const
 */
-HB_FUNC( QABSTRACTSLIDER_INVERTEDCONTROLS )
+HB_FUNC_STATIC( QABSTRACTSLIDER_INVERTEDCONTROLS )
 {
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -148,7 +148,7 @@ HB_FUNC( QABSTRACTSLIDER_INVERTEDCONTROLS )
 /*
 bool isSliderDown () const
 */
-HB_FUNC( QABSTRACTSLIDER_ISSLIDERDOWN )
+HB_FUNC_STATIC( QABSTRACTSLIDER_ISSLIDERDOWN )
 {
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -162,7 +162,7 @@ HB_FUNC( QABSTRACTSLIDER_ISSLIDERDOWN )
 /*
 int maximum () const
 */
-HB_FUNC( QABSTRACTSLIDER_MAXIMUM )
+HB_FUNC_STATIC( QABSTRACTSLIDER_MAXIMUM )
 {
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -176,7 +176,7 @@ HB_FUNC( QABSTRACTSLIDER_MAXIMUM )
 /*
 int minimum () const
 */
-HB_FUNC( QABSTRACTSLIDER_MINIMUM )
+HB_FUNC_STATIC( QABSTRACTSLIDER_MINIMUM )
 {
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -190,7 +190,7 @@ HB_FUNC( QABSTRACTSLIDER_MINIMUM )
 /*
 Qt::Orientation orientation () const
 */
-HB_FUNC( QABSTRACTSLIDER_ORIENTATION )
+HB_FUNC_STATIC( QABSTRACTSLIDER_ORIENTATION )
 {
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -204,7 +204,7 @@ HB_FUNC( QABSTRACTSLIDER_ORIENTATION )
 /*
 int pageStep () const
 */
-HB_FUNC( QABSTRACTSLIDER_PAGESTEP )
+HB_FUNC_STATIC( QABSTRACTSLIDER_PAGESTEP )
 {
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -218,7 +218,7 @@ HB_FUNC( QABSTRACTSLIDER_PAGESTEP )
 /*
 void setInvertedAppearance ( bool )
 */
-HB_FUNC( QABSTRACTSLIDER_SETINVERTEDAPPEARANCE )
+HB_FUNC_STATIC( QABSTRACTSLIDER_SETINVERTEDAPPEARANCE )
 {
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -233,7 +233,7 @@ HB_FUNC( QABSTRACTSLIDER_SETINVERTEDAPPEARANCE )
 /*
 void setInvertedControls ( bool )
 */
-HB_FUNC( QABSTRACTSLIDER_SETINVERTEDCONTROLS )
+HB_FUNC_STATIC( QABSTRACTSLIDER_SETINVERTEDCONTROLS )
 {
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -248,7 +248,7 @@ HB_FUNC( QABSTRACTSLIDER_SETINVERTEDCONTROLS )
 /*
 void setMaximum ( int )
 */
-HB_FUNC( QABSTRACTSLIDER_SETMAXIMUM )
+HB_FUNC_STATIC( QABSTRACTSLIDER_SETMAXIMUM )
 {
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -263,7 +263,7 @@ HB_FUNC( QABSTRACTSLIDER_SETMAXIMUM )
 /*
 void setMinimum ( int )
 */
-HB_FUNC( QABSTRACTSLIDER_SETMINIMUM )
+HB_FUNC_STATIC( QABSTRACTSLIDER_SETMINIMUM )
 {
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -278,7 +278,7 @@ HB_FUNC( QABSTRACTSLIDER_SETMINIMUM )
 /*
 void setPageStep ( int )
 */
-HB_FUNC( QABSTRACTSLIDER_SETPAGESTEP )
+HB_FUNC_STATIC( QABSTRACTSLIDER_SETPAGESTEP )
 {
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -293,7 +293,7 @@ HB_FUNC( QABSTRACTSLIDER_SETPAGESTEP )
 /*
 void setRange ( int min, int max )
 */
-HB_FUNC( QABSTRACTSLIDER_SETRANGE )
+HB_FUNC_STATIC( QABSTRACTSLIDER_SETRANGE )
 {
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -309,7 +309,7 @@ HB_FUNC( QABSTRACTSLIDER_SETRANGE )
 /*
 void setSingleStep ( int )
 */
-HB_FUNC( QABSTRACTSLIDER_SETSINGLESTEP )
+HB_FUNC_STATIC( QABSTRACTSLIDER_SETSINGLESTEP )
 {
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -324,7 +324,7 @@ HB_FUNC( QABSTRACTSLIDER_SETSINGLESTEP )
 /*
 void setSliderDown ( bool )
 */
-HB_FUNC( QABSTRACTSLIDER_SETSLIDERDOWN )
+HB_FUNC_STATIC( QABSTRACTSLIDER_SETSLIDERDOWN )
 {
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -339,7 +339,7 @@ HB_FUNC( QABSTRACTSLIDER_SETSLIDERDOWN )
 /*
 void setSliderPosition ( int )
 */
-HB_FUNC( QABSTRACTSLIDER_SETSLIDERPOSITION )
+HB_FUNC_STATIC( QABSTRACTSLIDER_SETSLIDERPOSITION )
 {
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -354,7 +354,7 @@ HB_FUNC( QABSTRACTSLIDER_SETSLIDERPOSITION )
 /*
 void setTracking ( bool enable )
 */
-HB_FUNC( QABSTRACTSLIDER_SETTRACKING )
+HB_FUNC_STATIC( QABSTRACTSLIDER_SETTRACKING )
 {
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -369,7 +369,7 @@ HB_FUNC( QABSTRACTSLIDER_SETTRACKING )
 /*
 int singleStep () const
 */
-HB_FUNC( QABSTRACTSLIDER_SINGLESTEP )
+HB_FUNC_STATIC( QABSTRACTSLIDER_SINGLESTEP )
 {
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -383,7 +383,7 @@ HB_FUNC( QABSTRACTSLIDER_SINGLESTEP )
 /*
 int sliderPosition () const
 */
-HB_FUNC( QABSTRACTSLIDER_SLIDERPOSITION )
+HB_FUNC_STATIC( QABSTRACTSLIDER_SLIDERPOSITION )
 {
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -397,7 +397,7 @@ HB_FUNC( QABSTRACTSLIDER_SLIDERPOSITION )
 /*
 void triggerAction ( SliderAction action )
 */
-HB_FUNC( QABSTRACTSLIDER_TRIGGERACTION )
+HB_FUNC_STATIC( QABSTRACTSLIDER_TRIGGERACTION )
 {
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -412,7 +412,7 @@ HB_FUNC( QABSTRACTSLIDER_TRIGGERACTION )
 /*
 int value () const
 */
-HB_FUNC( QABSTRACTSLIDER_VALUE )
+HB_FUNC_STATIC( QABSTRACTSLIDER_VALUE )
 {
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -426,7 +426,7 @@ HB_FUNC( QABSTRACTSLIDER_VALUE )
 /*
 void setOrientation ( Qt::Orientation )
 */
-HB_FUNC( QABSTRACTSLIDER_SETORIENTATION )
+HB_FUNC_STATIC( QABSTRACTSLIDER_SETORIENTATION )
 {
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -441,7 +441,7 @@ HB_FUNC( QABSTRACTSLIDER_SETORIENTATION )
 /*
 void setValue ( int )
 */
-HB_FUNC( QABSTRACTSLIDER_SETVALUE )
+HB_FUNC_STATIC( QABSTRACTSLIDER_SETVALUE )
 {
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

@@ -101,7 +101,7 @@ RETURN
 /*
 QSqlRelation ()
 */
-HB_FUNC( QSQLRELATION_NEW1 )
+HB_FUNC_STATIC( QSQLRELATION_NEW1 )
 {
   QSqlRelation * o = NULL;
   o = new QSqlRelation (  );
@@ -119,7 +119,7 @@ HB_FUNC( QSQLRELATION_NEW1 )
 /*
 QSqlRelation ( const QString & tableName, const QString & indexColumn, const QString & displayColumn )
 */
-HB_FUNC( QSQLRELATION_NEW2 )
+HB_FUNC_STATIC( QSQLRELATION_NEW2 )
 {
   QSqlRelation * o = NULL;
   QString par1 = hb_parc(1);
@@ -140,7 +140,7 @@ HB_FUNC( QSQLRELATION_NEW2 )
 //[1]QSqlRelation ()
 //[2]QSqlRelation ( const QString & tableName, const QString & indexColumn, const QString & displayColumn )
 
-HB_FUNC( QSQLRELATION_NEW )
+HB_FUNC_STATIC( QSQLRELATION_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -160,7 +160,7 @@ HB_FUNC( QSQLRELATION_NEW )
 /*
 QString displayColumn () const
 */
-HB_FUNC( QSQLRELATION_DISPLAYCOLUMN )
+HB_FUNC_STATIC( QSQLRELATION_DISPLAYCOLUMN )
 {
   QSqlRelation * obj = (QSqlRelation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -174,7 +174,7 @@ HB_FUNC( QSQLRELATION_DISPLAYCOLUMN )
 /*
 QString indexColumn () const
 */
-HB_FUNC( QSQLRELATION_INDEXCOLUMN )
+HB_FUNC_STATIC( QSQLRELATION_INDEXCOLUMN )
 {
   QSqlRelation * obj = (QSqlRelation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -188,7 +188,7 @@ HB_FUNC( QSQLRELATION_INDEXCOLUMN )
 /*
 bool isValid () const
 */
-HB_FUNC( QSQLRELATION_ISVALID )
+HB_FUNC_STATIC( QSQLRELATION_ISVALID )
 {
   QSqlRelation * obj = (QSqlRelation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -202,7 +202,7 @@ HB_FUNC( QSQLRELATION_ISVALID )
 /*
 QString tableName () const
 */
-HB_FUNC( QSQLRELATION_TABLENAME )
+HB_FUNC_STATIC( QSQLRELATION_TABLENAME )
 {
   QSqlRelation * obj = (QSqlRelation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

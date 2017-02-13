@@ -102,7 +102,7 @@ RETURN
 
 #include <QScriptValue>
 
-HB_FUNC( QSCRIPTABLE_DELETE )
+HB_FUNC_STATIC( QSCRIPTABLE_DELETE )
 {
   QScriptable * obj = (QScriptable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -121,7 +121,7 @@ HB_FUNC( QSCRIPTABLE_DELETE )
 /*
 QScriptValue argument ( int index ) const
 */
-HB_FUNC( QSCRIPTABLE_ARGUMENT )
+HB_FUNC_STATIC( QSCRIPTABLE_ARGUMENT )
 {
   QScriptable * obj = (QScriptable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -135,7 +135,7 @@ HB_FUNC( QSCRIPTABLE_ARGUMENT )
 /*
 int argumentCount () const
 */
-HB_FUNC( QSCRIPTABLE_ARGUMENTCOUNT )
+HB_FUNC_STATIC( QSCRIPTABLE_ARGUMENTCOUNT )
 {
   QScriptable * obj = (QScriptable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -149,7 +149,7 @@ HB_FUNC( QSCRIPTABLE_ARGUMENTCOUNT )
 /*
 QScriptContext * context () const
 */
-HB_FUNC( QSCRIPTABLE_CONTEXT )
+HB_FUNC_STATIC( QSCRIPTABLE_CONTEXT )
 {
   QScriptable * obj = (QScriptable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -162,7 +162,7 @@ HB_FUNC( QSCRIPTABLE_CONTEXT )
 /*
 QScriptEngine * engine () const
 */
-HB_FUNC( QSCRIPTABLE_ENGINE )
+HB_FUNC_STATIC( QSCRIPTABLE_ENGINE )
 {
   QScriptable * obj = (QScriptable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -175,7 +175,7 @@ HB_FUNC( QSCRIPTABLE_ENGINE )
 /*
 QScriptValue thisObject () const
 */
-HB_FUNC( QSCRIPTABLE_THISOBJECT )
+HB_FUNC_STATIC( QSCRIPTABLE_THISOBJECT )
 {
   QScriptable * obj = (QScriptable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

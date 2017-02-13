@@ -147,7 +147,7 @@ RETURN
 /*
 QPlatformWindowFormat ()
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_NEW1 )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_NEW1 )
 {
   QPlatformWindowFormat * o = NULL;
   o = new QPlatformWindowFormat (  );
@@ -162,7 +162,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_NEW1 )
 /*
 QPlatformWindowFormat ( FormatOptions options )
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_NEW2 )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_NEW2 )
 {
   QPlatformWindowFormat * o = NULL;
   int par1 = hb_parni(1);
@@ -178,7 +178,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_NEW2 )
 /*
 QPlatformWindowFormat ( const QPlatformWindowFormat & other )
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_NEW3 )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_NEW3 )
 {
   QPlatformWindowFormat * o = NULL;
   QPlatformWindowFormat * par1 = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -195,7 +195,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_NEW3 )
 //[2]QPlatformWindowFormat ( FormatOptions options )
 //[3]QPlatformWindowFormat ( const QPlatformWindowFormat & other )
 
-HB_FUNC( QPLATFORMWINDOWFORMAT_NEW )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -215,7 +215,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_NEW )
   }
 }
 
-HB_FUNC( QPLATFORMWINDOWFORMAT_DELETE )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_DELETE )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -234,7 +234,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_DELETE )
 /*
 bool accum () const
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_ACCUM )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_ACCUM )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -248,7 +248,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_ACCUM )
 /*
 int accumBufferSize () const
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_ACCUMBUFFERSIZE )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_ACCUMBUFFERSIZE )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -262,7 +262,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_ACCUMBUFFERSIZE )
 /*
 bool alpha () const
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_ALPHA )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_ALPHA )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -276,7 +276,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_ALPHA )
 /*
 int alphaBufferSize () const
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_ALPHABUFFERSIZE )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_ALPHABUFFERSIZE )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -290,7 +290,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_ALPHABUFFERSIZE )
 /*
 int blueBufferSize () const
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_BLUEBUFFERSIZE )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_BLUEBUFFERSIZE )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -304,7 +304,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_BLUEBUFFERSIZE )
 /*
 bool depth () const
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_DEPTH )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_DEPTH )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -318,7 +318,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_DEPTH )
 /*
 int depthBufferSize () const
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_DEPTHBUFFERSIZE )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_DEPTHBUFFERSIZE )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -332,7 +332,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_DEPTHBUFFERSIZE )
 /*
 bool directRendering () const
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_DIRECTRENDERING )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_DIRECTRENDERING )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -346,7 +346,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_DIRECTRENDERING )
 /*
 bool doubleBuffer () const
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_DOUBLEBUFFER )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_DOUBLEBUFFER )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -360,7 +360,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_DOUBLEBUFFER )
 /*
 int greenBufferSize () const
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_GREENBUFFERSIZE )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_GREENBUFFERSIZE )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -374,7 +374,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_GREENBUFFERSIZE )
 /*
 bool hasWindowSurface () const
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_HASWINDOWSURFACE )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_HASWINDOWSURFACE )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -388,7 +388,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_HASWINDOWSURFACE )
 /*
 int redBufferSize () const
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_REDBUFFERSIZE )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_REDBUFFERSIZE )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -402,7 +402,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_REDBUFFERSIZE )
 /*
 bool rgba () const
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_RGBA )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_RGBA )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -416,7 +416,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_RGBA )
 /*
 bool sampleBuffers () const
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_SAMPLEBUFFERS )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SAMPLEBUFFERS )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -430,7 +430,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_SAMPLEBUFFERS )
 /*
 int samples () const
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_SAMPLES )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SAMPLES )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -444,7 +444,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_SAMPLES )
 /*
 void setAccum ( bool enable )
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_SETACCUM )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETACCUM )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -459,7 +459,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_SETACCUM )
 /*
 void setAccumBufferSize ( int size )
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_SETACCUMBUFFERSIZE )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETACCUMBUFFERSIZE )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -474,7 +474,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_SETACCUMBUFFERSIZE )
 /*
 void setAlpha ( bool enable )
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_SETALPHA )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETALPHA )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -489,7 +489,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_SETALPHA )
 /*
 void setAlphaBufferSize ( int size )
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_SETALPHABUFFERSIZE )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETALPHABUFFERSIZE )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -504,7 +504,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_SETALPHABUFFERSIZE )
 /*
 void setBlueBufferSize ( int size )
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_SETBLUEBUFFERSIZE )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETBLUEBUFFERSIZE )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -519,7 +519,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_SETBLUEBUFFERSIZE )
 /*
 void setDepth ( bool enable )
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_SETDEPTH )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETDEPTH )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -534,7 +534,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_SETDEPTH )
 /*
 void setDepthBufferSize ( int size )
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_SETDEPTHBUFFERSIZE )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETDEPTHBUFFERSIZE )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -549,7 +549,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_SETDEPTHBUFFERSIZE )
 /*
 void setDirectRendering ( bool enable )
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_SETDIRECTRENDERING )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETDIRECTRENDERING )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -564,7 +564,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_SETDIRECTRENDERING )
 /*
 void setDoubleBuffer ( bool enable )
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_SETDOUBLEBUFFER )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETDOUBLEBUFFER )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -579,7 +579,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_SETDOUBLEBUFFER )
 /*
 void setGreenBufferSize ( int size )
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_SETGREENBUFFERSIZE )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETGREENBUFFERSIZE )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -594,7 +594,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_SETGREENBUFFERSIZE )
 /*
 void setOption ( QPlatformWindowFormat::FormatOptions opt )
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_SETOPTION )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETOPTION )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -609,7 +609,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_SETOPTION )
 /*
 void setRedBufferSize ( int size )
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_SETREDBUFFERSIZE )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETREDBUFFERSIZE )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -624,7 +624,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_SETREDBUFFERSIZE )
 /*
 void setRgba ( bool enable )
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_SETRGBA )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETRGBA )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -639,7 +639,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_SETRGBA )
 /*
 void setSampleBuffers ( bool enable )
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_SETSAMPLEBUFFERS )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETSAMPLEBUFFERS )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -654,7 +654,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_SETSAMPLEBUFFERS )
 /*
 void setSamples ( int numSamples )
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_SETSAMPLES )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETSAMPLES )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -669,7 +669,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_SETSAMPLES )
 /*
 void setSharedContext ( QPlatformGLContext * context )
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_SETSHAREDCONTEXT )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETSHAREDCONTEXT )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -684,7 +684,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_SETSHAREDCONTEXT )
 /*
 void setStencil ( bool enable )
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_SETSTENCIL )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETSTENCIL )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -699,7 +699,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_SETSTENCIL )
 /*
 void setStencilBufferSize ( int size )
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_SETSTENCILBUFFERSIZE )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETSTENCILBUFFERSIZE )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -714,7 +714,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_SETSTENCILBUFFERSIZE )
 /*
 void setStereo ( bool enable )
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_SETSTEREO )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETSTEREO )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -729,7 +729,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_SETSTEREO )
 /*
 void setSwapInterval ( int interval )
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_SETSWAPINTERVAL )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETSWAPINTERVAL )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -744,7 +744,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_SETSWAPINTERVAL )
 /*
 void setWindowApi ( QPlatformWindowFormat::WindowApi api )
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_SETWINDOWAPI )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETWINDOWAPI )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -759,7 +759,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_SETWINDOWAPI )
 /*
 void setWindowSurface ( bool enable )
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_SETWINDOWSURFACE )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETWINDOWSURFACE )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -774,7 +774,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_SETWINDOWSURFACE )
 /*
 QPlatformGLContext * sharedGLContext () const
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_SHAREDGLCONTEXT )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SHAREDGLCONTEXT )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -787,7 +787,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_SHAREDGLCONTEXT )
 /*
 bool stencil () const
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_STENCIL )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_STENCIL )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -801,7 +801,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_STENCIL )
 /*
 int stencilBufferSize () const
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_STENCILBUFFERSIZE )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_STENCILBUFFERSIZE )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -815,7 +815,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_STENCILBUFFERSIZE )
 /*
 bool stereo () const
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_STEREO )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_STEREO )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -829,7 +829,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_STEREO )
 /*
 int swapInterval () const
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_SWAPINTERVAL )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SWAPINTERVAL )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -843,7 +843,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_SWAPINTERVAL )
 /*
 bool testOption ( QPlatformWindowFormat::FormatOptions opt ) const
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_TESTOPTION )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_TESTOPTION )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -858,7 +858,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_TESTOPTION )
 /*
 WindowApi windowApi () const
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_WINDOWAPI )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_WINDOWAPI )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -873,7 +873,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_WINDOWAPI )
 /*
 QPlatformWindowFormat defaultFormat ()
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_DEFAULTFORMAT )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_DEFAULTFORMAT )
 {
   QPlatformWindowFormat * ptr = new QPlatformWindowFormat( QPlatformWindowFormat::defaultFormat (  ) );
   _qt4xhb_createReturnClass ( ptr, "QPLATFORMWINDOWFORMAT" );}
@@ -882,7 +882,7 @@ HB_FUNC( QPLATFORMWINDOWFORMAT_DEFAULTFORMAT )
 /*
 void setDefaultFormat ( const QPlatformWindowFormat & f )
 */
-HB_FUNC( QPLATFORMWINDOWFORMAT_SETDEFAULTFORMAT )
+HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETDEFAULTFORMAT )
 {
   QPlatformWindowFormat * par1 = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QPlatformWindowFormat::setDefaultFormat ( *par1 );

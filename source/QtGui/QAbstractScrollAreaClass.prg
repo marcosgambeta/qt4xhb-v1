@@ -78,7 +78,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QABSTRACTSCROLLAREA_DELETE )
+HB_FUNC_STATIC( QABSTRACTSCROLLAREA_DELETE )
 {
   QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -97,7 +97,7 @@ HB_FUNC( QABSTRACTSCROLLAREA_DELETE )
 /*
 void addScrollBarWidget ( QWidget * widget, Qt::Alignment alignment )
 */
-HB_FUNC( QABSTRACTSCROLLAREA_ADDSCROLLBARWIDGET )
+HB_FUNC_STATIC( QABSTRACTSCROLLAREA_ADDSCROLLBARWIDGET )
 {
   QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -113,7 +113,7 @@ HB_FUNC( QABSTRACTSCROLLAREA_ADDSCROLLBARWIDGET )
 /*
 QWidget * cornerWidget () const
 */
-HB_FUNC( QABSTRACTSCROLLAREA_CORNERWIDGET )
+HB_FUNC_STATIC( QABSTRACTSCROLLAREA_CORNERWIDGET )
 {
   QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -126,7 +126,7 @@ HB_FUNC( QABSTRACTSCROLLAREA_CORNERWIDGET )
 /*
 QScrollBar * horizontalScrollBar () const
 */
-HB_FUNC( QABSTRACTSCROLLAREA_HORIZONTALSCROLLBAR )
+HB_FUNC_STATIC( QABSTRACTSCROLLAREA_HORIZONTALSCROLLBAR )
 {
   QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -139,7 +139,7 @@ HB_FUNC( QABSTRACTSCROLLAREA_HORIZONTALSCROLLBAR )
 /*
 Qt::ScrollBarPolicy horizontalScrollBarPolicy () const
 */
-HB_FUNC( QABSTRACTSCROLLAREA_HORIZONTALSCROLLBARPOLICY )
+HB_FUNC_STATIC( QABSTRACTSCROLLAREA_HORIZONTALSCROLLBARPOLICY )
 {
   QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -153,7 +153,7 @@ HB_FUNC( QABSTRACTSCROLLAREA_HORIZONTALSCROLLBARPOLICY )
 /*
 QSize maximumViewportSize () const
 */
-HB_FUNC( QABSTRACTSCROLLAREA_MAXIMUMVIEWPORTSIZE )
+HB_FUNC_STATIC( QABSTRACTSCROLLAREA_MAXIMUMVIEWPORTSIZE )
 {
   QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -166,7 +166,7 @@ HB_FUNC( QABSTRACTSCROLLAREA_MAXIMUMVIEWPORTSIZE )
 /*
 QWidgetList scrollBarWidgets ( Qt::Alignment alignment )
 */
-HB_FUNC( QABSTRACTSCROLLAREA_SCROLLBARWIDGETS )
+HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SCROLLBARWIDGETS )
 {
   QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -211,7 +211,7 @@ HB_FUNC( QABSTRACTSCROLLAREA_SCROLLBARWIDGETS )
 /*
 void setCornerWidget ( QWidget * widget )
 */
-HB_FUNC( QABSTRACTSCROLLAREA_SETCORNERWIDGET )
+HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETCORNERWIDGET )
 {
   QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -226,7 +226,7 @@ HB_FUNC( QABSTRACTSCROLLAREA_SETCORNERWIDGET )
 /*
 void setHorizontalScrollBar ( QScrollBar * scrollBar )
 */
-HB_FUNC( QABSTRACTSCROLLAREA_SETHORIZONTALSCROLLBAR )
+HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETHORIZONTALSCROLLBAR )
 {
   QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -241,7 +241,7 @@ HB_FUNC( QABSTRACTSCROLLAREA_SETHORIZONTALSCROLLBAR )
 /*
 void setHorizontalScrollBarPolicy ( Qt::ScrollBarPolicy )
 */
-HB_FUNC( QABSTRACTSCROLLAREA_SETHORIZONTALSCROLLBARPOLICY )
+HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETHORIZONTALSCROLLBARPOLICY )
 {
   QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -256,7 +256,7 @@ HB_FUNC( QABSTRACTSCROLLAREA_SETHORIZONTALSCROLLBARPOLICY )
 /*
 void setVerticalScrollBar ( QScrollBar * scrollBar )
 */
-HB_FUNC( QABSTRACTSCROLLAREA_SETVERTICALSCROLLBAR )
+HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETVERTICALSCROLLBAR )
 {
   QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -271,7 +271,7 @@ HB_FUNC( QABSTRACTSCROLLAREA_SETVERTICALSCROLLBAR )
 /*
 void setVerticalScrollBarPolicy ( Qt::ScrollBarPolicy )
 */
-HB_FUNC( QABSTRACTSCROLLAREA_SETVERTICALSCROLLBARPOLICY )
+HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETVERTICALSCROLLBARPOLICY )
 {
   QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -286,7 +286,7 @@ HB_FUNC( QABSTRACTSCROLLAREA_SETVERTICALSCROLLBARPOLICY )
 /*
 void setViewport ( QWidget * widget )
 */
-HB_FUNC( QABSTRACTSCROLLAREA_SETVIEWPORT )
+HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETVIEWPORT )
 {
   QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -301,7 +301,7 @@ HB_FUNC( QABSTRACTSCROLLAREA_SETVIEWPORT )
 /*
 QScrollBar * verticalScrollBar () const
 */
-HB_FUNC( QABSTRACTSCROLLAREA_VERTICALSCROLLBAR )
+HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VERTICALSCROLLBAR )
 {
   QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -314,7 +314,7 @@ HB_FUNC( QABSTRACTSCROLLAREA_VERTICALSCROLLBAR )
 /*
 Qt::ScrollBarPolicy verticalScrollBarPolicy () const
 */
-HB_FUNC( QABSTRACTSCROLLAREA_VERTICALSCROLLBARPOLICY )
+HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VERTICALSCROLLBARPOLICY )
 {
   QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -328,7 +328,7 @@ HB_FUNC( QABSTRACTSCROLLAREA_VERTICALSCROLLBARPOLICY )
 /*
 QWidget * viewport () const
 */
-HB_FUNC( QABSTRACTSCROLLAREA_VIEWPORT )
+HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VIEWPORT )
 {
   QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -341,7 +341,7 @@ HB_FUNC( QABSTRACTSCROLLAREA_VIEWPORT )
 /*
 virtual QSize minimumSizeHint () const
 */
-HB_FUNC( QABSTRACTSCROLLAREA_MINIMUMSIZEHINT )
+HB_FUNC_STATIC( QABSTRACTSCROLLAREA_MINIMUMSIZEHINT )
 {
   QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -354,7 +354,7 @@ HB_FUNC( QABSTRACTSCROLLAREA_MINIMUMSIZEHINT )
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC( QABSTRACTSCROLLAREA_SIZEHINT )
+HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SIZEHINT )
 {
   QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

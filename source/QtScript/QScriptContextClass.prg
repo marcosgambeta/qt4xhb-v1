@@ -115,7 +115,7 @@ RETURN
 
 #include <QStringList>
 
-HB_FUNC( QSCRIPTCONTEXT_DELETE )
+HB_FUNC_STATIC( QSCRIPTCONTEXT_DELETE )
 {
   QScriptContext * obj = (QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -134,7 +134,7 @@ HB_FUNC( QSCRIPTCONTEXT_DELETE )
 /*
 QScriptValue activationObject () const
 */
-HB_FUNC( QSCRIPTCONTEXT_ACTIVATIONOBJECT )
+HB_FUNC_STATIC( QSCRIPTCONTEXT_ACTIVATIONOBJECT )
 {
   QScriptContext * obj = (QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -147,7 +147,7 @@ HB_FUNC( QSCRIPTCONTEXT_ACTIVATIONOBJECT )
 /*
 QScriptValue argument ( int index ) const
 */
-HB_FUNC( QSCRIPTCONTEXT_ARGUMENT )
+HB_FUNC_STATIC( QSCRIPTCONTEXT_ARGUMENT )
 {
   QScriptContext * obj = (QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -161,7 +161,7 @@ HB_FUNC( QSCRIPTCONTEXT_ARGUMENT )
 /*
 int argumentCount () const
 */
-HB_FUNC( QSCRIPTCONTEXT_ARGUMENTCOUNT )
+HB_FUNC_STATIC( QSCRIPTCONTEXT_ARGUMENTCOUNT )
 {
   QScriptContext * obj = (QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -175,7 +175,7 @@ HB_FUNC( QSCRIPTCONTEXT_ARGUMENTCOUNT )
 /*
 QScriptValue argumentsObject () const
 */
-HB_FUNC( QSCRIPTCONTEXT_ARGUMENTSOBJECT )
+HB_FUNC_STATIC( QSCRIPTCONTEXT_ARGUMENTSOBJECT )
 {
   QScriptContext * obj = (QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -188,7 +188,7 @@ HB_FUNC( QSCRIPTCONTEXT_ARGUMENTSOBJECT )
 /*
 QStringList backtrace () const
 */
-HB_FUNC( QSCRIPTCONTEXT_BACKTRACE )
+HB_FUNC_STATIC( QSCRIPTCONTEXT_BACKTRACE )
 {
   QScriptContext * obj = (QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -211,7 +211,7 @@ HB_FUNC( QSCRIPTCONTEXT_BACKTRACE )
 /*
 QScriptValue callee () const
 */
-HB_FUNC( QSCRIPTCONTEXT_CALLEE )
+HB_FUNC_STATIC( QSCRIPTCONTEXT_CALLEE )
 {
   QScriptContext * obj = (QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -224,7 +224,7 @@ HB_FUNC( QSCRIPTCONTEXT_CALLEE )
 /*
 QScriptEngine * engine () const
 */
-HB_FUNC( QSCRIPTCONTEXT_ENGINE )
+HB_FUNC_STATIC( QSCRIPTCONTEXT_ENGINE )
 {
   QScriptContext * obj = (QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -237,7 +237,7 @@ HB_FUNC( QSCRIPTCONTEXT_ENGINE )
 /*
 bool isCalledAsConstructor () const
 */
-HB_FUNC( QSCRIPTCONTEXT_ISCALLEDASCONSTRUCTOR )
+HB_FUNC_STATIC( QSCRIPTCONTEXT_ISCALLEDASCONSTRUCTOR )
 {
   QScriptContext * obj = (QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -251,7 +251,7 @@ HB_FUNC( QSCRIPTCONTEXT_ISCALLEDASCONSTRUCTOR )
 /*
 QScriptContext * parentContext () const
 */
-HB_FUNC( QSCRIPTCONTEXT_PARENTCONTEXT )
+HB_FUNC_STATIC( QSCRIPTCONTEXT_PARENTCONTEXT )
 {
   QScriptContext * obj = (QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -264,7 +264,7 @@ HB_FUNC( QSCRIPTCONTEXT_PARENTCONTEXT )
 /*
 void setActivationObject ( const QScriptValue & activation )
 */
-HB_FUNC( QSCRIPTCONTEXT_SETACTIVATIONOBJECT )
+HB_FUNC_STATIC( QSCRIPTCONTEXT_SETACTIVATIONOBJECT )
 {
   QScriptContext * obj = (QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -279,7 +279,7 @@ HB_FUNC( QSCRIPTCONTEXT_SETACTIVATIONOBJECT )
 /*
 void setThisObject ( const QScriptValue & thisObject )
 */
-HB_FUNC( QSCRIPTCONTEXT_SETTHISOBJECT )
+HB_FUNC_STATIC( QSCRIPTCONTEXT_SETTHISOBJECT )
 {
   QScriptContext * obj = (QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -294,7 +294,7 @@ HB_FUNC( QSCRIPTCONTEXT_SETTHISOBJECT )
 /*
 ExecutionState state () const
 */
-HB_FUNC( QSCRIPTCONTEXT_STATE )
+HB_FUNC_STATIC( QSCRIPTCONTEXT_STATE )
 {
   QScriptContext * obj = (QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -308,7 +308,7 @@ HB_FUNC( QSCRIPTCONTEXT_STATE )
 /*
 QScriptValue thisObject () const
 */
-HB_FUNC( QSCRIPTCONTEXT_THISOBJECT )
+HB_FUNC_STATIC( QSCRIPTCONTEXT_THISOBJECT )
 {
   QScriptContext * obj = (QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -321,7 +321,7 @@ HB_FUNC( QSCRIPTCONTEXT_THISOBJECT )
 /*
 QScriptValue throwError ( Error error, const QString & text )
 */
-HB_FUNC( QSCRIPTCONTEXT_THROWERROR1 )
+HB_FUNC_STATIC( QSCRIPTCONTEXT_THROWERROR1 )
 {
   QScriptContext * obj = (QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -336,7 +336,7 @@ HB_FUNC( QSCRIPTCONTEXT_THROWERROR1 )
 /*
 QScriptValue throwError ( const QString & text )
 */
-HB_FUNC( QSCRIPTCONTEXT_THROWERROR2 )
+HB_FUNC_STATIC( QSCRIPTCONTEXT_THROWERROR2 )
 {
   QScriptContext * obj = (QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -350,7 +350,7 @@ HB_FUNC( QSCRIPTCONTEXT_THROWERROR2 )
 //[1]QScriptValue throwError ( Error error, const QString & text )
 //[2]QScriptValue throwError ( const QString & text )
 
-HB_FUNC( QSCRIPTCONTEXT_THROWERROR )
+HB_FUNC_STATIC( QSCRIPTCONTEXT_THROWERROR )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
   {
@@ -365,7 +365,7 @@ HB_FUNC( QSCRIPTCONTEXT_THROWERROR )
 /*
 QScriptValue throwValue ( const QScriptValue & value )
 */
-HB_FUNC( QSCRIPTCONTEXT_THROWVALUE )
+HB_FUNC_STATIC( QSCRIPTCONTEXT_THROWVALUE )
 {
   QScriptContext * obj = (QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -379,7 +379,7 @@ HB_FUNC( QSCRIPTCONTEXT_THROWVALUE )
 /*
 QString toString () const
 */
-HB_FUNC( QSCRIPTCONTEXT_TOSTRING )
+HB_FUNC_STATIC( QSCRIPTCONTEXT_TOSTRING )
 {
   QScriptContext * obj = (QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

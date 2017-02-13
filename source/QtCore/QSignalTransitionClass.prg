@@ -69,7 +69,7 @@ RETURN
 /*
 QSignalTransition(QState *sourceState = 0)
 */
-HB_FUNC( QSIGNALTRANSITION_NEW1 )
+HB_FUNC_STATIC( QSIGNALTRANSITION_NEW1 )
 {
   QSignalTransition * o = NULL;
   QState * par1 = ISNIL(1)? 0 : (QState *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -85,7 +85,7 @@ HB_FUNC( QSIGNALTRANSITION_NEW1 )
 /*
 QSignalTransition(QObject *sender, const char *signal,QState *sourceState = 0)
 */
-HB_FUNC( QSIGNALTRANSITION_NEW2 )
+HB_FUNC_STATIC( QSIGNALTRANSITION_NEW2 )
 {
   QSignalTransition * o = NULL;
   QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -103,7 +103,7 @@ HB_FUNC( QSIGNALTRANSITION_NEW2 )
 //[1]QSignalTransition(QState *sourceState = 0)
 //[2]QSignalTransition(QObject *sender, const char *signal,QState *sourceState = 0)
 
-HB_FUNC( QSIGNALTRANSITION_NEW )
+HB_FUNC_STATIC( QSIGNALTRANSITION_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQSTATE(1)||ISNIL(1)) )
   {
@@ -119,7 +119,7 @@ HB_FUNC( QSIGNALTRANSITION_NEW )
   }
 }
 
-HB_FUNC( QSIGNALTRANSITION_DELETE )
+HB_FUNC_STATIC( QSIGNALTRANSITION_DELETE )
 {
   QSignalTransition * obj = (QSignalTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -138,7 +138,7 @@ HB_FUNC( QSIGNALTRANSITION_DELETE )
 /*
 QObject *senderObject() const
 */
-HB_FUNC( QSIGNALTRANSITION_SENDEROBJECT )
+HB_FUNC_STATIC( QSIGNALTRANSITION_SENDEROBJECT )
 {
   QSignalTransition * obj = (QSignalTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -151,7 +151,7 @@ HB_FUNC( QSIGNALTRANSITION_SENDEROBJECT )
 /*
 void setSenderObject(QObject *sender)
 */
-HB_FUNC( QSIGNALTRANSITION_SETSENDEROBJECT )
+HB_FUNC_STATIC( QSIGNALTRANSITION_SETSENDEROBJECT )
 {
   QSignalTransition * obj = (QSignalTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -166,7 +166,7 @@ HB_FUNC( QSIGNALTRANSITION_SETSENDEROBJECT )
 /*
 QByteArray signal() const
 */
-HB_FUNC( QSIGNALTRANSITION_SIGNAL )
+HB_FUNC_STATIC( QSIGNALTRANSITION_SIGNAL )
 {
   QSignalTransition * obj = (QSignalTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -179,7 +179,7 @@ HB_FUNC( QSIGNALTRANSITION_SIGNAL )
 /*
 void setSignal(const QByteArray &signal)
 */
-HB_FUNC( QSIGNALTRANSITION_SETSIGNAL )
+HB_FUNC_STATIC( QSIGNALTRANSITION_SETSIGNAL )
 {
   QSignalTransition * obj = (QSignalTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

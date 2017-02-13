@@ -102,7 +102,7 @@ RETURN
 /*
 QTextEncoder(const QTextCodec * codec)
 */
-HB_FUNC( QTEXTENCODER_NEW1 )
+HB_FUNC_STATIC( QTEXTENCODER_NEW1 )
 {
   QTextEncoder * o = NULL;
   const QTextCodec * par1 = (const QTextCodec *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -118,7 +118,7 @@ HB_FUNC( QTEXTENCODER_NEW1 )
 /*
 QTextEncoder(const QTextCodec * codec, QTextCodec::ConversionFlags flags)
 */
-HB_FUNC( QTEXTENCODER_NEW2 )
+HB_FUNC_STATIC( QTEXTENCODER_NEW2 )
 {
   QTextEncoder * o = NULL;
   const QTextCodec * par1 = (const QTextCodec *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -135,7 +135,7 @@ HB_FUNC( QTEXTENCODER_NEW2 )
 //[1]QTextEncoder(const QTextCodec * codec)
 //[2]QTextEncoder(const QTextCodec * codec, QTextCodec::ConversionFlags flags)
 
-HB_FUNC( QTEXTENCODER_NEW )
+HB_FUNC_STATIC( QTEXTENCODER_NEW )
 {
   if( ISNUMPAR(1) && ISQTEXTCODEC(1) )
   {
@@ -151,7 +151,7 @@ HB_FUNC( QTEXTENCODER_NEW )
   }
 }
 
-HB_FUNC( QTEXTENCODER_DELETE )
+HB_FUNC_STATIC( QTEXTENCODER_DELETE )
 {
   QTextEncoder * obj = (QTextEncoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -170,7 +170,7 @@ HB_FUNC( QTEXTENCODER_DELETE )
 /*
 QByteArray fromUnicode(const QString & str)
 */
-HB_FUNC( QTEXTENCODER_FROMUNICODE1 )
+HB_FUNC_STATIC( QTEXTENCODER_FROMUNICODE1 )
 {
   QTextEncoder * obj = (QTextEncoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -184,7 +184,7 @@ HB_FUNC( QTEXTENCODER_FROMUNICODE1 )
 /*
 QByteArray fromUnicode(const QChar * uc, int len)
 */
-HB_FUNC( QTEXTENCODER_FROMUNICODE2 )
+HB_FUNC_STATIC( QTEXTENCODER_FROMUNICODE2 )
 {
   QTextEncoder * obj = (QTextEncoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -199,7 +199,7 @@ HB_FUNC( QTEXTENCODER_FROMUNICODE2 )
 //[1]QByteArray fromUnicode(const QString & str)
 //[2]QByteArray fromUnicode(const QChar * uc, int len)
 
-HB_FUNC( QTEXTENCODER_FROMUNICODE )
+HB_FUNC_STATIC( QTEXTENCODER_FROMUNICODE )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {

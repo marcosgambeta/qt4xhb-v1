@@ -71,7 +71,7 @@ RETURN
 /*
 QDeclarativePropertyMap ( QObject * parent = 0 )
 */
-HB_FUNC( QDECLARATIVEPROPERTYMAP_NEW )
+HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_NEW )
 {
   QDeclarativePropertyMap * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -84,7 +84,7 @@ HB_FUNC( QDECLARATIVEPROPERTYMAP_NEW )
 }
 
 
-HB_FUNC( QDECLARATIVEPROPERTYMAP_DELETE )
+HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_DELETE )
 {
   QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -103,7 +103,7 @@ HB_FUNC( QDECLARATIVEPROPERTYMAP_DELETE )
 /*
 void clear ( const QString & key )
 */
-HB_FUNC( QDECLARATIVEPROPERTYMAP_CLEAR )
+HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_CLEAR )
 {
   QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -118,7 +118,7 @@ HB_FUNC( QDECLARATIVEPROPERTYMAP_CLEAR )
 /*
 bool contains ( const QString & key ) const
 */
-HB_FUNC( QDECLARATIVEPROPERTYMAP_CONTAINS )
+HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_CONTAINS )
 {
   QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -133,7 +133,7 @@ HB_FUNC( QDECLARATIVEPROPERTYMAP_CONTAINS )
 /*
 int count () const
 */
-HB_FUNC( QDECLARATIVEPROPERTYMAP_COUNT )
+HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_COUNT )
 {
   QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -147,7 +147,7 @@ HB_FUNC( QDECLARATIVEPROPERTYMAP_COUNT )
 /*
 void insert ( const QString & key, const QVariant & value )
 */
-HB_FUNC( QDECLARATIVEPROPERTYMAP_INSERT )
+HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_INSERT )
 {
   QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -163,7 +163,7 @@ HB_FUNC( QDECLARATIVEPROPERTYMAP_INSERT )
 /*
 bool isEmpty () const
 */
-HB_FUNC( QDECLARATIVEPROPERTYMAP_ISEMPTY )
+HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_ISEMPTY )
 {
   QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -177,7 +177,7 @@ HB_FUNC( QDECLARATIVEPROPERTYMAP_ISEMPTY )
 /*
 QStringList keys () const
 */
-HB_FUNC( QDECLARATIVEPROPERTYMAP_KEYS )
+HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_KEYS )
 {
   QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -200,7 +200,7 @@ HB_FUNC( QDECLARATIVEPROPERTYMAP_KEYS )
 /*
 int size () const
 */
-HB_FUNC( QDECLARATIVEPROPERTYMAP_SIZE )
+HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_SIZE )
 {
   QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -214,7 +214,7 @@ HB_FUNC( QDECLARATIVEPROPERTYMAP_SIZE )
 /*
 QVariant value ( const QString & key ) const
 */
-HB_FUNC( QDECLARATIVEPROPERTYMAP_VALUE )
+HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_VALUE )
 {
   QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

@@ -101,7 +101,7 @@ RETURN
 /*
 QDeclarativeImageProvider ( ImageType type )
 */
-HB_FUNC( QDECLARATIVEIMAGEPROVIDER_NEW )
+HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_NEW )
 {
   QDeclarativeImageProvider * o = NULL;
   int par1 = hb_parni(1);
@@ -114,7 +114,7 @@ HB_FUNC( QDECLARATIVEIMAGEPROVIDER_NEW )
 }
 
 
-HB_FUNC( QDECLARATIVEIMAGEPROVIDER_DELETE )
+HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_DELETE )
 {
   QDeclarativeImageProvider * obj = (QDeclarativeImageProvider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -133,7 +133,7 @@ HB_FUNC( QDECLARATIVEIMAGEPROVIDER_DELETE )
 /*
 ImageType imageType () const
 */
-HB_FUNC( QDECLARATIVEIMAGEPROVIDER_IMAGETYPE )
+HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_IMAGETYPE )
 {
   QDeclarativeImageProvider * obj = (QDeclarativeImageProvider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -147,7 +147,7 @@ HB_FUNC( QDECLARATIVEIMAGEPROVIDER_IMAGETYPE )
 /*
 virtual QImage requestImage ( const QString & id, QSize * size, const QSize & requestedSize )
 */
-HB_FUNC( QDECLARATIVEIMAGEPROVIDER_REQUESTIMAGE )
+HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_REQUESTIMAGE )
 {
   QDeclarativeImageProvider * obj = (QDeclarativeImageProvider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -163,7 +163,7 @@ HB_FUNC( QDECLARATIVEIMAGEPROVIDER_REQUESTIMAGE )
 /*
 virtual QPixmap requestPixmap ( const QString & id, QSize * size, const QSize & requestedSize )
 */
-HB_FUNC( QDECLARATIVEIMAGEPROVIDER_REQUESTPIXMAP )
+HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_REQUESTPIXMAP )
 {
   QDeclarativeImageProvider * obj = (QDeclarativeImageProvider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

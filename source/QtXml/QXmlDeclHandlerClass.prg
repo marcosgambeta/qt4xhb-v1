@@ -96,7 +96,7 @@ RETURN
 #include "qt4xhb_clsid.h"
 #include "qt4xhb_utils.h"
 
-HB_FUNC( QXMLDECLHANDLER_DELETE )
+HB_FUNC_STATIC( QXMLDECLHANDLER_DELETE )
 {
   QXmlDeclHandler * obj = (QXmlDeclHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -115,7 +115,7 @@ HB_FUNC( QXMLDECLHANDLER_DELETE )
 /*
 virtual bool attributeDecl ( const QString & eName, const QString & aName, const QString & type, const QString & valueDefault, const QString & value ) = 0
 */
-HB_FUNC( QXMLDECLHANDLER_ATTRIBUTEDECL )
+HB_FUNC_STATIC( QXMLDECLHANDLER_ATTRIBUTEDECL )
 {
   QXmlDeclHandler * obj = (QXmlDeclHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -134,7 +134,7 @@ HB_FUNC( QXMLDECLHANDLER_ATTRIBUTEDECL )
 /*
 virtual QString errorString () const = 0
 */
-HB_FUNC( QXMLDECLHANDLER_ERRORSTRING )
+HB_FUNC_STATIC( QXMLDECLHANDLER_ERRORSTRING )
 {
   QXmlDeclHandler * obj = (QXmlDeclHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -148,7 +148,7 @@ HB_FUNC( QXMLDECLHANDLER_ERRORSTRING )
 /*
 virtual bool externalEntityDecl ( const QString & name, const QString & publicId, const QString & systemId ) = 0
 */
-HB_FUNC( QXMLDECLHANDLER_EXTERNALENTITYDECL )
+HB_FUNC_STATIC( QXMLDECLHANDLER_EXTERNALENTITYDECL )
 {
   QXmlDeclHandler * obj = (QXmlDeclHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -165,7 +165,7 @@ HB_FUNC( QXMLDECLHANDLER_EXTERNALENTITYDECL )
 /*
 virtual bool internalEntityDecl ( const QString & name, const QString & value ) = 0
 */
-HB_FUNC( QXMLDECLHANDLER_INTERNALENTITYDECL )
+HB_FUNC_STATIC( QXMLDECLHANDLER_INTERNALENTITYDECL )
 {
   QXmlDeclHandler * obj = (QXmlDeclHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

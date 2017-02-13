@@ -113,7 +113,7 @@ RETURN
 /*
 QKeySequence ()
 */
-HB_FUNC( QKEYSEQUENCE_NEW1 )
+HB_FUNC_STATIC( QKEYSEQUENCE_NEW1 )
 {
   QKeySequence * o = NULL;
   o = new QKeySequence (  );
@@ -131,7 +131,7 @@ HB_FUNC( QKEYSEQUENCE_NEW1 )
 /*
 QKeySequence ( const QString & key )
 */
-HB_FUNC( QKEYSEQUENCE_NEW2 )
+HB_FUNC_STATIC( QKEYSEQUENCE_NEW2 )
 {
   QKeySequence * o = NULL;
   QString par1 = hb_parc(1);
@@ -150,7 +150,7 @@ HB_FUNC( QKEYSEQUENCE_NEW2 )
 /*
 QKeySequence ( const QString & key, SequenceFormat format )
 */
-HB_FUNC( QKEYSEQUENCE_NEW3 )
+HB_FUNC_STATIC( QKEYSEQUENCE_NEW3 )
 {
   QKeySequence * o = NULL;
   QString par1 = hb_parc(1);
@@ -170,7 +170,7 @@ HB_FUNC( QKEYSEQUENCE_NEW3 )
 /*
 QKeySequence ( int k1, int k2 = 0, int k3 = 0, int k4 = 0 )
 */
-HB_FUNC( QKEYSEQUENCE_NEW4 )
+HB_FUNC_STATIC( QKEYSEQUENCE_NEW4 )
 {
   QKeySequence * o = NULL;
   int par1 = hb_parni(1);
@@ -192,7 +192,7 @@ HB_FUNC( QKEYSEQUENCE_NEW4 )
 /*
 QKeySequence ( const QKeySequence & keysequence )
 */
-HB_FUNC( QKEYSEQUENCE_NEW5 )
+HB_FUNC_STATIC( QKEYSEQUENCE_NEW5 )
 {
   QKeySequence * o = NULL;
   QKeySequence * par1 = (QKeySequence *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -211,7 +211,7 @@ HB_FUNC( QKEYSEQUENCE_NEW5 )
 /*
 QKeySequence ( StandardKey key )
 */
-HB_FUNC( QKEYSEQUENCE_NEW6 )
+HB_FUNC_STATIC( QKEYSEQUENCE_NEW6 )
 {
   QKeySequence * o = NULL;
   int par1 = hb_parni(1);
@@ -241,7 +241,7 @@ HB_FUNC( QKEYSEQUENCE_NEW6 )
   numéricos, será considerado [4].
 */
 
-HB_FUNC( QKEYSEQUENCE_NEW )
+HB_FUNC_STATIC( QKEYSEQUENCE_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -273,7 +273,7 @@ HB_FUNC( QKEYSEQUENCE_NEW )
   }
 }
 
-HB_FUNC( QKEYSEQUENCE_DELETE )
+HB_FUNC_STATIC( QKEYSEQUENCE_DELETE )
 {
   QKeySequence * obj = (QKeySequence *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -292,7 +292,7 @@ HB_FUNC( QKEYSEQUENCE_DELETE )
 /*
 uint count () const
 */
-HB_FUNC( QKEYSEQUENCE_COUNT )
+HB_FUNC_STATIC( QKEYSEQUENCE_COUNT )
 {
   QKeySequence * obj = (QKeySequence *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -306,7 +306,7 @@ HB_FUNC( QKEYSEQUENCE_COUNT )
 /*
 bool isEmpty () const
 */
-HB_FUNC( QKEYSEQUENCE_ISEMPTY )
+HB_FUNC_STATIC( QKEYSEQUENCE_ISEMPTY )
 {
   QKeySequence * obj = (QKeySequence *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -320,7 +320,7 @@ HB_FUNC( QKEYSEQUENCE_ISEMPTY )
 /*
 SequenceMatch matches ( const QKeySequence & seq ) const
 */
-HB_FUNC( QKEYSEQUENCE_MATCHES )
+HB_FUNC_STATIC( QKEYSEQUENCE_MATCHES )
 {
   QKeySequence * obj = (QKeySequence *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -335,7 +335,7 @@ HB_FUNC( QKEYSEQUENCE_MATCHES )
 /*
 QString toString ( SequenceFormat format = PortableText ) const
 */
-HB_FUNC( QKEYSEQUENCE_TOSTRING )
+HB_FUNC_STATIC( QKEYSEQUENCE_TOSTRING )
 {
   QKeySequence * obj = (QKeySequence *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -351,7 +351,7 @@ HB_FUNC( QKEYSEQUENCE_TOSTRING )
 /*
 QKeySequence fromString ( const QString & str, SequenceFormat format = PortableText )
 */
-HB_FUNC( QKEYSEQUENCE_FROMSTRING )
+HB_FUNC_STATIC( QKEYSEQUENCE_FROMSTRING )
 {
   QString par1 = hb_parc(1);
   int par2 = ISNIL(2)? (int) QKeySequence::PortableText : hb_parni(2);
@@ -362,7 +362,7 @@ HB_FUNC( QKEYSEQUENCE_FROMSTRING )
 /*
 QList<QKeySequence> keyBindings ( StandardKey key )
 */
-HB_FUNC( QKEYSEQUENCE_KEYBINDINGS )
+HB_FUNC_STATIC( QKEYSEQUENCE_KEYBINDINGS )
 {
   int par1 = hb_parni(1);
   QList<QKeySequence> list = QKeySequence::keyBindings (  (QKeySequence::StandardKey) par1 );
@@ -407,7 +407,7 @@ HB_FUNC( QKEYSEQUENCE_KEYBINDINGS )
 /*
 QKeySequence mnemonic ( const QString & text )
 */
-HB_FUNC( QKEYSEQUENCE_MNEMONIC )
+HB_FUNC_STATIC( QKEYSEQUENCE_MNEMONIC )
 {
   QString par1 = hb_parc(1);
   QKeySequence * ptr = new QKeySequence( QKeySequence::mnemonic ( par1 ) );

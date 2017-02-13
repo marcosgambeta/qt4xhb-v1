@@ -100,7 +100,7 @@ RETURN
 /*
 QDomDocument ()
 */
-HB_FUNC( QDOMDOCUMENT_NEW1 )
+HB_FUNC_STATIC( QDOMDOCUMENT_NEW1 )
 {
   QDomDocument * o = NULL;
   o = new QDomDocument (  );
@@ -118,7 +118,7 @@ HB_FUNC( QDOMDOCUMENT_NEW1 )
 /*
 QDomDocument ( const QString & name )
 */
-HB_FUNC( QDOMDOCUMENT_NEW2 )
+HB_FUNC_STATIC( QDOMDOCUMENT_NEW2 )
 {
   QDomDocument * o = NULL;
   QString par1 = hb_parc(1);
@@ -137,7 +137,7 @@ HB_FUNC( QDOMDOCUMENT_NEW2 )
 /*
 QDomDocument ( const QDomDocumentType & doctype )
 */
-HB_FUNC( QDOMDOCUMENT_NEW3 )
+HB_FUNC_STATIC( QDOMDOCUMENT_NEW3 )
 {
   QDomDocument * o = NULL;
   QDomDocumentType * par1 = (QDomDocumentType *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -156,7 +156,7 @@ HB_FUNC( QDOMDOCUMENT_NEW3 )
 /*
 QDomDocument ( const QDomDocument & x )
 */
-HB_FUNC( QDOMDOCUMENT_NEW4 )
+HB_FUNC_STATIC( QDOMDOCUMENT_NEW4 )
 {
   QDomDocument * o = NULL;
   QDomDocument * par1 = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -177,7 +177,7 @@ HB_FUNC( QDOMDOCUMENT_NEW4 )
 //[3]QDomDocument ( const QDomDocumentType & doctype )
 //[4]QDomDocument ( const QDomDocument & x )
 
-HB_FUNC( QDOMDOCUMENT_NEW )
+HB_FUNC_STATIC( QDOMDOCUMENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -201,7 +201,7 @@ HB_FUNC( QDOMDOCUMENT_NEW )
   }
 }
 
-HB_FUNC( QDOMDOCUMENT_DELETE )
+HB_FUNC_STATIC( QDOMDOCUMENT_DELETE )
 {
   QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -220,7 +220,7 @@ HB_FUNC( QDOMDOCUMENT_DELETE )
 /*
 QDomAttr createAttribute ( const QString & name )
 */
-HB_FUNC( QDOMDOCUMENT_CREATEATTRIBUTE )
+HB_FUNC_STATIC( QDOMDOCUMENT_CREATEATTRIBUTE )
 {
   QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -234,7 +234,7 @@ HB_FUNC( QDOMDOCUMENT_CREATEATTRIBUTE )
 /*
 QDomAttr createAttributeNS ( const QString & nsURI, const QString & qName )
 */
-HB_FUNC( QDOMDOCUMENT_CREATEATTRIBUTENS )
+HB_FUNC_STATIC( QDOMDOCUMENT_CREATEATTRIBUTENS )
 {
   QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -249,7 +249,7 @@ HB_FUNC( QDOMDOCUMENT_CREATEATTRIBUTENS )
 /*
 QDomCDATASection createCDATASection ( const QString & value )
 */
-HB_FUNC( QDOMDOCUMENT_CREATECDATASECTION )
+HB_FUNC_STATIC( QDOMDOCUMENT_CREATECDATASECTION )
 {
   QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -263,7 +263,7 @@ HB_FUNC( QDOMDOCUMENT_CREATECDATASECTION )
 /*
 QDomComment createComment ( const QString & value )
 */
-HB_FUNC( QDOMDOCUMENT_CREATECOMMENT )
+HB_FUNC_STATIC( QDOMDOCUMENT_CREATECOMMENT )
 {
   QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -277,7 +277,7 @@ HB_FUNC( QDOMDOCUMENT_CREATECOMMENT )
 /*
 QDomDocumentFragment createDocumentFragment ()
 */
-HB_FUNC( QDOMDOCUMENT_CREATEDOCUMENTFRAGMENT )
+HB_FUNC_STATIC( QDOMDOCUMENT_CREATEDOCUMENTFRAGMENT )
 {
   QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -290,7 +290,7 @@ HB_FUNC( QDOMDOCUMENT_CREATEDOCUMENTFRAGMENT )
 /*
 QDomElement createElement ( const QString & tagName )
 */
-HB_FUNC( QDOMDOCUMENT_CREATEELEMENT )
+HB_FUNC_STATIC( QDOMDOCUMENT_CREATEELEMENT )
 {
   QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -304,7 +304,7 @@ HB_FUNC( QDOMDOCUMENT_CREATEELEMENT )
 /*
 QDomElement createElementNS ( const QString & nsURI, const QString & qName )
 */
-HB_FUNC( QDOMDOCUMENT_CREATEELEMENTNS )
+HB_FUNC_STATIC( QDOMDOCUMENT_CREATEELEMENTNS )
 {
   QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -319,7 +319,7 @@ HB_FUNC( QDOMDOCUMENT_CREATEELEMENTNS )
 /*
 QDomEntityReference createEntityReference ( const QString & name )
 */
-HB_FUNC( QDOMDOCUMENT_CREATEENTITYREFERENCE )
+HB_FUNC_STATIC( QDOMDOCUMENT_CREATEENTITYREFERENCE )
 {
   QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -333,7 +333,7 @@ HB_FUNC( QDOMDOCUMENT_CREATEENTITYREFERENCE )
 /*
 QDomProcessingInstruction createProcessingInstruction ( const QString & target, const QString & data )
 */
-HB_FUNC( QDOMDOCUMENT_CREATEPROCESSINGINSTRUCTION )
+HB_FUNC_STATIC( QDOMDOCUMENT_CREATEPROCESSINGINSTRUCTION )
 {
   QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -348,7 +348,7 @@ HB_FUNC( QDOMDOCUMENT_CREATEPROCESSINGINSTRUCTION )
 /*
 QDomText createTextNode ( const QString & value )
 */
-HB_FUNC( QDOMDOCUMENT_CREATETEXTNODE )
+HB_FUNC_STATIC( QDOMDOCUMENT_CREATETEXTNODE )
 {
   QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -362,7 +362,7 @@ HB_FUNC( QDOMDOCUMENT_CREATETEXTNODE )
 /*
 QDomDocumentType doctype () const
 */
-HB_FUNC( QDOMDOCUMENT_DOCTYPE )
+HB_FUNC_STATIC( QDOMDOCUMENT_DOCTYPE )
 {
   QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -375,7 +375,7 @@ HB_FUNC( QDOMDOCUMENT_DOCTYPE )
 /*
 QDomElement documentElement () const
 */
-HB_FUNC( QDOMDOCUMENT_DOCUMENTELEMENT )
+HB_FUNC_STATIC( QDOMDOCUMENT_DOCUMENTELEMENT )
 {
   QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -388,7 +388,7 @@ HB_FUNC( QDOMDOCUMENT_DOCUMENTELEMENT )
 /*
 QDomElement elementById ( const QString & elementId )
 */
-HB_FUNC( QDOMDOCUMENT_ELEMENTBYID )
+HB_FUNC_STATIC( QDOMDOCUMENT_ELEMENTBYID )
 {
   QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -402,7 +402,7 @@ HB_FUNC( QDOMDOCUMENT_ELEMENTBYID )
 /*
 QDomNodeList elementsByTagName ( const QString & tagname ) const
 */
-HB_FUNC( QDOMDOCUMENT_ELEMENTSBYTAGNAME )
+HB_FUNC_STATIC( QDOMDOCUMENT_ELEMENTSBYTAGNAME )
 {
   QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -416,7 +416,7 @@ HB_FUNC( QDOMDOCUMENT_ELEMENTSBYTAGNAME )
 /*
 QDomNodeList elementsByTagNameNS ( const QString & nsURI, const QString & localName )
 */
-HB_FUNC( QDOMDOCUMENT_ELEMENTSBYTAGNAMENS )
+HB_FUNC_STATIC( QDOMDOCUMENT_ELEMENTSBYTAGNAMENS )
 {
   QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -431,7 +431,7 @@ HB_FUNC( QDOMDOCUMENT_ELEMENTSBYTAGNAMENS )
 /*
 QDomImplementation implementation () const
 */
-HB_FUNC( QDOMDOCUMENT_IMPLEMENTATION )
+HB_FUNC_STATIC( QDOMDOCUMENT_IMPLEMENTATION )
 {
   QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -444,7 +444,7 @@ HB_FUNC( QDOMDOCUMENT_IMPLEMENTATION )
 /*
 QDomNode importNode ( const QDomNode & importedNode, bool deep )
 */
-HB_FUNC( QDOMDOCUMENT_IMPORTNODE )
+HB_FUNC_STATIC( QDOMDOCUMENT_IMPORTNODE )
 {
   QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -459,7 +459,7 @@ HB_FUNC( QDOMDOCUMENT_IMPORTNODE )
 /*
 QDomNode::NodeType nodeType () const
 */
-HB_FUNC( QDOMDOCUMENT_NODETYPE )
+HB_FUNC_STATIC( QDOMDOCUMENT_NODETYPE )
 {
   QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -488,14 +488,14 @@ HB_FUNC( QDOMDOCUMENT_NODETYPE )
 //[8]bool setContent ( QXmlInputSource * source, QXmlReader * reader, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
 
 // TODO: implementar função
-HB_FUNC( QDOMDOCUMENT_SETCONTENT )
+HB_FUNC_STATIC( QDOMDOCUMENT_SETCONTENT )
 {
 }
 
 /*
 QByteArray toByteArray ( int indent = 1 ) const
 */
-HB_FUNC( QDOMDOCUMENT_TOBYTEARRAY )
+HB_FUNC_STATIC( QDOMDOCUMENT_TOBYTEARRAY )
 {
   QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -509,7 +509,7 @@ HB_FUNC( QDOMDOCUMENT_TOBYTEARRAY )
 /*
 QString toString ( int indent = 1 ) const
 */
-HB_FUNC( QDOMDOCUMENT_TOSTRING )
+HB_FUNC_STATIC( QDOMDOCUMENT_TOSTRING )
 {
   QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

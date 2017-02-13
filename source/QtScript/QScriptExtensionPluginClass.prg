@@ -64,7 +64,7 @@ RETURN
 #include <QScriptValue>
 
 
-HB_FUNC( QSCRIPTEXTENSIONPLUGIN_DELETE )
+HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_DELETE )
 {
   QScriptExtensionPlugin * obj = (QScriptExtensionPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -83,7 +83,7 @@ HB_FUNC( QSCRIPTEXTENSIONPLUGIN_DELETE )
 /*
 QScriptValue setupPackage ( const QString & key, QScriptEngine * engine ) const
 */
-HB_FUNC( QSCRIPTEXTENSIONPLUGIN_SETUPPACKAGE )
+HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_SETUPPACKAGE )
 {
   QScriptExtensionPlugin * obj = (QScriptExtensionPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -98,7 +98,7 @@ HB_FUNC( QSCRIPTEXTENSIONPLUGIN_SETUPPACKAGE )
 /*
 virtual void initialize ( const QString & key, QScriptEngine * engine ) = 0
 */
-HB_FUNC( QSCRIPTEXTENSIONPLUGIN_INITIALIZE )
+HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_INITIALIZE )
 {
   QScriptExtensionPlugin * obj = (QScriptExtensionPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -114,7 +114,7 @@ HB_FUNC( QSCRIPTEXTENSIONPLUGIN_INITIALIZE )
 /*
 virtual QStringList keys () const = 0
 */
-HB_FUNC( QSCRIPTEXTENSIONPLUGIN_KEYS )
+HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_KEYS )
 {
   QScriptExtensionPlugin * obj = (QScriptExtensionPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

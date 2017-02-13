@@ -99,7 +99,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QGESTURERECOGNIZER_DELETE )
+HB_FUNC_STATIC( QGESTURERECOGNIZER_DELETE )
 {
   QGestureRecognizer * obj = (QGestureRecognizer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -118,7 +118,7 @@ HB_FUNC( QGESTURERECOGNIZER_DELETE )
 /*
 virtual QGesture * create ( QObject * target )
 */
-HB_FUNC( QGESTURERECOGNIZER_CREATE )
+HB_FUNC_STATIC( QGESTURERECOGNIZER_CREATE )
 {
   QGestureRecognizer * obj = (QGestureRecognizer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -132,7 +132,7 @@ HB_FUNC( QGESTURERECOGNIZER_CREATE )
 /*
 virtual Result recognize ( QGesture * gesture, QObject * watched, QEvent * event ) = 0
 */
-HB_FUNC( QGESTURERECOGNIZER_RECOGNIZE )
+HB_FUNC_STATIC( QGESTURERECOGNIZER_RECOGNIZE )
 {
   QGestureRecognizer * obj = (QGestureRecognizer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -149,7 +149,7 @@ HB_FUNC( QGESTURERECOGNIZER_RECOGNIZE )
 /*
 virtual void reset ( QGesture * gesture )
 */
-HB_FUNC( QGESTURERECOGNIZER_RESET )
+HB_FUNC_STATIC( QGESTURERECOGNIZER_RESET )
 {
   QGestureRecognizer * obj = (QGestureRecognizer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -165,7 +165,7 @@ HB_FUNC( QGESTURERECOGNIZER_RESET )
 /*
 Qt::GestureType registerRecognizer ( QGestureRecognizer * recognizer )
 */
-HB_FUNC( QGESTURERECOGNIZER_REGISTERRECOGNIZER )
+HB_FUNC_STATIC( QGESTURERECOGNIZER_REGISTERRECOGNIZER )
 {
   QGestureRecognizer * par1 = (QGestureRecognizer *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int i = QGestureRecognizer::registerRecognizer ( par1 );
@@ -176,7 +176,7 @@ HB_FUNC( QGESTURERECOGNIZER_REGISTERRECOGNIZER )
 /*
 void unregisterRecognizer ( Qt::GestureType type )
 */
-HB_FUNC( QGESTURERECOGNIZER_UNREGISTERRECOGNIZER )
+HB_FUNC_STATIC( QGESTURERECOGNIZER_UNREGISTERRECOGNIZER )
 {
   int par1 = hb_parni(1);
   QGestureRecognizer::unregisterRecognizer (  (Qt::GestureType) par1 );

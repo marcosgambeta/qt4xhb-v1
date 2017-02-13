@@ -63,7 +63,7 @@ RETURN
 /*
 virtual void initializeEngine ( QDeclarativeEngine * engine, const char * uri )
 */
-HB_FUNC( QDECLARATIVEEXTENSIONPLUGIN_INITIALIZEENGINE )
+HB_FUNC_STATIC( QDECLARATIVEEXTENSIONPLUGIN_INITIALIZEENGINE )
 {
   QDeclarativeExtensionPlugin * obj = (QDeclarativeExtensionPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -79,7 +79,7 @@ HB_FUNC( QDECLARATIVEEXTENSIONPLUGIN_INITIALIZEENGINE )
 /*
 virtual void registerTypes ( const char * uri ) = 0
 */
-HB_FUNC( QDECLARATIVEEXTENSIONPLUGIN_REGISTERTYPES )
+HB_FUNC_STATIC( QDECLARATIVEEXTENSIONPLUGIN_REGISTERTYPES )
 {
   QDeclarativeExtensionPlugin * obj = (QDeclarativeExtensionPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

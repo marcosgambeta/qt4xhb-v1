@@ -98,7 +98,7 @@ RETURN
 /*
 QXmlNamePool ()
 */
-HB_FUNC( QXMLNAMEPOOL_NEW1 )
+HB_FUNC_STATIC( QXMLNAMEPOOL_NEW1 )
 {
   QXmlNamePool * o = NULL;
   o = new QXmlNamePool (  );
@@ -116,7 +116,7 @@ HB_FUNC( QXMLNAMEPOOL_NEW1 )
 /*
 QXmlNamePool ( const QXmlNamePool & other )
 */
-HB_FUNC( QXMLNAMEPOOL_NEW2 )
+HB_FUNC_STATIC( QXMLNAMEPOOL_NEW2 )
 {
   QXmlNamePool * o = NULL;
   QXmlNamePool * par1 = (QXmlNamePool *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -135,7 +135,7 @@ HB_FUNC( QXMLNAMEPOOL_NEW2 )
 //[1]QXmlNamePool ()
 //[2]QXmlNamePool ( const QXmlNamePool & other )
 
-HB_FUNC( QXMLNAMEPOOL_NEW )
+HB_FUNC_STATIC( QXMLNAMEPOOL_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -151,7 +151,7 @@ HB_FUNC( QXMLNAMEPOOL_NEW )
   }
 }
 
-HB_FUNC( QXMLNAMEPOOL_DELETE )
+HB_FUNC_STATIC( QXMLNAMEPOOL_DELETE )
 {
   QXmlNamePool * obj = (QXmlNamePool *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

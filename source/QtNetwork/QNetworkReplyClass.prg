@@ -92,7 +92,7 @@ RETURN
 
 #include <QSslConfiguration>
 
-HB_FUNC( QNETWORKREPLY_DELETE )
+HB_FUNC_STATIC( QNETWORKREPLY_DELETE )
 {
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -111,7 +111,7 @@ HB_FUNC( QNETWORKREPLY_DELETE )
 /*
 virtual void abort () = 0
 */
-HB_FUNC( QNETWORKREPLY_ABORT )
+HB_FUNC_STATIC( QNETWORKREPLY_ABORT )
 {
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -125,7 +125,7 @@ HB_FUNC( QNETWORKREPLY_ABORT )
 /*
 QVariant attribute ( QNetworkRequest::Attribute code ) const
 */
-HB_FUNC( QNETWORKREPLY_ATTRIBUTE )
+HB_FUNC_STATIC( QNETWORKREPLY_ATTRIBUTE )
 {
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -139,7 +139,7 @@ HB_FUNC( QNETWORKREPLY_ATTRIBUTE )
 /*
 NetworkError error () const
 */
-HB_FUNC( QNETWORKREPLY_ERROR )
+HB_FUNC_STATIC( QNETWORKREPLY_ERROR )
 {
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -153,7 +153,7 @@ HB_FUNC( QNETWORKREPLY_ERROR )
 /*
 bool hasRawHeader ( const QByteArray & headerName ) const
 */
-HB_FUNC( QNETWORKREPLY_HASRAWHEADER )
+HB_FUNC_STATIC( QNETWORKREPLY_HASRAWHEADER )
 {
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -168,7 +168,7 @@ HB_FUNC( QNETWORKREPLY_HASRAWHEADER )
 /*
 QVariant header ( QNetworkRequest::KnownHeaders header ) const
 */
-HB_FUNC( QNETWORKREPLY_HEADER )
+HB_FUNC_STATIC( QNETWORKREPLY_HEADER )
 {
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -182,7 +182,7 @@ HB_FUNC( QNETWORKREPLY_HEADER )
 /*
 void ignoreSslErrors ( const QList<QSslError> & errors )
 */
-HB_FUNC( QNETWORKREPLY_IGNORESSLERRORS1 )
+HB_FUNC_STATIC( QNETWORKREPLY_IGNORESSLERRORS1 )
 {
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -204,7 +204,7 @@ par1 << *(QSslError *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1,
 /*
 virtual void ignoreSslErrors ()
 */
-HB_FUNC( QNETWORKREPLY_IGNORESSLERRORS2 )
+HB_FUNC_STATIC( QNETWORKREPLY_IGNORESSLERRORS2 )
 {
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -218,7 +218,7 @@ HB_FUNC( QNETWORKREPLY_IGNORESSLERRORS2 )
 //[1]void ignoreSslErrors ( const QList<QSslError> & errors )
 //[2]virtual void ignoreSslErrors ()
 
-HB_FUNC( QNETWORKREPLY_IGNORESSLERRORS )
+HB_FUNC_STATIC( QNETWORKREPLY_IGNORESSLERRORS )
 {
   if( ISNUMPAR(1) && ISARRAY(1) )
   {
@@ -233,7 +233,7 @@ HB_FUNC( QNETWORKREPLY_IGNORESSLERRORS )
 /*
 bool isFinished () const
 */
-HB_FUNC( QNETWORKREPLY_ISFINISHED )
+HB_FUNC_STATIC( QNETWORKREPLY_ISFINISHED )
 {
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -247,7 +247,7 @@ HB_FUNC( QNETWORKREPLY_ISFINISHED )
 /*
 bool isRunning () const
 */
-HB_FUNC( QNETWORKREPLY_ISRUNNING )
+HB_FUNC_STATIC( QNETWORKREPLY_ISRUNNING )
 {
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -261,7 +261,7 @@ HB_FUNC( QNETWORKREPLY_ISRUNNING )
 /*
 QNetworkAccessManager * manager () const
 */
-HB_FUNC( QNETWORKREPLY_MANAGER )
+HB_FUNC_STATIC( QNETWORKREPLY_MANAGER )
 {
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -274,7 +274,7 @@ HB_FUNC( QNETWORKREPLY_MANAGER )
 /*
 QNetworkAccessManager::Operation operation () const
 */
-HB_FUNC( QNETWORKREPLY_OPERATION )
+HB_FUNC_STATIC( QNETWORKREPLY_OPERATION )
 {
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -288,7 +288,7 @@ HB_FUNC( QNETWORKREPLY_OPERATION )
 /*
 QByteArray rawHeader ( const QByteArray & headerName ) const
 */
-HB_FUNC( QNETWORKREPLY_RAWHEADER )
+HB_FUNC_STATIC( QNETWORKREPLY_RAWHEADER )
 {
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -302,7 +302,7 @@ HB_FUNC( QNETWORKREPLY_RAWHEADER )
 /*
 QList<QByteArray> rawHeaderList () const
 */
-HB_FUNC( QNETWORKREPLY_RAWHEADERLIST )
+HB_FUNC_STATIC( QNETWORKREPLY_RAWHEADERLIST )
 {
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -347,7 +347,7 @@ HB_FUNC( QNETWORKREPLY_RAWHEADERLIST )
 /*
 qint64 readBufferSize () const
 */
-HB_FUNC( QNETWORKREPLY_READBUFFERSIZE )
+HB_FUNC_STATIC( QNETWORKREPLY_READBUFFERSIZE )
 {
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -361,7 +361,7 @@ HB_FUNC( QNETWORKREPLY_READBUFFERSIZE )
 /*
 QNetworkRequest request () const
 */
-HB_FUNC( QNETWORKREPLY_REQUEST )
+HB_FUNC_STATIC( QNETWORKREPLY_REQUEST )
 {
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -374,7 +374,7 @@ HB_FUNC( QNETWORKREPLY_REQUEST )
 /*
 virtual void setReadBufferSize ( qint64 size )
 */
-HB_FUNC( QNETWORKREPLY_SETREADBUFFERSIZE )
+HB_FUNC_STATIC( QNETWORKREPLY_SETREADBUFFERSIZE )
 {
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -389,7 +389,7 @@ HB_FUNC( QNETWORKREPLY_SETREADBUFFERSIZE )
 /*
 void setSslConfiguration ( const QSslConfiguration & config )
 */
-HB_FUNC( QNETWORKREPLY_SETSSLCONFIGURATION )
+HB_FUNC_STATIC( QNETWORKREPLY_SETSSLCONFIGURATION )
 {
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -404,7 +404,7 @@ HB_FUNC( QNETWORKREPLY_SETSSLCONFIGURATION )
 /*
 QSslConfiguration sslConfiguration () const
 */
-HB_FUNC( QNETWORKREPLY_SSLCONFIGURATION )
+HB_FUNC_STATIC( QNETWORKREPLY_SSLCONFIGURATION )
 {
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -417,7 +417,7 @@ HB_FUNC( QNETWORKREPLY_SSLCONFIGURATION )
 /*
 QUrl url () const
 */
-HB_FUNC( QNETWORKREPLY_URL )
+HB_FUNC_STATIC( QNETWORKREPLY_URL )
 {
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -430,7 +430,7 @@ HB_FUNC( QNETWORKREPLY_URL )
 /*
 virtual void close ()
 */
-HB_FUNC( QNETWORKREPLY_CLOSE )
+HB_FUNC_STATIC( QNETWORKREPLY_CLOSE )
 {
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

@@ -61,7 +61,7 @@ RETURN
 #include "qt4xhb_clsid.h"
 #include "qt4xhb_utils.h"
 
-HB_FUNC( QGRAPHICSANCHOR_DELETE )
+HB_FUNC_STATIC( QGRAPHICSANCHOR_DELETE )
 {
   QGraphicsAnchor * obj = (QGraphicsAnchor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -80,7 +80,7 @@ HB_FUNC( QGRAPHICSANCHOR_DELETE )
 /*
 void setSizePolicy ( QSizePolicy::Policy policy )
 */
-HB_FUNC( QGRAPHICSANCHOR_SETSIZEPOLICY )
+HB_FUNC_STATIC( QGRAPHICSANCHOR_SETSIZEPOLICY )
 {
   QGraphicsAnchor * obj = (QGraphicsAnchor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -95,7 +95,7 @@ HB_FUNC( QGRAPHICSANCHOR_SETSIZEPOLICY )
 /*
 void setSpacing ( qreal spacing )
 */
-HB_FUNC( QGRAPHICSANCHOR_SETSPACING )
+HB_FUNC_STATIC( QGRAPHICSANCHOR_SETSPACING )
 {
   QGraphicsAnchor * obj = (QGraphicsAnchor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -110,7 +110,7 @@ HB_FUNC( QGRAPHICSANCHOR_SETSPACING )
 /*
 QSizePolicy::Policy sizePolicy () const
 */
-HB_FUNC( QGRAPHICSANCHOR_SIZEPOLICY )
+HB_FUNC_STATIC( QGRAPHICSANCHOR_SIZEPOLICY )
 {
   QGraphicsAnchor * obj = (QGraphicsAnchor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -124,7 +124,7 @@ HB_FUNC( QGRAPHICSANCHOR_SIZEPOLICY )
 /*
 qreal spacing () const
 */
-HB_FUNC( QGRAPHICSANCHOR_SPACING )
+HB_FUNC_STATIC( QGRAPHICSANCHOR_SPACING )
 {
   QGraphicsAnchor * obj = (QGraphicsAnchor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -138,7 +138,7 @@ HB_FUNC( QGRAPHICSANCHOR_SPACING )
 /*
 void unsetSpacing ()
 */
-HB_FUNC( QGRAPHICSANCHOR_UNSETSPACING )
+HB_FUNC_STATIC( QGRAPHICSANCHOR_UNSETSPACING )
 {
   QGraphicsAnchor * obj = (QGraphicsAnchor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

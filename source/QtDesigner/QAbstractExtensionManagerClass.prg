@@ -96,7 +96,7 @@ RETURN
 #include "qt4xhb_clsid.h"
 #include "qt4xhb_utils.h"
 
-HB_FUNC( QABSTRACTEXTENSIONMANAGER_DELETE )
+HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_DELETE )
 {
   QAbstractExtensionManager * obj = (QAbstractExtensionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -115,7 +115,7 @@ HB_FUNC( QABSTRACTEXTENSIONMANAGER_DELETE )
 /*
 virtual QObject * extension ( QObject * object, const QString & iid ) const = 0
 */
-HB_FUNC( QABSTRACTEXTENSIONMANAGER_EXTENSION )
+HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_EXTENSION )
 {
   QAbstractExtensionManager * obj = (QAbstractExtensionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -130,7 +130,7 @@ HB_FUNC( QABSTRACTEXTENSIONMANAGER_EXTENSION )
 /*
 virtual void registerExtensions ( QAbstractExtensionFactory * factory, const QString & iid ) = 0
 */
-HB_FUNC( QABSTRACTEXTENSIONMANAGER_REGISTEREXTENSIONS )
+HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_REGISTEREXTENSIONS )
 {
   QAbstractExtensionManager * obj = (QAbstractExtensionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -146,7 +146,7 @@ HB_FUNC( QABSTRACTEXTENSIONMANAGER_REGISTEREXTENSIONS )
 /*
 virtual void unregisterExtensions ( QAbstractExtensionFactory * factory, const QString & iid ) = 0
 */
-HB_FUNC( QABSTRACTEXTENSIONMANAGER_UNREGISTEREXTENSIONS )
+HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_UNREGISTEREXTENSIONS )
 {
   QAbstractExtensionManager * obj = (QAbstractExtensionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

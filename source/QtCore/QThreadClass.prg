@@ -78,7 +78,7 @@ RETURN
 /*
 QThread(QObject * parent = 0)
 */
-HB_FUNC( QTHREAD_NEW )
+HB_FUNC_STATIC( QTHREAD_NEW )
 {
   QThread * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -91,7 +91,7 @@ HB_FUNC( QTHREAD_NEW )
 }
 
 
-HB_FUNC( QTHREAD_DELETE )
+HB_FUNC_STATIC( QTHREAD_DELETE )
 {
   QThread * obj = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -111,7 +111,7 @@ HB_FUNC( QTHREAD_DELETE )
 /*
 void exit(int returnCode = 0)
 */
-HB_FUNC( QTHREAD_EXIT )
+HB_FUNC_STATIC( QTHREAD_EXIT )
 {
   QThread * obj = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -126,7 +126,7 @@ HB_FUNC( QTHREAD_EXIT )
 /*
 bool isFinished() const
 */
-HB_FUNC( QTHREAD_ISFINISHED )
+HB_FUNC_STATIC( QTHREAD_ISFINISHED )
 {
   QThread * obj = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -140,7 +140,7 @@ HB_FUNC( QTHREAD_ISFINISHED )
 /*
 bool isRunning() const
 */
-HB_FUNC( QTHREAD_ISRUNNING )
+HB_FUNC_STATIC( QTHREAD_ISRUNNING )
 {
   QThread * obj = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -154,7 +154,7 @@ HB_FUNC( QTHREAD_ISRUNNING )
 /*
 Priority priority() const
 */
-HB_FUNC( QTHREAD_PRIORITY )
+HB_FUNC_STATIC( QTHREAD_PRIORITY )
 {
   QThread * obj = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -169,7 +169,7 @@ HB_FUNC( QTHREAD_PRIORITY )
 /*
 void setPriority(Priority priority)
 */
-HB_FUNC( QTHREAD_SETPRIORITY )
+HB_FUNC_STATIC( QTHREAD_SETPRIORITY )
 {
   QThread * obj = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -184,7 +184,7 @@ HB_FUNC( QTHREAD_SETPRIORITY )
 /*
 void setStackSize(uint stackSize)
 */
-HB_FUNC( QTHREAD_SETSTACKSIZE )
+HB_FUNC_STATIC( QTHREAD_SETSTACKSIZE )
 {
   QThread * obj = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -199,7 +199,7 @@ HB_FUNC( QTHREAD_SETSTACKSIZE )
 /*
 uint stackSize() const
 */
-HB_FUNC( QTHREAD_STACKSIZE )
+HB_FUNC_STATIC( QTHREAD_STACKSIZE )
 {
   QThread * obj = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -214,7 +214,7 @@ HB_FUNC( QTHREAD_STACKSIZE )
 /*
 virtual bool event(QEvent * event)
 */
-HB_FUNC( QTHREAD_EVENT )
+HB_FUNC_STATIC( QTHREAD_EVENT )
 {
   QThread * obj = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -229,7 +229,7 @@ HB_FUNC( QTHREAD_EVENT )
 /*
 void quit()
 */
-HB_FUNC( QTHREAD_QUIT )
+HB_FUNC_STATIC( QTHREAD_QUIT )
 {
   QThread * obj = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -243,7 +243,7 @@ HB_FUNC( QTHREAD_QUIT )
 /*
 void start(Priority priority = InheritPriority)
 */
-HB_FUNC( QTHREAD_START )
+HB_FUNC_STATIC( QTHREAD_START )
 {
   QThread * obj = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -258,7 +258,7 @@ HB_FUNC( QTHREAD_START )
 /*
 void terminate()
 */
-HB_FUNC( QTHREAD_TERMINATE )
+HB_FUNC_STATIC( QTHREAD_TERMINATE )
 {
   QThread * obj = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -273,7 +273,7 @@ HB_FUNC( QTHREAD_TERMINATE )
 /*
 QThread * currentThread()
 */
-HB_FUNC( QTHREAD_CURRENTTHREAD )
+HB_FUNC_STATIC( QTHREAD_CURRENTTHREAD )
 {
   QThread * ptr = QThread::currentThread (  );
   _qt4xhb_createReturnClass ( ptr, "QTHREAD" );}
@@ -283,7 +283,7 @@ HB_FUNC( QTHREAD_CURRENTTHREAD )
 /*
 int idealThreadCount()
 */
-HB_FUNC( QTHREAD_IDEALTHREADCOUNT )
+HB_FUNC_STATIC( QTHREAD_IDEALTHREADCOUNT )
 {
   int i = QThread::idealThreadCount (  );
   hb_retni( i );
@@ -296,7 +296,7 @@ HB_FUNC( QTHREAD_IDEALTHREADCOUNT )
 /*
 void yieldCurrentThread()
 */
-HB_FUNC( QTHREAD_YIELDCURRENTTHREAD )
+HB_FUNC_STATIC( QTHREAD_YIELDCURRENTTHREAD )
 {
   QThread::yieldCurrentThread (  );
   hb_itemReturn( hb_stackSelfItem() );

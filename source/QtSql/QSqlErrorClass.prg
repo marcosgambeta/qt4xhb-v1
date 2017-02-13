@@ -108,7 +108,7 @@ RETURN
 /*
 QSqlError ( const QString & driverText = QString(), const QString & databaseText = QString(), ErrorType type = NoError, int number = -1 )
 */
-HB_FUNC( QSQLERROR_NEW1 )
+HB_FUNC_STATIC( QSQLERROR_NEW1 )
 {
   QSqlError * o = NULL;
   QString par1 = ISNIL(1)? QString() : hb_parc(1);
@@ -130,7 +130,7 @@ HB_FUNC( QSQLERROR_NEW1 )
 /*
 QSqlError ( const QSqlError & other )
 */
-HB_FUNC( QSQLERROR_NEW2 )
+HB_FUNC_STATIC( QSQLERROR_NEW2 )
 {
   QSqlError * o = NULL;
   QSqlError * par1 = (QSqlError *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -149,7 +149,7 @@ HB_FUNC( QSQLERROR_NEW2 )
 //[1]QSqlError ( const QString & driverText = QString(), const QString & databaseText = QString(), ErrorType type = NoError, int number = -1 )
 //[2]QSqlError ( const QSqlError & other )
 
-HB_FUNC( QSQLERROR_NEW )
+HB_FUNC_STATIC( QSQLERROR_NEW )
 {
   if( ISBETWEEN(0,4) && (ISCHAR(1)||ISNIL(1)) && (ISCHAR(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
   {
@@ -165,7 +165,7 @@ HB_FUNC( QSQLERROR_NEW )
   }
 }
 
-HB_FUNC( QSQLERROR_DELETE )
+HB_FUNC_STATIC( QSQLERROR_DELETE )
 {
   QSqlError * obj = (QSqlError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -184,7 +184,7 @@ HB_FUNC( QSQLERROR_DELETE )
 /*
 QString databaseText () const
 */
-HB_FUNC( QSQLERROR_DATABASETEXT )
+HB_FUNC_STATIC( QSQLERROR_DATABASETEXT )
 {
   QSqlError * obj = (QSqlError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -198,7 +198,7 @@ HB_FUNC( QSQLERROR_DATABASETEXT )
 /*
 QString driverText () const
 */
-HB_FUNC( QSQLERROR_DRIVERTEXT )
+HB_FUNC_STATIC( QSQLERROR_DRIVERTEXT )
 {
   QSqlError * obj = (QSqlError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -212,7 +212,7 @@ HB_FUNC( QSQLERROR_DRIVERTEXT )
 /*
 bool isValid () const
 */
-HB_FUNC( QSQLERROR_ISVALID )
+HB_FUNC_STATIC( QSQLERROR_ISVALID )
 {
   QSqlError * obj = (QSqlError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -226,7 +226,7 @@ HB_FUNC( QSQLERROR_ISVALID )
 /*
 int number () const
 */
-HB_FUNC( QSQLERROR_NUMBER )
+HB_FUNC_STATIC( QSQLERROR_NUMBER )
 {
   QSqlError * obj = (QSqlError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -240,7 +240,7 @@ HB_FUNC( QSQLERROR_NUMBER )
 /*
 void setDatabaseText ( const QString & databaseText )
 */
-HB_FUNC( QSQLERROR_SETDATABASETEXT )
+HB_FUNC_STATIC( QSQLERROR_SETDATABASETEXT )
 {
   QSqlError * obj = (QSqlError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -255,7 +255,7 @@ HB_FUNC( QSQLERROR_SETDATABASETEXT )
 /*
 void setDriverText ( const QString & driverText )
 */
-HB_FUNC( QSQLERROR_SETDRIVERTEXT )
+HB_FUNC_STATIC( QSQLERROR_SETDRIVERTEXT )
 {
   QSqlError * obj = (QSqlError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -270,7 +270,7 @@ HB_FUNC( QSQLERROR_SETDRIVERTEXT )
 /*
 void setNumber ( int number )
 */
-HB_FUNC( QSQLERROR_SETNUMBER )
+HB_FUNC_STATIC( QSQLERROR_SETNUMBER )
 {
   QSqlError * obj = (QSqlError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -285,7 +285,7 @@ HB_FUNC( QSQLERROR_SETNUMBER )
 /*
 void setType ( ErrorType type )
 */
-HB_FUNC( QSQLERROR_SETTYPE )
+HB_FUNC_STATIC( QSQLERROR_SETTYPE )
 {
   QSqlError * obj = (QSqlError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -300,7 +300,7 @@ HB_FUNC( QSQLERROR_SETTYPE )
 /*
 QString text () const
 */
-HB_FUNC( QSQLERROR_TEXT )
+HB_FUNC_STATIC( QSQLERROR_TEXT )
 {
   QSqlError * obj = (QSqlError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -314,7 +314,7 @@ HB_FUNC( QSQLERROR_TEXT )
 /*
 ErrorType type () const
 */
-HB_FUNC( QSQLERROR_TYPE )
+HB_FUNC_STATIC( QSQLERROR_TYPE )
 {
   QSqlError * obj = (QSqlError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

@@ -109,7 +109,7 @@ RETURN
 /*
 static int registerTypedef(const char *typeName, int aliasId)
 */
-HB_FUNC( QMETATYPE_REGISTERTYPEDEF )
+HB_FUNC_STATIC( QMETATYPE_REGISTERTYPEDEF )
 {
   const char * par1 = hb_parc(1);
   int par2 = hb_parni(2);
@@ -121,7 +121,7 @@ HB_FUNC( QMETATYPE_REGISTERTYPEDEF )
 /*
 static int type(const char *typeName)
 */
-HB_FUNC( QMETATYPE_TYPE )
+HB_FUNC_STATIC( QMETATYPE_TYPE )
 {
   const char * par1 = hb_parc(1);
   int i = QMetaType::type (  (const char *) par1 );
@@ -132,7 +132,7 @@ HB_FUNC( QMETATYPE_TYPE )
 /*
 static const char *typeName(int type)
 */
-HB_FUNC( QMETATYPE_TYPENAME )
+HB_FUNC_STATIC( QMETATYPE_TYPENAME )
 {
   int par1 = hb_parni(1);
   const char * str1 = QMetaType::typeName ( par1 );
@@ -143,7 +143,7 @@ HB_FUNC( QMETATYPE_TYPENAME )
 /*
 static bool isRegistered(int type)
 */
-HB_FUNC( QMETATYPE_ISREGISTERED )
+HB_FUNC_STATIC( QMETATYPE_ISREGISTERED )
 {
   int par1 = hb_parni(1);
   bool b = QMetaType::isRegistered ( par1 );
@@ -154,7 +154,7 @@ HB_FUNC( QMETATYPE_ISREGISTERED )
 /*
 static void *construct(int type, const void *copy = 0)
 */
-HB_FUNC( QMETATYPE_CONSTRUCT )
+HB_FUNC_STATIC( QMETATYPE_CONSTRUCT )
 {
   int par1 = hb_parni(1);
   const void * par2 = ISNIL(2)? 0 : (const void *) hb_parptr(2);
@@ -166,7 +166,7 @@ HB_FUNC( QMETATYPE_CONSTRUCT )
 /*
 static void destroy(int type, void *data)
 */
-HB_FUNC( QMETATYPE_DESTROY )
+HB_FUNC_STATIC( QMETATYPE_DESTROY )
 {
   int par1 = hb_parni(1);
   void * par2 = (void *) hb_parptr(2);
@@ -178,7 +178,7 @@ HB_FUNC( QMETATYPE_DESTROY )
 /*
 static void unregisterType(const char *typeName)
 */
-HB_FUNC( QMETATYPE_UNREGISTERTYPE )
+HB_FUNC_STATIC( QMETATYPE_UNREGISTERTYPE )
 {
   const char * par1 = hb_parc(1);
   QMetaType::unregisterType (  (const char *) par1 );
@@ -189,7 +189,7 @@ HB_FUNC( QMETATYPE_UNREGISTERTYPE )
 /*
 static bool save(QDataStream &stream, int type, const void *data)
 */
-HB_FUNC( QMETATYPE_SAVE )
+HB_FUNC_STATIC( QMETATYPE_SAVE )
 {
   QDataStream * par1 = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = hb_parni(2);
@@ -202,7 +202,7 @@ HB_FUNC( QMETATYPE_SAVE )
 /*
 static bool load(QDataStream &stream, int type, void *data)
 */
-HB_FUNC( QMETATYPE_LOAD )
+HB_FUNC_STATIC( QMETATYPE_LOAD )
 {
   QDataStream * par1 = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = hb_parni(2);

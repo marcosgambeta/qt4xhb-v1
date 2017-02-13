@@ -72,7 +72,7 @@ RETURN
 /*
 virtual int exec () = 0
 */
-HB_FUNC( QABSTRACTPRINTDIALOG_EXEC )
+HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_EXEC )
 {
   QAbstractPrintDialog * obj = (QAbstractPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -86,7 +86,7 @@ HB_FUNC( QABSTRACTPRINTDIALOG_EXEC )
 /*
 int fromPage () const
 */
-HB_FUNC( QABSTRACTPRINTDIALOG_FROMPAGE )
+HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_FROMPAGE )
 {
   QAbstractPrintDialog * obj = (QAbstractPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -100,7 +100,7 @@ HB_FUNC( QABSTRACTPRINTDIALOG_FROMPAGE )
 /*
 int maxPage () const
 */
-HB_FUNC( QABSTRACTPRINTDIALOG_MAXPAGE )
+HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_MAXPAGE )
 {
   QAbstractPrintDialog * obj = (QAbstractPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -114,7 +114,7 @@ HB_FUNC( QABSTRACTPRINTDIALOG_MAXPAGE )
 /*
 int minPage () const
 */
-HB_FUNC( QABSTRACTPRINTDIALOG_MINPAGE )
+HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_MINPAGE )
 {
   QAbstractPrintDialog * obj = (QAbstractPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -128,7 +128,7 @@ HB_FUNC( QABSTRACTPRINTDIALOG_MINPAGE )
 /*
 PrintRange printRange () const
 */
-HB_FUNC( QABSTRACTPRINTDIALOG_PRINTRANGE )
+HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_PRINTRANGE )
 {
   QAbstractPrintDialog * obj = (QAbstractPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -142,7 +142,7 @@ HB_FUNC( QABSTRACTPRINTDIALOG_PRINTRANGE )
 /*
 QPrinter * printer () const
 */
-HB_FUNC( QABSTRACTPRINTDIALOG_PRINTER )
+HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_PRINTER )
 {
   QAbstractPrintDialog * obj = (QAbstractPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -155,7 +155,7 @@ HB_FUNC( QABSTRACTPRINTDIALOG_PRINTER )
 /*
 void setFromTo ( int from, int to )
 */
-HB_FUNC( QABSTRACTPRINTDIALOG_SETFROMTO )
+HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_SETFROMTO )
 {
   QAbstractPrintDialog * obj = (QAbstractPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -171,7 +171,7 @@ HB_FUNC( QABSTRACTPRINTDIALOG_SETFROMTO )
 /*
 void setMinMax ( int min, int max )
 */
-HB_FUNC( QABSTRACTPRINTDIALOG_SETMINMAX )
+HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_SETMINMAX )
 {
   QAbstractPrintDialog * obj = (QAbstractPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -188,7 +188,7 @@ HB_FUNC( QABSTRACTPRINTDIALOG_SETMINMAX )
 /*
 void setPrintRange ( PrintRange range )
 */
-HB_FUNC( QABSTRACTPRINTDIALOG_SETPRINTRANGE )
+HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_SETPRINTRANGE )
 {
   QAbstractPrintDialog * obj = (QAbstractPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -203,7 +203,7 @@ HB_FUNC( QABSTRACTPRINTDIALOG_SETPRINTRANGE )
 /*
 int toPage () const
 */
-HB_FUNC( QABSTRACTPRINTDIALOG_TOPAGE )
+HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_TOPAGE )
 {
   QAbstractPrintDialog * obj = (QAbstractPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

@@ -74,7 +74,7 @@ RETURN
 /*
 QStackedWidget ( QWidget * parent = 0 )
 */
-HB_FUNC( QSTACKEDWIDGET_NEW )
+HB_FUNC_STATIC( QSTACKEDWIDGET_NEW )
 {
   QStackedWidget * o = NULL;
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -87,7 +87,7 @@ HB_FUNC( QSTACKEDWIDGET_NEW )
 }
 
 
-HB_FUNC( QSTACKEDWIDGET_DELETE )
+HB_FUNC_STATIC( QSTACKEDWIDGET_DELETE )
 {
   QStackedWidget * obj = (QStackedWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -106,7 +106,7 @@ HB_FUNC( QSTACKEDWIDGET_DELETE )
 /*
 int addWidget ( QWidget * widget )
 */
-HB_FUNC( QSTACKEDWIDGET_ADDWIDGET )
+HB_FUNC_STATIC( QSTACKEDWIDGET_ADDWIDGET )
 {
   QStackedWidget * obj = (QStackedWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -121,7 +121,7 @@ HB_FUNC( QSTACKEDWIDGET_ADDWIDGET )
 /*
 int count () const
 */
-HB_FUNC( QSTACKEDWIDGET_COUNT )
+HB_FUNC_STATIC( QSTACKEDWIDGET_COUNT )
 {
   QStackedWidget * obj = (QStackedWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -135,7 +135,7 @@ HB_FUNC( QSTACKEDWIDGET_COUNT )
 /*
 int currentIndex () const
 */
-HB_FUNC( QSTACKEDWIDGET_CURRENTINDEX )
+HB_FUNC_STATIC( QSTACKEDWIDGET_CURRENTINDEX )
 {
   QStackedWidget * obj = (QStackedWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -149,7 +149,7 @@ HB_FUNC( QSTACKEDWIDGET_CURRENTINDEX )
 /*
 QWidget * currentWidget () const
 */
-HB_FUNC( QSTACKEDWIDGET_CURRENTWIDGET )
+HB_FUNC_STATIC( QSTACKEDWIDGET_CURRENTWIDGET )
 {
   QStackedWidget * obj = (QStackedWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -162,7 +162,7 @@ HB_FUNC( QSTACKEDWIDGET_CURRENTWIDGET )
 /*
 int indexOf ( QWidget * widget ) const
 */
-HB_FUNC( QSTACKEDWIDGET_INDEXOF )
+HB_FUNC_STATIC( QSTACKEDWIDGET_INDEXOF )
 {
   QStackedWidget * obj = (QStackedWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -177,7 +177,7 @@ HB_FUNC( QSTACKEDWIDGET_INDEXOF )
 /*
 int insertWidget ( int index, QWidget * widget )
 */
-HB_FUNC( QSTACKEDWIDGET_INSERTWIDGET )
+HB_FUNC_STATIC( QSTACKEDWIDGET_INSERTWIDGET )
 {
   QStackedWidget * obj = (QStackedWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -193,7 +193,7 @@ HB_FUNC( QSTACKEDWIDGET_INSERTWIDGET )
 /*
 void removeWidget ( QWidget * widget )
 */
-HB_FUNC( QSTACKEDWIDGET_REMOVEWIDGET )
+HB_FUNC_STATIC( QSTACKEDWIDGET_REMOVEWIDGET )
 {
   QStackedWidget * obj = (QStackedWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -208,7 +208,7 @@ HB_FUNC( QSTACKEDWIDGET_REMOVEWIDGET )
 /*
 QWidget * widget ( int index ) const
 */
-HB_FUNC( QSTACKEDWIDGET_WIDGET )
+HB_FUNC_STATIC( QSTACKEDWIDGET_WIDGET )
 {
   QStackedWidget * obj = (QStackedWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -222,7 +222,7 @@ HB_FUNC( QSTACKEDWIDGET_WIDGET )
 /*
 void setCurrentIndex ( int index )
 */
-HB_FUNC( QSTACKEDWIDGET_SETCURRENTINDEX )
+HB_FUNC_STATIC( QSTACKEDWIDGET_SETCURRENTINDEX )
 {
   QStackedWidget * obj = (QStackedWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -237,7 +237,7 @@ HB_FUNC( QSTACKEDWIDGET_SETCURRENTINDEX )
 /*
 void setCurrentWidget ( QWidget * widget )
 */
-HB_FUNC( QSTACKEDWIDGET_SETCURRENTWIDGET )
+HB_FUNC_STATIC( QSTACKEDWIDGET_SETCURRENTWIDGET )
 {
   QStackedWidget * obj = (QStackedWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

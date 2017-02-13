@@ -136,7 +136,7 @@ RETURN
 /*
 QSqlRecord ()
 */
-HB_FUNC( QSQLRECORD_NEW1 )
+HB_FUNC_STATIC( QSQLRECORD_NEW1 )
 {
   QSqlRecord * o = NULL;
   o = new QSqlRecord (  );
@@ -154,7 +154,7 @@ HB_FUNC( QSQLRECORD_NEW1 )
 /*
 QSqlRecord ( const QSqlRecord & other )
 */
-HB_FUNC( QSQLRECORD_NEW2 )
+HB_FUNC_STATIC( QSQLRECORD_NEW2 )
 {
   QSqlRecord * o = NULL;
   QSqlRecord * par1 = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -173,7 +173,7 @@ HB_FUNC( QSQLRECORD_NEW2 )
 //[1]QSqlRecord ()
 //[2]QSqlRecord ( const QSqlRecord & other )
 
-HB_FUNC( QSQLRECORD_NEW )
+HB_FUNC_STATIC( QSQLRECORD_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -189,7 +189,7 @@ HB_FUNC( QSQLRECORD_NEW )
   }
 }
 
-HB_FUNC( QSQLRECORD_DELETE )
+HB_FUNC_STATIC( QSQLRECORD_DELETE )
 {
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -208,7 +208,7 @@ HB_FUNC( QSQLRECORD_DELETE )
 /*
 void append ( const QSqlField & field )
 */
-HB_FUNC( QSQLRECORD_APPEND )
+HB_FUNC_STATIC( QSQLRECORD_APPEND )
 {
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -223,7 +223,7 @@ HB_FUNC( QSQLRECORD_APPEND )
 /*
 void clear ()
 */
-HB_FUNC( QSQLRECORD_CLEAR )
+HB_FUNC_STATIC( QSQLRECORD_CLEAR )
 {
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -237,7 +237,7 @@ HB_FUNC( QSQLRECORD_CLEAR )
 /*
 void clearValues ()
 */
-HB_FUNC( QSQLRECORD_CLEARVALUES )
+HB_FUNC_STATIC( QSQLRECORD_CLEARVALUES )
 {
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -251,7 +251,7 @@ HB_FUNC( QSQLRECORD_CLEARVALUES )
 /*
 bool contains ( const QString & name ) const
 */
-HB_FUNC( QSQLRECORD_CONTAINS )
+HB_FUNC_STATIC( QSQLRECORD_CONTAINS )
 {
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -266,7 +266,7 @@ HB_FUNC( QSQLRECORD_CONTAINS )
 /*
 int count () const
 */
-HB_FUNC( QSQLRECORD_COUNT )
+HB_FUNC_STATIC( QSQLRECORD_COUNT )
 {
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -280,7 +280,7 @@ HB_FUNC( QSQLRECORD_COUNT )
 /*
 QSqlField field ( int index ) const
 */
-HB_FUNC( QSQLRECORD_FIELD1 )
+HB_FUNC_STATIC( QSQLRECORD_FIELD1 )
 {
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -294,7 +294,7 @@ HB_FUNC( QSQLRECORD_FIELD1 )
 /*
 QSqlField field ( const QString & name ) const
 */
-HB_FUNC( QSQLRECORD_FIELD2 )
+HB_FUNC_STATIC( QSQLRECORD_FIELD2 )
 {
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -308,7 +308,7 @@ HB_FUNC( QSQLRECORD_FIELD2 )
 //[1]QSqlField field ( int index ) const
 //[2]QSqlField field ( const QString & name ) const
 
-HB_FUNC( QSQLRECORD_FIELD )
+HB_FUNC_STATIC( QSQLRECORD_FIELD )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
@@ -323,7 +323,7 @@ HB_FUNC( QSQLRECORD_FIELD )
 /*
 QString fieldName ( int index ) const
 */
-HB_FUNC( QSQLRECORD_FIELDNAME )
+HB_FUNC_STATIC( QSQLRECORD_FIELDNAME )
 {
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -338,7 +338,7 @@ HB_FUNC( QSQLRECORD_FIELDNAME )
 /*
 int indexOf ( const QString & name ) const
 */
-HB_FUNC( QSQLRECORD_INDEXOF )
+HB_FUNC_STATIC( QSQLRECORD_INDEXOF )
 {
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -353,7 +353,7 @@ HB_FUNC( QSQLRECORD_INDEXOF )
 /*
 void insert ( int pos, const QSqlField & field )
 */
-HB_FUNC( QSQLRECORD_INSERT )
+HB_FUNC_STATIC( QSQLRECORD_INSERT )
 {
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -369,7 +369,7 @@ HB_FUNC( QSQLRECORD_INSERT )
 /*
 bool isEmpty () const
 */
-HB_FUNC( QSQLRECORD_ISEMPTY )
+HB_FUNC_STATIC( QSQLRECORD_ISEMPTY )
 {
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -383,7 +383,7 @@ HB_FUNC( QSQLRECORD_ISEMPTY )
 /*
 bool isGenerated ( const QString & name ) const
 */
-HB_FUNC( QSQLRECORD_ISGENERATED1 )
+HB_FUNC_STATIC( QSQLRECORD_ISGENERATED1 )
 {
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -398,7 +398,7 @@ HB_FUNC( QSQLRECORD_ISGENERATED1 )
 /*
 bool isGenerated ( int index ) const
 */
-HB_FUNC( QSQLRECORD_ISGENERATED2 )
+HB_FUNC_STATIC( QSQLRECORD_ISGENERATED2 )
 {
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -413,7 +413,7 @@ HB_FUNC( QSQLRECORD_ISGENERATED2 )
 //[1]bool isGenerated ( const QString & name ) const
 //[2]bool isGenerated ( int index ) const
 
-HB_FUNC( QSQLRECORD_ISGENERATED )
+HB_FUNC_STATIC( QSQLRECORD_ISGENERATED )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
@@ -428,7 +428,7 @@ HB_FUNC( QSQLRECORD_ISGENERATED )
 /*
 bool isNull ( const QString & name ) const
 */
-HB_FUNC( QSQLRECORD_ISNULL1 )
+HB_FUNC_STATIC( QSQLRECORD_ISNULL1 )
 {
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -443,7 +443,7 @@ HB_FUNC( QSQLRECORD_ISNULL1 )
 /*
 bool isNull ( int index ) const
 */
-HB_FUNC( QSQLRECORD_ISNULL2 )
+HB_FUNC_STATIC( QSQLRECORD_ISNULL2 )
 {
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -458,7 +458,7 @@ HB_FUNC( QSQLRECORD_ISNULL2 )
 //[1]bool isNull ( const QString & name ) const
 //[2]bool isNull ( int index ) const
 
-HB_FUNC( QSQLRECORD_ISNULL )
+HB_FUNC_STATIC( QSQLRECORD_ISNULL )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
@@ -473,7 +473,7 @@ HB_FUNC( QSQLRECORD_ISNULL )
 /*
 void remove ( int pos )
 */
-HB_FUNC( QSQLRECORD_REMOVE )
+HB_FUNC_STATIC( QSQLRECORD_REMOVE )
 {
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -488,7 +488,7 @@ HB_FUNC( QSQLRECORD_REMOVE )
 /*
 void replace ( int pos, const QSqlField & field )
 */
-HB_FUNC( QSQLRECORD_REPLACE )
+HB_FUNC_STATIC( QSQLRECORD_REPLACE )
 {
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -504,7 +504,7 @@ HB_FUNC( QSQLRECORD_REPLACE )
 /*
 void setGenerated ( const QString & name, bool generated )
 */
-HB_FUNC( QSQLRECORD_SETGENERATED1 )
+HB_FUNC_STATIC( QSQLRECORD_SETGENERATED1 )
 {
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -520,7 +520,7 @@ HB_FUNC( QSQLRECORD_SETGENERATED1 )
 /*
 void setGenerated ( int index, bool generated )
 */
-HB_FUNC( QSQLRECORD_SETGENERATED2 )
+HB_FUNC_STATIC( QSQLRECORD_SETGENERATED2 )
 {
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -536,7 +536,7 @@ HB_FUNC( QSQLRECORD_SETGENERATED2 )
 //[1]void setGenerated ( const QString & name, bool generated )
 //[2]void setGenerated ( int index, bool generated )
 
-HB_FUNC( QSQLRECORD_SETGENERATED )
+HB_FUNC_STATIC( QSQLRECORD_SETGENERATED )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISLOG(2) )
   {
@@ -551,7 +551,7 @@ HB_FUNC( QSQLRECORD_SETGENERATED )
 /*
 void setNull ( int index )
 */
-HB_FUNC( QSQLRECORD_SETNULL1 )
+HB_FUNC_STATIC( QSQLRECORD_SETNULL1 )
 {
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -566,7 +566,7 @@ HB_FUNC( QSQLRECORD_SETNULL1 )
 /*
 void setNull ( const QString & name )
 */
-HB_FUNC( QSQLRECORD_SETNULL2 )
+HB_FUNC_STATIC( QSQLRECORD_SETNULL2 )
 {
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -581,7 +581,7 @@ HB_FUNC( QSQLRECORD_SETNULL2 )
 //[1]void setNull ( int index )
 //[2]void setNull ( const QString & name )
 
-HB_FUNC( QSQLRECORD_SETNULL )
+HB_FUNC_STATIC( QSQLRECORD_SETNULL )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
@@ -596,7 +596,7 @@ HB_FUNC( QSQLRECORD_SETNULL )
 /*
 void setValue ( int index, const QVariant & val )
 */
-HB_FUNC( QSQLRECORD_SETVALUE1 )
+HB_FUNC_STATIC( QSQLRECORD_SETVALUE1 )
 {
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -612,7 +612,7 @@ HB_FUNC( QSQLRECORD_SETVALUE1 )
 /*
 void setValue ( const QString & name, const QVariant & val )
 */
-HB_FUNC( QSQLRECORD_SETVALUE2 )
+HB_FUNC_STATIC( QSQLRECORD_SETVALUE2 )
 {
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -628,7 +628,7 @@ HB_FUNC( QSQLRECORD_SETVALUE2 )
 //[1]void setValue ( int index, const QVariant & val )
 //[2]void setValue ( const QString & name, const QVariant & val )
 
-HB_FUNC( QSQLRECORD_SETVALUE )
+HB_FUNC_STATIC( QSQLRECORD_SETVALUE )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISQVARIANT(2) )
   {
@@ -643,7 +643,7 @@ HB_FUNC( QSQLRECORD_SETVALUE )
 /*
 QVariant value ( int index ) const
 */
-HB_FUNC( QSQLRECORD_VALUE1 )
+HB_FUNC_STATIC( QSQLRECORD_VALUE1 )
 {
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -657,7 +657,7 @@ HB_FUNC( QSQLRECORD_VALUE1 )
 /*
 QVariant value ( const QString & name ) const
 */
-HB_FUNC( QSQLRECORD_VALUE2 )
+HB_FUNC_STATIC( QSQLRECORD_VALUE2 )
 {
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -671,7 +671,7 @@ HB_FUNC( QSQLRECORD_VALUE2 )
 //[1]QVariant value ( int index ) const
 //[2]QVariant value ( const QString & name ) const
 
-HB_FUNC( QSQLRECORD_VALUE )
+HB_FUNC_STATIC( QSQLRECORD_VALUE )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {

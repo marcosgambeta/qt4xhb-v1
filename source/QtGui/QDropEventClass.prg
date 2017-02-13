@@ -78,7 +78,7 @@ RETURN
 /*
 QDropEvent ( const QPoint & pos, Qt::DropActions actions, const QMimeData * data, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers, Type type = Drop )
 */
-HB_FUNC( QDROPEVENT_NEW )
+HB_FUNC_STATIC( QDROPEVENT_NEW )
 {
   QDropEvent * o = NULL;
   QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -96,7 +96,7 @@ HB_FUNC( QDROPEVENT_NEW )
 }
 
 
-HB_FUNC( QDROPEVENT_DELETE )
+HB_FUNC_STATIC( QDROPEVENT_DELETE )
 {
   QDropEvent * obj = (QDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -115,7 +115,7 @@ HB_FUNC( QDROPEVENT_DELETE )
 /*
 void acceptProposedAction ()
 */
-HB_FUNC( QDROPEVENT_ACCEPTPROPOSEDACTION )
+HB_FUNC_STATIC( QDROPEVENT_ACCEPTPROPOSEDACTION )
 {
   QDropEvent * obj = (QDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -129,7 +129,7 @@ HB_FUNC( QDROPEVENT_ACCEPTPROPOSEDACTION )
 /*
 Qt::DropAction dropAction () const
 */
-HB_FUNC( QDROPEVENT_DROPACTION )
+HB_FUNC_STATIC( QDROPEVENT_DROPACTION )
 {
   QDropEvent * obj = (QDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -143,7 +143,7 @@ HB_FUNC( QDROPEVENT_DROPACTION )
 /*
 Qt::KeyboardModifiers keyboardModifiers () const
 */
-HB_FUNC( QDROPEVENT_KEYBOARDMODIFIERS )
+HB_FUNC_STATIC( QDROPEVENT_KEYBOARDMODIFIERS )
 {
   QDropEvent * obj = (QDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -157,7 +157,7 @@ HB_FUNC( QDROPEVENT_KEYBOARDMODIFIERS )
 /*
 const QMimeData * mimeData () const
 */
-HB_FUNC( QDROPEVENT_MIMEDATA )
+HB_FUNC_STATIC( QDROPEVENT_MIMEDATA )
 {
   QDropEvent * obj = (QDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -170,7 +170,7 @@ HB_FUNC( QDROPEVENT_MIMEDATA )
 /*
 Qt::MouseButtons mouseButtons () const
 */
-HB_FUNC( QDROPEVENT_MOUSEBUTTONS )
+HB_FUNC_STATIC( QDROPEVENT_MOUSEBUTTONS )
 {
   QDropEvent * obj = (QDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -184,7 +184,7 @@ HB_FUNC( QDROPEVENT_MOUSEBUTTONS )
 /*
 const QPoint &  pos () const
 */
-HB_FUNC( QDROPEVENT_POS )
+HB_FUNC_STATIC( QDROPEVENT_POS )
 {
   QDropEvent * obj = (QDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -197,7 +197,7 @@ HB_FUNC( QDROPEVENT_POS )
 /*
 Qt::DropActions possibleActions () const
 */
-HB_FUNC( QDROPEVENT_POSSIBLEACTIONS )
+HB_FUNC_STATIC( QDROPEVENT_POSSIBLEACTIONS )
 {
   QDropEvent * obj = (QDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -211,7 +211,7 @@ HB_FUNC( QDROPEVENT_POSSIBLEACTIONS )
 /*
 Qt::DropAction proposedAction () const
 */
-HB_FUNC( QDROPEVENT_PROPOSEDACTION )
+HB_FUNC_STATIC( QDROPEVENT_PROPOSEDACTION )
 {
   QDropEvent * obj = (QDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -225,7 +225,7 @@ HB_FUNC( QDROPEVENT_PROPOSEDACTION )
 /*
 void setDropAction ( Qt::DropAction action )
 */
-HB_FUNC( QDROPEVENT_SETDROPACTION )
+HB_FUNC_STATIC( QDROPEVENT_SETDROPACTION )
 {
   QDropEvent * obj = (QDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -240,7 +240,7 @@ HB_FUNC( QDROPEVENT_SETDROPACTION )
 /*
 QWidget * source () const
 */
-HB_FUNC( QDROPEVENT_SOURCE )
+HB_FUNC_STATIC( QDROPEVENT_SOURCE )
 {
   QDropEvent * obj = (QDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -253,7 +253,7 @@ HB_FUNC( QDROPEVENT_SOURCE )
 /*
 virtual QByteArray encodedData ( const char * format ) const
 */
-HB_FUNC( QDROPEVENT_ENCODEDDATA )
+HB_FUNC_STATIC( QDROPEVENT_ENCODEDDATA )
 {
   QDropEvent * obj = (QDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -267,7 +267,7 @@ HB_FUNC( QDROPEVENT_ENCODEDDATA )
 /*
 virtual const char * format ( int n = 0 ) const
 */
-HB_FUNC( QDROPEVENT_FORMAT )
+HB_FUNC_STATIC( QDROPEVENT_FORMAT )
 {
   QDropEvent * obj = (QDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -282,7 +282,7 @@ HB_FUNC( QDROPEVENT_FORMAT )
 /*
 virtual bool provides ( const char * mimeType ) const
 */
-HB_FUNC( QDROPEVENT_PROVIDES )
+HB_FUNC_STATIC( QDROPEVENT_PROVIDES )
 {
   QDropEvent * obj = (QDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

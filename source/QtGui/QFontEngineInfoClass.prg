@@ -108,7 +108,7 @@ RETURN
 /*
 QFontEngineInfo ()
 */
-HB_FUNC( QFONTENGINEINFO_NEW1 )
+HB_FUNC_STATIC( QFONTENGINEINFO_NEW1 )
 {
   QFontEngineInfo * o = NULL;
   o = new QFontEngineInfo (  );
@@ -123,7 +123,7 @@ HB_FUNC( QFONTENGINEINFO_NEW1 )
 /*
 QFontEngineInfo ( const QString & family )
 */
-HB_FUNC( QFONTENGINEINFO_NEW2 )
+HB_FUNC_STATIC( QFONTENGINEINFO_NEW2 )
 {
   QFontEngineInfo * o = NULL;
   QString par1 = hb_parc(1);
@@ -139,7 +139,7 @@ HB_FUNC( QFONTENGINEINFO_NEW2 )
 /*
 QFontEngineInfo ( const QFontEngineInfo & other )
 */
-HB_FUNC( QFONTENGINEINFO_NEW3 )
+HB_FUNC_STATIC( QFONTENGINEINFO_NEW3 )
 {
   QFontEngineInfo * o = NULL;
   QFontEngineInfo * par1 = (QFontEngineInfo *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -156,7 +156,7 @@ HB_FUNC( QFONTENGINEINFO_NEW3 )
 //[2]QFontEngineInfo ( const QString & family )
 //[3]QFontEngineInfo ( const QFontEngineInfo & other )
 
-HB_FUNC( QFONTENGINEINFO_NEW )
+HB_FUNC_STATIC( QFONTENGINEINFO_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -176,7 +176,7 @@ HB_FUNC( QFONTENGINEINFO_NEW )
   }
 }
 
-HB_FUNC( QFONTENGINEINFO_DELETE )
+HB_FUNC_STATIC( QFONTENGINEINFO_DELETE )
 {
   QFontEngineInfo * obj = (QFontEngineInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -195,7 +195,7 @@ HB_FUNC( QFONTENGINEINFO_DELETE )
 /*
 QString family () const
 */
-HB_FUNC( QFONTENGINEINFO_FAMILY )
+HB_FUNC_STATIC( QFONTENGINEINFO_FAMILY )
 {
   QFontEngineInfo * obj = (QFontEngineInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -209,7 +209,7 @@ HB_FUNC( QFONTENGINEINFO_FAMILY )
 /*
 qreal pixelSize () const
 */
-HB_FUNC( QFONTENGINEINFO_PIXELSIZE )
+HB_FUNC_STATIC( QFONTENGINEINFO_PIXELSIZE )
 {
   QFontEngineInfo * obj = (QFontEngineInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -223,7 +223,7 @@ HB_FUNC( QFONTENGINEINFO_PIXELSIZE )
 /*
 void setFamily ( const QString & name )
 */
-HB_FUNC( QFONTENGINEINFO_SETFAMILY )
+HB_FUNC_STATIC( QFONTENGINEINFO_SETFAMILY )
 {
   QFontEngineInfo * obj = (QFontEngineInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -238,7 +238,7 @@ HB_FUNC( QFONTENGINEINFO_SETFAMILY )
 /*
 void setPixelSize ( qreal size )
 */
-HB_FUNC( QFONTENGINEINFO_SETPIXELSIZE )
+HB_FUNC_STATIC( QFONTENGINEINFO_SETPIXELSIZE )
 {
   QFontEngineInfo * obj = (QFontEngineInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -253,7 +253,7 @@ HB_FUNC( QFONTENGINEINFO_SETPIXELSIZE )
 /*
 void setStyle ( QFont::Style style )
 */
-HB_FUNC( QFONTENGINEINFO_SETSTYLE )
+HB_FUNC_STATIC( QFONTENGINEINFO_SETSTYLE )
 {
   QFontEngineInfo * obj = (QFontEngineInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -268,7 +268,7 @@ HB_FUNC( QFONTENGINEINFO_SETSTYLE )
 /*
 void setWeight ( int weight )
 */
-HB_FUNC( QFONTENGINEINFO_SETWEIGHT )
+HB_FUNC_STATIC( QFONTENGINEINFO_SETWEIGHT )
 {
   QFontEngineInfo * obj = (QFontEngineInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -283,7 +283,7 @@ HB_FUNC( QFONTENGINEINFO_SETWEIGHT )
 /*
 void setWritingSystems ( const QList<QFontDatabase::WritingSystem> & writingSystems )
 */
-HB_FUNC( QFONTENGINEINFO_SETWRITINGSYSTEMS )
+HB_FUNC_STATIC( QFONTENGINEINFO_SETWRITINGSYSTEMS )
 {
   QFontEngineInfo * obj = (QFontEngineInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -307,7 +307,7 @@ par1 << (QFontDatabase::WritingSystem) temp1;
 /*
 QFont::Style style () const
 */
-HB_FUNC( QFONTENGINEINFO_STYLE )
+HB_FUNC_STATIC( QFONTENGINEINFO_STYLE )
 {
   QFontEngineInfo * obj = (QFontEngineInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -321,7 +321,7 @@ HB_FUNC( QFONTENGINEINFO_STYLE )
 /*
 int weight () const
 */
-HB_FUNC( QFONTENGINEINFO_WEIGHT )
+HB_FUNC_STATIC( QFONTENGINEINFO_WEIGHT )
 {
   QFontEngineInfo * obj = (QFontEngineInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -335,7 +335,7 @@ HB_FUNC( QFONTENGINEINFO_WEIGHT )
 /*
 QList<QFontDatabase::WritingSystem> writingSystems () const
 */
-HB_FUNC( QFONTENGINEINFO_WRITINGSYSTEMS )
+HB_FUNC_STATIC( QFONTENGINEINFO_WRITINGSYSTEMS )
 {
   QFontEngineInfo * obj = (QFontEngineInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

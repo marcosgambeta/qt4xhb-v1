@@ -72,7 +72,7 @@ RETURN
 /*
 QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos, Qt::KeyboardModifiers modifiers )
 */
-HB_FUNC( QCONTEXTMENUEVENT_NEW1 )
+HB_FUNC_STATIC( QCONTEXTMENUEVENT_NEW1 )
 {
   QContextMenuEvent * o = NULL;
   int par1 = hb_parni(1);
@@ -91,7 +91,7 @@ HB_FUNC( QCONTEXTMENUEVENT_NEW1 )
 /*
 QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos )
 */
-HB_FUNC( QCONTEXTMENUEVENT_NEW2 )
+HB_FUNC_STATIC( QCONTEXTMENUEVENT_NEW2 )
 {
   QContextMenuEvent * o = NULL;
   int par1 = hb_parni(1);
@@ -109,7 +109,7 @@ HB_FUNC( QCONTEXTMENUEVENT_NEW2 )
 /*
 QContextMenuEvent ( Reason reason, const QPoint & pos )
 */
-HB_FUNC( QCONTEXTMENUEVENT_NEW3 )
+HB_FUNC_STATIC( QCONTEXTMENUEVENT_NEW3 )
 {
   QContextMenuEvent * o = NULL;
   int par1 = hb_parni(1);
@@ -127,7 +127,7 @@ HB_FUNC( QCONTEXTMENUEVENT_NEW3 )
 //[2]QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos )
 //[3]QContextMenuEvent ( Reason reason, const QPoint & pos )
 
-HB_FUNC( QCONTEXTMENUEVENT_NEW )
+HB_FUNC_STATIC( QCONTEXTMENUEVENT_NEW )
 {
   if( ISNUMPAR(4) && ISNUM(1) && ISQPOINT(2) && ISQPOINT(3) && ISNUM(4) )
   {
@@ -147,7 +147,7 @@ HB_FUNC( QCONTEXTMENUEVENT_NEW )
   }
 }
 
-HB_FUNC( QCONTEXTMENUEVENT_DELETE )
+HB_FUNC_STATIC( QCONTEXTMENUEVENT_DELETE )
 {
   QContextMenuEvent * obj = (QContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -166,7 +166,7 @@ HB_FUNC( QCONTEXTMENUEVENT_DELETE )
 /*
 const QPoint & globalPos () const
 */
-HB_FUNC( QCONTEXTMENUEVENT_GLOBALPOS )
+HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALPOS )
 {
   QContextMenuEvent * obj = (QContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -179,7 +179,7 @@ HB_FUNC( QCONTEXTMENUEVENT_GLOBALPOS )
 /*
 int globalX () const
 */
-HB_FUNC( QCONTEXTMENUEVENT_GLOBALX )
+HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALX )
 {
   QContextMenuEvent * obj = (QContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -193,7 +193,7 @@ HB_FUNC( QCONTEXTMENUEVENT_GLOBALX )
 /*
 int globalY () const
 */
-HB_FUNC( QCONTEXTMENUEVENT_GLOBALY )
+HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALY )
 {
   QContextMenuEvent * obj = (QContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -207,7 +207,7 @@ HB_FUNC( QCONTEXTMENUEVENT_GLOBALY )
 /*
 const QPoint & pos () const
 */
-HB_FUNC( QCONTEXTMENUEVENT_POS )
+HB_FUNC_STATIC( QCONTEXTMENUEVENT_POS )
 {
   QContextMenuEvent * obj = (QContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -220,7 +220,7 @@ HB_FUNC( QCONTEXTMENUEVENT_POS )
 /*
 Reason reason () const
 */
-HB_FUNC( QCONTEXTMENUEVENT_REASON )
+HB_FUNC_STATIC( QCONTEXTMENUEVENT_REASON )
 {
   QContextMenuEvent * obj = (QContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -234,7 +234,7 @@ HB_FUNC( QCONTEXTMENUEVENT_REASON )
 /*
 int x () const
 */
-HB_FUNC( QCONTEXTMENUEVENT_X )
+HB_FUNC_STATIC( QCONTEXTMENUEVENT_X )
 {
   QContextMenuEvent * obj = (QContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -248,7 +248,7 @@ HB_FUNC( QCONTEXTMENUEVENT_X )
 /*
 int y () const
 */
-HB_FUNC( QCONTEXTMENUEVENT_Y )
+HB_FUNC_STATIC( QCONTEXTMENUEVENT_Y )
 {
   QContextMenuEvent * obj = (QContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

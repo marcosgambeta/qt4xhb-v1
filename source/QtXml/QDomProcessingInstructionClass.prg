@@ -66,7 +66,7 @@ RETURN
 /*
 QDomProcessingInstruction ()
 */
-HB_FUNC( QDOMPROCESSINGINSTRUCTION_NEW1 )
+HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW1 )
 {
   QDomProcessingInstruction * o = NULL;
   o = new QDomProcessingInstruction (  );
@@ -84,7 +84,7 @@ HB_FUNC( QDOMPROCESSINGINSTRUCTION_NEW1 )
 /*
 QDomProcessingInstruction ( const QDomProcessingInstruction & x )
 */
-HB_FUNC( QDOMPROCESSINGINSTRUCTION_NEW2 )
+HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW2 )
 {
   QDomProcessingInstruction * o = NULL;
   QDomProcessingInstruction * par1 = (QDomProcessingInstruction *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -103,7 +103,7 @@ HB_FUNC( QDOMPROCESSINGINSTRUCTION_NEW2 )
 //[1]QDomProcessingInstruction ()
 //[2]QDomProcessingInstruction ( const QDomProcessingInstruction & x )
 
-HB_FUNC( QDOMPROCESSINGINSTRUCTION_NEW )
+HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -124,7 +124,7 @@ HB_FUNC( QDOMPROCESSINGINSTRUCTION_NEW )
 /*
 QString data () const
 */
-HB_FUNC( QDOMPROCESSINGINSTRUCTION_DATA )
+HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_DATA )
 {
   QDomProcessingInstruction * obj = (QDomProcessingInstruction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -138,7 +138,7 @@ HB_FUNC( QDOMPROCESSINGINSTRUCTION_DATA )
 /*
 QDomNode::NodeType nodeType () const
 */
-HB_FUNC( QDOMPROCESSINGINSTRUCTION_NODETYPE )
+HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NODETYPE )
 {
   QDomProcessingInstruction * obj = (QDomProcessingInstruction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -152,7 +152,7 @@ HB_FUNC( QDOMPROCESSINGINSTRUCTION_NODETYPE )
 /*
 void setData ( const QString & d )
 */
-HB_FUNC( QDOMPROCESSINGINSTRUCTION_SETDATA )
+HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_SETDATA )
 {
   QDomProcessingInstruction * obj = (QDomProcessingInstruction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -167,7 +167,7 @@ HB_FUNC( QDOMPROCESSINGINSTRUCTION_SETDATA )
 /*
 QString target () const
 */
-HB_FUNC( QDOMPROCESSINGINSTRUCTION_TARGET )
+HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_TARGET )
 {
   QDomProcessingInstruction * obj = (QDomProcessingInstruction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

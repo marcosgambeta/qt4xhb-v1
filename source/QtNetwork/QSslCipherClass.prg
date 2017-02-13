@@ -108,7 +108,7 @@ RETURN
 /*
 QSslCipher ()
 */
-HB_FUNC( QSSLCIPHER_NEW1 )
+HB_FUNC_STATIC( QSSLCIPHER_NEW1 )
 {
   QSslCipher * o = NULL;
   o = new QSslCipher (  );
@@ -126,7 +126,7 @@ HB_FUNC( QSSLCIPHER_NEW1 )
 /*
 QSslCipher ( const QString & name, QSsl::SslProtocol protocol )
 */
-HB_FUNC( QSSLCIPHER_NEW2 )
+HB_FUNC_STATIC( QSSLCIPHER_NEW2 )
 {
   QSslCipher * o = NULL;
   QString par1 = hb_parc(1);
@@ -146,7 +146,7 @@ HB_FUNC( QSSLCIPHER_NEW2 )
 /*
 QSslCipher ( const QSslCipher & other )
 */
-HB_FUNC( QSSLCIPHER_NEW3 )
+HB_FUNC_STATIC( QSSLCIPHER_NEW3 )
 {
   QSslCipher * o = NULL;
   QSslCipher * par1 = (QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -166,7 +166,7 @@ HB_FUNC( QSSLCIPHER_NEW3 )
 //[2]QSslCipher ( const QString & name, QSsl::SslProtocol protocol )
 //[3]QSslCipher ( const QSslCipher & other )
 
-HB_FUNC( QSSLCIPHER_NEW )
+HB_FUNC_STATIC( QSSLCIPHER_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -186,7 +186,7 @@ HB_FUNC( QSSLCIPHER_NEW )
   }
 }
 
-HB_FUNC( QSSLCIPHER_DELETE )
+HB_FUNC_STATIC( QSSLCIPHER_DELETE )
 {
   QSslCipher * obj = (QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -205,7 +205,7 @@ HB_FUNC( QSSLCIPHER_DELETE )
 /*
 QString authenticationMethod () const
 */
-HB_FUNC( QSSLCIPHER_AUTHENTICATIONMETHOD )
+HB_FUNC_STATIC( QSSLCIPHER_AUTHENTICATIONMETHOD )
 {
   QSslCipher * obj = (QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -219,7 +219,7 @@ HB_FUNC( QSSLCIPHER_AUTHENTICATIONMETHOD )
 /*
 QString encryptionMethod () const
 */
-HB_FUNC( QSSLCIPHER_ENCRYPTIONMETHOD )
+HB_FUNC_STATIC( QSSLCIPHER_ENCRYPTIONMETHOD )
 {
   QSslCipher * obj = (QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -233,7 +233,7 @@ HB_FUNC( QSSLCIPHER_ENCRYPTIONMETHOD )
 /*
 bool isNull () const
 */
-HB_FUNC( QSSLCIPHER_ISNULL )
+HB_FUNC_STATIC( QSSLCIPHER_ISNULL )
 {
   QSslCipher * obj = (QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -247,7 +247,7 @@ HB_FUNC( QSSLCIPHER_ISNULL )
 /*
 QString keyExchangeMethod () const
 */
-HB_FUNC( QSSLCIPHER_KEYEXCHANGEMETHOD )
+HB_FUNC_STATIC( QSSLCIPHER_KEYEXCHANGEMETHOD )
 {
   QSslCipher * obj = (QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -261,7 +261,7 @@ HB_FUNC( QSSLCIPHER_KEYEXCHANGEMETHOD )
 /*
 QString name () const
 */
-HB_FUNC( QSSLCIPHER_NAME )
+HB_FUNC_STATIC( QSSLCIPHER_NAME )
 {
   QSslCipher * obj = (QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -275,7 +275,7 @@ HB_FUNC( QSSLCIPHER_NAME )
 /*
 QSsl::SslProtocol protocol () const
 */
-HB_FUNC( QSSLCIPHER_PROTOCOL )
+HB_FUNC_STATIC( QSSLCIPHER_PROTOCOL )
 {
   QSslCipher * obj = (QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -289,7 +289,7 @@ HB_FUNC( QSSLCIPHER_PROTOCOL )
 /*
 QString protocolString () const
 */
-HB_FUNC( QSSLCIPHER_PROTOCOLSTRING )
+HB_FUNC_STATIC( QSSLCIPHER_PROTOCOLSTRING )
 {
   QSslCipher * obj = (QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -303,7 +303,7 @@ HB_FUNC( QSSLCIPHER_PROTOCOLSTRING )
 /*
 int supportedBits () const
 */
-HB_FUNC( QSSLCIPHER_SUPPORTEDBITS )
+HB_FUNC_STATIC( QSSLCIPHER_SUPPORTEDBITS )
 {
   QSslCipher * obj = (QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -317,7 +317,7 @@ HB_FUNC( QSSLCIPHER_SUPPORTEDBITS )
 /*
 int usedBits () const
 */
-HB_FUNC( QSSLCIPHER_USEDBITS )
+HB_FUNC_STATIC( QSSLCIPHER_USEDBITS )
 {
   QSslCipher * obj = (QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

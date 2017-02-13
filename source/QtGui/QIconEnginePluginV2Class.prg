@@ -61,7 +61,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QICONENGINEPLUGINV2_DELETE )
+HB_FUNC_STATIC( QICONENGINEPLUGINV2_DELETE )
 {
   QIconEnginePluginV2 * obj = (QIconEnginePluginV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -80,7 +80,7 @@ HB_FUNC( QICONENGINEPLUGINV2_DELETE )
 /*
 virtual QIconEngineV2 * create ( const QString & filename = QString() ) = 0
 */
-HB_FUNC( QICONENGINEPLUGINV2_CREATE )
+HB_FUNC_STATIC( QICONENGINEPLUGINV2_CREATE )
 {
   QIconEnginePluginV2 * obj = (QIconEnginePluginV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -94,7 +94,7 @@ HB_FUNC( QICONENGINEPLUGINV2_CREATE )
 /*
 virtual QStringList keys () const = 0
 */
-HB_FUNC( QICONENGINEPLUGINV2_KEYS )
+HB_FUNC_STATIC( QICONENGINEPLUGINV2_KEYS )
 {
   QIconEnginePluginV2 * obj = (QIconEnginePluginV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

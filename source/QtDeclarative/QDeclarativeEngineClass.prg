@@ -95,7 +95,7 @@ RETURN
 /*
 QDeclarativeEngine ( QObject * parent = 0 )
 */
-HB_FUNC( QDECLARATIVEENGINE_NEW )
+HB_FUNC_STATIC( QDECLARATIVEENGINE_NEW )
 {
   QDeclarativeEngine * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -108,7 +108,7 @@ HB_FUNC( QDECLARATIVEENGINE_NEW )
 }
 
 
-HB_FUNC( QDECLARATIVEENGINE_DELETE )
+HB_FUNC_STATIC( QDECLARATIVEENGINE_DELETE )
 {
   QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -127,7 +127,7 @@ HB_FUNC( QDECLARATIVEENGINE_DELETE )
 /*
 void addImageProvider ( const QString & providerId, QDeclarativeImageProvider * provider )
 */
-HB_FUNC( QDECLARATIVEENGINE_ADDIMAGEPROVIDER )
+HB_FUNC_STATIC( QDECLARATIVEENGINE_ADDIMAGEPROVIDER )
 {
   QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -143,7 +143,7 @@ HB_FUNC( QDECLARATIVEENGINE_ADDIMAGEPROVIDER )
 /*
 void addImportPath ( const QString & path )
 */
-HB_FUNC( QDECLARATIVEENGINE_ADDIMPORTPATH )
+HB_FUNC_STATIC( QDECLARATIVEENGINE_ADDIMPORTPATH )
 {
   QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -158,7 +158,7 @@ HB_FUNC( QDECLARATIVEENGINE_ADDIMPORTPATH )
 /*
 void addPluginPath ( const QString & path )
 */
-HB_FUNC( QDECLARATIVEENGINE_ADDPLUGINPATH )
+HB_FUNC_STATIC( QDECLARATIVEENGINE_ADDPLUGINPATH )
 {
   QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -173,7 +173,7 @@ HB_FUNC( QDECLARATIVEENGINE_ADDPLUGINPATH )
 /*
 QUrl baseUrl () const
 */
-HB_FUNC( QDECLARATIVEENGINE_BASEURL )
+HB_FUNC_STATIC( QDECLARATIVEENGINE_BASEURL )
 {
   QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -186,7 +186,7 @@ HB_FUNC( QDECLARATIVEENGINE_BASEURL )
 /*
 void clearComponentCache ()
 */
-HB_FUNC( QDECLARATIVEENGINE_CLEARCOMPONENTCACHE )
+HB_FUNC_STATIC( QDECLARATIVEENGINE_CLEARCOMPONENTCACHE )
 {
   QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -200,7 +200,7 @@ HB_FUNC( QDECLARATIVEENGINE_CLEARCOMPONENTCACHE )
 /*
 QDeclarativeImageProvider * imageProvider ( const QString & providerId ) const
 */
-HB_FUNC( QDECLARATIVEENGINE_IMAGEPROVIDER )
+HB_FUNC_STATIC( QDECLARATIVEENGINE_IMAGEPROVIDER )
 {
   QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -214,7 +214,7 @@ HB_FUNC( QDECLARATIVEENGINE_IMAGEPROVIDER )
 /*
 QStringList importPathList () const
 */
-HB_FUNC( QDECLARATIVEENGINE_IMPORTPATHLIST )
+HB_FUNC_STATIC( QDECLARATIVEENGINE_IMPORTPATHLIST )
 {
   QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -237,7 +237,7 @@ HB_FUNC( QDECLARATIVEENGINE_IMPORTPATHLIST )
 /*
 bool importPlugin ( const QString & filePath, const QString & uri, QString * errorString )
 */
-HB_FUNC( QDECLARATIVEENGINE_IMPORTPLUGIN )
+HB_FUNC_STATIC( QDECLARATIVEENGINE_IMPORTPLUGIN )
 {
   QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -254,7 +254,7 @@ HB_FUNC( QDECLARATIVEENGINE_IMPORTPLUGIN )
 /*
 QNetworkAccessManager * networkAccessManager () const
 */
-HB_FUNC( QDECLARATIVEENGINE_NETWORKACCESSMANAGER )
+HB_FUNC_STATIC( QDECLARATIVEENGINE_NETWORKACCESSMANAGER )
 {
   QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -267,7 +267,7 @@ HB_FUNC( QDECLARATIVEENGINE_NETWORKACCESSMANAGER )
 /*
 QDeclarativeNetworkAccessManagerFactory * networkAccessManagerFactory () const
 */
-HB_FUNC( QDECLARATIVEENGINE_NETWORKACCESSMANAGERFACTORY )
+HB_FUNC_STATIC( QDECLARATIVEENGINE_NETWORKACCESSMANAGERFACTORY )
 {
   QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -280,7 +280,7 @@ HB_FUNC( QDECLARATIVEENGINE_NETWORKACCESSMANAGERFACTORY )
 /*
 QString offlineStoragePath () const
 */
-HB_FUNC( QDECLARATIVEENGINE_OFFLINESTORAGEPATH )
+HB_FUNC_STATIC( QDECLARATIVEENGINE_OFFLINESTORAGEPATH )
 {
   QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -294,7 +294,7 @@ HB_FUNC( QDECLARATIVEENGINE_OFFLINESTORAGEPATH )
 /*
 bool outputWarningsToStandardError () const
 */
-HB_FUNC( QDECLARATIVEENGINE_OUTPUTWARNINGSTOSTANDARDERROR )
+HB_FUNC_STATIC( QDECLARATIVEENGINE_OUTPUTWARNINGSTOSTANDARDERROR )
 {
   QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -308,7 +308,7 @@ HB_FUNC( QDECLARATIVEENGINE_OUTPUTWARNINGSTOSTANDARDERROR )
 /*
 QStringList pluginPathList () const
 */
-HB_FUNC( QDECLARATIVEENGINE_PLUGINPATHLIST )
+HB_FUNC_STATIC( QDECLARATIVEENGINE_PLUGINPATHLIST )
 {
   QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -331,7 +331,7 @@ HB_FUNC( QDECLARATIVEENGINE_PLUGINPATHLIST )
 /*
 void removeImageProvider ( const QString & providerId )
 */
-HB_FUNC( QDECLARATIVEENGINE_REMOVEIMAGEPROVIDER )
+HB_FUNC_STATIC( QDECLARATIVEENGINE_REMOVEIMAGEPROVIDER )
 {
   QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -346,7 +346,7 @@ HB_FUNC( QDECLARATIVEENGINE_REMOVEIMAGEPROVIDER )
 /*
 QDeclarativeContext * rootContext () const
 */
-HB_FUNC( QDECLARATIVEENGINE_ROOTCONTEXT )
+HB_FUNC_STATIC( QDECLARATIVEENGINE_ROOTCONTEXT )
 {
   QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -359,7 +359,7 @@ HB_FUNC( QDECLARATIVEENGINE_ROOTCONTEXT )
 /*
 void setBaseUrl ( const QUrl & url )
 */
-HB_FUNC( QDECLARATIVEENGINE_SETBASEURL )
+HB_FUNC_STATIC( QDECLARATIVEENGINE_SETBASEURL )
 {
   QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -374,7 +374,7 @@ HB_FUNC( QDECLARATIVEENGINE_SETBASEURL )
 /*
 void setImportPathList ( const QStringList & paths )
 */
-HB_FUNC( QDECLARATIVEENGINE_SETIMPORTPATHLIST )
+HB_FUNC_STATIC( QDECLARATIVEENGINE_SETIMPORTPATHLIST )
 {
   QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -397,7 +397,7 @@ par1 << temp;
 /*
 void setNetworkAccessManagerFactory ( QDeclarativeNetworkAccessManagerFactory * factory )
 */
-HB_FUNC( QDECLARATIVEENGINE_SETNETWORKACCESSMANAGERFACTORY )
+HB_FUNC_STATIC( QDECLARATIVEENGINE_SETNETWORKACCESSMANAGERFACTORY )
 {
   QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -412,7 +412,7 @@ HB_FUNC( QDECLARATIVEENGINE_SETNETWORKACCESSMANAGERFACTORY )
 /*
 void setOfflineStoragePath ( const QString & dir )
 */
-HB_FUNC( QDECLARATIVEENGINE_SETOFFLINESTORAGEPATH )
+HB_FUNC_STATIC( QDECLARATIVEENGINE_SETOFFLINESTORAGEPATH )
 {
   QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -427,7 +427,7 @@ HB_FUNC( QDECLARATIVEENGINE_SETOFFLINESTORAGEPATH )
 /*
 void setOutputWarningsToStandardError ( bool enabled )
 */
-HB_FUNC( QDECLARATIVEENGINE_SETOUTPUTWARNINGSTOSTANDARDERROR )
+HB_FUNC_STATIC( QDECLARATIVEENGINE_SETOUTPUTWARNINGSTOSTANDARDERROR )
 {
   QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -442,7 +442,7 @@ HB_FUNC( QDECLARATIVEENGINE_SETOUTPUTWARNINGSTOSTANDARDERROR )
 /*
 void setPluginPathList ( const QStringList & paths )
 */
-HB_FUNC( QDECLARATIVEENGINE_SETPLUGINPATHLIST )
+HB_FUNC_STATIC( QDECLARATIVEENGINE_SETPLUGINPATHLIST )
 {
   QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -466,7 +466,7 @@ par1 << temp;
 /*
 QDeclarativeContext * contextForObject ( const QObject * object )
 */
-HB_FUNC( QDECLARATIVEENGINE_CONTEXTFOROBJECT )
+HB_FUNC_STATIC( QDECLARATIVEENGINE_CONTEXTFOROBJECT )
 {
   const QObject * par1 = (const QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QDeclarativeContext * ptr = QDeclarativeEngine::contextForObject ( par1 );
@@ -476,7 +476,7 @@ HB_FUNC( QDECLARATIVEENGINE_CONTEXTFOROBJECT )
 /*
 ObjectOwnership objectOwnership ( QObject * object )
 */
-HB_FUNC( QDECLARATIVEENGINE_OBJECTOWNERSHIP )
+HB_FUNC_STATIC( QDECLARATIVEENGINE_OBJECTOWNERSHIP )
 {
   QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int i = QDeclarativeEngine::objectOwnership ( par1 );
@@ -487,7 +487,7 @@ HB_FUNC( QDECLARATIVEENGINE_OBJECTOWNERSHIP )
 /*
 void setContextForObject ( QObject * object, QDeclarativeContext * context )
 */
-HB_FUNC( QDECLARATIVEENGINE_SETCONTEXTFOROBJECT )
+HB_FUNC_STATIC( QDECLARATIVEENGINE_SETCONTEXTFOROBJECT )
 {
   QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QDeclarativeContext * par2 = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -499,7 +499,7 @@ HB_FUNC( QDECLARATIVEENGINE_SETCONTEXTFOROBJECT )
 /*
 void setObjectOwnership ( QObject * object, ObjectOwnership ownership )
 */
-HB_FUNC( QDECLARATIVEENGINE_SETOBJECTOWNERSHIP )
+HB_FUNC_STATIC( QDECLARATIVEENGINE_SETOBJECTOWNERSHIP )
 {
   QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = hb_parni(2);

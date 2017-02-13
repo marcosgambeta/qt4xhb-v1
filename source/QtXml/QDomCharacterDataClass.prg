@@ -71,7 +71,7 @@ RETURN
 /*
 QDomCharacterData ()
 */
-HB_FUNC( QDOMCHARACTERDATA_NEW1 )
+HB_FUNC_STATIC( QDOMCHARACTERDATA_NEW1 )
 {
   QDomCharacterData * o = NULL;
   o = new QDomCharacterData (  );
@@ -89,7 +89,7 @@ HB_FUNC( QDOMCHARACTERDATA_NEW1 )
 /*
 QDomCharacterData ( const QDomCharacterData & x )
 */
-HB_FUNC( QDOMCHARACTERDATA_NEW2 )
+HB_FUNC_STATIC( QDOMCHARACTERDATA_NEW2 )
 {
   QDomCharacterData * o = NULL;
   QDomCharacterData * par1 = (QDomCharacterData *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -108,7 +108,7 @@ HB_FUNC( QDOMCHARACTERDATA_NEW2 )
 //[1]QDomCharacterData ()
 //[2]QDomCharacterData ( const QDomCharacterData & x )
 
-HB_FUNC( QDOMCHARACTERDATA_NEW )
+HB_FUNC_STATIC( QDOMCHARACTERDATA_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -129,7 +129,7 @@ HB_FUNC( QDOMCHARACTERDATA_NEW )
 /*
 void appendData ( const QString & arg )
 */
-HB_FUNC( QDOMCHARACTERDATA_APPENDDATA )
+HB_FUNC_STATIC( QDOMCHARACTERDATA_APPENDDATA )
 {
   QDomCharacterData * obj = (QDomCharacterData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -144,7 +144,7 @@ HB_FUNC( QDOMCHARACTERDATA_APPENDDATA )
 /*
 QString data () const
 */
-HB_FUNC( QDOMCHARACTERDATA_DATA )
+HB_FUNC_STATIC( QDOMCHARACTERDATA_DATA )
 {
   QDomCharacterData * obj = (QDomCharacterData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -158,7 +158,7 @@ HB_FUNC( QDOMCHARACTERDATA_DATA )
 /*
 void deleteData ( unsigned long offset, unsigned long count )
 */
-HB_FUNC( QDOMCHARACTERDATA_DELETEDATA )
+HB_FUNC_STATIC( QDOMCHARACTERDATA_DELETEDATA )
 {
   QDomCharacterData * obj = (QDomCharacterData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -174,7 +174,7 @@ HB_FUNC( QDOMCHARACTERDATA_DELETEDATA )
 /*
 void insertData ( unsigned long offset, const QString & arg )
 */
-HB_FUNC( QDOMCHARACTERDATA_INSERTDATA )
+HB_FUNC_STATIC( QDOMCHARACTERDATA_INSERTDATA )
 {
   QDomCharacterData * obj = (QDomCharacterData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -190,7 +190,7 @@ HB_FUNC( QDOMCHARACTERDATA_INSERTDATA )
 /*
 uint length () const
 */
-HB_FUNC( QDOMCHARACTERDATA_LENGTH )
+HB_FUNC_STATIC( QDOMCHARACTERDATA_LENGTH )
 {
   QDomCharacterData * obj = (QDomCharacterData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -204,7 +204,7 @@ HB_FUNC( QDOMCHARACTERDATA_LENGTH )
 /*
 QDomNode::NodeType nodeType () const
 */
-HB_FUNC( QDOMCHARACTERDATA_NODETYPE )
+HB_FUNC_STATIC( QDOMCHARACTERDATA_NODETYPE )
 {
   QDomCharacterData * obj = (QDomCharacterData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -218,7 +218,7 @@ HB_FUNC( QDOMCHARACTERDATA_NODETYPE )
 /*
 void replaceData ( unsigned long offset, unsigned long count, const QString & arg )
 */
-HB_FUNC( QDOMCHARACTERDATA_REPLACEDATA )
+HB_FUNC_STATIC( QDOMCHARACTERDATA_REPLACEDATA )
 {
   QDomCharacterData * obj = (QDomCharacterData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -235,7 +235,7 @@ HB_FUNC( QDOMCHARACTERDATA_REPLACEDATA )
 /*
 void setData ( const QString & v )
 */
-HB_FUNC( QDOMCHARACTERDATA_SETDATA )
+HB_FUNC_STATIC( QDOMCHARACTERDATA_SETDATA )
 {
   QDomCharacterData * obj = (QDomCharacterData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -250,7 +250,7 @@ HB_FUNC( QDOMCHARACTERDATA_SETDATA )
 /*
 QString substringData ( unsigned long offset, unsigned long count )
 */
-HB_FUNC( QDOMCHARACTERDATA_SUBSTRINGDATA )
+HB_FUNC_STATIC( QDOMCHARACTERDATA_SUBSTRINGDATA )
 {
   QDomCharacterData * obj = (QDomCharacterData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

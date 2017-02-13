@@ -62,7 +62,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QIMAGEIOPLUGIN_DELETE )
+HB_FUNC_STATIC( QIMAGEIOPLUGIN_DELETE )
 {
   QImageIOPlugin * obj = (QImageIOPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -81,7 +81,7 @@ HB_FUNC( QIMAGEIOPLUGIN_DELETE )
 /*
 virtual Capabilities capabilities ( QIODevice * device, const QByteArray & format ) const = 0
 */
-HB_FUNC( QIMAGEIOPLUGIN_CAPABILITIES )
+HB_FUNC_STATIC( QIMAGEIOPLUGIN_CAPABILITIES )
 {
   QImageIOPlugin * obj = (QImageIOPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -97,7 +97,7 @@ HB_FUNC( QIMAGEIOPLUGIN_CAPABILITIES )
 /*
 virtual QImageIOHandler * create ( QIODevice * device, const QByteArray & format = QByteArray() ) const = 0
 */
-HB_FUNC( QIMAGEIOPLUGIN_CREATE )
+HB_FUNC_STATIC( QIMAGEIOPLUGIN_CREATE )
 {
   QImageIOPlugin * obj = (QImageIOPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -112,7 +112,7 @@ HB_FUNC( QIMAGEIOPLUGIN_CREATE )
 /*
 virtual QStringList keys () const = 0
 */
-HB_FUNC( QIMAGEIOPLUGIN_KEYS )
+HB_FUNC_STATIC( QIMAGEIOPLUGIN_KEYS )
 {
   QImageIOPlugin * obj = (QImageIOPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

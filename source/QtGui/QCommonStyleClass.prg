@@ -82,7 +82,7 @@ RETURN
 /*
 QCommonStyle ()
 */
-HB_FUNC( QCOMMONSTYLE_NEW )
+HB_FUNC_STATIC( QCOMMONSTYLE_NEW )
 {
   QCommonStyle * o = NULL;
   o = new QCommonStyle (  );
@@ -94,7 +94,7 @@ HB_FUNC( QCOMMONSTYLE_NEW )
 }
 
 
-HB_FUNC( QCOMMONSTYLE_DELETE )
+HB_FUNC_STATIC( QCOMMONSTYLE_DELETE )
 {
   QCommonStyle * obj = (QCommonStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -113,7 +113,7 @@ HB_FUNC( QCOMMONSTYLE_DELETE )
 /*
 virtual void drawComplexControl ( ComplexControl cc, const QStyleOptionComplex * opt, QPainter * p, const QWidget * widget = 0 ) const
 */
-HB_FUNC( QCOMMONSTYLE_DRAWCOMPLEXCONTROL )
+HB_FUNC_STATIC( QCOMMONSTYLE_DRAWCOMPLEXCONTROL )
 {
   QCommonStyle * obj = (QCommonStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -131,7 +131,7 @@ HB_FUNC( QCOMMONSTYLE_DRAWCOMPLEXCONTROL )
 /*
 virtual void drawControl ( ControlElement element, const QStyleOption * opt, QPainter * p, const QWidget * widget = 0 ) const
 */
-HB_FUNC( QCOMMONSTYLE_DRAWCONTROL )
+HB_FUNC_STATIC( QCOMMONSTYLE_DRAWCONTROL )
 {
   QCommonStyle * obj = (QCommonStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -149,7 +149,7 @@ HB_FUNC( QCOMMONSTYLE_DRAWCONTROL )
 /*
 virtual void drawPrimitive ( PrimitiveElement pe, const QStyleOption * opt, QPainter * p, const QWidget * widget = 0 ) const
 */
-HB_FUNC( QCOMMONSTYLE_DRAWPRIMITIVE )
+HB_FUNC_STATIC( QCOMMONSTYLE_DRAWPRIMITIVE )
 {
   QCommonStyle * obj = (QCommonStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -167,7 +167,7 @@ HB_FUNC( QCOMMONSTYLE_DRAWPRIMITIVE )
 /*
 virtual QPixmap generatedIconPixmap ( QIcon::Mode iconMode, const QPixmap & pixmap, const QStyleOption * opt ) const
 */
-HB_FUNC( QCOMMONSTYLE_GENERATEDICONPIXMAP )
+HB_FUNC_STATIC( QCOMMONSTYLE_GENERATEDICONPIXMAP )
 {
   QCommonStyle * obj = (QCommonStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -183,7 +183,7 @@ HB_FUNC( QCOMMONSTYLE_GENERATEDICONPIXMAP )
 /*
 virtual SubControl hitTestComplexControl ( ComplexControl cc, const QStyleOptionComplex * opt, const QPoint & pt, const QWidget * widget = 0 ) const
 */
-HB_FUNC( QCOMMONSTYLE_HITTESTCOMPLEXCONTROL )
+HB_FUNC_STATIC( QCOMMONSTYLE_HITTESTCOMPLEXCONTROL )
 {
   QCommonStyle * obj = (QCommonStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -201,7 +201,7 @@ HB_FUNC( QCOMMONSTYLE_HITTESTCOMPLEXCONTROL )
 /*
 virtual int pixelMetric ( PixelMetric m, const QStyleOption * opt = 0, const QWidget * widget = 0 ) const
 */
-HB_FUNC( QCOMMONSTYLE_PIXELMETRIC )
+HB_FUNC_STATIC( QCOMMONSTYLE_PIXELMETRIC )
 {
   QCommonStyle * obj = (QCommonStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -218,7 +218,7 @@ HB_FUNC( QCOMMONSTYLE_PIXELMETRIC )
 /*
 virtual void polish ( QPalette & pal )
 */
-HB_FUNC( QCOMMONSTYLE_POLISH1 )
+HB_FUNC_STATIC( QCOMMONSTYLE_POLISH1 )
 {
   QCommonStyle * obj = (QCommonStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -233,7 +233,7 @@ HB_FUNC( QCOMMONSTYLE_POLISH1 )
 /*
 virtual void polish ( QApplication * app )
 */
-HB_FUNC( QCOMMONSTYLE_POLISH2 )
+HB_FUNC_STATIC( QCOMMONSTYLE_POLISH2 )
 {
   QCommonStyle * obj = (QCommonStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -248,7 +248,7 @@ HB_FUNC( QCOMMONSTYLE_POLISH2 )
 /*
 virtual void polish ( QWidget * widget )
 */
-HB_FUNC( QCOMMONSTYLE_POLISH3 )
+HB_FUNC_STATIC( QCOMMONSTYLE_POLISH3 )
 {
   QCommonStyle * obj = (QCommonStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -264,7 +264,7 @@ HB_FUNC( QCOMMONSTYLE_POLISH3 )
 //[2]virtual void polish ( QApplication * app )
 //[3]virtual void polish ( QWidget * widget )
 
-HB_FUNC( QCOMMONSTYLE_POLISH )
+HB_FUNC_STATIC( QCOMMONSTYLE_POLISH )
 {
   if( ISNUMPAR(1) && ISQPALETTE(1) )
   {
@@ -283,7 +283,7 @@ HB_FUNC( QCOMMONSTYLE_POLISH )
 /*
 virtual QSize sizeFromContents ( ContentsType ct, const QStyleOption * opt, const QSize & csz, const QWidget * widget = 0 ) const
 */
-HB_FUNC( QCOMMONSTYLE_SIZEFROMCONTENTS )
+HB_FUNC_STATIC( QCOMMONSTYLE_SIZEFROMCONTENTS )
 {
   QCommonStyle * obj = (QCommonStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -300,7 +300,7 @@ HB_FUNC( QCOMMONSTYLE_SIZEFROMCONTENTS )
 /*
 virtual QPixmap standardPixmap ( StandardPixmap sp, const QStyleOption * option = 0, const QWidget * widget = 0 ) const
 */
-HB_FUNC( QCOMMONSTYLE_STANDARDPIXMAP )
+HB_FUNC_STATIC( QCOMMONSTYLE_STANDARDPIXMAP )
 {
   QCommonStyle * obj = (QCommonStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -316,7 +316,7 @@ HB_FUNC( QCOMMONSTYLE_STANDARDPIXMAP )
 /*
 virtual int styleHint ( StyleHint sh, const QStyleOption * opt = 0, const QWidget * widget = 0, QStyleHintReturn * hret = 0 ) const
 */
-HB_FUNC( QCOMMONSTYLE_STYLEHINT )
+HB_FUNC_STATIC( QCOMMONSTYLE_STYLEHINT )
 {
   QCommonStyle * obj = (QCommonStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -334,7 +334,7 @@ HB_FUNC( QCOMMONSTYLE_STYLEHINT )
 /*
 virtual QRect subControlRect ( ComplexControl cc, const QStyleOptionComplex * opt, SubControl sc, const QWidget * widget = 0 ) const
 */
-HB_FUNC( QCOMMONSTYLE_SUBCONTROLRECT )
+HB_FUNC_STATIC( QCOMMONSTYLE_SUBCONTROLRECT )
 {
   QCommonStyle * obj = (QCommonStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -351,7 +351,7 @@ HB_FUNC( QCOMMONSTYLE_SUBCONTROLRECT )
 /*
 virtual QRect subElementRect ( SubElement sr, const QStyleOption * opt, const QWidget * widget = 0 ) const
 */
-HB_FUNC( QCOMMONSTYLE_SUBELEMENTRECT )
+HB_FUNC_STATIC( QCOMMONSTYLE_SUBELEMENTRECT )
 {
   QCommonStyle * obj = (QCommonStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -367,7 +367,7 @@ HB_FUNC( QCOMMONSTYLE_SUBELEMENTRECT )
 /*
 virtual void unpolish ( QWidget * widget )
 */
-HB_FUNC( QCOMMONSTYLE_UNPOLISH1 )
+HB_FUNC_STATIC( QCOMMONSTYLE_UNPOLISH1 )
 {
   QCommonStyle * obj = (QCommonStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -382,7 +382,7 @@ HB_FUNC( QCOMMONSTYLE_UNPOLISH1 )
 /*
 virtual void unpolish ( QApplication * application )
 */
-HB_FUNC( QCOMMONSTYLE_UNPOLISH2 )
+HB_FUNC_STATIC( QCOMMONSTYLE_UNPOLISH2 )
 {
   QCommonStyle * obj = (QCommonStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -397,7 +397,7 @@ HB_FUNC( QCOMMONSTYLE_UNPOLISH2 )
 //[1]virtual void unpolish ( QWidget * widget )
 //[2]virtual void unpolish ( QApplication * application )
 
-HB_FUNC( QCOMMONSTYLE_UNPOLISH )
+HB_FUNC_STATIC( QCOMMONSTYLE_UNPOLISH )
 {
   if( ISNUMPAR(1) && ISQWIDGET(1) )
   {

@@ -99,7 +99,7 @@ RETURN
 #include "qt4xhb_clsid.h"
 #include "qt4xhb_utils.h"
 
-HB_FUNC( QTEXTITEM_DELETE )
+HB_FUNC_STATIC( QTEXTITEM_DELETE )
 {
   QTextItem * obj = (QTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -118,7 +118,7 @@ HB_FUNC( QTEXTITEM_DELETE )
 /*
 qreal ascent () const
 */
-HB_FUNC( QTEXTITEM_ASCENT )
+HB_FUNC_STATIC( QTEXTITEM_ASCENT )
 {
   QTextItem * obj = (QTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -132,7 +132,7 @@ HB_FUNC( QTEXTITEM_ASCENT )
 /*
 qreal descent () const
 */
-HB_FUNC( QTEXTITEM_DESCENT )
+HB_FUNC_STATIC( QTEXTITEM_DESCENT )
 {
   QTextItem * obj = (QTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -146,7 +146,7 @@ HB_FUNC( QTEXTITEM_DESCENT )
 /*
 QFont font () const
 */
-HB_FUNC( QTEXTITEM_FONT )
+HB_FUNC_STATIC( QTEXTITEM_FONT )
 {
   QTextItem * obj = (QTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -159,7 +159,7 @@ HB_FUNC( QTEXTITEM_FONT )
 /*
 RenderFlags renderFlags () const
 */
-HB_FUNC( QTEXTITEM_RENDERFLAGS )
+HB_FUNC_STATIC( QTEXTITEM_RENDERFLAGS )
 {
   QTextItem * obj = (QTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -173,7 +173,7 @@ HB_FUNC( QTEXTITEM_RENDERFLAGS )
 /*
 QString text () const
 */
-HB_FUNC( QTEXTITEM_TEXT )
+HB_FUNC_STATIC( QTEXTITEM_TEXT )
 {
   QTextItem * obj = (QTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -187,7 +187,7 @@ HB_FUNC( QTEXTITEM_TEXT )
 /*
 qreal width () const
 */
-HB_FUNC( QTEXTITEM_WIDTH )
+HB_FUNC_STATIC( QTEXTITEM_WIDTH )
 {
   QTextItem * obj = (QTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

@@ -79,7 +79,7 @@ RETURN
 /*
 QWizardPage ( QWidget * parent = 0 )
 */
-HB_FUNC( QWIZARDPAGE_NEW )
+HB_FUNC_STATIC( QWIZARDPAGE_NEW )
 {
   QWizardPage * o = NULL;
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -96,7 +96,7 @@ HB_FUNC( QWIZARDPAGE_NEW )
 /*
 QString buttonText ( QWizard::WizardButton which ) const
 */
-HB_FUNC( QWIZARDPAGE_BUTTONTEXT )
+HB_FUNC_STATIC( QWIZARDPAGE_BUTTONTEXT )
 {
   QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -111,7 +111,7 @@ HB_FUNC( QWIZARDPAGE_BUTTONTEXT )
 /*
 virtual void cleanupPage ()
 */
-HB_FUNC( QWIZARDPAGE_CLEANUPPAGE )
+HB_FUNC_STATIC( QWIZARDPAGE_CLEANUPPAGE )
 {
   QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -125,7 +125,7 @@ HB_FUNC( QWIZARDPAGE_CLEANUPPAGE )
 /*
 virtual void initializePage ()
 */
-HB_FUNC( QWIZARDPAGE_INITIALIZEPAGE )
+HB_FUNC_STATIC( QWIZARDPAGE_INITIALIZEPAGE )
 {
   QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -139,7 +139,7 @@ HB_FUNC( QWIZARDPAGE_INITIALIZEPAGE )
 /*
 bool isCommitPage () const
 */
-HB_FUNC( QWIZARDPAGE_ISCOMMITPAGE )
+HB_FUNC_STATIC( QWIZARDPAGE_ISCOMMITPAGE )
 {
   QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -153,7 +153,7 @@ HB_FUNC( QWIZARDPAGE_ISCOMMITPAGE )
 /*
 virtual bool isComplete () const
 */
-HB_FUNC( QWIZARDPAGE_ISCOMPLETE )
+HB_FUNC_STATIC( QWIZARDPAGE_ISCOMPLETE )
 {
   QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -167,7 +167,7 @@ HB_FUNC( QWIZARDPAGE_ISCOMPLETE )
 /*
 bool isFinalPage () const
 */
-HB_FUNC( QWIZARDPAGE_ISFINALPAGE )
+HB_FUNC_STATIC( QWIZARDPAGE_ISFINALPAGE )
 {
   QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -181,7 +181,7 @@ HB_FUNC( QWIZARDPAGE_ISFINALPAGE )
 /*
 virtual int nextId () const
 */
-HB_FUNC( QWIZARDPAGE_NEXTID )
+HB_FUNC_STATIC( QWIZARDPAGE_NEXTID )
 {
   QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -195,7 +195,7 @@ HB_FUNC( QWIZARDPAGE_NEXTID )
 /*
 QPixmap pixmap ( QWizard::WizardPixmap which ) const
 */
-HB_FUNC( QWIZARDPAGE_PIXMAP )
+HB_FUNC_STATIC( QWIZARDPAGE_PIXMAP )
 {
   QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -209,7 +209,7 @@ HB_FUNC( QWIZARDPAGE_PIXMAP )
 /*
 void setButtonText ( QWizard::WizardButton which, const QString & text )
 */
-HB_FUNC( QWIZARDPAGE_SETBUTTONTEXT )
+HB_FUNC_STATIC( QWIZARDPAGE_SETBUTTONTEXT )
 {
   QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -225,7 +225,7 @@ HB_FUNC( QWIZARDPAGE_SETBUTTONTEXT )
 /*
 void setCommitPage ( bool commitPage )
 */
-HB_FUNC( QWIZARDPAGE_SETCOMMITPAGE )
+HB_FUNC_STATIC( QWIZARDPAGE_SETCOMMITPAGE )
 {
   QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -240,7 +240,7 @@ HB_FUNC( QWIZARDPAGE_SETCOMMITPAGE )
 /*
 void setFinalPage ( bool finalPage )
 */
-HB_FUNC( QWIZARDPAGE_SETFINALPAGE )
+HB_FUNC_STATIC( QWIZARDPAGE_SETFINALPAGE )
 {
   QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -255,7 +255,7 @@ HB_FUNC( QWIZARDPAGE_SETFINALPAGE )
 /*
 void setPixmap ( QWizard::WizardPixmap which, const QPixmap & pixmap )
 */
-HB_FUNC( QWIZARDPAGE_SETPIXMAP )
+HB_FUNC_STATIC( QWIZARDPAGE_SETPIXMAP )
 {
   QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -271,7 +271,7 @@ HB_FUNC( QWIZARDPAGE_SETPIXMAP )
 /*
 void setSubTitle ( const QString & subTitle )
 */
-HB_FUNC( QWIZARDPAGE_SETSUBTITLE )
+HB_FUNC_STATIC( QWIZARDPAGE_SETSUBTITLE )
 {
   QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -286,7 +286,7 @@ HB_FUNC( QWIZARDPAGE_SETSUBTITLE )
 /*
 void setTitle ( const QString & title )
 */
-HB_FUNC( QWIZARDPAGE_SETTITLE )
+HB_FUNC_STATIC( QWIZARDPAGE_SETTITLE )
 {
   QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -301,7 +301,7 @@ HB_FUNC( QWIZARDPAGE_SETTITLE )
 /*
 QString subTitle () const
 */
-HB_FUNC( QWIZARDPAGE_SUBTITLE )
+HB_FUNC_STATIC( QWIZARDPAGE_SUBTITLE )
 {
   QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -315,7 +315,7 @@ HB_FUNC( QWIZARDPAGE_SUBTITLE )
 /*
 QString title () const
 */
-HB_FUNC( QWIZARDPAGE_TITLE )
+HB_FUNC_STATIC( QWIZARDPAGE_TITLE )
 {
   QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -329,7 +329,7 @@ HB_FUNC( QWIZARDPAGE_TITLE )
 /*
 virtual bool validatePage ()
 */
-HB_FUNC( QWIZARDPAGE_VALIDATEPAGE )
+HB_FUNC_STATIC( QWIZARDPAGE_VALIDATEPAGE )
 {
   QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

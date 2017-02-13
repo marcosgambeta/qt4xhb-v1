@@ -95,7 +95,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QABSTRACTFILEENGINEHANDLER_DELETE )
+HB_FUNC_STATIC( QABSTRACTFILEENGINEHANDLER_DELETE )
 {
   QAbstractFileEngineHandler * obj = (QAbstractFileEngineHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -114,7 +114,7 @@ HB_FUNC( QABSTRACTFILEENGINEHANDLER_DELETE )
 /*
 virtual QAbstractFileEngine * create ( const QString & fileName ) const = 0
 */
-HB_FUNC( QABSTRACTFILEENGINEHANDLER_CREATE )
+HB_FUNC_STATIC( QABSTRACTFILEENGINEHANDLER_CREATE )
 {
   QAbstractFileEngineHandler * obj = (QAbstractFileEngineHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

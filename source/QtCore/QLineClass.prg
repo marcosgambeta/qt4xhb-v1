@@ -121,7 +121,7 @@ RETURN
 /*
 QLine()
 */
-HB_FUNC( QLINE_NEW1 )
+HB_FUNC_STATIC( QLINE_NEW1 )
 {
   QLine * o = NULL;
   o = new QLine (  );
@@ -139,7 +139,7 @@ HB_FUNC( QLINE_NEW1 )
 /*
 QLine(const QPoint & p1, const QPoint & p2)
 */
-HB_FUNC( QLINE_NEW2 )
+HB_FUNC_STATIC( QLINE_NEW2 )
 {
   QLine * o = NULL;
   QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -159,7 +159,7 @@ HB_FUNC( QLINE_NEW2 )
 /*
 QLine(int x1, int y1, int x2, int y2)
 */
-HB_FUNC( QLINE_NEW3 )
+HB_FUNC_STATIC( QLINE_NEW3 )
 {
   QLine * o = NULL;
   int par1 = hb_parni(1);
@@ -182,7 +182,7 @@ HB_FUNC( QLINE_NEW3 )
 //[2]QLine(const QPoint & p1, const QPoint & p2)
 //[3]QLine(int x1, int y1, int x2, int y2)
 
-HB_FUNC( QLINE_NEW )
+HB_FUNC_STATIC( QLINE_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -202,7 +202,7 @@ HB_FUNC( QLINE_NEW )
   }
 }
 
-HB_FUNC( QLINE_DELETE )
+HB_FUNC_STATIC( QLINE_DELETE )
 {
   QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -221,7 +221,7 @@ HB_FUNC( QLINE_DELETE )
 /*
 QPoint p1() const
 */
-HB_FUNC( QLINE_P1 )
+HB_FUNC_STATIC( QLINE_P1 )
 {
   QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -234,7 +234,7 @@ HB_FUNC( QLINE_P1 )
 /*
 QPoint p2() const
 */
-HB_FUNC( QLINE_P2 )
+HB_FUNC_STATIC( QLINE_P2 )
 {
   QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -247,7 +247,7 @@ HB_FUNC( QLINE_P2 )
 /*
 int x1() const
 */
-HB_FUNC( QLINE_X1 )
+HB_FUNC_STATIC( QLINE_X1 )
 {
   QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -261,7 +261,7 @@ HB_FUNC( QLINE_X1 )
 /*
 int x2() const
 */
-HB_FUNC( QLINE_X2 )
+HB_FUNC_STATIC( QLINE_X2 )
 {
   QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -275,7 +275,7 @@ HB_FUNC( QLINE_X2 )
 /*
 int y1() const
 */
-HB_FUNC( QLINE_Y1 )
+HB_FUNC_STATIC( QLINE_Y1 )
 {
   QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -289,7 +289,7 @@ HB_FUNC( QLINE_Y1 )
 /*
 int y2() const
 */
-HB_FUNC( QLINE_Y2 )
+HB_FUNC_STATIC( QLINE_Y2 )
 {
   QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -303,7 +303,7 @@ HB_FUNC( QLINE_Y2 )
 /*
 int dx() const
 */
-HB_FUNC( QLINE_DX )
+HB_FUNC_STATIC( QLINE_DX )
 {
   QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -317,7 +317,7 @@ HB_FUNC( QLINE_DX )
 /*
 int dy() const
 */
-HB_FUNC( QLINE_DY )
+HB_FUNC_STATIC( QLINE_DY )
 {
   QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -331,7 +331,7 @@ HB_FUNC( QLINE_DY )
 /*
 bool isNull() const
 */
-HB_FUNC( QLINE_ISNULL )
+HB_FUNC_STATIC( QLINE_ISNULL )
 {
   QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -345,7 +345,7 @@ HB_FUNC( QLINE_ISNULL )
 /*
 void setP1(const QPoint & p1)
 */
-HB_FUNC( QLINE_SETP1 )
+HB_FUNC_STATIC( QLINE_SETP1 )
 {
   QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -360,7 +360,7 @@ HB_FUNC( QLINE_SETP1 )
 /*
 void setP2(const QPoint & p2)
 */
-HB_FUNC( QLINE_SETP2 )
+HB_FUNC_STATIC( QLINE_SETP2 )
 {
   QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -375,7 +375,7 @@ HB_FUNC( QLINE_SETP2 )
 /*
 void setLine(int x1, int y1, int x2, int y2)
 */
-HB_FUNC( QLINE_SETLINE )
+HB_FUNC_STATIC( QLINE_SETLINE )
 {
   QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -393,7 +393,7 @@ HB_FUNC( QLINE_SETLINE )
 /*
 void setPoints(const QPoint & p1, const QPoint & p2)
 */
-HB_FUNC( QLINE_SETPOINTS )
+HB_FUNC_STATIC( QLINE_SETPOINTS )
 {
   QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -409,7 +409,7 @@ HB_FUNC( QLINE_SETPOINTS )
 /*
 void translate(const QPoint & offset)
 */
-HB_FUNC( QLINE_TRANSLATE1 )
+HB_FUNC_STATIC( QLINE_TRANSLATE1 )
 {
   QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -424,7 +424,7 @@ HB_FUNC( QLINE_TRANSLATE1 )
 /*
 void translate(int dx, int dy)
 */
-HB_FUNC( QLINE_TRANSLATE2 )
+HB_FUNC_STATIC( QLINE_TRANSLATE2 )
 {
   QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -440,7 +440,7 @@ HB_FUNC( QLINE_TRANSLATE2 )
 //[1]void translate(const QPoint & offset)
 //[2]void translate(int dx, int dy)
 
-HB_FUNC( QLINE_TRANSLATE )
+HB_FUNC_STATIC( QLINE_TRANSLATE )
 {
   if( ISNUMPAR(1) && ISQPOINT(1) )
   {
@@ -455,7 +455,7 @@ HB_FUNC( QLINE_TRANSLATE )
 /*
 QLine translated(const QPoint & offset) const
 */
-HB_FUNC( QLINE_TRANSLATED1 )
+HB_FUNC_STATIC( QLINE_TRANSLATED1 )
 {
   QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -469,7 +469,7 @@ HB_FUNC( QLINE_TRANSLATED1 )
 /*
 QLine translated(int dx, int dy) const
 */
-HB_FUNC( QLINE_TRANSLATED2 )
+HB_FUNC_STATIC( QLINE_TRANSLATED2 )
 {
   QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -484,7 +484,7 @@ HB_FUNC( QLINE_TRANSLATED2 )
 //[1]QLine translated(const QPoint & offset) const
 //[2]QLine translated(int dx, int dy) const
 
-HB_FUNC( QLINE_TRANSLATED )
+HB_FUNC_STATIC( QLINE_TRANSLATED )
 {
   if( ISNUMPAR(1) && ISQPOINT(1) )
   {

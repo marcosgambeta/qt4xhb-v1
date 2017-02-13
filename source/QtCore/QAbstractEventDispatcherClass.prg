@@ -75,7 +75,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QABSTRACTEVENTDISPATCHER_DELETE )
+HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_DELETE )
 {
   QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -94,7 +94,7 @@ HB_FUNC( QABSTRACTEVENTDISPATCHER_DELETE )
 /*
 bool filterEvent ( void * message )
 */
-HB_FUNC( QABSTRACTEVENTDISPATCHER_FILTEREVENT )
+HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_FILTEREVENT )
 {
   QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -109,7 +109,7 @@ HB_FUNC( QABSTRACTEVENTDISPATCHER_FILTEREVENT )
 /*
 virtual void flush () = 0
 */
-HB_FUNC( QABSTRACTEVENTDISPATCHER_FLUSH )
+HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_FLUSH )
 {
   QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -123,7 +123,7 @@ HB_FUNC( QABSTRACTEVENTDISPATCHER_FLUSH )
 /*
 virtual bool hasPendingEvents () = 0
 */
-HB_FUNC( QABSTRACTEVENTDISPATCHER_HASPENDINGEVENTS )
+HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_HASPENDINGEVENTS )
 {
   QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -137,7 +137,7 @@ HB_FUNC( QABSTRACTEVENTDISPATCHER_HASPENDINGEVENTS )
 /*
 virtual void interrupt () = 0
 */
-HB_FUNC( QABSTRACTEVENTDISPATCHER_INTERRUPT )
+HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_INTERRUPT )
 {
   QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -151,7 +151,7 @@ HB_FUNC( QABSTRACTEVENTDISPATCHER_INTERRUPT )
 /*
 virtual bool processEvents ( QEventLoop::ProcessEventsFlags flags ) = 0
 */
-HB_FUNC( QABSTRACTEVENTDISPATCHER_PROCESSEVENTS )
+HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_PROCESSEVENTS )
 {
   QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -166,7 +166,7 @@ HB_FUNC( QABSTRACTEVENTDISPATCHER_PROCESSEVENTS )
 /*
 virtual void registerSocketNotifier ( QSocketNotifier * notifier ) = 0
 */
-HB_FUNC( QABSTRACTEVENTDISPATCHER_REGISTERSOCKETNOTIFIER )
+HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERSOCKETNOTIFIER )
 {
   QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -181,7 +181,7 @@ HB_FUNC( QABSTRACTEVENTDISPATCHER_REGISTERSOCKETNOTIFIER )
 /*
 int registerTimer ( int interval, QObject * object )
 */
-HB_FUNC( QABSTRACTEVENTDISPATCHER_REGISTERTIMER1 )
+HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERTIMER1 )
 {
   QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -197,7 +197,7 @@ HB_FUNC( QABSTRACTEVENTDISPATCHER_REGISTERTIMER1 )
 /*
 virtual void registerTimer ( int timerId, int interval, QObject * object ) = 0
 */
-HB_FUNC( QABSTRACTEVENTDISPATCHER_REGISTERTIMER2 )
+HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERTIMER2 )
 {
   QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -214,7 +214,7 @@ HB_FUNC( QABSTRACTEVENTDISPATCHER_REGISTERTIMER2 )
 //[1]int registerTimer ( int interval, QObject * object )
 //[2]virtual void registerTimer ( int timerId, int interval, QObject * object ) = 0
 
-HB_FUNC( QABSTRACTEVENTDISPATCHER_REGISTERTIMER )
+HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERTIMER )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISQOBJECT(2) )
   {
@@ -231,7 +231,7 @@ HB_FUNC( QABSTRACTEVENTDISPATCHER_REGISTERTIMER )
 /*
 virtual void unregisterSocketNotifier ( QSocketNotifier * notifier ) = 0
 */
-HB_FUNC( QABSTRACTEVENTDISPATCHER_UNREGISTERSOCKETNOTIFIER )
+HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERSOCKETNOTIFIER )
 {
   QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -246,7 +246,7 @@ HB_FUNC( QABSTRACTEVENTDISPATCHER_UNREGISTERSOCKETNOTIFIER )
 /*
 virtual bool unregisterTimer ( int timerId ) = 0
 */
-HB_FUNC( QABSTRACTEVENTDISPATCHER_UNREGISTERTIMER )
+HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERTIMER )
 {
   QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -261,7 +261,7 @@ HB_FUNC( QABSTRACTEVENTDISPATCHER_UNREGISTERTIMER )
 /*
 virtual bool unregisterTimers ( QObject * object ) = 0
 */
-HB_FUNC( QABSTRACTEVENTDISPATCHER_UNREGISTERTIMERS )
+HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERTIMERS )
 {
   QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -276,7 +276,7 @@ HB_FUNC( QABSTRACTEVENTDISPATCHER_UNREGISTERTIMERS )
 /*
 virtual void wakeUp () = 0
 */
-HB_FUNC( QABSTRACTEVENTDISPATCHER_WAKEUP )
+HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_WAKEUP )
 {
   QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -291,7 +291,7 @@ HB_FUNC( QABSTRACTEVENTDISPATCHER_WAKEUP )
 /*
 QAbstractEventDispatcher * instance ( QThread * thread = 0 )
 */
-HB_FUNC( QABSTRACTEVENTDISPATCHER_INSTANCE )
+HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_INSTANCE )
 {
   QThread * par1 = ISNIL(1)? 0 : (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QAbstractEventDispatcher * ptr = QAbstractEventDispatcher::instance ( par1 );

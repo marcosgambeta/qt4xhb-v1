@@ -60,7 +60,7 @@ RETURN
 #include "qt4xhb_clsid.h"
 #include "qt4xhb_utils.h"
 
-HB_FUNC( QHELPSEARCHRESULTWIDGET_DELETE )
+HB_FUNC_STATIC( QHELPSEARCHRESULTWIDGET_DELETE )
 {
   QHelpSearchResultWidget * obj = (QHelpSearchResultWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -79,7 +79,7 @@ HB_FUNC( QHELPSEARCHRESULTWIDGET_DELETE )
 /*
 QUrl linkAt ( const QPoint & point )
 */
-HB_FUNC( QHELPSEARCHRESULTWIDGET_LINKAT )
+HB_FUNC_STATIC( QHELPSEARCHRESULTWIDGET_LINKAT )
 {
   QHelpSearchResultWidget * obj = (QHelpSearchResultWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

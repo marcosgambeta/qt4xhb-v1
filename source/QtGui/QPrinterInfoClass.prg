@@ -107,7 +107,7 @@ RETURN
 /*
 QPrinterInfo ()
 */
-HB_FUNC( QPRINTERINFO_NEW1 )
+HB_FUNC_STATIC( QPRINTERINFO_NEW1 )
 {
   QPrinterInfo * o = NULL;
   o = new QPrinterInfo (  );
@@ -125,7 +125,7 @@ HB_FUNC( QPRINTERINFO_NEW1 )
 /*
 QPrinterInfo ( const QPrinterInfo & src )
 */
-HB_FUNC( QPRINTERINFO_NEW2 )
+HB_FUNC_STATIC( QPRINTERINFO_NEW2 )
 {
   QPrinterInfo * o = NULL;
   QPrinterInfo * par1 = (QPrinterInfo *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -144,7 +144,7 @@ HB_FUNC( QPRINTERINFO_NEW2 )
 /*
 QPrinterInfo ( const QPrinter & printer )
 */
-HB_FUNC( QPRINTERINFO_NEW3 )
+HB_FUNC_STATIC( QPRINTERINFO_NEW3 )
 {
   QPrinterInfo * o = NULL;
   QPrinter * par1 = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -164,7 +164,7 @@ HB_FUNC( QPRINTERINFO_NEW3 )
 //[2]QPrinterInfo ( const QPrinterInfo & src )
 //[3]QPrinterInfo ( const QPrinter & printer )
 
-HB_FUNC( QPRINTERINFO_NEW )
+HB_FUNC_STATIC( QPRINTERINFO_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -184,7 +184,7 @@ HB_FUNC( QPRINTERINFO_NEW )
   }
 }
 
-HB_FUNC( QPRINTERINFO_DELETE )
+HB_FUNC_STATIC( QPRINTERINFO_DELETE )
 {
   QPrinterInfo * obj = (QPrinterInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -203,7 +203,7 @@ HB_FUNC( QPRINTERINFO_DELETE )
 /*
 bool isDefault () const
 */
-HB_FUNC( QPRINTERINFO_ISDEFAULT )
+HB_FUNC_STATIC( QPRINTERINFO_ISDEFAULT )
 {
   QPrinterInfo * obj = (QPrinterInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -217,7 +217,7 @@ HB_FUNC( QPRINTERINFO_ISDEFAULT )
 /*
 bool isNull () const
 */
-HB_FUNC( QPRINTERINFO_ISNULL )
+HB_FUNC_STATIC( QPRINTERINFO_ISNULL )
 {
   QPrinterInfo * obj = (QPrinterInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -231,7 +231,7 @@ HB_FUNC( QPRINTERINFO_ISNULL )
 /*
 QString printerName () const
 */
-HB_FUNC( QPRINTERINFO_PRINTERNAME )
+HB_FUNC_STATIC( QPRINTERINFO_PRINTERNAME )
 {
   QPrinterInfo * obj = (QPrinterInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -245,7 +245,7 @@ HB_FUNC( QPRINTERINFO_PRINTERNAME )
 /*
 QList<QPrinter::PaperSize> supportedPaperSizes () const
 */
-HB_FUNC( QPRINTERINFO_SUPPORTEDPAPERSIZES )
+HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDPAPERSIZES )
 {
   QPrinterInfo * obj = (QPrinterInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -269,7 +269,7 @@ HB_FUNC( QPRINTERINFO_SUPPORTEDPAPERSIZES )
 /*
 QList<QPrinterInfo> availablePrinters ()
 */
-HB_FUNC( QPRINTERINFO_AVAILABLEPRINTERS )
+HB_FUNC_STATIC( QPRINTERINFO_AVAILABLEPRINTERS )
 {
   QList<QPrinterInfo> list = QPrinterInfo::availablePrinters (  );
   PHB_DYNS pDynSym;
@@ -313,7 +313,7 @@ HB_FUNC( QPRINTERINFO_AVAILABLEPRINTERS )
 /*
 QPrinterInfo defaultPrinter ()
 */
-HB_FUNC( QPRINTERINFO_DEFAULTPRINTER )
+HB_FUNC_STATIC( QPRINTERINFO_DEFAULTPRINTER )
 {
   QPrinterInfo * ptr = new QPrinterInfo( QPrinterInfo::defaultPrinter (  ) );
   _qt4xhb_createReturnClass ( ptr, "QPRINTERINFO", true );}

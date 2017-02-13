@@ -166,7 +166,7 @@ RETURN
 /*
 QGraphicsView ( QWidget * parent = 0 )
 */
-HB_FUNC( QGRAPHICSVIEW_NEW1 )
+HB_FUNC_STATIC( QGRAPHICSVIEW_NEW1 )
 {
   QGraphicsView * o = NULL;
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -182,7 +182,7 @@ HB_FUNC( QGRAPHICSVIEW_NEW1 )
 /*
 QGraphicsView ( QGraphicsScene * scene, QWidget * parent = 0 )
 */
-HB_FUNC( QGRAPHICSVIEW_NEW2 )
+HB_FUNC_STATIC( QGRAPHICSVIEW_NEW2 )
 {
   QGraphicsView * o = NULL;
   QGraphicsScene * par1 = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -199,7 +199,7 @@ HB_FUNC( QGRAPHICSVIEW_NEW2 )
 //[1]QGraphicsView ( QWidget * parent = 0 )
 //[2]QGraphicsView ( QGraphicsScene * scene, QWidget * parent = 0 )
 
-HB_FUNC( QGRAPHICSVIEW_NEW )
+HB_FUNC_STATIC( QGRAPHICSVIEW_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
@@ -215,7 +215,7 @@ HB_FUNC( QGRAPHICSVIEW_NEW )
   }
 }
 
-HB_FUNC( QGRAPHICSVIEW_DELETE )
+HB_FUNC_STATIC( QGRAPHICSVIEW_DELETE )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -234,7 +234,7 @@ HB_FUNC( QGRAPHICSVIEW_DELETE )
 /*
 Qt::Alignment alignment () const
 */
-HB_FUNC( QGRAPHICSVIEW_ALIGNMENT )
+HB_FUNC_STATIC( QGRAPHICSVIEW_ALIGNMENT )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -248,7 +248,7 @@ HB_FUNC( QGRAPHICSVIEW_ALIGNMENT )
 /*
 QBrush backgroundBrush () const
 */
-HB_FUNC( QGRAPHICSVIEW_BACKGROUNDBRUSH )
+HB_FUNC_STATIC( QGRAPHICSVIEW_BACKGROUNDBRUSH )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -261,7 +261,7 @@ HB_FUNC( QGRAPHICSVIEW_BACKGROUNDBRUSH )
 /*
 CacheMode cacheMode () const
 */
-HB_FUNC( QGRAPHICSVIEW_CACHEMODE )
+HB_FUNC_STATIC( QGRAPHICSVIEW_CACHEMODE )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -275,7 +275,7 @@ HB_FUNC( QGRAPHICSVIEW_CACHEMODE )
 /*
 void centerOn ( const QPointF & pos )
 */
-HB_FUNC( QGRAPHICSVIEW_CENTERON1 )
+HB_FUNC_STATIC( QGRAPHICSVIEW_CENTERON1 )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -290,7 +290,7 @@ HB_FUNC( QGRAPHICSVIEW_CENTERON1 )
 /*
 void centerOn ( qreal x, qreal y )
 */
-HB_FUNC( QGRAPHICSVIEW_CENTERON2 )
+HB_FUNC_STATIC( QGRAPHICSVIEW_CENTERON2 )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -306,7 +306,7 @@ HB_FUNC( QGRAPHICSVIEW_CENTERON2 )
 /*
 void centerOn ( const QGraphicsItem * item )
 */
-HB_FUNC( QGRAPHICSVIEW_CENTERON3 )
+HB_FUNC_STATIC( QGRAPHICSVIEW_CENTERON3 )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -322,7 +322,7 @@ HB_FUNC( QGRAPHICSVIEW_CENTERON3 )
 //[2]void centerOn ( qreal x, qreal y )
 //[3]void centerOn ( const QGraphicsItem * item )
 
-HB_FUNC( QGRAPHICSVIEW_CENTERON )
+HB_FUNC_STATIC( QGRAPHICSVIEW_CENTERON )
 {
   if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
@@ -341,7 +341,7 @@ HB_FUNC( QGRAPHICSVIEW_CENTERON )
 /*
 DragMode dragMode () const
 */
-HB_FUNC( QGRAPHICSVIEW_DRAGMODE )
+HB_FUNC_STATIC( QGRAPHICSVIEW_DRAGMODE )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -355,7 +355,7 @@ HB_FUNC( QGRAPHICSVIEW_DRAGMODE )
 /*
 void ensureVisible ( const QRectF & rect, int xmargin = 50, int ymargin = 50 )
 */
-HB_FUNC( QGRAPHICSVIEW_ENSUREVISIBLE1 )
+HB_FUNC_STATIC( QGRAPHICSVIEW_ENSUREVISIBLE1 )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -372,7 +372,7 @@ HB_FUNC( QGRAPHICSVIEW_ENSUREVISIBLE1 )
 /*
 void ensureVisible ( qreal x, qreal y, qreal w, qreal h, int xmargin = 50, int ymargin = 50 )
 */
-HB_FUNC( QGRAPHICSVIEW_ENSUREVISIBLE2 )
+HB_FUNC_STATIC( QGRAPHICSVIEW_ENSUREVISIBLE2 )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -392,7 +392,7 @@ HB_FUNC( QGRAPHICSVIEW_ENSUREVISIBLE2 )
 /*
 void ensureVisible ( const QGraphicsItem * item, int xmargin = 50, int ymargin = 50 )
 */
-HB_FUNC( QGRAPHICSVIEW_ENSUREVISIBLE3 )
+HB_FUNC_STATIC( QGRAPHICSVIEW_ENSUREVISIBLE3 )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -410,7 +410,7 @@ HB_FUNC( QGRAPHICSVIEW_ENSUREVISIBLE3 )
 //[2]void ensureVisible ( qreal x, qreal y, qreal w, qreal h, int xmargin = 50, int ymargin = 50 )
 //[3]void ensureVisible ( const QGraphicsItem * item, int xmargin = 50, int ymargin = 50 )
 
-HB_FUNC( QGRAPHICSVIEW_ENSUREVISIBLE )
+HB_FUNC_STATIC( QGRAPHICSVIEW_ENSUREVISIBLE )
 {
   if( ISBETWEEN(1,3) && ISQRECTF(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
@@ -429,7 +429,7 @@ HB_FUNC( QGRAPHICSVIEW_ENSUREVISIBLE )
 /*
 void fitInView ( const QRectF & rect, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio )
 */
-HB_FUNC( QGRAPHICSVIEW_FITINVIEW1 )
+HB_FUNC_STATIC( QGRAPHICSVIEW_FITINVIEW1 )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -445,7 +445,7 @@ HB_FUNC( QGRAPHICSVIEW_FITINVIEW1 )
 /*
 void fitInView ( qreal x, qreal y, qreal w, qreal h, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio )
 */
-HB_FUNC( QGRAPHICSVIEW_FITINVIEW2 )
+HB_FUNC_STATIC( QGRAPHICSVIEW_FITINVIEW2 )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -464,7 +464,7 @@ HB_FUNC( QGRAPHICSVIEW_FITINVIEW2 )
 /*
 void fitInView ( const QGraphicsItem * item, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio )
 */
-HB_FUNC( QGRAPHICSVIEW_FITINVIEW3 )
+HB_FUNC_STATIC( QGRAPHICSVIEW_FITINVIEW3 )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -481,7 +481,7 @@ HB_FUNC( QGRAPHICSVIEW_FITINVIEW3 )
 //[2]void fitInView ( qreal x, qreal y, qreal w, qreal h, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio )
 //[3]void fitInView ( const QGraphicsItem * item, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio )
 
-HB_FUNC( QGRAPHICSVIEW_FITINVIEW )
+HB_FUNC_STATIC( QGRAPHICSVIEW_FITINVIEW )
 {
   if( ISBETWEEN(1,2) && ISQRECTF(1) && (ISNUM(2)||ISNIL(2)) )
   {
@@ -500,7 +500,7 @@ HB_FUNC( QGRAPHICSVIEW_FITINVIEW )
 /*
 QBrush foregroundBrush () const
 */
-HB_FUNC( QGRAPHICSVIEW_FOREGROUNDBRUSH )
+HB_FUNC_STATIC( QGRAPHICSVIEW_FOREGROUNDBRUSH )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -513,7 +513,7 @@ HB_FUNC( QGRAPHICSVIEW_FOREGROUNDBRUSH )
 /*
 bool isInteractive () const
 */
-HB_FUNC( QGRAPHICSVIEW_ISINTERACTIVE )
+HB_FUNC_STATIC( QGRAPHICSVIEW_ISINTERACTIVE )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -527,7 +527,7 @@ HB_FUNC( QGRAPHICSVIEW_ISINTERACTIVE )
 /*
 bool isTransformed () const
 */
-HB_FUNC( QGRAPHICSVIEW_ISTRANSFORMED )
+HB_FUNC_STATIC( QGRAPHICSVIEW_ISTRANSFORMED )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -541,7 +541,7 @@ HB_FUNC( QGRAPHICSVIEW_ISTRANSFORMED )
 /*
 QGraphicsItem * itemAt ( const QPoint & pos ) const
 */
-HB_FUNC( QGRAPHICSVIEW_ITEMAT1 )
+HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMAT1 )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -555,7 +555,7 @@ HB_FUNC( QGRAPHICSVIEW_ITEMAT1 )
 /*
 QGraphicsItem * itemAt ( int x, int y ) const
 */
-HB_FUNC( QGRAPHICSVIEW_ITEMAT2 )
+HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMAT2 )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -570,7 +570,7 @@ HB_FUNC( QGRAPHICSVIEW_ITEMAT2 )
 //[1]QGraphicsItem * itemAt ( const QPoint & pos ) const
 //[2]QGraphicsItem * itemAt ( int x, int y ) const
 
-HB_FUNC( QGRAPHICSVIEW_ITEMAT )
+HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMAT )
 {
   if( ISNUMPAR(1) && ISQPOINT(1) )
   {
@@ -585,7 +585,7 @@ HB_FUNC( QGRAPHICSVIEW_ITEMAT )
 /*
 QList<QGraphicsItem *> items () const
 */
-HB_FUNC( QGRAPHICSVIEW_ITEMS1 )
+HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS1 )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -629,7 +629,7 @@ HB_FUNC( QGRAPHICSVIEW_ITEMS1 )
 /*
 QList<QGraphicsItem *> items ( const QPoint & pos ) const
 */
-HB_FUNC( QGRAPHICSVIEW_ITEMS2 )
+HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS2 )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -674,7 +674,7 @@ HB_FUNC( QGRAPHICSVIEW_ITEMS2 )
 /*
 QList<QGraphicsItem *> items ( int x, int y ) const
 */
-HB_FUNC( QGRAPHICSVIEW_ITEMS3 )
+HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS3 )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -720,7 +720,7 @@ HB_FUNC( QGRAPHICSVIEW_ITEMS3 )
 /*
 QList<QGraphicsItem *> items ( int x, int y, int w, int h, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
 */
-HB_FUNC( QGRAPHICSVIEW_ITEMS4 )
+HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS4 )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -769,7 +769,7 @@ HB_FUNC( QGRAPHICSVIEW_ITEMS4 )
 /*
 QList<QGraphicsItem *> items ( const QRect & rect, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
 */
-HB_FUNC( QGRAPHICSVIEW_ITEMS5 )
+HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS5 )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -815,7 +815,7 @@ HB_FUNC( QGRAPHICSVIEW_ITEMS5 )
 /*
 QList<QGraphicsItem *> items ( const QPolygon & polygon, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
 */
-HB_FUNC( QGRAPHICSVIEW_ITEMS6 )
+HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS6 )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -861,7 +861,7 @@ HB_FUNC( QGRAPHICSVIEW_ITEMS6 )
 /*
 QList<QGraphicsItem *> items ( const QPainterPath & path, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
 */
-HB_FUNC( QGRAPHICSVIEW_ITEMS7 )
+HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS7 )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -912,7 +912,7 @@ HB_FUNC( QGRAPHICSVIEW_ITEMS7 )
 //[6]QList<QGraphicsItem *> items ( const QPolygon & polygon, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
 //[7]QList<QGraphicsItem *> items ( const QPainterPath & path, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
 
-HB_FUNC( QGRAPHICSVIEW_ITEMS )
+HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS )
 {
   if( ISNUMPAR(0) )
   {
@@ -947,7 +947,7 @@ HB_FUNC( QGRAPHICSVIEW_ITEMS )
 /*
 QPoint mapFromScene ( const QPointF & point ) const
 */
-HB_FUNC( QGRAPHICSVIEW_MAPFROMSCENE1 )
+HB_FUNC_STATIC( QGRAPHICSVIEW_MAPFROMSCENE1 )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -961,7 +961,7 @@ HB_FUNC( QGRAPHICSVIEW_MAPFROMSCENE1 )
 /*
 QPolygon mapFromScene ( const QRectF & rect ) const
 */
-HB_FUNC( QGRAPHICSVIEW_MAPFROMSCENE2 )
+HB_FUNC_STATIC( QGRAPHICSVIEW_MAPFROMSCENE2 )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -975,7 +975,7 @@ HB_FUNC( QGRAPHICSVIEW_MAPFROMSCENE2 )
 /*
 QPolygon mapFromScene ( const QPolygonF & polygon ) const
 */
-HB_FUNC( QGRAPHICSVIEW_MAPFROMSCENE3 )
+HB_FUNC_STATIC( QGRAPHICSVIEW_MAPFROMSCENE3 )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -989,7 +989,7 @@ HB_FUNC( QGRAPHICSVIEW_MAPFROMSCENE3 )
 /*
 QPainterPath mapFromScene ( const QPainterPath & path ) const
 */
-HB_FUNC( QGRAPHICSVIEW_MAPFROMSCENE4 )
+HB_FUNC_STATIC( QGRAPHICSVIEW_MAPFROMSCENE4 )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1003,7 +1003,7 @@ HB_FUNC( QGRAPHICSVIEW_MAPFROMSCENE4 )
 /*
 QPoint mapFromScene ( qreal x, qreal y ) const
 */
-HB_FUNC( QGRAPHICSVIEW_MAPFROMSCENE5 )
+HB_FUNC_STATIC( QGRAPHICSVIEW_MAPFROMSCENE5 )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1018,7 +1018,7 @@ HB_FUNC( QGRAPHICSVIEW_MAPFROMSCENE5 )
 /*
 QPolygon mapFromScene ( qreal x, qreal y, qreal w, qreal h ) const
 */
-HB_FUNC( QGRAPHICSVIEW_MAPFROMSCENE6 )
+HB_FUNC_STATIC( QGRAPHICSVIEW_MAPFROMSCENE6 )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1039,7 +1039,7 @@ HB_FUNC( QGRAPHICSVIEW_MAPFROMSCENE6 )
 //[5]QPoint mapFromScene ( qreal x, qreal y ) const
 //[6]QPolygon mapFromScene ( qreal x, qreal y, qreal w, qreal h ) const
 
-HB_FUNC( QGRAPHICSVIEW_MAPFROMSCENE )
+HB_FUNC_STATIC( QGRAPHICSVIEW_MAPFROMSCENE )
 {
   if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
@@ -1070,7 +1070,7 @@ HB_FUNC( QGRAPHICSVIEW_MAPFROMSCENE )
 /*
 QPointF mapToScene ( const QPoint & point ) const
 */
-HB_FUNC( QGRAPHICSVIEW_MAPTOSCENE1 )
+HB_FUNC_STATIC( QGRAPHICSVIEW_MAPTOSCENE1 )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1084,7 +1084,7 @@ HB_FUNC( QGRAPHICSVIEW_MAPTOSCENE1 )
 /*
 QPolygonF mapToScene ( const QRect & rect ) const
 */
-HB_FUNC( QGRAPHICSVIEW_MAPTOSCENE2 )
+HB_FUNC_STATIC( QGRAPHICSVIEW_MAPTOSCENE2 )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1098,7 +1098,7 @@ HB_FUNC( QGRAPHICSVIEW_MAPTOSCENE2 )
 /*
 QPolygonF mapToScene ( const QPolygon & polygon ) const
 */
-HB_FUNC( QGRAPHICSVIEW_MAPTOSCENE3 )
+HB_FUNC_STATIC( QGRAPHICSVIEW_MAPTOSCENE3 )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1112,7 +1112,7 @@ HB_FUNC( QGRAPHICSVIEW_MAPTOSCENE3 )
 /*
 QPainterPath mapToScene ( const QPainterPath & path ) const
 */
-HB_FUNC( QGRAPHICSVIEW_MAPTOSCENE4 )
+HB_FUNC_STATIC( QGRAPHICSVIEW_MAPTOSCENE4 )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1126,7 +1126,7 @@ HB_FUNC( QGRAPHICSVIEW_MAPTOSCENE4 )
 /*
 QPointF mapToScene ( int x, int y ) const
 */
-HB_FUNC( QGRAPHICSVIEW_MAPTOSCENE5 )
+HB_FUNC_STATIC( QGRAPHICSVIEW_MAPTOSCENE5 )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1141,7 +1141,7 @@ HB_FUNC( QGRAPHICSVIEW_MAPTOSCENE5 )
 /*
 QPolygonF mapToScene ( int x, int y, int w, int h ) const
 */
-HB_FUNC( QGRAPHICSVIEW_MAPTOSCENE6 )
+HB_FUNC_STATIC( QGRAPHICSVIEW_MAPTOSCENE6 )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1162,7 +1162,7 @@ HB_FUNC( QGRAPHICSVIEW_MAPTOSCENE6 )
 //[5]QPointF mapToScene ( int x, int y ) const
 //[6]QPolygonF mapToScene ( int x, int y, int w, int h ) const
 
-HB_FUNC( QGRAPHICSVIEW_MAPTOSCENE )
+HB_FUNC_STATIC( QGRAPHICSVIEW_MAPTOSCENE )
 {
   if( ISNUMPAR(1) && ISQPOINT(1) )
   {
@@ -1193,7 +1193,7 @@ HB_FUNC( QGRAPHICSVIEW_MAPTOSCENE )
 /*
 QMatrix matrix () const
 */
-HB_FUNC( QGRAPHICSVIEW_MATRIX )
+HB_FUNC_STATIC( QGRAPHICSVIEW_MATRIX )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1206,7 +1206,7 @@ HB_FUNC( QGRAPHICSVIEW_MATRIX )
 /*
 OptimizationFlags optimizationFlags () const
 */
-HB_FUNC( QGRAPHICSVIEW_OPTIMIZATIONFLAGS )
+HB_FUNC_STATIC( QGRAPHICSVIEW_OPTIMIZATIONFLAGS )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1220,7 +1220,7 @@ HB_FUNC( QGRAPHICSVIEW_OPTIMIZATIONFLAGS )
 /*
 void render ( QPainter * painter, const QRectF & target = QRectF(), const QRect & source = QRect(), Qt::AspectRatioMode aspectRatioMode = Qt::KeepAspectRatio )
 */
-HB_FUNC( QGRAPHICSVIEW_RENDER )
+HB_FUNC_STATIC( QGRAPHICSVIEW_RENDER )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1238,7 +1238,7 @@ HB_FUNC( QGRAPHICSVIEW_RENDER )
 /*
 QPainter::RenderHints renderHints () const
 */
-HB_FUNC( QGRAPHICSVIEW_RENDERHINTS )
+HB_FUNC_STATIC( QGRAPHICSVIEW_RENDERHINTS )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1252,7 +1252,7 @@ HB_FUNC( QGRAPHICSVIEW_RENDERHINTS )
 /*
 void resetCachedContent ()
 */
-HB_FUNC( QGRAPHICSVIEW_RESETCACHEDCONTENT )
+HB_FUNC_STATIC( QGRAPHICSVIEW_RESETCACHEDCONTENT )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1266,7 +1266,7 @@ HB_FUNC( QGRAPHICSVIEW_RESETCACHEDCONTENT )
 /*
 void resetMatrix ()
 */
-HB_FUNC( QGRAPHICSVIEW_RESETMATRIX )
+HB_FUNC_STATIC( QGRAPHICSVIEW_RESETMATRIX )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1280,7 +1280,7 @@ HB_FUNC( QGRAPHICSVIEW_RESETMATRIX )
 /*
 void resetTransform ()
 */
-HB_FUNC( QGRAPHICSVIEW_RESETTRANSFORM )
+HB_FUNC_STATIC( QGRAPHICSVIEW_RESETTRANSFORM )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1294,7 +1294,7 @@ HB_FUNC( QGRAPHICSVIEW_RESETTRANSFORM )
 /*
 ViewportAnchor resizeAnchor () const
 */
-HB_FUNC( QGRAPHICSVIEW_RESIZEANCHOR )
+HB_FUNC_STATIC( QGRAPHICSVIEW_RESIZEANCHOR )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1308,7 +1308,7 @@ HB_FUNC( QGRAPHICSVIEW_RESIZEANCHOR )
 /*
 void rotate ( qreal angle )
 */
-HB_FUNC( QGRAPHICSVIEW_ROTATE )
+HB_FUNC_STATIC( QGRAPHICSVIEW_ROTATE )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1323,7 +1323,7 @@ HB_FUNC( QGRAPHICSVIEW_ROTATE )
 /*
 Qt::ItemSelectionMode rubberBandSelectionMode () const
 */
-HB_FUNC( QGRAPHICSVIEW_RUBBERBANDSELECTIONMODE )
+HB_FUNC_STATIC( QGRAPHICSVIEW_RUBBERBANDSELECTIONMODE )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1337,7 +1337,7 @@ HB_FUNC( QGRAPHICSVIEW_RUBBERBANDSELECTIONMODE )
 /*
 void scale ( qreal sx, qreal sy )
 */
-HB_FUNC( QGRAPHICSVIEW_SCALE )
+HB_FUNC_STATIC( QGRAPHICSVIEW_SCALE )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1353,7 +1353,7 @@ HB_FUNC( QGRAPHICSVIEW_SCALE )
 /*
 QGraphicsScene * scene () const
 */
-HB_FUNC( QGRAPHICSVIEW_SCENE )
+HB_FUNC_STATIC( QGRAPHICSVIEW_SCENE )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1366,7 +1366,7 @@ HB_FUNC( QGRAPHICSVIEW_SCENE )
 /*
 QRectF sceneRect () const
 */
-HB_FUNC( QGRAPHICSVIEW_SCENERECT )
+HB_FUNC_STATIC( QGRAPHICSVIEW_SCENERECT )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1379,7 +1379,7 @@ HB_FUNC( QGRAPHICSVIEW_SCENERECT )
 /*
 void setAlignment ( Qt::Alignment alignment )
 */
-HB_FUNC( QGRAPHICSVIEW_SETALIGNMENT )
+HB_FUNC_STATIC( QGRAPHICSVIEW_SETALIGNMENT )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1394,7 +1394,7 @@ HB_FUNC( QGRAPHICSVIEW_SETALIGNMENT )
 /*
 void setBackgroundBrush ( const QBrush & brush )
 */
-HB_FUNC( QGRAPHICSVIEW_SETBACKGROUNDBRUSH )
+HB_FUNC_STATIC( QGRAPHICSVIEW_SETBACKGROUNDBRUSH )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1409,7 +1409,7 @@ HB_FUNC( QGRAPHICSVIEW_SETBACKGROUNDBRUSH )
 /*
 void setCacheMode ( CacheMode mode )
 */
-HB_FUNC( QGRAPHICSVIEW_SETCACHEMODE )
+HB_FUNC_STATIC( QGRAPHICSVIEW_SETCACHEMODE )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1424,7 +1424,7 @@ HB_FUNC( QGRAPHICSVIEW_SETCACHEMODE )
 /*
 void setDragMode ( DragMode mode )
 */
-HB_FUNC( QGRAPHICSVIEW_SETDRAGMODE )
+HB_FUNC_STATIC( QGRAPHICSVIEW_SETDRAGMODE )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1439,7 +1439,7 @@ HB_FUNC( QGRAPHICSVIEW_SETDRAGMODE )
 /*
 void setForegroundBrush ( const QBrush & brush )
 */
-HB_FUNC( QGRAPHICSVIEW_SETFOREGROUNDBRUSH )
+HB_FUNC_STATIC( QGRAPHICSVIEW_SETFOREGROUNDBRUSH )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1454,7 +1454,7 @@ HB_FUNC( QGRAPHICSVIEW_SETFOREGROUNDBRUSH )
 /*
 void setInteractive ( bool allowed )
 */
-HB_FUNC( QGRAPHICSVIEW_SETINTERACTIVE )
+HB_FUNC_STATIC( QGRAPHICSVIEW_SETINTERACTIVE )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1469,7 +1469,7 @@ HB_FUNC( QGRAPHICSVIEW_SETINTERACTIVE )
 /*
 void setMatrix ( const QMatrix & matrix, bool combine = false )
 */
-HB_FUNC( QGRAPHICSVIEW_SETMATRIX )
+HB_FUNC_STATIC( QGRAPHICSVIEW_SETMATRIX )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1485,7 +1485,7 @@ HB_FUNC( QGRAPHICSVIEW_SETMATRIX )
 /*
 void setOptimizationFlag ( OptimizationFlag flag, bool enabled = true )
 */
-HB_FUNC( QGRAPHICSVIEW_SETOPTIMIZATIONFLAG )
+HB_FUNC_STATIC( QGRAPHICSVIEW_SETOPTIMIZATIONFLAG )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1501,7 +1501,7 @@ HB_FUNC( QGRAPHICSVIEW_SETOPTIMIZATIONFLAG )
 /*
 void setOptimizationFlags ( OptimizationFlags flags )
 */
-HB_FUNC( QGRAPHICSVIEW_SETOPTIMIZATIONFLAGS )
+HB_FUNC_STATIC( QGRAPHICSVIEW_SETOPTIMIZATIONFLAGS )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1516,7 +1516,7 @@ HB_FUNC( QGRAPHICSVIEW_SETOPTIMIZATIONFLAGS )
 /*
 void setRenderHint ( QPainter::RenderHint hint, bool enabled = true )
 */
-HB_FUNC( QGRAPHICSVIEW_SETRENDERHINT )
+HB_FUNC_STATIC( QGRAPHICSVIEW_SETRENDERHINT )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1532,7 +1532,7 @@ HB_FUNC( QGRAPHICSVIEW_SETRENDERHINT )
 /*
 void setRenderHints ( QPainter::RenderHints hints )
 */
-HB_FUNC( QGRAPHICSVIEW_SETRENDERHINTS )
+HB_FUNC_STATIC( QGRAPHICSVIEW_SETRENDERHINTS )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1547,7 +1547,7 @@ HB_FUNC( QGRAPHICSVIEW_SETRENDERHINTS )
 /*
 void setResizeAnchor ( ViewportAnchor anchor )
 */
-HB_FUNC( QGRAPHICSVIEW_SETRESIZEANCHOR )
+HB_FUNC_STATIC( QGRAPHICSVIEW_SETRESIZEANCHOR )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1562,7 +1562,7 @@ HB_FUNC( QGRAPHICSVIEW_SETRESIZEANCHOR )
 /*
 void setRubberBandSelectionMode ( Qt::ItemSelectionMode mode )
 */
-HB_FUNC( QGRAPHICSVIEW_SETRUBBERBANDSELECTIONMODE )
+HB_FUNC_STATIC( QGRAPHICSVIEW_SETRUBBERBANDSELECTIONMODE )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1577,7 +1577,7 @@ HB_FUNC( QGRAPHICSVIEW_SETRUBBERBANDSELECTIONMODE )
 /*
 void setScene ( QGraphicsScene * scene )
 */
-HB_FUNC( QGRAPHICSVIEW_SETSCENE )
+HB_FUNC_STATIC( QGRAPHICSVIEW_SETSCENE )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1592,7 +1592,7 @@ HB_FUNC( QGRAPHICSVIEW_SETSCENE )
 /*
 void setSceneRect ( const QRectF & rect )
 */
-HB_FUNC( QGRAPHICSVIEW_SETSCENERECT1 )
+HB_FUNC_STATIC( QGRAPHICSVIEW_SETSCENERECT1 )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1607,7 +1607,7 @@ HB_FUNC( QGRAPHICSVIEW_SETSCENERECT1 )
 /*
 void setSceneRect ( qreal x, qreal y, qreal w, qreal h )
 */
-HB_FUNC( QGRAPHICSVIEW_SETSCENERECT2 )
+HB_FUNC_STATIC( QGRAPHICSVIEW_SETSCENERECT2 )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1625,7 +1625,7 @@ HB_FUNC( QGRAPHICSVIEW_SETSCENERECT2 )
 //[1]void setSceneRect ( const QRectF & rect )
 //[2]void setSceneRect ( qreal x, qreal y, qreal w, qreal h )
 
-HB_FUNC( QGRAPHICSVIEW_SETSCENERECT )
+HB_FUNC_STATIC( QGRAPHICSVIEW_SETSCENERECT )
 {
   if( ISNUMPAR(1) && ISQRECTF(1) )
   {
@@ -1640,7 +1640,7 @@ HB_FUNC( QGRAPHICSVIEW_SETSCENERECT )
 /*
 void setTransform ( const QTransform & matrix, bool combine = false )
 */
-HB_FUNC( QGRAPHICSVIEW_SETTRANSFORM )
+HB_FUNC_STATIC( QGRAPHICSVIEW_SETTRANSFORM )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1656,7 +1656,7 @@ HB_FUNC( QGRAPHICSVIEW_SETTRANSFORM )
 /*
 void setTransformationAnchor ( ViewportAnchor anchor )
 */
-HB_FUNC( QGRAPHICSVIEW_SETTRANSFORMATIONANCHOR )
+HB_FUNC_STATIC( QGRAPHICSVIEW_SETTRANSFORMATIONANCHOR )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1671,7 +1671,7 @@ HB_FUNC( QGRAPHICSVIEW_SETTRANSFORMATIONANCHOR )
 /*
 void setViewportUpdateMode ( ViewportUpdateMode mode )
 */
-HB_FUNC( QGRAPHICSVIEW_SETVIEWPORTUPDATEMODE )
+HB_FUNC_STATIC( QGRAPHICSVIEW_SETVIEWPORTUPDATEMODE )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1686,7 +1686,7 @@ HB_FUNC( QGRAPHICSVIEW_SETVIEWPORTUPDATEMODE )
 /*
 void shear ( qreal sh, qreal sv )
 */
-HB_FUNC( QGRAPHICSVIEW_SHEAR )
+HB_FUNC_STATIC( QGRAPHICSVIEW_SHEAR )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1702,7 +1702,7 @@ HB_FUNC( QGRAPHICSVIEW_SHEAR )
 /*
 QTransform transform () const
 */
-HB_FUNC( QGRAPHICSVIEW_TRANSFORM )
+HB_FUNC_STATIC( QGRAPHICSVIEW_TRANSFORM )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1715,7 +1715,7 @@ HB_FUNC( QGRAPHICSVIEW_TRANSFORM )
 /*
 ViewportAnchor transformationAnchor () const
 */
-HB_FUNC( QGRAPHICSVIEW_TRANSFORMATIONANCHOR )
+HB_FUNC_STATIC( QGRAPHICSVIEW_TRANSFORMATIONANCHOR )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1729,7 +1729,7 @@ HB_FUNC( QGRAPHICSVIEW_TRANSFORMATIONANCHOR )
 /*
 void translate ( qreal dx, qreal dy )
 */
-HB_FUNC( QGRAPHICSVIEW_TRANSLATE )
+HB_FUNC_STATIC( QGRAPHICSVIEW_TRANSLATE )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1745,7 +1745,7 @@ HB_FUNC( QGRAPHICSVIEW_TRANSLATE )
 /*
 QTransform viewportTransform () const
 */
-HB_FUNC( QGRAPHICSVIEW_VIEWPORTTRANSFORM )
+HB_FUNC_STATIC( QGRAPHICSVIEW_VIEWPORTTRANSFORM )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1758,7 +1758,7 @@ HB_FUNC( QGRAPHICSVIEW_VIEWPORTTRANSFORM )
 /*
 ViewportUpdateMode viewportUpdateMode () const
 */
-HB_FUNC( QGRAPHICSVIEW_VIEWPORTUPDATEMODE )
+HB_FUNC_STATIC( QGRAPHICSVIEW_VIEWPORTUPDATEMODE )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1772,7 +1772,7 @@ HB_FUNC( QGRAPHICSVIEW_VIEWPORTUPDATEMODE )
 /*
 virtual QVariant inputMethodQuery ( Qt::InputMethodQuery query ) const
 */
-HB_FUNC( QGRAPHICSVIEW_INPUTMETHODQUERY )
+HB_FUNC_STATIC( QGRAPHICSVIEW_INPUTMETHODQUERY )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1786,7 +1786,7 @@ HB_FUNC( QGRAPHICSVIEW_INPUTMETHODQUERY )
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC( QGRAPHICSVIEW_SIZEHINT )
+HB_FUNC_STATIC( QGRAPHICSVIEW_SIZEHINT )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1799,7 +1799,7 @@ HB_FUNC( QGRAPHICSVIEW_SIZEHINT )
 /*
 void invalidateScene ( const QRectF & rect = QRectF(), QGraphicsScene::SceneLayers layers = QGraphicsScene::AllLayers )
 */
-HB_FUNC( QGRAPHICSVIEW_INVALIDATESCENE )
+HB_FUNC_STATIC( QGRAPHICSVIEW_INVALIDATESCENE )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1815,7 +1815,7 @@ HB_FUNC( QGRAPHICSVIEW_INVALIDATESCENE )
 /*
 void updateScene ( const QList<QRectF> & rects )
 */
-HB_FUNC( QGRAPHICSVIEW_UPDATESCENE )
+HB_FUNC_STATIC( QGRAPHICSVIEW_UPDATESCENE )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1837,7 +1837,7 @@ par1 << *(QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1
 /*
 void updateSceneRect ( const QRectF & rect )
 */
-HB_FUNC( QGRAPHICSVIEW_UPDATESCENERECT )
+HB_FUNC_STATIC( QGRAPHICSVIEW_UPDATESCENERECT )
 {
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

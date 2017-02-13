@@ -104,7 +104,7 @@ RETURN
 /*
 QPoint()
 */
-HB_FUNC( QPOINT_NEW1 )
+HB_FUNC_STATIC( QPOINT_NEW1 )
 {
   QPoint * o = NULL;
   o = new QPoint (  );
@@ -122,7 +122,7 @@ HB_FUNC( QPOINT_NEW1 )
 /*
 QPoint(int xpos, int ypos)
 */
-HB_FUNC( QPOINT_NEW2 )
+HB_FUNC_STATIC( QPOINT_NEW2 )
 {
   QPoint * o = NULL;
   int par1 = hb_parni(1);
@@ -142,7 +142,7 @@ HB_FUNC( QPOINT_NEW2 )
 //[1]QPoint()
 //[2]QPoint(int xpos, int ypos)
 
-HB_FUNC( QPOINT_NEW )
+HB_FUNC_STATIC( QPOINT_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -158,7 +158,7 @@ HB_FUNC( QPOINT_NEW )
   }
 }
 
-HB_FUNC( QPOINT_DELETE )
+HB_FUNC_STATIC( QPOINT_DELETE )
 {
   QPoint * obj = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -177,7 +177,7 @@ HB_FUNC( QPOINT_DELETE )
 /*
 bool isNull() const
 */
-HB_FUNC( QPOINT_ISNULL )
+HB_FUNC_STATIC( QPOINT_ISNULL )
 {
   QPoint * obj = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -191,7 +191,7 @@ HB_FUNC( QPOINT_ISNULL )
 /*
 int manhattanLength() const
 */
-HB_FUNC( QPOINT_MANHATTANLENGTH )
+HB_FUNC_STATIC( QPOINT_MANHATTANLENGTH )
 {
   QPoint * obj = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -207,7 +207,7 @@ HB_FUNC( QPOINT_MANHATTANLENGTH )
 /*
 void setX(int x)
 */
-HB_FUNC( QPOINT_SETX )
+HB_FUNC_STATIC( QPOINT_SETX )
 {
   QPoint * obj = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -222,7 +222,7 @@ HB_FUNC( QPOINT_SETX )
 /*
 void setY(int y)
 */
-HB_FUNC( QPOINT_SETY )
+HB_FUNC_STATIC( QPOINT_SETY )
 {
   QPoint * obj = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -237,7 +237,7 @@ HB_FUNC( QPOINT_SETY )
 /*
 int x() const
 */
-HB_FUNC( QPOINT_X )
+HB_FUNC_STATIC( QPOINT_X )
 {
   QPoint * obj = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -251,7 +251,7 @@ HB_FUNC( QPOINT_X )
 /*
 int y() const
 */
-HB_FUNC( QPOINT_Y )
+HB_FUNC_STATIC( QPOINT_Y )
 {
   QPoint * obj = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

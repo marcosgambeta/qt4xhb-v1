@@ -77,7 +77,7 @@ RETURN
 /*
 bool allowsErrorInteraction ()
 */
-HB_FUNC( QSESSIONMANAGER_ALLOWSERRORINTERACTION )
+HB_FUNC_STATIC( QSESSIONMANAGER_ALLOWSERRORINTERACTION )
 {
   QSessionManager * obj = (QSessionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -91,7 +91,7 @@ HB_FUNC( QSESSIONMANAGER_ALLOWSERRORINTERACTION )
 /*
 bool allowsInteraction ()
 */
-HB_FUNC( QSESSIONMANAGER_ALLOWSINTERACTION )
+HB_FUNC_STATIC( QSESSIONMANAGER_ALLOWSINTERACTION )
 {
   QSessionManager * obj = (QSessionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -105,7 +105,7 @@ HB_FUNC( QSESSIONMANAGER_ALLOWSINTERACTION )
 /*
 void cancel ()
 */
-HB_FUNC( QSESSIONMANAGER_CANCEL )
+HB_FUNC_STATIC( QSESSIONMANAGER_CANCEL )
 {
   QSessionManager * obj = (QSessionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -119,7 +119,7 @@ HB_FUNC( QSESSIONMANAGER_CANCEL )
 /*
 QStringList discardCommand () const
 */
-HB_FUNC( QSESSIONMANAGER_DISCARDCOMMAND )
+HB_FUNC_STATIC( QSESSIONMANAGER_DISCARDCOMMAND )
 {
   QSessionManager * obj = (QSessionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -142,7 +142,7 @@ HB_FUNC( QSESSIONMANAGER_DISCARDCOMMAND )
 /*
 bool isPhase2 () const
 */
-HB_FUNC( QSESSIONMANAGER_ISPHASE2 )
+HB_FUNC_STATIC( QSESSIONMANAGER_ISPHASE2 )
 {
   QSessionManager * obj = (QSessionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -156,7 +156,7 @@ HB_FUNC( QSESSIONMANAGER_ISPHASE2 )
 /*
 void release ()
 */
-HB_FUNC( QSESSIONMANAGER_RELEASE )
+HB_FUNC_STATIC( QSESSIONMANAGER_RELEASE )
 {
   QSessionManager * obj = (QSessionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -170,7 +170,7 @@ HB_FUNC( QSESSIONMANAGER_RELEASE )
 /*
 void requestPhase2 ()
 */
-HB_FUNC( QSESSIONMANAGER_REQUESTPHASE2 )
+HB_FUNC_STATIC( QSESSIONMANAGER_REQUESTPHASE2 )
 {
   QSessionManager * obj = (QSessionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -184,7 +184,7 @@ HB_FUNC( QSESSIONMANAGER_REQUESTPHASE2 )
 /*
 QStringList restartCommand () const
 */
-HB_FUNC( QSESSIONMANAGER_RESTARTCOMMAND )
+HB_FUNC_STATIC( QSESSIONMANAGER_RESTARTCOMMAND )
 {
   QSessionManager * obj = (QSessionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -207,7 +207,7 @@ HB_FUNC( QSESSIONMANAGER_RESTARTCOMMAND )
 /*
 RestartHint restartHint () const
 */
-HB_FUNC( QSESSIONMANAGER_RESTARTHINT )
+HB_FUNC_STATIC( QSESSIONMANAGER_RESTARTHINT )
 {
   QSessionManager * obj = (QSessionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -221,7 +221,7 @@ HB_FUNC( QSESSIONMANAGER_RESTARTHINT )
 /*
 QString sessionId () const
 */
-HB_FUNC( QSESSIONMANAGER_SESSIONID )
+HB_FUNC_STATIC( QSESSIONMANAGER_SESSIONID )
 {
   QSessionManager * obj = (QSessionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -235,7 +235,7 @@ HB_FUNC( QSESSIONMANAGER_SESSIONID )
 /*
 QString sessionKey () const
 */
-HB_FUNC( QSESSIONMANAGER_SESSIONKEY )
+HB_FUNC_STATIC( QSESSIONMANAGER_SESSIONKEY )
 {
   QSessionManager * obj = (QSessionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -249,7 +249,7 @@ HB_FUNC( QSESSIONMANAGER_SESSIONKEY )
 /*
 void setDiscardCommand ( const QStringList & list )
 */
-HB_FUNC( QSESSIONMANAGER_SETDISCARDCOMMAND )
+HB_FUNC_STATIC( QSESSIONMANAGER_SETDISCARDCOMMAND )
 {
   QSessionManager * obj = (QSessionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -272,7 +272,7 @@ par1 << temp;
 /*
 void setManagerProperty ( const QString & name, const QStringList & value )
 */
-HB_FUNC( QSESSIONMANAGER_SETMANAGERPROPERTY1 )
+HB_FUNC_STATIC( QSESSIONMANAGER_SETMANAGERPROPERTY1 )
 {
   QSessionManager * obj = (QSessionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -296,7 +296,7 @@ par2 << temp;
 /*
 void setManagerProperty ( const QString & name, const QString & value )
 */
-HB_FUNC( QSESSIONMANAGER_SETMANAGERPROPERTY2 )
+HB_FUNC_STATIC( QSESSIONMANAGER_SETMANAGERPROPERTY2 )
 {
   QSessionManager * obj = (QSessionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -312,7 +312,7 @@ HB_FUNC( QSESSIONMANAGER_SETMANAGERPROPERTY2 )
 //[1]void setManagerProperty ( const QString & name, const QStringList & value )
 //[2]void setManagerProperty ( const QString & name, const QString & value )
 
-HB_FUNC( QSESSIONMANAGER_SETMANAGERPROPERTY )
+HB_FUNC_STATIC( QSESSIONMANAGER_SETMANAGERPROPERTY )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISARRAY(2) )
   {
@@ -327,7 +327,7 @@ HB_FUNC( QSESSIONMANAGER_SETMANAGERPROPERTY )
 /*
 void setRestartCommand ( const QStringList & command )
 */
-HB_FUNC( QSESSIONMANAGER_SETRESTARTCOMMAND )
+HB_FUNC_STATIC( QSESSIONMANAGER_SETRESTARTCOMMAND )
 {
   QSessionManager * obj = (QSessionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -350,7 +350,7 @@ par1 << temp;
 /*
 void setRestartHint ( RestartHint hint )
 */
-HB_FUNC( QSESSIONMANAGER_SETRESTARTHINT )
+HB_FUNC_STATIC( QSESSIONMANAGER_SETRESTARTHINT )
 {
   QSessionManager * obj = (QSessionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

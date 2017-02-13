@@ -107,7 +107,7 @@ RETURN
 /*
 QDomImplementation ()
 */
-HB_FUNC( QDOMIMPLEMENTATION_NEW1 )
+HB_FUNC_STATIC( QDOMIMPLEMENTATION_NEW1 )
 {
   QDomImplementation * o = NULL;
   o = new QDomImplementation (  );
@@ -125,7 +125,7 @@ HB_FUNC( QDOMIMPLEMENTATION_NEW1 )
 /*
 QDomImplementation ( const QDomImplementation & x )
 */
-HB_FUNC( QDOMIMPLEMENTATION_NEW2 )
+HB_FUNC_STATIC( QDOMIMPLEMENTATION_NEW2 )
 {
   QDomImplementation * o = NULL;
   QDomImplementation * par1 = (QDomImplementation *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -144,7 +144,7 @@ HB_FUNC( QDOMIMPLEMENTATION_NEW2 )
 //[1]QDomImplementation ()
 //[2]QDomImplementation ( const QDomImplementation & x )
 
-HB_FUNC( QDOMIMPLEMENTATION_NEW )
+HB_FUNC_STATIC( QDOMIMPLEMENTATION_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -160,7 +160,7 @@ HB_FUNC( QDOMIMPLEMENTATION_NEW )
   }
 }
 
-HB_FUNC( QDOMIMPLEMENTATION_DELETE )
+HB_FUNC_STATIC( QDOMIMPLEMENTATION_DELETE )
 {
   QDomImplementation * obj = (QDomImplementation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -179,7 +179,7 @@ HB_FUNC( QDOMIMPLEMENTATION_DELETE )
 /*
 QDomDocument createDocument ( const QString & nsURI, const QString & qName, const QDomDocumentType & doctype )
 */
-HB_FUNC( QDOMIMPLEMENTATION_CREATEDOCUMENT )
+HB_FUNC_STATIC( QDOMIMPLEMENTATION_CREATEDOCUMENT )
 {
   QDomImplementation * obj = (QDomImplementation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -195,7 +195,7 @@ HB_FUNC( QDOMIMPLEMENTATION_CREATEDOCUMENT )
 /*
 QDomDocumentType createDocumentType ( const QString & qName, const QString & publicId, const QString & systemId )
 */
-HB_FUNC( QDOMIMPLEMENTATION_CREATEDOCUMENTTYPE )
+HB_FUNC_STATIC( QDOMIMPLEMENTATION_CREATEDOCUMENTTYPE )
 {
   QDomImplementation * obj = (QDomImplementation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -211,7 +211,7 @@ HB_FUNC( QDOMIMPLEMENTATION_CREATEDOCUMENTTYPE )
 /*
 bool hasFeature ( const QString & feature, const QString & version ) const
 */
-HB_FUNC( QDOMIMPLEMENTATION_HASFEATURE )
+HB_FUNC_STATIC( QDOMIMPLEMENTATION_HASFEATURE )
 {
   QDomImplementation * obj = (QDomImplementation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -227,7 +227,7 @@ HB_FUNC( QDOMIMPLEMENTATION_HASFEATURE )
 /*
 bool isNull ()
 */
-HB_FUNC( QDOMIMPLEMENTATION_ISNULL )
+HB_FUNC_STATIC( QDOMIMPLEMENTATION_ISNULL )
 {
   QDomImplementation * obj = (QDomImplementation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -242,7 +242,7 @@ HB_FUNC( QDOMIMPLEMENTATION_ISNULL )
 /*
 InvalidDataPolicy invalidDataPolicy ()
 */
-HB_FUNC( QDOMIMPLEMENTATION_INVALIDDATAPOLICY )
+HB_FUNC_STATIC( QDOMIMPLEMENTATION_INVALIDDATAPOLICY )
 {
   int i = QDomImplementation::invalidDataPolicy (  );
   hb_retni( i );
@@ -252,7 +252,7 @@ HB_FUNC( QDOMIMPLEMENTATION_INVALIDDATAPOLICY )
 /*
 void setInvalidDataPolicy ( InvalidDataPolicy policy )
 */
-HB_FUNC( QDOMIMPLEMENTATION_SETINVALIDDATAPOLICY )
+HB_FUNC_STATIC( QDOMIMPLEMENTATION_SETINVALIDDATAPOLICY )
 {
   int par1 = hb_parni(1);
   QDomImplementation::setInvalidDataPolicy (  (QDomImplementation::InvalidDataPolicy) par1 );

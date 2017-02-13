@@ -111,7 +111,7 @@ RETURN
 /*
 QWebHistoryItem ( const QWebHistoryItem & other )
 */
-HB_FUNC( QWEBHISTORYITEM_NEW )
+HB_FUNC_STATIC( QWEBHISTORYITEM_NEW )
 {
   QWebHistoryItem * o = NULL;
   QWebHistoryItem * par1 = (QWebHistoryItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -127,7 +127,7 @@ HB_FUNC( QWEBHISTORYITEM_NEW )
 }
 
 
-HB_FUNC( QWEBHISTORYITEM_DELETE )
+HB_FUNC_STATIC( QWEBHISTORYITEM_DELETE )
 {
   QWebHistoryItem * obj = (QWebHistoryItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -146,7 +146,7 @@ HB_FUNC( QWEBHISTORYITEM_DELETE )
 /*
 QIcon icon () const
 */
-HB_FUNC( QWEBHISTORYITEM_ICON )
+HB_FUNC_STATIC( QWEBHISTORYITEM_ICON )
 {
   QWebHistoryItem * obj = (QWebHistoryItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -159,7 +159,7 @@ HB_FUNC( QWEBHISTORYITEM_ICON )
 /*
 bool isValid () const
 */
-HB_FUNC( QWEBHISTORYITEM_ISVALID )
+HB_FUNC_STATIC( QWEBHISTORYITEM_ISVALID )
 {
   QWebHistoryItem * obj = (QWebHistoryItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -173,7 +173,7 @@ HB_FUNC( QWEBHISTORYITEM_ISVALID )
 /*
 QDateTime lastVisited () const
 */
-HB_FUNC( QWEBHISTORYITEM_LASTVISITED )
+HB_FUNC_STATIC( QWEBHISTORYITEM_LASTVISITED )
 {
   QWebHistoryItem * obj = (QWebHistoryItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -186,7 +186,7 @@ HB_FUNC( QWEBHISTORYITEM_LASTVISITED )
 /*
 QUrl originalUrl () const
 */
-HB_FUNC( QWEBHISTORYITEM_ORIGINALURL )
+HB_FUNC_STATIC( QWEBHISTORYITEM_ORIGINALURL )
 {
   QWebHistoryItem * obj = (QWebHistoryItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -199,7 +199,7 @@ HB_FUNC( QWEBHISTORYITEM_ORIGINALURL )
 /*
 void setUserData ( const QVariant & userData )
 */
-HB_FUNC( QWEBHISTORYITEM_SETUSERDATA )
+HB_FUNC_STATIC( QWEBHISTORYITEM_SETUSERDATA )
 {
   QWebHistoryItem * obj = (QWebHistoryItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -214,7 +214,7 @@ HB_FUNC( QWEBHISTORYITEM_SETUSERDATA )
 /*
 QString title () const
 */
-HB_FUNC( QWEBHISTORYITEM_TITLE )
+HB_FUNC_STATIC( QWEBHISTORYITEM_TITLE )
 {
   QWebHistoryItem * obj = (QWebHistoryItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -228,7 +228,7 @@ HB_FUNC( QWEBHISTORYITEM_TITLE )
 /*
 QUrl url () const
 */
-HB_FUNC( QWEBHISTORYITEM_URL )
+HB_FUNC_STATIC( QWEBHISTORYITEM_URL )
 {
   QWebHistoryItem * obj = (QWebHistoryItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -241,7 +241,7 @@ HB_FUNC( QWEBHISTORYITEM_URL )
 /*
 QVariant userData () const
 */
-HB_FUNC( QWEBHISTORYITEM_USERDATA )
+HB_FUNC_STATIC( QWEBHISTORYITEM_USERDATA )
 {
   QWebHistoryItem * obj = (QWebHistoryItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

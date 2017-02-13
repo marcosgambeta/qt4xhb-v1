@@ -113,7 +113,7 @@ RETURN
 /*
 QSize ()
 */
-HB_FUNC( QSIZE_NEW1 )
+HB_FUNC_STATIC( QSIZE_NEW1 )
 {
   QSize * o = NULL;
   o = new QSize (  );
@@ -131,7 +131,7 @@ HB_FUNC( QSIZE_NEW1 )
 /*
 QSize ( int width, int height )
 */
-HB_FUNC( QSIZE_NEW2 )
+HB_FUNC_STATIC( QSIZE_NEW2 )
 {
   QSize * o = NULL;
   int par1 = hb_parni(1);
@@ -151,7 +151,7 @@ HB_FUNC( QSIZE_NEW2 )
 //[1]QSize ()
 //[2]QSize ( int width, int height )
 
-HB_FUNC( QSIZE_NEW )
+HB_FUNC_STATIC( QSIZE_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -167,7 +167,7 @@ HB_FUNC( QSIZE_NEW )
   }
 }
 
-HB_FUNC( QSIZE_DELETE )
+HB_FUNC_STATIC( QSIZE_DELETE )
 {
   QSize * obj = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -187,7 +187,7 @@ HB_FUNC( QSIZE_DELETE )
 /*
 QSize boundedTo ( const QSize & otherSize ) const
 */
-HB_FUNC( QSIZE_BOUNDEDTO )
+HB_FUNC_STATIC( QSIZE_BOUNDEDTO )
 {
   QSize * obj = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -201,7 +201,7 @@ HB_FUNC( QSIZE_BOUNDEDTO )
 /*
 QSize expandedTo ( const QSize & otherSize ) const
 */
-HB_FUNC( QSIZE_EXPANDEDTO )
+HB_FUNC_STATIC( QSIZE_EXPANDEDTO )
 {
   QSize * obj = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -215,7 +215,7 @@ HB_FUNC( QSIZE_EXPANDEDTO )
 /*
 int height () const
 */
-HB_FUNC( QSIZE_HEIGHT )
+HB_FUNC_STATIC( QSIZE_HEIGHT )
 {
   QSize * obj = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -229,7 +229,7 @@ HB_FUNC( QSIZE_HEIGHT )
 /*
 bool isEmpty () const
 */
-HB_FUNC( QSIZE_ISEMPTY )
+HB_FUNC_STATIC( QSIZE_ISEMPTY )
 {
   QSize * obj = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -243,7 +243,7 @@ HB_FUNC( QSIZE_ISEMPTY )
 /*
 bool isNull () const
 */
-HB_FUNC( QSIZE_ISNULL )
+HB_FUNC_STATIC( QSIZE_ISNULL )
 {
   QSize * obj = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -257,7 +257,7 @@ HB_FUNC( QSIZE_ISNULL )
 /*
 bool isValid () const
 */
-HB_FUNC( QSIZE_ISVALID )
+HB_FUNC_STATIC( QSIZE_ISVALID )
 {
   QSize * obj = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -273,7 +273,7 @@ HB_FUNC( QSIZE_ISVALID )
 /*
 void scale ( int width, int height, Qt::AspectRatioMode mode )
 */
-HB_FUNC( QSIZE_SCALE1 )
+HB_FUNC_STATIC( QSIZE_SCALE1 )
 {
   QSize * obj = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -290,7 +290,7 @@ HB_FUNC( QSIZE_SCALE1 )
 /*
 void scale ( const QSize & size, Qt::AspectRatioMode mode )
 */
-HB_FUNC( QSIZE_SCALE2 )
+HB_FUNC_STATIC( QSIZE_SCALE2 )
 {
   QSize * obj = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -306,7 +306,7 @@ HB_FUNC( QSIZE_SCALE2 )
 //[1]void scale ( int width, int height, Qt::AspectRatioMode mode )
 //[2]void scale ( const QSize & size, Qt::AspectRatioMode mode )
 
-HB_FUNC( QSIZE_SCALE )
+HB_FUNC_STATIC( QSIZE_SCALE )
 {
   if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
   {
@@ -321,7 +321,7 @@ HB_FUNC( QSIZE_SCALE )
 /*
 void setHeight ( int height )
 */
-HB_FUNC( QSIZE_SETHEIGHT )
+HB_FUNC_STATIC( QSIZE_SETHEIGHT )
 {
   QSize * obj = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -336,7 +336,7 @@ HB_FUNC( QSIZE_SETHEIGHT )
 /*
 void setWidth ( int width )
 */
-HB_FUNC( QSIZE_SETWIDTH )
+HB_FUNC_STATIC( QSIZE_SETWIDTH )
 {
   QSize * obj = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -351,7 +351,7 @@ HB_FUNC( QSIZE_SETWIDTH )
 /*
 void transpose ()
 */
-HB_FUNC( QSIZE_TRANSPOSE )
+HB_FUNC_STATIC( QSIZE_TRANSPOSE )
 {
   QSize * obj = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -365,7 +365,7 @@ HB_FUNC( QSIZE_TRANSPOSE )
 /*
 int width () const
 */
-HB_FUNC( QSIZE_WIDTH )
+HB_FUNC_STATIC( QSIZE_WIDTH )
 {
   QSize * obj = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

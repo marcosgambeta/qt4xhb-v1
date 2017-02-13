@@ -72,7 +72,7 @@ RETURN
 /*
 QBitmap ()
 */
-HB_FUNC( QBITMAP_NEW1 )
+HB_FUNC_STATIC( QBITMAP_NEW1 )
 {
   QBitmap * o = NULL;
   o = new QBitmap (  );
@@ -90,7 +90,7 @@ HB_FUNC( QBITMAP_NEW1 )
 /*
 QBitmap ( const QPixmap & pixmap )
 */
-HB_FUNC( QBITMAP_NEW2 )
+HB_FUNC_STATIC( QBITMAP_NEW2 )
 {
   QBitmap * o = NULL;
   QPixmap * par1 = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -109,7 +109,7 @@ HB_FUNC( QBITMAP_NEW2 )
 /*
 QBitmap ( int width, int height )
 */
-HB_FUNC( QBITMAP_NEW3 )
+HB_FUNC_STATIC( QBITMAP_NEW3 )
 {
   QBitmap * o = NULL;
   int par1 = hb_parni(1);
@@ -129,7 +129,7 @@ HB_FUNC( QBITMAP_NEW3 )
 /*
 QBitmap ( const QSize & size )
 */
-HB_FUNC( QBITMAP_NEW4 )
+HB_FUNC_STATIC( QBITMAP_NEW4 )
 {
   QBitmap * o = NULL;
   QSize * par1 = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -148,7 +148,7 @@ HB_FUNC( QBITMAP_NEW4 )
 /*
 QBitmap ( const QString & fileName, const char * format = 0 )
 */
-HB_FUNC( QBITMAP_NEW5 )
+HB_FUNC_STATIC( QBITMAP_NEW5 )
 {
   QBitmap * o = NULL;
   QString par1 = hb_parc(1);
@@ -171,7 +171,7 @@ HB_FUNC( QBITMAP_NEW5 )
 //[4]QBitmap ( const QSize & size )
 //[5]QBitmap ( const QString & fileName, const char * format = 0 )
 
-HB_FUNC( QBITMAP_NEW )
+HB_FUNC_STATIC( QBITMAP_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -199,7 +199,7 @@ HB_FUNC( QBITMAP_NEW )
   }
 }
 
-HB_FUNC( QBITMAP_DELETE )
+HB_FUNC_STATIC( QBITMAP_DELETE )
 {
   QBitmap * obj = (QBitmap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -218,7 +218,7 @@ HB_FUNC( QBITMAP_DELETE )
 /*
 void clear ()
 */
-HB_FUNC( QBITMAP_CLEAR )
+HB_FUNC_STATIC( QBITMAP_CLEAR )
 {
   QBitmap * obj = (QBitmap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -232,7 +232,7 @@ HB_FUNC( QBITMAP_CLEAR )
 /*
 QBitmap transformed ( const QTransform & matrix ) const
 */
-HB_FUNC( QBITMAP_TRANSFORMED )
+HB_FUNC_STATIC( QBITMAP_TRANSFORMED )
 {
   QBitmap * obj = (QBitmap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -247,7 +247,7 @@ HB_FUNC( QBITMAP_TRANSFORMED )
 /*
 QBitmap fromData ( const QSize & size, const uchar * bits, QImage::Format monoFormat = QImage::Format_MonoLSB )
 */
-HB_FUNC( QBITMAP_FROMDATA )
+HB_FUNC_STATIC( QBITMAP_FROMDATA )
 {
   QSize * par1 = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   const uchar * par2 = (const uchar *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -259,7 +259,7 @@ HB_FUNC( QBITMAP_FROMDATA )
 /*
 QBitmap fromImage ( const QImage & image, Qt::ImageConversionFlags flags = Qt::AutoColor )
 */
-HB_FUNC( QBITMAP_FROMIMAGE )
+HB_FUNC_STATIC( QBITMAP_FROMIMAGE )
 {
   QImage * par1 = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = ISNIL(2)? (int) Qt::AutoColor : hb_parni(2);

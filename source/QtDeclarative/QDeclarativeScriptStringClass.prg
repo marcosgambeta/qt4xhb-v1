@@ -105,7 +105,7 @@ RETURN
 /*
 QDeclarativeScriptString ()
 */
-HB_FUNC( QDECLARATIVESCRIPTSTRING_NEW1 )
+HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEW1 )
 {
   QDeclarativeScriptString * o = NULL;
   o = new QDeclarativeScriptString (  );
@@ -120,7 +120,7 @@ HB_FUNC( QDECLARATIVESCRIPTSTRING_NEW1 )
 /*
 QDeclarativeScriptString ( const QDeclarativeScriptString & other )
 */
-HB_FUNC( QDECLARATIVESCRIPTSTRING_NEW2 )
+HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEW2 )
 {
   QDeclarativeScriptString * o = NULL;
   QDeclarativeScriptString * par1 = (QDeclarativeScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -136,7 +136,7 @@ HB_FUNC( QDECLARATIVESCRIPTSTRING_NEW2 )
 //[1]QDeclarativeScriptString ()
 //[2]QDeclarativeScriptString ( const QDeclarativeScriptString & other )
 
-HB_FUNC( QDECLARATIVESCRIPTSTRING_NEW )
+HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -157,7 +157,7 @@ HB_FUNC( QDECLARATIVESCRIPTSTRING_NEW )
 /*
 QDeclarativeContext * context () const
 */
-HB_FUNC( QDECLARATIVESCRIPTSTRING_CONTEXT )
+HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_CONTEXT )
 {
   QDeclarativeScriptString * obj = (QDeclarativeScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -170,7 +170,7 @@ HB_FUNC( QDECLARATIVESCRIPTSTRING_CONTEXT )
 /*
 QObject * scopeObject () const
 */
-HB_FUNC( QDECLARATIVESCRIPTSTRING_SCOPEOBJECT )
+HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SCOPEOBJECT )
 {
   QDeclarativeScriptString * obj = (QDeclarativeScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -183,7 +183,7 @@ HB_FUNC( QDECLARATIVESCRIPTSTRING_SCOPEOBJECT )
 /*
 QString script () const
 */
-HB_FUNC( QDECLARATIVESCRIPTSTRING_SCRIPT )
+HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SCRIPT )
 {
   QDeclarativeScriptString * obj = (QDeclarativeScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -197,7 +197,7 @@ HB_FUNC( QDECLARATIVESCRIPTSTRING_SCRIPT )
 /*
 void setContext ( QDeclarativeContext * context )
 */
-HB_FUNC( QDECLARATIVESCRIPTSTRING_SETCONTEXT )
+HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SETCONTEXT )
 {
   QDeclarativeScriptString * obj = (QDeclarativeScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -212,7 +212,7 @@ HB_FUNC( QDECLARATIVESCRIPTSTRING_SETCONTEXT )
 /*
 void setScopeObject ( QObject * object )
 */
-HB_FUNC( QDECLARATIVESCRIPTSTRING_SETSCOPEOBJECT )
+HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SETSCOPEOBJECT )
 {
   QDeclarativeScriptString * obj = (QDeclarativeScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -227,7 +227,7 @@ HB_FUNC( QDECLARATIVESCRIPTSTRING_SETSCOPEOBJECT )
 /*
 void setScript ( const QString & script )
 */
-HB_FUNC( QDECLARATIVESCRIPTSTRING_SETSCRIPT )
+HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SETSCRIPT )
 {
   QDeclarativeScriptString * obj = (QDeclarativeScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

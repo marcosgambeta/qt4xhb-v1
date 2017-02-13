@@ -63,7 +63,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QTAPANDHOLDGESTURE_DELETE )
+HB_FUNC_STATIC( QTAPANDHOLDGESTURE_DELETE )
 {
   QTapAndHoldGesture * obj = (QTapAndHoldGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -82,7 +82,7 @@ HB_FUNC( QTAPANDHOLDGESTURE_DELETE )
 /*
 QPointF position () const
 */
-HB_FUNC( QTAPANDHOLDGESTURE_POSITION )
+HB_FUNC_STATIC( QTAPANDHOLDGESTURE_POSITION )
 {
   QTapAndHoldGesture * obj = (QTapAndHoldGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -95,7 +95,7 @@ HB_FUNC( QTAPANDHOLDGESTURE_POSITION )
 /*
 void setPosition ( const QPointF & pos )
 */
-HB_FUNC( QTAPANDHOLDGESTURE_SETPOSITION )
+HB_FUNC_STATIC( QTAPANDHOLDGESTURE_SETPOSITION )
 {
   QTapAndHoldGesture * obj = (QTapAndHoldGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -111,7 +111,7 @@ HB_FUNC( QTAPANDHOLDGESTURE_SETPOSITION )
 /*
 void setTimeout ( int msecs )
 */
-HB_FUNC( QTAPANDHOLDGESTURE_SETTIMEOUT )
+HB_FUNC_STATIC( QTAPANDHOLDGESTURE_SETTIMEOUT )
 {
   int par1 = hb_parni(1);
   QTapAndHoldGesture::setTimeout ( par1 );
@@ -122,7 +122,7 @@ HB_FUNC( QTAPANDHOLDGESTURE_SETTIMEOUT )
 /*
 int timeout ()
 */
-HB_FUNC( QTAPANDHOLDGESTURE_TIMEOUT )
+HB_FUNC_STATIC( QTAPANDHOLDGESTURE_TIMEOUT )
 {
   int i = QTapAndHoldGesture::timeout (  );
   hb_retni( i );

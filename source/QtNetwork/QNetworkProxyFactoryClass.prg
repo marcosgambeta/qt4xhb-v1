@@ -100,7 +100,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QNETWORKPROXYFACTORY_DELETE )
+HB_FUNC_STATIC( QNETWORKPROXYFACTORY_DELETE )
 {
   QNetworkProxyFactory * obj = (QNetworkProxyFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -119,7 +119,7 @@ HB_FUNC( QNETWORKPROXYFACTORY_DELETE )
 /*
 virtual QList<QNetworkProxy> queryProxy ( const QNetworkProxyQuery & query = QNetworkProxyQuery() ) = 0
 */
-HB_FUNC( QNETWORKPROXYFACTORY_QUERYPROXY )
+HB_FUNC_STATIC( QNETWORKPROXYFACTORY_QUERYPROXY )
 {
   QNetworkProxyFactory * obj = (QNetworkProxyFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -169,7 +169,7 @@ HB_FUNC( QNETWORKPROXYFACTORY_QUERYPROXY )
 /*
 QList<QNetworkProxy> proxyForQuery ( const QNetworkProxyQuery & query )
 */
-HB_FUNC( QNETWORKPROXYFACTORY_PROXYFORQUERY )
+HB_FUNC_STATIC( QNETWORKPROXYFACTORY_PROXYFORQUERY )
 {
   QNetworkProxyQuery * par1 = (QNetworkProxyQuery *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QList<QNetworkProxy> list = QNetworkProxyFactory::proxyForQuery ( *par1 );
@@ -214,7 +214,7 @@ HB_FUNC( QNETWORKPROXYFACTORY_PROXYFORQUERY )
 /*
 void setApplicationProxyFactory ( QNetworkProxyFactory * factory )
 */
-HB_FUNC( QNETWORKPROXYFACTORY_SETAPPLICATIONPROXYFACTORY )
+HB_FUNC_STATIC( QNETWORKPROXYFACTORY_SETAPPLICATIONPROXYFACTORY )
 {
   QNetworkProxyFactory * par1 = (QNetworkProxyFactory *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QNetworkProxyFactory::setApplicationProxyFactory ( par1 );
@@ -225,7 +225,7 @@ HB_FUNC( QNETWORKPROXYFACTORY_SETAPPLICATIONPROXYFACTORY )
 /*
 void setUseSystemConfiguration ( bool enable )
 */
-HB_FUNC( QNETWORKPROXYFACTORY_SETUSESYSTEMCONFIGURATION )
+HB_FUNC_STATIC( QNETWORKPROXYFACTORY_SETUSESYSTEMCONFIGURATION )
 {
   bool par1 = hb_parl(1);
   QNetworkProxyFactory::setUseSystemConfiguration ( par1 );
@@ -236,7 +236,7 @@ HB_FUNC( QNETWORKPROXYFACTORY_SETUSESYSTEMCONFIGURATION )
 /*
 QList<QNetworkProxy> systemProxyForQuery ( const QNetworkProxyQuery & query = QNetworkProxyQuery() )
 */
-HB_FUNC( QNETWORKPROXYFACTORY_SYSTEMPROXYFORQUERY )
+HB_FUNC_STATIC( QNETWORKPROXYFACTORY_SYSTEMPROXYFORQUERY )
 {
   QNetworkProxyQuery par1 = ISNIL(1)? QNetworkProxyQuery() : *(QNetworkProxyQuery *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QList<QNetworkProxy> list = QNetworkProxyFactory::systemProxyForQuery ( par1 );

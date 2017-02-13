@@ -76,7 +76,7 @@ RETURN
 /*
 QHelpSearchEngine ( QHelpEngineCore * helpEngine, QObject * parent = 0 )
 */
-HB_FUNC( QHELPSEARCHENGINE_NEW )
+HB_FUNC_STATIC( QHELPSEARCHENGINE_NEW )
 {
   QHelpSearchEngine * o = NULL;
   QHelpEngineCore * par1 = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -90,7 +90,7 @@ HB_FUNC( QHELPSEARCHENGINE_NEW )
 }
 
 
-HB_FUNC( QHELPSEARCHENGINE_DELETE )
+HB_FUNC_STATIC( QHELPSEARCHENGINE_DELETE )
 {
   QHelpSearchEngine * obj = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -109,7 +109,7 @@ HB_FUNC( QHELPSEARCHENGINE_DELETE )
 /*
 int hitCount () const
 */
-HB_FUNC( QHELPSEARCHENGINE_HITCOUNT )
+HB_FUNC_STATIC( QHELPSEARCHENGINE_HITCOUNT )
 {
   QHelpSearchEngine * obj = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -124,7 +124,7 @@ HB_FUNC( QHELPSEARCHENGINE_HITCOUNT )
 /*
 QList<QHelpSearchQuery> query () const
 */
-HB_FUNC( QHELPSEARCHENGINE_QUERY )
+HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERY )
 {
   QHelpSearchEngine * obj = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -168,7 +168,7 @@ HB_FUNC( QHELPSEARCHENGINE_QUERY )
 /*
 QHelpSearchQueryWidget * queryWidget ()
 */
-HB_FUNC( QHELPSEARCHENGINE_QUERYWIDGET )
+HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERYWIDGET )
 {
   QHelpSearchEngine * obj = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -181,7 +181,7 @@ HB_FUNC( QHELPSEARCHENGINE_QUERYWIDGET )
 /*
 QHelpSearchResultWidget * resultWidget ()
 */
-HB_FUNC( QHELPSEARCHENGINE_RESULTWIDGET )
+HB_FUNC_STATIC( QHELPSEARCHENGINE_RESULTWIDGET )
 {
   QHelpSearchEngine * obj = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -194,7 +194,7 @@ HB_FUNC( QHELPSEARCHENGINE_RESULTWIDGET )
 /*
 void cancelIndexing ()
 */
-HB_FUNC( QHELPSEARCHENGINE_CANCELINDEXING )
+HB_FUNC_STATIC( QHELPSEARCHENGINE_CANCELINDEXING )
 {
   QHelpSearchEngine * obj = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -208,7 +208,7 @@ HB_FUNC( QHELPSEARCHENGINE_CANCELINDEXING )
 /*
 void cancelSearching ()
 */
-HB_FUNC( QHELPSEARCHENGINE_CANCELSEARCHING )
+HB_FUNC_STATIC( QHELPSEARCHENGINE_CANCELSEARCHING )
 {
   QHelpSearchEngine * obj = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -222,7 +222,7 @@ HB_FUNC( QHELPSEARCHENGINE_CANCELSEARCHING )
 /*
 void reindexDocumentation ()
 */
-HB_FUNC( QHELPSEARCHENGINE_REINDEXDOCUMENTATION )
+HB_FUNC_STATIC( QHELPSEARCHENGINE_REINDEXDOCUMENTATION )
 {
   QHelpSearchEngine * obj = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -236,7 +236,7 @@ HB_FUNC( QHELPSEARCHENGINE_REINDEXDOCUMENTATION )
 /*
 void search ( const QList<QHelpSearchQuery> & queryList )
 */
-HB_FUNC( QHELPSEARCHENGINE_SEARCH )
+HB_FUNC_STATIC( QHELPSEARCHENGINE_SEARCH )
 {
   QHelpSearchEngine * obj = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

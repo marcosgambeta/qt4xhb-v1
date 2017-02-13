@@ -95,7 +95,7 @@ RETURN
 #include "qt4xhb_clsid.h"
 #include "qt4xhb_utils.h"
 
-HB_FUNC( QXMLDTDHANDLER_DELETE )
+HB_FUNC_STATIC( QXMLDTDHANDLER_DELETE )
 {
   QXmlDTDHandler * obj = (QXmlDTDHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -114,7 +114,7 @@ HB_FUNC( QXMLDTDHANDLER_DELETE )
 /*
 virtual QString errorString () const = 0
 */
-HB_FUNC( QXMLDTDHANDLER_ERRORSTRING )
+HB_FUNC_STATIC( QXMLDTDHANDLER_ERRORSTRING )
 {
   QXmlDTDHandler * obj = (QXmlDTDHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -128,7 +128,7 @@ HB_FUNC( QXMLDTDHANDLER_ERRORSTRING )
 /*
 virtual bool notationDecl ( const QString & name, const QString & publicId, const QString & systemId ) = 0
 */
-HB_FUNC( QXMLDTDHANDLER_NOTATIONDECL )
+HB_FUNC_STATIC( QXMLDTDHANDLER_NOTATIONDECL )
 {
   QXmlDTDHandler * obj = (QXmlDTDHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -145,7 +145,7 @@ HB_FUNC( QXMLDTDHANDLER_NOTATIONDECL )
 /*
 virtual bool unparsedEntityDecl ( const QString & name, const QString & publicId, const QString & systemId, const QString & notationName ) = 0
 */
-HB_FUNC( QXMLDTDHANDLER_UNPARSEDENTITYDECL )
+HB_FUNC_STATIC( QXMLDTDHANDLER_UNPARSEDENTITYDECL )
 {
   QXmlDTDHandler * obj = (QXmlDTDHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

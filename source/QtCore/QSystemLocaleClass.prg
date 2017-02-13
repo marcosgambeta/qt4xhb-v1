@@ -99,7 +99,7 @@ RETURN
 /*
 QSystemLocale ()
 */
-HB_FUNC( QSYSTEMLOCALE_NEW )
+HB_FUNC_STATIC( QSYSTEMLOCALE_NEW )
 {
   QSystemLocale * o = NULL;
   o = new QSystemLocale (  );
@@ -115,7 +115,7 @@ HB_FUNC( QSYSTEMLOCALE_NEW )
 /*
 virtual QLocale fallbackLocale () const
 */
-HB_FUNC( QSYSTEMLOCALE_FALLBACKLOCALE )
+HB_FUNC_STATIC( QSYSTEMLOCALE_FALLBACKLOCALE )
 {
   QSystemLocale * obj = (QSystemLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -128,7 +128,7 @@ HB_FUNC( QSYSTEMLOCALE_FALLBACKLOCALE )
 /*
 virtual QVariant query ( QueryType type, QVariant in ) const
 */
-HB_FUNC( QSYSTEMLOCALE_QUERY )
+HB_FUNC_STATIC( QSYSTEMLOCALE_QUERY )
 {
   QSystemLocale * obj = (QSystemLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

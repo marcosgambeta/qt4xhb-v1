@@ -60,7 +60,7 @@ RETURN
 /*
 QShowEvent()
 */
-HB_FUNC( QSHOWEVENT_NEW )
+HB_FUNC_STATIC( QSHOWEVENT_NEW )
 {
   QShowEvent * o = NULL;
   o = new QShowEvent (  );
@@ -72,7 +72,7 @@ HB_FUNC( QSHOWEVENT_NEW )
 }
 
 
-HB_FUNC( QSHOWEVENT_DELETE )
+HB_FUNC_STATIC( QSHOWEVENT_DELETE )
 {
   QShowEvent * obj = (QShowEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

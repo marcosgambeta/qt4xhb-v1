@@ -102,7 +102,7 @@ RETURN
 /*
 QScriptProgram ()
 */
-HB_FUNC( QSCRIPTPROGRAM_NEW1 )
+HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW1 )
 {
   QScriptProgram * o = NULL;
   o = new QScriptProgram (  );
@@ -117,7 +117,7 @@ HB_FUNC( QSCRIPTPROGRAM_NEW1 )
 /*
 QScriptProgram ( const QString & sourceCode, const QString fileName = QString(), int firstLineNumber = 1 )
 */
-HB_FUNC( QSCRIPTPROGRAM_NEW2 )
+HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW2 )
 {
   QScriptProgram * o = NULL;
   QString par1 = hb_parc(1);
@@ -135,7 +135,7 @@ HB_FUNC( QSCRIPTPROGRAM_NEW2 )
 /*
 QScriptProgram ( const QScriptProgram & other )
 */
-HB_FUNC( QSCRIPTPROGRAM_NEW3 )
+HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW3 )
 {
   QScriptProgram * o = NULL;
   QScriptProgram * par1 = (QScriptProgram *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -152,7 +152,7 @@ HB_FUNC( QSCRIPTPROGRAM_NEW3 )
 //[2]QScriptProgram ( const QString & sourceCode, const QString fileName = QString(), int firstLineNumber = 1 )
 //[3]QScriptProgram ( const QScriptProgram & other )
 
-HB_FUNC( QSCRIPTPROGRAM_NEW )
+HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -172,7 +172,7 @@ HB_FUNC( QSCRIPTPROGRAM_NEW )
   }
 }
 
-HB_FUNC( QSCRIPTPROGRAM_DELETE )
+HB_FUNC_STATIC( QSCRIPTPROGRAM_DELETE )
 {
   QScriptProgram * obj = (QScriptProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -191,7 +191,7 @@ HB_FUNC( QSCRIPTPROGRAM_DELETE )
 /*
 QString fileName () const
 */
-HB_FUNC( QSCRIPTPROGRAM_FILENAME )
+HB_FUNC_STATIC( QSCRIPTPROGRAM_FILENAME )
 {
   QScriptProgram * obj = (QScriptProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -205,7 +205,7 @@ HB_FUNC( QSCRIPTPROGRAM_FILENAME )
 /*
 int firstLineNumber () const
 */
-HB_FUNC( QSCRIPTPROGRAM_FIRSTLINENUMBER )
+HB_FUNC_STATIC( QSCRIPTPROGRAM_FIRSTLINENUMBER )
 {
   QScriptProgram * obj = (QScriptProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -219,7 +219,7 @@ HB_FUNC( QSCRIPTPROGRAM_FIRSTLINENUMBER )
 /*
 bool isNull () const
 */
-HB_FUNC( QSCRIPTPROGRAM_ISNULL )
+HB_FUNC_STATIC( QSCRIPTPROGRAM_ISNULL )
 {
   QScriptProgram * obj = (QScriptProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -233,7 +233,7 @@ HB_FUNC( QSCRIPTPROGRAM_ISNULL )
 /*
 QString sourceCode () const
 */
-HB_FUNC( QSCRIPTPROGRAM_SOURCECODE )
+HB_FUNC_STATIC( QSCRIPTPROGRAM_SOURCECODE )
 {
   QScriptProgram * obj = (QScriptProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

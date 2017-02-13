@@ -80,7 +80,7 @@ RETURN
 /*
 QColumnView ( QWidget * parent = 0 )
 */
-HB_FUNC( QCOLUMNVIEW_NEW )
+HB_FUNC_STATIC( QCOLUMNVIEW_NEW )
 {
   QColumnView * o = NULL;
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -93,7 +93,7 @@ HB_FUNC( QCOLUMNVIEW_NEW )
 }
 
 
-HB_FUNC( QCOLUMNVIEW_DELETE )
+HB_FUNC_STATIC( QCOLUMNVIEW_DELETE )
 {
   QColumnView * obj = (QColumnView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -112,7 +112,7 @@ HB_FUNC( QCOLUMNVIEW_DELETE )
 /*
 QList<int> columnWidths () const
 */
-HB_FUNC( QCOLUMNVIEW_COLUMNWIDTHS )
+HB_FUNC_STATIC( QCOLUMNVIEW_COLUMNWIDTHS )
 {
   QColumnView * obj = (QColumnView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -135,7 +135,7 @@ HB_FUNC( QCOLUMNVIEW_COLUMNWIDTHS )
 /*
 QWidget * previewWidget () const
 */
-HB_FUNC( QCOLUMNVIEW_PREVIEWWIDGET )
+HB_FUNC_STATIC( QCOLUMNVIEW_PREVIEWWIDGET )
 {
   QColumnView * obj = (QColumnView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -148,7 +148,7 @@ HB_FUNC( QCOLUMNVIEW_PREVIEWWIDGET )
 /*
 bool resizeGripsVisible () const
 */
-HB_FUNC( QCOLUMNVIEW_RESIZEGRIPSVISIBLE )
+HB_FUNC_STATIC( QCOLUMNVIEW_RESIZEGRIPSVISIBLE )
 {
   QColumnView * obj = (QColumnView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -162,7 +162,7 @@ HB_FUNC( QCOLUMNVIEW_RESIZEGRIPSVISIBLE )
 /*
 void setColumnWidths ( const QList<int> & list )
 */
-HB_FUNC( QCOLUMNVIEW_SETCOLUMNWIDTHS )
+HB_FUNC_STATIC( QCOLUMNVIEW_SETCOLUMNWIDTHS )
 {
   QColumnView * obj = (QColumnView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -186,7 +186,7 @@ par1 << temp1;
 /*
 void setPreviewWidget ( QWidget * widget )
 */
-HB_FUNC( QCOLUMNVIEW_SETPREVIEWWIDGET )
+HB_FUNC_STATIC( QCOLUMNVIEW_SETPREVIEWWIDGET )
 {
   QColumnView * obj = (QColumnView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -201,7 +201,7 @@ HB_FUNC( QCOLUMNVIEW_SETPREVIEWWIDGET )
 /*
 void setResizeGripsVisible ( bool visible )
 */
-HB_FUNC( QCOLUMNVIEW_SETRESIZEGRIPSVISIBLE )
+HB_FUNC_STATIC( QCOLUMNVIEW_SETRESIZEGRIPSVISIBLE )
 {
   QColumnView * obj = (QColumnView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -216,7 +216,7 @@ HB_FUNC( QCOLUMNVIEW_SETRESIZEGRIPSVISIBLE )
 /*
 virtual QModelIndex indexAt ( const QPoint & point ) const
 */
-HB_FUNC( QCOLUMNVIEW_INDEXAT )
+HB_FUNC_STATIC( QCOLUMNVIEW_INDEXAT )
 {
   QColumnView * obj = (QColumnView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -230,7 +230,7 @@ HB_FUNC( QCOLUMNVIEW_INDEXAT )
 /*
 virtual void scrollTo ( const QModelIndex & index, ScrollHint hint = EnsureVisible )
 */
-HB_FUNC( QCOLUMNVIEW_SCROLLTO )
+HB_FUNC_STATIC( QCOLUMNVIEW_SCROLLTO )
 {
   QColumnView * obj = (QColumnView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -246,7 +246,7 @@ HB_FUNC( QCOLUMNVIEW_SCROLLTO )
 /*
 virtual void selectAll ()
 */
-HB_FUNC( QCOLUMNVIEW_SELECTALL )
+HB_FUNC_STATIC( QCOLUMNVIEW_SELECTALL )
 {
   QColumnView * obj = (QColumnView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -260,7 +260,7 @@ HB_FUNC( QCOLUMNVIEW_SELECTALL )
 /*
 virtual void setModel ( QAbstractItemModel * model )
 */
-HB_FUNC( QCOLUMNVIEW_SETMODEL )
+HB_FUNC_STATIC( QCOLUMNVIEW_SETMODEL )
 {
   QColumnView * obj = (QColumnView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -275,7 +275,7 @@ HB_FUNC( QCOLUMNVIEW_SETMODEL )
 /*
 virtual void setRootIndex ( const QModelIndex & index )
 */
-HB_FUNC( QCOLUMNVIEW_SETROOTINDEX )
+HB_FUNC_STATIC( QCOLUMNVIEW_SETROOTINDEX )
 {
   QColumnView * obj = (QColumnView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -290,7 +290,7 @@ HB_FUNC( QCOLUMNVIEW_SETROOTINDEX )
 /*
 virtual void setSelectionModel ( QItemSelectionModel * newSelectionModel )
 */
-HB_FUNC( QCOLUMNVIEW_SETSELECTIONMODEL )
+HB_FUNC_STATIC( QCOLUMNVIEW_SETSELECTIONMODEL )
 {
   QColumnView * obj = (QColumnView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -305,7 +305,7 @@ HB_FUNC( QCOLUMNVIEW_SETSELECTIONMODEL )
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC( QCOLUMNVIEW_SIZEHINT )
+HB_FUNC_STATIC( QCOLUMNVIEW_SIZEHINT )
 {
   QColumnView * obj = (QColumnView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -318,7 +318,7 @@ HB_FUNC( QCOLUMNVIEW_SIZEHINT )
 /*
 virtual QRect visualRect ( const QModelIndex & index ) const
 */
-HB_FUNC( QCOLUMNVIEW_VISUALRECT )
+HB_FUNC_STATIC( QCOLUMNVIEW_VISUALRECT )
 {
   QColumnView * obj = (QColumnView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

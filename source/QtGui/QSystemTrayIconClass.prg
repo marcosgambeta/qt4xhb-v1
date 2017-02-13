@@ -82,7 +82,7 @@ RETURN
 /*
 QSystemTrayIcon ( QObject * parent = 0 )
 */
-HB_FUNC( QSYSTEMTRAYICON_NEW1 )
+HB_FUNC_STATIC( QSYSTEMTRAYICON_NEW1 )
 {
   QSystemTrayIcon * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -98,7 +98,7 @@ HB_FUNC( QSYSTEMTRAYICON_NEW1 )
 /*
 QSystemTrayIcon ( const QIcon & icon, QObject * parent = 0 )
 */
-HB_FUNC( QSYSTEMTRAYICON_NEW2 )
+HB_FUNC_STATIC( QSYSTEMTRAYICON_NEW2 )
 {
   QSystemTrayIcon * o = NULL;
   QIcon par1 = ISOBJECT(1)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(1));
@@ -115,7 +115,7 @@ HB_FUNC( QSYSTEMTRAYICON_NEW2 )
 //[1]QSystemTrayIcon ( QObject * parent = 0 )
 //[2]QSystemTrayIcon ( const QIcon & icon, QObject * parent = 0 )
 
-HB_FUNC( QSYSTEMTRAYICON_NEW )
+HB_FUNC_STATIC( QSYSTEMTRAYICON_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
@@ -131,7 +131,7 @@ HB_FUNC( QSYSTEMTRAYICON_NEW )
   }
 }
 
-HB_FUNC( QSYSTEMTRAYICON_DELETE )
+HB_FUNC_STATIC( QSYSTEMTRAYICON_DELETE )
 {
   QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -150,7 +150,7 @@ HB_FUNC( QSYSTEMTRAYICON_DELETE )
 /*
 QMenu * contextMenu () const
 */
-HB_FUNC( QSYSTEMTRAYICON_CONTEXTMENU )
+HB_FUNC_STATIC( QSYSTEMTRAYICON_CONTEXTMENU )
 {
   QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -163,7 +163,7 @@ HB_FUNC( QSYSTEMTRAYICON_CONTEXTMENU )
 /*
 QRect geometry () const
 */
-HB_FUNC( QSYSTEMTRAYICON_GEOMETRY )
+HB_FUNC_STATIC( QSYSTEMTRAYICON_GEOMETRY )
 {
   QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -176,7 +176,7 @@ HB_FUNC( QSYSTEMTRAYICON_GEOMETRY )
 /*
 QIcon icon () const
 */
-HB_FUNC( QSYSTEMTRAYICON_ICON )
+HB_FUNC_STATIC( QSYSTEMTRAYICON_ICON )
 {
   QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -189,7 +189,7 @@ HB_FUNC( QSYSTEMTRAYICON_ICON )
 /*
 bool isVisible () const
 */
-HB_FUNC( QSYSTEMTRAYICON_ISVISIBLE )
+HB_FUNC_STATIC( QSYSTEMTRAYICON_ISVISIBLE )
 {
   QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -203,7 +203,7 @@ HB_FUNC( QSYSTEMTRAYICON_ISVISIBLE )
 /*
 void setContextMenu ( QMenu * menu )
 */
-HB_FUNC( QSYSTEMTRAYICON_SETCONTEXTMENU )
+HB_FUNC_STATIC( QSYSTEMTRAYICON_SETCONTEXTMENU )
 {
   QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -218,7 +218,7 @@ HB_FUNC( QSYSTEMTRAYICON_SETCONTEXTMENU )
 /*
 void setIcon ( const QIcon & icon )
 */
-HB_FUNC( QSYSTEMTRAYICON_SETICON )
+HB_FUNC_STATIC( QSYSTEMTRAYICON_SETICON )
 {
   QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -233,7 +233,7 @@ HB_FUNC( QSYSTEMTRAYICON_SETICON )
 /*
 void setToolTip ( const QString & tip )
 */
-HB_FUNC( QSYSTEMTRAYICON_SETTOOLTIP )
+HB_FUNC_STATIC( QSYSTEMTRAYICON_SETTOOLTIP )
 {
   QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -248,7 +248,7 @@ HB_FUNC( QSYSTEMTRAYICON_SETTOOLTIP )
 /*
 void showMessage ( const QString & title, const QString & message, MessageIcon icon = Information, int millisecondsTimeoutHint = 10000 )
 */
-HB_FUNC( QSYSTEMTRAYICON_SHOWMESSAGE )
+HB_FUNC_STATIC( QSYSTEMTRAYICON_SHOWMESSAGE )
 {
   QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -266,7 +266,7 @@ HB_FUNC( QSYSTEMTRAYICON_SHOWMESSAGE )
 /*
 QString toolTip () const
 */
-HB_FUNC( QSYSTEMTRAYICON_TOOLTIP )
+HB_FUNC_STATIC( QSYSTEMTRAYICON_TOOLTIP )
 {
   QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -280,7 +280,7 @@ HB_FUNC( QSYSTEMTRAYICON_TOOLTIP )
 /*
 void hide ()
 */
-HB_FUNC( QSYSTEMTRAYICON_HIDE )
+HB_FUNC_STATIC( QSYSTEMTRAYICON_HIDE )
 {
   QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -294,7 +294,7 @@ HB_FUNC( QSYSTEMTRAYICON_HIDE )
 /*
 void setVisible ( bool visible )
 */
-HB_FUNC( QSYSTEMTRAYICON_SETVISIBLE )
+HB_FUNC_STATIC( QSYSTEMTRAYICON_SETVISIBLE )
 {
   QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -309,7 +309,7 @@ HB_FUNC( QSYSTEMTRAYICON_SETVISIBLE )
 /*
 void show ()
 */
-HB_FUNC( QSYSTEMTRAYICON_SHOW )
+HB_FUNC_STATIC( QSYSTEMTRAYICON_SHOW )
 {
   QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -324,7 +324,7 @@ HB_FUNC( QSYSTEMTRAYICON_SHOW )
 /*
 bool isSystemTrayAvailable ()
 */
-HB_FUNC( QSYSTEMTRAYICON_ISSYSTEMTRAYAVAILABLE )
+HB_FUNC_STATIC( QSYSTEMTRAYICON_ISSYSTEMTRAYAVAILABLE )
 {
   bool b = QSystemTrayIcon::isSystemTrayAvailable (  );
   hb_retl( b );
@@ -334,7 +334,7 @@ HB_FUNC( QSYSTEMTRAYICON_ISSYSTEMTRAYAVAILABLE )
 /*
 bool supportsMessages ()
 */
-HB_FUNC( QSYSTEMTRAYICON_SUPPORTSMESSAGES )
+HB_FUNC_STATIC( QSYSTEMTRAYICON_SUPPORTSMESSAGES )
 {
   bool b = QSystemTrayIcon::supportsMessages (  );
   hb_retl( b );

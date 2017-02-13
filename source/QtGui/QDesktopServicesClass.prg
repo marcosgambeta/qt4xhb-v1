@@ -100,7 +100,7 @@ RETURN
 /*
 QString displayName ( StandardLocation type )
 */
-HB_FUNC( QDESKTOPSERVICES_DISPLAYNAME )
+HB_FUNC_STATIC( QDESKTOPSERVICES_DISPLAYNAME )
 {
   int par1 = hb_parni(1);
   QString str1 = QDesktopServices::displayName (  (QDesktopServices::StandardLocation) par1 );
@@ -111,7 +111,7 @@ HB_FUNC( QDESKTOPSERVICES_DISPLAYNAME )
 /*
 bool openUrl ( const QUrl & url )
 */
-HB_FUNC( QDESKTOPSERVICES_OPENURL )
+HB_FUNC_STATIC( QDESKTOPSERVICES_OPENURL )
 {
   QUrl * par1 = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   bool b = QDesktopServices::openUrl ( *par1 );
@@ -122,7 +122,7 @@ HB_FUNC( QDESKTOPSERVICES_OPENURL )
 /*
 void setUrlHandler ( const QString & scheme, QObject * receiver, const char * method )
 */
-HB_FUNC( QDESKTOPSERVICES_SETURLHANDLER )
+HB_FUNC_STATIC( QDESKTOPSERVICES_SETURLHANDLER )
 {
   QString par1 = hb_parc(1);
   QObject * par2 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -135,7 +135,7 @@ HB_FUNC( QDESKTOPSERVICES_SETURLHANDLER )
 /*
 QString storageLocation ( StandardLocation type )
 */
-HB_FUNC( QDESKTOPSERVICES_STORAGELOCATION )
+HB_FUNC_STATIC( QDESKTOPSERVICES_STORAGELOCATION )
 {
   int par1 = hb_parni(1);
   QString str1 = QDesktopServices::storageLocation (  (QDesktopServices::StandardLocation) par1 );
@@ -146,7 +146,7 @@ HB_FUNC( QDESKTOPSERVICES_STORAGELOCATION )
 /*
 void unsetUrlHandler ( const QString & scheme )
 */
-HB_FUNC( QDESKTOPSERVICES_UNSETURLHANDLER )
+HB_FUNC_STATIC( QDESKTOPSERVICES_UNSETURLHANDLER )
 {
   QString par1 = hb_parc(1);
   QDesktopServices::unsetUrlHandler ( par1 );

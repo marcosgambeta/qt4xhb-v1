@@ -88,7 +88,7 @@ RETURN
 /*
 QXmlDefaultHandler ()
 */
-HB_FUNC( QXMLDEFAULTHANDLER_NEW )
+HB_FUNC_STATIC( QXMLDEFAULTHANDLER_NEW )
 {
   QXmlDefaultHandler * o = NULL;
   o = new QXmlDefaultHandler (  );
@@ -103,7 +103,7 @@ HB_FUNC( QXMLDEFAULTHANDLER_NEW )
 }
 
 
-HB_FUNC( QXMLDEFAULTHANDLER_DELETE )
+HB_FUNC_STATIC( QXMLDEFAULTHANDLER_DELETE )
 {
   QXmlDefaultHandler * obj = (QXmlDefaultHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -122,7 +122,7 @@ HB_FUNC( QXMLDEFAULTHANDLER_DELETE )
 /*
 virtual bool attributeDecl ( const QString & eName, const QString & aName, const QString & type, const QString & valueDefault, const QString & value )
 */
-HB_FUNC( QXMLDEFAULTHANDLER_ATTRIBUTEDECL )
+HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ATTRIBUTEDECL )
 {
   QXmlDefaultHandler * obj = (QXmlDefaultHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -141,7 +141,7 @@ HB_FUNC( QXMLDEFAULTHANDLER_ATTRIBUTEDECL )
 /*
 virtual bool characters ( const QString & ch )
 */
-HB_FUNC( QXMLDEFAULTHANDLER_CHARACTERS )
+HB_FUNC_STATIC( QXMLDEFAULTHANDLER_CHARACTERS )
 {
   QXmlDefaultHandler * obj = (QXmlDefaultHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -156,7 +156,7 @@ HB_FUNC( QXMLDEFAULTHANDLER_CHARACTERS )
 /*
 virtual bool comment ( const QString & ch )
 */
-HB_FUNC( QXMLDEFAULTHANDLER_COMMENT )
+HB_FUNC_STATIC( QXMLDEFAULTHANDLER_COMMENT )
 {
   QXmlDefaultHandler * obj = (QXmlDefaultHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -171,7 +171,7 @@ HB_FUNC( QXMLDEFAULTHANDLER_COMMENT )
 /*
 virtual bool endCDATA ()
 */
-HB_FUNC( QXMLDEFAULTHANDLER_ENDCDATA )
+HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ENDCDATA )
 {
   QXmlDefaultHandler * obj = (QXmlDefaultHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -185,7 +185,7 @@ HB_FUNC( QXMLDEFAULTHANDLER_ENDCDATA )
 /*
 virtual bool endDTD ()
 */
-HB_FUNC( QXMLDEFAULTHANDLER_ENDDTD )
+HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ENDDTD )
 {
   QXmlDefaultHandler * obj = (QXmlDefaultHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -199,7 +199,7 @@ HB_FUNC( QXMLDEFAULTHANDLER_ENDDTD )
 /*
 virtual bool endDocument ()
 */
-HB_FUNC( QXMLDEFAULTHANDLER_ENDDOCUMENT )
+HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ENDDOCUMENT )
 {
   QXmlDefaultHandler * obj = (QXmlDefaultHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -213,7 +213,7 @@ HB_FUNC( QXMLDEFAULTHANDLER_ENDDOCUMENT )
 /*
 virtual bool endElement ( const QString & namespaceURI, const QString & localName, const QString & qName )
 */
-HB_FUNC( QXMLDEFAULTHANDLER_ENDELEMENT )
+HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ENDELEMENT )
 {
   QXmlDefaultHandler * obj = (QXmlDefaultHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -230,7 +230,7 @@ HB_FUNC( QXMLDEFAULTHANDLER_ENDELEMENT )
 /*
 virtual bool endEntity ( const QString & name )
 */
-HB_FUNC( QXMLDEFAULTHANDLER_ENDENTITY )
+HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ENDENTITY )
 {
   QXmlDefaultHandler * obj = (QXmlDefaultHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -245,7 +245,7 @@ HB_FUNC( QXMLDEFAULTHANDLER_ENDENTITY )
 /*
 virtual bool endPrefixMapping ( const QString & prefix )
 */
-HB_FUNC( QXMLDEFAULTHANDLER_ENDPREFIXMAPPING )
+HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ENDPREFIXMAPPING )
 {
   QXmlDefaultHandler * obj = (QXmlDefaultHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -260,7 +260,7 @@ HB_FUNC( QXMLDEFAULTHANDLER_ENDPREFIXMAPPING )
 /*
 virtual bool error ( const QXmlParseException & exception )
 */
-HB_FUNC( QXMLDEFAULTHANDLER_ERROR )
+HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ERROR )
 {
   QXmlDefaultHandler * obj = (QXmlDefaultHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -275,7 +275,7 @@ HB_FUNC( QXMLDEFAULTHANDLER_ERROR )
 /*
 virtual QString errorString () const
 */
-HB_FUNC( QXMLDEFAULTHANDLER_ERRORSTRING )
+HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ERRORSTRING )
 {
   QXmlDefaultHandler * obj = (QXmlDefaultHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -289,7 +289,7 @@ HB_FUNC( QXMLDEFAULTHANDLER_ERRORSTRING )
 /*
 virtual bool externalEntityDecl ( const QString & name, const QString & publicId, const QString & systemId )
 */
-HB_FUNC( QXMLDEFAULTHANDLER_EXTERNALENTITYDECL )
+HB_FUNC_STATIC( QXMLDEFAULTHANDLER_EXTERNALENTITYDECL )
 {
   QXmlDefaultHandler * obj = (QXmlDefaultHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -306,7 +306,7 @@ HB_FUNC( QXMLDEFAULTHANDLER_EXTERNALENTITYDECL )
 /*
 virtual bool fatalError ( const QXmlParseException & exception )
 */
-HB_FUNC( QXMLDEFAULTHANDLER_FATALERROR )
+HB_FUNC_STATIC( QXMLDEFAULTHANDLER_FATALERROR )
 {
   QXmlDefaultHandler * obj = (QXmlDefaultHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -321,7 +321,7 @@ HB_FUNC( QXMLDEFAULTHANDLER_FATALERROR )
 /*
 virtual bool ignorableWhitespace ( const QString & ch )
 */
-HB_FUNC( QXMLDEFAULTHANDLER_IGNORABLEWHITESPACE )
+HB_FUNC_STATIC( QXMLDEFAULTHANDLER_IGNORABLEWHITESPACE )
 {
   QXmlDefaultHandler * obj = (QXmlDefaultHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -336,7 +336,7 @@ HB_FUNC( QXMLDEFAULTHANDLER_IGNORABLEWHITESPACE )
 /*
 virtual bool internalEntityDecl ( const QString & name, const QString & value )
 */
-HB_FUNC( QXMLDEFAULTHANDLER_INTERNALENTITYDECL )
+HB_FUNC_STATIC( QXMLDEFAULTHANDLER_INTERNALENTITYDECL )
 {
   QXmlDefaultHandler * obj = (QXmlDefaultHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -352,7 +352,7 @@ HB_FUNC( QXMLDEFAULTHANDLER_INTERNALENTITYDECL )
 /*
 virtual bool notationDecl ( const QString & name, const QString & publicId, const QString & systemId )
 */
-HB_FUNC( QXMLDEFAULTHANDLER_NOTATIONDECL )
+HB_FUNC_STATIC( QXMLDEFAULTHANDLER_NOTATIONDECL )
 {
   QXmlDefaultHandler * obj = (QXmlDefaultHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -369,7 +369,7 @@ HB_FUNC( QXMLDEFAULTHANDLER_NOTATIONDECL )
 /*
 virtual bool processingInstruction ( const QString & target, const QString & data )
 */
-HB_FUNC( QXMLDEFAULTHANDLER_PROCESSINGINSTRUCTION )
+HB_FUNC_STATIC( QXMLDEFAULTHANDLER_PROCESSINGINSTRUCTION )
 {
   QXmlDefaultHandler * obj = (QXmlDefaultHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -386,7 +386,7 @@ HB_FUNC( QXMLDEFAULTHANDLER_PROCESSINGINSTRUCTION )
 /*
 virtual void setDocumentLocator ( QXmlLocator * locator )
 */
-HB_FUNC( QXMLDEFAULTHANDLER_SETDOCUMENTLOCATOR )
+HB_FUNC_STATIC( QXMLDEFAULTHANDLER_SETDOCUMENTLOCATOR )
 {
   QXmlDefaultHandler * obj = (QXmlDefaultHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -401,7 +401,7 @@ HB_FUNC( QXMLDEFAULTHANDLER_SETDOCUMENTLOCATOR )
 /*
 virtual bool skippedEntity ( const QString & name )
 */
-HB_FUNC( QXMLDEFAULTHANDLER_SKIPPEDENTITY )
+HB_FUNC_STATIC( QXMLDEFAULTHANDLER_SKIPPEDENTITY )
 {
   QXmlDefaultHandler * obj = (QXmlDefaultHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -416,7 +416,7 @@ HB_FUNC( QXMLDEFAULTHANDLER_SKIPPEDENTITY )
 /*
 virtual bool startCDATA ()
 */
-HB_FUNC( QXMLDEFAULTHANDLER_STARTCDATA )
+HB_FUNC_STATIC( QXMLDEFAULTHANDLER_STARTCDATA )
 {
   QXmlDefaultHandler * obj = (QXmlDefaultHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -430,7 +430,7 @@ HB_FUNC( QXMLDEFAULTHANDLER_STARTCDATA )
 /*
 virtual bool startDTD ( const QString & name, const QString & publicId, const QString & systemId )
 */
-HB_FUNC( QXMLDEFAULTHANDLER_STARTDTD )
+HB_FUNC_STATIC( QXMLDEFAULTHANDLER_STARTDTD )
 {
   QXmlDefaultHandler * obj = (QXmlDefaultHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -447,7 +447,7 @@ HB_FUNC( QXMLDEFAULTHANDLER_STARTDTD )
 /*
 virtual bool startDocument ()
 */
-HB_FUNC( QXMLDEFAULTHANDLER_STARTDOCUMENT )
+HB_FUNC_STATIC( QXMLDEFAULTHANDLER_STARTDOCUMENT )
 {
   QXmlDefaultHandler * obj = (QXmlDefaultHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -461,7 +461,7 @@ HB_FUNC( QXMLDEFAULTHANDLER_STARTDOCUMENT )
 /*
 virtual bool startElement ( const QString & namespaceURI, const QString & localName, const QString & qName, const QXmlAttributes & atts )
 */
-HB_FUNC( QXMLDEFAULTHANDLER_STARTELEMENT )
+HB_FUNC_STATIC( QXMLDEFAULTHANDLER_STARTELEMENT )
 {
   QXmlDefaultHandler * obj = (QXmlDefaultHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -479,7 +479,7 @@ HB_FUNC( QXMLDEFAULTHANDLER_STARTELEMENT )
 /*
 virtual bool startEntity ( const QString & name )
 */
-HB_FUNC( QXMLDEFAULTHANDLER_STARTENTITY )
+HB_FUNC_STATIC( QXMLDEFAULTHANDLER_STARTENTITY )
 {
   QXmlDefaultHandler * obj = (QXmlDefaultHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -494,7 +494,7 @@ HB_FUNC( QXMLDEFAULTHANDLER_STARTENTITY )
 /*
 virtual bool startPrefixMapping ( const QString & prefix, const QString & uri )
 */
-HB_FUNC( QXMLDEFAULTHANDLER_STARTPREFIXMAPPING )
+HB_FUNC_STATIC( QXMLDEFAULTHANDLER_STARTPREFIXMAPPING )
 {
   QXmlDefaultHandler * obj = (QXmlDefaultHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -510,7 +510,7 @@ HB_FUNC( QXMLDEFAULTHANDLER_STARTPREFIXMAPPING )
 /*
 virtual bool unparsedEntityDecl ( const QString & name, const QString & publicId, const QString & systemId, const QString & notationName )
 */
-HB_FUNC( QXMLDEFAULTHANDLER_UNPARSEDENTITYDECL )
+HB_FUNC_STATIC( QXMLDEFAULTHANDLER_UNPARSEDENTITYDECL )
 {
   QXmlDefaultHandler * obj = (QXmlDefaultHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -528,7 +528,7 @@ HB_FUNC( QXMLDEFAULTHANDLER_UNPARSEDENTITYDECL )
 /*
 virtual bool warning ( const QXmlParseException & exception )
 */
-HB_FUNC( QXMLDEFAULTHANDLER_WARNING )
+HB_FUNC_STATIC( QXMLDEFAULTHANDLER_WARNING )
 {
   QXmlDefaultHandler * obj = (QXmlDefaultHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

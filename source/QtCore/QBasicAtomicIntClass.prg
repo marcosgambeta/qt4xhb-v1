@@ -114,7 +114,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QBASICATOMICINT_DELETE )
+HB_FUNC_STATIC( QBASICATOMICINT_DELETE )
 {
   QBasicAtomicInt * obj = (QBasicAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -133,7 +133,7 @@ HB_FUNC( QBASICATOMICINT_DELETE )
 /*
 bool ref()
 */
-HB_FUNC( QBASICATOMICINT_REF )
+HB_FUNC_STATIC( QBASICATOMICINT_REF )
 {
   QBasicAtomicInt * obj = (QBasicAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -147,7 +147,7 @@ HB_FUNC( QBASICATOMICINT_REF )
 /*
 bool deref()
 */
-HB_FUNC( QBASICATOMICINT_DEREF )
+HB_FUNC_STATIC( QBASICATOMICINT_DEREF )
 {
   QBasicAtomicInt * obj = (QBasicAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -161,7 +161,7 @@ HB_FUNC( QBASICATOMICINT_DEREF )
 /*
 bool testAndSetRelaxed(int expectedValue, int newValue)
 */
-HB_FUNC( QBASICATOMICINT_TESTANDSETRELAXED )
+HB_FUNC_STATIC( QBASICATOMICINT_TESTANDSETRELAXED )
 {
   QBasicAtomicInt * obj = (QBasicAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -177,7 +177,7 @@ HB_FUNC( QBASICATOMICINT_TESTANDSETRELAXED )
 /*
 bool testAndSetAcquire(int expectedValue, int newValue)
 */
-HB_FUNC( QBASICATOMICINT_TESTANDSETACQUIRE )
+HB_FUNC_STATIC( QBASICATOMICINT_TESTANDSETACQUIRE )
 {
   QBasicAtomicInt * obj = (QBasicAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -193,7 +193,7 @@ HB_FUNC( QBASICATOMICINT_TESTANDSETACQUIRE )
 /*
 bool testAndSetRelease(int expectedValue, int newValue)
 */
-HB_FUNC( QBASICATOMICINT_TESTANDSETRELEASE )
+HB_FUNC_STATIC( QBASICATOMICINT_TESTANDSETRELEASE )
 {
   QBasicAtomicInt * obj = (QBasicAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -209,7 +209,7 @@ HB_FUNC( QBASICATOMICINT_TESTANDSETRELEASE )
 /*
 bool testAndSetOrdered(int expectedValue, int newValue)
 */
-HB_FUNC( QBASICATOMICINT_TESTANDSETORDERED )
+HB_FUNC_STATIC( QBASICATOMICINT_TESTANDSETORDERED )
 {
   QBasicAtomicInt * obj = (QBasicAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -225,7 +225,7 @@ HB_FUNC( QBASICATOMICINT_TESTANDSETORDERED )
 /*
 int fetchAndStoreRelaxed(int newValue)
 */
-HB_FUNC( QBASICATOMICINT_FETCHANDSTORERELAXED )
+HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDSTORERELAXED )
 {
   QBasicAtomicInt * obj = (QBasicAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -240,7 +240,7 @@ HB_FUNC( QBASICATOMICINT_FETCHANDSTORERELAXED )
 /*
 int fetchAndStoreAcquire(int newValue)
 */
-HB_FUNC( QBASICATOMICINT_FETCHANDSTOREACQUIRE )
+HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDSTOREACQUIRE )
 {
   QBasicAtomicInt * obj = (QBasicAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -255,7 +255,7 @@ HB_FUNC( QBASICATOMICINT_FETCHANDSTOREACQUIRE )
 /*
 int fetchAndStoreRelease(int newValue)
 */
-HB_FUNC( QBASICATOMICINT_FETCHANDSTORERELEASE )
+HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDSTORERELEASE )
 {
   QBasicAtomicInt * obj = (QBasicAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -270,7 +270,7 @@ HB_FUNC( QBASICATOMICINT_FETCHANDSTORERELEASE )
 /*
 int fetchAndStoreOrdered(int newValue)
 */
-HB_FUNC( QBASICATOMICINT_FETCHANDSTOREORDERED )
+HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDSTOREORDERED )
 {
   QBasicAtomicInt * obj = (QBasicAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -285,7 +285,7 @@ HB_FUNC( QBASICATOMICINT_FETCHANDSTOREORDERED )
 /*
 int fetchAndAddRelaxed(int valueToAdd)
 */
-HB_FUNC( QBASICATOMICINT_FETCHANDADDRELAXED )
+HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDADDRELAXED )
 {
   QBasicAtomicInt * obj = (QBasicAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -300,7 +300,7 @@ HB_FUNC( QBASICATOMICINT_FETCHANDADDRELAXED )
 /*
 int fetchAndAddAcquire(int valueToAdd)
 */
-HB_FUNC( QBASICATOMICINT_FETCHANDADDACQUIRE )
+HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDADDACQUIRE )
 {
   QBasicAtomicInt * obj = (QBasicAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -315,7 +315,7 @@ HB_FUNC( QBASICATOMICINT_FETCHANDADDACQUIRE )
 /*
 int fetchAndAddRelease(int valueToAdd)
 */
-HB_FUNC( QBASICATOMICINT_FETCHANDADDRELEASE )
+HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDADDRELEASE )
 {
   QBasicAtomicInt * obj = (QBasicAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -330,7 +330,7 @@ HB_FUNC( QBASICATOMICINT_FETCHANDADDRELEASE )
 /*
 int fetchAndAddOrdered(int valueToAdd)
 */
-HB_FUNC( QBASICATOMICINT_FETCHANDADDORDERED )
+HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDADDORDERED )
 {
   QBasicAtomicInt * obj = (QBasicAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -346,7 +346,7 @@ HB_FUNC( QBASICATOMICINT_FETCHANDADDORDERED )
 /*
 static bool isReferenceCountingNative()
 */
-HB_FUNC( QBASICATOMICINT_ISREFERENCECOUNTINGNATIVE )
+HB_FUNC_STATIC( QBASICATOMICINT_ISREFERENCECOUNTINGNATIVE )
 {
   bool b = QBasicAtomicInt::isReferenceCountingNative (  );
   hb_retl( b );
@@ -356,7 +356,7 @@ HB_FUNC( QBASICATOMICINT_ISREFERENCECOUNTINGNATIVE )
 /*
 static bool isReferenceCountingWaitFree()
 */
-HB_FUNC( QBASICATOMICINT_ISREFERENCECOUNTINGWAITFREE )
+HB_FUNC_STATIC( QBASICATOMICINT_ISREFERENCECOUNTINGWAITFREE )
 {
   bool b = QBasicAtomicInt::isReferenceCountingWaitFree (  );
   hb_retl( b );
@@ -366,7 +366,7 @@ HB_FUNC( QBASICATOMICINT_ISREFERENCECOUNTINGWAITFREE )
 /*
 static bool isTestAndSetNative()
 */
-HB_FUNC( QBASICATOMICINT_ISTESTANDSETNATIVE )
+HB_FUNC_STATIC( QBASICATOMICINT_ISTESTANDSETNATIVE )
 {
   bool b = QBasicAtomicInt::isTestAndSetNative (  );
   hb_retl( b );
@@ -376,7 +376,7 @@ HB_FUNC( QBASICATOMICINT_ISTESTANDSETNATIVE )
 /*
 static bool isTestAndSetWaitFree()
 */
-HB_FUNC( QBASICATOMICINT_ISTESTANDSETWAITFREE )
+HB_FUNC_STATIC( QBASICATOMICINT_ISTESTANDSETWAITFREE )
 {
   bool b = QBasicAtomicInt::isTestAndSetWaitFree (  );
   hb_retl( b );
@@ -386,7 +386,7 @@ HB_FUNC( QBASICATOMICINT_ISTESTANDSETWAITFREE )
 /*
 static bool isFetchAndStoreNative()
 */
-HB_FUNC( QBASICATOMICINT_ISFETCHANDSTORENATIVE )
+HB_FUNC_STATIC( QBASICATOMICINT_ISFETCHANDSTORENATIVE )
 {
   bool b = QBasicAtomicInt::isFetchAndStoreNative (  );
   hb_retl( b );
@@ -396,7 +396,7 @@ HB_FUNC( QBASICATOMICINT_ISFETCHANDSTORENATIVE )
 /*
 static bool isFetchAndStoreWaitFree()
 */
-HB_FUNC( QBASICATOMICINT_ISFETCHANDSTOREWAITFREE )
+HB_FUNC_STATIC( QBASICATOMICINT_ISFETCHANDSTOREWAITFREE )
 {
   bool b = QBasicAtomicInt::isFetchAndStoreWaitFree (  );
   hb_retl( b );
@@ -406,7 +406,7 @@ HB_FUNC( QBASICATOMICINT_ISFETCHANDSTOREWAITFREE )
 /*
 static bool isFetchAndAddNative()
 */
-HB_FUNC( QBASICATOMICINT_ISFETCHANDADDNATIVE )
+HB_FUNC_STATIC( QBASICATOMICINT_ISFETCHANDADDNATIVE )
 {
   bool b = QBasicAtomicInt::isFetchAndAddNative (  );
   hb_retl( b );
@@ -416,7 +416,7 @@ HB_FUNC( QBASICATOMICINT_ISFETCHANDADDNATIVE )
 /*
 static bool isFetchAndAddWaitFree()
 */
-HB_FUNC( QBASICATOMICINT_ISFETCHANDADDWAITFREE )
+HB_FUNC_STATIC( QBASICATOMICINT_ISFETCHANDADDWAITFREE )
 {
   bool b = QBasicAtomicInt::isFetchAndAddWaitFree (  );
   hb_retl( b );

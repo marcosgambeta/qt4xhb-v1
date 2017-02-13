@@ -93,7 +93,7 @@ RETURN
 #include "qt4xhb_clsid.h"
 #include "qt4xhb_utils.h"
 
-HB_FUNC( QACCESSIBLEBRIDGE_DELETE )
+HB_FUNC_STATIC( QACCESSIBLEBRIDGE_DELETE )
 {
   QAccessibleBridge * obj = (QAccessibleBridge *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -112,7 +112,7 @@ HB_FUNC( QACCESSIBLEBRIDGE_DELETE )
 /*
 virtual void notifyAccessibilityUpdate ( int reason, QAccessibleInterface * interface, int child ) = 0
 */
-HB_FUNC( QACCESSIBLEBRIDGE_NOTIFYACCESSIBILITYUPDATE )
+HB_FUNC_STATIC( QACCESSIBLEBRIDGE_NOTIFYACCESSIBILITYUPDATE )
 {
   QAccessibleBridge * obj = (QAccessibleBridge *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -129,7 +129,7 @@ HB_FUNC( QACCESSIBLEBRIDGE_NOTIFYACCESSIBILITYUPDATE )
 /*
 virtual void setRootObject ( QAccessibleInterface * object ) = 0
 */
-HB_FUNC( QACCESSIBLEBRIDGE_SETROOTOBJECT )
+HB_FUNC_STATIC( QACCESSIBLEBRIDGE_SETROOTOBJECT )
 {
   QAccessibleBridge * obj = (QAccessibleBridge *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

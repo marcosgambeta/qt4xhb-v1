@@ -124,7 +124,7 @@ RETURN
 /*
 QVector2D ()
 */
-HB_FUNC( QVECTOR2D_NEW1 )
+HB_FUNC_STATIC( QVECTOR2D_NEW1 )
 {
   QVector2D * o = NULL;
   o = new QVector2D (  );
@@ -139,7 +139,7 @@ HB_FUNC( QVECTOR2D_NEW1 )
 /*
 QVector2D ( qreal xpos, qreal ypos )
 */
-HB_FUNC( QVECTOR2D_NEW2 )
+HB_FUNC_STATIC( QVECTOR2D_NEW2 )
 {
   QVector2D * o = NULL;
   qreal par1 = hb_parnd(1);
@@ -156,7 +156,7 @@ HB_FUNC( QVECTOR2D_NEW2 )
 /*
 QVector2D ( const QPoint & point )
 */
-HB_FUNC( QVECTOR2D_NEW3 )
+HB_FUNC_STATIC( QVECTOR2D_NEW3 )
 {
   QVector2D * o = NULL;
   QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -172,7 +172,7 @@ HB_FUNC( QVECTOR2D_NEW3 )
 /*
 QVector2D ( const QPointF & point )
 */
-HB_FUNC( QVECTOR2D_NEW4 )
+HB_FUNC_STATIC( QVECTOR2D_NEW4 )
 {
   QVector2D * o = NULL;
   QPointF * par1 = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -188,7 +188,7 @@ HB_FUNC( QVECTOR2D_NEW4 )
 /*
 QVector2D ( const QVector3D & vector )
 */
-HB_FUNC( QVECTOR2D_NEW5 )
+HB_FUNC_STATIC( QVECTOR2D_NEW5 )
 {
   QVector2D * o = NULL;
   QVector3D * par1 = (QVector3D *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -204,7 +204,7 @@ HB_FUNC( QVECTOR2D_NEW5 )
 /*
 QVector2D ( const QVector4D & vector )
 */
-HB_FUNC( QVECTOR2D_NEW6 )
+HB_FUNC_STATIC( QVECTOR2D_NEW6 )
 {
   QVector2D * o = NULL;
   QVector4D * par1 = (QVector4D *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -224,7 +224,7 @@ HB_FUNC( QVECTOR2D_NEW6 )
 //[5]QVector2D ( const QVector3D & vector )
 //[6]QVector2D ( const QVector4D & vector )
 
-HB_FUNC( QVECTOR2D_NEW )
+HB_FUNC_STATIC( QVECTOR2D_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -256,7 +256,7 @@ HB_FUNC( QVECTOR2D_NEW )
   }
 }
 
-HB_FUNC( QVECTOR2D_DELETE )
+HB_FUNC_STATIC( QVECTOR2D_DELETE )
 {
   QVector2D * obj = (QVector2D *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -275,7 +275,7 @@ HB_FUNC( QVECTOR2D_DELETE )
 /*
 bool isNull () const
 */
-HB_FUNC( QVECTOR2D_ISNULL )
+HB_FUNC_STATIC( QVECTOR2D_ISNULL )
 {
   QVector2D * obj = (QVector2D *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -289,7 +289,7 @@ HB_FUNC( QVECTOR2D_ISNULL )
 /*
 qreal length () const
 */
-HB_FUNC( QVECTOR2D_LENGTH )
+HB_FUNC_STATIC( QVECTOR2D_LENGTH )
 {
   QVector2D * obj = (QVector2D *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -303,7 +303,7 @@ HB_FUNC( QVECTOR2D_LENGTH )
 /*
 qreal lengthSquared () const
 */
-HB_FUNC( QVECTOR2D_LENGTHSQUARED )
+HB_FUNC_STATIC( QVECTOR2D_LENGTHSQUARED )
 {
   QVector2D * obj = (QVector2D *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -317,7 +317,7 @@ HB_FUNC( QVECTOR2D_LENGTHSQUARED )
 /*
 void normalize ()
 */
-HB_FUNC( QVECTOR2D_NORMALIZE )
+HB_FUNC_STATIC( QVECTOR2D_NORMALIZE )
 {
   QVector2D * obj = (QVector2D *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -331,7 +331,7 @@ HB_FUNC( QVECTOR2D_NORMALIZE )
 /*
 QVector2D normalized () const
 */
-HB_FUNC( QVECTOR2D_NORMALIZED )
+HB_FUNC_STATIC( QVECTOR2D_NORMALIZED )
 {
   QVector2D * obj = (QVector2D *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -344,7 +344,7 @@ HB_FUNC( QVECTOR2D_NORMALIZED )
 /*
 void setX ( qreal x )
 */
-HB_FUNC( QVECTOR2D_SETX )
+HB_FUNC_STATIC( QVECTOR2D_SETX )
 {
   QVector2D * obj = (QVector2D *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -359,7 +359,7 @@ HB_FUNC( QVECTOR2D_SETX )
 /*
 void setY ( qreal y )
 */
-HB_FUNC( QVECTOR2D_SETY )
+HB_FUNC_STATIC( QVECTOR2D_SETY )
 {
   QVector2D * obj = (QVector2D *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -374,7 +374,7 @@ HB_FUNC( QVECTOR2D_SETY )
 /*
 QPoint toPoint () const
 */
-HB_FUNC( QVECTOR2D_TOPOINT )
+HB_FUNC_STATIC( QVECTOR2D_TOPOINT )
 {
   QVector2D * obj = (QVector2D *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -387,7 +387,7 @@ HB_FUNC( QVECTOR2D_TOPOINT )
 /*
 QPointF toPointF () const
 */
-HB_FUNC( QVECTOR2D_TOPOINTF )
+HB_FUNC_STATIC( QVECTOR2D_TOPOINTF )
 {
   QVector2D * obj = (QVector2D *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -400,7 +400,7 @@ HB_FUNC( QVECTOR2D_TOPOINTF )
 /*
 QVector3D toVector3D () const
 */
-HB_FUNC( QVECTOR2D_TOVECTOR3D )
+HB_FUNC_STATIC( QVECTOR2D_TOVECTOR3D )
 {
   QVector2D * obj = (QVector2D *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -413,7 +413,7 @@ HB_FUNC( QVECTOR2D_TOVECTOR3D )
 /*
 QVector4D toVector4D () const
 */
-HB_FUNC( QVECTOR2D_TOVECTOR4D )
+HB_FUNC_STATIC( QVECTOR2D_TOVECTOR4D )
 {
   QVector2D * obj = (QVector2D *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -426,7 +426,7 @@ HB_FUNC( QVECTOR2D_TOVECTOR4D )
 /*
 qreal x () const
 */
-HB_FUNC( QVECTOR2D_X )
+HB_FUNC_STATIC( QVECTOR2D_X )
 {
   QVector2D * obj = (QVector2D *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -440,7 +440,7 @@ HB_FUNC( QVECTOR2D_X )
 /*
 qreal y () const
 */
-HB_FUNC( QVECTOR2D_Y )
+HB_FUNC_STATIC( QVECTOR2D_Y )
 {
   QVector2D * obj = (QVector2D *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -455,7 +455,7 @@ HB_FUNC( QVECTOR2D_Y )
 /*
 qreal dotProduct ( const QVector2D & v1, const QVector2D & v2 )
 */
-HB_FUNC( QVECTOR2D_DOTPRODUCT )
+HB_FUNC_STATIC( QVECTOR2D_DOTPRODUCT )
 {
   QVector2D * par1 = (QVector2D *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QVector2D * par2 = (QVector2D *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );

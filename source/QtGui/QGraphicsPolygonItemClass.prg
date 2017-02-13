@@ -77,7 +77,7 @@ RETURN
 /*
 QGraphicsPolygonItem ( QGraphicsItem * parent = 0 )
 */
-HB_FUNC( QGRAPHICSPOLYGONITEM_NEW1 )
+HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_NEW1 )
 {
   QGraphicsPolygonItem * o = NULL;
   QGraphicsItem * par1 = ISNIL(1)? 0 : (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -93,7 +93,7 @@ HB_FUNC( QGRAPHICSPOLYGONITEM_NEW1 )
 /*
 QGraphicsPolygonItem ( const QPolygonF & polygon, QGraphicsItem * parent = 0 )
 */
-HB_FUNC( QGRAPHICSPOLYGONITEM_NEW2 )
+HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_NEW2 )
 {
   QGraphicsPolygonItem * o = NULL;
   QPolygonF * par1 = (QPolygonF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -110,7 +110,7 @@ HB_FUNC( QGRAPHICSPOLYGONITEM_NEW2 )
 //[1]QGraphicsPolygonItem ( QGraphicsItem * parent = 0 )
 //[2]QGraphicsPolygonItem ( const QPolygonF & polygon, QGraphicsItem * parent = 0 )
 
-HB_FUNC( QGRAPHICSPOLYGONITEM_NEW )
+HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQGRAPHICSITEM(1)||ISNIL(1)) )
   {
@@ -126,7 +126,7 @@ HB_FUNC( QGRAPHICSPOLYGONITEM_NEW )
   }
 }
 
-HB_FUNC( QGRAPHICSPOLYGONITEM_DELETE )
+HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_DELETE )
 {
   QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -145,7 +145,7 @@ HB_FUNC( QGRAPHICSPOLYGONITEM_DELETE )
 /*
 Qt::FillRule fillRule () const
 */
-HB_FUNC( QGRAPHICSPOLYGONITEM_FILLRULE )
+HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_FILLRULE )
 {
   QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -159,7 +159,7 @@ HB_FUNC( QGRAPHICSPOLYGONITEM_FILLRULE )
 /*
 QPolygonF polygon () const
 */
-HB_FUNC( QGRAPHICSPOLYGONITEM_POLYGON )
+HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_POLYGON )
 {
   QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -172,7 +172,7 @@ HB_FUNC( QGRAPHICSPOLYGONITEM_POLYGON )
 /*
 void setFillRule ( Qt::FillRule rule )
 */
-HB_FUNC( QGRAPHICSPOLYGONITEM_SETFILLRULE )
+HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_SETFILLRULE )
 {
   QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -187,7 +187,7 @@ HB_FUNC( QGRAPHICSPOLYGONITEM_SETFILLRULE )
 /*
 void setPolygon ( const QPolygonF & polygon )
 */
-HB_FUNC( QGRAPHICSPOLYGONITEM_SETPOLYGON )
+HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_SETPOLYGON )
 {
   QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -202,7 +202,7 @@ HB_FUNC( QGRAPHICSPOLYGONITEM_SETPOLYGON )
 /*
 virtual QRectF boundingRect () const
 */
-HB_FUNC( QGRAPHICSPOLYGONITEM_BOUNDINGRECT )
+HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_BOUNDINGRECT )
 {
   QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -215,7 +215,7 @@ HB_FUNC( QGRAPHICSPOLYGONITEM_BOUNDINGRECT )
 /*
 virtual bool contains ( const QPointF & point ) const
 */
-HB_FUNC( QGRAPHICSPOLYGONITEM_CONTAINS )
+HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_CONTAINS )
 {
   QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -230,7 +230,7 @@ HB_FUNC( QGRAPHICSPOLYGONITEM_CONTAINS )
 /*
 virtual bool isObscuredBy ( const QGraphicsItem * item ) const
 */
-HB_FUNC( QGRAPHICSPOLYGONITEM_ISOBSCUREDBY )
+HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_ISOBSCUREDBY )
 {
   QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -245,7 +245,7 @@ HB_FUNC( QGRAPHICSPOLYGONITEM_ISOBSCUREDBY )
 /*
 virtual QPainterPath opaqueArea () const
 */
-HB_FUNC( QGRAPHICSPOLYGONITEM_OPAQUEAREA )
+HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_OPAQUEAREA )
 {
   QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -258,7 +258,7 @@ HB_FUNC( QGRAPHICSPOLYGONITEM_OPAQUEAREA )
 /*
 virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
 */
-HB_FUNC( QGRAPHICSPOLYGONITEM_PAINT )
+HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_PAINT )
 {
   QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -275,7 +275,7 @@ HB_FUNC( QGRAPHICSPOLYGONITEM_PAINT )
 /*
 virtual QPainterPath shape () const
 */
-HB_FUNC( QGRAPHICSPOLYGONITEM_SHAPE )
+HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_SHAPE )
 {
   QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -288,7 +288,7 @@ HB_FUNC( QGRAPHICSPOLYGONITEM_SHAPE )
 /*
 virtual int type () const
 */
-HB_FUNC( QGRAPHICSPOLYGONITEM_TYPE )
+HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_TYPE )
 {
   QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

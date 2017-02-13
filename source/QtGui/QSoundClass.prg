@@ -70,7 +70,7 @@ RETURN
 /*
 QSound ( const QString & filename, QObject * parent = 0 )
 */
-HB_FUNC( QSOUND_NEW )
+HB_FUNC_STATIC( QSOUND_NEW )
 {
   QSound * o = NULL;
   QString par1 = hb_parc(1);
@@ -84,7 +84,7 @@ HB_FUNC( QSOUND_NEW )
 }
 
 
-HB_FUNC( QSOUND_DELETE )
+HB_FUNC_STATIC( QSOUND_DELETE )
 {
   QSound * obj = (QSound *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -103,7 +103,7 @@ HB_FUNC( QSOUND_DELETE )
 /*
 QString fileName () const
 */
-HB_FUNC( QSOUND_FILENAME )
+HB_FUNC_STATIC( QSOUND_FILENAME )
 {
   QSound * obj = (QSound *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -117,7 +117,7 @@ HB_FUNC( QSOUND_FILENAME )
 /*
 bool isFinished () const
 */
-HB_FUNC( QSOUND_ISFINISHED )
+HB_FUNC_STATIC( QSOUND_ISFINISHED )
 {
   QSound * obj = (QSound *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -131,7 +131,7 @@ HB_FUNC( QSOUND_ISFINISHED )
 /*
 int loops () const
 */
-HB_FUNC( QSOUND_LOOPS )
+HB_FUNC_STATIC( QSOUND_LOOPS )
 {
   QSound * obj = (QSound *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -145,7 +145,7 @@ HB_FUNC( QSOUND_LOOPS )
 /*
 int loopsRemaining () const
 */
-HB_FUNC( QSOUND_LOOPSREMAINING )
+HB_FUNC_STATIC( QSOUND_LOOPSREMAINING )
 {
   QSound * obj = (QSound *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -159,7 +159,7 @@ HB_FUNC( QSOUND_LOOPSREMAINING )
 /*
 void setLoops ( int number )
 */
-HB_FUNC( QSOUND_SETLOOPS )
+HB_FUNC_STATIC( QSOUND_SETLOOPS )
 {
   QSound * obj = (QSound *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -174,7 +174,7 @@ HB_FUNC( QSOUND_SETLOOPS )
 /*
 void play ()
 */
-HB_FUNC( QSOUND_PLAY1 )
+HB_FUNC_STATIC( QSOUND_PLAY1 )
 {
   QSound * obj = (QSound *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -188,7 +188,7 @@ HB_FUNC( QSOUND_PLAY1 )
 /*
 void stop ()
 */
-HB_FUNC( QSOUND_STOP )
+HB_FUNC_STATIC( QSOUND_STOP )
 {
   QSound * obj = (QSound *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -203,7 +203,7 @@ HB_FUNC( QSOUND_STOP )
 /*
 bool isAvailable ()
 */
-HB_FUNC( QSOUND_ISAVAILABLE )
+HB_FUNC_STATIC( QSOUND_ISAVAILABLE )
 {
   bool b = QSound::isAvailable (  );
   hb_retl( b );
@@ -213,7 +213,7 @@ HB_FUNC( QSOUND_ISAVAILABLE )
 /*
 void play ( const QString & filename )
 */
-HB_FUNC( QSOUND_PLAY2 )
+HB_FUNC_STATIC( QSOUND_PLAY2 )
 {
   QString par1 = hb_parc(1);
   QSound::play ( par1 );
@@ -224,7 +224,7 @@ HB_FUNC( QSOUND_PLAY2 )
 //[1]void play ()
 //[2]void play ( const QString & filename )
 
-HB_FUNC( QSOUND_PLAY )
+HB_FUNC_STATIC( QSOUND_PLAY )
 {
   if( ISNUMPAR(0) )
   {

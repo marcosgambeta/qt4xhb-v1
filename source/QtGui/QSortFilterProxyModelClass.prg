@@ -123,7 +123,7 @@ RETURN
 /*
 QSortFilterProxyModel ( QObject * parent = 0 )
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_NEW )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_NEW )
 {
   QSortFilterProxyModel * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -136,7 +136,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_NEW )
 }
 
 
-HB_FUNC( QSORTFILTERPROXYMODEL_DELETE )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_DELETE )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -155,7 +155,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_DELETE )
 /*
 bool dynamicSortFilter () const
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_DYNAMICSORTFILTER )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_DYNAMICSORTFILTER )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -169,7 +169,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_DYNAMICSORTFILTER )
 /*
 Qt::CaseSensitivity filterCaseSensitivity () const
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_FILTERCASESENSITIVITY )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_FILTERCASESENSITIVITY )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -183,7 +183,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_FILTERCASESENSITIVITY )
 /*
 int filterKeyColumn () const
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_FILTERKEYCOLUMN )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_FILTERKEYCOLUMN )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -197,7 +197,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_FILTERKEYCOLUMN )
 /*
 QRegExp filterRegExp () const
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_FILTERREGEXP )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_FILTERREGEXP )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -210,7 +210,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_FILTERREGEXP )
 /*
 int filterRole () const
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_FILTERROLE )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_FILTERROLE )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -224,7 +224,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_FILTERROLE )
 /*
 bool isSortLocaleAware () const
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_ISSORTLOCALEAWARE )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_ISSORTLOCALEAWARE )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -238,7 +238,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_ISSORTLOCALEAWARE )
 /*
 void setDynamicSortFilter ( bool enable )
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_SETDYNAMICSORTFILTER )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETDYNAMICSORTFILTER )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -253,7 +253,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_SETDYNAMICSORTFILTER )
 /*
 void setFilterCaseSensitivity ( Qt::CaseSensitivity cs )
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_SETFILTERCASESENSITIVITY )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERCASESENSITIVITY )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -268,7 +268,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_SETFILTERCASESENSITIVITY )
 /*
 void setFilterKeyColumn ( int column )
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_SETFILTERKEYCOLUMN )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERKEYCOLUMN )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -283,7 +283,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_SETFILTERKEYCOLUMN )
 /*
 void setFilterRegExp ( const QRegExp & regExp )
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_SETFILTERREGEXP1 )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERREGEXP1 )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -298,7 +298,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_SETFILTERREGEXP1 )
 /*
 void setFilterRole ( int role )
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_SETFILTERROLE )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERROLE )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -313,7 +313,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_SETFILTERROLE )
 /*
 void setSortCaseSensitivity ( Qt::CaseSensitivity cs )
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_SETSORTCASESENSITIVITY )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETSORTCASESENSITIVITY )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -328,7 +328,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_SETSORTCASESENSITIVITY )
 /*
 void setSortLocaleAware ( bool on )
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_SETSORTLOCALEAWARE )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETSORTLOCALEAWARE )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -343,7 +343,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_SETSORTLOCALEAWARE )
 /*
 void setSortRole ( int role )
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_SETSORTROLE )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETSORTROLE )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -358,7 +358,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_SETSORTROLE )
 /*
 Qt::CaseSensitivity sortCaseSensitivity () const
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_SORTCASESENSITIVITY )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SORTCASESENSITIVITY )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -372,7 +372,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_SORTCASESENSITIVITY )
 /*
 int sortColumn () const
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_SORTCOLUMN )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SORTCOLUMN )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -386,7 +386,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_SORTCOLUMN )
 /*
 Qt::SortOrder sortOrder () const
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_SORTORDER )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SORTORDER )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -400,7 +400,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_SORTORDER )
 /*
 int sortRole () const
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_SORTROLE )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SORTROLE )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -414,7 +414,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_SORTROLE )
 /*
 virtual QModelIndex buddy ( const QModelIndex & index ) const
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_BUDDY )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_BUDDY )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -428,7 +428,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_BUDDY )
 /*
 virtual bool canFetchMore ( const QModelIndex & parent ) const
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_CANFETCHMORE )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_CANFETCHMORE )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -443,7 +443,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_CANFETCHMORE )
 /*
 virtual int columnCount ( const QModelIndex & parent = QModelIndex() ) const
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_COLUMNCOUNT )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_COLUMNCOUNT )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -458,7 +458,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_COLUMNCOUNT )
 /*
 virtual QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_DATA )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_DATA )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -473,7 +473,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_DATA )
 /*
 virtual bool dropMimeData ( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_DROPMIMEDATA )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_DROPMIMEDATA )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -492,7 +492,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_DROPMIMEDATA )
 /*
 virtual void fetchMore ( const QModelIndex & parent )
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_FETCHMORE )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_FETCHMORE )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -507,7 +507,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_FETCHMORE )
 /*
 virtual Qt::ItemFlags flags ( const QModelIndex & index ) const
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_FLAGS )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_FLAGS )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -522,7 +522,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_FLAGS )
 /*
 virtual bool hasChildren ( const QModelIndex & parent = QModelIndex() ) const
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_HASCHILDREN )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_HASCHILDREN )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -537,7 +537,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_HASCHILDREN )
 /*
 virtual QVariant headerData ( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_HEADERDATA )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_HEADERDATA )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -553,7 +553,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_HEADERDATA )
 /*
 virtual QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_INDEX )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_INDEX )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -569,7 +569,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_INDEX )
 /*
 virtual bool insertColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_INSERTCOLUMNS )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_INSERTCOLUMNS )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -586,7 +586,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_INSERTCOLUMNS )
 /*
 virtual bool insertRows ( int row, int count, const QModelIndex & parent = QModelIndex() )
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_INSERTROWS )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_INSERTROWS )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -603,7 +603,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_INSERTROWS )
 /*
 virtual QModelIndex mapFromSource ( const QModelIndex & sourceIndex ) const
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_MAPFROMSOURCE )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MAPFROMSOURCE )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -617,7 +617,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_MAPFROMSOURCE )
 /*
 virtual QItemSelection mapSelectionFromSource ( const QItemSelection & sourceSelection ) const
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_MAPSELECTIONFROMSOURCE )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MAPSELECTIONFROMSOURCE )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -631,7 +631,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_MAPSELECTIONFROMSOURCE )
 /*
 virtual QItemSelection mapSelectionToSource ( const QItemSelection & proxySelection ) const
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_MAPSELECTIONTOSOURCE )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MAPSELECTIONTOSOURCE )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -645,7 +645,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_MAPSELECTIONTOSOURCE )
 /*
 virtual QModelIndex mapToSource ( const QModelIndex & proxyIndex ) const
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_MAPTOSOURCE )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MAPTOSOURCE )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -659,7 +659,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_MAPTOSOURCE )
 /*
 virtual QModelIndexList match ( const QModelIndex & start, int role, const QVariant & value, int hits = 1, Qt::MatchFlags flags = Qt::MatchFlags( Qt::MatchStartsWith | Qt::MatchWrap ) ) const
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_MATCH )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MATCH )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -708,7 +708,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_MATCH )
 /*
 virtual QMimeData * mimeData ( const QModelIndexList & indexes ) const
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_MIMEDATA )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MIMEDATA )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -722,7 +722,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_MIMEDATA )
 /*
 virtual QStringList mimeTypes () const
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_MIMETYPES )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MIMETYPES )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -745,7 +745,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_MIMETYPES )
 /*
 virtual QModelIndex parent ( const QModelIndex & child ) const
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_PARENT )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_PARENT )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -759,7 +759,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_PARENT )
 /*
 virtual bool removeColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_REMOVECOLUMNS )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_REMOVECOLUMNS )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -776,7 +776,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_REMOVECOLUMNS )
 /*
 virtual bool removeRows ( int row, int count, const QModelIndex & parent = QModelIndex() )
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_REMOVEROWS )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_REMOVEROWS )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -793,7 +793,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_REMOVEROWS )
 /*
 virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_ROWCOUNT )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_ROWCOUNT )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -808,7 +808,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_ROWCOUNT )
 /*
 virtual bool setData ( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_SETDATA )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETDATA )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -825,7 +825,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_SETDATA )
 /*
 virtual bool setHeaderData ( int section, Qt::Orientation orientation, const QVariant & value, int role = Qt::EditRole )
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_SETHEADERDATA )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETHEADERDATA )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -843,7 +843,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_SETHEADERDATA )
 /*
 virtual void setSourceModel ( QAbstractItemModel * sourceModel )
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_SETSOURCEMODEL )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETSOURCEMODEL )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -858,7 +858,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_SETSOURCEMODEL )
 /*
 virtual void sort ( int column, Qt::SortOrder order = Qt::AscendingOrder )
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_SORT )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SORT )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -874,7 +874,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_SORT )
 /*
 virtual QSize span ( const QModelIndex & index ) const
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_SPAN )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SPAN )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -888,7 +888,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_SPAN )
 /*
 virtual Qt::DropActions supportedDropActions () const
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_SUPPORTEDDROPACTIONS )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SUPPORTEDDROPACTIONS )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -902,7 +902,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_SUPPORTEDDROPACTIONS )
 /*
 void invalidate ()
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_INVALIDATE )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_INVALIDATE )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -916,7 +916,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_INVALIDATE )
 /*
 void setFilterFixedString ( const QString & pattern )
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_SETFILTERFIXEDSTRING )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERFIXEDSTRING )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -931,7 +931,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_SETFILTERFIXEDSTRING )
 /*
 void setFilterRegExp ( const QString & pattern )
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_SETFILTERREGEXP2 )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERREGEXP2 )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -946,7 +946,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_SETFILTERREGEXP2 )
 //[1]void setFilterRegExp ( const QRegExp & regExp )
 //[2]void setFilterRegExp ( const QString & pattern )
 
-HB_FUNC( QSORTFILTERPROXYMODEL_SETFILTERREGEXP )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERREGEXP )
 {
   if( ISNUMPAR(1) && ISQREGEXP(1) )
   {
@@ -961,7 +961,7 @@ HB_FUNC( QSORTFILTERPROXYMODEL_SETFILTERREGEXP )
 /*
 void setFilterWildcard ( const QString & pattern )
 */
-HB_FUNC( QSORTFILTERPROXYMODEL_SETFILTERWILDCARD )
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERWILDCARD )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

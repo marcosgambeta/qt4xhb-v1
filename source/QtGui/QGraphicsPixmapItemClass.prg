@@ -84,7 +84,7 @@ RETURN
 /*
 QGraphicsPixmapItem ( QGraphicsItem * parent = 0 )
 */
-HB_FUNC( QGRAPHICSPIXMAPITEM_NEW1 )
+HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_NEW1 )
 {
   QGraphicsPixmapItem * o = NULL;
   QGraphicsItem * par1 = ISNIL(1)? 0 : (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -100,7 +100,7 @@ HB_FUNC( QGRAPHICSPIXMAPITEM_NEW1 )
 /*
 QGraphicsPixmapItem ( const QPixmap & pixmap, QGraphicsItem * parent = 0 )
 */
-HB_FUNC( QGRAPHICSPIXMAPITEM_NEW2 )
+HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_NEW2 )
 {
   QGraphicsPixmapItem * o = NULL;
   QPixmap * par1 = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -117,7 +117,7 @@ HB_FUNC( QGRAPHICSPIXMAPITEM_NEW2 )
 //[1]QGraphicsPixmapItem ( QGraphicsItem * parent = 0 )
 //[2]QGraphicsPixmapItem ( const QPixmap & pixmap, QGraphicsItem * parent = 0 )
 
-HB_FUNC( QGRAPHICSPIXMAPITEM_NEW )
+HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQGRAPHICSITEM(1)||ISNIL(1)) )
   {
@@ -133,7 +133,7 @@ HB_FUNC( QGRAPHICSPIXMAPITEM_NEW )
   }
 }
 
-HB_FUNC( QGRAPHICSPIXMAPITEM_DELETE )
+HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_DELETE )
 {
   QGraphicsPixmapItem * obj = (QGraphicsPixmapItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -152,7 +152,7 @@ HB_FUNC( QGRAPHICSPIXMAPITEM_DELETE )
 /*
 QPointF offset () const
 */
-HB_FUNC( QGRAPHICSPIXMAPITEM_OFFSET )
+HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_OFFSET )
 {
   QGraphicsPixmapItem * obj = (QGraphicsPixmapItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -165,7 +165,7 @@ HB_FUNC( QGRAPHICSPIXMAPITEM_OFFSET )
 /*
 QPixmap pixmap () const
 */
-HB_FUNC( QGRAPHICSPIXMAPITEM_PIXMAP )
+HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_PIXMAP )
 {
   QGraphicsPixmapItem * obj = (QGraphicsPixmapItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -178,7 +178,7 @@ HB_FUNC( QGRAPHICSPIXMAPITEM_PIXMAP )
 /*
 void setOffset ( const QPointF & offset )
 */
-HB_FUNC( QGRAPHICSPIXMAPITEM_SETOFFSET1 )
+HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETOFFSET1 )
 {
   QGraphicsPixmapItem * obj = (QGraphicsPixmapItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -193,7 +193,7 @@ HB_FUNC( QGRAPHICSPIXMAPITEM_SETOFFSET1 )
 /*
 void setOffset ( qreal x, qreal y )
 */
-HB_FUNC( QGRAPHICSPIXMAPITEM_SETOFFSET2 )
+HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETOFFSET2 )
 {
   QGraphicsPixmapItem * obj = (QGraphicsPixmapItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -209,7 +209,7 @@ HB_FUNC( QGRAPHICSPIXMAPITEM_SETOFFSET2 )
 //[1]void setOffset ( const QPointF & offset )
 //[2]void setOffset ( qreal x, qreal y )
 
-HB_FUNC( QGRAPHICSPIXMAPITEM_SETOFFSET )
+HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETOFFSET )
 {
   if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
@@ -224,7 +224,7 @@ HB_FUNC( QGRAPHICSPIXMAPITEM_SETOFFSET )
 /*
 void setPixmap ( const QPixmap & pixmap )
 */
-HB_FUNC( QGRAPHICSPIXMAPITEM_SETPIXMAP )
+HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETPIXMAP )
 {
   QGraphicsPixmapItem * obj = (QGraphicsPixmapItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -239,7 +239,7 @@ HB_FUNC( QGRAPHICSPIXMAPITEM_SETPIXMAP )
 /*
 void setShapeMode ( ShapeMode mode )
 */
-HB_FUNC( QGRAPHICSPIXMAPITEM_SETSHAPEMODE )
+HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETSHAPEMODE )
 {
   QGraphicsPixmapItem * obj = (QGraphicsPixmapItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -254,7 +254,7 @@ HB_FUNC( QGRAPHICSPIXMAPITEM_SETSHAPEMODE )
 /*
 void setTransformationMode ( Qt::TransformationMode mode )
 */
-HB_FUNC( QGRAPHICSPIXMAPITEM_SETTRANSFORMATIONMODE )
+HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETTRANSFORMATIONMODE )
 {
   QGraphicsPixmapItem * obj = (QGraphicsPixmapItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -269,7 +269,7 @@ HB_FUNC( QGRAPHICSPIXMAPITEM_SETTRANSFORMATIONMODE )
 /*
 ShapeMode shapeMode () const
 */
-HB_FUNC( QGRAPHICSPIXMAPITEM_SHAPEMODE )
+HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SHAPEMODE )
 {
   QGraphicsPixmapItem * obj = (QGraphicsPixmapItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -283,7 +283,7 @@ HB_FUNC( QGRAPHICSPIXMAPITEM_SHAPEMODE )
 /*
 Qt::TransformationMode transformationMode () const
 */
-HB_FUNC( QGRAPHICSPIXMAPITEM_TRANSFORMATIONMODE )
+HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_TRANSFORMATIONMODE )
 {
   QGraphicsPixmapItem * obj = (QGraphicsPixmapItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -297,7 +297,7 @@ HB_FUNC( QGRAPHICSPIXMAPITEM_TRANSFORMATIONMODE )
 /*
 virtual QRectF boundingRect () const
 */
-HB_FUNC( QGRAPHICSPIXMAPITEM_BOUNDINGRECT )
+HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_BOUNDINGRECT )
 {
   QGraphicsPixmapItem * obj = (QGraphicsPixmapItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -310,7 +310,7 @@ HB_FUNC( QGRAPHICSPIXMAPITEM_BOUNDINGRECT )
 /*
 virtual bool contains ( const QPointF & point ) const
 */
-HB_FUNC( QGRAPHICSPIXMAPITEM_CONTAINS )
+HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_CONTAINS )
 {
   QGraphicsPixmapItem * obj = (QGraphicsPixmapItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -325,7 +325,7 @@ HB_FUNC( QGRAPHICSPIXMAPITEM_CONTAINS )
 /*
 virtual bool isObscuredBy ( const QGraphicsItem * item ) const
 */
-HB_FUNC( QGRAPHICSPIXMAPITEM_ISOBSCUREDBY )
+HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_ISOBSCUREDBY )
 {
   QGraphicsPixmapItem * obj = (QGraphicsPixmapItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -340,7 +340,7 @@ HB_FUNC( QGRAPHICSPIXMAPITEM_ISOBSCUREDBY )
 /*
 virtual QPainterPath opaqueArea () const
 */
-HB_FUNC( QGRAPHICSPIXMAPITEM_OPAQUEAREA )
+HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_OPAQUEAREA )
 {
   QGraphicsPixmapItem * obj = (QGraphicsPixmapItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -353,7 +353,7 @@ HB_FUNC( QGRAPHICSPIXMAPITEM_OPAQUEAREA )
 /*
 virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget )
 */
-HB_FUNC( QGRAPHICSPIXMAPITEM_PAINT )
+HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_PAINT )
 {
   QGraphicsPixmapItem * obj = (QGraphicsPixmapItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -370,7 +370,7 @@ HB_FUNC( QGRAPHICSPIXMAPITEM_PAINT )
 /*
 virtual QPainterPath shape () const
 */
-HB_FUNC( QGRAPHICSPIXMAPITEM_SHAPE )
+HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SHAPE )
 {
   QGraphicsPixmapItem * obj = (QGraphicsPixmapItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -383,7 +383,7 @@ HB_FUNC( QGRAPHICSPIXMAPITEM_SHAPE )
 /*
 virtual int type () const
 */
-HB_FUNC( QGRAPHICSPIXMAPITEM_TYPE )
+HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_TYPE )
 {
   QGraphicsPixmapItem * obj = (QGraphicsPixmapItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

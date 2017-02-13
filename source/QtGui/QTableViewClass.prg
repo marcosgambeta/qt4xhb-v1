@@ -108,7 +108,7 @@ RETURN
 /*
 QTableView ( QWidget * parent = 0 )
 */
-HB_FUNC( QTABLEVIEW_NEW )
+HB_FUNC_STATIC( QTABLEVIEW_NEW )
 {
   QTableView * o = NULL;
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -121,7 +121,7 @@ HB_FUNC( QTABLEVIEW_NEW )
 }
 
 
-HB_FUNC( QTABLEVIEW_DELETE )
+HB_FUNC_STATIC( QTABLEVIEW_DELETE )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -140,7 +140,7 @@ HB_FUNC( QTABLEVIEW_DELETE )
 /*
 void clearSpans ()
 */
-HB_FUNC( QTABLEVIEW_CLEARSPANS )
+HB_FUNC_STATIC( QTABLEVIEW_CLEARSPANS )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -154,7 +154,7 @@ HB_FUNC( QTABLEVIEW_CLEARSPANS )
 /*
 int columnAt ( int x ) const
 */
-HB_FUNC( QTABLEVIEW_COLUMNAT )
+HB_FUNC_STATIC( QTABLEVIEW_COLUMNAT )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -169,7 +169,7 @@ HB_FUNC( QTABLEVIEW_COLUMNAT )
 /*
 int columnSpan ( int row, int column ) const
 */
-HB_FUNC( QTABLEVIEW_COLUMNSPAN )
+HB_FUNC_STATIC( QTABLEVIEW_COLUMNSPAN )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -185,7 +185,7 @@ HB_FUNC( QTABLEVIEW_COLUMNSPAN )
 /*
 int columnViewportPosition ( int column ) const
 */
-HB_FUNC( QTABLEVIEW_COLUMNVIEWPORTPOSITION )
+HB_FUNC_STATIC( QTABLEVIEW_COLUMNVIEWPORTPOSITION )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -200,7 +200,7 @@ HB_FUNC( QTABLEVIEW_COLUMNVIEWPORTPOSITION )
 /*
 int columnWidth ( int column ) const
 */
-HB_FUNC( QTABLEVIEW_COLUMNWIDTH )
+HB_FUNC_STATIC( QTABLEVIEW_COLUMNWIDTH )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -215,7 +215,7 @@ HB_FUNC( QTABLEVIEW_COLUMNWIDTH )
 /*
 Qt::PenStyle gridStyle () const
 */
-HB_FUNC( QTABLEVIEW_GRIDSTYLE )
+HB_FUNC_STATIC( QTABLEVIEW_GRIDSTYLE )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -229,7 +229,7 @@ HB_FUNC( QTABLEVIEW_GRIDSTYLE )
 /*
 QHeaderView * horizontalHeader () const
 */
-HB_FUNC( QTABLEVIEW_HORIZONTALHEADER )
+HB_FUNC_STATIC( QTABLEVIEW_HORIZONTALHEADER )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -242,7 +242,7 @@ HB_FUNC( QTABLEVIEW_HORIZONTALHEADER )
 /*
 bool isColumnHidden ( int column ) const
 */
-HB_FUNC( QTABLEVIEW_ISCOLUMNHIDDEN )
+HB_FUNC_STATIC( QTABLEVIEW_ISCOLUMNHIDDEN )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -257,7 +257,7 @@ HB_FUNC( QTABLEVIEW_ISCOLUMNHIDDEN )
 /*
 bool isCornerButtonEnabled () const
 */
-HB_FUNC( QTABLEVIEW_ISCORNERBUTTONENABLED )
+HB_FUNC_STATIC( QTABLEVIEW_ISCORNERBUTTONENABLED )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -271,7 +271,7 @@ HB_FUNC( QTABLEVIEW_ISCORNERBUTTONENABLED )
 /*
 bool isRowHidden ( int row ) const
 */
-HB_FUNC( QTABLEVIEW_ISROWHIDDEN )
+HB_FUNC_STATIC( QTABLEVIEW_ISROWHIDDEN )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -286,7 +286,7 @@ HB_FUNC( QTABLEVIEW_ISROWHIDDEN )
 /*
 bool isSortingEnabled () const
 */
-HB_FUNC( QTABLEVIEW_ISSORTINGENABLED )
+HB_FUNC_STATIC( QTABLEVIEW_ISSORTINGENABLED )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -300,7 +300,7 @@ HB_FUNC( QTABLEVIEW_ISSORTINGENABLED )
 /*
 int rowAt ( int y ) const
 */
-HB_FUNC( QTABLEVIEW_ROWAT )
+HB_FUNC_STATIC( QTABLEVIEW_ROWAT )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -315,7 +315,7 @@ HB_FUNC( QTABLEVIEW_ROWAT )
 /*
 int rowHeight ( int row ) const
 */
-HB_FUNC( QTABLEVIEW_ROWHEIGHT )
+HB_FUNC_STATIC( QTABLEVIEW_ROWHEIGHT )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -330,7 +330,7 @@ HB_FUNC( QTABLEVIEW_ROWHEIGHT )
 /*
 int rowSpan ( int row, int column ) const
 */
-HB_FUNC( QTABLEVIEW_ROWSPAN )
+HB_FUNC_STATIC( QTABLEVIEW_ROWSPAN )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -346,7 +346,7 @@ HB_FUNC( QTABLEVIEW_ROWSPAN )
 /*
 int rowViewportPosition ( int row ) const
 */
-HB_FUNC( QTABLEVIEW_ROWVIEWPORTPOSITION )
+HB_FUNC_STATIC( QTABLEVIEW_ROWVIEWPORTPOSITION )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -361,7 +361,7 @@ HB_FUNC( QTABLEVIEW_ROWVIEWPORTPOSITION )
 /*
 void setColumnHidden ( int column, bool hide )
 */
-HB_FUNC( QTABLEVIEW_SETCOLUMNHIDDEN )
+HB_FUNC_STATIC( QTABLEVIEW_SETCOLUMNHIDDEN )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -377,7 +377,7 @@ HB_FUNC( QTABLEVIEW_SETCOLUMNHIDDEN )
 /*
 void setColumnWidth ( int column, int width )
 */
-HB_FUNC( QTABLEVIEW_SETCOLUMNWIDTH )
+HB_FUNC_STATIC( QTABLEVIEW_SETCOLUMNWIDTH )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -393,7 +393,7 @@ HB_FUNC( QTABLEVIEW_SETCOLUMNWIDTH )
 /*
 void setCornerButtonEnabled ( bool enable )
 */
-HB_FUNC( QTABLEVIEW_SETCORNERBUTTONENABLED )
+HB_FUNC_STATIC( QTABLEVIEW_SETCORNERBUTTONENABLED )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -408,7 +408,7 @@ HB_FUNC( QTABLEVIEW_SETCORNERBUTTONENABLED )
 /*
 void setGridStyle ( Qt::PenStyle style )
 */
-HB_FUNC( QTABLEVIEW_SETGRIDSTYLE )
+HB_FUNC_STATIC( QTABLEVIEW_SETGRIDSTYLE )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -423,7 +423,7 @@ HB_FUNC( QTABLEVIEW_SETGRIDSTYLE )
 /*
 void setHorizontalHeader ( QHeaderView * header )
 */
-HB_FUNC( QTABLEVIEW_SETHORIZONTALHEADER )
+HB_FUNC_STATIC( QTABLEVIEW_SETHORIZONTALHEADER )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -438,7 +438,7 @@ HB_FUNC( QTABLEVIEW_SETHORIZONTALHEADER )
 /*
 void setRowHeight ( int row, int height )
 */
-HB_FUNC( QTABLEVIEW_SETROWHEIGHT )
+HB_FUNC_STATIC( QTABLEVIEW_SETROWHEIGHT )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -454,7 +454,7 @@ HB_FUNC( QTABLEVIEW_SETROWHEIGHT )
 /*
 void setRowHidden ( int row, bool hide )
 */
-HB_FUNC( QTABLEVIEW_SETROWHIDDEN )
+HB_FUNC_STATIC( QTABLEVIEW_SETROWHIDDEN )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -470,7 +470,7 @@ HB_FUNC( QTABLEVIEW_SETROWHIDDEN )
 /*
 void setSortingEnabled ( bool enable )
 */
-HB_FUNC( QTABLEVIEW_SETSORTINGENABLED )
+HB_FUNC_STATIC( QTABLEVIEW_SETSORTINGENABLED )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -485,7 +485,7 @@ HB_FUNC( QTABLEVIEW_SETSORTINGENABLED )
 /*
 void setSpan ( int row, int column, int rowSpanCount, int columnSpanCount )
 */
-HB_FUNC( QTABLEVIEW_SETSPAN )
+HB_FUNC_STATIC( QTABLEVIEW_SETSPAN )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -503,7 +503,7 @@ HB_FUNC( QTABLEVIEW_SETSPAN )
 /*
 void setVerticalHeader ( QHeaderView * header )
 */
-HB_FUNC( QTABLEVIEW_SETVERTICALHEADER )
+HB_FUNC_STATIC( QTABLEVIEW_SETVERTICALHEADER )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -518,7 +518,7 @@ HB_FUNC( QTABLEVIEW_SETVERTICALHEADER )
 /*
 void setWordWrap ( bool on )
 */
-HB_FUNC( QTABLEVIEW_SETWORDWRAP )
+HB_FUNC_STATIC( QTABLEVIEW_SETWORDWRAP )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -533,7 +533,7 @@ HB_FUNC( QTABLEVIEW_SETWORDWRAP )
 /*
 bool showGrid () const
 */
-HB_FUNC( QTABLEVIEW_SHOWGRID )
+HB_FUNC_STATIC( QTABLEVIEW_SHOWGRID )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -547,7 +547,7 @@ HB_FUNC( QTABLEVIEW_SHOWGRID )
 /*
 void sortByColumn ( int column, Qt::SortOrder order )
 */
-HB_FUNC( QTABLEVIEW_SORTBYCOLUMN )
+HB_FUNC_STATIC( QTABLEVIEW_SORTBYCOLUMN )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -563,7 +563,7 @@ HB_FUNC( QTABLEVIEW_SORTBYCOLUMN )
 /*
 QHeaderView * verticalHeader () const
 */
-HB_FUNC( QTABLEVIEW_VERTICALHEADER )
+HB_FUNC_STATIC( QTABLEVIEW_VERTICALHEADER )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -576,7 +576,7 @@ HB_FUNC( QTABLEVIEW_VERTICALHEADER )
 /*
 bool wordWrap () const
 */
-HB_FUNC( QTABLEVIEW_WORDWRAP )
+HB_FUNC_STATIC( QTABLEVIEW_WORDWRAP )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -590,7 +590,7 @@ HB_FUNC( QTABLEVIEW_WORDWRAP )
 /*
 virtual QModelIndex indexAt ( const QPoint & pos ) const
 */
-HB_FUNC( QTABLEVIEW_INDEXAT )
+HB_FUNC_STATIC( QTABLEVIEW_INDEXAT )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -604,7 +604,7 @@ HB_FUNC( QTABLEVIEW_INDEXAT )
 /*
 virtual void setModel ( QAbstractItemModel * model )
 */
-HB_FUNC( QTABLEVIEW_SETMODEL )
+HB_FUNC_STATIC( QTABLEVIEW_SETMODEL )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -619,7 +619,7 @@ HB_FUNC( QTABLEVIEW_SETMODEL )
 /*
 virtual void setRootIndex ( const QModelIndex & index )
 */
-HB_FUNC( QTABLEVIEW_SETROOTINDEX )
+HB_FUNC_STATIC( QTABLEVIEW_SETROOTINDEX )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -634,7 +634,7 @@ HB_FUNC( QTABLEVIEW_SETROOTINDEX )
 /*
 virtual void setSelectionModel ( QItemSelectionModel * selectionModel )
 */
-HB_FUNC( QTABLEVIEW_SETSELECTIONMODEL )
+HB_FUNC_STATIC( QTABLEVIEW_SETSELECTIONMODEL )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -649,7 +649,7 @@ HB_FUNC( QTABLEVIEW_SETSELECTIONMODEL )
 /*
 void hideColumn ( int column )
 */
-HB_FUNC( QTABLEVIEW_HIDECOLUMN )
+HB_FUNC_STATIC( QTABLEVIEW_HIDECOLUMN )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -664,7 +664,7 @@ HB_FUNC( QTABLEVIEW_HIDECOLUMN )
 /*
 void hideRow ( int row )
 */
-HB_FUNC( QTABLEVIEW_HIDEROW )
+HB_FUNC_STATIC( QTABLEVIEW_HIDEROW )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -679,7 +679,7 @@ HB_FUNC( QTABLEVIEW_HIDEROW )
 /*
 void resizeColumnToContents ( int column )
 */
-HB_FUNC( QTABLEVIEW_RESIZECOLUMNTOCONTENTS )
+HB_FUNC_STATIC( QTABLEVIEW_RESIZECOLUMNTOCONTENTS )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -694,7 +694,7 @@ HB_FUNC( QTABLEVIEW_RESIZECOLUMNTOCONTENTS )
 /*
 void resizeColumnsToContents ()
 */
-HB_FUNC( QTABLEVIEW_RESIZECOLUMNSTOCONTENTS )
+HB_FUNC_STATIC( QTABLEVIEW_RESIZECOLUMNSTOCONTENTS )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -708,7 +708,7 @@ HB_FUNC( QTABLEVIEW_RESIZECOLUMNSTOCONTENTS )
 /*
 void resizeRowToContents ( int row )
 */
-HB_FUNC( QTABLEVIEW_RESIZEROWTOCONTENTS )
+HB_FUNC_STATIC( QTABLEVIEW_RESIZEROWTOCONTENTS )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -723,7 +723,7 @@ HB_FUNC( QTABLEVIEW_RESIZEROWTOCONTENTS )
 /*
 void resizeRowsToContents ()
 */
-HB_FUNC( QTABLEVIEW_RESIZEROWSTOCONTENTS )
+HB_FUNC_STATIC( QTABLEVIEW_RESIZEROWSTOCONTENTS )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -737,7 +737,7 @@ HB_FUNC( QTABLEVIEW_RESIZEROWSTOCONTENTS )
 /*
 void selectColumn ( int column )
 */
-HB_FUNC( QTABLEVIEW_SELECTCOLUMN )
+HB_FUNC_STATIC( QTABLEVIEW_SELECTCOLUMN )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -752,7 +752,7 @@ HB_FUNC( QTABLEVIEW_SELECTCOLUMN )
 /*
 void selectRow ( int row )
 */
-HB_FUNC( QTABLEVIEW_SELECTROW )
+HB_FUNC_STATIC( QTABLEVIEW_SELECTROW )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -767,7 +767,7 @@ HB_FUNC( QTABLEVIEW_SELECTROW )
 /*
 void setShowGrid ( bool show )
 */
-HB_FUNC( QTABLEVIEW_SETSHOWGRID )
+HB_FUNC_STATIC( QTABLEVIEW_SETSHOWGRID )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -782,7 +782,7 @@ HB_FUNC( QTABLEVIEW_SETSHOWGRID )
 /*
 void showColumn ( int column )
 */
-HB_FUNC( QTABLEVIEW_SHOWCOLUMN )
+HB_FUNC_STATIC( QTABLEVIEW_SHOWCOLUMN )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -797,7 +797,7 @@ HB_FUNC( QTABLEVIEW_SHOWCOLUMN )
 /*
 void showRow ( int row )
 */
-HB_FUNC( QTABLEVIEW_SHOWROW )
+HB_FUNC_STATIC( QTABLEVIEW_SHOWROW )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

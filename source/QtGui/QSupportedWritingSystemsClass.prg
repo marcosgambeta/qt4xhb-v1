@@ -99,7 +99,7 @@ RETURN
 /*
 QSupportedWritingSystems ()
 */
-HB_FUNC( QSUPPORTEDWRITINGSYSTEMS_NEW1 )
+HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_NEW1 )
 {
   QSupportedWritingSystems * o = NULL;
   o = new QSupportedWritingSystems (  );
@@ -114,7 +114,7 @@ HB_FUNC( QSUPPORTEDWRITINGSYSTEMS_NEW1 )
 /*
 QSupportedWritingSystems ( const QSupportedWritingSystems & other )
 */
-HB_FUNC( QSUPPORTEDWRITINGSYSTEMS_NEW2 )
+HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_NEW2 )
 {
   QSupportedWritingSystems * o = NULL;
   QSupportedWritingSystems * par1 = (QSupportedWritingSystems *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -130,7 +130,7 @@ HB_FUNC( QSUPPORTEDWRITINGSYSTEMS_NEW2 )
 //[1]QSupportedWritingSystems ()
 //[2]QSupportedWritingSystems ( const QSupportedWritingSystems & other )
 
-HB_FUNC( QSUPPORTEDWRITINGSYSTEMS_NEW )
+HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -146,7 +146,7 @@ HB_FUNC( QSUPPORTEDWRITINGSYSTEMS_NEW )
   }
 }
 
-HB_FUNC( QSUPPORTEDWRITINGSYSTEMS_DELETE )
+HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_DELETE )
 {
   QSupportedWritingSystems * obj = (QSupportedWritingSystems *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -165,7 +165,7 @@ HB_FUNC( QSUPPORTEDWRITINGSYSTEMS_DELETE )
 /*
 void setSupported ( QFontDatabase::WritingSystem writingSystem, bool support = true )
 */
-HB_FUNC( QSUPPORTEDWRITINGSYSTEMS_SETSUPPORTED )
+HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_SETSUPPORTED )
 {
   QSupportedWritingSystems * obj = (QSupportedWritingSystems *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -181,7 +181,7 @@ HB_FUNC( QSUPPORTEDWRITINGSYSTEMS_SETSUPPORTED )
 /*
 bool supported ( QFontDatabase::WritingSystem writingSystem ) const
 */
-HB_FUNC( QSUPPORTEDWRITINGSYSTEMS_SUPPORTED )
+HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_SUPPORTED )
 {
   QSupportedWritingSystems * obj = (QSupportedWritingSystems *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

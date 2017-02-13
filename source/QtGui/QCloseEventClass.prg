@@ -60,7 +60,7 @@ RETURN
 /*
 QCloseEvent ()
 */
-HB_FUNC( QCLOSEEVENT_NEW )
+HB_FUNC_STATIC( QCLOSEEVENT_NEW )
 {
   QCloseEvent * o = NULL;
   o = new QCloseEvent (  );
@@ -72,7 +72,7 @@ HB_FUNC( QCLOSEEVENT_NEW )
 }
 
 
-HB_FUNC( QCLOSEEVENT_DELETE )
+HB_FUNC_STATIC( QCLOSEEVENT_DELETE )
 {
   QCloseEvent * obj = (QCloseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

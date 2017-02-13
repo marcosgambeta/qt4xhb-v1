@@ -61,7 +61,7 @@ RETURN
 /*
 QDateEdit ( QWidget * parent = 0 )
 */
-HB_FUNC( QDATEEDIT_NEW1 )
+HB_FUNC_STATIC( QDATEEDIT_NEW1 )
 {
   QDateEdit * o = NULL;
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -77,7 +77,7 @@ HB_FUNC( QDATEEDIT_NEW1 )
 /*
 QDateEdit ( const QDate & date, QWidget * parent = 0 )
 */
-HB_FUNC( QDATEEDIT_NEW2 )
+HB_FUNC_STATIC( QDATEEDIT_NEW2 )
 {
   QDateEdit * o = NULL;
   QDate * par1 = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -94,7 +94,7 @@ HB_FUNC( QDATEEDIT_NEW2 )
 //[1]QDateEdit ( QWidget * parent = 0 )
 //[2]QDateEdit ( const QDate & date, QWidget * parent = 0 )
 
-HB_FUNC( QDATEEDIT_NEW )
+HB_FUNC_STATIC( QDATEEDIT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {

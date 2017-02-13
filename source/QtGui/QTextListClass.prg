@@ -68,7 +68,7 @@ RETURN
 #include "qt4xhb_clsid.h"
 #include "qt4xhb_utils.h"
 
-HB_FUNC( QTEXTLIST_DELETE )
+HB_FUNC_STATIC( QTEXTLIST_DELETE )
 {
   QTextList * obj = (QTextList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -87,7 +87,7 @@ HB_FUNC( QTEXTLIST_DELETE )
 /*
 void add ( const QTextBlock & block )
 */
-HB_FUNC( QTEXTLIST_ADD )
+HB_FUNC_STATIC( QTEXTLIST_ADD )
 {
   QTextList * obj = (QTextList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -102,7 +102,7 @@ HB_FUNC( QTEXTLIST_ADD )
 /*
 int count () const
 */
-HB_FUNC( QTEXTLIST_COUNT )
+HB_FUNC_STATIC( QTEXTLIST_COUNT )
 {
   QTextList * obj = (QTextList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -116,7 +116,7 @@ HB_FUNC( QTEXTLIST_COUNT )
 /*
 QTextListFormat format () const
 */
-HB_FUNC( QTEXTLIST_FORMAT )
+HB_FUNC_STATIC( QTEXTLIST_FORMAT )
 {
   QTextList * obj = (QTextList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -129,7 +129,7 @@ HB_FUNC( QTEXTLIST_FORMAT )
 /*
 QTextBlock item ( int i ) const
 */
-HB_FUNC( QTEXTLIST_ITEM )
+HB_FUNC_STATIC( QTEXTLIST_ITEM )
 {
   QTextList * obj = (QTextList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -143,7 +143,7 @@ HB_FUNC( QTEXTLIST_ITEM )
 /*
 int itemNumber ( const QTextBlock & block ) const
 */
-HB_FUNC( QTEXTLIST_ITEMNUMBER )
+HB_FUNC_STATIC( QTEXTLIST_ITEMNUMBER )
 {
   QTextList * obj = (QTextList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -158,7 +158,7 @@ HB_FUNC( QTEXTLIST_ITEMNUMBER )
 /*
 QString itemText ( const QTextBlock & block ) const
 */
-HB_FUNC( QTEXTLIST_ITEMTEXT )
+HB_FUNC_STATIC( QTEXTLIST_ITEMTEXT )
 {
   QTextList * obj = (QTextList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -173,7 +173,7 @@ HB_FUNC( QTEXTLIST_ITEMTEXT )
 /*
 void remove ( const QTextBlock & block )
 */
-HB_FUNC( QTEXTLIST_REMOVE )
+HB_FUNC_STATIC( QTEXTLIST_REMOVE )
 {
   QTextList * obj = (QTextList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -188,7 +188,7 @@ HB_FUNC( QTEXTLIST_REMOVE )
 /*
 void removeItem ( int i )
 */
-HB_FUNC( QTEXTLIST_REMOVEITEM )
+HB_FUNC_STATIC( QTEXTLIST_REMOVEITEM )
 {
   QTextList * obj = (QTextList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -203,7 +203,7 @@ HB_FUNC( QTEXTLIST_REMOVEITEM )
 /*
 void setFormat ( const QTextListFormat & format )
 */
-HB_FUNC( QTEXTLIST_SETFORMAT )
+HB_FUNC_STATIC( QTEXTLIST_SETFORMAT )
 {
   QTextList * obj = (QTextList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

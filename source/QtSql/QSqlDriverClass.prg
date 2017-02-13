@@ -93,7 +93,7 @@ RETURN
 #include <QVariant>
 
 
-HB_FUNC( QSQLDRIVER_DELETE )
+HB_FUNC_STATIC( QSQLDRIVER_DELETE )
 {
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -112,7 +112,7 @@ HB_FUNC( QSQLDRIVER_DELETE )
 /*
 virtual bool beginTransaction ()
 */
-HB_FUNC( QSQLDRIVER_BEGINTRANSACTION )
+HB_FUNC_STATIC( QSQLDRIVER_BEGINTRANSACTION )
 {
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -126,7 +126,7 @@ HB_FUNC( QSQLDRIVER_BEGINTRANSACTION )
 /*
 virtual void close () = 0
 */
-HB_FUNC( QSQLDRIVER_CLOSE )
+HB_FUNC_STATIC( QSQLDRIVER_CLOSE )
 {
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -140,7 +140,7 @@ HB_FUNC( QSQLDRIVER_CLOSE )
 /*
 virtual bool commitTransaction ()
 */
-HB_FUNC( QSQLDRIVER_COMMITTRANSACTION )
+HB_FUNC_STATIC( QSQLDRIVER_COMMITTRANSACTION )
 {
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -154,7 +154,7 @@ HB_FUNC( QSQLDRIVER_COMMITTRANSACTION )
 /*
 virtual QSqlResult * createResult () const = 0
 */
-HB_FUNC( QSQLDRIVER_CREATERESULT )
+HB_FUNC_STATIC( QSQLDRIVER_CREATERESULT )
 {
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -167,7 +167,7 @@ HB_FUNC( QSQLDRIVER_CREATERESULT )
 /*
 virtual QString escapeIdentifier ( const QString & identifier, IdentifierType type ) const
 */
-HB_FUNC( QSQLDRIVER_ESCAPEIDENTIFIER )
+HB_FUNC_STATIC( QSQLDRIVER_ESCAPEIDENTIFIER )
 {
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -183,7 +183,7 @@ HB_FUNC( QSQLDRIVER_ESCAPEIDENTIFIER )
 /*
 virtual QString formatValue ( const QSqlField & field, bool trimStrings = false ) const
 */
-HB_FUNC( QSQLDRIVER_FORMATVALUE )
+HB_FUNC_STATIC( QSQLDRIVER_FORMATVALUE )
 {
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -199,7 +199,7 @@ HB_FUNC( QSQLDRIVER_FORMATVALUE )
 /*
 virtual QVariant handle () const
 */
-HB_FUNC( QSQLDRIVER_HANDLE )
+HB_FUNC_STATIC( QSQLDRIVER_HANDLE )
 {
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -212,7 +212,7 @@ HB_FUNC( QSQLDRIVER_HANDLE )
 /*
 virtual bool hasFeature ( DriverFeature feature ) const = 0
 */
-HB_FUNC( QSQLDRIVER_HASFEATURE )
+HB_FUNC_STATIC( QSQLDRIVER_HASFEATURE )
 {
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -227,7 +227,7 @@ HB_FUNC( QSQLDRIVER_HASFEATURE )
 /*
 bool isIdentifierEscaped ( const QString & identifier, IdentifierType type ) const
 */
-HB_FUNC( QSQLDRIVER_ISIDENTIFIERESCAPED )
+HB_FUNC_STATIC( QSQLDRIVER_ISIDENTIFIERESCAPED )
 {
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -243,7 +243,7 @@ HB_FUNC( QSQLDRIVER_ISIDENTIFIERESCAPED )
 /*
 virtual bool isOpen () const
 */
-HB_FUNC( QSQLDRIVER_ISOPEN )
+HB_FUNC_STATIC( QSQLDRIVER_ISOPEN )
 {
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -257,7 +257,7 @@ HB_FUNC( QSQLDRIVER_ISOPEN )
 /*
 bool isOpenError () const
 */
-HB_FUNC( QSQLDRIVER_ISOPENERROR )
+HB_FUNC_STATIC( QSQLDRIVER_ISOPENERROR )
 {
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -271,7 +271,7 @@ HB_FUNC( QSQLDRIVER_ISOPENERROR )
 /*
 QSqlError lastError () const
 */
-HB_FUNC( QSQLDRIVER_LASTERROR )
+HB_FUNC_STATIC( QSQLDRIVER_LASTERROR )
 {
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -284,7 +284,7 @@ HB_FUNC( QSQLDRIVER_LASTERROR )
 /*
 QSql::NumericalPrecisionPolicy numericalPrecisionPolicy () const
 */
-HB_FUNC( QSQLDRIVER_NUMERICALPRECISIONPOLICY )
+HB_FUNC_STATIC( QSQLDRIVER_NUMERICALPRECISIONPOLICY )
 {
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -298,7 +298,7 @@ HB_FUNC( QSQLDRIVER_NUMERICALPRECISIONPOLICY )
 /*
 virtual bool open ( const QString & db, const QString & user = QString(), const QString & password = QString(), const QString & host = QString(), int port = -1, const QString & options = QString() ) = 0
 */
-HB_FUNC( QSQLDRIVER_OPEN )
+HB_FUNC_STATIC( QSQLDRIVER_OPEN )
 {
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -318,7 +318,7 @@ HB_FUNC( QSQLDRIVER_OPEN )
 /*
 virtual QSqlIndex primaryIndex ( const QString & tableName ) const
 */
-HB_FUNC( QSQLDRIVER_PRIMARYINDEX )
+HB_FUNC_STATIC( QSQLDRIVER_PRIMARYINDEX )
 {
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -332,7 +332,7 @@ HB_FUNC( QSQLDRIVER_PRIMARYINDEX )
 /*
 virtual QSqlRecord record ( const QString & tableName ) const
 */
-HB_FUNC( QSQLDRIVER_RECORD )
+HB_FUNC_STATIC( QSQLDRIVER_RECORD )
 {
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -346,7 +346,7 @@ HB_FUNC( QSQLDRIVER_RECORD )
 /*
 virtual bool rollbackTransaction ()
 */
-HB_FUNC( QSQLDRIVER_ROLLBACKTRANSACTION )
+HB_FUNC_STATIC( QSQLDRIVER_ROLLBACKTRANSACTION )
 {
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -360,7 +360,7 @@ HB_FUNC( QSQLDRIVER_ROLLBACKTRANSACTION )
 /*
 void setNumericalPrecisionPolicy ( QSql::NumericalPrecisionPolicy precisionPolicy )
 */
-HB_FUNC( QSQLDRIVER_SETNUMERICALPRECISIONPOLICY )
+HB_FUNC_STATIC( QSQLDRIVER_SETNUMERICALPRECISIONPOLICY )
 {
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -375,7 +375,7 @@ HB_FUNC( QSQLDRIVER_SETNUMERICALPRECISIONPOLICY )
 /*
 virtual QString sqlStatement ( StatementType type, const QString & tableName, const QSqlRecord & rec, bool preparedStatement ) const
 */
-HB_FUNC( QSQLDRIVER_SQLSTATEMENT )
+HB_FUNC_STATIC( QSQLDRIVER_SQLSTATEMENT )
 {
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -393,7 +393,7 @@ HB_FUNC( QSQLDRIVER_SQLSTATEMENT )
 /*
 QString stripDelimiters ( const QString & identifier, IdentifierType type ) const
 */
-HB_FUNC( QSQLDRIVER_STRIPDELIMITERS )
+HB_FUNC_STATIC( QSQLDRIVER_STRIPDELIMITERS )
 {
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -409,7 +409,7 @@ HB_FUNC( QSQLDRIVER_STRIPDELIMITERS )
 /*
 bool subscribeToNotification ( const QString & name )
 */
-HB_FUNC( QSQLDRIVER_SUBSCRIBETONOTIFICATION )
+HB_FUNC_STATIC( QSQLDRIVER_SUBSCRIBETONOTIFICATION )
 {
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -424,7 +424,7 @@ HB_FUNC( QSQLDRIVER_SUBSCRIBETONOTIFICATION )
 /*
 QStringList subscribedToNotifications () const
 */
-HB_FUNC( QSQLDRIVER_SUBSCRIBEDTONOTIFICATIONS )
+HB_FUNC_STATIC( QSQLDRIVER_SUBSCRIBEDTONOTIFICATIONS )
 {
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -447,7 +447,7 @@ HB_FUNC( QSQLDRIVER_SUBSCRIBEDTONOTIFICATIONS )
 /*
 virtual QStringList tables ( QSql::TableType tableType ) const
 */
-HB_FUNC( QSQLDRIVER_TABLES )
+HB_FUNC_STATIC( QSQLDRIVER_TABLES )
 {
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -471,7 +471,7 @@ HB_FUNC( QSQLDRIVER_TABLES )
 /*
 bool unsubscribeFromNotification ( const QString & name )
 */
-HB_FUNC( QSQLDRIVER_UNSUBSCRIBEFROMNOTIFICATION )
+HB_FUNC_STATIC( QSQLDRIVER_UNSUBSCRIBEFROMNOTIFICATION )
 {
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

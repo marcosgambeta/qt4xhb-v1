@@ -69,7 +69,7 @@ RETURN
 //[2]QSyntaxHighlighter ( QTextDocument * parent )
 //[3]QSyntaxHighlighter ( QTextEdit * parent )
 
-//HB_FUNC( QSYNTAXHIGHLIGHTER_NEW )
+//HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_NEW )
 //{
 //  if( ISNUMPAR(1) && ISQOBJECT(1) )
 //  {
@@ -79,7 +79,7 @@ RETURN
 //  }
 //}
 
-HB_FUNC( QSYNTAXHIGHLIGHTER_DELETE )
+HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_DELETE )
 {
   QSyntaxHighlighter * obj = (QSyntaxHighlighter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -98,7 +98,7 @@ HB_FUNC( QSYNTAXHIGHLIGHTER_DELETE )
 /*
 QTextDocument * document () const
 */
-HB_FUNC( QSYNTAXHIGHLIGHTER_DOCUMENT )
+HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_DOCUMENT )
 {
   QSyntaxHighlighter * obj = (QSyntaxHighlighter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -111,7 +111,7 @@ HB_FUNC( QSYNTAXHIGHLIGHTER_DOCUMENT )
 /*
 void setDocument ( QTextDocument * doc )
 */
-HB_FUNC( QSYNTAXHIGHLIGHTER_SETDOCUMENT )
+HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_SETDOCUMENT )
 {
   QSyntaxHighlighter * obj = (QSyntaxHighlighter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -126,7 +126,7 @@ HB_FUNC( QSYNTAXHIGHLIGHTER_SETDOCUMENT )
 /*
 void rehighlight ()
 */
-HB_FUNC( QSYNTAXHIGHLIGHTER_REHIGHLIGHT )
+HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_REHIGHLIGHT )
 {
   QSyntaxHighlighter * obj = (QSyntaxHighlighter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -140,7 +140,7 @@ HB_FUNC( QSYNTAXHIGHLIGHTER_REHIGHLIGHT )
 /*
 void rehighlightBlock ( const QTextBlock & block )
 */
-HB_FUNC( QSYNTAXHIGHLIGHTER_REHIGHLIGHTBLOCK )
+HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_REHIGHLIGHTBLOCK )
 {
   QSyntaxHighlighter * obj = (QSyntaxHighlighter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

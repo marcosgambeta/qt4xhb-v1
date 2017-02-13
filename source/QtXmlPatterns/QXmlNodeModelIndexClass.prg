@@ -104,7 +104,7 @@ RETURN
 /*
 QXmlNodeModelIndex ()
 */
-HB_FUNC( QXMLNODEMODELINDEX_NEW1 )
+HB_FUNC_STATIC( QXMLNODEMODELINDEX_NEW1 )
 {
   QXmlNodeModelIndex * o = NULL;
   o = new QXmlNodeModelIndex (  );
@@ -122,7 +122,7 @@ HB_FUNC( QXMLNODEMODELINDEX_NEW1 )
 /*
 QXmlNodeModelIndex ( const QXmlNodeModelIndex & other )
 */
-HB_FUNC( QXMLNODEMODELINDEX_NEW2 )
+HB_FUNC_STATIC( QXMLNODEMODELINDEX_NEW2 )
 {
   QXmlNodeModelIndex * o = NULL;
   QXmlNodeModelIndex * par1 = (QXmlNodeModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -141,7 +141,7 @@ HB_FUNC( QXMLNODEMODELINDEX_NEW2 )
 //[1]QXmlNodeModelIndex ()
 //[2]QXmlNodeModelIndex ( const QXmlNodeModelIndex & other )
 
-HB_FUNC( QXMLNODEMODELINDEX_NEW )
+HB_FUNC_STATIC( QXMLNODEMODELINDEX_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -162,7 +162,7 @@ HB_FUNC( QXMLNODEMODELINDEX_NEW )
 /*
 qint64 additionalData () const
 */
-HB_FUNC( QXMLNODEMODELINDEX_ADDITIONALDATA )
+HB_FUNC_STATIC( QXMLNODEMODELINDEX_ADDITIONALDATA )
 {
   QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -176,7 +176,7 @@ HB_FUNC( QXMLNODEMODELINDEX_ADDITIONALDATA )
 /*
 qint64 data () const
 */
-HB_FUNC( QXMLNODEMODELINDEX_DATA )
+HB_FUNC_STATIC( QXMLNODEMODELINDEX_DATA )
 {
   QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -190,7 +190,7 @@ HB_FUNC( QXMLNODEMODELINDEX_DATA )
 /*
 void * internalPointer () const
 */
-HB_FUNC( QXMLNODEMODELINDEX_INTERNALPOINTER )
+HB_FUNC_STATIC( QXMLNODEMODELINDEX_INTERNALPOINTER )
 {
   QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -204,7 +204,7 @@ HB_FUNC( QXMLNODEMODELINDEX_INTERNALPOINTER )
 /*
 bool isNull () const
 */
-HB_FUNC( QXMLNODEMODELINDEX_ISNULL )
+HB_FUNC_STATIC( QXMLNODEMODELINDEX_ISNULL )
 {
   QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -218,7 +218,7 @@ HB_FUNC( QXMLNODEMODELINDEX_ISNULL )
 /*
 const QAbstractXmlNodeModel * model () const
 */
-HB_FUNC( QXMLNODEMODELINDEX_MODEL )
+HB_FUNC_STATIC( QXMLNODEMODELINDEX_MODEL )
 {
   QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

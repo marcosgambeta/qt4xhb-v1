@@ -62,7 +62,7 @@ RETURN
 #include <QUrl>
 
 
-HB_FUNC( QABSTRACTURIRESOLVER_DELETE )
+HB_FUNC_STATIC( QABSTRACTURIRESOLVER_DELETE )
 {
   QAbstractUriResolver * obj = (QAbstractUriResolver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -81,7 +81,7 @@ HB_FUNC( QABSTRACTURIRESOLVER_DELETE )
 /*
 virtual QUrl resolve ( const QUrl & relative, const QUrl & baseURI ) const = 0
 */
-HB_FUNC( QABSTRACTURIRESOLVER_RESOLVE )
+HB_FUNC_STATIC( QABSTRACTURIRESOLVER_RESOLVE )
 {
   QAbstractUriResolver * obj = (QAbstractUriResolver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

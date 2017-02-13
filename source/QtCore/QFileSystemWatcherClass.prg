@@ -72,7 +72,7 @@ RETURN
 /*
 QFileSystemWatcher(QObject * parent = 0)
 */
-HB_FUNC( QFILESYSTEMWATCHER_NEW1 )
+HB_FUNC_STATIC( QFILESYSTEMWATCHER_NEW1 )
 {
   QFileSystemWatcher * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -88,7 +88,7 @@ HB_FUNC( QFILESYSTEMWATCHER_NEW1 )
 /*
 QFileSystemWatcher(const QStringList & paths, QObject * parent = 0)
 */
-HB_FUNC( QFILESYSTEMWATCHER_NEW2 )
+HB_FUNC_STATIC( QFILESYSTEMWATCHER_NEW2 )
 {
   QFileSystemWatcher * o = NULL;
 QStringList par1;
@@ -113,7 +113,7 @@ par1 << temp;
 //[1]QFileSystemWatcher(QObject * parent = 0)
 //[2]QFileSystemWatcher(const QStringList & paths, QObject * parent = 0)
 
-HB_FUNC( QFILESYSTEMWATCHER_NEW )
+HB_FUNC_STATIC( QFILESYSTEMWATCHER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
@@ -129,7 +129,7 @@ HB_FUNC( QFILESYSTEMWATCHER_NEW )
   }
 }
 
-HB_FUNC( QFILESYSTEMWATCHER_DELETE )
+HB_FUNC_STATIC( QFILESYSTEMWATCHER_DELETE )
 {
   QFileSystemWatcher * obj = (QFileSystemWatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -148,7 +148,7 @@ HB_FUNC( QFILESYSTEMWATCHER_DELETE )
 /*
 void addPath ( const QString & path )
 */
-HB_FUNC( QFILESYSTEMWATCHER_ADDPATH )
+HB_FUNC_STATIC( QFILESYSTEMWATCHER_ADDPATH )
 {
   QFileSystemWatcher * obj = (QFileSystemWatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -163,7 +163,7 @@ HB_FUNC( QFILESYSTEMWATCHER_ADDPATH )
 /*
 void addPaths ( const QStringList & paths )
 */
-HB_FUNC( QFILESYSTEMWATCHER_ADDPATHS )
+HB_FUNC_STATIC( QFILESYSTEMWATCHER_ADDPATHS )
 {
   QFileSystemWatcher * obj = (QFileSystemWatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -186,7 +186,7 @@ par1 << temp;
 /*
 QStringList directories () const
 */
-HB_FUNC( QFILESYSTEMWATCHER_DIRECTORIES )
+HB_FUNC_STATIC( QFILESYSTEMWATCHER_DIRECTORIES )
 {
   QFileSystemWatcher * obj = (QFileSystemWatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -209,7 +209,7 @@ HB_FUNC( QFILESYSTEMWATCHER_DIRECTORIES )
 /*
 QStringList files () const
 */
-HB_FUNC( QFILESYSTEMWATCHER_FILES )
+HB_FUNC_STATIC( QFILESYSTEMWATCHER_FILES )
 {
   QFileSystemWatcher * obj = (QFileSystemWatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -232,7 +232,7 @@ HB_FUNC( QFILESYSTEMWATCHER_FILES )
 /*
 void removePath ( const QString & path )
 */
-HB_FUNC( QFILESYSTEMWATCHER_REMOVEPATH )
+HB_FUNC_STATIC( QFILESYSTEMWATCHER_REMOVEPATH )
 {
   QFileSystemWatcher * obj = (QFileSystemWatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -247,7 +247,7 @@ HB_FUNC( QFILESYSTEMWATCHER_REMOVEPATH )
 /*
 void removePaths ( const QStringList & paths )
 */
-HB_FUNC( QFILESYSTEMWATCHER_REMOVEPATHS )
+HB_FUNC_STATIC( QFILESYSTEMWATCHER_REMOVEPATHS )
 {
   QFileSystemWatcher * obj = (QFileSystemWatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

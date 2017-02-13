@@ -66,7 +66,7 @@ RETURN
 /*
 QDomEntity ()
 */
-HB_FUNC( QDOMENTITY_NEW1 )
+HB_FUNC_STATIC( QDOMENTITY_NEW1 )
 {
   QDomEntity * o = NULL;
   o = new QDomEntity (  );
@@ -84,7 +84,7 @@ HB_FUNC( QDOMENTITY_NEW1 )
 /*
 QDomEntity ( const QDomEntity & x )
 */
-HB_FUNC( QDOMENTITY_NEW2 )
+HB_FUNC_STATIC( QDOMENTITY_NEW2 )
 {
   QDomEntity * o = NULL;
   QDomEntity * par1 = (QDomEntity *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -103,7 +103,7 @@ HB_FUNC( QDOMENTITY_NEW2 )
 //[1]QDomEntity ()
 //[2]QDomEntity ( const QDomEntity & x )
 
-HB_FUNC( QDOMENTITY_NEW )
+HB_FUNC_STATIC( QDOMENTITY_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -124,7 +124,7 @@ HB_FUNC( QDOMENTITY_NEW )
 /*
 QDomNode::NodeType nodeType () const
 */
-HB_FUNC( QDOMENTITY_NODETYPE )
+HB_FUNC_STATIC( QDOMENTITY_NODETYPE )
 {
   QDomEntity * obj = (QDomEntity *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -138,7 +138,7 @@ HB_FUNC( QDOMENTITY_NODETYPE )
 /*
 QString notationName () const
 */
-HB_FUNC( QDOMENTITY_NOTATIONNAME )
+HB_FUNC_STATIC( QDOMENTITY_NOTATIONNAME )
 {
   QDomEntity * obj = (QDomEntity *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -152,7 +152,7 @@ HB_FUNC( QDOMENTITY_NOTATIONNAME )
 /*
 QString publicId () const
 */
-HB_FUNC( QDOMENTITY_PUBLICID )
+HB_FUNC_STATIC( QDOMENTITY_PUBLICID )
 {
   QDomEntity * obj = (QDomEntity *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -166,7 +166,7 @@ HB_FUNC( QDOMENTITY_PUBLICID )
 /*
 QString systemId () const
 */
-HB_FUNC( QDOMENTITY_SYSTEMID )
+HB_FUNC_STATIC( QDOMENTITY_SYSTEMID )
 {
   QDomEntity * obj = (QDomEntity *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

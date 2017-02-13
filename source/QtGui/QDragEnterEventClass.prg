@@ -60,7 +60,7 @@ RETURN
 /*
 QDragEnterEvent ( const QPoint & point, Qt::DropActions actions, const QMimeData * data, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers )
 */
-HB_FUNC( QDRAGENTEREVENT_NEW )
+HB_FUNC_STATIC( QDRAGENTEREVENT_NEW )
 {
   QDragEnterEvent * o = NULL;
   QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -77,7 +77,7 @@ HB_FUNC( QDRAGENTEREVENT_NEW )
 }
 
 
-HB_FUNC( QDRAGENTEREVENT_DELETE )
+HB_FUNC_STATIC( QDRAGENTEREVENT_DELETE )
 {
   QDragEnterEvent * obj = (QDragEnterEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

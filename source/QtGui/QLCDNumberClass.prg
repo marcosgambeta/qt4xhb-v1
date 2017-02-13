@@ -87,7 +87,7 @@ RETURN
 /*
 QLCDNumber ( QWidget * parent = 0 )
 */
-HB_FUNC( QLCDNUMBER_NEW1 )
+HB_FUNC_STATIC( QLCDNUMBER_NEW1 )
 {
   QLCDNumber * o = NULL;
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -103,7 +103,7 @@ HB_FUNC( QLCDNUMBER_NEW1 )
 /*
 QLCDNumber ( uint numDigits, QWidget * parent = 0 )
 */
-HB_FUNC( QLCDNUMBER_NEW2 )
+HB_FUNC_STATIC( QLCDNUMBER_NEW2 )
 {
   QLCDNumber * o = NULL;
   uint par1 = hb_parni(1);
@@ -120,7 +120,7 @@ HB_FUNC( QLCDNUMBER_NEW2 )
 //[1]QLCDNumber ( QWidget * parent = 0 )
 //[2]QLCDNumber ( uint numDigits, QWidget * parent = 0 )
 
-HB_FUNC( QLCDNUMBER_NEW )
+HB_FUNC_STATIC( QLCDNUMBER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
@@ -136,7 +136,7 @@ HB_FUNC( QLCDNUMBER_NEW )
   }
 }
 
-HB_FUNC( QLCDNUMBER_DELETE )
+HB_FUNC_STATIC( QLCDNUMBER_DELETE )
 {
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -155,7 +155,7 @@ HB_FUNC( QLCDNUMBER_DELETE )
 /*
 bool checkOverflow ( double num ) const
 */
-HB_FUNC( QLCDNUMBER_CHECKOVERFLOW1 )
+HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW1 )
 {
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -170,7 +170,7 @@ HB_FUNC( QLCDNUMBER_CHECKOVERFLOW1 )
 /*
 bool checkOverflow ( int num ) const
 */
-HB_FUNC( QLCDNUMBER_CHECKOVERFLOW2 )
+HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW2 )
 {
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -186,7 +186,7 @@ HB_FUNC( QLCDNUMBER_CHECKOVERFLOW2 )
 //[2]bool checkOverflow ( int num ) const
 
 // TODO: reconhecer se é int ou double
-HB_FUNC( QLCDNUMBER_CHECKOVERFLOW )
+HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
@@ -197,7 +197,7 @@ HB_FUNC( QLCDNUMBER_CHECKOVERFLOW )
 /*
 int digitCount () const
 */
-HB_FUNC( QLCDNUMBER_DIGITCOUNT )
+HB_FUNC_STATIC( QLCDNUMBER_DIGITCOUNT )
 {
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -211,7 +211,7 @@ HB_FUNC( QLCDNUMBER_DIGITCOUNT )
 /*
 int intValue () const
 */
-HB_FUNC( QLCDNUMBER_INTVALUE )
+HB_FUNC_STATIC( QLCDNUMBER_INTVALUE )
 {
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -225,7 +225,7 @@ HB_FUNC( QLCDNUMBER_INTVALUE )
 /*
 Mode mode () const
 */
-HB_FUNC( QLCDNUMBER_MODE )
+HB_FUNC_STATIC( QLCDNUMBER_MODE )
 {
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -239,7 +239,7 @@ HB_FUNC( QLCDNUMBER_MODE )
 /*
 SegmentStyle segmentStyle () const
 */
-HB_FUNC( QLCDNUMBER_SEGMENTSTYLE )
+HB_FUNC_STATIC( QLCDNUMBER_SEGMENTSTYLE )
 {
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -253,7 +253,7 @@ HB_FUNC( QLCDNUMBER_SEGMENTSTYLE )
 /*
 void setDigitCount ( int numDigits )
 */
-HB_FUNC( QLCDNUMBER_SETDIGITCOUNT )
+HB_FUNC_STATIC( QLCDNUMBER_SETDIGITCOUNT )
 {
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -268,7 +268,7 @@ HB_FUNC( QLCDNUMBER_SETDIGITCOUNT )
 /*
 void setMode ( Mode )
 */
-HB_FUNC( QLCDNUMBER_SETMODE )
+HB_FUNC_STATIC( QLCDNUMBER_SETMODE )
 {
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -283,7 +283,7 @@ HB_FUNC( QLCDNUMBER_SETMODE )
 /*
 void setSegmentStyle ( SegmentStyle )
 */
-HB_FUNC( QLCDNUMBER_SETSEGMENTSTYLE )
+HB_FUNC_STATIC( QLCDNUMBER_SETSEGMENTSTYLE )
 {
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -298,7 +298,7 @@ HB_FUNC( QLCDNUMBER_SETSEGMENTSTYLE )
 /*
 bool smallDecimalPoint () const
 */
-HB_FUNC( QLCDNUMBER_SMALLDECIMALPOINT )
+HB_FUNC_STATIC( QLCDNUMBER_SMALLDECIMALPOINT )
 {
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -312,7 +312,7 @@ HB_FUNC( QLCDNUMBER_SMALLDECIMALPOINT )
 /*
 double value () const
 */
-HB_FUNC( QLCDNUMBER_VALUE )
+HB_FUNC_STATIC( QLCDNUMBER_VALUE )
 {
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -326,7 +326,7 @@ HB_FUNC( QLCDNUMBER_VALUE )
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC( QLCDNUMBER_SIZEHINT )
+HB_FUNC_STATIC( QLCDNUMBER_SIZEHINT )
 {
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -339,7 +339,7 @@ HB_FUNC( QLCDNUMBER_SIZEHINT )
 /*
 void display ( const QString & s )
 */
-HB_FUNC( QLCDNUMBER_DISPLAY1 )
+HB_FUNC_STATIC( QLCDNUMBER_DISPLAY1 )
 {
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -354,7 +354,7 @@ HB_FUNC( QLCDNUMBER_DISPLAY1 )
 /*
 void display ( double num )
 */
-HB_FUNC( QLCDNUMBER_DISPLAY2 )
+HB_FUNC_STATIC( QLCDNUMBER_DISPLAY2 )
 {
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -369,7 +369,7 @@ HB_FUNC( QLCDNUMBER_DISPLAY2 )
 /*
 void display ( int num )
 */
-HB_FUNC( QLCDNUMBER_DISPLAY3 )
+HB_FUNC_STATIC( QLCDNUMBER_DISPLAY3 )
 {
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -387,7 +387,7 @@ HB_FUNC( QLCDNUMBER_DISPLAY3 )
 
 // TODO: reconhecer se é int ou double
 
-HB_FUNC( QLCDNUMBER_DISPLAY )
+HB_FUNC_STATIC( QLCDNUMBER_DISPLAY )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
@@ -402,7 +402,7 @@ HB_FUNC( QLCDNUMBER_DISPLAY )
 /*
 void setBinMode ()
 */
-HB_FUNC( QLCDNUMBER_SETBINMODE )
+HB_FUNC_STATIC( QLCDNUMBER_SETBINMODE )
 {
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -416,7 +416,7 @@ HB_FUNC( QLCDNUMBER_SETBINMODE )
 /*
 void setDecMode ()
 */
-HB_FUNC( QLCDNUMBER_SETDECMODE )
+HB_FUNC_STATIC( QLCDNUMBER_SETDECMODE )
 {
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -430,7 +430,7 @@ HB_FUNC( QLCDNUMBER_SETDECMODE )
 /*
 void setHexMode ()
 */
-HB_FUNC( QLCDNUMBER_SETHEXMODE )
+HB_FUNC_STATIC( QLCDNUMBER_SETHEXMODE )
 {
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -444,7 +444,7 @@ HB_FUNC( QLCDNUMBER_SETHEXMODE )
 /*
 void setOctMode ()
 */
-HB_FUNC( QLCDNUMBER_SETOCTMODE )
+HB_FUNC_STATIC( QLCDNUMBER_SETOCTMODE )
 {
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -458,7 +458,7 @@ HB_FUNC( QLCDNUMBER_SETOCTMODE )
 /*
 void setSmallDecimalPoint ( bool )
 */
-HB_FUNC( QLCDNUMBER_SETSMALLDECIMALPOINT )
+HB_FUNC_STATIC( QLCDNUMBER_SETSMALLDECIMALPOINT )
 {
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

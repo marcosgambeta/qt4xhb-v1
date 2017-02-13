@@ -99,7 +99,7 @@ RETURN
 #include "qt4xhb_clsid.h"
 #include "qt4xhb_utils.h"
 
-HB_FUNC( QPRINTENGINE_DELETE )
+HB_FUNC_STATIC( QPRINTENGINE_DELETE )
 {
   QPrintEngine * obj = (QPrintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -118,7 +118,7 @@ HB_FUNC( QPRINTENGINE_DELETE )
 /*
 virtual bool abort () = 0
 */
-HB_FUNC( QPRINTENGINE_ABORT )
+HB_FUNC_STATIC( QPRINTENGINE_ABORT )
 {
   QPrintEngine * obj = (QPrintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -132,7 +132,7 @@ HB_FUNC( QPRINTENGINE_ABORT )
 /*
 virtual int metric ( QPaintDevice::PaintDeviceMetric id ) const = 0
 */
-HB_FUNC( QPRINTENGINE_METRIC )
+HB_FUNC_STATIC( QPRINTENGINE_METRIC )
 {
   QPrintEngine * obj = (QPrintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -147,7 +147,7 @@ HB_FUNC( QPRINTENGINE_METRIC )
 /*
 virtual bool newPage () = 0
 */
-HB_FUNC( QPRINTENGINE_NEWPAGE )
+HB_FUNC_STATIC( QPRINTENGINE_NEWPAGE )
 {
   QPrintEngine * obj = (QPrintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -161,7 +161,7 @@ HB_FUNC( QPRINTENGINE_NEWPAGE )
 /*
 virtual QPrinter::PrinterState printerState () const = 0
 */
-HB_FUNC( QPRINTENGINE_PRINTERSTATE )
+HB_FUNC_STATIC( QPRINTENGINE_PRINTERSTATE )
 {
   QPrintEngine * obj = (QPrintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -175,7 +175,7 @@ HB_FUNC( QPRINTENGINE_PRINTERSTATE )
 /*
 virtual QVariant property ( PrintEnginePropertyKey key ) const = 0
 */
-HB_FUNC( QPRINTENGINE_PROPERTY )
+HB_FUNC_STATIC( QPRINTENGINE_PROPERTY )
 {
   QPrintEngine * obj = (QPrintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -189,7 +189,7 @@ HB_FUNC( QPRINTENGINE_PROPERTY )
 /*
 virtual void setProperty ( PrintEnginePropertyKey key, const QVariant & value ) = 0
 */
-HB_FUNC( QPRINTENGINE_SETPROPERTY )
+HB_FUNC_STATIC( QPRINTENGINE_SETPROPERTY )
 {
   QPrintEngine * obj = (QPrintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

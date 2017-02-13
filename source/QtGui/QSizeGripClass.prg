@@ -64,7 +64,7 @@ RETURN
 /*
 QSizeGrip ( QWidget * parent )
 */
-HB_FUNC( QSIZEGRIP_NEW )
+HB_FUNC_STATIC( QSIZEGRIP_NEW )
 {
   QSizeGrip * o = NULL;
   QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -77,7 +77,7 @@ HB_FUNC( QSIZEGRIP_NEW )
 }
 
 
-HB_FUNC( QSIZEGRIP_DELETE )
+HB_FUNC_STATIC( QSIZEGRIP_DELETE )
 {
   QSizeGrip * obj = (QSizeGrip *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -96,7 +96,7 @@ HB_FUNC( QSIZEGRIP_DELETE )
 /*
 virtual void setVisible ( bool visible )
 */
-HB_FUNC( QSIZEGRIP_SETVISIBLE )
+HB_FUNC_STATIC( QSIZEGRIP_SETVISIBLE )
 {
   QSizeGrip * obj = (QSizeGrip *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -111,7 +111,7 @@ HB_FUNC( QSIZEGRIP_SETVISIBLE )
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC( QSIZEGRIP_SIZEHINT )
+HB_FUNC_STATIC( QSIZEGRIP_SIZEHINT )
 {
   QSizeGrip * obj = (QSizeGrip *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

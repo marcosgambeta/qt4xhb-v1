@@ -81,7 +81,7 @@ RETURN
 #include <QSourceLocation>
 
 
-HB_FUNC( QABSTRACTXMLNODEMODEL_DELETE )
+HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_DELETE )
 {
   QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -100,7 +100,7 @@ HB_FUNC( QABSTRACTXMLNODEMODEL_DELETE )
 /*
 virtual QUrl baseUri ( const QXmlNodeModelIndex & n ) const = 0
 */
-HB_FUNC( QABSTRACTXMLNODEMODEL_BASEURI )
+HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_BASEURI )
 {
   QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -114,7 +114,7 @@ HB_FUNC( QABSTRACTXMLNODEMODEL_BASEURI )
 /*
 virtual QXmlNodeModelIndex::DocumentOrder compareOrder ( const QXmlNodeModelIndex & ni1, const QXmlNodeModelIndex & ni2 ) const = 0
 */
-HB_FUNC( QABSTRACTXMLNODEMODEL_COMPAREORDER )
+HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_COMPAREORDER )
 {
   QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -130,7 +130,7 @@ HB_FUNC( QABSTRACTXMLNODEMODEL_COMPAREORDER )
 /*
 virtual QUrl documentUri ( const QXmlNodeModelIndex & n ) const = 0
 */
-HB_FUNC( QABSTRACTXMLNODEMODEL_DOCUMENTURI )
+HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_DOCUMENTURI )
 {
   QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -144,7 +144,7 @@ HB_FUNC( QABSTRACTXMLNODEMODEL_DOCUMENTURI )
 /*
 virtual QXmlNodeModelIndex elementById ( const QXmlName & id ) const = 0
 */
-HB_FUNC( QABSTRACTXMLNODEMODEL_ELEMENTBYID )
+HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_ELEMENTBYID )
 {
   QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -158,7 +158,7 @@ HB_FUNC( QABSTRACTXMLNODEMODEL_ELEMENTBYID )
 /*
 virtual QXmlNodeModelIndex::NodeKind kind ( const QXmlNodeModelIndex & ni ) const = 0
 */
-HB_FUNC( QABSTRACTXMLNODEMODEL_KIND )
+HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_KIND )
 {
   QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -173,7 +173,7 @@ HB_FUNC( QABSTRACTXMLNODEMODEL_KIND )
 /*
 virtual QXmlName name ( const QXmlNodeModelIndex & ni ) const = 0
 */
-HB_FUNC( QABSTRACTXMLNODEMODEL_NAME )
+HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_NAME )
 {
   QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -187,7 +187,7 @@ HB_FUNC( QABSTRACTXMLNODEMODEL_NAME )
 /*
 virtual QVector<QXmlName> namespaceBindings ( const QXmlNodeModelIndex & n ) const = 0
 */
-HB_FUNC( QABSTRACTXMLNODEMODEL_NAMESPACEBINDINGS )
+HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_NAMESPACEBINDINGS )
 {
   QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -232,7 +232,7 @@ HB_FUNC( QABSTRACTXMLNODEMODEL_NAMESPACEBINDINGS )
 /*
 virtual QVector<QXmlNodeModelIndex> nodesByIdref ( const QXmlName & idref ) const = 0
 */
-HB_FUNC( QABSTRACTXMLNODEMODEL_NODESBYIDREF )
+HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_NODESBYIDREF )
 {
   QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -277,7 +277,7 @@ HB_FUNC( QABSTRACTXMLNODEMODEL_NODESBYIDREF )
 /*
 virtual QXmlNodeModelIndex root ( const QXmlNodeModelIndex & n ) const = 0
 */
-HB_FUNC( QABSTRACTXMLNODEMODEL_ROOT )
+HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_ROOT )
 {
   QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -291,7 +291,7 @@ HB_FUNC( QABSTRACTXMLNODEMODEL_ROOT )
 /*
 QSourceLocation sourceLocation ( const QXmlNodeModelIndex & index ) const
 */
-HB_FUNC( QABSTRACTXMLNODEMODEL_SOURCELOCATION )
+HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_SOURCELOCATION )
 {
   QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -305,7 +305,7 @@ HB_FUNC( QABSTRACTXMLNODEMODEL_SOURCELOCATION )
 /*
 virtual QString stringValue ( const QXmlNodeModelIndex & n ) const = 0
 */
-HB_FUNC( QABSTRACTXMLNODEMODEL_STRINGVALUE )
+HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_STRINGVALUE )
 {
   QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -320,7 +320,7 @@ HB_FUNC( QABSTRACTXMLNODEMODEL_STRINGVALUE )
 /*
 virtual QVariant typedValue ( const QXmlNodeModelIndex & node ) const = 0
 */
-HB_FUNC( QABSTRACTXMLNODEMODEL_TYPEDVALUE )
+HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_TYPEDVALUE )
 {
   QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

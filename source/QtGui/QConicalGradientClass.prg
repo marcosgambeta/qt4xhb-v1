@@ -70,7 +70,7 @@ RETURN
 /*
 QConicalGradient()
 */
-HB_FUNC( QCONICALGRADIENT_NEW1 )
+HB_FUNC_STATIC( QCONICALGRADIENT_NEW1 )
 {
   QConicalGradient * o = NULL;
   o = new QConicalGradient (  );
@@ -85,7 +85,7 @@ HB_FUNC( QCONICALGRADIENT_NEW1 )
 /*
 QConicalGradient(const QPointF &center, qreal startAngle)
 */
-HB_FUNC( QCONICALGRADIENT_NEW2 )
+HB_FUNC_STATIC( QCONICALGRADIENT_NEW2 )
 {
   QConicalGradient * o = NULL;
   QPointF * par1 = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -102,7 +102,7 @@ HB_FUNC( QCONICALGRADIENT_NEW2 )
 /*
 QConicalGradient(qreal cx, qreal cy, qreal startAngle)
 */
-HB_FUNC( QCONICALGRADIENT_NEW3 )
+HB_FUNC_STATIC( QCONICALGRADIENT_NEW3 )
 {
   QConicalGradient * o = NULL;
   qreal par1 = hb_parnd(1);
@@ -121,7 +121,7 @@ HB_FUNC( QCONICALGRADIENT_NEW3 )
 //[2]QConicalGradient(const QPointF &center, qreal startAngle)
 //[3]QConicalGradient(qreal cx, qreal cy, qreal startAngle)
 
-HB_FUNC( QCONICALGRADIENT_NEW )
+HB_FUNC_STATIC( QCONICALGRADIENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -145,7 +145,7 @@ HB_FUNC( QCONICALGRADIENT_NEW )
 /*
 qreal angle () const
 */
-HB_FUNC( QCONICALGRADIENT_ANGLE )
+HB_FUNC_STATIC( QCONICALGRADIENT_ANGLE )
 {
   QConicalGradient * obj = (QConicalGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -159,7 +159,7 @@ HB_FUNC( QCONICALGRADIENT_ANGLE )
 /*
 QPointF center () const
 */
-HB_FUNC( QCONICALGRADIENT_CENTER )
+HB_FUNC_STATIC( QCONICALGRADIENT_CENTER )
 {
   QConicalGradient * obj = (QConicalGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -172,7 +172,7 @@ HB_FUNC( QCONICALGRADIENT_CENTER )
 /*
 void setAngle ( qreal angle )
 */
-HB_FUNC( QCONICALGRADIENT_SETANGLE )
+HB_FUNC_STATIC( QCONICALGRADIENT_SETANGLE )
 {
   QConicalGradient * obj = (QConicalGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -187,7 +187,7 @@ HB_FUNC( QCONICALGRADIENT_SETANGLE )
 /*
 void setCenter ( const QPointF & center )
 */
-HB_FUNC( QCONICALGRADIENT_SETCENTER1 )
+HB_FUNC_STATIC( QCONICALGRADIENT_SETCENTER1 )
 {
   QConicalGradient * obj = (QConicalGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -202,7 +202,7 @@ HB_FUNC( QCONICALGRADIENT_SETCENTER1 )
 /*
 void setCenter ( qreal x, qreal y )
 */
-HB_FUNC( QCONICALGRADIENT_SETCENTER2 )
+HB_FUNC_STATIC( QCONICALGRADIENT_SETCENTER2 )
 {
   QConicalGradient * obj = (QConicalGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -218,7 +218,7 @@ HB_FUNC( QCONICALGRADIENT_SETCENTER2 )
 //[1]void setCenter ( const QPointF & center )
 //[2]void setCenter ( qreal x, qreal y )
 
-HB_FUNC( QCONICALGRADIENT_SETCENTER )
+HB_FUNC_STATIC( QCONICALGRADIENT_SETCENTER )
 {
   if( ISNUMPAR(1) && ISQPOINTF(1) )
   {

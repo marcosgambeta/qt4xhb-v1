@@ -179,7 +179,7 @@ RETURN
 /*
 QApplication ( int & argc, char ** argv )
 */
-HB_FUNC( QAPPLICATION_NEW )
+HB_FUNC_STATIC( QAPPLICATION_NEW )
 {
   int argc;
   char ** argv;
@@ -194,7 +194,7 @@ HB_FUNC( QAPPLICATION_NEW )
   hb_itemReturn( self );
 }
 
-HB_FUNC( QAPPLICATION_DELETE )
+HB_FUNC_STATIC( QAPPLICATION_DELETE )
 {
   QApplication * obj = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -213,7 +213,7 @@ HB_FUNC( QAPPLICATION_DELETE )
 /*
 virtual void commitData ( QSessionManager & manager )
 */
-HB_FUNC( QAPPLICATION_COMMITDATA )
+HB_FUNC_STATIC( QAPPLICATION_COMMITDATA )
 {
   QApplication * obj = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -228,7 +228,7 @@ HB_FUNC( QAPPLICATION_COMMITDATA )
 /*
 QInputContext * inputContext () const
 */
-HB_FUNC( QAPPLICATION_INPUTCONTEXT )
+HB_FUNC_STATIC( QAPPLICATION_INPUTCONTEXT )
 {
   QApplication * obj = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -241,7 +241,7 @@ HB_FUNC( QAPPLICATION_INPUTCONTEXT )
 /*
 bool isSessionRestored () const
 */
-HB_FUNC( QAPPLICATION_ISSESSIONRESTORED )
+HB_FUNC_STATIC( QAPPLICATION_ISSESSIONRESTORED )
 {
   QApplication * obj = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -258,7 +258,7 @@ HB_FUNC( QAPPLICATION_ISSESSIONRESTORED )
 /*
 virtual void saveState ( QSessionManager & manager )
 */
-HB_FUNC( QAPPLICATION_SAVESTATE )
+HB_FUNC_STATIC( QAPPLICATION_SAVESTATE )
 {
   QApplication * obj = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -273,7 +273,7 @@ HB_FUNC( QAPPLICATION_SAVESTATE )
 /*
 QString sessionId () const
 */
-HB_FUNC( QAPPLICATION_SESSIONID )
+HB_FUNC_STATIC( QAPPLICATION_SESSIONID )
 {
   QApplication * obj = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -287,7 +287,7 @@ HB_FUNC( QAPPLICATION_SESSIONID )
 /*
 QString sessionKey () const
 */
-HB_FUNC( QAPPLICATION_SESSIONKEY )
+HB_FUNC_STATIC( QAPPLICATION_SESSIONKEY )
 {
   QApplication * obj = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -301,7 +301,7 @@ HB_FUNC( QAPPLICATION_SESSIONKEY )
 /*
 void setInputContext ( QInputContext * inputContext )
 */
-HB_FUNC( QAPPLICATION_SETINPUTCONTEXT )
+HB_FUNC_STATIC( QAPPLICATION_SETINPUTCONTEXT )
 {
   QApplication * obj = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -316,7 +316,7 @@ HB_FUNC( QAPPLICATION_SETINPUTCONTEXT )
 /*
 QString styleSheet () const
 */
-HB_FUNC( QAPPLICATION_STYLESHEET )
+HB_FUNC_STATIC( QAPPLICATION_STYLESHEET )
 {
   QApplication * obj = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -336,7 +336,7 @@ HB_FUNC( QAPPLICATION_STYLESHEET )
 /*
 virtual bool notify ( QObject * receiver, QEvent * e )
 */
-HB_FUNC( QAPPLICATION_NOTIFY )
+HB_FUNC_STATIC( QAPPLICATION_NOTIFY )
 {
   QApplication * obj = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -354,7 +354,7 @@ HB_FUNC( QAPPLICATION_NOTIFY )
 /*
 void aboutQt ()
 */
-HB_FUNC( QAPPLICATION_ABOUTQT )
+HB_FUNC_STATIC( QAPPLICATION_ABOUTQT )
 {
   QApplication * obj = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -370,7 +370,7 @@ HB_FUNC( QAPPLICATION_ABOUTQT )
 /*
 void closeAllWindows ()
 */
-HB_FUNC( QAPPLICATION_CLOSEALLWINDOWS )
+HB_FUNC_STATIC( QAPPLICATION_CLOSEALLWINDOWS )
 {
   QApplication * obj = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -386,7 +386,7 @@ HB_FUNC( QAPPLICATION_CLOSEALLWINDOWS )
 /*
 void setStyleSheet ( const QString & sheet )
 */
-HB_FUNC( QAPPLICATION_SETSTYLESHEET )
+HB_FUNC_STATIC( QAPPLICATION_SETSTYLESHEET )
 {
   QApplication * obj = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -404,7 +404,7 @@ HB_FUNC( QAPPLICATION_SETSTYLESHEET )
 /*
 QWidget * activeModalWidget ()
 */
-HB_FUNC( QAPPLICATION_ACTIVEMODALWIDGET )
+HB_FUNC_STATIC( QAPPLICATION_ACTIVEMODALWIDGET )
 {
   QWidget * ptr = QApplication::activeModalWidget (  );
   _qt4xhb_createReturnClass ( ptr, "QWIDGET" );}
@@ -413,7 +413,7 @@ HB_FUNC( QAPPLICATION_ACTIVEMODALWIDGET )
 /*
 QWidget * activePopupWidget ()
 */
-HB_FUNC( QAPPLICATION_ACTIVEPOPUPWIDGET )
+HB_FUNC_STATIC( QAPPLICATION_ACTIVEPOPUPWIDGET )
 {
   QWidget * ptr = QApplication::activePopupWidget (  );
   _qt4xhb_createReturnClass ( ptr, "QWIDGET" );}
@@ -422,7 +422,7 @@ HB_FUNC( QAPPLICATION_ACTIVEPOPUPWIDGET )
 /*
 QWidget * activeWindow ()
 */
-HB_FUNC( QAPPLICATION_ACTIVEWINDOW )
+HB_FUNC_STATIC( QAPPLICATION_ACTIVEWINDOW )
 {
   QWidget * ptr = QApplication::activeWindow (  );
   _qt4xhb_createReturnClass ( ptr, "QWIDGET" );}
@@ -431,7 +431,7 @@ HB_FUNC( QAPPLICATION_ACTIVEWINDOW )
 /*
 void alert ( QWidget * widget, int msec = 0 )
 */
-HB_FUNC( QAPPLICATION_ALERT )
+HB_FUNC_STATIC( QAPPLICATION_ALERT )
 {
   QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = ISNIL(2)? 0 : hb_parni(2);
@@ -443,7 +443,7 @@ HB_FUNC( QAPPLICATION_ALERT )
 /*
 QWidgetList allWidgets ()
 */
-HB_FUNC( QAPPLICATION_ALLWIDGETS )
+HB_FUNC_STATIC( QAPPLICATION_ALLWIDGETS )
 {
   QWidgetList list = QApplication::allWidgets (  );
   PHB_DYNS pDynSym;
@@ -483,7 +483,7 @@ HB_FUNC( QAPPLICATION_ALLWIDGETS )
 /*
 void beep ()
 */
-HB_FUNC( QAPPLICATION_BEEP )
+HB_FUNC_STATIC( QAPPLICATION_BEEP )
 {
   QApplication::beep (  );
   hb_itemReturn( hb_stackSelfItem() );
@@ -493,7 +493,7 @@ HB_FUNC( QAPPLICATION_BEEP )
 /*
 void changeOverrideCursor ( const QCursor & cursor )
 */
-HB_FUNC( QAPPLICATION_CHANGEOVERRIDECURSOR )
+HB_FUNC_STATIC( QAPPLICATION_CHANGEOVERRIDECURSOR )
 {
   QCursor * par1 = (QCursor *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QApplication::changeOverrideCursor ( *par1 );
@@ -504,7 +504,7 @@ HB_FUNC( QAPPLICATION_CHANGEOVERRIDECURSOR )
 /*
 QClipboard * clipboard ()
 */
-HB_FUNC( QAPPLICATION_CLIPBOARD )
+HB_FUNC_STATIC( QAPPLICATION_CLIPBOARD )
 {
   QClipboard * ptr = QApplication::clipboard (  );
   _qt4xhb_createReturnClass ( ptr, "QCLIPBOARD" );}
@@ -513,7 +513,7 @@ HB_FUNC( QAPPLICATION_CLIPBOARD )
 /*
 int colorSpec ()
 */
-HB_FUNC( QAPPLICATION_COLORSPEC )
+HB_FUNC_STATIC( QAPPLICATION_COLORSPEC )
 {
   int i = QApplication::colorSpec (  );
   hb_retni( i );
@@ -523,7 +523,7 @@ HB_FUNC( QAPPLICATION_COLORSPEC )
 /*
 int cursorFlashTime ()
 */
-HB_FUNC( QAPPLICATION_CURSORFLASHTIME )
+HB_FUNC_STATIC( QAPPLICATION_CURSORFLASHTIME )
 {
   int i = QApplication::cursorFlashTime (  );
   hb_retni( i );
@@ -533,7 +533,7 @@ HB_FUNC( QAPPLICATION_CURSORFLASHTIME )
 /*
 QDesktopWidget * desktop ()
 */
-HB_FUNC( QAPPLICATION_DESKTOP )
+HB_FUNC_STATIC( QAPPLICATION_DESKTOP )
 {
   QDesktopWidget * ptr = QApplication::desktop (  );
   _qt4xhb_createReturnClass ( ptr, "QDESKTOPWIDGET" );}
@@ -542,7 +542,7 @@ HB_FUNC( QAPPLICATION_DESKTOP )
 /*
 bool desktopSettingsAware ()
 */
-HB_FUNC( QAPPLICATION_DESKTOPSETTINGSAWARE )
+HB_FUNC_STATIC( QAPPLICATION_DESKTOPSETTINGSAWARE )
 {
   bool b = QApplication::desktopSettingsAware (  );
   hb_retl( b );
@@ -552,7 +552,7 @@ HB_FUNC( QAPPLICATION_DESKTOPSETTINGSAWARE )
 /*
 int doubleClickInterval ()
 */
-HB_FUNC( QAPPLICATION_DOUBLECLICKINTERVAL )
+HB_FUNC_STATIC( QAPPLICATION_DOUBLECLICKINTERVAL )
 {
   int i = QApplication::doubleClickInterval (  );
   hb_retni( i );
@@ -562,7 +562,7 @@ HB_FUNC( QAPPLICATION_DOUBLECLICKINTERVAL )
 /*
 int exec ()
 */
-HB_FUNC( QAPPLICATION_EXEC )
+HB_FUNC_STATIC( QAPPLICATION_EXEC )
 {
   int i = QApplication::exec (  );
   hb_retni( i );
@@ -572,7 +572,7 @@ HB_FUNC( QAPPLICATION_EXEC )
 /*
 QWidget * focusWidget ()
 */
-HB_FUNC( QAPPLICATION_FOCUSWIDGET )
+HB_FUNC_STATIC( QAPPLICATION_FOCUSWIDGET )
 {
   QWidget * ptr = QApplication::focusWidget (  );
   _qt4xhb_createReturnClass ( ptr, "QWIDGET" );}
@@ -581,7 +581,7 @@ HB_FUNC( QAPPLICATION_FOCUSWIDGET )
 /*
 QFont font ()
 */
-HB_FUNC( QAPPLICATION_FONT1 )
+HB_FUNC_STATIC( QAPPLICATION_FONT1 )
 {
   QFont * ptr = new QFont( QApplication::font (  ) );
   _qt4xhb_createReturnClass ( ptr, "QFONT", true );}
@@ -590,7 +590,7 @@ HB_FUNC( QAPPLICATION_FONT1 )
 /*
 QFont font ( const QWidget * widget )
 */
-HB_FUNC( QAPPLICATION_FONT2 )
+HB_FUNC_STATIC( QAPPLICATION_FONT2 )
 {
   QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QFont * ptr = new QFont( QApplication::font ( par1 ) );
@@ -600,7 +600,7 @@ HB_FUNC( QAPPLICATION_FONT2 )
 /*
 QFont font ( const char * className )
 */
-HB_FUNC( QAPPLICATION_FONT3 )
+HB_FUNC_STATIC( QAPPLICATION_FONT3 )
 {
   const char * par1 = hb_parc(1);
   QFont * ptr = new QFont( QApplication::font (  (const char *) par1 ) );
@@ -611,7 +611,7 @@ HB_FUNC( QAPPLICATION_FONT3 )
 //[2]QFont font ( const QWidget * widget )
 //[3]QFont font ( const char * className )
 
-HB_FUNC( QAPPLICATION_FONT )
+HB_FUNC_STATIC( QAPPLICATION_FONT )
 {
   if( ISNUMPAR(0) )
   {
@@ -630,7 +630,7 @@ HB_FUNC( QAPPLICATION_FONT )
 /*
 QFontMetrics fontMetrics ()
 */
-HB_FUNC( QAPPLICATION_FONTMETRICS )
+HB_FUNC_STATIC( QAPPLICATION_FONTMETRICS )
 {
   QFontMetrics * ptr = new QFontMetrics( QApplication::fontMetrics (  ) );
   _qt4xhb_createReturnClass ( ptr, "QFONTMETRICS", true );}
@@ -639,7 +639,7 @@ HB_FUNC( QAPPLICATION_FONTMETRICS )
 /*
 QSize globalStrut ()
 */
-HB_FUNC( QAPPLICATION_GLOBALSTRUT )
+HB_FUNC_STATIC( QAPPLICATION_GLOBALSTRUT )
 {
   QSize * ptr = new QSize( QApplication::globalStrut (  ) );
   _qt4xhb_createReturnClass ( ptr, "QSIZE", true );}
@@ -648,7 +648,7 @@ HB_FUNC( QAPPLICATION_GLOBALSTRUT )
 /*
 bool isEffectEnabled ( Qt::UIEffect effect )
 */
-HB_FUNC( QAPPLICATION_ISEFFECTENABLED )
+HB_FUNC_STATIC( QAPPLICATION_ISEFFECTENABLED )
 {
   int par1 = hb_parni(1);
   bool b = QApplication::isEffectEnabled (  (Qt::UIEffect) par1 );
@@ -659,7 +659,7 @@ HB_FUNC( QAPPLICATION_ISEFFECTENABLED )
 /*
 bool isLeftToRight ()
 */
-HB_FUNC( QAPPLICATION_ISLEFTTORIGHT )
+HB_FUNC_STATIC( QAPPLICATION_ISLEFTTORIGHT )
 {
   bool b = QApplication::isLeftToRight (  );
   hb_retl( b );
@@ -669,7 +669,7 @@ HB_FUNC( QAPPLICATION_ISLEFTTORIGHT )
 /*
 bool isRightToLeft ()
 */
-HB_FUNC( QAPPLICATION_ISRIGHTTOLEFT )
+HB_FUNC_STATIC( QAPPLICATION_ISRIGHTTOLEFT )
 {
   bool b = QApplication::isRightToLeft (  );
   hb_retl( b );
@@ -679,7 +679,7 @@ HB_FUNC( QAPPLICATION_ISRIGHTTOLEFT )
 /*
 Qt::LayoutDirection keyboardInputDirection ()
 */
-HB_FUNC( QAPPLICATION_KEYBOARDINPUTDIRECTION )
+HB_FUNC_STATIC( QAPPLICATION_KEYBOARDINPUTDIRECTION )
 {
   int i = QApplication::keyboardInputDirection (  );
   hb_retni( i );
@@ -689,7 +689,7 @@ HB_FUNC( QAPPLICATION_KEYBOARDINPUTDIRECTION )
 /*
 int keyboardInputInterval ()
 */
-HB_FUNC( QAPPLICATION_KEYBOARDINPUTINTERVAL )
+HB_FUNC_STATIC( QAPPLICATION_KEYBOARDINPUTINTERVAL )
 {
   int i = QApplication::keyboardInputInterval (  );
   hb_retni( i );
@@ -699,7 +699,7 @@ HB_FUNC( QAPPLICATION_KEYBOARDINPUTINTERVAL )
 /*
 QLocale keyboardInputLocale ()
 */
-HB_FUNC( QAPPLICATION_KEYBOARDINPUTLOCALE )
+HB_FUNC_STATIC( QAPPLICATION_KEYBOARDINPUTLOCALE )
 {
   QLocale * ptr = new QLocale( QApplication::keyboardInputLocale (  ) );
   _qt4xhb_createReturnClass ( ptr, "QLOCALE" );}
@@ -708,7 +708,7 @@ HB_FUNC( QAPPLICATION_KEYBOARDINPUTLOCALE )
 /*
 Qt::KeyboardModifiers keyboardModifiers ()
 */
-HB_FUNC( QAPPLICATION_KEYBOARDMODIFIERS )
+HB_FUNC_STATIC( QAPPLICATION_KEYBOARDMODIFIERS )
 {
   int i = QApplication::keyboardModifiers (  );
   hb_retni( i );
@@ -719,7 +719,7 @@ HB_FUNC( QAPPLICATION_KEYBOARDMODIFIERS )
 /*
 Qt::LayoutDirection layoutDirection ()
 */
-HB_FUNC( QAPPLICATION_LAYOUTDIRECTION )
+HB_FUNC_STATIC( QAPPLICATION_LAYOUTDIRECTION )
 {
   int i = QApplication::layoutDirection (  );
   hb_retni( i );
@@ -729,7 +729,7 @@ HB_FUNC( QAPPLICATION_LAYOUTDIRECTION )
 /*
 Qt::MouseButtons mouseButtons ()
 */
-HB_FUNC( QAPPLICATION_MOUSEBUTTONS )
+HB_FUNC_STATIC( QAPPLICATION_MOUSEBUTTONS )
 {
   int i = QApplication::mouseButtons (  );
   hb_retni( i );
@@ -740,7 +740,7 @@ HB_FUNC( QAPPLICATION_MOUSEBUTTONS )
 /*
 QCursor * overrideCursor ()
 */
-HB_FUNC( QAPPLICATION_OVERRIDECURSOR )
+HB_FUNC_STATIC( QAPPLICATION_OVERRIDECURSOR )
 {
   QCursor * ptr = QApplication::overrideCursor (  );
   _qt4xhb_createReturnClass ( ptr, "QCURSOR" );}
@@ -749,7 +749,7 @@ HB_FUNC( QAPPLICATION_OVERRIDECURSOR )
 /*
 QPalette palette ()
 */
-HB_FUNC( QAPPLICATION_PALETTE1 )
+HB_FUNC_STATIC( QAPPLICATION_PALETTE1 )
 {
   QPalette * ptr = new QPalette( QApplication::palette (  ) );
   _qt4xhb_createReturnClass ( ptr, "QPALETTE", true );}
@@ -758,7 +758,7 @@ HB_FUNC( QAPPLICATION_PALETTE1 )
 /*
 QPalette palette ( const QWidget * widget )
 */
-HB_FUNC( QAPPLICATION_PALETTE2 )
+HB_FUNC_STATIC( QAPPLICATION_PALETTE2 )
 {
   QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QPalette * ptr = new QPalette( QApplication::palette ( par1 ) );
@@ -768,7 +768,7 @@ HB_FUNC( QAPPLICATION_PALETTE2 )
 /*
 QPalette palette ( const char * className )
 */
-HB_FUNC( QAPPLICATION_PALETTE3 )
+HB_FUNC_STATIC( QAPPLICATION_PALETTE3 )
 {
   const char * par1 = hb_parc(1);
   QPalette * ptr = new QPalette( QApplication::palette (  (const char *) par1 ) );
@@ -779,7 +779,7 @@ HB_FUNC( QAPPLICATION_PALETTE3 )
 //[2]QPalette palette ( const QWidget * widget )
 //[3]QPalette palette ( const char * className )
 
-HB_FUNC( QAPPLICATION_PALETTE )
+HB_FUNC_STATIC( QAPPLICATION_PALETTE )
 {
   if( ISNUMPAR(0) )
   {
@@ -798,7 +798,7 @@ HB_FUNC( QAPPLICATION_PALETTE )
 /*
 Qt::KeyboardModifiers queryKeyboardModifiers ()
 */
-HB_FUNC( QAPPLICATION_QUERYKEYBOARDMODIFIERS )
+HB_FUNC_STATIC( QAPPLICATION_QUERYKEYBOARDMODIFIERS )
 {
   int i = QApplication::queryKeyboardModifiers (  );
   hb_retni( i );
@@ -808,7 +808,7 @@ HB_FUNC( QAPPLICATION_QUERYKEYBOARDMODIFIERS )
 /*
 bool quitOnLastWindowClosed ()
 */
-HB_FUNC( QAPPLICATION_QUITONLASTWINDOWCLOSED )
+HB_FUNC_STATIC( QAPPLICATION_QUITONLASTWINDOWCLOSED )
 {
   bool b = QApplication::quitOnLastWindowClosed (  );
   hb_retl( b );
@@ -821,7 +821,7 @@ HB_FUNC( QAPPLICATION_QUITONLASTWINDOWCLOSED )
 /*
 void restoreOverrideCursor ()
 */
-HB_FUNC( QAPPLICATION_RESTOREOVERRIDECURSOR )
+HB_FUNC_STATIC( QAPPLICATION_RESTOREOVERRIDECURSOR )
 {
   QApplication::restoreOverrideCursor (  );
   hb_itemReturn( hb_stackSelfItem() );
@@ -831,7 +831,7 @@ HB_FUNC( QAPPLICATION_RESTOREOVERRIDECURSOR )
 /*
 void setActiveWindow ( QWidget * active )
 */
-HB_FUNC( QAPPLICATION_SETACTIVEWINDOW )
+HB_FUNC_STATIC( QAPPLICATION_SETACTIVEWINDOW )
 {
   QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QApplication::setActiveWindow ( par1 );
@@ -842,7 +842,7 @@ HB_FUNC( QAPPLICATION_SETACTIVEWINDOW )
 /*
 void setColorSpec ( int spec )
 */
-HB_FUNC( QAPPLICATION_SETCOLORSPEC )
+HB_FUNC_STATIC( QAPPLICATION_SETCOLORSPEC )
 {
   int par1 = hb_parni(1);
   QApplication::setColorSpec ( par1 );
@@ -853,7 +853,7 @@ HB_FUNC( QAPPLICATION_SETCOLORSPEC )
 /*
 void setCursorFlashTime ( int )
 */
-HB_FUNC( QAPPLICATION_SETCURSORFLASHTIME )
+HB_FUNC_STATIC( QAPPLICATION_SETCURSORFLASHTIME )
 {
   int par1 = hb_parni(1);
   QApplication::setCursorFlashTime ( par1 );
@@ -864,7 +864,7 @@ HB_FUNC( QAPPLICATION_SETCURSORFLASHTIME )
 /*
 void setDesktopSettingsAware ( bool on )
 */
-HB_FUNC( QAPPLICATION_SETDESKTOPSETTINGSAWARE )
+HB_FUNC_STATIC( QAPPLICATION_SETDESKTOPSETTINGSAWARE )
 {
   bool par1 = hb_parl(1);
   QApplication::setDesktopSettingsAware ( par1 );
@@ -875,7 +875,7 @@ HB_FUNC( QAPPLICATION_SETDESKTOPSETTINGSAWARE )
 /*
 void setDoubleClickInterval ( int )
 */
-HB_FUNC( QAPPLICATION_SETDOUBLECLICKINTERVAL )
+HB_FUNC_STATIC( QAPPLICATION_SETDOUBLECLICKINTERVAL )
 {
   int par1 = hb_parni(1);
   QApplication::setDoubleClickInterval ( par1 );
@@ -886,7 +886,7 @@ HB_FUNC( QAPPLICATION_SETDOUBLECLICKINTERVAL )
 /*
 void setEffectEnabled ( Qt::UIEffect effect, bool enable = true )
 */
-HB_FUNC( QAPPLICATION_SETEFFECTENABLED )
+HB_FUNC_STATIC( QAPPLICATION_SETEFFECTENABLED )
 {
   int par1 = hb_parni(1);
   bool par2 = ISNIL(2)? true : hb_parl(2);
@@ -898,7 +898,7 @@ HB_FUNC( QAPPLICATION_SETEFFECTENABLED )
 /*
 void setFont ( const QFont & font, const char * className = 0 )
 */
-HB_FUNC( QAPPLICATION_SETFONT )
+HB_FUNC_STATIC( QAPPLICATION_SETFONT )
 {
   QFont * par1 = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   const char * par2 = ISNIL(2)? 0 : hb_parc(2);
@@ -910,7 +910,7 @@ HB_FUNC( QAPPLICATION_SETFONT )
 /*
 void setGlobalStrut ( const QSize & )
 */
-HB_FUNC( QAPPLICATION_SETGLOBALSTRUT )
+HB_FUNC_STATIC( QAPPLICATION_SETGLOBALSTRUT )
 {
   QSize * par1 = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QApplication::setGlobalStrut ( *par1 );
@@ -921,7 +921,7 @@ HB_FUNC( QAPPLICATION_SETGLOBALSTRUT )
 /*
 void setGraphicsSystem ( const QString & system )
 */
-HB_FUNC( QAPPLICATION_SETGRAPHICSSYSTEM )
+HB_FUNC_STATIC( QAPPLICATION_SETGRAPHICSSYSTEM )
 {
   QString par1 = hb_parc(1);
   QApplication::setGraphicsSystem ( par1 );
@@ -932,7 +932,7 @@ HB_FUNC( QAPPLICATION_SETGRAPHICSSYSTEM )
 /*
 void setKeyboardInputInterval ( int )
 */
-HB_FUNC( QAPPLICATION_SETKEYBOARDINPUTINTERVAL )
+HB_FUNC_STATIC( QAPPLICATION_SETKEYBOARDINPUTINTERVAL )
 {
   int par1 = hb_parni(1);
   QApplication::setKeyboardInputInterval ( par1 );
@@ -943,7 +943,7 @@ HB_FUNC( QAPPLICATION_SETKEYBOARDINPUTINTERVAL )
 /*
 void setLayoutDirection ( Qt::LayoutDirection direction )
 */
-HB_FUNC( QAPPLICATION_SETLAYOUTDIRECTION )
+HB_FUNC_STATIC( QAPPLICATION_SETLAYOUTDIRECTION )
 {
   int par1 = hb_parni(1);
   QApplication::setLayoutDirection (  (Qt::LayoutDirection) par1 );
@@ -955,7 +955,7 @@ HB_FUNC( QAPPLICATION_SETLAYOUTDIRECTION )
 /*
 void setOverrideCursor ( const QCursor & cursor )
 */
-HB_FUNC( QAPPLICATION_SETOVERRIDECURSOR )
+HB_FUNC_STATIC( QAPPLICATION_SETOVERRIDECURSOR )
 {
   QCursor * par1 = (QCursor *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QApplication::setOverrideCursor ( *par1 );
@@ -966,7 +966,7 @@ HB_FUNC( QAPPLICATION_SETOVERRIDECURSOR )
 /*
 void setPalette ( const QPalette & palette, const char * className = 0 )
 */
-HB_FUNC( QAPPLICATION_SETPALETTE )
+HB_FUNC_STATIC( QAPPLICATION_SETPALETTE )
 {
   QPalette * par1 = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   const char * par2 = ISNIL(2)? 0 : hb_parc(2);
@@ -978,7 +978,7 @@ HB_FUNC( QAPPLICATION_SETPALETTE )
 /*
 void setQuitOnLastWindowClosed ( bool quit )
 */
-HB_FUNC( QAPPLICATION_SETQUITONLASTWINDOWCLOSED )
+HB_FUNC_STATIC( QAPPLICATION_SETQUITONLASTWINDOWCLOSED )
 {
   bool par1 = hb_parl(1);
   QApplication::setQuitOnLastWindowClosed ( par1 );
@@ -989,7 +989,7 @@ HB_FUNC( QAPPLICATION_SETQUITONLASTWINDOWCLOSED )
 /*
 void setStartDragDistance ( int l )
 */
-HB_FUNC( QAPPLICATION_SETSTARTDRAGDISTANCE )
+HB_FUNC_STATIC( QAPPLICATION_SETSTARTDRAGDISTANCE )
 {
   int par1 = hb_parni(1);
   QApplication::setStartDragDistance ( par1 );
@@ -1000,7 +1000,7 @@ HB_FUNC( QAPPLICATION_SETSTARTDRAGDISTANCE )
 /*
 void setStartDragTime ( int ms )
 */
-HB_FUNC( QAPPLICATION_SETSTARTDRAGTIME )
+HB_FUNC_STATIC( QAPPLICATION_SETSTARTDRAGTIME )
 {
   int par1 = hb_parni(1);
   QApplication::setStartDragTime ( par1 );
@@ -1011,7 +1011,7 @@ HB_FUNC( QAPPLICATION_SETSTARTDRAGTIME )
 /*
 void setStyle ( QStyle * style )
 */
-HB_FUNC( QAPPLICATION_SETSTYLE1 )
+HB_FUNC_STATIC( QAPPLICATION_SETSTYLE1 )
 {
   QStyle * par1 = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QApplication::setStyle ( par1 );
@@ -1022,7 +1022,7 @@ HB_FUNC( QAPPLICATION_SETSTYLE1 )
 /*
 QStyle * setStyle ( const QString & style )
 */
-HB_FUNC( QAPPLICATION_SETSTYLE2 )
+HB_FUNC_STATIC( QAPPLICATION_SETSTYLE2 )
 {
   QString par1 = hb_parc(1);
   QStyle * ptr = QApplication::setStyle ( par1 );
@@ -1032,7 +1032,7 @@ HB_FUNC( QAPPLICATION_SETSTYLE2 )
 //[1]void setStyle ( QStyle * style )
 //[2]QStyle * setStyle ( const QString & style )
 
-HB_FUNC( QAPPLICATION_SETSTYLE )
+HB_FUNC_STATIC( QAPPLICATION_SETSTYLE )
 {
   if( ISNUMPAR(1) && ISQSTYLE(1) )
   {
@@ -1047,7 +1047,7 @@ HB_FUNC( QAPPLICATION_SETSTYLE )
 /*
 void setWheelScrollLines ( int )
 */
-HB_FUNC( QAPPLICATION_SETWHEELSCROLLLINES )
+HB_FUNC_STATIC( QAPPLICATION_SETWHEELSCROLLLINES )
 {
   int par1 = hb_parni(1);
   QApplication::setWheelScrollLines ( par1 );
@@ -1058,7 +1058,7 @@ HB_FUNC( QAPPLICATION_SETWHEELSCROLLLINES )
 /*
 void setWindowIcon ( const QIcon & icon )
 */
-HB_FUNC( QAPPLICATION_SETWINDOWICON )
+HB_FUNC_STATIC( QAPPLICATION_SETWINDOWICON )
 {
   QIcon par1 = ISOBJECT(1)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(1));
   QApplication::setWindowIcon ( par1 );
@@ -1069,7 +1069,7 @@ HB_FUNC( QAPPLICATION_SETWINDOWICON )
 /*
 int startDragDistance ()
 */
-HB_FUNC( QAPPLICATION_STARTDRAGDISTANCE )
+HB_FUNC_STATIC( QAPPLICATION_STARTDRAGDISTANCE )
 {
   int i = QApplication::startDragDistance (  );
   hb_retni( i );
@@ -1079,7 +1079,7 @@ HB_FUNC( QAPPLICATION_STARTDRAGDISTANCE )
 /*
 int startDragTime ()
 */
-HB_FUNC( QAPPLICATION_STARTDRAGTIME )
+HB_FUNC_STATIC( QAPPLICATION_STARTDRAGTIME )
 {
   int i = QApplication::startDragTime (  );
   hb_retni( i );
@@ -1089,7 +1089,7 @@ HB_FUNC( QAPPLICATION_STARTDRAGTIME )
 /*
 QStyle * style ()
 */
-HB_FUNC( QAPPLICATION_STYLE )
+HB_FUNC_STATIC( QAPPLICATION_STYLE )
 {
   QStyle * ptr = QApplication::style (  );
   _qt4xhb_createReturnClass ( ptr, "QSTYLE" );}
@@ -1098,7 +1098,7 @@ HB_FUNC( QAPPLICATION_STYLE )
 /*
 void syncX ()
 */
-HB_FUNC( QAPPLICATION_SYNCX )
+HB_FUNC_STATIC( QAPPLICATION_SYNCX )
 {
   QApplication::syncX (  );
   hb_itemReturn( hb_stackSelfItem() );
@@ -1108,7 +1108,7 @@ HB_FUNC( QAPPLICATION_SYNCX )
 /*
 QWidget * topLevelAt ( const QPoint & point )
 */
-HB_FUNC( QAPPLICATION_TOPLEVELAT1 )
+HB_FUNC_STATIC( QAPPLICATION_TOPLEVELAT1 )
 {
   QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QWidget * ptr = QApplication::topLevelAt ( *par1 );
@@ -1118,7 +1118,7 @@ HB_FUNC( QAPPLICATION_TOPLEVELAT1 )
 /*
 QWidget * topLevelAt ( int x, int y )
 */
-HB_FUNC( QAPPLICATION_TOPLEVELAT2 )
+HB_FUNC_STATIC( QAPPLICATION_TOPLEVELAT2 )
 {
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
@@ -1129,7 +1129,7 @@ HB_FUNC( QAPPLICATION_TOPLEVELAT2 )
 //[1]QWidget * topLevelAt ( const QPoint & point )
 //[2]QWidget * topLevelAt ( int x, int y )
 
-HB_FUNC( QAPPLICATION_TOPLEVELAT )
+HB_FUNC_STATIC( QAPPLICATION_TOPLEVELAT )
 {
   if( ISNUMPAR(1) && ISQPOINT(1) )
   {
@@ -1144,7 +1144,7 @@ HB_FUNC( QAPPLICATION_TOPLEVELAT )
 /*
 QWidgetList topLevelWidgets ()
 */
-HB_FUNC( QAPPLICATION_TOPLEVELWIDGETS )
+HB_FUNC_STATIC( QAPPLICATION_TOPLEVELWIDGETS )
 {
   QWidgetList list = QApplication::topLevelWidgets (  );
   PHB_DYNS pDynSym;
@@ -1184,7 +1184,7 @@ HB_FUNC( QAPPLICATION_TOPLEVELWIDGETS )
 /*
 QApplication::Type type ()
 */
-HB_FUNC( QAPPLICATION_TYPE )
+HB_FUNC_STATIC( QAPPLICATION_TYPE )
 {
   int i = QApplication::type (  );
   hb_retni( i );
@@ -1194,7 +1194,7 @@ HB_FUNC( QAPPLICATION_TYPE )
 /*
 int wheelScrollLines ()
 */
-HB_FUNC( QAPPLICATION_WHEELSCROLLLINES )
+HB_FUNC_STATIC( QAPPLICATION_WHEELSCROLLLINES )
 {
   int i = QApplication::wheelScrollLines (  );
   hb_retni( i );
@@ -1204,7 +1204,7 @@ HB_FUNC( QAPPLICATION_WHEELSCROLLLINES )
 /*
 QWidget * widgetAt ( const QPoint & point )
 */
-HB_FUNC( QAPPLICATION_WIDGETAT1 )
+HB_FUNC_STATIC( QAPPLICATION_WIDGETAT1 )
 {
   QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QWidget * ptr = QApplication::widgetAt ( *par1 );
@@ -1214,7 +1214,7 @@ HB_FUNC( QAPPLICATION_WIDGETAT1 )
 /*
 QWidget * widgetAt ( int x, int y )
 */
-HB_FUNC( QAPPLICATION_WIDGETAT2 )
+HB_FUNC_STATIC( QAPPLICATION_WIDGETAT2 )
 {
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
@@ -1225,7 +1225,7 @@ HB_FUNC( QAPPLICATION_WIDGETAT2 )
 //[1]QWidget * widgetAt ( const QPoint & point )
 //[2]QWidget * widgetAt ( int x, int y )
 
-HB_FUNC( QAPPLICATION_WIDGETAT )
+HB_FUNC_STATIC( QAPPLICATION_WIDGETAT )
 {
   if( ISNUMPAR(1) && ISQPOINT(1) )
   {
@@ -1240,7 +1240,7 @@ HB_FUNC( QAPPLICATION_WIDGETAT )
 /*
 QIcon windowIcon ()
 */
-HB_FUNC( QAPPLICATION_WINDOWICON )
+HB_FUNC_STATIC( QAPPLICATION_WINDOWICON )
 {
   QIcon * ptr = new QIcon( QApplication::windowIcon (  ) );
   _qt4xhb_createReturnClass ( ptr, "QICON", true );}

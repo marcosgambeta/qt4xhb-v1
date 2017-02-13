@@ -105,7 +105,7 @@ RETURN
 /*
 QEasingCurve ( Type type = Linear )
 */
-HB_FUNC( QEASINGCURVE_NEW1 )
+HB_FUNC_STATIC( QEASINGCURVE_NEW1 )
 {
   QEasingCurve * o = NULL;
   int par1 = hb_parni(1);
@@ -121,7 +121,7 @@ HB_FUNC( QEASINGCURVE_NEW1 )
 /*
 QEasingCurve ( const QEasingCurve & other )
 */
-HB_FUNC( QEASINGCURVE_NEW2 )
+HB_FUNC_STATIC( QEASINGCURVE_NEW2 )
 {
   QEasingCurve * o = NULL;
   QEasingCurve * par1 = (QEasingCurve *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -137,7 +137,7 @@ HB_FUNC( QEASINGCURVE_NEW2 )
 //[1]QEasingCurve(Type type = Linear)
 //[2]QEasingCurve(const QEasingCurve & other)
 
-HB_FUNC( QEASINGCURVE_NEW )
+HB_FUNC_STATIC( QEASINGCURVE_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -157,7 +157,7 @@ HB_FUNC( QEASINGCURVE_NEW )
   }
 }
 
-HB_FUNC( QEASINGCURVE_DELETE )
+HB_FUNC_STATIC( QEASINGCURVE_DELETE )
 {
   QEasingCurve * obj = (QEasingCurve *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -176,7 +176,7 @@ HB_FUNC( QEASINGCURVE_DELETE )
 /*
 qreal amplitude () const
 */
-HB_FUNC( QEASINGCURVE_AMPLITUDE )
+HB_FUNC_STATIC( QEASINGCURVE_AMPLITUDE )
 {
   QEasingCurve * obj = (QEasingCurve *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -191,7 +191,7 @@ HB_FUNC( QEASINGCURVE_AMPLITUDE )
 /*
 qreal overshoot () const
 */
-HB_FUNC( QEASINGCURVE_OVERSHOOT )
+HB_FUNC_STATIC( QEASINGCURVE_OVERSHOOT )
 {
   QEasingCurve * obj = (QEasingCurve *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -205,7 +205,7 @@ HB_FUNC( QEASINGCURVE_OVERSHOOT )
 /*
 qreal period () const
 */
-HB_FUNC( QEASINGCURVE_PERIOD )
+HB_FUNC_STATIC( QEASINGCURVE_PERIOD )
 {
   QEasingCurve * obj = (QEasingCurve *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -219,7 +219,7 @@ HB_FUNC( QEASINGCURVE_PERIOD )
 /*
 void setAmplitude ( qreal amplitude )
 */
-HB_FUNC( QEASINGCURVE_SETAMPLITUDE )
+HB_FUNC_STATIC( QEASINGCURVE_SETAMPLITUDE )
 {
   QEasingCurve * obj = (QEasingCurve *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -235,7 +235,7 @@ HB_FUNC( QEASINGCURVE_SETAMPLITUDE )
 /*
 void setOvershoot ( qreal overshoot )
 */
-HB_FUNC( QEASINGCURVE_SETOVERSHOOT )
+HB_FUNC_STATIC( QEASINGCURVE_SETOVERSHOOT )
 {
   QEasingCurve * obj = (QEasingCurve *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -250,7 +250,7 @@ HB_FUNC( QEASINGCURVE_SETOVERSHOOT )
 /*
 void setPeriod ( qreal period )
 */
-HB_FUNC( QEASINGCURVE_SETPERIOD )
+HB_FUNC_STATIC( QEASINGCURVE_SETPERIOD )
 {
   QEasingCurve * obj = (QEasingCurve *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -265,7 +265,7 @@ HB_FUNC( QEASINGCURVE_SETPERIOD )
 /*
 void setType ( Type type )
 */
-HB_FUNC( QEASINGCURVE_SETTYPE )
+HB_FUNC_STATIC( QEASINGCURVE_SETTYPE )
 {
   QEasingCurve * obj = (QEasingCurve *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -280,7 +280,7 @@ HB_FUNC( QEASINGCURVE_SETTYPE )
 /*
 Type type () const
 */
-HB_FUNC( QEASINGCURVE_TYPE )
+HB_FUNC_STATIC( QEASINGCURVE_TYPE )
 {
   QEasingCurve * obj = (QEasingCurve *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

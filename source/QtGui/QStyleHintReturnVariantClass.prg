@@ -60,7 +60,7 @@ RETURN
 /*
 QStyleHintReturnVariant ()
 */
-HB_FUNC( QSTYLEHINTRETURNVARIANT_NEW )
+HB_FUNC_STATIC( QSTYLEHINTRETURNVARIANT_NEW )
 {
   QStyleHintReturnVariant * o = NULL;
   o = new QStyleHintReturnVariant (  );
@@ -72,7 +72,7 @@ HB_FUNC( QSTYLEHINTRETURNVARIANT_NEW )
 }
 
 
-HB_FUNC( QSTYLEHINTRETURNVARIANT_DELETE )
+HB_FUNC_STATIC( QSTYLEHINTRETURNVARIANT_DELETE )
 {
   QStyleHintReturnVariant * obj = (QStyleHintReturnVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

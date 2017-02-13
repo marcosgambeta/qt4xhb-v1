@@ -102,7 +102,7 @@ RETURN
 /*
 QSemaphore ( int n = 0 )
 */
-HB_FUNC( QSEMAPHORE_NEW )
+HB_FUNC_STATIC( QSEMAPHORE_NEW )
 {
   QSemaphore * o = NULL;
   int par1 = ISNIL(1)? 0 : hb_parni(1);
@@ -118,7 +118,7 @@ HB_FUNC( QSEMAPHORE_NEW )
 }
 
 
-HB_FUNC( QSEMAPHORE_DELETE )
+HB_FUNC_STATIC( QSEMAPHORE_DELETE )
 {
   QSemaphore * obj = (QSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -137,7 +137,7 @@ HB_FUNC( QSEMAPHORE_DELETE )
 /*
 void acquire ( int n = 1 )
 */
-HB_FUNC( QSEMAPHORE_ACQUIRE )
+HB_FUNC_STATIC( QSEMAPHORE_ACQUIRE )
 {
   QSemaphore * obj = (QSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -152,7 +152,7 @@ HB_FUNC( QSEMAPHORE_ACQUIRE )
 /*
 int available () const
 */
-HB_FUNC( QSEMAPHORE_AVAILABLE )
+HB_FUNC_STATIC( QSEMAPHORE_AVAILABLE )
 {
   QSemaphore * obj = (QSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -166,7 +166,7 @@ HB_FUNC( QSEMAPHORE_AVAILABLE )
 /*
 void release ( int n = 1 )
 */
-HB_FUNC( QSEMAPHORE_RELEASE )
+HB_FUNC_STATIC( QSEMAPHORE_RELEASE )
 {
   QSemaphore * obj = (QSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -181,7 +181,7 @@ HB_FUNC( QSEMAPHORE_RELEASE )
 /*
 bool tryAcquire ( int n = 1 )
 */
-HB_FUNC( QSEMAPHORE_TRYACQUIRE1 )
+HB_FUNC_STATIC( QSEMAPHORE_TRYACQUIRE1 )
 {
   QSemaphore * obj = (QSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -196,7 +196,7 @@ HB_FUNC( QSEMAPHORE_TRYACQUIRE1 )
 /*
 bool tryAcquire ( int n, int timeout )
 */
-HB_FUNC( QSEMAPHORE_TRYACQUIRE2 )
+HB_FUNC_STATIC( QSEMAPHORE_TRYACQUIRE2 )
 {
   QSemaphore * obj = (QSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -212,7 +212,7 @@ HB_FUNC( QSEMAPHORE_TRYACQUIRE2 )
 //[1]bool tryAcquire ( int n = 1 )
 //[2]bool tryAcquire ( int n, int timeout )
 
-HB_FUNC( QSEMAPHORE_TRYACQUIRE )
+HB_FUNC_STATIC( QSEMAPHORE_TRYACQUIRE )
 {
   if( ISNUMPAR(0) )
   {

@@ -133,7 +133,7 @@ RETURN
 /*
 QFutureInterfaceBase(State initialState = NoState)
 */
-HB_FUNC( QFUTUREINTERFACEBASE_NEW1 )
+HB_FUNC_STATIC( QFUTUREINTERFACEBASE_NEW1 )
 {
   QFutureInterfaceBase * o = NULL;
   int par1 = ISNIL(1)? (int) QFutureInterfaceBase::NoState : hb_parni(1);
@@ -149,7 +149,7 @@ HB_FUNC( QFUTUREINTERFACEBASE_NEW1 )
 /*
 QFutureInterfaceBase(const QFutureInterfaceBase &other)
 */
-HB_FUNC( QFUTUREINTERFACEBASE_NEW2 )
+HB_FUNC_STATIC( QFUTUREINTERFACEBASE_NEW2 )
 {
   QFutureInterfaceBase * o = NULL;
   QFutureInterfaceBase * par1 = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -165,7 +165,7 @@ HB_FUNC( QFUTUREINTERFACEBASE_NEW2 )
 //[1]QFutureInterfaceBase(State initialState = NoState)
 //[2]QFutureInterfaceBase(const QFutureInterfaceBase &other)
 
-HB_FUNC( QFUTUREINTERFACEBASE_NEW )
+HB_FUNC_STATIC( QFUTUREINTERFACEBASE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
@@ -181,7 +181,7 @@ HB_FUNC( QFUTUREINTERFACEBASE_NEW )
   }
 }
 
-HB_FUNC( QFUTUREINTERFACEBASE_DELETE )
+HB_FUNC_STATIC( QFUTUREINTERFACEBASE_DELETE )
 {
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -200,7 +200,7 @@ HB_FUNC( QFUTUREINTERFACEBASE_DELETE )
 /*
 void reportStarted()
 */
-HB_FUNC( QFUTUREINTERFACEBASE_REPORTSTARTED )
+HB_FUNC_STATIC( QFUTUREINTERFACEBASE_REPORTSTARTED )
 {
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -214,7 +214,7 @@ HB_FUNC( QFUTUREINTERFACEBASE_REPORTSTARTED )
 /*
 void reportFinished()
 */
-HB_FUNC( QFUTUREINTERFACEBASE_REPORTFINISHED )
+HB_FUNC_STATIC( QFUTUREINTERFACEBASE_REPORTFINISHED )
 {
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -228,7 +228,7 @@ HB_FUNC( QFUTUREINTERFACEBASE_REPORTFINISHED )
 /*
 void reportCanceled()
 */
-HB_FUNC( QFUTUREINTERFACEBASE_REPORTCANCELED )
+HB_FUNC_STATIC( QFUTUREINTERFACEBASE_REPORTCANCELED )
 {
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -243,7 +243,7 @@ HB_FUNC( QFUTUREINTERFACEBASE_REPORTCANCELED )
 /*
 void reportResultsReady(int beginIndex, int endIndex)
 */
-HB_FUNC( QFUTUREINTERFACEBASE_REPORTRESULTSREADY )
+HB_FUNC_STATIC( QFUTUREINTERFACEBASE_REPORTRESULTSREADY )
 {
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -259,7 +259,7 @@ HB_FUNC( QFUTUREINTERFACEBASE_REPORTRESULTSREADY )
 /*
 void setRunnable(QRunnable *runnable)
 */
-HB_FUNC( QFUTUREINTERFACEBASE_SETRUNNABLE )
+HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETRUNNABLE )
 {
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -274,7 +274,7 @@ HB_FUNC( QFUTUREINTERFACEBASE_SETRUNNABLE )
 /*
 void setFilterMode(bool enable)
 */
-HB_FUNC( QFUTUREINTERFACEBASE_SETFILTERMODE )
+HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETFILTERMODE )
 {
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -289,7 +289,7 @@ HB_FUNC( QFUTUREINTERFACEBASE_SETFILTERMODE )
 /*
 void setProgressRange(int minimum, int maximum)
 */
-HB_FUNC( QFUTUREINTERFACEBASE_SETPROGRESSRANGE )
+HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETPROGRESSRANGE )
 {
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -305,7 +305,7 @@ HB_FUNC( QFUTUREINTERFACEBASE_SETPROGRESSRANGE )
 /*
 int progressMinimum() const
 */
-HB_FUNC( QFUTUREINTERFACEBASE_PROGRESSMINIMUM )
+HB_FUNC_STATIC( QFUTUREINTERFACEBASE_PROGRESSMINIMUM )
 {
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -319,7 +319,7 @@ HB_FUNC( QFUTUREINTERFACEBASE_PROGRESSMINIMUM )
 /*
 int progressMaximum() const
 */
-HB_FUNC( QFUTUREINTERFACEBASE_PROGRESSMAXIMUM )
+HB_FUNC_STATIC( QFUTUREINTERFACEBASE_PROGRESSMAXIMUM )
 {
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -333,7 +333,7 @@ HB_FUNC( QFUTUREINTERFACEBASE_PROGRESSMAXIMUM )
 /*
 bool isProgressUpdateNeeded() const
 */
-HB_FUNC( QFUTUREINTERFACEBASE_ISPROGRESSUPDATENEEDED )
+HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISPROGRESSUPDATENEEDED )
 {
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -347,7 +347,7 @@ HB_FUNC( QFUTUREINTERFACEBASE_ISPROGRESSUPDATENEEDED )
 /*
 void setProgressValue(int progressValue)
 */
-HB_FUNC( QFUTUREINTERFACEBASE_SETPROGRESSVALUE )
+HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETPROGRESSVALUE )
 {
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -362,7 +362,7 @@ HB_FUNC( QFUTUREINTERFACEBASE_SETPROGRESSVALUE )
 /*
 int progressValue() const
 */
-HB_FUNC( QFUTUREINTERFACEBASE_PROGRESSVALUE )
+HB_FUNC_STATIC( QFUTUREINTERFACEBASE_PROGRESSVALUE )
 {
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -376,7 +376,7 @@ HB_FUNC( QFUTUREINTERFACEBASE_PROGRESSVALUE )
 /*
 void setProgressValueAndText(int progressValue, const QString &progressText)
 */
-HB_FUNC( QFUTUREINTERFACEBASE_SETPROGRESSVALUEANDTEXT )
+HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETPROGRESSVALUEANDTEXT )
 {
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -392,7 +392,7 @@ HB_FUNC( QFUTUREINTERFACEBASE_SETPROGRESSVALUEANDTEXT )
 /*
 QString progressText() const
 */
-HB_FUNC( QFUTUREINTERFACEBASE_PROGRESSTEXT )
+HB_FUNC_STATIC( QFUTUREINTERFACEBASE_PROGRESSTEXT )
 {
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -406,7 +406,7 @@ HB_FUNC( QFUTUREINTERFACEBASE_PROGRESSTEXT )
 /*
 void setExpectedResultCount(int resultCount)
 */
-HB_FUNC( QFUTUREINTERFACEBASE_SETEXPECTEDRESULTCOUNT )
+HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETEXPECTEDRESULTCOUNT )
 {
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -421,7 +421,7 @@ HB_FUNC( QFUTUREINTERFACEBASE_SETEXPECTEDRESULTCOUNT )
 /*
 int expectedResultCount()
 */
-HB_FUNC( QFUTUREINTERFACEBASE_EXPECTEDRESULTCOUNT )
+HB_FUNC_STATIC( QFUTUREINTERFACEBASE_EXPECTEDRESULTCOUNT )
 {
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -435,7 +435,7 @@ HB_FUNC( QFUTUREINTERFACEBASE_EXPECTEDRESULTCOUNT )
 /*
 int resultCount() const
 */
-HB_FUNC( QFUTUREINTERFACEBASE_RESULTCOUNT )
+HB_FUNC_STATIC( QFUTUREINTERFACEBASE_RESULTCOUNT )
 {
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -449,7 +449,7 @@ HB_FUNC( QFUTUREINTERFACEBASE_RESULTCOUNT )
 /*
 bool queryState(State state) const
 */
-HB_FUNC( QFUTUREINTERFACEBASE_QUERYSTATE )
+HB_FUNC_STATIC( QFUTUREINTERFACEBASE_QUERYSTATE )
 {
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -464,7 +464,7 @@ HB_FUNC( QFUTUREINTERFACEBASE_QUERYSTATE )
 /*
 bool isRunning() const
 */
-HB_FUNC( QFUTUREINTERFACEBASE_ISRUNNING )
+HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISRUNNING )
 {
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -478,7 +478,7 @@ HB_FUNC( QFUTUREINTERFACEBASE_ISRUNNING )
 /*
 bool isStarted() const
 */
-HB_FUNC( QFUTUREINTERFACEBASE_ISSTARTED )
+HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISSTARTED )
 {
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -492,7 +492,7 @@ HB_FUNC( QFUTUREINTERFACEBASE_ISSTARTED )
 /*
 bool isCanceled() const
 */
-HB_FUNC( QFUTUREINTERFACEBASE_ISCANCELED )
+HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISCANCELED )
 {
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -506,7 +506,7 @@ HB_FUNC( QFUTUREINTERFACEBASE_ISCANCELED )
 /*
 bool isFinished() const
 */
-HB_FUNC( QFUTUREINTERFACEBASE_ISFINISHED )
+HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISFINISHED )
 {
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -520,7 +520,7 @@ HB_FUNC( QFUTUREINTERFACEBASE_ISFINISHED )
 /*
 bool isPaused() const
 */
-HB_FUNC( QFUTUREINTERFACEBASE_ISPAUSED )
+HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISPAUSED )
 {
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -534,7 +534,7 @@ HB_FUNC( QFUTUREINTERFACEBASE_ISPAUSED )
 /*
 bool isThrottled() const
 */
-HB_FUNC( QFUTUREINTERFACEBASE_ISTHROTTLED )
+HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISTHROTTLED )
 {
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -548,7 +548,7 @@ HB_FUNC( QFUTUREINTERFACEBASE_ISTHROTTLED )
 /*
 bool isResultReadyAt(int index) const
 */
-HB_FUNC( QFUTUREINTERFACEBASE_ISRESULTREADYAT )
+HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISRESULTREADYAT )
 {
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -563,7 +563,7 @@ HB_FUNC( QFUTUREINTERFACEBASE_ISRESULTREADYAT )
 /*
 void cancel()
 */
-HB_FUNC( QFUTUREINTERFACEBASE_CANCEL )
+HB_FUNC_STATIC( QFUTUREINTERFACEBASE_CANCEL )
 {
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -577,7 +577,7 @@ HB_FUNC( QFUTUREINTERFACEBASE_CANCEL )
 /*
 void setPaused(bool paused)
 */
-HB_FUNC( QFUTUREINTERFACEBASE_SETPAUSED )
+HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETPAUSED )
 {
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -592,7 +592,7 @@ HB_FUNC( QFUTUREINTERFACEBASE_SETPAUSED )
 /*
 void togglePaused()
 */
-HB_FUNC( QFUTUREINTERFACEBASE_TOGGLEPAUSED )
+HB_FUNC_STATIC( QFUTUREINTERFACEBASE_TOGGLEPAUSED )
 {
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -606,7 +606,7 @@ HB_FUNC( QFUTUREINTERFACEBASE_TOGGLEPAUSED )
 /*
 void setThrottled(bool enable)
 */
-HB_FUNC( QFUTUREINTERFACEBASE_SETTHROTTLED )
+HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETTHROTTLED )
 {
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -621,7 +621,7 @@ HB_FUNC( QFUTUREINTERFACEBASE_SETTHROTTLED )
 /*
 void waitForFinished()
 */
-HB_FUNC( QFUTUREINTERFACEBASE_WAITFORFINISHED )
+HB_FUNC_STATIC( QFUTUREINTERFACEBASE_WAITFORFINISHED )
 {
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -635,7 +635,7 @@ HB_FUNC( QFUTUREINTERFACEBASE_WAITFORFINISHED )
 /*
 bool waitForNextResult()
 */
-HB_FUNC( QFUTUREINTERFACEBASE_WAITFORNEXTRESULT )
+HB_FUNC_STATIC( QFUTUREINTERFACEBASE_WAITFORNEXTRESULT )
 {
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -649,7 +649,7 @@ HB_FUNC( QFUTUREINTERFACEBASE_WAITFORNEXTRESULT )
 /*
 void waitForResult(int resultIndex)
 */
-HB_FUNC( QFUTUREINTERFACEBASE_WAITFORRESULT )
+HB_FUNC_STATIC( QFUTUREINTERFACEBASE_WAITFORRESULT )
 {
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -664,7 +664,7 @@ HB_FUNC( QFUTUREINTERFACEBASE_WAITFORRESULT )
 /*
 void waitForResume()
 */
-HB_FUNC( QFUTUREINTERFACEBASE_WAITFORRESUME )
+HB_FUNC_STATIC( QFUTUREINTERFACEBASE_WAITFORRESUME )
 {
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -678,7 +678,7 @@ HB_FUNC( QFUTUREINTERFACEBASE_WAITFORRESUME )
 /*
 QMutex *mutex() const
 */
-HB_FUNC( QFUTUREINTERFACEBASE_MUTEX )
+HB_FUNC_STATIC( QFUTUREINTERFACEBASE_MUTEX )
 {
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

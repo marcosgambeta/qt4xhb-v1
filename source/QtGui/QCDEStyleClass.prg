@@ -66,7 +66,7 @@ RETURN
 /*
 QCDEStyle ( bool useHighlightCols = false )
 */
-HB_FUNC( QCDESTYLE_NEW )
+HB_FUNC_STATIC( QCDESTYLE_NEW )
 {
   QCDEStyle * o = NULL;
   bool par1 = ISNIL(1)? false : hb_parl(1);
@@ -79,7 +79,7 @@ HB_FUNC( QCDESTYLE_NEW )
 }
 
 
-HB_FUNC( QCDESTYLE_DELETE )
+HB_FUNC_STATIC( QCDESTYLE_DELETE )
 {
   QCDEStyle * obj = (QCDEStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -98,7 +98,7 @@ HB_FUNC( QCDESTYLE_DELETE )
 /*
 virtual void drawControl ( ControlElement element, const QStyleOption * opt, QPainter * p, const QWidget * widget = 0 ) const
 */
-HB_FUNC( QCDESTYLE_DRAWCONTROL )
+HB_FUNC_STATIC( QCDESTYLE_DRAWCONTROL )
 {
   QCDEStyle * obj = (QCDEStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -116,7 +116,7 @@ HB_FUNC( QCDESTYLE_DRAWCONTROL )
 /*
 virtual void drawPrimitive ( PrimitiveElement pe, const QStyleOption * opt, QPainter * p, const QWidget * widget = 0 ) const
 */
-HB_FUNC( QCDESTYLE_DRAWPRIMITIVE )
+HB_FUNC_STATIC( QCDESTYLE_DRAWPRIMITIVE )
 {
   QCDEStyle * obj = (QCDEStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -134,7 +134,7 @@ HB_FUNC( QCDESTYLE_DRAWPRIMITIVE )
 /*
 virtual int pixelMetric ( PixelMetric metric, const QStyleOption * option = 0, const QWidget * widget = 0 ) const
 */
-HB_FUNC( QCDESTYLE_PIXELMETRIC )
+HB_FUNC_STATIC( QCDESTYLE_PIXELMETRIC )
 {
   QCDEStyle * obj = (QCDEStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -151,7 +151,7 @@ HB_FUNC( QCDESTYLE_PIXELMETRIC )
 /*
 virtual QPalette standardPalette () const
 */
-HB_FUNC( QCDESTYLE_STANDARDPALETTE )
+HB_FUNC_STATIC( QCDESTYLE_STANDARDPALETTE )
 {
   QCDEStyle * obj = (QCDEStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

@@ -63,7 +63,7 @@ RETURN
 /*
 QDomCDATASection ()
 */
-HB_FUNC( QDOMCDATASECTION_NEW1 )
+HB_FUNC_STATIC( QDOMCDATASECTION_NEW1 )
 {
   QDomCDATASection * o = NULL;
   o = new QDomCDATASection (  );
@@ -81,7 +81,7 @@ HB_FUNC( QDOMCDATASECTION_NEW1 )
 /*
 QDomCDATASection ( const QDomCDATASection & x )
 */
-HB_FUNC( QDOMCDATASECTION_NEW2 )
+HB_FUNC_STATIC( QDOMCDATASECTION_NEW2 )
 {
   QDomCDATASection * o = NULL;
   QDomCDATASection * par1 = (QDomCDATASection *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -100,7 +100,7 @@ HB_FUNC( QDOMCDATASECTION_NEW2 )
 //[1]QDomCDATASection ()
 //[2]QDomCDATASection ( const QDomCDATASection & x )
 
-HB_FUNC( QDOMCDATASECTION_NEW )
+HB_FUNC_STATIC( QDOMCDATASECTION_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -121,7 +121,7 @@ HB_FUNC( QDOMCDATASECTION_NEW )
 /*
 QDomNode::NodeType nodeType () const
 */
-HB_FUNC( QDOMCDATASECTION_NODETYPE )
+HB_FUNC_STATIC( QDOMCDATASECTION_NODETYPE )
 {
   QDomCDATASection * obj = (QDomCDATASection *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

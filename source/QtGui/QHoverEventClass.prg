@@ -64,7 +64,7 @@ RETURN
 /*
 QHoverEvent ( Type type, const QPoint & pos, const QPoint & oldPos )
 */
-HB_FUNC( QHOVEREVENT_NEW )
+HB_FUNC_STATIC( QHOVEREVENT_NEW )
 {
   QHoverEvent * o = NULL;
   int par1 = hb_parni(1);
@@ -79,7 +79,7 @@ HB_FUNC( QHOVEREVENT_NEW )
 }
 
 
-HB_FUNC( QHOVEREVENT_DELETE )
+HB_FUNC_STATIC( QHOVEREVENT_DELETE )
 {
   QHoverEvent * obj = (QHoverEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -98,7 +98,7 @@ HB_FUNC( QHOVEREVENT_DELETE )
 /*
 const QPoint & pos () const
 */
-HB_FUNC( QHOVEREVENT_POS )
+HB_FUNC_STATIC( QHOVEREVENT_POS )
 {
   QHoverEvent * obj = (QHoverEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -111,7 +111,7 @@ HB_FUNC( QHOVEREVENT_POS )
 /*
 const QPoint & oldPos () const
 */
-HB_FUNC( QHOVEREVENT_OLDPOS )
+HB_FUNC_STATIC( QHOVEREVENT_OLDPOS )
 {
   QHoverEvent * obj = (QHoverEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

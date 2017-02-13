@@ -68,7 +68,7 @@ RETURN
 /*
 QEventTransition(QState * sourceState = 0)
 */
-HB_FUNC( QEVENTTRANSITION_NEW1 )
+HB_FUNC_STATIC( QEVENTTRANSITION_NEW1 )
 {
   QEventTransition * o = NULL;
   QState * par1 = ISNIL(1)? 0 : (QState *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -84,7 +84,7 @@ HB_FUNC( QEVENTTRANSITION_NEW1 )
 /*
 QEventTransition(QObject * object, QEvent::Type type, QState * sourceState = 0)
 */
-HB_FUNC( QEVENTTRANSITION_NEW2 )
+HB_FUNC_STATIC( QEVENTTRANSITION_NEW2 )
 {
   QEventTransition * o = NULL;
   QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -102,7 +102,7 @@ HB_FUNC( QEVENTTRANSITION_NEW2 )
 //[1]QEventTransition(QState * sourceState = 0)
 //[2]QEventTransition(QObject * object, QEvent::Type type, QState * sourceState = 0)
 
-HB_FUNC( QEVENTTRANSITION_NEW )
+HB_FUNC_STATIC( QEVENTTRANSITION_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQSTATE(1)||ISNIL(1)) )
   {
@@ -118,7 +118,7 @@ HB_FUNC( QEVENTTRANSITION_NEW )
   }
 }
 
-HB_FUNC( QEVENTTRANSITION_DELETE )
+HB_FUNC_STATIC( QEVENTTRANSITION_DELETE )
 {
   QEventTransition * obj = (QEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -137,7 +137,7 @@ HB_FUNC( QEVENTTRANSITION_DELETE )
 /*
 QObject * eventSource() const
 */
-HB_FUNC( QEVENTTRANSITION_EVENTSOURCE )
+HB_FUNC_STATIC( QEVENTTRANSITION_EVENTSOURCE )
 {
   QEventTransition * obj = (QEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -150,7 +150,7 @@ HB_FUNC( QEVENTTRANSITION_EVENTSOURCE )
 /*
 QEvent::Type eventType() const
 */
-HB_FUNC( QEVENTTRANSITION_EVENTTYPE )
+HB_FUNC_STATIC( QEVENTTRANSITION_EVENTTYPE )
 {
   QEventTransition * obj = (QEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -164,7 +164,7 @@ HB_FUNC( QEVENTTRANSITION_EVENTTYPE )
 /*
 void setEventSource(QObject * object)
 */
-HB_FUNC( QEVENTTRANSITION_SETEVENTSOURCE )
+HB_FUNC_STATIC( QEVENTTRANSITION_SETEVENTSOURCE )
 {
   QEventTransition * obj = (QEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -179,7 +179,7 @@ HB_FUNC( QEVENTTRANSITION_SETEVENTSOURCE )
 /*
 void setEventType(QEvent::Type type)
 */
-HB_FUNC( QEVENTTRANSITION_SETEVENTTYPE )
+HB_FUNC_STATIC( QEVENTTRANSITION_SETEVENTTYPE )
 {
   QEventTransition * obj = (QEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

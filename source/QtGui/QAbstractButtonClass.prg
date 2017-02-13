@@ -92,7 +92,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QABSTRACTBUTTON_DELETE )
+HB_FUNC_STATIC( QABSTRACTBUTTON_DELETE )
 {
   QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -111,7 +111,7 @@ HB_FUNC( QABSTRACTBUTTON_DELETE )
 /*
 bool autoExclusive () const
 */
-HB_FUNC( QABSTRACTBUTTON_AUTOEXCLUSIVE )
+HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOEXCLUSIVE )
 {
   QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -125,7 +125,7 @@ HB_FUNC( QABSTRACTBUTTON_AUTOEXCLUSIVE )
 /*
 bool autoRepeat () const 
 */
-HB_FUNC( QABSTRACTBUTTON_AUTOREPEAT )
+HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEAT )
 {
   QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -139,7 +139,7 @@ HB_FUNC( QABSTRACTBUTTON_AUTOREPEAT )
 /*
 int autoRepeatDelay () const 
 */
-HB_FUNC( QABSTRACTBUTTON_AUTOREPEATDELAY )
+HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEATDELAY )
 {
   QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -153,7 +153,7 @@ HB_FUNC( QABSTRACTBUTTON_AUTOREPEATDELAY )
 /*
 int autoRepeatInterval () const 
 */
-HB_FUNC( QABSTRACTBUTTON_AUTOREPEATINTERVAL )
+HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEATINTERVAL )
 {
   QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -167,7 +167,7 @@ HB_FUNC( QABSTRACTBUTTON_AUTOREPEATINTERVAL )
 /*
 QButtonGroup * group () const 
 */
-HB_FUNC( QABSTRACTBUTTON_GROUP )
+HB_FUNC_STATIC( QABSTRACTBUTTON_GROUP )
 {
   QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -180,7 +180,7 @@ HB_FUNC( QABSTRACTBUTTON_GROUP )
 /*
 QIcon icon () const 
 */
-HB_FUNC( QABSTRACTBUTTON_ICON )
+HB_FUNC_STATIC( QABSTRACTBUTTON_ICON )
 {
   QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -193,7 +193,7 @@ HB_FUNC( QABSTRACTBUTTON_ICON )
 /*
 QSize iconSize () const 
 */
-HB_FUNC( QABSTRACTBUTTON_ICONSIZE )
+HB_FUNC_STATIC( QABSTRACTBUTTON_ICONSIZE )
 {
   QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -206,7 +206,7 @@ HB_FUNC( QABSTRACTBUTTON_ICONSIZE )
 /*
 bool isCheckable () const 
 */
-HB_FUNC( QABSTRACTBUTTON_ISCHECKABLE )
+HB_FUNC_STATIC( QABSTRACTBUTTON_ISCHECKABLE )
 {
   QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -220,7 +220,7 @@ HB_FUNC( QABSTRACTBUTTON_ISCHECKABLE )
 /*
 bool isChecked () const 
 */
-HB_FUNC( QABSTRACTBUTTON_ISCHECKED )
+HB_FUNC_STATIC( QABSTRACTBUTTON_ISCHECKED )
 {
   QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -234,7 +234,7 @@ HB_FUNC( QABSTRACTBUTTON_ISCHECKED )
 /*
 bool isDown () const 
 */
-HB_FUNC( QABSTRACTBUTTON_ISDOWN )
+HB_FUNC_STATIC( QABSTRACTBUTTON_ISDOWN )
 {
   QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -248,7 +248,7 @@ HB_FUNC( QABSTRACTBUTTON_ISDOWN )
 /*
 void setAutoExclusive ( bool ) 
 */
-HB_FUNC( QABSTRACTBUTTON_SETAUTOEXCLUSIVE )
+HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOEXCLUSIVE )
 {
   QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -263,7 +263,7 @@ HB_FUNC( QABSTRACTBUTTON_SETAUTOEXCLUSIVE )
 /*
 void setAutoRepeat ( bool ) 
 */
-HB_FUNC( QABSTRACTBUTTON_SETAUTOREPEAT )
+HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEAT )
 {
   QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -278,7 +278,7 @@ HB_FUNC( QABSTRACTBUTTON_SETAUTOREPEAT )
 /*
 void setAutoRepeatDelay ( int ) 
 */
-HB_FUNC( QABSTRACTBUTTON_SETAUTOREPEATDELAY )
+HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEATDELAY )
 {
   QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -293,7 +293,7 @@ HB_FUNC( QABSTRACTBUTTON_SETAUTOREPEATDELAY )
 /*
 void setAutoRepeatInterval ( int ) 
 */
-HB_FUNC( QABSTRACTBUTTON_SETAUTOREPEATINTERVAL )
+HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEATINTERVAL )
 {
   QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -308,7 +308,7 @@ HB_FUNC( QABSTRACTBUTTON_SETAUTOREPEATINTERVAL )
 /*
 void setCheckable ( bool ) 
 */
-HB_FUNC( QABSTRACTBUTTON_SETCHECKABLE )
+HB_FUNC_STATIC( QABSTRACTBUTTON_SETCHECKABLE )
 {
   QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -323,7 +323,7 @@ HB_FUNC( QABSTRACTBUTTON_SETCHECKABLE )
 /*
 void setDown ( bool ) 
 */
-HB_FUNC( QABSTRACTBUTTON_SETDOWN )
+HB_FUNC_STATIC( QABSTRACTBUTTON_SETDOWN )
 {
   QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -338,7 +338,7 @@ HB_FUNC( QABSTRACTBUTTON_SETDOWN )
 /*
 void setIcon ( const QIcon & icon ) 
 */
-HB_FUNC( QABSTRACTBUTTON_SETICON )
+HB_FUNC_STATIC( QABSTRACTBUTTON_SETICON )
 {
   QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -353,7 +353,7 @@ HB_FUNC( QABSTRACTBUTTON_SETICON )
 /*
 void setShortcut ( const QKeySequence & key ) 
 */
-HB_FUNC( QABSTRACTBUTTON_SETSHORTCUT )
+HB_FUNC_STATIC( QABSTRACTBUTTON_SETSHORTCUT )
 {
   QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -368,7 +368,7 @@ HB_FUNC( QABSTRACTBUTTON_SETSHORTCUT )
 /*
 void setText ( const QString & text ) 
 */
-HB_FUNC( QABSTRACTBUTTON_SETTEXT )
+HB_FUNC_STATIC( QABSTRACTBUTTON_SETTEXT )
 {
   QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -383,7 +383,7 @@ HB_FUNC( QABSTRACTBUTTON_SETTEXT )
 /*
 QKeySequence shortcut () const 
 */
-HB_FUNC( QABSTRACTBUTTON_SHORTCUT )
+HB_FUNC_STATIC( QABSTRACTBUTTON_SHORTCUT )
 {
   QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -396,7 +396,7 @@ HB_FUNC( QABSTRACTBUTTON_SHORTCUT )
 /*
 QString text () const 
 */
-HB_FUNC( QABSTRACTBUTTON_TEXT )
+HB_FUNC_STATIC( QABSTRACTBUTTON_TEXT )
 {
   QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -410,7 +410,7 @@ HB_FUNC( QABSTRACTBUTTON_TEXT )
 /*
 void animateClick ( int msec = 100 )
 */
-HB_FUNC( QABSTRACTBUTTON_ANIMATECLICK )
+HB_FUNC_STATIC( QABSTRACTBUTTON_ANIMATECLICK )
 {
   QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -425,7 +425,7 @@ HB_FUNC( QABSTRACTBUTTON_ANIMATECLICK )
 /*
 void click () 
 */
-HB_FUNC( QABSTRACTBUTTON_CLICK )
+HB_FUNC_STATIC( QABSTRACTBUTTON_CLICK )
 {
   QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -439,7 +439,7 @@ HB_FUNC( QABSTRACTBUTTON_CLICK )
 /*
 void setChecked ( bool ) 
 */
-HB_FUNC( QABSTRACTBUTTON_SETCHECKED )
+HB_FUNC_STATIC( QABSTRACTBUTTON_SETCHECKED )
 {
   QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -454,7 +454,7 @@ HB_FUNC( QABSTRACTBUTTON_SETCHECKED )
 /*
 void setIconSize ( const QSize & size ) 
 */
-HB_FUNC( QABSTRACTBUTTON_SETICONSIZE )
+HB_FUNC_STATIC( QABSTRACTBUTTON_SETICONSIZE )
 {
   QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -469,7 +469,7 @@ HB_FUNC( QABSTRACTBUTTON_SETICONSIZE )
 /*
 void toggle () 
 */
-HB_FUNC( QABSTRACTBUTTON_TOGGLE )
+HB_FUNC_STATIC( QABSTRACTBUTTON_TOGGLE )
 {
   QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

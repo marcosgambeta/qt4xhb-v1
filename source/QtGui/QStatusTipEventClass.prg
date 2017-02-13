@@ -61,7 +61,7 @@ RETURN
 /*
 QStatusTipEvent(const QString &tip)
 */
-HB_FUNC( QSTATUSTIPEVENT_NEW )
+HB_FUNC_STATIC( QSTATUSTIPEVENT_NEW )
 {
   QStatusTipEvent * o = NULL;
   QString par1 = hb_parc(1);
@@ -74,7 +74,7 @@ HB_FUNC( QSTATUSTIPEVENT_NEW )
 }
 
 
-HB_FUNC( QSTATUSTIPEVENT_DELETE )
+HB_FUNC_STATIC( QSTATUSTIPEVENT_DELETE )
 {
   QStatusTipEvent * obj = (QStatusTipEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -93,7 +93,7 @@ HB_FUNC( QSTATUSTIPEVENT_DELETE )
 /*
 QString tip() const
 */
-HB_FUNC( QSTATUSTIPEVENT_TIP )
+HB_FUNC_STATIC( QSTATUSTIPEVENT_TIP )
 {
   QStatusTipEvent * obj = (QStatusTipEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

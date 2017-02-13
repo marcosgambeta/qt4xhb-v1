@@ -77,7 +77,7 @@ RETURN
 /*
 QGraphicsAnchorLayout ( QGraphicsLayoutItem * parent = 0 )
 */
-HB_FUNC( QGRAPHICSANCHORLAYOUT_NEW )
+HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_NEW )
 {
   QGraphicsAnchorLayout * o = NULL;
   QGraphicsLayoutItem * par1 = ISNIL(1)? 0 : (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -90,7 +90,7 @@ HB_FUNC( QGRAPHICSANCHORLAYOUT_NEW )
 }
 
 
-HB_FUNC( QGRAPHICSANCHORLAYOUT_DELETE )
+HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_DELETE )
 {
   QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -109,7 +109,7 @@ HB_FUNC( QGRAPHICSANCHORLAYOUT_DELETE )
 /*
 QGraphicsAnchor * addAnchor ( QGraphicsLayoutItem * firstItem, Qt::AnchorPoint firstEdge, QGraphicsLayoutItem * secondItem, Qt::AnchorPoint secondEdge )
 */
-HB_FUNC( QGRAPHICSANCHORLAYOUT_ADDANCHOR )
+HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ADDANCHOR )
 {
   QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -126,7 +126,7 @@ HB_FUNC( QGRAPHICSANCHORLAYOUT_ADDANCHOR )
 /*
 void addAnchors ( QGraphicsLayoutItem * firstItem, QGraphicsLayoutItem * secondItem, Qt::Orientations orientations = Qt::Horizontal | Qt::Vertical )
 */
-HB_FUNC( QGRAPHICSANCHORLAYOUT_ADDANCHORS )
+HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ADDANCHORS )
 {
   QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -143,7 +143,7 @@ HB_FUNC( QGRAPHICSANCHORLAYOUT_ADDANCHORS )
 /*
 void addCornerAnchors ( QGraphicsLayoutItem * firstItem, Qt::Corner firstCorner, QGraphicsLayoutItem * secondItem, Qt::Corner secondCorner )
 */
-HB_FUNC( QGRAPHICSANCHORLAYOUT_ADDCORNERANCHORS )
+HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ADDCORNERANCHORS )
 {
   QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -161,7 +161,7 @@ HB_FUNC( QGRAPHICSANCHORLAYOUT_ADDCORNERANCHORS )
 /*
 QGraphicsAnchor * anchor ( QGraphicsLayoutItem * firstItem, Qt::AnchorPoint firstEdge, QGraphicsLayoutItem * secondItem, Qt::AnchorPoint secondEdge )
 */
-HB_FUNC( QGRAPHICSANCHORLAYOUT_ANCHOR )
+HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ANCHOR )
 {
   QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -178,7 +178,7 @@ HB_FUNC( QGRAPHICSANCHORLAYOUT_ANCHOR )
 /*
 qreal horizontalSpacing () const
 */
-HB_FUNC( QGRAPHICSANCHORLAYOUT_HORIZONTALSPACING )
+HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_HORIZONTALSPACING )
 {
   QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -192,7 +192,7 @@ HB_FUNC( QGRAPHICSANCHORLAYOUT_HORIZONTALSPACING )
 /*
 void setHorizontalSpacing ( qreal spacing )
 */
-HB_FUNC( QGRAPHICSANCHORLAYOUT_SETHORIZONTALSPACING )
+HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_SETHORIZONTALSPACING )
 {
   QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -207,7 +207,7 @@ HB_FUNC( QGRAPHICSANCHORLAYOUT_SETHORIZONTALSPACING )
 /*
 void setSpacing ( qreal spacing )
 */
-HB_FUNC( QGRAPHICSANCHORLAYOUT_SETSPACING )
+HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_SETSPACING )
 {
   QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -222,7 +222,7 @@ HB_FUNC( QGRAPHICSANCHORLAYOUT_SETSPACING )
 /*
 void setVerticalSpacing ( qreal spacing )
 */
-HB_FUNC( QGRAPHICSANCHORLAYOUT_SETVERTICALSPACING )
+HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_SETVERTICALSPACING )
 {
   QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -237,7 +237,7 @@ HB_FUNC( QGRAPHICSANCHORLAYOUT_SETVERTICALSPACING )
 /*
 qreal verticalSpacing () const
 */
-HB_FUNC( QGRAPHICSANCHORLAYOUT_VERTICALSPACING )
+HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_VERTICALSPACING )
 {
   QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -251,7 +251,7 @@ HB_FUNC( QGRAPHICSANCHORLAYOUT_VERTICALSPACING )
 /*
 virtual int count () const
 */
-HB_FUNC( QGRAPHICSANCHORLAYOUT_COUNT )
+HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_COUNT )
 {
   QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -265,7 +265,7 @@ HB_FUNC( QGRAPHICSANCHORLAYOUT_COUNT )
 /*
 virtual void invalidate ()
 */
-HB_FUNC( QGRAPHICSANCHORLAYOUT_INVALIDATE )
+HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_INVALIDATE )
 {
   QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -279,7 +279,7 @@ HB_FUNC( QGRAPHICSANCHORLAYOUT_INVALIDATE )
 /*
 virtual QGraphicsLayoutItem * itemAt ( int index ) const
 */
-HB_FUNC( QGRAPHICSANCHORLAYOUT_ITEMAT )
+HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ITEMAT )
 {
   QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -293,7 +293,7 @@ HB_FUNC( QGRAPHICSANCHORLAYOUT_ITEMAT )
 /*
 virtual void removeAt ( int index )
 */
-HB_FUNC( QGRAPHICSANCHORLAYOUT_REMOVEAT )
+HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_REMOVEAT )
 {
   QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -308,7 +308,7 @@ HB_FUNC( QGRAPHICSANCHORLAYOUT_REMOVEAT )
 /*
 virtual void setGeometry ( const QRectF & geom )
 */
-HB_FUNC( QGRAPHICSANCHORLAYOUT_SETGEOMETRY )
+HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_SETGEOMETRY )
 {
   QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

@@ -83,7 +83,7 @@ RETURN
 /*
 QGraphicsLineItem ( QGraphicsItem * parent = 0 )
 */
-HB_FUNC( QGRAPHICSLINEITEM_NEW1 )
+HB_FUNC_STATIC( QGRAPHICSLINEITEM_NEW1 )
 {
   QGraphicsLineItem * o = NULL;
   QGraphicsItem * par1 = ISNIL(1)? 0 : (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -99,7 +99,7 @@ HB_FUNC( QGRAPHICSLINEITEM_NEW1 )
 /*
 QGraphicsLineItem ( const QLineF & line, QGraphicsItem * parent = 0 )
 */
-HB_FUNC( QGRAPHICSLINEITEM_NEW2 )
+HB_FUNC_STATIC( QGRAPHICSLINEITEM_NEW2 )
 {
   QGraphicsLineItem * o = NULL;
   QLineF * par1 = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -116,7 +116,7 @@ HB_FUNC( QGRAPHICSLINEITEM_NEW2 )
 /*
 QGraphicsLineItem ( qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsItem * parent = 0 )
 */
-HB_FUNC( QGRAPHICSLINEITEM_NEW3 )
+HB_FUNC_STATIC( QGRAPHICSLINEITEM_NEW3 )
 {
   QGraphicsLineItem * o = NULL;
   qreal par1 = hb_parnd(1);
@@ -137,7 +137,7 @@ HB_FUNC( QGRAPHICSLINEITEM_NEW3 )
 //[2]QGraphicsLineItem ( const QLineF & line, QGraphicsItem * parent = 0 )
 //[3]QGraphicsLineItem ( qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsItem * parent = 0 )
 
-HB_FUNC( QGRAPHICSLINEITEM_NEW )
+HB_FUNC_STATIC( QGRAPHICSLINEITEM_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQGRAPHICSITEM(1)||ISNIL(1)) )
   {
@@ -157,7 +157,7 @@ HB_FUNC( QGRAPHICSLINEITEM_NEW )
   }
 }
 
-HB_FUNC( QGRAPHICSLINEITEM_DELETE )
+HB_FUNC_STATIC( QGRAPHICSLINEITEM_DELETE )
 {
   QGraphicsLineItem * obj = (QGraphicsLineItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -176,7 +176,7 @@ HB_FUNC( QGRAPHICSLINEITEM_DELETE )
 /*
 QLineF line () const
 */
-HB_FUNC( QGRAPHICSLINEITEM_LINE )
+HB_FUNC_STATIC( QGRAPHICSLINEITEM_LINE )
 {
   QGraphicsLineItem * obj = (QGraphicsLineItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -189,7 +189,7 @@ HB_FUNC( QGRAPHICSLINEITEM_LINE )
 /*
 QPen pen () const
 */
-HB_FUNC( QGRAPHICSLINEITEM_PEN )
+HB_FUNC_STATIC( QGRAPHICSLINEITEM_PEN )
 {
   QGraphicsLineItem * obj = (QGraphicsLineItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -202,7 +202,7 @@ HB_FUNC( QGRAPHICSLINEITEM_PEN )
 /*
 void setLine ( const QLineF & line )
 */
-HB_FUNC( QGRAPHICSLINEITEM_SETLINE1 )
+HB_FUNC_STATIC( QGRAPHICSLINEITEM_SETLINE1 )
 {
   QGraphicsLineItem * obj = (QGraphicsLineItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -217,7 +217,7 @@ HB_FUNC( QGRAPHICSLINEITEM_SETLINE1 )
 /*
 void setLine ( qreal x1, qreal y1, qreal x2, qreal y2 )
 */
-HB_FUNC( QGRAPHICSLINEITEM_SETLINE2 )
+HB_FUNC_STATIC( QGRAPHICSLINEITEM_SETLINE2 )
 {
   QGraphicsLineItem * obj = (QGraphicsLineItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -235,7 +235,7 @@ HB_FUNC( QGRAPHICSLINEITEM_SETLINE2 )
 //[1]void setLine ( const QLineF & line )
 //[2]void setLine ( qreal x1, qreal y1, qreal x2, qreal y2 )
 
-HB_FUNC( QGRAPHICSLINEITEM_SETLINE )
+HB_FUNC_STATIC( QGRAPHICSLINEITEM_SETLINE )
 {
   if( ISNUMPAR(1) && ISQLINEF(1) )
   {
@@ -250,7 +250,7 @@ HB_FUNC( QGRAPHICSLINEITEM_SETLINE )
 /*
 void setPen ( const QPen & pen )
 */
-HB_FUNC( QGRAPHICSLINEITEM_SETPEN )
+HB_FUNC_STATIC( QGRAPHICSLINEITEM_SETPEN )
 {
   QGraphicsLineItem * obj = (QGraphicsLineItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -265,7 +265,7 @@ HB_FUNC( QGRAPHICSLINEITEM_SETPEN )
 /*
 virtual QRectF boundingRect () const
 */
-HB_FUNC( QGRAPHICSLINEITEM_BOUNDINGRECT )
+HB_FUNC_STATIC( QGRAPHICSLINEITEM_BOUNDINGRECT )
 {
   QGraphicsLineItem * obj = (QGraphicsLineItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -278,7 +278,7 @@ HB_FUNC( QGRAPHICSLINEITEM_BOUNDINGRECT )
 /*
 virtual bool contains ( const QPointF & point ) const
 */
-HB_FUNC( QGRAPHICSLINEITEM_CONTAINS )
+HB_FUNC_STATIC( QGRAPHICSLINEITEM_CONTAINS )
 {
   QGraphicsLineItem * obj = (QGraphicsLineItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -293,7 +293,7 @@ HB_FUNC( QGRAPHICSLINEITEM_CONTAINS )
 /*
 virtual bool isObscuredBy ( const QGraphicsItem * item ) const
 */
-HB_FUNC( QGRAPHICSLINEITEM_ISOBSCUREDBY )
+HB_FUNC_STATIC( QGRAPHICSLINEITEM_ISOBSCUREDBY )
 {
   QGraphicsLineItem * obj = (QGraphicsLineItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -308,7 +308,7 @@ HB_FUNC( QGRAPHICSLINEITEM_ISOBSCUREDBY )
 /*
 virtual QPainterPath opaqueArea () const
 */
-HB_FUNC( QGRAPHICSLINEITEM_OPAQUEAREA )
+HB_FUNC_STATIC( QGRAPHICSLINEITEM_OPAQUEAREA )
 {
   QGraphicsLineItem * obj = (QGraphicsLineItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -321,7 +321,7 @@ HB_FUNC( QGRAPHICSLINEITEM_OPAQUEAREA )
 /*
 virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
 */
-HB_FUNC( QGRAPHICSLINEITEM_PAINT )
+HB_FUNC_STATIC( QGRAPHICSLINEITEM_PAINT )
 {
   QGraphicsLineItem * obj = (QGraphicsLineItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -338,7 +338,7 @@ HB_FUNC( QGRAPHICSLINEITEM_PAINT )
 /*
 virtual QPainterPath shape () const
 */
-HB_FUNC( QGRAPHICSLINEITEM_SHAPE )
+HB_FUNC_STATIC( QGRAPHICSLINEITEM_SHAPE )
 {
   QGraphicsLineItem * obj = (QGraphicsLineItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -351,7 +351,7 @@ HB_FUNC( QGRAPHICSLINEITEM_SHAPE )
 /*
 virtual int type () const
 */
-HB_FUNC( QGRAPHICSLINEITEM_TYPE )
+HB_FUNC_STATIC( QGRAPHICSLINEITEM_TYPE )
 {
   QGraphicsLineItem * obj = (QGraphicsLineItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

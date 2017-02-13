@@ -99,7 +99,7 @@ RETURN
 /*
 QBasicTimer ()
 */
-HB_FUNC( QBASICTIMER_NEW )
+HB_FUNC_STATIC( QBASICTIMER_NEW )
 {
   QBasicTimer * o = NULL;
   o = new QBasicTimer (  );
@@ -111,7 +111,7 @@ HB_FUNC( QBASICTIMER_NEW )
 }
 
 
-HB_FUNC( QBASICTIMER_DELETE )
+HB_FUNC_STATIC( QBASICTIMER_DELETE )
 {
   QBasicTimer * obj = (QBasicTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -131,7 +131,7 @@ HB_FUNC( QBASICTIMER_DELETE )
 /*
 bool isActive () const
 */
-HB_FUNC( QBASICTIMER_ISACTIVE )
+HB_FUNC_STATIC( QBASICTIMER_ISACTIVE )
 {
   QBasicTimer * obj = (QBasicTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -145,7 +145,7 @@ HB_FUNC( QBASICTIMER_ISACTIVE )
 /*
 void start ( int msec, QObject * object )
 */
-HB_FUNC( QBASICTIMER_START )
+HB_FUNC_STATIC( QBASICTIMER_START )
 {
   QBasicTimer * obj = (QBasicTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -161,7 +161,7 @@ HB_FUNC( QBASICTIMER_START )
 /*
 void stop ()
 */
-HB_FUNC( QBASICTIMER_STOP )
+HB_FUNC_STATIC( QBASICTIMER_STOP )
 {
   QBasicTimer * obj = (QBasicTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -175,7 +175,7 @@ HB_FUNC( QBASICTIMER_STOP )
 /*
 int timerId () const
 */
-HB_FUNC( QBASICTIMER_TIMERID )
+HB_FUNC_STATIC( QBASICTIMER_TIMERID )
 {
   QBasicTimer * obj = (QBasicTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

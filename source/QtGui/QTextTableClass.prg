@@ -83,7 +83,7 @@ RETURN
 
 #include <QTextCursor>
 
-HB_FUNC( QTEXTTABLE_DELETE )
+HB_FUNC_STATIC( QTEXTTABLE_DELETE )
 {
   QTextTable * obj = (QTextTable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -102,7 +102,7 @@ HB_FUNC( QTEXTTABLE_DELETE )
 /*
 void appendColumns ( int count )
 */
-HB_FUNC( QTEXTTABLE_APPENDCOLUMNS )
+HB_FUNC_STATIC( QTEXTTABLE_APPENDCOLUMNS )
 {
   QTextTable * obj = (QTextTable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -117,7 +117,7 @@ HB_FUNC( QTEXTTABLE_APPENDCOLUMNS )
 /*
 void appendRows ( int count )
 */
-HB_FUNC( QTEXTTABLE_APPENDROWS )
+HB_FUNC_STATIC( QTEXTTABLE_APPENDROWS )
 {
   QTextTable * obj = (QTextTable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -132,7 +132,7 @@ HB_FUNC( QTEXTTABLE_APPENDROWS )
 /*
 QTextTableCell cellAt ( int row, int column ) const
 */
-HB_FUNC( QTEXTTABLE_CELLAT1 )
+HB_FUNC_STATIC( QTEXTTABLE_CELLAT1 )
 {
   QTextTable * obj = (QTextTable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -147,7 +147,7 @@ HB_FUNC( QTEXTTABLE_CELLAT1 )
 /*
 QTextTableCell cellAt ( int position ) const
 */
-HB_FUNC( QTEXTTABLE_CELLAT2 )
+HB_FUNC_STATIC( QTEXTTABLE_CELLAT2 )
 {
   QTextTable * obj = (QTextTable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -161,7 +161,7 @@ HB_FUNC( QTEXTTABLE_CELLAT2 )
 /*
 QTextTableCell cellAt ( const QTextCursor & cursor ) const
 */
-HB_FUNC( QTEXTTABLE_CELLAT3 )
+HB_FUNC_STATIC( QTEXTTABLE_CELLAT3 )
 {
   QTextTable * obj = (QTextTable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -176,7 +176,7 @@ HB_FUNC( QTEXTTABLE_CELLAT3 )
 //[2]QTextTableCell cellAt ( int position ) const
 //[3]QTextTableCell cellAt ( const QTextCursor & cursor ) const
 
-HB_FUNC( QTEXTTABLE_CELLAT )
+HB_FUNC_STATIC( QTEXTTABLE_CELLAT )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
@@ -195,7 +195,7 @@ HB_FUNC( QTEXTTABLE_CELLAT )
 /*
 int columns () const
 */
-HB_FUNC( QTEXTTABLE_COLUMNS )
+HB_FUNC_STATIC( QTEXTTABLE_COLUMNS )
 {
   QTextTable * obj = (QTextTable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -209,7 +209,7 @@ HB_FUNC( QTEXTTABLE_COLUMNS )
 /*
 QTextTableFormat format () const
 */
-HB_FUNC( QTEXTTABLE_FORMAT )
+HB_FUNC_STATIC( QTEXTTABLE_FORMAT )
 {
   QTextTable * obj = (QTextTable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -222,7 +222,7 @@ HB_FUNC( QTEXTTABLE_FORMAT )
 /*
 void insertColumns ( int index, int columns )
 */
-HB_FUNC( QTEXTTABLE_INSERTCOLUMNS )
+HB_FUNC_STATIC( QTEXTTABLE_INSERTCOLUMNS )
 {
   QTextTable * obj = (QTextTable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -238,7 +238,7 @@ HB_FUNC( QTEXTTABLE_INSERTCOLUMNS )
 /*
 void insertRows ( int index, int rows )
 */
-HB_FUNC( QTEXTTABLE_INSERTROWS )
+HB_FUNC_STATIC( QTEXTTABLE_INSERTROWS )
 {
   QTextTable * obj = (QTextTable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -254,7 +254,7 @@ HB_FUNC( QTEXTTABLE_INSERTROWS )
 /*
 void mergeCells ( int row, int column, int numRows, int numCols )
 */
-HB_FUNC( QTEXTTABLE_MERGECELLS1 )
+HB_FUNC_STATIC( QTEXTTABLE_MERGECELLS1 )
 {
   QTextTable * obj = (QTextTable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -272,7 +272,7 @@ HB_FUNC( QTEXTTABLE_MERGECELLS1 )
 /*
 void mergeCells ( const QTextCursor & cursor )
 */
-HB_FUNC( QTEXTTABLE_MERGECELLS2 )
+HB_FUNC_STATIC( QTEXTTABLE_MERGECELLS2 )
 {
   QTextTable * obj = (QTextTable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -287,7 +287,7 @@ HB_FUNC( QTEXTTABLE_MERGECELLS2 )
 //[1]void mergeCells ( int row, int column, int numRows, int numCols )
 //[2]void mergeCells ( const QTextCursor & cursor )
 
-HB_FUNC( QTEXTTABLE_MERGECELLS )
+HB_FUNC_STATIC( QTEXTTABLE_MERGECELLS )
 {
   if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
@@ -302,7 +302,7 @@ HB_FUNC( QTEXTTABLE_MERGECELLS )
 /*
 void removeColumns ( int index, int columns )
 */
-HB_FUNC( QTEXTTABLE_REMOVECOLUMNS )
+HB_FUNC_STATIC( QTEXTTABLE_REMOVECOLUMNS )
 {
   QTextTable * obj = (QTextTable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -318,7 +318,7 @@ HB_FUNC( QTEXTTABLE_REMOVECOLUMNS )
 /*
 void removeRows ( int index, int rows )
 */
-HB_FUNC( QTEXTTABLE_REMOVEROWS )
+HB_FUNC_STATIC( QTEXTTABLE_REMOVEROWS )
 {
   QTextTable * obj = (QTextTable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -334,7 +334,7 @@ HB_FUNC( QTEXTTABLE_REMOVEROWS )
 /*
 void resize ( int rows, int columns )
 */
-HB_FUNC( QTEXTTABLE_RESIZE )
+HB_FUNC_STATIC( QTEXTTABLE_RESIZE )
 {
   QTextTable * obj = (QTextTable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -350,7 +350,7 @@ HB_FUNC( QTEXTTABLE_RESIZE )
 /*
 QTextCursor rowEnd ( const QTextCursor & cursor ) const
 */
-HB_FUNC( QTEXTTABLE_ROWEND )
+HB_FUNC_STATIC( QTEXTTABLE_ROWEND )
 {
   QTextTable * obj = (QTextTable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -364,7 +364,7 @@ HB_FUNC( QTEXTTABLE_ROWEND )
 /*
 QTextCursor rowStart ( const QTextCursor & cursor ) const
 */
-HB_FUNC( QTEXTTABLE_ROWSTART )
+HB_FUNC_STATIC( QTEXTTABLE_ROWSTART )
 {
   QTextTable * obj = (QTextTable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -378,7 +378,7 @@ HB_FUNC( QTEXTTABLE_ROWSTART )
 /*
 int rows () const
 */
-HB_FUNC( QTEXTTABLE_ROWS )
+HB_FUNC_STATIC( QTEXTTABLE_ROWS )
 {
   QTextTable * obj = (QTextTable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -392,7 +392,7 @@ HB_FUNC( QTEXTTABLE_ROWS )
 /*
 void setFormat ( const QTextTableFormat & format )
 */
-HB_FUNC( QTEXTTABLE_SETFORMAT )
+HB_FUNC_STATIC( QTEXTTABLE_SETFORMAT )
 {
   QTextTable * obj = (QTextTable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -407,7 +407,7 @@ HB_FUNC( QTEXTTABLE_SETFORMAT )
 /*
 void splitCell ( int row, int column, int numRows, int numCols )
 */
-HB_FUNC( QTEXTTABLE_SPLITCELL )
+HB_FUNC_STATIC( QTEXTTABLE_SPLITCELL )
 {
   QTextTable * obj = (QTextTable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

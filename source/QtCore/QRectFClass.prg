@@ -170,7 +170,7 @@ RETURN
 /*
 QRectF ()
 */
-HB_FUNC( QRECTF_NEW1 )
+HB_FUNC_STATIC( QRECTF_NEW1 )
 {
   QRectF * o = NULL;
   o = new QRectF (  );
@@ -188,7 +188,7 @@ HB_FUNC( QRECTF_NEW1 )
 /*
 QRectF ( const QPointF & topLeft, const QSizeF & size )
 */
-HB_FUNC( QRECTF_NEW2 )
+HB_FUNC_STATIC( QRECTF_NEW2 )
 {
   QRectF * o = NULL;
   QPointF * par1 = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -208,7 +208,7 @@ HB_FUNC( QRECTF_NEW2 )
 /*
 QRectF ( const QPointF & topLeft, const QPointF & bottomRight )
 */
-HB_FUNC( QRECTF_NEW3 )
+HB_FUNC_STATIC( QRECTF_NEW3 )
 {
   QRectF * o = NULL;
   QPointF * par1 = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -228,7 +228,7 @@ HB_FUNC( QRECTF_NEW3 )
 /*
 QRectF ( qreal x, qreal y, qreal width, qreal height )
 */
-HB_FUNC( QRECTF_NEW4 )
+HB_FUNC_STATIC( QRECTF_NEW4 )
 {
   QRectF * o = NULL;
   qreal par1 = hb_parnd(1);
@@ -250,7 +250,7 @@ HB_FUNC( QRECTF_NEW4 )
 /*
 QRectF ( const QRect & rectangle )
 */
-HB_FUNC( QRECTF_NEW5 )
+HB_FUNC_STATIC( QRECTF_NEW5 )
 {
   QRectF * o = NULL;
   QRect * par1 = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -272,7 +272,7 @@ HB_FUNC( QRECTF_NEW5 )
 //[4]QRectF ( qreal x, qreal y, qreal width, qreal height )
 //[5]QRectF ( const QRect & rectangle )
 
-HB_FUNC( QRECTF_NEW )
+HB_FUNC_STATIC( QRECTF_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -300,7 +300,7 @@ HB_FUNC( QRECTF_NEW )
   }
 }
 
-HB_FUNC( QRECTF_DELETE )
+HB_FUNC_STATIC( QRECTF_DELETE )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -319,7 +319,7 @@ HB_FUNC( QRECTF_DELETE )
 /*
 void adjust ( qreal dx1, qreal dy1, qreal dx2, qreal dy2 )
 */
-HB_FUNC( QRECTF_ADJUST )
+HB_FUNC_STATIC( QRECTF_ADJUST )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -337,7 +337,7 @@ HB_FUNC( QRECTF_ADJUST )
 /*
 QRectF adjusted ( qreal dx1, qreal dy1, qreal dx2, qreal dy2 ) const
 */
-HB_FUNC( QRECTF_ADJUSTED )
+HB_FUNC_STATIC( QRECTF_ADJUSTED )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -354,7 +354,7 @@ HB_FUNC( QRECTF_ADJUSTED )
 /*
 qreal bottom () const
 */
-HB_FUNC( QRECTF_BOTTOM )
+HB_FUNC_STATIC( QRECTF_BOTTOM )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -368,7 +368,7 @@ HB_FUNC( QRECTF_BOTTOM )
 /*
 QPointF bottomLeft () const
 */
-HB_FUNC( QRECTF_BOTTOMLEFT )
+HB_FUNC_STATIC( QRECTF_BOTTOMLEFT )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -381,7 +381,7 @@ HB_FUNC( QRECTF_BOTTOMLEFT )
 /*
 QPointF bottomRight () const
 */
-HB_FUNC( QRECTF_BOTTOMRIGHT )
+HB_FUNC_STATIC( QRECTF_BOTTOMRIGHT )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -394,7 +394,7 @@ HB_FUNC( QRECTF_BOTTOMRIGHT )
 /*
 QPointF center () const
 */
-HB_FUNC( QRECTF_CENTER )
+HB_FUNC_STATIC( QRECTF_CENTER )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -407,7 +407,7 @@ HB_FUNC( QRECTF_CENTER )
 /*
 bool contains ( const QPointF & point ) const
 */
-HB_FUNC( QRECTF_CONTAINS1 )
+HB_FUNC_STATIC( QRECTF_CONTAINS1 )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -422,7 +422,7 @@ HB_FUNC( QRECTF_CONTAINS1 )
 /*
 bool contains ( qreal x, qreal y ) const
 */
-HB_FUNC( QRECTF_CONTAINS2 )
+HB_FUNC_STATIC( QRECTF_CONTAINS2 )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -438,7 +438,7 @@ HB_FUNC( QRECTF_CONTAINS2 )
 /*
 bool contains ( const QRectF & rectangle ) const
 */
-HB_FUNC( QRECTF_CONTAINS3 )
+HB_FUNC_STATIC( QRECTF_CONTAINS3 )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -454,7 +454,7 @@ HB_FUNC( QRECTF_CONTAINS3 )
 //[2]bool contains ( qreal x, qreal y ) const
 //[3]bool contains ( const QRectF & rectangle ) const
 
-HB_FUNC( QRECTF_CONTAINS )
+HB_FUNC_STATIC( QRECTF_CONTAINS )
 {
   if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
@@ -473,7 +473,7 @@ HB_FUNC( QRECTF_CONTAINS )
 /*
 void getCoords ( qreal * x1, qreal * y1, qreal * x2, qreal * y2 ) const
 */
-HB_FUNC( QRECTF_GETCOORDS )
+HB_FUNC_STATIC( QRECTF_GETCOORDS )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -495,7 +495,7 @@ HB_FUNC( QRECTF_GETCOORDS )
 /*
 void getRect ( qreal * x, qreal * y, qreal * width, qreal * height ) const
 */
-HB_FUNC( QRECTF_GETRECT )
+HB_FUNC_STATIC( QRECTF_GETRECT )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -517,7 +517,7 @@ HB_FUNC( QRECTF_GETRECT )
 /*
 qreal height () const
 */
-HB_FUNC( QRECTF_HEIGHT )
+HB_FUNC_STATIC( QRECTF_HEIGHT )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -531,7 +531,7 @@ HB_FUNC( QRECTF_HEIGHT )
 /*
 QRectF intersected ( const QRectF & rectangle ) const
 */
-HB_FUNC( QRECTF_INTERSECTED )
+HB_FUNC_STATIC( QRECTF_INTERSECTED )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -545,7 +545,7 @@ HB_FUNC( QRECTF_INTERSECTED )
 /*
 bool intersects ( const QRectF & rectangle ) const
 */
-HB_FUNC( QRECTF_INTERSECTS )
+HB_FUNC_STATIC( QRECTF_INTERSECTS )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -560,7 +560,7 @@ HB_FUNC( QRECTF_INTERSECTS )
 /*
 bool isEmpty () const
 */
-HB_FUNC( QRECTF_ISEMPTY )
+HB_FUNC_STATIC( QRECTF_ISEMPTY )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -574,7 +574,7 @@ HB_FUNC( QRECTF_ISEMPTY )
 /*
 bool isNull () const
 */
-HB_FUNC( QRECTF_ISNULL )
+HB_FUNC_STATIC( QRECTF_ISNULL )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -588,7 +588,7 @@ HB_FUNC( QRECTF_ISNULL )
 /*
 bool isValid () const
 */
-HB_FUNC( QRECTF_ISVALID )
+HB_FUNC_STATIC( QRECTF_ISVALID )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -602,7 +602,7 @@ HB_FUNC( QRECTF_ISVALID )
 /*
 qreal left () const
 */
-HB_FUNC( QRECTF_LEFT )
+HB_FUNC_STATIC( QRECTF_LEFT )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -616,7 +616,7 @@ HB_FUNC( QRECTF_LEFT )
 /*
 void moveBottom ( qreal y )
 */
-HB_FUNC( QRECTF_MOVEBOTTOM )
+HB_FUNC_STATIC( QRECTF_MOVEBOTTOM )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -631,7 +631,7 @@ HB_FUNC( QRECTF_MOVEBOTTOM )
 /*
 void moveBottomLeft ( const QPointF & position )
 */
-HB_FUNC( QRECTF_MOVEBOTTOMLEFT )
+HB_FUNC_STATIC( QRECTF_MOVEBOTTOMLEFT )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -646,7 +646,7 @@ HB_FUNC( QRECTF_MOVEBOTTOMLEFT )
 /*
 void moveBottomRight ( const QPointF & position )
 */
-HB_FUNC( QRECTF_MOVEBOTTOMRIGHT )
+HB_FUNC_STATIC( QRECTF_MOVEBOTTOMRIGHT )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -661,7 +661,7 @@ HB_FUNC( QRECTF_MOVEBOTTOMRIGHT )
 /*
 void moveCenter ( const QPointF & position )
 */
-HB_FUNC( QRECTF_MOVECENTER )
+HB_FUNC_STATIC( QRECTF_MOVECENTER )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -676,7 +676,7 @@ HB_FUNC( QRECTF_MOVECENTER )
 /*
 void moveLeft ( qreal x )
 */
-HB_FUNC( QRECTF_MOVELEFT )
+HB_FUNC_STATIC( QRECTF_MOVELEFT )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -691,7 +691,7 @@ HB_FUNC( QRECTF_MOVELEFT )
 /*
 void moveRight ( qreal x )
 */
-HB_FUNC( QRECTF_MOVERIGHT )
+HB_FUNC_STATIC( QRECTF_MOVERIGHT )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -706,7 +706,7 @@ HB_FUNC( QRECTF_MOVERIGHT )
 /*
 void moveTo ( qreal x, qreal y )
 */
-HB_FUNC( QRECTF_MOVETO1 )
+HB_FUNC_STATIC( QRECTF_MOVETO1 )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -722,7 +722,7 @@ HB_FUNC( QRECTF_MOVETO1 )
 /*
 void moveTo ( const QPointF & position )
 */
-HB_FUNC( QRECTF_MOVETO2 )
+HB_FUNC_STATIC( QRECTF_MOVETO2 )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -737,7 +737,7 @@ HB_FUNC( QRECTF_MOVETO2 )
 //[1]void moveTo ( qreal x, qreal y )
 //[2]void moveTo ( const QPointF & position )
 
-HB_FUNC( QRECTF_MOVETO )
+HB_FUNC_STATIC( QRECTF_MOVETO )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
@@ -752,7 +752,7 @@ HB_FUNC( QRECTF_MOVETO )
 /*
 void moveTop ( qreal y )
 */
-HB_FUNC( QRECTF_MOVETOP )
+HB_FUNC_STATIC( QRECTF_MOVETOP )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -767,7 +767,7 @@ HB_FUNC( QRECTF_MOVETOP )
 /*
 void moveTopLeft ( const QPointF & position )
 */
-HB_FUNC( QRECTF_MOVETOPLEFT )
+HB_FUNC_STATIC( QRECTF_MOVETOPLEFT )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -782,7 +782,7 @@ HB_FUNC( QRECTF_MOVETOPLEFT )
 /*
 void moveTopRight ( const QPointF & position )
 */
-HB_FUNC( QRECTF_MOVETOPRIGHT )
+HB_FUNC_STATIC( QRECTF_MOVETOPRIGHT )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -797,7 +797,7 @@ HB_FUNC( QRECTF_MOVETOPRIGHT )
 /*
 QRectF normalized () const
 */
-HB_FUNC( QRECTF_NORMALIZED )
+HB_FUNC_STATIC( QRECTF_NORMALIZED )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -810,7 +810,7 @@ HB_FUNC( QRECTF_NORMALIZED )
 /*
 qreal right () const
 */
-HB_FUNC( QRECTF_RIGHT )
+HB_FUNC_STATIC( QRECTF_RIGHT )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -824,7 +824,7 @@ HB_FUNC( QRECTF_RIGHT )
 /*
 void setBottom ( qreal y )
 */
-HB_FUNC( QRECTF_SETBOTTOM )
+HB_FUNC_STATIC( QRECTF_SETBOTTOM )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -839,7 +839,7 @@ HB_FUNC( QRECTF_SETBOTTOM )
 /*
 void setBottomLeft ( const QPointF & position )
 */
-HB_FUNC( QRECTF_SETBOTTOMLEFT )
+HB_FUNC_STATIC( QRECTF_SETBOTTOMLEFT )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -854,7 +854,7 @@ HB_FUNC( QRECTF_SETBOTTOMLEFT )
 /*
 void setBottomRight ( const QPointF & position )
 */
-HB_FUNC( QRECTF_SETBOTTOMRIGHT )
+HB_FUNC_STATIC( QRECTF_SETBOTTOMRIGHT )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -869,7 +869,7 @@ HB_FUNC( QRECTF_SETBOTTOMRIGHT )
 /*
 void setCoords ( qreal x1, qreal y1, qreal x2, qreal y2 )
 */
-HB_FUNC( QRECTF_SETCOORDS )
+HB_FUNC_STATIC( QRECTF_SETCOORDS )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -887,7 +887,7 @@ HB_FUNC( QRECTF_SETCOORDS )
 /*
 void setHeight ( qreal height )
 */
-HB_FUNC( QRECTF_SETHEIGHT )
+HB_FUNC_STATIC( QRECTF_SETHEIGHT )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -902,7 +902,7 @@ HB_FUNC( QRECTF_SETHEIGHT )
 /*
 void setLeft ( qreal x )
 */
-HB_FUNC( QRECTF_SETLEFT )
+HB_FUNC_STATIC( QRECTF_SETLEFT )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -917,7 +917,7 @@ HB_FUNC( QRECTF_SETLEFT )
 /*
 void setRect ( qreal x, qreal y, qreal width, qreal height )
 */
-HB_FUNC( QRECTF_SETRECT )
+HB_FUNC_STATIC( QRECTF_SETRECT )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -935,7 +935,7 @@ HB_FUNC( QRECTF_SETRECT )
 /*
 void setRight ( qreal x )
 */
-HB_FUNC( QRECTF_SETRIGHT )
+HB_FUNC_STATIC( QRECTF_SETRIGHT )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -950,7 +950,7 @@ HB_FUNC( QRECTF_SETRIGHT )
 /*
 void setSize ( const QSizeF & size )
 */
-HB_FUNC( QRECTF_SETSIZE )
+HB_FUNC_STATIC( QRECTF_SETSIZE )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -965,7 +965,7 @@ HB_FUNC( QRECTF_SETSIZE )
 /*
 void setTop ( qreal y )
 */
-HB_FUNC( QRECTF_SETTOP )
+HB_FUNC_STATIC( QRECTF_SETTOP )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -980,7 +980,7 @@ HB_FUNC( QRECTF_SETTOP )
 /*
 void setTopLeft ( const QPointF & position )
 */
-HB_FUNC( QRECTF_SETTOPLEFT )
+HB_FUNC_STATIC( QRECTF_SETTOPLEFT )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -995,7 +995,7 @@ HB_FUNC( QRECTF_SETTOPLEFT )
 /*
 void setTopRight ( const QPointF & position )
 */
-HB_FUNC( QRECTF_SETTOPRIGHT )
+HB_FUNC_STATIC( QRECTF_SETTOPRIGHT )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1010,7 +1010,7 @@ HB_FUNC( QRECTF_SETTOPRIGHT )
 /*
 void setWidth ( qreal width )
 */
-HB_FUNC( QRECTF_SETWIDTH )
+HB_FUNC_STATIC( QRECTF_SETWIDTH )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1025,7 +1025,7 @@ HB_FUNC( QRECTF_SETWIDTH )
 /*
 void setX ( qreal x )
 */
-HB_FUNC( QRECTF_SETX )
+HB_FUNC_STATIC( QRECTF_SETX )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1040,7 +1040,7 @@ HB_FUNC( QRECTF_SETX )
 /*
 void setY ( qreal y )
 */
-HB_FUNC( QRECTF_SETY )
+HB_FUNC_STATIC( QRECTF_SETY )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1055,7 +1055,7 @@ HB_FUNC( QRECTF_SETY )
 /*
 QSizeF size () const
 */
-HB_FUNC( QRECTF_SIZE )
+HB_FUNC_STATIC( QRECTF_SIZE )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1068,7 +1068,7 @@ HB_FUNC( QRECTF_SIZE )
 /*
 QRect toAlignedRect () const
 */
-HB_FUNC( QRECTF_TOALIGNEDRECT )
+HB_FUNC_STATIC( QRECTF_TOALIGNEDRECT )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1081,7 +1081,7 @@ HB_FUNC( QRECTF_TOALIGNEDRECT )
 /*
 QRect toRect () const
 */
-HB_FUNC( QRECTF_TORECT )
+HB_FUNC_STATIC( QRECTF_TORECT )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1094,7 +1094,7 @@ HB_FUNC( QRECTF_TORECT )
 /*
 qreal top () const
 */
-HB_FUNC( QRECTF_TOP )
+HB_FUNC_STATIC( QRECTF_TOP )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1108,7 +1108,7 @@ HB_FUNC( QRECTF_TOP )
 /*
 QPointF topLeft () const
 */
-HB_FUNC( QRECTF_TOPLEFT )
+HB_FUNC_STATIC( QRECTF_TOPLEFT )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1121,7 +1121,7 @@ HB_FUNC( QRECTF_TOPLEFT )
 /*
 QPointF topRight () const
 */
-HB_FUNC( QRECTF_TOPRIGHT )
+HB_FUNC_STATIC( QRECTF_TOPRIGHT )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1134,7 +1134,7 @@ HB_FUNC( QRECTF_TOPRIGHT )
 /*
 void translate ( qreal dx, qreal dy )
 */
-HB_FUNC( QRECTF_TRANSLATE1 )
+HB_FUNC_STATIC( QRECTF_TRANSLATE1 )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1150,7 +1150,7 @@ HB_FUNC( QRECTF_TRANSLATE1 )
 /*
 void translate ( const QPointF & offset )
 */
-HB_FUNC( QRECTF_TRANSLATE2 )
+HB_FUNC_STATIC( QRECTF_TRANSLATE2 )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1165,7 +1165,7 @@ HB_FUNC( QRECTF_TRANSLATE2 )
 //[1]void translate ( qreal dx, qreal dy )
 //[2]void translate ( const QPointF & offset )
 
-HB_FUNC( QRECTF_TRANSLATE )
+HB_FUNC_STATIC( QRECTF_TRANSLATE )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
@@ -1180,7 +1180,7 @@ HB_FUNC( QRECTF_TRANSLATE )
 /*
 QRectF translated ( qreal dx, qreal dy ) const
 */
-HB_FUNC( QRECTF_TRANSLATED1 )
+HB_FUNC_STATIC( QRECTF_TRANSLATED1 )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1195,7 +1195,7 @@ HB_FUNC( QRECTF_TRANSLATED1 )
 /*
 QRectF translated ( const QPointF & offset ) const
 */
-HB_FUNC( QRECTF_TRANSLATED2 )
+HB_FUNC_STATIC( QRECTF_TRANSLATED2 )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1209,7 +1209,7 @@ HB_FUNC( QRECTF_TRANSLATED2 )
 //[1]QRectF translated ( qreal dx, qreal dy ) const
 //[2]QRectF translated ( const QPointF & offset ) const
 
-HB_FUNC( QRECTF_TRANSLATED )
+HB_FUNC_STATIC( QRECTF_TRANSLATED )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
@@ -1224,7 +1224,7 @@ HB_FUNC( QRECTF_TRANSLATED )
 /*
 QRectF united ( const QRectF & rectangle ) const
 */
-HB_FUNC( QRECTF_UNITED )
+HB_FUNC_STATIC( QRECTF_UNITED )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1238,7 +1238,7 @@ HB_FUNC( QRECTF_UNITED )
 /*
 qreal width () const
 */
-HB_FUNC( QRECTF_WIDTH )
+HB_FUNC_STATIC( QRECTF_WIDTH )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1252,7 +1252,7 @@ HB_FUNC( QRECTF_WIDTH )
 /*
 qreal x () const
 */
-HB_FUNC( QRECTF_X )
+HB_FUNC_STATIC( QRECTF_X )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1266,7 +1266,7 @@ HB_FUNC( QRECTF_X )
 /*
 qreal y () const
 */
-HB_FUNC( QRECTF_Y )
+HB_FUNC_STATIC( QRECTF_Y )
 {
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

@@ -61,7 +61,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QDECORATIONPLUGIN_DELETE )
+HB_FUNC_STATIC( QDECORATIONPLUGIN_DELETE )
 {
   QDecorationPlugin * obj = (QDecorationPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -80,7 +80,7 @@ HB_FUNC( QDECORATIONPLUGIN_DELETE )
 /*
 virtual QDecoration * create ( const QString & key ) = 0
 */
-HB_FUNC( QDECORATIONPLUGIN_CREATE )
+HB_FUNC_STATIC( QDECORATIONPLUGIN_CREATE )
 {
   QDecorationPlugin * obj = (QDecorationPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -94,7 +94,7 @@ HB_FUNC( QDECORATIONPLUGIN_CREATE )
 /*
 virtual QStringList keys () const = 0
 */
-HB_FUNC( QDECORATIONPLUGIN_KEYS )
+HB_FUNC_STATIC( QDECORATIONPLUGIN_KEYS )
 {
   QDecorationPlugin * obj = (QDecorationPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

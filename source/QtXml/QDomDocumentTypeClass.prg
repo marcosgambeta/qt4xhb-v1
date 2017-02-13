@@ -71,7 +71,7 @@ RETURN
 /*
 QDomDocumentType ()
 */
-HB_FUNC( QDOMDOCUMENTTYPE_NEW1 )
+HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW1 )
 {
   QDomDocumentType * o = NULL;
   o = new QDomDocumentType (  );
@@ -89,7 +89,7 @@ HB_FUNC( QDOMDOCUMENTTYPE_NEW1 )
 /*
 QDomDocumentType ( const QDomDocumentType & n )
 */
-HB_FUNC( QDOMDOCUMENTTYPE_NEW2 )
+HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW2 )
 {
   QDomDocumentType * o = NULL;
   QDomDocumentType * par1 = (QDomDocumentType *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -108,7 +108,7 @@ HB_FUNC( QDOMDOCUMENTTYPE_NEW2 )
 //[1]QDomDocumentType ()
 //[2]QDomDocumentType ( const QDomDocumentType & n )
 
-HB_FUNC( QDOMDOCUMENTTYPE_NEW )
+HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -129,7 +129,7 @@ HB_FUNC( QDOMDOCUMENTTYPE_NEW )
 /*
 QDomNamedNodeMap entities () const
 */
-HB_FUNC( QDOMDOCUMENTTYPE_ENTITIES )
+HB_FUNC_STATIC( QDOMDOCUMENTTYPE_ENTITIES )
 {
   QDomDocumentType * obj = (QDomDocumentType *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -142,7 +142,7 @@ HB_FUNC( QDOMDOCUMENTTYPE_ENTITIES )
 /*
 QString internalSubset () const
 */
-HB_FUNC( QDOMDOCUMENTTYPE_INTERNALSUBSET )
+HB_FUNC_STATIC( QDOMDOCUMENTTYPE_INTERNALSUBSET )
 {
   QDomDocumentType * obj = (QDomDocumentType *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -156,7 +156,7 @@ HB_FUNC( QDOMDOCUMENTTYPE_INTERNALSUBSET )
 /*
 QString name () const
 */
-HB_FUNC( QDOMDOCUMENTTYPE_NAME )
+HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NAME )
 {
   QDomDocumentType * obj = (QDomDocumentType *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -170,7 +170,7 @@ HB_FUNC( QDOMDOCUMENTTYPE_NAME )
 /*
 QDomNode::NodeType nodeType () const
 */
-HB_FUNC( QDOMDOCUMENTTYPE_NODETYPE )
+HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NODETYPE )
 {
   QDomDocumentType * obj = (QDomDocumentType *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -184,7 +184,7 @@ HB_FUNC( QDOMDOCUMENTTYPE_NODETYPE )
 /*
 QDomNamedNodeMap notations () const
 */
-HB_FUNC( QDOMDOCUMENTTYPE_NOTATIONS )
+HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NOTATIONS )
 {
   QDomDocumentType * obj = (QDomDocumentType *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -197,7 +197,7 @@ HB_FUNC( QDOMDOCUMENTTYPE_NOTATIONS )
 /*
 QString publicId () const
 */
-HB_FUNC( QDOMDOCUMENTTYPE_PUBLICID )
+HB_FUNC_STATIC( QDOMDOCUMENTTYPE_PUBLICID )
 {
   QDomDocumentType * obj = (QDomDocumentType *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -211,7 +211,7 @@ HB_FUNC( QDOMDOCUMENTTYPE_PUBLICID )
 /*
 QString systemId () const
 */
-HB_FUNC( QDOMDOCUMENTTYPE_SYSTEMID )
+HB_FUNC_STATIC( QDOMDOCUMENTTYPE_SYSTEMID )
 {
   QDomDocumentType * obj = (QDomDocumentType *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

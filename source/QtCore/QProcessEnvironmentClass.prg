@@ -111,7 +111,7 @@ RETURN
 /*
 QProcessEnvironment()
 */
-HB_FUNC( QPROCESSENVIRONMENT_NEW1 )
+HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEW1 )
 {
   QProcessEnvironment * o = NULL;
   o = new QProcessEnvironment (  );
@@ -129,7 +129,7 @@ HB_FUNC( QPROCESSENVIRONMENT_NEW1 )
 /*
 QProcessEnvironment(const QProcessEnvironment &other)
 */
-HB_FUNC( QPROCESSENVIRONMENT_NEW2 )
+HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEW2 )
 {
   QProcessEnvironment * o = NULL;
   QProcessEnvironment * par1 = (QProcessEnvironment *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -148,7 +148,7 @@ HB_FUNC( QPROCESSENVIRONMENT_NEW2 )
 //[1]QProcessEnvironment()
 //[2]QProcessEnvironment(const QProcessEnvironment &other)
 
-HB_FUNC( QPROCESSENVIRONMENT_NEW )
+HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -164,7 +164,7 @@ HB_FUNC( QPROCESSENVIRONMENT_NEW )
   }
 }
 
-HB_FUNC( QPROCESSENVIRONMENT_DELETE )
+HB_FUNC_STATIC( QPROCESSENVIRONMENT_DELETE )
 {
   QProcessEnvironment * obj = (QProcessEnvironment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -183,7 +183,7 @@ HB_FUNC( QPROCESSENVIRONMENT_DELETE )
 /*
 bool isEmpty() const
 */
-HB_FUNC( QPROCESSENVIRONMENT_ISEMPTY )
+HB_FUNC_STATIC( QPROCESSENVIRONMENT_ISEMPTY )
 {
   QProcessEnvironment * obj = (QProcessEnvironment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -197,7 +197,7 @@ HB_FUNC( QPROCESSENVIRONMENT_ISEMPTY )
 /*
 void clear()
 */
-HB_FUNC( QPROCESSENVIRONMENT_CLEAR )
+HB_FUNC_STATIC( QPROCESSENVIRONMENT_CLEAR )
 {
   QProcessEnvironment * obj = (QProcessEnvironment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -211,7 +211,7 @@ HB_FUNC( QPROCESSENVIRONMENT_CLEAR )
 /*
 bool contains(const QString &name) const
 */
-HB_FUNC( QPROCESSENVIRONMENT_CONTAINS )
+HB_FUNC_STATIC( QPROCESSENVIRONMENT_CONTAINS )
 {
   QProcessEnvironment * obj = (QProcessEnvironment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -226,7 +226,7 @@ HB_FUNC( QPROCESSENVIRONMENT_CONTAINS )
 /*
 void insert(const QString &name, const QString &value)
 */
-HB_FUNC( QPROCESSENVIRONMENT_INSERT1 )
+HB_FUNC_STATIC( QPROCESSENVIRONMENT_INSERT1 )
 {
   QProcessEnvironment * obj = (QProcessEnvironment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -242,7 +242,7 @@ HB_FUNC( QPROCESSENVIRONMENT_INSERT1 )
 /*
 void remove(const QString &name)
 */
-HB_FUNC( QPROCESSENVIRONMENT_REMOVE )
+HB_FUNC_STATIC( QPROCESSENVIRONMENT_REMOVE )
 {
   QProcessEnvironment * obj = (QProcessEnvironment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -257,7 +257,7 @@ HB_FUNC( QPROCESSENVIRONMENT_REMOVE )
 /*
 QString value(const QString &name, const QString &defaultValue = QString()) const
 */
-HB_FUNC( QPROCESSENVIRONMENT_VALUE )
+HB_FUNC_STATIC( QPROCESSENVIRONMENT_VALUE )
 {
   QProcessEnvironment * obj = (QProcessEnvironment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -273,7 +273,7 @@ HB_FUNC( QPROCESSENVIRONMENT_VALUE )
 /*
 QStringList toStringList() const
 */
-HB_FUNC( QPROCESSENVIRONMENT_TOSTRINGLIST )
+HB_FUNC_STATIC( QPROCESSENVIRONMENT_TOSTRINGLIST )
 {
   QProcessEnvironment * obj = (QProcessEnvironment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -296,7 +296,7 @@ HB_FUNC( QPROCESSENVIRONMENT_TOSTRINGLIST )
 /*
 QStringList keys() const
 */
-HB_FUNC( QPROCESSENVIRONMENT_KEYS )
+HB_FUNC_STATIC( QPROCESSENVIRONMENT_KEYS )
 {
   QProcessEnvironment * obj = (QProcessEnvironment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -319,7 +319,7 @@ HB_FUNC( QPROCESSENVIRONMENT_KEYS )
 /*
 void insert(const QProcessEnvironment &e)
 */
-HB_FUNC( QPROCESSENVIRONMENT_INSERT2 )
+HB_FUNC_STATIC( QPROCESSENVIRONMENT_INSERT2 )
 {
   QProcessEnvironment * obj = (QProcessEnvironment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -334,7 +334,7 @@ HB_FUNC( QPROCESSENVIRONMENT_INSERT2 )
 //[1]void insert(const QString &name, const QString &value)
 //[2]void insert(const QProcessEnvironment &e)
 
-HB_FUNC( QPROCESSENVIRONMENT_INSERT )
+HB_FUNC_STATIC( QPROCESSENVIRONMENT_INSERT )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
   {
@@ -350,7 +350,7 @@ HB_FUNC( QPROCESSENVIRONMENT_INSERT )
 /*
 static QProcessEnvironment systemEnvironment()
 */
-HB_FUNC( QPROCESSENVIRONMENT_SYSTEMENVIRONMENT )
+HB_FUNC_STATIC( QPROCESSENVIRONMENT_SYSTEMENVIRONMENT )
 {
   QProcessEnvironment * ptr = new QProcessEnvironment( QProcessEnvironment::systemEnvironment (  ) );
   _qt4xhb_createReturnClass ( ptr, "QPROCESSENVIRONMENT", true );}

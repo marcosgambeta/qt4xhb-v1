@@ -67,7 +67,7 @@ RETURN
 /*
 QInputMethodEvent ()
 */
-HB_FUNC( QINPUTMETHODEVENT_NEW1 )
+HB_FUNC_STATIC( QINPUTMETHODEVENT_NEW1 )
 {
   QInputMethodEvent * o = NULL;
   o = new QInputMethodEvent (  );
@@ -83,7 +83,7 @@ HB_FUNC( QINPUTMETHODEVENT_NEW1 )
 /*
 QInputMethodEvent ( const QInputMethodEvent & other )
 */
-HB_FUNC( QINPUTMETHODEVENT_NEW3 )
+HB_FUNC_STATIC( QINPUTMETHODEVENT_NEW3 )
 {
   QInputMethodEvent * o = NULL;
   QInputMethodEvent * par1 = (QInputMethodEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -100,7 +100,7 @@ HB_FUNC( QINPUTMETHODEVENT_NEW3 )
 //[2]QInputMethodEvent ( const QString & preeditText, const QList<Attribute> & attributes )
 //[3]QInputMethodEvent ( const QInputMethodEvent & other )
 
-HB_FUNC( QINPUTMETHODEVENT_NEW )
+HB_FUNC_STATIC( QINPUTMETHODEVENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -116,7 +116,7 @@ HB_FUNC( QINPUTMETHODEVENT_NEW )
   }
 }
 
-HB_FUNC( QINPUTMETHODEVENT_DELETE )
+HB_FUNC_STATIC( QINPUTMETHODEVENT_DELETE )
 {
   QInputMethodEvent * obj = (QInputMethodEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -136,7 +136,7 @@ HB_FUNC( QINPUTMETHODEVENT_DELETE )
 /*
 const QString & commitString () const
 */
-HB_FUNC( QINPUTMETHODEVENT_COMMITSTRING )
+HB_FUNC_STATIC( QINPUTMETHODEVENT_COMMITSTRING )
 {
   QInputMethodEvent * obj = (QInputMethodEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -150,7 +150,7 @@ HB_FUNC( QINPUTMETHODEVENT_COMMITSTRING )
 /*
 const QString & preeditString () const
 */
-HB_FUNC( QINPUTMETHODEVENT_PREEDITSTRING )
+HB_FUNC_STATIC( QINPUTMETHODEVENT_PREEDITSTRING )
 {
   QInputMethodEvent * obj = (QInputMethodEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -164,7 +164,7 @@ HB_FUNC( QINPUTMETHODEVENT_PREEDITSTRING )
 /*
 int replacementLength () const
 */
-HB_FUNC( QINPUTMETHODEVENT_REPLACEMENTLENGTH )
+HB_FUNC_STATIC( QINPUTMETHODEVENT_REPLACEMENTLENGTH )
 {
   QInputMethodEvent * obj = (QInputMethodEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -178,7 +178,7 @@ HB_FUNC( QINPUTMETHODEVENT_REPLACEMENTLENGTH )
 /*
 int replacementStart () const
 */
-HB_FUNC( QINPUTMETHODEVENT_REPLACEMENTSTART )
+HB_FUNC_STATIC( QINPUTMETHODEVENT_REPLACEMENTSTART )
 {
   QInputMethodEvent * obj = (QInputMethodEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -192,7 +192,7 @@ HB_FUNC( QINPUTMETHODEVENT_REPLACEMENTSTART )
 /*
 void setCommitString ( const QString & commitString, int replaceFrom = 0, int replaceLength = 0 )
 */
-HB_FUNC( QINPUTMETHODEVENT_SETCOMMITSTRING )
+HB_FUNC_STATIC( QINPUTMETHODEVENT_SETCOMMITSTRING )
 {
   QInputMethodEvent * obj = (QInputMethodEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

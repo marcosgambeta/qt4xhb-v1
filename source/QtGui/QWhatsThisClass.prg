@@ -100,7 +100,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QWHATSTHIS_DELETE )
+HB_FUNC_STATIC( QWHATSTHIS_DELETE )
 {
   QWhatsThis * obj = (QWhatsThis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -120,7 +120,7 @@ HB_FUNC( QWHATSTHIS_DELETE )
 /*
 QAction * createAction ( QObject * parent = 0 )
 */
-HB_FUNC( QWHATSTHIS_CREATEACTION )
+HB_FUNC_STATIC( QWHATSTHIS_CREATEACTION )
 {
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QAction * ptr = QWhatsThis::createAction ( par1 );
@@ -130,7 +130,7 @@ HB_FUNC( QWHATSTHIS_CREATEACTION )
 /*
 void enterWhatsThisMode ()
 */
-HB_FUNC( QWHATSTHIS_ENTERWHATSTHISMODE )
+HB_FUNC_STATIC( QWHATSTHIS_ENTERWHATSTHISMODE )
 {
   QWhatsThis::enterWhatsThisMode (  );
   hb_itemReturn( hb_stackSelfItem() );
@@ -140,7 +140,7 @@ HB_FUNC( QWHATSTHIS_ENTERWHATSTHISMODE )
 /*
 void hideText ()
 */
-HB_FUNC( QWHATSTHIS_HIDETEXT )
+HB_FUNC_STATIC( QWHATSTHIS_HIDETEXT )
 {
   QWhatsThis::hideText (  );
   hb_itemReturn( hb_stackSelfItem() );
@@ -150,7 +150,7 @@ HB_FUNC( QWHATSTHIS_HIDETEXT )
 /*
 bool inWhatsThisMode ()
 */
-HB_FUNC( QWHATSTHIS_INWHATSTHISMODE )
+HB_FUNC_STATIC( QWHATSTHIS_INWHATSTHISMODE )
 {
   bool b = QWhatsThis::inWhatsThisMode (  );
   hb_retl( b );
@@ -160,7 +160,7 @@ HB_FUNC( QWHATSTHIS_INWHATSTHISMODE )
 /*
 void leaveWhatsThisMode ()
 */
-HB_FUNC( QWHATSTHIS_LEAVEWHATSTHISMODE )
+HB_FUNC_STATIC( QWHATSTHIS_LEAVEWHATSTHISMODE )
 {
   QWhatsThis::leaveWhatsThisMode (  );
   hb_itemReturn( hb_stackSelfItem() );
@@ -170,7 +170,7 @@ HB_FUNC( QWHATSTHIS_LEAVEWHATSTHISMODE )
 /*
 void showText ( const QPoint & pos, const QString & text, QWidget * w = 0 )
 */
-HB_FUNC( QWHATSTHIS_SHOWTEXT )
+HB_FUNC_STATIC( QWHATSTHIS_SHOWTEXT )
 {
   QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QString par2 = hb_parc(2);

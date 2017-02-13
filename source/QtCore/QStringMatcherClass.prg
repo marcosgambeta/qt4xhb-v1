@@ -106,7 +106,7 @@ RETURN
 /*
 QStringMatcher()
 */
-HB_FUNC( QSTRINGMATCHER_NEW1 )
+HB_FUNC_STATIC( QSTRINGMATCHER_NEW1 )
 {
   QStringMatcher * o = NULL;
   o = new QStringMatcher (  );
@@ -124,7 +124,7 @@ HB_FUNC( QSTRINGMATCHER_NEW1 )
 /*
 QStringMatcher(const QString &pattern,Qt::CaseSensitivity cs = Qt::CaseSensitive)
 */
-HB_FUNC( QSTRINGMATCHER_NEW2 )
+HB_FUNC_STATIC( QSTRINGMATCHER_NEW2 )
 {
   QStringMatcher * o = NULL;
   QString par1 = hb_parc(1);
@@ -144,7 +144,7 @@ HB_FUNC( QSTRINGMATCHER_NEW2 )
 /*
 QStringMatcher(const QChar *uc, int len,Qt::CaseSensitivity cs = Qt::CaseSensitive)
 */
-HB_FUNC( QSTRINGMATCHER_NEW3 )
+HB_FUNC_STATIC( QSTRINGMATCHER_NEW3 )
 {
   QStringMatcher * o = NULL;
   const QChar * par1 = (const QChar *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -165,7 +165,7 @@ HB_FUNC( QSTRINGMATCHER_NEW3 )
 /*
 QStringMatcher(const QStringMatcher &other)
 */
-HB_FUNC( QSTRINGMATCHER_NEW4 )
+HB_FUNC_STATIC( QSTRINGMATCHER_NEW4 )
 {
   QStringMatcher * o = NULL;
   QStringMatcher * par1 = (QStringMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -186,7 +186,7 @@ HB_FUNC( QSTRINGMATCHER_NEW4 )
 //[3]QStringMatcher(const QChar *uc, int len,Qt::CaseSensitivity cs = Qt::CaseSensitive)
 //[4]QStringMatcher(const QStringMatcher &other)
 
-HB_FUNC( QSTRINGMATCHER_NEW )
+HB_FUNC_STATIC( QSTRINGMATCHER_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -210,7 +210,7 @@ HB_FUNC( QSTRINGMATCHER_NEW )
   }
 }
 
-HB_FUNC( QSTRINGMATCHER_DELETE )
+HB_FUNC_STATIC( QSTRINGMATCHER_DELETE )
 {
   QStringMatcher * obj = (QStringMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -229,7 +229,7 @@ HB_FUNC( QSTRINGMATCHER_DELETE )
 /*
 void setPattern(const QString &pattern)
 */
-HB_FUNC( QSTRINGMATCHER_SETPATTERN )
+HB_FUNC_STATIC( QSTRINGMATCHER_SETPATTERN )
 {
   QStringMatcher * obj = (QStringMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -244,7 +244,7 @@ HB_FUNC( QSTRINGMATCHER_SETPATTERN )
 /*
 void setCaseSensitivity(Qt::CaseSensitivity cs)
 */
-HB_FUNC( QSTRINGMATCHER_SETCASESENSITIVITY )
+HB_FUNC_STATIC( QSTRINGMATCHER_SETCASESENSITIVITY )
 {
   QStringMatcher * obj = (QStringMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -259,7 +259,7 @@ HB_FUNC( QSTRINGMATCHER_SETCASESENSITIVITY )
 /*
 int indexIn(const QString &str, int from = 0) const
 */
-HB_FUNC( QSTRINGMATCHER_INDEXIN1 )
+HB_FUNC_STATIC( QSTRINGMATCHER_INDEXIN1 )
 {
   QStringMatcher * obj = (QStringMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -275,7 +275,7 @@ HB_FUNC( QSTRINGMATCHER_INDEXIN1 )
 /*
 int indexIn(const QChar *str, int length, int from = 0) const
 */
-HB_FUNC( QSTRINGMATCHER_INDEXIN2 )
+HB_FUNC_STATIC( QSTRINGMATCHER_INDEXIN2 )
 {
   QStringMatcher * obj = (QStringMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -292,7 +292,7 @@ HB_FUNC( QSTRINGMATCHER_INDEXIN2 )
 /*
 QString pattern() const
 */
-HB_FUNC( QSTRINGMATCHER_PATTERN )
+HB_FUNC_STATIC( QSTRINGMATCHER_PATTERN )
 {
   QStringMatcher * obj = (QStringMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -306,7 +306,7 @@ HB_FUNC( QSTRINGMATCHER_PATTERN )
 /*
 Qt::CaseSensitivity caseSensitivity() const
 */
-HB_FUNC( QSTRINGMATCHER_CASESENSITIVITY )
+HB_FUNC_STATIC( QSTRINGMATCHER_CASESENSITIVITY )
 {
   QStringMatcher * obj = (QStringMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

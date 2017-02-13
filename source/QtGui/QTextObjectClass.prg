@@ -67,7 +67,7 @@ RETURN
 /*
 QTextDocument * document () const
 */
-HB_FUNC( QTEXTOBJECT_DOCUMENT )
+HB_FUNC_STATIC( QTEXTOBJECT_DOCUMENT )
 {
   QTextObject * obj = (QTextObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -80,7 +80,7 @@ HB_FUNC( QTEXTOBJECT_DOCUMENT )
 /*
 QTextFormat format () const
 */
-HB_FUNC( QTEXTOBJECT_FORMAT )
+HB_FUNC_STATIC( QTEXTOBJECT_FORMAT )
 {
   QTextObject * obj = (QTextObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -93,7 +93,7 @@ HB_FUNC( QTEXTOBJECT_FORMAT )
 /*
 int formatIndex () const
 */
-HB_FUNC( QTEXTOBJECT_FORMATINDEX )
+HB_FUNC_STATIC( QTEXTOBJECT_FORMATINDEX )
 {
   QTextObject * obj = (QTextObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -107,7 +107,7 @@ HB_FUNC( QTEXTOBJECT_FORMATINDEX )
 /*
 int objectIndex () const
 */
-HB_FUNC( QTEXTOBJECT_OBJECTINDEX )
+HB_FUNC_STATIC( QTEXTOBJECT_OBJECTINDEX )
 {
   QTextObject * obj = (QTextObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

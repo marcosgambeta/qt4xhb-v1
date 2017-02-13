@@ -93,7 +93,7 @@ RETURN
 #include "qt4xhb_clsid.h"
 #include "qt4xhb_utils.h"
 
-HB_FUNC( QXMLENTITYRESOLVER_DELETE )
+HB_FUNC_STATIC( QXMLENTITYRESOLVER_DELETE )
 {
   QXmlEntityResolver * obj = (QXmlEntityResolver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -112,7 +112,7 @@ HB_FUNC( QXMLENTITYRESOLVER_DELETE )
 /*
 virtual QString errorString () const = 0
 */
-HB_FUNC( QXMLENTITYRESOLVER_ERRORSTRING )
+HB_FUNC_STATIC( QXMLENTITYRESOLVER_ERRORSTRING )
 {
   QXmlEntityResolver * obj = (QXmlEntityResolver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

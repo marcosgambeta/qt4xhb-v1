@@ -102,7 +102,7 @@ RETURN
 /*
 QSettings ( const QString & organization, const QString & application = QString(), QObject * parent = 0 )
 */
-HB_FUNC( QSETTINGS_NEW1 )
+HB_FUNC_STATIC( QSETTINGS_NEW1 )
 {
   QSettings * o = NULL;
   QString par1 = hb_parc(1);
@@ -120,7 +120,7 @@ HB_FUNC( QSETTINGS_NEW1 )
 /*
 QSettings ( Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = 0 )
 */
-HB_FUNC( QSETTINGS_NEW2 )
+HB_FUNC_STATIC( QSETTINGS_NEW2 )
 {
   QSettings * o = NULL;
   int par1 = hb_parni(1);
@@ -139,7 +139,7 @@ HB_FUNC( QSETTINGS_NEW2 )
 /*
 QSettings ( Format format, Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = 0 )
 */
-HB_FUNC( QSETTINGS_NEW3 )
+HB_FUNC_STATIC( QSETTINGS_NEW3 )
 {
   QSettings * o = NULL;
   int par1 = hb_parni(1);
@@ -159,7 +159,7 @@ HB_FUNC( QSETTINGS_NEW3 )
 /*
 QSettings ( const QString & fileName, Format format, QObject * parent = 0 )
 */
-HB_FUNC( QSETTINGS_NEW4 )
+HB_FUNC_STATIC( QSETTINGS_NEW4 )
 {
   QSettings * o = NULL;
   QString par1 = hb_parc(1);
@@ -177,7 +177,7 @@ HB_FUNC( QSETTINGS_NEW4 )
 /*
 QSettings ( QObject * parent = 0 )
 */
-HB_FUNC( QSETTINGS_NEW5 )
+HB_FUNC_STATIC( QSETTINGS_NEW5 )
 {
   QSettings * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -196,7 +196,7 @@ HB_FUNC( QSETTINGS_NEW5 )
 //[4]QSettings ( const QString & fileName, Format format, QObject * parent = 0 )
 //[5]QSettings ( QObject * parent = 0 )
 
-HB_FUNC( QSETTINGS_NEW )
+HB_FUNC_STATIC( QSETTINGS_NEW )
 {
   if( ISBETWEEN(1,3) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) && (ISQOBJECT(3)||ISNIL(3)) )
   {
@@ -224,7 +224,7 @@ HB_FUNC( QSETTINGS_NEW )
   }
 }
 
-HB_FUNC( QSETTINGS_DELETE )
+HB_FUNC_STATIC( QSETTINGS_DELETE )
 {
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -244,7 +244,7 @@ HB_FUNC( QSETTINGS_DELETE )
 /*
 QStringList allKeys () const
 */
-HB_FUNC( QSETTINGS_ALLKEYS )
+HB_FUNC_STATIC( QSETTINGS_ALLKEYS )
 {
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -267,7 +267,7 @@ HB_FUNC( QSETTINGS_ALLKEYS )
 /*
 QString applicationName () const
 */
-HB_FUNC( QSETTINGS_APPLICATIONNAME )
+HB_FUNC_STATIC( QSETTINGS_APPLICATIONNAME )
 {
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -281,7 +281,7 @@ HB_FUNC( QSETTINGS_APPLICATIONNAME )
 /*
 void beginGroup ( const QString & prefix )
 */
-HB_FUNC( QSETTINGS_BEGINGROUP )
+HB_FUNC_STATIC( QSETTINGS_BEGINGROUP )
 {
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -296,7 +296,7 @@ HB_FUNC( QSETTINGS_BEGINGROUP )
 /*
 int beginReadArray ( const QString & prefix )
 */
-HB_FUNC( QSETTINGS_BEGINREADARRAY )
+HB_FUNC_STATIC( QSETTINGS_BEGINREADARRAY )
 {
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -311,7 +311,7 @@ HB_FUNC( QSETTINGS_BEGINREADARRAY )
 /*
 void beginWriteArray ( const QString & prefix, int size = -1 )
 */
-HB_FUNC( QSETTINGS_BEGINWRITEARRAY )
+HB_FUNC_STATIC( QSETTINGS_BEGINWRITEARRAY )
 {
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -327,7 +327,7 @@ HB_FUNC( QSETTINGS_BEGINWRITEARRAY )
 /*
 QStringList childGroups () const
 */
-HB_FUNC( QSETTINGS_CHILDGROUPS )
+HB_FUNC_STATIC( QSETTINGS_CHILDGROUPS )
 {
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -350,7 +350,7 @@ HB_FUNC( QSETTINGS_CHILDGROUPS )
 /*
 QStringList childKeys () const
 */
-HB_FUNC( QSETTINGS_CHILDKEYS )
+HB_FUNC_STATIC( QSETTINGS_CHILDKEYS )
 {
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -373,7 +373,7 @@ HB_FUNC( QSETTINGS_CHILDKEYS )
 /*
 void clear ()
 */
-HB_FUNC( QSETTINGS_CLEAR )
+HB_FUNC_STATIC( QSETTINGS_CLEAR )
 {
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -387,7 +387,7 @@ HB_FUNC( QSETTINGS_CLEAR )
 /*
 bool contains ( const QString & key ) const
 */
-HB_FUNC( QSETTINGS_CONTAINS )
+HB_FUNC_STATIC( QSETTINGS_CONTAINS )
 {
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -402,7 +402,7 @@ HB_FUNC( QSETTINGS_CONTAINS )
 /*
 void endArray ()
 */
-HB_FUNC( QSETTINGS_ENDARRAY )
+HB_FUNC_STATIC( QSETTINGS_ENDARRAY )
 {
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -416,7 +416,7 @@ HB_FUNC( QSETTINGS_ENDARRAY )
 /*
 void endGroup ()
 */
-HB_FUNC( QSETTINGS_ENDGROUP )
+HB_FUNC_STATIC( QSETTINGS_ENDGROUP )
 {
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -430,7 +430,7 @@ HB_FUNC( QSETTINGS_ENDGROUP )
 /*
 bool fallbacksEnabled () const
 */
-HB_FUNC( QSETTINGS_FALLBACKSENABLED )
+HB_FUNC_STATIC( QSETTINGS_FALLBACKSENABLED )
 {
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -444,7 +444,7 @@ HB_FUNC( QSETTINGS_FALLBACKSENABLED )
 /*
 QString fileName () const
 */
-HB_FUNC( QSETTINGS_FILENAME )
+HB_FUNC_STATIC( QSETTINGS_FILENAME )
 {
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -458,7 +458,7 @@ HB_FUNC( QSETTINGS_FILENAME )
 /*
 Format format () const
 */
-HB_FUNC( QSETTINGS_FORMAT )
+HB_FUNC_STATIC( QSETTINGS_FORMAT )
 {
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -472,7 +472,7 @@ HB_FUNC( QSETTINGS_FORMAT )
 /*
 QString group () const
 */
-HB_FUNC( QSETTINGS_GROUP )
+HB_FUNC_STATIC( QSETTINGS_GROUP )
 {
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -486,7 +486,7 @@ HB_FUNC( QSETTINGS_GROUP )
 /*
 QTextCodec * iniCodec () const
 */
-HB_FUNC( QSETTINGS_INICODEC )
+HB_FUNC_STATIC( QSETTINGS_INICODEC )
 {
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -499,7 +499,7 @@ HB_FUNC( QSETTINGS_INICODEC )
 /*
 bool isWritable () const
 */
-HB_FUNC( QSETTINGS_ISWRITABLE )
+HB_FUNC_STATIC( QSETTINGS_ISWRITABLE )
 {
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -513,7 +513,7 @@ HB_FUNC( QSETTINGS_ISWRITABLE )
 /*
 QString organizationName () const
 */
-HB_FUNC( QSETTINGS_ORGANIZATIONNAME )
+HB_FUNC_STATIC( QSETTINGS_ORGANIZATIONNAME )
 {
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -527,7 +527,7 @@ HB_FUNC( QSETTINGS_ORGANIZATIONNAME )
 /*
 void remove ( const QString & key )
 */
-HB_FUNC( QSETTINGS_REMOVE )
+HB_FUNC_STATIC( QSETTINGS_REMOVE )
 {
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -542,7 +542,7 @@ HB_FUNC( QSETTINGS_REMOVE )
 /*
 Scope scope () const
 */
-HB_FUNC( QSETTINGS_SCOPE )
+HB_FUNC_STATIC( QSETTINGS_SCOPE )
 {
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -556,7 +556,7 @@ HB_FUNC( QSETTINGS_SCOPE )
 /*
 void setArrayIndex ( int i )
 */
-HB_FUNC( QSETTINGS_SETARRAYINDEX )
+HB_FUNC_STATIC( QSETTINGS_SETARRAYINDEX )
 {
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -571,7 +571,7 @@ HB_FUNC( QSETTINGS_SETARRAYINDEX )
 /*
 void setFallbacksEnabled ( bool b )
 */
-HB_FUNC( QSETTINGS_SETFALLBACKSENABLED )
+HB_FUNC_STATIC( QSETTINGS_SETFALLBACKSENABLED )
 {
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -586,7 +586,7 @@ HB_FUNC( QSETTINGS_SETFALLBACKSENABLED )
 /*
 void setIniCodec ( QTextCodec * codec )
 */
-HB_FUNC( QSETTINGS_SETINICODEC1 )
+HB_FUNC_STATIC( QSETTINGS_SETINICODEC1 )
 {
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -601,7 +601,7 @@ HB_FUNC( QSETTINGS_SETINICODEC1 )
 /*
 void setIniCodec ( const char * codecName )
 */
-HB_FUNC( QSETTINGS_SETINICODEC2 )
+HB_FUNC_STATIC( QSETTINGS_SETINICODEC2 )
 {
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -613,7 +613,7 @@ HB_FUNC( QSETTINGS_SETINICODEC2 )
 }
 
 
-HB_FUNC( QSETTINGS_SETINICODEC )
+HB_FUNC_STATIC( QSETTINGS_SETINICODEC )
 {
   if( ISNUMPAR(1) && ISQTEXTCODEC(1) )
   {
@@ -628,7 +628,7 @@ HB_FUNC( QSETTINGS_SETINICODEC )
 /*
 void setValue ( const QString & key, const QVariant & value )
 */
-HB_FUNC( QSETTINGS_SETVALUE )
+HB_FUNC_STATIC( QSETTINGS_SETVALUE )
 {
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -644,7 +644,7 @@ HB_FUNC( QSETTINGS_SETVALUE )
 /*
 Status status () const
 */
-HB_FUNC( QSETTINGS_STATUS )
+HB_FUNC_STATIC( QSETTINGS_STATUS )
 {
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -658,7 +658,7 @@ HB_FUNC( QSETTINGS_STATUS )
 /*
 void sync ()
 */
-HB_FUNC( QSETTINGS_SYNC )
+HB_FUNC_STATIC( QSETTINGS_SYNC )
 {
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -672,7 +672,7 @@ HB_FUNC( QSETTINGS_SYNC )
 /*
 QVariant value ( const QString & key, const QVariant & defaultValue = QVariant() ) const
 */
-HB_FUNC( QSETTINGS_VALUE )
+HB_FUNC_STATIC( QSETTINGS_VALUE )
 {
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -688,7 +688,7 @@ HB_FUNC( QSETTINGS_VALUE )
 /*
 Format defaultFormat ()
 */
-HB_FUNC( QSETTINGS_DEFAULTFORMAT )
+HB_FUNC_STATIC( QSETTINGS_DEFAULTFORMAT )
 {
   int i = QSettings::defaultFormat (  );
   hb_retni( i );
@@ -699,7 +699,7 @@ HB_FUNC( QSETTINGS_DEFAULTFORMAT )
 /*
 void setDefaultFormat ( Format format )
 */
-HB_FUNC( QSETTINGS_SETDEFAULTFORMAT )
+HB_FUNC_STATIC( QSETTINGS_SETDEFAULTFORMAT )
 {
   int par1 = hb_parni(1);
   QSettings::setDefaultFormat (  (QSettings::Format) par1 );
@@ -710,7 +710,7 @@ HB_FUNC( QSETTINGS_SETDEFAULTFORMAT )
 /*
 void setPath ( Format format, Scope scope, const QString & path )
 */
-HB_FUNC( QSETTINGS_SETPATH )
+HB_FUNC_STATIC( QSETTINGS_SETPATH )
 {
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);

@@ -65,7 +65,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QABSTRACTFONTENGINE_DELETE )
+HB_FUNC_STATIC( QABSTRACTFONTENGINE_DELETE )
 {
   QAbstractFontEngine * obj = (QAbstractFontEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -84,7 +84,7 @@ HB_FUNC( QABSTRACTFONTENGINE_DELETE )
 /*
 virtual void addGlyphOutlinesToPath ( uint * glyphs, int numGlyphs, FixedPoint * positions, QPainterPath * path )
 */
-HB_FUNC( QABSTRACTFONTENGINE_ADDGLYPHOUTLINESTOPATH )
+HB_FUNC_STATIC( QABSTRACTFONTENGINE_ADDGLYPHOUTLINESTOPATH )
 {
   QAbstractFontEngine * obj = (QAbstractFontEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -102,7 +102,7 @@ HB_FUNC( QABSTRACTFONTENGINE_ADDGLYPHOUTLINESTOPATH )
 /*
 virtual Capabilities capabilities () const = 0
 */
-HB_FUNC( QABSTRACTFONTENGINE_CAPABILITIES )
+HB_FUNC_STATIC( QABSTRACTFONTENGINE_CAPABILITIES )
 {
   QAbstractFontEngine * obj = (QAbstractFontEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -116,7 +116,7 @@ HB_FUNC( QABSTRACTFONTENGINE_CAPABILITIES )
 /*
 virtual bool convertStringToGlyphIndices ( const QChar * string, int length, uint * glyphs, int * numGlyphs, TextShapingFlags flags ) const = 0
 */
-HB_FUNC( QABSTRACTFONTENGINE_CONVERTSTRINGTOGLYPHINDICES )
+HB_FUNC_STATIC( QABSTRACTFONTENGINE_CONVERTSTRINGTOGLYPHINDICES )
 {
   QAbstractFontEngine * obj = (QAbstractFontEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -136,7 +136,7 @@ HB_FUNC( QABSTRACTFONTENGINE_CONVERTSTRINGTOGLYPHINDICES )
 /*
 virtual QVariant fontProperty ( FontProperty property ) const = 0
 */
-HB_FUNC( QABSTRACTFONTENGINE_FONTPROPERTY )
+HB_FUNC_STATIC( QABSTRACTFONTENGINE_FONTPROPERTY )
 {
   QAbstractFontEngine * obj = (QAbstractFontEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -150,7 +150,7 @@ HB_FUNC( QABSTRACTFONTENGINE_FONTPROPERTY )
 /*
 virtual void getGlyphAdvances ( const uint * glyphs, int numGlyphs, Fixed * advances, TextShapingFlags flags ) const = 0
 */
-HB_FUNC( QABSTRACTFONTENGINE_GETGLYPHADVANCES )
+HB_FUNC_STATIC( QABSTRACTFONTENGINE_GETGLYPHADVANCES )
 {
   QAbstractFontEngine * obj = (QAbstractFontEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -169,7 +169,7 @@ HB_FUNC( QABSTRACTFONTENGINE_GETGLYPHADVANCES )
 /*
 virtual bool renderGlyph ( uint glyph, int depth, int bytesPerLine, int height, uchar * buffer )
 */
-HB_FUNC( QABSTRACTFONTENGINE_RENDERGLYPH )
+HB_FUNC_STATIC( QABSTRACTFONTENGINE_RENDERGLYPH )
 {
   QAbstractFontEngine * obj = (QAbstractFontEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

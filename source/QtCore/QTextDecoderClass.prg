@@ -101,7 +101,7 @@ RETURN
 /*
 QTextDecoder(const QTextCodec * codec)
 */
-HB_FUNC( QTEXTDECODER_NEW1 )
+HB_FUNC_STATIC( QTEXTDECODER_NEW1 )
 {
   QTextDecoder * o = NULL;
   const QTextCodec * par1 = (const QTextCodec *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -117,7 +117,7 @@ HB_FUNC( QTEXTDECODER_NEW1 )
 /*
 QTextDecoder(const QTextCodec * codec, QTextCodec::ConversionFlags flags)
 */
-HB_FUNC( QTEXTDECODER_NEW2 )
+HB_FUNC_STATIC( QTEXTDECODER_NEW2 )
 {
   QTextDecoder * o = NULL;
   const QTextCodec * par1 = (const QTextCodec *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -134,7 +134,7 @@ HB_FUNC( QTEXTDECODER_NEW2 )
 //[1]QTextDecoder(const QTextCodec * codec)
 //[2]QTextDecoder(const QTextCodec * codec, QTextCodec::ConversionFlags flags)
 
-HB_FUNC( QTEXTDECODER_NEW )
+HB_FUNC_STATIC( QTEXTDECODER_NEW )
 {
   if( ISNUMPAR(1) && ISQTEXTCODEC(1) )
   {
@@ -150,7 +150,7 @@ HB_FUNC( QTEXTDECODER_NEW )
   }
 }
 
-HB_FUNC( QTEXTDECODER_DELETE )
+HB_FUNC_STATIC( QTEXTDECODER_DELETE )
 {
   QTextDecoder * obj = (QTextDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -169,7 +169,7 @@ HB_FUNC( QTEXTDECODER_DELETE )
 /*
 QString toUnicode(const char * chars, int len)
 */
-HB_FUNC( QTEXTDECODER_TOUNICODE1 )
+HB_FUNC_STATIC( QTEXTDECODER_TOUNICODE1 )
 {
   QTextDecoder * obj = (QTextDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -185,7 +185,7 @@ HB_FUNC( QTEXTDECODER_TOUNICODE1 )
 /*
 void toUnicode(QString * target, const char * chars, int len)
 */
-HB_FUNC( QTEXTDECODER_TOUNICODE2 )
+HB_FUNC_STATIC( QTEXTDECODER_TOUNICODE2 )
 {
   QTextDecoder * obj = (QTextDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -202,7 +202,7 @@ HB_FUNC( QTEXTDECODER_TOUNICODE2 )
 /*
 QString toUnicode(const QByteArray & ba)
 */
-HB_FUNC( QTEXTDECODER_TOUNICODE3 )
+HB_FUNC_STATIC( QTEXTDECODER_TOUNICODE3 )
 {
   QTextDecoder * obj = (QTextDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -218,7 +218,7 @@ HB_FUNC( QTEXTDECODER_TOUNICODE3 )
 //[2]void toUnicode(QString * target, const char * chars, int len)
 //[3]QString toUnicode(const QByteArray & ba)
 
-HB_FUNC( QTEXTDECODER_TOUNICODE )
+HB_FUNC_STATIC( QTEXTDECODER_TOUNICODE )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
   {

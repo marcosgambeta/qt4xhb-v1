@@ -191,7 +191,7 @@ RETURN
 /*
 QStandardItem()
 */
-HB_FUNC( QSTANDARDITEM_NEW1 )
+HB_FUNC_STATIC( QSTANDARDITEM_NEW1 )
 {
   QStandardItem * o = NULL;
   o = new QStandardItem (  );
@@ -206,7 +206,7 @@ HB_FUNC( QSTANDARDITEM_NEW1 )
 /*
 QStandardItem(const QString &text)
 */
-HB_FUNC( QSTANDARDITEM_NEW2 )
+HB_FUNC_STATIC( QSTANDARDITEM_NEW2 )
 {
   QStandardItem * o = NULL;
   QString par1 = hb_parc(1);
@@ -222,7 +222,7 @@ HB_FUNC( QSTANDARDITEM_NEW2 )
 /*
 QStandardItem(const QIcon &icon, const QString &text)
 */
-HB_FUNC( QSTANDARDITEM_NEW3 )
+HB_FUNC_STATIC( QSTANDARDITEM_NEW3 )
 {
   QStandardItem * o = NULL;
   QIcon par1 = ISOBJECT(1)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(1));
@@ -239,7 +239,7 @@ HB_FUNC( QSTANDARDITEM_NEW3 )
 /*
 QStandardItem(int rows, int columns = 1)
 */
-HB_FUNC( QSTANDARDITEM_NEW4 )
+HB_FUNC_STATIC( QSTANDARDITEM_NEW4 )
 {
   QStandardItem * o = NULL;
   int par1 = hb_parni(1);
@@ -258,7 +258,7 @@ HB_FUNC( QSTANDARDITEM_NEW4 )
 //[3]QStandardItem(const QIcon &icon, const QString &text)
 //[4]QStandardItem(int rows, int columns = 1)
 
-HB_FUNC( QSTANDARDITEM_NEW )
+HB_FUNC_STATIC( QSTANDARDITEM_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -282,7 +282,7 @@ HB_FUNC( QSTANDARDITEM_NEW )
   }
 }
 
-HB_FUNC( QSTANDARDITEM_DELETE )
+HB_FUNC_STATIC( QSTANDARDITEM_DELETE )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -301,7 +301,7 @@ HB_FUNC( QSTANDARDITEM_DELETE )
 /*
 virtual QVariant data(int role = Qt::UserRole + 1) const
 */
-HB_FUNC( QSTANDARDITEM_DATA )
+HB_FUNC_STATIC( QSTANDARDITEM_DATA )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -315,7 +315,7 @@ HB_FUNC( QSTANDARDITEM_DATA )
 /*
 virtual void setData(const QVariant &value, int role = Qt::UserRole + 1)
 */
-HB_FUNC( QSTANDARDITEM_SETDATA )
+HB_FUNC_STATIC( QSTANDARDITEM_SETDATA )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -331,7 +331,7 @@ HB_FUNC( QSTANDARDITEM_SETDATA )
 /*
 QString text() const
 */
-HB_FUNC( QSTANDARDITEM_TEXT )
+HB_FUNC_STATIC( QSTANDARDITEM_TEXT )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -345,7 +345,7 @@ HB_FUNC( QSTANDARDITEM_TEXT )
 /*
 void setText(const QString &text)
 */
-HB_FUNC( QSTANDARDITEM_SETTEXT )
+HB_FUNC_STATIC( QSTANDARDITEM_SETTEXT )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -360,7 +360,7 @@ HB_FUNC( QSTANDARDITEM_SETTEXT )
 /*
 QIcon icon() const
 */
-HB_FUNC( QSTANDARDITEM_ICON )
+HB_FUNC_STATIC( QSTANDARDITEM_ICON )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -373,7 +373,7 @@ HB_FUNC( QSTANDARDITEM_ICON )
 /*
 void setIcon(const QIcon &icon)
 */
-HB_FUNC( QSTANDARDITEM_SETICON )
+HB_FUNC_STATIC( QSTANDARDITEM_SETICON )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -388,7 +388,7 @@ HB_FUNC( QSTANDARDITEM_SETICON )
 /*
 QString toolTip() const
 */
-HB_FUNC( QSTANDARDITEM_TOOLTIP )
+HB_FUNC_STATIC( QSTANDARDITEM_TOOLTIP )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -402,7 +402,7 @@ HB_FUNC( QSTANDARDITEM_TOOLTIP )
 /*
 void setToolTip(const QString &toolTip)
 */
-HB_FUNC( QSTANDARDITEM_SETTOOLTIP )
+HB_FUNC_STATIC( QSTANDARDITEM_SETTOOLTIP )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -417,7 +417,7 @@ HB_FUNC( QSTANDARDITEM_SETTOOLTIP )
 /*
 QString statusTip() const
 */
-HB_FUNC( QSTANDARDITEM_STATUSTIP )
+HB_FUNC_STATIC( QSTANDARDITEM_STATUSTIP )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -431,7 +431,7 @@ HB_FUNC( QSTANDARDITEM_STATUSTIP )
 /*
 void setStatusTip(const QString &statusTip)
 */
-HB_FUNC( QSTANDARDITEM_SETSTATUSTIP )
+HB_FUNC_STATIC( QSTANDARDITEM_SETSTATUSTIP )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -446,7 +446,7 @@ HB_FUNC( QSTANDARDITEM_SETSTATUSTIP )
 /*
 QString whatsThis() const
 */
-HB_FUNC( QSTANDARDITEM_WHATSTHIS )
+HB_FUNC_STATIC( QSTANDARDITEM_WHATSTHIS )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -460,7 +460,7 @@ HB_FUNC( QSTANDARDITEM_WHATSTHIS )
 /*
 void setWhatsThis(const QString &whatsThis)
 */
-HB_FUNC( QSTANDARDITEM_SETWHATSTHIS )
+HB_FUNC_STATIC( QSTANDARDITEM_SETWHATSTHIS )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -475,7 +475,7 @@ HB_FUNC( QSTANDARDITEM_SETWHATSTHIS )
 /*
 QSize sizeHint() const
 */
-HB_FUNC( QSTANDARDITEM_SIZEHINT )
+HB_FUNC_STATIC( QSTANDARDITEM_SIZEHINT )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -488,7 +488,7 @@ HB_FUNC( QSTANDARDITEM_SIZEHINT )
 /*
 void setSizeHint(const QSize &sizeHint)
 */
-HB_FUNC( QSTANDARDITEM_SETSIZEHINT )
+HB_FUNC_STATIC( QSTANDARDITEM_SETSIZEHINT )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -503,7 +503,7 @@ HB_FUNC( QSTANDARDITEM_SETSIZEHINT )
 /*
 QFont font() const
 */
-HB_FUNC( QSTANDARDITEM_FONT )
+HB_FUNC_STATIC( QSTANDARDITEM_FONT )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -516,7 +516,7 @@ HB_FUNC( QSTANDARDITEM_FONT )
 /*
 void setFont(const QFont &font)
 */
-HB_FUNC( QSTANDARDITEM_SETFONT )
+HB_FUNC_STATIC( QSTANDARDITEM_SETFONT )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -531,7 +531,7 @@ HB_FUNC( QSTANDARDITEM_SETFONT )
 /*
 Qt::Alignment textAlignment() const
 */
-HB_FUNC( QSTANDARDITEM_TEXTALIGNMENT )
+HB_FUNC_STATIC( QSTANDARDITEM_TEXTALIGNMENT )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -545,7 +545,7 @@ HB_FUNC( QSTANDARDITEM_TEXTALIGNMENT )
 /*
 void setTextAlignment(Qt::Alignment textAlignment)
 */
-HB_FUNC( QSTANDARDITEM_SETTEXTALIGNMENT )
+HB_FUNC_STATIC( QSTANDARDITEM_SETTEXTALIGNMENT )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -560,7 +560,7 @@ HB_FUNC( QSTANDARDITEM_SETTEXTALIGNMENT )
 /*
 QBrush background() const
 */
-HB_FUNC( QSTANDARDITEM_BACKGROUND )
+HB_FUNC_STATIC( QSTANDARDITEM_BACKGROUND )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -573,7 +573,7 @@ HB_FUNC( QSTANDARDITEM_BACKGROUND )
 /*
 void setBackground(const QBrush &brush)
 */
-HB_FUNC( QSTANDARDITEM_SETBACKGROUND )
+HB_FUNC_STATIC( QSTANDARDITEM_SETBACKGROUND )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -588,7 +588,7 @@ HB_FUNC( QSTANDARDITEM_SETBACKGROUND )
 /*
 QBrush foreground() const
 */
-HB_FUNC( QSTANDARDITEM_FOREGROUND )
+HB_FUNC_STATIC( QSTANDARDITEM_FOREGROUND )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -601,7 +601,7 @@ HB_FUNC( QSTANDARDITEM_FOREGROUND )
 /*
 void setForeground(const QBrush &brush)
 */
-HB_FUNC( QSTANDARDITEM_SETFOREGROUND )
+HB_FUNC_STATIC( QSTANDARDITEM_SETFOREGROUND )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -616,7 +616,7 @@ HB_FUNC( QSTANDARDITEM_SETFOREGROUND )
 /*
 Qt::CheckState checkState() const
 */
-HB_FUNC( QSTANDARDITEM_CHECKSTATE )
+HB_FUNC_STATIC( QSTANDARDITEM_CHECKSTATE )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -630,7 +630,7 @@ HB_FUNC( QSTANDARDITEM_CHECKSTATE )
 /*
 void setCheckState(Qt::CheckState checkState)
 */
-HB_FUNC( QSTANDARDITEM_SETCHECKSTATE )
+HB_FUNC_STATIC( QSTANDARDITEM_SETCHECKSTATE )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -645,7 +645,7 @@ HB_FUNC( QSTANDARDITEM_SETCHECKSTATE )
 /*
 QString accessibleText() const
 */
-HB_FUNC( QSTANDARDITEM_ACCESSIBLETEXT )
+HB_FUNC_STATIC( QSTANDARDITEM_ACCESSIBLETEXT )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -659,7 +659,7 @@ HB_FUNC( QSTANDARDITEM_ACCESSIBLETEXT )
 /*
 void setAccessibleText(const QString &accessibleText)
 */
-HB_FUNC( QSTANDARDITEM_SETACCESSIBLETEXT )
+HB_FUNC_STATIC( QSTANDARDITEM_SETACCESSIBLETEXT )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -674,7 +674,7 @@ HB_FUNC( QSTANDARDITEM_SETACCESSIBLETEXT )
 /*
 QString accessibleDescription() const
 */
-HB_FUNC( QSTANDARDITEM_ACCESSIBLEDESCRIPTION )
+HB_FUNC_STATIC( QSTANDARDITEM_ACCESSIBLEDESCRIPTION )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -688,7 +688,7 @@ HB_FUNC( QSTANDARDITEM_ACCESSIBLEDESCRIPTION )
 /*
 void setAccessibleDescription(const QString &accessibleDescription)
 */
-HB_FUNC( QSTANDARDITEM_SETACCESSIBLEDESCRIPTION )
+HB_FUNC_STATIC( QSTANDARDITEM_SETACCESSIBLEDESCRIPTION )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -703,7 +703,7 @@ HB_FUNC( QSTANDARDITEM_SETACCESSIBLEDESCRIPTION )
 /*
 Qt::ItemFlags flags() const
 */
-HB_FUNC( QSTANDARDITEM_FLAGS )
+HB_FUNC_STATIC( QSTANDARDITEM_FLAGS )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -717,7 +717,7 @@ HB_FUNC( QSTANDARDITEM_FLAGS )
 /*
 void setFlags(Qt::ItemFlags flags)
 */
-HB_FUNC( QSTANDARDITEM_SETFLAGS )
+HB_FUNC_STATIC( QSTANDARDITEM_SETFLAGS )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -732,7 +732,7 @@ HB_FUNC( QSTANDARDITEM_SETFLAGS )
 /*
 bool isEnabled() const
 */
-HB_FUNC( QSTANDARDITEM_ISENABLED )
+HB_FUNC_STATIC( QSTANDARDITEM_ISENABLED )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -746,7 +746,7 @@ HB_FUNC( QSTANDARDITEM_ISENABLED )
 /*
 void setEnabled(bool enabled)
 */
-HB_FUNC( QSTANDARDITEM_SETENABLED )
+HB_FUNC_STATIC( QSTANDARDITEM_SETENABLED )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -761,7 +761,7 @@ HB_FUNC( QSTANDARDITEM_SETENABLED )
 /*
 bool isEditable() const
 */
-HB_FUNC( QSTANDARDITEM_ISEDITABLE )
+HB_FUNC_STATIC( QSTANDARDITEM_ISEDITABLE )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -775,7 +775,7 @@ HB_FUNC( QSTANDARDITEM_ISEDITABLE )
 /*
 void setEditable(bool editable)
 */
-HB_FUNC( QSTANDARDITEM_SETEDITABLE )
+HB_FUNC_STATIC( QSTANDARDITEM_SETEDITABLE )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -790,7 +790,7 @@ HB_FUNC( QSTANDARDITEM_SETEDITABLE )
 /*
 bool isSelectable() const
 */
-HB_FUNC( QSTANDARDITEM_ISSELECTABLE )
+HB_FUNC_STATIC( QSTANDARDITEM_ISSELECTABLE )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -804,7 +804,7 @@ HB_FUNC( QSTANDARDITEM_ISSELECTABLE )
 /*
 void setSelectable(bool selectable)
 */
-HB_FUNC( QSTANDARDITEM_SETSELECTABLE )
+HB_FUNC_STATIC( QSTANDARDITEM_SETSELECTABLE )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -819,7 +819,7 @@ HB_FUNC( QSTANDARDITEM_SETSELECTABLE )
 /*
 bool isCheckable() const
 */
-HB_FUNC( QSTANDARDITEM_ISCHECKABLE )
+HB_FUNC_STATIC( QSTANDARDITEM_ISCHECKABLE )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -833,7 +833,7 @@ HB_FUNC( QSTANDARDITEM_ISCHECKABLE )
 /*
 void setCheckable(bool checkable)
 */
-HB_FUNC( QSTANDARDITEM_SETCHECKABLE )
+HB_FUNC_STATIC( QSTANDARDITEM_SETCHECKABLE )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -848,7 +848,7 @@ HB_FUNC( QSTANDARDITEM_SETCHECKABLE )
 /*
 bool isTristate() const
 */
-HB_FUNC( QSTANDARDITEM_ISTRISTATE )
+HB_FUNC_STATIC( QSTANDARDITEM_ISTRISTATE )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -862,7 +862,7 @@ HB_FUNC( QSTANDARDITEM_ISTRISTATE )
 /*
 void setTristate(bool tristate)
 */
-HB_FUNC( QSTANDARDITEM_SETTRISTATE )
+HB_FUNC_STATIC( QSTANDARDITEM_SETTRISTATE )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -877,7 +877,7 @@ HB_FUNC( QSTANDARDITEM_SETTRISTATE )
 /*
 bool isDragEnabled() const
 */
-HB_FUNC( QSTANDARDITEM_ISDRAGENABLED )
+HB_FUNC_STATIC( QSTANDARDITEM_ISDRAGENABLED )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -891,7 +891,7 @@ HB_FUNC( QSTANDARDITEM_ISDRAGENABLED )
 /*
 void setDragEnabled(bool dragEnabled)
 */
-HB_FUNC( QSTANDARDITEM_SETDRAGENABLED )
+HB_FUNC_STATIC( QSTANDARDITEM_SETDRAGENABLED )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -906,7 +906,7 @@ HB_FUNC( QSTANDARDITEM_SETDRAGENABLED )
 /*
 bool isDropEnabled() const
 */
-HB_FUNC( QSTANDARDITEM_ISDROPENABLED )
+HB_FUNC_STATIC( QSTANDARDITEM_ISDROPENABLED )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -920,7 +920,7 @@ HB_FUNC( QSTANDARDITEM_ISDROPENABLED )
 /*
 void setDropEnabled(bool dropEnabled)
 */
-HB_FUNC( QSTANDARDITEM_SETDROPENABLED )
+HB_FUNC_STATIC( QSTANDARDITEM_SETDROPENABLED )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -935,7 +935,7 @@ HB_FUNC( QSTANDARDITEM_SETDROPENABLED )
 /*
 QStandardItem *parent() const
 */
-HB_FUNC( QSTANDARDITEM_PARENT )
+HB_FUNC_STATIC( QSTANDARDITEM_PARENT )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -948,7 +948,7 @@ HB_FUNC( QSTANDARDITEM_PARENT )
 /*
 int row() const
 */
-HB_FUNC( QSTANDARDITEM_ROW )
+HB_FUNC_STATIC( QSTANDARDITEM_ROW )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -962,7 +962,7 @@ HB_FUNC( QSTANDARDITEM_ROW )
 /*
 int column() const
 */
-HB_FUNC( QSTANDARDITEM_COLUMN )
+HB_FUNC_STATIC( QSTANDARDITEM_COLUMN )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -976,7 +976,7 @@ HB_FUNC( QSTANDARDITEM_COLUMN )
 /*
 QModelIndex index() const
 */
-HB_FUNC( QSTANDARDITEM_INDEX )
+HB_FUNC_STATIC( QSTANDARDITEM_INDEX )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -989,7 +989,7 @@ HB_FUNC( QSTANDARDITEM_INDEX )
 /*
 QStandardItemModel *model() const
 */
-HB_FUNC( QSTANDARDITEM_MODEL )
+HB_FUNC_STATIC( QSTANDARDITEM_MODEL )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1002,7 +1002,7 @@ HB_FUNC( QSTANDARDITEM_MODEL )
 /*
 int rowCount() const
 */
-HB_FUNC( QSTANDARDITEM_ROWCOUNT )
+HB_FUNC_STATIC( QSTANDARDITEM_ROWCOUNT )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1016,7 +1016,7 @@ HB_FUNC( QSTANDARDITEM_ROWCOUNT )
 /*
 void setRowCount(int rows)
 */
-HB_FUNC( QSTANDARDITEM_SETROWCOUNT )
+HB_FUNC_STATIC( QSTANDARDITEM_SETROWCOUNT )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1031,7 +1031,7 @@ HB_FUNC( QSTANDARDITEM_SETROWCOUNT )
 /*
 int columnCount() const
 */
-HB_FUNC( QSTANDARDITEM_COLUMNCOUNT )
+HB_FUNC_STATIC( QSTANDARDITEM_COLUMNCOUNT )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1045,7 +1045,7 @@ HB_FUNC( QSTANDARDITEM_COLUMNCOUNT )
 /*
 void setColumnCount(int columns)
 */
-HB_FUNC( QSTANDARDITEM_SETCOLUMNCOUNT )
+HB_FUNC_STATIC( QSTANDARDITEM_SETCOLUMNCOUNT )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1060,7 +1060,7 @@ HB_FUNC( QSTANDARDITEM_SETCOLUMNCOUNT )
 /*
 bool hasChildren() const
 */
-HB_FUNC( QSTANDARDITEM_HASCHILDREN )
+HB_FUNC_STATIC( QSTANDARDITEM_HASCHILDREN )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1074,7 +1074,7 @@ HB_FUNC( QSTANDARDITEM_HASCHILDREN )
 /*
 QStandardItem *child(int row, int column = 0) const
 */
-HB_FUNC( QSTANDARDITEM_CHILD )
+HB_FUNC_STATIC( QSTANDARDITEM_CHILD )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1089,7 +1089,7 @@ HB_FUNC( QSTANDARDITEM_CHILD )
 /*
 void setChild(int row, int column, QStandardItem *item)
 */
-HB_FUNC( QSTANDARDITEM_SETCHILD1 )
+HB_FUNC_STATIC( QSTANDARDITEM_SETCHILD1 )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1106,7 +1106,7 @@ HB_FUNC( QSTANDARDITEM_SETCHILD1 )
 /*
 void setChild(int row, QStandardItem *item)
 */
-HB_FUNC( QSTANDARDITEM_SETCHILD2 )
+HB_FUNC_STATIC( QSTANDARDITEM_SETCHILD2 )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1122,7 +1122,7 @@ HB_FUNC( QSTANDARDITEM_SETCHILD2 )
 //[1]void setChild(int row, int column, QStandardItem *item)
 //[2]void setChild(int row, QStandardItem *item)
 
-HB_FUNC( QSTANDARDITEM_SETCHILD )
+HB_FUNC_STATIC( QSTANDARDITEM_SETCHILD )
 {
   if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISQSTANDARDITEM(3) )
   {
@@ -1137,7 +1137,7 @@ HB_FUNC( QSTANDARDITEM_SETCHILD )
 /*
 void insertRow(int row, const QList<QStandardItem*> &items)
 */
-HB_FUNC( QSTANDARDITEM_INSERTROW1 )
+HB_FUNC_STATIC( QSTANDARDITEM_INSERTROW1 )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1159,7 +1159,7 @@ par2 << (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aLis
 /*
 void insertRow(int row, QStandardItem *item)
 */
-HB_FUNC( QSTANDARDITEM_INSERTROW2 )
+HB_FUNC_STATIC( QSTANDARDITEM_INSERTROW2 )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1175,7 +1175,7 @@ HB_FUNC( QSTANDARDITEM_INSERTROW2 )
 //[1]void insertRow(int row, const QList<QStandardItem*> &items)
 //[2]void insertRow(int row, QStandardItem *item)
 
-HB_FUNC( QSTANDARDITEM_INSERTROW )
+HB_FUNC_STATIC( QSTANDARDITEM_INSERTROW )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISARRAY(2) )
   {
@@ -1190,7 +1190,7 @@ HB_FUNC( QSTANDARDITEM_INSERTROW )
 /*
 void insertColumn(int column, const QList<QStandardItem*> &items)
 */
-HB_FUNC( QSTANDARDITEM_INSERTCOLUMN )
+HB_FUNC_STATIC( QSTANDARDITEM_INSERTCOLUMN )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1212,7 +1212,7 @@ par2 << (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aLis
 /*
 void insertRows(int row, const QList<QStandardItem*> &items)
 */
-HB_FUNC( QSTANDARDITEM_INSERTROWS1 )
+HB_FUNC_STATIC( QSTANDARDITEM_INSERTROWS1 )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1234,7 +1234,7 @@ par2 << (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aLis
 /*
 void insertRows(int row, int count)
 */
-HB_FUNC( QSTANDARDITEM_INSERTROWS2 )
+HB_FUNC_STATIC( QSTANDARDITEM_INSERTROWS2 )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1250,7 +1250,7 @@ HB_FUNC( QSTANDARDITEM_INSERTROWS2 )
 //[1]void insertRows(int row, const QList<QStandardItem*> &items)
 //[2]void insertRows(int row, int count)
 
-HB_FUNC( QSTANDARDITEM_INSERTROWS )
+HB_FUNC_STATIC( QSTANDARDITEM_INSERTROWS )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISARRAY(2) )
   {
@@ -1265,7 +1265,7 @@ HB_FUNC( QSTANDARDITEM_INSERTROWS )
 /*
 void insertColumns(int column, int count)
 */
-HB_FUNC( QSTANDARDITEM_INSERTCOLUMNS )
+HB_FUNC_STATIC( QSTANDARDITEM_INSERTCOLUMNS )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1281,7 +1281,7 @@ HB_FUNC( QSTANDARDITEM_INSERTCOLUMNS )
 /*
 void removeRow(int row)
 */
-HB_FUNC( QSTANDARDITEM_REMOVEROW )
+HB_FUNC_STATIC( QSTANDARDITEM_REMOVEROW )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1296,7 +1296,7 @@ HB_FUNC( QSTANDARDITEM_REMOVEROW )
 /*
 void removeColumn(int column)
 */
-HB_FUNC( QSTANDARDITEM_REMOVECOLUMN )
+HB_FUNC_STATIC( QSTANDARDITEM_REMOVECOLUMN )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1311,7 +1311,7 @@ HB_FUNC( QSTANDARDITEM_REMOVECOLUMN )
 /*
 void removeRows(int row, int count)
 */
-HB_FUNC( QSTANDARDITEM_REMOVEROWS )
+HB_FUNC_STATIC( QSTANDARDITEM_REMOVEROWS )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1327,7 +1327,7 @@ HB_FUNC( QSTANDARDITEM_REMOVEROWS )
 /*
 void removeColumns(int column, int count)
 */
-HB_FUNC( QSTANDARDITEM_REMOVECOLUMNS )
+HB_FUNC_STATIC( QSTANDARDITEM_REMOVECOLUMNS )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1343,7 +1343,7 @@ HB_FUNC( QSTANDARDITEM_REMOVECOLUMNS )
 /*
 void appendRow(const QList<QStandardItem*> &items)
 */
-HB_FUNC( QSTANDARDITEM_APPENDROW1 )
+HB_FUNC_STATIC( QSTANDARDITEM_APPENDROW1 )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1364,7 +1364,7 @@ par1 << (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aLis
 /*
 void appendRow(QStandardItem *item)
 */
-HB_FUNC( QSTANDARDITEM_APPENDROW2 )
+HB_FUNC_STATIC( QSTANDARDITEM_APPENDROW2 )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1379,7 +1379,7 @@ HB_FUNC( QSTANDARDITEM_APPENDROW2 )
 //[1]void appendRow(const QList<QStandardItem*> &items)
 //[2]void appendRow(QStandardItem *item)
 
-HB_FUNC( QSTANDARDITEM_APPENDROW )
+HB_FUNC_STATIC( QSTANDARDITEM_APPENDROW )
 {
   if( ISNUMPAR(1) && ISARRAY(1) )
   {
@@ -1394,7 +1394,7 @@ HB_FUNC( QSTANDARDITEM_APPENDROW )
 /*
 void appendRows(const QList<QStandardItem*> &items)
 */
-HB_FUNC( QSTANDARDITEM_APPENDROWS )
+HB_FUNC_STATIC( QSTANDARDITEM_APPENDROWS )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1415,7 +1415,7 @@ par1 << (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aLis
 /*
 void appendColumn(const QList<QStandardItem*> &items)
 */
-HB_FUNC( QSTANDARDITEM_APPENDCOLUMN )
+HB_FUNC_STATIC( QSTANDARDITEM_APPENDCOLUMN )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1436,7 +1436,7 @@ par1 << (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aLis
 /*
 QStandardItem *takeChild(int row, int column = 0)
 */
-HB_FUNC( QSTANDARDITEM_TAKECHILD )
+HB_FUNC_STATIC( QSTANDARDITEM_TAKECHILD )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1451,7 +1451,7 @@ HB_FUNC( QSTANDARDITEM_TAKECHILD )
 /*
 QList<QStandardItem*> takeRow(int row)
 */
-HB_FUNC( QSTANDARDITEM_TAKEROW )
+HB_FUNC_STATIC( QSTANDARDITEM_TAKEROW )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1496,7 +1496,7 @@ HB_FUNC( QSTANDARDITEM_TAKEROW )
 /*
 QList<QStandardItem*> takeColumn(int column)
 */
-HB_FUNC( QSTANDARDITEM_TAKECOLUMN )
+HB_FUNC_STATIC( QSTANDARDITEM_TAKECOLUMN )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1541,7 +1541,7 @@ HB_FUNC( QSTANDARDITEM_TAKECOLUMN )
 /*
 void sortChildren(int column, Qt::SortOrder order = Qt::AscendingOrder)
 */
-HB_FUNC( QSTANDARDITEM_SORTCHILDREN )
+HB_FUNC_STATIC( QSTANDARDITEM_SORTCHILDREN )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1557,7 +1557,7 @@ HB_FUNC( QSTANDARDITEM_SORTCHILDREN )
 /*
 QStandardItem *clone() const
 */
-HB_FUNC( QSTANDARDITEM_CLONE )
+HB_FUNC_STATIC( QSTANDARDITEM_CLONE )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1570,7 +1570,7 @@ HB_FUNC( QSTANDARDITEM_CLONE )
 /*
 virtual int type() const
 */
-HB_FUNC( QSTANDARDITEM_TYPE )
+HB_FUNC_STATIC( QSTANDARDITEM_TYPE )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1584,7 +1584,7 @@ HB_FUNC( QSTANDARDITEM_TYPE )
 /*
 virtual void read(QDataStream &in)
 */
-HB_FUNC( QSTANDARDITEM_READ )
+HB_FUNC_STATIC( QSTANDARDITEM_READ )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1599,7 +1599,7 @@ HB_FUNC( QSTANDARDITEM_READ )
 /*
 virtual void write(QDataStream &out) const
 */
-HB_FUNC( QSTANDARDITEM_WRITE )
+HB_FUNC_STATIC( QSTANDARDITEM_WRITE )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

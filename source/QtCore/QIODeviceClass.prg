@@ -105,7 +105,7 @@ RETURN
 //[1]QIODevice ()
 //[2]QIODevice ( QObject * parent )
 
-//HB_FUNC( QIODEVICE_NEW )
+//HB_FUNC_STATIC( QIODEVICE_NEW )
 //{
 //  if( ISNUMPAR(0) )
 //  {
@@ -121,7 +121,7 @@ RETURN
 //  }
 //}
 
-HB_FUNC( QIODEVICE_DELETE )
+HB_FUNC_STATIC( QIODEVICE_DELETE )
 {
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -141,7 +141,7 @@ HB_FUNC( QIODEVICE_DELETE )
 /*
 virtual bool atEnd () const
 */
-HB_FUNC( QIODEVICE_ATEND )
+HB_FUNC_STATIC( QIODEVICE_ATEND )
 {
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -155,7 +155,7 @@ HB_FUNC( QIODEVICE_ATEND )
 /*
 virtual qint64 bytesAvailable () const
 */
-HB_FUNC( QIODEVICE_BYTESAVAILABLE )
+HB_FUNC_STATIC( QIODEVICE_BYTESAVAILABLE )
 {
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -169,7 +169,7 @@ HB_FUNC( QIODEVICE_BYTESAVAILABLE )
 /*
 virtual qint64 bytesToWrite () const
 */
-HB_FUNC( QIODEVICE_BYTESTOWRITE )
+HB_FUNC_STATIC( QIODEVICE_BYTESTOWRITE )
 {
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -183,7 +183,7 @@ HB_FUNC( QIODEVICE_BYTESTOWRITE )
 /*
 virtual bool canReadLine () const
 */
-HB_FUNC( QIODEVICE_CANREADLINE )
+HB_FUNC_STATIC( QIODEVICE_CANREADLINE )
 {
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -197,7 +197,7 @@ HB_FUNC( QIODEVICE_CANREADLINE )
 /*
 virtual void close ()
 */
-HB_FUNC( QIODEVICE_CLOSE )
+HB_FUNC_STATIC( QIODEVICE_CLOSE )
 {
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -211,7 +211,7 @@ HB_FUNC( QIODEVICE_CLOSE )
 /*
 QString errorString () const
 */
-HB_FUNC( QIODEVICE_ERRORSTRING )
+HB_FUNC_STATIC( QIODEVICE_ERRORSTRING )
 {
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -225,7 +225,7 @@ HB_FUNC( QIODEVICE_ERRORSTRING )
 /*
 bool getChar ( char * c )
 */
-HB_FUNC( QIODEVICE_GETCHAR )
+HB_FUNC_STATIC( QIODEVICE_GETCHAR )
 {
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -240,7 +240,7 @@ HB_FUNC( QIODEVICE_GETCHAR )
 /*
 bool isOpen () const
 */
-HB_FUNC( QIODEVICE_ISOPEN )
+HB_FUNC_STATIC( QIODEVICE_ISOPEN )
 {
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -254,7 +254,7 @@ HB_FUNC( QIODEVICE_ISOPEN )
 /*
 bool isReadable () const
 */
-HB_FUNC( QIODEVICE_ISREADABLE )
+HB_FUNC_STATIC( QIODEVICE_ISREADABLE )
 {
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -268,7 +268,7 @@ HB_FUNC( QIODEVICE_ISREADABLE )
 /*
 virtual bool isSequential () const
 */
-HB_FUNC( QIODEVICE_ISSEQUENTIAL )
+HB_FUNC_STATIC( QIODEVICE_ISSEQUENTIAL )
 {
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -282,7 +282,7 @@ HB_FUNC( QIODEVICE_ISSEQUENTIAL )
 /*
 bool isTextModeEnabled () const
 */
-HB_FUNC( QIODEVICE_ISTEXTMODEENABLED )
+HB_FUNC_STATIC( QIODEVICE_ISTEXTMODEENABLED )
 {
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -296,7 +296,7 @@ HB_FUNC( QIODEVICE_ISTEXTMODEENABLED )
 /*
 bool isWritable () const
 */
-HB_FUNC( QIODEVICE_ISWRITABLE )
+HB_FUNC_STATIC( QIODEVICE_ISWRITABLE )
 {
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -310,7 +310,7 @@ HB_FUNC( QIODEVICE_ISWRITABLE )
 /*
 virtual bool open ( OpenMode mode )
 */
-HB_FUNC( QIODEVICE_OPEN )
+HB_FUNC_STATIC( QIODEVICE_OPEN )
 {
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -325,7 +325,7 @@ HB_FUNC( QIODEVICE_OPEN )
 /*
 OpenMode openMode () const
 */
-HB_FUNC( QIODEVICE_OPENMODE )
+HB_FUNC_STATIC( QIODEVICE_OPENMODE )
 {
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -339,7 +339,7 @@ HB_FUNC( QIODEVICE_OPENMODE )
 /*
 qint64 peek ( char * data, qint64 maxSize )
 */
-HB_FUNC( QIODEVICE_PEEK1 )
+HB_FUNC_STATIC( QIODEVICE_PEEK1 )
 {
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -355,7 +355,7 @@ HB_FUNC( QIODEVICE_PEEK1 )
 /*
 QByteArray peek ( qint64 maxSize )
 */
-HB_FUNC( QIODEVICE_PEEK2 )
+HB_FUNC_STATIC( QIODEVICE_PEEK2 )
 {
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -369,7 +369,7 @@ HB_FUNC( QIODEVICE_PEEK2 )
 //[1]qint64 peek ( char * data, qint64 maxSize )
 //[2]QByteArray peek ( qint64 maxSize )
 
-HB_FUNC( QIODEVICE_PEEK )
+HB_FUNC_STATIC( QIODEVICE_PEEK )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
   {
@@ -384,7 +384,7 @@ HB_FUNC( QIODEVICE_PEEK )
 /*
 virtual qint64 pos () const
 */
-HB_FUNC( QIODEVICE_POS )
+HB_FUNC_STATIC( QIODEVICE_POS )
 {
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -398,7 +398,7 @@ HB_FUNC( QIODEVICE_POS )
 /*
 bool putChar ( char c )
 */
-HB_FUNC( QIODEVICE_PUTCHAR )
+HB_FUNC_STATIC( QIODEVICE_PUTCHAR )
 {
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -413,7 +413,7 @@ HB_FUNC( QIODEVICE_PUTCHAR )
 /*
 qint64 read ( char * data, qint64 maxSize )
 */
-HB_FUNC( QIODEVICE_READ1 )
+HB_FUNC_STATIC( QIODEVICE_READ1 )
 {
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -429,7 +429,7 @@ HB_FUNC( QIODEVICE_READ1 )
 /*
 QByteArray read ( qint64 maxSize )
 */
-HB_FUNC( QIODEVICE_READ2 )
+HB_FUNC_STATIC( QIODEVICE_READ2 )
 {
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -443,7 +443,7 @@ HB_FUNC( QIODEVICE_READ2 )
 //[1]qint64 read ( char * data, qint64 maxSize )
 //[2]QByteArray read ( qint64 maxSize )
 
-HB_FUNC( QIODEVICE_READ )
+HB_FUNC_STATIC( QIODEVICE_READ )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
   {
@@ -458,7 +458,7 @@ HB_FUNC( QIODEVICE_READ )
 /*
 QByteArray readAll ()
 */
-HB_FUNC( QIODEVICE_READALL )
+HB_FUNC_STATIC( QIODEVICE_READALL )
 {
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -471,7 +471,7 @@ HB_FUNC( QIODEVICE_READALL )
 /*
 qint64 readLine ( char * data, qint64 maxSize )
 */
-HB_FUNC( QIODEVICE_READLINE1 )
+HB_FUNC_STATIC( QIODEVICE_READLINE1 )
 {
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -487,7 +487,7 @@ HB_FUNC( QIODEVICE_READLINE1 )
 /*
 QByteArray readLine ( qint64 maxSize = 0 )
 */
-HB_FUNC( QIODEVICE_READLINE2 )
+HB_FUNC_STATIC( QIODEVICE_READLINE2 )
 {
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -501,7 +501,7 @@ HB_FUNC( QIODEVICE_READLINE2 )
 //[1]qint64 readLine ( char * data, qint64 maxSize )
 //[2]QByteArray readLine ( qint64 maxSize = 0 )
 
-HB_FUNC( QIODEVICE_READLINE )
+HB_FUNC_STATIC( QIODEVICE_READLINE )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
   {
@@ -516,7 +516,7 @@ HB_FUNC( QIODEVICE_READLINE )
 /*
 virtual bool reset ()
 */
-HB_FUNC( QIODEVICE_RESET )
+HB_FUNC_STATIC( QIODEVICE_RESET )
 {
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -530,7 +530,7 @@ HB_FUNC( QIODEVICE_RESET )
 /*
 virtual bool seek ( qint64 pos )
 */
-HB_FUNC( QIODEVICE_SEEK )
+HB_FUNC_STATIC( QIODEVICE_SEEK )
 {
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -545,7 +545,7 @@ HB_FUNC( QIODEVICE_SEEK )
 /*
 void setTextModeEnabled ( bool enabled )
 */
-HB_FUNC( QIODEVICE_SETTEXTMODEENABLED )
+HB_FUNC_STATIC( QIODEVICE_SETTEXTMODEENABLED )
 {
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -560,7 +560,7 @@ HB_FUNC( QIODEVICE_SETTEXTMODEENABLED )
 /*
 virtual qint64 size () const
 */
-HB_FUNC( QIODEVICE_SIZE )
+HB_FUNC_STATIC( QIODEVICE_SIZE )
 {
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -574,7 +574,7 @@ HB_FUNC( QIODEVICE_SIZE )
 /*
 void ungetChar ( char c )
 */
-HB_FUNC( QIODEVICE_UNGETCHAR )
+HB_FUNC_STATIC( QIODEVICE_UNGETCHAR )
 {
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -589,7 +589,7 @@ HB_FUNC( QIODEVICE_UNGETCHAR )
 /*
 virtual bool waitForBytesWritten ( int msecs )
 */
-HB_FUNC( QIODEVICE_WAITFORBYTESWRITTEN )
+HB_FUNC_STATIC( QIODEVICE_WAITFORBYTESWRITTEN )
 {
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -604,7 +604,7 @@ HB_FUNC( QIODEVICE_WAITFORBYTESWRITTEN )
 /*
 virtual bool waitForReadyRead ( int msecs )
 */
-HB_FUNC( QIODEVICE_WAITFORREADYREAD )
+HB_FUNC_STATIC( QIODEVICE_WAITFORREADYREAD )
 {
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -619,7 +619,7 @@ HB_FUNC( QIODEVICE_WAITFORREADYREAD )
 /*
 qint64 write ( const char * data, qint64 maxSize )
 */
-HB_FUNC( QIODEVICE_WRITE1 )
+HB_FUNC_STATIC( QIODEVICE_WRITE1 )
 {
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -635,7 +635,7 @@ HB_FUNC( QIODEVICE_WRITE1 )
 /*
 qint64 write ( const char * data )
 */
-HB_FUNC( QIODEVICE_WRITE2 )
+HB_FUNC_STATIC( QIODEVICE_WRITE2 )
 {
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -650,7 +650,7 @@ HB_FUNC( QIODEVICE_WRITE2 )
 /*
 qint64 write ( const QByteArray & byteArray )
 */
-HB_FUNC( QIODEVICE_WRITE3 )
+HB_FUNC_STATIC( QIODEVICE_WRITE3 )
 {
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -666,7 +666,7 @@ HB_FUNC( QIODEVICE_WRITE3 )
 //[2]qint64 write ( const char * data )
 //[3]qint64 write ( const QByteArray & byteArray )
 
-HB_FUNC( QIODEVICE_WRITE )
+HB_FUNC_STATIC( QIODEVICE_WRITE )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
   {

@@ -73,7 +73,7 @@ RETURN
 /*
 QXmlFormatter ( const QXmlQuery & query, QIODevice * outputDevice
 */
-HB_FUNC( QXMLFORMATTER_NEW )
+HB_FUNC_STATIC( QXMLFORMATTER_NEW )
 {
   QXmlFormatter * o = NULL;
   QXmlQuery * par1 = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -95,7 +95,7 @@ HB_FUNC( QXMLFORMATTER_NEW )
 /*
 int indentationDepth () const
 */
-HB_FUNC( QXMLFORMATTER_INDENTATIONDEPTH )
+HB_FUNC_STATIC( QXMLFORMATTER_INDENTATIONDEPTH )
 {
   QXmlFormatter * obj = (QXmlFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -109,7 +109,7 @@ HB_FUNC( QXMLFORMATTER_INDENTATIONDEPTH )
 /*
 void setIndentationDepth ( int depth )
 */
-HB_FUNC( QXMLFORMATTER_SETINDENTATIONDEPTH )
+HB_FUNC_STATIC( QXMLFORMATTER_SETINDENTATIONDEPTH )
 {
   QXmlFormatter * obj = (QXmlFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -124,7 +124,7 @@ HB_FUNC( QXMLFORMATTER_SETINDENTATIONDEPTH )
 /*
 virtual void atomicValue ( const QVariant & value )
 */
-HB_FUNC( QXMLFORMATTER_ATOMICVALUE )
+HB_FUNC_STATIC( QXMLFORMATTER_ATOMICVALUE )
 {
   QXmlFormatter * obj = (QXmlFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -139,7 +139,7 @@ HB_FUNC( QXMLFORMATTER_ATOMICVALUE )
 /*
 virtual void attribute ( const QXmlName & name, const QStringRef & value )
 */
-HB_FUNC( QXMLFORMATTER_ATTRIBUTE )
+HB_FUNC_STATIC( QXMLFORMATTER_ATTRIBUTE )
 {
   QXmlFormatter * obj = (QXmlFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -155,7 +155,7 @@ HB_FUNC( QXMLFORMATTER_ATTRIBUTE )
 /*
 virtual void characters ( const QStringRef & value )
 */
-HB_FUNC( QXMLFORMATTER_CHARACTERS )
+HB_FUNC_STATIC( QXMLFORMATTER_CHARACTERS )
 {
   QXmlFormatter * obj = (QXmlFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -170,7 +170,7 @@ HB_FUNC( QXMLFORMATTER_CHARACTERS )
 /*
 virtual void comment ( const QString & value )
 */
-HB_FUNC( QXMLFORMATTER_COMMENT )
+HB_FUNC_STATIC( QXMLFORMATTER_COMMENT )
 {
   QXmlFormatter * obj = (QXmlFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -185,7 +185,7 @@ HB_FUNC( QXMLFORMATTER_COMMENT )
 /*
 virtual void endDocument ()
 */
-HB_FUNC( QXMLFORMATTER_ENDDOCUMENT )
+HB_FUNC_STATIC( QXMLFORMATTER_ENDDOCUMENT )
 {
   QXmlFormatter * obj = (QXmlFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -199,7 +199,7 @@ HB_FUNC( QXMLFORMATTER_ENDDOCUMENT )
 /*
 virtual void endElement ()
 */
-HB_FUNC( QXMLFORMATTER_ENDELEMENT )
+HB_FUNC_STATIC( QXMLFORMATTER_ENDELEMENT )
 {
   QXmlFormatter * obj = (QXmlFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -213,7 +213,7 @@ HB_FUNC( QXMLFORMATTER_ENDELEMENT )
 /*
 virtual void endOfSequence ()
 */
-HB_FUNC( QXMLFORMATTER_ENDOFSEQUENCE )
+HB_FUNC_STATIC( QXMLFORMATTER_ENDOFSEQUENCE )
 {
   QXmlFormatter * obj = (QXmlFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -227,7 +227,7 @@ HB_FUNC( QXMLFORMATTER_ENDOFSEQUENCE )
 /*
 virtual void processingInstruction ( const QXmlName & name, const QString & value )
 */
-HB_FUNC( QXMLFORMATTER_PROCESSINGINSTRUCTION )
+HB_FUNC_STATIC( QXMLFORMATTER_PROCESSINGINSTRUCTION )
 {
   QXmlFormatter * obj = (QXmlFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -243,7 +243,7 @@ HB_FUNC( QXMLFORMATTER_PROCESSINGINSTRUCTION )
 /*
 virtual void startDocument ()
 */
-HB_FUNC( QXMLFORMATTER_STARTDOCUMENT )
+HB_FUNC_STATIC( QXMLFORMATTER_STARTDOCUMENT )
 {
   QXmlFormatter * obj = (QXmlFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -257,7 +257,7 @@ HB_FUNC( QXMLFORMATTER_STARTDOCUMENT )
 /*
 virtual void startElement ( const QXmlName & name )
 */
-HB_FUNC( QXMLFORMATTER_STARTELEMENT )
+HB_FUNC_STATIC( QXMLFORMATTER_STARTELEMENT )
 {
   QXmlFormatter * obj = (QXmlFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -272,7 +272,7 @@ HB_FUNC( QXMLFORMATTER_STARTELEMENT )
 /*
 virtual void startOfSequence ()
 */
-HB_FUNC( QXMLFORMATTER_STARTOFSEQUENCE )
+HB_FUNC_STATIC( QXMLFORMATTER_STARTOFSEQUENCE )
 {
   QXmlFormatter * obj = (QXmlFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

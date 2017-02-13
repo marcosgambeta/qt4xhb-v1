@@ -105,7 +105,7 @@ RETURN
 /*
 QFSFileEngine ()
 */
-HB_FUNC( QFSFILEENGINE_NEW1 )
+HB_FUNC_STATIC( QFSFILEENGINE_NEW1 )
 {
   QFSFileEngine * o = NULL;
   o = new QFSFileEngine (  );
@@ -120,7 +120,7 @@ HB_FUNC( QFSFILEENGINE_NEW1 )
 /*
 QFSFileEngine ( const QString & file )
 */
-HB_FUNC( QFSFILEENGINE_NEW2 )
+HB_FUNC_STATIC( QFSFILEENGINE_NEW2 )
 {
   QFSFileEngine * o = NULL;
   QString par1 = hb_parc(1);
@@ -136,7 +136,7 @@ HB_FUNC( QFSFILEENGINE_NEW2 )
 //[1]QFSFileEngine ()
 //[2]QFSFileEngine ( const QString & file )
 
-HB_FUNC( QFSFILEENGINE_NEW )
+HB_FUNC_STATIC( QFSFILEENGINE_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -152,7 +152,7 @@ HB_FUNC( QFSFILEENGINE_NEW )
   }
 }
 
-HB_FUNC( QFSFILEENGINE_DELETE )
+HB_FUNC_STATIC( QFSFILEENGINE_DELETE )
 {
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -171,7 +171,7 @@ HB_FUNC( QFSFILEENGINE_DELETE )
 /*
 bool open ( QIODevice::OpenMode openMode, FILE * fh )
 */
-HB_FUNC( QFSFILEENGINE_OPEN1 )
+HB_FUNC_STATIC( QFSFILEENGINE_OPEN1 )
 {
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -187,7 +187,7 @@ HB_FUNC( QFSFILEENGINE_OPEN1 )
 /*
 bool open ( QIODevice::OpenMode openMode, int fd )
 */
-HB_FUNC( QFSFILEENGINE_OPEN2 )
+HB_FUNC_STATIC( QFSFILEENGINE_OPEN2 )
 {
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -203,7 +203,7 @@ HB_FUNC( QFSFILEENGINE_OPEN2 )
 /*
 bool open ( QIODevice::OpenMode openMode, int fd, QFile::FileHandleFlags handleFlags )
 */
-HB_FUNC( QFSFILEENGINE_OPEN3 )
+HB_FUNC_STATIC( QFSFILEENGINE_OPEN3 )
 {
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -220,7 +220,7 @@ HB_FUNC( QFSFILEENGINE_OPEN3 )
 /*
 bool open ( QIODevice::OpenMode openMode, FILE * fh, QFile::FileHandleFlags handleFlags )
 */
-HB_FUNC( QFSFILEENGINE_OPEN4 )
+HB_FUNC_STATIC( QFSFILEENGINE_OPEN4 )
 {
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -241,7 +241,7 @@ HB_FUNC( QFSFILEENGINE_OPEN4 )
 //[4]bool open ( QIODevice::OpenMode openMode, FILE * fh, QFile::FileHandleFlags handleFlags )
 //[5]bool open ( QIODevice::OpenMode openMode, const RFile & file, QFile::FileHandleFlags handleFlags )
 
-HB_FUNC( QFSFILEENGINE_OPEN )
+HB_FUNC_STATIC( QFSFILEENGINE_OPEN )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISPOINTER(2) )
   {
@@ -264,7 +264,7 @@ HB_FUNC( QFSFILEENGINE_OPEN )
 /*
 virtual bool caseSensitive () const
 */
-HB_FUNC( QFSFILEENGINE_CASESENSITIVE )
+HB_FUNC_STATIC( QFSFILEENGINE_CASESENSITIVE )
 {
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -278,7 +278,7 @@ HB_FUNC( QFSFILEENGINE_CASESENSITIVE )
 /*
 virtual bool close ()
 */
-HB_FUNC( QFSFILEENGINE_CLOSE )
+HB_FUNC_STATIC( QFSFILEENGINE_CLOSE )
 {
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -292,7 +292,7 @@ HB_FUNC( QFSFILEENGINE_CLOSE )
 /*
 virtual bool copy ( const QString & copyName )
 */
-HB_FUNC( QFSFILEENGINE_COPY )
+HB_FUNC_STATIC( QFSFILEENGINE_COPY )
 {
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -308,7 +308,7 @@ HB_FUNC( QFSFILEENGINE_COPY )
 /*
 virtual FileFlags fileFlags ( FileFlags type ) const
 */
-HB_FUNC( QFSFILEENGINE_FILEFLAGS )
+HB_FUNC_STATIC( QFSFILEENGINE_FILEFLAGS )
 {
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -323,7 +323,7 @@ HB_FUNC( QFSFILEENGINE_FILEFLAGS )
 /*
 virtual QString fileName ( FileName file ) const
 */
-HB_FUNC( QFSFILEENGINE_FILENAME )
+HB_FUNC_STATIC( QFSFILEENGINE_FILENAME )
 {
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -338,7 +338,7 @@ HB_FUNC( QFSFILEENGINE_FILENAME )
 /*
 virtual QDateTime fileTime ( FileTime time ) const
 */
-HB_FUNC( QFSFILEENGINE_FILETIME )
+HB_FUNC_STATIC( QFSFILEENGINE_FILETIME )
 {
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -352,7 +352,7 @@ HB_FUNC( QFSFILEENGINE_FILETIME )
 /*
 virtual bool flush ()
 */
-HB_FUNC( QFSFILEENGINE_FLUSH )
+HB_FUNC_STATIC( QFSFILEENGINE_FLUSH )
 {
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -366,7 +366,7 @@ HB_FUNC( QFSFILEENGINE_FLUSH )
 /*
 virtual int handle () const
 */
-HB_FUNC( QFSFILEENGINE_HANDLE )
+HB_FUNC_STATIC( QFSFILEENGINE_HANDLE )
 {
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -380,7 +380,7 @@ HB_FUNC( QFSFILEENGINE_HANDLE )
 /*
 virtual bool isRelativePath () const
 */
-HB_FUNC( QFSFILEENGINE_ISRELATIVEPATH )
+HB_FUNC_STATIC( QFSFILEENGINE_ISRELATIVEPATH )
 {
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -394,7 +394,7 @@ HB_FUNC( QFSFILEENGINE_ISRELATIVEPATH )
 /*
 virtual bool isSequential () const
 */
-HB_FUNC( QFSFILEENGINE_ISSEQUENTIAL )
+HB_FUNC_STATIC( QFSFILEENGINE_ISSEQUENTIAL )
 {
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -408,7 +408,7 @@ HB_FUNC( QFSFILEENGINE_ISSEQUENTIAL )
 /*
 virtual bool link ( const QString & newName )
 */
-HB_FUNC( QFSFILEENGINE_LINK )
+HB_FUNC_STATIC( QFSFILEENGINE_LINK )
 {
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -423,7 +423,7 @@ HB_FUNC( QFSFILEENGINE_LINK )
 /*
 virtual bool mkdir ( const QString & name, bool createParentDirectories ) const
 */
-HB_FUNC( QFSFILEENGINE_MKDIR )
+HB_FUNC_STATIC( QFSFILEENGINE_MKDIR )
 {
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -440,7 +440,7 @@ HB_FUNC( QFSFILEENGINE_MKDIR )
 /*
 virtual QString owner ( FileOwner own ) const
 */
-HB_FUNC( QFSFILEENGINE_OWNER )
+HB_FUNC_STATIC( QFSFILEENGINE_OWNER )
 {
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -455,7 +455,7 @@ HB_FUNC( QFSFILEENGINE_OWNER )
 /*
 virtual uint ownerId ( FileOwner own ) const
 */
-HB_FUNC( QFSFILEENGINE_OWNERID )
+HB_FUNC_STATIC( QFSFILEENGINE_OWNERID )
 {
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -470,7 +470,7 @@ HB_FUNC( QFSFILEENGINE_OWNERID )
 /*
 virtual qint64 pos () const
 */
-HB_FUNC( QFSFILEENGINE_POS )
+HB_FUNC_STATIC( QFSFILEENGINE_POS )
 {
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -484,7 +484,7 @@ HB_FUNC( QFSFILEENGINE_POS )
 /*
 virtual qint64 read ( char * data, qint64 maxlen )
 */
-HB_FUNC( QFSFILEENGINE_READ )
+HB_FUNC_STATIC( QFSFILEENGINE_READ )
 {
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -500,7 +500,7 @@ HB_FUNC( QFSFILEENGINE_READ )
 /*
 virtual qint64 readLine ( char * data, qint64 maxlen )
 */
-HB_FUNC( QFSFILEENGINE_READLINE )
+HB_FUNC_STATIC( QFSFILEENGINE_READLINE )
 {
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -516,7 +516,7 @@ HB_FUNC( QFSFILEENGINE_READLINE )
 /*
 virtual bool remove ()
 */
-HB_FUNC( QFSFILEENGINE_REMOVE )
+HB_FUNC_STATIC( QFSFILEENGINE_REMOVE )
 {
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -530,7 +530,7 @@ HB_FUNC( QFSFILEENGINE_REMOVE )
 /*
 virtual bool rename ( const QString & newName )
 */
-HB_FUNC( QFSFILEENGINE_RENAME )
+HB_FUNC_STATIC( QFSFILEENGINE_RENAME )
 {
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -545,7 +545,7 @@ HB_FUNC( QFSFILEENGINE_RENAME )
 /*
 virtual bool rmdir ( const QString & name, bool recurseParentDirectories ) const
 */
-HB_FUNC( QFSFILEENGINE_RMDIR )
+HB_FUNC_STATIC( QFSFILEENGINE_RMDIR )
 {
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -561,7 +561,7 @@ HB_FUNC( QFSFILEENGINE_RMDIR )
 /*
 virtual bool seek ( qint64 pos )
 */
-HB_FUNC( QFSFILEENGINE_SEEK )
+HB_FUNC_STATIC( QFSFILEENGINE_SEEK )
 {
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -576,7 +576,7 @@ HB_FUNC( QFSFILEENGINE_SEEK )
 /*
 virtual void setFileName ( const QString & file )
 */
-HB_FUNC( QFSFILEENGINE_SETFILENAME )
+HB_FUNC_STATIC( QFSFILEENGINE_SETFILENAME )
 {
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -591,7 +591,7 @@ HB_FUNC( QFSFILEENGINE_SETFILENAME )
 /*
 virtual bool setPermissions ( uint perms )
 */
-HB_FUNC( QFSFILEENGINE_SETPERMISSIONS )
+HB_FUNC_STATIC( QFSFILEENGINE_SETPERMISSIONS )
 {
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -606,7 +606,7 @@ HB_FUNC( QFSFILEENGINE_SETPERMISSIONS )
 /*
 virtual bool setSize ( qint64 size )
 */
-HB_FUNC( QFSFILEENGINE_SETSIZE )
+HB_FUNC_STATIC( QFSFILEENGINE_SETSIZE )
 {
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -621,7 +621,7 @@ HB_FUNC( QFSFILEENGINE_SETSIZE )
 /*
 virtual qint64 size () const
 */
-HB_FUNC( QFSFILEENGINE_SIZE )
+HB_FUNC_STATIC( QFSFILEENGINE_SIZE )
 {
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -635,7 +635,7 @@ HB_FUNC( QFSFILEENGINE_SIZE )
 /*
 virtual bool supportsExtension ( Extension extension ) const
 */
-HB_FUNC( QFSFILEENGINE_SUPPORTSEXTENSION )
+HB_FUNC_STATIC( QFSFILEENGINE_SUPPORTSEXTENSION )
 {
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -650,7 +650,7 @@ HB_FUNC( QFSFILEENGINE_SUPPORTSEXTENSION )
 /*
 virtual qint64 write ( const char * data, qint64 len )
 */
-HB_FUNC( QFSFILEENGINE_WRITE )
+HB_FUNC_STATIC( QFSFILEENGINE_WRITE )
 {
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -667,7 +667,7 @@ HB_FUNC( QFSFILEENGINE_WRITE )
 /*
 QString currentPath ( const QString & fileName = QString() )
 */
-HB_FUNC( QFSFILEENGINE_CURRENTPATH )
+HB_FUNC_STATIC( QFSFILEENGINE_CURRENTPATH )
 {
   QString par1 = ISNIL(1)? QString() : hb_parc(1);
   QString str1 = QFSFileEngine::currentPath ( par1 );
@@ -678,7 +678,7 @@ HB_FUNC( QFSFILEENGINE_CURRENTPATH )
 /*
 QFileInfoList drives ()
 */
-HB_FUNC( QFSFILEENGINE_DRIVES )
+HB_FUNC_STATIC( QFSFILEENGINE_DRIVES )
 {
   QFileInfoList list = QFSFileEngine::drives (  );
   PHB_DYNS pDynSym;
@@ -718,7 +718,7 @@ HB_FUNC( QFSFILEENGINE_DRIVES )
 /*
 QString homePath ()
 */
-HB_FUNC( QFSFILEENGINE_HOMEPATH )
+HB_FUNC_STATIC( QFSFILEENGINE_HOMEPATH )
 {
   QString str1 = QFSFileEngine::homePath (  );
   hb_retc( (const char *) str1.toLatin1().data() );
@@ -728,7 +728,7 @@ HB_FUNC( QFSFILEENGINE_HOMEPATH )
 /*
 QString rootPath ()
 */
-HB_FUNC( QFSFILEENGINE_ROOTPATH )
+HB_FUNC_STATIC( QFSFILEENGINE_ROOTPATH )
 {
   QString str1 = QFSFileEngine::rootPath (  );
   hb_retc( (const char *) str1.toLatin1().data() );
@@ -738,7 +738,7 @@ HB_FUNC( QFSFILEENGINE_ROOTPATH )
 /*
 bool setCurrentPath ( const QString & path )
 */
-HB_FUNC( QFSFILEENGINE_SETCURRENTPATH )
+HB_FUNC_STATIC( QFSFILEENGINE_SETCURRENTPATH )
 {
   QString par1 = hb_parc(1);
   bool b = QFSFileEngine::setCurrentPath ( par1 );
@@ -749,7 +749,7 @@ HB_FUNC( QFSFILEENGINE_SETCURRENTPATH )
 /*
 QString tempPath ()
 */
-HB_FUNC( QFSFILEENGINE_TEMPPATH )
+HB_FUNC_STATIC( QFSFILEENGINE_TEMPPATH )
 {
   QString str1 = QFSFileEngine::tempPath (  );
   hb_retc( (const char *) str1.toLatin1().data() );

@@ -71,7 +71,7 @@ RETURN
 /*
 void grabGesture ( Qt::GestureType gesture, Qt::GestureFlags flags = Qt::GestureFlags() )
 */
-HB_FUNC( QGRAPHICSOBJECT_GRABGESTURE )
+HB_FUNC_STATIC( QGRAPHICSOBJECT_GRABGESTURE )
 {
   QGraphicsObject * obj = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -87,7 +87,7 @@ HB_FUNC( QGRAPHICSOBJECT_GRABGESTURE )
 /*
 void ungrabGesture ( Qt::GestureType gesture )
 */
-HB_FUNC( QGRAPHICSOBJECT_UNGRABGESTURE )
+HB_FUNC_STATIC( QGRAPHICSOBJECT_UNGRABGESTURE )
 {
   QGraphicsObject * obj = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

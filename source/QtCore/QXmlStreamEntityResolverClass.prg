@@ -93,7 +93,7 @@ RETURN
 #include "qt4xhb_clsid.h"
 #include "qt4xhb_utils.h"
 
-HB_FUNC( QXMLSTREAMENTITYRESOLVER_DELETE )
+HB_FUNC_STATIC( QXMLSTREAMENTITYRESOLVER_DELETE )
 {
   QXmlStreamEntityResolver * obj = (QXmlStreamEntityResolver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -112,7 +112,7 @@ HB_FUNC( QXMLSTREAMENTITYRESOLVER_DELETE )
 /*
 virtual QString resolveUndeclaredEntity(const QString & name)
 */
-HB_FUNC( QXMLSTREAMENTITYRESOLVER_RESOLVEUNDECLAREDENTITY )
+HB_FUNC_STATIC( QXMLSTREAMENTITYRESOLVER_RESOLVEUNDECLAREDENTITY )
 {
   QXmlStreamEntityResolver * obj = (QXmlStreamEntityResolver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

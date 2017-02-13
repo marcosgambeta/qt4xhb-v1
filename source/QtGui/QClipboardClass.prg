@@ -87,7 +87,7 @@ RETURN
 /*
 void clear ( Mode mode = Clipboard )
 */
-HB_FUNC( QCLIPBOARD_CLEAR )
+HB_FUNC_STATIC( QCLIPBOARD_CLEAR )
 {
   QClipboard * obj = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -102,7 +102,7 @@ HB_FUNC( QCLIPBOARD_CLEAR )
 /*
 QImage image ( Mode mode = Clipboard ) const
 */
-HB_FUNC( QCLIPBOARD_IMAGE )
+HB_FUNC_STATIC( QCLIPBOARD_IMAGE )
 {
   QClipboard * obj = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -116,7 +116,7 @@ HB_FUNC( QCLIPBOARD_IMAGE )
 /*
 const QMimeData * mimeData ( Mode mode = Clipboard ) const
 */
-HB_FUNC( QCLIPBOARD_MIMEDATA )
+HB_FUNC_STATIC( QCLIPBOARD_MIMEDATA )
 {
   QClipboard * obj = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -130,7 +130,7 @@ HB_FUNC( QCLIPBOARD_MIMEDATA )
 /*
 bool ownsClipboard () const
 */
-HB_FUNC( QCLIPBOARD_OWNSCLIPBOARD )
+HB_FUNC_STATIC( QCLIPBOARD_OWNSCLIPBOARD )
 {
   QClipboard * obj = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -144,7 +144,7 @@ HB_FUNC( QCLIPBOARD_OWNSCLIPBOARD )
 /*
 bool ownsFindBuffer () const
 */
-HB_FUNC( QCLIPBOARD_OWNSFINDBUFFER )
+HB_FUNC_STATIC( QCLIPBOARD_OWNSFINDBUFFER )
 {
   QClipboard * obj = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -158,7 +158,7 @@ HB_FUNC( QCLIPBOARD_OWNSFINDBUFFER )
 /*
 bool ownsSelection () const
 */
-HB_FUNC( QCLIPBOARD_OWNSSELECTION )
+HB_FUNC_STATIC( QCLIPBOARD_OWNSSELECTION )
 {
   QClipboard * obj = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -172,7 +172,7 @@ HB_FUNC( QCLIPBOARD_OWNSSELECTION )
 /*
 QPixmap pixmap ( Mode mode = Clipboard ) const
 */
-HB_FUNC( QCLIPBOARD_PIXMAP )
+HB_FUNC_STATIC( QCLIPBOARD_PIXMAP )
 {
   QClipboard * obj = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -186,7 +186,7 @@ HB_FUNC( QCLIPBOARD_PIXMAP )
 /*
 void setImage ( const QImage & image, Mode mode = Clipboard )
 */
-HB_FUNC( QCLIPBOARD_SETIMAGE )
+HB_FUNC_STATIC( QCLIPBOARD_SETIMAGE )
 {
   QClipboard * obj = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -202,7 +202,7 @@ HB_FUNC( QCLIPBOARD_SETIMAGE )
 /*
 void setMimeData ( QMimeData * src, Mode mode = Clipboard )
 */
-HB_FUNC( QCLIPBOARD_SETMIMEDATA )
+HB_FUNC_STATIC( QCLIPBOARD_SETMIMEDATA )
 {
   QClipboard * obj = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -218,7 +218,7 @@ HB_FUNC( QCLIPBOARD_SETMIMEDATA )
 /*
 void setPixmap ( const QPixmap & pixmap, Mode mode = Clipboard )
 */
-HB_FUNC( QCLIPBOARD_SETPIXMAP )
+HB_FUNC_STATIC( QCLIPBOARD_SETPIXMAP )
 {
   QClipboard * obj = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -234,7 +234,7 @@ HB_FUNC( QCLIPBOARD_SETPIXMAP )
 /*
 void setText ( const QString & text, Mode mode = Clipboard )
 */
-HB_FUNC( QCLIPBOARD_SETTEXT )
+HB_FUNC_STATIC( QCLIPBOARD_SETTEXT )
 {
   QClipboard * obj = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -250,7 +250,7 @@ HB_FUNC( QCLIPBOARD_SETTEXT )
 /*
 bool supportsFindBuffer () const
 */
-HB_FUNC( QCLIPBOARD_SUPPORTSFINDBUFFER )
+HB_FUNC_STATIC( QCLIPBOARD_SUPPORTSFINDBUFFER )
 {
   QClipboard * obj = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -264,7 +264,7 @@ HB_FUNC( QCLIPBOARD_SUPPORTSFINDBUFFER )
 /*
 bool supportsSelection () const
 */
-HB_FUNC( QCLIPBOARD_SUPPORTSSELECTION )
+HB_FUNC_STATIC( QCLIPBOARD_SUPPORTSSELECTION )
 {
   QClipboard * obj = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -278,7 +278,7 @@ HB_FUNC( QCLIPBOARD_SUPPORTSSELECTION )
 /*
 QString text ( Mode mode = Clipboard ) const
 */
-HB_FUNC( QCLIPBOARD_TEXT1 )
+HB_FUNC_STATIC( QCLIPBOARD_TEXT1 )
 {
   QClipboard * obj = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -293,7 +293,7 @@ HB_FUNC( QCLIPBOARD_TEXT1 )
 /*
 QString text ( QString & subtype, Mode mode = Clipboard ) const
 */
-HB_FUNC( QCLIPBOARD_TEXT2 )
+HB_FUNC_STATIC( QCLIPBOARD_TEXT2 )
 {
   QClipboard * obj = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -309,7 +309,7 @@ HB_FUNC( QCLIPBOARD_TEXT2 )
 //[1]QString text ( Mode mode = Clipboard ) const
 //[2]QString text ( QString & subtype, Mode mode = Clipboard ) const
 
-HB_FUNC( QCLIPBOARD_TEXT )
+HB_FUNC_STATIC( QCLIPBOARD_TEXT )
 {
   if( ISNUMPAR(0) )
   {

@@ -95,7 +95,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QXMLLOCATOR_DELETE )
+HB_FUNC_STATIC( QXMLLOCATOR_DELETE )
 {
   QXmlLocator * obj = (QXmlLocator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -114,7 +114,7 @@ HB_FUNC( QXMLLOCATOR_DELETE )
 /*
 virtual int columnNumber () const = 0
 */
-HB_FUNC( QXMLLOCATOR_COLUMNNUMBER )
+HB_FUNC_STATIC( QXMLLOCATOR_COLUMNNUMBER )
 {
   QXmlLocator * obj = (QXmlLocator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -128,7 +128,7 @@ HB_FUNC( QXMLLOCATOR_COLUMNNUMBER )
 /*
 virtual int lineNumber () const = 0
 */
-HB_FUNC( QXMLLOCATOR_LINENUMBER )
+HB_FUNC_STATIC( QXMLLOCATOR_LINENUMBER )
 {
   QXmlLocator * obj = (QXmlLocator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

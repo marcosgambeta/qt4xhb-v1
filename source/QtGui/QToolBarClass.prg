@@ -106,7 +106,7 @@ RETURN
 /*
 QToolBar ( const QString & title, QWidget * parent = 0 )
 */
-HB_FUNC( QTOOLBAR_NEW1 )
+HB_FUNC_STATIC( QTOOLBAR_NEW1 )
 {
   QToolBar * o = NULL;
   QString par1 = hb_parc(1);
@@ -123,7 +123,7 @@ HB_FUNC( QTOOLBAR_NEW1 )
 /*
 QToolBar ( QWidget * parent = 0 )
 */
-HB_FUNC( QTOOLBAR_NEW2 )
+HB_FUNC_STATIC( QTOOLBAR_NEW2 )
 {
   QToolBar * o = NULL;
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -139,7 +139,7 @@ HB_FUNC( QTOOLBAR_NEW2 )
 //[1]QToolBar ( const QString & title, QWidget * parent = 0 )
 //[2]QToolBar ( QWidget * parent = 0 )
 
-HB_FUNC( QTOOLBAR_NEW )
+HB_FUNC_STATIC( QTOOLBAR_NEW )
 {
   if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
@@ -155,7 +155,7 @@ HB_FUNC( QTOOLBAR_NEW )
   }
 }
 
-HB_FUNC( QTOOLBAR_DELETE )
+HB_FUNC_STATIC( QTOOLBAR_DELETE )
 {
   QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -174,7 +174,7 @@ HB_FUNC( QTOOLBAR_DELETE )
 /*
 QAction * actionAt ( int x, int y ) const
 */
-HB_FUNC( QTOOLBAR_ACTIONAT1 )
+HB_FUNC_STATIC( QTOOLBAR_ACTIONAT1 )
 {
   QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -189,7 +189,7 @@ HB_FUNC( QTOOLBAR_ACTIONAT1 )
 /*
 QAction * actionAt ( const QPoint & p ) const
 */
-HB_FUNC( QTOOLBAR_ACTIONAT2 )
+HB_FUNC_STATIC( QTOOLBAR_ACTIONAT2 )
 {
   QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -203,7 +203,7 @@ HB_FUNC( QTOOLBAR_ACTIONAT2 )
 //[1]QAction * actionAt ( int x, int y ) const
 //[2]QAction * actionAt ( const QPoint & p ) const
 
-HB_FUNC( QTOOLBAR_ACTIONAT )
+HB_FUNC_STATIC( QTOOLBAR_ACTIONAT )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
@@ -218,7 +218,7 @@ HB_FUNC( QTOOLBAR_ACTIONAT )
 /*
 void addAction ( QAction * action )
 */
-HB_FUNC( QTOOLBAR_ADDACTION1 )
+HB_FUNC_STATIC( QTOOLBAR_ADDACTION1 )
 {
   QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -233,7 +233,7 @@ HB_FUNC( QTOOLBAR_ADDACTION1 )
 /*
 QAction * addAction ( const QString & text )
 */
-HB_FUNC( QTOOLBAR_ADDACTION2 )
+HB_FUNC_STATIC( QTOOLBAR_ADDACTION2 )
 {
   QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -247,7 +247,7 @@ HB_FUNC( QTOOLBAR_ADDACTION2 )
 /*
 QAction * addAction ( const QIcon & icon, const QString & text )
 */
-HB_FUNC( QTOOLBAR_ADDACTION3 )
+HB_FUNC_STATIC( QTOOLBAR_ADDACTION3 )
 {
   QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -262,7 +262,7 @@ HB_FUNC( QTOOLBAR_ADDACTION3 )
 /*
 QAction * addAction ( const QString & text, const QObject * receiver, const char * member )
 */
-HB_FUNC( QTOOLBAR_ADDACTION4 )
+HB_FUNC_STATIC( QTOOLBAR_ADDACTION4 )
 {
   QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -278,7 +278,7 @@ HB_FUNC( QTOOLBAR_ADDACTION4 )
 /*
 QAction * addAction ( const QIcon & icon, const QString & text, const QObject * receiver, const char * member )
 */
-HB_FUNC( QTOOLBAR_ADDACTION5 )
+HB_FUNC_STATIC( QTOOLBAR_ADDACTION5 )
 {
   QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -298,7 +298,7 @@ HB_FUNC( QTOOLBAR_ADDACTION5 )
 //[4]QAction * addAction ( const QString & text, const QObject * receiver, const char * member )
 //[5]QAction * addAction ( const QIcon & icon, const QString & text, const QObject * receiver, const char * member )
 
-HB_FUNC( QTOOLBAR_ADDACTION )
+HB_FUNC_STATIC( QTOOLBAR_ADDACTION )
 {
   if( ISNUMPAR(1) && ISQACTION(1) )
   {
@@ -325,7 +325,7 @@ HB_FUNC( QTOOLBAR_ADDACTION )
 /*
 QAction * addSeparator ()
 */
-HB_FUNC( QTOOLBAR_ADDSEPARATOR )
+HB_FUNC_STATIC( QTOOLBAR_ADDSEPARATOR )
 {
   QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -338,7 +338,7 @@ HB_FUNC( QTOOLBAR_ADDSEPARATOR )
 /*
 QAction * addWidget ( QWidget * widget )
 */
-HB_FUNC( QTOOLBAR_ADDWIDGET )
+HB_FUNC_STATIC( QTOOLBAR_ADDWIDGET )
 {
   QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -352,7 +352,7 @@ HB_FUNC( QTOOLBAR_ADDWIDGET )
 /*
 Qt::ToolBarAreas allowedAreas () const
 */
-HB_FUNC( QTOOLBAR_ALLOWEDAREAS )
+HB_FUNC_STATIC( QTOOLBAR_ALLOWEDAREAS )
 {
   QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -366,7 +366,7 @@ HB_FUNC( QTOOLBAR_ALLOWEDAREAS )
 /*
 void clear ()
 */
-HB_FUNC( QTOOLBAR_CLEAR )
+HB_FUNC_STATIC( QTOOLBAR_CLEAR )
 {
   QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -380,7 +380,7 @@ HB_FUNC( QTOOLBAR_CLEAR )
 /*
 QSize iconSize () const
 */
-HB_FUNC( QTOOLBAR_ICONSIZE )
+HB_FUNC_STATIC( QTOOLBAR_ICONSIZE )
 {
   QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -393,7 +393,7 @@ HB_FUNC( QTOOLBAR_ICONSIZE )
 /*
 QAction * insertSeparator ( QAction * before )
 */
-HB_FUNC( QTOOLBAR_INSERTSEPARATOR )
+HB_FUNC_STATIC( QTOOLBAR_INSERTSEPARATOR )
 {
   QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -407,7 +407,7 @@ HB_FUNC( QTOOLBAR_INSERTSEPARATOR )
 /*
 QAction * insertWidget ( QAction * before, QWidget * widget )
 */
-HB_FUNC( QTOOLBAR_INSERTWIDGET )
+HB_FUNC_STATIC( QTOOLBAR_INSERTWIDGET )
 {
   QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -422,7 +422,7 @@ HB_FUNC( QTOOLBAR_INSERTWIDGET )
 /*
 bool isAreaAllowed ( Qt::ToolBarArea area ) const
 */
-HB_FUNC( QTOOLBAR_ISAREAALLOWED )
+HB_FUNC_STATIC( QTOOLBAR_ISAREAALLOWED )
 {
   QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -437,7 +437,7 @@ HB_FUNC( QTOOLBAR_ISAREAALLOWED )
 /*
 bool isFloatable () const
 */
-HB_FUNC( QTOOLBAR_ISFLOATABLE )
+HB_FUNC_STATIC( QTOOLBAR_ISFLOATABLE )
 {
   QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -451,7 +451,7 @@ HB_FUNC( QTOOLBAR_ISFLOATABLE )
 /*
 bool isFloating () const
 */
-HB_FUNC( QTOOLBAR_ISFLOATING )
+HB_FUNC_STATIC( QTOOLBAR_ISFLOATING )
 {
   QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -465,7 +465,7 @@ HB_FUNC( QTOOLBAR_ISFLOATING )
 /*
 bool isMovable () const
 */
-HB_FUNC( QTOOLBAR_ISMOVABLE )
+HB_FUNC_STATIC( QTOOLBAR_ISMOVABLE )
 {
   QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -479,7 +479,7 @@ HB_FUNC( QTOOLBAR_ISMOVABLE )
 /*
 Qt::Orientation orientation () const
 */
-HB_FUNC( QTOOLBAR_ORIENTATION )
+HB_FUNC_STATIC( QTOOLBAR_ORIENTATION )
 {
   QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -493,7 +493,7 @@ HB_FUNC( QTOOLBAR_ORIENTATION )
 /*
 void setAllowedAreas ( Qt::ToolBarAreas areas )
 */
-HB_FUNC( QTOOLBAR_SETALLOWEDAREAS )
+HB_FUNC_STATIC( QTOOLBAR_SETALLOWEDAREAS )
 {
   QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -508,7 +508,7 @@ HB_FUNC( QTOOLBAR_SETALLOWEDAREAS )
 /*
 void setFloatable ( bool floatable )
 */
-HB_FUNC( QTOOLBAR_SETFLOATABLE )
+HB_FUNC_STATIC( QTOOLBAR_SETFLOATABLE )
 {
   QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -523,7 +523,7 @@ HB_FUNC( QTOOLBAR_SETFLOATABLE )
 /*
 void setMovable ( bool movable )
 */
-HB_FUNC( QTOOLBAR_SETMOVABLE )
+HB_FUNC_STATIC( QTOOLBAR_SETMOVABLE )
 {
   QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -538,7 +538,7 @@ HB_FUNC( QTOOLBAR_SETMOVABLE )
 /*
 void setOrientation ( Qt::Orientation orientation )
 */
-HB_FUNC( QTOOLBAR_SETORIENTATION )
+HB_FUNC_STATIC( QTOOLBAR_SETORIENTATION )
 {
   QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -553,7 +553,7 @@ HB_FUNC( QTOOLBAR_SETORIENTATION )
 /*
 QAction * toggleViewAction () const
 */
-HB_FUNC( QTOOLBAR_TOGGLEVIEWACTION )
+HB_FUNC_STATIC( QTOOLBAR_TOGGLEVIEWACTION )
 {
   QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -566,7 +566,7 @@ HB_FUNC( QTOOLBAR_TOGGLEVIEWACTION )
 /*
 Qt::ToolButtonStyle toolButtonStyle () const
 */
-HB_FUNC( QTOOLBAR_TOOLBUTTONSTYLE )
+HB_FUNC_STATIC( QTOOLBAR_TOOLBUTTONSTYLE )
 {
   QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -580,7 +580,7 @@ HB_FUNC( QTOOLBAR_TOOLBUTTONSTYLE )
 /*
 QWidget * widgetForAction ( QAction * action ) const
 */
-HB_FUNC( QTOOLBAR_WIDGETFORACTION )
+HB_FUNC_STATIC( QTOOLBAR_WIDGETFORACTION )
 {
   QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -594,7 +594,7 @@ HB_FUNC( QTOOLBAR_WIDGETFORACTION )
 /*
 void setIconSize ( const QSize & iconSize )
 */
-HB_FUNC( QTOOLBAR_SETICONSIZE )
+HB_FUNC_STATIC( QTOOLBAR_SETICONSIZE )
 {
   QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -609,7 +609,7 @@ HB_FUNC( QTOOLBAR_SETICONSIZE )
 /*
 void setToolButtonStyle ( Qt::ToolButtonStyle toolButtonStyle )
 */
-HB_FUNC( QTOOLBAR_SETTOOLBUTTONSTYLE )
+HB_FUNC_STATIC( QTOOLBAR_SETTOOLBUTTONSTYLE )
 {
   QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

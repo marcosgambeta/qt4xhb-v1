@@ -68,7 +68,7 @@ RETURN
 /*
 QGraphicsColorizeEffect ( QObject * parent = 0 )
 */
-HB_FUNC( QGRAPHICSCOLORIZEEFFECT_NEW )
+HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_NEW )
 {
   QGraphicsColorizeEffect * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -81,7 +81,7 @@ HB_FUNC( QGRAPHICSCOLORIZEEFFECT_NEW )
 }
 
 
-HB_FUNC( QGRAPHICSCOLORIZEEFFECT_DELETE )
+HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_DELETE )
 {
   QGraphicsColorizeEffect * obj = (QGraphicsColorizeEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -100,7 +100,7 @@ HB_FUNC( QGRAPHICSCOLORIZEEFFECT_DELETE )
 /*
 QColor color () const
 */
-HB_FUNC( QGRAPHICSCOLORIZEEFFECT_COLOR )
+HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_COLOR )
 {
   QGraphicsColorizeEffect * obj = (QGraphicsColorizeEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -113,7 +113,7 @@ HB_FUNC( QGRAPHICSCOLORIZEEFFECT_COLOR )
 /*
 qreal strength () const
 */
-HB_FUNC( QGRAPHICSCOLORIZEEFFECT_STRENGTH )
+HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_STRENGTH )
 {
   QGraphicsColorizeEffect * obj = (QGraphicsColorizeEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -127,7 +127,7 @@ HB_FUNC( QGRAPHICSCOLORIZEEFFECT_STRENGTH )
 /*
 void setColor ( const QColor & c )
 */
-HB_FUNC( QGRAPHICSCOLORIZEEFFECT_SETCOLOR )
+HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_SETCOLOR )
 {
   QGraphicsColorizeEffect * obj = (QGraphicsColorizeEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -142,7 +142,7 @@ HB_FUNC( QGRAPHICSCOLORIZEEFFECT_SETCOLOR )
 /*
 void setStrength ( qreal strength )
 */
-HB_FUNC( QGRAPHICSCOLORIZEEFFECT_SETSTRENGTH )
+HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_SETSTRENGTH )
 {
   QGraphicsColorizeEffect * obj = (QGraphicsColorizeEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

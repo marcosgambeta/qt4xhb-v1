@@ -121,7 +121,7 @@ RETURN
 /*
 QItemSelectionRange ()
 */
-HB_FUNC( QITEMSELECTIONRANGE_NEW1 )
+HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW1 )
 {
   QItemSelectionRange * o = NULL;
   o = new QItemSelectionRange (  );
@@ -136,7 +136,7 @@ HB_FUNC( QITEMSELECTIONRANGE_NEW1 )
 /*
 QItemSelectionRange ( const QItemSelectionRange & other )
 */
-HB_FUNC( QITEMSELECTIONRANGE_NEW2 )
+HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW2 )
 {
   QItemSelectionRange * o = NULL;
   QItemSelectionRange * par1 = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -152,7 +152,7 @@ HB_FUNC( QITEMSELECTIONRANGE_NEW2 )
 /*
 QItemSelectionRange ( const QModelIndex & topLeft, const QModelIndex & bottomRight )
 */
-HB_FUNC( QITEMSELECTIONRANGE_NEW3 )
+HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW3 )
 {
   QItemSelectionRange * o = NULL;
   QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -169,7 +169,7 @@ HB_FUNC( QITEMSELECTIONRANGE_NEW3 )
 /*
 QItemSelectionRange ( const QModelIndex & index )
 */
-HB_FUNC( QITEMSELECTIONRANGE_NEW4 )
+HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW4 )
 {
   QItemSelectionRange * o = NULL;
   QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -187,7 +187,7 @@ HB_FUNC( QITEMSELECTIONRANGE_NEW4 )
 //[3]QItemSelectionRange ( const QModelIndex & topLeft, const QModelIndex & bottomRight )
 //[4]QItemSelectionRange ( const QModelIndex & index )
 
-HB_FUNC( QITEMSELECTIONRANGE_NEW )
+HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -211,7 +211,7 @@ HB_FUNC( QITEMSELECTIONRANGE_NEW )
   }
 }
 
-HB_FUNC( QITEMSELECTIONRANGE_DELETE )
+HB_FUNC_STATIC( QITEMSELECTIONRANGE_DELETE )
 {
   QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -230,7 +230,7 @@ HB_FUNC( QITEMSELECTIONRANGE_DELETE )
 /*
 int bottom () const
 */
-HB_FUNC( QITEMSELECTIONRANGE_BOTTOM )
+HB_FUNC_STATIC( QITEMSELECTIONRANGE_BOTTOM )
 {
   QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -244,7 +244,7 @@ HB_FUNC( QITEMSELECTIONRANGE_BOTTOM )
 /*
 QModelIndex bottomRight () const
 */
-HB_FUNC( QITEMSELECTIONRANGE_BOTTOMRIGHT )
+HB_FUNC_STATIC( QITEMSELECTIONRANGE_BOTTOMRIGHT )
 {
   QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -257,7 +257,7 @@ HB_FUNC( QITEMSELECTIONRANGE_BOTTOMRIGHT )
 /*
 bool contains ( const QModelIndex & index ) const
 */
-HB_FUNC( QITEMSELECTIONRANGE_CONTAINS1 )
+HB_FUNC_STATIC( QITEMSELECTIONRANGE_CONTAINS1 )
 {
   QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -272,7 +272,7 @@ HB_FUNC( QITEMSELECTIONRANGE_CONTAINS1 )
 /*
 bool contains ( int row, int column, const QModelIndex & parentIndex ) const
 */
-HB_FUNC( QITEMSELECTIONRANGE_CONTAINS2 )
+HB_FUNC_STATIC( QITEMSELECTIONRANGE_CONTAINS2 )
 {
   QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -289,7 +289,7 @@ HB_FUNC( QITEMSELECTIONRANGE_CONTAINS2 )
 //[1]bool contains ( const QModelIndex & index ) const
 //[2]bool contains ( int row, int column, const QModelIndex & parentIndex ) const
 
-HB_FUNC( QITEMSELECTIONRANGE_CONTAINS )
+HB_FUNC_STATIC( QITEMSELECTIONRANGE_CONTAINS )
 {
   if( ISNUMPAR(1) && ISQMODELINDEX(1) )
   {
@@ -304,7 +304,7 @@ HB_FUNC( QITEMSELECTIONRANGE_CONTAINS )
 /*
 int height () const
 */
-HB_FUNC( QITEMSELECTIONRANGE_HEIGHT )
+HB_FUNC_STATIC( QITEMSELECTIONRANGE_HEIGHT )
 {
   QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -318,7 +318,7 @@ HB_FUNC( QITEMSELECTIONRANGE_HEIGHT )
 /*
 QModelIndexList indexes () const
 */
-HB_FUNC( QITEMSELECTIONRANGE_INDEXES )
+HB_FUNC_STATIC( QITEMSELECTIONRANGE_INDEXES )
 {
   QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -362,7 +362,7 @@ HB_FUNC( QITEMSELECTIONRANGE_INDEXES )
 /*
 QItemSelectionRange intersected ( const QItemSelectionRange & other ) const
 */
-HB_FUNC( QITEMSELECTIONRANGE_INTERSECTED )
+HB_FUNC_STATIC( QITEMSELECTIONRANGE_INTERSECTED )
 {
   QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -376,7 +376,7 @@ HB_FUNC( QITEMSELECTIONRANGE_INTERSECTED )
 /*
 bool intersects ( const QItemSelectionRange & other ) const
 */
-HB_FUNC( QITEMSELECTIONRANGE_INTERSECTS )
+HB_FUNC_STATIC( QITEMSELECTIONRANGE_INTERSECTS )
 {
   QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -391,7 +391,7 @@ HB_FUNC( QITEMSELECTIONRANGE_INTERSECTS )
 /*
 bool isEmpty () const
 */
-HB_FUNC( QITEMSELECTIONRANGE_ISEMPTY )
+HB_FUNC_STATIC( QITEMSELECTIONRANGE_ISEMPTY )
 {
   QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -405,7 +405,7 @@ HB_FUNC( QITEMSELECTIONRANGE_ISEMPTY )
 /*
 bool isValid () const
 */
-HB_FUNC( QITEMSELECTIONRANGE_ISVALID )
+HB_FUNC_STATIC( QITEMSELECTIONRANGE_ISVALID )
 {
   QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -419,7 +419,7 @@ HB_FUNC( QITEMSELECTIONRANGE_ISVALID )
 /*
 int left () const
 */
-HB_FUNC( QITEMSELECTIONRANGE_LEFT )
+HB_FUNC_STATIC( QITEMSELECTIONRANGE_LEFT )
 {
   QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -433,7 +433,7 @@ HB_FUNC( QITEMSELECTIONRANGE_LEFT )
 /*
 const QAbstractItemModel * model () const
 */
-HB_FUNC( QITEMSELECTIONRANGE_MODEL )
+HB_FUNC_STATIC( QITEMSELECTIONRANGE_MODEL )
 {
   QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -446,7 +446,7 @@ HB_FUNC( QITEMSELECTIONRANGE_MODEL )
 /*
 QModelIndex parent () const
 */
-HB_FUNC( QITEMSELECTIONRANGE_PARENT )
+HB_FUNC_STATIC( QITEMSELECTIONRANGE_PARENT )
 {
   QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -459,7 +459,7 @@ HB_FUNC( QITEMSELECTIONRANGE_PARENT )
 /*
 int right () const
 */
-HB_FUNC( QITEMSELECTIONRANGE_RIGHT )
+HB_FUNC_STATIC( QITEMSELECTIONRANGE_RIGHT )
 {
   QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -473,7 +473,7 @@ HB_FUNC( QITEMSELECTIONRANGE_RIGHT )
 /*
 int top () const
 */
-HB_FUNC( QITEMSELECTIONRANGE_TOP )
+HB_FUNC_STATIC( QITEMSELECTIONRANGE_TOP )
 {
   QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -487,7 +487,7 @@ HB_FUNC( QITEMSELECTIONRANGE_TOP )
 /*
 QModelIndex topLeft () const
 */
-HB_FUNC( QITEMSELECTIONRANGE_TOPLEFT )
+HB_FUNC_STATIC( QITEMSELECTIONRANGE_TOPLEFT )
 {
   QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -500,7 +500,7 @@ HB_FUNC( QITEMSELECTIONRANGE_TOPLEFT )
 /*
 int width () const
 */
-HB_FUNC( QITEMSELECTIONRANGE_WIDTH )
+HB_FUNC_STATIC( QITEMSELECTIONRANGE_WIDTH )
 {
   QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

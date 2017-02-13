@@ -68,7 +68,7 @@ RETURN
 /*
 QSequentialAnimationGroup ( QObject * parent = 0 )
 */
-HB_FUNC( QSEQUENTIALANIMATIONGROUP_NEW )
+HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_NEW )
 {
   QSequentialAnimationGroup * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -81,7 +81,7 @@ HB_FUNC( QSEQUENTIALANIMATIONGROUP_NEW )
 }
 
 
-HB_FUNC( QSEQUENTIALANIMATIONGROUP_DELETE )
+HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_DELETE )
 {
   QSequentialAnimationGroup * obj = (QSequentialAnimationGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -101,7 +101,7 @@ HB_FUNC( QSEQUENTIALANIMATIONGROUP_DELETE )
 /*
 QPauseAnimation * addPause ( int msecs )
 */
-HB_FUNC( QSEQUENTIALANIMATIONGROUP_ADDPAUSE )
+HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_ADDPAUSE )
 {
   QSequentialAnimationGroup * obj = (QSequentialAnimationGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -115,7 +115,7 @@ HB_FUNC( QSEQUENTIALANIMATIONGROUP_ADDPAUSE )
 /*
 QAbstractAnimation * currentAnimation () const
 */
-HB_FUNC( QSEQUENTIALANIMATIONGROUP_CURRENTANIMATION )
+HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_CURRENTANIMATION )
 {
   QSequentialAnimationGroup * obj = (QSequentialAnimationGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -128,7 +128,7 @@ HB_FUNC( QSEQUENTIALANIMATIONGROUP_CURRENTANIMATION )
 /*
 QPauseAnimation * insertPause ( int index, int msecs )
 */
-HB_FUNC( QSEQUENTIALANIMATIONGROUP_INSERTPAUSE )
+HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_INSERTPAUSE )
 {
   QSequentialAnimationGroup * obj = (QSequentialAnimationGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -143,7 +143,7 @@ HB_FUNC( QSEQUENTIALANIMATIONGROUP_INSERTPAUSE )
 /*
 virtual int duration () const
 */
-HB_FUNC( QSEQUENTIALANIMATIONGROUP_DURATION )
+HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_DURATION )
 {
   QSequentialAnimationGroup * obj = (QSequentialAnimationGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

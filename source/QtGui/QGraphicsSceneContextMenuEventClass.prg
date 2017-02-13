@@ -64,7 +64,7 @@ RETURN
 #include "qt4xhb_clsid.h"
 #include "qt4xhb_utils.h"
 
-HB_FUNC( QGRAPHICSSCENECONTEXTMENUEVENT_DELETE )
+HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_DELETE )
 {
   QGraphicsSceneContextMenuEvent * obj = (QGraphicsSceneContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -83,7 +83,7 @@ HB_FUNC( QGRAPHICSSCENECONTEXTMENUEVENT_DELETE )
 /*
 Qt::KeyboardModifiers modifiers () const
 */
-HB_FUNC( QGRAPHICSSCENECONTEXTMENUEVENT_MODIFIERS )
+HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_MODIFIERS )
 {
   QGraphicsSceneContextMenuEvent * obj = (QGraphicsSceneContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -97,7 +97,7 @@ HB_FUNC( QGRAPHICSSCENECONTEXTMENUEVENT_MODIFIERS )
 /*
 QPointF pos () const
 */
-HB_FUNC( QGRAPHICSSCENECONTEXTMENUEVENT_POS )
+HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_POS )
 {
   QGraphicsSceneContextMenuEvent * obj = (QGraphicsSceneContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -110,7 +110,7 @@ HB_FUNC( QGRAPHICSSCENECONTEXTMENUEVENT_POS )
 /*
 Reason reason () const
 */
-HB_FUNC( QGRAPHICSSCENECONTEXTMENUEVENT_REASON )
+HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_REASON )
 {
   QGraphicsSceneContextMenuEvent * obj = (QGraphicsSceneContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -124,7 +124,7 @@ HB_FUNC( QGRAPHICSSCENECONTEXTMENUEVENT_REASON )
 /*
 QPointF scenePos () const
 */
-HB_FUNC( QGRAPHICSSCENECONTEXTMENUEVENT_SCENEPOS )
+HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_SCENEPOS )
 {
   QGraphicsSceneContextMenuEvent * obj = (QGraphicsSceneContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -137,7 +137,7 @@ HB_FUNC( QGRAPHICSSCENECONTEXTMENUEVENT_SCENEPOS )
 /*
 QPoint screenPos () const
 */
-HB_FUNC( QGRAPHICSSCENECONTEXTMENUEVENT_SCREENPOS )
+HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_SCREENPOS )
 {
   QGraphicsSceneContextMenuEvent * obj = (QGraphicsSceneContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

@@ -108,7 +108,7 @@ RETURN
 /*
 QDirIterator ( const QDir & dir, IteratorFlags flags = NoIteratorFlags )
 */
-HB_FUNC( QDIRITERATOR_NEW1 )
+HB_FUNC_STATIC( QDIRITERATOR_NEW1 )
 {
   QDirIterator * o = NULL;
   QDir * par1 = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -128,7 +128,7 @@ HB_FUNC( QDIRITERATOR_NEW1 )
 /*
 QDirIterator ( const QString & path, IteratorFlags flags = NoIteratorFlags )
 */
-HB_FUNC( QDIRITERATOR_NEW2 )
+HB_FUNC_STATIC( QDIRITERATOR_NEW2 )
 {
   QDirIterator * o = NULL;
   QString par1 = hb_parc(1);
@@ -148,7 +148,7 @@ HB_FUNC( QDIRITERATOR_NEW2 )
 /*
 QDirIterator ( const QString & path, QDir::Filters filters, IteratorFlags flags = NoIteratorFlags )
 */
-HB_FUNC( QDIRITERATOR_NEW3 )
+HB_FUNC_STATIC( QDIRITERATOR_NEW3 )
 {
   QDirIterator * o = NULL;
   QString par1 = hb_parc(1);
@@ -169,7 +169,7 @@ HB_FUNC( QDIRITERATOR_NEW3 )
 /*
 QDirIterator ( const QString & path, const QStringList & nameFilters, QDir::Filters filters = QDir::NoFilter, IteratorFlags flags = NoIteratorFlags )
 */
-HB_FUNC( QDIRITERATOR_NEW4 )
+HB_FUNC_STATIC( QDIRITERATOR_NEW4 )
 {
   QDirIterator * o = NULL;
   QString par1 = hb_parc(1);
@@ -203,7 +203,7 @@ par2 << temp;
 
 // TODO: resolver conflito entre casos 2 e 3
 
-HB_FUNC( QDIRITERATOR_NEW )
+HB_FUNC_STATIC( QDIRITERATOR_NEW )
 {
   if( ISBETWEEN(1,2) && ISQDIR(1) && (ISNUM(2)||ISNIL(2)) )
   {
@@ -227,7 +227,7 @@ HB_FUNC( QDIRITERATOR_NEW )
   }
 }
 
-HB_FUNC( QDIRITERATOR_DELETE )
+HB_FUNC_STATIC( QDIRITERATOR_DELETE )
 {
   QDirIterator * obj = (QDirIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -246,7 +246,7 @@ HB_FUNC( QDIRITERATOR_DELETE )
 /*
 QFileInfo fileInfo () const
 */
-HB_FUNC( QDIRITERATOR_FILEINFO )
+HB_FUNC_STATIC( QDIRITERATOR_FILEINFO )
 {
   QDirIterator * obj = (QDirIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -259,7 +259,7 @@ HB_FUNC( QDIRITERATOR_FILEINFO )
 /*
 QString fileName () const
 */
-HB_FUNC( QDIRITERATOR_FILENAME )
+HB_FUNC_STATIC( QDIRITERATOR_FILENAME )
 {
   QDirIterator * obj = (QDirIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -273,7 +273,7 @@ HB_FUNC( QDIRITERATOR_FILENAME )
 /*
 QString filePath () const
 */
-HB_FUNC( QDIRITERATOR_FILEPATH )
+HB_FUNC_STATIC( QDIRITERATOR_FILEPATH )
 {
   QDirIterator * obj = (QDirIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -287,7 +287,7 @@ HB_FUNC( QDIRITERATOR_FILEPATH )
 /*
 bool hasNext () const
 */
-HB_FUNC( QDIRITERATOR_HASNEXT )
+HB_FUNC_STATIC( QDIRITERATOR_HASNEXT )
 {
   QDirIterator * obj = (QDirIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -301,7 +301,7 @@ HB_FUNC( QDIRITERATOR_HASNEXT )
 /*
 QString next ()
 */
-HB_FUNC( QDIRITERATOR_NEXT )
+HB_FUNC_STATIC( QDIRITERATOR_NEXT )
 {
   QDirIterator * obj = (QDirIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -315,7 +315,7 @@ HB_FUNC( QDIRITERATOR_NEXT )
 /*
 QString path () const
 */
-HB_FUNC( QDIRITERATOR_PATH )
+HB_FUNC_STATIC( QDIRITERATOR_PATH )
 {
   QDirIterator * obj = (QDirIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

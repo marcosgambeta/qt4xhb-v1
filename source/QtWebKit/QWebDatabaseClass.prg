@@ -108,7 +108,7 @@ RETURN
 /*
 QWebDatabase ( const QWebDatabase & other )
 */
-HB_FUNC( QWEBDATABASE_NEW )
+HB_FUNC_STATIC( QWEBDATABASE_NEW )
 {
   QWebDatabase * o = NULL;
   QWebDatabase * par1 = (QWebDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -124,7 +124,7 @@ HB_FUNC( QWEBDATABASE_NEW )
 }
 
 
-HB_FUNC( QWEBDATABASE_DELETE )
+HB_FUNC_STATIC( QWEBDATABASE_DELETE )
 {
   QWebDatabase * obj = (QWebDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -143,7 +143,7 @@ HB_FUNC( QWEBDATABASE_DELETE )
 /*
 QString displayName () const
 */
-HB_FUNC( QWEBDATABASE_DISPLAYNAME )
+HB_FUNC_STATIC( QWEBDATABASE_DISPLAYNAME )
 {
   QWebDatabase * obj = (QWebDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -157,7 +157,7 @@ HB_FUNC( QWEBDATABASE_DISPLAYNAME )
 /*
 qint64 expectedSize () const
 */
-HB_FUNC( QWEBDATABASE_EXPECTEDSIZE )
+HB_FUNC_STATIC( QWEBDATABASE_EXPECTEDSIZE )
 {
   QWebDatabase * obj = (QWebDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -171,7 +171,7 @@ HB_FUNC( QWEBDATABASE_EXPECTEDSIZE )
 /*
 QString fileName () const
 */
-HB_FUNC( QWEBDATABASE_FILENAME )
+HB_FUNC_STATIC( QWEBDATABASE_FILENAME )
 {
   QWebDatabase * obj = (QWebDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -185,7 +185,7 @@ HB_FUNC( QWEBDATABASE_FILENAME )
 /*
 QString name () const
 */
-HB_FUNC( QWEBDATABASE_NAME )
+HB_FUNC_STATIC( QWEBDATABASE_NAME )
 {
   QWebDatabase * obj = (QWebDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -199,7 +199,7 @@ HB_FUNC( QWEBDATABASE_NAME )
 /*
 QWebSecurityOrigin origin () const
 */
-HB_FUNC( QWEBDATABASE_ORIGIN )
+HB_FUNC_STATIC( QWEBDATABASE_ORIGIN )
 {
   QWebDatabase * obj = (QWebDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -212,7 +212,7 @@ HB_FUNC( QWEBDATABASE_ORIGIN )
 /*
 qint64 size () const
 */
-HB_FUNC( QWEBDATABASE_SIZE )
+HB_FUNC_STATIC( QWEBDATABASE_SIZE )
 {
   QWebDatabase * obj = (QWebDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -227,7 +227,7 @@ HB_FUNC( QWEBDATABASE_SIZE )
 /*
 void removeAllDatabases ()
 */
-HB_FUNC( QWEBDATABASE_REMOVEALLDATABASES )
+HB_FUNC_STATIC( QWEBDATABASE_REMOVEALLDATABASES )
 {
   QWebDatabase::removeAllDatabases (  );
   hb_itemReturn( hb_stackSelfItem() );
@@ -237,7 +237,7 @@ HB_FUNC( QWEBDATABASE_REMOVEALLDATABASES )
 /*
 void removeDatabase ( const QWebDatabase & db )
 */
-HB_FUNC( QWEBDATABASE_REMOVEDATABASE )
+HB_FUNC_STATIC( QWEBDATABASE_REMOVEDATABASE )
 {
   QWebDatabase * par1 = (QWebDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QWebDatabase::removeDatabase ( *par1 );

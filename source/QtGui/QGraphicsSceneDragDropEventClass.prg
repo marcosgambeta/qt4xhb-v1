@@ -73,7 +73,7 @@ RETURN
 #include "qt4xhb_clsid.h"
 #include "qt4xhb_utils.h"
 
-HB_FUNC( QGRAPHICSSCENEDRAGDROPEVENT_DELETE )
+HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_DELETE )
 {
   QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -92,7 +92,7 @@ HB_FUNC( QGRAPHICSSCENEDRAGDROPEVENT_DELETE )
 /*
 void acceptProposedAction ()
 */
-HB_FUNC( QGRAPHICSSCENEDRAGDROPEVENT_ACCEPTPROPOSEDACTION )
+HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_ACCEPTPROPOSEDACTION )
 {
   QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -106,7 +106,7 @@ HB_FUNC( QGRAPHICSSCENEDRAGDROPEVENT_ACCEPTPROPOSEDACTION )
 /*
 Qt::MouseButtons buttons () const
 */
-HB_FUNC( QGRAPHICSSCENEDRAGDROPEVENT_BUTTONS )
+HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_BUTTONS )
 {
   QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -120,7 +120,7 @@ HB_FUNC( QGRAPHICSSCENEDRAGDROPEVENT_BUTTONS )
 /*
 Qt::DropAction dropAction () const
 */
-HB_FUNC( QGRAPHICSSCENEDRAGDROPEVENT_DROPACTION )
+HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_DROPACTION )
 {
   QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -134,7 +134,7 @@ HB_FUNC( QGRAPHICSSCENEDRAGDROPEVENT_DROPACTION )
 /*
 const QMimeData * mimeData () const
 */
-HB_FUNC( QGRAPHICSSCENEDRAGDROPEVENT_MIMEDATA )
+HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_MIMEDATA )
 {
   QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -147,7 +147,7 @@ HB_FUNC( QGRAPHICSSCENEDRAGDROPEVENT_MIMEDATA )
 /*
 Qt::KeyboardModifiers modifiers () const
 */
-HB_FUNC( QGRAPHICSSCENEDRAGDROPEVENT_MODIFIERS )
+HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_MODIFIERS )
 {
   QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -161,7 +161,7 @@ HB_FUNC( QGRAPHICSSCENEDRAGDROPEVENT_MODIFIERS )
 /*
 QPointF pos () const
 */
-HB_FUNC( QGRAPHICSSCENEDRAGDROPEVENT_POS )
+HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_POS )
 {
   QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -174,7 +174,7 @@ HB_FUNC( QGRAPHICSSCENEDRAGDROPEVENT_POS )
 /*
 Qt::DropActions possibleActions () const
 */
-HB_FUNC( QGRAPHICSSCENEDRAGDROPEVENT_POSSIBLEACTIONS )
+HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_POSSIBLEACTIONS )
 {
   QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -188,7 +188,7 @@ HB_FUNC( QGRAPHICSSCENEDRAGDROPEVENT_POSSIBLEACTIONS )
 /*
 Qt::DropAction proposedAction () const
 */
-HB_FUNC( QGRAPHICSSCENEDRAGDROPEVENT_PROPOSEDACTION )
+HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_PROPOSEDACTION )
 {
   QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -202,7 +202,7 @@ HB_FUNC( QGRAPHICSSCENEDRAGDROPEVENT_PROPOSEDACTION )
 /*
 QPointF scenePos () const
 */
-HB_FUNC( QGRAPHICSSCENEDRAGDROPEVENT_SCENEPOS )
+HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_SCENEPOS )
 {
   QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -215,7 +215,7 @@ HB_FUNC( QGRAPHICSSCENEDRAGDROPEVENT_SCENEPOS )
 /*
 QPoint screenPos () const
 */
-HB_FUNC( QGRAPHICSSCENEDRAGDROPEVENT_SCREENPOS )
+HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_SCREENPOS )
 {
   QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -228,7 +228,7 @@ HB_FUNC( QGRAPHICSSCENEDRAGDROPEVENT_SCREENPOS )
 /*
 void setDropAction ( Qt::DropAction action )
 */
-HB_FUNC( QGRAPHICSSCENEDRAGDROPEVENT_SETDROPACTION )
+HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_SETDROPACTION )
 {
   QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -243,7 +243,7 @@ HB_FUNC( QGRAPHICSSCENEDRAGDROPEVENT_SETDROPACTION )
 /*
 QWidget * source () const
 */
-HB_FUNC( QGRAPHICSSCENEDRAGDROPEVENT_SOURCE )
+HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_SOURCE )
 {
   QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

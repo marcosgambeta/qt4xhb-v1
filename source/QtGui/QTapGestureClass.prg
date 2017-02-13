@@ -61,7 +61,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QTAPGESTURE_DELETE )
+HB_FUNC_STATIC( QTAPGESTURE_DELETE )
 {
   QTapGesture * obj = (QTapGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -80,7 +80,7 @@ HB_FUNC( QTAPGESTURE_DELETE )
 /*
 QPointF position () const
 */
-HB_FUNC( QTAPGESTURE_POSITION )
+HB_FUNC_STATIC( QTAPGESTURE_POSITION )
 {
   QTapGesture * obj = (QTapGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -93,7 +93,7 @@ HB_FUNC( QTAPGESTURE_POSITION )
 /*
 void setPosition ( const QPointF & pos )
 */
-HB_FUNC( QTAPGESTURE_SETPOSITION )
+HB_FUNC_STATIC( QTAPGESTURE_SETPOSITION )
 {
   QTapGesture * obj = (QTapGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

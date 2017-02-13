@@ -107,7 +107,7 @@ RETURN
 #include "qt4xhb_clsid.h"
 #include "qt4xhb_utils.h"
 
-HB_FUNC( QDESIGNERMEMBERSHEETEXTENSION_DELETE )
+HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_DELETE )
 {
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -126,7 +126,7 @@ HB_FUNC( QDESIGNERMEMBERSHEETEXTENSION_DELETE )
 /*
 virtual int count () const = 0
 */
-HB_FUNC( QDESIGNERMEMBERSHEETEXTENSION_COUNT )
+HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_COUNT )
 {
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -140,7 +140,7 @@ HB_FUNC( QDESIGNERMEMBERSHEETEXTENSION_COUNT )
 /*
 virtual QString declaredInClass ( int index ) const = 0
 */
-HB_FUNC( QDESIGNERMEMBERSHEETEXTENSION_DECLAREDINCLASS )
+HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_DECLAREDINCLASS )
 {
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -155,7 +155,7 @@ HB_FUNC( QDESIGNERMEMBERSHEETEXTENSION_DECLAREDINCLASS )
 /*
 virtual int indexOf ( const QString & name ) const = 0
 */
-HB_FUNC( QDESIGNERMEMBERSHEETEXTENSION_INDEXOF )
+HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_INDEXOF )
 {
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -170,7 +170,7 @@ HB_FUNC( QDESIGNERMEMBERSHEETEXTENSION_INDEXOF )
 /*
 virtual bool inheritedFromWidget ( int index ) const = 0
 */
-HB_FUNC( QDESIGNERMEMBERSHEETEXTENSION_INHERITEDFROMWIDGET )
+HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_INHERITEDFROMWIDGET )
 {
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -185,7 +185,7 @@ HB_FUNC( QDESIGNERMEMBERSHEETEXTENSION_INHERITEDFROMWIDGET )
 /*
 virtual bool isSignal ( int index ) const = 0
 */
-HB_FUNC( QDESIGNERMEMBERSHEETEXTENSION_ISSIGNAL )
+HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_ISSIGNAL )
 {
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -200,7 +200,7 @@ HB_FUNC( QDESIGNERMEMBERSHEETEXTENSION_ISSIGNAL )
 /*
 virtual bool isSlot ( int index ) const = 0
 */
-HB_FUNC( QDESIGNERMEMBERSHEETEXTENSION_ISSLOT )
+HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_ISSLOT )
 {
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -215,7 +215,7 @@ HB_FUNC( QDESIGNERMEMBERSHEETEXTENSION_ISSLOT )
 /*
 virtual bool isVisible ( int index ) const = 0
 */
-HB_FUNC( QDESIGNERMEMBERSHEETEXTENSION_ISVISIBLE )
+HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_ISVISIBLE )
 {
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -230,7 +230,7 @@ HB_FUNC( QDESIGNERMEMBERSHEETEXTENSION_ISVISIBLE )
 /*
 virtual QString memberGroup ( int index ) const = 0
 */
-HB_FUNC( QDESIGNERMEMBERSHEETEXTENSION_MEMBERGROUP )
+HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_MEMBERGROUP )
 {
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -245,7 +245,7 @@ HB_FUNC( QDESIGNERMEMBERSHEETEXTENSION_MEMBERGROUP )
 /*
 virtual QString memberName ( int index ) const = 0
 */
-HB_FUNC( QDESIGNERMEMBERSHEETEXTENSION_MEMBERNAME )
+HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_MEMBERNAME )
 {
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -260,7 +260,7 @@ HB_FUNC( QDESIGNERMEMBERSHEETEXTENSION_MEMBERNAME )
 /*
 virtual QList<QByteArray> parameterNames ( int index ) const = 0
 */
-HB_FUNC( QDESIGNERMEMBERSHEETEXTENSION_PARAMETERNAMES )
+HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_PARAMETERNAMES )
 {
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -305,7 +305,7 @@ HB_FUNC( QDESIGNERMEMBERSHEETEXTENSION_PARAMETERNAMES )
 /*
 virtual QList<QByteArray> parameterTypes ( int index ) const = 0
 */
-HB_FUNC( QDESIGNERMEMBERSHEETEXTENSION_PARAMETERTYPES )
+HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_PARAMETERTYPES )
 {
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -350,7 +350,7 @@ HB_FUNC( QDESIGNERMEMBERSHEETEXTENSION_PARAMETERTYPES )
 /*
 virtual void setMemberGroup ( int index, const QString & group ) = 0
 */
-HB_FUNC( QDESIGNERMEMBERSHEETEXTENSION_SETMEMBERGROUP )
+HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_SETMEMBERGROUP )
 {
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -366,7 +366,7 @@ HB_FUNC( QDESIGNERMEMBERSHEETEXTENSION_SETMEMBERGROUP )
 /*
 virtual void setVisible ( int index, bool visible ) = 0
 */
-HB_FUNC( QDESIGNERMEMBERSHEETEXTENSION_SETVISIBLE )
+HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_SETVISIBLE )
 {
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -382,7 +382,7 @@ HB_FUNC( QDESIGNERMEMBERSHEETEXTENSION_SETVISIBLE )
 /*
 virtual QString signature ( int index ) const = 0
 */
-HB_FUNC( QDESIGNERMEMBERSHEETEXTENSION_SIGNATURE )
+HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_SIGNATURE )
 {
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

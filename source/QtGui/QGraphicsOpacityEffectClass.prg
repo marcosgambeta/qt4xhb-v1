@@ -68,7 +68,7 @@ RETURN
 /*
 QGraphicsOpacityEffect ( QObject * parent = 0 )
 */
-HB_FUNC( QGRAPHICSOPACITYEFFECT_NEW )
+HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_NEW )
 {
   QGraphicsOpacityEffect * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -81,7 +81,7 @@ HB_FUNC( QGRAPHICSOPACITYEFFECT_NEW )
 }
 
 
-HB_FUNC( QGRAPHICSOPACITYEFFECT_DELETE )
+HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_DELETE )
 {
   QGraphicsOpacityEffect * obj = (QGraphicsOpacityEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -100,7 +100,7 @@ HB_FUNC( QGRAPHICSOPACITYEFFECT_DELETE )
 /*
 qreal opacity () const
 */
-HB_FUNC( QGRAPHICSOPACITYEFFECT_OPACITY )
+HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_OPACITY )
 {
   QGraphicsOpacityEffect * obj = (QGraphicsOpacityEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -114,7 +114,7 @@ HB_FUNC( QGRAPHICSOPACITYEFFECT_OPACITY )
 /*
 QBrush opacityMask () const
 */
-HB_FUNC( QGRAPHICSOPACITYEFFECT_OPACITYMASK )
+HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_OPACITYMASK )
 {
   QGraphicsOpacityEffect * obj = (QGraphicsOpacityEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -127,7 +127,7 @@ HB_FUNC( QGRAPHICSOPACITYEFFECT_OPACITYMASK )
 /*
 void setOpacity ( qreal opacity )
 */
-HB_FUNC( QGRAPHICSOPACITYEFFECT_SETOPACITY )
+HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_SETOPACITY )
 {
   QGraphicsOpacityEffect * obj = (QGraphicsOpacityEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -142,7 +142,7 @@ HB_FUNC( QGRAPHICSOPACITYEFFECT_SETOPACITY )
 /*
 void setOpacityMask ( const QBrush & mask )
 */
-HB_FUNC( QGRAPHICSOPACITYEFFECT_SETOPACITYMASK )
+HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_SETOPACITYMASK )
 {
   QGraphicsOpacityEffect * obj = (QGraphicsOpacityEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

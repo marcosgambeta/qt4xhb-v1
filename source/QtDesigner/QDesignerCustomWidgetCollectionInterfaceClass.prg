@@ -94,7 +94,7 @@ RETURN
 #include "qt4xhb_clsid.h"
 #include "qt4xhb_utils.h"
 
-HB_FUNC( QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_DELETE )
+HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_DELETE )
 {
   QDesignerCustomWidgetCollectionInterface * obj = (QDesignerCustomWidgetCollectionInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -113,7 +113,7 @@ HB_FUNC( QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_DELETE )
 /*
 virtual QList<QDesignerCustomWidgetInterface *> customWidgets () const = 0
 */
-HB_FUNC( QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_CUSTOMWIDGETS )
+HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_CUSTOMWIDGETS )
 {
   QDesignerCustomWidgetCollectionInterface * obj = (QDesignerCustomWidgetCollectionInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

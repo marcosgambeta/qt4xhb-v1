@@ -64,7 +64,7 @@ RETURN
 /*
 QWindowStateChangeEvent(Qt::WindowStates aOldState)
 */
-HB_FUNC( QWINDOWSTATECHANGEEVENT_NEW1 )
+HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_NEW1 )
 {
   QWindowStateChangeEvent * o = NULL;
   int par1 = hb_parni(1);
@@ -80,7 +80,7 @@ HB_FUNC( QWINDOWSTATECHANGEEVENT_NEW1 )
 /*
 QWindowStateChangeEvent(Qt::WindowStates aOldState, bool isOverride)
 */
-HB_FUNC( QWINDOWSTATECHANGEEVENT_NEW2 )
+HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_NEW2 )
 {
   QWindowStateChangeEvent * o = NULL;
   int par1 = hb_parni(1);
@@ -97,7 +97,7 @@ HB_FUNC( QWINDOWSTATECHANGEEVENT_NEW2 )
 //[1]QWindowStateChangeEvent(Qt::WindowStates aOldState)
 //[2]QWindowStateChangeEvent(Qt::WindowStates aOldState, bool isOverride)
 
-HB_FUNC( QWINDOWSTATECHANGEEVENT_NEW )
+HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_NEW )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
@@ -113,7 +113,7 @@ HB_FUNC( QWINDOWSTATECHANGEEVENT_NEW )
   }
 }
 
-HB_FUNC( QWINDOWSTATECHANGEEVENT_DELETE )
+HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_DELETE )
 {
   QWindowStateChangeEvent * obj = (QWindowStateChangeEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -132,7 +132,7 @@ HB_FUNC( QWINDOWSTATECHANGEEVENT_DELETE )
 /*
 Qt::WindowStates oldState() const
 */
-HB_FUNC( QWINDOWSTATECHANGEEVENT_OLDSTATE )
+HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_OLDSTATE )
 {
   QWindowStateChangeEvent * obj = (QWindowStateChangeEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -146,7 +146,7 @@ HB_FUNC( QWINDOWSTATECHANGEEVENT_OLDSTATE )
 /*
 bool isOverride() const
 */
-HB_FUNC( QWINDOWSTATECHANGEEVENT_ISOVERRIDE )
+HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_ISOVERRIDE )
 {
   QWindowStateChangeEvent * obj = (QWindowStateChangeEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

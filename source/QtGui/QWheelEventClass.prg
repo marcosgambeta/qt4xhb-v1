@@ -73,7 +73,7 @@ RETURN
 /*
 QWheelEvent(const QPoint &pos, int delta,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,Qt::Orientation orient = Qt::Vertical)
 */
-HB_FUNC( QWHEELEVENT_NEW1 )
+HB_FUNC_STATIC( QWHEELEVENT_NEW1 )
 {
   QWheelEvent * o = NULL;
   QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -93,7 +93,7 @@ HB_FUNC( QWHEELEVENT_NEW1 )
 /*
 QWheelEvent(const QPoint &pos, const QPoint& globalPos, int delta,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,Qt::Orientation orient = Qt::Vertical)
 */
-HB_FUNC( QWHEELEVENT_NEW2 )
+HB_FUNC_STATIC( QWHEELEVENT_NEW2 )
 {
   QWheelEvent * o = NULL;
   QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -114,7 +114,7 @@ HB_FUNC( QWHEELEVENT_NEW2 )
 //[1]QWheelEvent(const QPoint &pos, int delta,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,Qt::Orientation orient = Qt::Vertical)
 //[2]QWheelEvent(const QPoint &pos, const QPoint& globalPos, int delta,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,Qt::Orientation orient = Qt::Vertical)
 
-HB_FUNC( QWHEELEVENT_NEW )
+HB_FUNC_STATIC( QWHEELEVENT_NEW )
 {
   if( ISBETWEEN(4,5) && ISQPOINT(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && (ISNUM(5)||ISNIL(5)) )
   {
@@ -130,7 +130,7 @@ HB_FUNC( QWHEELEVENT_NEW )
   }
 }
 
-HB_FUNC( QWHEELEVENT_DELETE )
+HB_FUNC_STATIC( QWHEELEVENT_DELETE )
 {
   QWheelEvent * obj = (QWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -149,7 +149,7 @@ HB_FUNC( QWHEELEVENT_DELETE )
 /*
 int delta() const
 */
-HB_FUNC( QWHEELEVENT_DELTA )
+HB_FUNC_STATIC( QWHEELEVENT_DELTA )
 {
   QWheelEvent * obj = (QWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -163,7 +163,7 @@ HB_FUNC( QWHEELEVENT_DELTA )
 /*
 const QPoint &pos() const
 */
-HB_FUNC( QWHEELEVENT_POS )
+HB_FUNC_STATIC( QWHEELEVENT_POS )
 {
   QWheelEvent * obj = (QWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -176,7 +176,7 @@ HB_FUNC( QWHEELEVENT_POS )
 /*
 const QPoint &globalPos() const
 */
-HB_FUNC( QWHEELEVENT_GLOBALPOS )
+HB_FUNC_STATIC( QWHEELEVENT_GLOBALPOS )
 {
   QWheelEvent * obj = (QWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -189,7 +189,7 @@ HB_FUNC( QWHEELEVENT_GLOBALPOS )
 /*
 int x() const
 */
-HB_FUNC( QWHEELEVENT_X )
+HB_FUNC_STATIC( QWHEELEVENT_X )
 {
   QWheelEvent * obj = (QWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -203,7 +203,7 @@ HB_FUNC( QWHEELEVENT_X )
 /*
 int y() const
 */
-HB_FUNC( QWHEELEVENT_Y )
+HB_FUNC_STATIC( QWHEELEVENT_Y )
 {
   QWheelEvent * obj = (QWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -217,7 +217,7 @@ HB_FUNC( QWHEELEVENT_Y )
 /*
 int globalX() const
 */
-HB_FUNC( QWHEELEVENT_GLOBALX )
+HB_FUNC_STATIC( QWHEELEVENT_GLOBALX )
 {
   QWheelEvent * obj = (QWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -231,7 +231,7 @@ HB_FUNC( QWHEELEVENT_GLOBALX )
 /*
 int globalY() const
 */
-HB_FUNC( QWHEELEVENT_GLOBALY )
+HB_FUNC_STATIC( QWHEELEVENT_GLOBALY )
 {
   QWheelEvent * obj = (QWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -245,7 +245,7 @@ HB_FUNC( QWHEELEVENT_GLOBALY )
 /*
 Qt::MouseButtons buttons() const
 */
-HB_FUNC( QWHEELEVENT_BUTTONS )
+HB_FUNC_STATIC( QWHEELEVENT_BUTTONS )
 {
   QWheelEvent * obj = (QWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -259,7 +259,7 @@ HB_FUNC( QWHEELEVENT_BUTTONS )
 /*
 Qt::Orientation orientation() const
 */
-HB_FUNC( QWHEELEVENT_ORIENTATION )
+HB_FUNC_STATIC( QWHEELEVENT_ORIENTATION )
 {
   QWheelEvent * obj = (QWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

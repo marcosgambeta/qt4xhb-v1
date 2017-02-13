@@ -89,7 +89,7 @@ RETURN
 /*
 QTextBrowser ( QWidget * parent = 0 )
 */
-HB_FUNC( QTEXTBROWSER_NEW )
+HB_FUNC_STATIC( QTEXTBROWSER_NEW )
 {
   QTextBrowser * o = NULL;
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -106,7 +106,7 @@ HB_FUNC( QTEXTBROWSER_NEW )
 /*
 int backwardHistoryCount () const
 */
-HB_FUNC( QTEXTBROWSER_BACKWARDHISTORYCOUNT )
+HB_FUNC_STATIC( QTEXTBROWSER_BACKWARDHISTORYCOUNT )
 {
   QTextBrowser * obj = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -120,7 +120,7 @@ HB_FUNC( QTEXTBROWSER_BACKWARDHISTORYCOUNT )
 /*
 void clearHistory ()
 */
-HB_FUNC( QTEXTBROWSER_CLEARHISTORY )
+HB_FUNC_STATIC( QTEXTBROWSER_CLEARHISTORY )
 {
   QTextBrowser * obj = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -134,7 +134,7 @@ HB_FUNC( QTEXTBROWSER_CLEARHISTORY )
 /*
 int forwardHistoryCount () const
 */
-HB_FUNC( QTEXTBROWSER_FORWARDHISTORYCOUNT )
+HB_FUNC_STATIC( QTEXTBROWSER_FORWARDHISTORYCOUNT )
 {
   QTextBrowser * obj = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -148,7 +148,7 @@ HB_FUNC( QTEXTBROWSER_FORWARDHISTORYCOUNT )
 /*
 QString historyTitle ( int i ) const
 */
-HB_FUNC( QTEXTBROWSER_HISTORYTITLE )
+HB_FUNC_STATIC( QTEXTBROWSER_HISTORYTITLE )
 {
   QTextBrowser * obj = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -163,7 +163,7 @@ HB_FUNC( QTEXTBROWSER_HISTORYTITLE )
 /*
 QUrl historyUrl ( int i ) const
 */
-HB_FUNC( QTEXTBROWSER_HISTORYURL )
+HB_FUNC_STATIC( QTEXTBROWSER_HISTORYURL )
 {
   QTextBrowser * obj = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -177,7 +177,7 @@ HB_FUNC( QTEXTBROWSER_HISTORYURL )
 /*
 bool isBackwardAvailable () const
 */
-HB_FUNC( QTEXTBROWSER_ISBACKWARDAVAILABLE )
+HB_FUNC_STATIC( QTEXTBROWSER_ISBACKWARDAVAILABLE )
 {
   QTextBrowser * obj = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -191,7 +191,7 @@ HB_FUNC( QTEXTBROWSER_ISBACKWARDAVAILABLE )
 /*
 bool isForwardAvailable () const
 */
-HB_FUNC( QTEXTBROWSER_ISFORWARDAVAILABLE )
+HB_FUNC_STATIC( QTEXTBROWSER_ISFORWARDAVAILABLE )
 {
   QTextBrowser * obj = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -205,7 +205,7 @@ HB_FUNC( QTEXTBROWSER_ISFORWARDAVAILABLE )
 /*
 bool openExternalLinks () const
 */
-HB_FUNC( QTEXTBROWSER_OPENEXTERNALLINKS )
+HB_FUNC_STATIC( QTEXTBROWSER_OPENEXTERNALLINKS )
 {
   QTextBrowser * obj = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -219,7 +219,7 @@ HB_FUNC( QTEXTBROWSER_OPENEXTERNALLINKS )
 /*
 bool openLinks () const
 */
-HB_FUNC( QTEXTBROWSER_OPENLINKS )
+HB_FUNC_STATIC( QTEXTBROWSER_OPENLINKS )
 {
   QTextBrowser * obj = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -233,7 +233,7 @@ HB_FUNC( QTEXTBROWSER_OPENLINKS )
 /*
 QStringList searchPaths () const
 */
-HB_FUNC( QTEXTBROWSER_SEARCHPATHS )
+HB_FUNC_STATIC( QTEXTBROWSER_SEARCHPATHS )
 {
   QTextBrowser * obj = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -256,7 +256,7 @@ HB_FUNC( QTEXTBROWSER_SEARCHPATHS )
 /*
 void setOpenExternalLinks ( bool open )
 */
-HB_FUNC( QTEXTBROWSER_SETOPENEXTERNALLINKS )
+HB_FUNC_STATIC( QTEXTBROWSER_SETOPENEXTERNALLINKS )
 {
   QTextBrowser * obj = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -271,7 +271,7 @@ HB_FUNC( QTEXTBROWSER_SETOPENEXTERNALLINKS )
 /*
 void setOpenLinks ( bool open )
 */
-HB_FUNC( QTEXTBROWSER_SETOPENLINKS )
+HB_FUNC_STATIC( QTEXTBROWSER_SETOPENLINKS )
 {
   QTextBrowser * obj = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -286,7 +286,7 @@ HB_FUNC( QTEXTBROWSER_SETOPENLINKS )
 /*
 void setSearchPaths ( const QStringList & paths )
 */
-HB_FUNC( QTEXTBROWSER_SETSEARCHPATHS )
+HB_FUNC_STATIC( QTEXTBROWSER_SETSEARCHPATHS )
 {
   QTextBrowser * obj = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -309,7 +309,7 @@ par1 << temp;
 /*
 QUrl source () const
 */
-HB_FUNC( QTEXTBROWSER_SOURCE )
+HB_FUNC_STATIC( QTEXTBROWSER_SOURCE )
 {
   QTextBrowser * obj = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -322,7 +322,7 @@ HB_FUNC( QTEXTBROWSER_SOURCE )
 /*
 virtual QVariant loadResource ( int type, const QUrl & name )
 */
-HB_FUNC( QTEXTBROWSER_LOADRESOURCE )
+HB_FUNC_STATIC( QTEXTBROWSER_LOADRESOURCE )
 {
   QTextBrowser * obj = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -337,7 +337,7 @@ HB_FUNC( QTEXTBROWSER_LOADRESOURCE )
 /*
 virtual void backward ()
 */
-HB_FUNC( QTEXTBROWSER_BACKWARD )
+HB_FUNC_STATIC( QTEXTBROWSER_BACKWARD )
 {
   QTextBrowser * obj = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -351,7 +351,7 @@ HB_FUNC( QTEXTBROWSER_BACKWARD )
 /*
 virtual void forward ()
 */
-HB_FUNC( QTEXTBROWSER_FORWARD )
+HB_FUNC_STATIC( QTEXTBROWSER_FORWARD )
 {
   QTextBrowser * obj = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -365,7 +365,7 @@ HB_FUNC( QTEXTBROWSER_FORWARD )
 /*
 virtual void home ()
 */
-HB_FUNC( QTEXTBROWSER_HOME )
+HB_FUNC_STATIC( QTEXTBROWSER_HOME )
 {
   QTextBrowser * obj = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -379,7 +379,7 @@ HB_FUNC( QTEXTBROWSER_HOME )
 /*
 virtual void reload ()
 */
-HB_FUNC( QTEXTBROWSER_RELOAD )
+HB_FUNC_STATIC( QTEXTBROWSER_RELOAD )
 {
   QTextBrowser * obj = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -393,7 +393,7 @@ HB_FUNC( QTEXTBROWSER_RELOAD )
 /*
 virtual void setSource ( const QUrl & name )
 */
-HB_FUNC( QTEXTBROWSER_SETSOURCE )
+HB_FUNC_STATIC( QTEXTBROWSER_SETSOURCE )
 {
   QTextBrowser * obj = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

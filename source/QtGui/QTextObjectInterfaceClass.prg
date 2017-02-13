@@ -95,7 +95,7 @@ RETURN
 #include "qt4xhb_clsid.h"
 #include "qt4xhb_utils.h"
 
-HB_FUNC( QTEXTOBJECTINTERFACE_DELETE )
+HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_DELETE )
 {
   QTextObjectInterface * obj = (QTextObjectInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -114,7 +114,7 @@ HB_FUNC( QTEXTOBJECTINTERFACE_DELETE )
 /*
 virtual void drawObject ( QPainter * painter, const QRectF & rect, QTextDocument * doc, int posInDocument, const QTextFormat & format ) = 0
 */
-HB_FUNC( QTEXTOBJECTINTERFACE_DRAWOBJECT )
+HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_DRAWOBJECT )
 {
   QTextObjectInterface * obj = (QTextObjectInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -133,7 +133,7 @@ HB_FUNC( QTEXTOBJECTINTERFACE_DRAWOBJECT )
 /*
 virtual QSizeF intrinsicSize ( QTextDocument * doc, int posInDocument, const QTextFormat & format ) = 0
 */
-HB_FUNC( QTEXTOBJECTINTERFACE_INTRINSICSIZE )
+HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_INTRINSICSIZE )
 {
   QTextObjectInterface * obj = (QTextObjectInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

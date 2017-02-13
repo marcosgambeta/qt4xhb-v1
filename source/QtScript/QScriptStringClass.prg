@@ -99,7 +99,7 @@ RETURN
 /*
 QScriptString ()
 */
-HB_FUNC( QSCRIPTSTRING_NEW1 )
+HB_FUNC_STATIC( QSCRIPTSTRING_NEW1 )
 {
   QScriptString * o = NULL;
   o = new QScriptString (  );
@@ -114,7 +114,7 @@ HB_FUNC( QSCRIPTSTRING_NEW1 )
 /*
 QScriptString ( const QScriptString & other )
 */
-HB_FUNC( QSCRIPTSTRING_NEW2 )
+HB_FUNC_STATIC( QSCRIPTSTRING_NEW2 )
 {
   QScriptString * o = NULL;
   QScriptString * par1 = (QScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -130,7 +130,7 @@ HB_FUNC( QSCRIPTSTRING_NEW2 )
 //[1]QScriptString ()
 //[2]QScriptString ( const QScriptString & other )
 
-HB_FUNC( QSCRIPTSTRING_NEW )
+HB_FUNC_STATIC( QSCRIPTSTRING_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -146,7 +146,7 @@ HB_FUNC( QSCRIPTSTRING_NEW )
   }
 }
 
-HB_FUNC( QSCRIPTSTRING_DELETE )
+HB_FUNC_STATIC( QSCRIPTSTRING_DELETE )
 {
   QScriptString * obj = (QScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -165,7 +165,7 @@ HB_FUNC( QSCRIPTSTRING_DELETE )
 /*
 bool isValid () const
 */
-HB_FUNC( QSCRIPTSTRING_ISVALID )
+HB_FUNC_STATIC( QSCRIPTSTRING_ISVALID )
 {
   QScriptString * obj = (QScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -180,7 +180,7 @@ HB_FUNC( QSCRIPTSTRING_ISVALID )
 /*
 QString toString () const
 */
-HB_FUNC( QSCRIPTSTRING_TOSTRING )
+HB_FUNC_STATIC( QSCRIPTSTRING_TOSTRING )
 {
   QScriptString * obj = (QScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

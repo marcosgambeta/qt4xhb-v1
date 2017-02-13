@@ -115,7 +115,7 @@ RETURN
 /*
 void back ()
 */
-HB_FUNC( QWEBHISTORY_BACK )
+HB_FUNC_STATIC( QWEBHISTORY_BACK )
 {
   QWebHistory * obj = (QWebHistory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -129,7 +129,7 @@ HB_FUNC( QWEBHISTORY_BACK )
 /*
 QWebHistoryItem backItem () const
 */
-HB_FUNC( QWEBHISTORY_BACKITEM )
+HB_FUNC_STATIC( QWEBHISTORY_BACKITEM )
 {
   QWebHistory * obj = (QWebHistory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -142,7 +142,7 @@ HB_FUNC( QWEBHISTORY_BACKITEM )
 /*
 QList<QWebHistoryItem> backItems ( int maxItems ) const
 */
-HB_FUNC( QWEBHISTORY_BACKITEMS )
+HB_FUNC_STATIC( QWEBHISTORY_BACKITEMS )
 {
   QWebHistory * obj = (QWebHistory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -191,7 +191,7 @@ HB_FUNC( QWEBHISTORY_BACKITEMS )
 /*
 bool canGoBack () const
 */
-HB_FUNC( QWEBHISTORY_CANGOBACK )
+HB_FUNC_STATIC( QWEBHISTORY_CANGOBACK )
 {
   QWebHistory * obj = (QWebHistory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -205,7 +205,7 @@ HB_FUNC( QWEBHISTORY_CANGOBACK )
 /*
 bool canGoForward () const
 */
-HB_FUNC( QWEBHISTORY_CANGOFORWARD )
+HB_FUNC_STATIC( QWEBHISTORY_CANGOFORWARD )
 {
   QWebHistory * obj = (QWebHistory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -219,7 +219,7 @@ HB_FUNC( QWEBHISTORY_CANGOFORWARD )
 /*
 void clear ()
 */
-HB_FUNC( QWEBHISTORY_CLEAR )
+HB_FUNC_STATIC( QWEBHISTORY_CLEAR )
 {
   QWebHistory * obj = (QWebHistory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -233,7 +233,7 @@ HB_FUNC( QWEBHISTORY_CLEAR )
 /*
 int count () const
 */
-HB_FUNC( QWEBHISTORY_COUNT )
+HB_FUNC_STATIC( QWEBHISTORY_COUNT )
 {
   QWebHistory * obj = (QWebHistory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -247,7 +247,7 @@ HB_FUNC( QWEBHISTORY_COUNT )
 /*
 QWebHistoryItem currentItem () const
 */
-HB_FUNC( QWEBHISTORY_CURRENTITEM )
+HB_FUNC_STATIC( QWEBHISTORY_CURRENTITEM )
 {
   QWebHistory * obj = (QWebHistory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -260,7 +260,7 @@ HB_FUNC( QWEBHISTORY_CURRENTITEM )
 /*
 int currentItemIndex () const
 */
-HB_FUNC( QWEBHISTORY_CURRENTITEMINDEX )
+HB_FUNC_STATIC( QWEBHISTORY_CURRENTITEMINDEX )
 {
   QWebHistory * obj = (QWebHistory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -274,7 +274,7 @@ HB_FUNC( QWEBHISTORY_CURRENTITEMINDEX )
 /*
 void forward ()
 */
-HB_FUNC( QWEBHISTORY_FORWARD )
+HB_FUNC_STATIC( QWEBHISTORY_FORWARD )
 {
   QWebHistory * obj = (QWebHistory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -288,7 +288,7 @@ HB_FUNC( QWEBHISTORY_FORWARD )
 /*
 QWebHistoryItem forwardItem () const
 */
-HB_FUNC( QWEBHISTORY_FORWARDITEM )
+HB_FUNC_STATIC( QWEBHISTORY_FORWARDITEM )
 {
   QWebHistory * obj = (QWebHistory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -301,7 +301,7 @@ HB_FUNC( QWEBHISTORY_FORWARDITEM )
 /*
 QList<QWebHistoryItem> forwardItems ( int maxItems ) const
 */
-HB_FUNC( QWEBHISTORY_FORWARDITEMS )
+HB_FUNC_STATIC( QWEBHISTORY_FORWARDITEMS )
 {
   QWebHistory * obj = (QWebHistory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -350,7 +350,7 @@ HB_FUNC( QWEBHISTORY_FORWARDITEMS )
 /*
 void goToItem ( const QWebHistoryItem & item )
 */
-HB_FUNC( QWEBHISTORY_GOTOITEM )
+HB_FUNC_STATIC( QWEBHISTORY_GOTOITEM )
 {
   QWebHistory * obj = (QWebHistory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -365,7 +365,7 @@ HB_FUNC( QWEBHISTORY_GOTOITEM )
 /*
 QWebHistoryItem itemAt ( int i ) const
 */
-HB_FUNC( QWEBHISTORY_ITEMAT )
+HB_FUNC_STATIC( QWEBHISTORY_ITEMAT )
 {
   QWebHistory * obj = (QWebHistory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -379,7 +379,7 @@ HB_FUNC( QWEBHISTORY_ITEMAT )
 /*
 QList<QWebHistoryItem> items () const
 */
-HB_FUNC( QWEBHISTORY_ITEMS )
+HB_FUNC_STATIC( QWEBHISTORY_ITEMS )
 {
   QWebHistory * obj = (QWebHistory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -427,7 +427,7 @@ HB_FUNC( QWEBHISTORY_ITEMS )
 /*
 int maximumItemCount () const
 */
-HB_FUNC( QWEBHISTORY_MAXIMUMITEMCOUNT )
+HB_FUNC_STATIC( QWEBHISTORY_MAXIMUMITEMCOUNT )
 {
   QWebHistory * obj = (QWebHistory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -441,7 +441,7 @@ HB_FUNC( QWEBHISTORY_MAXIMUMITEMCOUNT )
 /*
 void setMaximumItemCount ( int count )
 */
-HB_FUNC( QWEBHISTORY_SETMAXIMUMITEMCOUNT )
+HB_FUNC_STATIC( QWEBHISTORY_SETMAXIMUMITEMCOUNT )
 {
   QWebHistory * obj = (QWebHistory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

@@ -70,7 +70,7 @@ RETURN
 /*
 QSvgWidget ( QWidget * parent = 0 )
 */
-HB_FUNC( QSVGWIDGET_NEW1 )
+HB_FUNC_STATIC( QSVGWIDGET_NEW1 )
 {
   QSvgWidget * o = NULL;
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -86,7 +86,7 @@ HB_FUNC( QSVGWIDGET_NEW1 )
 /*
 QSvgWidget ( const QString & file, QWidget * parent = 0 )
 */
-HB_FUNC( QSVGWIDGET_NEW2 )
+HB_FUNC_STATIC( QSVGWIDGET_NEW2 )
 {
   QSvgWidget * o = NULL;
   QString par1 = hb_parc(1);
@@ -103,7 +103,7 @@ HB_FUNC( QSVGWIDGET_NEW2 )
 //[1]QSvgWidget ( QWidget * parent = 0 )
 //[2]QSvgWidget ( const QString & file, QWidget * parent = 0 )
 
-HB_FUNC( QSVGWIDGET_NEW )
+HB_FUNC_STATIC( QSVGWIDGET_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
@@ -119,7 +119,7 @@ HB_FUNC( QSVGWIDGET_NEW )
   }
 }
 
-HB_FUNC( QSVGWIDGET_DELETE )
+HB_FUNC_STATIC( QSVGWIDGET_DELETE )
 {
   QSvgWidget * obj = (QSvgWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -138,7 +138,7 @@ HB_FUNC( QSVGWIDGET_DELETE )
 /*
 QSvgRenderer * renderer () const
 */
-HB_FUNC( QSVGWIDGET_RENDERER )
+HB_FUNC_STATIC( QSVGWIDGET_RENDERER )
 {
   QSvgWidget * obj = (QSvgWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -151,7 +151,7 @@ HB_FUNC( QSVGWIDGET_RENDERER )
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC( QSVGWIDGET_SIZEHINT )
+HB_FUNC_STATIC( QSVGWIDGET_SIZEHINT )
 {
   QSvgWidget * obj = (QSvgWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -164,7 +164,7 @@ HB_FUNC( QSVGWIDGET_SIZEHINT )
 /*
 void load ( const QString & file )
 */
-HB_FUNC( QSVGWIDGET_LOAD1 )
+HB_FUNC_STATIC( QSVGWIDGET_LOAD1 )
 {
   QSvgWidget * obj = (QSvgWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -179,7 +179,7 @@ HB_FUNC( QSVGWIDGET_LOAD1 )
 /*
 void load ( const QByteArray & contents )
 */
-HB_FUNC( QSVGWIDGET_LOAD2 )
+HB_FUNC_STATIC( QSVGWIDGET_LOAD2 )
 {
   QSvgWidget * obj = (QSvgWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -194,7 +194,7 @@ HB_FUNC( QSVGWIDGET_LOAD2 )
 //[1]void load ( const QString & file )
 //[2]void load ( const QByteArray & contents )
 
-HB_FUNC( QSVGWIDGET_LOAD )
+HB_FUNC_STATIC( QSVGWIDGET_LOAD )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {

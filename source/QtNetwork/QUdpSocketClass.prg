@@ -71,7 +71,7 @@ RETURN
 /*
 QUdpSocket ( QObject * parent = 0 )
 */
-HB_FUNC( QUDPSOCKET_NEW )
+HB_FUNC_STATIC( QUDPSOCKET_NEW )
 {
   QUdpSocket * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -84,7 +84,7 @@ HB_FUNC( QUDPSOCKET_NEW )
 }
 
 
-HB_FUNC( QUDPSOCKET_DELETE )
+HB_FUNC_STATIC( QUDPSOCKET_DELETE )
 {
   QUdpSocket * obj = (QUdpSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -103,7 +103,7 @@ HB_FUNC( QUDPSOCKET_DELETE )
 /*
 bool bind ( const QHostAddress & address, quint16 port )
 */
-HB_FUNC( QUDPSOCKET_BIND1 )
+HB_FUNC_STATIC( QUDPSOCKET_BIND1 )
 {
   QUdpSocket * obj = (QUdpSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -119,7 +119,7 @@ HB_FUNC( QUDPSOCKET_BIND1 )
 /*
 bool bind ( const QHostAddress & address, quint16 port, BindMode mode )
 */
-HB_FUNC( QUDPSOCKET_BIND2 )
+HB_FUNC_STATIC( QUDPSOCKET_BIND2 )
 {
   QUdpSocket * obj = (QUdpSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -136,7 +136,7 @@ HB_FUNC( QUDPSOCKET_BIND2 )
 /*
 bool bind ( quint16 port = 0 )
 */
-HB_FUNC( QUDPSOCKET_BIND3 )
+HB_FUNC_STATIC( QUDPSOCKET_BIND3 )
 {
   QUdpSocket * obj = (QUdpSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -151,7 +151,7 @@ HB_FUNC( QUDPSOCKET_BIND3 )
 /*
 bool bind ( quint16 port, BindMode mode )
 */
-HB_FUNC( QUDPSOCKET_BIND4 )
+HB_FUNC_STATIC( QUDPSOCKET_BIND4 )
 {
   QUdpSocket * obj = (QUdpSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -169,7 +169,7 @@ HB_FUNC( QUDPSOCKET_BIND4 )
 //[3]bool bind ( quint16 port = 0 )
 //[4]bool bind ( quint16 port, BindMode mode )
 
-HB_FUNC( QUDPSOCKET_BIND )
+HB_FUNC_STATIC( QUDPSOCKET_BIND )
 {
   if( ISNUMPAR(2) && ISQHOSTADDRESS(1) && ISNUM(2) )
   {
@@ -192,7 +192,7 @@ HB_FUNC( QUDPSOCKET_BIND )
 /*
 bool hasPendingDatagrams () const
 */
-HB_FUNC( QUDPSOCKET_HASPENDINGDATAGRAMS )
+HB_FUNC_STATIC( QUDPSOCKET_HASPENDINGDATAGRAMS )
 {
   QUdpSocket * obj = (QUdpSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -206,7 +206,7 @@ HB_FUNC( QUDPSOCKET_HASPENDINGDATAGRAMS )
 /*
 qint64 pendingDatagramSize () const
 */
-HB_FUNC( QUDPSOCKET_PENDINGDATAGRAMSIZE )
+HB_FUNC_STATIC( QUDPSOCKET_PENDINGDATAGRAMSIZE )
 {
   QUdpSocket * obj = (QUdpSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -220,7 +220,7 @@ HB_FUNC( QUDPSOCKET_PENDINGDATAGRAMSIZE )
 /*
 qint64 readDatagram ( char * data, qint64 maxSize, QHostAddress * address = 0, quint16 * port = 0 )
 */
-HB_FUNC( QUDPSOCKET_READDATAGRAM )
+HB_FUNC_STATIC( QUDPSOCKET_READDATAGRAM )
 {
   QUdpSocket * obj = (QUdpSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -238,7 +238,7 @@ HB_FUNC( QUDPSOCKET_READDATAGRAM )
 /*
 qint64 writeDatagram ( const char * data, qint64 size, const QHostAddress & address, quint16 port )
 */
-HB_FUNC( QUDPSOCKET_WRITEDATAGRAM1 )
+HB_FUNC_STATIC( QUDPSOCKET_WRITEDATAGRAM1 )
 {
   QUdpSocket * obj = (QUdpSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -256,7 +256,7 @@ HB_FUNC( QUDPSOCKET_WRITEDATAGRAM1 )
 /*
 qint64 writeDatagram ( const QByteArray & datagram, const QHostAddress & host, quint16 port )
 */
-HB_FUNC( QUDPSOCKET_WRITEDATAGRAM2 )
+HB_FUNC_STATIC( QUDPSOCKET_WRITEDATAGRAM2 )
 {
   QUdpSocket * obj = (QUdpSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -273,7 +273,7 @@ HB_FUNC( QUDPSOCKET_WRITEDATAGRAM2 )
 //[1]qint64 writeDatagram ( const char * data, qint64 size, const QHostAddress & address, quint16 port )
 //[2]qint64 writeDatagram ( const QByteArray & datagram, const QHostAddress & host, quint16 port )
 
-HB_FUNC( QUDPSOCKET_WRITEDATAGRAM )
+HB_FUNC_STATIC( QUDPSOCKET_WRITEDATAGRAM )
 {
   if( ISNUMPAR(4) && ISCHAR(1) && ISNUM(2) && ISQHOSTADDRESS(3) && ISNUM(4) )
   {

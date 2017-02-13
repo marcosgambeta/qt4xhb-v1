@@ -80,7 +80,7 @@ RETURN
 /*
 const QRect availableGeometry ( int screen = -1 ) const
 */
-HB_FUNC( QDESKTOPWIDGET_AVAILABLEGEOMETRY1 )
+HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY1 )
 {
   QDesktopWidget * obj = (QDesktopWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -94,7 +94,7 @@ HB_FUNC( QDESKTOPWIDGET_AVAILABLEGEOMETRY1 )
 /*
 const QRect availableGeometry ( const QWidget * widget ) const
 */
-HB_FUNC( QDESKTOPWIDGET_AVAILABLEGEOMETRY2 )
+HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY2 )
 {
   QDesktopWidget * obj = (QDesktopWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -108,7 +108,7 @@ HB_FUNC( QDESKTOPWIDGET_AVAILABLEGEOMETRY2 )
 /*
 const QRect availableGeometry ( const QPoint & p ) const
 */
-HB_FUNC( QDESKTOPWIDGET_AVAILABLEGEOMETRY3 )
+HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY3 )
 {
   QDesktopWidget * obj = (QDesktopWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -123,7 +123,7 @@ HB_FUNC( QDESKTOPWIDGET_AVAILABLEGEOMETRY3 )
 //[2]const QRect availableGeometry ( const QWidget * widget ) const
 //[3]const QRect availableGeometry ( const QPoint & p ) const
 
-HB_FUNC( QDESKTOPWIDGET_AVAILABLEGEOMETRY )
+HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY )
 {
   if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
@@ -142,7 +142,7 @@ HB_FUNC( QDESKTOPWIDGET_AVAILABLEGEOMETRY )
 /*
 bool isVirtualDesktop () const
 */
-HB_FUNC( QDESKTOPWIDGET_ISVIRTUALDESKTOP )
+HB_FUNC_STATIC( QDESKTOPWIDGET_ISVIRTUALDESKTOP )
 {
   QDesktopWidget * obj = (QDesktopWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -156,7 +156,7 @@ HB_FUNC( QDESKTOPWIDGET_ISVIRTUALDESKTOP )
 /*
 int primaryScreen () const
 */
-HB_FUNC( QDESKTOPWIDGET_PRIMARYSCREEN )
+HB_FUNC_STATIC( QDESKTOPWIDGET_PRIMARYSCREEN )
 {
   QDesktopWidget * obj = (QDesktopWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -170,7 +170,7 @@ HB_FUNC( QDESKTOPWIDGET_PRIMARYSCREEN )
 /*
 QWidget * screen ( int screen = -1 )
 */
-HB_FUNC( QDESKTOPWIDGET_SCREEN )
+HB_FUNC_STATIC( QDESKTOPWIDGET_SCREEN )
 {
   QDesktopWidget * obj = (QDesktopWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -184,7 +184,7 @@ HB_FUNC( QDESKTOPWIDGET_SCREEN )
 /*
 int screenCount () const
 */
-HB_FUNC( QDESKTOPWIDGET_SCREENCOUNT )
+HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENCOUNT )
 {
   QDesktopWidget * obj = (QDesktopWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -198,7 +198,7 @@ HB_FUNC( QDESKTOPWIDGET_SCREENCOUNT )
 /*
 const QRect screenGeometry ( int screen = -1 ) const
 */
-HB_FUNC( QDESKTOPWIDGET_SCREENGEOMETRY1 )
+HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY1 )
 {
   QDesktopWidget * obj = (QDesktopWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -212,7 +212,7 @@ HB_FUNC( QDESKTOPWIDGET_SCREENGEOMETRY1 )
 /*
 const QRect screenGeometry ( const QWidget * widget ) const
 */
-HB_FUNC( QDESKTOPWIDGET_SCREENGEOMETRY2 )
+HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY2 )
 {
   QDesktopWidget * obj = (QDesktopWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -226,7 +226,7 @@ HB_FUNC( QDESKTOPWIDGET_SCREENGEOMETRY2 )
 /*
 const QRect screenGeometry ( const QPoint & p ) const
 */
-HB_FUNC( QDESKTOPWIDGET_SCREENGEOMETRY3 )
+HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY3 )
 {
   QDesktopWidget * obj = (QDesktopWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -241,7 +241,7 @@ HB_FUNC( QDESKTOPWIDGET_SCREENGEOMETRY3 )
 //[2]const QRect screenGeometry ( const QWidget * widget ) const
 //[3]const QRect screenGeometry ( const QPoint & p ) const
 
-HB_FUNC( QDESKTOPWIDGET_SCREENGEOMETRY )
+HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY )
 {
   if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
@@ -260,7 +260,7 @@ HB_FUNC( QDESKTOPWIDGET_SCREENGEOMETRY )
 /*
 int screenNumber ( const QWidget * widget = 0 ) const
 */
-HB_FUNC( QDESKTOPWIDGET_SCREENNUMBER1 )
+HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENNUMBER1 )
 {
   QDesktopWidget * obj = (QDesktopWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -275,7 +275,7 @@ HB_FUNC( QDESKTOPWIDGET_SCREENNUMBER1 )
 /*
 int screenNumber ( const QPoint & point ) const
 */
-HB_FUNC( QDESKTOPWIDGET_SCREENNUMBER2 )
+HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENNUMBER2 )
 {
   QDesktopWidget * obj = (QDesktopWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -290,7 +290,7 @@ HB_FUNC( QDESKTOPWIDGET_SCREENNUMBER2 )
 //[1]int screenNumber ( const QWidget * widget = 0 ) const
 //[2]int screenNumber ( const QPoint & point ) const
 
-HB_FUNC( QDESKTOPWIDGET_SCREENNUMBER )
+HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENNUMBER )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {

@@ -70,7 +70,7 @@ RETURN
 /*
 QGLFramebufferObjectFormat ()
 */
-HB_FUNC( QGLFRAMEBUFFEROBJECTFORMAT_NEW1 )
+HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_NEW1 )
 {
   QGLFramebufferObjectFormat * o = NULL;
   o = new QGLFramebufferObjectFormat (  );
@@ -85,7 +85,7 @@ HB_FUNC( QGLFRAMEBUFFEROBJECTFORMAT_NEW1 )
 /*
 QGLFramebufferObjectFormat ( const QGLFramebufferObjectFormat & other )
 */
-HB_FUNC( QGLFRAMEBUFFEROBJECTFORMAT_NEW2 )
+HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_NEW2 )
 {
   QGLFramebufferObjectFormat * o = NULL;
   QGLFramebufferObjectFormat * par1 = (QGLFramebufferObjectFormat *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -101,7 +101,7 @@ HB_FUNC( QGLFRAMEBUFFEROBJECTFORMAT_NEW2 )
 //[1]QGLFramebufferObjectFormat ()
 //[2]QGLFramebufferObjectFormat ( const QGLFramebufferObjectFormat & other )
 
-HB_FUNC( QGLFRAMEBUFFEROBJECTFORMAT_NEW )
+HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -117,7 +117,7 @@ HB_FUNC( QGLFRAMEBUFFEROBJECTFORMAT_NEW )
   }
 }
 
-HB_FUNC( QGLFRAMEBUFFEROBJECTFORMAT_DELETE )
+HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_DELETE )
 {
   QGLFramebufferObjectFormat * obj = (QGLFramebufferObjectFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -136,7 +136,7 @@ HB_FUNC( QGLFRAMEBUFFEROBJECTFORMAT_DELETE )
 /*
 QGLFramebufferObject::Attachment attachment () const
 */
-HB_FUNC( QGLFRAMEBUFFEROBJECTFORMAT_ATTACHMENT )
+HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_ATTACHMENT )
 {
   QGLFramebufferObjectFormat * obj = (QGLFramebufferObjectFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -150,7 +150,7 @@ HB_FUNC( QGLFRAMEBUFFEROBJECTFORMAT_ATTACHMENT )
 /*
 GLenum internalTextureFormat () const
 */
-HB_FUNC( QGLFRAMEBUFFEROBJECTFORMAT_INTERNALTEXTUREFORMAT )
+HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_INTERNALTEXTUREFORMAT )
 {
   QGLFramebufferObjectFormat * obj = (QGLFramebufferObjectFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -164,7 +164,7 @@ HB_FUNC( QGLFRAMEBUFFEROBJECTFORMAT_INTERNALTEXTUREFORMAT )
 /*
 int samples () const
 */
-HB_FUNC( QGLFRAMEBUFFEROBJECTFORMAT_SAMPLES )
+HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_SAMPLES )
 {
   QGLFramebufferObjectFormat * obj = (QGLFramebufferObjectFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -178,7 +178,7 @@ HB_FUNC( QGLFRAMEBUFFEROBJECTFORMAT_SAMPLES )
 /*
 void setAttachment ( QGLFramebufferObject::Attachment attachment )
 */
-HB_FUNC( QGLFRAMEBUFFEROBJECTFORMAT_SETATTACHMENT )
+HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_SETATTACHMENT )
 {
   QGLFramebufferObjectFormat * obj = (QGLFramebufferObjectFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -193,7 +193,7 @@ HB_FUNC( QGLFRAMEBUFFEROBJECTFORMAT_SETATTACHMENT )
 /*
 void setInternalTextureFormat ( GLenum internalTextureFormat )
 */
-HB_FUNC( QGLFRAMEBUFFEROBJECTFORMAT_SETINTERNALTEXTUREFORMAT )
+HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_SETINTERNALTEXTUREFORMAT )
 {
   QGLFramebufferObjectFormat * obj = (QGLFramebufferObjectFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -208,7 +208,7 @@ HB_FUNC( QGLFRAMEBUFFEROBJECTFORMAT_SETINTERNALTEXTUREFORMAT )
 /*
 void setSamples ( int samples )
 */
-HB_FUNC( QGLFRAMEBUFFEROBJECTFORMAT_SETSAMPLES )
+HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_SETSAMPLES )
 {
   QGLFramebufferObjectFormat * obj = (QGLFramebufferObjectFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -223,7 +223,7 @@ HB_FUNC( QGLFRAMEBUFFEROBJECTFORMAT_SETSAMPLES )
 /*
 void setTextureTarget ( GLenum target )
 */
-HB_FUNC( QGLFRAMEBUFFEROBJECTFORMAT_SETTEXTURETARGET )
+HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_SETTEXTURETARGET )
 {
   QGLFramebufferObjectFormat * obj = (QGLFramebufferObjectFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -238,7 +238,7 @@ HB_FUNC( QGLFRAMEBUFFEROBJECTFORMAT_SETTEXTURETARGET )
 /*
 GLenum textureTarget () const
 */
-HB_FUNC( QGLFRAMEBUFFEROBJECTFORMAT_TEXTURETARGET )
+HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_TEXTURETARGET )
 {
   QGLFramebufferObjectFormat * obj = (QGLFramebufferObjectFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

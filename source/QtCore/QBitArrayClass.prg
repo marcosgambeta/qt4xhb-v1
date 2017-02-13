@@ -116,7 +116,7 @@ RETURN
 /*
 QBitArray ()
 */
-HB_FUNC( QBITARRAY_NEW1 )
+HB_FUNC_STATIC( QBITARRAY_NEW1 )
 {
   QBitArray * o = NULL;
   o = new QBitArray (  );
@@ -131,7 +131,7 @@ HB_FUNC( QBITARRAY_NEW1 )
 /*
 QBitArray ( int size, bool value = false )
 */
-HB_FUNC( QBITARRAY_NEW2 )
+HB_FUNC_STATIC( QBITARRAY_NEW2 )
 {
   QBitArray * o = NULL;
   int par1 = hb_parni(1);
@@ -148,7 +148,7 @@ HB_FUNC( QBITARRAY_NEW2 )
 /*
 QBitArray ( const QBitArray & other )
 */
-HB_FUNC( QBITARRAY_NEW3 )
+HB_FUNC_STATIC( QBITARRAY_NEW3 )
 {
   QBitArray * o = NULL;
   QBitArray * par1 = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -165,7 +165,7 @@ HB_FUNC( QBITARRAY_NEW3 )
 //[2]QBitArray ( int size, bool value = false )
 //[3]QBitArray ( const QBitArray & other )
 
-HB_FUNC( QBITARRAY_NEW )
+HB_FUNC_STATIC( QBITARRAY_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -190,7 +190,7 @@ HB_FUNC( QBITARRAY_NEW )
 /*
 bool at ( int i ) const
 */
-HB_FUNC( QBITARRAY_AT )
+HB_FUNC_STATIC( QBITARRAY_AT )
 {
   QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -205,7 +205,7 @@ HB_FUNC( QBITARRAY_AT )
 /*
 void clear ()
 */
-HB_FUNC( QBITARRAY_CLEAR )
+HB_FUNC_STATIC( QBITARRAY_CLEAR )
 {
   QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -219,7 +219,7 @@ HB_FUNC( QBITARRAY_CLEAR )
 /*
 void clearBit ( int i )
 */
-HB_FUNC( QBITARRAY_CLEARBIT )
+HB_FUNC_STATIC( QBITARRAY_CLEARBIT )
 {
   QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -234,7 +234,7 @@ HB_FUNC( QBITARRAY_CLEARBIT )
 /*
 int count () const
 */
-HB_FUNC( QBITARRAY_COUNT1 )
+HB_FUNC_STATIC( QBITARRAY_COUNT1 )
 {
   QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -248,7 +248,7 @@ HB_FUNC( QBITARRAY_COUNT1 )
 /*
 int count ( bool on ) const
 */
-HB_FUNC( QBITARRAY_COUNT2 )
+HB_FUNC_STATIC( QBITARRAY_COUNT2 )
 {
   QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -263,7 +263,7 @@ HB_FUNC( QBITARRAY_COUNT2 )
 //[1]int count () const
 //[2]int count ( bool on ) const
 
-HB_FUNC( QBITARRAY_COUNT )
+HB_FUNC_STATIC( QBITARRAY_COUNT )
 {
   if( ISNUMPAR(0) )
   {
@@ -278,7 +278,7 @@ HB_FUNC( QBITARRAY_COUNT )
 /*
 bool fill ( bool value, int size = -1 )
 */
-HB_FUNC( QBITARRAY_FILL1 )
+HB_FUNC_STATIC( QBITARRAY_FILL1 )
 {
   QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -294,7 +294,7 @@ HB_FUNC( QBITARRAY_FILL1 )
 /*
 void fill ( bool value, int begin, int end )
 */
-HB_FUNC( QBITARRAY_FILL2 )
+HB_FUNC_STATIC( QBITARRAY_FILL2 )
 {
   QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -311,7 +311,7 @@ HB_FUNC( QBITARRAY_FILL2 )
 //[1]bool fill ( bool value, int size = -1 )
 //[2]void fill ( bool value, int begin, int end )
 
-HB_FUNC( QBITARRAY_FILL )
+HB_FUNC_STATIC( QBITARRAY_FILL )
 {
   if( ISBETWEEN(1,2) && ISLOG(1) && (ISNUM(2)||ISNIL(2)) )
   {
@@ -326,7 +326,7 @@ HB_FUNC( QBITARRAY_FILL )
 /*
 bool isEmpty () const
 */
-HB_FUNC( QBITARRAY_ISEMPTY )
+HB_FUNC_STATIC( QBITARRAY_ISEMPTY )
 {
   QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -340,7 +340,7 @@ HB_FUNC( QBITARRAY_ISEMPTY )
 /*
 bool isNull () const
 */
-HB_FUNC( QBITARRAY_ISNULL )
+HB_FUNC_STATIC( QBITARRAY_ISNULL )
 {
   QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -354,7 +354,7 @@ HB_FUNC( QBITARRAY_ISNULL )
 /*
 void resize ( int size )
 */
-HB_FUNC( QBITARRAY_RESIZE )
+HB_FUNC_STATIC( QBITARRAY_RESIZE )
 {
   QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -369,7 +369,7 @@ HB_FUNC( QBITARRAY_RESIZE )
 /*
 void setBit ( int i )
 */
-HB_FUNC( QBITARRAY_SETBIT1 )
+HB_FUNC_STATIC( QBITARRAY_SETBIT1 )
 {
   QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -384,7 +384,7 @@ HB_FUNC( QBITARRAY_SETBIT1 )
 /*
 void setBit ( int i, bool value )
 */
-HB_FUNC( QBITARRAY_SETBIT2 )
+HB_FUNC_STATIC( QBITARRAY_SETBIT2 )
 {
   QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -400,7 +400,7 @@ HB_FUNC( QBITARRAY_SETBIT2 )
 //[1]void setBit ( int i )
 //[2]void setBit ( int i, bool value )
 
-HB_FUNC( QBITARRAY_SETBIT )
+HB_FUNC_STATIC( QBITARRAY_SETBIT )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
@@ -415,7 +415,7 @@ HB_FUNC( QBITARRAY_SETBIT )
 /*
 int size () const
 */
-HB_FUNC( QBITARRAY_SIZE )
+HB_FUNC_STATIC( QBITARRAY_SIZE )
 {
   QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -429,7 +429,7 @@ HB_FUNC( QBITARRAY_SIZE )
 /*
 bool testBit ( int i ) const
 */
-HB_FUNC( QBITARRAY_TESTBIT )
+HB_FUNC_STATIC( QBITARRAY_TESTBIT )
 {
   QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -444,7 +444,7 @@ HB_FUNC( QBITARRAY_TESTBIT )
 /*
 bool toggleBit ( int i )
 */
-HB_FUNC( QBITARRAY_TOGGLEBIT )
+HB_FUNC_STATIC( QBITARRAY_TOGGLEBIT )
 {
   QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -459,7 +459,7 @@ HB_FUNC( QBITARRAY_TOGGLEBIT )
 /*
 void truncate ( int pos )
 */
-HB_FUNC( QBITARRAY_TRUNCATE )
+HB_FUNC_STATIC( QBITARRAY_TRUNCATE )
 {
   QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

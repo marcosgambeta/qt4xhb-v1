@@ -120,7 +120,7 @@ RETURN
 /*
 QFileSystemModel(QObject * parent = 0)
 */
-HB_FUNC( QFILESYSTEMMODEL_NEW )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_NEW )
 {
   QFileSystemModel * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -133,7 +133,7 @@ HB_FUNC( QFILESYSTEMMODEL_NEW )
 }
 
 
-HB_FUNC( QFILESYSTEMMODEL_DELETE )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_DELETE )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -152,7 +152,7 @@ HB_FUNC( QFILESYSTEMMODEL_DELETE )
 /*
 QIcon fileIcon ( const QModelIndex & index ) const
 */
-HB_FUNC( QFILESYSTEMMODEL_FILEICON )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEICON )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -166,7 +166,7 @@ HB_FUNC( QFILESYSTEMMODEL_FILEICON )
 /*
 QFileInfo fileInfo ( const QModelIndex & index ) const
 */
-HB_FUNC( QFILESYSTEMMODEL_FILEINFO )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEINFO )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -180,7 +180,7 @@ HB_FUNC( QFILESYSTEMMODEL_FILEINFO )
 /*
 QString fileName ( const QModelIndex & index ) const
 */
-HB_FUNC( QFILESYSTEMMODEL_FILENAME )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_FILENAME )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -195,7 +195,7 @@ HB_FUNC( QFILESYSTEMMODEL_FILENAME )
 /*
 QString filePath ( const QModelIndex & index ) const
 */
-HB_FUNC( QFILESYSTEMMODEL_FILEPATH )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEPATH )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -210,7 +210,7 @@ HB_FUNC( QFILESYSTEMMODEL_FILEPATH )
 /*
 QDir::Filters filter () const
 */
-HB_FUNC( QFILESYSTEMMODEL_FILTER )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_FILTER )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -224,7 +224,7 @@ HB_FUNC( QFILESYSTEMMODEL_FILTER )
 /*
 QFileIconProvider * iconProvider () const
 */
-HB_FUNC( QFILESYSTEMMODEL_ICONPROVIDER )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_ICONPROVIDER )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -237,7 +237,7 @@ HB_FUNC( QFILESYSTEMMODEL_ICONPROVIDER )
 /*
 QModelIndex index ( const QString & path, int column = 0 ) const
 */
-HB_FUNC( QFILESYSTEMMODEL_INDEX1 )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_INDEX1 )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -252,7 +252,7 @@ HB_FUNC( QFILESYSTEMMODEL_INDEX1 )
 /*
 bool isDir ( const QModelIndex & index ) const
 */
-HB_FUNC( QFILESYSTEMMODEL_ISDIR )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_ISDIR )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -267,7 +267,7 @@ HB_FUNC( QFILESYSTEMMODEL_ISDIR )
 /*
 bool isReadOnly () const
 */
-HB_FUNC( QFILESYSTEMMODEL_ISREADONLY )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_ISREADONLY )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -281,7 +281,7 @@ HB_FUNC( QFILESYSTEMMODEL_ISREADONLY )
 /*
 QDateTime lastModified ( const QModelIndex & index ) const
 */
-HB_FUNC( QFILESYSTEMMODEL_LASTMODIFIED )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_LASTMODIFIED )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -295,7 +295,7 @@ HB_FUNC( QFILESYSTEMMODEL_LASTMODIFIED )
 /*
 QModelIndex mkdir ( const QModelIndex & parent, const QString & name )
 */
-HB_FUNC( QFILESYSTEMMODEL_MKDIR )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_MKDIR )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -310,7 +310,7 @@ HB_FUNC( QFILESYSTEMMODEL_MKDIR )
 /*
 QVariant myComputer ( int role = Qt::DisplayRole ) const
 */
-HB_FUNC( QFILESYSTEMMODEL_MYCOMPUTER )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_MYCOMPUTER )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -324,7 +324,7 @@ HB_FUNC( QFILESYSTEMMODEL_MYCOMPUTER )
 /*
 bool nameFilterDisables () const
 */
-HB_FUNC( QFILESYSTEMMODEL_NAMEFILTERDISABLES )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_NAMEFILTERDISABLES )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -338,7 +338,7 @@ HB_FUNC( QFILESYSTEMMODEL_NAMEFILTERDISABLES )
 /*
 QStringList nameFilters () const
 */
-HB_FUNC( QFILESYSTEMMODEL_NAMEFILTERS )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_NAMEFILTERS )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -361,7 +361,7 @@ HB_FUNC( QFILESYSTEMMODEL_NAMEFILTERS )
 /*
 QFile::Permissions permissions ( const QModelIndex & index ) const
 */
-HB_FUNC( QFILESYSTEMMODEL_PERMISSIONS )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_PERMISSIONS )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -376,7 +376,7 @@ HB_FUNC( QFILESYSTEMMODEL_PERMISSIONS )
 /*
 bool remove ( const QModelIndex & index ) const
 */
-HB_FUNC( QFILESYSTEMMODEL_REMOVE )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_REMOVE )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -391,7 +391,7 @@ HB_FUNC( QFILESYSTEMMODEL_REMOVE )
 /*
 bool resolveSymlinks () const
 */
-HB_FUNC( QFILESYSTEMMODEL_RESOLVESYMLINKS )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_RESOLVESYMLINKS )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -405,7 +405,7 @@ HB_FUNC( QFILESYSTEMMODEL_RESOLVESYMLINKS )
 /*
 bool rmdir ( const QModelIndex & index ) const
 */
-HB_FUNC( QFILESYSTEMMODEL_RMDIR )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_RMDIR )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -420,7 +420,7 @@ HB_FUNC( QFILESYSTEMMODEL_RMDIR )
 /*
 QDir rootDirectory () const
 */
-HB_FUNC( QFILESYSTEMMODEL_ROOTDIRECTORY )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_ROOTDIRECTORY )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -433,7 +433,7 @@ HB_FUNC( QFILESYSTEMMODEL_ROOTDIRECTORY )
 /*
 QString rootPath () const
 */
-HB_FUNC( QFILESYSTEMMODEL_ROOTPATH )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_ROOTPATH )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -447,7 +447,7 @@ HB_FUNC( QFILESYSTEMMODEL_ROOTPATH )
 /*
 void setFilter ( QDir::Filters filters )
 */
-HB_FUNC( QFILESYSTEMMODEL_SETFILTER )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_SETFILTER )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -462,7 +462,7 @@ HB_FUNC( QFILESYSTEMMODEL_SETFILTER )
 /*
 void setIconProvider ( QFileIconProvider * provider )
 */
-HB_FUNC( QFILESYSTEMMODEL_SETICONPROVIDER )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_SETICONPROVIDER )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -477,7 +477,7 @@ HB_FUNC( QFILESYSTEMMODEL_SETICONPROVIDER )
 /*
 void setNameFilterDisables ( bool enable )
 */
-HB_FUNC( QFILESYSTEMMODEL_SETNAMEFILTERDISABLES )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_SETNAMEFILTERDISABLES )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -492,7 +492,7 @@ HB_FUNC( QFILESYSTEMMODEL_SETNAMEFILTERDISABLES )
 /*
 void setNameFilters ( const QStringList & filters )
 */
-HB_FUNC( QFILESYSTEMMODEL_SETNAMEFILTERS )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_SETNAMEFILTERS )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -515,7 +515,7 @@ par1 << temp;
 /*
 void setReadOnly ( bool enable )
 */
-HB_FUNC( QFILESYSTEMMODEL_SETREADONLY )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_SETREADONLY )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -530,7 +530,7 @@ HB_FUNC( QFILESYSTEMMODEL_SETREADONLY )
 /*
 void setResolveSymlinks ( bool enable )
 */
-HB_FUNC( QFILESYSTEMMODEL_SETRESOLVESYMLINKS )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_SETRESOLVESYMLINKS )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -545,7 +545,7 @@ HB_FUNC( QFILESYSTEMMODEL_SETRESOLVESYMLINKS )
 /*
 QModelIndex setRootPath ( const QString & newPath )
 */
-HB_FUNC( QFILESYSTEMMODEL_SETROOTPATH )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_SETROOTPATH )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -559,7 +559,7 @@ HB_FUNC( QFILESYSTEMMODEL_SETROOTPATH )
 /*
 qint64 size ( const QModelIndex & index ) const
 */
-HB_FUNC( QFILESYSTEMMODEL_SIZE )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_SIZE )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -574,7 +574,7 @@ HB_FUNC( QFILESYSTEMMODEL_SIZE )
 /*
 QString type ( const QModelIndex & index ) const
 */
-HB_FUNC( QFILESYSTEMMODEL_TYPE )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_TYPE )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -589,7 +589,7 @@ HB_FUNC( QFILESYSTEMMODEL_TYPE )
 /*
 virtual bool canFetchMore ( const QModelIndex & parent ) const
 */
-HB_FUNC( QFILESYSTEMMODEL_CANFETCHMORE )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_CANFETCHMORE )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -604,7 +604,7 @@ HB_FUNC( QFILESYSTEMMODEL_CANFETCHMORE )
 /*
 virtual int columnCount ( const QModelIndex & parent = QModelIndex() ) const
 */
-HB_FUNC( QFILESYSTEMMODEL_COLUMNCOUNT )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_COLUMNCOUNT )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -619,7 +619,7 @@ HB_FUNC( QFILESYSTEMMODEL_COLUMNCOUNT )
 /*
 virtual QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const
 */
-HB_FUNC( QFILESYSTEMMODEL_DATA )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_DATA )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -634,7 +634,7 @@ HB_FUNC( QFILESYSTEMMODEL_DATA )
 /*
 virtual bool dropMimeData ( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
 */
-HB_FUNC( QFILESYSTEMMODEL_DROPMIMEDATA )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_DROPMIMEDATA )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -653,7 +653,7 @@ HB_FUNC( QFILESYSTEMMODEL_DROPMIMEDATA )
 /*
 virtual void fetchMore ( const QModelIndex & parent )
 */
-HB_FUNC( QFILESYSTEMMODEL_FETCHMORE )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_FETCHMORE )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -668,7 +668,7 @@ HB_FUNC( QFILESYSTEMMODEL_FETCHMORE )
 /*
 virtual Qt::ItemFlags flags ( const QModelIndex & index ) const
 */
-HB_FUNC( QFILESYSTEMMODEL_FLAGS )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_FLAGS )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -683,7 +683,7 @@ HB_FUNC( QFILESYSTEMMODEL_FLAGS )
 /*
 virtual bool hasChildren ( const QModelIndex & parent = QModelIndex() ) const
 */
-HB_FUNC( QFILESYSTEMMODEL_HASCHILDREN )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_HASCHILDREN )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -698,7 +698,7 @@ HB_FUNC( QFILESYSTEMMODEL_HASCHILDREN )
 /*
 virtual QVariant headerData ( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
 */
-HB_FUNC( QFILESYSTEMMODEL_HEADERDATA )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_HEADERDATA )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -714,7 +714,7 @@ HB_FUNC( QFILESYSTEMMODEL_HEADERDATA )
 /*
 virtual QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
 */
-HB_FUNC( QFILESYSTEMMODEL_INDEX2 )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_INDEX2 )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -730,7 +730,7 @@ HB_FUNC( QFILESYSTEMMODEL_INDEX2 )
 //[1]QModelIndex index ( const QString & path, int column = 0 ) const
 //[2]virtual QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
 
-HB_FUNC( QFILESYSTEMMODEL_INDEX )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_INDEX )
 {
   if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
   {
@@ -745,7 +745,7 @@ HB_FUNC( QFILESYSTEMMODEL_INDEX )
 /*
 virtual QMimeData * mimeData ( const QModelIndexList & indexes ) const
 */
-HB_FUNC( QFILESYSTEMMODEL_MIMEDATA )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_MIMEDATA )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -759,7 +759,7 @@ HB_FUNC( QFILESYSTEMMODEL_MIMEDATA )
 /*
 virtual QStringList mimeTypes () const
 */
-HB_FUNC( QFILESYSTEMMODEL_MIMETYPES )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_MIMETYPES )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -782,7 +782,7 @@ HB_FUNC( QFILESYSTEMMODEL_MIMETYPES )
 /*
 virtual QModelIndex parent ( const QModelIndex & index ) const
 */
-HB_FUNC( QFILESYSTEMMODEL_PARENT )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_PARENT )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -796,7 +796,7 @@ HB_FUNC( QFILESYSTEMMODEL_PARENT )
 /*
 virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const
 */
-HB_FUNC( QFILESYSTEMMODEL_ROWCOUNT )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_ROWCOUNT )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -811,7 +811,7 @@ HB_FUNC( QFILESYSTEMMODEL_ROWCOUNT )
 /*
 virtual bool setData ( const QModelIndex & idx, const QVariant & value, int role = Qt::EditRole )
 */
-HB_FUNC( QFILESYSTEMMODEL_SETDATA )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_SETDATA )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -828,7 +828,7 @@ HB_FUNC( QFILESYSTEMMODEL_SETDATA )
 /*
 virtual void sort ( int column, Qt::SortOrder order = Qt::AscendingOrder )
 */
-HB_FUNC( QFILESYSTEMMODEL_SORT )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_SORT )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -844,7 +844,7 @@ HB_FUNC( QFILESYSTEMMODEL_SORT )
 /*
 virtual Qt::DropActions supportedDropActions () const
 */
-HB_FUNC( QFILESYSTEMMODEL_SUPPORTEDDROPACTIONS )
+HB_FUNC_STATIC( QFILESYSTEMMODEL_SUPPORTEDDROPACTIONS )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

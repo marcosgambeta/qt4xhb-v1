@@ -61,7 +61,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QDESIGNEROBJECTINSPECTORINTERFACE_DELETE )
+HB_FUNC_STATIC( QDESIGNEROBJECTINSPECTORINTERFACE_DELETE )
 {
   QDesignerObjectInspectorInterface * obj = (QDesignerObjectInspectorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -80,7 +80,7 @@ HB_FUNC( QDESIGNEROBJECTINSPECTORINTERFACE_DELETE )
 /*
 virtual QDesignerFormEditorInterface * core () const
 */
-HB_FUNC( QDESIGNEROBJECTINSPECTORINTERFACE_CORE )
+HB_FUNC_STATIC( QDESIGNEROBJECTINSPECTORINTERFACE_CORE )
 {
   QDesignerObjectInspectorInterface * obj = (QDesignerObjectInspectorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -93,7 +93,7 @@ HB_FUNC( QDESIGNEROBJECTINSPECTORINTERFACE_CORE )
 /*
 virtual void setFormWindow ( QDesignerFormWindowInterface * formWindow ) = 0
 */
-HB_FUNC( QDESIGNEROBJECTINSPECTORINTERFACE_SETFORMWINDOW )
+HB_FUNC_STATIC( QDESIGNEROBJECTINSPECTORINTERFACE_SETFORMWINDOW )
 {
   QDesignerObjectInspectorInterface * obj = (QDesignerObjectInspectorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

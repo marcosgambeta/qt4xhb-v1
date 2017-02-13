@@ -73,7 +73,7 @@ RETURN
 /*
 QStringListModel(QObject * parent = 0)
 */
-HB_FUNC( QSTRINGLISTMODEL_NEW1 )
+HB_FUNC_STATIC( QSTRINGLISTMODEL_NEW1 )
 {
   QStringListModel * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -89,7 +89,7 @@ HB_FUNC( QSTRINGLISTMODEL_NEW1 )
 /*
 QStringListModel(const QStringList & strings, QObject * parent = 0)
 */
-HB_FUNC( QSTRINGLISTMODEL_NEW2 )
+HB_FUNC_STATIC( QSTRINGLISTMODEL_NEW2 )
 {
   QStringListModel * o = NULL;
 QStringList par1;
@@ -114,7 +114,7 @@ par1 << temp;
 //[1]QStringListModel(QObject * parent = 0)
 //[2]QStringListModel(const QStringList & strings, QObject * parent = 0)
 
-HB_FUNC( QSTRINGLISTMODEL_NEW )
+HB_FUNC_STATIC( QSTRINGLISTMODEL_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
@@ -135,7 +135,7 @@ HB_FUNC( QSTRINGLISTMODEL_NEW )
 /*
 void setStringList(const QStringList & strings)
 */
-HB_FUNC( QSTRINGLISTMODEL_SETSTRINGLIST )
+HB_FUNC_STATIC( QSTRINGLISTMODEL_SETSTRINGLIST )
 {
   QStringListModel * obj = (QStringListModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -158,7 +158,7 @@ par1 << temp;
 /*
 QStringList stringList() const
 */
-HB_FUNC( QSTRINGLISTMODEL_STRINGLIST )
+HB_FUNC_STATIC( QSTRINGLISTMODEL_STRINGLIST )
 {
   QStringListModel * obj = (QStringListModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -181,7 +181,7 @@ HB_FUNC( QSTRINGLISTMODEL_STRINGLIST )
 /*
 virtual QVariant data(const QModelIndex & index, int role) const
 */
-HB_FUNC( QSTRINGLISTMODEL_DATA )
+HB_FUNC_STATIC( QSTRINGLISTMODEL_DATA )
 {
   QStringListModel * obj = (QStringListModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -196,7 +196,7 @@ HB_FUNC( QSTRINGLISTMODEL_DATA )
 /*
 virtual Qt::ItemFlags flags(const QModelIndex & index) const
 */
-HB_FUNC( QSTRINGLISTMODEL_FLAGS )
+HB_FUNC_STATIC( QSTRINGLISTMODEL_FLAGS )
 {
   QStringListModel * obj = (QStringListModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -211,7 +211,7 @@ HB_FUNC( QSTRINGLISTMODEL_FLAGS )
 /*
 virtual bool insertRows(int row, int count, const QModelIndex & parent = QModelIndex())
 */
-HB_FUNC( QSTRINGLISTMODEL_INSERTROWS )
+HB_FUNC_STATIC( QSTRINGLISTMODEL_INSERTROWS )
 {
   QStringListModel * obj = (QStringListModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -228,7 +228,7 @@ HB_FUNC( QSTRINGLISTMODEL_INSERTROWS )
 /*
 virtual bool removeRows(int row, int count, const QModelIndex & parent = QModelIndex())
 */
-HB_FUNC( QSTRINGLISTMODEL_REMOVEROWS )
+HB_FUNC_STATIC( QSTRINGLISTMODEL_REMOVEROWS )
 {
   QStringListModel * obj = (QStringListModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -245,7 +245,7 @@ HB_FUNC( QSTRINGLISTMODEL_REMOVEROWS )
 /*
 virtual int rowCount(const QModelIndex & parent = QModelIndex()) const
 */
-HB_FUNC( QSTRINGLISTMODEL_ROWCOUNT )
+HB_FUNC_STATIC( QSTRINGLISTMODEL_ROWCOUNT )
 {
   QStringListModel * obj = (QStringListModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -260,7 +260,7 @@ HB_FUNC( QSTRINGLISTMODEL_ROWCOUNT )
 /*
 virtual bool setData(const QModelIndex & index, const QVariant & value, int role = Qt::EditRole)
 */
-HB_FUNC( QSTRINGLISTMODEL_SETDATA )
+HB_FUNC_STATIC( QSTRINGLISTMODEL_SETDATA )
 {
   QStringListModel * obj = (QStringListModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -277,7 +277,7 @@ HB_FUNC( QSTRINGLISTMODEL_SETDATA )
 /*
 virtual void sort(int column, Qt::SortOrder order = Qt::AscendingOrder)
 */
-HB_FUNC( QSTRINGLISTMODEL_SORT )
+HB_FUNC_STATIC( QSTRINGLISTMODEL_SORT )
 {
   QStringListModel * obj = (QStringListModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -293,7 +293,7 @@ HB_FUNC( QSTRINGLISTMODEL_SORT )
 /*
 virtual Qt::DropActions supportedDropActions() const
 */
-HB_FUNC( QSTRINGLISTMODEL_SUPPORTEDDROPACTIONS )
+HB_FUNC_STATIC( QSTRINGLISTMODEL_SUPPORTEDDROPACTIONS )
 {
   QStringListModel * obj = (QStringListModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

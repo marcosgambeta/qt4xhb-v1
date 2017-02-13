@@ -78,7 +78,7 @@ RETURN
 /*
 QScriptEngineDebugger ( QObject * parent = 0 )
 */
-HB_FUNC( QSCRIPTENGINEDEBUGGER_NEW )
+HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_NEW )
 {
   QScriptEngineDebugger * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -91,7 +91,7 @@ HB_FUNC( QSCRIPTENGINEDEBUGGER_NEW )
 }
 
 
-HB_FUNC( QSCRIPTENGINEDEBUGGER_DELETE )
+HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_DELETE )
 {
   QScriptEngineDebugger * obj = (QScriptEngineDebugger *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -110,7 +110,7 @@ HB_FUNC( QSCRIPTENGINEDEBUGGER_DELETE )
 /*
 QAction * action ( DebuggerAction action ) const
 */
-HB_FUNC( QSCRIPTENGINEDEBUGGER_ACTION )
+HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ACTION )
 {
   QScriptEngineDebugger * obj = (QScriptEngineDebugger *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -124,7 +124,7 @@ HB_FUNC( QSCRIPTENGINEDEBUGGER_ACTION )
 /*
 void attachTo ( QScriptEngine * engine )
 */
-HB_FUNC( QSCRIPTENGINEDEBUGGER_ATTACHTO )
+HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ATTACHTO )
 {
   QScriptEngineDebugger * obj = (QScriptEngineDebugger *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -139,7 +139,7 @@ HB_FUNC( QSCRIPTENGINEDEBUGGER_ATTACHTO )
 /*
 bool autoShowStandardWindow () const
 */
-HB_FUNC( QSCRIPTENGINEDEBUGGER_AUTOSHOWSTANDARDWINDOW )
+HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_AUTOSHOWSTANDARDWINDOW )
 {
   QScriptEngineDebugger * obj = (QScriptEngineDebugger *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -153,7 +153,7 @@ HB_FUNC( QSCRIPTENGINEDEBUGGER_AUTOSHOWSTANDARDWINDOW )
 /*
 QMenu * createStandardMenu ( QWidget * parent = 0 )
 */
-HB_FUNC( QSCRIPTENGINEDEBUGGER_CREATESTANDARDMENU )
+HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_CREATESTANDARDMENU )
 {
   QScriptEngineDebugger * obj = (QScriptEngineDebugger *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -167,7 +167,7 @@ HB_FUNC( QSCRIPTENGINEDEBUGGER_CREATESTANDARDMENU )
 /*
 QToolBar * createStandardToolBar ( QWidget * parent = 0 )
 */
-HB_FUNC( QSCRIPTENGINEDEBUGGER_CREATESTANDARDTOOLBAR )
+HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_CREATESTANDARDTOOLBAR )
 {
   QScriptEngineDebugger * obj = (QScriptEngineDebugger *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -181,7 +181,7 @@ HB_FUNC( QSCRIPTENGINEDEBUGGER_CREATESTANDARDTOOLBAR )
 /*
 void detach ()
 */
-HB_FUNC( QSCRIPTENGINEDEBUGGER_DETACH )
+HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_DETACH )
 {
   QScriptEngineDebugger * obj = (QScriptEngineDebugger *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -195,7 +195,7 @@ HB_FUNC( QSCRIPTENGINEDEBUGGER_DETACH )
 /*
 void setAutoShowStandardWindow ( bool autoShow )
 */
-HB_FUNC( QSCRIPTENGINEDEBUGGER_SETAUTOSHOWSTANDARDWINDOW )
+HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_SETAUTOSHOWSTANDARDWINDOW )
 {
   QScriptEngineDebugger * obj = (QScriptEngineDebugger *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -210,7 +210,7 @@ HB_FUNC( QSCRIPTENGINEDEBUGGER_SETAUTOSHOWSTANDARDWINDOW )
 /*
 QMainWindow * standardWindow () const
 */
-HB_FUNC( QSCRIPTENGINEDEBUGGER_STANDARDWINDOW )
+HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_STANDARDWINDOW )
 {
   QScriptEngineDebugger * obj = (QScriptEngineDebugger *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -223,7 +223,7 @@ HB_FUNC( QSCRIPTENGINEDEBUGGER_STANDARDWINDOW )
 /*
 DebuggerState state () const
 */
-HB_FUNC( QSCRIPTENGINEDEBUGGER_STATE )
+HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_STATE )
 {
   QScriptEngineDebugger * obj = (QScriptEngineDebugger *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -237,7 +237,7 @@ HB_FUNC( QSCRIPTENGINEDEBUGGER_STATE )
 /*
 QWidget * widget ( DebuggerWidget widget ) const
 */
-HB_FUNC( QSCRIPTENGINEDEBUGGER_WIDGET )
+HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_WIDGET )
 {
   QScriptEngineDebugger * obj = (QScriptEngineDebugger *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

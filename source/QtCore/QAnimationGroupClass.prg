@@ -67,7 +67,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QANIMATIONGROUP_DELETE )
+HB_FUNC_STATIC( QANIMATIONGROUP_DELETE )
 {
   QAnimationGroup * obj = (QAnimationGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -87,7 +87,7 @@ HB_FUNC( QANIMATIONGROUP_DELETE )
 /*
 void addAnimation ( QAbstractAnimation * animation )
 */
-HB_FUNC( QANIMATIONGROUP_ADDANIMATION )
+HB_FUNC_STATIC( QANIMATIONGROUP_ADDANIMATION )
 {
   QAnimationGroup * obj = (QAnimationGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -102,7 +102,7 @@ HB_FUNC( QANIMATIONGROUP_ADDANIMATION )
 /*
 QAbstractAnimation * animationAt ( int index ) const
 */
-HB_FUNC( QANIMATIONGROUP_ANIMATIONAT )
+HB_FUNC_STATIC( QANIMATIONGROUP_ANIMATIONAT )
 {
   QAnimationGroup * obj = (QAnimationGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -116,7 +116,7 @@ HB_FUNC( QANIMATIONGROUP_ANIMATIONAT )
 /*
 int animationCount () const
 */
-HB_FUNC( QANIMATIONGROUP_ANIMATIONCOUNT )
+HB_FUNC_STATIC( QANIMATIONGROUP_ANIMATIONCOUNT )
 {
   QAnimationGroup * obj = (QAnimationGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -130,7 +130,7 @@ HB_FUNC( QANIMATIONGROUP_ANIMATIONCOUNT )
 /*
 void clear ()
 */
-HB_FUNC( QANIMATIONGROUP_CLEAR )
+HB_FUNC_STATIC( QANIMATIONGROUP_CLEAR )
 {
   QAnimationGroup * obj = (QAnimationGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -144,7 +144,7 @@ HB_FUNC( QANIMATIONGROUP_CLEAR )
 /*
 int indexOfAnimation ( QAbstractAnimation * animation ) const
 */
-HB_FUNC( QANIMATIONGROUP_INDEXOFANIMATION )
+HB_FUNC_STATIC( QANIMATIONGROUP_INDEXOFANIMATION )
 {
   QAnimationGroup * obj = (QAnimationGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -159,7 +159,7 @@ HB_FUNC( QANIMATIONGROUP_INDEXOFANIMATION )
 /*
 void insertAnimation ( int index, QAbstractAnimation * animation )
 */
-HB_FUNC( QANIMATIONGROUP_INSERTANIMATION )
+HB_FUNC_STATIC( QANIMATIONGROUP_INSERTANIMATION )
 {
   QAnimationGroup * obj = (QAnimationGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -175,7 +175,7 @@ HB_FUNC( QANIMATIONGROUP_INSERTANIMATION )
 /*
 void removeAnimation ( QAbstractAnimation * animation )
 */
-HB_FUNC( QANIMATIONGROUP_REMOVEANIMATION )
+HB_FUNC_STATIC( QANIMATIONGROUP_REMOVEANIMATION )
 {
   QAnimationGroup * obj = (QAnimationGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -190,7 +190,7 @@ HB_FUNC( QANIMATIONGROUP_REMOVEANIMATION )
 /*
 QAbstractAnimation *	takeAnimation ( int index )
 */
-HB_FUNC( QANIMATIONGROUP_TAKEANIMATION )
+HB_FUNC_STATIC( QANIMATIONGROUP_TAKEANIMATION )
 {
   QAnimationGroup * obj = (QAnimationGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

@@ -64,7 +64,7 @@ RETURN
 /*
 QActionEvent ( int type, QAction * action, QAction * before = 0 )
 */
-HB_FUNC( QACTIONEVENT_NEW )
+HB_FUNC_STATIC( QACTIONEVENT_NEW )
 {
   QActionEvent * o = NULL;
   int par1 = hb_parni(1);
@@ -79,7 +79,7 @@ HB_FUNC( QACTIONEVENT_NEW )
 }
 
 
-HB_FUNC( QACTIONEVENT_DELETE )
+HB_FUNC_STATIC( QACTIONEVENT_DELETE )
 {
   QActionEvent * obj = (QActionEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -98,7 +98,7 @@ HB_FUNC( QACTIONEVENT_DELETE )
 /*
 QAction * action () const
 */
-HB_FUNC( QACTIONEVENT_ACTION )
+HB_FUNC_STATIC( QACTIONEVENT_ACTION )
 {
   QActionEvent * obj = (QActionEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -111,7 +111,7 @@ HB_FUNC( QACTIONEVENT_ACTION )
 /*
 QAction * before () const
 */
-HB_FUNC( QACTIONEVENT_BEFORE )
+HB_FUNC_STATIC( QACTIONEVENT_BEFORE )
 {
   QActionEvent * obj = (QActionEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

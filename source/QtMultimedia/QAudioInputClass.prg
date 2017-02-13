@@ -85,7 +85,7 @@ RETURN
 /*
 QAudioInput ( const QAudioFormat & format = QAudioFormat(), QObject * parent = 0 )
 */
-HB_FUNC( QAUDIOINPUT_NEW1 )
+HB_FUNC_STATIC( QAUDIOINPUT_NEW1 )
 {
   QAudioInput * o = NULL;
   QAudioFormat par1 = ISNIL(1)? QAudioFormat() : *(QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -102,7 +102,7 @@ HB_FUNC( QAUDIOINPUT_NEW1 )
 /*
 QAudioInput ( const QAudioDeviceInfo & audioDevice, const QAudioFormat & format = QAudioFormat(), QObject * parent = 0 )
 */
-HB_FUNC( QAUDIOINPUT_NEW2 )
+HB_FUNC_STATIC( QAUDIOINPUT_NEW2 )
 {
   QAudioInput * o = NULL;
   QAudioDeviceInfo * par1 = (QAudioDeviceInfo *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -120,7 +120,7 @@ HB_FUNC( QAUDIOINPUT_NEW2 )
 //[1]QAudioInput ( const QAudioFormat & format = QAudioFormat(), QObject * parent = 0 )
 //[2]QAudioInput ( const QAudioDeviceInfo & audioDevice, const QAudioFormat & format = QAudioFormat(), QObject * parent = 0 )
 
-HB_FUNC( QAUDIOINPUT_NEW )
+HB_FUNC_STATIC( QAUDIOINPUT_NEW )
 {
   if( ISBETWEEN(0,2) && (ISQAUDIOFORMAT(1)||ISNIL(1)) && (ISQOBJECT(2)||ISNIL(2)) )
   {
@@ -136,7 +136,7 @@ HB_FUNC( QAUDIOINPUT_NEW )
   }
 }
 
-HB_FUNC( QAUDIOINPUT_DELETE )
+HB_FUNC_STATIC( QAUDIOINPUT_DELETE )
 {
   QAudioInput * obj = (QAudioInput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -155,7 +155,7 @@ HB_FUNC( QAUDIOINPUT_DELETE )
 /*
 int bufferSize () const
 */
-HB_FUNC( QAUDIOINPUT_BUFFERSIZE )
+HB_FUNC_STATIC( QAUDIOINPUT_BUFFERSIZE )
 {
   QAudioInput * obj = (QAudioInput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -169,7 +169,7 @@ HB_FUNC( QAUDIOINPUT_BUFFERSIZE )
 /*
 int bytesReady () const
 */
-HB_FUNC( QAUDIOINPUT_BYTESREADY )
+HB_FUNC_STATIC( QAUDIOINPUT_BYTESREADY )
 {
   QAudioInput * obj = (QAudioInput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -183,7 +183,7 @@ HB_FUNC( QAUDIOINPUT_BYTESREADY )
 /*
 qint64 elapsedUSecs () const
 */
-HB_FUNC( QAUDIOINPUT_ELAPSEDUSECS )
+HB_FUNC_STATIC( QAUDIOINPUT_ELAPSEDUSECS )
 {
   QAudioInput * obj = (QAudioInput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -197,7 +197,7 @@ HB_FUNC( QAUDIOINPUT_ELAPSEDUSECS )
 /*
 QAudio::Error error () const
 */
-HB_FUNC( QAUDIOINPUT_ERROR )
+HB_FUNC_STATIC( QAUDIOINPUT_ERROR )
 {
   QAudioInput * obj = (QAudioInput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -211,7 +211,7 @@ HB_FUNC( QAUDIOINPUT_ERROR )
 /*
 QAudioFormat format () const
 */
-HB_FUNC( QAUDIOINPUT_FORMAT )
+HB_FUNC_STATIC( QAUDIOINPUT_FORMAT )
 {
   QAudioInput * obj = (QAudioInput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -224,7 +224,7 @@ HB_FUNC( QAUDIOINPUT_FORMAT )
 /*
 int notifyInterval () const
 */
-HB_FUNC( QAUDIOINPUT_NOTIFYINTERVAL )
+HB_FUNC_STATIC( QAUDIOINPUT_NOTIFYINTERVAL )
 {
   QAudioInput * obj = (QAudioInput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -238,7 +238,7 @@ HB_FUNC( QAUDIOINPUT_NOTIFYINTERVAL )
 /*
 int periodSize () const
 */
-HB_FUNC( QAUDIOINPUT_PERIODSIZE )
+HB_FUNC_STATIC( QAUDIOINPUT_PERIODSIZE )
 {
   QAudioInput * obj = (QAudioInput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -252,7 +252,7 @@ HB_FUNC( QAUDIOINPUT_PERIODSIZE )
 /*
 qint64 processedUSecs () const
 */
-HB_FUNC( QAUDIOINPUT_PROCESSEDUSECS )
+HB_FUNC_STATIC( QAUDIOINPUT_PROCESSEDUSECS )
 {
   QAudioInput * obj = (QAudioInput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -266,7 +266,7 @@ HB_FUNC( QAUDIOINPUT_PROCESSEDUSECS )
 /*
 void reset ()
 */
-HB_FUNC( QAUDIOINPUT_RESET )
+HB_FUNC_STATIC( QAUDIOINPUT_RESET )
 {
   QAudioInput * obj = (QAudioInput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -280,7 +280,7 @@ HB_FUNC( QAUDIOINPUT_RESET )
 /*
 void resume ()
 */
-HB_FUNC( QAUDIOINPUT_RESUME )
+HB_FUNC_STATIC( QAUDIOINPUT_RESUME )
 {
   QAudioInput * obj = (QAudioInput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -294,7 +294,7 @@ HB_FUNC( QAUDIOINPUT_RESUME )
 /*
 void setBufferSize ( int value )
 */
-HB_FUNC( QAUDIOINPUT_SETBUFFERSIZE )
+HB_FUNC_STATIC( QAUDIOINPUT_SETBUFFERSIZE )
 {
   QAudioInput * obj = (QAudioInput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -309,7 +309,7 @@ HB_FUNC( QAUDIOINPUT_SETBUFFERSIZE )
 /*
 void setNotifyInterval ( int ms )
 */
-HB_FUNC( QAUDIOINPUT_SETNOTIFYINTERVAL )
+HB_FUNC_STATIC( QAUDIOINPUT_SETNOTIFYINTERVAL )
 {
   QAudioInput * obj = (QAudioInput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -324,7 +324,7 @@ HB_FUNC( QAUDIOINPUT_SETNOTIFYINTERVAL )
 /*
 void start ( QIODevice * device )
 */
-HB_FUNC( QAUDIOINPUT_START1 )
+HB_FUNC_STATIC( QAUDIOINPUT_START1 )
 {
   QAudioInput * obj = (QAudioInput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -339,7 +339,7 @@ HB_FUNC( QAUDIOINPUT_START1 )
 /*
 QIODevice * start ()
 */
-HB_FUNC( QAUDIOINPUT_START2 )
+HB_FUNC_STATIC( QAUDIOINPUT_START2 )
 {
   QAudioInput * obj = (QAudioInput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -352,7 +352,7 @@ HB_FUNC( QAUDIOINPUT_START2 )
 //[1]void start ( QIODevice * device )
 //[2]QIODevice * start ()
 
-HB_FUNC( QAUDIOINPUT_START )
+HB_FUNC_STATIC( QAUDIOINPUT_START )
 {
   if( ISNUMPAR(1) && ISQIODEVICE(1) )
   {
@@ -367,7 +367,7 @@ HB_FUNC( QAUDIOINPUT_START )
 /*
 QAudio::State state () const
 */
-HB_FUNC( QAUDIOINPUT_STATE )
+HB_FUNC_STATIC( QAUDIOINPUT_STATE )
 {
   QAudioInput * obj = (QAudioInput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -381,7 +381,7 @@ HB_FUNC( QAUDIOINPUT_STATE )
 /*
 void stop ()
 */
-HB_FUNC( QAUDIOINPUT_STOP )
+HB_FUNC_STATIC( QAUDIOINPUT_STOP )
 {
   QAudioInput * obj = (QAudioInput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -395,7 +395,7 @@ HB_FUNC( QAUDIOINPUT_STOP )
 /*
 void suspend ()
 */
-HB_FUNC( QAUDIOINPUT_SUSPEND )
+HB_FUNC_STATIC( QAUDIOINPUT_SUSPEND )
 {
   QAudioInput * obj = (QAudioInput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

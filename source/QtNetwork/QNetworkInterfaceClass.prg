@@ -113,7 +113,7 @@ RETURN
 /*
 QNetworkInterface ()
 */
-HB_FUNC( QNETWORKINTERFACE_NEW1 )
+HB_FUNC_STATIC( QNETWORKINTERFACE_NEW1 )
 {
   QNetworkInterface * o = NULL;
   o = new QNetworkInterface (  );
@@ -131,7 +131,7 @@ HB_FUNC( QNETWORKINTERFACE_NEW1 )
 /*
 QNetworkInterface ( const QNetworkInterface & other )
 */
-HB_FUNC( QNETWORKINTERFACE_NEW2 )
+HB_FUNC_STATIC( QNETWORKINTERFACE_NEW2 )
 {
   QNetworkInterface * o = NULL;
   QNetworkInterface * par1 = (QNetworkInterface *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -150,7 +150,7 @@ HB_FUNC( QNETWORKINTERFACE_NEW2 )
 //[1]QNetworkInterface ()
 //[2]QNetworkInterface ( const QNetworkInterface & other )
 
-HB_FUNC( QNETWORKINTERFACE_NEW )
+HB_FUNC_STATIC( QNETWORKINTERFACE_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -166,7 +166,7 @@ HB_FUNC( QNETWORKINTERFACE_NEW )
   }
 }
 
-HB_FUNC( QNETWORKINTERFACE_DELETE )
+HB_FUNC_STATIC( QNETWORKINTERFACE_DELETE )
 {
   QNetworkInterface * obj = (QNetworkInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -185,7 +185,7 @@ HB_FUNC( QNETWORKINTERFACE_DELETE )
 /*
 QList<QNetworkAddressEntry> addressEntries () const
 */
-HB_FUNC( QNETWORKINTERFACE_ADDRESSENTRIES )
+HB_FUNC_STATIC( QNETWORKINTERFACE_ADDRESSENTRIES )
 {
   QNetworkInterface * obj = (QNetworkInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -233,7 +233,7 @@ HB_FUNC( QNETWORKINTERFACE_ADDRESSENTRIES )
 /*
 InterfaceFlags flags () const
 */
-HB_FUNC( QNETWORKINTERFACE_FLAGS )
+HB_FUNC_STATIC( QNETWORKINTERFACE_FLAGS )
 {
   QNetworkInterface * obj = (QNetworkInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -247,7 +247,7 @@ HB_FUNC( QNETWORKINTERFACE_FLAGS )
 /*
 QString hardwareAddress () const
 */
-HB_FUNC( QNETWORKINTERFACE_HARDWAREADDRESS )
+HB_FUNC_STATIC( QNETWORKINTERFACE_HARDWAREADDRESS )
 {
   QNetworkInterface * obj = (QNetworkInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -261,7 +261,7 @@ HB_FUNC( QNETWORKINTERFACE_HARDWAREADDRESS )
 /*
 QString humanReadableName () const
 */
-HB_FUNC( QNETWORKINTERFACE_HUMANREADABLENAME )
+HB_FUNC_STATIC( QNETWORKINTERFACE_HUMANREADABLENAME )
 {
   QNetworkInterface * obj = (QNetworkInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -275,7 +275,7 @@ HB_FUNC( QNETWORKINTERFACE_HUMANREADABLENAME )
 /*
 int index () const
 */
-HB_FUNC( QNETWORKINTERFACE_INDEX )
+HB_FUNC_STATIC( QNETWORKINTERFACE_INDEX )
 {
   QNetworkInterface * obj = (QNetworkInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -289,7 +289,7 @@ HB_FUNC( QNETWORKINTERFACE_INDEX )
 /*
 bool isValid () const
 */
-HB_FUNC( QNETWORKINTERFACE_ISVALID )
+HB_FUNC_STATIC( QNETWORKINTERFACE_ISVALID )
 {
   QNetworkInterface * obj = (QNetworkInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -303,7 +303,7 @@ HB_FUNC( QNETWORKINTERFACE_ISVALID )
 /*
 QString name () const
 */
-HB_FUNC( QNETWORKINTERFACE_NAME )
+HB_FUNC_STATIC( QNETWORKINTERFACE_NAME )
 {
   QNetworkInterface * obj = (QNetworkInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -318,7 +318,7 @@ HB_FUNC( QNETWORKINTERFACE_NAME )
 /*
 QList<QHostAddress> allAddresses ()
 */
-HB_FUNC( QNETWORKINTERFACE_ALLADDRESSES )
+HB_FUNC_STATIC( QNETWORKINTERFACE_ALLADDRESSES )
 {
   QList<QHostAddress> list = QNetworkInterface::allAddresses (  );
   PHB_DYNS pDynSym;
@@ -362,7 +362,7 @@ HB_FUNC( QNETWORKINTERFACE_ALLADDRESSES )
 /*
 QList<QNetworkInterface> allInterfaces ()
 */
-HB_FUNC( QNETWORKINTERFACE_ALLINTERFACES )
+HB_FUNC_STATIC( QNETWORKINTERFACE_ALLINTERFACES )
 {
   QList<QNetworkInterface> list = QNetworkInterface::allInterfaces (  );
   PHB_DYNS pDynSym;
@@ -406,7 +406,7 @@ HB_FUNC( QNETWORKINTERFACE_ALLINTERFACES )
 /*
 QNetworkInterface interfaceFromIndex ( int index )
 */
-HB_FUNC( QNETWORKINTERFACE_INTERFACEFROMINDEX )
+HB_FUNC_STATIC( QNETWORKINTERFACE_INTERFACEFROMINDEX )
 {
   int par1 = hb_parni(1);
   QNetworkInterface * ptr = new QNetworkInterface( QNetworkInterface::interfaceFromIndex ( par1 ) );
@@ -416,7 +416,7 @@ HB_FUNC( QNETWORKINTERFACE_INTERFACEFROMINDEX )
 /*
 QNetworkInterface interfaceFromName ( const QString & name )
 */
-HB_FUNC( QNETWORKINTERFACE_INTERFACEFROMNAME )
+HB_FUNC_STATIC( QNETWORKINTERFACE_INTERFACEFROMNAME )
 {
   QString par1 = hb_parc(1);
   QNetworkInterface * ptr = new QNetworkInterface( QNetworkInterface::interfaceFromName ( par1 ) );

@@ -81,7 +81,7 @@ RETURN
 /*
 QDoubleSpinBox ( QWidget * parent = 0 )
 */
-HB_FUNC( QDOUBLESPINBOX_NEW )
+HB_FUNC_STATIC( QDOUBLESPINBOX_NEW )
 {
   QDoubleSpinBox * o = NULL;
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -98,7 +98,7 @@ HB_FUNC( QDOUBLESPINBOX_NEW )
 /*
 QString cleanText () const
 */
-HB_FUNC( QDOUBLESPINBOX_CLEANTEXT )
+HB_FUNC_STATIC( QDOUBLESPINBOX_CLEANTEXT )
 {
   QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -112,7 +112,7 @@ HB_FUNC( QDOUBLESPINBOX_CLEANTEXT )
 /*
 int decimals () const
 */
-HB_FUNC( QDOUBLESPINBOX_DECIMALS )
+HB_FUNC_STATIC( QDOUBLESPINBOX_DECIMALS )
 {
   QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -126,7 +126,7 @@ HB_FUNC( QDOUBLESPINBOX_DECIMALS )
 /*
 double maximum () const
 */
-HB_FUNC( QDOUBLESPINBOX_MAXIMUM )
+HB_FUNC_STATIC( QDOUBLESPINBOX_MAXIMUM )
 {
   QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -140,7 +140,7 @@ HB_FUNC( QDOUBLESPINBOX_MAXIMUM )
 /*
 double minimum () const
 */
-HB_FUNC( QDOUBLESPINBOX_MINIMUM )
+HB_FUNC_STATIC( QDOUBLESPINBOX_MINIMUM )
 {
   QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -154,7 +154,7 @@ HB_FUNC( QDOUBLESPINBOX_MINIMUM )
 /*
 QString prefix () const
 */
-HB_FUNC( QDOUBLESPINBOX_PREFIX )
+HB_FUNC_STATIC( QDOUBLESPINBOX_PREFIX )
 {
   QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -168,7 +168,7 @@ HB_FUNC( QDOUBLESPINBOX_PREFIX )
 /*
 void setDecimals ( int prec )
 */
-HB_FUNC( QDOUBLESPINBOX_SETDECIMALS )
+HB_FUNC_STATIC( QDOUBLESPINBOX_SETDECIMALS )
 {
   QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -183,7 +183,7 @@ HB_FUNC( QDOUBLESPINBOX_SETDECIMALS )
 /*
 void setMaximum ( double max )
 */
-HB_FUNC( QDOUBLESPINBOX_SETMAXIMUM )
+HB_FUNC_STATIC( QDOUBLESPINBOX_SETMAXIMUM )
 {
   QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -198,7 +198,7 @@ HB_FUNC( QDOUBLESPINBOX_SETMAXIMUM )
 /*
 void setMinimum ( double min )
 */
-HB_FUNC( QDOUBLESPINBOX_SETMINIMUM )
+HB_FUNC_STATIC( QDOUBLESPINBOX_SETMINIMUM )
 {
   QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -213,7 +213,7 @@ HB_FUNC( QDOUBLESPINBOX_SETMINIMUM )
 /*
 void setPrefix ( const QString & prefix )
 */
-HB_FUNC( QDOUBLESPINBOX_SETPREFIX )
+HB_FUNC_STATIC( QDOUBLESPINBOX_SETPREFIX )
 {
   QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -228,7 +228,7 @@ HB_FUNC( QDOUBLESPINBOX_SETPREFIX )
 /*
 void setRange ( double minimum, double maximum )
 */
-HB_FUNC( QDOUBLESPINBOX_SETRANGE )
+HB_FUNC_STATIC( QDOUBLESPINBOX_SETRANGE )
 {
   QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -244,7 +244,7 @@ HB_FUNC( QDOUBLESPINBOX_SETRANGE )
 /*
 void setSingleStep ( double val )
 */
-HB_FUNC( QDOUBLESPINBOX_SETSINGLESTEP )
+HB_FUNC_STATIC( QDOUBLESPINBOX_SETSINGLESTEP )
 {
   QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -259,7 +259,7 @@ HB_FUNC( QDOUBLESPINBOX_SETSINGLESTEP )
 /*
 void setSuffix ( const QString & suffix )
 */
-HB_FUNC( QDOUBLESPINBOX_SETSUFFIX )
+HB_FUNC_STATIC( QDOUBLESPINBOX_SETSUFFIX )
 {
   QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -274,7 +274,7 @@ HB_FUNC( QDOUBLESPINBOX_SETSUFFIX )
 /*
 double singleStep () const
 */
-HB_FUNC( QDOUBLESPINBOX_SINGLESTEP )
+HB_FUNC_STATIC( QDOUBLESPINBOX_SINGLESTEP )
 {
   QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -288,7 +288,7 @@ HB_FUNC( QDOUBLESPINBOX_SINGLESTEP )
 /*
 QString suffix () const
 */
-HB_FUNC( QDOUBLESPINBOX_SUFFIX )
+HB_FUNC_STATIC( QDOUBLESPINBOX_SUFFIX )
 {
   QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -302,7 +302,7 @@ HB_FUNC( QDOUBLESPINBOX_SUFFIX )
 /*
 virtual QString textFromValue ( double value ) const
 */
-HB_FUNC( QDOUBLESPINBOX_TEXTFROMVALUE )
+HB_FUNC_STATIC( QDOUBLESPINBOX_TEXTFROMVALUE )
 {
   QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -317,7 +317,7 @@ HB_FUNC( QDOUBLESPINBOX_TEXTFROMVALUE )
 /*
 double value () const
 */
-HB_FUNC( QDOUBLESPINBOX_VALUE )
+HB_FUNC_STATIC( QDOUBLESPINBOX_VALUE )
 {
   QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -331,7 +331,7 @@ HB_FUNC( QDOUBLESPINBOX_VALUE )
 /*
 virtual double valueFromText ( const QString & text ) const
 */
-HB_FUNC( QDOUBLESPINBOX_VALUEFROMTEXT )
+HB_FUNC_STATIC( QDOUBLESPINBOX_VALUEFROMTEXT )
 {
   QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -346,7 +346,7 @@ HB_FUNC( QDOUBLESPINBOX_VALUEFROMTEXT )
 /*
 virtual void fixup ( QString & input ) const
 */
-HB_FUNC( QDOUBLESPINBOX_FIXUP )
+HB_FUNC_STATIC( QDOUBLESPINBOX_FIXUP )
 {
   QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -361,7 +361,7 @@ HB_FUNC( QDOUBLESPINBOX_FIXUP )
 /*
 virtual QValidator::State validate ( QString & text, int & pos ) const
 */
-HB_FUNC( QDOUBLESPINBOX_VALIDATE )
+HB_FUNC_STATIC( QDOUBLESPINBOX_VALIDATE )
 {
   QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -377,7 +377,7 @@ HB_FUNC( QDOUBLESPINBOX_VALIDATE )
 /*
 void setValue ( double val )
 */
-HB_FUNC( QDOUBLESPINBOX_SETVALUE )
+HB_FUNC_STATIC( QDOUBLESPINBOX_SETVALUE )
 {
   QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

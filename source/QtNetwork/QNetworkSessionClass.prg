@@ -89,7 +89,7 @@ RETURN
 /*
 QNetworkSession ( const QNetworkConfiguration & connectionConfig, QObject * parent = 0 )
 */
-HB_FUNC( QNETWORKSESSION_NEW )
+HB_FUNC_STATIC( QNETWORKSESSION_NEW )
 {
   QNetworkSession * o = NULL;
   QNetworkConfiguration * par1 = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -103,7 +103,7 @@ HB_FUNC( QNETWORKSESSION_NEW )
 }
 
 
-HB_FUNC( QNETWORKSESSION_DELETE )
+HB_FUNC_STATIC( QNETWORKSESSION_DELETE )
 {
   QNetworkSession * obj = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -122,7 +122,7 @@ HB_FUNC( QNETWORKSESSION_DELETE )
 /*
 quint64 activeTime () const
 */
-HB_FUNC( QNETWORKSESSION_ACTIVETIME )
+HB_FUNC_STATIC( QNETWORKSESSION_ACTIVETIME )
 {
   QNetworkSession * obj = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -136,7 +136,7 @@ HB_FUNC( QNETWORKSESSION_ACTIVETIME )
 /*
 quint64 bytesReceived () const
 */
-HB_FUNC( QNETWORKSESSION_BYTESRECEIVED )
+HB_FUNC_STATIC( QNETWORKSESSION_BYTESRECEIVED )
 {
   QNetworkSession * obj = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -150,7 +150,7 @@ HB_FUNC( QNETWORKSESSION_BYTESRECEIVED )
 /*
 quint64 bytesWritten () const
 */
-HB_FUNC( QNETWORKSESSION_BYTESWRITTEN )
+HB_FUNC_STATIC( QNETWORKSESSION_BYTESWRITTEN )
 {
   QNetworkSession * obj = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -164,7 +164,7 @@ HB_FUNC( QNETWORKSESSION_BYTESWRITTEN )
 /*
 QNetworkConfiguration configuration () const
 */
-HB_FUNC( QNETWORKSESSION_CONFIGURATION )
+HB_FUNC_STATIC( QNETWORKSESSION_CONFIGURATION )
 {
   QNetworkSession * obj = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -177,7 +177,7 @@ HB_FUNC( QNETWORKSESSION_CONFIGURATION )
 /*
 SessionError error () const
 */
-HB_FUNC( QNETWORKSESSION_ERROR )
+HB_FUNC_STATIC( QNETWORKSESSION_ERROR )
 {
   QNetworkSession * obj = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -191,7 +191,7 @@ HB_FUNC( QNETWORKSESSION_ERROR )
 /*
 QString errorString () const
 */
-HB_FUNC( QNETWORKSESSION_ERRORSTRING )
+HB_FUNC_STATIC( QNETWORKSESSION_ERRORSTRING )
 {
   QNetworkSession * obj = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -205,7 +205,7 @@ HB_FUNC( QNETWORKSESSION_ERRORSTRING )
 /*
 QNetworkInterface interface () const
 */
-HB_FUNC( QNETWORKSESSION_INTERFACE )
+HB_FUNC_STATIC( QNETWORKSESSION_INTERFACE )
 {
   QNetworkSession * obj = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -218,7 +218,7 @@ HB_FUNC( QNETWORKSESSION_INTERFACE )
 /*
 bool isOpen () const
 */
-HB_FUNC( QNETWORKSESSION_ISOPEN )
+HB_FUNC_STATIC( QNETWORKSESSION_ISOPEN )
 {
   QNetworkSession * obj = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -232,7 +232,7 @@ HB_FUNC( QNETWORKSESSION_ISOPEN )
 /*
 QVariant sessionProperty ( const QString & key ) const
 */
-HB_FUNC( QNETWORKSESSION_SESSIONPROPERTY )
+HB_FUNC_STATIC( QNETWORKSESSION_SESSIONPROPERTY )
 {
   QNetworkSession * obj = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -246,7 +246,7 @@ HB_FUNC( QNETWORKSESSION_SESSIONPROPERTY )
 /*
 void setSessionProperty ( const QString & key, const QVariant & value )
 */
-HB_FUNC( QNETWORKSESSION_SETSESSIONPROPERTY )
+HB_FUNC_STATIC( QNETWORKSESSION_SETSESSIONPROPERTY )
 {
   QNetworkSession * obj = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -262,7 +262,7 @@ HB_FUNC( QNETWORKSESSION_SETSESSIONPROPERTY )
 /*
 State state () const
 */
-HB_FUNC( QNETWORKSESSION_STATE )
+HB_FUNC_STATIC( QNETWORKSESSION_STATE )
 {
   QNetworkSession * obj = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -276,7 +276,7 @@ HB_FUNC( QNETWORKSESSION_STATE )
 /*
 bool waitForOpened ( int msecs = 30000 )
 */
-HB_FUNC( QNETWORKSESSION_WAITFOROPENED )
+HB_FUNC_STATIC( QNETWORKSESSION_WAITFOROPENED )
 {
   QNetworkSession * obj = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -291,7 +291,7 @@ HB_FUNC( QNETWORKSESSION_WAITFOROPENED )
 /*
 void accept ()
 */
-HB_FUNC( QNETWORKSESSION_ACCEPT )
+HB_FUNC_STATIC( QNETWORKSESSION_ACCEPT )
 {
   QNetworkSession * obj = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -305,7 +305,7 @@ HB_FUNC( QNETWORKSESSION_ACCEPT )
 /*
 void close ()
 */
-HB_FUNC( QNETWORKSESSION_CLOSE )
+HB_FUNC_STATIC( QNETWORKSESSION_CLOSE )
 {
   QNetworkSession * obj = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -319,7 +319,7 @@ HB_FUNC( QNETWORKSESSION_CLOSE )
 /*
 void ignore ()
 */
-HB_FUNC( QNETWORKSESSION_IGNORE )
+HB_FUNC_STATIC( QNETWORKSESSION_IGNORE )
 {
   QNetworkSession * obj = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -333,7 +333,7 @@ HB_FUNC( QNETWORKSESSION_IGNORE )
 /*
 void migrate ()
 */
-HB_FUNC( QNETWORKSESSION_MIGRATE )
+HB_FUNC_STATIC( QNETWORKSESSION_MIGRATE )
 {
   QNetworkSession * obj = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -347,7 +347,7 @@ HB_FUNC( QNETWORKSESSION_MIGRATE )
 /*
 void open ()
 */
-HB_FUNC( QNETWORKSESSION_OPEN )
+HB_FUNC_STATIC( QNETWORKSESSION_OPEN )
 {
   QNetworkSession * obj = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -361,7 +361,7 @@ HB_FUNC( QNETWORKSESSION_OPEN )
 /*
 void reject ()
 */
-HB_FUNC( QNETWORKSESSION_REJECT )
+HB_FUNC_STATIC( QNETWORKSESSION_REJECT )
 {
   QNetworkSession * obj = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -375,7 +375,7 @@ HB_FUNC( QNETWORKSESSION_REJECT )
 /*
 void stop ()
 */
-HB_FUNC( QNETWORKSESSION_STOP )
+HB_FUNC_STATIC( QNETWORKSESSION_STOP )
 {
   QNetworkSession * obj = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

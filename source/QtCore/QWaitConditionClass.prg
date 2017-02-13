@@ -98,7 +98,7 @@ RETURN
 /*
 QWaitCondition ()
 */
-HB_FUNC( QWAITCONDITION_NEW )
+HB_FUNC_STATIC( QWAITCONDITION_NEW )
 {
   QWaitCondition * o = NULL;
   o = new QWaitCondition (  );
@@ -113,7 +113,7 @@ HB_FUNC( QWAITCONDITION_NEW )
 }
 
 
-HB_FUNC( QWAITCONDITION_DELETE )
+HB_FUNC_STATIC( QWAITCONDITION_DELETE )
 {
   QWaitCondition * obj = (QWaitCondition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -134,7 +134,7 @@ HB_FUNC( QWAITCONDITION_DELETE )
 /*
 void wakeAll ()
 */
-HB_FUNC( QWAITCONDITION_WAKEALL )
+HB_FUNC_STATIC( QWAITCONDITION_WAKEALL )
 {
   QWaitCondition * obj = (QWaitCondition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -148,7 +148,7 @@ HB_FUNC( QWAITCONDITION_WAKEALL )
 /*
 void wakeOne ()
 */
-HB_FUNC( QWAITCONDITION_WAKEONE )
+HB_FUNC_STATIC( QWAITCONDITION_WAKEONE )
 {
   QWaitCondition * obj = (QWaitCondition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

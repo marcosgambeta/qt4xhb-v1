@@ -61,7 +61,7 @@ RETURN
 #include "qt4xhb_clsid.h"
 #include "qt4xhb_utils.h"
 
-HB_FUNC( QGRAPHICSSCENEHELPEVENT_DELETE )
+HB_FUNC_STATIC( QGRAPHICSSCENEHELPEVENT_DELETE )
 {
   QGraphicsSceneHelpEvent * obj = (QGraphicsSceneHelpEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -80,7 +80,7 @@ HB_FUNC( QGRAPHICSSCENEHELPEVENT_DELETE )
 /*
 QPointF scenePos () const
 */
-HB_FUNC( QGRAPHICSSCENEHELPEVENT_SCENEPOS )
+HB_FUNC_STATIC( QGRAPHICSSCENEHELPEVENT_SCENEPOS )
 {
   QGraphicsSceneHelpEvent * obj = (QGraphicsSceneHelpEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -93,7 +93,7 @@ HB_FUNC( QGRAPHICSSCENEHELPEVENT_SCENEPOS )
 /*
 QPoint screenPos () const
 */
-HB_FUNC( QGRAPHICSSCENEHELPEVENT_SCREENPOS )
+HB_FUNC_STATIC( QGRAPHICSSCENEHELPEVENT_SCREENPOS )
 {
   QGraphicsSceneHelpEvent * obj = (QGraphicsSceneHelpEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

@@ -79,7 +79,7 @@ RETURN
 /*
 QDesignerFormEditorInterface ( QObject * parent = 0 )
 */
-HB_FUNC( QDESIGNERFORMEDITORINTERFACE_NEW )
+HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_NEW )
 {
   QDesignerFormEditorInterface * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -92,7 +92,7 @@ HB_FUNC( QDESIGNERFORMEDITORINTERFACE_NEW )
 }
 
 
-HB_FUNC( QDESIGNERFORMEDITORINTERFACE_DELETE )
+HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_DELETE )
 {
   QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -111,7 +111,7 @@ HB_FUNC( QDESIGNERFORMEDITORINTERFACE_DELETE )
 /*
 QDesignerActionEditorInterface * actionEditor () const
 */
-HB_FUNC( QDESIGNERFORMEDITORINTERFACE_ACTIONEDITOR )
+HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_ACTIONEDITOR )
 {
   QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -124,7 +124,7 @@ HB_FUNC( QDESIGNERFORMEDITORINTERFACE_ACTIONEDITOR )
 /*
 QExtensionManager * extensionManager () const
 */
-HB_FUNC( QDESIGNERFORMEDITORINTERFACE_EXTENSIONMANAGER )
+HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_EXTENSIONMANAGER )
 {
   QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -137,7 +137,7 @@ HB_FUNC( QDESIGNERFORMEDITORINTERFACE_EXTENSIONMANAGER )
 /*
 QDesignerFormWindowManagerInterface * formWindowManager () const
 */
-HB_FUNC( QDESIGNERFORMEDITORINTERFACE_FORMWINDOWMANAGER )
+HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_FORMWINDOWMANAGER )
 {
   QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -150,7 +150,7 @@ HB_FUNC( QDESIGNERFORMEDITORINTERFACE_FORMWINDOWMANAGER )
 /*
 QDesignerObjectInspectorInterface * objectInspector () const
 */
-HB_FUNC( QDESIGNERFORMEDITORINTERFACE_OBJECTINSPECTOR )
+HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_OBJECTINSPECTOR )
 {
   QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -163,7 +163,7 @@ HB_FUNC( QDESIGNERFORMEDITORINTERFACE_OBJECTINSPECTOR )
 /*
 QDesignerPropertyEditorInterface * propertyEditor () const
 */
-HB_FUNC( QDESIGNERFORMEDITORINTERFACE_PROPERTYEDITOR )
+HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_PROPERTYEDITOR )
 {
   QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -176,7 +176,7 @@ HB_FUNC( QDESIGNERFORMEDITORINTERFACE_PROPERTYEDITOR )
 /*
 void setActionEditor ( QDesignerActionEditorInterface * actionEditor )
 */
-HB_FUNC( QDESIGNERFORMEDITORINTERFACE_SETACTIONEDITOR )
+HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_SETACTIONEDITOR )
 {
   QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -191,7 +191,7 @@ HB_FUNC( QDESIGNERFORMEDITORINTERFACE_SETACTIONEDITOR )
 /*
 void setObjectInspector ( QDesignerObjectInspectorInterface * objectInspector )
 */
-HB_FUNC( QDESIGNERFORMEDITORINTERFACE_SETOBJECTINSPECTOR )
+HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_SETOBJECTINSPECTOR )
 {
   QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -206,7 +206,7 @@ HB_FUNC( QDESIGNERFORMEDITORINTERFACE_SETOBJECTINSPECTOR )
 /*
 void setPropertyEditor ( QDesignerPropertyEditorInterface * propertyEditor )
 */
-HB_FUNC( QDESIGNERFORMEDITORINTERFACE_SETPROPERTYEDITOR )
+HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_SETPROPERTYEDITOR )
 {
   QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -221,7 +221,7 @@ HB_FUNC( QDESIGNERFORMEDITORINTERFACE_SETPROPERTYEDITOR )
 /*
 void setWidgetBox ( QDesignerWidgetBoxInterface * widgetBox )
 */
-HB_FUNC( QDESIGNERFORMEDITORINTERFACE_SETWIDGETBOX )
+HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_SETWIDGETBOX )
 {
   QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -236,7 +236,7 @@ HB_FUNC( QDESIGNERFORMEDITORINTERFACE_SETWIDGETBOX )
 /*
 QWidget * topLevel () const
 */
-HB_FUNC( QDESIGNERFORMEDITORINTERFACE_TOPLEVEL )
+HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_TOPLEVEL )
 {
   QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -249,7 +249,7 @@ HB_FUNC( QDESIGNERFORMEDITORINTERFACE_TOPLEVEL )
 /*
 QDesignerWidgetBoxInterface * widgetBox () const
 */
-HB_FUNC( QDESIGNERFORMEDITORINTERFACE_WIDGETBOX )
+HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_WIDGETBOX )
 {
   QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

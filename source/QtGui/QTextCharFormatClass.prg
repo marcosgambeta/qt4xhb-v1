@@ -113,7 +113,7 @@ RETURN
 /*
 QTextCharFormat ()
 */
-HB_FUNC( QTEXTCHARFORMAT_NEW )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_NEW )
 {
   QTextCharFormat * o = NULL;
   o = new QTextCharFormat (  );
@@ -125,7 +125,7 @@ HB_FUNC( QTEXTCHARFORMAT_NEW )
 }
 
 
-HB_FUNC( QTEXTCHARFORMAT_DELETE )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_DELETE )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -144,7 +144,7 @@ HB_FUNC( QTEXTCHARFORMAT_DELETE )
 /*
 QString anchorHref () const
 */
-HB_FUNC( QTEXTCHARFORMAT_ANCHORHREF )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_ANCHORHREF )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -158,7 +158,7 @@ HB_FUNC( QTEXTCHARFORMAT_ANCHORHREF )
 /*
 QStringList anchorNames () const
 */
-HB_FUNC( QTEXTCHARFORMAT_ANCHORNAMES )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_ANCHORNAMES )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -181,7 +181,7 @@ HB_FUNC( QTEXTCHARFORMAT_ANCHORNAMES )
 /*
 QFont font () const
 */
-HB_FUNC( QTEXTCHARFORMAT_FONT )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_FONT )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -194,7 +194,7 @@ HB_FUNC( QTEXTCHARFORMAT_FONT )
 /*
 QFont::Capitalization fontCapitalization () const
 */
-HB_FUNC( QTEXTCHARFORMAT_FONTCAPITALIZATION )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTCAPITALIZATION )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -208,7 +208,7 @@ HB_FUNC( QTEXTCHARFORMAT_FONTCAPITALIZATION )
 /*
 QString fontFamily () const
 */
-HB_FUNC( QTEXTCHARFORMAT_FONTFAMILY )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTFAMILY )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -222,7 +222,7 @@ HB_FUNC( QTEXTCHARFORMAT_FONTFAMILY )
 /*
 bool fontFixedPitch () const
 */
-HB_FUNC( QTEXTCHARFORMAT_FONTFIXEDPITCH )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTFIXEDPITCH )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -236,7 +236,7 @@ HB_FUNC( QTEXTCHARFORMAT_FONTFIXEDPITCH )
 /*
 QFont::HintingPreference fontHintingPreference () const
 */
-HB_FUNC( QTEXTCHARFORMAT_FONTHINTINGPREFERENCE )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTHINTINGPREFERENCE )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -250,7 +250,7 @@ HB_FUNC( QTEXTCHARFORMAT_FONTHINTINGPREFERENCE )
 /*
 bool fontItalic () const
 */
-HB_FUNC( QTEXTCHARFORMAT_FONTITALIC )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTITALIC )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -264,7 +264,7 @@ HB_FUNC( QTEXTCHARFORMAT_FONTITALIC )
 /*
 bool fontKerning () const
 */
-HB_FUNC( QTEXTCHARFORMAT_FONTKERNING )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTKERNING )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -278,7 +278,7 @@ HB_FUNC( QTEXTCHARFORMAT_FONTKERNING )
 /*
 qreal fontLetterSpacing () const
 */
-HB_FUNC( QTEXTCHARFORMAT_FONTLETTERSPACING )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTLETTERSPACING )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -292,7 +292,7 @@ HB_FUNC( QTEXTCHARFORMAT_FONTLETTERSPACING )
 /*
 bool fontOverline () const
 */
-HB_FUNC( QTEXTCHARFORMAT_FONTOVERLINE )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTOVERLINE )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -306,7 +306,7 @@ HB_FUNC( QTEXTCHARFORMAT_FONTOVERLINE )
 /*
 qreal fontPointSize () const
 */
-HB_FUNC( QTEXTCHARFORMAT_FONTPOINTSIZE )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTPOINTSIZE )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -320,7 +320,7 @@ HB_FUNC( QTEXTCHARFORMAT_FONTPOINTSIZE )
 /*
 bool fontStrikeOut () const
 */
-HB_FUNC( QTEXTCHARFORMAT_FONTSTRIKEOUT )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTSTRIKEOUT )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -334,7 +334,7 @@ HB_FUNC( QTEXTCHARFORMAT_FONTSTRIKEOUT )
 /*
 QFont::StyleHint fontStyleHint () const
 */
-HB_FUNC( QTEXTCHARFORMAT_FONTSTYLEHINT )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTSTYLEHINT )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -348,7 +348,7 @@ HB_FUNC( QTEXTCHARFORMAT_FONTSTYLEHINT )
 /*
 QFont::StyleStrategy fontStyleStrategy () const
 */
-HB_FUNC( QTEXTCHARFORMAT_FONTSTYLESTRATEGY )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTSTYLESTRATEGY )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -362,7 +362,7 @@ HB_FUNC( QTEXTCHARFORMAT_FONTSTYLESTRATEGY )
 /*
 bool fontUnderline () const
 */
-HB_FUNC( QTEXTCHARFORMAT_FONTUNDERLINE )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTUNDERLINE )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -376,7 +376,7 @@ HB_FUNC( QTEXTCHARFORMAT_FONTUNDERLINE )
 /*
 int fontWeight () const
 */
-HB_FUNC( QTEXTCHARFORMAT_FONTWEIGHT )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTWEIGHT )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -390,7 +390,7 @@ HB_FUNC( QTEXTCHARFORMAT_FONTWEIGHT )
 /*
 qreal fontWordSpacing () const
 */
-HB_FUNC( QTEXTCHARFORMAT_FONTWORDSPACING )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTWORDSPACING )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -404,7 +404,7 @@ HB_FUNC( QTEXTCHARFORMAT_FONTWORDSPACING )
 /*
 bool isAnchor () const
 */
-HB_FUNC( QTEXTCHARFORMAT_ISANCHOR )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_ISANCHOR )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -418,7 +418,7 @@ HB_FUNC( QTEXTCHARFORMAT_ISANCHOR )
 /*
 bool isValid () const
 */
-HB_FUNC( QTEXTCHARFORMAT_ISVALID )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_ISVALID )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -432,7 +432,7 @@ HB_FUNC( QTEXTCHARFORMAT_ISVALID )
 /*
 void setAnchor ( bool anchor )
 */
-HB_FUNC( QTEXTCHARFORMAT_SETANCHOR )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_SETANCHOR )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -447,7 +447,7 @@ HB_FUNC( QTEXTCHARFORMAT_SETANCHOR )
 /*
 void setAnchorHref ( const QString & value )
 */
-HB_FUNC( QTEXTCHARFORMAT_SETANCHORHREF )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_SETANCHORHREF )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -462,7 +462,7 @@ HB_FUNC( QTEXTCHARFORMAT_SETANCHORHREF )
 /*
 void setAnchorNames ( const QStringList & names )
 */
-HB_FUNC( QTEXTCHARFORMAT_SETANCHORNAMES )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_SETANCHORNAMES )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -485,7 +485,7 @@ par1 << temp;
 /*
 void setFont ( const QFont & font )
 */
-HB_FUNC( QTEXTCHARFORMAT_SETFONT )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONT )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -500,7 +500,7 @@ HB_FUNC( QTEXTCHARFORMAT_SETFONT )
 /*
 void setFontCapitalization ( QFont::Capitalization capitalization )
 */
-HB_FUNC( QTEXTCHARFORMAT_SETFONTCAPITALIZATION )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTCAPITALIZATION )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -515,7 +515,7 @@ HB_FUNC( QTEXTCHARFORMAT_SETFONTCAPITALIZATION )
 /*
 void setFontFamily ( const QString & family )
 */
-HB_FUNC( QTEXTCHARFORMAT_SETFONTFAMILY )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTFAMILY )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -530,7 +530,7 @@ HB_FUNC( QTEXTCHARFORMAT_SETFONTFAMILY )
 /*
 void setFontFixedPitch ( bool fixedPitch )
 */
-HB_FUNC( QTEXTCHARFORMAT_SETFONTFIXEDPITCH )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTFIXEDPITCH )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -545,7 +545,7 @@ HB_FUNC( QTEXTCHARFORMAT_SETFONTFIXEDPITCH )
 /*
 void setFontHintingPreference ( QFont::HintingPreference hintingPreference )
 */
-HB_FUNC( QTEXTCHARFORMAT_SETFONTHINTINGPREFERENCE )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTHINTINGPREFERENCE )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -560,7 +560,7 @@ HB_FUNC( QTEXTCHARFORMAT_SETFONTHINTINGPREFERENCE )
 /*
 void setFontItalic ( bool italic )
 */
-HB_FUNC( QTEXTCHARFORMAT_SETFONTITALIC )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTITALIC )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -575,7 +575,7 @@ HB_FUNC( QTEXTCHARFORMAT_SETFONTITALIC )
 /*
 void setFontKerning ( bool enable )
 */
-HB_FUNC( QTEXTCHARFORMAT_SETFONTKERNING )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTKERNING )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -590,7 +590,7 @@ HB_FUNC( QTEXTCHARFORMAT_SETFONTKERNING )
 /*
 void setFontLetterSpacing ( qreal spacing )
 */
-HB_FUNC( QTEXTCHARFORMAT_SETFONTLETTERSPACING )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTLETTERSPACING )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -605,7 +605,7 @@ HB_FUNC( QTEXTCHARFORMAT_SETFONTLETTERSPACING )
 /*
 void setFontOverline ( bool overline )
 */
-HB_FUNC( QTEXTCHARFORMAT_SETFONTOVERLINE )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTOVERLINE )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -620,7 +620,7 @@ HB_FUNC( QTEXTCHARFORMAT_SETFONTOVERLINE )
 /*
 void setFontPointSize ( qreal size )
 */
-HB_FUNC( QTEXTCHARFORMAT_SETFONTPOINTSIZE )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTPOINTSIZE )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -635,7 +635,7 @@ HB_FUNC( QTEXTCHARFORMAT_SETFONTPOINTSIZE )
 /*
 void setFontStrikeOut ( bool strikeOut )
 */
-HB_FUNC( QTEXTCHARFORMAT_SETFONTSTRIKEOUT )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTSTRIKEOUT )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -650,7 +650,7 @@ HB_FUNC( QTEXTCHARFORMAT_SETFONTSTRIKEOUT )
 /*
 void setFontStyleHint ( QFont::StyleHint hint, QFont::StyleStrategy strategy = QFont::PreferDefault )
 */
-HB_FUNC( QTEXTCHARFORMAT_SETFONTSTYLEHINT )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTSTYLEHINT )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -666,7 +666,7 @@ HB_FUNC( QTEXTCHARFORMAT_SETFONTSTYLEHINT )
 /*
 void setFontStyleStrategy ( QFont::StyleStrategy strategy )
 */
-HB_FUNC( QTEXTCHARFORMAT_SETFONTSTYLESTRATEGY )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTSTYLESTRATEGY )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -681,7 +681,7 @@ HB_FUNC( QTEXTCHARFORMAT_SETFONTSTYLESTRATEGY )
 /*
 void setFontUnderline ( bool underline )
 */
-HB_FUNC( QTEXTCHARFORMAT_SETFONTUNDERLINE )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTUNDERLINE )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -696,7 +696,7 @@ HB_FUNC( QTEXTCHARFORMAT_SETFONTUNDERLINE )
 /*
 void setFontWeight ( int weight )
 */
-HB_FUNC( QTEXTCHARFORMAT_SETFONTWEIGHT )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTWEIGHT )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -711,7 +711,7 @@ HB_FUNC( QTEXTCHARFORMAT_SETFONTWEIGHT )
 /*
 void setFontWordSpacing ( qreal spacing )
 */
-HB_FUNC( QTEXTCHARFORMAT_SETFONTWORDSPACING )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTWORDSPACING )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -726,7 +726,7 @@ HB_FUNC( QTEXTCHARFORMAT_SETFONTWORDSPACING )
 /*
 void setTextOutline ( const QPen & pen )
 */
-HB_FUNC( QTEXTCHARFORMAT_SETTEXTOUTLINE )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_SETTEXTOUTLINE )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -741,7 +741,7 @@ HB_FUNC( QTEXTCHARFORMAT_SETTEXTOUTLINE )
 /*
 void setToolTip ( const QString & text )
 */
-HB_FUNC( QTEXTCHARFORMAT_SETTOOLTIP )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_SETTOOLTIP )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -756,7 +756,7 @@ HB_FUNC( QTEXTCHARFORMAT_SETTOOLTIP )
 /*
 void setUnderlineColor ( const QColor & color )
 */
-HB_FUNC( QTEXTCHARFORMAT_SETUNDERLINECOLOR )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_SETUNDERLINECOLOR )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -771,7 +771,7 @@ HB_FUNC( QTEXTCHARFORMAT_SETUNDERLINECOLOR )
 /*
 void setUnderlineStyle ( UnderlineStyle style )
 */
-HB_FUNC( QTEXTCHARFORMAT_SETUNDERLINESTYLE )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_SETUNDERLINESTYLE )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -786,7 +786,7 @@ HB_FUNC( QTEXTCHARFORMAT_SETUNDERLINESTYLE )
 /*
 void setVerticalAlignment ( VerticalAlignment alignment )
 */
-HB_FUNC( QTEXTCHARFORMAT_SETVERTICALALIGNMENT )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_SETVERTICALALIGNMENT )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -801,7 +801,7 @@ HB_FUNC( QTEXTCHARFORMAT_SETVERTICALALIGNMENT )
 /*
 QPen textOutline () const
 */
-HB_FUNC( QTEXTCHARFORMAT_TEXTOUTLINE )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_TEXTOUTLINE )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -814,7 +814,7 @@ HB_FUNC( QTEXTCHARFORMAT_TEXTOUTLINE )
 /*
 QString toolTip () const
 */
-HB_FUNC( QTEXTCHARFORMAT_TOOLTIP )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_TOOLTIP )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -828,7 +828,7 @@ HB_FUNC( QTEXTCHARFORMAT_TOOLTIP )
 /*
 QColor underlineColor () const
 */
-HB_FUNC( QTEXTCHARFORMAT_UNDERLINECOLOR )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_UNDERLINECOLOR )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -841,7 +841,7 @@ HB_FUNC( QTEXTCHARFORMAT_UNDERLINECOLOR )
 /*
 UnderlineStyle underlineStyle () const
 */
-HB_FUNC( QTEXTCHARFORMAT_UNDERLINESTYLE )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_UNDERLINESTYLE )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -855,7 +855,7 @@ HB_FUNC( QTEXTCHARFORMAT_UNDERLINESTYLE )
 /*
 VerticalAlignment verticalAlignment () const
 */
-HB_FUNC( QTEXTCHARFORMAT_VERTICALALIGNMENT )
+HB_FUNC_STATIC( QTEXTCHARFORMAT_VERTICALALIGNMENT )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

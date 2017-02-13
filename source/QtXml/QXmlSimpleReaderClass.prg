@@ -63,7 +63,7 @@ RETURN
 /*
 QXmlSimpleReader ()
 */
-HB_FUNC( QXMLSIMPLEREADER_NEW )
+HB_FUNC_STATIC( QXMLSIMPLEREADER_NEW )
 {
   QXmlSimpleReader * o = NULL;
   o = new QXmlSimpleReader (  );
@@ -78,7 +78,7 @@ HB_FUNC( QXMLSIMPLEREADER_NEW )
 }
 
 
-HB_FUNC( QXMLSIMPLEREADER_DELETE )
+HB_FUNC_STATIC( QXMLSIMPLEREADER_DELETE )
 {
   QXmlSimpleReader * obj = (QXmlSimpleReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -97,7 +97,7 @@ HB_FUNC( QXMLSIMPLEREADER_DELETE )
 /*
 virtual bool parse ( const QXmlInputSource * input, bool incremental )
 */
-HB_FUNC( QXMLSIMPLEREADER_PARSE )
+HB_FUNC_STATIC( QXMLSIMPLEREADER_PARSE )
 {
   QXmlSimpleReader * obj = (QXmlSimpleReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -113,7 +113,7 @@ HB_FUNC( QXMLSIMPLEREADER_PARSE )
 /*
 virtual bool parseContinue ()
 */
-HB_FUNC( QXMLSIMPLEREADER_PARSECONTINUE )
+HB_FUNC_STATIC( QXMLSIMPLEREADER_PARSECONTINUE )
 {
   QXmlSimpleReader * obj = (QXmlSimpleReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

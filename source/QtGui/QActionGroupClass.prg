@@ -78,7 +78,7 @@ RETURN
 /*
 QActionGroup ( QObject * parent )
 */
-HB_FUNC( QACTIONGROUP_NEW )
+HB_FUNC_STATIC( QACTIONGROUP_NEW )
 {
   QActionGroup * o = NULL;
   QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -91,7 +91,7 @@ HB_FUNC( QACTIONGROUP_NEW )
 }
 
 
-HB_FUNC( QACTIONGROUP_DELETE )
+HB_FUNC_STATIC( QACTIONGROUP_DELETE )
 {
   QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -110,7 +110,7 @@ HB_FUNC( QACTIONGROUP_DELETE )
 /*
 QList<QAction *> actions () const
 */
-HB_FUNC( QACTIONGROUP_ACTIONS )
+HB_FUNC_STATIC( QACTIONGROUP_ACTIONS )
 {
   QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -154,7 +154,7 @@ HB_FUNC( QACTIONGROUP_ACTIONS )
 /*
 QAction * addAction ( QAction * action )
 */
-HB_FUNC( QACTIONGROUP_ADDACTION1 )
+HB_FUNC_STATIC( QACTIONGROUP_ADDACTION1 )
 {
   QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -168,7 +168,7 @@ HB_FUNC( QACTIONGROUP_ADDACTION1 )
 /*
 QAction * addAction ( const QString & text )
 */
-HB_FUNC( QACTIONGROUP_ADDACTION2 )
+HB_FUNC_STATIC( QACTIONGROUP_ADDACTION2 )
 {
   QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -182,7 +182,7 @@ HB_FUNC( QACTIONGROUP_ADDACTION2 )
 /*
 QAction * addAction ( const QIcon & icon, const QString & text )
 */
-HB_FUNC( QACTIONGROUP_ADDACTION3 )
+HB_FUNC_STATIC( QACTIONGROUP_ADDACTION3 )
 {
   QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -198,7 +198,7 @@ HB_FUNC( QACTIONGROUP_ADDACTION3 )
 //[2]QAction * addAction ( const QString & text )
 //[3]QAction * addAction ( const QIcon & icon, const QString & text )
 
-HB_FUNC( QACTIONGROUP_ADDACTION )
+HB_FUNC_STATIC( QACTIONGROUP_ADDACTION )
 {
   if( ISNUMPAR(1) && ISQACTION(1) )
   {
@@ -217,7 +217,7 @@ HB_FUNC( QACTIONGROUP_ADDACTION )
 /*
 QAction * checkedAction () const
 */
-HB_FUNC( QACTIONGROUP_CHECKEDACTION )
+HB_FUNC_STATIC( QACTIONGROUP_CHECKEDACTION )
 {
   QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -230,7 +230,7 @@ HB_FUNC( QACTIONGROUP_CHECKEDACTION )
 /*
 bool isEnabled () const
 */
-HB_FUNC( QACTIONGROUP_ISENABLED )
+HB_FUNC_STATIC( QACTIONGROUP_ISENABLED )
 {
   QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -244,7 +244,7 @@ HB_FUNC( QACTIONGROUP_ISENABLED )
 /*
 bool isExclusive () const
 */
-HB_FUNC( QACTIONGROUP_ISEXCLUSIVE )
+HB_FUNC_STATIC( QACTIONGROUP_ISEXCLUSIVE )
 {
   QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -258,7 +258,7 @@ HB_FUNC( QACTIONGROUP_ISEXCLUSIVE )
 /*
 bool isVisible () const
 */
-HB_FUNC( QACTIONGROUP_ISVISIBLE )
+HB_FUNC_STATIC( QACTIONGROUP_ISVISIBLE )
 {
   QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -272,7 +272,7 @@ HB_FUNC( QACTIONGROUP_ISVISIBLE )
 /*
 void removeAction ( QAction * action )
 */
-HB_FUNC( QACTIONGROUP_REMOVEACTION )
+HB_FUNC_STATIC( QACTIONGROUP_REMOVEACTION )
 {
   QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -287,7 +287,7 @@ HB_FUNC( QACTIONGROUP_REMOVEACTION )
 /*
 void setDisabled ( bool b )
 */
-HB_FUNC( QACTIONGROUP_SETDISABLED )
+HB_FUNC_STATIC( QACTIONGROUP_SETDISABLED )
 {
   QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -302,7 +302,7 @@ HB_FUNC( QACTIONGROUP_SETDISABLED )
 /*
 void setEnabled ( bool )
 */
-HB_FUNC( QACTIONGROUP_SETENABLED )
+HB_FUNC_STATIC( QACTIONGROUP_SETENABLED )
 {
   QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -317,7 +317,7 @@ HB_FUNC( QACTIONGROUP_SETENABLED )
 /*
 void setExclusive ( bool )
 */
-HB_FUNC( QACTIONGROUP_SETEXCLUSIVE )
+HB_FUNC_STATIC( QACTIONGROUP_SETEXCLUSIVE )
 {
   QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -332,7 +332,7 @@ HB_FUNC( QACTIONGROUP_SETEXCLUSIVE )
 /*
 void setVisible ( bool )
 */
-HB_FUNC( QACTIONGROUP_SETVISIBLE )
+HB_FUNC_STATIC( QACTIONGROUP_SETVISIBLE )
 {
   QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

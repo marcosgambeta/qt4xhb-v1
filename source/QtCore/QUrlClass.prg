@@ -182,7 +182,7 @@ RETURN
 /*
 QUrl ()
 */
-HB_FUNC( QURL_NEW1 )
+HB_FUNC_STATIC( QURL_NEW1 )
 {
   QUrl * o = NULL;
   o = new QUrl (  );
@@ -200,7 +200,7 @@ HB_FUNC( QURL_NEW1 )
 /*
 QUrl ( const QString & url )
 */
-HB_FUNC( QURL_NEW2 )
+HB_FUNC_STATIC( QURL_NEW2 )
 {
   QUrl * o = NULL;
   QString par1 = hb_parc(1);
@@ -219,7 +219,7 @@ HB_FUNC( QURL_NEW2 )
 /*
 QUrl ( const QUrl & other )
 */
-HB_FUNC( QURL_NEW3 )
+HB_FUNC_STATIC( QURL_NEW3 )
 {
   QUrl * o = NULL;
   QUrl * par1 = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -238,7 +238,7 @@ HB_FUNC( QURL_NEW3 )
 /*
 QUrl ( const QString & url, ParsingMode parsingMode )
 */
-HB_FUNC( QURL_NEW4 )
+HB_FUNC_STATIC( QURL_NEW4 )
 {
   QUrl * o = NULL;
   QString par1 = hb_parc(1);
@@ -260,7 +260,7 @@ HB_FUNC( QURL_NEW4 )
 //[3]QUrl ( const QUrl & other )
 //[4]QUrl ( const QString & url, ParsingMode parsingMode )
 
-HB_FUNC( QURL_NEW )
+HB_FUNC_STATIC( QURL_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -284,7 +284,7 @@ HB_FUNC( QURL_NEW )
   }
 }
 
-HB_FUNC( QURL_DELETE )
+HB_FUNC_STATIC( QURL_DELETE )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -304,7 +304,7 @@ HB_FUNC( QURL_DELETE )
 /*
 void addEncodedQueryItem ( const QByteArray & key, const QByteArray & value )
 */
-HB_FUNC( QURL_ADDENCODEDQUERYITEM )
+HB_FUNC_STATIC( QURL_ADDENCODEDQUERYITEM )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -320,7 +320,7 @@ HB_FUNC( QURL_ADDENCODEDQUERYITEM )
 /*
 void addQueryItem ( const QString & key, const QString & value )
 */
-HB_FUNC( QURL_ADDQUERYITEM )
+HB_FUNC_STATIC( QURL_ADDQUERYITEM )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -336,7 +336,7 @@ HB_FUNC( QURL_ADDQUERYITEM )
 /*
 QList<QByteArray> allEncodedQueryItemValues ( const QByteArray & key ) const
 */
-HB_FUNC( QURL_ALLENCODEDQUERYITEMVALUES )
+HB_FUNC_STATIC( QURL_ALLENCODEDQUERYITEMVALUES )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -381,7 +381,7 @@ HB_FUNC( QURL_ALLENCODEDQUERYITEMVALUES )
 /*
 QStringList allQueryItemValues ( const QString & key ) const
 */
-HB_FUNC( QURL_ALLQUERYITEMVALUES )
+HB_FUNC_STATIC( QURL_ALLQUERYITEMVALUES )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -405,7 +405,7 @@ HB_FUNC( QURL_ALLQUERYITEMVALUES )
 /*
 QString authority () const
 */
-HB_FUNC( QURL_AUTHORITY )
+HB_FUNC_STATIC( QURL_AUTHORITY )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -419,7 +419,7 @@ HB_FUNC( QURL_AUTHORITY )
 /*
 void clear ()
 */
-HB_FUNC( QURL_CLEAR )
+HB_FUNC_STATIC( QURL_CLEAR )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -433,7 +433,7 @@ HB_FUNC( QURL_CLEAR )
 /*
 QByteArray encodedFragment () const
 */
-HB_FUNC( QURL_ENCODEDFRAGMENT )
+HB_FUNC_STATIC( QURL_ENCODEDFRAGMENT )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -446,7 +446,7 @@ HB_FUNC( QURL_ENCODEDFRAGMENT )
 /*
 QByteArray encodedHost () const
 */
-HB_FUNC( QURL_ENCODEDHOST )
+HB_FUNC_STATIC( QURL_ENCODEDHOST )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -459,7 +459,7 @@ HB_FUNC( QURL_ENCODEDHOST )
 /*
 QByteArray encodedPassword () const
 */
-HB_FUNC( QURL_ENCODEDPASSWORD )
+HB_FUNC_STATIC( QURL_ENCODEDPASSWORD )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -472,7 +472,7 @@ HB_FUNC( QURL_ENCODEDPASSWORD )
 /*
 QByteArray encodedPath () const
 */
-HB_FUNC( QURL_ENCODEDPATH )
+HB_FUNC_STATIC( QURL_ENCODEDPATH )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -485,7 +485,7 @@ HB_FUNC( QURL_ENCODEDPATH )
 /*
 QByteArray encodedQuery () const
 */
-HB_FUNC( QURL_ENCODEDQUERY )
+HB_FUNC_STATIC( QURL_ENCODEDQUERY )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -498,7 +498,7 @@ HB_FUNC( QURL_ENCODEDQUERY )
 /*
 QByteArray encodedQueryItemValue ( const QByteArray & key ) const
 */
-HB_FUNC( QURL_ENCODEDQUERYITEMVALUE )
+HB_FUNC_STATIC( QURL_ENCODEDQUERYITEMVALUE )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -513,7 +513,7 @@ HB_FUNC( QURL_ENCODEDQUERYITEMVALUE )
 /*
 QByteArray encodedUserName () const
 */
-HB_FUNC( QURL_ENCODEDUSERNAME )
+HB_FUNC_STATIC( QURL_ENCODEDUSERNAME )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -526,7 +526,7 @@ HB_FUNC( QURL_ENCODEDUSERNAME )
 /*
 QString errorString () const
 */
-HB_FUNC( QURL_ERRORSTRING )
+HB_FUNC_STATIC( QURL_ERRORSTRING )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -540,7 +540,7 @@ HB_FUNC( QURL_ERRORSTRING )
 /*
 QString fragment () const
 */
-HB_FUNC( QURL_FRAGMENT )
+HB_FUNC_STATIC( QURL_FRAGMENT )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -554,7 +554,7 @@ HB_FUNC( QURL_FRAGMENT )
 /*
 bool hasEncodedQueryItem ( const QByteArray & key ) const
 */
-HB_FUNC( QURL_HASENCODEDQUERYITEM )
+HB_FUNC_STATIC( QURL_HASENCODEDQUERYITEM )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -569,7 +569,7 @@ HB_FUNC( QURL_HASENCODEDQUERYITEM )
 /*
 bool hasFragment () const
 */
-HB_FUNC( QURL_HASFRAGMENT )
+HB_FUNC_STATIC( QURL_HASFRAGMENT )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -583,7 +583,7 @@ HB_FUNC( QURL_HASFRAGMENT )
 /*
 bool hasQuery () const
 */
-HB_FUNC( QURL_HASQUERY )
+HB_FUNC_STATIC( QURL_HASQUERY )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -597,7 +597,7 @@ HB_FUNC( QURL_HASQUERY )
 /*
 bool hasQueryItem ( const QString & key ) const
 */
-HB_FUNC( QURL_HASQUERYITEM )
+HB_FUNC_STATIC( QURL_HASQUERYITEM )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -612,7 +612,7 @@ HB_FUNC( QURL_HASQUERYITEM )
 /*
 QString host () const
 */
-HB_FUNC( QURL_HOST )
+HB_FUNC_STATIC( QURL_HOST )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -626,7 +626,7 @@ HB_FUNC( QURL_HOST )
 /*
 bool isEmpty () const
 */
-HB_FUNC( QURL_ISEMPTY )
+HB_FUNC_STATIC( QURL_ISEMPTY )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -640,7 +640,7 @@ HB_FUNC( QURL_ISEMPTY )
 /*
 bool isLocalFile () const
 */
-HB_FUNC( QURL_ISLOCALFILE )
+HB_FUNC_STATIC( QURL_ISLOCALFILE )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -654,7 +654,7 @@ HB_FUNC( QURL_ISLOCALFILE )
 /*
 bool isParentOf ( const QUrl & childUrl ) const
 */
-HB_FUNC( QURL_ISPARENTOF )
+HB_FUNC_STATIC( QURL_ISPARENTOF )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -669,7 +669,7 @@ HB_FUNC( QURL_ISPARENTOF )
 /*
 bool isRelative () const
 */
-HB_FUNC( QURL_ISRELATIVE )
+HB_FUNC_STATIC( QURL_ISRELATIVE )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -683,7 +683,7 @@ HB_FUNC( QURL_ISRELATIVE )
 /*
 bool isValid () const
 */
-HB_FUNC( QURL_ISVALID )
+HB_FUNC_STATIC( QURL_ISVALID )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -697,7 +697,7 @@ HB_FUNC( QURL_ISVALID )
 /*
 QString password () const
 */
-HB_FUNC( QURL_PASSWORD )
+HB_FUNC_STATIC( QURL_PASSWORD )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -711,7 +711,7 @@ HB_FUNC( QURL_PASSWORD )
 /*
 QString path () const
 */
-HB_FUNC( QURL_PATH )
+HB_FUNC_STATIC( QURL_PATH )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -725,7 +725,7 @@ HB_FUNC( QURL_PATH )
 /*
 int port () const
 */
-HB_FUNC( QURL_PORT1 )
+HB_FUNC_STATIC( QURL_PORT1 )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -739,7 +739,7 @@ HB_FUNC( QURL_PORT1 )
 /*
 int port ( int defaultPort ) const
 */
-HB_FUNC( QURL_PORT2 )
+HB_FUNC_STATIC( QURL_PORT2 )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -754,7 +754,7 @@ HB_FUNC( QURL_PORT2 )
 //[1]int port () const
 //[2]int port ( int defaultPort ) const
 
-HB_FUNC( QURL_PORT )
+HB_FUNC_STATIC( QURL_PORT )
 {
   if( ISNUMPAR(0) )
   {
@@ -769,7 +769,7 @@ HB_FUNC( QURL_PORT )
 /*
 QString queryItemValue ( const QString & key ) const
 */
-HB_FUNC( QURL_QUERYITEMVALUE )
+HB_FUNC_STATIC( QURL_QUERYITEMVALUE )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -787,7 +787,7 @@ HB_FUNC( QURL_QUERYITEMVALUE )
 /*
 void removeAllEncodedQueryItems ( const QByteArray & key )
 */
-HB_FUNC( QURL_REMOVEALLENCODEDQUERYITEMS )
+HB_FUNC_STATIC( QURL_REMOVEALLENCODEDQUERYITEMS )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -802,7 +802,7 @@ HB_FUNC( QURL_REMOVEALLENCODEDQUERYITEMS )
 /*
 void removeAllQueryItems ( const QString & key )
 */
-HB_FUNC( QURL_REMOVEALLQUERYITEMS )
+HB_FUNC_STATIC( QURL_REMOVEALLQUERYITEMS )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -817,7 +817,7 @@ HB_FUNC( QURL_REMOVEALLQUERYITEMS )
 /*
 void removeEncodedQueryItem ( const QByteArray & key )
 */
-HB_FUNC( QURL_REMOVEENCODEDQUERYITEM )
+HB_FUNC_STATIC( QURL_REMOVEENCODEDQUERYITEM )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -832,7 +832,7 @@ HB_FUNC( QURL_REMOVEENCODEDQUERYITEM )
 /*
 void removeQueryItem ( const QString & key )
 */
-HB_FUNC( QURL_REMOVEQUERYITEM )
+HB_FUNC_STATIC( QURL_REMOVEQUERYITEM )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -847,7 +847,7 @@ HB_FUNC( QURL_REMOVEQUERYITEM )
 /*
 QUrl resolved ( const QUrl & relative ) const
 */
-HB_FUNC( QURL_RESOLVED )
+HB_FUNC_STATIC( QURL_RESOLVED )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -861,7 +861,7 @@ HB_FUNC( QURL_RESOLVED )
 /*
 QString scheme () const
 */
-HB_FUNC( QURL_SCHEME )
+HB_FUNC_STATIC( QURL_SCHEME )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -875,7 +875,7 @@ HB_FUNC( QURL_SCHEME )
 /*
 void setAuthority ( const QString & authority )
 */
-HB_FUNC( QURL_SETAUTHORITY )
+HB_FUNC_STATIC( QURL_SETAUTHORITY )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -890,7 +890,7 @@ HB_FUNC( QURL_SETAUTHORITY )
 /*
 void setEncodedFragment ( const QByteArray & fragment )
 */
-HB_FUNC( QURL_SETENCODEDFRAGMENT )
+HB_FUNC_STATIC( QURL_SETENCODEDFRAGMENT )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -905,7 +905,7 @@ HB_FUNC( QURL_SETENCODEDFRAGMENT )
 /*
 void setEncodedHost ( const QByteArray & host )
 */
-HB_FUNC( QURL_SETENCODEDHOST )
+HB_FUNC_STATIC( QURL_SETENCODEDHOST )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -920,7 +920,7 @@ HB_FUNC( QURL_SETENCODEDHOST )
 /*
 void setEncodedPassword ( const QByteArray & password )
 */
-HB_FUNC( QURL_SETENCODEDPASSWORD )
+HB_FUNC_STATIC( QURL_SETENCODEDPASSWORD )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -935,7 +935,7 @@ HB_FUNC( QURL_SETENCODEDPASSWORD )
 /*
 void setEncodedPath ( const QByteArray & path )
 */
-HB_FUNC( QURL_SETENCODEDPATH )
+HB_FUNC_STATIC( QURL_SETENCODEDPATH )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -950,7 +950,7 @@ HB_FUNC( QURL_SETENCODEDPATH )
 /*
 void setEncodedQuery ( const QByteArray & query )
 */
-HB_FUNC( QURL_SETENCODEDQUERY )
+HB_FUNC_STATIC( QURL_SETENCODEDQUERY )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -966,7 +966,7 @@ HB_FUNC( QURL_SETENCODEDQUERY )
 /*
 void setEncodedUrl ( const QByteArray & encodedUrl )
 */
-HB_FUNC( QURL_SETENCODEDURL1 )
+HB_FUNC_STATIC( QURL_SETENCODEDURL1 )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -981,7 +981,7 @@ HB_FUNC( QURL_SETENCODEDURL1 )
 /*
 void setEncodedUrl ( const QByteArray & encodedUrl, ParsingMode parsingMode )
 */
-HB_FUNC( QURL_SETENCODEDURL2 )
+HB_FUNC_STATIC( QURL_SETENCODEDURL2 )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -997,7 +997,7 @@ HB_FUNC( QURL_SETENCODEDURL2 )
 //[1]void setEncodedUrl ( const QByteArray & encodedUrl )
 //[2]void setEncodedUrl ( const QByteArray & encodedUrl, ParsingMode parsingMode )
 
-HB_FUNC( QURL_SETENCODEDURL )
+HB_FUNC_STATIC( QURL_SETENCODEDURL )
 {
   if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
@@ -1012,7 +1012,7 @@ HB_FUNC( QURL_SETENCODEDURL )
 /*
 void setEncodedUserName ( const QByteArray & userName )
 */
-HB_FUNC( QURL_SETENCODEDUSERNAME )
+HB_FUNC_STATIC( QURL_SETENCODEDUSERNAME )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1027,7 +1027,7 @@ HB_FUNC( QURL_SETENCODEDUSERNAME )
 /*
 void setFragment ( const QString & fragment )
 */
-HB_FUNC( QURL_SETFRAGMENT )
+HB_FUNC_STATIC( QURL_SETFRAGMENT )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1042,7 +1042,7 @@ HB_FUNC( QURL_SETFRAGMENT )
 /*
 void setHost ( const QString & host )
 */
-HB_FUNC( QURL_SETHOST )
+HB_FUNC_STATIC( QURL_SETHOST )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1057,7 +1057,7 @@ HB_FUNC( QURL_SETHOST )
 /*
 void setPassword ( const QString & password )
 */
-HB_FUNC( QURL_SETPASSWORD )
+HB_FUNC_STATIC( QURL_SETPASSWORD )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1072,7 +1072,7 @@ HB_FUNC( QURL_SETPASSWORD )
 /*
 void setPath ( const QString & path )
 */
-HB_FUNC( QURL_SETPATH )
+HB_FUNC_STATIC( QURL_SETPATH )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1087,7 +1087,7 @@ HB_FUNC( QURL_SETPATH )
 /*
 void setPort ( int port )
 */
-HB_FUNC( QURL_SETPORT )
+HB_FUNC_STATIC( QURL_SETPORT )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1102,7 +1102,7 @@ HB_FUNC( QURL_SETPORT )
 /*
 void setQueryDelimiters ( char valueDelimiter, char pairDelimiter )
 */
-HB_FUNC( QURL_SETQUERYDELIMITERS )
+HB_FUNC_STATIC( QURL_SETQUERYDELIMITERS )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1119,7 +1119,7 @@ HB_FUNC( QURL_SETQUERYDELIMITERS )
 /*
 void setScheme ( const QString & scheme )
 */
-HB_FUNC( QURL_SETSCHEME )
+HB_FUNC_STATIC( QURL_SETSCHEME )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1134,7 +1134,7 @@ HB_FUNC( QURL_SETSCHEME )
 /*
 void setUrl ( const QString & url )
 */
-HB_FUNC( QURL_SETURL1 )
+HB_FUNC_STATIC( QURL_SETURL1 )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1149,7 +1149,7 @@ HB_FUNC( QURL_SETURL1 )
 /*
 void setUrl ( const QString & url, ParsingMode parsingMode )
 */
-HB_FUNC( QURL_SETURL2 )
+HB_FUNC_STATIC( QURL_SETURL2 )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1165,7 +1165,7 @@ HB_FUNC( QURL_SETURL2 )
 //[1]void setUrl ( const QString & url )
 //[2]void setUrl ( const QString & url, ParsingMode parsingMode )
 
-HB_FUNC( QURL_SETURL )
+HB_FUNC_STATIC( QURL_SETURL )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
@@ -1180,7 +1180,7 @@ HB_FUNC( QURL_SETURL )
 /*
 void setUserInfo ( const QString & userInfo )
 */
-HB_FUNC( QURL_SETUSERINFO )
+HB_FUNC_STATIC( QURL_SETUSERINFO )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1195,7 +1195,7 @@ HB_FUNC( QURL_SETUSERINFO )
 /*
 void setUserName ( const QString & userName )
 */
-HB_FUNC( QURL_SETUSERNAME )
+HB_FUNC_STATIC( QURL_SETUSERNAME )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1210,7 +1210,7 @@ HB_FUNC( QURL_SETUSERNAME )
 /*
 void swap ( QUrl & other )
 */
-HB_FUNC( QURL_SWAP )
+HB_FUNC_STATIC( QURL_SWAP )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1225,7 +1225,7 @@ HB_FUNC( QURL_SWAP )
 /*
 QByteArray toEncoded ( FormattingOptions options = None ) const
 */
-HB_FUNC( QURL_TOENCODED )
+HB_FUNC_STATIC( QURL_TOENCODED )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1239,7 +1239,7 @@ HB_FUNC( QURL_TOENCODED )
 /*
 QString toLocalFile () const
 */
-HB_FUNC( QURL_TOLOCALFILE )
+HB_FUNC_STATIC( QURL_TOLOCALFILE )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1253,7 +1253,7 @@ HB_FUNC( QURL_TOLOCALFILE )
 /*
 QString toString ( FormattingOptions options = None ) const
 */
-HB_FUNC( QURL_TOSTRING )
+HB_FUNC_STATIC( QURL_TOSTRING )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1268,7 +1268,7 @@ HB_FUNC( QURL_TOSTRING )
 /*
 QString topLevelDomain () const
 */
-HB_FUNC( QURL_TOPLEVELDOMAIN )
+HB_FUNC_STATIC( QURL_TOPLEVELDOMAIN )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1282,7 +1282,7 @@ HB_FUNC( QURL_TOPLEVELDOMAIN )
 /*
 QString userInfo () const
 */
-HB_FUNC( QURL_USERINFO )
+HB_FUNC_STATIC( QURL_USERINFO )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1296,7 +1296,7 @@ HB_FUNC( QURL_USERINFO )
 /*
 QString userName () const
 */
-HB_FUNC( QURL_USERNAME )
+HB_FUNC_STATIC( QURL_USERNAME )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1311,7 +1311,7 @@ HB_FUNC( QURL_USERNAME )
 /*
 QString fromAce ( const QByteArray & domain )
 */
-HB_FUNC( QURL_FROMACE )
+HB_FUNC_STATIC( QURL_FROMACE )
 {
   QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QString str1 = QUrl::fromAce ( *par1 );
@@ -1322,7 +1322,7 @@ HB_FUNC( QURL_FROMACE )
 /*
 QUrl fromEncoded ( const QByteArray & input )
 */
-HB_FUNC( QURL_FROMENCODED1 )
+HB_FUNC_STATIC( QURL_FROMENCODED1 )
 {
   QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QUrl * ptr = new QUrl( QUrl::fromEncoded ( *par1 ) );
@@ -1332,7 +1332,7 @@ HB_FUNC( QURL_FROMENCODED1 )
 /*
 QUrl fromEncoded ( const QByteArray & input, ParsingMode parsingMode )
 */
-HB_FUNC( QURL_FROMENCODED2 )
+HB_FUNC_STATIC( QURL_FROMENCODED2 )
 {
   QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = hb_parni(2);
@@ -1343,7 +1343,7 @@ HB_FUNC( QURL_FROMENCODED2 )
 //[1]QUrl fromEncoded ( const QByteArray & input )
 //[2]QUrl fromEncoded ( const QByteArray & input, ParsingMode parsingMode )
 
-HB_FUNC( QURL_FROMENCODED )
+HB_FUNC_STATIC( QURL_FROMENCODED )
 {
   if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
@@ -1358,7 +1358,7 @@ HB_FUNC( QURL_FROMENCODED )
 /*
 QUrl fromLocalFile ( const QString & localFile )
 */
-HB_FUNC( QURL_FROMLOCALFILE )
+HB_FUNC_STATIC( QURL_FROMLOCALFILE )
 {
   QString par1 = hb_parc(1);
   QUrl * ptr = new QUrl( QUrl::fromLocalFile ( par1 ) );
@@ -1368,7 +1368,7 @@ HB_FUNC( QURL_FROMLOCALFILE )
 /*
 QString fromPercentEncoding ( const QByteArray & input )
 */
-HB_FUNC( QURL_FROMPERCENTENCODING )
+HB_FUNC_STATIC( QURL_FROMPERCENTENCODING )
 {
   QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QString str1 = QUrl::fromPercentEncoding ( *par1 );
@@ -1379,7 +1379,7 @@ HB_FUNC( QURL_FROMPERCENTENCODING )
 /*
 QUrl fromUserInput ( const QString & userInput )
 */
-HB_FUNC( QURL_FROMUSERINPUT )
+HB_FUNC_STATIC( QURL_FROMUSERINPUT )
 {
   QString par1 = hb_parc(1);
   QUrl * ptr = new QUrl( QUrl::fromUserInput ( par1 ) );
@@ -1389,7 +1389,7 @@ HB_FUNC( QURL_FROMUSERINPUT )
 /*
 QStringList idnWhitelist ()
 */
-HB_FUNC( QURL_IDNWHITELIST )
+HB_FUNC_STATIC( QURL_IDNWHITELIST )
 {
   QStringList strl = QUrl::idnWhitelist (  );
   PHB_ITEM pArray;
@@ -1408,7 +1408,7 @@ HB_FUNC( QURL_IDNWHITELIST )
 /*
 void setIdnWhitelist ( const QStringList & list )
 */
-HB_FUNC( QURL_SETIDNWHITELIST )
+HB_FUNC_STATIC( QURL_SETIDNWHITELIST )
 {
 QStringList par1;
 PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
@@ -1427,7 +1427,7 @@ par1 << temp;
 /*
 QByteArray toAce ( const QString & domain )
 */
-HB_FUNC( QURL_TOACE )
+HB_FUNC_STATIC( QURL_TOACE )
 {
   QString par1 = hb_parc(1);
   QByteArray * ptr = new QByteArray( QUrl::toAce ( par1 ) );
@@ -1437,7 +1437,7 @@ HB_FUNC( QURL_TOACE )
 /*
 QByteArray toPercentEncoding ( const QString & input, const QByteArray & exclude = QByteArray(), const QByteArray & include = QByteArray() )
 */
-HB_FUNC( QURL_TOPERCENTENCODING )
+HB_FUNC_STATIC( QURL_TOPERCENTENCODING )
 {
   QString par1 = hb_parc(1);
   QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );

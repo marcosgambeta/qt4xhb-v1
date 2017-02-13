@@ -61,7 +61,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QWEBPLUGINFACTORY_DELETE )
+HB_FUNC_STATIC( QWEBPLUGINFACTORY_DELETE )
 {
   QWebPluginFactory * obj = (QWebPluginFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -80,7 +80,7 @@ HB_FUNC( QWEBPLUGINFACTORY_DELETE )
 /*
 virtual QObject * create ( const QString & mimeType, const QUrl & url, const QStringList & argumentNames, const QStringList & argumentValues ) const = 0
 */
-HB_FUNC( QWEBPLUGINFACTORY_CREATE )
+HB_FUNC_STATIC( QWEBPLUGINFACTORY_CREATE )
 {
   QWebPluginFactory * obj = (QWebPluginFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -114,7 +114,7 @@ par4 << temp;
 /*
 virtual void refreshPlugins ()
 */
-HB_FUNC( QWEBPLUGINFACTORY_REFRESHPLUGINS )
+HB_FUNC_STATIC( QWEBPLUGINFACTORY_REFRESHPLUGINS )
 {
   QWebPluginFactory * obj = (QWebPluginFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

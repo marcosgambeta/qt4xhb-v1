@@ -100,7 +100,7 @@ RETURN
 #include "qt4xhb_clsid.h"
 #include "qt4xhb_utils.h"
 
-HB_FUNC( QXMLLEXICALHANDLER_DELETE )
+HB_FUNC_STATIC( QXMLLEXICALHANDLER_DELETE )
 {
   QXmlLexicalHandler * obj = (QXmlLexicalHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -119,7 +119,7 @@ HB_FUNC( QXMLLEXICALHANDLER_DELETE )
 /*
 virtual bool comment ( const QString & ch ) = 0
 */
-HB_FUNC( QXMLLEXICALHANDLER_COMMENT )
+HB_FUNC_STATIC( QXMLLEXICALHANDLER_COMMENT )
 {
   QXmlLexicalHandler * obj = (QXmlLexicalHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -134,7 +134,7 @@ HB_FUNC( QXMLLEXICALHANDLER_COMMENT )
 /*
 virtual bool endCDATA () = 0
 */
-HB_FUNC( QXMLLEXICALHANDLER_ENDCDATA )
+HB_FUNC_STATIC( QXMLLEXICALHANDLER_ENDCDATA )
 {
   QXmlLexicalHandler * obj = (QXmlLexicalHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -148,7 +148,7 @@ HB_FUNC( QXMLLEXICALHANDLER_ENDCDATA )
 /*
 virtual bool endDTD () = 0
 */
-HB_FUNC( QXMLLEXICALHANDLER_ENDDTD )
+HB_FUNC_STATIC( QXMLLEXICALHANDLER_ENDDTD )
 {
   QXmlLexicalHandler * obj = (QXmlLexicalHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -162,7 +162,7 @@ HB_FUNC( QXMLLEXICALHANDLER_ENDDTD )
 /*
 virtual bool endEntity ( const QString & name ) = 0
 */
-HB_FUNC( QXMLLEXICALHANDLER_ENDENTITY )
+HB_FUNC_STATIC( QXMLLEXICALHANDLER_ENDENTITY )
 {
   QXmlLexicalHandler * obj = (QXmlLexicalHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -177,7 +177,7 @@ HB_FUNC( QXMLLEXICALHANDLER_ENDENTITY )
 /*
 virtual QString errorString () const = 0
 */
-HB_FUNC( QXMLLEXICALHANDLER_ERRORSTRING )
+HB_FUNC_STATIC( QXMLLEXICALHANDLER_ERRORSTRING )
 {
   QXmlLexicalHandler * obj = (QXmlLexicalHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -191,7 +191,7 @@ HB_FUNC( QXMLLEXICALHANDLER_ERRORSTRING )
 /*
 virtual bool startCDATA () = 0
 */
-HB_FUNC( QXMLLEXICALHANDLER_STARTCDATA )
+HB_FUNC_STATIC( QXMLLEXICALHANDLER_STARTCDATA )
 {
   QXmlLexicalHandler * obj = (QXmlLexicalHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -205,7 +205,7 @@ HB_FUNC( QXMLLEXICALHANDLER_STARTCDATA )
 /*
 virtual bool startDTD ( const QString & name, const QString & publicId, const QString & systemId ) = 0
 */
-HB_FUNC( QXMLLEXICALHANDLER_STARTDTD )
+HB_FUNC_STATIC( QXMLLEXICALHANDLER_STARTDTD )
 {
   QXmlLexicalHandler * obj = (QXmlLexicalHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -222,7 +222,7 @@ HB_FUNC( QXMLLEXICALHANDLER_STARTDTD )
 /*
 virtual bool startEntity ( const QString & name ) = 0
 */
-HB_FUNC( QXMLLEXICALHANDLER_STARTENTITY )
+HB_FUNC_STATIC( QXMLLEXICALHANDLER_STARTENTITY )
 {
   QXmlLexicalHandler * obj = (QXmlLexicalHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

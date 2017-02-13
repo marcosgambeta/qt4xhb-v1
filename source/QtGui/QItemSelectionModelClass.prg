@@ -88,7 +88,7 @@ RETURN
 /*
 QItemSelectionModel ( QAbstractItemModel * model )
 */
-HB_FUNC( QITEMSELECTIONMODEL_NEW1 )
+HB_FUNC_STATIC( QITEMSELECTIONMODEL_NEW1 )
 {
   QItemSelectionModel * o = NULL;
   QAbstractItemModel * par1 = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -104,7 +104,7 @@ HB_FUNC( QITEMSELECTIONMODEL_NEW1 )
 /*
 QItemSelectionModel ( QAbstractItemModel * model, QObject * parent )
 */
-HB_FUNC( QITEMSELECTIONMODEL_NEW2 )
+HB_FUNC_STATIC( QITEMSELECTIONMODEL_NEW2 )
 {
   QItemSelectionModel * o = NULL;
   QAbstractItemModel * par1 = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -121,7 +121,7 @@ HB_FUNC( QITEMSELECTIONMODEL_NEW2 )
 //[1]QItemSelectionModel ( QAbstractItemModel * model )
 //[2]QItemSelectionModel ( QAbstractItemModel * model, QObject * parent )
 
-HB_FUNC( QITEMSELECTIONMODEL_NEW )
+HB_FUNC_STATIC( QITEMSELECTIONMODEL_NEW )
 {
   if( ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1) )
   {
@@ -137,7 +137,7 @@ HB_FUNC( QITEMSELECTIONMODEL_NEW )
   }
 }
 
-HB_FUNC( QITEMSELECTIONMODEL_DELETE )
+HB_FUNC_STATIC( QITEMSELECTIONMODEL_DELETE )
 {
   QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -156,7 +156,7 @@ HB_FUNC( QITEMSELECTIONMODEL_DELETE )
 /*
 bool columnIntersectsSelection ( int column, const QModelIndex & parent ) const
 */
-HB_FUNC( QITEMSELECTIONMODEL_COLUMNINTERSECTSSELECTION )
+HB_FUNC_STATIC( QITEMSELECTIONMODEL_COLUMNINTERSECTSSELECTION )
 {
   QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -172,7 +172,7 @@ HB_FUNC( QITEMSELECTIONMODEL_COLUMNINTERSECTSSELECTION )
 /*
 QModelIndex currentIndex () const
 */
-HB_FUNC( QITEMSELECTIONMODEL_CURRENTINDEX )
+HB_FUNC_STATIC( QITEMSELECTIONMODEL_CURRENTINDEX )
 {
   QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -185,7 +185,7 @@ HB_FUNC( QITEMSELECTIONMODEL_CURRENTINDEX )
 /*
 bool hasSelection () const
 */
-HB_FUNC( QITEMSELECTIONMODEL_HASSELECTION )
+HB_FUNC_STATIC( QITEMSELECTIONMODEL_HASSELECTION )
 {
   QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -199,7 +199,7 @@ HB_FUNC( QITEMSELECTIONMODEL_HASSELECTION )
 /*
 bool isColumnSelected ( int column, const QModelIndex & parent ) const
 */
-HB_FUNC( QITEMSELECTIONMODEL_ISCOLUMNSELECTED )
+HB_FUNC_STATIC( QITEMSELECTIONMODEL_ISCOLUMNSELECTED )
 {
   QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -215,7 +215,7 @@ HB_FUNC( QITEMSELECTIONMODEL_ISCOLUMNSELECTED )
 /*
 bool isRowSelected ( int row, const QModelIndex & parent ) const
 */
-HB_FUNC( QITEMSELECTIONMODEL_ISROWSELECTED )
+HB_FUNC_STATIC( QITEMSELECTIONMODEL_ISROWSELECTED )
 {
   QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -231,7 +231,7 @@ HB_FUNC( QITEMSELECTIONMODEL_ISROWSELECTED )
 /*
 bool isSelected ( const QModelIndex & index ) const
 */
-HB_FUNC( QITEMSELECTIONMODEL_ISSELECTED )
+HB_FUNC_STATIC( QITEMSELECTIONMODEL_ISSELECTED )
 {
   QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -246,7 +246,7 @@ HB_FUNC( QITEMSELECTIONMODEL_ISSELECTED )
 /*
 const QAbstractItemModel * model () const
 */
-HB_FUNC( QITEMSELECTIONMODEL_MODEL )
+HB_FUNC_STATIC( QITEMSELECTIONMODEL_MODEL )
 {
   QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -259,7 +259,7 @@ HB_FUNC( QITEMSELECTIONMODEL_MODEL )
 /*
 bool rowIntersectsSelection ( int row, const QModelIndex & parent ) const
 */
-HB_FUNC( QITEMSELECTIONMODEL_ROWINTERSECTSSELECTION )
+HB_FUNC_STATIC( QITEMSELECTIONMODEL_ROWINTERSECTSSELECTION )
 {
   QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -275,7 +275,7 @@ HB_FUNC( QITEMSELECTIONMODEL_ROWINTERSECTSSELECTION )
 /*
 QModelIndexList selectedColumns ( int row = 0 ) const
 */
-HB_FUNC( QITEMSELECTIONMODEL_SELECTEDCOLUMNS )
+HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDCOLUMNS )
 {
   QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -320,7 +320,7 @@ HB_FUNC( QITEMSELECTIONMODEL_SELECTEDCOLUMNS )
 /*
 QModelIndexList selectedIndexes () const
 */
-HB_FUNC( QITEMSELECTIONMODEL_SELECTEDINDEXES )
+HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDINDEXES )
 {
   QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -364,7 +364,7 @@ HB_FUNC( QITEMSELECTIONMODEL_SELECTEDINDEXES )
 /*
 QModelIndexList selectedRows ( int column = 0 ) const
 */
-HB_FUNC( QITEMSELECTIONMODEL_SELECTEDROWS )
+HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDROWS )
 {
   QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -409,7 +409,7 @@ HB_FUNC( QITEMSELECTIONMODEL_SELECTEDROWS )
 /*
 const QItemSelection selection () const
 */
-HB_FUNC( QITEMSELECTIONMODEL_SELECTION )
+HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTION )
 {
   QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -421,7 +421,7 @@ HB_FUNC( QITEMSELECTIONMODEL_SELECTION )
 /*
 virtual void clear ()
 */
-HB_FUNC( QITEMSELECTIONMODEL_CLEAR )
+HB_FUNC_STATIC( QITEMSELECTIONMODEL_CLEAR )
 {
   QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -435,7 +435,7 @@ HB_FUNC( QITEMSELECTIONMODEL_CLEAR )
 /*
 void clearSelection ()
 */
-HB_FUNC( QITEMSELECTIONMODEL_CLEARSELECTION )
+HB_FUNC_STATIC( QITEMSELECTIONMODEL_CLEARSELECTION )
 {
   QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -449,7 +449,7 @@ HB_FUNC( QITEMSELECTIONMODEL_CLEARSELECTION )
 /*
 virtual void reset ()
 */
-HB_FUNC( QITEMSELECTIONMODEL_RESET )
+HB_FUNC_STATIC( QITEMSELECTIONMODEL_RESET )
 {
   QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -463,7 +463,7 @@ HB_FUNC( QITEMSELECTIONMODEL_RESET )
 /*
 virtual void select ( const QModelIndex & index, QItemSelectionModel::SelectionFlags command )
 */
-HB_FUNC( QITEMSELECTIONMODEL_SELECT1 )
+HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECT1 )
 {
   QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -479,7 +479,7 @@ HB_FUNC( QITEMSELECTIONMODEL_SELECT1 )
 /*
 virtual void select ( const QItemSelection & selection, QItemSelectionModel::SelectionFlags command )
 */
-HB_FUNC( QITEMSELECTIONMODEL_SELECT2 )
+HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECT2 )
 {
   QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -495,7 +495,7 @@ HB_FUNC( QITEMSELECTIONMODEL_SELECT2 )
 //[1]virtual void select ( const QModelIndex & index, QItemSelectionModel::SelectionFlags command )
 //[2]virtual void select ( const QItemSelection & selection, QItemSelectionModel::SelectionFlags command )
 
-HB_FUNC( QITEMSELECTIONMODEL_SELECT )
+HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECT )
 {
   if( ISNUMPAR(2) && ISQMODELINDEX(1) && ISNUM(2) )
   {
@@ -510,7 +510,7 @@ HB_FUNC( QITEMSELECTIONMODEL_SELECT )
 /*
 void setCurrentIndex ( const QModelIndex & index, QItemSelectionModel::SelectionFlags command )
 */
-HB_FUNC( QITEMSELECTIONMODEL_SETCURRENTINDEX )
+HB_FUNC_STATIC( QITEMSELECTIONMODEL_SETCURRENTINDEX )
 {
   QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

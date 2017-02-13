@@ -84,7 +84,7 @@ RETURN
 /*
 QColorDialog ( QWidget * parent = 0 )
 */
-HB_FUNC( QCOLORDIALOG_NEW1 )
+HB_FUNC_STATIC( QCOLORDIALOG_NEW1 )
 {
   QColorDialog * o = NULL;
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -100,7 +100,7 @@ HB_FUNC( QCOLORDIALOG_NEW1 )
 /*
 QColorDialog ( const QColor & initial, QWidget * parent = 0 )
 */
-HB_FUNC( QCOLORDIALOG_NEW2 )
+HB_FUNC_STATIC( QCOLORDIALOG_NEW2 )
 {
   QColorDialog * o = NULL;
   QColor par1 = ISOBJECT(1)? *(QColor *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QColor(hb_parc(1));
@@ -117,7 +117,7 @@ HB_FUNC( QCOLORDIALOG_NEW2 )
 //[1]QColorDialog ( QWidget * parent = 0 )
 //[2]QColorDialog ( const QColor & initial, QWidget * parent = 0 )
 
-HB_FUNC( QCOLORDIALOG_NEW )
+HB_FUNC_STATIC( QCOLORDIALOG_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
@@ -133,7 +133,7 @@ HB_FUNC( QCOLORDIALOG_NEW )
   }
 }
 
-HB_FUNC( QCOLORDIALOG_DELETE )
+HB_FUNC_STATIC( QCOLORDIALOG_DELETE )
 {
   QColorDialog * obj = (QColorDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -152,7 +152,7 @@ HB_FUNC( QCOLORDIALOG_DELETE )
 /*
 QColor currentColor () const
 */
-HB_FUNC( QCOLORDIALOG_CURRENTCOLOR )
+HB_FUNC_STATIC( QCOLORDIALOG_CURRENTCOLOR )
 {
   QColorDialog * obj = (QColorDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -165,7 +165,7 @@ HB_FUNC( QCOLORDIALOG_CURRENTCOLOR )
 /*
 void open ()
 */
-HB_FUNC( QCOLORDIALOG_OPEN1 )
+HB_FUNC_STATIC( QCOLORDIALOG_OPEN1 )
 {
   QColorDialog * obj = (QColorDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -179,7 +179,7 @@ HB_FUNC( QCOLORDIALOG_OPEN1 )
 /*
 void open ( QObject * receiver, const char * member )
 */
-HB_FUNC( QCOLORDIALOG_OPEN2 )
+HB_FUNC_STATIC( QCOLORDIALOG_OPEN2 )
 {
   QColorDialog * obj = (QColorDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -195,7 +195,7 @@ HB_FUNC( QCOLORDIALOG_OPEN2 )
 //[1]void open ()
 //[2]void open ( QObject * receiver, const char * member )
 
-HB_FUNC( QCOLORDIALOG_OPEN )
+HB_FUNC_STATIC( QCOLORDIALOG_OPEN )
 {
   if( ISNUMPAR(0) )
   {
@@ -210,7 +210,7 @@ HB_FUNC( QCOLORDIALOG_OPEN )
 /*
 ColorDialogOptions options () const
 */
-HB_FUNC( QCOLORDIALOG_OPTIONS )
+HB_FUNC_STATIC( QCOLORDIALOG_OPTIONS )
 {
   QColorDialog * obj = (QColorDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -224,7 +224,7 @@ HB_FUNC( QCOLORDIALOG_OPTIONS )
 /*
 QColor selectedColor () const
 */
-HB_FUNC( QCOLORDIALOG_SELECTEDCOLOR )
+HB_FUNC_STATIC( QCOLORDIALOG_SELECTEDCOLOR )
 {
   QColorDialog * obj = (QColorDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -237,7 +237,7 @@ HB_FUNC( QCOLORDIALOG_SELECTEDCOLOR )
 /*
 void setCurrentColor ( const QColor & color )
 */
-HB_FUNC( QCOLORDIALOG_SETCURRENTCOLOR )
+HB_FUNC_STATIC( QCOLORDIALOG_SETCURRENTCOLOR )
 {
   QColorDialog * obj = (QColorDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -252,7 +252,7 @@ HB_FUNC( QCOLORDIALOG_SETCURRENTCOLOR )
 /*
 void setOption ( ColorDialogOption option, bool on = true )
 */
-HB_FUNC( QCOLORDIALOG_SETOPTION )
+HB_FUNC_STATIC( QCOLORDIALOG_SETOPTION )
 {
   QColorDialog * obj = (QColorDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -268,7 +268,7 @@ HB_FUNC( QCOLORDIALOG_SETOPTION )
 /*
 void setOptions ( ColorDialogOptions options )
 */
-HB_FUNC( QCOLORDIALOG_SETOPTIONS )
+HB_FUNC_STATIC( QCOLORDIALOG_SETOPTIONS )
 {
   QColorDialog * obj = (QColorDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -283,7 +283,7 @@ HB_FUNC( QCOLORDIALOG_SETOPTIONS )
 /*
 bool testOption ( ColorDialogOption option ) const
 */
-HB_FUNC( QCOLORDIALOG_TESTOPTION )
+HB_FUNC_STATIC( QCOLORDIALOG_TESTOPTION )
 {
   QColorDialog * obj = (QColorDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -298,7 +298,7 @@ HB_FUNC( QCOLORDIALOG_TESTOPTION )
 /*
 virtual void setVisible ( bool visible )
 */
-HB_FUNC( QCOLORDIALOG_SETVISIBLE )
+HB_FUNC_STATIC( QCOLORDIALOG_SETVISIBLE )
 {
   QColorDialog * obj = (QColorDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -314,7 +314,7 @@ HB_FUNC( QCOLORDIALOG_SETVISIBLE )
 /*
 QRgb customColor ( int index )
 */
-HB_FUNC( QCOLORDIALOG_CUSTOMCOLOR )
+HB_FUNC_STATIC( QCOLORDIALOG_CUSTOMCOLOR )
 {
   int par1 = hb_parni(1);
   QRgb i = QColorDialog::customColor ( par1 );
@@ -325,7 +325,7 @@ HB_FUNC( QCOLORDIALOG_CUSTOMCOLOR )
 /*
 int customCount ()
 */
-HB_FUNC( QCOLORDIALOG_CUSTOMCOUNT )
+HB_FUNC_STATIC( QCOLORDIALOG_CUSTOMCOUNT )
 {
   int i = QColorDialog::customCount (  );
   hb_retni( i );
@@ -335,7 +335,7 @@ HB_FUNC( QCOLORDIALOG_CUSTOMCOUNT )
 /*
 QColor getColor ( const QColor & initial, QWidget * parent, const QString & title, ColorDialogOptions options = 0 )
 */
-HB_FUNC( QCOLORDIALOG_GETCOLOR1 )
+HB_FUNC_STATIC( QCOLORDIALOG_GETCOLOR1 )
 {
   QColor par1 = ISOBJECT(1)? *(QColor *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QColor(hb_parc(1));
   QWidget * par2 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -348,7 +348,7 @@ HB_FUNC( QCOLORDIALOG_GETCOLOR1 )
 /*
 QColor getColor ( const QColor & initial = Qt::white, QWidget * parent = 0 )
 */
-HB_FUNC( QCOLORDIALOG_GETCOLOR2 )
+HB_FUNC_STATIC( QCOLORDIALOG_GETCOLOR2 )
 {
   QColor par1 = ISOBJECT(1)? *(QColor *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QColor(hb_parc(1));
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -359,7 +359,7 @@ HB_FUNC( QCOLORDIALOG_GETCOLOR2 )
 //[1]QColor getColor ( const QColor & initial, QWidget * parent, const QString & title, ColorDialogOptions options = 0 )
 //[2]QColor getColor ( const QColor & initial = Qt::white, QWidget * parent = 0 )
 
-HB_FUNC( QCOLORDIALOG_GETCOLOR )
+HB_FUNC_STATIC( QCOLORDIALOG_GETCOLOR )
 {
   if( ISBETWEEN(3,4) && (ISQCOLOR(1)||ISCHAR(1)) && ISQWIDGET(2) && ISCHAR(3) && (ISNUM(4)||ISNIL(4)) )
   {
@@ -374,7 +374,7 @@ HB_FUNC( QCOLORDIALOG_GETCOLOR )
 /*
 void setCustomColor ( int index, QRgb color )
 */
-HB_FUNC( QCOLORDIALOG_SETCUSTOMCOLOR )
+HB_FUNC_STATIC( QCOLORDIALOG_SETCUSTOMCOLOR )
 {
   int par1 = hb_parni(1);
   QRgb par2 = hb_parni(2);
@@ -386,7 +386,7 @@ HB_FUNC( QCOLORDIALOG_SETCUSTOMCOLOR )
 /*
 void setStandardColor ( int index, QRgb color
 */
-HB_FUNC( QCOLORDIALOG_SETSTANDARDCOLOR )
+HB_FUNC_STATIC( QCOLORDIALOG_SETSTANDARDCOLOR )
 {
   int par1 = hb_parni(1);
   QRgb par2 = hb_parni(2);

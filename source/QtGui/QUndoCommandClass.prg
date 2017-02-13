@@ -107,7 +107,7 @@ RETURN
 /*
 QUndoCommand ( QUndoCommand * parent = 0 )
 */
-HB_FUNC( QUNDOCOMMAND_NEW1 )
+HB_FUNC_STATIC( QUNDOCOMMAND_NEW1 )
 {
   QUndoCommand * o = NULL;
   QUndoCommand * par1 = ISNIL(1)? 0 : (QUndoCommand *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -123,7 +123,7 @@ HB_FUNC( QUNDOCOMMAND_NEW1 )
 /*
 QUndoCommand ( const QString & text, QUndoCommand * parent = 0 )
 */
-HB_FUNC( QUNDOCOMMAND_NEW2 )
+HB_FUNC_STATIC( QUNDOCOMMAND_NEW2 )
 {
   QUndoCommand * o = NULL;
   QString par1 = hb_parc(1);
@@ -140,7 +140,7 @@ HB_FUNC( QUNDOCOMMAND_NEW2 )
 //[1]QUndoCommand ( QUndoCommand * parent = 0 )
 //[2]QUndoCommand ( const QString & text, QUndoCommand * parent = 0 )
 
-HB_FUNC( QUNDOCOMMAND_NEW )
+HB_FUNC_STATIC( QUNDOCOMMAND_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQUNDOCOMMAND(1)||ISNIL(1)) )
   {
@@ -156,7 +156,7 @@ HB_FUNC( QUNDOCOMMAND_NEW )
   }
 }
 
-HB_FUNC( QUNDOCOMMAND_DELETE )
+HB_FUNC_STATIC( QUNDOCOMMAND_DELETE )
 {
   QUndoCommand * obj = (QUndoCommand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -175,7 +175,7 @@ HB_FUNC( QUNDOCOMMAND_DELETE )
 /*
 const QUndoCommand * child ( int index ) const
 */
-HB_FUNC( QUNDOCOMMAND_CHILD )
+HB_FUNC_STATIC( QUNDOCOMMAND_CHILD )
 {
   QUndoCommand * obj = (QUndoCommand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -189,7 +189,7 @@ HB_FUNC( QUNDOCOMMAND_CHILD )
 /*
 int childCount () const
 */
-HB_FUNC( QUNDOCOMMAND_CHILDCOUNT )
+HB_FUNC_STATIC( QUNDOCOMMAND_CHILDCOUNT )
 {
   QUndoCommand * obj = (QUndoCommand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -203,7 +203,7 @@ HB_FUNC( QUNDOCOMMAND_CHILDCOUNT )
 /*
 virtual int id () const
 */
-HB_FUNC( QUNDOCOMMAND_ID )
+HB_FUNC_STATIC( QUNDOCOMMAND_ID )
 {
   QUndoCommand * obj = (QUndoCommand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -217,7 +217,7 @@ HB_FUNC( QUNDOCOMMAND_ID )
 /*
 virtual bool mergeWith ( const QUndoCommand * command )
 */
-HB_FUNC( QUNDOCOMMAND_MERGEWITH )
+HB_FUNC_STATIC( QUNDOCOMMAND_MERGEWITH )
 {
   QUndoCommand * obj = (QUndoCommand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -232,7 +232,7 @@ HB_FUNC( QUNDOCOMMAND_MERGEWITH )
 /*
 virtual void redo ()
 */
-HB_FUNC( QUNDOCOMMAND_REDO )
+HB_FUNC_STATIC( QUNDOCOMMAND_REDO )
 {
   QUndoCommand * obj = (QUndoCommand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -246,7 +246,7 @@ HB_FUNC( QUNDOCOMMAND_REDO )
 /*
 void setText ( const QString & text )
 */
-HB_FUNC( QUNDOCOMMAND_SETTEXT )
+HB_FUNC_STATIC( QUNDOCOMMAND_SETTEXT )
 {
   QUndoCommand * obj = (QUndoCommand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -261,7 +261,7 @@ HB_FUNC( QUNDOCOMMAND_SETTEXT )
 /*
 QString text () const
 */
-HB_FUNC( QUNDOCOMMAND_TEXT )
+HB_FUNC_STATIC( QUNDOCOMMAND_TEXT )
 {
   QUndoCommand * obj = (QUndoCommand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -275,7 +275,7 @@ HB_FUNC( QUNDOCOMMAND_TEXT )
 /*
 virtual void undo ()
 */
-HB_FUNC( QUNDOCOMMAND_UNDO )
+HB_FUNC_STATIC( QUNDOCOMMAND_UNDO )
 {
   QUndoCommand * obj = (QUndoCommand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

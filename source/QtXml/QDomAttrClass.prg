@@ -70,7 +70,7 @@ RETURN
 /*
 QDomAttr ()
 */
-HB_FUNC( QDOMATTR_NEW1 )
+HB_FUNC_STATIC( QDOMATTR_NEW1 )
 {
   QDomAttr * o = NULL;
   o = new QDomAttr (  );
@@ -88,7 +88,7 @@ HB_FUNC( QDOMATTR_NEW1 )
 /*
 QDomAttr ( const QDomAttr & x )
 */
-HB_FUNC( QDOMATTR_NEW2 )
+HB_FUNC_STATIC( QDOMATTR_NEW2 )
 {
   QDomAttr * o = NULL;
   QDomAttr * par1 = (QDomAttr *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -107,7 +107,7 @@ HB_FUNC( QDOMATTR_NEW2 )
 //[1]QDomAttr ()
 //[2]QDomAttr ( const QDomAttr & x )
 
-HB_FUNC( QDOMATTR_NEW )
+HB_FUNC_STATIC( QDOMATTR_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -128,7 +128,7 @@ HB_FUNC( QDOMATTR_NEW )
 /*
 QString name () const
 */
-HB_FUNC( QDOMATTR_NAME )
+HB_FUNC_STATIC( QDOMATTR_NAME )
 {
   QDomAttr * obj = (QDomAttr *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -142,7 +142,7 @@ HB_FUNC( QDOMATTR_NAME )
 /*
 QDomNode::NodeType nodeType () const
 */
-HB_FUNC( QDOMATTR_NODETYPE )
+HB_FUNC_STATIC( QDOMATTR_NODETYPE )
 {
   QDomAttr * obj = (QDomAttr *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -156,7 +156,7 @@ HB_FUNC( QDOMATTR_NODETYPE )
 /*
 QDomElement ownerElement () const
 */
-HB_FUNC( QDOMATTR_OWNERELEMENT )
+HB_FUNC_STATIC( QDOMATTR_OWNERELEMENT )
 {
   QDomAttr * obj = (QDomAttr *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -169,7 +169,7 @@ HB_FUNC( QDOMATTR_OWNERELEMENT )
 /*
 void setValue ( const QString & v )
 */
-HB_FUNC( QDOMATTR_SETVALUE )
+HB_FUNC_STATIC( QDOMATTR_SETVALUE )
 {
   QDomAttr * obj = (QDomAttr *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -184,7 +184,7 @@ HB_FUNC( QDOMATTR_SETVALUE )
 /*
 bool specified () const
 */
-HB_FUNC( QDOMATTR_SPECIFIED )
+HB_FUNC_STATIC( QDOMATTR_SPECIFIED )
 {
   QDomAttr * obj = (QDomAttr *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -198,7 +198,7 @@ HB_FUNC( QDOMATTR_SPECIFIED )
 /*
 QString value () const
 */
-HB_FUNC( QDOMATTR_VALUE )
+HB_FUNC_STATIC( QDOMATTR_VALUE )
 {
   QDomAttr * obj = (QDomAttr *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

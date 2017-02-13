@@ -82,7 +82,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QAXFACTORY_DELETE )
+HB_FUNC_STATIC( QAXFACTORY_DELETE )
 {
   QAxFactory * obj = (QAxFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -101,7 +101,7 @@ HB_FUNC( QAXFACTORY_DELETE )
 /*
 virtual QUuid appID () const
 */
-HB_FUNC( QAXFACTORY_APPID )
+HB_FUNC_STATIC( QAXFACTORY_APPID )
 {
   QAxFactory * obj = (QAxFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -114,7 +114,7 @@ HB_FUNC( QAXFACTORY_APPID )
 /*
 virtual QUuid classID ( const QString & key ) const
 */
-HB_FUNC( QAXFACTORY_CLASSID )
+HB_FUNC_STATIC( QAXFACTORY_CLASSID )
 {
   QAxFactory * obj = (QAxFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -128,7 +128,7 @@ HB_FUNC( QAXFACTORY_CLASSID )
 /*
 virtual QObject * createObject ( const QString & key ) = 0
 */
-HB_FUNC( QAXFACTORY_CREATEOBJECT )
+HB_FUNC_STATIC( QAXFACTORY_CREATEOBJECT )
 {
   QAxFactory * obj = (QAxFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -143,7 +143,7 @@ HB_FUNC( QAXFACTORY_CREATEOBJECT )
 /*
 virtual QUuid eventsID ( const QString & key ) const
 */
-HB_FUNC( QAXFACTORY_EVENTSID )
+HB_FUNC_STATIC( QAXFACTORY_EVENTSID )
 {
   QAxFactory * obj = (QAxFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -157,7 +157,7 @@ HB_FUNC( QAXFACTORY_EVENTSID )
 /*
 virtual QString exposeToSuperClass ( const QString & key ) const
 */
-HB_FUNC( QAXFACTORY_EXPOSETOSUPERCLASS )
+HB_FUNC_STATIC( QAXFACTORY_EXPOSETOSUPERCLASS )
 {
   QAxFactory * obj = (QAxFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -172,7 +172,7 @@ HB_FUNC( QAXFACTORY_EXPOSETOSUPERCLASS )
 /*
 virtual QStringList featureList () const = 0
 */
-HB_FUNC( QAXFACTORY_FEATURELIST )
+HB_FUNC_STATIC( QAXFACTORY_FEATURELIST )
 {
   QAxFactory * obj = (QAxFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -195,7 +195,7 @@ HB_FUNC( QAXFACTORY_FEATURELIST )
 /*
 virtual bool hasStockEvents ( const QString & key ) const
 */
-HB_FUNC( QAXFACTORY_HASSTOCKEVENTS )
+HB_FUNC_STATIC( QAXFACTORY_HASSTOCKEVENTS )
 {
   QAxFactory * obj = (QAxFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -210,7 +210,7 @@ HB_FUNC( QAXFACTORY_HASSTOCKEVENTS )
 /*
 virtual QUuid interfaceID ( const QString & key ) const
 */
-HB_FUNC( QAXFACTORY_INTERFACEID )
+HB_FUNC_STATIC( QAXFACTORY_INTERFACEID )
 {
   QAxFactory * obj = (QAxFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -224,7 +224,7 @@ HB_FUNC( QAXFACTORY_INTERFACEID )
 /*
 virtual bool isService () const
 */
-HB_FUNC( QAXFACTORY_ISSERVICE )
+HB_FUNC_STATIC( QAXFACTORY_ISSERVICE )
 {
   QAxFactory * obj = (QAxFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -238,7 +238,7 @@ HB_FUNC( QAXFACTORY_ISSERVICE )
 /*
 virtual const QMetaObject * metaObject ( const QString & key ) const = 0
 */
-HB_FUNC( QAXFACTORY_METAOBJECT )
+HB_FUNC_STATIC( QAXFACTORY_METAOBJECT )
 {
   QAxFactory * obj = (QAxFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -252,7 +252,7 @@ HB_FUNC( QAXFACTORY_METAOBJECT )
 /*
 virtual void registerClass ( const QString & key, QSettings * settings ) const
 */
-HB_FUNC( QAXFACTORY_REGISTERCLASS )
+HB_FUNC_STATIC( QAXFACTORY_REGISTERCLASS )
 {
   QAxFactory * obj = (QAxFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -268,7 +268,7 @@ HB_FUNC( QAXFACTORY_REGISTERCLASS )
 /*
 virtual bool stayTopLevel ( const QString & key ) const
 */
-HB_FUNC( QAXFACTORY_STAYTOPLEVEL )
+HB_FUNC_STATIC( QAXFACTORY_STAYTOPLEVEL )
 {
   QAxFactory * obj = (QAxFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -283,7 +283,7 @@ HB_FUNC( QAXFACTORY_STAYTOPLEVEL )
 /*
 virtual QUuid typeLibID () const
 */
-HB_FUNC( QAXFACTORY_TYPELIBID )
+HB_FUNC_STATIC( QAXFACTORY_TYPELIBID )
 {
   QAxFactory * obj = (QAxFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -296,7 +296,7 @@ HB_FUNC( QAXFACTORY_TYPELIBID )
 /*
 virtual void unregisterClass ( const QString & key, QSettings * settings ) const
 */
-HB_FUNC( QAXFACTORY_UNREGISTERCLASS )
+HB_FUNC_STATIC( QAXFACTORY_UNREGISTERCLASS )
 {
   QAxFactory * obj = (QAxFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -312,7 +312,7 @@ HB_FUNC( QAXFACTORY_UNREGISTERCLASS )
 /*
 virtual bool validateLicenseKey ( const QString & key, const QString & licenseKey ) const
 */
-HB_FUNC( QAXFACTORY_VALIDATELICENSEKEY )
+HB_FUNC_STATIC( QAXFACTORY_VALIDATELICENSEKEY )
 {
   QAxFactory * obj = (QAxFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -329,7 +329,7 @@ HB_FUNC( QAXFACTORY_VALIDATELICENSEKEY )
 /*
 bool isServer ()
 */
-HB_FUNC( QAXFACTORY_ISSERVER )
+HB_FUNC_STATIC( QAXFACTORY_ISSERVER )
 {
   bool b = QAxFactory::isServer (  );
   hb_retl( b );
@@ -339,7 +339,7 @@ HB_FUNC( QAXFACTORY_ISSERVER )
 /*
 bool registerActiveObject ( QObject * object )
 */
-HB_FUNC( QAXFACTORY_REGISTERACTIVEOBJECT )
+HB_FUNC_STATIC( QAXFACTORY_REGISTERACTIVEOBJECT )
 {
   QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   bool b = QAxFactory::registerActiveObject ( par1 );
@@ -350,7 +350,7 @@ HB_FUNC( QAXFACTORY_REGISTERACTIVEOBJECT )
 /*
 QString serverDirPath ()
 */
-HB_FUNC( QAXFACTORY_SERVERDIRPATH )
+HB_FUNC_STATIC( QAXFACTORY_SERVERDIRPATH )
 {
   QString str1 = QAxFactory::serverDirPath (  );
   hb_retc( (const char *) str1.toLatin1().data() );
@@ -360,7 +360,7 @@ HB_FUNC( QAXFACTORY_SERVERDIRPATH )
 /*
 QString serverFilePath ()
 */
-HB_FUNC( QAXFACTORY_SERVERFILEPATH )
+HB_FUNC_STATIC( QAXFACTORY_SERVERFILEPATH )
 {
   QString str1 = QAxFactory::serverFilePath (  );
   hb_retc( (const char *) str1.toLatin1().data() );
@@ -370,7 +370,7 @@ HB_FUNC( QAXFACTORY_SERVERFILEPATH )
 /*
 bool startServer ( ServerType type = MultipleInstances )
 */
-HB_FUNC( QAXFACTORY_STARTSERVER )
+HB_FUNC_STATIC( QAXFACTORY_STARTSERVER )
 {
   int par1 = ISNIL(1)? (int) QAxFactory::MultipleInstances : hb_parni(1);
   bool b = QAxFactory::startServer (  (QAxFactory::ServerType) par1 );
@@ -381,7 +381,7 @@ HB_FUNC( QAXFACTORY_STARTSERVER )
 /*
 bool stopServer ()
 */
-HB_FUNC( QAXFACTORY_STOPSERVER )
+HB_FUNC_STATIC( QAXFACTORY_STOPSERVER )
 {
   bool b = QAxFactory::stopServer (  );
   hb_retl( b );

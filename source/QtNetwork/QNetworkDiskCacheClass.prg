@@ -76,7 +76,7 @@ RETURN
 /*
 QNetworkDiskCache ( QObject * parent = 0 )
 */
-HB_FUNC( QNETWORKDISKCACHE_NEW )
+HB_FUNC_STATIC( QNETWORKDISKCACHE_NEW )
 {
   QNetworkDiskCache * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -89,7 +89,7 @@ HB_FUNC( QNETWORKDISKCACHE_NEW )
 }
 
 
-HB_FUNC( QNETWORKDISKCACHE_DELETE )
+HB_FUNC_STATIC( QNETWORKDISKCACHE_DELETE )
 {
   QNetworkDiskCache * obj = (QNetworkDiskCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -108,7 +108,7 @@ HB_FUNC( QNETWORKDISKCACHE_DELETE )
 /*
 QString cacheDirectory () const
 */
-HB_FUNC( QNETWORKDISKCACHE_CACHEDIRECTORY )
+HB_FUNC_STATIC( QNETWORKDISKCACHE_CACHEDIRECTORY )
 {
   QNetworkDiskCache * obj = (QNetworkDiskCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -122,7 +122,7 @@ HB_FUNC( QNETWORKDISKCACHE_CACHEDIRECTORY )
 /*
 QNetworkCacheMetaData fileMetaData ( const QString & fileName ) const
 */
-HB_FUNC( QNETWORKDISKCACHE_FILEMETADATA )
+HB_FUNC_STATIC( QNETWORKDISKCACHE_FILEMETADATA )
 {
   QNetworkDiskCache * obj = (QNetworkDiskCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -136,7 +136,7 @@ HB_FUNC( QNETWORKDISKCACHE_FILEMETADATA )
 /*
 qint64 maximumCacheSize () const
 */
-HB_FUNC( QNETWORKDISKCACHE_MAXIMUMCACHESIZE )
+HB_FUNC_STATIC( QNETWORKDISKCACHE_MAXIMUMCACHESIZE )
 {
   QNetworkDiskCache * obj = (QNetworkDiskCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -150,7 +150,7 @@ HB_FUNC( QNETWORKDISKCACHE_MAXIMUMCACHESIZE )
 /*
 void setCacheDirectory ( const QString & cacheDir )
 */
-HB_FUNC( QNETWORKDISKCACHE_SETCACHEDIRECTORY )
+HB_FUNC_STATIC( QNETWORKDISKCACHE_SETCACHEDIRECTORY )
 {
   QNetworkDiskCache * obj = (QNetworkDiskCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -165,7 +165,7 @@ HB_FUNC( QNETWORKDISKCACHE_SETCACHEDIRECTORY )
 /*
 void setMaximumCacheSize ( qint64 size )
 */
-HB_FUNC( QNETWORKDISKCACHE_SETMAXIMUMCACHESIZE )
+HB_FUNC_STATIC( QNETWORKDISKCACHE_SETMAXIMUMCACHESIZE )
 {
   QNetworkDiskCache * obj = (QNetworkDiskCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -180,7 +180,7 @@ HB_FUNC( QNETWORKDISKCACHE_SETMAXIMUMCACHESIZE )
 /*
 virtual qint64 cacheSize () const
 */
-HB_FUNC( QNETWORKDISKCACHE_CACHESIZE )
+HB_FUNC_STATIC( QNETWORKDISKCACHE_CACHESIZE )
 {
   QNetworkDiskCache * obj = (QNetworkDiskCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -194,7 +194,7 @@ HB_FUNC( QNETWORKDISKCACHE_CACHESIZE )
 /*
 virtual QIODevice * data ( const QUrl & url )
 */
-HB_FUNC( QNETWORKDISKCACHE_DATA )
+HB_FUNC_STATIC( QNETWORKDISKCACHE_DATA )
 {
   QNetworkDiskCache * obj = (QNetworkDiskCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -208,7 +208,7 @@ HB_FUNC( QNETWORKDISKCACHE_DATA )
 /*
 virtual void insert ( QIODevice * device )
 */
-HB_FUNC( QNETWORKDISKCACHE_INSERT )
+HB_FUNC_STATIC( QNETWORKDISKCACHE_INSERT )
 {
   QNetworkDiskCache * obj = (QNetworkDiskCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -223,7 +223,7 @@ HB_FUNC( QNETWORKDISKCACHE_INSERT )
 /*
 virtual QNetworkCacheMetaData metaData ( const QUrl & url )
 */
-HB_FUNC( QNETWORKDISKCACHE_METADATA )
+HB_FUNC_STATIC( QNETWORKDISKCACHE_METADATA )
 {
   QNetworkDiskCache * obj = (QNetworkDiskCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -237,7 +237,7 @@ HB_FUNC( QNETWORKDISKCACHE_METADATA )
 /*
 virtual QIODevice * prepare ( const QNetworkCacheMetaData & metaData )
 */
-HB_FUNC( QNETWORKDISKCACHE_PREPARE )
+HB_FUNC_STATIC( QNETWORKDISKCACHE_PREPARE )
 {
   QNetworkDiskCache * obj = (QNetworkDiskCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -251,7 +251,7 @@ HB_FUNC( QNETWORKDISKCACHE_PREPARE )
 /*
 virtual bool remove ( const QUrl & url )
 */
-HB_FUNC( QNETWORKDISKCACHE_REMOVE )
+HB_FUNC_STATIC( QNETWORKDISKCACHE_REMOVE )
 {
   QNetworkDiskCache * obj = (QNetworkDiskCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -266,7 +266,7 @@ HB_FUNC( QNETWORKDISKCACHE_REMOVE )
 /*
 virtual void updateMetaData ( const QNetworkCacheMetaData & metaData )
 */
-HB_FUNC( QNETWORKDISKCACHE_UPDATEMETADATA )
+HB_FUNC_STATIC( QNETWORKDISKCACHE_UPDATEMETADATA )
 {
   QNetworkDiskCache * obj = (QNetworkDiskCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -281,7 +281,7 @@ HB_FUNC( QNETWORKDISKCACHE_UPDATEMETADATA )
 /*
 virtual void clear ()
 */
-HB_FUNC( QNETWORKDISKCACHE_CLEAR )
+HB_FUNC_STATIC( QNETWORKDISKCACHE_CLEAR )
 {
   QNetworkDiskCache * obj = (QNetworkDiskCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

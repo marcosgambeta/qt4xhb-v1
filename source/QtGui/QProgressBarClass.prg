@@ -86,7 +86,7 @@ RETURN
 /*
 QProgressBar ( QWidget * parent = 0 )
 */
-HB_FUNC( QPROGRESSBAR_NEW )
+HB_FUNC_STATIC( QPROGRESSBAR_NEW )
 {
   QProgressBar * o = NULL;
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -99,7 +99,7 @@ HB_FUNC( QPROGRESSBAR_NEW )
 }
 
 
-HB_FUNC( QPROGRESSBAR_DELETE )
+HB_FUNC_STATIC( QPROGRESSBAR_DELETE )
 {
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -118,7 +118,7 @@ HB_FUNC( QPROGRESSBAR_DELETE )
 /*
 Qt::Alignment alignment () const
 */
-HB_FUNC( QPROGRESSBAR_ALIGNMENT )
+HB_FUNC_STATIC( QPROGRESSBAR_ALIGNMENT )
 {
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -132,7 +132,7 @@ HB_FUNC( QPROGRESSBAR_ALIGNMENT )
 /*
 QString format () const
 */
-HB_FUNC( QPROGRESSBAR_FORMAT )
+HB_FUNC_STATIC( QPROGRESSBAR_FORMAT )
 {
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -146,7 +146,7 @@ HB_FUNC( QPROGRESSBAR_FORMAT )
 /*
 bool invertedAppearance ()
 */
-HB_FUNC( QPROGRESSBAR_INVERTEDAPPEARANCE )
+HB_FUNC_STATIC( QPROGRESSBAR_INVERTEDAPPEARANCE )
 {
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -161,7 +161,7 @@ HB_FUNC( QPROGRESSBAR_INVERTEDAPPEARANCE )
 /*
 bool isTextVisible () const
 */
-HB_FUNC( QPROGRESSBAR_ISTEXTVISIBLE )
+HB_FUNC_STATIC( QPROGRESSBAR_ISTEXTVISIBLE )
 {
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -175,7 +175,7 @@ HB_FUNC( QPROGRESSBAR_ISTEXTVISIBLE )
 /*
 int maximum () const
 */
-HB_FUNC( QPROGRESSBAR_MAXIMUM )
+HB_FUNC_STATIC( QPROGRESSBAR_MAXIMUM )
 {
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -189,7 +189,7 @@ HB_FUNC( QPROGRESSBAR_MAXIMUM )
 /*
 int minimum () const
 */
-HB_FUNC( QPROGRESSBAR_MINIMUM )
+HB_FUNC_STATIC( QPROGRESSBAR_MINIMUM )
 {
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -203,7 +203,7 @@ HB_FUNC( QPROGRESSBAR_MINIMUM )
 /*
 Qt::Orientation orientation () const
 */
-HB_FUNC( QPROGRESSBAR_ORIENTATION )
+HB_FUNC_STATIC( QPROGRESSBAR_ORIENTATION )
 {
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -217,7 +217,7 @@ HB_FUNC( QPROGRESSBAR_ORIENTATION )
 /*
 void setAlignment ( Qt::Alignment alignment )
 */
-HB_FUNC( QPROGRESSBAR_SETALIGNMENT )
+HB_FUNC_STATIC( QPROGRESSBAR_SETALIGNMENT )
 {
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -232,7 +232,7 @@ HB_FUNC( QPROGRESSBAR_SETALIGNMENT )
 /*
 void setFormat ( const QString & format )
 */
-HB_FUNC( QPROGRESSBAR_SETFORMAT )
+HB_FUNC_STATIC( QPROGRESSBAR_SETFORMAT )
 {
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -247,7 +247,7 @@ HB_FUNC( QPROGRESSBAR_SETFORMAT )
 /*
 void setInvertedAppearance ( bool invert )
 */
-HB_FUNC( QPROGRESSBAR_SETINVERTEDAPPEARANCE )
+HB_FUNC_STATIC( QPROGRESSBAR_SETINVERTEDAPPEARANCE )
 {
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -262,7 +262,7 @@ HB_FUNC( QPROGRESSBAR_SETINVERTEDAPPEARANCE )
 /*
 void setTextDirection ( QProgressBar::Direction textDirection )
 */
-HB_FUNC( QPROGRESSBAR_SETTEXTDIRECTION )
+HB_FUNC_STATIC( QPROGRESSBAR_SETTEXTDIRECTION )
 {
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -277,7 +277,7 @@ HB_FUNC( QPROGRESSBAR_SETTEXTDIRECTION )
 /*
 void setTextVisible ( bool visible )
 */
-HB_FUNC( QPROGRESSBAR_SETTEXTVISIBLE )
+HB_FUNC_STATIC( QPROGRESSBAR_SETTEXTVISIBLE )
 {
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -292,7 +292,7 @@ HB_FUNC( QPROGRESSBAR_SETTEXTVISIBLE )
 /*
 virtual QString text () const
 */
-HB_FUNC( QPROGRESSBAR_TEXT )
+HB_FUNC_STATIC( QPROGRESSBAR_TEXT )
 {
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -306,7 +306,7 @@ HB_FUNC( QPROGRESSBAR_TEXT )
 /*
 QProgressBar::Direction textDirection ()
 */
-HB_FUNC( QPROGRESSBAR_TEXTDIRECTION )
+HB_FUNC_STATIC( QPROGRESSBAR_TEXTDIRECTION )
 {
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -321,7 +321,7 @@ HB_FUNC( QPROGRESSBAR_TEXTDIRECTION )
 /*
 int value () const
 */
-HB_FUNC( QPROGRESSBAR_VALUE )
+HB_FUNC_STATIC( QPROGRESSBAR_VALUE )
 {
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -335,7 +335,7 @@ HB_FUNC( QPROGRESSBAR_VALUE )
 /*
 virtual QSize minimumSizeHint () const
 */
-HB_FUNC( QPROGRESSBAR_MINIMUMSIZEHINT )
+HB_FUNC_STATIC( QPROGRESSBAR_MINIMUMSIZEHINT )
 {
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -348,7 +348,7 @@ HB_FUNC( QPROGRESSBAR_MINIMUMSIZEHINT )
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC( QPROGRESSBAR_SIZEHINT )
+HB_FUNC_STATIC( QPROGRESSBAR_SIZEHINT )
 {
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -361,7 +361,7 @@ HB_FUNC( QPROGRESSBAR_SIZEHINT )
 /*
 void reset ()
 */
-HB_FUNC( QPROGRESSBAR_RESET )
+HB_FUNC_STATIC( QPROGRESSBAR_RESET )
 {
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -375,7 +375,7 @@ HB_FUNC( QPROGRESSBAR_RESET )
 /*
 void setMaximum ( int maximum )
 */
-HB_FUNC( QPROGRESSBAR_SETMAXIMUM )
+HB_FUNC_STATIC( QPROGRESSBAR_SETMAXIMUM )
 {
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -390,7 +390,7 @@ HB_FUNC( QPROGRESSBAR_SETMAXIMUM )
 /*
 void setMinimum ( int minimum )
 */
-HB_FUNC( QPROGRESSBAR_SETMINIMUM )
+HB_FUNC_STATIC( QPROGRESSBAR_SETMINIMUM )
 {
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -405,7 +405,7 @@ HB_FUNC( QPROGRESSBAR_SETMINIMUM )
 /*
 void setOrientation ( Qt::Orientation )
 */
-HB_FUNC( QPROGRESSBAR_SETORIENTATION )
+HB_FUNC_STATIC( QPROGRESSBAR_SETORIENTATION )
 {
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -420,7 +420,7 @@ HB_FUNC( QPROGRESSBAR_SETORIENTATION )
 /*
 void setRange ( int minimum, int maximum )
 */
-HB_FUNC( QPROGRESSBAR_SETRANGE )
+HB_FUNC_STATIC( QPROGRESSBAR_SETRANGE )
 {
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -436,7 +436,7 @@ HB_FUNC( QPROGRESSBAR_SETRANGE )
 /*
 void setValue ( int value )
 */
-HB_FUNC( QPROGRESSBAR_SETVALUE )
+HB_FUNC_STATIC( QPROGRESSBAR_SETVALUE )
 {
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

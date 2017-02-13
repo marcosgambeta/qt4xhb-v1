@@ -60,7 +60,7 @@ RETURN
 /*
 QIconDragEvent ()
 */
-HB_FUNC( QICONDRAGEVENT_NEW )
+HB_FUNC_STATIC( QICONDRAGEVENT_NEW )
 {
   QIconDragEvent * o = NULL;
   o = new QIconDragEvent (  );
@@ -72,7 +72,7 @@ HB_FUNC( QICONDRAGEVENT_NEW )
 }
 
 
-HB_FUNC( QICONDRAGEVENT_DELETE )
+HB_FUNC_STATIC( QICONDRAGEVENT_DELETE )
 {
   QIconDragEvent * obj = (QIconDragEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

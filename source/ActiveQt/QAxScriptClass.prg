@@ -79,7 +79,7 @@ RETURN
 /*
 QAxScript ( const QString & name, QAxScriptManager * manager )
 */
-HB_FUNC( QAXSCRIPT_NEW )
+HB_FUNC_STATIC( QAXSCRIPT_NEW )
 {
   QAxScript * o = NULL;
   QString par1 = hb_parc(1);
@@ -93,7 +93,7 @@ HB_FUNC( QAXSCRIPT_NEW )
 }
 
 
-HB_FUNC( QAXSCRIPT_DELETE )
+HB_FUNC_STATIC( QAXSCRIPT_DELETE )
 {
   QAxScript * obj = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -112,7 +112,7 @@ HB_FUNC( QAXSCRIPT_DELETE )
 /*
 QVariant call ( const QString & function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
 */
-HB_FUNC( QAXSCRIPT_CALL1 )
+HB_FUNC_STATIC( QAXSCRIPT_CALL1 )
 {
   QAxScript * obj = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -134,7 +134,7 @@ HB_FUNC( QAXSCRIPT_CALL1 )
 /*
 QVariant call ( const QString & function, QList<QVariant> & arguments )
 */
-HB_FUNC( QAXSCRIPT_CALL2 )
+HB_FUNC_STATIC( QAXSCRIPT_CALL2 )
 {
   QAxScript * obj = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -156,7 +156,7 @@ par2 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, 
 //[1]QVariant call ( const QString & function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
 //[2]QVariant call ( const QString & function, QList<QVariant> & arguments )
 
-HB_FUNC( QAXSCRIPT_CALL )
+HB_FUNC_STATIC( QAXSCRIPT_CALL )
 {
   if( ISBETWEEN(1,9) && ISCHAR(1) && (ISQVARIANT(2)||ISNIL(2)) && (ISQVARIANT(3)||ISNIL(3)) && (ISQVARIANT(4)||ISNIL(4)) && (ISQVARIANT(5)||ISNIL(5)) && (ISQVARIANT(6)||ISNIL(6)) && (ISQVARIANT(7)||ISNIL(7)) && (ISQVARIANT(8)||ISNIL(8)) && (ISQVARIANT(9)||ISNIL(9)) )
   {
@@ -171,7 +171,7 @@ HB_FUNC( QAXSCRIPT_CALL )
 /*
 QStringList functions ( FunctionFlags flags = FunctionNames ) const
 */
-HB_FUNC( QAXSCRIPT_FUNCTIONS )
+HB_FUNC_STATIC( QAXSCRIPT_FUNCTIONS )
 {
   QAxScript * obj = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -195,7 +195,7 @@ HB_FUNC( QAXSCRIPT_FUNCTIONS )
 /*
 bool load ( const QString & code, const QString & language = QString() )
 */
-HB_FUNC( QAXSCRIPT_LOAD )
+HB_FUNC_STATIC( QAXSCRIPT_LOAD )
 {
   QAxScript * obj = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -211,7 +211,7 @@ HB_FUNC( QAXSCRIPT_LOAD )
 /*
 QString scriptCode () const
 */
-HB_FUNC( QAXSCRIPT_SCRIPTCODE )
+HB_FUNC_STATIC( QAXSCRIPT_SCRIPTCODE )
 {
   QAxScript * obj = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -225,7 +225,7 @@ HB_FUNC( QAXSCRIPT_SCRIPTCODE )
 /*
 QAxScriptEngine * scriptEngine () const
 */
-HB_FUNC( QAXSCRIPT_SCRIPTENGINE )
+HB_FUNC_STATIC( QAXSCRIPT_SCRIPTENGINE )
 {
   QAxScript * obj = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -238,7 +238,7 @@ HB_FUNC( QAXSCRIPT_SCRIPTENGINE )
 /*
 QString scriptName () const
 */
-HB_FUNC( QAXSCRIPT_SCRIPTNAME )
+HB_FUNC_STATIC( QAXSCRIPT_SCRIPTNAME )
 {
   QAxScript * obj = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

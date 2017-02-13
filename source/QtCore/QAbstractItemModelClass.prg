@@ -117,7 +117,7 @@ RETURN
 #include <QSize>
 
 
-HB_FUNC( QABSTRACTITEMMODEL_DELETE )
+HB_FUNC_STATIC( QABSTRACTITEMMODEL_DELETE )
 {
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -136,7 +136,7 @@ HB_FUNC( QABSTRACTITEMMODEL_DELETE )
 /*
 virtual QModelIndex buddy ( const QModelIndex & index ) const
 */
-HB_FUNC( QABSTRACTITEMMODEL_BUDDY )
+HB_FUNC_STATIC( QABSTRACTITEMMODEL_BUDDY )
 {
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -150,7 +150,7 @@ HB_FUNC( QABSTRACTITEMMODEL_BUDDY )
 /*
 virtual bool canFetchMore ( const QModelIndex & parent ) const
 */
-HB_FUNC( QABSTRACTITEMMODEL_CANFETCHMORE )
+HB_FUNC_STATIC( QABSTRACTITEMMODEL_CANFETCHMORE )
 {
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -165,7 +165,7 @@ HB_FUNC( QABSTRACTITEMMODEL_CANFETCHMORE )
 /*
 virtual int columnCount ( const QModelIndex & parent = QModelIndex() ) const = 0
 */
-HB_FUNC( QABSTRACTITEMMODEL_COLUMNCOUNT )
+HB_FUNC_STATIC( QABSTRACTITEMMODEL_COLUMNCOUNT )
 {
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -180,7 +180,7 @@ HB_FUNC( QABSTRACTITEMMODEL_COLUMNCOUNT )
 /*
 virtual QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const = 0
 */
-HB_FUNC( QABSTRACTITEMMODEL_DATA )
+HB_FUNC_STATIC( QABSTRACTITEMMODEL_DATA )
 {
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -195,7 +195,7 @@ HB_FUNC( QABSTRACTITEMMODEL_DATA )
 /*
 virtual bool dropMimeData ( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
 */
-HB_FUNC( QABSTRACTITEMMODEL_DROPMIMEDATA )
+HB_FUNC_STATIC( QABSTRACTITEMMODEL_DROPMIMEDATA )
 {
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -214,7 +214,7 @@ HB_FUNC( QABSTRACTITEMMODEL_DROPMIMEDATA )
 /*
 virtual void fetchMore ( const QModelIndex & parent )
 */
-HB_FUNC( QABSTRACTITEMMODEL_FETCHMORE )
+HB_FUNC_STATIC( QABSTRACTITEMMODEL_FETCHMORE )
 {
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -229,7 +229,7 @@ HB_FUNC( QABSTRACTITEMMODEL_FETCHMORE )
 /*
 virtual Qt::ItemFlags flags ( const QModelIndex & index ) const
 */
-HB_FUNC( QABSTRACTITEMMODEL_FLAGS )
+HB_FUNC_STATIC( QABSTRACTITEMMODEL_FLAGS )
 {
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -244,7 +244,7 @@ HB_FUNC( QABSTRACTITEMMODEL_FLAGS )
 /*
 virtual bool hasChildren ( const QModelIndex & parent = QModelIndex() ) const
 */
-HB_FUNC( QABSTRACTITEMMODEL_HASCHILDREN )
+HB_FUNC_STATIC( QABSTRACTITEMMODEL_HASCHILDREN )
 {
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -259,7 +259,7 @@ HB_FUNC( QABSTRACTITEMMODEL_HASCHILDREN )
 /*
 bool hasIndex ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
 */
-HB_FUNC( QABSTRACTITEMMODEL_HASINDEX )
+HB_FUNC_STATIC( QABSTRACTITEMMODEL_HASINDEX )
 {
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -276,7 +276,7 @@ HB_FUNC( QABSTRACTITEMMODEL_HASINDEX )
 /*
 virtual QVariant headerData ( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
 */
-HB_FUNC( QABSTRACTITEMMODEL_HEADERDATA )
+HB_FUNC_STATIC( QABSTRACTITEMMODEL_HEADERDATA )
 {
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -292,7 +292,7 @@ HB_FUNC( QABSTRACTITEMMODEL_HEADERDATA )
 /*
 virtual QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const = 0
 */
-HB_FUNC( QABSTRACTITEMMODEL_INDEX )
+HB_FUNC_STATIC( QABSTRACTITEMMODEL_INDEX )
 {
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -308,7 +308,7 @@ HB_FUNC( QABSTRACTITEMMODEL_INDEX )
 /*
 bool insertColumn ( int column, const QModelIndex & parent = QModelIndex() )
 */
-HB_FUNC( QABSTRACTITEMMODEL_INSERTCOLUMN )
+HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTCOLUMN )
 {
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -324,7 +324,7 @@ HB_FUNC( QABSTRACTITEMMODEL_INSERTCOLUMN )
 /*
 virtual bool insertColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
 */
-HB_FUNC( QABSTRACTITEMMODEL_INSERTCOLUMNS )
+HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTCOLUMNS )
 {
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -341,7 +341,7 @@ HB_FUNC( QABSTRACTITEMMODEL_INSERTCOLUMNS )
 /*
 bool insertRow ( int row, const QModelIndex & parent = QModelIndex() )
 */
-HB_FUNC( QABSTRACTITEMMODEL_INSERTROW )
+HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTROW )
 {
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -357,7 +357,7 @@ HB_FUNC( QABSTRACTITEMMODEL_INSERTROW )
 /*
 virtual bool insertRows ( int row, int count, const QModelIndex & parent = QModelIndex() )
 */
-HB_FUNC( QABSTRACTITEMMODEL_INSERTROWS )
+HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTROWS )
 {
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -375,7 +375,7 @@ HB_FUNC( QABSTRACTITEMMODEL_INSERTROWS )
 /*
 virtual QModelIndexList match ( const QModelIndex & start, int role, const QVariant & value, int hits = 1, Qt::MatchFlags flags = Qt::MatchFlags( Qt::MatchStartsWith | Qt::MatchWrap ) ) const
 */
-HB_FUNC( QABSTRACTITEMMODEL_MATCH )
+HB_FUNC_STATIC( QABSTRACTITEMMODEL_MATCH )
 {
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -424,7 +424,7 @@ HB_FUNC( QABSTRACTITEMMODEL_MATCH )
 /*
 virtual QMimeData * mimeData ( const QModelIndexList & indexes ) const
 */
-HB_FUNC( QABSTRACTITEMMODEL_MIMEDATA )
+HB_FUNC_STATIC( QABSTRACTITEMMODEL_MIMEDATA )
 {
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -438,7 +438,7 @@ HB_FUNC( QABSTRACTITEMMODEL_MIMEDATA )
 /*
 virtual QStringList mimeTypes () const
 */
-HB_FUNC( QABSTRACTITEMMODEL_MIMETYPES )
+HB_FUNC_STATIC( QABSTRACTITEMMODEL_MIMETYPES )
 {
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -461,7 +461,7 @@ HB_FUNC( QABSTRACTITEMMODEL_MIMETYPES )
 /*
 virtual QModelIndex parent ( const QModelIndex & index ) const = 0
 */
-HB_FUNC( QABSTRACTITEMMODEL_PARENT )
+HB_FUNC_STATIC( QABSTRACTITEMMODEL_PARENT )
 {
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -475,7 +475,7 @@ HB_FUNC( QABSTRACTITEMMODEL_PARENT )
 /*
 bool removeColumn ( int column, const QModelIndex & parent = QModelIndex() )
 */
-HB_FUNC( QABSTRACTITEMMODEL_REMOVECOLUMN )
+HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVECOLUMN )
 {
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -491,7 +491,7 @@ HB_FUNC( QABSTRACTITEMMODEL_REMOVECOLUMN )
 /*
 virtual bool removeColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
 */
-HB_FUNC( QABSTRACTITEMMODEL_REMOVECOLUMNS )
+HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVECOLUMNS )
 {
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -508,7 +508,7 @@ HB_FUNC( QABSTRACTITEMMODEL_REMOVECOLUMNS )
 /*
 bool removeRow ( int row, const QModelIndex & parent = QModelIndex() )
 */
-HB_FUNC( QABSTRACTITEMMODEL_REMOVEROW )
+HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVEROW )
 {
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -524,7 +524,7 @@ HB_FUNC( QABSTRACTITEMMODEL_REMOVEROW )
 /*
 virtual bool removeRows ( int row, int count, const QModelIndex & parent = QModelIndex() )
 */
-HB_FUNC( QABSTRACTITEMMODEL_REMOVEROWS )
+HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVEROWS )
 {
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -542,7 +542,7 @@ HB_FUNC( QABSTRACTITEMMODEL_REMOVEROWS )
 /*
 virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const = 0
 */
-HB_FUNC( QABSTRACTITEMMODEL_ROWCOUNT )
+HB_FUNC_STATIC( QABSTRACTITEMMODEL_ROWCOUNT )
 {
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -557,7 +557,7 @@ HB_FUNC( QABSTRACTITEMMODEL_ROWCOUNT )
 /*
 virtual bool setData ( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
 */
-HB_FUNC( QABSTRACTITEMMODEL_SETDATA )
+HB_FUNC_STATIC( QABSTRACTITEMMODEL_SETDATA )
 {
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -574,7 +574,7 @@ HB_FUNC( QABSTRACTITEMMODEL_SETDATA )
 /*
 virtual bool setHeaderData ( int section, Qt::Orientation orientation, const QVariant & value, int role = Qt::EditRole )
 */
-HB_FUNC( QABSTRACTITEMMODEL_SETHEADERDATA )
+HB_FUNC_STATIC( QABSTRACTITEMMODEL_SETHEADERDATA )
 {
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -593,7 +593,7 @@ HB_FUNC( QABSTRACTITEMMODEL_SETHEADERDATA )
 /*
 void setSupportedDragActions ( Qt::DropActions actions )
 */
-HB_FUNC( QABSTRACTITEMMODEL_SETSUPPORTEDDRAGACTIONS )
+HB_FUNC_STATIC( QABSTRACTITEMMODEL_SETSUPPORTEDDRAGACTIONS )
 {
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -608,7 +608,7 @@ HB_FUNC( QABSTRACTITEMMODEL_SETSUPPORTEDDRAGACTIONS )
 /*
 QModelIndex sibling ( int row, int column, const QModelIndex & index ) const
 */
-HB_FUNC( QABSTRACTITEMMODEL_SIBLING )
+HB_FUNC_STATIC( QABSTRACTITEMMODEL_SIBLING )
 {
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -624,7 +624,7 @@ HB_FUNC( QABSTRACTITEMMODEL_SIBLING )
 /*
 virtual void sort ( int column, Qt::SortOrder order = Qt::AscendingOrder )
 */
-HB_FUNC( QABSTRACTITEMMODEL_SORT )
+HB_FUNC_STATIC( QABSTRACTITEMMODEL_SORT )
 {
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -640,7 +640,7 @@ HB_FUNC( QABSTRACTITEMMODEL_SORT )
 /*
 virtual QSize span ( const QModelIndex & index ) const
 */
-HB_FUNC( QABSTRACTITEMMODEL_SPAN )
+HB_FUNC_STATIC( QABSTRACTITEMMODEL_SPAN )
 {
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -654,7 +654,7 @@ HB_FUNC( QABSTRACTITEMMODEL_SPAN )
 /*
 Qt::DropActions supportedDragActions () const
 */
-HB_FUNC( QABSTRACTITEMMODEL_SUPPORTEDDRAGACTIONS )
+HB_FUNC_STATIC( QABSTRACTITEMMODEL_SUPPORTEDDRAGACTIONS )
 {
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -668,7 +668,7 @@ HB_FUNC( QABSTRACTITEMMODEL_SUPPORTEDDRAGACTIONS )
 /*
 virtual Qt::DropActions supportedDropActions () const
 */
-HB_FUNC( QABSTRACTITEMMODEL_SUPPORTEDDROPACTIONS )
+HB_FUNC_STATIC( QABSTRACTITEMMODEL_SUPPORTEDDROPACTIONS )
 {
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -682,7 +682,7 @@ HB_FUNC( QABSTRACTITEMMODEL_SUPPORTEDDROPACTIONS )
 /*
 virtual void revert ()
 */
-HB_FUNC( QABSTRACTITEMMODEL_REVERT )
+HB_FUNC_STATIC( QABSTRACTITEMMODEL_REVERT )
 {
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -696,7 +696,7 @@ HB_FUNC( QABSTRACTITEMMODEL_REVERT )
 /*
 virtual bool submit ()
 */
-HB_FUNC( QABSTRACTITEMMODEL_SUBMIT )
+HB_FUNC_STATIC( QABSTRACTITEMMODEL_SUBMIT )
 {
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

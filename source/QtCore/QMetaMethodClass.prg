@@ -114,7 +114,7 @@ RETURN
 /*
 QMetaMethod()
 */
-HB_FUNC( QMETAMETHOD_NEW )
+HB_FUNC_STATIC( QMETAMETHOD_NEW )
 {
   QMetaMethod * o = NULL;
   o = new QMetaMethod (  );
@@ -126,7 +126,7 @@ HB_FUNC( QMETAMETHOD_NEW )
 }
 
 
-HB_FUNC( QMETAMETHOD_DELETE )
+HB_FUNC_STATIC( QMETAMETHOD_DELETE )
 {
   QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -145,7 +145,7 @@ HB_FUNC( QMETAMETHOD_DELETE )
 /*
 const char *signature() const
 */
-HB_FUNC( QMETAMETHOD_SIGNATURE )
+HB_FUNC_STATIC( QMETAMETHOD_SIGNATURE )
 {
   QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -159,7 +159,7 @@ HB_FUNC( QMETAMETHOD_SIGNATURE )
 /*
 const char *typeName() const
 */
-HB_FUNC( QMETAMETHOD_TYPENAME )
+HB_FUNC_STATIC( QMETAMETHOD_TYPENAME )
 {
   QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -173,7 +173,7 @@ HB_FUNC( QMETAMETHOD_TYPENAME )
 /*
 QList<QByteArray> parameterTypes() const
 */
-HB_FUNC( QMETAMETHOD_PARAMETERTYPES )
+HB_FUNC_STATIC( QMETAMETHOD_PARAMETERTYPES )
 {
   QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -217,7 +217,7 @@ HB_FUNC( QMETAMETHOD_PARAMETERTYPES )
 /*
 QList<QByteArray> parameterNames() const
 */
-HB_FUNC( QMETAMETHOD_PARAMETERNAMES )
+HB_FUNC_STATIC( QMETAMETHOD_PARAMETERNAMES )
 {
   QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -261,7 +261,7 @@ HB_FUNC( QMETAMETHOD_PARAMETERNAMES )
 /*
 const char *tag() const
 */
-HB_FUNC( QMETAMETHOD_TAG )
+HB_FUNC_STATIC( QMETAMETHOD_TAG )
 {
   QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -275,7 +275,7 @@ HB_FUNC( QMETAMETHOD_TAG )
 /*
 Access access() const
 */
-HB_FUNC( QMETAMETHOD_ACCESS )
+HB_FUNC_STATIC( QMETAMETHOD_ACCESS )
 {
   QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -289,7 +289,7 @@ HB_FUNC( QMETAMETHOD_ACCESS )
 /*
 MethodType methodType() const
 */
-HB_FUNC( QMETAMETHOD_METHODTYPE )
+HB_FUNC_STATIC( QMETAMETHOD_METHODTYPE )
 {
   QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -303,7 +303,7 @@ HB_FUNC( QMETAMETHOD_METHODTYPE )
 /*
 int attributes() const
 */
-HB_FUNC( QMETAMETHOD_ATTRIBUTES )
+HB_FUNC_STATIC( QMETAMETHOD_ATTRIBUTES )
 {
   QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -317,7 +317,7 @@ HB_FUNC( QMETAMETHOD_ATTRIBUTES )
 /*
 int methodIndex() const
 */
-HB_FUNC( QMETAMETHOD_METHODINDEX )
+HB_FUNC_STATIC( QMETAMETHOD_METHODINDEX )
 {
   QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -331,7 +331,7 @@ HB_FUNC( QMETAMETHOD_METHODINDEX )
 /*
 int revision() const
 */
-HB_FUNC( QMETAMETHOD_REVISION )
+HB_FUNC_STATIC( QMETAMETHOD_REVISION )
 {
   QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -345,7 +345,7 @@ HB_FUNC( QMETAMETHOD_REVISION )
 /*
 const QMetaObject *enclosingMetaObject() const
 */
-HB_FUNC( QMETAMETHOD_ENCLOSINGMETAOBJECT )
+HB_FUNC_STATIC( QMETAMETHOD_ENCLOSINGMETAOBJECT )
 {
   QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -358,7 +358,7 @@ HB_FUNC( QMETAMETHOD_ENCLOSINGMETAOBJECT )
 /*
 bool invoke(QObject *object,Qt::ConnectionType connectionType,QGenericReturnArgument returnValue,QGenericArgument val0 = QGenericArgument(0),QGenericArgument val1 = QGenericArgument(),QGenericArgument val2 = QGenericArgument(),QGenericArgument val3 = QGenericArgument(),QGenericArgument val4 = QGenericArgument(),QGenericArgument val5 = QGenericArgument(),QGenericArgument val6 = QGenericArgument(),QGenericArgument val7 = QGenericArgument(),QGenericArgument val8 = QGenericArgument(),QGenericArgument val9 = QGenericArgument()) const
 */
-HB_FUNC( QMETAMETHOD_INVOKE1 )
+HB_FUNC_STATIC( QMETAMETHOD_INVOKE1 )
 {
   QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -385,7 +385,7 @@ HB_FUNC( QMETAMETHOD_INVOKE1 )
 /*
 bool invoke(QObject *object,QGenericReturnArgument returnValue,QGenericArgument val0 = QGenericArgument(0),QGenericArgument val1 = QGenericArgument(),QGenericArgument val2 = QGenericArgument(),QGenericArgument val3 = QGenericArgument(),QGenericArgument val4 = QGenericArgument(),QGenericArgument val5 = QGenericArgument(),QGenericArgument val6 = QGenericArgument(),QGenericArgument val7 = QGenericArgument(),QGenericArgument val8 = QGenericArgument(),QGenericArgument val9 = QGenericArgument()) const
 */
-HB_FUNC( QMETAMETHOD_INVOKE2 )
+HB_FUNC_STATIC( QMETAMETHOD_INVOKE2 )
 {
   QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -411,7 +411,7 @@ HB_FUNC( QMETAMETHOD_INVOKE2 )
 /*
 bool invoke(QObject *object,Qt::ConnectionType connectionType,QGenericArgument val0 = QGenericArgument(0),QGenericArgument val1 = QGenericArgument(),QGenericArgument val2 = QGenericArgument(),QGenericArgument val3 = QGenericArgument(),QGenericArgument val4 = QGenericArgument(),QGenericArgument val5 = QGenericArgument(),QGenericArgument val6 = QGenericArgument(),QGenericArgument val7 = QGenericArgument(),QGenericArgument val8 = QGenericArgument(),QGenericArgument val9 = QGenericArgument()) const
 */
-HB_FUNC( QMETAMETHOD_INVOKE3 )
+HB_FUNC_STATIC( QMETAMETHOD_INVOKE3 )
 {
   QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -437,7 +437,7 @@ HB_FUNC( QMETAMETHOD_INVOKE3 )
 /*
 bool invoke(QObject *object,QGenericArgument val0 = QGenericArgument(0),QGenericArgument val1 = QGenericArgument(),QGenericArgument val2 = QGenericArgument(),QGenericArgument val3 = QGenericArgument(),QGenericArgument val4 = QGenericArgument(),QGenericArgument val5 = QGenericArgument(),QGenericArgument val6 = QGenericArgument(),QGenericArgument val7 = QGenericArgument(),QGenericArgument val8 = QGenericArgument(),QGenericArgument val9 = QGenericArgument()) const
 */
-HB_FUNC( QMETAMETHOD_INVOKE4 )
+HB_FUNC_STATIC( QMETAMETHOD_INVOKE4 )
 {
   QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -464,7 +464,7 @@ HB_FUNC( QMETAMETHOD_INVOKE4 )
 //[3]bool invoke(QObject *object,Qt::ConnectionType connectionType,QGenericArgument val0 = QGenericArgument(0),QGenericArgument val1 = QGenericArgument(),QGenericArgument val2 = QGenericArgument(),QGenericArgument val3 = QGenericArgument(),QGenericArgument val4 = QGenericArgument(),QGenericArgument val5 = QGenericArgument(),QGenericArgument val6 = QGenericArgument(),QGenericArgument val7 = QGenericArgument(),QGenericArgument val8 = QGenericArgument(),QGenericArgument val9 = QGenericArgument()) const
 //[4]bool invoke(QObject *object,QGenericArgument val0 = QGenericArgument(0),QGenericArgument val1 = QGenericArgument(),QGenericArgument val2 = QGenericArgument(),QGenericArgument val3 = QGenericArgument(),QGenericArgument val4 = QGenericArgument(),QGenericArgument val5 = QGenericArgument(),QGenericArgument val6 = QGenericArgument(),QGenericArgument val7 = QGenericArgument(),QGenericArgument val8 = QGenericArgument(),QGenericArgument val9 = QGenericArgument()) const
 
-HB_FUNC( QMETAMETHOD_INVOKE )
+HB_FUNC_STATIC( QMETAMETHOD_INVOKE )
 {
   if( ISBETWEEN(3,13) && ISQOBJECT(1) && ISNUM(1) && ISOBJECT(3) && (ISOBJECT(4)||ISNIL(4)) && (ISOBJECT(5)||ISNIL(5)) && (ISOBJECT(6)||ISNIL(6)) && (ISOBJECT(7)||ISNIL(7)) && (ISOBJECT(8)||ISNIL(8)) && (ISOBJECT(9)||ISNIL(9)) && (ISOBJECT(10)||ISNIL(10)) && (ISOBJECT(11)||ISNIL(11)) && (ISOBJECT(12)||ISNIL(12)) && (ISOBJECT(13)||ISNIL(13)) )
   {

@@ -110,7 +110,7 @@ RETURN
 /*
 QMetaEnum()
 */
-HB_FUNC( QMETAENUM_NEW )
+HB_FUNC_STATIC( QMETAENUM_NEW )
 {
   QMetaEnum * o = NULL;
   o = new QMetaEnum (  );
@@ -122,7 +122,7 @@ HB_FUNC( QMETAENUM_NEW )
 }
 
 
-HB_FUNC( QMETAENUM_DELETE )
+HB_FUNC_STATIC( QMETAENUM_DELETE )
 {
   QMetaEnum * obj = (QMetaEnum *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -141,7 +141,7 @@ HB_FUNC( QMETAENUM_DELETE )
 /*
 const char *name() const
 */
-HB_FUNC( QMETAENUM_NAME )
+HB_FUNC_STATIC( QMETAENUM_NAME )
 {
   QMetaEnum * obj = (QMetaEnum *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -155,7 +155,7 @@ HB_FUNC( QMETAENUM_NAME )
 /*
 bool isFlag() const
 */
-HB_FUNC( QMETAENUM_ISFLAG )
+HB_FUNC_STATIC( QMETAENUM_ISFLAG )
 {
   QMetaEnum * obj = (QMetaEnum *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -169,7 +169,7 @@ HB_FUNC( QMETAENUM_ISFLAG )
 /*
 int keyCount() const
 */
-HB_FUNC( QMETAENUM_KEYCOUNT )
+HB_FUNC_STATIC( QMETAENUM_KEYCOUNT )
 {
   QMetaEnum * obj = (QMetaEnum *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -183,7 +183,7 @@ HB_FUNC( QMETAENUM_KEYCOUNT )
 /*
 const char *key(int index) const
 */
-HB_FUNC( QMETAENUM_KEY )
+HB_FUNC_STATIC( QMETAENUM_KEY )
 {
   QMetaEnum * obj = (QMetaEnum *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -198,7 +198,7 @@ HB_FUNC( QMETAENUM_KEY )
 /*
 int value(int index) const
 */
-HB_FUNC( QMETAENUM_VALUE )
+HB_FUNC_STATIC( QMETAENUM_VALUE )
 {
   QMetaEnum * obj = (QMetaEnum *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -213,7 +213,7 @@ HB_FUNC( QMETAENUM_VALUE )
 /*
 const char *scope() const
 */
-HB_FUNC( QMETAENUM_SCOPE )
+HB_FUNC_STATIC( QMETAENUM_SCOPE )
 {
   QMetaEnum * obj = (QMetaEnum *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -227,7 +227,7 @@ HB_FUNC( QMETAENUM_SCOPE )
 /*
 int keyToValue(const char *key) const
 */
-HB_FUNC( QMETAENUM_KEYTOVALUE )
+HB_FUNC_STATIC( QMETAENUM_KEYTOVALUE )
 {
   QMetaEnum * obj = (QMetaEnum *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -242,7 +242,7 @@ HB_FUNC( QMETAENUM_KEYTOVALUE )
 /*
 const char* valueToKey(int value) const
 */
-HB_FUNC( QMETAENUM_VALUETOKEY )
+HB_FUNC_STATIC( QMETAENUM_VALUETOKEY )
 {
   QMetaEnum * obj = (QMetaEnum *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -257,7 +257,7 @@ HB_FUNC( QMETAENUM_VALUETOKEY )
 /*
 int keysToValue(const char * keys) const
 */
-HB_FUNC( QMETAENUM_KEYSTOVALUE )
+HB_FUNC_STATIC( QMETAENUM_KEYSTOVALUE )
 {
   QMetaEnum * obj = (QMetaEnum *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -272,7 +272,7 @@ HB_FUNC( QMETAENUM_KEYSTOVALUE )
 /*
 QByteArray valueToKeys(int value) const
 */
-HB_FUNC( QMETAENUM_VALUETOKEYS )
+HB_FUNC_STATIC( QMETAENUM_VALUETOKEYS )
 {
   QMetaEnum * obj = (QMetaEnum *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -286,7 +286,7 @@ HB_FUNC( QMETAENUM_VALUETOKEYS )
 /*
 const QMetaObject *enclosingMetaObject() const
 */
-HB_FUNC( QMETAENUM_ENCLOSINGMETAOBJECT )
+HB_FUNC_STATIC( QMETAENUM_ENCLOSINGMETAOBJECT )
 {
   QMetaEnum * obj = (QMetaEnum *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -299,7 +299,7 @@ HB_FUNC( QMETAENUM_ENCLOSINGMETAOBJECT )
 /*
 bool isValid() const
 */
-HB_FUNC( QMETAENUM_ISVALID )
+HB_FUNC_STATIC( QMETAENUM_ISVALID )
 {
   QMetaEnum * obj = (QMetaEnum *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

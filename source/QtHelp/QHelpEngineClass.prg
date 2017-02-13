@@ -71,7 +71,7 @@ RETURN
 /*
 QHelpEngine ( const QString & collectionFile, QObject * parent = 0 )
 */
-HB_FUNC( QHELPENGINE_NEW )
+HB_FUNC_STATIC( QHELPENGINE_NEW )
 {
   QHelpEngine * o = NULL;
   QString par1 = hb_parc(1);
@@ -85,7 +85,7 @@ HB_FUNC( QHELPENGINE_NEW )
 }
 
 
-HB_FUNC( QHELPENGINE_DELETE )
+HB_FUNC_STATIC( QHELPENGINE_DELETE )
 {
   QHelpEngine * obj = (QHelpEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -104,7 +104,7 @@ HB_FUNC( QHELPENGINE_DELETE )
 /*
 QHelpContentModel * contentModel () const
 */
-HB_FUNC( QHELPENGINE_CONTENTMODEL )
+HB_FUNC_STATIC( QHELPENGINE_CONTENTMODEL )
 {
   QHelpEngine * obj = (QHelpEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -117,7 +117,7 @@ HB_FUNC( QHELPENGINE_CONTENTMODEL )
 /*
 QHelpContentWidget * contentWidget ()
 */
-HB_FUNC( QHELPENGINE_CONTENTWIDGET )
+HB_FUNC_STATIC( QHELPENGINE_CONTENTWIDGET )
 {
   QHelpEngine * obj = (QHelpEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -130,7 +130,7 @@ HB_FUNC( QHELPENGINE_CONTENTWIDGET )
 /*
 QHelpIndexModel * indexModel () const
 */
-HB_FUNC( QHELPENGINE_INDEXMODEL )
+HB_FUNC_STATIC( QHELPENGINE_INDEXMODEL )
 {
   QHelpEngine * obj = (QHelpEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -143,7 +143,7 @@ HB_FUNC( QHELPENGINE_INDEXMODEL )
 /*
 QHelpIndexWidget * indexWidget ()
 */
-HB_FUNC( QHELPENGINE_INDEXWIDGET )
+HB_FUNC_STATIC( QHELPENGINE_INDEXWIDGET )
 {
   QHelpEngine * obj = (QHelpEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -156,7 +156,7 @@ HB_FUNC( QHELPENGINE_INDEXWIDGET )
 /*
 QHelpSearchEngine * searchEngine ()
 */
-HB_FUNC( QHELPENGINE_SEARCHENGINE )
+HB_FUNC_STATIC( QHELPENGINE_SEARCHENGINE )
 {
   QHelpEngine * obj = (QHelpEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

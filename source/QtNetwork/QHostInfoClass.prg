@@ -116,7 +116,7 @@ RETURN
 /*
 QHostInfo ( int id = -1 )
 */
-HB_FUNC( QHOSTINFO_NEW1 )
+HB_FUNC_STATIC( QHOSTINFO_NEW1 )
 {
   QHostInfo * o = NULL;
   int par1 = ISNIL(1)? -1 : hb_parni(1);
@@ -135,7 +135,7 @@ HB_FUNC( QHOSTINFO_NEW1 )
 /*
 QHostInfo ( const QHostInfo & other )
 */
-HB_FUNC( QHOSTINFO_NEW2 )
+HB_FUNC_STATIC( QHOSTINFO_NEW2 )
 {
   QHostInfo * o = NULL;
   QHostInfo * par1 = (QHostInfo *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -154,7 +154,7 @@ HB_FUNC( QHOSTINFO_NEW2 )
 //[1]QHostInfo ( int id = -1 )
 //[2]QHostInfo ( const QHostInfo & other )
 
-HB_FUNC( QHOSTINFO_NEW )
+HB_FUNC_STATIC( QHOSTINFO_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -174,7 +174,7 @@ HB_FUNC( QHOSTINFO_NEW )
   }
 }
 
-HB_FUNC( QHOSTINFO_DELETE )
+HB_FUNC_STATIC( QHOSTINFO_DELETE )
 {
   QHostInfo * obj = (QHostInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -193,7 +193,7 @@ HB_FUNC( QHOSTINFO_DELETE )
 /*
 QList<QHostAddress> addresses () const
 */
-HB_FUNC( QHOSTINFO_ADDRESSES )
+HB_FUNC_STATIC( QHOSTINFO_ADDRESSES )
 {
   QHostInfo * obj = (QHostInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -241,7 +241,7 @@ HB_FUNC( QHOSTINFO_ADDRESSES )
 /*
 HostInfoError error () const
 */
-HB_FUNC( QHOSTINFO_ERROR )
+HB_FUNC_STATIC( QHOSTINFO_ERROR )
 {
   QHostInfo * obj = (QHostInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -255,7 +255,7 @@ HB_FUNC( QHOSTINFO_ERROR )
 /*
 QString errorString () const
 */
-HB_FUNC( QHOSTINFO_ERRORSTRING )
+HB_FUNC_STATIC( QHOSTINFO_ERRORSTRING )
 {
   QHostInfo * obj = (QHostInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -269,7 +269,7 @@ HB_FUNC( QHOSTINFO_ERRORSTRING )
 /*
 QString hostName () const
 */
-HB_FUNC( QHOSTINFO_HOSTNAME )
+HB_FUNC_STATIC( QHOSTINFO_HOSTNAME )
 {
   QHostInfo * obj = (QHostInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -283,7 +283,7 @@ HB_FUNC( QHOSTINFO_HOSTNAME )
 /*
 int lookupId () const
 */
-HB_FUNC( QHOSTINFO_LOOKUPID )
+HB_FUNC_STATIC( QHOSTINFO_LOOKUPID )
 {
   QHostInfo * obj = (QHostInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -297,7 +297,7 @@ HB_FUNC( QHOSTINFO_LOOKUPID )
 /*
 void setAddresses ( const QList<QHostAddress> & addresses )
 */
-HB_FUNC( QHOSTINFO_SETADDRESSES )
+HB_FUNC_STATIC( QHOSTINFO_SETADDRESSES )
 {
   QHostInfo * obj = (QHostInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -319,7 +319,7 @@ par1 << *(QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aLis
 /*
 void setError ( HostInfoError error )
 */
-HB_FUNC( QHOSTINFO_SETERROR )
+HB_FUNC_STATIC( QHOSTINFO_SETERROR )
 {
   QHostInfo * obj = (QHostInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -334,7 +334,7 @@ HB_FUNC( QHOSTINFO_SETERROR )
 /*
 void setErrorString ( const QString & str )
 */
-HB_FUNC( QHOSTINFO_SETERRORSTRING )
+HB_FUNC_STATIC( QHOSTINFO_SETERRORSTRING )
 {
   QHostInfo * obj = (QHostInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -349,7 +349,7 @@ HB_FUNC( QHOSTINFO_SETERRORSTRING )
 /*
 void setHostName ( const QString & hostName )
 */
-HB_FUNC( QHOSTINFO_SETHOSTNAME )
+HB_FUNC_STATIC( QHOSTINFO_SETHOSTNAME )
 {
   QHostInfo * obj = (QHostInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -364,7 +364,7 @@ HB_FUNC( QHOSTINFO_SETHOSTNAME )
 /*
 void setLookupId ( int id )
 */
-HB_FUNC( QHOSTINFO_SETLOOKUPID )
+HB_FUNC_STATIC( QHOSTINFO_SETLOOKUPID )
 {
   QHostInfo * obj = (QHostInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -380,7 +380,7 @@ HB_FUNC( QHOSTINFO_SETLOOKUPID )
 /*
 void abortHostLookup ( int id )
 */
-HB_FUNC( QHOSTINFO_ABORTHOSTLOOKUP )
+HB_FUNC_STATIC( QHOSTINFO_ABORTHOSTLOOKUP )
 {
   int par1 = hb_parni(1);
   QHostInfo::abortHostLookup ( par1 );
@@ -391,7 +391,7 @@ HB_FUNC( QHOSTINFO_ABORTHOSTLOOKUP )
 /*
 QHostInfo fromName ( const QString & name )
 */
-HB_FUNC( QHOSTINFO_FROMNAME )
+HB_FUNC_STATIC( QHOSTINFO_FROMNAME )
 {
   QString par1 = hb_parc(1);
   QHostInfo * ptr = new QHostInfo( QHostInfo::fromName ( par1 ) );
@@ -401,7 +401,7 @@ HB_FUNC( QHOSTINFO_FROMNAME )
 /*
 QString localDomainName ()
 */
-HB_FUNC( QHOSTINFO_LOCALDOMAINNAME )
+HB_FUNC_STATIC( QHOSTINFO_LOCALDOMAINNAME )
 {
   QString str1 = QHostInfo::localDomainName (  );
   hb_retc( (const char *) str1.toLatin1().data() );
@@ -411,7 +411,7 @@ HB_FUNC( QHOSTINFO_LOCALDOMAINNAME )
 /*
 QString localHostName ()
 */
-HB_FUNC( QHOSTINFO_LOCALHOSTNAME )
+HB_FUNC_STATIC( QHOSTINFO_LOCALHOSTNAME )
 {
   QString str1 = QHostInfo::localHostName (  );
   hb_retc( (const char *) str1.toLatin1().data() );
@@ -421,7 +421,7 @@ HB_FUNC( QHOSTINFO_LOCALHOSTNAME )
 /*
 int lookupHost ( const QString & name, QObject * receiver, const char * member )
 */
-HB_FUNC( QHOSTINFO_LOOKUPHOST )
+HB_FUNC_STATIC( QHOSTINFO_LOOKUPHOST )
 {
   QString par1 = hb_parc(1);
   QObject * par2 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );

@@ -155,7 +155,7 @@ RETURN
 /*
 QGLFunctions ()
 */
-HB_FUNC( QGLFUNCTIONS_NEW1 )
+HB_FUNC_STATIC( QGLFUNCTIONS_NEW1 )
 {
   QGLFunctions * o = NULL;
   o = new QGLFunctions (  );
@@ -170,7 +170,7 @@ HB_FUNC( QGLFUNCTIONS_NEW1 )
 /*
 QGLFunctions ( const QGLContext * context )
 */
-HB_FUNC( QGLFUNCTIONS_NEW2 )
+HB_FUNC_STATIC( QGLFUNCTIONS_NEW2 )
 {
   QGLFunctions * o = NULL;
   const QGLContext * par1 = (const QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -186,7 +186,7 @@ HB_FUNC( QGLFUNCTIONS_NEW2 )
 //[1]QGLFunctions ()
 //[2]QGLFunctions ( const QGLContext * context )
 
-HB_FUNC( QGLFUNCTIONS_NEW )
+HB_FUNC_STATIC( QGLFUNCTIONS_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -202,7 +202,7 @@ HB_FUNC( QGLFUNCTIONS_NEW )
   }
 }
 
-HB_FUNC( QGLFUNCTIONS_DELETE )
+HB_FUNC_STATIC( QGLFUNCTIONS_DELETE )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -221,7 +221,7 @@ HB_FUNC( QGLFUNCTIONS_DELETE )
 /*
 void glActiveTexture ( GLenum texture )
 */
-HB_FUNC( QGLFUNCTIONS_GLACTIVETEXTURE )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLACTIVETEXTURE )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -236,7 +236,7 @@ HB_FUNC( QGLFUNCTIONS_GLACTIVETEXTURE )
 /*
 void glAttachShader ( GLuint program, GLuint shader )
 */
-HB_FUNC( QGLFUNCTIONS_GLATTACHSHADER )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLATTACHSHADER )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -252,7 +252,7 @@ HB_FUNC( QGLFUNCTIONS_GLATTACHSHADER )
 /*
 void glBindAttribLocation ( GLuint program, GLuint index, const char * name )
 */
-HB_FUNC( QGLFUNCTIONS_GLBINDATTRIBLOCATION )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLBINDATTRIBLOCATION )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -269,7 +269,7 @@ HB_FUNC( QGLFUNCTIONS_GLBINDATTRIBLOCATION )
 /*
 void glBindBuffer ( GLenum target, GLuint buffer )
 */
-HB_FUNC( QGLFUNCTIONS_GLBINDBUFFER )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLBINDBUFFER )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -285,7 +285,7 @@ HB_FUNC( QGLFUNCTIONS_GLBINDBUFFER )
 /*
 void glBindFramebuffer ( GLenum target, GLuint framebuffer )
 */
-HB_FUNC( QGLFUNCTIONS_GLBINDFRAMEBUFFER )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLBINDFRAMEBUFFER )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -301,7 +301,7 @@ HB_FUNC( QGLFUNCTIONS_GLBINDFRAMEBUFFER )
 /*
 void glBindRenderbuffer ( GLenum target, GLuint renderbuffer )
 */
-HB_FUNC( QGLFUNCTIONS_GLBINDRENDERBUFFER )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLBINDRENDERBUFFER )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -317,7 +317,7 @@ HB_FUNC( QGLFUNCTIONS_GLBINDRENDERBUFFER )
 /*
 void glBlendColor ( GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha )
 */
-HB_FUNC( QGLFUNCTIONS_GLBLENDCOLOR )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLBLENDCOLOR )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -335,7 +335,7 @@ HB_FUNC( QGLFUNCTIONS_GLBLENDCOLOR )
 /*
 void glBlendEquation ( GLenum mode )
 */
-HB_FUNC( QGLFUNCTIONS_GLBLENDEQUATION )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLBLENDEQUATION )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -350,7 +350,7 @@ HB_FUNC( QGLFUNCTIONS_GLBLENDEQUATION )
 /*
 void glBlendEquationSeparate ( GLenum modeRGB, GLenum modeAlpha )
 */
-HB_FUNC( QGLFUNCTIONS_GLBLENDEQUATIONSEPARATE )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLBLENDEQUATIONSEPARATE )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -366,7 +366,7 @@ HB_FUNC( QGLFUNCTIONS_GLBLENDEQUATIONSEPARATE )
 /*
 void glBlendFuncSeparate ( GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha )
 */
-HB_FUNC( QGLFUNCTIONS_GLBLENDFUNCSEPARATE )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLBLENDFUNCSEPARATE )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -386,7 +386,7 @@ HB_FUNC( QGLFUNCTIONS_GLBLENDFUNCSEPARATE )
 /*
 GLenum glCheckFramebufferStatus ( GLenum target )
 */
-HB_FUNC( QGLFUNCTIONS_GLCHECKFRAMEBUFFERSTATUS )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLCHECKFRAMEBUFFERSTATUS )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -401,7 +401,7 @@ HB_FUNC( QGLFUNCTIONS_GLCHECKFRAMEBUFFERSTATUS )
 /*
 void glClearDepthf ( GLclampf depth )
 */
-HB_FUNC( QGLFUNCTIONS_GLCLEARDEPTHF )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLCLEARDEPTHF )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -416,7 +416,7 @@ HB_FUNC( QGLFUNCTIONS_GLCLEARDEPTHF )
 /*
 void glCompileShader ( GLuint shader )
 */
-HB_FUNC( QGLFUNCTIONS_GLCOMPILESHADER )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLCOMPILESHADER )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -431,7 +431,7 @@ HB_FUNC( QGLFUNCTIONS_GLCOMPILESHADER )
 /*
 void glCompressedTexImage2D ( GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLsizei imageSize, const void * data )
 */
-HB_FUNC( QGLFUNCTIONS_GLCOMPRESSEDTEXIMAGE2D )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLCOMPRESSEDTEXIMAGE2D )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -453,7 +453,7 @@ HB_FUNC( QGLFUNCTIONS_GLCOMPRESSEDTEXIMAGE2D )
 /*
 void glCompressedTexSubImage2D ( GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLsizei imageSize, const void * data )
 */
-HB_FUNC( QGLFUNCTIONS_GLCOMPRESSEDTEXSUBIMAGE2D )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLCOMPRESSEDTEXSUBIMAGE2D )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -476,7 +476,7 @@ HB_FUNC( QGLFUNCTIONS_GLCOMPRESSEDTEXSUBIMAGE2D )
 /*
 GLuint glCreateProgram ()
 */
-HB_FUNC( QGLFUNCTIONS_GLCREATEPROGRAM )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLCREATEPROGRAM )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -490,7 +490,7 @@ HB_FUNC( QGLFUNCTIONS_GLCREATEPROGRAM )
 /*
 GLuint glCreateShader ( GLenum type )
 */
-HB_FUNC( QGLFUNCTIONS_GLCREATESHADER )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLCREATESHADER )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -507,7 +507,7 @@ HB_FUNC( QGLFUNCTIONS_GLCREATESHADER )
 /*
 void glDeleteProgram ( GLuint program )
 */
-HB_FUNC( QGLFUNCTIONS_GLDELETEPROGRAM )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLDELETEPROGRAM )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -523,7 +523,7 @@ HB_FUNC( QGLFUNCTIONS_GLDELETEPROGRAM )
 /*
 void glDeleteShader ( GLuint shader )
 */
-HB_FUNC( QGLFUNCTIONS_GLDELETESHADER )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLDELETESHADER )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -538,7 +538,7 @@ HB_FUNC( QGLFUNCTIONS_GLDELETESHADER )
 /*
 void glDepthRangef ( GLclampf zNear, GLclampf zFar )
 */
-HB_FUNC( QGLFUNCTIONS_GLDEPTHRANGEF )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLDEPTHRANGEF )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -554,7 +554,7 @@ HB_FUNC( QGLFUNCTIONS_GLDEPTHRANGEF )
 /*
 void glDetachShader ( GLuint program, GLuint shader )
 */
-HB_FUNC( QGLFUNCTIONS_GLDETACHSHADER )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLDETACHSHADER )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -570,7 +570,7 @@ HB_FUNC( QGLFUNCTIONS_GLDETACHSHADER )
 /*
 void glDisableVertexAttribArray ( GLuint index )
 */
-HB_FUNC( QGLFUNCTIONS_GLDISABLEVERTEXATTRIBARRAY )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLDISABLEVERTEXATTRIBARRAY )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -585,7 +585,7 @@ HB_FUNC( QGLFUNCTIONS_GLDISABLEVERTEXATTRIBARRAY )
 /*
 void glEnableVertexAttribArray ( GLuint index )
 */
-HB_FUNC( QGLFUNCTIONS_GLENABLEVERTEXATTRIBARRAY )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLENABLEVERTEXATTRIBARRAY )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -600,7 +600,7 @@ HB_FUNC( QGLFUNCTIONS_GLENABLEVERTEXATTRIBARRAY )
 /*
 void glFramebufferRenderbuffer ( GLenum target, GLenum attachment, GLenum renderbuffertarget, GLuint renderbuffer )
 */
-HB_FUNC( QGLFUNCTIONS_GLFRAMEBUFFERRENDERBUFFER )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLFRAMEBUFFERRENDERBUFFER )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -618,7 +618,7 @@ HB_FUNC( QGLFUNCTIONS_GLFRAMEBUFFERRENDERBUFFER )
 /*
 void glFramebufferTexture2D ( GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level )
 */
-HB_FUNC( QGLFUNCTIONS_GLFRAMEBUFFERTEXTURE2D )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLFRAMEBUFFERTEXTURE2D )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -640,7 +640,7 @@ HB_FUNC( QGLFUNCTIONS_GLFRAMEBUFFERTEXTURE2D )
 /*
 void glGenerateMipmap ( GLenum target )
 */
-HB_FUNC( QGLFUNCTIONS_GLGENERATEMIPMAP )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLGENERATEMIPMAP )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -658,7 +658,7 @@ HB_FUNC( QGLFUNCTIONS_GLGENERATEMIPMAP )
 /*
 int glGetAttribLocation ( GLuint program, const char * name )
 */
-HB_FUNC( QGLFUNCTIONS_GLGETATTRIBLOCATION )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLGETATTRIBLOCATION )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -683,7 +683,7 @@ HB_FUNC( QGLFUNCTIONS_GLGETATTRIBLOCATION )
 /*
 int glGetUniformLocation ( GLuint program, const char * name )
 */
-HB_FUNC( QGLFUNCTIONS_GLGETUNIFORMLOCATION )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLGETUNIFORMLOCATION )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -704,7 +704,7 @@ HB_FUNC( QGLFUNCTIONS_GLGETUNIFORMLOCATION )
 /*
 GLboolean glIsBuffer ( GLuint buffer )
 */
-HB_FUNC( QGLFUNCTIONS_GLISBUFFER )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLISBUFFER )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -719,7 +719,7 @@ HB_FUNC( QGLFUNCTIONS_GLISBUFFER )
 /*
 GLboolean glIsFramebuffer ( GLuint framebuffer )
 */
-HB_FUNC( QGLFUNCTIONS_GLISFRAMEBUFFER )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLISFRAMEBUFFER )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -734,7 +734,7 @@ HB_FUNC( QGLFUNCTIONS_GLISFRAMEBUFFER )
 /*
 GLboolean glIsProgram ( GLuint program )
 */
-HB_FUNC( QGLFUNCTIONS_GLISPROGRAM )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLISPROGRAM )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -749,7 +749,7 @@ HB_FUNC( QGLFUNCTIONS_GLISPROGRAM )
 /*
 GLboolean glIsRenderbuffer ( GLuint renderbuffer )
 */
-HB_FUNC( QGLFUNCTIONS_GLISRENDERBUFFER )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLISRENDERBUFFER )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -764,7 +764,7 @@ HB_FUNC( QGLFUNCTIONS_GLISRENDERBUFFER )
 /*
 GLboolean glIsShader ( GLuint shader )
 */
-HB_FUNC( QGLFUNCTIONS_GLISSHADER )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLISSHADER )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -779,7 +779,7 @@ HB_FUNC( QGLFUNCTIONS_GLISSHADER )
 /*
 void glLinkProgram ( GLuint program )
 */
-HB_FUNC( QGLFUNCTIONS_GLLINKPROGRAM )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLLINKPROGRAM )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -794,7 +794,7 @@ HB_FUNC( QGLFUNCTIONS_GLLINKPROGRAM )
 /*
 void glReleaseShaderCompiler ()
 */
-HB_FUNC( QGLFUNCTIONS_GLRELEASESHADERCOMPILER )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLRELEASESHADERCOMPILER )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -808,7 +808,7 @@ HB_FUNC( QGLFUNCTIONS_GLRELEASESHADERCOMPILER )
 /*
 void glRenderbufferStorage ( GLenum target, GLenum internalformat, GLsizei width, GLsizei height )
 */
-HB_FUNC( QGLFUNCTIONS_GLRENDERBUFFERSTORAGE )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLRENDERBUFFERSTORAGE )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -826,7 +826,7 @@ HB_FUNC( QGLFUNCTIONS_GLRENDERBUFFERSTORAGE )
 /*
 void glSampleCoverage ( GLclampf value, GLboolean invert )
 */
-HB_FUNC( QGLFUNCTIONS_GLSAMPLECOVERAGE )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLSAMPLECOVERAGE )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -844,7 +844,7 @@ HB_FUNC( QGLFUNCTIONS_GLSAMPLECOVERAGE )
 /*
 void glStencilFuncSeparate ( GLenum face, GLenum func, GLint ref, GLuint mask )
 */
-HB_FUNC( QGLFUNCTIONS_GLSTENCILFUNCSEPARATE )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLSTENCILFUNCSEPARATE )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -862,7 +862,7 @@ HB_FUNC( QGLFUNCTIONS_GLSTENCILFUNCSEPARATE )
 /*
 void glStencilMaskSeparate ( GLenum face, GLuint mask )
 */
-HB_FUNC( QGLFUNCTIONS_GLSTENCILMASKSEPARATE )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLSTENCILMASKSEPARATE )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -878,7 +878,7 @@ HB_FUNC( QGLFUNCTIONS_GLSTENCILMASKSEPARATE )
 /*
 void glStencilOpSeparate ( GLenum face, GLenum fail, GLenum zfail, GLenum zpass )
 */
-HB_FUNC( QGLFUNCTIONS_GLSTENCILOPSEPARATE )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLSTENCILOPSEPARATE )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -896,7 +896,7 @@ HB_FUNC( QGLFUNCTIONS_GLSTENCILOPSEPARATE )
 /*
 void glUniform1f ( GLint location, GLfloat x )
 */
-HB_FUNC( QGLFUNCTIONS_GLUNIFORM1F )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLUNIFORM1F )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -913,7 +913,7 @@ HB_FUNC( QGLFUNCTIONS_GLUNIFORM1F )
 /*
 void glUniform1i ( GLint location, GLint x )
 */
-HB_FUNC( QGLFUNCTIONS_GLUNIFORM1I )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLUNIFORM1I )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -930,7 +930,7 @@ HB_FUNC( QGLFUNCTIONS_GLUNIFORM1I )
 /*
 void glUniform2f ( GLint location, GLfloat x, GLfloat y )
 */
-HB_FUNC( QGLFUNCTIONS_GLUNIFORM2F )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLUNIFORM2F )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -948,7 +948,7 @@ HB_FUNC( QGLFUNCTIONS_GLUNIFORM2F )
 /*
 void glUniform2i ( GLint location, GLint x, GLint y )
 */
-HB_FUNC( QGLFUNCTIONS_GLUNIFORM2I )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLUNIFORM2I )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -966,7 +966,7 @@ HB_FUNC( QGLFUNCTIONS_GLUNIFORM2I )
 /*
 void glUniform3f ( GLint location, GLfloat x, GLfloat y, GLfloat z )
 */
-HB_FUNC( QGLFUNCTIONS_GLUNIFORM3F )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLUNIFORM3F )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -985,7 +985,7 @@ HB_FUNC( QGLFUNCTIONS_GLUNIFORM3F )
 /*
 void glUniform3i ( GLint location, GLint x, GLint y, GLint z )
 */
-HB_FUNC( QGLFUNCTIONS_GLUNIFORM3I )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLUNIFORM3I )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1004,7 +1004,7 @@ HB_FUNC( QGLFUNCTIONS_GLUNIFORM3I )
 /*
 void glUniform4f ( GLint location, GLfloat x, GLfloat y, GLfloat z, GLfloat w )
 */
-HB_FUNC( QGLFUNCTIONS_GLUNIFORM4F )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLUNIFORM4F )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1024,7 +1024,7 @@ HB_FUNC( QGLFUNCTIONS_GLUNIFORM4F )
 /*
 void glUniform4i ( GLint location, GLint x, GLint y, GLint z, GLint w )
 */
-HB_FUNC( QGLFUNCTIONS_GLUNIFORM4I )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLUNIFORM4I )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1047,7 +1047,7 @@ HB_FUNC( QGLFUNCTIONS_GLUNIFORM4I )
 /*
 void glUseProgram ( GLuint program )
 */
-HB_FUNC( QGLFUNCTIONS_GLUSEPROGRAM )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLUSEPROGRAM )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1062,7 +1062,7 @@ HB_FUNC( QGLFUNCTIONS_GLUSEPROGRAM )
 /*
 void glValidateProgram ( GLuint program )
 */
-HB_FUNC( QGLFUNCTIONS_GLVALIDATEPROGRAM )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLVALIDATEPROGRAM )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1077,7 +1077,7 @@ HB_FUNC( QGLFUNCTIONS_GLVALIDATEPROGRAM )
 /*
 void glVertexAttrib1f ( GLuint indx, GLfloat x )
 */
-HB_FUNC( QGLFUNCTIONS_GLVERTEXATTRIB1F )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLVERTEXATTRIB1F )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1094,7 +1094,7 @@ HB_FUNC( QGLFUNCTIONS_GLVERTEXATTRIB1F )
 /*
 void glVertexAttrib2f ( GLuint indx, GLfloat x, GLfloat y )
 */
-HB_FUNC( QGLFUNCTIONS_GLVERTEXATTRIB2F )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLVERTEXATTRIB2F )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1112,7 +1112,7 @@ HB_FUNC( QGLFUNCTIONS_GLVERTEXATTRIB2F )
 /*
 void glVertexAttrib3f ( GLuint indx, GLfloat x, GLfloat y, GLfloat z )
 */
-HB_FUNC( QGLFUNCTIONS_GLVERTEXATTRIB3F )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLVERTEXATTRIB3F )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1131,7 +1131,7 @@ HB_FUNC( QGLFUNCTIONS_GLVERTEXATTRIB3F )
 /*
 void glVertexAttrib4f ( GLuint indx, GLfloat x, GLfloat y, GLfloat z, GLfloat w )
 */
-HB_FUNC( QGLFUNCTIONS_GLVERTEXATTRIB4F )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLVERTEXATTRIB4F )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1151,7 +1151,7 @@ HB_FUNC( QGLFUNCTIONS_GLVERTEXATTRIB4F )
 /*
 void glVertexAttribPointer ( GLuint indx, GLint size, GLenum type, GLboolean normalized, GLsizei stride, const void * ptr )
 */
-HB_FUNC( QGLFUNCTIONS_GLVERTEXATTRIBPOINTER )
+HB_FUNC_STATIC( QGLFUNCTIONS_GLVERTEXATTRIBPOINTER )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1171,7 +1171,7 @@ HB_FUNC( QGLFUNCTIONS_GLVERTEXATTRIBPOINTER )
 /*
 bool hasOpenGLFeature ( QGLFunctions::OpenGLFeature feature ) const
 */
-HB_FUNC( QGLFUNCTIONS_HASOPENGLFEATURE )
+HB_FUNC_STATIC( QGLFUNCTIONS_HASOPENGLFEATURE )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1186,7 +1186,7 @@ HB_FUNC( QGLFUNCTIONS_HASOPENGLFEATURE )
 /*
 void initializeGLFunctions ( const QGLContext * context = 0 )
 */
-HB_FUNC( QGLFUNCTIONS_INITIALIZEGLFUNCTIONS )
+HB_FUNC_STATIC( QGLFUNCTIONS_INITIALIZEGLFUNCTIONS )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1201,7 +1201,7 @@ HB_FUNC( QGLFUNCTIONS_INITIALIZEGLFUNCTIONS )
 /*
 QGLFunctions::OpenGLFeatures openGLFeatures () const
 */
-HB_FUNC( QGLFUNCTIONS_OPENGLFEATURES )
+HB_FUNC_STATIC( QGLFUNCTIONS_OPENGLFEATURES )
 {
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

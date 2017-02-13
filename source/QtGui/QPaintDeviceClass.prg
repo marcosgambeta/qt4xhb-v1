@@ -106,7 +106,7 @@ RETURN
 #include "qt4xhb_clsid.h"
 #include "qt4xhb_utils.h"
 
-HB_FUNC( QPAINTDEVICE_DELETE )
+HB_FUNC_STATIC( QPAINTDEVICE_DELETE )
 {
   QPaintDevice * obj = (QPaintDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -125,7 +125,7 @@ HB_FUNC( QPAINTDEVICE_DELETE )
 /*
 int colorCount () const
 */
-HB_FUNC( QPAINTDEVICE_COLORCOUNT )
+HB_FUNC_STATIC( QPAINTDEVICE_COLORCOUNT )
 {
   QPaintDevice * obj = (QPaintDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -139,7 +139,7 @@ HB_FUNC( QPAINTDEVICE_COLORCOUNT )
 /*
 int depth () const
 */
-HB_FUNC( QPAINTDEVICE_DEPTH )
+HB_FUNC_STATIC( QPAINTDEVICE_DEPTH )
 {
   QPaintDevice * obj = (QPaintDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -153,7 +153,7 @@ HB_FUNC( QPAINTDEVICE_DEPTH )
 /*
 int height () const
 */
-HB_FUNC( QPAINTDEVICE_HEIGHT )
+HB_FUNC_STATIC( QPAINTDEVICE_HEIGHT )
 {
   QPaintDevice * obj = (QPaintDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -167,7 +167,7 @@ HB_FUNC( QPAINTDEVICE_HEIGHT )
 /*
 int heightMM () const
 */
-HB_FUNC( QPAINTDEVICE_HEIGHTMM )
+HB_FUNC_STATIC( QPAINTDEVICE_HEIGHTMM )
 {
   QPaintDevice * obj = (QPaintDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -181,7 +181,7 @@ HB_FUNC( QPAINTDEVICE_HEIGHTMM )
 /*
 int logicalDpiX () const
 */
-HB_FUNC( QPAINTDEVICE_LOGICALDPIX )
+HB_FUNC_STATIC( QPAINTDEVICE_LOGICALDPIX )
 {
   QPaintDevice * obj = (QPaintDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -195,7 +195,7 @@ HB_FUNC( QPAINTDEVICE_LOGICALDPIX )
 /*
 int logicalDpiY () const
 */
-HB_FUNC( QPAINTDEVICE_LOGICALDPIY )
+HB_FUNC_STATIC( QPAINTDEVICE_LOGICALDPIY )
 {
   QPaintDevice * obj = (QPaintDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -209,7 +209,7 @@ HB_FUNC( QPAINTDEVICE_LOGICALDPIY )
 /*
 int numColors () const (deprecated)
 */
-HB_FUNC( QPAINTDEVICE_NUMCOLORS )
+HB_FUNC_STATIC( QPAINTDEVICE_NUMCOLORS )
 {
   QPaintDevice * obj = (QPaintDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -223,7 +223,7 @@ HB_FUNC( QPAINTDEVICE_NUMCOLORS )
 /*
 virtual QPaintEngine * paintEngine () const = 0
 */
-HB_FUNC( QPAINTDEVICE_PAINTENGINE )
+HB_FUNC_STATIC( QPAINTDEVICE_PAINTENGINE )
 {
   QPaintDevice * obj = (QPaintDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -236,7 +236,7 @@ HB_FUNC( QPAINTDEVICE_PAINTENGINE )
 /*
 bool paintingActive () const
 */
-HB_FUNC( QPAINTDEVICE_PAINTINGACTIVE )
+HB_FUNC_STATIC( QPAINTDEVICE_PAINTINGACTIVE )
 {
   QPaintDevice * obj = (QPaintDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -250,7 +250,7 @@ HB_FUNC( QPAINTDEVICE_PAINTINGACTIVE )
 /*
 int physicalDpiX () const
 */
-HB_FUNC( QPAINTDEVICE_PHYSICALDPIX )
+HB_FUNC_STATIC( QPAINTDEVICE_PHYSICALDPIX )
 {
   QPaintDevice * obj = (QPaintDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -264,7 +264,7 @@ HB_FUNC( QPAINTDEVICE_PHYSICALDPIX )
 /*
 int physicalDpiY () const
 */
-HB_FUNC( QPAINTDEVICE_PHYSICALDPIY )
+HB_FUNC_STATIC( QPAINTDEVICE_PHYSICALDPIY )
 {
   QPaintDevice * obj = (QPaintDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -278,7 +278,7 @@ HB_FUNC( QPAINTDEVICE_PHYSICALDPIY )
 /*
 int width () const
 */
-HB_FUNC( QPAINTDEVICE_WIDTH )
+HB_FUNC_STATIC( QPAINTDEVICE_WIDTH )
 {
   QPaintDevice * obj = (QPaintDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -292,7 +292,7 @@ HB_FUNC( QPAINTDEVICE_WIDTH )
 /*
 int widthMM () const
 */
-HB_FUNC( QPAINTDEVICE_WIDTHMM )
+HB_FUNC_STATIC( QPAINTDEVICE_WIDTHMM )
 {
   QPaintDevice * obj = (QPaintDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

@@ -83,7 +83,7 @@ RETURN
 /*
 QUiLoader ( QObject * parent = 0 )
 */
-HB_FUNC( QUILOADER_NEW )
+HB_FUNC_STATIC( QUILOADER_NEW )
 {
   QUiLoader * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -96,7 +96,7 @@ HB_FUNC( QUILOADER_NEW )
 }
 
 
-HB_FUNC( QUILOADER_DELETE )
+HB_FUNC_STATIC( QUILOADER_DELETE )
 {
   QUiLoader * obj = (QUiLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -115,7 +115,7 @@ HB_FUNC( QUILOADER_DELETE )
 /*
 void addPluginPath ( const QString & path )
 */
-HB_FUNC( QUILOADER_ADDPLUGINPATH )
+HB_FUNC_STATIC( QUILOADER_ADDPLUGINPATH )
 {
   QUiLoader * obj = (QUiLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -130,7 +130,7 @@ HB_FUNC( QUILOADER_ADDPLUGINPATH )
 /*
 QStringList availableLayouts () const
 */
-HB_FUNC( QUILOADER_AVAILABLELAYOUTS )
+HB_FUNC_STATIC( QUILOADER_AVAILABLELAYOUTS )
 {
   QUiLoader * obj = (QUiLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -153,7 +153,7 @@ HB_FUNC( QUILOADER_AVAILABLELAYOUTS )
 /*
 QStringList availableWidgets () const
 */
-HB_FUNC( QUILOADER_AVAILABLEWIDGETS )
+HB_FUNC_STATIC( QUILOADER_AVAILABLEWIDGETS )
 {
   QUiLoader * obj = (QUiLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -176,7 +176,7 @@ HB_FUNC( QUILOADER_AVAILABLEWIDGETS )
 /*
 void clearPluginPaths ()
 */
-HB_FUNC( QUILOADER_CLEARPLUGINPATHS )
+HB_FUNC_STATIC( QUILOADER_CLEARPLUGINPATHS )
 {
   QUiLoader * obj = (QUiLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -190,7 +190,7 @@ HB_FUNC( QUILOADER_CLEARPLUGINPATHS )
 /*
 virtual QAction * createAction ( QObject * parent = 0, const QString & name = QString() )
 */
-HB_FUNC( QUILOADER_CREATEACTION )
+HB_FUNC_STATIC( QUILOADER_CREATEACTION )
 {
   QUiLoader * obj = (QUiLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -205,7 +205,7 @@ HB_FUNC( QUILOADER_CREATEACTION )
 /*
 virtual QActionGroup * createActionGroup ( QObject * parent = 0, const QString & name = QString() )
 */
-HB_FUNC( QUILOADER_CREATEACTIONGROUP )
+HB_FUNC_STATIC( QUILOADER_CREATEACTIONGROUP )
 {
   QUiLoader * obj = (QUiLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -220,7 +220,7 @@ HB_FUNC( QUILOADER_CREATEACTIONGROUP )
 /*
 virtual QLayout * createLayout ( const QString & className, QObject * parent = 0, const QString & name = QString() )
 */
-HB_FUNC( QUILOADER_CREATELAYOUT )
+HB_FUNC_STATIC( QUILOADER_CREATELAYOUT )
 {
   QUiLoader * obj = (QUiLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -236,7 +236,7 @@ HB_FUNC( QUILOADER_CREATELAYOUT )
 /*
 virtual QWidget * createWidget ( const QString & className, QWidget * parent = 0, const QString & name = QString() )
 */
-HB_FUNC( QUILOADER_CREATEWIDGET )
+HB_FUNC_STATIC( QUILOADER_CREATEWIDGET )
 {
   QUiLoader * obj = (QUiLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -252,7 +252,7 @@ HB_FUNC( QUILOADER_CREATEWIDGET )
 /*
 bool isLanguageChangeEnabled () const
 */
-HB_FUNC( QUILOADER_ISLANGUAGECHANGEENABLED )
+HB_FUNC_STATIC( QUILOADER_ISLANGUAGECHANGEENABLED )
 {
   QUiLoader * obj = (QUiLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -266,7 +266,7 @@ HB_FUNC( QUILOADER_ISLANGUAGECHANGEENABLED )
 /*
 QWidget * load ( QIODevice * device, QWidget * parentWidget = 0 )
 */
-HB_FUNC( QUILOADER_LOAD )
+HB_FUNC_STATIC( QUILOADER_LOAD )
 {
   QUiLoader * obj = (QUiLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -281,7 +281,7 @@ HB_FUNC( QUILOADER_LOAD )
 /*
 QStringList pluginPaths () const
 */
-HB_FUNC( QUILOADER_PLUGINPATHS )
+HB_FUNC_STATIC( QUILOADER_PLUGINPATHS )
 {
   QUiLoader * obj = (QUiLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -304,7 +304,7 @@ HB_FUNC( QUILOADER_PLUGINPATHS )
 /*
 void setLanguageChangeEnabled ( bool enabled )
 */
-HB_FUNC( QUILOADER_SETLANGUAGECHANGEENABLED )
+HB_FUNC_STATIC( QUILOADER_SETLANGUAGECHANGEENABLED )
 {
   QUiLoader * obj = (QUiLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -319,7 +319,7 @@ HB_FUNC( QUILOADER_SETLANGUAGECHANGEENABLED )
 /*
 void setWorkingDirectory ( const QDir & dir )
 */
-HB_FUNC( QUILOADER_SETWORKINGDIRECTORY )
+HB_FUNC_STATIC( QUILOADER_SETWORKINGDIRECTORY )
 {
   QUiLoader * obj = (QUiLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -334,7 +334,7 @@ HB_FUNC( QUILOADER_SETWORKINGDIRECTORY )
 /*
 QDir workingDirectory () const
 */
-HB_FUNC( QUILOADER_WORKINGDIRECTORY )
+HB_FUNC_STATIC( QUILOADER_WORKINGDIRECTORY )
 {
   QUiLoader * obj = (QUiLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

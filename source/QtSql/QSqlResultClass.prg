@@ -94,7 +94,7 @@ RETURN
 #include "qt4xhb_clsid.h"
 #include "qt4xhb_utils.h"
 
-HB_FUNC( QSQLRESULT_DELETE )
+HB_FUNC_STATIC( QSQLRESULT_DELETE )
 {
   QSqlResult * obj = (QSqlResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -113,7 +113,7 @@ HB_FUNC( QSQLRESULT_DELETE )
 /*
 virtual QVariant handle () const
 */
-HB_FUNC( QSQLRESULT_HANDLE )
+HB_FUNC_STATIC( QSQLRESULT_HANDLE )
 {
   QSqlResult * obj = (QSqlResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

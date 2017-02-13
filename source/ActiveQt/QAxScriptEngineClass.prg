@@ -66,7 +66,7 @@ RETURN
 /*
 QAxScriptEngine ( const QString & language, QAxScript * script )
 */
-HB_FUNC( QAXSCRIPTENGINE_NEW )
+HB_FUNC_STATIC( QAXSCRIPTENGINE_NEW )
 {
   QAxScriptEngine * o = NULL;
   QString par1 = hb_parc(1);
@@ -80,7 +80,7 @@ HB_FUNC( QAXSCRIPTENGINE_NEW )
 }
 
 
-HB_FUNC( QAXSCRIPTENGINE_DELETE )
+HB_FUNC_STATIC( QAXSCRIPTENGINE_DELETE )
 {
   QAxScriptEngine * obj = (QAxScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -99,7 +99,7 @@ HB_FUNC( QAXSCRIPTENGINE_DELETE )
 /*
 void addItem ( const QString & name )
 */
-HB_FUNC( QAXSCRIPTENGINE_ADDITEM )
+HB_FUNC_STATIC( QAXSCRIPTENGINE_ADDITEM )
 {
   QAxScriptEngine * obj = (QAxScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -114,7 +114,7 @@ HB_FUNC( QAXSCRIPTENGINE_ADDITEM )
 /*
 bool hasIntrospection () const
 */
-HB_FUNC( QAXSCRIPTENGINE_HASINTROSPECTION )
+HB_FUNC_STATIC( QAXSCRIPTENGINE_HASINTROSPECTION )
 {
   QAxScriptEngine * obj = (QAxScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -128,7 +128,7 @@ HB_FUNC( QAXSCRIPTENGINE_HASINTROSPECTION )
 /*
 bool isValid () const
 */
-HB_FUNC( QAXSCRIPTENGINE_ISVALID )
+HB_FUNC_STATIC( QAXSCRIPTENGINE_ISVALID )
 {
   QAxScriptEngine * obj = (QAxScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -143,7 +143,7 @@ HB_FUNC( QAXSCRIPTENGINE_ISVALID )
 /*
 QString scriptLanguage () const
 */
-HB_FUNC( QAXSCRIPTENGINE_SCRIPTLANGUAGE )
+HB_FUNC_STATIC( QAXSCRIPTENGINE_SCRIPTLANGUAGE )
 {
   QAxScriptEngine * obj = (QAxScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -157,7 +157,7 @@ HB_FUNC( QAXSCRIPTENGINE_SCRIPTLANGUAGE )
 /*
 void setState ( State st )
 */
-HB_FUNC( QAXSCRIPTENGINE_SETSTATE )
+HB_FUNC_STATIC( QAXSCRIPTENGINE_SETSTATE )
 {
   QAxScriptEngine * obj = (QAxScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -172,7 +172,7 @@ HB_FUNC( QAXSCRIPTENGINE_SETSTATE )
 /*
 State state () const
 */
-HB_FUNC( QAXSCRIPTENGINE_STATE )
+HB_FUNC_STATIC( QAXSCRIPTENGINE_STATE )
 {
   QAxScriptEngine * obj = (QAxScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

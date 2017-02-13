@@ -108,7 +108,7 @@ RETURN
 /*
 QXmlName ()
 */
-HB_FUNC( QXMLNAME_NEW1 )
+HB_FUNC_STATIC( QXMLNAME_NEW1 )
 {
   QXmlName * o = NULL;
   o = new QXmlName (  );
@@ -126,7 +126,7 @@ HB_FUNC( QXMLNAME_NEW1 )
 /*
 QXmlName ( QXmlNamePool & namePool, const QString & localName, const QString & namespaceURI = QString(), const QString & prefix = QString() )
 */
-HB_FUNC( QXMLNAME_NEW2 )
+HB_FUNC_STATIC( QXMLNAME_NEW2 )
 {
   QXmlName * o = NULL;
   QXmlNamePool * par1 = (QXmlNamePool *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -148,7 +148,7 @@ HB_FUNC( QXMLNAME_NEW2 )
 //[1]QXmlName ()
 //[2]QXmlName ( QXmlNamePool & namePool, const QString & localName, const QString & namespaceURI = QString(), const QString & prefix = QString() )
 
-HB_FUNC( QXMLNAME_NEW )
+HB_FUNC_STATIC( QXMLNAME_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -169,7 +169,7 @@ HB_FUNC( QXMLNAME_NEW )
 /*
 bool isNull () const
 */
-HB_FUNC( QXMLNAME_ISNULL )
+HB_FUNC_STATIC( QXMLNAME_ISNULL )
 {
   QXmlName * obj = (QXmlName *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -183,7 +183,7 @@ HB_FUNC( QXMLNAME_ISNULL )
 /*
 QString localName ( const QXmlNamePool & namePool ) const
 */
-HB_FUNC( QXMLNAME_LOCALNAME )
+HB_FUNC_STATIC( QXMLNAME_LOCALNAME )
 {
   QXmlName * obj = (QXmlName *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -198,7 +198,7 @@ HB_FUNC( QXMLNAME_LOCALNAME )
 /*
 QString namespaceUri ( const QXmlNamePool & namePool ) const
 */
-HB_FUNC( QXMLNAME_NAMESPACEURI )
+HB_FUNC_STATIC( QXMLNAME_NAMESPACEURI )
 {
   QXmlName * obj = (QXmlName *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -213,7 +213,7 @@ HB_FUNC( QXMLNAME_NAMESPACEURI )
 /*
 QString prefix ( const QXmlNamePool & namePool ) const
 */
-HB_FUNC( QXMLNAME_PREFIX )
+HB_FUNC_STATIC( QXMLNAME_PREFIX )
 {
   QXmlName * obj = (QXmlName *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -228,7 +228,7 @@ HB_FUNC( QXMLNAME_PREFIX )
 /*
 QString toClarkName ( const QXmlNamePool & namePool ) const
 */
-HB_FUNC( QXMLNAME_TOCLARKNAME )
+HB_FUNC_STATIC( QXMLNAME_TOCLARKNAME )
 {
   QXmlName * obj = (QXmlName *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -244,7 +244,7 @@ HB_FUNC( QXMLNAME_TOCLARKNAME )
 /*
 QXmlName fromClarkName ( const QString & clarkName, const QXmlNamePool & namePool )
 */
-HB_FUNC( QXMLNAME_FROMCLARKNAME )
+HB_FUNC_STATIC( QXMLNAME_FROMCLARKNAME )
 {
   QString par1 = hb_parc(1);
   QXmlNamePool * par2 = (QXmlNamePool *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -255,7 +255,7 @@ HB_FUNC( QXMLNAME_FROMCLARKNAME )
 /*
 bool isNCName ( const QString & candidate )
 */
-HB_FUNC( QXMLNAME_ISNCNAME )
+HB_FUNC_STATIC( QXMLNAME_ISNCNAME )
 {
   QString par1 = hb_parc(1);
   bool b = QXmlName::isNCName ( par1 );

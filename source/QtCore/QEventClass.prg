@@ -102,7 +102,7 @@ RETURN
 /*
 QEvent ( Type type )
 */
-HB_FUNC( QEVENT_NEW )
+HB_FUNC_STATIC( QEVENT_NEW )
 {
   QEvent * o = NULL;
   int par1 = hb_parni(1);
@@ -115,7 +115,7 @@ HB_FUNC( QEVENT_NEW )
 }
 
 
-HB_FUNC( QEVENT_DELETE )
+HB_FUNC_STATIC( QEVENT_DELETE )
 {
   QEvent * obj = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -135,7 +135,7 @@ HB_FUNC( QEVENT_DELETE )
 /*
 void accept ()
 */
-HB_FUNC( QEVENT_ACCEPT )
+HB_FUNC_STATIC( QEVENT_ACCEPT )
 {
   QEvent * obj = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -149,7 +149,7 @@ HB_FUNC( QEVENT_ACCEPT )
 /*
 void ignore ()
 */
-HB_FUNC( QEVENT_IGNORE )
+HB_FUNC_STATIC( QEVENT_IGNORE )
 {
   QEvent * obj = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -163,7 +163,7 @@ HB_FUNC( QEVENT_IGNORE )
 /*
 bool isAccepted () const
 */
-HB_FUNC( QEVENT_ISACCEPTED )
+HB_FUNC_STATIC( QEVENT_ISACCEPTED )
 {
   QEvent * obj = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -177,7 +177,7 @@ HB_FUNC( QEVENT_ISACCEPTED )
 /*
 void setAccepted ( bool accepted )
 */
-HB_FUNC( QEVENT_SETACCEPTED )
+HB_FUNC_STATIC( QEVENT_SETACCEPTED )
 {
   QEvent * obj = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -192,7 +192,7 @@ HB_FUNC( QEVENT_SETACCEPTED )
 /*
 bool spontaneous () const
 */
-HB_FUNC( QEVENT_SPONTANEOUS )
+HB_FUNC_STATIC( QEVENT_SPONTANEOUS )
 {
   QEvent * obj = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -206,7 +206,7 @@ HB_FUNC( QEVENT_SPONTANEOUS )
 /*
 Type type () const
 */
-HB_FUNC( QEVENT_TYPE )
+HB_FUNC_STATIC( QEVENT_TYPE )
 {
   QEvent * obj = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -221,7 +221,7 @@ HB_FUNC( QEVENT_TYPE )
 /*
 int registerEventType ( int hint = -1 )
 */
-HB_FUNC( QEVENT_REGISTEREVENTTYPE )
+HB_FUNC_STATIC( QEVENT_REGISTEREVENTTYPE )
 {
   int par1 = ISNIL(1)? -1 : hb_parni(1);
   int i = QEvent::registerEventType ( par1 );

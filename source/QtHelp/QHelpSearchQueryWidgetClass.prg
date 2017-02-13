@@ -64,7 +64,7 @@ RETURN
 /*
 QHelpSearchQueryWidget ( QWidget * parent = 0 )
 */
-HB_FUNC( QHELPSEARCHQUERYWIDGET_NEW )
+HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_NEW )
 {
   QHelpSearchQueryWidget * o = NULL;
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -77,7 +77,7 @@ HB_FUNC( QHELPSEARCHQUERYWIDGET_NEW )
 }
 
 
-HB_FUNC( QHELPSEARCHQUERYWIDGET_DELETE )
+HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_DELETE )
 {
   QHelpSearchQueryWidget * obj = (QHelpSearchQueryWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -96,7 +96,7 @@ HB_FUNC( QHELPSEARCHQUERYWIDGET_DELETE )
 /*
 QList<QHelpSearchQuery> query () const
 */
-HB_FUNC( QHELPSEARCHQUERYWIDGET_QUERY )
+HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_QUERY )
 {
   QHelpSearchQueryWidget * obj = (QHelpSearchQueryWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

@@ -73,7 +73,7 @@ RETURN
 #include <QVideoSurfaceFormat>
 
 
-HB_FUNC( QABSTRACTVIDEOSURFACE_DELETE )
+HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_DELETE )
 {
   QAbstractVideoSurface * obj = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -92,7 +92,7 @@ HB_FUNC( QABSTRACTVIDEOSURFACE_DELETE )
 /*
 Error error () const
 */
-HB_FUNC( QABSTRACTVIDEOSURFACE_ERROR )
+HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ERROR )
 {
   QAbstractVideoSurface * obj = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -106,7 +106,7 @@ HB_FUNC( QABSTRACTVIDEOSURFACE_ERROR )
 /*
 bool isActive () const
 */
-HB_FUNC( QABSTRACTVIDEOSURFACE_ISACTIVE )
+HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ISACTIVE )
 {
   QAbstractVideoSurface * obj = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -120,7 +120,7 @@ HB_FUNC( QABSTRACTVIDEOSURFACE_ISACTIVE )
 /*
 virtual bool isFormatSupported ( const QVideoSurfaceFormat & format ) const
 */
-HB_FUNC( QABSTRACTVIDEOSURFACE_ISFORMATSUPPORTED )
+HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ISFORMATSUPPORTED )
 {
   QAbstractVideoSurface * obj = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -135,7 +135,7 @@ HB_FUNC( QABSTRACTVIDEOSURFACE_ISFORMATSUPPORTED )
 /*
 virtual QVideoSurfaceFormat nearestFormat ( const QVideoSurfaceFormat & format ) const
 */
-HB_FUNC( QABSTRACTVIDEOSURFACE_NEARESTFORMAT )
+HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_NEARESTFORMAT )
 {
   QAbstractVideoSurface * obj = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -149,7 +149,7 @@ HB_FUNC( QABSTRACTVIDEOSURFACE_NEARESTFORMAT )
 /*
 virtual bool present ( const QVideoFrame & frame ) = 0
 */
-HB_FUNC( QABSTRACTVIDEOSURFACE_PRESENT )
+HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_PRESENT )
 {
   QAbstractVideoSurface * obj = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -164,7 +164,7 @@ HB_FUNC( QABSTRACTVIDEOSURFACE_PRESENT )
 /*
 virtual bool start ( const QVideoSurfaceFormat & format )
 */
-HB_FUNC( QABSTRACTVIDEOSURFACE_START )
+HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_START )
 {
   QAbstractVideoSurface * obj = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -179,7 +179,7 @@ HB_FUNC( QABSTRACTVIDEOSURFACE_START )
 /*
 virtual void stop ()
 */
-HB_FUNC( QABSTRACTVIDEOSURFACE_STOP )
+HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_STOP )
 {
   QAbstractVideoSurface * obj = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -193,7 +193,7 @@ HB_FUNC( QABSTRACTVIDEOSURFACE_STOP )
 /*
 virtual QList<QVideoFrame::PixelFormat> supportedPixelFormats ( QAbstractVideoBuffer::HandleType type = QAbstractVideoBuffer::NoHandle ) const = 0
 */
-HB_FUNC( QABSTRACTVIDEOSURFACE_SUPPORTEDPIXELFORMATS )
+HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_SUPPORTEDPIXELFORMATS )
 {
   QAbstractVideoSurface * obj = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -217,7 +217,7 @@ HB_FUNC( QABSTRACTVIDEOSURFACE_SUPPORTEDPIXELFORMATS )
 /*
 QVideoSurfaceFormat surfaceFormat () const
 */
-HB_FUNC( QABSTRACTVIDEOSURFACE_SURFACEFORMAT )
+HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_SURFACEFORMAT )
 {
   QAbstractVideoSurface * obj = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

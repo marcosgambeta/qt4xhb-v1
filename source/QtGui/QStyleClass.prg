@@ -100,7 +100,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QSTYLE_DELETE )
+HB_FUNC_STATIC( QSTYLE_DELETE )
 {
   QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -119,7 +119,7 @@ HB_FUNC( QSTYLE_DELETE )
 /*
 int combinedLayoutSpacing ( QSizePolicy::ControlTypes controls1, QSizePolicy::ControlTypes controls2, Qt::Orientation orientation, QStyleOption * option = 0, QWidget * widget = 0 ) const
 */
-HB_FUNC( QSTYLE_COMBINEDLAYOUTSPACING )
+HB_FUNC_STATIC( QSTYLE_COMBINEDLAYOUTSPACING )
 {
   QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -138,7 +138,7 @@ HB_FUNC( QSTYLE_COMBINEDLAYOUTSPACING )
 /*
 virtual void drawComplexControl ( ComplexControl control, const QStyleOptionComplex * option, QPainter * painter, const QWidget * widget = 0 ) const = 0
 */
-HB_FUNC( QSTYLE_DRAWCOMPLEXCONTROL )
+HB_FUNC_STATIC( QSTYLE_DRAWCOMPLEXCONTROL )
 {
   QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -156,7 +156,7 @@ HB_FUNC( QSTYLE_DRAWCOMPLEXCONTROL )
 /*
 virtual void drawControl ( ControlElement element, const QStyleOption * option, QPainter * painter, const QWidget * widget = 0 ) const = 0
 */
-HB_FUNC( QSTYLE_DRAWCONTROL )
+HB_FUNC_STATIC( QSTYLE_DRAWCONTROL )
 {
   QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -174,7 +174,7 @@ HB_FUNC( QSTYLE_DRAWCONTROL )
 /*
 virtual void drawItemPixmap ( QPainter * painter, const QRect & rectangle, int alignment, const QPixmap & pixmap ) const
 */
-HB_FUNC( QSTYLE_DRAWITEMPIXMAP )
+HB_FUNC_STATIC( QSTYLE_DRAWITEMPIXMAP )
 {
   QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -192,7 +192,7 @@ HB_FUNC( QSTYLE_DRAWITEMPIXMAP )
 /*
 virtual void drawItemText ( QPainter * painter, const QRect & rectangle, int alignment, const QPalette & palette, bool enabled, const QString & text, QPalette::ColorRole textRole = QPalette::NoRole ) const
 */
-HB_FUNC( QSTYLE_DRAWITEMTEXT )
+HB_FUNC_STATIC( QSTYLE_DRAWITEMTEXT )
 {
   QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -213,7 +213,7 @@ HB_FUNC( QSTYLE_DRAWITEMTEXT )
 /*
 virtual void drawPrimitive ( PrimitiveElement element, const QStyleOption * option, QPainter * painter, const QWidget * widget = 0 ) const = 0
 */
-HB_FUNC( QSTYLE_DRAWPRIMITIVE )
+HB_FUNC_STATIC( QSTYLE_DRAWPRIMITIVE )
 {
   QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -231,7 +231,7 @@ HB_FUNC( QSTYLE_DRAWPRIMITIVE )
 /*
 virtual QPixmap generatedIconPixmap ( QIcon::Mode iconMode, const QPixmap & pixmap, const QStyleOption * option ) const = 0
 */
-HB_FUNC( QSTYLE_GENERATEDICONPIXMAP )
+HB_FUNC_STATIC( QSTYLE_GENERATEDICONPIXMAP )
 {
   QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -247,7 +247,7 @@ HB_FUNC( QSTYLE_GENERATEDICONPIXMAP )
 /*
 virtual SubControl hitTestComplexControl ( ComplexControl control, const QStyleOptionComplex * option, const QPoint & position, const QWidget * widget = 0 ) const = 0
 */
-HB_FUNC( QSTYLE_HITTESTCOMPLEXCONTROL )
+HB_FUNC_STATIC( QSTYLE_HITTESTCOMPLEXCONTROL )
 {
   QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -265,7 +265,7 @@ HB_FUNC( QSTYLE_HITTESTCOMPLEXCONTROL )
 /*
 virtual QRect itemPixmapRect ( const QRect & rectangle, int alignment, const QPixmap & pixmap ) const
 */
-HB_FUNC( QSTYLE_ITEMPIXMAPRECT )
+HB_FUNC_STATIC( QSTYLE_ITEMPIXMAPRECT )
 {
   QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -281,7 +281,7 @@ HB_FUNC( QSTYLE_ITEMPIXMAPRECT )
 /*
 virtual QRect itemTextRect ( const QFontMetrics & metrics, const QRect & rectangle, int alignment, bool enabled, const QString & text ) const
 */
-HB_FUNC( QSTYLE_ITEMTEXTRECT )
+HB_FUNC_STATIC( QSTYLE_ITEMTEXTRECT )
 {
   QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -299,7 +299,7 @@ HB_FUNC( QSTYLE_ITEMTEXTRECT )
 /*
 int layoutSpacing ( QSizePolicy::ControlType control1, QSizePolicy::ControlType control2, Qt::Orientation orientation, const QStyleOption * option = 0, const QWidget * widget = 0 ) const
 */
-HB_FUNC( QSTYLE_LAYOUTSPACING )
+HB_FUNC_STATIC( QSTYLE_LAYOUTSPACING )
 {
   QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -318,7 +318,7 @@ HB_FUNC( QSTYLE_LAYOUTSPACING )
 /*
 virtual int pixelMetric ( PixelMetric metric, const QStyleOption * option = 0, const QWidget * widget = 0 ) const = 0
 */
-HB_FUNC( QSTYLE_PIXELMETRIC )
+HB_FUNC_STATIC( QSTYLE_PIXELMETRIC )
 {
   QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -335,7 +335,7 @@ HB_FUNC( QSTYLE_PIXELMETRIC )
 /*
 virtual void polish ( QWidget * widget )
 */
-HB_FUNC( QSTYLE_POLISH1 )
+HB_FUNC_STATIC( QSTYLE_POLISH1 )
 {
   QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -350,7 +350,7 @@ HB_FUNC( QSTYLE_POLISH1 )
 /*
 virtual void polish ( QApplication * application )
 */
-HB_FUNC( QSTYLE_POLISH2 )
+HB_FUNC_STATIC( QSTYLE_POLISH2 )
 {
   QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -365,7 +365,7 @@ HB_FUNC( QSTYLE_POLISH2 )
 /*
 virtual void polish ( QPalette & palette )
 */
-HB_FUNC( QSTYLE_POLISH3 )
+HB_FUNC_STATIC( QSTYLE_POLISH3 )
 {
   QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -381,7 +381,7 @@ HB_FUNC( QSTYLE_POLISH3 )
 //[2]virtual void polish ( QApplication * application )
 //[3]virtual void polish ( QPalette & palette )
 
-HB_FUNC( QSTYLE_POLISH )
+HB_FUNC_STATIC( QSTYLE_POLISH )
 {
   if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
@@ -400,7 +400,7 @@ HB_FUNC( QSTYLE_POLISH )
 /*
 const QStyle * proxy () const
 */
-HB_FUNC( QSTYLE_PROXY )
+HB_FUNC_STATIC( QSTYLE_PROXY )
 {
   QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -413,7 +413,7 @@ HB_FUNC( QSTYLE_PROXY )
 /*
 virtual QSize sizeFromContents ( ContentsType type, const QStyleOption * option, const QSize & contentsSize, const QWidget * widget = 0 ) const = 0
 */
-HB_FUNC( QSTYLE_SIZEFROMCONTENTS )
+HB_FUNC_STATIC( QSTYLE_SIZEFROMCONTENTS )
 {
   QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -430,7 +430,7 @@ HB_FUNC( QSTYLE_SIZEFROMCONTENTS )
 /*
 QIcon standardIcon ( StandardPixmap standardIcon, const QStyleOption * option = 0, const QWidget * widget = 0 ) const
 */
-HB_FUNC( QSTYLE_STANDARDICON )
+HB_FUNC_STATIC( QSTYLE_STANDARDICON )
 {
   QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -446,7 +446,7 @@ HB_FUNC( QSTYLE_STANDARDICON )
 /*
 virtual QPalette standardPalette () const
 */
-HB_FUNC( QSTYLE_STANDARDPALETTE )
+HB_FUNC_STATIC( QSTYLE_STANDARDPALETTE )
 {
   QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -459,7 +459,7 @@ HB_FUNC( QSTYLE_STANDARDPALETTE )
 /*
 virtual int styleHint ( StyleHint hint, const QStyleOption * option = 0, const QWidget * widget = 0, QStyleHintReturn * returnData = 0 ) const = 0
 */
-HB_FUNC( QSTYLE_STYLEHINT )
+HB_FUNC_STATIC( QSTYLE_STYLEHINT )
 {
   QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -477,7 +477,7 @@ HB_FUNC( QSTYLE_STYLEHINT )
 /*
 virtual QRect subControlRect ( ComplexControl control, const QStyleOptionComplex * option, SubControl subControl, const QWidget * widget = 0 ) const = 0
 */
-HB_FUNC( QSTYLE_SUBCONTROLRECT )
+HB_FUNC_STATIC( QSTYLE_SUBCONTROLRECT )
 {
   QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -494,7 +494,7 @@ HB_FUNC( QSTYLE_SUBCONTROLRECT )
 /*
 virtual QRect subElementRect ( SubElement element, const QStyleOption * option, const QWidget * widget = 0 ) const = 0
 */
-HB_FUNC( QSTYLE_SUBELEMENTRECT )
+HB_FUNC_STATIC( QSTYLE_SUBELEMENTRECT )
 {
   QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -510,7 +510,7 @@ HB_FUNC( QSTYLE_SUBELEMENTRECT )
 /*
 virtual void unpolish ( QWidget * widget )
 */
-HB_FUNC( QSTYLE_UNPOLISH1 )
+HB_FUNC_STATIC( QSTYLE_UNPOLISH1 )
 {
   QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -525,7 +525,7 @@ HB_FUNC( QSTYLE_UNPOLISH1 )
 /*
 virtual void unpolish ( QApplication * application )
 */
-HB_FUNC( QSTYLE_UNPOLISH2 )
+HB_FUNC_STATIC( QSTYLE_UNPOLISH2 )
 {
   QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -540,7 +540,7 @@ HB_FUNC( QSTYLE_UNPOLISH2 )
 //[1]virtual void unpolish ( QWidget * widget )
 //[2]virtual void unpolish ( QApplication * application )
 
-HB_FUNC( QSTYLE_UNPOLISH )
+HB_FUNC_STATIC( QSTYLE_UNPOLISH )
 {
   if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
@@ -558,7 +558,7 @@ HB_FUNC( QSTYLE_UNPOLISH )
 /*
 QRect alignedRect ( Qt::LayoutDirection direction, Qt::Alignment alignment, const QSize & size, const QRect & rectangle )
 */
-HB_FUNC( QSTYLE_ALIGNEDRECT )
+HB_FUNC_STATIC( QSTYLE_ALIGNEDRECT )
 {
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
@@ -571,7 +571,7 @@ HB_FUNC( QSTYLE_ALIGNEDRECT )
 /*
 int sliderPositionFromValue ( int min, int max, int logicalValue, int span, bool upsideDown = false )
 */
-HB_FUNC( QSTYLE_SLIDERPOSITIONFROMVALUE )
+HB_FUNC_STATIC( QSTYLE_SLIDERPOSITIONFROMVALUE )
 {
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
@@ -586,7 +586,7 @@ HB_FUNC( QSTYLE_SLIDERPOSITIONFROMVALUE )
 /*
 int sliderValueFromPosition ( int min, int max, int position, int span, bool upsideDown = false )
 */
-HB_FUNC( QSTYLE_SLIDERVALUEFROMPOSITION )
+HB_FUNC_STATIC( QSTYLE_SLIDERVALUEFROMPOSITION )
 {
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
@@ -601,7 +601,7 @@ HB_FUNC( QSTYLE_SLIDERVALUEFROMPOSITION )
 /*
 Qt::Alignment visualAlignment ( Qt::LayoutDirection direction, Qt::Alignment alignment )
 */
-HB_FUNC( QSTYLE_VISUALALIGNMENT )
+HB_FUNC_STATIC( QSTYLE_VISUALALIGNMENT )
 {
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
@@ -613,7 +613,7 @@ HB_FUNC( QSTYLE_VISUALALIGNMENT )
 /*
 QPoint visualPos ( Qt::LayoutDirection direction, const QRect & boundingRectangle, const QPoint & logicalPosition )
 */
-HB_FUNC( QSTYLE_VISUALPOS )
+HB_FUNC_STATIC( QSTYLE_VISUALPOS )
 {
   int par1 = hb_parni(1);
   QRect * par2 = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -625,7 +625,7 @@ HB_FUNC( QSTYLE_VISUALPOS )
 /*
 QRect visualRect ( Qt::LayoutDirection direction, const QRect & boundingRectangle, const QRect & logicalRectangle )
 */
-HB_FUNC( QSTYLE_VISUALRECT )
+HB_FUNC_STATIC( QSTYLE_VISUALRECT )
 {
   int par1 = hb_parni(1);
   QRect * par2 = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );

@@ -104,7 +104,7 @@ RETURN
 /*
 QDebug ( QIODevice * device )
 */
-HB_FUNC( QDEBUG_NEW1 )
+HB_FUNC_STATIC( QDEBUG_NEW1 )
 {
   QDebug * o = NULL;
   QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -120,7 +120,7 @@ HB_FUNC( QDEBUG_NEW1 )
 /*
 QDebug ( QString * string )
 */
-HB_FUNC( QDEBUG_NEW2 )
+HB_FUNC_STATIC( QDEBUG_NEW2 )
 {
   QDebug * o = NULL;
   QString * par1 = NULL;
@@ -136,7 +136,7 @@ HB_FUNC( QDEBUG_NEW2 )
 /*
 QDebug ( QtMsgType type )
 */
-HB_FUNC( QDEBUG_NEW3 )
+HB_FUNC_STATIC( QDEBUG_NEW3 )
 {
   QDebug * o = NULL;
   int par1 = hb_parni(1);
@@ -152,7 +152,7 @@ HB_FUNC( QDEBUG_NEW3 )
 /*
 QDebug ( const QDebug & other )
 */
-HB_FUNC( QDEBUG_NEW4 )
+HB_FUNC_STATIC( QDEBUG_NEW4 )
 {
   QDebug * o = NULL;
   QDebug * par1 = (QDebug *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -170,7 +170,7 @@ HB_FUNC( QDEBUG_NEW4 )
 //[3]QDebug ( QtMsgType type )
 //[4]QDebug ( const QDebug & other )
 
-HB_FUNC( QDEBUG_NEW )
+HB_FUNC_STATIC( QDEBUG_NEW )
 {
   if( ISNUMPAR(1) && ISQIODEVICE(1) )
   {
@@ -194,7 +194,7 @@ HB_FUNC( QDEBUG_NEW )
   }
 }
 
-HB_FUNC( QDEBUG_DELETE )
+HB_FUNC_STATIC( QDEBUG_DELETE )
 {
   QDebug * obj = (QDebug *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -213,7 +213,7 @@ HB_FUNC( QDEBUG_DELETE )
 /*
 QDebug & maybeSpace ()
 */
-HB_FUNC( QDEBUG_MAYBESPACE )
+HB_FUNC_STATIC( QDEBUG_MAYBESPACE )
 {
   QDebug * obj = (QDebug *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -226,7 +226,7 @@ HB_FUNC( QDEBUG_MAYBESPACE )
 /*
 QDebug & nospace ()
 */
-HB_FUNC( QDEBUG_NOSPACE )
+HB_FUNC_STATIC( QDEBUG_NOSPACE )
 {
   QDebug * obj = (QDebug *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -239,7 +239,7 @@ HB_FUNC( QDEBUG_NOSPACE )
 /*
 QDebug & space ()
 */
-HB_FUNC( QDEBUG_SPACE )
+HB_FUNC_STATIC( QDEBUG_SPACE )
 {
   QDebug * obj = (QDebug *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

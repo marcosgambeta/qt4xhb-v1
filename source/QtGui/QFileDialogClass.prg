@@ -129,7 +129,7 @@ RETURN
 /*
 QFileDialog ( QWidget * parent, Qt::WindowFlags flags )
 */
-HB_FUNC( QFILEDIALOG_NEW1 )
+HB_FUNC_STATIC( QFILEDIALOG_NEW1 )
 {
   QFileDialog * o = NULL;
   QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -146,7 +146,7 @@ HB_FUNC( QFILEDIALOG_NEW1 )
 /*
 QFileDialog ( QWidget * parent = 0, const QString & caption = QString(), const QString & directory = QString(), const QString & filter = QString() )
 */
-HB_FUNC( QFILEDIALOG_NEW2 )
+HB_FUNC_STATIC( QFILEDIALOG_NEW2 )
 {
   QFileDialog * o = NULL;
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -165,7 +165,7 @@ HB_FUNC( QFILEDIALOG_NEW2 )
 //[1]QFileDialog ( QWidget * parent, Qt::WindowFlags flags )
 //[2]QFileDialog ( QWidget * parent = 0, const QString & caption = QString(), const QString & directory = QString(), const QString & filter = QString() )
 
-HB_FUNC( QFILEDIALOG_NEW )
+HB_FUNC_STATIC( QFILEDIALOG_NEW )
 {
   if( ISNUMPAR(2) && ISQWIDGET(1) && ISNUM(2) )
   {
@@ -181,7 +181,7 @@ HB_FUNC( QFILEDIALOG_NEW )
   }
 }
 
-HB_FUNC( QFILEDIALOG_DELETE )
+HB_FUNC_STATIC( QFILEDIALOG_DELETE )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -200,7 +200,7 @@ HB_FUNC( QFILEDIALOG_DELETE )
 /*
 AcceptMode acceptMode () const
 */
-HB_FUNC( QFILEDIALOG_ACCEPTMODE )
+HB_FUNC_STATIC( QFILEDIALOG_ACCEPTMODE )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -214,7 +214,7 @@ HB_FUNC( QFILEDIALOG_ACCEPTMODE )
 /*
 bool confirmOverwrite () const
 */
-HB_FUNC( QFILEDIALOG_CONFIRMOVERWRITE )
+HB_FUNC_STATIC( QFILEDIALOG_CONFIRMOVERWRITE )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -228,7 +228,7 @@ HB_FUNC( QFILEDIALOG_CONFIRMOVERWRITE )
 /*
 QString defaultSuffix () const
 */
-HB_FUNC( QFILEDIALOG_DEFAULTSUFFIX )
+HB_FUNC_STATIC( QFILEDIALOG_DEFAULTSUFFIX )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -242,7 +242,7 @@ HB_FUNC( QFILEDIALOG_DEFAULTSUFFIX )
 /*
 QDir directory () const
 */
-HB_FUNC( QFILEDIALOG_DIRECTORY )
+HB_FUNC_STATIC( QFILEDIALOG_DIRECTORY )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -255,7 +255,7 @@ HB_FUNC( QFILEDIALOG_DIRECTORY )
 /*
 FileMode fileMode () const
 */
-HB_FUNC( QFILEDIALOG_FILEMODE )
+HB_FUNC_STATIC( QFILEDIALOG_FILEMODE )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -269,7 +269,7 @@ HB_FUNC( QFILEDIALOG_FILEMODE )
 /*
 QDir::Filters filter () const
 */
-HB_FUNC( QFILEDIALOG_FILTER )
+HB_FUNC_STATIC( QFILEDIALOG_FILTER )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -283,7 +283,7 @@ HB_FUNC( QFILEDIALOG_FILTER )
 /*
 QStringList history () const
 */
-HB_FUNC( QFILEDIALOG_HISTORY )
+HB_FUNC_STATIC( QFILEDIALOG_HISTORY )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -306,7 +306,7 @@ HB_FUNC( QFILEDIALOG_HISTORY )
 /*
 QFileIconProvider * iconProvider () const
 */
-HB_FUNC( QFILEDIALOG_ICONPROVIDER )
+HB_FUNC_STATIC( QFILEDIALOG_ICONPROVIDER )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -319,7 +319,7 @@ HB_FUNC( QFILEDIALOG_ICONPROVIDER )
 /*
 bool isNameFilterDetailsVisible () const
 */
-HB_FUNC( QFILEDIALOG_ISNAMEFILTERDETAILSVISIBLE )
+HB_FUNC_STATIC( QFILEDIALOG_ISNAMEFILTERDETAILSVISIBLE )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -333,7 +333,7 @@ HB_FUNC( QFILEDIALOG_ISNAMEFILTERDETAILSVISIBLE )
 /*
 bool isReadOnly () const
 */
-HB_FUNC( QFILEDIALOG_ISREADONLY )
+HB_FUNC_STATIC( QFILEDIALOG_ISREADONLY )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -347,7 +347,7 @@ HB_FUNC( QFILEDIALOG_ISREADONLY )
 /*
 QAbstractItemDelegate * itemDelegate () const
 */
-HB_FUNC( QFILEDIALOG_ITEMDELEGATE )
+HB_FUNC_STATIC( QFILEDIALOG_ITEMDELEGATE )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -360,7 +360,7 @@ HB_FUNC( QFILEDIALOG_ITEMDELEGATE )
 /*
 QString labelText ( DialogLabel label ) const
 */
-HB_FUNC( QFILEDIALOG_LABELTEXT )
+HB_FUNC_STATIC( QFILEDIALOG_LABELTEXT )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -375,7 +375,7 @@ HB_FUNC( QFILEDIALOG_LABELTEXT )
 /*
 QStringList nameFilters () const
 */
-HB_FUNC( QFILEDIALOG_NAMEFILTERS )
+HB_FUNC_STATIC( QFILEDIALOG_NAMEFILTERS )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -398,7 +398,7 @@ HB_FUNC( QFILEDIALOG_NAMEFILTERS )
 /*
 void open ( QObject * receiver, const char * member )
 */
-HB_FUNC( QFILEDIALOG_OPEN )
+HB_FUNC_STATIC( QFILEDIALOG_OPEN )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -414,7 +414,7 @@ HB_FUNC( QFILEDIALOG_OPEN )
 /*
 Options options () const
 */
-HB_FUNC( QFILEDIALOG_OPTIONS )
+HB_FUNC_STATIC( QFILEDIALOG_OPTIONS )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -428,7 +428,7 @@ HB_FUNC( QFILEDIALOG_OPTIONS )
 /*
 QAbstractProxyModel * proxyModel () const
 */
-HB_FUNC( QFILEDIALOG_PROXYMODEL )
+HB_FUNC_STATIC( QFILEDIALOG_PROXYMODEL )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -441,7 +441,7 @@ HB_FUNC( QFILEDIALOG_PROXYMODEL )
 /*
 bool resolveSymlinks () const
 */
-HB_FUNC( QFILEDIALOG_RESOLVESYMLINKS )
+HB_FUNC_STATIC( QFILEDIALOG_RESOLVESYMLINKS )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -455,7 +455,7 @@ HB_FUNC( QFILEDIALOG_RESOLVESYMLINKS )
 /*
 bool restoreState ( const QByteArray & state )
 */
-HB_FUNC( QFILEDIALOG_RESTORESTATE )
+HB_FUNC_STATIC( QFILEDIALOG_RESTORESTATE )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -470,7 +470,7 @@ HB_FUNC( QFILEDIALOG_RESTORESTATE )
 /*
 QByteArray saveState () const
 */
-HB_FUNC( QFILEDIALOG_SAVESTATE )
+HB_FUNC_STATIC( QFILEDIALOG_SAVESTATE )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -483,7 +483,7 @@ HB_FUNC( QFILEDIALOG_SAVESTATE )
 /*
 void selectFile ( const QString & filename )
 */
-HB_FUNC( QFILEDIALOG_SELECTFILE )
+HB_FUNC_STATIC( QFILEDIALOG_SELECTFILE )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -498,7 +498,7 @@ HB_FUNC( QFILEDIALOG_SELECTFILE )
 /*
 void selectNameFilter ( const QString & filter )
 */
-HB_FUNC( QFILEDIALOG_SELECTNAMEFILTER )
+HB_FUNC_STATIC( QFILEDIALOG_SELECTNAMEFILTER )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -513,7 +513,7 @@ HB_FUNC( QFILEDIALOG_SELECTNAMEFILTER )
 /*
 QStringList selectedFiles () const
 */
-HB_FUNC( QFILEDIALOG_SELECTEDFILES )
+HB_FUNC_STATIC( QFILEDIALOG_SELECTEDFILES )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -536,7 +536,7 @@ HB_FUNC( QFILEDIALOG_SELECTEDFILES )
 /*
 QString selectedNameFilter () const
 */
-HB_FUNC( QFILEDIALOG_SELECTEDNAMEFILTER )
+HB_FUNC_STATIC( QFILEDIALOG_SELECTEDNAMEFILTER )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -550,7 +550,7 @@ HB_FUNC( QFILEDIALOG_SELECTEDNAMEFILTER )
 /*
 void setAcceptMode ( AcceptMode mode )
 */
-HB_FUNC( QFILEDIALOG_SETACCEPTMODE )
+HB_FUNC_STATIC( QFILEDIALOG_SETACCEPTMODE )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -565,7 +565,7 @@ HB_FUNC( QFILEDIALOG_SETACCEPTMODE )
 /*
 void setConfirmOverwrite ( bool enabled )
 */
-HB_FUNC( QFILEDIALOG_SETCONFIRMOVERWRITE )
+HB_FUNC_STATIC( QFILEDIALOG_SETCONFIRMOVERWRITE )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -580,7 +580,7 @@ HB_FUNC( QFILEDIALOG_SETCONFIRMOVERWRITE )
 /*
 void setDefaultSuffix ( const QString & suffix )
 */
-HB_FUNC( QFILEDIALOG_SETDEFAULTSUFFIX )
+HB_FUNC_STATIC( QFILEDIALOG_SETDEFAULTSUFFIX )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -595,7 +595,7 @@ HB_FUNC( QFILEDIALOG_SETDEFAULTSUFFIX )
 /*
 void setDirectory ( const QString & directory )
 */
-HB_FUNC( QFILEDIALOG_SETDIRECTORY1 )
+HB_FUNC_STATIC( QFILEDIALOG_SETDIRECTORY1 )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -610,7 +610,7 @@ HB_FUNC( QFILEDIALOG_SETDIRECTORY1 )
 /*
 void setDirectory ( const QDir & directory )
 */
-HB_FUNC( QFILEDIALOG_SETDIRECTORY2 )
+HB_FUNC_STATIC( QFILEDIALOG_SETDIRECTORY2 )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -625,7 +625,7 @@ HB_FUNC( QFILEDIALOG_SETDIRECTORY2 )
 //[1]void setDirectory ( const QString & directory )
 //[2]void setDirectory ( const QDir & directory )
 
-HB_FUNC( QFILEDIALOG_SETDIRECTORY )
+HB_FUNC_STATIC( QFILEDIALOG_SETDIRECTORY )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
@@ -640,7 +640,7 @@ HB_FUNC( QFILEDIALOG_SETDIRECTORY )
 /*
 void setFileMode ( FileMode mode )
 */
-HB_FUNC( QFILEDIALOG_SETFILEMODE )
+HB_FUNC_STATIC( QFILEDIALOG_SETFILEMODE )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -655,7 +655,7 @@ HB_FUNC( QFILEDIALOG_SETFILEMODE )
 /*
 void setFilter ( QDir::Filters filters )
 */
-HB_FUNC( QFILEDIALOG_SETFILTER )
+HB_FUNC_STATIC( QFILEDIALOG_SETFILTER )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -670,7 +670,7 @@ HB_FUNC( QFILEDIALOG_SETFILTER )
 /*
 void setHistory ( const QStringList & paths )
 */
-HB_FUNC( QFILEDIALOG_SETHISTORY )
+HB_FUNC_STATIC( QFILEDIALOG_SETHISTORY )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -693,7 +693,7 @@ par1 << temp;
 /*
 void setIconProvider ( QFileIconProvider * provider )
 */
-HB_FUNC( QFILEDIALOG_SETICONPROVIDER )
+HB_FUNC_STATIC( QFILEDIALOG_SETICONPROVIDER )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -708,7 +708,7 @@ HB_FUNC( QFILEDIALOG_SETICONPROVIDER )
 /*
 void setItemDelegate ( QAbstractItemDelegate * delegate )
 */
-HB_FUNC( QFILEDIALOG_SETITEMDELEGATE )
+HB_FUNC_STATIC( QFILEDIALOG_SETITEMDELEGATE )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -723,7 +723,7 @@ HB_FUNC( QFILEDIALOG_SETITEMDELEGATE )
 /*
 void setLabelText ( DialogLabel label, const QString & text )
 */
-HB_FUNC( QFILEDIALOG_SETLABELTEXT )
+HB_FUNC_STATIC( QFILEDIALOG_SETLABELTEXT )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -739,7 +739,7 @@ HB_FUNC( QFILEDIALOG_SETLABELTEXT )
 /*
 void setNameFilter ( const QString & filter )
 */
-HB_FUNC( QFILEDIALOG_SETNAMEFILTER )
+HB_FUNC_STATIC( QFILEDIALOG_SETNAMEFILTER )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -754,7 +754,7 @@ HB_FUNC( QFILEDIALOG_SETNAMEFILTER )
 /*
 void setNameFilterDetailsVisible ( bool enabled )
 */
-HB_FUNC( QFILEDIALOG_SETNAMEFILTERDETAILSVISIBLE )
+HB_FUNC_STATIC( QFILEDIALOG_SETNAMEFILTERDETAILSVISIBLE )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -769,7 +769,7 @@ HB_FUNC( QFILEDIALOG_SETNAMEFILTERDETAILSVISIBLE )
 /*
 void setNameFilters ( const QStringList & filters )
 */
-HB_FUNC( QFILEDIALOG_SETNAMEFILTERS )
+HB_FUNC_STATIC( QFILEDIALOG_SETNAMEFILTERS )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -792,7 +792,7 @@ par1 << temp;
 /*
 void setOption ( Option option, bool on = true )
 */
-HB_FUNC( QFILEDIALOG_SETOPTION )
+HB_FUNC_STATIC( QFILEDIALOG_SETOPTION )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -808,7 +808,7 @@ HB_FUNC( QFILEDIALOG_SETOPTION )
 /*
 void setOptions ( Options options )
 */
-HB_FUNC( QFILEDIALOG_SETOPTIONS )
+HB_FUNC_STATIC( QFILEDIALOG_SETOPTIONS )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -823,7 +823,7 @@ HB_FUNC( QFILEDIALOG_SETOPTIONS )
 /*
 void setProxyModel ( QAbstractProxyModel * proxyModel )
 */
-HB_FUNC( QFILEDIALOG_SETPROXYMODEL )
+HB_FUNC_STATIC( QFILEDIALOG_SETPROXYMODEL )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -838,7 +838,7 @@ HB_FUNC( QFILEDIALOG_SETPROXYMODEL )
 /*
 void setReadOnly ( bool enabled )
 */
-HB_FUNC( QFILEDIALOG_SETREADONLY )
+HB_FUNC_STATIC( QFILEDIALOG_SETREADONLY )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -853,7 +853,7 @@ HB_FUNC( QFILEDIALOG_SETREADONLY )
 /*
 void setResolveSymlinks ( bool enabled )
 */
-HB_FUNC( QFILEDIALOG_SETRESOLVESYMLINKS )
+HB_FUNC_STATIC( QFILEDIALOG_SETRESOLVESYMLINKS )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -868,7 +868,7 @@ HB_FUNC( QFILEDIALOG_SETRESOLVESYMLINKS )
 /*
 void setSidebarUrls ( const QList<QUrl> & urls )
 */
-HB_FUNC( QFILEDIALOG_SETSIDEBARURLS )
+HB_FUNC_STATIC( QFILEDIALOG_SETSIDEBARURLS )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -890,7 +890,7 @@ par1 << *(QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1
 /*
 void setViewMode ( ViewMode mode )
 */
-HB_FUNC( QFILEDIALOG_SETVIEWMODE )
+HB_FUNC_STATIC( QFILEDIALOG_SETVIEWMODE )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -905,7 +905,7 @@ HB_FUNC( QFILEDIALOG_SETVIEWMODE )
 /*
 QList<QUrl> sidebarUrls () const
 */
-HB_FUNC( QFILEDIALOG_SIDEBARURLS )
+HB_FUNC_STATIC( QFILEDIALOG_SIDEBARURLS )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -953,7 +953,7 @@ HB_FUNC( QFILEDIALOG_SIDEBARURLS )
 /*
 bool testOption ( Option option ) const
 */
-HB_FUNC( QFILEDIALOG_TESTOPTION )
+HB_FUNC_STATIC( QFILEDIALOG_TESTOPTION )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -968,7 +968,7 @@ HB_FUNC( QFILEDIALOG_TESTOPTION )
 /*
 ViewMode viewMode () const
 */
-HB_FUNC( QFILEDIALOG_VIEWMODE )
+HB_FUNC_STATIC( QFILEDIALOG_VIEWMODE )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -982,7 +982,7 @@ HB_FUNC( QFILEDIALOG_VIEWMODE )
 /*
 virtual void setVisible ( bool visible )
 */
-HB_FUNC( QFILEDIALOG_SETVISIBLE )
+HB_FUNC_STATIC( QFILEDIALOG_SETVISIBLE )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -998,7 +998,7 @@ HB_FUNC( QFILEDIALOG_SETVISIBLE )
 /*
 QString getExistingDirectory ( QWidget * parent = 0, const QString & caption = QString(), const QString & dir = QString(), Options options = ShowDirsOnly )
 */
-HB_FUNC( QFILEDIALOG_GETEXISTINGDIRECTORY )
+HB_FUNC_STATIC( QFILEDIALOG_GETEXISTINGDIRECTORY )
 {
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QString par2 = ISNIL(2)? QString() : hb_parc(2);
@@ -1012,7 +1012,7 @@ HB_FUNC( QFILEDIALOG_GETEXISTINGDIRECTORY )
 /*
 QString getOpenFileName ( QWidget * parent = 0, const QString & caption = QString(), const QString & dir = QString(), const QString & filter = QString(), QString * selectedFilter = 0, Options options = 0 )
 */
-HB_FUNC( QFILEDIALOG_GETOPENFILENAME )
+HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILENAME )
 {
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QString par2 = ISNIL(2)? QString() : hb_parc(2);
@@ -1028,7 +1028,7 @@ HB_FUNC( QFILEDIALOG_GETOPENFILENAME )
 /*
 QStringList getOpenFileNames ( QWidget * parent = 0, const QString & caption = QString(), const QString & dir = QString(), const QString & filter = QString(), QString * selectedFilter = 0, Options options = 0 )
 */
-HB_FUNC( QFILEDIALOG_GETOPENFILENAMES )
+HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILENAMES )
 {
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QString par2 = ISNIL(2)? QString() : hb_parc(2);
@@ -1053,7 +1053,7 @@ HB_FUNC( QFILEDIALOG_GETOPENFILENAMES )
 /*
 QString getSaveFileName ( QWidget * parent = 0, const QString & caption = QString(), const QString & dir = QString(), const QString & filter = QString(), QString * selectedFilter = 0, Options options = 0 )
 */
-HB_FUNC( QFILEDIALOG_GETSAVEFILENAME )
+HB_FUNC_STATIC( QFILEDIALOG_GETSAVEFILENAME )
 {
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QString par2 = ISNIL(2)? QString() : hb_parc(2);

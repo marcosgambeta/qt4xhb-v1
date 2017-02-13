@@ -126,7 +126,7 @@ RETURN
 /*
 QFontDatabase ()
 */
-HB_FUNC( QFONTDATABASE_NEW )
+HB_FUNC_STATIC( QFONTDATABASE_NEW )
 {
   QFontDatabase * o = NULL;
   o = new QFontDatabase (  );
@@ -145,7 +145,7 @@ HB_FUNC( QFONTDATABASE_NEW )
 /*
 bool bold ( const QString & family, const QString & style ) const
 */
-HB_FUNC( QFONTDATABASE_BOLD )
+HB_FUNC_STATIC( QFONTDATABASE_BOLD )
 {
   QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -161,7 +161,7 @@ HB_FUNC( QFONTDATABASE_BOLD )
 /*
 QStringList families ( WritingSystem writingSystem = Any ) const
 */
-HB_FUNC( QFONTDATABASE_FAMILIES )
+HB_FUNC_STATIC( QFONTDATABASE_FAMILIES )
 {
   QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -185,7 +185,7 @@ HB_FUNC( QFONTDATABASE_FAMILIES )
 /*
 QFont font ( const QString & family, const QString & style, int pointSize ) const
 */
-HB_FUNC( QFONTDATABASE_FONT )
+HB_FUNC_STATIC( QFONTDATABASE_FONT )
 {
   QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -201,7 +201,7 @@ HB_FUNC( QFONTDATABASE_FONT )
 /*
 bool isBitmapScalable ( const QString & family, const QString & style = QString() ) const
 */
-HB_FUNC( QFONTDATABASE_ISBITMAPSCALABLE )
+HB_FUNC_STATIC( QFONTDATABASE_ISBITMAPSCALABLE )
 {
   QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -217,7 +217,7 @@ HB_FUNC( QFONTDATABASE_ISBITMAPSCALABLE )
 /*
 bool isFixedPitch ( const QString & family, const QString & style = QString() ) const
 */
-HB_FUNC( QFONTDATABASE_ISFIXEDPITCH )
+HB_FUNC_STATIC( QFONTDATABASE_ISFIXEDPITCH )
 {
   QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -233,7 +233,7 @@ HB_FUNC( QFONTDATABASE_ISFIXEDPITCH )
 /*
 bool isScalable ( const QString & family, const QString & style = QString() ) const
 */
-HB_FUNC( QFONTDATABASE_ISSCALABLE )
+HB_FUNC_STATIC( QFONTDATABASE_ISSCALABLE )
 {
   QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -249,7 +249,7 @@ HB_FUNC( QFONTDATABASE_ISSCALABLE )
 /*
 bool isSmoothlyScalable ( const QString & family, const QString & style = QString() ) const
 */
-HB_FUNC( QFONTDATABASE_ISSMOOTHLYSCALABLE )
+HB_FUNC_STATIC( QFONTDATABASE_ISSMOOTHLYSCALABLE )
 {
   QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -265,7 +265,7 @@ HB_FUNC( QFONTDATABASE_ISSMOOTHLYSCALABLE )
 /*
 bool italic ( const QString & family, const QString & style ) const
 */
-HB_FUNC( QFONTDATABASE_ITALIC )
+HB_FUNC_STATIC( QFONTDATABASE_ITALIC )
 {
   QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -281,7 +281,7 @@ HB_FUNC( QFONTDATABASE_ITALIC )
 /*
 QList<int> pointSizes ( const QString & family, const QString & style = QString() )
 */
-HB_FUNC( QFONTDATABASE_POINTSIZES )
+HB_FUNC_STATIC( QFONTDATABASE_POINTSIZES )
 {
   QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -306,7 +306,7 @@ HB_FUNC( QFONTDATABASE_POINTSIZES )
 /*
 QList<int> smoothSizes ( const QString & family, const QString & style )
 */
-HB_FUNC( QFONTDATABASE_SMOOTHSIZES )
+HB_FUNC_STATIC( QFONTDATABASE_SMOOTHSIZES )
 {
   QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -331,7 +331,7 @@ HB_FUNC( QFONTDATABASE_SMOOTHSIZES )
 /*
 QString styleString ( const QFont & font )
 */
-HB_FUNC( QFONTDATABASE_STYLESTRING1 )
+HB_FUNC_STATIC( QFONTDATABASE_STYLESTRING1 )
 {
   QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -346,7 +346,7 @@ HB_FUNC( QFONTDATABASE_STYLESTRING1 )
 /*
 QString styleString ( const QFontInfo & fontInfo )
 */
-HB_FUNC( QFONTDATABASE_STYLESTRING2 )
+HB_FUNC_STATIC( QFONTDATABASE_STYLESTRING2 )
 {
   QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -361,7 +361,7 @@ HB_FUNC( QFONTDATABASE_STYLESTRING2 )
 //[1]QString styleString ( const QFont & font )
 //[2]QString styleString ( const QFontInfo & fontInfo )
 
-HB_FUNC( QFONTDATABASE_STYLESTRING )
+HB_FUNC_STATIC( QFONTDATABASE_STYLESTRING )
 {
   if( ISNUMPAR(1) && ISQFONT(1) )
   {
@@ -376,7 +376,7 @@ HB_FUNC( QFONTDATABASE_STYLESTRING )
 /*
 QStringList styles ( const QString & family ) const
 */
-HB_FUNC( QFONTDATABASE_STYLES )
+HB_FUNC_STATIC( QFONTDATABASE_STYLES )
 {
   QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -400,7 +400,7 @@ HB_FUNC( QFONTDATABASE_STYLES )
 /*
 int weight ( const QString & family, const QString & style ) const
 */
-HB_FUNC( QFONTDATABASE_WEIGHT )
+HB_FUNC_STATIC( QFONTDATABASE_WEIGHT )
 {
   QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -416,7 +416,7 @@ HB_FUNC( QFONTDATABASE_WEIGHT )
 /*
 QList<WritingSystem> writingSystems () const
 */
-HB_FUNC( QFONTDATABASE_WRITINGSYSTEMS1 )
+HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMS1 )
 {
   QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -439,7 +439,7 @@ HB_FUNC( QFONTDATABASE_WRITINGSYSTEMS1 )
 /*
 QList<WritingSystem> writingSystems ( const QString & family ) const
 */
-HB_FUNC( QFONTDATABASE_WRITINGSYSTEMS2 )
+HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMS2 )
 {
   QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -463,7 +463,7 @@ HB_FUNC( QFONTDATABASE_WRITINGSYSTEMS2 )
 //[1]QList<WritingSystem> writingSystems () const
 //[2]QList<WritingSystem> writingSystems ( const QString & family ) const
 
-HB_FUNC( QFONTDATABASE_WRITINGSYSTEMS )
+HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMS )
 {
   if( ISNUMPAR(0) )
   {
@@ -479,7 +479,7 @@ HB_FUNC( QFONTDATABASE_WRITINGSYSTEMS )
 /*
 int addApplicationFont ( const QString & fileName )
 */
-HB_FUNC( QFONTDATABASE_ADDAPPLICATIONFONT )
+HB_FUNC_STATIC( QFONTDATABASE_ADDAPPLICATIONFONT )
 {
   QString par1 = hb_parc(1);
   int i = QFontDatabase::addApplicationFont ( par1 );
@@ -490,7 +490,7 @@ HB_FUNC( QFONTDATABASE_ADDAPPLICATIONFONT )
 /*
 int addApplicationFontFromData ( const QByteArray & fontData )
 */
-HB_FUNC( QFONTDATABASE_ADDAPPLICATIONFONTFROMDATA )
+HB_FUNC_STATIC( QFONTDATABASE_ADDAPPLICATIONFONTFROMDATA )
 {
   QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int i = QFontDatabase::addApplicationFontFromData ( *par1 );
@@ -501,7 +501,7 @@ HB_FUNC( QFONTDATABASE_ADDAPPLICATIONFONTFROMDATA )
 /*
 QStringList applicationFontFamilies ( int id )
 */
-HB_FUNC( QFONTDATABASE_APPLICATIONFONTFAMILIES )
+HB_FUNC_STATIC( QFONTDATABASE_APPLICATIONFONTFAMILIES )
 {
   int par1 = hb_parni(1);
   QStringList strl = QFontDatabase::applicationFontFamilies ( par1 );
@@ -521,7 +521,7 @@ HB_FUNC( QFONTDATABASE_APPLICATIONFONTFAMILIES )
 /*
 bool removeAllApplicationFonts ()
 */
-HB_FUNC( QFONTDATABASE_REMOVEALLAPPLICATIONFONTS )
+HB_FUNC_STATIC( QFONTDATABASE_REMOVEALLAPPLICATIONFONTS )
 {
   bool b = QFontDatabase::removeAllApplicationFonts (  );
   hb_retl( b );
@@ -531,7 +531,7 @@ HB_FUNC( QFONTDATABASE_REMOVEALLAPPLICATIONFONTS )
 /*
 bool removeApplicationFont ( int id )
 */
-HB_FUNC( QFONTDATABASE_REMOVEAPPLICATIONFONT )
+HB_FUNC_STATIC( QFONTDATABASE_REMOVEAPPLICATIONFONT )
 {
   int par1 = hb_parni(1);
   bool b = QFontDatabase::removeApplicationFont ( par1 );
@@ -542,7 +542,7 @@ HB_FUNC( QFONTDATABASE_REMOVEAPPLICATIONFONT )
 /*
 QList<int> standardSizes ()
 */
-HB_FUNC( QFONTDATABASE_STANDARDSIZES )
+HB_FUNC_STATIC( QFONTDATABASE_STANDARDSIZES )
 {
   QList<int> list = QFontDatabase::standardSizes (  );
   PHB_ITEM pArray;
@@ -561,7 +561,7 @@ HB_FUNC( QFONTDATABASE_STANDARDSIZES )
 /*
 bool supportsThreadedFontRendering ()
 */
-HB_FUNC( QFONTDATABASE_SUPPORTSTHREADEDFONTRENDERING )
+HB_FUNC_STATIC( QFONTDATABASE_SUPPORTSTHREADEDFONTRENDERING )
 {
   bool b = QFontDatabase::supportsThreadedFontRendering (  );
   hb_retl( b );
@@ -571,7 +571,7 @@ HB_FUNC( QFONTDATABASE_SUPPORTSTHREADEDFONTRENDERING )
 /*
 QString writingSystemName ( WritingSystem writingSystem )
 */
-HB_FUNC( QFONTDATABASE_WRITINGSYSTEMNAME )
+HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMNAME )
 {
   int par1 = hb_parni(1);
   QString str1 = QFontDatabase::writingSystemName (  (QFontDatabase::WritingSystem) par1 );
@@ -582,7 +582,7 @@ HB_FUNC( QFONTDATABASE_WRITINGSYSTEMNAME )
 /*
 QString writingSystemSample ( WritingSystem writingSystem )
 */
-HB_FUNC( QFONTDATABASE_WRITINGSYSTEMSAMPLE )
+HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMSAMPLE )
 {
   int par1 = hb_parni(1);
   QString str1 = QFontDatabase::writingSystemSample (  (QFontDatabase::WritingSystem) par1 );

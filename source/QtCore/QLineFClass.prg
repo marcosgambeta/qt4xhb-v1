@@ -133,7 +133,7 @@ RETURN
 /*
 QLineF()
 */
-HB_FUNC( QLINEF_NEW1 )
+HB_FUNC_STATIC( QLINEF_NEW1 )
 {
   QLineF * o = NULL;
   o = new QLineF (  );
@@ -151,7 +151,7 @@ HB_FUNC( QLINEF_NEW1 )
 /*
 QLineF(const QPointF & p1, const QPointF & p2)
 */
-HB_FUNC( QLINEF_NEW2 )
+HB_FUNC_STATIC( QLINEF_NEW2 )
 {
   QLineF * o = NULL;
   QPointF * par1 = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -171,7 +171,7 @@ HB_FUNC( QLINEF_NEW2 )
 /*
 QLineF(qreal x1, qreal y1, qreal x2, qreal y2)
 */
-HB_FUNC( QLINEF_NEW3 )
+HB_FUNC_STATIC( QLINEF_NEW3 )
 {
   QLineF * o = NULL;
   qreal par1 = hb_parnd(1);
@@ -193,7 +193,7 @@ HB_FUNC( QLINEF_NEW3 )
 /*
 QLineF(const QLine & line)
 */
-HB_FUNC( QLINEF_NEW4 )
+HB_FUNC_STATIC( QLINEF_NEW4 )
 {
   QLineF * o = NULL;
   QLine * par1 = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -214,7 +214,7 @@ HB_FUNC( QLINEF_NEW4 )
 //[3]QLineF(qreal x1, qreal y1, qreal x2, qreal y2)
 //[4]QLineF(const QLine & line)
 
-HB_FUNC( QLINEF_NEW )
+HB_FUNC_STATIC( QLINEF_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -238,7 +238,7 @@ HB_FUNC( QLINEF_NEW )
   }
 }
 
-HB_FUNC( QLINEF_DELETE )
+HB_FUNC_STATIC( QLINEF_DELETE )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -257,7 +257,7 @@ HB_FUNC( QLINEF_DELETE )
 /*
 QPointF p1() const
 */
-HB_FUNC( QLINEF_P1 )
+HB_FUNC_STATIC( QLINEF_P1 )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -270,7 +270,7 @@ HB_FUNC( QLINEF_P1 )
 /*
 QPointF p2() const
 */
-HB_FUNC( QLINEF_P2 )
+HB_FUNC_STATIC( QLINEF_P2 )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -283,7 +283,7 @@ HB_FUNC( QLINEF_P2 )
 /*
 qreal x1() const
 */
-HB_FUNC( QLINEF_X1 )
+HB_FUNC_STATIC( QLINEF_X1 )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -297,7 +297,7 @@ HB_FUNC( QLINEF_X1 )
 /*
 qreal x2() const
 */
-HB_FUNC( QLINEF_X2 )
+HB_FUNC_STATIC( QLINEF_X2 )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -311,7 +311,7 @@ HB_FUNC( QLINEF_X2 )
 /*
 qreal y1() const
 */
-HB_FUNC( QLINEF_Y1 )
+HB_FUNC_STATIC( QLINEF_Y1 )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -325,7 +325,7 @@ HB_FUNC( QLINEF_Y1 )
 /*
 qreal y2() const
 */
-HB_FUNC( QLINEF_Y2 )
+HB_FUNC_STATIC( QLINEF_Y2 )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -339,7 +339,7 @@ HB_FUNC( QLINEF_Y2 )
 /*
 qreal angle() const
 */
-HB_FUNC( QLINEF_ANGLE )
+HB_FUNC_STATIC( QLINEF_ANGLE )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -353,7 +353,7 @@ HB_FUNC( QLINEF_ANGLE )
 /*
 qreal angleTo(const QLineF & line) const
 */
-HB_FUNC( QLINEF_ANGLETO )
+HB_FUNC_STATIC( QLINEF_ANGLETO )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -368,7 +368,7 @@ HB_FUNC( QLINEF_ANGLETO )
 /*
 qreal dx() const
 */
-HB_FUNC( QLINEF_DX )
+HB_FUNC_STATIC( QLINEF_DX )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -382,7 +382,7 @@ HB_FUNC( QLINEF_DX )
 /*
 qreal dy() const
 */
-HB_FUNC( QLINEF_DY )
+HB_FUNC_STATIC( QLINEF_DY )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -397,7 +397,7 @@ HB_FUNC( QLINEF_DY )
 /*
 bool isNull() const
 */
-HB_FUNC( QLINEF_ISNULL )
+HB_FUNC_STATIC( QLINEF_ISNULL )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -411,7 +411,7 @@ HB_FUNC( QLINEF_ISNULL )
 /*
 qreal length() const
 */
-HB_FUNC( QLINEF_LENGTH )
+HB_FUNC_STATIC( QLINEF_LENGTH )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -425,7 +425,7 @@ HB_FUNC( QLINEF_LENGTH )
 /*
 QLineF normalVector() const
 */
-HB_FUNC( QLINEF_NORMALVECTOR )
+HB_FUNC_STATIC( QLINEF_NORMALVECTOR )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -438,7 +438,7 @@ HB_FUNC( QLINEF_NORMALVECTOR )
 /*
 QPointF pointAt(qreal t) const
 */
-HB_FUNC( QLINEF_POINTAT )
+HB_FUNC_STATIC( QLINEF_POINTAT )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -452,7 +452,7 @@ HB_FUNC( QLINEF_POINTAT )
 /*
 void setP1(const QPointF & p1)
 */
-HB_FUNC( QLINEF_SETP1 )
+HB_FUNC_STATIC( QLINEF_SETP1 )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -467,7 +467,7 @@ HB_FUNC( QLINEF_SETP1 )
 /*
 void setP2(const QPointF & p2)
 */
-HB_FUNC( QLINEF_SETP2 )
+HB_FUNC_STATIC( QLINEF_SETP2 )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -482,7 +482,7 @@ HB_FUNC( QLINEF_SETP2 )
 /*
 void setAngle(qreal angle)
 */
-HB_FUNC( QLINEF_SETANGLE )
+HB_FUNC_STATIC( QLINEF_SETANGLE )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -497,7 +497,7 @@ HB_FUNC( QLINEF_SETANGLE )
 /*
 void setLength(qreal length)
 */
-HB_FUNC( QLINEF_SETLENGTH )
+HB_FUNC_STATIC( QLINEF_SETLENGTH )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -512,7 +512,7 @@ HB_FUNC( QLINEF_SETLENGTH )
 /*
 void setLine(qreal x1, qreal y1, qreal x2, qreal y2)
 */
-HB_FUNC( QLINEF_SETLINE )
+HB_FUNC_STATIC( QLINEF_SETLINE )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -530,7 +530,7 @@ HB_FUNC( QLINEF_SETLINE )
 /*
 void setPoints(const QPointF & p1, const QPointF & p2)
 */
-HB_FUNC( QLINEF_SETPOINTS )
+HB_FUNC_STATIC( QLINEF_SETPOINTS )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -546,7 +546,7 @@ HB_FUNC( QLINEF_SETPOINTS )
 /*
 QLine toLine() const
 */
-HB_FUNC( QLINEF_TOLINE )
+HB_FUNC_STATIC( QLINEF_TOLINE )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -559,7 +559,7 @@ HB_FUNC( QLINEF_TOLINE )
 /*
 void translate(const QPointF & offset)
 */
-HB_FUNC( QLINEF_TRANSLATE1 )
+HB_FUNC_STATIC( QLINEF_TRANSLATE1 )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -574,7 +574,7 @@ HB_FUNC( QLINEF_TRANSLATE1 )
 /*
 void translate(qreal dx, qreal dy)
 */
-HB_FUNC( QLINEF_TRANSLATE2 )
+HB_FUNC_STATIC( QLINEF_TRANSLATE2 )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -590,7 +590,7 @@ HB_FUNC( QLINEF_TRANSLATE2 )
 //[1]void translate(const QPointF & offset)
 //[2]void translate(qreal dx, qreal dy)
 
-HB_FUNC( QLINEF_TRANSLATE )
+HB_FUNC_STATIC( QLINEF_TRANSLATE )
 {
   if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
@@ -605,7 +605,7 @@ HB_FUNC( QLINEF_TRANSLATE )
 /*
 QLineF translated(const QPointF & offset) const
 */
-HB_FUNC( QLINEF_TRANSLATED1 )
+HB_FUNC_STATIC( QLINEF_TRANSLATED1 )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -619,7 +619,7 @@ HB_FUNC( QLINEF_TRANSLATED1 )
 /*
 QLineF translated(qreal dx, qreal dy) const
 */
-HB_FUNC( QLINEF_TRANSLATED2 )
+HB_FUNC_STATIC( QLINEF_TRANSLATED2 )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -634,7 +634,7 @@ HB_FUNC( QLINEF_TRANSLATED2 )
 //[1]QLineF translated(const QPointF & offset) const
 //[2]QLineF translated(qreal dx, qreal dy) const
 
-HB_FUNC( QLINEF_TRANSLATED )
+HB_FUNC_STATIC( QLINEF_TRANSLATED )
 {
   if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
@@ -649,7 +649,7 @@ HB_FUNC( QLINEF_TRANSLATED )
 /*
 QLineF unitVector() const
 */
-HB_FUNC( QLINEF_UNITVECTOR )
+HB_FUNC_STATIC( QLINEF_UNITVECTOR )
 {
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -663,7 +663,7 @@ HB_FUNC( QLINEF_UNITVECTOR )
 /*
 QLineF fromPolar(qreal length, qreal angle)
 */
-HB_FUNC( QLINEF_FROMPOLAR )
+HB_FUNC_STATIC( QLINEF_FROMPOLAR )
 {
   qreal par1 = hb_parnd(1);
   qreal par2 = hb_parnd(2);

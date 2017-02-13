@@ -100,7 +100,7 @@ RETURN
 /*
 QTextLength ()
 */
-HB_FUNC( QTEXTLENGTH_NEW1 )
+HB_FUNC_STATIC( QTEXTLENGTH_NEW1 )
 {
   QTextLength * o = NULL;
   o = new QTextLength (  );
@@ -115,7 +115,7 @@ HB_FUNC( QTEXTLENGTH_NEW1 )
 /*
 QTextLength ( Type type, qreal value )
 */
-HB_FUNC( QTEXTLENGTH_NEW2 )
+HB_FUNC_STATIC( QTEXTLENGTH_NEW2 )
 {
   QTextLength * o = NULL;
   int par1 = hb_parni(1);
@@ -132,7 +132,7 @@ HB_FUNC( QTEXTLENGTH_NEW2 )
 //[1]QTextLength ()
 //[2]QTextLength ( Type type, qreal value )
 
-HB_FUNC( QTEXTLENGTH_NEW )
+HB_FUNC_STATIC( QTEXTLENGTH_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -148,7 +148,7 @@ HB_FUNC( QTEXTLENGTH_NEW )
   }
 }
 
-HB_FUNC( QTEXTLENGTH_DELETE )
+HB_FUNC_STATIC( QTEXTLENGTH_DELETE )
 {
   QTextLength * obj = (QTextLength *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -167,7 +167,7 @@ HB_FUNC( QTEXTLENGTH_DELETE )
 /*
 qreal rawValue () const
 */
-HB_FUNC( QTEXTLENGTH_RAWVALUE )
+HB_FUNC_STATIC( QTEXTLENGTH_RAWVALUE )
 {
   QTextLength * obj = (QTextLength *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -181,7 +181,7 @@ HB_FUNC( QTEXTLENGTH_RAWVALUE )
 /*
 Type type () const
 */
-HB_FUNC( QTEXTLENGTH_TYPE )
+HB_FUNC_STATIC( QTEXTLENGTH_TYPE )
 {
   QTextLength * obj = (QTextLength *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -195,7 +195,7 @@ HB_FUNC( QTEXTLENGTH_TYPE )
 /*
 qreal value ( qreal maximumLength ) const
 */
-HB_FUNC( QTEXTLENGTH_VALUE )
+HB_FUNC_STATIC( QTEXTLENGTH_VALUE )
 {
   QTextLength * obj = (QTextLength *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

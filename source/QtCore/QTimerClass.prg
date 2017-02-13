@@ -72,7 +72,7 @@ RETURN
 /*
 QTimer ( QObject * parent = 0 )
 */
-HB_FUNC( QTIMER_NEW )
+HB_FUNC_STATIC( QTIMER_NEW )
 {
   QTimer * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -85,7 +85,7 @@ HB_FUNC( QTIMER_NEW )
 }
 
 
-HB_FUNC( QTIMER_DELETE )
+HB_FUNC_STATIC( QTIMER_DELETE )
 {
   QTimer * obj = (QTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -105,7 +105,7 @@ HB_FUNC( QTIMER_DELETE )
 /*
 int interval () const
 */
-HB_FUNC( QTIMER_INTERVAL )
+HB_FUNC_STATIC( QTIMER_INTERVAL )
 {
   QTimer * obj = (QTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -119,7 +119,7 @@ HB_FUNC( QTIMER_INTERVAL )
 /*
 bool isActive () const
 */
-HB_FUNC( QTIMER_ISACTIVE )
+HB_FUNC_STATIC( QTIMER_ISACTIVE )
 {
   QTimer * obj = (QTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -133,7 +133,7 @@ HB_FUNC( QTIMER_ISACTIVE )
 /*
 bool isSingleShot () const
 */
-HB_FUNC( QTIMER_ISSINGLESHOT )
+HB_FUNC_STATIC( QTIMER_ISSINGLESHOT )
 {
   QTimer * obj = (QTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -147,7 +147,7 @@ HB_FUNC( QTIMER_ISSINGLESHOT )
 /*
 void setInterval ( int msec )
 */
-HB_FUNC( QTIMER_SETINTERVAL )
+HB_FUNC_STATIC( QTIMER_SETINTERVAL )
 {
   QTimer * obj = (QTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -162,7 +162,7 @@ HB_FUNC( QTIMER_SETINTERVAL )
 /*
 void setSingleShot ( bool singleShot )
 */
-HB_FUNC( QTIMER_SETSINGLESHOT )
+HB_FUNC_STATIC( QTIMER_SETSINGLESHOT )
 {
   QTimer * obj = (QTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -177,7 +177,7 @@ HB_FUNC( QTIMER_SETSINGLESHOT )
 /*
 int timerId () const
 */
-HB_FUNC( QTIMER_TIMERID )
+HB_FUNC_STATIC( QTIMER_TIMERID )
 {
   QTimer * obj = (QTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -193,7 +193,7 @@ HB_FUNC( QTIMER_TIMERID )
 /*
 void start ( int msec )
 */
-HB_FUNC( QTIMER_START1 )
+HB_FUNC_STATIC( QTIMER_START1 )
 {
   QTimer * obj = (QTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -208,7 +208,7 @@ HB_FUNC( QTIMER_START1 )
 /*
 void start ()
 */
-HB_FUNC( QTIMER_START2 )
+HB_FUNC_STATIC( QTIMER_START2 )
 {
   QTimer * obj = (QTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -222,7 +222,7 @@ HB_FUNC( QTIMER_START2 )
 //[1]void start ( int msec )
 //[2]void start ()
 
-HB_FUNC( QTIMER_START )
+HB_FUNC_STATIC( QTIMER_START )
 {
   if( ISNUMPAR(0) )
   {
@@ -237,7 +237,7 @@ HB_FUNC( QTIMER_START )
 /*
 void stop ()
 */
-HB_FUNC( QTIMER_STOP )
+HB_FUNC_STATIC( QTIMER_STOP )
 {
   QTimer * obj = (QTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -254,7 +254,7 @@ HB_FUNC( QTIMER_STOP )
 /*
 void singleShot ( int msec, QObject * receiver, const char * member )
 */
-HB_FUNC( QTIMER_SINGLESHOT )
+HB_FUNC_STATIC( QTIMER_SINGLESHOT )
 {
   int par1 = hb_parni(1);
   QObject * par2 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );

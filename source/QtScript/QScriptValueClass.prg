@@ -159,7 +159,7 @@ RETURN
 /*
 QScriptValue ()
 */
-HB_FUNC( QSCRIPTVALUE_NEW1 )
+HB_FUNC_STATIC( QSCRIPTVALUE_NEW1 )
 {
   QScriptValue * o = NULL;
   o = new QScriptValue (  );
@@ -174,7 +174,7 @@ HB_FUNC( QSCRIPTVALUE_NEW1 )
 /*
 QScriptValue ( const QScriptValue & other )
 */
-HB_FUNC( QSCRIPTVALUE_NEW2 )
+HB_FUNC_STATIC( QSCRIPTVALUE_NEW2 )
 {
   QScriptValue * o = NULL;
   QScriptValue * par1 = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -190,7 +190,7 @@ HB_FUNC( QSCRIPTVALUE_NEW2 )
 /*
 QScriptValue ( SpecialValue value )
 */
-HB_FUNC( QSCRIPTVALUE_NEW3 )
+HB_FUNC_STATIC( QSCRIPTVALUE_NEW3 )
 {
   QScriptValue * o = NULL;
   int par1 = hb_parni(1);
@@ -206,7 +206,7 @@ HB_FUNC( QSCRIPTVALUE_NEW3 )
 /*
 QScriptValue ( bool value )
 */
-HB_FUNC( QSCRIPTVALUE_NEW4 )
+HB_FUNC_STATIC( QSCRIPTVALUE_NEW4 )
 {
   QScriptValue * o = NULL;
   bool par1 = hb_parl(1);
@@ -222,7 +222,7 @@ HB_FUNC( QSCRIPTVALUE_NEW4 )
 /*
 QScriptValue ( int value )
 */
-HB_FUNC( QSCRIPTVALUE_NEW5 )
+HB_FUNC_STATIC( QSCRIPTVALUE_NEW5 )
 {
   QScriptValue * o = NULL;
   int par1 = hb_parni(1);
@@ -238,7 +238,7 @@ HB_FUNC( QSCRIPTVALUE_NEW5 )
 /*
 QScriptValue ( uint value )
 */
-HB_FUNC( QSCRIPTVALUE_NEW6 )
+HB_FUNC_STATIC( QSCRIPTVALUE_NEW6 )
 {
   QScriptValue * o = NULL;
   uint par1 = hb_parni(1);
@@ -254,7 +254,7 @@ HB_FUNC( QSCRIPTVALUE_NEW6 )
 /*
 QScriptValue ( qsreal value )
 */
-HB_FUNC( QSCRIPTVALUE_NEW7 )
+HB_FUNC_STATIC( QSCRIPTVALUE_NEW7 )
 {
   QScriptValue * o = NULL;
   qsreal par1 = hb_parnd(1);
@@ -270,7 +270,7 @@ HB_FUNC( QSCRIPTVALUE_NEW7 )
 /*
 QScriptValue ( const QString & value )
 */
-HB_FUNC( QSCRIPTVALUE_NEW8 )
+HB_FUNC_STATIC( QSCRIPTVALUE_NEW8 )
 {
   QScriptValue * o = NULL;
   QString par1 = hb_parc(1);
@@ -287,7 +287,7 @@ HB_FUNC( QSCRIPTVALUE_NEW8 )
 /*
 QScriptValue ( const char * value )
 */
-HB_FUNC( QSCRIPTVALUE_NEW10 )
+HB_FUNC_STATIC( QSCRIPTVALUE_NEW10 )
 {
   QScriptValue * o = NULL;
   const char * par1 = hb_parc(1);
@@ -311,7 +311,7 @@ HB_FUNC( QSCRIPTVALUE_NEW10 )
 //[09]QScriptValue ( const QLatin1String & value )
 //[10]QScriptValue ( const char * value )
 
-HB_FUNC( QSCRIPTVALUE_NEW )
+HB_FUNC_STATIC( QSCRIPTVALUE_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -343,7 +343,7 @@ HB_FUNC( QSCRIPTVALUE_NEW )
   }
 }
 
-HB_FUNC( QSCRIPTVALUE_DELETE )
+HB_FUNC_STATIC( QSCRIPTVALUE_DELETE )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -362,7 +362,7 @@ HB_FUNC( QSCRIPTVALUE_DELETE )
 /*
 QScriptValue call ( const QScriptValue & thisObject = QScriptValue(), const QScriptValueList & args = QScriptValueList() )
 */
-HB_FUNC( QSCRIPTVALUE_CALL1 )
+HB_FUNC_STATIC( QSCRIPTVALUE_CALL1 )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -384,7 +384,7 @@ par2 << *(QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aLis
 /*
 QScriptValue call ( const QScriptValue & thisObject, const QScriptValue & arguments )
 */
-HB_FUNC( QSCRIPTVALUE_CALL2 )
+HB_FUNC_STATIC( QSCRIPTVALUE_CALL2 )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -401,7 +401,7 @@ HB_FUNC( QSCRIPTVALUE_CALL2 )
 
 // TODO: QScripValueList = array ?
 
-HB_FUNC( QSCRIPTVALUE_CALL )
+HB_FUNC_STATIC( QSCRIPTVALUE_CALL )
 {
   if( ISBETWEEN(0,2) && (ISQSCRIPTVALUE(1)||ISNIL(1)) && (ISOBJECT(2)||ISNIL(2)) )
   {
@@ -416,7 +416,7 @@ HB_FUNC( QSCRIPTVALUE_CALL )
 /*
 QScriptValue construct ( const QScriptValueList & args = QScriptValueList() )
 */
-HB_FUNC( QSCRIPTVALUE_CONSTRUCT1 )
+HB_FUNC_STATIC( QSCRIPTVALUE_CONSTRUCT1 )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -437,7 +437,7 @@ par1 << *(QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aLis
 /*
 QScriptValue construct ( const QScriptValue & arguments )
 */
-HB_FUNC( QSCRIPTVALUE_CONSTRUCT2 )
+HB_FUNC_STATIC( QSCRIPTVALUE_CONSTRUCT2 )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -451,7 +451,7 @@ HB_FUNC( QSCRIPTVALUE_CONSTRUCT2 )
 //[1]QScriptValue construct ( const QScriptValueList & args = QScriptValueList() )
 //[2]QScriptValue construct ( const QScriptValue & arguments )
 
-HB_FUNC( QSCRIPTVALUE_CONSTRUCT )
+HB_FUNC_STATIC( QSCRIPTVALUE_CONSTRUCT )
 {
   if( ISBETWEEN(0,1) && (ISOBJECT(1)||ISNIL(1)) )
   {
@@ -466,7 +466,7 @@ HB_FUNC( QSCRIPTVALUE_CONSTRUCT )
 /*
 QScriptValue data () const
 */
-HB_FUNC( QSCRIPTVALUE_DATA )
+HB_FUNC_STATIC( QSCRIPTVALUE_DATA )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -479,7 +479,7 @@ HB_FUNC( QSCRIPTVALUE_DATA )
 /*
 QScriptEngine * engine () const
 */
-HB_FUNC( QSCRIPTVALUE_ENGINE )
+HB_FUNC_STATIC( QSCRIPTVALUE_ENGINE )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -492,7 +492,7 @@ HB_FUNC( QSCRIPTVALUE_ENGINE )
 /*
 bool equals ( const QScriptValue & other ) const
 */
-HB_FUNC( QSCRIPTVALUE_EQUALS )
+HB_FUNC_STATIC( QSCRIPTVALUE_EQUALS )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -507,7 +507,7 @@ HB_FUNC( QSCRIPTVALUE_EQUALS )
 /*
 bool instanceOf ( const QScriptValue & other ) const
 */
-HB_FUNC( QSCRIPTVALUE_INSTANCEOF )
+HB_FUNC_STATIC( QSCRIPTVALUE_INSTANCEOF )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -522,7 +522,7 @@ HB_FUNC( QSCRIPTVALUE_INSTANCEOF )
 /*
 bool isArray () const
 */
-HB_FUNC( QSCRIPTVALUE_ISARRAY )
+HB_FUNC_STATIC( QSCRIPTVALUE_ISARRAY )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -536,7 +536,7 @@ HB_FUNC( QSCRIPTVALUE_ISARRAY )
 /*
 bool isBool () const
 */
-HB_FUNC( QSCRIPTVALUE_ISBOOL )
+HB_FUNC_STATIC( QSCRIPTVALUE_ISBOOL )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -550,7 +550,7 @@ HB_FUNC( QSCRIPTVALUE_ISBOOL )
 /*
 bool isDate () const
 */
-HB_FUNC( QSCRIPTVALUE_ISDATE )
+HB_FUNC_STATIC( QSCRIPTVALUE_ISDATE )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -564,7 +564,7 @@ HB_FUNC( QSCRIPTVALUE_ISDATE )
 /*
 bool isError () const
 */
-HB_FUNC( QSCRIPTVALUE_ISERROR )
+HB_FUNC_STATIC( QSCRIPTVALUE_ISERROR )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -578,7 +578,7 @@ HB_FUNC( QSCRIPTVALUE_ISERROR )
 /*
 bool isFunction () const
 */
-HB_FUNC( QSCRIPTVALUE_ISFUNCTION )
+HB_FUNC_STATIC( QSCRIPTVALUE_ISFUNCTION )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -592,7 +592,7 @@ HB_FUNC( QSCRIPTVALUE_ISFUNCTION )
 /*
 bool isNull () const
 */
-HB_FUNC( QSCRIPTVALUE_ISNULL )
+HB_FUNC_STATIC( QSCRIPTVALUE_ISNULL )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -606,7 +606,7 @@ HB_FUNC( QSCRIPTVALUE_ISNULL )
 /*
 bool isNumber () const
 */
-HB_FUNC( QSCRIPTVALUE_ISNUMBER )
+HB_FUNC_STATIC( QSCRIPTVALUE_ISNUMBER )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -620,7 +620,7 @@ HB_FUNC( QSCRIPTVALUE_ISNUMBER )
 /*
 bool isObject () const
 */
-HB_FUNC( QSCRIPTVALUE_ISOBJECT )
+HB_FUNC_STATIC( QSCRIPTVALUE_ISOBJECT )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -634,7 +634,7 @@ HB_FUNC( QSCRIPTVALUE_ISOBJECT )
 /*
 bool isQMetaObject () const
 */
-HB_FUNC( QSCRIPTVALUE_ISQMETAOBJECT )
+HB_FUNC_STATIC( QSCRIPTVALUE_ISQMETAOBJECT )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -648,7 +648,7 @@ HB_FUNC( QSCRIPTVALUE_ISQMETAOBJECT )
 /*
 bool isQObject () const
 */
-HB_FUNC( QSCRIPTVALUE_ISQOBJECT )
+HB_FUNC_STATIC( QSCRIPTVALUE_ISQOBJECT )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -662,7 +662,7 @@ HB_FUNC( QSCRIPTVALUE_ISQOBJECT )
 /*
 bool isRegExp () const
 */
-HB_FUNC( QSCRIPTVALUE_ISREGEXP )
+HB_FUNC_STATIC( QSCRIPTVALUE_ISREGEXP )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -676,7 +676,7 @@ HB_FUNC( QSCRIPTVALUE_ISREGEXP )
 /*
 bool isString () const
 */
-HB_FUNC( QSCRIPTVALUE_ISSTRING )
+HB_FUNC_STATIC( QSCRIPTVALUE_ISSTRING )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -690,7 +690,7 @@ HB_FUNC( QSCRIPTVALUE_ISSTRING )
 /*
 bool isUndefined () const
 */
-HB_FUNC( QSCRIPTVALUE_ISUNDEFINED )
+HB_FUNC_STATIC( QSCRIPTVALUE_ISUNDEFINED )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -704,7 +704,7 @@ HB_FUNC( QSCRIPTVALUE_ISUNDEFINED )
 /*
 bool isValid () const
 */
-HB_FUNC( QSCRIPTVALUE_ISVALID )
+HB_FUNC_STATIC( QSCRIPTVALUE_ISVALID )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -718,7 +718,7 @@ HB_FUNC( QSCRIPTVALUE_ISVALID )
 /*
 bool isVariant () const
 */
-HB_FUNC( QSCRIPTVALUE_ISVARIANT )
+HB_FUNC_STATIC( QSCRIPTVALUE_ISVARIANT )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -732,7 +732,7 @@ HB_FUNC( QSCRIPTVALUE_ISVARIANT )
 /*
 bool lessThan ( const QScriptValue & other ) const
 */
-HB_FUNC( QSCRIPTVALUE_LESSTHAN )
+HB_FUNC_STATIC( QSCRIPTVALUE_LESSTHAN )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -752,7 +752,7 @@ HB_FUNC( QSCRIPTVALUE_LESSTHAN )
 /*
 QScriptValue prototype () const
 */
-HB_FUNC( QSCRIPTVALUE_PROTOTYPE )
+HB_FUNC_STATIC( QSCRIPTVALUE_PROTOTYPE )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -765,7 +765,7 @@ HB_FUNC( QSCRIPTVALUE_PROTOTYPE )
 /*
 QScriptClass * scriptClass () const
 */
-HB_FUNC( QSCRIPTVALUE_SCRIPTCLASS )
+HB_FUNC_STATIC( QSCRIPTVALUE_SCRIPTCLASS )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -778,7 +778,7 @@ HB_FUNC( QSCRIPTVALUE_SCRIPTCLASS )
 /*
 void setData ( const QScriptValue & data )
 */
-HB_FUNC( QSCRIPTVALUE_SETDATA )
+HB_FUNC_STATIC( QSCRIPTVALUE_SETDATA )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -796,7 +796,7 @@ HB_FUNC( QSCRIPTVALUE_SETDATA )
 /*
 void setPrototype ( const QScriptValue & prototype )
 */
-HB_FUNC( QSCRIPTVALUE_SETPROTOTYPE )
+HB_FUNC_STATIC( QSCRIPTVALUE_SETPROTOTYPE )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -811,7 +811,7 @@ HB_FUNC( QSCRIPTVALUE_SETPROTOTYPE )
 /*
 void setScriptClass ( QScriptClass * scriptClass )
 */
-HB_FUNC( QSCRIPTVALUE_SETSCRIPTCLASS )
+HB_FUNC_STATIC( QSCRIPTVALUE_SETSCRIPTCLASS )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -826,7 +826,7 @@ HB_FUNC( QSCRIPTVALUE_SETSCRIPTCLASS )
 /*
 bool strictlyEquals ( const QScriptValue & other ) const
 */
-HB_FUNC( QSCRIPTVALUE_STRICTLYEQUALS )
+HB_FUNC_STATIC( QSCRIPTVALUE_STRICTLYEQUALS )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -841,7 +841,7 @@ HB_FUNC( QSCRIPTVALUE_STRICTLYEQUALS )
 /*
 bool toBool () const
 */
-HB_FUNC( QSCRIPTVALUE_TOBOOL )
+HB_FUNC_STATIC( QSCRIPTVALUE_TOBOOL )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -855,7 +855,7 @@ HB_FUNC( QSCRIPTVALUE_TOBOOL )
 /*
 QDateTime toDateTime () const
 */
-HB_FUNC( QSCRIPTVALUE_TODATETIME )
+HB_FUNC_STATIC( QSCRIPTVALUE_TODATETIME )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -868,7 +868,7 @@ HB_FUNC( QSCRIPTVALUE_TODATETIME )
 /*
 qint32 toInt32 () const
 */
-HB_FUNC( QSCRIPTVALUE_TOINT32 )
+HB_FUNC_STATIC( QSCRIPTVALUE_TOINT32 )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -882,7 +882,7 @@ HB_FUNC( QSCRIPTVALUE_TOINT32 )
 /*
 qsreal toInteger () const
 */
-HB_FUNC( QSCRIPTVALUE_TOINTEGER )
+HB_FUNC_STATIC( QSCRIPTVALUE_TOINTEGER )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -896,7 +896,7 @@ HB_FUNC( QSCRIPTVALUE_TOINTEGER )
 /*
 qsreal toNumber () const
 */
-HB_FUNC( QSCRIPTVALUE_TONUMBER )
+HB_FUNC_STATIC( QSCRIPTVALUE_TONUMBER )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -911,7 +911,7 @@ HB_FUNC( QSCRIPTVALUE_TONUMBER )
 /*
 QObject * toQObject () const
 */
-HB_FUNC( QSCRIPTVALUE_TOQOBJECT )
+HB_FUNC_STATIC( QSCRIPTVALUE_TOQOBJECT )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -924,7 +924,7 @@ HB_FUNC( QSCRIPTVALUE_TOQOBJECT )
 /*
 QRegExp toRegExp () const
 */
-HB_FUNC( QSCRIPTVALUE_TOREGEXP )
+HB_FUNC_STATIC( QSCRIPTVALUE_TOREGEXP )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -937,7 +937,7 @@ HB_FUNC( QSCRIPTVALUE_TOREGEXP )
 /*
 QString toString () const
 */
-HB_FUNC( QSCRIPTVALUE_TOSTRING )
+HB_FUNC_STATIC( QSCRIPTVALUE_TOSTRING )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -951,7 +951,7 @@ HB_FUNC( QSCRIPTVALUE_TOSTRING )
 /*
 quint16 toUInt16 () const
 */
-HB_FUNC( QSCRIPTVALUE_TOUINT16 )
+HB_FUNC_STATIC( QSCRIPTVALUE_TOUINT16 )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -965,7 +965,7 @@ HB_FUNC( QSCRIPTVALUE_TOUINT16 )
 /*
 quint32 toUInt32 () const
 */
-HB_FUNC( QSCRIPTVALUE_TOUINT32 )
+HB_FUNC_STATIC( QSCRIPTVALUE_TOUINT32 )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -979,7 +979,7 @@ HB_FUNC( QSCRIPTVALUE_TOUINT32 )
 /*
 QVariant toVariant () const
 */
-HB_FUNC( QSCRIPTVALUE_TOVARIANT )
+HB_FUNC_STATIC( QSCRIPTVALUE_TOVARIANT )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

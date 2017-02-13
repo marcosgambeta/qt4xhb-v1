@@ -61,7 +61,7 @@ RETURN
 /*
 QWhatsThisClickedEvent(const QString &href)
 */
-HB_FUNC( QWHATSTHISCLICKEDEVENT_NEW )
+HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_NEW )
 {
   QWhatsThisClickedEvent * o = NULL;
   QString par1 = hb_parc(1);
@@ -74,7 +74,7 @@ HB_FUNC( QWHATSTHISCLICKEDEVENT_NEW )
 }
 
 
-HB_FUNC( QWHATSTHISCLICKEDEVENT_DELETE )
+HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_DELETE )
 {
   QWhatsThisClickedEvent * obj = (QWhatsThisClickedEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -93,7 +93,7 @@ HB_FUNC( QWHATSTHISCLICKEDEVENT_DELETE )
 /*
 QString href() const
 */
-HB_FUNC( QWHATSTHISCLICKEDEVENT_HREF )
+HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_HREF )
 {
   QWhatsThisClickedEvent * obj = (QWhatsThisClickedEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

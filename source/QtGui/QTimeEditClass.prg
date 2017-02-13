@@ -61,7 +61,7 @@ RETURN
 /*
 QTimeEdit ( QWidget * parent = 0 )
 */
-HB_FUNC( QTIMEEDIT_NEW1 )
+HB_FUNC_STATIC( QTIMEEDIT_NEW1 )
 {
   QTimeEdit * o = NULL;
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -77,7 +77,7 @@ HB_FUNC( QTIMEEDIT_NEW1 )
 /*
 QTimeEdit ( const QTime & time, QWidget * parent = 0 )
 */
-HB_FUNC( QTIMEEDIT_NEW2 )
+HB_FUNC_STATIC( QTIMEEDIT_NEW2 )
 {
   QTimeEdit * o = NULL;
   QTime * par1 = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -94,7 +94,7 @@ HB_FUNC( QTIMEEDIT_NEW2 )
 //[1]QTimeEdit ( QWidget * parent = 0 )
 //[2]QTimeEdit ( const QTime & time, QWidget * parent = 0 )
 
-HB_FUNC( QTIMEEDIT_NEW )
+HB_FUNC_STATIC( QTIMEEDIT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {

@@ -98,7 +98,7 @@ RETURN
 /*
 QSharedData ()
 */
-HB_FUNC( QSHAREDDATA_NEW1 )
+HB_FUNC_STATIC( QSHAREDDATA_NEW1 )
 {
   QSharedData * o = NULL;
   o = new QSharedData (  );
@@ -116,7 +116,7 @@ HB_FUNC( QSHAREDDATA_NEW1 )
 /*
 QSharedData ( const QSharedData & other )
 */
-HB_FUNC( QSHAREDDATA_NEW2 )
+HB_FUNC_STATIC( QSHAREDDATA_NEW2 )
 {
   QSharedData * o = NULL;
   QSharedData * par1 = (QSharedData *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -135,7 +135,7 @@ HB_FUNC( QSHAREDDATA_NEW2 )
 //[1]QSharedData ()
 //[2]QSharedData ( const QSharedData & other )
 
-HB_FUNC( QSHAREDDATA_NEW )
+HB_FUNC_STATIC( QSHAREDDATA_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -151,7 +151,7 @@ HB_FUNC( QSHAREDDATA_NEW )
   }
 }
 
-HB_FUNC( QSHAREDDATA_DELETE )
+HB_FUNC_STATIC( QSHAREDDATA_DELETE )
 {
   QSharedData * obj = (QSharedData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

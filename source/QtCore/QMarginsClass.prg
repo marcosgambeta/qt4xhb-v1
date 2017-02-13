@@ -107,7 +107,7 @@ RETURN
 /*
 QMargins ()
 */
-HB_FUNC( QMARGINS_NEW1 )
+HB_FUNC_STATIC( QMARGINS_NEW1 )
 {
   QMargins * o = NULL;
   o = new QMargins (  );
@@ -125,7 +125,7 @@ HB_FUNC( QMARGINS_NEW1 )
 /*
 QMargins ( int left, int top, int right, int bottom )
 */
-HB_FUNC( QMARGINS_NEW2 )
+HB_FUNC_STATIC( QMARGINS_NEW2 )
 {
   QMargins * o = NULL;
   int par1 = hb_parni(1);
@@ -147,7 +147,7 @@ HB_FUNC( QMARGINS_NEW2 )
 //[1]QMargins ()
 //[2]QMargins ( int left, int top, int right, int bottom )
 
-HB_FUNC( QMARGINS_NEW )
+HB_FUNC_STATIC( QMARGINS_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -163,7 +163,7 @@ HB_FUNC( QMARGINS_NEW )
   }
 }
 
-HB_FUNC( QMARGINS_DELETE )
+HB_FUNC_STATIC( QMARGINS_DELETE )
 {
   QMargins * obj = (QMargins *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -182,7 +182,7 @@ HB_FUNC( QMARGINS_DELETE )
 /*
 int bottom () const
 */
-HB_FUNC( QMARGINS_BOTTOM )
+HB_FUNC_STATIC( QMARGINS_BOTTOM )
 {
   QMargins * obj = (QMargins *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -196,7 +196,7 @@ HB_FUNC( QMARGINS_BOTTOM )
 /*
 bool isNull () const
 */
-HB_FUNC( QMARGINS_ISNULL )
+HB_FUNC_STATIC( QMARGINS_ISNULL )
 {
   QMargins * obj = (QMargins *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -210,7 +210,7 @@ HB_FUNC( QMARGINS_ISNULL )
 /*
 int left () const
 */
-HB_FUNC( QMARGINS_LEFT )
+HB_FUNC_STATIC( QMARGINS_LEFT )
 {
   QMargins * obj = (QMargins *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -224,7 +224,7 @@ HB_FUNC( QMARGINS_LEFT )
 /*
 int right () const
 */
-HB_FUNC( QMARGINS_RIGHT )
+HB_FUNC_STATIC( QMARGINS_RIGHT )
 {
   QMargins * obj = (QMargins *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -238,7 +238,7 @@ HB_FUNC( QMARGINS_RIGHT )
 /*
 void setBottom ( int bottom )
 */
-HB_FUNC( QMARGINS_SETBOTTOM )
+HB_FUNC_STATIC( QMARGINS_SETBOTTOM )
 {
   QMargins * obj = (QMargins *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -253,7 +253,7 @@ HB_FUNC( QMARGINS_SETBOTTOM )
 /*
 void setLeft ( int left )
 */
-HB_FUNC( QMARGINS_SETLEFT )
+HB_FUNC_STATIC( QMARGINS_SETLEFT )
 {
   QMargins * obj = (QMargins *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -268,7 +268,7 @@ HB_FUNC( QMARGINS_SETLEFT )
 /*
 void setRight ( int right )
 */
-HB_FUNC( QMARGINS_SETRIGHT )
+HB_FUNC_STATIC( QMARGINS_SETRIGHT )
 {
   QMargins * obj = (QMargins *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -283,7 +283,7 @@ HB_FUNC( QMARGINS_SETRIGHT )
 /*
 void setTop ( int Top )
 */
-HB_FUNC( QMARGINS_SETTOP )
+HB_FUNC_STATIC( QMARGINS_SETTOP )
 {
   QMargins * obj = (QMargins *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -298,7 +298,7 @@ HB_FUNC( QMARGINS_SETTOP )
 /*
 int top () const
 */
-HB_FUNC( QMARGINS_TOP )
+HB_FUNC_STATIC( QMARGINS_TOP )
 {
   QMargins * obj = (QMargins *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

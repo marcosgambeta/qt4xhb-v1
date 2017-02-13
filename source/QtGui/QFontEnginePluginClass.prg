@@ -63,7 +63,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QFONTENGINEPLUGIN_DELETE )
+HB_FUNC_STATIC( QFONTENGINEPLUGIN_DELETE )
 {
   QFontEnginePlugin * obj = (QFontEnginePlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -82,7 +82,7 @@ HB_FUNC( QFONTENGINEPLUGIN_DELETE )
 /*
 virtual QList<QFontEngineInfo> availableFontEngines () const = 0
 */
-HB_FUNC( QFONTENGINEPLUGIN_AVAILABLEFONTENGINES )
+HB_FUNC_STATIC( QFONTENGINEPLUGIN_AVAILABLEFONTENGINES )
 {
   QFontEnginePlugin * obj = (QFontEnginePlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -126,7 +126,7 @@ HB_FUNC( QFONTENGINEPLUGIN_AVAILABLEFONTENGINES )
 /*
 virtual QAbstractFontEngine * create ( const QFontEngineInfo & info ) = 0
 */
-HB_FUNC( QFONTENGINEPLUGIN_CREATE )
+HB_FUNC_STATIC( QFONTENGINEPLUGIN_CREATE )
 {
   QFontEnginePlugin * obj = (QFontEnginePlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -140,7 +140,7 @@ HB_FUNC( QFONTENGINEPLUGIN_CREATE )
 /*
 virtual QStringList keys () const
 */
-HB_FUNC( QFONTENGINEPLUGIN_KEYS )
+HB_FUNC_STATIC( QFONTENGINEPLUGIN_KEYS )
 {
   QFontEnginePlugin * obj = (QFontEnginePlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

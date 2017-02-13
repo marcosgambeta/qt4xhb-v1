@@ -72,7 +72,7 @@ RETURN
 /*
 QPlainTextDocumentLayout ( QTextDocument * document )
 */
-HB_FUNC( QPLAINTEXTDOCUMENTLAYOUT_NEW )
+HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_NEW )
 {
   QPlainTextDocumentLayout * o = NULL;
   QTextDocument * par1 = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -85,7 +85,7 @@ HB_FUNC( QPLAINTEXTDOCUMENTLAYOUT_NEW )
 }
 
 
-HB_FUNC( QPLAINTEXTDOCUMENTLAYOUT_DELETE )
+HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_DELETE )
 {
   QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -104,7 +104,7 @@ HB_FUNC( QPLAINTEXTDOCUMENTLAYOUT_DELETE )
 /*
 int cursorWidth () const
 */
-HB_FUNC( QPLAINTEXTDOCUMENTLAYOUT_CURSORWIDTH )
+HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_CURSORWIDTH )
 {
   QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -118,7 +118,7 @@ HB_FUNC( QPLAINTEXTDOCUMENTLAYOUT_CURSORWIDTH )
 /*
 void ensureBlockLayout ( const QTextBlock & block ) const
 */
-HB_FUNC( QPLAINTEXTDOCUMENTLAYOUT_ENSUREBLOCKLAYOUT )
+HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_ENSUREBLOCKLAYOUT )
 {
   QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -133,7 +133,7 @@ HB_FUNC( QPLAINTEXTDOCUMENTLAYOUT_ENSUREBLOCKLAYOUT )
 /*
 void requestUpdate ()
 */
-HB_FUNC( QPLAINTEXTDOCUMENTLAYOUT_REQUESTUPDATE )
+HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_REQUESTUPDATE )
 {
   QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -147,7 +147,7 @@ HB_FUNC( QPLAINTEXTDOCUMENTLAYOUT_REQUESTUPDATE )
 /*
 void setCursorWidth ( int width )
 */
-HB_FUNC( QPLAINTEXTDOCUMENTLAYOUT_SETCURSORWIDTH )
+HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_SETCURSORWIDTH )
 {
   QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -162,7 +162,7 @@ HB_FUNC( QPLAINTEXTDOCUMENTLAYOUT_SETCURSORWIDTH )
 /*
 virtual QRectF blockBoundingRect ( const QTextBlock & block ) const
 */
-HB_FUNC( QPLAINTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT )
+HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT )
 {
   QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -176,7 +176,7 @@ HB_FUNC( QPLAINTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT )
 /*
 virtual QSizeF documentSize () const
 */
-HB_FUNC( QPLAINTEXTDOCUMENTLAYOUT_DOCUMENTSIZE )
+HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_DOCUMENTSIZE )
 {
   QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -190,7 +190,7 @@ HB_FUNC( QPLAINTEXTDOCUMENTLAYOUT_DOCUMENTSIZE )
 /*
 virtual QRectF frameBoundingRect ( QTextFrame * ) const
 */
-HB_FUNC( QPLAINTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT )
+HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT )
 {
   QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -204,7 +204,7 @@ HB_FUNC( QPLAINTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT )
 /*
 virtual int hitTest ( const QPointF &, Qt::HitTestAccuracy ) const
 */
-HB_FUNC( QPLAINTEXTDOCUMENTLAYOUT_HITTEST )
+HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_HITTEST )
 {
   QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -220,7 +220,7 @@ HB_FUNC( QPLAINTEXTDOCUMENTLAYOUT_HITTEST )
 /*
 virtual int pageCount () const
 */
-HB_FUNC( QPLAINTEXTDOCUMENTLAYOUT_PAGECOUNT )
+HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_PAGECOUNT )
 {
   QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

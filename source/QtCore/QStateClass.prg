@@ -83,7 +83,7 @@ RETURN
 /*
 QState ( QState * parent = 0 )
 */
-HB_FUNC( QSTATE_NEW1 )
+HB_FUNC_STATIC( QSTATE_NEW1 )
 {
   QState * o = NULL;
   QState * par1 = ISNIL(1)? 0 : (QState *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -99,7 +99,7 @@ HB_FUNC( QSTATE_NEW1 )
 /*
 QState ( ChildMode childMode, QState * parent = 0 )
 */
-HB_FUNC( QSTATE_NEW2 )
+HB_FUNC_STATIC( QSTATE_NEW2 )
 {
   QState * o = NULL;
   int par1 = hb_parni(1);
@@ -116,7 +116,7 @@ HB_FUNC( QSTATE_NEW2 )
 //[1]QState ( QState * parent = 0 )
 //[2]QState ( ChildMode childMode, QState * parent = 0 )
 
-HB_FUNC( QSTATE_NEW )
+HB_FUNC_STATIC( QSTATE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQSTATE(1)||ISNIL(1)) )
   {
@@ -132,7 +132,7 @@ HB_FUNC( QSTATE_NEW )
   }
 }
 
-HB_FUNC( QSTATE_DELETE )
+HB_FUNC_STATIC( QSTATE_DELETE )
 {
   QState * obj = (QState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -151,7 +151,7 @@ HB_FUNC( QSTATE_DELETE )
 /*
 void addTransition ( QAbstractTransition * transition )
 */
-HB_FUNC( QSTATE_ADDTRANSITION1 )
+HB_FUNC_STATIC( QSTATE_ADDTRANSITION1 )
 {
   QState * obj = (QState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -166,7 +166,7 @@ HB_FUNC( QSTATE_ADDTRANSITION1 )
 /*
 QSignalTransition * addTransition ( QObject * sender, const char * signal, QAbstractState * target )
 */
-HB_FUNC( QSTATE_ADDTRANSITION2 )
+HB_FUNC_STATIC( QSTATE_ADDTRANSITION2 )
 {
   QState * obj = (QState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -182,7 +182,7 @@ HB_FUNC( QSTATE_ADDTRANSITION2 )
 /*
 QAbstractTransition * addTransition ( QAbstractState * target )
 */
-HB_FUNC( QSTATE_ADDTRANSITION3 )
+HB_FUNC_STATIC( QSTATE_ADDTRANSITION3 )
 {
   QState * obj = (QState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -197,7 +197,7 @@ HB_FUNC( QSTATE_ADDTRANSITION3 )
 //[2]QSignalTransition * addTransition ( QObject * sender, const char * signal, QAbstractState * target )
 //[3]QAbstractTransition * addTransition ( QAbstractState * target )
 
-HB_FUNC( QSTATE_ADDTRANSITION )
+HB_FUNC_STATIC( QSTATE_ADDTRANSITION )
 {
   if( ISNUMPAR(1) && ISQABSTRACTTRANSITION(1) )
   {
@@ -216,7 +216,7 @@ HB_FUNC( QSTATE_ADDTRANSITION )
 /*
 void assignProperty ( QObject * object, const char * name, const QVariant & value )
 */
-HB_FUNC( QSTATE_ASSIGNPROPERTY )
+HB_FUNC_STATIC( QSTATE_ASSIGNPROPERTY )
 {
   QState * obj = (QState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -233,7 +233,7 @@ HB_FUNC( QSTATE_ASSIGNPROPERTY )
 /*
 ChildMode childMode () const
 */
-HB_FUNC( QSTATE_CHILDMODE )
+HB_FUNC_STATIC( QSTATE_CHILDMODE )
 {
   QState * obj = (QState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -247,7 +247,7 @@ HB_FUNC( QSTATE_CHILDMODE )
 /*
 QAbstractState * errorState () const
 */
-HB_FUNC( QSTATE_ERRORSTATE )
+HB_FUNC_STATIC( QSTATE_ERRORSTATE )
 {
   QState * obj = (QState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -260,7 +260,7 @@ HB_FUNC( QSTATE_ERRORSTATE )
 /*
 QAbstractState * initialState () const
 */
-HB_FUNC( QSTATE_INITIALSTATE )
+HB_FUNC_STATIC( QSTATE_INITIALSTATE )
 {
   QState * obj = (QState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -273,7 +273,7 @@ HB_FUNC( QSTATE_INITIALSTATE )
 /*
 void removeTransition ( QAbstractTransition * transition )
 */
-HB_FUNC( QSTATE_REMOVETRANSITION )
+HB_FUNC_STATIC( QSTATE_REMOVETRANSITION )
 {
   QState * obj = (QState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -288,7 +288,7 @@ HB_FUNC( QSTATE_REMOVETRANSITION )
 /*
 void setChildMode ( ChildMode mode )
 */
-HB_FUNC( QSTATE_SETCHILDMODE )
+HB_FUNC_STATIC( QSTATE_SETCHILDMODE )
 {
   QState * obj = (QState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -303,7 +303,7 @@ HB_FUNC( QSTATE_SETCHILDMODE )
 /*
 void setErrorState ( QAbstractState * state )
 */
-HB_FUNC( QSTATE_SETERRORSTATE )
+HB_FUNC_STATIC( QSTATE_SETERRORSTATE )
 {
   QState * obj = (QState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -318,7 +318,7 @@ HB_FUNC( QSTATE_SETERRORSTATE )
 /*
 void setInitialState ( QAbstractState * state )
 */
-HB_FUNC( QSTATE_SETINITIALSTATE )
+HB_FUNC_STATIC( QSTATE_SETINITIALSTATE )
 {
   QState * obj = (QState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -333,7 +333,7 @@ HB_FUNC( QSTATE_SETINITIALSTATE )
 /*
 QList<QAbstractTransition *> transitions () const
 */
-HB_FUNC( QSTATE_TRANSITIONS )
+HB_FUNC_STATIC( QSTATE_TRANSITIONS )
 {
   QState * obj = (QState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

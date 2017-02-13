@@ -138,7 +138,7 @@ RETURN
 /*
 QWebPage ( QObject * parent = 0 )
 */
-HB_FUNC( QWEBPAGE_NEW )
+HB_FUNC_STATIC( QWEBPAGE_NEW )
 {
   QWebPage * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -151,7 +151,7 @@ HB_FUNC( QWEBPAGE_NEW )
 }
 
 
-HB_FUNC( QWEBPAGE_DELETE )
+HB_FUNC_STATIC( QWEBPAGE_DELETE )
 {
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -170,7 +170,7 @@ HB_FUNC( QWEBPAGE_DELETE )
 /*
 QAction * action ( WebAction action ) const
 */
-HB_FUNC( QWEBPAGE_ACTION )
+HB_FUNC_STATIC( QWEBPAGE_ACTION )
 {
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -184,7 +184,7 @@ HB_FUNC( QWEBPAGE_ACTION )
 /*
 quint64 bytesReceived () const
 */
-HB_FUNC( QWEBPAGE_BYTESRECEIVED )
+HB_FUNC_STATIC( QWEBPAGE_BYTESRECEIVED )
 {
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -198,7 +198,7 @@ HB_FUNC( QWEBPAGE_BYTESRECEIVED )
 /*
 QMenu * createStandardContextMenu ()
 */
-HB_FUNC( QWEBPAGE_CREATESTANDARDCONTEXTMENU )
+HB_FUNC_STATIC( QWEBPAGE_CREATESTANDARDCONTEXTMENU )
 {
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -211,7 +211,7 @@ HB_FUNC( QWEBPAGE_CREATESTANDARDCONTEXTMENU )
 /*
 QWebFrame * currentFrame () const
 */
-HB_FUNC( QWEBPAGE_CURRENTFRAME )
+HB_FUNC_STATIC( QWEBPAGE_CURRENTFRAME )
 {
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -224,7 +224,7 @@ HB_FUNC( QWEBPAGE_CURRENTFRAME )
 /*
 virtual bool extension ( Extension extension, const ExtensionOption * option = 0, ExtensionReturn * output = 0 )
 */
-HB_FUNC( QWEBPAGE_EXTENSION )
+HB_FUNC_STATIC( QWEBPAGE_EXTENSION )
 {
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -241,7 +241,7 @@ HB_FUNC( QWEBPAGE_EXTENSION )
 /*
 bool findText ( const QString & subString, FindFlags options = 0 )
 */
-HB_FUNC( QWEBPAGE_FINDTEXT )
+HB_FUNC_STATIC( QWEBPAGE_FINDTEXT )
 {
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -257,7 +257,7 @@ HB_FUNC( QWEBPAGE_FINDTEXT )
 /*
 bool focusNextPrevChild ( bool next )
 */
-HB_FUNC( QWEBPAGE_FOCUSNEXTPREVCHILD )
+HB_FUNC_STATIC( QWEBPAGE_FOCUSNEXTPREVCHILD )
 {
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -272,7 +272,7 @@ HB_FUNC( QWEBPAGE_FOCUSNEXTPREVCHILD )
 /*
 bool forwardUnsupportedContent () const
 */
-HB_FUNC( QWEBPAGE_FORWARDUNSUPPORTEDCONTENT )
+HB_FUNC_STATIC( QWEBPAGE_FORWARDUNSUPPORTEDCONTENT )
 {
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -286,7 +286,7 @@ HB_FUNC( QWEBPAGE_FORWARDUNSUPPORTEDCONTENT )
 /*
 QWebFrame * frameAt ( const QPoint & pos ) const
 */
-HB_FUNC( QWEBPAGE_FRAMEAT )
+HB_FUNC_STATIC( QWEBPAGE_FRAMEAT )
 {
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -300,7 +300,7 @@ HB_FUNC( QWEBPAGE_FRAMEAT )
 /*
 QWebHistory * history () const
 */
-HB_FUNC( QWEBPAGE_HISTORY )
+HB_FUNC_STATIC( QWEBPAGE_HISTORY )
 {
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -313,7 +313,7 @@ HB_FUNC( QWEBPAGE_HISTORY )
 /*
 QVariant inputMethodQuery ( Qt::InputMethodQuery property ) const
 */
-HB_FUNC( QWEBPAGE_INPUTMETHODQUERY )
+HB_FUNC_STATIC( QWEBPAGE_INPUTMETHODQUERY )
 {
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -327,7 +327,7 @@ HB_FUNC( QWEBPAGE_INPUTMETHODQUERY )
 /*
 bool isContentEditable () const
 */
-HB_FUNC( QWEBPAGE_ISCONTENTEDITABLE )
+HB_FUNC_STATIC( QWEBPAGE_ISCONTENTEDITABLE )
 {
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -341,7 +341,7 @@ HB_FUNC( QWEBPAGE_ISCONTENTEDITABLE )
 /*
 bool isModified () const
 */
-HB_FUNC( QWEBPAGE_ISMODIFIED )
+HB_FUNC_STATIC( QWEBPAGE_ISMODIFIED )
 {
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -355,7 +355,7 @@ HB_FUNC( QWEBPAGE_ISMODIFIED )
 /*
 LinkDelegationPolicy linkDelegationPolicy () const
 */
-HB_FUNC( QWEBPAGE_LINKDELEGATIONPOLICY )
+HB_FUNC_STATIC( QWEBPAGE_LINKDELEGATIONPOLICY )
 {
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -369,7 +369,7 @@ HB_FUNC( QWEBPAGE_LINKDELEGATIONPOLICY )
 /*
 QWebFrame * mainFrame () const
 */
-HB_FUNC( QWEBPAGE_MAINFRAME )
+HB_FUNC_STATIC( QWEBPAGE_MAINFRAME )
 {
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -382,7 +382,7 @@ HB_FUNC( QWEBPAGE_MAINFRAME )
 /*
 QNetworkAccessManager * networkAccessManager () const
 */
-HB_FUNC( QWEBPAGE_NETWORKACCESSMANAGER )
+HB_FUNC_STATIC( QWEBPAGE_NETWORKACCESSMANAGER )
 {
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -395,7 +395,7 @@ HB_FUNC( QWEBPAGE_NETWORKACCESSMANAGER )
 /*
 QPalette palette () const
 */
-HB_FUNC( QWEBPAGE_PALETTE )
+HB_FUNC_STATIC( QWEBPAGE_PALETTE )
 {
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -408,7 +408,7 @@ HB_FUNC( QWEBPAGE_PALETTE )
 /*
 QWebPluginFactory * pluginFactory () const
 */
-HB_FUNC( QWEBPAGE_PLUGINFACTORY )
+HB_FUNC_STATIC( QWEBPAGE_PLUGINFACTORY )
 {
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -421,7 +421,7 @@ HB_FUNC( QWEBPAGE_PLUGINFACTORY )
 /*
 QSize preferredContentsSize () const
 */
-HB_FUNC( QWEBPAGE_PREFERREDCONTENTSSIZE )
+HB_FUNC_STATIC( QWEBPAGE_PREFERREDCONTENTSSIZE )
 {
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -434,7 +434,7 @@ HB_FUNC( QWEBPAGE_PREFERREDCONTENTSSIZE )
 /*
 QString selectedText () const
 */
-HB_FUNC( QWEBPAGE_SELECTEDTEXT )
+HB_FUNC_STATIC( QWEBPAGE_SELECTEDTEXT )
 {
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -448,7 +448,7 @@ HB_FUNC( QWEBPAGE_SELECTEDTEXT )
 /*
 void setContentEditable ( bool editable )
 */
-HB_FUNC( QWEBPAGE_SETCONTENTEDITABLE )
+HB_FUNC_STATIC( QWEBPAGE_SETCONTENTEDITABLE )
 {
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -463,7 +463,7 @@ HB_FUNC( QWEBPAGE_SETCONTENTEDITABLE )
 /*
 void setForwardUnsupportedContent ( bool forward )
 */
-HB_FUNC( QWEBPAGE_SETFORWARDUNSUPPORTEDCONTENT )
+HB_FUNC_STATIC( QWEBPAGE_SETFORWARDUNSUPPORTEDCONTENT )
 {
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -478,7 +478,7 @@ HB_FUNC( QWEBPAGE_SETFORWARDUNSUPPORTEDCONTENT )
 /*
 void setLinkDelegationPolicy ( LinkDelegationPolicy policy )
 */
-HB_FUNC( QWEBPAGE_SETLINKDELEGATIONPOLICY )
+HB_FUNC_STATIC( QWEBPAGE_SETLINKDELEGATIONPOLICY )
 {
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -493,7 +493,7 @@ HB_FUNC( QWEBPAGE_SETLINKDELEGATIONPOLICY )
 /*
 void setNetworkAccessManager ( QNetworkAccessManager * manager )
 */
-HB_FUNC( QWEBPAGE_SETNETWORKACCESSMANAGER )
+HB_FUNC_STATIC( QWEBPAGE_SETNETWORKACCESSMANAGER )
 {
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -508,7 +508,7 @@ HB_FUNC( QWEBPAGE_SETNETWORKACCESSMANAGER )
 /*
 void setPalette ( const QPalette & palette )
 */
-HB_FUNC( QWEBPAGE_SETPALETTE )
+HB_FUNC_STATIC( QWEBPAGE_SETPALETTE )
 {
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -523,7 +523,7 @@ HB_FUNC( QWEBPAGE_SETPALETTE )
 /*
 void setPluginFactory ( QWebPluginFactory * factory )
 */
-HB_FUNC( QWEBPAGE_SETPLUGINFACTORY )
+HB_FUNC_STATIC( QWEBPAGE_SETPLUGINFACTORY )
 {
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -538,7 +538,7 @@ HB_FUNC( QWEBPAGE_SETPLUGINFACTORY )
 /*
 void setPreferredContentsSize ( const QSize & size ) const
 */
-HB_FUNC( QWEBPAGE_SETPREFERREDCONTENTSSIZE )
+HB_FUNC_STATIC( QWEBPAGE_SETPREFERREDCONTENTSSIZE )
 {
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -553,7 +553,7 @@ HB_FUNC( QWEBPAGE_SETPREFERREDCONTENTSSIZE )
 /*
 void setView ( QWidget * view )
 */
-HB_FUNC( QWEBPAGE_SETVIEW )
+HB_FUNC_STATIC( QWEBPAGE_SETVIEW )
 {
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -568,7 +568,7 @@ HB_FUNC( QWEBPAGE_SETVIEW )
 /*
 void setViewportSize ( const QSize & size ) const
 */
-HB_FUNC( QWEBPAGE_SETVIEWPORTSIZE )
+HB_FUNC_STATIC( QWEBPAGE_SETVIEWPORTSIZE )
 {
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -583,7 +583,7 @@ HB_FUNC( QWEBPAGE_SETVIEWPORTSIZE )
 /*
 QWebSettings * settings () const
 */
-HB_FUNC( QWEBPAGE_SETTINGS )
+HB_FUNC_STATIC( QWEBPAGE_SETTINGS )
 {
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -596,7 +596,7 @@ HB_FUNC( QWEBPAGE_SETTINGS )
 /*
 virtual bool supportsExtension ( Extension extension ) const
 */
-HB_FUNC( QWEBPAGE_SUPPORTSEXTENSION )
+HB_FUNC_STATIC( QWEBPAGE_SUPPORTSEXTENSION )
 {
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -611,7 +611,7 @@ HB_FUNC( QWEBPAGE_SUPPORTSEXTENSION )
 /*
 bool swallowContextMenuEvent ( QContextMenuEvent * event )
 */
-HB_FUNC( QWEBPAGE_SWALLOWCONTEXTMENUEVENT )
+HB_FUNC_STATIC( QWEBPAGE_SWALLOWCONTEXTMENUEVENT )
 {
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -626,7 +626,7 @@ HB_FUNC( QWEBPAGE_SWALLOWCONTEXTMENUEVENT )
 /*
 quint64 totalBytes () const
 */
-HB_FUNC( QWEBPAGE_TOTALBYTES )
+HB_FUNC_STATIC( QWEBPAGE_TOTALBYTES )
 {
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -640,7 +640,7 @@ HB_FUNC( QWEBPAGE_TOTALBYTES )
 /*
 virtual void triggerAction ( WebAction action, bool checked = false )
 */
-HB_FUNC( QWEBPAGE_TRIGGERACTION )
+HB_FUNC_STATIC( QWEBPAGE_TRIGGERACTION )
 {
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -656,7 +656,7 @@ HB_FUNC( QWEBPAGE_TRIGGERACTION )
 /*
 QUndoStack * undoStack () const
 */
-HB_FUNC( QWEBPAGE_UNDOSTACK )
+HB_FUNC_STATIC( QWEBPAGE_UNDOSTACK )
 {
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -669,7 +669,7 @@ HB_FUNC( QWEBPAGE_UNDOSTACK )
 /*
 void updatePositionDependentActions ( const QPoint & pos )
 */
-HB_FUNC( QWEBPAGE_UPDATEPOSITIONDEPENDENTACTIONS )
+HB_FUNC_STATIC( QWEBPAGE_UPDATEPOSITIONDEPENDENTACTIONS )
 {
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -684,7 +684,7 @@ HB_FUNC( QWEBPAGE_UPDATEPOSITIONDEPENDENTACTIONS )
 /*
 QWidget * view () const
 */
-HB_FUNC( QWEBPAGE_VIEW )
+HB_FUNC_STATIC( QWEBPAGE_VIEW )
 {
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -697,7 +697,7 @@ HB_FUNC( QWEBPAGE_VIEW )
 /*
 QSize viewportSize () const
 */
-HB_FUNC( QWEBPAGE_VIEWPORTSIZE )
+HB_FUNC_STATIC( QWEBPAGE_VIEWPORTSIZE )
 {
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -710,7 +710,7 @@ HB_FUNC( QWEBPAGE_VIEWPORTSIZE )
 /*
 virtual bool event ( QEvent * ev )
 */
-HB_FUNC( QWEBPAGE_EVENT )
+HB_FUNC_STATIC( QWEBPAGE_EVENT )
 {
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -725,7 +725,7 @@ HB_FUNC( QWEBPAGE_EVENT )
 /*
 bool shouldInterruptJavaScript ()
 */
-HB_FUNC( QWEBPAGE_SHOULDINTERRUPTJAVASCRIPT )
+HB_FUNC_STATIC( QWEBPAGE_SHOULDINTERRUPTJAVASCRIPT )
 {
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

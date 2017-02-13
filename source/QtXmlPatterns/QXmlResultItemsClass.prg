@@ -103,7 +103,7 @@ RETURN
 /*
 QXmlResultItems ()
 */
-HB_FUNC( QXMLRESULTITEMS_NEW )
+HB_FUNC_STATIC( QXMLRESULTITEMS_NEW )
 {
   QXmlResultItems * o = NULL;
   o = new QXmlResultItems (  );
@@ -118,7 +118,7 @@ HB_FUNC( QXMLRESULTITEMS_NEW )
 }
 
 
-HB_FUNC( QXMLRESULTITEMS_DELETE )
+HB_FUNC_STATIC( QXMLRESULTITEMS_DELETE )
 {
   QXmlResultItems * obj = (QXmlResultItems *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -137,7 +137,7 @@ HB_FUNC( QXMLRESULTITEMS_DELETE )
 /*
 QXmlItem current () const
 */
-HB_FUNC( QXMLRESULTITEMS_CURRENT )
+HB_FUNC_STATIC( QXMLRESULTITEMS_CURRENT )
 {
   QXmlResultItems * obj = (QXmlResultItems *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -150,7 +150,7 @@ HB_FUNC( QXMLRESULTITEMS_CURRENT )
 /*
 bool hasError () const
 */
-HB_FUNC( QXMLRESULTITEMS_HASERROR )
+HB_FUNC_STATIC( QXMLRESULTITEMS_HASERROR )
 {
   QXmlResultItems * obj = (QXmlResultItems *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -164,7 +164,7 @@ HB_FUNC( QXMLRESULTITEMS_HASERROR )
 /*
 QXmlItem next ()
 */
-HB_FUNC( QXMLRESULTITEMS_NEXT )
+HB_FUNC_STATIC( QXMLRESULTITEMS_NEXT )
 {
   QXmlResultItems * obj = (QXmlResultItems *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

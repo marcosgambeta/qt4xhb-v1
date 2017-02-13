@@ -63,7 +63,7 @@ RETURN
 /*
 QInputEvent(Type type, Qt::KeyboardModifiers modifiers = Qt::NoModifier)
 */
-HB_FUNC( QINPUTEVENT_NEW )
+HB_FUNC_STATIC( QINPUTEVENT_NEW )
 {
   QInputEvent * o = NULL;
   int par1 = hb_parni(1);
@@ -77,7 +77,7 @@ HB_FUNC( QINPUTEVENT_NEW )
 }
 
 
-HB_FUNC( QINPUTEVENT_DELETE )
+HB_FUNC_STATIC( QINPUTEVENT_DELETE )
 {
   QInputEvent * obj = (QInputEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -96,7 +96,7 @@ HB_FUNC( QINPUTEVENT_DELETE )
 /*
 Qt::KeyboardModifiers modifiers() const
 */
-HB_FUNC( QINPUTEVENT_MODIFIERS )
+HB_FUNC_STATIC( QINPUTEVENT_MODIFIERS )
 {
   QInputEvent * obj = (QInputEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -110,7 +110,7 @@ HB_FUNC( QINPUTEVENT_MODIFIERS )
 /*
 void setModifiers(Qt::KeyboardModifiers amodifiers)
 */
-HB_FUNC( QINPUTEVENT_SETMODIFIERS )
+HB_FUNC_STATIC( QINPUTEVENT_SETMODIFIERS )
 {
   QInputEvent * obj = (QInputEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

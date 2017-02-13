@@ -60,7 +60,7 @@ RETURN
 /*
 QHideEvent ()
 */
-HB_FUNC( QHIDEEVENT_NEW )
+HB_FUNC_STATIC( QHIDEEVENT_NEW )
 {
   QHideEvent * o = NULL;
   o = new QHideEvent (  );
@@ -72,7 +72,7 @@ HB_FUNC( QHIDEEVENT_NEW )
 }
 
 
-HB_FUNC( QHIDEEVENT_DELETE )
+HB_FUNC_STATIC( QHIDEEVENT_DELETE )
 {
   QHideEvent * obj = (QHideEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

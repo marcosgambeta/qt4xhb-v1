@@ -102,7 +102,7 @@ RETURN
 #include <QVariant>
 
 
-HB_FUNC( QABSTRACTVIDEOBUFFER_DELETE )
+HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_DELETE )
 {
   QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -121,7 +121,7 @@ HB_FUNC( QABSTRACTVIDEOBUFFER_DELETE )
 /*
 virtual QVariant handle () const
 */
-HB_FUNC( QABSTRACTVIDEOBUFFER_HANDLE )
+HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_HANDLE )
 {
   QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -134,7 +134,7 @@ HB_FUNC( QABSTRACTVIDEOBUFFER_HANDLE )
 /*
 HandleType handleType () const
 */
-HB_FUNC( QABSTRACTVIDEOBUFFER_HANDLETYPE )
+HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_HANDLETYPE )
 {
   QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -148,7 +148,7 @@ HB_FUNC( QABSTRACTVIDEOBUFFER_HANDLETYPE )
 /*
 virtual uchar * map ( MapMode mode, int * numBytes, int * bytesPerLine ) = 0
 */
-HB_FUNC( QABSTRACTVIDEOBUFFER_MAP )
+HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_MAP )
 {
   QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -166,7 +166,7 @@ HB_FUNC( QABSTRACTVIDEOBUFFER_MAP )
 /*
 virtual MapMode mapMode () const = 0
 */
-HB_FUNC( QABSTRACTVIDEOBUFFER_MAPMODE )
+HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_MAPMODE )
 {
   QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -180,7 +180,7 @@ HB_FUNC( QABSTRACTVIDEOBUFFER_MAPMODE )
 /*
 virtual void unmap () = 0
 */
-HB_FUNC( QABSTRACTVIDEOBUFFER_UNMAP )
+HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_UNMAP )
 {
   QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

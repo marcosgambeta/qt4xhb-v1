@@ -111,7 +111,7 @@ RETURN
 /*
 QCalendarWidget ( QWidget * parent = 0 )
 */
-HB_FUNC( QCALENDARWIDGET_NEW )
+HB_FUNC_STATIC( QCALENDARWIDGET_NEW )
 {
   QCalendarWidget * o = NULL;
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -124,7 +124,7 @@ HB_FUNC( QCALENDARWIDGET_NEW )
 }
 
 
-HB_FUNC( QCALENDARWIDGET_DELETE )
+HB_FUNC_STATIC( QCALENDARWIDGET_DELETE )
 {
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -143,7 +143,7 @@ HB_FUNC( QCALENDARWIDGET_DELETE )
 /*
 int dateEditAcceptDelay () const
 */
-HB_FUNC( QCALENDARWIDGET_DATEEDITACCEPTDELAY )
+HB_FUNC_STATIC( QCALENDARWIDGET_DATEEDITACCEPTDELAY )
 {
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -158,7 +158,7 @@ HB_FUNC( QCALENDARWIDGET_DATEEDITACCEPTDELAY )
 /*
 QTextCharFormat dateTextFormat ( const QDate & date ) const
 */
-HB_FUNC( QCALENDARWIDGET_DATETEXTFORMAT2 )
+HB_FUNC_STATIC( QCALENDARWIDGET_DATETEXTFORMAT2 )
 {
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -172,7 +172,7 @@ HB_FUNC( QCALENDARWIDGET_DATETEXTFORMAT2 )
 //[1]QMap<QDate, QTextCharFormat> dateTextFormat () const
 //[2]QTextCharFormat dateTextFormat ( const QDate & date ) const
 
-HB_FUNC( QCALENDARWIDGET_DATETEXTFORMAT )
+HB_FUNC_STATIC( QCALENDARWIDGET_DATETEXTFORMAT )
 {
   //if( ISNUMPAR(0) )
   //{
@@ -187,7 +187,7 @@ HB_FUNC( QCALENDARWIDGET_DATETEXTFORMAT )
 /*
 Qt::DayOfWeek firstDayOfWeek () const
 */
-HB_FUNC( QCALENDARWIDGET_FIRSTDAYOFWEEK )
+HB_FUNC_STATIC( QCALENDARWIDGET_FIRSTDAYOFWEEK )
 {
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -201,7 +201,7 @@ HB_FUNC( QCALENDARWIDGET_FIRSTDAYOFWEEK )
 /*
 QTextCharFormat headerTextFormat () const
 */
-HB_FUNC( QCALENDARWIDGET_HEADERTEXTFORMAT )
+HB_FUNC_STATIC( QCALENDARWIDGET_HEADERTEXTFORMAT )
 {
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -214,7 +214,7 @@ HB_FUNC( QCALENDARWIDGET_HEADERTEXTFORMAT )
 /*
 HorizontalHeaderFormat horizontalHeaderFormat () const
 */
-HB_FUNC( QCALENDARWIDGET_HORIZONTALHEADERFORMAT )
+HB_FUNC_STATIC( QCALENDARWIDGET_HORIZONTALHEADERFORMAT )
 {
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -228,7 +228,7 @@ HB_FUNC( QCALENDARWIDGET_HORIZONTALHEADERFORMAT )
 /*
 bool isDateEditEnabled () const
 */
-HB_FUNC( QCALENDARWIDGET_ISDATEEDITENABLED )
+HB_FUNC_STATIC( QCALENDARWIDGET_ISDATEEDITENABLED )
 {
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -242,7 +242,7 @@ HB_FUNC( QCALENDARWIDGET_ISDATEEDITENABLED )
 /*
 bool isGridVisible () const
 */
-HB_FUNC( QCALENDARWIDGET_ISGRIDVISIBLE )
+HB_FUNC_STATIC( QCALENDARWIDGET_ISGRIDVISIBLE )
 {
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -256,7 +256,7 @@ HB_FUNC( QCALENDARWIDGET_ISGRIDVISIBLE )
 /*
 bool isNavigationBarVisible () const
 */
-HB_FUNC( QCALENDARWIDGET_ISNAVIGATIONBARVISIBLE )
+HB_FUNC_STATIC( QCALENDARWIDGET_ISNAVIGATIONBARVISIBLE )
 {
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -270,7 +270,7 @@ HB_FUNC( QCALENDARWIDGET_ISNAVIGATIONBARVISIBLE )
 /*
 QDate maximumDate () const
 */
-HB_FUNC( QCALENDARWIDGET_MAXIMUMDATE )
+HB_FUNC_STATIC( QCALENDARWIDGET_MAXIMUMDATE )
 {
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -283,7 +283,7 @@ HB_FUNC( QCALENDARWIDGET_MAXIMUMDATE )
 /*
 QDate minimumDate () const
 */
-HB_FUNC( QCALENDARWIDGET_MINIMUMDATE )
+HB_FUNC_STATIC( QCALENDARWIDGET_MINIMUMDATE )
 {
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -296,7 +296,7 @@ HB_FUNC( QCALENDARWIDGET_MINIMUMDATE )
 /*
 int monthShown () const
 */
-HB_FUNC( QCALENDARWIDGET_MONTHSHOWN )
+HB_FUNC_STATIC( QCALENDARWIDGET_MONTHSHOWN )
 {
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -310,7 +310,7 @@ HB_FUNC( QCALENDARWIDGET_MONTHSHOWN )
 /*
 QDate selectedDate () const
 */
-HB_FUNC( QCALENDARWIDGET_SELECTEDDATE )
+HB_FUNC_STATIC( QCALENDARWIDGET_SELECTEDDATE )
 {
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -323,7 +323,7 @@ HB_FUNC( QCALENDARWIDGET_SELECTEDDATE )
 /*
 SelectionMode selectionMode () const
 */
-HB_FUNC( QCALENDARWIDGET_SELECTIONMODE )
+HB_FUNC_STATIC( QCALENDARWIDGET_SELECTIONMODE )
 {
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -337,7 +337,7 @@ HB_FUNC( QCALENDARWIDGET_SELECTIONMODE )
 /*
 void setDateEditAcceptDelay ( int delay )
 */
-HB_FUNC( QCALENDARWIDGET_SETDATEEDITACCEPTDELAY )
+HB_FUNC_STATIC( QCALENDARWIDGET_SETDATEEDITACCEPTDELAY )
 {
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -352,7 +352,7 @@ HB_FUNC( QCALENDARWIDGET_SETDATEEDITACCEPTDELAY )
 /*
 void setDateEditEnabled ( bool enable )
 */
-HB_FUNC( QCALENDARWIDGET_SETDATEEDITENABLED )
+HB_FUNC_STATIC( QCALENDARWIDGET_SETDATEEDITENABLED )
 {
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -367,7 +367,7 @@ HB_FUNC( QCALENDARWIDGET_SETDATEEDITENABLED )
 /*
 void setDateTextFormat ( const QDate & date, const QTextCharFormat & format )
 */
-HB_FUNC( QCALENDARWIDGET_SETDATETEXTFORMAT )
+HB_FUNC_STATIC( QCALENDARWIDGET_SETDATETEXTFORMAT )
 {
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -383,7 +383,7 @@ HB_FUNC( QCALENDARWIDGET_SETDATETEXTFORMAT )
 /*
 void setFirstDayOfWeek ( Qt::DayOfWeek dayOfWeek )
 */
-HB_FUNC( QCALENDARWIDGET_SETFIRSTDAYOFWEEK )
+HB_FUNC_STATIC( QCALENDARWIDGET_SETFIRSTDAYOFWEEK )
 {
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -398,7 +398,7 @@ HB_FUNC( QCALENDARWIDGET_SETFIRSTDAYOFWEEK )
 /*
 void setHeaderTextFormat ( const QTextCharFormat & format )
 */
-HB_FUNC( QCALENDARWIDGET_SETHEADERTEXTFORMAT )
+HB_FUNC_STATIC( QCALENDARWIDGET_SETHEADERTEXTFORMAT )
 {
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -413,7 +413,7 @@ HB_FUNC( QCALENDARWIDGET_SETHEADERTEXTFORMAT )
 /*
 void setHorizontalHeaderFormat ( HorizontalHeaderFormat format )
 */
-HB_FUNC( QCALENDARWIDGET_SETHORIZONTALHEADERFORMAT )
+HB_FUNC_STATIC( QCALENDARWIDGET_SETHORIZONTALHEADERFORMAT )
 {
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -428,7 +428,7 @@ HB_FUNC( QCALENDARWIDGET_SETHORIZONTALHEADERFORMAT )
 /*
 void setMaximumDate ( const QDate & date )
 */
-HB_FUNC( QCALENDARWIDGET_SETMAXIMUMDATE )
+HB_FUNC_STATIC( QCALENDARWIDGET_SETMAXIMUMDATE )
 {
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -443,7 +443,7 @@ HB_FUNC( QCALENDARWIDGET_SETMAXIMUMDATE )
 /*
 void setMinimumDate ( const QDate & date )
 */
-HB_FUNC( QCALENDARWIDGET_SETMINIMUMDATE )
+HB_FUNC_STATIC( QCALENDARWIDGET_SETMINIMUMDATE )
 {
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -458,7 +458,7 @@ HB_FUNC( QCALENDARWIDGET_SETMINIMUMDATE )
 /*
 void setSelectionMode ( SelectionMode mode )
 */
-HB_FUNC( QCALENDARWIDGET_SETSELECTIONMODE )
+HB_FUNC_STATIC( QCALENDARWIDGET_SETSELECTIONMODE )
 {
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -473,7 +473,7 @@ HB_FUNC( QCALENDARWIDGET_SETSELECTIONMODE )
 /*
 void setVerticalHeaderFormat ( VerticalHeaderFormat format )
 */
-HB_FUNC( QCALENDARWIDGET_SETVERTICALHEADERFORMAT )
+HB_FUNC_STATIC( QCALENDARWIDGET_SETVERTICALHEADERFORMAT )
 {
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -488,7 +488,7 @@ HB_FUNC( QCALENDARWIDGET_SETVERTICALHEADERFORMAT )
 /*
 void setWeekdayTextFormat ( Qt::DayOfWeek dayOfWeek, const QTextCharFormat & format )
 */
-HB_FUNC( QCALENDARWIDGET_SETWEEKDAYTEXTFORMAT )
+HB_FUNC_STATIC( QCALENDARWIDGET_SETWEEKDAYTEXTFORMAT )
 {
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -504,7 +504,7 @@ HB_FUNC( QCALENDARWIDGET_SETWEEKDAYTEXTFORMAT )
 /*
 VerticalHeaderFormat verticalHeaderFormat () const
 */
-HB_FUNC( QCALENDARWIDGET_VERTICALHEADERFORMAT )
+HB_FUNC_STATIC( QCALENDARWIDGET_VERTICALHEADERFORMAT )
 {
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -518,7 +518,7 @@ HB_FUNC( QCALENDARWIDGET_VERTICALHEADERFORMAT )
 /*
 QTextCharFormat weekdayTextFormat ( Qt::DayOfWeek dayOfWeek ) const
 */
-HB_FUNC( QCALENDARWIDGET_WEEKDAYTEXTFORMAT )
+HB_FUNC_STATIC( QCALENDARWIDGET_WEEKDAYTEXTFORMAT )
 {
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -532,7 +532,7 @@ HB_FUNC( QCALENDARWIDGET_WEEKDAYTEXTFORMAT )
 /*
 int yearShown () const
 */
-HB_FUNC( QCALENDARWIDGET_YEARSHOWN )
+HB_FUNC_STATIC( QCALENDARWIDGET_YEARSHOWN )
 {
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -546,7 +546,7 @@ HB_FUNC( QCALENDARWIDGET_YEARSHOWN )
 /*
 virtual QSize minimumSizeHint () const
 */
-HB_FUNC( QCALENDARWIDGET_MINIMUMSIZEHINT )
+HB_FUNC_STATIC( QCALENDARWIDGET_MINIMUMSIZEHINT )
 {
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -559,7 +559,7 @@ HB_FUNC( QCALENDARWIDGET_MINIMUMSIZEHINT )
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC( QCALENDARWIDGET_SIZEHINT )
+HB_FUNC_STATIC( QCALENDARWIDGET_SIZEHINT )
 {
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -572,7 +572,7 @@ HB_FUNC( QCALENDARWIDGET_SIZEHINT )
 /*
 void setCurrentPage ( int year, int month )
 */
-HB_FUNC( QCALENDARWIDGET_SETCURRENTPAGE )
+HB_FUNC_STATIC( QCALENDARWIDGET_SETCURRENTPAGE )
 {
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -588,7 +588,7 @@ HB_FUNC( QCALENDARWIDGET_SETCURRENTPAGE )
 /*
 void setDateRange ( const QDate & min, const QDate & max )
 */
-HB_FUNC( QCALENDARWIDGET_SETDATERANGE )
+HB_FUNC_STATIC( QCALENDARWIDGET_SETDATERANGE )
 {
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -604,7 +604,7 @@ HB_FUNC( QCALENDARWIDGET_SETDATERANGE )
 /*
 void setGridVisible ( bool show )
 */
-HB_FUNC( QCALENDARWIDGET_SETGRIDVISIBLE )
+HB_FUNC_STATIC( QCALENDARWIDGET_SETGRIDVISIBLE )
 {
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -619,7 +619,7 @@ HB_FUNC( QCALENDARWIDGET_SETGRIDVISIBLE )
 /*
 void setNavigationBarVisible ( bool visible )
 */
-HB_FUNC( QCALENDARWIDGET_SETNAVIGATIONBARVISIBLE )
+HB_FUNC_STATIC( QCALENDARWIDGET_SETNAVIGATIONBARVISIBLE )
 {
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -634,7 +634,7 @@ HB_FUNC( QCALENDARWIDGET_SETNAVIGATIONBARVISIBLE )
 /*
 void setSelectedDate ( const QDate & date )
 */
-HB_FUNC( QCALENDARWIDGET_SETSELECTEDDATE )
+HB_FUNC_STATIC( QCALENDARWIDGET_SETSELECTEDDATE )
 {
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -649,7 +649,7 @@ HB_FUNC( QCALENDARWIDGET_SETSELECTEDDATE )
 /*
 void showNextMonth ()
 */
-HB_FUNC( QCALENDARWIDGET_SHOWNEXTMONTH )
+HB_FUNC_STATIC( QCALENDARWIDGET_SHOWNEXTMONTH )
 {
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -663,7 +663,7 @@ HB_FUNC( QCALENDARWIDGET_SHOWNEXTMONTH )
 /*
 void showNextYear ()
 */
-HB_FUNC( QCALENDARWIDGET_SHOWNEXTYEAR )
+HB_FUNC_STATIC( QCALENDARWIDGET_SHOWNEXTYEAR )
 {
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -677,7 +677,7 @@ HB_FUNC( QCALENDARWIDGET_SHOWNEXTYEAR )
 /*
 void showPreviousMonth ()
 */
-HB_FUNC( QCALENDARWIDGET_SHOWPREVIOUSMONTH )
+HB_FUNC_STATIC( QCALENDARWIDGET_SHOWPREVIOUSMONTH )
 {
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -691,7 +691,7 @@ HB_FUNC( QCALENDARWIDGET_SHOWPREVIOUSMONTH )
 /*
 void showPreviousYear ()
 */
-HB_FUNC( QCALENDARWIDGET_SHOWPREVIOUSYEAR )
+HB_FUNC_STATIC( QCALENDARWIDGET_SHOWPREVIOUSYEAR )
 {
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -705,7 +705,7 @@ HB_FUNC( QCALENDARWIDGET_SHOWPREVIOUSYEAR )
 /*
 void showSelectedDate ()
 */
-HB_FUNC( QCALENDARWIDGET_SHOWSELECTEDDATE )
+HB_FUNC_STATIC( QCALENDARWIDGET_SHOWSELECTEDDATE )
 {
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -719,7 +719,7 @@ HB_FUNC( QCALENDARWIDGET_SHOWSELECTEDDATE )
 /*
 void showToday ()
 */
-HB_FUNC( QCALENDARWIDGET_SHOWTODAY )
+HB_FUNC_STATIC( QCALENDARWIDGET_SHOWTODAY )
 {
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

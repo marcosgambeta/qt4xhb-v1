@@ -61,7 +61,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QABSTRACTLISTMODEL_DELETE )
+HB_FUNC_STATIC( QABSTRACTLISTMODEL_DELETE )
 {
   QAbstractListModel * obj = (QAbstractListModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -80,7 +80,7 @@ HB_FUNC( QABSTRACTLISTMODEL_DELETE )
 /*
 virtual bool dropMimeData ( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
 */
-HB_FUNC( QABSTRACTLISTMODEL_DROPMIMEDATA )
+HB_FUNC_STATIC( QABSTRACTLISTMODEL_DROPMIMEDATA )
 {
   QAbstractListModel * obj = (QAbstractListModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -99,7 +99,7 @@ HB_FUNC( QABSTRACTLISTMODEL_DROPMIMEDATA )
 /*
 virtual QModelIndex index ( int row, int column = 0, const QModelIndex & parent = QModelIndex() ) const
 */
-HB_FUNC( QABSTRACTLISTMODEL_INDEX )
+HB_FUNC_STATIC( QABSTRACTLISTMODEL_INDEX )
 {
   QAbstractListModel * obj = (QAbstractListModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

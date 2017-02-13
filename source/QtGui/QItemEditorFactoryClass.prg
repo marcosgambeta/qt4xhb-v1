@@ -104,7 +104,7 @@ RETURN
 /*
 QItemEditorFactory ()
 */
-HB_FUNC( QITEMEDITORFACTORY_NEW )
+HB_FUNC_STATIC( QITEMEDITORFACTORY_NEW )
 {
   QItemEditorFactory * o = NULL;
   o = new QItemEditorFactory (  );
@@ -116,7 +116,7 @@ HB_FUNC( QITEMEDITORFACTORY_NEW )
 }
 
 
-HB_FUNC( QITEMEDITORFACTORY_DELETE )
+HB_FUNC_STATIC( QITEMEDITORFACTORY_DELETE )
 {
   QItemEditorFactory * obj = (QItemEditorFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -135,7 +135,7 @@ HB_FUNC( QITEMEDITORFACTORY_DELETE )
 /*
 virtual QWidget * createEditor ( QVariant::Type type, QWidget * parent ) const
 */
-HB_FUNC( QITEMEDITORFACTORY_CREATEEDITOR )
+HB_FUNC_STATIC( QITEMEDITORFACTORY_CREATEEDITOR )
 {
   QItemEditorFactory * obj = (QItemEditorFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -150,7 +150,7 @@ HB_FUNC( QITEMEDITORFACTORY_CREATEEDITOR )
 /*
 void registerEditor ( QVariant::Type type, QItemEditorCreatorBase * creator )
 */
-HB_FUNC( QITEMEDITORFACTORY_REGISTEREDITOR )
+HB_FUNC_STATIC( QITEMEDITORFACTORY_REGISTEREDITOR )
 {
   QItemEditorFactory * obj = (QItemEditorFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -166,7 +166,7 @@ HB_FUNC( QITEMEDITORFACTORY_REGISTEREDITOR )
 /*
 virtual QByteArray valuePropertyName ( QVariant::Type type ) const
 */
-HB_FUNC( QITEMEDITORFACTORY_VALUEPROPERTYNAME )
+HB_FUNC_STATIC( QITEMEDITORFACTORY_VALUEPROPERTYNAME )
 {
   QItemEditorFactory * obj = (QItemEditorFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -181,7 +181,7 @@ HB_FUNC( QITEMEDITORFACTORY_VALUEPROPERTYNAME )
 /*
 const QItemEditorFactory * defaultFactory ()
 */
-HB_FUNC( QITEMEDITORFACTORY_DEFAULTFACTORY )
+HB_FUNC_STATIC( QITEMEDITORFACTORY_DEFAULTFACTORY )
 {
   const QItemEditorFactory * ptr = QItemEditorFactory::defaultFactory (  );
   _qt4xhb_createReturnClass ( ptr, "QITEMEDITORFACTORY" );}
@@ -190,7 +190,7 @@ HB_FUNC( QITEMEDITORFACTORY_DEFAULTFACTORY )
 /*
 void setDefaultFactory ( QItemEditorFactory * factory )
 */
-HB_FUNC( QITEMEDITORFACTORY_SETDEFAULTFACTORY )
+HB_FUNC_STATIC( QITEMEDITORFACTORY_SETDEFAULTFACTORY )
 {
   QItemEditorFactory * par1 = (QItemEditorFactory *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QItemEditorFactory::setDefaultFactory ( par1 );

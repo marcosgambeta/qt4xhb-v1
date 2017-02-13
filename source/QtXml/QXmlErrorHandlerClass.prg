@@ -96,7 +96,7 @@ RETURN
 #include "qt4xhb_clsid.h"
 #include "qt4xhb_utils.h"
 
-HB_FUNC( QXMLERRORHANDLER_DELETE )
+HB_FUNC_STATIC( QXMLERRORHANDLER_DELETE )
 {
   QXmlErrorHandler * obj = (QXmlErrorHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -115,7 +115,7 @@ HB_FUNC( QXMLERRORHANDLER_DELETE )
 /*
 virtual bool error ( const QXmlParseException & exception ) = 0
 */
-HB_FUNC( QXMLERRORHANDLER_ERROR )
+HB_FUNC_STATIC( QXMLERRORHANDLER_ERROR )
 {
   QXmlErrorHandler * obj = (QXmlErrorHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -130,7 +130,7 @@ HB_FUNC( QXMLERRORHANDLER_ERROR )
 /*
 virtual QString errorString () const = 0
 */
-HB_FUNC( QXMLERRORHANDLER_ERRORSTRING )
+HB_FUNC_STATIC( QXMLERRORHANDLER_ERRORSTRING )
 {
   QXmlErrorHandler * obj = (QXmlErrorHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -144,7 +144,7 @@ HB_FUNC( QXMLERRORHANDLER_ERRORSTRING )
 /*
 virtual bool fatalError ( const QXmlParseException & exception ) = 0
 */
-HB_FUNC( QXMLERRORHANDLER_FATALERROR )
+HB_FUNC_STATIC( QXMLERRORHANDLER_FATALERROR )
 {
   QXmlErrorHandler * obj = (QXmlErrorHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -159,7 +159,7 @@ HB_FUNC( QXMLERRORHANDLER_FATALERROR )
 /*
 virtual bool warning ( const QXmlParseException & exception ) = 0
 */
-HB_FUNC( QXMLERRORHANDLER_WARNING )
+HB_FUNC_STATIC( QXMLERRORHANDLER_WARNING )
 {
   QXmlErrorHandler * obj = (QXmlErrorHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

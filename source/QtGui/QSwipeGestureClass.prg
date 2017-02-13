@@ -61,7 +61,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QSWIPEGESTURE_DELETE )
+HB_FUNC_STATIC( QSWIPEGESTURE_DELETE )
 {
   QSwipeGesture * obj = (QSwipeGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -80,7 +80,7 @@ HB_FUNC( QSWIPEGESTURE_DELETE )
 /*
 SwipeDirection horizontalDirection () const
 */
-HB_FUNC( QSWIPEGESTURE_HORIZONTALDIRECTION )
+HB_FUNC_STATIC( QSWIPEGESTURE_HORIZONTALDIRECTION )
 {
   QSwipeGesture * obj = (QSwipeGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -94,7 +94,7 @@ HB_FUNC( QSWIPEGESTURE_HORIZONTALDIRECTION )
 /*
 void setSwipeAngle ( qreal value )
 */
-HB_FUNC( QSWIPEGESTURE_SETSWIPEANGLE )
+HB_FUNC_STATIC( QSWIPEGESTURE_SETSWIPEANGLE )
 {
   QSwipeGesture * obj = (QSwipeGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -109,7 +109,7 @@ HB_FUNC( QSWIPEGESTURE_SETSWIPEANGLE )
 /*
 qreal swipeAngle () const
 */
-HB_FUNC( QSWIPEGESTURE_SWIPEANGLE )
+HB_FUNC_STATIC( QSWIPEGESTURE_SWIPEANGLE )
 {
   QSwipeGesture * obj = (QSwipeGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -123,7 +123,7 @@ HB_FUNC( QSWIPEGESTURE_SWIPEANGLE )
 /*
 SwipeDirection verticalDirection () const
 */
-HB_FUNC( QSWIPEGESTURE_VERTICALDIRECTION )
+HB_FUNC_STATIC( QSWIPEGESTURE_VERTICALDIRECTION )
 {
   QSwipeGesture * obj = (QSwipeGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

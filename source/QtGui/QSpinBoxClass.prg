@@ -76,7 +76,7 @@ RETURN
 /*
 QSpinBox ( QWidget * parent = 0 )
 */
-HB_FUNC( QSPINBOX_NEW )
+HB_FUNC_STATIC( QSPINBOX_NEW )
 {
   QSpinBox * o = NULL;
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -89,7 +89,7 @@ HB_FUNC( QSPINBOX_NEW )
 }
 
 
-HB_FUNC( QSPINBOX_DELETE )
+HB_FUNC_STATIC( QSPINBOX_DELETE )
 {
   QSpinBox * obj = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -108,7 +108,7 @@ HB_FUNC( QSPINBOX_DELETE )
 /*
 QString cleanText () const
 */
-HB_FUNC( QSPINBOX_CLEANTEXT )
+HB_FUNC_STATIC( QSPINBOX_CLEANTEXT )
 {
   QSpinBox * obj = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -122,7 +122,7 @@ HB_FUNC( QSPINBOX_CLEANTEXT )
 /*
 int maximum () const
 */
-HB_FUNC( QSPINBOX_MAXIMUM )
+HB_FUNC_STATIC( QSPINBOX_MAXIMUM )
 {
   QSpinBox * obj = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -136,7 +136,7 @@ HB_FUNC( QSPINBOX_MAXIMUM )
 /*
 int minimum () const
 */
-HB_FUNC( QSPINBOX_MINIMUM )
+HB_FUNC_STATIC( QSPINBOX_MINIMUM )
 {
   QSpinBox * obj = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -150,7 +150,7 @@ HB_FUNC( QSPINBOX_MINIMUM )
 /*
 QString prefix () const
 */
-HB_FUNC( QSPINBOX_PREFIX )
+HB_FUNC_STATIC( QSPINBOX_PREFIX )
 {
   QSpinBox * obj = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -164,7 +164,7 @@ HB_FUNC( QSPINBOX_PREFIX )
 /*
 void setMaximum ( int max )
 */
-HB_FUNC( QSPINBOX_SETMAXIMUM )
+HB_FUNC_STATIC( QSPINBOX_SETMAXIMUM )
 {
   QSpinBox * obj = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -179,7 +179,7 @@ HB_FUNC( QSPINBOX_SETMAXIMUM )
 /*
 void setMinimum ( int min )
 */
-HB_FUNC( QSPINBOX_SETMINIMUM )
+HB_FUNC_STATIC( QSPINBOX_SETMINIMUM )
 {
   QSpinBox * obj = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -194,7 +194,7 @@ HB_FUNC( QSPINBOX_SETMINIMUM )
 /*
 void setPrefix ( const QString & prefix )
 */
-HB_FUNC( QSPINBOX_SETPREFIX )
+HB_FUNC_STATIC( QSPINBOX_SETPREFIX )
 {
   QSpinBox * obj = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -209,7 +209,7 @@ HB_FUNC( QSPINBOX_SETPREFIX )
 /*
 void setRange ( int minimum, int maximum )
 */
-HB_FUNC( QSPINBOX_SETRANGE )
+HB_FUNC_STATIC( QSPINBOX_SETRANGE )
 {
   QSpinBox * obj = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -225,7 +225,7 @@ HB_FUNC( QSPINBOX_SETRANGE )
 /*
 void setSingleStep ( int val )
 */
-HB_FUNC( QSPINBOX_SETSINGLESTEP )
+HB_FUNC_STATIC( QSPINBOX_SETSINGLESTEP )
 {
   QSpinBox * obj = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -240,7 +240,7 @@ HB_FUNC( QSPINBOX_SETSINGLESTEP )
 /*
 void setSuffix ( const QString & suffix )
 */
-HB_FUNC( QSPINBOX_SETSUFFIX )
+HB_FUNC_STATIC( QSPINBOX_SETSUFFIX )
 {
   QSpinBox * obj = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -255,7 +255,7 @@ HB_FUNC( QSPINBOX_SETSUFFIX )
 /*
 int singleStep () const
 */
-HB_FUNC( QSPINBOX_SINGLESTEP )
+HB_FUNC_STATIC( QSPINBOX_SINGLESTEP )
 {
   QSpinBox * obj = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -269,7 +269,7 @@ HB_FUNC( QSPINBOX_SINGLESTEP )
 /*
 QString suffix () const
 */
-HB_FUNC( QSPINBOX_SUFFIX )
+HB_FUNC_STATIC( QSPINBOX_SUFFIX )
 {
   QSpinBox * obj = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -283,7 +283,7 @@ HB_FUNC( QSPINBOX_SUFFIX )
 /*
 int value () const
 */
-HB_FUNC( QSPINBOX_VALUE )
+HB_FUNC_STATIC( QSPINBOX_VALUE )
 {
   QSpinBox * obj = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -297,7 +297,7 @@ HB_FUNC( QSPINBOX_VALUE )
 /*
 void setValue ( int val )
 */
-HB_FUNC( QSPINBOX_SETVALUE )
+HB_FUNC_STATIC( QSPINBOX_SETVALUE )
 {
   QSpinBox * obj = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

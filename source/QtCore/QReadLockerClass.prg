@@ -101,7 +101,7 @@ RETURN
 /*
 QReadLocker ( QReadWriteLock * lock )
 */
-HB_FUNC( QREADLOCKER_NEW )
+HB_FUNC_STATIC( QREADLOCKER_NEW )
 {
   QReadLocker * o = NULL;
   QReadWriteLock * par1 = (QReadWriteLock *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -117,7 +117,7 @@ HB_FUNC( QREADLOCKER_NEW )
 }
 
 
-HB_FUNC( QREADLOCKER_DELETE )
+HB_FUNC_STATIC( QREADLOCKER_DELETE )
 {
   QReadLocker * obj = (QReadLocker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -136,7 +136,7 @@ HB_FUNC( QREADLOCKER_DELETE )
 /*
 QReadWriteLock * readWriteLock () const
 */
-HB_FUNC( QREADLOCKER_READWRITELOCK )
+HB_FUNC_STATIC( QREADLOCKER_READWRITELOCK )
 {
   QReadLocker * obj = (QReadLocker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -149,7 +149,7 @@ HB_FUNC( QREADLOCKER_READWRITELOCK )
 /*
 void relock ()
 */
-HB_FUNC( QREADLOCKER_RELOCK )
+HB_FUNC_STATIC( QREADLOCKER_RELOCK )
 {
   QReadLocker * obj = (QReadLocker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -163,7 +163,7 @@ HB_FUNC( QREADLOCKER_RELOCK )
 /*
 void unlock ()
 */
-HB_FUNC( QREADLOCKER_UNLOCK )
+HB_FUNC_STATIC( QREADLOCKER_UNLOCK )
 {
   QReadLocker * obj = (QReadLocker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

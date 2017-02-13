@@ -110,7 +110,7 @@ RETURN
 /*
 QScriptEngineAgent ( QScriptEngine * engine )
 */
-HB_FUNC( QSCRIPTENGINEAGENT_NEW )
+HB_FUNC_STATIC( QSCRIPTENGINEAGENT_NEW )
 {
   QScriptEngineAgent * o = NULL;
   QScriptEngine * par1 = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -123,7 +123,7 @@ HB_FUNC( QSCRIPTENGINEAGENT_NEW )
 }
 
 
-HB_FUNC( QSCRIPTENGINEAGENT_DELETE )
+HB_FUNC_STATIC( QSCRIPTENGINEAGENT_DELETE )
 {
   QScriptEngineAgent * obj = (QScriptEngineAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -142,7 +142,7 @@ HB_FUNC( QSCRIPTENGINEAGENT_DELETE )
 /*
 virtual void contextPop ()
 */
-HB_FUNC( QSCRIPTENGINEAGENT_CONTEXTPOP )
+HB_FUNC_STATIC( QSCRIPTENGINEAGENT_CONTEXTPOP )
 {
   QScriptEngineAgent * obj = (QScriptEngineAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -156,7 +156,7 @@ HB_FUNC( QSCRIPTENGINEAGENT_CONTEXTPOP )
 /*
 virtual void contextPush ()
 */
-HB_FUNC( QSCRIPTENGINEAGENT_CONTEXTPUSH )
+HB_FUNC_STATIC( QSCRIPTENGINEAGENT_CONTEXTPUSH )
 {
   QScriptEngineAgent * obj = (QScriptEngineAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -170,7 +170,7 @@ HB_FUNC( QSCRIPTENGINEAGENT_CONTEXTPUSH )
 /*
 QScriptEngine * engine () const
 */
-HB_FUNC( QSCRIPTENGINEAGENT_ENGINE )
+HB_FUNC_STATIC( QSCRIPTENGINEAGENT_ENGINE )
 {
   QScriptEngineAgent * obj = (QScriptEngineAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -183,7 +183,7 @@ HB_FUNC( QSCRIPTENGINEAGENT_ENGINE )
 /*
 virtual void exceptionCatch ( qint64 scriptId, const QScriptValue & exception )
 */
-HB_FUNC( QSCRIPTENGINEAGENT_EXCEPTIONCATCH )
+HB_FUNC_STATIC( QSCRIPTENGINEAGENT_EXCEPTIONCATCH )
 {
   QScriptEngineAgent * obj = (QScriptEngineAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -199,7 +199,7 @@ HB_FUNC( QSCRIPTENGINEAGENT_EXCEPTIONCATCH )
 /*
 virtual void exceptionThrow ( qint64 scriptId, const QScriptValue & exception, bool hasHandler )
 */
-HB_FUNC( QSCRIPTENGINEAGENT_EXCEPTIONTHROW )
+HB_FUNC_STATIC( QSCRIPTENGINEAGENT_EXCEPTIONTHROW )
 {
   QScriptEngineAgent * obj = (QScriptEngineAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -216,7 +216,7 @@ HB_FUNC( QSCRIPTENGINEAGENT_EXCEPTIONTHROW )
 /*
 virtual QVariant extension ( Extension extension, const QVariant & argument = QVariant() )
 */
-HB_FUNC( QSCRIPTENGINEAGENT_EXTENSION )
+HB_FUNC_STATIC( QSCRIPTENGINEAGENT_EXTENSION )
 {
   QScriptEngineAgent * obj = (QScriptEngineAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -231,7 +231,7 @@ HB_FUNC( QSCRIPTENGINEAGENT_EXTENSION )
 /*
 virtual void functionEntry ( qint64 scriptId )
 */
-HB_FUNC( QSCRIPTENGINEAGENT_FUNCTIONENTRY )
+HB_FUNC_STATIC( QSCRIPTENGINEAGENT_FUNCTIONENTRY )
 {
   QScriptEngineAgent * obj = (QScriptEngineAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -246,7 +246,7 @@ HB_FUNC( QSCRIPTENGINEAGENT_FUNCTIONENTRY )
 /*
 virtual void functionExit ( qint64 scriptId, const QScriptValue & returnValue )
 */
-HB_FUNC( QSCRIPTENGINEAGENT_FUNCTIONEXIT )
+HB_FUNC_STATIC( QSCRIPTENGINEAGENT_FUNCTIONEXIT )
 {
   QScriptEngineAgent * obj = (QScriptEngineAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -262,7 +262,7 @@ HB_FUNC( QSCRIPTENGINEAGENT_FUNCTIONEXIT )
 /*
 virtual void positionChange ( qint64 scriptId, int lineNumber, int columnNumber )
 */
-HB_FUNC( QSCRIPTENGINEAGENT_POSITIONCHANGE )
+HB_FUNC_STATIC( QSCRIPTENGINEAGENT_POSITIONCHANGE )
 {
   QScriptEngineAgent * obj = (QScriptEngineAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -279,7 +279,7 @@ HB_FUNC( QSCRIPTENGINEAGENT_POSITIONCHANGE )
 /*
 virtual void scriptLoad ( qint64 id, const QString & program, const QString & fileName, int baseLineNumber )
 */
-HB_FUNC( QSCRIPTENGINEAGENT_SCRIPTLOAD )
+HB_FUNC_STATIC( QSCRIPTENGINEAGENT_SCRIPTLOAD )
 {
   QScriptEngineAgent * obj = (QScriptEngineAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -297,7 +297,7 @@ HB_FUNC( QSCRIPTENGINEAGENT_SCRIPTLOAD )
 /*
 virtual void scriptUnload ( qint64 id )
 */
-HB_FUNC( QSCRIPTENGINEAGENT_SCRIPTUNLOAD )
+HB_FUNC_STATIC( QSCRIPTENGINEAGENT_SCRIPTUNLOAD )
 {
   QScriptEngineAgent * obj = (QScriptEngineAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -312,7 +312,7 @@ HB_FUNC( QSCRIPTENGINEAGENT_SCRIPTUNLOAD )
 /*
 virtual bool supportsExtension ( Extension extension ) const
 */
-HB_FUNC( QSCRIPTENGINEAGENT_SUPPORTSEXTENSION )
+HB_FUNC_STATIC( QSCRIPTENGINEAGENT_SUPPORTSEXTENSION )
 {
   QScriptEngineAgent * obj = (QScriptEngineAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

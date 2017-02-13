@@ -81,7 +81,7 @@ RETURN
 /*
 QGraphicsDropShadowEffect ( QObject * parent = 0 )
 */
-HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_NEW )
+HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_NEW )
 {
   QGraphicsDropShadowEffect * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -94,7 +94,7 @@ HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_NEW )
 }
 
 
-HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_DELETE )
+HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_DELETE )
 {
   QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -113,7 +113,7 @@ HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_DELETE )
 /*
 qreal blurRadius () const
 */
-HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_BLURRADIUS )
+HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_BLURRADIUS )
 {
   QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -127,7 +127,7 @@ HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_BLURRADIUS )
 /*
 QColor color () const
 */
-HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_COLOR )
+HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_COLOR )
 {
   QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -140,7 +140,7 @@ HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_COLOR )
 /*
 QPointF offset () const
 */
-HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_OFFSET )
+HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_OFFSET )
 {
   QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -153,7 +153,7 @@ HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_OFFSET )
 /*
 qreal xOffset () const
 */
-HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_XOFFSET )
+HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_XOFFSET )
 {
   QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -167,7 +167,7 @@ HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_XOFFSET )
 /*
 qreal yOffset () const
 */
-HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_YOFFSET )
+HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_YOFFSET )
 {
   QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -181,7 +181,7 @@ HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_YOFFSET )
 /*
 virtual QRectF boundingRectFor ( const QRectF & rect ) const
 */
-HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_BOUNDINGRECTFOR )
+HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_BOUNDINGRECTFOR )
 {
   QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -195,7 +195,7 @@ HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_BOUNDINGRECTFOR )
 /*
 void setBlurRadius ( qreal blurRadius )
 */
-HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_SETBLURRADIUS )
+HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETBLURRADIUS )
 {
   QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -210,7 +210,7 @@ HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_SETBLURRADIUS )
 /*
 void setColor ( const QColor & color )
 */
-HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_SETCOLOR )
+HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETCOLOR )
 {
   QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -225,7 +225,7 @@ HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_SETCOLOR )
 /*
 void setOffset ( const QPointF & ofs )
 */
-HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET1 )
+HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET1 )
 {
   QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -240,7 +240,7 @@ HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET1 )
 /*
 void setOffset ( qreal dx, qreal dy )
 */
-HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET2 )
+HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET2 )
 {
   QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -256,7 +256,7 @@ HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET2 )
 /*
 void setOffset ( qreal d )
 */
-HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET3 )
+HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET3 )
 {
   QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -272,7 +272,7 @@ HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET3 )
 //[2]void setOffset ( qreal dx, qreal dy )
 //[3]void setOffset ( qreal d )
 
-HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET )
+HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET )
 {
   if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
@@ -291,7 +291,7 @@ HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET )
 /*
 void setXOffset ( qreal dx )
 */
-HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_SETXOFFSET )
+HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETXOFFSET )
 {
   QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -306,7 +306,7 @@ HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_SETXOFFSET )
 /*
 void setYOffset ( qreal dy )
 */
-HB_FUNC( QGRAPHICSDROPSHADOWEFFECT_SETYOFFSET )
+HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETYOFFSET )
 {
   QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

@@ -103,7 +103,7 @@ RETURN
 /*
 QCryptographicHash ( Algorithm method )
 */
-HB_FUNC( QCRYPTOGRAPHICHASH_NEW )
+HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_NEW )
 {
   QCryptographicHash * o = NULL;
   int par1 = hb_parni(1);
@@ -116,7 +116,7 @@ HB_FUNC( QCRYPTOGRAPHICHASH_NEW )
 }
 
 
-HB_FUNC( QCRYPTOGRAPHICHASH_DELETE )
+HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_DELETE )
 {
   QCryptographicHash * obj = (QCryptographicHash *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -135,7 +135,7 @@ HB_FUNC( QCRYPTOGRAPHICHASH_DELETE )
 /*
 void addData ( const char * data, int length )
 */
-HB_FUNC( QCRYPTOGRAPHICHASH_ADDDATA1 )
+HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_ADDDATA1 )
 {
   QCryptographicHash * obj = (QCryptographicHash *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -151,7 +151,7 @@ HB_FUNC( QCRYPTOGRAPHICHASH_ADDDATA1 )
 /*
 void addData ( const QByteArray & data )
 */
-HB_FUNC( QCRYPTOGRAPHICHASH_ADDDATA2 )
+HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_ADDDATA2 )
 {
   QCryptographicHash * obj = (QCryptographicHash *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -166,7 +166,7 @@ HB_FUNC( QCRYPTOGRAPHICHASH_ADDDATA2 )
 //[1]void addData ( const char * data, int length )
 //[2]void addData ( const QByteArray & data )
 
-HB_FUNC( QCRYPTOGRAPHICHASH_ADDDATA )
+HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_ADDDATA )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
   {
@@ -181,7 +181,7 @@ HB_FUNC( QCRYPTOGRAPHICHASH_ADDDATA )
 /*
 void reset ()
 */
-HB_FUNC( QCRYPTOGRAPHICHASH_RESET )
+HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_RESET )
 {
   QCryptographicHash * obj = (QCryptographicHash *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -195,7 +195,7 @@ HB_FUNC( QCRYPTOGRAPHICHASH_RESET )
 /*
 QByteArray result () const
 */
-HB_FUNC( QCRYPTOGRAPHICHASH_RESULT )
+HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_RESULT )
 {
   QCryptographicHash * obj = (QCryptographicHash *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -209,7 +209,7 @@ HB_FUNC( QCRYPTOGRAPHICHASH_RESULT )
 /*
 QByteArray hash ( const QByteArray & data, Algorithm method )
 */
-HB_FUNC( QCRYPTOGRAPHICHASH_HASH )
+HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_HASH )
 {
   QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = hb_parni(2);

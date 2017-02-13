@@ -112,7 +112,7 @@ RETURN
 /*
 QCoreApplication ( int & argc, char ** argv )
 */
-HB_FUNC( QCOREAPPLICATION_NEW )
+HB_FUNC_STATIC( QCOREAPPLICATION_NEW )
 {
   int argc;
   char ** argv;
@@ -127,7 +127,7 @@ HB_FUNC( QCOREAPPLICATION_NEW )
   hb_itemReturn( self );
 }
 
-HB_FUNC( QCOREAPPLICATION_DELETE )
+HB_FUNC_STATIC( QCOREAPPLICATION_DELETE )
 {
   QCoreApplication * obj = (QCoreApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -147,7 +147,7 @@ HB_FUNC( QCOREAPPLICATION_DELETE )
 /*
 bool filterEvent ( void * message, long * result )
 */
-HB_FUNC( QCOREAPPLICATION_FILTEREVENT )
+HB_FUNC_STATIC( QCOREAPPLICATION_FILTEREVENT )
 {
   QCoreApplication * obj = (QCoreApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -164,7 +164,7 @@ HB_FUNC( QCOREAPPLICATION_FILTEREVENT )
 /*
 virtual bool notify ( QObject * receiver, QEvent * event )
 */
-HB_FUNC( QCOREAPPLICATION_NOTIFY )
+HB_FUNC_STATIC( QCOREAPPLICATION_NOTIFY )
 {
   QCoreApplication * obj = (QCoreApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -182,7 +182,7 @@ HB_FUNC( QCOREAPPLICATION_NOTIFY )
 /*
 void quit ()
 */
-HB_FUNC( QCOREAPPLICATION_QUIT )
+HB_FUNC_STATIC( QCOREAPPLICATION_QUIT )
 {
   QCoreApplication * obj = (QCoreApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -197,7 +197,7 @@ HB_FUNC( QCOREAPPLICATION_QUIT )
 /*
 void addLibraryPath ( const QString & path )
 */
-HB_FUNC( QCOREAPPLICATION_ADDLIBRARYPATH )
+HB_FUNC_STATIC( QCOREAPPLICATION_ADDLIBRARYPATH )
 {
   QString par1 = hb_parc(1);
   QCoreApplication::addLibraryPath ( par1 );
@@ -208,7 +208,7 @@ HB_FUNC( QCOREAPPLICATION_ADDLIBRARYPATH )
 /*
 QString applicationDirPath ()
 */
-HB_FUNC( QCOREAPPLICATION_APPLICATIONDIRPATH )
+HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONDIRPATH )
 {
   QString str1 = QCoreApplication::applicationDirPath (  );
   hb_retc( (const char *) str1.toLatin1().data() );
@@ -218,7 +218,7 @@ HB_FUNC( QCOREAPPLICATION_APPLICATIONDIRPATH )
 /*
 QString applicationFilePath ()
 */
-HB_FUNC( QCOREAPPLICATION_APPLICATIONFILEPATH )
+HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONFILEPATH )
 {
   QString str1 = QCoreApplication::applicationFilePath (  );
   hb_retc( (const char *) str1.toLatin1().data() );
@@ -228,7 +228,7 @@ HB_FUNC( QCOREAPPLICATION_APPLICATIONFILEPATH )
 /*
 QString applicationName ()
 */
-HB_FUNC( QCOREAPPLICATION_APPLICATIONNAME )
+HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONNAME )
 {
   QString str1 = QCoreApplication::applicationName (  );
   hb_retc( (const char *) str1.toLatin1().data() );
@@ -238,7 +238,7 @@ HB_FUNC( QCOREAPPLICATION_APPLICATIONNAME )
 /*
 qint64 applicationPid ()
 */
-HB_FUNC( QCOREAPPLICATION_APPLICATIONPID )
+HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONPID )
 {
   qint64 i = QCoreApplication::applicationPid (  );
   hb_retni( i );
@@ -248,7 +248,7 @@ HB_FUNC( QCOREAPPLICATION_APPLICATIONPID )
 /*
 QString applicationVersion ()
 */
-HB_FUNC( QCOREAPPLICATION_APPLICATIONVERSION )
+HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONVERSION )
 {
   QString str1 = QCoreApplication::applicationVersion (  );
   hb_retc( (const char *) str1.toLatin1().data() );
@@ -258,7 +258,7 @@ HB_FUNC( QCOREAPPLICATION_APPLICATIONVERSION )
 /*
 QStringList arguments ()
 */
-HB_FUNC( QCOREAPPLICATION_ARGUMENTS )
+HB_FUNC_STATIC( QCOREAPPLICATION_ARGUMENTS )
 {
   QStringList strl = QCoreApplication::arguments (  );
   PHB_ITEM pArray;
@@ -277,7 +277,7 @@ HB_FUNC( QCOREAPPLICATION_ARGUMENTS )
 /*
 bool closingDown ()
 */
-HB_FUNC( QCOREAPPLICATION_CLOSINGDOWN )
+HB_FUNC_STATIC( QCOREAPPLICATION_CLOSINGDOWN )
 {
   bool b = QCoreApplication::closingDown (  );
   hb_retl( b );
@@ -287,7 +287,7 @@ HB_FUNC( QCOREAPPLICATION_CLOSINGDOWN )
 /*
 int exec ()
 */
-HB_FUNC( QCOREAPPLICATION_EXEC )
+HB_FUNC_STATIC( QCOREAPPLICATION_EXEC )
 {
   int i = QCoreApplication::exec (  );
   hb_retni( i );
@@ -297,7 +297,7 @@ HB_FUNC( QCOREAPPLICATION_EXEC )
 /*
 void exit ( int returnCode = 0 )
 */
-HB_FUNC( QCOREAPPLICATION_EXIT )
+HB_FUNC_STATIC( QCOREAPPLICATION_EXIT )
 {
   int par1 = ISNIL(1)? 0 : hb_parni(1);
   QCoreApplication::exit ( par1 );
@@ -308,7 +308,7 @@ HB_FUNC( QCOREAPPLICATION_EXIT )
 /*
 void flush ()
 */
-HB_FUNC( QCOREAPPLICATION_FLUSH )
+HB_FUNC_STATIC( QCOREAPPLICATION_FLUSH )
 {
   QCoreApplication::flush (  );
   hb_itemReturn( hb_stackSelfItem() );
@@ -318,7 +318,7 @@ HB_FUNC( QCOREAPPLICATION_FLUSH )
 /*
 bool hasPendingEvents ()
 */
-HB_FUNC( QCOREAPPLICATION_HASPENDINGEVENTS )
+HB_FUNC_STATIC( QCOREAPPLICATION_HASPENDINGEVENTS )
 {
   bool b = QCoreApplication::hasPendingEvents (  );
   hb_retl( b );
@@ -328,7 +328,7 @@ HB_FUNC( QCOREAPPLICATION_HASPENDINGEVENTS )
 /*
 void installTranslator ( QTranslator * translationFile )
 */
-HB_FUNC( QCOREAPPLICATION_INSTALLTRANSLATOR )
+HB_FUNC_STATIC( QCOREAPPLICATION_INSTALLTRANSLATOR )
 {
   QTranslator * par1 = (QTranslator *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QCoreApplication::installTranslator ( par1 );
@@ -339,7 +339,7 @@ HB_FUNC( QCOREAPPLICATION_INSTALLTRANSLATOR )
 /*
 QCoreApplication * instance ()
 */
-HB_FUNC( QCOREAPPLICATION_INSTANCE )
+HB_FUNC_STATIC( QCOREAPPLICATION_INSTANCE )
 {
   QCoreApplication * ptr = QCoreApplication::instance (  );
   _qt4xhb_createReturnClass ( ptr, "QCOREAPPLICATION" );}
@@ -348,7 +348,7 @@ HB_FUNC( QCOREAPPLICATION_INSTANCE )
 /*
 QStringList libraryPaths ()
 */
-HB_FUNC( QCOREAPPLICATION_LIBRARYPATHS )
+HB_FUNC_STATIC( QCOREAPPLICATION_LIBRARYPATHS )
 {
   QStringList strl = QCoreApplication::libraryPaths (  );
   PHB_ITEM pArray;
@@ -367,7 +367,7 @@ HB_FUNC( QCOREAPPLICATION_LIBRARYPATHS )
 /*
 QString organizationDomain ()
 */
-HB_FUNC( QCOREAPPLICATION_ORGANIZATIONDOMAIN )
+HB_FUNC_STATIC( QCOREAPPLICATION_ORGANIZATIONDOMAIN )
 {
   QString str1 = QCoreApplication::organizationDomain (  );
   hb_retc( (const char *) str1.toLatin1().data() );
@@ -377,7 +377,7 @@ HB_FUNC( QCOREAPPLICATION_ORGANIZATIONDOMAIN )
 /*
 QString organizationName ()
 */
-HB_FUNC( QCOREAPPLICATION_ORGANIZATIONNAME )
+HB_FUNC_STATIC( QCOREAPPLICATION_ORGANIZATIONNAME )
 {
   QString str1 = QCoreApplication::organizationName (  );
   hb_retc( (const char *) str1.toLatin1().data() );
@@ -387,7 +387,7 @@ HB_FUNC( QCOREAPPLICATION_ORGANIZATIONNAME )
 /*
 void postEvent ( QObject * receiver, QEvent * event )
 */
-HB_FUNC( QCOREAPPLICATION_POSTEVENT1 )
+HB_FUNC_STATIC( QCOREAPPLICATION_POSTEVENT1 )
 {
   QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QEvent * par2 = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -399,7 +399,7 @@ HB_FUNC( QCOREAPPLICATION_POSTEVENT1 )
 /*
 void postEvent ( QObject * receiver, QEvent * event, int priority )
 */
-HB_FUNC( QCOREAPPLICATION_POSTEVENT2 )
+HB_FUNC_STATIC( QCOREAPPLICATION_POSTEVENT2 )
 {
   QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QEvent * par2 = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -412,7 +412,7 @@ HB_FUNC( QCOREAPPLICATION_POSTEVENT2 )
 //[1]void postEvent ( QObject * receiver, QEvent * event )
 //[2]void postEvent ( QObject * receiver, QEvent * event, int priority )
 
-HB_FUNC( QCOREAPPLICATION_POSTEVENT )
+HB_FUNC_STATIC( QCOREAPPLICATION_POSTEVENT )
 {
   if( ISNUMPAR(2) && ISQOBJECT(1) && ISOBJECT(2) )
   {
@@ -427,7 +427,7 @@ HB_FUNC( QCOREAPPLICATION_POSTEVENT )
 /*
 void processEvents ( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
 */
-HB_FUNC( QCOREAPPLICATION_PROCESSEVENTS1 )
+HB_FUNC_STATIC( QCOREAPPLICATION_PROCESSEVENTS1 )
 {
   int par1 = ISNIL(1)? (int) QEventLoop::AllEvents : hb_parni(1);
   QCoreApplication::processEvents (  (QEventLoop::ProcessEventsFlags) par1 );
@@ -438,7 +438,7 @@ HB_FUNC( QCOREAPPLICATION_PROCESSEVENTS1 )
 /*
 void processEvents ( QEventLoop::ProcessEventsFlags flags, int maxtime )
 */
-HB_FUNC( QCOREAPPLICATION_PROCESSEVENTS2 )
+HB_FUNC_STATIC( QCOREAPPLICATION_PROCESSEVENTS2 )
 {
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
@@ -450,7 +450,7 @@ HB_FUNC( QCOREAPPLICATION_PROCESSEVENTS2 )
 //[1]void processEvents ( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
 //[2]void processEvents ( QEventLoop::ProcessEventsFlags flags, int maxtime )
 
-HB_FUNC( QCOREAPPLICATION_PROCESSEVENTS )
+HB_FUNC_STATIC( QCOREAPPLICATION_PROCESSEVENTS )
 {
   if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
@@ -465,7 +465,7 @@ HB_FUNC( QCOREAPPLICATION_PROCESSEVENTS )
 /*
 void removeLibraryPath ( const QString & path )
 */
-HB_FUNC( QCOREAPPLICATION_REMOVELIBRARYPATH )
+HB_FUNC_STATIC( QCOREAPPLICATION_REMOVELIBRARYPATH )
 {
   QString par1 = hb_parc(1);
   QCoreApplication::removeLibraryPath ( par1 );
@@ -476,7 +476,7 @@ HB_FUNC( QCOREAPPLICATION_REMOVELIBRARYPATH )
 /*
 void removePostedEvents ( QObject * receiver )
 */
-HB_FUNC( QCOREAPPLICATION_REMOVEPOSTEDEVENTS1 )
+HB_FUNC_STATIC( QCOREAPPLICATION_REMOVEPOSTEDEVENTS1 )
 {
   QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QCoreApplication::removePostedEvents ( par1 );
@@ -487,7 +487,7 @@ HB_FUNC( QCOREAPPLICATION_REMOVEPOSTEDEVENTS1 )
 /*
 void removePostedEvents ( QObject * receiver, int eventType )
 */
-HB_FUNC( QCOREAPPLICATION_REMOVEPOSTEDEVENTS2 )
+HB_FUNC_STATIC( QCOREAPPLICATION_REMOVEPOSTEDEVENTS2 )
 {
   QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = hb_parni(2);
@@ -499,7 +499,7 @@ HB_FUNC( QCOREAPPLICATION_REMOVEPOSTEDEVENTS2 )
 //[1]void removePostedEvents ( QObject * receiver )
 //[2]void removePostedEvents ( QObject * receiver, int eventType )
 
-HB_FUNC( QCOREAPPLICATION_REMOVEPOSTEDEVENTS )
+HB_FUNC_STATIC( QCOREAPPLICATION_REMOVEPOSTEDEVENTS )
 {
   if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
@@ -514,7 +514,7 @@ HB_FUNC( QCOREAPPLICATION_REMOVEPOSTEDEVENTS )
 /*
 void removeTranslator ( QTranslator * translationFile )
 */
-HB_FUNC( QCOREAPPLICATION_REMOVETRANSLATOR )
+HB_FUNC_STATIC( QCOREAPPLICATION_REMOVETRANSLATOR )
 {
   QTranslator * par1 = (QTranslator *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QCoreApplication::removeTranslator ( par1 );
@@ -525,7 +525,7 @@ HB_FUNC( QCOREAPPLICATION_REMOVETRANSLATOR )
 /*
 bool sendEvent ( QObject * receiver, QEvent * event )
 */
-HB_FUNC( QCOREAPPLICATION_SENDEVENT )
+HB_FUNC_STATIC( QCOREAPPLICATION_SENDEVENT )
 {
   QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QEvent * par2 = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -537,7 +537,7 @@ HB_FUNC( QCOREAPPLICATION_SENDEVENT )
 /*
 void sendPostedEvents ( QObject * receiver, int event_type )
 */
-HB_FUNC( QCOREAPPLICATION_SENDPOSTEDEVENTS1 )
+HB_FUNC_STATIC( QCOREAPPLICATION_SENDPOSTEDEVENTS1 )
 {
   QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = hb_parni(2);
@@ -549,7 +549,7 @@ HB_FUNC( QCOREAPPLICATION_SENDPOSTEDEVENTS1 )
 /*
 void sendPostedEvents ()
 */
-HB_FUNC( QCOREAPPLICATION_SENDPOSTEDEVENTS2 )
+HB_FUNC_STATIC( QCOREAPPLICATION_SENDPOSTEDEVENTS2 )
 {
   QCoreApplication::sendPostedEvents (  );
   hb_itemReturn( hb_stackSelfItem() );
@@ -559,7 +559,7 @@ HB_FUNC( QCOREAPPLICATION_SENDPOSTEDEVENTS2 )
 //[1]void sendPostedEvents ( QObject * receiver, int event_type )
 //[2]void sendPostedEvents ()
 
-HB_FUNC( QCOREAPPLICATION_SENDPOSTEDEVENTS )
+HB_FUNC_STATIC( QCOREAPPLICATION_SENDPOSTEDEVENTS )
 {
   if( ISNUMPAR(2) && ISQOBJECT(1) && ISNUM(2) )
   {
@@ -574,7 +574,7 @@ HB_FUNC( QCOREAPPLICATION_SENDPOSTEDEVENTS )
 /*
 void setApplicationName ( const QString & application )
 */
-HB_FUNC( QCOREAPPLICATION_SETAPPLICATIONNAME )
+HB_FUNC_STATIC( QCOREAPPLICATION_SETAPPLICATIONNAME )
 {
   QString par1 = hb_parc(1);
   QCoreApplication::setApplicationName ( par1 );
@@ -585,7 +585,7 @@ HB_FUNC( QCOREAPPLICATION_SETAPPLICATIONNAME )
 /*
 void setApplicationVersion ( const QString & version )
 */
-HB_FUNC( QCOREAPPLICATION_SETAPPLICATIONVERSION )
+HB_FUNC_STATIC( QCOREAPPLICATION_SETAPPLICATIONVERSION )
 {
   QString par1 = hb_parc(1);
   QCoreApplication::setApplicationVersion ( par1 );
@@ -596,7 +596,7 @@ HB_FUNC( QCOREAPPLICATION_SETAPPLICATIONVERSION )
 /*
 void setAttribute ( Qt::ApplicationAttribute attribute, bool on = true )
 */
-HB_FUNC( QCOREAPPLICATION_SETATTRIBUTE )
+HB_FUNC_STATIC( QCOREAPPLICATION_SETATTRIBUTE )
 {
   int par1 = hb_parni(1);
   bool par2 = ISNIL(2)? true : hb_parl(2);
@@ -608,7 +608,7 @@ HB_FUNC( QCOREAPPLICATION_SETATTRIBUTE )
 /*
 void setLibraryPaths ( const QStringList & paths )
 */
-HB_FUNC( QCOREAPPLICATION_SETLIBRARYPATHS )
+HB_FUNC_STATIC( QCOREAPPLICATION_SETLIBRARYPATHS )
 {
 QStringList par1;
 PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
@@ -627,7 +627,7 @@ par1 << temp;
 /*
 void setOrganizationDomain ( const QString & orgDomain )
 */
-HB_FUNC( QCOREAPPLICATION_SETORGANIZATIONDOMAIN )
+HB_FUNC_STATIC( QCOREAPPLICATION_SETORGANIZATIONDOMAIN )
 {
   QString par1 = hb_parc(1);
   QCoreApplication::setOrganizationDomain ( par1 );
@@ -638,7 +638,7 @@ HB_FUNC( QCOREAPPLICATION_SETORGANIZATIONDOMAIN )
 /*
 void setOrganizationName ( const QString & orgName )
 */
-HB_FUNC( QCOREAPPLICATION_SETORGANIZATIONNAME )
+HB_FUNC_STATIC( QCOREAPPLICATION_SETORGANIZATIONNAME )
 {
   QString par1 = hb_parc(1);
   QCoreApplication::setOrganizationName ( par1 );
@@ -649,7 +649,7 @@ HB_FUNC( QCOREAPPLICATION_SETORGANIZATIONNAME )
 /*
 bool startingUp ()
 */
-HB_FUNC( QCOREAPPLICATION_STARTINGUP )
+HB_FUNC_STATIC( QCOREAPPLICATION_STARTINGUP )
 {
   bool b = QCoreApplication::startingUp (  );
   hb_retl( b );
@@ -659,7 +659,7 @@ HB_FUNC( QCOREAPPLICATION_STARTINGUP )
 /*
 bool testAttribute ( Qt::ApplicationAttribute attribute )
 */
-HB_FUNC( QCOREAPPLICATION_TESTATTRIBUTE )
+HB_FUNC_STATIC( QCOREAPPLICATION_TESTATTRIBUTE )
 {
   int par1 = hb_parni(1);
   bool b = QCoreApplication::testAttribute (  (Qt::ApplicationAttribute) par1 );
@@ -670,7 +670,7 @@ HB_FUNC( QCOREAPPLICATION_TESTATTRIBUTE )
 /*
 QString translate ( const char * context, const char * sourceText, const char * disambiguation, Encoding encoding, int n )
 */
-HB_FUNC( QCOREAPPLICATION_TRANSLATE1 )
+HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE1 )
 {
   const char * par1 = hb_parc(1);
   const char * par2 = hb_parc(2);
@@ -685,7 +685,7 @@ HB_FUNC( QCOREAPPLICATION_TRANSLATE1 )
 /*
 QString translate ( const char * context, const char * sourceText, const char * disambiguation = 0, Encoding encoding = CodecForTr )
 */
-HB_FUNC( QCOREAPPLICATION_TRANSLATE2 )
+HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE2 )
 {
   const char * par1 = hb_parc(1);
   const char * par2 = hb_parc(2);
@@ -699,7 +699,7 @@ HB_FUNC( QCOREAPPLICATION_TRANSLATE2 )
 //[1]QString translate ( const char * context, const char * sourceText, const char * disambiguation, Encoding encoding, int n )
 //[2]QString translate ( const char * context, const char * sourceText, const char * disambiguation = 0, Encoding encoding = CodecForTr )
 
-HB_FUNC( QCOREAPPLICATION_TRANSLATE )
+HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE )
 {
   if( ISNUMPAR(5) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) && ISNUM(4) && ISNUM(5) )
   {

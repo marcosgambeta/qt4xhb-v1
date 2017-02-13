@@ -107,7 +107,7 @@ RETURN
 /*
 QXmlInputSource ()
 */
-HB_FUNC( QXMLINPUTSOURCE_NEW1 )
+HB_FUNC_STATIC( QXMLINPUTSOURCE_NEW1 )
 {
   QXmlInputSource * o = NULL;
   o = new QXmlInputSource (  );
@@ -125,7 +125,7 @@ HB_FUNC( QXMLINPUTSOURCE_NEW1 )
 /*
 QXmlInputSource ( QIODevice * dev )
 */
-HB_FUNC( QXMLINPUTSOURCE_NEW2 )
+HB_FUNC_STATIC( QXMLINPUTSOURCE_NEW2 )
 {
   QXmlInputSource * o = NULL;
   QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -144,7 +144,7 @@ HB_FUNC( QXMLINPUTSOURCE_NEW2 )
 //[1]QXmlInputSource ()
 //[2]QXmlInputSource ( QIODevice * dev )
 
-HB_FUNC( QXMLINPUTSOURCE_NEW )
+HB_FUNC_STATIC( QXMLINPUTSOURCE_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -160,7 +160,7 @@ HB_FUNC( QXMLINPUTSOURCE_NEW )
   }
 }
 
-HB_FUNC( QXMLINPUTSOURCE_DELETE )
+HB_FUNC_STATIC( QXMLINPUTSOURCE_DELETE )
 {
   QXmlInputSource * obj = (QXmlInputSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -179,7 +179,7 @@ HB_FUNC( QXMLINPUTSOURCE_DELETE )
 /*
 virtual QString data () const
 */
-HB_FUNC( QXMLINPUTSOURCE_DATA )
+HB_FUNC_STATIC( QXMLINPUTSOURCE_DATA )
 {
   QXmlInputSource * obj = (QXmlInputSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -193,7 +193,7 @@ HB_FUNC( QXMLINPUTSOURCE_DATA )
 /*
 virtual void fetchData ()
 */
-HB_FUNC( QXMLINPUTSOURCE_FETCHDATA )
+HB_FUNC_STATIC( QXMLINPUTSOURCE_FETCHDATA )
 {
   QXmlInputSource * obj = (QXmlInputSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -207,7 +207,7 @@ HB_FUNC( QXMLINPUTSOURCE_FETCHDATA )
 /*
 virtual QChar next ()
 */
-HB_FUNC( QXMLINPUTSOURCE_NEXT )
+HB_FUNC_STATIC( QXMLINPUTSOURCE_NEXT )
 {
   QXmlInputSource * obj = (QXmlInputSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -220,7 +220,7 @@ HB_FUNC( QXMLINPUTSOURCE_NEXT )
 /*
 virtual void reset ()
 */
-HB_FUNC( QXMLINPUTSOURCE_RESET )
+HB_FUNC_STATIC( QXMLINPUTSOURCE_RESET )
 {
   QXmlInputSource * obj = (QXmlInputSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -234,7 +234,7 @@ HB_FUNC( QXMLINPUTSOURCE_RESET )
 /*
 virtual void setData ( const QString & dat )
 */
-HB_FUNC( QXMLINPUTSOURCE_SETDATA1 )
+HB_FUNC_STATIC( QXMLINPUTSOURCE_SETDATA1 )
 {
   QXmlInputSource * obj = (QXmlInputSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -249,7 +249,7 @@ HB_FUNC( QXMLINPUTSOURCE_SETDATA1 )
 /*
 virtual void setData ( const QByteArray & dat )
 */
-HB_FUNC( QXMLINPUTSOURCE_SETDATA2 )
+HB_FUNC_STATIC( QXMLINPUTSOURCE_SETDATA2 )
 {
   QXmlInputSource * obj = (QXmlInputSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -264,7 +264,7 @@ HB_FUNC( QXMLINPUTSOURCE_SETDATA2 )
 //[1]virtual void setData ( const QString & dat )
 //[2]virtual void setData ( const QByteArray & dat )
 
-HB_FUNC( QXMLINPUTSOURCE_SETDATA )
+HB_FUNC_STATIC( QXMLINPUTSOURCE_SETDATA )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {

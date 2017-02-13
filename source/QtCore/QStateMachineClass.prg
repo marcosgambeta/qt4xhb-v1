@@ -83,7 +83,7 @@ RETURN
 /*
 QStateMachine ( QObject * parent = 0 )
 */
-HB_FUNC( QSTATEMACHINE_NEW )
+HB_FUNC_STATIC( QSTATEMACHINE_NEW )
 {
   QStateMachine * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -96,7 +96,7 @@ HB_FUNC( QSTATEMACHINE_NEW )
 }
 
 
-HB_FUNC( QSTATEMACHINE_DELETE )
+HB_FUNC_STATIC( QSTATEMACHINE_DELETE )
 {
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -115,7 +115,7 @@ HB_FUNC( QSTATEMACHINE_DELETE )
 /*
 void addDefaultAnimation ( QAbstractAnimation * animation )
 */
-HB_FUNC( QSTATEMACHINE_ADDDEFAULTANIMATION )
+HB_FUNC_STATIC( QSTATEMACHINE_ADDDEFAULTANIMATION )
 {
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -130,7 +130,7 @@ HB_FUNC( QSTATEMACHINE_ADDDEFAULTANIMATION )
 /*
 void addState ( QAbstractState * state )
 */
-HB_FUNC( QSTATEMACHINE_ADDSTATE )
+HB_FUNC_STATIC( QSTATEMACHINE_ADDSTATE )
 {
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -145,7 +145,7 @@ HB_FUNC( QSTATEMACHINE_ADDSTATE )
 /*
 bool cancelDelayedEvent ( int id )
 */
-HB_FUNC( QSTATEMACHINE_CANCELDELAYEDEVENT )
+HB_FUNC_STATIC( QSTATEMACHINE_CANCELDELAYEDEVENT )
 {
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -160,7 +160,7 @@ HB_FUNC( QSTATEMACHINE_CANCELDELAYEDEVENT )
 /*
 void clearError ()
 */
-HB_FUNC( QSTATEMACHINE_CLEARERROR )
+HB_FUNC_STATIC( QSTATEMACHINE_CLEARERROR )
 {
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -175,7 +175,7 @@ HB_FUNC( QSTATEMACHINE_CLEARERROR )
 /*
 QList<QAbstractAnimation *> defaultAnimations () const
 */
-HB_FUNC( QSTATEMACHINE_DEFAULTANIMATIONS )
+HB_FUNC_STATIC( QSTATEMACHINE_DEFAULTANIMATIONS )
 {
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -219,7 +219,7 @@ HB_FUNC( QSTATEMACHINE_DEFAULTANIMATIONS )
 /*
 Error error () const
 */
-HB_FUNC( QSTATEMACHINE_ERROR )
+HB_FUNC_STATIC( QSTATEMACHINE_ERROR )
 {
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -233,7 +233,7 @@ HB_FUNC( QSTATEMACHINE_ERROR )
 /*
 QString errorString () const
 */
-HB_FUNC( QSTATEMACHINE_ERRORSTRING )
+HB_FUNC_STATIC( QSTATEMACHINE_ERRORSTRING )
 {
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -247,7 +247,7 @@ HB_FUNC( QSTATEMACHINE_ERRORSTRING )
 /*
 QStateMachine::RestorePolicy globalRestorePolicy () const
 */
-HB_FUNC( QSTATEMACHINE_GLOBALRESTOREPOLICY )
+HB_FUNC_STATIC( QSTATEMACHINE_GLOBALRESTOREPOLICY )
 {
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -261,7 +261,7 @@ HB_FUNC( QSTATEMACHINE_GLOBALRESTOREPOLICY )
 /*
 bool isAnimated () const
 */
-HB_FUNC( QSTATEMACHINE_ISANIMATED )
+HB_FUNC_STATIC( QSTATEMACHINE_ISANIMATED )
 {
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -275,7 +275,7 @@ HB_FUNC( QSTATEMACHINE_ISANIMATED )
 /*
 bool isRunning () const
 */
-HB_FUNC( QSTATEMACHINE_ISRUNNING )
+HB_FUNC_STATIC( QSTATEMACHINE_ISRUNNING )
 {
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -289,7 +289,7 @@ HB_FUNC( QSTATEMACHINE_ISRUNNING )
 /*
 int postDelayedEvent ( QEvent * event, int delay )
 */
-HB_FUNC( QSTATEMACHINE_POSTDELAYEDEVENT )
+HB_FUNC_STATIC( QSTATEMACHINE_POSTDELAYEDEVENT )
 {
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -305,7 +305,7 @@ HB_FUNC( QSTATEMACHINE_POSTDELAYEDEVENT )
 /*
 void postEvent ( QEvent * event, EventPriority priority = NormalPriority )
 */
-HB_FUNC( QSTATEMACHINE_POSTEVENT )
+HB_FUNC_STATIC( QSTATEMACHINE_POSTEVENT )
 {
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -321,7 +321,7 @@ HB_FUNC( QSTATEMACHINE_POSTEVENT )
 /*
 void removeDefaultAnimation ( QAbstractAnimation * animation )
 */
-HB_FUNC( QSTATEMACHINE_REMOVEDEFAULTANIMATION )
+HB_FUNC_STATIC( QSTATEMACHINE_REMOVEDEFAULTANIMATION )
 {
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -336,7 +336,7 @@ HB_FUNC( QSTATEMACHINE_REMOVEDEFAULTANIMATION )
 /*
 void removeState ( QAbstractState * state )
 */
-HB_FUNC( QSTATEMACHINE_REMOVESTATE )
+HB_FUNC_STATIC( QSTATEMACHINE_REMOVESTATE )
 {
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -351,7 +351,7 @@ HB_FUNC( QSTATEMACHINE_REMOVESTATE )
 /*
 void setAnimated ( bool enabled )
 */
-HB_FUNC( QSTATEMACHINE_SETANIMATED )
+HB_FUNC_STATIC( QSTATEMACHINE_SETANIMATED )
 {
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -366,7 +366,7 @@ HB_FUNC( QSTATEMACHINE_SETANIMATED )
 /*
 void setGlobalRestorePolicy ( QStateMachine::RestorePolicy restorePolicy )
 */
-HB_FUNC( QSTATEMACHINE_SETGLOBALRESTOREPOLICY )
+HB_FUNC_STATIC( QSTATEMACHINE_SETGLOBALRESTOREPOLICY )
 {
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -381,7 +381,7 @@ HB_FUNC( QSTATEMACHINE_SETGLOBALRESTOREPOLICY )
 /*
 virtual bool eventFilter ( QObject * watched, QEvent * event )
 */
-HB_FUNC( QSTATEMACHINE_EVENTFILTER )
+HB_FUNC_STATIC( QSTATEMACHINE_EVENTFILTER )
 {
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -397,7 +397,7 @@ HB_FUNC( QSTATEMACHINE_EVENTFILTER )
 /*
 void start ()
 */
-HB_FUNC( QSTATEMACHINE_START )
+HB_FUNC_STATIC( QSTATEMACHINE_START )
 {
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -411,7 +411,7 @@ HB_FUNC( QSTATEMACHINE_START )
 /*
 void stop ()
 */
-HB_FUNC( QSTATEMACHINE_STOP )
+HB_FUNC_STATIC( QSTATEMACHINE_STOP )
 {
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

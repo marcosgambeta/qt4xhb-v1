@@ -83,7 +83,7 @@ RETURN
 /*
 QDeclarativeExpression ()
 */
-HB_FUNC( QDECLARATIVEEXPRESSION_NEW1 )
+HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NEW1 )
 {
   QDeclarativeExpression * o = NULL;
   o = new QDeclarativeExpression (  );
@@ -98,7 +98,7 @@ HB_FUNC( QDECLARATIVEEXPRESSION_NEW1 )
 /*
 QDeclarativeExpression ( QDeclarativeContext * ctxt, QObject * scope, const QString & expression, QObject * parent = 0 )
 */
-HB_FUNC( QDECLARATIVEEXPRESSION_NEW2 )
+HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NEW2 )
 {
   QDeclarativeExpression * o = NULL;
   QDeclarativeContext * par1 = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -117,7 +117,7 @@ HB_FUNC( QDECLARATIVEEXPRESSION_NEW2 )
 //[1]QDeclarativeExpression ()
 //[2]QDeclarativeExpression ( QDeclarativeContext * ctxt, QObject * scope, const QString & expression, QObject * parent = 0 )
 
-HB_FUNC( QDECLARATIVEEXPRESSION_NEW )
+HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -133,7 +133,7 @@ HB_FUNC( QDECLARATIVEEXPRESSION_NEW )
   }
 }
 
-HB_FUNC( QDECLARATIVEEXPRESSION_DELETE )
+HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_DELETE )
 {
   QDeclarativeExpression * obj = (QDeclarativeExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -152,7 +152,7 @@ HB_FUNC( QDECLARATIVEEXPRESSION_DELETE )
 /*
 void clearError ()
 */
-HB_FUNC( QDECLARATIVEEXPRESSION_CLEARERROR )
+HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_CLEARERROR )
 {
   QDeclarativeExpression * obj = (QDeclarativeExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -166,7 +166,7 @@ HB_FUNC( QDECLARATIVEEXPRESSION_CLEARERROR )
 /*
 QDeclarativeContext * context () const
 */
-HB_FUNC( QDECLARATIVEEXPRESSION_CONTEXT )
+HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_CONTEXT )
 {
   QDeclarativeExpression * obj = (QDeclarativeExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -179,7 +179,7 @@ HB_FUNC( QDECLARATIVEEXPRESSION_CONTEXT )
 /*
 QDeclarativeEngine * engine () const
 */
-HB_FUNC( QDECLARATIVEEXPRESSION_ENGINE )
+HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_ENGINE )
 {
   QDeclarativeExpression * obj = (QDeclarativeExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -192,7 +192,7 @@ HB_FUNC( QDECLARATIVEEXPRESSION_ENGINE )
 /*
 QDeclarativeError error () const
 */
-HB_FUNC( QDECLARATIVEEXPRESSION_ERROR )
+HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_ERROR )
 {
   QDeclarativeExpression * obj = (QDeclarativeExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -205,7 +205,7 @@ HB_FUNC( QDECLARATIVEEXPRESSION_ERROR )
 /*
 QVariant evaluate ( bool * valueIsUndefined = 0 )
 */
-HB_FUNC( QDECLARATIVEEXPRESSION_EVALUATE )
+HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_EVALUATE )
 {
   QDeclarativeExpression * obj = (QDeclarativeExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -220,7 +220,7 @@ HB_FUNC( QDECLARATIVEEXPRESSION_EVALUATE )
 /*
 QString expression () const
 */
-HB_FUNC( QDECLARATIVEEXPRESSION_EXPRESSION )
+HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_EXPRESSION )
 {
   QDeclarativeExpression * obj = (QDeclarativeExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -234,7 +234,7 @@ HB_FUNC( QDECLARATIVEEXPRESSION_EXPRESSION )
 /*
 bool hasError () const
 */
-HB_FUNC( QDECLARATIVEEXPRESSION_HASERROR )
+HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_HASERROR )
 {
   QDeclarativeExpression * obj = (QDeclarativeExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -248,7 +248,7 @@ HB_FUNC( QDECLARATIVEEXPRESSION_HASERROR )
 /*
 int lineNumber () const
 */
-HB_FUNC( QDECLARATIVEEXPRESSION_LINENUMBER )
+HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_LINENUMBER )
 {
   QDeclarativeExpression * obj = (QDeclarativeExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -262,7 +262,7 @@ HB_FUNC( QDECLARATIVEEXPRESSION_LINENUMBER )
 /*
 bool notifyOnValueChanged () const
 */
-HB_FUNC( QDECLARATIVEEXPRESSION_NOTIFYONVALUECHANGED )
+HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NOTIFYONVALUECHANGED )
 {
   QDeclarativeExpression * obj = (QDeclarativeExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -276,7 +276,7 @@ HB_FUNC( QDECLARATIVEEXPRESSION_NOTIFYONVALUECHANGED )
 /*
 QObject * scopeObject () const
 */
-HB_FUNC( QDECLARATIVEEXPRESSION_SCOPEOBJECT )
+HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SCOPEOBJECT )
 {
   QDeclarativeExpression * obj = (QDeclarativeExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -289,7 +289,7 @@ HB_FUNC( QDECLARATIVEEXPRESSION_SCOPEOBJECT )
 /*
 void setExpression ( const QString & expression )
 */
-HB_FUNC( QDECLARATIVEEXPRESSION_SETEXPRESSION )
+HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SETEXPRESSION )
 {
   QDeclarativeExpression * obj = (QDeclarativeExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -304,7 +304,7 @@ HB_FUNC( QDECLARATIVEEXPRESSION_SETEXPRESSION )
 /*
 void setNotifyOnValueChanged ( bool notifyOnChange )
 */
-HB_FUNC( QDECLARATIVEEXPRESSION_SETNOTIFYONVALUECHANGED )
+HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SETNOTIFYONVALUECHANGED )
 {
   QDeclarativeExpression * obj = (QDeclarativeExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -319,7 +319,7 @@ HB_FUNC( QDECLARATIVEEXPRESSION_SETNOTIFYONVALUECHANGED )
 /*
 void setSourceLocation ( const QString & url, int line )
 */
-HB_FUNC( QDECLARATIVEEXPRESSION_SETSOURCELOCATION )
+HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SETSOURCELOCATION )
 {
   QDeclarativeExpression * obj = (QDeclarativeExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -335,7 +335,7 @@ HB_FUNC( QDECLARATIVEEXPRESSION_SETSOURCELOCATION )
 /*
 QString sourceFile () const
 */
-HB_FUNC( QDECLARATIVEEXPRESSION_SOURCEFILE )
+HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SOURCEFILE )
 {
   QDeclarativeExpression * obj = (QDeclarativeExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

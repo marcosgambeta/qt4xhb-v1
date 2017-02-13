@@ -64,7 +64,7 @@ RETURN
 /*
 QMoveEvent ( const QPoint & pos, const QPoint & oldPos )
 */
-HB_FUNC( QMOVEEVENT_NEW )
+HB_FUNC_STATIC( QMOVEEVENT_NEW )
 {
   QMoveEvent * o = NULL;
   QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -78,7 +78,7 @@ HB_FUNC( QMOVEEVENT_NEW )
 }
 
 
-HB_FUNC( QMOVEEVENT_DELETE )
+HB_FUNC_STATIC( QMOVEEVENT_DELETE )
 {
   QMoveEvent * obj = (QMoveEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -97,7 +97,7 @@ HB_FUNC( QMOVEEVENT_DELETE )
 /*
 const QPoint & oldPos () const
 */
-HB_FUNC( QMOVEEVENT_OLDPOS )
+HB_FUNC_STATIC( QMOVEEVENT_OLDPOS )
 {
   QMoveEvent * obj = (QMoveEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -110,7 +110,7 @@ HB_FUNC( QMOVEEVENT_OLDPOS )
 /*
 const QPoint & pos () const
 */
-HB_FUNC( QMOVEEVENT_POS )
+HB_FUNC_STATIC( QMOVEEVENT_POS )
 {
   QMoveEvent * obj = (QMoveEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

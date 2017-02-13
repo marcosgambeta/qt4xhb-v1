@@ -135,7 +135,7 @@ RETURN
 /*
 QHeaderView ( Qt::Orientation orientation, QWidget * parent = 0 )
 */
-HB_FUNC( QHEADERVIEW_NEW )
+HB_FUNC_STATIC( QHEADERVIEW_NEW )
 {
   QHeaderView * o = NULL;
   int par1 = hb_parni(1);
@@ -149,7 +149,7 @@ HB_FUNC( QHEADERVIEW_NEW )
 }
 
 
-HB_FUNC( QHEADERVIEW_DELETE )
+HB_FUNC_STATIC( QHEADERVIEW_DELETE )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -168,7 +168,7 @@ HB_FUNC( QHEADERVIEW_DELETE )
 /*
 bool cascadingSectionResizes () const
 */
-HB_FUNC( QHEADERVIEW_CASCADINGSECTIONRESIZES )
+HB_FUNC_STATIC( QHEADERVIEW_CASCADINGSECTIONRESIZES )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -182,7 +182,7 @@ HB_FUNC( QHEADERVIEW_CASCADINGSECTIONRESIZES )
 /*
 int count () const
 */
-HB_FUNC( QHEADERVIEW_COUNT )
+HB_FUNC_STATIC( QHEADERVIEW_COUNT )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -196,7 +196,7 @@ HB_FUNC( QHEADERVIEW_COUNT )
 /*
 Qt::Alignment defaultAlignment () const
 */
-HB_FUNC( QHEADERVIEW_DEFAULTALIGNMENT )
+HB_FUNC_STATIC( QHEADERVIEW_DEFAULTALIGNMENT )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -210,7 +210,7 @@ HB_FUNC( QHEADERVIEW_DEFAULTALIGNMENT )
 /*
 int defaultSectionSize () const
 */
-HB_FUNC( QHEADERVIEW_DEFAULTSECTIONSIZE )
+HB_FUNC_STATIC( QHEADERVIEW_DEFAULTSECTIONSIZE )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -224,7 +224,7 @@ HB_FUNC( QHEADERVIEW_DEFAULTSECTIONSIZE )
 /*
 int hiddenSectionCount () const
 */
-HB_FUNC( QHEADERVIEW_HIDDENSECTIONCOUNT )
+HB_FUNC_STATIC( QHEADERVIEW_HIDDENSECTIONCOUNT )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -238,7 +238,7 @@ HB_FUNC( QHEADERVIEW_HIDDENSECTIONCOUNT )
 /*
 void hideSection ( int logicalIndex )
 */
-HB_FUNC( QHEADERVIEW_HIDESECTION )
+HB_FUNC_STATIC( QHEADERVIEW_HIDESECTION )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -253,7 +253,7 @@ HB_FUNC( QHEADERVIEW_HIDESECTION )
 /*
 bool highlightSections () const
 */
-HB_FUNC( QHEADERVIEW_HIGHLIGHTSECTIONS )
+HB_FUNC_STATIC( QHEADERVIEW_HIGHLIGHTSECTIONS )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -267,7 +267,7 @@ HB_FUNC( QHEADERVIEW_HIGHLIGHTSECTIONS )
 /*
 bool isClickable () const
 */
-HB_FUNC( QHEADERVIEW_ISCLICKABLE )
+HB_FUNC_STATIC( QHEADERVIEW_ISCLICKABLE )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -281,7 +281,7 @@ HB_FUNC( QHEADERVIEW_ISCLICKABLE )
 /*
 bool isMovable () const
 */
-HB_FUNC( QHEADERVIEW_ISMOVABLE )
+HB_FUNC_STATIC( QHEADERVIEW_ISMOVABLE )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -295,7 +295,7 @@ HB_FUNC( QHEADERVIEW_ISMOVABLE )
 /*
 bool isSectionHidden ( int logicalIndex ) const
 */
-HB_FUNC( QHEADERVIEW_ISSECTIONHIDDEN )
+HB_FUNC_STATIC( QHEADERVIEW_ISSECTIONHIDDEN )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -310,7 +310,7 @@ HB_FUNC( QHEADERVIEW_ISSECTIONHIDDEN )
 /*
 bool isSortIndicatorShown () const
 */
-HB_FUNC( QHEADERVIEW_ISSORTINDICATORSHOWN )
+HB_FUNC_STATIC( QHEADERVIEW_ISSORTINDICATORSHOWN )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -324,7 +324,7 @@ HB_FUNC( QHEADERVIEW_ISSORTINDICATORSHOWN )
 /*
 int length () const
 */
-HB_FUNC( QHEADERVIEW_LENGTH )
+HB_FUNC_STATIC( QHEADERVIEW_LENGTH )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -338,7 +338,7 @@ HB_FUNC( QHEADERVIEW_LENGTH )
 /*
 int logicalIndex ( int visualIndex ) const
 */
-HB_FUNC( QHEADERVIEW_LOGICALINDEX )
+HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEX )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -353,7 +353,7 @@ HB_FUNC( QHEADERVIEW_LOGICALINDEX )
 /*
 int logicalIndexAt ( int position ) const
 */
-HB_FUNC( QHEADERVIEW_LOGICALINDEXAT1 )
+HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEXAT1 )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -368,7 +368,7 @@ HB_FUNC( QHEADERVIEW_LOGICALINDEXAT1 )
 /*
 int logicalIndexAt ( int x, int y ) const
 */
-HB_FUNC( QHEADERVIEW_LOGICALINDEXAT2 )
+HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEXAT2 )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -384,7 +384,7 @@ HB_FUNC( QHEADERVIEW_LOGICALINDEXAT2 )
 /*
 int logicalIndexAt ( const QPoint & pos ) const
 */
-HB_FUNC( QHEADERVIEW_LOGICALINDEXAT3 )
+HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEXAT3 )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -400,7 +400,7 @@ HB_FUNC( QHEADERVIEW_LOGICALINDEXAT3 )
 //[2]int logicalIndexAt ( int x, int y ) const
 //[3]int logicalIndexAt ( const QPoint & pos ) const
 
-HB_FUNC( QHEADERVIEW_LOGICALINDEXAT )
+HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEXAT )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
@@ -419,7 +419,7 @@ HB_FUNC( QHEADERVIEW_LOGICALINDEXAT )
 /*
 int minimumSectionSize () const
 */
-HB_FUNC( QHEADERVIEW_MINIMUMSECTIONSIZE )
+HB_FUNC_STATIC( QHEADERVIEW_MINIMUMSECTIONSIZE )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -433,7 +433,7 @@ HB_FUNC( QHEADERVIEW_MINIMUMSECTIONSIZE )
 /*
 void moveSection ( int from, int to )
 */
-HB_FUNC( QHEADERVIEW_MOVESECTION )
+HB_FUNC_STATIC( QHEADERVIEW_MOVESECTION )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -449,7 +449,7 @@ HB_FUNC( QHEADERVIEW_MOVESECTION )
 /*
 int offset () const
 */
-HB_FUNC( QHEADERVIEW_OFFSET )
+HB_FUNC_STATIC( QHEADERVIEW_OFFSET )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -463,7 +463,7 @@ HB_FUNC( QHEADERVIEW_OFFSET )
 /*
 Qt::Orientation orientation () const
 */
-HB_FUNC( QHEADERVIEW_ORIENTATION )
+HB_FUNC_STATIC( QHEADERVIEW_ORIENTATION )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -477,7 +477,7 @@ HB_FUNC( QHEADERVIEW_ORIENTATION )
 /*
 ResizeMode resizeMode ( int logicalIndex ) const
 */
-HB_FUNC( QHEADERVIEW_RESIZEMODE )
+HB_FUNC_STATIC( QHEADERVIEW_RESIZEMODE )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -492,7 +492,7 @@ HB_FUNC( QHEADERVIEW_RESIZEMODE )
 /*
 void resizeSection ( int logicalIndex, int size )
 */
-HB_FUNC( QHEADERVIEW_RESIZESECTION )
+HB_FUNC_STATIC( QHEADERVIEW_RESIZESECTION )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -508,7 +508,7 @@ HB_FUNC( QHEADERVIEW_RESIZESECTION )
 /*
 void resizeSections ( QHeaderView::ResizeMode mode )
 */
-HB_FUNC( QHEADERVIEW_RESIZESECTIONS )
+HB_FUNC_STATIC( QHEADERVIEW_RESIZESECTIONS )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -523,7 +523,7 @@ HB_FUNC( QHEADERVIEW_RESIZESECTIONS )
 /*
 bool restoreState ( const QByteArray & state )
 */
-HB_FUNC( QHEADERVIEW_RESTORESTATE )
+HB_FUNC_STATIC( QHEADERVIEW_RESTORESTATE )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -538,7 +538,7 @@ HB_FUNC( QHEADERVIEW_RESTORESTATE )
 /*
 QByteArray saveState () const
 */
-HB_FUNC( QHEADERVIEW_SAVESTATE )
+HB_FUNC_STATIC( QHEADERVIEW_SAVESTATE )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -551,7 +551,7 @@ HB_FUNC( QHEADERVIEW_SAVESTATE )
 /*
 int sectionPosition ( int logicalIndex ) const
 */
-HB_FUNC( QHEADERVIEW_SECTIONPOSITION )
+HB_FUNC_STATIC( QHEADERVIEW_SECTIONPOSITION )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -566,7 +566,7 @@ HB_FUNC( QHEADERVIEW_SECTIONPOSITION )
 /*
 int sectionSize ( int logicalIndex ) const
 */
-HB_FUNC( QHEADERVIEW_SECTIONSIZE )
+HB_FUNC_STATIC( QHEADERVIEW_SECTIONSIZE )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -581,7 +581,7 @@ HB_FUNC( QHEADERVIEW_SECTIONSIZE )
 /*
 int sectionSizeHint ( int logicalIndex ) const
 */
-HB_FUNC( QHEADERVIEW_SECTIONSIZEHINT )
+HB_FUNC_STATIC( QHEADERVIEW_SECTIONSIZEHINT )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -596,7 +596,7 @@ HB_FUNC( QHEADERVIEW_SECTIONSIZEHINT )
 /*
 int sectionViewportPosition ( int logicalIndex ) const
 */
-HB_FUNC( QHEADERVIEW_SECTIONVIEWPORTPOSITION )
+HB_FUNC_STATIC( QHEADERVIEW_SECTIONVIEWPORTPOSITION )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -611,7 +611,7 @@ HB_FUNC( QHEADERVIEW_SECTIONVIEWPORTPOSITION )
 /*
 bool sectionsHidden () const
 */
-HB_FUNC( QHEADERVIEW_SECTIONSHIDDEN )
+HB_FUNC_STATIC( QHEADERVIEW_SECTIONSHIDDEN )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -625,7 +625,7 @@ HB_FUNC( QHEADERVIEW_SECTIONSHIDDEN )
 /*
 bool sectionsMoved () const
 */
-HB_FUNC( QHEADERVIEW_SECTIONSMOVED )
+HB_FUNC_STATIC( QHEADERVIEW_SECTIONSMOVED )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -639,7 +639,7 @@ HB_FUNC( QHEADERVIEW_SECTIONSMOVED )
 /*
 void setCascadingSectionResizes ( bool enable )
 */
-HB_FUNC( QHEADERVIEW_SETCASCADINGSECTIONRESIZES )
+HB_FUNC_STATIC( QHEADERVIEW_SETCASCADINGSECTIONRESIZES )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -654,7 +654,7 @@ HB_FUNC( QHEADERVIEW_SETCASCADINGSECTIONRESIZES )
 /*
 void setClickable ( bool clickable )
 */
-HB_FUNC( QHEADERVIEW_SETCLICKABLE )
+HB_FUNC_STATIC( QHEADERVIEW_SETCLICKABLE )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -669,7 +669,7 @@ HB_FUNC( QHEADERVIEW_SETCLICKABLE )
 /*
 void setDefaultAlignment ( Qt::Alignment alignment )
 */
-HB_FUNC( QHEADERVIEW_SETDEFAULTALIGNMENT )
+HB_FUNC_STATIC( QHEADERVIEW_SETDEFAULTALIGNMENT )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -684,7 +684,7 @@ HB_FUNC( QHEADERVIEW_SETDEFAULTALIGNMENT )
 /*
 void setDefaultSectionSize ( int size )
 */
-HB_FUNC( QHEADERVIEW_SETDEFAULTSECTIONSIZE )
+HB_FUNC_STATIC( QHEADERVIEW_SETDEFAULTSECTIONSIZE )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -699,7 +699,7 @@ HB_FUNC( QHEADERVIEW_SETDEFAULTSECTIONSIZE )
 /*
 void setHighlightSections ( bool highlight )
 */
-HB_FUNC( QHEADERVIEW_SETHIGHLIGHTSECTIONS )
+HB_FUNC_STATIC( QHEADERVIEW_SETHIGHLIGHTSECTIONS )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -714,7 +714,7 @@ HB_FUNC( QHEADERVIEW_SETHIGHLIGHTSECTIONS )
 /*
 void setMinimumSectionSize ( int size )
 */
-HB_FUNC( QHEADERVIEW_SETMINIMUMSECTIONSIZE )
+HB_FUNC_STATIC( QHEADERVIEW_SETMINIMUMSECTIONSIZE )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -729,7 +729,7 @@ HB_FUNC( QHEADERVIEW_SETMINIMUMSECTIONSIZE )
 /*
 void setMovable ( bool movable )
 */
-HB_FUNC( QHEADERVIEW_SETMOVABLE )
+HB_FUNC_STATIC( QHEADERVIEW_SETMOVABLE )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -744,7 +744,7 @@ HB_FUNC( QHEADERVIEW_SETMOVABLE )
 /*
 void setResizeMode ( ResizeMode mode )
 */
-HB_FUNC( QHEADERVIEW_SETRESIZEMODE1 )
+HB_FUNC_STATIC( QHEADERVIEW_SETRESIZEMODE1 )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -759,7 +759,7 @@ HB_FUNC( QHEADERVIEW_SETRESIZEMODE1 )
 /*
 void setResizeMode ( int logicalIndex, ResizeMode mode )
 */
-HB_FUNC( QHEADERVIEW_SETRESIZEMODE2 )
+HB_FUNC_STATIC( QHEADERVIEW_SETRESIZEMODE2 )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -775,7 +775,7 @@ HB_FUNC( QHEADERVIEW_SETRESIZEMODE2 )
 //[1]void setResizeMode ( ResizeMode mode )
 //[2]void setResizeMode ( int logicalIndex, ResizeMode mode )
 
-HB_FUNC( QHEADERVIEW_SETRESIZEMODE )
+HB_FUNC_STATIC( QHEADERVIEW_SETRESIZEMODE )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
@@ -790,7 +790,7 @@ HB_FUNC( QHEADERVIEW_SETRESIZEMODE )
 /*
 void setSectionHidden ( int logicalIndex, bool hide )
 */
-HB_FUNC( QHEADERVIEW_SETSECTIONHIDDEN )
+HB_FUNC_STATIC( QHEADERVIEW_SETSECTIONHIDDEN )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -806,7 +806,7 @@ HB_FUNC( QHEADERVIEW_SETSECTIONHIDDEN )
 /*
 void setSortIndicator ( int logicalIndex, Qt::SortOrder order )
 */
-HB_FUNC( QHEADERVIEW_SETSORTINDICATOR )
+HB_FUNC_STATIC( QHEADERVIEW_SETSORTINDICATOR )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -822,7 +822,7 @@ HB_FUNC( QHEADERVIEW_SETSORTINDICATOR )
 /*
 void setSortIndicatorShown ( bool show )
 */
-HB_FUNC( QHEADERVIEW_SETSORTINDICATORSHOWN )
+HB_FUNC_STATIC( QHEADERVIEW_SETSORTINDICATORSHOWN )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -837,7 +837,7 @@ HB_FUNC( QHEADERVIEW_SETSORTINDICATORSHOWN )
 /*
 void setStretchLastSection ( bool stretch )
 */
-HB_FUNC( QHEADERVIEW_SETSTRETCHLASTSECTION )
+HB_FUNC_STATIC( QHEADERVIEW_SETSTRETCHLASTSECTION )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -852,7 +852,7 @@ HB_FUNC( QHEADERVIEW_SETSTRETCHLASTSECTION )
 /*
 void showSection ( int logicalIndex )
 */
-HB_FUNC( QHEADERVIEW_SHOWSECTION )
+HB_FUNC_STATIC( QHEADERVIEW_SHOWSECTION )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -867,7 +867,7 @@ HB_FUNC( QHEADERVIEW_SHOWSECTION )
 /*
 Qt::SortOrder sortIndicatorOrder () const
 */
-HB_FUNC( QHEADERVIEW_SORTINDICATORORDER )
+HB_FUNC_STATIC( QHEADERVIEW_SORTINDICATORORDER )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -881,7 +881,7 @@ HB_FUNC( QHEADERVIEW_SORTINDICATORORDER )
 /*
 int sortIndicatorSection () const
 */
-HB_FUNC( QHEADERVIEW_SORTINDICATORSECTION )
+HB_FUNC_STATIC( QHEADERVIEW_SORTINDICATORSECTION )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -895,7 +895,7 @@ HB_FUNC( QHEADERVIEW_SORTINDICATORSECTION )
 /*
 bool stretchLastSection () const
 */
-HB_FUNC( QHEADERVIEW_STRETCHLASTSECTION )
+HB_FUNC_STATIC( QHEADERVIEW_STRETCHLASTSECTION )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -909,7 +909,7 @@ HB_FUNC( QHEADERVIEW_STRETCHLASTSECTION )
 /*
 int stretchSectionCount () const
 */
-HB_FUNC( QHEADERVIEW_STRETCHSECTIONCOUNT )
+HB_FUNC_STATIC( QHEADERVIEW_STRETCHSECTIONCOUNT )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -923,7 +923,7 @@ HB_FUNC( QHEADERVIEW_STRETCHSECTIONCOUNT )
 /*
 void swapSections ( int first, int second )
 */
-HB_FUNC( QHEADERVIEW_SWAPSECTIONS )
+HB_FUNC_STATIC( QHEADERVIEW_SWAPSECTIONS )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -939,7 +939,7 @@ HB_FUNC( QHEADERVIEW_SWAPSECTIONS )
 /*
 int visualIndex ( int logicalIndex ) const
 */
-HB_FUNC( QHEADERVIEW_VISUALINDEX )
+HB_FUNC_STATIC( QHEADERVIEW_VISUALINDEX )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -954,7 +954,7 @@ HB_FUNC( QHEADERVIEW_VISUALINDEX )
 /*
 int visualIndexAt ( int position ) const
 */
-HB_FUNC( QHEADERVIEW_VISUALINDEXAT )
+HB_FUNC_STATIC( QHEADERVIEW_VISUALINDEXAT )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -969,7 +969,7 @@ HB_FUNC( QHEADERVIEW_VISUALINDEXAT )
 /*
 virtual void reset ()
 */
-HB_FUNC( QHEADERVIEW_RESET )
+HB_FUNC_STATIC( QHEADERVIEW_RESET )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -983,7 +983,7 @@ HB_FUNC( QHEADERVIEW_RESET )
 /*
 virtual void setModel ( QAbstractItemModel * model )
 */
-HB_FUNC( QHEADERVIEW_SETMODEL )
+HB_FUNC_STATIC( QHEADERVIEW_SETMODEL )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -998,7 +998,7 @@ HB_FUNC( QHEADERVIEW_SETMODEL )
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC( QHEADERVIEW_SIZEHINT )
+HB_FUNC_STATIC( QHEADERVIEW_SIZEHINT )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1011,7 +1011,7 @@ HB_FUNC( QHEADERVIEW_SIZEHINT )
 /*
 void headerDataChanged ( Qt::Orientation orientation, int logicalFirst, int logicalLast )
 */
-HB_FUNC( QHEADERVIEW_HEADERDATACHANGED )
+HB_FUNC_STATIC( QHEADERVIEW_HEADERDATACHANGED )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1028,7 +1028,7 @@ HB_FUNC( QHEADERVIEW_HEADERDATACHANGED )
 /*
 void setOffset ( int offset )
 */
-HB_FUNC( QHEADERVIEW_SETOFFSET )
+HB_FUNC_STATIC( QHEADERVIEW_SETOFFSET )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1043,7 +1043,7 @@ HB_FUNC( QHEADERVIEW_SETOFFSET )
 /*
 void setOffsetToLastSection ()
 */
-HB_FUNC( QHEADERVIEW_SETOFFSETTOLASTSECTION )
+HB_FUNC_STATIC( QHEADERVIEW_SETOFFSETTOLASTSECTION )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1057,7 +1057,7 @@ HB_FUNC( QHEADERVIEW_SETOFFSETTOLASTSECTION )
 /*
 void setOffsetToSectionPosition ( int visualIndex )
 */
-HB_FUNC( QHEADERVIEW_SETOFFSETTOSECTIONPOSITION )
+HB_FUNC_STATIC( QHEADERVIEW_SETOFFSETTOSECTIONPOSITION )
 {
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

@@ -131,7 +131,7 @@ RETURN
 /*
 QUrlInfo ()
 */
-HB_FUNC( QURLINFO_NEW1 )
+HB_FUNC_STATIC( QURLINFO_NEW1 )
 {
   QUrlInfo * o = NULL;
   o = new QUrlInfo (  );
@@ -149,7 +149,7 @@ HB_FUNC( QURLINFO_NEW1 )
 /*
 QUrlInfo ( const QUrlInfo & ui )
 */
-HB_FUNC( QURLINFO_NEW2 )
+HB_FUNC_STATIC( QURLINFO_NEW2 )
 {
   QUrlInfo * o = NULL;
   QUrlInfo * par1 = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -168,7 +168,7 @@ HB_FUNC( QURLINFO_NEW2 )
 /*
 QUrlInfo ( const QString & name, int permissions, const QString & owner, const QString & group, qint64 size, const QDateTime & lastModified, const QDateTime & lastRead, bool isDir, bool isFile, bool isSymLink, bool isWritable, bool isReadable, bool isExecutable )
 */
-HB_FUNC( QURLINFO_NEW3 )
+HB_FUNC_STATIC( QURLINFO_NEW3 )
 {
   QUrlInfo * o = NULL;
   QString par1 = hb_parc(1);
@@ -199,7 +199,7 @@ HB_FUNC( QURLINFO_NEW3 )
 /*
 QUrlInfo ( const QUrl & url, int permissions, const QString & owner, const QString & group, qint64 size, const QDateTime & lastModified, const QDateTime & lastRead, bool isDir, bool isFile, bool isSymLink, bool isWritable, bool isReadable, bool isExecutable )
 */
-HB_FUNC( QURLINFO_NEW4 )
+HB_FUNC_STATIC( QURLINFO_NEW4 )
 {
   QUrlInfo * o = NULL;
   QUrl * par1 = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -232,7 +232,7 @@ HB_FUNC( QURLINFO_NEW4 )
 //[3]QUrlInfo ( const QString & name, int permissions, const QString & owner, const QString & group, qint64 size, const QDateTime & lastModified, const QDateTime & lastRead, bool isDir, bool isFile, bool isSymLink, bool isWritable, bool isReadable, bool isExecutable )
 //[4]QUrlInfo ( const QUrl & url, int permissions, const QString & owner, const QString & group, qint64 size, const QDateTime & lastModified, const QDateTime & lastRead, bool isDir, bool isFile, bool isSymLink, bool isWritable, bool isReadable, bool isExecutable )
 
-HB_FUNC( QURLINFO_NEW )
+HB_FUNC_STATIC( QURLINFO_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -256,7 +256,7 @@ HB_FUNC( QURLINFO_NEW )
   }
 }
 
-HB_FUNC( QURLINFO_DELETE )
+HB_FUNC_STATIC( QURLINFO_DELETE )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -275,7 +275,7 @@ HB_FUNC( QURLINFO_DELETE )
 /*
 QString group () const
 */
-HB_FUNC( QURLINFO_GROUP )
+HB_FUNC_STATIC( QURLINFO_GROUP )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -289,7 +289,7 @@ HB_FUNC( QURLINFO_GROUP )
 /*
 bool isDir () const
 */
-HB_FUNC( QURLINFO_ISDIR )
+HB_FUNC_STATIC( QURLINFO_ISDIR )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -303,7 +303,7 @@ HB_FUNC( QURLINFO_ISDIR )
 /*
 bool isExecutable () const
 */
-HB_FUNC( QURLINFO_ISEXECUTABLE )
+HB_FUNC_STATIC( QURLINFO_ISEXECUTABLE )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -317,7 +317,7 @@ HB_FUNC( QURLINFO_ISEXECUTABLE )
 /*
 bool isFile () const
 */
-HB_FUNC( QURLINFO_ISFILE )
+HB_FUNC_STATIC( QURLINFO_ISFILE )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -331,7 +331,7 @@ HB_FUNC( QURLINFO_ISFILE )
 /*
 bool isReadable () const
 */
-HB_FUNC( QURLINFO_ISREADABLE )
+HB_FUNC_STATIC( QURLINFO_ISREADABLE )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -345,7 +345,7 @@ HB_FUNC( QURLINFO_ISREADABLE )
 /*
 bool isSymLink () const
 */
-HB_FUNC( QURLINFO_ISSYMLINK )
+HB_FUNC_STATIC( QURLINFO_ISSYMLINK )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -359,7 +359,7 @@ HB_FUNC( QURLINFO_ISSYMLINK )
 /*
 bool isValid () const
 */
-HB_FUNC( QURLINFO_ISVALID )
+HB_FUNC_STATIC( QURLINFO_ISVALID )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -373,7 +373,7 @@ HB_FUNC( QURLINFO_ISVALID )
 /*
 bool isWritable () const
 */
-HB_FUNC( QURLINFO_ISWRITABLE )
+HB_FUNC_STATIC( QURLINFO_ISWRITABLE )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -387,7 +387,7 @@ HB_FUNC( QURLINFO_ISWRITABLE )
 /*
 QDateTime lastModified () const
 */
-HB_FUNC( QURLINFO_LASTMODIFIED )
+HB_FUNC_STATIC( QURLINFO_LASTMODIFIED )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -400,7 +400,7 @@ HB_FUNC( QURLINFO_LASTMODIFIED )
 /*
 QDateTime lastRead () const
 */
-HB_FUNC( QURLINFO_LASTREAD )
+HB_FUNC_STATIC( QURLINFO_LASTREAD )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -413,7 +413,7 @@ HB_FUNC( QURLINFO_LASTREAD )
 /*
 QString name () const
 */
-HB_FUNC( QURLINFO_NAME )
+HB_FUNC_STATIC( QURLINFO_NAME )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -427,7 +427,7 @@ HB_FUNC( QURLINFO_NAME )
 /*
 QString owner () const
 */
-HB_FUNC( QURLINFO_OWNER )
+HB_FUNC_STATIC( QURLINFO_OWNER )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -441,7 +441,7 @@ HB_FUNC( QURLINFO_OWNER )
 /*
 int permissions () const
 */
-HB_FUNC( QURLINFO_PERMISSIONS )
+HB_FUNC_STATIC( QURLINFO_PERMISSIONS )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -455,7 +455,7 @@ HB_FUNC( QURLINFO_PERMISSIONS )
 /*
 virtual void setDir ( bool b )
 */
-HB_FUNC( QURLINFO_SETDIR )
+HB_FUNC_STATIC( QURLINFO_SETDIR )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -470,7 +470,7 @@ HB_FUNC( QURLINFO_SETDIR )
 /*
 virtual void setFile ( bool b )
 */
-HB_FUNC( QURLINFO_SETFILE )
+HB_FUNC_STATIC( QURLINFO_SETFILE )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -485,7 +485,7 @@ HB_FUNC( QURLINFO_SETFILE )
 /*
 virtual void setGroup ( const QString & s )
 */
-HB_FUNC( QURLINFO_SETGROUP )
+HB_FUNC_STATIC( QURLINFO_SETGROUP )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -500,7 +500,7 @@ HB_FUNC( QURLINFO_SETGROUP )
 /*
 virtual void setLastModified ( const QDateTime & dt )
 */
-HB_FUNC( QURLINFO_SETLASTMODIFIED )
+HB_FUNC_STATIC( QURLINFO_SETLASTMODIFIED )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -515,7 +515,7 @@ HB_FUNC( QURLINFO_SETLASTMODIFIED )
 /*
 void setLastRead ( const QDateTime & dt )
 */
-HB_FUNC( QURLINFO_SETLASTREAD )
+HB_FUNC_STATIC( QURLINFO_SETLASTREAD )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -530,7 +530,7 @@ HB_FUNC( QURLINFO_SETLASTREAD )
 /*
 virtual void setName ( const QString & name )
 */
-HB_FUNC( QURLINFO_SETNAME )
+HB_FUNC_STATIC( QURLINFO_SETNAME )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -545,7 +545,7 @@ HB_FUNC( QURLINFO_SETNAME )
 /*
 virtual void setOwner ( const QString & s )
 */
-HB_FUNC( QURLINFO_SETOWNER )
+HB_FUNC_STATIC( QURLINFO_SETOWNER )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -560,7 +560,7 @@ HB_FUNC( QURLINFO_SETOWNER )
 /*
 virtual void setPermissions ( int p )
 */
-HB_FUNC( QURLINFO_SETPERMISSIONS )
+HB_FUNC_STATIC( QURLINFO_SETPERMISSIONS )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -575,7 +575,7 @@ HB_FUNC( QURLINFO_SETPERMISSIONS )
 /*
 virtual void setReadable ( bool b )
 */
-HB_FUNC( QURLINFO_SETREADABLE )
+HB_FUNC_STATIC( QURLINFO_SETREADABLE )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -590,7 +590,7 @@ HB_FUNC( QURLINFO_SETREADABLE )
 /*
 virtual void setSize ( qint64 size )
 */
-HB_FUNC( QURLINFO_SETSIZE )
+HB_FUNC_STATIC( QURLINFO_SETSIZE )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -605,7 +605,7 @@ HB_FUNC( QURLINFO_SETSIZE )
 /*
 virtual void setSymLink ( bool b )
 */
-HB_FUNC( QURLINFO_SETSYMLINK )
+HB_FUNC_STATIC( QURLINFO_SETSYMLINK )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -620,7 +620,7 @@ HB_FUNC( QURLINFO_SETSYMLINK )
 /*
 virtual void setWritable ( bool b )
 */
-HB_FUNC( QURLINFO_SETWRITABLE )
+HB_FUNC_STATIC( QURLINFO_SETWRITABLE )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -635,7 +635,7 @@ HB_FUNC( QURLINFO_SETWRITABLE )
 /*
 qint64 size () const
 */
-HB_FUNC( QURLINFO_SIZE )
+HB_FUNC_STATIC( QURLINFO_SIZE )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -650,7 +650,7 @@ HB_FUNC( QURLINFO_SIZE )
 /*
 bool equal ( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
 */
-HB_FUNC( QURLINFO_EQUAL )
+HB_FUNC_STATIC( QURLINFO_EQUAL )
 {
   QUrlInfo * par1 = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QUrlInfo * par2 = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -663,7 +663,7 @@ HB_FUNC( QURLINFO_EQUAL )
 /*
 bool greaterThan ( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
 */
-HB_FUNC( QURLINFO_GREATERTHAN )
+HB_FUNC_STATIC( QURLINFO_GREATERTHAN )
 {
   QUrlInfo * par1 = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QUrlInfo * par2 = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -676,7 +676,7 @@ HB_FUNC( QURLINFO_GREATERTHAN )
 /*
 bool lessThan ( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
 */
-HB_FUNC( QURLINFO_LESSTHAN )
+HB_FUNC_STATIC( QURLINFO_LESSTHAN )
 {
   QUrlInfo * par1 = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QUrlInfo * par2 = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );

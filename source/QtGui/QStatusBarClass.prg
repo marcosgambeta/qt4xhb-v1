@@ -71,7 +71,7 @@ RETURN
 /*
 QStatusBar ( QWidget * parent = 0 )
 */
-HB_FUNC( QSTATUSBAR_NEW )
+HB_FUNC_STATIC( QSTATUSBAR_NEW )
 {
   QStatusBar * o = NULL;
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -84,7 +84,7 @@ HB_FUNC( QSTATUSBAR_NEW )
 }
 
 
-HB_FUNC( QSTATUSBAR_DELETE )
+HB_FUNC_STATIC( QSTATUSBAR_DELETE )
 {
   QStatusBar * obj = (QStatusBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -103,7 +103,7 @@ HB_FUNC( QSTATUSBAR_DELETE )
 /*
 void addPermanentWidget ( QWidget * widget, int stretch = 0 )
 */
-HB_FUNC( QSTATUSBAR_ADDPERMANENTWIDGET )
+HB_FUNC_STATIC( QSTATUSBAR_ADDPERMANENTWIDGET )
 {
   QStatusBar * obj = (QStatusBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -119,7 +119,7 @@ HB_FUNC( QSTATUSBAR_ADDPERMANENTWIDGET )
 /*
 void addWidget ( QWidget * widget, int stretch = 0 )
 */
-HB_FUNC( QSTATUSBAR_ADDWIDGET )
+HB_FUNC_STATIC( QSTATUSBAR_ADDWIDGET )
 {
   QStatusBar * obj = (QStatusBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -135,7 +135,7 @@ HB_FUNC( QSTATUSBAR_ADDWIDGET )
 /*
 QString currentMessage () const
 */
-HB_FUNC( QSTATUSBAR_CURRENTMESSAGE )
+HB_FUNC_STATIC( QSTATUSBAR_CURRENTMESSAGE )
 {
   QStatusBar * obj = (QStatusBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -149,7 +149,7 @@ HB_FUNC( QSTATUSBAR_CURRENTMESSAGE )
 /*
 int insertPermanentWidget ( int index, QWidget * widget, int stretch = 0 )
 */
-HB_FUNC( QSTATUSBAR_INSERTPERMANENTWIDGET )
+HB_FUNC_STATIC( QSTATUSBAR_INSERTPERMANENTWIDGET )
 {
   QStatusBar * obj = (QStatusBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -166,7 +166,7 @@ HB_FUNC( QSTATUSBAR_INSERTPERMANENTWIDGET )
 /*
 int insertWidget ( int index, QWidget * widget, int stretch = 0 )
 */
-HB_FUNC( QSTATUSBAR_INSERTWIDGET )
+HB_FUNC_STATIC( QSTATUSBAR_INSERTWIDGET )
 {
   QStatusBar * obj = (QStatusBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -183,7 +183,7 @@ HB_FUNC( QSTATUSBAR_INSERTWIDGET )
 /*
 bool isSizeGripEnabled () const
 */
-HB_FUNC( QSTATUSBAR_ISSIZEGRIPENABLED )
+HB_FUNC_STATIC( QSTATUSBAR_ISSIZEGRIPENABLED )
 {
   QStatusBar * obj = (QStatusBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -197,7 +197,7 @@ HB_FUNC( QSTATUSBAR_ISSIZEGRIPENABLED )
 /*
 void removeWidget ( QWidget * widget )
 */
-HB_FUNC( QSTATUSBAR_REMOVEWIDGET )
+HB_FUNC_STATIC( QSTATUSBAR_REMOVEWIDGET )
 {
   QStatusBar * obj = (QStatusBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -212,7 +212,7 @@ HB_FUNC( QSTATUSBAR_REMOVEWIDGET )
 /*
 void setSizeGripEnabled ( bool )
 */
-HB_FUNC( QSTATUSBAR_SETSIZEGRIPENABLED )
+HB_FUNC_STATIC( QSTATUSBAR_SETSIZEGRIPENABLED )
 {
   QStatusBar * obj = (QStatusBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -227,7 +227,7 @@ HB_FUNC( QSTATUSBAR_SETSIZEGRIPENABLED )
 /*
 void clearMessage ()
 */
-HB_FUNC( QSTATUSBAR_CLEARMESSAGE )
+HB_FUNC_STATIC( QSTATUSBAR_CLEARMESSAGE )
 {
   QStatusBar * obj = (QStatusBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -241,7 +241,7 @@ HB_FUNC( QSTATUSBAR_CLEARMESSAGE )
 /*
 void showMessage ( const QString & message, int timeout = 0 )
 */
-HB_FUNC( QSTATUSBAR_SHOWMESSAGE )
+HB_FUNC_STATIC( QSTATUSBAR_SHOWMESSAGE )
 {
   QStatusBar * obj = (QStatusBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

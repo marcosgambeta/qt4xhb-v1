@@ -101,7 +101,7 @@ RETURN
 /*
 QMutex ( RecursionMode mode = NonRecursive )
 */
-HB_FUNC( QMUTEX_NEW )
+HB_FUNC_STATIC( QMUTEX_NEW )
 {
   QMutex * o = NULL;
   int par1 = ISNIL(1)? (int) QMutex::NonRecursive : hb_parni(1);
@@ -117,7 +117,7 @@ HB_FUNC( QMUTEX_NEW )
 }
 
 
-HB_FUNC( QMUTEX_DELETE )
+HB_FUNC_STATIC( QMUTEX_DELETE )
 {
   QMutex * obj = (QMutex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -136,7 +136,7 @@ HB_FUNC( QMUTEX_DELETE )
 /*
 void lock ()
 */
-HB_FUNC( QMUTEX_LOCK )
+HB_FUNC_STATIC( QMUTEX_LOCK )
 {
   QMutex * obj = (QMutex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -150,7 +150,7 @@ HB_FUNC( QMUTEX_LOCK )
 /*
 bool tryLock ()
 */
-HB_FUNC( QMUTEX_TRYLOCK1 )
+HB_FUNC_STATIC( QMUTEX_TRYLOCK1 )
 {
   QMutex * obj = (QMutex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -164,7 +164,7 @@ HB_FUNC( QMUTEX_TRYLOCK1 )
 /*
 bool tryLock ( int timeout )
 */
-HB_FUNC( QMUTEX_TRYLOCK2 )
+HB_FUNC_STATIC( QMUTEX_TRYLOCK2 )
 {
   QMutex * obj = (QMutex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -179,7 +179,7 @@ HB_FUNC( QMUTEX_TRYLOCK2 )
 //[1]bool tryLock ()
 //[2]bool tryLock ( int timeout )
 
-HB_FUNC( QMUTEX_TRYLOCK )
+HB_FUNC_STATIC( QMUTEX_TRYLOCK )
 {
   if( ISNUMPAR(0) )
   {
@@ -194,7 +194,7 @@ HB_FUNC( QMUTEX_TRYLOCK )
 /*
 void unlock ()
 */
-HB_FUNC( QMUTEX_UNLOCK )
+HB_FUNC_STATIC( QMUTEX_UNLOCK )
 {
   QMutex * obj = (QMutex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

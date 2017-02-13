@@ -132,7 +132,7 @@ RETURN
 /*
 QRegion ()
 */
-HB_FUNC( QREGION_NEW1 )
+HB_FUNC_STATIC( QREGION_NEW1 )
 {
   QRegion * o = NULL;
   o = new QRegion (  );
@@ -150,7 +150,7 @@ HB_FUNC( QREGION_NEW1 )
 /*
 QRegion ( int x, int y, int w, int h, RegionType t = Rectangle )
 */
-HB_FUNC( QREGION_NEW2 )
+HB_FUNC_STATIC( QREGION_NEW2 )
 {
   QRegion * o = NULL;
   int par1 = hb_parni(1);
@@ -173,7 +173,7 @@ HB_FUNC( QREGION_NEW2 )
 /*
 QRegion ( const QPolygon & a, Qt::FillRule fillRule = Qt::OddEvenFill )
 */
-HB_FUNC( QREGION_NEW3 )
+HB_FUNC_STATIC( QREGION_NEW3 )
 {
   QRegion * o = NULL;
   QPolygon * par1 = (QPolygon *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -193,7 +193,7 @@ HB_FUNC( QREGION_NEW3 )
 /*
 QRegion ( const QRegion & r )
 */
-HB_FUNC( QREGION_NEW4 )
+HB_FUNC_STATIC( QREGION_NEW4 )
 {
   QRegion * o = NULL;
   QRegion * par1 = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -212,7 +212,7 @@ HB_FUNC( QREGION_NEW4 )
 /*
 QRegion ( const QBitmap & bm )
 */
-HB_FUNC( QREGION_NEW5 )
+HB_FUNC_STATIC( QREGION_NEW5 )
 {
   QRegion * o = NULL;
   QBitmap * par1 = (QBitmap *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -231,7 +231,7 @@ HB_FUNC( QREGION_NEW5 )
 /*
 QRegion ( const QRect & r, RegionType t = Rectangle )
 */
-HB_FUNC( QREGION_NEW6 )
+HB_FUNC_STATIC( QREGION_NEW6 )
 {
   QRegion * o = NULL;
   QRect * par1 = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -255,7 +255,7 @@ HB_FUNC( QREGION_NEW6 )
 //[5]QRegion ( const QBitmap & bm )
 //[6]QRegion ( const QRect & r, RegionType t = Rectangle )
 
-HB_FUNC( QREGION_NEW )
+HB_FUNC_STATIC( QREGION_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -287,7 +287,7 @@ HB_FUNC( QREGION_NEW )
   }
 }
 
-HB_FUNC( QREGION_DELETE )
+HB_FUNC_STATIC( QREGION_DELETE )
 {
   QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -306,7 +306,7 @@ HB_FUNC( QREGION_DELETE )
 /*
 QRect boundingRect () const
 */
-HB_FUNC( QREGION_BOUNDINGRECT )
+HB_FUNC_STATIC( QREGION_BOUNDINGRECT )
 {
   QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -319,7 +319,7 @@ HB_FUNC( QREGION_BOUNDINGRECT )
 /*
 bool contains ( const QPoint & p ) const
 */
-HB_FUNC( QREGION_CONTAINS1 )
+HB_FUNC_STATIC( QREGION_CONTAINS1 )
 {
   QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -334,7 +334,7 @@ HB_FUNC( QREGION_CONTAINS1 )
 /*
 bool contains ( const QRect & r ) const
 */
-HB_FUNC( QREGION_CONTAINS2 )
+HB_FUNC_STATIC( QREGION_CONTAINS2 )
 {
   QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -349,7 +349,7 @@ HB_FUNC( QREGION_CONTAINS2 )
 //[1]bool contains ( const QPoint & p ) const
 //[2]bool contains ( const QRect & r ) const
 
-HB_FUNC( QREGION_CONTAINS )
+HB_FUNC_STATIC( QREGION_CONTAINS )
 {
   if( ISNUMPAR(1) && ISQPOINT(1) )
   {
@@ -365,7 +365,7 @@ HB_FUNC( QREGION_CONTAINS )
 /*
 QRegion intersected ( const QRegion & r ) const
 */
-HB_FUNC( QREGION_INTERSECTED1 )
+HB_FUNC_STATIC( QREGION_INTERSECTED1 )
 {
   QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -379,7 +379,7 @@ HB_FUNC( QREGION_INTERSECTED1 )
 /*
 QRegion intersected ( const QRect & rect ) const
 */
-HB_FUNC( QREGION_INTERSECTED2 )
+HB_FUNC_STATIC( QREGION_INTERSECTED2 )
 {
   QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -393,7 +393,7 @@ HB_FUNC( QREGION_INTERSECTED2 )
 //[1]QRegion intersected ( const QRegion & r ) const
 //[2]QRegion intersected ( const QRect & rect ) const
 
-HB_FUNC( QREGION_INTERSECTED )
+HB_FUNC_STATIC( QREGION_INTERSECTED )
 {
   if( ISNUMPAR(1) && ISQREGION(1) )
   {
@@ -408,7 +408,7 @@ HB_FUNC( QREGION_INTERSECTED )
 /*
 bool intersects ( const QRegion & region ) const
 */
-HB_FUNC( QREGION_INTERSECTS1 )
+HB_FUNC_STATIC( QREGION_INTERSECTS1 )
 {
   QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -423,7 +423,7 @@ HB_FUNC( QREGION_INTERSECTS1 )
 /*
 bool intersects ( const QRect & rect ) const
 */
-HB_FUNC( QREGION_INTERSECTS2 )
+HB_FUNC_STATIC( QREGION_INTERSECTS2 )
 {
   QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -438,7 +438,7 @@ HB_FUNC( QREGION_INTERSECTS2 )
 //[1]bool intersects ( const QRegion & region ) const
 //[2]bool intersects ( const QRect & rect ) const
 
-HB_FUNC( QREGION_INTERSECTS )
+HB_FUNC_STATIC( QREGION_INTERSECTS )
 {
   if( ISNUMPAR(1) && ISQREGION(1) )
   {
@@ -453,7 +453,7 @@ HB_FUNC( QREGION_INTERSECTS )
 /*
 bool isEmpty () const
 */
-HB_FUNC( QREGION_ISEMPTY )
+HB_FUNC_STATIC( QREGION_ISEMPTY )
 {
   QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -467,7 +467,7 @@ HB_FUNC( QREGION_ISEMPTY )
 /*
 int rectCount () const
 */
-HB_FUNC( QREGION_RECTCOUNT )
+HB_FUNC_STATIC( QREGION_RECTCOUNT )
 {
   QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -481,7 +481,7 @@ HB_FUNC( QREGION_RECTCOUNT )
 /*
 QVector<QRect> rects () const
 */
-HB_FUNC( QREGION_RECTS )
+HB_FUNC_STATIC( QREGION_RECTS )
 {
   QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -526,7 +526,7 @@ HB_FUNC( QREGION_RECTS )
 /*
 QRegion subtracted ( const QRegion & r ) const
 */
-HB_FUNC( QREGION_SUBTRACTED )
+HB_FUNC_STATIC( QREGION_SUBTRACTED )
 {
   QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -540,7 +540,7 @@ HB_FUNC( QREGION_SUBTRACTED )
 /*
 void swap ( QRegion & other )
 */
-HB_FUNC( QREGION_SWAP )
+HB_FUNC_STATIC( QREGION_SWAP )
 {
   QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -555,7 +555,7 @@ HB_FUNC( QREGION_SWAP )
 /*
 void translate ( int dx, int dy )
 */
-HB_FUNC( QREGION_TRANSLATE1 )
+HB_FUNC_STATIC( QREGION_TRANSLATE1 )
 {
   QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -571,7 +571,7 @@ HB_FUNC( QREGION_TRANSLATE1 )
 /*
 void translate ( const QPoint & point )
 */
-HB_FUNC( QREGION_TRANSLATE2 )
+HB_FUNC_STATIC( QREGION_TRANSLATE2 )
 {
   QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -586,7 +586,7 @@ HB_FUNC( QREGION_TRANSLATE2 )
 //[1]void translate ( int dx, int dy )
 //[2]void translate ( const QPoint & point )
 
-HB_FUNC( QREGION_TRANSLATE )
+HB_FUNC_STATIC( QREGION_TRANSLATE )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
@@ -601,7 +601,7 @@ HB_FUNC( QREGION_TRANSLATE )
 /*
 QRegion translated ( int dx, int dy ) const
 */
-HB_FUNC( QREGION_TRANSLATED1 )
+HB_FUNC_STATIC( QREGION_TRANSLATED1 )
 {
   QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -616,7 +616,7 @@ HB_FUNC( QREGION_TRANSLATED1 )
 /*
 QRegion translated ( const QPoint & p ) const
 */
-HB_FUNC( QREGION_TRANSLATED2 )
+HB_FUNC_STATIC( QREGION_TRANSLATED2 )
 {
   QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -630,7 +630,7 @@ HB_FUNC( QREGION_TRANSLATED2 )
 //[1]QRegion translated ( int dx, int dy ) const
 //[2]QRegion translated ( const QPoint & p ) const
 
-HB_FUNC( QREGION_TRANSLATED )
+HB_FUNC_STATIC( QREGION_TRANSLATED )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
@@ -645,7 +645,7 @@ HB_FUNC( QREGION_TRANSLATED )
 /*
 QRegion united ( const QRegion & r ) const
 */
-HB_FUNC( QREGION_UNITED1 )
+HB_FUNC_STATIC( QREGION_UNITED1 )
 {
   QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -659,7 +659,7 @@ HB_FUNC( QREGION_UNITED1 )
 /*
 QRegion united ( const QRect & rect ) const
 */
-HB_FUNC( QREGION_UNITED2 )
+HB_FUNC_STATIC( QREGION_UNITED2 )
 {
   QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -673,7 +673,7 @@ HB_FUNC( QREGION_UNITED2 )
 //[1]QRegion united ( const QRegion & r ) const
 //[2]QRegion united ( const QRect & rect ) const
 
-HB_FUNC( QREGION_UNITED )
+HB_FUNC_STATIC( QREGION_UNITED )
 {
   if( ISNUMPAR(1) && ISQREGION(1) )
   {
@@ -688,7 +688,7 @@ HB_FUNC( QREGION_UNITED )
 /*
 QRegion xored ( const QRegion & r ) const
 */
-HB_FUNC( QREGION_XORED )
+HB_FUNC_STATIC( QREGION_XORED )
 {
   QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

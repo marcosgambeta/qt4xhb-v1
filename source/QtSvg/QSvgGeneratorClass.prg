@@ -82,7 +82,7 @@ RETURN
 /*
 QSvgGenerator ()
 */
-HB_FUNC( QSVGGENERATOR_NEW )
+HB_FUNC_STATIC( QSVGGENERATOR_NEW )
 {
   QSvgGenerator * o = NULL;
   o = new QSvgGenerator (  );
@@ -94,7 +94,7 @@ HB_FUNC( QSVGGENERATOR_NEW )
 }
 
 
-HB_FUNC( QSVGGENERATOR_DELETE )
+HB_FUNC_STATIC( QSVGGENERATOR_DELETE )
 {
   QSvgGenerator * obj = (QSvgGenerator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -113,7 +113,7 @@ HB_FUNC( QSVGGENERATOR_DELETE )
 /*
 QString description () const
 */
-HB_FUNC( QSVGGENERATOR_DESCRIPTION )
+HB_FUNC_STATIC( QSVGGENERATOR_DESCRIPTION )
 {
   QSvgGenerator * obj = (QSvgGenerator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -127,7 +127,7 @@ HB_FUNC( QSVGGENERATOR_DESCRIPTION )
 /*
 QString fileName () const
 */
-HB_FUNC( QSVGGENERATOR_FILENAME )
+HB_FUNC_STATIC( QSVGGENERATOR_FILENAME )
 {
   QSvgGenerator * obj = (QSvgGenerator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -141,7 +141,7 @@ HB_FUNC( QSVGGENERATOR_FILENAME )
 /*
 QIODevice * outputDevice () const
 */
-HB_FUNC( QSVGGENERATOR_OUTPUTDEVICE )
+HB_FUNC_STATIC( QSVGGENERATOR_OUTPUTDEVICE )
 {
   QSvgGenerator * obj = (QSvgGenerator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -154,7 +154,7 @@ HB_FUNC( QSVGGENERATOR_OUTPUTDEVICE )
 /*
 int resolution () const
 */
-HB_FUNC( QSVGGENERATOR_RESOLUTION )
+HB_FUNC_STATIC( QSVGGENERATOR_RESOLUTION )
 {
   QSvgGenerator * obj = (QSvgGenerator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -168,7 +168,7 @@ HB_FUNC( QSVGGENERATOR_RESOLUTION )
 /*
 void setDescription ( const QString & description )
 */
-HB_FUNC( QSVGGENERATOR_SETDESCRIPTION )
+HB_FUNC_STATIC( QSVGGENERATOR_SETDESCRIPTION )
 {
   QSvgGenerator * obj = (QSvgGenerator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -183,7 +183,7 @@ HB_FUNC( QSVGGENERATOR_SETDESCRIPTION )
 /*
 void setFileName ( const QString & fileName )
 */
-HB_FUNC( QSVGGENERATOR_SETFILENAME )
+HB_FUNC_STATIC( QSVGGENERATOR_SETFILENAME )
 {
   QSvgGenerator * obj = (QSvgGenerator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -198,7 +198,7 @@ HB_FUNC( QSVGGENERATOR_SETFILENAME )
 /*
 void setOutputDevice ( QIODevice * outputDevice )
 */
-HB_FUNC( QSVGGENERATOR_SETOUTPUTDEVICE )
+HB_FUNC_STATIC( QSVGGENERATOR_SETOUTPUTDEVICE )
 {
   QSvgGenerator * obj = (QSvgGenerator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -213,7 +213,7 @@ HB_FUNC( QSVGGENERATOR_SETOUTPUTDEVICE )
 /*
 void setResolution ( int dpi )
 */
-HB_FUNC( QSVGGENERATOR_SETRESOLUTION )
+HB_FUNC_STATIC( QSVGGENERATOR_SETRESOLUTION )
 {
   QSvgGenerator * obj = (QSvgGenerator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -228,7 +228,7 @@ HB_FUNC( QSVGGENERATOR_SETRESOLUTION )
 /*
 void setSize ( const QSize & size )
 */
-HB_FUNC( QSVGGENERATOR_SETSIZE )
+HB_FUNC_STATIC( QSVGGENERATOR_SETSIZE )
 {
   QSvgGenerator * obj = (QSvgGenerator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -243,7 +243,7 @@ HB_FUNC( QSVGGENERATOR_SETSIZE )
 /*
 void setTitle ( const QString & title )
 */
-HB_FUNC( QSVGGENERATOR_SETTITLE )
+HB_FUNC_STATIC( QSVGGENERATOR_SETTITLE )
 {
   QSvgGenerator * obj = (QSvgGenerator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -258,7 +258,7 @@ HB_FUNC( QSVGGENERATOR_SETTITLE )
 /*
 void setViewBox ( const QRect & viewBox )
 */
-HB_FUNC( QSVGGENERATOR_SETVIEWBOX1 )
+HB_FUNC_STATIC( QSVGGENERATOR_SETVIEWBOX1 )
 {
   QSvgGenerator * obj = (QSvgGenerator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -273,7 +273,7 @@ HB_FUNC( QSVGGENERATOR_SETVIEWBOX1 )
 /*
 void setViewBox ( const QRectF & viewBox )
 */
-HB_FUNC( QSVGGENERATOR_SETVIEWBOX2 )
+HB_FUNC_STATIC( QSVGGENERATOR_SETVIEWBOX2 )
 {
   QSvgGenerator * obj = (QSvgGenerator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -288,7 +288,7 @@ HB_FUNC( QSVGGENERATOR_SETVIEWBOX2 )
 //[1]void setViewBox ( const QRect & viewBox )
 //[2]void setViewBox ( const QRectF & viewBox )
 
-HB_FUNC( QSVGGENERATOR_SETVIEWBOX )
+HB_FUNC_STATIC( QSVGGENERATOR_SETVIEWBOX )
 {
   if( ISNUMPAR(1) && ISQRECT(1) )
   {
@@ -303,7 +303,7 @@ HB_FUNC( QSVGGENERATOR_SETVIEWBOX )
 /*
 QSize size () const
 */
-HB_FUNC( QSVGGENERATOR_SIZE )
+HB_FUNC_STATIC( QSVGGENERATOR_SIZE )
 {
   QSvgGenerator * obj = (QSvgGenerator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -316,7 +316,7 @@ HB_FUNC( QSVGGENERATOR_SIZE )
 /*
 QString title () const
 */
-HB_FUNC( QSVGGENERATOR_TITLE )
+HB_FUNC_STATIC( QSVGGENERATOR_TITLE )
 {
   QSvgGenerator * obj = (QSvgGenerator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -330,7 +330,7 @@ HB_FUNC( QSVGGENERATOR_TITLE )
 /*
 QRect viewBox () const
 */
-HB_FUNC( QSVGGENERATOR_VIEWBOX )
+HB_FUNC_STATIC( QSVGGENERATOR_VIEWBOX )
 {
   QSvgGenerator * obj = (QSvgGenerator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -343,7 +343,7 @@ HB_FUNC( QSVGGENERATOR_VIEWBOX )
 /*
 QRectF viewBoxF () const
 */
-HB_FUNC( QSVGGENERATOR_VIEWBOXF )
+HB_FUNC_STATIC( QSVGGENERATOR_VIEWBOXF )
 {
   QSvgGenerator * obj = (QSvgGenerator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

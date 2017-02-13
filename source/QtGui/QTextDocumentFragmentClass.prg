@@ -111,7 +111,7 @@ RETURN
 /*
 QTextDocumentFragment ()
 */
-HB_FUNC( QTEXTDOCUMENTFRAGMENT_NEW1 )
+HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW1 )
 {
   QTextDocumentFragment * o = NULL;
   o = new QTextDocumentFragment (  );
@@ -129,7 +129,7 @@ HB_FUNC( QTEXTDOCUMENTFRAGMENT_NEW1 )
 /*
 QTextDocumentFragment ( const QTextDocument * document )
 */
-HB_FUNC( QTEXTDOCUMENTFRAGMENT_NEW2 )
+HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW2 )
 {
   QTextDocumentFragment * o = NULL;
   const QTextDocument * par1 = (const QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -148,7 +148,7 @@ HB_FUNC( QTEXTDOCUMENTFRAGMENT_NEW2 )
 /*
 QTextDocumentFragment ( const QTextCursor & cursor )
 */
-HB_FUNC( QTEXTDOCUMENTFRAGMENT_NEW3 )
+HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW3 )
 {
   QTextDocumentFragment * o = NULL;
   QTextCursor * par1 = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -167,7 +167,7 @@ HB_FUNC( QTEXTDOCUMENTFRAGMENT_NEW3 )
 /*
 QTextDocumentFragment ( const QTextDocumentFragment & other )
 */
-HB_FUNC( QTEXTDOCUMENTFRAGMENT_NEW4 )
+HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW4 )
 {
   QTextDocumentFragment * o = NULL;
   QTextDocumentFragment * par1 = (QTextDocumentFragment *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -188,7 +188,7 @@ HB_FUNC( QTEXTDOCUMENTFRAGMENT_NEW4 )
 //[3]QTextDocumentFragment ( const QTextCursor & cursor )
 //[4]QTextDocumentFragment ( const QTextDocumentFragment & other )
 
-HB_FUNC( QTEXTDOCUMENTFRAGMENT_NEW )
+HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -212,7 +212,7 @@ HB_FUNC( QTEXTDOCUMENTFRAGMENT_NEW )
   }
 }
 
-HB_FUNC( QTEXTDOCUMENTFRAGMENT_DELETE )
+HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_DELETE )
 {
   QTextDocumentFragment * obj = (QTextDocumentFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -231,7 +231,7 @@ HB_FUNC( QTEXTDOCUMENTFRAGMENT_DELETE )
 /*
 bool isEmpty () const
 */
-HB_FUNC( QTEXTDOCUMENTFRAGMENT_ISEMPTY )
+HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_ISEMPTY )
 {
   QTextDocumentFragment * obj = (QTextDocumentFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -245,7 +245,7 @@ HB_FUNC( QTEXTDOCUMENTFRAGMENT_ISEMPTY )
 /*
 QString toHtml ( const QByteArray & encoding ) const
 */
-HB_FUNC( QTEXTDOCUMENTFRAGMENT_TOHTML1 )
+HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_TOHTML1 )
 {
   QTextDocumentFragment * obj = (QTextDocumentFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -260,7 +260,7 @@ HB_FUNC( QTEXTDOCUMENTFRAGMENT_TOHTML1 )
 /*
 QString toHtml () const
 */
-HB_FUNC( QTEXTDOCUMENTFRAGMENT_TOHTML2 )
+HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_TOHTML2 )
 {
   QTextDocumentFragment * obj = (QTextDocumentFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -274,7 +274,7 @@ HB_FUNC( QTEXTDOCUMENTFRAGMENT_TOHTML2 )
 //[1]QString toHtml ( const QByteArray & encoding ) const
 //[2]QString toHtml () const
 
-HB_FUNC( QTEXTDOCUMENTFRAGMENT_TOHTML )
+HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_TOHTML )
 {
   if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
@@ -289,7 +289,7 @@ HB_FUNC( QTEXTDOCUMENTFRAGMENT_TOHTML )
 /*
 QString toPlainText () const
 */
-HB_FUNC( QTEXTDOCUMENTFRAGMENT_TOPLAINTEXT )
+HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_TOPLAINTEXT )
 {
   QTextDocumentFragment * obj = (QTextDocumentFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -304,7 +304,7 @@ HB_FUNC( QTEXTDOCUMENTFRAGMENT_TOPLAINTEXT )
 /*
 QTextDocumentFragment fromHtml ( const QString & text )
 */
-HB_FUNC( QTEXTDOCUMENTFRAGMENT_FROMHTML1 )
+HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_FROMHTML1 )
 {
   QString par1 = hb_parc(1);
   QTextDocumentFragment * ptr = new QTextDocumentFragment( QTextDocumentFragment::fromHtml ( par1 ) );
@@ -314,7 +314,7 @@ HB_FUNC( QTEXTDOCUMENTFRAGMENT_FROMHTML1 )
 /*
 QTextDocumentFragment fromHtml ( const QString & text, const QTextDocument * resourceProvider )
 */
-HB_FUNC( QTEXTDOCUMENTFRAGMENT_FROMHTML2 )
+HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_FROMHTML2 )
 {
   QString par1 = hb_parc(1);
   const QTextDocument * par2 = (const QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -325,7 +325,7 @@ HB_FUNC( QTEXTDOCUMENTFRAGMENT_FROMHTML2 )
 //[1]QTextDocumentFragment fromHtml ( const QString & text )
 //[2]QTextDocumentFragment fromHtml ( const QString & text, const QTextDocument * resourceProvider )
 
-HB_FUNC( QTEXTDOCUMENTFRAGMENT_FROMHTML )
+HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_FROMHTML )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
@@ -340,7 +340,7 @@ HB_FUNC( QTEXTDOCUMENTFRAGMENT_FROMHTML )
 /*
 QTextDocumentFragment fromPlainText ( const QString & plainText )
 */
-HB_FUNC( QTEXTDOCUMENTFRAGMENT_FROMPLAINTEXT )
+HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_FROMPLAINTEXT )
 {
   QString par1 = hb_parc(1);
   QTextDocumentFragment * ptr = new QTextDocumentFragment( QTextDocumentFragment::fromPlainText ( par1 ) );

@@ -97,7 +97,7 @@ RETURN
 /*
 virtual void classBegin () = 0
 */
-HB_FUNC( QDECLARATIVEPARSERSTATUS_CLASSBEGIN )
+HB_FUNC_STATIC( QDECLARATIVEPARSERSTATUS_CLASSBEGIN )
 {
   QDeclarativeParserStatus * obj = (QDeclarativeParserStatus *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -111,7 +111,7 @@ HB_FUNC( QDECLARATIVEPARSERSTATUS_CLASSBEGIN )
 /*
 virtual void componentComplete () = 0
 */
-HB_FUNC( QDECLARATIVEPARSERSTATUS_COMPONENTCOMPLETE )
+HB_FUNC_STATIC( QDECLARATIVEPARSERSTATUS_COMPONENTCOMPLETE )
 {
   QDeclarativeParserStatus * obj = (QDeclarativeParserStatus *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

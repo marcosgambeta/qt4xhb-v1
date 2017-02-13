@@ -107,7 +107,7 @@ RETURN
 /*
 QColormap ( const QColormap & colormap )
 */
-HB_FUNC( QCOLORMAP_NEW )
+HB_FUNC_STATIC( QCOLORMAP_NEW )
 {
   QColormap * o = NULL;
   QColormap * par1 = (QColormap *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -120,7 +120,7 @@ HB_FUNC( QCOLORMAP_NEW )
 }
 
 
-HB_FUNC( QCOLORMAP_DELETE )
+HB_FUNC_STATIC( QCOLORMAP_DELETE )
 {
   QColormap * obj = (QColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -139,7 +139,7 @@ HB_FUNC( QCOLORMAP_DELETE )
 /*
 const QColor colorAt ( uint pixel ) const
 */
-HB_FUNC( QCOLORMAP_COLORAT )
+HB_FUNC_STATIC( QCOLORMAP_COLORAT )
 {
   QColormap * obj = (QColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -153,7 +153,7 @@ HB_FUNC( QCOLORMAP_COLORAT )
 /*
 const QVector<QColor> colormap () const
 */
-HB_FUNC( QCOLORMAP_COLORMAP )
+HB_FUNC_STATIC( QCOLORMAP_COLORMAP )
 {
   QColormap * obj = (QColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -197,7 +197,7 @@ HB_FUNC( QCOLORMAP_COLORMAP )
 /*
 int depth () const
 */
-HB_FUNC( QCOLORMAP_DEPTH )
+HB_FUNC_STATIC( QCOLORMAP_DEPTH )
 {
   QColormap * obj = (QColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -211,7 +211,7 @@ HB_FUNC( QCOLORMAP_DEPTH )
 /*
 Mode mode () const
 */
-HB_FUNC( QCOLORMAP_MODE )
+HB_FUNC_STATIC( QCOLORMAP_MODE )
 {
   QColormap * obj = (QColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -225,7 +225,7 @@ HB_FUNC( QCOLORMAP_MODE )
 /*
 uint pixel ( const QColor & color ) const
 */
-HB_FUNC( QCOLORMAP_PIXEL )
+HB_FUNC_STATIC( QCOLORMAP_PIXEL )
 {
   QColormap * obj = (QColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -240,7 +240,7 @@ HB_FUNC( QCOLORMAP_PIXEL )
 /*
 int size () const
 */
-HB_FUNC( QCOLORMAP_SIZE )
+HB_FUNC_STATIC( QCOLORMAP_SIZE )
 {
   QColormap * obj = (QColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -256,7 +256,7 @@ HB_FUNC( QCOLORMAP_SIZE )
 /*
 QColormap instance ( int screen = -1 )
 */
-HB_FUNC( QCOLORMAP_INSTANCE )
+HB_FUNC_STATIC( QCOLORMAP_INSTANCE )
 {
   int par1 = ISNIL(1)? -1 : hb_parni(1);
   QColormap * ptr = new QColormap( QColormap::instance ( par1 ) );

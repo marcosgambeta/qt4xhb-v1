@@ -74,7 +74,7 @@ RETURN
 /*
 QGraphicsRotation ( QObject * parent = 0 )
 */
-HB_FUNC( QGRAPHICSROTATION_NEW )
+HB_FUNC_STATIC( QGRAPHICSROTATION_NEW )
 {
   QGraphicsRotation * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -87,7 +87,7 @@ HB_FUNC( QGRAPHICSROTATION_NEW )
 }
 
 
-HB_FUNC( QGRAPHICSROTATION_DELETE )
+HB_FUNC_STATIC( QGRAPHICSROTATION_DELETE )
 {
   QGraphicsRotation * obj = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -106,7 +106,7 @@ HB_FUNC( QGRAPHICSROTATION_DELETE )
 /*
 qreal angle () const
 */
-HB_FUNC( QGRAPHICSROTATION_ANGLE )
+HB_FUNC_STATIC( QGRAPHICSROTATION_ANGLE )
 {
   QGraphicsRotation * obj = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -120,7 +120,7 @@ HB_FUNC( QGRAPHICSROTATION_ANGLE )
 /*
 QVector3D axis () const
 */
-HB_FUNC( QGRAPHICSROTATION_AXIS )
+HB_FUNC_STATIC( QGRAPHICSROTATION_AXIS )
 {
   QGraphicsRotation * obj = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -133,7 +133,7 @@ HB_FUNC( QGRAPHICSROTATION_AXIS )
 /*
 QVector3D origin () const
 */
-HB_FUNC( QGRAPHICSROTATION_ORIGIN )
+HB_FUNC_STATIC( QGRAPHICSROTATION_ORIGIN )
 {
   QGraphicsRotation * obj = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -146,7 +146,7 @@ HB_FUNC( QGRAPHICSROTATION_ORIGIN )
 /*
 void setAngle ( qreal )
 */
-HB_FUNC( QGRAPHICSROTATION_SETANGLE )
+HB_FUNC_STATIC( QGRAPHICSROTATION_SETANGLE )
 {
   QGraphicsRotation * obj = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -161,7 +161,7 @@ HB_FUNC( QGRAPHICSROTATION_SETANGLE )
 /*
 void setAxis ( const QVector3D & axis )
 */
-HB_FUNC( QGRAPHICSROTATION_SETAXIS1 )
+HB_FUNC_STATIC( QGRAPHICSROTATION_SETAXIS1 )
 {
   QGraphicsRotation * obj = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -176,7 +176,7 @@ HB_FUNC( QGRAPHICSROTATION_SETAXIS1 )
 /*
 void setAxis ( Qt::Axis axis )
 */
-HB_FUNC( QGRAPHICSROTATION_SETAXIS2 )
+HB_FUNC_STATIC( QGRAPHICSROTATION_SETAXIS2 )
 {
   QGraphicsRotation * obj = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -191,7 +191,7 @@ HB_FUNC( QGRAPHICSROTATION_SETAXIS2 )
 //[1]void setAxis ( const QVector3D & axis )
 //[2]void setAxis ( Qt::Axis axis )
 
-HB_FUNC( QGRAPHICSROTATION_SETAXIS )
+HB_FUNC_STATIC( QGRAPHICSROTATION_SETAXIS )
 {
   if( ISNUMPAR(1) && ISQVECTOR3D(1) )
   {
@@ -206,7 +206,7 @@ HB_FUNC( QGRAPHICSROTATION_SETAXIS )
 /*
 void setOrigin ( const QVector3D & point )
 */
-HB_FUNC( QGRAPHICSROTATION_SETORIGIN )
+HB_FUNC_STATIC( QGRAPHICSROTATION_SETORIGIN )
 {
   QGraphicsRotation * obj = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -221,7 +221,7 @@ HB_FUNC( QGRAPHICSROTATION_SETORIGIN )
 /*
 virtual void applyTo ( QMatrix4x4 * matrix ) const
 */
-HB_FUNC( QGRAPHICSROTATION_APPLYTO )
+HB_FUNC_STATIC( QGRAPHICSROTATION_APPLYTO )
 {
   QGraphicsRotation * obj = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

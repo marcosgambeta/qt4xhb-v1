@@ -128,7 +128,7 @@ RETURN
 
 #include <QDateTime>
 
-HB_FUNC( QABSTRACTFILEENGINE_DELETE )
+HB_FUNC_STATIC( QABSTRACTFILEENGINE_DELETE )
 {
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -147,7 +147,7 @@ HB_FUNC( QABSTRACTFILEENGINE_DELETE )
 /*
 bool atEnd () const
 */
-HB_FUNC( QABSTRACTFILEENGINE_ATEND )
+HB_FUNC_STATIC( QABSTRACTFILEENGINE_ATEND )
 {
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -162,7 +162,7 @@ HB_FUNC( QABSTRACTFILEENGINE_ATEND )
 /*
 virtual bool caseSensitive () const
 */
-HB_FUNC( QABSTRACTFILEENGINE_CASESENSITIVE )
+HB_FUNC_STATIC( QABSTRACTFILEENGINE_CASESENSITIVE )
 {
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -176,7 +176,7 @@ HB_FUNC( QABSTRACTFILEENGINE_CASESENSITIVE )
 /*
 virtual bool close ()
 */
-HB_FUNC( QABSTRACTFILEENGINE_CLOSE )
+HB_FUNC_STATIC( QABSTRACTFILEENGINE_CLOSE )
 {
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -190,7 +190,7 @@ HB_FUNC( QABSTRACTFILEENGINE_CLOSE )
 /*
 virtual bool copy ( const QString & newName )
 */
-HB_FUNC( QABSTRACTFILEENGINE_COPY )
+HB_FUNC_STATIC( QABSTRACTFILEENGINE_COPY )
 {
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -205,7 +205,7 @@ HB_FUNC( QABSTRACTFILEENGINE_COPY )
 /*
 virtual QStringList entryList ( QDir::Filters filters, const QStringList & filterNames ) const
 */
-HB_FUNC( QABSTRACTFILEENGINE_ENTRYLIST )
+HB_FUNC_STATIC( QABSTRACTFILEENGINE_ENTRYLIST )
 {
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -238,7 +238,7 @@ par2 << temp;
 /*
 QFile::FileError error () const
 */
-HB_FUNC( QABSTRACTFILEENGINE_ERROR )
+HB_FUNC_STATIC( QABSTRACTFILEENGINE_ERROR )
 {
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -252,7 +252,7 @@ HB_FUNC( QABSTRACTFILEENGINE_ERROR )
 /*
 QString errorString () const
 */
-HB_FUNC( QABSTRACTFILEENGINE_ERRORSTRING )
+HB_FUNC_STATIC( QABSTRACTFILEENGINE_ERRORSTRING )
 {
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -267,7 +267,7 @@ HB_FUNC( QABSTRACTFILEENGINE_ERRORSTRING )
 /*
 virtual FileFlags fileFlags ( FileFlags type = FileInfoAll ) const
 */
-HB_FUNC( QABSTRACTFILEENGINE_FILEFLAGS )
+HB_FUNC_STATIC( QABSTRACTFILEENGINE_FILEFLAGS )
 {
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -282,7 +282,7 @@ HB_FUNC( QABSTRACTFILEENGINE_FILEFLAGS )
 /*
 virtual QString fileName ( FileName file = DefaultName ) const
 */
-HB_FUNC( QABSTRACTFILEENGINE_FILENAME )
+HB_FUNC_STATIC( QABSTRACTFILEENGINE_FILENAME )
 {
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -297,7 +297,7 @@ HB_FUNC( QABSTRACTFILEENGINE_FILENAME )
 /*
 virtual QDateTime fileTime ( FileTime time ) const
 */
-HB_FUNC( QABSTRACTFILEENGINE_FILETIME )
+HB_FUNC_STATIC( QABSTRACTFILEENGINE_FILETIME )
 {
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -311,7 +311,7 @@ HB_FUNC( QABSTRACTFILEENGINE_FILETIME )
 /*
 virtual bool flush ()
 */
-HB_FUNC( QABSTRACTFILEENGINE_FLUSH )
+HB_FUNC_STATIC( QABSTRACTFILEENGINE_FLUSH )
 {
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -325,7 +325,7 @@ HB_FUNC( QABSTRACTFILEENGINE_FLUSH )
 /*
 virtual int handle () const
 */
-HB_FUNC( QABSTRACTFILEENGINE_HANDLE )
+HB_FUNC_STATIC( QABSTRACTFILEENGINE_HANDLE )
 {
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -339,7 +339,7 @@ HB_FUNC( QABSTRACTFILEENGINE_HANDLE )
 /*
 virtual bool isRelativePath () const
 */
-HB_FUNC( QABSTRACTFILEENGINE_ISRELATIVEPATH )
+HB_FUNC_STATIC( QABSTRACTFILEENGINE_ISRELATIVEPATH )
 {
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -353,7 +353,7 @@ HB_FUNC( QABSTRACTFILEENGINE_ISRELATIVEPATH )
 /*
 virtual bool isSequential () const
 */
-HB_FUNC( QABSTRACTFILEENGINE_ISSEQUENTIAL )
+HB_FUNC_STATIC( QABSTRACTFILEENGINE_ISSEQUENTIAL )
 {
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -367,7 +367,7 @@ HB_FUNC( QABSTRACTFILEENGINE_ISSEQUENTIAL )
 /*
 virtual bool link ( const QString & newName )
 */
-HB_FUNC( QABSTRACTFILEENGINE_LINK )
+HB_FUNC_STATIC( QABSTRACTFILEENGINE_LINK )
 {
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -383,7 +383,7 @@ HB_FUNC( QABSTRACTFILEENGINE_LINK )
 /*
 virtual bool mkdir ( const QString & dirName, bool createParentDirectories ) const
 */
-HB_FUNC( QABSTRACTFILEENGINE_MKDIR )
+HB_FUNC_STATIC( QABSTRACTFILEENGINE_MKDIR )
 {
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -399,7 +399,7 @@ HB_FUNC( QABSTRACTFILEENGINE_MKDIR )
 /*
 virtual bool open ( QIODevice::OpenMode mode )
 */
-HB_FUNC( QABSTRACTFILEENGINE_OPEN )
+HB_FUNC_STATIC( QABSTRACTFILEENGINE_OPEN )
 {
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -414,7 +414,7 @@ HB_FUNC( QABSTRACTFILEENGINE_OPEN )
 /*
 virtual QString owner ( FileOwner owner ) const
 */
-HB_FUNC( QABSTRACTFILEENGINE_OWNER )
+HB_FUNC_STATIC( QABSTRACTFILEENGINE_OWNER )
 {
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -429,7 +429,7 @@ HB_FUNC( QABSTRACTFILEENGINE_OWNER )
 /*
 virtual uint ownerId ( FileOwner owner ) const
 */
-HB_FUNC( QABSTRACTFILEENGINE_OWNERID )
+HB_FUNC_STATIC( QABSTRACTFILEENGINE_OWNERID )
 {
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -444,7 +444,7 @@ HB_FUNC( QABSTRACTFILEENGINE_OWNERID )
 /*
 virtual qint64 pos () const
 */
-HB_FUNC( QABSTRACTFILEENGINE_POS )
+HB_FUNC_STATIC( QABSTRACTFILEENGINE_POS )
 {
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -459,7 +459,7 @@ HB_FUNC( QABSTRACTFILEENGINE_POS )
 /*
 virtual qint64 readLine ( char * data, qint64 maxlen )
 */
-HB_FUNC( QABSTRACTFILEENGINE_READLINE )
+HB_FUNC_STATIC( QABSTRACTFILEENGINE_READLINE )
 {
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -475,7 +475,7 @@ HB_FUNC( QABSTRACTFILEENGINE_READLINE )
 /*
 virtual bool remove ()
 */
-HB_FUNC( QABSTRACTFILEENGINE_REMOVE )
+HB_FUNC_STATIC( QABSTRACTFILEENGINE_REMOVE )
 {
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -489,7 +489,7 @@ HB_FUNC( QABSTRACTFILEENGINE_REMOVE )
 /*
 virtual bool rename ( const QString & newName )
 */
-HB_FUNC( QABSTRACTFILEENGINE_RENAME )
+HB_FUNC_STATIC( QABSTRACTFILEENGINE_RENAME )
 {
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -504,7 +504,7 @@ HB_FUNC( QABSTRACTFILEENGINE_RENAME )
 /*
 virtual bool rmdir ( const QString & dirName, bool recurseParentDirectories ) const
 */
-HB_FUNC( QABSTRACTFILEENGINE_RMDIR )
+HB_FUNC_STATIC( QABSTRACTFILEENGINE_RMDIR )
 {
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -520,7 +520,7 @@ HB_FUNC( QABSTRACTFILEENGINE_RMDIR )
 /*
 virtual bool seek ( qint64 offset )
 */
-HB_FUNC( QABSTRACTFILEENGINE_SEEK )
+HB_FUNC_STATIC( QABSTRACTFILEENGINE_SEEK )
 {
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -535,7 +535,7 @@ HB_FUNC( QABSTRACTFILEENGINE_SEEK )
 /*
 virtual void setFileName ( const QString & file )
 */
-HB_FUNC( QABSTRACTFILEENGINE_SETFILENAME )
+HB_FUNC_STATIC( QABSTRACTFILEENGINE_SETFILENAME )
 {
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -550,7 +550,7 @@ HB_FUNC( QABSTRACTFILEENGINE_SETFILENAME )
 /*
 virtual bool setPermissions ( uint perms )
 */
-HB_FUNC( QABSTRACTFILEENGINE_SETPERMISSIONS )
+HB_FUNC_STATIC( QABSTRACTFILEENGINE_SETPERMISSIONS )
 {
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -565,7 +565,7 @@ HB_FUNC( QABSTRACTFILEENGINE_SETPERMISSIONS )
 /*
 virtual bool setSize ( qint64 size )
 */
-HB_FUNC( QABSTRACTFILEENGINE_SETSIZE )
+HB_FUNC_STATIC( QABSTRACTFILEENGINE_SETSIZE )
 {
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -580,7 +580,7 @@ HB_FUNC( QABSTRACTFILEENGINE_SETSIZE )
 /*
 virtual qint64 size () const
 */
-HB_FUNC( QABSTRACTFILEENGINE_SIZE )
+HB_FUNC_STATIC( QABSTRACTFILEENGINE_SIZE )
 {
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -594,7 +594,7 @@ HB_FUNC( QABSTRACTFILEENGINE_SIZE )
 /*
 virtual bool supportsExtension ( Extension extension ) const
 */
-HB_FUNC( QABSTRACTFILEENGINE_SUPPORTSEXTENSION )
+HB_FUNC_STATIC( QABSTRACTFILEENGINE_SUPPORTSEXTENSION )
 {
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -610,7 +610,7 @@ HB_FUNC( QABSTRACTFILEENGINE_SUPPORTSEXTENSION )
 /*
 virtual qint64 write ( const char * data, qint64 len )
 */
-HB_FUNC( QABSTRACTFILEENGINE_WRITE )
+HB_FUNC_STATIC( QABSTRACTFILEENGINE_WRITE )
 {
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -627,7 +627,7 @@ HB_FUNC( QABSTRACTFILEENGINE_WRITE )
 /*
 QAbstractFileEngine * create ( const QString & fileName )
 */
-HB_FUNC( QABSTRACTFILEENGINE_CREATE )
+HB_FUNC_STATIC( QABSTRACTFILEENGINE_CREATE )
 {
   QString par1 = hb_parc(1);
   QAbstractFileEngine * ptr = QAbstractFileEngine::create ( par1 );

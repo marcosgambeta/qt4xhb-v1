@@ -87,7 +87,7 @@ RETURN
 /*
 QGestureEvent ( const QList<QGesture *> & gestures )
 */
-HB_FUNC( QGESTUREEVENT_NEW )
+HB_FUNC_STATIC( QGESTUREEVENT_NEW )
 {
   QGestureEvent * o = NULL;
 QList<QGesture *> par1;
@@ -106,7 +106,7 @@ par1 << (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i
 }
 
 
-HB_FUNC( QGESTUREEVENT_DELETE )
+HB_FUNC_STATIC( QGESTUREEVENT_DELETE )
 {
   QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -125,7 +125,7 @@ HB_FUNC( QGESTUREEVENT_DELETE )
 /*
 void accept ()
 */
-HB_FUNC( QGESTUREEVENT_ACCEPT1 )
+HB_FUNC_STATIC( QGESTUREEVENT_ACCEPT1 )
 {
   QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -139,7 +139,7 @@ HB_FUNC( QGESTUREEVENT_ACCEPT1 )
 /*
 void accept ( QGesture * gesture )
 */
-HB_FUNC( QGESTUREEVENT_ACCEPT2 )
+HB_FUNC_STATIC( QGESTUREEVENT_ACCEPT2 )
 {
   QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -154,7 +154,7 @@ HB_FUNC( QGESTUREEVENT_ACCEPT2 )
 /*
 void accept ( Qt::GestureType gestureType )
 */
-HB_FUNC( QGESTUREEVENT_ACCEPT3 )
+HB_FUNC_STATIC( QGESTUREEVENT_ACCEPT3 )
 {
   QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -170,7 +170,7 @@ HB_FUNC( QGESTUREEVENT_ACCEPT3 )
 //[2]void accept ( QGesture * gesture )
 //[3]void accept ( Qt::GestureType gestureType )
 
-HB_FUNC( QGESTUREEVENT_ACCEPT )
+HB_FUNC_STATIC( QGESTUREEVENT_ACCEPT )
 {
   if( ISNUMPAR(0) )
   {
@@ -189,7 +189,7 @@ HB_FUNC( QGESTUREEVENT_ACCEPT )
 /*
 QList<QGesture *> activeGestures () const
 */
-HB_FUNC( QGESTUREEVENT_ACTIVEGESTURES )
+HB_FUNC_STATIC( QGESTUREEVENT_ACTIVEGESTURES )
 {
   QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -233,7 +233,7 @@ HB_FUNC( QGESTUREEVENT_ACTIVEGESTURES )
 /*
 QList<QGesture *> canceledGestures () const
 */
-HB_FUNC( QGESTUREEVENT_CANCELEDGESTURES )
+HB_FUNC_STATIC( QGESTUREEVENT_CANCELEDGESTURES )
 {
   QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -277,7 +277,7 @@ HB_FUNC( QGESTUREEVENT_CANCELEDGESTURES )
 /*
 QGesture * gesture ( Qt::GestureType type ) const
 */
-HB_FUNC( QGESTUREEVENT_GESTURE )
+HB_FUNC_STATIC( QGESTUREEVENT_GESTURE )
 {
   QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -291,7 +291,7 @@ HB_FUNC( QGESTUREEVENT_GESTURE )
 /*
 QList<QGesture *> gestures () const
 */
-HB_FUNC( QGESTUREEVENT_GESTURES )
+HB_FUNC_STATIC( QGESTUREEVENT_GESTURES )
 {
   QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -335,7 +335,7 @@ HB_FUNC( QGESTUREEVENT_GESTURES )
 /*
 void ignore ()
 */
-HB_FUNC( QGESTUREEVENT_IGNORE1 )
+HB_FUNC_STATIC( QGESTUREEVENT_IGNORE1 )
 {
   QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -349,7 +349,7 @@ HB_FUNC( QGESTUREEVENT_IGNORE1 )
 /*
 void ignore ( QGesture * gesture )
 */
-HB_FUNC( QGESTUREEVENT_IGNORE2 )
+HB_FUNC_STATIC( QGESTUREEVENT_IGNORE2 )
 {
   QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -364,7 +364,7 @@ HB_FUNC( QGESTUREEVENT_IGNORE2 )
 /*
 void ignore ( Qt::GestureType gestureType )
 */
-HB_FUNC( QGESTUREEVENT_IGNORE3 )
+HB_FUNC_STATIC( QGESTUREEVENT_IGNORE3 )
 {
   QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -380,7 +380,7 @@ HB_FUNC( QGESTUREEVENT_IGNORE3 )
 //[2]void ignore ( QGesture * gesture )
 //[3]void ignore ( Qt::GestureType gestureType )
 
-HB_FUNC( QGESTUREEVENT_IGNORE )
+HB_FUNC_STATIC( QGESTUREEVENT_IGNORE )
 {
   if( ISNUMPAR(0) )
   {
@@ -399,7 +399,7 @@ HB_FUNC( QGESTUREEVENT_IGNORE )
 /*
 bool isAccepted () const
 */
-HB_FUNC( QGESTUREEVENT_ISACCEPTED1 )
+HB_FUNC_STATIC( QGESTUREEVENT_ISACCEPTED1 )
 {
   QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -413,7 +413,7 @@ HB_FUNC( QGESTUREEVENT_ISACCEPTED1 )
 /*
 bool isAccepted ( QGesture * gesture ) const
 */
-HB_FUNC( QGESTUREEVENT_ISACCEPTED2 )
+HB_FUNC_STATIC( QGESTUREEVENT_ISACCEPTED2 )
 {
   QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -428,7 +428,7 @@ HB_FUNC( QGESTUREEVENT_ISACCEPTED2 )
 /*
 bool isAccepted ( Qt::GestureType gestureType ) const
 */
-HB_FUNC( QGESTUREEVENT_ISACCEPTED3 )
+HB_FUNC_STATIC( QGESTUREEVENT_ISACCEPTED3 )
 {
   QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -444,7 +444,7 @@ HB_FUNC( QGESTUREEVENT_ISACCEPTED3 )
 //[2]bool isAccepted ( QGesture * gesture ) const
 //[3]bool isAccepted ( Qt::GestureType gestureType ) const
 
-HB_FUNC( QGESTUREEVENT_ISACCEPTED )
+HB_FUNC_STATIC( QGESTUREEVENT_ISACCEPTED )
 {
   if( ISNUMPAR(0) )
   {
@@ -463,7 +463,7 @@ HB_FUNC( QGESTUREEVENT_ISACCEPTED )
 /*
 QPointF mapToGraphicsScene ( const QPointF & gesturePoint ) const
 */
-HB_FUNC( QGESTUREEVENT_MAPTOGRAPHICSSCENE )
+HB_FUNC_STATIC( QGESTUREEVENT_MAPTOGRAPHICSSCENE )
 {
   QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -477,7 +477,7 @@ HB_FUNC( QGESTUREEVENT_MAPTOGRAPHICSSCENE )
 /*
 void setAccepted ( bool accepted )
 */
-HB_FUNC( QGESTUREEVENT_SETACCEPTED1 )
+HB_FUNC_STATIC( QGESTUREEVENT_SETACCEPTED1 )
 {
   QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -492,7 +492,7 @@ HB_FUNC( QGESTUREEVENT_SETACCEPTED1 )
 /*
 void setAccepted ( QGesture * gesture, bool value )
 */
-HB_FUNC( QGESTUREEVENT_SETACCEPTED2 )
+HB_FUNC_STATIC( QGESTUREEVENT_SETACCEPTED2 )
 {
   QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -508,7 +508,7 @@ HB_FUNC( QGESTUREEVENT_SETACCEPTED2 )
 /*
 void setAccepted ( Qt::GestureType gestureType, bool value )
 */
-HB_FUNC( QGESTUREEVENT_SETACCEPTED3 )
+HB_FUNC_STATIC( QGESTUREEVENT_SETACCEPTED3 )
 {
   QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -525,7 +525,7 @@ HB_FUNC( QGESTUREEVENT_SETACCEPTED3 )
 //[2]void setAccepted ( QGesture * gesture, bool value )
 //[3]void setAccepted ( Qt::GestureType gestureType, bool value )
 
-HB_FUNC( QGESTUREEVENT_SETACCEPTED )
+HB_FUNC_STATIC( QGESTUREEVENT_SETACCEPTED )
 {
   if( ISNUMPAR(1) && ISLOG(1) )
   {
@@ -544,7 +544,7 @@ HB_FUNC( QGESTUREEVENT_SETACCEPTED )
 /*
 void setWidget(QWidget *widget)
 */
-HB_FUNC( QGESTUREEVENT_SETWIDGET )
+HB_FUNC_STATIC( QGESTUREEVENT_SETWIDGET )
 {
   QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -559,7 +559,7 @@ HB_FUNC( QGESTUREEVENT_SETWIDGET )
 /*
 QWidget * widget () const
 */
-HB_FUNC( QGESTUREEVENT_WIDGET )
+HB_FUNC_STATIC( QGESTUREEVENT_WIDGET )
 {
   QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

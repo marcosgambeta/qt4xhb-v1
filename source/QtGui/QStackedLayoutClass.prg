@@ -76,7 +76,7 @@ RETURN
 /*
 QStackedLayout ()
 */
-HB_FUNC( QSTACKEDLAYOUT_NEW1 )
+HB_FUNC_STATIC( QSTACKEDLAYOUT_NEW1 )
 {
   QStackedLayout * o = NULL;
   o = new QStackedLayout (  );
@@ -91,7 +91,7 @@ HB_FUNC( QSTACKEDLAYOUT_NEW1 )
 /*
 QStackedLayout ( QWidget * parent )
 */
-HB_FUNC( QSTACKEDLAYOUT_NEW2 )
+HB_FUNC_STATIC( QSTACKEDLAYOUT_NEW2 )
 {
   QStackedLayout * o = NULL;
   QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -107,7 +107,7 @@ HB_FUNC( QSTACKEDLAYOUT_NEW2 )
 /*
 QStackedLayout ( QLayout * parentLayout )
 */
-HB_FUNC( QSTACKEDLAYOUT_NEW3 )
+HB_FUNC_STATIC( QSTACKEDLAYOUT_NEW3 )
 {
   QStackedLayout * o = NULL;
   QLayout * par1 = (QLayout *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -124,7 +124,7 @@ HB_FUNC( QSTACKEDLAYOUT_NEW3 )
 //[2]QStackedLayout ( QWidget * parent )
 //[3]QStackedLayout ( QLayout * parentLayout )
 
-HB_FUNC( QSTACKEDLAYOUT_NEW )
+HB_FUNC_STATIC( QSTACKEDLAYOUT_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -144,7 +144,7 @@ HB_FUNC( QSTACKEDLAYOUT_NEW )
   }
 }
 
-HB_FUNC( QSTACKEDLAYOUT_DELETE )
+HB_FUNC_STATIC( QSTACKEDLAYOUT_DELETE )
 {
   QStackedLayout * obj = (QStackedLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -163,7 +163,7 @@ HB_FUNC( QSTACKEDLAYOUT_DELETE )
 /*
 int addWidget ( QWidget * widget )
 */
-HB_FUNC( QSTACKEDLAYOUT_ADDWIDGET )
+HB_FUNC_STATIC( QSTACKEDLAYOUT_ADDWIDGET )
 {
   QStackedLayout * obj = (QStackedLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -178,7 +178,7 @@ HB_FUNC( QSTACKEDLAYOUT_ADDWIDGET )
 /*
 int currentIndex () const
 */
-HB_FUNC( QSTACKEDLAYOUT_CURRENTINDEX )
+HB_FUNC_STATIC( QSTACKEDLAYOUT_CURRENTINDEX )
 {
   QStackedLayout * obj = (QStackedLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -192,7 +192,7 @@ HB_FUNC( QSTACKEDLAYOUT_CURRENTINDEX )
 /*
 QWidget * currentWidget () const
 */
-HB_FUNC( QSTACKEDLAYOUT_CURRENTWIDGET )
+HB_FUNC_STATIC( QSTACKEDLAYOUT_CURRENTWIDGET )
 {
   QStackedLayout * obj = (QStackedLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -205,7 +205,7 @@ HB_FUNC( QSTACKEDLAYOUT_CURRENTWIDGET )
 /*
 int insertWidget ( int index, QWidget * widget )
 */
-HB_FUNC( QSTACKEDLAYOUT_INSERTWIDGET )
+HB_FUNC_STATIC( QSTACKEDLAYOUT_INSERTWIDGET )
 {
   QStackedLayout * obj = (QStackedLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -221,7 +221,7 @@ HB_FUNC( QSTACKEDLAYOUT_INSERTWIDGET )
 /*
 void setStackingMode ( StackingMode stackingMode )
 */
-HB_FUNC( QSTACKEDLAYOUT_SETSTACKINGMODE )
+HB_FUNC_STATIC( QSTACKEDLAYOUT_SETSTACKINGMODE )
 {
   QStackedLayout * obj = (QStackedLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -236,7 +236,7 @@ HB_FUNC( QSTACKEDLAYOUT_SETSTACKINGMODE )
 /*
 StackingMode stackingMode () const
 */
-HB_FUNC( QSTACKEDLAYOUT_STACKINGMODE )
+HB_FUNC_STATIC( QSTACKEDLAYOUT_STACKINGMODE )
 {
   QStackedLayout * obj = (QStackedLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -250,7 +250,7 @@ HB_FUNC( QSTACKEDLAYOUT_STACKINGMODE )
 /*
 QWidget * widget ( int index ) const
 */
-HB_FUNC( QSTACKEDLAYOUT_WIDGET )
+HB_FUNC_STATIC( QSTACKEDLAYOUT_WIDGET )
 {
   QStackedLayout * obj = (QStackedLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -264,7 +264,7 @@ HB_FUNC( QSTACKEDLAYOUT_WIDGET )
 /*
 void setCurrentIndex ( int index )
 */
-HB_FUNC( QSTACKEDLAYOUT_SETCURRENTINDEX )
+HB_FUNC_STATIC( QSTACKEDLAYOUT_SETCURRENTINDEX )
 {
   QStackedLayout * obj = (QStackedLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -279,7 +279,7 @@ HB_FUNC( QSTACKEDLAYOUT_SETCURRENTINDEX )
 /*
 void setCurrentWidget ( QWidget * widget )
 */
-HB_FUNC( QSTACKEDLAYOUT_SETCURRENTWIDGET )
+HB_FUNC_STATIC( QSTACKEDLAYOUT_SETCURRENTWIDGET )
 {
   QStackedLayout * obj = (QStackedLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

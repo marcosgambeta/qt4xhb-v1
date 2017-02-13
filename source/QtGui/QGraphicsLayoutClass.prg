@@ -71,7 +71,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QGRAPHICSLAYOUT_DELETE )
+HB_FUNC_STATIC( QGRAPHICSLAYOUT_DELETE )
 {
   QGraphicsLayout * obj = (QGraphicsLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -90,7 +90,7 @@ HB_FUNC( QGRAPHICSLAYOUT_DELETE )
 /*
 void activate ()
 */
-HB_FUNC( QGRAPHICSLAYOUT_ACTIVATE )
+HB_FUNC_STATIC( QGRAPHICSLAYOUT_ACTIVATE )
 {
   QGraphicsLayout * obj = (QGraphicsLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -104,7 +104,7 @@ HB_FUNC( QGRAPHICSLAYOUT_ACTIVATE )
 /*
 virtual int count () const = 0
 */
-HB_FUNC( QGRAPHICSLAYOUT_COUNT )
+HB_FUNC_STATIC( QGRAPHICSLAYOUT_COUNT )
 {
   QGraphicsLayout * obj = (QGraphicsLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -118,7 +118,7 @@ HB_FUNC( QGRAPHICSLAYOUT_COUNT )
 /*
 virtual void invalidate ()
 */
-HB_FUNC( QGRAPHICSLAYOUT_INVALIDATE )
+HB_FUNC_STATIC( QGRAPHICSLAYOUT_INVALIDATE )
 {
   QGraphicsLayout * obj = (QGraphicsLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -132,7 +132,7 @@ HB_FUNC( QGRAPHICSLAYOUT_INVALIDATE )
 /*
 bool isActivated () const
 */
-HB_FUNC( QGRAPHICSLAYOUT_ISACTIVATED )
+HB_FUNC_STATIC( QGRAPHICSLAYOUT_ISACTIVATED )
 {
   QGraphicsLayout * obj = (QGraphicsLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -146,7 +146,7 @@ HB_FUNC( QGRAPHICSLAYOUT_ISACTIVATED )
 /*
 virtual QGraphicsLayoutItem * itemAt ( int i ) const = 0
 */
-HB_FUNC( QGRAPHICSLAYOUT_ITEMAT )
+HB_FUNC_STATIC( QGRAPHICSLAYOUT_ITEMAT )
 {
   QGraphicsLayout * obj = (QGraphicsLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -160,7 +160,7 @@ HB_FUNC( QGRAPHICSLAYOUT_ITEMAT )
 /*
 virtual void removeAt ( int index ) = 0
 */
-HB_FUNC( QGRAPHICSLAYOUT_REMOVEAT )
+HB_FUNC_STATIC( QGRAPHICSLAYOUT_REMOVEAT )
 {
   QGraphicsLayout * obj = (QGraphicsLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -175,7 +175,7 @@ HB_FUNC( QGRAPHICSLAYOUT_REMOVEAT )
 /*
 void setContentsMargins ( qreal left, qreal top, qreal right, qreal bottom )
 */
-HB_FUNC( QGRAPHICSLAYOUT_SETCONTENTSMARGINS )
+HB_FUNC_STATIC( QGRAPHICSLAYOUT_SETCONTENTSMARGINS )
 {
   QGraphicsLayout * obj = (QGraphicsLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -193,7 +193,7 @@ HB_FUNC( QGRAPHICSLAYOUT_SETCONTENTSMARGINS )
 /*
 virtual void widgetEvent ( QEvent * e )
 */
-HB_FUNC( QGRAPHICSLAYOUT_WIDGETEVENT )
+HB_FUNC_STATIC( QGRAPHICSLAYOUT_WIDGETEVENT )
 {
   QGraphicsLayout * obj = (QGraphicsLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -208,7 +208,7 @@ HB_FUNC( QGRAPHICSLAYOUT_WIDGETEVENT )
 /*
 virtual void getContentsMargins ( qreal * left, qreal * top, qreal * right, qreal * bottom ) const
 */
-HB_FUNC( QGRAPHICSLAYOUT_GETCONTENTSMARGINS )
+HB_FUNC_STATIC( QGRAPHICSLAYOUT_GETCONTENTSMARGINS )
 {
   QGraphicsLayout * obj = (QGraphicsLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -230,7 +230,7 @@ HB_FUNC( QGRAPHICSLAYOUT_GETCONTENTSMARGINS )
 /*
 virtual void updateGeometry ()
 */
-HB_FUNC( QGRAPHICSLAYOUT_UPDATEGEOMETRY )
+HB_FUNC_STATIC( QGRAPHICSLAYOUT_UPDATEGEOMETRY )
 {
   QGraphicsLayout * obj = (QGraphicsLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -245,7 +245,7 @@ HB_FUNC( QGRAPHICSLAYOUT_UPDATEGEOMETRY )
 /*
 bool instantInvalidatePropagation ()
 */
-HB_FUNC( QGRAPHICSLAYOUT_INSTANTINVALIDATEPROPAGATION )
+HB_FUNC_STATIC( QGRAPHICSLAYOUT_INSTANTINVALIDATEPROPAGATION )
 {
   bool b = QGraphicsLayout::instantInvalidatePropagation (  );
   hb_retl( b );
@@ -255,7 +255,7 @@ HB_FUNC( QGRAPHICSLAYOUT_INSTANTINVALIDATEPROPAGATION )
 /*
 void setInstantInvalidatePropagation ( bool enable )
 */
-HB_FUNC( QGRAPHICSLAYOUT_SETINSTANTINVALIDATEPROPAGATION )
+HB_FUNC_STATIC( QGRAPHICSLAYOUT_SETINSTANTINVALIDATEPROPAGATION )
 {
   bool par1 = hb_parl(1);
   QGraphicsLayout::setInstantInvalidatePropagation ( par1 );

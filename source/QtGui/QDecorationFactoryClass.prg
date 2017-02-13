@@ -98,7 +98,7 @@ RETURN
 /*
 QDecoration * create ( const QString & key )
 */
-HB_FUNC( QDECORATIONFACTORY_CREATE )
+HB_FUNC_STATIC( QDECORATIONFACTORY_CREATE )
 {
   QString par1 = hb_parc(1);
   QDecoration * ptr = QDecorationFactory::create ( par1 );
@@ -108,7 +108,7 @@ HB_FUNC( QDECORATIONFACTORY_CREATE )
 /*
 QStringList keys ()
 */
-HB_FUNC( QDECORATIONFACTORY_KEYS )
+HB_FUNC_STATIC( QDECORATIONFACTORY_KEYS )
 {
   QStringList strl = QDecorationFactory::keys (  );
   PHB_ITEM pArray;

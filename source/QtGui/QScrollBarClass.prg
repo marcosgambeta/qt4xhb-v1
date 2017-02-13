@@ -66,7 +66,7 @@ RETURN
 /*
 QScrollBar ( QWidget * parent = 0 )
 */
-HB_FUNC( QSCROLLBAR_NEW1 )
+HB_FUNC_STATIC( QSCROLLBAR_NEW1 )
 {
   QScrollBar * o = NULL;
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -82,7 +82,7 @@ HB_FUNC( QSCROLLBAR_NEW1 )
 /*
 QScrollBar ( Qt::Orientation orientation, QWidget * parent = 0 )
 */
-HB_FUNC( QSCROLLBAR_NEW2 )
+HB_FUNC_STATIC( QSCROLLBAR_NEW2 )
 {
   QScrollBar * o = NULL;
   int par1 = hb_parni(1);
@@ -99,7 +99,7 @@ HB_FUNC( QSCROLLBAR_NEW2 )
 //[1]QScrollBar ( QWidget * parent = 0 )
 //[2]QScrollBar ( Qt::Orientation orientation, QWidget * parent = 0 )
 
-HB_FUNC( QSCROLLBAR_NEW )
+HB_FUNC_STATIC( QSCROLLBAR_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
@@ -115,7 +115,7 @@ HB_FUNC( QSCROLLBAR_NEW )
   }
 }
 
-HB_FUNC( QSCROLLBAR_DELETE )
+HB_FUNC_STATIC( QSCROLLBAR_DELETE )
 {
   QScrollBar * obj = (QScrollBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -134,7 +134,7 @@ HB_FUNC( QSCROLLBAR_DELETE )
 /*
 virtual bool event ( QEvent * event )
 */
-HB_FUNC( QSCROLLBAR_EVENT )
+HB_FUNC_STATIC( QSCROLLBAR_EVENT )
 {
   QScrollBar * obj = (QScrollBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -149,7 +149,7 @@ HB_FUNC( QSCROLLBAR_EVENT )
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC( QSCROLLBAR_SIZEHINT )
+HB_FUNC_STATIC( QSCROLLBAR_SIZEHINT )
 {
   QScrollBar * obj = (QScrollBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

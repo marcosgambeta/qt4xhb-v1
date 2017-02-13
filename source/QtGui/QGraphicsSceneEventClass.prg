@@ -59,7 +59,7 @@ RETURN
 #include "qt4xhb_clsid.h"
 #include "qt4xhb_utils.h"
 
-HB_FUNC( QGRAPHICSSCENEEVENT_DELETE )
+HB_FUNC_STATIC( QGRAPHICSSCENEEVENT_DELETE )
 {
   QGraphicsSceneEvent * obj = (QGraphicsSceneEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -78,7 +78,7 @@ HB_FUNC( QGRAPHICSSCENEEVENT_DELETE )
 /*
 QWidget * widget () const
 */
-HB_FUNC( QGRAPHICSSCENEEVENT_WIDGET )
+HB_FUNC_STATIC( QGRAPHICSSCENEEVENT_WIDGET )
 {
   QGraphicsSceneEvent * obj = (QGraphicsSceneEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

@@ -80,7 +80,7 @@ RETURN
 /*
 QButtonGroup ( QObject * parent = 0 )
 */
-HB_FUNC( QBUTTONGROUP_NEW )
+HB_FUNC_STATIC( QBUTTONGROUP_NEW )
 {
   QButtonGroup * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -93,7 +93,7 @@ HB_FUNC( QBUTTONGROUP_NEW )
 }
 
 
-HB_FUNC( QBUTTONGROUP_DELETE )
+HB_FUNC_STATIC( QBUTTONGROUP_DELETE )
 {
   QButtonGroup * obj = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -112,7 +112,7 @@ HB_FUNC( QBUTTONGROUP_DELETE )
 /*
 void addButton ( QAbstractButton * button )
 */
-HB_FUNC( QBUTTONGROUP_ADDBUTTON1 )
+HB_FUNC_STATIC( QBUTTONGROUP_ADDBUTTON1 )
 {
   QButtonGroup * obj = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -127,7 +127,7 @@ HB_FUNC( QBUTTONGROUP_ADDBUTTON1 )
 /*
 void addButton ( QAbstractButton * button, int id )
 */
-HB_FUNC( QBUTTONGROUP_ADDBUTTON2 )
+HB_FUNC_STATIC( QBUTTONGROUP_ADDBUTTON2 )
 {
   QButtonGroup * obj = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -143,7 +143,7 @@ HB_FUNC( QBUTTONGROUP_ADDBUTTON2 )
 //[1]void addButton ( QAbstractButton * button )
 //[2]void addButton ( QAbstractButton * button, int id )
 
-HB_FUNC( QBUTTONGROUP_ADDBUTTON )
+HB_FUNC_STATIC( QBUTTONGROUP_ADDBUTTON )
 {
   if( ISNUMPAR(1) && ISQABSTRACTBUTTON(1) )
   {
@@ -158,7 +158,7 @@ HB_FUNC( QBUTTONGROUP_ADDBUTTON )
 /*
 QAbstractButton * button ( int id ) const
 */
-HB_FUNC( QBUTTONGROUP_BUTTON )
+HB_FUNC_STATIC( QBUTTONGROUP_BUTTON )
 {
   QButtonGroup * obj = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -172,7 +172,7 @@ HB_FUNC( QBUTTONGROUP_BUTTON )
 /*
 QList<QAbstractButton *> buttons () const
 */
-HB_FUNC( QBUTTONGROUP_BUTTONS )
+HB_FUNC_STATIC( QBUTTONGROUP_BUTTONS )
 {
   QButtonGroup * obj = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -216,7 +216,7 @@ HB_FUNC( QBUTTONGROUP_BUTTONS )
 /*
 QAbstractButton * checkedButton () const
 */
-HB_FUNC( QBUTTONGROUP_CHECKEDBUTTON )
+HB_FUNC_STATIC( QBUTTONGROUP_CHECKEDBUTTON )
 {
   QButtonGroup * obj = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -229,7 +229,7 @@ HB_FUNC( QBUTTONGROUP_CHECKEDBUTTON )
 /*
 int checkedId () const
 */
-HB_FUNC( QBUTTONGROUP_CHECKEDID )
+HB_FUNC_STATIC( QBUTTONGROUP_CHECKEDID )
 {
   QButtonGroup * obj = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -243,7 +243,7 @@ HB_FUNC( QBUTTONGROUP_CHECKEDID )
 /*
 bool exclusive () const
 */
-HB_FUNC( QBUTTONGROUP_EXCLUSIVE )
+HB_FUNC_STATIC( QBUTTONGROUP_EXCLUSIVE )
 {
   QButtonGroup * obj = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -257,7 +257,7 @@ HB_FUNC( QBUTTONGROUP_EXCLUSIVE )
 /*
 int id ( QAbstractButton * button ) const
 */
-HB_FUNC( QBUTTONGROUP_ID )
+HB_FUNC_STATIC( QBUTTONGROUP_ID )
 {
   QButtonGroup * obj = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -272,7 +272,7 @@ HB_FUNC( QBUTTONGROUP_ID )
 /*
 void removeButton ( QAbstractButton * button )
 */
-HB_FUNC( QBUTTONGROUP_REMOVEBUTTON )
+HB_FUNC_STATIC( QBUTTONGROUP_REMOVEBUTTON )
 {
   QButtonGroup * obj = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -287,7 +287,7 @@ HB_FUNC( QBUTTONGROUP_REMOVEBUTTON )
 /*
 void setExclusive ( bool )
 */
-HB_FUNC( QBUTTONGROUP_SETEXCLUSIVE )
+HB_FUNC_STATIC( QBUTTONGROUP_SETEXCLUSIVE )
 {
   QButtonGroup * obj = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -302,7 +302,7 @@ HB_FUNC( QBUTTONGROUP_SETEXCLUSIVE )
 /*
 void setId ( QAbstractButton * button, int id )
 */
-HB_FUNC( QBUTTONGROUP_SETID )
+HB_FUNC_STATIC( QBUTTONGROUP_SETID )
 {
   QButtonGroup * obj = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

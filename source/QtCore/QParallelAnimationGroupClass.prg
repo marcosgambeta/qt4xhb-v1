@@ -61,7 +61,7 @@ RETURN
 /*
 QParallelAnimationGroup ( QObject * parent = 0 )
 */
-HB_FUNC( QPARALLELANIMATIONGROUP_NEW )
+HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_NEW )
 {
   QParallelAnimationGroup * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -74,7 +74,7 @@ HB_FUNC( QPARALLELANIMATIONGROUP_NEW )
 }
 
 
-HB_FUNC( QPARALLELANIMATIONGROUP_DELETE )
+HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_DELETE )
 {
   QParallelAnimationGroup * obj = (QParallelAnimationGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -94,7 +94,7 @@ HB_FUNC( QPARALLELANIMATIONGROUP_DELETE )
 /*
 virtual int duration () const
 */
-HB_FUNC( QPARALLELANIMATIONGROUP_DURATION )
+HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_DURATION )
 {
   QParallelAnimationGroup * obj = (QParallelAnimationGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

@@ -116,7 +116,7 @@ RETURN
 /*
 QProcess ( QObject * parent = 0 )
 */
-HB_FUNC( QPROCESS_NEW )
+HB_FUNC_STATIC( QPROCESS_NEW )
 {
   QProcess * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -129,7 +129,7 @@ HB_FUNC( QPROCESS_NEW )
 }
 
 
-HB_FUNC( QPROCESS_DELETE )
+HB_FUNC_STATIC( QPROCESS_DELETE )
 {
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -149,7 +149,7 @@ HB_FUNC( QPROCESS_DELETE )
 /*
 void closeReadChannel ( ProcessChannel channel )
 */
-HB_FUNC( QPROCESS_CLOSEREADCHANNEL )
+HB_FUNC_STATIC( QPROCESS_CLOSEREADCHANNEL )
 {
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -164,7 +164,7 @@ HB_FUNC( QPROCESS_CLOSEREADCHANNEL )
 /*
 void closeWriteChannel ()
 */
-HB_FUNC( QPROCESS_CLOSEWRITECHANNEL )
+HB_FUNC_STATIC( QPROCESS_CLOSEWRITECHANNEL )
 {
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -178,7 +178,7 @@ HB_FUNC( QPROCESS_CLOSEWRITECHANNEL )
 /*
 QStringList environment () const (deprecated)
 */
-HB_FUNC( QPROCESS_ENVIRONMENT )
+HB_FUNC_STATIC( QPROCESS_ENVIRONMENT )
 {
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -201,7 +201,7 @@ HB_FUNC( QPROCESS_ENVIRONMENT )
 /*
 QProcess::ProcessError error () const
 */
-HB_FUNC( QPROCESS_ERROR )
+HB_FUNC_STATIC( QPROCESS_ERROR )
 {
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -215,7 +215,7 @@ HB_FUNC( QPROCESS_ERROR )
 /*
 int exitCode () const
 */
-HB_FUNC( QPROCESS_EXITCODE )
+HB_FUNC_STATIC( QPROCESS_EXITCODE )
 {
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -229,7 +229,7 @@ HB_FUNC( QPROCESS_EXITCODE )
 /*
 QProcess::ExitStatus exitStatus () const
 */
-HB_FUNC( QPROCESS_EXITSTATUS )
+HB_FUNC_STATIC( QPROCESS_EXITSTATUS )
 {
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -243,7 +243,7 @@ HB_FUNC( QPROCESS_EXITSTATUS )
 /*
 QString nativeArguments () const
 */
-HB_FUNC( QPROCESS_NATIVEARGUMENTS )
+HB_FUNC_STATIC( QPROCESS_NATIVEARGUMENTS )
 {
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -258,7 +258,7 @@ HB_FUNC( QPROCESS_NATIVEARGUMENTS )
 /*
 ProcessChannelMode processChannelMode () const
 */
-HB_FUNC( QPROCESS_PROCESSCHANNELMODE )
+HB_FUNC_STATIC( QPROCESS_PROCESSCHANNELMODE )
 {
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -272,7 +272,7 @@ HB_FUNC( QPROCESS_PROCESSCHANNELMODE )
 /*
 QProcessEnvironment processEnvironment () const
 */
-HB_FUNC( QPROCESS_PROCESSENVIRONMENT )
+HB_FUNC_STATIC( QPROCESS_PROCESSENVIRONMENT )
 {
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -285,7 +285,7 @@ HB_FUNC( QPROCESS_PROCESSENVIRONMENT )
 /*
 QByteArray readAllStandardError ()
 */
-HB_FUNC( QPROCESS_READALLSTANDARDERROR )
+HB_FUNC_STATIC( QPROCESS_READALLSTANDARDERROR )
 {
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -298,7 +298,7 @@ HB_FUNC( QPROCESS_READALLSTANDARDERROR )
 /*
 QByteArray readAllStandardOutput ()
 */
-HB_FUNC( QPROCESS_READALLSTANDARDOUTPUT )
+HB_FUNC_STATIC( QPROCESS_READALLSTANDARDOUTPUT )
 {
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -311,7 +311,7 @@ HB_FUNC( QPROCESS_READALLSTANDARDOUTPUT )
 /*
 ProcessChannel readChannel () const
 */
-HB_FUNC( QPROCESS_READCHANNEL )
+HB_FUNC_STATIC( QPROCESS_READCHANNEL )
 {
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -325,7 +325,7 @@ HB_FUNC( QPROCESS_READCHANNEL )
 /*
 void setEnvironment ( const QStringList & environment ) (deprecated)
 */
-HB_FUNC( QPROCESS_SETENVIRONMENT )
+HB_FUNC_STATIC( QPROCESS_SETENVIRONMENT )
 {
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -348,7 +348,7 @@ par1 << temp;
 /*
 void setNativeArguments ( const QString & arguments )
 */
-HB_FUNC( QPROCESS_SETNATIVEARGUMENTS )
+HB_FUNC_STATIC( QPROCESS_SETNATIVEARGUMENTS )
 {
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -363,7 +363,7 @@ HB_FUNC( QPROCESS_SETNATIVEARGUMENTS )
 /*
 void setProcessChannelMode ( ProcessChannelMode mode )
 */
-HB_FUNC( QPROCESS_SETPROCESSCHANNELMODE )
+HB_FUNC_STATIC( QPROCESS_SETPROCESSCHANNELMODE )
 {
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -378,7 +378,7 @@ HB_FUNC( QPROCESS_SETPROCESSCHANNELMODE )
 /*
 void setProcessEnvironment ( const QProcessEnvironment & environment )
 */
-HB_FUNC( QPROCESS_SETPROCESSENVIRONMENT )
+HB_FUNC_STATIC( QPROCESS_SETPROCESSENVIRONMENT )
 {
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -393,7 +393,7 @@ HB_FUNC( QPROCESS_SETPROCESSENVIRONMENT )
 /*
 void setReadChannel ( ProcessChannel channel )
 */
-HB_FUNC( QPROCESS_SETREADCHANNEL )
+HB_FUNC_STATIC( QPROCESS_SETREADCHANNEL )
 {
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -408,7 +408,7 @@ HB_FUNC( QPROCESS_SETREADCHANNEL )
 /*
 void setStandardErrorFile ( const QString & fileName, OpenMode mode = Truncate )
 */
-HB_FUNC( QPROCESS_SETSTANDARDERRORFILE )
+HB_FUNC_STATIC( QPROCESS_SETSTANDARDERRORFILE )
 {
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -424,7 +424,7 @@ HB_FUNC( QPROCESS_SETSTANDARDERRORFILE )
 /*
 void setStandardInputFile ( const QString & fileName )
 */
-HB_FUNC( QPROCESS_SETSTANDARDINPUTFILE )
+HB_FUNC_STATIC( QPROCESS_SETSTANDARDINPUTFILE )
 {
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -439,7 +439,7 @@ HB_FUNC( QPROCESS_SETSTANDARDINPUTFILE )
 /*
 void setStandardOutputFile ( const QString & fileName, OpenMode mode = Truncate )
 */
-HB_FUNC( QPROCESS_SETSTANDARDOUTPUTFILE )
+HB_FUNC_STATIC( QPROCESS_SETSTANDARDOUTPUTFILE )
 {
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -455,7 +455,7 @@ HB_FUNC( QPROCESS_SETSTANDARDOUTPUTFILE )
 /*
 void setStandardOutputProcess ( QProcess * destination )
 */
-HB_FUNC( QPROCESS_SETSTANDARDOUTPUTPROCESS )
+HB_FUNC_STATIC( QPROCESS_SETSTANDARDOUTPUTPROCESS )
 {
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -470,7 +470,7 @@ HB_FUNC( QPROCESS_SETSTANDARDOUTPUTPROCESS )
 /*
 void setWorkingDirectory ( const QString & dir )
 */
-HB_FUNC( QPROCESS_SETWORKINGDIRECTORY )
+HB_FUNC_STATIC( QPROCESS_SETWORKINGDIRECTORY )
 {
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -485,7 +485,7 @@ HB_FUNC( QPROCESS_SETWORKINGDIRECTORY )
 /*
 void start ( const QString & program, const QStringList & arguments, OpenMode mode = ReadWrite )
 */
-HB_FUNC( QPROCESS_START1 )
+HB_FUNC_STATIC( QPROCESS_START1 )
 {
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -510,7 +510,7 @@ par2 << temp;
 /*
 void start ( const QString & program, OpenMode mode = ReadWrite )
 */
-HB_FUNC( QPROCESS_START2 )
+HB_FUNC_STATIC( QPROCESS_START2 )
 {
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -526,7 +526,7 @@ HB_FUNC( QPROCESS_START2 )
 //[1]void start ( const QString & program, const QStringList & arguments, OpenMode mode = ReadWrite )
 //[2]void start ( const QString & program, OpenMode mode = ReadWrite )
 
-HB_FUNC( QPROCESS_START )
+HB_FUNC_STATIC( QPROCESS_START )
 {
   if( ISBETWEEN(2,3) && ISCHAR(1) && ISARRAY(2) && (ISNUM(3)||ISNIL(3)) )
   {
@@ -542,7 +542,7 @@ HB_FUNC( QPROCESS_START )
 /*
 QProcess::ProcessState state () const
 */
-HB_FUNC( QPROCESS_STATE )
+HB_FUNC_STATIC( QPROCESS_STATE )
 {
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -556,7 +556,7 @@ HB_FUNC( QPROCESS_STATE )
 /*
 bool waitForFinished ( int msecs = 30000 )
 */
-HB_FUNC( QPROCESS_WAITFORFINISHED )
+HB_FUNC_STATIC( QPROCESS_WAITFORFINISHED )
 {
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -571,7 +571,7 @@ HB_FUNC( QPROCESS_WAITFORFINISHED )
 /*
 bool waitForStarted ( int msecs = 30000 )
 */
-HB_FUNC( QPROCESS_WAITFORSTARTED )
+HB_FUNC_STATIC( QPROCESS_WAITFORSTARTED )
 {
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -586,7 +586,7 @@ HB_FUNC( QPROCESS_WAITFORSTARTED )
 /*
 QString workingDirectory () const
 */
-HB_FUNC( QPROCESS_WORKINGDIRECTORY )
+HB_FUNC_STATIC( QPROCESS_WORKINGDIRECTORY )
 {
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -600,7 +600,7 @@ HB_FUNC( QPROCESS_WORKINGDIRECTORY )
 /*
 virtual bool atEnd () const
 */
-HB_FUNC( QPROCESS_ATEND )
+HB_FUNC_STATIC( QPROCESS_ATEND )
 {
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -614,7 +614,7 @@ HB_FUNC( QPROCESS_ATEND )
 /*
 virtual qint64 bytesAvailable () const
 */
-HB_FUNC( QPROCESS_BYTESAVAILABLE )
+HB_FUNC_STATIC( QPROCESS_BYTESAVAILABLE )
 {
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -628,7 +628,7 @@ HB_FUNC( QPROCESS_BYTESAVAILABLE )
 /*
 virtual qint64 bytesToWrite () const
 */
-HB_FUNC( QPROCESS_BYTESTOWRITE )
+HB_FUNC_STATIC( QPROCESS_BYTESTOWRITE )
 {
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -642,7 +642,7 @@ HB_FUNC( QPROCESS_BYTESTOWRITE )
 /*
 virtual bool canReadLine () const
 */
-HB_FUNC( QPROCESS_CANREADLINE )
+HB_FUNC_STATIC( QPROCESS_CANREADLINE )
 {
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -656,7 +656,7 @@ HB_FUNC( QPROCESS_CANREADLINE )
 /*
 virtual void close ()
 */
-HB_FUNC( QPROCESS_CLOSE )
+HB_FUNC_STATIC( QPROCESS_CLOSE )
 {
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -670,7 +670,7 @@ HB_FUNC( QPROCESS_CLOSE )
 /*
 virtual bool isSequential () const
 */
-HB_FUNC( QPROCESS_ISSEQUENTIAL )
+HB_FUNC_STATIC( QPROCESS_ISSEQUENTIAL )
 {
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -684,7 +684,7 @@ HB_FUNC( QPROCESS_ISSEQUENTIAL )
 /*
 virtual bool waitForBytesWritten ( int msecs = 30000 )
 */
-HB_FUNC( QPROCESS_WAITFORBYTESWRITTEN )
+HB_FUNC_STATIC( QPROCESS_WAITFORBYTESWRITTEN )
 {
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -699,7 +699,7 @@ HB_FUNC( QPROCESS_WAITFORBYTESWRITTEN )
 /*
 virtual bool waitForReadyRead ( int msecs = 30000 )
 */
-HB_FUNC( QPROCESS_WAITFORREADYREAD )
+HB_FUNC_STATIC( QPROCESS_WAITFORREADYREAD )
 {
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -714,7 +714,7 @@ HB_FUNC( QPROCESS_WAITFORREADYREAD )
 /*
 void kill ()
 */
-HB_FUNC( QPROCESS_KILL )
+HB_FUNC_STATIC( QPROCESS_KILL )
 {
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -728,7 +728,7 @@ HB_FUNC( QPROCESS_KILL )
 /*
 void terminate ()
 */
-HB_FUNC( QPROCESS_TERMINATE )
+HB_FUNC_STATIC( QPROCESS_TERMINATE )
 {
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -743,7 +743,7 @@ HB_FUNC( QPROCESS_TERMINATE )
 /*
 int execute ( const QString & program, const QStringList & arguments )
 */
-HB_FUNC( QPROCESS_EXECUTE1 )
+HB_FUNC_STATIC( QPROCESS_EXECUTE1 )
 {
   QString par1 = hb_parc(1);
 QStringList par2;
@@ -763,7 +763,7 @@ par2 << temp;
 /*
 int execute ( const QString & program )
 */
-HB_FUNC( QPROCESS_EXECUTE2 )
+HB_FUNC_STATIC( QPROCESS_EXECUTE2 )
 {
   QString par1 = hb_parc(1);
   int i = QProcess::execute ( par1 );
@@ -774,7 +774,7 @@ HB_FUNC( QPROCESS_EXECUTE2 )
 //[1]int execute ( const QString & program, const QStringList & arguments )
 //[2]int execute ( const QString & program )
 
-HB_FUNC( QPROCESS_EXECUTE )
+HB_FUNC_STATIC( QPROCESS_EXECUTE )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISARRAY(2) )
   {
@@ -789,7 +789,7 @@ HB_FUNC( QPROCESS_EXECUTE )
 /*
 bool startDetached ( const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid = 0 )
 */
-HB_FUNC( QPROCESS_STARTDETACHED1 )
+HB_FUNC_STATIC( QPROCESS_STARTDETACHED1 )
 {
   QString par1 = hb_parc(1);
 QStringList par2;
@@ -811,7 +811,7 @@ par2 << temp;
 /*
 bool startDetached ( const QString & program, const QStringList & arguments )
 */
-HB_FUNC( QPROCESS_STARTDETACHED2 )
+HB_FUNC_STATIC( QPROCESS_STARTDETACHED2 )
 {
   QString par1 = hb_parc(1);
 QStringList par2;
@@ -831,7 +831,7 @@ par2 << temp;
 /*
 bool startDetached ( const QString & program )
 */
-HB_FUNC( QPROCESS_STARTDETACHED3 )
+HB_FUNC_STATIC( QPROCESS_STARTDETACHED3 )
 {
   QString par1 = hb_parc(1);
   bool b = QProcess::startDetached ( par1 );
@@ -843,7 +843,7 @@ HB_FUNC( QPROCESS_STARTDETACHED3 )
 //[2]bool startDetached ( const QString & program, const QStringList & arguments )
 //[3]bool startDetached ( const QString & program )
 
-HB_FUNC( QPROCESS_STARTDETACHED )
+HB_FUNC_STATIC( QPROCESS_STARTDETACHED )
 {
   if( ISNUMPAR(4) && ISCHAR(1) && ISARRAY(2) && ISCHAR(3) && ISNUM(4) )
   {
@@ -862,7 +862,7 @@ HB_FUNC( QPROCESS_STARTDETACHED )
 /*
 QStringList systemEnvironment ()
 */
-HB_FUNC( QPROCESS_SYSTEMENVIRONMENT )
+HB_FUNC_STATIC( QPROCESS_SYSTEMENVIRONMENT )
 {
   QStringList strl = QProcess::systemEnvironment (  );
   PHB_ITEM pArray;

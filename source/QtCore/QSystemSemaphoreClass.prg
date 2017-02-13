@@ -101,7 +101,7 @@ RETURN
 /*
 QSystemSemaphore ( const QString & key, int initialValue = 0, AccessMode mode = Open )
 */
-HB_FUNC( QSYSTEMSEMAPHORE_NEW )
+HB_FUNC_STATIC( QSYSTEMSEMAPHORE_NEW )
 {
   QSystemSemaphore * o = NULL;
   QString par1 = hb_parc(1);
@@ -116,7 +116,7 @@ HB_FUNC( QSYSTEMSEMAPHORE_NEW )
 }
 
 
-HB_FUNC( QSYSTEMSEMAPHORE_DELETE )
+HB_FUNC_STATIC( QSYSTEMSEMAPHORE_DELETE )
 {
   QSystemSemaphore * obj = (QSystemSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -135,7 +135,7 @@ HB_FUNC( QSYSTEMSEMAPHORE_DELETE )
 /*
 bool acquire ()
 */
-HB_FUNC( QSYSTEMSEMAPHORE_ACQUIRE )
+HB_FUNC_STATIC( QSYSTEMSEMAPHORE_ACQUIRE )
 {
   QSystemSemaphore * obj = (QSystemSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -149,7 +149,7 @@ HB_FUNC( QSYSTEMSEMAPHORE_ACQUIRE )
 /*
 SystemSemaphoreError error () const
 */
-HB_FUNC( QSYSTEMSEMAPHORE_ERROR )
+HB_FUNC_STATIC( QSYSTEMSEMAPHORE_ERROR )
 {
   QSystemSemaphore * obj = (QSystemSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -163,7 +163,7 @@ HB_FUNC( QSYSTEMSEMAPHORE_ERROR )
 /*
 QString errorString () const
 */
-HB_FUNC( QSYSTEMSEMAPHORE_ERRORSTRING )
+HB_FUNC_STATIC( QSYSTEMSEMAPHORE_ERRORSTRING )
 {
   QSystemSemaphore * obj = (QSystemSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -177,7 +177,7 @@ HB_FUNC( QSYSTEMSEMAPHORE_ERRORSTRING )
 /*
 QString key () const
 */
-HB_FUNC( QSYSTEMSEMAPHORE_KEY )
+HB_FUNC_STATIC( QSYSTEMSEMAPHORE_KEY )
 {
   QSystemSemaphore * obj = (QSystemSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -191,7 +191,7 @@ HB_FUNC( QSYSTEMSEMAPHORE_KEY )
 /*
 bool release ( int n = 1 )
 */
-HB_FUNC( QSYSTEMSEMAPHORE_RELEASE )
+HB_FUNC_STATIC( QSYSTEMSEMAPHORE_RELEASE )
 {
   QSystemSemaphore * obj = (QSystemSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -206,7 +206,7 @@ HB_FUNC( QSYSTEMSEMAPHORE_RELEASE )
 /*
 void setKey ( const QString & key, int initialValue = 0, AccessMode mode = Open )
 */
-HB_FUNC( QSYSTEMSEMAPHORE_SETKEY )
+HB_FUNC_STATIC( QSYSTEMSEMAPHORE_SETKEY )
 {
   QSystemSemaphore * obj = (QSystemSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

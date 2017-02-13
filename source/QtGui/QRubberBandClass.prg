@@ -70,7 +70,7 @@ RETURN
 /*
 QRubberBand ( Shape s, QWidget * p = 0 )
 */
-HB_FUNC( QRUBBERBAND_NEW )
+HB_FUNC_STATIC( QRUBBERBAND_NEW )
 {
   QRubberBand * o = NULL;
   int par1 = hb_parni(1);
@@ -84,7 +84,7 @@ HB_FUNC( QRUBBERBAND_NEW )
 }
 
 
-HB_FUNC( QRUBBERBAND_DELETE )
+HB_FUNC_STATIC( QRUBBERBAND_DELETE )
 {
   QRubberBand * obj = (QRubberBand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -103,7 +103,7 @@ HB_FUNC( QRUBBERBAND_DELETE )
 /*
 void move ( int x, int y )
 */
-HB_FUNC( QRUBBERBAND_MOVE1 )
+HB_FUNC_STATIC( QRUBBERBAND_MOVE1 )
 {
   QRubberBand * obj = (QRubberBand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -119,7 +119,7 @@ HB_FUNC( QRUBBERBAND_MOVE1 )
 /*
 void move ( const QPoint & p )
 */
-HB_FUNC( QRUBBERBAND_MOVE2 )
+HB_FUNC_STATIC( QRUBBERBAND_MOVE2 )
 {
   QRubberBand * obj = (QRubberBand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -134,7 +134,7 @@ HB_FUNC( QRUBBERBAND_MOVE2 )
 //[1]void move ( int x, int y )
 //[2]void move ( const QPoint & p )
 
-HB_FUNC( QRUBBERBAND_MOVE )
+HB_FUNC_STATIC( QRUBBERBAND_MOVE )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
@@ -149,7 +149,7 @@ HB_FUNC( QRUBBERBAND_MOVE )
 /*
 void resize ( int width, int height )
 */
-HB_FUNC( QRUBBERBAND_RESIZE1 )
+HB_FUNC_STATIC( QRUBBERBAND_RESIZE1 )
 {
   QRubberBand * obj = (QRubberBand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -165,7 +165,7 @@ HB_FUNC( QRUBBERBAND_RESIZE1 )
 /*
 void resize ( const QSize & size )
 */
-HB_FUNC( QRUBBERBAND_RESIZE2 )
+HB_FUNC_STATIC( QRUBBERBAND_RESIZE2 )
 {
   QRubberBand * obj = (QRubberBand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -180,7 +180,7 @@ HB_FUNC( QRUBBERBAND_RESIZE2 )
 //[1]void resize ( int width, int height )
 //[2]void resize ( const QSize & size )
 
-HB_FUNC( QRUBBERBAND_RESIZE )
+HB_FUNC_STATIC( QRUBBERBAND_RESIZE )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
@@ -195,7 +195,7 @@ HB_FUNC( QRUBBERBAND_RESIZE )
 /*
 void setGeometry ( const QRect & rect )
 */
-HB_FUNC( QRUBBERBAND_SETGEOMETRY1 )
+HB_FUNC_STATIC( QRUBBERBAND_SETGEOMETRY1 )
 {
   QRubberBand * obj = (QRubberBand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -210,7 +210,7 @@ HB_FUNC( QRUBBERBAND_SETGEOMETRY1 )
 /*
 void setGeometry ( int x, int y, int width, int height )
 */
-HB_FUNC( QRUBBERBAND_SETGEOMETRY2 )
+HB_FUNC_STATIC( QRUBBERBAND_SETGEOMETRY2 )
 {
   QRubberBand * obj = (QRubberBand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -228,7 +228,7 @@ HB_FUNC( QRUBBERBAND_SETGEOMETRY2 )
 //[1]void setGeometry ( const QRect & rect )
 //[2]void setGeometry ( int x, int y, int width, int height )
 
-HB_FUNC( QRUBBERBAND_SETGEOMETRY )
+HB_FUNC_STATIC( QRUBBERBAND_SETGEOMETRY )
 {
   if( ISNUMPAR(1) && ISQRECT(1) )
   {
@@ -243,7 +243,7 @@ HB_FUNC( QRUBBERBAND_SETGEOMETRY )
 /*
 Shape shape () const
 */
-HB_FUNC( QRUBBERBAND_SHAPE )
+HB_FUNC_STATIC( QRUBBERBAND_SHAPE )
 {
   QRubberBand * obj = (QRubberBand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

@@ -61,7 +61,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QDESIGNERWIDGETBOXINTERFACE_DELETE )
+HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_DELETE )
 {
   QDesignerWidgetBoxInterface * obj = (QDesignerWidgetBoxInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -80,7 +80,7 @@ HB_FUNC( QDESIGNERWIDGETBOXINTERFACE_DELETE )
 /*
 virtual QString fileName () const = 0
 */
-HB_FUNC( QDESIGNERWIDGETBOXINTERFACE_FILENAME )
+HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_FILENAME )
 {
   QDesignerWidgetBoxInterface * obj = (QDesignerWidgetBoxInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -94,7 +94,7 @@ HB_FUNC( QDESIGNERWIDGETBOXINTERFACE_FILENAME )
 /*
 virtual bool load () = 0
 */
-HB_FUNC( QDESIGNERWIDGETBOXINTERFACE_LOAD )
+HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_LOAD )
 {
   QDesignerWidgetBoxInterface * obj = (QDesignerWidgetBoxInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -108,7 +108,7 @@ HB_FUNC( QDESIGNERWIDGETBOXINTERFACE_LOAD )
 /*
 virtual bool save () = 0
 */
-HB_FUNC( QDESIGNERWIDGETBOXINTERFACE_SAVE )
+HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_SAVE )
 {
   QDesignerWidgetBoxInterface * obj = (QDesignerWidgetBoxInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -122,7 +122,7 @@ HB_FUNC( QDESIGNERWIDGETBOXINTERFACE_SAVE )
 /*
 virtual void setFileName ( const QString & fileName ) = 0
 */
-HB_FUNC( QDESIGNERWIDGETBOXINTERFACE_SETFILENAME )
+HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_SETFILENAME )
 {
   QDesignerWidgetBoxInterface * obj = (QDesignerWidgetBoxInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

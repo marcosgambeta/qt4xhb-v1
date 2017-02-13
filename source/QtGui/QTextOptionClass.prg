@@ -112,7 +112,7 @@ RETURN
 /*
 QTextOption ()
 */
-HB_FUNC( QTEXTOPTION_NEW1 )
+HB_FUNC_STATIC( QTEXTOPTION_NEW1 )
 {
   QTextOption * o = NULL;
   o = new QTextOption (  );
@@ -127,7 +127,7 @@ HB_FUNC( QTEXTOPTION_NEW1 )
 /*
 QTextOption ( Qt::Alignment alignment )
 */
-HB_FUNC( QTEXTOPTION_NEW2 )
+HB_FUNC_STATIC( QTEXTOPTION_NEW2 )
 {
   QTextOption * o = NULL;
   int par1 = hb_parni(1);
@@ -143,7 +143,7 @@ HB_FUNC( QTEXTOPTION_NEW2 )
 /*
 QTextOption ( const QTextOption & other )
 */
-HB_FUNC( QTEXTOPTION_NEW3 )
+HB_FUNC_STATIC( QTEXTOPTION_NEW3 )
 {
   QTextOption * o = NULL;
   QTextOption * par1 = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -160,7 +160,7 @@ HB_FUNC( QTEXTOPTION_NEW3 )
 //[2]QTextOption ( Qt::Alignment alignment )
 //[3]QTextOption ( const QTextOption & other )
 
-HB_FUNC( QTEXTOPTION_NEW )
+HB_FUNC_STATIC( QTEXTOPTION_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -180,7 +180,7 @@ HB_FUNC( QTEXTOPTION_NEW )
   }
 }
 
-HB_FUNC( QTEXTOPTION_DELETE )
+HB_FUNC_STATIC( QTEXTOPTION_DELETE )
 {
   QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -199,7 +199,7 @@ HB_FUNC( QTEXTOPTION_DELETE )
 /*
 Qt::Alignment alignment () const
 */
-HB_FUNC( QTEXTOPTION_ALIGNMENT )
+HB_FUNC_STATIC( QTEXTOPTION_ALIGNMENT )
 {
   QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -213,7 +213,7 @@ HB_FUNC( QTEXTOPTION_ALIGNMENT )
 /*
 Flags flags () const
 */
-HB_FUNC( QTEXTOPTION_FLAGS )
+HB_FUNC_STATIC( QTEXTOPTION_FLAGS )
 {
   QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -227,7 +227,7 @@ HB_FUNC( QTEXTOPTION_FLAGS )
 /*
 void setAlignment ( Qt::Alignment alignment )
 */
-HB_FUNC( QTEXTOPTION_SETALIGNMENT )
+HB_FUNC_STATIC( QTEXTOPTION_SETALIGNMENT )
 {
   QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -242,7 +242,7 @@ HB_FUNC( QTEXTOPTION_SETALIGNMENT )
 /*
 void setFlags ( Flags flags )
 */
-HB_FUNC( QTEXTOPTION_SETFLAGS )
+HB_FUNC_STATIC( QTEXTOPTION_SETFLAGS )
 {
   QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -257,7 +257,7 @@ HB_FUNC( QTEXTOPTION_SETFLAGS )
 /*
 void setTabArray ( QList<qreal> tabStops )
 */
-HB_FUNC( QTEXTOPTION_SETTABARRAY )
+HB_FUNC_STATIC( QTEXTOPTION_SETTABARRAY )
 {
   QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -281,7 +281,7 @@ par1 << temp1;
 /*
 void setTabStop ( qreal tabStop )
 */
-HB_FUNC( QTEXTOPTION_SETTABSTOP )
+HB_FUNC_STATIC( QTEXTOPTION_SETTABSTOP )
 {
   QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -297,7 +297,7 @@ HB_FUNC( QTEXTOPTION_SETTABSTOP )
 /*
 void setTextDirection ( Qt::LayoutDirection direction )
 */
-HB_FUNC( QTEXTOPTION_SETTEXTDIRECTION )
+HB_FUNC_STATIC( QTEXTOPTION_SETTEXTDIRECTION )
 {
   QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -312,7 +312,7 @@ HB_FUNC( QTEXTOPTION_SETTEXTDIRECTION )
 /*
 void setUseDesignMetrics ( bool enable )
 */
-HB_FUNC( QTEXTOPTION_SETUSEDESIGNMETRICS )
+HB_FUNC_STATIC( QTEXTOPTION_SETUSEDESIGNMETRICS )
 {
   QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -327,7 +327,7 @@ HB_FUNC( QTEXTOPTION_SETUSEDESIGNMETRICS )
 /*
 void setWrapMode ( WrapMode mode )
 */
-HB_FUNC( QTEXTOPTION_SETWRAPMODE )
+HB_FUNC_STATIC( QTEXTOPTION_SETWRAPMODE )
 {
   QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -342,7 +342,7 @@ HB_FUNC( QTEXTOPTION_SETWRAPMODE )
 /*
 QList<qreal> tabArray () const
 */
-HB_FUNC( QTEXTOPTION_TABARRAY )
+HB_FUNC_STATIC( QTEXTOPTION_TABARRAY )
 {
   QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -365,7 +365,7 @@ HB_FUNC( QTEXTOPTION_TABARRAY )
 /*
 qreal tabStop () const
 */
-HB_FUNC( QTEXTOPTION_TABSTOP )
+HB_FUNC_STATIC( QTEXTOPTION_TABSTOP )
 {
   QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -380,7 +380,7 @@ HB_FUNC( QTEXTOPTION_TABSTOP )
 /*
 Qt::LayoutDirection textDirection () const
 */
-HB_FUNC( QTEXTOPTION_TEXTDIRECTION )
+HB_FUNC_STATIC( QTEXTOPTION_TEXTDIRECTION )
 {
   QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -394,7 +394,7 @@ HB_FUNC( QTEXTOPTION_TEXTDIRECTION )
 /*
 bool useDesignMetrics () const
 */
-HB_FUNC( QTEXTOPTION_USEDESIGNMETRICS )
+HB_FUNC_STATIC( QTEXTOPTION_USEDESIGNMETRICS )
 {
   QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -408,7 +408,7 @@ HB_FUNC( QTEXTOPTION_USEDESIGNMETRICS )
 /*
 WrapMode wrapMode () const
 */
-HB_FUNC( QTEXTOPTION_WRAPMODE )
+HB_FUNC_STATIC( QTEXTOPTION_WRAPMODE )
 {
   QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

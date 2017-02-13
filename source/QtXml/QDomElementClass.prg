@@ -99,7 +99,7 @@ RETURN
 /*
 QDomElement ()
 */
-HB_FUNC( QDOMELEMENT_NEW1 )
+HB_FUNC_STATIC( QDOMELEMENT_NEW1 )
 {
   QDomElement * o = NULL;
   o = new QDomElement (  );
@@ -117,7 +117,7 @@ HB_FUNC( QDOMELEMENT_NEW1 )
 /*
 QDomElement ( const QDomElement & x )
 */
-HB_FUNC( QDOMELEMENT_NEW2 )
+HB_FUNC_STATIC( QDOMELEMENT_NEW2 )
 {
   QDomElement * o = NULL;
   QDomElement * par1 = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -136,7 +136,7 @@ HB_FUNC( QDOMELEMENT_NEW2 )
 //[1]QDomElement ()
 //[2]QDomElement ( const QDomElement & x )
 
-HB_FUNC( QDOMELEMENT_NEW )
+HB_FUNC_STATIC( QDOMELEMENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -157,7 +157,7 @@ HB_FUNC( QDOMELEMENT_NEW )
 /*
 QString attribute ( const QString & name, const QString & defValue = QString() ) const
 */
-HB_FUNC( QDOMELEMENT_ATTRIBUTE )
+HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTE )
 {
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -173,7 +173,7 @@ HB_FUNC( QDOMELEMENT_ATTRIBUTE )
 /*
 QString attributeNS ( const QString nsURI, const QString & localName, const QString & defValue = QString() ) const
 */
-HB_FUNC( QDOMELEMENT_ATTRIBUTENS )
+HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTENS )
 {
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -190,7 +190,7 @@ HB_FUNC( QDOMELEMENT_ATTRIBUTENS )
 /*
 QDomAttr attributeNode ( const QString & name )
 */
-HB_FUNC( QDOMELEMENT_ATTRIBUTENODE )
+HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTENODE )
 {
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -204,7 +204,7 @@ HB_FUNC( QDOMELEMENT_ATTRIBUTENODE )
 /*
 QDomAttr attributeNodeNS ( const QString & nsURI, const QString & localName )
 */
-HB_FUNC( QDOMELEMENT_ATTRIBUTENODENS )
+HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTENODENS )
 {
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -219,7 +219,7 @@ HB_FUNC( QDOMELEMENT_ATTRIBUTENODENS )
 /*
 QDomNamedNodeMap attributes () const
 */
-HB_FUNC( QDOMELEMENT_ATTRIBUTES )
+HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTES )
 {
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -232,7 +232,7 @@ HB_FUNC( QDOMELEMENT_ATTRIBUTES )
 /*
 QDomNodeList elementsByTagName ( const QString & tagname ) const
 */
-HB_FUNC( QDOMELEMENT_ELEMENTSBYTAGNAME )
+HB_FUNC_STATIC( QDOMELEMENT_ELEMENTSBYTAGNAME )
 {
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -246,7 +246,7 @@ HB_FUNC( QDOMELEMENT_ELEMENTSBYTAGNAME )
 /*
 QDomNodeList elementsByTagNameNS ( const QString & nsURI, const QString & localName ) const
 */
-HB_FUNC( QDOMELEMENT_ELEMENTSBYTAGNAMENS )
+HB_FUNC_STATIC( QDOMELEMENT_ELEMENTSBYTAGNAMENS )
 {
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -261,7 +261,7 @@ HB_FUNC( QDOMELEMENT_ELEMENTSBYTAGNAMENS )
 /*
 bool hasAttribute ( const QString & name ) const
 */
-HB_FUNC( QDOMELEMENT_HASATTRIBUTE )
+HB_FUNC_STATIC( QDOMELEMENT_HASATTRIBUTE )
 {
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -276,7 +276,7 @@ HB_FUNC( QDOMELEMENT_HASATTRIBUTE )
 /*
 bool hasAttributeNS ( const QString & nsURI, const QString & localName ) const
 */
-HB_FUNC( QDOMELEMENT_HASATTRIBUTENS )
+HB_FUNC_STATIC( QDOMELEMENT_HASATTRIBUTENS )
 {
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -292,7 +292,7 @@ HB_FUNC( QDOMELEMENT_HASATTRIBUTENS )
 /*
 QDomNode::NodeType nodeType () const
 */
-HB_FUNC( QDOMELEMENT_NODETYPE )
+HB_FUNC_STATIC( QDOMELEMENT_NODETYPE )
 {
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -306,7 +306,7 @@ HB_FUNC( QDOMELEMENT_NODETYPE )
 /*
 void removeAttribute ( const QString & name )
 */
-HB_FUNC( QDOMELEMENT_REMOVEATTRIBUTE )
+HB_FUNC_STATIC( QDOMELEMENT_REMOVEATTRIBUTE )
 {
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -321,7 +321,7 @@ HB_FUNC( QDOMELEMENT_REMOVEATTRIBUTE )
 /*
 void removeAttributeNS ( const QString & nsURI, const QString & localName )
 */
-HB_FUNC( QDOMELEMENT_REMOVEATTRIBUTENS )
+HB_FUNC_STATIC( QDOMELEMENT_REMOVEATTRIBUTENS )
 {
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -337,7 +337,7 @@ HB_FUNC( QDOMELEMENT_REMOVEATTRIBUTENS )
 /*
 QDomAttr removeAttributeNode ( const QDomAttr & oldAttr )
 */
-HB_FUNC( QDOMELEMENT_REMOVEATTRIBUTENODE )
+HB_FUNC_STATIC( QDOMELEMENT_REMOVEATTRIBUTENODE )
 {
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -351,7 +351,7 @@ HB_FUNC( QDOMELEMENT_REMOVEATTRIBUTENODE )
 /*
 void setAttribute ( const QString & name, const QString & value )
 */
-HB_FUNC( QDOMELEMENT_SETATTRIBUTE1 )
+HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE1 )
 {
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -367,7 +367,7 @@ HB_FUNC( QDOMELEMENT_SETATTRIBUTE1 )
 /*
 void setAttribute ( const QString & name, int value )
 */
-HB_FUNC( QDOMELEMENT_SETATTRIBUTE2 )
+HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE2 )
 {
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -383,7 +383,7 @@ HB_FUNC( QDOMELEMENT_SETATTRIBUTE2 )
 /*
 void setAttribute ( const QString & name, uint value )
 */
-HB_FUNC( QDOMELEMENT_SETATTRIBUTE3 )
+HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE3 )
 {
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -399,7 +399,7 @@ HB_FUNC( QDOMELEMENT_SETATTRIBUTE3 )
 /*
 void setAttribute ( const QString & name, qlonglong value )
 */
-HB_FUNC( QDOMELEMENT_SETATTRIBUTE4 )
+HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE4 )
 {
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -415,7 +415,7 @@ HB_FUNC( QDOMELEMENT_SETATTRIBUTE4 )
 /*
 void setAttribute ( const QString & name, qulonglong value )
 */
-HB_FUNC( QDOMELEMENT_SETATTRIBUTE5 )
+HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE5 )
 {
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -431,7 +431,7 @@ HB_FUNC( QDOMELEMENT_SETATTRIBUTE5 )
 /*
 void setAttribute ( const QString & name, float value )
 */
-HB_FUNC( QDOMELEMENT_SETATTRIBUTE6 )
+HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE6 )
 {
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -447,7 +447,7 @@ HB_FUNC( QDOMELEMENT_SETATTRIBUTE6 )
 /*
 void setAttribute ( const QString & name, double value )
 */
-HB_FUNC( QDOMELEMENT_SETATTRIBUTE7 )
+HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE7 )
 {
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -469,7 +469,7 @@ HB_FUNC( QDOMELEMENT_SETATTRIBUTE7 )
 //[7]void setAttribute ( const QString & name, double value )
 
 // TODO: implementar reconhecimento de int e double
-HB_FUNC( QDOMELEMENT_SETATTRIBUTE )
+HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
   {
@@ -484,7 +484,7 @@ HB_FUNC( QDOMELEMENT_SETATTRIBUTE )
 /*
 void setAttributeNS ( const QString nsURI, const QString & qName, const QString & value )
 */
-HB_FUNC( QDOMELEMENT_SETATTRIBUTENS1 )
+HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS1 )
 {
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -501,7 +501,7 @@ HB_FUNC( QDOMELEMENT_SETATTRIBUTENS1 )
 /*
 void setAttributeNS ( const QString nsURI, const QString & qName, int value )
 */
-HB_FUNC( QDOMELEMENT_SETATTRIBUTENS2 )
+HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS2 )
 {
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -518,7 +518,7 @@ HB_FUNC( QDOMELEMENT_SETATTRIBUTENS2 )
 /*
 void setAttributeNS ( const QString nsURI, const QString & qName, uint value )
 */
-HB_FUNC( QDOMELEMENT_SETATTRIBUTENS3 )
+HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS3 )
 {
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -535,7 +535,7 @@ HB_FUNC( QDOMELEMENT_SETATTRIBUTENS3 )
 /*
 void setAttributeNS ( const QString nsURI, const QString & qName, qlonglong value )
 */
-HB_FUNC( QDOMELEMENT_SETATTRIBUTENS4 )
+HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS4 )
 {
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -552,7 +552,7 @@ HB_FUNC( QDOMELEMENT_SETATTRIBUTENS4 )
 /*
 void setAttributeNS ( const QString nsURI, const QString & qName, qulonglong value )
 */
-HB_FUNC( QDOMELEMENT_SETATTRIBUTENS5 )
+HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS5 )
 {
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -569,7 +569,7 @@ HB_FUNC( QDOMELEMENT_SETATTRIBUTENS5 )
 /*
 void setAttributeNS ( const QString nsURI, const QString & qName, double value )
 */
-HB_FUNC( QDOMELEMENT_SETATTRIBUTENS6 )
+HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS6 )
 {
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -590,7 +590,7 @@ HB_FUNC( QDOMELEMENT_SETATTRIBUTENS6 )
 //[5]void setAttributeNS ( const QString nsURI, const QString & qName, qulonglong value )
 //[6]void setAttributeNS ( const QString nsURI, const QString & qName, double value )
 
-HB_FUNC( QDOMELEMENT_SETATTRIBUTENS )
+HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS )
 {
   if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) )
   {
@@ -605,7 +605,7 @@ HB_FUNC( QDOMELEMENT_SETATTRIBUTENS )
 /*
 QDomAttr setAttributeNode ( const QDomAttr & newAttr )
 */
-HB_FUNC( QDOMELEMENT_SETATTRIBUTENODE )
+HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENODE )
 {
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -619,7 +619,7 @@ HB_FUNC( QDOMELEMENT_SETATTRIBUTENODE )
 /*
 QDomAttr setAttributeNodeNS ( const QDomAttr & newAttr )
 */
-HB_FUNC( QDOMELEMENT_SETATTRIBUTENODENS )
+HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENODENS )
 {
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -633,7 +633,7 @@ HB_FUNC( QDOMELEMENT_SETATTRIBUTENODENS )
 /*
 void setTagName ( const QString & name )
 */
-HB_FUNC( QDOMELEMENT_SETTAGNAME )
+HB_FUNC_STATIC( QDOMELEMENT_SETTAGNAME )
 {
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -648,7 +648,7 @@ HB_FUNC( QDOMELEMENT_SETTAGNAME )
 /*
 QString tagName () const
 */
-HB_FUNC( QDOMELEMENT_TAGNAME )
+HB_FUNC_STATIC( QDOMELEMENT_TAGNAME )
 {
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -662,7 +662,7 @@ HB_FUNC( QDOMELEMENT_TAGNAME )
 /*
 QString text () const
 */
-HB_FUNC( QDOMELEMENT_TEXT )
+HB_FUNC_STATIC( QDOMELEMENT_TEXT )
 {
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

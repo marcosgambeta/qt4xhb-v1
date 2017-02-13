@@ -61,7 +61,7 @@ RETURN
 /*
 QToolBarChangeEvent(bool t)
 */
-HB_FUNC( QTOOLBARCHANGEEVENT_NEW )
+HB_FUNC_STATIC( QTOOLBARCHANGEEVENT_NEW )
 {
   QToolBarChangeEvent * o = NULL;
   bool par1 = hb_parl(1);
@@ -74,7 +74,7 @@ HB_FUNC( QTOOLBARCHANGEEVENT_NEW )
 }
 
 
-HB_FUNC( QTOOLBARCHANGEEVENT_DELETE )
+HB_FUNC_STATIC( QTOOLBARCHANGEEVENT_DELETE )
 {
   QToolBarChangeEvent * obj = (QToolBarChangeEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -93,7 +93,7 @@ HB_FUNC( QTOOLBARCHANGEEVENT_DELETE )
 /*
 bool toggle() const
 */
-HB_FUNC( QTOOLBARCHANGEEVENT_TOGGLE )
+HB_FUNC_STATIC( QTOOLBARCHANGEEVENT_TOGGLE )
 {
   QToolBarChangeEvent * obj = (QToolBarChangeEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

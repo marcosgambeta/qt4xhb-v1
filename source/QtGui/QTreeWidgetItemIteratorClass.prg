@@ -98,7 +98,7 @@ RETURN
 /*
 QTreeWidgetItemIterator ( const QTreeWidgetItemIterator & it )
 */
-HB_FUNC( QTREEWIDGETITEMITERATOR_NEW1 )
+HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_NEW1 )
 {
   QTreeWidgetItemIterator * o = NULL;
   QTreeWidgetItemIterator * par1 = (QTreeWidgetItemIterator *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -114,7 +114,7 @@ HB_FUNC( QTREEWIDGETITEMITERATOR_NEW1 )
 /*
 QTreeWidgetItemIterator ( QTreeWidget * widget, IteratorFlags flags = All )
 */
-HB_FUNC( QTREEWIDGETITEMITERATOR_NEW2 )
+HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_NEW2 )
 {
   QTreeWidgetItemIterator * o = NULL;
   QTreeWidget * par1 = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -131,7 +131,7 @@ HB_FUNC( QTREEWIDGETITEMITERATOR_NEW2 )
 /*
 QTreeWidgetItemIterator ( QTreeWidgetItem * item, IteratorFlags flags = All )
 */
-HB_FUNC( QTREEWIDGETITEMITERATOR_NEW3 )
+HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_NEW3 )
 {
   QTreeWidgetItemIterator * o = NULL;
   QTreeWidgetItem * par1 = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -149,7 +149,7 @@ HB_FUNC( QTREEWIDGETITEMITERATOR_NEW3 )
 //[2]QTreeWidgetItemIterator ( QTreeWidget * widget, IteratorFlags flags = All )
 //[3]QTreeWidgetItemIterator ( QTreeWidgetItem * item, IteratorFlags flags = All )
 
-HB_FUNC( QTREEWIDGETITEMITERATOR_NEW )
+HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_NEW )
 {
   if( ISNUMPAR(1) && ISQTREEWIDGETITEMITERATOR(1) )
   {
@@ -169,7 +169,7 @@ HB_FUNC( QTREEWIDGETITEMITERATOR_NEW )
   }
 }
 
-HB_FUNC( QTREEWIDGETITEMITERATOR_DELETE )
+HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_DELETE )
 {
   QTreeWidgetItemIterator * obj = (QTreeWidgetItemIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

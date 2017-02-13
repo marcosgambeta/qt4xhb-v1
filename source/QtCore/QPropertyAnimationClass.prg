@@ -69,7 +69,7 @@ RETURN
 /*
 QPropertyAnimation ( QObject * parent = 0 )
 */
-HB_FUNC( QPROPERTYANIMATION_NEW1 )
+HB_FUNC_STATIC( QPROPERTYANIMATION_NEW1 )
 {
   QPropertyAnimation * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -85,7 +85,7 @@ HB_FUNC( QPROPERTYANIMATION_NEW1 )
 /*
 QPropertyAnimation ( QObject * target, const QByteArray & propertyName, QObject * parent = 0 )
 */
-HB_FUNC( QPROPERTYANIMATION_NEW2 )
+HB_FUNC_STATIC( QPROPERTYANIMATION_NEW2 )
 {
   QPropertyAnimation * o = NULL;
   QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -103,7 +103,7 @@ HB_FUNC( QPROPERTYANIMATION_NEW2 )
 //[1]QPropertyAnimation ( QObject * parent = 0 )
 //[2]QPropertyAnimation ( QObject * target, const QByteArray & propertyName, QObject * parent = 0 )
 
-HB_FUNC( QPROPERTYANIMATION_NEW )
+HB_FUNC_STATIC( QPROPERTYANIMATION_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
@@ -119,7 +119,7 @@ HB_FUNC( QPROPERTYANIMATION_NEW )
   }
 }
 
-HB_FUNC( QPROPERTYANIMATION_DELETE )
+HB_FUNC_STATIC( QPROPERTYANIMATION_DELETE )
 {
   QPropertyAnimation * obj = (QPropertyAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -139,7 +139,7 @@ HB_FUNC( QPROPERTYANIMATION_DELETE )
 /*
 QByteArray propertyName () const
 */
-HB_FUNC( QPROPERTYANIMATION_PROPERTYNAME )
+HB_FUNC_STATIC( QPROPERTYANIMATION_PROPERTYNAME )
 {
   QPropertyAnimation * obj = (QPropertyAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -152,7 +152,7 @@ HB_FUNC( QPROPERTYANIMATION_PROPERTYNAME )
 /*
 void setPropertyName ( const QByteArray & propertyName )
 */
-HB_FUNC( QPROPERTYANIMATION_SETPROPERTYNAME )
+HB_FUNC_STATIC( QPROPERTYANIMATION_SETPROPERTYNAME )
 {
   QPropertyAnimation * obj = (QPropertyAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -167,7 +167,7 @@ HB_FUNC( QPROPERTYANIMATION_SETPROPERTYNAME )
 /*
 void setTargetObject ( QObject * target )
 */
-HB_FUNC( QPROPERTYANIMATION_SETTARGETOBJECT )
+HB_FUNC_STATIC( QPROPERTYANIMATION_SETTARGETOBJECT )
 {
   QPropertyAnimation * obj = (QPropertyAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -182,7 +182,7 @@ HB_FUNC( QPROPERTYANIMATION_SETTARGETOBJECT )
 /*
 QObject * targetObject () const
 */
-HB_FUNC( QPROPERTYANIMATION_TARGETOBJECT )
+HB_FUNC_STATIC( QPROPERTYANIMATION_TARGETOBJECT )
 {
   QPropertyAnimation * obj = (QPropertyAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

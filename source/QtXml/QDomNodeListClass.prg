@@ -106,7 +106,7 @@ RETURN
 /*
 QDomNodeList ()
 */
-HB_FUNC( QDOMNODELIST_NEW1 )
+HB_FUNC_STATIC( QDOMNODELIST_NEW1 )
 {
   QDomNodeList * o = NULL;
   o = new QDomNodeList (  );
@@ -124,7 +124,7 @@ HB_FUNC( QDOMNODELIST_NEW1 )
 /*
 QDomNodeList ( const QDomNodeList & n )
 */
-HB_FUNC( QDOMNODELIST_NEW2 )
+HB_FUNC_STATIC( QDOMNODELIST_NEW2 )
 {
   QDomNodeList * o = NULL;
   QDomNodeList * par1 = (QDomNodeList *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -143,7 +143,7 @@ HB_FUNC( QDOMNODELIST_NEW2 )
 //[1]QDomNodeList ()
 //[2]QDomNodeList ( const QDomNodeList & n )
 
-HB_FUNC( QDOMNODELIST_NEW )
+HB_FUNC_STATIC( QDOMNODELIST_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -159,7 +159,7 @@ HB_FUNC( QDOMNODELIST_NEW )
   }
 }
 
-HB_FUNC( QDOMNODELIST_DELETE )
+HB_FUNC_STATIC( QDOMNODELIST_DELETE )
 {
   QDomNodeList * obj = (QDomNodeList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -178,7 +178,7 @@ HB_FUNC( QDOMNODELIST_DELETE )
 /*
 QDomNode at ( int index ) const
 */
-HB_FUNC( QDOMNODELIST_AT )
+HB_FUNC_STATIC( QDOMNODELIST_AT )
 {
   QDomNodeList * obj = (QDomNodeList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -192,7 +192,7 @@ HB_FUNC( QDOMNODELIST_AT )
 /*
 int count () const
 */
-HB_FUNC( QDOMNODELIST_COUNT )
+HB_FUNC_STATIC( QDOMNODELIST_COUNT )
 {
   QDomNodeList * obj = (QDomNodeList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -206,7 +206,7 @@ HB_FUNC( QDOMNODELIST_COUNT )
 /*
 bool isEmpty () const
 */
-HB_FUNC( QDOMNODELIST_ISEMPTY )
+HB_FUNC_STATIC( QDOMNODELIST_ISEMPTY )
 {
   QDomNodeList * obj = (QDomNodeList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -220,7 +220,7 @@ HB_FUNC( QDOMNODELIST_ISEMPTY )
 /*
 QDomNode item ( int index ) const
 */
-HB_FUNC( QDOMNODELIST_ITEM )
+HB_FUNC_STATIC( QDOMNODELIST_ITEM )
 {
   QDomNodeList * obj = (QDomNodeList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -234,7 +234,7 @@ HB_FUNC( QDOMNODELIST_ITEM )
 /*
 uint length () const
 */
-HB_FUNC( QDOMNODELIST_LENGTH )
+HB_FUNC_STATIC( QDOMNODELIST_LENGTH )
 {
   QDomNodeList * obj = (QDomNodeList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -248,7 +248,7 @@ HB_FUNC( QDOMNODELIST_LENGTH )
 /*
 int size () const
 */
-HB_FUNC( QDOMNODELIST_SIZE )
+HB_FUNC_STATIC( QDOMNODELIST_SIZE )
 {
   QDomNodeList * obj = (QDomNodeList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

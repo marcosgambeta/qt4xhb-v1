@@ -123,7 +123,7 @@ RETURN
 /*
 QTime()
 */
-HB_FUNC( QTIME_NEW1 )
+HB_FUNC_STATIC( QTIME_NEW1 )
 {
   QTime * o = NULL;
   o = new QTime (  );
@@ -141,7 +141,7 @@ HB_FUNC( QTIME_NEW1 )
 /*
 QTime(int h, int m, int s = 0, int ms = 0)
 */
-HB_FUNC( QTIME_NEW2 )
+HB_FUNC_STATIC( QTIME_NEW2 )
 {
   QTime * o = NULL;
   int par1 = hb_parni(1);
@@ -163,7 +163,7 @@ HB_FUNC( QTIME_NEW2 )
 //[1]QTime()
 //[2]QTime(int h, int m, int s = 0, int ms = 0)
 
-HB_FUNC( QTIME_NEW )
+HB_FUNC_STATIC( QTIME_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -191,7 +191,7 @@ HB_FUNC( QTIME_NEW )
   }
 }
 
-HB_FUNC( QTIME_DELETE )
+HB_FUNC_STATIC( QTIME_DELETE )
 {
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -210,7 +210,7 @@ HB_FUNC( QTIME_DELETE )
 /*
 QTime addMSecs(int ms) const
 */
-HB_FUNC( QTIME_ADDMSECS )
+HB_FUNC_STATIC( QTIME_ADDMSECS )
 {
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -224,7 +224,7 @@ HB_FUNC( QTIME_ADDMSECS )
 /*
 QTime addSecs(int s) const
 */
-HB_FUNC( QTIME_ADDSECS )
+HB_FUNC_STATIC( QTIME_ADDSECS )
 {
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -238,7 +238,7 @@ HB_FUNC( QTIME_ADDSECS )
 /*
 int elapsed() const
 */
-HB_FUNC( QTIME_ELAPSED )
+HB_FUNC_STATIC( QTIME_ELAPSED )
 {
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -252,7 +252,7 @@ HB_FUNC( QTIME_ELAPSED )
 /*
 int hour() const
 */
-HB_FUNC( QTIME_HOUR )
+HB_FUNC_STATIC( QTIME_HOUR )
 {
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -266,7 +266,7 @@ HB_FUNC( QTIME_HOUR )
 /*
 bool isNull() const
 */
-HB_FUNC( QTIME_ISNULL )
+HB_FUNC_STATIC( QTIME_ISNULL )
 {
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -280,7 +280,7 @@ HB_FUNC( QTIME_ISNULL )
 /*
 bool isValid() const
 */
-HB_FUNC( QTIME_ISVALID1 )
+HB_FUNC_STATIC( QTIME_ISVALID1 )
 {
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -294,7 +294,7 @@ HB_FUNC( QTIME_ISVALID1 )
 /*
 int minute() const
 */
-HB_FUNC( QTIME_MINUTE )
+HB_FUNC_STATIC( QTIME_MINUTE )
 {
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -308,7 +308,7 @@ HB_FUNC( QTIME_MINUTE )
 /*
 int msec() const
 */
-HB_FUNC( QTIME_MSEC )
+HB_FUNC_STATIC( QTIME_MSEC )
 {
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -322,7 +322,7 @@ HB_FUNC( QTIME_MSEC )
 /*
 int msecsTo(const QTime & t) const
 */
-HB_FUNC( QTIME_MSECSTO )
+HB_FUNC_STATIC( QTIME_MSECSTO )
 {
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -337,7 +337,7 @@ HB_FUNC( QTIME_MSECSTO )
 /*
 int restart()
 */
-HB_FUNC( QTIME_RESTART )
+HB_FUNC_STATIC( QTIME_RESTART )
 {
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -351,7 +351,7 @@ HB_FUNC( QTIME_RESTART )
 /*
 int second() const
 */
-HB_FUNC( QTIME_SECOND )
+HB_FUNC_STATIC( QTIME_SECOND )
 {
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -365,7 +365,7 @@ HB_FUNC( QTIME_SECOND )
 /*
 int secsTo(const QTime & t) const
 */
-HB_FUNC( QTIME_SECSTO )
+HB_FUNC_STATIC( QTIME_SECSTO )
 {
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -380,7 +380,7 @@ HB_FUNC( QTIME_SECSTO )
 /*
 bool setHMS(int h, int m, int s, int ms = 0)
 */
-HB_FUNC( QTIME_SETHMS )
+HB_FUNC_STATIC( QTIME_SETHMS )
 {
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -398,7 +398,7 @@ HB_FUNC( QTIME_SETHMS )
 /*
 void start()
 */
-HB_FUNC( QTIME_START )
+HB_FUNC_STATIC( QTIME_START )
 {
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -412,7 +412,7 @@ HB_FUNC( QTIME_START )
 /*
 QString toString(const QString & format) const
 */
-HB_FUNC( QTIME_TOSTRING1 )
+HB_FUNC_STATIC( QTIME_TOSTRING1 )
 {
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -427,7 +427,7 @@ HB_FUNC( QTIME_TOSTRING1 )
 /*
 QString toString(Qt::DateFormat format = Qt::TextDate) const
 */
-HB_FUNC( QTIME_TOSTRING2 )
+HB_FUNC_STATIC( QTIME_TOSTRING2 )
 {
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -442,7 +442,7 @@ HB_FUNC( QTIME_TOSTRING2 )
 //[1]QString toString(const QString & format) const
 //[2]QString toString(Qt::DateFormat format = Qt::TextDate) const
 
-HB_FUNC( QTIME_TOSTRING )
+HB_FUNC_STATIC( QTIME_TOSTRING )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
@@ -458,7 +458,7 @@ HB_FUNC( QTIME_TOSTRING )
 /*
 QTime currentTime()
 */
-HB_FUNC( QTIME_CURRENTTIME )
+HB_FUNC_STATIC( QTIME_CURRENTTIME )
 {
   QTime * ptr = new QTime( QTime::currentTime (  ) );
   _qt4xhb_createReturnClass ( ptr, "QTIME", true );}
@@ -467,7 +467,7 @@ HB_FUNC( QTIME_CURRENTTIME )
 /*
 QTime fromString(const QString & string, Qt::DateFormat format = Qt::TextDate)
 */
-HB_FUNC( QTIME_FROMSTRING1 )
+HB_FUNC_STATIC( QTIME_FROMSTRING1 )
 {
   QString par1 = hb_parc(1);
   int par2 = ISNIL(2)? (int) Qt::TextDate : hb_parni(2);
@@ -478,7 +478,7 @@ HB_FUNC( QTIME_FROMSTRING1 )
 /*
 QTime fromString(const QString & string, const QString & format)
 */
-HB_FUNC( QTIME_FROMSTRING2 )
+HB_FUNC_STATIC( QTIME_FROMSTRING2 )
 {
   QString par1 = hb_parc(1);
   QString par2 = hb_parc(2);
@@ -489,7 +489,7 @@ HB_FUNC( QTIME_FROMSTRING2 )
 //[1]QTime fromString(const QString & string, Qt::DateFormat format = Qt::TextDate)
 //[2]QTime fromString(const QString & string, const QString & format)
 
-HB_FUNC( QTIME_FROMSTRING )
+HB_FUNC_STATIC( QTIME_FROMSTRING )
 {
   if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
   {
@@ -504,7 +504,7 @@ HB_FUNC( QTIME_FROMSTRING )
 /*
 bool isValid(int h, int m, int s, int ms = 0)
 */
-HB_FUNC( QTIME_ISVALID2 )
+HB_FUNC_STATIC( QTIME_ISVALID2 )
 {
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
@@ -518,7 +518,7 @@ HB_FUNC( QTIME_ISVALID2 )
 //[1]bool isValid() const
 //[2]bool isValid(int h, int m, int s, int ms = 0)
 
-HB_FUNC( QTIME_ISVALID )
+HB_FUNC_STATIC( QTIME_ISVALID )
 {
   if( ISNUMPAR(0) )
   {

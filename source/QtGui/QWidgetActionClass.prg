@@ -66,7 +66,7 @@ RETURN
 /*
 QWidgetAction ( QObject * parent )
 */
-HB_FUNC( QWIDGETACTION_NEW )
+HB_FUNC_STATIC( QWIDGETACTION_NEW )
 {
   QWidgetAction * o = NULL;
   QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -79,7 +79,7 @@ HB_FUNC( QWIDGETACTION_NEW )
 }
 
 
-HB_FUNC( QWIDGETACTION_DELETE )
+HB_FUNC_STATIC( QWIDGETACTION_DELETE )
 {
   QWidgetAction * obj = (QWidgetAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -98,7 +98,7 @@ HB_FUNC( QWIDGETACTION_DELETE )
 /*
 QWidget * defaultWidget () const
 */
-HB_FUNC( QWIDGETACTION_DEFAULTWIDGET )
+HB_FUNC_STATIC( QWIDGETACTION_DEFAULTWIDGET )
 {
   QWidgetAction * obj = (QWidgetAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -111,7 +111,7 @@ HB_FUNC( QWIDGETACTION_DEFAULTWIDGET )
 /*
 void releaseWidget ( QWidget * widget )
 */
-HB_FUNC( QWIDGETACTION_RELEASEWIDGET )
+HB_FUNC_STATIC( QWIDGETACTION_RELEASEWIDGET )
 {
   QWidgetAction * obj = (QWidgetAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -126,7 +126,7 @@ HB_FUNC( QWIDGETACTION_RELEASEWIDGET )
 /*
 QWidget * requestWidget ( QWidget * parent )
 */
-HB_FUNC( QWIDGETACTION_REQUESTWIDGET )
+HB_FUNC_STATIC( QWIDGETACTION_REQUESTWIDGET )
 {
   QWidgetAction * obj = (QWidgetAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -140,7 +140,7 @@ HB_FUNC( QWIDGETACTION_REQUESTWIDGET )
 /*
 void setDefaultWidget ( QWidget * widget )
 */
-HB_FUNC( QWIDGETACTION_SETDEFAULTWIDGET )
+HB_FUNC_STATIC( QWIDGETACTION_SETDEFAULTWIDGET )
 {
   QWidgetAction * obj = (QWidgetAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

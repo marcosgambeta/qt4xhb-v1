@@ -75,7 +75,7 @@ RETURN
 /*
 QThreadPool ( QObject * parent = 0 )
 */
-HB_FUNC( QTHREADPOOL_NEW )
+HB_FUNC_STATIC( QTHREADPOOL_NEW )
 {
   QThreadPool * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -88,7 +88,7 @@ HB_FUNC( QTHREADPOOL_NEW )
 }
 
 
-HB_FUNC( QTHREADPOOL_DELETE )
+HB_FUNC_STATIC( QTHREADPOOL_DELETE )
 {
   QThreadPool * obj = (QThreadPool *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -107,7 +107,7 @@ HB_FUNC( QTHREADPOOL_DELETE )
 /*
 int activeThreadCount () const
 */
-HB_FUNC( QTHREADPOOL_ACTIVETHREADCOUNT )
+HB_FUNC_STATIC( QTHREADPOOL_ACTIVETHREADCOUNT )
 {
   QThreadPool * obj = (QThreadPool *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -121,7 +121,7 @@ HB_FUNC( QTHREADPOOL_ACTIVETHREADCOUNT )
 /*
 int expiryTimeout () const
 */
-HB_FUNC( QTHREADPOOL_EXPIRYTIMEOUT )
+HB_FUNC_STATIC( QTHREADPOOL_EXPIRYTIMEOUT )
 {
   QThreadPool * obj = (QThreadPool *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -135,7 +135,7 @@ HB_FUNC( QTHREADPOOL_EXPIRYTIMEOUT )
 /*
 int maxThreadCount () const
 */
-HB_FUNC( QTHREADPOOL_MAXTHREADCOUNT )
+HB_FUNC_STATIC( QTHREADPOOL_MAXTHREADCOUNT )
 {
   QThreadPool * obj = (QThreadPool *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -149,7 +149,7 @@ HB_FUNC( QTHREADPOOL_MAXTHREADCOUNT )
 /*
 void releaseThread ()
 */
-HB_FUNC( QTHREADPOOL_RELEASETHREAD )
+HB_FUNC_STATIC( QTHREADPOOL_RELEASETHREAD )
 {
   QThreadPool * obj = (QThreadPool *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -163,7 +163,7 @@ HB_FUNC( QTHREADPOOL_RELEASETHREAD )
 /*
 void reserveThread ()
 */
-HB_FUNC( QTHREADPOOL_RESERVETHREAD )
+HB_FUNC_STATIC( QTHREADPOOL_RESERVETHREAD )
 {
   QThreadPool * obj = (QThreadPool *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -177,7 +177,7 @@ HB_FUNC( QTHREADPOOL_RESERVETHREAD )
 /*
 void setExpiryTimeout ( int expiryTimeout )
 */
-HB_FUNC( QTHREADPOOL_SETEXPIRYTIMEOUT )
+HB_FUNC_STATIC( QTHREADPOOL_SETEXPIRYTIMEOUT )
 {
   QThreadPool * obj = (QThreadPool *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -192,7 +192,7 @@ HB_FUNC( QTHREADPOOL_SETEXPIRYTIMEOUT )
 /*
 void setMaxThreadCount ( int maxThreadCount )
 */
-HB_FUNC( QTHREADPOOL_SETMAXTHREADCOUNT )
+HB_FUNC_STATIC( QTHREADPOOL_SETMAXTHREADCOUNT )
 {
   QThreadPool * obj = (QThreadPool *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -207,7 +207,7 @@ HB_FUNC( QTHREADPOOL_SETMAXTHREADCOUNT )
 /*
 void start ( QRunnable * runnable, int priority = 0 )
 */
-HB_FUNC( QTHREADPOOL_START )
+HB_FUNC_STATIC( QTHREADPOOL_START )
 {
   QThreadPool * obj = (QThreadPool *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -223,7 +223,7 @@ HB_FUNC( QTHREADPOOL_START )
 /*
 bool tryStart ( QRunnable * runnable )
 */
-HB_FUNC( QTHREADPOOL_TRYSTART )
+HB_FUNC_STATIC( QTHREADPOOL_TRYSTART )
 {
   QThreadPool * obj = (QThreadPool *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -238,7 +238,7 @@ HB_FUNC( QTHREADPOOL_TRYSTART )
 /*
 void waitForDone ()
 */
-HB_FUNC( QTHREADPOOL_WAITFORDONE1 )
+HB_FUNC_STATIC( QTHREADPOOL_WAITFORDONE1 )
 {
   QThreadPool * obj = (QThreadPool *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -252,7 +252,7 @@ HB_FUNC( QTHREADPOOL_WAITFORDONE1 )
 /*
 bool waitForDone ( int msecs )
 */
-HB_FUNC( QTHREADPOOL_WAITFORDONE2 )
+HB_FUNC_STATIC( QTHREADPOOL_WAITFORDONE2 )
 {
   QThreadPool * obj = (QThreadPool *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -267,7 +267,7 @@ HB_FUNC( QTHREADPOOL_WAITFORDONE2 )
 //[1]void waitForDone ()
 //[2]bool waitForDone ( int msecs )
 
-HB_FUNC( QTHREADPOOL_WAITFORDONE )
+HB_FUNC_STATIC( QTHREADPOOL_WAITFORDONE )
 {
   if( ISNUMPAR(0) )
   {
@@ -283,7 +283,7 @@ HB_FUNC( QTHREADPOOL_WAITFORDONE )
 /*
 QThreadPool * globalInstance ()
 */
-HB_FUNC( QTHREADPOOL_GLOBALINSTANCE )
+HB_FUNC_STATIC( QTHREADPOOL_GLOBALINSTANCE )
 {
   QThreadPool * ptr = QThreadPool::globalInstance (  );
   _qt4xhb_createReturnClass ( ptr, "QTHREADPOOL" );}

@@ -114,7 +114,7 @@ RETURN
 /*
 QStaticText ()
 */
-HB_FUNC( QSTATICTEXT_NEW1 )
+HB_FUNC_STATIC( QSTATICTEXT_NEW1 )
 {
   QStaticText * o = NULL;
   o = new QStaticText (  );
@@ -132,7 +132,7 @@ HB_FUNC( QSTATICTEXT_NEW1 )
 /*
 QStaticText ( const QString & text )
 */
-HB_FUNC( QSTATICTEXT_NEW2 )
+HB_FUNC_STATIC( QSTATICTEXT_NEW2 )
 {
   QStaticText * o = NULL;
   QString par1 = hb_parc(1);
@@ -151,7 +151,7 @@ HB_FUNC( QSTATICTEXT_NEW2 )
 /*
 QStaticText ( const QStaticText & other )
 */
-HB_FUNC( QSTATICTEXT_NEW3 )
+HB_FUNC_STATIC( QSTATICTEXT_NEW3 )
 {
   QStaticText * o = NULL;
   QStaticText * par1 = (QStaticText *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -171,7 +171,7 @@ HB_FUNC( QSTATICTEXT_NEW3 )
 //[2]QStaticText ( const QString & text )
 //[3]QStaticText ( const QStaticText & other )
 
-HB_FUNC( QSTATICTEXT_NEW )
+HB_FUNC_STATIC( QSTATICTEXT_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -191,7 +191,7 @@ HB_FUNC( QSTATICTEXT_NEW )
   }
 }
 
-HB_FUNC( QSTATICTEXT_DELETE )
+HB_FUNC_STATIC( QSTATICTEXT_DELETE )
 {
   QStaticText * obj = (QStaticText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -210,7 +210,7 @@ HB_FUNC( QSTATICTEXT_DELETE )
 /*
 PerformanceHint performanceHint () const
 */
-HB_FUNC( QSTATICTEXT_PERFORMANCEHINT )
+HB_FUNC_STATIC( QSTATICTEXT_PERFORMANCEHINT )
 {
   QStaticText * obj = (QStaticText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -224,7 +224,7 @@ HB_FUNC( QSTATICTEXT_PERFORMANCEHINT )
 /*
 void prepare ( const QTransform & matrix = QTransform(), const QFont & font = QFont() )
 */
-HB_FUNC( QSTATICTEXT_PREPARE )
+HB_FUNC_STATIC( QSTATICTEXT_PREPARE )
 {
   QStaticText * obj = (QStaticText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -240,7 +240,7 @@ HB_FUNC( QSTATICTEXT_PREPARE )
 /*
 void setPerformanceHint ( PerformanceHint performanceHint )
 */
-HB_FUNC( QSTATICTEXT_SETPERFORMANCEHINT )
+HB_FUNC_STATIC( QSTATICTEXT_SETPERFORMANCEHINT )
 {
   QStaticText * obj = (QStaticText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -255,7 +255,7 @@ HB_FUNC( QSTATICTEXT_SETPERFORMANCEHINT )
 /*
 void setText ( const QString & text )
 */
-HB_FUNC( QSTATICTEXT_SETTEXT )
+HB_FUNC_STATIC( QSTATICTEXT_SETTEXT )
 {
   QStaticText * obj = (QStaticText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -270,7 +270,7 @@ HB_FUNC( QSTATICTEXT_SETTEXT )
 /*
 void setTextFormat ( Qt::TextFormat textFormat )
 */
-HB_FUNC( QSTATICTEXT_SETTEXTFORMAT )
+HB_FUNC_STATIC( QSTATICTEXT_SETTEXTFORMAT )
 {
   QStaticText * obj = (QStaticText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -285,7 +285,7 @@ HB_FUNC( QSTATICTEXT_SETTEXTFORMAT )
 /*
 void setTextOption ( const QTextOption & textOption )
 */
-HB_FUNC( QSTATICTEXT_SETTEXTOPTION )
+HB_FUNC_STATIC( QSTATICTEXT_SETTEXTOPTION )
 {
   QStaticText * obj = (QStaticText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -300,7 +300,7 @@ HB_FUNC( QSTATICTEXT_SETTEXTOPTION )
 /*
 void setTextWidth ( qreal textWidth )
 */
-HB_FUNC( QSTATICTEXT_SETTEXTWIDTH )
+HB_FUNC_STATIC( QSTATICTEXT_SETTEXTWIDTH )
 {
   QStaticText * obj = (QStaticText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -315,7 +315,7 @@ HB_FUNC( QSTATICTEXT_SETTEXTWIDTH )
 /*
 QSizeF size () const
 */
-HB_FUNC( QSTATICTEXT_SIZE )
+HB_FUNC_STATIC( QSTATICTEXT_SIZE )
 {
   QStaticText * obj = (QStaticText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -328,7 +328,7 @@ HB_FUNC( QSTATICTEXT_SIZE )
 /*
 QString text () const
 */
-HB_FUNC( QSTATICTEXT_TEXT )
+HB_FUNC_STATIC( QSTATICTEXT_TEXT )
 {
   QStaticText * obj = (QStaticText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -342,7 +342,7 @@ HB_FUNC( QSTATICTEXT_TEXT )
 /*
 Qt::TextFormat textFormat () const
 */
-HB_FUNC( QSTATICTEXT_TEXTFORMAT )
+HB_FUNC_STATIC( QSTATICTEXT_TEXTFORMAT )
 {
   QStaticText * obj = (QStaticText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -356,7 +356,7 @@ HB_FUNC( QSTATICTEXT_TEXTFORMAT )
 /*
 QTextOption textOption () const
 */
-HB_FUNC( QSTATICTEXT_TEXTOPTION )
+HB_FUNC_STATIC( QSTATICTEXT_TEXTOPTION )
 {
   QStaticText * obj = (QStaticText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -369,7 +369,7 @@ HB_FUNC( QSTATICTEXT_TEXTOPTION )
 /*
 qreal textWidth () const
 */
-HB_FUNC( QSTATICTEXT_TEXTWIDTH )
+HB_FUNC_STATIC( QSTATICTEXT_TEXTWIDTH )
 {
   QStaticText * obj = (QStaticText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

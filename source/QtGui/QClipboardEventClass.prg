@@ -63,7 +63,7 @@ RETURN
 /*
 QClipboardEvent(QEventPrivate *data)
 */
-HB_FUNC( QCLIPBOARDEVENT_NEW )
+HB_FUNC_STATIC( QCLIPBOARDEVENT_NEW )
 {
   QClipboardEvent * o = NULL;
   QEventPrivate * par1 = (QEventPrivate *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -76,7 +76,7 @@ HB_FUNC( QCLIPBOARDEVENT_NEW )
 }
 
 
-HB_FUNC( QCLIPBOARDEVENT_DELETE )
+HB_FUNC_STATIC( QCLIPBOARDEVENT_DELETE )
 {
   QClipboardEvent * obj = (QClipboardEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -95,7 +95,7 @@ HB_FUNC( QCLIPBOARDEVENT_DELETE )
 /*
 QEventPrivate *data()
 */
-HB_FUNC( QCLIPBOARDEVENT_DATA )
+HB_FUNC_STATIC( QCLIPBOARDEVENT_DATA )
 {
   QClipboardEvent * obj = (QClipboardEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

@@ -115,7 +115,7 @@ RETURN
 /*
 QTestEventList ()
 */
-HB_FUNC( QTESTEVENTLIST_NEW1 )
+HB_FUNC_STATIC( QTESTEVENTLIST_NEW1 )
 {
   QTestEventList * o = NULL;
   o = new QTestEventList (  );
@@ -130,7 +130,7 @@ HB_FUNC( QTESTEVENTLIST_NEW1 )
 /*
 QTestEventList ( const QTestEventList & other )
 */
-HB_FUNC( QTESTEVENTLIST_NEW2 )
+HB_FUNC_STATIC( QTESTEVENTLIST_NEW2 )
 {
   QTestEventList * o = NULL;
   QTestEventList * par1 = (QTestEventList *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -146,7 +146,7 @@ HB_FUNC( QTESTEVENTLIST_NEW2 )
 //[1]QTestEventList ()
 //[2]QTestEventList ( const QTestEventList & other )
 
-HB_FUNC( QTESTEVENTLIST_NEW )
+HB_FUNC_STATIC( QTESTEVENTLIST_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -162,7 +162,7 @@ HB_FUNC( QTESTEVENTLIST_NEW )
   }
 }
 
-HB_FUNC( QTESTEVENTLIST_DELETE )
+HB_FUNC_STATIC( QTESTEVENTLIST_DELETE )
 {
   QTestEventList * obj = (QTestEventList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -181,7 +181,7 @@ HB_FUNC( QTESTEVENTLIST_DELETE )
 /*
 void addDelay ( int msecs )
 */
-HB_FUNC( QTESTEVENTLIST_ADDDELAY )
+HB_FUNC_STATIC( QTESTEVENTLIST_ADDDELAY )
 {
   QTestEventList * obj = (QTestEventList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -196,7 +196,7 @@ HB_FUNC( QTESTEVENTLIST_ADDDELAY )
 /*
 void addKeyClick ( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
 */
-HB_FUNC( QTESTEVENTLIST_ADDKEYCLICK1 )
+HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYCLICK1 )
 {
   QTestEventList * obj = (QTestEventList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -213,7 +213,7 @@ HB_FUNC( QTESTEVENTLIST_ADDKEYCLICK1 )
 /*
 void addKeyClick ( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
 */
-HB_FUNC( QTESTEVENTLIST_ADDKEYCLICK2 )
+HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYCLICK2 )
 {
   QTestEventList * obj = (QTestEventList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -230,7 +230,7 @@ HB_FUNC( QTESTEVENTLIST_ADDKEYCLICK2 )
 //[1]void addKeyClick ( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
 //[2]void addKeyClick ( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
 
-HB_FUNC( QTESTEVENTLIST_ADDKEYCLICK )
+HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYCLICK )
 {
   if( ISBETWEEN(1,3) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
@@ -245,7 +245,7 @@ HB_FUNC( QTESTEVENTLIST_ADDKEYCLICK )
 /*
 void addKeyClicks ( const QString & keys, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
 */
-HB_FUNC( QTESTEVENTLIST_ADDKEYCLICKS )
+HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYCLICKS )
 {
   QTestEventList * obj = (QTestEventList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -262,7 +262,7 @@ HB_FUNC( QTESTEVENTLIST_ADDKEYCLICKS )
 /*
 void addKeyPress ( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
 */
-HB_FUNC( QTESTEVENTLIST_ADDKEYPRESS1 )
+HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYPRESS1 )
 {
   QTestEventList * obj = (QTestEventList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -279,7 +279,7 @@ HB_FUNC( QTESTEVENTLIST_ADDKEYPRESS1 )
 /*
 void addKeyPress ( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
 */
-HB_FUNC( QTESTEVENTLIST_ADDKEYPRESS2 )
+HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYPRESS2 )
 {
   QTestEventList * obj = (QTestEventList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -296,7 +296,7 @@ HB_FUNC( QTESTEVENTLIST_ADDKEYPRESS2 )
 //[1]void addKeyPress ( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
 //[2]void addKeyPress ( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
 
-HB_FUNC( QTESTEVENTLIST_ADDKEYPRESS )
+HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYPRESS )
 {
   if( ISBETWEEN(1,3) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
@@ -311,7 +311,7 @@ HB_FUNC( QTESTEVENTLIST_ADDKEYPRESS )
 /*
 void addKeyRelease ( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
 */
-HB_FUNC( QTESTEVENTLIST_ADDKEYRELEASE1 )
+HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYRELEASE1 )
 {
   QTestEventList * obj = (QTestEventList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -328,7 +328,7 @@ HB_FUNC( QTESTEVENTLIST_ADDKEYRELEASE1 )
 /*
 void addKeyRelease ( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
 */
-HB_FUNC( QTESTEVENTLIST_ADDKEYRELEASE2 )
+HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYRELEASE2 )
 {
   QTestEventList * obj = (QTestEventList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -345,7 +345,7 @@ HB_FUNC( QTESTEVENTLIST_ADDKEYRELEASE2 )
 //[1]void addKeyRelease ( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
 //[2]void addKeyRelease ( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
 
-HB_FUNC( QTESTEVENTLIST_ADDKEYRELEASE )
+HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYRELEASE )
 {
   if( ISBETWEEN(1,3) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
@@ -360,7 +360,7 @@ HB_FUNC( QTESTEVENTLIST_ADDKEYRELEASE )
 /*
 void addMouseClick ( Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1 )
 */
-HB_FUNC( QTESTEVENTLIST_ADDMOUSECLICK )
+HB_FUNC_STATIC( QTESTEVENTLIST_ADDMOUSECLICK )
 {
   QTestEventList * obj = (QTestEventList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -378,7 +378,7 @@ HB_FUNC( QTESTEVENTLIST_ADDMOUSECLICK )
 /*
 void addMouseDClick ( Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1 )
 */
-HB_FUNC( QTESTEVENTLIST_ADDMOUSEDCLICK )
+HB_FUNC_STATIC( QTESTEVENTLIST_ADDMOUSEDCLICK )
 {
   QTestEventList * obj = (QTestEventList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -396,7 +396,7 @@ HB_FUNC( QTESTEVENTLIST_ADDMOUSEDCLICK )
 /*
 void addMouseMove ( QPoint pos = QPoint(), int delay = -1 )
 */
-HB_FUNC( QTESTEVENTLIST_ADDMOUSEMOVE )
+HB_FUNC_STATIC( QTESTEVENTLIST_ADDMOUSEMOVE )
 {
   QTestEventList * obj = (QTestEventList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -412,7 +412,7 @@ HB_FUNC( QTESTEVENTLIST_ADDMOUSEMOVE )
 /*
 void addMousePress ( Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1 )
 */
-HB_FUNC( QTESTEVENTLIST_ADDMOUSEPRESS )
+HB_FUNC_STATIC( QTESTEVENTLIST_ADDMOUSEPRESS )
 {
   QTestEventList * obj = (QTestEventList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -430,7 +430,7 @@ HB_FUNC( QTESTEVENTLIST_ADDMOUSEPRESS )
 /*
 void addMouseRelease ( Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1 )
 */
-HB_FUNC( QTESTEVENTLIST_ADDMOUSERELEASE )
+HB_FUNC_STATIC( QTESTEVENTLIST_ADDMOUSERELEASE )
 {
   QTestEventList * obj = (QTestEventList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -448,7 +448,7 @@ HB_FUNC( QTESTEVENTLIST_ADDMOUSERELEASE )
 /*
 void clear ()
 */
-HB_FUNC( QTESTEVENTLIST_CLEAR )
+HB_FUNC_STATIC( QTESTEVENTLIST_CLEAR )
 {
   QTestEventList * obj = (QTestEventList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -462,7 +462,7 @@ HB_FUNC( QTESTEVENTLIST_CLEAR )
 /*
 void simulate ( QWidget * w )
 */
-HB_FUNC( QTESTEVENTLIST_SIMULATE )
+HB_FUNC_STATIC( QTESTEVENTLIST_SIMULATE )
 {
   QTestEventList * obj = (QTestEventList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

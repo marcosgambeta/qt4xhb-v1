@@ -111,7 +111,7 @@ RETURN
 /*
 QFontInfo ( const QFont & font )
 */
-HB_FUNC( QFONTINFO_NEW1 )
+HB_FUNC_STATIC( QFONTINFO_NEW1 )
 {
   QFontInfo * o = NULL;
   QFont * par1 = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -130,7 +130,7 @@ HB_FUNC( QFONTINFO_NEW1 )
 /*
 QFontInfo ( const QFontInfo & fi )
 */
-HB_FUNC( QFONTINFO_NEW2 )
+HB_FUNC_STATIC( QFONTINFO_NEW2 )
 {
   QFontInfo * o = NULL;
   QFontInfo * par1 = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -149,7 +149,7 @@ HB_FUNC( QFONTINFO_NEW2 )
 //[1]QFontInfo ( const QFont & font )
 //[2]QFontInfo ( const QFontInfo & fi )
 
-HB_FUNC( QFONTINFO_NEW )
+HB_FUNC_STATIC( QFONTINFO_NEW )
 {
   if( ISNUMPAR(1) && ISQFONT(1) )
   {
@@ -165,7 +165,7 @@ HB_FUNC( QFONTINFO_NEW )
   }
 }
 
-HB_FUNC( QFONTINFO_DELETE )
+HB_FUNC_STATIC( QFONTINFO_DELETE )
 {
   QFontInfo * obj = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -184,7 +184,7 @@ HB_FUNC( QFONTINFO_DELETE )
 /*
 bool bold () const
 */
-HB_FUNC( QFONTINFO_BOLD )
+HB_FUNC_STATIC( QFONTINFO_BOLD )
 {
   QFontInfo * obj = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -198,7 +198,7 @@ HB_FUNC( QFONTINFO_BOLD )
 /*
 bool exactMatch () const
 */
-HB_FUNC( QFONTINFO_EXACTMATCH )
+HB_FUNC_STATIC( QFONTINFO_EXACTMATCH )
 {
   QFontInfo * obj = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -212,7 +212,7 @@ HB_FUNC( QFONTINFO_EXACTMATCH )
 /*
 QString family () const
 */
-HB_FUNC( QFONTINFO_FAMILY )
+HB_FUNC_STATIC( QFONTINFO_FAMILY )
 {
   QFontInfo * obj = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -226,7 +226,7 @@ HB_FUNC( QFONTINFO_FAMILY )
 /*
 bool fixedPitch () const
 */
-HB_FUNC( QFONTINFO_FIXEDPITCH )
+HB_FUNC_STATIC( QFONTINFO_FIXEDPITCH )
 {
   QFontInfo * obj = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -240,7 +240,7 @@ HB_FUNC( QFONTINFO_FIXEDPITCH )
 /*
 bool italic () const
 */
-HB_FUNC( QFONTINFO_ITALIC )
+HB_FUNC_STATIC( QFONTINFO_ITALIC )
 {
   QFontInfo * obj = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -254,7 +254,7 @@ HB_FUNC( QFONTINFO_ITALIC )
 /*
 int pixelSize () const
 */
-HB_FUNC( QFONTINFO_PIXELSIZE )
+HB_FUNC_STATIC( QFONTINFO_PIXELSIZE )
 {
   QFontInfo * obj = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -268,7 +268,7 @@ HB_FUNC( QFONTINFO_PIXELSIZE )
 /*
 int pointSize () const
 */
-HB_FUNC( QFONTINFO_POINTSIZE )
+HB_FUNC_STATIC( QFONTINFO_POINTSIZE )
 {
   QFontInfo * obj = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -282,7 +282,7 @@ HB_FUNC( QFONTINFO_POINTSIZE )
 /*
 qreal pointSizeF () const
 */
-HB_FUNC( QFONTINFO_POINTSIZEF )
+HB_FUNC_STATIC( QFONTINFO_POINTSIZEF )
 {
   QFontInfo * obj = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -296,7 +296,7 @@ HB_FUNC( QFONTINFO_POINTSIZEF )
 /*
 bool rawMode () const
 */
-HB_FUNC( QFONTINFO_RAWMODE )
+HB_FUNC_STATIC( QFONTINFO_RAWMODE )
 {
   QFontInfo * obj = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -310,7 +310,7 @@ HB_FUNC( QFONTINFO_RAWMODE )
 /*
 QFont::Style style () const
 */
-HB_FUNC( QFONTINFO_STYLE )
+HB_FUNC_STATIC( QFONTINFO_STYLE )
 {
   QFontInfo * obj = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -324,7 +324,7 @@ HB_FUNC( QFONTINFO_STYLE )
 /*
 QFont::StyleHint styleHint () const
 */
-HB_FUNC( QFONTINFO_STYLEHINT )
+HB_FUNC_STATIC( QFONTINFO_STYLEHINT )
 {
   QFontInfo * obj = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -338,7 +338,7 @@ HB_FUNC( QFONTINFO_STYLEHINT )
 /*
 QString styleName () const
 */
-HB_FUNC( QFONTINFO_STYLENAME )
+HB_FUNC_STATIC( QFONTINFO_STYLENAME )
 {
   QFontInfo * obj = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -352,7 +352,7 @@ HB_FUNC( QFONTINFO_STYLENAME )
 /*
 int weight () const
 */
-HB_FUNC( QFONTINFO_WEIGHT )
+HB_FUNC_STATIC( QFONTINFO_WEIGHT )
 {
   QFontInfo * obj = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

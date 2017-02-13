@@ -61,7 +61,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QSQLDRIVERPLUGIN_DELETE )
+HB_FUNC_STATIC( QSQLDRIVERPLUGIN_DELETE )
 {
   QSqlDriverPlugin * obj = (QSqlDriverPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -80,7 +80,7 @@ HB_FUNC( QSQLDRIVERPLUGIN_DELETE )
 /*
 virtual QSqlDriver * create ( const QString & key ) = 0
 */
-HB_FUNC( QSQLDRIVERPLUGIN_CREATE )
+HB_FUNC_STATIC( QSQLDRIVERPLUGIN_CREATE )
 {
   QSqlDriverPlugin * obj = (QSqlDriverPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -94,7 +94,7 @@ HB_FUNC( QSQLDRIVERPLUGIN_CREATE )
 /*
 virtual QStringList keys () const = 0
 */
-HB_FUNC( QSQLDRIVERPLUGIN_KEYS )
+HB_FUNC_STATIC( QSQLDRIVERPLUGIN_KEYS )
 {
   QSqlDriverPlugin * obj = (QSqlDriverPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

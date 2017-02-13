@@ -64,7 +64,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QINPUTCONTEXTPLUGIN_DELETE )
+HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_DELETE )
 {
   QInputContextPlugin * obj = (QInputContextPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -83,7 +83,7 @@ HB_FUNC( QINPUTCONTEXTPLUGIN_DELETE )
 /*
 virtual QInputContext * create ( const QString & key ) = 0
 */
-HB_FUNC( QINPUTCONTEXTPLUGIN_CREATE )
+HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_CREATE )
 {
   QInputContextPlugin * obj = (QInputContextPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -97,7 +97,7 @@ HB_FUNC( QINPUTCONTEXTPLUGIN_CREATE )
 /*
 virtual QString description ( const QString & key ) = 0
 */
-HB_FUNC( QINPUTCONTEXTPLUGIN_DESCRIPTION )
+HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_DESCRIPTION )
 {
   QInputContextPlugin * obj = (QInputContextPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -112,7 +112,7 @@ HB_FUNC( QINPUTCONTEXTPLUGIN_DESCRIPTION )
 /*
 virtual QString displayName ( const QString & key ) = 0
 */
-HB_FUNC( QINPUTCONTEXTPLUGIN_DISPLAYNAME )
+HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_DISPLAYNAME )
 {
   QInputContextPlugin * obj = (QInputContextPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -127,7 +127,7 @@ HB_FUNC( QINPUTCONTEXTPLUGIN_DISPLAYNAME )
 /*
 virtual QStringList keys () const = 0
 */
-HB_FUNC( QINPUTCONTEXTPLUGIN_KEYS )
+HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_KEYS )
 {
   QInputContextPlugin * obj = (QInputContextPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -150,7 +150,7 @@ HB_FUNC( QINPUTCONTEXTPLUGIN_KEYS )
 /*
 virtual QStringList languages ( const QString & key ) = 0
 */
-HB_FUNC( QINPUTCONTEXTPLUGIN_LANGUAGES )
+HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_LANGUAGES )
 {
   QInputContextPlugin * obj = (QInputContextPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

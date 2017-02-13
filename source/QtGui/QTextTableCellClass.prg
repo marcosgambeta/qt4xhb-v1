@@ -112,7 +112,7 @@ RETURN
 /*
 QTextTableCell ()
 */
-HB_FUNC( QTEXTTABLECELL_NEW1 )
+HB_FUNC_STATIC( QTEXTTABLECELL_NEW1 )
 {
   QTextTableCell * o = NULL;
   o = new QTextTableCell (  );
@@ -127,7 +127,7 @@ HB_FUNC( QTEXTTABLECELL_NEW1 )
 /*
 QTextTableCell ( const QTextTableCell & other )
 */
-HB_FUNC( QTEXTTABLECELL_NEW2 )
+HB_FUNC_STATIC( QTEXTTABLECELL_NEW2 )
 {
   QTextTableCell * o = NULL;
   QTextTableCell * par1 = (QTextTableCell *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -143,7 +143,7 @@ HB_FUNC( QTEXTTABLECELL_NEW2 )
 //[1]QTextTableCell ()
 //[2]QTextTableCell ( const QTextTableCell & other )
 
-HB_FUNC( QTEXTTABLECELL_NEW )
+HB_FUNC_STATIC( QTEXTTABLECELL_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -159,7 +159,7 @@ HB_FUNC( QTEXTTABLECELL_NEW )
   }
 }
 
-HB_FUNC( QTEXTTABLECELL_DELETE )
+HB_FUNC_STATIC( QTEXTTABLECELL_DELETE )
 {
   QTextTableCell * obj = (QTextTableCell *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -179,7 +179,7 @@ HB_FUNC( QTEXTTABLECELL_DELETE )
 /*
 int column () const
 */
-HB_FUNC( QTEXTTABLECELL_COLUMN )
+HB_FUNC_STATIC( QTEXTTABLECELL_COLUMN )
 {
   QTextTableCell * obj = (QTextTableCell *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -193,7 +193,7 @@ HB_FUNC( QTEXTTABLECELL_COLUMN )
 /*
 int columnSpan () const
 */
-HB_FUNC( QTEXTTABLECELL_COLUMNSPAN )
+HB_FUNC_STATIC( QTEXTTABLECELL_COLUMNSPAN )
 {
   QTextTableCell * obj = (QTextTableCell *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -208,7 +208,7 @@ HB_FUNC( QTEXTTABLECELL_COLUMNSPAN )
 /*
 QTextCursor firstCursorPosition () const
 */
-HB_FUNC( QTEXTTABLECELL_FIRSTCURSORPOSITION )
+HB_FUNC_STATIC( QTEXTTABLECELL_FIRSTCURSORPOSITION )
 {
   QTextTableCell * obj = (QTextTableCell *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -221,7 +221,7 @@ HB_FUNC( QTEXTTABLECELL_FIRSTCURSORPOSITION )
 /*
 QTextCharFormat format () const
 */
-HB_FUNC( QTEXTTABLECELL_FORMAT )
+HB_FUNC_STATIC( QTEXTTABLECELL_FORMAT )
 {
   QTextTableCell * obj = (QTextTableCell *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -234,7 +234,7 @@ HB_FUNC( QTEXTTABLECELL_FORMAT )
 /*
 bool isValid () const
 */
-HB_FUNC( QTEXTTABLECELL_ISVALID )
+HB_FUNC_STATIC( QTEXTTABLECELL_ISVALID )
 {
   QTextTableCell * obj = (QTextTableCell *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -248,7 +248,7 @@ HB_FUNC( QTEXTTABLECELL_ISVALID )
 /*
 QTextCursor lastCursorPosition () const
 */
-HB_FUNC( QTEXTTABLECELL_LASTCURSORPOSITION )
+HB_FUNC_STATIC( QTEXTTABLECELL_LASTCURSORPOSITION )
 {
   QTextTableCell * obj = (QTextTableCell *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -261,7 +261,7 @@ HB_FUNC( QTEXTTABLECELL_LASTCURSORPOSITION )
 /*
 int row () const
 */
-HB_FUNC( QTEXTTABLECELL_ROW )
+HB_FUNC_STATIC( QTEXTTABLECELL_ROW )
 {
   QTextTableCell * obj = (QTextTableCell *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -275,7 +275,7 @@ HB_FUNC( QTEXTTABLECELL_ROW )
 /*
 int rowSpan () const
 */
-HB_FUNC( QTEXTTABLECELL_ROWSPAN )
+HB_FUNC_STATIC( QTEXTTABLECELL_ROWSPAN )
 {
   QTextTableCell * obj = (QTextTableCell *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -289,7 +289,7 @@ HB_FUNC( QTEXTTABLECELL_ROWSPAN )
 /*
 void setFormat ( const QTextCharFormat & format )
 */
-HB_FUNC( QTEXTTABLECELL_SETFORMAT )
+HB_FUNC_STATIC( QTEXTTABLECELL_SETFORMAT )
 {
   QTextTableCell * obj = (QTextTableCell *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -304,7 +304,7 @@ HB_FUNC( QTEXTTABLECELL_SETFORMAT )
 /*
 int tableCellFormatIndex () const
 */
-HB_FUNC( QTEXTTABLECELL_TABLECELLFORMATINDEX )
+HB_FUNC_STATIC( QTEXTTABLECELL_TABLECELLFORMATINDEX )
 {
   QTextTableCell * obj = (QTextTableCell *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

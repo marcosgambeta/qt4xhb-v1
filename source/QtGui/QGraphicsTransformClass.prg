@@ -58,7 +58,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QGRAPHICSTRANSFORM_DELETE )
+HB_FUNC_STATIC( QGRAPHICSTRANSFORM_DELETE )
 {
   QGraphicsTransform * obj = (QGraphicsTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -77,7 +77,7 @@ HB_FUNC( QGRAPHICSTRANSFORM_DELETE )
 /*
 virtual void applyTo ( QMatrix4x4 * matrix ) const = 0
 */
-HB_FUNC( QGRAPHICSTRANSFORM_APPLYTO )
+HB_FUNC_STATIC( QGRAPHICSTRANSFORM_APPLYTO )
 {
   QGraphicsTransform * obj = (QGraphicsTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

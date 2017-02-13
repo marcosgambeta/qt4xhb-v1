@@ -103,7 +103,7 @@ RETURN
 /*
 QXmlStreamNamespaceDeclaration()
 */
-HB_FUNC( QXMLSTREAMNAMESPACEDECLARATION_NEW1 )
+HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NEW1 )
 {
   QXmlStreamNamespaceDeclaration * o = NULL;
   o = new QXmlStreamNamespaceDeclaration (  );
@@ -121,7 +121,7 @@ HB_FUNC( QXMLSTREAMNAMESPACEDECLARATION_NEW1 )
 /*
 QXmlStreamNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & other)
 */
-HB_FUNC( QXMLSTREAMNAMESPACEDECLARATION_NEW2 )
+HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NEW2 )
 {
   QXmlStreamNamespaceDeclaration * o = NULL;
   QXmlStreamNamespaceDeclaration * par1 = (QXmlStreamNamespaceDeclaration *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -140,7 +140,7 @@ HB_FUNC( QXMLSTREAMNAMESPACEDECLARATION_NEW2 )
 /*
 QXmlStreamNamespaceDeclaration(const QString & prefix, const QString & namespaceUri)
 */
-HB_FUNC( QXMLSTREAMNAMESPACEDECLARATION_NEW3 )
+HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NEW3 )
 {
   QXmlStreamNamespaceDeclaration * o = NULL;
   QString par1 = hb_parc(1);
@@ -161,7 +161,7 @@ HB_FUNC( QXMLSTREAMNAMESPACEDECLARATION_NEW3 )
 //[2]QXmlStreamNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & other)
 //[3]QXmlStreamNamespaceDeclaration(const QString & prefix, const QString & namespaceUri)
 
-HB_FUNC( QXMLSTREAMNAMESPACEDECLARATION_NEW )
+HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -181,7 +181,7 @@ HB_FUNC( QXMLSTREAMNAMESPACEDECLARATION_NEW )
   }
 }
 
-HB_FUNC( QXMLSTREAMNAMESPACEDECLARATION_DELETE )
+HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_DELETE )
 {
   QXmlStreamNamespaceDeclaration * obj = (QXmlStreamNamespaceDeclaration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -200,7 +200,7 @@ HB_FUNC( QXMLSTREAMNAMESPACEDECLARATION_DELETE )
 /*
 QStringRef namespaceUri() const
 */
-HB_FUNC( QXMLSTREAMNAMESPACEDECLARATION_NAMESPACEURI )
+HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NAMESPACEURI )
 {
   QXmlStreamNamespaceDeclaration * obj = (QXmlStreamNamespaceDeclaration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -213,7 +213,7 @@ HB_FUNC( QXMLSTREAMNAMESPACEDECLARATION_NAMESPACEURI )
 /*
 QStringRef prefix() const
 */
-HB_FUNC( QXMLSTREAMNAMESPACEDECLARATION_PREFIX )
+HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_PREFIX )
 {
   QXmlStreamNamespaceDeclaration * obj = (QXmlStreamNamespaceDeclaration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

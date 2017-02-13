@@ -68,7 +68,7 @@ RETURN
 /*
 QHelpEvent ( Type type, const QPoint & pos, const QPoint & globalPos )
 */
-HB_FUNC( QHELPEVENT_NEW )
+HB_FUNC_STATIC( QHELPEVENT_NEW )
 {
   QHelpEvent * o = NULL;
   int par1 = hb_parni(1);
@@ -83,7 +83,7 @@ HB_FUNC( QHELPEVENT_NEW )
 }
 
 
-HB_FUNC( QHELPEVENT_DELETE )
+HB_FUNC_STATIC( QHELPEVENT_DELETE )
 {
   QHelpEvent * obj = (QHelpEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -102,7 +102,7 @@ HB_FUNC( QHELPEVENT_DELETE )
 /*
 const QPoint & globalPos () const
 */
-HB_FUNC( QHELPEVENT_GLOBALPOS )
+HB_FUNC_STATIC( QHELPEVENT_GLOBALPOS )
 {
   QHelpEvent * obj = (QHelpEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -115,7 +115,7 @@ HB_FUNC( QHELPEVENT_GLOBALPOS )
 /*
 int globalX () const
 */
-HB_FUNC( QHELPEVENT_GLOBALX )
+HB_FUNC_STATIC( QHELPEVENT_GLOBALX )
 {
   QHelpEvent * obj = (QHelpEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -129,7 +129,7 @@ HB_FUNC( QHELPEVENT_GLOBALX )
 /*
 int globalY () const
 */
-HB_FUNC( QHELPEVENT_GLOBALY )
+HB_FUNC_STATIC( QHELPEVENT_GLOBALY )
 {
   QHelpEvent * obj = (QHelpEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -143,7 +143,7 @@ HB_FUNC( QHELPEVENT_GLOBALY )
 /*
 const QPoint & pos () const
 */
-HB_FUNC( QHELPEVENT_POS )
+HB_FUNC_STATIC( QHELPEVENT_POS )
 {
   QHelpEvent * obj = (QHelpEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -156,7 +156,7 @@ HB_FUNC( QHELPEVENT_POS )
 /*
 int x () const
 */
-HB_FUNC( QHELPEVENT_X )
+HB_FUNC_STATIC( QHELPEVENT_X )
 {
   QHelpEvent * obj = (QHelpEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -170,7 +170,7 @@ HB_FUNC( QHELPEVENT_X )
 /*
 int y () const
 */
-HB_FUNC( QHELPEVENT_Y )
+HB_FUNC_STATIC( QHELPEVENT_Y )
 {
   QHelpEvent * obj = (QHelpEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

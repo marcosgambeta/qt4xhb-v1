@@ -96,7 +96,7 @@ RETURN
 /*
 QAbstractSpinBox ( QWidget * parent = 0 )
 */
-HB_FUNC( QABSTRACTSPINBOX_NEW )
+HB_FUNC_STATIC( QABSTRACTSPINBOX_NEW )
 {
   QAbstractSpinBox * o = NULL;
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -109,7 +109,7 @@ HB_FUNC( QABSTRACTSPINBOX_NEW )
 }
 
 
-HB_FUNC( QABSTRACTSPINBOX_DELETE )
+HB_FUNC_STATIC( QABSTRACTSPINBOX_DELETE )
 {
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -128,7 +128,7 @@ HB_FUNC( QABSTRACTSPINBOX_DELETE )
 /*
 Qt::Alignment alignment () const
 */
-HB_FUNC( QABSTRACTSPINBOX_ALIGNMENT )
+HB_FUNC_STATIC( QABSTRACTSPINBOX_ALIGNMENT )
 {
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -142,7 +142,7 @@ HB_FUNC( QABSTRACTSPINBOX_ALIGNMENT )
 /*
 ButtonSymbols buttonSymbols () const
 */
-HB_FUNC( QABSTRACTSPINBOX_BUTTONSYMBOLS )
+HB_FUNC_STATIC( QABSTRACTSPINBOX_BUTTONSYMBOLS )
 {
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -156,7 +156,7 @@ HB_FUNC( QABSTRACTSPINBOX_BUTTONSYMBOLS )
 /*
 CorrectionMode correctionMode () const
 */
-HB_FUNC( QABSTRACTSPINBOX_CORRECTIONMODE )
+HB_FUNC_STATIC( QABSTRACTSPINBOX_CORRECTIONMODE )
 {
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -170,7 +170,7 @@ HB_FUNC( QABSTRACTSPINBOX_CORRECTIONMODE )
 /*
 virtual void fixup ( QString & input ) const
 */
-HB_FUNC( QABSTRACTSPINBOX_FIXUP )
+HB_FUNC_STATIC( QABSTRACTSPINBOX_FIXUP )
 {
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -185,7 +185,7 @@ HB_FUNC( QABSTRACTSPINBOX_FIXUP )
 /*
 bool hasAcceptableInput () const
 */
-HB_FUNC( QABSTRACTSPINBOX_HASACCEPTABLEINPUT )
+HB_FUNC_STATIC( QABSTRACTSPINBOX_HASACCEPTABLEINPUT )
 {
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -199,7 +199,7 @@ HB_FUNC( QABSTRACTSPINBOX_HASACCEPTABLEINPUT )
 /*
 bool hasFrame () const
 */
-HB_FUNC( QABSTRACTSPINBOX_HASFRAME )
+HB_FUNC_STATIC( QABSTRACTSPINBOX_HASFRAME )
 {
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -213,7 +213,7 @@ HB_FUNC( QABSTRACTSPINBOX_HASFRAME )
 /*
 void interpretText ()
 */
-HB_FUNC( QABSTRACTSPINBOX_INTERPRETTEXT )
+HB_FUNC_STATIC( QABSTRACTSPINBOX_INTERPRETTEXT )
 {
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -227,7 +227,7 @@ HB_FUNC( QABSTRACTSPINBOX_INTERPRETTEXT )
 /*
 bool isAccelerated () const
 */
-HB_FUNC( QABSTRACTSPINBOX_ISACCELERATED )
+HB_FUNC_STATIC( QABSTRACTSPINBOX_ISACCELERATED )
 {
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -241,7 +241,7 @@ HB_FUNC( QABSTRACTSPINBOX_ISACCELERATED )
 /*
 bool isReadOnly () const
 */
-HB_FUNC( QABSTRACTSPINBOX_ISREADONLY )
+HB_FUNC_STATIC( QABSTRACTSPINBOX_ISREADONLY )
 {
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -255,7 +255,7 @@ HB_FUNC( QABSTRACTSPINBOX_ISREADONLY )
 /*
 bool keyboardTracking () const
 */
-HB_FUNC( QABSTRACTSPINBOX_KEYBOARDTRACKING )
+HB_FUNC_STATIC( QABSTRACTSPINBOX_KEYBOARDTRACKING )
 {
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -269,7 +269,7 @@ HB_FUNC( QABSTRACTSPINBOX_KEYBOARDTRACKING )
 /*
 void setAccelerated ( bool on )
 */
-HB_FUNC( QABSTRACTSPINBOX_SETACCELERATED )
+HB_FUNC_STATIC( QABSTRACTSPINBOX_SETACCELERATED )
 {
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -284,7 +284,7 @@ HB_FUNC( QABSTRACTSPINBOX_SETACCELERATED )
 /*
 void setAlignment ( Qt::Alignment flag )
 */
-HB_FUNC( QABSTRACTSPINBOX_SETALIGNMENT )
+HB_FUNC_STATIC( QABSTRACTSPINBOX_SETALIGNMENT )
 {
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -299,7 +299,7 @@ HB_FUNC( QABSTRACTSPINBOX_SETALIGNMENT )
 /*
 void setButtonSymbols ( ButtonSymbols bs )
 */
-HB_FUNC( QABSTRACTSPINBOX_SETBUTTONSYMBOLS )
+HB_FUNC_STATIC( QABSTRACTSPINBOX_SETBUTTONSYMBOLS )
 {
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -314,7 +314,7 @@ HB_FUNC( QABSTRACTSPINBOX_SETBUTTONSYMBOLS )
 /*
 void setCorrectionMode ( CorrectionMode cm )
 */
-HB_FUNC( QABSTRACTSPINBOX_SETCORRECTIONMODE )
+HB_FUNC_STATIC( QABSTRACTSPINBOX_SETCORRECTIONMODE )
 {
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -329,7 +329,7 @@ HB_FUNC( QABSTRACTSPINBOX_SETCORRECTIONMODE )
 /*
 void setFrame ( bool )
 */
-HB_FUNC( QABSTRACTSPINBOX_SETFRAME )
+HB_FUNC_STATIC( QABSTRACTSPINBOX_SETFRAME )
 {
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -344,7 +344,7 @@ HB_FUNC( QABSTRACTSPINBOX_SETFRAME )
 /*
 void setKeyboardTracking ( bool kt )
 */
-HB_FUNC( QABSTRACTSPINBOX_SETKEYBOARDTRACKING )
+HB_FUNC_STATIC( QABSTRACTSPINBOX_SETKEYBOARDTRACKING )
 {
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -359,7 +359,7 @@ HB_FUNC( QABSTRACTSPINBOX_SETKEYBOARDTRACKING )
 /*
 void setReadOnly ( bool r )
 */
-HB_FUNC( QABSTRACTSPINBOX_SETREADONLY )
+HB_FUNC_STATIC( QABSTRACTSPINBOX_SETREADONLY )
 {
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -374,7 +374,7 @@ HB_FUNC( QABSTRACTSPINBOX_SETREADONLY )
 /*
 void setSpecialValueText ( const QString & txt )
 */
-HB_FUNC( QABSTRACTSPINBOX_SETSPECIALVALUETEXT )
+HB_FUNC_STATIC( QABSTRACTSPINBOX_SETSPECIALVALUETEXT )
 {
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -389,7 +389,7 @@ HB_FUNC( QABSTRACTSPINBOX_SETSPECIALVALUETEXT )
 /*
 void setWrapping ( bool w )
 */
-HB_FUNC( QABSTRACTSPINBOX_SETWRAPPING )
+HB_FUNC_STATIC( QABSTRACTSPINBOX_SETWRAPPING )
 {
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -404,7 +404,7 @@ HB_FUNC( QABSTRACTSPINBOX_SETWRAPPING )
 /*
 QString specialValueText () const
 */
-HB_FUNC( QABSTRACTSPINBOX_SPECIALVALUETEXT )
+HB_FUNC_STATIC( QABSTRACTSPINBOX_SPECIALVALUETEXT )
 {
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -418,7 +418,7 @@ HB_FUNC( QABSTRACTSPINBOX_SPECIALVALUETEXT )
 /*
 virtual void stepBy ( int steps )
 */
-HB_FUNC( QABSTRACTSPINBOX_STEPBY )
+HB_FUNC_STATIC( QABSTRACTSPINBOX_STEPBY )
 {
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -433,7 +433,7 @@ HB_FUNC( QABSTRACTSPINBOX_STEPBY )
 /*
 QString text () const
 */
-HB_FUNC( QABSTRACTSPINBOX_TEXT )
+HB_FUNC_STATIC( QABSTRACTSPINBOX_TEXT )
 {
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -447,7 +447,7 @@ HB_FUNC( QABSTRACTSPINBOX_TEXT )
 /*
 virtual QValidator::State validate ( QString & input, int & pos ) const
 */
-HB_FUNC( QABSTRACTSPINBOX_VALIDATE )
+HB_FUNC_STATIC( QABSTRACTSPINBOX_VALIDATE )
 {
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -463,7 +463,7 @@ HB_FUNC( QABSTRACTSPINBOX_VALIDATE )
 /*
 bool wrapping () const
 */
-HB_FUNC( QABSTRACTSPINBOX_WRAPPING )
+HB_FUNC_STATIC( QABSTRACTSPINBOX_WRAPPING )
 {
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -477,7 +477,7 @@ HB_FUNC( QABSTRACTSPINBOX_WRAPPING )
 /*
 virtual bool event ( QEvent * event )
 */
-HB_FUNC( QABSTRACTSPINBOX_EVENT )
+HB_FUNC_STATIC( QABSTRACTSPINBOX_EVENT )
 {
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -492,7 +492,7 @@ HB_FUNC( QABSTRACTSPINBOX_EVENT )
 /*
 virtual QVariant inputMethodQuery ( Qt::InputMethodQuery query ) const
 */
-HB_FUNC( QABSTRACTSPINBOX_INPUTMETHODQUERY )
+HB_FUNC_STATIC( QABSTRACTSPINBOX_INPUTMETHODQUERY )
 {
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -506,7 +506,7 @@ HB_FUNC( QABSTRACTSPINBOX_INPUTMETHODQUERY )
 /*
 virtual QSize minimumSizeHint () const
 */
-HB_FUNC( QABSTRACTSPINBOX_MINIMUMSIZEHINT )
+HB_FUNC_STATIC( QABSTRACTSPINBOX_MINIMUMSIZEHINT )
 {
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -519,7 +519,7 @@ HB_FUNC( QABSTRACTSPINBOX_MINIMUMSIZEHINT )
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC( QABSTRACTSPINBOX_SIZEHINT )
+HB_FUNC_STATIC( QABSTRACTSPINBOX_SIZEHINT )
 {
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -532,7 +532,7 @@ HB_FUNC( QABSTRACTSPINBOX_SIZEHINT )
 /*
 virtual void clear ()
 */
-HB_FUNC( QABSTRACTSPINBOX_CLEAR )
+HB_FUNC_STATIC( QABSTRACTSPINBOX_CLEAR )
 {
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -546,7 +546,7 @@ HB_FUNC( QABSTRACTSPINBOX_CLEAR )
 /*
 void selectAll ()
 */
-HB_FUNC( QABSTRACTSPINBOX_SELECTALL )
+HB_FUNC_STATIC( QABSTRACTSPINBOX_SELECTALL )
 {
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -560,7 +560,7 @@ HB_FUNC( QABSTRACTSPINBOX_SELECTALL )
 /*
 void stepDown ()
 */
-HB_FUNC( QABSTRACTSPINBOX_STEPDOWN )
+HB_FUNC_STATIC( QABSTRACTSPINBOX_STEPDOWN )
 {
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -574,7 +574,7 @@ HB_FUNC( QABSTRACTSPINBOX_STEPDOWN )
 /*
 void stepUp ()
 */
-HB_FUNC( QABSTRACTSPINBOX_STEPUP )
+HB_FUNC_STATIC( QABSTRACTSPINBOX_STEPUP )
 {
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

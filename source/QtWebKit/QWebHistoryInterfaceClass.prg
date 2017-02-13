@@ -63,7 +63,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QWEBHISTORYINTERFACE_DELETE )
+HB_FUNC_STATIC( QWEBHISTORYINTERFACE_DELETE )
 {
   QWebHistoryInterface * obj = (QWebHistoryInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -82,7 +82,7 @@ HB_FUNC( QWEBHISTORYINTERFACE_DELETE )
 /*
 virtual void addHistoryEntry ( const QString & url ) = 0
 */
-HB_FUNC( QWEBHISTORYINTERFACE_ADDHISTORYENTRY )
+HB_FUNC_STATIC( QWEBHISTORYINTERFACE_ADDHISTORYENTRY )
 {
   QWebHistoryInterface * obj = (QWebHistoryInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -97,7 +97,7 @@ HB_FUNC( QWEBHISTORYINTERFACE_ADDHISTORYENTRY )
 /*
 virtual bool historyContains ( const QString & url ) const = 0
 */
-HB_FUNC( QWEBHISTORYINTERFACE_HISTORYCONTAINS )
+HB_FUNC_STATIC( QWEBHISTORYINTERFACE_HISTORYCONTAINS )
 {
   QWebHistoryInterface * obj = (QWebHistoryInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -113,7 +113,7 @@ HB_FUNC( QWEBHISTORYINTERFACE_HISTORYCONTAINS )
 /*
 QWebHistoryInterface * defaultInterface ()
 */
-HB_FUNC( QWEBHISTORYINTERFACE_DEFAULTINTERFACE )
+HB_FUNC_STATIC( QWEBHISTORYINTERFACE_DEFAULTINTERFACE )
 {
   QWebHistoryInterface * ptr = QWebHistoryInterface::defaultInterface (  );
   _qt4xhb_createReturnClass ( ptr, "QWEBHISTORYINTERFACE" );}
@@ -122,7 +122,7 @@ HB_FUNC( QWEBHISTORYINTERFACE_DEFAULTINTERFACE )
 /*
 void setDefaultInterface ( QWebHistoryInterface * defaultInterface )
 */
-HB_FUNC( QWEBHISTORYINTERFACE_SETDEFAULTINTERFACE )
+HB_FUNC_STATIC( QWEBHISTORYINTERFACE_SETDEFAULTINTERFACE )
 {
   QWebHistoryInterface * par1 = (QWebHistoryInterface *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QWebHistoryInterface::setDefaultInterface ( par1 );

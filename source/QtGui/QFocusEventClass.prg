@@ -63,7 +63,7 @@ RETURN
 /*
 QFocusEvent ( Type type, Qt::FocusReason reason = Qt::OtherFocusReason )
 */
-HB_FUNC( QFOCUSEVENT_NEW )
+HB_FUNC_STATIC( QFOCUSEVENT_NEW )
 {
   QFocusEvent * o = NULL;
   int par1 = hb_parni(1);
@@ -77,7 +77,7 @@ HB_FUNC( QFOCUSEVENT_NEW )
 }
 
 
-HB_FUNC( QFOCUSEVENT_DELETE )
+HB_FUNC_STATIC( QFOCUSEVENT_DELETE )
 {
   QFocusEvent * obj = (QFocusEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -96,7 +96,7 @@ HB_FUNC( QFOCUSEVENT_DELETE )
 /*
 bool gotFocus () const
 */
-HB_FUNC( QFOCUSEVENT_GOTFOCUS )
+HB_FUNC_STATIC( QFOCUSEVENT_GOTFOCUS )
 {
   QFocusEvent * obj = (QFocusEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -110,7 +110,7 @@ HB_FUNC( QFOCUSEVENT_GOTFOCUS )
 /*
 bool lostFocus () const
 */
-HB_FUNC( QFOCUSEVENT_LOSTFOCUS )
+HB_FUNC_STATIC( QFOCUSEVENT_LOSTFOCUS )
 {
   QFocusEvent * obj = (QFocusEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -124,7 +124,7 @@ HB_FUNC( QFOCUSEVENT_LOSTFOCUS )
 /*
 Qt::FocusReason reason () const
 */
-HB_FUNC( QFOCUSEVENT_REASON )
+HB_FUNC_STATIC( QFOCUSEVENT_REASON )
 {
   QFocusEvent * obj = (QFocusEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

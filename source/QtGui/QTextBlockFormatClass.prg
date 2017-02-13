@@ -84,7 +84,7 @@ RETURN
 /*
 QTextBlockFormat ()
 */
-HB_FUNC( QTEXTBLOCKFORMAT_NEW )
+HB_FUNC_STATIC( QTEXTBLOCKFORMAT_NEW )
 {
   QTextBlockFormat * o = NULL;
   o = new QTextBlockFormat (  );
@@ -96,7 +96,7 @@ HB_FUNC( QTEXTBLOCKFORMAT_NEW )
 }
 
 
-HB_FUNC( QTEXTBLOCKFORMAT_DELETE )
+HB_FUNC_STATIC( QTEXTBLOCKFORMAT_DELETE )
 {
   QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -115,7 +115,7 @@ HB_FUNC( QTEXTBLOCKFORMAT_DELETE )
 /*
 Qt::Alignment alignment () const
 */
-HB_FUNC( QTEXTBLOCKFORMAT_ALIGNMENT )
+HB_FUNC_STATIC( QTEXTBLOCKFORMAT_ALIGNMENT )
 {
   QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -129,7 +129,7 @@ HB_FUNC( QTEXTBLOCKFORMAT_ALIGNMENT )
 /*
 qreal bottomMargin () const
 */
-HB_FUNC( QTEXTBLOCKFORMAT_BOTTOMMARGIN )
+HB_FUNC_STATIC( QTEXTBLOCKFORMAT_BOTTOMMARGIN )
 {
   QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -143,7 +143,7 @@ HB_FUNC( QTEXTBLOCKFORMAT_BOTTOMMARGIN )
 /*
 int indent () const
 */
-HB_FUNC( QTEXTBLOCKFORMAT_INDENT )
+HB_FUNC_STATIC( QTEXTBLOCKFORMAT_INDENT )
 {
   QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -157,7 +157,7 @@ HB_FUNC( QTEXTBLOCKFORMAT_INDENT )
 /*
 bool isValid () const
 */
-HB_FUNC( QTEXTBLOCKFORMAT_ISVALID )
+HB_FUNC_STATIC( QTEXTBLOCKFORMAT_ISVALID )
 {
   QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -171,7 +171,7 @@ HB_FUNC( QTEXTBLOCKFORMAT_ISVALID )
 /*
 qreal leftMargin () const
 */
-HB_FUNC( QTEXTBLOCKFORMAT_LEFTMARGIN )
+HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LEFTMARGIN )
 {
   QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -185,7 +185,7 @@ HB_FUNC( QTEXTBLOCKFORMAT_LEFTMARGIN )
 /*
 qreal lineHeight ( qreal scriptLineHeight, qreal scaling ) const
 */
-HB_FUNC( QTEXTBLOCKFORMAT_LINEHEIGHT1 )
+HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LINEHEIGHT1 )
 {
   QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -201,7 +201,7 @@ HB_FUNC( QTEXTBLOCKFORMAT_LINEHEIGHT1 )
 /*
 qreal lineHeight () const
 */
-HB_FUNC( QTEXTBLOCKFORMAT_LINEHEIGHT2 )
+HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LINEHEIGHT2 )
 {
   QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -215,7 +215,7 @@ HB_FUNC( QTEXTBLOCKFORMAT_LINEHEIGHT2 )
 //[1]qreal lineHeight ( qreal scriptLineHeight, qreal scaling ) const
 //[2]qreal lineHeight () const
 
-HB_FUNC( QTEXTBLOCKFORMAT_LINEHEIGHT )
+HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LINEHEIGHT )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
@@ -230,7 +230,7 @@ HB_FUNC( QTEXTBLOCKFORMAT_LINEHEIGHT )
 /*
 int lineHeightType () const
 */
-HB_FUNC( QTEXTBLOCKFORMAT_LINEHEIGHTTYPE )
+HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LINEHEIGHTTYPE )
 {
   QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -244,7 +244,7 @@ HB_FUNC( QTEXTBLOCKFORMAT_LINEHEIGHTTYPE )
 /*
 bool nonBreakableLines () const
 */
-HB_FUNC( QTEXTBLOCKFORMAT_NONBREAKABLELINES )
+HB_FUNC_STATIC( QTEXTBLOCKFORMAT_NONBREAKABLELINES )
 {
   QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -258,7 +258,7 @@ HB_FUNC( QTEXTBLOCKFORMAT_NONBREAKABLELINES )
 /*
 PageBreakFlags pageBreakPolicy () const
 */
-HB_FUNC( QTEXTBLOCKFORMAT_PAGEBREAKPOLICY )
+HB_FUNC_STATIC( QTEXTBLOCKFORMAT_PAGEBREAKPOLICY )
 {
   QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -272,7 +272,7 @@ HB_FUNC( QTEXTBLOCKFORMAT_PAGEBREAKPOLICY )
 /*
 qreal rightMargin () const
 */
-HB_FUNC( QTEXTBLOCKFORMAT_RIGHTMARGIN )
+HB_FUNC_STATIC( QTEXTBLOCKFORMAT_RIGHTMARGIN )
 {
   QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -286,7 +286,7 @@ HB_FUNC( QTEXTBLOCKFORMAT_RIGHTMARGIN )
 /*
 void setAlignment ( Qt::Alignment alignment )
 */
-HB_FUNC( QTEXTBLOCKFORMAT_SETALIGNMENT )
+HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETALIGNMENT )
 {
   QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -301,7 +301,7 @@ HB_FUNC( QTEXTBLOCKFORMAT_SETALIGNMENT )
 /*
 void setBottomMargin ( qreal margin )
 */
-HB_FUNC( QTEXTBLOCKFORMAT_SETBOTTOMMARGIN )
+HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETBOTTOMMARGIN )
 {
   QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -316,7 +316,7 @@ HB_FUNC( QTEXTBLOCKFORMAT_SETBOTTOMMARGIN )
 /*
 void setIndent ( int indentation )
 */
-HB_FUNC( QTEXTBLOCKFORMAT_SETINDENT )
+HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETINDENT )
 {
   QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -331,7 +331,7 @@ HB_FUNC( QTEXTBLOCKFORMAT_SETINDENT )
 /*
 void setLeftMargin ( qreal margin )
 */
-HB_FUNC( QTEXTBLOCKFORMAT_SETLEFTMARGIN )
+HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETLEFTMARGIN )
 {
   QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -346,7 +346,7 @@ HB_FUNC( QTEXTBLOCKFORMAT_SETLEFTMARGIN )
 /*
 void setLineHeight ( qreal height, int heightType )
 */
-HB_FUNC( QTEXTBLOCKFORMAT_SETLINEHEIGHT )
+HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETLINEHEIGHT )
 {
   QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -362,7 +362,7 @@ HB_FUNC( QTEXTBLOCKFORMAT_SETLINEHEIGHT )
 /*
 void setNonBreakableLines ( bool b )
 */
-HB_FUNC( QTEXTBLOCKFORMAT_SETNONBREAKABLELINES )
+HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETNONBREAKABLELINES )
 {
   QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -377,7 +377,7 @@ HB_FUNC( QTEXTBLOCKFORMAT_SETNONBREAKABLELINES )
 /*
 void setPageBreakPolicy ( PageBreakFlags policy )
 */
-HB_FUNC( QTEXTBLOCKFORMAT_SETPAGEBREAKPOLICY )
+HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETPAGEBREAKPOLICY )
 {
   QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -392,7 +392,7 @@ HB_FUNC( QTEXTBLOCKFORMAT_SETPAGEBREAKPOLICY )
 /*
 void setRightMargin ( qreal margin )
 */
-HB_FUNC( QTEXTBLOCKFORMAT_SETRIGHTMARGIN )
+HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETRIGHTMARGIN )
 {
   QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -408,7 +408,7 @@ HB_FUNC( QTEXTBLOCKFORMAT_SETRIGHTMARGIN )
 /*
 void setTextIndent ( qreal indent )
 */
-HB_FUNC( QTEXTBLOCKFORMAT_SETTEXTINDENT )
+HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETTEXTINDENT )
 {
   QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -423,7 +423,7 @@ HB_FUNC( QTEXTBLOCKFORMAT_SETTEXTINDENT )
 /*
 void setTopMargin ( qreal margin )
 */
-HB_FUNC( QTEXTBLOCKFORMAT_SETTOPMARGIN )
+HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETTOPMARGIN )
 {
   QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -439,7 +439,7 @@ HB_FUNC( QTEXTBLOCKFORMAT_SETTOPMARGIN )
 /*
 qreal textIndent () const
 */
-HB_FUNC( QTEXTBLOCKFORMAT_TEXTINDENT )
+HB_FUNC_STATIC( QTEXTBLOCKFORMAT_TEXTINDENT )
 {
   QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -453,7 +453,7 @@ HB_FUNC( QTEXTBLOCKFORMAT_TEXTINDENT )
 /*
 qreal topMargin () const
 */
-HB_FUNC( QTEXTBLOCKFORMAT_TOPMARGIN )
+HB_FUNC_STATIC( QTEXTBLOCKFORMAT_TOPMARGIN )
 {
   QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

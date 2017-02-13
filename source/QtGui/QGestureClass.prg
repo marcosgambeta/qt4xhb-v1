@@ -70,7 +70,7 @@ RETURN
 /*
 QGesture ( QObject * parent = 0 )
 */
-HB_FUNC( QGESTURE_NEW )
+HB_FUNC_STATIC( QGESTURE_NEW )
 {
   QGesture * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -83,7 +83,7 @@ HB_FUNC( QGESTURE_NEW )
 }
 
 
-HB_FUNC( QGESTURE_DELETE )
+HB_FUNC_STATIC( QGESTURE_DELETE )
 {
   QGesture * obj = (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -102,7 +102,7 @@ HB_FUNC( QGESTURE_DELETE )
 /*
 GestureCancelPolicy gestureCancelPolicy () const
 */
-HB_FUNC( QGESTURE_GESTURECANCELPOLICY )
+HB_FUNC_STATIC( QGESTURE_GESTURECANCELPOLICY )
 {
   QGesture * obj = (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -116,7 +116,7 @@ HB_FUNC( QGESTURE_GESTURECANCELPOLICY )
 /*
 Qt::GestureType gestureType () const
 */
-HB_FUNC( QGESTURE_GESTURETYPE )
+HB_FUNC_STATIC( QGESTURE_GESTURETYPE )
 {
   QGesture * obj = (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -130,7 +130,7 @@ HB_FUNC( QGESTURE_GESTURETYPE )
 /*
 bool hasHotSpot () const
 */
-HB_FUNC( QGESTURE_HASHOTSPOT )
+HB_FUNC_STATIC( QGESTURE_HASHOTSPOT )
 {
   QGesture * obj = (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -144,7 +144,7 @@ HB_FUNC( QGESTURE_HASHOTSPOT )
 /*
 QPointF hotSpot () const
 */
-HB_FUNC( QGESTURE_HOTSPOT )
+HB_FUNC_STATIC( QGESTURE_HOTSPOT )
 {
   QGesture * obj = (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -157,7 +157,7 @@ HB_FUNC( QGESTURE_HOTSPOT )
 /*
 void setGestureCancelPolicy ( GestureCancelPolicy policy )
 */
-HB_FUNC( QGESTURE_SETGESTURECANCELPOLICY )
+HB_FUNC_STATIC( QGESTURE_SETGESTURECANCELPOLICY )
 {
   QGesture * obj = (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -172,7 +172,7 @@ HB_FUNC( QGESTURE_SETGESTURECANCELPOLICY )
 /*
 void setHotSpot ( const QPointF & value )
 */
-HB_FUNC( QGESTURE_SETHOTSPOT )
+HB_FUNC_STATIC( QGESTURE_SETHOTSPOT )
 {
   QGesture * obj = (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -187,7 +187,7 @@ HB_FUNC( QGESTURE_SETHOTSPOT )
 /*
 Qt::GestureState state () const
 */
-HB_FUNC( QGESTURE_STATE )
+HB_FUNC_STATIC( QGESTURE_STATE )
 {
   QGesture * obj = (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -201,7 +201,7 @@ HB_FUNC( QGESTURE_STATE )
 /*
 void unsetHotSpot ()
 */
-HB_FUNC( QGESTURE_UNSETHOTSPOT )
+HB_FUNC_STATIC( QGESTURE_UNSETHOTSPOT )
 {
   QGesture * obj = (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

@@ -114,7 +114,7 @@ RETURN
 /*
 QAudioFormat ()
 */
-HB_FUNC( QAUDIOFORMAT_NEW1 )
+HB_FUNC_STATIC( QAUDIOFORMAT_NEW1 )
 {
   QAudioFormat * o = NULL;
   o = new QAudioFormat (  );
@@ -129,7 +129,7 @@ HB_FUNC( QAUDIOFORMAT_NEW1 )
 /*
 QAudioFormat ( const QAudioFormat & other )
 */
-HB_FUNC( QAUDIOFORMAT_NEW2 )
+HB_FUNC_STATIC( QAUDIOFORMAT_NEW2 )
 {
   QAudioFormat * o = NULL;
   QAudioFormat * par1 = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -145,7 +145,7 @@ HB_FUNC( QAUDIOFORMAT_NEW2 )
 //[1]QAudioFormat ()
 //[2]QAudioFormat ( const QAudioFormat & other )
 
-HB_FUNC( QAUDIOFORMAT_NEW )
+HB_FUNC_STATIC( QAUDIOFORMAT_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -161,7 +161,7 @@ HB_FUNC( QAUDIOFORMAT_NEW )
   }
 }
 
-HB_FUNC( QAUDIOFORMAT_DELETE )
+HB_FUNC_STATIC( QAUDIOFORMAT_DELETE )
 {
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -180,7 +180,7 @@ HB_FUNC( QAUDIOFORMAT_DELETE )
 /*
 bool isValid () const
 */
-HB_FUNC( QAUDIOFORMAT_ISVALID )
+HB_FUNC_STATIC( QAUDIOFORMAT_ISVALID )
 {
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -194,7 +194,7 @@ HB_FUNC( QAUDIOFORMAT_ISVALID )
 /*
 void setFrequency(int frequency)
 */
-HB_FUNC( QAUDIOFORMAT_SETFREQUENCY )
+HB_FUNC_STATIC( QAUDIOFORMAT_SETFREQUENCY )
 {
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -209,7 +209,7 @@ HB_FUNC( QAUDIOFORMAT_SETFREQUENCY )
 /*
 int frequency() const
 */
-HB_FUNC( QAUDIOFORMAT_FREQUENCY )
+HB_FUNC_STATIC( QAUDIOFORMAT_FREQUENCY )
 {
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -223,7 +223,7 @@ HB_FUNC( QAUDIOFORMAT_FREQUENCY )
 /*
 void setSampleRate ( int samplerate )
 */
-HB_FUNC( QAUDIOFORMAT_SETSAMPLERATE )
+HB_FUNC_STATIC( QAUDIOFORMAT_SETSAMPLERATE )
 {
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -238,7 +238,7 @@ HB_FUNC( QAUDIOFORMAT_SETSAMPLERATE )
 /*
 int sampleRate () const
 */
-HB_FUNC( QAUDIOFORMAT_SAMPLERATE )
+HB_FUNC_STATIC( QAUDIOFORMAT_SAMPLERATE )
 {
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -252,7 +252,7 @@ HB_FUNC( QAUDIOFORMAT_SAMPLERATE )
 /*
 void setChannels(int channels)
 */
-HB_FUNC( QAUDIOFORMAT_SETCHANNELS )
+HB_FUNC_STATIC( QAUDIOFORMAT_SETCHANNELS )
 {
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -267,7 +267,7 @@ HB_FUNC( QAUDIOFORMAT_SETCHANNELS )
 /*
 int channels() const
 */
-HB_FUNC( QAUDIOFORMAT_CHANNELS )
+HB_FUNC_STATIC( QAUDIOFORMAT_CHANNELS )
 {
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -281,7 +281,7 @@ HB_FUNC( QAUDIOFORMAT_CHANNELS )
 /*
 void setChannelCount(int channelCount)
 */
-HB_FUNC( QAUDIOFORMAT_SETCHANNELCOUNT )
+HB_FUNC_STATIC( QAUDIOFORMAT_SETCHANNELCOUNT )
 {
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -296,7 +296,7 @@ HB_FUNC( QAUDIOFORMAT_SETCHANNELCOUNT )
 /*
 int channelCount() const
 */
-HB_FUNC( QAUDIOFORMAT_CHANNELCOUNT )
+HB_FUNC_STATIC( QAUDIOFORMAT_CHANNELCOUNT )
 {
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -310,7 +310,7 @@ HB_FUNC( QAUDIOFORMAT_CHANNELCOUNT )
 /*
 void setSampleSize ( int sampleSize )
 */
-HB_FUNC( QAUDIOFORMAT_SETSAMPLESIZE )
+HB_FUNC_STATIC( QAUDIOFORMAT_SETSAMPLESIZE )
 {
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -325,7 +325,7 @@ HB_FUNC( QAUDIOFORMAT_SETSAMPLESIZE )
 /*
 int sampleSize () const
 */
-HB_FUNC( QAUDIOFORMAT_SAMPLESIZE )
+HB_FUNC_STATIC( QAUDIOFORMAT_SAMPLESIZE )
 {
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -339,7 +339,7 @@ HB_FUNC( QAUDIOFORMAT_SAMPLESIZE )
 /*
 void setCodec ( const QString & codec )
 */
-HB_FUNC( QAUDIOFORMAT_SETCODEC )
+HB_FUNC_STATIC( QAUDIOFORMAT_SETCODEC )
 {
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -354,7 +354,7 @@ HB_FUNC( QAUDIOFORMAT_SETCODEC )
 /*
 QString codec () const
 */
-HB_FUNC( QAUDIOFORMAT_CODEC )
+HB_FUNC_STATIC( QAUDIOFORMAT_CODEC )
 {
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -368,7 +368,7 @@ HB_FUNC( QAUDIOFORMAT_CODEC )
 /*
 void setByteOrder ( QAudioFormat::Endian byteOrder )
 */
-HB_FUNC( QAUDIOFORMAT_SETBYTEORDER )
+HB_FUNC_STATIC( QAUDIOFORMAT_SETBYTEORDER )
 {
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -383,7 +383,7 @@ HB_FUNC( QAUDIOFORMAT_SETBYTEORDER )
 /*
 QAudioFormat::Endian byteOrder () const
 */
-HB_FUNC( QAUDIOFORMAT_BYTEORDER )
+HB_FUNC_STATIC( QAUDIOFORMAT_BYTEORDER )
 {
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -397,7 +397,7 @@ HB_FUNC( QAUDIOFORMAT_BYTEORDER )
 /*
 QAudioFormat::SampleType sampleType () const
 */
-HB_FUNC( QAUDIOFORMAT_SAMPLETYPE )
+HB_FUNC_STATIC( QAUDIOFORMAT_SAMPLETYPE )
 {
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -411,7 +411,7 @@ HB_FUNC( QAUDIOFORMAT_SAMPLETYPE )
 /*
 void setSampleType ( QAudioFormat::SampleType sampleType )
 */
-HB_FUNC( QAUDIOFORMAT_SETSAMPLETYPE )
+HB_FUNC_STATIC( QAUDIOFORMAT_SETSAMPLETYPE )
 {
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

@@ -93,7 +93,7 @@ RETURN
 /*
 QUndoStack ( QObject * parent = 0 )
 */
-HB_FUNC( QUNDOSTACK_NEW )
+HB_FUNC_STATIC( QUNDOSTACK_NEW )
 {
   QUndoStack * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -106,7 +106,7 @@ HB_FUNC( QUNDOSTACK_NEW )
 }
 
 
-HB_FUNC( QUNDOSTACK_DELETE )
+HB_FUNC_STATIC( QUNDOSTACK_DELETE )
 {
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -125,7 +125,7 @@ HB_FUNC( QUNDOSTACK_DELETE )
 /*
 void beginMacro ( const QString & text )
 */
-HB_FUNC( QUNDOSTACK_BEGINMACRO )
+HB_FUNC_STATIC( QUNDOSTACK_BEGINMACRO )
 {
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -140,7 +140,7 @@ HB_FUNC( QUNDOSTACK_BEGINMACRO )
 /*
 bool canRedo () const
 */
-HB_FUNC( QUNDOSTACK_CANREDO )
+HB_FUNC_STATIC( QUNDOSTACK_CANREDO )
 {
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -154,7 +154,7 @@ HB_FUNC( QUNDOSTACK_CANREDO )
 /*
 bool canUndo () const
 */
-HB_FUNC( QUNDOSTACK_CANUNDO )
+HB_FUNC_STATIC( QUNDOSTACK_CANUNDO )
 {
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -168,7 +168,7 @@ HB_FUNC( QUNDOSTACK_CANUNDO )
 /*
 int cleanIndex () const
 */
-HB_FUNC( QUNDOSTACK_CLEANINDEX )
+HB_FUNC_STATIC( QUNDOSTACK_CLEANINDEX )
 {
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -182,7 +182,7 @@ HB_FUNC( QUNDOSTACK_CLEANINDEX )
 /*
 void clear ()
 */
-HB_FUNC( QUNDOSTACK_CLEAR )
+HB_FUNC_STATIC( QUNDOSTACK_CLEAR )
 {
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -196,7 +196,7 @@ HB_FUNC( QUNDOSTACK_CLEAR )
 /*
 const QUndoCommand * command ( int index ) const
 */
-HB_FUNC( QUNDOSTACK_COMMAND )
+HB_FUNC_STATIC( QUNDOSTACK_COMMAND )
 {
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -210,7 +210,7 @@ HB_FUNC( QUNDOSTACK_COMMAND )
 /*
 int count () const
 */
-HB_FUNC( QUNDOSTACK_COUNT )
+HB_FUNC_STATIC( QUNDOSTACK_COUNT )
 {
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -224,7 +224,7 @@ HB_FUNC( QUNDOSTACK_COUNT )
 /*
 QAction * createRedoAction ( QObject * parent, const QString & prefix = QString() ) const
 */
-HB_FUNC( QUNDOSTACK_CREATEREDOACTION )
+HB_FUNC_STATIC( QUNDOSTACK_CREATEREDOACTION )
 {
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -239,7 +239,7 @@ HB_FUNC( QUNDOSTACK_CREATEREDOACTION )
 /*
 QAction * createUndoAction ( QObject * parent, const QString & prefix = QString() ) const
 */
-HB_FUNC( QUNDOSTACK_CREATEUNDOACTION )
+HB_FUNC_STATIC( QUNDOSTACK_CREATEUNDOACTION )
 {
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -254,7 +254,7 @@ HB_FUNC( QUNDOSTACK_CREATEUNDOACTION )
 /*
 void endMacro ()
 */
-HB_FUNC( QUNDOSTACK_ENDMACRO )
+HB_FUNC_STATIC( QUNDOSTACK_ENDMACRO )
 {
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -268,7 +268,7 @@ HB_FUNC( QUNDOSTACK_ENDMACRO )
 /*
 int index () const
 */
-HB_FUNC( QUNDOSTACK_INDEX )
+HB_FUNC_STATIC( QUNDOSTACK_INDEX )
 {
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -282,7 +282,7 @@ HB_FUNC( QUNDOSTACK_INDEX )
 /*
 bool isActive () const
 */
-HB_FUNC( QUNDOSTACK_ISACTIVE )
+HB_FUNC_STATIC( QUNDOSTACK_ISACTIVE )
 {
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -296,7 +296,7 @@ HB_FUNC( QUNDOSTACK_ISACTIVE )
 /*
 bool isClean () const
 */
-HB_FUNC( QUNDOSTACK_ISCLEAN )
+HB_FUNC_STATIC( QUNDOSTACK_ISCLEAN )
 {
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -310,7 +310,7 @@ HB_FUNC( QUNDOSTACK_ISCLEAN )
 /*
 void push ( QUndoCommand * cmd )
 */
-HB_FUNC( QUNDOSTACK_PUSH )
+HB_FUNC_STATIC( QUNDOSTACK_PUSH )
 {
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -325,7 +325,7 @@ HB_FUNC( QUNDOSTACK_PUSH )
 /*
 QString redoText () const
 */
-HB_FUNC( QUNDOSTACK_REDOTEXT )
+HB_FUNC_STATIC( QUNDOSTACK_REDOTEXT )
 {
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -339,7 +339,7 @@ HB_FUNC( QUNDOSTACK_REDOTEXT )
 /*
 void setUndoLimit ( int limit )
 */
-HB_FUNC( QUNDOSTACK_SETUNDOLIMIT )
+HB_FUNC_STATIC( QUNDOSTACK_SETUNDOLIMIT )
 {
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -354,7 +354,7 @@ HB_FUNC( QUNDOSTACK_SETUNDOLIMIT )
 /*
 QString text ( int idx ) const
 */
-HB_FUNC( QUNDOSTACK_TEXT )
+HB_FUNC_STATIC( QUNDOSTACK_TEXT )
 {
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -369,7 +369,7 @@ HB_FUNC( QUNDOSTACK_TEXT )
 /*
 int undoLimit () const
 */
-HB_FUNC( QUNDOSTACK_UNDOLIMIT )
+HB_FUNC_STATIC( QUNDOSTACK_UNDOLIMIT )
 {
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -383,7 +383,7 @@ HB_FUNC( QUNDOSTACK_UNDOLIMIT )
 /*
 QString undoText () const
 */
-HB_FUNC( QUNDOSTACK_UNDOTEXT )
+HB_FUNC_STATIC( QUNDOSTACK_UNDOTEXT )
 {
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -397,7 +397,7 @@ HB_FUNC( QUNDOSTACK_UNDOTEXT )
 /*
 void redo ()
 */
-HB_FUNC( QUNDOSTACK_REDO )
+HB_FUNC_STATIC( QUNDOSTACK_REDO )
 {
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -411,7 +411,7 @@ HB_FUNC( QUNDOSTACK_REDO )
 /*
 void setActive ( bool active = true )
 */
-HB_FUNC( QUNDOSTACK_SETACTIVE )
+HB_FUNC_STATIC( QUNDOSTACK_SETACTIVE )
 {
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -426,7 +426,7 @@ HB_FUNC( QUNDOSTACK_SETACTIVE )
 /*
 void setClean ()
 */
-HB_FUNC( QUNDOSTACK_SETCLEAN )
+HB_FUNC_STATIC( QUNDOSTACK_SETCLEAN )
 {
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -440,7 +440,7 @@ HB_FUNC( QUNDOSTACK_SETCLEAN )
 /*
 void setIndex ( int idx )
 */
-HB_FUNC( QUNDOSTACK_SETINDEX )
+HB_FUNC_STATIC( QUNDOSTACK_SETINDEX )
 {
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -455,7 +455,7 @@ HB_FUNC( QUNDOSTACK_SETINDEX )
 /*
 void undo ()
 */
-HB_FUNC( QUNDOSTACK_UNDO )
+HB_FUNC_STATIC( QUNDOSTACK_UNDO )
 {
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

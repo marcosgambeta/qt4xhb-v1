@@ -95,7 +95,7 @@ RETURN
 #include "qt4xhb_clsid.h"
 #include "qt4xhb_utils.h"
 
-HB_FUNC( QDESIGNERTASKMENUEXTENSION_DELETE )
+HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_DELETE )
 {
   QDesignerTaskMenuExtension * obj = (QDesignerTaskMenuExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -114,7 +114,7 @@ HB_FUNC( QDESIGNERTASKMENUEXTENSION_DELETE )
 /*
 virtual QAction * preferredEditAction () const
 */
-HB_FUNC( QDESIGNERTASKMENUEXTENSION_PREFERREDEDITACTION )
+HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_PREFERREDEDITACTION )
 {
   QDesignerTaskMenuExtension * obj = (QDesignerTaskMenuExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -127,7 +127,7 @@ HB_FUNC( QDESIGNERTASKMENUEXTENSION_PREFERREDEDITACTION )
 /*
 virtual QList<QAction *> taskActions () const = 0
 */
-HB_FUNC( QDESIGNERTASKMENUEXTENSION_TASKACTIONS )
+HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_TASKACTIONS )
 {
   QDesignerTaskMenuExtension * obj = (QDesignerTaskMenuExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

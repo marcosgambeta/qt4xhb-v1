@@ -110,7 +110,7 @@ RETURN
 /*
 QMovie ( QObject * parent = 0 )
 */
-HB_FUNC( QMOVIE_NEW1 )
+HB_FUNC_STATIC( QMOVIE_NEW1 )
 {
   QMovie * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -126,7 +126,7 @@ HB_FUNC( QMOVIE_NEW1 )
 /*
 QMovie ( QIODevice * device, const QByteArray & format = QByteArray(), QObject * parent = 0 )
 */
-HB_FUNC( QMOVIE_NEW2 )
+HB_FUNC_STATIC( QMOVIE_NEW2 )
 {
   QMovie * o = NULL;
   QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -144,7 +144,7 @@ HB_FUNC( QMOVIE_NEW2 )
 /*
 QMovie ( const QString & fileName, const QByteArray & format = QByteArray(), QObject * parent = 0 )
 */
-HB_FUNC( QMOVIE_NEW3 )
+HB_FUNC_STATIC( QMOVIE_NEW3 )
 {
   QMovie * o = NULL;
   QString par1 = hb_parc(1);
@@ -163,7 +163,7 @@ HB_FUNC( QMOVIE_NEW3 )
 //[2]QMovie ( QIODevice * device, const QByteArray & format = QByteArray(), QObject * parent = 0 )
 //[3]QMovie ( const QString & fileName, const QByteArray & format = QByteArray(), QObject * parent = 0 )
 
-HB_FUNC( QMOVIE_NEW )
+HB_FUNC_STATIC( QMOVIE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
@@ -183,7 +183,7 @@ HB_FUNC( QMOVIE_NEW )
   }
 }
 
-HB_FUNC( QMOVIE_DELETE )
+HB_FUNC_STATIC( QMOVIE_DELETE )
 {
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -204,7 +204,7 @@ HB_FUNC( QMOVIE_DELETE )
 /*
 QColor  backgroundColor () const
 */
-HB_FUNC( QMOVIE_BACKGROUNDCOLOR )
+HB_FUNC_STATIC( QMOVIE_BACKGROUNDCOLOR )
 {
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -217,7 +217,7 @@ HB_FUNC( QMOVIE_BACKGROUNDCOLOR )
 /*
 CacheMode  cacheMode () const
 */
-HB_FUNC( QMOVIE_CACHEMODE )
+HB_FUNC_STATIC( QMOVIE_CACHEMODE )
 {
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -231,7 +231,7 @@ HB_FUNC( QMOVIE_CACHEMODE )
 /*
 int  currentFrameNumber () const
 */
-HB_FUNC( QMOVIE_CURRENTFRAMENUMBER )
+HB_FUNC_STATIC( QMOVIE_CURRENTFRAMENUMBER )
 {
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -245,7 +245,7 @@ HB_FUNC( QMOVIE_CURRENTFRAMENUMBER )
 /*
 QImage  currentImage () const
 */
-HB_FUNC( QMOVIE_CURRENTIMAGE )
+HB_FUNC_STATIC( QMOVIE_CURRENTIMAGE )
 {
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -258,7 +258,7 @@ HB_FUNC( QMOVIE_CURRENTIMAGE )
 /*
 QPixmap  currentPixmap () const
 */
-HB_FUNC( QMOVIE_CURRENTPIXMAP )
+HB_FUNC_STATIC( QMOVIE_CURRENTPIXMAP )
 {
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -271,7 +271,7 @@ HB_FUNC( QMOVIE_CURRENTPIXMAP )
 /*
 QIODevice *  device () const
 */
-HB_FUNC( QMOVIE_DEVICE )
+HB_FUNC_STATIC( QMOVIE_DEVICE )
 {
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -284,7 +284,7 @@ HB_FUNC( QMOVIE_DEVICE )
 /*
 QString  fileName () const
 */
-HB_FUNC( QMOVIE_FILENAME )
+HB_FUNC_STATIC( QMOVIE_FILENAME )
 {
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -298,7 +298,7 @@ HB_FUNC( QMOVIE_FILENAME )
 /*
 QByteArray  format () const
 */
-HB_FUNC( QMOVIE_FORMAT )
+HB_FUNC_STATIC( QMOVIE_FORMAT )
 {
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -311,7 +311,7 @@ HB_FUNC( QMOVIE_FORMAT )
 /*
 int  frameCount () const
 */
-HB_FUNC( QMOVIE_FRAMECOUNT )
+HB_FUNC_STATIC( QMOVIE_FRAMECOUNT )
 {
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -325,7 +325,7 @@ HB_FUNC( QMOVIE_FRAMECOUNT )
 /*
 QRect  frameRect () const
 */
-HB_FUNC( QMOVIE_FRAMERECT )
+HB_FUNC_STATIC( QMOVIE_FRAMERECT )
 {
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -338,7 +338,7 @@ HB_FUNC( QMOVIE_FRAMERECT )
 /*
 bool  isValid () const
 */
-HB_FUNC( QMOVIE_ISVALID )
+HB_FUNC_STATIC( QMOVIE_ISVALID )
 {
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -352,7 +352,7 @@ HB_FUNC( QMOVIE_ISVALID )
 /*
 bool  jumpToFrame ( int frameNumber )
 */
-HB_FUNC( QMOVIE_JUMPTOFRAME )
+HB_FUNC_STATIC( QMOVIE_JUMPTOFRAME )
 {
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -367,7 +367,7 @@ HB_FUNC( QMOVIE_JUMPTOFRAME )
 /*
 int  loopCount () const
 */
-HB_FUNC( QMOVIE_LOOPCOUNT )
+HB_FUNC_STATIC( QMOVIE_LOOPCOUNT )
 {
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -381,7 +381,7 @@ HB_FUNC( QMOVIE_LOOPCOUNT )
 /*
 int  nextFrameDelay () const
 */
-HB_FUNC( QMOVIE_NEXTFRAMEDELAY )
+HB_FUNC_STATIC( QMOVIE_NEXTFRAMEDELAY )
 {
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -395,7 +395,7 @@ HB_FUNC( QMOVIE_NEXTFRAMEDELAY )
 /*
 QSize  scaledSize ()
 */
-HB_FUNC( QMOVIE_SCALEDSIZE )
+HB_FUNC_STATIC( QMOVIE_SCALEDSIZE )
 {
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -408,7 +408,7 @@ HB_FUNC( QMOVIE_SCALEDSIZE )
 /*
 void  setBackgroundColor ( const QColor & color )
 */
-HB_FUNC( QMOVIE_SETBACKGROUNDCOLOR )
+HB_FUNC_STATIC( QMOVIE_SETBACKGROUNDCOLOR )
 {
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -423,7 +423,7 @@ HB_FUNC( QMOVIE_SETBACKGROUNDCOLOR )
 /*
 void  setCacheMode ( CacheMode mode )
 */
-HB_FUNC( QMOVIE_SETCACHEMODE )
+HB_FUNC_STATIC( QMOVIE_SETCACHEMODE )
 {
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -438,7 +438,7 @@ HB_FUNC( QMOVIE_SETCACHEMODE )
 /*
 void  setDevice ( QIODevice * device )
 */
-HB_FUNC( QMOVIE_SETDEVICE )
+HB_FUNC_STATIC( QMOVIE_SETDEVICE )
 {
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -453,7 +453,7 @@ HB_FUNC( QMOVIE_SETDEVICE )
 /*
 void  setFileName ( const QString & fileName )
 */
-HB_FUNC( QMOVIE_SETFILENAME )
+HB_FUNC_STATIC( QMOVIE_SETFILENAME )
 {
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -468,7 +468,7 @@ HB_FUNC( QMOVIE_SETFILENAME )
 /*
 void  setFormat ( const QByteArray & format )
 */
-HB_FUNC( QMOVIE_SETFORMAT )
+HB_FUNC_STATIC( QMOVIE_SETFORMAT )
 {
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -483,7 +483,7 @@ HB_FUNC( QMOVIE_SETFORMAT )
 /*
 void  setScaledSize ( const QSize & size )
 */
-HB_FUNC( QMOVIE_SETSCALEDSIZE )
+HB_FUNC_STATIC( QMOVIE_SETSCALEDSIZE )
 {
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -498,7 +498,7 @@ HB_FUNC( QMOVIE_SETSCALEDSIZE )
 /*
 int  speed () const
 */
-HB_FUNC( QMOVIE_SPEED )
+HB_FUNC_STATIC( QMOVIE_SPEED )
 {
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -512,7 +512,7 @@ HB_FUNC( QMOVIE_SPEED )
 /*
 MovieState  state () const
 */
-HB_FUNC( QMOVIE_STATE )
+HB_FUNC_STATIC( QMOVIE_STATE )
 {
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -528,7 +528,7 @@ HB_FUNC( QMOVIE_STATE )
 /*
 bool jumpToNextFrame ()
 */
-HB_FUNC( QMOVIE_JUMPTONEXTFRAME )
+HB_FUNC_STATIC( QMOVIE_JUMPTONEXTFRAME )
 {
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -542,7 +542,7 @@ HB_FUNC( QMOVIE_JUMPTONEXTFRAME )
 /*
 void setPaused ( bool paused )
 */
-HB_FUNC( QMOVIE_SETPAUSED )
+HB_FUNC_STATIC( QMOVIE_SETPAUSED )
 {
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -557,7 +557,7 @@ HB_FUNC( QMOVIE_SETPAUSED )
 /*
 void setSpeed ( int percentSpeed )
 */
-HB_FUNC( QMOVIE_SETSPEED )
+HB_FUNC_STATIC( QMOVIE_SETSPEED )
 {
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -572,7 +572,7 @@ HB_FUNC( QMOVIE_SETSPEED )
 /*
 void start ()
 */
-HB_FUNC( QMOVIE_START )
+HB_FUNC_STATIC( QMOVIE_START )
 {
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -586,7 +586,7 @@ HB_FUNC( QMOVIE_START )
 /*
 void stop ()
 */
-HB_FUNC( QMOVIE_STOP )
+HB_FUNC_STATIC( QMOVIE_STOP )
 {
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -603,7 +603,7 @@ HB_FUNC( QMOVIE_STOP )
 /*
 QList<QByteArray> supportedFormats ()
 */
-HB_FUNC( QMOVIE_SUPPORTEDFORMATS )
+HB_FUNC_STATIC( QMOVIE_SUPPORTEDFORMATS )
 {
   QList<QByteArray> list = QMovie::supportedFormats (  );
   PHB_DYNS pDynSym;

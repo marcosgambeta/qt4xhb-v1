@@ -66,7 +66,7 @@ RETURN
 /*
 QDomText ()
 */
-HB_FUNC( QDOMTEXT_NEW1 )
+HB_FUNC_STATIC( QDOMTEXT_NEW1 )
 {
   QDomText * o = NULL;
   o = new QDomText (  );
@@ -84,7 +84,7 @@ HB_FUNC( QDOMTEXT_NEW1 )
 /*
 QDomText ( const QDomText & x )
 */
-HB_FUNC( QDOMTEXT_NEW2 )
+HB_FUNC_STATIC( QDOMTEXT_NEW2 )
 {
   QDomText * o = NULL;
   QDomText * par1 = (QDomText *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -103,7 +103,7 @@ HB_FUNC( QDOMTEXT_NEW2 )
 //[1]QDomText ()
 //[2]QDomText ( const QDomText & x )
 
-HB_FUNC( QDOMTEXT_NEW )
+HB_FUNC_STATIC( QDOMTEXT_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -124,7 +124,7 @@ HB_FUNC( QDOMTEXT_NEW )
 /*
 QDomNode::NodeType nodeType () const
 */
-HB_FUNC( QDOMTEXT_NODETYPE )
+HB_FUNC_STATIC( QDOMTEXT_NODETYPE )
 {
   QDomText * obj = (QDomText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -138,7 +138,7 @@ HB_FUNC( QDOMTEXT_NODETYPE )
 /*
 QDomText splitText ( int offset )
 */
-HB_FUNC( QDOMTEXT_SPLITTEXT )
+HB_FUNC_STATIC( QDOMTEXT_SPLITTEXT )
 {
   QDomText * obj = (QDomText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

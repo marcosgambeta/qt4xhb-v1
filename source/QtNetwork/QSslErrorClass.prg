@@ -105,7 +105,7 @@ RETURN
 /*
 QSslError ()
 */
-HB_FUNC( QSSLERROR_NEW1 )
+HB_FUNC_STATIC( QSSLERROR_NEW1 )
 {
   QSslError * o = NULL;
   o = new QSslError (  );
@@ -123,7 +123,7 @@ HB_FUNC( QSSLERROR_NEW1 )
 /*
 QSslError ( SslError error )
 */
-HB_FUNC( QSSLERROR_NEW2 )
+HB_FUNC_STATIC( QSSLERROR_NEW2 )
 {
   QSslError * o = NULL;
   int par1 = hb_parni(1);
@@ -142,7 +142,7 @@ HB_FUNC( QSSLERROR_NEW2 )
 /*
 QSslError ( SslError error, const QSslCertificate & certificate )
 */
-HB_FUNC( QSSLERROR_NEW3 )
+HB_FUNC_STATIC( QSSLERROR_NEW3 )
 {
   QSslError * o = NULL;
   int par1 = hb_parni(1);
@@ -162,7 +162,7 @@ HB_FUNC( QSSLERROR_NEW3 )
 /*
 QSslError ( const QSslError & other )
 */
-HB_FUNC( QSSLERROR_NEW4 )
+HB_FUNC_STATIC( QSSLERROR_NEW4 )
 {
   QSslError * o = NULL;
   QSslError * par1 = (QSslError *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -183,7 +183,7 @@ HB_FUNC( QSSLERROR_NEW4 )
 //[3]QSslError ( SslError error, const QSslCertificate & certificate )
 //[4]QSslError ( const QSslError & other )
 
-HB_FUNC( QSSLERROR_NEW )
+HB_FUNC_STATIC( QSSLERROR_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -207,7 +207,7 @@ HB_FUNC( QSSLERROR_NEW )
   }
 }
 
-HB_FUNC( QSSLERROR_DELETE )
+HB_FUNC_STATIC( QSSLERROR_DELETE )
 {
   QSslError * obj = (QSslError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -226,7 +226,7 @@ HB_FUNC( QSSLERROR_DELETE )
 /*
 QSslCertificate certificate () const
 */
-HB_FUNC( QSSLERROR_CERTIFICATE )
+HB_FUNC_STATIC( QSSLERROR_CERTIFICATE )
 {
   QSslError * obj = (QSslError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -239,7 +239,7 @@ HB_FUNC( QSSLERROR_CERTIFICATE )
 /*
 SslError error () const
 */
-HB_FUNC( QSSLERROR_ERROR )
+HB_FUNC_STATIC( QSSLERROR_ERROR )
 {
   QSslError * obj = (QSslError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -253,7 +253,7 @@ HB_FUNC( QSSLERROR_ERROR )
 /*
 QString errorString () const
 */
-HB_FUNC( QSSLERROR_ERRORSTRING )
+HB_FUNC_STATIC( QSSLERROR_ERRORSTRING )
 {
   QSslError * obj = (QSslError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

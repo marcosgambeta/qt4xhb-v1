@@ -80,7 +80,7 @@ RETURN
 /*
 QIdentityProxyModel ( QObject * parent = 0 )
 */
-HB_FUNC( QIDENTITYPROXYMODEL_NEW )
+HB_FUNC_STATIC( QIDENTITYPROXYMODEL_NEW )
 {
   QIdentityProxyModel * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -93,7 +93,7 @@ HB_FUNC( QIDENTITYPROXYMODEL_NEW )
 }
 
 
-HB_FUNC( QIDENTITYPROXYMODEL_DELETE )
+HB_FUNC_STATIC( QIDENTITYPROXYMODEL_DELETE )
 {
   QIdentityProxyModel * obj = (QIdentityProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -112,7 +112,7 @@ HB_FUNC( QIDENTITYPROXYMODEL_DELETE )
 /*
 virtual int columnCount ( const QModelIndex & parent = QModelIndex() ) const
 */
-HB_FUNC( QIDENTITYPROXYMODEL_COLUMNCOUNT )
+HB_FUNC_STATIC( QIDENTITYPROXYMODEL_COLUMNCOUNT )
 {
   QIdentityProxyModel * obj = (QIdentityProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -127,7 +127,7 @@ HB_FUNC( QIDENTITYPROXYMODEL_COLUMNCOUNT )
 /*
 virtual bool dropMimeData ( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
 */
-HB_FUNC( QIDENTITYPROXYMODEL_DROPMIMEDATA )
+HB_FUNC_STATIC( QIDENTITYPROXYMODEL_DROPMIMEDATA )
 {
   QIdentityProxyModel * obj = (QIdentityProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -146,7 +146,7 @@ HB_FUNC( QIDENTITYPROXYMODEL_DROPMIMEDATA )
 /*
 virtual QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
 */
-HB_FUNC( QIDENTITYPROXYMODEL_INDEX )
+HB_FUNC_STATIC( QIDENTITYPROXYMODEL_INDEX )
 {
   QIdentityProxyModel * obj = (QIdentityProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -162,7 +162,7 @@ HB_FUNC( QIDENTITYPROXYMODEL_INDEX )
 /*
 virtual bool insertColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
 */
-HB_FUNC( QIDENTITYPROXYMODEL_INSERTCOLUMNS )
+HB_FUNC_STATIC( QIDENTITYPROXYMODEL_INSERTCOLUMNS )
 {
   QIdentityProxyModel * obj = (QIdentityProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -179,7 +179,7 @@ HB_FUNC( QIDENTITYPROXYMODEL_INSERTCOLUMNS )
 /*
 virtual bool insertRows ( int row, int count, const QModelIndex & parent = QModelIndex() )
 */
-HB_FUNC( QIDENTITYPROXYMODEL_INSERTROWS )
+HB_FUNC_STATIC( QIDENTITYPROXYMODEL_INSERTROWS )
 {
   QIdentityProxyModel * obj = (QIdentityProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -196,7 +196,7 @@ HB_FUNC( QIDENTITYPROXYMODEL_INSERTROWS )
 /*
 virtual QModelIndex mapFromSource ( const QModelIndex & sourceIndex ) const
 */
-HB_FUNC( QIDENTITYPROXYMODEL_MAPFROMSOURCE )
+HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MAPFROMSOURCE )
 {
   QIdentityProxyModel * obj = (QIdentityProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -210,7 +210,7 @@ HB_FUNC( QIDENTITYPROXYMODEL_MAPFROMSOURCE )
 /*
 virtual QItemSelection mapSelectionFromSource ( const QItemSelection & selection ) const
 */
-HB_FUNC( QIDENTITYPROXYMODEL_MAPSELECTIONFROMSOURCE )
+HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MAPSELECTIONFROMSOURCE )
 {
   QIdentityProxyModel * obj = (QIdentityProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -224,7 +224,7 @@ HB_FUNC( QIDENTITYPROXYMODEL_MAPSELECTIONFROMSOURCE )
 /*
 virtual QItemSelection mapSelectionToSource ( const QItemSelection & selection ) const
 */
-HB_FUNC( QIDENTITYPROXYMODEL_MAPSELECTIONTOSOURCE )
+HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MAPSELECTIONTOSOURCE )
 {
   QIdentityProxyModel * obj = (QIdentityProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -238,7 +238,7 @@ HB_FUNC( QIDENTITYPROXYMODEL_MAPSELECTIONTOSOURCE )
 /*
 virtual QModelIndex mapToSource ( const QModelIndex & proxyIndex ) const
 */
-HB_FUNC( QIDENTITYPROXYMODEL_MAPTOSOURCE )
+HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MAPTOSOURCE )
 {
   QIdentityProxyModel * obj = (QIdentityProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -252,7 +252,7 @@ HB_FUNC( QIDENTITYPROXYMODEL_MAPTOSOURCE )
 /*
 virtual QModelIndexList match ( const QModelIndex & start, int role, const QVariant & value, int hits = 1, Qt::MatchFlags flags = Qt::MatchFlags( Qt::MatchStartsWith | Qt::MatchWrap ) ) const
 */
-HB_FUNC( QIDENTITYPROXYMODEL_MATCH )
+HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MATCH )
 {
   QIdentityProxyModel * obj = (QIdentityProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -301,7 +301,7 @@ HB_FUNC( QIDENTITYPROXYMODEL_MATCH )
 /*
 virtual QModelIndex parent ( const QModelIndex & child ) const
 */
-HB_FUNC( QIDENTITYPROXYMODEL_PARENT )
+HB_FUNC_STATIC( QIDENTITYPROXYMODEL_PARENT )
 {
   QIdentityProxyModel * obj = (QIdentityProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -315,7 +315,7 @@ HB_FUNC( QIDENTITYPROXYMODEL_PARENT )
 /*
 virtual bool removeColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
 */
-HB_FUNC( QIDENTITYPROXYMODEL_REMOVECOLUMNS )
+HB_FUNC_STATIC( QIDENTITYPROXYMODEL_REMOVECOLUMNS )
 {
   QIdentityProxyModel * obj = (QIdentityProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -332,7 +332,7 @@ HB_FUNC( QIDENTITYPROXYMODEL_REMOVECOLUMNS )
 /*
 virtual bool removeRows ( int row, int count, const QModelIndex & parent = QModelIndex() )
 */
-HB_FUNC( QIDENTITYPROXYMODEL_REMOVEROWS )
+HB_FUNC_STATIC( QIDENTITYPROXYMODEL_REMOVEROWS )
 {
   QIdentityProxyModel * obj = (QIdentityProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -349,7 +349,7 @@ HB_FUNC( QIDENTITYPROXYMODEL_REMOVEROWS )
 /*
 virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const
 */
-HB_FUNC( QIDENTITYPROXYMODEL_ROWCOUNT )
+HB_FUNC_STATIC( QIDENTITYPROXYMODEL_ROWCOUNT )
 {
   QIdentityProxyModel * obj = (QIdentityProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -364,7 +364,7 @@ HB_FUNC( QIDENTITYPROXYMODEL_ROWCOUNT )
 /*
 virtual void setSourceModel ( QAbstractItemModel * newSourceModel )
 */
-HB_FUNC( QIDENTITYPROXYMODEL_SETSOURCEMODEL )
+HB_FUNC_STATIC( QIDENTITYPROXYMODEL_SETSOURCEMODEL )
 {
   QIdentityProxyModel * obj = (QIdentityProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

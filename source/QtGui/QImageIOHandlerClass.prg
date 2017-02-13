@@ -117,7 +117,7 @@ RETURN
 #include <QVariant>
 
 
-HB_FUNC( QIMAGEIOHANDLER_DELETE )
+HB_FUNC_STATIC( QIMAGEIOHANDLER_DELETE )
 {
   QImageIOHandler * obj = (QImageIOHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -136,7 +136,7 @@ HB_FUNC( QIMAGEIOHANDLER_DELETE )
 /*
 virtual bool canRead () const = 0
 */
-HB_FUNC( QIMAGEIOHANDLER_CANREAD )
+HB_FUNC_STATIC( QIMAGEIOHANDLER_CANREAD )
 {
   QImageIOHandler * obj = (QImageIOHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -150,7 +150,7 @@ HB_FUNC( QIMAGEIOHANDLER_CANREAD )
 /*
 virtual int currentImageNumber () const
 */
-HB_FUNC( QIMAGEIOHANDLER_CURRENTIMAGENUMBER )
+HB_FUNC_STATIC( QIMAGEIOHANDLER_CURRENTIMAGENUMBER )
 {
   QImageIOHandler * obj = (QImageIOHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -164,7 +164,7 @@ HB_FUNC( QIMAGEIOHANDLER_CURRENTIMAGENUMBER )
 /*
 virtual QRect currentImageRect () const
 */
-HB_FUNC( QIMAGEIOHANDLER_CURRENTIMAGERECT )
+HB_FUNC_STATIC( QIMAGEIOHANDLER_CURRENTIMAGERECT )
 {
   QImageIOHandler * obj = (QImageIOHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -177,7 +177,7 @@ HB_FUNC( QIMAGEIOHANDLER_CURRENTIMAGERECT )
 /*
 QIODevice * device () const
 */
-HB_FUNC( QIMAGEIOHANDLER_DEVICE )
+HB_FUNC_STATIC( QIMAGEIOHANDLER_DEVICE )
 {
   QImageIOHandler * obj = (QImageIOHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -190,7 +190,7 @@ HB_FUNC( QIMAGEIOHANDLER_DEVICE )
 /*
 QByteArray format () const
 */
-HB_FUNC( QIMAGEIOHANDLER_FORMAT )
+HB_FUNC_STATIC( QIMAGEIOHANDLER_FORMAT )
 {
   QImageIOHandler * obj = (QImageIOHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -203,7 +203,7 @@ HB_FUNC( QIMAGEIOHANDLER_FORMAT )
 /*
 virtual int imageCount () const
 */
-HB_FUNC( QIMAGEIOHANDLER_IMAGECOUNT )
+HB_FUNC_STATIC( QIMAGEIOHANDLER_IMAGECOUNT )
 {
   QImageIOHandler * obj = (QImageIOHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -217,7 +217,7 @@ HB_FUNC( QIMAGEIOHANDLER_IMAGECOUNT )
 /*
 virtual bool jumpToImage ( int imageNumber )
 */
-HB_FUNC( QIMAGEIOHANDLER_JUMPTOIMAGE )
+HB_FUNC_STATIC( QIMAGEIOHANDLER_JUMPTOIMAGE )
 {
   QImageIOHandler * obj = (QImageIOHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -232,7 +232,7 @@ HB_FUNC( QIMAGEIOHANDLER_JUMPTOIMAGE )
 /*
 virtual bool jumpToNextImage ()
 */
-HB_FUNC( QIMAGEIOHANDLER_JUMPTONEXTIMAGE )
+HB_FUNC_STATIC( QIMAGEIOHANDLER_JUMPTONEXTIMAGE )
 {
   QImageIOHandler * obj = (QImageIOHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -246,7 +246,7 @@ HB_FUNC( QIMAGEIOHANDLER_JUMPTONEXTIMAGE )
 /*
 virtual int loopCount () const
 */
-HB_FUNC( QIMAGEIOHANDLER_LOOPCOUNT )
+HB_FUNC_STATIC( QIMAGEIOHANDLER_LOOPCOUNT )
 {
   QImageIOHandler * obj = (QImageIOHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -260,7 +260,7 @@ HB_FUNC( QIMAGEIOHANDLER_LOOPCOUNT )
 /*
 virtual int nextImageDelay () const
 */
-HB_FUNC( QIMAGEIOHANDLER_NEXTIMAGEDELAY )
+HB_FUNC_STATIC( QIMAGEIOHANDLER_NEXTIMAGEDELAY )
 {
   QImageIOHandler * obj = (QImageIOHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -274,7 +274,7 @@ HB_FUNC( QIMAGEIOHANDLER_NEXTIMAGEDELAY )
 /*
 virtual QVariant option ( ImageOption option ) const
 */
-HB_FUNC( QIMAGEIOHANDLER_OPTION )
+HB_FUNC_STATIC( QIMAGEIOHANDLER_OPTION )
 {
   QImageIOHandler * obj = (QImageIOHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -288,7 +288,7 @@ HB_FUNC( QIMAGEIOHANDLER_OPTION )
 /*
 virtual bool read ( QImage * image ) = 0
 */
-HB_FUNC( QIMAGEIOHANDLER_READ )
+HB_FUNC_STATIC( QIMAGEIOHANDLER_READ )
 {
   QImageIOHandler * obj = (QImageIOHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -303,7 +303,7 @@ HB_FUNC( QIMAGEIOHANDLER_READ )
 /*
 void setDevice ( QIODevice * device )
 */
-HB_FUNC( QIMAGEIOHANDLER_SETDEVICE )
+HB_FUNC_STATIC( QIMAGEIOHANDLER_SETDEVICE )
 {
   QImageIOHandler * obj = (QImageIOHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -318,7 +318,7 @@ HB_FUNC( QIMAGEIOHANDLER_SETDEVICE )
 /*
 void setFormat ( const QByteArray & format )
 */
-HB_FUNC( QIMAGEIOHANDLER_SETFORMAT )
+HB_FUNC_STATIC( QIMAGEIOHANDLER_SETFORMAT )
 {
   QImageIOHandler * obj = (QImageIOHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -334,7 +334,7 @@ HB_FUNC( QIMAGEIOHANDLER_SETFORMAT )
 /*
 virtual void setOption ( ImageOption option, const QVariant & value )
 */
-HB_FUNC( QIMAGEIOHANDLER_SETOPTION )
+HB_FUNC_STATIC( QIMAGEIOHANDLER_SETOPTION )
 {
   QImageIOHandler * obj = (QImageIOHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -350,7 +350,7 @@ HB_FUNC( QIMAGEIOHANDLER_SETOPTION )
 /*
 virtual bool supportsOption ( ImageOption option ) const
 */
-HB_FUNC( QIMAGEIOHANDLER_SUPPORTSOPTION )
+HB_FUNC_STATIC( QIMAGEIOHANDLER_SUPPORTSOPTION )
 {
   QImageIOHandler * obj = (QImageIOHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -365,7 +365,7 @@ HB_FUNC( QIMAGEIOHANDLER_SUPPORTSOPTION )
 /*
 virtual bool write ( const QImage & image )
 */
-HB_FUNC( QIMAGEIOHANDLER_WRITE )
+HB_FUNC_STATIC( QIMAGEIOHANDLER_WRITE )
 {
   QImageIOHandler * obj = (QImageIOHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

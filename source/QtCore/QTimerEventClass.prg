@@ -61,7 +61,7 @@ RETURN
 /*
 QTimerEvent(int timerId)
 */
-HB_FUNC( QTIMEREVENT_NEW )
+HB_FUNC_STATIC( QTIMEREVENT_NEW )
 {
   QTimerEvent * o = NULL;
   int par1 = hb_parni(1);
@@ -74,7 +74,7 @@ HB_FUNC( QTIMEREVENT_NEW )
 }
 
 
-HB_FUNC( QTIMEREVENT_DELETE )
+HB_FUNC_STATIC( QTIMEREVENT_DELETE )
 {
   QTimerEvent * obj = (QTimerEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -93,7 +93,7 @@ HB_FUNC( QTIMEREVENT_DELETE )
 /*
 int timerId() const
 */
-HB_FUNC( QTIMEREVENT_TIMERID )
+HB_FUNC_STATIC( QTIMEREVENT_TIMERID )
 {
   QTimerEvent * obj = (QTimerEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

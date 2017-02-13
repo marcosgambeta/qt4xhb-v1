@@ -105,7 +105,7 @@ RETURN
 /*
 QXmlStreamEntityDeclaration()
 */
-HB_FUNC( QXMLSTREAMENTITYDECLARATION_NEW1 )
+HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NEW1 )
 {
   QXmlStreamEntityDeclaration * o = NULL;
   o = new QXmlStreamEntityDeclaration (  );
@@ -123,7 +123,7 @@ HB_FUNC( QXMLSTREAMENTITYDECLARATION_NEW1 )
 /*
 QXmlStreamEntityDeclaration(const QXmlStreamEntityDeclaration & other)
 */
-HB_FUNC( QXMLSTREAMENTITYDECLARATION_NEW2 )
+HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NEW2 )
 {
   QXmlStreamEntityDeclaration * o = NULL;
   QXmlStreamEntityDeclaration * par1 = (QXmlStreamEntityDeclaration *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -142,7 +142,7 @@ HB_FUNC( QXMLSTREAMENTITYDECLARATION_NEW2 )
 //[1]QXmlStreamEntityDeclaration()
 //[2]QXmlStreamEntityDeclaration(const QXmlStreamEntityDeclaration & other)
 
-HB_FUNC( QXMLSTREAMENTITYDECLARATION_NEW )
+HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -158,7 +158,7 @@ HB_FUNC( QXMLSTREAMENTITYDECLARATION_NEW )
   }
 }
 
-HB_FUNC( QXMLSTREAMENTITYDECLARATION_DELETE )
+HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_DELETE )
 {
   QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -177,7 +177,7 @@ HB_FUNC( QXMLSTREAMENTITYDECLARATION_DELETE )
 /*
 QStringRef name() const
 */
-HB_FUNC( QXMLSTREAMENTITYDECLARATION_NAME )
+HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NAME )
 {
   QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -190,7 +190,7 @@ HB_FUNC( QXMLSTREAMENTITYDECLARATION_NAME )
 /*
 QStringRef notationName() const
 */
-HB_FUNC( QXMLSTREAMENTITYDECLARATION_NOTATIONNAME )
+HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NOTATIONNAME )
 {
   QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -203,7 +203,7 @@ HB_FUNC( QXMLSTREAMENTITYDECLARATION_NOTATIONNAME )
 /*
 QStringRef publicId() const
 */
-HB_FUNC( QXMLSTREAMENTITYDECLARATION_PUBLICID )
+HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_PUBLICID )
 {
   QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -216,7 +216,7 @@ HB_FUNC( QXMLSTREAMENTITYDECLARATION_PUBLICID )
 /*
 QStringRef systemId() const
 */
-HB_FUNC( QXMLSTREAMENTITYDECLARATION_SYSTEMID )
+HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_SYSTEMID )
 {
   QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -229,7 +229,7 @@ HB_FUNC( QXMLSTREAMENTITYDECLARATION_SYSTEMID )
 /*
 QStringRef value() const
 */
-HB_FUNC( QXMLSTREAMENTITYDECLARATION_VALUE )
+HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_VALUE )
 {
   QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

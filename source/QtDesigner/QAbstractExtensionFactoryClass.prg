@@ -94,7 +94,7 @@ RETURN
 #include "qt4xhb_clsid.h"
 #include "qt4xhb_utils.h"
 
-HB_FUNC( QABSTRACTEXTENSIONFACTORY_DELETE )
+HB_FUNC_STATIC( QABSTRACTEXTENSIONFACTORY_DELETE )
 {
   QAbstractExtensionFactory * obj = (QAbstractExtensionFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -113,7 +113,7 @@ HB_FUNC( QABSTRACTEXTENSIONFACTORY_DELETE )
 /*
 virtual QObject * extension ( QObject * object, const QString & iid ) const = 0
 */
-HB_FUNC( QABSTRACTEXTENSIONFACTORY_EXTENSION )
+HB_FUNC_STATIC( QABSTRACTEXTENSIONFACTORY_EXTENSION )
 {
   QAbstractExtensionFactory * obj = (QAbstractExtensionFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

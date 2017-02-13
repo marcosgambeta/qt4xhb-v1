@@ -102,7 +102,7 @@ RETURN
 /*
 QGraphicsWebView ( QGraphicsItem * parent = 0 )
 */
-HB_FUNC( QGRAPHICSWEBVIEW_NEW )
+HB_FUNC_STATIC( QGRAPHICSWEBVIEW_NEW )
 {
   QGraphicsWebView * o = NULL;
   QGraphicsItem * par1 = ISNIL(1)? 0 : (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -115,7 +115,7 @@ HB_FUNC( QGRAPHICSWEBVIEW_NEW )
 }
 
 
-HB_FUNC( QGRAPHICSWEBVIEW_DELETE )
+HB_FUNC_STATIC( QGRAPHICSWEBVIEW_DELETE )
 {
   QGraphicsWebView * obj = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -134,7 +134,7 @@ HB_FUNC( QGRAPHICSWEBVIEW_DELETE )
 /*
 bool findText ( const QString & subString, QWebPage::FindFlags options = 0 )
 */
-HB_FUNC( QGRAPHICSWEBVIEW_FINDTEXT )
+HB_FUNC_STATIC( QGRAPHICSWEBVIEW_FINDTEXT )
 {
   QGraphicsWebView * obj = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -150,7 +150,7 @@ HB_FUNC( QGRAPHICSWEBVIEW_FINDTEXT )
 /*
 QWebHistory * history () const
 */
-HB_FUNC( QGRAPHICSWEBVIEW_HISTORY )
+HB_FUNC_STATIC( QGRAPHICSWEBVIEW_HISTORY )
 {
   QGraphicsWebView * obj = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -163,7 +163,7 @@ HB_FUNC( QGRAPHICSWEBVIEW_HISTORY )
 /*
 QIcon icon () const
 */
-HB_FUNC( QGRAPHICSWEBVIEW_ICON )
+HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ICON )
 {
   QGraphicsWebView * obj = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -176,7 +176,7 @@ HB_FUNC( QGRAPHICSWEBVIEW_ICON )
 /*
 bool isModified () const
 */
-HB_FUNC( QGRAPHICSWEBVIEW_ISMODIFIED )
+HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ISMODIFIED )
 {
   QGraphicsWebView * obj = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -190,7 +190,7 @@ HB_FUNC( QGRAPHICSWEBVIEW_ISMODIFIED )
 /*
 bool isTiledBackingStoreFrozen () const
 */
-HB_FUNC( QGRAPHICSWEBVIEW_ISTILEDBACKINGSTOREFROZEN )
+HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ISTILEDBACKINGSTOREFROZEN )
 {
   QGraphicsWebView * obj = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -204,7 +204,7 @@ HB_FUNC( QGRAPHICSWEBVIEW_ISTILEDBACKINGSTOREFROZEN )
 /*
 void load ( const QUrl & url )
 */
-HB_FUNC( QGRAPHICSWEBVIEW_LOAD1 )
+HB_FUNC_STATIC( QGRAPHICSWEBVIEW_LOAD1 )
 {
   QGraphicsWebView * obj = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -219,7 +219,7 @@ HB_FUNC( QGRAPHICSWEBVIEW_LOAD1 )
 /*
 void load ( const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
 */
-HB_FUNC( QGRAPHICSWEBVIEW_LOAD2 )
+HB_FUNC_STATIC( QGRAPHICSWEBVIEW_LOAD2 )
 {
   QGraphicsWebView * obj = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -236,7 +236,7 @@ HB_FUNC( QGRAPHICSWEBVIEW_LOAD2 )
 //[1]void load ( const QUrl & url )
 //[2]void load ( const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
 
-HB_FUNC( QGRAPHICSWEBVIEW_LOAD )
+HB_FUNC_STATIC( QGRAPHICSWEBVIEW_LOAD )
 {
   if( ISNUMPAR(1) && ISQURL(1) )
   {
@@ -251,7 +251,7 @@ HB_FUNC( QGRAPHICSWEBVIEW_LOAD )
 /*
 QWebPage * page () const
 */
-HB_FUNC( QGRAPHICSWEBVIEW_PAGE )
+HB_FUNC_STATIC( QGRAPHICSWEBVIEW_PAGE )
 {
   QGraphicsWebView * obj = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -264,7 +264,7 @@ HB_FUNC( QGRAPHICSWEBVIEW_PAGE )
 /*
 QAction * pageAction ( QWebPage::WebAction action ) const
 */
-HB_FUNC( QGRAPHICSWEBVIEW_PAGEACTION )
+HB_FUNC_STATIC( QGRAPHICSWEBVIEW_PAGEACTION )
 {
   QGraphicsWebView * obj = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -278,7 +278,7 @@ HB_FUNC( QGRAPHICSWEBVIEW_PAGEACTION )
 /*
 bool resizesToContents () const
 */
-HB_FUNC( QGRAPHICSWEBVIEW_RESIZESTOCONTENTS )
+HB_FUNC_STATIC( QGRAPHICSWEBVIEW_RESIZESTOCONTENTS )
 {
   QGraphicsWebView * obj = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -292,7 +292,7 @@ HB_FUNC( QGRAPHICSWEBVIEW_RESIZESTOCONTENTS )
 /*
 void setContent ( const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl() )
 */
-HB_FUNC( QGRAPHICSWEBVIEW_SETCONTENT )
+HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETCONTENT )
 {
   QGraphicsWebView * obj = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -309,7 +309,7 @@ HB_FUNC( QGRAPHICSWEBVIEW_SETCONTENT )
 /*
 void setHtml ( const QString & html, const QUrl & baseUrl = QUrl() )
 */
-HB_FUNC( QGRAPHICSWEBVIEW_SETHTML )
+HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETHTML )
 {
   QGraphicsWebView * obj = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -325,7 +325,7 @@ HB_FUNC( QGRAPHICSWEBVIEW_SETHTML )
 /*
 void setPage ( QWebPage * page )
 */
-HB_FUNC( QGRAPHICSWEBVIEW_SETPAGE )
+HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETPAGE )
 {
   QGraphicsWebView * obj = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -340,7 +340,7 @@ HB_FUNC( QGRAPHICSWEBVIEW_SETPAGE )
 /*
 void setResizesToContents ( bool enabled )
 */
-HB_FUNC( QGRAPHICSWEBVIEW_SETRESIZESTOCONTENTS )
+HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETRESIZESTOCONTENTS )
 {
   QGraphicsWebView * obj = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -355,7 +355,7 @@ HB_FUNC( QGRAPHICSWEBVIEW_SETRESIZESTOCONTENTS )
 /*
 void setTiledBackingStoreFrozen ( bool frozen )
 */
-HB_FUNC( QGRAPHICSWEBVIEW_SETTILEDBACKINGSTOREFROZEN )
+HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETTILEDBACKINGSTOREFROZEN )
 {
   QGraphicsWebView * obj = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -370,7 +370,7 @@ HB_FUNC( QGRAPHICSWEBVIEW_SETTILEDBACKINGSTOREFROZEN )
 /*
 void setUrl ( const QUrl & )
 */
-HB_FUNC( QGRAPHICSWEBVIEW_SETURL )
+HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETURL )
 {
   QGraphicsWebView * obj = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -385,7 +385,7 @@ HB_FUNC( QGRAPHICSWEBVIEW_SETURL )
 /*
 void setZoomFactor ( qreal )
 */
-HB_FUNC( QGRAPHICSWEBVIEW_SETZOOMFACTOR )
+HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETZOOMFACTOR )
 {
   QGraphicsWebView * obj = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -400,7 +400,7 @@ HB_FUNC( QGRAPHICSWEBVIEW_SETZOOMFACTOR )
 /*
 QWebSettings * settings () const
 */
-HB_FUNC( QGRAPHICSWEBVIEW_SETTINGS )
+HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETTINGS )
 {
   QGraphicsWebView * obj = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -413,7 +413,7 @@ HB_FUNC( QGRAPHICSWEBVIEW_SETTINGS )
 /*
 QString title () const
 */
-HB_FUNC( QGRAPHICSWEBVIEW_TITLE )
+HB_FUNC_STATIC( QGRAPHICSWEBVIEW_TITLE )
 {
   QGraphicsWebView * obj = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -427,7 +427,7 @@ HB_FUNC( QGRAPHICSWEBVIEW_TITLE )
 /*
 void triggerPageAction ( QWebPage::WebAction action, bool checked = false )
 */
-HB_FUNC( QGRAPHICSWEBVIEW_TRIGGERPAGEACTION )
+HB_FUNC_STATIC( QGRAPHICSWEBVIEW_TRIGGERPAGEACTION )
 {
   QGraphicsWebView * obj = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -443,7 +443,7 @@ HB_FUNC( QGRAPHICSWEBVIEW_TRIGGERPAGEACTION )
 /*
 QUrl url () const
 */
-HB_FUNC( QGRAPHICSWEBVIEW_URL )
+HB_FUNC_STATIC( QGRAPHICSWEBVIEW_URL )
 {
   QGraphicsWebView * obj = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -456,7 +456,7 @@ HB_FUNC( QGRAPHICSWEBVIEW_URL )
 /*
 qreal zoomFactor () const
 */
-HB_FUNC( QGRAPHICSWEBVIEW_ZOOMFACTOR )
+HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ZOOMFACTOR )
 {
   QGraphicsWebView * obj = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -470,7 +470,7 @@ HB_FUNC( QGRAPHICSWEBVIEW_ZOOMFACTOR )
 /*
 void back ()
 */
-HB_FUNC( QGRAPHICSWEBVIEW_BACK )
+HB_FUNC_STATIC( QGRAPHICSWEBVIEW_BACK )
 {
   QGraphicsWebView * obj = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -484,7 +484,7 @@ HB_FUNC( QGRAPHICSWEBVIEW_BACK )
 /*
 void forward ()
 */
-HB_FUNC( QGRAPHICSWEBVIEW_FORWARD )
+HB_FUNC_STATIC( QGRAPHICSWEBVIEW_FORWARD )
 {
   QGraphicsWebView * obj = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -498,7 +498,7 @@ HB_FUNC( QGRAPHICSWEBVIEW_FORWARD )
 /*
 void reload ()
 */
-HB_FUNC( QGRAPHICSWEBVIEW_RELOAD )
+HB_FUNC_STATIC( QGRAPHICSWEBVIEW_RELOAD )
 {
   QGraphicsWebView * obj = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -512,7 +512,7 @@ HB_FUNC( QGRAPHICSWEBVIEW_RELOAD )
 /*
 void stop ()
 */
-HB_FUNC( QGRAPHICSWEBVIEW_STOP )
+HB_FUNC_STATIC( QGRAPHICSWEBVIEW_STOP )
 {
   QGraphicsWebView * obj = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

@@ -63,7 +63,7 @@ RETURN
 /*
 QFocusFrame ( QWidget * parent = 0 )
 */
-HB_FUNC( QFOCUSFRAME_NEW )
+HB_FUNC_STATIC( QFOCUSFRAME_NEW )
 {
   QFocusFrame * o = NULL;
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -80,7 +80,7 @@ HB_FUNC( QFOCUSFRAME_NEW )
 /*
 void setWidget ( QWidget * widget )
 */
-HB_FUNC( QFOCUSFRAME_SETWIDGET )
+HB_FUNC_STATIC( QFOCUSFRAME_SETWIDGET )
 {
   QFocusFrame * obj = (QFocusFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -95,7 +95,7 @@ HB_FUNC( QFOCUSFRAME_SETWIDGET )
 /*
 QWidget * widget () const
 */
-HB_FUNC( QFOCUSFRAME_WIDGET )
+HB_FUNC_STATIC( QFOCUSFRAME_WIDGET )
 {
   QFocusFrame * obj = (QFocusFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

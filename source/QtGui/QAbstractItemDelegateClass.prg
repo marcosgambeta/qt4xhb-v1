@@ -71,7 +71,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QABSTRACTITEMDELEGATE_DELETE )
+HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_DELETE )
 {
   QAbstractItemDelegate * obj = (QAbstractItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -90,7 +90,7 @@ HB_FUNC( QABSTRACTITEMDELEGATE_DELETE )
 /*
 virtual QWidget * createEditor ( QWidget * parent, const QStyleOptionViewItem & option, const QModelIndex & index ) const
 */
-HB_FUNC( QABSTRACTITEMDELEGATE_CREATEEDITOR )
+HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_CREATEEDITOR )
 {
   QAbstractItemDelegate * obj = (QAbstractItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -106,7 +106,7 @@ HB_FUNC( QABSTRACTITEMDELEGATE_CREATEEDITOR )
 /*
 virtual bool editorEvent ( QEvent * event, QAbstractItemModel * model, const QStyleOptionViewItem & option, const QModelIndex & index )
 */
-HB_FUNC( QABSTRACTITEMDELEGATE_EDITOREVENT )
+HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_EDITOREVENT )
 {
   QAbstractItemDelegate * obj = (QAbstractItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -124,7 +124,7 @@ HB_FUNC( QABSTRACTITEMDELEGATE_EDITOREVENT )
 /*
 virtual void paint ( QPainter * painter, const QStyleOptionViewItem & option, const QModelIndex & index ) const = 0
 */
-HB_FUNC( QABSTRACTITEMDELEGATE_PAINT )
+HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_PAINT )
 {
   QAbstractItemDelegate * obj = (QAbstractItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -141,7 +141,7 @@ HB_FUNC( QABSTRACTITEMDELEGATE_PAINT )
 /*
 virtual void setEditorData ( QWidget * editor, const QModelIndex & index ) const
 */
-HB_FUNC( QABSTRACTITEMDELEGATE_SETEDITORDATA )
+HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SETEDITORDATA )
 {
   QAbstractItemDelegate * obj = (QAbstractItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -157,7 +157,7 @@ HB_FUNC( QABSTRACTITEMDELEGATE_SETEDITORDATA )
 /*
 virtual void setModelData ( QWidget * editor, QAbstractItemModel * model, const QModelIndex & index ) const
 */
-HB_FUNC( QABSTRACTITEMDELEGATE_SETMODELDATA )
+HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SETMODELDATA )
 {
   QAbstractItemDelegate * obj = (QAbstractItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -174,7 +174,7 @@ HB_FUNC( QABSTRACTITEMDELEGATE_SETMODELDATA )
 /*
 virtual QSize sizeHint ( const QStyleOptionViewItem & option, const QModelIndex & index ) const = 0
 */
-HB_FUNC( QABSTRACTITEMDELEGATE_SIZEHINT )
+HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SIZEHINT )
 {
   QAbstractItemDelegate * obj = (QAbstractItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -189,7 +189,7 @@ HB_FUNC( QABSTRACTITEMDELEGATE_SIZEHINT )
 /*
 virtual void updateEditorGeometry ( QWidget * editor, const QStyleOptionViewItem & option, const QModelIndex & index ) const
 */
-HB_FUNC( QABSTRACTITEMDELEGATE_UPDATEEDITORGEOMETRY )
+HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_UPDATEEDITORGEOMETRY )
 {
   QAbstractItemDelegate * obj = (QAbstractItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -206,7 +206,7 @@ HB_FUNC( QABSTRACTITEMDELEGATE_UPDATEEDITORGEOMETRY )
 /*
 bool helpEvent ( QHelpEvent * event, QAbstractItemView * view, const QStyleOptionViewItem & option, const QModelIndex & index )
 */
-HB_FUNC( QABSTRACTITEMDELEGATE_HELPEVENT )
+HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_HELPEVENT )
 {
   QAbstractItemDelegate * obj = (QAbstractItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

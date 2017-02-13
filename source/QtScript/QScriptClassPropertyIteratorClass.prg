@@ -106,7 +106,7 @@ RETURN
 
 #include <QScriptString>
 
-HB_FUNC( QSCRIPTCLASSPROPERTYITERATOR_DELETE )
+HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_DELETE )
 {
   QScriptClassPropertyIterator * obj = (QScriptClassPropertyIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -125,7 +125,7 @@ HB_FUNC( QSCRIPTCLASSPROPERTYITERATOR_DELETE )
 /*
 virtual QScriptValue::PropertyFlags flags () const
 */
-HB_FUNC( QSCRIPTCLASSPROPERTYITERATOR_FLAGS )
+HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_FLAGS )
 {
   QScriptClassPropertyIterator * obj = (QScriptClassPropertyIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -139,7 +139,7 @@ HB_FUNC( QSCRIPTCLASSPROPERTYITERATOR_FLAGS )
 /*
 virtual bool hasNext () const = 0
 */
-HB_FUNC( QSCRIPTCLASSPROPERTYITERATOR_HASNEXT )
+HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_HASNEXT )
 {
   QScriptClassPropertyIterator * obj = (QScriptClassPropertyIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -153,7 +153,7 @@ HB_FUNC( QSCRIPTCLASSPROPERTYITERATOR_HASNEXT )
 /*
 virtual bool hasPrevious () const = 0
 */
-HB_FUNC( QSCRIPTCLASSPROPERTYITERATOR_HASPREVIOUS )
+HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_HASPREVIOUS )
 {
   QScriptClassPropertyIterator * obj = (QScriptClassPropertyIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -167,7 +167,7 @@ HB_FUNC( QSCRIPTCLASSPROPERTYITERATOR_HASPREVIOUS )
 /*
 virtual uint id () const
 */
-HB_FUNC( QSCRIPTCLASSPROPERTYITERATOR_ID )
+HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_ID )
 {
   QScriptClassPropertyIterator * obj = (QScriptClassPropertyIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -181,7 +181,7 @@ HB_FUNC( QSCRIPTCLASSPROPERTYITERATOR_ID )
 /*
 virtual QScriptString name () const = 0
 */
-HB_FUNC( QSCRIPTCLASSPROPERTYITERATOR_NAME )
+HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_NAME )
 {
   QScriptClassPropertyIterator * obj = (QScriptClassPropertyIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -194,7 +194,7 @@ HB_FUNC( QSCRIPTCLASSPROPERTYITERATOR_NAME )
 /*
 virtual void next () = 0
 */
-HB_FUNC( QSCRIPTCLASSPROPERTYITERATOR_NEXT )
+HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_NEXT )
 {
   QScriptClassPropertyIterator * obj = (QScriptClassPropertyIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -208,7 +208,7 @@ HB_FUNC( QSCRIPTCLASSPROPERTYITERATOR_NEXT )
 /*
 QScriptValue object () const
 */
-HB_FUNC( QSCRIPTCLASSPROPERTYITERATOR_OBJECT )
+HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_OBJECT )
 {
   QScriptClassPropertyIterator * obj = (QScriptClassPropertyIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -221,7 +221,7 @@ HB_FUNC( QSCRIPTCLASSPROPERTYITERATOR_OBJECT )
 /*
 virtual void previous () = 0
 */
-HB_FUNC( QSCRIPTCLASSPROPERTYITERATOR_PREVIOUS )
+HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_PREVIOUS )
 {
   QScriptClassPropertyIterator * obj = (QScriptClassPropertyIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -235,7 +235,7 @@ HB_FUNC( QSCRIPTCLASSPROPERTYITERATOR_PREVIOUS )
 /*
 virtual void toBack () = 0
 */
-HB_FUNC( QSCRIPTCLASSPROPERTYITERATOR_TOBACK )
+HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_TOBACK )
 {
   QScriptClassPropertyIterator * obj = (QScriptClassPropertyIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -249,7 +249,7 @@ HB_FUNC( QSCRIPTCLASSPROPERTYITERATOR_TOBACK )
 /*
 virtual void toFront () = 0
 */
-HB_FUNC( QSCRIPTCLASSPROPERTYITERATOR_TOFRONT )
+HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_TOFRONT )
 {
   QScriptClassPropertyIterator * obj = (QScriptClassPropertyIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

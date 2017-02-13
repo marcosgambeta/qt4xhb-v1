@@ -77,7 +77,7 @@ RETURN
 /*
 QMouseEvent(Type type, const QPoint &pos, Qt::MouseButton button,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
 */
-HB_FUNC( QMOUSEEVENT_NEW1 )
+HB_FUNC_STATIC( QMOUSEEVENT_NEW1 )
 {
   QMouseEvent * o = NULL;
   int par1 = hb_parni(1);
@@ -97,7 +97,7 @@ HB_FUNC( QMOUSEEVENT_NEW1 )
 /*
 QMouseEvent(Type type, const QPoint &pos, const QPoint &globalPos,Qt::MouseButton button, Qt::MouseButtons buttons,Qt::KeyboardModifiers modifiers)
 */
-HB_FUNC( QMOUSEEVENT_NEW2 )
+HB_FUNC_STATIC( QMOUSEEVENT_NEW2 )
 {
   QMouseEvent * o = NULL;
   int par1 = hb_parni(1);
@@ -118,7 +118,7 @@ HB_FUNC( QMOUSEEVENT_NEW2 )
 //[1]QMouseEvent(Type type, const QPoint &pos, Qt::MouseButton button,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
 //[2]QMouseEvent(Type type, const QPoint &pos, const QPoint &globalPos,Qt::MouseButton button, Qt::MouseButtons buttons,Qt::KeyboardModifiers modifiers)
 
-HB_FUNC( QMOUSEEVENT_NEW )
+HB_FUNC_STATIC( QMOUSEEVENT_NEW )
 {
   if( ISNUMPAR(5) && ISNUM(1) && ISQPOINT(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) )
   {
@@ -134,7 +134,7 @@ HB_FUNC( QMOUSEEVENT_NEW )
   }
 }
 
-HB_FUNC( QMOUSEEVENT_DELETE )
+HB_FUNC_STATIC( QMOUSEEVENT_DELETE )
 {
   QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -153,7 +153,7 @@ HB_FUNC( QMOUSEEVENT_DELETE )
 /*
 const QPoint &pos() const
 */
-HB_FUNC( QMOUSEEVENT_POS )
+HB_FUNC_STATIC( QMOUSEEVENT_POS )
 {
   QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -166,7 +166,7 @@ HB_FUNC( QMOUSEEVENT_POS )
 /*
 const QPoint &globalPos() const
 */
-HB_FUNC( QMOUSEEVENT_GLOBALPOS )
+HB_FUNC_STATIC( QMOUSEEVENT_GLOBALPOS )
 {
   QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -179,7 +179,7 @@ HB_FUNC( QMOUSEEVENT_GLOBALPOS )
 /*
 int x() const
 */
-HB_FUNC( QMOUSEEVENT_X )
+HB_FUNC_STATIC( QMOUSEEVENT_X )
 {
   QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -193,7 +193,7 @@ HB_FUNC( QMOUSEEVENT_X )
 /*
 int y() const
 */
-HB_FUNC( QMOUSEEVENT_Y )
+HB_FUNC_STATIC( QMOUSEEVENT_Y )
 {
   QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -207,7 +207,7 @@ HB_FUNC( QMOUSEEVENT_Y )
 /*
 int globalX() const
 */
-HB_FUNC( QMOUSEEVENT_GLOBALX )
+HB_FUNC_STATIC( QMOUSEEVENT_GLOBALX )
 {
   QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -221,7 +221,7 @@ HB_FUNC( QMOUSEEVENT_GLOBALX )
 /*
 int globalY() const
 */
-HB_FUNC( QMOUSEEVENT_GLOBALY )
+HB_FUNC_STATIC( QMOUSEEVENT_GLOBALY )
 {
   QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -235,7 +235,7 @@ HB_FUNC( QMOUSEEVENT_GLOBALY )
 /*
 Qt::MouseButton button() const
 */
-HB_FUNC( QMOUSEEVENT_BUTTON )
+HB_FUNC_STATIC( QMOUSEEVENT_BUTTON )
 {
   QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -249,7 +249,7 @@ HB_FUNC( QMOUSEEVENT_BUTTON )
 /*
 Qt::MouseButtons buttons() const
 */
-HB_FUNC( QMOUSEEVENT_BUTTONS )
+HB_FUNC_STATIC( QMOUSEEVENT_BUTTONS )
 {
   QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -263,7 +263,7 @@ HB_FUNC( QMOUSEEVENT_BUTTONS )
 /*
 bool hasExtendedInfo() const
 */
-HB_FUNC( QMOUSEEVENT_HASEXTENDEDINFO )
+HB_FUNC_STATIC( QMOUSEEVENT_HASEXTENDEDINFO )
 {
   QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -277,7 +277,7 @@ HB_FUNC( QMOUSEEVENT_HASEXTENDEDINFO )
 /*
 QPointF posF() const
 */
-HB_FUNC( QMOUSEEVENT_POSF )
+HB_FUNC_STATIC( QMOUSEEVENT_POSF )
 {
   QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -291,7 +291,7 @@ HB_FUNC( QMOUSEEVENT_POSF )
 /*
 static QMouseEvent *createExtendedMouseEvent(Type type, const QPointF &pos,const QPoint &globalPos, Qt::MouseButton button,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
 */
-HB_FUNC( QMOUSEEVENT_CREATEEXTENDEDMOUSEEVENT )
+HB_FUNC_STATIC( QMOUSEEVENT_CREATEEXTENDEDMOUSEEVENT )
 {
   int par1 = hb_parni(1);
   QPointF * par2 = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );

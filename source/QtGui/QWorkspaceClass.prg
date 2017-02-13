@@ -82,7 +82,7 @@ RETURN
 /*
 QWorkspace ( QWidget * parent = 0 )
 */
-HB_FUNC( QWORKSPACE_NEW )
+HB_FUNC_STATIC( QWORKSPACE_NEW )
 {
   QWorkspace * o = NULL;
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -95,7 +95,7 @@ HB_FUNC( QWORKSPACE_NEW )
 }
 
 
-HB_FUNC( QWORKSPACE_DELETE )
+HB_FUNC_STATIC( QWORKSPACE_DELETE )
 {
   QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -114,7 +114,7 @@ HB_FUNC( QWORKSPACE_DELETE )
 /*
 QWidget * activeWindow () const
 */
-HB_FUNC( QWORKSPACE_ACTIVEWINDOW )
+HB_FUNC_STATIC( QWORKSPACE_ACTIVEWINDOW )
 {
   QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -127,7 +127,7 @@ HB_FUNC( QWORKSPACE_ACTIVEWINDOW )
 /*
 QWidget * addWindow ( QWidget * w, Qt::WindowFlags flags = 0 )
 */
-HB_FUNC( QWORKSPACE_ADDWINDOW )
+HB_FUNC_STATIC( QWORKSPACE_ADDWINDOW )
 {
   QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -142,7 +142,7 @@ HB_FUNC( QWORKSPACE_ADDWINDOW )
 /*
 QBrush background () const
 */
-HB_FUNC( QWORKSPACE_BACKGROUND )
+HB_FUNC_STATIC( QWORKSPACE_BACKGROUND )
 {
   QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -155,7 +155,7 @@ HB_FUNC( QWORKSPACE_BACKGROUND )
 /*
 bool scrollBarsEnabled () const
 */
-HB_FUNC( QWORKSPACE_SCROLLBARSENABLED )
+HB_FUNC_STATIC( QWORKSPACE_SCROLLBARSENABLED )
 {
   QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -169,7 +169,7 @@ HB_FUNC( QWORKSPACE_SCROLLBARSENABLED )
 /*
 void setBackground ( const QBrush & background )
 */
-HB_FUNC( QWORKSPACE_SETBACKGROUND )
+HB_FUNC_STATIC( QWORKSPACE_SETBACKGROUND )
 {
   QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -184,7 +184,7 @@ HB_FUNC( QWORKSPACE_SETBACKGROUND )
 /*
 void setScrollBarsEnabled ( bool enable )
 */
-HB_FUNC( QWORKSPACE_SETSCROLLBARSENABLED )
+HB_FUNC_STATIC( QWORKSPACE_SETSCROLLBARSENABLED )
 {
   QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -199,7 +199,7 @@ HB_FUNC( QWORKSPACE_SETSCROLLBARSENABLED )
 /*
 QWidgetList windowList ( WindowOrder order = CreationOrder ) const
 */
-HB_FUNC( QWORKSPACE_WINDOWLIST )
+HB_FUNC_STATIC( QWORKSPACE_WINDOWLIST )
 {
   QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -246,7 +246,7 @@ HB_FUNC( QWORKSPACE_WINDOWLIST )
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC( QWORKSPACE_SIZEHINT )
+HB_FUNC_STATIC( QWORKSPACE_SIZEHINT )
 {
   QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -261,7 +261,7 @@ HB_FUNC( QWORKSPACE_SIZEHINT )
 /*
 void activateNextWindow ()
 */
-HB_FUNC( QWORKSPACE_ACTIVATENEXTWINDOW )
+HB_FUNC_STATIC( QWORKSPACE_ACTIVATENEXTWINDOW )
 {
   QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -275,7 +275,7 @@ HB_FUNC( QWORKSPACE_ACTIVATENEXTWINDOW )
 /*
 void activatePreviousWindow ()
 */
-HB_FUNC( QWORKSPACE_ACTIVATEPREVIOUSWINDOW )
+HB_FUNC_STATIC( QWORKSPACE_ACTIVATEPREVIOUSWINDOW )
 {
   QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -289,7 +289,7 @@ HB_FUNC( QWORKSPACE_ACTIVATEPREVIOUSWINDOW )
 /*
 void arrangeIcons ()
 */
-HB_FUNC( QWORKSPACE_ARRANGEICONS )
+HB_FUNC_STATIC( QWORKSPACE_ARRANGEICONS )
 {
   QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -303,7 +303,7 @@ HB_FUNC( QWORKSPACE_ARRANGEICONS )
 /*
 void cascade ()
 */
-HB_FUNC( QWORKSPACE_CASCADE )
+HB_FUNC_STATIC( QWORKSPACE_CASCADE )
 {
   QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -317,7 +317,7 @@ HB_FUNC( QWORKSPACE_CASCADE )
 /*
 void closeActiveWindow ()
 */
-HB_FUNC( QWORKSPACE_CLOSEACTIVEWINDOW )
+HB_FUNC_STATIC( QWORKSPACE_CLOSEACTIVEWINDOW )
 {
   QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -331,7 +331,7 @@ HB_FUNC( QWORKSPACE_CLOSEACTIVEWINDOW )
 /*
 void closeAllWindows ()
 */
-HB_FUNC( QWORKSPACE_CLOSEALLWINDOWS )
+HB_FUNC_STATIC( QWORKSPACE_CLOSEALLWINDOWS )
 {
   QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -345,7 +345,7 @@ HB_FUNC( QWORKSPACE_CLOSEALLWINDOWS )
 /*
 void setActiveWindow ( QWidget * w )
 */
-HB_FUNC( QWORKSPACE_SETACTIVEWINDOW )
+HB_FUNC_STATIC( QWORKSPACE_SETACTIVEWINDOW )
 {
   QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -360,7 +360,7 @@ HB_FUNC( QWORKSPACE_SETACTIVEWINDOW )
 /*
 void tile ()
 */
-HB_FUNC( QWORKSPACE_TILE )
+HB_FUNC_STATIC( QWORKSPACE_TILE )
 {
   QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

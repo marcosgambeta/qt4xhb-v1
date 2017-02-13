@@ -67,7 +67,7 @@ RETURN
 /*
 QWebInspector ( QWidget * parent = 0 )
 */
-HB_FUNC( QWEBINSPECTOR_NEW )
+HB_FUNC_STATIC( QWEBINSPECTOR_NEW )
 {
   QWebInspector * o = NULL;
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -80,7 +80,7 @@ HB_FUNC( QWEBINSPECTOR_NEW )
 }
 
 
-HB_FUNC( QWEBINSPECTOR_DELETE )
+HB_FUNC_STATIC( QWEBINSPECTOR_DELETE )
 {
   QWebInspector * obj = (QWebInspector *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -99,7 +99,7 @@ HB_FUNC( QWEBINSPECTOR_DELETE )
 /*
 QWebPage * page () const
 */
-HB_FUNC( QWEBINSPECTOR_PAGE )
+HB_FUNC_STATIC( QWEBINSPECTOR_PAGE )
 {
   QWebInspector * obj = (QWebInspector *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -112,7 +112,7 @@ HB_FUNC( QWEBINSPECTOR_PAGE )
 /*
 void setPage ( QWebPage * page )
 */
-HB_FUNC( QWEBINSPECTOR_SETPAGE )
+HB_FUNC_STATIC( QWEBINSPECTOR_SETPAGE )
 {
   QWebInspector * obj = (QWebInspector *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -127,7 +127,7 @@ HB_FUNC( QWEBINSPECTOR_SETPAGE )
 /*
 virtual bool event ( QEvent * ev )
 */
-HB_FUNC( QWEBINSPECTOR_EVENT )
+HB_FUNC_STATIC( QWEBINSPECTOR_EVENT )
 {
   QWebInspector * obj = (QWebInspector *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -142,7 +142,7 @@ HB_FUNC( QWEBINSPECTOR_EVENT )
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC( QWEBINSPECTOR_SIZEHINT )
+HB_FUNC_STATIC( QWEBINSPECTOR_SIZEHINT )
 {
   QWebInspector * obj = (QWebInspector *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

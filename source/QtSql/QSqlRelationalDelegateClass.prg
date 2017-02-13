@@ -65,7 +65,7 @@ RETURN
 /*
 QSqlRelationalDelegate ( QObject * parent = 0 )
 */
-HB_FUNC( QSQLRELATIONALDELEGATE_NEW )
+HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_NEW )
 {
   QSqlRelationalDelegate * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -78,7 +78,7 @@ HB_FUNC( QSQLRELATIONALDELEGATE_NEW )
 }
 
 
-HB_FUNC( QSQLRELATIONALDELEGATE_DELETE )
+HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_DELETE )
 {
   QSqlRelationalDelegate * obj = (QSqlRelationalDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -97,7 +97,7 @@ HB_FUNC( QSQLRELATIONALDELEGATE_DELETE )
 /*
 virtual QWidget * createEditor ( QWidget * parent, const QStyleOptionViewItem & option, const QModelIndex & index ) const
 */
-HB_FUNC( QSQLRELATIONALDELEGATE_CREATEEDITOR )
+HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_CREATEEDITOR )
 {
   QSqlRelationalDelegate * obj = (QSqlRelationalDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -113,7 +113,7 @@ HB_FUNC( QSQLRELATIONALDELEGATE_CREATEEDITOR )
 /*
 virtual void setEditorData ( QWidget * editor, const QModelIndex & index ) const
 */
-HB_FUNC( QSQLRELATIONALDELEGATE_SETEDITORDATA )
+HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_SETEDITORDATA )
 {
   QSqlRelationalDelegate * obj = (QSqlRelationalDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -129,7 +129,7 @@ HB_FUNC( QSQLRELATIONALDELEGATE_SETEDITORDATA )
 /*
 virtual void setModelData ( QWidget * editor, QAbstractItemModel * model, const QModelIndex & index ) const
 */
-HB_FUNC( QSQLRELATIONALDELEGATE_SETMODELDATA )
+HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_SETMODELDATA )
 {
   QSqlRelationalDelegate * obj = (QSqlRelationalDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

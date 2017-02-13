@@ -98,7 +98,7 @@ RETURN
 #include "qt4xhb_clsid.h"
 #include "qt4xhb_utils.h"
 
-HB_FUNC( QINPUTCONTEXTFACTORY_DELETE )
+HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_DELETE )
 {
   QInputContextFactory * obj = (QInputContextFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -117,7 +117,7 @@ HB_FUNC( QINPUTCONTEXTFACTORY_DELETE )
 /*
 QInputContext * create ( const QString & key, QObject * parent )
 */
-HB_FUNC( QINPUTCONTEXTFACTORY_CREATE )
+HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_CREATE )
 {
   QString par1 = hb_parc(1);
   QObject * par2 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -128,7 +128,7 @@ HB_FUNC( QINPUTCONTEXTFACTORY_CREATE )
 /*
 QString description ( const QString & key )
 */
-HB_FUNC( QINPUTCONTEXTFACTORY_DESCRIPTION )
+HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_DESCRIPTION )
 {
   QString par1 = hb_parc(1);
   QString str1 = QInputContextFactory::description ( par1 );
@@ -139,7 +139,7 @@ HB_FUNC( QINPUTCONTEXTFACTORY_DESCRIPTION )
 /*
 QString displayName ( const QString & key )
 */
-HB_FUNC( QINPUTCONTEXTFACTORY_DISPLAYNAME )
+HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_DISPLAYNAME )
 {
   QString par1 = hb_parc(1);
   QString str1 = QInputContextFactory::displayName ( par1 );
@@ -150,7 +150,7 @@ HB_FUNC( QINPUTCONTEXTFACTORY_DISPLAYNAME )
 /*
 QStringList keys ()
 */
-HB_FUNC( QINPUTCONTEXTFACTORY_KEYS )
+HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_KEYS )
 {
   QStringList strl = QInputContextFactory::keys (  );
   PHB_ITEM pArray;
@@ -169,7 +169,7 @@ HB_FUNC( QINPUTCONTEXTFACTORY_KEYS )
 /*
 QStringList languages ( const QString & key )
 */
-HB_FUNC( QINPUTCONTEXTFACTORY_LANGUAGES )
+HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_LANGUAGES )
 {
   QString par1 = hb_parc(1);
   QStringList strl = QInputContextFactory::languages ( par1 );

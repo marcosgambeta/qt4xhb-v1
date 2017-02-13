@@ -96,7 +96,7 @@ RETURN
 #include "qt4xhb_clsid.h"
 #include "qt4xhb_utils.h"
 
-HB_FUNC( QITEMEDITORCREATORBASE_DELETE )
+HB_FUNC_STATIC( QITEMEDITORCREATORBASE_DELETE )
 {
   QItemEditorCreatorBase * obj = (QItemEditorCreatorBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -115,7 +115,7 @@ HB_FUNC( QITEMEDITORCREATORBASE_DELETE )
 /*
 virtual QWidget * createWidget ( QWidget * parent ) const = 0
 */
-HB_FUNC( QITEMEDITORCREATORBASE_CREATEWIDGET )
+HB_FUNC_STATIC( QITEMEDITORCREATORBASE_CREATEWIDGET )
 {
   QItemEditorCreatorBase * obj = (QItemEditorCreatorBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -129,7 +129,7 @@ HB_FUNC( QITEMEDITORCREATORBASE_CREATEWIDGET )
 /*
 virtual QByteArray valuePropertyName () const = 0
 */
-HB_FUNC( QITEMEDITORCREATORBASE_VALUEPROPERTYNAME )
+HB_FUNC_STATIC( QITEMEDITORCREATORBASE_VALUEPROPERTYNAME )
 {
   QItemEditorCreatorBase * obj = (QItemEditorCreatorBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

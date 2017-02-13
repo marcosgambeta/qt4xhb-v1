@@ -64,7 +64,7 @@ RETURN
 /*
 QPauseAnimation ( QObject * parent = 0 )
 */
-HB_FUNC( QPAUSEANIMATION_NEW1 )
+HB_FUNC_STATIC( QPAUSEANIMATION_NEW1 )
 {
   QPauseAnimation * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -80,7 +80,7 @@ HB_FUNC( QPAUSEANIMATION_NEW1 )
 /*
 QPauseAnimation ( int msecs, QObject * parent = 0 )
 */
-HB_FUNC( QPAUSEANIMATION_NEW2 )
+HB_FUNC_STATIC( QPAUSEANIMATION_NEW2 )
 {
   QPauseAnimation * o = NULL;
   int par1 = hb_parni(1);
@@ -97,7 +97,7 @@ HB_FUNC( QPAUSEANIMATION_NEW2 )
 //[1]QPauseAnimation ( QObject * parent = 0 )
 //[2]QPauseAnimation ( int msecs, QObject * parent = 0 )
 
-HB_FUNC( QPAUSEANIMATION_NEW )
+HB_FUNC_STATIC( QPAUSEANIMATION_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
@@ -113,7 +113,7 @@ HB_FUNC( QPAUSEANIMATION_NEW )
   }
 }
 
-HB_FUNC( QPAUSEANIMATION_DELETE )
+HB_FUNC_STATIC( QPAUSEANIMATION_DELETE )
 {
   QPauseAnimation * obj = (QPauseAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -133,7 +133,7 @@ HB_FUNC( QPAUSEANIMATION_DELETE )
 /*
 void setDuration ( int msecs )
 */
-HB_FUNC( QPAUSEANIMATION_SETDURATION )
+HB_FUNC_STATIC( QPAUSEANIMATION_SETDURATION )
 {
   QPauseAnimation * obj = (QPauseAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -148,7 +148,7 @@ HB_FUNC( QPAUSEANIMATION_SETDURATION )
 /*
 virtual int duration () const
 */
-HB_FUNC( QPAUSEANIMATION_DURATION )
+HB_FUNC_STATIC( QPAUSEANIMATION_DURATION )
 {
   QPauseAnimation * obj = (QPauseAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

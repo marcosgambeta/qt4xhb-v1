@@ -82,7 +82,7 @@ RETURN
 /*
 QMdiSubWindow ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
-HB_FUNC( QMDISUBWINDOW_NEW )
+HB_FUNC_STATIC( QMDISUBWINDOW_NEW )
 {
   QMdiSubWindow * o = NULL;
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -100,7 +100,7 @@ HB_FUNC( QMDISUBWINDOW_NEW )
 /*
 bool isShaded () const
 */
-HB_FUNC( QMDISUBWINDOW_ISSHADED )
+HB_FUNC_STATIC( QMDISUBWINDOW_ISSHADED )
 {
   QMdiSubWindow * obj = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -114,7 +114,7 @@ HB_FUNC( QMDISUBWINDOW_ISSHADED )
 /*
 int keyboardPageStep () const
 */
-HB_FUNC( QMDISUBWINDOW_KEYBOARDPAGESTEP )
+HB_FUNC_STATIC( QMDISUBWINDOW_KEYBOARDPAGESTEP )
 {
   QMdiSubWindow * obj = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -128,7 +128,7 @@ HB_FUNC( QMDISUBWINDOW_KEYBOARDPAGESTEP )
 /*
 int keyboardSingleStep () const
 */
-HB_FUNC( QMDISUBWINDOW_KEYBOARDSINGLESTEP )
+HB_FUNC_STATIC( QMDISUBWINDOW_KEYBOARDSINGLESTEP )
 {
   QMdiSubWindow * obj = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -142,7 +142,7 @@ HB_FUNC( QMDISUBWINDOW_KEYBOARDSINGLESTEP )
 /*
 QMdiArea * mdiArea () const
 */
-HB_FUNC( QMDISUBWINDOW_MDIAREA )
+HB_FUNC_STATIC( QMDISUBWINDOW_MDIAREA )
 {
   QMdiSubWindow * obj = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -155,7 +155,7 @@ HB_FUNC( QMDISUBWINDOW_MDIAREA )
 /*
 void setKeyboardPageStep ( int step )
 */
-HB_FUNC( QMDISUBWINDOW_SETKEYBOARDPAGESTEP )
+HB_FUNC_STATIC( QMDISUBWINDOW_SETKEYBOARDPAGESTEP )
 {
   QMdiSubWindow * obj = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -170,7 +170,7 @@ HB_FUNC( QMDISUBWINDOW_SETKEYBOARDPAGESTEP )
 /*
 void setKeyboardSingleStep ( int step )
 */
-HB_FUNC( QMDISUBWINDOW_SETKEYBOARDSINGLESTEP )
+HB_FUNC_STATIC( QMDISUBWINDOW_SETKEYBOARDSINGLESTEP )
 {
   QMdiSubWindow * obj = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -185,7 +185,7 @@ HB_FUNC( QMDISUBWINDOW_SETKEYBOARDSINGLESTEP )
 /*
 void setOption ( SubWindowOption option, bool on = true )
 */
-HB_FUNC( QMDISUBWINDOW_SETOPTION )
+HB_FUNC_STATIC( QMDISUBWINDOW_SETOPTION )
 {
   QMdiSubWindow * obj = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -201,7 +201,7 @@ HB_FUNC( QMDISUBWINDOW_SETOPTION )
 /*
 void setSystemMenu ( QMenu * systemMenu )
 */
-HB_FUNC( QMDISUBWINDOW_SETSYSTEMMENU )
+HB_FUNC_STATIC( QMDISUBWINDOW_SETSYSTEMMENU )
 {
   QMdiSubWindow * obj = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -216,7 +216,7 @@ HB_FUNC( QMDISUBWINDOW_SETSYSTEMMENU )
 /*
 void setWidget ( QWidget * widget )
 */
-HB_FUNC( QMDISUBWINDOW_SETWIDGET )
+HB_FUNC_STATIC( QMDISUBWINDOW_SETWIDGET )
 {
   QMdiSubWindow * obj = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -231,7 +231,7 @@ HB_FUNC( QMDISUBWINDOW_SETWIDGET )
 /*
 QMenu * systemMenu () const
 */
-HB_FUNC( QMDISUBWINDOW_SYSTEMMENU )
+HB_FUNC_STATIC( QMDISUBWINDOW_SYSTEMMENU )
 {
   QMdiSubWindow * obj = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -244,7 +244,7 @@ HB_FUNC( QMDISUBWINDOW_SYSTEMMENU )
 /*
 bool testOption ( SubWindowOption option ) const
 */
-HB_FUNC( QMDISUBWINDOW_TESTOPTION )
+HB_FUNC_STATIC( QMDISUBWINDOW_TESTOPTION )
 {
   QMdiSubWindow * obj = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -259,7 +259,7 @@ HB_FUNC( QMDISUBWINDOW_TESTOPTION )
 /*
 QWidget * widget () const
 */
-HB_FUNC( QMDISUBWINDOW_WIDGET )
+HB_FUNC_STATIC( QMDISUBWINDOW_WIDGET )
 {
   QMdiSubWindow * obj = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -272,7 +272,7 @@ HB_FUNC( QMDISUBWINDOW_WIDGET )
 /*
 virtual QSize minimumSizeHint () const
 */
-HB_FUNC( QMDISUBWINDOW_MINIMUMSIZEHINT )
+HB_FUNC_STATIC( QMDISUBWINDOW_MINIMUMSIZEHINT )
 {
   QMdiSubWindow * obj = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -285,7 +285,7 @@ HB_FUNC( QMDISUBWINDOW_MINIMUMSIZEHINT )
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC( QMDISUBWINDOW_SIZEHINT )
+HB_FUNC_STATIC( QMDISUBWINDOW_SIZEHINT )
 {
   QMdiSubWindow * obj = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -298,7 +298,7 @@ HB_FUNC( QMDISUBWINDOW_SIZEHINT )
 /*
 void showShaded ()
 */
-HB_FUNC( QMDISUBWINDOW_SHOWSHADED )
+HB_FUNC_STATIC( QMDISUBWINDOW_SHOWSHADED )
 {
   QMdiSubWindow * obj = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -312,7 +312,7 @@ HB_FUNC( QMDISUBWINDOW_SHOWSHADED )
 /*
 void showSystemMenu ()
 */
-HB_FUNC( QMDISUBWINDOW_SHOWSYSTEMMENU )
+HB_FUNC_STATIC( QMDISUBWINDOW_SHOWSYSTEMMENU )
 {
   QMdiSubWindow * obj = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

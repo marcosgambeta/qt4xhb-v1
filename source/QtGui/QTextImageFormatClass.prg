@@ -67,7 +67,7 @@ RETURN
 /*
 QTextImageFormat ()
 */
-HB_FUNC( QTEXTIMAGEFORMAT_NEW )
+HB_FUNC_STATIC( QTEXTIMAGEFORMAT_NEW )
 {
   QTextImageFormat * o = NULL;
   o = new QTextImageFormat (  );
@@ -79,7 +79,7 @@ HB_FUNC( QTEXTIMAGEFORMAT_NEW )
 }
 
 
-HB_FUNC( QTEXTIMAGEFORMAT_DELETE )
+HB_FUNC_STATIC( QTEXTIMAGEFORMAT_DELETE )
 {
   QTextImageFormat * obj = (QTextImageFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -98,7 +98,7 @@ HB_FUNC( QTEXTIMAGEFORMAT_DELETE )
 /*
 qreal height () const
 */
-HB_FUNC( QTEXTIMAGEFORMAT_HEIGHT )
+HB_FUNC_STATIC( QTEXTIMAGEFORMAT_HEIGHT )
 {
   QTextImageFormat * obj = (QTextImageFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -112,7 +112,7 @@ HB_FUNC( QTEXTIMAGEFORMAT_HEIGHT )
 /*
 bool isValid () const
 */
-HB_FUNC( QTEXTIMAGEFORMAT_ISVALID )
+HB_FUNC_STATIC( QTEXTIMAGEFORMAT_ISVALID )
 {
   QTextImageFormat * obj = (QTextImageFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -126,7 +126,7 @@ HB_FUNC( QTEXTIMAGEFORMAT_ISVALID )
 /*
 QString name () const
 */
-HB_FUNC( QTEXTIMAGEFORMAT_NAME )
+HB_FUNC_STATIC( QTEXTIMAGEFORMAT_NAME )
 {
   QTextImageFormat * obj = (QTextImageFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -140,7 +140,7 @@ HB_FUNC( QTEXTIMAGEFORMAT_NAME )
 /*
 void setHeight ( qreal height )
 */
-HB_FUNC( QTEXTIMAGEFORMAT_SETHEIGHT )
+HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETHEIGHT )
 {
   QTextImageFormat * obj = (QTextImageFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -155,7 +155,7 @@ HB_FUNC( QTEXTIMAGEFORMAT_SETHEIGHT )
 /*
 void setName ( const QString & name )
 */
-HB_FUNC( QTEXTIMAGEFORMAT_SETNAME )
+HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETNAME )
 {
   QTextImageFormat * obj = (QTextImageFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -170,7 +170,7 @@ HB_FUNC( QTEXTIMAGEFORMAT_SETNAME )
 /*
 void setWidth ( qreal width )
 */
-HB_FUNC( QTEXTIMAGEFORMAT_SETWIDTH )
+HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETWIDTH )
 {
   QTextImageFormat * obj = (QTextImageFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -185,7 +185,7 @@ HB_FUNC( QTEXTIMAGEFORMAT_SETWIDTH )
 /*
 qreal width () const
 */
-HB_FUNC( QTEXTIMAGEFORMAT_WIDTH )
+HB_FUNC_STATIC( QTEXTIMAGEFORMAT_WIDTH )
 {
   QTextImageFormat * obj = (QTextImageFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

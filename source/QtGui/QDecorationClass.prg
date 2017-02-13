@@ -105,7 +105,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QDECORATION_DELETE )
+HB_FUNC_STATIC( QDECORATION_DELETE )
 {
   QDecoration * obj = (QDecoration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -124,7 +124,7 @@ HB_FUNC( QDECORATION_DELETE )
 /*
 virtual void buildSysMenu ( QWidget * widget, QMenu * menu )
 */
-HB_FUNC( QDECORATION_BUILDSYSMENU )
+HB_FUNC_STATIC( QDECORATION_BUILDSYSMENU )
 {
   QDecoration * obj = (QDecoration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -140,7 +140,7 @@ HB_FUNC( QDECORATION_BUILDSYSMENU )
 /*
 void menuTriggered ( QWidget * widget, QAction * action )
 */
-HB_FUNC( QDECORATION_MENUTRIGGERED )
+HB_FUNC_STATIC( QDECORATION_MENUTRIGGERED )
 {
   QDecoration * obj = (QDecoration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -156,7 +156,7 @@ HB_FUNC( QDECORATION_MENUTRIGGERED )
 /*
 virtual bool paint ( QPainter * painter, const QWidget * widget, int decorationRegion = All, DecorationState state = Normal ) = 0
 */
-HB_FUNC( QDECORATION_PAINT )
+HB_FUNC_STATIC( QDECORATION_PAINT )
 {
   QDecoration * obj = (QDecoration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -174,7 +174,7 @@ HB_FUNC( QDECORATION_PAINT )
 /*
 virtual QRegion region ( const QWidget * widget, const QRect & rectangle, int decorationRegion = All ) = 0
 */
-HB_FUNC( QDECORATION_REGION1 )
+HB_FUNC_STATIC( QDECORATION_REGION1 )
 {
   QDecoration * obj = (QDecoration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -190,7 +190,7 @@ HB_FUNC( QDECORATION_REGION1 )
 /*
 QRegion region ( const QWidget * widget, int decorationRegion = All )
 */
-HB_FUNC( QDECORATION_REGION2 )
+HB_FUNC_STATIC( QDECORATION_REGION2 )
 {
   QDecoration * obj = (QDecoration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -205,7 +205,7 @@ HB_FUNC( QDECORATION_REGION2 )
 //[1]virtual QRegion region ( const QWidget * widget, const QRect & rectangle, int decorationRegion = All ) = 0
 //[2]QRegion region ( const QWidget * widget, int decorationRegion = All )
 
-HB_FUNC( QDECORATION_REGION )
+HB_FUNC_STATIC( QDECORATION_REGION )
 {
   if( ISBETWEEN(2,3) && ISQWIDGET(1) && ISQRECT(2) && (ISNUM(3)||ISNIL(3)) )
   {
@@ -220,7 +220,7 @@ HB_FUNC( QDECORATION_REGION )
 /*
 virtual int regionAt ( const QWidget * widget, const QPoint & point )
 */
-HB_FUNC( QDECORATION_REGIONAT )
+HB_FUNC_STATIC( QDECORATION_REGIONAT )
 {
   QDecoration * obj = (QDecoration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -236,7 +236,7 @@ HB_FUNC( QDECORATION_REGIONAT )
 /*
 virtual void regionClicked ( QWidget * widget, int region )
 */
-HB_FUNC( QDECORATION_REGIONCLICKED )
+HB_FUNC_STATIC( QDECORATION_REGIONCLICKED )
 {
   QDecoration * obj = (QDecoration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -252,7 +252,7 @@ HB_FUNC( QDECORATION_REGIONCLICKED )
 /*
 virtual void regionDoubleClicked ( QWidget * widget, int region )
 */
-HB_FUNC( QDECORATION_REGIONDOUBLECLICKED )
+HB_FUNC_STATIC( QDECORATION_REGIONDOUBLECLICKED )
 {
   QDecoration * obj = (QDecoration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -269,7 +269,7 @@ HB_FUNC( QDECORATION_REGIONDOUBLECLICKED )
 /*
 void startMove ( QWidget * widget )
 */
-HB_FUNC( QDECORATION_STARTMOVE )
+HB_FUNC_STATIC( QDECORATION_STARTMOVE )
 {
   QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QDecoration::startMove ( par1 );
@@ -280,7 +280,7 @@ HB_FUNC( QDECORATION_STARTMOVE )
 /*
 void startResize ( QWidget * widget )
 */
-HB_FUNC( QDECORATION_STARTRESIZE )
+HB_FUNC_STATIC( QDECORATION_STARTRESIZE )
 {
   QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QDecoration::startResize ( par1 );

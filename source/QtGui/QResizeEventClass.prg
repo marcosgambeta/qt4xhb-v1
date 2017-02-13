@@ -64,7 +64,7 @@ RETURN
 /*
 QResizeEvent(const QSize &size, const QSize &oldSize)
 */
-HB_FUNC( QRESIZEEVENT_NEW )
+HB_FUNC_STATIC( QRESIZEEVENT_NEW )
 {
   QResizeEvent * o = NULL;
   QSize * par1 = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -78,7 +78,7 @@ HB_FUNC( QRESIZEEVENT_NEW )
 }
 
 
-HB_FUNC( QRESIZEEVENT_DELETE )
+HB_FUNC_STATIC( QRESIZEEVENT_DELETE )
 {
   QResizeEvent * obj = (QResizeEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -97,7 +97,7 @@ HB_FUNC( QRESIZEEVENT_DELETE )
 /*
 const QSize &size() const
 */
-HB_FUNC( QRESIZEEVENT_SIZE )
+HB_FUNC_STATIC( QRESIZEEVENT_SIZE )
 {
   QResizeEvent * obj = (QResizeEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -110,7 +110,7 @@ HB_FUNC( QRESIZEEVENT_SIZE )
 /*
 const QSize &oldSize()const
 */
-HB_FUNC( QRESIZEEVENT_OLDSIZE )
+HB_FUNC_STATIC( QRESIZEEVENT_OLDSIZE )
 {
   QResizeEvent * obj = (QResizeEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

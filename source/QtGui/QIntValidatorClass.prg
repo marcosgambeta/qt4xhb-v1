@@ -69,7 +69,7 @@ RETURN
 /*
 QIntValidator ( QObject * parent = 0 )
 */
-HB_FUNC( QINTVALIDATOR_NEW1 )
+HB_FUNC_STATIC( QINTVALIDATOR_NEW1 )
 {
   QIntValidator * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -85,7 +85,7 @@ HB_FUNC( QINTVALIDATOR_NEW1 )
 /*
 QIntValidator ( int minimum, int maximum, QObject * parent )
 */
-HB_FUNC( QINTVALIDATOR_NEW2 )
+HB_FUNC_STATIC( QINTVALIDATOR_NEW2 )
 {
   QIntValidator * o = NULL;
   int par1 = hb_parni(1);
@@ -103,7 +103,7 @@ HB_FUNC( QINTVALIDATOR_NEW2 )
 //[1]QIntValidator ( QObject * parent = 0 )
 //[2]QIntValidator ( int minimum, int maximum, QObject * parent )
 
-HB_FUNC( QINTVALIDATOR_NEW )
+HB_FUNC_STATIC( QINTVALIDATOR_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
@@ -119,7 +119,7 @@ HB_FUNC( QINTVALIDATOR_NEW )
   }
 }
 
-HB_FUNC( QINTVALIDATOR_DELETE )
+HB_FUNC_STATIC( QINTVALIDATOR_DELETE )
 {
   QIntValidator * obj = (QIntValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -138,7 +138,7 @@ HB_FUNC( QINTVALIDATOR_DELETE )
 /*
 int bottom () const
 */
-HB_FUNC( QINTVALIDATOR_BOTTOM )
+HB_FUNC_STATIC( QINTVALIDATOR_BOTTOM )
 {
   QIntValidator * obj = (QIntValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -152,7 +152,7 @@ HB_FUNC( QINTVALIDATOR_BOTTOM )
 /*
 void setBottom ( int )
 */
-HB_FUNC( QINTVALIDATOR_SETBOTTOM )
+HB_FUNC_STATIC( QINTVALIDATOR_SETBOTTOM )
 {
   QIntValidator * obj = (QIntValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -167,7 +167,7 @@ HB_FUNC( QINTVALIDATOR_SETBOTTOM )
 /*
 virtual void setRange ( int bottom, int top )
 */
-HB_FUNC( QINTVALIDATOR_SETRANGE )
+HB_FUNC_STATIC( QINTVALIDATOR_SETRANGE )
 {
   QIntValidator * obj = (QIntValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -183,7 +183,7 @@ HB_FUNC( QINTVALIDATOR_SETRANGE )
 /*
 void setTop ( int )
 */
-HB_FUNC( QINTVALIDATOR_SETTOP )
+HB_FUNC_STATIC( QINTVALIDATOR_SETTOP )
 {
   QIntValidator * obj = (QIntValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -198,7 +198,7 @@ HB_FUNC( QINTVALIDATOR_SETTOP )
 /*
 int top () const
 */
-HB_FUNC( QINTVALIDATOR_TOP )
+HB_FUNC_STATIC( QINTVALIDATOR_TOP )
 {
   QIntValidator * obj = (QIntValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -212,7 +212,7 @@ HB_FUNC( QINTVALIDATOR_TOP )
 /*
 virtual void fixup ( QString & input ) const
 */
-HB_FUNC( QINTVALIDATOR_FIXUP )
+HB_FUNC_STATIC( QINTVALIDATOR_FIXUP )
 {
   QIntValidator * obj = (QIntValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -227,7 +227,7 @@ HB_FUNC( QINTVALIDATOR_FIXUP )
 /*
 virtual QValidator::State validate ( QString & input, int & pos ) const
 */
-HB_FUNC( QINTVALIDATOR_VALIDATE )
+HB_FUNC_STATIC( QINTVALIDATOR_VALIDATE )
 {
   QIntValidator * obj = (QIntValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

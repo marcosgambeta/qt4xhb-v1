@@ -94,7 +94,7 @@ RETURN
 #include "qt4xhb_clsid.h"
 #include "qt4xhb_utils.h"
 
-HB_FUNC( QSQLDRIVERCREATORBASE_DELETE )
+HB_FUNC_STATIC( QSQLDRIVERCREATORBASE_DELETE )
 {
   QSqlDriverCreatorBase * obj = (QSqlDriverCreatorBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -113,7 +113,7 @@ HB_FUNC( QSQLDRIVERCREATORBASE_DELETE )
 /*
 virtual QSqlDriver * createObject () const = 0
 */
-HB_FUNC( QSQLDRIVERCREATORBASE_CREATEOBJECT )
+HB_FUNC_STATIC( QSQLDRIVERCREATORBASE_CREATEOBJECT )
 {
   QSqlDriverCreatorBase * obj = (QSqlDriverCreatorBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

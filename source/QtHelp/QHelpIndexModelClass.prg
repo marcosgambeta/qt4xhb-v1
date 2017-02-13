@@ -67,7 +67,7 @@ RETURN
 /*
 void createIndex ( const QString & customFilterName )
 */
-HB_FUNC( QHELPINDEXMODEL_CREATEINDEX )
+HB_FUNC_STATIC( QHELPINDEXMODEL_CREATEINDEX )
 {
   QHelpIndexModel * obj = (QHelpIndexModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -82,7 +82,7 @@ HB_FUNC( QHELPINDEXMODEL_CREATEINDEX )
 /*
 QModelIndex filter ( const QString & filter, const QString & wildcard = QString() )
 */
-HB_FUNC( QHELPINDEXMODEL_FILTER )
+HB_FUNC_STATIC( QHELPINDEXMODEL_FILTER )
 {
   QHelpIndexModel * obj = (QHelpIndexModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -97,7 +97,7 @@ HB_FUNC( QHELPINDEXMODEL_FILTER )
 /*
 bool isCreatingIndex () const
 */
-HB_FUNC( QHELPINDEXMODEL_ISCREATINGINDEX )
+HB_FUNC_STATIC( QHELPINDEXMODEL_ISCREATINGINDEX )
 {
   QHelpIndexModel * obj = (QHelpIndexModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

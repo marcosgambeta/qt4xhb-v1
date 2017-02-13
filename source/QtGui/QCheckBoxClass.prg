@@ -70,7 +70,7 @@ RETURN
 /*
 QCheckBox ( QWidget * parent = 0 )
 */
-HB_FUNC( QCHECKBOX_NEW1 )
+HB_FUNC_STATIC( QCHECKBOX_NEW1 )
 {
   QCheckBox * o = NULL;
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -86,7 +86,7 @@ HB_FUNC( QCHECKBOX_NEW1 )
 /*
 QCheckBox ( const QString & text, QWidget * parent = 0 )
 */
-HB_FUNC( QCHECKBOX_NEW2 )
+HB_FUNC_STATIC( QCHECKBOX_NEW2 )
 {
   QCheckBox * o = NULL;
   QString par1 = hb_parc(1);
@@ -103,7 +103,7 @@ HB_FUNC( QCHECKBOX_NEW2 )
 //[1]QCheckBox ( QWidget * parent = 0 )
 //[2]QCheckBox ( const QString & text, QWidget * parent = 0 )
 
-HB_FUNC( QCHECKBOX_NEW )
+HB_FUNC_STATIC( QCHECKBOX_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
@@ -123,7 +123,7 @@ HB_FUNC( QCHECKBOX_NEW )
 /*
 Qt::CheckState checkState () const
 */
-HB_FUNC( QCHECKBOX_CHECKSTATE )
+HB_FUNC_STATIC( QCHECKBOX_CHECKSTATE )
 {
   QCheckBox * obj = (QCheckBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -137,7 +137,7 @@ HB_FUNC( QCHECKBOX_CHECKSTATE )
 /*
 bool isTristate () const
 */
-HB_FUNC( QCHECKBOX_ISTRISTATE )
+HB_FUNC_STATIC( QCHECKBOX_ISTRISTATE )
 {
   QCheckBox * obj = (QCheckBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -151,7 +151,7 @@ HB_FUNC( QCHECKBOX_ISTRISTATE )
 /*
 void setCheckState ( Qt::CheckState state )
 */
-HB_FUNC( QCHECKBOX_SETCHECKSTATE )
+HB_FUNC_STATIC( QCHECKBOX_SETCHECKSTATE )
 {
   QCheckBox * obj = (QCheckBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -166,7 +166,7 @@ HB_FUNC( QCHECKBOX_SETCHECKSTATE )
 /*
 void setTristate ( bool y = true )
 */
-HB_FUNC( QCHECKBOX_SETTRISTATE )
+HB_FUNC_STATIC( QCHECKBOX_SETTRISTATE )
 {
   QCheckBox * obj = (QCheckBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -181,7 +181,7 @@ HB_FUNC( QCHECKBOX_SETTRISTATE )
 /*
 virtual QSize minimumSizeHint () const
 */
-HB_FUNC( QCHECKBOX_MINIMUMSIZEHINT )
+HB_FUNC_STATIC( QCHECKBOX_MINIMUMSIZEHINT )
 {
   QCheckBox * obj = (QCheckBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -194,7 +194,7 @@ HB_FUNC( QCHECKBOX_MINIMUMSIZEHINT )
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC( QCHECKBOX_SIZEHINT )
+HB_FUNC_STATIC( QCHECKBOX_SIZEHINT )
 {
   QCheckBox * obj = (QCheckBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

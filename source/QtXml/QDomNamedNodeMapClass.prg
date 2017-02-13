@@ -112,7 +112,7 @@ RETURN
 /*
 QDomNamedNodeMap ()
 */
-HB_FUNC( QDOMNAMEDNODEMAP_NEW1 )
+HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NEW1 )
 {
   QDomNamedNodeMap * o = NULL;
   o = new QDomNamedNodeMap (  );
@@ -130,7 +130,7 @@ HB_FUNC( QDOMNAMEDNODEMAP_NEW1 )
 /*
 QDomNamedNodeMap ( const QDomNamedNodeMap & n )
 */
-HB_FUNC( QDOMNAMEDNODEMAP_NEW2 )
+HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NEW2 )
 {
   QDomNamedNodeMap * o = NULL;
   QDomNamedNodeMap * par1 = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -149,7 +149,7 @@ HB_FUNC( QDOMNAMEDNODEMAP_NEW2 )
 //[1]QDomNamedNodeMap ()
 //[2]QDomNamedNodeMap ( const QDomNamedNodeMap & n )
 
-HB_FUNC( QDOMNAMEDNODEMAP_NEW )
+HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -165,7 +165,7 @@ HB_FUNC( QDOMNAMEDNODEMAP_NEW )
   }
 }
 
-HB_FUNC( QDOMNAMEDNODEMAP_DELETE )
+HB_FUNC_STATIC( QDOMNAMEDNODEMAP_DELETE )
 {
   QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -184,7 +184,7 @@ HB_FUNC( QDOMNAMEDNODEMAP_DELETE )
 /*
 bool contains ( const QString & name ) const
 */
-HB_FUNC( QDOMNAMEDNODEMAP_CONTAINS )
+HB_FUNC_STATIC( QDOMNAMEDNODEMAP_CONTAINS )
 {
   QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -199,7 +199,7 @@ HB_FUNC( QDOMNAMEDNODEMAP_CONTAINS )
 /*
 int count () const
 */
-HB_FUNC( QDOMNAMEDNODEMAP_COUNT )
+HB_FUNC_STATIC( QDOMNAMEDNODEMAP_COUNT )
 {
   QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -213,7 +213,7 @@ HB_FUNC( QDOMNAMEDNODEMAP_COUNT )
 /*
 bool isEmpty () const
 */
-HB_FUNC( QDOMNAMEDNODEMAP_ISEMPTY )
+HB_FUNC_STATIC( QDOMNAMEDNODEMAP_ISEMPTY )
 {
   QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -227,7 +227,7 @@ HB_FUNC( QDOMNAMEDNODEMAP_ISEMPTY )
 /*
 QDomNode item ( int index ) const
 */
-HB_FUNC( QDOMNAMEDNODEMAP_ITEM )
+HB_FUNC_STATIC( QDOMNAMEDNODEMAP_ITEM )
 {
   QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -241,7 +241,7 @@ HB_FUNC( QDOMNAMEDNODEMAP_ITEM )
 /*
 uint length () const
 */
-HB_FUNC( QDOMNAMEDNODEMAP_LENGTH )
+HB_FUNC_STATIC( QDOMNAMEDNODEMAP_LENGTH )
 {
   QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -255,7 +255,7 @@ HB_FUNC( QDOMNAMEDNODEMAP_LENGTH )
 /*
 QDomNode namedItem ( const QString & name ) const
 */
-HB_FUNC( QDOMNAMEDNODEMAP_NAMEDITEM )
+HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NAMEDITEM )
 {
   QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -269,7 +269,7 @@ HB_FUNC( QDOMNAMEDNODEMAP_NAMEDITEM )
 /*
 QDomNode namedItemNS ( const QString & nsURI, const QString & localName ) const
 */
-HB_FUNC( QDOMNAMEDNODEMAP_NAMEDITEMNS )
+HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NAMEDITEMNS )
 {
   QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -284,7 +284,7 @@ HB_FUNC( QDOMNAMEDNODEMAP_NAMEDITEMNS )
 /*
 QDomNode removeNamedItem ( const QString & name )
 */
-HB_FUNC( QDOMNAMEDNODEMAP_REMOVENAMEDITEM )
+HB_FUNC_STATIC( QDOMNAMEDNODEMAP_REMOVENAMEDITEM )
 {
   QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -298,7 +298,7 @@ HB_FUNC( QDOMNAMEDNODEMAP_REMOVENAMEDITEM )
 /*
 QDomNode removeNamedItemNS ( const QString & nsURI, const QString & localName )
 */
-HB_FUNC( QDOMNAMEDNODEMAP_REMOVENAMEDITEMNS )
+HB_FUNC_STATIC( QDOMNAMEDNODEMAP_REMOVENAMEDITEMNS )
 {
   QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -313,7 +313,7 @@ HB_FUNC( QDOMNAMEDNODEMAP_REMOVENAMEDITEMNS )
 /*
 QDomNode setNamedItem ( const QDomNode & newNode )
 */
-HB_FUNC( QDOMNAMEDNODEMAP_SETNAMEDITEM )
+HB_FUNC_STATIC( QDOMNAMEDNODEMAP_SETNAMEDITEM )
 {
   QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -327,7 +327,7 @@ HB_FUNC( QDOMNAMEDNODEMAP_SETNAMEDITEM )
 /*
 QDomNode setNamedItemNS ( const QDomNode & newNode )
 */
-HB_FUNC( QDOMNAMEDNODEMAP_SETNAMEDITEMNS )
+HB_FUNC_STATIC( QDOMNAMEDNODEMAP_SETNAMEDITEMNS )
 {
   QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -341,7 +341,7 @@ HB_FUNC( QDOMNAMEDNODEMAP_SETNAMEDITEMNS )
 /*
 int size () const
 */
-HB_FUNC( QDOMNAMEDNODEMAP_SIZE )
+HB_FUNC_STATIC( QDOMNAMEDNODEMAP_SIZE )
 {
   QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

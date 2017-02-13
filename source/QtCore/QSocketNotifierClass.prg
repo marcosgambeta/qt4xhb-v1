@@ -65,7 +65,7 @@ RETURN
 /*
 QSocketNotifier(int socket, Type, QObject *parent = 0)
 */
-HB_FUNC( QSOCKETNOTIFIER_NEW )
+HB_FUNC_STATIC( QSOCKETNOTIFIER_NEW )
 {
   QSocketNotifier * o = NULL;
   int par1 = hb_parni(1);
@@ -80,7 +80,7 @@ HB_FUNC( QSOCKETNOTIFIER_NEW )
 }
 
 
-HB_FUNC( QSOCKETNOTIFIER_DELETE )
+HB_FUNC_STATIC( QSOCKETNOTIFIER_DELETE )
 {
   QSocketNotifier * obj = (QSocketNotifier *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -99,7 +99,7 @@ HB_FUNC( QSOCKETNOTIFIER_DELETE )
 /*
 int socket() const
 */
-HB_FUNC( QSOCKETNOTIFIER_SOCKET )
+HB_FUNC_STATIC( QSOCKETNOTIFIER_SOCKET )
 {
   QSocketNotifier * obj = (QSocketNotifier *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -113,7 +113,7 @@ HB_FUNC( QSOCKETNOTIFIER_SOCKET )
 /*
 Type type() const
 */
-HB_FUNC( QSOCKETNOTIFIER_TYPE )
+HB_FUNC_STATIC( QSOCKETNOTIFIER_TYPE )
 {
   QSocketNotifier * obj = (QSocketNotifier *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -127,7 +127,7 @@ HB_FUNC( QSOCKETNOTIFIER_TYPE )
 /*
 bool isEnabled() const
 */
-HB_FUNC( QSOCKETNOTIFIER_ISENABLED )
+HB_FUNC_STATIC( QSOCKETNOTIFIER_ISENABLED )
 {
   QSocketNotifier * obj = (QSocketNotifier *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -141,7 +141,7 @@ HB_FUNC( QSOCKETNOTIFIER_ISENABLED )
 /*
 void setEnabled(bool)
 */
-HB_FUNC( QSOCKETNOTIFIER_SETENABLED )
+HB_FUNC_STATIC( QSOCKETNOTIFIER_SETENABLED )
 {
   QSocketNotifier * obj = (QSocketNotifier *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

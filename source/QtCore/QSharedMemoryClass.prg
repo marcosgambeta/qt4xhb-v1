@@ -76,7 +76,7 @@ RETURN
 /*
 QSharedMemory(QObject *parent = 0)
 */
-HB_FUNC( QSHAREDMEMORY_NEW1 )
+HB_FUNC_STATIC( QSHAREDMEMORY_NEW1 )
 {
   QSharedMemory * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -92,7 +92,7 @@ HB_FUNC( QSHAREDMEMORY_NEW1 )
 /*
 QSharedMemory(const QString &key, QObject *parent = 0)
 */
-HB_FUNC( QSHAREDMEMORY_NEW2 )
+HB_FUNC_STATIC( QSHAREDMEMORY_NEW2 )
 {
   QSharedMemory * o = NULL;
   QString par1 = hb_parc(1);
@@ -109,7 +109,7 @@ HB_FUNC( QSHAREDMEMORY_NEW2 )
 //[1]QSharedMemory(QObject *parent = 0)
 //[2]QSharedMemory(const QString &key, QObject *parent = 0)
 
-HB_FUNC( QSHAREDMEMORY_NEW )
+HB_FUNC_STATIC( QSHAREDMEMORY_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
@@ -125,7 +125,7 @@ HB_FUNC( QSHAREDMEMORY_NEW )
   }
 }
 
-HB_FUNC( QSHAREDMEMORY_DELETE )
+HB_FUNC_STATIC( QSHAREDMEMORY_DELETE )
 {
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -144,7 +144,7 @@ HB_FUNC( QSHAREDMEMORY_DELETE )
 /*
 void setKey(const QString &key)
 */
-HB_FUNC( QSHAREDMEMORY_SETKEY )
+HB_FUNC_STATIC( QSHAREDMEMORY_SETKEY )
 {
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -159,7 +159,7 @@ HB_FUNC( QSHAREDMEMORY_SETKEY )
 /*
 QString key() const
 */
-HB_FUNC( QSHAREDMEMORY_KEY )
+HB_FUNC_STATIC( QSHAREDMEMORY_KEY )
 {
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -173,7 +173,7 @@ HB_FUNC( QSHAREDMEMORY_KEY )
 /*
 void setNativeKey(const QString &key)
 */
-HB_FUNC( QSHAREDMEMORY_SETNATIVEKEY )
+HB_FUNC_STATIC( QSHAREDMEMORY_SETNATIVEKEY )
 {
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -188,7 +188,7 @@ HB_FUNC( QSHAREDMEMORY_SETNATIVEKEY )
 /*
 QString nativeKey() const
 */
-HB_FUNC( QSHAREDMEMORY_NATIVEKEY )
+HB_FUNC_STATIC( QSHAREDMEMORY_NATIVEKEY )
 {
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -202,7 +202,7 @@ HB_FUNC( QSHAREDMEMORY_NATIVEKEY )
 /*
 bool create(int size, AccessMode mode = ReadWrite)
 */
-HB_FUNC( QSHAREDMEMORY_CREATE )
+HB_FUNC_STATIC( QSHAREDMEMORY_CREATE )
 {
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -218,7 +218,7 @@ HB_FUNC( QSHAREDMEMORY_CREATE )
 /*
 int size() const
 */
-HB_FUNC( QSHAREDMEMORY_SIZE )
+HB_FUNC_STATIC( QSHAREDMEMORY_SIZE )
 {
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -232,7 +232,7 @@ HB_FUNC( QSHAREDMEMORY_SIZE )
 /*
 bool attach(AccessMode mode = ReadWrite)
 */
-HB_FUNC( QSHAREDMEMORY_ATTACH )
+HB_FUNC_STATIC( QSHAREDMEMORY_ATTACH )
 {
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -247,7 +247,7 @@ HB_FUNC( QSHAREDMEMORY_ATTACH )
 /*
 bool isAttached() const
 */
-HB_FUNC( QSHAREDMEMORY_ISATTACHED )
+HB_FUNC_STATIC( QSHAREDMEMORY_ISATTACHED )
 {
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -261,7 +261,7 @@ HB_FUNC( QSHAREDMEMORY_ISATTACHED )
 /*
 bool detach()
 */
-HB_FUNC( QSHAREDMEMORY_DETACH )
+HB_FUNC_STATIC( QSHAREDMEMORY_DETACH )
 {
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -275,7 +275,7 @@ HB_FUNC( QSHAREDMEMORY_DETACH )
 /*
 void *data()
 */
-HB_FUNC( QSHAREDMEMORY_DATA )
+HB_FUNC_STATIC( QSHAREDMEMORY_DATA )
 {
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -291,7 +291,7 @@ HB_FUNC( QSHAREDMEMORY_DATA )
 /*
 bool lock()
 */
-HB_FUNC( QSHAREDMEMORY_LOCK )
+HB_FUNC_STATIC( QSHAREDMEMORY_LOCK )
 {
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -305,7 +305,7 @@ HB_FUNC( QSHAREDMEMORY_LOCK )
 /*
 bool unlock()
 */
-HB_FUNC( QSHAREDMEMORY_UNLOCK )
+HB_FUNC_STATIC( QSHAREDMEMORY_UNLOCK )
 {
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -319,7 +319,7 @@ HB_FUNC( QSHAREDMEMORY_UNLOCK )
 /*
 SharedMemoryError error() const
 */
-HB_FUNC( QSHAREDMEMORY_ERROR )
+HB_FUNC_STATIC( QSHAREDMEMORY_ERROR )
 {
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -333,7 +333,7 @@ HB_FUNC( QSHAREDMEMORY_ERROR )
 /*
 QString errorString() const
 */
-HB_FUNC( QSHAREDMEMORY_ERRORSTRING )
+HB_FUNC_STATIC( QSHAREDMEMORY_ERRORSTRING )
 {
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

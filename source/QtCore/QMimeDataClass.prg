@@ -88,7 +88,7 @@ RETURN
 /*
 QMimeData ()
 */
-HB_FUNC( QMIMEDATA_NEW )
+HB_FUNC_STATIC( QMIMEDATA_NEW )
 {
   QMimeData * o = NULL;
   o = new QMimeData (  );
@@ -100,7 +100,7 @@ HB_FUNC( QMIMEDATA_NEW )
 }
 
 
-HB_FUNC( QMIMEDATA_DELETE )
+HB_FUNC_STATIC( QMIMEDATA_DELETE )
 {
   QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -119,7 +119,7 @@ HB_FUNC( QMIMEDATA_DELETE )
 /*
 void clear ()
 */
-HB_FUNC( QMIMEDATA_CLEAR )
+HB_FUNC_STATIC( QMIMEDATA_CLEAR )
 {
   QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -133,7 +133,7 @@ HB_FUNC( QMIMEDATA_CLEAR )
 /*
 QVariant colorData () const
 */
-HB_FUNC( QMIMEDATA_COLORDATA )
+HB_FUNC_STATIC( QMIMEDATA_COLORDATA )
 {
   QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -146,7 +146,7 @@ HB_FUNC( QMIMEDATA_COLORDATA )
 /*
 QByteArray data ( const QString & mimeType ) const
 */
-HB_FUNC( QMIMEDATA_DATA )
+HB_FUNC_STATIC( QMIMEDATA_DATA )
 {
   QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -160,7 +160,7 @@ HB_FUNC( QMIMEDATA_DATA )
 /*
 virtual QStringList formats () const
 */
-HB_FUNC( QMIMEDATA_FORMATS )
+HB_FUNC_STATIC( QMIMEDATA_FORMATS )
 {
   QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -183,7 +183,7 @@ HB_FUNC( QMIMEDATA_FORMATS )
 /*
 bool hasColor () const
 */
-HB_FUNC( QMIMEDATA_HASCOLOR )
+HB_FUNC_STATIC( QMIMEDATA_HASCOLOR )
 {
   QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -197,7 +197,7 @@ HB_FUNC( QMIMEDATA_HASCOLOR )
 /*
 virtual bool hasFormat ( const QString & mimeType ) const
 */
-HB_FUNC( QMIMEDATA_HASFORMAT )
+HB_FUNC_STATIC( QMIMEDATA_HASFORMAT )
 {
   QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -212,7 +212,7 @@ HB_FUNC( QMIMEDATA_HASFORMAT )
 /*
 bool hasHtml () const
 */
-HB_FUNC( QMIMEDATA_HASHTML )
+HB_FUNC_STATIC( QMIMEDATA_HASHTML )
 {
   QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -226,7 +226,7 @@ HB_FUNC( QMIMEDATA_HASHTML )
 /*
 bool hasImage () const
 */
-HB_FUNC( QMIMEDATA_HASIMAGE )
+HB_FUNC_STATIC( QMIMEDATA_HASIMAGE )
 {
   QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -240,7 +240,7 @@ HB_FUNC( QMIMEDATA_HASIMAGE )
 /*
 bool hasText () const
 */
-HB_FUNC( QMIMEDATA_HASTEXT )
+HB_FUNC_STATIC( QMIMEDATA_HASTEXT )
 {
   QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -254,7 +254,7 @@ HB_FUNC( QMIMEDATA_HASTEXT )
 /*
 bool hasUrls () const
 */
-HB_FUNC( QMIMEDATA_HASURLS )
+HB_FUNC_STATIC( QMIMEDATA_HASURLS )
 {
   QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -268,7 +268,7 @@ HB_FUNC( QMIMEDATA_HASURLS )
 /*
 QString html () const
 */
-HB_FUNC( QMIMEDATA_HTML )
+HB_FUNC_STATIC( QMIMEDATA_HTML )
 {
   QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -282,7 +282,7 @@ HB_FUNC( QMIMEDATA_HTML )
 /*
 QVariant imageData () const
 */
-HB_FUNC( QMIMEDATA_IMAGEDATA )
+HB_FUNC_STATIC( QMIMEDATA_IMAGEDATA )
 {
   QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -295,7 +295,7 @@ HB_FUNC( QMIMEDATA_IMAGEDATA )
 /*
 void removeFormat ( const QString & mimeType )
 */
-HB_FUNC( QMIMEDATA_REMOVEFORMAT )
+HB_FUNC_STATIC( QMIMEDATA_REMOVEFORMAT )
 {
   QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -310,7 +310,7 @@ HB_FUNC( QMIMEDATA_REMOVEFORMAT )
 /*
 void setColorData ( const QVariant & color )
 */
-HB_FUNC( QMIMEDATA_SETCOLORDATA )
+HB_FUNC_STATIC( QMIMEDATA_SETCOLORDATA )
 {
   QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -325,7 +325,7 @@ HB_FUNC( QMIMEDATA_SETCOLORDATA )
 /*
 void setData ( const QString & mimeType, const QByteArray & data )
 */
-HB_FUNC( QMIMEDATA_SETDATA )
+HB_FUNC_STATIC( QMIMEDATA_SETDATA )
 {
   QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -341,7 +341,7 @@ HB_FUNC( QMIMEDATA_SETDATA )
 /*
 void setHtml ( const QString & html )
 */
-HB_FUNC( QMIMEDATA_SETHTML )
+HB_FUNC_STATIC( QMIMEDATA_SETHTML )
 {
   QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -356,7 +356,7 @@ HB_FUNC( QMIMEDATA_SETHTML )
 /*
 void setImageData ( const QVariant & image )
 */
-HB_FUNC( QMIMEDATA_SETIMAGEDATA )
+HB_FUNC_STATIC( QMIMEDATA_SETIMAGEDATA )
 {
   QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -371,7 +371,7 @@ HB_FUNC( QMIMEDATA_SETIMAGEDATA )
 /*
 void setText ( const QString & text )
 */
-HB_FUNC( QMIMEDATA_SETTEXT )
+HB_FUNC_STATIC( QMIMEDATA_SETTEXT )
 {
   QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -386,7 +386,7 @@ HB_FUNC( QMIMEDATA_SETTEXT )
 /*
 void setUrls ( const QList<QUrl> & urls )
 */
-HB_FUNC( QMIMEDATA_SETURLS )
+HB_FUNC_STATIC( QMIMEDATA_SETURLS )
 {
   QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -408,7 +408,7 @@ par1 << *(QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1
 /*
 QString text () const
 */
-HB_FUNC( QMIMEDATA_TEXT )
+HB_FUNC_STATIC( QMIMEDATA_TEXT )
 {
   QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -422,7 +422,7 @@ HB_FUNC( QMIMEDATA_TEXT )
 /*
 QList<QUrl> urls () const
 */
-HB_FUNC( QMIMEDATA_URLS )
+HB_FUNC_STATIC( QMIMEDATA_URLS )
 {
   QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

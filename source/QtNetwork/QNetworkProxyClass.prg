@@ -117,7 +117,7 @@ RETURN
 /*
 QNetworkProxy ()
 */
-HB_FUNC( QNETWORKPROXY_NEW1 )
+HB_FUNC_STATIC( QNETWORKPROXY_NEW1 )
 {
   QNetworkProxy * o = NULL;
   o = new QNetworkProxy (  );
@@ -135,7 +135,7 @@ HB_FUNC( QNETWORKPROXY_NEW1 )
 /*
 QNetworkProxy ( ProxyType type, const QString & hostName = QString(), quint16 port = 0, const QString & user = QString(), const QString & password = QString() )
 */
-HB_FUNC( QNETWORKPROXY_NEW2 )
+HB_FUNC_STATIC( QNETWORKPROXY_NEW2 )
 {
   QNetworkProxy * o = NULL;
   int par1 = hb_parni(1);
@@ -158,7 +158,7 @@ HB_FUNC( QNETWORKPROXY_NEW2 )
 /*
 QNetworkProxy ( const QNetworkProxy & other )
 */
-HB_FUNC( QNETWORKPROXY_NEW3 )
+HB_FUNC_STATIC( QNETWORKPROXY_NEW3 )
 {
   QNetworkProxy * o = NULL;
   QNetworkProxy * par1 = (QNetworkProxy *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -178,7 +178,7 @@ HB_FUNC( QNETWORKPROXY_NEW3 )
 //[2]QNetworkProxy ( ProxyType type, const QString & hostName = QString(), quint16 port = 0, const QString & user = QString(), const QString & password = QString() )
 //[3]QNetworkProxy ( const QNetworkProxy & other )
 
-HB_FUNC( QNETWORKPROXY_NEW )
+HB_FUNC_STATIC( QNETWORKPROXY_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -198,7 +198,7 @@ HB_FUNC( QNETWORKPROXY_NEW )
   }
 }
 
-HB_FUNC( QNETWORKPROXY_DELETE )
+HB_FUNC_STATIC( QNETWORKPROXY_DELETE )
 {
   QNetworkProxy * obj = (QNetworkProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -217,7 +217,7 @@ HB_FUNC( QNETWORKPROXY_DELETE )
 /*
 Capabilities capabilities () const
 */
-HB_FUNC( QNETWORKPROXY_CAPABILITIES )
+HB_FUNC_STATIC( QNETWORKPROXY_CAPABILITIES )
 {
   QNetworkProxy * obj = (QNetworkProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -231,7 +231,7 @@ HB_FUNC( QNETWORKPROXY_CAPABILITIES )
 /*
 QString hostName () const
 */
-HB_FUNC( QNETWORKPROXY_HOSTNAME )
+HB_FUNC_STATIC( QNETWORKPROXY_HOSTNAME )
 {
   QNetworkProxy * obj = (QNetworkProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -245,7 +245,7 @@ HB_FUNC( QNETWORKPROXY_HOSTNAME )
 /*
 bool isCachingProxy () const
 */
-HB_FUNC( QNETWORKPROXY_ISCACHINGPROXY )
+HB_FUNC_STATIC( QNETWORKPROXY_ISCACHINGPROXY )
 {
   QNetworkProxy * obj = (QNetworkProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -259,7 +259,7 @@ HB_FUNC( QNETWORKPROXY_ISCACHINGPROXY )
 /*
 bool isTransparentProxy () const
 */
-HB_FUNC( QNETWORKPROXY_ISTRANSPARENTPROXY )
+HB_FUNC_STATIC( QNETWORKPROXY_ISTRANSPARENTPROXY )
 {
   QNetworkProxy * obj = (QNetworkProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -273,7 +273,7 @@ HB_FUNC( QNETWORKPROXY_ISTRANSPARENTPROXY )
 /*
 QString password () const
 */
-HB_FUNC( QNETWORKPROXY_PASSWORD )
+HB_FUNC_STATIC( QNETWORKPROXY_PASSWORD )
 {
   QNetworkProxy * obj = (QNetworkProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -287,7 +287,7 @@ HB_FUNC( QNETWORKPROXY_PASSWORD )
 /*
 quint16 port () const
 */
-HB_FUNC( QNETWORKPROXY_PORT )
+HB_FUNC_STATIC( QNETWORKPROXY_PORT )
 {
   QNetworkProxy * obj = (QNetworkProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -301,7 +301,7 @@ HB_FUNC( QNETWORKPROXY_PORT )
 /*
 void setCapabilities ( Capabilities capabilities )
 */
-HB_FUNC( QNETWORKPROXY_SETCAPABILITIES )
+HB_FUNC_STATIC( QNETWORKPROXY_SETCAPABILITIES )
 {
   QNetworkProxy * obj = (QNetworkProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -316,7 +316,7 @@ HB_FUNC( QNETWORKPROXY_SETCAPABILITIES )
 /*
 void setHostName ( const QString & hostName )
 */
-HB_FUNC( QNETWORKPROXY_SETHOSTNAME )
+HB_FUNC_STATIC( QNETWORKPROXY_SETHOSTNAME )
 {
   QNetworkProxy * obj = (QNetworkProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -331,7 +331,7 @@ HB_FUNC( QNETWORKPROXY_SETHOSTNAME )
 /*
 void setPassword ( const QString & password )
 */
-HB_FUNC( QNETWORKPROXY_SETPASSWORD )
+HB_FUNC_STATIC( QNETWORKPROXY_SETPASSWORD )
 {
   QNetworkProxy * obj = (QNetworkProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -346,7 +346,7 @@ HB_FUNC( QNETWORKPROXY_SETPASSWORD )
 /*
 void setPort ( quint16 port )
 */
-HB_FUNC( QNETWORKPROXY_SETPORT )
+HB_FUNC_STATIC( QNETWORKPROXY_SETPORT )
 {
   QNetworkProxy * obj = (QNetworkProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -361,7 +361,7 @@ HB_FUNC( QNETWORKPROXY_SETPORT )
 /*
 void setType ( QNetworkProxy::ProxyType type )
 */
-HB_FUNC( QNETWORKPROXY_SETTYPE )
+HB_FUNC_STATIC( QNETWORKPROXY_SETTYPE )
 {
   QNetworkProxy * obj = (QNetworkProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -376,7 +376,7 @@ HB_FUNC( QNETWORKPROXY_SETTYPE )
 /*
 void setUser ( const QString & user )
 */
-HB_FUNC( QNETWORKPROXY_SETUSER )
+HB_FUNC_STATIC( QNETWORKPROXY_SETUSER )
 {
   QNetworkProxy * obj = (QNetworkProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -391,7 +391,7 @@ HB_FUNC( QNETWORKPROXY_SETUSER )
 /*
 QNetworkProxy::ProxyType type () const
 */
-HB_FUNC( QNETWORKPROXY_TYPE )
+HB_FUNC_STATIC( QNETWORKPROXY_TYPE )
 {
   QNetworkProxy * obj = (QNetworkProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -405,7 +405,7 @@ HB_FUNC( QNETWORKPROXY_TYPE )
 /*
 QString user () const
 */
-HB_FUNC( QNETWORKPROXY_USER )
+HB_FUNC_STATIC( QNETWORKPROXY_USER )
 {
   QNetworkProxy * obj = (QNetworkProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -420,7 +420,7 @@ HB_FUNC( QNETWORKPROXY_USER )
 /*
 QNetworkProxy applicationProxy ()
 */
-HB_FUNC( QNETWORKPROXY_APPLICATIONPROXY )
+HB_FUNC_STATIC( QNETWORKPROXY_APPLICATIONPROXY )
 {
   QNetworkProxy * ptr = new QNetworkProxy( QNetworkProxy::applicationProxy (  ) );
   _qt4xhb_createReturnClass ( ptr, "QNETWORKPROXY", true );}
@@ -429,7 +429,7 @@ HB_FUNC( QNETWORKPROXY_APPLICATIONPROXY )
 /*
 void setApplicationProxy ( const QNetworkProxy & networkProxy )
 */
-HB_FUNC( QNETWORKPROXY_SETAPPLICATIONPROXY )
+HB_FUNC_STATIC( QNETWORKPROXY_SETAPPLICATIONPROXY )
 {
   QNetworkProxy * par1 = (QNetworkProxy *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QNetworkProxy::setApplicationProxy ( *par1 );

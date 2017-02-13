@@ -84,7 +84,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QFUTUREWATCHERBASE_DELETE )
+HB_FUNC_STATIC( QFUTUREWATCHERBASE_DELETE )
 {
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -103,7 +103,7 @@ HB_FUNC( QFUTUREWATCHERBASE_DELETE )
 /*
 int progressValue() const
 */
-HB_FUNC( QFUTUREWATCHERBASE_PROGRESSVALUE )
+HB_FUNC_STATIC( QFUTUREWATCHERBASE_PROGRESSVALUE )
 {
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -117,7 +117,7 @@ HB_FUNC( QFUTUREWATCHERBASE_PROGRESSVALUE )
 /*
 int progressMinimum() const
 */
-HB_FUNC( QFUTUREWATCHERBASE_PROGRESSMINIMUM )
+HB_FUNC_STATIC( QFUTUREWATCHERBASE_PROGRESSMINIMUM )
 {
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -131,7 +131,7 @@ HB_FUNC( QFUTUREWATCHERBASE_PROGRESSMINIMUM )
 /*
 int progressMaximum() const
 */
-HB_FUNC( QFUTUREWATCHERBASE_PROGRESSMAXIMUM )
+HB_FUNC_STATIC( QFUTUREWATCHERBASE_PROGRESSMAXIMUM )
 {
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -145,7 +145,7 @@ HB_FUNC( QFUTUREWATCHERBASE_PROGRESSMAXIMUM )
 /*
 QString progressText() const
 */
-HB_FUNC( QFUTUREWATCHERBASE_PROGRESSTEXT )
+HB_FUNC_STATIC( QFUTUREWATCHERBASE_PROGRESSTEXT )
 {
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -159,7 +159,7 @@ HB_FUNC( QFUTUREWATCHERBASE_PROGRESSTEXT )
 /*
 bool isStarted() const
 */
-HB_FUNC( QFUTUREWATCHERBASE_ISSTARTED )
+HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISSTARTED )
 {
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -173,7 +173,7 @@ HB_FUNC( QFUTUREWATCHERBASE_ISSTARTED )
 /*
 bool isFinished() const
 */
-HB_FUNC( QFUTUREWATCHERBASE_ISFINISHED )
+HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISFINISHED )
 {
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -187,7 +187,7 @@ HB_FUNC( QFUTUREWATCHERBASE_ISFINISHED )
 /*
 bool isRunning() const
 */
-HB_FUNC( QFUTUREWATCHERBASE_ISRUNNING )
+HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISRUNNING )
 {
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -201,7 +201,7 @@ HB_FUNC( QFUTUREWATCHERBASE_ISRUNNING )
 /*
 bool isCanceled() const
 */
-HB_FUNC( QFUTUREWATCHERBASE_ISCANCELED )
+HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISCANCELED )
 {
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -215,7 +215,7 @@ HB_FUNC( QFUTUREWATCHERBASE_ISCANCELED )
 /*
 bool isPaused() const
 */
-HB_FUNC( QFUTUREWATCHERBASE_ISPAUSED )
+HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISPAUSED )
 {
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -229,7 +229,7 @@ HB_FUNC( QFUTUREWATCHERBASE_ISPAUSED )
 /*
 void waitForFinished()
 */
-HB_FUNC( QFUTUREWATCHERBASE_WAITFORFINISHED )
+HB_FUNC_STATIC( QFUTUREWATCHERBASE_WAITFORFINISHED )
 {
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -243,7 +243,7 @@ HB_FUNC( QFUTUREWATCHERBASE_WAITFORFINISHED )
 /*
 void setPendingResultsLimit(int limit)
 */
-HB_FUNC( QFUTUREWATCHERBASE_SETPENDINGRESULTSLIMIT )
+HB_FUNC_STATIC( QFUTUREWATCHERBASE_SETPENDINGRESULTSLIMIT )
 {
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -258,7 +258,7 @@ HB_FUNC( QFUTUREWATCHERBASE_SETPENDINGRESULTSLIMIT )
 /*
 bool event(QEvent *event)
 */
-HB_FUNC( QFUTUREWATCHERBASE_EVENT )
+HB_FUNC_STATIC( QFUTUREWATCHERBASE_EVENT )
 {
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -273,7 +273,7 @@ HB_FUNC( QFUTUREWATCHERBASE_EVENT )
 /*
 void cancel()
 */
-HB_FUNC( QFUTUREWATCHERBASE_CANCEL )
+HB_FUNC_STATIC( QFUTUREWATCHERBASE_CANCEL )
 {
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -287,7 +287,7 @@ HB_FUNC( QFUTUREWATCHERBASE_CANCEL )
 /*
 void setPaused(bool paused)
 */
-HB_FUNC( QFUTUREWATCHERBASE_SETPAUSED )
+HB_FUNC_STATIC( QFUTUREWATCHERBASE_SETPAUSED )
 {
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -302,7 +302,7 @@ HB_FUNC( QFUTUREWATCHERBASE_SETPAUSED )
 /*
 void pause()
 */
-HB_FUNC( QFUTUREWATCHERBASE_PAUSE )
+HB_FUNC_STATIC( QFUTUREWATCHERBASE_PAUSE )
 {
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -316,7 +316,7 @@ HB_FUNC( QFUTUREWATCHERBASE_PAUSE )
 /*
 void resume()
 */
-HB_FUNC( QFUTUREWATCHERBASE_RESUME )
+HB_FUNC_STATIC( QFUTUREWATCHERBASE_RESUME )
 {
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -330,7 +330,7 @@ HB_FUNC( QFUTUREWATCHERBASE_RESUME )
 /*
 void togglePaused()
 */
-HB_FUNC( QFUTUREWATCHERBASE_TOGGLEPAUSED )
+HB_FUNC_STATIC( QFUTUREWATCHERBASE_TOGGLEPAUSED )
 {
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

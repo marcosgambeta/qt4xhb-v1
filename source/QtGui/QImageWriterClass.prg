@@ -121,7 +121,7 @@ RETURN
 /*
 QImageWriter ()
 */
-HB_FUNC( QIMAGEWRITER_NEW1 )
+HB_FUNC_STATIC( QIMAGEWRITER_NEW1 )
 {
   QImageWriter * o = NULL;
   o = new QImageWriter (  );
@@ -139,7 +139,7 @@ HB_FUNC( QIMAGEWRITER_NEW1 )
 /*
 QImageWriter ( QIODevice * device, const QByteArray & format )
 */
-HB_FUNC( QIMAGEWRITER_NEW2 )
+HB_FUNC_STATIC( QIMAGEWRITER_NEW2 )
 {
   QImageWriter * o = NULL;
   QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -159,7 +159,7 @@ HB_FUNC( QIMAGEWRITER_NEW2 )
 /*
 QImageWriter ( const QString & fileName, const QByteArray & format = QByteArray() )
 */
-HB_FUNC( QIMAGEWRITER_NEW3 )
+HB_FUNC_STATIC( QIMAGEWRITER_NEW3 )
 {
   QImageWriter * o = NULL;
   QString par1 = hb_parc(1);
@@ -180,7 +180,7 @@ HB_FUNC( QIMAGEWRITER_NEW3 )
 //[2]QImageWriter ( QIODevice * device, const QByteArray & format )
 //[3]QImageWriter ( const QString & fileName, const QByteArray & format = QByteArray() )
 
-HB_FUNC( QIMAGEWRITER_NEW )
+HB_FUNC_STATIC( QIMAGEWRITER_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -200,7 +200,7 @@ HB_FUNC( QIMAGEWRITER_NEW )
   }
 }
 
-HB_FUNC( QIMAGEWRITER_DELETE )
+HB_FUNC_STATIC( QIMAGEWRITER_DELETE )
 {
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -219,7 +219,7 @@ HB_FUNC( QIMAGEWRITER_DELETE )
 /*
 bool canWrite () const
 */
-HB_FUNC( QIMAGEWRITER_CANWRITE )
+HB_FUNC_STATIC( QIMAGEWRITER_CANWRITE )
 {
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -233,7 +233,7 @@ HB_FUNC( QIMAGEWRITER_CANWRITE )
 /*
 int compression () const
 */
-HB_FUNC( QIMAGEWRITER_COMPRESSION )
+HB_FUNC_STATIC( QIMAGEWRITER_COMPRESSION )
 {
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -247,7 +247,7 @@ HB_FUNC( QIMAGEWRITER_COMPRESSION )
 /*
 QIODevice * device () const
 */
-HB_FUNC( QIMAGEWRITER_DEVICE )
+HB_FUNC_STATIC( QIMAGEWRITER_DEVICE )
 {
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -260,7 +260,7 @@ HB_FUNC( QIMAGEWRITER_DEVICE )
 /*
 ImageWriterError error () const
 */
-HB_FUNC( QIMAGEWRITER_ERROR )
+HB_FUNC_STATIC( QIMAGEWRITER_ERROR )
 {
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -274,7 +274,7 @@ HB_FUNC( QIMAGEWRITER_ERROR )
 /*
 QString errorString () const
 */
-HB_FUNC( QIMAGEWRITER_ERRORSTRING )
+HB_FUNC_STATIC( QIMAGEWRITER_ERRORSTRING )
 {
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -288,7 +288,7 @@ HB_FUNC( QIMAGEWRITER_ERRORSTRING )
 /*
 QString fileName () const
 */
-HB_FUNC( QIMAGEWRITER_FILENAME )
+HB_FUNC_STATIC( QIMAGEWRITER_FILENAME )
 {
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -302,7 +302,7 @@ HB_FUNC( QIMAGEWRITER_FILENAME )
 /*
 QByteArray format () const
 */
-HB_FUNC( QIMAGEWRITER_FORMAT )
+HB_FUNC_STATIC( QIMAGEWRITER_FORMAT )
 {
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -315,7 +315,7 @@ HB_FUNC( QIMAGEWRITER_FORMAT )
 /*
 float gamma () const
 */
-HB_FUNC( QIMAGEWRITER_GAMMA )
+HB_FUNC_STATIC( QIMAGEWRITER_GAMMA )
 {
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -329,7 +329,7 @@ HB_FUNC( QIMAGEWRITER_GAMMA )
 /*
 int quality () const
 */
-HB_FUNC( QIMAGEWRITER_QUALITY )
+HB_FUNC_STATIC( QIMAGEWRITER_QUALITY )
 {
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -343,7 +343,7 @@ HB_FUNC( QIMAGEWRITER_QUALITY )
 /*
 void setCompression ( int compression )
 */
-HB_FUNC( QIMAGEWRITER_SETCOMPRESSION )
+HB_FUNC_STATIC( QIMAGEWRITER_SETCOMPRESSION )
 {
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -358,7 +358,7 @@ HB_FUNC( QIMAGEWRITER_SETCOMPRESSION )
 /*
 void setDevice ( QIODevice * device )
 */
-HB_FUNC( QIMAGEWRITER_SETDEVICE )
+HB_FUNC_STATIC( QIMAGEWRITER_SETDEVICE )
 {
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -373,7 +373,7 @@ HB_FUNC( QIMAGEWRITER_SETDEVICE )
 /*
 void setFileName ( const QString & fileName )
 */
-HB_FUNC( QIMAGEWRITER_SETFILENAME )
+HB_FUNC_STATIC( QIMAGEWRITER_SETFILENAME )
 {
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -388,7 +388,7 @@ HB_FUNC( QIMAGEWRITER_SETFILENAME )
 /*
 void setFormat ( const QByteArray & format )
 */
-HB_FUNC( QIMAGEWRITER_SETFORMAT )
+HB_FUNC_STATIC( QIMAGEWRITER_SETFORMAT )
 {
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -403,7 +403,7 @@ HB_FUNC( QIMAGEWRITER_SETFORMAT )
 /*
 void setGamma ( float gamma )
 */
-HB_FUNC( QIMAGEWRITER_SETGAMMA )
+HB_FUNC_STATIC( QIMAGEWRITER_SETGAMMA )
 {
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -418,7 +418,7 @@ HB_FUNC( QIMAGEWRITER_SETGAMMA )
 /*
 void setQuality ( int quality )
 */
-HB_FUNC( QIMAGEWRITER_SETQUALITY )
+HB_FUNC_STATIC( QIMAGEWRITER_SETQUALITY )
 {
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -433,7 +433,7 @@ HB_FUNC( QIMAGEWRITER_SETQUALITY )
 /*
 void setText ( const QString & key, const QString & text )
 */
-HB_FUNC( QIMAGEWRITER_SETTEXT )
+HB_FUNC_STATIC( QIMAGEWRITER_SETTEXT )
 {
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -449,7 +449,7 @@ HB_FUNC( QIMAGEWRITER_SETTEXT )
 /*
 bool supportsOption ( QImageIOHandler::ImageOption option ) const
 */
-HB_FUNC( QIMAGEWRITER_SUPPORTSOPTION )
+HB_FUNC_STATIC( QIMAGEWRITER_SUPPORTSOPTION )
 {
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -464,7 +464,7 @@ HB_FUNC( QIMAGEWRITER_SUPPORTSOPTION )
 /*
 bool write ( const QImage & image )
 */
-HB_FUNC( QIMAGEWRITER_WRITE )
+HB_FUNC_STATIC( QIMAGEWRITER_WRITE )
 {
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -480,7 +480,7 @@ HB_FUNC( QIMAGEWRITER_WRITE )
 /*
 QList<QByteArray> supportedImageFormats ()
 */
-HB_FUNC( QIMAGEWRITER_SUPPORTEDIMAGEFORMATS )
+HB_FUNC_STATIC( QIMAGEWRITER_SUPPORTEDIMAGEFORMATS )
 {
   QList<QByteArray> list = QImageWriter::supportedImageFormats (  );
   PHB_DYNS pDynSym;

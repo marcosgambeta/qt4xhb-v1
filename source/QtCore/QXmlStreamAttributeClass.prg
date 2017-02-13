@@ -108,7 +108,7 @@ RETURN
 /*
 QXmlStreamAttribute()
 */
-HB_FUNC( QXMLSTREAMATTRIBUTE_NEW1 )
+HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NEW1 )
 {
   QXmlStreamAttribute * o = NULL;
   o = new QXmlStreamAttribute (  );
@@ -126,7 +126,7 @@ HB_FUNC( QXMLSTREAMATTRIBUTE_NEW1 )
 /*
 QXmlStreamAttribute(const QString & qualifiedName, const QString & value)
 */
-HB_FUNC( QXMLSTREAMATTRIBUTE_NEW2 )
+HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NEW2 )
 {
   QXmlStreamAttribute * o = NULL;
   QString par1 = hb_parc(1);
@@ -146,7 +146,7 @@ HB_FUNC( QXMLSTREAMATTRIBUTE_NEW2 )
 /*
 QXmlStreamAttribute(const QString & namespaceUri, const QString & name, const QString & value)
 */
-HB_FUNC( QXMLSTREAMATTRIBUTE_NEW3 )
+HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NEW3 )
 {
   QXmlStreamAttribute * o = NULL;
   QString par1 = hb_parc(1);
@@ -167,7 +167,7 @@ HB_FUNC( QXMLSTREAMATTRIBUTE_NEW3 )
 /*
 QXmlStreamAttribute(const QXmlStreamAttribute & other)
 */
-HB_FUNC( QXMLSTREAMATTRIBUTE_NEW4 )
+HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NEW4 )
 {
   QXmlStreamAttribute * o = NULL;
   QXmlStreamAttribute * par1 = (QXmlStreamAttribute *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -188,7 +188,7 @@ HB_FUNC( QXMLSTREAMATTRIBUTE_NEW4 )
 //[3]QXmlStreamAttribute(const QString & namespaceUri, const QString & name, const QString & value)
 //[4]QXmlStreamAttribute(const QXmlStreamAttribute & other)
 
-HB_FUNC( QXMLSTREAMATTRIBUTE_NEW )
+HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -212,7 +212,7 @@ HB_FUNC( QXMLSTREAMATTRIBUTE_NEW )
   }
 }
 
-HB_FUNC( QXMLSTREAMATTRIBUTE_DELETE )
+HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_DELETE )
 {
   QXmlStreamAttribute * obj = (QXmlStreamAttribute *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -231,7 +231,7 @@ HB_FUNC( QXMLSTREAMATTRIBUTE_DELETE )
 /*
 bool isDefault() const
 */
-HB_FUNC( QXMLSTREAMATTRIBUTE_ISDEFAULT )
+HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_ISDEFAULT )
 {
   QXmlStreamAttribute * obj = (QXmlStreamAttribute *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -245,7 +245,7 @@ HB_FUNC( QXMLSTREAMATTRIBUTE_ISDEFAULT )
 /*
 QStringRef name() const
 */
-HB_FUNC( QXMLSTREAMATTRIBUTE_NAME )
+HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NAME )
 {
   QXmlStreamAttribute * obj = (QXmlStreamAttribute *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -258,7 +258,7 @@ HB_FUNC( QXMLSTREAMATTRIBUTE_NAME )
 /*
 QStringRef namespaceUri() const
 */
-HB_FUNC( QXMLSTREAMATTRIBUTE_NAMESPACEURI )
+HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NAMESPACEURI )
 {
   QXmlStreamAttribute * obj = (QXmlStreamAttribute *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -271,7 +271,7 @@ HB_FUNC( QXMLSTREAMATTRIBUTE_NAMESPACEURI )
 /*
 QStringRef prefix() const
 */
-HB_FUNC( QXMLSTREAMATTRIBUTE_PREFIX )
+HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_PREFIX )
 {
   QXmlStreamAttribute * obj = (QXmlStreamAttribute *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -284,7 +284,7 @@ HB_FUNC( QXMLSTREAMATTRIBUTE_PREFIX )
 /*
 QStringRef qualifiedName() const
 */
-HB_FUNC( QXMLSTREAMATTRIBUTE_QUALIFIEDNAME )
+HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_QUALIFIEDNAME )
 {
   QXmlStreamAttribute * obj = (QXmlStreamAttribute *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -297,7 +297,7 @@ HB_FUNC( QXMLSTREAMATTRIBUTE_QUALIFIEDNAME )
 /*
 QStringRef value() const
 */
-HB_FUNC( QXMLSTREAMATTRIBUTE_VALUE )
+HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_VALUE )
 {
   QXmlStreamAttribute * obj = (QXmlStreamAttribute *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

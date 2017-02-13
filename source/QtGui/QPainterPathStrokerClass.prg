@@ -115,7 +115,7 @@ RETURN
 /*
 QPainterPathStroker ()
 */
-HB_FUNC( QPAINTERPATHSTROKER_NEW )
+HB_FUNC_STATIC( QPAINTERPATHSTROKER_NEW )
 {
   QPainterPathStroker * o = NULL;
   o = new QPainterPathStroker (  );
@@ -130,7 +130,7 @@ HB_FUNC( QPAINTERPATHSTROKER_NEW )
 }
 
 
-HB_FUNC( QPAINTERPATHSTROKER_DELETE )
+HB_FUNC_STATIC( QPAINTERPATHSTROKER_DELETE )
 {
   QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -149,7 +149,7 @@ HB_FUNC( QPAINTERPATHSTROKER_DELETE )
 /*
 Qt::PenCapStyle capStyle () const
 */
-HB_FUNC( QPAINTERPATHSTROKER_CAPSTYLE )
+HB_FUNC_STATIC( QPAINTERPATHSTROKER_CAPSTYLE )
 {
   QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -163,7 +163,7 @@ HB_FUNC( QPAINTERPATHSTROKER_CAPSTYLE )
 /*
 QPainterPath createStroke ( const QPainterPath & path ) const
 */
-HB_FUNC( QPAINTERPATHSTROKER_CREATESTROKE )
+HB_FUNC_STATIC( QPAINTERPATHSTROKER_CREATESTROKE )
 {
   QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -177,7 +177,7 @@ HB_FUNC( QPAINTERPATHSTROKER_CREATESTROKE )
 /*
 qreal curveThreshold () const
 */
-HB_FUNC( QPAINTERPATHSTROKER_CURVETHRESHOLD )
+HB_FUNC_STATIC( QPAINTERPATHSTROKER_CURVETHRESHOLD )
 {
   QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -191,7 +191,7 @@ HB_FUNC( QPAINTERPATHSTROKER_CURVETHRESHOLD )
 /*
 qreal dashOffset () const
 */
-HB_FUNC( QPAINTERPATHSTROKER_DASHOFFSET )
+HB_FUNC_STATIC( QPAINTERPATHSTROKER_DASHOFFSET )
 {
   QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -205,7 +205,7 @@ HB_FUNC( QPAINTERPATHSTROKER_DASHOFFSET )
 /*
 QVector<qreal> dashPattern () const
 */
-HB_FUNC( QPAINTERPATHSTROKER_DASHPATTERN )
+HB_FUNC_STATIC( QPAINTERPATHSTROKER_DASHPATTERN )
 {
   QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -228,7 +228,7 @@ HB_FUNC( QPAINTERPATHSTROKER_DASHPATTERN )
 /*
 Qt::PenJoinStyle joinStyle () const
 */
-HB_FUNC( QPAINTERPATHSTROKER_JOINSTYLE )
+HB_FUNC_STATIC( QPAINTERPATHSTROKER_JOINSTYLE )
 {
   QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -242,7 +242,7 @@ HB_FUNC( QPAINTERPATHSTROKER_JOINSTYLE )
 /*
 qreal miterLimit () const
 */
-HB_FUNC( QPAINTERPATHSTROKER_MITERLIMIT )
+HB_FUNC_STATIC( QPAINTERPATHSTROKER_MITERLIMIT )
 {
   QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -256,7 +256,7 @@ HB_FUNC( QPAINTERPATHSTROKER_MITERLIMIT )
 /*
 void setCapStyle ( Qt::PenCapStyle style )
 */
-HB_FUNC( QPAINTERPATHSTROKER_SETCAPSTYLE )
+HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETCAPSTYLE )
 {
   QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -271,7 +271,7 @@ HB_FUNC( QPAINTERPATHSTROKER_SETCAPSTYLE )
 /*
 void setCurveThreshold ( qreal threshold )
 */
-HB_FUNC( QPAINTERPATHSTROKER_SETCURVETHRESHOLD )
+HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETCURVETHRESHOLD )
 {
   QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -286,7 +286,7 @@ HB_FUNC( QPAINTERPATHSTROKER_SETCURVETHRESHOLD )
 /*
 void setDashOffset ( qreal offset )
 */
-HB_FUNC( QPAINTERPATHSTROKER_SETDASHOFFSET )
+HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETDASHOFFSET )
 {
   QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -301,7 +301,7 @@ HB_FUNC( QPAINTERPATHSTROKER_SETDASHOFFSET )
 /*
 void setDashPattern ( Qt::PenStyle style )
 */
-HB_FUNC( QPAINTERPATHSTROKER_SETDASHPATTERN1 )
+HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETDASHPATTERN1 )
 {
   QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -316,7 +316,7 @@ HB_FUNC( QPAINTERPATHSTROKER_SETDASHPATTERN1 )
 /*
 void setDashPattern ( const QVector<qreal> & dashPattern )
 */
-HB_FUNC( QPAINTERPATHSTROKER_SETDASHPATTERN2 )
+HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETDASHPATTERN2 )
 {
   QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -340,7 +340,7 @@ par1 << temp1;
 //[1]void setDashPattern ( Qt::PenStyle style )
 //[2]void setDashPattern ( const QVector<qreal> & dashPattern )
 
-HB_FUNC( QPAINTERPATHSTROKER_SETDASHPATTERN )
+HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETDASHPATTERN )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
@@ -355,7 +355,7 @@ HB_FUNC( QPAINTERPATHSTROKER_SETDASHPATTERN )
 /*
 void setJoinStyle ( Qt::PenJoinStyle style )
 */
-HB_FUNC( QPAINTERPATHSTROKER_SETJOINSTYLE )
+HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETJOINSTYLE )
 {
   QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -370,7 +370,7 @@ HB_FUNC( QPAINTERPATHSTROKER_SETJOINSTYLE )
 /*
 void setMiterLimit ( qreal limit )
 */
-HB_FUNC( QPAINTERPATHSTROKER_SETMITERLIMIT )
+HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETMITERLIMIT )
 {
   QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -385,7 +385,7 @@ HB_FUNC( QPAINTERPATHSTROKER_SETMITERLIMIT )
 /*
 void setWidth ( qreal width )
 */
-HB_FUNC( QPAINTERPATHSTROKER_SETWIDTH )
+HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETWIDTH )
 {
   QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -400,7 +400,7 @@ HB_FUNC( QPAINTERPATHSTROKER_SETWIDTH )
 /*
 qreal width () const
 */
-HB_FUNC( QPAINTERPATHSTROKER_WIDTH )
+HB_FUNC_STATIC( QPAINTERPATHSTROKER_WIDTH )
 {
   QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

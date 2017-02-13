@@ -111,7 +111,7 @@ RETURN
 /*
 QMenu ( QWidget * parent = 0 )
 */
-HB_FUNC( QMENU_NEW1 )
+HB_FUNC_STATIC( QMENU_NEW1 )
 {
   QMenu * o = NULL;
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -127,7 +127,7 @@ HB_FUNC( QMENU_NEW1 )
 /*
 QMenu ( const QString & title, QWidget * parent = 0 )
 */
-HB_FUNC( QMENU_NEW2 )
+HB_FUNC_STATIC( QMENU_NEW2 )
 {
   QMenu * o = NULL;
   QString par1 = hb_parc(1);
@@ -144,7 +144,7 @@ HB_FUNC( QMENU_NEW2 )
 //[1]QMenu ( QWidget * parent = 0 )
 //[2]QMenu ( const QString & title, QWidget * parent = 0 )
 
-HB_FUNC( QMENU_NEW )
+HB_FUNC_STATIC( QMENU_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
@@ -160,7 +160,7 @@ HB_FUNC( QMENU_NEW )
   }
 }
 
-HB_FUNC( QMENU_DELETE )
+HB_FUNC_STATIC( QMENU_DELETE )
 {
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -179,7 +179,7 @@ HB_FUNC( QMENU_DELETE )
 /*
 QAction * actionAt ( const QPoint & pt ) const
 */
-HB_FUNC( QMENU_ACTIONAT )
+HB_FUNC_STATIC( QMENU_ACTIONAT )
 {
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -193,7 +193,7 @@ HB_FUNC( QMENU_ACTIONAT )
 /*
 QRect actionGeometry ( QAction * act ) const
 */
-HB_FUNC( QMENU_ACTIONGEOMETRY )
+HB_FUNC_STATIC( QMENU_ACTIONGEOMETRY )
 {
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -207,7 +207,7 @@ HB_FUNC( QMENU_ACTIONGEOMETRY )
 /*
 QAction * activeAction () const
 */
-HB_FUNC( QMENU_ACTIVEACTION )
+HB_FUNC_STATIC( QMENU_ACTIVEACTION )
 {
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -220,7 +220,7 @@ HB_FUNC( QMENU_ACTIVEACTION )
 /*
 QAction * addAction ( const QString & text )
 */
-HB_FUNC( QMENU_ADDACTION1 )
+HB_FUNC_STATIC( QMENU_ADDACTION1 )
 {
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -234,7 +234,7 @@ HB_FUNC( QMENU_ADDACTION1 )
 /*
 QAction * addAction ( const QIcon & icon, const QString & text )
 */
-HB_FUNC( QMENU_ADDACTION2 )
+HB_FUNC_STATIC( QMENU_ADDACTION2 )
 {
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -249,7 +249,7 @@ HB_FUNC( QMENU_ADDACTION2 )
 /*
 QAction * addAction ( const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut = 0 )
 */
-HB_FUNC( QMENU_ADDACTION3 )
+HB_FUNC_STATIC( QMENU_ADDACTION3 )
 {
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -266,7 +266,7 @@ HB_FUNC( QMENU_ADDACTION3 )
 /*
 QAction * addAction ( const QIcon & icon, const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut = 0 )
 */
-HB_FUNC( QMENU_ADDACTION4 )
+HB_FUNC_STATIC( QMENU_ADDACTION4 )
 {
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -284,7 +284,7 @@ HB_FUNC( QMENU_ADDACTION4 )
 /*
 void addAction ( QAction * action )
 */
-HB_FUNC( QMENU_ADDACTION5 )
+HB_FUNC_STATIC( QMENU_ADDACTION5 )
 {
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -302,7 +302,7 @@ HB_FUNC( QMENU_ADDACTION5 )
 //[4]QAction * addAction ( const QIcon & icon, const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut = 0 )
 //[5]void addAction ( QAction * action )
 
-HB_FUNC( QMENU_ADDACTION )
+HB_FUNC_STATIC( QMENU_ADDACTION )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
@@ -329,7 +329,7 @@ HB_FUNC( QMENU_ADDACTION )
 /*
 QAction * addMenu ( QMenu * menu )
 */
-HB_FUNC( QMENU_ADDMENU1 )
+HB_FUNC_STATIC( QMENU_ADDMENU1 )
 {
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -343,7 +343,7 @@ HB_FUNC( QMENU_ADDMENU1 )
 /*
 QMenu * addMenu ( const QString & title )
 */
-HB_FUNC( QMENU_ADDMENU2 )
+HB_FUNC_STATIC( QMENU_ADDMENU2 )
 {
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -357,7 +357,7 @@ HB_FUNC( QMENU_ADDMENU2 )
 /*
 QMenu * addMenu ( const QIcon & icon, const QString & title )
 */
-HB_FUNC( QMENU_ADDMENU3 )
+HB_FUNC_STATIC( QMENU_ADDMENU3 )
 {
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -373,7 +373,7 @@ HB_FUNC( QMENU_ADDMENU3 )
 //[2]QMenu * addMenu ( const QString & title )
 //[3]QMenu * addMenu ( const QIcon & icon, const QString & title )
 
-HB_FUNC( QMENU_ADDMENU )
+HB_FUNC_STATIC( QMENU_ADDMENU )
 {
   if( ISNUMPAR(1) && ISQMENU(1) )
   {
@@ -392,7 +392,7 @@ HB_FUNC( QMENU_ADDMENU )
 /*
 QAction * addSeparator ()
 */
-HB_FUNC( QMENU_ADDSEPARATOR )
+HB_FUNC_STATIC( QMENU_ADDSEPARATOR )
 {
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -405,7 +405,7 @@ HB_FUNC( QMENU_ADDSEPARATOR )
 /*
 void clear ()
 */
-HB_FUNC( QMENU_CLEAR )
+HB_FUNC_STATIC( QMENU_CLEAR )
 {
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -419,7 +419,7 @@ HB_FUNC( QMENU_CLEAR )
 /*
 QAction * defaultAction () const
 */
-HB_FUNC( QMENU_DEFAULTACTION )
+HB_FUNC_STATIC( QMENU_DEFAULTACTION )
 {
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -432,7 +432,7 @@ HB_FUNC( QMENU_DEFAULTACTION )
 /*
 QAction * exec ()
 */
-HB_FUNC( QMENU_EXEC1 )
+HB_FUNC_STATIC( QMENU_EXEC1 )
 {
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -445,7 +445,7 @@ HB_FUNC( QMENU_EXEC1 )
 /*
 QAction * exec ( const QPoint & p, QAction * action = 0 )
 */
-HB_FUNC( QMENU_EXEC2 )
+HB_FUNC_STATIC( QMENU_EXEC2 )
 {
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -460,7 +460,7 @@ HB_FUNC( QMENU_EXEC2 )
 /*
 void hideTearOffMenu ()
 */
-HB_FUNC( QMENU_HIDETEAROFFMENU )
+HB_FUNC_STATIC( QMENU_HIDETEAROFFMENU )
 {
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -474,7 +474,7 @@ HB_FUNC( QMENU_HIDETEAROFFMENU )
 /*
 QIcon icon () const
 */
-HB_FUNC( QMENU_ICON )
+HB_FUNC_STATIC( QMENU_ICON )
 {
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -487,7 +487,7 @@ HB_FUNC( QMENU_ICON )
 /*
 QAction * insertMenu ( QAction * before, QMenu * menu )
 */
-HB_FUNC( QMENU_INSERTMENU )
+HB_FUNC_STATIC( QMENU_INSERTMENU )
 {
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -502,7 +502,7 @@ HB_FUNC( QMENU_INSERTMENU )
 /*
 QAction * insertSeparator ( QAction * before )
 */
-HB_FUNC( QMENU_INSERTSEPARATOR )
+HB_FUNC_STATIC( QMENU_INSERTSEPARATOR )
 {
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -516,7 +516,7 @@ HB_FUNC( QMENU_INSERTSEPARATOR )
 /*
 bool isEmpty () const
 */
-HB_FUNC( QMENU_ISEMPTY )
+HB_FUNC_STATIC( QMENU_ISEMPTY )
 {
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -530,7 +530,7 @@ HB_FUNC( QMENU_ISEMPTY )
 /*
 bool isTearOffEnabled () const
 */
-HB_FUNC( QMENU_ISTEAROFFENABLED )
+HB_FUNC_STATIC( QMENU_ISTEAROFFENABLED )
 {
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -544,7 +544,7 @@ HB_FUNC( QMENU_ISTEAROFFENABLED )
 /*
 bool isTearOffMenuVisible () const
 */
-HB_FUNC( QMENU_ISTEAROFFMENUVISIBLE )
+HB_FUNC_STATIC( QMENU_ISTEAROFFMENUVISIBLE )
 {
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -559,7 +559,7 @@ HB_FUNC( QMENU_ISTEAROFFMENUVISIBLE )
 /*
 QAction * menuAction () const
 */
-HB_FUNC( QMENU_MENUACTION )
+HB_FUNC_STATIC( QMENU_MENUACTION )
 {
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -572,7 +572,7 @@ HB_FUNC( QMENU_MENUACTION )
 /*
 void popup ( const QPoint & p, QAction * atAction = 0 )
 */
-HB_FUNC( QMENU_POPUP )
+HB_FUNC_STATIC( QMENU_POPUP )
 {
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -588,7 +588,7 @@ HB_FUNC( QMENU_POPUP )
 /*
 bool separatorsCollapsible () const
 */
-HB_FUNC( QMENU_SEPARATORSCOLLAPSIBLE )
+HB_FUNC_STATIC( QMENU_SEPARATORSCOLLAPSIBLE )
 {
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -602,7 +602,7 @@ HB_FUNC( QMENU_SEPARATORSCOLLAPSIBLE )
 /*
 void setActiveAction ( QAction * act )
 */
-HB_FUNC( QMENU_SETACTIVEACTION )
+HB_FUNC_STATIC( QMENU_SETACTIVEACTION )
 {
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -617,7 +617,7 @@ HB_FUNC( QMENU_SETACTIVEACTION )
 /*
 void setDefaultAction ( QAction * act )
 */
-HB_FUNC( QMENU_SETDEFAULTACTION )
+HB_FUNC_STATIC( QMENU_SETDEFAULTACTION )
 {
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -632,7 +632,7 @@ HB_FUNC( QMENU_SETDEFAULTACTION )
 /*
 void setIcon ( const QIcon & icon )
 */
-HB_FUNC( QMENU_SETICON )
+HB_FUNC_STATIC( QMENU_SETICON )
 {
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -647,7 +647,7 @@ HB_FUNC( QMENU_SETICON )
 /*
 void setSeparatorsCollapsible ( bool collapse )
 */
-HB_FUNC( QMENU_SETSEPARATORSCOLLAPSIBLE )
+HB_FUNC_STATIC( QMENU_SETSEPARATORSCOLLAPSIBLE )
 {
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -662,7 +662,7 @@ HB_FUNC( QMENU_SETSEPARATORSCOLLAPSIBLE )
 /*
 void setTearOffEnabled ( bool )
 */
-HB_FUNC( QMENU_SETTEAROFFENABLED )
+HB_FUNC_STATIC( QMENU_SETTEAROFFENABLED )
 {
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -677,7 +677,7 @@ HB_FUNC( QMENU_SETTEAROFFENABLED )
 /*
 void setTitle ( const QString & title )
 */
-HB_FUNC( QMENU_SETTITLE )
+HB_FUNC_STATIC( QMENU_SETTITLE )
 {
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -692,7 +692,7 @@ HB_FUNC( QMENU_SETTITLE )
 /*
 QString title () const
 */
-HB_FUNC( QMENU_TITLE )
+HB_FUNC_STATIC( QMENU_TITLE )
 {
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -706,7 +706,7 @@ HB_FUNC( QMENU_TITLE )
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC( QMENU_SIZEHINT )
+HB_FUNC_STATIC( QMENU_SIZEHINT )
 {
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -721,7 +721,7 @@ HB_FUNC( QMENU_SIZEHINT )
 /*
 QAction * exec ( QList<QAction *> actions, const QPoint & pos, QAction * at, QWidget * parent )
 */
-HB_FUNC( QMENU_EXEC3 )
+HB_FUNC_STATIC( QMENU_EXEC3 )
 {
 QList<QAction *> par1;
 PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
@@ -740,7 +740,7 @@ par1 << (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1
 /*
 QAction * exec ( QList<QAction *> actions, const QPoint & pos, QAction * at = 0 )
 */
-HB_FUNC( QMENU_EXEC4 )
+HB_FUNC_STATIC( QMENU_EXEC4 )
 {
 QList<QAction *> par1;
 PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
@@ -760,7 +760,7 @@ par1 << (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1
 //[3]QAction * exec ( QList<QAction *> actions, const QPoint & pos, QAction * at, QWidget * parent )
 //[4]QAction * exec ( QList<QAction *> actions, const QPoint & pos, QAction * at = 0 )
 
-HB_FUNC( QMENU_EXEC )
+HB_FUNC_STATIC( QMENU_EXEC )
 {
   if( ISNUMPAR(0) )
   {

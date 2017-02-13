@@ -109,7 +109,7 @@ RETURN
 /*
 QSslKey ()
 */
-HB_FUNC( QSSLKEY_NEW1 )
+HB_FUNC_STATIC( QSSLKEY_NEW1 )
 {
   QSslKey * o = NULL;
   o = new QSslKey (  );
@@ -127,7 +127,7 @@ HB_FUNC( QSSLKEY_NEW1 )
 /*
 QSslKey ( const QByteArray & encoded, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem, QSsl::KeyType type = QSsl::PrivateKey, const QByteArray & passPhrase = QByteArray() )
 */
-HB_FUNC( QSSLKEY_NEW2 )
+HB_FUNC_STATIC( QSSLKEY_NEW2 )
 {
   QSslKey * o = NULL;
   QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -150,7 +150,7 @@ HB_FUNC( QSSLKEY_NEW2 )
 /*
 QSslKey ( QIODevice * device, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem, QSsl::KeyType type = QSsl::PrivateKey, const QByteArray & passPhrase = QByteArray() )
 */
-HB_FUNC( QSSLKEY_NEW3 )
+HB_FUNC_STATIC( QSSLKEY_NEW3 )
 {
   QSslKey * o = NULL;
   QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -173,7 +173,7 @@ HB_FUNC( QSSLKEY_NEW3 )
 /*
 QSslKey ( const QSslKey & other )
 */
-HB_FUNC( QSSLKEY_NEW4 )
+HB_FUNC_STATIC( QSSLKEY_NEW4 )
 {
   QSslKey * o = NULL;
   QSslKey * par1 = (QSslKey *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -194,7 +194,7 @@ HB_FUNC( QSSLKEY_NEW4 )
 //[3]QSslKey ( QIODevice * device, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem, QSsl::KeyType type = QSsl::PrivateKey, const QByteArray & passPhrase = QByteArray() )
 //[4]QSslKey ( const QSslKey & other )
 
-HB_FUNC( QSSLKEY_NEW )
+HB_FUNC_STATIC( QSSLKEY_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -218,7 +218,7 @@ HB_FUNC( QSSLKEY_NEW )
   }
 }
 
-HB_FUNC( QSSLKEY_DELETE )
+HB_FUNC_STATIC( QSSLKEY_DELETE )
 {
   QSslKey * obj = (QSslKey *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -237,7 +237,7 @@ HB_FUNC( QSSLKEY_DELETE )
 /*
 QSsl::KeyAlgorithm algorithm () const
 */
-HB_FUNC( QSSLKEY_ALGORITHM )
+HB_FUNC_STATIC( QSSLKEY_ALGORITHM )
 {
   QSslKey * obj = (QSslKey *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -251,7 +251,7 @@ HB_FUNC( QSSLKEY_ALGORITHM )
 /*
 void clear ()
 */
-HB_FUNC( QSSLKEY_CLEAR )
+HB_FUNC_STATIC( QSSLKEY_CLEAR )
 {
   QSslKey * obj = (QSslKey *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -266,7 +266,7 @@ HB_FUNC( QSSLKEY_CLEAR )
 /*
 bool isNull () const
 */
-HB_FUNC( QSSLKEY_ISNULL )
+HB_FUNC_STATIC( QSSLKEY_ISNULL )
 {
   QSslKey * obj = (QSslKey *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -280,7 +280,7 @@ HB_FUNC( QSSLKEY_ISNULL )
 /*
 int length () const
 */
-HB_FUNC( QSSLKEY_LENGTH )
+HB_FUNC_STATIC( QSSLKEY_LENGTH )
 {
   QSslKey * obj = (QSslKey *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -294,7 +294,7 @@ HB_FUNC( QSSLKEY_LENGTH )
 /*
 QByteArray toDer ( const QByteArray & passPhrase = QByteArray() ) const
 */
-HB_FUNC( QSSLKEY_TODER )
+HB_FUNC_STATIC( QSSLKEY_TODER )
 {
   QSslKey * obj = (QSslKey *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -308,7 +308,7 @@ HB_FUNC( QSSLKEY_TODER )
 /*
 QByteArray toPem ( const QByteArray & passPhrase = QByteArray() ) const
 */
-HB_FUNC( QSSLKEY_TOPEM )
+HB_FUNC_STATIC( QSSLKEY_TOPEM )
 {
   QSslKey * obj = (QSslKey *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -322,7 +322,7 @@ HB_FUNC( QSSLKEY_TOPEM )
 /*
 QSsl::KeyType type () const
 */
-HB_FUNC( QSSLKEY_TYPE )
+HB_FUNC_STATIC( QSSLKEY_TYPE )
 {
   QSslKey * obj = (QSslKey *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

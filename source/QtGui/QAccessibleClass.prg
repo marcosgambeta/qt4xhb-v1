@@ -103,7 +103,7 @@ RETURN
 /*
 bool isActive ()
 */
-HB_FUNC( QACCESSIBLE_ISACTIVE )
+HB_FUNC_STATIC( QACCESSIBLE_ISACTIVE )
 {
   bool b = QAccessible::isActive (  );
   hb_retl( b );
@@ -113,7 +113,7 @@ HB_FUNC( QACCESSIBLE_ISACTIVE )
 /*
 QAccessibleInterface * queryAccessibleInterface ( QObject * object )
 */
-HB_FUNC( QACCESSIBLE_QUERYACCESSIBLEINTERFACE )
+HB_FUNC_STATIC( QACCESSIBLE_QUERYACCESSIBLEINTERFACE )
 {
   QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QAccessibleInterface * ptr = QAccessible::queryAccessibleInterface ( par1 );
@@ -124,7 +124,7 @@ HB_FUNC( QACCESSIBLE_QUERYACCESSIBLEINTERFACE )
 /*
 void setRootObject ( QObject * object )
 */
-HB_FUNC( QACCESSIBLE_SETROOTOBJECT )
+HB_FUNC_STATIC( QACCESSIBLE_SETROOTOBJECT )
 {
   QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QAccessible::setRootObject ( par1 );
@@ -135,7 +135,7 @@ HB_FUNC( QACCESSIBLE_SETROOTOBJECT )
 /*
 void updateAccessibility ( QObject * object, int child, Event reason )
 */
-HB_FUNC( QACCESSIBLE_UPDATEACCESSIBILITY )
+HB_FUNC_STATIC( QACCESSIBLE_UPDATEACCESSIBILITY )
 {
   QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = hb_parni(2);

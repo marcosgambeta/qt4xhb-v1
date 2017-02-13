@@ -71,7 +71,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QVARIANTANIMATION_DELETE )
+HB_FUNC_STATIC( QVARIANTANIMATION_DELETE )
 {
   QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -91,7 +91,7 @@ HB_FUNC( QVARIANTANIMATION_DELETE )
 /*
 QVariant currentValue () const
 */
-HB_FUNC( QVARIANTANIMATION_CURRENTVALUE )
+HB_FUNC_STATIC( QVARIANTANIMATION_CURRENTVALUE )
 {
   QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -104,7 +104,7 @@ HB_FUNC( QVARIANTANIMATION_CURRENTVALUE )
 /*
 QEasingCurve easingCurve () const
 */
-HB_FUNC( QVARIANTANIMATION_EASINGCURVE )
+HB_FUNC_STATIC( QVARIANTANIMATION_EASINGCURVE )
 {
   QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -117,7 +117,7 @@ HB_FUNC( QVARIANTANIMATION_EASINGCURVE )
 /*
 QVariant endValue () const
 */
-HB_FUNC( QVARIANTANIMATION_ENDVALUE )
+HB_FUNC_STATIC( QVARIANTANIMATION_ENDVALUE )
 {
   QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -130,7 +130,7 @@ HB_FUNC( QVARIANTANIMATION_ENDVALUE )
 /*
 QVariant keyValueAt ( qreal step ) const
 */
-HB_FUNC( QVARIANTANIMATION_KEYVALUEAT )
+HB_FUNC_STATIC( QVARIANTANIMATION_KEYVALUEAT )
 {
   QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -145,7 +145,7 @@ HB_FUNC( QVARIANTANIMATION_KEYVALUEAT )
 /*
 void setDuration ( int msecs )
 */
-HB_FUNC( QVARIANTANIMATION_SETDURATION )
+HB_FUNC_STATIC( QVARIANTANIMATION_SETDURATION )
 {
   QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -160,7 +160,7 @@ HB_FUNC( QVARIANTANIMATION_SETDURATION )
 /*
 void setEasingCurve ( const QEasingCurve & easing )
 */
-HB_FUNC( QVARIANTANIMATION_SETEASINGCURVE )
+HB_FUNC_STATIC( QVARIANTANIMATION_SETEASINGCURVE )
 {
   QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -175,7 +175,7 @@ HB_FUNC( QVARIANTANIMATION_SETEASINGCURVE )
 /*
 void setEndValue ( const QVariant & value )
 */
-HB_FUNC( QVARIANTANIMATION_SETENDVALUE )
+HB_FUNC_STATIC( QVARIANTANIMATION_SETENDVALUE )
 {
   QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -190,7 +190,7 @@ HB_FUNC( QVARIANTANIMATION_SETENDVALUE )
 /*
 void setKeyValueAt ( qreal step, const QVariant & value )
 */
-HB_FUNC( QVARIANTANIMATION_SETKEYVALUEAT )
+HB_FUNC_STATIC( QVARIANTANIMATION_SETKEYVALUEAT )
 {
   QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -207,7 +207,7 @@ HB_FUNC( QVARIANTANIMATION_SETKEYVALUEAT )
 /*
 void setStartValue ( const QVariant & value )
 */
-HB_FUNC( QVARIANTANIMATION_SETSTARTVALUE )
+HB_FUNC_STATIC( QVARIANTANIMATION_SETSTARTVALUE )
 {
   QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -222,7 +222,7 @@ HB_FUNC( QVARIANTANIMATION_SETSTARTVALUE )
 /*
 QVariant startValue () const
 */
-HB_FUNC( QVARIANTANIMATION_STARTVALUE )
+HB_FUNC_STATIC( QVARIANTANIMATION_STARTVALUE )
 {
   QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

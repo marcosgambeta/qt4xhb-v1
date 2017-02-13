@@ -102,7 +102,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QGRAPHICSLAYOUTITEM_DELETE )
+HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_DELETE )
 {
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -121,7 +121,7 @@ HB_FUNC( QGRAPHICSLAYOUTITEM_DELETE )
 /*
 QRectF contentsRect () const
 */
-HB_FUNC( QGRAPHICSLAYOUTITEM_CONTENTSRECT )
+HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_CONTENTSRECT )
 {
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -134,7 +134,7 @@ HB_FUNC( QGRAPHICSLAYOUTITEM_CONTENTSRECT )
 /*
 QSizeF effectiveSizeHint ( Qt::SizeHint which, const QSizeF & constraint = QSizeF() ) const
 */
-HB_FUNC( QGRAPHICSLAYOUTITEM_EFFECTIVESIZEHINT )
+HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_EFFECTIVESIZEHINT )
 {
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -149,7 +149,7 @@ HB_FUNC( QGRAPHICSLAYOUTITEM_EFFECTIVESIZEHINT )
 /*
 QRectF geometry () const
 */
-HB_FUNC( QGRAPHICSLAYOUTITEM_GEOMETRY )
+HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_GEOMETRY )
 {
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -162,7 +162,7 @@ HB_FUNC( QGRAPHICSLAYOUTITEM_GEOMETRY )
 /*
 virtual void getContentsMargins ( qreal * left, qreal * top, qreal * right, qreal * bottom ) const
 */
-HB_FUNC( QGRAPHICSLAYOUTITEM_GETCONTENTSMARGINS )
+HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_GETCONTENTSMARGINS )
 {
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -184,7 +184,7 @@ HB_FUNC( QGRAPHICSLAYOUTITEM_GETCONTENTSMARGINS )
 /*
 QGraphicsItem * graphicsItem () const
 */
-HB_FUNC( QGRAPHICSLAYOUTITEM_GRAPHICSITEM )
+HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_GRAPHICSITEM )
 {
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -197,7 +197,7 @@ HB_FUNC( QGRAPHICSLAYOUTITEM_GRAPHICSITEM )
 /*
 bool isLayout () const
 */
-HB_FUNC( QGRAPHICSLAYOUTITEM_ISLAYOUT )
+HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_ISLAYOUT )
 {
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -211,7 +211,7 @@ HB_FUNC( QGRAPHICSLAYOUTITEM_ISLAYOUT )
 /*
 qreal maximumHeight () const
 */
-HB_FUNC( QGRAPHICSLAYOUTITEM_MAXIMUMHEIGHT )
+HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MAXIMUMHEIGHT )
 {
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -225,7 +225,7 @@ HB_FUNC( QGRAPHICSLAYOUTITEM_MAXIMUMHEIGHT )
 /*
 QSizeF maximumSize () const
 */
-HB_FUNC( QGRAPHICSLAYOUTITEM_MAXIMUMSIZE )
+HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MAXIMUMSIZE )
 {
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -238,7 +238,7 @@ HB_FUNC( QGRAPHICSLAYOUTITEM_MAXIMUMSIZE )
 /*
 qreal maximumWidth () const
 */
-HB_FUNC( QGRAPHICSLAYOUTITEM_MAXIMUMWIDTH )
+HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MAXIMUMWIDTH )
 {
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -252,7 +252,7 @@ HB_FUNC( QGRAPHICSLAYOUTITEM_MAXIMUMWIDTH )
 /*
 qreal minimumHeight () const
 */
-HB_FUNC( QGRAPHICSLAYOUTITEM_MINIMUMHEIGHT )
+HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MINIMUMHEIGHT )
 {
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -266,7 +266,7 @@ HB_FUNC( QGRAPHICSLAYOUTITEM_MINIMUMHEIGHT )
 /*
 QSizeF minimumSize () const
 */
-HB_FUNC( QGRAPHICSLAYOUTITEM_MINIMUMSIZE )
+HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MINIMUMSIZE )
 {
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -279,7 +279,7 @@ HB_FUNC( QGRAPHICSLAYOUTITEM_MINIMUMSIZE )
 /*
 qreal minimumWidth () const
 */
-HB_FUNC( QGRAPHICSLAYOUTITEM_MINIMUMWIDTH )
+HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MINIMUMWIDTH )
 {
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -293,7 +293,7 @@ HB_FUNC( QGRAPHICSLAYOUTITEM_MINIMUMWIDTH )
 /*
 bool ownedByLayout () const
 */
-HB_FUNC( QGRAPHICSLAYOUTITEM_OWNEDBYLAYOUT )
+HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_OWNEDBYLAYOUT )
 {
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -307,7 +307,7 @@ HB_FUNC( QGRAPHICSLAYOUTITEM_OWNEDBYLAYOUT )
 /*
 QGraphicsLayoutItem * parentLayoutItem () const
 */
-HB_FUNC( QGRAPHICSLAYOUTITEM_PARENTLAYOUTITEM )
+HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_PARENTLAYOUTITEM )
 {
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -320,7 +320,7 @@ HB_FUNC( QGRAPHICSLAYOUTITEM_PARENTLAYOUTITEM )
 /*
 qreal preferredHeight () const
 */
-HB_FUNC( QGRAPHICSLAYOUTITEM_PREFERREDHEIGHT )
+HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_PREFERREDHEIGHT )
 {
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -334,7 +334,7 @@ HB_FUNC( QGRAPHICSLAYOUTITEM_PREFERREDHEIGHT )
 /*
 QSizeF preferredSize () const
 */
-HB_FUNC( QGRAPHICSLAYOUTITEM_PREFERREDSIZE )
+HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_PREFERREDSIZE )
 {
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -347,7 +347,7 @@ HB_FUNC( QGRAPHICSLAYOUTITEM_PREFERREDSIZE )
 /*
 qreal preferredWidth () const
 */
-HB_FUNC( QGRAPHICSLAYOUTITEM_PREFERREDWIDTH )
+HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_PREFERREDWIDTH )
 {
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -361,7 +361,7 @@ HB_FUNC( QGRAPHICSLAYOUTITEM_PREFERREDWIDTH )
 /*
 virtual void setGeometry ( const QRectF & rect )
 */
-HB_FUNC( QGRAPHICSLAYOUTITEM_SETGEOMETRY )
+HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETGEOMETRY )
 {
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -376,7 +376,7 @@ HB_FUNC( QGRAPHICSLAYOUTITEM_SETGEOMETRY )
 /*
 void setMaximumHeight ( qreal height )
 */
-HB_FUNC( QGRAPHICSLAYOUTITEM_SETMAXIMUMHEIGHT )
+HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMAXIMUMHEIGHT )
 {
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -391,7 +391,7 @@ HB_FUNC( QGRAPHICSLAYOUTITEM_SETMAXIMUMHEIGHT )
 /*
 void setMaximumSize ( const QSizeF & size )
 */
-HB_FUNC( QGRAPHICSLAYOUTITEM_SETMAXIMUMSIZE1 )
+HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMAXIMUMSIZE1 )
 {
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -406,7 +406,7 @@ HB_FUNC( QGRAPHICSLAYOUTITEM_SETMAXIMUMSIZE1 )
 /*
 void setMaximumSize ( qreal w, qreal h )
 */
-HB_FUNC( QGRAPHICSLAYOUTITEM_SETMAXIMUMSIZE2 )
+HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMAXIMUMSIZE2 )
 {
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -422,7 +422,7 @@ HB_FUNC( QGRAPHICSLAYOUTITEM_SETMAXIMUMSIZE2 )
 //[1]void setMaximumSize ( const QSizeF & size )
 //[2]void setMaximumSize ( qreal w, qreal h )
 
-HB_FUNC( QGRAPHICSLAYOUTITEM_SETMAXIMUMSIZE )
+HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMAXIMUMSIZE )
 {
   if( ISNUMPAR(1) && ISQSIZEF(1) )
   {
@@ -437,7 +437,7 @@ HB_FUNC( QGRAPHICSLAYOUTITEM_SETMAXIMUMSIZE )
 /*
 void setMaximumWidth ( qreal width )
 */
-HB_FUNC( QGRAPHICSLAYOUTITEM_SETMAXIMUMWIDTH )
+HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMAXIMUMWIDTH )
 {
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -452,7 +452,7 @@ HB_FUNC( QGRAPHICSLAYOUTITEM_SETMAXIMUMWIDTH )
 /*
 void setMinimumHeight ( qreal height )
 */
-HB_FUNC( QGRAPHICSLAYOUTITEM_SETMINIMUMHEIGHT )
+HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMINIMUMHEIGHT )
 {
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -467,7 +467,7 @@ HB_FUNC( QGRAPHICSLAYOUTITEM_SETMINIMUMHEIGHT )
 /*
 void setMinimumSize ( const QSizeF & size )
 */
-HB_FUNC( QGRAPHICSLAYOUTITEM_SETMINIMUMSIZE1 )
+HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMINIMUMSIZE1 )
 {
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -482,7 +482,7 @@ HB_FUNC( QGRAPHICSLAYOUTITEM_SETMINIMUMSIZE1 )
 /*
 void setMinimumSize ( qreal w, qreal h )
 */
-HB_FUNC( QGRAPHICSLAYOUTITEM_SETMINIMUMSIZE2 )
+HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMINIMUMSIZE2 )
 {
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -495,7 +495,7 @@ HB_FUNC( QGRAPHICSLAYOUTITEM_SETMINIMUMSIZE2 )
 }
 
 
-HB_FUNC( QGRAPHICSLAYOUTITEM_SETMINIMUMSIZE )
+HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMINIMUMSIZE )
 {
   if( ISNUMPAR(1) && ISQSIZEF(1) )
   {
@@ -510,7 +510,7 @@ HB_FUNC( QGRAPHICSLAYOUTITEM_SETMINIMUMSIZE )
 /*
 void setMinimumWidth ( qreal width )
 */
-HB_FUNC( QGRAPHICSLAYOUTITEM_SETMINIMUMWIDTH )
+HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMINIMUMWIDTH )
 {
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -525,7 +525,7 @@ HB_FUNC( QGRAPHICSLAYOUTITEM_SETMINIMUMWIDTH )
 /*
 void setParentLayoutItem ( QGraphicsLayoutItem * parent )
 */
-HB_FUNC( QGRAPHICSLAYOUTITEM_SETPARENTLAYOUTITEM )
+HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPARENTLAYOUTITEM )
 {
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -540,7 +540,7 @@ HB_FUNC( QGRAPHICSLAYOUTITEM_SETPARENTLAYOUTITEM )
 /*
 void setPreferredHeight ( qreal height )
 */
-HB_FUNC( QGRAPHICSLAYOUTITEM_SETPREFERREDHEIGHT )
+HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPREFERREDHEIGHT )
 {
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -555,7 +555,7 @@ HB_FUNC( QGRAPHICSLAYOUTITEM_SETPREFERREDHEIGHT )
 /*
 void setPreferredSize ( const QSizeF & size )
 */
-HB_FUNC( QGRAPHICSLAYOUTITEM_SETPREFERREDSIZE1 )
+HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPREFERREDSIZE1 )
 {
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -570,7 +570,7 @@ HB_FUNC( QGRAPHICSLAYOUTITEM_SETPREFERREDSIZE1 )
 /*
 void setPreferredSize ( qreal w, qreal h )
 */
-HB_FUNC( QGRAPHICSLAYOUTITEM_SETPREFERREDSIZE2 )
+HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPREFERREDSIZE2 )
 {
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -583,7 +583,7 @@ HB_FUNC( QGRAPHICSLAYOUTITEM_SETPREFERREDSIZE2 )
 }
 
 
-HB_FUNC( QGRAPHICSLAYOUTITEM_SETPREFERREDSIZE )
+HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPREFERREDSIZE )
 {
   if( ISNUMPAR(1) && ISQSIZEF(1) )
   {
@@ -598,7 +598,7 @@ HB_FUNC( QGRAPHICSLAYOUTITEM_SETPREFERREDSIZE )
 /*
 void setPreferredWidth ( qreal width )
 */
-HB_FUNC( QGRAPHICSLAYOUTITEM_SETPREFERREDWIDTH )
+HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPREFERREDWIDTH )
 {
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -613,7 +613,7 @@ HB_FUNC( QGRAPHICSLAYOUTITEM_SETPREFERREDWIDTH )
 /*
 void setSizePolicy ( const QSizePolicy & policy )
 */
-HB_FUNC( QGRAPHICSLAYOUTITEM_SETSIZEPOLICY1 )
+HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETSIZEPOLICY1 )
 {
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -628,7 +628,7 @@ HB_FUNC( QGRAPHICSLAYOUTITEM_SETSIZEPOLICY1 )
 /*
 void setSizePolicy ( QSizePolicy::Policy hPolicy, QSizePolicy::Policy vPolicy, QSizePolicy::ControlType controlType = QSizePolicy::DefaultType )
 */
-HB_FUNC( QGRAPHICSLAYOUTITEM_SETSIZEPOLICY2 )
+HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETSIZEPOLICY2 )
 {
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -645,7 +645,7 @@ HB_FUNC( QGRAPHICSLAYOUTITEM_SETSIZEPOLICY2 )
 //[1]void setSizePolicy ( const QSizePolicy & policy )
 //[2]void setSizePolicy ( QSizePolicy::Policy hPolicy, QSizePolicy::Policy vPolicy, QSizePolicy::ControlType controlType = QSizePolicy::DefaultType )
 
-HB_FUNC( QGRAPHICSLAYOUTITEM_SETSIZEPOLICY )
+HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETSIZEPOLICY )
 {
   if( ISNUMPAR(1) && ISQSIZEPOLICY(1) )
   {
@@ -660,7 +660,7 @@ HB_FUNC( QGRAPHICSLAYOUTITEM_SETSIZEPOLICY )
 /*
 QSizePolicy sizePolicy () const
 */
-HB_FUNC( QGRAPHICSLAYOUTITEM_SIZEPOLICY )
+HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SIZEPOLICY )
 {
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -673,7 +673,7 @@ HB_FUNC( QGRAPHICSLAYOUTITEM_SIZEPOLICY )
 /*
 virtual void updateGeometry ()
 */
-HB_FUNC( QGRAPHICSLAYOUTITEM_UPDATEGEOMETRY )
+HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_UPDATEGEOMETRY )
 {
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

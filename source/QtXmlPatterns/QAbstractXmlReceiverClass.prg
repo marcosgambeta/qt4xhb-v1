@@ -105,7 +105,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QABSTRACTXMLRECEIVER_DELETE )
+HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_DELETE )
 {
   QAbstractXmlReceiver * obj = (QAbstractXmlReceiver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -124,7 +124,7 @@ HB_FUNC( QABSTRACTXMLRECEIVER_DELETE )
 /*
 virtual void atomicValue ( const QVariant & value ) = 0
 */
-HB_FUNC( QABSTRACTXMLRECEIVER_ATOMICVALUE )
+HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_ATOMICVALUE )
 {
   QAbstractXmlReceiver * obj = (QAbstractXmlReceiver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -139,7 +139,7 @@ HB_FUNC( QABSTRACTXMLRECEIVER_ATOMICVALUE )
 /*
 virtual void attribute ( const QXmlName & name, const QStringRef & value ) = 0
 */
-HB_FUNC( QABSTRACTXMLRECEIVER_ATTRIBUTE )
+HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_ATTRIBUTE )
 {
   QAbstractXmlReceiver * obj = (QAbstractXmlReceiver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -155,7 +155,7 @@ HB_FUNC( QABSTRACTXMLRECEIVER_ATTRIBUTE )
 /*
 virtual void characters ( const QStringRef & value ) = 0
 */
-HB_FUNC( QABSTRACTXMLRECEIVER_CHARACTERS )
+HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_CHARACTERS )
 {
   QAbstractXmlReceiver * obj = (QAbstractXmlReceiver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -170,7 +170,7 @@ HB_FUNC( QABSTRACTXMLRECEIVER_CHARACTERS )
 /*
 virtual void comment ( const QString & value ) = 0
 */
-HB_FUNC( QABSTRACTXMLRECEIVER_COMMENT )
+HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_COMMENT )
 {
   QAbstractXmlReceiver * obj = (QAbstractXmlReceiver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -185,7 +185,7 @@ HB_FUNC( QABSTRACTXMLRECEIVER_COMMENT )
 /*
 virtual void endDocument () = 0
 */
-HB_FUNC( QABSTRACTXMLRECEIVER_ENDDOCUMENT )
+HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_ENDDOCUMENT )
 {
   QAbstractXmlReceiver * obj = (QAbstractXmlReceiver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -199,7 +199,7 @@ HB_FUNC( QABSTRACTXMLRECEIVER_ENDDOCUMENT )
 /*
 virtual void endElement () = 0
 */
-HB_FUNC( QABSTRACTXMLRECEIVER_ENDELEMENT )
+HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_ENDELEMENT )
 {
   QAbstractXmlReceiver * obj = (QAbstractXmlReceiver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -213,7 +213,7 @@ HB_FUNC( QABSTRACTXMLRECEIVER_ENDELEMENT )
 /*
 virtual void endOfSequence () = 0
 */
-HB_FUNC( QABSTRACTXMLRECEIVER_ENDOFSEQUENCE )
+HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_ENDOFSEQUENCE )
 {
   QAbstractXmlReceiver * obj = (QAbstractXmlReceiver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -227,7 +227,7 @@ HB_FUNC( QABSTRACTXMLRECEIVER_ENDOFSEQUENCE )
 /*
 virtual void namespaceBinding ( const QXmlName & name ) = 0
 */
-HB_FUNC( QABSTRACTXMLRECEIVER_NAMESPACEBINDING )
+HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_NAMESPACEBINDING )
 {
   QAbstractXmlReceiver * obj = (QAbstractXmlReceiver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -242,7 +242,7 @@ HB_FUNC( QABSTRACTXMLRECEIVER_NAMESPACEBINDING )
 /*
 virtual void processingInstruction ( const QXmlName & target, const QString & value ) = 0
 */
-HB_FUNC( QABSTRACTXMLRECEIVER_PROCESSINGINSTRUCTION )
+HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_PROCESSINGINSTRUCTION )
 {
   QAbstractXmlReceiver * obj = (QAbstractXmlReceiver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -258,7 +258,7 @@ HB_FUNC( QABSTRACTXMLRECEIVER_PROCESSINGINSTRUCTION )
 /*
 virtual void startDocument () = 0
 */
-HB_FUNC( QABSTRACTXMLRECEIVER_STARTDOCUMENT )
+HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_STARTDOCUMENT )
 {
   QAbstractXmlReceiver * obj = (QAbstractXmlReceiver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -272,7 +272,7 @@ HB_FUNC( QABSTRACTXMLRECEIVER_STARTDOCUMENT )
 /*
 virtual void startElement ( const QXmlName & name ) = 0
 */
-HB_FUNC( QABSTRACTXMLRECEIVER_STARTELEMENT )
+HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_STARTELEMENT )
 {
   QAbstractXmlReceiver * obj = (QAbstractXmlReceiver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -287,7 +287,7 @@ HB_FUNC( QABSTRACTXMLRECEIVER_STARTELEMENT )
 /*
 virtual void startOfSequence () = 0
 */
-HB_FUNC( QABSTRACTXMLRECEIVER_STARTOFSEQUENCE )
+HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_STARTOFSEQUENCE )
 {
   QAbstractXmlReceiver * obj = (QAbstractXmlReceiver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

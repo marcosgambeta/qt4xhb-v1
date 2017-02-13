@@ -118,7 +118,7 @@ RETURN
 #include "qt4xhb_clsid.h"
 #include "qt4xhb_utils.h"
 
-HB_FUNC( QPAINTENGINESTATE_DELETE )
+HB_FUNC_STATIC( QPAINTENGINESTATE_DELETE )
 {
   QPaintEngineState * obj = (QPaintEngineState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -137,7 +137,7 @@ HB_FUNC( QPAINTENGINESTATE_DELETE )
 /*
 QBrush backgroundBrush () const
 */
-HB_FUNC( QPAINTENGINESTATE_BACKGROUNDBRUSH )
+HB_FUNC_STATIC( QPAINTENGINESTATE_BACKGROUNDBRUSH )
 {
   QPaintEngineState * obj = (QPaintEngineState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -150,7 +150,7 @@ HB_FUNC( QPAINTENGINESTATE_BACKGROUNDBRUSH )
 /*
 Qt::BGMode backgroundMode () const
 */
-HB_FUNC( QPAINTENGINESTATE_BACKGROUNDMODE )
+HB_FUNC_STATIC( QPAINTENGINESTATE_BACKGROUNDMODE )
 {
   QPaintEngineState * obj = (QPaintEngineState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -164,7 +164,7 @@ HB_FUNC( QPAINTENGINESTATE_BACKGROUNDMODE )
 /*
 QBrush brush () const
 */
-HB_FUNC( QPAINTENGINESTATE_BRUSH )
+HB_FUNC_STATIC( QPAINTENGINESTATE_BRUSH )
 {
   QPaintEngineState * obj = (QPaintEngineState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -177,7 +177,7 @@ HB_FUNC( QPAINTENGINESTATE_BRUSH )
 /*
 bool brushNeedsResolving () const
 */
-HB_FUNC( QPAINTENGINESTATE_BRUSHNEEDSRESOLVING )
+HB_FUNC_STATIC( QPAINTENGINESTATE_BRUSHNEEDSRESOLVING )
 {
   QPaintEngineState * obj = (QPaintEngineState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -191,7 +191,7 @@ HB_FUNC( QPAINTENGINESTATE_BRUSHNEEDSRESOLVING )
 /*
 QPointF brushOrigin () const
 */
-HB_FUNC( QPAINTENGINESTATE_BRUSHORIGIN )
+HB_FUNC_STATIC( QPAINTENGINESTATE_BRUSHORIGIN )
 {
   QPaintEngineState * obj = (QPaintEngineState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -204,7 +204,7 @@ HB_FUNC( QPAINTENGINESTATE_BRUSHORIGIN )
 /*
 Qt::ClipOperation clipOperation () const
 */
-HB_FUNC( QPAINTENGINESTATE_CLIPOPERATION )
+HB_FUNC_STATIC( QPAINTENGINESTATE_CLIPOPERATION )
 {
   QPaintEngineState * obj = (QPaintEngineState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -218,7 +218,7 @@ HB_FUNC( QPAINTENGINESTATE_CLIPOPERATION )
 /*
 QPainterPath clipPath () const
 */
-HB_FUNC( QPAINTENGINESTATE_CLIPPATH )
+HB_FUNC_STATIC( QPAINTENGINESTATE_CLIPPATH )
 {
   QPaintEngineState * obj = (QPaintEngineState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -231,7 +231,7 @@ HB_FUNC( QPAINTENGINESTATE_CLIPPATH )
 /*
 QRegion clipRegion () const
 */
-HB_FUNC( QPAINTENGINESTATE_CLIPREGION )
+HB_FUNC_STATIC( QPAINTENGINESTATE_CLIPREGION )
 {
   QPaintEngineState * obj = (QPaintEngineState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -244,7 +244,7 @@ HB_FUNC( QPAINTENGINESTATE_CLIPREGION )
 /*
 QPainter::CompositionMode compositionMode () const
 */
-HB_FUNC( QPAINTENGINESTATE_COMPOSITIONMODE )
+HB_FUNC_STATIC( QPAINTENGINESTATE_COMPOSITIONMODE )
 {
   QPaintEngineState * obj = (QPaintEngineState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -258,7 +258,7 @@ HB_FUNC( QPAINTENGINESTATE_COMPOSITIONMODE )
 /*
 QFont font () const
 */
-HB_FUNC( QPAINTENGINESTATE_FONT )
+HB_FUNC_STATIC( QPAINTENGINESTATE_FONT )
 {
   QPaintEngineState * obj = (QPaintEngineState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -271,7 +271,7 @@ HB_FUNC( QPAINTENGINESTATE_FONT )
 /*
 bool isClipEnabled () const
 */
-HB_FUNC( QPAINTENGINESTATE_ISCLIPENABLED )
+HB_FUNC_STATIC( QPAINTENGINESTATE_ISCLIPENABLED )
 {
   QPaintEngineState * obj = (QPaintEngineState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -285,7 +285,7 @@ HB_FUNC( QPAINTENGINESTATE_ISCLIPENABLED )
 /*
 qreal opacity () const
 */
-HB_FUNC( QPAINTENGINESTATE_OPACITY )
+HB_FUNC_STATIC( QPAINTENGINESTATE_OPACITY )
 {
   QPaintEngineState * obj = (QPaintEngineState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -299,7 +299,7 @@ HB_FUNC( QPAINTENGINESTATE_OPACITY )
 /*
 QPainter * painter () const
 */
-HB_FUNC( QPAINTENGINESTATE_PAINTER )
+HB_FUNC_STATIC( QPAINTENGINESTATE_PAINTER )
 {
   QPaintEngineState * obj = (QPaintEngineState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -312,7 +312,7 @@ HB_FUNC( QPAINTENGINESTATE_PAINTER )
 /*
 QPen pen () const
 */
-HB_FUNC( QPAINTENGINESTATE_PEN )
+HB_FUNC_STATIC( QPAINTENGINESTATE_PEN )
 {
   QPaintEngineState * obj = (QPaintEngineState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -325,7 +325,7 @@ HB_FUNC( QPAINTENGINESTATE_PEN )
 /*
 bool penNeedsResolving () const
 */
-HB_FUNC( QPAINTENGINESTATE_PENNEEDSRESOLVING )
+HB_FUNC_STATIC( QPAINTENGINESTATE_PENNEEDSRESOLVING )
 {
   QPaintEngineState * obj = (QPaintEngineState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -339,7 +339,7 @@ HB_FUNC( QPAINTENGINESTATE_PENNEEDSRESOLVING )
 /*
 QPainter::RenderHints renderHints () const
 */
-HB_FUNC( QPAINTENGINESTATE_RENDERHINTS )
+HB_FUNC_STATIC( QPAINTENGINESTATE_RENDERHINTS )
 {
   QPaintEngineState * obj = (QPaintEngineState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -353,7 +353,7 @@ HB_FUNC( QPAINTENGINESTATE_RENDERHINTS )
 /*
 QPaintEngine::DirtyFlags state () const
 */
-HB_FUNC( QPAINTENGINESTATE_STATE )
+HB_FUNC_STATIC( QPAINTENGINESTATE_STATE )
 {
   QPaintEngineState * obj = (QPaintEngineState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -367,7 +367,7 @@ HB_FUNC( QPAINTENGINESTATE_STATE )
 /*
 QTransform transform () const
 */
-HB_FUNC( QPAINTENGINESTATE_TRANSFORM )
+HB_FUNC_STATIC( QPAINTENGINESTATE_TRANSFORM )
 {
   QPaintEngineState * obj = (QPaintEngineState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

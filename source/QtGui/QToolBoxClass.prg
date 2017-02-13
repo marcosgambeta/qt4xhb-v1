@@ -86,7 +86,7 @@ RETURN
 /*
 QToolBox ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
-HB_FUNC( QTOOLBOX_NEW )
+HB_FUNC_STATIC( QTOOLBOX_NEW )
 {
   QToolBox * o = NULL;
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -100,7 +100,7 @@ HB_FUNC( QTOOLBOX_NEW )
 }
 
 
-HB_FUNC( QTOOLBOX_DELETE )
+HB_FUNC_STATIC( QTOOLBOX_DELETE )
 {
   QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -119,7 +119,7 @@ HB_FUNC( QTOOLBOX_DELETE )
 /*
 int addItem ( QWidget * widget, const QIcon & iconSet, const QString & text )
 */
-HB_FUNC( QTOOLBOX_ADDITEM1 )
+HB_FUNC_STATIC( QTOOLBOX_ADDITEM1 )
 {
   QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -136,7 +136,7 @@ HB_FUNC( QTOOLBOX_ADDITEM1 )
 /*
 int addItem ( QWidget * w, const QString & text )
 */
-HB_FUNC( QTOOLBOX_ADDITEM2 )
+HB_FUNC_STATIC( QTOOLBOX_ADDITEM2 )
 {
   QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -152,7 +152,7 @@ HB_FUNC( QTOOLBOX_ADDITEM2 )
 //[1]int addItem ( QWidget * widget, const QIcon & iconSet, const QString & text )
 //[2]int addItem ( QWidget * w, const QString & text )
 
-HB_FUNC( QTOOLBOX_ADDITEM )
+HB_FUNC_STATIC( QTOOLBOX_ADDITEM )
 {
   if( ISNUMPAR(3) && ISQWIDGET(1) && (ISQICON(2)||ISCHAR(2)) && ISCHAR(3) )
   {
@@ -167,7 +167,7 @@ HB_FUNC( QTOOLBOX_ADDITEM )
 /*
 int count () const
 */
-HB_FUNC( QTOOLBOX_COUNT )
+HB_FUNC_STATIC( QTOOLBOX_COUNT )
 {
   QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -181,7 +181,7 @@ HB_FUNC( QTOOLBOX_COUNT )
 /*
 int currentIndex () const
 */
-HB_FUNC( QTOOLBOX_CURRENTINDEX )
+HB_FUNC_STATIC( QTOOLBOX_CURRENTINDEX )
 {
   QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -195,7 +195,7 @@ HB_FUNC( QTOOLBOX_CURRENTINDEX )
 /*
 QWidget * currentWidget () const
 */
-HB_FUNC( QTOOLBOX_CURRENTWIDGET )
+HB_FUNC_STATIC( QTOOLBOX_CURRENTWIDGET )
 {
   QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -208,7 +208,7 @@ HB_FUNC( QTOOLBOX_CURRENTWIDGET )
 /*
 int indexOf ( QWidget * widget ) const
 */
-HB_FUNC( QTOOLBOX_INDEXOF )
+HB_FUNC_STATIC( QTOOLBOX_INDEXOF )
 {
   QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -223,7 +223,7 @@ HB_FUNC( QTOOLBOX_INDEXOF )
 /*
 int insertItem ( int index, QWidget * widget, const QIcon & icon, const QString & text )
 */
-HB_FUNC( QTOOLBOX_INSERTITEM1 )
+HB_FUNC_STATIC( QTOOLBOX_INSERTITEM1 )
 {
   QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -241,7 +241,7 @@ HB_FUNC( QTOOLBOX_INSERTITEM1 )
 /*
 int insertItem ( int index, QWidget * widget, const QString & text )
 */
-HB_FUNC( QTOOLBOX_INSERTITEM2 )
+HB_FUNC_STATIC( QTOOLBOX_INSERTITEM2 )
 {
   QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -258,7 +258,7 @@ HB_FUNC( QTOOLBOX_INSERTITEM2 )
 //[1]int insertItem ( int index, QWidget * widget, const QIcon & icon, const QString & text )
 //[2]int insertItem ( int index, QWidget * widget, const QString & text )
 
-HB_FUNC( QTOOLBOX_INSERTITEM )
+HB_FUNC_STATIC( QTOOLBOX_INSERTITEM )
 {
   if( ISNUMPAR(4) && ISNUM(1) && ISQWIDGET(2) && (ISQICON(3)||ISCHAR(3)) && ISCHAR(4) )
   {
@@ -273,7 +273,7 @@ HB_FUNC( QTOOLBOX_INSERTITEM )
 /*
 bool isItemEnabled ( int index ) const
 */
-HB_FUNC( QTOOLBOX_ISITEMENABLED )
+HB_FUNC_STATIC( QTOOLBOX_ISITEMENABLED )
 {
   QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -288,7 +288,7 @@ HB_FUNC( QTOOLBOX_ISITEMENABLED )
 /*
 QIcon itemIcon ( int index ) const
 */
-HB_FUNC( QTOOLBOX_ITEMICON )
+HB_FUNC_STATIC( QTOOLBOX_ITEMICON )
 {
   QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -302,7 +302,7 @@ HB_FUNC( QTOOLBOX_ITEMICON )
 /*
 QString itemText ( int index ) const
 */
-HB_FUNC( QTOOLBOX_ITEMTEXT )
+HB_FUNC_STATIC( QTOOLBOX_ITEMTEXT )
 {
   QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -317,7 +317,7 @@ HB_FUNC( QTOOLBOX_ITEMTEXT )
 /*
 QString itemToolTip ( int index ) const
 */
-HB_FUNC( QTOOLBOX_ITEMTOOLTIP )
+HB_FUNC_STATIC( QTOOLBOX_ITEMTOOLTIP )
 {
   QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -332,7 +332,7 @@ HB_FUNC( QTOOLBOX_ITEMTOOLTIP )
 /*
 void removeItem ( int index )
 */
-HB_FUNC( QTOOLBOX_REMOVEITEM )
+HB_FUNC_STATIC( QTOOLBOX_REMOVEITEM )
 {
   QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -347,7 +347,7 @@ HB_FUNC( QTOOLBOX_REMOVEITEM )
 /*
 void setItemEnabled ( int index, bool enabled )
 */
-HB_FUNC( QTOOLBOX_SETITEMENABLED )
+HB_FUNC_STATIC( QTOOLBOX_SETITEMENABLED )
 {
   QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -363,7 +363,7 @@ HB_FUNC( QTOOLBOX_SETITEMENABLED )
 /*
 void setItemIcon ( int index, const QIcon & icon )
 */
-HB_FUNC( QTOOLBOX_SETITEMICON )
+HB_FUNC_STATIC( QTOOLBOX_SETITEMICON )
 {
   QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -379,7 +379,7 @@ HB_FUNC( QTOOLBOX_SETITEMICON )
 /*
 void setItemText ( int index, const QString & text )
 */
-HB_FUNC( QTOOLBOX_SETITEMTEXT )
+HB_FUNC_STATIC( QTOOLBOX_SETITEMTEXT )
 {
   QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -395,7 +395,7 @@ HB_FUNC( QTOOLBOX_SETITEMTEXT )
 /*
 void setItemToolTip ( int index, const QString & toolTip )
 */
-HB_FUNC( QTOOLBOX_SETITEMTOOLTIP )
+HB_FUNC_STATIC( QTOOLBOX_SETITEMTOOLTIP )
 {
   QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -411,7 +411,7 @@ HB_FUNC( QTOOLBOX_SETITEMTOOLTIP )
 /*
 QWidget * widget ( int index ) const
 */
-HB_FUNC( QTOOLBOX_WIDGET )
+HB_FUNC_STATIC( QTOOLBOX_WIDGET )
 {
   QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -425,7 +425,7 @@ HB_FUNC( QTOOLBOX_WIDGET )
 /*
 void setCurrentIndex ( int index )
 */
-HB_FUNC( QTOOLBOX_SETCURRENTINDEX )
+HB_FUNC_STATIC( QTOOLBOX_SETCURRENTINDEX )
 {
   QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -440,7 +440,7 @@ HB_FUNC( QTOOLBOX_SETCURRENTINDEX )
 /*
 void setCurrentWidget ( QWidget * widget )
 */
-HB_FUNC( QTOOLBOX_SETCURRENTWIDGET )
+HB_FUNC_STATIC( QTOOLBOX_SETCURRENTWIDGET )
 {
   QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

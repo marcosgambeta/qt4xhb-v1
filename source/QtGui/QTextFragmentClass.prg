@@ -108,7 +108,7 @@ RETURN
 /*
 QTextFragment ()
 */
-HB_FUNC( QTEXTFRAGMENT_NEW1 )
+HB_FUNC_STATIC( QTEXTFRAGMENT_NEW1 )
 {
   QTextFragment * o = NULL;
   o = new QTextFragment (  );
@@ -123,7 +123,7 @@ HB_FUNC( QTEXTFRAGMENT_NEW1 )
 /*
 QTextFragment ( const QTextFragment & other )
 */
-HB_FUNC( QTEXTFRAGMENT_NEW2 )
+HB_FUNC_STATIC( QTEXTFRAGMENT_NEW2 )
 {
   QTextFragment * o = NULL;
   QTextFragment * par1 = (QTextFragment *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -139,7 +139,7 @@ HB_FUNC( QTEXTFRAGMENT_NEW2 )
 //[1]QTextFragment ()
 //[2]QTextFragment ( const QTextFragment & other )
 
-HB_FUNC( QTEXTFRAGMENT_NEW )
+HB_FUNC_STATIC( QTEXTFRAGMENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -155,7 +155,7 @@ HB_FUNC( QTEXTFRAGMENT_NEW )
   }
 }
 
-HB_FUNC( QTEXTFRAGMENT_DELETE )
+HB_FUNC_STATIC( QTEXTFRAGMENT_DELETE )
 {
   QTextFragment * obj = (QTextFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -174,7 +174,7 @@ HB_FUNC( QTEXTFRAGMENT_DELETE )
 /*
 QTextCharFormat charFormat () const
 */
-HB_FUNC( QTEXTFRAGMENT_CHARFORMAT )
+HB_FUNC_STATIC( QTEXTFRAGMENT_CHARFORMAT )
 {
   QTextFragment * obj = (QTextFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -187,7 +187,7 @@ HB_FUNC( QTEXTFRAGMENT_CHARFORMAT )
 /*
 int charFormatIndex () const
 */
-HB_FUNC( QTEXTFRAGMENT_CHARFORMATINDEX )
+HB_FUNC_STATIC( QTEXTFRAGMENT_CHARFORMATINDEX )
 {
   QTextFragment * obj = (QTextFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -201,7 +201,7 @@ HB_FUNC( QTEXTFRAGMENT_CHARFORMATINDEX )
 /*
 bool contains ( int position ) const
 */
-HB_FUNC( QTEXTFRAGMENT_CONTAINS )
+HB_FUNC_STATIC( QTEXTFRAGMENT_CONTAINS )
 {
   QTextFragment * obj = (QTextFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -216,7 +216,7 @@ HB_FUNC( QTEXTFRAGMENT_CONTAINS )
 /*
 QList<QGlyphRun> glyphRuns () const
 */
-HB_FUNC( QTEXTFRAGMENT_GLYPHRUNS )
+HB_FUNC_STATIC( QTEXTFRAGMENT_GLYPHRUNS )
 {
   QTextFragment * obj = (QTextFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -260,7 +260,7 @@ HB_FUNC( QTEXTFRAGMENT_GLYPHRUNS )
 /*
 bool isValid () const
 */
-HB_FUNC( QTEXTFRAGMENT_ISVALID )
+HB_FUNC_STATIC( QTEXTFRAGMENT_ISVALID )
 {
   QTextFragment * obj = (QTextFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -274,7 +274,7 @@ HB_FUNC( QTEXTFRAGMENT_ISVALID )
 /*
 int length () const
 */
-HB_FUNC( QTEXTFRAGMENT_LENGTH )
+HB_FUNC_STATIC( QTEXTFRAGMENT_LENGTH )
 {
   QTextFragment * obj = (QTextFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -288,7 +288,7 @@ HB_FUNC( QTEXTFRAGMENT_LENGTH )
 /*
 int position () const
 */
-HB_FUNC( QTEXTFRAGMENT_POSITION )
+HB_FUNC_STATIC( QTEXTFRAGMENT_POSITION )
 {
   QTextFragment * obj = (QTextFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -302,7 +302,7 @@ HB_FUNC( QTEXTFRAGMENT_POSITION )
 /*
 QString text () const
 */
-HB_FUNC( QTEXTFRAGMENT_TEXT )
+HB_FUNC_STATIC( QTEXTFRAGMENT_TEXT )
 {
   QTextFragment * obj = (QTextFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

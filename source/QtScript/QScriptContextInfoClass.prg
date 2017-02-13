@@ -108,7 +108,7 @@ RETURN
 /*
 QScriptContextInfo ( const QScriptContext * context )
 */
-HB_FUNC( QSCRIPTCONTEXTINFO_NEW1 )
+HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEW1 )
 {
   QScriptContextInfo * o = NULL;
   const QScriptContext * par1 = (const QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -124,7 +124,7 @@ HB_FUNC( QSCRIPTCONTEXTINFO_NEW1 )
 /*
 QScriptContextInfo ( const QScriptContextInfo & other )
 */
-HB_FUNC( QSCRIPTCONTEXTINFO_NEW2 )
+HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEW2 )
 {
   QScriptContextInfo * o = NULL;
   QScriptContextInfo * par1 = (QScriptContextInfo *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -140,7 +140,7 @@ HB_FUNC( QSCRIPTCONTEXTINFO_NEW2 )
 /*
 QScriptContextInfo ()
 */
-HB_FUNC( QSCRIPTCONTEXTINFO_NEW3 )
+HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEW3 )
 {
   QScriptContextInfo * o = NULL;
   o = new QScriptContextInfo (  );
@@ -156,7 +156,7 @@ HB_FUNC( QSCRIPTCONTEXTINFO_NEW3 )
 //[2]QScriptContextInfo ( const QScriptContextInfo & other )
 //[3]QScriptContextInfo ()
 
-HB_FUNC( QSCRIPTCONTEXTINFO_NEW )
+HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEW )
 {
   if( ISNUMPAR(1) && ISQSCRIPTCONTEXT(1) )
   {
@@ -176,7 +176,7 @@ HB_FUNC( QSCRIPTCONTEXTINFO_NEW )
   }
 }
 
-HB_FUNC( QSCRIPTCONTEXTINFO_DELETE )
+HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_DELETE )
 {
   QScriptContextInfo * obj = (QScriptContextInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -195,7 +195,7 @@ HB_FUNC( QSCRIPTCONTEXTINFO_DELETE )
 /*
 QString fileName () const
 */
-HB_FUNC( QSCRIPTCONTEXTINFO_FILENAME )
+HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FILENAME )
 {
   QScriptContextInfo * obj = (QScriptContextInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -209,7 +209,7 @@ HB_FUNC( QSCRIPTCONTEXTINFO_FILENAME )
 /*
 int functionEndLineNumber () const
 */
-HB_FUNC( QSCRIPTCONTEXTINFO_FUNCTIONENDLINENUMBER )
+HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONENDLINENUMBER )
 {
   QScriptContextInfo * obj = (QScriptContextInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -223,7 +223,7 @@ HB_FUNC( QSCRIPTCONTEXTINFO_FUNCTIONENDLINENUMBER )
 /*
 int functionMetaIndex () const
 */
-HB_FUNC( QSCRIPTCONTEXTINFO_FUNCTIONMETAINDEX )
+HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONMETAINDEX )
 {
   QScriptContextInfo * obj = (QScriptContextInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -237,7 +237,7 @@ HB_FUNC( QSCRIPTCONTEXTINFO_FUNCTIONMETAINDEX )
 /*
 QString functionName () const
 */
-HB_FUNC( QSCRIPTCONTEXTINFO_FUNCTIONNAME )
+HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONNAME )
 {
   QScriptContextInfo * obj = (QScriptContextInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -251,7 +251,7 @@ HB_FUNC( QSCRIPTCONTEXTINFO_FUNCTIONNAME )
 /*
 QStringList functionParameterNames () const
 */
-HB_FUNC( QSCRIPTCONTEXTINFO_FUNCTIONPARAMETERNAMES )
+HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONPARAMETERNAMES )
 {
   QScriptContextInfo * obj = (QScriptContextInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -274,7 +274,7 @@ HB_FUNC( QSCRIPTCONTEXTINFO_FUNCTIONPARAMETERNAMES )
 /*
 int functionStartLineNumber () const
 */
-HB_FUNC( QSCRIPTCONTEXTINFO_FUNCTIONSTARTLINENUMBER )
+HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONSTARTLINENUMBER )
 {
   QScriptContextInfo * obj = (QScriptContextInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -288,7 +288,7 @@ HB_FUNC( QSCRIPTCONTEXTINFO_FUNCTIONSTARTLINENUMBER )
 /*
 FunctionType functionType () const
 */
-HB_FUNC( QSCRIPTCONTEXTINFO_FUNCTIONTYPE )
+HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONTYPE )
 {
   QScriptContextInfo * obj = (QScriptContextInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -302,7 +302,7 @@ HB_FUNC( QSCRIPTCONTEXTINFO_FUNCTIONTYPE )
 /*
 bool isNull () const
 */
-HB_FUNC( QSCRIPTCONTEXTINFO_ISNULL )
+HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_ISNULL )
 {
   QScriptContextInfo * obj = (QScriptContextInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -316,7 +316,7 @@ HB_FUNC( QSCRIPTCONTEXTINFO_ISNULL )
 /*
 int lineNumber () const
 */
-HB_FUNC( QSCRIPTCONTEXTINFO_LINENUMBER )
+HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_LINENUMBER )
 {
   QScriptContextInfo * obj = (QScriptContextInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -330,7 +330,7 @@ HB_FUNC( QSCRIPTCONTEXTINFO_LINENUMBER )
 /*
 qint64 scriptId () const
 */
-HB_FUNC( QSCRIPTCONTEXTINFO_SCRIPTID )
+HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_SCRIPTID )
 {
   QScriptContextInfo * obj = (QScriptContextInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

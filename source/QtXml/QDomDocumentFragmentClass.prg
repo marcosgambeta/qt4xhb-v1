@@ -63,7 +63,7 @@ RETURN
 /*
 QDomDocumentFragment ()
 */
-HB_FUNC( QDOMDOCUMENTFRAGMENT_NEW1 )
+HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NEW1 )
 {
   QDomDocumentFragment * o = NULL;
   o = new QDomDocumentFragment (  );
@@ -81,7 +81,7 @@ HB_FUNC( QDOMDOCUMENTFRAGMENT_NEW1 )
 /*
 QDomDocumentFragment ( const QDomDocumentFragment & x )
 */
-HB_FUNC( QDOMDOCUMENTFRAGMENT_NEW2 )
+HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NEW2 )
 {
   QDomDocumentFragment * o = NULL;
   QDomDocumentFragment * par1 = (QDomDocumentFragment *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -100,7 +100,7 @@ HB_FUNC( QDOMDOCUMENTFRAGMENT_NEW2 )
 //[1]QDomDocumentFragment ()
 //[2]QDomDocumentFragment ( const QDomDocumentFragment & x )
 
-HB_FUNC( QDOMDOCUMENTFRAGMENT_NEW )
+HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -121,7 +121,7 @@ HB_FUNC( QDOMDOCUMENTFRAGMENT_NEW )
 /*
 QDomNode::NodeType nodeType () const
 */
-HB_FUNC( QDOMDOCUMENTFRAGMENT_NODETYPE )
+HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NODETYPE )
 {
   QDomDocumentFragment * obj = (QDomDocumentFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

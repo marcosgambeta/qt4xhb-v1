@@ -77,7 +77,7 @@ RETURN
 /*
 QFrame ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
-HB_FUNC( QFRAME_NEW )
+HB_FUNC_STATIC( QFRAME_NEW )
 {
   QFrame * o = NULL;
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -91,7 +91,7 @@ HB_FUNC( QFRAME_NEW )
 }
 
 
-HB_FUNC( QFRAME_DELETE )
+HB_FUNC_STATIC( QFRAME_DELETE )
 {
   QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -110,7 +110,7 @@ HB_FUNC( QFRAME_DELETE )
 /*
 QRect frameRect () const
 */
-HB_FUNC( QFRAME_FRAMERECT )
+HB_FUNC_STATIC( QFRAME_FRAMERECT )
 {
   QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -123,7 +123,7 @@ HB_FUNC( QFRAME_FRAMERECT )
 /*
 Shadow frameShadow () const
 */
-HB_FUNC( QFRAME_FRAMESHADOW )
+HB_FUNC_STATIC( QFRAME_FRAMESHADOW )
 {
   QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -137,7 +137,7 @@ HB_FUNC( QFRAME_FRAMESHADOW )
 /*
 Shape frameShape () const
 */
-HB_FUNC( QFRAME_FRAMESHAPE )
+HB_FUNC_STATIC( QFRAME_FRAMESHAPE )
 {
   QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -151,7 +151,7 @@ HB_FUNC( QFRAME_FRAMESHAPE )
 /*
 int frameStyle () const
 */
-HB_FUNC( QFRAME_FRAMESTYLE )
+HB_FUNC_STATIC( QFRAME_FRAMESTYLE )
 {
   QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -165,7 +165,7 @@ HB_FUNC( QFRAME_FRAMESTYLE )
 /*
 int frameWidth () const
 */
-HB_FUNC( QFRAME_FRAMEWIDTH )
+HB_FUNC_STATIC( QFRAME_FRAMEWIDTH )
 {
   QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -179,7 +179,7 @@ HB_FUNC( QFRAME_FRAMEWIDTH )
 /*
 int lineWidth () const
 */
-HB_FUNC( QFRAME_LINEWIDTH )
+HB_FUNC_STATIC( QFRAME_LINEWIDTH )
 {
   QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -193,7 +193,7 @@ HB_FUNC( QFRAME_LINEWIDTH )
 /*
 int midLineWidth () const
 */
-HB_FUNC( QFRAME_MIDLINEWIDTH )
+HB_FUNC_STATIC( QFRAME_MIDLINEWIDTH )
 {
   QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -207,7 +207,7 @@ HB_FUNC( QFRAME_MIDLINEWIDTH )
 /*
 void setFrameRect ( const QRect & )
 */
-HB_FUNC( QFRAME_SETFRAMERECT )
+HB_FUNC_STATIC( QFRAME_SETFRAMERECT )
 {
   QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -222,7 +222,7 @@ HB_FUNC( QFRAME_SETFRAMERECT )
 /*
 void setFrameShadow ( Shadow )
 */
-HB_FUNC( QFRAME_SETFRAMESHADOW )
+HB_FUNC_STATIC( QFRAME_SETFRAMESHADOW )
 {
   QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -237,7 +237,7 @@ HB_FUNC( QFRAME_SETFRAMESHADOW )
 /*
 void setFrameShape ( Shape )
 */
-HB_FUNC( QFRAME_SETFRAMESHAPE )
+HB_FUNC_STATIC( QFRAME_SETFRAMESHAPE )
 {
   QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -252,7 +252,7 @@ HB_FUNC( QFRAME_SETFRAMESHAPE )
 /*
 void setFrameStyle ( int style )
 */
-HB_FUNC( QFRAME_SETFRAMESTYLE )
+HB_FUNC_STATIC( QFRAME_SETFRAMESTYLE )
 {
   QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -267,7 +267,7 @@ HB_FUNC( QFRAME_SETFRAMESTYLE )
 /*
 void setLineWidth ( int )
 */
-HB_FUNC( QFRAME_SETLINEWIDTH )
+HB_FUNC_STATIC( QFRAME_SETLINEWIDTH )
 {
   QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -282,7 +282,7 @@ HB_FUNC( QFRAME_SETLINEWIDTH )
 /*
 void setMidLineWidth ( int )
 */
-HB_FUNC( QFRAME_SETMIDLINEWIDTH )
+HB_FUNC_STATIC( QFRAME_SETMIDLINEWIDTH )
 {
   QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -297,7 +297,7 @@ HB_FUNC( QFRAME_SETMIDLINEWIDTH )
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC( QFRAME_SIZEHINT )
+HB_FUNC_STATIC( QFRAME_SIZEHINT )
 {
   QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

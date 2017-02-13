@@ -109,7 +109,7 @@ RETURN
 /*
 QDeclarativeError ()
 */
-HB_FUNC( QDECLARATIVEERROR_NEW1 )
+HB_FUNC_STATIC( QDECLARATIVEERROR_NEW1 )
 {
   QDeclarativeError * o = NULL;
   o = new QDeclarativeError (  );
@@ -124,7 +124,7 @@ HB_FUNC( QDECLARATIVEERROR_NEW1 )
 /*
 QDeclarativeError ( const QDeclarativeError & other )
 */
-HB_FUNC( QDECLARATIVEERROR_NEW2 )
+HB_FUNC_STATIC( QDECLARATIVEERROR_NEW2 )
 {
   QDeclarativeError * o = NULL;
   QDeclarativeError * par1 = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -140,7 +140,7 @@ HB_FUNC( QDECLARATIVEERROR_NEW2 )
 //[1]QDeclarativeError ()
 //[2]QDeclarativeError ( const QDeclarativeError & other )
 
-HB_FUNC( QDECLARATIVEERROR_NEW )
+HB_FUNC_STATIC( QDECLARATIVEERROR_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -156,7 +156,7 @@ HB_FUNC( QDECLARATIVEERROR_NEW )
   }
 }
 
-HB_FUNC( QDECLARATIVEERROR_DELETE )
+HB_FUNC_STATIC( QDECLARATIVEERROR_DELETE )
 {
   QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -175,7 +175,7 @@ HB_FUNC( QDECLARATIVEERROR_DELETE )
 /*
 int column () const
 */
-HB_FUNC( QDECLARATIVEERROR_COLUMN )
+HB_FUNC_STATIC( QDECLARATIVEERROR_COLUMN )
 {
   QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -189,7 +189,7 @@ HB_FUNC( QDECLARATIVEERROR_COLUMN )
 /*
 QString description () const
 */
-HB_FUNC( QDECLARATIVEERROR_DESCRIPTION )
+HB_FUNC_STATIC( QDECLARATIVEERROR_DESCRIPTION )
 {
   QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -203,7 +203,7 @@ HB_FUNC( QDECLARATIVEERROR_DESCRIPTION )
 /*
 bool isValid () const
 */
-HB_FUNC( QDECLARATIVEERROR_ISVALID )
+HB_FUNC_STATIC( QDECLARATIVEERROR_ISVALID )
 {
   QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -217,7 +217,7 @@ HB_FUNC( QDECLARATIVEERROR_ISVALID )
 /*
 int line () const
 */
-HB_FUNC( QDECLARATIVEERROR_LINE )
+HB_FUNC_STATIC( QDECLARATIVEERROR_LINE )
 {
   QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -231,7 +231,7 @@ HB_FUNC( QDECLARATIVEERROR_LINE )
 /*
 void setColumn ( int column )
 */
-HB_FUNC( QDECLARATIVEERROR_SETCOLUMN )
+HB_FUNC_STATIC( QDECLARATIVEERROR_SETCOLUMN )
 {
   QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -246,7 +246,7 @@ HB_FUNC( QDECLARATIVEERROR_SETCOLUMN )
 /*
 void setDescription ( const QString & description )
 */
-HB_FUNC( QDECLARATIVEERROR_SETDESCRIPTION )
+HB_FUNC_STATIC( QDECLARATIVEERROR_SETDESCRIPTION )
 {
   QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -261,7 +261,7 @@ HB_FUNC( QDECLARATIVEERROR_SETDESCRIPTION )
 /*
 void setLine ( int line )
 */
-HB_FUNC( QDECLARATIVEERROR_SETLINE )
+HB_FUNC_STATIC( QDECLARATIVEERROR_SETLINE )
 {
   QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -276,7 +276,7 @@ HB_FUNC( QDECLARATIVEERROR_SETLINE )
 /*
 void setUrl ( const QUrl & url )
 */
-HB_FUNC( QDECLARATIVEERROR_SETURL )
+HB_FUNC_STATIC( QDECLARATIVEERROR_SETURL )
 {
   QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -291,7 +291,7 @@ HB_FUNC( QDECLARATIVEERROR_SETURL )
 /*
 QString toString () const
 */
-HB_FUNC( QDECLARATIVEERROR_TOSTRING )
+HB_FUNC_STATIC( QDECLARATIVEERROR_TOSTRING )
 {
   QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -305,7 +305,7 @@ HB_FUNC( QDECLARATIVEERROR_TOSTRING )
 /*
 QUrl url () const
 */
-HB_FUNC( QDECLARATIVEERROR_URL )
+HB_FUNC_STATIC( QDECLARATIVEERROR_URL )
 {
   QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

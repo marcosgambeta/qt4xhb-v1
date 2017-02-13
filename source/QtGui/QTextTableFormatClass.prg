@@ -75,7 +75,7 @@ RETURN
 /*
 QTextTableFormat ()
 */
-HB_FUNC( QTEXTTABLEFORMAT_NEW )
+HB_FUNC_STATIC( QTEXTTABLEFORMAT_NEW )
 {
   QTextTableFormat * o = NULL;
   o = new QTextTableFormat (  );
@@ -87,7 +87,7 @@ HB_FUNC( QTEXTTABLEFORMAT_NEW )
 }
 
 
-HB_FUNC( QTEXTTABLEFORMAT_DELETE )
+HB_FUNC_STATIC( QTEXTTABLEFORMAT_DELETE )
 {
   QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -106,7 +106,7 @@ HB_FUNC( QTEXTTABLEFORMAT_DELETE )
 /*
 Qt::Alignment alignment () const
 */
-HB_FUNC( QTEXTTABLEFORMAT_ALIGNMENT )
+HB_FUNC_STATIC( QTEXTTABLEFORMAT_ALIGNMENT )
 {
   QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -120,7 +120,7 @@ HB_FUNC( QTEXTTABLEFORMAT_ALIGNMENT )
 /*
 qreal cellPadding () const
 */
-HB_FUNC( QTEXTTABLEFORMAT_CELLPADDING )
+HB_FUNC_STATIC( QTEXTTABLEFORMAT_CELLPADDING )
 {
   QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -134,7 +134,7 @@ HB_FUNC( QTEXTTABLEFORMAT_CELLPADDING )
 /*
 qreal cellSpacing () const
 */
-HB_FUNC( QTEXTTABLEFORMAT_CELLSPACING )
+HB_FUNC_STATIC( QTEXTTABLEFORMAT_CELLSPACING )
 {
   QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -148,7 +148,7 @@ HB_FUNC( QTEXTTABLEFORMAT_CELLSPACING )
 /*
 void clearColumnWidthConstraints ()
 */
-HB_FUNC( QTEXTTABLEFORMAT_CLEARCOLUMNWIDTHCONSTRAINTS )
+HB_FUNC_STATIC( QTEXTTABLEFORMAT_CLEARCOLUMNWIDTHCONSTRAINTS )
 {
   QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -162,7 +162,7 @@ HB_FUNC( QTEXTTABLEFORMAT_CLEARCOLUMNWIDTHCONSTRAINTS )
 /*
 QVector<QTextLength> columnWidthConstraints () const
 */
-HB_FUNC( QTEXTTABLEFORMAT_COLUMNWIDTHCONSTRAINTS )
+HB_FUNC_STATIC( QTEXTTABLEFORMAT_COLUMNWIDTHCONSTRAINTS )
 {
   QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -206,7 +206,7 @@ HB_FUNC( QTEXTTABLEFORMAT_COLUMNWIDTHCONSTRAINTS )
 /*
 int columns () const
 */
-HB_FUNC( QTEXTTABLEFORMAT_COLUMNS )
+HB_FUNC_STATIC( QTEXTTABLEFORMAT_COLUMNS )
 {
   QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -220,7 +220,7 @@ HB_FUNC( QTEXTTABLEFORMAT_COLUMNS )
 /*
 int headerRowCount () const
 */
-HB_FUNC( QTEXTTABLEFORMAT_HEADERROWCOUNT )
+HB_FUNC_STATIC( QTEXTTABLEFORMAT_HEADERROWCOUNT )
 {
   QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -234,7 +234,7 @@ HB_FUNC( QTEXTTABLEFORMAT_HEADERROWCOUNT )
 /*
 bool isValid () const
 */
-HB_FUNC( QTEXTTABLEFORMAT_ISVALID )
+HB_FUNC_STATIC( QTEXTTABLEFORMAT_ISVALID )
 {
   QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -248,7 +248,7 @@ HB_FUNC( QTEXTTABLEFORMAT_ISVALID )
 /*
 void setAlignment ( Qt::Alignment alignment )
 */
-HB_FUNC( QTEXTTABLEFORMAT_SETALIGNMENT )
+HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETALIGNMENT )
 {
   QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -263,7 +263,7 @@ HB_FUNC( QTEXTTABLEFORMAT_SETALIGNMENT )
 /*
 void setCellPadding ( qreal padding )
 */
-HB_FUNC( QTEXTTABLEFORMAT_SETCELLPADDING )
+HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETCELLPADDING )
 {
   QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -278,7 +278,7 @@ HB_FUNC( QTEXTTABLEFORMAT_SETCELLPADDING )
 /*
 void setCellSpacing ( qreal spacing )
 */
-HB_FUNC( QTEXTTABLEFORMAT_SETCELLSPACING )
+HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETCELLSPACING )
 {
   QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -293,7 +293,7 @@ HB_FUNC( QTEXTTABLEFORMAT_SETCELLSPACING )
 /*
 void setColumnWidthConstraints ( const QVector<QTextLength> & constraints )
 */
-HB_FUNC( QTEXTTABLEFORMAT_SETCOLUMNWIDTHCONSTRAINTS )
+HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETCOLUMNWIDTHCONSTRAINTS )
 {
   QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -315,7 +315,7 @@ par1 << *(QTextLength *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList
 /*
 void setHeaderRowCount ( int count )
 */
-HB_FUNC( QTEXTTABLEFORMAT_SETHEADERROWCOUNT )
+HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETHEADERROWCOUNT )
 {
   QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

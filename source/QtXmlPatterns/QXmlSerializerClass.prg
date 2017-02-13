@@ -78,7 +78,7 @@ RETURN
 /*
 QXmlSerializer ( const QXmlQuery & query, QIODevice * outputDevice )
 */
-HB_FUNC( QXMLSERIALIZER_NEW )
+HB_FUNC_STATIC( QXMLSERIALIZER_NEW )
 {
   QXmlSerializer * o = NULL;
   QXmlQuery * par1 = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -100,7 +100,7 @@ HB_FUNC( QXMLSERIALIZER_NEW )
 /*
 const QTextCodec * codec () const
 */
-HB_FUNC( QXMLSERIALIZER_CODEC )
+HB_FUNC_STATIC( QXMLSERIALIZER_CODEC )
 {
   QXmlSerializer * obj = (QXmlSerializer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -113,7 +113,7 @@ HB_FUNC( QXMLSERIALIZER_CODEC )
 /*
 QIODevice * outputDevice () const
 */
-HB_FUNC( QXMLSERIALIZER_OUTPUTDEVICE )
+HB_FUNC_STATIC( QXMLSERIALIZER_OUTPUTDEVICE )
 {
   QXmlSerializer * obj = (QXmlSerializer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -126,7 +126,7 @@ HB_FUNC( QXMLSERIALIZER_OUTPUTDEVICE )
 /*
 void setCodec ( const QTextCodec * outputCodec )
 */
-HB_FUNC( QXMLSERIALIZER_SETCODEC )
+HB_FUNC_STATIC( QXMLSERIALIZER_SETCODEC )
 {
   QXmlSerializer * obj = (QXmlSerializer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -141,7 +141,7 @@ HB_FUNC( QXMLSERIALIZER_SETCODEC )
 /*
 virtual void atomicValue ( const QVariant & value )
 */
-HB_FUNC( QXMLSERIALIZER_ATOMICVALUE )
+HB_FUNC_STATIC( QXMLSERIALIZER_ATOMICVALUE )
 {
   QXmlSerializer * obj = (QXmlSerializer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -156,7 +156,7 @@ HB_FUNC( QXMLSERIALIZER_ATOMICVALUE )
 /*
 virtual void attribute ( const QXmlName & name, const QStringRef & value )
 */
-HB_FUNC( QXMLSERIALIZER_ATTRIBUTE )
+HB_FUNC_STATIC( QXMLSERIALIZER_ATTRIBUTE )
 {
   QXmlSerializer * obj = (QXmlSerializer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -172,7 +172,7 @@ HB_FUNC( QXMLSERIALIZER_ATTRIBUTE )
 /*
 virtual void characters ( const QStringRef & value )
 */
-HB_FUNC( QXMLSERIALIZER_CHARACTERS )
+HB_FUNC_STATIC( QXMLSERIALIZER_CHARACTERS )
 {
   QXmlSerializer * obj = (QXmlSerializer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -187,7 +187,7 @@ HB_FUNC( QXMLSERIALIZER_CHARACTERS )
 /*
 virtual void comment ( const QString & value )
 */
-HB_FUNC( QXMLSERIALIZER_COMMENT )
+HB_FUNC_STATIC( QXMLSERIALIZER_COMMENT )
 {
   QXmlSerializer * obj = (QXmlSerializer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -202,7 +202,7 @@ HB_FUNC( QXMLSERIALIZER_COMMENT )
 /*
 virtual void endDocument ()
 */
-HB_FUNC( QXMLSERIALIZER_ENDDOCUMENT )
+HB_FUNC_STATIC( QXMLSERIALIZER_ENDDOCUMENT )
 {
   QXmlSerializer * obj = (QXmlSerializer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -216,7 +216,7 @@ HB_FUNC( QXMLSERIALIZER_ENDDOCUMENT )
 /*
 virtual void endElement ()
 */
-HB_FUNC( QXMLSERIALIZER_ENDELEMENT )
+HB_FUNC_STATIC( QXMLSERIALIZER_ENDELEMENT )
 {
   QXmlSerializer * obj = (QXmlSerializer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -230,7 +230,7 @@ HB_FUNC( QXMLSERIALIZER_ENDELEMENT )
 /*
 virtual void endOfSequence ()
 */
-HB_FUNC( QXMLSERIALIZER_ENDOFSEQUENCE )
+HB_FUNC_STATIC( QXMLSERIALIZER_ENDOFSEQUENCE )
 {
   QXmlSerializer * obj = (QXmlSerializer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -244,7 +244,7 @@ HB_FUNC( QXMLSERIALIZER_ENDOFSEQUENCE )
 /*
 virtual void namespaceBinding ( const QXmlName & nb )
 */
-HB_FUNC( QXMLSERIALIZER_NAMESPACEBINDING )
+HB_FUNC_STATIC( QXMLSERIALIZER_NAMESPACEBINDING )
 {
   QXmlSerializer * obj = (QXmlSerializer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -259,7 +259,7 @@ HB_FUNC( QXMLSERIALIZER_NAMESPACEBINDING )
 /*
 virtual void processingInstruction ( const QXmlName & name, const QString & value )
 */
-HB_FUNC( QXMLSERIALIZER_PROCESSINGINSTRUCTION )
+HB_FUNC_STATIC( QXMLSERIALIZER_PROCESSINGINSTRUCTION )
 {
   QXmlSerializer * obj = (QXmlSerializer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -275,7 +275,7 @@ HB_FUNC( QXMLSERIALIZER_PROCESSINGINSTRUCTION )
 /*
 virtual void startDocument ()
 */
-HB_FUNC( QXMLSERIALIZER_STARTDOCUMENT )
+HB_FUNC_STATIC( QXMLSERIALIZER_STARTDOCUMENT )
 {
   QXmlSerializer * obj = (QXmlSerializer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -289,7 +289,7 @@ HB_FUNC( QXMLSERIALIZER_STARTDOCUMENT )
 /*
 virtual void startElement ( const QXmlName & name )
 */
-HB_FUNC( QXMLSERIALIZER_STARTELEMENT )
+HB_FUNC_STATIC( QXMLSERIALIZER_STARTELEMENT )
 {
   QXmlSerializer * obj = (QXmlSerializer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -304,7 +304,7 @@ HB_FUNC( QXMLSERIALIZER_STARTELEMENT )
 /*
 virtual void startOfSequence ()
 */
-HB_FUNC( QXMLSERIALIZER_STARTOFSEQUENCE )
+HB_FUNC_STATIC( QXMLSERIALIZER_STARTOFSEQUENCE )
 {
   QXmlSerializer * obj = (QXmlSerializer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

@@ -111,7 +111,7 @@ RETURN
 /*
 QNetworkConfiguration ()
 */
-HB_FUNC( QNETWORKCONFIGURATION_NEW1 )
+HB_FUNC_STATIC( QNETWORKCONFIGURATION_NEW1 )
 {
   QNetworkConfiguration * o = NULL;
   o = new QNetworkConfiguration (  );
@@ -129,7 +129,7 @@ HB_FUNC( QNETWORKCONFIGURATION_NEW1 )
 /*
 QNetworkConfiguration ( const QNetworkConfiguration & other )
 */
-HB_FUNC( QNETWORKCONFIGURATION_NEW2 )
+HB_FUNC_STATIC( QNETWORKCONFIGURATION_NEW2 )
 {
   QNetworkConfiguration * o = NULL;
   QNetworkConfiguration * par1 = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -148,7 +148,7 @@ HB_FUNC( QNETWORKCONFIGURATION_NEW2 )
 //[1]QNetworkConfiguration ()
 //[2]QNetworkConfiguration ( const QNetworkConfiguration & other )
 
-HB_FUNC( QNETWORKCONFIGURATION_NEW )
+HB_FUNC_STATIC( QNETWORKCONFIGURATION_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -164,7 +164,7 @@ HB_FUNC( QNETWORKCONFIGURATION_NEW )
   }
 }
 
-HB_FUNC( QNETWORKCONFIGURATION_DELETE )
+HB_FUNC_STATIC( QNETWORKCONFIGURATION_DELETE )
 {
   QNetworkConfiguration * obj = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -183,7 +183,7 @@ HB_FUNC( QNETWORKCONFIGURATION_DELETE )
 /*
 QString bearerName () const (deprecated)
 */
-HB_FUNC( QNETWORKCONFIGURATION_BEARERNAME )
+HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERNAME )
 {
   QNetworkConfiguration * obj = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -197,7 +197,7 @@ HB_FUNC( QNETWORKCONFIGURATION_BEARERNAME )
 /*
 BearerType bearerType () const
 */
-HB_FUNC( QNETWORKCONFIGURATION_BEARERTYPE )
+HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERTYPE )
 {
   QNetworkConfiguration * obj = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -211,7 +211,7 @@ HB_FUNC( QNETWORKCONFIGURATION_BEARERTYPE )
 /*
 QString bearerTypeName () const
 */
-HB_FUNC( QNETWORKCONFIGURATION_BEARERTYPENAME )
+HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERTYPENAME )
 {
   QNetworkConfiguration * obj = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -225,7 +225,7 @@ HB_FUNC( QNETWORKCONFIGURATION_BEARERTYPENAME )
 /*
 QList<QNetworkConfiguration> children () const
 */
-HB_FUNC( QNETWORKCONFIGURATION_CHILDREN )
+HB_FUNC_STATIC( QNETWORKCONFIGURATION_CHILDREN )
 {
   QNetworkConfiguration * obj = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -273,7 +273,7 @@ HB_FUNC( QNETWORKCONFIGURATION_CHILDREN )
 /*
 QString identifier () const
 */
-HB_FUNC( QNETWORKCONFIGURATION_IDENTIFIER )
+HB_FUNC_STATIC( QNETWORKCONFIGURATION_IDENTIFIER )
 {
   QNetworkConfiguration * obj = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -287,7 +287,7 @@ HB_FUNC( QNETWORKCONFIGURATION_IDENTIFIER )
 /*
 bool isRoamingAvailable () const
 */
-HB_FUNC( QNETWORKCONFIGURATION_ISROAMINGAVAILABLE )
+HB_FUNC_STATIC( QNETWORKCONFIGURATION_ISROAMINGAVAILABLE )
 {
   QNetworkConfiguration * obj = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -301,7 +301,7 @@ HB_FUNC( QNETWORKCONFIGURATION_ISROAMINGAVAILABLE )
 /*
 bool isValid () const
 */
-HB_FUNC( QNETWORKCONFIGURATION_ISVALID )
+HB_FUNC_STATIC( QNETWORKCONFIGURATION_ISVALID )
 {
   QNetworkConfiguration * obj = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -315,7 +315,7 @@ HB_FUNC( QNETWORKCONFIGURATION_ISVALID )
 /*
 QString name () const
 */
-HB_FUNC( QNETWORKCONFIGURATION_NAME )
+HB_FUNC_STATIC( QNETWORKCONFIGURATION_NAME )
 {
   QNetworkConfiguration * obj = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -329,7 +329,7 @@ HB_FUNC( QNETWORKCONFIGURATION_NAME )
 /*
 Purpose purpose () const
 */
-HB_FUNC( QNETWORKCONFIGURATION_PURPOSE )
+HB_FUNC_STATIC( QNETWORKCONFIGURATION_PURPOSE )
 {
   QNetworkConfiguration * obj = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -343,7 +343,7 @@ HB_FUNC( QNETWORKCONFIGURATION_PURPOSE )
 /*
 StateFlags state () const
 */
-HB_FUNC( QNETWORKCONFIGURATION_STATE )
+HB_FUNC_STATIC( QNETWORKCONFIGURATION_STATE )
 {
   QNetworkConfiguration * obj = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -357,7 +357,7 @@ HB_FUNC( QNETWORKCONFIGURATION_STATE )
 /*
 Type type () const
 */
-HB_FUNC( QNETWORKCONFIGURATION_TYPE )
+HB_FUNC_STATIC( QNETWORKCONFIGURATION_TYPE )
 {
   QNetworkConfiguration * obj = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

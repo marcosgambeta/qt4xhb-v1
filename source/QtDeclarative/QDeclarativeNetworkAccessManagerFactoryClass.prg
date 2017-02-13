@@ -94,7 +94,7 @@ RETURN
 #include "qt4xhb_clsid.h"
 #include "qt4xhb_utils.h"
 
-HB_FUNC( QDECLARATIVENETWORKACCESSMANAGERFACTORY_DELETE )
+HB_FUNC_STATIC( QDECLARATIVENETWORKACCESSMANAGERFACTORY_DELETE )
 {
   QDeclarativeNetworkAccessManagerFactory * obj = (QDeclarativeNetworkAccessManagerFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -113,7 +113,7 @@ HB_FUNC( QDECLARATIVENETWORKACCESSMANAGERFACTORY_DELETE )
 /*
 virtual QNetworkAccessManager * create ( QObject * parent ) = 0
 */
-HB_FUNC( QDECLARATIVENETWORKACCESSMANAGERFACTORY_CREATE )
+HB_FUNC_STATIC( QDECLARATIVENETWORKACCESSMANAGERFACTORY_CREATE )
 {
   QDeclarativeNetworkAccessManagerFactory * obj = (QDeclarativeNetworkAccessManagerFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

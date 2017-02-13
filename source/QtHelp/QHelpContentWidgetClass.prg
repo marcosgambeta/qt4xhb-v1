@@ -64,7 +64,7 @@ RETURN
 /*
 QModelIndex indexOf ( const QUrl & link )
 */
-HB_FUNC( QHELPCONTENTWIDGET_INDEXOF )
+HB_FUNC_STATIC( QHELPCONTENTWIDGET_INDEXOF )
 {
   QHelpContentWidget * obj = (QHelpContentWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

@@ -64,7 +64,7 @@ RETURN
 /*
 QRadioButton ( QWidget * parent = 0 )
 */
-HB_FUNC( QRADIOBUTTON_NEW1 )
+HB_FUNC_STATIC( QRADIOBUTTON_NEW1 )
 {
   QRadioButton * o = NULL;
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -80,7 +80,7 @@ HB_FUNC( QRADIOBUTTON_NEW1 )
 /*
 QRadioButton ( const QString & text, QWidget * parent = 0 )
 */
-HB_FUNC( QRADIOBUTTON_NEW2 )
+HB_FUNC_STATIC( QRADIOBUTTON_NEW2 )
 {
   QRadioButton * o = NULL;
   QString par1 = hb_parc(1);
@@ -97,7 +97,7 @@ HB_FUNC( QRADIOBUTTON_NEW2 )
 //[1]QRadioButton ( QWidget * parent = 0 )
 //[2]QRadioButton ( const QString & text, QWidget * parent = 0 )
 
-HB_FUNC( QRADIOBUTTON_NEW )
+HB_FUNC_STATIC( QRADIOBUTTON_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
@@ -117,7 +117,7 @@ HB_FUNC( QRADIOBUTTON_NEW )
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC( QRADIOBUTTON_SIZEHINT )
+HB_FUNC_STATIC( QRADIOBUTTON_SIZEHINT )
 {
   QRadioButton * obj = (QRadioButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

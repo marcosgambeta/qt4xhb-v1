@@ -60,7 +60,7 @@ RETURN
 /*
 QTcpSocket ( QObject * parent = 0 )
 */
-HB_FUNC( QTCPSOCKET_NEW )
+HB_FUNC_STATIC( QTCPSOCKET_NEW )
 {
   QTcpSocket * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -73,7 +73,7 @@ HB_FUNC( QTCPSOCKET_NEW )
 }
 
 
-HB_FUNC( QTCPSOCKET_DELETE )
+HB_FUNC_STATIC( QTCPSOCKET_DELETE )
 {
   QTcpSocket * obj = (QTcpSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

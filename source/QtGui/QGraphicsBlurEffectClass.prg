@@ -69,7 +69,7 @@ RETURN
 /*
 QGraphicsBlurEffect ( QObject * parent = 0 )
 */
-HB_FUNC( QGRAPHICSBLUREFFECT_NEW )
+HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_NEW )
 {
   QGraphicsBlurEffect * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -82,7 +82,7 @@ HB_FUNC( QGRAPHICSBLUREFFECT_NEW )
 }
 
 
-HB_FUNC( QGRAPHICSBLUREFFECT_DELETE )
+HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_DELETE )
 {
   QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -101,7 +101,7 @@ HB_FUNC( QGRAPHICSBLUREFFECT_DELETE )
 /*
 BlurHints blurHints () const
 */
-HB_FUNC( QGRAPHICSBLUREFFECT_BLURHINTS )
+HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BLURHINTS )
 {
   QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -115,7 +115,7 @@ HB_FUNC( QGRAPHICSBLUREFFECT_BLURHINTS )
 /*
 qreal blurRadius () const
 */
-HB_FUNC( QGRAPHICSBLUREFFECT_BLURRADIUS )
+HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BLURRADIUS )
 {
   QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -129,7 +129,7 @@ HB_FUNC( QGRAPHICSBLUREFFECT_BLURRADIUS )
 /*
 virtual QRectF boundingRectFor ( const QRectF & rect ) const
 */
-HB_FUNC( QGRAPHICSBLUREFFECT_BOUNDINGRECTFOR )
+HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BOUNDINGRECTFOR )
 {
   QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -143,7 +143,7 @@ HB_FUNC( QGRAPHICSBLUREFFECT_BOUNDINGRECTFOR )
 /*
 void setBlurHints ( BlurHints hints )
 */
-HB_FUNC( QGRAPHICSBLUREFFECT_SETBLURHINTS )
+HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_SETBLURHINTS )
 {
   QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -158,7 +158,7 @@ HB_FUNC( QGRAPHICSBLUREFFECT_SETBLURHINTS )
 /*
 void setBlurRadius ( qreal blurRadius )
 */
-HB_FUNC( QGRAPHICSBLUREFFECT_SETBLURRADIUS )
+HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_SETBLURRADIUS )
 {
   QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

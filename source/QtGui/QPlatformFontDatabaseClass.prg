@@ -101,7 +101,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QPLATFORMFONTDATABASE_DELETE )
+HB_FUNC_STATIC( QPLATFORMFONTDATABASE_DELETE )
 {
   QPlatformFontDatabase * obj = (QPlatformFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -120,7 +120,7 @@ HB_FUNC( QPLATFORMFONTDATABASE_DELETE )
 /*
 virtual QStringList addApplicationFont ( const QByteArray & fontData, const QString & fileName )
 */
-HB_FUNC( QPLATFORMFONTDATABASE_ADDAPPLICATIONFONT )
+HB_FUNC_STATIC( QPLATFORMFONTDATABASE_ADDAPPLICATIONFONT )
 {
   QPlatformFontDatabase * obj = (QPlatformFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -146,7 +146,7 @@ HB_FUNC( QPLATFORMFONTDATABASE_ADDAPPLICATIONFONT )
 /*
 virtual QString fontDir () const
 */
-HB_FUNC( QPLATFORMFONTDATABASE_FONTDIR )
+HB_FUNC_STATIC( QPLATFORMFONTDATABASE_FONTDIR )
 {
   QPlatformFontDatabase * obj = (QPlatformFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -161,7 +161,7 @@ HB_FUNC( QPLATFORMFONTDATABASE_FONTDIR )
 /*
 virtual QFontEngine * fontEngine ( const QByteArray & fontData, qreal pixelSize, QFont::HintingPreference hintingPreference )
 */
-HB_FUNC( QPLATFORMFONTDATABASE_FONTENGINE )
+HB_FUNC_STATIC( QPLATFORMFONTDATABASE_FONTENGINE )
 {
   QPlatformFontDatabase * obj = (QPlatformFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -177,7 +177,7 @@ HB_FUNC( QPLATFORMFONTDATABASE_FONTENGINE )
 /*
 virtual void populateFontDatabase ()
 */
-HB_FUNC( QPLATFORMFONTDATABASE_POPULATEFONTDATABASE )
+HB_FUNC_STATIC( QPLATFORMFONTDATABASE_POPULATEFONTDATABASE )
 {
   QPlatformFontDatabase * obj = (QPlatformFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -191,7 +191,7 @@ HB_FUNC( QPLATFORMFONTDATABASE_POPULATEFONTDATABASE )
 /*
 virtual void releaseHandle ( void * handle )
 */
-HB_FUNC( QPLATFORMFONTDATABASE_RELEASEHANDLE )
+HB_FUNC_STATIC( QPLATFORMFONTDATABASE_RELEASEHANDLE )
 {
   QPlatformFontDatabase * obj = (QPlatformFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -207,7 +207,7 @@ HB_FUNC( QPLATFORMFONTDATABASE_RELEASEHANDLE )
 /*
 void registerFont ( const QString & familyName, const QString & foundryName, QFont::Weight weight, QFont::Style style, QFont::Stretch stretch, bool antialiased, bool scalable, int pixelSize, const QSupportedWritingSystems & writingSystems, void * usrPtr )
 */
-HB_FUNC( QPLATFORMFONTDATABASE_REGISTERFONT )
+HB_FUNC_STATIC( QPLATFORMFONTDATABASE_REGISTERFONT )
 {
   QString par1 = hb_parc(1);
   QString par2 = hb_parc(2);
@@ -227,7 +227,7 @@ HB_FUNC( QPLATFORMFONTDATABASE_REGISTERFONT )
 /*
 void registerQPF2Font ( const QByteArray & dataArray, void * handle )
 */
-HB_FUNC( QPLATFORMFONTDATABASE_REGISTERQPF2FONT )
+HB_FUNC_STATIC( QPLATFORMFONTDATABASE_REGISTERQPF2FONT )
 {
   QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   void * par2 = (void *) hb_parptr(2);

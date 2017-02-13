@@ -69,7 +69,7 @@ RETURN
 /*
 QDragMoveEvent ( const QPoint & pos, Qt::DropActions actions, const QMimeData * data, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers, Type type = DragMove )
 */
-HB_FUNC( QDRAGMOVEEVENT_NEW )
+HB_FUNC_STATIC( QDRAGMOVEEVENT_NEW )
 {
   QDragMoveEvent * o = NULL;
   QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -87,7 +87,7 @@ HB_FUNC( QDRAGMOVEEVENT_NEW )
 }
 
 
-HB_FUNC( QDRAGMOVEEVENT_DELETE )
+HB_FUNC_STATIC( QDRAGMOVEEVENT_DELETE )
 {
   QDragMoveEvent * obj = (QDragMoveEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -106,7 +106,7 @@ HB_FUNC( QDRAGMOVEEVENT_DELETE )
 /*
 void accept ( const QRect & rectangle )
 */
-HB_FUNC( QDRAGMOVEEVENT_ACCEPT1 )
+HB_FUNC_STATIC( QDRAGMOVEEVENT_ACCEPT1 )
 {
   QDragMoveEvent * obj = (QDragMoveEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -121,7 +121,7 @@ HB_FUNC( QDRAGMOVEEVENT_ACCEPT1 )
 /*
 void accept ()
 */
-HB_FUNC( QDRAGMOVEEVENT_ACCEPT2 )
+HB_FUNC_STATIC( QDRAGMOVEEVENT_ACCEPT2 )
 {
   QDragMoveEvent * obj = (QDragMoveEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -135,7 +135,7 @@ HB_FUNC( QDRAGMOVEEVENT_ACCEPT2 )
 //[1]void accept ( const QRect & rectangle )
 //[2]void accept ()
 
-HB_FUNC( QDRAGMOVEEVENT_ACCEPT )
+HB_FUNC_STATIC( QDRAGMOVEEVENT_ACCEPT )
 {
   if( ISNUMPAR(1) && ISQRECT(1) )
   {
@@ -150,7 +150,7 @@ HB_FUNC( QDRAGMOVEEVENT_ACCEPT )
 /*
 QRect answerRect () const
 */
-HB_FUNC( QDRAGMOVEEVENT_ANSWERRECT )
+HB_FUNC_STATIC( QDRAGMOVEEVENT_ANSWERRECT )
 {
   QDragMoveEvent * obj = (QDragMoveEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -163,7 +163,7 @@ HB_FUNC( QDRAGMOVEEVENT_ANSWERRECT )
 /*
 void ignore ( const QRect & rectangle )
 */
-HB_FUNC( QDRAGMOVEEVENT_IGNORE1 )
+HB_FUNC_STATIC( QDRAGMOVEEVENT_IGNORE1 )
 {
   QDragMoveEvent * obj = (QDragMoveEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -178,7 +178,7 @@ HB_FUNC( QDRAGMOVEEVENT_IGNORE1 )
 /*
 void ignore ()
 */
-HB_FUNC( QDRAGMOVEEVENT_IGNORE2 )
+HB_FUNC_STATIC( QDRAGMOVEEVENT_IGNORE2 )
 {
   QDragMoveEvent * obj = (QDragMoveEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -192,7 +192,7 @@ HB_FUNC( QDRAGMOVEEVENT_IGNORE2 )
 //[1]void ignore ( const QRect & rectangle )
 //[2]void ignore ()
 
-HB_FUNC( QDRAGMOVEEVENT_IGNORE )
+HB_FUNC_STATIC( QDRAGMOVEEVENT_IGNORE )
 {
   if( ISNUMPAR(1) && ISQRECT(1) )
   {

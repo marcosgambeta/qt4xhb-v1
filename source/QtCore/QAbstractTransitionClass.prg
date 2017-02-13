@@ -72,7 +72,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QABSTRACTTRANSITION_DELETE )
+HB_FUNC_STATIC( QABSTRACTTRANSITION_DELETE )
 {
   QAbstractTransition * obj = (QAbstractTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -91,7 +91,7 @@ HB_FUNC( QABSTRACTTRANSITION_DELETE )
 /*
 void addAnimation ( QAbstractAnimation * animation )
 */
-HB_FUNC( QABSTRACTTRANSITION_ADDANIMATION )
+HB_FUNC_STATIC( QABSTRACTTRANSITION_ADDANIMATION )
 {
   QAbstractTransition * obj = (QAbstractTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -106,7 +106,7 @@ HB_FUNC( QABSTRACTTRANSITION_ADDANIMATION )
 /*
 QList<QAbstractAnimation *> animations () const
 */
-HB_FUNC( QABSTRACTTRANSITION_ANIMATIONS )
+HB_FUNC_STATIC( QABSTRACTTRANSITION_ANIMATIONS )
 {
   QAbstractTransition * obj = (QAbstractTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -150,7 +150,7 @@ HB_FUNC( QABSTRACTTRANSITION_ANIMATIONS )
 /*
 QStateMachine * machine () const
 */
-HB_FUNC( QABSTRACTTRANSITION_MACHINE )
+HB_FUNC_STATIC( QABSTRACTTRANSITION_MACHINE )
 {
   QAbstractTransition * obj = (QAbstractTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -163,7 +163,7 @@ HB_FUNC( QABSTRACTTRANSITION_MACHINE )
 /*
 void removeAnimation ( QAbstractAnimation * animation )
 */
-HB_FUNC( QABSTRACTTRANSITION_REMOVEANIMATION )
+HB_FUNC_STATIC( QABSTRACTTRANSITION_REMOVEANIMATION )
 {
   QAbstractTransition * obj = (QAbstractTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -178,7 +178,7 @@ HB_FUNC( QABSTRACTTRANSITION_REMOVEANIMATION )
 /*
 void setTargetState ( QAbstractState * target )
 */
-HB_FUNC( QABSTRACTTRANSITION_SETTARGETSTATE )
+HB_FUNC_STATIC( QABSTRACTTRANSITION_SETTARGETSTATE )
 {
   QAbstractTransition * obj = (QAbstractTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -193,7 +193,7 @@ HB_FUNC( QABSTRACTTRANSITION_SETTARGETSTATE )
 /*
 void setTargetStates ( const QList<QAbstractState *> & targets )
 */
-HB_FUNC( QABSTRACTTRANSITION_SETTARGETSTATES )
+HB_FUNC_STATIC( QABSTRACTTRANSITION_SETTARGETSTATES )
 {
   QAbstractTransition * obj = (QAbstractTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -214,7 +214,7 @@ par1 << (QAbstractState *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aLi
 /*
 QState * sourceState () const
 */
-HB_FUNC( QABSTRACTTRANSITION_SOURCESTATE )
+HB_FUNC_STATIC( QABSTRACTTRANSITION_SOURCESTATE )
 {
   QAbstractTransition * obj = (QAbstractTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -227,7 +227,7 @@ HB_FUNC( QABSTRACTTRANSITION_SOURCESTATE )
 /*
 QAbstractState * targetState () const
 */
-HB_FUNC( QABSTRACTTRANSITION_TARGETSTATE )
+HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATE )
 {
   QAbstractTransition * obj = (QAbstractTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -240,7 +240,7 @@ HB_FUNC( QABSTRACTTRANSITION_TARGETSTATE )
 /*
 QList<QAbstractState *> targetStates () const
 */
-HB_FUNC( QABSTRACTTRANSITION_TARGETSTATES )
+HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATES )
 {
   QAbstractTransition * obj = (QAbstractTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

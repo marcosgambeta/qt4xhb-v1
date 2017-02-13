@@ -67,7 +67,7 @@ RETURN
 /*
 QPaintEvent ( const QRegion & paintRegion )
 */
-HB_FUNC( QPAINTEVENT_NEW1 )
+HB_FUNC_STATIC( QPAINTEVENT_NEW1 )
 {
   QPaintEvent * o = NULL;
   QRegion * par1 = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -83,7 +83,7 @@ HB_FUNC( QPAINTEVENT_NEW1 )
 /*
 QPaintEvent ( const QRect & paintRect )
 */
-HB_FUNC( QPAINTEVENT_NEW2 )
+HB_FUNC_STATIC( QPAINTEVENT_NEW2 )
 {
   QPaintEvent * o = NULL;
   QRect * par1 = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -99,7 +99,7 @@ HB_FUNC( QPAINTEVENT_NEW2 )
 //[1]QPaintEvent ( const QRegion & paintRegion )
 //[2]QPaintEvent ( const QRect & paintRect )
 
-HB_FUNC( QPAINTEVENT_NEW )
+HB_FUNC_STATIC( QPAINTEVENT_NEW )
 {
   if( ISNUMPAR(1) && ISQREGION(1) )
   {
@@ -115,7 +115,7 @@ HB_FUNC( QPAINTEVENT_NEW )
   }
 }
 
-HB_FUNC( QPAINTEVENT_DELETE )
+HB_FUNC_STATIC( QPAINTEVENT_DELETE )
 {
   QPaintEvent * obj = (QPaintEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -134,7 +134,7 @@ HB_FUNC( QPAINTEVENT_DELETE )
 /*
 const QRect & rect () const
 */
-HB_FUNC( QPAINTEVENT_RECT )
+HB_FUNC_STATIC( QPAINTEVENT_RECT )
 {
   QPaintEvent * obj = (QPaintEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -147,7 +147,7 @@ HB_FUNC( QPAINTEVENT_RECT )
 /*
 const QRegion & region () const
 */
-HB_FUNC( QPAINTEVENT_REGION )
+HB_FUNC_STATIC( QPAINTEVENT_REGION )
 {
   QPaintEvent * obj = (QPaintEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

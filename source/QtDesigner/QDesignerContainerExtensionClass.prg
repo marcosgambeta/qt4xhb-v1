@@ -100,7 +100,7 @@ RETURN
 #include "qt4xhb_clsid.h"
 #include "qt4xhb_utils.h"
 
-HB_FUNC( QDESIGNERCONTAINEREXTENSION_DELETE )
+HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_DELETE )
 {
   QDesignerContainerExtension * obj = (QDesignerContainerExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -119,7 +119,7 @@ HB_FUNC( QDESIGNERCONTAINEREXTENSION_DELETE )
 /*
 virtual void addWidget ( QWidget * page ) = 0
 */
-HB_FUNC( QDESIGNERCONTAINEREXTENSION_ADDWIDGET )
+HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_ADDWIDGET )
 {
   QDesignerContainerExtension * obj = (QDesignerContainerExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -134,7 +134,7 @@ HB_FUNC( QDESIGNERCONTAINEREXTENSION_ADDWIDGET )
 /*
 virtual int count () const = 0
 */
-HB_FUNC( QDESIGNERCONTAINEREXTENSION_COUNT )
+HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_COUNT )
 {
   QDesignerContainerExtension * obj = (QDesignerContainerExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -148,7 +148,7 @@ HB_FUNC( QDESIGNERCONTAINEREXTENSION_COUNT )
 /*
 virtual int currentIndex () const = 0
 */
-HB_FUNC( QDESIGNERCONTAINEREXTENSION_CURRENTINDEX )
+HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_CURRENTINDEX )
 {
   QDesignerContainerExtension * obj = (QDesignerContainerExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -162,7 +162,7 @@ HB_FUNC( QDESIGNERCONTAINEREXTENSION_CURRENTINDEX )
 /*
 virtual void insertWidget ( int index, QWidget * page ) = 0
 */
-HB_FUNC( QDESIGNERCONTAINEREXTENSION_INSERTWIDGET )
+HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_INSERTWIDGET )
 {
   QDesignerContainerExtension * obj = (QDesignerContainerExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -178,7 +178,7 @@ HB_FUNC( QDESIGNERCONTAINEREXTENSION_INSERTWIDGET )
 /*
 virtual void remove ( int index ) = 0
 */
-HB_FUNC( QDESIGNERCONTAINEREXTENSION_REMOVE )
+HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_REMOVE )
 {
   QDesignerContainerExtension * obj = (QDesignerContainerExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -193,7 +193,7 @@ HB_FUNC( QDESIGNERCONTAINEREXTENSION_REMOVE )
 /*
 virtual void setCurrentIndex ( int index ) = 0
 */
-HB_FUNC( QDESIGNERCONTAINEREXTENSION_SETCURRENTINDEX )
+HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_SETCURRENTINDEX )
 {
   QDesignerContainerExtension * obj = (QDesignerContainerExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -208,7 +208,7 @@ HB_FUNC( QDESIGNERCONTAINEREXTENSION_SETCURRENTINDEX )
 /*
 virtual QWidget * widget ( int index ) const = 0
 */
-HB_FUNC( QDESIGNERCONTAINEREXTENSION_WIDGET )
+HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_WIDGET )
 {
   QDesignerContainerExtension * obj = (QDesignerContainerExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

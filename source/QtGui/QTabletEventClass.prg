@@ -81,7 +81,7 @@ RETURN
 /*
 QTabletEvent(Type t, const QPoint &pos, const QPoint &globalPos, const QPointF &hiResGlobalPos,int device, int pointerType, qreal pressure, int xTilt, int yTilt,qreal tangentialPressure, qreal rotation, int z,Qt::KeyboardModifiers keyState, qint64 uniqueID)
 */
-HB_FUNC( QTABLETEVENT_NEW )
+HB_FUNC_STATIC( QTABLETEVENT_NEW )
 {
   QTabletEvent * o = NULL;
   int par1 = hb_parni(1);
@@ -107,7 +107,7 @@ HB_FUNC( QTABLETEVENT_NEW )
 }
 
 
-HB_FUNC( QTABLETEVENT_DELETE )
+HB_FUNC_STATIC( QTABLETEVENT_DELETE )
 {
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -126,7 +126,7 @@ HB_FUNC( QTABLETEVENT_DELETE )
 /*
 const QPoint &pos() const
 */
-HB_FUNC( QTABLETEVENT_POS )
+HB_FUNC_STATIC( QTABLETEVENT_POS )
 {
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -139,7 +139,7 @@ HB_FUNC( QTABLETEVENT_POS )
 /*
 const QPoint &globalPos() const
 */
-HB_FUNC( QTABLETEVENT_GLOBALPOS )
+HB_FUNC_STATIC( QTABLETEVENT_GLOBALPOS )
 {
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -152,7 +152,7 @@ HB_FUNC( QTABLETEVENT_GLOBALPOS )
 /*
 const QPointF &hiResGlobalPos() const
 */
-HB_FUNC( QTABLETEVENT_HIRESGLOBALPOS )
+HB_FUNC_STATIC( QTABLETEVENT_HIRESGLOBALPOS )
 {
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -165,7 +165,7 @@ HB_FUNC( QTABLETEVENT_HIRESGLOBALPOS )
 /*
 int x() const
 */
-HB_FUNC( QTABLETEVENT_X )
+HB_FUNC_STATIC( QTABLETEVENT_X )
 {
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -179,7 +179,7 @@ HB_FUNC( QTABLETEVENT_X )
 /*
 int y() const
 */
-HB_FUNC( QTABLETEVENT_Y )
+HB_FUNC_STATIC( QTABLETEVENT_Y )
 {
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -193,7 +193,7 @@ HB_FUNC( QTABLETEVENT_Y )
 /*
 int globalX() const
 */
-HB_FUNC( QTABLETEVENT_GLOBALX )
+HB_FUNC_STATIC( QTABLETEVENT_GLOBALX )
 {
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -207,7 +207,7 @@ HB_FUNC( QTABLETEVENT_GLOBALX )
 /*
 int globalY() const
 */
-HB_FUNC( QTABLETEVENT_GLOBALY )
+HB_FUNC_STATIC( QTABLETEVENT_GLOBALY )
 {
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -221,7 +221,7 @@ HB_FUNC( QTABLETEVENT_GLOBALY )
 /*
 qreal hiResGlobalX() const
 */
-HB_FUNC( QTABLETEVENT_HIRESGLOBALX )
+HB_FUNC_STATIC( QTABLETEVENT_HIRESGLOBALX )
 {
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -235,7 +235,7 @@ HB_FUNC( QTABLETEVENT_HIRESGLOBALX )
 /*
 qreal hiResGlobalY() const
 */
-HB_FUNC( QTABLETEVENT_HIRESGLOBALY )
+HB_FUNC_STATIC( QTABLETEVENT_HIRESGLOBALY )
 {
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -249,7 +249,7 @@ HB_FUNC( QTABLETEVENT_HIRESGLOBALY )
 /*
 TabletDevice device() const
 */
-HB_FUNC( QTABLETEVENT_DEVICE )
+HB_FUNC_STATIC( QTABLETEVENT_DEVICE )
 {
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -263,7 +263,7 @@ HB_FUNC( QTABLETEVENT_DEVICE )
 /*
 PointerType pointerType() const
 */
-HB_FUNC( QTABLETEVENT_POINTERTYPE )
+HB_FUNC_STATIC( QTABLETEVENT_POINTERTYPE )
 {
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -277,7 +277,7 @@ HB_FUNC( QTABLETEVENT_POINTERTYPE )
 /*
 qint64 uniqueId() const
 */
-HB_FUNC( QTABLETEVENT_UNIQUEID )
+HB_FUNC_STATIC( QTABLETEVENT_UNIQUEID )
 {
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -291,7 +291,7 @@ HB_FUNC( QTABLETEVENT_UNIQUEID )
 /*
 qreal pressure() const
 */
-HB_FUNC( QTABLETEVENT_PRESSURE )
+HB_FUNC_STATIC( QTABLETEVENT_PRESSURE )
 {
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -305,7 +305,7 @@ HB_FUNC( QTABLETEVENT_PRESSURE )
 /*
 int z() const
 */
-HB_FUNC( QTABLETEVENT_Z )
+HB_FUNC_STATIC( QTABLETEVENT_Z )
 {
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -319,7 +319,7 @@ HB_FUNC( QTABLETEVENT_Z )
 /*
 qreal tangentialPressure() const
 */
-HB_FUNC( QTABLETEVENT_TANGENTIALPRESSURE )
+HB_FUNC_STATIC( QTABLETEVENT_TANGENTIALPRESSURE )
 {
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -333,7 +333,7 @@ HB_FUNC( QTABLETEVENT_TANGENTIALPRESSURE )
 /*
 qreal rotation() const
 */
-HB_FUNC( QTABLETEVENT_ROTATION )
+HB_FUNC_STATIC( QTABLETEVENT_ROTATION )
 {
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -347,7 +347,7 @@ HB_FUNC( QTABLETEVENT_ROTATION )
 /*
 int xTilt() const
 */
-HB_FUNC( QTABLETEVENT_XTILT )
+HB_FUNC_STATIC( QTABLETEVENT_XTILT )
 {
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -361,7 +361,7 @@ HB_FUNC( QTABLETEVENT_XTILT )
 /*
 int yTilt() const
 */
-HB_FUNC( QTABLETEVENT_YTILT )
+HB_FUNC_STATIC( QTABLETEVENT_YTILT )
 {
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

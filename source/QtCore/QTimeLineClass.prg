@@ -92,7 +92,7 @@ RETURN
 /*
 QTimeLine ( int duration = 1000, QObject * parent = 0 )
 */
-HB_FUNC( QTIMELINE_NEW )
+HB_FUNC_STATIC( QTIMELINE_NEW )
 {
   QTimeLine * o = NULL;
   int par1 = ISNIL(1)? 1000 : hb_parni(1);
@@ -106,7 +106,7 @@ HB_FUNC( QTIMELINE_NEW )
 }
 
 
-HB_FUNC( QTIMELINE_DELETE )
+HB_FUNC_STATIC( QTIMELINE_DELETE )
 {
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -125,7 +125,7 @@ HB_FUNC( QTIMELINE_DELETE )
 /*
 int currentFrame () const
 */
-HB_FUNC( QTIMELINE_CURRENTFRAME )
+HB_FUNC_STATIC( QTIMELINE_CURRENTFRAME )
 {
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -139,7 +139,7 @@ HB_FUNC( QTIMELINE_CURRENTFRAME )
 /*
 int currentTime () const
 */
-HB_FUNC( QTIMELINE_CURRENTTIME )
+HB_FUNC_STATIC( QTIMELINE_CURRENTTIME )
 {
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -153,7 +153,7 @@ HB_FUNC( QTIMELINE_CURRENTTIME )
 /*
 qreal currentValue () const
 */
-HB_FUNC( QTIMELINE_CURRENTVALUE )
+HB_FUNC_STATIC( QTIMELINE_CURRENTVALUE )
 {
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -167,7 +167,7 @@ HB_FUNC( QTIMELINE_CURRENTVALUE )
 /*
 CurveShape curveShape () const
 */
-HB_FUNC( QTIMELINE_CURVESHAPE )
+HB_FUNC_STATIC( QTIMELINE_CURVESHAPE )
 {
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -181,7 +181,7 @@ HB_FUNC( QTIMELINE_CURVESHAPE )
 /*
 Direction direction () const
 */
-HB_FUNC( QTIMELINE_DIRECTION )
+HB_FUNC_STATIC( QTIMELINE_DIRECTION )
 {
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -195,7 +195,7 @@ HB_FUNC( QTIMELINE_DIRECTION )
 /*
 int duration () const
 */
-HB_FUNC( QTIMELINE_DURATION )
+HB_FUNC_STATIC( QTIMELINE_DURATION )
 {
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -210,7 +210,7 @@ HB_FUNC( QTIMELINE_DURATION )
 /*
 int endFrame () const
 */
-HB_FUNC( QTIMELINE_ENDFRAME )
+HB_FUNC_STATIC( QTIMELINE_ENDFRAME )
 {
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -224,7 +224,7 @@ HB_FUNC( QTIMELINE_ENDFRAME )
 /*
 int frameForTime ( int msec ) const
 */
-HB_FUNC( QTIMELINE_FRAMEFORTIME )
+HB_FUNC_STATIC( QTIMELINE_FRAMEFORTIME )
 {
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -239,7 +239,7 @@ HB_FUNC( QTIMELINE_FRAMEFORTIME )
 /*
 int loopCount () const
 */
-HB_FUNC( QTIMELINE_LOOPCOUNT )
+HB_FUNC_STATIC( QTIMELINE_LOOPCOUNT )
 {
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -253,7 +253,7 @@ HB_FUNC( QTIMELINE_LOOPCOUNT )
 /*
 void setCurveShape ( CurveShape shape )
 */
-HB_FUNC( QTIMELINE_SETCURVESHAPE )
+HB_FUNC_STATIC( QTIMELINE_SETCURVESHAPE )
 {
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -268,7 +268,7 @@ HB_FUNC( QTIMELINE_SETCURVESHAPE )
 /*
 void setDirection ( Direction direction )
 */
-HB_FUNC( QTIMELINE_SETDIRECTION )
+HB_FUNC_STATIC( QTIMELINE_SETDIRECTION )
 {
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -283,7 +283,7 @@ HB_FUNC( QTIMELINE_SETDIRECTION )
 /*
 void setDuration ( int duration )
 */
-HB_FUNC( QTIMELINE_SETDURATION )
+HB_FUNC_STATIC( QTIMELINE_SETDURATION )
 {
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -298,7 +298,7 @@ HB_FUNC( QTIMELINE_SETDURATION )
 /*
 void setEasingCurve ( const QEasingCurve & curve )
 */
-HB_FUNC( QTIMELINE_SETEASINGCURVE )
+HB_FUNC_STATIC( QTIMELINE_SETEASINGCURVE )
 {
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -313,7 +313,7 @@ HB_FUNC( QTIMELINE_SETEASINGCURVE )
 /*
 void setEndFrame ( int frame )
 */
-HB_FUNC( QTIMELINE_SETENDFRAME )
+HB_FUNC_STATIC( QTIMELINE_SETENDFRAME )
 {
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -328,7 +328,7 @@ HB_FUNC( QTIMELINE_SETENDFRAME )
 /*
 void setFrameRange ( int startFrame, int endFrame )
 */
-HB_FUNC( QTIMELINE_SETFRAMERANGE )
+HB_FUNC_STATIC( QTIMELINE_SETFRAMERANGE )
 {
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -344,7 +344,7 @@ HB_FUNC( QTIMELINE_SETFRAMERANGE )
 /*
 void setLoopCount ( int count )
 */
-HB_FUNC( QTIMELINE_SETLOOPCOUNT )
+HB_FUNC_STATIC( QTIMELINE_SETLOOPCOUNT )
 {
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -359,7 +359,7 @@ HB_FUNC( QTIMELINE_SETLOOPCOUNT )
 /*
 void setStartFrame ( int frame )
 */
-HB_FUNC( QTIMELINE_SETSTARTFRAME )
+HB_FUNC_STATIC( QTIMELINE_SETSTARTFRAME )
 {
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -374,7 +374,7 @@ HB_FUNC( QTIMELINE_SETSTARTFRAME )
 /*
 void setUpdateInterval ( int interval )
 */
-HB_FUNC( QTIMELINE_SETUPDATEINTERVAL )
+HB_FUNC_STATIC( QTIMELINE_SETUPDATEINTERVAL )
 {
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -389,7 +389,7 @@ HB_FUNC( QTIMELINE_SETUPDATEINTERVAL )
 /*
 int startFrame () const
 */
-HB_FUNC( QTIMELINE_STARTFRAME )
+HB_FUNC_STATIC( QTIMELINE_STARTFRAME )
 {
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -403,7 +403,7 @@ HB_FUNC( QTIMELINE_STARTFRAME )
 /*
 State state () const
 */
-HB_FUNC( QTIMELINE_STATE )
+HB_FUNC_STATIC( QTIMELINE_STATE )
 {
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -417,7 +417,7 @@ HB_FUNC( QTIMELINE_STATE )
 /*
 int updateInterval () const
 */
-HB_FUNC( QTIMELINE_UPDATEINTERVAL )
+HB_FUNC_STATIC( QTIMELINE_UPDATEINTERVAL )
 {
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -431,7 +431,7 @@ HB_FUNC( QTIMELINE_UPDATEINTERVAL )
 /*
 virtual qreal valueForTime ( int msec ) const
 */
-HB_FUNC( QTIMELINE_VALUEFORTIME )
+HB_FUNC_STATIC( QTIMELINE_VALUEFORTIME )
 {
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -446,7 +446,7 @@ HB_FUNC( QTIMELINE_VALUEFORTIME )
 /*
 void resume ()
 */
-HB_FUNC( QTIMELINE_RESUME )
+HB_FUNC_STATIC( QTIMELINE_RESUME )
 {
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -460,7 +460,7 @@ HB_FUNC( QTIMELINE_RESUME )
 /*
 void setCurrentTime ( int msec )
 */
-HB_FUNC( QTIMELINE_SETCURRENTTIME )
+HB_FUNC_STATIC( QTIMELINE_SETCURRENTTIME )
 {
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -475,7 +475,7 @@ HB_FUNC( QTIMELINE_SETCURRENTTIME )
 /*
 void setPaused ( bool paused )
 */
-HB_FUNC( QTIMELINE_SETPAUSED )
+HB_FUNC_STATIC( QTIMELINE_SETPAUSED )
 {
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -490,7 +490,7 @@ HB_FUNC( QTIMELINE_SETPAUSED )
 /*
 void start ()
 */
-HB_FUNC( QTIMELINE_START )
+HB_FUNC_STATIC( QTIMELINE_START )
 {
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -504,7 +504,7 @@ HB_FUNC( QTIMELINE_START )
 /*
 void stop ()
 */
-HB_FUNC( QTIMELINE_STOP )
+HB_FUNC_STATIC( QTIMELINE_STOP )
 {
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -518,7 +518,7 @@ HB_FUNC( QTIMELINE_STOP )
 /*
 void toggleDirection ()
 */
-HB_FUNC( QTIMELINE_TOGGLEDIRECTION )
+HB_FUNC_STATIC( QTIMELINE_TOGGLEDIRECTION )
 {
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

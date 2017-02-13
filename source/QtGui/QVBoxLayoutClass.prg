@@ -62,7 +62,7 @@ RETURN
 /*
 QVBoxLayout ()
 */
-HB_FUNC( QVBOXLAYOUT_NEW1 )
+HB_FUNC_STATIC( QVBOXLAYOUT_NEW1 )
 {
   QVBoxLayout * o = NULL;
   o = new QVBoxLayout (  );
@@ -77,7 +77,7 @@ HB_FUNC( QVBOXLAYOUT_NEW1 )
 /*
 QVBoxLayout ( QWidget * parent )
 */
-HB_FUNC( QVBOXLAYOUT_NEW2 )
+HB_FUNC_STATIC( QVBOXLAYOUT_NEW2 )
 {
   QVBoxLayout * o = NULL;
   QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -93,7 +93,7 @@ HB_FUNC( QVBOXLAYOUT_NEW2 )
 //[1]QVBoxLayout ()
 //[2]QVBoxLayout ( QWidget * parent )
 
-HB_FUNC( QVBOXLAYOUT_NEW )
+HB_FUNC_STATIC( QVBOXLAYOUT_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -109,7 +109,7 @@ HB_FUNC( QVBOXLAYOUT_NEW )
   }
 }
 
-HB_FUNC( QVBOXLAYOUT_DELETE )
+HB_FUNC_STATIC( QVBOXLAYOUT_DELETE )
 {
   QVBoxLayout * obj = (QVBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

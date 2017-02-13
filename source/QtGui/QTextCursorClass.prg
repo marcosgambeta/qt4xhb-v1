@@ -185,7 +185,7 @@ RETURN
 /*
 QTextCursor ()
 */
-HB_FUNC( QTEXTCURSOR_NEW1 )
+HB_FUNC_STATIC( QTEXTCURSOR_NEW1 )
 {
   QTextCursor * o = NULL;
   o = new QTextCursor (  );
@@ -203,7 +203,7 @@ HB_FUNC( QTEXTCURSOR_NEW1 )
 /*
 QTextCursor ( QTextDocument * document )
 */
-HB_FUNC( QTEXTCURSOR_NEW2 )
+HB_FUNC_STATIC( QTEXTCURSOR_NEW2 )
 {
   QTextCursor * o = NULL;
   QTextDocument * par1 = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -222,7 +222,7 @@ HB_FUNC( QTEXTCURSOR_NEW2 )
 /*
 QTextCursor ( QTextFrame * frame )
 */
-HB_FUNC( QTEXTCURSOR_NEW3 )
+HB_FUNC_STATIC( QTEXTCURSOR_NEW3 )
 {
   QTextCursor * o = NULL;
   QTextFrame * par1 = (QTextFrame *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -241,7 +241,7 @@ HB_FUNC( QTEXTCURSOR_NEW3 )
 /*
 QTextCursor ( const QTextBlock & block )
 */
-HB_FUNC( QTEXTCURSOR_NEW4 )
+HB_FUNC_STATIC( QTEXTCURSOR_NEW4 )
 {
   QTextCursor * o = NULL;
   QTextBlock * par1 = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -260,7 +260,7 @@ HB_FUNC( QTEXTCURSOR_NEW4 )
 /*
 QTextCursor ( const QTextCursor & cursor )
 */
-HB_FUNC( QTEXTCURSOR_NEW5 )
+HB_FUNC_STATIC( QTEXTCURSOR_NEW5 )
 {
   QTextCursor * o = NULL;
   QTextCursor * par1 = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -282,7 +282,7 @@ HB_FUNC( QTEXTCURSOR_NEW5 )
 //[4]QTextCursor ( const QTextBlock & block )
 //[5]QTextCursor ( const QTextCursor & cursor )
 
-HB_FUNC( QTEXTCURSOR_NEW )
+HB_FUNC_STATIC( QTEXTCURSOR_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -310,7 +310,7 @@ HB_FUNC( QTEXTCURSOR_NEW )
   }
 }
 
-HB_FUNC( QTEXTCURSOR_DELETE )
+HB_FUNC_STATIC( QTEXTCURSOR_DELETE )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -329,7 +329,7 @@ HB_FUNC( QTEXTCURSOR_DELETE )
 /*
 int anchor () const
 */
-HB_FUNC( QTEXTCURSOR_ANCHOR )
+HB_FUNC_STATIC( QTEXTCURSOR_ANCHOR )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -343,7 +343,7 @@ HB_FUNC( QTEXTCURSOR_ANCHOR )
 /*
 bool atBlockEnd () const
 */
-HB_FUNC( QTEXTCURSOR_ATBLOCKEND )
+HB_FUNC_STATIC( QTEXTCURSOR_ATBLOCKEND )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -357,7 +357,7 @@ HB_FUNC( QTEXTCURSOR_ATBLOCKEND )
 /*
 bool atBlockStart () const
 */
-HB_FUNC( QTEXTCURSOR_ATBLOCKSTART )
+HB_FUNC_STATIC( QTEXTCURSOR_ATBLOCKSTART )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -371,7 +371,7 @@ HB_FUNC( QTEXTCURSOR_ATBLOCKSTART )
 /*
 bool atEnd () const
 */
-HB_FUNC( QTEXTCURSOR_ATEND )
+HB_FUNC_STATIC( QTEXTCURSOR_ATEND )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -385,7 +385,7 @@ HB_FUNC( QTEXTCURSOR_ATEND )
 /*
 bool atStart () const
 */
-HB_FUNC( QTEXTCURSOR_ATSTART )
+HB_FUNC_STATIC( QTEXTCURSOR_ATSTART )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -399,7 +399,7 @@ HB_FUNC( QTEXTCURSOR_ATSTART )
 /*
 void beginEditBlock ()
 */
-HB_FUNC( QTEXTCURSOR_BEGINEDITBLOCK )
+HB_FUNC_STATIC( QTEXTCURSOR_BEGINEDITBLOCK )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -413,7 +413,7 @@ HB_FUNC( QTEXTCURSOR_BEGINEDITBLOCK )
 /*
 QTextBlock block () const
 */
-HB_FUNC( QTEXTCURSOR_BLOCK )
+HB_FUNC_STATIC( QTEXTCURSOR_BLOCK )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -426,7 +426,7 @@ HB_FUNC( QTEXTCURSOR_BLOCK )
 /*
 QTextCharFormat blockCharFormat () const
 */
-HB_FUNC( QTEXTCURSOR_BLOCKCHARFORMAT )
+HB_FUNC_STATIC( QTEXTCURSOR_BLOCKCHARFORMAT )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -439,7 +439,7 @@ HB_FUNC( QTEXTCURSOR_BLOCKCHARFORMAT )
 /*
 QTextBlockFormat blockFormat () const
 */
-HB_FUNC( QTEXTCURSOR_BLOCKFORMAT )
+HB_FUNC_STATIC( QTEXTCURSOR_BLOCKFORMAT )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -452,7 +452,7 @@ HB_FUNC( QTEXTCURSOR_BLOCKFORMAT )
 /*
 int blockNumber () const
 */
-HB_FUNC( QTEXTCURSOR_BLOCKNUMBER )
+HB_FUNC_STATIC( QTEXTCURSOR_BLOCKNUMBER )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -466,7 +466,7 @@ HB_FUNC( QTEXTCURSOR_BLOCKNUMBER )
 /*
 QTextCharFormat charFormat () const
 */
-HB_FUNC( QTEXTCURSOR_CHARFORMAT )
+HB_FUNC_STATIC( QTEXTCURSOR_CHARFORMAT )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -479,7 +479,7 @@ HB_FUNC( QTEXTCURSOR_CHARFORMAT )
 /*
 void clearSelection ()
 */
-HB_FUNC( QTEXTCURSOR_CLEARSELECTION )
+HB_FUNC_STATIC( QTEXTCURSOR_CLEARSELECTION )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -493,7 +493,7 @@ HB_FUNC( QTEXTCURSOR_CLEARSELECTION )
 /*
 int columnNumber () const
 */
-HB_FUNC( QTEXTCURSOR_COLUMNNUMBER )
+HB_FUNC_STATIC( QTEXTCURSOR_COLUMNNUMBER )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -507,7 +507,7 @@ HB_FUNC( QTEXTCURSOR_COLUMNNUMBER )
 /*
 QTextList * createList ( const QTextListFormat & format )
 */
-HB_FUNC( QTEXTCURSOR_CREATELIST1 )
+HB_FUNC_STATIC( QTEXTCURSOR_CREATELIST1 )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -521,7 +521,7 @@ HB_FUNC( QTEXTCURSOR_CREATELIST1 )
 /*
 QTextList * createList ( QTextListFormat::Style style )
 */
-HB_FUNC( QTEXTCURSOR_CREATELIST2 )
+HB_FUNC_STATIC( QTEXTCURSOR_CREATELIST2 )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -535,7 +535,7 @@ HB_FUNC( QTEXTCURSOR_CREATELIST2 )
 //[1]QTextList * createList ( const QTextListFormat & format )
 //[2]QTextList * createList ( QTextListFormat::Style style )
 
-HB_FUNC( QTEXTCURSOR_CREATELIST )
+HB_FUNC_STATIC( QTEXTCURSOR_CREATELIST )
 {
   if( ISNUMPAR(1) && ISQTEXTLISTFORMAT(1) )
   {
@@ -550,7 +550,7 @@ HB_FUNC( QTEXTCURSOR_CREATELIST )
 /*
 QTextFrame * currentFrame () const
 */
-HB_FUNC( QTEXTCURSOR_CURRENTFRAME )
+HB_FUNC_STATIC( QTEXTCURSOR_CURRENTFRAME )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -563,7 +563,7 @@ HB_FUNC( QTEXTCURSOR_CURRENTFRAME )
 /*
 QTextList * currentList () const
 */
-HB_FUNC( QTEXTCURSOR_CURRENTLIST )
+HB_FUNC_STATIC( QTEXTCURSOR_CURRENTLIST )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -576,7 +576,7 @@ HB_FUNC( QTEXTCURSOR_CURRENTLIST )
 /*
 QTextTable * currentTable () const
 */
-HB_FUNC( QTEXTCURSOR_CURRENTTABLE )
+HB_FUNC_STATIC( QTEXTCURSOR_CURRENTTABLE )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -589,7 +589,7 @@ HB_FUNC( QTEXTCURSOR_CURRENTTABLE )
 /*
 void deleteChar ()
 */
-HB_FUNC( QTEXTCURSOR_DELETECHAR )
+HB_FUNC_STATIC( QTEXTCURSOR_DELETECHAR )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -603,7 +603,7 @@ HB_FUNC( QTEXTCURSOR_DELETECHAR )
 /*
 void deletePreviousChar ()
 */
-HB_FUNC( QTEXTCURSOR_DELETEPREVIOUSCHAR )
+HB_FUNC_STATIC( QTEXTCURSOR_DELETEPREVIOUSCHAR )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -617,7 +617,7 @@ HB_FUNC( QTEXTCURSOR_DELETEPREVIOUSCHAR )
 /*
 QTextDocument * document () const
 */
-HB_FUNC( QTEXTCURSOR_DOCUMENT )
+HB_FUNC_STATIC( QTEXTCURSOR_DOCUMENT )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -630,7 +630,7 @@ HB_FUNC( QTEXTCURSOR_DOCUMENT )
 /*
 void endEditBlock ()
 */
-HB_FUNC( QTEXTCURSOR_ENDEDITBLOCK )
+HB_FUNC_STATIC( QTEXTCURSOR_ENDEDITBLOCK )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -644,7 +644,7 @@ HB_FUNC( QTEXTCURSOR_ENDEDITBLOCK )
 /*
 bool hasComplexSelection () const
 */
-HB_FUNC( QTEXTCURSOR_HASCOMPLEXSELECTION )
+HB_FUNC_STATIC( QTEXTCURSOR_HASCOMPLEXSELECTION )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -658,7 +658,7 @@ HB_FUNC( QTEXTCURSOR_HASCOMPLEXSELECTION )
 /*
 bool hasSelection () const
 */
-HB_FUNC( QTEXTCURSOR_HASSELECTION )
+HB_FUNC_STATIC( QTEXTCURSOR_HASSELECTION )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -672,7 +672,7 @@ HB_FUNC( QTEXTCURSOR_HASSELECTION )
 /*
 void insertBlock ()
 */
-HB_FUNC( QTEXTCURSOR_INSERTBLOCK1 )
+HB_FUNC_STATIC( QTEXTCURSOR_INSERTBLOCK1 )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -686,7 +686,7 @@ HB_FUNC( QTEXTCURSOR_INSERTBLOCK1 )
 /*
 void insertBlock ( const QTextBlockFormat & format )
 */
-HB_FUNC( QTEXTCURSOR_INSERTBLOCK2 )
+HB_FUNC_STATIC( QTEXTCURSOR_INSERTBLOCK2 )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -701,7 +701,7 @@ HB_FUNC( QTEXTCURSOR_INSERTBLOCK2 )
 /*
 void insertBlock ( const QTextBlockFormat & format, const QTextCharFormat & charFormat )
 */
-HB_FUNC( QTEXTCURSOR_INSERTBLOCK3 )
+HB_FUNC_STATIC( QTEXTCURSOR_INSERTBLOCK3 )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -718,7 +718,7 @@ HB_FUNC( QTEXTCURSOR_INSERTBLOCK3 )
 //[2]void insertBlock ( const QTextBlockFormat & format )
 //[3]void insertBlock ( const QTextBlockFormat & format, const QTextCharFormat & charFormat )
 
-HB_FUNC( QTEXTCURSOR_INSERTBLOCK )
+HB_FUNC_STATIC( QTEXTCURSOR_INSERTBLOCK )
 {
   if( ISNUMPAR(0) )
   {
@@ -737,7 +737,7 @@ HB_FUNC( QTEXTCURSOR_INSERTBLOCK )
 /*
 void insertFragment ( const QTextDocumentFragment & fragment )
 */
-HB_FUNC( QTEXTCURSOR_INSERTFRAGMENT )
+HB_FUNC_STATIC( QTEXTCURSOR_INSERTFRAGMENT )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -752,7 +752,7 @@ HB_FUNC( QTEXTCURSOR_INSERTFRAGMENT )
 /*
 QTextFrame * insertFrame ( const QTextFrameFormat & format )
 */
-HB_FUNC( QTEXTCURSOR_INSERTFRAME )
+HB_FUNC_STATIC( QTEXTCURSOR_INSERTFRAME )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -766,7 +766,7 @@ HB_FUNC( QTEXTCURSOR_INSERTFRAME )
 /*
 void insertHtml ( const QString & html )
 */
-HB_FUNC( QTEXTCURSOR_INSERTHTML )
+HB_FUNC_STATIC( QTEXTCURSOR_INSERTHTML )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -781,7 +781,7 @@ HB_FUNC( QTEXTCURSOR_INSERTHTML )
 /*
 void insertImage ( const QTextImageFormat & format )
 */
-HB_FUNC( QTEXTCURSOR_INSERTIMAGE1 )
+HB_FUNC_STATIC( QTEXTCURSOR_INSERTIMAGE1 )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -796,7 +796,7 @@ HB_FUNC( QTEXTCURSOR_INSERTIMAGE1 )
 /*
 void insertImage ( const QTextImageFormat & format, QTextFrameFormat::Position alignment )
 */
-HB_FUNC( QTEXTCURSOR_INSERTIMAGE2 )
+HB_FUNC_STATIC( QTEXTCURSOR_INSERTIMAGE2 )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -812,7 +812,7 @@ HB_FUNC( QTEXTCURSOR_INSERTIMAGE2 )
 /*
 void insertImage ( const QString & name )
 */
-HB_FUNC( QTEXTCURSOR_INSERTIMAGE3 )
+HB_FUNC_STATIC( QTEXTCURSOR_INSERTIMAGE3 )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -827,7 +827,7 @@ HB_FUNC( QTEXTCURSOR_INSERTIMAGE3 )
 /*
 void insertImage ( const QImage & image, const QString & name = QString() )
 */
-HB_FUNC( QTEXTCURSOR_INSERTIMAGE4 )
+HB_FUNC_STATIC( QTEXTCURSOR_INSERTIMAGE4 )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -845,7 +845,7 @@ HB_FUNC( QTEXTCURSOR_INSERTIMAGE4 )
 //[3]void insertImage ( const QString & name )
 //[4]void insertImage ( const QImage & image, const QString & name = QString() )
 
-HB_FUNC( QTEXTCURSOR_INSERTIMAGE )
+HB_FUNC_STATIC( QTEXTCURSOR_INSERTIMAGE )
 {
   if( ISNUMPAR(1) && ISQTEXTIMAGEFORMAT(1) )
   {
@@ -868,7 +868,7 @@ HB_FUNC( QTEXTCURSOR_INSERTIMAGE )
 /*
 QTextList * insertList ( const QTextListFormat & format )
 */
-HB_FUNC( QTEXTCURSOR_INSERTLIST1 )
+HB_FUNC_STATIC( QTEXTCURSOR_INSERTLIST1 )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -882,7 +882,7 @@ HB_FUNC( QTEXTCURSOR_INSERTLIST1 )
 /*
 QTextList * insertList ( QTextListFormat::Style style )
 */
-HB_FUNC( QTEXTCURSOR_INSERTLIST2 )
+HB_FUNC_STATIC( QTEXTCURSOR_INSERTLIST2 )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -896,7 +896,7 @@ HB_FUNC( QTEXTCURSOR_INSERTLIST2 )
 //[1]QTextList * insertList ( const QTextListFormat & format )
 //[2]QTextList * insertList ( QTextListFormat::Style style )
 
-HB_FUNC( QTEXTCURSOR_INSERTLIST )
+HB_FUNC_STATIC( QTEXTCURSOR_INSERTLIST )
 {
   if( ISNUMPAR(1) && ISQTEXTLISTFORMAT(1) )
   {
@@ -911,7 +911,7 @@ HB_FUNC( QTEXTCURSOR_INSERTLIST )
 /*
 QTextTable * insertTable ( int rows, int columns, const QTextTableFormat & format )
 */
-HB_FUNC( QTEXTCURSOR_INSERTTABLE1 )
+HB_FUNC_STATIC( QTEXTCURSOR_INSERTTABLE1 )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -927,7 +927,7 @@ HB_FUNC( QTEXTCURSOR_INSERTTABLE1 )
 /*
 QTextTable * insertTable ( int rows, int columns )
 */
-HB_FUNC( QTEXTCURSOR_INSERTTABLE2 )
+HB_FUNC_STATIC( QTEXTCURSOR_INSERTTABLE2 )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -942,7 +942,7 @@ HB_FUNC( QTEXTCURSOR_INSERTTABLE2 )
 //[1]QTextTable * insertTable ( int rows, int columns, const QTextTableFormat & format )
 //[2]QTextTable * insertTable ( int rows, int columns )
 
-HB_FUNC( QTEXTCURSOR_INSERTTABLE )
+HB_FUNC_STATIC( QTEXTCURSOR_INSERTTABLE )
 {
   if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISQTEXTTABLEFORMAT(3) )
   {
@@ -957,7 +957,7 @@ HB_FUNC( QTEXTCURSOR_INSERTTABLE )
 /*
 void insertText ( const QString & text )
 */
-HB_FUNC( QTEXTCURSOR_INSERTTEXT1 )
+HB_FUNC_STATIC( QTEXTCURSOR_INSERTTEXT1 )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -972,7 +972,7 @@ HB_FUNC( QTEXTCURSOR_INSERTTEXT1 )
 /*
 void insertText ( const QString & text, const QTextCharFormat & format )
 */
-HB_FUNC( QTEXTCURSOR_INSERTTEXT2 )
+HB_FUNC_STATIC( QTEXTCURSOR_INSERTTEXT2 )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -987,7 +987,7 @@ HB_FUNC( QTEXTCURSOR_INSERTTEXT2 )
 //[1]void insertText ( const QString & text )
 //[2]void insertText ( const QString & text, const QTextCharFormat & format )
 
-HB_FUNC( QTEXTCURSOR_INSERTTEXT )
+HB_FUNC_STATIC( QTEXTCURSOR_INSERTTEXT )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
@@ -1002,7 +1002,7 @@ HB_FUNC( QTEXTCURSOR_INSERTTEXT )
 /*
 bool isCopyOf ( const QTextCursor & other ) const
 */
-HB_FUNC( QTEXTCURSOR_ISCOPYOF )
+HB_FUNC_STATIC( QTEXTCURSOR_ISCOPYOF )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1017,7 +1017,7 @@ HB_FUNC( QTEXTCURSOR_ISCOPYOF )
 /*
 bool isNull () const
 */
-HB_FUNC( QTEXTCURSOR_ISNULL )
+HB_FUNC_STATIC( QTEXTCURSOR_ISNULL )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1031,7 +1031,7 @@ HB_FUNC( QTEXTCURSOR_ISNULL )
 /*
 void joinPreviousEditBlock ()
 */
-HB_FUNC( QTEXTCURSOR_JOINPREVIOUSEDITBLOCK )
+HB_FUNC_STATIC( QTEXTCURSOR_JOINPREVIOUSEDITBLOCK )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1045,7 +1045,7 @@ HB_FUNC( QTEXTCURSOR_JOINPREVIOUSEDITBLOCK )
 /*
 bool keepPositionOnInsert () const
 */
-HB_FUNC( QTEXTCURSOR_KEEPPOSITIONONINSERT )
+HB_FUNC_STATIC( QTEXTCURSOR_KEEPPOSITIONONINSERT )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1059,7 +1059,7 @@ HB_FUNC( QTEXTCURSOR_KEEPPOSITIONONINSERT )
 /*
 void mergeBlockCharFormat ( const QTextCharFormat & modifier )
 */
-HB_FUNC( QTEXTCURSOR_MERGEBLOCKCHARFORMAT )
+HB_FUNC_STATIC( QTEXTCURSOR_MERGEBLOCKCHARFORMAT )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1074,7 +1074,7 @@ HB_FUNC( QTEXTCURSOR_MERGEBLOCKCHARFORMAT )
 /*
 void mergeBlockFormat ( const QTextBlockFormat & modifier )
 */
-HB_FUNC( QTEXTCURSOR_MERGEBLOCKFORMAT )
+HB_FUNC_STATIC( QTEXTCURSOR_MERGEBLOCKFORMAT )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1089,7 +1089,7 @@ HB_FUNC( QTEXTCURSOR_MERGEBLOCKFORMAT )
 /*
 void mergeCharFormat ( const QTextCharFormat & modifier )
 */
-HB_FUNC( QTEXTCURSOR_MERGECHARFORMAT )
+HB_FUNC_STATIC( QTEXTCURSOR_MERGECHARFORMAT )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1104,7 +1104,7 @@ HB_FUNC( QTEXTCURSOR_MERGECHARFORMAT )
 /*
 bool movePosition ( MoveOperation operation, MoveMode mode = MoveAnchor, int n = 1 )
 */
-HB_FUNC( QTEXTCURSOR_MOVEPOSITION )
+HB_FUNC_STATIC( QTEXTCURSOR_MOVEPOSITION )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1121,7 +1121,7 @@ HB_FUNC( QTEXTCURSOR_MOVEPOSITION )
 /*
 int position () const
 */
-HB_FUNC( QTEXTCURSOR_POSITION )
+HB_FUNC_STATIC( QTEXTCURSOR_POSITION )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1135,7 +1135,7 @@ HB_FUNC( QTEXTCURSOR_POSITION )
 /*
 int positionInBlock () const
 */
-HB_FUNC( QTEXTCURSOR_POSITIONINBLOCK )
+HB_FUNC_STATIC( QTEXTCURSOR_POSITIONINBLOCK )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1149,7 +1149,7 @@ HB_FUNC( QTEXTCURSOR_POSITIONINBLOCK )
 /*
 void removeSelectedText ()
 */
-HB_FUNC( QTEXTCURSOR_REMOVESELECTEDTEXT )
+HB_FUNC_STATIC( QTEXTCURSOR_REMOVESELECTEDTEXT )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1163,7 +1163,7 @@ HB_FUNC( QTEXTCURSOR_REMOVESELECTEDTEXT )
 /*
 void select ( SelectionType selection )
 */
-HB_FUNC( QTEXTCURSOR_SELECT )
+HB_FUNC_STATIC( QTEXTCURSOR_SELECT )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1178,7 +1178,7 @@ HB_FUNC( QTEXTCURSOR_SELECT )
 /*
 void selectedTableCells ( int * firstRow, int * numRows, int * firstColumn, int * numColumns ) const
 */
-HB_FUNC( QTEXTCURSOR_SELECTEDTABLECELLS )
+HB_FUNC_STATIC( QTEXTCURSOR_SELECTEDTABLECELLS )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1200,7 +1200,7 @@ HB_FUNC( QTEXTCURSOR_SELECTEDTABLECELLS )
 /*
 QString selectedText () const
 */
-HB_FUNC( QTEXTCURSOR_SELECTEDTEXT )
+HB_FUNC_STATIC( QTEXTCURSOR_SELECTEDTEXT )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1214,7 +1214,7 @@ HB_FUNC( QTEXTCURSOR_SELECTEDTEXT )
 /*
 QTextDocumentFragment selection () const
 */
-HB_FUNC( QTEXTCURSOR_SELECTION )
+HB_FUNC_STATIC( QTEXTCURSOR_SELECTION )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1227,7 +1227,7 @@ HB_FUNC( QTEXTCURSOR_SELECTION )
 /*
 int selectionEnd () const
 */
-HB_FUNC( QTEXTCURSOR_SELECTIONEND )
+HB_FUNC_STATIC( QTEXTCURSOR_SELECTIONEND )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1241,7 +1241,7 @@ HB_FUNC( QTEXTCURSOR_SELECTIONEND )
 /*
 int selectionStart () const
 */
-HB_FUNC( QTEXTCURSOR_SELECTIONSTART )
+HB_FUNC_STATIC( QTEXTCURSOR_SELECTIONSTART )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1255,7 +1255,7 @@ HB_FUNC( QTEXTCURSOR_SELECTIONSTART )
 /*
 void setBlockCharFormat ( const QTextCharFormat & format )
 */
-HB_FUNC( QTEXTCURSOR_SETBLOCKCHARFORMAT )
+HB_FUNC_STATIC( QTEXTCURSOR_SETBLOCKCHARFORMAT )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1270,7 +1270,7 @@ HB_FUNC( QTEXTCURSOR_SETBLOCKCHARFORMAT )
 /*
 void setBlockFormat ( const QTextBlockFormat & format )
 */
-HB_FUNC( QTEXTCURSOR_SETBLOCKFORMAT )
+HB_FUNC_STATIC( QTEXTCURSOR_SETBLOCKFORMAT )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1285,7 +1285,7 @@ HB_FUNC( QTEXTCURSOR_SETBLOCKFORMAT )
 /*
 void setCharFormat ( const QTextCharFormat & format )
 */
-HB_FUNC( QTEXTCURSOR_SETCHARFORMAT )
+HB_FUNC_STATIC( QTEXTCURSOR_SETCHARFORMAT )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1300,7 +1300,7 @@ HB_FUNC( QTEXTCURSOR_SETCHARFORMAT )
 /*
 void setKeepPositionOnInsert ( bool b )
 */
-HB_FUNC( QTEXTCURSOR_SETKEEPPOSITIONONINSERT )
+HB_FUNC_STATIC( QTEXTCURSOR_SETKEEPPOSITIONONINSERT )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1315,7 +1315,7 @@ HB_FUNC( QTEXTCURSOR_SETKEEPPOSITIONONINSERT )
 /*
 void setPosition ( int pos, MoveMode m = MoveAnchor )
 */
-HB_FUNC( QTEXTCURSOR_SETPOSITION )
+HB_FUNC_STATIC( QTEXTCURSOR_SETPOSITION )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1331,7 +1331,7 @@ HB_FUNC( QTEXTCURSOR_SETPOSITION )
 /*
 void setVerticalMovementX ( int x )
 */
-HB_FUNC( QTEXTCURSOR_SETVERTICALMOVEMENTX )
+HB_FUNC_STATIC( QTEXTCURSOR_SETVERTICALMOVEMENTX )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1346,7 +1346,7 @@ HB_FUNC( QTEXTCURSOR_SETVERTICALMOVEMENTX )
 /*
 void setVisualNavigation ( bool b )
 */
-HB_FUNC( QTEXTCURSOR_SETVISUALNAVIGATION )
+HB_FUNC_STATIC( QTEXTCURSOR_SETVISUALNAVIGATION )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1361,7 +1361,7 @@ HB_FUNC( QTEXTCURSOR_SETVISUALNAVIGATION )
 /*
 int verticalMovementX () const
 */
-HB_FUNC( QTEXTCURSOR_VERTICALMOVEMENTX )
+HB_FUNC_STATIC( QTEXTCURSOR_VERTICALMOVEMENTX )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1375,7 +1375,7 @@ HB_FUNC( QTEXTCURSOR_VERTICALMOVEMENTX )
 /*
 bool visualNavigation () const
 */
-HB_FUNC( QTEXTCURSOR_VISUALNAVIGATION )
+HB_FUNC_STATIC( QTEXTCURSOR_VISUALNAVIGATION )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

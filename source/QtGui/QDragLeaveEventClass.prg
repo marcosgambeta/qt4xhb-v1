@@ -60,7 +60,7 @@ RETURN
 /*
 QDragLeaveEvent ()
 */
-HB_FUNC( QDRAGLEAVEEVENT_NEW )
+HB_FUNC_STATIC( QDRAGLEAVEEVENT_NEW )
 {
   QDragLeaveEvent * o = NULL;
   o = new QDragLeaveEvent (  );
@@ -72,7 +72,7 @@ HB_FUNC( QDRAGLEAVEEVENT_NEW )
 }
 
 
-HB_FUNC( QDRAGLEAVEEVENT_DELETE )
+HB_FUNC_STATIC( QDRAGLEAVEEVENT_DELETE )
 {
   QDragLeaveEvent * obj = (QDragLeaveEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

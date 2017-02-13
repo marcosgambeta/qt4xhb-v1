@@ -104,7 +104,7 @@ RETURN
 /*
 QTableWidgetSelectionRange ()
 */
-HB_FUNC( QTABLEWIDGETSELECTIONRANGE_NEW1 )
+HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_NEW1 )
 {
   QTableWidgetSelectionRange * o = NULL;
   o = new QTableWidgetSelectionRange (  );
@@ -119,7 +119,7 @@ HB_FUNC( QTABLEWIDGETSELECTIONRANGE_NEW1 )
 /*
 QTableWidgetSelectionRange ( int top, int left, int bottom, int right )
 */
-HB_FUNC( QTABLEWIDGETSELECTIONRANGE_NEW2 )
+HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_NEW2 )
 {
   QTableWidgetSelectionRange * o = NULL;
   int par1 = hb_parni(1);
@@ -138,7 +138,7 @@ HB_FUNC( QTABLEWIDGETSELECTIONRANGE_NEW2 )
 /*
 QTableWidgetSelectionRange ( const QTableWidgetSelectionRange & other )
 */
-HB_FUNC( QTABLEWIDGETSELECTIONRANGE_NEW3 )
+HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_NEW3 )
 {
   QTableWidgetSelectionRange * o = NULL;
   QTableWidgetSelectionRange * par1 = (QTableWidgetSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -155,7 +155,7 @@ HB_FUNC( QTABLEWIDGETSELECTIONRANGE_NEW3 )
 //[2]QTableWidgetSelectionRange ( int top, int left, int bottom, int right )
 //[3]QTableWidgetSelectionRange ( const QTableWidgetSelectionRange & other )
 
-HB_FUNC( QTABLEWIDGETSELECTIONRANGE_NEW )
+HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -175,7 +175,7 @@ HB_FUNC( QTABLEWIDGETSELECTIONRANGE_NEW )
   }
 }
 
-HB_FUNC( QTABLEWIDGETSELECTIONRANGE_DELETE )
+HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_DELETE )
 {
   QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -194,7 +194,7 @@ HB_FUNC( QTABLEWIDGETSELECTIONRANGE_DELETE )
 /*
 int bottomRow () const
 */
-HB_FUNC( QTABLEWIDGETSELECTIONRANGE_BOTTOMROW )
+HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_BOTTOMROW )
 {
   QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -208,7 +208,7 @@ HB_FUNC( QTABLEWIDGETSELECTIONRANGE_BOTTOMROW )
 /*
 int columnCount () const
 */
-HB_FUNC( QTABLEWIDGETSELECTIONRANGE_COLUMNCOUNT )
+HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_COLUMNCOUNT )
 {
   QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -222,7 +222,7 @@ HB_FUNC( QTABLEWIDGETSELECTIONRANGE_COLUMNCOUNT )
 /*
 int leftColumn () const
 */
-HB_FUNC( QTABLEWIDGETSELECTIONRANGE_LEFTCOLUMN )
+HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_LEFTCOLUMN )
 {
   QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -236,7 +236,7 @@ HB_FUNC( QTABLEWIDGETSELECTIONRANGE_LEFTCOLUMN )
 /*
 int rightColumn () const
 */
-HB_FUNC( QTABLEWIDGETSELECTIONRANGE_RIGHTCOLUMN )
+HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_RIGHTCOLUMN )
 {
   QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -250,7 +250,7 @@ HB_FUNC( QTABLEWIDGETSELECTIONRANGE_RIGHTCOLUMN )
 /*
 int rowCount () const
 */
-HB_FUNC( QTABLEWIDGETSELECTIONRANGE_ROWCOUNT )
+HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_ROWCOUNT )
 {
   QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -264,7 +264,7 @@ HB_FUNC( QTABLEWIDGETSELECTIONRANGE_ROWCOUNT )
 /*
 int topRow () const
 */
-HB_FUNC( QTABLEWIDGETSELECTIONRANGE_TOPROW )
+HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_TOPROW )
 {
   QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

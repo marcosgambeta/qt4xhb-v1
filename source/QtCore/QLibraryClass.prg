@@ -81,7 +81,7 @@ RETURN
 /*
 QLibrary(QObject *parent = 0)
 */
-HB_FUNC( QLIBRARY_NEW1 )
+HB_FUNC_STATIC( QLIBRARY_NEW1 )
 {
   QLibrary * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -97,7 +97,7 @@ HB_FUNC( QLIBRARY_NEW1 )
 /*
 QLibrary(const QString& fileName, QObject *parent = 0)
 */
-HB_FUNC( QLIBRARY_NEW2 )
+HB_FUNC_STATIC( QLIBRARY_NEW2 )
 {
   QLibrary * o = NULL;
   QString par1 = hb_parc(1);
@@ -114,7 +114,7 @@ HB_FUNC( QLIBRARY_NEW2 )
 /*
 QLibrary(const QString& fileName, int verNum, QObject *parent = 0)
 */
-HB_FUNC( QLIBRARY_NEW3 )
+HB_FUNC_STATIC( QLIBRARY_NEW3 )
 {
   QLibrary * o = NULL;
   QString par1 = hb_parc(1);
@@ -132,7 +132,7 @@ HB_FUNC( QLIBRARY_NEW3 )
 /*
 QLibrary(const QString& fileName, const QString &version, QObject *parent = 0)
 */
-HB_FUNC( QLIBRARY_NEW4 )
+HB_FUNC_STATIC( QLIBRARY_NEW4 )
 {
   QLibrary * o = NULL;
   QString par1 = hb_parc(1);
@@ -152,7 +152,7 @@ HB_FUNC( QLIBRARY_NEW4 )
 //[3]QLibrary(const QString& fileName, int verNum, QObject *parent = 0)
 //[4]QLibrary(const QString& fileName, const QString &version, QObject *parent = 0)
 
-HB_FUNC( QLIBRARY_NEW )
+HB_FUNC_STATIC( QLIBRARY_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
@@ -176,7 +176,7 @@ HB_FUNC( QLIBRARY_NEW )
   }
 }
 
-HB_FUNC( QLIBRARY_DELETE )
+HB_FUNC_STATIC( QLIBRARY_DELETE )
 {
   QLibrary * obj = (QLibrary *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -195,7 +195,7 @@ HB_FUNC( QLIBRARY_DELETE )
 /*
 void *resolve(const char *symbol)
 */
-HB_FUNC( QLIBRARY_RESOLVE1 )
+HB_FUNC_STATIC( QLIBRARY_RESOLVE1 )
 {
   QLibrary * obj = (QLibrary *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -210,7 +210,7 @@ HB_FUNC( QLIBRARY_RESOLVE1 )
 /*
 bool load()
 */
-HB_FUNC( QLIBRARY_LOAD )
+HB_FUNC_STATIC( QLIBRARY_LOAD )
 {
   QLibrary * obj = (QLibrary *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -224,7 +224,7 @@ HB_FUNC( QLIBRARY_LOAD )
 /*
 bool unload()
 */
-HB_FUNC( QLIBRARY_UNLOAD )
+HB_FUNC_STATIC( QLIBRARY_UNLOAD )
 {
   QLibrary * obj = (QLibrary *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -238,7 +238,7 @@ HB_FUNC( QLIBRARY_UNLOAD )
 /*
 bool isLoaded() const
 */
-HB_FUNC( QLIBRARY_ISLOADED )
+HB_FUNC_STATIC( QLIBRARY_ISLOADED )
 {
   QLibrary * obj = (QLibrary *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -252,7 +252,7 @@ HB_FUNC( QLIBRARY_ISLOADED )
 /*
 void setFileName(const QString &fileName)
 */
-HB_FUNC( QLIBRARY_SETFILENAME )
+HB_FUNC_STATIC( QLIBRARY_SETFILENAME )
 {
   QLibrary * obj = (QLibrary *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -267,7 +267,7 @@ HB_FUNC( QLIBRARY_SETFILENAME )
 /*
 QString fileName() const
 */
-HB_FUNC( QLIBRARY_FILENAME )
+HB_FUNC_STATIC( QLIBRARY_FILENAME )
 {
   QLibrary * obj = (QLibrary *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -281,7 +281,7 @@ HB_FUNC( QLIBRARY_FILENAME )
 /*
 void setFileNameAndVersion(const QString &fileName, int verNum)
 */
-HB_FUNC( QLIBRARY_SETFILENAMEANDVERSION1 )
+HB_FUNC_STATIC( QLIBRARY_SETFILENAMEANDVERSION1 )
 {
   QLibrary * obj = (QLibrary *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -297,7 +297,7 @@ HB_FUNC( QLIBRARY_SETFILENAMEANDVERSION1 )
 /*
 void setFileNameAndVersion(const QString &fileName, const QString &version)
 */
-HB_FUNC( QLIBRARY_SETFILENAMEANDVERSION2 )
+HB_FUNC_STATIC( QLIBRARY_SETFILENAMEANDVERSION2 )
 {
   QLibrary * obj = (QLibrary *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -313,7 +313,7 @@ HB_FUNC( QLIBRARY_SETFILENAMEANDVERSION2 )
 //[1]void setFileNameAndVersion(const QString &fileName, int verNum)
 //[2]void setFileNameAndVersion(const QString &fileName, const QString &version)
 
-HB_FUNC( QLIBRARY_SETFILENAMEANDVERSION )
+HB_FUNC_STATIC( QLIBRARY_SETFILENAMEANDVERSION )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
   {
@@ -328,7 +328,7 @@ HB_FUNC( QLIBRARY_SETFILENAMEANDVERSION )
 /*
 QString errorString() const
 */
-HB_FUNC( QLIBRARY_ERRORSTRING )
+HB_FUNC_STATIC( QLIBRARY_ERRORSTRING )
 {
   QLibrary * obj = (QLibrary *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -342,7 +342,7 @@ HB_FUNC( QLIBRARY_ERRORSTRING )
 /*
 void setLoadHints(LoadHints hints)
 */
-HB_FUNC( QLIBRARY_SETLOADHINTS )
+HB_FUNC_STATIC( QLIBRARY_SETLOADHINTS )
 {
   QLibrary * obj = (QLibrary *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -357,7 +357,7 @@ HB_FUNC( QLIBRARY_SETLOADHINTS )
 /*
 LoadHints loadHints() const
 */
-HB_FUNC( QLIBRARY_LOADHINTS )
+HB_FUNC_STATIC( QLIBRARY_LOADHINTS )
 {
   QLibrary * obj = (QLibrary *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -372,7 +372,7 @@ HB_FUNC( QLIBRARY_LOADHINTS )
 /*
 static void *resolve(const QString &fileName, const char *symbol)
 */
-HB_FUNC( QLIBRARY_RESOLVE2 )
+HB_FUNC_STATIC( QLIBRARY_RESOLVE2 )
 {
   QString par1 = hb_parc(1);
   const char * par2 = hb_parc(2);
@@ -384,7 +384,7 @@ HB_FUNC( QLIBRARY_RESOLVE2 )
 /*
 static void *resolve(const QString &fileName, int verNum, const char *symbol)
 */
-HB_FUNC( QLIBRARY_RESOLVE3 )
+HB_FUNC_STATIC( QLIBRARY_RESOLVE3 )
 {
   QString par1 = hb_parc(1);
   int par2 = hb_parni(2);
@@ -397,7 +397,7 @@ HB_FUNC( QLIBRARY_RESOLVE3 )
 /*
 static void *resolve(const QString &fileName, const QString &version, const char *symbol)
 */
-HB_FUNC( QLIBRARY_RESOLVE4 )
+HB_FUNC_STATIC( QLIBRARY_RESOLVE4 )
 {
   QString par1 = hb_parc(1);
   QString par2 = hb_parc(2);
@@ -412,7 +412,7 @@ HB_FUNC( QLIBRARY_RESOLVE4 )
 //[3]static void *resolve(const QString &fileName, int verNum, const char *symbol)
 //[4]static void *resolve(const QString &fileName, const QString &version, const char *symbol)
 
-HB_FUNC( QLIBRARY_RESOLVE )
+HB_FUNC_STATIC( QLIBRARY_RESOLVE )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
@@ -435,7 +435,7 @@ HB_FUNC( QLIBRARY_RESOLVE )
 /*
 static bool isLibrary(const QString &fileName)
 */
-HB_FUNC( QLIBRARY_ISLIBRARY )
+HB_FUNC_STATIC( QLIBRARY_ISLIBRARY )
 {
   QString par1 = hb_parc(1);
   bool b = QLibrary::isLibrary ( par1 );

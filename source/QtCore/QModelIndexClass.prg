@@ -113,7 +113,7 @@ RETURN
 /*
 QModelIndex ()
 */
-HB_FUNC( QMODELINDEX_NEW1 )
+HB_FUNC_STATIC( QMODELINDEX_NEW1 )
 {
   QModelIndex * o = NULL;
   o = new QModelIndex (  );
@@ -131,7 +131,7 @@ HB_FUNC( QMODELINDEX_NEW1 )
 /*
 QModelIndex ( const QModelIndex & other )
 */
-HB_FUNC( QMODELINDEX_NEW2 )
+HB_FUNC_STATIC( QMODELINDEX_NEW2 )
 {
   QModelIndex * o = NULL;
   QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -150,7 +150,7 @@ HB_FUNC( QMODELINDEX_NEW2 )
 //[1]QModelIndex ()
 //[2]QModelIndex ( const QModelIndex & other )
 
-HB_FUNC( QMODELINDEX_NEW )
+HB_FUNC_STATIC( QMODELINDEX_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -166,7 +166,7 @@ HB_FUNC( QMODELINDEX_NEW )
   }
 }
 
-HB_FUNC( QMODELINDEX_DELETE )
+HB_FUNC_STATIC( QMODELINDEX_DELETE )
 {
   QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -185,7 +185,7 @@ HB_FUNC( QMODELINDEX_DELETE )
 /*
 QModelIndex child ( int row, int column ) const
 */
-HB_FUNC( QMODELINDEX_CHILD )
+HB_FUNC_STATIC( QMODELINDEX_CHILD )
 {
   QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -200,7 +200,7 @@ HB_FUNC( QMODELINDEX_CHILD )
 /*
 int column () const
 */
-HB_FUNC( QMODELINDEX_COLUMN )
+HB_FUNC_STATIC( QMODELINDEX_COLUMN )
 {
   QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -214,7 +214,7 @@ HB_FUNC( QMODELINDEX_COLUMN )
 /*
 QVariant data ( int role = Qt::DisplayRole ) const
 */
-HB_FUNC( QMODELINDEX_DATA )
+HB_FUNC_STATIC( QMODELINDEX_DATA )
 {
   QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -228,7 +228,7 @@ HB_FUNC( QMODELINDEX_DATA )
 /*
 Qt::ItemFlags flags () const
 */
-HB_FUNC( QMODELINDEX_FLAGS )
+HB_FUNC_STATIC( QMODELINDEX_FLAGS )
 {
   QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -242,7 +242,7 @@ HB_FUNC( QMODELINDEX_FLAGS )
 /*
 qint64 internalId () const
 */
-HB_FUNC( QMODELINDEX_INTERNALID )
+HB_FUNC_STATIC( QMODELINDEX_INTERNALID )
 {
   QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -256,7 +256,7 @@ HB_FUNC( QMODELINDEX_INTERNALID )
 /*
 void * internalPointer () const
 */
-HB_FUNC( QMODELINDEX_INTERNALPOINTER )
+HB_FUNC_STATIC( QMODELINDEX_INTERNALPOINTER )
 {
   QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -270,7 +270,7 @@ HB_FUNC( QMODELINDEX_INTERNALPOINTER )
 /*
 bool isValid () const
 */
-HB_FUNC( QMODELINDEX_ISVALID )
+HB_FUNC_STATIC( QMODELINDEX_ISVALID )
 {
   QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -284,7 +284,7 @@ HB_FUNC( QMODELINDEX_ISVALID )
 /*
 const QAbstractItemModel * model () const
 */
-HB_FUNC( QMODELINDEX_MODEL )
+HB_FUNC_STATIC( QMODELINDEX_MODEL )
 {
   QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -297,7 +297,7 @@ HB_FUNC( QMODELINDEX_MODEL )
 /*
 QModelIndex parent () const
 */
-HB_FUNC( QMODELINDEX_PARENT )
+HB_FUNC_STATIC( QMODELINDEX_PARENT )
 {
   QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -310,7 +310,7 @@ HB_FUNC( QMODELINDEX_PARENT )
 /*
 int row () const
 */
-HB_FUNC( QMODELINDEX_ROW )
+HB_FUNC_STATIC( QMODELINDEX_ROW )
 {
   QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -324,7 +324,7 @@ HB_FUNC( QMODELINDEX_ROW )
 /*
 QModelIndex sibling ( int row, int column ) const
 */
-HB_FUNC( QMODELINDEX_SIBLING )
+HB_FUNC_STATIC( QMODELINDEX_SIBLING )
 {
   QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

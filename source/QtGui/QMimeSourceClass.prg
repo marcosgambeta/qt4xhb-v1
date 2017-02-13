@@ -97,7 +97,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QMIMESOURCE_DELETE )
+HB_FUNC_STATIC( QMIMESOURCE_DELETE )
 {
   QMimeSource * obj = (QMimeSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -116,7 +116,7 @@ HB_FUNC( QMIMESOURCE_DELETE )
 /*
 virtual QByteArray encodedData ( const char * format ) const = 0
 */
-HB_FUNC( QMIMESOURCE_ENCODEDDATA )
+HB_FUNC_STATIC( QMIMESOURCE_ENCODEDDATA )
 {
   QMimeSource * obj = (QMimeSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -130,7 +130,7 @@ HB_FUNC( QMIMESOURCE_ENCODEDDATA )
 /*
 virtual const char * format ( int i = 0 ) const = 0
 */
-HB_FUNC( QMIMESOURCE_FORMAT )
+HB_FUNC_STATIC( QMIMESOURCE_FORMAT )
 {
   QMimeSource * obj = (QMimeSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -145,7 +145,7 @@ HB_FUNC( QMIMESOURCE_FORMAT )
 /*
 virtual bool provides ( const char * mimeType ) const
 */
-HB_FUNC( QMIMESOURCE_PROVIDES )
+HB_FUNC_STATIC( QMIMESOURCE_PROVIDES )
 {
   QMimeSource * obj = (QMimeSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

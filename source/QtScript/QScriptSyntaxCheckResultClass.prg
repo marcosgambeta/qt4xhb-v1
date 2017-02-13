@@ -99,7 +99,7 @@ RETURN
 /*
 QScriptSyntaxCheckResult ( const QScriptSyntaxCheckResult & other )
 */
-HB_FUNC( QSCRIPTSYNTAXCHECKRESULT_NEW )
+HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_NEW )
 {
   QScriptSyntaxCheckResult * o = NULL;
   QScriptSyntaxCheckResult * par1 = (QScriptSyntaxCheckResult *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -112,7 +112,7 @@ HB_FUNC( QSCRIPTSYNTAXCHECKRESULT_NEW )
 }
 
 
-HB_FUNC( QSCRIPTSYNTAXCHECKRESULT_DELETE )
+HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_DELETE )
 {
   QScriptSyntaxCheckResult * obj = (QScriptSyntaxCheckResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -131,7 +131,7 @@ HB_FUNC( QSCRIPTSYNTAXCHECKRESULT_DELETE )
 /*
 int errorColumnNumber () const
 */
-HB_FUNC( QSCRIPTSYNTAXCHECKRESULT_ERRORCOLUMNNUMBER )
+HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_ERRORCOLUMNNUMBER )
 {
   QScriptSyntaxCheckResult * obj = (QScriptSyntaxCheckResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -145,7 +145,7 @@ HB_FUNC( QSCRIPTSYNTAXCHECKRESULT_ERRORCOLUMNNUMBER )
 /*
 int errorLineNumber () const
 */
-HB_FUNC( QSCRIPTSYNTAXCHECKRESULT_ERRORLINENUMBER )
+HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_ERRORLINENUMBER )
 {
   QScriptSyntaxCheckResult * obj = (QScriptSyntaxCheckResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -159,7 +159,7 @@ HB_FUNC( QSCRIPTSYNTAXCHECKRESULT_ERRORLINENUMBER )
 /*
 QString errorMessage () const
 */
-HB_FUNC( QSCRIPTSYNTAXCHECKRESULT_ERRORMESSAGE )
+HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_ERRORMESSAGE )
 {
   QScriptSyntaxCheckResult * obj = (QScriptSyntaxCheckResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -173,7 +173,7 @@ HB_FUNC( QSCRIPTSYNTAXCHECKRESULT_ERRORMESSAGE )
 /*
 State state () const
 */
-HB_FUNC( QSCRIPTSYNTAXCHECKRESULT_STATE )
+HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_STATE )
 {
   QScriptSyntaxCheckResult * obj = (QScriptSyntaxCheckResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

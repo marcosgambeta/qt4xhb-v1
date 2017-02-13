@@ -91,7 +91,7 @@ RETURN
 /*
 QSvgRenderer ( QObject * parent = 0 )
 */
-HB_FUNC( QSVGRENDERER_NEW1 )
+HB_FUNC_STATIC( QSVGRENDERER_NEW1 )
 {
   QSvgRenderer * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -107,7 +107,7 @@ HB_FUNC( QSVGRENDERER_NEW1 )
 /*
 QSvgRenderer ( const QString & filename, QObject * parent = 0 )
 */
-HB_FUNC( QSVGRENDERER_NEW2 )
+HB_FUNC_STATIC( QSVGRENDERER_NEW2 )
 {
   QSvgRenderer * o = NULL;
   QString par1 = hb_parc(1);
@@ -124,7 +124,7 @@ HB_FUNC( QSVGRENDERER_NEW2 )
 /*
 QSvgRenderer ( const QByteArray & contents, QObject * parent = 0 )
 */
-HB_FUNC( QSVGRENDERER_NEW3 )
+HB_FUNC_STATIC( QSVGRENDERER_NEW3 )
 {
   QSvgRenderer * o = NULL;
   QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -141,7 +141,7 @@ HB_FUNC( QSVGRENDERER_NEW3 )
 /*
 QSvgRenderer ( QXmlStreamReader * contents, QObject * parent = 0 )
 */
-HB_FUNC( QSVGRENDERER_NEW4 )
+HB_FUNC_STATIC( QSVGRENDERER_NEW4 )
 {
   QSvgRenderer * o = NULL;
   QXmlStreamReader * par1 = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -160,7 +160,7 @@ HB_FUNC( QSVGRENDERER_NEW4 )
 //[3]QSvgRenderer ( const QByteArray & contents, QObject * parent = 0 )
 //[4]QSvgRenderer ( QXmlStreamReader * contents, QObject * parent = 0 )
 
-HB_FUNC( QSVGRENDERER_NEW )
+HB_FUNC_STATIC( QSVGRENDERER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
@@ -184,7 +184,7 @@ HB_FUNC( QSVGRENDERER_NEW )
   }
 }
 
-HB_FUNC( QSVGRENDERER_DELETE )
+HB_FUNC_STATIC( QSVGRENDERER_DELETE )
 {
   QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -203,7 +203,7 @@ HB_FUNC( QSVGRENDERER_DELETE )
 /*
 bool animated () const
 */
-HB_FUNC( QSVGRENDERER_ANIMATED )
+HB_FUNC_STATIC( QSVGRENDERER_ANIMATED )
 {
   QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -217,7 +217,7 @@ HB_FUNC( QSVGRENDERER_ANIMATED )
 /*
 QRectF boundsOnElement ( const QString & id ) const
 */
-HB_FUNC( QSVGRENDERER_BOUNDSONELEMENT )
+HB_FUNC_STATIC( QSVGRENDERER_BOUNDSONELEMENT )
 {
   QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -231,7 +231,7 @@ HB_FUNC( QSVGRENDERER_BOUNDSONELEMENT )
 /*
 QSize defaultSize () const
 */
-HB_FUNC( QSVGRENDERER_DEFAULTSIZE )
+HB_FUNC_STATIC( QSVGRENDERER_DEFAULTSIZE )
 {
   QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -244,7 +244,7 @@ HB_FUNC( QSVGRENDERER_DEFAULTSIZE )
 /*
 bool elementExists ( const QString & id ) const
 */
-HB_FUNC( QSVGRENDERER_ELEMENTEXISTS )
+HB_FUNC_STATIC( QSVGRENDERER_ELEMENTEXISTS )
 {
   QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -259,7 +259,7 @@ HB_FUNC( QSVGRENDERER_ELEMENTEXISTS )
 /*
 int framesPerSecond () const
 */
-HB_FUNC( QSVGRENDERER_FRAMESPERSECOND )
+HB_FUNC_STATIC( QSVGRENDERER_FRAMESPERSECOND )
 {
   QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -273,7 +273,7 @@ HB_FUNC( QSVGRENDERER_FRAMESPERSECOND )
 /*
 bool isValid () const
 */
-HB_FUNC( QSVGRENDERER_ISVALID )
+HB_FUNC_STATIC( QSVGRENDERER_ISVALID )
 {
   QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -287,7 +287,7 @@ HB_FUNC( QSVGRENDERER_ISVALID )
 /*
 QMatrix matrixForElement ( const QString & id ) const
 */
-HB_FUNC( QSVGRENDERER_MATRIXFORELEMENT )
+HB_FUNC_STATIC( QSVGRENDERER_MATRIXFORELEMENT )
 {
   QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -301,7 +301,7 @@ HB_FUNC( QSVGRENDERER_MATRIXFORELEMENT )
 /*
 void setFramesPerSecond ( int num )
 */
-HB_FUNC( QSVGRENDERER_SETFRAMESPERSECOND )
+HB_FUNC_STATIC( QSVGRENDERER_SETFRAMESPERSECOND )
 {
   QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -316,7 +316,7 @@ HB_FUNC( QSVGRENDERER_SETFRAMESPERSECOND )
 /*
 void setViewBox ( const QRect & viewbox )
 */
-HB_FUNC( QSVGRENDERER_SETVIEWBOX1 )
+HB_FUNC_STATIC( QSVGRENDERER_SETVIEWBOX1 )
 {
   QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -331,7 +331,7 @@ HB_FUNC( QSVGRENDERER_SETVIEWBOX1 )
 /*
 void setViewBox ( const QRectF & viewbox )
 */
-HB_FUNC( QSVGRENDERER_SETVIEWBOX2 )
+HB_FUNC_STATIC( QSVGRENDERER_SETVIEWBOX2 )
 {
   QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -346,7 +346,7 @@ HB_FUNC( QSVGRENDERER_SETVIEWBOX2 )
 //[1]void setViewBox ( const QRect & viewbox )
 //[2]void setViewBox ( const QRectF & viewbox )
 
-HB_FUNC( QSVGRENDERER_SETVIEWBOX )
+HB_FUNC_STATIC( QSVGRENDERER_SETVIEWBOX )
 {
   if( ISNUMPAR(1) && ISQRECT(1) )
   {
@@ -361,7 +361,7 @@ HB_FUNC( QSVGRENDERER_SETVIEWBOX )
 /*
 QRect viewBox () const
 */
-HB_FUNC( QSVGRENDERER_VIEWBOX )
+HB_FUNC_STATIC( QSVGRENDERER_VIEWBOX )
 {
   QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -374,7 +374,7 @@ HB_FUNC( QSVGRENDERER_VIEWBOX )
 /*
 QRectF viewBoxF () const
 */
-HB_FUNC( QSVGRENDERER_VIEWBOXF )
+HB_FUNC_STATIC( QSVGRENDERER_VIEWBOXF )
 {
   QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -387,7 +387,7 @@ HB_FUNC( QSVGRENDERER_VIEWBOXF )
 /*
 bool load ( const QString & filename )
 */
-HB_FUNC( QSVGRENDERER_LOAD1 )
+HB_FUNC_STATIC( QSVGRENDERER_LOAD1 )
 {
   QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -402,7 +402,7 @@ HB_FUNC( QSVGRENDERER_LOAD1 )
 /*
 bool load ( const QByteArray & contents )
 */
-HB_FUNC( QSVGRENDERER_LOAD2 )
+HB_FUNC_STATIC( QSVGRENDERER_LOAD2 )
 {
   QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -417,7 +417,7 @@ HB_FUNC( QSVGRENDERER_LOAD2 )
 /*
 bool load ( QXmlStreamReader * contents )
 */
-HB_FUNC( QSVGRENDERER_LOAD3 )
+HB_FUNC_STATIC( QSVGRENDERER_LOAD3 )
 {
   QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -433,7 +433,7 @@ HB_FUNC( QSVGRENDERER_LOAD3 )
 //[2]bool load ( const QByteArray & contents )
 //[3]bool load ( QXmlStreamReader * contents )
 
-HB_FUNC( QSVGRENDERER_LOAD )
+HB_FUNC_STATIC( QSVGRENDERER_LOAD )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
@@ -452,7 +452,7 @@ HB_FUNC( QSVGRENDERER_LOAD )
 /*
 void render ( QPainter * painter )
 */
-HB_FUNC( QSVGRENDERER_RENDER1 )
+HB_FUNC_STATIC( QSVGRENDERER_RENDER1 )
 {
   QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -467,7 +467,7 @@ HB_FUNC( QSVGRENDERER_RENDER1 )
 /*
 void render ( QPainter * painter, const QRectF & bounds )
 */
-HB_FUNC( QSVGRENDERER_RENDER2 )
+HB_FUNC_STATIC( QSVGRENDERER_RENDER2 )
 {
   QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -483,7 +483,7 @@ HB_FUNC( QSVGRENDERER_RENDER2 )
 /*
 void render ( QPainter * painter, const QString & elementId, const QRectF & bounds = QRectF() )
 */
-HB_FUNC( QSVGRENDERER_RENDER3 )
+HB_FUNC_STATIC( QSVGRENDERER_RENDER3 )
 {
   QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -501,7 +501,7 @@ HB_FUNC( QSVGRENDERER_RENDER3 )
 //[2]void render ( QPainter * painter, const QRectF & bounds )
 //[3]void render ( QPainter * painter, const QString & elementId, const QRectF & bounds = QRectF() )
 
-HB_FUNC( QSVGRENDERER_RENDER )
+HB_FUNC_STATIC( QSVGRENDERER_RENDER )
 {
   if( ISNUMPAR(1) && ISQPAINTER(1) )
   {

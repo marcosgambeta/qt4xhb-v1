@@ -93,7 +93,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QWINDOWSMIME_DELETE )
+HB_FUNC_STATIC( QWINDOWSMIME_DELETE )
 {
   QWindowsMime * obj = (QWindowsMime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -119,7 +119,7 @@ HB_FUNC( QWINDOWSMIME_DELETE )
 /*
 int registerMimeType ( const QString & mime )
 */
-HB_FUNC( QWINDOWSMIME_REGISTERMIMETYPE )
+HB_FUNC_STATIC( QWINDOWSMIME_REGISTERMIMETYPE )
 {
   QString par1 = hb_parc(1);
   int i = QWindowsMime::registerMimeType ( par1 );

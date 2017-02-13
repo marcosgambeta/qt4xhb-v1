@@ -67,7 +67,7 @@ RETURN
 /*
 QRegExpValidator ( QObject * parent = 0 )
 */
-HB_FUNC( QREGEXPVALIDATOR_NEW1 )
+HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW1 )
 {
   QRegExpValidator * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -83,7 +83,7 @@ HB_FUNC( QREGEXPVALIDATOR_NEW1 )
 /*
 QRegExpValidator ( const QRegExp & rx, QObject * parent )
 */
-HB_FUNC( QREGEXPVALIDATOR_NEW2 )
+HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW2 )
 {
   QRegExpValidator * o = NULL;
   QRegExp * par1 = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -100,7 +100,7 @@ HB_FUNC( QREGEXPVALIDATOR_NEW2 )
 //[1]QRegExpValidator ( QObject * parent = 0 )
 //[2]QRegExpValidator ( const QRegExp & rx, QObject * parent )
 
-HB_FUNC( QREGEXPVALIDATOR_NEW )
+HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
@@ -116,7 +116,7 @@ HB_FUNC( QREGEXPVALIDATOR_NEW )
   }
 }
 
-HB_FUNC( QREGEXPVALIDATOR_DELETE )
+HB_FUNC_STATIC( QREGEXPVALIDATOR_DELETE )
 {
   QRegExpValidator * obj = (QRegExpValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -135,7 +135,7 @@ HB_FUNC( QREGEXPVALIDATOR_DELETE )
 /*
 const QRegExp & regExp () const
 */
-HB_FUNC( QREGEXPVALIDATOR_REGEXP )
+HB_FUNC_STATIC( QREGEXPVALIDATOR_REGEXP )
 {
   QRegExpValidator * obj = (QRegExpValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -148,7 +148,7 @@ HB_FUNC( QREGEXPVALIDATOR_REGEXP )
 /*
 void setRegExp ( const QRegExp & rx )
 */
-HB_FUNC( QREGEXPVALIDATOR_SETREGEXP )
+HB_FUNC_STATIC( QREGEXPVALIDATOR_SETREGEXP )
 {
   QRegExpValidator * obj = (QRegExpValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -163,7 +163,7 @@ HB_FUNC( QREGEXPVALIDATOR_SETREGEXP )
 /*
 virtual QValidator::State validate ( QString & input, int & pos ) const
 */
-HB_FUNC( QREGEXPVALIDATOR_VALIDATE )
+HB_FUNC_STATIC( QREGEXPVALIDATOR_VALIDATE )
 {
   QRegExpValidator * obj = (QRegExpValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

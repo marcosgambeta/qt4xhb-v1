@@ -110,7 +110,7 @@ RETURN
 /*
 QScriptEngine ()
 */
-HB_FUNC( QSCRIPTENGINE_NEW1 )
+HB_FUNC_STATIC( QSCRIPTENGINE_NEW1 )
 {
   QScriptEngine * o = NULL;
   o = new QScriptEngine (  );
@@ -125,7 +125,7 @@ HB_FUNC( QSCRIPTENGINE_NEW1 )
 /*
 QScriptEngine ( QObject * parent )
 */
-HB_FUNC( QSCRIPTENGINE_NEW2 )
+HB_FUNC_STATIC( QSCRIPTENGINE_NEW2 )
 {
   QScriptEngine * o = NULL;
   QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -141,7 +141,7 @@ HB_FUNC( QSCRIPTENGINE_NEW2 )
 //[1]QScriptEngine ()
 //[2]QScriptEngine ( QObject * parent )
 
-HB_FUNC( QSCRIPTENGINE_NEW )
+HB_FUNC_STATIC( QSCRIPTENGINE_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -157,7 +157,7 @@ HB_FUNC( QSCRIPTENGINE_NEW )
   }
 }
 
-HB_FUNC( QSCRIPTENGINE_DELETE )
+HB_FUNC_STATIC( QSCRIPTENGINE_DELETE )
 {
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -176,7 +176,7 @@ HB_FUNC( QSCRIPTENGINE_DELETE )
 /*
 void abortEvaluation ( const QScriptValue & result = QScriptValue() )
 */
-HB_FUNC( QSCRIPTENGINE_ABORTEVALUATION )
+HB_FUNC_STATIC( QSCRIPTENGINE_ABORTEVALUATION )
 {
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -191,7 +191,7 @@ HB_FUNC( QSCRIPTENGINE_ABORTEVALUATION )
 /*
 QScriptEngineAgent * agent () const
 */
-HB_FUNC( QSCRIPTENGINE_AGENT )
+HB_FUNC_STATIC( QSCRIPTENGINE_AGENT )
 {
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -204,7 +204,7 @@ HB_FUNC( QSCRIPTENGINE_AGENT )
 /*
 QStringList availableExtensions () const
 */
-HB_FUNC( QSCRIPTENGINE_AVAILABLEEXTENSIONS )
+HB_FUNC_STATIC( QSCRIPTENGINE_AVAILABLEEXTENSIONS )
 {
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -227,7 +227,7 @@ HB_FUNC( QSCRIPTENGINE_AVAILABLEEXTENSIONS )
 /*
 void clearExceptions ()
 */
-HB_FUNC( QSCRIPTENGINE_CLEAREXCEPTIONS )
+HB_FUNC_STATIC( QSCRIPTENGINE_CLEAREXCEPTIONS )
 {
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -241,7 +241,7 @@ HB_FUNC( QSCRIPTENGINE_CLEAREXCEPTIONS )
 /*
 void collectGarbage ()
 */
-HB_FUNC( QSCRIPTENGINE_COLLECTGARBAGE )
+HB_FUNC_STATIC( QSCRIPTENGINE_COLLECTGARBAGE )
 {
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -255,7 +255,7 @@ HB_FUNC( QSCRIPTENGINE_COLLECTGARBAGE )
 /*
 QScriptContext * currentContext () const
 */
-HB_FUNC( QSCRIPTENGINE_CURRENTCONTEXT )
+HB_FUNC_STATIC( QSCRIPTENGINE_CURRENTCONTEXT )
 {
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -268,7 +268,7 @@ HB_FUNC( QSCRIPTENGINE_CURRENTCONTEXT )
 /*
 QScriptValue defaultPrototype ( int metaTypeId ) const
 */
-HB_FUNC( QSCRIPTENGINE_DEFAULTPROTOTYPE )
+HB_FUNC_STATIC( QSCRIPTENGINE_DEFAULTPROTOTYPE )
 {
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -282,7 +282,7 @@ HB_FUNC( QSCRIPTENGINE_DEFAULTPROTOTYPE )
 /*
 QScriptValue evaluate ( const QString & program, const QString & fileName = QString(), int lineNumber = 1 )
 */
-HB_FUNC( QSCRIPTENGINE_EVALUATE1 )
+HB_FUNC_STATIC( QSCRIPTENGINE_EVALUATE1 )
 {
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -298,7 +298,7 @@ HB_FUNC( QSCRIPTENGINE_EVALUATE1 )
 /*
 QScriptValue evaluate ( const QScriptProgram & program )
 */
-HB_FUNC( QSCRIPTENGINE_EVALUATE2 )
+HB_FUNC_STATIC( QSCRIPTENGINE_EVALUATE2 )
 {
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -312,7 +312,7 @@ HB_FUNC( QSCRIPTENGINE_EVALUATE2 )
 //[1]QScriptValue evaluate ( const QString & program, const QString & fileName = QString(), int lineNumber = 1 )
 //[2]QScriptValue evaluate ( const QScriptProgram & program )
 
-HB_FUNC( QSCRIPTENGINE_EVALUATE )
+HB_FUNC_STATIC( QSCRIPTENGINE_EVALUATE )
 {
   if( ISBETWEEN(1,3) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) && (ISNUM(3)||ISNUM(3)) )
   {
@@ -328,7 +328,7 @@ HB_FUNC( QSCRIPTENGINE_EVALUATE )
 /*
 QScriptValue globalObject () const
 */
-HB_FUNC( QSCRIPTENGINE_GLOBALOBJECT )
+HB_FUNC_STATIC( QSCRIPTENGINE_GLOBALOBJECT )
 {
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -341,7 +341,7 @@ HB_FUNC( QSCRIPTENGINE_GLOBALOBJECT )
 /*
 bool hasUncaughtException () const
 */
-HB_FUNC( QSCRIPTENGINE_HASUNCAUGHTEXCEPTION )
+HB_FUNC_STATIC( QSCRIPTENGINE_HASUNCAUGHTEXCEPTION )
 {
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -355,7 +355,7 @@ HB_FUNC( QSCRIPTENGINE_HASUNCAUGHTEXCEPTION )
 /*
 QScriptValue importExtension ( const QString & extension )
 */
-HB_FUNC( QSCRIPTENGINE_IMPORTEXTENSION )
+HB_FUNC_STATIC( QSCRIPTENGINE_IMPORTEXTENSION )
 {
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -369,7 +369,7 @@ HB_FUNC( QSCRIPTENGINE_IMPORTEXTENSION )
 /*
 QStringList importedExtensions () const
 */
-HB_FUNC( QSCRIPTENGINE_IMPORTEDEXTENSIONS )
+HB_FUNC_STATIC( QSCRIPTENGINE_IMPORTEDEXTENSIONS )
 {
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -392,7 +392,7 @@ HB_FUNC( QSCRIPTENGINE_IMPORTEDEXTENSIONS )
 /*
 void installTranslatorFunctions ( const QScriptValue & object = QScriptValue() )
 */
-HB_FUNC( QSCRIPTENGINE_INSTALLTRANSLATORFUNCTIONS )
+HB_FUNC_STATIC( QSCRIPTENGINE_INSTALLTRANSLATORFUNCTIONS )
 {
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -407,7 +407,7 @@ HB_FUNC( QSCRIPTENGINE_INSTALLTRANSLATORFUNCTIONS )
 /*
 bool isEvaluating () const
 */
-HB_FUNC( QSCRIPTENGINE_ISEVALUATING )
+HB_FUNC_STATIC( QSCRIPTENGINE_ISEVALUATING )
 {
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -421,7 +421,7 @@ HB_FUNC( QSCRIPTENGINE_ISEVALUATING )
 /*
 QScriptValue newArray ( uint length = 0 )
 */
-HB_FUNC( QSCRIPTENGINE_NEWARRAY )
+HB_FUNC_STATIC( QSCRIPTENGINE_NEWARRAY )
 {
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -444,7 +444,7 @@ HB_FUNC( QSCRIPTENGINE_NEWARRAY )
 /*
 QScriptValue newRegExp ( const QRegExp & regexp )
 */
-HB_FUNC( QSCRIPTENGINE_NEWREGEXP1 )
+HB_FUNC_STATIC( QSCRIPTENGINE_NEWREGEXP1 )
 {
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -458,7 +458,7 @@ HB_FUNC( QSCRIPTENGINE_NEWREGEXP1 )
 /*
 QScriptValue newRegExp ( const QString & pattern, const QString & flags )
 */
-HB_FUNC( QSCRIPTENGINE_NEWREGEXP2 )
+HB_FUNC_STATIC( QSCRIPTENGINE_NEWREGEXP2 )
 {
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -473,7 +473,7 @@ HB_FUNC( QSCRIPTENGINE_NEWREGEXP2 )
 //[1]QScriptValue newRegExp ( const QRegExp & regexp )
 //[2]QScriptValue newRegExp ( const QString & pattern, const QString & flags )
 
-HB_FUNC( QSCRIPTENGINE_NEWREGEXP )
+HB_FUNC_STATIC( QSCRIPTENGINE_NEWREGEXP )
 {
   if( ISNUMPAR(1) && ISQREGEXP(1) )
   {
@@ -488,7 +488,7 @@ HB_FUNC( QSCRIPTENGINE_NEWREGEXP )
 /*
 QScriptValue newVariant ( const QVariant & value )
 */
-HB_FUNC( QSCRIPTENGINE_NEWVARIANT1 )
+HB_FUNC_STATIC( QSCRIPTENGINE_NEWVARIANT1 )
 {
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -502,7 +502,7 @@ HB_FUNC( QSCRIPTENGINE_NEWVARIANT1 )
 /*
 QScriptValue newVariant ( const QScriptValue & object, const QVariant & value )
 */
-HB_FUNC( QSCRIPTENGINE_NEWVARIANT2 )
+HB_FUNC_STATIC( QSCRIPTENGINE_NEWVARIANT2 )
 {
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -517,7 +517,7 @@ HB_FUNC( QSCRIPTENGINE_NEWVARIANT2 )
 //[1]QScriptValue newVariant ( const QVariant & value )
 //[2]QScriptValue newVariant ( const QScriptValue & object, const QVariant & value )
 
-HB_FUNC( QSCRIPTENGINE_NEWVARIANT )
+HB_FUNC_STATIC( QSCRIPTENGINE_NEWVARIANT )
 {
   if( ISNUMPAR(1) && ISQVARIANT(1) )
   {
@@ -532,7 +532,7 @@ HB_FUNC( QSCRIPTENGINE_NEWVARIANT )
 /*
 QScriptValue nullValue ()
 */
-HB_FUNC( QSCRIPTENGINE_NULLVALUE )
+HB_FUNC_STATIC( QSCRIPTENGINE_NULLVALUE )
 {
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -545,7 +545,7 @@ HB_FUNC( QSCRIPTENGINE_NULLVALUE )
 /*
 void popContext ()
 */
-HB_FUNC( QSCRIPTENGINE_POPCONTEXT )
+HB_FUNC_STATIC( QSCRIPTENGINE_POPCONTEXT )
 {
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -559,7 +559,7 @@ HB_FUNC( QSCRIPTENGINE_POPCONTEXT )
 /*
 int processEventsInterval () const
 */
-HB_FUNC( QSCRIPTENGINE_PROCESSEVENTSINTERVAL )
+HB_FUNC_STATIC( QSCRIPTENGINE_PROCESSEVENTSINTERVAL )
 {
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -573,7 +573,7 @@ HB_FUNC( QSCRIPTENGINE_PROCESSEVENTSINTERVAL )
 /*
 QScriptContext * pushContext ()
 */
-HB_FUNC( QSCRIPTENGINE_PUSHCONTEXT )
+HB_FUNC_STATIC( QSCRIPTENGINE_PUSHCONTEXT )
 {
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -586,7 +586,7 @@ HB_FUNC( QSCRIPTENGINE_PUSHCONTEXT )
 /*
 void reportAdditionalMemoryCost ( int size )
 */
-HB_FUNC( QSCRIPTENGINE_REPORTADDITIONALMEMORYCOST )
+HB_FUNC_STATIC( QSCRIPTENGINE_REPORTADDITIONALMEMORYCOST )
 {
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -602,7 +602,7 @@ HB_FUNC( QSCRIPTENGINE_REPORTADDITIONALMEMORYCOST )
 /*
 void setAgent ( QScriptEngineAgent * agent )
 */
-HB_FUNC( QSCRIPTENGINE_SETAGENT )
+HB_FUNC_STATIC( QSCRIPTENGINE_SETAGENT )
 {
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -617,7 +617,7 @@ HB_FUNC( QSCRIPTENGINE_SETAGENT )
 /*
 void setDefaultPrototype ( int metaTypeId, const QScriptValue & prototype )
 */
-HB_FUNC( QSCRIPTENGINE_SETDEFAULTPROTOTYPE )
+HB_FUNC_STATIC( QSCRIPTENGINE_SETDEFAULTPROTOTYPE )
 {
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -633,7 +633,7 @@ HB_FUNC( QSCRIPTENGINE_SETDEFAULTPROTOTYPE )
 /*
 void setGlobalObject ( const QScriptValue & object )
 */
-HB_FUNC( QSCRIPTENGINE_SETGLOBALOBJECT )
+HB_FUNC_STATIC( QSCRIPTENGINE_SETGLOBALOBJECT )
 {
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -648,7 +648,7 @@ HB_FUNC( QSCRIPTENGINE_SETGLOBALOBJECT )
 /*
 void setProcessEventsInterval ( int interval )
 */
-HB_FUNC( QSCRIPTENGINE_SETPROCESSEVENTSINTERVAL )
+HB_FUNC_STATIC( QSCRIPTENGINE_SETPROCESSEVENTSINTERVAL )
 {
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -663,7 +663,7 @@ HB_FUNC( QSCRIPTENGINE_SETPROCESSEVENTSINTERVAL )
 /*
 QScriptValue toObject ( const QScriptValue & value )
 */
-HB_FUNC( QSCRIPTENGINE_TOOBJECT )
+HB_FUNC_STATIC( QSCRIPTENGINE_TOOBJECT )
 {
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -678,7 +678,7 @@ HB_FUNC( QSCRIPTENGINE_TOOBJECT )
 /*
 QScriptString toStringHandle ( const QString & str )
 */
-HB_FUNC( QSCRIPTENGINE_TOSTRINGHANDLE )
+HB_FUNC_STATIC( QSCRIPTENGINE_TOSTRINGHANDLE )
 {
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -692,7 +692,7 @@ HB_FUNC( QSCRIPTENGINE_TOSTRINGHANDLE )
 /*
 QScriptValue uncaughtException () const
 */
-HB_FUNC( QSCRIPTENGINE_UNCAUGHTEXCEPTION )
+HB_FUNC_STATIC( QSCRIPTENGINE_UNCAUGHTEXCEPTION )
 {
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -705,7 +705,7 @@ HB_FUNC( QSCRIPTENGINE_UNCAUGHTEXCEPTION )
 /*
 QStringList uncaughtExceptionBacktrace () const
 */
-HB_FUNC( QSCRIPTENGINE_UNCAUGHTEXCEPTIONBACKTRACE )
+HB_FUNC_STATIC( QSCRIPTENGINE_UNCAUGHTEXCEPTIONBACKTRACE )
 {
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -728,7 +728,7 @@ HB_FUNC( QSCRIPTENGINE_UNCAUGHTEXCEPTIONBACKTRACE )
 /*
 int uncaughtExceptionLineNumber () const
 */
-HB_FUNC( QSCRIPTENGINE_UNCAUGHTEXCEPTIONLINENUMBER )
+HB_FUNC_STATIC( QSCRIPTENGINE_UNCAUGHTEXCEPTIONLINENUMBER )
 {
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -742,7 +742,7 @@ HB_FUNC( QSCRIPTENGINE_UNCAUGHTEXCEPTIONLINENUMBER )
 /*
 QScriptValue undefinedValue ()
 */
-HB_FUNC( QSCRIPTENGINE_UNDEFINEDVALUE )
+HB_FUNC_STATIC( QSCRIPTENGINE_UNDEFINEDVALUE )
 {
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -756,7 +756,7 @@ HB_FUNC( QSCRIPTENGINE_UNDEFINEDVALUE )
 /*
 QScriptSyntaxCheckResult checkSyntax ( const QString & program )
 */
-HB_FUNC( QSCRIPTENGINE_CHECKSYNTAX )
+HB_FUNC_STATIC( QSCRIPTENGINE_CHECKSYNTAX )
 {
   QString par1 = hb_parc(1);
   QScriptSyntaxCheckResult * ptr = new QScriptSyntaxCheckResult( QScriptEngine::checkSyntax ( par1 ) );

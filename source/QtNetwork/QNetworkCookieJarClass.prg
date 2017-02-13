@@ -64,7 +64,7 @@ RETURN
 /*
 QNetworkCookieJar ( QObject * parent = 0 )
 */
-HB_FUNC( QNETWORKCOOKIEJAR_NEW )
+HB_FUNC_STATIC( QNETWORKCOOKIEJAR_NEW )
 {
   QNetworkCookieJar * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -77,7 +77,7 @@ HB_FUNC( QNETWORKCOOKIEJAR_NEW )
 }
 
 
-HB_FUNC( QNETWORKCOOKIEJAR_DELETE )
+HB_FUNC_STATIC( QNETWORKCOOKIEJAR_DELETE )
 {
   QNetworkCookieJar * obj = (QNetworkCookieJar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -96,7 +96,7 @@ HB_FUNC( QNETWORKCOOKIEJAR_DELETE )
 /*
 virtual QList<QNetworkCookie> cookiesForUrl ( const QUrl & url ) const
 */
-HB_FUNC( QNETWORKCOOKIEJAR_COOKIESFORURL )
+HB_FUNC_STATIC( QNETWORKCOOKIEJAR_COOKIESFORURL )
 {
   QNetworkCookieJar * obj = (QNetworkCookieJar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -145,7 +145,7 @@ HB_FUNC( QNETWORKCOOKIEJAR_COOKIESFORURL )
 /*
 virtual bool setCookiesFromUrl ( const QList<QNetworkCookie> & cookieList, const QUrl & url )
 */
-HB_FUNC( QNETWORKCOOKIEJAR_SETCOOKIESFROMURL )
+HB_FUNC_STATIC( QNETWORKCOOKIEJAR_SETCOOKIESFROMURL )
 {
   QNetworkCookieJar * obj = (QNetworkCookieJar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

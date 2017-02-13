@@ -69,7 +69,7 @@ RETURN
 /*
 QFileOpenEvent(const QString &file)
 */
-HB_FUNC( QFILEOPENEVENT_NEW1 )
+HB_FUNC_STATIC( QFILEOPENEVENT_NEW1 )
 {
   QFileOpenEvent * o = NULL;
   QFileOpenEvent * par1 = (QFileOpenEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -85,7 +85,7 @@ HB_FUNC( QFILEOPENEVENT_NEW1 )
 /*
 QFileOpenEvent(const QUrl &url)
 */
-HB_FUNC( QFILEOPENEVENT_NEW2 )
+HB_FUNC_STATIC( QFILEOPENEVENT_NEW2 )
 {
   QFileOpenEvent * o = NULL;
   QFileOpenEvent * par1 = (QFileOpenEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -101,7 +101,7 @@ HB_FUNC( QFILEOPENEVENT_NEW2 )
 //[1]QFileOpenEvent(const QString &file)
 //[2]QFileOpenEvent(const QUrl &url)
 
-HB_FUNC( QFILEOPENEVENT_NEW )
+HB_FUNC_STATIC( QFILEOPENEVENT_NEW )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
@@ -117,7 +117,7 @@ HB_FUNC( QFILEOPENEVENT_NEW )
   }
 }
 
-HB_FUNC( QFILEOPENEVENT_DELETE )
+HB_FUNC_STATIC( QFILEOPENEVENT_DELETE )
 {
   QFileOpenEvent * obj = (QFileOpenEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -136,7 +136,7 @@ HB_FUNC( QFILEOPENEVENT_DELETE )
 /*
 QString file () const
 */
-HB_FUNC( QFILEOPENEVENT_FILE )
+HB_FUNC_STATIC( QFILEOPENEVENT_FILE )
 {
   QFileOpenEvent * obj = (QFileOpenEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -150,7 +150,7 @@ HB_FUNC( QFILEOPENEVENT_FILE )
 /*
 bool openFile ( QFile & file, QIODevice::OpenMode flags ) const
 */
-HB_FUNC( QFILEOPENEVENT_OPENFILE )
+HB_FUNC_STATIC( QFILEOPENEVENT_OPENFILE )
 {
   QFileOpenEvent * obj = (QFileOpenEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -166,7 +166,7 @@ HB_FUNC( QFILEOPENEVENT_OPENFILE )
 /*
 QUrl url () const
 */
-HB_FUNC( QFILEOPENEVENT_URL )
+HB_FUNC_STATIC( QFILEOPENEVENT_URL )
 {
   QFileOpenEvent * obj = (QFileOpenEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

@@ -109,7 +109,7 @@ RETURN
 /*
 QAuthenticator ()
 */
-HB_FUNC( QAUTHENTICATOR_NEW1 )
+HB_FUNC_STATIC( QAUTHENTICATOR_NEW1 )
 {
   QAuthenticator * o = NULL;
   o = new QAuthenticator (  );
@@ -124,7 +124,7 @@ HB_FUNC( QAUTHENTICATOR_NEW1 )
 /*
 QAuthenticator ( const QAuthenticator & other )
 */
-HB_FUNC( QAUTHENTICATOR_NEW2 )
+HB_FUNC_STATIC( QAUTHENTICATOR_NEW2 )
 {
   QAuthenticator * o = NULL;
   QAuthenticator * par1 = (QAuthenticator *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -140,7 +140,7 @@ HB_FUNC( QAUTHENTICATOR_NEW2 )
 //[1]QAuthenticator ()
 //[2]QAuthenticator ( const QAuthenticator & other )
 
-HB_FUNC( QAUTHENTICATOR_NEW )
+HB_FUNC_STATIC( QAUTHENTICATOR_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -156,7 +156,7 @@ HB_FUNC( QAUTHENTICATOR_NEW )
   }
 }
 
-HB_FUNC( QAUTHENTICATOR_DELETE )
+HB_FUNC_STATIC( QAUTHENTICATOR_DELETE )
 {
   QAuthenticator * obj = (QAuthenticator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -175,7 +175,7 @@ HB_FUNC( QAUTHENTICATOR_DELETE )
 /*
 bool isNull () const
 */
-HB_FUNC( QAUTHENTICATOR_ISNULL )
+HB_FUNC_STATIC( QAUTHENTICATOR_ISNULL )
 {
   QAuthenticator * obj = (QAuthenticator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -189,7 +189,7 @@ HB_FUNC( QAUTHENTICATOR_ISNULL )
 /*
 QVariant option ( const QString & opt ) const
 */
-HB_FUNC( QAUTHENTICATOR_OPTION )
+HB_FUNC_STATIC( QAUTHENTICATOR_OPTION )
 {
   QAuthenticator * obj = (QAuthenticator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -203,7 +203,7 @@ HB_FUNC( QAUTHENTICATOR_OPTION )
 /*
 QVariantHash options () const
 */
-HB_FUNC( QAUTHENTICATOR_OPTIONS )
+HB_FUNC_STATIC( QAUTHENTICATOR_OPTIONS )
 {
   QAuthenticator * obj = (QAuthenticator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -216,7 +216,7 @@ HB_FUNC( QAUTHENTICATOR_OPTIONS )
 /*
 QString password () const
 */
-HB_FUNC( QAUTHENTICATOR_PASSWORD )
+HB_FUNC_STATIC( QAUTHENTICATOR_PASSWORD )
 {
   QAuthenticator * obj = (QAuthenticator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -230,7 +230,7 @@ HB_FUNC( QAUTHENTICATOR_PASSWORD )
 /*
 QString realm () const
 */
-HB_FUNC( QAUTHENTICATOR_REALM )
+HB_FUNC_STATIC( QAUTHENTICATOR_REALM )
 {
   QAuthenticator * obj = (QAuthenticator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -244,7 +244,7 @@ HB_FUNC( QAUTHENTICATOR_REALM )
 /*
 void setOption ( const QString & opt, const QVariant & value )
 */
-HB_FUNC( QAUTHENTICATOR_SETOPTION )
+HB_FUNC_STATIC( QAUTHENTICATOR_SETOPTION )
 {
   QAuthenticator * obj = (QAuthenticator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -260,7 +260,7 @@ HB_FUNC( QAUTHENTICATOR_SETOPTION )
 /*
 void setPassword ( const QString & password )
 */
-HB_FUNC( QAUTHENTICATOR_SETPASSWORD )
+HB_FUNC_STATIC( QAUTHENTICATOR_SETPASSWORD )
 {
   QAuthenticator * obj = (QAuthenticator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -275,7 +275,7 @@ HB_FUNC( QAUTHENTICATOR_SETPASSWORD )
 /*
 void setUser ( const QString & user )
 */
-HB_FUNC( QAUTHENTICATOR_SETUSER )
+HB_FUNC_STATIC( QAUTHENTICATOR_SETUSER )
 {
   QAuthenticator * obj = (QAuthenticator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -290,7 +290,7 @@ HB_FUNC( QAUTHENTICATOR_SETUSER )
 /*
 QString user () const
 */
-HB_FUNC( QAUTHENTICATOR_USER )
+HB_FUNC_STATIC( QAUTHENTICATOR_USER )
 {
   QAuthenticator * obj = (QAuthenticator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

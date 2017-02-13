@@ -74,7 +74,7 @@ RETURN
 /*
 QPrintDialog ( QPrinter * printer, QWidget * parent = 0 )
 */
-HB_FUNC( QPRINTDIALOG_NEW1 )
+HB_FUNC_STATIC( QPRINTDIALOG_NEW1 )
 {
   QPrintDialog * o = NULL;
   QPrinter * par1 = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -91,7 +91,7 @@ HB_FUNC( QPRINTDIALOG_NEW1 )
 /*
 QPrintDialog ( QWidget * parent = 0 )
 */
-HB_FUNC( QPRINTDIALOG_NEW2 )
+HB_FUNC_STATIC( QPRINTDIALOG_NEW2 )
 {
   QPrintDialog * o = NULL;
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -107,7 +107,7 @@ HB_FUNC( QPRINTDIALOG_NEW2 )
 //[1]QPrintDialog ( QPrinter * printer, QWidget * parent = 0 )
 //[2]QPrintDialog ( QWidget * parent = 0 )
 
-HB_FUNC( QPRINTDIALOG_NEW )
+HB_FUNC_STATIC( QPRINTDIALOG_NEW )
 {
   if( ISBETWEEN(1,2) && ISQPRINTER(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
@@ -123,7 +123,7 @@ HB_FUNC( QPRINTDIALOG_NEW )
   }
 }
 
-HB_FUNC( QPRINTDIALOG_DELETE )
+HB_FUNC_STATIC( QPRINTDIALOG_DELETE )
 {
   QPrintDialog * obj = (QPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -142,7 +142,7 @@ HB_FUNC( QPRINTDIALOG_DELETE )
 /*
 void open ( QObject * receiver, const char * member )
 */
-HB_FUNC( QPRINTDIALOG_OPEN )
+HB_FUNC_STATIC( QPRINTDIALOG_OPEN )
 {
   QPrintDialog * obj = (QPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -158,7 +158,7 @@ HB_FUNC( QPRINTDIALOG_OPEN )
 /*
 PrintDialogOptions options () const
 */
-HB_FUNC( QPRINTDIALOG_OPTIONS )
+HB_FUNC_STATIC( QPRINTDIALOG_OPTIONS )
 {
   QPrintDialog * obj = (QPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -172,7 +172,7 @@ HB_FUNC( QPRINTDIALOG_OPTIONS )
 /*
 QPrinter * printer ()
 */
-HB_FUNC( QPRINTDIALOG_PRINTER )
+HB_FUNC_STATIC( QPRINTDIALOG_PRINTER )
 {
   QPrintDialog * obj = (QPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -185,7 +185,7 @@ HB_FUNC( QPRINTDIALOG_PRINTER )
 /*
 void setOption ( PrintDialogOption option, bool on = true )
 */
-HB_FUNC( QPRINTDIALOG_SETOPTION )
+HB_FUNC_STATIC( QPRINTDIALOG_SETOPTION )
 {
   QPrintDialog * obj = (QPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -201,7 +201,7 @@ HB_FUNC( QPRINTDIALOG_SETOPTION )
 /*
 void setOptions ( PrintDialogOptions options )
 */
-HB_FUNC( QPRINTDIALOG_SETOPTIONS )
+HB_FUNC_STATIC( QPRINTDIALOG_SETOPTIONS )
 {
   QPrintDialog * obj = (QPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -216,7 +216,7 @@ HB_FUNC( QPRINTDIALOG_SETOPTIONS )
 /*
 bool testOption ( PrintDialogOption option ) const
 */
-HB_FUNC( QPRINTDIALOG_TESTOPTION )
+HB_FUNC_STATIC( QPRINTDIALOG_TESTOPTION )
 {
   QPrintDialog * obj = (QPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -231,7 +231,7 @@ HB_FUNC( QPRINTDIALOG_TESTOPTION )
 /*
 virtual void done ( int result )
 */
-HB_FUNC( QPRINTDIALOG_DONE )
+HB_FUNC_STATIC( QPRINTDIALOG_DONE )
 {
   QPrintDialog * obj = (QPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -246,7 +246,7 @@ HB_FUNC( QPRINTDIALOG_DONE )
 /*
 virtual int exec ()
 */
-HB_FUNC( QPRINTDIALOG_EXEC )
+HB_FUNC_STATIC( QPRINTDIALOG_EXEC )
 {
   QPrintDialog * obj = (QPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -260,7 +260,7 @@ HB_FUNC( QPRINTDIALOG_EXEC )
 /*
 virtual void setVisible ( bool visible )
 */
-HB_FUNC( QPRINTDIALOG_SETVISIBLE )
+HB_FUNC_STATIC( QPRINTDIALOG_SETVISIBLE )
 {
   QPrintDialog * obj = (QPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

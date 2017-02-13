@@ -61,7 +61,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QGENERICPLUGIN_DELETE )
+HB_FUNC_STATIC( QGENERICPLUGIN_DELETE )
 {
   QGenericPlugin * obj = (QGenericPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -80,7 +80,7 @@ HB_FUNC( QGENERICPLUGIN_DELETE )
 /*
 virtual QObject * create ( const QString & key, const QString & specification ) = 0
 */
-HB_FUNC( QGENERICPLUGIN_CREATE )
+HB_FUNC_STATIC( QGENERICPLUGIN_CREATE )
 {
   QGenericPlugin * obj = (QGenericPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -95,7 +95,7 @@ HB_FUNC( QGENERICPLUGIN_CREATE )
 /*
 virtual QStringList keys () const = 0
 */
-HB_FUNC( QGENERICPLUGIN_KEYS )
+HB_FUNC_STATIC( QGENERICPLUGIN_KEYS )
 {
   QGenericPlugin * obj = (QGenericPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

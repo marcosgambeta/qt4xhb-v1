@@ -110,7 +110,7 @@ RETURN
 /*
 QScriptClass ( QScriptEngine * engine )
 */
-HB_FUNC( QSCRIPTCLASS_NEW )
+HB_FUNC_STATIC( QSCRIPTCLASS_NEW )
 {
   QScriptClass * o = NULL;
   QScriptEngine * par1 = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -123,7 +123,7 @@ HB_FUNC( QSCRIPTCLASS_NEW )
 }
 
 
-HB_FUNC( QSCRIPTCLASS_DELETE )
+HB_FUNC_STATIC( QSCRIPTCLASS_DELETE )
 {
   QScriptClass * obj = (QScriptClass *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -142,7 +142,7 @@ HB_FUNC( QSCRIPTCLASS_DELETE )
 /*
 QScriptEngine * engine () const
 */
-HB_FUNC( QSCRIPTCLASS_ENGINE )
+HB_FUNC_STATIC( QSCRIPTCLASS_ENGINE )
 {
   QScriptClass * obj = (QScriptClass *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -155,7 +155,7 @@ HB_FUNC( QSCRIPTCLASS_ENGINE )
 /*
 virtual QVariant extension ( Extension extension, const QVariant & argument = QVariant() )
 */
-HB_FUNC( QSCRIPTCLASS_EXTENSION )
+HB_FUNC_STATIC( QSCRIPTCLASS_EXTENSION )
 {
   QScriptClass * obj = (QScriptClass *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -170,7 +170,7 @@ HB_FUNC( QSCRIPTCLASS_EXTENSION )
 /*
 virtual QString name () const
 */
-HB_FUNC( QSCRIPTCLASS_NAME )
+HB_FUNC_STATIC( QSCRIPTCLASS_NAME )
 {
   QScriptClass * obj = (QScriptClass *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -184,7 +184,7 @@ HB_FUNC( QSCRIPTCLASS_NAME )
 /*
 virtual QScriptClassPropertyIterator * newIterator ( const QScriptValue & object )
 */
-HB_FUNC( QSCRIPTCLASS_NEWITERATOR )
+HB_FUNC_STATIC( QSCRIPTCLASS_NEWITERATOR )
 {
   QScriptClass * obj = (QScriptClass *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -198,7 +198,7 @@ HB_FUNC( QSCRIPTCLASS_NEWITERATOR )
 /*
 virtual QScriptValue property ( const QScriptValue & object, const QScriptString & name, uint id )
 */
-HB_FUNC( QSCRIPTCLASS_PROPERTY )
+HB_FUNC_STATIC( QSCRIPTCLASS_PROPERTY )
 {
   QScriptClass * obj = (QScriptClass *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -214,7 +214,7 @@ HB_FUNC( QSCRIPTCLASS_PROPERTY )
 /*
 virtual QScriptValue::PropertyFlags propertyFlags ( const QScriptValue & object, const QScriptString & name, uint id )
 */
-HB_FUNC( QSCRIPTCLASS_PROPERTYFLAGS )
+HB_FUNC_STATIC( QSCRIPTCLASS_PROPERTYFLAGS )
 {
   QScriptClass * obj = (QScriptClass *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -231,7 +231,7 @@ HB_FUNC( QSCRIPTCLASS_PROPERTYFLAGS )
 /*
 virtual QScriptValue prototype () const
 */
-HB_FUNC( QSCRIPTCLASS_PROTOTYPE )
+HB_FUNC_STATIC( QSCRIPTCLASS_PROTOTYPE )
 {
   QScriptClass * obj = (QScriptClass *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -244,7 +244,7 @@ HB_FUNC( QSCRIPTCLASS_PROTOTYPE )
 /*
 virtual QueryFlags queryProperty ( const QScriptValue & object, const QScriptString & name, QueryFlags flags, uint * id )
 */
-HB_FUNC( QSCRIPTCLASS_QUERYPROPERTY )
+HB_FUNC_STATIC( QSCRIPTCLASS_QUERYPROPERTY )
 {
   QScriptClass * obj = (QScriptClass *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -262,7 +262,7 @@ HB_FUNC( QSCRIPTCLASS_QUERYPROPERTY )
 /*
 virtual void setProperty ( QScriptValue & object, const QScriptString & name, uint id, const QScriptValue & value )
 */
-HB_FUNC( QSCRIPTCLASS_SETPROPERTY )
+HB_FUNC_STATIC( QSCRIPTCLASS_SETPROPERTY )
 {
   QScriptClass * obj = (QScriptClass *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -280,7 +280,7 @@ HB_FUNC( QSCRIPTCLASS_SETPROPERTY )
 /*
 virtual bool supportsExtension ( Extension extension ) const
 */
-HB_FUNC( QSCRIPTCLASS_SUPPORTSEXTENSION )
+HB_FUNC_STATIC( QSCRIPTCLASS_SUPPORTSEXTENSION )
 {
   QScriptClass * obj = (QScriptClass *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

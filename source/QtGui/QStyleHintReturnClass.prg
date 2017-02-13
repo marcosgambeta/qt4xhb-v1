@@ -95,7 +95,7 @@ RETURN
 /*
 QStyleHintReturn ( int version = QStyleOption::Version, int type = SH_Default )
 */
-HB_FUNC( QSTYLEHINTRETURN_NEW )
+HB_FUNC_STATIC( QSTYLEHINTRETURN_NEW )
 {
   QStyleHintReturn * o = NULL;
   int par1 = ISNIL(1)? QStyleOption::Version : hb_parni(1);
@@ -109,7 +109,7 @@ HB_FUNC( QSTYLEHINTRETURN_NEW )
 }
 
 
-HB_FUNC( QSTYLEHINTRETURN_DELETE )
+HB_FUNC_STATIC( QSTYLEHINTRETURN_DELETE )
 {
   QStyleHintReturn * obj = (QStyleHintReturn *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

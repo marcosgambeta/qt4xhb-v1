@@ -71,7 +71,7 @@ RETURN
 #include "qt4xhb_clsid.h"
 #include "qt4xhb_utils.h"
 
-HB_FUNC( QGRAPHICSSCENEMOUSEEVENT_DELETE )
+HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_DELETE )
 {
   QGraphicsSceneMouseEvent * obj = (QGraphicsSceneMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -90,7 +90,7 @@ HB_FUNC( QGRAPHICSSCENEMOUSEEVENT_DELETE )
 /*
 Qt::MouseButton button () const
 */
-HB_FUNC( QGRAPHICSSCENEMOUSEEVENT_BUTTON )
+HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTON )
 {
   QGraphicsSceneMouseEvent * obj = (QGraphicsSceneMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -104,7 +104,7 @@ HB_FUNC( QGRAPHICSSCENEMOUSEEVENT_BUTTON )
 /*
 QPointF buttonDownPos ( Qt::MouseButton button ) const
 */
-HB_FUNC( QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNPOS )
+HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNPOS )
 {
   QGraphicsSceneMouseEvent * obj = (QGraphicsSceneMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -118,7 +118,7 @@ HB_FUNC( QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNPOS )
 /*
 QPointF buttonDownScenePos ( Qt::MouseButton button ) const
 */
-HB_FUNC( QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNSCENEPOS )
+HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNSCENEPOS )
 {
   QGraphicsSceneMouseEvent * obj = (QGraphicsSceneMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -132,7 +132,7 @@ HB_FUNC( QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNSCENEPOS )
 /*
 QPoint buttonDownScreenPos ( Qt::MouseButton button ) const
 */
-HB_FUNC( QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNSCREENPOS )
+HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNSCREENPOS )
 {
   QGraphicsSceneMouseEvent * obj = (QGraphicsSceneMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -146,7 +146,7 @@ HB_FUNC( QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNSCREENPOS )
 /*
 Qt::MouseButtons buttons () const
 */
-HB_FUNC( QGRAPHICSSCENEMOUSEEVENT_BUTTONS )
+HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTONS )
 {
   QGraphicsSceneMouseEvent * obj = (QGraphicsSceneMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -160,7 +160,7 @@ HB_FUNC( QGRAPHICSSCENEMOUSEEVENT_BUTTONS )
 /*
 QPointF lastPos () const
 */
-HB_FUNC( QGRAPHICSSCENEMOUSEEVENT_LASTPOS )
+HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_LASTPOS )
 {
   QGraphicsSceneMouseEvent * obj = (QGraphicsSceneMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -173,7 +173,7 @@ HB_FUNC( QGRAPHICSSCENEMOUSEEVENT_LASTPOS )
 /*
 QPointF lastScenePos () const
 */
-HB_FUNC( QGRAPHICSSCENEMOUSEEVENT_LASTSCENEPOS )
+HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_LASTSCENEPOS )
 {
   QGraphicsSceneMouseEvent * obj = (QGraphicsSceneMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -186,7 +186,7 @@ HB_FUNC( QGRAPHICSSCENEMOUSEEVENT_LASTSCENEPOS )
 /*
 QPoint lastScreenPos () const
 */
-HB_FUNC( QGRAPHICSSCENEMOUSEEVENT_LASTSCREENPOS )
+HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_LASTSCREENPOS )
 {
   QGraphicsSceneMouseEvent * obj = (QGraphicsSceneMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -199,7 +199,7 @@ HB_FUNC( QGRAPHICSSCENEMOUSEEVENT_LASTSCREENPOS )
 /*
 Qt::KeyboardModifiers modifiers () const
 */
-HB_FUNC( QGRAPHICSSCENEMOUSEEVENT_MODIFIERS )
+HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_MODIFIERS )
 {
   QGraphicsSceneMouseEvent * obj = (QGraphicsSceneMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -213,7 +213,7 @@ HB_FUNC( QGRAPHICSSCENEMOUSEEVENT_MODIFIERS )
 /*
 QPointF pos () const
 */
-HB_FUNC( QGRAPHICSSCENEMOUSEEVENT_POS )
+HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_POS )
 {
   QGraphicsSceneMouseEvent * obj = (QGraphicsSceneMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -226,7 +226,7 @@ HB_FUNC( QGRAPHICSSCENEMOUSEEVENT_POS )
 /*
 QPointF scenePos () const
 */
-HB_FUNC( QGRAPHICSSCENEMOUSEEVENT_SCENEPOS )
+HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_SCENEPOS )
 {
   QGraphicsSceneMouseEvent * obj = (QGraphicsSceneMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -239,7 +239,7 @@ HB_FUNC( QGRAPHICSSCENEMOUSEEVENT_SCENEPOS )
 /*
 QPoint screenPos () const
 */
-HB_FUNC( QGRAPHICSSCENEMOUSEEVENT_SCREENPOS )
+HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_SCREENPOS )
 {
   QGraphicsSceneMouseEvent * obj = (QGraphicsSceneMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

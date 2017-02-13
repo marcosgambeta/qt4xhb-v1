@@ -74,7 +74,7 @@ RETURN
 /*
 QScrollArea ( QWidget * parent = 0 )
 */
-HB_FUNC( QSCROLLAREA_NEW )
+HB_FUNC_STATIC( QSCROLLAREA_NEW )
 {
   QScrollArea * o = NULL;
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -87,7 +87,7 @@ HB_FUNC( QSCROLLAREA_NEW )
 }
 
 
-HB_FUNC( QSCROLLAREA_DELETE )
+HB_FUNC_STATIC( QSCROLLAREA_DELETE )
 {
   QScrollArea * obj = (QScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -106,7 +106,7 @@ HB_FUNC( QSCROLLAREA_DELETE )
 /*
 Qt::Alignment alignment () const
 */
-HB_FUNC( QSCROLLAREA_ALIGNMENT )
+HB_FUNC_STATIC( QSCROLLAREA_ALIGNMENT )
 {
   QScrollArea * obj = (QScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -120,7 +120,7 @@ HB_FUNC( QSCROLLAREA_ALIGNMENT )
 /*
 void ensureVisible ( int x, int y, int xmargin = 50, int ymargin = 50 )
 */
-HB_FUNC( QSCROLLAREA_ENSUREVISIBLE )
+HB_FUNC_STATIC( QSCROLLAREA_ENSUREVISIBLE )
 {
   QScrollArea * obj = (QScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -138,7 +138,7 @@ HB_FUNC( QSCROLLAREA_ENSUREVISIBLE )
 /*
 void ensureWidgetVisible ( QWidget * childWidget, int xmargin = 50, int ymargin = 50 )
 */
-HB_FUNC( QSCROLLAREA_ENSUREWIDGETVISIBLE )
+HB_FUNC_STATIC( QSCROLLAREA_ENSUREWIDGETVISIBLE )
 {
   QScrollArea * obj = (QScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -155,7 +155,7 @@ HB_FUNC( QSCROLLAREA_ENSUREWIDGETVISIBLE )
 /*
 void setAlignment ( Qt::Alignment )
 */
-HB_FUNC( QSCROLLAREA_SETALIGNMENT )
+HB_FUNC_STATIC( QSCROLLAREA_SETALIGNMENT )
 {
   QScrollArea * obj = (QScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -170,7 +170,7 @@ HB_FUNC( QSCROLLAREA_SETALIGNMENT )
 /*
 void setWidget ( QWidget * widget )
 */
-HB_FUNC( QSCROLLAREA_SETWIDGET )
+HB_FUNC_STATIC( QSCROLLAREA_SETWIDGET )
 {
   QScrollArea * obj = (QScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -185,7 +185,7 @@ HB_FUNC( QSCROLLAREA_SETWIDGET )
 /*
 void setWidgetResizable ( bool resizable )
 */
-HB_FUNC( QSCROLLAREA_SETWIDGETRESIZABLE )
+HB_FUNC_STATIC( QSCROLLAREA_SETWIDGETRESIZABLE )
 {
   QScrollArea * obj = (QScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -200,7 +200,7 @@ HB_FUNC( QSCROLLAREA_SETWIDGETRESIZABLE )
 /*
 QWidget * takeWidget ()
 */
-HB_FUNC( QSCROLLAREA_TAKEWIDGET )
+HB_FUNC_STATIC( QSCROLLAREA_TAKEWIDGET )
 {
   QScrollArea * obj = (QScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -213,7 +213,7 @@ HB_FUNC( QSCROLLAREA_TAKEWIDGET )
 /*
 QWidget * widget () const
 */
-HB_FUNC( QSCROLLAREA_WIDGET )
+HB_FUNC_STATIC( QSCROLLAREA_WIDGET )
 {
   QScrollArea * obj = (QScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -226,7 +226,7 @@ HB_FUNC( QSCROLLAREA_WIDGET )
 /*
 bool widgetResizable () const
 */
-HB_FUNC( QSCROLLAREA_WIDGETRESIZABLE )
+HB_FUNC_STATIC( QSCROLLAREA_WIDGETRESIZABLE )
 {
   QScrollArea * obj = (QScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -240,7 +240,7 @@ HB_FUNC( QSCROLLAREA_WIDGETRESIZABLE )
 /*
 virtual bool focusNextPrevChild ( bool next )
 */
-HB_FUNC( QSCROLLAREA_FOCUSNEXTPREVCHILD )
+HB_FUNC_STATIC( QSCROLLAREA_FOCUSNEXTPREVCHILD )
 {
   QScrollArea * obj = (QScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -255,7 +255,7 @@ HB_FUNC( QSCROLLAREA_FOCUSNEXTPREVCHILD )
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC( QSCROLLAREA_SIZEHINT )
+HB_FUNC_STATIC( QSCROLLAREA_SIZEHINT )
 {
   QScrollArea * obj = (QScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

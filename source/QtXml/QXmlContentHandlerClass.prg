@@ -104,7 +104,7 @@ RETURN
 #include "qt4xhb_clsid.h"
 #include "qt4xhb_utils.h"
 
-HB_FUNC( QXMLCONTENTHANDLER_DELETE )
+HB_FUNC_STATIC( QXMLCONTENTHANDLER_DELETE )
 {
   QXmlContentHandler * obj = (QXmlContentHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -123,7 +123,7 @@ HB_FUNC( QXMLCONTENTHANDLER_DELETE )
 /*
 virtual bool characters ( const QString & ch ) = 0
 */
-HB_FUNC( QXMLCONTENTHANDLER_CHARACTERS )
+HB_FUNC_STATIC( QXMLCONTENTHANDLER_CHARACTERS )
 {
   QXmlContentHandler * obj = (QXmlContentHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -138,7 +138,7 @@ HB_FUNC( QXMLCONTENTHANDLER_CHARACTERS )
 /*
 virtual bool endDocument () = 0
 */
-HB_FUNC( QXMLCONTENTHANDLER_ENDDOCUMENT )
+HB_FUNC_STATIC( QXMLCONTENTHANDLER_ENDDOCUMENT )
 {
   QXmlContentHandler * obj = (QXmlContentHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -152,7 +152,7 @@ HB_FUNC( QXMLCONTENTHANDLER_ENDDOCUMENT )
 /*
 virtual bool endElement ( const QString & namespaceURI, const QString & localName, const QString & qName ) = 0
 */
-HB_FUNC( QXMLCONTENTHANDLER_ENDELEMENT )
+HB_FUNC_STATIC( QXMLCONTENTHANDLER_ENDELEMENT )
 {
   QXmlContentHandler * obj = (QXmlContentHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -169,7 +169,7 @@ HB_FUNC( QXMLCONTENTHANDLER_ENDELEMENT )
 /*
 virtual bool endPrefixMapping ( const QString & prefix ) = 0
 */
-HB_FUNC( QXMLCONTENTHANDLER_ENDPREFIXMAPPING )
+HB_FUNC_STATIC( QXMLCONTENTHANDLER_ENDPREFIXMAPPING )
 {
   QXmlContentHandler * obj = (QXmlContentHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -184,7 +184,7 @@ HB_FUNC( QXMLCONTENTHANDLER_ENDPREFIXMAPPING )
 /*
 virtual QString errorString () const = 0
 */
-HB_FUNC( QXMLCONTENTHANDLER_ERRORSTRING )
+HB_FUNC_STATIC( QXMLCONTENTHANDLER_ERRORSTRING )
 {
   QXmlContentHandler * obj = (QXmlContentHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -198,7 +198,7 @@ HB_FUNC( QXMLCONTENTHANDLER_ERRORSTRING )
 /*
 virtual bool ignorableWhitespace ( const QString & ch ) = 0
 */
-HB_FUNC( QXMLCONTENTHANDLER_IGNORABLEWHITESPACE )
+HB_FUNC_STATIC( QXMLCONTENTHANDLER_IGNORABLEWHITESPACE )
 {
   QXmlContentHandler * obj = (QXmlContentHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -213,7 +213,7 @@ HB_FUNC( QXMLCONTENTHANDLER_IGNORABLEWHITESPACE )
 /*
 virtual bool processingInstruction ( const QString & target, const QString & data ) = 0
 */
-HB_FUNC( QXMLCONTENTHANDLER_PROCESSINGINSTRUCTION )
+HB_FUNC_STATIC( QXMLCONTENTHANDLER_PROCESSINGINSTRUCTION )
 {
   QXmlContentHandler * obj = (QXmlContentHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -229,7 +229,7 @@ HB_FUNC( QXMLCONTENTHANDLER_PROCESSINGINSTRUCTION )
 /*
 virtual void setDocumentLocator ( QXmlLocator * locator ) = 0
 */
-HB_FUNC( QXMLCONTENTHANDLER_SETDOCUMENTLOCATOR )
+HB_FUNC_STATIC( QXMLCONTENTHANDLER_SETDOCUMENTLOCATOR )
 {
   QXmlContentHandler * obj = (QXmlContentHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -244,7 +244,7 @@ HB_FUNC( QXMLCONTENTHANDLER_SETDOCUMENTLOCATOR )
 /*
 virtual bool skippedEntity ( const QString & name ) = 0
 */
-HB_FUNC( QXMLCONTENTHANDLER_SKIPPEDENTITY )
+HB_FUNC_STATIC( QXMLCONTENTHANDLER_SKIPPEDENTITY )
 {
   QXmlContentHandler * obj = (QXmlContentHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -259,7 +259,7 @@ HB_FUNC( QXMLCONTENTHANDLER_SKIPPEDENTITY )
 /*
 virtual bool startDocument () = 0
 */
-HB_FUNC( QXMLCONTENTHANDLER_STARTDOCUMENT )
+HB_FUNC_STATIC( QXMLCONTENTHANDLER_STARTDOCUMENT )
 {
   QXmlContentHandler * obj = (QXmlContentHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -273,7 +273,7 @@ HB_FUNC( QXMLCONTENTHANDLER_STARTDOCUMENT )
 /*
 virtual bool startElement ( const QString & namespaceURI, const QString & localName, const QString & qName, const QXmlAttributes & atts ) = 0
 */
-HB_FUNC( QXMLCONTENTHANDLER_STARTELEMENT )
+HB_FUNC_STATIC( QXMLCONTENTHANDLER_STARTELEMENT )
 {
   QXmlContentHandler * obj = (QXmlContentHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -291,7 +291,7 @@ HB_FUNC( QXMLCONTENTHANDLER_STARTELEMENT )
 /*
 virtual bool startPrefixMapping ( const QString & prefix, const QString & uri ) = 0
 */
-HB_FUNC( QXMLCONTENTHANDLER_STARTPREFIXMAPPING )
+HB_FUNC_STATIC( QXMLCONTENTHANDLER_STARTPREFIXMAPPING )
 {
   QXmlContentHandler * obj = (QXmlContentHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

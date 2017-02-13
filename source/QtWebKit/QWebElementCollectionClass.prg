@@ -107,7 +107,7 @@ RETURN
 /*
 QWebElementCollection ()
 */
-HB_FUNC( QWEBELEMENTCOLLECTION_NEW1 )
+HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW1 )
 {
   QWebElementCollection * o = NULL;
   o = new QWebElementCollection (  );
@@ -125,7 +125,7 @@ HB_FUNC( QWEBELEMENTCOLLECTION_NEW1 )
 /*
 QWebElementCollection ( const QWebElement & contextElement, const QString & query )
 */
-HB_FUNC( QWEBELEMENTCOLLECTION_NEW2 )
+HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW2 )
 {
   QWebElementCollection * o = NULL;
   QWebElement * par1 = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -145,7 +145,7 @@ HB_FUNC( QWEBELEMENTCOLLECTION_NEW2 )
 /*
 QWebElementCollection ( const QWebElementCollection & other )
 */
-HB_FUNC( QWEBELEMENTCOLLECTION_NEW3 )
+HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW3 )
 {
   QWebElementCollection * o = NULL;
   QWebElementCollection * par1 = (QWebElementCollection *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -165,7 +165,7 @@ HB_FUNC( QWEBELEMENTCOLLECTION_NEW3 )
 //[2]QWebElementCollection ( const QWebElement & contextElement, const QString & query )
 //[3]QWebElementCollection ( const QWebElementCollection & other )
 
-HB_FUNC( QWEBELEMENTCOLLECTION_NEW )
+HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -185,7 +185,7 @@ HB_FUNC( QWEBELEMENTCOLLECTION_NEW )
   }
 }
 
-HB_FUNC( QWEBELEMENTCOLLECTION_DELETE )
+HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_DELETE )
 {
   QWebElementCollection * obj = (QWebElementCollection *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -204,7 +204,7 @@ HB_FUNC( QWEBELEMENTCOLLECTION_DELETE )
 /*
 void append ( const QWebElementCollection & other )
 */
-HB_FUNC( QWEBELEMENTCOLLECTION_APPEND )
+HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_APPEND )
 {
   QWebElementCollection * obj = (QWebElementCollection *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -219,7 +219,7 @@ HB_FUNC( QWEBELEMENTCOLLECTION_APPEND )
 /*
 QWebElement at ( int i ) const
 */
-HB_FUNC( QWEBELEMENTCOLLECTION_AT )
+HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_AT )
 {
   QWebElementCollection * obj = (QWebElementCollection *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -237,7 +237,7 @@ HB_FUNC( QWEBELEMENTCOLLECTION_AT )
 /*
 int count () const
 */
-HB_FUNC( QWEBELEMENTCOLLECTION_COUNT )
+HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_COUNT )
 {
   QWebElementCollection * obj = (QWebElementCollection *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -253,7 +253,7 @@ HB_FUNC( QWEBELEMENTCOLLECTION_COUNT )
 /*
 QWebElement first () const
 */
-HB_FUNC( QWEBELEMENTCOLLECTION_FIRST )
+HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_FIRST )
 {
   QWebElementCollection * obj = (QWebElementCollection *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -266,7 +266,7 @@ HB_FUNC( QWEBELEMENTCOLLECTION_FIRST )
 /*
 QWebElement last () const
 */
-HB_FUNC( QWEBELEMENTCOLLECTION_LAST )
+HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_LAST )
 {
   QWebElementCollection * obj = (QWebElementCollection *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -279,7 +279,7 @@ HB_FUNC( QWEBELEMENTCOLLECTION_LAST )
 /*
 QList<QWebElement> toList () const
 */
-HB_FUNC( QWEBELEMENTCOLLECTION_TOLIST )
+HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_TOLIST )
 {
   QWebElementCollection * obj = (QWebElementCollection *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

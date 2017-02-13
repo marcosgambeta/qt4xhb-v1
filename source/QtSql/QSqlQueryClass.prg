@@ -149,7 +149,7 @@ RETURN
 /*
 QSqlQuery ( QSqlResult * result )
 */
-HB_FUNC( QSQLQUERY_NEW1 )
+HB_FUNC_STATIC( QSQLQUERY_NEW1 )
 {
   QSqlQuery * o = NULL;
   QSqlResult * par1 = (QSqlResult *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -168,7 +168,7 @@ HB_FUNC( QSQLQUERY_NEW1 )
 /*
 QSqlQuery ( const QString & query = QString(), QSqlDatabase db = QSqlDatabase() )
 */
-HB_FUNC( QSQLQUERY_NEW2 )
+HB_FUNC_STATIC( QSQLQUERY_NEW2 )
 {
   QSqlQuery * o = NULL;
   QString par1 = ISNIL(1)? QString() : hb_parc(1);
@@ -188,7 +188,7 @@ HB_FUNC( QSQLQUERY_NEW2 )
 /*
 QSqlQuery ( QSqlDatabase db )
 */
-HB_FUNC( QSQLQUERY_NEW3 )
+HB_FUNC_STATIC( QSQLQUERY_NEW3 )
 {
   QSqlQuery * o = NULL;
   QSqlDatabase * par1 = (QSqlDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -207,7 +207,7 @@ HB_FUNC( QSQLQUERY_NEW3 )
 /*
 QSqlQuery ( const QSqlQuery & other )
 */
-HB_FUNC( QSQLQUERY_NEW4 )
+HB_FUNC_STATIC( QSQLQUERY_NEW4 )
 {
   QSqlQuery * o = NULL;
   QSqlQuery * par1 = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -228,7 +228,7 @@ HB_FUNC( QSQLQUERY_NEW4 )
 //[3]QSqlQuery ( QSqlDatabase db )
 //[4]QSqlQuery ( const QSqlQuery & other )
 
-HB_FUNC( QSQLQUERY_NEW )
+HB_FUNC_STATIC( QSQLQUERY_NEW )
 {
   if( ISNUMPAR(1) && ISQSQLRESULT(1) )
   {
@@ -252,7 +252,7 @@ HB_FUNC( QSQLQUERY_NEW )
   }
 }
 
-HB_FUNC( QSQLQUERY_DELETE )
+HB_FUNC_STATIC( QSQLQUERY_DELETE )
 {
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -271,7 +271,7 @@ HB_FUNC( QSQLQUERY_DELETE )
 /*
 void addBindValue ( const QVariant & val, QSql::ParamType paramType = QSql::In )
 */
-HB_FUNC( QSQLQUERY_ADDBINDVALUE )
+HB_FUNC_STATIC( QSQLQUERY_ADDBINDVALUE )
 {
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -287,7 +287,7 @@ HB_FUNC( QSQLQUERY_ADDBINDVALUE )
 /*
 int at () const
 */
-HB_FUNC( QSQLQUERY_AT )
+HB_FUNC_STATIC( QSQLQUERY_AT )
 {
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -301,7 +301,7 @@ HB_FUNC( QSQLQUERY_AT )
 /*
 void bindValue ( const QString & placeholder, const QVariant & val, QSql::ParamType paramType = QSql::In )
 */
-HB_FUNC( QSQLQUERY_BINDVALUE1 )
+HB_FUNC_STATIC( QSQLQUERY_BINDVALUE1 )
 {
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -318,7 +318,7 @@ HB_FUNC( QSQLQUERY_BINDVALUE1 )
 /*
 void bindValue ( int pos, const QVariant & val, QSql::ParamType paramType = QSql::In )
 */
-HB_FUNC( QSQLQUERY_BINDVALUE2 )
+HB_FUNC_STATIC( QSQLQUERY_BINDVALUE2 )
 {
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -335,7 +335,7 @@ HB_FUNC( QSQLQUERY_BINDVALUE2 )
 //[1]void bindValue ( const QString & placeholder, const QVariant & val, QSql::ParamType paramType = QSql::In )
 //[2]void bindValue ( int pos, const QVariant & val, QSql::ParamType paramType = QSql::In )
 
-HB_FUNC( QSQLQUERY_BINDVALUE )
+HB_FUNC_STATIC( QSQLQUERY_BINDVALUE )
 {
   if( ISBETWEEN(2,3) && ISCHAR(1) && ISQVARIANT(2) && (ISNUM(3)||ISNIL(3)) )
   {
@@ -350,7 +350,7 @@ HB_FUNC( QSQLQUERY_BINDVALUE )
 /*
 QVariant boundValue ( const QString & placeholder ) const
 */
-HB_FUNC( QSQLQUERY_BOUNDVALUE1 )
+HB_FUNC_STATIC( QSQLQUERY_BOUNDVALUE1 )
 {
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -364,7 +364,7 @@ HB_FUNC( QSQLQUERY_BOUNDVALUE1 )
 /*
 QVariant boundValue ( int pos ) const
 */
-HB_FUNC( QSQLQUERY_BOUNDVALUE2 )
+HB_FUNC_STATIC( QSQLQUERY_BOUNDVALUE2 )
 {
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -378,7 +378,7 @@ HB_FUNC( QSQLQUERY_BOUNDVALUE2 )
 //[1]QVariant boundValue ( const QString & placeholder ) const
 //[2]QVariant boundValue ( int pos ) const
 
-HB_FUNC( QSQLQUERY_BOUNDVALUE )
+HB_FUNC_STATIC( QSQLQUERY_BOUNDVALUE )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
@@ -394,7 +394,7 @@ HB_FUNC( QSQLQUERY_BOUNDVALUE )
 /*
 void clear ()
 */
-HB_FUNC( QSQLQUERY_CLEAR )
+HB_FUNC_STATIC( QSQLQUERY_CLEAR )
 {
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -408,7 +408,7 @@ HB_FUNC( QSQLQUERY_CLEAR )
 /*
 const QSqlDriver * driver () const
 */
-HB_FUNC( QSQLQUERY_DRIVER )
+HB_FUNC_STATIC( QSQLQUERY_DRIVER )
 {
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -421,7 +421,7 @@ HB_FUNC( QSQLQUERY_DRIVER )
 /*
 bool exec ( const QString & query )
 */
-HB_FUNC( QSQLQUERY_EXEC1 )
+HB_FUNC_STATIC( QSQLQUERY_EXEC1 )
 {
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -436,7 +436,7 @@ HB_FUNC( QSQLQUERY_EXEC1 )
 /*
 bool exec ()
 */
-HB_FUNC( QSQLQUERY_EXEC2 )
+HB_FUNC_STATIC( QSQLQUERY_EXEC2 )
 {
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -450,7 +450,7 @@ HB_FUNC( QSQLQUERY_EXEC2 )
 //[1]bool exec ( const QString & query )
 //[2]bool exec ()
 
-HB_FUNC( QSQLQUERY_EXEC )
+HB_FUNC_STATIC( QSQLQUERY_EXEC )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
@@ -465,7 +465,7 @@ HB_FUNC( QSQLQUERY_EXEC )
 /*
 bool execBatch ( BatchExecutionMode mode = ValuesAsRows )
 */
-HB_FUNC( QSQLQUERY_EXECBATCH )
+HB_FUNC_STATIC( QSQLQUERY_EXECBATCH )
 {
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -480,7 +480,7 @@ HB_FUNC( QSQLQUERY_EXECBATCH )
 /*
 QString executedQuery () const
 */
-HB_FUNC( QSQLQUERY_EXECUTEDQUERY )
+HB_FUNC_STATIC( QSQLQUERY_EXECUTEDQUERY )
 {
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -494,7 +494,7 @@ HB_FUNC( QSQLQUERY_EXECUTEDQUERY )
 /*
 void finish ()
 */
-HB_FUNC( QSQLQUERY_FINISH )
+HB_FUNC_STATIC( QSQLQUERY_FINISH )
 {
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -508,7 +508,7 @@ HB_FUNC( QSQLQUERY_FINISH )
 /*
 bool first ()
 */
-HB_FUNC( QSQLQUERY_FIRST )
+HB_FUNC_STATIC( QSQLQUERY_FIRST )
 {
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -522,7 +522,7 @@ HB_FUNC( QSQLQUERY_FIRST )
 /*
 bool isActive () const
 */
-HB_FUNC( QSQLQUERY_ISACTIVE )
+HB_FUNC_STATIC( QSQLQUERY_ISACTIVE )
 {
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -536,7 +536,7 @@ HB_FUNC( QSQLQUERY_ISACTIVE )
 /*
 bool isForwardOnly () const
 */
-HB_FUNC( QSQLQUERY_ISFORWARDONLY )
+HB_FUNC_STATIC( QSQLQUERY_ISFORWARDONLY )
 {
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -550,7 +550,7 @@ HB_FUNC( QSQLQUERY_ISFORWARDONLY )
 /*
 bool isNull ( int field ) const
 */
-HB_FUNC( QSQLQUERY_ISNULL )
+HB_FUNC_STATIC( QSQLQUERY_ISNULL )
 {
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -565,7 +565,7 @@ HB_FUNC( QSQLQUERY_ISNULL )
 /*
 bool isSelect () const
 */
-HB_FUNC( QSQLQUERY_ISSELECT )
+HB_FUNC_STATIC( QSQLQUERY_ISSELECT )
 {
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -579,7 +579,7 @@ HB_FUNC( QSQLQUERY_ISSELECT )
 /*
 bool isValid () const
 */
-HB_FUNC( QSQLQUERY_ISVALID )
+HB_FUNC_STATIC( QSQLQUERY_ISVALID )
 {
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -593,7 +593,7 @@ HB_FUNC( QSQLQUERY_ISVALID )
 /*
 bool last ()
 */
-HB_FUNC( QSQLQUERY_LAST )
+HB_FUNC_STATIC( QSQLQUERY_LAST )
 {
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -607,7 +607,7 @@ HB_FUNC( QSQLQUERY_LAST )
 /*
 QSqlError lastError () const
 */
-HB_FUNC( QSQLQUERY_LASTERROR )
+HB_FUNC_STATIC( QSQLQUERY_LASTERROR )
 {
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -620,7 +620,7 @@ HB_FUNC( QSQLQUERY_LASTERROR )
 /*
 QVariant lastInsertId () const
 */
-HB_FUNC( QSQLQUERY_LASTINSERTID )
+HB_FUNC_STATIC( QSQLQUERY_LASTINSERTID )
 {
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -633,7 +633,7 @@ HB_FUNC( QSQLQUERY_LASTINSERTID )
 /*
 QString lastQuery () const
 */
-HB_FUNC( QSQLQUERY_LASTQUERY )
+HB_FUNC_STATIC( QSQLQUERY_LASTQUERY )
 {
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -647,7 +647,7 @@ HB_FUNC( QSQLQUERY_LASTQUERY )
 /*
 bool next ()
 */
-HB_FUNC( QSQLQUERY_NEXT )
+HB_FUNC_STATIC( QSQLQUERY_NEXT )
 {
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -661,7 +661,7 @@ HB_FUNC( QSQLQUERY_NEXT )
 /*
 bool nextResult ()
 */
-HB_FUNC( QSQLQUERY_NEXTRESULT )
+HB_FUNC_STATIC( QSQLQUERY_NEXTRESULT )
 {
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -675,7 +675,7 @@ HB_FUNC( QSQLQUERY_NEXTRESULT )
 /*
 int numRowsAffected () const
 */
-HB_FUNC( QSQLQUERY_NUMROWSAFFECTED )
+HB_FUNC_STATIC( QSQLQUERY_NUMROWSAFFECTED )
 {
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -689,7 +689,7 @@ HB_FUNC( QSQLQUERY_NUMROWSAFFECTED )
 /*
 QSql::NumericalPrecisionPolicy numericalPrecisionPolicy () const
 */
-HB_FUNC( QSQLQUERY_NUMERICALPRECISIONPOLICY )
+HB_FUNC_STATIC( QSQLQUERY_NUMERICALPRECISIONPOLICY )
 {
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -703,7 +703,7 @@ HB_FUNC( QSQLQUERY_NUMERICALPRECISIONPOLICY )
 /*
 bool prepare ( const QString & query )
 */
-HB_FUNC( QSQLQUERY_PREPARE )
+HB_FUNC_STATIC( QSQLQUERY_PREPARE )
 {
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -718,7 +718,7 @@ HB_FUNC( QSQLQUERY_PREPARE )
 /*
 bool previous ()
 */
-HB_FUNC( QSQLQUERY_PREVIOUS )
+HB_FUNC_STATIC( QSQLQUERY_PREVIOUS )
 {
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -732,7 +732,7 @@ HB_FUNC( QSQLQUERY_PREVIOUS )
 /*
 QSqlRecord record () const
 */
-HB_FUNC( QSQLQUERY_RECORD )
+HB_FUNC_STATIC( QSQLQUERY_RECORD )
 {
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -745,7 +745,7 @@ HB_FUNC( QSQLQUERY_RECORD )
 /*
 const QSqlResult * result () const
 */
-HB_FUNC( QSQLQUERY_RESULT )
+HB_FUNC_STATIC( QSQLQUERY_RESULT )
 {
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -758,7 +758,7 @@ HB_FUNC( QSQLQUERY_RESULT )
 /*
 bool seek ( int index, bool relative = false )
 */
-HB_FUNC( QSQLQUERY_SEEK )
+HB_FUNC_STATIC( QSQLQUERY_SEEK )
 {
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -774,7 +774,7 @@ HB_FUNC( QSQLQUERY_SEEK )
 /*
 void setForwardOnly ( bool forward )
 */
-HB_FUNC( QSQLQUERY_SETFORWARDONLY )
+HB_FUNC_STATIC( QSQLQUERY_SETFORWARDONLY )
 {
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -789,7 +789,7 @@ HB_FUNC( QSQLQUERY_SETFORWARDONLY )
 /*
 void setNumericalPrecisionPolicy ( QSql::NumericalPrecisionPolicy precisionPolicy )
 */
-HB_FUNC( QSQLQUERY_SETNUMERICALPRECISIONPOLICY )
+HB_FUNC_STATIC( QSQLQUERY_SETNUMERICALPRECISIONPOLICY )
 {
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -804,7 +804,7 @@ HB_FUNC( QSQLQUERY_SETNUMERICALPRECISIONPOLICY )
 /*
 int size () const
 */
-HB_FUNC( QSQLQUERY_SIZE )
+HB_FUNC_STATIC( QSQLQUERY_SIZE )
 {
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -818,7 +818,7 @@ HB_FUNC( QSQLQUERY_SIZE )
 /*
 QVariant value ( int index ) const
 */
-HB_FUNC( QSQLQUERY_VALUE )
+HB_FUNC_STATIC( QSQLQUERY_VALUE )
 {
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

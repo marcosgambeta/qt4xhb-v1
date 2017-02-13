@@ -93,7 +93,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QDECLARATIVEPROPERTYVALUESOURCE_DELETE )
+HB_FUNC_STATIC( QDECLARATIVEPROPERTYVALUESOURCE_DELETE )
 {
   QDeclarativePropertyValueSource * obj = (QDeclarativePropertyValueSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -112,7 +112,7 @@ HB_FUNC( QDECLARATIVEPROPERTYVALUESOURCE_DELETE )
 /*
 virtual void setTarget ( const QDeclarativeProperty & property ) = 0
 */
-HB_FUNC( QDECLARATIVEPROPERTYVALUESOURCE_SETTARGET )
+HB_FUNC_STATIC( QDECLARATIVEPROPERTYVALUESOURCE_SETTARGET )
 {
   QDeclarativePropertyValueSource * obj = (QDeclarativePropertyValueSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

@@ -154,7 +154,7 @@ RETURN
 /*
 QGLFormat ()
 */
-HB_FUNC( QGLFORMAT_NEW1 )
+HB_FUNC_STATIC( QGLFORMAT_NEW1 )
 {
   QGLFormat * o = NULL;
   o = new QGLFormat (  );
@@ -169,7 +169,7 @@ HB_FUNC( QGLFORMAT_NEW1 )
 /*
 QGLFormat ( QGL::FormatOptions options, int plane = 0 )
 */
-HB_FUNC( QGLFORMAT_NEW2 )
+HB_FUNC_STATIC( QGLFORMAT_NEW2 )
 {
   QGLFormat * o = NULL;
   int par1 = hb_parni(1);
@@ -186,7 +186,7 @@ HB_FUNC( QGLFORMAT_NEW2 )
 /*
 QGLFormat ( const QGLFormat & other )
 */
-HB_FUNC( QGLFORMAT_NEW3 )
+HB_FUNC_STATIC( QGLFORMAT_NEW3 )
 {
   QGLFormat * o = NULL;
   QGLFormat * par1 = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -203,7 +203,7 @@ HB_FUNC( QGLFORMAT_NEW3 )
 //[2]QGLFormat ( QGL::FormatOptions options, int plane = 0 )
 //[3]QGLFormat ( const QGLFormat & other )
 
-HB_FUNC( QGLFORMAT_NEW )
+HB_FUNC_STATIC( QGLFORMAT_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -223,7 +223,7 @@ HB_FUNC( QGLFORMAT_NEW )
   }
 }
 
-HB_FUNC( QGLFORMAT_DELETE )
+HB_FUNC_STATIC( QGLFORMAT_DELETE )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -242,7 +242,7 @@ HB_FUNC( QGLFORMAT_DELETE )
 /*
 bool accum () const
 */
-HB_FUNC( QGLFORMAT_ACCUM )
+HB_FUNC_STATIC( QGLFORMAT_ACCUM )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -256,7 +256,7 @@ HB_FUNC( QGLFORMAT_ACCUM )
 /*
 int accumBufferSize () const
 */
-HB_FUNC( QGLFORMAT_ACCUMBUFFERSIZE )
+HB_FUNC_STATIC( QGLFORMAT_ACCUMBUFFERSIZE )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -270,7 +270,7 @@ HB_FUNC( QGLFORMAT_ACCUMBUFFERSIZE )
 /*
 bool alpha () const
 */
-HB_FUNC( QGLFORMAT_ALPHA )
+HB_FUNC_STATIC( QGLFORMAT_ALPHA )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -284,7 +284,7 @@ HB_FUNC( QGLFORMAT_ALPHA )
 /*
 int alphaBufferSize () const
 */
-HB_FUNC( QGLFORMAT_ALPHABUFFERSIZE )
+HB_FUNC_STATIC( QGLFORMAT_ALPHABUFFERSIZE )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -298,7 +298,7 @@ HB_FUNC( QGLFORMAT_ALPHABUFFERSIZE )
 /*
 int blueBufferSize () const
 */
-HB_FUNC( QGLFORMAT_BLUEBUFFERSIZE )
+HB_FUNC_STATIC( QGLFORMAT_BLUEBUFFERSIZE )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -312,7 +312,7 @@ HB_FUNC( QGLFORMAT_BLUEBUFFERSIZE )
 /*
 bool depth () const
 */
-HB_FUNC( QGLFORMAT_DEPTH )
+HB_FUNC_STATIC( QGLFORMAT_DEPTH )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -326,7 +326,7 @@ HB_FUNC( QGLFORMAT_DEPTH )
 /*
 int depthBufferSize () const
 */
-HB_FUNC( QGLFORMAT_DEPTHBUFFERSIZE )
+HB_FUNC_STATIC( QGLFORMAT_DEPTHBUFFERSIZE )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -340,7 +340,7 @@ HB_FUNC( QGLFORMAT_DEPTHBUFFERSIZE )
 /*
 bool directRendering () const
 */
-HB_FUNC( QGLFORMAT_DIRECTRENDERING )
+HB_FUNC_STATIC( QGLFORMAT_DIRECTRENDERING )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -354,7 +354,7 @@ HB_FUNC( QGLFORMAT_DIRECTRENDERING )
 /*
 bool doubleBuffer () const
 */
-HB_FUNC( QGLFORMAT_DOUBLEBUFFER )
+HB_FUNC_STATIC( QGLFORMAT_DOUBLEBUFFER )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -368,7 +368,7 @@ HB_FUNC( QGLFORMAT_DOUBLEBUFFER )
 /*
 int greenBufferSize () const
 */
-HB_FUNC( QGLFORMAT_GREENBUFFERSIZE )
+HB_FUNC_STATIC( QGLFORMAT_GREENBUFFERSIZE )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -382,7 +382,7 @@ HB_FUNC( QGLFORMAT_GREENBUFFERSIZE )
 /*
 bool hasOverlay () const
 */
-HB_FUNC( QGLFORMAT_HASOVERLAY )
+HB_FUNC_STATIC( QGLFORMAT_HASOVERLAY )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -396,7 +396,7 @@ HB_FUNC( QGLFORMAT_HASOVERLAY )
 /*
 int majorVersion () const
 */
-HB_FUNC( QGLFORMAT_MAJORVERSION )
+HB_FUNC_STATIC( QGLFORMAT_MAJORVERSION )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -410,7 +410,7 @@ HB_FUNC( QGLFORMAT_MAJORVERSION )
 /*
 int minorVersion () const
 */
-HB_FUNC( QGLFORMAT_MINORVERSION )
+HB_FUNC_STATIC( QGLFORMAT_MINORVERSION )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -424,7 +424,7 @@ HB_FUNC( QGLFORMAT_MINORVERSION )
 /*
 int plane () const
 */
-HB_FUNC( QGLFORMAT_PLANE )
+HB_FUNC_STATIC( QGLFORMAT_PLANE )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -438,7 +438,7 @@ HB_FUNC( QGLFORMAT_PLANE )
 /*
 OpenGLContextProfile profile () const
 */
-HB_FUNC( QGLFORMAT_PROFILE )
+HB_FUNC_STATIC( QGLFORMAT_PROFILE )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -452,7 +452,7 @@ HB_FUNC( QGLFORMAT_PROFILE )
 /*
 int redBufferSize () const
 */
-HB_FUNC( QGLFORMAT_REDBUFFERSIZE )
+HB_FUNC_STATIC( QGLFORMAT_REDBUFFERSIZE )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -466,7 +466,7 @@ HB_FUNC( QGLFORMAT_REDBUFFERSIZE )
 /*
 bool rgba () const
 */
-HB_FUNC( QGLFORMAT_RGBA )
+HB_FUNC_STATIC( QGLFORMAT_RGBA )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -480,7 +480,7 @@ HB_FUNC( QGLFORMAT_RGBA )
 /*
 bool sampleBuffers () const
 */
-HB_FUNC( QGLFORMAT_SAMPLEBUFFERS )
+HB_FUNC_STATIC( QGLFORMAT_SAMPLEBUFFERS )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -494,7 +494,7 @@ HB_FUNC( QGLFORMAT_SAMPLEBUFFERS )
 /*
 int samples () const
 */
-HB_FUNC( QGLFORMAT_SAMPLES )
+HB_FUNC_STATIC( QGLFORMAT_SAMPLES )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -508,7 +508,7 @@ HB_FUNC( QGLFORMAT_SAMPLES )
 /*
 void setAccum ( bool enable )
 */
-HB_FUNC( QGLFORMAT_SETACCUM )
+HB_FUNC_STATIC( QGLFORMAT_SETACCUM )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -523,7 +523,7 @@ HB_FUNC( QGLFORMAT_SETACCUM )
 /*
 void setAccumBufferSize ( int size )
 */
-HB_FUNC( QGLFORMAT_SETACCUMBUFFERSIZE )
+HB_FUNC_STATIC( QGLFORMAT_SETACCUMBUFFERSIZE )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -538,7 +538,7 @@ HB_FUNC( QGLFORMAT_SETACCUMBUFFERSIZE )
 /*
 void setAlpha ( bool enable )
 */
-HB_FUNC( QGLFORMAT_SETALPHA )
+HB_FUNC_STATIC( QGLFORMAT_SETALPHA )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -553,7 +553,7 @@ HB_FUNC( QGLFORMAT_SETALPHA )
 /*
 void setAlphaBufferSize ( int size )
 */
-HB_FUNC( QGLFORMAT_SETALPHABUFFERSIZE )
+HB_FUNC_STATIC( QGLFORMAT_SETALPHABUFFERSIZE )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -568,7 +568,7 @@ HB_FUNC( QGLFORMAT_SETALPHABUFFERSIZE )
 /*
 void setBlueBufferSize ( int size )
 */
-HB_FUNC( QGLFORMAT_SETBLUEBUFFERSIZE )
+HB_FUNC_STATIC( QGLFORMAT_SETBLUEBUFFERSIZE )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -583,7 +583,7 @@ HB_FUNC( QGLFORMAT_SETBLUEBUFFERSIZE )
 /*
 void setDepth ( bool enable )
 */
-HB_FUNC( QGLFORMAT_SETDEPTH )
+HB_FUNC_STATIC( QGLFORMAT_SETDEPTH )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -598,7 +598,7 @@ HB_FUNC( QGLFORMAT_SETDEPTH )
 /*
 void setDepthBufferSize ( int size )
 */
-HB_FUNC( QGLFORMAT_SETDEPTHBUFFERSIZE )
+HB_FUNC_STATIC( QGLFORMAT_SETDEPTHBUFFERSIZE )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -613,7 +613,7 @@ HB_FUNC( QGLFORMAT_SETDEPTHBUFFERSIZE )
 /*
 void setDirectRendering ( bool enable )
 */
-HB_FUNC( QGLFORMAT_SETDIRECTRENDERING )
+HB_FUNC_STATIC( QGLFORMAT_SETDIRECTRENDERING )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -628,7 +628,7 @@ HB_FUNC( QGLFORMAT_SETDIRECTRENDERING )
 /*
 void setDoubleBuffer ( bool enable )
 */
-HB_FUNC( QGLFORMAT_SETDOUBLEBUFFER )
+HB_FUNC_STATIC( QGLFORMAT_SETDOUBLEBUFFER )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -643,7 +643,7 @@ HB_FUNC( QGLFORMAT_SETDOUBLEBUFFER )
 /*
 void setGreenBufferSize ( int size )
 */
-HB_FUNC( QGLFORMAT_SETGREENBUFFERSIZE )
+HB_FUNC_STATIC( QGLFORMAT_SETGREENBUFFERSIZE )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -658,7 +658,7 @@ HB_FUNC( QGLFORMAT_SETGREENBUFFERSIZE )
 /*
 void setOption ( QGL::FormatOptions opt )
 */
-HB_FUNC( QGLFORMAT_SETOPTION )
+HB_FUNC_STATIC( QGLFORMAT_SETOPTION )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -673,7 +673,7 @@ HB_FUNC( QGLFORMAT_SETOPTION )
 /*
 void setOverlay ( bool enable )
 */
-HB_FUNC( QGLFORMAT_SETOVERLAY )
+HB_FUNC_STATIC( QGLFORMAT_SETOVERLAY )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -688,7 +688,7 @@ HB_FUNC( QGLFORMAT_SETOVERLAY )
 /*
 void setPlane ( int plane )
 */
-HB_FUNC( QGLFORMAT_SETPLANE )
+HB_FUNC_STATIC( QGLFORMAT_SETPLANE )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -703,7 +703,7 @@ HB_FUNC( QGLFORMAT_SETPLANE )
 /*
 void setProfile ( OpenGLContextProfile profile )
 */
-HB_FUNC( QGLFORMAT_SETPROFILE )
+HB_FUNC_STATIC( QGLFORMAT_SETPROFILE )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -718,7 +718,7 @@ HB_FUNC( QGLFORMAT_SETPROFILE )
 /*
 void setRedBufferSize ( int size )
 */
-HB_FUNC( QGLFORMAT_SETREDBUFFERSIZE )
+HB_FUNC_STATIC( QGLFORMAT_SETREDBUFFERSIZE )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -733,7 +733,7 @@ HB_FUNC( QGLFORMAT_SETREDBUFFERSIZE )
 /*
 void setRgba ( bool enable )
 */
-HB_FUNC( QGLFORMAT_SETRGBA )
+HB_FUNC_STATIC( QGLFORMAT_SETRGBA )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -748,7 +748,7 @@ HB_FUNC( QGLFORMAT_SETRGBA )
 /*
 void setSampleBuffers ( bool enable )
 */
-HB_FUNC( QGLFORMAT_SETSAMPLEBUFFERS )
+HB_FUNC_STATIC( QGLFORMAT_SETSAMPLEBUFFERS )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -763,7 +763,7 @@ HB_FUNC( QGLFORMAT_SETSAMPLEBUFFERS )
 /*
 void setSamples ( int numSamples )
 */
-HB_FUNC( QGLFORMAT_SETSAMPLES )
+HB_FUNC_STATIC( QGLFORMAT_SETSAMPLES )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -778,7 +778,7 @@ HB_FUNC( QGLFORMAT_SETSAMPLES )
 /*
 void setStencil ( bool enable )
 */
-HB_FUNC( QGLFORMAT_SETSTENCIL )
+HB_FUNC_STATIC( QGLFORMAT_SETSTENCIL )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -793,7 +793,7 @@ HB_FUNC( QGLFORMAT_SETSTENCIL )
 /*
 void setStencilBufferSize ( int size )
 */
-HB_FUNC( QGLFORMAT_SETSTENCILBUFFERSIZE )
+HB_FUNC_STATIC( QGLFORMAT_SETSTENCILBUFFERSIZE )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -808,7 +808,7 @@ HB_FUNC( QGLFORMAT_SETSTENCILBUFFERSIZE )
 /*
 void setStereo ( bool enable )
 */
-HB_FUNC( QGLFORMAT_SETSTEREO )
+HB_FUNC_STATIC( QGLFORMAT_SETSTEREO )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -823,7 +823,7 @@ HB_FUNC( QGLFORMAT_SETSTEREO )
 /*
 void setSwapInterval ( int interval )
 */
-HB_FUNC( QGLFORMAT_SETSWAPINTERVAL )
+HB_FUNC_STATIC( QGLFORMAT_SETSWAPINTERVAL )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -838,7 +838,7 @@ HB_FUNC( QGLFORMAT_SETSWAPINTERVAL )
 /*
 void setVersion ( int major, int minor )
 */
-HB_FUNC( QGLFORMAT_SETVERSION )
+HB_FUNC_STATIC( QGLFORMAT_SETVERSION )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -854,7 +854,7 @@ HB_FUNC( QGLFORMAT_SETVERSION )
 /*
 bool stencil () const
 */
-HB_FUNC( QGLFORMAT_STENCIL )
+HB_FUNC_STATIC( QGLFORMAT_STENCIL )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -868,7 +868,7 @@ HB_FUNC( QGLFORMAT_STENCIL )
 /*
 int stencilBufferSize () const
 */
-HB_FUNC( QGLFORMAT_STENCILBUFFERSIZE )
+HB_FUNC_STATIC( QGLFORMAT_STENCILBUFFERSIZE )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -882,7 +882,7 @@ HB_FUNC( QGLFORMAT_STENCILBUFFERSIZE )
 /*
 bool stereo () const
 */
-HB_FUNC( QGLFORMAT_STEREO )
+HB_FUNC_STATIC( QGLFORMAT_STEREO )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -896,7 +896,7 @@ HB_FUNC( QGLFORMAT_STEREO )
 /*
 int swapInterval () const
 */
-HB_FUNC( QGLFORMAT_SWAPINTERVAL )
+HB_FUNC_STATIC( QGLFORMAT_SWAPINTERVAL )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -910,7 +910,7 @@ HB_FUNC( QGLFORMAT_SWAPINTERVAL )
 /*
 bool testOption ( QGL::FormatOptions opt ) const
 */
-HB_FUNC( QGLFORMAT_TESTOPTION )
+HB_FUNC_STATIC( QGLFORMAT_TESTOPTION )
 {
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -926,7 +926,7 @@ HB_FUNC( QGLFORMAT_TESTOPTION )
 /*
 QGLFormat defaultFormat ()
 */
-HB_FUNC( QGLFORMAT_DEFAULTFORMAT )
+HB_FUNC_STATIC( QGLFORMAT_DEFAULTFORMAT )
 {
   QGLFormat * ptr = new QGLFormat( QGLFormat::defaultFormat (  ) );
   _qt4xhb_createReturnClass ( ptr, "QGLFORMAT" );}
@@ -935,7 +935,7 @@ HB_FUNC( QGLFORMAT_DEFAULTFORMAT )
 /*
 QGLFormat defaultOverlayFormat ()
 */
-HB_FUNC( QGLFORMAT_DEFAULTOVERLAYFORMAT )
+HB_FUNC_STATIC( QGLFORMAT_DEFAULTOVERLAYFORMAT )
 {
   QGLFormat * ptr = new QGLFormat( QGLFormat::defaultOverlayFormat (  ) );
   _qt4xhb_createReturnClass ( ptr, "QGLFORMAT" );}
@@ -944,7 +944,7 @@ HB_FUNC( QGLFORMAT_DEFAULTOVERLAYFORMAT )
 /*
 bool hasOpenGL ()
 */
-HB_FUNC( QGLFORMAT_HASOPENGL )
+HB_FUNC_STATIC( QGLFORMAT_HASOPENGL )
 {
   bool b = QGLFormat::hasOpenGL (  );
   hb_retl( b );
@@ -954,7 +954,7 @@ HB_FUNC( QGLFORMAT_HASOPENGL )
 /*
 bool hasOpenGLOverlays ()
 */
-HB_FUNC( QGLFORMAT_HASOPENGLOVERLAYS )
+HB_FUNC_STATIC( QGLFORMAT_HASOPENGLOVERLAYS )
 {
   bool b = QGLFormat::hasOpenGLOverlays (  );
   hb_retl( b );
@@ -964,7 +964,7 @@ HB_FUNC( QGLFORMAT_HASOPENGLOVERLAYS )
 /*
 OpenGLVersionFlags openGLVersionFlags ()
 */
-HB_FUNC( QGLFORMAT_OPENGLVERSIONFLAGS )
+HB_FUNC_STATIC( QGLFORMAT_OPENGLVERSIONFLAGS )
 {
   int i = QGLFormat::openGLVersionFlags (  );
   hb_retni( i );
@@ -974,7 +974,7 @@ HB_FUNC( QGLFORMAT_OPENGLVERSIONFLAGS )
 /*
 void setDefaultFormat ( const QGLFormat & f )
 */
-HB_FUNC( QGLFORMAT_SETDEFAULTFORMAT )
+HB_FUNC_STATIC( QGLFORMAT_SETDEFAULTFORMAT )
 {
   QGLFormat * par1 = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QGLFormat::setDefaultFormat ( *par1 );
@@ -985,7 +985,7 @@ HB_FUNC( QGLFORMAT_SETDEFAULTFORMAT )
 /*
 void setDefaultOverlayFormat ( const QGLFormat & f )
 */
-HB_FUNC( QGLFORMAT_SETDEFAULTOVERLAYFORMAT )
+HB_FUNC_STATIC( QGLFORMAT_SETDEFAULTOVERLAYFORMAT )
 {
   QGLFormat * par1 = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QGLFormat::setDefaultOverlayFormat ( *par1 );

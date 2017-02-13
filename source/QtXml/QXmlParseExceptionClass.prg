@@ -103,7 +103,7 @@ RETURN
 /*
 QXmlParseException ( const QString & name = QString(), int c = -1, int l = -1, const QString & p = QString(), const QString & s = QString() )
 */
-HB_FUNC( QXMLPARSEEXCEPTION_NEW1 )
+HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEW1 )
 {
   QXmlParseException * o = NULL;
   QString par1 = ISNIL(1)? QString() : hb_parc(1);
@@ -126,7 +126,7 @@ HB_FUNC( QXMLPARSEEXCEPTION_NEW1 )
 /*
 QXmlParseException ( const QXmlParseException & other )
 */
-HB_FUNC( QXMLPARSEEXCEPTION_NEW2 )
+HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEW2 )
 {
   QXmlParseException * o = NULL;
   QXmlParseException * par1 = (QXmlParseException *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -145,7 +145,7 @@ HB_FUNC( QXMLPARSEEXCEPTION_NEW2 )
 //[1]QXmlParseException ( const QString & name = QString(), int c = -1, int l = -1, const QString & p = QString(), const QString & s = QString() )
 //[2]QXmlParseException ( const QXmlParseException & other )
 
-HB_FUNC( QXMLPARSEEXCEPTION_NEW )
+HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEW )
 {
   if( ISBETWEEN(0,5) && (ISCHAR(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) && (ISCHAR(4)||ISNIL(4)) && (ISCHAR(5)||ISNIL(5)) )
   {
@@ -161,7 +161,7 @@ HB_FUNC( QXMLPARSEEXCEPTION_NEW )
   }
 }
 
-HB_FUNC( QXMLPARSEEXCEPTION_DELETE )
+HB_FUNC_STATIC( QXMLPARSEEXCEPTION_DELETE )
 {
   QXmlParseException * obj = (QXmlParseException *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -180,7 +180,7 @@ HB_FUNC( QXMLPARSEEXCEPTION_DELETE )
 /*
 int columnNumber () const
 */
-HB_FUNC( QXMLPARSEEXCEPTION_COLUMNNUMBER )
+HB_FUNC_STATIC( QXMLPARSEEXCEPTION_COLUMNNUMBER )
 {
   QXmlParseException * obj = (QXmlParseException *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -194,7 +194,7 @@ HB_FUNC( QXMLPARSEEXCEPTION_COLUMNNUMBER )
 /*
 int lineNumber () const
 */
-HB_FUNC( QXMLPARSEEXCEPTION_LINENUMBER )
+HB_FUNC_STATIC( QXMLPARSEEXCEPTION_LINENUMBER )
 {
   QXmlParseException * obj = (QXmlParseException *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -208,7 +208,7 @@ HB_FUNC( QXMLPARSEEXCEPTION_LINENUMBER )
 /*
 QString message () const
 */
-HB_FUNC( QXMLPARSEEXCEPTION_MESSAGE )
+HB_FUNC_STATIC( QXMLPARSEEXCEPTION_MESSAGE )
 {
   QXmlParseException * obj = (QXmlParseException *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -222,7 +222,7 @@ HB_FUNC( QXMLPARSEEXCEPTION_MESSAGE )
 /*
 QString publicId () const
 */
-HB_FUNC( QXMLPARSEEXCEPTION_PUBLICID )
+HB_FUNC_STATIC( QXMLPARSEEXCEPTION_PUBLICID )
 {
   QXmlParseException * obj = (QXmlParseException *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -236,7 +236,7 @@ HB_FUNC( QXMLPARSEEXCEPTION_PUBLICID )
 /*
 QString systemId () const
 */
-HB_FUNC( QXMLPARSEEXCEPTION_SYSTEMID )
+HB_FUNC_STATIC( QXMLPARSEEXCEPTION_SYSTEMID )
 {
   QXmlParseException * obj = (QXmlParseException *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

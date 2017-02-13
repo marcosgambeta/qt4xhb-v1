@@ -62,7 +62,7 @@ RETURN
 /*
 QAccessibleEvent ( Type type, int child )
 */
-HB_FUNC( QACCESSIBLEEVENT_NEW )
+HB_FUNC_STATIC( QACCESSIBLEEVENT_NEW )
 {
   QAccessibleEvent * o = NULL;
   int par1 = hb_parni(1);
@@ -80,7 +80,7 @@ HB_FUNC( QACCESSIBLEEVENT_NEW )
 /*
 int child () const
 */
-HB_FUNC( QACCESSIBLEEVENT_CHILD )
+HB_FUNC_STATIC( QACCESSIBLEEVENT_CHILD )
 {
   QAccessibleEvent * obj = (QAccessibleEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -94,7 +94,7 @@ HB_FUNC( QACCESSIBLEEVENT_CHILD )
 /*
 void setValue ( const QString & text )
 */
-HB_FUNC( QACCESSIBLEEVENT_SETVALUE )
+HB_FUNC_STATIC( QACCESSIBLEEVENT_SETVALUE )
 {
   QAccessibleEvent * obj = (QAccessibleEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -109,7 +109,7 @@ HB_FUNC( QACCESSIBLEEVENT_SETVALUE )
 /*
 QString value () const
 */
-HB_FUNC( QACCESSIBLEEVENT_VALUE )
+HB_FUNC_STATIC( QACCESSIBLEEVENT_VALUE )
 {
   QAccessibleEvent * obj = (QAccessibleEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

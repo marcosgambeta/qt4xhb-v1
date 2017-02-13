@@ -133,7 +133,7 @@ RETURN
 /*
 QAction ( QObject * parent )
 */
-HB_FUNC( QACTION_NEW1 )
+HB_FUNC_STATIC( QACTION_NEW1 )
 {
   QAction * o = NULL;
   QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -149,7 +149,7 @@ HB_FUNC( QACTION_NEW1 )
 /*
 QAction ( const QString & text, QObject * parent )
 */
-HB_FUNC( QACTION_NEW2 )
+HB_FUNC_STATIC( QACTION_NEW2 )
 {
   QAction * o = NULL;
   QString par1 = hb_parc(1);
@@ -166,7 +166,7 @@ HB_FUNC( QACTION_NEW2 )
 /*
 QAction ( const QIcon & icon, const QString & text, QObject * parent )
 */
-HB_FUNC( QACTION_NEW3 )
+HB_FUNC_STATIC( QACTION_NEW3 )
 {
   QAction * o = NULL;
   QIcon par1 = ISOBJECT(1)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(1));
@@ -185,7 +185,7 @@ HB_FUNC( QACTION_NEW3 )
 //[2]QAction ( const QString & text, QObject * parent )
 //[3]QAction ( const QIcon & icon, const QString & text, QObject * parent )
 
-HB_FUNC( QACTION_NEW )
+HB_FUNC_STATIC( QACTION_NEW )
 {
   if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
@@ -205,7 +205,7 @@ HB_FUNC( QACTION_NEW )
   }
 }
 
-HB_FUNC( QACTION_DELETE )
+HB_FUNC_STATIC( QACTION_DELETE )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -224,7 +224,7 @@ HB_FUNC( QACTION_DELETE )
 /*
 QActionGroup * actionGroup () const
 */
-HB_FUNC( QACTION_ACTIONGROUP )
+HB_FUNC_STATIC( QACTION_ACTIONGROUP )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -237,7 +237,7 @@ HB_FUNC( QACTION_ACTIONGROUP )
 /*
 void activate ( ActionEvent event )
 */
-HB_FUNC( QACTION_ACTIVATE )
+HB_FUNC_STATIC( QACTION_ACTIVATE )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -252,7 +252,7 @@ HB_FUNC( QACTION_ACTIVATE )
 /*
 QList<QGraphicsWidget *> associatedGraphicsWidgets () const
 */
-HB_FUNC( QACTION_ASSOCIATEDGRAPHICSWIDGETS )
+HB_FUNC_STATIC( QACTION_ASSOCIATEDGRAPHICSWIDGETS )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -296,7 +296,7 @@ HB_FUNC( QACTION_ASSOCIATEDGRAPHICSWIDGETS )
 /*
 QList<QWidget *> associatedWidgets () const
 */
-HB_FUNC( QACTION_ASSOCIATEDWIDGETS )
+HB_FUNC_STATIC( QACTION_ASSOCIATEDWIDGETS )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -340,7 +340,7 @@ HB_FUNC( QACTION_ASSOCIATEDWIDGETS )
 /*
 bool autoRepeat () const
 */
-HB_FUNC( QACTION_AUTOREPEAT )
+HB_FUNC_STATIC( QACTION_AUTOREPEAT )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -354,7 +354,7 @@ HB_FUNC( QACTION_AUTOREPEAT )
 /*
 QVariant data () const
 */
-HB_FUNC( QACTION_DATA )
+HB_FUNC_STATIC( QACTION_DATA )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -367,7 +367,7 @@ HB_FUNC( QACTION_DATA )
 /*
 QFont font () const
 */
-HB_FUNC( QACTION_FONT )
+HB_FUNC_STATIC( QACTION_FONT )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -380,7 +380,7 @@ HB_FUNC( QACTION_FONT )
 /*
 QIcon icon () const
 */
-HB_FUNC( QACTION_ICON )
+HB_FUNC_STATIC( QACTION_ICON )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -393,7 +393,7 @@ HB_FUNC( QACTION_ICON )
 /*
 QString iconText () const
 */
-HB_FUNC( QACTION_ICONTEXT )
+HB_FUNC_STATIC( QACTION_ICONTEXT )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -407,7 +407,7 @@ HB_FUNC( QACTION_ICONTEXT )
 /*
 bool isCheckable () const
 */
-HB_FUNC( QACTION_ISCHECKABLE )
+HB_FUNC_STATIC( QACTION_ISCHECKABLE )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -421,7 +421,7 @@ HB_FUNC( QACTION_ISCHECKABLE )
 /*
 bool isChecked () const
 */
-HB_FUNC( QACTION_ISCHECKED )
+HB_FUNC_STATIC( QACTION_ISCHECKED )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -435,7 +435,7 @@ HB_FUNC( QACTION_ISCHECKED )
 /*
 bool isEnabled () const
 */
-HB_FUNC( QACTION_ISENABLED )
+HB_FUNC_STATIC( QACTION_ISENABLED )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -449,7 +449,7 @@ HB_FUNC( QACTION_ISENABLED )
 /*
 bool isIconVisibleInMenu () const
 */
-HB_FUNC( QACTION_ISICONVISIBLEINMENU )
+HB_FUNC_STATIC( QACTION_ISICONVISIBLEINMENU )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -463,7 +463,7 @@ HB_FUNC( QACTION_ISICONVISIBLEINMENU )
 /*
 bool isSeparator () const
 */
-HB_FUNC( QACTION_ISSEPARATOR )
+HB_FUNC_STATIC( QACTION_ISSEPARATOR )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -477,7 +477,7 @@ HB_FUNC( QACTION_ISSEPARATOR )
 /*
 bool isVisible () const
 */
-HB_FUNC( QACTION_ISVISIBLE )
+HB_FUNC_STATIC( QACTION_ISVISIBLE )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -491,7 +491,7 @@ HB_FUNC( QACTION_ISVISIBLE )
 /*
 QMenu * menu () const
 */
-HB_FUNC( QACTION_MENU )
+HB_FUNC_STATIC( QACTION_MENU )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -504,7 +504,7 @@ HB_FUNC( QACTION_MENU )
 /*
 MenuRole menuRole () const
 */
-HB_FUNC( QACTION_MENUROLE )
+HB_FUNC_STATIC( QACTION_MENUROLE )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -518,7 +518,7 @@ HB_FUNC( QACTION_MENUROLE )
 /*
 QWidget * parentWidget () const
 */
-HB_FUNC( QACTION_PARENTWIDGET )
+HB_FUNC_STATIC( QACTION_PARENTWIDGET )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -531,7 +531,7 @@ HB_FUNC( QACTION_PARENTWIDGET )
 /*
 Priority priority () const
 */
-HB_FUNC( QACTION_PRIORITY )
+HB_FUNC_STATIC( QACTION_PRIORITY )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -545,7 +545,7 @@ HB_FUNC( QACTION_PRIORITY )
 /*
 void setActionGroup ( QActionGroup * group )
 */
-HB_FUNC( QACTION_SETACTIONGROUP )
+HB_FUNC_STATIC( QACTION_SETACTIONGROUP )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -560,7 +560,7 @@ HB_FUNC( QACTION_SETACTIONGROUP )
 /*
 void setAutoRepeat ( bool )
 */
-HB_FUNC( QACTION_SETAUTOREPEAT )
+HB_FUNC_STATIC( QACTION_SETAUTOREPEAT )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -575,7 +575,7 @@ HB_FUNC( QACTION_SETAUTOREPEAT )
 /*
 void setCheckable ( bool )
 */
-HB_FUNC( QACTION_SETCHECKABLE )
+HB_FUNC_STATIC( QACTION_SETCHECKABLE )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -590,7 +590,7 @@ HB_FUNC( QACTION_SETCHECKABLE )
 /*
 void setData ( const QVariant & userData )
 */
-HB_FUNC( QACTION_SETDATA )
+HB_FUNC_STATIC( QACTION_SETDATA )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -605,7 +605,7 @@ HB_FUNC( QACTION_SETDATA )
 /*
 void setFont ( const QFont & font )
 */
-HB_FUNC( QACTION_SETFONT )
+HB_FUNC_STATIC( QACTION_SETFONT )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -620,7 +620,7 @@ HB_FUNC( QACTION_SETFONT )
 /*
 void setIcon ( const QIcon & icon )
 */
-HB_FUNC( QACTION_SETICON )
+HB_FUNC_STATIC( QACTION_SETICON )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -635,7 +635,7 @@ HB_FUNC( QACTION_SETICON )
 /*
 void setIconText ( const QString & text )
 */
-HB_FUNC( QACTION_SETICONTEXT )
+HB_FUNC_STATIC( QACTION_SETICONTEXT )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -650,7 +650,7 @@ HB_FUNC( QACTION_SETICONTEXT )
 /*
 void setIconVisibleInMenu ( bool visible )
 */
-HB_FUNC( QACTION_SETICONVISIBLEINMENU )
+HB_FUNC_STATIC( QACTION_SETICONVISIBLEINMENU )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -665,7 +665,7 @@ HB_FUNC( QACTION_SETICONVISIBLEINMENU )
 /*
 void setMenu ( QMenu * menu )
 */
-HB_FUNC( QACTION_SETMENU )
+HB_FUNC_STATIC( QACTION_SETMENU )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -680,7 +680,7 @@ HB_FUNC( QACTION_SETMENU )
 /*
 void setMenuRole ( MenuRole menuRole )
 */
-HB_FUNC( QACTION_SETMENUROLE )
+HB_FUNC_STATIC( QACTION_SETMENUROLE )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -695,7 +695,7 @@ HB_FUNC( QACTION_SETMENUROLE )
 /*
 void setPriority ( Priority priority )
 */
-HB_FUNC( QACTION_SETPRIORITY )
+HB_FUNC_STATIC( QACTION_SETPRIORITY )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -710,7 +710,7 @@ HB_FUNC( QACTION_SETPRIORITY )
 /*
 void setSeparator ( bool b )
 */
-HB_FUNC( QACTION_SETSEPARATOR )
+HB_FUNC_STATIC( QACTION_SETSEPARATOR )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -725,7 +725,7 @@ HB_FUNC( QACTION_SETSEPARATOR )
 /*
 void setShortcut ( const QKeySequence & shortcut )
 */
-HB_FUNC( QACTION_SETSHORTCUT )
+HB_FUNC_STATIC( QACTION_SETSHORTCUT )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -740,7 +740,7 @@ HB_FUNC( QACTION_SETSHORTCUT )
 /*
 void setShortcutContext ( Qt::ShortcutContext context )
 */
-HB_FUNC( QACTION_SETSHORTCUTCONTEXT )
+HB_FUNC_STATIC( QACTION_SETSHORTCUTCONTEXT )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -755,7 +755,7 @@ HB_FUNC( QACTION_SETSHORTCUTCONTEXT )
 /*
 void setShortcuts ( const QList<QKeySequence> & shortcuts )
 */
-HB_FUNC( QACTION_SETSHORTCUTS1 )
+HB_FUNC_STATIC( QACTION_SETSHORTCUTS1 )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -777,7 +777,7 @@ par1 << *(QKeySequence *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aLis
 /*
 void setShortcuts ( QKeySequence::StandardKey key )
 */
-HB_FUNC( QACTION_SETSHORTCUTS2 )
+HB_FUNC_STATIC( QACTION_SETSHORTCUTS2 )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -792,7 +792,7 @@ HB_FUNC( QACTION_SETSHORTCUTS2 )
 //[1]void setShortcuts ( const QList<QKeySequence> & shortcuts )
 //[2]void setShortcuts ( QKeySequence::StandardKey key )
 
-HB_FUNC( QACTION_SETSHORTCUTS )
+HB_FUNC_STATIC( QACTION_SETSHORTCUTS )
 {
   if( ISNUMPAR(1) && ISARRAY(1) )
   {
@@ -807,7 +807,7 @@ HB_FUNC( QACTION_SETSHORTCUTS )
 /*
 void setSoftKeyRole ( SoftKeyRole softKeyRole )
 */
-HB_FUNC( QACTION_SETSOFTKEYROLE )
+HB_FUNC_STATIC( QACTION_SETSOFTKEYROLE )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -822,7 +822,7 @@ HB_FUNC( QACTION_SETSOFTKEYROLE )
 /*
 void setStatusTip ( const QString & statusTip )
 */
-HB_FUNC( QACTION_SETSTATUSTIP )
+HB_FUNC_STATIC( QACTION_SETSTATUSTIP )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -837,7 +837,7 @@ HB_FUNC( QACTION_SETSTATUSTIP )
 /*
 void setText ( const QString & text )
 */
-HB_FUNC( QACTION_SETTEXT )
+HB_FUNC_STATIC( QACTION_SETTEXT )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -852,7 +852,7 @@ HB_FUNC( QACTION_SETTEXT )
 /*
 void setToolTip ( const QString & tip )
 */
-HB_FUNC( QACTION_SETTOOLTIP )
+HB_FUNC_STATIC( QACTION_SETTOOLTIP )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -867,7 +867,7 @@ HB_FUNC( QACTION_SETTOOLTIP )
 /*
 void setWhatsThis ( const QString & what )
 */
-HB_FUNC( QACTION_SETWHATSTHIS )
+HB_FUNC_STATIC( QACTION_SETWHATSTHIS )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -882,7 +882,7 @@ HB_FUNC( QACTION_SETWHATSTHIS )
 /*
 QKeySequence shortcut () const
 */
-HB_FUNC( QACTION_SHORTCUT )
+HB_FUNC_STATIC( QACTION_SHORTCUT )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -895,7 +895,7 @@ HB_FUNC( QACTION_SHORTCUT )
 /*
 Qt::ShortcutContext shortcutContext () const
 */
-HB_FUNC( QACTION_SHORTCUTCONTEXT )
+HB_FUNC_STATIC( QACTION_SHORTCUTCONTEXT )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -909,7 +909,7 @@ HB_FUNC( QACTION_SHORTCUTCONTEXT )
 /*
 QList<QKeySequence> shortcuts () const
 */
-HB_FUNC( QACTION_SHORTCUTS )
+HB_FUNC_STATIC( QACTION_SHORTCUTS )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -957,7 +957,7 @@ HB_FUNC( QACTION_SHORTCUTS )
 /*
 bool showStatusText ( QWidget * widget = 0 )
 */
-HB_FUNC( QACTION_SHOWSTATUSTEXT )
+HB_FUNC_STATIC( QACTION_SHOWSTATUSTEXT )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -972,7 +972,7 @@ HB_FUNC( QACTION_SHOWSTATUSTEXT )
 /*
 SoftKeyRole softKeyRole () const
 */
-HB_FUNC( QACTION_SOFTKEYROLE )
+HB_FUNC_STATIC( QACTION_SOFTKEYROLE )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -986,7 +986,7 @@ HB_FUNC( QACTION_SOFTKEYROLE )
 /*
 QString statusTip () const
 */
-HB_FUNC( QACTION_STATUSTIP )
+HB_FUNC_STATIC( QACTION_STATUSTIP )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1000,7 +1000,7 @@ HB_FUNC( QACTION_STATUSTIP )
 /*
 QString text () const
 */
-HB_FUNC( QACTION_TEXT )
+HB_FUNC_STATIC( QACTION_TEXT )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1014,7 +1014,7 @@ HB_FUNC( QACTION_TEXT )
 /*
 QString toolTip () const
 */
-HB_FUNC( QACTION_TOOLTIP )
+HB_FUNC_STATIC( QACTION_TOOLTIP )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1028,7 +1028,7 @@ HB_FUNC( QACTION_TOOLTIP )
 /*
 QString whatsThis () const
 */
-HB_FUNC( QACTION_WHATSTHIS )
+HB_FUNC_STATIC( QACTION_WHATSTHIS )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1042,7 +1042,7 @@ HB_FUNC( QACTION_WHATSTHIS )
 /*
 void hover ()
 */
-HB_FUNC( QACTION_HOVER )
+HB_FUNC_STATIC( QACTION_HOVER )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1056,7 +1056,7 @@ HB_FUNC( QACTION_HOVER )
 /*
 void setChecked ( bool )
 */
-HB_FUNC( QACTION_SETCHECKED )
+HB_FUNC_STATIC( QACTION_SETCHECKED )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1071,7 +1071,7 @@ HB_FUNC( QACTION_SETCHECKED )
 /*
 void setDisabled ( bool b )
 */
-HB_FUNC( QACTION_SETDISABLED )
+HB_FUNC_STATIC( QACTION_SETDISABLED )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1086,7 +1086,7 @@ HB_FUNC( QACTION_SETDISABLED )
 /*
 void setEnabled ( bool )
 */
-HB_FUNC( QACTION_SETENABLED )
+HB_FUNC_STATIC( QACTION_SETENABLED )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1101,7 +1101,7 @@ HB_FUNC( QACTION_SETENABLED )
 /*
 void setVisible ( bool )
 */
-HB_FUNC( QACTION_SETVISIBLE )
+HB_FUNC_STATIC( QACTION_SETVISIBLE )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1116,7 +1116,7 @@ HB_FUNC( QACTION_SETVISIBLE )
 /*
 void toggle ()
 */
-HB_FUNC( QACTION_TOGGLE )
+HB_FUNC_STATIC( QACTION_TOGGLE )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1130,7 +1130,7 @@ HB_FUNC( QACTION_TOGGLE )
 /*
 void trigger ()
 */
-HB_FUNC( QACTION_TRIGGER )
+HB_FUNC_STATIC( QACTION_TRIGGER )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

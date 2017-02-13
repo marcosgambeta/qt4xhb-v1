@@ -146,7 +146,7 @@ RETURN
 /*
 QGLShaderProgram ( QObject * parent = 0 )
 */
-HB_FUNC( QGLSHADERPROGRAM_NEW1 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_NEW1 )
 {
   QGLShaderProgram * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -162,7 +162,7 @@ HB_FUNC( QGLSHADERPROGRAM_NEW1 )
 /*
 QGLShaderProgram ( const QGLContext * context, QObject * parent = 0 )
 */
-HB_FUNC( QGLSHADERPROGRAM_NEW2 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_NEW2 )
 {
   QGLShaderProgram * o = NULL;
   const QGLContext * par1 = (const QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -179,7 +179,7 @@ HB_FUNC( QGLSHADERPROGRAM_NEW2 )
 //[1]QGLShaderProgram ( QObject * parent = 0 )
 //[2]QGLShaderProgram ( const QGLContext * context, QObject * parent = 0 )
 
-HB_FUNC( QGLSHADERPROGRAM_NEW )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
@@ -195,7 +195,7 @@ HB_FUNC( QGLSHADERPROGRAM_NEW )
   }
 }
 
-HB_FUNC( QGLSHADERPROGRAM_DELETE )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_DELETE )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -214,7 +214,7 @@ HB_FUNC( QGLSHADERPROGRAM_DELETE )
 /*
 bool addShader ( QGLShader * shader )
 */
-HB_FUNC( QGLSHADERPROGRAM_ADDSHADER )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_ADDSHADER )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -229,7 +229,7 @@ HB_FUNC( QGLSHADERPROGRAM_ADDSHADER )
 /*
 bool addShaderFromSourceCode ( QGLShader::ShaderType type, const char * source )
 */
-HB_FUNC( QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE1 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE1 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -245,7 +245,7 @@ HB_FUNC( QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE1 )
 /*
 bool addShaderFromSourceCode ( QGLShader::ShaderType type, const QByteArray & source )
 */
-HB_FUNC( QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE2 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE2 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -261,7 +261,7 @@ HB_FUNC( QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE2 )
 /*
 bool addShaderFromSourceCode ( QGLShader::ShaderType type, const QString & source )
 */
-HB_FUNC( QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE3 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE3 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -278,7 +278,7 @@ HB_FUNC( QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE3 )
 //[2]bool addShaderFromSourceCode ( QGLShader::ShaderType type, const QByteArray & source )
 //[3]bool addShaderFromSourceCode ( QGLShader::ShaderType type, const QString & source )
 
-HB_FUNC( QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
   {
@@ -297,7 +297,7 @@ HB_FUNC( QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE )
 /*
 bool addShaderFromSourceFile ( QGLShader::ShaderType type, const QString & fileName )
 */
-HB_FUNC( QGLSHADERPROGRAM_ADDSHADERFROMSOURCEFILE )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_ADDSHADERFROMSOURCEFILE )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -313,7 +313,7 @@ HB_FUNC( QGLSHADERPROGRAM_ADDSHADERFROMSOURCEFILE )
 /*
 int attributeLocation ( const char * name ) const
 */
-HB_FUNC( QGLSHADERPROGRAM_ATTRIBUTELOCATION1 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_ATTRIBUTELOCATION1 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -328,7 +328,7 @@ HB_FUNC( QGLSHADERPROGRAM_ATTRIBUTELOCATION1 )
 /*
 int attributeLocation ( const QByteArray & name ) const
 */
-HB_FUNC( QGLSHADERPROGRAM_ATTRIBUTELOCATION2 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_ATTRIBUTELOCATION2 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -343,7 +343,7 @@ HB_FUNC( QGLSHADERPROGRAM_ATTRIBUTELOCATION2 )
 /*
 int attributeLocation ( const QString & name ) const
 */
-HB_FUNC( QGLSHADERPROGRAM_ATTRIBUTELOCATION3 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_ATTRIBUTELOCATION3 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -359,7 +359,7 @@ HB_FUNC( QGLSHADERPROGRAM_ATTRIBUTELOCATION3 )
 //[2]int attributeLocation ( const QByteArray & name ) const
 //[3]int attributeLocation ( const QString & name ) const
 
-HB_FUNC( QGLSHADERPROGRAM_ATTRIBUTELOCATION )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_ATTRIBUTELOCATION )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
@@ -378,7 +378,7 @@ HB_FUNC( QGLSHADERPROGRAM_ATTRIBUTELOCATION )
 /*
 bool bind ()
 */
-HB_FUNC( QGLSHADERPROGRAM_BIND )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_BIND )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -392,7 +392,7 @@ HB_FUNC( QGLSHADERPROGRAM_BIND )
 /*
 void bindAttributeLocation ( const char * name, int location )
 */
-HB_FUNC( QGLSHADERPROGRAM_BINDATTRIBUTELOCATION1 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_BINDATTRIBUTELOCATION1 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -408,7 +408,7 @@ HB_FUNC( QGLSHADERPROGRAM_BINDATTRIBUTELOCATION1 )
 /*
 void bindAttributeLocation ( const QByteArray & name, int location )
 */
-HB_FUNC( QGLSHADERPROGRAM_BINDATTRIBUTELOCATION2 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_BINDATTRIBUTELOCATION2 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -424,7 +424,7 @@ HB_FUNC( QGLSHADERPROGRAM_BINDATTRIBUTELOCATION2 )
 /*
 void bindAttributeLocation ( const QString & name, int location )
 */
-HB_FUNC( QGLSHADERPROGRAM_BINDATTRIBUTELOCATION3 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_BINDATTRIBUTELOCATION3 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -441,7 +441,7 @@ HB_FUNC( QGLSHADERPROGRAM_BINDATTRIBUTELOCATION3 )
 //[2]void bindAttributeLocation ( const QByteArray & name, int location )
 //[3]void bindAttributeLocation ( const QString & name, int location )
 
-HB_FUNC( QGLSHADERPROGRAM_BINDATTRIBUTELOCATION )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_BINDATTRIBUTELOCATION )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
   {
@@ -460,7 +460,7 @@ HB_FUNC( QGLSHADERPROGRAM_BINDATTRIBUTELOCATION )
 /*
 void disableAttributeArray ( int location )
 */
-HB_FUNC( QGLSHADERPROGRAM_DISABLEATTRIBUTEARRAY1 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_DISABLEATTRIBUTEARRAY1 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -475,7 +475,7 @@ HB_FUNC( QGLSHADERPROGRAM_DISABLEATTRIBUTEARRAY1 )
 /*
 void disableAttributeArray ( const char * name )
 */
-HB_FUNC( QGLSHADERPROGRAM_DISABLEATTRIBUTEARRAY2 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_DISABLEATTRIBUTEARRAY2 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -490,7 +490,7 @@ HB_FUNC( QGLSHADERPROGRAM_DISABLEATTRIBUTEARRAY2 )
 //[1]void disableAttributeArray ( int location )
 //[2]void disableAttributeArray ( const char * name )
 
-HB_FUNC( QGLSHADERPROGRAM_DISABLEATTRIBUTEARRAY )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_DISABLEATTRIBUTEARRAY )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
@@ -505,7 +505,7 @@ HB_FUNC( QGLSHADERPROGRAM_DISABLEATTRIBUTEARRAY )
 /*
 void enableAttributeArray ( int location )
 */
-HB_FUNC( QGLSHADERPROGRAM_ENABLEATTRIBUTEARRAY1 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_ENABLEATTRIBUTEARRAY1 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -520,7 +520,7 @@ HB_FUNC( QGLSHADERPROGRAM_ENABLEATTRIBUTEARRAY1 )
 /*
 void enableAttributeArray ( const char * name )
 */
-HB_FUNC( QGLSHADERPROGRAM_ENABLEATTRIBUTEARRAY2 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_ENABLEATTRIBUTEARRAY2 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -535,7 +535,7 @@ HB_FUNC( QGLSHADERPROGRAM_ENABLEATTRIBUTEARRAY2 )
 //[1]void enableAttributeArray ( int location )
 //[2]void enableAttributeArray ( const char * name )
 
-HB_FUNC( QGLSHADERPROGRAM_ENABLEATTRIBUTEARRAY )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_ENABLEATTRIBUTEARRAY )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
@@ -550,7 +550,7 @@ HB_FUNC( QGLSHADERPROGRAM_ENABLEATTRIBUTEARRAY )
 /*
 GLenum geometryInputType () const
 */
-HB_FUNC( QGLSHADERPROGRAM_GEOMETRYINPUTTYPE )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_GEOMETRYINPUTTYPE )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -564,7 +564,7 @@ HB_FUNC( QGLSHADERPROGRAM_GEOMETRYINPUTTYPE )
 /*
 GLenum geometryOutputType () const
 */
-HB_FUNC( QGLSHADERPROGRAM_GEOMETRYOUTPUTTYPE )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_GEOMETRYOUTPUTTYPE )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -578,7 +578,7 @@ HB_FUNC( QGLSHADERPROGRAM_GEOMETRYOUTPUTTYPE )
 /*
 int geometryOutputVertexCount () const
 */
-HB_FUNC( QGLSHADERPROGRAM_GEOMETRYOUTPUTVERTEXCOUNT )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_GEOMETRYOUTPUTVERTEXCOUNT )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -592,7 +592,7 @@ HB_FUNC( QGLSHADERPROGRAM_GEOMETRYOUTPUTVERTEXCOUNT )
 /*
 bool isLinked () const
 */
-HB_FUNC( QGLSHADERPROGRAM_ISLINKED )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_ISLINKED )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -606,7 +606,7 @@ HB_FUNC( QGLSHADERPROGRAM_ISLINKED )
 /*
 virtual bool link ()
 */
-HB_FUNC( QGLSHADERPROGRAM_LINK )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_LINK )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -620,7 +620,7 @@ HB_FUNC( QGLSHADERPROGRAM_LINK )
 /*
 QString log () const
 */
-HB_FUNC( QGLSHADERPROGRAM_LOG )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_LOG )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -634,7 +634,7 @@ HB_FUNC( QGLSHADERPROGRAM_LOG )
 /*
 int maxGeometryOutputVertices () const
 */
-HB_FUNC( QGLSHADERPROGRAM_MAXGEOMETRYOUTPUTVERTICES )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_MAXGEOMETRYOUTPUTVERTICES )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -648,7 +648,7 @@ HB_FUNC( QGLSHADERPROGRAM_MAXGEOMETRYOUTPUTVERTICES )
 /*
 GLuint programId () const
 */
-HB_FUNC( QGLSHADERPROGRAM_PROGRAMID )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_PROGRAMID )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -662,7 +662,7 @@ HB_FUNC( QGLSHADERPROGRAM_PROGRAMID )
 /*
 void release ()
 */
-HB_FUNC( QGLSHADERPROGRAM_RELEASE )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_RELEASE )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -676,7 +676,7 @@ HB_FUNC( QGLSHADERPROGRAM_RELEASE )
 /*
 void removeAllShaders ()
 */
-HB_FUNC( QGLSHADERPROGRAM_REMOVEALLSHADERS )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_REMOVEALLSHADERS )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -690,7 +690,7 @@ HB_FUNC( QGLSHADERPROGRAM_REMOVEALLSHADERS )
 /*
 void removeShader ( QGLShader * shader )
 */
-HB_FUNC( QGLSHADERPROGRAM_REMOVESHADER )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_REMOVESHADER )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -724,14 +724,14 @@ HB_FUNC( QGLSHADERPROGRAM_REMOVESHADER )
 //[10]void setAttributeArray ( const char * name, GLenum type, const void * values, int tupleSize, int stride = 0 )
 
 // TODO: implementar
-HB_FUNC( QGLSHADERPROGRAM_SETATTRIBUTEARRAY )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEARRAY )
 {
 }
 
 /*
 void setAttributeBuffer ( int location, GLenum type, int offset, int tupleSize, int stride = 0 )
 */
-HB_FUNC( QGLSHADERPROGRAM_SETATTRIBUTEBUFFER1 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEBUFFER1 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -750,7 +750,7 @@ HB_FUNC( QGLSHADERPROGRAM_SETATTRIBUTEBUFFER1 )
 /*
 void setAttributeBuffer ( const char * name, GLenum type, int offset, int tupleSize, int stride = 0 )
 */
-HB_FUNC( QGLSHADERPROGRAM_SETATTRIBUTEBUFFER2 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEBUFFER2 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -769,7 +769,7 @@ HB_FUNC( QGLSHADERPROGRAM_SETATTRIBUTEBUFFER2 )
 //[1]void setAttributeBuffer ( int location, GLenum type, int offset, int tupleSize, int stride = 0 )
 //[2]void setAttributeBuffer ( const char * name, GLenum type, int offset, int tupleSize, int stride = 0 )
 
-HB_FUNC( QGLSHADERPROGRAM_SETATTRIBUTEBUFFER )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEBUFFER )
 {
   if( ISBETWEEN(4,5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && (ISNUM(5)||ISNIL(5)) )
   {
@@ -784,7 +784,7 @@ HB_FUNC( QGLSHADERPROGRAM_SETATTRIBUTEBUFFER )
 /*
 void setAttributeValue ( int location, GLfloat value )
 */
-HB_FUNC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE1 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE1 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -800,7 +800,7 @@ HB_FUNC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE1 )
 /*
 void setAttributeValue ( int location, GLfloat x, GLfloat y )
 */
-HB_FUNC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE2 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE2 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -816,7 +816,7 @@ HB_FUNC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE2 )
 /*
 void setAttributeValue ( int location, GLfloat x, GLfloat y, GLfloat z )
 */
-HB_FUNC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE3 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE3 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -834,7 +834,7 @@ HB_FUNC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE3 )
 /*
 void setAttributeValue ( int location, GLfloat x, GLfloat y, GLfloat z, GLfloat w )
 */
-HB_FUNC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE4 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE4 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -856,7 +856,7 @@ HB_FUNC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE4 )
 /*
 void setAttributeValue ( int location, const QColor & value )
 */
-HB_FUNC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE8 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE8 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -873,7 +873,7 @@ HB_FUNC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE8 )
 /*
 void setAttributeValue ( const char * name, GLfloat value )
 */
-HB_FUNC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE10 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE10 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -889,7 +889,7 @@ HB_FUNC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE10 )
 /*
 void setAttributeValue ( const char * name, GLfloat x, GLfloat y )
 */
-HB_FUNC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE11 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE11 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -906,7 +906,7 @@ HB_FUNC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE11 )
 /*
 void setAttributeValue ( const char * name, GLfloat x, GLfloat y, GLfloat z )
 */
-HB_FUNC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE12 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE12 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -924,7 +924,7 @@ HB_FUNC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE12 )
 /*
 void setAttributeValue ( const char * name, GLfloat x, GLfloat y, GLfloat z, GLfloat w )
 */
-HB_FUNC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE13 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE13 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -946,7 +946,7 @@ HB_FUNC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE13 )
 /*
 void setAttributeValue ( const char * name, const QColor & value )
 */
-HB_FUNC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE17 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE17 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -981,7 +981,7 @@ HB_FUNC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE17 )
 
 // TODO: implementar casos 5/6/7/9/14/15/16/18
 
-HB_FUNC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
@@ -1028,7 +1028,7 @@ HB_FUNC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE )
 /*
 void setGeometryInputType ( GLenum inputType )
 */
-HB_FUNC( QGLSHADERPROGRAM_SETGEOMETRYINPUTTYPE )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SETGEOMETRYINPUTTYPE )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1043,7 +1043,7 @@ HB_FUNC( QGLSHADERPROGRAM_SETGEOMETRYINPUTTYPE )
 /*
 void setGeometryOutputType ( GLenum outputType )
 */
-HB_FUNC( QGLSHADERPROGRAM_SETGEOMETRYOUTPUTTYPE )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SETGEOMETRYOUTPUTTYPE )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1058,7 +1058,7 @@ HB_FUNC( QGLSHADERPROGRAM_SETGEOMETRYOUTPUTTYPE )
 /*
 void setGeometryOutputVertexCount ( int count )
 */
-HB_FUNC( QGLSHADERPROGRAM_SETGEOMETRYOUTPUTVERTEXCOUNT )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SETGEOMETRYOUTPUTVERTEXCOUNT )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1073,7 +1073,7 @@ HB_FUNC( QGLSHADERPROGRAM_SETGEOMETRYOUTPUTVERTEXCOUNT )
 /*
 void setUniformValue ( int location, GLfloat value )
 */
-HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE1 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE1 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1089,7 +1089,7 @@ HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE1 )
 /*
 void setUniformValue ( const char * name, const QPointF & point )
 */
-HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE2 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE2 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1105,7 +1105,7 @@ HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE2 )
 /*
 void setUniformValue ( const char * name, const QSize & size )
 */
-HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE3 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE3 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1121,7 +1121,7 @@ HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE3 )
 /*
 void setUniformValue ( const char * name, const QSizeF & size )
 */
-HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE4 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE4 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1152,7 +1152,7 @@ HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE4 )
 /*
 void setUniformValue ( const char * name, const QTransform & value )
 */
-HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE20 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE20 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1168,7 +1168,7 @@ HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE20 )
 /*
 void setUniformValue ( int location, GLint value )
 */
-HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE21 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE21 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1184,7 +1184,7 @@ HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE21 )
 /*
 void setUniformValue ( int location, GLuint value )
 */
-HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE22 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE22 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1200,7 +1200,7 @@ HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE22 )
 /*
 void setUniformValue ( int location, GLfloat x, GLfloat y )
 */
-HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE23 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE23 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1217,7 +1217,7 @@ HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE23 )
 /*
 void setUniformValue ( int location, GLfloat x, GLfloat y, GLfloat z )
 */
-HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE24 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE24 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1235,7 +1235,7 @@ HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE24 )
 /*
 void setUniformValue ( int location, GLfloat x, GLfloat y, GLfloat z, GLfloat w )
 */
-HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE25 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE25 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1257,7 +1257,7 @@ HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE25 )
 /*
 void setUniformValue ( int location, const QColor & color )
 */
-HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE29 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE29 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1273,7 +1273,7 @@ HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE29 )
 /*
 void setUniformValue ( int location, const QPoint & point )
 */
-HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE30 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE30 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1289,7 +1289,7 @@ HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE30 )
 /*
 void setUniformValue ( int location, const QPointF & point )
 */
-HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE31 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE31 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1305,7 +1305,7 @@ HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE31 )
 /*
 void setUniformValue ( int location, const QSize & size )
 */
-HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE32 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE32 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1321,7 +1321,7 @@ HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE32 )
 /*
 void setUniformValue ( int location, const QSizeF & size )
 */
-HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE33 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE33 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1346,7 +1346,7 @@ HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE33 )
 /*
 void setUniformValue ( int location, const QTransform & value )
 */
-HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE43 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE43 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1362,7 +1362,7 @@ HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE43 )
 /*
 void setUniformValue ( const char * name, GLfloat value )
 */
-HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE44 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE44 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1378,7 +1378,7 @@ HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE44 )
 /*
 void setUniformValue ( const char * name, GLint value )
 */
-HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE45 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE45 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1394,7 +1394,7 @@ HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE45 )
 /*
 void setUniformValue ( const char * name, GLuint value )
 */
-HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE46 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE46 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1410,7 +1410,7 @@ HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE46 )
 /*
 void setUniformValue ( const char * name, GLfloat x, GLfloat y )
 */
-HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE47 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE47 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1427,7 +1427,7 @@ HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE47 )
 /*
 void setUniformValue ( const char * name, GLfloat x, GLfloat y, GLfloat z )
 */
-HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE48 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE48 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1445,7 +1445,7 @@ HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE48 )
 /*
 void setUniformValue ( const char * name, GLfloat x, GLfloat y, GLfloat z, GLfloat w )
 */
-HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE49 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE49 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1467,7 +1467,7 @@ HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE49 )
 /*
 void setUniformValue ( const char * name, const QColor & color )
 */
-HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE53 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE53 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1483,7 +1483,7 @@ HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE53 )
 /*
 void setUniformValue ( const char * name, const QPoint & point )
 */
-HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE54 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE54 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1553,7 +1553,7 @@ HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE54 )
 
 // TODO: implementar reconhecimento de parâmetros
 
-HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE )
 {
   if( ISNUMPAR(2) && ISNUM(1) && (ISQCOLOR(2)||ISCHAR(2)) )
   {
@@ -1628,14 +1628,14 @@ HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUE )
 
 // TODO: implementar métodos e reconhecimento dos parâmetros
 
-HB_FUNC( QGLSHADERPROGRAM_SETUNIFORMVALUEARRAY )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUEARRAY )
 {
 }
 
 /*
 QList<QGLShader *> shaders () const
 */
-HB_FUNC( QGLSHADERPROGRAM_SHADERS )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_SHADERS )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1679,7 +1679,7 @@ HB_FUNC( QGLSHADERPROGRAM_SHADERS )
 /*
 int uniformLocation ( const char * name ) const
 */
-HB_FUNC( QGLSHADERPROGRAM_UNIFORMLOCATION1 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_UNIFORMLOCATION1 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1694,7 +1694,7 @@ HB_FUNC( QGLSHADERPROGRAM_UNIFORMLOCATION1 )
 /*
 int uniformLocation ( const QByteArray & name ) const
 */
-HB_FUNC( QGLSHADERPROGRAM_UNIFORMLOCATION2 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_UNIFORMLOCATION2 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1709,7 +1709,7 @@ HB_FUNC( QGLSHADERPROGRAM_UNIFORMLOCATION2 )
 /*
 int uniformLocation ( const QString & name ) const
 */
-HB_FUNC( QGLSHADERPROGRAM_UNIFORMLOCATION3 )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_UNIFORMLOCATION3 )
 {
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1725,7 +1725,7 @@ HB_FUNC( QGLSHADERPROGRAM_UNIFORMLOCATION3 )
 //[2]int uniformLocation ( const QByteArray & name ) const
 //[3]int uniformLocation ( const QString & name ) const
 
-HB_FUNC( QGLSHADERPROGRAM_UNIFORMLOCATION )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_UNIFORMLOCATION )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
@@ -1745,7 +1745,7 @@ HB_FUNC( QGLSHADERPROGRAM_UNIFORMLOCATION )
 /*
 bool hasOpenGLShaderPrograms ( const QGLContext * context = 0 )
 */
-HB_FUNC( QGLSHADERPROGRAM_HASOPENGLSHADERPROGRAMS )
+HB_FUNC_STATIC( QGLSHADERPROGRAM_HASOPENGLSHADERPROGRAMS )
 {
   const QGLContext * par1 = ISNIL(1)? 0 : (const QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   bool b = QGLShaderProgram::hasOpenGLShaderPrograms ( par1 );

@@ -79,7 +79,7 @@ RETURN
 /*
 QShortcut(QWidget * parent)
 */
-HB_FUNC( QSHORTCUT_NEW1 )
+HB_FUNC_STATIC( QSHORTCUT_NEW1 )
 {
   QShortcut * o = NULL;
   QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -95,7 +95,7 @@ HB_FUNC( QSHORTCUT_NEW1 )
 /*
 QShortcut(const QKeySequence & key, QWidget * parent, const char * member = 0, const char * ambiguousMember = 0, Qt::ShortcutContext context = Qt::WindowShortcut)
 */
-HB_FUNC( QSHORTCUT_NEW2 )
+HB_FUNC_STATIC( QSHORTCUT_NEW2 )
 {
   QShortcut * o = NULL;
   QKeySequence * par1 = (QKeySequence *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -115,7 +115,7 @@ HB_FUNC( QSHORTCUT_NEW2 )
 //[1]QShortcut(QWidget * parent)
 //[2]QShortcut(const QKeySequence & key, QWidget * parent, const char * member = 0, const char * ambiguousMember = 0, Qt::ShortcutContext context = Qt::WindowShortcut)
 
-HB_FUNC( QSHORTCUT_NEW )
+HB_FUNC_STATIC( QSHORTCUT_NEW )
 {
   if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
@@ -131,7 +131,7 @@ HB_FUNC( QSHORTCUT_NEW )
   }
 }
 
-HB_FUNC( QSHORTCUT_DELETE )
+HB_FUNC_STATIC( QSHORTCUT_DELETE )
 {
   QShortcut * obj = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -150,7 +150,7 @@ HB_FUNC( QSHORTCUT_DELETE )
 /*
 bool autoRepeat() const
 */
-HB_FUNC( QSHORTCUT_AUTOREPEAT )
+HB_FUNC_STATIC( QSHORTCUT_AUTOREPEAT )
 {
   QShortcut * obj = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -164,7 +164,7 @@ HB_FUNC( QSHORTCUT_AUTOREPEAT )
 /*
 Qt::ShortcutContext context() const
 */
-HB_FUNC( QSHORTCUT_CONTEXT )
+HB_FUNC_STATIC( QSHORTCUT_CONTEXT )
 {
   QShortcut * obj = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -178,7 +178,7 @@ HB_FUNC( QSHORTCUT_CONTEXT )
 /*
 int id() const
 */
-HB_FUNC( QSHORTCUT_ID )
+HB_FUNC_STATIC( QSHORTCUT_ID )
 {
   QShortcut * obj = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -192,7 +192,7 @@ HB_FUNC( QSHORTCUT_ID )
 /*
 bool isEnabled() const
 */
-HB_FUNC( QSHORTCUT_ISENABLED )
+HB_FUNC_STATIC( QSHORTCUT_ISENABLED )
 {
   QShortcut * obj = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -206,7 +206,7 @@ HB_FUNC( QSHORTCUT_ISENABLED )
 /*
 QKeySequence key() const
 */
-HB_FUNC( QSHORTCUT_KEY )
+HB_FUNC_STATIC( QSHORTCUT_KEY )
 {
   QShortcut * obj = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -219,7 +219,7 @@ HB_FUNC( QSHORTCUT_KEY )
 /*
 QWidget * parentWidget() const
 */
-HB_FUNC( QSHORTCUT_PARENTWIDGET )
+HB_FUNC_STATIC( QSHORTCUT_PARENTWIDGET )
 {
   QShortcut * obj = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -232,7 +232,7 @@ HB_FUNC( QSHORTCUT_PARENTWIDGET )
 /*
 void setAutoRepeat(bool on)
 */
-HB_FUNC( QSHORTCUT_SETAUTOREPEAT )
+HB_FUNC_STATIC( QSHORTCUT_SETAUTOREPEAT )
 {
   QShortcut * obj = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -247,7 +247,7 @@ HB_FUNC( QSHORTCUT_SETAUTOREPEAT )
 /*
 void setContext(Qt::ShortcutContext context)
 */
-HB_FUNC( QSHORTCUT_SETCONTEXT )
+HB_FUNC_STATIC( QSHORTCUT_SETCONTEXT )
 {
   QShortcut * obj = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -262,7 +262,7 @@ HB_FUNC( QSHORTCUT_SETCONTEXT )
 /*
 void setEnabled(bool enable)
 */
-HB_FUNC( QSHORTCUT_SETENABLED )
+HB_FUNC_STATIC( QSHORTCUT_SETENABLED )
 {
   QShortcut * obj = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -277,7 +277,7 @@ HB_FUNC( QSHORTCUT_SETENABLED )
 /*
 void setKey(const QKeySequence & key)
 */
-HB_FUNC( QSHORTCUT_SETKEY )
+HB_FUNC_STATIC( QSHORTCUT_SETKEY )
 {
   QShortcut * obj = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -292,7 +292,7 @@ HB_FUNC( QSHORTCUT_SETKEY )
 /*
 void setWhatsThis(const QString & text)
 */
-HB_FUNC( QSHORTCUT_SETWHATSTHIS )
+HB_FUNC_STATIC( QSHORTCUT_SETWHATSTHIS )
 {
   QShortcut * obj = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -307,7 +307,7 @@ HB_FUNC( QSHORTCUT_SETWHATSTHIS )
 /*
 QString whatsThis() const
 */
-HB_FUNC( QSHORTCUT_WHATSTHIS )
+HB_FUNC_STATIC( QSHORTCUT_WHATSTHIS )
 {
   QShortcut * obj = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

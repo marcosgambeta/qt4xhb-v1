@@ -107,7 +107,7 @@ RETURN
 /*
 QXmlNamespaceSupport ()
 */
-HB_FUNC( QXMLNAMESPACESUPPORT_NEW )
+HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_NEW )
 {
   QXmlNamespaceSupport * o = NULL;
   o = new QXmlNamespaceSupport (  );
@@ -122,7 +122,7 @@ HB_FUNC( QXMLNAMESPACESUPPORT_NEW )
 }
 
 
-HB_FUNC( QXMLNAMESPACESUPPORT_DELETE )
+HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_DELETE )
 {
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -141,7 +141,7 @@ HB_FUNC( QXMLNAMESPACESUPPORT_DELETE )
 /*
 void popContext ()
 */
-HB_FUNC( QXMLNAMESPACESUPPORT_POPCONTEXT )
+HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_POPCONTEXT )
 {
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -155,7 +155,7 @@ HB_FUNC( QXMLNAMESPACESUPPORT_POPCONTEXT )
 /*
 QString prefix ( const QString & uri ) const
 */
-HB_FUNC( QXMLNAMESPACESUPPORT_PREFIX )
+HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIX )
 {
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -170,7 +170,7 @@ HB_FUNC( QXMLNAMESPACESUPPORT_PREFIX )
 /*
 QStringList prefixes () const
 */
-HB_FUNC( QXMLNAMESPACESUPPORT_PREFIXES1 )
+HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIXES1 )
 {
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -193,7 +193,7 @@ HB_FUNC( QXMLNAMESPACESUPPORT_PREFIXES1 )
 /*
 QStringList prefixes ( const QString & uri ) const
 */
-HB_FUNC( QXMLNAMESPACESUPPORT_PREFIXES2 )
+HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIXES2 )
 {
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -217,7 +217,7 @@ HB_FUNC( QXMLNAMESPACESUPPORT_PREFIXES2 )
 //[1]QStringList prefixes () const
 //[2]QStringList prefixes ( const QString & uri ) const
 
-HB_FUNC( QXMLNAMESPACESUPPORT_PREFIXES )
+HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIXES )
 {
   if( ISNUMPAR(0) )
   {
@@ -232,7 +232,7 @@ HB_FUNC( QXMLNAMESPACESUPPORT_PREFIXES )
 /*
 void processName ( const QString & qname, bool isAttribute, QString & nsuri, QString & localname ) const
 */
-HB_FUNC( QXMLNAMESPACESUPPORT_PROCESSNAME )
+HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PROCESSNAME )
 {
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -250,7 +250,7 @@ HB_FUNC( QXMLNAMESPACESUPPORT_PROCESSNAME )
 /*
 void pushContext ()
 */
-HB_FUNC( QXMLNAMESPACESUPPORT_PUSHCONTEXT )
+HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PUSHCONTEXT )
 {
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -264,7 +264,7 @@ HB_FUNC( QXMLNAMESPACESUPPORT_PUSHCONTEXT )
 /*
 void reset ()
 */
-HB_FUNC( QXMLNAMESPACESUPPORT_RESET )
+HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_RESET )
 {
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -278,7 +278,7 @@ HB_FUNC( QXMLNAMESPACESUPPORT_RESET )
 /*
 void setPrefix ( const QString & pre, const QString & uri )
 */
-HB_FUNC( QXMLNAMESPACESUPPORT_SETPREFIX )
+HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_SETPREFIX )
 {
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -294,7 +294,7 @@ HB_FUNC( QXMLNAMESPACESUPPORT_SETPREFIX )
 /*
 void splitName ( const QString & qname, QString & prefix, QString & localname ) const
 */
-HB_FUNC( QXMLNAMESPACESUPPORT_SPLITNAME )
+HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_SPLITNAME )
 {
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -311,7 +311,7 @@ HB_FUNC( QXMLNAMESPACESUPPORT_SPLITNAME )
 /*
 QString uri ( const QString & prefix ) const
 */
-HB_FUNC( QXMLNAMESPACESUPPORT_URI )
+HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_URI )
 {
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

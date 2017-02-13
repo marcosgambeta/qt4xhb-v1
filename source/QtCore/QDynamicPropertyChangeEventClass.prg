@@ -63,7 +63,7 @@ RETURN
 /*
 QDynamicPropertyChangeEvent ( const QByteArray & name )
 */
-HB_FUNC( QDYNAMICPROPERTYCHANGEEVENT_NEW )
+HB_FUNC_STATIC( QDYNAMICPROPERTYCHANGEEVENT_NEW )
 {
   QDynamicPropertyChangeEvent * o = NULL;
   QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -76,7 +76,7 @@ HB_FUNC( QDYNAMICPROPERTYCHANGEEVENT_NEW )
 }
 
 
-HB_FUNC( QDYNAMICPROPERTYCHANGEEVENT_DELETE )
+HB_FUNC_STATIC( QDYNAMICPROPERTYCHANGEEVENT_DELETE )
 {
   QDynamicPropertyChangeEvent * obj = (QDynamicPropertyChangeEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -95,7 +95,7 @@ HB_FUNC( QDYNAMICPROPERTYCHANGEEVENT_DELETE )
 /*
 QByteArray propertyName () const
 */
-HB_FUNC( QDYNAMICPROPERTYCHANGEEVENT_PROPERTYNAME )
+HB_FUNC_STATIC( QDYNAMICPROPERTYCHANGEEVENT_PROPERTYNAME )
 {
   QDynamicPropertyChangeEvent * obj = (QDynamicPropertyChangeEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

@@ -68,7 +68,7 @@ RETURN
 /*
 QPageSetupDialog ( QPrinter * printer, QWidget * parent = 0 )
 */
-HB_FUNC( QPAGESETUPDIALOG_NEW )
+HB_FUNC_STATIC( QPAGESETUPDIALOG_NEW )
 {
   QPageSetupDialog * o = NULL;
   QPrinter * par1 = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -86,7 +86,7 @@ HB_FUNC( QPAGESETUPDIALOG_NEW )
 /*
 void open ( QObject * receiver, const char * member )
 */
-HB_FUNC( QPAGESETUPDIALOG_OPEN )
+HB_FUNC_STATIC( QPAGESETUPDIALOG_OPEN )
 {
   QPageSetupDialog * obj = (QPageSetupDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -102,7 +102,7 @@ HB_FUNC( QPAGESETUPDIALOG_OPEN )
 /*
 PageSetupDialogOptions options () const
 */
-HB_FUNC( QPAGESETUPDIALOG_OPTIONS )
+HB_FUNC_STATIC( QPAGESETUPDIALOG_OPTIONS )
 {
   QPageSetupDialog * obj = (QPageSetupDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -116,7 +116,7 @@ HB_FUNC( QPAGESETUPDIALOG_OPTIONS )
 /*
 QPrinter * printer ()
 */
-HB_FUNC( QPAGESETUPDIALOG_PRINTER )
+HB_FUNC_STATIC( QPAGESETUPDIALOG_PRINTER )
 {
   QPageSetupDialog * obj = (QPageSetupDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -129,7 +129,7 @@ HB_FUNC( QPAGESETUPDIALOG_PRINTER )
 /*
 void setOption ( PageSetupDialogOption option, bool on = true )
 */
-HB_FUNC( QPAGESETUPDIALOG_SETOPTION )
+HB_FUNC_STATIC( QPAGESETUPDIALOG_SETOPTION )
 {
   QPageSetupDialog * obj = (QPageSetupDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -145,7 +145,7 @@ HB_FUNC( QPAGESETUPDIALOG_SETOPTION )
 /*
 void setOptions ( PageSetupDialogOptions options )
 */
-HB_FUNC( QPAGESETUPDIALOG_SETOPTIONS )
+HB_FUNC_STATIC( QPAGESETUPDIALOG_SETOPTIONS )
 {
   QPageSetupDialog * obj = (QPageSetupDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -160,7 +160,7 @@ HB_FUNC( QPAGESETUPDIALOG_SETOPTIONS )
 /*
 bool testOption ( PageSetupDialogOption option ) const
 */
-HB_FUNC( QPAGESETUPDIALOG_TESTOPTION )
+HB_FUNC_STATIC( QPAGESETUPDIALOG_TESTOPTION )
 {
   QPageSetupDialog * obj = (QPageSetupDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -175,7 +175,7 @@ HB_FUNC( QPAGESETUPDIALOG_TESTOPTION )
 /*
 virtual void setVisible ( bool visible )
 */
-HB_FUNC( QPAGESETUPDIALOG_SETVISIBLE )
+HB_FUNC_STATIC( QPAGESETUPDIALOG_SETVISIBLE )
 {
   QPageSetupDialog * obj = (QPageSetupDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

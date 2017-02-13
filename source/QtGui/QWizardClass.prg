@@ -114,7 +114,7 @@ RETURN
 /*
 QWizard ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
-HB_FUNC( QWIZARD_NEW )
+HB_FUNC_STATIC( QWIZARD_NEW )
 {
   QWizard * o = NULL;
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -128,7 +128,7 @@ HB_FUNC( QWIZARD_NEW )
 }
 
 
-HB_FUNC( QWIZARD_DELETE )
+HB_FUNC_STATIC( QWIZARD_DELETE )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -147,7 +147,7 @@ HB_FUNC( QWIZARD_DELETE )
 /*
 int addPage ( QWizardPage * page )
 */
-HB_FUNC( QWIZARD_ADDPAGE )
+HB_FUNC_STATIC( QWIZARD_ADDPAGE )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -162,7 +162,7 @@ HB_FUNC( QWIZARD_ADDPAGE )
 /*
 QAbstractButton * button ( WizardButton which ) const
 */
-HB_FUNC( QWIZARD_BUTTON )
+HB_FUNC_STATIC( QWIZARD_BUTTON )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -176,7 +176,7 @@ HB_FUNC( QWIZARD_BUTTON )
 /*
 QString buttonText ( WizardButton which ) const
 */
-HB_FUNC( QWIZARD_BUTTONTEXT )
+HB_FUNC_STATIC( QWIZARD_BUTTONTEXT )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -191,7 +191,7 @@ HB_FUNC( QWIZARD_BUTTONTEXT )
 /*
 int currentId () const
 */
-HB_FUNC( QWIZARD_CURRENTID )
+HB_FUNC_STATIC( QWIZARD_CURRENTID )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -205,7 +205,7 @@ HB_FUNC( QWIZARD_CURRENTID )
 /*
 QWizardPage * currentPage () const
 */
-HB_FUNC( QWIZARD_CURRENTPAGE )
+HB_FUNC_STATIC( QWIZARD_CURRENTPAGE )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -218,7 +218,7 @@ HB_FUNC( QWIZARD_CURRENTPAGE )
 /*
 QVariant field ( const QString & name ) const
 */
-HB_FUNC( QWIZARD_FIELD )
+HB_FUNC_STATIC( QWIZARD_FIELD )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -232,7 +232,7 @@ HB_FUNC( QWIZARD_FIELD )
 /*
 bool hasVisitedPage ( int id ) const
 */
-HB_FUNC( QWIZARD_HASVISITEDPAGE )
+HB_FUNC_STATIC( QWIZARD_HASVISITEDPAGE )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -247,7 +247,7 @@ HB_FUNC( QWIZARD_HASVISITEDPAGE )
 /*
 virtual int nextId () const
 */
-HB_FUNC( QWIZARD_NEXTID )
+HB_FUNC_STATIC( QWIZARD_NEXTID )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -261,7 +261,7 @@ HB_FUNC( QWIZARD_NEXTID )
 /*
 WizardOptions options () const
 */
-HB_FUNC( QWIZARD_OPTIONS )
+HB_FUNC_STATIC( QWIZARD_OPTIONS )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -275,7 +275,7 @@ HB_FUNC( QWIZARD_OPTIONS )
 /*
 QWizardPage * page ( int id ) const
 */
-HB_FUNC( QWIZARD_PAGE )
+HB_FUNC_STATIC( QWIZARD_PAGE )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -289,7 +289,7 @@ HB_FUNC( QWIZARD_PAGE )
 /*
 QList<int> pageIds () const
 */
-HB_FUNC( QWIZARD_PAGEIDS )
+HB_FUNC_STATIC( QWIZARD_PAGEIDS )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -312,7 +312,7 @@ HB_FUNC( QWIZARD_PAGEIDS )
 /*
 QPixmap pixmap ( WizardPixmap which ) const
 */
-HB_FUNC( QWIZARD_PIXMAP )
+HB_FUNC_STATIC( QWIZARD_PIXMAP )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -326,7 +326,7 @@ HB_FUNC( QWIZARD_PIXMAP )
 /*
 void removePage ( int id )
 */
-HB_FUNC( QWIZARD_REMOVEPAGE )
+HB_FUNC_STATIC( QWIZARD_REMOVEPAGE )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -341,7 +341,7 @@ HB_FUNC( QWIZARD_REMOVEPAGE )
 /*
 void setButton ( WizardButton which, QAbstractButton * button )
 */
-HB_FUNC( QWIZARD_SETBUTTON )
+HB_FUNC_STATIC( QWIZARD_SETBUTTON )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -357,7 +357,7 @@ HB_FUNC( QWIZARD_SETBUTTON )
 /*
 void setButtonLayout ( const QList<WizardButton> & layout )
 */
-HB_FUNC( QWIZARD_SETBUTTONLAYOUT )
+HB_FUNC_STATIC( QWIZARD_SETBUTTONLAYOUT )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -381,7 +381,7 @@ par1 << (QWizard::WizardButton) temp1;
 /*
 void setButtonText ( WizardButton which, const QString & text )
 */
-HB_FUNC( QWIZARD_SETBUTTONTEXT )
+HB_FUNC_STATIC( QWIZARD_SETBUTTONTEXT )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -397,7 +397,7 @@ HB_FUNC( QWIZARD_SETBUTTONTEXT )
 /*
 void setDefaultProperty ( const char * className, const char * property, const char * changedSignal )
 */
-HB_FUNC( QWIZARD_SETDEFAULTPROPERTY )
+HB_FUNC_STATIC( QWIZARD_SETDEFAULTPROPERTY )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -414,7 +414,7 @@ HB_FUNC( QWIZARD_SETDEFAULTPROPERTY )
 /*
 void setField ( const QString & name, const QVariant & value )
 */
-HB_FUNC( QWIZARD_SETFIELD )
+HB_FUNC_STATIC( QWIZARD_SETFIELD )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -430,7 +430,7 @@ HB_FUNC( QWIZARD_SETFIELD )
 /*
 void setOption ( WizardOption option, bool on = true )
 */
-HB_FUNC( QWIZARD_SETOPTION )
+HB_FUNC_STATIC( QWIZARD_SETOPTION )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -446,7 +446,7 @@ HB_FUNC( QWIZARD_SETOPTION )
 /*
 void setOptions ( WizardOptions options )
 */
-HB_FUNC( QWIZARD_SETOPTIONS )
+HB_FUNC_STATIC( QWIZARD_SETOPTIONS )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -461,7 +461,7 @@ HB_FUNC( QWIZARD_SETOPTIONS )
 /*
 void setPage ( int id, QWizardPage * page )
 */
-HB_FUNC( QWIZARD_SETPAGE )
+HB_FUNC_STATIC( QWIZARD_SETPAGE )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -477,7 +477,7 @@ HB_FUNC( QWIZARD_SETPAGE )
 /*
 void setPixmap ( WizardPixmap which, const QPixmap & pixmap )
 */
-HB_FUNC( QWIZARD_SETPIXMAP )
+HB_FUNC_STATIC( QWIZARD_SETPIXMAP )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -493,7 +493,7 @@ HB_FUNC( QWIZARD_SETPIXMAP )
 /*
 void setSideWidget ( QWidget * widget )
 */
-HB_FUNC( QWIZARD_SETSIDEWIDGET )
+HB_FUNC_STATIC( QWIZARD_SETSIDEWIDGET )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -508,7 +508,7 @@ HB_FUNC( QWIZARD_SETSIDEWIDGET )
 /*
 void setStartId ( int id )
 */
-HB_FUNC( QWIZARD_SETSTARTID )
+HB_FUNC_STATIC( QWIZARD_SETSTARTID )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -523,7 +523,7 @@ HB_FUNC( QWIZARD_SETSTARTID )
 /*
 void setSubTitleFormat ( Qt::TextFormat format )
 */
-HB_FUNC( QWIZARD_SETSUBTITLEFORMAT )
+HB_FUNC_STATIC( QWIZARD_SETSUBTITLEFORMAT )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -538,7 +538,7 @@ HB_FUNC( QWIZARD_SETSUBTITLEFORMAT )
 /*
 void setTitleFormat ( Qt::TextFormat format )
 */
-HB_FUNC( QWIZARD_SETTITLEFORMAT )
+HB_FUNC_STATIC( QWIZARD_SETTITLEFORMAT )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -553,7 +553,7 @@ HB_FUNC( QWIZARD_SETTITLEFORMAT )
 /*
 void setWizardStyle ( WizardStyle style )
 */
-HB_FUNC( QWIZARD_SETWIZARDSTYLE )
+HB_FUNC_STATIC( QWIZARD_SETWIZARDSTYLE )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -568,7 +568,7 @@ HB_FUNC( QWIZARD_SETWIZARDSTYLE )
 /*
 QWidget * sideWidget () const
 */
-HB_FUNC( QWIZARD_SIDEWIDGET )
+HB_FUNC_STATIC( QWIZARD_SIDEWIDGET )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -581,7 +581,7 @@ HB_FUNC( QWIZARD_SIDEWIDGET )
 /*
 int startId () const
 */
-HB_FUNC( QWIZARD_STARTID )
+HB_FUNC_STATIC( QWIZARD_STARTID )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -595,7 +595,7 @@ HB_FUNC( QWIZARD_STARTID )
 /*
 Qt::TextFormat subTitleFormat () const
 */
-HB_FUNC( QWIZARD_SUBTITLEFORMAT )
+HB_FUNC_STATIC( QWIZARD_SUBTITLEFORMAT )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -609,7 +609,7 @@ HB_FUNC( QWIZARD_SUBTITLEFORMAT )
 /*
 bool testOption ( WizardOption option ) const
 */
-HB_FUNC( QWIZARD_TESTOPTION )
+HB_FUNC_STATIC( QWIZARD_TESTOPTION )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -624,7 +624,7 @@ HB_FUNC( QWIZARD_TESTOPTION )
 /*
 Qt::TextFormat titleFormat () const
 */
-HB_FUNC( QWIZARD_TITLEFORMAT )
+HB_FUNC_STATIC( QWIZARD_TITLEFORMAT )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -638,7 +638,7 @@ HB_FUNC( QWIZARD_TITLEFORMAT )
 /*
 virtual bool validateCurrentPage ()
 */
-HB_FUNC( QWIZARD_VALIDATECURRENTPAGE )
+HB_FUNC_STATIC( QWIZARD_VALIDATECURRENTPAGE )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -652,7 +652,7 @@ HB_FUNC( QWIZARD_VALIDATECURRENTPAGE )
 /*
 QList<int> visitedPages () const
 */
-HB_FUNC( QWIZARD_VISITEDPAGES )
+HB_FUNC_STATIC( QWIZARD_VISITEDPAGES )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -675,7 +675,7 @@ HB_FUNC( QWIZARD_VISITEDPAGES )
 /*
 WizardStyle wizardStyle () const
 */
-HB_FUNC( QWIZARD_WIZARDSTYLE )
+HB_FUNC_STATIC( QWIZARD_WIZARDSTYLE )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -689,7 +689,7 @@ HB_FUNC( QWIZARD_WIZARDSTYLE )
 /*
 virtual void setVisible ( bool visible )
 */
-HB_FUNC( QWIZARD_SETVISIBLE )
+HB_FUNC_STATIC( QWIZARD_SETVISIBLE )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -704,7 +704,7 @@ HB_FUNC( QWIZARD_SETVISIBLE )
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC( QWIZARD_SIZEHINT )
+HB_FUNC_STATIC( QWIZARD_SIZEHINT )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -717,7 +717,7 @@ HB_FUNC( QWIZARD_SIZEHINT )
 /*
 void back ()
 */
-HB_FUNC( QWIZARD_BACK )
+HB_FUNC_STATIC( QWIZARD_BACK )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -731,7 +731,7 @@ HB_FUNC( QWIZARD_BACK )
 /*
 void next ()
 */
-HB_FUNC( QWIZARD_NEXT )
+HB_FUNC_STATIC( QWIZARD_NEXT )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -745,7 +745,7 @@ HB_FUNC( QWIZARD_NEXT )
 /*
 void restart ()
 */
-HB_FUNC( QWIZARD_RESTART )
+HB_FUNC_STATIC( QWIZARD_RESTART )
 {
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

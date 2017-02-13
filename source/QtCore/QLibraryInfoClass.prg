@@ -103,7 +103,7 @@ RETURN
 /*
 static QString licensee()
 */
-HB_FUNC( QLIBRARYINFO_LICENSEE )
+HB_FUNC_STATIC( QLIBRARYINFO_LICENSEE )
 {
   QString str1 = QLibraryInfo::licensee (  );
   hb_retc( (const char *) str1.toLatin1().data() );
@@ -113,7 +113,7 @@ HB_FUNC( QLIBRARYINFO_LICENSEE )
 /*
 static QString licensedProducts()
 */
-HB_FUNC( QLIBRARYINFO_LICENSEDPRODUCTS )
+HB_FUNC_STATIC( QLIBRARYINFO_LICENSEDPRODUCTS )
 {
   QString str1 = QLibraryInfo::licensedProducts (  );
   hb_retc( (const char *) str1.toLatin1().data() );
@@ -123,7 +123,7 @@ HB_FUNC( QLIBRARYINFO_LICENSEDPRODUCTS )
 /*
 static QString buildKey()
 */
-HB_FUNC( QLIBRARYINFO_BUILDKEY )
+HB_FUNC_STATIC( QLIBRARYINFO_BUILDKEY )
 {
   QString str1 = QLibraryInfo::buildKey (  );
   hb_retc( (const char *) str1.toLatin1().data() );
@@ -133,7 +133,7 @@ HB_FUNC( QLIBRARYINFO_BUILDKEY )
 /*
 static QDate buildDate()
 */
-HB_FUNC( QLIBRARYINFO_BUILDDATE )
+HB_FUNC_STATIC( QLIBRARYINFO_BUILDDATE )
 {
   QDate * ptr = new QDate( QLibraryInfo::buildDate (  ) );
   _qt4xhb_createReturnClass ( ptr, "QDATE", true );}
@@ -142,7 +142,7 @@ HB_FUNC( QLIBRARYINFO_BUILDDATE )
 /*
 static QString location(LibraryLocation)
 */
-HB_FUNC( QLIBRARYINFO_LOCATION )
+HB_FUNC_STATIC( QLIBRARYINFO_LOCATION )
 {
   int par1 = hb_parni(1);
   QString str1 = QLibraryInfo::location (  (QLibraryInfo::LibraryLocation) par1 );

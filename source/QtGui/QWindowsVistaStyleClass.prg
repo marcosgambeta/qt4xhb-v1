@@ -60,7 +60,7 @@ RETURN
 /*
 QWindowsVistaStyle ()
 */
-HB_FUNC( QWINDOWSVISTASTYLE_NEW )
+HB_FUNC_STATIC( QWINDOWSVISTASTYLE_NEW )
 {
   QWindowsVistaStyle * o = NULL;
   o = new QWindowsVistaStyle (  );
@@ -72,7 +72,7 @@ HB_FUNC( QWINDOWSVISTASTYLE_NEW )
 }
 
 
-HB_FUNC( QWINDOWSVISTASTYLE_DELETE )
+HB_FUNC_STATIC( QWINDOWSVISTASTYLE_DELETE )
 {
   QWindowsVistaStyle * obj = (QWindowsVistaStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

@@ -71,7 +71,7 @@ RETURN
 /*
 QSlider ( QWidget * parent = 0 )
 */
-HB_FUNC( QSLIDER_NEW1 )
+HB_FUNC_STATIC( QSLIDER_NEW1 )
 {
   QSlider * o = NULL;
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -87,7 +87,7 @@ HB_FUNC( QSLIDER_NEW1 )
 /*
 QSlider ( Qt::Orientation orientation, QWidget * parent = 0 )
 */
-HB_FUNC( QSLIDER_NEW2 )
+HB_FUNC_STATIC( QSLIDER_NEW2 )
 {
   QSlider * o = NULL;
   int par1 = hb_parni(1);
@@ -104,7 +104,7 @@ HB_FUNC( QSLIDER_NEW2 )
 //[1]QSlider ( QWidget * parent = 0 )
 //[2]QSlider ( Qt::Orientation orientation, QWidget * parent = 0 )
 
-HB_FUNC( QSLIDER_NEW )
+HB_FUNC_STATIC( QSLIDER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
@@ -120,7 +120,7 @@ HB_FUNC( QSLIDER_NEW )
   }
 }
 
-HB_FUNC( QSLIDER_DELETE )
+HB_FUNC_STATIC( QSLIDER_DELETE )
 {
   QSlider * obj = (QSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -139,7 +139,7 @@ HB_FUNC( QSLIDER_DELETE )
 /*
 void setTickInterval ( int ti )
 */
-HB_FUNC( QSLIDER_SETTICKINTERVAL )
+HB_FUNC_STATIC( QSLIDER_SETTICKINTERVAL )
 {
   QSlider * obj = (QSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -154,7 +154,7 @@ HB_FUNC( QSLIDER_SETTICKINTERVAL )
 /*
 void setTickPosition ( TickPosition position )
 */
-HB_FUNC( QSLIDER_SETTICKPOSITION )
+HB_FUNC_STATIC( QSLIDER_SETTICKPOSITION )
 {
   QSlider * obj = (QSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -169,7 +169,7 @@ HB_FUNC( QSLIDER_SETTICKPOSITION )
 /*
 int tickInterval () const
 */
-HB_FUNC( QSLIDER_TICKINTERVAL )
+HB_FUNC_STATIC( QSLIDER_TICKINTERVAL )
 {
   QSlider * obj = (QSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -183,7 +183,7 @@ HB_FUNC( QSLIDER_TICKINTERVAL )
 /*
 TickPosition tickPosition () const
 */
-HB_FUNC( QSLIDER_TICKPOSITION )
+HB_FUNC_STATIC( QSLIDER_TICKPOSITION )
 {
   QSlider * obj = (QSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -197,7 +197,7 @@ HB_FUNC( QSLIDER_TICKPOSITION )
 /*
 virtual bool event ( QEvent * event )
 */
-HB_FUNC( QSLIDER_EVENT )
+HB_FUNC_STATIC( QSLIDER_EVENT )
 {
   QSlider * obj = (QSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -212,7 +212,7 @@ HB_FUNC( QSLIDER_EVENT )
 /*
 virtual QSize minimumSizeHint () const
 */
-HB_FUNC( QSLIDER_MINIMUMSIZEHINT )
+HB_FUNC_STATIC( QSLIDER_MINIMUMSIZEHINT )
 {
   QSlider * obj = (QSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -225,7 +225,7 @@ HB_FUNC( QSLIDER_MINIMUMSIZEHINT )
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC( QSLIDER_SIZEHINT )
+HB_FUNC_STATIC( QSLIDER_SIZEHINT )
 {
   QSlider * obj = (QSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

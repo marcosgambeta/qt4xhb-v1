@@ -88,7 +88,7 @@ RETURN
 /*
 QDeclarativeComponent(QObject *parent = 0);
 */
-HB_FUNC( QDECLARATIVECOMPONENT_NEW1 )
+HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW1 )
 {
   QDeclarativeComponent * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -104,7 +104,7 @@ HB_FUNC( QDECLARATIVECOMPONENT_NEW1 )
 /*
 QDeclarativeComponent(QDeclarativeEngine *, QObject *parent=0)
 */
-HB_FUNC( QDECLARATIVECOMPONENT_NEW2 )
+HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW2 )
 {
   QDeclarativeComponent * o = NULL;
   QDeclarativeEngine * par1 = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -121,7 +121,7 @@ HB_FUNC( QDECLARATIVECOMPONENT_NEW2 )
 /*
 QDeclarativeComponent(QDeclarativeEngine *, const QString &fileName, QObject *parent = 0)
 */
-HB_FUNC( QDECLARATIVECOMPONENT_NEW3 )
+HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW3 )
 {
   QDeclarativeComponent * o = NULL;
   QDeclarativeEngine * par1 = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -139,7 +139,7 @@ HB_FUNC( QDECLARATIVECOMPONENT_NEW3 )
 /*
 QDeclarativeComponent(QDeclarativeEngine *, const QUrl &url, QObject *parent = 0)
 */
-HB_FUNC( QDECLARATIVECOMPONENT_NEW4 )
+HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW4 )
 {
   QDeclarativeComponent * o = NULL;
   QDeclarativeEngine * par1 = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -159,7 +159,7 @@ HB_FUNC( QDECLARATIVECOMPONENT_NEW4 )
 //[3]QDeclarativeComponent(QDeclarativeEngine *, const QString &fileName, QObject *parent = 0);
 //[4]QDeclarativeComponent(QDeclarativeEngine *, const QUrl &url, QObject *parent = 0);
 
-HB_FUNC( QDECLARATIVECOMPONENT_NEW )
+HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
@@ -183,7 +183,7 @@ HB_FUNC( QDECLARATIVECOMPONENT_NEW )
   }
 }
 
-HB_FUNC( QDECLARATIVECOMPONENT_DELETE )
+HB_FUNC_STATIC( QDECLARATIVECOMPONENT_DELETE )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -202,7 +202,7 @@ HB_FUNC( QDECLARATIVECOMPONENT_DELETE )
 /*
 virtual QObject * beginCreate ( QDeclarativeContext * context )
 */
-HB_FUNC( QDECLARATIVECOMPONENT_BEGINCREATE )
+HB_FUNC_STATIC( QDECLARATIVECOMPONENT_BEGINCREATE )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -216,7 +216,7 @@ HB_FUNC( QDECLARATIVECOMPONENT_BEGINCREATE )
 /*
 virtual void completeCreate ()
 */
-HB_FUNC( QDECLARATIVECOMPONENT_COMPLETECREATE )
+HB_FUNC_STATIC( QDECLARATIVECOMPONENT_COMPLETECREATE )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -230,7 +230,7 @@ HB_FUNC( QDECLARATIVECOMPONENT_COMPLETECREATE )
 /*
 virtual QObject * create ( QDeclarativeContext * context = 0 )
 */
-HB_FUNC( QDECLARATIVECOMPONENT_CREATE )
+HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATE )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -244,7 +244,7 @@ HB_FUNC( QDECLARATIVECOMPONENT_CREATE )
 /*
 QDeclarativeContext * creationContext () const
 */
-HB_FUNC( QDECLARATIVECOMPONENT_CREATIONCONTEXT )
+HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATIONCONTEXT )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -257,7 +257,7 @@ HB_FUNC( QDECLARATIVECOMPONENT_CREATIONCONTEXT )
 /*
 QList<QDeclarativeError> errors () const
 */
-HB_FUNC( QDECLARATIVECOMPONENT_ERRORS )
+HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ERRORS )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -301,7 +301,7 @@ HB_FUNC( QDECLARATIVECOMPONENT_ERRORS )
 /*
 bool isError () const
 */
-HB_FUNC( QDECLARATIVECOMPONENT_ISERROR )
+HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISERROR )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -315,7 +315,7 @@ HB_FUNC( QDECLARATIVECOMPONENT_ISERROR )
 /*
 bool isLoading () const
 */
-HB_FUNC( QDECLARATIVECOMPONENT_ISLOADING )
+HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISLOADING )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -329,7 +329,7 @@ HB_FUNC( QDECLARATIVECOMPONENT_ISLOADING )
 /*
 bool isNull () const
 */
-HB_FUNC( QDECLARATIVECOMPONENT_ISNULL )
+HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISNULL )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -343,7 +343,7 @@ HB_FUNC( QDECLARATIVECOMPONENT_ISNULL )
 /*
 bool isReady () const
 */
-HB_FUNC( QDECLARATIVECOMPONENT_ISREADY )
+HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISREADY )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -357,7 +357,7 @@ HB_FUNC( QDECLARATIVECOMPONENT_ISREADY )
 /*
 void loadUrl ( const QUrl & url )
 */
-HB_FUNC( QDECLARATIVECOMPONENT_LOADURL )
+HB_FUNC_STATIC( QDECLARATIVECOMPONENT_LOADURL )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -372,7 +372,7 @@ HB_FUNC( QDECLARATIVECOMPONENT_LOADURL )
 /*
 qreal progress () const
 */
-HB_FUNC( QDECLARATIVECOMPONENT_PROGRESS )
+HB_FUNC_STATIC( QDECLARATIVECOMPONENT_PROGRESS )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -386,7 +386,7 @@ HB_FUNC( QDECLARATIVECOMPONENT_PROGRESS )
 /*
 void setData ( const QByteArray & data, const QUrl & url )
 */
-HB_FUNC( QDECLARATIVECOMPONENT_SETDATA )
+HB_FUNC_STATIC( QDECLARATIVECOMPONENT_SETDATA )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -402,7 +402,7 @@ HB_FUNC( QDECLARATIVECOMPONENT_SETDATA )
 /*
 Status status () const
 */
-HB_FUNC( QDECLARATIVECOMPONENT_STATUS )
+HB_FUNC_STATIC( QDECLARATIVECOMPONENT_STATUS )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -416,7 +416,7 @@ HB_FUNC( QDECLARATIVECOMPONENT_STATUS )
 /*
 QUrl url () const
 */
-HB_FUNC( QDECLARATIVECOMPONENT_URL )
+HB_FUNC_STATIC( QDECLARATIVECOMPONENT_URL )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -429,7 +429,7 @@ HB_FUNC( QDECLARATIVECOMPONENT_URL )
 /*
 Q_INVOKABLE QString errorString() const
 */
-HB_FUNC( QDECLARATIVECOMPONENT_ERRORSTRING )
+HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ERRORSTRING )
 {
   QDeclarativeComponent * obj = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -444,7 +444,7 @@ HB_FUNC( QDECLARATIVECOMPONENT_ERRORSTRING )
 /*
 static QDeclarativeComponentAttached *qmlAttachedProperties(QObject *)
 */
-HB_FUNC( QDECLARATIVECOMPONENT_QMLATTACHEDPROPERTIES )
+HB_FUNC_STATIC( QDECLARATIVECOMPONENT_QMLATTACHEDPROPERTIES )
 {
   QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QDeclarativeComponentAttached * ptr = QDeclarativeComponent::qmlAttachedProperties ( par1 );

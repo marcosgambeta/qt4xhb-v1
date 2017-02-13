@@ -102,7 +102,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QABSTRACTFILEENGINEITERATOR_DELETE )
+HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_DELETE )
 {
   QAbstractFileEngineIterator * obj = (QAbstractFileEngineIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -121,7 +121,7 @@ HB_FUNC( QABSTRACTFILEENGINEITERATOR_DELETE )
 /*
 virtual QFileInfo currentFileInfo () const
 */
-HB_FUNC( QABSTRACTFILEENGINEITERATOR_CURRENTFILEINFO )
+HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_CURRENTFILEINFO )
 {
   QAbstractFileEngineIterator * obj = (QAbstractFileEngineIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -134,7 +134,7 @@ HB_FUNC( QABSTRACTFILEENGINEITERATOR_CURRENTFILEINFO )
 /*
 virtual QString currentFileName () const = 0
 */
-HB_FUNC( QABSTRACTFILEENGINEITERATOR_CURRENTFILENAME )
+HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_CURRENTFILENAME )
 {
   QAbstractFileEngineIterator * obj = (QAbstractFileEngineIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -148,7 +148,7 @@ HB_FUNC( QABSTRACTFILEENGINEITERATOR_CURRENTFILENAME )
 /*
 QString currentFilePath () const
 */
-HB_FUNC( QABSTRACTFILEENGINEITERATOR_CURRENTFILEPATH )
+HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_CURRENTFILEPATH )
 {
   QAbstractFileEngineIterator * obj = (QAbstractFileEngineIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -162,7 +162,7 @@ HB_FUNC( QABSTRACTFILEENGINEITERATOR_CURRENTFILEPATH )
 /*
 QDir::Filters filters () const
 */
-HB_FUNC( QABSTRACTFILEENGINEITERATOR_FILTERS )
+HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_FILTERS )
 {
   QAbstractFileEngineIterator * obj = (QAbstractFileEngineIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -176,7 +176,7 @@ HB_FUNC( QABSTRACTFILEENGINEITERATOR_FILTERS )
 /*
 virtual bool hasNext () const = 0
 */
-HB_FUNC( QABSTRACTFILEENGINEITERATOR_HASNEXT )
+HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_HASNEXT )
 {
   QAbstractFileEngineIterator * obj = (QAbstractFileEngineIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -190,7 +190,7 @@ HB_FUNC( QABSTRACTFILEENGINEITERATOR_HASNEXT )
 /*
 QStringList nameFilters () const
 */
-HB_FUNC( QABSTRACTFILEENGINEITERATOR_NAMEFILTERS )
+HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_NAMEFILTERS )
 {
   QAbstractFileEngineIterator * obj = (QAbstractFileEngineIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -213,7 +213,7 @@ HB_FUNC( QABSTRACTFILEENGINEITERATOR_NAMEFILTERS )
 /*
 virtual QString next () = 0
 */
-HB_FUNC( QABSTRACTFILEENGINEITERATOR_NEXT )
+HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_NEXT )
 {
   QAbstractFileEngineIterator * obj = (QAbstractFileEngineIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -227,7 +227,7 @@ HB_FUNC( QABSTRACTFILEENGINEITERATOR_NEXT )
 /*
 QString path () const
 */
-HB_FUNC( QABSTRACTFILEENGINEITERATOR_PATH )
+HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_PATH )
 {
   QAbstractFileEngineIterator * obj = (QAbstractFileEngineIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

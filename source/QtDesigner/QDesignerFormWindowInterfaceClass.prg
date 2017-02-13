@@ -120,7 +120,7 @@ RETURN
 #include <QDir>
 
 
-HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_DELETE )
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_DELETE )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -139,7 +139,7 @@ HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_DELETE )
 /*
 virtual QDir absoluteDir () const = 0
 */
-HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_ABSOLUTEDIR )
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_ABSOLUTEDIR )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -152,7 +152,7 @@ HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_ABSOLUTEDIR )
 /*
 virtual void addResourceFile ( const QString & path ) = 0
 */
-HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_ADDRESOURCEFILE )
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_ADDRESOURCEFILE )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -167,7 +167,7 @@ HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_ADDRESOURCEFILE )
 /*
 virtual QString author () const = 0
 */
-HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_AUTHOR )
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_AUTHOR )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -181,7 +181,7 @@ HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_AUTHOR )
 /*
 virtual QString comment () const = 0
 */
-HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_COMMENT )
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_COMMENT )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -195,7 +195,7 @@ HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_COMMENT )
 /*
 virtual QString contents () const = 0
 */
-HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_CONTENTS )
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_CONTENTS )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -209,7 +209,7 @@ HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_CONTENTS )
 /*
 virtual QDesignerFormEditorInterface * core () const
 */
-HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_CORE )
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_CORE )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -222,7 +222,7 @@ HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_CORE )
 /*
 virtual QDesignerFormWindowCursorInterface * cursor () const = 0
 */
-HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_CURSOR )
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_CURSOR )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -235,7 +235,7 @@ HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_CURSOR )
 /*
 virtual void emitSelectionChanged () = 0
 */
-HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_EMITSELECTIONCHANGED )
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_EMITSELECTIONCHANGED )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -249,7 +249,7 @@ HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_EMITSELECTIONCHANGED )
 /*
 virtual QString exportMacro () const = 0
 */
-HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_EXPORTMACRO )
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_EXPORTMACRO )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -263,7 +263,7 @@ HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_EXPORTMACRO )
 /*
 virtual Feature features () const = 0
 */
-HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_FEATURES )
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_FEATURES )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -277,7 +277,7 @@ HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_FEATURES )
 /*
 virtual QString fileName () const = 0
 */
-HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_FILENAME )
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_FILENAME )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -291,7 +291,7 @@ HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_FILENAME )
 /*
 virtual QPoint grid () const = 0
 */
-HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_GRID )
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_GRID )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -304,7 +304,7 @@ HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_GRID )
 /*
 virtual bool hasFeature ( Feature feature ) const = 0
 */
-HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_HASFEATURE )
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_HASFEATURE )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -319,7 +319,7 @@ HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_HASFEATURE )
 /*
 virtual QStringList includeHints () const = 0
 */
-HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_INCLUDEHINTS )
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_INCLUDEHINTS )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -342,7 +342,7 @@ HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_INCLUDEHINTS )
 /*
 virtual bool isDirty () const = 0
 */
-HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_ISDIRTY )
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_ISDIRTY )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -356,7 +356,7 @@ HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_ISDIRTY )
 /*
 virtual bool isManaged ( QWidget * widget ) const = 0
 */
-HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_ISMANAGED )
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_ISMANAGED )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -371,7 +371,7 @@ HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_ISMANAGED )
 /*
 virtual void layoutDefault ( int * margin, int * spacing ) = 0
 */
-HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_LAYOUTDEFAULT )
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_LAYOUTDEFAULT )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -390,7 +390,7 @@ HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_LAYOUTDEFAULT )
 /*
 virtual QWidget * mainContainer () const = 0
 */
-HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_MAINCONTAINER )
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_MAINCONTAINER )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -403,7 +403,7 @@ HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_MAINCONTAINER )
 /*
 virtual QString pixmapFunction () const = 0
 */
-HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_PIXMAPFUNCTION )
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_PIXMAPFUNCTION )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -417,7 +417,7 @@ HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_PIXMAPFUNCTION )
 /*
 virtual void removeResourceFile ( const QString & path ) = 0
 */
-HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_REMOVERESOURCEFILE )
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_REMOVERESOURCEFILE )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -432,7 +432,7 @@ HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_REMOVERESOURCEFILE )
 /*
 virtual QStringList resourceFiles () const = 0
 */
-HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_RESOURCEFILES )
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_RESOURCEFILES )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -455,7 +455,7 @@ HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_RESOURCEFILES )
 /*
 virtual void setAuthor ( const QString & author ) = 0
 */
-HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_SETAUTHOR )
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETAUTHOR )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -470,7 +470,7 @@ HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_SETAUTHOR )
 /*
 virtual void setComment ( const QString & comment ) = 0
 */
-HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_SETCOMMENT )
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETCOMMENT )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -485,7 +485,7 @@ HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_SETCOMMENT )
 /*
 virtual void setContents ( QIODevice * device ) = 0
 */
-HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_SETCONTENTS1 )
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETCONTENTS1 )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -500,7 +500,7 @@ HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_SETCONTENTS1 )
 /*
 virtual void setExportMacro ( const QString & exportMacro ) = 0
 */
-HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_SETEXPORTMACRO )
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETEXPORTMACRO )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -515,7 +515,7 @@ HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_SETEXPORTMACRO )
 /*
 virtual void setIncludeHints ( const QStringList & includeHints ) = 0
 */
-HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_SETINCLUDEHINTS )
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETINCLUDEHINTS )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -538,7 +538,7 @@ par1 << temp;
 /*
 virtual void setLayoutDefault ( int margin, int spacing ) = 0
 */
-HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_SETLAYOUTDEFAULT )
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETLAYOUTDEFAULT )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -554,7 +554,7 @@ HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_SETLAYOUTDEFAULT )
 /*
 virtual void setLayoutFunction ( const QString & margin, const QString & spacing ) = 0
 */
-HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_SETLAYOUTFUNCTION )
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETLAYOUTFUNCTION )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -570,7 +570,7 @@ HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_SETLAYOUTFUNCTION )
 /*
 virtual void setMainContainer ( QWidget * mainContainer ) = 0
 */
-HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_SETMAINCONTAINER )
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETMAINCONTAINER )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -585,7 +585,7 @@ HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_SETMAINCONTAINER )
 /*
 virtual void setPixmapFunction ( const QString & pixmapFunction ) = 0
 */
-HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_SETPIXMAPFUNCTION )
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETPIXMAPFUNCTION )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -600,7 +600,7 @@ HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_SETPIXMAPFUNCTION )
 /*
 virtual void clearSelection ( bool update = true ) = 0
 */
-HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_CLEARSELECTION )
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_CLEARSELECTION )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -615,7 +615,7 @@ HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_CLEARSELECTION )
 /*
 virtual void manageWidget ( QWidget * widget ) = 0
 */
-HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_MANAGEWIDGET )
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_MANAGEWIDGET )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -630,7 +630,7 @@ HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_MANAGEWIDGET )
 /*
 virtual void selectWidget ( QWidget * widget, bool select = true ) = 0
 */
-HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_SELECTWIDGET )
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SELECTWIDGET )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -646,7 +646,7 @@ HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_SELECTWIDGET )
 /*
 virtual void setContents ( const QString & contents ) = 0
 */
-HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_SETCONTENTS2 )
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETCONTENTS2 )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -661,7 +661,7 @@ HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_SETCONTENTS2 )
 //[1]virtual void setContents ( QIODevice * device ) = 0
 //[2]virtual void setContents ( const QString & contents ) = 0
 
-HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_SETCONTENTS )
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETCONTENTS )
 {
   if( ISNUMPAR(1) && ISQIODEVICE(1) )
   {
@@ -676,7 +676,7 @@ HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_SETCONTENTS )
 /*
 virtual void setDirty ( bool dirty ) = 0
 */
-HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_SETDIRTY )
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETDIRTY )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -691,7 +691,7 @@ HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_SETDIRTY )
 /*
 virtual void setFeatures ( Feature features ) = 0
 */
-HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_SETFEATURES )
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETFEATURES )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -706,7 +706,7 @@ HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_SETFEATURES )
 /*
 virtual void setFileName ( const QString & fileName ) = 0
 */
-HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_SETFILENAME )
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETFILENAME )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -721,7 +721,7 @@ HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_SETFILENAME )
 /*
 virtual void setGrid ( const QPoint & grid ) = 0
 */
-HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_SETGRID )
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETGRID )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -736,7 +736,7 @@ HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_SETGRID )
 /*
 virtual void unmanageWidget ( QWidget * widget ) = 0
 */
-HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_UNMANAGEWIDGET )
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_UNMANAGEWIDGET )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -752,7 +752,7 @@ HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_UNMANAGEWIDGET )
 /*
 QDesignerFormWindowInterface * findFormWindow ( QWidget * widget )
 */
-HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_FINDFORMWINDOW1 )
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_FINDFORMWINDOW1 )
 {
   QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QDesignerFormWindowInterface * ptr = QDesignerFormWindowInterface::findFormWindow ( par1 );
@@ -762,7 +762,7 @@ HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_FINDFORMWINDOW1 )
 /*
 QDesignerFormWindowInterface * findFormWindow ( QObject * object )
 */
-HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_FINDFORMWINDOW2 )
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_FINDFORMWINDOW2 )
 {
   QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QDesignerFormWindowInterface * ptr = QDesignerFormWindowInterface::findFormWindow ( par1 );
@@ -772,7 +772,7 @@ HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_FINDFORMWINDOW2 )
 //[1]QDesignerFormWindowInterface * findFormWindow ( QWidget * widget )
 //[2]QDesignerFormWindowInterface * findFormWindow ( QObject * object )
 
-HB_FUNC( QDESIGNERFORMWINDOWINTERFACE_FINDFORMWINDOW )
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_FINDFORMWINDOW )
 {
   if( ISNUMPAR(1) && ISQWIDGET(1) )
   {

@@ -63,7 +63,7 @@ RETURN
 #include "qt4xhb_clsid.h"
 #include "qt4xhb_utils.h"
 
-HB_FUNC( QABSTRACTSTATE_DELETE )
+HB_FUNC_STATIC( QABSTRACTSTATE_DELETE )
 {
   QAbstractState * obj = (QAbstractState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -82,7 +82,7 @@ HB_FUNC( QABSTRACTSTATE_DELETE )
 /*
 QStateMachine * machine () const
 */
-HB_FUNC( QABSTRACTSTATE_MACHINE )
+HB_FUNC_STATIC( QABSTRACTSTATE_MACHINE )
 {
   QAbstractState * obj = (QAbstractState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -95,7 +95,7 @@ HB_FUNC( QABSTRACTSTATE_MACHINE )
 /*
 QState * parentState () const
 */
-HB_FUNC( QABSTRACTSTATE_PARENTSTATE )
+HB_FUNC_STATIC( QABSTRACTSTATE_PARENTSTATE )
 {
   QAbstractState * obj = (QAbstractState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

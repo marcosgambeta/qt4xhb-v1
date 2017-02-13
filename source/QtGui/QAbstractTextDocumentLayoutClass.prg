@@ -81,7 +81,7 @@ RETURN
 /*
 QString anchorAt ( const QPointF & position ) const
 */
-HB_FUNC( QABSTRACTTEXTDOCUMENTLAYOUT_ANCHORAT )
+HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ANCHORAT )
 {
   QAbstractTextDocumentLayout * obj = (QAbstractTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -96,7 +96,7 @@ HB_FUNC( QABSTRACTTEXTDOCUMENTLAYOUT_ANCHORAT )
 /*
 virtual QRectF blockBoundingRect ( const QTextBlock & block ) const = 0
 */
-HB_FUNC( QABSTRACTTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT )
+HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT )
 {
   QAbstractTextDocumentLayout * obj = (QAbstractTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -110,7 +110,7 @@ HB_FUNC( QABSTRACTTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT )
 /*
 QTextDocument * document () const
 */
-HB_FUNC( QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENT )
+HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENT )
 {
   QAbstractTextDocumentLayout * obj = (QAbstractTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -123,7 +123,7 @@ HB_FUNC( QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENT )
 /*
 virtual QSizeF documentSize () const = 0
 */
-HB_FUNC( QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENTSIZE )
+HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENTSIZE )
 {
   QAbstractTextDocumentLayout * obj = (QAbstractTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -137,7 +137,7 @@ HB_FUNC( QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENTSIZE )
 /*
 virtual QRectF frameBoundingRect ( QTextFrame * frame ) const = 0
 */
-HB_FUNC( QABSTRACTTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT )
+HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT )
 {
   QAbstractTextDocumentLayout * obj = (QAbstractTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -151,7 +151,7 @@ HB_FUNC( QABSTRACTTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT )
 /*
 QTextObjectInterface * handlerForObject ( int objectType ) const
 */
-HB_FUNC( QABSTRACTTEXTDOCUMENTLAYOUT_HANDLERFOROBJECT )
+HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_HANDLERFOROBJECT )
 {
   QAbstractTextDocumentLayout * obj = (QAbstractTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -165,7 +165,7 @@ HB_FUNC( QABSTRACTTEXTDOCUMENTLAYOUT_HANDLERFOROBJECT )
 /*
 virtual int hitTest ( const QPointF & point, Qt::HitTestAccuracy accuracy ) const = 0
 */
-HB_FUNC( QABSTRACTTEXTDOCUMENTLAYOUT_HITTEST )
+HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_HITTEST )
 {
   QAbstractTextDocumentLayout * obj = (QAbstractTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -181,7 +181,7 @@ HB_FUNC( QABSTRACTTEXTDOCUMENTLAYOUT_HITTEST )
 /*
 virtual int pageCount () const = 0
 */
-HB_FUNC( QABSTRACTTEXTDOCUMENTLAYOUT_PAGECOUNT )
+HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_PAGECOUNT )
 {
   QAbstractTextDocumentLayout * obj = (QAbstractTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -195,7 +195,7 @@ HB_FUNC( QABSTRACTTEXTDOCUMENTLAYOUT_PAGECOUNT )
 /*
 QPaintDevice * paintDevice () const
 */
-HB_FUNC( QABSTRACTTEXTDOCUMENTLAYOUT_PAINTDEVICE )
+HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_PAINTDEVICE )
 {
   QAbstractTextDocumentLayout * obj = (QAbstractTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -208,7 +208,7 @@ HB_FUNC( QABSTRACTTEXTDOCUMENTLAYOUT_PAINTDEVICE )
 /*
 void registerHandler ( int objectType, QObject * component )
 */
-HB_FUNC( QABSTRACTTEXTDOCUMENTLAYOUT_REGISTERHANDLER )
+HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_REGISTERHANDLER )
 {
   QAbstractTextDocumentLayout * obj = (QAbstractTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -224,7 +224,7 @@ HB_FUNC( QABSTRACTTEXTDOCUMENTLAYOUT_REGISTERHANDLER )
 /*
 void setPaintDevice ( QPaintDevice * device )
 */
-HB_FUNC( QABSTRACTTEXTDOCUMENTLAYOUT_SETPAINTDEVICE )
+HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_SETPAINTDEVICE )
 {
   QAbstractTextDocumentLayout * obj = (QAbstractTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

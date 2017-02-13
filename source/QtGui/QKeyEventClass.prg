@@ -72,7 +72,7 @@ RETURN
 /*
 QKeyEvent ( Type type, int key, Qt::KeyboardModifiers modifiers, const QString & text = QString(), bool autorep = false, ushort count = 1 )
 */
-HB_FUNC( QKEYEVENT_NEW )
+HB_FUNC_STATIC( QKEYEVENT_NEW )
 {
   QKeyEvent * o = NULL;
   int par1 = hb_parni(1);
@@ -90,7 +90,7 @@ HB_FUNC( QKEYEVENT_NEW )
 }
 
 
-HB_FUNC( QKEYEVENT_DELETE )
+HB_FUNC_STATIC( QKEYEVENT_DELETE )
 {
   QKeyEvent * obj = (QKeyEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -109,7 +109,7 @@ HB_FUNC( QKEYEVENT_DELETE )
 /*
 int count () const
 */
-HB_FUNC( QKEYEVENT_COUNT )
+HB_FUNC_STATIC( QKEYEVENT_COUNT )
 {
   QKeyEvent * obj = (QKeyEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -123,7 +123,7 @@ HB_FUNC( QKEYEVENT_COUNT )
 /*
 bool isAutoRepeat () const
 */
-HB_FUNC( QKEYEVENT_ISAUTOREPEAT )
+HB_FUNC_STATIC( QKEYEVENT_ISAUTOREPEAT )
 {
   QKeyEvent * obj = (QKeyEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -137,7 +137,7 @@ HB_FUNC( QKEYEVENT_ISAUTOREPEAT )
 /*
 int key () const
 */
-HB_FUNC( QKEYEVENT_KEY )
+HB_FUNC_STATIC( QKEYEVENT_KEY )
 {
   QKeyEvent * obj = (QKeyEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -151,7 +151,7 @@ HB_FUNC( QKEYEVENT_KEY )
 /*
 bool matches ( QKeySequence::StandardKey key ) const
 */
-HB_FUNC( QKEYEVENT_MATCHES )
+HB_FUNC_STATIC( QKEYEVENT_MATCHES )
 {
   QKeyEvent * obj = (QKeyEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -166,7 +166,7 @@ HB_FUNC( QKEYEVENT_MATCHES )
 /*
 Qt::KeyboardModifiers modifiers () const
 */
-HB_FUNC( QKEYEVENT_MODIFIERS )
+HB_FUNC_STATIC( QKEYEVENT_MODIFIERS )
 {
   QKeyEvent * obj = (QKeyEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -180,7 +180,7 @@ HB_FUNC( QKEYEVENT_MODIFIERS )
 /*
 quint32 nativeModifiers () const
 */
-HB_FUNC( QKEYEVENT_NATIVEMODIFIERS )
+HB_FUNC_STATIC( QKEYEVENT_NATIVEMODIFIERS )
 {
   QKeyEvent * obj = (QKeyEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -194,7 +194,7 @@ HB_FUNC( QKEYEVENT_NATIVEMODIFIERS )
 /*
 quint32 nativeScanCode () const
 */
-HB_FUNC( QKEYEVENT_NATIVESCANCODE )
+HB_FUNC_STATIC( QKEYEVENT_NATIVESCANCODE )
 {
   QKeyEvent * obj = (QKeyEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -208,7 +208,7 @@ HB_FUNC( QKEYEVENT_NATIVESCANCODE )
 /*
 quint32 nativeVirtualKey () const
 */
-HB_FUNC( QKEYEVENT_NATIVEVIRTUALKEY )
+HB_FUNC_STATIC( QKEYEVENT_NATIVEVIRTUALKEY )
 {
   QKeyEvent * obj = (QKeyEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -222,7 +222,7 @@ HB_FUNC( QKEYEVENT_NATIVEVIRTUALKEY )
 /*
 QString text () const
 */
-HB_FUNC( QKEYEVENT_TEXT )
+HB_FUNC_STATIC( QKEYEVENT_TEXT )
 {
   QKeyEvent * obj = (QKeyEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -237,7 +237,7 @@ HB_FUNC( QKEYEVENT_TEXT )
 /*
 static QKeyEvent *createExtendedKeyEvent(Type type, int key, Qt::KeyboardModifiers modifiers, quint32 nativeScanCode, quint32 nativeVirtualKey,quint32 nativeModifiers,const QString& text = QString(), bool autorep = false,ushort count = 1)
 */
-HB_FUNC( QKEYEVENT_CREATEEXTENDEDKEYEVENT )
+HB_FUNC_STATIC( QKEYEVENT_CREATEEXTENDEDKEYEVENT )
 {
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);

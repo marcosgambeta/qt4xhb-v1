@@ -60,7 +60,7 @@ RETURN
 /*
 QStyleHintReturnMask ()
 */
-HB_FUNC( QSTYLEHINTRETURNMASK_NEW )
+HB_FUNC_STATIC( QSTYLEHINTRETURNMASK_NEW )
 {
   QStyleHintReturnMask * o = NULL;
   o = new QStyleHintReturnMask (  );
@@ -72,7 +72,7 @@ HB_FUNC( QSTYLEHINTRETURNMASK_NEW )
 }
 
 
-HB_FUNC( QSTYLEHINTRETURNMASK_DELETE )
+HB_FUNC_STATIC( QSTYLEHINTRETURNMASK_DELETE )
 {
   QStyleHintReturnMask * obj = (QStyleHintReturnMask *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

@@ -106,7 +106,7 @@ RETURN
 /*
 QByteArrayMatcher ()
 */
-HB_FUNC( QBYTEARRAYMATCHER_NEW1 )
+HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW1 )
 {
   QByteArrayMatcher * o = NULL;
   o = new QByteArrayMatcher (  );
@@ -121,7 +121,7 @@ HB_FUNC( QBYTEARRAYMATCHER_NEW1 )
 /*
 QByteArrayMatcher ( const QByteArray & pattern )
 */
-HB_FUNC( QBYTEARRAYMATCHER_NEW2 )
+HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW2 )
 {
   QByteArrayMatcher * o = NULL;
   QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -137,7 +137,7 @@ HB_FUNC( QBYTEARRAYMATCHER_NEW2 )
 /*
 QByteArrayMatcher ( const char * pattern, int length )
 */
-HB_FUNC( QBYTEARRAYMATCHER_NEW3 )
+HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW3 )
 {
   QByteArrayMatcher * o = NULL;
   const char * par1 = hb_parc(1);
@@ -154,7 +154,7 @@ HB_FUNC( QBYTEARRAYMATCHER_NEW3 )
 /*
 QByteArrayMatcher ( const QByteArrayMatcher & other )
 */
-HB_FUNC( QBYTEARRAYMATCHER_NEW4 )
+HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW4 )
 {
   QByteArrayMatcher * o = NULL;
   QByteArrayMatcher * par1 = (QByteArrayMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -172,7 +172,7 @@ HB_FUNC( QBYTEARRAYMATCHER_NEW4 )
 //[3]QByteArrayMatcher ( const char * pattern, int length )
 //[4]QByteArrayMatcher ( const QByteArrayMatcher & other )
 
-HB_FUNC( QBYTEARRAYMATCHER_NEW )
+HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -196,7 +196,7 @@ HB_FUNC( QBYTEARRAYMATCHER_NEW )
   }
 }
 
-HB_FUNC( QBYTEARRAYMATCHER_DELETE )
+HB_FUNC_STATIC( QBYTEARRAYMATCHER_DELETE )
 {
   QByteArrayMatcher * obj = (QByteArrayMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -215,7 +215,7 @@ HB_FUNC( QBYTEARRAYMATCHER_DELETE )
 /*
 int indexIn ( const QByteArray & ba, int from = 0 ) const
 */
-HB_FUNC( QBYTEARRAYMATCHER_INDEXIN1 )
+HB_FUNC_STATIC( QBYTEARRAYMATCHER_INDEXIN1 )
 {
   QByteArrayMatcher * obj = (QByteArrayMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -231,7 +231,7 @@ HB_FUNC( QBYTEARRAYMATCHER_INDEXIN1 )
 /*
 int indexIn ( const char * str, int len, int from = 0 ) const
 */
-HB_FUNC( QBYTEARRAYMATCHER_INDEXIN2 )
+HB_FUNC_STATIC( QBYTEARRAYMATCHER_INDEXIN2 )
 {
   QByteArrayMatcher * obj = (QByteArrayMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -248,7 +248,7 @@ HB_FUNC( QBYTEARRAYMATCHER_INDEXIN2 )
 //[1]int indexIn ( const QByteArray & ba, int from = 0 ) const
 //[2]int indexIn ( const char * str, int len, int from = 0 ) const
 
-HB_FUNC( QBYTEARRAYMATCHER_INDEXIN )
+HB_FUNC_STATIC( QBYTEARRAYMATCHER_INDEXIN )
 {
   if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISNUM(2)||ISNIL(2)) )
   {
@@ -263,7 +263,7 @@ HB_FUNC( QBYTEARRAYMATCHER_INDEXIN )
 /*
 QByteArray pattern () const
 */
-HB_FUNC( QBYTEARRAYMATCHER_PATTERN )
+HB_FUNC_STATIC( QBYTEARRAYMATCHER_PATTERN )
 {
   QByteArrayMatcher * obj = (QByteArrayMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -276,7 +276,7 @@ HB_FUNC( QBYTEARRAYMATCHER_PATTERN )
 /*
 void setPattern ( const QByteArray & pattern )
 */
-HB_FUNC( QBYTEARRAYMATCHER_SETPATTERN )
+HB_FUNC_STATIC( QBYTEARRAYMATCHER_SETPATTERN )
 {
   QByteArrayMatcher * obj = (QByteArrayMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

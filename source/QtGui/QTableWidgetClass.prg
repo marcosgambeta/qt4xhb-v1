@@ -133,7 +133,7 @@ RETURN
 /*
 QTableWidget ( QWidget * parent = 0 )
 */
-HB_FUNC( QTABLEWIDGET_NEW1 )
+HB_FUNC_STATIC( QTABLEWIDGET_NEW1 )
 {
   QTableWidget * o = NULL;
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -149,7 +149,7 @@ HB_FUNC( QTABLEWIDGET_NEW1 )
 /*
 QTableWidget ( int rows, int columns, QWidget * parent = 0 )
 */
-HB_FUNC( QTABLEWIDGET_NEW2 )
+HB_FUNC_STATIC( QTABLEWIDGET_NEW2 )
 {
   QTableWidget * o = NULL;
   int par1 = hb_parni(1);
@@ -167,7 +167,7 @@ HB_FUNC( QTABLEWIDGET_NEW2 )
 //[1]QTableWidget ( QWidget * parent = 0 )
 //[2]QTableWidget ( int rows, int columns, QWidget * parent = 0 )
 
-HB_FUNC( QTABLEWIDGET_NEW )
+HB_FUNC_STATIC( QTABLEWIDGET_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
@@ -183,7 +183,7 @@ HB_FUNC( QTABLEWIDGET_NEW )
   }
 }
 
-HB_FUNC( QTABLEWIDGET_DELETE )
+HB_FUNC_STATIC( QTABLEWIDGET_DELETE )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -202,7 +202,7 @@ HB_FUNC( QTABLEWIDGET_DELETE )
 /*
 QWidget * cellWidget ( int row, int column ) const
 */
-HB_FUNC( QTABLEWIDGET_CELLWIDGET )
+HB_FUNC_STATIC( QTABLEWIDGET_CELLWIDGET )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -217,7 +217,7 @@ HB_FUNC( QTABLEWIDGET_CELLWIDGET )
 /*
 void closePersistentEditor ( QTableWidgetItem * item )
 */
-HB_FUNC( QTABLEWIDGET_CLOSEPERSISTENTEDITOR )
+HB_FUNC_STATIC( QTABLEWIDGET_CLOSEPERSISTENTEDITOR )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -232,7 +232,7 @@ HB_FUNC( QTABLEWIDGET_CLOSEPERSISTENTEDITOR )
 /*
 int column ( const QTableWidgetItem * item ) const
 */
-HB_FUNC( QTABLEWIDGET_COLUMN )
+HB_FUNC_STATIC( QTABLEWIDGET_COLUMN )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -247,7 +247,7 @@ HB_FUNC( QTABLEWIDGET_COLUMN )
 /*
 int columnCount () const
 */
-HB_FUNC( QTABLEWIDGET_COLUMNCOUNT )
+HB_FUNC_STATIC( QTABLEWIDGET_COLUMNCOUNT )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -261,7 +261,7 @@ HB_FUNC( QTABLEWIDGET_COLUMNCOUNT )
 /*
 int currentColumn () const
 */
-HB_FUNC( QTABLEWIDGET_CURRENTCOLUMN )
+HB_FUNC_STATIC( QTABLEWIDGET_CURRENTCOLUMN )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -275,7 +275,7 @@ HB_FUNC( QTABLEWIDGET_CURRENTCOLUMN )
 /*
 QTableWidgetItem * currentItem () const
 */
-HB_FUNC( QTABLEWIDGET_CURRENTITEM )
+HB_FUNC_STATIC( QTABLEWIDGET_CURRENTITEM )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -288,7 +288,7 @@ HB_FUNC( QTABLEWIDGET_CURRENTITEM )
 /*
 int currentRow () const
 */
-HB_FUNC( QTABLEWIDGET_CURRENTROW )
+HB_FUNC_STATIC( QTABLEWIDGET_CURRENTROW )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -302,7 +302,7 @@ HB_FUNC( QTABLEWIDGET_CURRENTROW )
 /*
 void editItem ( QTableWidgetItem * item )
 */
-HB_FUNC( QTABLEWIDGET_EDITITEM )
+HB_FUNC_STATIC( QTABLEWIDGET_EDITITEM )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -317,7 +317,7 @@ HB_FUNC( QTABLEWIDGET_EDITITEM )
 /*
 QList<QTableWidgetItem *> findItems ( const QString & text, Qt::MatchFlags flags ) const
 */
-HB_FUNC( QTABLEWIDGET_FINDITEMS )
+HB_FUNC_STATIC( QTABLEWIDGET_FINDITEMS )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -363,7 +363,7 @@ HB_FUNC( QTABLEWIDGET_FINDITEMS )
 /*
 QTableWidgetItem * horizontalHeaderItem ( int column ) const
 */
-HB_FUNC( QTABLEWIDGET_HORIZONTALHEADERITEM )
+HB_FUNC_STATIC( QTABLEWIDGET_HORIZONTALHEADERITEM )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -377,7 +377,7 @@ HB_FUNC( QTABLEWIDGET_HORIZONTALHEADERITEM )
 /*
 QTableWidgetItem * item ( int row, int column ) const
 */
-HB_FUNC( QTABLEWIDGET_ITEM )
+HB_FUNC_STATIC( QTABLEWIDGET_ITEM )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -392,7 +392,7 @@ HB_FUNC( QTABLEWIDGET_ITEM )
 /*
 QTableWidgetItem * itemAt ( const QPoint & point ) const
 */
-HB_FUNC( QTABLEWIDGET_ITEMAT1 )
+HB_FUNC_STATIC( QTABLEWIDGET_ITEMAT1 )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -406,7 +406,7 @@ HB_FUNC( QTABLEWIDGET_ITEMAT1 )
 /*
 QTableWidgetItem * itemAt ( int ax, int ay ) const
 */
-HB_FUNC( QTABLEWIDGET_ITEMAT2 )
+HB_FUNC_STATIC( QTABLEWIDGET_ITEMAT2 )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -421,7 +421,7 @@ HB_FUNC( QTABLEWIDGET_ITEMAT2 )
 //[1]QTableWidgetItem * itemAt ( const QPoint & point ) const
 //[2]QTableWidgetItem * itemAt ( int ax, int ay ) const
 
-HB_FUNC( QTABLEWIDGET_ITEMAT )
+HB_FUNC_STATIC( QTABLEWIDGET_ITEMAT )
 {
   if( ISNUMPAR(1) && ISQPOINT(1) )
   {
@@ -437,7 +437,7 @@ HB_FUNC( QTABLEWIDGET_ITEMAT )
 /*
 void openPersistentEditor ( QTableWidgetItem * item )
 */
-HB_FUNC( QTABLEWIDGET_OPENPERSISTENTEDITOR )
+HB_FUNC_STATIC( QTABLEWIDGET_OPENPERSISTENTEDITOR )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -452,7 +452,7 @@ HB_FUNC( QTABLEWIDGET_OPENPERSISTENTEDITOR )
 /*
 void removeCellWidget ( int row, int column )
 */
-HB_FUNC( QTABLEWIDGET_REMOVECELLWIDGET )
+HB_FUNC_STATIC( QTABLEWIDGET_REMOVECELLWIDGET )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -468,7 +468,7 @@ HB_FUNC( QTABLEWIDGET_REMOVECELLWIDGET )
 /*
 int row ( const QTableWidgetItem * item ) const
 */
-HB_FUNC( QTABLEWIDGET_ROW )
+HB_FUNC_STATIC( QTABLEWIDGET_ROW )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -483,7 +483,7 @@ HB_FUNC( QTABLEWIDGET_ROW )
 /*
 int rowCount () const
 */
-HB_FUNC( QTABLEWIDGET_ROWCOUNT )
+HB_FUNC_STATIC( QTABLEWIDGET_ROWCOUNT )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -497,7 +497,7 @@ HB_FUNC( QTABLEWIDGET_ROWCOUNT )
 /*
 QList<QTableWidgetItem *> selectedItems ()
 */
-HB_FUNC( QTABLEWIDGET_SELECTEDITEMS )
+HB_FUNC_STATIC( QTABLEWIDGET_SELECTEDITEMS )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -541,7 +541,7 @@ HB_FUNC( QTABLEWIDGET_SELECTEDITEMS )
 /*
 QList<QTableWidgetSelectionRange> selectedRanges () const
 */
-HB_FUNC( QTABLEWIDGET_SELECTEDRANGES )
+HB_FUNC_STATIC( QTABLEWIDGET_SELECTEDRANGES )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -585,7 +585,7 @@ HB_FUNC( QTABLEWIDGET_SELECTEDRANGES )
 /*
 void setCellWidget ( int row, int column, QWidget * widget )
 */
-HB_FUNC( QTABLEWIDGET_SETCELLWIDGET )
+HB_FUNC_STATIC( QTABLEWIDGET_SETCELLWIDGET )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -602,7 +602,7 @@ HB_FUNC( QTABLEWIDGET_SETCELLWIDGET )
 /*
 void setColumnCount ( int columns )
 */
-HB_FUNC( QTABLEWIDGET_SETCOLUMNCOUNT )
+HB_FUNC_STATIC( QTABLEWIDGET_SETCOLUMNCOUNT )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -617,7 +617,7 @@ HB_FUNC( QTABLEWIDGET_SETCOLUMNCOUNT )
 /*
 void setCurrentCell ( int row, int column )
 */
-HB_FUNC( QTABLEWIDGET_SETCURRENTCELL1 )
+HB_FUNC_STATIC( QTABLEWIDGET_SETCURRENTCELL1 )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -633,7 +633,7 @@ HB_FUNC( QTABLEWIDGET_SETCURRENTCELL1 )
 /*
 void setCurrentCell ( int row, int column, QItemSelectionModel::SelectionFlags command )
 */
-HB_FUNC( QTABLEWIDGET_SETCURRENTCELL2 )
+HB_FUNC_STATIC( QTABLEWIDGET_SETCURRENTCELL2 )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -650,7 +650,7 @@ HB_FUNC( QTABLEWIDGET_SETCURRENTCELL2 )
 //[1]void setCurrentCell ( int row, int column )
 //[2]void setCurrentCell ( int row, int column, QItemSelectionModel::SelectionFlags command )
 
-HB_FUNC( QTABLEWIDGET_SETCURRENTCELL )
+HB_FUNC_STATIC( QTABLEWIDGET_SETCURRENTCELL )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
@@ -665,7 +665,7 @@ HB_FUNC( QTABLEWIDGET_SETCURRENTCELL )
 /*
 void setCurrentItem ( QTableWidgetItem * item )
 */
-HB_FUNC( QTABLEWIDGET_SETCURRENTITEM1 )
+HB_FUNC_STATIC( QTABLEWIDGET_SETCURRENTITEM1 )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -680,7 +680,7 @@ HB_FUNC( QTABLEWIDGET_SETCURRENTITEM1 )
 /*
 void setCurrentItem ( QTableWidgetItem * item, QItemSelectionModel::SelectionFlags command )
 */
-HB_FUNC( QTABLEWIDGET_SETCURRENTITEM2 )
+HB_FUNC_STATIC( QTABLEWIDGET_SETCURRENTITEM2 )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -696,7 +696,7 @@ HB_FUNC( QTABLEWIDGET_SETCURRENTITEM2 )
 //[1]void setCurrentItem ( QTableWidgetItem * item )
 //[2]void setCurrentItem ( QTableWidgetItem * item, QItemSelectionModel::SelectionFlags command )
 
-HB_FUNC( QTABLEWIDGET_SETCURRENTITEM )
+HB_FUNC_STATIC( QTABLEWIDGET_SETCURRENTITEM )
 {
   if( ISNUMPAR(1) && ISQTABLEWIDGETITEM(1) )
   {
@@ -711,7 +711,7 @@ HB_FUNC( QTABLEWIDGET_SETCURRENTITEM )
 /*
 void setHorizontalHeaderItem ( int column, QTableWidgetItem * item )
 */
-HB_FUNC( QTABLEWIDGET_SETHORIZONTALHEADERITEM )
+HB_FUNC_STATIC( QTABLEWIDGET_SETHORIZONTALHEADERITEM )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -727,7 +727,7 @@ HB_FUNC( QTABLEWIDGET_SETHORIZONTALHEADERITEM )
 /*
 void setHorizontalHeaderLabels ( const QStringList & labels )
 */
-HB_FUNC( QTABLEWIDGET_SETHORIZONTALHEADERLABELS )
+HB_FUNC_STATIC( QTABLEWIDGET_SETHORIZONTALHEADERLABELS )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -750,7 +750,7 @@ par1 << temp;
 /*
 void setItem ( int row, int column, QTableWidgetItem * item )
 */
-HB_FUNC( QTABLEWIDGET_SETITEM )
+HB_FUNC_STATIC( QTABLEWIDGET_SETITEM )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -767,7 +767,7 @@ HB_FUNC( QTABLEWIDGET_SETITEM )
 /*
 void setItemPrototype ( const QTableWidgetItem * item )
 */
-HB_FUNC( QTABLEWIDGET_SETITEMPROTOTYPE )
+HB_FUNC_STATIC( QTABLEWIDGET_SETITEMPROTOTYPE )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -782,7 +782,7 @@ HB_FUNC( QTABLEWIDGET_SETITEMPROTOTYPE )
 /*
 void setRangeSelected ( const QTableWidgetSelectionRange & range, bool select )
 */
-HB_FUNC( QTABLEWIDGET_SETRANGESELECTED )
+HB_FUNC_STATIC( QTABLEWIDGET_SETRANGESELECTED )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -798,7 +798,7 @@ HB_FUNC( QTABLEWIDGET_SETRANGESELECTED )
 /*
 void setRowCount ( int rows )
 */
-HB_FUNC( QTABLEWIDGET_SETROWCOUNT )
+HB_FUNC_STATIC( QTABLEWIDGET_SETROWCOUNT )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -813,7 +813,7 @@ HB_FUNC( QTABLEWIDGET_SETROWCOUNT )
 /*
 void setVerticalHeaderItem ( int row, QTableWidgetItem * item )
 */
-HB_FUNC( QTABLEWIDGET_SETVERTICALHEADERITEM )
+HB_FUNC_STATIC( QTABLEWIDGET_SETVERTICALHEADERITEM )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -829,7 +829,7 @@ HB_FUNC( QTABLEWIDGET_SETVERTICALHEADERITEM )
 /*
 void setVerticalHeaderLabels ( const QStringList & labels )
 */
-HB_FUNC( QTABLEWIDGET_SETVERTICALHEADERLABELS )
+HB_FUNC_STATIC( QTABLEWIDGET_SETVERTICALHEADERLABELS )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -852,7 +852,7 @@ par1 << temp;
 /*
 void sortItems ( int column, Qt::SortOrder order = Qt::AscendingOrder )
 */
-HB_FUNC( QTABLEWIDGET_SORTITEMS )
+HB_FUNC_STATIC( QTABLEWIDGET_SORTITEMS )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -868,7 +868,7 @@ HB_FUNC( QTABLEWIDGET_SORTITEMS )
 /*
 QTableWidgetItem * takeHorizontalHeaderItem ( int column )
 */
-HB_FUNC( QTABLEWIDGET_TAKEHORIZONTALHEADERITEM )
+HB_FUNC_STATIC( QTABLEWIDGET_TAKEHORIZONTALHEADERITEM )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -882,7 +882,7 @@ HB_FUNC( QTABLEWIDGET_TAKEHORIZONTALHEADERITEM )
 /*
 QTableWidgetItem * takeItem ( int row, int column )
 */
-HB_FUNC( QTABLEWIDGET_TAKEITEM )
+HB_FUNC_STATIC( QTABLEWIDGET_TAKEITEM )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -897,7 +897,7 @@ HB_FUNC( QTABLEWIDGET_TAKEITEM )
 /*
 QTableWidgetItem * takeVerticalHeaderItem ( int row )
 */
-HB_FUNC( QTABLEWIDGET_TAKEVERTICALHEADERITEM )
+HB_FUNC_STATIC( QTABLEWIDGET_TAKEVERTICALHEADERITEM )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -911,7 +911,7 @@ HB_FUNC( QTABLEWIDGET_TAKEVERTICALHEADERITEM )
 /*
 QTableWidgetItem * verticalHeaderItem ( int row ) const
 */
-HB_FUNC( QTABLEWIDGET_VERTICALHEADERITEM )
+HB_FUNC_STATIC( QTABLEWIDGET_VERTICALHEADERITEM )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -925,7 +925,7 @@ HB_FUNC( QTABLEWIDGET_VERTICALHEADERITEM )
 /*
 int visualColumn ( int logicalColumn ) const
 */
-HB_FUNC( QTABLEWIDGET_VISUALCOLUMN )
+HB_FUNC_STATIC( QTABLEWIDGET_VISUALCOLUMN )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -940,7 +940,7 @@ HB_FUNC( QTABLEWIDGET_VISUALCOLUMN )
 /*
 QRect visualItemRect ( const QTableWidgetItem * item ) const
 */
-HB_FUNC( QTABLEWIDGET_VISUALITEMRECT )
+HB_FUNC_STATIC( QTABLEWIDGET_VISUALITEMRECT )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -954,7 +954,7 @@ HB_FUNC( QTABLEWIDGET_VISUALITEMRECT )
 /*
 int visualRow ( int logicalRow ) const
 */
-HB_FUNC( QTABLEWIDGET_VISUALROW )
+HB_FUNC_STATIC( QTABLEWIDGET_VISUALROW )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -969,7 +969,7 @@ HB_FUNC( QTABLEWIDGET_VISUALROW )
 /*
 void clear ()
 */
-HB_FUNC( QTABLEWIDGET_CLEAR )
+HB_FUNC_STATIC( QTABLEWIDGET_CLEAR )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -983,7 +983,7 @@ HB_FUNC( QTABLEWIDGET_CLEAR )
 /*
 void clearContents ()
 */
-HB_FUNC( QTABLEWIDGET_CLEARCONTENTS )
+HB_FUNC_STATIC( QTABLEWIDGET_CLEARCONTENTS )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -997,7 +997,7 @@ HB_FUNC( QTABLEWIDGET_CLEARCONTENTS )
 /*
 void insertColumn ( int column )
 */
-HB_FUNC( QTABLEWIDGET_INSERTCOLUMN )
+HB_FUNC_STATIC( QTABLEWIDGET_INSERTCOLUMN )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1012,7 +1012,7 @@ HB_FUNC( QTABLEWIDGET_INSERTCOLUMN )
 /*
 void insertRow ( int row )
 */
-HB_FUNC( QTABLEWIDGET_INSERTROW )
+HB_FUNC_STATIC( QTABLEWIDGET_INSERTROW )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1027,7 +1027,7 @@ HB_FUNC( QTABLEWIDGET_INSERTROW )
 /*
 void removeColumn ( int column )
 */
-HB_FUNC( QTABLEWIDGET_REMOVECOLUMN )
+HB_FUNC_STATIC( QTABLEWIDGET_REMOVECOLUMN )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1042,7 +1042,7 @@ HB_FUNC( QTABLEWIDGET_REMOVECOLUMN )
 /*
 void removeRow ( int row )
 */
-HB_FUNC( QTABLEWIDGET_REMOVEROW )
+HB_FUNC_STATIC( QTABLEWIDGET_REMOVEROW )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1057,7 +1057,7 @@ HB_FUNC( QTABLEWIDGET_REMOVEROW )
 /*
 void scrollToItem ( const QTableWidgetItem * item, QAbstractItemView::ScrollHint hint = EnsureVisible )
 */
-HB_FUNC( QTABLEWIDGET_SCROLLTOITEM )
+HB_FUNC_STATIC( QTABLEWIDGET_SCROLLTOITEM )
 {
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

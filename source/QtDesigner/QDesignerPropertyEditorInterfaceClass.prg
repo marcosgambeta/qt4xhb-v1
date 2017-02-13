@@ -68,7 +68,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QDESIGNERPROPERTYEDITORINTERFACE_DELETE )
+HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_DELETE )
 {
   QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -87,7 +87,7 @@ HB_FUNC( QDESIGNERPROPERTYEDITORINTERFACE_DELETE )
 /*
 virtual QDesignerFormEditorInterface * core () const
 */
-HB_FUNC( QDESIGNERPROPERTYEDITORINTERFACE_CORE )
+HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_CORE )
 {
   QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -100,7 +100,7 @@ HB_FUNC( QDESIGNERPROPERTYEDITORINTERFACE_CORE )
 /*
 virtual QString currentPropertyName () const = 0
 */
-HB_FUNC( QDESIGNERPROPERTYEDITORINTERFACE_CURRENTPROPERTYNAME )
+HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_CURRENTPROPERTYNAME )
 {
   QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -114,7 +114,7 @@ HB_FUNC( QDESIGNERPROPERTYEDITORINTERFACE_CURRENTPROPERTYNAME )
 /*
 virtual bool isReadOnly () const = 0
 */
-HB_FUNC( QDESIGNERPROPERTYEDITORINTERFACE_ISREADONLY )
+HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_ISREADONLY )
 {
   QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -128,7 +128,7 @@ HB_FUNC( QDESIGNERPROPERTYEDITORINTERFACE_ISREADONLY )
 /*
 virtual QObject * object () const = 0
 */
-HB_FUNC( QDESIGNERPROPERTYEDITORINTERFACE_OBJECT )
+HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_OBJECT )
 {
   QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -141,7 +141,7 @@ HB_FUNC( QDESIGNERPROPERTYEDITORINTERFACE_OBJECT )
 /*
 virtual void setObject ( QObject * object ) = 0
 */
-HB_FUNC( QDESIGNERPROPERTYEDITORINTERFACE_SETOBJECT )
+HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETOBJECT )
 {
   QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -156,7 +156,7 @@ HB_FUNC( QDESIGNERPROPERTYEDITORINTERFACE_SETOBJECT )
 /*
 virtual void setPropertyValue ( const QString & name, const QVariant & value, bool changed = true ) = 0
 */
-HB_FUNC( QDESIGNERPROPERTYEDITORINTERFACE_SETPROPERTYVALUE )
+HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETPROPERTYVALUE )
 {
   QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -173,7 +173,7 @@ HB_FUNC( QDESIGNERPROPERTYEDITORINTERFACE_SETPROPERTYVALUE )
 /*
 virtual void setReadOnly ( bool readOnly ) = 0
 */
-HB_FUNC( QDESIGNERPROPERTYEDITORINTERFACE_SETREADONLY )
+HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETREADONLY )
 {
   QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

@@ -124,7 +124,7 @@ RETURN
 /*
 QWebHitTestResult ()
 */
-HB_FUNC( QWEBHITTESTRESULT_NEW1 )
+HB_FUNC_STATIC( QWEBHITTESTRESULT_NEW1 )
 {
   QWebHitTestResult * o = NULL;
   o = new QWebHitTestResult (  );
@@ -142,7 +142,7 @@ HB_FUNC( QWEBHITTESTRESULT_NEW1 )
 /*
 QWebHitTestResult ( const QWebHitTestResult & other )
 */
-HB_FUNC( QWEBHITTESTRESULT_NEW2 )
+HB_FUNC_STATIC( QWEBHITTESTRESULT_NEW2 )
 {
   QWebHitTestResult * o = NULL;
   QWebHitTestResult * par1 = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -161,7 +161,7 @@ HB_FUNC( QWEBHITTESTRESULT_NEW2 )
 //[1]QWebHitTestResult ()
 //[2]QWebHitTestResult ( const QWebHitTestResult & other )
 
-HB_FUNC( QWEBHITTESTRESULT_NEW )
+HB_FUNC_STATIC( QWEBHITTESTRESULT_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -177,7 +177,7 @@ HB_FUNC( QWEBHITTESTRESULT_NEW )
   }
 }
 
-HB_FUNC( QWEBHITTESTRESULT_DELETE )
+HB_FUNC_STATIC( QWEBHITTESTRESULT_DELETE )
 {
   QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -196,7 +196,7 @@ HB_FUNC( QWEBHITTESTRESULT_DELETE )
 /*
 QString alternateText () const
 */
-HB_FUNC( QWEBHITTESTRESULT_ALTERNATETEXT )
+HB_FUNC_STATIC( QWEBHITTESTRESULT_ALTERNATETEXT )
 {
   QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -210,7 +210,7 @@ HB_FUNC( QWEBHITTESTRESULT_ALTERNATETEXT )
 /*
 QRect boundingRect () const
 */
-HB_FUNC( QWEBHITTESTRESULT_BOUNDINGRECT )
+HB_FUNC_STATIC( QWEBHITTESTRESULT_BOUNDINGRECT )
 {
   QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -223,7 +223,7 @@ HB_FUNC( QWEBHITTESTRESULT_BOUNDINGRECT )
 /*
 QWebElement element () const
 */
-HB_FUNC( QWEBHITTESTRESULT_ELEMENT )
+HB_FUNC_STATIC( QWEBHITTESTRESULT_ELEMENT )
 {
   QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -236,7 +236,7 @@ HB_FUNC( QWEBHITTESTRESULT_ELEMENT )
 /*
 QWebElement enclosingBlockElement () const
 */
-HB_FUNC( QWEBHITTESTRESULT_ENCLOSINGBLOCKELEMENT )
+HB_FUNC_STATIC( QWEBHITTESTRESULT_ENCLOSINGBLOCKELEMENT )
 {
   QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -249,7 +249,7 @@ HB_FUNC( QWEBHITTESTRESULT_ENCLOSINGBLOCKELEMENT )
 /*
 QWebFrame * frame () const
 */
-HB_FUNC( QWEBHITTESTRESULT_FRAME )
+HB_FUNC_STATIC( QWEBHITTESTRESULT_FRAME )
 {
   QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -262,7 +262,7 @@ HB_FUNC( QWEBHITTESTRESULT_FRAME )
 /*
 QUrl imageUrl () const
 */
-HB_FUNC( QWEBHITTESTRESULT_IMAGEURL )
+HB_FUNC_STATIC( QWEBHITTESTRESULT_IMAGEURL )
 {
   QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -275,7 +275,7 @@ HB_FUNC( QWEBHITTESTRESULT_IMAGEURL )
 /*
 bool isContentEditable () const
 */
-HB_FUNC( QWEBHITTESTRESULT_ISCONTENTEDITABLE )
+HB_FUNC_STATIC( QWEBHITTESTRESULT_ISCONTENTEDITABLE )
 {
   QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -289,7 +289,7 @@ HB_FUNC( QWEBHITTESTRESULT_ISCONTENTEDITABLE )
 /*
 bool isContentSelected () const
 */
-HB_FUNC( QWEBHITTESTRESULT_ISCONTENTSELECTED )
+HB_FUNC_STATIC( QWEBHITTESTRESULT_ISCONTENTSELECTED )
 {
   QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -303,7 +303,7 @@ HB_FUNC( QWEBHITTESTRESULT_ISCONTENTSELECTED )
 /*
 bool isNull () const
 */
-HB_FUNC( QWEBHITTESTRESULT_ISNULL )
+HB_FUNC_STATIC( QWEBHITTESTRESULT_ISNULL )
 {
   QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -317,7 +317,7 @@ HB_FUNC( QWEBHITTESTRESULT_ISNULL )
 /*
 QWebElement linkElement () const
 */
-HB_FUNC( QWEBHITTESTRESULT_LINKELEMENT )
+HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKELEMENT )
 {
   QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -330,7 +330,7 @@ HB_FUNC( QWEBHITTESTRESULT_LINKELEMENT )
 /*
 QWebFrame * linkTargetFrame () const
 */
-HB_FUNC( QWEBHITTESTRESULT_LINKTARGETFRAME )
+HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKTARGETFRAME )
 {
   QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -343,7 +343,7 @@ HB_FUNC( QWEBHITTESTRESULT_LINKTARGETFRAME )
 /*
 QString linkText () const
 */
-HB_FUNC( QWEBHITTESTRESULT_LINKTEXT )
+HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKTEXT )
 {
   QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -357,7 +357,7 @@ HB_FUNC( QWEBHITTESTRESULT_LINKTEXT )
 /*
 QUrl linkTitle () const
 */
-HB_FUNC( QWEBHITTESTRESULT_LINKTITLE )
+HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKTITLE )
 {
   QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -370,7 +370,7 @@ HB_FUNC( QWEBHITTESTRESULT_LINKTITLE )
 /*
 QUrl linkUrl () const
 */
-HB_FUNC( QWEBHITTESTRESULT_LINKURL )
+HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKURL )
 {
   QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -383,7 +383,7 @@ HB_FUNC( QWEBHITTESTRESULT_LINKURL )
 /*
 QPixmap pixmap () const
 */
-HB_FUNC( QWEBHITTESTRESULT_PIXMAP )
+HB_FUNC_STATIC( QWEBHITTESTRESULT_PIXMAP )
 {
   QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -396,7 +396,7 @@ HB_FUNC( QWEBHITTESTRESULT_PIXMAP )
 /*
 QPoint pos () const
 */
-HB_FUNC( QWEBHITTESTRESULT_POS )
+HB_FUNC_STATIC( QWEBHITTESTRESULT_POS )
 {
   QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -409,7 +409,7 @@ HB_FUNC( QWEBHITTESTRESULT_POS )
 /*
 QString title () const
 */
-HB_FUNC( QWEBHITTESTRESULT_TITLE )
+HB_FUNC_STATIC( QWEBHITTESTRESULT_TITLE )
 {
   QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

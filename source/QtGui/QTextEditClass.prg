@@ -161,7 +161,7 @@ RETURN
 /*
 QTextEdit ( QWidget * parent = 0 )
 */
-HB_FUNC( QTEXTEDIT_NEW1 )
+HB_FUNC_STATIC( QTEXTEDIT_NEW1 )
 {
   QTextEdit * o = NULL;
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -177,7 +177,7 @@ HB_FUNC( QTEXTEDIT_NEW1 )
 /*
 QTextEdit ( const QString & text, QWidget * parent = 0 )
 */
-HB_FUNC( QTEXTEDIT_NEW2 )
+HB_FUNC_STATIC( QTEXTEDIT_NEW2 )
 {
   QTextEdit * o = NULL;
   QString par1 = hb_parc(1);
@@ -194,7 +194,7 @@ HB_FUNC( QTEXTEDIT_NEW2 )
 //[1]QTextEdit ( QWidget * parent = 0 )
 //[2]QTextEdit ( const QString & text, QWidget * parent = 0 )
 
-HB_FUNC( QTEXTEDIT_NEW )
+HB_FUNC_STATIC( QTEXTEDIT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
@@ -210,7 +210,7 @@ HB_FUNC( QTEXTEDIT_NEW )
   }
 }
 
-HB_FUNC( QTEXTEDIT_DELETE )
+HB_FUNC_STATIC( QTEXTEDIT_DELETE )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -229,7 +229,7 @@ HB_FUNC( QTEXTEDIT_DELETE )
 /*
 bool acceptRichText () const
 */
-HB_FUNC( QTEXTEDIT_ACCEPTRICHTEXT )
+HB_FUNC_STATIC( QTEXTEDIT_ACCEPTRICHTEXT )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -243,7 +243,7 @@ HB_FUNC( QTEXTEDIT_ACCEPTRICHTEXT )
 /*
 Qt::Alignment alignment () const
 */
-HB_FUNC( QTEXTEDIT_ALIGNMENT )
+HB_FUNC_STATIC( QTEXTEDIT_ALIGNMENT )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -257,7 +257,7 @@ HB_FUNC( QTEXTEDIT_ALIGNMENT )
 /*
 QString anchorAt ( const QPoint & pos ) const
 */
-HB_FUNC( QTEXTEDIT_ANCHORAT )
+HB_FUNC_STATIC( QTEXTEDIT_ANCHORAT )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -272,7 +272,7 @@ HB_FUNC( QTEXTEDIT_ANCHORAT )
 /*
 AutoFormatting autoFormatting () const
 */
-HB_FUNC( QTEXTEDIT_AUTOFORMATTING )
+HB_FUNC_STATIC( QTEXTEDIT_AUTOFORMATTING )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -286,7 +286,7 @@ HB_FUNC( QTEXTEDIT_AUTOFORMATTING )
 /*
 bool canPaste () const
 */
-HB_FUNC( QTEXTEDIT_CANPASTE )
+HB_FUNC_STATIC( QTEXTEDIT_CANPASTE )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -300,7 +300,7 @@ HB_FUNC( QTEXTEDIT_CANPASTE )
 /*
 QMenu * createStandardContextMenu ()
 */
-HB_FUNC( QTEXTEDIT_CREATESTANDARDCONTEXTMENU1 )
+HB_FUNC_STATIC( QTEXTEDIT_CREATESTANDARDCONTEXTMENU1 )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -313,7 +313,7 @@ HB_FUNC( QTEXTEDIT_CREATESTANDARDCONTEXTMENU1 )
 /*
 QMenu * createStandardContextMenu ( const QPoint & position )
 */
-HB_FUNC( QTEXTEDIT_CREATESTANDARDCONTEXTMENU2 )
+HB_FUNC_STATIC( QTEXTEDIT_CREATESTANDARDCONTEXTMENU2 )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -327,7 +327,7 @@ HB_FUNC( QTEXTEDIT_CREATESTANDARDCONTEXTMENU2 )
 //[1]QMenu * createStandardContextMenu ()
 //[2]QMenu * createStandardContextMenu ( const QPoint & position )
 
-HB_FUNC( QTEXTEDIT_CREATESTANDARDCONTEXTMENU )
+HB_FUNC_STATIC( QTEXTEDIT_CREATESTANDARDCONTEXTMENU )
 {
   if( ISNUMPAR(0) )
   {
@@ -342,7 +342,7 @@ HB_FUNC( QTEXTEDIT_CREATESTANDARDCONTEXTMENU )
 /*
 QTextCharFormat currentCharFormat () const
 */
-HB_FUNC( QTEXTEDIT_CURRENTCHARFORMAT )
+HB_FUNC_STATIC( QTEXTEDIT_CURRENTCHARFORMAT )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -355,7 +355,7 @@ HB_FUNC( QTEXTEDIT_CURRENTCHARFORMAT )
 /*
 QFont currentFont () const
 */
-HB_FUNC( QTEXTEDIT_CURRENTFONT )
+HB_FUNC_STATIC( QTEXTEDIT_CURRENTFONT )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -368,7 +368,7 @@ HB_FUNC( QTEXTEDIT_CURRENTFONT )
 /*
 QTextCursor cursorForPosition ( const QPoint & pos ) const
 */
-HB_FUNC( QTEXTEDIT_CURSORFORPOSITION )
+HB_FUNC_STATIC( QTEXTEDIT_CURSORFORPOSITION )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -382,7 +382,7 @@ HB_FUNC( QTEXTEDIT_CURSORFORPOSITION )
 /*
 QRect cursorRect ( const QTextCursor & cursor ) const
 */
-HB_FUNC( QTEXTEDIT_CURSORRECT1 )
+HB_FUNC_STATIC( QTEXTEDIT_CURSORRECT1 )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -396,7 +396,7 @@ HB_FUNC( QTEXTEDIT_CURSORRECT1 )
 /*
 QRect cursorRect () const
 */
-HB_FUNC( QTEXTEDIT_CURSORRECT2 )
+HB_FUNC_STATIC( QTEXTEDIT_CURSORRECT2 )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -409,7 +409,7 @@ HB_FUNC( QTEXTEDIT_CURSORRECT2 )
 //[1]QRect cursorRect ( const QTextCursor & cursor ) const
 //[2]QRect cursorRect () const
 
-HB_FUNC( QTEXTEDIT_CURSORRECT )
+HB_FUNC_STATIC( QTEXTEDIT_CURSORRECT )
 {
   if( ISNUMPAR(1) && ISQTEXTCURSOR(1) )
   {
@@ -424,7 +424,7 @@ HB_FUNC( QTEXTEDIT_CURSORRECT )
 /*
 int cursorWidth () const
 */
-HB_FUNC( QTEXTEDIT_CURSORWIDTH )
+HB_FUNC_STATIC( QTEXTEDIT_CURSORWIDTH )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -438,7 +438,7 @@ HB_FUNC( QTEXTEDIT_CURSORWIDTH )
 /*
 QTextDocument * document () const
 */
-HB_FUNC( QTEXTEDIT_DOCUMENT )
+HB_FUNC_STATIC( QTEXTEDIT_DOCUMENT )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -451,7 +451,7 @@ HB_FUNC( QTEXTEDIT_DOCUMENT )
 /*
 QString documentTitle () const
 */
-HB_FUNC( QTEXTEDIT_DOCUMENTTITLE )
+HB_FUNC_STATIC( QTEXTEDIT_DOCUMENTTITLE )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -465,7 +465,7 @@ HB_FUNC( QTEXTEDIT_DOCUMENTTITLE )
 /*
 void ensureCursorVisible ()
 */
-HB_FUNC( QTEXTEDIT_ENSURECURSORVISIBLE )
+HB_FUNC_STATIC( QTEXTEDIT_ENSURECURSORVISIBLE )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -480,7 +480,7 @@ HB_FUNC( QTEXTEDIT_ENSURECURSORVISIBLE )
 /*
 bool find ( const QString & exp, QTextDocument::FindFlags options = 0 )
 */
-HB_FUNC( QTEXTEDIT_FIND )
+HB_FUNC_STATIC( QTEXTEDIT_FIND )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -496,7 +496,7 @@ HB_FUNC( QTEXTEDIT_FIND )
 /*
 QString fontFamily () const
 */
-HB_FUNC( QTEXTEDIT_FONTFAMILY )
+HB_FUNC_STATIC( QTEXTEDIT_FONTFAMILY )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -510,7 +510,7 @@ HB_FUNC( QTEXTEDIT_FONTFAMILY )
 /*
 bool fontItalic () const
 */
-HB_FUNC( QTEXTEDIT_FONTITALIC )
+HB_FUNC_STATIC( QTEXTEDIT_FONTITALIC )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -524,7 +524,7 @@ HB_FUNC( QTEXTEDIT_FONTITALIC )
 /*
 qreal fontPointSize () const
 */
-HB_FUNC( QTEXTEDIT_FONTPOINTSIZE )
+HB_FUNC_STATIC( QTEXTEDIT_FONTPOINTSIZE )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -538,7 +538,7 @@ HB_FUNC( QTEXTEDIT_FONTPOINTSIZE )
 /*
 bool fontUnderline () const
 */
-HB_FUNC( QTEXTEDIT_FONTUNDERLINE )
+HB_FUNC_STATIC( QTEXTEDIT_FONTUNDERLINE )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -552,7 +552,7 @@ HB_FUNC( QTEXTEDIT_FONTUNDERLINE )
 /*
 int fontWeight () const
 */
-HB_FUNC( QTEXTEDIT_FONTWEIGHT )
+HB_FUNC_STATIC( QTEXTEDIT_FONTWEIGHT )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -566,7 +566,7 @@ HB_FUNC( QTEXTEDIT_FONTWEIGHT )
 /*
 bool isReadOnly () const
 */
-HB_FUNC( QTEXTEDIT_ISREADONLY )
+HB_FUNC_STATIC( QTEXTEDIT_ISREADONLY )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -580,7 +580,7 @@ HB_FUNC( QTEXTEDIT_ISREADONLY )
 /*
 bool isUndoRedoEnabled () const
 */
-HB_FUNC( QTEXTEDIT_ISUNDOREDOENABLED )
+HB_FUNC_STATIC( QTEXTEDIT_ISUNDOREDOENABLED )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -594,7 +594,7 @@ HB_FUNC( QTEXTEDIT_ISUNDOREDOENABLED )
 /*
 int lineWrapColumnOrWidth () const
 */
-HB_FUNC( QTEXTEDIT_LINEWRAPCOLUMNORWIDTH )
+HB_FUNC_STATIC( QTEXTEDIT_LINEWRAPCOLUMNORWIDTH )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -608,7 +608,7 @@ HB_FUNC( QTEXTEDIT_LINEWRAPCOLUMNORWIDTH )
 /*
 LineWrapMode lineWrapMode () const
 */
-HB_FUNC( QTEXTEDIT_LINEWRAPMODE )
+HB_FUNC_STATIC( QTEXTEDIT_LINEWRAPMODE )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -622,7 +622,7 @@ HB_FUNC( QTEXTEDIT_LINEWRAPMODE )
 /*
 virtual QVariant loadResource ( int type, const QUrl & name )
 */
-HB_FUNC( QTEXTEDIT_LOADRESOURCE )
+HB_FUNC_STATIC( QTEXTEDIT_LOADRESOURCE )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -637,7 +637,7 @@ HB_FUNC( QTEXTEDIT_LOADRESOURCE )
 /*
 void mergeCurrentCharFormat ( const QTextCharFormat & modifier )
 */
-HB_FUNC( QTEXTEDIT_MERGECURRENTCHARFORMAT )
+HB_FUNC_STATIC( QTEXTEDIT_MERGECURRENTCHARFORMAT )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -652,7 +652,7 @@ HB_FUNC( QTEXTEDIT_MERGECURRENTCHARFORMAT )
 /*
 void moveCursor ( QTextCursor::MoveOperation operation, QTextCursor::MoveMode mode = QTextCursor::MoveAnchor )
 */
-HB_FUNC( QTEXTEDIT_MOVECURSOR )
+HB_FUNC_STATIC( QTEXTEDIT_MOVECURSOR )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -668,7 +668,7 @@ HB_FUNC( QTEXTEDIT_MOVECURSOR )
 /*
 bool overwriteMode () const
 */
-HB_FUNC( QTEXTEDIT_OVERWRITEMODE )
+HB_FUNC_STATIC( QTEXTEDIT_OVERWRITEMODE )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -682,7 +682,7 @@ HB_FUNC( QTEXTEDIT_OVERWRITEMODE )
 /*
 void print ( QPrinter * printer ) const
 */
-HB_FUNC( QTEXTEDIT_PRINT )
+HB_FUNC_STATIC( QTEXTEDIT_PRINT )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -697,7 +697,7 @@ HB_FUNC( QTEXTEDIT_PRINT )
 /*
 void setAcceptRichText ( bool accept )
 */
-HB_FUNC( QTEXTEDIT_SETACCEPTRICHTEXT )
+HB_FUNC_STATIC( QTEXTEDIT_SETACCEPTRICHTEXT )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -712,7 +712,7 @@ HB_FUNC( QTEXTEDIT_SETACCEPTRICHTEXT )
 /*
 void setAutoFormatting ( AutoFormatting features )
 */
-HB_FUNC( QTEXTEDIT_SETAUTOFORMATTING )
+HB_FUNC_STATIC( QTEXTEDIT_SETAUTOFORMATTING )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -727,7 +727,7 @@ HB_FUNC( QTEXTEDIT_SETAUTOFORMATTING )
 /*
 void setCurrentCharFormat ( const QTextCharFormat & format )
 */
-HB_FUNC( QTEXTEDIT_SETCURRENTCHARFORMAT )
+HB_FUNC_STATIC( QTEXTEDIT_SETCURRENTCHARFORMAT )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -742,7 +742,7 @@ HB_FUNC( QTEXTEDIT_SETCURRENTCHARFORMAT )
 /*
 void setCursorWidth ( int width )
 */
-HB_FUNC( QTEXTEDIT_SETCURSORWIDTH )
+HB_FUNC_STATIC( QTEXTEDIT_SETCURSORWIDTH )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -757,7 +757,7 @@ HB_FUNC( QTEXTEDIT_SETCURSORWIDTH )
 /*
 void setDocument ( QTextDocument * document )
 */
-HB_FUNC( QTEXTEDIT_SETDOCUMENT )
+HB_FUNC_STATIC( QTEXTEDIT_SETDOCUMENT )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -772,7 +772,7 @@ HB_FUNC( QTEXTEDIT_SETDOCUMENT )
 /*
 void setDocumentTitle ( const QString & title )
 */
-HB_FUNC( QTEXTEDIT_SETDOCUMENTTITLE )
+HB_FUNC_STATIC( QTEXTEDIT_SETDOCUMENTTITLE )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -788,7 +788,7 @@ HB_FUNC( QTEXTEDIT_SETDOCUMENTTITLE )
 /*
 void setLineWrapColumnOrWidth ( int w )
 */
-HB_FUNC( QTEXTEDIT_SETLINEWRAPCOLUMNORWIDTH )
+HB_FUNC_STATIC( QTEXTEDIT_SETLINEWRAPCOLUMNORWIDTH )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -803,7 +803,7 @@ HB_FUNC( QTEXTEDIT_SETLINEWRAPCOLUMNORWIDTH )
 /*
 void setLineWrapMode ( LineWrapMode mode )
 */
-HB_FUNC( QTEXTEDIT_SETLINEWRAPMODE )
+HB_FUNC_STATIC( QTEXTEDIT_SETLINEWRAPMODE )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -818,7 +818,7 @@ HB_FUNC( QTEXTEDIT_SETLINEWRAPMODE )
 /*
 void setOverwriteMode ( bool overwrite )
 */
-HB_FUNC( QTEXTEDIT_SETOVERWRITEMODE )
+HB_FUNC_STATIC( QTEXTEDIT_SETOVERWRITEMODE )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -833,7 +833,7 @@ HB_FUNC( QTEXTEDIT_SETOVERWRITEMODE )
 /*
 void setReadOnly ( bool ro )
 */
-HB_FUNC( QTEXTEDIT_SETREADONLY )
+HB_FUNC_STATIC( QTEXTEDIT_SETREADONLY )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -848,7 +848,7 @@ HB_FUNC( QTEXTEDIT_SETREADONLY )
 /*
 void setTabChangesFocus ( bool b )
 */
-HB_FUNC( QTEXTEDIT_SETTABCHANGESFOCUS )
+HB_FUNC_STATIC( QTEXTEDIT_SETTABCHANGESFOCUS )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -863,7 +863,7 @@ HB_FUNC( QTEXTEDIT_SETTABCHANGESFOCUS )
 /*
 void setTabStopWidth ( int width )
 */
-HB_FUNC( QTEXTEDIT_SETTABSTOPWIDTH )
+HB_FUNC_STATIC( QTEXTEDIT_SETTABSTOPWIDTH )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -878,7 +878,7 @@ HB_FUNC( QTEXTEDIT_SETTABSTOPWIDTH )
 /*
 void setTextCursor ( const QTextCursor & cursor )
 */
-HB_FUNC( QTEXTEDIT_SETTEXTCURSOR )
+HB_FUNC_STATIC( QTEXTEDIT_SETTEXTCURSOR )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -893,7 +893,7 @@ HB_FUNC( QTEXTEDIT_SETTEXTCURSOR )
 /*
 void setTextInteractionFlags ( Qt::TextInteractionFlags flags )
 */
-HB_FUNC( QTEXTEDIT_SETTEXTINTERACTIONFLAGS )
+HB_FUNC_STATIC( QTEXTEDIT_SETTEXTINTERACTIONFLAGS )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -908,7 +908,7 @@ HB_FUNC( QTEXTEDIT_SETTEXTINTERACTIONFLAGS )
 /*
 void setUndoRedoEnabled ( bool enable )
 */
-HB_FUNC( QTEXTEDIT_SETUNDOREDOENABLED )
+HB_FUNC_STATIC( QTEXTEDIT_SETUNDOREDOENABLED )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -923,7 +923,7 @@ HB_FUNC( QTEXTEDIT_SETUNDOREDOENABLED )
 /*
 void setWordWrapMode ( QTextOption::WrapMode policy )
 */
-HB_FUNC( QTEXTEDIT_SETWORDWRAPMODE )
+HB_FUNC_STATIC( QTEXTEDIT_SETWORDWRAPMODE )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -938,7 +938,7 @@ HB_FUNC( QTEXTEDIT_SETWORDWRAPMODE )
 /*
 bool tabChangesFocus () const
 */
-HB_FUNC( QTEXTEDIT_TABCHANGESFOCUS )
+HB_FUNC_STATIC( QTEXTEDIT_TABCHANGESFOCUS )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -952,7 +952,7 @@ HB_FUNC( QTEXTEDIT_TABCHANGESFOCUS )
 /*
 int tabStopWidth () const
 */
-HB_FUNC( QTEXTEDIT_TABSTOPWIDTH )
+HB_FUNC_STATIC( QTEXTEDIT_TABSTOPWIDTH )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -966,7 +966,7 @@ HB_FUNC( QTEXTEDIT_TABSTOPWIDTH )
 /*
 QColor textBackgroundColor () const
 */
-HB_FUNC( QTEXTEDIT_TEXTBACKGROUNDCOLOR )
+HB_FUNC_STATIC( QTEXTEDIT_TEXTBACKGROUNDCOLOR )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -979,7 +979,7 @@ HB_FUNC( QTEXTEDIT_TEXTBACKGROUNDCOLOR )
 /*
 QColor textColor () const
 */
-HB_FUNC( QTEXTEDIT_TEXTCOLOR )
+HB_FUNC_STATIC( QTEXTEDIT_TEXTCOLOR )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -992,7 +992,7 @@ HB_FUNC( QTEXTEDIT_TEXTCOLOR )
 /*
 QTextCursor textCursor () const
 */
-HB_FUNC( QTEXTEDIT_TEXTCURSOR )
+HB_FUNC_STATIC( QTEXTEDIT_TEXTCURSOR )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1005,7 +1005,7 @@ HB_FUNC( QTEXTEDIT_TEXTCURSOR )
 /*
 Qt::TextInteractionFlags textInteractionFlags () const
 */
-HB_FUNC( QTEXTEDIT_TEXTINTERACTIONFLAGS )
+HB_FUNC_STATIC( QTEXTEDIT_TEXTINTERACTIONFLAGS )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1019,7 +1019,7 @@ HB_FUNC( QTEXTEDIT_TEXTINTERACTIONFLAGS )
 /*
 QString toHtml () const
 */
-HB_FUNC( QTEXTEDIT_TOHTML )
+HB_FUNC_STATIC( QTEXTEDIT_TOHTML )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1033,7 +1033,7 @@ HB_FUNC( QTEXTEDIT_TOHTML )
 /*
 QString toPlainText () const
 */
-HB_FUNC( QTEXTEDIT_TOPLAINTEXT )
+HB_FUNC_STATIC( QTEXTEDIT_TOPLAINTEXT )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1047,7 +1047,7 @@ HB_FUNC( QTEXTEDIT_TOPLAINTEXT )
 /*
 QTextOption::WrapMode wordWrapMode () const
 */
-HB_FUNC( QTEXTEDIT_WORDWRAPMODE )
+HB_FUNC_STATIC( QTEXTEDIT_WORDWRAPMODE )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1061,7 +1061,7 @@ HB_FUNC( QTEXTEDIT_WORDWRAPMODE )
 /*
 void append ( const QString & text )
 */
-HB_FUNC( QTEXTEDIT_APPEND )
+HB_FUNC_STATIC( QTEXTEDIT_APPEND )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1076,7 +1076,7 @@ HB_FUNC( QTEXTEDIT_APPEND )
 /*
 void clear ()
 */
-HB_FUNC( QTEXTEDIT_CLEAR )
+HB_FUNC_STATIC( QTEXTEDIT_CLEAR )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1090,7 +1090,7 @@ HB_FUNC( QTEXTEDIT_CLEAR )
 /*
 void copy ()
 */
-HB_FUNC( QTEXTEDIT_COPY )
+HB_FUNC_STATIC( QTEXTEDIT_COPY )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1104,7 +1104,7 @@ HB_FUNC( QTEXTEDIT_COPY )
 /*
 void cut ()
 */
-HB_FUNC( QTEXTEDIT_CUT )
+HB_FUNC_STATIC( QTEXTEDIT_CUT )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1118,7 +1118,7 @@ HB_FUNC( QTEXTEDIT_CUT )
 /*
 void insertHtml ( const QString & text )
 */
-HB_FUNC( QTEXTEDIT_INSERTHTML )
+HB_FUNC_STATIC( QTEXTEDIT_INSERTHTML )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1133,7 +1133,7 @@ HB_FUNC( QTEXTEDIT_INSERTHTML )
 /*
 void insertPlainText ( const QString & text )
 */
-HB_FUNC( QTEXTEDIT_INSERTPLAINTEXT )
+HB_FUNC_STATIC( QTEXTEDIT_INSERTPLAINTEXT )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1148,7 +1148,7 @@ HB_FUNC( QTEXTEDIT_INSERTPLAINTEXT )
 /*
 void paste ()
 */
-HB_FUNC( QTEXTEDIT_PASTE )
+HB_FUNC_STATIC( QTEXTEDIT_PASTE )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1162,7 +1162,7 @@ HB_FUNC( QTEXTEDIT_PASTE )
 /*
 void redo ()
 */
-HB_FUNC( QTEXTEDIT_REDO )
+HB_FUNC_STATIC( QTEXTEDIT_REDO )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1176,7 +1176,7 @@ HB_FUNC( QTEXTEDIT_REDO )
 /*
 void scrollToAnchor ( const QString & name )
 */
-HB_FUNC( QTEXTEDIT_SCROLLTOANCHOR )
+HB_FUNC_STATIC( QTEXTEDIT_SCROLLTOANCHOR )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1191,7 +1191,7 @@ HB_FUNC( QTEXTEDIT_SCROLLTOANCHOR )
 /*
 void selectAll ()
 */
-HB_FUNC( QTEXTEDIT_SELECTALL )
+HB_FUNC_STATIC( QTEXTEDIT_SELECTALL )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1205,7 +1205,7 @@ HB_FUNC( QTEXTEDIT_SELECTALL )
 /*
 void setAlignment ( Qt::Alignment a )
 */
-HB_FUNC( QTEXTEDIT_SETALIGNMENT )
+HB_FUNC_STATIC( QTEXTEDIT_SETALIGNMENT )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1220,7 +1220,7 @@ HB_FUNC( QTEXTEDIT_SETALIGNMENT )
 /*
 void setCurrentFont ( const QFont & f )
 */
-HB_FUNC( QTEXTEDIT_SETCURRENTFONT )
+HB_FUNC_STATIC( QTEXTEDIT_SETCURRENTFONT )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1235,7 +1235,7 @@ HB_FUNC( QTEXTEDIT_SETCURRENTFONT )
 /*
 void setFontFamily ( const QString & fontFamily )
 */
-HB_FUNC( QTEXTEDIT_SETFONTFAMILY )
+HB_FUNC_STATIC( QTEXTEDIT_SETFONTFAMILY )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1250,7 +1250,7 @@ HB_FUNC( QTEXTEDIT_SETFONTFAMILY )
 /*
 void setFontItalic ( bool italic )
 */
-HB_FUNC( QTEXTEDIT_SETFONTITALIC )
+HB_FUNC_STATIC( QTEXTEDIT_SETFONTITALIC )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1265,7 +1265,7 @@ HB_FUNC( QTEXTEDIT_SETFONTITALIC )
 /*
 void setFontPointSize ( qreal s )
 */
-HB_FUNC( QTEXTEDIT_SETFONTPOINTSIZE )
+HB_FUNC_STATIC( QTEXTEDIT_SETFONTPOINTSIZE )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1280,7 +1280,7 @@ HB_FUNC( QTEXTEDIT_SETFONTPOINTSIZE )
 /*
 void setFontUnderline ( bool underline )
 */
-HB_FUNC( QTEXTEDIT_SETFONTUNDERLINE )
+HB_FUNC_STATIC( QTEXTEDIT_SETFONTUNDERLINE )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1295,7 +1295,7 @@ HB_FUNC( QTEXTEDIT_SETFONTUNDERLINE )
 /*
 void setFontWeight ( int weight )
 */
-HB_FUNC( QTEXTEDIT_SETFONTWEIGHT )
+HB_FUNC_STATIC( QTEXTEDIT_SETFONTWEIGHT )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1310,7 +1310,7 @@ HB_FUNC( QTEXTEDIT_SETFONTWEIGHT )
 /*
 void setHtml ( const QString & text )
 */
-HB_FUNC( QTEXTEDIT_SETHTML )
+HB_FUNC_STATIC( QTEXTEDIT_SETHTML )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1325,7 +1325,7 @@ HB_FUNC( QTEXTEDIT_SETHTML )
 /*
 void setPlainText ( const QString & text )
 */
-HB_FUNC( QTEXTEDIT_SETPLAINTEXT )
+HB_FUNC_STATIC( QTEXTEDIT_SETPLAINTEXT )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1340,7 +1340,7 @@ HB_FUNC( QTEXTEDIT_SETPLAINTEXT )
 /*
 void setText ( const QString & text )
 */
-HB_FUNC( QTEXTEDIT_SETTEXT )
+HB_FUNC_STATIC( QTEXTEDIT_SETTEXT )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1355,7 +1355,7 @@ HB_FUNC( QTEXTEDIT_SETTEXT )
 /*
 void setTextBackgroundColor ( const QColor & c )
 */
-HB_FUNC( QTEXTEDIT_SETTEXTBACKGROUNDCOLOR )
+HB_FUNC_STATIC( QTEXTEDIT_SETTEXTBACKGROUNDCOLOR )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1370,7 +1370,7 @@ HB_FUNC( QTEXTEDIT_SETTEXTBACKGROUNDCOLOR )
 /*
 void setTextColor ( const QColor & c )
 */
-HB_FUNC( QTEXTEDIT_SETTEXTCOLOR )
+HB_FUNC_STATIC( QTEXTEDIT_SETTEXTCOLOR )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1385,7 +1385,7 @@ HB_FUNC( QTEXTEDIT_SETTEXTCOLOR )
 /*
 void undo ()
 */
-HB_FUNC( QTEXTEDIT_UNDO )
+HB_FUNC_STATIC( QTEXTEDIT_UNDO )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1399,7 +1399,7 @@ HB_FUNC( QTEXTEDIT_UNDO )
 /*
 void zoomIn ( int range = 1 )
 */
-HB_FUNC( QTEXTEDIT_ZOOMIN )
+HB_FUNC_STATIC( QTEXTEDIT_ZOOMIN )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -1414,7 +1414,7 @@ HB_FUNC( QTEXTEDIT_ZOOMIN )
 /*
 void zoomOut ( int range = 1 )
 */
-HB_FUNC( QTEXTEDIT_ZOOMOUT )
+HB_FUNC_STATIC( QTEXTEDIT_ZOOMOUT )
 {
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

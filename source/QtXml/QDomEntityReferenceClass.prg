@@ -63,7 +63,7 @@ RETURN
 /*
 QDomEntityReference ()
 */
-HB_FUNC( QDOMENTITYREFERENCE_NEW1 )
+HB_FUNC_STATIC( QDOMENTITYREFERENCE_NEW1 )
 {
   QDomEntityReference * o = NULL;
   o = new QDomEntityReference (  );
@@ -81,7 +81,7 @@ HB_FUNC( QDOMENTITYREFERENCE_NEW1 )
 /*
 QDomEntityReference ( const QDomEntityReference & x )
 */
-HB_FUNC( QDOMENTITYREFERENCE_NEW2 )
+HB_FUNC_STATIC( QDOMENTITYREFERENCE_NEW2 )
 {
   QDomEntityReference * o = NULL;
   QDomEntityReference * par1 = (QDomEntityReference *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -100,7 +100,7 @@ HB_FUNC( QDOMENTITYREFERENCE_NEW2 )
 //[1]QDomEntityReference ()
 //[2]QDomEntityReference ( const QDomEntityReference & x )
 
-HB_FUNC( QDOMENTITYREFERENCE_NEW )
+HB_FUNC_STATIC( QDOMENTITYREFERENCE_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -121,7 +121,7 @@ HB_FUNC( QDOMENTITYREFERENCE_NEW )
 /*
 QDomNode::NodeType nodeType () const
 */
-HB_FUNC( QDOMENTITYREFERENCE_NODETYPE )
+HB_FUNC_STATIC( QDOMENTITYREFERENCE_NODETYPE )
 {
   QDomEntityReference * obj = (QDomEntityReference *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

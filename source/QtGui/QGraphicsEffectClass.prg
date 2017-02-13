@@ -65,7 +65,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QGRAPHICSEFFECT_DELETE )
+HB_FUNC_STATIC( QGRAPHICSEFFECT_DELETE )
 {
   QGraphicsEffect * obj = (QGraphicsEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -84,7 +84,7 @@ HB_FUNC( QGRAPHICSEFFECT_DELETE )
 /*
 QRectF boundingRect () const
 */
-HB_FUNC( QGRAPHICSEFFECT_BOUNDINGRECT )
+HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECT )
 {
   QGraphicsEffect * obj = (QGraphicsEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -97,7 +97,7 @@ HB_FUNC( QGRAPHICSEFFECT_BOUNDINGRECT )
 /*
 virtual QRectF boundingRectFor ( const QRectF & rect ) const
 */
-HB_FUNC( QGRAPHICSEFFECT_BOUNDINGRECTFOR )
+HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECTFOR )
 {
   QGraphicsEffect * obj = (QGraphicsEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -111,7 +111,7 @@ HB_FUNC( QGRAPHICSEFFECT_BOUNDINGRECTFOR )
 /*
 bool isEnabled () const
 */
-HB_FUNC( QGRAPHICSEFFECT_ISENABLED )
+HB_FUNC_STATIC( QGRAPHICSEFFECT_ISENABLED )
 {
   QGraphicsEffect * obj = (QGraphicsEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -125,7 +125,7 @@ HB_FUNC( QGRAPHICSEFFECT_ISENABLED )
 /*
 void setEnabled ( bool enable )
 */
-HB_FUNC( QGRAPHICSEFFECT_SETENABLED )
+HB_FUNC_STATIC( QGRAPHICSEFFECT_SETENABLED )
 {
   QGraphicsEffect * obj = (QGraphicsEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -140,7 +140,7 @@ HB_FUNC( QGRAPHICSEFFECT_SETENABLED )
 /*
 void update ()
 */
-HB_FUNC( QGRAPHICSEFFECT_UPDATE )
+HB_FUNC_STATIC( QGRAPHICSEFFECT_UPDATE )
 {
   QGraphicsEffect * obj = (QGraphicsEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

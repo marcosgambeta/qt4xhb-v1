@@ -68,7 +68,7 @@ RETURN
 /*
 QEventLoop ( QObject * parent = 0 )
 */
-HB_FUNC( QEVENTLOOP_NEW )
+HB_FUNC_STATIC( QEVENTLOOP_NEW )
 {
   QEventLoop * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -81,7 +81,7 @@ HB_FUNC( QEVENTLOOP_NEW )
 }
 
 
-HB_FUNC( QEVENTLOOP_DELETE )
+HB_FUNC_STATIC( QEVENTLOOP_DELETE )
 {
   QEventLoop * obj = (QEventLoop *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -101,7 +101,7 @@ HB_FUNC( QEVENTLOOP_DELETE )
 /*
 int exec ( ProcessEventsFlags flags = AllEvents )
 */
-HB_FUNC( QEVENTLOOP_EXEC )
+HB_FUNC_STATIC( QEVENTLOOP_EXEC )
 {
   QEventLoop * obj = (QEventLoop *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -116,7 +116,7 @@ HB_FUNC( QEVENTLOOP_EXEC )
 /*
 void exit ( int returnCode = 0 )
 */
-HB_FUNC( QEVENTLOOP_EXIT )
+HB_FUNC_STATIC( QEVENTLOOP_EXIT )
 {
   QEventLoop * obj = (QEventLoop *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -131,7 +131,7 @@ HB_FUNC( QEVENTLOOP_EXIT )
 /*
 bool isRunning () const
 */
-HB_FUNC( QEVENTLOOP_ISRUNNING )
+HB_FUNC_STATIC( QEVENTLOOP_ISRUNNING )
 {
   QEventLoop * obj = (QEventLoop *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -145,7 +145,7 @@ HB_FUNC( QEVENTLOOP_ISRUNNING )
 /*
 bool processEvents ( ProcessEventsFlags flags = AllEvents )
 */
-HB_FUNC( QEVENTLOOP_PROCESSEVENTS1 )
+HB_FUNC_STATIC( QEVENTLOOP_PROCESSEVENTS1 )
 {
   QEventLoop * obj = (QEventLoop *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -160,7 +160,7 @@ HB_FUNC( QEVENTLOOP_PROCESSEVENTS1 )
 /*
 void processEvents ( ProcessEventsFlags flags, int maxTime )
 */
-HB_FUNC( QEVENTLOOP_PROCESSEVENTS2 )
+HB_FUNC_STATIC( QEVENTLOOP_PROCESSEVENTS2 )
 {
   QEventLoop * obj = (QEventLoop *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -176,7 +176,7 @@ HB_FUNC( QEVENTLOOP_PROCESSEVENTS2 )
 //[1]bool processEvents ( ProcessEventsFlags flags = AllEvents )
 //[2]void processEvents ( ProcessEventsFlags flags, int maxTime )
 
-HB_FUNC( QEVENTLOOP_PROCESSEVENTS )
+HB_FUNC_STATIC( QEVENTLOOP_PROCESSEVENTS )
 {
   if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
@@ -191,7 +191,7 @@ HB_FUNC( QEVENTLOOP_PROCESSEVENTS )
 /*
 void wakeUp ()
 */
-HB_FUNC( QEVENTLOOP_WAKEUP )
+HB_FUNC_STATIC( QEVENTLOOP_WAKEUP )
 {
   QEventLoop * obj = (QEventLoop *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -205,7 +205,7 @@ HB_FUNC( QEVENTLOOP_WAKEUP )
 /*
 void quit ()
 */
-HB_FUNC( QEVENTLOOP_QUIT )
+HB_FUNC_STATIC( QEVENTLOOP_QUIT )
 {
   QEventLoop * obj = (QEventLoop *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

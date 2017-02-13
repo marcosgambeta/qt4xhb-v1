@@ -111,7 +111,7 @@ RETURN
 /*
 QTabWidget ( QWidget * parent = 0 )
 */
-HB_FUNC( QTABWIDGET_NEW )
+HB_FUNC_STATIC( QTABWIDGET_NEW )
 {
   QTabWidget * o = NULL;
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -124,7 +124,7 @@ HB_FUNC( QTABWIDGET_NEW )
 }
 
 
-HB_FUNC( QTABWIDGET_DELETE )
+HB_FUNC_STATIC( QTABWIDGET_DELETE )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -143,7 +143,7 @@ HB_FUNC( QTABWIDGET_DELETE )
 /*
 int addTab ( QWidget * page, const QString & label )
 */
-HB_FUNC( QTABWIDGET_ADDTAB1 )
+HB_FUNC_STATIC( QTABWIDGET_ADDTAB1 )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -159,7 +159,7 @@ HB_FUNC( QTABWIDGET_ADDTAB1 )
 /*
 int addTab ( QWidget * page, const QIcon & icon, const QString & label )
 */
-HB_FUNC( QTABWIDGET_ADDTAB2 )
+HB_FUNC_STATIC( QTABWIDGET_ADDTAB2 )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -176,7 +176,7 @@ HB_FUNC( QTABWIDGET_ADDTAB2 )
 //[1]int addTab ( QWidget * page, const QString & label )
 //[2]int addTab ( QWidget * page, const QIcon & icon, const QString & label )
 
-HB_FUNC( QTABWIDGET_ADDTAB )
+HB_FUNC_STATIC( QTABWIDGET_ADDTAB )
 {
   if( ISNUMPAR(2) && ISQWIDGET(1) && ISCHAR(2) )
   {
@@ -191,7 +191,7 @@ HB_FUNC( QTABWIDGET_ADDTAB )
 /*
 void clear ()
 */
-HB_FUNC( QTABWIDGET_CLEAR )
+HB_FUNC_STATIC( QTABWIDGET_CLEAR )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -205,7 +205,7 @@ HB_FUNC( QTABWIDGET_CLEAR )
 /*
 QWidget * cornerWidget ( Qt::Corner corner = Qt::TopRightCorner ) const
 */
-HB_FUNC( QTABWIDGET_CORNERWIDGET )
+HB_FUNC_STATIC( QTABWIDGET_CORNERWIDGET )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -219,7 +219,7 @@ HB_FUNC( QTABWIDGET_CORNERWIDGET )
 /*
 int count () const
 */
-HB_FUNC( QTABWIDGET_COUNT )
+HB_FUNC_STATIC( QTABWIDGET_COUNT )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -233,7 +233,7 @@ HB_FUNC( QTABWIDGET_COUNT )
 /*
 int currentIndex () const
 */
-HB_FUNC( QTABWIDGET_CURRENTINDEX )
+HB_FUNC_STATIC( QTABWIDGET_CURRENTINDEX )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -247,7 +247,7 @@ HB_FUNC( QTABWIDGET_CURRENTINDEX )
 /*
 QWidget * currentWidget () const
 */
-HB_FUNC( QTABWIDGET_CURRENTWIDGET )
+HB_FUNC_STATIC( QTABWIDGET_CURRENTWIDGET )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -260,7 +260,7 @@ HB_FUNC( QTABWIDGET_CURRENTWIDGET )
 /*
 bool documentMode () const
 */
-HB_FUNC( QTABWIDGET_DOCUMENTMODE )
+HB_FUNC_STATIC( QTABWIDGET_DOCUMENTMODE )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -274,7 +274,7 @@ HB_FUNC( QTABWIDGET_DOCUMENTMODE )
 /*
 Qt::TextElideMode elideMode () const
 */
-HB_FUNC( QTABWIDGET_ELIDEMODE )
+HB_FUNC_STATIC( QTABWIDGET_ELIDEMODE )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -288,7 +288,7 @@ HB_FUNC( QTABWIDGET_ELIDEMODE )
 /*
 QSize iconSize () const
 */
-HB_FUNC( QTABWIDGET_ICONSIZE )
+HB_FUNC_STATIC( QTABWIDGET_ICONSIZE )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -301,7 +301,7 @@ HB_FUNC( QTABWIDGET_ICONSIZE )
 /*
 int indexOf ( QWidget * w ) const
 */
-HB_FUNC( QTABWIDGET_INDEXOF )
+HB_FUNC_STATIC( QTABWIDGET_INDEXOF )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -316,7 +316,7 @@ HB_FUNC( QTABWIDGET_INDEXOF )
 /*
 int insertTab ( int index, QWidget * page, const QString & label )
 */
-HB_FUNC( QTABWIDGET_INSERTTAB1 )
+HB_FUNC_STATIC( QTABWIDGET_INSERTTAB1 )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -333,7 +333,7 @@ HB_FUNC( QTABWIDGET_INSERTTAB1 )
 /*
 int insertTab ( int index, QWidget * page, const QIcon & icon, const QString & label )
 */
-HB_FUNC( QTABWIDGET_INSERTTAB2 )
+HB_FUNC_STATIC( QTABWIDGET_INSERTTAB2 )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -351,7 +351,7 @@ HB_FUNC( QTABWIDGET_INSERTTAB2 )
 //[1]int insertTab ( int index, QWidget * page, const QString & label )
 //[2]int insertTab ( int index, QWidget * page, const QIcon & icon, const QString & label )
 
-HB_FUNC( QTABWIDGET_INSERTTAB )
+HB_FUNC_STATIC( QTABWIDGET_INSERTTAB )
 {
   if( ISNUMPAR(3) && ISNUM(1) && ISQWIDGET(2) && ISCHAR(3) )
   {
@@ -366,7 +366,7 @@ HB_FUNC( QTABWIDGET_INSERTTAB )
 /*
 bool isMovable () const
 */
-HB_FUNC( QTABWIDGET_ISMOVABLE )
+HB_FUNC_STATIC( QTABWIDGET_ISMOVABLE )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -380,7 +380,7 @@ HB_FUNC( QTABWIDGET_ISMOVABLE )
 /*
 bool isTabEnabled ( int index ) const
 */
-HB_FUNC( QTABWIDGET_ISTABENABLED )
+HB_FUNC_STATIC( QTABWIDGET_ISTABENABLED )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -395,7 +395,7 @@ HB_FUNC( QTABWIDGET_ISTABENABLED )
 /*
 void removeTab ( int index )
 */
-HB_FUNC( QTABWIDGET_REMOVETAB )
+HB_FUNC_STATIC( QTABWIDGET_REMOVETAB )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -410,7 +410,7 @@ HB_FUNC( QTABWIDGET_REMOVETAB )
 /*
 void setCornerWidget ( QWidget * widget, Qt::Corner corner = Qt::TopRightCorner )
 */
-HB_FUNC( QTABWIDGET_SETCORNERWIDGET )
+HB_FUNC_STATIC( QTABWIDGET_SETCORNERWIDGET )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -426,7 +426,7 @@ HB_FUNC( QTABWIDGET_SETCORNERWIDGET )
 /*
 void setDocumentMode ( bool set )
 */
-HB_FUNC( QTABWIDGET_SETDOCUMENTMODE )
+HB_FUNC_STATIC( QTABWIDGET_SETDOCUMENTMODE )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -441,7 +441,7 @@ HB_FUNC( QTABWIDGET_SETDOCUMENTMODE )
 /*
 void setElideMode ( Qt::TextElideMode )
 */
-HB_FUNC( QTABWIDGET_SETELIDEMODE )
+HB_FUNC_STATIC( QTABWIDGET_SETELIDEMODE )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -456,7 +456,7 @@ HB_FUNC( QTABWIDGET_SETELIDEMODE )
 /*
 void setIconSize ( const QSize & size )
 */
-HB_FUNC( QTABWIDGET_SETICONSIZE )
+HB_FUNC_STATIC( QTABWIDGET_SETICONSIZE )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -471,7 +471,7 @@ HB_FUNC( QTABWIDGET_SETICONSIZE )
 /*
 void setMovable ( bool movable )
 */
-HB_FUNC( QTABWIDGET_SETMOVABLE )
+HB_FUNC_STATIC( QTABWIDGET_SETMOVABLE )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -486,7 +486,7 @@ HB_FUNC( QTABWIDGET_SETMOVABLE )
 /*
 void setTabEnabled ( int index, bool enable )
 */
-HB_FUNC( QTABWIDGET_SETTABENABLED )
+HB_FUNC_STATIC( QTABWIDGET_SETTABENABLED )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -502,7 +502,7 @@ HB_FUNC( QTABWIDGET_SETTABENABLED )
 /*
 void setTabIcon ( int index, const QIcon & icon )
 */
-HB_FUNC( QTABWIDGET_SETTABICON )
+HB_FUNC_STATIC( QTABWIDGET_SETTABICON )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -518,7 +518,7 @@ HB_FUNC( QTABWIDGET_SETTABICON )
 /*
 void setTabPosition ( TabPosition )
 */
-HB_FUNC( QTABWIDGET_SETTABPOSITION )
+HB_FUNC_STATIC( QTABWIDGET_SETTABPOSITION )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -533,7 +533,7 @@ HB_FUNC( QTABWIDGET_SETTABPOSITION )
 /*
 void setTabShape ( TabShape s )
 */
-HB_FUNC( QTABWIDGET_SETTABSHAPE )
+HB_FUNC_STATIC( QTABWIDGET_SETTABSHAPE )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -548,7 +548,7 @@ HB_FUNC( QTABWIDGET_SETTABSHAPE )
 /*
 void setTabText ( int index, const QString & label )
 */
-HB_FUNC( QTABWIDGET_SETTABTEXT )
+HB_FUNC_STATIC( QTABWIDGET_SETTABTEXT )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -564,7 +564,7 @@ HB_FUNC( QTABWIDGET_SETTABTEXT )
 /*
 void setTabToolTip ( int index, const QString & tip )
 */
-HB_FUNC( QTABWIDGET_SETTABTOOLTIP )
+HB_FUNC_STATIC( QTABWIDGET_SETTABTOOLTIP )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -580,7 +580,7 @@ HB_FUNC( QTABWIDGET_SETTABTOOLTIP )
 /*
 void setTabWhatsThis ( int index, const QString & text )
 */
-HB_FUNC( QTABWIDGET_SETTABWHATSTHIS )
+HB_FUNC_STATIC( QTABWIDGET_SETTABWHATSTHIS )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -596,7 +596,7 @@ HB_FUNC( QTABWIDGET_SETTABWHATSTHIS )
 /*
 void setTabsClosable ( bool closeable )
 */
-HB_FUNC( QTABWIDGET_SETTABSCLOSABLE )
+HB_FUNC_STATIC( QTABWIDGET_SETTABSCLOSABLE )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -611,7 +611,7 @@ HB_FUNC( QTABWIDGET_SETTABSCLOSABLE )
 /*
 void setUsesScrollButtons ( bool useButtons )
 */
-HB_FUNC( QTABWIDGET_SETUSESSCROLLBUTTONS )
+HB_FUNC_STATIC( QTABWIDGET_SETUSESSCROLLBUTTONS )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -626,7 +626,7 @@ HB_FUNC( QTABWIDGET_SETUSESSCROLLBUTTONS )
 /*
 QIcon tabIcon ( int index ) const
 */
-HB_FUNC( QTABWIDGET_TABICON )
+HB_FUNC_STATIC( QTABWIDGET_TABICON )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -640,7 +640,7 @@ HB_FUNC( QTABWIDGET_TABICON )
 /*
 TabPosition tabPosition () const
 */
-HB_FUNC( QTABWIDGET_TABPOSITION )
+HB_FUNC_STATIC( QTABWIDGET_TABPOSITION )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -654,7 +654,7 @@ HB_FUNC( QTABWIDGET_TABPOSITION )
 /*
 TabShape tabShape () const
 */
-HB_FUNC( QTABWIDGET_TABSHAPE )
+HB_FUNC_STATIC( QTABWIDGET_TABSHAPE )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -668,7 +668,7 @@ HB_FUNC( QTABWIDGET_TABSHAPE )
 /*
 QString tabText ( int index ) const
 */
-HB_FUNC( QTABWIDGET_TABTEXT )
+HB_FUNC_STATIC( QTABWIDGET_TABTEXT )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -683,7 +683,7 @@ HB_FUNC( QTABWIDGET_TABTEXT )
 /*
 QString tabToolTip ( int index ) const
 */
-HB_FUNC( QTABWIDGET_TABTOOLTIP )
+HB_FUNC_STATIC( QTABWIDGET_TABTOOLTIP )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -698,7 +698,7 @@ HB_FUNC( QTABWIDGET_TABTOOLTIP )
 /*
 QString tabWhatsThis ( int index ) const
 */
-HB_FUNC( QTABWIDGET_TABWHATSTHIS )
+HB_FUNC_STATIC( QTABWIDGET_TABWHATSTHIS )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -713,7 +713,7 @@ HB_FUNC( QTABWIDGET_TABWHATSTHIS )
 /*
 bool tabsClosable () const
 */
-HB_FUNC( QTABWIDGET_TABSCLOSABLE )
+HB_FUNC_STATIC( QTABWIDGET_TABSCLOSABLE )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -727,7 +727,7 @@ HB_FUNC( QTABWIDGET_TABSCLOSABLE )
 /*
 bool usesScrollButtons () const
 */
-HB_FUNC( QTABWIDGET_USESSCROLLBUTTONS )
+HB_FUNC_STATIC( QTABWIDGET_USESSCROLLBUTTONS )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -741,7 +741,7 @@ HB_FUNC( QTABWIDGET_USESSCROLLBUTTONS )
 /*
 QWidget * widget ( int index ) const
 */
-HB_FUNC( QTABWIDGET_WIDGET )
+HB_FUNC_STATIC( QTABWIDGET_WIDGET )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -755,7 +755,7 @@ HB_FUNC( QTABWIDGET_WIDGET )
 /*
 virtual QSize minimumSizeHint () const
 */
-HB_FUNC( QTABWIDGET_MINIMUMSIZEHINT )
+HB_FUNC_STATIC( QTABWIDGET_MINIMUMSIZEHINT )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -768,7 +768,7 @@ HB_FUNC( QTABWIDGET_MINIMUMSIZEHINT )
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC( QTABWIDGET_SIZEHINT )
+HB_FUNC_STATIC( QTABWIDGET_SIZEHINT )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -781,7 +781,7 @@ HB_FUNC( QTABWIDGET_SIZEHINT )
 /*
 void setCurrentIndex ( int index )
 */
-HB_FUNC( QTABWIDGET_SETCURRENTINDEX )
+HB_FUNC_STATIC( QTABWIDGET_SETCURRENTINDEX )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -796,7 +796,7 @@ HB_FUNC( QTABWIDGET_SETCURRENTINDEX )
 /*
 void setCurrentWidget ( QWidget * widget )
 */
-HB_FUNC( QTABWIDGET_SETCURRENTWIDGET )
+HB_FUNC_STATIC( QTABWIDGET_SETCURRENTWIDGET )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

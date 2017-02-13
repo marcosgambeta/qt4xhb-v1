@@ -74,7 +74,7 @@ RETURN
 /*
 QWidgetItem ( QWidget * widget )
 */
-HB_FUNC( QWIDGETITEM_NEW )
+HB_FUNC_STATIC( QWIDGETITEM_NEW )
 {
   QWidgetItem * o = NULL;
   QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -87,7 +87,7 @@ HB_FUNC( QWIDGETITEM_NEW )
 }
 
 
-HB_FUNC( QWIDGETITEM_DELETE )
+HB_FUNC_STATIC( QWIDGETITEM_DELETE )
 {
   QWidgetItem * obj = (QWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -106,7 +106,7 @@ HB_FUNC( QWIDGETITEM_DELETE )
 /*
 virtual Qt::Orientations expandingDirections () const
 */
-HB_FUNC( QWIDGETITEM_EXPANDINGDIRECTIONS )
+HB_FUNC_STATIC( QWIDGETITEM_EXPANDINGDIRECTIONS )
 {
   QWidgetItem * obj = (QWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -120,7 +120,7 @@ HB_FUNC( QWIDGETITEM_EXPANDINGDIRECTIONS )
 /*
 virtual QRect geometry () const
 */
-HB_FUNC( QWIDGETITEM_GEOMETRY )
+HB_FUNC_STATIC( QWIDGETITEM_GEOMETRY )
 {
   QWidgetItem * obj = (QWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -133,7 +133,7 @@ HB_FUNC( QWIDGETITEM_GEOMETRY )
 /*
 virtual bool hasHeightForWidth () const
 */
-HB_FUNC( QWIDGETITEM_HASHEIGHTFORWIDTH )
+HB_FUNC_STATIC( QWIDGETITEM_HASHEIGHTFORWIDTH )
 {
   QWidgetItem * obj = (QWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -147,7 +147,7 @@ HB_FUNC( QWIDGETITEM_HASHEIGHTFORWIDTH )
 /*
 virtual int heightForWidth ( int w ) const
 */
-HB_FUNC( QWIDGETITEM_HEIGHTFORWIDTH )
+HB_FUNC_STATIC( QWIDGETITEM_HEIGHTFORWIDTH )
 {
   QWidgetItem * obj = (QWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -162,7 +162,7 @@ HB_FUNC( QWIDGETITEM_HEIGHTFORWIDTH )
 /*
 virtual bool isEmpty () const
 */
-HB_FUNC( QWIDGETITEM_ISEMPTY )
+HB_FUNC_STATIC( QWIDGETITEM_ISEMPTY )
 {
   QWidgetItem * obj = (QWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -176,7 +176,7 @@ HB_FUNC( QWIDGETITEM_ISEMPTY )
 /*
 virtual QSize maximumSize () const
 */
-HB_FUNC( QWIDGETITEM_MAXIMUMSIZE )
+HB_FUNC_STATIC( QWIDGETITEM_MAXIMUMSIZE )
 {
   QWidgetItem * obj = (QWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -189,7 +189,7 @@ HB_FUNC( QWIDGETITEM_MAXIMUMSIZE )
 /*
 virtual QSize minimumSize () const
 */
-HB_FUNC( QWIDGETITEM_MINIMUMSIZE )
+HB_FUNC_STATIC( QWIDGETITEM_MINIMUMSIZE )
 {
   QWidgetItem * obj = (QWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -202,7 +202,7 @@ HB_FUNC( QWIDGETITEM_MINIMUMSIZE )
 /*
 virtual void setGeometry ( const QRect & rect )
 */
-HB_FUNC( QWIDGETITEM_SETGEOMETRY )
+HB_FUNC_STATIC( QWIDGETITEM_SETGEOMETRY )
 {
   QWidgetItem * obj = (QWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -217,7 +217,7 @@ HB_FUNC( QWIDGETITEM_SETGEOMETRY )
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC( QWIDGETITEM_SIZEHINT )
+HB_FUNC_STATIC( QWIDGETITEM_SIZEHINT )
 {
   QWidgetItem * obj = (QWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -230,7 +230,7 @@ HB_FUNC( QWIDGETITEM_SIZEHINT )
 /*
 virtual QWidget * widget ()
 */
-HB_FUNC( QWIDGETITEM_WIDGET )
+HB_FUNC_STATIC( QWIDGETITEM_WIDGET )
 {
   QWidgetItem * obj = (QWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

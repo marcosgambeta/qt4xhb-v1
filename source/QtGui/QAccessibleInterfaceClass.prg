@@ -75,7 +75,7 @@ RETURN
 #include "qt4xhb_clsid.h"
 #include "qt4xhb_utils.h"
 
-HB_FUNC( QACCESSIBLEINTERFACE_DELETE )
+HB_FUNC_STATIC( QACCESSIBLEINTERFACE_DELETE )
 {
   QAccessibleInterface * obj = (QAccessibleInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -94,7 +94,7 @@ HB_FUNC( QACCESSIBLEINTERFACE_DELETE )
 /*
 virtual QString actionText ( int action, Text t, int child ) const = 0
 */
-HB_FUNC( QACCESSIBLEINTERFACE_ACTIONTEXT )
+HB_FUNC_STATIC( QACCESSIBLEINTERFACE_ACTIONTEXT )
 {
   QAccessibleInterface * obj = (QAccessibleInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -111,7 +111,7 @@ HB_FUNC( QACCESSIBLEINTERFACE_ACTIONTEXT )
 /*
 virtual int childAt ( int x, int y ) const = 0
 */
-HB_FUNC( QACCESSIBLEINTERFACE_CHILDAT )
+HB_FUNC_STATIC( QACCESSIBLEINTERFACE_CHILDAT )
 {
   QAccessibleInterface * obj = (QAccessibleInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -127,7 +127,7 @@ HB_FUNC( QACCESSIBLEINTERFACE_CHILDAT )
 /*
 virtual int childCount () const = 0
 */
-HB_FUNC( QACCESSIBLEINTERFACE_CHILDCOUNT )
+HB_FUNC_STATIC( QACCESSIBLEINTERFACE_CHILDCOUNT )
 {
   QAccessibleInterface * obj = (QAccessibleInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -141,7 +141,7 @@ HB_FUNC( QACCESSIBLEINTERFACE_CHILDCOUNT )
 /*
 virtual bool doAction ( int action, int child, const QVariantList & params = QVariantList() ) = 0
 */
-HB_FUNC( QACCESSIBLEINTERFACE_DOACTION )
+HB_FUNC_STATIC( QACCESSIBLEINTERFACE_DOACTION )
 {
   QAccessibleInterface * obj = (QAccessibleInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -165,7 +165,7 @@ par3 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList3, 
 /*
 virtual int indexOfChild ( const QAccessibleInterface * child ) const = 0
 */
-HB_FUNC( QACCESSIBLEINTERFACE_INDEXOFCHILD )
+HB_FUNC_STATIC( QACCESSIBLEINTERFACE_INDEXOFCHILD )
 {
   QAccessibleInterface * obj = (QAccessibleInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -180,7 +180,7 @@ HB_FUNC( QACCESSIBLEINTERFACE_INDEXOFCHILD )
 /*
 QVariant invokeMethod ( Method method, int child = 0, const QVariantList & params = QVariantList() )
 */
-HB_FUNC( QACCESSIBLEINTERFACE_INVOKEMETHOD )
+HB_FUNC_STATIC( QACCESSIBLEINTERFACE_INVOKEMETHOD )
 {
   QAccessibleInterface * obj = (QAccessibleInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -203,7 +203,7 @@ par3 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList3, 
 /*
 virtual bool isValid () const = 0
 */
-HB_FUNC( QACCESSIBLEINTERFACE_ISVALID )
+HB_FUNC_STATIC( QACCESSIBLEINTERFACE_ISVALID )
 {
   QAccessibleInterface * obj = (QAccessibleInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -218,7 +218,7 @@ HB_FUNC( QACCESSIBLEINTERFACE_ISVALID )
 /*
 virtual QObject * object () const = 0
 */
-HB_FUNC( QACCESSIBLEINTERFACE_OBJECT )
+HB_FUNC_STATIC( QACCESSIBLEINTERFACE_OBJECT )
 {
   QAccessibleInterface * obj = (QAccessibleInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -231,7 +231,7 @@ HB_FUNC( QACCESSIBLEINTERFACE_OBJECT )
 /*
 virtual QRect rect ( int child ) const = 0
 */
-HB_FUNC( QACCESSIBLEINTERFACE_RECT )
+HB_FUNC_STATIC( QACCESSIBLEINTERFACE_RECT )
 {
   QAccessibleInterface * obj = (QAccessibleInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -245,7 +245,7 @@ HB_FUNC( QACCESSIBLEINTERFACE_RECT )
 /*
 virtual Relation relationTo ( int child, const QAccessibleInterface * other, int otherChild ) const = 0
 */
-HB_FUNC( QACCESSIBLEINTERFACE_RELATIONTO )
+HB_FUNC_STATIC( QACCESSIBLEINTERFACE_RELATIONTO )
 {
   QAccessibleInterface * obj = (QAccessibleInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -262,7 +262,7 @@ HB_FUNC( QACCESSIBLEINTERFACE_RELATIONTO )
 /*
 virtual Role role ( int child ) const = 0
 */
-HB_FUNC( QACCESSIBLEINTERFACE_ROLE )
+HB_FUNC_STATIC( QACCESSIBLEINTERFACE_ROLE )
 {
   QAccessibleInterface * obj = (QAccessibleInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -277,7 +277,7 @@ HB_FUNC( QACCESSIBLEINTERFACE_ROLE )
 /*
 virtual void setText ( Text t, int child, const QString & text ) = 0
 */
-HB_FUNC( QACCESSIBLEINTERFACE_SETTEXT )
+HB_FUNC_STATIC( QACCESSIBLEINTERFACE_SETTEXT )
 {
   QAccessibleInterface * obj = (QAccessibleInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -294,7 +294,7 @@ HB_FUNC( QACCESSIBLEINTERFACE_SETTEXT )
 /*
 virtual State state ( int child ) const = 0
 */
-HB_FUNC( QACCESSIBLEINTERFACE_STATE )
+HB_FUNC_STATIC( QACCESSIBLEINTERFACE_STATE )
 {
   QAccessibleInterface * obj = (QAccessibleInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -310,7 +310,7 @@ HB_FUNC( QACCESSIBLEINTERFACE_STATE )
 /*
 virtual QString text ( Text t, int child ) const = 0
 */
-HB_FUNC( QACCESSIBLEINTERFACE_TEXT )
+HB_FUNC_STATIC( QACCESSIBLEINTERFACE_TEXT )
 {
   QAccessibleInterface * obj = (QAccessibleInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -326,7 +326,7 @@ HB_FUNC( QACCESSIBLEINTERFACE_TEXT )
 /*
 virtual int userActionCount ( int child ) const = 0
 */
-HB_FUNC( QACCESSIBLEINTERFACE_USERACTIONCOUNT )
+HB_FUNC_STATIC( QACCESSIBLEINTERFACE_USERACTIONCOUNT )
 {
   QAccessibleInterface * obj = (QAccessibleInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

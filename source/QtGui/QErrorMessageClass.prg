@@ -66,7 +66,7 @@ RETURN
 /*
 QErrorMessage ( QWidget * parent = 0 )
 */
-HB_FUNC( QERRORMESSAGE_NEW )
+HB_FUNC_STATIC( QERRORMESSAGE_NEW )
 {
   QErrorMessage * o = NULL;
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -79,7 +79,7 @@ HB_FUNC( QERRORMESSAGE_NEW )
 }
 
 
-HB_FUNC( QERRORMESSAGE_DELETE )
+HB_FUNC_STATIC( QERRORMESSAGE_DELETE )
 {
   QErrorMessage * obj = (QErrorMessage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -98,7 +98,7 @@ HB_FUNC( QERRORMESSAGE_DELETE )
 /*
 void showMessage ( const QString & message )
 */
-HB_FUNC( QERRORMESSAGE_SHOWMESSAGE1 )
+HB_FUNC_STATIC( QERRORMESSAGE_SHOWMESSAGE1 )
 {
   QErrorMessage * obj = (QErrorMessage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -113,7 +113,7 @@ HB_FUNC( QERRORMESSAGE_SHOWMESSAGE1 )
 /*
 void showMessage ( const QString & message, const QString & type )
 */
-HB_FUNC( QERRORMESSAGE_SHOWMESSAGE2 )
+HB_FUNC_STATIC( QERRORMESSAGE_SHOWMESSAGE2 )
 {
   QErrorMessage * obj = (QErrorMessage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -129,7 +129,7 @@ HB_FUNC( QERRORMESSAGE_SHOWMESSAGE2 )
 //[1]void showMessage ( const QString & message )
 //[2]void showMessage ( const QString & message, const QString & type )
 
-HB_FUNC( QERRORMESSAGE_SHOWMESSAGE )
+HB_FUNC_STATIC( QERRORMESSAGE_SHOWMESSAGE )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
@@ -145,7 +145,7 @@ HB_FUNC( QERRORMESSAGE_SHOWMESSAGE )
 /*
 QErrorMessage * qtHandler ()
 */
-HB_FUNC( QERRORMESSAGE_QTHANDLER )
+HB_FUNC_STATIC( QERRORMESSAGE_QTHANDLER )
 {
   QErrorMessage * ptr = QErrorMessage::qtHandler (  );
   _qt4xhb_createReturnClass ( ptr, "QERRORMESSAGE" );}

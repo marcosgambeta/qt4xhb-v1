@@ -65,7 +65,7 @@ RETURN
 /*
 QExtensionFactory ( QExtensionManager * parent = 0 )
 */
-HB_FUNC( QEXTENSIONFACTORY_NEW )
+HB_FUNC_STATIC( QEXTENSIONFACTORY_NEW )
 {
   QExtensionFactory * o = NULL;
   QExtensionManager * par1 = ISNIL(1)? 0 : (QExtensionManager *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -78,7 +78,7 @@ HB_FUNC( QEXTENSIONFACTORY_NEW )
 }
 
 
-HB_FUNC( QEXTENSIONFACTORY_DELETE )
+HB_FUNC_STATIC( QEXTENSIONFACTORY_DELETE )
 {
   QExtensionFactory * obj = (QExtensionFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -97,7 +97,7 @@ HB_FUNC( QEXTENSIONFACTORY_DELETE )
 /*
 QExtensionManager * extensionManager () const
 */
-HB_FUNC( QEXTENSIONFACTORY_EXTENSIONMANAGER )
+HB_FUNC_STATIC( QEXTENSIONFACTORY_EXTENSIONMANAGER )
 {
   QExtensionFactory * obj = (QExtensionFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -110,7 +110,7 @@ HB_FUNC( QEXTENSIONFACTORY_EXTENSIONMANAGER )
 /*
 virtual QObject * extension ( QObject * object, const QString & iid ) const
 */
-HB_FUNC( QEXTENSIONFACTORY_EXTENSION )
+HB_FUNC_STATIC( QEXTENSIONFACTORY_EXTENSION )
 {
   QExtensionFactory * obj = (QExtensionFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

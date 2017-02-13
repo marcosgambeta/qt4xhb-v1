@@ -101,7 +101,7 @@ RETURN
 /*
 QFileIconProvider()
 */
-HB_FUNC( QFILEICONPROVIDER_NEW )
+HB_FUNC_STATIC( QFILEICONPROVIDER_NEW )
 {
   QFileIconProvider * o = NULL;
   o = new QFileIconProvider (  );
@@ -113,7 +113,7 @@ HB_FUNC( QFILEICONPROVIDER_NEW )
 }
 
 
-HB_FUNC( QFILEICONPROVIDER_DELETE )
+HB_FUNC_STATIC( QFILEICONPROVIDER_DELETE )
 {
   QFileIconProvider * obj = (QFileIconProvider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -132,7 +132,7 @@ HB_FUNC( QFILEICONPROVIDER_DELETE )
 /*
 virtual QIcon icon(IconType type) const
 */
-HB_FUNC( QFILEICONPROVIDER_ICON1 )
+HB_FUNC_STATIC( QFILEICONPROVIDER_ICON1 )
 {
   QFileIconProvider * obj = (QFileIconProvider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -146,7 +146,7 @@ HB_FUNC( QFILEICONPROVIDER_ICON1 )
 /*
 virtual QIcon icon(const QFileInfo & info) const
 */
-HB_FUNC( QFILEICONPROVIDER_ICON2 )
+HB_FUNC_STATIC( QFILEICONPROVIDER_ICON2 )
 {
   QFileIconProvider * obj = (QFileIconProvider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -160,7 +160,7 @@ HB_FUNC( QFILEICONPROVIDER_ICON2 )
 //[1]virtual QIcon icon(IconType type) const
 //[2]virtual QIcon icon(const QFileInfo & info) const
 
-HB_FUNC( QFILEICONPROVIDER_ICON )
+HB_FUNC_STATIC( QFILEICONPROVIDER_ICON )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
@@ -175,7 +175,7 @@ HB_FUNC( QFILEICONPROVIDER_ICON )
 /*
 virtual QString type(const QFileInfo & info) const
 */
-HB_FUNC( QFILEICONPROVIDER_TYPE )
+HB_FUNC_STATIC( QFILEICONPROVIDER_TYPE )
 {
   QFileIconProvider * obj = (QFileIconProvider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

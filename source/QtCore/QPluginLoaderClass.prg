@@ -73,7 +73,7 @@ RETURN
 /*
 QPluginLoader ( QObject * parent = 0 )
 */
-HB_FUNC( QPLUGINLOADER_NEW1 )
+HB_FUNC_STATIC( QPLUGINLOADER_NEW1 )
 {
   QPluginLoader * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -89,7 +89,7 @@ HB_FUNC( QPLUGINLOADER_NEW1 )
 /*
 QPluginLoader ( const QString & fileName, QObject * parent = 0 )
 */
-HB_FUNC( QPLUGINLOADER_NEW2 )
+HB_FUNC_STATIC( QPLUGINLOADER_NEW2 )
 {
   QPluginLoader * o = NULL;
   QString par1 = hb_parc(1);
@@ -106,7 +106,7 @@ HB_FUNC( QPLUGINLOADER_NEW2 )
 //[1]QPluginLoader ( QObject * parent = 0 )
 //[2]QPluginLoader ( const QString & fileName, QObject * parent = 0 )
 
-HB_FUNC( QPLUGINLOADER_NEW )
+HB_FUNC_STATIC( QPLUGINLOADER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
@@ -122,7 +122,7 @@ HB_FUNC( QPLUGINLOADER_NEW )
   }
 }
 
-HB_FUNC( QPLUGINLOADER_DELETE )
+HB_FUNC_STATIC( QPLUGINLOADER_DELETE )
 {
   QPluginLoader * obj = (QPluginLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -142,7 +142,7 @@ HB_FUNC( QPLUGINLOADER_DELETE )
 /*
 QString errorString () const
 */
-HB_FUNC( QPLUGINLOADER_ERRORSTRING )
+HB_FUNC_STATIC( QPLUGINLOADER_ERRORSTRING )
 {
   QPluginLoader * obj = (QPluginLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -156,7 +156,7 @@ HB_FUNC( QPLUGINLOADER_ERRORSTRING )
 /*
 QString fileName () const
 */
-HB_FUNC( QPLUGINLOADER_FILENAME )
+HB_FUNC_STATIC( QPLUGINLOADER_FILENAME )
 {
   QPluginLoader * obj = (QPluginLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -170,7 +170,7 @@ HB_FUNC( QPLUGINLOADER_FILENAME )
 /*
 QObject * instance ()
 */
-HB_FUNC( QPLUGINLOADER_INSTANCE )
+HB_FUNC_STATIC( QPLUGINLOADER_INSTANCE )
 {
   QPluginLoader * obj = (QPluginLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -183,7 +183,7 @@ HB_FUNC( QPLUGINLOADER_INSTANCE )
 /*
 bool isLoaded () const
 */
-HB_FUNC( QPLUGINLOADER_ISLOADED )
+HB_FUNC_STATIC( QPLUGINLOADER_ISLOADED )
 {
   QPluginLoader * obj = (QPluginLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -197,7 +197,7 @@ HB_FUNC( QPLUGINLOADER_ISLOADED )
 /*
 bool load ()
 */
-HB_FUNC( QPLUGINLOADER_LOAD )
+HB_FUNC_STATIC( QPLUGINLOADER_LOAD )
 {
   QPluginLoader * obj = (QPluginLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -211,7 +211,7 @@ HB_FUNC( QPLUGINLOADER_LOAD )
 /*
 QLibrary::LoadHints loadHints () const
 */
-HB_FUNC( QPLUGINLOADER_LOADHINTS )
+HB_FUNC_STATIC( QPLUGINLOADER_LOADHINTS )
 {
   QPluginLoader * obj = (QPluginLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -225,7 +225,7 @@ HB_FUNC( QPLUGINLOADER_LOADHINTS )
 /*
 void setFileName ( const QString & fileName )
 */
-HB_FUNC( QPLUGINLOADER_SETFILENAME )
+HB_FUNC_STATIC( QPLUGINLOADER_SETFILENAME )
 {
   QPluginLoader * obj = (QPluginLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -240,7 +240,7 @@ HB_FUNC( QPLUGINLOADER_SETFILENAME )
 /*
 void setLoadHints ( QLibrary::LoadHints loadHints )
 */
-HB_FUNC( QPLUGINLOADER_SETLOADHINTS )
+HB_FUNC_STATIC( QPLUGINLOADER_SETLOADHINTS )
 {
   QPluginLoader * obj = (QPluginLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -255,7 +255,7 @@ HB_FUNC( QPLUGINLOADER_SETLOADHINTS )
 /*
 bool unload ()
 */
-HB_FUNC( QPLUGINLOADER_UNLOAD )
+HB_FUNC_STATIC( QPLUGINLOADER_UNLOAD )
 {
   QPluginLoader * obj = (QPluginLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

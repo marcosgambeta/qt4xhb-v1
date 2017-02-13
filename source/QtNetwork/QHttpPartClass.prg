@@ -102,7 +102,7 @@ RETURN
 /*
 QHttpPart ()
 */
-HB_FUNC( QHTTPPART_NEW1 )
+HB_FUNC_STATIC( QHTTPPART_NEW1 )
 {
   QHttpPart * o = NULL;
   o = new QHttpPart (  );
@@ -120,7 +120,7 @@ HB_FUNC( QHTTPPART_NEW1 )
 /*
 QHttpPart ( const QHttpPart & other )
 */
-HB_FUNC( QHTTPPART_NEW2 )
+HB_FUNC_STATIC( QHTTPPART_NEW2 )
 {
   QHttpPart * o = NULL;
   QHttpPart * par1 = (QHttpPart *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -139,7 +139,7 @@ HB_FUNC( QHTTPPART_NEW2 )
 //[1]QHttpPart ()
 //[2]QHttpPart ( const QHttpPart & other )
 
-HB_FUNC( QHTTPPART_NEW )
+HB_FUNC_STATIC( QHTTPPART_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -155,7 +155,7 @@ HB_FUNC( QHTTPPART_NEW )
   }
 }
 
-HB_FUNC( QHTTPPART_DELETE )
+HB_FUNC_STATIC( QHTTPPART_DELETE )
 {
   QHttpPart * obj = (QHttpPart *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -174,7 +174,7 @@ HB_FUNC( QHTTPPART_DELETE )
 /*
 void setBody ( const QByteArray & body )
 */
-HB_FUNC( QHTTPPART_SETBODY )
+HB_FUNC_STATIC( QHTTPPART_SETBODY )
 {
   QHttpPart * obj = (QHttpPart *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -189,7 +189,7 @@ HB_FUNC( QHTTPPART_SETBODY )
 /*
 void setBodyDevice ( QIODevice * device )
 */
-HB_FUNC( QHTTPPART_SETBODYDEVICE )
+HB_FUNC_STATIC( QHTTPPART_SETBODYDEVICE )
 {
   QHttpPart * obj = (QHttpPart *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -204,7 +204,7 @@ HB_FUNC( QHTTPPART_SETBODYDEVICE )
 /*
 void setHeader ( QNetworkRequest::KnownHeaders header, const QVariant & value )
 */
-HB_FUNC( QHTTPPART_SETHEADER )
+HB_FUNC_STATIC( QHTTPPART_SETHEADER )
 {
   QHttpPart * obj = (QHttpPart *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -220,7 +220,7 @@ HB_FUNC( QHTTPPART_SETHEADER )
 /*
 void setRawHeader ( const QByteArray & headerName, const QByteArray & headerValue )
 */
-HB_FUNC( QHTTPPART_SETRAWHEADER )
+HB_FUNC_STATIC( QHTTPPART_SETRAWHEADER )
 {
   QHttpPart * obj = (QHttpPart *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

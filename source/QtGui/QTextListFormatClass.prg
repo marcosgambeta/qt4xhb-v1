@@ -69,7 +69,7 @@ RETURN
 /*
 QTextListFormat ()
 */
-HB_FUNC( QTEXTLISTFORMAT_NEW )
+HB_FUNC_STATIC( QTEXTLISTFORMAT_NEW )
 {
   QTextListFormat * o = NULL;
   o = new QTextListFormat (  );
@@ -81,7 +81,7 @@ HB_FUNC( QTEXTLISTFORMAT_NEW )
 }
 
 
-HB_FUNC( QTEXTLISTFORMAT_DELETE )
+HB_FUNC_STATIC( QTEXTLISTFORMAT_DELETE )
 {
   QTextListFormat * obj = (QTextListFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -100,7 +100,7 @@ HB_FUNC( QTEXTLISTFORMAT_DELETE )
 /*
 int indent () const
 */
-HB_FUNC( QTEXTLISTFORMAT_INDENT )
+HB_FUNC_STATIC( QTEXTLISTFORMAT_INDENT )
 {
   QTextListFormat * obj = (QTextListFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -114,7 +114,7 @@ HB_FUNC( QTEXTLISTFORMAT_INDENT )
 /*
 bool isValid () const
 */
-HB_FUNC( QTEXTLISTFORMAT_ISVALID )
+HB_FUNC_STATIC( QTEXTLISTFORMAT_ISVALID )
 {
   QTextListFormat * obj = (QTextListFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -128,7 +128,7 @@ HB_FUNC( QTEXTLISTFORMAT_ISVALID )
 /*
 QString numberPrefix () const
 */
-HB_FUNC( QTEXTLISTFORMAT_NUMBERPREFIX )
+HB_FUNC_STATIC( QTEXTLISTFORMAT_NUMBERPREFIX )
 {
   QTextListFormat * obj = (QTextListFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -142,7 +142,7 @@ HB_FUNC( QTEXTLISTFORMAT_NUMBERPREFIX )
 /*
 QString numberSuffix () const
 */
-HB_FUNC( QTEXTLISTFORMAT_NUMBERSUFFIX )
+HB_FUNC_STATIC( QTEXTLISTFORMAT_NUMBERSUFFIX )
 {
   QTextListFormat * obj = (QTextListFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -156,7 +156,7 @@ HB_FUNC( QTEXTLISTFORMAT_NUMBERSUFFIX )
 /*
 void setIndent ( int indentation )
 */
-HB_FUNC( QTEXTLISTFORMAT_SETINDENT )
+HB_FUNC_STATIC( QTEXTLISTFORMAT_SETINDENT )
 {
   QTextListFormat * obj = (QTextListFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -171,7 +171,7 @@ HB_FUNC( QTEXTLISTFORMAT_SETINDENT )
 /*
 void setNumberPrefix ( const QString & numberPrefix )
 */
-HB_FUNC( QTEXTLISTFORMAT_SETNUMBERPREFIX )
+HB_FUNC_STATIC( QTEXTLISTFORMAT_SETNUMBERPREFIX )
 {
   QTextListFormat * obj = (QTextListFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -186,7 +186,7 @@ HB_FUNC( QTEXTLISTFORMAT_SETNUMBERPREFIX )
 /*
 void setNumberSuffix ( const QString & numberSuffix )
 */
-HB_FUNC( QTEXTLISTFORMAT_SETNUMBERSUFFIX )
+HB_FUNC_STATIC( QTEXTLISTFORMAT_SETNUMBERSUFFIX )
 {
   QTextListFormat * obj = (QTextListFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -201,7 +201,7 @@ HB_FUNC( QTEXTLISTFORMAT_SETNUMBERSUFFIX )
 /*
 void setStyle ( Style style )
 */
-HB_FUNC( QTEXTLISTFORMAT_SETSTYLE )
+HB_FUNC_STATIC( QTEXTLISTFORMAT_SETSTYLE )
 {
   QTextListFormat * obj = (QTextListFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -216,7 +216,7 @@ HB_FUNC( QTEXTLISTFORMAT_SETSTYLE )
 /*
 Style style () const
 */
-HB_FUNC( QTEXTLISTFORMAT_STYLE )
+HB_FUNC_STATIC( QTEXTLISTFORMAT_STYLE )
 {
   QTextListFormat * obj = (QTextListFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

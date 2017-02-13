@@ -63,7 +63,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 
-HB_FUNC( QVALIDATOR_DELETE )
+HB_FUNC_STATIC( QVALIDATOR_DELETE )
 {
   QValidator * obj = (QValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -82,7 +82,7 @@ HB_FUNC( QVALIDATOR_DELETE )
 /*
 virtual void fixup ( QString & input ) const
 */
-HB_FUNC( QVALIDATOR_FIXUP )
+HB_FUNC_STATIC( QVALIDATOR_FIXUP )
 {
   QValidator * obj = (QValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -97,7 +97,7 @@ HB_FUNC( QVALIDATOR_FIXUP )
 /*
 QLocale locale () const
 */
-HB_FUNC( QVALIDATOR_LOCALE )
+HB_FUNC_STATIC( QVALIDATOR_LOCALE )
 {
   QValidator * obj = (QValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -110,7 +110,7 @@ HB_FUNC( QVALIDATOR_LOCALE )
 /*
 void setLocale ( const QLocale & locale )
 */
-HB_FUNC( QVALIDATOR_SETLOCALE )
+HB_FUNC_STATIC( QVALIDATOR_SETLOCALE )
 {
   QValidator * obj = (QValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -125,7 +125,7 @@ HB_FUNC( QVALIDATOR_SETLOCALE )
 /*
 virtual State validate ( QString & input, int & pos ) const = 0
 */
-HB_FUNC( QVALIDATOR_VALIDATE )
+HB_FUNC_STATIC( QVALIDATOR_VALIDATE )
 {
   QValidator * obj = (QValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

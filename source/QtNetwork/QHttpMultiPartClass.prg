@@ -68,7 +68,7 @@ RETURN
 /*
 QHttpMultiPart ( QObject * parent = 0 )
 */
-HB_FUNC( QHTTPMULTIPART_NEW1 )
+HB_FUNC_STATIC( QHTTPMULTIPART_NEW1 )
 {
   QHttpMultiPart * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -84,7 +84,7 @@ HB_FUNC( QHTTPMULTIPART_NEW1 )
 /*
 QHttpMultiPart ( ContentType contentType, QObject * parent = 0 )
 */
-HB_FUNC( QHTTPMULTIPART_NEW2 )
+HB_FUNC_STATIC( QHTTPMULTIPART_NEW2 )
 {
   QHttpMultiPart * o = NULL;
   int par1 = hb_parni(1);
@@ -101,7 +101,7 @@ HB_FUNC( QHTTPMULTIPART_NEW2 )
 //[1]QHttpMultiPart ( QObject * parent = 0 )
 //[2]QHttpMultiPart ( ContentType contentType, QObject * parent = 0 )
 
-HB_FUNC( QHTTPMULTIPART_NEW )
+HB_FUNC_STATIC( QHTTPMULTIPART_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
@@ -117,7 +117,7 @@ HB_FUNC( QHTTPMULTIPART_NEW )
   }
 }
 
-HB_FUNC( QHTTPMULTIPART_DELETE )
+HB_FUNC_STATIC( QHTTPMULTIPART_DELETE )
 {
   QHttpMultiPart * obj = (QHttpMultiPart *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -136,7 +136,7 @@ HB_FUNC( QHTTPMULTIPART_DELETE )
 /*
 void append ( const QHttpPart & httpPart )
 */
-HB_FUNC( QHTTPMULTIPART_APPEND )
+HB_FUNC_STATIC( QHTTPMULTIPART_APPEND )
 {
   QHttpMultiPart * obj = (QHttpMultiPart *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -151,7 +151,7 @@ HB_FUNC( QHTTPMULTIPART_APPEND )
 /*
 QByteArray boundary () const
 */
-HB_FUNC( QHTTPMULTIPART_BOUNDARY )
+HB_FUNC_STATIC( QHTTPMULTIPART_BOUNDARY )
 {
   QHttpMultiPart * obj = (QHttpMultiPart *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -164,7 +164,7 @@ HB_FUNC( QHTTPMULTIPART_BOUNDARY )
 /*
 void setBoundary ( const QByteArray & boundary )
 */
-HB_FUNC( QHTTPMULTIPART_SETBOUNDARY )
+HB_FUNC_STATIC( QHTTPMULTIPART_SETBOUNDARY )
 {
   QHttpMultiPart * obj = (QHttpMultiPart *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -179,7 +179,7 @@ HB_FUNC( QHTTPMULTIPART_SETBOUNDARY )
 /*
 void setContentType ( ContentType contentType )
 */
-HB_FUNC( QHTTPMULTIPART_SETCONTENTTYPE )
+HB_FUNC_STATIC( QHTTPMULTIPART_SETCONTENTTYPE )
 {
   QHttpMultiPart * obj = (QHttpMultiPart *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

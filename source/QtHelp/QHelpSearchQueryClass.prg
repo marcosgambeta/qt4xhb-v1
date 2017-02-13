@@ -96,7 +96,7 @@ RETURN
 /*
 QHelpSearchQuery ()
 */
-HB_FUNC( QHELPSEARCHQUERY_NEW1 )
+HB_FUNC_STATIC( QHELPSEARCHQUERY_NEW1 )
 {
   QHelpSearchQuery * o = NULL;
   o = new QHelpSearchQuery (  );
@@ -111,7 +111,7 @@ HB_FUNC( QHELPSEARCHQUERY_NEW1 )
 /*
 QHelpSearchQuery ( FieldName field, const QStringList & wordList )
 */
-HB_FUNC( QHELPSEARCHQUERY_NEW2 )
+HB_FUNC_STATIC( QHELPSEARCHQUERY_NEW2 )
 {
   QHelpSearchQuery * o = NULL;
   int par1 = hb_parni(1);
@@ -136,7 +136,7 @@ par2 << temp;
 //[1]QHelpSearchQuery ()
 //[2]QHelpSearchQuery ( FieldName field, const QStringList & wordList )
 
-HB_FUNC( QHELPSEARCHQUERY_NEW )
+HB_FUNC_STATIC( QHELPSEARCHQUERY_NEW )
 {
   if( ISNUMPAR(0) )
   {

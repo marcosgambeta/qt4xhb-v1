@@ -118,7 +118,7 @@ RETURN
 /*
 QHostAddress ()
 */
-HB_FUNC( QHOSTADDRESS_NEW1 )
+HB_FUNC_STATIC( QHOSTADDRESS_NEW1 )
 {
   QHostAddress * o = NULL;
   o = new QHostAddress (  );
@@ -136,7 +136,7 @@ HB_FUNC( QHOSTADDRESS_NEW1 )
 /*
 QHostAddress ( quint32 ip4Addr )
 */
-HB_FUNC( QHOSTADDRESS_NEW2 )
+HB_FUNC_STATIC( QHOSTADDRESS_NEW2 )
 {
   QHostAddress * o = NULL;
   quint32 par1 = hb_parni(1);
@@ -158,7 +158,7 @@ HB_FUNC( QHOSTADDRESS_NEW2 )
 /*
 QHostAddress ( const QString & address )
 */
-HB_FUNC( QHOSTADDRESS_NEW6 )
+HB_FUNC_STATIC( QHOSTADDRESS_NEW6 )
 {
   QHostAddress * o = NULL;
   QString par1 = hb_parc(1);
@@ -177,7 +177,7 @@ HB_FUNC( QHOSTADDRESS_NEW6 )
 /*
 QHostAddress ( const QHostAddress & address )
 */
-HB_FUNC( QHOSTADDRESS_NEW7 )
+HB_FUNC_STATIC( QHOSTADDRESS_NEW7 )
 {
   QHostAddress * o = NULL;
   QHostAddress * par1 = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -196,7 +196,7 @@ HB_FUNC( QHOSTADDRESS_NEW7 )
 /*
 QHostAddress ( SpecialAddress address )
 */
-HB_FUNC( QHOSTADDRESS_NEW8 )
+HB_FUNC_STATIC( QHOSTADDRESS_NEW8 )
 {
   QHostAddress * o = NULL;
   int par1 = hb_parni(1);
@@ -221,7 +221,7 @@ HB_FUNC( QHOSTADDRESS_NEW8 )
 //[7]QHostAddress ( const QHostAddress & address )
 //[8]QHostAddress ( SpecialAddress address )
 
-HB_FUNC( QHOSTADDRESS_NEW )
+HB_FUNC_STATIC( QHOSTADDRESS_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -249,7 +249,7 @@ HB_FUNC( QHOSTADDRESS_NEW )
   }
 }
 
-HB_FUNC( QHOSTADDRESS_DELETE )
+HB_FUNC_STATIC( QHOSTADDRESS_DELETE )
 {
   QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -268,7 +268,7 @@ HB_FUNC( QHOSTADDRESS_DELETE )
 /*
 void clear ()
 */
-HB_FUNC( QHOSTADDRESS_CLEAR )
+HB_FUNC_STATIC( QHOSTADDRESS_CLEAR )
 {
   QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -282,7 +282,7 @@ HB_FUNC( QHOSTADDRESS_CLEAR )
 /*
 bool isInSubnet ( const QHostAddress & subnet, int netmask ) const
 */
-HB_FUNC( QHOSTADDRESS_ISINSUBNET1 )
+HB_FUNC_STATIC( QHOSTADDRESS_ISINSUBNET1 )
 {
   QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -300,7 +300,7 @@ HB_FUNC( QHOSTADDRESS_ISINSUBNET1 )
 //[1]bool isInSubnet ( const QHostAddress & subnet, int netmask ) const
 //[2]bool isInSubnet ( const QPair<QHostAddress, int> & subnet ) const
 
-HB_FUNC( QHOSTADDRESS_ISINSUBNET )
+HB_FUNC_STATIC( QHOSTADDRESS_ISINSUBNET )
 {
   if( ISNUMPAR(2) && ISQHOSTADDRESS(1) && ISNUM(2) )
   {
@@ -315,7 +315,7 @@ HB_FUNC( QHOSTADDRESS_ISINSUBNET )
 /*
 bool isNull () const
 */
-HB_FUNC( QHOSTADDRESS_ISNULL )
+HB_FUNC_STATIC( QHOSTADDRESS_ISNULL )
 {
   QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -329,7 +329,7 @@ HB_FUNC( QHOSTADDRESS_ISNULL )
 /*
 QAbstractSocket::NetworkLayerProtocol protocol () const
 */
-HB_FUNC( QHOSTADDRESS_PROTOCOL )
+HB_FUNC_STATIC( QHOSTADDRESS_PROTOCOL )
 {
   QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -343,7 +343,7 @@ HB_FUNC( QHOSTADDRESS_PROTOCOL )
 /*
 QString scopeId () const
 */
-HB_FUNC( QHOSTADDRESS_SCOPEID )
+HB_FUNC_STATIC( QHOSTADDRESS_SCOPEID )
 {
   QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -357,7 +357,7 @@ HB_FUNC( QHOSTADDRESS_SCOPEID )
 /*
 void setAddress ( quint32 ip4Addr )
 */
-HB_FUNC( QHOSTADDRESS_SETADDRESS1 )
+HB_FUNC_STATIC( QHOSTADDRESS_SETADDRESS1 )
 {
   QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -372,7 +372,7 @@ HB_FUNC( QHOSTADDRESS_SETADDRESS1 )
 /*
 void setAddress ( quint8 * ip6Addr )
 */
-HB_FUNC( QHOSTADDRESS_SETADDRESS2 )
+HB_FUNC_STATIC( QHOSTADDRESS_SETADDRESS2 )
 {
   QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -388,7 +388,7 @@ HB_FUNC( QHOSTADDRESS_SETADDRESS2 )
 /*
 bool setAddress ( const QString & address )
 */
-HB_FUNC( QHOSTADDRESS_SETADDRESS4 )
+HB_FUNC_STATIC( QHOSTADDRESS_SETADDRESS4 )
 {
   QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -403,7 +403,7 @@ HB_FUNC( QHOSTADDRESS_SETADDRESS4 )
 /*
 void setAddress ( const sockaddr * sockaddr )
 */
-HB_FUNC( QHOSTADDRESS_SETADDRESS5 )
+HB_FUNC_STATIC( QHOSTADDRESS_SETADDRESS5 )
 {
   QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -422,7 +422,7 @@ HB_FUNC( QHOSTADDRESS_SETADDRESS5 )
 //[5]void setAddress ( const sockaddr * sockaddr )
 
 // TODO: completar implementação
-HB_FUNC( QHOSTADDRESS_SETADDRESS )
+HB_FUNC_STATIC( QHOSTADDRESS_SETADDRESS )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
@@ -437,7 +437,7 @@ HB_FUNC( QHOSTADDRESS_SETADDRESS )
 /*
 void setScopeId ( const QString & id )
 */
-HB_FUNC( QHOSTADDRESS_SETSCOPEID )
+HB_FUNC_STATIC( QHOSTADDRESS_SETSCOPEID )
 {
   QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -452,7 +452,7 @@ HB_FUNC( QHOSTADDRESS_SETSCOPEID )
 /*
 quint32 toIPv4Address () const
 */
-HB_FUNC( QHOSTADDRESS_TOIPV4ADDRESS )
+HB_FUNC_STATIC( QHOSTADDRESS_TOIPV4ADDRESS )
 {
   QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -466,7 +466,7 @@ HB_FUNC( QHOSTADDRESS_TOIPV4ADDRESS )
 /*
 Q_IPV6ADDR toIPv6Address () const
 */
-HB_FUNC( QHOSTADDRESS_TOIPV6ADDRESS )
+HB_FUNC_STATIC( QHOSTADDRESS_TOIPV6ADDRESS )
 {
   QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -479,7 +479,7 @@ HB_FUNC( QHOSTADDRESS_TOIPV6ADDRESS )
 /*
 QString toString () const
 */
-HB_FUNC( QHOSTADDRESS_TOSTRING )
+HB_FUNC_STATIC( QHOSTADDRESS_TOSTRING )
 {
   QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

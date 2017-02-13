@@ -102,7 +102,7 @@ RETURN
 /*
 QAbstractFormBuilder ()
 */
-HB_FUNC( QABSTRACTFORMBUILDER_NEW )
+HB_FUNC_STATIC( QABSTRACTFORMBUILDER_NEW )
 {
   QAbstractFormBuilder * o = NULL;
   o = new QAbstractFormBuilder (  );
@@ -114,7 +114,7 @@ HB_FUNC( QABSTRACTFORMBUILDER_NEW )
 }
 
 
-HB_FUNC( QABSTRACTFORMBUILDER_DELETE )
+HB_FUNC_STATIC( QABSTRACTFORMBUILDER_DELETE )
 {
   QAbstractFormBuilder * obj = (QAbstractFormBuilder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -133,7 +133,7 @@ HB_FUNC( QABSTRACTFORMBUILDER_DELETE )
 /*
 virtual QWidget * load ( QIODevice * device, QWidget * parent = 0 )
 */
-HB_FUNC( QABSTRACTFORMBUILDER_LOAD )
+HB_FUNC_STATIC( QABSTRACTFORMBUILDER_LOAD )
 {
   QAbstractFormBuilder * obj = (QAbstractFormBuilder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -148,7 +148,7 @@ HB_FUNC( QABSTRACTFORMBUILDER_LOAD )
 /*
 virtual void save ( QIODevice * device, QWidget * widget )
 */
-HB_FUNC( QABSTRACTFORMBUILDER_SAVE )
+HB_FUNC_STATIC( QABSTRACTFORMBUILDER_SAVE )
 {
   QAbstractFormBuilder * obj = (QAbstractFormBuilder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -164,7 +164,7 @@ HB_FUNC( QABSTRACTFORMBUILDER_SAVE )
 /*
 void setWorkingDirectory ( const QDir & directory )
 */
-HB_FUNC( QABSTRACTFORMBUILDER_SETWORKINGDIRECTORY )
+HB_FUNC_STATIC( QABSTRACTFORMBUILDER_SETWORKINGDIRECTORY )
 {
   QAbstractFormBuilder * obj = (QAbstractFormBuilder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -179,7 +179,7 @@ HB_FUNC( QABSTRACTFORMBUILDER_SETWORKINGDIRECTORY )
 /*
 QDir workingDirectory () const
 */
-HB_FUNC( QABSTRACTFORMBUILDER_WORKINGDIRECTORY )
+HB_FUNC_STATIC( QABSTRACTFORMBUILDER_WORKINGDIRECTORY )
 {
   QAbstractFormBuilder * obj = (QAbstractFormBuilder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

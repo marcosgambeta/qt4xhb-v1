@@ -98,7 +98,7 @@ RETURN
 /*
 QNetworkAccessManager ( QObject * parent = 0 )
 */
-HB_FUNC( QNETWORKACCESSMANAGER_NEW )
+HB_FUNC_STATIC( QNETWORKACCESSMANAGER_NEW )
 {
   QNetworkAccessManager * o = NULL;
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -111,7 +111,7 @@ HB_FUNC( QNETWORKACCESSMANAGER_NEW )
 }
 
 
-HB_FUNC( QNETWORKACCESSMANAGER_DELETE )
+HB_FUNC_STATIC( QNETWORKACCESSMANAGER_DELETE )
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -130,7 +130,7 @@ HB_FUNC( QNETWORKACCESSMANAGER_DELETE )
 /*
 QNetworkConfiguration activeConfiguration () const
 */
-HB_FUNC( QNETWORKACCESSMANAGER_ACTIVECONFIGURATION )
+HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ACTIVECONFIGURATION )
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -143,7 +143,7 @@ HB_FUNC( QNETWORKACCESSMANAGER_ACTIVECONFIGURATION )
 /*
 QAbstractNetworkCache * cache () const
 */
-HB_FUNC( QNETWORKACCESSMANAGER_CACHE )
+HB_FUNC_STATIC( QNETWORKACCESSMANAGER_CACHE )
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -156,7 +156,7 @@ HB_FUNC( QNETWORKACCESSMANAGER_CACHE )
 /*
 QNetworkConfiguration configuration () const
 */
-HB_FUNC( QNETWORKACCESSMANAGER_CONFIGURATION )
+HB_FUNC_STATIC( QNETWORKACCESSMANAGER_CONFIGURATION )
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -169,7 +169,7 @@ HB_FUNC( QNETWORKACCESSMANAGER_CONFIGURATION )
 /*
 QNetworkCookieJar * cookieJar () const
 */
-HB_FUNC( QNETWORKACCESSMANAGER_COOKIEJAR )
+HB_FUNC_STATIC( QNETWORKACCESSMANAGER_COOKIEJAR )
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -182,7 +182,7 @@ HB_FUNC( QNETWORKACCESSMANAGER_COOKIEJAR )
 /*
 QNetworkReply * deleteResource ( const QNetworkRequest & request )
 */
-HB_FUNC( QNETWORKACCESSMANAGER_DELETERESOURCE )
+HB_FUNC_STATIC( QNETWORKACCESSMANAGER_DELETERESOURCE )
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -196,7 +196,7 @@ HB_FUNC( QNETWORKACCESSMANAGER_DELETERESOURCE )
 /*
 QNetworkReply * get ( const QNetworkRequest & request )
 */
-HB_FUNC( QNETWORKACCESSMANAGER_GET )
+HB_FUNC_STATIC( QNETWORKACCESSMANAGER_GET )
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -210,7 +210,7 @@ HB_FUNC( QNETWORKACCESSMANAGER_GET )
 /*
 QNetworkReply * head ( const QNetworkRequest & request )
 */
-HB_FUNC( QNETWORKACCESSMANAGER_HEAD )
+HB_FUNC_STATIC( QNETWORKACCESSMANAGER_HEAD )
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -224,7 +224,7 @@ HB_FUNC( QNETWORKACCESSMANAGER_HEAD )
 /*
 NetworkAccessibility networkAccessible () const
 */
-HB_FUNC( QNETWORKACCESSMANAGER_NETWORKACCESSIBLE )
+HB_FUNC_STATIC( QNETWORKACCESSMANAGER_NETWORKACCESSIBLE )
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -238,7 +238,7 @@ HB_FUNC( QNETWORKACCESSMANAGER_NETWORKACCESSIBLE )
 /*
 QNetworkReply * post ( const QNetworkRequest & request, QIODevice * data )
 */
-HB_FUNC( QNETWORKACCESSMANAGER_POST1 )
+HB_FUNC_STATIC( QNETWORKACCESSMANAGER_POST1 )
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -253,7 +253,7 @@ HB_FUNC( QNETWORKACCESSMANAGER_POST1 )
 /*
 QNetworkReply * post ( const QNetworkRequest & request, const QByteArray & data )
 */
-HB_FUNC( QNETWORKACCESSMANAGER_POST2 )
+HB_FUNC_STATIC( QNETWORKACCESSMANAGER_POST2 )
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -268,7 +268,7 @@ HB_FUNC( QNETWORKACCESSMANAGER_POST2 )
 //[1]QNetworkReply * post ( const QNetworkRequest & request, QIODevice * data )
 //[2]QNetworkReply * post ( const QNetworkRequest & request, const QByteArray & data )
 
-HB_FUNC( QNETWORKACCESSMANAGER_POST )
+HB_FUNC_STATIC( QNETWORKACCESSMANAGER_POST )
 {
   if( ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQIODEVICE(2) )
   {
@@ -283,7 +283,7 @@ HB_FUNC( QNETWORKACCESSMANAGER_POST )
 /*
 QNetworkProxy proxy () const
 */
-HB_FUNC( QNETWORKACCESSMANAGER_PROXY )
+HB_FUNC_STATIC( QNETWORKACCESSMANAGER_PROXY )
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -296,7 +296,7 @@ HB_FUNC( QNETWORKACCESSMANAGER_PROXY )
 /*
 QNetworkProxyFactory * proxyFactory () const
 */
-HB_FUNC( QNETWORKACCESSMANAGER_PROXYFACTORY )
+HB_FUNC_STATIC( QNETWORKACCESSMANAGER_PROXYFACTORY )
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -309,7 +309,7 @@ HB_FUNC( QNETWORKACCESSMANAGER_PROXYFACTORY )
 /*
 QNetworkReply * put ( const QNetworkRequest & request, QIODevice * data )
 */
-HB_FUNC( QNETWORKACCESSMANAGER_PUT1 )
+HB_FUNC_STATIC( QNETWORKACCESSMANAGER_PUT1 )
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -324,7 +324,7 @@ HB_FUNC( QNETWORKACCESSMANAGER_PUT1 )
 /*
 QNetworkReply * put ( const QNetworkRequest & request, const QByteArray & data )
 */
-HB_FUNC( QNETWORKACCESSMANAGER_PUT2 )
+HB_FUNC_STATIC( QNETWORKACCESSMANAGER_PUT2 )
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -339,7 +339,7 @@ HB_FUNC( QNETWORKACCESSMANAGER_PUT2 )
 //[1]QNetworkReply * put ( const QNetworkRequest & request, QIODevice * data )
 //[2]QNetworkReply * put ( const QNetworkRequest & request, const QByteArray & data )
 
-HB_FUNC( QNETWORKACCESSMANAGER_PUT )
+HB_FUNC_STATIC( QNETWORKACCESSMANAGER_PUT )
 {
   if( ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQIODEVICE(2) )
   {
@@ -354,7 +354,7 @@ HB_FUNC( QNETWORKACCESSMANAGER_PUT )
 /*
 QNetworkReply * sendCustomRequest ( const QNetworkRequest & request, const QByteArray & verb, QIODevice * data = 0 )
 */
-HB_FUNC( QNETWORKACCESSMANAGER_SENDCUSTOMREQUEST )
+HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SENDCUSTOMREQUEST )
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -370,7 +370,7 @@ HB_FUNC( QNETWORKACCESSMANAGER_SENDCUSTOMREQUEST )
 /*
 void setCache ( QAbstractNetworkCache * cache )
 */
-HB_FUNC( QNETWORKACCESSMANAGER_SETCACHE )
+HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETCACHE )
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -385,7 +385,7 @@ HB_FUNC( QNETWORKACCESSMANAGER_SETCACHE )
 /*
 void setConfiguration ( const QNetworkConfiguration & config )
 */
-HB_FUNC( QNETWORKACCESSMANAGER_SETCONFIGURATION )
+HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETCONFIGURATION )
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -400,7 +400,7 @@ HB_FUNC( QNETWORKACCESSMANAGER_SETCONFIGURATION )
 /*
 void setCookieJar ( QNetworkCookieJar * cookieJar )
 */
-HB_FUNC( QNETWORKACCESSMANAGER_SETCOOKIEJAR )
+HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETCOOKIEJAR )
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -415,7 +415,7 @@ HB_FUNC( QNETWORKACCESSMANAGER_SETCOOKIEJAR )
 /*
 void setNetworkAccessible ( NetworkAccessibility accessible )
 */
-HB_FUNC( QNETWORKACCESSMANAGER_SETNETWORKACCESSIBLE )
+HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETNETWORKACCESSIBLE )
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -430,7 +430,7 @@ HB_FUNC( QNETWORKACCESSMANAGER_SETNETWORKACCESSIBLE )
 /*
 void setProxy ( const QNetworkProxy & proxy )
 */
-HB_FUNC( QNETWORKACCESSMANAGER_SETPROXY )
+HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETPROXY )
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -445,7 +445,7 @@ HB_FUNC( QNETWORKACCESSMANAGER_SETPROXY )
 /*
 void setProxyFactory ( QNetworkProxyFactory * factory )
 */
-HB_FUNC( QNETWORKACCESSMANAGER_SETPROXYFACTORY )
+HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETPROXYFACTORY )
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
