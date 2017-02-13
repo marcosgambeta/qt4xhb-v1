@@ -127,7 +127,8 @@ HB_FUNC_STATIC( QAXSCRIPT_CALL1 )
     QVariant par8 = ISNIL(8)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(8, HB_IT_OBJECT ), "POINTER", 0 ) );
     QVariant par9 = ISNIL(9)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(9, HB_IT_OBJECT ), "POINTER", 0 ) );
     QVariant * ptr = new QVariant( obj->call ( par1, par2, par3, par4, par5, par6, par7, par8, par9 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+  }
 }
 
 
@@ -149,7 +150,8 @@ for (i2=0;i2<nLen2;i2++)
 par2 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
 }
     QVariant * ptr = new QVariant( obj->call ( par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+  }
 }
 
 
@@ -231,7 +233,8 @@ HB_FUNC_STATIC( QAXSCRIPT_SCRIPTENGINE )
   if( obj )
   {
     QAxScriptEngine * ptr = obj->scriptEngine (  );
-    _qt4xhb_createReturnClass ( ptr, "QAXSCRIPTENGINE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QAXSCRIPTENGINE" );
+  }
 }
 
 

@@ -163,7 +163,8 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_CONTEXT )
   if( obj )
   {
     QDeclarativeContext * ptr = obj->context (  );
-    _qt4xhb_createReturnClass ( ptr, "QDECLARATIVECONTEXT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QDECLARATIVECONTEXT" );
+  }
 }
 
 
@@ -176,7 +177,8 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SCOPEOBJECT )
   if( obj )
   {
     QObject * ptr = obj->scopeObject (  );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+  }
 }
 
 

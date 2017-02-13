@@ -146,7 +146,8 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_CREATEWIDGET )
   {
     QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QWidget * ptr = obj->createWidget ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );  }
+    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  }
 }
 
 
@@ -187,7 +188,8 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_ICON )
   if( obj )
   {
     QIcon * ptr = new QIcon( obj->icon (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QICON", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QICON", true );
+  }
 }
 
 

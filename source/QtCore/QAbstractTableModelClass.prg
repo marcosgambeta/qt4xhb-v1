@@ -109,7 +109,8 @@ HB_FUNC_STATIC( QABSTRACTTABLEMODEL_INDEX )
     int par2 = hb_parni(2);
     QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     QModelIndex * ptr = new QModelIndex( obj->index ( par1, par2, par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+  }
 }
 
 

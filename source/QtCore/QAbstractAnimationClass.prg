@@ -176,7 +176,8 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_GROUP )
   if( obj )
   {
     QAnimationGroup * ptr = obj->group (  );
-    _qt4xhb_createReturnClass ( ptr, "QANIMATIONGROUP" );  }
+    _qt4xhb_createReturnClass ( ptr, "QANIMATIONGROUP" );
+  }
 }
 
 

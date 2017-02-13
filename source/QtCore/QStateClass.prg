@@ -175,7 +175,8 @@ HB_FUNC_STATIC( QSTATE_ADDTRANSITION2 )
     const char * par2 = hb_parc(2);
     QAbstractState * par3 = (QAbstractState *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     QSignalTransition * ptr = obj->addTransition ( par1,  (const char *) par2, par3 );
-    _qt4xhb_createReturnClass ( ptr, "QSIGNALTRANSITION" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIGNALTRANSITION" );
+  }
 }
 
 
@@ -189,7 +190,8 @@ HB_FUNC_STATIC( QSTATE_ADDTRANSITION3 )
   {
     QAbstractState * par1 = (QAbstractState *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QAbstractTransition * ptr = obj->addTransition ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTTRANSITION" );  }
+    _qt4xhb_createReturnClass ( ptr, "QABSTRACTTRANSITION" );
+  }
 }
 
 
@@ -253,7 +255,8 @@ HB_FUNC_STATIC( QSTATE_ERRORSTATE )
   if( obj )
   {
     QAbstractState * ptr = obj->errorState (  );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTSTATE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QABSTRACTSTATE" );
+  }
 }
 
 
@@ -266,7 +269,8 @@ HB_FUNC_STATIC( QSTATE_INITIALSTATE )
   if( obj )
   {
     QAbstractState * ptr = obj->initialState (  );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTSTATE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QABSTRACTSTATE" );
+  }
 }
 
 

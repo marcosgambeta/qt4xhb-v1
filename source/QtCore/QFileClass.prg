@@ -689,7 +689,8 @@ HB_FUNC_STATIC( QFILE_ENCODENAME )
 {
   QString par1 = hb_parc(1);
   QByteArray * ptr = new QByteArray( QFile::encodeName ( par1 ) );
-  _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );}
+  _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+}
 
 
 /*

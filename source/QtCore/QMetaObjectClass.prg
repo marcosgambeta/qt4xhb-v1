@@ -166,7 +166,8 @@ HB_FUNC_STATIC( QMETAOBJECT_CLASSINFO )
   {
     int par1 = hb_parni(1);
     QMetaClassInfo * ptr = new QMetaClassInfo( obj->classInfo ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMETACLASSINFO" );  }
+    _qt4xhb_createReturnClass ( ptr, "QMETACLASSINFO" );
+  }
 }
 
 
@@ -222,7 +223,8 @@ HB_FUNC_STATIC( QMETAOBJECT_CONSTRUCTOR )
   {
     int par1 = hb_parni(1);
     QMetaMethod * ptr = new QMetaMethod( obj->constructor ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMETAMETHOD" );  }
+    _qt4xhb_createReturnClass ( ptr, "QMETAMETHOD" );
+  }
 }
 
 
@@ -250,7 +252,8 @@ HB_FUNC_STATIC( QMETAOBJECT_ENUMERATOR )
   {
     int par1 = hb_parni(1);
     QMetaEnum * ptr = new QMetaEnum( obj->enumerator ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMETAENUM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QMETAENUM" );
+  }
 }
 
 
@@ -397,7 +400,8 @@ HB_FUNC_STATIC( QMETAOBJECT_METHOD )
   {
     int par1 = hb_parni(1);
     QMetaMethod * ptr = new QMetaMethod( obj->method ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMETAMETHOD" );  }
+    _qt4xhb_createReturnClass ( ptr, "QMETAMETHOD" );
+  }
 }
 
 
@@ -448,7 +452,8 @@ HB_FUNC_STATIC( QMETAOBJECT_NEWINSTANCE )
     QGenericArgument par9 = ISNIL(9)? QGenericArgument() : *(QGenericArgument *) hb_itemGetPtr( hb_objSendMsg( hb_param(9, HB_IT_OBJECT ), "POINTER", 0 ) );
     QGenericArgument par10 = ISNIL(10)? QGenericArgument() : *(QGenericArgument *) hb_itemGetPtr( hb_objSendMsg( hb_param(10, HB_IT_OBJECT ), "POINTER", 0 ) );
     QObject * ptr = obj->newInstance ( par1, par2, par3, par4, par5, par6, par7, par8, par9, par10 );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+  }
 }
 
 
@@ -462,7 +467,8 @@ HB_FUNC_STATIC( QMETAOBJECT_PROPERTY )
   {
     int par1 = hb_parni(1);
     QMetaProperty * ptr = new QMetaProperty( obj->property ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMETAPROPERTY" );  }
+    _qt4xhb_createReturnClass ( ptr, "QMETAPROPERTY" );
+  }
 }
 
 
@@ -503,7 +509,8 @@ HB_FUNC_STATIC( QMETAOBJECT_SUPERCLASS )
   if( obj )
   {
     const QMetaObject * ptr = obj->superClass (  );
-    _qt4xhb_createReturnClass ( ptr, "QMETAOBJECT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QMETAOBJECT" );
+  }
 }
 
 
@@ -516,7 +523,8 @@ HB_FUNC_STATIC( QMETAOBJECT_USERPROPERTY )
   if( obj )
   {
     QMetaProperty * ptr = new QMetaProperty( obj->userProperty (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QMETAPROPERTY" );  }
+    _qt4xhb_createReturnClass ( ptr, "QMETAPROPERTY" );
+  }
 }
 
 
@@ -668,7 +676,8 @@ HB_FUNC_STATIC( QMETAOBJECT_NORMALIZEDSIGNATURE )
 {
   const char * par1 = hb_parc(1);
   QByteArray * ptr = new QByteArray( QMetaObject::normalizedSignature (  (const char *) par1 ) );
-  _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );}
+  _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+}
 
 
 /*
@@ -678,7 +687,8 @@ HB_FUNC_STATIC( QMETAOBJECT_NORMALIZEDTYPE )
 {
   const char * par1 = hb_parc(1);
   QByteArray * ptr = new QByteArray( QMetaObject::normalizedType (  (const char *) par1 ) );
-  _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );}
+  _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+}
 
 
 

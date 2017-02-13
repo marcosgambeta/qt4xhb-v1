@@ -408,7 +408,8 @@ HB_FUNC_STATIC( QMETAPROPERTY_ENUMERATOR )
   if( obj )
   {
     QMetaEnum * ptr = new QMetaEnum( obj->enumerator (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QMETAENUM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QMETAENUM" );
+  }
 }
 
 
@@ -435,7 +436,8 @@ HB_FUNC_STATIC( QMETAPROPERTY_NOTIFYSIGNAL )
   if( obj )
   {
     QMetaMethod * ptr = new QMetaMethod( obj->notifySignal (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QMETAMETHOD" );  }
+    _qt4xhb_createReturnClass ( ptr, "QMETAMETHOD" );
+  }
 }
 
 
@@ -477,7 +479,8 @@ HB_FUNC_STATIC( QMETAPROPERTY_READ )
   {
     const QObject * par1 = (const QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QVariant * ptr = new QVariant( obj->read ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+  }
 }
 
 
@@ -549,7 +552,8 @@ HB_FUNC_STATIC( QMETAPROPERTY_ENCLOSINGMETAOBJECT )
   if( obj )
   {
     const QMetaObject * ptr = obj->enclosingMetaObject (  );
-    _qt4xhb_createReturnClass ( ptr, "QMETAOBJECT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QMETAOBJECT" );
+  }
 }
 
 

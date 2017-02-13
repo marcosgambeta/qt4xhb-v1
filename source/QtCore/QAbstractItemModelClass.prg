@@ -143,7 +143,8 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_BUDDY )
   {
     QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QModelIndex * ptr = new QModelIndex( obj->buddy ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+  }
 }
 
 
@@ -188,7 +189,8 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_DATA )
     QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = ISNIL(2)? Qt::DisplayRole : hb_parni(2);
     QVariant * ptr = new QVariant( obj->data ( *par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+  }
 }
 
 
@@ -285,7 +287,8 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_HEADERDATA )
     int par2 = hb_parni(2);
     int par3 = ISNIL(3)? Qt::DisplayRole : hb_parni(3);
     QVariant * ptr = new QVariant( obj->headerData ( par1,  (Qt::Orientation) par2, par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+  }
 }
 
 
@@ -301,7 +304,8 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_INDEX )
     int par2 = hb_parni(2);
     QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     QModelIndex * ptr = new QModelIndex( obj->index ( par1, par2, par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+  }
 }
 
 
@@ -431,7 +435,8 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_MIMEDATA )
   {
     QModelIndexList * par1 = (QModelIndexList *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QMimeData * ptr = obj->mimeData ( *par1 );
-    _qt4xhb_createReturnClass ( ptr, "QMIMEDATA" );  }
+    _qt4xhb_createReturnClass ( ptr, "QMIMEDATA" );
+  }
 }
 
 
@@ -468,7 +473,8 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_PARENT )
   {
     QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QModelIndex * ptr = new QModelIndex( obj->parent ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+  }
 }
 
 
@@ -617,7 +623,8 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SIBLING )
     int par2 = hb_parni(2);
     QModelIndex * par3 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     QModelIndex * ptr = new QModelIndex( obj->sibling ( par1, par2, *par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+  }
 }
 
 
@@ -647,7 +654,8 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SPAN )
   {
     QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QSize * ptr = new QSize( obj->span ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 

@@ -183,7 +183,8 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NAME )
   if( obj )
   {
     QStringRef * ptr = new QStringRef( obj->name (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
+  }
 }
 
 
@@ -196,7 +197,8 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NOTATIONNAME )
   if( obj )
   {
     QStringRef * ptr = new QStringRef( obj->notationName (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
+  }
 }
 
 
@@ -209,7 +211,8 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_PUBLICID )
   if( obj )
   {
     QStringRef * ptr = new QStringRef( obj->publicId (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
+  }
 }
 
 
@@ -222,7 +225,8 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_SYSTEMID )
   if( obj )
   {
     QStringRef * ptr = new QStringRef( obj->systemId (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
+  }
 }
 
 
@@ -235,7 +239,8 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_VALUE )
   if( obj )
   {
     QStringRef * ptr = new QStringRef( obj->value (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
+  }
 }
 
 

@@ -215,7 +215,8 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_WIDGET )
   {
     int par1 = hb_parni(1);
     QWidget * ptr = obj->widget ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );  }
+    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  }
 }
 
 

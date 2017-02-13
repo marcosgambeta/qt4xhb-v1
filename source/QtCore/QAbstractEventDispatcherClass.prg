@@ -295,7 +295,8 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_INSTANCE )
 {
   QThread * par1 = ISNIL(1)? 0 : (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QAbstractEventDispatcher * ptr = QAbstractEventDispatcher::instance ( par1 );
-  _qt4xhb_createReturnClass ( ptr, "QABSTRACTEVENTDISPATCHER" );}
+  _qt4xhb_createReturnClass ( ptr, "QABSTRACTEVENTDISPATCHER" );
+}
 
 
 

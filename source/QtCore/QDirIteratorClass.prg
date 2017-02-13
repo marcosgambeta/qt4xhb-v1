@@ -252,7 +252,8 @@ HB_FUNC_STATIC( QDIRITERATOR_FILEINFO )
   if( obj )
   {
     QFileInfo * ptr = new QFileInfo( obj->fileInfo (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QFILEINFO", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QFILEINFO", true );
+  }
 }
 
 

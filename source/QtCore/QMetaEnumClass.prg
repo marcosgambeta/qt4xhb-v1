@@ -279,7 +279,8 @@ HB_FUNC_STATIC( QMETAENUM_VALUETOKEYS )
   {
     int par1 = hb_parni(1);
     QByteArray * ptr = new QByteArray( obj->valueToKeys ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );  }
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+  }
 }
 
 
@@ -292,7 +293,8 @@ HB_FUNC_STATIC( QMETAENUM_ENCLOSINGMETAOBJECT )
   if( obj )
   {
     const QMetaObject * ptr = obj->enclosingMetaObject (  );
-    _qt4xhb_createReturnClass ( ptr, "QMETAOBJECT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QMETAOBJECT" );
+  }
 }
 
 

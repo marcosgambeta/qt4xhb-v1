@@ -186,7 +186,8 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_AT )
   {
     int par1 = hb_parni(1);
     QObject * ptr = obj->at ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+  }
 }
 
 
@@ -297,7 +298,8 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_LISTELEMENTTYPE )
   if( obj )
   {
     const QMetaObject * ptr = obj->listElementType (  );
-    _qt4xhb_createReturnClass ( ptr, "QMETAOBJECT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QMETAOBJECT" );
+  }
 }
 
 
@@ -310,7 +312,8 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_OBJECT )
   if( obj )
   {
     QObject * ptr = obj->object (  );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+  }
 }
 
 

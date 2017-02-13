@@ -286,7 +286,8 @@ HB_FUNC_STATIC( QUUID_TOBYTEARRAY )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->toByteArray (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );  }
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+  }
 }
 
 
@@ -299,7 +300,8 @@ HB_FUNC_STATIC( QUUID_TORFC4122 )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->toRfc4122 (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );  }
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+  }
 }
 
 
@@ -353,7 +355,8 @@ HB_FUNC_STATIC( QUUID_FROMRFC4122 )
 {
   QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QUuid * ptr = new QUuid( QUuid::fromRfc4122 ( *par1 ) );
-  _qt4xhb_createReturnClass ( ptr, "QUUID", true );}
+  _qt4xhb_createReturnClass ( ptr, "QUUID", true );
+}
 
 
 /*
@@ -362,7 +365,8 @@ static QUuid createUuid()
 HB_FUNC_STATIC( QUUID_CREATEUUID )
 {
   QUuid * ptr = new QUuid( QUuid::createUuid (  ) );
-  _qt4xhb_createReturnClass ( ptr, "QUUID", true );}
+  _qt4xhb_createReturnClass ( ptr, "QUUID", true );
+}
 
 
 

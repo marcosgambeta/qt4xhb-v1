@@ -263,7 +263,8 @@ HB_FUNC_STATIC( QLINEF_P1 )
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->p1 (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+  }
 }
 
 
@@ -276,7 +277,8 @@ HB_FUNC_STATIC( QLINEF_P2 )
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->p2 (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+  }
 }
 
 
@@ -431,7 +433,8 @@ HB_FUNC_STATIC( QLINEF_NORMALVECTOR )
   if( obj )
   {
     QLineF * ptr = new QLineF( obj->normalVector (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QLINEF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QLINEF", true );
+  }
 }
 
 
@@ -445,7 +448,8 @@ HB_FUNC_STATIC( QLINEF_POINTAT )
   {
     qreal par1 = hb_parnd(1);
     QPointF * ptr = new QPointF( obj->pointAt ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+  }
 }
 
 
@@ -552,7 +556,8 @@ HB_FUNC_STATIC( QLINEF_TOLINE )
   if( obj )
   {
     QLine * ptr = new QLine( obj->toLine (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QLINE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QLINE", true );
+  }
 }
 
 
@@ -612,7 +617,8 @@ HB_FUNC_STATIC( QLINEF_TRANSLATED1 )
   {
     QPointF * par1 = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QLineF * ptr = new QLineF( obj->translated ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QLINEF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QLINEF", true );
+  }
 }
 
 
@@ -627,7 +633,8 @@ HB_FUNC_STATIC( QLINEF_TRANSLATED2 )
     qreal par1 = hb_parnd(1);
     qreal par2 = hb_parnd(2);
     QLineF * ptr = new QLineF( obj->translated ( par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QLINEF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QLINEF", true );
+  }
 }
 
 
@@ -655,7 +662,8 @@ HB_FUNC_STATIC( QLINEF_UNITVECTOR )
   if( obj )
   {
     QLineF * ptr = new QLineF( obj->unitVector (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QLINEF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QLINEF", true );
+  }
 }
 
 
@@ -668,7 +676,8 @@ HB_FUNC_STATIC( QLINEF_FROMPOLAR )
   qreal par1 = hb_parnd(1);
   qreal par2 = hb_parnd(2);
   QLineF * ptr = new QLineF( QLineF::fromPolar ( par1, par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QLINEF", true );}
+  _qt4xhb_createReturnClass ( ptr, "QLINEF", true );
+}
 
 
 

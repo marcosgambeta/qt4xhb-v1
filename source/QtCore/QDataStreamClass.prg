@@ -259,7 +259,8 @@ HB_FUNC_STATIC( QDATASTREAM_DEVICE )
   if( obj )
   {
     QIODevice * ptr = obj->device (  );
-    _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );
+  }
 }
 
 

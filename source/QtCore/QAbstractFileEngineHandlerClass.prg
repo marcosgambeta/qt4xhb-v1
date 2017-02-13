@@ -121,7 +121,8 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEHANDLER_CREATE )
   {
     QString par1 = hb_parc(1);
     QAbstractFileEngine * ptr = obj->create ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTFILEENGINE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QABSTRACTFILEENGINE" );
+  }
 }
 
 

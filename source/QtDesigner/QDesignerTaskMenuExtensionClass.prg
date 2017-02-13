@@ -120,7 +120,8 @@ HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_PREFERREDEDITACTION )
   if( obj )
   {
     QAction * ptr = obj->preferredEditAction (  );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );  }
+    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+  }
 }
 
 

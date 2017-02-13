@@ -87,7 +87,8 @@ HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_CORE )
   if( obj )
   {
     QDesignerFormEditorInterface * ptr = obj->core (  );
-    _qt4xhb_createReturnClass ( ptr, "QDESIGNERFORMEDITORINTERFACE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QDESIGNERFORMEDITORINTERFACE" );
+  }
 }
 
 

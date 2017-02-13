@@ -209,7 +209,8 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_BEGINCREATE )
   {
     QDeclarativeContext * par1 = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QObject * ptr = obj->beginCreate ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+  }
 }
 
 
@@ -237,7 +238,8 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATE )
   {
     QDeclarativeContext * par1 = ISNIL(1)? 0 : (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QObject * ptr = obj->create ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+  }
 }
 
 
@@ -250,7 +252,8 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATIONCONTEXT )
   if( obj )
   {
     QDeclarativeContext * ptr = obj->creationContext (  );
-    _qt4xhb_createReturnClass ( ptr, "QDECLARATIVECONTEXT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QDECLARATIVECONTEXT" );
+  }
 }
 
 
@@ -422,7 +425,8 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_URL )
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->url (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+  }
 }
 
 
@@ -448,7 +452,8 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_QMLATTACHEDPROPERTIES )
 {
   QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QDeclarativeComponentAttached * ptr = QDeclarativeComponent::qmlAttachedProperties ( par1 );
-  _qt4xhb_createReturnClass ( ptr, "QDECLARATIVECOMPONENTATTACHED" );}
+  _qt4xhb_createReturnClass ( ptr, "QDECLARATIVECOMPONENTATTACHED" );
+}
 
 
 

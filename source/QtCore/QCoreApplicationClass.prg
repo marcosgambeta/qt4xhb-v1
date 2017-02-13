@@ -342,7 +342,8 @@ QCoreApplication * instance ()
 HB_FUNC_STATIC( QCOREAPPLICATION_INSTANCE )
 {
   QCoreApplication * ptr = QCoreApplication::instance (  );
-  _qt4xhb_createReturnClass ( ptr, "QCOREAPPLICATION" );}
+  _qt4xhb_createReturnClass ( ptr, "QCOREAPPLICATION" );
+}
 
 
 /*

@@ -142,7 +142,8 @@ HB_FUNC_STATIC( QMUTEXLOCKER_MUTEX )
   if( obj )
   {
     QMutex * ptr = obj->mutex (  );
-    _qt4xhb_createReturnClass ( ptr, "QMUTEX" );  }
+    _qt4xhb_createReturnClass ( ptr, "QMUTEX" );
+  }
 }
 
 

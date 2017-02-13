@@ -217,7 +217,8 @@ HB_FUNC_STATIC( QTIME_ADDMSECS )
   {
     int par1 = hb_parni(1);
     QTime * ptr = new QTime( obj->addMSecs ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QTIME", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QTIME", true );
+  }
 }
 
 
@@ -231,7 +232,8 @@ HB_FUNC_STATIC( QTIME_ADDSECS )
   {
     int par1 = hb_parni(1);
     QTime * ptr = new QTime( obj->addSecs ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QTIME", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QTIME", true );
+  }
 }
 
 
@@ -461,7 +463,8 @@ QTime currentTime()
 HB_FUNC_STATIC( QTIME_CURRENTTIME )
 {
   QTime * ptr = new QTime( QTime::currentTime (  ) );
-  _qt4xhb_createReturnClass ( ptr, "QTIME", true );}
+  _qt4xhb_createReturnClass ( ptr, "QTIME", true );
+}
 
 
 /*
@@ -472,7 +475,8 @@ HB_FUNC_STATIC( QTIME_FROMSTRING1 )
   QString par1 = hb_parc(1);
   int par2 = ISNIL(2)? (int) Qt::TextDate : hb_parni(2);
   QTime * ptr = new QTime( QTime::fromString ( par1,  (Qt::DateFormat) par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QTIME", true );}
+  _qt4xhb_createReturnClass ( ptr, "QTIME", true );
+}
 
 
 /*
@@ -483,7 +487,8 @@ HB_FUNC_STATIC( QTIME_FROMSTRING2 )
   QString par1 = hb_parc(1);
   QString par2 = hb_parc(2);
   QTime * ptr = new QTime( QTime::fromString ( par1, par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QTIME", true );}
+  _qt4xhb_createReturnClass ( ptr, "QTIME", true );
+}
 
 
 //[1]QTime fromString(const QString & string, Qt::DateFormat format = Qt::TextDate)

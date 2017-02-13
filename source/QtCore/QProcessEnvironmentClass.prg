@@ -353,7 +353,8 @@ static QProcessEnvironment systemEnvironment()
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_SYSTEMENVIRONMENT )
 {
   QProcessEnvironment * ptr = new QProcessEnvironment( QProcessEnvironment::systemEnvironment (  ) );
-  _qt4xhb_createReturnClass ( ptr, "QPROCESSENVIRONMENT", true );}
+  _qt4xhb_createReturnClass ( ptr, "QPROCESSENVIRONMENT", true );
+}
 
 
 

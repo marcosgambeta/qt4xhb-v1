@@ -288,7 +288,8 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE1 )
     QString par1 = hb_parc(1);
     QString par2 = hb_parc(2);
     QStringRef * ptr = new QStringRef( obj->value ( par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
+  }
 }
 
 
@@ -303,7 +304,8 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE2 )
     QString par1 = hb_parc(1);
     QLatin1String * par2 = (QLatin1String *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     QStringRef * ptr = new QStringRef( obj->value ( par1, *par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
+  }
 }
 
 
@@ -318,7 +320,8 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE3 )
     QLatin1String * par1 = (QLatin1String *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QLatin1String * par2 = (QLatin1String *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     QStringRef * ptr = new QStringRef( obj->value ( *par1, *par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
+  }
 }
 
 
@@ -332,7 +335,8 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE4 )
   {
     QString par1 = hb_parc(1);
     QStringRef * ptr = new QStringRef( obj->value ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
+  }
 }
 
 
@@ -346,7 +350,8 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE5 )
   {
     QLatin1String * par1 = (QLatin1String *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QStringRef * ptr = new QStringRef( obj->value ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
+  }
 }
 
 

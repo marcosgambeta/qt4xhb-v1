@@ -1148,7 +1148,8 @@ HB_FUNC_STATIC( QVARIANT_TOBITARRAY )
   if( obj )
   {
     QBitArray * ptr = new QBitArray( obj->toBitArray (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBITARRAY" );  }
+    _qt4xhb_createReturnClass ( ptr, "QBITARRAY" );
+  }
 }
 
 
@@ -1175,7 +1176,8 @@ HB_FUNC_STATIC( QVARIANT_TOBYTEARRAY )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->toByteArray (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );  }
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+  }
 }
 
 
@@ -1188,7 +1190,8 @@ HB_FUNC_STATIC( QVARIANT_TOCHAR )
   if( obj )
   {
     QChar * ptr = new QChar( obj->toChar (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QCHAR" );  }
+    _qt4xhb_createReturnClass ( ptr, "QCHAR" );
+  }
 }
 
 
@@ -1201,7 +1204,8 @@ HB_FUNC_STATIC( QVARIANT_TODATE )
   if( obj )
   {
     QDate * ptr = new QDate( obj->toDate (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDATE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QDATE", true );
+  }
 }
 
 
@@ -1214,7 +1218,8 @@ HB_FUNC_STATIC( QVARIANT_TODATETIME )
   if( obj )
   {
     QDateTime * ptr = new QDateTime( obj->toDateTime (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
+  }
 }
 
 
@@ -1228,7 +1233,8 @@ HB_FUNC_STATIC( QVARIANT_TOEASINGCURVE )
   if( obj )
   {
     QEasingCurve * ptr = new QEasingCurve( obj->toEasingCurve (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QEASINGCURVE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QEASINGCURVE" );
+  }
 }
 
 
@@ -1244,7 +1250,8 @@ HB_FUNC_STATIC( QVARIANT_TOLINE )
   if( obj )
   {
     QLine * ptr = new QLine( obj->toLine (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QLINE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QLINE", true );
+  }
 }
 
 
@@ -1257,7 +1264,8 @@ HB_FUNC_STATIC( QVARIANT_TOLINEF )
   if( obj )
   {
     QLineF * ptr = new QLineF( obj->toLineF (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QLINEF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QLINEF", true );
+  }
 }
 
 
@@ -1318,7 +1326,8 @@ HB_FUNC_STATIC( QVARIANT_TOLOCALE )
   if( obj )
   {
     QLocale * ptr = new QLocale( obj->toLocale (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QLOCALE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QLOCALE" );
+  }
 }
 
 
@@ -1333,7 +1342,8 @@ HB_FUNC_STATIC( QVARIANT_TOPOINT )
   if( obj )
   {
     QPoint * ptr = new QPoint( obj->toPoint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+  }
 }
 
 
@@ -1346,7 +1356,8 @@ HB_FUNC_STATIC( QVARIANT_TOPOINTF )
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->toPointF (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+  }
 }
 
 
@@ -1360,7 +1371,8 @@ HB_FUNC_STATIC( QVARIANT_TORECT )
   if( obj )
   {
     QRect * ptr = new QRect( obj->toRect (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+  }
 }
 
 
@@ -1373,7 +1385,8 @@ HB_FUNC_STATIC( QVARIANT_TORECTF )
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->toRectF (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+  }
 }
 
 
@@ -1386,7 +1399,8 @@ HB_FUNC_STATIC( QVARIANT_TOREGEXP )
   if( obj )
   {
     QRegExp * ptr = new QRegExp( obj->toRegExp (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QREGEXP", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QREGEXP", true );
+  }
 }
 
 
@@ -1399,7 +1413,8 @@ HB_FUNC_STATIC( QVARIANT_TOSIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->toSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 
@@ -1412,7 +1427,8 @@ HB_FUNC_STATIC( QVARIANT_TOSIZEF )
   if( obj )
   {
     QSizeF * ptr = new QSizeF( obj->toSizeF (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
+  }
 }
 
 
@@ -1462,7 +1478,8 @@ HB_FUNC_STATIC( QVARIANT_TOTIME )
   if( obj )
   {
     QTime * ptr = new QTime( obj->toTime (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTIME", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QTIME", true );
+  }
 }
 
 
@@ -1477,7 +1494,8 @@ HB_FUNC_STATIC( QVARIANT_TOURL )
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->toUrl (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+  }
 }
 
 

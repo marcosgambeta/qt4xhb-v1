@@ -269,7 +269,8 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_PATTERN )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->pattern (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );  }
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+  }
 }
 
 

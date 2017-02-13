@@ -964,7 +964,8 @@ QDir current()
 HB_FUNC_STATIC( QDIR_CURRENT )
 {
   QDir * ptr = new QDir( QDir::current (  ) );
-  _qt4xhb_createReturnClass ( ptr, "QDIR", true );}
+  _qt4xhb_createReturnClass ( ptr, "QDIR", true );
+}
 
 
 /*
@@ -1034,7 +1035,8 @@ QDir home()
 HB_FUNC_STATIC( QDIR_HOME )
 {
   QDir * ptr = new QDir( QDir::home (  ) );
-  _qt4xhb_createReturnClass ( ptr, "QDIR", true );}
+  _qt4xhb_createReturnClass ( ptr, "QDIR", true );
+}
 
 
 /*
@@ -1122,7 +1124,8 @@ QDir root()
 HB_FUNC_STATIC( QDIR_ROOT )
 {
   QDir * ptr = new QDir( QDir::root (  ) );
-  _qt4xhb_createReturnClass ( ptr, "QDIR", true );}
+  _qt4xhb_createReturnClass ( ptr, "QDIR", true );
+}
 
 
 /*
@@ -1161,7 +1164,8 @@ QChar separator()
 HB_FUNC_STATIC( QDIR_SEPARATOR )
 {
   QChar * ptr = new QChar( QDir::separator (  ) );
-  _qt4xhb_createReturnClass ( ptr, "QCHAR" );}
+  _qt4xhb_createReturnClass ( ptr, "QCHAR" );
+}
 
 
 /*
@@ -1201,7 +1205,8 @@ QDir temp()
 HB_FUNC_STATIC( QDIR_TEMP )
 {
   QDir * ptr = new QDir( QDir::temp (  ) );
-  _qt4xhb_createReturnClass ( ptr, "QDIR", true );}
+  _qt4xhb_createReturnClass ( ptr, "QDIR", true );
+}
 
 
 /*

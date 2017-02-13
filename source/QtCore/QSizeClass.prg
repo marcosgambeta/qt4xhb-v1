@@ -194,7 +194,8 @@ HB_FUNC_STATIC( QSIZE_BOUNDEDTO )
   {
     QSize * par1 = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QSize * ptr = new QSize( obj->boundedTo ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 
@@ -208,7 +209,8 @@ HB_FUNC_STATIC( QSIZE_EXPANDEDTO )
   {
     QSize * par1 = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QSize * ptr = new QSize( obj->expandedTo ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 

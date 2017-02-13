@@ -223,7 +223,8 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING1 )
   {
     int par1 = hb_parni(1);
     QObject * ptr = obj->mapping ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+  }
 }
 
 
@@ -237,7 +238,8 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING2 )
   {
     QString par1 = hb_parc(1);
     QObject * ptr = obj->mapping ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+  }
 }
 
 
@@ -251,7 +253,8 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING3 )
   {
     QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QObject * ptr = obj->mapping ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+  }
 }
 
 
@@ -265,7 +268,8 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING4 )
   {
     QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QObject * ptr = obj->mapping ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+  }
 }
 
 

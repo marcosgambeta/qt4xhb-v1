@@ -297,7 +297,8 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_CODEC )
   if( obj )
   {
     QTextCodec * ptr = obj->codec (  );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTCODEC" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTEXTCODEC" );
+  }
 }
 
 
@@ -310,7 +311,8 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_DEVICE )
   if( obj )
   {
     QIODevice * ptr = obj->device (  );
-    _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );
+  }
 }
 
 

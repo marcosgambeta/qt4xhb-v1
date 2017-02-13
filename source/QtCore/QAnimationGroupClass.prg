@@ -109,7 +109,8 @@ HB_FUNC_STATIC( QANIMATIONGROUP_ANIMATIONAT )
   {
     int par1 = hb_parni(1);
     QAbstractAnimation * ptr = obj->animationAt ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTANIMATION" );  }
+    _qt4xhb_createReturnClass ( ptr, "QABSTRACTANIMATION" );
+  }
 }
 
 
@@ -197,7 +198,8 @@ HB_FUNC_STATIC( QANIMATIONGROUP_TAKEANIMATION )
   {
     int par1 = hb_parni(1);
     QAbstractAnimation * ptr = obj->takeAnimation ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTANIMATION" );  }
+    _qt4xhb_createReturnClass ( ptr, "QABSTRACTANIMATION" );
+  }
 }
 
 

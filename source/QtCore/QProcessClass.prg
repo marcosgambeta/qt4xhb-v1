@@ -278,7 +278,8 @@ HB_FUNC_STATIC( QPROCESS_PROCESSENVIRONMENT )
   if( obj )
   {
     QProcessEnvironment * ptr = new QProcessEnvironment( obj->processEnvironment (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPROCESSENVIRONMENT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPROCESSENVIRONMENT", true );
+  }
 }
 
 
@@ -291,7 +292,8 @@ HB_FUNC_STATIC( QPROCESS_READALLSTANDARDERROR )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->readAllStandardError (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );  }
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+  }
 }
 
 
@@ -304,7 +306,8 @@ HB_FUNC_STATIC( QPROCESS_READALLSTANDARDOUTPUT )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->readAllStandardOutput (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );  }
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+  }
 }
 
 

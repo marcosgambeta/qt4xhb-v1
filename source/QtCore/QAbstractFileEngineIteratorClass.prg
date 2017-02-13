@@ -127,7 +127,8 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_CURRENTFILEINFO )
   if( obj )
   {
     QFileInfo * ptr = new QFileInfo( obj->currentFileInfo (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QFILEINFO", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QFILEINFO", true );
+  }
 }
 
 

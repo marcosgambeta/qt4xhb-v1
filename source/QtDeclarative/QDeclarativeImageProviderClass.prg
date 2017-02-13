@@ -156,7 +156,8 @@ HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_REQUESTIMAGE )
     QSize * par2 = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     QSize * par3 = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     QImage * ptr = new QImage( obj->requestImage ( par1, par2, *par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );
+  }
 }
 
 
@@ -172,7 +173,8 @@ HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_REQUESTPIXMAP )
     QSize * par2 = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     QSize * par3 = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     QPixmap * ptr = new QPixmap( obj->requestPixmap ( par1, par2, *par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
+  }
 }
 
 

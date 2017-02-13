@@ -142,7 +142,8 @@ HB_FUNC_STATIC( QREADLOCKER_READWRITELOCK )
   if( obj )
   {
     QReadWriteLock * ptr = obj->readWriteLock (  );
-    _qt4xhb_createReturnClass ( ptr, "QREADWRITELOCK" );  }
+    _qt4xhb_createReturnClass ( ptr, "QREADWRITELOCK" );
+  }
 }
 
 

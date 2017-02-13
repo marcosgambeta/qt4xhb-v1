@@ -331,7 +331,8 @@ HB_FUNC_STATIC( QTEXTSTREAM_CODEC )
   if( obj )
   {
     QTextCodec * ptr = obj->codec (  );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTCODEC" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTEXTCODEC" );
+  }
 }
 
 
@@ -417,7 +418,8 @@ HB_FUNC_STATIC( QTEXTSTREAM_LOCALE )
   if( obj )
   {
     QLocale * ptr = new QLocale( obj->locale (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QLOCALE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QLOCALE" );
+  }
 }
 
 
@@ -445,7 +447,8 @@ HB_FUNC_STATIC( QTEXTSTREAM_DEVICE )
   if( obj )
   {
     QIODevice * ptr = obj->device (  );
-    _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );
+  }
 }
 
 
@@ -474,7 +477,8 @@ HB_FUNC_STATIC( QTEXTSTREAM_STRING )
   if( obj )
   {
     QString * ptr = obj->string (  );
-    _qt4xhb_createReturnClass ( ptr, "QSTRING" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSTRING" );
+  }
 }
 
 
@@ -703,7 +707,8 @@ HB_FUNC_STATIC( QTEXTSTREAM_PADCHAR )
   if( obj )
   {
     QChar * ptr = new QChar( obj->padChar (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QCHAR" );  }
+    _qt4xhb_createReturnClass ( ptr, "QCHAR" );
+  }
 }
 
 

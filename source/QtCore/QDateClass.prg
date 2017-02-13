@@ -222,7 +222,8 @@ HB_FUNC_STATIC( QDATE_ADDDAYS )
   {
     int par1 = hb_parni(1);
     QDate * ptr = new QDate( obj->addDays ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDATE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QDATE", true );
+  }
 }
 
 
@@ -236,7 +237,8 @@ HB_FUNC_STATIC( QDATE_ADDMONTHS )
   {
     int par1 = hb_parni(1);
     QDate * ptr = new QDate( obj->addMonths ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDATE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QDATE", true );
+  }
 }
 
 
@@ -250,7 +252,8 @@ HB_FUNC_STATIC( QDATE_ADDYEARS )
   {
     int par1 = hb_parni(1);
     QDate * ptr = new QDate( obj->addYears ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDATE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QDATE", true );
+  }
 }
 
 
@@ -514,7 +517,8 @@ QDate currentDate ()
 HB_FUNC_STATIC( QDATE_CURRENTDATE )
 {
   QDate * ptr = new QDate( QDate::currentDate (  ) );
-  _qt4xhb_createReturnClass ( ptr, "QDATE", true );}
+  _qt4xhb_createReturnClass ( ptr, "QDATE", true );
+}
 
 
 /*
@@ -524,7 +528,8 @@ HB_FUNC_STATIC( QDATE_FROMJULIANDAY )
 {
   int par1 = hb_parni(1);
   QDate * ptr = new QDate( QDate::fromJulianDay ( par1 ) );
-  _qt4xhb_createReturnClass ( ptr, "QDATE", true );}
+  _qt4xhb_createReturnClass ( ptr, "QDATE", true );
+}
 
 
 /*
@@ -535,7 +540,8 @@ HB_FUNC_STATIC( QDATE_FROMSTRING1 )
   QString par1 = hb_parc(1);
   int par2 = ISNIL(2)? (int) Qt::TextDate : hb_parni(2);
   QDate * ptr = new QDate( QDate::fromString ( par1,  (Qt::DateFormat) par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QDATE", true );}
+  _qt4xhb_createReturnClass ( ptr, "QDATE", true );
+}
 
 
 /*
@@ -546,7 +552,8 @@ HB_FUNC_STATIC( QDATE_FROMSTRING2 )
   QString par1 = hb_parc(1);
   QString par2 = hb_parc(2);
   QDate * ptr = new QDate( QDate::fromString ( par1, par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QDATE", true );}
+  _qt4xhb_createReturnClass ( ptr, "QDATE", true );
+}
 
 
 //[1]QDate fromString ( const QString & string, Qt::DateFormat format = Qt::TextDate )

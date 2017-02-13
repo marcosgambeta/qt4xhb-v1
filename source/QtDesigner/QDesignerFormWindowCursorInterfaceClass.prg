@@ -130,7 +130,8 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_CURRENT )
   if( obj )
   {
     QWidget * ptr = obj->current (  );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );  }
+    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  }
 }
 
 
@@ -143,7 +144,8 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_FORMWINDOW )
   if( obj )
   {
     QDesignerFormWindowInterface * ptr = obj->formWindow (  );
-    _qt4xhb_createReturnClass ( ptr, "QDESIGNERFORMWINDOWINTERFACE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
+  }
 }
 
 
@@ -217,7 +219,8 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_SELECTEDWIDGET )
   {
     int par1 = hb_parni(1);
     QWidget * ptr = obj->selectedWidget ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );  }
+    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  }
 }
 
 
@@ -263,7 +266,8 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_WIDGET )
   {
     int par1 = hb_parni(1);
     QWidget * ptr = obj->widget ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );  }
+    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  }
 }
 
 

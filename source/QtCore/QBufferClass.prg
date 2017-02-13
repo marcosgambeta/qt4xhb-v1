@@ -154,7 +154,8 @@ HB_FUNC_STATIC( QBUFFER_BUFFER1 )
   if( obj )
   {
     QByteArray * ptr = &obj->buffer (  );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );  }
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+  }
 }
 
 
@@ -167,7 +168,8 @@ HB_FUNC_STATIC( QBUFFER_BUFFER2 )
   if( obj )
   {
     const QByteArray * ptr = &obj->buffer (  );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );  }
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+  }
 }
 
 
@@ -188,7 +190,8 @@ HB_FUNC_STATIC( QBUFFER_DATA )
   if( obj )
   {
     const QByteArray * ptr = &obj->data (  );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );  }
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+  }
 }
 
 

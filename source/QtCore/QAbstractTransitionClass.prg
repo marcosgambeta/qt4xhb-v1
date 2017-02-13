@@ -156,7 +156,8 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_MACHINE )
   if( obj )
   {
     QStateMachine * ptr = obj->machine (  );
-    _qt4xhb_createReturnClass ( ptr, "QSTATEMACHINE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSTATEMACHINE" );
+  }
 }
 
 
@@ -220,7 +221,8 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_SOURCESTATE )
   if( obj )
   {
     QState * ptr = obj->sourceState (  );
-    _qt4xhb_createReturnClass ( ptr, "QSTATE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSTATE" );
+  }
 }
 
 
@@ -233,7 +235,8 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATE )
   if( obj )
   {
     QAbstractState * ptr = obj->targetState (  );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTSTATE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QABSTRACTSTATE" );
+  }
 }
 
 

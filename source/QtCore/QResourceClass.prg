@@ -166,7 +166,8 @@ HB_FUNC_STATIC( QRESOURCE_DATA )
   if( obj )
   {
     const uchar * ptr = obj->data (  );
-    _qt4xhb_createReturnClass ( ptr, "UCHAR" );  }
+    _qt4xhb_createReturnClass ( ptr, "UCHAR" );
+  }
 }
 
 
@@ -221,7 +222,8 @@ HB_FUNC_STATIC( QRESOURCE_LOCALE )
   if( obj )
   {
     QLocale * ptr = new QLocale( obj->locale (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QLOCALE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QLOCALE" );
+  }
 }
 
 

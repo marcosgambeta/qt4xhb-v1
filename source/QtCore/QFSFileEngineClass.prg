@@ -345,7 +345,8 @@ HB_FUNC_STATIC( QFSFILEENGINE_FILETIME )
   {
     int par1 = hb_parni(1);
     QDateTime * ptr = new QDateTime( obj->fileTime (  (QAbstractFileEngine::FileTime) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
+  }
 }
 
 

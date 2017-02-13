@@ -276,7 +276,8 @@ QThread * currentThread()
 HB_FUNC_STATIC( QTHREAD_CURRENTTHREAD )
 {
   QThread * ptr = QThread::currentThread (  );
-  _qt4xhb_createReturnClass ( ptr, "QTHREAD" );}
+  _qt4xhb_createReturnClass ( ptr, "QTHREAD" );
+}
 
 
 

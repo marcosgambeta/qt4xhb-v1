@@ -103,7 +103,8 @@ HB_FUNC_STATIC( QEXTENSIONFACTORY_EXTENSIONMANAGER )
   if( obj )
   {
     QExtensionManager * ptr = obj->extensionManager (  );
-    _qt4xhb_createReturnClass ( ptr, "QEXTENSIONMANAGER" );  }
+    _qt4xhb_createReturnClass ( ptr, "QEXTENSIONMANAGER" );
+  }
 }
 
 
@@ -118,7 +119,8 @@ HB_FUNC_STATIC( QEXTENSIONFACTORY_EXTENSION )
     QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QString par2 = hb_parc(2);
     QObject * ptr = obj->extension ( par1, par2 );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+  }
 }
 
 

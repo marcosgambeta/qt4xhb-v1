@@ -206,7 +206,8 @@ HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NAMESPACEURI )
   if( obj )
   {
     QStringRef * ptr = new QStringRef( obj->namespaceUri (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
+  }
 }
 
 
@@ -219,7 +220,8 @@ HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_PREFIX )
   if( obj )
   {
     QStringRef * ptr = new QStringRef( obj->prefix (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
+  }
 }
 
 

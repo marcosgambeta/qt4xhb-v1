@@ -193,7 +193,8 @@ HB_FUNC_STATIC( QMODELINDEX_CHILD )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     QModelIndex * ptr = new QModelIndex( obj->child ( par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+  }
 }
 
 
@@ -221,7 +222,8 @@ HB_FUNC_STATIC( QMODELINDEX_DATA )
   {
     int par1 = ISNIL(1)? Qt::DisplayRole : hb_parni(1);
     QVariant * ptr = new QVariant( obj->data ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+  }
 }
 
 
@@ -290,7 +292,8 @@ HB_FUNC_STATIC( QMODELINDEX_MODEL )
   if( obj )
   {
     const QAbstractItemModel * ptr = obj->model (  );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTITEMMODEL" );  }
+    _qt4xhb_createReturnClass ( ptr, "QABSTRACTITEMMODEL" );
+  }
 }
 
 
@@ -303,7 +306,8 @@ HB_FUNC_STATIC( QMODELINDEX_PARENT )
   if( obj )
   {
     QModelIndex * ptr = new QModelIndex( obj->parent (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+  }
 }
 
 
@@ -332,7 +336,8 @@ HB_FUNC_STATIC( QMODELINDEX_SIBLING )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     QModelIndex * ptr = new QModelIndex( obj->sibling ( par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+  }
 }
 
 

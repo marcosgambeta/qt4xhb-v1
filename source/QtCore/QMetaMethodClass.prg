@@ -351,7 +351,8 @@ HB_FUNC_STATIC( QMETAMETHOD_ENCLOSINGMETAOBJECT )
   if( obj )
   {
     const QMetaObject * ptr = obj->enclosingMetaObject (  );
-    _qt4xhb_createReturnClass ( ptr, "QMETAOBJECT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QMETAOBJECT" );
+  }
 }
 
 

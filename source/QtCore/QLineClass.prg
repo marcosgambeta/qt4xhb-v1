@@ -227,7 +227,8 @@ HB_FUNC_STATIC( QLINE_P1 )
   if( obj )
   {
     QPoint * ptr = new QPoint( obj->p1 (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+  }
 }
 
 
@@ -240,7 +241,8 @@ HB_FUNC_STATIC( QLINE_P2 )
   if( obj )
   {
     QPoint * ptr = new QPoint( obj->p2 (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+  }
 }
 
 
@@ -462,7 +464,8 @@ HB_FUNC_STATIC( QLINE_TRANSLATED1 )
   {
     QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QLine * ptr = new QLine( obj->translated ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QLINE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QLINE", true );
+  }
 }
 
 
@@ -477,7 +480,8 @@ HB_FUNC_STATIC( QLINE_TRANSLATED2 )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     QLine * ptr = new QLine( obj->translated ( par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QLINE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QLINE", true );
+  }
 }
 
 

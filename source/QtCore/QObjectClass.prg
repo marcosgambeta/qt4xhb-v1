@@ -1722,7 +1722,8 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILD )
   {
     QString par1 = ISNIL(1)? QString() : hb_parc(1);
     QObject * ptr = obj->findChild<QObject *> ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+  }
 }
 
 
@@ -1900,7 +1901,8 @@ HB_FUNC_STATIC( QOBJECT_METAOBJECT )
   if( obj )
   {
     const QMetaObject * ptr = obj->metaObject (  );
-    _qt4xhb_createReturnClass ( ptr, "QMETAOBJECT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QMETAOBJECT" );
+  }
 }
 
 
@@ -1942,7 +1944,8 @@ HB_FUNC_STATIC( QOBJECT_PARENT )
   if( obj )
   {
     QObject * ptr = obj->parent (  );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+  }
 }
 
 
@@ -1956,7 +1959,8 @@ HB_FUNC_STATIC( QOBJECT_PROPERTY )
   {
     const char * par1 = hb_parc(1);
     QVariant * ptr = new QVariant( obj->property (  (const char *) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+  }
 }
 
 
@@ -2059,7 +2063,8 @@ HB_FUNC_STATIC( QOBJECT_THREAD )
   if( obj )
   {
     QThread * ptr = obj->thread (  );
-    _qt4xhb_createReturnClass ( ptr, "QTHREAD" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTHREAD" );
+  }
 }
 
 

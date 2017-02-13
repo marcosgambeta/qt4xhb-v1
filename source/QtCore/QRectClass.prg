@@ -320,7 +320,8 @@ HB_FUNC_STATIC( QRECT_ADJUSTED )
     int par3 = hb_parni(3);
     int par4 = hb_parni(4);
     QRect * ptr = new QRect( obj->adjusted ( par1, par2, par3, par4 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+  }
 }
 
 
@@ -347,7 +348,8 @@ HB_FUNC_STATIC( QRECT_BOTTOMLEFT )
   if( obj )
   {
     QPoint * ptr = new QPoint( obj->bottomLeft (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+  }
 }
 
 
@@ -360,7 +362,8 @@ HB_FUNC_STATIC( QRECT_BOTTOMRIGHT )
   if( obj )
   {
     QPoint * ptr = new QPoint( obj->bottomRight (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+  }
 }
 
 
@@ -373,7 +376,8 @@ HB_FUNC_STATIC( QRECT_CENTER )
   if( obj )
   {
     QPoint * ptr = new QPoint( obj->center (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+  }
 }
 
 
@@ -535,7 +539,8 @@ HB_FUNC_STATIC( QRECT_INTERSECTED )
   {
     QRect * par1 = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QRect * ptr = new QRect( obj->intersected ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+  }
 }
 
 
@@ -800,7 +805,8 @@ HB_FUNC_STATIC( QRECT_NORMALIZED )
   if( obj )
   {
     QRect * ptr = new QRect( obj->normalized (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+  }
 }
 
 
@@ -1058,7 +1064,8 @@ HB_FUNC_STATIC( QRECT_SIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->size (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 
@@ -1085,7 +1092,8 @@ HB_FUNC_STATIC( QRECT_TOPLEFT )
   if( obj )
   {
     QPoint * ptr = new QPoint( obj->topLeft (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+  }
 }
 
 
@@ -1098,7 +1106,8 @@ HB_FUNC_STATIC( QRECT_TOPRIGHT )
   if( obj )
   {
     QPoint * ptr = new QPoint( obj->topRight (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+  }
 }
 
 
@@ -1159,7 +1168,8 @@ HB_FUNC_STATIC( QRECT_TRANSLATED1 )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     QRect * ptr = new QRect( obj->translated ( par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+  }
 }
 
 
@@ -1173,7 +1183,8 @@ HB_FUNC_STATIC( QRECT_TRANSLATED2 )
   {
     QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QRect * ptr = new QRect( obj->translated ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+  }
 }
 
 
@@ -1202,7 +1213,8 @@ HB_FUNC_STATIC( QRECT_UNITED )
   {
     QRect * par1 = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QRect * ptr = new QRect( obj->united ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+  }
 }
 
 

@@ -145,7 +145,8 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_ABSOLUTEDIR )
   if( obj )
   {
     QDir * ptr = new QDir( obj->absoluteDir (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDIR", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QDIR", true );
+  }
 }
 
 
@@ -215,7 +216,8 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_CORE )
   if( obj )
   {
     QDesignerFormEditorInterface * ptr = obj->core (  );
-    _qt4xhb_createReturnClass ( ptr, "QDESIGNERFORMEDITORINTERFACE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QDESIGNERFORMEDITORINTERFACE" );
+  }
 }
 
 
@@ -228,7 +230,8 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_CURSOR )
   if( obj )
   {
     QDesignerFormWindowCursorInterface * ptr = obj->cursor (  );
-    _qt4xhb_createReturnClass ( ptr, "QDESIGNERFORMWINDOWCURSORINTERFACE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QDESIGNERFORMWINDOWCURSORINTERFACE" );
+  }
 }
 
 
@@ -297,7 +300,8 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_GRID )
   if( obj )
   {
     QPoint * ptr = new QPoint( obj->grid (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+  }
 }
 
 
@@ -396,7 +400,8 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_MAINCONTAINER )
   if( obj )
   {
     QWidget * ptr = obj->mainContainer (  );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );  }
+    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  }
 }
 
 
@@ -756,7 +761,8 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_FINDFORMWINDOW1 )
 {
   QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QDesignerFormWindowInterface * ptr = QDesignerFormWindowInterface::findFormWindow ( par1 );
-  _qt4xhb_createReturnClass ( ptr, "QDESIGNERFORMWINDOWINTERFACE" );}
+  _qt4xhb_createReturnClass ( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
+}
 
 
 /*
@@ -766,7 +772,8 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_FINDFORMWINDOW2 )
 {
   QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QDesignerFormWindowInterface * ptr = QDesignerFormWindowInterface::findFormWindow ( par1 );
-  _qt4xhb_createReturnClass ( ptr, "QDESIGNERFORMWINDOWINTERFACE" );}
+  _qt4xhb_createReturnClass ( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
+}
 
 
 //[1]QDesignerFormWindowInterface * findFormWindow ( QWidget * widget )
