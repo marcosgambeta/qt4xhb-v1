@@ -1667,7 +1667,7 @@ HB_FUNC_STATIC( QCOLOR_ISVALIDCOLOR )
 /*
 int qAlpha ( QRgb rgba )
 */
-HB_FUNC_STATIC( QALPHA )
+HB_FUNC( QALPHA )
 {
   hb_retni( qAlpha ( (QRgb) hb_parni(1) ) );
 }
@@ -1675,7 +1675,7 @@ HB_FUNC_STATIC( QALPHA )
 /*
 int qBlue ( QRgb rgb )
 */
-HB_FUNC_STATIC( QBLUE )
+HB_FUNC( QBLUE )
 {
   hb_retni( qBlue ( (QRgb) hb_parni(1) ) );
 }
@@ -1683,7 +1683,7 @@ HB_FUNC_STATIC( QBLUE )
 /*
 int qGray ( int r, int g, int b )
 */
-HB_FUNC_STATIC( QGRAY1 )
+HB_FUNC( QGRAY1 )
 {
   hb_retni( qGray ( hb_parni(1), hb_parni(2), hb_parni(3) ) );
 }
@@ -1691,7 +1691,7 @@ HB_FUNC_STATIC( QGRAY1 )
 /*
 int qGray ( QRgb rgb )
 */
-HB_FUNC_STATIC( QGRAY2 )
+HB_FUNC( QGRAY2 )
 {
   hb_retni( qGray ( (QRgb) hb_parni(1) ) );
 }
@@ -1699,7 +1699,7 @@ HB_FUNC_STATIC( QGRAY2 )
 //[1]int qGray ( int r, int g, int b )
 //[2]int qGray ( QRgb rgb )
 
-HB_FUNC_STATIC( QGRAY )
+HB_FUNC( QGRAY )
 {
   if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
   {
@@ -1714,7 +1714,7 @@ HB_FUNC_STATIC( QGRAY )
 /*
 int qGreen ( QRgb rgb )
 */
-HB_FUNC_STATIC( QGREEN )
+HB_FUNC( QGREEN )
 {
   hb_retni( qGreen ( (QRgb) hb_parni(1) ) );
 }
@@ -1722,7 +1722,7 @@ HB_FUNC_STATIC( QGREEN )
 /*
 int qRed ( QRgb rgb )
 */
-HB_FUNC_STATIC( QRED )
+HB_FUNC( QRED )
 {
   hb_retni( qRed ( (QRgb) hb_parni(1) ) );
 }
@@ -1730,7 +1730,7 @@ HB_FUNC_STATIC( QRED )
 /*
 QRgb qRgb ( int r, int g, int b )
 */
-HB_FUNC_STATIC( QRGB )
+HB_FUNC( QRGB )
 {
   hb_retni( qRgb ( hb_parni(1), hb_parni(2), hb_parni(3) ) );
 }
@@ -1738,7 +1738,7 @@ HB_FUNC_STATIC( QRGB )
 /*
 QRgb qRgba ( int r, int g, int b, int a )
 */
-HB_FUNC_STATIC( QRGBA )
+HB_FUNC( QRGBA )
 {
   hb_retni( qRgba ( hb_parni(1), hb_parni(2), hb_parni(3), hb_parni(4) ) );
 }
