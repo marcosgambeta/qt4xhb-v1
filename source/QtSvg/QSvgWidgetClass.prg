@@ -144,7 +144,8 @@ HB_FUNC_STATIC( QSVGWIDGET_RENDERER )
   if( obj )
   {
     QSvgRenderer * ptr = obj->renderer (  );
-    _qt4xhb_createReturnClass ( ptr, "QSVGRENDERER" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSVGRENDERER" );
+  }
 }
 
 
@@ -157,7 +158,8 @@ HB_FUNC_STATIC( QSVGWIDGET_SIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 

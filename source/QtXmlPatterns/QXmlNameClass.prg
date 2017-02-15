@@ -249,7 +249,8 @@ HB_FUNC_STATIC( QXMLNAME_FROMCLARKNAME )
   QString par1 = hb_parc(1);
   QXmlNamePool * par2 = (QXmlNamePool *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
   QXmlName * ptr = new QXmlName( QXmlName::fromClarkName ( par1, *par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QXMLNAME", true );}
+  _qt4xhb_createReturnClass ( ptr, "QXMLNAME", true );
+}
 
 
 /*

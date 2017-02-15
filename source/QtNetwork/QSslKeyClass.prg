@@ -301,7 +301,8 @@ HB_FUNC_STATIC( QSSLKEY_TODER )
   {
     QByteArray par1 = ISNIL(1)? QByteArray() : *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QByteArray * ptr = new QByteArray( obj->toDer ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );  }
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+  }
 }
 
 
@@ -315,7 +316,8 @@ HB_FUNC_STATIC( QSSLKEY_TOPEM )
   {
     QByteArray par1 = ISNIL(1)? QByteArray() : *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QByteArray * ptr = new QByteArray( obj->toPem ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );  }
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+  }
 }
 
 

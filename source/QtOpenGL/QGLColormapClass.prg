@@ -181,7 +181,8 @@ HB_FUNC_STATIC( QGLCOLORMAP_ENTRYCOLOR )
   {
     int par1 = hb_parni(1);
     QColor * ptr = new QColor( obj->entryColor ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+  }
 }
 
 

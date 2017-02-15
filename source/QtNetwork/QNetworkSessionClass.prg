@@ -170,7 +170,8 @@ HB_FUNC_STATIC( QNETWORKSESSION_CONFIGURATION )
   if( obj )
   {
     QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->configuration (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QNETWORKCONFIGURATION", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QNETWORKCONFIGURATION", true );
+  }
 }
 
 
@@ -211,7 +212,8 @@ HB_FUNC_STATIC( QNETWORKSESSION_INTERFACE )
   if( obj )
   {
     QNetworkInterface * ptr = new QNetworkInterface( obj->interface (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QNETWORKINTERFACE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QNETWORKINTERFACE", true );
+  }
 }
 
 
@@ -239,7 +241,8 @@ HB_FUNC_STATIC( QNETWORKSESSION_SESSIONPROPERTY )
   {
     QString par1 = hb_parc(1);
     QVariant * ptr = new QVariant( obj->sessionProperty ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+  }
 }
 
 

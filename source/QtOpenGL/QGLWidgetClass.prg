@@ -320,7 +320,8 @@ HB_FUNC_STATIC( QGLWIDGET_COLORMAP )
   if( obj )
   {
     const QGLColormap * ptr = &obj->colormap (  );
-    _qt4xhb_createReturnClass ( ptr, "QGLCOLORMAP" );  }
+    _qt4xhb_createReturnClass ( ptr, "QGLCOLORMAP" );
+  }
 }
 
 
@@ -333,7 +334,8 @@ HB_FUNC_STATIC( QGLWIDGET_CONTEXT )
   if( obj )
   {
     const QGLContext * ptr = obj->context (  );
-    _qt4xhb_createReturnClass ( ptr, "QGLCONTEXT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QGLCONTEXT" );
+  }
 }
 
 
@@ -438,7 +440,8 @@ HB_FUNC_STATIC( QGLWIDGET_FORMAT )
   if( obj )
   {
     QGLFormat * ptr = new QGLFormat( obj->format (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QGLFORMAT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QGLFORMAT" );
+  }
 }
 
 
@@ -452,7 +455,8 @@ HB_FUNC_STATIC( QGLWIDGET_GRABFRAMEBUFFER )
   {
     bool par1 = ISNIL(1)? false : hb_parl(1);
     QImage * ptr = new QImage( obj->grabFrameBuffer ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );
+  }
 }
 
 
@@ -521,7 +525,8 @@ HB_FUNC_STATIC( QGLWIDGET_OVERLAYCONTEXT )
   if( obj )
   {
     const QGLContext * ptr = obj->overlayContext (  );
-    _qt4xhb_createReturnClass ( ptr, "QGLCONTEXT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QGLCONTEXT" );
+  }
 }
 
 
@@ -567,7 +572,8 @@ HB_FUNC_STATIC( QGLWIDGET_RENDERPIXMAP )
     int par2 = ISNIL(2)? 0 : hb_parni(2);
     bool par3 = ISNIL(3)? false : hb_parl(3);
     QPixmap * ptr = new QPixmap( obj->renderPixmap ( par1, par2, par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
+  }
 }
 
 
@@ -704,7 +710,8 @@ HB_FUNC_STATIC( QGLWIDGET_CONVERTTOGLFORMAT )
 {
   QImage * par1 = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QImage * ptr = new QImage( QGLWidget::convertToGLFormat ( *par1 ) );
-  _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );}
+  _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );
+}
 
 
 

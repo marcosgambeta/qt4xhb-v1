@@ -248,7 +248,8 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_LOCALADDRESS )
   if( obj )
   {
     QHostAddress * ptr = new QHostAddress( obj->localAddress (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
+  }
 }
 
 
@@ -275,7 +276,8 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_PEERADDRESS )
   if( obj )
   {
     QHostAddress * ptr = new QHostAddress( obj->peerAddress (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
+  }
 }
 
 
@@ -316,7 +318,8 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_PROXY )
   if( obj )
   {
     QNetworkProxy * ptr = new QNetworkProxy( obj->proxy (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QNETWORKPROXY", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QNETWORKPROXY", true );
+  }
 }
 
 
@@ -421,7 +424,8 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SOCKETOPTION )
   {
     int par1 = hb_parni(1);
     QVariant * ptr = new QVariant( obj->socketOption (  (QAbstractSocket::SocketOption) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+  }
 }
 
 

@@ -423,7 +423,8 @@ QNetworkProxy applicationProxy ()
 HB_FUNC_STATIC( QNETWORKPROXY_APPLICATIONPROXY )
 {
   QNetworkProxy * ptr = new QNetworkProxy( QNetworkProxy::applicationProxy (  ) );
-  _qt4xhb_createReturnClass ( ptr, "QNETWORKPROXY", true );}
+  _qt4xhb_createReturnClass ( ptr, "QNETWORKPROXY", true );
+}
 
 
 /*

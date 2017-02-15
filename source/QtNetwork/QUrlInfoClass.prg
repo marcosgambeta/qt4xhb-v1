@@ -393,7 +393,8 @@ HB_FUNC_STATIC( QURLINFO_LASTMODIFIED )
   if( obj )
   {
     QDateTime * ptr = new QDateTime( obj->lastModified (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
+  }
 }
 
 
@@ -406,7 +407,8 @@ HB_FUNC_STATIC( QURLINFO_LASTREAD )
   if( obj )
   {
     QDateTime * ptr = new QDateTime( obj->lastRead (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
+  }
 }
 
 

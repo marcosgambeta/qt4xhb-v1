@@ -127,7 +127,8 @@ HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_HANDLE )
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->handle (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+  }
 }
 
 
@@ -157,7 +158,8 @@ HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_MAP )
     int par2;
     int par3;
     uchar * ptr = obj->map (  (QAbstractVideoBuffer::MapMode) par1, &par2, &par3 );
-    _qt4xhb_createReturnClass ( ptr, "UCHAR" );    hb_storni( par2, 2 );
+    _qt4xhb_createReturnClass ( ptr, "UCHAR" );
+    hb_storni( par2, 2 );
     hb_storni( par3, 3 );
   }
 }

@@ -226,7 +226,8 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_AT )
   {
     int par1 = hb_parni(1);
     QWebElement * ptr = new QWebElement( obj->at ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
+  }
 }
 
 
@@ -259,7 +260,8 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_FIRST )
   if( obj )
   {
     QWebElement * ptr = new QWebElement( obj->first (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
+  }
 }
 
 
@@ -272,7 +274,8 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_LAST )
   if( obj )
   {
     QWebElement * ptr = new QWebElement( obj->last (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
+  }
 }
 
 

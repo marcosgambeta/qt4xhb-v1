@@ -164,7 +164,8 @@ HB_FUNC_STATIC( QWEBVIEW_HISTORY )
   if( obj )
   {
     QWebHistory * ptr = obj->history (  );
-    _qt4xhb_createReturnClass ( ptr, "QWEBHISTORY" );  }
+    _qt4xhb_createReturnClass ( ptr, "QWEBHISTORY" );
+  }
 }
 
 
@@ -177,7 +178,8 @@ HB_FUNC_STATIC( QWEBVIEW_ICON )
   if( obj )
   {
     QIcon * ptr = new QIcon( obj->icon (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QICON", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QICON", true );
+  }
 }
 
 
@@ -251,7 +253,8 @@ HB_FUNC_STATIC( QWEBVIEW_PAGE )
   if( obj )
   {
     QWebPage * ptr = obj->page (  );
-    _qt4xhb_createReturnClass ( ptr, "QWEBPAGE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QWEBPAGE" );
+  }
 }
 
 
@@ -265,7 +268,8 @@ HB_FUNC_STATIC( QWEBVIEW_PAGEACTION )
   {
     int par1 = hb_parni(1);
     QAction * ptr = obj->pageAction (  (QWebPage::WebAction) par1 );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );  }
+    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+  }
 }
 
 
@@ -430,7 +434,8 @@ HB_FUNC_STATIC( QWEBVIEW_SETTINGS )
   if( obj )
   {
     QWebSettings * ptr = obj->settings (  );
-    _qt4xhb_createReturnClass ( ptr, "QWEBSETTINGS" );  }
+    _qt4xhb_createReturnClass ( ptr, "QWEBSETTINGS" );
+  }
 }
 
 
@@ -487,7 +492,8 @@ HB_FUNC_STATIC( QWEBVIEW_URL )
   if( obj )
   {
     QUrl * ptr = new QUrl( obj->url (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+  }
 }
 
 

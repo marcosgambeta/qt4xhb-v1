@@ -186,7 +186,8 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_BROADCAST )
   if( obj )
   {
     QHostAddress * ptr = new QHostAddress( obj->broadcast (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
+  }
 }
 
 
@@ -199,7 +200,8 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_IP )
   if( obj )
   {
     QHostAddress * ptr = new QHostAddress( obj->ip (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
+  }
 }
 
 
@@ -212,7 +214,8 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NETMASK )
   if( obj )
   {
     QHostAddress * ptr = new QHostAddress( obj->netmask (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
+  }
 }
 
 

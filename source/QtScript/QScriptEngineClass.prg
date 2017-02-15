@@ -197,7 +197,8 @@ HB_FUNC_STATIC( QSCRIPTENGINE_AGENT )
   if( obj )
   {
     QScriptEngineAgent * ptr = obj->agent (  );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTENGINEAGENT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSCRIPTENGINEAGENT" );
+  }
 }
 
 
@@ -261,7 +262,8 @@ HB_FUNC_STATIC( QSCRIPTENGINE_CURRENTCONTEXT )
   if( obj )
   {
     QScriptContext * ptr = obj->currentContext (  );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTCONTEXT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSCRIPTCONTEXT" );
+  }
 }
 
 
@@ -275,7 +277,8 @@ HB_FUNC_STATIC( QSCRIPTENGINE_DEFAULTPROTOTYPE )
   {
     int par1 = hb_parni(1);
     QScriptValue * ptr = new QScriptValue( obj->defaultPrototype ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+  }
 }
 
 
@@ -291,7 +294,8 @@ HB_FUNC_STATIC( QSCRIPTENGINE_EVALUATE1 )
     QString par2 = ISNIL(2)? QString() : hb_parc(2);
     int par3 = ISNIL(3)? 1 : hb_parni(3);
     QScriptValue * ptr = new QScriptValue( obj->evaluate ( par1, par2, par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+  }
 }
 
 
@@ -305,7 +309,8 @@ HB_FUNC_STATIC( QSCRIPTENGINE_EVALUATE2 )
   {
     QScriptProgram * par1 = (QScriptProgram *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QScriptValue * ptr = new QScriptValue( obj->evaluate ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+  }
 }
 
 
@@ -334,7 +339,8 @@ HB_FUNC_STATIC( QSCRIPTENGINE_GLOBALOBJECT )
   if( obj )
   {
     QScriptValue * ptr = new QScriptValue( obj->globalObject (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+  }
 }
 
 
@@ -362,7 +368,8 @@ HB_FUNC_STATIC( QSCRIPTENGINE_IMPORTEXTENSION )
   {
     QString par1 = hb_parc(1);
     QScriptValue * ptr = new QScriptValue( obj->importExtension ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+  }
 }
 
 
@@ -428,7 +435,8 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWARRAY )
   {
     uint par1 = ISNIL(1)? 0 : hb_parni(1);
     QScriptValue * ptr = new QScriptValue( obj->newArray ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+  }
 }
 
 
@@ -451,7 +459,8 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWREGEXP1 )
   {
     QRegExp * par1 = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QScriptValue * ptr = new QScriptValue( obj->newRegExp ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+  }
 }
 
 
@@ -466,7 +475,8 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWREGEXP2 )
     QString par1 = hb_parc(1);
     QString par2 = hb_parc(2);
     QScriptValue * ptr = new QScriptValue( obj->newRegExp ( par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+  }
 }
 
 
@@ -495,7 +505,8 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWVARIANT1 )
   {
     QVariant * par1 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QScriptValue * ptr = new QScriptValue( obj->newVariant ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+  }
 }
 
 
@@ -510,7 +521,8 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWVARIANT2 )
     QScriptValue * par1 = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QVariant * par2 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     QScriptValue * ptr = new QScriptValue( obj->newVariant ( *par1, *par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+  }
 }
 
 
@@ -538,7 +550,8 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NULLVALUE )
   if( obj )
   {
     QScriptValue * ptr = new QScriptValue( obj->nullValue (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+  }
 }
 
 
@@ -579,7 +592,8 @@ HB_FUNC_STATIC( QSCRIPTENGINE_PUSHCONTEXT )
   if( obj )
   {
     QScriptContext * ptr = obj->pushContext (  );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTCONTEXT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSCRIPTCONTEXT" );
+  }
 }
 
 
@@ -670,7 +684,8 @@ HB_FUNC_STATIC( QSCRIPTENGINE_TOOBJECT )
   {
     QScriptValue * par1 = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QScriptValue * ptr = new QScriptValue( obj->toObject ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+  }
 }
 
 
@@ -685,7 +700,8 @@ HB_FUNC_STATIC( QSCRIPTENGINE_TOSTRINGHANDLE )
   {
     QString par1 = hb_parc(1);
     QScriptString * ptr = new QScriptString( obj->toStringHandle ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTSTRING" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSCRIPTSTRING" );
+  }
 }
 
 
@@ -698,7 +714,8 @@ HB_FUNC_STATIC( QSCRIPTENGINE_UNCAUGHTEXCEPTION )
   if( obj )
   {
     QScriptValue * ptr = new QScriptValue( obj->uncaughtException (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+  }
 }
 
 
@@ -748,7 +765,8 @@ HB_FUNC_STATIC( QSCRIPTENGINE_UNDEFINEDVALUE )
   if( obj )
   {
     QScriptValue * ptr = new QScriptValue( obj->undefinedValue (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+  }
 }
 
 
@@ -760,7 +778,8 @@ HB_FUNC_STATIC( QSCRIPTENGINE_CHECKSYNTAX )
 {
   QString par1 = hb_parc(1);
   QScriptSyntaxCheckResult * ptr = new QScriptSyntaxCheckResult( QScriptEngine::checkSyntax ( par1 ) );
-  _qt4xhb_createReturnClass ( ptr, "QSCRIPTSYNTAXCHECKRESULT" );}
+  _qt4xhb_createReturnClass ( ptr, "QSCRIPTSYNTAXCHECKRESULT" );
+}
 
 
 

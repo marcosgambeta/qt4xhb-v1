@@ -174,7 +174,8 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERYWIDGET )
   if( obj )
   {
     QHelpSearchQueryWidget * ptr = obj->queryWidget (  );
-    _qt4xhb_createReturnClass ( ptr, "QHELPSEARCHQUERYWIDGET" );  }
+    _qt4xhb_createReturnClass ( ptr, "QHELPSEARCHQUERYWIDGET" );
+  }
 }
 
 
@@ -187,7 +188,8 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_RESULTWIDGET )
   if( obj )
   {
     QHelpSearchResultWidget * ptr = obj->resultWidget (  );
-    _qt4xhb_createReturnClass ( ptr, "QHELPSEARCHRESULTWIDGET" );  }
+    _qt4xhb_createReturnClass ( ptr, "QHELPSEARCHRESULTWIDGET" );
+  }
 }
 
 

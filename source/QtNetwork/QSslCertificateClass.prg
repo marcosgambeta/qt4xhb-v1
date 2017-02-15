@@ -246,7 +246,8 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_DIGEST )
   {
     int par1 = ISNIL(1)? (int) QCryptographicHash::Md5 : hb_parni(1);
     QByteArray * ptr = new QByteArray( obj->digest (  (QCryptographicHash::Algorithm) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );  }
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+  }
 }
 
 
@@ -259,7 +260,8 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_EFFECTIVEDATE )
   if( obj )
   {
     QDateTime * ptr = new QDateTime( obj->effectiveDate (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
+  }
 }
 
 
@@ -272,7 +274,8 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_EXPIRYDATE )
   if( obj )
   {
     QDateTime * ptr = new QDateTime( obj->expiryDate (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
+  }
 }
 
 
@@ -344,7 +347,8 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_PUBLICKEY )
   if( obj )
   {
     QSslKey * ptr = new QSslKey( obj->publicKey (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSSLKEY", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSSLKEY", true );
+  }
 }
 
 
@@ -357,7 +361,8 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_SERIALNUMBER )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->serialNumber (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );  }
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+  }
 }
 
 
@@ -400,7 +405,8 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_TODER )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->toDer (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );  }
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+  }
 }
 
 
@@ -413,7 +419,8 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_TOPEM )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->toPem (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );  }
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+  }
 }
 
 
@@ -426,7 +433,8 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_VERSION )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->version (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );  }
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+  }
 }
 
 

@@ -187,7 +187,8 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_NAME )
   if( obj )
   {
     QScriptString * ptr = new QScriptString( obj->name (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTSTRING" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSCRIPTSTRING" );
+  }
 }
 
 
@@ -214,7 +215,8 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_OBJECT )
   if( obj )
   {
     QScriptValue * ptr = new QScriptValue( obj->object (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+  }
 }
 
 

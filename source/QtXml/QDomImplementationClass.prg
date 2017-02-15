@@ -188,7 +188,8 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_CREATEDOCUMENT )
     QString par2 = hb_parc(2);
     QDomDocumentType * par3 = (QDomDocumentType *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     QDomDocument * ptr = new QDomDocument( obj->createDocument ( par1, par2, *par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMDOCUMENT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QDOMDOCUMENT", true );
+  }
 }
 
 
@@ -204,7 +205,8 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_CREATEDOCUMENTTYPE )
     QString par2 = hb_parc(2);
     QString par3 = hb_parc(3);
     QDomDocumentType * ptr = new QDomDocumentType( obj->createDocumentType ( par1, par2, par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMDOCUMENTTYPE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QDOMDOCUMENTTYPE", true );
+  }
 }
 
 

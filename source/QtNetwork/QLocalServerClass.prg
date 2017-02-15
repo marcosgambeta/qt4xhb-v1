@@ -213,7 +213,8 @@ HB_FUNC_STATIC( QLOCALSERVER_NEXTPENDINGCONNECTION )
   if( obj )
   {
     QLocalSocket * ptr = obj->nextPendingConnection (  );
-    _qt4xhb_createReturnClass ( ptr, "QLOCALSOCKET" );  }
+    _qt4xhb_createReturnClass ( ptr, "QLOCALSOCKET" );
+  }
 }
 
 

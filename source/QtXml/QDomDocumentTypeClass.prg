@@ -135,7 +135,8 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_ENTITIES )
   if( obj )
   {
     QDomNamedNodeMap * ptr = new QDomNamedNodeMap( obj->entities (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMNAMEDNODEMAP", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QDOMNAMEDNODEMAP", true );
+  }
 }
 
 
@@ -190,7 +191,8 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NOTATIONS )
   if( obj )
   {
     QDomNamedNodeMap * ptr = new QDomNamedNodeMap( obj->notations (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMNAMEDNODEMAP", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QDOMNAMEDNODEMAP", true );
+  }
 }
 
 

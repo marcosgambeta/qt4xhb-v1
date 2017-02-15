@@ -106,7 +106,8 @@ QString temp = hb_arrayGetCPtr(aStrings4, i4+1);
 par4 << temp;
 }
     QObject * ptr = obj->create ( par1, *par2, par3, par4 );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+  }
 }
 
 

@@ -278,7 +278,8 @@ HB_FUNC_STATIC( QXMLITEM_TOATOMICVALUE )
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->toAtomicValue (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+  }
 }
 
 
@@ -291,7 +292,8 @@ HB_FUNC_STATIC( QXMLITEM_TONODEMODELINDEX )
   if( obj )
   {
     QXmlNodeModelIndex * ptr = new QXmlNodeModelIndex( obj->toNodeModelIndex (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QXMLNODEMODELINDEX", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QXMLNODEMODELINDEX", true );
+  }
 }
 
 

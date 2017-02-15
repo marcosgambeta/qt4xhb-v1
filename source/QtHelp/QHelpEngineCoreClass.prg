@@ -242,7 +242,8 @@ HB_FUNC_STATIC( QHELPENGINECORE_CUSTOMVALUE )
     QString par1 = hb_parc(1);
     QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     QVariant * ptr = new QVariant( obj->customValue ( par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+  }
 }
 
 
@@ -285,7 +286,8 @@ HB_FUNC_STATIC( QHELPENGINECORE_FILEDATA )
   {
     QUrl * par1 = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QByteArray * ptr = new QByteArray( obj->fileData ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );  }
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+  }
 }
 
 
@@ -421,7 +423,8 @@ HB_FUNC_STATIC( QHELPENGINECORE_FINDFILE )
   {
     QUrl * par1 = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QUrl * ptr = new QUrl( obj->findFile ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+  }
 }
 
 
@@ -593,7 +596,8 @@ HB_FUNC_STATIC( QHELPENGINECORE_METADATA )
   QString par1 = hb_parc(1);
   QString par2 = hb_parc(2);
   QVariant * ptr = new QVariant( QHelpEngineCore::metaData ( par1, par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );}
+  _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+}
 
 
 /*

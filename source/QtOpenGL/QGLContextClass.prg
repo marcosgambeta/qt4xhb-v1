@@ -309,7 +309,8 @@ HB_FUNC_STATIC( QGLCONTEXT_DEVICE )
   if( obj )
   {
     QPaintDevice * ptr = obj->device (  );
-    _qt4xhb_createReturnClass ( ptr, "QPAINTDEVICE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QPAINTDEVICE" );
+  }
 }
 
 
@@ -385,7 +386,8 @@ HB_FUNC_STATIC( QGLCONTEXT_FORMAT )
   if( obj )
   {
     QGLFormat * ptr = new QGLFormat( obj->format (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QGLFORMAT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QGLFORMAT" );
+  }
 }
 
 
@@ -455,7 +457,8 @@ HB_FUNC_STATIC( QGLCONTEXT_OVERLAYTRANSPARENTCOLOR )
   if( obj )
   {
     QColor * ptr = new QColor( obj->overlayTransparentColor (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+  }
 }
 
 
@@ -468,7 +471,8 @@ HB_FUNC_STATIC( QGLCONTEXT_REQUESTEDFORMAT )
   if( obj )
   {
     QGLFormat * ptr = new QGLFormat( obj->requestedFormat (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QGLFORMAT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QGLFORMAT" );
+  }
 }
 
 
@@ -534,7 +538,8 @@ const QGLContext * currentContext ()
 HB_FUNC_STATIC( QGLCONTEXT_CURRENTCONTEXT )
 {
   const QGLContext * ptr = QGLContext::currentContext (  );
-  _qt4xhb_createReturnClass ( ptr, "QGLCONTEXT" );}
+  _qt4xhb_createReturnClass ( ptr, "QGLCONTEXT" );
+}
 
 
 /*

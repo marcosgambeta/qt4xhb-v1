@@ -215,7 +215,8 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_EXPIRATIONDATE )
   if( obj )
   {
     QDateTime * ptr = new QDateTime( obj->expirationDate (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
+  }
 }
 
 
@@ -270,7 +271,8 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_NAME )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->name (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );  }
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+  }
 }
 
 
@@ -403,7 +405,8 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_TORAWFORM )
   {
     int par1 = ISNIL(1)? (int) QNetworkCookie::Full : hb_parni(1);
     QByteArray * ptr = new QByteArray( obj->toRawForm (  (QNetworkCookie::RawForm) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );  }
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+  }
 }
 
 
@@ -416,7 +419,8 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_VALUE )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->value (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );  }
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+  }
 }
 
 

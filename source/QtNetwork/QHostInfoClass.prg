@@ -395,7 +395,8 @@ HB_FUNC_STATIC( QHOSTINFO_FROMNAME )
 {
   QString par1 = hb_parc(1);
   QHostInfo * ptr = new QHostInfo( QHostInfo::fromName ( par1 ) );
-  _qt4xhb_createReturnClass ( ptr, "QHOSTINFO", true );}
+  _qt4xhb_createReturnClass ( ptr, "QHOSTINFO", true );
+}
 
 
 /*

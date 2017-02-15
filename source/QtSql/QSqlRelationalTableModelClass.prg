@@ -114,7 +114,8 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_RELATION )
   {
     int par1 = hb_parni(1);
     QSqlRelation * ptr = new QSqlRelation( obj->relation ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSQLRELATION", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSQLRELATION", true );
+  }
 }
 
 
@@ -128,7 +129,8 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_RELATIONMODEL )
   {
     int par1 = hb_parni(1);
     QSqlTableModel * ptr = obj->relationModel ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QSQLTABLEMODEL" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSQLTABLEMODEL" );
+  }
 }
 
 
@@ -173,7 +175,8 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_DATA )
     QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = ISNIL(2)? Qt::DisplayRole : hb_parni(2);
     QVariant * ptr = new QVariant( obj->data ( *par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+  }
 }
 
 

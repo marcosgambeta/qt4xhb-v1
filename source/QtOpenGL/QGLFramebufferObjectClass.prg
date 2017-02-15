@@ -306,7 +306,8 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_FORMAT )
   if( obj )
   {
     QGLFramebufferObjectFormat * ptr = new QGLFramebufferObjectFormat( obj->format (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QGLFRAMEBUFFEROBJECTFORMAT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QGLFRAMEBUFFEROBJECTFORMAT" );
+  }
 }
 
 
@@ -375,7 +376,8 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_SIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->size (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 
@@ -402,7 +404,8 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_TOIMAGE )
   if( obj )
   {
     QImage * ptr = new QImage( obj->toImage (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );
+  }
 }
 
 
@@ -415,7 +418,8 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_PAINTENGINE )
   if( obj )
   {
     QPaintEngine * ptr = obj->paintEngine (  );
-    _qt4xhb_createReturnClass ( ptr, "QPAINTENGINE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QPAINTENGINE" );
+  }
 }
 
 

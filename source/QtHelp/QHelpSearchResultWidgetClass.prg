@@ -86,7 +86,8 @@ HB_FUNC_STATIC( QHELPSEARCHRESULTWIDGET_LINKAT )
   {
     QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QUrl * ptr = new QUrl( obj->linkAt ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+  }
 }
 
 

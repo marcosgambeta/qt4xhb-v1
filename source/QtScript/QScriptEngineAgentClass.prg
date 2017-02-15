@@ -176,7 +176,8 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_ENGINE )
   if( obj )
   {
     QScriptEngine * ptr = obj->engine (  );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTENGINE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSCRIPTENGINE" );
+  }
 }
 
 
@@ -224,7 +225,8 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_EXTENSION )
     int par1 = hb_parni(1);
     QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     QVariant * ptr = new QVariant( obj->extension (  (QScriptEngineAgent::Extension) par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+  }
 }
 
 

@@ -205,7 +205,8 @@ HB_FUNC_STATIC( QWEBDATABASE_ORIGIN )
   if( obj )
   {
     QWebSecurityOrigin * ptr = new QWebSecurityOrigin( obj->origin (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QWEBSECURITYORIGIN", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QWEBSECURITYORIGIN", true );
+  }
 }
 
 

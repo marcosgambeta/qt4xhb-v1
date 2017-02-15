@@ -160,7 +160,8 @@ HB_FUNC_STATIC( QSQLDRIVER_CREATERESULT )
   if( obj )
   {
     QSqlResult * ptr = obj->createResult (  );
-    _qt4xhb_createReturnClass ( ptr, "QSQLRESULT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSQLRESULT" );
+  }
 }
 
 
@@ -205,7 +206,8 @@ HB_FUNC_STATIC( QSQLDRIVER_HANDLE )
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->handle (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+  }
 }
 
 
@@ -277,7 +279,8 @@ HB_FUNC_STATIC( QSQLDRIVER_LASTERROR )
   if( obj )
   {
     QSqlError * ptr = new QSqlError( obj->lastError (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSQLERROR", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSQLERROR", true );
+  }
 }
 
 
@@ -325,7 +328,8 @@ HB_FUNC_STATIC( QSQLDRIVER_PRIMARYINDEX )
   {
     QString par1 = hb_parc(1);
     QSqlIndex * ptr = new QSqlIndex( obj->primaryIndex ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSQLINDEX", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSQLINDEX", true );
+  }
 }
 
 
@@ -339,7 +343,8 @@ HB_FUNC_STATIC( QSQLDRIVER_RECORD )
   {
     QString par1 = hb_parc(1);
     QSqlRecord * ptr = new QSqlRecord( obj->record ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSQLRECORD", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSQLRECORD", true );
+  }
 }
 
 

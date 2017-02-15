@@ -128,7 +128,8 @@ HB_FUNC_STATIC( QSCRIPTABLE_ARGUMENT )
   {
     int par1 = hb_parni(1);
     QScriptValue * ptr = new QScriptValue( obj->argument ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+  }
 }
 
 
@@ -155,7 +156,8 @@ HB_FUNC_STATIC( QSCRIPTABLE_CONTEXT )
   if( obj )
   {
     QScriptContext * ptr = obj->context (  );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTCONTEXT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSCRIPTCONTEXT" );
+  }
 }
 
 
@@ -168,7 +170,8 @@ HB_FUNC_STATIC( QSCRIPTABLE_ENGINE )
   if( obj )
   {
     QScriptEngine * ptr = obj->engine (  );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTENGINE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSCRIPTENGINE" );
+  }
 }
 
 
@@ -181,7 +184,8 @@ HB_FUNC_STATIC( QSCRIPTABLE_THISOBJECT )
   if( obj )
   {
     QScriptValue * ptr = new QScriptValue( obj->thisObject (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+  }
 }
 
 

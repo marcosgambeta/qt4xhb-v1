@@ -96,7 +96,8 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_CONTENTITEMAT )
   {
     QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QHelpContentItem * ptr = obj->contentItemAt ( *par1 );
-    _qt4xhb_createReturnClass ( ptr, "QHELPCONTENTITEM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QHELPCONTENTITEM" );
+  }
 }
 
 
@@ -155,7 +156,8 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_DATA )
     QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
     QVariant * ptr = new QVariant( obj->data ( *par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+  }
 }
 
 
@@ -171,7 +173,8 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_INDEX )
     int par2 = hb_parni(2);
     QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     QModelIndex * ptr = new QModelIndex( obj->index ( par1, par2, par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+  }
 }
 
 
@@ -185,7 +188,8 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_PARENT )
   {
     QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QModelIndex * ptr = new QModelIndex( obj->parent ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+  }
 }
 
 

@@ -224,7 +224,8 @@ HB_FUNC_STATIC( QSVGRENDERER_BOUNDSONELEMENT )
   {
     QString par1 = hb_parc(1);
     QRectF * ptr = new QRectF( obj->boundsOnElement ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+  }
 }
 
 
@@ -237,7 +238,8 @@ HB_FUNC_STATIC( QSVGRENDERER_DEFAULTSIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->defaultSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 
@@ -294,7 +296,8 @@ HB_FUNC_STATIC( QSVGRENDERER_MATRIXFORELEMENT )
   {
     QString par1 = hb_parc(1);
     QMatrix * ptr = new QMatrix( obj->matrixForElement ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMATRIX" );  }
+    _qt4xhb_createReturnClass ( ptr, "QMATRIX" );
+  }
 }
 
 
@@ -367,7 +370,8 @@ HB_FUNC_STATIC( QSVGRENDERER_VIEWBOX )
   if( obj )
   {
     QRect * ptr = new QRect( obj->viewBox (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+  }
 }
 
 
@@ -380,7 +384,8 @@ HB_FUNC_STATIC( QSVGRENDERER_VIEWBOXF )
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->viewBoxF (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+  }
 }
 
 

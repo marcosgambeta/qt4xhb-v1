@@ -929,7 +929,8 @@ QGLFormat defaultFormat ()
 HB_FUNC_STATIC( QGLFORMAT_DEFAULTFORMAT )
 {
   QGLFormat * ptr = new QGLFormat( QGLFormat::defaultFormat (  ) );
-  _qt4xhb_createReturnClass ( ptr, "QGLFORMAT" );}
+  _qt4xhb_createReturnClass ( ptr, "QGLFORMAT" );
+}
 
 
 /*
@@ -938,7 +939,8 @@ QGLFormat defaultOverlayFormat ()
 HB_FUNC_STATIC( QGLFORMAT_DEFAULTOVERLAYFORMAT )
 {
   QGLFormat * ptr = new QGLFormat( QGLFormat::defaultOverlayFormat (  ) );
-  _qt4xhb_createReturnClass ( ptr, "QGLFORMAT" );}
+  _qt4xhb_createReturnClass ( ptr, "QGLFORMAT" );
+}
 
 
 /*

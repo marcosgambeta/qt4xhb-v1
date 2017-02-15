@@ -138,7 +138,8 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_DATABASE )
   if( obj )
   {
     QSqlDatabase * ptr = new QSqlDatabase( obj->database (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSQLDATABASE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSQLDATABASE" );
+  }
 }
 
 
@@ -225,7 +226,8 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_PRIMARYKEY )
   if( obj )
   {
     QSqlIndex * ptr = new QSqlIndex( obj->primaryKey (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSQLINDEX", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSQLINDEX", true );
+  }
 }
 
 
@@ -374,7 +376,8 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_DATA )
     QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = ISNIL(2)? Qt::DisplayRole : hb_parni(2);
     QVariant * ptr = new QVariant( obj->data ( *par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+  }
 }
 
 
@@ -405,7 +408,8 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_HEADERDATA )
     int par2 = hb_parni(2);
     int par3 = ISNIL(3)? Qt::DisplayRole : hb_parni(3);
     QVariant * ptr = new QVariant( obj->headerData ( par1,  (Qt::Orientation) par2, par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+  }
 }
 
 

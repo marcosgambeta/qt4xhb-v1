@@ -436,7 +436,8 @@ HB_FUNC_STATIC( QWEBELEMENT_CLONE )
   if( obj )
   {
     QWebElement * ptr = new QWebElement( obj->clone (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
+  }
 }
 
 
@@ -449,7 +450,8 @@ HB_FUNC_STATIC( QWEBELEMENT_DOCUMENT )
   if( obj )
   {
     QWebElement * ptr = new QWebElement( obj->document (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
+  }
 }
 
 
@@ -553,7 +555,8 @@ HB_FUNC_STATIC( QWEBELEMENT_EVALUATEJAVASCRIPT )
   {
     QString par1 = hb_parc(1);
     QVariant * ptr = new QVariant( obj->evaluateJavaScript ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+  }
 }
 
 
@@ -567,7 +570,8 @@ HB_FUNC_STATIC( QWEBELEMENT_FINDALL )
   {
     QString par1 = hb_parc(1);
     QWebElementCollection * ptr = new QWebElementCollection( obj->findAll ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QWEBELEMENTCOLLECTION", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QWEBELEMENTCOLLECTION", true );
+  }
 }
 
 
@@ -581,7 +585,8 @@ HB_FUNC_STATIC( QWEBELEMENT_FINDFIRST )
   {
     QString par1 = hb_parc(1);
     QWebElement * ptr = new QWebElement( obj->findFirst ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
+  }
 }
 
 
@@ -594,7 +599,8 @@ HB_FUNC_STATIC( QWEBELEMENT_FIRSTCHILD )
   if( obj )
   {
     QWebElement * ptr = new QWebElement( obj->firstChild (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
+  }
 }
 
 
@@ -607,7 +613,8 @@ HB_FUNC_STATIC( QWEBELEMENT_GEOMETRY )
   if( obj )
   {
     QRect * ptr = new QRect( obj->geometry (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+  }
 }
 
 
@@ -708,7 +715,8 @@ HB_FUNC_STATIC( QWEBELEMENT_LASTCHILD )
   if( obj )
   {
     QWebElement * ptr = new QWebElement( obj->lastChild (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
+  }
 }
 
 
@@ -749,7 +757,8 @@ HB_FUNC_STATIC( QWEBELEMENT_NEXTSIBLING )
   if( obj )
   {
     QWebElement * ptr = new QWebElement( obj->nextSibling (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
+  }
 }
 
 
@@ -762,7 +771,8 @@ HB_FUNC_STATIC( QWEBELEMENT_PARENT )
   if( obj )
   {
     QWebElement * ptr = new QWebElement( obj->parent (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
+  }
 }
 
 
@@ -879,7 +889,8 @@ HB_FUNC_STATIC( QWEBELEMENT_PREVIOUSSIBLING )
   if( obj )
   {
     QWebElement * ptr = new QWebElement( obj->previousSibling (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
+  }
 }
 
 
@@ -1195,7 +1206,8 @@ HB_FUNC_STATIC( QWEBELEMENT_TAKEFROMDOCUMENT )
   if( obj )
   {
     QWebElement * ptr = &obj->takeFromDocument (  );
-    _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT" );
+  }
 }
 
 
@@ -1265,7 +1277,8 @@ HB_FUNC_STATIC( QWEBELEMENT_WEBFRAME )
   if( obj )
   {
     QWebFrame * ptr = obj->webFrame (  );
-    _qt4xhb_createReturnClass ( ptr, "QWEBFRAME" );  }
+    _qt4xhb_createReturnClass ( ptr, "QWEBFRAME" );
+  }
 }
 
 

@@ -147,7 +147,8 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_MAXIMUMCACHESIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->maximumCacheSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 
@@ -160,7 +161,8 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_RENDERER )
   if( obj )
   {
     QSvgRenderer * ptr = obj->renderer (  );
-    _qt4xhb_createReturnClass ( ptr, "QSVGRENDERER" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSVGRENDERER" );
+  }
 }
 
 
@@ -218,7 +220,8 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_BOUNDINGRECT )
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->boundingRect (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+  }
 }
 
 

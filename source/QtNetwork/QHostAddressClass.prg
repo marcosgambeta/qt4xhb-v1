@@ -472,7 +472,8 @@ HB_FUNC_STATIC( QHOSTADDRESS_TOIPV6ADDRESS )
   if( obj )
   {
     Q_IPV6ADDR * ptr = new Q_IPV6ADDR( obj->toIPv6Address (  ) );
-    _qt4xhb_createReturnClass ( ptr, "Q_IPV6ADDR" );  }
+    _qt4xhb_createReturnClass ( ptr, "Q_IPV6ADDR" );
+  }
 }
 
 

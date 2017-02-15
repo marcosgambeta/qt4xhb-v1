@@ -305,7 +305,8 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_FORMAT )
   if( obj )
   {
     QGLFormat * ptr = new QGLFormat( obj->format (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QGLFORMAT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QGLFORMAT" );
+  }
 }
 
 
@@ -375,7 +376,8 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_SIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->size (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 
@@ -388,7 +390,8 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_TOIMAGE )
   if( obj )
   {
     QImage * ptr = new QImage( obj->toImage (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );
+  }
 }
 
 
@@ -416,7 +419,8 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_PAINTENGINE )
   if( obj )
   {
     QPaintEngine * ptr = obj->paintEngine (  );
-    _qt4xhb_createReturnClass ( ptr, "QPAINTENGINE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QPAINTENGINE" );
+  }
 }
 
 

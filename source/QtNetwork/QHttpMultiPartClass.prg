@@ -157,7 +157,8 @@ HB_FUNC_STATIC( QHTTPMULTIPART_BOUNDARY )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->boundary (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );  }
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+  }
 }
 
 

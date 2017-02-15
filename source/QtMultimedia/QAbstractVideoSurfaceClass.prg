@@ -142,7 +142,8 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_NEARESTFORMAT )
   {
     QVideoSurfaceFormat * par1 = (QVideoSurfaceFormat *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QVideoSurfaceFormat * ptr = new QVideoSurfaceFormat( obj->nearestFormat ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVIDEOSURFACEFORMAT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QVIDEOSURFACEFORMAT", true );
+  }
 }
 
 
@@ -223,7 +224,8 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_SURFACEFORMAT )
   if( obj )
   {
     QVideoSurfaceFormat * ptr = new QVideoSurfaceFormat( obj->surfaceFormat (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QVIDEOSURFACEFORMAT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QVIDEOSURFACEFORMAT", true );
+  }
 }
 
 

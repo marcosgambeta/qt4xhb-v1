@@ -248,7 +248,8 @@ HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_SCRIPTNAME )
   if( obj )
   {
     QScriptString * ptr = new QScriptString( obj->scriptName (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTSTRING" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSCRIPTSTRING" );
+  }
 }
 
 
@@ -304,7 +305,8 @@ HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_VALUE )
   if( obj )
   {
     QScriptValue * ptr = new QScriptValue( obj->value (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
+  }
 }
 
 

@@ -207,7 +207,8 @@ HB_FUNC_STATIC( QTCPSERVER_NEXTPENDINGCONNECTION )
   if( obj )
   {
     QTcpSocket * ptr = obj->nextPendingConnection (  );
-    _qt4xhb_createReturnClass ( ptr, "QTCPSOCKET" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTCPSOCKET" );
+  }
 }
 
 
@@ -220,7 +221,8 @@ HB_FUNC_STATIC( QTCPSERVER_PROXY )
   if( obj )
   {
     QNetworkProxy * ptr = new QNetworkProxy( obj->proxy (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QNETWORKPROXY", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QNETWORKPROXY", true );
+  }
 }
 
 
@@ -233,7 +235,8 @@ HB_FUNC_STATIC( QTCPSERVER_SERVERADDRESS )
   if( obj )
   {
     QHostAddress * ptr = new QHostAddress( obj->serverAddress (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
+  }
 }
 
 

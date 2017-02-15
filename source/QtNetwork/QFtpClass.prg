@@ -224,7 +224,8 @@ HB_FUNC_STATIC( QFTP_CURRENTDEVICE )
   if( obj )
   {
     QIODevice * ptr = obj->currentDevice (  );
-    _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );
+  }
 }
 
 
@@ -436,7 +437,8 @@ HB_FUNC_STATIC( QFTP_READALL )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->readAll (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );  }
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+  }
 }
 
 
