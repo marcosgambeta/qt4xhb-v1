@@ -157,7 +157,8 @@ HB_FUNC_STATIC( QCDESTYLE_STANDARDPALETTE )
   if( obj )
   {
     QPalette * ptr = new QPalette( obj->standardPalette (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPALETTE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPALETTE", true );
+  }
 }
 
 

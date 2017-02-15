@@ -145,7 +145,8 @@ HB_FUNC_STATIC( QMDIAREA_ACTIVESUBWINDOW )
   if( obj )
   {
     QMdiSubWindow * ptr = obj->activeSubWindow (  );
-    _qt4xhb_createReturnClass ( ptr, "QMDISUBWINDOW" );  }
+    _qt4xhb_createReturnClass ( ptr, "QMDISUBWINDOW" );
+  }
 }
 
 
@@ -160,7 +161,8 @@ HB_FUNC_STATIC( QMDIAREA_ADDSUBWINDOW )
     QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
     QMdiSubWindow * ptr = obj->addSubWindow ( par1,  (Qt::WindowFlags) par2 );
-    _qt4xhb_createReturnClass ( ptr, "QMDISUBWINDOW" );  }
+    _qt4xhb_createReturnClass ( ptr, "QMDISUBWINDOW" );
+  }
 }
 
 
@@ -173,7 +175,8 @@ HB_FUNC_STATIC( QMDIAREA_BACKGROUND )
   if( obj )
   {
     QBrush * ptr = new QBrush( obj->background (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
+  }
 }
 
 
@@ -186,7 +189,8 @@ HB_FUNC_STATIC( QMDIAREA_CURRENTSUBWINDOW )
   if( obj )
   {
     QMdiSubWindow * ptr = obj->currentSubWindow (  );
-    _qt4xhb_createReturnClass ( ptr, "QMDISUBWINDOW" );  }
+    _qt4xhb_createReturnClass ( ptr, "QMDISUBWINDOW" );
+  }
 }
 
 
@@ -436,7 +440,8 @@ HB_FUNC_STATIC( QMDIAREA_MINIMUMSIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 
@@ -449,7 +454,8 @@ HB_FUNC_STATIC( QMDIAREA_SIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 

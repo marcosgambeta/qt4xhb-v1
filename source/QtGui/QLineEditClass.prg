@@ -240,7 +240,8 @@ HB_FUNC_STATIC( QLINEEDIT_COMPLETER )
   if( obj )
   {
     QCompleter * ptr = obj->completer (  );
-    _qt4xhb_createReturnClass ( ptr, "QCOMPLETER" );  }
+    _qt4xhb_createReturnClass ( ptr, "QCOMPLETER" );
+  }
 }
 
 
@@ -253,7 +254,8 @@ HB_FUNC_STATIC( QLINEEDIT_CREATESTANDARDCONTEXTMENU )
   if( obj )
   {
     QMenu * ptr = obj->createStandardContextMenu (  );
-    _qt4xhb_createReturnClass ( ptr, "QMENU" );  }
+    _qt4xhb_createReturnClass ( ptr, "QMENU" );
+  }
 }
 
 
@@ -634,7 +636,8 @@ HB_FUNC_STATIC( QLINEEDIT_MINIMUMSIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 
@@ -919,7 +922,8 @@ HB_FUNC_STATIC( QLINEEDIT_SIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 
@@ -946,7 +950,8 @@ HB_FUNC_STATIC( QLINEEDIT_TEXTMARGINS )
   if( obj )
   {
     QMargins * ptr = new QMargins( obj->textMargins (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QMARGINS", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QMARGINS", true );
+  }
 }
 
 
@@ -959,7 +964,8 @@ HB_FUNC_STATIC( QLINEEDIT_VALIDATOR )
   if( obj )
   {
     const QValidator * ptr = obj->validator (  );
-    _qt4xhb_createReturnClass ( ptr, "QVALIDATOR" );  }
+    _qt4xhb_createReturnClass ( ptr, "QVALIDATOR" );
+  }
 }
 
 
@@ -988,7 +994,8 @@ HB_FUNC_STATIC( QLINEEDIT_INPUTMETHODQUERY )
   {
     int par1 = hb_parni(1);
     QVariant * ptr = new QVariant( obj->inputMethodQuery (  (Qt::InputMethodQuery) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+  }
 }
 
 

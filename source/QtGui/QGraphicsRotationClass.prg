@@ -126,7 +126,8 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_AXIS )
   if( obj )
   {
     QVector3D * ptr = new QVector3D( obj->axis (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QVECTOR3D" );  }
+    _qt4xhb_createReturnClass ( ptr, "QVECTOR3D" );
+  }
 }
 
 
@@ -139,7 +140,8 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ORIGIN )
   if( obj )
   {
     QVector3D * ptr = new QVector3D( obj->origin (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QVECTOR3D" );  }
+    _qt4xhb_createReturnClass ( ptr, "QVECTOR3D" );
+  }
 }
 
 

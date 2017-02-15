@@ -147,7 +147,8 @@ HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_HOTSPOT )
   if( obj )
   {
     QPoint * ptr = new QPoint( obj->hotspot (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+  }
 }
 
 
@@ -160,7 +161,8 @@ HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_IMAGE )
   if( obj )
   {
     QImage * ptr = obj->image (  );
-    _qt4xhb_createReturnClass ( ptr, "QIMAGE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QIMAGE" );
+  }
 }
 
 

@@ -123,7 +123,8 @@ HB_FUNC_STATIC( QMIMESOURCE_ENCODEDDATA )
   {
     const char * par1 = hb_parc(1);
     QByteArray * ptr = new QByteArray( obj->encodedData (  (const char *) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );  }
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+  }
 }
 
 

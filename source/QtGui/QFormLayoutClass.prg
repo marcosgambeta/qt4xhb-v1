@@ -514,7 +514,8 @@ HB_FUNC_STATIC( QFORMLAYOUT_ITEMAT1 )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     QLayoutItem * ptr = obj->itemAt ( par1,  (QFormLayout::ItemRole) par2 );
-    _qt4xhb_createReturnClass ( ptr, "QLAYOUTITEM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
+  }
 }
 
 
@@ -542,7 +543,8 @@ HB_FUNC_STATIC( QFORMLAYOUT_LABELFORFIELD1 )
   {
     QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QWidget * ptr = obj->labelForField ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );  }
+    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  }
 }
 
 
@@ -556,7 +558,8 @@ HB_FUNC_STATIC( QFORMLAYOUT_LABELFORFIELD2 )
   {
     QLayout * par1 = (QLayout *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QWidget * ptr = obj->labelForField ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );  }
+    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  }
 }
 
 
@@ -883,7 +886,8 @@ HB_FUNC_STATIC( QFORMLAYOUT_ITEMAT2 )
   {
     int par1 = hb_parni(1);
     QLayoutItem * ptr = obj->itemAt ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QLAYOUTITEM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
+  }
 }
 
 
@@ -896,7 +900,8 @@ HB_FUNC_STATIC( QFORMLAYOUT_MINIMUMSIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->minimumSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 
@@ -924,7 +929,8 @@ HB_FUNC_STATIC( QFORMLAYOUT_SIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 
@@ -938,7 +944,8 @@ HB_FUNC_STATIC( QFORMLAYOUT_TAKEAT )
   {
     int par1 = hb_parni(1);
     QLayoutItem * ptr = obj->takeAt ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QLAYOUTITEM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
+  }
 }
 
 

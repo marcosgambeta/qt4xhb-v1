@@ -780,7 +780,8 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SHAREDGLCONTEXT )
   if( obj )
   {
     QPlatformGLContext * ptr = obj->sharedGLContext (  );
-    _qt4xhb_createReturnClass ( ptr, "QPLATFORMGLCONTEXT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QPLATFORMGLCONTEXT" );
+  }
 }
 
 
@@ -876,7 +877,8 @@ QPlatformWindowFormat defaultFormat ()
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_DEFAULTFORMAT )
 {
   QPlatformWindowFormat * ptr = new QPlatformWindowFormat( QPlatformWindowFormat::defaultFormat (  ) );
-  _qt4xhb_createReturnClass ( ptr, "QPLATFORMWINDOWFORMAT" );}
+  _qt4xhb_createReturnClass ( ptr, "QPLATFORMWINDOWFORMAT" );
+}
 
 
 /*

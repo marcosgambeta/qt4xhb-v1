@@ -87,7 +87,8 @@ HB_FUNC_STATIC( QDECORATIONPLUGIN_CREATE )
   {
     QString par1 = hb_parc(1);
     QDecoration * ptr = obj->create ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QDECORATION" );  }
+    _qt4xhb_createReturnClass ( ptr, "QDECORATION" );
+  }
 }
 
 

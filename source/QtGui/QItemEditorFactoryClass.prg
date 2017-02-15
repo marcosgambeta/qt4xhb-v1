@@ -143,7 +143,8 @@ HB_FUNC_STATIC( QITEMEDITORFACTORY_CREATEEDITOR )
     int par1 = hb_parni(1);
     QWidget * par2 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     QWidget * ptr = obj->createEditor (  (QVariant::Type) par1, par2 );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );  }
+    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  }
 }
 
 
@@ -173,7 +174,8 @@ HB_FUNC_STATIC( QITEMEDITORFACTORY_VALUEPROPERTYNAME )
   {
     int par1 = hb_parni(1);
     QByteArray * ptr = new QByteArray( obj->valuePropertyName (  (QVariant::Type) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );  }
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+  }
 }
 
 
@@ -184,7 +186,8 @@ const QItemEditorFactory * defaultFactory ()
 HB_FUNC_STATIC( QITEMEDITORFACTORY_DEFAULTFACTORY )
 {
   const QItemEditorFactory * ptr = QItemEditorFactory::defaultFactory (  );
-  _qt4xhb_createReturnClass ( ptr, "QITEMEDITORFACTORY" );}
+  _qt4xhb_createReturnClass ( ptr, "QITEMEDITORFACTORY" );
+}
 
 
 /*

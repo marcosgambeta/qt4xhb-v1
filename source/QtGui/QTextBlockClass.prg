@@ -170,7 +170,8 @@ HB_FUNC_STATIC( QTEXTBLOCK_BLOCKFORMAT )
   if( obj )
   {
     QTextBlockFormat * ptr = new QTextBlockFormat( obj->blockFormat (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTBLOCKFORMAT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTEXTBLOCKFORMAT" );
+  }
 }
 
 
@@ -211,7 +212,8 @@ HB_FUNC_STATIC( QTEXTBLOCK_CHARFORMAT )
   if( obj )
   {
     QTextCharFormat * ptr = new QTextCharFormat( obj->charFormat (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT" );
+  }
 }
 
 
@@ -267,7 +269,8 @@ HB_FUNC_STATIC( QTEXTBLOCK_DOCUMENT )
   if( obj )
   {
     const QTextDocument * ptr = obj->document (  );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTDOCUMENT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTEXTDOCUMENT" );
+  }
 }
 
 
@@ -323,7 +326,8 @@ HB_FUNC_STATIC( QTEXTBLOCK_LAYOUT )
   if( obj )
   {
     QTextLayout * ptr = obj->layout (  );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTLAYOUT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTEXTLAYOUT" );
+  }
 }
 
 
@@ -364,7 +368,8 @@ HB_FUNC_STATIC( QTEXTBLOCK_NEXT )
   if( obj )
   {
     QTextBlock * ptr = new QTextBlock( obj->next (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTBLOCK" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTEXTBLOCK" );
+  }
 }
 
 
@@ -391,7 +396,8 @@ HB_FUNC_STATIC( QTEXTBLOCK_PREVIOUS )
   if( obj )
   {
     QTextBlock * ptr = new QTextBlock( obj->previous (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTBLOCK" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTEXTBLOCK" );
+  }
 }
 
 
@@ -521,7 +527,8 @@ HB_FUNC_STATIC( QTEXTBLOCK_TEXTLIST )
   if( obj )
   {
     QTextList * ptr = obj->textList (  );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTLIST" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTEXTLIST" );
+  }
 }
 
 
@@ -534,7 +541,8 @@ HB_FUNC_STATIC( QTEXTBLOCK_USERDATA )
   if( obj )
   {
     QTextBlockUserData * ptr = obj->userData (  );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTBLOCKUSERDATA" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTEXTBLOCKUSERDATA" );
+  }
 }
 
 

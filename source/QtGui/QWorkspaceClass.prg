@@ -120,7 +120,8 @@ HB_FUNC_STATIC( QWORKSPACE_ACTIVEWINDOW )
   if( obj )
   {
     QWidget * ptr = obj->activeWindow (  );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );  }
+    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  }
 }
 
 
@@ -135,7 +136,8 @@ HB_FUNC_STATIC( QWORKSPACE_ADDWINDOW )
     QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
     QWidget * ptr = obj->addWindow ( par1,  (Qt::WindowFlags) par2 );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );  }
+    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  }
 }
 
 
@@ -148,7 +150,8 @@ HB_FUNC_STATIC( QWORKSPACE_BACKGROUND )
   if( obj )
   {
     QBrush * ptr = new QBrush( obj->background (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
+  }
 }
 
 
@@ -252,7 +255,8 @@ HB_FUNC_STATIC( QWORKSPACE_SIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 

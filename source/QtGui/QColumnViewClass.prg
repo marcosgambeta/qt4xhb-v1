@@ -141,7 +141,8 @@ HB_FUNC_STATIC( QCOLUMNVIEW_PREVIEWWIDGET )
   if( obj )
   {
     QWidget * ptr = obj->previewWidget (  );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );  }
+    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  }
 }
 
 
@@ -223,7 +224,8 @@ HB_FUNC_STATIC( QCOLUMNVIEW_INDEXAT )
   {
     QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QModelIndex * ptr = new QModelIndex( obj->indexAt ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+  }
 }
 
 
@@ -311,7 +313,8 @@ HB_FUNC_STATIC( QCOLUMNVIEW_SIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 
@@ -325,7 +328,8 @@ HB_FUNC_STATIC( QCOLUMNVIEW_VISUALRECT )
   {
     QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QRect * ptr = new QRect( obj->visualRect ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+  }
 }
 
 

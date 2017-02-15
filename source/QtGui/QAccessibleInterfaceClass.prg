@@ -196,7 +196,8 @@ for (i3=0;i3<nLen3;i3++)
 par3 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList3, i3+1 ), "POINTER", 0 ) );
 }
     QVariant * ptr = new QVariant( obj->invokeMethod (  (QAccessibleInterface::Method) par1, par2, par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+  }
 }
 
 
@@ -224,7 +225,8 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_OBJECT )
   if( obj )
   {
     QObject * ptr = obj->object (  );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+  }
 }
 
 
@@ -238,7 +240,8 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_RECT )
   {
     int par1 = hb_parni(1);
     QRect * ptr = new QRect( obj->rect ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+  }
 }
 
 

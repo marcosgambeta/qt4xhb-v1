@@ -280,7 +280,8 @@ HB_FUNC_STATIC( QGLYPHRUN_RAWFONT )
   if( obj )
   {
     QRawFont * ptr = new QRawFont( obj->rawFont (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRAWFONT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRAWFONT", true );
+  }
 }
 
 

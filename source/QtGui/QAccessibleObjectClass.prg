@@ -131,7 +131,8 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_OBJECT )
   if( obj )
   {
     QObject * ptr = obj->object (  );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+  }
 }
 
 
@@ -145,7 +146,8 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_RECT )
   {
     int par1 = hb_parni(1);
     QRect * ptr = new QRect( obj->rect ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+  }
 }
 
 

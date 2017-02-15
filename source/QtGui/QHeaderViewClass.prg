@@ -544,7 +544,8 @@ HB_FUNC_STATIC( QHEADERVIEW_SAVESTATE )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->saveState (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );  }
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+  }
 }
 
 
@@ -1004,7 +1005,8 @@ HB_FUNC_STATIC( QHEADERVIEW_SIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 

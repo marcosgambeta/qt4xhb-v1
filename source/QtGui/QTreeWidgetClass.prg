@@ -236,7 +236,8 @@ HB_FUNC_STATIC( QTREEWIDGET_CURRENTITEM )
   if( obj )
   {
     QTreeWidgetItem * ptr = obj->currentItem (  );
-    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
+  }
 }
 
 
@@ -312,7 +313,8 @@ HB_FUNC_STATIC( QTREEWIDGET_HEADERITEM )
   if( obj )
   {
     QTreeWidgetItem * ptr = obj->headerItem (  );
-    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
+  }
 }
 
 
@@ -378,7 +380,8 @@ HB_FUNC_STATIC( QTREEWIDGET_INVISIBLEROOTITEM )
   if( obj )
   {
     QTreeWidgetItem * ptr = obj->invisibleRootItem (  );
-    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
+  }
 }
 
 
@@ -407,7 +410,8 @@ HB_FUNC_STATIC( QTREEWIDGET_ITEMABOVE )
   {
     const QTreeWidgetItem * par1 = (const QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QTreeWidgetItem * ptr = obj->itemAbove ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
+  }
 }
 
 
@@ -421,7 +425,8 @@ HB_FUNC_STATIC( QTREEWIDGET_ITEMAT1 )
   {
     QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QTreeWidgetItem * ptr = obj->itemAt ( *par1 );
-    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
+  }
 }
 
 
@@ -436,7 +441,8 @@ HB_FUNC_STATIC( QTREEWIDGET_ITEMAT2 )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     QTreeWidgetItem * ptr = obj->itemAt ( par1, par2 );
-    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
+  }
 }
 
 
@@ -465,7 +471,8 @@ HB_FUNC_STATIC( QTREEWIDGET_ITEMBELOW )
   {
     const QTreeWidgetItem * par1 = (const QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QTreeWidgetItem * ptr = obj->itemBelow ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
+  }
 }
 
 
@@ -480,7 +487,8 @@ HB_FUNC_STATIC( QTREEWIDGET_ITEMWIDGET )
     QTreeWidgetItem * par1 = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
     QWidget * ptr = obj->itemWidget ( par1, par2 );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );  }
+    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  }
 }
 
 
@@ -769,7 +777,8 @@ HB_FUNC_STATIC( QTREEWIDGET_TAKETOPLEVELITEM )
   {
     int par1 = hb_parni(1);
     QTreeWidgetItem * ptr = obj->takeTopLevelItem ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
+  }
 }
 
 
@@ -783,7 +792,8 @@ HB_FUNC_STATIC( QTREEWIDGET_TOPLEVELITEM )
   {
     int par1 = hb_parni(1);
     QTreeWidgetItem * ptr = obj->topLevelItem ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
+  }
 }
 
 
@@ -811,7 +821,8 @@ HB_FUNC_STATIC( QTREEWIDGET_VISUALITEMRECT )
   {
     const QTreeWidgetItem * par1 = (const QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QRect * ptr = new QRect( obj->visualItemRect ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+  }
 }
 
 

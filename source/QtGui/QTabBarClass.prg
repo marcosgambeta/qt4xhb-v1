@@ -292,7 +292,8 @@ HB_FUNC_STATIC( QTABBAR_ICONSIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->iconSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 
@@ -737,7 +738,8 @@ HB_FUNC_STATIC( QTABBAR_TABBUTTON )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     QWidget * ptr = obj->tabButton ( par1,  (QTabBar::ButtonPosition) par2 );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );  }
+    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  }
 }
 
 
@@ -751,7 +753,8 @@ HB_FUNC_STATIC( QTABBAR_TABDATA )
   {
     int par1 = hb_parni(1);
     QVariant * ptr = new QVariant( obj->tabData ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+  }
 }
 
 
@@ -765,7 +768,8 @@ HB_FUNC_STATIC( QTABBAR_TABICON )
   {
     int par1 = hb_parni(1);
     QIcon * ptr = new QIcon( obj->tabIcon ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QICON", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QICON", true );
+  }
 }
 
 
@@ -779,7 +783,8 @@ HB_FUNC_STATIC( QTABBAR_TABRECT )
   {
     int par1 = hb_parni(1);
     QRect * ptr = new QRect( obj->tabRect ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+  }
 }
 
 
@@ -808,7 +813,8 @@ HB_FUNC_STATIC( QTABBAR_TABTEXTCOLOR )
   {
     int par1 = hb_parni(1);
     QColor * ptr = new QColor( obj->tabTextColor ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+  }
 }
 
 
@@ -879,7 +885,8 @@ HB_FUNC_STATIC( QTABBAR_MINIMUMSIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 
@@ -892,7 +899,8 @@ HB_FUNC_STATIC( QTABBAR_SIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 

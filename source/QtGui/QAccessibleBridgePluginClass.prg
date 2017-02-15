@@ -87,7 +87,8 @@ HB_FUNC_STATIC( QACCESSIBLEBRIDGEPLUGIN_CREATE )
   {
     QString par1 = hb_parc(1);
     QAccessibleBridge * ptr = obj->create ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QACCESSIBLEBRIDGE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QACCESSIBLEBRIDGE" );
+  }
 }
 
 

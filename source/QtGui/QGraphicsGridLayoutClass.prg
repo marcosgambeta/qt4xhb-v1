@@ -336,7 +336,8 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ITEMAT1 )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     QGraphicsLayoutItem * ptr = obj->itemAt ( par1, par2 );
-    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSLAYOUTITEM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSLAYOUTITEM" );
+  }
 }
 
 
@@ -350,7 +351,8 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ITEMAT2 )
   {
     int par1 = hb_parni(1);
     QGraphicsLayoutItem * ptr = obj->itemAt ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSLAYOUTITEM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSLAYOUTITEM" );
+  }
 }
 
 
@@ -856,7 +858,8 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SIZEHINT )
     int par1 = hb_parni(1);
     QSizeF par2 = ISNIL(2)? QSizeF() : *(QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     QSizeF * ptr = new QSizeF( obj->sizeHint (  (Qt::SizeHint) par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
+  }
 }
 
 

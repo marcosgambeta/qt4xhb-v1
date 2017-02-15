@@ -156,7 +156,8 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_ANSWERRECT )
   if( obj )
   {
     QRect * ptr = new QRect( obj->answerRect (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+  }
 }
 
 

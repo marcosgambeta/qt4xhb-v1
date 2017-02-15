@@ -201,7 +201,8 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ADDBUTTON2 )
     QString par1 = hb_parc(1);
     int par2 = hb_parni(2);
     QPushButton * ptr = obj->addButton ( par1,  (QDialogButtonBox::ButtonRole) par2 );
-    _qt4xhb_createReturnClass ( ptr, "QPUSHBUTTON" );  }
+    _qt4xhb_createReturnClass ( ptr, "QPUSHBUTTON" );
+  }
 }
 
 
@@ -215,7 +216,8 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ADDBUTTON3 )
   {
     int par1 = hb_parni(1);
     QPushButton * ptr = obj->addButton (  (QDialogButtonBox::StandardButton) par1 );
-    _qt4xhb_createReturnClass ( ptr, "QPUSHBUTTON" );  }
+    _qt4xhb_createReturnClass ( ptr, "QPUSHBUTTON" );
+  }
 }
 
 
@@ -249,7 +251,8 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_BUTTON )
   {
     int par1 = hb_parni(1);
     QPushButton * ptr = obj->button (  (QDialogButtonBox::StandardButton) par1 );
-    _qt4xhb_createReturnClass ( ptr, "QPUSHBUTTON" );  }
+    _qt4xhb_createReturnClass ( ptr, "QPUSHBUTTON" );
+  }
 }
 
 

@@ -143,7 +143,8 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_BACKGROUNDBRUSH )
   if( obj )
   {
     QBrush * ptr = new QBrush( obj->backgroundBrush (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
+  }
 }
 
 
@@ -170,7 +171,8 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_BRUSH )
   if( obj )
   {
     QBrush * ptr = new QBrush( obj->brush (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
+  }
 }
 
 
@@ -197,7 +199,8 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_BRUSHORIGIN )
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->brushOrigin (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+  }
 }
 
 
@@ -224,7 +227,8 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_CLIPPATH )
   if( obj )
   {
     QPainterPath * ptr = new QPainterPath( obj->clipPath (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
+  }
 }
 
 
@@ -237,7 +241,8 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_CLIPREGION )
   if( obj )
   {
     QRegion * ptr = new QRegion( obj->clipRegion (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QREGION", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QREGION", true );
+  }
 }
 
 
@@ -264,7 +269,8 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_FONT )
   if( obj )
   {
     QFont * ptr = new QFont( obj->font (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QFONT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QFONT", true );
+  }
 }
 
 
@@ -305,7 +311,8 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_PAINTER )
   if( obj )
   {
     QPainter * ptr = obj->painter (  );
-    _qt4xhb_createReturnClass ( ptr, "QPAINTER" );  }
+    _qt4xhb_createReturnClass ( ptr, "QPAINTER" );
+  }
 }
 
 
@@ -318,7 +325,8 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_PEN )
   if( obj )
   {
     QPen * ptr = new QPen( obj->pen (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPEN", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPEN", true );
+  }
 }
 
 
@@ -373,7 +381,8 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_TRANSFORM )
   if( obj )
   {
     QTransform * ptr = new QTransform( obj->transform (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );
+  }
 }
 
 

@@ -162,7 +162,8 @@ HB_FUNC_STATIC( QINPUTCONTEXT_FOCUSWIDGET )
   if( obj )
   {
     QWidget * ptr = obj->focusWidget (  );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );  }
+    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  }
 }
 
 
@@ -175,7 +176,8 @@ HB_FUNC_STATIC( QINPUTCONTEXT_FONT )
   if( obj )
   {
     QFont * ptr = new QFont( obj->font (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QFONT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QFONT", true );
+  }
 }
 
 
@@ -291,7 +293,8 @@ HB_FUNC_STATIC( QINPUTCONTEXT_STANDARDFORMAT )
   {
     int par1 = hb_parni(1);
     QTextFormat * ptr = new QTextFormat( obj->standardFormat (  (QInputContext::StandardFormat) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTFORMAT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTEXTFORMAT" );
+  }
 }
 
 

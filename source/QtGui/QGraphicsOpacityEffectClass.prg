@@ -120,7 +120,8 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_OPACITYMASK )
   if( obj )
   {
     QBrush * ptr = new QBrush( obj->opacityMask (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
+  }
 }
 
 

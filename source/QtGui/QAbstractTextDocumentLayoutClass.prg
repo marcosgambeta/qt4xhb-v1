@@ -103,7 +103,8 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT )
   {
     QTextBlock * par1 = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QRectF * ptr = new QRectF( obj->blockBoundingRect ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+  }
 }
 
 
@@ -116,7 +117,8 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENT )
   if( obj )
   {
     QTextDocument * ptr = obj->document (  );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTDOCUMENT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTEXTDOCUMENT" );
+  }
 }
 
 
@@ -129,7 +131,8 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENTSIZE )
   if( obj )
   {
     QSizeF * ptr = new QSizeF( obj->documentSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
+  }
 }
 
 
@@ -144,7 +147,8 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT )
   {
     QTextFrame * par1 = (QTextFrame *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QRectF * ptr = new QRectF( obj->frameBoundingRect ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+  }
 }
 
 
@@ -158,7 +162,8 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_HANDLERFOROBJECT )
   {
     int par1 = hb_parni(1);
     QTextObjectInterface * ptr = obj->handlerForObject ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTOBJECTINTERFACE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTEXTOBJECTINTERFACE" );
+  }
 }
 
 
@@ -201,7 +206,8 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_PAINTDEVICE )
   if( obj )
   {
     QPaintDevice * ptr = obj->paintDevice (  );
-    _qt4xhb_createReturnClass ( ptr, "QPAINTDEVICE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QPAINTDEVICE" );
+  }
 }
 
 

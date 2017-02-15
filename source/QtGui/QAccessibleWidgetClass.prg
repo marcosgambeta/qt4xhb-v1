@@ -185,7 +185,8 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_RECT )
   {
     int par1 = hb_parni(1);
     QRect * ptr = new QRect( obj->rect ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+  }
 }
 
 

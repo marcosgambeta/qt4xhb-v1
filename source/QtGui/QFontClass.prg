@@ -592,7 +592,8 @@ HB_FUNC_STATIC( QFONT_RESOLVE )
   {
     QFont * par1 = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QFont * ptr = new QFont( obj->resolve ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QFONT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QFONT", true );
+  }
 }
 
 

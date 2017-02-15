@@ -284,7 +284,8 @@ HB_FUNC_STATIC( QGESTUREEVENT_GESTURE )
   {
     int par1 = hb_parni(1);
     QGesture * ptr = obj->gesture (  (Qt::GestureType) par1 );
-    _qt4xhb_createReturnClass ( ptr, "QGESTURE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QGESTURE" );
+  }
 }
 
 
@@ -470,7 +471,8 @@ HB_FUNC_STATIC( QGESTUREEVENT_MAPTOGRAPHICSSCENE )
   {
     QPointF * par1 = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QPointF * ptr = new QPointF( obj->mapToGraphicsScene ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+  }
 }
 
 
@@ -565,7 +567,8 @@ HB_FUNC_STATIC( QGESTUREEVENT_WIDGET )
   if( obj )
   {
     QWidget * ptr = obj->widget (  );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );  }
+    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  }
 }
 
 

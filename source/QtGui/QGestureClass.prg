@@ -150,7 +150,8 @@ HB_FUNC_STATIC( QGESTURE_HOTSPOT )
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->hotSpot (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+  }
 }
 
 

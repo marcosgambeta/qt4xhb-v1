@@ -287,7 +287,8 @@ HB_FUNC_STATIC( QMATRIX4X4_COLUMN )
   {
     int par1 = hb_parni(1);
     QVector4D * ptr = new QVector4D( obj->column ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVECTOR4D" );  }
+    _qt4xhb_createReturnClass ( ptr, "QVECTOR4D" );
+  }
 }
 
 
@@ -368,7 +369,8 @@ HB_FUNC_STATIC( QMATRIX4X4_INVERTED )
   {
     bool par1;
     QMatrix4x4 * ptr = new QMatrix4x4( obj->inverted ( &par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMATRIX4X4", true );    hb_storl( par1, 1 );
+    _qt4xhb_createReturnClass ( ptr, "QMATRIX4X4", true );
+    hb_storl( par1, 1 );
   }
 }
 
@@ -414,7 +416,8 @@ HB_FUNC_STATIC( QMATRIX4X4_MAP1 )
   {
     QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QPoint * ptr = new QPoint( obj->map ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+  }
 }
 
 
@@ -428,7 +431,8 @@ HB_FUNC_STATIC( QMATRIX4X4_MAP2 )
   {
     QPointF * par1 = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QPointF * ptr = new QPointF( obj->map ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+  }
 }
 
 
@@ -442,7 +446,8 @@ HB_FUNC_STATIC( QMATRIX4X4_MAP3 )
   {
     QVector3D * par1 = (QVector3D *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QVector3D * ptr = new QVector3D( obj->map ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVECTOR3D" );  }
+    _qt4xhb_createReturnClass ( ptr, "QVECTOR3D" );
+  }
 }
 
 
@@ -456,7 +461,8 @@ HB_FUNC_STATIC( QMATRIX4X4_MAP4 )
   {
     QVector4D * par1 = (QVector4D *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QVector4D * ptr = new QVector4D( obj->map ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVECTOR4D" );  }
+    _qt4xhb_createReturnClass ( ptr, "QVECTOR4D" );
+  }
 }
 
 
@@ -495,7 +501,8 @@ HB_FUNC_STATIC( QMATRIX4X4_MAPRECT1 )
   {
     QRect * par1 = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QRect * ptr = new QRect( obj->mapRect ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+  }
 }
 
 
@@ -509,7 +516,8 @@ HB_FUNC_STATIC( QMATRIX4X4_MAPRECT2 )
   {
     QRectF * par1 = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QRectF * ptr = new QRectF( obj->mapRect ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+  }
 }
 
 
@@ -538,7 +546,8 @@ HB_FUNC_STATIC( QMATRIX4X4_MAPVECTOR )
   {
     QVector3D * par1 = (QVector3D *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QVector3D * ptr = new QVector3D( obj->mapVector ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVECTOR3D" );  }
+    _qt4xhb_createReturnClass ( ptr, "QVECTOR3D" );
+  }
 }
 
 
@@ -551,7 +560,8 @@ HB_FUNC_STATIC( QMATRIX4X4_NORMALMATRIX )
   if( obj )
   {
     QMatrix3x3 * ptr = new QMatrix3x3( obj->normalMatrix (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QMATRIX3X3" );  }
+    _qt4xhb_createReturnClass ( ptr, "QMATRIX3X3" );
+  }
 }
 
 
@@ -736,7 +746,8 @@ HB_FUNC_STATIC( QMATRIX4X4_ROW )
   {
     int par1 = hb_parni(1);
     QVector4D * ptr = new QVector4D( obj->row ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVECTOR4D" );  }
+    _qt4xhb_createReturnClass ( ptr, "QVECTOR4D" );
+  }
 }
 
 
@@ -885,7 +896,8 @@ HB_FUNC_STATIC( QMATRIX4X4_TOTRANSFORM1 )
   if( obj )
   {
     QTransform * ptr = new QTransform( obj->toTransform (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );
+  }
 }
 
 
@@ -899,7 +911,8 @@ HB_FUNC_STATIC( QMATRIX4X4_TOTRANSFORM2 )
   {
     qreal par1 = hb_parnd(1);
     QTransform * ptr = new QTransform( obj->toTransform ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );
+  }
 }
 
 
@@ -995,7 +1008,8 @@ HB_FUNC_STATIC( QMATRIX4X4_TRANSPOSED )
   if( obj )
   {
     QMatrix4x4 * ptr = new QMatrix4x4( obj->transposed (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QMATRIX4X4", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QMATRIX4X4", true );
+  }
 }
 
 

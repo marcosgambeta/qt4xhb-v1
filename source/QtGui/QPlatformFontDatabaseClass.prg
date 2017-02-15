@@ -170,7 +170,8 @@ HB_FUNC_STATIC( QPLATFORMFONTDATABASE_FONTENGINE )
     qreal par2 = hb_parnd(2);
     int par3 = hb_parni(3);
     QFontEngine * ptr = obj->fontEngine ( *par1, par2,  (QFont::HintingPreference) par3 );
-    _qt4xhb_createReturnClass ( ptr, "QFONTENGINE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QFONTENGINE" );
+  }
 }
 
 

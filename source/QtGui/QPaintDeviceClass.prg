@@ -229,7 +229,8 @@ HB_FUNC_STATIC( QPAINTDEVICE_PAINTENGINE )
   if( obj )
   {
     QPaintEngine * ptr = obj->paintEngine (  );
-    _qt4xhb_createReturnClass ( ptr, "QPAINTENGINE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QPAINTENGINE" );
+  }
 }
 
 

@@ -170,7 +170,8 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_ITEM )
   if( obj )
   {
     QGraphicsItem * ptr = obj->item (  );
-    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSITEM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSITEM" );
+  }
 }
 
 
@@ -184,7 +185,8 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_MATRIXAT )
   {
     qreal par1 = hb_parnd(1);
     QMatrix * ptr = new QMatrix( obj->matrixAt ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMATRIX" );  }
+    _qt4xhb_createReturnClass ( ptr, "QMATRIX" );
+  }
 }
 
 
@@ -198,7 +200,8 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_POSAT )
   {
     qreal par1 = hb_parnd(1);
     QPointF * ptr = new QPointF( obj->posAt ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+  }
 }
 
 
@@ -343,7 +346,8 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_TIMELINE )
   if( obj )
   {
     QTimeLine * ptr = obj->timeLine (  );
-    _qt4xhb_createReturnClass ( ptr, "QTIMELINE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTIMELINE" );
+  }
 }
 
 

@@ -534,7 +534,8 @@ HB_FUNC_STATIC( QBOXLAYOUT_ITEMAT )
   {
     int par1 = hb_parni(1);
     QLayoutItem * ptr = obj->itemAt ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QLAYOUTITEM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
+  }
 }
 
 
@@ -547,7 +548,8 @@ HB_FUNC_STATIC( QBOXLAYOUT_MAXIMUMSIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->maximumSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 
@@ -575,7 +577,8 @@ HB_FUNC_STATIC( QBOXLAYOUT_MINIMUMSIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->minimumSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 
@@ -603,7 +606,8 @@ HB_FUNC_STATIC( QBOXLAYOUT_SIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 
@@ -617,7 +621,8 @@ HB_FUNC_STATIC( QBOXLAYOUT_TAKEAT )
   {
     int par1 = hb_parni(1);
     QLayoutItem * ptr = obj->takeAt ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QLAYOUTITEM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
+  }
 }
 
 

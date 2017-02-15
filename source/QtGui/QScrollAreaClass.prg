@@ -206,7 +206,8 @@ HB_FUNC_STATIC( QSCROLLAREA_TAKEWIDGET )
   if( obj )
   {
     QWidget * ptr = obj->takeWidget (  );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );  }
+    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  }
 }
 
 
@@ -219,7 +220,8 @@ HB_FUNC_STATIC( QSCROLLAREA_WIDGET )
   if( obj )
   {
     QWidget * ptr = obj->widget (  );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );  }
+    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  }
 }
 
 
@@ -261,7 +263,8 @@ HB_FUNC_STATIC( QSCROLLAREA_SIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 

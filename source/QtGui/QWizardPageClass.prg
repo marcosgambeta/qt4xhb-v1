@@ -202,7 +202,8 @@ HB_FUNC_STATIC( QWIZARDPAGE_PIXMAP )
   {
     int par1 = hb_parni(1);
     QPixmap * ptr = new QPixmap( obj->pixmap (  (QWizard::WizardPixmap) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
+  }
 }
 
 

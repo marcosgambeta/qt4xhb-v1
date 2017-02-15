@@ -159,7 +159,8 @@ HB_FUNC_STATIC( QMOUSEEVENT_POS )
   if( obj )
   {
     const QPoint * ptr = &obj->pos (  );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QPOINT" );
+  }
 }
 
 
@@ -172,7 +173,8 @@ HB_FUNC_STATIC( QMOUSEEVENT_GLOBALPOS )
   if( obj )
   {
     const QPoint * ptr = &obj->globalPos (  );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QPOINT" );
+  }
 }
 
 
@@ -283,7 +285,8 @@ HB_FUNC_STATIC( QMOUSEEVENT_POSF )
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->posF (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+  }
 }
 
 
@@ -300,7 +303,8 @@ HB_FUNC_STATIC( QMOUSEEVENT_CREATEEXTENDEDMOUSEEVENT )
   int par5 = hb_parni(5);
   int par6 = hb_parni(6);
   QMouseEvent * ptr = QMouseEvent::createExtendedMouseEvent (  (QEvent::Type) par1, *par2, *par3,  (Qt::MouseButton) par4,  (Qt::MouseButtons) par5,  (Qt::KeyboardModifiers) par6 );
-  _qt4xhb_createReturnClass ( ptr, "QMOUSEEVENT" );}
+  _qt4xhb_createReturnClass ( ptr, "QMOUSEEVENT" );
+}
 
 
 

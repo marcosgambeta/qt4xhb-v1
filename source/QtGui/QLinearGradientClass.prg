@@ -170,7 +170,8 @@ HB_FUNC_STATIC( QLINEARGRADIENT_FINALSTOP )
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->finalStop (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+  }
 }
 
 
@@ -275,7 +276,8 @@ HB_FUNC_STATIC( QLINEARGRADIENT_START )
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->start (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+  }
 }
 
 

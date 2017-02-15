@@ -141,7 +141,8 @@ HB_FUNC_STATIC( QICONENGINEV2_CLONE )
   if( obj )
   {
     QIconEngineV2 * ptr = obj->clone (  );
-    _qt4xhb_createReturnClass ( ptr, "QICONENGINEV2" );  }
+    _qt4xhb_createReturnClass ( ptr, "QICONENGINEV2" );
+  }
 }
 
 

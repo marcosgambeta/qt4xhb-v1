@@ -122,7 +122,8 @@ HB_FUNC_STATIC( QDECORATIONDEFAULT_REGION )
     QRect * par2 = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par3 = ISNIL(3)? QDecoration::All : hb_parni(3);
     QRegion * ptr = new QRegion( obj->region ( par1, *par2, par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QREGION", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QREGION", true );
+  }
 }
 
 

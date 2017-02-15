@@ -253,7 +253,8 @@ HB_FUNC_STATIC( QIMAGEWRITER_DEVICE )
   if( obj )
   {
     QIODevice * ptr = obj->device (  );
-    _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );
+  }
 }
 
 
@@ -308,7 +309,8 @@ HB_FUNC_STATIC( QIMAGEWRITER_FORMAT )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->format (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );  }
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+  }
 }
 
 

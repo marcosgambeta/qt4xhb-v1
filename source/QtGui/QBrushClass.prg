@@ -405,7 +405,8 @@ HB_FUNC_STATIC( QBRUSH_COLOR )
   if( obj )
   {
     const QColor * ptr = &obj->color (  );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR" );  }
+    _qt4xhb_createReturnClass ( ptr, "QCOLOR" );
+  }
 }
 
 
@@ -418,7 +419,8 @@ HB_FUNC_STATIC( QBRUSH_GRADIENT )
   if( obj )
   {
     const QGradient * ptr = obj->gradient (  );
-    _qt4xhb_createReturnClass ( ptr, "QGRADIENT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QGRADIENT" );
+  }
 }
 
 
@@ -445,7 +447,8 @@ HB_FUNC_STATIC( QBRUSH_MATRIX )
   if( obj )
   {
     const QMatrix * ptr = &obj->matrix (  );
-    _qt4xhb_createReturnClass ( ptr, "QMATRIX" );  }
+    _qt4xhb_createReturnClass ( ptr, "QMATRIX" );
+  }
 }
 
 
@@ -592,7 +595,8 @@ HB_FUNC_STATIC( QBRUSH_TEXTURE )
   if( obj )
   {
     QPixmap * ptr = new QPixmap( obj->texture (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
+  }
 }
 
 
@@ -605,7 +609,8 @@ HB_FUNC_STATIC( QBRUSH_TEXTUREIMAGE )
   if( obj )
   {
     QImage * ptr = new QImage( obj->textureImage (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );
+  }
 }
 
 
@@ -618,7 +623,8 @@ HB_FUNC_STATIC( QBRUSH_TRANSFORM )
   if( obj )
   {
     QTransform * ptr = new QTransform( obj->transform (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );
+  }
 }
 
 

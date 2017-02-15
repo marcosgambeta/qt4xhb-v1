@@ -239,7 +239,8 @@ HB_FUNC_STATIC( QMAINWINDOW_ADDTOOLBAR3 )
   {
     QString par1 = hb_parc(1);
     QToolBar * ptr = obj->addToolBar ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QTOOLBAR" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTOOLBAR" );
+  }
 }
 
 
@@ -287,7 +288,8 @@ HB_FUNC_STATIC( QMAINWINDOW_CENTRALWIDGET )
   if( obj )
   {
     QWidget * ptr = obj->centralWidget (  );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );  }
+    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  }
 }
 
 
@@ -315,7 +317,8 @@ HB_FUNC_STATIC( QMAINWINDOW_CREATEPOPUPMENU )
   if( obj )
   {
     QMenu * ptr = obj->createPopupMenu (  );
-    _qt4xhb_createReturnClass ( ptr, "QMENU" );  }
+    _qt4xhb_createReturnClass ( ptr, "QMENU" );
+  }
 }
 
 
@@ -371,7 +374,8 @@ HB_FUNC_STATIC( QMAINWINDOW_ICONSIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->iconSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 
@@ -443,7 +447,8 @@ HB_FUNC_STATIC( QMAINWINDOW_MENUBAR )
   if( obj )
   {
     QMenuBar * ptr = obj->menuBar (  );
-    _qt4xhb_createReturnClass ( ptr, "QMENUBAR" );  }
+    _qt4xhb_createReturnClass ( ptr, "QMENUBAR" );
+  }
 }
 
 
@@ -456,7 +461,8 @@ HB_FUNC_STATIC( QMAINWINDOW_MENUWIDGET )
   if( obj )
   {
     QWidget * ptr = obj->menuWidget (  );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );  }
+    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  }
 }
 
 
@@ -546,7 +552,8 @@ HB_FUNC_STATIC( QMAINWINDOW_SAVESTATE )
   {
     int par1 = ISNIL(1)? 0 : hb_parni(1);
     QByteArray * ptr = new QByteArray( obj->saveState ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );  }
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+  }
 }
 
 
@@ -744,7 +751,8 @@ HB_FUNC_STATIC( QMAINWINDOW_STATUSBAR )
   if( obj )
   {
     QStatusBar * ptr = obj->statusBar (  );
-    _qt4xhb_createReturnClass ( ptr, "QSTATUSBAR" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSTATUSBAR" );
+  }
 }
 
 

@@ -264,7 +264,8 @@ HB_FUNC_STATIC( QFONTMETRICS_BOUNDINGRECT1 )
   {
     QChar * par1 = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QRect * ptr = new QRect( obj->boundingRect ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+  }
 }
 
 
@@ -278,7 +279,8 @@ HB_FUNC_STATIC( QFONTMETRICS_BOUNDINGRECT2 )
   {
     QString par1 = hb_parc(1);
     QRect * ptr = new QRect( obj->boundingRect ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+  }
 }
 
 
@@ -299,7 +301,8 @@ HB_FUNC_STATIC( QFONTMETRICS_BOUNDINGRECT3 )
     int par7 = hb_parni(7);
     int* par8 = (int*) hb_itemGetPtr( hb_objSendMsg( hb_param(8, HB_IT_OBJECT ), "POINTER", 0 ) );
     QRect * ptr = new QRect( obj->boundingRect ( par1, par2, par3, par4, par5, par6, par7, par8 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+  }
 }
 
 
@@ -317,7 +320,8 @@ HB_FUNC_STATIC( QFONTMETRICS_BOUNDINGRECT4 )
     int par4 = hb_parni(4);
     int* par5 = (int*) hb_itemGetPtr( hb_objSendMsg( hb_param(5, HB_IT_OBJECT ), "POINTER", 0 ) );
     QRect * ptr = new QRect( obj->boundingRect ( *par1, par2, par3, par4, par5 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+  }
 }
 
 
@@ -563,7 +567,8 @@ HB_FUNC_STATIC( QFONTMETRICS_SIZE )
     int par3 = ISNIL(3)? 0 : hb_parni(3);
     int* par4 = (int*) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
     QSize * ptr = new QSize( obj->size ( par1, par2, par3, par4 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 
@@ -591,7 +596,8 @@ HB_FUNC_STATIC( QFONTMETRICS_TIGHTBOUNDINGRECT )
   {
     QString par1 = hb_parc(1);
     QRect * ptr = new QRect( obj->tightBoundingRect ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+  }
 }
 
 

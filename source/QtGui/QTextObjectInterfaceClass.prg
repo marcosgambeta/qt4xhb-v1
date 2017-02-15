@@ -142,7 +142,8 @@ HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_INTRINSICSIZE )
     int par2 = hb_parni(2);
     QTextFormat * par3 = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     QSizeF * ptr = new QSizeF( obj->intrinsicSize ( par1, par2, *par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
+  }
 }
 
 

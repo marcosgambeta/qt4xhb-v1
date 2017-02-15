@@ -316,7 +316,8 @@ QPrinterInfo defaultPrinter ()
 HB_FUNC_STATIC( QPRINTERINFO_DEFAULTPRINTER )
 {
   QPrinterInfo * ptr = new QPrinterInfo( QPrinterInfo::defaultPrinter (  ) );
-  _qt4xhb_createReturnClass ( ptr, "QPRINTERINFO", true );}
+  _qt4xhb_createReturnClass ( ptr, "QPRINTERINFO", true );
+}
 
 
 

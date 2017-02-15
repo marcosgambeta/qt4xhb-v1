@@ -249,7 +249,8 @@ HB_FUNC_STATIC( QTEXTFORMAT_BACKGROUND )
   if( obj )
   {
     QBrush * ptr = new QBrush( obj->background (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
+  }
 }
 
 
@@ -278,7 +279,8 @@ HB_FUNC_STATIC( QTEXTFORMAT_BRUSHPROPERTY )
   {
     int par1 = hb_parni(1);
     QBrush * ptr = new QBrush( obj->brushProperty ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
+  }
 }
 
 
@@ -335,7 +337,8 @@ HB_FUNC_STATIC( QTEXTFORMAT_COLORPROPERTY )
   {
     int par1 = hb_parni(1);
     QColor * ptr = new QColor( obj->colorProperty ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+  }
 }
 
 
@@ -363,7 +366,8 @@ HB_FUNC_STATIC( QTEXTFORMAT_FOREGROUND )
   if( obj )
   {
     QBrush * ptr = new QBrush( obj->foreground (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
+  }
 }
 
 
@@ -533,7 +537,8 @@ HB_FUNC_STATIC( QTEXTFORMAT_LENGTHPROPERTY )
   {
     int par1 = hb_parni(1);
     QTextLength * ptr = new QTextLength( obj->lengthProperty ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTLENGTH" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTEXTLENGTH" );
+  }
 }
 
 
@@ -635,7 +640,8 @@ HB_FUNC_STATIC( QTEXTFORMAT_PENPROPERTY )
   {
     int par1 = hb_parni(1);
     QPen * ptr = new QPen( obj->penProperty ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPEN", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPEN", true );
+  }
 }
 
 
@@ -650,7 +656,8 @@ HB_FUNC_STATIC( QTEXTFORMAT_PROPERTY )
   {
     int par1 = hb_parni(1);
     QVariant * ptr = new QVariant( obj->property ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+  }
 }
 
 
@@ -821,7 +828,8 @@ HB_FUNC_STATIC( QTEXTFORMAT_TOBLOCKFORMAT )
   if( obj )
   {
     QTextBlockFormat * ptr = new QTextBlockFormat( obj->toBlockFormat (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTBLOCKFORMAT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTEXTBLOCKFORMAT" );
+  }
 }
 
 
@@ -834,7 +842,8 @@ HB_FUNC_STATIC( QTEXTFORMAT_TOCHARFORMAT )
   if( obj )
   {
     QTextCharFormat * ptr = new QTextCharFormat( obj->toCharFormat (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT" );
+  }
 }
 
 
@@ -847,7 +856,8 @@ HB_FUNC_STATIC( QTEXTFORMAT_TOFRAMEFORMAT )
   if( obj )
   {
     QTextFrameFormat * ptr = new QTextFrameFormat( obj->toFrameFormat (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTFRAMEFORMAT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTEXTFRAMEFORMAT" );
+  }
 }
 
 
@@ -860,7 +870,8 @@ HB_FUNC_STATIC( QTEXTFORMAT_TOIMAGEFORMAT )
   if( obj )
   {
     QTextImageFormat * ptr = new QTextImageFormat( obj->toImageFormat (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTIMAGEFORMAT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTEXTIMAGEFORMAT" );
+  }
 }
 
 
@@ -873,7 +884,8 @@ HB_FUNC_STATIC( QTEXTFORMAT_TOLISTFORMAT )
   if( obj )
   {
     QTextListFormat * ptr = new QTextListFormat( obj->toListFormat (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTLISTFORMAT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTEXTLISTFORMAT" );
+  }
 }
 
 
@@ -886,7 +898,8 @@ HB_FUNC_STATIC( QTEXTFORMAT_TOTABLECELLFORMAT )
   if( obj )
   {
     QTextTableCellFormat * ptr = new QTextTableCellFormat( obj->toTableCellFormat (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTTABLECELLFORMAT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTEXTTABLECELLFORMAT" );
+  }
 }
 
 
@@ -899,7 +912,8 @@ HB_FUNC_STATIC( QTEXTFORMAT_TOTABLEFORMAT )
   if( obj )
   {
     QTextTableFormat * ptr = new QTextTableFormat( obj->toTableFormat (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTTABLEFORMAT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTEXTTABLEFORMAT" );
+  }
 }
 
 

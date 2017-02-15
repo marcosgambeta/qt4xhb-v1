@@ -103,7 +103,8 @@ HB_FUNC_STATIC( QGENERICPLUGINFACTORY_CREATE )
   const QString  * par1 = (const QString  *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   const QString  * par2 = (const QString  *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
   QObject * ptr = QGenericPluginFactory::create ( *par1, *par2 );
-  _qt4xhb_createReturnClass ( ptr, "QOBJECT" );}
+  _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+}
 
 
 /*

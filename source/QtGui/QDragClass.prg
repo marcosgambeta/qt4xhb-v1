@@ -167,7 +167,8 @@ HB_FUNC_STATIC( QDRAG_HOTSPOT )
   if( obj )
   {
     QPoint * ptr = new QPoint( obj->hotSpot (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+  }
 }
 
 
@@ -180,7 +181,8 @@ HB_FUNC_STATIC( QDRAG_MIMEDATA )
   if( obj )
   {
     QMimeData * ptr = obj->mimeData (  );
-    _qt4xhb_createReturnClass ( ptr, "QMIMEDATA" );  }
+    _qt4xhb_createReturnClass ( ptr, "QMIMEDATA" );
+  }
 }
 
 
@@ -193,7 +195,8 @@ HB_FUNC_STATIC( QDRAG_PIXMAP )
   if( obj )
   {
     QPixmap * ptr = new QPixmap( obj->pixmap (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
+  }
 }
 
 
@@ -267,7 +270,8 @@ HB_FUNC_STATIC( QDRAG_SOURCE )
   if( obj )
   {
     QWidget * ptr = obj->source (  );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );  }
+    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  }
 }
 
 
@@ -280,7 +284,8 @@ HB_FUNC_STATIC( QDRAG_TARGET )
   if( obj )
   {
     QWidget * ptr = obj->target (  );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );  }
+    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  }
 }
 
 

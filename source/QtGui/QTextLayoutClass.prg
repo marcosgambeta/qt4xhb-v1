@@ -250,7 +250,8 @@ HB_FUNC_STATIC( QTEXTLAYOUT_BOUNDINGRECT )
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->boundingRect (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+  }
 }
 
 
@@ -305,7 +306,8 @@ HB_FUNC_STATIC( QTEXTLAYOUT_CREATELINE )
   if( obj )
   {
     QTextLine * ptr = new QTextLine( obj->createLine (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTLINE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTEXTLINE" );
+  }
 }
 
 
@@ -397,7 +399,8 @@ HB_FUNC_STATIC( QTEXTLAYOUT_FONT )
   if( obj )
   {
     QFont * ptr = new QFont( obj->font (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QFONT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QFONT", true );
+  }
 }
 
 
@@ -485,7 +488,8 @@ HB_FUNC_STATIC( QTEXTLAYOUT_LINEAT )
   {
     int par1 = hb_parni(1);
     QTextLine * ptr = new QTextLine( obj->lineAt ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTLINE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTEXTLINE" );
+  }
 }
 
 
@@ -513,7 +517,8 @@ HB_FUNC_STATIC( QTEXTLAYOUT_LINEFORTEXTPOSITION )
   {
     int par1 = hb_parni(1);
     QTextLine * ptr = new QTextLine( obj->lineForTextPosition ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTLINE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTEXTLINE" );
+  }
 }
 
 
@@ -570,7 +575,8 @@ HB_FUNC_STATIC( QTEXTLAYOUT_POSITION )
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->position (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+  }
 }
 
 
@@ -763,7 +769,8 @@ HB_FUNC_STATIC( QTEXTLAYOUT_TEXTOPTION )
   if( obj )
   {
     QTextOption * ptr = new QTextOption( obj->textOption (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTOPTION" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTEXTOPTION" );
+  }
 }
 
 

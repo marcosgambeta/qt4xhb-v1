@@ -247,7 +247,8 @@ HB_FUNC_STATIC( QLISTWIDGET_CURRENTITEM )
   if( obj )
   {
     QListWidgetItem * ptr = obj->currentItem (  );
-    _qt4xhb_createReturnClass ( ptr, "QLISTWIDGETITEM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QLISTWIDGETITEM" );
+  }
 }
 
 
@@ -421,7 +422,8 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEM )
   {
     int par1 = hb_parni(1);
     QListWidgetItem * ptr = obj->item ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QLISTWIDGETITEM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QLISTWIDGETITEM" );
+  }
 }
 
 
@@ -435,7 +437,8 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEMAT1 )
   {
     QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QListWidgetItem * ptr = obj->itemAt ( *par1 );
-    _qt4xhb_createReturnClass ( ptr, "QLISTWIDGETITEM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QLISTWIDGETITEM" );
+  }
 }
 
 
@@ -450,7 +453,8 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEMAT2 )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     QListWidgetItem * ptr = obj->itemAt ( par1, par2 );
-    _qt4xhb_createReturnClass ( ptr, "QLISTWIDGETITEM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QLISTWIDGETITEM" );
+  }
 }
 
 
@@ -479,7 +483,8 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEMWIDGET )
   {
     QListWidgetItem * par1 = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QWidget * ptr = obj->itemWidget ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );  }
+    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  }
 }
 
 
@@ -720,7 +725,8 @@ HB_FUNC_STATIC( QLISTWIDGET_TAKEITEM )
   {
     int par1 = hb_parni(1);
     QListWidgetItem * ptr = obj->takeItem ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QLISTWIDGETITEM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QLISTWIDGETITEM" );
+  }
 }
 
 
@@ -734,7 +740,8 @@ HB_FUNC_STATIC( QLISTWIDGET_VISUALITEMRECT )
   {
     const QListWidgetItem * par1 = (const QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QRect * ptr = new QRect( obj->visualItemRect ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+  }
 }
 
 

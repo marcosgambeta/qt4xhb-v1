@@ -194,7 +194,8 @@ HB_FUNC_STATIC( QFONTDATABASE_FONT )
     QString par2 = hb_parc(2);
     int par3 = hb_parni(3);
     QFont * ptr = new QFont( obj->font ( par1, par2, par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QFONT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QFONT", true );
+  }
 }
 
 

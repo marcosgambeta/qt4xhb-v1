@@ -139,7 +139,8 @@ HB_FUNC_STATIC( QFILEICONPROVIDER_ICON1 )
   {
     int par1 = hb_parni(1);
     QIcon * ptr = new QIcon( obj->icon (  (QFileIconProvider::IconType) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QICON", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QICON", true );
+  }
 }
 
 
@@ -153,7 +154,8 @@ HB_FUNC_STATIC( QFILEICONPROVIDER_ICON2 )
   {
     QFileInfo * par1 = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QIcon * ptr = new QIcon( obj->icon ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QICON", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QICON", true );
+  }
 }
 
 

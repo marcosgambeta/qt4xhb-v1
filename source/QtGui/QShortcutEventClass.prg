@@ -105,7 +105,8 @@ HB_FUNC_STATIC( QSHORTCUTEVENT_KEY )
   if( obj )
   {
     const QKeySequence * ptr = &obj->key (  );
-    _qt4xhb_createReturnClass ( ptr, "QKEYSEQUENCE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QKEYSEQUENCE" );
+  }
 }
 
 

@@ -325,7 +325,8 @@ HB_FUNC_STATIC( QTEXTLINE_NATURALTEXTRECT )
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->naturalTextRect (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+  }
 }
 
 
@@ -352,7 +353,8 @@ HB_FUNC_STATIC( QTEXTLINE_POSITION )
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->position (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+  }
 }
 
 
@@ -365,7 +367,8 @@ HB_FUNC_STATIC( QTEXTLINE_RECT )
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->rect (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+  }
 }
 
 

@@ -182,7 +182,8 @@ HB_FUNC_STATIC( QUNDOCOMMAND_CHILD )
   {
     int par1 = hb_parni(1);
     const QUndoCommand * ptr = obj->child ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QUNDOCOMMAND" );  }
+    _qt4xhb_createReturnClass ( ptr, "QUNDOCOMMAND" );
+  }
 }
 
 

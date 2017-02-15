@@ -104,7 +104,8 @@ HB_FUNC_STATIC( QWIDGETACTION_DEFAULTWIDGET )
   if( obj )
   {
     QWidget * ptr = obj->defaultWidget (  );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );  }
+    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  }
 }
 
 
@@ -133,7 +134,8 @@ HB_FUNC_STATIC( QWIDGETACTION_REQUESTWIDGET )
   {
     QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QWidget * ptr = obj->requestWidget ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );  }
+    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  }
 }
 
 

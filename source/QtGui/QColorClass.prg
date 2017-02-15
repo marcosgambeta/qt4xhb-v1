@@ -477,7 +477,8 @@ HB_FUNC_STATIC( QCOLOR_CONVERTTO )
   {
     int par1 = hb_parni(1);
     QColor * ptr = new QColor( obj->convertTo (  (QColor::Spec) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+  }
 }
 
 
@@ -519,7 +520,8 @@ HB_FUNC_STATIC( QCOLOR_DARKER )
   {
     int par1 = ISNIL(1)? 200 : hb_parni(1);
     QColor * ptr = new QColor( obj->darker ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+  }
 }
 
 
@@ -895,7 +897,8 @@ HB_FUNC_STATIC( QCOLOR_LIGHTER )
   {
     int par1 = ISNIL(1)? 150 : hb_parni(1);
     QColor * ptr = new QColor( obj->lighter ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+  }
 }
 
 
@@ -1406,7 +1409,8 @@ HB_FUNC_STATIC( QCOLOR_TOCMYK )
   if( obj )
   {
     QColor * ptr = new QColor( obj->toCmyk (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+  }
 }
 
 
@@ -1419,7 +1423,8 @@ HB_FUNC_STATIC( QCOLOR_TOHSL )
   if( obj )
   {
     QColor * ptr = new QColor( obj->toHsl (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+  }
 }
 
 
@@ -1432,7 +1437,8 @@ HB_FUNC_STATIC( QCOLOR_TOHSV )
   if( obj )
   {
     QColor * ptr = new QColor( obj->toHsv (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+  }
 }
 
 
@@ -1445,7 +1451,8 @@ HB_FUNC_STATIC( QCOLOR_TORGB )
   if( obj )
   {
     QColor * ptr = new QColor( obj->toRgb (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+  }
 }
 
 
@@ -1537,7 +1544,8 @@ HB_FUNC_STATIC( QCOLOR_FROMCMYK )
   int par4 = hb_parni(4);
   int par5 = ISNIL(5)? 255 : hb_parni(5);
   QColor * ptr = new QColor( QColor::fromCmyk ( par1, par2, par3, par4, par5 ) );
-  _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );}
+  _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+}
 
 
 /*
@@ -1551,7 +1559,8 @@ HB_FUNC_STATIC( QCOLOR_FROMCMYKF )
   qreal par4 = hb_parnd(4);
   qreal par5 = ISNIL(5)? 1.0 : hb_parnd(5);
   QColor * ptr = new QColor( QColor::fromCmykF ( par1, par2, par3, par4, par5 ) );
-  _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );}
+  _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+}
 
 
 /*
@@ -1564,7 +1573,8 @@ HB_FUNC_STATIC( QCOLOR_FROMHSL )
   int par3 = hb_parni(3);
   int par4 = ISNIL(4)? 255 : hb_parni(4);
   QColor * ptr = new QColor( QColor::fromHsl ( par1, par2, par3, par4 ) );
-  _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );}
+  _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+}
 
 
 /*
@@ -1577,7 +1587,8 @@ HB_FUNC_STATIC( QCOLOR_FROMHSLF )
   qreal par3 = hb_parnd(3);
   qreal par4 = ISNIL(4)? 1.0 : hb_parnd(4);
   QColor * ptr = new QColor( QColor::fromHslF ( par1, par2, par3, par4 ) );
-  _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );}
+  _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+}
 
 
 /*
@@ -1590,7 +1601,8 @@ HB_FUNC_STATIC( QCOLOR_FROMHSV )
   int par3 = hb_parni(3);
   int par4 = ISNIL(4)? 255 : hb_parni(4);
   QColor * ptr = new QColor( QColor::fromHsv ( par1, par2, par3, par4 ) );
-  _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );}
+  _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+}
 
 
 /*
@@ -1603,7 +1615,8 @@ HB_FUNC_STATIC( QCOLOR_FROMHSVF )
   qreal par3 = hb_parnd(3);
   qreal par4 = ISNIL(4)? 1.0 : hb_parnd(4);
   QColor * ptr = new QColor( QColor::fromHsvF ( par1, par2, par3, par4 ) );
-  _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );}
+  _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+}
 
 
 /*
@@ -1613,7 +1626,8 @@ HB_FUNC_STATIC( QCOLOR_FROMRGB1 )
 {
   QRgb par1 = hb_parni(1);
   QColor * ptr = new QColor( QColor::fromRgb ( par1 ) );
-  _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );}
+  _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+}
 
 
 /*
@@ -1626,7 +1640,8 @@ HB_FUNC_STATIC( QCOLOR_FROMRGB2 )
   int par3 = hb_parni(3);
   int par4 = ISNIL(4)? 255 : hb_parni(4);
   QColor * ptr = new QColor( QColor::fromRgb ( par1, par2, par3, par4 ) );
-  _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );}
+  _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+}
 
 
 /*
@@ -1639,7 +1654,8 @@ HB_FUNC_STATIC( QCOLOR_FROMRGBF )
   qreal par3 = hb_parnd(3);
   qreal par4 = ISNIL(4)? 1.0 : hb_parnd(4);
   QColor * ptr = new QColor( QColor::fromRgbF ( par1, par2, par3, par4 ) );
-  _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );}
+  _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+}
 
 
 /*
@@ -1649,7 +1665,8 @@ HB_FUNC_STATIC( QCOLOR_FROMRGBA )
 {
   QRgb par1 = hb_parni(1);
   QColor * ptr = new QColor( QColor::fromRgba ( par1 ) );
-  _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );}
+  _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+}
 
 
 /*

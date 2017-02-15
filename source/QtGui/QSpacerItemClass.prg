@@ -130,7 +130,8 @@ HB_FUNC_STATIC( QSPACERITEM_GEOMETRY )
   if( obj )
   {
     QRect * ptr = new QRect( obj->geometry (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+  }
 }
 
 
@@ -157,7 +158,8 @@ HB_FUNC_STATIC( QSPACERITEM_MAXIMUMSIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->maximumSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 
@@ -170,7 +172,8 @@ HB_FUNC_STATIC( QSPACERITEM_MINIMUMSIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->minimumSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 
@@ -198,7 +201,8 @@ HB_FUNC_STATIC( QSPACERITEM_SIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 
@@ -211,7 +215,8 @@ HB_FUNC_STATIC( QSPACERITEM_SPACERITEM )
   if( obj )
   {
     QSpacerItem * ptr = obj->spacerItem (  );
-    _qt4xhb_createReturnClass ( ptr, "QSPACERITEM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QSPACERITEM" );
+  }
 }
 
 

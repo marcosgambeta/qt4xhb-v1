@@ -206,7 +206,8 @@ HB_FUNC_STATIC( QMESSAGEBOX_ADDBUTTON2 )
     QString par1 = hb_parc(1);
     int par2 = hb_parni(2);
     QPushButton * ptr = obj->addButton ( par1,  (QMessageBox::ButtonRole) par2 );
-    _qt4xhb_createReturnClass ( ptr, "QPUSHBUTTON" );  }
+    _qt4xhb_createReturnClass ( ptr, "QPUSHBUTTON" );
+  }
 }
 
 
@@ -220,7 +221,8 @@ HB_FUNC_STATIC( QMESSAGEBOX_ADDBUTTON3 )
   {
     int par1 = hb_parni(1);
     QPushButton * ptr = obj->addButton (  (QMessageBox::StandardButton) par1 );
-    _qt4xhb_createReturnClass ( ptr, "QPUSHBUTTON" );  }
+    _qt4xhb_createReturnClass ( ptr, "QPUSHBUTTON" );
+  }
 }
 
 
@@ -254,7 +256,8 @@ HB_FUNC_STATIC( QMESSAGEBOX_BUTTON )
   {
     int par1 = hb_parni(1);
     QAbstractButton * ptr = obj->button (  (QMessageBox::StandardButton) par1 );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTBUTTON" );  }
+    _qt4xhb_createReturnClass ( ptr, "QABSTRACTBUTTON" );
+  }
 }
 
 
@@ -326,7 +329,8 @@ HB_FUNC_STATIC( QMESSAGEBOX_CLICKEDBUTTON )
   if( obj )
   {
     QAbstractButton * ptr = obj->clickedButton (  );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTBUTTON" );  }
+    _qt4xhb_createReturnClass ( ptr, "QABSTRACTBUTTON" );
+  }
 }
 
 
@@ -339,7 +343,8 @@ HB_FUNC_STATIC( QMESSAGEBOX_DEFAULTBUTTON )
   if( obj )
   {
     QPushButton * ptr = obj->defaultButton (  );
-    _qt4xhb_createReturnClass ( ptr, "QPUSHBUTTON" );  }
+    _qt4xhb_createReturnClass ( ptr, "QPUSHBUTTON" );
+  }
 }
 
 
@@ -366,7 +371,8 @@ HB_FUNC_STATIC( QMESSAGEBOX_ESCAPEBUTTON )
   if( obj )
   {
     QAbstractButton * ptr = obj->escapeButton (  );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTBUTTON" );  }
+    _qt4xhb_createReturnClass ( ptr, "QABSTRACTBUTTON" );
+  }
 }
 
 
@@ -393,7 +399,8 @@ HB_FUNC_STATIC( QMESSAGEBOX_ICONPIXMAP )
   if( obj )
   {
     QPixmap * ptr = new QPixmap( obj->iconPixmap (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
+  }
 }
 
 

@@ -248,7 +248,8 @@ HB_FUNC_STATIC( QTREEVIEW_HEADER )
   if( obj )
   {
     QHeaderView * ptr = obj->header (  );
-    _qt4xhb_createReturnClass ( ptr, "QHEADERVIEW" );  }
+    _qt4xhb_createReturnClass ( ptr, "QHEADERVIEW" );
+  }
 }
 
 
@@ -276,7 +277,8 @@ HB_FUNC_STATIC( QTREEVIEW_INDEXABOVE )
   {
     QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QModelIndex * ptr = new QModelIndex( obj->indexAbove ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+  }
 }
 
 
@@ -290,7 +292,8 @@ HB_FUNC_STATIC( QTREEVIEW_INDEXBELOW )
   {
     QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QModelIndex * ptr = new QModelIndex( obj->indexBelow ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+  }
 }
 
 
@@ -758,7 +761,8 @@ HB_FUNC_STATIC( QTREEVIEW_INDEXAT )
   {
     QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QModelIndex * ptr = new QModelIndex( obj->indexAt ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+  }
 }
 
 
@@ -876,7 +880,8 @@ HB_FUNC_STATIC( QTREEVIEW_VISUALRECT )
   {
     QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QRect * ptr = new QRect( obj->visualRect ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+  }
 }
 
 

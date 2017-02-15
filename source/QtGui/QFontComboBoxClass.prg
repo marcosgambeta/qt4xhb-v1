@@ -109,7 +109,8 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_CURRENTFONT )
   if( obj )
   {
     QFont * ptr = new QFont( obj->currentFont (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QFONT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QFONT", true );
+  }
 }
 
 
@@ -180,7 +181,8 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_SIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 

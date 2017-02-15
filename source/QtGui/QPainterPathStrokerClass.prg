@@ -170,7 +170,8 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_CREATESTROKE )
   {
     QPainterPath * par1 = (QPainterPath *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QPainterPath * ptr = new QPainterPath( obj->createStroke ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
+  }
 }
 
 

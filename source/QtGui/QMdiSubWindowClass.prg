@@ -148,7 +148,8 @@ HB_FUNC_STATIC( QMDISUBWINDOW_MDIAREA )
   if( obj )
   {
     QMdiArea * ptr = obj->mdiArea (  );
-    _qt4xhb_createReturnClass ( ptr, "QMDIAREA" );  }
+    _qt4xhb_createReturnClass ( ptr, "QMDIAREA" );
+  }
 }
 
 
@@ -237,7 +238,8 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SYSTEMMENU )
   if( obj )
   {
     QMenu * ptr = obj->systemMenu (  );
-    _qt4xhb_createReturnClass ( ptr, "QMENU" );  }
+    _qt4xhb_createReturnClass ( ptr, "QMENU" );
+  }
 }
 
 
@@ -265,7 +267,8 @@ HB_FUNC_STATIC( QMDISUBWINDOW_WIDGET )
   if( obj )
   {
     QWidget * ptr = obj->widget (  );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );  }
+    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  }
 }
 
 
@@ -278,7 +281,8 @@ HB_FUNC_STATIC( QMDISUBWINDOW_MINIMUMSIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 
@@ -291,7 +295,8 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 

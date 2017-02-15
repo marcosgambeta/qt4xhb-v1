@@ -163,7 +163,8 @@ HB_FUNC_STATIC( QDROPEVENT_MIMEDATA )
   if( obj )
   {
     const QMimeData * ptr = obj->mimeData (  );
-    _qt4xhb_createReturnClass ( ptr, "QMIMEDATA" );  }
+    _qt4xhb_createReturnClass ( ptr, "QMIMEDATA" );
+  }
 }
 
 
@@ -190,7 +191,8 @@ HB_FUNC_STATIC( QDROPEVENT_POS )
   if( obj )
   {
     const QPoint * ptr = &obj->pos (  );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QPOINT" );
+  }
 }
 
 
@@ -246,7 +248,8 @@ HB_FUNC_STATIC( QDROPEVENT_SOURCE )
   if( obj )
   {
     QWidget * ptr = obj->source (  );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );  }
+    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  }
 }
 
 
@@ -260,7 +263,8 @@ HB_FUNC_STATIC( QDROPEVENT_ENCODEDDATA )
   {
     const char * par1 = hb_parc(1);
     QByteArray * ptr = new QByteArray( obj->encodedData (  (const char *) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );  }
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+  }
 }
 
 

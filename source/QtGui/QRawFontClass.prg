@@ -332,7 +332,8 @@ HB_FUNC_STATIC( QRAWFONT_ALPHAMAPFORGLYPH )
     int par2 = ISNIL(2)? (int) QRawFont::SubPixelAntialiasing : hb_parni(2);
     QTransform par3 = ISNIL(3)? QTransform() : *(QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     QImage * ptr = new QImage( obj->alphaMapForGlyph ( par1,  (QRawFont::AntialiasingType) par2, par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );
+  }
 }
 
 
@@ -402,7 +403,8 @@ HB_FUNC_STATIC( QRAWFONT_FONTTABLE )
   {
     const char * par1 = hb_parc(1);
     QByteArray * ptr = new QByteArray( obj->fontTable (  (const char *) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );  }
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+  }
 }
 
 
@@ -531,7 +533,8 @@ HB_FUNC_STATIC( QRAWFONT_PATHFORGLYPH )
   {
     quint32 par1 = hb_parni(1);
     QPainterPath * ptr = new QPainterPath( obj->pathForGlyph ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
+  }
 }
 
 
@@ -711,7 +714,8 @@ HB_FUNC_STATIC( QRAWFONT_FROMFONT )
   QFont * par1 = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = ISNIL(2)? (int) QFontDatabase::Any : hb_parni(2);
   QRawFont * ptr = new QRawFont( QRawFont::fromFont ( *par1,  (QFontDatabase::WritingSystem) par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QRAWFONT", true );}
+  _qt4xhb_createReturnClass ( ptr, "QRAWFONT", true );
+}
 
 
 

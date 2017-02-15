@@ -288,7 +288,8 @@ HB_FUNC_STATIC( QFONTMETRICSF_BOUNDINGRECT1 )
   {
     QString par1 = hb_parc(1);
     QRectF * ptr = new QRectF( obj->boundingRect ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+  }
 }
 
 
@@ -302,7 +303,8 @@ HB_FUNC_STATIC( QFONTMETRICSF_BOUNDINGRECT2 )
   {
     QChar * par1 = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QRectF * ptr = new QRectF( obj->boundingRect ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+  }
 }
 
 
@@ -320,7 +322,8 @@ HB_FUNC_STATIC( QFONTMETRICSF_BOUNDINGRECT3 )
     int par4 = ISNIL(4)? 0 : hb_parni(4);
     int par5;
     QRectF * ptr = new QRectF( obj->boundingRect ( *par1, par2, par3, par4, &par5 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );    hb_storni( par5, 5 );
+    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+    hb_storni( par5, 5 );
   }
 }
 
@@ -562,7 +565,8 @@ HB_FUNC_STATIC( QFONTMETRICSF_SIZE )
     int par3 = ISNIL(3)? 0 : hb_parni(3);
     int par4;
     QSizeF * ptr = new QSizeF( obj->size ( par1, par2, par3, &par4 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );    hb_storni( par4, 4 );
+    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
+    hb_storni( par4, 4 );
   }
 }
 
@@ -591,7 +595,8 @@ HB_FUNC_STATIC( QFONTMETRICSF_TIGHTBOUNDINGRECT )
   {
     QString par1 = hb_parc(1);
     QRectF * ptr = new QRectF( obj->tightBoundingRect ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+  }
 }
 
 

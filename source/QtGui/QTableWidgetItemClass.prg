@@ -260,7 +260,8 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_BACKGROUND )
   if( obj )
   {
     QBrush * ptr = new QBrush( obj->background (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
+  }
 }
 
 
@@ -287,7 +288,8 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_CLONE )
   if( obj )
   {
     QTableWidgetItem * ptr = obj->clone (  );
-    _qt4xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
+  }
 }
 
 
@@ -315,7 +317,8 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_DATA )
   {
     int par1 = hb_parni(1);
     QVariant * ptr = new QVariant( obj->data ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+  }
 }
 
 
@@ -342,7 +345,8 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_FONT )
   if( obj )
   {
     QFont * ptr = new QFont( obj->font (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QFONT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QFONT", true );
+  }
 }
 
 
@@ -355,7 +359,8 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_FOREGROUND )
   if( obj )
   {
     QBrush * ptr = new QBrush( obj->foreground (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
+  }
 }
 
 
@@ -368,7 +373,8 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_ICON )
   if( obj )
   {
     QIcon * ptr = new QIcon( obj->icon (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QICON", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QICON", true );
+  }
 }
 
 
@@ -635,7 +641,8 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_SIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 
@@ -662,7 +669,8 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_TABLEWIDGET )
   if( obj )
   {
     QTableWidget * ptr = obj->tableWidget (  );
-    _qt4xhb_createReturnClass ( ptr, "QTABLEWIDGET" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTABLEWIDGET" );
+  }
 }
 
 

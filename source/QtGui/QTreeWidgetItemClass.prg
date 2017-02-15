@@ -460,7 +460,8 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_BACKGROUND )
   {
     int par1 = hb_parni(1);
     QBrush * ptr = new QBrush( obj->background ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
+  }
 }
 
 
@@ -489,7 +490,8 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_CHILD )
   {
     int par1 = hb_parni(1);
     QTreeWidgetItem * ptr = obj->child ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
+  }
 }
 
 
@@ -530,7 +532,8 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_CLONE )
   if( obj )
   {
     QTreeWidgetItem * ptr = obj->clone (  );
-    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
+  }
 }
 
 
@@ -559,7 +562,8 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_DATA )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     QVariant * ptr = new QVariant( obj->data ( par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+  }
 }
 
 
@@ -587,7 +591,8 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_FONT )
   {
     int par1 = hb_parni(1);
     QFont * ptr = new QFont( obj->font ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QFONT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QFONT", true );
+  }
 }
 
 
@@ -601,7 +606,8 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_FOREGROUND )
   {
     int par1 = hb_parni(1);
     QBrush * ptr = new QBrush( obj->foreground ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
+  }
 }
 
 
@@ -615,7 +621,8 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_ICON )
   {
     int par1 = hb_parni(1);
     QIcon * ptr = new QIcon( obj->icon ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QICON", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QICON", true );
+  }
 }
 
 
@@ -751,7 +758,8 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_PARENT )
   if( obj )
   {
     QTreeWidgetItem * ptr = obj->parent (  );
-    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
+  }
 }
 
 
@@ -1093,7 +1101,8 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SIZEHINT )
   {
     int par1 = hb_parni(1);
     QSize * ptr = new QSize( obj->sizeHint ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 
@@ -1138,7 +1147,8 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_TAKECHILD )
   {
     int par1 = hb_parni(1);
     QTreeWidgetItem * ptr = obj->takeChild ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
+  }
 }
 
 
@@ -1240,7 +1250,8 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_TREEWIDGET )
   if( obj )
   {
     QTreeWidget * ptr = obj->treeWidget (  );
-    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGET" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTREEWIDGET" );
+  }
 }
 
 

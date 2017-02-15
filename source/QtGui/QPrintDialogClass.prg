@@ -178,7 +178,8 @@ HB_FUNC_STATIC( QPRINTDIALOG_PRINTER )
   if( obj )
   {
     QPrinter * ptr = obj->printer (  );
-    _qt4xhb_createReturnClass ( ptr, "QPRINTER" );  }
+    _qt4xhb_createReturnClass ( ptr, "QPRINTER" );
+  }
 }
 
 

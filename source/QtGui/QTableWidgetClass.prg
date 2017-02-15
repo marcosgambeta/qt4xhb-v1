@@ -210,7 +210,8 @@ HB_FUNC_STATIC( QTABLEWIDGET_CELLWIDGET )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     QWidget * ptr = obj->cellWidget ( par1, par2 );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );  }
+    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  }
 }
 
 
@@ -281,7 +282,8 @@ HB_FUNC_STATIC( QTABLEWIDGET_CURRENTITEM )
   if( obj )
   {
     QTableWidgetItem * ptr = obj->currentItem (  );
-    _qt4xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
+  }
 }
 
 
@@ -370,7 +372,8 @@ HB_FUNC_STATIC( QTABLEWIDGET_HORIZONTALHEADERITEM )
   {
     int par1 = hb_parni(1);
     QTableWidgetItem * ptr = obj->horizontalHeaderItem ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
+  }
 }
 
 
@@ -385,7 +388,8 @@ HB_FUNC_STATIC( QTABLEWIDGET_ITEM )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     QTableWidgetItem * ptr = obj->item ( par1, par2 );
-    _qt4xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
+  }
 }
 
 
@@ -399,7 +403,8 @@ HB_FUNC_STATIC( QTABLEWIDGET_ITEMAT1 )
   {
     QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QTableWidgetItem * ptr = obj->itemAt ( *par1 );
-    _qt4xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
+  }
 }
 
 
@@ -414,7 +419,8 @@ HB_FUNC_STATIC( QTABLEWIDGET_ITEMAT2 )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     QTableWidgetItem * ptr = obj->itemAt ( par1, par2 );
-    _qt4xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
+  }
 }
 
 
@@ -875,7 +881,8 @@ HB_FUNC_STATIC( QTABLEWIDGET_TAKEHORIZONTALHEADERITEM )
   {
     int par1 = hb_parni(1);
     QTableWidgetItem * ptr = obj->takeHorizontalHeaderItem ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
+  }
 }
 
 
@@ -890,7 +897,8 @@ HB_FUNC_STATIC( QTABLEWIDGET_TAKEITEM )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     QTableWidgetItem * ptr = obj->takeItem ( par1, par2 );
-    _qt4xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
+  }
 }
 
 
@@ -904,7 +912,8 @@ HB_FUNC_STATIC( QTABLEWIDGET_TAKEVERTICALHEADERITEM )
   {
     int par1 = hb_parni(1);
     QTableWidgetItem * ptr = obj->takeVerticalHeaderItem ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
+  }
 }
 
 
@@ -918,7 +927,8 @@ HB_FUNC_STATIC( QTABLEWIDGET_VERTICALHEADERITEM )
   {
     int par1 = hb_parni(1);
     QTableWidgetItem * ptr = obj->verticalHeaderItem ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
+  }
 }
 
 
@@ -947,7 +957,8 @@ HB_FUNC_STATIC( QTABLEWIDGET_VISUALITEMRECT )
   {
     const QTableWidgetItem * par1 = (const QTableWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QRect * ptr = new QRect( obj->visualItemRect ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+  }
 }
 
 

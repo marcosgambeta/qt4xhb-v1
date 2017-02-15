@@ -123,7 +123,8 @@ HB_FUNC_STATIC( QDIRECTPAINTER_ALLOCATEDREGION )
   if( obj )
   {
     QRegion * ptr = new QRegion( obj->allocatedRegion (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QREGION", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QREGION", true );
+  }
 }
 
 
@@ -195,7 +196,8 @@ HB_FUNC_STATIC( QDIRECTPAINTER_GEOMETRY )
   if( obj )
   {
     QRect * ptr = new QRect( obj->geometry (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+  }
 }
 
 
@@ -251,7 +253,8 @@ HB_FUNC_STATIC( QDIRECTPAINTER_REQUESTEDREGION )
   if( obj )
   {
     QRegion * ptr = new QRegion( obj->requestedRegion (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QREGION", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QREGION", true );
+  }
 }
 
 
@@ -308,7 +311,8 @@ uchar * frameBuffer ()
 HB_FUNC_STATIC( QDIRECTPAINTER_FRAMEBUFFER )
 {
   uchar * ptr = QDirectPainter::frameBuffer (  );
-  _qt4xhb_createReturnClass ( ptr, "UCHAR" );}
+  _qt4xhb_createReturnClass ( ptr, "UCHAR" );
+}
 
 
 /*

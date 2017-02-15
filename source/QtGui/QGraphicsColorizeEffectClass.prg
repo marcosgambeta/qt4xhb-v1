@@ -106,7 +106,8 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_COLOR )
   if( obj )
   {
     QColor * ptr = new QColor( obj->color (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+  }
 }
 
 

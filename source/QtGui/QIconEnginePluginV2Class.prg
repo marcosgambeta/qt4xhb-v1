@@ -87,7 +87,8 @@ HB_FUNC_STATIC( QICONENGINEPLUGINV2_CREATE )
   {
     QString par1 = ISNIL(1)? QString() : hb_parc(1);
     QIconEngineV2 * ptr = obj->create ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QICONENGINEV2" );  }
+    _qt4xhb_createReturnClass ( ptr, "QICONENGINEV2" );
+  }
 }
 
 

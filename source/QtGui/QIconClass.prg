@@ -303,7 +303,8 @@ HB_FUNC_STATIC( QICON_ACTUALSIZE )
     int par2 = ISNIL(2)? (int) QIcon::Normal : hb_parni(2);
     int par3 = ISNIL(3)? (int) QIcon::Off : hb_parni(3);
     QSize * ptr = new QSize( obj->actualSize ( *par1,  (QIcon::Mode) par2,  (QIcon::State) par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 
@@ -502,7 +503,8 @@ HB_FUNC_STATIC( QICON_PIXMAP1 )
     int par2 = ISNIL(2)? (int) QIcon::Normal : hb_parni(2);
     int par3 = ISNIL(3)? (int) QIcon::Off : hb_parni(3);
     QPixmap * ptr = new QPixmap( obj->pixmap ( *par1,  (QIcon::Mode) par2,  (QIcon::State) par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
+  }
 }
 
 
@@ -519,7 +521,8 @@ HB_FUNC_STATIC( QICON_PIXMAP2 )
     int par3 = ISNIL(3)? (int) QIcon::Normal : hb_parni(3);
     int par4 = ISNIL(4)? (int) QIcon::Off : hb_parni(4);
     QPixmap * ptr = new QPixmap( obj->pixmap ( par1, par2,  (QIcon::Mode) par3,  (QIcon::State) par4 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
+  }
 }
 
 
@@ -535,7 +538,8 @@ HB_FUNC_STATIC( QICON_PIXMAP3 )
     int par2 = ISNIL(2)? (int) QIcon::Normal : hb_parni(2);
     int par3 = ISNIL(3)? (int) QIcon::Off : hb_parni(3);
     QPixmap * ptr = new QPixmap( obj->pixmap ( par1,  (QIcon::Mode) par2,  (QIcon::State) par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
+  }
 }
 
 
@@ -568,7 +572,8 @@ HB_FUNC_STATIC( QICON_FROMTHEME )
   QString par1 = hb_parc(1);
   QIcon par2 = ISNIL(2)? QIcon() : ISOBJECT(2)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(2));
   QIcon * ptr = new QIcon( QIcon::fromTheme ( par1, par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QICON", true );}
+  _qt4xhb_createReturnClass ( ptr, "QICON", true );
+}
 
 
 /*

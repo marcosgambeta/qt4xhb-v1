@@ -421,7 +421,8 @@ HB_FUNC_STATIC( QTRANSFORM_ADJOINT )
   if( obj )
   {
     QTransform * ptr = new QTransform( obj->adjoint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );
+  }
 }
 
 
@@ -477,7 +478,8 @@ HB_FUNC_STATIC( QTRANSFORM_INVERTED )
   {
     bool par1;
     QTransform * ptr = new QTransform( obj->inverted ( &par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );    hb_storl( par1, 1 );
+    _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );
+    hb_storl( par1, 1 );
   }
 }
 
@@ -596,7 +598,8 @@ HB_FUNC_STATIC( QTRANSFORM_MAP2 )
   {
     QPointF * par1 = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QPointF * ptr = new QPointF( obj->map ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
+  }
 }
 
 
@@ -610,7 +613,8 @@ HB_FUNC_STATIC( QTRANSFORM_MAP3 )
   {
     QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QPoint * ptr = new QPoint( obj->map ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+  }
 }
 
 
@@ -624,7 +628,8 @@ HB_FUNC_STATIC( QTRANSFORM_MAP4 )
   {
     QLine * par1 = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QLine * ptr = new QLine( obj->map ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QLINE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QLINE", true );
+  }
 }
 
 
@@ -638,7 +643,8 @@ HB_FUNC_STATIC( QTRANSFORM_MAP5 )
   {
     QLineF * par1 = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QLineF * ptr = new QLineF( obj->map ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QLINEF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QLINEF", true );
+  }
 }
 
 
@@ -652,7 +658,8 @@ HB_FUNC_STATIC( QTRANSFORM_MAP6 )
   {
     QPolygonF * par1 = (QPolygonF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QPolygonF * ptr = new QPolygonF( obj->map ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOLYGONF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPOLYGONF", true );
+  }
 }
 
 
@@ -666,7 +673,8 @@ HB_FUNC_STATIC( QTRANSFORM_MAP7 )
   {
     QPolygon * par1 = (QPolygon *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QPolygon * ptr = new QPolygon( obj->map ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOLYGON", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPOLYGON", true );
+  }
 }
 
 
@@ -680,7 +688,8 @@ HB_FUNC_STATIC( QTRANSFORM_MAP8 )
   {
     QRegion * par1 = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QRegion * ptr = new QRegion( obj->map ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QREGION", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QREGION", true );
+  }
 }
 
 
@@ -694,7 +703,8 @@ HB_FUNC_STATIC( QTRANSFORM_MAP9 )
   {
     QPainterPath * par1 = (QPainterPath *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QPainterPath * ptr = new QPainterPath( obj->map ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
+  }
 }
 
 
@@ -785,7 +795,8 @@ HB_FUNC_STATIC( QTRANSFORM_MAPRECT1 )
   {
     QRectF * par1 = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QRectF * ptr = new QRectF( obj->mapRect ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+  }
 }
 
 
@@ -799,7 +810,8 @@ HB_FUNC_STATIC( QTRANSFORM_MAPRECT2 )
   {
     QRect * par1 = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QRect * ptr = new QRect( obj->mapRect ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+  }
 }
 
 
@@ -828,7 +840,8 @@ HB_FUNC_STATIC( QTRANSFORM_MAPTOPOLYGON )
   {
     QRect * par1 = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QPolygon * ptr = new QPolygon( obj->mapToPolygon ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOLYGON", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPOLYGON", true );
+  }
 }
 
 
@@ -884,7 +897,8 @@ HB_FUNC_STATIC( QTRANSFORM_TRANSPOSED )
   if( obj )
   {
     QTransform * ptr = new QTransform( obj->transposed (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );
+  }
 }
 
 
@@ -911,7 +925,8 @@ HB_FUNC_STATIC( QTRANSFORM_FROMSCALE )
   qreal par1 = hb_parnd(1);
   qreal par2 = hb_parnd(2);
   QTransform * ptr = new QTransform( QTransform::fromScale ( par1, par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );}
+  _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );
+}
 
 
 /*
@@ -922,7 +937,8 @@ HB_FUNC_STATIC( QTRANSFORM_FROMTRANSLATE )
   qreal par1 = hb_parnd(1);
   qreal par2 = hb_parnd(2);
   QTransform * ptr = new QTransform( QTransform::fromTranslate ( par1, par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );}
+  _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );
+}
 
 
 /*

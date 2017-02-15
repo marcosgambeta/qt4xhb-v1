@@ -158,7 +158,8 @@ HB_FUNC_STATIC( QPICTURE_BOUNDINGRECT )
   if( obj )
   {
     QRect * ptr = new QRect( obj->boundingRect (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+  }
 }
 
 

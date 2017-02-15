@@ -101,7 +101,8 @@ HB_FUNC_STATIC( QCLIPBOARDEVENT_DATA )
   if( obj )
   {
     QEventPrivate * ptr = obj->data (  );
-    _qt4xhb_createReturnClass ( ptr, "QEVENTPRIVATE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QEVENTPRIVATE" );
+  }
 }
 
 

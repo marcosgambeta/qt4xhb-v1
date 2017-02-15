@@ -165,7 +165,8 @@ HB_FUNC_STATIC( QCALENDARWIDGET_DATETEXTFORMAT2 )
   {
     QDate * par1 = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QTextCharFormat * ptr = new QTextCharFormat( obj->dateTextFormat ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT" );
+  }
 }
 
 
@@ -207,7 +208,8 @@ HB_FUNC_STATIC( QCALENDARWIDGET_HEADERTEXTFORMAT )
   if( obj )
   {
     QTextCharFormat * ptr = new QTextCharFormat( obj->headerTextFormat (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT" );
+  }
 }
 
 
@@ -276,7 +278,8 @@ HB_FUNC_STATIC( QCALENDARWIDGET_MAXIMUMDATE )
   if( obj )
   {
     QDate * ptr = new QDate( obj->maximumDate (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDATE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QDATE", true );
+  }
 }
 
 
@@ -289,7 +292,8 @@ HB_FUNC_STATIC( QCALENDARWIDGET_MINIMUMDATE )
   if( obj )
   {
     QDate * ptr = new QDate( obj->minimumDate (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDATE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QDATE", true );
+  }
 }
 
 
@@ -316,7 +320,8 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SELECTEDDATE )
   if( obj )
   {
     QDate * ptr = new QDate( obj->selectedDate (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDATE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QDATE", true );
+  }
 }
 
 
@@ -525,7 +530,8 @@ HB_FUNC_STATIC( QCALENDARWIDGET_WEEKDAYTEXTFORMAT )
   {
     int par1 = hb_parni(1);
     QTextCharFormat * ptr = new QTextCharFormat( obj->weekdayTextFormat (  (Qt::DayOfWeek) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT" );
+  }
 }
 
 
@@ -552,7 +558,8 @@ HB_FUNC_STATIC( QCALENDARWIDGET_MINIMUMSIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 
@@ -565,7 +572,8 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 

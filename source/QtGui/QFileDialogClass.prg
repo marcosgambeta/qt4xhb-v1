@@ -248,7 +248,8 @@ HB_FUNC_STATIC( QFILEDIALOG_DIRECTORY )
   if( obj )
   {
     QDir * ptr = new QDir( obj->directory (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QDIR", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QDIR", true );
+  }
 }
 
 
@@ -312,7 +313,8 @@ HB_FUNC_STATIC( QFILEDIALOG_ICONPROVIDER )
   if( obj )
   {
     QFileIconProvider * ptr = obj->iconProvider (  );
-    _qt4xhb_createReturnClass ( ptr, "QFILEICONPROVIDER" );  }
+    _qt4xhb_createReturnClass ( ptr, "QFILEICONPROVIDER" );
+  }
 }
 
 
@@ -353,7 +355,8 @@ HB_FUNC_STATIC( QFILEDIALOG_ITEMDELEGATE )
   if( obj )
   {
     QAbstractItemDelegate * ptr = obj->itemDelegate (  );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTITEMDELEGATE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QABSTRACTITEMDELEGATE" );
+  }
 }
 
 
@@ -434,7 +437,8 @@ HB_FUNC_STATIC( QFILEDIALOG_PROXYMODEL )
   if( obj )
   {
     QAbstractProxyModel * ptr = obj->proxyModel (  );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTPROXYMODEL" );  }
+    _qt4xhb_createReturnClass ( ptr, "QABSTRACTPROXYMODEL" );
+  }
 }
 
 
@@ -476,7 +480,8 @@ HB_FUNC_STATIC( QFILEDIALOG_SAVESTATE )
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->saveState (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );  }
+    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+  }
 }
 
 

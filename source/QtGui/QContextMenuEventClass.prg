@@ -172,7 +172,8 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALPOS )
   if( obj )
   {
     const QPoint * ptr = &obj->globalPos (  );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QPOINT" );
+  }
 }
 
 
@@ -213,7 +214,8 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_POS )
   if( obj )
   {
     const QPoint * ptr = &obj->pos (  );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QPOINT" );
+  }
 }
 
 

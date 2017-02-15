@@ -109,7 +109,8 @@ HB_FUNC_STATIC( QCLIPBOARD_IMAGE )
   {
     int par1 = hb_parni(1);
     QImage * ptr = new QImage( obj->image (  (QClipboard::Mode) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );
+  }
 }
 
 
@@ -123,7 +124,8 @@ HB_FUNC_STATIC( QCLIPBOARD_MIMEDATA )
   {
     int par1 = hb_parni(1);
     const QMimeData * ptr = obj->mimeData (  (QClipboard::Mode) par1 );
-    _qt4xhb_createReturnClass ( ptr, "QMIMEDATA" );  }
+    _qt4xhb_createReturnClass ( ptr, "QMIMEDATA" );
+  }
 }
 
 
@@ -179,7 +181,8 @@ HB_FUNC_STATIC( QCLIPBOARD_PIXMAP )
   {
     int par1 = hb_parni(1);
     QPixmap * ptr = new QPixmap( obj->pixmap (  (QClipboard::Mode) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
+  }
 }
 
 

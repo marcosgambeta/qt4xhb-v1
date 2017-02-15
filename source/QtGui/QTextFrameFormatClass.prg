@@ -145,7 +145,8 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_BORDERBRUSH )
   if( obj )
   {
     QBrush * ptr = new QBrush( obj->borderBrush (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
+  }
 }
 
 
@@ -186,7 +187,8 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_HEIGHT )
   if( obj )
   {
     QTextLength * ptr = new QTextLength( obj->height (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTLENGTH" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTEXTLENGTH" );
+  }
 }
 
 
@@ -566,7 +568,8 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_WIDTH )
   if( obj )
   {
     QTextLength * ptr = new QTextLength( obj->width (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTLENGTH" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTEXTLENGTH" );
+  }
 }
 
 

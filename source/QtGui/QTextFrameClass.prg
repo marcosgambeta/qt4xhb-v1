@@ -158,7 +158,8 @@ HB_FUNC_STATIC( QTEXTFRAME_FIRSTCURSORPOSITION )
   if( obj )
   {
     QTextCursor * ptr = new QTextCursor( obj->firstCursorPosition (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
+  }
 }
 
 
@@ -185,7 +186,8 @@ HB_FUNC_STATIC( QTEXTFRAME_FRAMEFORMAT )
   if( obj )
   {
     QTextFrameFormat * ptr = new QTextFrameFormat( obj->frameFormat (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTFRAMEFORMAT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTEXTFRAMEFORMAT" );
+  }
 }
 
 
@@ -198,7 +200,8 @@ HB_FUNC_STATIC( QTEXTFRAME_LASTCURSORPOSITION )
   if( obj )
   {
     QTextCursor * ptr = new QTextCursor( obj->lastCursorPosition (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
+  }
 }
 
 
@@ -225,7 +228,8 @@ HB_FUNC_STATIC( QTEXTFRAME_PARENTFRAME )
   if( obj )
   {
     QTextFrame * ptr = obj->parentFrame (  );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTFRAME" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTEXTFRAME" );
+  }
 }
 
 

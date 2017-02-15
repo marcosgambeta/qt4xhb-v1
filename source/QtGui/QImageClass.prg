@@ -476,7 +476,8 @@ HB_FUNC_STATIC( QIMAGE_CONVERTTOFORMAT1 )
     int par1 = hb_parni(1);
     int par2 = ISNIL(2)? (int) Qt::AutoColor : hb_parni(2);
     QImage * ptr = new QImage( obj->convertToFormat (  (QImage::Format) par1,  (Qt::ImageConversionFlags) par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );
+  }
 }
 
 
@@ -501,7 +502,8 @@ par2 << temp2;
 }
     int par3 = ISNIL(3)? (int) Qt::AutoColor : hb_parni(3);
     QImage * ptr = new QImage( obj->convertToFormat (  (QImage::Format) par1, par2,  (Qt::ImageConversionFlags) par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );
+  }
 }
 
 

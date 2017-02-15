@@ -182,7 +182,8 @@ HB_FUNC_STATIC( QTOOLBAR_ACTIONAT1 )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     QAction * ptr = obj->actionAt ( par1, par2 );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );  }
+    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+  }
 }
 
 
@@ -196,7 +197,8 @@ HB_FUNC_STATIC( QTOOLBAR_ACTIONAT2 )
   {
     QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QAction * ptr = obj->actionAt ( *par1 );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );  }
+    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+  }
 }
 
 
@@ -240,7 +242,8 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION2 )
   {
     QString par1 = hb_parc(1);
     QAction * ptr = obj->addAction ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );  }
+    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+  }
 }
 
 
@@ -255,7 +258,8 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION3 )
     QIcon par1 = ISOBJECT(1)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(1));
     QString par2 = hb_parc(2);
     QAction * ptr = obj->addAction ( par1, par2 );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );  }
+    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+  }
 }
 
 
@@ -271,7 +275,8 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION4 )
     const QObject * par2 = (const QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     const char * par3 = hb_parc(3);
     QAction * ptr = obj->addAction ( par1, par2,  (const char *) par3 );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );  }
+    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+  }
 }
 
 
@@ -288,7 +293,8 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION5 )
     const QObject * par3 = (const QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     const char * par4 = hb_parc(4);
     QAction * ptr = obj->addAction ( par1, par2, par3,  (const char *) par4 );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );  }
+    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+  }
 }
 
 
@@ -331,7 +337,8 @@ HB_FUNC_STATIC( QTOOLBAR_ADDSEPARATOR )
   if( obj )
   {
     QAction * ptr = obj->addSeparator (  );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );  }
+    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+  }
 }
 
 
@@ -345,7 +352,8 @@ HB_FUNC_STATIC( QTOOLBAR_ADDWIDGET )
   {
     QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QAction * ptr = obj->addWidget ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );  }
+    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+  }
 }
 
 
@@ -386,7 +394,8 @@ HB_FUNC_STATIC( QTOOLBAR_ICONSIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->iconSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 
@@ -400,7 +409,8 @@ HB_FUNC_STATIC( QTOOLBAR_INSERTSEPARATOR )
   {
     QAction * par1 = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QAction * ptr = obj->insertSeparator ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );  }
+    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+  }
 }
 
 
@@ -415,7 +425,8 @@ HB_FUNC_STATIC( QTOOLBAR_INSERTWIDGET )
     QAction * par1 = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QWidget * par2 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     QAction * ptr = obj->insertWidget ( par1, par2 );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );  }
+    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+  }
 }
 
 
@@ -559,7 +570,8 @@ HB_FUNC_STATIC( QTOOLBAR_TOGGLEVIEWACTION )
   if( obj )
   {
     QAction * ptr = obj->toggleViewAction (  );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );  }
+    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+  }
 }
 
 
@@ -587,7 +599,8 @@ HB_FUNC_STATIC( QTOOLBAR_WIDGETFORACTION )
   {
     QAction * par1 = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QWidget * ptr = obj->widgetForAction ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );  }
+    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  }
 }
 
 

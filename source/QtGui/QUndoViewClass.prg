@@ -171,7 +171,8 @@ HB_FUNC_STATIC( QUNDOVIEW_CLEANICON )
   if( obj )
   {
     QIcon * ptr = new QIcon( obj->cleanIcon (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QICON", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QICON", true );
+  }
 }
 
 
@@ -198,7 +199,8 @@ HB_FUNC_STATIC( QUNDOVIEW_GROUP )
   if( obj )
   {
     QUndoGroup * ptr = obj->group (  );
-    _qt4xhb_createReturnClass ( ptr, "QUNDOGROUP" );  }
+    _qt4xhb_createReturnClass ( ptr, "QUNDOGROUP" );
+  }
 }
 
 
@@ -241,7 +243,8 @@ HB_FUNC_STATIC( QUNDOVIEW_STACK )
   if( obj )
   {
     QUndoStack * ptr = obj->stack (  );
-    _qt4xhb_createReturnClass ( ptr, "QUNDOSTACK" );  }
+    _qt4xhb_createReturnClass ( ptr, "QUNDOSTACK" );
+  }
 }
 
 

@@ -363,7 +363,8 @@ HB_FUNC_STATIC( QPAINTENGINE_PAINTDEVICE )
   if( obj )
   {
     QPaintDevice * ptr = obj->paintDevice (  );
-    _qt4xhb_createReturnClass ( ptr, "QPAINTDEVICE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QPAINTDEVICE" );
+  }
 }
 
 
@@ -376,7 +377,8 @@ HB_FUNC_STATIC( QPAINTENGINE_PAINTER )
   if( obj )
   {
     QPainter * ptr = obj->painter (  );
-    _qt4xhb_createReturnClass ( ptr, "QPAINTER" );  }
+    _qt4xhb_createReturnClass ( ptr, "QPAINTER" );
+  }
 }
 
 

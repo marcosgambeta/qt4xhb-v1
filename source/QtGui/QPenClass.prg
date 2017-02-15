@@ -281,7 +281,8 @@ HB_FUNC_STATIC( QPEN_BRUSH )
   if( obj )
   {
     QBrush * ptr = new QBrush( obj->brush (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
+  }
 }
 
 
@@ -308,7 +309,8 @@ HB_FUNC_STATIC( QPEN_COLOR )
   if( obj )
   {
     QColor * ptr = new QColor( obj->color (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
+  }
 }
 
 

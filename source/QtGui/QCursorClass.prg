@@ -276,7 +276,8 @@ HB_FUNC_STATIC( QCURSOR_BITMAP )
   if( obj )
   {
     const QBitmap * ptr = obj->bitmap (  );
-    _qt4xhb_createReturnClass ( ptr, "QBITMAP" );  }
+    _qt4xhb_createReturnClass ( ptr, "QBITMAP" );
+  }
 }
 
 
@@ -290,7 +291,8 @@ HB_FUNC_STATIC( QCURSOR_HOTSPOT )
   if( obj )
   {
     QPoint * ptr = new QPoint( obj->hotSpot (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+  }
 }
 
 
@@ -303,7 +305,8 @@ HB_FUNC_STATIC( QCURSOR_MASK )
   if( obj )
   {
     const QBitmap * ptr = obj->mask (  );
-    _qt4xhb_createReturnClass ( ptr, "QBITMAP" );  }
+    _qt4xhb_createReturnClass ( ptr, "QBITMAP" );
+  }
 }
 
 
@@ -316,7 +319,8 @@ HB_FUNC_STATIC( QCURSOR_PIXMAP )
   if( obj )
   {
     QPixmap * ptr = new QPixmap( obj->pixmap (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
+  }
 }
 
 
@@ -356,7 +360,8 @@ QPoint pos ()
 HB_FUNC_STATIC( QCURSOR_POS )
 {
   QPoint * ptr = new QPoint( QCursor::pos (  ) );
-  _qt4xhb_createReturnClass ( ptr, "QPOINT", true );}
+  _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+}
 
 
 /*

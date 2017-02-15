@@ -251,7 +251,8 @@ HB_FUNC_STATIC( QCOMBOBOX_COMPLETER )
   if( obj )
   {
     QCompleter * ptr = obj->completer (  );
-    _qt4xhb_createReturnClass ( ptr, "QCOMPLETER" );  }
+    _qt4xhb_createReturnClass ( ptr, "QCOMPLETER" );
+  }
 }
 
 
@@ -383,7 +384,8 @@ HB_FUNC_STATIC( QCOMBOBOX_ICONSIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->iconSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 
@@ -515,7 +517,8 @@ HB_FUNC_STATIC( QCOMBOBOX_ITEMDATA )
     int par1 = hb_parni(1);
     int par2 = ISNIL(2)? Qt::UserRole : hb_parni(2);
     QVariant * ptr = new QVariant( obj->itemData ( par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+  }
 }
 
 
@@ -528,7 +531,8 @@ HB_FUNC_STATIC( QCOMBOBOX_ITEMDELEGATE )
   if( obj )
   {
     QAbstractItemDelegate * ptr = obj->itemDelegate (  );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTITEMDELEGATE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QABSTRACTITEMDELEGATE" );
+  }
 }
 
 
@@ -542,7 +546,8 @@ HB_FUNC_STATIC( QCOMBOBOX_ITEMICON )
   {
     int par1 = hb_parni(1);
     QIcon * ptr = new QIcon( obj->itemIcon ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QICON", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QICON", true );
+  }
 }
 
 
@@ -570,7 +575,8 @@ HB_FUNC_STATIC( QCOMBOBOX_LINEEDIT )
   if( obj )
   {
     QLineEdit * ptr = obj->lineEdit (  );
-    _qt4xhb_createReturnClass ( ptr, "QLINEEDIT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QLINEEDIT" );
+  }
 }
 
 
@@ -625,7 +631,8 @@ HB_FUNC_STATIC( QCOMBOBOX_MODEL )
   if( obj )
   {
     QAbstractItemModel * ptr = obj->model (  );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTITEMMODEL" );  }
+    _qt4xhb_createReturnClass ( ptr, "QABSTRACTITEMMODEL" );
+  }
 }
 
 
@@ -667,7 +674,8 @@ HB_FUNC_STATIC( QCOMBOBOX_ROOTMODELINDEX )
   if( obj )
   {
     QModelIndex * ptr = new QModelIndex( obj->rootModelIndex (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+  }
 }
 
 
@@ -1012,7 +1020,8 @@ HB_FUNC_STATIC( QCOMBOBOX_VALIDATOR )
   if( obj )
   {
     const QValidator * ptr = obj->validator (  );
-    _qt4xhb_createReturnClass ( ptr, "QVALIDATOR" );  }
+    _qt4xhb_createReturnClass ( ptr, "QVALIDATOR" );
+  }
 }
 
 
@@ -1025,7 +1034,8 @@ HB_FUNC_STATIC( QCOMBOBOX_VIEW )
   if( obj )
   {
     QAbstractItemView * ptr = obj->view (  );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTITEMVIEW" );  }
+    _qt4xhb_createReturnClass ( ptr, "QABSTRACTITEMVIEW" );
+  }
 }
 
 
@@ -1053,7 +1063,8 @@ HB_FUNC_STATIC( QCOMBOBOX_MINIMUMSIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 
@@ -1066,7 +1077,8 @@ HB_FUNC_STATIC( QCOMBOBOX_SIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 

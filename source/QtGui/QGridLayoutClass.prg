@@ -306,7 +306,8 @@ HB_FUNC_STATIC( QGRIDLAYOUT_CELLRECT )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     QRect * ptr = new QRect( obj->cellRect ( par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+  }
 }
 
 
@@ -402,7 +403,8 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ITEMATPOSITION )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     QLayoutItem * ptr = obj->itemAtPosition ( par1, par2 );
-    _qt4xhb_createReturnClass ( ptr, "QLAYOUTITEM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
+  }
 }
 
 
@@ -697,7 +699,8 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ITEMAT )
   {
     int par1 = hb_parni(1);
     QLayoutItem * ptr = obj->itemAt ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QLAYOUTITEM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
+  }
 }
 
 
@@ -710,7 +713,8 @@ HB_FUNC_STATIC( QGRIDLAYOUT_MAXIMUMSIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->maximumSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 
@@ -738,7 +742,8 @@ HB_FUNC_STATIC( QGRIDLAYOUT_MINIMUMSIZE )
   if( obj )
   {
     QSize * ptr = new QSize( obj->minimumSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 
@@ -766,7 +771,8 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SIZEHINT )
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+  }
 }
 
 
@@ -780,7 +786,8 @@ HB_FUNC_STATIC( QGRIDLAYOUT_TAKEAT )
   {
     int par1 = hb_parni(1);
     QLayoutItem * ptr = obj->takeAt ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QLAYOUTITEM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
+  }
 }
 
 

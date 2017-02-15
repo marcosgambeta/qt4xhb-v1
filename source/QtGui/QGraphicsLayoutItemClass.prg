@@ -127,7 +127,8 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_CONTENTSRECT )
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->contentsRect (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+  }
 }
 
 
@@ -142,7 +143,8 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_EFFECTIVESIZEHINT )
     int par1 = hb_parni(1);
     QSizeF par2 = ISNIL(2)? QSizeF() : *(QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     QSizeF * ptr = new QSizeF( obj->effectiveSizeHint (  (Qt::SizeHint) par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
+  }
 }
 
 
@@ -155,7 +157,8 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_GEOMETRY )
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->geometry (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+  }
 }
 
 
@@ -190,7 +193,8 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_GRAPHICSITEM )
   if( obj )
   {
     QGraphicsItem * ptr = obj->graphicsItem (  );
-    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSITEM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSITEM" );
+  }
 }
 
 
@@ -231,7 +235,8 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MAXIMUMSIZE )
   if( obj )
   {
     QSizeF * ptr = new QSizeF( obj->maximumSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
+  }
 }
 
 
@@ -272,7 +277,8 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MINIMUMSIZE )
   if( obj )
   {
     QSizeF * ptr = new QSizeF( obj->minimumSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
+  }
 }
 
 
@@ -313,7 +319,8 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_PARENTLAYOUTITEM )
   if( obj )
   {
     QGraphicsLayoutItem * ptr = obj->parentLayoutItem (  );
-    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSLAYOUTITEM" );  }
+    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSLAYOUTITEM" );
+  }
 }
 
 
@@ -340,7 +347,8 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_PREFERREDSIZE )
   if( obj )
   {
     QSizeF * ptr = new QSizeF( obj->preferredSize (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
+  }
 }
 
 
@@ -666,7 +674,8 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SIZEPOLICY )
   if( obj )
   {
     QSizePolicy * ptr = new QSizePolicy( obj->sizePolicy (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZEPOLICY", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZEPOLICY", true );
+  }
 }
 
 

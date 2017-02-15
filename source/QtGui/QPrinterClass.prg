@@ -446,7 +446,8 @@ HB_FUNC_STATIC( QPRINTER_PAGERECT1 )
   if( obj )
   {
     QRect * ptr = new QRect( obj->pageRect (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+  }
 }
 
 
@@ -460,7 +461,8 @@ HB_FUNC_STATIC( QPRINTER_PAGERECT2 )
   {
     int par1 = hb_parni(1);
     QRectF * ptr = new QRectF( obj->pageRect (  (QPrinter::Unit) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+  }
 }
 
 
@@ -488,7 +490,8 @@ HB_FUNC_STATIC( QPRINTER_PAPERRECT1 )
   if( obj )
   {
     QRect * ptr = new QRect( obj->paperRect (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+  }
 }
 
 
@@ -502,7 +505,8 @@ HB_FUNC_STATIC( QPRINTER_PAPERRECT2 )
   {
     int par1 = hb_parni(1);
     QRectF * ptr = new QRectF( obj->paperRect (  (QPrinter::Unit) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
+  }
 }
 
 
@@ -545,7 +549,8 @@ HB_FUNC_STATIC( QPRINTER_PAPERSIZE2 )
   {
     int par1 = hb_parni(1);
     QSizeF * ptr = new QSizeF( obj->paperSize (  (QPrinter::Unit) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
+  }
 }
 
 
@@ -587,7 +592,8 @@ HB_FUNC_STATIC( QPRINTER_PRINTENGINE )
   if( obj )
   {
     QPrintEngine * ptr = obj->printEngine (  );
-    _qt4xhb_createReturnClass ( ptr, "QPRINTENGINE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QPRINTENGINE" );
+  }
 }
 
 
@@ -1126,7 +1132,8 @@ HB_FUNC_STATIC( QPRINTER_PAINTENGINE )
   if( obj )
   {
     QPaintEngine * ptr = obj->paintEngine (  );
-    _qt4xhb_createReturnClass ( ptr, "QPAINTENGINE" );  }
+    _qt4xhb_createReturnClass ( ptr, "QPAINTENGINE" );
+  }
 }
 
 

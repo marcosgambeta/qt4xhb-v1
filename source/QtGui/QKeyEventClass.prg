@@ -249,7 +249,8 @@ HB_FUNC_STATIC( QKEYEVENT_CREATEEXTENDEDKEYEVENT )
   bool par8 = ISNIL(8)? false : hb_parl(8);
   ushort par9 = ISNIL(9)? 1 : hb_parni(9);
   QKeyEvent * ptr = QKeyEvent::createExtendedKeyEvent (  (QEvent::Type) par1, par2,  (Qt::KeyboardModifiers) par3, par4, par5, par6, par7, par8, par9 );
-  _qt4xhb_createReturnClass ( ptr, "QKEYEVENT" );}
+  _qt4xhb_createReturnClass ( ptr, "QKEYEVENT" );
+}
 
 
 

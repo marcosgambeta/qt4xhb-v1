@@ -124,7 +124,8 @@ HB_FUNC_STATIC( QWHATSTHIS_CREATEACTION )
 {
   QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QAction * ptr = QWhatsThis::createAction ( par1 );
-  _qt4xhb_createReturnClass ( ptr, "QACTION" );}
+  _qt4xhb_createReturnClass ( ptr, "QACTION" );
+}
 
 
 /*

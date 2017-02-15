@@ -156,7 +156,8 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_CONTEXTMENU )
   if( obj )
   {
     QMenu * ptr = obj->contextMenu (  );
-    _qt4xhb_createReturnClass ( ptr, "QMENU" );  }
+    _qt4xhb_createReturnClass ( ptr, "QMENU" );
+  }
 }
 
 
@@ -169,7 +170,8 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_GEOMETRY )
   if( obj )
   {
     QRect * ptr = new QRect( obj->geometry (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+  }
 }
 
 

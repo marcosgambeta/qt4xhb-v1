@@ -178,7 +178,8 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_CURRENTINDEX )
   if( obj )
   {
     QModelIndex * ptr = new QModelIndex( obj->currentIndex (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+  }
 }
 
 
@@ -252,7 +253,8 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_MODEL )
   if( obj )
   {
     const QAbstractItemModel * ptr = obj->model (  );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTITEMMODEL" );  }
+    _qt4xhb_createReturnClass ( ptr, "QABSTRACTITEMMODEL" );
+  }
 }
 
 

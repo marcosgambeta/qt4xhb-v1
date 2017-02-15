@@ -308,7 +308,8 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_FROMHTML1 )
 {
   QString par1 = hb_parc(1);
   QTextDocumentFragment * ptr = new QTextDocumentFragment( QTextDocumentFragment::fromHtml ( par1 ) );
-  _qt4xhb_createReturnClass ( ptr, "QTEXTDOCUMENTFRAGMENT", true );}
+  _qt4xhb_createReturnClass ( ptr, "QTEXTDOCUMENTFRAGMENT", true );
+}
 
 
 /*
@@ -319,7 +320,8 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_FROMHTML2 )
   QString par1 = hb_parc(1);
   const QTextDocument * par2 = (const QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
   QTextDocumentFragment * ptr = new QTextDocumentFragment( QTextDocumentFragment::fromHtml ( par1, par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QTEXTDOCUMENTFRAGMENT", true );}
+  _qt4xhb_createReturnClass ( ptr, "QTEXTDOCUMENTFRAGMENT", true );
+}
 
 
 //[1]QTextDocumentFragment fromHtml ( const QString & text )
@@ -344,7 +346,8 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_FROMPLAINTEXT )
 {
   QString par1 = hb_parc(1);
   QTextDocumentFragment * ptr = new QTextDocumentFragment( QTextDocumentFragment::fromPlainText ( par1 ) );
-  _qt4xhb_createReturnClass ( ptr, "QTEXTDOCUMENTFRAGMENT", true );}
+  _qt4xhb_createReturnClass ( ptr, "QTEXTDOCUMENTFRAGMENT", true );
+}
 
 
 

@@ -214,7 +214,8 @@ HB_FUNC_STATIC( QTEXTTABLECELL_FIRSTCURSORPOSITION )
   if( obj )
   {
     QTextCursor * ptr = new QTextCursor( obj->firstCursorPosition (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
+  }
 }
 
 
@@ -227,7 +228,8 @@ HB_FUNC_STATIC( QTEXTTABLECELL_FORMAT )
   if( obj )
   {
     QTextCharFormat * ptr = new QTextCharFormat( obj->format (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT" );  }
+    _qt4xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT" );
+  }
 }
 
 
@@ -254,7 +256,8 @@ HB_FUNC_STATIC( QTEXTTABLECELL_LASTCURSORPOSITION )
   if( obj )
   {
     QTextCursor * ptr = new QTextCursor( obj->lastCursorPosition (  ) );
-    _qt4xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
+  }
 }
 
 

@@ -239,7 +239,8 @@ HB_FUNC_STATIC( QBITMAP_TRANSFORMED )
   {
     QTransform * par1 = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QBitmap * ptr = new QBitmap( obj->transformed ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QBITMAP", true );  }
+    _qt4xhb_createReturnClass ( ptr, "QBITMAP", true );
+  }
 }
 
 
@@ -253,7 +254,8 @@ HB_FUNC_STATIC( QBITMAP_FROMDATA )
   const uchar * par2 = (const uchar *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par3 = ISNIL(3)? (int) QImage::Format_MonoLSB : hb_parni(3);
   QBitmap * ptr = new QBitmap( QBitmap::fromData ( *par1, par2,  (QImage::Format) par3 ) );
-  _qt4xhb_createReturnClass ( ptr, "QBITMAP", true );}
+  _qt4xhb_createReturnClass ( ptr, "QBITMAP", true );
+}
 
 
 /*
@@ -264,7 +266,8 @@ HB_FUNC_STATIC( QBITMAP_FROMIMAGE )
   QImage * par1 = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = ISNIL(2)? (int) Qt::AutoColor : hb_parni(2);
   QBitmap * ptr = new QBitmap( QBitmap::fromImage ( *par1,  (Qt::ImageConversionFlags) par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QBITMAP", true );}
+  _qt4xhb_createReturnClass ( ptr, "QBITMAP", true );
+}
 
 
 
