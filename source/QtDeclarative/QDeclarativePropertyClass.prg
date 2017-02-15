@@ -329,8 +329,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_CONNECTNOTIFYSIGNAL1 )
   {
     QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     const char * par2 = hb_parc(2);
-    bool b = obj->connectNotifySignal ( par1,  (const char *) par2 );
-    hb_retl( b );
+    hb_retl( obj->connectNotifySignal ( par1,  (const char *) par2 ) );
   }
 }
 
@@ -345,8 +344,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_CONNECTNOTIFYSIGNAL2 )
   {
     QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
-    bool b = obj->connectNotifySignal ( par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->connectNotifySignal ( par1, par2 ) );
   }
 }
 
@@ -374,8 +372,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_HASNOTIFYSIGNAL )
   QDeclarativeProperty * obj = (QDeclarativeProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasNotifySignal (  );
-    hb_retl( b );
+    hb_retl( obj->hasNotifySignal (  ) );
   }
 }
 
@@ -402,8 +399,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_ISDESIGNABLE )
   QDeclarativeProperty * obj = (QDeclarativeProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isDesignable (  );
-    hb_retl( b );
+    hb_retl( obj->isDesignable (  ) );
   }
 }
 
@@ -416,8 +412,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_ISPROPERTY )
   QDeclarativeProperty * obj = (QDeclarativeProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isProperty (  );
-    hb_retl( b );
+    hb_retl( obj->isProperty (  ) );
   }
 }
 
@@ -430,8 +425,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_ISRESETTABLE )
   QDeclarativeProperty * obj = (QDeclarativeProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isResettable (  );
-    hb_retl( b );
+    hb_retl( obj->isResettable (  ) );
   }
 }
 
@@ -444,8 +438,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_ISSIGNALPROPERTY )
   QDeclarativeProperty * obj = (QDeclarativeProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isSignalProperty (  );
-    hb_retl( b );
+    hb_retl( obj->isSignalProperty (  ) );
   }
 }
 
@@ -458,8 +451,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_ISVALID )
   QDeclarativeProperty * obj = (QDeclarativeProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isValid (  );
-    hb_retl( b );
+    hb_retl( obj->isValid (  ) );
   }
 }
 
@@ -472,8 +464,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_ISWRITABLE )
   QDeclarativeProperty * obj = (QDeclarativeProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isWritable (  );
-    hb_retl( b );
+    hb_retl( obj->isWritable (  ) );
   }
 }
 
@@ -514,8 +505,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEEDSNOTIFYSIGNAL )
   QDeclarativeProperty * obj = (QDeclarativeProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->needsNotifySignal (  );
-    hb_retl( b );
+    hb_retl( obj->needsNotifySignal (  ) );
   }
 }
 
@@ -612,8 +602,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_RESET )
   QDeclarativeProperty * obj = (QDeclarativeProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->reset (  );
-    hb_retl( b );
+    hb_retl( obj->reset (  ) );
   }
 }
 
@@ -641,8 +630,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_WRITE1 )
   if( obj )
   {
     QVariant * par1 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->write ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->write ( *par1 ) );
   }
 }
 
@@ -719,8 +707,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_WRITE2 )
   QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QString par2 = hb_parc(2);
   QVariant * par3 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  bool b = QDeclarativeProperty::write ( par1, par2, *par3 );
-  hb_retl( b );
+  hb_retl( QDeclarativeProperty::write ( par1, par2, *par3 ) );
 }
 
 
@@ -733,8 +720,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_WRITE3 )
   QString par2 = hb_parc(2);
   QVariant * par3 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
   QDeclarativeContext * par4 = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-  bool b = QDeclarativeProperty::write ( par1, par2, *par3, par4 );
-  hb_retl( b );
+  hb_retl( QDeclarativeProperty::write ( par1, par2, *par3, par4 ) );
 }
 
 
@@ -747,8 +733,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_WRITE4 )
   QString par2 = hb_parc(2);
   QVariant * par3 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
   QDeclarativeEngine * par4 = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-  bool b = QDeclarativeProperty::write ( par1, par2, *par3, par4 );
-  hb_retl( b );
+  hb_retl( QDeclarativeProperty::write ( par1, par2, *par3, par4 ) );
 }
 
 

@@ -179,8 +179,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_FLUSH )
   QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->flush (  );
-    hb_retl( b );
+    hb_retl( obj->flush (  ) );
   }
 }
 
@@ -207,8 +206,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_ISVALID )
   QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isValid (  );
-    hb_retl( b );
+    hb_retl( obj->isValid (  ) );
   }
 }
 
@@ -281,8 +279,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_WAITFORCONNECTED )
   if( obj )
   {
     int par1 = ISNIL(1)? 30000 : hb_parni(1);
-    bool b = obj->waitForConnected ( par1 );
-    hb_retl( b );
+    hb_retl( obj->waitForConnected ( par1 ) );
   }
 }
 
@@ -296,8 +293,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_WAITFORDISCONNECTED )
   if( obj )
   {
     int par1 = ISNIL(1)? 30000 : hb_parni(1);
-    bool b = obj->waitForDisconnected ( par1 );
-    hb_retl( b );
+    hb_retl( obj->waitForDisconnected ( par1 ) );
   }
 }
 
@@ -338,8 +334,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_CANREADLINE )
   QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->canReadLine (  );
-    hb_retl( b );
+    hb_retl( obj->canReadLine (  ) );
   }
 }
 
@@ -366,8 +361,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_ISSEQUENTIAL )
   QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isSequential (  );
-    hb_retl( b );
+    hb_retl( obj->isSequential (  ) );
   }
 }
 
@@ -381,8 +375,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_WAITFORBYTESWRITTEN )
   if( obj )
   {
     int par1 = ISNIL(1)? 30000 : hb_parni(1);
-    bool b = obj->waitForBytesWritten ( par1 );
-    hb_retl( b );
+    hb_retl( obj->waitForBytesWritten ( par1 ) );
   }
 }
 
@@ -396,8 +389,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_WAITFORREADYREAD )
   if( obj )
   {
     int par1 = ISNIL(1)? 30000 : hb_parni(1);
-    bool b = obj->waitForReadyRead ( par1 );
-    hb_retl( b );
+    hb_retl( obj->waitForReadyRead ( par1 ) );
   }
 }
 

@@ -292,8 +292,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_ISROAMINGAVAILABLE )
   QNetworkConfiguration * obj = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isRoamingAvailable (  );
-    hb_retl( b );
+    hb_retl( obj->isRoamingAvailable (  ) );
   }
 }
 
@@ -306,8 +305,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_ISVALID )
   QNetworkConfiguration * obj = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isValid (  );
-    hb_retl( b );
+    hb_retl( obj->isValid (  ) );
   }
 }
 

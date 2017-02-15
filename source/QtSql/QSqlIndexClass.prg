@@ -212,8 +212,7 @@ HB_FUNC_STATIC( QSQLINDEX_ISDESCENDING )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->isDescending ( par1 );
-    hb_retl( b );
+    hb_retl( obj->isDescending ( par1 ) );
   }
 }
 

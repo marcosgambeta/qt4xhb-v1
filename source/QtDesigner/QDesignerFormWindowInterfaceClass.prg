@@ -314,8 +314,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_HASFEATURE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->hasFeature (  (QDesignerFormWindowInterface::Feature) par1 );
-    hb_retl( b );
+    hb_retl( obj->hasFeature (  (QDesignerFormWindowInterface::Feature) par1 ) );
   }
 }
 
@@ -351,8 +350,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_ISDIRTY )
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isDirty (  );
-    hb_retl( b );
+    hb_retl( obj->isDirty (  ) );
   }
 }
 
@@ -366,8 +364,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_ISMANAGED )
   if( obj )
   {
     QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->isManaged ( par1 );
-    hb_retl( b );
+    hb_retl( obj->isManaged ( par1 ) );
   }
 }
 

@@ -238,8 +238,7 @@ HB_FUNC_STATIC( QSQLDATABASE_COMMIT )
   QSqlDatabase * obj = (QSqlDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->commit (  );
-    hb_retl( b );
+    hb_retl( obj->commit (  ) );
   }
 }
 
@@ -351,8 +350,7 @@ HB_FUNC_STATIC( QSQLDATABASE_ISOPEN )
   QSqlDatabase * obj = (QSqlDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isOpen (  );
-    hb_retl( b );
+    hb_retl( obj->isOpen (  ) );
   }
 }
 
@@ -365,8 +363,7 @@ HB_FUNC_STATIC( QSQLDATABASE_ISOPENERROR )
   QSqlDatabase * obj = (QSqlDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isOpenError (  );
-    hb_retl( b );
+    hb_retl( obj->isOpenError (  ) );
   }
 }
 
@@ -379,8 +376,7 @@ HB_FUNC_STATIC( QSQLDATABASE_ISVALID )
   QSqlDatabase * obj = (QSqlDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isValid (  );
-    hb_retl( b );
+    hb_retl( obj->isValid (  ) );
   }
 }
 
@@ -421,8 +417,7 @@ HB_FUNC_STATIC( QSQLDATABASE_OPEN1 )
   QSqlDatabase * obj = (QSqlDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->open (  );
-    hb_retl( b );
+    hb_retl( obj->open (  ) );
   }
 }
 
@@ -437,8 +432,7 @@ HB_FUNC_STATIC( QSQLDATABASE_OPEN2 )
   {
     QString par1 = hb_parc(1);
     QString par2 = hb_parc(2);
-    bool b = obj->open ( par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->open ( par1, par2 ) );
   }
 }
 
@@ -524,8 +518,7 @@ HB_FUNC_STATIC( QSQLDATABASE_ROLLBACK )
   QSqlDatabase * obj = (QSqlDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->rollback (  );
-    hb_retl( b );
+    hb_retl( obj->rollback (  ) );
   }
 }
 
@@ -667,8 +660,7 @@ HB_FUNC_STATIC( QSQLDATABASE_TRANSACTION )
   QSqlDatabase * obj = (QSqlDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->transaction (  );
-    hb_retl( b );
+    hb_retl( obj->transaction (  ) );
   }
 }
 
@@ -839,8 +831,7 @@ HB_FUNC_STATIC( QSQLDATABASE_CONTAINS )
   {
     par1 = hb_parc(1);
   }
-  bool b = QSqlDatabase::contains ( par1 );
-  hb_retl( b );
+  hb_retl( QSqlDatabase::contains ( par1 ) );
 }
 
 
@@ -911,8 +902,7 @@ bool isDriverAvailable ( const QString & name )
 HB_FUNC_STATIC( QSQLDATABASE_ISDRIVERAVAILABLE )
 {
   QString par1 = hb_parc(1);
-  bool b = QSqlDatabase::isDriverAvailable ( par1 );
-  hb_retl( b );
+  hb_retl( QSqlDatabase::isDriverAvailable ( par1 ) );
 }
 
 

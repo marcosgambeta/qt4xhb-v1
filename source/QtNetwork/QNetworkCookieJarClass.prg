@@ -159,8 +159,7 @@ for (i1=0;i1<nLen1;i1++)
 par1 << *(QNetworkCookie *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
 }
     QUrl * par2 = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->setCookiesFromUrl ( par1, *par2 );
-    hb_retl( b );
+    hb_retl( obj->setCookiesFromUrl ( par1, *par2 ) );
   }
 }
 

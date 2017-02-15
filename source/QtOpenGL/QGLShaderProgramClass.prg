@@ -220,8 +220,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_ADDSHADER )
   if( obj )
   {
     QGLShader * par1 = (QGLShader *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->addShader ( par1 );
-    hb_retl( b );
+    hb_retl( obj->addShader ( par1 ) );
   }
 }
 
@@ -236,8 +235,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE1 )
   {
     int par1 = hb_parni(1);
     const char * par2 = hb_parc(2);
-    bool b = obj->addShaderFromSourceCode (  (QGLShader::ShaderType) par1,  (const char *) par2 );
-    hb_retl( b );
+    hb_retl( obj->addShaderFromSourceCode (  (QGLShader::ShaderType) par1,  (const char *) par2 ) );
   }
 }
 
@@ -252,8 +250,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE2 )
   {
     int par1 = hb_parni(1);
     QByteArray * par2 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->addShaderFromSourceCode (  (QGLShader::ShaderType) par1, *par2 );
-    hb_retl( b );
+    hb_retl( obj->addShaderFromSourceCode (  (QGLShader::ShaderType) par1, *par2 ) );
   }
 }
 
@@ -268,8 +265,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE3 )
   {
     int par1 = hb_parni(1);
     QString par2 = hb_parc(2);
-    bool b = obj->addShaderFromSourceCode (  (QGLShader::ShaderType) par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->addShaderFromSourceCode (  (QGLShader::ShaderType) par1, par2 ) );
   }
 }
 
@@ -304,8 +300,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_ADDSHADERFROMSOURCEFILE )
   {
     int par1 = hb_parni(1);
     QString par2 = hb_parc(2);
-    bool b = obj->addShaderFromSourceFile (  (QGLShader::ShaderType) par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->addShaderFromSourceFile (  (QGLShader::ShaderType) par1, par2 ) );
   }
 }
 
@@ -383,8 +378,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_BIND )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->bind (  );
-    hb_retl( b );
+    hb_retl( obj->bind (  ) );
   }
 }
 
@@ -597,8 +591,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_ISLINKED )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isLinked (  );
-    hb_retl( b );
+    hb_retl( obj->isLinked (  ) );
   }
 }
 
@@ -611,8 +604,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_LINK )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->link (  );
-    hb_retl( b );
+    hb_retl( obj->link (  ) );
   }
 }
 
@@ -1748,8 +1740,7 @@ bool hasOpenGLShaderPrograms ( const QGLContext * context = 0 )
 HB_FUNC_STATIC( QGLSHADERPROGRAM_HASOPENGLSHADERPROGRAMS )
 {
   const QGLContext * par1 = ISNIL(1)? 0 : (const QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  bool b = QGLShaderProgram::hasOpenGLShaderPrograms ( par1 );
-  hb_retl( b );
+  hb_retl( QGLShaderProgram::hasOpenGLShaderPrograms ( par1 ) );
 }
 
 

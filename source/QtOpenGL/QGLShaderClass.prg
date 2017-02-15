@@ -151,8 +151,7 @@ HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE1 )
   if( obj )
   {
     const char * par1 = hb_parc(1);
-    bool b = obj->compileSourceCode (  (const char *) par1 );
-    hb_retl( b );
+    hb_retl( obj->compileSourceCode (  (const char *) par1 ) );
   }
 }
 
@@ -166,8 +165,7 @@ HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE2 )
   if( obj )
   {
     QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->compileSourceCode ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->compileSourceCode ( *par1 ) );
   }
 }
 
@@ -181,8 +179,7 @@ HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE3 )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    bool b = obj->compileSourceCode ( par1 );
-    hb_retl( b );
+    hb_retl( obj->compileSourceCode ( par1 ) );
   }
 }
 
@@ -216,8 +213,7 @@ HB_FUNC_STATIC( QGLSHADER_COMPILESOURCEFILE )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    bool b = obj->compileSourceFile ( par1 );
-    hb_retl( b );
+    hb_retl( obj->compileSourceFile ( par1 ) );
   }
 }
 
@@ -230,8 +226,7 @@ HB_FUNC_STATIC( QGLSHADER_ISCOMPILED )
   QGLShader * obj = (QGLShader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isCompiled (  );
-    hb_retl( b );
+    hb_retl( obj->isCompiled (  ) );
   }
 }
 
@@ -300,8 +295,7 @@ HB_FUNC_STATIC( QGLSHADER_HASOPENGLSHADERS )
 {
   int par1 = hb_parni(1);
   const QGLContext * par2 = ISNIL(2)? 0 : (const QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  bool b = QGLShader::hasOpenGLShaders (  (QGLShader::ShaderType) par1, par2 );
-  hb_retl( b );
+  hb_retl( QGLShader::hasOpenGLShaders (  (QGLShader::ShaderType) par1, par2 ) );
 }
 
 

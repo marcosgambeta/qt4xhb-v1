@@ -247,8 +247,7 @@ HB_FUNC_STATIC( QGLFORMAT_ACCUM )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->accum (  );
-    hb_retl( b );
+    hb_retl( obj->accum (  ) );
   }
 }
 
@@ -275,8 +274,7 @@ HB_FUNC_STATIC( QGLFORMAT_ALPHA )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->alpha (  );
-    hb_retl( b );
+    hb_retl( obj->alpha (  ) );
   }
 }
 
@@ -317,8 +315,7 @@ HB_FUNC_STATIC( QGLFORMAT_DEPTH )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->depth (  );
-    hb_retl( b );
+    hb_retl( obj->depth (  ) );
   }
 }
 
@@ -345,8 +342,7 @@ HB_FUNC_STATIC( QGLFORMAT_DIRECTRENDERING )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->directRendering (  );
-    hb_retl( b );
+    hb_retl( obj->directRendering (  ) );
   }
 }
 
@@ -359,8 +355,7 @@ HB_FUNC_STATIC( QGLFORMAT_DOUBLEBUFFER )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->doubleBuffer (  );
-    hb_retl( b );
+    hb_retl( obj->doubleBuffer (  ) );
   }
 }
 
@@ -387,8 +382,7 @@ HB_FUNC_STATIC( QGLFORMAT_HASOVERLAY )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasOverlay (  );
-    hb_retl( b );
+    hb_retl( obj->hasOverlay (  ) );
   }
 }
 
@@ -471,8 +465,7 @@ HB_FUNC_STATIC( QGLFORMAT_RGBA )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->rgba (  );
-    hb_retl( b );
+    hb_retl( obj->rgba (  ) );
   }
 }
 
@@ -485,8 +478,7 @@ HB_FUNC_STATIC( QGLFORMAT_SAMPLEBUFFERS )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->sampleBuffers (  );
-    hb_retl( b );
+    hb_retl( obj->sampleBuffers (  ) );
   }
 }
 
@@ -859,8 +851,7 @@ HB_FUNC_STATIC( QGLFORMAT_STENCIL )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->stencil (  );
-    hb_retl( b );
+    hb_retl( obj->stencil (  ) );
   }
 }
 
@@ -887,8 +878,7 @@ HB_FUNC_STATIC( QGLFORMAT_STEREO )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->stereo (  );
-    hb_retl( b );
+    hb_retl( obj->stereo (  ) );
   }
 }
 
@@ -916,8 +906,7 @@ HB_FUNC_STATIC( QGLFORMAT_TESTOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->testOption (  (QGL::FormatOptions) par1 );
-    hb_retl( b );
+    hb_retl( obj->testOption (  (QGL::FormatOptions) par1 ) );
   }
 }
 
@@ -948,8 +937,7 @@ bool hasOpenGL ()
 */
 HB_FUNC_STATIC( QGLFORMAT_HASOPENGL )
 {
-  bool b = QGLFormat::hasOpenGL (  );
-  hb_retl( b );
+  hb_retl( QGLFormat::hasOpenGL (  ) );
 }
 
 
@@ -958,8 +946,7 @@ bool hasOpenGLOverlays ()
 */
 HB_FUNC_STATIC( QGLFORMAT_HASOPENGLOVERLAYS )
 {
-  bool b = QGLFormat::hasOpenGLOverlays (  );
-  hb_retl( b );
+  hb_retl( QGLFormat::hasOpenGLOverlays (  ) );
 }
 
 

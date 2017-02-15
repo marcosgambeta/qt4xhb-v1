@@ -254,8 +254,7 @@ HB_FUNC_STATIC( QGLBUFFER_BIND )
   QGLBuffer * obj = (QGLBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->bind (  );
-    hb_retl( b );
+    hb_retl( obj->bind (  ) );
   }
 }
 
@@ -282,8 +281,7 @@ HB_FUNC_STATIC( QGLBUFFER_CREATE )
   QGLBuffer * obj = (QGLBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->create (  );
-    hb_retl( b );
+    hb_retl( obj->create (  ) );
   }
 }
 
@@ -310,8 +308,7 @@ HB_FUNC_STATIC( QGLBUFFER_ISCREATED )
   QGLBuffer * obj = (QGLBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isCreated (  );
-    hb_retl( b );
+    hb_retl( obj->isCreated (  ) );
   }
 }
 
@@ -342,8 +339,7 @@ HB_FUNC_STATIC( QGLBUFFER_READ )
     int par1 = hb_parni(1);
     void * par2 = (void *) hb_parptr(2);
     int par3 = hb_parni(3);
-    bool b = obj->read ( par1, par2, par3 );
-    hb_retl( b );
+    hb_retl( obj->read ( par1, par2, par3 ) );
   }
 }
 
@@ -413,8 +409,7 @@ HB_FUNC_STATIC( QGLBUFFER_UNMAP )
   QGLBuffer * obj = (QGLBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->unmap (  );
-    hb_retl( b );
+    hb_retl( obj->unmap (  ) );
   }
 }
 

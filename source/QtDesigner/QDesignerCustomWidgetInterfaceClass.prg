@@ -230,8 +230,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_ISCONTAINER )
   QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isContainer (  );
-    hb_retl( b );
+    hb_retl( obj->isContainer (  ) );
   }
 }
 
@@ -244,8 +243,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_ISINITIALIZED )
   QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isInitialized (  );
-    hb_retl( b );
+    hb_retl( obj->isInitialized (  ) );
   }
 }
 

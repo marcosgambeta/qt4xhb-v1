@@ -225,8 +225,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_ISOPEN )
   QNetworkSession * obj = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isOpen (  );
-    hb_retl( b );
+    hb_retl( obj->isOpen (  ) );
   }
 }
 
@@ -285,8 +284,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_WAITFOROPENED )
   if( obj )
   {
     int par1 = ISNIL(1)? 30000 : hb_parni(1);
-    bool b = obj->waitForOpened ( par1 );
-    hb_retl( b );
+    hb_retl( obj->waitForOpened ( par1 ) );
   }
 }
 

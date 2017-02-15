@@ -376,8 +376,7 @@ HB_FUNC_STATIC( QGLWIDGET_DOUBLEBUFFER )
   QGLWidget * obj = (QGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->doubleBuffer (  );
-    hb_retl( b );
+    hb_retl( obj->doubleBuffer (  ) );
   }
 }
 
@@ -468,8 +467,7 @@ HB_FUNC_STATIC( QGLWIDGET_ISSHARING )
   QGLWidget * obj = (QGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isSharing (  );
-    hb_retl( b );
+    hb_retl( obj->isSharing (  ) );
   }
 }
 
@@ -482,8 +480,7 @@ HB_FUNC_STATIC( QGLWIDGET_ISVALID )
   QGLWidget * obj = (QGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isValid (  );
-    hb_retl( b );
+    hb_retl( obj->isValid (  ) );
   }
 }
 

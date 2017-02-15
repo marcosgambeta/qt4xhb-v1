@@ -145,8 +145,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_AUTOSHOWSTANDARDWINDOW )
   QScriptEngineDebugger * obj = (QScriptEngineDebugger *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->autoShowStandardWindow (  );
-    hb_retl( b );
+    hb_retl( obj->autoShowStandardWindow (  ) );
   }
 }
 

@@ -243,8 +243,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_HASERROR )
   QDeclarativeExpression * obj = (QDeclarativeExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasError (  );
-    hb_retl( b );
+    hb_retl( obj->hasError (  ) );
   }
 }
 
@@ -271,8 +270,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NOTIFYONVALUECHANGED )
   QDeclarativeExpression * obj = (QDeclarativeExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->notifyOnValueChanged (  );
-    hb_retl( b );
+    hb_retl( obj->notifyOnValueChanged (  ) );
   }
 }
 

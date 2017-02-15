@@ -202,8 +202,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_ISFORMATSUPPORTED )
   if( obj )
   {
     QAudioFormat * par1 = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->isFormatSupported ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->isFormatSupported ( *par1 ) );
   }
 }
 
@@ -216,8 +215,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_ISNULL )
   QAudioDeviceInfo * obj = (QAudioDeviceInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isNull (  );
-    hb_retl( b );
+    hb_retl( obj->isNull (  ) );
   }
 }
 

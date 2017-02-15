@@ -148,8 +148,7 @@ HB_FUNC_STATIC( QTCPSERVER_HASPENDINGCONNECTIONS )
   QTcpServer * obj = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasPendingConnections (  );
-    hb_retl( b );
+    hb_retl( obj->hasPendingConnections (  ) );
   }
 }
 
@@ -162,8 +161,7 @@ HB_FUNC_STATIC( QTCPSERVER_ISLISTENING )
   QTcpServer * obj = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isListening (  );
-    hb_retl( b );
+    hb_retl( obj->isListening (  ) );
   }
 }
 
@@ -178,8 +176,7 @@ HB_FUNC_STATIC( QTCPSERVER_LISTEN )
   {
     QHostAddress par1 = ISNIL(1)? QHostAddress::Any : *(QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     quint16 par2 = ISNIL(2)? 0 : hb_parni(2);
-    bool b = obj->listen ( par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->listen ( par1, par2 ) );
   }
 }
 
@@ -307,8 +304,7 @@ HB_FUNC_STATIC( QTCPSERVER_SETSOCKETDESCRIPTOR )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->setSocketDescriptor ( par1 );
-    hb_retl( b );
+    hb_retl( obj->setSocketDescriptor ( par1 ) );
   }
 }
 
@@ -337,8 +333,7 @@ HB_FUNC_STATIC( QTCPSERVER_WAITFORNEWCONNECTION )
   {
     int par1 = ISNIL(1)? 0 : hb_parni(1);
     bool par2;
-    bool b = obj->waitForNewConnection ( par1, &par2 );
-    hb_retl( b );
+    hb_retl( obj->waitForNewConnection ( par1, &par2 ) );
     hb_storl( par2, 2 );
   }
 }

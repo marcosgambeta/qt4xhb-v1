@@ -110,8 +110,7 @@ HB_FUNC_STATIC( QUDPSOCKET_BIND1 )
   {
     QHostAddress * par1 = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     quint16 par2 = hb_parni(2);
-    bool b = obj->bind ( *par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->bind ( *par1, par2 ) );
   }
 }
 
@@ -127,8 +126,7 @@ HB_FUNC_STATIC( QUDPSOCKET_BIND2 )
     QHostAddress * par1 = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     quint16 par2 = hb_parni(2);
     int par3 = hb_parni(3);
-    bool b = obj->bind ( *par1, par2,  (QUdpSocket::BindMode) par3 );
-    hb_retl( b );
+    hb_retl( obj->bind ( *par1, par2,  (QUdpSocket::BindMode) par3 ) );
   }
 }
 
@@ -142,8 +140,7 @@ HB_FUNC_STATIC( QUDPSOCKET_BIND3 )
   if( obj )
   {
     quint16 par1 = ISNIL(1)? 0 : hb_parni(1);
-    bool b = obj->bind ( par1 );
-    hb_retl( b );
+    hb_retl( obj->bind ( par1 ) );
   }
 }
 
@@ -158,8 +155,7 @@ HB_FUNC_STATIC( QUDPSOCKET_BIND4 )
   {
     quint16 par1 = hb_parni(1);
     int par2 = hb_parni(2);
-    bool b = obj->bind ( par1,  (QUdpSocket::BindMode) par2 );
-    hb_retl( b );
+    hb_retl( obj->bind ( par1,  (QUdpSocket::BindMode) par2 ) );
   }
 }
 
@@ -197,8 +193,7 @@ HB_FUNC_STATIC( QUDPSOCKET_HASPENDINGDATAGRAMS )
   QUdpSocket * obj = (QUdpSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasPendingDatagrams (  );
-    hb_retl( b );
+    hb_retl( obj->hasPendingDatagrams (  ) );
   }
 }
 

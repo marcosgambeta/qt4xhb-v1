@@ -157,8 +157,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_HASSELECTION )
   QDesignerFormWindowCursorInterface * obj = (QDesignerFormWindowCursorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasSelection (  );
-    hb_retl( b );
+    hb_retl( obj->hasSelection (  ) );
   }
 }
 
@@ -172,8 +171,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_ISWIDGETSELECTED )
   if( obj )
   {
     QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->isWidgetSelected ( par1 );
-    hb_retl( b );
+    hb_retl( obj->isWidgetSelected ( par1 ) );
   }
 }
 
@@ -188,8 +186,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_MOVEPOSITION )
   {
     int par1 = hb_parni(1);
     int par2 = ISNIL(2)? (int) QDesignerFormWindowCursorInterface::MoveAnchor : hb_parni(2);
-    bool b = obj->movePosition (  (QDesignerFormWindowCursorInterface::MoveOperation) par1,  (QDesignerFormWindowCursorInterface::MoveMode) par2 );
-    hb_retl( b );
+    hb_retl( obj->movePosition (  (QDesignerFormWindowCursorInterface::MoveOperation) par1,  (QDesignerFormWindowCursorInterface::MoveMode) par2 ) );
   }
 }
 

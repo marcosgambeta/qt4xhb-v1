@@ -196,8 +196,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_INSERTRECORD )
   {
     int par1 = hb_parni(1);
     QSqlRecord * par2 = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->insertRecord ( par1, *par2 );
-    hb_retl( b );
+    hb_retl( obj->insertRecord ( par1, *par2 ) );
   }
 }
 
@@ -211,8 +210,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ISDIRTY )
   if( obj )
   {
     QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->isDirty ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->isDirty ( *par1 ) );
   }
 }
 
@@ -254,8 +252,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SELECT )
   QSqlTableModel * obj = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->select (  );
-    hb_retl( b );
+    hb_retl( obj->select (  ) );
   }
 }
 
@@ -300,8 +297,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SETRECORD )
   {
     int par1 = hb_parni(1);
     QSqlRecord * par2 = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->setRecord ( par1, *par2 );
-    hb_retl( b );
+    hb_retl( obj->setRecord ( par1, *par2 ) );
   }
 }
 
@@ -424,8 +420,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_INSERTROWS )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->insertRows ( par1, par2, par3 );
-    hb_retl( b );
+    hb_retl( obj->insertRows ( par1, par2, par3 ) );
   }
 }
 
@@ -441,8 +436,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_REMOVECOLUMNS )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->removeColumns ( par1, par2, par3 );
-    hb_retl( b );
+    hb_retl( obj->removeColumns ( par1, par2, par3 ) );
   }
 }
 
@@ -458,8 +452,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_REMOVEROWS )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->removeRows ( par1, par2, par3 );
-    hb_retl( b );
+    hb_retl( obj->removeRows ( par1, par2, par3 ) );
   }
 }
 
@@ -490,8 +483,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SETDATA )
     QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QVariant * par2 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par3 = ISNIL(3)? Qt::EditRole : hb_parni(3);
-    bool b = obj->setData ( *par1, *par2, par3 );
-    hb_retl( b );
+    hb_retl( obj->setData ( *par1, *par2, par3 ) );
   }
 }
 
@@ -548,8 +540,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SUBMIT )
   QSqlTableModel * obj = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->submit (  );
-    hb_retl( b );
+    hb_retl( obj->submit (  ) );
   }
 }
 
@@ -562,8 +553,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SUBMITALL )
   QSqlTableModel * obj = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->submitAll (  );
-    hb_retl( b );
+    hb_retl( obj->submitAll (  ) );
   }
 }
 

@@ -214,8 +214,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ADDCACERTIFICATES1 )
     QString par1 = hb_parc(1);
     int par2 = ISNIL(2)? (int) QSsl::Pem : hb_parni(2);
     int par3 = ISNIL(3)? (int) QRegExp::FixedString : hb_parni(3);
-    bool b = obj->addCaCertificates ( par1,  (QSsl::EncodingFormat) par2,  (QRegExp::PatternSyntax) par3 );
-    hb_retl( b );
+    hb_retl( obj->addCaCertificates ( par1,  (QSsl::EncodingFormat) par2,  (QRegExp::PatternSyntax) par3 ) );
   }
 }
 
@@ -439,8 +438,7 @@ HB_FUNC_STATIC( QSSLSOCKET_FLUSH )
   QSslSocket * obj = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->flush (  );
-    hb_retl( b );
+    hb_retl( obj->flush (  ) );
   }
 }
 
@@ -504,8 +502,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ISENCRYPTED )
   QSslSocket * obj = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isEncrypted (  );
-    hb_retl( b );
+    hb_retl( obj->isEncrypted (  ) );
   }
 }
 
@@ -909,8 +906,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETSOCKETDESCRIPTOR )
     int par1 = hb_parni(1);
     int par2 = ISNIL(2)? (int) QAbstractSocket::ConnectedState : hb_parni(2);
     int par3 = ISNIL(3)? (int) QIODevice::ReadWrite : hb_parni(3);
-    bool b = obj->setSocketDescriptor ( par1,  (QAbstractSocket::SocketState) par2,  (QIODevice::OpenMode) par3 );
-    hb_retl( b );
+    hb_retl( obj->setSocketDescriptor ( par1,  (QAbstractSocket::SocketState) par2,  (QIODevice::OpenMode) par3 ) );
   }
 }
 
@@ -1032,8 +1028,7 @@ HB_FUNC_STATIC( QSSLSOCKET_WAITFORCONNECTED )
   if( obj )
   {
     int par1 = ISNIL(1)? 30000 : hb_parni(1);
-    bool b = obj->waitForConnected ( par1 );
-    hb_retl( b );
+    hb_retl( obj->waitForConnected ( par1 ) );
   }
 }
 
@@ -1047,8 +1042,7 @@ HB_FUNC_STATIC( QSSLSOCKET_WAITFORDISCONNECTED )
   if( obj )
   {
     int par1 = ISNIL(1)? 30000 : hb_parni(1);
-    bool b = obj->waitForDisconnected ( par1 );
-    hb_retl( b );
+    hb_retl( obj->waitForDisconnected ( par1 ) );
   }
 }
 
@@ -1062,8 +1056,7 @@ HB_FUNC_STATIC( QSSLSOCKET_WAITFORENCRYPTED )
   if( obj )
   {
     int par1 = ISNIL(1)? 30000 : hb_parni(1);
-    bool b = obj->waitForEncrypted ( par1 );
-    hb_retl( b );
+    hb_retl( obj->waitForEncrypted ( par1 ) );
   }
 }
 
@@ -1076,8 +1069,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ATEND )
   QSslSocket * obj = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->atEnd (  );
-    hb_retl( b );
+    hb_retl( obj->atEnd (  ) );
   }
 }
 
@@ -1118,8 +1110,7 @@ HB_FUNC_STATIC( QSSLSOCKET_CANREADLINE )
   QSslSocket * obj = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->canReadLine (  );
-    hb_retl( b );
+    hb_retl( obj->canReadLine (  ) );
   }
 }
 
@@ -1147,8 +1138,7 @@ HB_FUNC_STATIC( QSSLSOCKET_WAITFORBYTESWRITTEN )
   if( obj )
   {
     int par1 = ISNIL(1)? 30000 : hb_parni(1);
-    bool b = obj->waitForBytesWritten ( par1 );
-    hb_retl( b );
+    hb_retl( obj->waitForBytesWritten ( par1 ) );
   }
 }
 
@@ -1162,8 +1152,7 @@ HB_FUNC_STATIC( QSSLSOCKET_WAITFORREADYREAD )
   if( obj )
   {
     int par1 = ISNIL(1)? 30000 : hb_parni(1);
-    bool b = obj->waitForReadyRead ( par1 );
-    hb_retl( b );
+    hb_retl( obj->waitForReadyRead ( par1 ) );
   }
 }
 
@@ -1217,8 +1206,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ADDDEFAULTCACERTIFICATES1 )
   QString par1 = hb_parc(1);
   int par2 = ISNIL(2)? (int) QSsl::Pem : hb_parni(2);
   int par3 = ISNIL(3)? (int) QRegExp::FixedString : hb_parni(3);
-  bool b = QSslSocket::addDefaultCaCertificates ( par1,  (QSsl::EncodingFormat) par2,  (QRegExp::PatternSyntax) par3 );
-  hb_retl( b );
+  hb_retl( QSslSocket::addDefaultCaCertificates ( par1,  (QSsl::EncodingFormat) par2,  (QRegExp::PatternSyntax) par3 ) );
 }
 
 
@@ -1428,8 +1416,7 @@ bool supportsSsl ()
 */
 HB_FUNC_STATIC( QSSLSOCKET_SUPPORTSSSL )
 {
-  bool b = QSslSocket::supportsSsl (  );
-  hb_retl( b );
+  hb_retl( QSslSocket::supportsSsl (  ) );
 }
 
 

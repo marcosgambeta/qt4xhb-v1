@@ -145,8 +145,7 @@ for (i2=0;i2<nLen2;i2++)
 QString temp = hb_arrayGetCPtr(aStrings2, i2+1);
 par2 << temp;
 }
-    bool b = obj->addCustomFilter ( par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->addCustomFilter ( par1, par2 ) );
   }
 }
 
@@ -159,8 +158,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_AUTOSAVEFILTER )
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->autoSaveFilter (  );
-    hb_retl( b );
+    hb_retl( obj->autoSaveFilter (  ) );
   }
 }
 
@@ -188,8 +186,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_COPYCOLLECTIONFILE )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    bool b = obj->copyCollectionFile ( par1 );
-    hb_retl( b );
+    hb_retl( obj->copyCollectionFile ( par1 ) );
   }
 }
 
@@ -438,8 +435,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_REGISTERDOCUMENTATION )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    bool b = obj->registerDocumentation ( par1 );
-    hb_retl( b );
+    hb_retl( obj->registerDocumentation ( par1 ) );
   }
 }
 
@@ -476,8 +472,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_REMOVECUSTOMFILTER )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    bool b = obj->removeCustomFilter ( par1 );
-    hb_retl( b );
+    hb_retl( obj->removeCustomFilter ( par1 ) );
   }
 }
 
@@ -491,8 +486,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_REMOVECUSTOMVALUE )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    bool b = obj->removeCustomValue ( par1 );
-    hb_retl( b );
+    hb_retl( obj->removeCustomValue ( par1 ) );
   }
 }
 
@@ -552,8 +546,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_SETCUSTOMVALUE )
   {
     QString par1 = hb_parc(1);
     QVariant * par2 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->setCustomValue ( par1, *par2 );
-    hb_retl( b );
+    hb_retl( obj->setCustomValue ( par1, *par2 ) );
   }
 }
 
@@ -566,8 +559,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_SETUPDATA )
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->setupData (  );
-    hb_retl( b );
+    hb_retl( obj->setupData (  ) );
   }
 }
 
@@ -581,8 +573,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_UNREGISTERDOCUMENTATION )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    bool b = obj->unregisterDocumentation ( par1 );
-    hb_retl( b );
+    hb_retl( obj->unregisterDocumentation ( par1 ) );
   }
 }
 

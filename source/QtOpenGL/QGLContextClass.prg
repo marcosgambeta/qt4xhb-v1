@@ -279,8 +279,7 @@ HB_FUNC_STATIC( QGLCONTEXT_CREATE )
   if( obj )
   {
     QGLContext * par1 = ISNIL(1)? 0 : (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->create ( par1 );
-    hb_retl( b );
+    hb_retl( obj->create ( par1 ) );
   }
 }
 
@@ -414,8 +413,7 @@ HB_FUNC_STATIC( QGLCONTEXT_ISSHARING )
   QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isSharing (  );
-    hb_retl( b );
+    hb_retl( obj->isSharing (  ) );
   }
 }
 
@@ -428,8 +426,7 @@ HB_FUNC_STATIC( QGLCONTEXT_ISVALID )
   QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isValid (  );
-    hb_retl( b );
+    hb_retl( obj->isValid (  ) );
   }
 }
 
@@ -527,8 +524,7 @@ HB_FUNC_STATIC( QGLCONTEXT_ARESHARING )
 {
   QGLContext * par1 = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QGLContext * par2 = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  bool b = QGLContext::areSharing ( par1, par2 );
-  hb_retl( b );
+  hb_retl( QGLContext::areSharing ( par1, par2 ) );
 }
 
 

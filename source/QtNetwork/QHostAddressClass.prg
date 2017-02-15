@@ -289,8 +289,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_ISINSUBNET1 )
   {
     QHostAddress * par1 = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
-    bool b = obj->isInSubnet ( *par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->isInSubnet ( *par1, par2 ) );
   }
 }
 
@@ -320,8 +319,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_ISNULL )
   QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isNull (  );
-    hb_retl( b );
+    hb_retl( obj->isNull (  ) );
   }
 }
 
@@ -394,8 +392,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_SETADDRESS4 )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    bool b = obj->setAddress ( par1 );
-    hb_retl( b );
+    hb_retl( obj->setAddress ( par1 ) );
   }
 }
 

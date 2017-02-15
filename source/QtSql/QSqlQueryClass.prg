@@ -430,8 +430,7 @@ HB_FUNC_STATIC( QSQLQUERY_EXEC1 )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    bool b = obj->exec ( par1 );
-    hb_retl( b );
+    hb_retl( obj->exec ( par1 ) );
   }
 }
 
@@ -444,8 +443,7 @@ HB_FUNC_STATIC( QSQLQUERY_EXEC2 )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->exec (  );
-    hb_retl( b );
+    hb_retl( obj->exec (  ) );
   }
 }
 
@@ -474,8 +472,7 @@ HB_FUNC_STATIC( QSQLQUERY_EXECBATCH )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->execBatch (  (QSqlQuery::BatchExecutionMode) par1 );
-    hb_retl( b );
+    hb_retl( obj->execBatch (  (QSqlQuery::BatchExecutionMode) par1 ) );
   }
 }
 
@@ -516,8 +513,7 @@ HB_FUNC_STATIC( QSQLQUERY_FIRST )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->first (  );
-    hb_retl( b );
+    hb_retl( obj->first (  ) );
   }
 }
 
@@ -530,8 +526,7 @@ HB_FUNC_STATIC( QSQLQUERY_ISACTIVE )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isActive (  );
-    hb_retl( b );
+    hb_retl( obj->isActive (  ) );
   }
 }
 
@@ -544,8 +539,7 @@ HB_FUNC_STATIC( QSQLQUERY_ISFORWARDONLY )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isForwardOnly (  );
-    hb_retl( b );
+    hb_retl( obj->isForwardOnly (  ) );
   }
 }
 
@@ -559,8 +553,7 @@ HB_FUNC_STATIC( QSQLQUERY_ISNULL )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->isNull ( par1 );
-    hb_retl( b );
+    hb_retl( obj->isNull ( par1 ) );
   }
 }
 
@@ -573,8 +566,7 @@ HB_FUNC_STATIC( QSQLQUERY_ISSELECT )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isSelect (  );
-    hb_retl( b );
+    hb_retl( obj->isSelect (  ) );
   }
 }
 
@@ -587,8 +579,7 @@ HB_FUNC_STATIC( QSQLQUERY_ISVALID )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isValid (  );
-    hb_retl( b );
+    hb_retl( obj->isValid (  ) );
   }
 }
 
@@ -601,8 +592,7 @@ HB_FUNC_STATIC( QSQLQUERY_LAST )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->last (  );
-    hb_retl( b );
+    hb_retl( obj->last (  ) );
   }
 }
 
@@ -657,8 +647,7 @@ HB_FUNC_STATIC( QSQLQUERY_NEXT )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->next (  );
-    hb_retl( b );
+    hb_retl( obj->next (  ) );
   }
 }
 
@@ -671,8 +660,7 @@ HB_FUNC_STATIC( QSQLQUERY_NEXTRESULT )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->nextResult (  );
-    hb_retl( b );
+    hb_retl( obj->nextResult (  ) );
   }
 }
 
@@ -714,8 +702,7 @@ HB_FUNC_STATIC( QSQLQUERY_PREPARE )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    bool b = obj->prepare ( par1 );
-    hb_retl( b );
+    hb_retl( obj->prepare ( par1 ) );
   }
 }
 
@@ -728,8 +715,7 @@ HB_FUNC_STATIC( QSQLQUERY_PREVIOUS )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->previous (  );
-    hb_retl( b );
+    hb_retl( obj->previous (  ) );
   }
 }
 
@@ -772,8 +758,7 @@ HB_FUNC_STATIC( QSQLQUERY_SEEK )
   {
     int par1 = hb_parni(1);
     bool par2 = ISNIL(2)? false : hb_parl(2);
-    bool b = obj->seek ( par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->seek ( par1, par2 ) );
   }
 }
 

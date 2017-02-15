@@ -160,8 +160,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_HASRAWHEADER )
   if( obj )
   {
     QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->hasRawHeader ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->hasRawHeader ( *par1 ) );
   }
 }
 
@@ -240,8 +239,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ISFINISHED )
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isFinished (  );
-    hb_retl( b );
+    hb_retl( obj->isFinished (  ) );
   }
 }
 
@@ -254,8 +252,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ISRUNNING )
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isRunning (  );
-    hb_retl( b );
+    hb_retl( obj->isRunning (  ) );
   }
 }
 

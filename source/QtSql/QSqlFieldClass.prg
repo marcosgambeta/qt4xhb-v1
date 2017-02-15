@@ -231,8 +231,7 @@ HB_FUNC_STATIC( QSQLFIELD_ISAUTOVALUE )
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isAutoValue (  );
-    hb_retl( b );
+    hb_retl( obj->isAutoValue (  ) );
   }
 }
 
@@ -245,8 +244,7 @@ HB_FUNC_STATIC( QSQLFIELD_ISGENERATED )
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isGenerated (  );
-    hb_retl( b );
+    hb_retl( obj->isGenerated (  ) );
   }
 }
 
@@ -259,8 +257,7 @@ HB_FUNC_STATIC( QSQLFIELD_ISNULL )
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isNull (  );
-    hb_retl( b );
+    hb_retl( obj->isNull (  ) );
   }
 }
 
@@ -273,8 +270,7 @@ HB_FUNC_STATIC( QSQLFIELD_ISREADONLY )
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isReadOnly (  );
-    hb_retl( b );
+    hb_retl( obj->isReadOnly (  ) );
   }
 }
 
@@ -287,8 +283,7 @@ HB_FUNC_STATIC( QSQLFIELD_ISVALID )
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isValid (  );
-    hb_retl( b );
+    hb_retl( obj->isValid (  ) );
   }
 }
 

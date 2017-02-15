@@ -149,8 +149,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_HASRESET )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->hasReset ( par1 );
-    hb_retl( b );
+    hb_retl( obj->hasReset ( par1 ) );
   }
 }
 
@@ -179,8 +178,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_ISATTRIBUTE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->isAttribute ( par1 );
-    hb_retl( b );
+    hb_retl( obj->isAttribute ( par1 ) );
   }
 }
 
@@ -194,8 +192,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_ISCHANGED )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->isChanged ( par1 );
-    hb_retl( b );
+    hb_retl( obj->isChanged ( par1 ) );
   }
 }
 
@@ -209,8 +206,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_ISVISIBLE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->isVisible ( par1 );
-    hb_retl( b );
+    hb_retl( obj->isVisible ( par1 ) );
   }
 }
 
@@ -269,8 +265,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_RESET )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->reset ( par1 );
-    hb_retl( b );
+    hb_retl( obj->reset ( par1 ) );
   }
 }
 

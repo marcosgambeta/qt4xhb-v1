@@ -163,8 +163,7 @@ HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_HASNEXT )
   QScriptValueIterator * obj = (QScriptValueIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasNext (  );
-    hb_retl( b );
+    hb_retl( obj->hasNext (  ) );
   }
 }
 
@@ -177,8 +176,7 @@ HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_HASPREVIOUS )
   QScriptValueIterator * obj = (QScriptValueIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasPrevious (  );
-    hb_retl( b );
+    hb_retl( obj->hasPrevious (  ) );
   }
 }
 

@@ -164,8 +164,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_CLIP )
   QDeclarativeItem * obj = (QDeclarativeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->clip (  );
-    hb_retl( b );
+    hb_retl( obj->clip (  ) );
   }
 }
 
@@ -220,8 +219,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_KEEPMOUSEGRAB )
   QDeclarativeItem * obj = (QDeclarativeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->keepMouseGrab (  );
-    hb_retl( b );
+    hb_retl( obj->keepMouseGrab (  ) );
   }
 }
 
@@ -372,8 +370,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_SMOOTH )
   QDeclarativeItem * obj = (QDeclarativeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->smooth (  );
-    hb_retl( b );
+    hb_retl( obj->smooth (  ) );
   }
 }
 

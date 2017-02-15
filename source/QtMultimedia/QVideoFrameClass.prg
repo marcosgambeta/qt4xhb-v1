@@ -407,8 +407,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_ISMAPPED )
   QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isMapped (  );
-    hb_retl( b );
+    hb_retl( obj->isMapped (  ) );
   }
 }
 
@@ -421,8 +420,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_ISREADABLE )
   QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isReadable (  );
-    hb_retl( b );
+    hb_retl( obj->isReadable (  ) );
   }
 }
 
@@ -435,8 +433,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_ISVALID )
   QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isValid (  );
-    hb_retl( b );
+    hb_retl( obj->isValid (  ) );
   }
 }
 
@@ -449,8 +446,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_ISWRITABLE )
   QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isWritable (  );
-    hb_retl( b );
+    hb_retl( obj->isWritable (  ) );
   }
 }
 
@@ -464,8 +460,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_MAP )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->map (  (QAbstractVideoBuffer::MapMode) par1 );
-    hb_retl( b );
+    hb_retl( obj->map (  (QAbstractVideoBuffer::MapMode) par1 ) );
   }
 }
 

@@ -1177,8 +1177,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_HASOPENGLFEATURE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->hasOpenGLFeature (  (QGLFunctions::OpenGLFeature) par1 );
-    hb_retl( b );
+    hb_retl( obj->hasOpenGLFeature (  (QGLFunctions::OpenGLFeature) par1 ) );
   }
 }
 

@@ -309,8 +309,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISERROR )
   QDeclarativeComponent * obj = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isError (  );
-    hb_retl( b );
+    hb_retl( obj->isError (  ) );
   }
 }
 
@@ -323,8 +322,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISLOADING )
   QDeclarativeComponent * obj = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isLoading (  );
-    hb_retl( b );
+    hb_retl( obj->isLoading (  ) );
   }
 }
 
@@ -337,8 +335,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISNULL )
   QDeclarativeComponent * obj = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isNull (  );
-    hb_retl( b );
+    hb_retl( obj->isNull (  ) );
   }
 }
 
@@ -351,8 +348,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISREADY )
   QDeclarativeComponent * obj = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isReady (  );
-    hb_retl( b );
+    hb_retl( obj->isReady (  ) );
   }
 }
 

@@ -124,8 +124,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_CONTAINS )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    bool b = obj->contains ( par1 );
-    hb_retl( b );
+    hb_retl( obj->contains ( par1 ) );
   }
 }
 
@@ -168,8 +167,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_ISEMPTY )
   QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isEmpty (  );
-    hb_retl( b );
+    hb_retl( obj->isEmpty (  ) );
   }
 }
 

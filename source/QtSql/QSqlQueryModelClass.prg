@@ -257,8 +257,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_CANFETCHMORE )
   if( obj )
   {
     QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->canFetchMore ( par1 );
-    hb_retl( b );
+    hb_retl( obj->canFetchMore ( par1 ) );
   }
 }
 
@@ -337,8 +336,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_INSERTCOLUMNS )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->insertColumns ( par1, par2, par3 );
-    hb_retl( b );
+    hb_retl( obj->insertColumns ( par1, par2, par3 ) );
   }
 }
 
@@ -354,8 +352,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_REMOVECOLUMNS )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->removeColumns ( par1, par2, par3 );
-    hb_retl( b );
+    hb_retl( obj->removeColumns ( par1, par2, par3 ) );
   }
 }
 
@@ -387,8 +384,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_SETHEADERDATA )
     int par2 = hb_parni(2);
     QVariant * par3 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par4 = ISNIL(4)? Qt::EditRole : hb_parni(4);
-    bool b = obj->setHeaderData ( par1,  (Qt::Orientation) par2, *par3, par4 );
-    hb_retl( b );
+    hb_retl( obj->setHeaderData ( par1,  (Qt::Orientation) par2, *par3, par4 ) );
   }
 }
 

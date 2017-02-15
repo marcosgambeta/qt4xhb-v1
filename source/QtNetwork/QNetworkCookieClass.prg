@@ -228,8 +228,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_ISHTTPONLY )
   QNetworkCookie * obj = (QNetworkCookie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isHttpOnly (  );
-    hb_retl( b );
+    hb_retl( obj->isHttpOnly (  ) );
   }
 }
 
@@ -242,8 +241,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_ISSECURE )
   QNetworkCookie * obj = (QNetworkCookie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isSecure (  );
-    hb_retl( b );
+    hb_retl( obj->isSecure (  ) );
   }
 }
 
@@ -256,8 +254,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_ISSESSIONCOOKIE )
   QNetworkCookie * obj = (QNetworkCookie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isSessionCookie (  );
-    hb_retl( b );
+    hb_retl( obj->isSessionCookie (  ) );
   }
 }
 

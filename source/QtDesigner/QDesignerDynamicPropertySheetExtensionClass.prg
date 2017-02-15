@@ -137,8 +137,7 @@ HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_CANADDDYNAMICPROPERTY )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    bool b = obj->canAddDynamicProperty ( par1 );
-    hb_retl( b );
+    hb_retl( obj->canAddDynamicProperty ( par1 ) );
   }
 }
 
@@ -151,8 +150,7 @@ HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_DYNAMICPROPERTIESALLOWED 
   QDesignerDynamicPropertySheetExtension * obj = (QDesignerDynamicPropertySheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->dynamicPropertiesAllowed (  );
-    hb_retl( b );
+    hb_retl( obj->dynamicPropertiesAllowed (  ) );
   }
 }
 
@@ -166,8 +164,7 @@ HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_ISDYNAMICPROPERTY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->isDynamicProperty ( par1 );
-    hb_retl( b );
+    hb_retl( obj->isDynamicProperty ( par1 ) );
   }
 }
 
@@ -181,8 +178,7 @@ HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_REMOVEDYNAMICPROPERTY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->removeDynamicProperty ( par1 );
-    hb_retl( b );
+    hb_retl( obj->removeDynamicProperty ( par1 ) );
   }
 }
 

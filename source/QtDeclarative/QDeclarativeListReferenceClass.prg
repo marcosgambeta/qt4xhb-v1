@@ -170,8 +170,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_APPEND )
   if( obj )
   {
     QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->append ( par1 );
-    hb_retl( b );
+    hb_retl( obj->append ( par1 ) );
   }
 }
 
@@ -199,8 +198,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANAPPEND )
   QDeclarativeListReference * obj = (QDeclarativeListReference *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->canAppend (  );
-    hb_retl( b );
+    hb_retl( obj->canAppend (  ) );
   }
 }
 
@@ -213,8 +211,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANAT )
   QDeclarativeListReference * obj = (QDeclarativeListReference *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->canAt (  );
-    hb_retl( b );
+    hb_retl( obj->canAt (  ) );
   }
 }
 
@@ -227,8 +224,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANCLEAR )
   QDeclarativeListReference * obj = (QDeclarativeListReference *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->canClear (  );
-    hb_retl( b );
+    hb_retl( obj->canClear (  ) );
   }
 }
 
@@ -241,8 +237,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANCOUNT )
   QDeclarativeListReference * obj = (QDeclarativeListReference *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->canCount (  );
-    hb_retl( b );
+    hb_retl( obj->canCount (  ) );
   }
 }
 
@@ -255,8 +250,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CLEAR )
   QDeclarativeListReference * obj = (QDeclarativeListReference *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->clear (  );
-    hb_retl( b );
+    hb_retl( obj->clear (  ) );
   }
 }
 
@@ -283,8 +277,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_ISVALID )
   QDeclarativeListReference * obj = (QDeclarativeListReference *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isValid (  );
-    hb_retl( b );
+    hb_retl( obj->isValid (  ) );
   }
 }
 

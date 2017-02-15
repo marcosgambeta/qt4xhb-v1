@@ -247,8 +247,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_ISCALLEDASCONSTRUCTOR )
   QScriptContext * obj = (QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isCalledAsConstructor (  );
-    hb_retl( b );
+    hb_retl( obj->isCalledAsConstructor (  ) );
   }
 }
 

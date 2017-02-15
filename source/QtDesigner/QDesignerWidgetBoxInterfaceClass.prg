@@ -99,8 +99,7 @@ HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_LOAD )
   QDesignerWidgetBoxInterface * obj = (QDesignerWidgetBoxInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->load (  );
-    hb_retl( b );
+    hb_retl( obj->load (  ) );
   }
 }
 
@@ -113,8 +112,7 @@ HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_SAVE )
   QDesignerWidgetBoxInterface * obj = (QDesignerWidgetBoxInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->save (  );
-    hb_retl( b );
+    hb_retl( obj->save (  ) );
   }
 }
 

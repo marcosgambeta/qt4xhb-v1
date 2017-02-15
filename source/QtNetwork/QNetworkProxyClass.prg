@@ -250,8 +250,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_ISCACHINGPROXY )
   QNetworkProxy * obj = (QNetworkProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isCachingProxy (  );
-    hb_retl( b );
+    hb_retl( obj->isCachingProxy (  ) );
   }
 }
 
@@ -264,8 +263,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_ISTRANSPARENTPROXY )
   QNetworkProxy * obj = (QNetworkProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isTransparentProxy (  );
-    hb_retl( b );
+    hb_retl( obj->isTransparentProxy (  ) );
   }
 }
 

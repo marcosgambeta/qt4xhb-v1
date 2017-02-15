@@ -243,8 +243,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_BIND )
   QGLFramebufferObject * obj = (QGLFramebufferObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->bind (  );
-    hb_retl( b );
+    hb_retl( obj->bind (  ) );
   }
 }
 
@@ -333,8 +332,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_ISBOUND )
   QGLFramebufferObject * obj = (QGLFramebufferObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isBound (  );
-    hb_retl( b );
+    hb_retl( obj->isBound (  ) );
   }
 }
 
@@ -347,8 +345,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_ISVALID )
   QGLFramebufferObject * obj = (QGLFramebufferObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isValid (  );
-    hb_retl( b );
+    hb_retl( obj->isValid (  ) );
   }
 }
 
@@ -361,8 +358,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_RELEASE )
   QGLFramebufferObject * obj = (QGLFramebufferObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->release (  );
-    hb_retl( b );
+    hb_retl( obj->release (  ) );
   }
 }
 
@@ -444,8 +440,7 @@ bool hasOpenGLFramebufferBlit ()
 */
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_HASOPENGLFRAMEBUFFERBLIT )
 {
-  bool b = QGLFramebufferObject::hasOpenGLFramebufferBlit (  );
-  hb_retl( b );
+  hb_retl( QGLFramebufferObject::hasOpenGLFramebufferBlit (  ) );
 }
 
 
@@ -454,8 +449,7 @@ bool hasOpenGLFramebufferObjects ()
 */
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_HASOPENGLFRAMEBUFFEROBJECTS )
 {
-  bool b = QGLFramebufferObject::hasOpenGLFramebufferObjects (  );
-  hb_retl( b );
+  hb_retl( QGLFramebufferObject::hasOpenGLFramebufferObjects (  ) );
 }
 
 

@@ -352,8 +352,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_HASUNCAUGHTEXCEPTION )
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasUncaughtException (  );
-    hb_retl( b );
+    hb_retl( obj->hasUncaughtException (  ) );
   }
 }
 
@@ -419,8 +418,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_ISEVALUATING )
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isEvaluating (  );
-    hb_retl( b );
+    hb_retl( obj->isEvaluating (  ) );
   }
 }
 

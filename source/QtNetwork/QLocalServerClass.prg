@@ -155,8 +155,7 @@ HB_FUNC_STATIC( QLOCALSERVER_HASPENDINGCONNECTIONS )
   QLocalServer * obj = (QLocalServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasPendingConnections (  );
-    hb_retl( b );
+    hb_retl( obj->hasPendingConnections (  ) );
   }
 }
 
@@ -169,8 +168,7 @@ HB_FUNC_STATIC( QLOCALSERVER_ISLISTENING )
   QLocalServer * obj = (QLocalServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isListening (  );
-    hb_retl( b );
+    hb_retl( obj->isListening (  ) );
   }
 }
 
@@ -184,8 +182,7 @@ HB_FUNC_STATIC( QLOCALSERVER_LISTEN )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    bool b = obj->listen ( par1 );
-    hb_retl( b );
+    hb_retl( obj->listen ( par1 ) );
   }
 }
 
@@ -271,8 +268,7 @@ HB_FUNC_STATIC( QLOCALSERVER_WAITFORNEWCONNECTION )
   {
     int par1 = ISNIL(1)? 0 : hb_parni(1);
     bool par2;
-    bool b = obj->waitForNewConnection ( par1, &par2 );
-    hb_retl( b );
+    hb_retl( obj->waitForNewConnection ( par1, &par2 ) );
     hb_storl( par2, 2 );
   }
 }
@@ -285,8 +281,7 @@ bool removeServer ( const QString & name )
 HB_FUNC_STATIC( QLOCALSERVER_REMOVESERVER )
 {
   QString par1 = hb_parc(1);
-  bool b = QLocalServer::removeServer ( par1 );
-  hb_retl( b );
+  hb_retl( QLocalServer::removeServer ( par1 ) );
 }
 
 

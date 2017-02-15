@@ -296,8 +296,7 @@ HB_FUNC_STATIC( QFTP_HASPENDINGCOMMANDS )
   QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasPendingCommands (  );
-    hb_retl( b );
+    hb_retl( obj->hasPendingCommands (  ) );
   }
 }
 

@@ -219,8 +219,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_FLUSH )
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->flush (  );
-    hb_retl( b );
+    hb_retl( obj->flush (  ) );
   }
 }
 
@@ -233,8 +232,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ISVALID )
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isValid (  );
-    hb_retl( b );
+    hb_retl( obj->isValid (  ) );
   }
 }
 
@@ -378,8 +376,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SETSOCKETDESCRIPTOR )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     int par3 = ISNIL(3)? (int) QAbstractSocket::ReadWrite : hb_parni(3);
-    bool b = obj->setSocketDescriptor ( par1,  (QAbstractSocket::SocketState) par2,  (QAbstractSocket::OpenMode) par3 );
-    hb_retl( b );
+    hb_retl( obj->setSocketDescriptor ( par1,  (QAbstractSocket::SocketState) par2,  (QAbstractSocket::OpenMode) par3 ) );
   }
 }
 
@@ -466,8 +463,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORCONNECTED )
   if( obj )
   {
     int par1 = ISNIL(1)? 30000 : hb_parni(1);
-    bool b = obj->waitForConnected ( par1 );
-    hb_retl( b );
+    hb_retl( obj->waitForConnected ( par1 ) );
   }
 }
 
@@ -481,8 +477,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORDISCONNECTED )
   if( obj )
   {
     int par1 = ISNIL(1)? 30000 : hb_parni(1);
-    bool b = obj->waitForDisconnected ( par1 );
-    hb_retl( b );
+    hb_retl( obj->waitForDisconnected ( par1 ) );
   }
 }
 
@@ -495,8 +490,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ATEND )
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->atEnd (  );
-    hb_retl( b );
+    hb_retl( obj->atEnd (  ) );
   }
 }
 
@@ -537,8 +531,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_CANREADLINE )
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->canReadLine (  );
-    hb_retl( b );
+    hb_retl( obj->canReadLine (  ) );
   }
 }
 
@@ -565,8 +558,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ISSEQUENTIAL )
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isSequential (  );
-    hb_retl( b );
+    hb_retl( obj->isSequential (  ) );
   }
 }
 
@@ -580,8 +572,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORBYTESWRITTEN )
   if( obj )
   {
     int par1 = ISNIL(1)? 30000 : hb_parni(1);
-    bool b = obj->waitForBytesWritten ( par1 );
-    hb_retl( b );
+    hb_retl( obj->waitForBytesWritten ( par1 ) );
   }
 }
 
@@ -595,8 +586,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORREADYREAD )
   if( obj )
   {
     int par1 = ISNIL(1)? 30000 : hb_parni(1);
-    bool b = obj->waitForReadyRead ( par1 );
-    hb_retl( b );
+    hb_retl( obj->waitForReadyRead ( par1 ) );
   }
 }
 

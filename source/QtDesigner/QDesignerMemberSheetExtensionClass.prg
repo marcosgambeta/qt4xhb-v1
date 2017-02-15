@@ -176,8 +176,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_INHERITEDFROMWIDGET )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->inheritedFromWidget ( par1 );
-    hb_retl( b );
+    hb_retl( obj->inheritedFromWidget ( par1 ) );
   }
 }
 
@@ -191,8 +190,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_ISSIGNAL )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->isSignal ( par1 );
-    hb_retl( b );
+    hb_retl( obj->isSignal ( par1 ) );
   }
 }
 
@@ -206,8 +204,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_ISSLOT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->isSlot ( par1 );
-    hb_retl( b );
+    hb_retl( obj->isSlot ( par1 ) );
   }
 }
 
@@ -221,8 +218,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_ISVISIBLE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->isVisible ( par1 );
-    hb_retl( b );
+    hb_retl( obj->isVisible ( par1 ) );
   }
 }
 
