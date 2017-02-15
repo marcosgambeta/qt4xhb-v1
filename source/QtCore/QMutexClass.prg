@@ -155,8 +155,7 @@ HB_FUNC_STATIC( QMUTEX_TRYLOCK1 )
   QMutex * obj = (QMutex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->tryLock (  );
-    hb_retl( b );
+    hb_retl( obj->tryLock (  ) );
   }
 }
 
@@ -170,8 +169,7 @@ HB_FUNC_STATIC( QMUTEX_TRYLOCK2 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->tryLock ( par1 );
-    hb_retl( b );
+    hb_retl( obj->tryLock ( par1 ) );
   }
 }
 

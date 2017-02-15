@@ -104,8 +104,7 @@ HB_FUNC_STATIC( QCHILDEVENT_ADDED )
   QChildEvent * obj = (QChildEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->added (  );
-    hb_retl( b );
+    hb_retl( obj->added (  ) );
   }
 }
 
@@ -132,8 +131,7 @@ HB_FUNC_STATIC( QCHILDEVENT_POLISHED )
   QChildEvent * obj = (QChildEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->polished (  );
-    hb_retl( b );
+    hb_retl( obj->polished (  ) );
   }
 }
 
@@ -146,8 +144,7 @@ HB_FUNC_STATIC( QCHILDEVENT_REMOVED )
   QChildEvent * obj = (QChildEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->removed (  );
-    hb_retl( b );
+    hb_retl( obj->removed (  ) );
   }
 }
 

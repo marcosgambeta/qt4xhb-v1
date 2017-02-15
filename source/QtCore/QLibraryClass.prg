@@ -215,8 +215,7 @@ HB_FUNC_STATIC( QLIBRARY_LOAD )
   QLibrary * obj = (QLibrary *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->load (  );
-    hb_retl( b );
+    hb_retl( obj->load (  ) );
   }
 }
 
@@ -229,8 +228,7 @@ HB_FUNC_STATIC( QLIBRARY_UNLOAD )
   QLibrary * obj = (QLibrary *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->unload (  );
-    hb_retl( b );
+    hb_retl( obj->unload (  ) );
   }
 }
 
@@ -243,8 +241,7 @@ HB_FUNC_STATIC( QLIBRARY_ISLOADED )
   QLibrary * obj = (QLibrary *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isLoaded (  );
-    hb_retl( b );
+    hb_retl( obj->isLoaded (  ) );
   }
 }
 
@@ -438,8 +435,7 @@ static bool isLibrary(const QString &fileName)
 HB_FUNC_STATIC( QLIBRARY_ISLIBRARY )
 {
   QString par1 = hb_parc(1);
-  bool b = QLibrary::isLibrary ( par1 );
-  hb_retl( b );
+  hb_retl( QLibrary::isLibrary ( par1 ) );
 }
 
 

@@ -160,8 +160,7 @@ HB_FUNC_STATIC( QMETAENUM_ISFLAG )
   QMetaEnum * obj = (QMetaEnum *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isFlag (  );
-    hb_retl( b );
+    hb_retl( obj->isFlag (  ) );
   }
 }
 
@@ -306,8 +305,7 @@ HB_FUNC_STATIC( QMETAENUM_ISVALID )
   QMetaEnum * obj = (QMetaEnum *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isValid (  );
-    hb_retl( b );
+    hb_retl( obj->isValid (  ) );
   }
 }
 

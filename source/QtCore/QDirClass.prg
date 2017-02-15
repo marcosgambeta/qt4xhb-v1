@@ -312,8 +312,7 @@ HB_FUNC_STATIC( QDIR_CD )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    bool b = obj->cd ( par1 );
-    hb_retl( b );
+    hb_retl( obj->cd ( par1 ) );
   }
 }
 
@@ -326,8 +325,7 @@ HB_FUNC_STATIC( QDIR_CDUP )
   QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->cdUp (  );
-    hb_retl( b );
+    hb_retl( obj->cdUp (  ) );
   }
 }
 
@@ -559,8 +557,7 @@ HB_FUNC_STATIC( QDIR_EXISTS1 )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    bool b = obj->exists ( par1 );
-    hb_retl( b );
+    hb_retl( obj->exists ( par1 ) );
   }
 }
 
@@ -573,8 +570,7 @@ HB_FUNC_STATIC( QDIR_EXISTS2 )
   QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->exists (  );
-    hb_retl( b );
+    hb_retl( obj->exists (  ) );
   }
 }
 
@@ -631,8 +627,7 @@ HB_FUNC_STATIC( QDIR_ISABSOLUTE )
   QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isAbsolute (  );
-    hb_retl( b );
+    hb_retl( obj->isAbsolute (  ) );
   }
 }
 
@@ -645,8 +640,7 @@ HB_FUNC_STATIC( QDIR_ISREADABLE )
   QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isReadable (  );
-    hb_retl( b );
+    hb_retl( obj->isReadable (  ) );
   }
 }
 
@@ -659,8 +653,7 @@ HB_FUNC_STATIC( QDIR_ISRELATIVE )
   QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isRelative (  );
-    hb_retl( b );
+    hb_retl( obj->isRelative (  ) );
   }
 }
 
@@ -673,8 +666,7 @@ HB_FUNC_STATIC( QDIR_ISROOT )
   QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isRoot (  );
-    hb_retl( b );
+    hb_retl( obj->isRoot (  ) );
   }
 }
 
@@ -687,8 +679,7 @@ HB_FUNC_STATIC( QDIR_MAKEABSOLUTE )
   QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->makeAbsolute (  );
-    hb_retl( b );
+    hb_retl( obj->makeAbsolute (  ) );
   }
 }
 
@@ -702,8 +693,7 @@ HB_FUNC_STATIC( QDIR_MKDIR )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    bool b = obj->mkdir ( par1 );
-    hb_retl( b );
+    hb_retl( obj->mkdir ( par1 ) );
   }
 }
 
@@ -717,8 +707,7 @@ HB_FUNC_STATIC( QDIR_MKPATH )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    bool b = obj->mkpath ( par1 );
-    hb_retl( b );
+    hb_retl( obj->mkpath ( par1 ) );
   }
 }
 
@@ -798,8 +787,7 @@ HB_FUNC_STATIC( QDIR_REMOVE )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    bool b = obj->remove ( par1 );
-    hb_retl( b );
+    hb_retl( obj->remove ( par1 ) );
   }
 }
 
@@ -815,8 +803,7 @@ HB_FUNC_STATIC( QDIR_RENAME )
   {
     QString par1 = hb_parc(1);
     QString par2 = hb_parc(2);
-    bool b = obj->rename ( par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->rename ( par1, par2 ) );
   }
 }
 
@@ -830,8 +817,7 @@ HB_FUNC_STATIC( QDIR_RMDIR )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    bool b = obj->rmdir ( par1 );
-    hb_retl( b );
+    hb_retl( obj->rmdir ( par1 ) );
   }
 }
 
@@ -845,8 +831,7 @@ HB_FUNC_STATIC( QDIR_RMPATH )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    bool b = obj->rmpath ( par1 );
-    hb_retl( b );
+    hb_retl( obj->rmpath ( par1 ) );
   }
 }
 
@@ -1055,8 +1040,7 @@ bool isAbsolutePath(const QString & path)
 HB_FUNC_STATIC( QDIR_ISABSOLUTEPATH )
 {
   QString par1 = hb_parc(1);
-  bool b = QDir::isAbsolutePath ( par1 );
-  hb_retl( b );
+  hb_retl( QDir::isAbsolutePath ( par1 ) );
 }
 
 
@@ -1066,8 +1050,7 @@ bool isRelativePath(const QString & path)
 HB_FUNC_STATIC( QDIR_ISRELATIVEPATH )
 {
   QString par1 = hb_parc(1);
-  bool b = QDir::isRelativePath ( par1 );
-  hb_retl( b );
+  hb_retl( QDir::isRelativePath ( par1 ) );
 }
 
 
@@ -1078,8 +1061,7 @@ HB_FUNC_STATIC( QDIR_MATCH1 )
 {
   QString par1 = hb_parc(1);
   QString par2 = hb_parc(2);
-  bool b = QDir::match ( par1, par2 );
-  hb_retl( b );
+  hb_retl( QDir::match ( par1, par2 ) );
 }
 
 
@@ -1098,8 +1080,7 @@ QString temp = hb_arrayGetCPtr(aStrings1, i1+1);
 par1 << temp;
 }
   QString par2 = hb_parc(2);
-  bool b = QDir::match ( par1, par2 );
-  hb_retl( b );
+  hb_retl( QDir::match ( par1, par2 ) );
 }
 
 
@@ -1174,8 +1155,7 @@ bool setCurrent(const QString & path)
 HB_FUNC_STATIC( QDIR_SETCURRENT )
 {
   QString par1 = hb_parc(1);
-  bool b = QDir::setCurrent ( par1 );
-  hb_retl( b );
+  hb_retl( QDir::setCurrent ( par1 ) );
 }
 
 

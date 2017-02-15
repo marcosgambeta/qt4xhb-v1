@@ -211,8 +211,7 @@ HB_FUNC_STATIC( QFILE_COPY1 )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    bool b = obj->copy ( par1 );
-    hb_retl( b );
+    hb_retl( obj->copy ( par1 ) );
   }
 }
 
@@ -239,8 +238,7 @@ HB_FUNC_STATIC( QFILE_EXISTS1 )
   QFile * obj = (QFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->exists (  );
-    hb_retl( b );
+    hb_retl( obj->exists (  ) );
   }
 }
 
@@ -267,8 +265,7 @@ HB_FUNC_STATIC( QFILE_FLUSH )
   QFile * obj = (QFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->flush (  );
-    hb_retl( b );
+    hb_retl( obj->flush (  ) );
   }
 }
 
@@ -296,8 +293,7 @@ HB_FUNC_STATIC( QFILE_LINK1 )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    bool b = obj->link ( par1 );
-    hb_retl( b );
+    hb_retl( obj->link ( par1 ) );
   }
 }
 
@@ -313,8 +309,7 @@ HB_FUNC_STATIC( QFILE_OPEN1 )
   {
     FILE * par1 = (FILE *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
-    bool b = obj->open ( par1,  (QFile::OpenMode) par2 );
-    hb_retl( b );
+    hb_retl( obj->open ( par1,  (QFile::OpenMode) par2 ) );
   }
 }
 
@@ -330,8 +325,7 @@ HB_FUNC_STATIC( QFILE_OPEN2 )
     FILE * par1 = (FILE *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
     int par3 = hb_parni(3);
-    bool b = obj->open ( par1,  (QFile::OpenMode) par2,  (QFile::FileHandleFlags) par3 );
-    hb_retl( b );
+    hb_retl( obj->open ( par1,  (QFile::OpenMode) par2,  (QFile::FileHandleFlags) par3 ) );
   }
 }
 
@@ -346,8 +340,7 @@ HB_FUNC_STATIC( QFILE_OPEN3 )
   {
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
-    bool b = obj->open ( par1,  (QFile::OpenMode) par2 );
-    hb_retl( b );
+    hb_retl( obj->open ( par1,  (QFile::OpenMode) par2 ) );
   }
 }
 
@@ -363,8 +356,7 @@ HB_FUNC_STATIC( QFILE_OPEN4 )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     int par3 = hb_parni(3);
-    bool b = obj->open ( par1,  (QFile::OpenMode) par2,  (QFile::FileHandleFlags) par3 );
-    hb_retl( b );
+    hb_retl( obj->open ( par1,  (QFile::OpenMode) par2,  (QFile::FileHandleFlags) par3 ) );
   }
 }
 
@@ -392,8 +384,7 @@ HB_FUNC_STATIC( QFILE_REMOVE1 )
   QFile * obj = (QFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->remove (  );
-    hb_retl( b );
+    hb_retl( obj->remove (  ) );
   }
 }
 
@@ -407,8 +398,7 @@ HB_FUNC_STATIC( QFILE_RENAME1 )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    bool b = obj->rename ( par1 );
-    hb_retl( b );
+    hb_retl( obj->rename ( par1 ) );
   }
 }
 
@@ -422,8 +412,7 @@ HB_FUNC_STATIC( QFILE_RESIZE1 )
   if( obj )
   {
     qint64 par1 = hb_parni(1);
-    bool b = obj->resize ( par1 );
-    hb_retl( b );
+    hb_retl( obj->resize ( par1 ) );
   }
 }
 
@@ -452,8 +441,7 @@ HB_FUNC_STATIC( QFILE_SETPERMISSIONS1 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->setPermissions (  (QFile::Permissions) par1 );
-    hb_retl( b );
+    hb_retl( obj->setPermissions (  (QFile::Permissions) par1 ) );
   }
 }
 
@@ -481,8 +469,7 @@ HB_FUNC_STATIC( QFILE_UNMAP )
   if( obj )
   {
     uchar * par1 = (uchar *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->unmap ( par1 );
-    hb_retl( b );
+    hb_retl( obj->unmap ( par1 ) );
   }
 }
 
@@ -511,8 +498,7 @@ HB_FUNC_STATIC( QFILE_ATEND )
   QFile * obj = (QFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->atEnd (  );
-    hb_retl( b );
+    hb_retl( obj->atEnd (  ) );
   }
 }
 
@@ -539,8 +525,7 @@ HB_FUNC_STATIC( QFILE_ISSEQUENTIAL )
   QFile * obj = (QFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isSequential (  );
-    hb_retl( b );
+    hb_retl( obj->isSequential (  ) );
   }
 }
 
@@ -554,8 +539,7 @@ HB_FUNC_STATIC( QFILE_OPEN6 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->open (  (QFile::OpenMode) par1 );
-    hb_retl( b );
+    hb_retl( obj->open (  (QFile::OpenMode) par1 ) );
   }
 }
 
@@ -595,8 +579,7 @@ HB_FUNC_STATIC( QFILE_SEEK )
   if( obj )
   {
     qint64 par1 = hb_parni(1);
-    bool b = obj->seek ( par1 );
-    hb_retl( b );
+    hb_retl( obj->seek ( par1 ) );
   }
 }
 
@@ -625,8 +608,7 @@ HB_FUNC_STATIC( QFILE_COPY2 )
 {
   QString par1 = hb_parc(1);
   QString par2 = hb_parc(2);
-  bool b = QFile::copy ( par1, par2 );
-  hb_retl( b );
+  hb_retl( QFile::copy ( par1, par2 ) );
 }
 
 
@@ -699,8 +681,7 @@ bool exists ( const QString & fileName )
 HB_FUNC_STATIC( QFILE_EXISTS2 )
 {
   QString par1 = hb_parc(1);
-  bool b = QFile::exists ( par1 );
-  hb_retl( b );
+  hb_retl( QFile::exists ( par1 ) );
 }
 
 
@@ -726,8 +707,7 @@ HB_FUNC_STATIC( QFILE_LINK2 )
 {
   QString par1 = hb_parc(1);
   QString par2 = hb_parc(2);
-  bool b = QFile::link ( par1, par2 );
-  hb_retl( b );
+  hb_retl( QFile::link ( par1, par2 ) );
 }
 
 
@@ -778,8 +758,7 @@ bool remove ( const QString & fileName )
 HB_FUNC_STATIC( QFILE_REMOVE2 )
 {
   QString par1 = hb_parc(1);
-  bool b = QFile::remove ( par1 );
-  hb_retl( b );
+  hb_retl( QFile::remove ( par1 ) );
 }
 
 
@@ -805,8 +784,7 @@ HB_FUNC_STATIC( QFILE_RENAME2 )
 {
   QString par1 = hb_parc(1);
   QString par2 = hb_parc(2);
-  bool b = QFile::rename ( par1, par2 );
-  hb_retl( b );
+  hb_retl( QFile::rename ( par1, par2 ) );
 }
 
 
@@ -832,8 +810,7 @@ HB_FUNC_STATIC( QFILE_RESIZE2 )
 {
   QString par1 = hb_parc(1);
   qint64 par2 = hb_parni(2);
-  bool b = QFile::resize ( par1, par2 );
-  hb_retl( b );
+  hb_retl( QFile::resize ( par1, par2 ) );
 }
 
 
@@ -861,8 +838,7 @@ HB_FUNC_STATIC( QFILE_SETPERMISSIONS2 )
 {
   QString par1 = hb_parc(1);
   int par2 = hb_parni(2);
-  bool b = QFile::setPermissions ( par1,  (QFile::Permissions) par2 );
-  hb_retl( b );
+  hb_retl( QFile::setPermissions ( par1,  (QFile::Permissions) par2 ) );
 }
 
 

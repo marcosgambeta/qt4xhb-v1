@@ -370,8 +370,7 @@ HB_FUNC_STATIC( QDATE_ISNULL )
   QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isNull (  );
-    hb_retl( b );
+    hb_retl( obj->isNull (  ) );
   }
 }
 
@@ -384,8 +383,7 @@ HB_FUNC_STATIC( QDATE_ISVALID1 )
   QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isValid (  );
-    hb_retl( b );
+    hb_retl( obj->isValid (  ) );
   }
 }
 
@@ -415,8 +413,7 @@ HB_FUNC_STATIC( QDATE_SETDATE )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     int par3 = hb_parni(3);
-    bool b = obj->setDate ( par1, par2, par3 );
-    hb_retl( b );
+    hb_retl( obj->setDate ( par1, par2, par3 ) );
   }
 }
 
@@ -577,8 +574,7 @@ bool isLeapYear ( int year )
 HB_FUNC_STATIC( QDATE_ISLEAPYEAR )
 {
   int par1 = hb_parni(1);
-  bool b = QDate::isLeapYear ( par1 );
-  hb_retl( b );
+  hb_retl( QDate::isLeapYear ( par1 ) );
 }
 
 
@@ -590,8 +586,7 @@ HB_FUNC_STATIC( QDATE_ISVALID2 )
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
   int par3 = hb_parni(3);
-  bool b = QDate::isValid ( par1, par2, par3 );
-  hb_retl( b );
+  hb_retl( QDate::isValid ( par1, par2, par3 ) );
 }
 
 

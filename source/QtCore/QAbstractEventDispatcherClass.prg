@@ -100,8 +100,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_FILTEREVENT )
   if( obj )
   {
     void * par1 = (void *) hb_parptr(1);
-    bool b = obj->filterEvent ( par1 );
-    hb_retl( b );
+    hb_retl( obj->filterEvent ( par1 ) );
   }
 }
 
@@ -128,8 +127,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_HASPENDINGEVENTS )
   QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasPendingEvents (  );
-    hb_retl( b );
+    hb_retl( obj->hasPendingEvents (  ) );
   }
 }
 
@@ -157,8 +155,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_PROCESSEVENTS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->processEvents (  (QEventLoop::ProcessEventsFlags) par1 );
-    hb_retl( b );
+    hb_retl( obj->processEvents (  (QEventLoop::ProcessEventsFlags) par1 ) );
   }
 }
 
@@ -252,8 +249,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERTIMER )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->unregisterTimer ( par1 );
-    hb_retl( b );
+    hb_retl( obj->unregisterTimer ( par1 ) );
   }
 }
 
@@ -267,8 +263,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERTIMERS )
   if( obj )
   {
     QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->unregisterTimers ( par1 );
-    hb_retl( b );
+    hb_retl( obj->unregisterTimers ( par1 ) );
   }
 }
 

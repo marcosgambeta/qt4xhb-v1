@@ -359,8 +359,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_AUTODETECTUNICODE )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->autoDetectUnicode (  );
-    hb_retl( b );
+    hb_retl( obj->autoDetectUnicode (  ) );
   }
 }
 
@@ -388,8 +387,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_GENERATEBYTEORDERMARK )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->generateByteOrderMark (  );
-    hb_retl( b );
+    hb_retl( obj->generateByteOrderMark (  ) );
   }
 }
 
@@ -533,8 +531,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_ATEND )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->atEnd (  );
-    hb_retl( b );
+    hb_retl( obj->atEnd (  ) );
   }
 }
 
@@ -576,8 +573,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SEEK )
   if( obj )
   {
     qint64 par1 = hb_parni(1);
-    bool b = obj->seek ( par1 );
-    hb_retl( b );
+    hb_retl( obj->seek ( par1 ) );
   }
 }
 

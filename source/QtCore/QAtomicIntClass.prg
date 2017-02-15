@@ -191,8 +191,7 @@ HB_FUNC_STATIC( QATOMICINT_DEREF )
   QAtomicInt * obj = (QAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->deref (  );
-    hb_retl( b );
+    hb_retl( obj->deref (  ) );
   }
 }
 
@@ -325,8 +324,7 @@ HB_FUNC_STATIC( QATOMICINT_REF )
   QAtomicInt * obj = (QAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->ref (  );
-    hb_retl( b );
+    hb_retl( obj->ref (  ) );
   }
 }
 
@@ -341,8 +339,7 @@ HB_FUNC_STATIC( QATOMICINT_TESTANDSETACQUIRE )
   {
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
-    bool b = obj->testAndSetAcquire ( par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->testAndSetAcquire ( par1, par2 ) );
   }
 }
 
@@ -357,8 +354,7 @@ HB_FUNC_STATIC( QATOMICINT_TESTANDSETORDERED )
   {
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
-    bool b = obj->testAndSetOrdered ( par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->testAndSetOrdered ( par1, par2 ) );
   }
 }
 
@@ -373,8 +369,7 @@ HB_FUNC_STATIC( QATOMICINT_TESTANDSETRELAXED )
   {
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
-    bool b = obj->testAndSetRelaxed ( par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->testAndSetRelaxed ( par1, par2 ) );
   }
 }
 
@@ -389,8 +384,7 @@ HB_FUNC_STATIC( QATOMICINT_TESTANDSETRELEASE )
   {
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
-    bool b = obj->testAndSetRelease ( par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->testAndSetRelease ( par1, par2 ) );
   }
 }
 
@@ -401,8 +395,7 @@ bool isFetchAndAddNative ()
 */
 HB_FUNC_STATIC( QATOMICINT_ISFETCHANDADDNATIVE )
 {
-  bool b = QAtomicInt::isFetchAndAddNative (  );
-  hb_retl( b );
+  hb_retl( QAtomicInt::isFetchAndAddNative (  ) );
 }
 
 
@@ -411,8 +404,7 @@ bool isFetchAndAddWaitFree ()
 */
 HB_FUNC_STATIC( QATOMICINT_ISFETCHANDADDWAITFREE )
 {
-  bool b = QAtomicInt::isFetchAndAddWaitFree (  );
-  hb_retl( b );
+  hb_retl( QAtomicInt::isFetchAndAddWaitFree (  ) );
 }
 
 
@@ -421,8 +413,7 @@ bool isFetchAndStoreNative ()
 */
 HB_FUNC_STATIC( QATOMICINT_ISFETCHANDSTORENATIVE )
 {
-  bool b = QAtomicInt::isFetchAndStoreNative (  );
-  hb_retl( b );
+  hb_retl( QAtomicInt::isFetchAndStoreNative (  ) );
 }
 
 
@@ -431,8 +422,7 @@ bool isFetchAndStoreWaitFree ()
 */
 HB_FUNC_STATIC( QATOMICINT_ISFETCHANDSTOREWAITFREE )
 {
-  bool b = QAtomicInt::isFetchAndStoreWaitFree (  );
-  hb_retl( b );
+  hb_retl( QAtomicInt::isFetchAndStoreWaitFree (  ) );
 }
 
 
@@ -441,8 +431,7 @@ bool isReferenceCountingNative ()
 */
 HB_FUNC_STATIC( QATOMICINT_ISREFERENCECOUNTINGNATIVE )
 {
-  bool b = QAtomicInt::isReferenceCountingNative (  );
-  hb_retl( b );
+  hb_retl( QAtomicInt::isReferenceCountingNative (  ) );
 }
 
 
@@ -451,8 +440,7 @@ bool isReferenceCountingWaitFree ()
 */
 HB_FUNC_STATIC( QATOMICINT_ISREFERENCECOUNTINGWAITFREE )
 {
-  bool b = QAtomicInt::isReferenceCountingWaitFree (  );
-  hb_retl( b );
+  hb_retl( QAtomicInt::isReferenceCountingWaitFree (  ) );
 }
 
 
@@ -461,8 +449,7 @@ bool isTestAndSetNative ()
 */
 HB_FUNC_STATIC( QATOMICINT_ISTESTANDSETNATIVE )
 {
-  bool b = QAtomicInt::isTestAndSetNative (  );
-  hb_retl( b );
+  hb_retl( QAtomicInt::isTestAndSetNative (  ) );
 }
 
 
@@ -471,8 +458,7 @@ bool isTestAndSetWaitFree ()
 */
 HB_FUNC_STATIC( QATOMICINT_ISTESTANDSETWAITFREE )
 {
-  bool b = QAtomicInt::isTestAndSetWaitFree (  );
-  hb_retl( b );
+  hb_retl( QAtomicInt::isTestAndSetWaitFree (  ) );
 }
 
 

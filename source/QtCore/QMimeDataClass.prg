@@ -190,8 +190,7 @@ HB_FUNC_STATIC( QMIMEDATA_HASCOLOR )
   QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasColor (  );
-    hb_retl( b );
+    hb_retl( obj->hasColor (  ) );
   }
 }
 
@@ -205,8 +204,7 @@ HB_FUNC_STATIC( QMIMEDATA_HASFORMAT )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    bool b = obj->hasFormat ( par1 );
-    hb_retl( b );
+    hb_retl( obj->hasFormat ( par1 ) );
   }
 }
 
@@ -219,8 +217,7 @@ HB_FUNC_STATIC( QMIMEDATA_HASHTML )
   QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasHtml (  );
-    hb_retl( b );
+    hb_retl( obj->hasHtml (  ) );
   }
 }
 
@@ -233,8 +230,7 @@ HB_FUNC_STATIC( QMIMEDATA_HASIMAGE )
   QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasImage (  );
-    hb_retl( b );
+    hb_retl( obj->hasImage (  ) );
   }
 }
 
@@ -247,8 +243,7 @@ HB_FUNC_STATIC( QMIMEDATA_HASTEXT )
   QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasText (  );
-    hb_retl( b );
+    hb_retl( obj->hasText (  ) );
   }
 }
 
@@ -261,8 +256,7 @@ HB_FUNC_STATIC( QMIMEDATA_HASURLS )
   QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasUrls (  );
-    hb_retl( b );
+    hb_retl( obj->hasUrls (  ) );
   }
 }
 

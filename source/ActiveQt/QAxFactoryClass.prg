@@ -205,8 +205,7 @@ HB_FUNC_STATIC( QAXFACTORY_HASSTOCKEVENTS )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    bool b = obj->hasStockEvents ( par1 );
-    hb_retl( b );
+    hb_retl( obj->hasStockEvents ( par1 ) );
   }
 }
 
@@ -234,8 +233,7 @@ HB_FUNC_STATIC( QAXFACTORY_ISSERVICE )
   QAxFactory * obj = (QAxFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isService (  );
-    hb_retl( b );
+    hb_retl( obj->isService (  ) );
   }
 }
 
@@ -280,8 +278,7 @@ HB_FUNC_STATIC( QAXFACTORY_STAYTOPLEVEL )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    bool b = obj->stayTopLevel ( par1 );
-    hb_retl( b );
+    hb_retl( obj->stayTopLevel ( par1 ) );
   }
 }
 
@@ -326,8 +323,7 @@ HB_FUNC_STATIC( QAXFACTORY_VALIDATELICENSEKEY )
   {
     QString par1 = hb_parc(1);
     QString par2 = hb_parc(2);
-    bool b = obj->validateLicenseKey ( par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->validateLicenseKey ( par1, par2 ) );
   }
 }
 
@@ -338,8 +334,7 @@ bool isServer ()
 */
 HB_FUNC_STATIC( QAXFACTORY_ISSERVER )
 {
-  bool b = QAxFactory::isServer (  );
-  hb_retl( b );
+  hb_retl( QAxFactory::isServer (  ) );
 }
 
 
@@ -349,8 +344,7 @@ bool registerActiveObject ( QObject * object )
 HB_FUNC_STATIC( QAXFACTORY_REGISTERACTIVEOBJECT )
 {
   QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  bool b = QAxFactory::registerActiveObject ( par1 );
-  hb_retl( b );
+  hb_retl( QAxFactory::registerActiveObject ( par1 ) );
 }
 
 
@@ -380,8 +374,7 @@ bool startServer ( ServerType type = MultipleInstances )
 HB_FUNC_STATIC( QAXFACTORY_STARTSERVER )
 {
   int par1 = ISNIL(1)? (int) QAxFactory::MultipleInstances : hb_parni(1);
-  bool b = QAxFactory::startServer (  (QAxFactory::ServerType) par1 );
-  hb_retl( b );
+  hb_retl( QAxFactory::startServer (  (QAxFactory::ServerType) par1 ) );
 }
 
 
@@ -390,8 +383,7 @@ bool stopServer ()
 */
 HB_FUNC_STATIC( QAXFACTORY_STOPSERVER )
 {
-  bool b = QAxFactory::stopServer (  );
-  hb_retl( b );
+  hb_retl( QAxFactory::stopServer (  ) );
 }
 
 

@@ -220,8 +220,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE1 )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    bool b = obj->hasAttribute ( par1 );
-    hb_retl( b );
+    hb_retl( obj->hasAttribute ( par1 ) );
   }
 }
 
@@ -235,8 +234,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE2 )
   if( obj )
   {
     QLatin1String * par1 = (QLatin1String *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->hasAttribute ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->hasAttribute ( *par1 ) );
   }
 }
 
@@ -251,8 +249,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE3 )
   {
     QString par1 = hb_parc(1);
     QString par2 = hb_parc(2);
-    bool b = obj->hasAttribute ( par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->hasAttribute ( par1, par2 ) );
   }
 }
 

@@ -542,8 +542,7 @@ HB_FUNC_STATIC( QBYTEARRAY_CONTAINS1 )
   if( obj )
   {
     QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->contains ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->contains ( *par1 ) );
   }
 }
 
@@ -557,8 +556,7 @@ HB_FUNC_STATIC( QBYTEARRAY_CONTAINS2 )
   if( obj )
   {
     const char * par1 = hb_parc(1);
-    bool b = obj->contains (  (const char *) par1 );
-    hb_retl( b );
+    hb_retl( obj->contains (  (const char *) par1 ) );
   }
 }
 
@@ -572,8 +570,7 @@ HB_FUNC_STATIC( QBYTEARRAY_CONTAINS3 )
   if( obj )
   {
     char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
-    bool b = obj->contains ( par1 );
-    hb_retl( b );
+    hb_retl( obj->contains ( par1 ) );
   }
 }
 
@@ -701,8 +698,7 @@ HB_FUNC_STATIC( QBYTEARRAY_ENDSWITH1 )
   if( obj )
   {
     QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->endsWith ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->endsWith ( *par1 ) );
   }
 }
 
@@ -716,8 +712,7 @@ HB_FUNC_STATIC( QBYTEARRAY_ENDSWITH2 )
   if( obj )
   {
     const char * par1 = hb_parc(1);
-    bool b = obj->endsWith (  (const char *) par1 );
-    hb_retl( b );
+    hb_retl( obj->endsWith (  (const char *) par1 ) );
   }
 }
 
@@ -731,8 +726,7 @@ HB_FUNC_STATIC( QBYTEARRAY_ENDSWITH3 )
   if( obj )
   {
     char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
-    bool b = obj->endsWith ( par1 );
-    hb_retl( b );
+    hb_retl( obj->endsWith ( par1 ) );
   }
 }
 
@@ -977,8 +971,7 @@ HB_FUNC_STATIC( QBYTEARRAY_ISEMPTY )
   QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isEmpty (  );
-    hb_retl( b );
+    hb_retl( obj->isEmpty (  ) );
   }
 }
 
@@ -991,8 +984,7 @@ HB_FUNC_STATIC( QBYTEARRAY_ISNULL )
   QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isNull (  );
-    hb_retl( b );
+    hb_retl( obj->isNull (  ) );
   }
 }
 
@@ -2051,8 +2043,7 @@ HB_FUNC_STATIC( QBYTEARRAY_STARTSWITH1 )
   if( obj )
   {
     QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->startsWith ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->startsWith ( *par1 ) );
   }
 }
 
@@ -2066,8 +2057,7 @@ HB_FUNC_STATIC( QBYTEARRAY_STARTSWITH2 )
   if( obj )
   {
     const char * par1 = hb_parc(1);
-    bool b = obj->startsWith (  (const char *) par1 );
-    hb_retl( b );
+    hb_retl( obj->startsWith (  (const char *) par1 ) );
   }
 }
 
@@ -2081,8 +2071,7 @@ HB_FUNC_STATIC( QBYTEARRAY_STARTSWITH3 )
   if( obj )
   {
     char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
-    bool b = obj->startsWith ( par1 );
-    hb_retl( b );
+    hb_retl( obj->startsWith ( par1 ) );
   }
 }
 

@@ -391,8 +391,7 @@ HB_FUNC_STATIC( QRECT_CONTAINS1 )
   {
     QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     bool par2 = ISNIL(2)? false : hb_parl(2);
-    bool b = obj->contains ( *par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->contains ( *par1, par2 ) );
   }
 }
 
@@ -408,8 +407,7 @@ HB_FUNC_STATIC( QRECT_CONTAINS2 )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     bool par3 = hb_parl(3);
-    bool b = obj->contains ( par1, par2, par3 );
-    hb_retl( b );
+    hb_retl( obj->contains ( par1, par2, par3 ) );
   }
 }
 
@@ -424,8 +422,7 @@ HB_FUNC_STATIC( QRECT_CONTAINS3 )
   {
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
-    bool b = obj->contains ( par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->contains ( par1, par2 ) );
   }
 }
 
@@ -440,8 +437,7 @@ HB_FUNC_STATIC( QRECT_CONTAINS4 )
   {
     QRect * par1 = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     bool par2 = ISNIL(2)? false : hb_parl(2);
-    bool b = obj->contains ( *par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->contains ( *par1, par2 ) );
   }
 }
 
@@ -553,8 +549,7 @@ HB_FUNC_STATIC( QRECT_INTERSECTS )
   if( obj )
   {
     QRect * par1 = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->intersects ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->intersects ( *par1 ) );
   }
 }
 
@@ -567,8 +562,7 @@ HB_FUNC_STATIC( QRECT_ISEMPTY )
   QRect * obj = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isEmpty (  );
-    hb_retl( b );
+    hb_retl( obj->isEmpty (  ) );
   }
 }
 
@@ -581,8 +575,7 @@ HB_FUNC_STATIC( QRECT_ISNULL )
   QRect * obj = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isNull (  );
-    hb_retl( b );
+    hb_retl( obj->isNull (  ) );
   }
 }
 
@@ -595,8 +588,7 @@ HB_FUNC_STATIC( QRECT_ISVALID )
   QRect * obj = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isValid (  );
-    hb_retl( b );
+    hb_retl( obj->isValid (  ) );
   }
 }
 

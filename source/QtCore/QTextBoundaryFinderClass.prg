@@ -228,8 +228,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_ISVALID )
   QTextBoundaryFinder * obj = (QTextBoundaryFinder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isValid (  );
-    hb_retl( b );
+    hb_retl( obj->isValid (  ) );
   }
 }
 
@@ -355,8 +354,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_ISATBOUNDARY )
   QTextBoundaryFinder * obj = (QTextBoundaryFinder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isAtBoundary (  );
-    hb_retl( b );
+    hb_retl( obj->isAtBoundary (  ) );
   }
 }
 

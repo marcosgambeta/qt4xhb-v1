@@ -1556,8 +1556,7 @@ HB_FUNC_STATIC( QOBJECT_BLOCKSIGNALS )
   if( obj )
   {
     bool par1 = hb_parl(1);
-    bool b = obj->blockSignals ( par1 );
-    hb_retl( b );
+    hb_retl( obj->blockSignals ( par1 ) );
   }
 }
 
@@ -1690,8 +1689,7 @@ HB_FUNC_STATIC( QOBJECT_EVENT )
   if( obj )
   {
     QEvent * par1 = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->event ( par1 );
-    hb_retl( b );
+    hb_retl( obj->event ( par1 ) );
   }
 }
 
@@ -1706,8 +1704,7 @@ HB_FUNC_STATIC( QOBJECT_EVENTFILTER )
   {
     QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QEvent * par2 = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->eventFilter ( par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->eventFilter ( par1, par2 ) );
   }
 }
 
@@ -1842,8 +1839,7 @@ HB_FUNC_STATIC( QOBJECT_INHERITS )
   if( obj )
   {
     const char * par1 = hb_parc(1);
-    bool b = obj->inherits (  (const char *) par1 );
-    hb_retl( b );
+    hb_retl( obj->inherits (  (const char *) par1 ) );
   }
 }
 
@@ -1871,8 +1867,7 @@ HB_FUNC_STATIC( QOBJECT_ISWIDGETTYPE )
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isWidgetType (  );
-    hb_retl( b );
+    hb_retl( obj->isWidgetType (  ) );
   }
 }
 
@@ -2019,8 +2014,7 @@ HB_FUNC_STATIC( QOBJECT_SETPROPERTY )
   {
     const char * par1 = hb_parc(1);
     QVariant * par2 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->setProperty (  (const char *) par1, *par2 );
-    hb_retl( b );
+    hb_retl( obj->setProperty (  (const char *) par1, *par2 ) );
   }
 }
 
@@ -2033,8 +2027,7 @@ HB_FUNC_STATIC( QOBJECT_SIGNALSBLOCKED )
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->signalsBlocked (  );
-    hb_retl( b );
+    hb_retl( obj->signalsBlocked (  ) );
   }
 }
 

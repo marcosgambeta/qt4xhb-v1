@@ -136,8 +136,7 @@ HB_FUNC_STATIC( QEVENTLOOP_ISRUNNING )
   QEventLoop * obj = (QEventLoop *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isRunning (  );
-    hb_retl( b );
+    hb_retl( obj->isRunning (  ) );
   }
 }
 
@@ -151,8 +150,7 @@ HB_FUNC_STATIC( QEVENTLOOP_PROCESSEVENTS1 )
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QEventLoop::AllEvents : hb_parni(1);
-    bool b = obj->processEvents (  (QEventLoop::ProcessEventsFlags) par1 );
-    hb_retl( b );
+    hb_retl( obj->processEvents (  (QEventLoop::ProcessEventsFlags) par1 ) );
   }
 }
 

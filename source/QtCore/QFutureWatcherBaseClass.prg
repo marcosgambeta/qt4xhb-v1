@@ -164,8 +164,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISSTARTED )
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isStarted (  );
-    hb_retl( b );
+    hb_retl( obj->isStarted (  ) );
   }
 }
 
@@ -178,8 +177,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISFINISHED )
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isFinished (  );
-    hb_retl( b );
+    hb_retl( obj->isFinished (  ) );
   }
 }
 
@@ -192,8 +190,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISRUNNING )
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isRunning (  );
-    hb_retl( b );
+    hb_retl( obj->isRunning (  ) );
   }
 }
 
@@ -206,8 +203,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISCANCELED )
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isCanceled (  );
-    hb_retl( b );
+    hb_retl( obj->isCanceled (  ) );
   }
 }
 
@@ -220,8 +216,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISPAUSED )
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isPaused (  );
-    hb_retl( b );
+    hb_retl( obj->isPaused (  ) );
   }
 }
 
@@ -264,8 +259,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_EVENT )
   if( obj )
   {
     QEvent * par1 = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->event ( par1 );
-    hb_retl( b );
+    hb_retl( obj->event ( par1 ) );
   }
 }
 

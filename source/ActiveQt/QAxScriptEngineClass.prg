@@ -119,8 +119,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_HASINTROSPECTION )
   QAxScriptEngine * obj = (QAxScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasIntrospection (  );
-    hb_retl( b );
+    hb_retl( obj->hasIntrospection (  ) );
   }
 }
 
@@ -133,8 +132,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_ISVALID )
   QAxScriptEngine * obj = (QAxScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isValid (  );
-    hb_retl( b );
+    hb_retl( obj->isValid (  ) );
   }
 }
 

@@ -264,8 +264,7 @@ HB_FUNC_STATIC( QBUFFER_ATEND )
   QBuffer * obj = (QBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->atEnd (  );
-    hb_retl( b );
+    hb_retl( obj->atEnd (  ) );
   }
 }
 
@@ -278,8 +277,7 @@ HB_FUNC_STATIC( QBUFFER_CANREADLINE )
   QBuffer * obj = (QBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->canReadLine (  );
-    hb_retl( b );
+    hb_retl( obj->canReadLine (  ) );
   }
 }
 
@@ -307,8 +305,7 @@ HB_FUNC_STATIC( QBUFFER_OPEN )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->open (  (QBuffer::OpenMode) par1 );
-    hb_retl( b );
+    hb_retl( obj->open (  (QBuffer::OpenMode) par1 ) );
   }
 }
 
@@ -336,8 +333,7 @@ HB_FUNC_STATIC( QBUFFER_SEEK )
   if( obj )
   {
     qint64 par1 = hb_parni(1);
-    bool b = obj->seek ( par1 );
-    hb_retl( b );
+    hb_retl( obj->seek ( par1 ) );
   }
 }
 

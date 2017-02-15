@@ -140,8 +140,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_ACQUIRE )
   QSystemSemaphore * obj = (QSystemSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->acquire (  );
-    hb_retl( b );
+    hb_retl( obj->acquire (  ) );
   }
 }
 
@@ -197,8 +196,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_RELEASE )
   if( obj )
   {
     int par1 = ISNIL(1)? 1 : hb_parni(1);
-    bool b = obj->release ( par1 );
-    hb_retl( b );
+    hb_retl( obj->release ( par1 ) );
   }
 }
 

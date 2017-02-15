@@ -193,8 +193,7 @@ HB_FUNC_STATIC( QRESOURCE_ISCOMPRESSED )
   QResource * obj = (QResource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isCompressed (  );
-    hb_retl( b );
+    hb_retl( obj->isCompressed (  ) );
   }
 }
 
@@ -207,8 +206,7 @@ HB_FUNC_STATIC( QRESOURCE_ISVALID )
   QResource * obj = (QResource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isValid (  );
-    hb_retl( b );
+    hb_retl( obj->isValid (  ) );
   }
 }
 
@@ -279,8 +277,7 @@ HB_FUNC_STATIC( QRESOURCE_REGISTERRESOURCE )
 {
   QString par1 = hb_parc(1);
   QString par2 = ISNIL(2)? QString() : hb_parc(2);
-  bool b = QResource::registerResource ( par1, par2 );
-  hb_retl( b );
+  hb_retl( QResource::registerResource ( par1, par2 ) );
 }
 
 
@@ -292,8 +289,7 @@ HB_FUNC_STATIC( QRESOURCE_UNREGISTERRESOURCE )
 {
   QString par1 = hb_parc(1);
   QString par2 = ISNIL(2)? QString() : hb_parc(2);
-  bool b = QResource::unregisterResource ( par1, par2 );
-  hb_retl( b );
+  hb_retl( QResource::unregisterResource ( par1, par2 ) );
 }
 
 

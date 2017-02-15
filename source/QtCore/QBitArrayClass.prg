@@ -196,8 +196,7 @@ HB_FUNC_STATIC( QBITARRAY_AT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->at ( par1 );
-    hb_retl( b );
+    hb_retl( obj->at ( par1 ) );
   }
 }
 
@@ -285,8 +284,7 @@ HB_FUNC_STATIC( QBITARRAY_FILL1 )
   {
     bool par1 = hb_parl(1);
     int par2 = ISNIL(2)? -1 : hb_parni(2);
-    bool b = obj->fill ( par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->fill ( par1, par2 ) );
   }
 }
 
@@ -331,8 +329,7 @@ HB_FUNC_STATIC( QBITARRAY_ISEMPTY )
   QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isEmpty (  );
-    hb_retl( b );
+    hb_retl( obj->isEmpty (  ) );
   }
 }
 
@@ -345,8 +342,7 @@ HB_FUNC_STATIC( QBITARRAY_ISNULL )
   QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isNull (  );
-    hb_retl( b );
+    hb_retl( obj->isNull (  ) );
   }
 }
 
@@ -435,8 +431,7 @@ HB_FUNC_STATIC( QBITARRAY_TESTBIT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->testBit ( par1 );
-    hb_retl( b );
+    hb_retl( obj->testBit ( par1 ) );
   }
 }
 
@@ -450,8 +445,7 @@ HB_FUNC_STATIC( QBITARRAY_TOGGLEBIT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->toggleBit ( par1 );
-    hb_retl( b );
+    hb_retl( obj->toggleBit ( par1 ) );
   }
 }
 

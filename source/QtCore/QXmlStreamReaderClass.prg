@@ -404,8 +404,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ATEND )
   QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->atEnd (  );
-    hb_retl( b );
+    hb_retl( obj->atEnd (  ) );
   }
 }
 
@@ -614,8 +613,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_HASERROR )
   QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasError (  );
-    hb_retl( b );
+    hb_retl( obj->hasError (  ) );
   }
 }
 
@@ -628,8 +626,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISCDATA )
   QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isCDATA (  );
-    hb_retl( b );
+    hb_retl( obj->isCDATA (  ) );
   }
 }
 
@@ -642,8 +639,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISCHARACTERS )
   QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isCharacters (  );
-    hb_retl( b );
+    hb_retl( obj->isCharacters (  ) );
   }
 }
 
@@ -656,8 +652,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISCOMMENT )
   QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isComment (  );
-    hb_retl( b );
+    hb_retl( obj->isComment (  ) );
   }
 }
 
@@ -670,8 +665,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISDTD )
   QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isDTD (  );
-    hb_retl( b );
+    hb_retl( obj->isDTD (  ) );
   }
 }
 
@@ -684,8 +678,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISENDDOCUMENT )
   QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isEndDocument (  );
-    hb_retl( b );
+    hb_retl( obj->isEndDocument (  ) );
   }
 }
 
@@ -698,8 +691,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISENDELEMENT )
   QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isEndElement (  );
-    hb_retl( b );
+    hb_retl( obj->isEndElement (  ) );
   }
 }
 
@@ -712,8 +704,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISENTITYREFERENCE )
   QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isEntityReference (  );
-    hb_retl( b );
+    hb_retl( obj->isEntityReference (  ) );
   }
 }
 
@@ -726,8 +717,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISPROCESSINGINSTRUCTION )
   QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isProcessingInstruction (  );
-    hb_retl( b );
+    hb_retl( obj->isProcessingInstruction (  ) );
   }
 }
 
@@ -740,8 +730,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISSTANDALONEDOCUMENT )
   QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isStandaloneDocument (  );
-    hb_retl( b );
+    hb_retl( obj->isStandaloneDocument (  ) );
   }
 }
 
@@ -754,8 +743,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISSTARTDOCUMENT )
   QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isStartDocument (  );
-    hb_retl( b );
+    hb_retl( obj->isStartDocument (  ) );
   }
 }
 
@@ -768,8 +756,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISSTARTELEMENT )
   QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isStartElement (  );
-    hb_retl( b );
+    hb_retl( obj->isStartElement (  ) );
   }
 }
 
@@ -782,8 +769,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISWHITESPACE )
   QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isWhitespace (  );
-    hb_retl( b );
+    hb_retl( obj->isWhitespace (  ) );
   }
 }
 
@@ -838,8 +824,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NAMESPACEPROCESSING )
   QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->namespaceProcessing (  );
-    hb_retl( b );
+    hb_retl( obj->namespaceProcessing (  ) );
   }
 }
 
@@ -980,8 +965,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_READNEXTSTARTELEMENT )
   QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->readNextStartElement (  );
-    hb_retl( b );
+    hb_retl( obj->readNextStartElement (  ) );
   }
 }
 

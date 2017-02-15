@@ -372,8 +372,7 @@ HB_FUNC_STATIC( QFILEINFO_CACHING )
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->caching (  );
-    hb_retl( b );
+    hb_retl( obj->caching (  ) );
   }
 }
 
@@ -470,8 +469,7 @@ HB_FUNC_STATIC( QFILEINFO_EXISTS )
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->exists (  );
-    hb_retl( b );
+    hb_retl( obj->exists (  ) );
   }
 }
 
@@ -540,8 +538,7 @@ HB_FUNC_STATIC( QFILEINFO_ISABSOLUTE )
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isAbsolute (  );
-    hb_retl( b );
+    hb_retl( obj->isAbsolute (  ) );
   }
 }
 
@@ -554,8 +551,7 @@ HB_FUNC_STATIC( QFILEINFO_ISBUNDLE )
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isBundle (  );
-    hb_retl( b );
+    hb_retl( obj->isBundle (  ) );
   }
 }
 
@@ -568,8 +564,7 @@ HB_FUNC_STATIC( QFILEINFO_ISDIR )
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isDir (  );
-    hb_retl( b );
+    hb_retl( obj->isDir (  ) );
   }
 }
 
@@ -582,8 +577,7 @@ HB_FUNC_STATIC( QFILEINFO_ISEXECUTABLE )
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isExecutable (  );
-    hb_retl( b );
+    hb_retl( obj->isExecutable (  ) );
   }
 }
 
@@ -596,8 +590,7 @@ HB_FUNC_STATIC( QFILEINFO_ISFILE )
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isFile (  );
-    hb_retl( b );
+    hb_retl( obj->isFile (  ) );
   }
 }
 
@@ -610,8 +603,7 @@ HB_FUNC_STATIC( QFILEINFO_ISHIDDEN )
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isHidden (  );
-    hb_retl( b );
+    hb_retl( obj->isHidden (  ) );
   }
 }
 
@@ -625,8 +617,7 @@ HB_FUNC_STATIC( QFILEINFO_ISREADABLE )
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isReadable (  );
-    hb_retl( b );
+    hb_retl( obj->isReadable (  ) );
   }
 }
 
@@ -639,8 +630,7 @@ HB_FUNC_STATIC( QFILEINFO_ISRELATIVE )
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isRelative (  );
-    hb_retl( b );
+    hb_retl( obj->isRelative (  ) );
   }
 }
 
@@ -653,8 +643,7 @@ HB_FUNC_STATIC( QFILEINFO_ISROOT )
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isRoot (  );
-    hb_retl( b );
+    hb_retl( obj->isRoot (  ) );
   }
 }
 
@@ -667,8 +656,7 @@ HB_FUNC_STATIC( QFILEINFO_ISSYMLINK )
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isSymLink (  );
-    hb_retl( b );
+    hb_retl( obj->isSymLink (  ) );
   }
 }
 
@@ -681,8 +669,7 @@ HB_FUNC_STATIC( QFILEINFO_ISWRITABLE )
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isWritable (  );
-    hb_retl( b );
+    hb_retl( obj->isWritable (  ) );
   }
 }
 
@@ -723,8 +710,7 @@ HB_FUNC_STATIC( QFILEINFO_MAKEABSOLUTE )
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->makeAbsolute (  );
-    hb_retl( b );
+    hb_retl( obj->makeAbsolute (  ) );
   }
 }
 
@@ -780,8 +766,7 @@ HB_FUNC_STATIC( QFILEINFO_PERMISSION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->permission (  (QFile::Permissions) par1 );
-    hb_retl( b );
+    hb_retl( obj->permission (  (QFile::Permissions) par1 ) );
   }
 }
 

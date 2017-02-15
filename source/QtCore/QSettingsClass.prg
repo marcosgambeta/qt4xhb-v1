@@ -393,8 +393,7 @@ HB_FUNC_STATIC( QSETTINGS_CONTAINS )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    bool b = obj->contains ( par1 );
-    hb_retl( b );
+    hb_retl( obj->contains ( par1 ) );
   }
 }
 
@@ -435,8 +434,7 @@ HB_FUNC_STATIC( QSETTINGS_FALLBACKSENABLED )
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->fallbacksEnabled (  );
-    hb_retl( b );
+    hb_retl( obj->fallbacksEnabled (  ) );
   }
 }
 
@@ -505,8 +503,7 @@ HB_FUNC_STATIC( QSETTINGS_ISWRITABLE )
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isWritable (  );
-    hb_retl( b );
+    hb_retl( obj->isWritable (  ) );
   }
 }
 

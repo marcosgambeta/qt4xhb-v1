@@ -146,8 +146,7 @@ static bool isRegistered(int type)
 HB_FUNC_STATIC( QMETATYPE_ISREGISTERED )
 {
   int par1 = hb_parni(1);
-  bool b = QMetaType::isRegistered ( par1 );
-  hb_retl( b );
+  hb_retl( QMetaType::isRegistered ( par1 ) );
 }
 
 
@@ -194,8 +193,7 @@ HB_FUNC_STATIC( QMETATYPE_SAVE )
   QDataStream * par1 = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = hb_parni(2);
   const void * par3 = (const void *) hb_parptr(3);
-  bool b = QMetaType::save ( *par1, par2, par3 );
-  hb_retl( b );
+  hb_retl( QMetaType::save ( *par1, par2, par3 ) );
 }
 
 
@@ -207,8 +205,7 @@ HB_FUNC_STATIC( QMETATYPE_LOAD )
   QDataStream * par1 = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = hb_parni(2);
   void * par3 = (void *) hb_parptr(3);
-  bool b = QMetaType::load ( *par1, par2, par3 );
-  hb_retl( b );
+  hb_retl( QMetaType::load ( *par1, par2, par3 ) );
 }
 
 

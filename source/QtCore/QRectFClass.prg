@@ -417,8 +417,7 @@ HB_FUNC_STATIC( QRECTF_CONTAINS1 )
   if( obj )
   {
     QPointF * par1 = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->contains ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->contains ( *par1 ) );
   }
 }
 
@@ -433,8 +432,7 @@ HB_FUNC_STATIC( QRECTF_CONTAINS2 )
   {
     qreal par1 = hb_parnd(1);
     qreal par2 = hb_parnd(2);
-    bool b = obj->contains ( par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->contains ( par1, par2 ) );
   }
 }
 
@@ -448,8 +446,7 @@ HB_FUNC_STATIC( QRECTF_CONTAINS3 )
   if( obj )
   {
     QRectF * par1 = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->contains ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->contains ( *par1 ) );
   }
 }
 
@@ -556,8 +553,7 @@ HB_FUNC_STATIC( QRECTF_INTERSECTS )
   if( obj )
   {
     QRectF * par1 = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->intersects ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->intersects ( *par1 ) );
   }
 }
 
@@ -570,8 +566,7 @@ HB_FUNC_STATIC( QRECTF_ISEMPTY )
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isEmpty (  );
-    hb_retl( b );
+    hb_retl( obj->isEmpty (  ) );
   }
 }
 
@@ -584,8 +579,7 @@ HB_FUNC_STATIC( QRECTF_ISNULL )
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isNull (  );
-    hb_retl( b );
+    hb_retl( obj->isNull (  ) );
   }
 }
 
@@ -598,8 +592,7 @@ HB_FUNC_STATIC( QRECTF_ISVALID )
   QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isValid (  );
-    hb_retl( b );
+    hb_retl( obj->isValid (  ) );
   }
 }
 

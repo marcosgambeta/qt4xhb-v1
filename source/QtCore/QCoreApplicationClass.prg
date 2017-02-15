@@ -154,8 +154,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_FILTEREVENT )
   {
     void * par1 = (void *) hb_parptr(1);
     long par2;
-    bool b = obj->filterEvent ( par1, &par2 );
-    hb_retl( b );
+    hb_retl( obj->filterEvent ( par1, &par2 ) );
     hb_stornl( par2, 2 );
   }
 }
@@ -171,8 +170,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_NOTIFY )
   {
     QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QEvent * par2 = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->notify ( par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->notify ( par1, par2 ) );
   }
 }
 
@@ -279,8 +277,7 @@ bool closingDown ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_CLOSINGDOWN )
 {
-  bool b = QCoreApplication::closingDown (  );
-  hb_retl( b );
+  hb_retl( QCoreApplication::closingDown (  ) );
 }
 
 
@@ -320,8 +317,7 @@ bool hasPendingEvents ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_HASPENDINGEVENTS )
 {
-  bool b = QCoreApplication::hasPendingEvents (  );
-  hb_retl( b );
+  hb_retl( QCoreApplication::hasPendingEvents (  ) );
 }
 
 
@@ -530,8 +526,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_SENDEVENT )
 {
   QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QEvent * par2 = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  bool b = QCoreApplication::sendEvent ( par1, par2 );
-  hb_retl( b );
+  hb_retl( QCoreApplication::sendEvent ( par1, par2 ) );
 }
 
 
@@ -652,8 +647,7 @@ bool startingUp ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_STARTINGUP )
 {
-  bool b = QCoreApplication::startingUp (  );
-  hb_retl( b );
+  hb_retl( QCoreApplication::startingUp (  ) );
 }
 
 
@@ -663,8 +657,7 @@ bool testAttribute ( Qt::ApplicationAttribute attribute )
 HB_FUNC_STATIC( QCOREAPPLICATION_TESTATTRIBUTE )
 {
   int par1 = hb_parni(1);
-  bool b = QCoreApplication::testAttribute (  (Qt::ApplicationAttribute) par1 );
-  hb_retl( b );
+  hb_retl( QCoreApplication::testAttribute (  (Qt::ApplicationAttribute) par1 ) );
 }
 
 

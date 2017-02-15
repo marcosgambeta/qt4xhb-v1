@@ -377,8 +377,7 @@ HB_FUNC_STATIC( QMETAMETHOD_INVOKE1 )
     QGenericArgument par11 = ISNIL(11)? QGenericArgument() : *(QGenericArgument *) hb_itemGetPtr( hb_objSendMsg( hb_param(11, HB_IT_OBJECT ), "POINTER", 0 ) );
     QGenericArgument par12 = ISNIL(12)? QGenericArgument() : *(QGenericArgument *) hb_itemGetPtr( hb_objSendMsg( hb_param(12, HB_IT_OBJECT ), "POINTER", 0 ) );
     QGenericArgument par13 = ISNIL(13)? QGenericArgument() : *(QGenericArgument *) hb_itemGetPtr( hb_objSendMsg( hb_param(13, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->invoke ( par1,  (Qt::ConnectionType) par2, *par3, par4, par5, par6, par7, par8, par9, par10, par11, par12, par13 );
-    hb_retl( b );
+    hb_retl( obj->invoke ( par1,  (Qt::ConnectionType) par2, *par3, par4, par5, par6, par7, par8, par9, par10, par11, par12, par13 ) );
   }
 }
 
@@ -403,8 +402,7 @@ HB_FUNC_STATIC( QMETAMETHOD_INVOKE2 )
     QGenericArgument par10 = ISNIL(10)? QGenericArgument() : *(QGenericArgument *) hb_itemGetPtr( hb_objSendMsg( hb_param(10, HB_IT_OBJECT ), "POINTER", 0 ) );
     QGenericArgument par11 = ISNIL(11)? QGenericArgument() : *(QGenericArgument *) hb_itemGetPtr( hb_objSendMsg( hb_param(11, HB_IT_OBJECT ), "POINTER", 0 ) );
     QGenericArgument par12 = ISNIL(12)? QGenericArgument() : *(QGenericArgument *) hb_itemGetPtr( hb_objSendMsg( hb_param(12, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->invoke ( par1, *par2, par3, par4, par5, par6, par7, par8, par9, par10, par11, par12 );
-    hb_retl( b );
+    hb_retl( obj->invoke ( par1, *par2, par3, par4, par5, par6, par7, par8, par9, par10, par11, par12 ) );
   }
 }
 
@@ -429,8 +427,7 @@ HB_FUNC_STATIC( QMETAMETHOD_INVOKE3 )
     QGenericArgument par10 = ISNIL(10)? QGenericArgument() : *(QGenericArgument *) hb_itemGetPtr( hb_objSendMsg( hb_param(10, HB_IT_OBJECT ), "POINTER", 0 ) );
     QGenericArgument par11 = ISNIL(11)? QGenericArgument() : *(QGenericArgument *) hb_itemGetPtr( hb_objSendMsg( hb_param(11, HB_IT_OBJECT ), "POINTER", 0 ) );
     QGenericArgument par12 = ISNIL(12)? QGenericArgument() : *(QGenericArgument *) hb_itemGetPtr( hb_objSendMsg( hb_param(12, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->invoke ( par1,  (Qt::ConnectionType) par2, par3, par4, par5, par6, par7, par8, par9, par10, par11, par12 );
-    hb_retl( b );
+    hb_retl( obj->invoke ( par1,  (Qt::ConnectionType) par2, par3, par4, par5, par6, par7, par8, par9, par10, par11, par12 ) );
   }
 }
 
@@ -454,8 +451,7 @@ HB_FUNC_STATIC( QMETAMETHOD_INVOKE4 )
     QGenericArgument par9 = ISNIL(9)? QGenericArgument() : *(QGenericArgument *) hb_itemGetPtr( hb_objSendMsg( hb_param(9, HB_IT_OBJECT ), "POINTER", 0 ) );
     QGenericArgument par10 = ISNIL(10)? QGenericArgument() : *(QGenericArgument *) hb_itemGetPtr( hb_objSendMsg( hb_param(10, HB_IT_OBJECT ), "POINTER", 0 ) );
     QGenericArgument par11 = ISNIL(11)? QGenericArgument() : *(QGenericArgument *) hb_itemGetPtr( hb_objSendMsg( hb_param(11, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->invoke ( par1, par2, par3, par4, par5, par6, par7, par8, par9, par10, par11 );
-    hb_retl( b );
+    hb_retl( obj->invoke ( par1, par2, par3, par4, par5, par6, par7, par8, par9, par10, par11 ) );
   }
 }
 

@@ -1059,8 +1059,7 @@ HB_FUNC_STATIC( QVARIANT_CANCONVERT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->canConvert (  (QVariant::Type) par1 );
-    hb_retl( b );
+    hb_retl( obj->canConvert (  (QVariant::Type) par1 ) );
   }
 }
 
@@ -1104,8 +1103,7 @@ HB_FUNC_STATIC( QVARIANT_CONVERT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->convert (  (QVariant::Type) par1 );
-    hb_retl( b );
+    hb_retl( obj->convert (  (QVariant::Type) par1 ) );
   }
 }
 
@@ -1118,8 +1116,7 @@ HB_FUNC_STATIC( QVARIANT_ISNULL )
   QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isNull (  );
-    hb_retl( b );
+    hb_retl( obj->isNull (  ) );
   }
 }
 
@@ -1132,8 +1129,7 @@ HB_FUNC_STATIC( QVARIANT_ISVALID )
   QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isValid (  );
-    hb_retl( b );
+    hb_retl( obj->isValid (  ) );
   }
 }
 
@@ -1161,8 +1157,7 @@ HB_FUNC_STATIC( QVARIANT_TOBOOL )
   QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->toBool (  );
-    hb_retl( b );
+    hb_retl( obj->toBool (  ) );
   }
 }
 

@@ -124,8 +124,7 @@ HB_FUNC_STATIC( QTIMER_ISACTIVE )
   QTimer * obj = (QTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isActive (  );
-    hb_retl( b );
+    hb_retl( obj->isActive (  ) );
   }
 }
 
@@ -138,8 +137,7 @@ HB_FUNC_STATIC( QTIMER_ISSINGLESHOT )
   QTimer * obj = (QTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isSingleShot (  );
-    hb_retl( b );
+    hb_retl( obj->isSingleShot (  ) );
   }
 }
 

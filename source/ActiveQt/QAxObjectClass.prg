@@ -186,8 +186,7 @@ HB_FUNC_STATIC( QAXOBJECT_DOVERB )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    bool b = obj->doVerb ( par1 );
-    hb_retl( b );
+    hb_retl( obj->doVerb ( par1 ) );
   }
 }
 
@@ -362,8 +361,7 @@ HB_FUNC_STATIC( QAXOBJECT_ISNULL )
   QAxObject * obj = (QAxObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isNull (  );
-    hb_retl( b );
+    hb_retl( obj->isNull (  ) );
   }
 }
 
@@ -378,8 +376,7 @@ HB_FUNC_STATIC( QAXOBJECT_PROPERTYWRITABLE )
   if( obj )
   {
     const char * par1 = hb_parc(1);
-    bool b = obj->propertyWritable (  (const char *) par1 );
-    hb_retl( b );
+    hb_retl( obj->propertyWritable (  (const char *) par1 ) );
   }
 }
 
@@ -455,8 +452,7 @@ HB_FUNC_STATIC( QAXOBJECT_SETCONTROL )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    bool b = obj->setControl ( par1 );
-    hb_retl( b );
+    hb_retl( obj->setControl ( par1 ) );
   }
 }
 

@@ -338,8 +338,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISPROGRESSUPDATENEEDED )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isProgressUpdateNeeded (  );
-    hb_retl( b );
+    hb_retl( obj->isProgressUpdateNeeded (  ) );
   }
 }
 
@@ -455,8 +454,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_QUERYSTATE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->queryState (  (QFutureInterfaceBase::State) par1 );
-    hb_retl( b );
+    hb_retl( obj->queryState (  (QFutureInterfaceBase::State) par1 ) );
   }
 }
 
@@ -469,8 +467,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISRUNNING )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isRunning (  );
-    hb_retl( b );
+    hb_retl( obj->isRunning (  ) );
   }
 }
 
@@ -483,8 +480,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISSTARTED )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isStarted (  );
-    hb_retl( b );
+    hb_retl( obj->isStarted (  ) );
   }
 }
 
@@ -497,8 +493,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISCANCELED )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isCanceled (  );
-    hb_retl( b );
+    hb_retl( obj->isCanceled (  ) );
   }
 }
 
@@ -511,8 +506,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISFINISHED )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isFinished (  );
-    hb_retl( b );
+    hb_retl( obj->isFinished (  ) );
   }
 }
 
@@ -525,8 +519,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISPAUSED )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isPaused (  );
-    hb_retl( b );
+    hb_retl( obj->isPaused (  ) );
   }
 }
 
@@ -539,8 +532,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISTHROTTLED )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isThrottled (  );
-    hb_retl( b );
+    hb_retl( obj->isThrottled (  ) );
   }
 }
 
@@ -554,8 +546,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISRESULTREADYAT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->isResultReadyAt ( par1 );
-    hb_retl( b );
+    hb_retl( obj->isResultReadyAt ( par1 ) );
   }
 }
 
@@ -640,8 +631,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_WAITFORNEXTRESULT )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->waitForNextResult (  );
-    hb_retl( b );
+    hb_retl( obj->waitForNextResult (  ) );
   }
 }
 

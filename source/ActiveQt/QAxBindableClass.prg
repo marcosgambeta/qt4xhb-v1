@@ -153,8 +153,7 @@ HB_FUNC_STATIC( QAXBINDABLE_READDATA )
   {
     QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QString par2 = hb_parc(2);
-    bool b = obj->readData ( par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->readData ( par1, par2 ) );
   }
 }
 
@@ -186,8 +185,7 @@ HB_FUNC_STATIC( QAXBINDABLE_WRITEDATA )
   if( obj )
   {
     QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->writeData ( par1 );
-    hb_retl( b );
+    hb_retl( obj->writeData ( par1 ) );
   }
 }
 

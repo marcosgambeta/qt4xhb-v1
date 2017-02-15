@@ -209,8 +209,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_CREATE )
   {
     int par1 = hb_parni(1);
     int par2 = ISNIL(2)? (int) QSharedMemory::ReadWrite : hb_parni(2);
-    bool b = obj->create ( par1,  (QSharedMemory::AccessMode) par2 );
-    hb_retl( b );
+    hb_retl( obj->create ( par1,  (QSharedMemory::AccessMode) par2 ) );
   }
 }
 
@@ -238,8 +237,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_ATTACH )
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QSharedMemory::ReadWrite : hb_parni(1);
-    bool b = obj->attach (  (QSharedMemory::AccessMode) par1 );
-    hb_retl( b );
+    hb_retl( obj->attach (  (QSharedMemory::AccessMode) par1 ) );
   }
 }
 
@@ -252,8 +250,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_ISATTACHED )
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isAttached (  );
-    hb_retl( b );
+    hb_retl( obj->isAttached (  ) );
   }
 }
 
@@ -266,8 +263,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_DETACH )
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->detach (  );
-    hb_retl( b );
+    hb_retl( obj->detach (  ) );
   }
 }
 
@@ -296,8 +292,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_LOCK )
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->lock (  );
-    hb_retl( b );
+    hb_retl( obj->lock (  ) );
   }
 }
 
@@ -310,8 +305,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_UNLOCK )
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->unlock (  );
-    hb_retl( b );
+    hb_retl( obj->unlock (  ) );
   }
 }
 

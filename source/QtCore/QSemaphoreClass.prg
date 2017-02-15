@@ -187,8 +187,7 @@ HB_FUNC_STATIC( QSEMAPHORE_TRYACQUIRE1 )
   if( obj )
   {
     int par1 = ISNIL(1)? 1 : hb_parni(1);
-    bool b = obj->tryAcquire ( par1 );
-    hb_retl( b );
+    hb_retl( obj->tryAcquire ( par1 ) );
   }
 }
 
@@ -203,8 +202,7 @@ HB_FUNC_STATIC( QSEMAPHORE_TRYACQUIRE2 )
   {
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
-    bool b = obj->tryAcquire ( par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->tryAcquire ( par1, par2 ) );
   }
 }
 

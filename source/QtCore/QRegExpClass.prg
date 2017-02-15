@@ -305,8 +305,7 @@ HB_FUNC_STATIC( QREGEXP_EXACTMATCH )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    bool b = obj->exactMatch ( par1 );
-    hb_retl( b );
+    hb_retl( obj->exactMatch ( par1 ) );
   }
 }
 
@@ -336,8 +335,7 @@ HB_FUNC_STATIC( QREGEXP_ISEMPTY )
   QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isEmpty (  );
-    hb_retl( b );
+    hb_retl( obj->isEmpty (  ) );
   }
 }
 
@@ -350,8 +348,7 @@ HB_FUNC_STATIC( QREGEXP_ISMINIMAL )
   QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isMinimal (  );
-    hb_retl( b );
+    hb_retl( obj->isMinimal (  ) );
   }
 }
 
@@ -364,8 +361,7 @@ HB_FUNC_STATIC( QREGEXP_ISVALID )
   QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isValid (  );
-    hb_retl( b );
+    hb_retl( obj->isValid (  ) );
   }
 }
 

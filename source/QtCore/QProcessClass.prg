@@ -565,8 +565,7 @@ HB_FUNC_STATIC( QPROCESS_WAITFORFINISHED )
   if( obj )
   {
     int par1 = ISNIL(1)? 30000 : hb_parni(1);
-    bool b = obj->waitForFinished ( par1 );
-    hb_retl( b );
+    hb_retl( obj->waitForFinished ( par1 ) );
   }
 }
 
@@ -580,8 +579,7 @@ HB_FUNC_STATIC( QPROCESS_WAITFORSTARTED )
   if( obj )
   {
     int par1 = ISNIL(1)? 30000 : hb_parni(1);
-    bool b = obj->waitForStarted ( par1 );
-    hb_retl( b );
+    hb_retl( obj->waitForStarted ( par1 ) );
   }
 }
 
@@ -608,8 +606,7 @@ HB_FUNC_STATIC( QPROCESS_ATEND )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->atEnd (  );
-    hb_retl( b );
+    hb_retl( obj->atEnd (  ) );
   }
 }
 
@@ -650,8 +647,7 @@ HB_FUNC_STATIC( QPROCESS_CANREADLINE )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->canReadLine (  );
-    hb_retl( b );
+    hb_retl( obj->canReadLine (  ) );
   }
 }
 
@@ -678,8 +674,7 @@ HB_FUNC_STATIC( QPROCESS_ISSEQUENTIAL )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isSequential (  );
-    hb_retl( b );
+    hb_retl( obj->isSequential (  ) );
   }
 }
 
@@ -693,8 +688,7 @@ HB_FUNC_STATIC( QPROCESS_WAITFORBYTESWRITTEN )
   if( obj )
   {
     int par1 = ISNIL(1)? 30000 : hb_parni(1);
-    bool b = obj->waitForBytesWritten ( par1 );
-    hb_retl( b );
+    hb_retl( obj->waitForBytesWritten ( par1 ) );
   }
 }
 
@@ -708,8 +702,7 @@ HB_FUNC_STATIC( QPROCESS_WAITFORREADYREAD )
   if( obj )
   {
     int par1 = ISNIL(1)? 30000 : hb_parni(1);
-    bool b = obj->waitForReadyRead ( par1 );
-    hb_retl( b );
+    hb_retl( obj->waitForReadyRead ( par1 ) );
   }
 }
 
@@ -806,8 +799,7 @@ par2 << temp;
 }
   QString par3 = hb_parc(3);
   qint64 * par4 = (qint64 *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-  bool b = QProcess::startDetached ( par1, par2, par3, par4 );
-  hb_retl( b );
+  hb_retl( QProcess::startDetached ( par1, par2, par3, par4 ) );
 }
 
 
@@ -826,8 +818,7 @@ for (i2=0;i2<nLen2;i2++)
 QString temp = hb_arrayGetCPtr(aStrings2, i2+1);
 par2 << temp;
 }
-  bool b = QProcess::startDetached ( par1, par2 );
-  hb_retl( b );
+  hb_retl( QProcess::startDetached ( par1, par2 ) );
 }
 
 
@@ -837,8 +828,7 @@ bool startDetached ( const QString & program )
 HB_FUNC_STATIC( QPROCESS_STARTDETACHED3 )
 {
   QString par1 = hb_parc(1);
-  bool b = QProcess::startDetached ( par1 );
-  hb_retl( b );
+  hb_retl( QProcess::startDetached ( par1 ) );
 }
 
 

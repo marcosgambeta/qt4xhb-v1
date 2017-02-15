@@ -236,8 +236,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_ISDEFAULT )
   QXmlStreamAttribute * obj = (QXmlStreamAttribute *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isDefault (  );
-    hb_retl( b );
+    hb_retl( obj->isDefault (  ) );
   }
 }
 

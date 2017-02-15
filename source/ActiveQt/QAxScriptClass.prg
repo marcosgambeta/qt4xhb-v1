@@ -204,8 +204,7 @@ HB_FUNC_STATIC( QAXSCRIPT_LOAD )
   {
     QString par1 = hb_parc(1);
     QString par2 = ISNIL(2)? QString() : hb_parc(2);
-    bool b = obj->load ( par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->load ( par1, par2 ) );
   }
 }
 

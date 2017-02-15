@@ -142,8 +142,7 @@ HB_FUNC_STATIC( QTEXTCODEC_CANENCODE1 )
   if( obj )
   {
     QChar * par1 = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->canEncode ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->canEncode ( *par1 ) );
   }
 }
 
@@ -157,8 +156,7 @@ HB_FUNC_STATIC( QTEXTCODEC_CANENCODE2 )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    bool b = obj->canEncode ( par1 );
-    hb_retl( b );
+    hb_retl( obj->canEncode ( par1 ) );
   }
 }
 

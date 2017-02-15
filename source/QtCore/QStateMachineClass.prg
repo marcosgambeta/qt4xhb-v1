@@ -151,8 +151,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_CANCELDELAYEDEVENT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->cancelDelayedEvent ( par1 );
-    hb_retl( b );
+    hb_retl( obj->cancelDelayedEvent ( par1 ) );
   }
 }
 
@@ -266,8 +265,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_ISANIMATED )
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isAnimated (  );
-    hb_retl( b );
+    hb_retl( obj->isAnimated (  ) );
   }
 }
 
@@ -280,8 +278,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_ISRUNNING )
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isRunning (  );
-    hb_retl( b );
+    hb_retl( obj->isRunning (  ) );
   }
 }
 
@@ -388,8 +385,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_EVENTFILTER )
   {
     QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QEvent * par2 = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->eventFilter ( par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->eventFilter ( par1, par2 ) );
   }
 }
 

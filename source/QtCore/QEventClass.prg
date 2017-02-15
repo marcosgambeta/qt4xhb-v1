@@ -168,8 +168,7 @@ HB_FUNC_STATIC( QEVENT_ISACCEPTED )
   QEvent * obj = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isAccepted (  );
-    hb_retl( b );
+    hb_retl( obj->isAccepted (  ) );
   }
 }
 
@@ -197,8 +196,7 @@ HB_FUNC_STATIC( QEVENT_SPONTANEOUS )
   QEvent * obj = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->spontaneous (  );
-    hb_retl( b );
+    hb_retl( obj->spontaneous (  ) );
   }
 }
 

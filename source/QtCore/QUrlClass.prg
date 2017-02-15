@@ -567,8 +567,7 @@ HB_FUNC_STATIC( QURL_HASENCODEDQUERYITEM )
   if( obj )
   {
     QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->hasEncodedQueryItem ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->hasEncodedQueryItem ( *par1 ) );
   }
 }
 
@@ -581,8 +580,7 @@ HB_FUNC_STATIC( QURL_HASFRAGMENT )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasFragment (  );
-    hb_retl( b );
+    hb_retl( obj->hasFragment (  ) );
   }
 }
 
@@ -595,8 +593,7 @@ HB_FUNC_STATIC( QURL_HASQUERY )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasQuery (  );
-    hb_retl( b );
+    hb_retl( obj->hasQuery (  ) );
   }
 }
 
@@ -610,8 +607,7 @@ HB_FUNC_STATIC( QURL_HASQUERYITEM )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    bool b = obj->hasQueryItem ( par1 );
-    hb_retl( b );
+    hb_retl( obj->hasQueryItem ( par1 ) );
   }
 }
 
@@ -638,8 +634,7 @@ HB_FUNC_STATIC( QURL_ISEMPTY )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isEmpty (  );
-    hb_retl( b );
+    hb_retl( obj->isEmpty (  ) );
   }
 }
 
@@ -652,8 +647,7 @@ HB_FUNC_STATIC( QURL_ISLOCALFILE )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isLocalFile (  );
-    hb_retl( b );
+    hb_retl( obj->isLocalFile (  ) );
   }
 }
 
@@ -667,8 +661,7 @@ HB_FUNC_STATIC( QURL_ISPARENTOF )
   if( obj )
   {
     QUrl * par1 = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->isParentOf ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->isParentOf ( *par1 ) );
   }
 }
 
@@ -681,8 +674,7 @@ HB_FUNC_STATIC( QURL_ISRELATIVE )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isRelative (  );
-    hb_retl( b );
+    hb_retl( obj->isRelative (  ) );
   }
 }
 
@@ -695,8 +687,7 @@ HB_FUNC_STATIC( QURL_ISVALID )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isValid (  );
-    hb_retl( b );
+    hb_retl( obj->isValid (  ) );
   }
 }
 

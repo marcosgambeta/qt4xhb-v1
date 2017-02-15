@@ -162,8 +162,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_HASEXPIRED )
   if( obj )
   {
     qint64 par1 = hb_parni(1);
-    bool b = obj->hasExpired ( par1 );
-    hb_retl( b );
+    hb_retl( obj->hasExpired ( par1 ) );
   }
 }
 
@@ -190,8 +189,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_ISVALID )
   QElapsedTimer * obj = (QElapsedTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isValid (  );
-    hb_retl( b );
+    hb_retl( obj->isValid (  ) );
   }
 }
 
@@ -298,8 +296,7 @@ bool isMonotonic()
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_ISMONOTONIC )
 {
-  bool b = QElapsedTimer::isMonotonic (  );
-  hb_retl( b );
+  hb_retl( QElapsedTimer::isMonotonic (  ) );
 }
 
 

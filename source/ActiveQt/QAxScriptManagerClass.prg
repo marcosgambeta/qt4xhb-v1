@@ -334,8 +334,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_REGISTERENGINE )
   QString par1 = hb_parc(1);
   QString par2 = hb_parc(2);
   QString par3 = ISNIL(3)? QString() : hb_parc(3);
-  bool b = QAxScriptManager::registerEngine ( par1, par2, par3 );
-  hb_retl( b );
+  hb_retl( QAxScriptManager::registerEngine ( par1, par2, par3 ) );
 }
 
 

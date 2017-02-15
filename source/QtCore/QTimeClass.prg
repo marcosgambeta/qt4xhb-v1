@@ -273,8 +273,7 @@ HB_FUNC_STATIC( QTIME_ISNULL )
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isNull (  );
-    hb_retl( b );
+    hb_retl( obj->isNull (  ) );
   }
 }
 
@@ -287,8 +286,7 @@ HB_FUNC_STATIC( QTIME_ISVALID1 )
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isValid (  );
-    hb_retl( b );
+    hb_retl( obj->isValid (  ) );
   }
 }
 
@@ -391,8 +389,7 @@ HB_FUNC_STATIC( QTIME_SETHMS )
     int par2 = hb_parni(2);
     int par3 = hb_parni(3);
     int par4 = ISNIL(4)? 0 : hb_parni(4);
-    bool b = obj->setHMS ( par1, par2, par3, par4 );
-    hb_retl( b );
+    hb_retl( obj->setHMS ( par1, par2, par3, par4 ) );
   }
 }
 
@@ -515,8 +512,7 @@ HB_FUNC_STATIC( QTIME_ISVALID2 )
   int par2 = hb_parni(2);
   int par3 = hb_parni(3);
   int par4 = ISNIL(4)? 0 : hb_parni(4);
-  bool b = QTime::isValid ( par1, par2, par3, par4 );
-  hb_retl( b );
+  hb_retl( QTime::isValid ( par1, par2, par3, par4 ) );
 }
 
 

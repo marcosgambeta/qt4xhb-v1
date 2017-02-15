@@ -189,8 +189,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_ISLOADED )
   QPluginLoader * obj = (QPluginLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isLoaded (  );
-    hb_retl( b );
+    hb_retl( obj->isLoaded (  ) );
   }
 }
 
@@ -203,8 +202,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_LOAD )
   QPluginLoader * obj = (QPluginLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->load (  );
-    hb_retl( b );
+    hb_retl( obj->load (  ) );
   }
 }
 
@@ -261,8 +259,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_UNLOAD )
   QPluginLoader * obj = (QPluginLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->unload (  );
-    hb_retl( b );
+    hb_retl( obj->unload (  ) );
   }
 }
 

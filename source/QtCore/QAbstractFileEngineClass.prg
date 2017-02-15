@@ -152,8 +152,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_ATEND )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->atEnd (  );
-    hb_retl( b );
+    hb_retl( obj->atEnd (  ) );
   }
 }
 
@@ -167,8 +166,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_CASESENSITIVE )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->caseSensitive (  );
-    hb_retl( b );
+    hb_retl( obj->caseSensitive (  ) );
   }
 }
 
@@ -181,8 +179,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_CLOSE )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->close (  );
-    hb_retl( b );
+    hb_retl( obj->close (  ) );
   }
 }
 
@@ -196,8 +193,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_COPY )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    bool b = obj->copy ( par1 );
-    hb_retl( b );
+    hb_retl( obj->copy ( par1 ) );
   }
 }
 
@@ -317,8 +313,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_FLUSH )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->flush (  );
-    hb_retl( b );
+    hb_retl( obj->flush (  ) );
   }
 }
 
@@ -345,8 +340,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_ISRELATIVEPATH )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isRelativePath (  );
-    hb_retl( b );
+    hb_retl( obj->isRelativePath (  ) );
   }
 }
 
@@ -359,8 +353,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_ISSEQUENTIAL )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isSequential (  );
-    hb_retl( b );
+    hb_retl( obj->isSequential (  ) );
   }
 }
 
@@ -374,8 +367,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_LINK )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    bool b = obj->link ( par1 );
-    hb_retl( b );
+    hb_retl( obj->link ( par1 ) );
   }
 }
 
@@ -391,8 +383,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_MKDIR )
   {
     QString par1 = hb_parc(1);
     bool par2 = hb_parl(2);
-    bool b = obj->mkdir ( par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->mkdir ( par1, par2 ) );
   }
 }
 
@@ -406,8 +397,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_OPEN )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->open (  (QIODevice::OpenMode) par1 );
-    hb_retl( b );
+    hb_retl( obj->open (  (QIODevice::OpenMode) par1 ) );
   }
 }
 
@@ -481,8 +471,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_REMOVE )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->remove (  );
-    hb_retl( b );
+    hb_retl( obj->remove (  ) );
   }
 }
 
@@ -496,8 +485,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_RENAME )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    bool b = obj->rename ( par1 );
-    hb_retl( b );
+    hb_retl( obj->rename ( par1 ) );
   }
 }
 
@@ -512,8 +500,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_RMDIR )
   {
     QString par1 = hb_parc(1);
     bool par2 = hb_parl(2);
-    bool b = obj->rmdir ( par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->rmdir ( par1, par2 ) );
   }
 }
 
@@ -527,8 +514,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_SEEK )
   if( obj )
   {
     qint64 par1 = hb_parni(1);
-    bool b = obj->seek ( par1 );
-    hb_retl( b );
+    hb_retl( obj->seek ( par1 ) );
   }
 }
 
@@ -557,8 +543,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_SETPERMISSIONS )
   if( obj )
   {
     uint par1 = hb_parni(1);
-    bool b = obj->setPermissions ( par1 );
-    hb_retl( b );
+    hb_retl( obj->setPermissions ( par1 ) );
   }
 }
 
@@ -572,8 +557,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_SETSIZE )
   if( obj )
   {
     qint64 par1 = hb_parni(1);
-    bool b = obj->setSize ( par1 );
-    hb_retl( b );
+    hb_retl( obj->setSize ( par1 ) );
   }
 }
 
@@ -601,8 +585,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_SUPPORTSEXTENSION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->supportsExtension (  (QAbstractFileEngine::Extension) par1 );
-    hb_retl( b );
+    hb_retl( obj->supportsExtension (  (QAbstractFileEngine::Extension) par1 ) );
   }
 }
 

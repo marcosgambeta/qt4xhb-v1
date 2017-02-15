@@ -131,8 +131,7 @@ HB_FUNC_STATIC( QTHREAD_ISFINISHED )
   QThread * obj = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isFinished (  );
-    hb_retl( b );
+    hb_retl( obj->isFinished (  ) );
   }
 }
 
@@ -145,8 +144,7 @@ HB_FUNC_STATIC( QTHREAD_ISRUNNING )
   QThread * obj = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isRunning (  );
-    hb_retl( b );
+    hb_retl( obj->isRunning (  ) );
   }
 }
 
@@ -220,8 +218,7 @@ HB_FUNC_STATIC( QTHREAD_EVENT )
   if( obj )
   {
     QEvent * par1 = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->event ( par1 );
-    hb_retl( b );
+    hb_retl( obj->event ( par1 ) );
   }
 }
 
