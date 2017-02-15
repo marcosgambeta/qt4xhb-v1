@@ -235,8 +235,7 @@ HB_FUNC_STATIC( QWEBPAGE_EXTENSION )
     int par1 = hb_parni(1);
     const QWebPage::ExtensionOption * par2 = ISNIL(2)? 0 : (const QWebPage::ExtensionOption *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     QWebPage::ExtensionReturn * par3 = ISNIL(3)? 0 : (QWebPage::ExtensionReturn *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->extension (  (QWebPage::Extension) par1, par2, par3 );
-    hb_retl( b );
+    hb_retl( obj->extension (  (QWebPage::Extension) par1, par2, par3 ) );
   }
 }
 
@@ -251,8 +250,7 @@ HB_FUNC_STATIC( QWEBPAGE_FINDTEXT )
   {
     QString par1 = hb_parc(1);
     int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-    bool b = obj->findText ( par1,  (QWebPage::FindFlags) par2 );
-    hb_retl( b );
+    hb_retl( obj->findText ( par1,  (QWebPage::FindFlags) par2 ) );
   }
 }
 
@@ -266,8 +264,7 @@ HB_FUNC_STATIC( QWEBPAGE_FOCUSNEXTPREVCHILD )
   if( obj )
   {
     bool par1 = hb_parl(1);
-    bool b = obj->focusNextPrevChild ( par1 );
-    hb_retl( b );
+    hb_retl( obj->focusNextPrevChild ( par1 ) );
   }
 }
 
@@ -280,8 +277,7 @@ HB_FUNC_STATIC( QWEBPAGE_FORWARDUNSUPPORTEDCONTENT )
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->forwardUnsupportedContent (  );
-    hb_retl( b );
+    hb_retl( obj->forwardUnsupportedContent (  ) );
   }
 }
 
@@ -338,8 +334,7 @@ HB_FUNC_STATIC( QWEBPAGE_ISCONTENTEDITABLE )
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isContentEditable (  );
-    hb_retl( b );
+    hb_retl( obj->isContentEditable (  ) );
   }
 }
 
@@ -352,8 +347,7 @@ HB_FUNC_STATIC( QWEBPAGE_ISMODIFIED )
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isModified (  );
-    hb_retl( b );
+    hb_retl( obj->isModified (  ) );
   }
 }
 
@@ -614,8 +608,7 @@ HB_FUNC_STATIC( QWEBPAGE_SUPPORTSEXTENSION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->supportsExtension (  (QWebPage::Extension) par1 );
-    hb_retl( b );
+    hb_retl( obj->supportsExtension (  (QWebPage::Extension) par1 ) );
   }
 }
 
@@ -629,8 +622,7 @@ HB_FUNC_STATIC( QWEBPAGE_SWALLOWCONTEXTMENUEVENT )
   if( obj )
   {
     QContextMenuEvent * par1 = (QContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->swallowContextMenuEvent ( par1 );
-    hb_retl( b );
+    hb_retl( obj->swallowContextMenuEvent ( par1 ) );
   }
 }
 
@@ -731,8 +723,7 @@ HB_FUNC_STATIC( QWEBPAGE_EVENT )
   if( obj )
   {
     QEvent * par1 = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->event ( par1 );
-    hb_retl( b );
+    hb_retl( obj->event ( par1 ) );
   }
 }
 
@@ -745,8 +736,7 @@ HB_FUNC_STATIC( QWEBPAGE_SHOULDINTERRUPTJAVASCRIPT )
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->shouldInterruptJavaScript (  );
-    hb_retl( b );
+    hb_retl( obj->shouldInterruptJavaScript (  ) );
   }
 }
 

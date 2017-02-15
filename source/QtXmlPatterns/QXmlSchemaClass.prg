@@ -208,8 +208,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_ISVALID )
   QXmlSchema * obj = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isValid (  );
-    hb_retl( b );
+    hb_retl( obj->isValid (  ) );
   }
 }
 
@@ -223,8 +222,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_LOAD1 )
   if( obj )
   {
     QUrl * par1 = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->load ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->load ( *par1 ) );
   }
 }
 
@@ -239,8 +237,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_LOAD2 )
   {
     QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QUrl par2 = ISNIL(2)? QUrl() : *(QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->load ( par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->load ( par1, par2 ) );
   }
 }
 
@@ -255,8 +252,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_LOAD3 )
   {
     QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QUrl par2 = ISNIL(2)? QUrl() : *(QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->load ( *par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->load ( *par1, par2 ) );
   }
 }
 

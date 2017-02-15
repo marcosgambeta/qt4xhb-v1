@@ -214,8 +214,7 @@ HB_FUNC_STATIC( QXMLREADER_FEATURE )
   {
     QString par1 = hb_parc(1);
     bool par2;
-    bool b = obj->feature ( par1, &par2 );
-    hb_retl( b );
+    hb_retl( obj->feature ( par1, &par2 ) );
     hb_storl( par2, 2 );
   }
 }
@@ -230,8 +229,7 @@ HB_FUNC_STATIC( QXMLREADER_HASFEATURE )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    bool b = obj->hasFeature ( par1 );
-    hb_retl( b );
+    hb_retl( obj->hasFeature ( par1 ) );
   }
 }
 
@@ -245,8 +243,7 @@ HB_FUNC_STATIC( QXMLREADER_HASPROPERTY )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    bool b = obj->hasProperty ( par1 );
-    hb_retl( b );
+    hb_retl( obj->hasProperty ( par1 ) );
   }
 }
 
@@ -274,8 +271,7 @@ HB_FUNC_STATIC( QXMLREADER_PARSE )
   if( obj )
   {
     const QXmlInputSource * par1 = (const QXmlInputSource *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->parse ( par1 );
-    hb_retl( b );
+    hb_retl( obj->parse ( par1 ) );
   }
 }
 

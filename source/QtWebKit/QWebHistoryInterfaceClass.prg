@@ -103,8 +103,7 @@ HB_FUNC_STATIC( QWEBHISTORYINTERFACE_HISTORYCONTAINS )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    bool b = obj->historyContains ( par1 );
-    hb_retl( b );
+    hb_retl( obj->historyContains ( par1 ) );
   }
 }
 

@@ -371,8 +371,7 @@ HB_FUNC_STATIC( QDOMNODE_HASATTRIBUTES )
   QDomNode * obj = (QDomNode *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasAttributes (  );
-    hb_retl( b );
+    hb_retl( obj->hasAttributes (  ) );
   }
 }
 
@@ -385,8 +384,7 @@ HB_FUNC_STATIC( QDOMNODE_HASCHILDNODES )
   QDomNode * obj = (QDomNode *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasChildNodes (  );
-    hb_retl( b );
+    hb_retl( obj->hasChildNodes (  ) );
   }
 }
 
@@ -431,8 +429,7 @@ HB_FUNC_STATIC( QDOMNODE_ISATTR )
   QDomNode * obj = (QDomNode *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isAttr (  );
-    hb_retl( b );
+    hb_retl( obj->isAttr (  ) );
   }
 }
 
@@ -445,8 +442,7 @@ HB_FUNC_STATIC( QDOMNODE_ISCDATASECTION )
   QDomNode * obj = (QDomNode *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isCDATASection (  );
-    hb_retl( b );
+    hb_retl( obj->isCDATASection (  ) );
   }
 }
 
@@ -459,8 +455,7 @@ HB_FUNC_STATIC( QDOMNODE_ISCHARACTERDATA )
   QDomNode * obj = (QDomNode *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isCharacterData (  );
-    hb_retl( b );
+    hb_retl( obj->isCharacterData (  ) );
   }
 }
 
@@ -473,8 +468,7 @@ HB_FUNC_STATIC( QDOMNODE_ISCOMMENT )
   QDomNode * obj = (QDomNode *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isComment (  );
-    hb_retl( b );
+    hb_retl( obj->isComment (  ) );
   }
 }
 
@@ -487,8 +481,7 @@ HB_FUNC_STATIC( QDOMNODE_ISDOCUMENT )
   QDomNode * obj = (QDomNode *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isDocument (  );
-    hb_retl( b );
+    hb_retl( obj->isDocument (  ) );
   }
 }
 
@@ -501,8 +494,7 @@ HB_FUNC_STATIC( QDOMNODE_ISDOCUMENTFRAGMENT )
   QDomNode * obj = (QDomNode *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isDocumentFragment (  );
-    hb_retl( b );
+    hb_retl( obj->isDocumentFragment (  ) );
   }
 }
 
@@ -515,8 +507,7 @@ HB_FUNC_STATIC( QDOMNODE_ISDOCUMENTTYPE )
   QDomNode * obj = (QDomNode *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isDocumentType (  );
-    hb_retl( b );
+    hb_retl( obj->isDocumentType (  ) );
   }
 }
 
@@ -529,8 +520,7 @@ HB_FUNC_STATIC( QDOMNODE_ISELEMENT )
   QDomNode * obj = (QDomNode *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isElement (  );
-    hb_retl( b );
+    hb_retl( obj->isElement (  ) );
   }
 }
 
@@ -543,8 +533,7 @@ HB_FUNC_STATIC( QDOMNODE_ISENTITY )
   QDomNode * obj = (QDomNode *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isEntity (  );
-    hb_retl( b );
+    hb_retl( obj->isEntity (  ) );
   }
 }
 
@@ -557,8 +546,7 @@ HB_FUNC_STATIC( QDOMNODE_ISENTITYREFERENCE )
   QDomNode * obj = (QDomNode *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isEntityReference (  );
-    hb_retl( b );
+    hb_retl( obj->isEntityReference (  ) );
   }
 }
 
@@ -571,8 +559,7 @@ HB_FUNC_STATIC( QDOMNODE_ISNOTATION )
   QDomNode * obj = (QDomNode *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isNotation (  );
-    hb_retl( b );
+    hb_retl( obj->isNotation (  ) );
   }
 }
 
@@ -585,8 +572,7 @@ HB_FUNC_STATIC( QDOMNODE_ISNULL )
   QDomNode * obj = (QDomNode *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isNull (  );
-    hb_retl( b );
+    hb_retl( obj->isNull (  ) );
   }
 }
 
@@ -599,8 +585,7 @@ HB_FUNC_STATIC( QDOMNODE_ISPROCESSINGINSTRUCTION )
   QDomNode * obj = (QDomNode *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isProcessingInstruction (  );
-    hb_retl( b );
+    hb_retl( obj->isProcessingInstruction (  ) );
   }
 }
 
@@ -615,8 +600,7 @@ HB_FUNC_STATIC( QDOMNODE_ISSUPPORTED )
   {
     QString par1 = hb_parc(1);
     QString par2 = hb_parc(2);
-    bool b = obj->isSupported ( par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->isSupported ( par1, par2 ) );
   }
 }
 
@@ -629,8 +613,7 @@ HB_FUNC_STATIC( QDOMNODE_ISTEXT )
   QDomNode * obj = (QDomNode *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isText (  );
-    hb_retl( b );
+    hb_retl( obj->isText (  ) );
   }
 }
 

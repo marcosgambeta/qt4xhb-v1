@@ -285,8 +285,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_ISCONTENTEDITABLE )
   QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isContentEditable (  );
-    hb_retl( b );
+    hb_retl( obj->isContentEditable (  ) );
   }
 }
 
@@ -299,8 +298,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_ISCONTENTSELECTED )
   QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isContentSelected (  );
-    hb_retl( b );
+    hb_retl( obj->isContentSelected (  ) );
   }
 }
 
@@ -313,8 +311,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_ISNULL )
   QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isNull (  );
-    hb_retl( b );
+    hb_retl( obj->isNull (  ) );
   }
 }
 

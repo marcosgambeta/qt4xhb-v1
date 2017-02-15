@@ -174,8 +174,7 @@ HB_FUNC_STATIC( QXMLNAME_ISNULL )
   QXmlName * obj = (QXmlName *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isNull (  );
-    hb_retl( b );
+    hb_retl( obj->isNull (  ) );
   }
 }
 
@@ -259,8 +258,7 @@ bool isNCName ( const QString & candidate )
 HB_FUNC_STATIC( QXMLNAME_ISNCNAME )
 {
   QString par1 = hb_parc(1);
-  bool b = QXmlName::isNCName ( par1 );
-  hb_retl( b );
+  hb_retl( QXmlName::isNCName ( par1 ) );
 }
 
 

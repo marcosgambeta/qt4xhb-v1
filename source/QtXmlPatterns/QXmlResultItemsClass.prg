@@ -156,8 +156,7 @@ HB_FUNC_STATIC( QXMLRESULTITEMS_HASERROR )
   QXmlResultItems * obj = (QXmlResultItems *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasError (  );
-    hb_retl( b );
+    hb_retl( obj->hasError (  ) );
   }
 }
 

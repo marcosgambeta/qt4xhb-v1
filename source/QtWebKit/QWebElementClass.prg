@@ -627,8 +627,7 @@ HB_FUNC_STATIC( QWEBELEMENT_HASATTRIBUTE )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    bool b = obj->hasAttribute ( par1 );
-    hb_retl( b );
+    hb_retl( obj->hasAttribute ( par1 ) );
   }
 }
 
@@ -643,8 +642,7 @@ HB_FUNC_STATIC( QWEBELEMENT_HASATTRIBUTENS )
   {
     QString par1 = hb_parc(1);
     QString par2 = hb_parc(2);
-    bool b = obj->hasAttributeNS ( par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->hasAttributeNS ( par1, par2 ) );
   }
 }
 
@@ -657,8 +655,7 @@ HB_FUNC_STATIC( QWEBELEMENT_HASATTRIBUTES )
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasAttributes (  );
-    hb_retl( b );
+    hb_retl( obj->hasAttributes (  ) );
   }
 }
 
@@ -672,8 +669,7 @@ HB_FUNC_STATIC( QWEBELEMENT_HASCLASS )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    bool b = obj->hasClass ( par1 );
-    hb_retl( b );
+    hb_retl( obj->hasClass ( par1 ) );
   }
 }
 
@@ -686,8 +682,7 @@ HB_FUNC_STATIC( QWEBELEMENT_HASFOCUS )
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasFocus (  );
-    hb_retl( b );
+    hb_retl( obj->hasFocus (  ) );
   }
 }
 
@@ -700,8 +695,7 @@ HB_FUNC_STATIC( QWEBELEMENT_ISNULL )
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isNull (  );
-    hb_retl( b );
+    hb_retl( obj->isNull (  ) );
   }
 }
 

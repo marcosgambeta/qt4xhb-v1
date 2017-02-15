@@ -125,8 +125,7 @@ HB_FUNC_STATIC( QXMLDECLHANDLER_ATTRIBUTEDECL )
     QString par3 = hb_parc(3);
     QString par4 = hb_parc(4);
     QString par5 = hb_parc(5);
-    bool b = obj->attributeDecl ( par1, par2, par3, par4, par5 );
-    hb_retl( b );
+    hb_retl( obj->attributeDecl ( par1, par2, par3, par4, par5 ) );
   }
 }
 
@@ -156,8 +155,7 @@ HB_FUNC_STATIC( QXMLDECLHANDLER_EXTERNALENTITYDECL )
     QString par1 = hb_parc(1);
     QString par2 = hb_parc(2);
     QString par3 = hb_parc(3);
-    bool b = obj->externalEntityDecl ( par1, par2, par3 );
-    hb_retl( b );
+    hb_retl( obj->externalEntityDecl ( par1, par2, par3 ) );
   }
 }
 
@@ -172,8 +170,7 @@ HB_FUNC_STATIC( QXMLDECLHANDLER_INTERNALENTITYDECL )
   {
     QString par1 = hb_parc(1);
     QString par2 = hb_parc(2);
-    bool b = obj->internalEntityDecl ( par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->internalEntityDecl ( par1, par2 ) );
   }
 }
 

@@ -104,8 +104,7 @@ HB_FUNC_STATIC( QXMLSIMPLEREADER_PARSE )
   {
     const QXmlInputSource * par1 = (const QXmlInputSource *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     bool par2 = hb_parl(2);
-    bool b = obj->parse ( par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->parse ( par1, par2 ) );
   }
 }
 
@@ -118,8 +117,7 @@ HB_FUNC_STATIC( QXMLSIMPLEREADER_PARSECONTINUE )
   QXmlSimpleReader * obj = (QXmlSimpleReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->parseContinue (  );
-    hb_retl( b );
+    hb_retl( obj->parseContinue (  ) );
   }
 }
 

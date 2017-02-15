@@ -121,8 +121,7 @@ HB_FUNC_STATIC( QXMLERRORHANDLER_ERROR )
   if( obj )
   {
     QXmlParseException * par1 = (QXmlParseException *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->error ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->error ( *par1 ) );
   }
 }
 
@@ -150,8 +149,7 @@ HB_FUNC_STATIC( QXMLERRORHANDLER_FATALERROR )
   if( obj )
   {
     QXmlParseException * par1 = (QXmlParseException *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->fatalError ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->fatalError ( *par1 ) );
   }
 }
 
@@ -165,8 +163,7 @@ HB_FUNC_STATIC( QXMLERRORHANDLER_WARNING )
   if( obj )
   {
     QXmlParseException * par1 = (QXmlParseException *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->warning ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->warning ( *par1 ) );
   }
 }
 

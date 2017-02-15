@@ -235,8 +235,7 @@ HB_FUNC_STATIC( QXMLITEM_ISATOMICVALUE )
   QXmlItem * obj = (QXmlItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isAtomicValue (  );
-    hb_retl( b );
+    hb_retl( obj->isAtomicValue (  ) );
   }
 }
 
@@ -249,8 +248,7 @@ HB_FUNC_STATIC( QXMLITEM_ISNODE )
   QXmlItem * obj = (QXmlItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isNode (  );
-    hb_retl( b );
+    hb_retl( obj->isNode (  ) );
   }
 }
 
@@ -263,8 +261,7 @@ HB_FUNC_STATIC( QXMLITEM_ISNULL )
   QXmlItem * obj = (QXmlItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isNull (  );
-    hb_retl( b );
+    hb_retl( obj->isNull (  ) );
   }
 }
 

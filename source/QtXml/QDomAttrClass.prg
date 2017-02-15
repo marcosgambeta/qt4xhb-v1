@@ -190,8 +190,7 @@ HB_FUNC_STATIC( QDOMATTR_SPECIFIED )
   QDomAttr * obj = (QDomAttr *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->specified (  );
-    hb_retl( b );
+    hb_retl( obj->specified (  ) );
   }
 }
 

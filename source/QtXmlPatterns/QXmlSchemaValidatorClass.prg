@@ -327,8 +327,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_VALIDATE1 )
   if( obj )
   {
     QUrl * par1 = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->validate ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->validate ( *par1 ) );
   }
 }
 
@@ -343,8 +342,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_VALIDATE2 )
   {
     QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QUrl par2 = ISNIL(2)? QUrl() : *(QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->validate ( par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->validate ( par1, par2 ) );
   }
 }
 
@@ -359,8 +357,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_VALIDATE3 )
   {
     QByteArray  * par1 = (QByteArray  *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QUrl par2 = ISNIL(2)? QUrl() : *(QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->validate ( *par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->validate ( *par1, par2 ) );
   }
 }
 

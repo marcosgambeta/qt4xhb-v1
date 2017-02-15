@@ -149,8 +149,7 @@ HB_FUNC_STATIC( QWEBVIEW_FINDTEXT )
   {
     QString par1 = hb_parc(1);
     int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-    bool b = obj->findText ( par1,  (QWebPage::FindFlags) par2 );
-    hb_retl( b );
+    hb_retl( obj->findText ( par1,  (QWebPage::FindFlags) par2 ) );
   }
 }
 
@@ -191,8 +190,7 @@ HB_FUNC_STATIC( QWEBVIEW_ISMODIFIED )
   QWebView * obj = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isModified (  );
-    hb_retl( b );
+    hb_retl( obj->isModified (  ) );
   }
 }
 

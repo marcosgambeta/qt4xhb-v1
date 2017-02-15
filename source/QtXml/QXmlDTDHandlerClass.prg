@@ -136,8 +136,7 @@ HB_FUNC_STATIC( QXMLDTDHANDLER_NOTATIONDECL )
     QString par1 = hb_parc(1);
     QString par2 = hb_parc(2);
     QString par3 = hb_parc(3);
-    bool b = obj->notationDecl ( par1, par2, par3 );
-    hb_retl( b );
+    hb_retl( obj->notationDecl ( par1, par2, par3 ) );
   }
 }
 
@@ -154,8 +153,7 @@ HB_FUNC_STATIC( QXMLDTDHANDLER_UNPARSEDENTITYDECL )
     QString par2 = hb_parc(2);
     QString par3 = hb_parc(3);
     QString par4 = hb_parc(4);
-    bool b = obj->unparsedEntityDecl ( par1, par2, par3, par4 );
-    hb_retl( b );
+    hb_retl( obj->unparsedEntityDecl ( par1, par2, par3, par4 ) );
   }
 }
 

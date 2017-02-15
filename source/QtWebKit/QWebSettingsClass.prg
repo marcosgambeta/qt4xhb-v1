@@ -340,8 +340,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_TESTATTRIBUTE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->testAttribute (  (QWebSettings::WebAttribute) par1 );
-    hb_retl( b );
+    hb_retl( obj->testAttribute (  (QWebSettings::WebAttribute) par1 ) );
   }
 }
 

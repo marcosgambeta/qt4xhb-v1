@@ -197,8 +197,7 @@ HB_FUNC_STATIC( QWEBHISTORY_CANGOBACK )
   QWebHistory * obj = (QWebHistory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->canGoBack (  );
-    hb_retl( b );
+    hb_retl( obj->canGoBack (  ) );
   }
 }
 
@@ -211,8 +210,7 @@ HB_FUNC_STATIC( QWEBHISTORY_CANGOFORWARD )
   QWebHistory * obj = (QWebHistory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->canGoForward (  );
-    hb_retl( b );
+    hb_retl( obj->canGoForward (  ) );
   }
 }
 
