@@ -347,8 +347,7 @@ HB_FUNC_STATIC( QLOCALE_COUNTRY )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->country (  );
-    hb_retni( i );
+    hb_retni( (int) obj->country (  ) );
   }
 }
 
@@ -473,8 +472,7 @@ HB_FUNC_STATIC( QLOCALE_FIRSTDAYOFWEEK )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->firstDayOfWeek (  );
-    hb_retni( i );
+    hb_retni( (int) obj->firstDayOfWeek (  ) );
   }
 }
 
@@ -501,8 +499,7 @@ HB_FUNC_STATIC( QLOCALE_LANGUAGE )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->language (  );
-    hb_retni( i );
+    hb_retni( (int) obj->language (  ) );
   }
 }
 
@@ -515,8 +512,7 @@ HB_FUNC_STATIC( QLOCALE_MEASUREMENTSYSTEM )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->measurementSystem (  );
-    hb_retni( i );
+    hb_retni( (int) obj->measurementSystem (  ) );
   }
 }
 
@@ -601,8 +597,7 @@ HB_FUNC_STATIC( QLOCALE_NUMBEROPTIONS )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->numberOptions (  );
-    hb_retni( i );
+    hb_retni( (int) obj->numberOptions (  ) );
   }
 }
 
@@ -697,8 +692,7 @@ HB_FUNC_STATIC( QLOCALE_SCRIPT )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->script (  );
-    hb_retni( i );
+    hb_retni( (int) obj->script (  ) );
   }
 }
 
@@ -758,8 +752,7 @@ HB_FUNC_STATIC( QLOCALE_TEXTDIRECTION )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->textDirection (  );
-    hb_retni( i );
+    hb_retni( (int) obj->textDirection (  ) );
   }
 }
 
@@ -1065,8 +1058,7 @@ HB_FUNC_STATIC( QLOCALE_TOINT )
     QString par1 = hb_parc(1);
     bool par2;
     int par3 = ISNIL(3)? 0 : hb_parni(3);
-    int i = obj->toInt ( par1, &par2, par3 );
-    hb_retni( i );
+    hb_retni( obj->toInt ( par1, &par2, par3 ) );
     hb_storl( par2, 2 );
   }
 }

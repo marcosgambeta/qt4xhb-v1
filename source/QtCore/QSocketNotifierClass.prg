@@ -104,8 +104,7 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_SOCKET )
   QSocketNotifier * obj = (QSocketNotifier *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->socket (  );
-    hb_retni( i );
+    hb_retni( obj->socket (  ) );
   }
 }
 
@@ -118,8 +117,7 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_TYPE )
   QSocketNotifier * obj = (QSocketNotifier *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->type (  );
-    hb_retni( i );
+    hb_retni( (int) obj->type (  ) );
   }
 }
 

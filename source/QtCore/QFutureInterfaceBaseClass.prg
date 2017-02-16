@@ -310,8 +310,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_PROGRESSMINIMUM )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->progressMinimum (  );
-    hb_retni( i );
+    hb_retni( obj->progressMinimum (  ) );
   }
 }
 
@@ -324,8 +323,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_PROGRESSMAXIMUM )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->progressMaximum (  );
-    hb_retni( i );
+    hb_retni( obj->progressMaximum (  ) );
   }
 }
 
@@ -366,8 +364,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_PROGRESSVALUE )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->progressValue (  );
-    hb_retni( i );
+    hb_retni( obj->progressValue (  ) );
   }
 }
 
@@ -425,8 +422,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_EXPECTEDRESULTCOUNT )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->expectedResultCount (  );
-    hb_retni( i );
+    hb_retni( obj->expectedResultCount (  ) );
   }
 }
 
@@ -439,8 +435,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_RESULTCOUNT )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->resultCount (  );
-    hb_retni( i );
+    hb_retni( obj->resultCount (  ) );
   }
 }
 

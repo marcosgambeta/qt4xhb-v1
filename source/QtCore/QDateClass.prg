@@ -265,8 +265,7 @@ HB_FUNC_STATIC( QDATE_DAY )
   QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->day (  );
-    hb_retni( i );
+    hb_retni( obj->day (  ) );
   }
 }
 
@@ -279,8 +278,7 @@ HB_FUNC_STATIC( QDATE_DAYOFWEEK )
   QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->dayOfWeek (  );
-    hb_retni( i );
+    hb_retni( obj->dayOfWeek (  ) );
   }
 }
 
@@ -293,8 +291,7 @@ HB_FUNC_STATIC( QDATE_DAYOFYEAR )
   QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->dayOfYear (  );
-    hb_retni( i );
+    hb_retni( obj->dayOfYear (  ) );
   }
 }
 
@@ -307,8 +304,7 @@ HB_FUNC_STATIC( QDATE_DAYSINMONTH )
   QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->daysInMonth (  );
-    hb_retni( i );
+    hb_retni( obj->daysInMonth (  ) );
   }
 }
 
@@ -321,8 +317,7 @@ HB_FUNC_STATIC( QDATE_DAYSINYEAR )
   QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->daysInYear (  );
-    hb_retni( i );
+    hb_retni( obj->daysInYear (  ) );
   }
 }
 
@@ -336,8 +331,7 @@ HB_FUNC_STATIC( QDATE_DAYSTO )
   if( obj )
   {
     QDate * par1 = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->daysTo ( *par1 );
-    hb_retni( i );
+    hb_retni( obj->daysTo ( *par1 ) );
   }
 }
 
@@ -396,8 +390,7 @@ HB_FUNC_STATIC( QDATE_MONTH )
   QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->month (  );
-    hb_retni( i );
+    hb_retni( obj->month (  ) );
   }
 }
 
@@ -426,8 +419,7 @@ HB_FUNC_STATIC( QDATE_TOJULIANDAY )
   QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->toJulianDay (  );
-    hb_retni( i );
+    hb_retni( obj->toJulianDay (  ) );
   }
 }
 
@@ -486,8 +478,7 @@ HB_FUNC_STATIC( QDATE_WEEKNUMBER )
   if( obj )
   {
     int par1;
-    int i = obj->weekNumber ( &par1 );
-    hb_retni( i );
+    hb_retni( obj->weekNumber ( &par1 ) );
     hb_storni( par1, 1 );
   }
 }
@@ -501,8 +492,7 @@ HB_FUNC_STATIC( QDATE_YEAR )
   QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->year (  );
-    hb_retni( i );
+    hb_retni( obj->year (  ) );
   }
 }
 

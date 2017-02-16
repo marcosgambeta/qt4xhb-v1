@@ -206,8 +206,7 @@ HB_FUNC_STATIC( QMODELINDEX_COLUMN )
   QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->column (  );
-    hb_retni( i );
+    hb_retni( obj->column (  ) );
   }
 }
 
@@ -235,8 +234,7 @@ HB_FUNC_STATIC( QMODELINDEX_FLAGS )
   QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->flags (  );
-    hb_retni( i );
+    hb_retni( (int) obj->flags (  ) );
   }
 }
 
@@ -318,8 +316,7 @@ HB_FUNC_STATIC( QMODELINDEX_ROW )
   QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->row (  );
-    hb_retni( i );
+    hb_retni( obj->row (  ) );
   }
 }
 

@@ -113,8 +113,7 @@ HB_FUNC_STATIC( QMETATYPE_REGISTERTYPEDEF )
 {
   const char * par1 = hb_parc(1);
   int par2 = hb_parni(2);
-  int i = QMetaType::registerTypedef (  (const char *) par1, par2 );
-  hb_retni( i );
+  hb_retni( QMetaType::registerTypedef (  (const char *) par1, par2 ) );
 }
 
 
@@ -124,8 +123,7 @@ static int type(const char *typeName)
 HB_FUNC_STATIC( QMETATYPE_TYPE )
 {
   const char * par1 = hb_parc(1);
-  int i = QMetaType::type (  (const char *) par1 );
-  hb_retni( i );
+  hb_retni( QMetaType::type (  (const char *) par1 ) );
 }
 
 

@@ -225,8 +225,7 @@ HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDSTORERELAXED )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->fetchAndStoreRelaxed ( par1 );
-    hb_retni( i );
+    hb_retni( obj->fetchAndStoreRelaxed ( par1 ) );
   }
 }
 
@@ -240,8 +239,7 @@ HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDSTOREACQUIRE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->fetchAndStoreAcquire ( par1 );
-    hb_retni( i );
+    hb_retni( obj->fetchAndStoreAcquire ( par1 ) );
   }
 }
 
@@ -255,8 +253,7 @@ HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDSTORERELEASE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->fetchAndStoreRelease ( par1 );
-    hb_retni( i );
+    hb_retni( obj->fetchAndStoreRelease ( par1 ) );
   }
 }
 
@@ -270,8 +267,7 @@ HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDSTOREORDERED )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->fetchAndStoreOrdered ( par1 );
-    hb_retni( i );
+    hb_retni( obj->fetchAndStoreOrdered ( par1 ) );
   }
 }
 
@@ -285,8 +281,7 @@ HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDADDRELAXED )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->fetchAndAddRelaxed ( par1 );
-    hb_retni( i );
+    hb_retni( obj->fetchAndAddRelaxed ( par1 ) );
   }
 }
 
@@ -300,8 +295,7 @@ HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDADDACQUIRE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->fetchAndAddAcquire ( par1 );
-    hb_retni( i );
+    hb_retni( obj->fetchAndAddAcquire ( par1 ) );
   }
 }
 
@@ -315,8 +309,7 @@ HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDADDRELEASE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->fetchAndAddRelease ( par1 );
-    hb_retni( i );
+    hb_retni( obj->fetchAndAddRelease ( par1 ) );
   }
 }
 
@@ -330,8 +323,7 @@ HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDADDORDERED )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->fetchAndAddOrdered ( par1 );
-    hb_retni( i );
+    hb_retni( obj->fetchAndAddOrdered ( par1 ) );
   }
 }
 

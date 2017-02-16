@@ -286,8 +286,7 @@ ClockType clockType()
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_CLOCKTYPE )
 {
-  int i = QElapsedTimer::clockType (  );
-  hb_retni( i );
+  hb_retni( (int) QElapsedTimer::clockType (  ) );
 }
 
 

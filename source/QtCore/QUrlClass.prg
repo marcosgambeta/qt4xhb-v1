@@ -728,8 +728,7 @@ HB_FUNC_STATIC( QURL_PORT1 )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->port (  );
-    hb_retni( i );
+    hb_retni( obj->port (  ) );
   }
 }
 
@@ -743,8 +742,7 @@ HB_FUNC_STATIC( QURL_PORT2 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->port ( par1 );
-    hb_retni( i );
+    hb_retni( obj->port ( par1 ) );
   }
 }
 

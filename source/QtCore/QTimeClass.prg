@@ -245,8 +245,7 @@ HB_FUNC_STATIC( QTIME_ELAPSED )
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->elapsed (  );
-    hb_retni( i );
+    hb_retni( obj->elapsed (  ) );
   }
 }
 
@@ -259,8 +258,7 @@ HB_FUNC_STATIC( QTIME_HOUR )
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->hour (  );
-    hb_retni( i );
+    hb_retni( obj->hour (  ) );
   }
 }
 
@@ -299,8 +297,7 @@ HB_FUNC_STATIC( QTIME_MINUTE )
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->minute (  );
-    hb_retni( i );
+    hb_retni( obj->minute (  ) );
   }
 }
 
@@ -313,8 +310,7 @@ HB_FUNC_STATIC( QTIME_MSEC )
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->msec (  );
-    hb_retni( i );
+    hb_retni( obj->msec (  ) );
   }
 }
 
@@ -328,8 +324,7 @@ HB_FUNC_STATIC( QTIME_MSECSTO )
   if( obj )
   {
     QTime * par1 = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->msecsTo ( *par1 );
-    hb_retni( i );
+    hb_retni( obj->msecsTo ( *par1 ) );
   }
 }
 
@@ -342,8 +337,7 @@ HB_FUNC_STATIC( QTIME_RESTART )
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->restart (  );
-    hb_retni( i );
+    hb_retni( obj->restart (  ) );
   }
 }
 
@@ -356,8 +350,7 @@ HB_FUNC_STATIC( QTIME_SECOND )
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->second (  );
-    hb_retni( i );
+    hb_retni( obj->second (  ) );
   }
 }
 
@@ -371,8 +364,7 @@ HB_FUNC_STATIC( QTIME_SECSTO )
   if( obj )
   {
     QTime * par1 = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->secsTo ( *par1 );
-    hb_retni( i );
+    hb_retni( obj->secsTo ( *par1 ) );
   }
 }
 

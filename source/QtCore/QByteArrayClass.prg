@@ -484,8 +484,7 @@ HB_FUNC_STATIC( QBYTEARRAY_CAPACITY )
   QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->capacity (  );
-    hb_retni( i );
+    hb_retni( obj->capacity (  ) );
   }
 }
 
@@ -604,8 +603,7 @@ HB_FUNC_STATIC( QBYTEARRAY_COUNT1 )
   if( obj )
   {
     QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->count ( *par1 );
-    hb_retni( i );
+    hb_retni( obj->count ( *par1 ) );
   }
 }
 
@@ -619,8 +617,7 @@ HB_FUNC_STATIC( QBYTEARRAY_COUNT2 )
   if( obj )
   {
     const char * par1 = hb_parc(1);
-    int i = obj->count (  (const char *) par1 );
-    hb_retni( i );
+    hb_retni( obj->count (  (const char *) par1 ) );
   }
 }
 
@@ -634,8 +631,7 @@ HB_FUNC_STATIC( QBYTEARRAY_COUNT3 )
   if( obj )
   {
     char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
-    int i = obj->count ( par1 );
-    hb_retni( i );
+    hb_retni( obj->count ( par1 ) );
   }
 }
 
@@ -648,8 +644,7 @@ HB_FUNC_STATIC( QBYTEARRAY_COUNT4 )
   QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->count (  );
-    hb_retni( i );
+    hb_retni( obj->count (  ) );
   }
 }
 
@@ -777,8 +772,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INDEXOF1 )
   {
     QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = ISNIL(2)? 0 : hb_parni(2);
-    int i = obj->indexOf ( *par1, par2 );
-    hb_retni( i );
+    hb_retni( obj->indexOf ( *par1, par2 ) );
   }
 }
 
@@ -793,8 +787,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INDEXOF2 )
   {
     QString par1 = hb_parc(1);
     int par2 = ISNIL(2)? 0 : hb_parni(2);
-    int i = obj->indexOf ( par1, par2 );
-    hb_retni( i );
+    hb_retni( obj->indexOf ( par1, par2 ) );
   }
 }
 
@@ -809,8 +802,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INDEXOF3 )
   {
     const char * par1 = hb_parc(1);
     int par2 = ISNIL(2)? 0 : hb_parni(2);
-    int i = obj->indexOf (  (const char *) par1, par2 );
-    hb_retni( i );
+    hb_retni( obj->indexOf (  (const char *) par1, par2 ) );
   }
 }
 
@@ -825,8 +817,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INDEXOF4 )
   {
     char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
     int par2 = ISNIL(2)? 0 : hb_parni(2);
-    int i = obj->indexOf ( par1, par2 );
-    hb_retni( i );
+    hb_retni( obj->indexOf ( par1, par2 ) );
   }
 }
 
@@ -999,8 +990,7 @@ HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF1 )
   {
     QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = ISNIL(2)? -1 : hb_parni(2);
-    int i = obj->lastIndexOf ( *par1, par2 );
-    hb_retni( i );
+    hb_retni( obj->lastIndexOf ( *par1, par2 ) );
   }
 }
 
@@ -1015,8 +1005,7 @@ HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF2 )
   {
     QString par1 = hb_parc(1);
     int par2 = ISNIL(2)? -1 : hb_parni(2);
-    int i = obj->lastIndexOf ( par1, par2 );
-    hb_retni( i );
+    hb_retni( obj->lastIndexOf ( par1, par2 ) );
   }
 }
 
@@ -1031,8 +1020,7 @@ HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF3 )
   {
     const char * par1 = hb_parc(1);
     int par2 = ISNIL(2)? -1 : hb_parni(2);
-    int i = obj->lastIndexOf (  (const char *) par1, par2 );
-    hb_retni( i );
+    hb_retni( obj->lastIndexOf (  (const char *) par1, par2 ) );
   }
 }
 
@@ -1047,8 +1035,7 @@ HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF4 )
   {
     char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
     int par2 = ISNIL(2)? -1 : hb_parni(2);
-    int i = obj->lastIndexOf ( par1, par2 );
-    hb_retni( i );
+    hb_retni( obj->lastIndexOf ( par1, par2 ) );
   }
 }
 
@@ -1118,8 +1105,7 @@ HB_FUNC_STATIC( QBYTEARRAY_LENGTH )
   QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->length (  );
-    hb_retni( i );
+    hb_retni( obj->length (  ) );
   }
 }
 
@@ -1969,8 +1955,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SIZE )
   QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->size (  );
-    hb_retni( i );
+    hb_retni( obj->size (  ) );
   }
 }
 
@@ -2166,8 +2151,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOINT )
   {
     bool par1;
     int par2 = ISNIL(2)? 10 : hb_parni(2);
-    int i = obj->toInt ( &par1, par2 );
-    hb_retni( i );
+    hb_retni( obj->toInt ( &par1, par2 ) );
     hb_storl( par1, 1 );
   }
 }

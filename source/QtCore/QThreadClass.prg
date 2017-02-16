@@ -157,8 +157,7 @@ HB_FUNC_STATIC( QTHREAD_PRIORITY )
   QThread * obj = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->priority (  );
-    hb_retni( i );
+    hb_retni( (int) obj->priority (  ) );
   }
 }
 
@@ -283,8 +282,7 @@ int idealThreadCount()
 */
 HB_FUNC_STATIC( QTHREAD_IDEALTHREADCOUNT )
 {
-  int i = QThread::idealThreadCount (  );
-  hb_retni( i );
+  hb_retni( QThread::idealThreadCount (  ) );
 }
 
 

@@ -326,8 +326,7 @@ HB_FUNC_STATIC( QUUID_VARIANT )
   QUuid * obj = (QUuid *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->variant (  );
-    hb_retni( i );
+    hb_retni( (int) obj->variant (  ) );
   }
 }
 
@@ -340,8 +339,7 @@ HB_FUNC_STATIC( QUUID_VERSION )
   QUuid * obj = (QUuid *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->version (  );
-    hb_retni( i );
+    hb_retni( (int) obj->version (  ) );
   }
 }
 

@@ -2041,8 +2041,7 @@ HB_FUNC_STATIC( QOBJECT_STARTTIMER )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->startTimer ( par1 );
-    hb_retni( i );
+    hb_retni( obj->startTimer ( par1 ) );
   }
 }
 

@@ -99,8 +99,7 @@ HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_DURATION )
   QParallelAnimationGroup * obj = (QParallelAnimationGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->duration (  );
-    hb_retni( i );
+    hb_retni( obj->duration (  ) );
   }
 }
 

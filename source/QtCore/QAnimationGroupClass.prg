@@ -122,8 +122,7 @@ HB_FUNC_STATIC( QANIMATIONGROUP_ANIMATIONCOUNT )
   QAnimationGroup * obj = (QAnimationGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->animationCount (  );
-    hb_retni( i );
+    hb_retni( obj->animationCount (  ) );
   }
 }
 
@@ -151,8 +150,7 @@ HB_FUNC_STATIC( QANIMATIONGROUP_INDEXOFANIMATION )
   if( obj )
   {
     QAbstractAnimation * par1 = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->indexOfAnimation ( par1 );
-    hb_retni( i );
+    hb_retni( obj->indexOfAnimation ( par1 ) );
   }
 }
 

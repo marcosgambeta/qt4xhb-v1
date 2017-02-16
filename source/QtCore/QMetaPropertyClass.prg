@@ -192,8 +192,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_TYPE )
   QMetaProperty * obj = (QMetaProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->type (  );
-    hb_retni( i );
+    hb_retni( (int) obj->type (  ) );
   }
 }
 
@@ -206,8 +205,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_USERTYPE )
   QMetaProperty * obj = (QMetaProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->userType (  );
-    hb_retni( i );
+    hb_retni( obj->userType (  ) );
   }
 }
 
@@ -220,8 +218,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_PROPERTYINDEX )
   QMetaProperty * obj = (QMetaProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->propertyIndex (  );
-    hb_retni( i );
+    hb_retni( obj->propertyIndex (  ) );
   }
 }
 
@@ -436,8 +433,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_NOTIFYSIGNALINDEX )
   QMetaProperty * obj = (QMetaProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->notifySignalIndex (  );
-    hb_retni( i );
+    hb_retni( obj->notifySignalIndex (  ) );
   }
 }
 
@@ -450,8 +446,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_REVISION )
   QMetaProperty * obj = (QMetaProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->revision (  );
-    hb_retni( i );
+    hb_retni( obj->revision (  ) );
   }
 }
 

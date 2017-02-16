@@ -385,8 +385,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_INDEX )
   QDeclarativeProperty * obj = (QDeclarativeProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->index (  );
-    hb_retni( i );
+    hb_retni( obj->index (  ) );
   }
 }
 
@@ -546,8 +545,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_PROPERTYTYPE )
   QDeclarativeProperty * obj = (QDeclarativeProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->propertyType (  );
-    hb_retni( i );
+    hb_retni( obj->propertyType (  ) );
   }
 }
 
@@ -560,8 +558,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_PROPERTYTYPECATEGORY )
   QDeclarativeProperty * obj = (QDeclarativeProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->propertyTypeCategory (  );
-    hb_retni( i );
+    hb_retni( (int) obj->propertyTypeCategory (  ) );
   }
 }
 
@@ -615,8 +612,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_TYPE )
   QDeclarativeProperty * obj = (QDeclarativeProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->type (  );
-    hb_retni( i );
+    hb_retni( (int) obj->type (  ) );
   }
 }
 

@@ -168,8 +168,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_FILTERS )
   QAbstractFileEngineIterator * obj = (QAbstractFileEngineIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->filters (  );
-    hb_retni( i );
+    hb_retni( (int) obj->filters (  ) );
   }
 }
 

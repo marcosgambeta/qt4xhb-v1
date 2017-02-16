@@ -333,8 +333,7 @@ HB_FUNC_STATIC( QRECT_BOTTOM )
   QRect * obj = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->bottom (  );
-    hb_retni( i );
+    hb_retni( obj->bottom (  ) );
   }
 }
 
@@ -519,8 +518,7 @@ HB_FUNC_STATIC( QRECT_HEIGHT )
   QRect * obj = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->height (  );
-    hb_retni( i );
+    hb_retni( obj->height (  ) );
   }
 }
 
@@ -601,8 +599,7 @@ HB_FUNC_STATIC( QRECT_LEFT )
   QRect * obj = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->left (  );
-    hb_retni( i );
+    hb_retni( obj->left (  ) );
   }
 }
 
@@ -810,8 +807,7 @@ HB_FUNC_STATIC( QRECT_RIGHT )
   QRect * obj = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->right (  );
-    hb_retni( i );
+    hb_retni( obj->right (  ) );
   }
 }
 
@@ -1069,8 +1065,7 @@ HB_FUNC_STATIC( QRECT_TOP )
   QRect * obj = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->top (  );
-    hb_retni( i );
+    hb_retni( obj->top (  ) );
   }
 }
 
@@ -1218,8 +1213,7 @@ HB_FUNC_STATIC( QRECT_WIDTH )
   QRect * obj = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->width (  );
-    hb_retni( i );
+    hb_retni( obj->width (  ) );
   }
 }
 
@@ -1232,8 +1226,7 @@ HB_FUNC_STATIC( QRECT_X )
   QRect * obj = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->x (  );
-    hb_retni( i );
+    hb_retni( obj->x (  ) );
   }
 }
 
@@ -1246,8 +1239,7 @@ HB_FUNC_STATIC( QRECT_Y )
   QRect * obj = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->y (  );
-    hb_retni( i );
+    hb_retni( obj->y (  ) );
   }
 }
 

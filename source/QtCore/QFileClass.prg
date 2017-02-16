@@ -224,8 +224,7 @@ HB_FUNC_STATIC( QFILE_ERROR )
   QFile * obj = (QFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->error (  );
-    hb_retni( i );
+    hb_retni( (int) obj->error (  ) );
   }
 }
 
@@ -278,8 +277,7 @@ HB_FUNC_STATIC( QFILE_HANDLE )
   QFile * obj = (QFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->handle (  );
-    hb_retni( i );
+    hb_retni( obj->handle (  ) );
   }
 }
 
@@ -370,8 +368,7 @@ HB_FUNC_STATIC( QFILE_PERMISSIONS1 )
   QFile * obj = (QFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->permissions (  );
-    hb_retni( i );
+    hb_retni( (int) obj->permissions (  ) );
   }
 }
 
@@ -732,8 +729,7 @@ Permissions permissions ( const QString & fileName )
 HB_FUNC_STATIC( QFILE_PERMISSIONS2 )
 {
   QString par1 = hb_parc(1);
-  int i = QFile::permissions ( par1 );
-  hb_retni( i );
+  hb_retni( (int) QFile::permissions ( par1 ) );
 }
 
 

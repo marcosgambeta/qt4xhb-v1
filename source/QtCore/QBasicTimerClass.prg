@@ -179,8 +179,7 @@ HB_FUNC_STATIC( QBASICTIMER_TIMERID )
   QBasicTimer * obj = (QBasicTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->timerId (  );
-    hb_retni( i );
+    hb_retni( obj->timerId (  ) );
   }
 }
 

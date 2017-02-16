@@ -483,8 +483,7 @@ ObjectOwnership objectOwnership ( QObject * object )
 HB_FUNC_STATIC( QDECLARATIVEENGINE_OBJECTOWNERSHIP )
 {
   QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  int i = QDeclarativeEngine::objectOwnership ( par1 );
-  hb_retni( i );
+  hb_retni( (int) QDeclarativeEngine::objectOwnership ( par1 ) );
 }
 
 

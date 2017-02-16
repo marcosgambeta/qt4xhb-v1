@@ -243,8 +243,7 @@ HB_FUNC_STATIC( QDATASTREAM_BYTEORDER )
   QDataStream * obj = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->byteOrder (  );
-    hb_retni( i );
+    hb_retni( (int) obj->byteOrder (  ) );
   }
 }
 
@@ -271,8 +270,7 @@ HB_FUNC_STATIC( QDATASTREAM_FLOATINGPOINTPRECISION )
   QDataStream * obj = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->floatingPointPrecision (  );
-    hb_retni( i );
+    hb_retni( (int) obj->floatingPointPrecision (  ) );
   }
 }
 
@@ -288,8 +286,7 @@ HB_FUNC_STATIC( QDATASTREAM_READRAWDATA )
   {
     char * par1 = (char *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
-    int i = obj->readRawData ( par1, par2 );
-    hb_retni( i );
+    hb_retni( obj->readRawData ( par1, par2 ) );
   }
 }
 
@@ -392,8 +389,7 @@ HB_FUNC_STATIC( QDATASTREAM_SKIPRAWDATA )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->skipRawData ( par1 );
-    hb_retni( i );
+    hb_retni( obj->skipRawData ( par1 ) );
   }
 }
 
@@ -406,8 +402,7 @@ HB_FUNC_STATIC( QDATASTREAM_STATUS )
   QDataStream * obj = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->status (  );
-    hb_retni( i );
+    hb_retni( (int) obj->status (  ) );
   }
 }
 
@@ -420,8 +415,7 @@ HB_FUNC_STATIC( QDATASTREAM_VERSION )
   QDataStream * obj = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->version (  );
-    hb_retni( i );
+    hb_retni( obj->version (  ) );
   }
 }
 
@@ -437,8 +431,7 @@ HB_FUNC_STATIC( QDATASTREAM_WRITERAWDATA )
   {
     const char * par1 = hb_parc(1);
     int par2 = hb_parni(2);
-    int i = obj->writeRawData (  (const char *) par1, par2 );
-    hb_retni( i );
+    hb_retni( obj->writeRawData (  (const char *) par1, par2 ) );
   }
 }
 

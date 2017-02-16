@@ -130,8 +130,7 @@ HB_FUNC_STATIC( QTIMELINE_CURRENTFRAME )
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->currentFrame (  );
-    hb_retni( i );
+    hb_retni( obj->currentFrame (  ) );
   }
 }
 
@@ -144,8 +143,7 @@ HB_FUNC_STATIC( QTIMELINE_CURRENTTIME )
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->currentTime (  );
-    hb_retni( i );
+    hb_retni( obj->currentTime (  ) );
   }
 }
 
@@ -172,8 +170,7 @@ HB_FUNC_STATIC( QTIMELINE_CURVESHAPE )
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->curveShape (  );
-    hb_retni( i );
+    hb_retni( (int) obj->curveShape (  ) );
   }
 }
 
@@ -186,8 +183,7 @@ HB_FUNC_STATIC( QTIMELINE_DIRECTION )
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->direction (  );
-    hb_retni( i );
+    hb_retni( (int) obj->direction (  ) );
   }
 }
 
@@ -200,8 +196,7 @@ HB_FUNC_STATIC( QTIMELINE_DURATION )
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->duration (  );
-    hb_retni( i );
+    hb_retni( obj->duration (  ) );
   }
 }
 
@@ -215,8 +210,7 @@ HB_FUNC_STATIC( QTIMELINE_ENDFRAME )
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->endFrame (  );
-    hb_retni( i );
+    hb_retni( obj->endFrame (  ) );
   }
 }
 
@@ -230,8 +224,7 @@ HB_FUNC_STATIC( QTIMELINE_FRAMEFORTIME )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->frameForTime ( par1 );
-    hb_retni( i );
+    hb_retni( obj->frameForTime ( par1 ) );
   }
 }
 
@@ -244,8 +237,7 @@ HB_FUNC_STATIC( QTIMELINE_LOOPCOUNT )
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->loopCount (  );
-    hb_retni( i );
+    hb_retni( obj->loopCount (  ) );
   }
 }
 
@@ -394,8 +386,7 @@ HB_FUNC_STATIC( QTIMELINE_STARTFRAME )
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->startFrame (  );
-    hb_retni( i );
+    hb_retni( obj->startFrame (  ) );
   }
 }
 
@@ -408,8 +399,7 @@ HB_FUNC_STATIC( QTIMELINE_STATE )
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->state (  );
-    hb_retni( i );
+    hb_retni( (int) obj->state (  ) );
   }
 }
 
@@ -422,8 +412,7 @@ HB_FUNC_STATIC( QTIMELINE_UPDATEINTERVAL )
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->updateInterval (  );
-    hb_retni( i );
+    hb_retni( obj->updateInterval (  ) );
   }
 }
 

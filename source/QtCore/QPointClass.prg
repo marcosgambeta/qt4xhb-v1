@@ -195,8 +195,7 @@ HB_FUNC_STATIC( QPOINT_MANHATTANLENGTH )
   QPoint * obj = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->manhattanLength (  );
-    hb_retni( i );
+    hb_retni( obj->manhattanLength (  ) );
   }
 }
 
@@ -241,8 +240,7 @@ HB_FUNC_STATIC( QPOINT_X )
   QPoint * obj = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->x (  );
-    hb_retni( i );
+    hb_retni( obj->x (  ) );
   }
 }
 
@@ -255,8 +253,7 @@ HB_FUNC_STATIC( QPOINT_Y )
   QPoint * obj = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->y (  );
-    hb_retni( i );
+    hb_retni( obj->y (  ) );
   }
 }
 

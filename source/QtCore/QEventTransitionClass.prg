@@ -156,8 +156,7 @@ HB_FUNC_STATIC( QEVENTTRANSITION_EVENTTYPE )
   QEventTransition * obj = (QEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->eventType (  );
-    hb_retni( i );
+    hb_retni( (int) obj->eventType (  ) );
   }
 }
 

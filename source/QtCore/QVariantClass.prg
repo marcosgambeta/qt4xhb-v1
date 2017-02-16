@@ -1502,8 +1502,7 @@ HB_FUNC_STATIC( QVARIANT_TYPE )
   QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->type (  );
-    hb_retni( i );
+    hb_retni( (int) obj->type (  ) );
   }
 }
 
@@ -1530,8 +1529,7 @@ HB_FUNC_STATIC( QVARIANT_USERTYPE )
   QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->userType (  );
-    hb_retni( i );
+    hb_retni( obj->userType (  ) );
   }
 }
 
@@ -1545,8 +1543,7 @@ Type nameToType ( const char * name )
 HB_FUNC_STATIC( QVARIANT_NAMETOTYPE )
 {
   const char * par1 = hb_parc(1);
-  int i = QVariant::nameToType (  (const char *) par1 );
-  hb_retni( i );
+  hb_retni( (int) QVariant::nameToType (  (const char *) par1 ) );
 }
 
 

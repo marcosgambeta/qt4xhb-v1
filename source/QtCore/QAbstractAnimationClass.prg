@@ -105,8 +105,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_CURRENTLOOP )
   QAbstractAnimation * obj = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->currentLoop (  );
-    hb_retni( i );
+    hb_retni( obj->currentLoop (  ) );
   }
 }
 
@@ -119,8 +118,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_CURRENTLOOPTIME )
   QAbstractAnimation * obj = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->currentLoopTime (  );
-    hb_retni( i );
+    hb_retni( obj->currentLoopTime (  ) );
   }
 }
 
@@ -133,8 +131,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_CURRENTTIME )
   QAbstractAnimation * obj = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->currentTime (  );
-    hb_retni( i );
+    hb_retni( obj->currentTime (  ) );
   }
 }
 
@@ -147,8 +144,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_DIRECTION )
   QAbstractAnimation * obj = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->direction (  );
-    hb_retni( i );
+    hb_retni( (int) obj->direction (  ) );
   }
 }
 
@@ -161,8 +157,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_DURATION )
   QAbstractAnimation * obj = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->duration (  );
-    hb_retni( i );
+    hb_retni( obj->duration (  ) );
   }
 }
 
@@ -189,8 +184,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_LOOPCOUNT )
   QAbstractAnimation * obj = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->loopCount (  );
-    hb_retni( i );
+    hb_retni( obj->loopCount (  ) );
   }
 }
 
@@ -233,8 +227,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_STATE )
   QAbstractAnimation * obj = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->state (  );
-    hb_retni( i );
+    hb_retni( (int) obj->state (  ) );
   }
 }
 
@@ -247,8 +240,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_TOTALDURATION )
   QAbstractAnimation * obj = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->totalDuration (  );
-    hb_retni( i );
+    hb_retni( obj->totalDuration (  ) );
   }
 }
 

@@ -356,8 +356,7 @@ HB_FUNC_STATIC( QDATETIME_DAYSTO )
   if( obj )
   {
     QDateTime * par1 = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->daysTo ( *par1 );
-    hb_retni( i );
+    hb_retni( obj->daysTo ( *par1 ) );
   }
 }
 
@@ -412,8 +411,7 @@ HB_FUNC_STATIC( QDATETIME_SECSTO )
   if( obj )
   {
     QDateTime * par1 = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->secsTo ( *par1 );
-    hb_retni( i );
+    hb_retni( obj->secsTo ( *par1 ) );
   }
 }
 
@@ -515,8 +513,7 @@ HB_FUNC_STATIC( QDATETIME_TIMESPEC )
   QDateTime * obj = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->timeSpec (  );
-    hb_retni( i );
+    hb_retni( (int) obj->timeSpec (  ) );
   }
 }
 

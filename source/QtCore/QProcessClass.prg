@@ -206,8 +206,7 @@ HB_FUNC_STATIC( QPROCESS_ERROR )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->error (  );
-    hb_retni( i );
+    hb_retni( (int) obj->error (  ) );
   }
 }
 
@@ -220,8 +219,7 @@ HB_FUNC_STATIC( QPROCESS_EXITCODE )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->exitCode (  );
-    hb_retni( i );
+    hb_retni( obj->exitCode (  ) );
   }
 }
 
@@ -234,8 +232,7 @@ HB_FUNC_STATIC( QPROCESS_EXITSTATUS )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->exitStatus (  );
-    hb_retni( i );
+    hb_retni( (int) obj->exitStatus (  ) );
   }
 }
 
@@ -263,8 +260,7 @@ HB_FUNC_STATIC( QPROCESS_PROCESSCHANNELMODE )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->processChannelMode (  );
-    hb_retni( i );
+    hb_retni( (int) obj->processChannelMode (  ) );
   }
 }
 
@@ -319,8 +315,7 @@ HB_FUNC_STATIC( QPROCESS_READCHANNEL )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->readChannel (  );
-    hb_retni( i );
+    hb_retni( (int) obj->readChannel (  ) );
   }
 }
 
@@ -550,8 +545,7 @@ HB_FUNC_STATIC( QPROCESS_STATE )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->state (  );
-    hb_retni( i );
+    hb_retni( (int) obj->state (  ) );
   }
 }
 
@@ -751,8 +745,7 @@ for (i2=0;i2<nLen2;i2++)
 QString temp = hb_arrayGetCPtr(aStrings2, i2+1);
 par2 << temp;
 }
-  int i = QProcess::execute ( par1, par2 );
-  hb_retni( i );
+  hb_retni( QProcess::execute ( par1, par2 ) );
 }
 
 
@@ -762,8 +755,7 @@ int execute ( const QString & program )
 HB_FUNC_STATIC( QPROCESS_EXECUTE2 )
 {
   QString par1 = hb_parc(1);
-  int i = QProcess::execute ( par1 );
-  hb_retni( i );
+  hb_retni( QProcess::execute ( par1 ) );
 }
 
 

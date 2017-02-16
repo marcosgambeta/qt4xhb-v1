@@ -331,8 +331,7 @@ HB_FUNC_STATIC( QCHAR_CATEGORY )
   QChar * obj = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->category (  );
-    hb_retni( i );
+    hb_retni( (int) obj->category (  ) );
   }
 }
 
@@ -348,8 +347,7 @@ HB_FUNC_STATIC( QCHAR_DECOMPOSITIONTAG )
   QChar * obj = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->decompositionTag (  );
-    hb_retni( i );
+    hb_retni( (int) obj->decompositionTag (  ) );
   }
 }
 
@@ -362,8 +360,7 @@ HB_FUNC_STATIC( QCHAR_DIGITVALUE )
   QChar * obj = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->digitValue (  );
-    hb_retni( i );
+    hb_retni( obj->digitValue (  ) );
   }
 }
 
@@ -376,8 +373,7 @@ HB_FUNC_STATIC( QCHAR_DIRECTION )
   QChar * obj = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->direction (  );
-    hb_retni( i );
+    hb_retni( (int) obj->direction (  ) );
   }
 }
 
@@ -598,8 +594,7 @@ HB_FUNC_STATIC( QCHAR_JOINING )
   QChar * obj = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->joining (  );
-    hb_retni( i );
+    hb_retni( (int) obj->joining (  ) );
   }
 }
 
@@ -687,8 +682,7 @@ HB_FUNC_STATIC( QCHAR_UNICODEVERSION )
   QChar * obj = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->unicodeVersion (  );
-    hb_retni( i );
+    hb_retni( (int) obj->unicodeVersion (  ) );
   }
 }
 

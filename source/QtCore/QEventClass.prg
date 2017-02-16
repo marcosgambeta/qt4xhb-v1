@@ -209,8 +209,7 @@ HB_FUNC_STATIC( QEVENT_TYPE )
   QEvent * obj = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->type (  );
-    hb_retni( i );
+    hb_retni( (int) obj->type (  ) );
   }
 }
 
@@ -222,8 +221,7 @@ int registerEventType ( int hint = -1 )
 HB_FUNC_STATIC( QEVENT_REGISTEREVENTTYPE )
 {
   int par1 = ISNIL(1)? -1 : hb_parni(1);
-  int i = QEvent::registerEventType ( par1 );
-  hb_retni( i );
+  hb_retni( QEvent::registerEventType ( par1 ) );
 }
 
 

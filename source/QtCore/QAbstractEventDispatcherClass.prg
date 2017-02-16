@@ -185,8 +185,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERTIMER1 )
   {
     int par1 = hb_parni(1);
     QObject * par2 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->registerTimer ( par1, par2 );
-    hb_retni( i );
+    hb_retni( obj->registerTimer ( par1, par2 ) );
   }
 }
 

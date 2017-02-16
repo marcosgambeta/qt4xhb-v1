@@ -108,8 +108,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_PROGRESSVALUE )
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->progressValue (  );
-    hb_retni( i );
+    hb_retni( obj->progressValue (  ) );
   }
 }
 
@@ -122,8 +121,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_PROGRESSMINIMUM )
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->progressMinimum (  );
-    hb_retni( i );
+    hb_retni( obj->progressMinimum (  ) );
   }
 }
 
@@ -136,8 +134,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_PROGRESSMAXIMUM )
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->progressMaximum (  );
-    hb_retni( i );
+    hb_retni( obj->progressMaximum (  ) );
   }
 }
 

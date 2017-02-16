@@ -238,8 +238,7 @@ HB_FUNC_STATIC( QBITARRAY_COUNT1 )
   QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->count (  );
-    hb_retni( i );
+    hb_retni( obj->count (  ) );
   }
 }
 
@@ -253,8 +252,7 @@ HB_FUNC_STATIC( QBITARRAY_COUNT2 )
   if( obj )
   {
     bool par1 = hb_parl(1);
-    int i = obj->count ( par1 );
-    hb_retni( i );
+    hb_retni( obj->count ( par1 ) );
   }
 }
 
@@ -416,8 +414,7 @@ HB_FUNC_STATIC( QBITARRAY_SIZE )
   QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->size (  );
-    hb_retni( i );
+    hb_retni( obj->size (  ) );
   }
 }
 

@@ -223,8 +223,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_ERROR )
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->error (  );
-    hb_retni( i );
+    hb_retni( (int) obj->error (  ) );
   }
 }
 
@@ -251,8 +250,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_GLOBALRESTOREPOLICY )
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->globalRestorePolicy (  );
-    hb_retni( i );
+    hb_retni( (int) obj->globalRestorePolicy (  ) );
   }
 }
 
@@ -293,8 +291,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_POSTDELAYEDEVENT )
   {
     QEvent * par1 = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
-    int i = obj->postDelayedEvent ( par1, par2 );
-    hb_retni( i );
+    hb_retni( obj->postDelayedEvent ( par1, par2 ) );
   }
 }
 

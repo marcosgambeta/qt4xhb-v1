@@ -239,8 +239,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_ERROR )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->error (  );
-    hb_retni( i );
+    hb_retni( (int) obj->error (  ) );
   }
 }
 
@@ -269,8 +268,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_FILEFLAGS )
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QAbstractFileEngine::FileInfoAll : hb_parni(1);
-    int i = obj->fileFlags (  (QAbstractFileEngine::FileFlags) par1 );
-    hb_retni( i );
+    hb_retni( (int) obj->fileFlags (  (QAbstractFileEngine::FileFlags) par1 ) );
   }
 }
 
@@ -326,8 +324,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_HANDLE )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->handle (  );
-    hb_retni( i );
+    hb_retni( obj->handle (  ) );
   }
 }
 

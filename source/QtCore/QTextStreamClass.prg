@@ -488,8 +488,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_STATUS )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->status (  );
-    hb_retni( i );
+    hb_retni( (int) obj->status (  ) );
   }
 }
 
@@ -673,8 +672,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_FIELDALIGNMENT )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->fieldAlignment (  );
-    hb_retni( i );
+    hb_retni( (int) obj->fieldAlignment (  ) );
   }
 }
 
@@ -731,8 +729,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_FIELDWIDTH )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->fieldWidth (  );
-    hb_retni( i );
+    hb_retni( obj->fieldWidth (  ) );
   }
 }
 
@@ -760,8 +757,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_NUMBERFLAGS )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->numberFlags (  );
-    hb_retni( i );
+    hb_retni( (int) obj->numberFlags (  ) );
   }
 }
 
@@ -789,8 +785,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_INTEGERBASE )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->integerBase (  );
-    hb_retni( i );
+    hb_retni( obj->integerBase (  ) );
   }
 }
 
@@ -818,8 +813,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_REALNUMBERNOTATION )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->realNumberNotation (  );
-    hb_retni( i );
+    hb_retni( (int) obj->realNumberNotation (  ) );
   }
 }
 
@@ -847,8 +841,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_REALNUMBERPRECISION )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->realNumberPrecision (  );
-    hb_retni( i );
+    hb_retni( obj->realNumberPrecision (  ) );
   }
 }
 

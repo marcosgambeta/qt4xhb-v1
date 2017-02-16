@@ -112,8 +112,7 @@ HB_FUNC_STATIC( QTHREADPOOL_ACTIVETHREADCOUNT )
   QThreadPool * obj = (QThreadPool *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->activeThreadCount (  );
-    hb_retni( i );
+    hb_retni( obj->activeThreadCount (  ) );
   }
 }
 
@@ -126,8 +125,7 @@ HB_FUNC_STATIC( QTHREADPOOL_EXPIRYTIMEOUT )
   QThreadPool * obj = (QThreadPool *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->expiryTimeout (  );
-    hb_retni( i );
+    hb_retni( obj->expiryTimeout (  ) );
   }
 }
 
@@ -140,8 +138,7 @@ HB_FUNC_STATIC( QTHREADPOOL_MAXTHREADCOUNT )
   QThreadPool * obj = (QThreadPool *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->maxThreadCount (  );
-    hb_retni( i );
+    hb_retni( obj->maxThreadCount (  ) );
   }
 }
 

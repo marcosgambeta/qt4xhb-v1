@@ -180,8 +180,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_COLUMN )
   QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->column (  );
-    hb_retni( i );
+    hb_retni( obj->column (  ) );
   }
 }
 
@@ -221,8 +220,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_LINE )
   QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->line (  );
-    hb_retni( i );
+    hb_retni( obj->line (  ) );
   }
 }
 

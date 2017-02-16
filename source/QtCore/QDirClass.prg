@@ -613,8 +613,7 @@ HB_FUNC_STATIC( QDIR_FILTER )
   QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->filter (  );
-    hb_retni( i );
+    hb_retni( (int) obj->filter (  ) );
   }
 }
 
@@ -912,8 +911,7 @@ HB_FUNC_STATIC( QDIR_SORTING )
   QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->sorting (  );
-    hb_retni( i );
+    hb_retni( (int) obj->sorting (  ) );
   }
 }
 

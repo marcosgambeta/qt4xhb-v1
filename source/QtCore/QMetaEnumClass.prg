@@ -173,8 +173,7 @@ HB_FUNC_STATIC( QMETAENUM_KEYCOUNT )
   QMetaEnum * obj = (QMetaEnum *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->keyCount (  );
-    hb_retni( i );
+    hb_retni( obj->keyCount (  ) );
   }
 }
 
@@ -203,8 +202,7 @@ HB_FUNC_STATIC( QMETAENUM_VALUE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->value ( par1 );
-    hb_retni( i );
+    hb_retni( obj->value ( par1 ) );
   }
 }
 
@@ -232,8 +230,7 @@ HB_FUNC_STATIC( QMETAENUM_KEYTOVALUE )
   if( obj )
   {
     const char * par1 = hb_parc(1);
-    int i = obj->keyToValue (  (const char *) par1 );
-    hb_retni( i );
+    hb_retni( obj->keyToValue (  (const char *) par1 ) );
   }
 }
 
@@ -262,8 +259,7 @@ HB_FUNC_STATIC( QMETAENUM_KEYSTOVALUE )
   if( obj )
   {
     const char * par1 = hb_parc(1);
-    int i = obj->keysToValue (  (const char *) par1 );
-    hb_retni( i );
+    hb_retni( obj->keysToValue (  (const char *) par1 ) );
   }
 }
 

@@ -280,8 +280,7 @@ HB_FUNC_STATIC( QMETAMETHOD_ACCESS )
   QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->access (  );
-    hb_retni( i );
+    hb_retni( (int) obj->access (  ) );
   }
 }
 
@@ -294,8 +293,7 @@ HB_FUNC_STATIC( QMETAMETHOD_METHODTYPE )
   QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->methodType (  );
-    hb_retni( i );
+    hb_retni( (int) obj->methodType (  ) );
   }
 }
 
@@ -308,8 +306,7 @@ HB_FUNC_STATIC( QMETAMETHOD_ATTRIBUTES )
   QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->attributes (  );
-    hb_retni( i );
+    hb_retni( obj->attributes (  ) );
   }
 }
 
@@ -322,8 +319,7 @@ HB_FUNC_STATIC( QMETAMETHOD_METHODINDEX )
   QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->methodIndex (  );
-    hb_retni( i );
+    hb_retni( obj->methodIndex (  ) );
   }
 }
 
@@ -336,8 +332,7 @@ HB_FUNC_STATIC( QMETAMETHOD_REVISION )
   QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->revision (  );
-    hb_retni( i );
+    hb_retni( obj->revision (  ) );
   }
 }
 

@@ -110,8 +110,7 @@ HB_FUNC_STATIC( QTIMER_INTERVAL )
   QTimer * obj = (QTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->interval (  );
-    hb_retni( i );
+    hb_retni( obj->interval (  ) );
   }
 }
 
@@ -180,8 +179,7 @@ HB_FUNC_STATIC( QTIMER_TIMERID )
   QTimer * obj = (QTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->timerId (  );
-    hb_retni( i );
+    hb_retni( obj->timerId (  ) );
   }
 }
 

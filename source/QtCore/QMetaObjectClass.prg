@@ -179,8 +179,7 @@ HB_FUNC_STATIC( QMETAOBJECT_CLASSINFOCOUNT )
   QMetaObject * obj = (QMetaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->classInfoCount (  );
-    hb_retni( i );
+    hb_retni( obj->classInfoCount (  ) );
   }
 }
 
@@ -193,8 +192,7 @@ HB_FUNC_STATIC( QMETAOBJECT_CLASSINFOOFFSET )
   QMetaObject * obj = (QMetaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->classInfoOffset (  );
-    hb_retni( i );
+    hb_retni( obj->classInfoOffset (  ) );
   }
 }
 
@@ -236,8 +234,7 @@ HB_FUNC_STATIC( QMETAOBJECT_CONSTRUCTORCOUNT )
   QMetaObject * obj = (QMetaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->constructorCount (  );
-    hb_retni( i );
+    hb_retni( obj->constructorCount (  ) );
   }
 }
 
@@ -265,8 +262,7 @@ HB_FUNC_STATIC( QMETAOBJECT_ENUMERATORCOUNT )
   QMetaObject * obj = (QMetaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->enumeratorCount (  );
-    hb_retni( i );
+    hb_retni( obj->enumeratorCount (  ) );
   }
 }
 
@@ -279,8 +275,7 @@ HB_FUNC_STATIC( QMETAOBJECT_ENUMERATOROFFSET )
   QMetaObject * obj = (QMetaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->enumeratorOffset (  );
-    hb_retni( i );
+    hb_retni( obj->enumeratorOffset (  ) );
   }
 }
 
@@ -294,8 +289,7 @@ HB_FUNC_STATIC( QMETAOBJECT_INDEXOFCLASSINFO )
   if( obj )
   {
     const char * par1 = hb_parc(1);
-    int i = obj->indexOfClassInfo (  (const char *) par1 );
-    hb_retni( i );
+    hb_retni( obj->indexOfClassInfo (  (const char *) par1 ) );
   }
 }
 
@@ -309,8 +303,7 @@ HB_FUNC_STATIC( QMETAOBJECT_INDEXOFCONSTRUCTOR )
   if( obj )
   {
     const char * par1 = hb_parc(1);
-    int i = obj->indexOfConstructor (  (const char *) par1 );
-    hb_retni( i );
+    hb_retni( obj->indexOfConstructor (  (const char *) par1 ) );
   }
 }
 
@@ -324,8 +317,7 @@ HB_FUNC_STATIC( QMETAOBJECT_INDEXOFENUMERATOR )
   if( obj )
   {
     const char * par1 = hb_parc(1);
-    int i = obj->indexOfEnumerator (  (const char *) par1 );
-    hb_retni( i );
+    hb_retni( obj->indexOfEnumerator (  (const char *) par1 ) );
   }
 }
 
@@ -339,8 +331,7 @@ HB_FUNC_STATIC( QMETAOBJECT_INDEXOFMETHOD )
   if( obj )
   {
     const char * par1 = hb_parc(1);
-    int i = obj->indexOfMethod (  (const char *) par1 );
-    hb_retni( i );
+    hb_retni( obj->indexOfMethod (  (const char *) par1 ) );
   }
 }
 
@@ -354,8 +345,7 @@ HB_FUNC_STATIC( QMETAOBJECT_INDEXOFPROPERTY )
   if( obj )
   {
     const char * par1 = hb_parc(1);
-    int i = obj->indexOfProperty (  (const char *) par1 );
-    hb_retni( i );
+    hb_retni( obj->indexOfProperty (  (const char *) par1 ) );
   }
 }
 
@@ -369,8 +359,7 @@ HB_FUNC_STATIC( QMETAOBJECT_INDEXOFSIGNAL )
   if( obj )
   {
     const char * par1 = hb_parc(1);
-    int i = obj->indexOfSignal (  (const char *) par1 );
-    hb_retni( i );
+    hb_retni( obj->indexOfSignal (  (const char *) par1 ) );
   }
 }
 
@@ -384,8 +373,7 @@ HB_FUNC_STATIC( QMETAOBJECT_INDEXOFSLOT )
   if( obj )
   {
     const char * par1 = hb_parc(1);
-    int i = obj->indexOfSlot (  (const char *) par1 );
-    hb_retni( i );
+    hb_retni( obj->indexOfSlot (  (const char *) par1 ) );
   }
 }
 
@@ -413,8 +401,7 @@ HB_FUNC_STATIC( QMETAOBJECT_METHODCOUNT )
   QMetaObject * obj = (QMetaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->methodCount (  );
-    hb_retni( i );
+    hb_retni( obj->methodCount (  ) );
   }
 }
 
@@ -427,8 +414,7 @@ HB_FUNC_STATIC( QMETAOBJECT_METHODOFFSET )
   QMetaObject * obj = (QMetaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->methodOffset (  );
-    hb_retni( i );
+    hb_retni( obj->methodOffset (  ) );
   }
 }
 
@@ -480,8 +466,7 @@ HB_FUNC_STATIC( QMETAOBJECT_PROPERTYCOUNT )
   QMetaObject * obj = (QMetaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->propertyCount (  );
-    hb_retni( i );
+    hb_retni( obj->propertyCount (  ) );
   }
 }
 
@@ -494,8 +479,7 @@ HB_FUNC_STATIC( QMETAOBJECT_PROPERTYOFFSET )
   QMetaObject * obj = (QMetaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->propertyOffset (  );
-    hb_retni( i );
+    hb_retni( obj->propertyOffset (  ) );
   }
 }
 

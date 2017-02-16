@@ -307,8 +307,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_FILEFLAGS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->fileFlags (  (QAbstractFileEngine::FileFlags) par1 );
-    hb_retni( i );
+    hb_retni( (int) obj->fileFlags (  (QAbstractFileEngine::FileFlags) par1 ) );
   }
 }
 
@@ -364,8 +363,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_HANDLE )
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->handle (  );
-    hb_retni( i );
+    hb_retni( obj->handle (  ) );
   }
 }
 

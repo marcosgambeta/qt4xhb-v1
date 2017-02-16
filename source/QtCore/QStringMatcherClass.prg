@@ -266,8 +266,7 @@ HB_FUNC_STATIC( QSTRINGMATCHER_INDEXIN1 )
   {
     QString par1 = hb_parc(1);
     int par2 = ISNIL(2)? 0 : hb_parni(2);
-    int i = obj->indexIn ( par1, par2 );
-    hb_retni( i );
+    hb_retni( obj->indexIn ( par1, par2 ) );
   }
 }
 
@@ -283,8 +282,7 @@ HB_FUNC_STATIC( QSTRINGMATCHER_INDEXIN2 )
     const QChar * par1 = (const QChar *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
     int par3 = ISNIL(3)? 0 : hb_parni(3);
-    int i = obj->indexIn ( par1, par2, par3 );
-    hb_retni( i );
+    hb_retni( obj->indexIn ( par1, par2, par3 ) );
   }
 }
 
@@ -311,8 +309,7 @@ HB_FUNC_STATIC( QSTRINGMATCHER_CASESENSITIVITY )
   QStringMatcher * obj = (QStringMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->caseSensitivity (  );
-    hb_retni( i );
+    hb_retni( (int) obj->caseSensitivity (  ) );
   }
 }
 

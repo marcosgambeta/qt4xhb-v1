@@ -585,8 +585,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ERROR )
   QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->error (  );
-    hb_retni( i );
+    hb_retni( (int) obj->error (  ) );
   }
 }
 
@@ -951,8 +950,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_READNEXT )
   QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->readNext (  );
-    hb_retni( i );
+    hb_retni( (int) obj->readNext (  ) );
   }
 }
 
@@ -1065,8 +1063,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_TOKENTYPE )
   QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->tokenType (  );
-    hb_retni( i );
+    hb_retni( (int) obj->tokenType (  ) );
   }
 }
 

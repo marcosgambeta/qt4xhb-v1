@@ -302,8 +302,7 @@ HB_FUNC_STATIC( QSETTINGS_BEGINREADARRAY )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    int i = obj->beginReadArray ( par1 );
-    hb_retni( i );
+    hb_retni( obj->beginReadArray ( par1 ) );
   }
 }
 
@@ -461,8 +460,7 @@ HB_FUNC_STATIC( QSETTINGS_FORMAT )
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->format (  );
-    hb_retni( i );
+    hb_retni( (int) obj->format (  ) );
   }
 }
 
@@ -545,8 +543,7 @@ HB_FUNC_STATIC( QSETTINGS_SCOPE )
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->scope (  );
-    hb_retni( i );
+    hb_retni( (int) obj->scope (  ) );
   }
 }
 
@@ -647,8 +644,7 @@ HB_FUNC_STATIC( QSETTINGS_STATUS )
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->status (  );
-    hb_retni( i );
+    hb_retni( (int) obj->status (  ) );
   }
 }
 
@@ -689,8 +685,7 @@ Format defaultFormat ()
 */
 HB_FUNC_STATIC( QSETTINGS_DEFAULTFORMAT )
 {
-  int i = QSettings::defaultFormat (  );
-  hb_retni( i );
+  hb_retni( (int) QSettings::defaultFormat (  ) );
 }
 
 

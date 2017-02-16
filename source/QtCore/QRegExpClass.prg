@@ -239,8 +239,7 @@ HB_FUNC_STATIC( QREGEXP_CAPTURECOUNT )
   QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->captureCount (  );
-    hb_retni( i );
+    hb_retni( obj->captureCount (  ) );
   }
 }
 
@@ -276,8 +275,7 @@ HB_FUNC_STATIC( QREGEXP_CASESENSITIVITY )
   QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->caseSensitivity (  );
-    hb_retni( i );
+    hb_retni( (int) obj->caseSensitivity (  ) );
   }
 }
 
@@ -321,8 +319,7 @@ HB_FUNC_STATIC( QREGEXP_INDEXIN )
     QString par1 = hb_parc(1);
     int par2 = ISNIL(2)? 0 : hb_parni(2);
     int par3 = ISNIL(3)? (int) QRegExp::CaretAtZero : hb_parni(3);
-    int i = obj->indexIn ( par1, par2,  (QRegExp::CaretMode) par3 );
-    hb_retni( i );
+    hb_retni( obj->indexIn ( par1, par2,  (QRegExp::CaretMode) par3 ) );
   }
 }
 
@@ -377,8 +374,7 @@ HB_FUNC_STATIC( QREGEXP_LASTINDEXIN )
     QString par1 = hb_parc(1);
     int par2 = ISNIL(2)? -1 : hb_parni(2);
     int par3 = ISNIL(3)? (int) QRegExp::CaretAtZero : hb_parni(3);
-    int i = obj->lastIndexIn ( par1, par2,  (QRegExp::CaretMode) par3 );
-    hb_retni( i );
+    hb_retni( obj->lastIndexIn ( par1, par2,  (QRegExp::CaretMode) par3 ) );
   }
 }
 
@@ -391,8 +387,7 @@ HB_FUNC_STATIC( QREGEXP_MATCHEDLENGTH )
   QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->matchedLength (  );
-    hb_retni( i );
+    hb_retni( obj->matchedLength (  ) );
   }
 }
 
@@ -419,8 +414,7 @@ HB_FUNC_STATIC( QREGEXP_PATTERNSYNTAX )
   QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->patternSyntax (  );
-    hb_retni( i );
+    hb_retni( (int) obj->patternSyntax (  ) );
   }
 }
 
@@ -434,8 +428,7 @@ HB_FUNC_STATIC( QREGEXP_POS )
   if( obj )
   {
     int par1 = ISNIL(1)? 0 : hb_parni(1);
-    int i = obj->pos ( par1 );
-    hb_retni( i );
+    hb_retni( obj->pos ( par1 ) );
   }
 }
 
