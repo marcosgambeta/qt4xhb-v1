@@ -196,8 +196,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_ISVISIBLE )
   QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isVisible (  );
-    hb_retl( b );
+    hb_retl( obj->isVisible (  ) );
   }
 }
 
@@ -328,8 +327,7 @@ bool isSystemTrayAvailable ()
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_ISSYSTEMTRAYAVAILABLE )
 {
-  bool b = QSystemTrayIcon::isSystemTrayAvailable (  );
-  hb_retl( b );
+  hb_retl( QSystemTrayIcon::isSystemTrayAvailable (  ) );
 }
 
 
@@ -338,8 +336,7 @@ bool supportsMessages ()
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SUPPORTSMESSAGES )
 {
-  bool b = QSystemTrayIcon::supportsMessages (  );
-  hb_retl( b );
+  hb_retl( QSystemTrayIcon::supportsMessages (  ) );
 }
 
 

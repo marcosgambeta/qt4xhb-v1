@@ -736,8 +736,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ISEMPTY )
   QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isEmpty (  );
-    hb_retl( b );
+    hb_retl( obj->isEmpty (  ) );
   }
 }
 
@@ -750,8 +749,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ISMODIFIED )
   QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isModified (  );
-    hb_retl( b );
+    hb_retl( obj->isModified (  ) );
   }
 }
 
@@ -764,8 +762,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ISREDOAVAILABLE )
   QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isRedoAvailable (  );
-    hb_retl( b );
+    hb_retl( obj->isRedoAvailable (  ) );
   }
 }
 
@@ -778,8 +775,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ISUNDOAVAILABLE )
   QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isUndoAvailable (  );
-    hb_retl( b );
+    hb_retl( obj->isUndoAvailable (  ) );
   }
 }
 
@@ -792,8 +788,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ISUNDOREDOENABLED )
   QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isUndoRedoEnabled (  );
-    hb_retl( b );
+    hb_retl( obj->isUndoRedoEnabled (  ) );
   }
 }
 
@@ -1309,8 +1304,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_USEDESIGNMETRICS )
   QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->useDesignMetrics (  );
-    hb_retl( b );
+    hb_retl( obj->useDesignMetrics (  ) );
   }
 }
 

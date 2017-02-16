@@ -156,8 +156,7 @@ for (i3=0;i3<nLen3;i3++)
 {
 par3 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList3, i3+1 ), "POINTER", 0 ) );
 }
-    bool b = obj->doAction ( par1, par2, par3 );
-    hb_retl( b );
+    hb_retl( obj->doAction ( par1, par2, par3 ) );
   }
 }
 
@@ -209,8 +208,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_ISVALID )
   QAccessibleInterface * obj = (QAccessibleInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isValid (  );
-    hb_retl( b );
+    hb_retl( obj->isValid (  ) );
   }
 }
 

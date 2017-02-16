@@ -383,8 +383,7 @@ HB_FUNC_STATIC( QMATRIX4X4_ISIDENTITY )
   QMatrix4x4 * obj = (QMatrix4x4 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isIdentity (  );
-    hb_retl( b );
+    hb_retl( obj->isIdentity (  ) );
   }
 }
 

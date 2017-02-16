@@ -167,8 +167,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_TESTOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->testOption (  (QPageSetupDialog::PageSetupDialogOption) par1 );
-    hb_retl( b );
+    hb_retl( obj->testOption (  (QPageSetupDialog::PageSetupDialogOption) par1 ) );
   }
 }
 

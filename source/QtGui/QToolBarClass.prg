@@ -439,8 +439,7 @@ HB_FUNC_STATIC( QTOOLBAR_ISAREAALLOWED )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->isAreaAllowed (  (Qt::ToolBarArea) par1 );
-    hb_retl( b );
+    hb_retl( obj->isAreaAllowed (  (Qt::ToolBarArea) par1 ) );
   }
 }
 
@@ -453,8 +452,7 @@ HB_FUNC_STATIC( QTOOLBAR_ISFLOATABLE )
   QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isFloatable (  );
-    hb_retl( b );
+    hb_retl( obj->isFloatable (  ) );
   }
 }
 
@@ -467,8 +465,7 @@ HB_FUNC_STATIC( QTOOLBAR_ISFLOATING )
   QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isFloating (  );
-    hb_retl( b );
+    hb_retl( obj->isFloating (  ) );
   }
 }
 
@@ -481,8 +478,7 @@ HB_FUNC_STATIC( QTOOLBAR_ISMOVABLE )
   QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isMovable (  );
-    hb_retl( b );
+    hb_retl( obj->isMovable (  ) );
   }
 }
 

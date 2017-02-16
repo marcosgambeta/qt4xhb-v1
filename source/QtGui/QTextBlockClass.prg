@@ -254,8 +254,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_CONTAINS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->contains ( par1 );
-    hb_retl( b );
+    hb_retl( obj->contains ( par1 ) );
   }
 }
 
@@ -297,8 +296,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_ISVALID )
   QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isValid (  );
-    hb_retl( b );
+    hb_retl( obj->isValid (  ) );
   }
 }
 
@@ -311,8 +309,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_ISVISIBLE )
   QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isVisible (  );
-    hb_retl( b );
+    hb_retl( obj->isVisible (  ) );
   }
 }
 

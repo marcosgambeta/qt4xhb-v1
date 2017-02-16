@@ -161,8 +161,7 @@ HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW1 )
   if( obj )
   {
     double par1 = hb_parnd(1);
-    bool b = obj->checkOverflow ( par1 );
-    hb_retl( b );
+    hb_retl( obj->checkOverflow ( par1 ) );
   }
 }
 
@@ -176,8 +175,7 @@ HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW2 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->checkOverflow ( par1 );
-    hb_retl( b );
+    hb_retl( obj->checkOverflow ( par1 ) );
   }
 }
 
@@ -303,8 +301,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SMALLDECIMALPOINT )
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->smallDecimalPoint (  );
-    hb_retl( b );
+    hb_retl( obj->smallDecimalPoint (  ) );
   }
 }
 

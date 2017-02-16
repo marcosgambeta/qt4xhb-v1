@@ -241,8 +241,7 @@ HB_FUNC_STATIC( QWIZARD_HASVISITEDPAGE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->hasVisitedPage ( par1 );
-    hb_retl( b );
+    hb_retl( obj->hasVisitedPage ( par1 ) );
   }
 }
 
@@ -621,8 +620,7 @@ HB_FUNC_STATIC( QWIZARD_TESTOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->testOption (  (QWizard::WizardOption) par1 );
-    hb_retl( b );
+    hb_retl( obj->testOption (  (QWizard::WizardOption) par1 ) );
   }
 }
 
@@ -649,8 +647,7 @@ HB_FUNC_STATIC( QWIZARD_VALIDATECURRENTPAGE )
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->validateCurrentPage (  );
-    hb_retl( b );
+    hb_retl( obj->validateCurrentPage (  ) );
   }
 }
 

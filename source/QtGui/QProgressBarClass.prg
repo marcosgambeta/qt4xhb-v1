@@ -151,8 +151,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_INVERTEDAPPEARANCE )
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->invertedAppearance (  );
-    hb_retl( b );
+    hb_retl( obj->invertedAppearance (  ) );
   }
 }
 
@@ -166,8 +165,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_ISTEXTVISIBLE )
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isTextVisible (  );
-    hb_retl( b );
+    hb_retl( obj->isTextVisible (  ) );
   }
 }
 

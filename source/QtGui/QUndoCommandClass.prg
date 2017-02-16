@@ -224,8 +224,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_MERGEWITH )
   if( obj )
   {
     const QUndoCommand * par1 = (const QUndoCommand *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->mergeWith ( par1 );
-    hb_retl( b );
+    hb_retl( obj->mergeWith ( par1 ) );
   }
 }
 

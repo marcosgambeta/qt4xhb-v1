@@ -400,8 +400,7 @@ HB_FUNC_STATIC( QLINEEDIT_DRAGENABLED )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->dragEnabled (  );
-    hb_retl( b );
+    hb_retl( obj->dragEnabled (  ) );
   }
 }
 
@@ -465,8 +464,7 @@ HB_FUNC_STATIC( QLINEEDIT_HASACCEPTABLEINPUT )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasAcceptableInput (  );
-    hb_retl( b );
+    hb_retl( obj->hasAcceptableInput (  ) );
   }
 }
 
@@ -479,8 +477,7 @@ HB_FUNC_STATIC( QLINEEDIT_HASFRAME )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasFrame (  );
-    hb_retl( b );
+    hb_retl( obj->hasFrame (  ) );
   }
 }
 
@@ -493,8 +490,7 @@ HB_FUNC_STATIC( QLINEEDIT_HASSELECTEDTEXT )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasSelectedText (  );
-    hb_retl( b );
+    hb_retl( obj->hasSelectedText (  ) );
   }
 }
 
@@ -551,8 +547,7 @@ HB_FUNC_STATIC( QLINEEDIT_ISMODIFIED )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isModified (  );
-    hb_retl( b );
+    hb_retl( obj->isModified (  ) );
   }
 }
 
@@ -565,8 +560,7 @@ HB_FUNC_STATIC( QLINEEDIT_ISREADONLY )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isReadOnly (  );
-    hb_retl( b );
+    hb_retl( obj->isReadOnly (  ) );
   }
 }
 
@@ -579,8 +573,7 @@ HB_FUNC_STATIC( QLINEEDIT_ISREDOAVAILABLE )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isRedoAvailable (  );
-    hb_retl( b );
+    hb_retl( obj->isRedoAvailable (  ) );
   }
 }
 
@@ -593,8 +586,7 @@ HB_FUNC_STATIC( QLINEEDIT_ISUNDOAVAILABLE )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isUndoAvailable (  );
-    hb_retl( b );
+    hb_retl( obj->isUndoAvailable (  ) );
   }
 }
 
@@ -978,8 +970,7 @@ HB_FUNC_STATIC( QLINEEDIT_EVENT )
   if( obj )
   {
     QEvent * par1 = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->event ( par1 );
-    hb_retl( b );
+    hb_retl( obj->event ( par1 ) );
   }
 }
 

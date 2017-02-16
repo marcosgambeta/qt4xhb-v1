@@ -249,8 +249,7 @@ HB_FUNC_STATIC( QTABLEVIEW_ISCOLUMNHIDDEN )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->isColumnHidden ( par1 );
-    hb_retl( b );
+    hb_retl( obj->isColumnHidden ( par1 ) );
   }
 }
 
@@ -263,8 +262,7 @@ HB_FUNC_STATIC( QTABLEVIEW_ISCORNERBUTTONENABLED )
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isCornerButtonEnabled (  );
-    hb_retl( b );
+    hb_retl( obj->isCornerButtonEnabled (  ) );
   }
 }
 
@@ -278,8 +276,7 @@ HB_FUNC_STATIC( QTABLEVIEW_ISROWHIDDEN )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->isRowHidden ( par1 );
-    hb_retl( b );
+    hb_retl( obj->isRowHidden ( par1 ) );
   }
 }
 
@@ -292,8 +289,7 @@ HB_FUNC_STATIC( QTABLEVIEW_ISSORTINGENABLED )
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isSortingEnabled (  );
-    hb_retl( b );
+    hb_retl( obj->isSortingEnabled (  ) );
   }
 }
 
@@ -539,8 +535,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SHOWGRID )
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->showGrid (  );
-    hb_retl( b );
+    hb_retl( obj->showGrid (  ) );
   }
 }
 
@@ -583,8 +578,7 @@ HB_FUNC_STATIC( QTABLEVIEW_WORDWRAP )
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->wordWrap (  );
-    hb_retl( b );
+    hb_retl( obj->wordWrap (  ) );
   }
 }
 

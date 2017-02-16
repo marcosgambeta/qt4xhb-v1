@@ -306,8 +306,7 @@ HB_FUNC_STATIC( QCOMBOBOX_DUPLICATESENABLED )
   QComboBox * obj = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->duplicatesEnabled (  );
-    hb_retl( b );
+    hb_retl( obj->duplicatesEnabled (  ) );
   }
 }
 
@@ -355,8 +354,7 @@ HB_FUNC_STATIC( QCOMBOBOX_HASFRAME )
   QComboBox * obj = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasFrame (  );
-    hb_retl( b );
+    hb_retl( obj->hasFrame (  ) );
   }
 }
 
@@ -500,8 +498,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ISEDITABLE )
   QComboBox * obj = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isEditable (  );
-    hb_retl( b );
+    hb_retl( obj->isEditable (  ) );
   }
 }
 
@@ -1048,8 +1045,7 @@ HB_FUNC_STATIC( QCOMBOBOX_EVENT )
   if( obj )
   {
     QEvent * par1 = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->event ( par1 );
-    hb_retl( b );
+    hb_retl( obj->event ( par1 ) );
   }
 }
 

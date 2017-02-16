@@ -105,8 +105,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_ISSHADED )
   QMdiSubWindow * obj = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isShaded (  );
-    hb_retl( b );
+    hb_retl( obj->isShaded (  ) );
   }
 }
 
@@ -252,8 +251,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_TESTOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->testOption (  (QMdiSubWindow::SubWindowOption) par1 );
-    hb_retl( b );
+    hb_retl( obj->testOption (  (QMdiSubWindow::SubWindowOption) par1 ) );
   }
 }
 

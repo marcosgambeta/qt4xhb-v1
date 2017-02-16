@@ -181,8 +181,7 @@ HB_FUNC_STATIC( QSPLITTER_CHILDRENCOLLAPSIBLE )
   QSplitter * obj = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->childrenCollapsible (  );
-    hb_retl( b );
+    hb_retl( obj->childrenCollapsible (  ) );
   }
 }
 
@@ -289,8 +288,7 @@ HB_FUNC_STATIC( QSPLITTER_ISCOLLAPSIBLE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->isCollapsible ( par1 );
-    hb_retl( b );
+    hb_retl( obj->isCollapsible ( par1 ) );
   }
 }
 
@@ -303,8 +301,7 @@ HB_FUNC_STATIC( QSPLITTER_OPAQUERESIZE )
   QSplitter * obj = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->opaqueResize (  );
-    hb_retl( b );
+    hb_retl( obj->opaqueResize (  ) );
   }
 }
 
@@ -346,8 +343,7 @@ HB_FUNC_STATIC( QSPLITTER_RESTORESTATE )
   if( obj )
   {
     QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->restoreState ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->restoreState ( *par1 ) );
   }
 }
 

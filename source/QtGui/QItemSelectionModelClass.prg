@@ -163,8 +163,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_COLUMNINTERSECTSSELECTION )
   {
     int par1 = hb_parni(1);
     QModelIndex * par2 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->columnIntersectsSelection ( par1, *par2 );
-    hb_retl( b );
+    hb_retl( obj->columnIntersectsSelection ( par1, *par2 ) );
   }
 }
 
@@ -191,8 +190,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_HASSELECTION )
   QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasSelection (  );
-    hb_retl( b );
+    hb_retl( obj->hasSelection (  ) );
   }
 }
 
@@ -207,8 +205,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ISCOLUMNSELECTED )
   {
     int par1 = hb_parni(1);
     QModelIndex * par2 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->isColumnSelected ( par1, *par2 );
-    hb_retl( b );
+    hb_retl( obj->isColumnSelected ( par1, *par2 ) );
   }
 }
 
@@ -223,8 +220,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ISROWSELECTED )
   {
     int par1 = hb_parni(1);
     QModelIndex * par2 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->isRowSelected ( par1, *par2 );
-    hb_retl( b );
+    hb_retl( obj->isRowSelected ( par1, *par2 ) );
   }
 }
 
@@ -238,8 +234,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ISSELECTED )
   if( obj )
   {
     QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->isSelected ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->isSelected ( *par1 ) );
   }
 }
 
@@ -268,8 +263,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ROWINTERSECTSSELECTION )
   {
     int par1 = hb_parni(1);
     QModelIndex * par2 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->rowIntersectsSelection ( par1, *par2 );
-    hb_retl( b );
+    hb_retl( obj->rowIntersectsSelection ( par1, *par2 ) );
   }
 }
 

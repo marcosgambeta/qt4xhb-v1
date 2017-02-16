@@ -208,8 +208,7 @@ HB_FUNC_STATIC( QPRINTERINFO_ISDEFAULT )
   QPrinterInfo * obj = (QPrinterInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isDefault (  );
-    hb_retl( b );
+    hb_retl( obj->isDefault (  ) );
   }
 }
 
@@ -222,8 +221,7 @@ HB_FUNC_STATIC( QPRINTERINFO_ISNULL )
   QPrinterInfo * obj = (QPrinterInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isNull (  );
-    hb_retl( b );
+    hb_retl( obj->isNull (  ) );
   }
 }
 

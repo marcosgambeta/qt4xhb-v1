@@ -103,8 +103,7 @@ HB_FUNC_STATIC( QITEMDELEGATE_HASCLIPPING )
   QItemDelegate * obj = (QItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasClipping (  );
-    hb_retl( b );
+    hb_retl( obj->hasClipping (  ) );
   }
 }
 

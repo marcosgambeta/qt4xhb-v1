@@ -142,8 +142,7 @@ HB_FUNC_STATIC( QCHECKBOX_ISTRISTATE )
   QCheckBox * obj = (QCheckBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isTristate (  );
-    hb_retl( b );
+    hb_retl( obj->isTristate (  ) );
   }
 }
 

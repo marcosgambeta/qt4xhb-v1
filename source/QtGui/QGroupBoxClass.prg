@@ -148,8 +148,7 @@ HB_FUNC_STATIC( QGROUPBOX_ISCHECKABLE )
   QGroupBox * obj = (QGroupBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isCheckable (  );
-    hb_retl( b );
+    hb_retl( obj->isCheckable (  ) );
   }
 }
 
@@ -162,8 +161,7 @@ HB_FUNC_STATIC( QGROUPBOX_ISCHECKED )
   QGroupBox * obj = (QGroupBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isChecked (  );
-    hb_retl( b );
+    hb_retl( obj->isChecked (  ) );
   }
 }
 
@@ -176,8 +174,7 @@ HB_FUNC_STATIC( QGROUPBOX_ISFLAT )
   QGroupBox * obj = (QGroupBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isFlat (  );
-    hb_retl( b );
+    hb_retl( obj->isFlat (  ) );
   }
 }
 

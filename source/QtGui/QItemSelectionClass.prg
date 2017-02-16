@@ -177,8 +177,7 @@ HB_FUNC_STATIC( QITEMSELECTION_CONTAINS )
   if( obj )
   {
     QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->contains ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->contains ( *par1 ) );
   }
 }
 

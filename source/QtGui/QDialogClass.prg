@@ -116,8 +116,7 @@ HB_FUNC_STATIC( QDIALOG_ISSIZEGRIPENABLED )
   QDialog * obj = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isSizeGripEnabled (  );
-    hb_retl( b );
+    hb_retl( obj->isSizeGripEnabled (  ) );
   }
 }
 

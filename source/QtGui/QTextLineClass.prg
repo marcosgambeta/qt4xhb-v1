@@ -268,8 +268,7 @@ HB_FUNC_STATIC( QTEXTLINE_ISVALID )
   QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isValid (  );
-    hb_retl( b );
+    hb_retl( obj->isValid (  ) );
   }
 }
 
@@ -296,8 +295,7 @@ HB_FUNC_STATIC( QTEXTLINE_LEADINGINCLUDED )
   QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->leadingIncluded (  );
-    hb_retl( b );
+    hb_retl( obj->leadingIncluded (  ) );
   }
 }
 

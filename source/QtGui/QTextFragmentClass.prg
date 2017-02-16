@@ -208,8 +208,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_CONTAINS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->contains ( par1 );
-    hb_retl( b );
+    hb_retl( obj->contains ( par1 ) );
   }
 }
 
@@ -266,8 +265,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_ISVALID )
   QTextFragment * obj = (QTextFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isValid (  );
-    hb_retl( b );
+    hb_retl( obj->isValid (  ) );
   }
 }
 

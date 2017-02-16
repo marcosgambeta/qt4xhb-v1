@@ -223,8 +223,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_TESTOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->testOption (  (QPrintDialog::PrintDialogOption) par1 );
-    hb_retl( b );
+    hb_retl( obj->testOption (  (QPrintDialog::PrintDialogOption) par1 ) );
   }
 }
 

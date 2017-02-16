@@ -116,8 +116,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOEXCLUSIVE )
   QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->autoExclusive (  );
-    hb_retl( b );
+    hb_retl( obj->autoExclusive (  ) );
   }
 }
 
@@ -130,8 +129,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEAT )
   QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->autoRepeat (  );
-    hb_retl( b );
+    hb_retl( obj->autoRepeat (  ) );
   }
 }
 
@@ -214,8 +212,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ISCHECKABLE )
   QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isCheckable (  );
-    hb_retl( b );
+    hb_retl( obj->isCheckable (  ) );
   }
 }
 
@@ -228,8 +225,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ISCHECKED )
   QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isChecked (  );
-    hb_retl( b );
+    hb_retl( obj->isChecked (  ) );
   }
 }
 
@@ -242,8 +238,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ISDOWN )
   QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isDown (  );
-    hb_retl( b );
+    hb_retl( obj->isDown (  ) );
   }
 }
 

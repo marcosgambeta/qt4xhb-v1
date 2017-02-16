@@ -184,8 +184,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_BRUSHNEEDSRESOLVING )
   QPaintEngineState * obj = (QPaintEngineState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->brushNeedsResolving (  );
-    hb_retl( b );
+    hb_retl( obj->brushNeedsResolving (  ) );
   }
 }
 
@@ -282,8 +281,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_ISCLIPENABLED )
   QPaintEngineState * obj = (QPaintEngineState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isClipEnabled (  );
-    hb_retl( b );
+    hb_retl( obj->isClipEnabled (  ) );
   }
 }
 
@@ -338,8 +336,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_PENNEEDSRESOLVING )
   QPaintEngineState * obj = (QPaintEngineState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->penNeedsResolving (  );
-    hb_retl( b );
+    hb_retl( obj->penNeedsResolving (  ) );
   }
 }
 

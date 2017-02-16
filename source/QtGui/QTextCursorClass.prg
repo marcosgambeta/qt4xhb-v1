@@ -348,8 +348,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_ATBLOCKEND )
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->atBlockEnd (  );
-    hb_retl( b );
+    hb_retl( obj->atBlockEnd (  ) );
   }
 }
 
@@ -362,8 +361,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_ATBLOCKSTART )
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->atBlockStart (  );
-    hb_retl( b );
+    hb_retl( obj->atBlockStart (  ) );
   }
 }
 
@@ -376,8 +374,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_ATEND )
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->atEnd (  );
-    hb_retl( b );
+    hb_retl( obj->atEnd (  ) );
   }
 }
 
@@ -390,8 +387,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_ATSTART )
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->atStart (  );
-    hb_retl( b );
+    hb_retl( obj->atStart (  ) );
   }
 }
 
@@ -659,8 +655,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_HASCOMPLEXSELECTION )
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasComplexSelection (  );
-    hb_retl( b );
+    hb_retl( obj->hasComplexSelection (  ) );
   }
 }
 
@@ -673,8 +668,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_HASSELECTION )
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasSelection (  );
-    hb_retl( b );
+    hb_retl( obj->hasSelection (  ) );
   }
 }
 
@@ -1023,8 +1017,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_ISCOPYOF )
   if( obj )
   {
     QTextCursor * par1 = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->isCopyOf ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->isCopyOf ( *par1 ) );
   }
 }
 
@@ -1037,8 +1030,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_ISNULL )
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isNull (  );
-    hb_retl( b );
+    hb_retl( obj->isNull (  ) );
   }
 }
 
@@ -1065,8 +1057,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_KEEPPOSITIONONINSERT )
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->keepPositionOnInsert (  );
-    hb_retl( b );
+    hb_retl( obj->keepPositionOnInsert (  ) );
   }
 }
 
@@ -1127,8 +1118,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_MOVEPOSITION )
     int par1 = hb_parni(1);
     int par2 = ISNIL(2)? (int) QTextCursor::MoveAnchor : hb_parni(2);
     int par3 = ISNIL(3)? 1 : hb_parni(3);
-    bool b = obj->movePosition (  (QTextCursor::MoveOperation) par1,  (QTextCursor::MoveMode) par2, par3 );
-    hb_retl( b );
+    hb_retl( obj->movePosition (  (QTextCursor::MoveOperation) par1,  (QTextCursor::MoveMode) par2, par3 ) );
   }
 }
 
@@ -1396,8 +1386,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_VISUALNAVIGATION )
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->visualNavigation (  );
-    hb_retl( b );
+    hb_retl( obj->visualNavigation (  ) );
   }
 }
 

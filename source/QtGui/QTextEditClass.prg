@@ -234,8 +234,7 @@ HB_FUNC_STATIC( QTEXTEDIT_ACCEPTRICHTEXT )
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->acceptRichText (  );
-    hb_retl( b );
+    hb_retl( obj->acceptRichText (  ) );
   }
 }
 
@@ -291,8 +290,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CANPASTE )
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->canPaste (  );
-    hb_retl( b );
+    hb_retl( obj->canPaste (  ) );
   }
 }
 
@@ -495,8 +493,7 @@ HB_FUNC_STATIC( QTEXTEDIT_FIND )
   {
     QString par1 = hb_parc(1);
     int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-    bool b = obj->find ( par1,  (QTextDocument::FindFlags) par2 );
-    hb_retl( b );
+    hb_retl( obj->find ( par1,  (QTextDocument::FindFlags) par2 ) );
   }
 }
 
@@ -523,8 +520,7 @@ HB_FUNC_STATIC( QTEXTEDIT_FONTITALIC )
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->fontItalic (  );
-    hb_retl( b );
+    hb_retl( obj->fontItalic (  ) );
   }
 }
 
@@ -551,8 +547,7 @@ HB_FUNC_STATIC( QTEXTEDIT_FONTUNDERLINE )
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->fontUnderline (  );
-    hb_retl( b );
+    hb_retl( obj->fontUnderline (  ) );
   }
 }
 
@@ -579,8 +574,7 @@ HB_FUNC_STATIC( QTEXTEDIT_ISREADONLY )
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isReadOnly (  );
-    hb_retl( b );
+    hb_retl( obj->isReadOnly (  ) );
   }
 }
 
@@ -593,8 +587,7 @@ HB_FUNC_STATIC( QTEXTEDIT_ISUNDOREDOENABLED )
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isUndoRedoEnabled (  );
-    hb_retl( b );
+    hb_retl( obj->isUndoRedoEnabled (  ) );
   }
 }
 
@@ -682,8 +675,7 @@ HB_FUNC_STATIC( QTEXTEDIT_OVERWRITEMODE )
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->overwriteMode (  );
-    hb_retl( b );
+    hb_retl( obj->overwriteMode (  ) );
   }
 }
 
@@ -952,8 +944,7 @@ HB_FUNC_STATIC( QTEXTEDIT_TABCHANGESFOCUS )
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->tabChangesFocus (  );
-    hb_retl( b );
+    hb_retl( obj->tabChangesFocus (  ) );
   }
 }
 

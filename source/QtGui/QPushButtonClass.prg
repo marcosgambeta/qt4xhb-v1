@@ -166,8 +166,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_AUTODEFAULT )
   QPushButton * obj = (QPushButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->autoDefault (  );
-    hb_retl( b );
+    hb_retl( obj->autoDefault (  ) );
   }
 }
 
@@ -180,8 +179,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_ISDEFAULT )
   QPushButton * obj = (QPushButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isDefault (  );
-    hb_retl( b );
+    hb_retl( obj->isDefault (  ) );
   }
 }
 
@@ -194,8 +192,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_ISFLAT )
   QPushButton * obj = (QPushButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isFlat (  );
-    hb_retl( b );
+    hb_retl( obj->isFlat (  ) );
   }
 }
 

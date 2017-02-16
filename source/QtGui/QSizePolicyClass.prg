@@ -247,8 +247,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_HASHEIGHTFORWIDTH )
   QSizePolicy * obj = (QSizePolicy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasHeightForWidth (  );
-    hb_retl( b );
+    hb_retl( obj->hasHeightForWidth (  ) );
   }
 }
 
@@ -261,8 +260,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_HASWIDTHFORHEIGHT )
   QSizePolicy * obj = (QSizePolicy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasWidthForHeight (  );
-    hb_retl( b );
+    hb_retl( obj->hasWidthForHeight (  ) );
   }
 }
 

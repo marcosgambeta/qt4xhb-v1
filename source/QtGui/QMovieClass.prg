@@ -349,8 +349,7 @@ HB_FUNC_STATIC( QMOVIE_ISVALID )
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isValid (  );
-    hb_retl( b );
+    hb_retl( obj->isValid (  ) );
   }
 }
 
@@ -364,8 +363,7 @@ HB_FUNC_STATIC( QMOVIE_JUMPTOFRAME )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->jumpToFrame ( par1 );
-    hb_retl( b );
+    hb_retl( obj->jumpToFrame ( par1 ) );
   }
 }
 
@@ -540,8 +538,7 @@ HB_FUNC_STATIC( QMOVIE_JUMPTONEXTFRAME )
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->jumpToNextFrame (  );
-    hb_retl( b );
+    hb_retl( obj->jumpToNextFrame (  ) );
   }
 }
 

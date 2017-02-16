@@ -480,8 +480,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETCURRENTROW )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->setCurrentRow ( par1 );
-    hb_retl( b );
+    hb_retl( obj->setCurrentRow ( par1 ) );
   }
 }
 
@@ -607,8 +606,7 @@ HB_FUNC_STATIC( QCOMPLETER_WRAPAROUND )
   QCompleter * obj = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->wrapAround (  );
-    hb_retl( b );
+    hb_retl( obj->wrapAround (  ) );
   }
 }
 

@@ -187,8 +187,7 @@ HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_SUPPORTED )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->supported (  (QFontDatabase::WritingSystem) par1 );
-    hb_retl( b );
+    hb_retl( obj->supported (  (QFontDatabase::WritingSystem) par1 ) );
   }
 }
 

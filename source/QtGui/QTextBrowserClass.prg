@@ -183,8 +183,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ISBACKWARDAVAILABLE )
   QTextBrowser * obj = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isBackwardAvailable (  );
-    hb_retl( b );
+    hb_retl( obj->isBackwardAvailable (  ) );
   }
 }
 
@@ -197,8 +196,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ISFORWARDAVAILABLE )
   QTextBrowser * obj = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isForwardAvailable (  );
-    hb_retl( b );
+    hb_retl( obj->isForwardAvailable (  ) );
   }
 }
 
@@ -211,8 +209,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_OPENEXTERNALLINKS )
   QTextBrowser * obj = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->openExternalLinks (  );
-    hb_retl( b );
+    hb_retl( obj->openExternalLinks (  ) );
   }
 }
 
@@ -225,8 +222,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_OPENLINKS )
   QTextBrowser * obj = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->openLinks (  );
-    hb_retl( b );
+    hb_retl( obj->openLinks (  ) );
   }
 }
 

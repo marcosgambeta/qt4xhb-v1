@@ -122,8 +122,7 @@ HB_FUNC_STATIC( QSOUND_ISFINISHED )
   QSound * obj = (QSound *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isFinished (  );
-    hb_retl( b );
+    hb_retl( obj->isFinished (  ) );
   }
 }
 
@@ -205,8 +204,7 @@ bool isAvailable ()
 */
 HB_FUNC_STATIC( QSOUND_ISAVAILABLE )
 {
-  bool b = QSound::isAvailable (  );
-  hb_retl( b );
+  hb_retl( QSound::isAvailable (  ) );
 }
 
 

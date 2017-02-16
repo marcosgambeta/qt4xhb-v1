@@ -206,8 +206,7 @@ HB_FUNC_STATIC( QPRINTER_ABORT )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->abort (  );
-    hb_retl( b );
+    hb_retl( obj->abort (  ) );
   }
 }
 
@@ -220,8 +219,7 @@ HB_FUNC_STATIC( QPRINTER_COLLATECOPIES )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->collateCopies (  );
-    hb_retl( b );
+    hb_retl( obj->collateCopies (  ) );
   }
 }
 
@@ -290,8 +288,7 @@ HB_FUNC_STATIC( QPRINTER_DOUBLESIDEDPRINTING )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->doubleSidedPrinting (  );
-    hb_retl( b );
+    hb_retl( obj->doubleSidedPrinting (  ) );
   }
 }
 
@@ -318,8 +315,7 @@ HB_FUNC_STATIC( QPRINTER_FONTEMBEDDINGENABLED )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->fontEmbeddingEnabled (  );
-    hb_retl( b );
+    hb_retl( obj->fontEmbeddingEnabled (  ) );
   }
 }
 
@@ -346,8 +342,7 @@ HB_FUNC_STATIC( QPRINTER_FULLPAGE )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->fullPage (  );
-    hb_retl( b );
+    hb_retl( obj->fullPage (  ) );
   }
 }
 
@@ -361,8 +356,7 @@ HB_FUNC_STATIC( QPRINTER_ISVALID )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isValid (  );
-    hb_retl( b );
+    hb_retl( obj->isValid (  ) );
   }
 }
 
@@ -375,8 +369,7 @@ HB_FUNC_STATIC( QPRINTER_NEWPAGE )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->newPage (  );
-    hb_retl( b );
+    hb_retl( obj->newPage (  ) );
   }
 }
 
@@ -1089,8 +1082,7 @@ HB_FUNC_STATIC( QPRINTER_SUPPORTSMULTIPLECOPIES )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->supportsMultipleCopies (  );
-    hb_retl( b );
+    hb_retl( obj->supportsMultipleCopies (  ) );
   }
 }
 

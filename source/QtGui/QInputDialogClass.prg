@@ -316,8 +316,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_ISCOMBOBOXEDITABLE )
   QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isComboBoxEditable (  );
-    hb_retl( b );
+    hb_retl( obj->isComboBoxEditable (  ) );
   }
 }
 
@@ -700,8 +699,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_TESTOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->testOption (  (QInputDialog::InputDialogOption) par1 );
-    hb_retl( b );
+    hb_retl( obj->testOption (  (QInputDialog::InputDialogOption) par1 ) );
   }
 }
 

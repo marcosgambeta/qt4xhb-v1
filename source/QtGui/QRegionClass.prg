@@ -326,8 +326,7 @@ HB_FUNC_STATIC( QREGION_CONTAINS1 )
   if( obj )
   {
     QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->contains ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->contains ( *par1 ) );
   }
 }
 
@@ -341,8 +340,7 @@ HB_FUNC_STATIC( QREGION_CONTAINS2 )
   if( obj )
   {
     QRect * par1 = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->contains ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->contains ( *par1 ) );
   }
 }
 
@@ -417,8 +415,7 @@ HB_FUNC_STATIC( QREGION_INTERSECTS1 )
   if( obj )
   {
     QRegion * par1 = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->intersects ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->intersects ( *par1 ) );
   }
 }
 
@@ -432,8 +429,7 @@ HB_FUNC_STATIC( QREGION_INTERSECTS2 )
   if( obj )
   {
     QRect * par1 = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->intersects ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->intersects ( *par1 ) );
   }
 }
 
@@ -461,8 +457,7 @@ HB_FUNC_STATIC( QREGION_ISEMPTY )
   QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isEmpty (  );
-    hb_retl( b );
+    hb_retl( obj->isEmpty (  ) );
   }
 }
 

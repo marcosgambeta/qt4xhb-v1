@@ -262,8 +262,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ISDIR )
   if( obj )
   {
     QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->isDir ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->isDir ( *par1 ) );
   }
 }
 
@@ -276,8 +275,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ISREADONLY )
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isReadOnly (  );
-    hb_retl( b );
+    hb_retl( obj->isReadOnly (  ) );
   }
 }
 
@@ -336,8 +334,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_NAMEFILTERDISABLES )
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->nameFilterDisables (  );
-    hb_retl( b );
+    hb_retl( obj->nameFilterDisables (  ) );
   }
 }
 
@@ -389,8 +386,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_REMOVE )
   if( obj )
   {
     QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->remove ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->remove ( *par1 ) );
   }
 }
 
@@ -403,8 +399,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_RESOLVESYMLINKS )
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->resolveSymlinks (  );
-    hb_retl( b );
+    hb_retl( obj->resolveSymlinks (  ) );
   }
 }
 
@@ -418,8 +413,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_RMDIR )
   if( obj )
   {
     QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->rmdir ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->rmdir ( *par1 ) );
   }
 }
 
@@ -604,8 +598,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_CANFETCHMORE )
   if( obj )
   {
     QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->canFetchMore ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->canFetchMore ( *par1 ) );
   }
 }
 
@@ -654,8 +647,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_DROPMIMEDATA )
     int par3 = hb_parni(3);
     int par4 = hb_parni(4);
     QModelIndex * par5 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(5, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->dropMimeData ( par1,  (Qt::DropAction) par2, par3, par4, *par5 );
-    hb_retl( b );
+    hb_retl( obj->dropMimeData ( par1,  (Qt::DropAction) par2, par3, par4, *par5 ) );
   }
 }
 
@@ -699,8 +691,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_HASCHILDREN )
   if( obj )
   {
     QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->hasChildren ( par1 );
-    hb_retl( b );
+    hb_retl( obj->hasChildren ( par1 ) );
   }
 }
 
@@ -833,8 +824,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETDATA )
     QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QVariant * par2 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par3 = ISNIL(3)? Qt::EditRole : hb_parni(3);
-    bool b = obj->setData ( *par1, *par2, par3 );
-    hb_retl( b );
+    hb_retl( obj->setData ( *par1, *par2, par3 ) );
   }
 }
 

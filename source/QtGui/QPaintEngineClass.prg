@@ -141,8 +141,7 @@ HB_FUNC_STATIC( QPAINTENGINE_BEGIN )
   if( obj )
   {
     QPaintDevice * par1 = (QPaintDevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->begin ( par1 );
-    hb_retl( b );
+    hb_retl( obj->begin ( par1 ) );
   }
 }
 
@@ -319,8 +318,7 @@ HB_FUNC_STATIC( QPAINTENGINE_END )
   QPaintEngine * obj = (QPaintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->end (  );
-    hb_retl( b );
+    hb_retl( obj->end (  ) );
   }
 }
 
@@ -334,8 +332,7 @@ HB_FUNC_STATIC( QPAINTENGINE_HASFEATURE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->hasFeature (  (QPaintEngine::PaintEngineFeatures) par1 );
-    hb_retl( b );
+    hb_retl( obj->hasFeature (  (QPaintEngine::PaintEngineFeatures) par1 ) );
   }
 }
 
@@ -348,8 +345,7 @@ HB_FUNC_STATIC( QPAINTENGINE_ISACTIVE )
   QPaintEngine * obj = (QPaintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isActive (  );
-    hb_retl( b );
+    hb_retl( obj->isActive (  ) );
   }
 }
 

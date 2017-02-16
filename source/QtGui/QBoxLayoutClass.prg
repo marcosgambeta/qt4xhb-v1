@@ -372,8 +372,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_SETSTRETCHFACTOR1 )
   {
     QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
-    bool b = obj->setStretchFactor ( par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->setStretchFactor ( par1, par2 ) );
   }
 }
 
@@ -388,8 +387,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_SETSTRETCHFACTOR2 )
   {
     QLayout * par1 = (QLayout *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
-    bool b = obj->setStretchFactor ( par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->setStretchFactor ( par1, par2 ) );
   }
 }
 
@@ -489,8 +487,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_HASHEIGHTFORWIDTH )
   QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasHeightForWidth (  );
-    hb_retl( b );
+    hb_retl( obj->hasHeightForWidth (  ) );
   }
 }
 

@@ -298,8 +298,7 @@ HB_FUNC_STATIC( QPOLYGON_CONTAINSPOINT )
   {
     QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
-    bool b = obj->containsPoint ( *par1,  (Qt::FillRule) par2 );
-    hb_retl( b );
+    hb_retl( obj->containsPoint ( *par1,  (Qt::FillRule) par2 ) );
   }
 }
 

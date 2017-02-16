@@ -206,8 +206,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_ISLAYOUT )
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isLayout (  );
-    hb_retl( b );
+    hb_retl( obj->isLayout (  ) );
   }
 }
 
@@ -304,8 +303,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_OWNEDBYLAYOUT )
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->ownedByLayout (  );
-    hb_retl( b );
+    hb_retl( obj->ownedByLayout (  ) );
   }
 }
 

@@ -167,8 +167,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_AUTOCLOSE )
   QProgressDialog * obj = (QProgressDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->autoClose (  );
-    hb_retl( b );
+    hb_retl( obj->autoClose (  ) );
   }
 }
 
@@ -181,8 +180,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_AUTORESET )
   QProgressDialog * obj = (QProgressDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->autoReset (  );
-    hb_retl( b );
+    hb_retl( obj->autoReset (  ) );
   }
 }
 
@@ -356,8 +354,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_WASCANCELED )
   QProgressDialog * obj = (QProgressDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->wasCanceled (  );
-    hb_retl( b );
+    hb_retl( obj->wasCanceled (  ) );
   }
 }
 

@@ -254,8 +254,7 @@ HB_FUNC_STATIC( QIMAGEREADER_AUTODETECTIMAGEFORMAT )
   QImageReader * obj = (QImageReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->autoDetectImageFormat (  );
-    hb_retl( b );
+    hb_retl( obj->autoDetectImageFormat (  ) );
   }
 }
 
@@ -282,8 +281,7 @@ HB_FUNC_STATIC( QIMAGEREADER_CANREAD )
   QImageReader * obj = (QImageReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->canRead (  );
-    hb_retl( b );
+    hb_retl( obj->canRead (  ) );
   }
 }
 
@@ -338,8 +336,7 @@ HB_FUNC_STATIC( QIMAGEREADER_DECIDEFORMATFROMCONTENT )
   QImageReader * obj = (QImageReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->decideFormatFromContent (  );
-    hb_retl( b );
+    hb_retl( obj->decideFormatFromContent (  ) );
   }
 }
 
@@ -451,8 +448,7 @@ HB_FUNC_STATIC( QIMAGEREADER_JUMPTOIMAGE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->jumpToImage ( par1 );
-    hb_retl( b );
+    hb_retl( obj->jumpToImage ( par1 ) );
   }
 }
 
@@ -465,8 +461,7 @@ HB_FUNC_STATIC( QIMAGEREADER_JUMPTONEXTIMAGE )
   QImageReader * obj = (QImageReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->jumpToNextImage (  );
-    hb_retl( b );
+    hb_retl( obj->jumpToNextImage (  ) );
   }
 }
 
@@ -536,8 +531,7 @@ HB_FUNC_STATIC( QIMAGEREADER_READ2 )
   if( obj )
   {
     QImage * par1 = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->read ( par1 );
-    hb_retl( b );
+    hb_retl( obj->read ( par1 ) );
   }
 }
 
@@ -757,8 +751,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SUPPORTSANIMATION )
   QImageReader * obj = (QImageReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->supportsAnimation (  );
-    hb_retl( b );
+    hb_retl( obj->supportsAnimation (  ) );
   }
 }
 
@@ -772,8 +765,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SUPPORTSOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->supportsOption (  (QImageIOHandler::ImageOption) par1 );
-    hb_retl( b );
+    hb_retl( obj->supportsOption (  (QImageIOHandler::ImageOption) par1 ) );
   }
 }
 

@@ -267,8 +267,7 @@ HB_FUNC_STATIC( QTABWIDGET_DOCUMENTMODE )
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->documentMode (  );
-    hb_retl( b );
+    hb_retl( obj->documentMode (  ) );
   }
 }
 
@@ -374,8 +373,7 @@ HB_FUNC_STATIC( QTABWIDGET_ISMOVABLE )
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isMovable (  );
-    hb_retl( b );
+    hb_retl( obj->isMovable (  ) );
   }
 }
 
@@ -389,8 +387,7 @@ HB_FUNC_STATIC( QTABWIDGET_ISTABENABLED )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->isTabEnabled ( par1 );
-    hb_retl( b );
+    hb_retl( obj->isTabEnabled ( par1 ) );
   }
 }
 
@@ -722,8 +719,7 @@ HB_FUNC_STATIC( QTABWIDGET_TABSCLOSABLE )
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->tabsClosable (  );
-    hb_retl( b );
+    hb_retl( obj->tabsClosable (  ) );
   }
 }
 
@@ -736,8 +732,7 @@ HB_FUNC_STATIC( QTABWIDGET_USESSCROLLBUTTONS )
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->usesScrollButtons (  );
-    hb_retl( b );
+    hb_retl( obj->usesScrollButtons (  ) );
   }
 }
 

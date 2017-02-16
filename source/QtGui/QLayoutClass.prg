@@ -131,8 +131,7 @@ HB_FUNC_STATIC( QLAYOUT_ACTIVATE )
   QLayout * obj = (QLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->activate (  );
-    hb_retl( b );
+    hb_retl( obj->activate (  ) );
   }
 }
 
@@ -268,8 +267,7 @@ HB_FUNC_STATIC( QLAYOUT_ISENABLED )
   QLayout * obj = (QLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isEnabled (  );
-    hb_retl( b );
+    hb_retl( obj->isEnabled (  ) );
   }
 }
 
@@ -385,8 +383,7 @@ HB_FUNC_STATIC( QLAYOUT_SETALIGNMENT1 )
   {
     QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
-    bool b = obj->setAlignment ( par1,  (Qt::Alignment) par2 );
-    hb_retl( b );
+    hb_retl( obj->setAlignment ( par1,  (Qt::Alignment) par2 ) );
   }
 }
 
@@ -416,8 +413,7 @@ HB_FUNC_STATIC( QLAYOUT_SETALIGNMENT3 )
   {
     QLayout * par1 = (QLayout *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
-    bool b = obj->setAlignment ( par1,  (Qt::Alignment) par2 );
-    hb_retl( b );
+    hb_retl( obj->setAlignment ( par1,  (Qt::Alignment) par2 ) );
   }
 }
 
@@ -644,8 +640,7 @@ HB_FUNC_STATIC( QLAYOUT_ISEMPTY )
   QLayout * obj = (QLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isEmpty (  );
-    hb_retl( b );
+    hb_retl( obj->isEmpty (  ) );
   }
 }
 

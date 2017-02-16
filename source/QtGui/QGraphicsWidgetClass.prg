@@ -260,8 +260,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_AUTOFILLBACKGROUND )
   QGraphicsWidget * obj = (QGraphicsWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->autoFillBackground (  );
-    hb_retl( b );
+    hb_retl( obj->autoFillBackground (  ) );
   }
 }
 
@@ -392,8 +391,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_ISACTIVEWINDOW )
   QGraphicsWidget * obj = (QGraphicsWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isActiveWindow (  );
-    hb_retl( b );
+    hb_retl( obj->isActiveWindow (  ) );
   }
 }
 
@@ -821,8 +819,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_TESTATTRIBUTE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->testAttribute (  (Qt::WidgetAttribute) par1 );
-    hb_retl( b );
+    hb_retl( obj->testAttribute (  (Qt::WidgetAttribute) par1 ) );
   }
 }
 
@@ -1044,8 +1041,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_CLOSE )
   QGraphicsWidget * obj = (QGraphicsWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->close (  );
-    hb_retl( b );
+    hb_retl( obj->close (  ) );
   }
 }
 

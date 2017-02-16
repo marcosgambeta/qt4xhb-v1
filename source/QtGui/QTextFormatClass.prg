@@ -263,8 +263,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_BOOLPROPERTY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->boolProperty ( par1 );
-    hb_retl( b );
+    hb_retl( obj->boolProperty ( par1 ) );
   }
 }
 
@@ -380,8 +379,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_HASPROPERTY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->hasProperty ( par1 );
-    hb_retl( b );
+    hb_retl( obj->hasProperty ( par1 ) );
   }
 }
 
@@ -409,8 +407,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_ISBLOCKFORMAT )
   QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isBlockFormat (  );
-    hb_retl( b );
+    hb_retl( obj->isBlockFormat (  ) );
   }
 }
 
@@ -423,8 +420,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_ISCHARFORMAT )
   QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isCharFormat (  );
-    hb_retl( b );
+    hb_retl( obj->isCharFormat (  ) );
   }
 }
 
@@ -437,8 +433,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_ISFRAMEFORMAT )
   QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isFrameFormat (  );
-    hb_retl( b );
+    hb_retl( obj->isFrameFormat (  ) );
   }
 }
 
@@ -451,8 +446,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_ISIMAGEFORMAT )
   QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isImageFormat (  );
-    hb_retl( b );
+    hb_retl( obj->isImageFormat (  ) );
   }
 }
 
@@ -465,8 +459,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_ISLISTFORMAT )
   QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isListFormat (  );
-    hb_retl( b );
+    hb_retl( obj->isListFormat (  ) );
   }
 }
 
@@ -479,8 +472,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_ISTABLECELLFORMAT )
   QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isTableCellFormat (  );
-    hb_retl( b );
+    hb_retl( obj->isTableCellFormat (  ) );
   }
 }
 
@@ -493,8 +485,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_ISTABLEFORMAT )
   QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isTableFormat (  );
-    hb_retl( b );
+    hb_retl( obj->isTableFormat (  ) );
   }
 }
 
@@ -507,8 +498,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_ISVALID )
   QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isValid (  );
-    hb_retl( b );
+    hb_retl( obj->isValid (  ) );
   }
 }
 

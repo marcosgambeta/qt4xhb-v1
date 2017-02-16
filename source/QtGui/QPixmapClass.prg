@@ -298,8 +298,7 @@ HB_FUNC_STATIC( QPIXMAP_CONVERTFROMIMAGE )
   {
     QImage * par1 = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = ISNIL(2)? (int) Qt::AutoColor : hb_parni(2);
-    bool b = obj->convertFromImage ( *par1,  (Qt::ImageConversionFlags) par2 );
-    hb_retl( b );
+    hb_retl( obj->convertFromImage ( *par1,  (Qt::ImageConversionFlags) par2 ) );
   }
 }
 
@@ -518,8 +517,7 @@ HB_FUNC_STATIC( QPIXMAP_HASALPHA )
   QPixmap * obj = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasAlpha (  );
-    hb_retl( b );
+    hb_retl( obj->hasAlpha (  ) );
   }
 }
 
@@ -532,8 +530,7 @@ HB_FUNC_STATIC( QPIXMAP_HASALPHACHANNEL )
   QPixmap * obj = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasAlphaChannel (  );
-    hb_retl( b );
+    hb_retl( obj->hasAlphaChannel (  ) );
   }
 }
 
@@ -560,8 +557,7 @@ HB_FUNC_STATIC( QPIXMAP_ISNULL )
   QPixmap * obj = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isNull (  );
-    hb_retl( b );
+    hb_retl( obj->isNull (  ) );
   }
 }
 
@@ -574,8 +570,7 @@ HB_FUNC_STATIC( QPIXMAP_ISQBITMAP )
   QPixmap * obj = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isQBitmap (  );
-    hb_retl( b );
+    hb_retl( obj->isQBitmap (  ) );
   }
 }
 
@@ -591,8 +586,7 @@ HB_FUNC_STATIC( QPIXMAP_LOAD )
     QString par1 = hb_parc(1);
     const char * par2 = ISNIL(2)? 0 : hb_parc(2);
     int par3 = ISNIL(3)? (int) Qt::AutoColor : hb_parni(3);
-    bool b = obj->load ( par1,  (const char *) par2,  (Qt::ImageConversionFlags) par3 );
-    hb_retl( b );
+    hb_retl( obj->load ( par1,  (const char *) par2,  (Qt::ImageConversionFlags) par3 ) );
   }
 }
 
@@ -609,8 +603,7 @@ HB_FUNC_STATIC( QPIXMAP_LOADFROMDATA1 )
     uint par2 = hb_parni(2);
     const char * par3 = ISNIL(3)? 0 : hb_parc(3);
     int par4 = ISNIL(4)? (int) Qt::AutoColor : hb_parni(4);
-    bool b = obj->loadFromData ( par1, par2,  (const char *) par3,  (Qt::ImageConversionFlags) par4 );
-    hb_retl( b );
+    hb_retl( obj->loadFromData ( par1, par2,  (const char *) par3,  (Qt::ImageConversionFlags) par4 ) );
   }
 }
 
@@ -626,8 +619,7 @@ HB_FUNC_STATIC( QPIXMAP_LOADFROMDATA2 )
     QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     const char * par2 = ISNIL(2)? 0 : hb_parc(2);
     int par3 = ISNIL(3)? (int) Qt::AutoColor : hb_parni(3);
-    bool b = obj->loadFromData ( *par1,  (const char *) par2,  (Qt::ImageConversionFlags) par3 );
-    hb_retl( b );
+    hb_retl( obj->loadFromData ( *par1,  (const char *) par2,  (Qt::ImageConversionFlags) par3 ) );
   }
 }
 
@@ -686,8 +678,7 @@ HB_FUNC_STATIC( QPIXMAP_SAVE1 )
     QString par1 = hb_parc(1);
     const char * par2 = ISNIL(2)? 0 : hb_parc(2);
     int par3 = ISNIL(3)? -1 : hb_parni(3);
-    bool b = obj->save ( par1,  (const char *) par2, par3 );
-    hb_retl( b );
+    hb_retl( obj->save ( par1,  (const char *) par2, par3 ) );
   }
 }
 
@@ -703,8 +694,7 @@ HB_FUNC_STATIC( QPIXMAP_SAVE2 )
     QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     const char * par2 = ISNIL(2)? 0 : hb_parc(2);
     int par3 = ISNIL(3)? -1 : hb_parni(3);
-    bool b = obj->save ( par1,  (const char *) par2, par3 );
-    hb_retl( b );
+    hb_retl( obj->save ( par1,  (const char *) par2, par3 ) );
   }
 }
 

@@ -263,8 +263,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_CACHEENABLED )
   QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->cacheEnabled (  );
-    hb_retl( b );
+    hb_retl( obj->cacheEnabled (  ) );
   }
 }
 
@@ -457,8 +456,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_ISVALIDCURSORPOSITION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->isValidCursorPosition ( par1 );
-    hb_retl( b );
+    hb_retl( obj->isValidCursorPosition ( par1 ) );
   }
 }
 

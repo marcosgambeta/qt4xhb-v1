@@ -455,8 +455,7 @@ HB_FUNC_STATIC( QRAWFONT_ISVALID )
   QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isValid (  );
-    hb_retl( b );
+    hb_retl( obj->isValid (  ) );
   }
 }
 
@@ -627,8 +626,7 @@ HB_FUNC_STATIC( QRAWFONT_SUPPORTSCHARACTER1 )
   if( obj )
   {
     QChar * par1 = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->supportsCharacter ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->supportsCharacter ( *par1 ) );
   }
 }
 
@@ -642,8 +640,7 @@ HB_FUNC_STATIC( QRAWFONT_SUPPORTSCHARACTER2 )
   if( obj )
   {
     quint32 par1 = hb_parni(1);
-    bool b = obj->supportsCharacter ( par1 );
-    hb_retl( b );
+    hb_retl( obj->supportsCharacter ( par1 ) );
   }
 }
 

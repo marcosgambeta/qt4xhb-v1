@@ -224,8 +224,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_CANWRITE )
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->canWrite (  );
-    hb_retl( b );
+    hb_retl( obj->canWrite (  ) );
   }
 }
 
@@ -457,8 +456,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_SUPPORTSOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->supportsOption (  (QImageIOHandler::ImageOption) par1 );
-    hb_retl( b );
+    hb_retl( obj->supportsOption (  (QImageIOHandler::ImageOption) par1 ) );
   }
 }
 
@@ -472,8 +470,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_WRITE )
   if( obj )
   {
     QImage * par1 = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->write ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->write ( *par1 ) );
   }
 }
 

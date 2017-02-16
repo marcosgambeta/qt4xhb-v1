@@ -162,8 +162,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_ISVALID )
   QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isValid (  );
-    hb_retl( b );
+    hb_retl( obj->isValid (  ) );
   }
 }
 
@@ -249,8 +248,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_NONBREAKABLELINES )
   QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->nonBreakableLines (  );
-    hb_retl( b );
+    hb_retl( obj->nonBreakableLines (  ) );
   }
 }
 

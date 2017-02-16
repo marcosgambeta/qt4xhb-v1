@@ -557,8 +557,7 @@ HB_FUNC_STATIC( QPALETTE_ISBRUSHSET )
   {
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
-    bool b = obj->isBrushSet (  (QPalette::ColorGroup) par1,  (QPalette::ColorRole) par2 );
-    hb_retl( b );
+    hb_retl( obj->isBrushSet (  (QPalette::ColorGroup) par1,  (QPalette::ColorRole) par2 ) );
   }
 }
 
@@ -572,8 +571,7 @@ HB_FUNC_STATIC( QPALETTE_ISCOPYOF )
   if( obj )
   {
     QPalette * par1 = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->isCopyOf ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->isCopyOf ( *par1 ) );
   }
 }
 
@@ -588,8 +586,7 @@ HB_FUNC_STATIC( QPALETTE_ISEQUAL )
   {
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
-    bool b = obj->isEqual (  (QPalette::ColorGroup) par1,  (QPalette::ColorGroup) par2 );
-    hb_retl( b );
+    hb_retl( obj->isEqual (  (QPalette::ColorGroup) par1,  (QPalette::ColorGroup) par2 ) );
   }
 }
 

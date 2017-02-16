@@ -136,8 +136,7 @@ HB_FUNC_STATIC( QDIAL_NOTCHESVISIBLE )
   QDial * obj = (QDial *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->notchesVisible (  );
-    hb_retl( b );
+    hb_retl( obj->notchesVisible (  ) );
   }
 }
 
@@ -165,8 +164,7 @@ HB_FUNC_STATIC( QDIAL_WRAPPING )
   QDial * obj = (QDial *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->wrapping (  );
-    hb_retl( b );
+    hb_retl( obj->wrapping (  ) );
   }
 }
 

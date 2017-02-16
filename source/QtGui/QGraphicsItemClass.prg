@@ -328,8 +328,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ACCEPTDROPS )
   QGraphicsItem * obj = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->acceptDrops (  );
-    hb_retl( b );
+    hb_retl( obj->acceptDrops (  ) );
   }
 }
 
@@ -342,8 +341,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ACCEPTHOVEREVENTS )
   QGraphicsItem * obj = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->acceptHoverEvents (  );
-    hb_retl( b );
+    hb_retl( obj->acceptHoverEvents (  ) );
   }
 }
 
@@ -356,8 +354,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ACCEPTTOUCHEVENTS )
   QGraphicsItem * obj = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->acceptTouchEvents (  );
-    hb_retl( b );
+    hb_retl( obj->acceptTouchEvents (  ) );
   }
 }
 
@@ -544,8 +541,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_COLLIDESWITHITEM )
   {
     const QGraphicsItem * par1 = (const QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = ISNIL(2)? (int) Qt::IntersectsItemShape : hb_parni(2);
-    bool b = obj->collidesWithItem ( par1,  (Qt::ItemSelectionMode) par2 );
-    hb_retl( b );
+    hb_retl( obj->collidesWithItem ( par1,  (Qt::ItemSelectionMode) par2 ) );
   }
 }
 
@@ -560,8 +556,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_COLLIDESWITHPATH )
   {
     QPainterPath * par1 = (QPainterPath *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = ISNIL(2)? (int) Qt::IntersectsItemShape : hb_parni(2);
-    bool b = obj->collidesWithPath ( *par1,  (Qt::ItemSelectionMode) par2 );
-    hb_retl( b );
+    hb_retl( obj->collidesWithPath ( *par1,  (Qt::ItemSelectionMode) par2 ) );
   }
 }
 
@@ -635,8 +630,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_CONTAINS )
   if( obj )
   {
     QPointF * par1 = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->contains ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->contains ( *par1 ) );
   }
 }
 
@@ -759,8 +753,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_FILTERSCHILDEVENTS )
   QGraphicsItem * obj = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->filtersChildEvents (  );
-    hb_retl( b );
+    hb_retl( obj->filtersChildEvents (  ) );
   }
 }
 
@@ -871,8 +864,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_HASCURSOR )
   QGraphicsItem * obj = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasCursor (  );
-    hb_retl( b );
+    hb_retl( obj->hasCursor (  ) );
   }
 }
 
@@ -885,8 +877,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_HASFOCUS )
   QGraphicsItem * obj = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasFocus (  );
-    hb_retl( b );
+    hb_retl( obj->hasFocus (  ) );
   }
 }
 
@@ -942,8 +933,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISACTIVE )
   QGraphicsItem * obj = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isActive (  );
-    hb_retl( b );
+    hb_retl( obj->isActive (  ) );
   }
 }
 
@@ -957,8 +947,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISANCESTOROF )
   if( obj )
   {
     const QGraphicsItem * par1 = (const QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->isAncestorOf ( par1 );
-    hb_retl( b );
+    hb_retl( obj->isAncestorOf ( par1 ) );
   }
 }
 
@@ -972,8 +961,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISCLIPPED )
   QGraphicsItem * obj = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isClipped (  );
-    hb_retl( b );
+    hb_retl( obj->isClipped (  ) );
   }
 }
 
@@ -986,8 +974,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISENABLED )
   QGraphicsItem * obj = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isEnabled (  );
-    hb_retl( b );
+    hb_retl( obj->isEnabled (  ) );
   }
 }
 
@@ -1000,8 +987,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISOBSCURED1 )
   QGraphicsItem * obj = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isObscured (  );
-    hb_retl( b );
+    hb_retl( obj->isObscured (  ) );
   }
 }
 
@@ -1018,8 +1004,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISOBSCURED2 )
     qreal par2 = hb_parnd(2);
     qreal par3 = hb_parnd(3);
     qreal par4 = hb_parnd(4);
-    bool b = obj->isObscured ( par1, par2, par3, par4 );
-    hb_retl( b );
+    hb_retl( obj->isObscured ( par1, par2, par3, par4 ) );
   }
 }
 
@@ -1033,8 +1018,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISOBSCURED3 )
   if( obj )
   {
     QRectF * par1 = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->isObscured ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->isObscured ( *par1 ) );
   }
 }
 
@@ -1068,8 +1052,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISOBSCUREDBY )
   if( obj )
   {
     const QGraphicsItem * par1 = (const QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->isObscuredBy ( par1 );
-    hb_retl( b );
+    hb_retl( obj->isObscuredBy ( par1 ) );
   }
 }
 
@@ -1082,8 +1065,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISPANEL )
   QGraphicsItem * obj = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isPanel (  );
-    hb_retl( b );
+    hb_retl( obj->isPanel (  ) );
   }
 }
 
@@ -1096,8 +1078,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISSELECTED )
   QGraphicsItem * obj = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isSelected (  );
-    hb_retl( b );
+    hb_retl( obj->isSelected (  ) );
   }
 }
 
@@ -1110,8 +1091,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISUNDERMOUSE )
   QGraphicsItem * obj = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isUnderMouse (  );
-    hb_retl( b );
+    hb_retl( obj->isUnderMouse (  ) );
   }
 }
 
@@ -1124,8 +1104,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISVISIBLE )
   QGraphicsItem * obj = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isVisible (  );
-    hb_retl( b );
+    hb_retl( obj->isVisible (  ) );
   }
 }
 
@@ -1139,8 +1118,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISVISIBLETO )
   if( obj )
   {
     const QGraphicsItem * par1 = (const QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->isVisibleTo ( par1 );
-    hb_retl( b );
+    hb_retl( obj->isVisibleTo ( par1 ) );
   }
 }
 
@@ -1153,8 +1131,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISWIDGET )
   QGraphicsItem * obj = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isWidget (  );
-    hb_retl( b );
+    hb_retl( obj->isWidget (  ) );
   }
 }
 
@@ -1167,8 +1144,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISWINDOW )
   QGraphicsItem * obj = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isWindow (  );
-    hb_retl( b );
+    hb_retl( obj->isWindow (  ) );
   }
 }
 

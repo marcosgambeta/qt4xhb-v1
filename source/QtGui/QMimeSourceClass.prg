@@ -152,8 +152,7 @@ HB_FUNC_STATIC( QMIMESOURCE_PROVIDES )
   if( obj )
   {
     const char * par1 = hb_parc(1);
-    bool b = obj->provides (  (const char *) par1 );
-    hb_retl( b );
+    hb_retl( obj->provides (  (const char *) par1 ) );
   }
 }
 

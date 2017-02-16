@@ -126,8 +126,7 @@ HB_FUNC_STATIC( QABSTRACTFONTENGINE_CONVERTSTRINGTOGLYPHINDICES )
     uint * par3 = (uint *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par4;
     int par5 = hb_parni(5);
-    bool b = obj->convertStringToGlyphIndices ( par1, par2, par3, &par4,  (QAbstractFontEngine::TextShapingFlags) par5 );
-    hb_retl( b );
+    hb_retl( obj->convertStringToGlyphIndices ( par1, par2, par3, &par4,  (QAbstractFontEngine::TextShapingFlags) par5 ) );
     hb_storni( par4, 4 );
   }
 }
@@ -180,8 +179,7 @@ HB_FUNC_STATIC( QABSTRACTFONTENGINE_RENDERGLYPH )
     int par3 = hb_parni(3);
     int par4 = hb_parni(4);
     uchar * par5 = (uchar *) hb_itemGetPtr( hb_objSendMsg( hb_param(5, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->renderGlyph ( par1, par2, par3, par4, par5 );
-    hb_retl( b );
+    hb_retl( obj->renderGlyph ( par1, par2, par3, par4, par5 ) );
   }
 }
 

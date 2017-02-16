@@ -687,8 +687,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_ISDISABLED )
   QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isDisabled (  );
-    hb_retl( b );
+    hb_retl( obj->isDisabled (  ) );
   }
 }
 
@@ -701,8 +700,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_ISEXPANDED )
   QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isExpanded (  );
-    hb_retl( b );
+    hb_retl( obj->isExpanded (  ) );
   }
 }
 
@@ -715,8 +713,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_ISFIRSTCOLUMNSPANNED )
   QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isFirstColumnSpanned (  );
-    hb_retl( b );
+    hb_retl( obj->isFirstColumnSpanned (  ) );
   }
 }
 
@@ -729,8 +726,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_ISHIDDEN )
   QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isHidden (  );
-    hb_retl( b );
+    hb_retl( obj->isHidden (  ) );
   }
 }
 
@@ -743,8 +739,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_ISSELECTED )
   QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isSelected (  );
-    hb_retl( b );
+    hb_retl( obj->isSelected (  ) );
   }
 }
 

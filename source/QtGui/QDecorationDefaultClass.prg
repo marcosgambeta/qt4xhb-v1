@@ -104,8 +104,7 @@ HB_FUNC_STATIC( QDECORATIONDEFAULT_PAINT )
     const QWidget * par2 = (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par3 = ISNIL(3)? QDecoration::All : hb_parni(3);
     int par4 = ISNIL(4)? (int) QDecoration::Normal : hb_parni(4);
-    bool b = obj->paint ( par1, par2, par3,  (QDecoration::DecorationState) par4 );
-    hb_retl( b );
+    hb_retl( obj->paint ( par1, par2, par3,  (QDecoration::DecorationState) par4 ) );
   }
 }
 

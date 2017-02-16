@@ -163,8 +163,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ALTERNATINGROWCOLORS )
   QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->alternatingRowColors (  );
-    hb_retl( b );
+    hb_retl( obj->alternatingRowColors (  ) );
   }
 }
 
@@ -248,8 +247,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_DRAGDROPOVERWRITEMODE )
   QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->dragDropOverwriteMode (  );
-    hb_retl( b );
+    hb_retl( obj->dragDropOverwriteMode (  ) );
   }
 }
 
@@ -262,8 +260,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_DRAGENABLED )
   QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->dragEnabled (  );
-    hb_retl( b );
+    hb_retl( obj->dragEnabled (  ) );
   }
 }
 
@@ -290,8 +287,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_HASAUTOSCROLL )
   QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasAutoScroll (  );
-    hb_retl( b );
+    hb_retl( obj->hasAutoScroll (  ) );
   }
 }
 
@@ -885,8 +881,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SHOWDROPINDICATOR )
   QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->showDropIndicator (  );
-    hb_retl( b );
+    hb_retl( obj->showDropIndicator (  ) );
   }
 }
 
@@ -944,8 +939,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_TABKEYNAVIGATION )
   QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->tabKeyNavigation (  );
-    hb_retl( b );
+    hb_retl( obj->tabKeyNavigation (  ) );
   }
 }
 

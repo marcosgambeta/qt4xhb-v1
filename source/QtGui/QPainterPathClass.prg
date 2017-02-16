@@ -707,8 +707,7 @@ HB_FUNC_STATIC( QPAINTERPATH_CONTAINS1 )
   if( obj )
   {
     QPointF * par1 = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->contains ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->contains ( *par1 ) );
   }
 }
 
@@ -722,8 +721,7 @@ HB_FUNC_STATIC( QPAINTERPATH_CONTAINS2 )
   if( obj )
   {
     QRectF * par1 = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->contains ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->contains ( *par1 ) );
   }
 }
 
@@ -737,8 +735,7 @@ HB_FUNC_STATIC( QPAINTERPATH_CONTAINS3 )
   if( obj )
   {
     QPainterPath * par1 = (QPainterPath *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->contains ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->contains ( *par1 ) );
   }
 }
 
@@ -896,8 +893,7 @@ HB_FUNC_STATIC( QPAINTERPATH_INTERSECTS1 )
   if( obj )
   {
     QRectF * par1 = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->intersects ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->intersects ( *par1 ) );
   }
 }
 
@@ -911,8 +907,7 @@ HB_FUNC_STATIC( QPAINTERPATH_INTERSECTS2 )
   if( obj )
   {
     QPainterPath * par1 = (QPainterPath *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->intersects ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->intersects ( *par1 ) );
   }
 }
 
@@ -940,8 +935,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ISEMPTY )
   QPainterPath * obj = (QPainterPath *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isEmpty (  );
-    hb_retl( b );
+    hb_retl( obj->isEmpty (  ) );
   }
 }
 

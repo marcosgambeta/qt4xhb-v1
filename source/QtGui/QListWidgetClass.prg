@@ -406,8 +406,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ISSORTINGENABLED )
   QListWidget * obj = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isSortingEnabled (  );
-    hb_retl( b );
+    hb_retl( obj->isSortingEnabled (  ) );
   }
 }
 

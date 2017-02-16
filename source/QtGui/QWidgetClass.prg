@@ -385,8 +385,7 @@ HB_FUNC_STATIC( QWIDGET_ACCEPTDROPS )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->acceptDrops (  );
-    hb_retl( b );
+    hb_retl( obj->acceptDrops (  ) );
   }
 }
 
@@ -535,8 +534,7 @@ HB_FUNC_STATIC( QWIDGET_AUTOFILLBACKGROUND )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->autoFillBackground (  );
-    hb_retl( b );
+    hb_retl( obj->autoFillBackground (  ) );
   }
 }
 
@@ -1044,8 +1042,7 @@ HB_FUNC_STATIC( QWIDGET_HASFOCUS )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasFocus (  );
-    hb_retl( b );
+    hb_retl( obj->hasFocus (  ) );
   }
 }
 
@@ -1058,8 +1055,7 @@ HB_FUNC_STATIC( QWIDGET_HASMOUSETRACKING )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasMouseTracking (  );
-    hb_retl( b );
+    hb_retl( obj->hasMouseTracking (  ) );
   }
 }
 
@@ -1182,8 +1178,7 @@ HB_FUNC_STATIC( QWIDGET_ISACTIVEWINDOW )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isActiveWindow (  );
-    hb_retl( b );
+    hb_retl( obj->isActiveWindow (  ) );
   }
 }
 
@@ -1197,8 +1192,7 @@ HB_FUNC_STATIC( QWIDGET_ISANCESTOROF )
   if( obj )
   {
     const QWidget * par1 = (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->isAncestorOf ( par1 );
-    hb_retl( b );
+    hb_retl( obj->isAncestorOf ( par1 ) );
   }
 }
 
@@ -1211,8 +1205,7 @@ HB_FUNC_STATIC( QWIDGET_ISENABLED )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isEnabled (  );
-    hb_retl( b );
+    hb_retl( obj->isEnabled (  ) );
   }
 }
 
@@ -1226,8 +1219,7 @@ HB_FUNC_STATIC( QWIDGET_ISENABLEDTO )
   if( obj )
   {
     QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->isEnabledTo ( par1 );
-    hb_retl( b );
+    hb_retl( obj->isEnabledTo ( par1 ) );
   }
 }
 
@@ -1240,8 +1232,7 @@ HB_FUNC_STATIC( QWIDGET_ISFULLSCREEN )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isFullScreen (  );
-    hb_retl( b );
+    hb_retl( obj->isFullScreen (  ) );
   }
 }
 
@@ -1254,8 +1245,7 @@ HB_FUNC_STATIC( QWIDGET_ISHIDDEN )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isHidden (  );
-    hb_retl( b );
+    hb_retl( obj->isHidden (  ) );
   }
 }
 
@@ -1268,8 +1258,7 @@ HB_FUNC_STATIC( QWIDGET_ISMAXIMIZED )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isMaximized (  );
-    hb_retl( b );
+    hb_retl( obj->isMaximized (  ) );
   }
 }
 
@@ -1282,8 +1271,7 @@ HB_FUNC_STATIC( QWIDGET_ISMINIMIZED )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isMinimized (  );
-    hb_retl( b );
+    hb_retl( obj->isMinimized (  ) );
   }
 }
 
@@ -1296,8 +1284,7 @@ HB_FUNC_STATIC( QWIDGET_ISMODAL )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isModal (  );
-    hb_retl( b );
+    hb_retl( obj->isModal (  ) );
   }
 }
 
@@ -1310,8 +1297,7 @@ HB_FUNC_STATIC( QWIDGET_ISVISIBLE )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isVisible (  );
-    hb_retl( b );
+    hb_retl( obj->isVisible (  ) );
   }
 }
 
@@ -1325,8 +1311,7 @@ HB_FUNC_STATIC( QWIDGET_ISVISIBLETO )
   if( obj )
   {
     QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->isVisibleTo ( par1 );
-    hb_retl( b );
+    hb_retl( obj->isVisibleTo ( par1 ) );
   }
 }
 
@@ -1339,8 +1324,7 @@ HB_FUNC_STATIC( QWIDGET_ISWINDOW )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isWindow (  );
-    hb_retl( b );
+    hb_retl( obj->isWindow (  ) );
   }
 }
 
@@ -1353,8 +1337,7 @@ HB_FUNC_STATIC( QWIDGET_ISWINDOWMODIFIED )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isWindowModified (  );
-    hb_retl( b );
+    hb_retl( obj->isWindowModified (  ) );
   }
 }
 
@@ -2014,8 +1997,7 @@ HB_FUNC_STATIC( QWIDGET_RESTOREGEOMETRY )
   if( obj )
   {
     QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->restoreGeometry ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->restoreGeometry ( *par1 ) );
   }
 }
 
@@ -3332,8 +3314,7 @@ HB_FUNC_STATIC( QWIDGET_TESTATTRIBUTE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->testAttribute (  (Qt::WidgetAttribute) par1 );
-    hb_retl( b );
+    hb_retl( obj->testAttribute (  (Qt::WidgetAttribute) par1 ) );
   }
 }
 
@@ -3360,8 +3341,7 @@ HB_FUNC_STATIC( QWIDGET_UNDERMOUSE )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->underMouse (  );
-    hb_retl( b );
+    hb_retl( obj->underMouse (  ) );
   }
 }
 
@@ -3532,8 +3512,7 @@ HB_FUNC_STATIC( QWIDGET_UPDATESENABLED )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->updatesEnabled (  );
-    hb_retl( b );
+    hb_retl( obj->updatesEnabled (  ) );
   }
 }
 
@@ -3803,8 +3782,7 @@ HB_FUNC_STATIC( QWIDGET_CLOSE )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->close (  );
-    hb_retl( b );
+    hb_retl( obj->close (  ) );
   }
 }
 
@@ -4126,8 +4104,7 @@ HB_FUNC_STATIC( QWIDGET_PAINTINGACTIVE )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->paintingActive (  );
-    hb_retl( b );
+    hb_retl( obj->paintingActive (  ) );
   }
 }
 

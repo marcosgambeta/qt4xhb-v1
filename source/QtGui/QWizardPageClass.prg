@@ -144,8 +144,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_ISCOMMITPAGE )
   QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isCommitPage (  );
-    hb_retl( b );
+    hb_retl( obj->isCommitPage (  ) );
   }
 }
 
@@ -158,8 +157,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_ISCOMPLETE )
   QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isComplete (  );
-    hb_retl( b );
+    hb_retl( obj->isComplete (  ) );
   }
 }
 
@@ -172,8 +170,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_ISFINALPAGE )
   QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isFinalPage (  );
-    hb_retl( b );
+    hb_retl( obj->isFinalPage (  ) );
   }
 }
 
@@ -335,8 +332,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_VALIDATEPAGE )
   QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->validatePage (  );
-    hb_retl( b );
+    hb_retl( obj->validatePage (  ) );
   }
 }
 

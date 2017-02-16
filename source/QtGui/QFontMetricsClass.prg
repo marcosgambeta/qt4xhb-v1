@@ -405,8 +405,7 @@ HB_FUNC_STATIC( QFONTMETRICS_INFONT )
   if( obj )
   {
     QChar * par1 = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->inFont ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->inFont ( *par1 ) );
   }
 }
 
@@ -420,8 +419,7 @@ HB_FUNC_STATIC( QFONTMETRICS_INFONTUCS4 )
   if( obj )
   {
     uint par1 = hb_parni(1);
-    bool b = obj->inFontUcs4 ( par1 );
-    hb_retl( b );
+    hb_retl( obj->inFontUcs4 ( par1 ) );
   }
 }
 

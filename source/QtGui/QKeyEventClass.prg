@@ -128,8 +128,7 @@ HB_FUNC_STATIC( QKEYEVENT_ISAUTOREPEAT )
   QKeyEvent * obj = (QKeyEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isAutoRepeat (  );
-    hb_retl( b );
+    hb_retl( obj->isAutoRepeat (  ) );
   }
 }
 
@@ -157,8 +156,7 @@ HB_FUNC_STATIC( QKEYEVENT_MATCHES )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->matches (  (QKeySequence::StandardKey) par1 );
-    hb_retl( b );
+    hb_retl( obj->matches (  (QKeySequence::StandardKey) par1 ) );
   }
 }
 

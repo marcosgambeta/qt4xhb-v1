@@ -145,8 +145,7 @@ HB_FUNC_STATIC( QUNDOSTACK_CANREDO )
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->canRedo (  );
-    hb_retl( b );
+    hb_retl( obj->canRedo (  ) );
   }
 }
 
@@ -159,8 +158,7 @@ HB_FUNC_STATIC( QUNDOSTACK_CANUNDO )
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->canUndo (  );
-    hb_retl( b );
+    hb_retl( obj->canUndo (  ) );
   }
 }
 
@@ -290,8 +288,7 @@ HB_FUNC_STATIC( QUNDOSTACK_ISACTIVE )
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isActive (  );
-    hb_retl( b );
+    hb_retl( obj->isActive (  ) );
   }
 }
 
@@ -304,8 +301,7 @@ HB_FUNC_STATIC( QUNDOSTACK_ISCLEAN )
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isClean (  );
-    hb_retl( b );
+    hb_retl( obj->isClean (  ) );
   }
 }
 

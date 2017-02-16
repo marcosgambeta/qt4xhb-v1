@@ -137,8 +137,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_ISACTIVATED )
   QGraphicsLayout * obj = (QGraphicsLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isActivated (  );
-    hb_retl( b );
+    hb_retl( obj->isActivated (  ) );
   }
 }
 
@@ -248,8 +247,7 @@ bool instantInvalidatePropagation ()
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUT_INSTANTINVALIDATEPROPAGATION )
 {
-  bool b = QGraphicsLayout::instantInvalidatePropagation (  );
-  hb_retl( b );
+  hb_retl( QGraphicsLayout::instantInvalidatePropagation (  ) );
 }
 
 

@@ -116,8 +116,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_EDITOREVENT )
     QAbstractItemModel * par2 = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     QStyleOptionViewItem * par3 = (QStyleOptionViewItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     QModelIndex * par4 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->editorEvent ( par1, par2, *par3, *par4 );
-    hb_retl( b );
+    hb_retl( obj->editorEvent ( par1, par2, *par3, *par4 ) );
   }
 }
 
@@ -217,8 +216,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_HELPEVENT )
     QAbstractItemView * par2 = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     QStyleOptionViewItem * par3 = (QStyleOptionViewItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     QModelIndex * par4 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->helpEvent ( par1, par2, *par3, *par4 );
-    hb_retl( b );
+    hb_retl( obj->helpEvent ( par1, par2, *par3, *par4 ) );
   }
 }
 

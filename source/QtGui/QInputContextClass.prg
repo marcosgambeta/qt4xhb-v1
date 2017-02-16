@@ -147,8 +147,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_FILTEREVENT )
   if( obj )
   {
     const QEvent * par1 = (const QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->filterEvent ( par1 );
-    hb_retl( b );
+    hb_retl( obj->filterEvent ( par1 ) );
   }
 }
 
@@ -203,8 +202,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_ISCOMPOSING )
   QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isComposing (  );
-    hb_retl( b );
+    hb_retl( obj->isComposing (  ) );
   }
 }
 

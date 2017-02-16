@@ -743,8 +743,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ISENABLED )
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isEnabled (  );
-    hb_retl( b );
+    hb_retl( obj->isEnabled (  ) );
   }
 }
 
@@ -772,8 +771,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ISEDITABLE )
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isEditable (  );
-    hb_retl( b );
+    hb_retl( obj->isEditable (  ) );
   }
 }
 
@@ -801,8 +799,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ISSELECTABLE )
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isSelectable (  );
-    hb_retl( b );
+    hb_retl( obj->isSelectable (  ) );
   }
 }
 
@@ -830,8 +827,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ISCHECKABLE )
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isCheckable (  );
-    hb_retl( b );
+    hb_retl( obj->isCheckable (  ) );
   }
 }
 
@@ -859,8 +855,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ISTRISTATE )
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isTristate (  );
-    hb_retl( b );
+    hb_retl( obj->isTristate (  ) );
   }
 }
 
@@ -888,8 +883,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ISDRAGENABLED )
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isDragEnabled (  );
-    hb_retl( b );
+    hb_retl( obj->isDragEnabled (  ) );
   }
 }
 
@@ -917,8 +911,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ISDROPENABLED )
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isDropEnabled (  );
-    hb_retl( b );
+    hb_retl( obj->isDropEnabled (  ) );
   }
 }
 
@@ -1074,8 +1067,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_HASCHILDREN )
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasChildren (  );
-    hb_retl( b );
+    hb_retl( obj->hasChildren (  ) );
   }
 }
 

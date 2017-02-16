@@ -220,8 +220,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_INSERTROWS )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->insertRows ( par1, par2, par3 );
-    hb_retl( b );
+    hb_retl( obj->insertRows ( par1, par2, par3 ) );
   }
 }
 
@@ -237,8 +236,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_REMOVEROWS )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->removeRows ( par1, par2, par3 );
-    hb_retl( b );
+    hb_retl( obj->removeRows ( par1, par2, par3 ) );
   }
 }
 
@@ -269,8 +267,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_SETDATA )
     QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QVariant * par2 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par3 = ISNIL(3)? Qt::EditRole : hb_parni(3);
-    bool b = obj->setData ( *par1, *par2, par3 );
-    hb_retl( b );
+    hb_retl( obj->setData ( *par1, *par2, par3 ) );
   }
 }
 

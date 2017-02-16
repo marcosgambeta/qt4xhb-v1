@@ -264,8 +264,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_CONTAINS1 )
   if( obj )
   {
     QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->contains ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->contains ( *par1 ) );
   }
 }
 
@@ -281,8 +280,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_CONTAINS2 )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     QModelIndex * par3 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->contains ( par1, par2, *par3 );
-    hb_retl( b );
+    hb_retl( obj->contains ( par1, par2, *par3 ) );
   }
 }
 
@@ -384,8 +382,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_INTERSECTS )
   if( obj )
   {
     QItemSelectionRange * par1 = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->intersects ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->intersects ( *par1 ) );
   }
 }
 
@@ -398,8 +395,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_ISEMPTY )
   QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isEmpty (  );
-    hb_retl( b );
+    hb_retl( obj->isEmpty (  ) );
   }
 }
 
@@ -412,8 +408,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_ISVALID )
   QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isValid (  );
-    hb_retl( b );
+    hb_retl( obj->isValid (  ) );
   }
 }
 

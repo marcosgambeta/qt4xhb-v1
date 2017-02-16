@@ -346,8 +346,7 @@ HB_FUNC_STATIC( QACTION_AUTOREPEAT )
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->autoRepeat (  );
-    hb_retl( b );
+    hb_retl( obj->autoRepeat (  ) );
   }
 }
 
@@ -416,8 +415,7 @@ HB_FUNC_STATIC( QACTION_ISCHECKABLE )
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isCheckable (  );
-    hb_retl( b );
+    hb_retl( obj->isCheckable (  ) );
   }
 }
 
@@ -430,8 +428,7 @@ HB_FUNC_STATIC( QACTION_ISCHECKED )
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isChecked (  );
-    hb_retl( b );
+    hb_retl( obj->isChecked (  ) );
   }
 }
 
@@ -444,8 +441,7 @@ HB_FUNC_STATIC( QACTION_ISENABLED )
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isEnabled (  );
-    hb_retl( b );
+    hb_retl( obj->isEnabled (  ) );
   }
 }
 
@@ -458,8 +454,7 @@ HB_FUNC_STATIC( QACTION_ISICONVISIBLEINMENU )
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isIconVisibleInMenu (  );
-    hb_retl( b );
+    hb_retl( obj->isIconVisibleInMenu (  ) );
   }
 }
 
@@ -472,8 +467,7 @@ HB_FUNC_STATIC( QACTION_ISSEPARATOR )
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isSeparator (  );
-    hb_retl( b );
+    hb_retl( obj->isSeparator (  ) );
   }
 }
 
@@ -486,8 +480,7 @@ HB_FUNC_STATIC( QACTION_ISVISIBLE )
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isVisible (  );
-    hb_retl( b );
+    hb_retl( obj->isVisible (  ) );
   }
 }
 
@@ -970,8 +963,7 @@ HB_FUNC_STATIC( QACTION_SHOWSTATUSTEXT )
   if( obj )
   {
     QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->showStatusText ( par1 );
-    hb_retl( b );
+    hb_retl( obj->showStatusText ( par1 ) );
   }
 }
 

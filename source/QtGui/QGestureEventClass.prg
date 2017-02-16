@@ -405,8 +405,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_ISACCEPTED1 )
   QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isAccepted (  );
-    hb_retl( b );
+    hb_retl( obj->isAccepted (  ) );
   }
 }
 
@@ -420,8 +419,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_ISACCEPTED2 )
   if( obj )
   {
     QGesture * par1 = (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->isAccepted ( par1 );
-    hb_retl( b );
+    hb_retl( obj->isAccepted ( par1 ) );
   }
 }
 
@@ -435,8 +433,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_ISACCEPTED3 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->isAccepted (  (Qt::GestureType) par1 );
-    hb_retl( b );
+    hb_retl( obj->isAccepted (  (Qt::GestureType) par1 ) );
   }
 }
 

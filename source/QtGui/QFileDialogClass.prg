@@ -219,8 +219,7 @@ HB_FUNC_STATIC( QFILEDIALOG_CONFIRMOVERWRITE )
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->confirmOverwrite (  );
-    hb_retl( b );
+    hb_retl( obj->confirmOverwrite (  ) );
   }
 }
 
@@ -326,8 +325,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ISNAMEFILTERDETAILSVISIBLE )
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isNameFilterDetailsVisible (  );
-    hb_retl( b );
+    hb_retl( obj->isNameFilterDetailsVisible (  ) );
   }
 }
 
@@ -340,8 +338,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ISREADONLY )
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isReadOnly (  );
-    hb_retl( b );
+    hb_retl( obj->isReadOnly (  ) );
   }
 }
 
@@ -450,8 +447,7 @@ HB_FUNC_STATIC( QFILEDIALOG_RESOLVESYMLINKS )
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->resolveSymlinks (  );
-    hb_retl( b );
+    hb_retl( obj->resolveSymlinks (  ) );
   }
 }
 
@@ -465,8 +461,7 @@ HB_FUNC_STATIC( QFILEDIALOG_RESTORESTATE )
   if( obj )
   {
     QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->restoreState ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->restoreState ( *par1 ) );
   }
 }
 
@@ -964,8 +959,7 @@ HB_FUNC_STATIC( QFILEDIALOG_TESTOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->testOption (  (QFileDialog::Option) par1 );
-    hb_retl( b );
+    hb_retl( obj->testOption (  (QFileDialog::Option) par1 ) );
   }
 }
 

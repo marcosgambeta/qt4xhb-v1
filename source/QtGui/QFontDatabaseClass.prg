@@ -152,8 +152,7 @@ HB_FUNC_STATIC( QFONTDATABASE_BOLD )
   {
     QString par1 = hb_parc(1);
     QString par2 = hb_parc(2);
-    bool b = obj->bold ( par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->bold ( par1, par2 ) );
   }
 }
 
@@ -209,8 +208,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ISBITMAPSCALABLE )
   {
     QString par1 = hb_parc(1);
     QString par2 = ISNIL(2)? QString() : hb_parc(2);
-    bool b = obj->isBitmapScalable ( par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->isBitmapScalable ( par1, par2 ) );
   }
 }
 
@@ -225,8 +223,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ISFIXEDPITCH )
   {
     QString par1 = hb_parc(1);
     QString par2 = ISNIL(2)? QString() : hb_parc(2);
-    bool b = obj->isFixedPitch ( par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->isFixedPitch ( par1, par2 ) );
   }
 }
 
@@ -241,8 +238,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ISSCALABLE )
   {
     QString par1 = hb_parc(1);
     QString par2 = ISNIL(2)? QString() : hb_parc(2);
-    bool b = obj->isScalable ( par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->isScalable ( par1, par2 ) );
   }
 }
 
@@ -257,8 +253,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ISSMOOTHLYSCALABLE )
   {
     QString par1 = hb_parc(1);
     QString par2 = ISNIL(2)? QString() : hb_parc(2);
-    bool b = obj->isSmoothlyScalable ( par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->isSmoothlyScalable ( par1, par2 ) );
   }
 }
 
@@ -273,8 +268,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ITALIC )
   {
     QString par1 = hb_parc(1);
     QString par2 = hb_parc(2);
-    bool b = obj->italic ( par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->italic ( par1, par2 ) );
   }
 }
 
@@ -524,8 +518,7 @@ bool removeAllApplicationFonts ()
 */
 HB_FUNC_STATIC( QFONTDATABASE_REMOVEALLAPPLICATIONFONTS )
 {
-  bool b = QFontDatabase::removeAllApplicationFonts (  );
-  hb_retl( b );
+  hb_retl( QFontDatabase::removeAllApplicationFonts (  ) );
 }
 
 
@@ -535,8 +528,7 @@ bool removeApplicationFont ( int id )
 HB_FUNC_STATIC( QFONTDATABASE_REMOVEAPPLICATIONFONT )
 {
   int par1 = hb_parni(1);
-  bool b = QFontDatabase::removeApplicationFont ( par1 );
-  hb_retl( b );
+  hb_retl( QFontDatabase::removeApplicationFont ( par1 ) );
 }
 
 
@@ -564,8 +556,7 @@ bool supportsThreadedFontRendering ()
 */
 HB_FUNC_STATIC( QFONTDATABASE_SUPPORTSTHREADEDFONTRENDERING )
 {
-  bool b = QFontDatabase::supportsThreadedFontRendering (  );
-  hb_retl( b );
+  hb_retl( QFontDatabase::supportsThreadedFontRendering (  ) );
 }
 
 

@@ -247,8 +247,7 @@ HB_FUNC_STATIC( QAPPLICATION_ISSESSIONRESTORED )
   QApplication * obj = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isSessionRestored (  );
-    hb_retl( b );
+    hb_retl( obj->isSessionRestored (  ) );
   }
 }
 
@@ -344,8 +343,7 @@ HB_FUNC_STATIC( QAPPLICATION_NOTIFY )
   {
     QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QEvent * par2 = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->notify ( par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->notify ( par1, par2 ) );
   }
 }
 
@@ -550,8 +548,7 @@ bool desktopSettingsAware ()
 */
 HB_FUNC_STATIC( QAPPLICATION_DESKTOPSETTINGSAWARE )
 {
-  bool b = QApplication::desktopSettingsAware (  );
-  hb_retl( b );
+  hb_retl( QApplication::desktopSettingsAware (  ) );
 }
 
 
@@ -663,8 +660,7 @@ bool isEffectEnabled ( Qt::UIEffect effect )
 HB_FUNC_STATIC( QAPPLICATION_ISEFFECTENABLED )
 {
   int par1 = hb_parni(1);
-  bool b = QApplication::isEffectEnabled (  (Qt::UIEffect) par1 );
-  hb_retl( b );
+  hb_retl( QApplication::isEffectEnabled (  (Qt::UIEffect) par1 ) );
 }
 
 
@@ -673,8 +669,7 @@ bool isLeftToRight ()
 */
 HB_FUNC_STATIC( QAPPLICATION_ISLEFTTORIGHT )
 {
-  bool b = QApplication::isLeftToRight (  );
-  hb_retl( b );
+  hb_retl( QApplication::isLeftToRight (  ) );
 }
 
 
@@ -683,8 +678,7 @@ bool isRightToLeft ()
 */
 HB_FUNC_STATIC( QAPPLICATION_ISRIGHTTOLEFT )
 {
-  bool b = QApplication::isRightToLeft (  );
-  hb_retl( b );
+  hb_retl( QApplication::isRightToLeft (  ) );
 }
 
 
@@ -827,8 +821,7 @@ bool quitOnLastWindowClosed ()
 */
 HB_FUNC_STATIC( QAPPLICATION_QUITONLASTWINDOWCLOSED )
 {
-  bool b = QApplication::quitOnLastWindowClosed (  );
-  hb_retl( b );
+  hb_retl( QApplication::quitOnLastWindowClosed (  ) );
 }
 
 

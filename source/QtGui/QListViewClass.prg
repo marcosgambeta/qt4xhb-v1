@@ -191,8 +191,7 @@ HB_FUNC_STATIC( QLISTVIEW_ISROWHIDDEN )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->isRowHidden ( par1 );
-    hb_retl( b );
+    hb_retl( obj->isRowHidden ( par1 ) );
   }
 }
 
@@ -205,8 +204,7 @@ HB_FUNC_STATIC( QLISTVIEW_ISSELECTIONRECTVISIBLE )
   QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isSelectionRectVisible (  );
-    hb_retl( b );
+    hb_retl( obj->isSelectionRectVisible (  ) );
   }
 }
 
@@ -219,8 +217,7 @@ HB_FUNC_STATIC( QLISTVIEW_ISWRAPPING )
   QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isWrapping (  );
-    hb_retl( b );
+    hb_retl( obj->isWrapping (  ) );
   }
 }
 
@@ -514,8 +511,7 @@ HB_FUNC_STATIC( QLISTVIEW_UNIFORMITEMSIZES )
   QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->uniformItemSizes (  );
-    hb_retl( b );
+    hb_retl( obj->uniformItemSizes (  ) );
   }
 }
 
@@ -542,8 +538,7 @@ HB_FUNC_STATIC( QLISTVIEW_WORDWRAP )
   QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->wordWrap (  );
-    hb_retl( b );
+    hb_retl( obj->wordWrap (  ) );
   }
 }
 

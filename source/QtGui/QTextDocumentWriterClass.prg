@@ -327,8 +327,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_WRITE1 )
   if( obj )
   {
     const QTextDocument * par1 = (const QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->write ( par1 );
-    hb_retl( b );
+    hb_retl( obj->write ( par1 ) );
   }
 }
 
@@ -342,8 +341,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_WRITE2 )
   if( obj )
   {
     QTextDocumentFragment * par1 = (QTextDocumentFragment *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->write ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->write ( *par1 ) );
   }
 }
 

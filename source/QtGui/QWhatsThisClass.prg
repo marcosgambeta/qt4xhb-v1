@@ -153,8 +153,7 @@ bool inWhatsThisMode ()
 */
 HB_FUNC_STATIC( QWHATSTHIS_INWHATSTHISMODE )
 {
-  bool b = QWhatsThis::inWhatsThisMode (  );
-  hb_retl( b );
+  hb_retl( QWhatsThis::inWhatsThisMode (  ) );
 }
 
 

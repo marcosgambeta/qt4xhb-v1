@@ -538,8 +538,7 @@ HB_FUNC_STATIC( QMENU_ISEMPTY )
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isEmpty (  );
-    hb_retl( b );
+    hb_retl( obj->isEmpty (  ) );
   }
 }
 
@@ -552,8 +551,7 @@ HB_FUNC_STATIC( QMENU_ISTEAROFFENABLED )
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isTearOffEnabled (  );
-    hb_retl( b );
+    hb_retl( obj->isTearOffEnabled (  ) );
   }
 }
 
@@ -566,8 +564,7 @@ HB_FUNC_STATIC( QMENU_ISTEAROFFMENUVISIBLE )
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isTearOffMenuVisible (  );
-    hb_retl( b );
+    hb_retl( obj->isTearOffMenuVisible (  ) );
   }
 }
 
@@ -611,8 +608,7 @@ HB_FUNC_STATIC( QMENU_SEPARATORSCOLLAPSIBLE )
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->separatorsCollapsible (  );
-    hb_retl( b );
+    hb_retl( obj->separatorsCollapsible (  ) );
   }
 }
 

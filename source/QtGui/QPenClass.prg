@@ -359,8 +359,7 @@ HB_FUNC_STATIC( QPEN_ISCOSMETIC )
   QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isCosmetic (  );
-    hb_retl( b );
+    hb_retl( obj->isCosmetic (  ) );
   }
 }
 
@@ -373,8 +372,7 @@ HB_FUNC_STATIC( QPEN_ISSOLID )
   QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isSolid (  );
-    hb_retl( b );
+    hb_retl( obj->isSolid (  ) );
   }
 }
 

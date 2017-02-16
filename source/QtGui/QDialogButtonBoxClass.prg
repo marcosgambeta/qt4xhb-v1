@@ -323,8 +323,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_CENTERBUTTONS )
   QDialogButtonBox * obj = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->centerButtons (  );
-    hb_retl( b );
+    hb_retl( obj->centerButtons (  ) );
   }
 }
 

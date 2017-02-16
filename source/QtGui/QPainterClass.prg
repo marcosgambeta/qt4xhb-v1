@@ -419,8 +419,7 @@ HB_FUNC_STATIC( QPAINTER_BEGIN )
   if( obj )
   {
     QPaintDevice * par1 = (QPaintDevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->begin ( par1 );
-    hb_retl( b );
+    hb_retl( obj->begin ( par1 ) );
   }
 }
 
@@ -2526,8 +2525,7 @@ HB_FUNC_STATIC( QPAINTER_END )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->end (  );
-    hb_retl( b );
+    hb_retl( obj->end (  ) );
   }
 }
 
@@ -2949,8 +2947,7 @@ HB_FUNC_STATIC( QPAINTER_HASCLIPPING )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasClipping (  );
-    hb_retl( b );
+    hb_retl( obj->hasClipping (  ) );
   }
 }
 
@@ -2978,8 +2975,7 @@ HB_FUNC_STATIC( QPAINTER_ISACTIVE )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isActive (  );
-    hb_retl( b );
+    hb_retl( obj->isActive (  ) );
   }
 }
 
@@ -3742,8 +3738,7 @@ HB_FUNC_STATIC( QPAINTER_TESTRENDERHINT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->testRenderHint (  (QPainter::RenderHint) par1 );
-    hb_retl( b );
+    hb_retl( obj->testRenderHint (  (QPainter::RenderHint) par1 ) );
   }
 }
 
@@ -3836,8 +3831,7 @@ HB_FUNC_STATIC( QPAINTER_VIEWTRANSFORMENABLED )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->viewTransformEnabled (  );
-    hb_retl( b );
+    hb_retl( obj->viewTransformEnabled (  ) );
   }
 }
 
@@ -3878,8 +3872,7 @@ HB_FUNC_STATIC( QPAINTER_WORLDMATRIXENABLED )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->worldMatrixEnabled (  );
-    hb_retl( b );
+    hb_retl( obj->worldMatrixEnabled (  ) );
   }
 }
 

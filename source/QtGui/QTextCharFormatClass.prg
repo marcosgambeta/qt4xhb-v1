@@ -228,8 +228,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTFIXEDPITCH )
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->fontFixedPitch (  );
-    hb_retl( b );
+    hb_retl( obj->fontFixedPitch (  ) );
   }
 }
 
@@ -256,8 +255,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTITALIC )
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->fontItalic (  );
-    hb_retl( b );
+    hb_retl( obj->fontItalic (  ) );
   }
 }
 
@@ -270,8 +268,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTKERNING )
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->fontKerning (  );
-    hb_retl( b );
+    hb_retl( obj->fontKerning (  ) );
   }
 }
 
@@ -298,8 +295,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTOVERLINE )
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->fontOverline (  );
-    hb_retl( b );
+    hb_retl( obj->fontOverline (  ) );
   }
 }
 
@@ -326,8 +322,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTSTRIKEOUT )
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->fontStrikeOut (  );
-    hb_retl( b );
+    hb_retl( obj->fontStrikeOut (  ) );
   }
 }
 
@@ -368,8 +363,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTUNDERLINE )
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->fontUnderline (  );
-    hb_retl( b );
+    hb_retl( obj->fontUnderline (  ) );
   }
 }
 
@@ -410,8 +404,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_ISANCHOR )
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isAnchor (  );
-    hb_retl( b );
+    hb_retl( obj->isAnchor (  ) );
   }
 }
 
@@ -424,8 +417,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_ISVALID )
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isValid (  );
-    hb_retl( b );
+    hb_retl( obj->isValid (  ) );
   }
 }
 

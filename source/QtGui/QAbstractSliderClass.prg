@@ -111,8 +111,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_HASTRACKING )
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasTracking (  );
-    hb_retl( b );
+    hb_retl( obj->hasTracking (  ) );
   }
 }
 
@@ -125,8 +124,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_INVERTEDAPPEARANCE )
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->invertedAppearance (  );
-    hb_retl( b );
+    hb_retl( obj->invertedAppearance (  ) );
   }
 }
 
@@ -139,8 +137,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_INVERTEDCONTROLS )
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->invertedControls (  );
-    hb_retl( b );
+    hb_retl( obj->invertedControls (  ) );
   }
 }
 
@@ -153,8 +150,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ISSLIDERDOWN )
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isSliderDown (  );
-    hb_retl( b );
+    hb_retl( obj->isSliderDown (  ) );
   }
 }
 

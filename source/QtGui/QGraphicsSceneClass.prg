@@ -733,8 +733,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_HASFOCUS )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasFocus (  );
-    hb_retl( b );
+    hb_retl( obj->hasFocus (  ) );
   }
 }
 
@@ -826,8 +825,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ISACTIVE )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isActive (  );
-    hb_retl( b );
+    hb_retl( obj->isActive (  ) );
   }
 }
 
@@ -840,8 +838,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ISSORTCACHEENABLED )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isSortCacheEnabled (  );
-    hb_retl( b );
+    hb_retl( obj->isSortCacheEnabled (  ) );
   }
 }
 
@@ -1437,8 +1434,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SENDEVENT )
   {
     QGraphicsItem * par1 = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QEvent * par2 = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->sendEvent ( par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->sendEvent ( par1, par2 ) );
   }
 }
 
@@ -1743,8 +1739,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_STICKYFOCUS )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->stickyFocus (  );
-    hb_retl( b );
+    hb_retl( obj->stickyFocus (  ) );
   }
 }
 

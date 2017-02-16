@@ -252,8 +252,7 @@ HB_FUNC_STATIC( QGRAPHICSRECTITEM_CONTAINS )
   if( obj )
   {
     QPointF * par1 = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->contains ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->contains ( *par1 ) );
   }
 }
 
@@ -267,8 +266,7 @@ HB_FUNC_STATIC( QGRAPHICSRECTITEM_ISOBSCUREDBY )
   if( obj )
   {
     const QGraphicsItem * par1 = (const QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->isObscuredBy ( par1 );
-    hb_retl( b );
+    hb_retl( obj->isObscuredBy ( par1 ) );
   }
 }
 

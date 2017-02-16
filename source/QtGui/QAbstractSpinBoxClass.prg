@@ -190,8 +190,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_HASACCEPTABLEINPUT )
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasAcceptableInput (  );
-    hb_retl( b );
+    hb_retl( obj->hasAcceptableInput (  ) );
   }
 }
 
@@ -204,8 +203,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_HASFRAME )
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasFrame (  );
-    hb_retl( b );
+    hb_retl( obj->hasFrame (  ) );
   }
 }
 
@@ -232,8 +230,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_ISACCELERATED )
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isAccelerated (  );
-    hb_retl( b );
+    hb_retl( obj->isAccelerated (  ) );
   }
 }
 
@@ -246,8 +243,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_ISREADONLY )
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isReadOnly (  );
-    hb_retl( b );
+    hb_retl( obj->isReadOnly (  ) );
   }
 }
 
@@ -260,8 +256,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_KEYBOARDTRACKING )
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->keyboardTracking (  );
-    hb_retl( b );
+    hb_retl( obj->keyboardTracking (  ) );
   }
 }
 
@@ -468,8 +463,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_WRAPPING )
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->wrapping (  );
-    hb_retl( b );
+    hb_retl( obj->wrapping (  ) );
   }
 }
 
@@ -483,8 +477,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_EVENT )
   if( obj )
   {
     QEvent * par1 = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->event ( par1 );
-    hb_retl( b );
+    hb_retl( obj->event ( par1 ) );
   }
 }
 

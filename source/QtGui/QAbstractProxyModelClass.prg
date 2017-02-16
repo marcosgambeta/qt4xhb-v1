@@ -219,8 +219,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_CANFETCHMORE )
   if( obj )
   {
     QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->canFetchMore ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->canFetchMore ( *par1 ) );
   }
 }
 
@@ -280,8 +279,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_HASCHILDREN )
   if( obj )
   {
     QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->hasChildren ( par1 );
-    hb_retl( b );
+    hb_retl( obj->hasChildren ( par1 ) );
   }
 }
 
@@ -367,8 +365,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SETDATA )
     QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QVariant * par2 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par3 = ISNIL(3)? Qt::EditRole : hb_parni(3);
-    bool b = obj->setData ( *par1, *par2, par3 );
-    hb_retl( b );
+    hb_retl( obj->setData ( *par1, *par2, par3 ) );
   }
 }
 
@@ -385,8 +382,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SETHEADERDATA )
     int par2 = hb_parni(2);
     QVariant * par3 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par4 = ISNIL(4)? Qt::EditRole : hb_parni(4);
-    bool b = obj->setHeaderData ( par1,  (Qt::Orientation) par2, *par3, par4 );
-    hb_retl( b );
+    hb_retl( obj->setHeaderData ( par1,  (Qt::Orientation) par2, *par3, par4 ) );
   }
 }
 
@@ -431,8 +427,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SUBMIT )
   QAbstractProxyModel * obj = (QAbstractProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->submit (  );
-    hb_retl( b );
+    hb_retl( obj->submit (  ) );
   }
 }
 

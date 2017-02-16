@@ -141,8 +141,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_CANREAD )
   QImageIOHandler * obj = (QImageIOHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->canRead (  );
-    hb_retl( b );
+    hb_retl( obj->canRead (  ) );
   }
 }
 
@@ -226,8 +225,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_JUMPTOIMAGE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->jumpToImage ( par1 );
-    hb_retl( b );
+    hb_retl( obj->jumpToImage ( par1 ) );
   }
 }
 
@@ -240,8 +238,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_JUMPTONEXTIMAGE )
   QImageIOHandler * obj = (QImageIOHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->jumpToNextImage (  );
-    hb_retl( b );
+    hb_retl( obj->jumpToNextImage (  ) );
   }
 }
 
@@ -298,8 +295,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_READ )
   if( obj )
   {
     QImage * par1 = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->read ( par1 );
-    hb_retl( b );
+    hb_retl( obj->read ( par1 ) );
   }
 }
 
@@ -360,8 +356,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_SUPPORTSOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->supportsOption (  (QImageIOHandler::ImageOption) par1 );
-    hb_retl( b );
+    hb_retl( obj->supportsOption (  (QImageIOHandler::ImageOption) par1 ) );
   }
 }
 
@@ -375,8 +370,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_WRITE )
   if( obj )
   {
     QImage * par1 = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->write ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->write ( *par1 ) );
   }
 }
 

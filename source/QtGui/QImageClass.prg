@@ -347,8 +347,7 @@ HB_FUNC_STATIC( QIMAGE_ALLGRAY )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->allGray (  );
-    hb_retl( b );
+    hb_retl( obj->allGray (  ) );
   }
 }
 
@@ -737,8 +736,7 @@ HB_FUNC_STATIC( QIMAGE_HASALPHACHANNEL )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasAlphaChannel (  );
-    hb_retl( b );
+    hb_retl( obj->hasAlphaChannel (  ) );
   }
 }
 
@@ -780,8 +778,7 @@ HB_FUNC_STATIC( QIMAGE_ISGRAYSCALE )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isGrayscale (  );
-    hb_retl( b );
+    hb_retl( obj->isGrayscale (  ) );
   }
 }
 
@@ -794,8 +791,7 @@ HB_FUNC_STATIC( QIMAGE_ISNULL )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isNull (  );
-    hb_retl( b );
+    hb_retl( obj->isNull (  ) );
   }
 }
 
@@ -810,8 +806,7 @@ HB_FUNC_STATIC( QIMAGE_LOAD1 )
   {
     QString par1 = hb_parc(1);
     const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    bool b = obj->load ( par1,  (const char *) par2 );
-    hb_retl( b );
+    hb_retl( obj->load ( par1,  (const char *) par2 ) );
   }
 }
 
@@ -826,8 +821,7 @@ HB_FUNC_STATIC( QIMAGE_LOAD2 )
   {
     QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     const char * par2 = hb_parc(2);
-    bool b = obj->load ( par1,  (const char *) par2 );
-    hb_retl( b );
+    hb_retl( obj->load ( par1,  (const char *) par2 ) );
   }
 }
 
@@ -858,8 +852,7 @@ HB_FUNC_STATIC( QIMAGE_LOADFROMDATA1 )
     const uchar * par1 = (const uchar *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
     const char * par3 = ISNIL(3)? 0 : hb_parc(3);
-    bool b = obj->loadFromData ( par1, par2,  (const char *) par3 );
-    hb_retl( b );
+    hb_retl( obj->loadFromData ( par1, par2,  (const char *) par3 ) );
   }
 }
 
@@ -874,8 +867,7 @@ HB_FUNC_STATIC( QIMAGE_LOADFROMDATA2 )
   {
     QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    bool b = obj->loadFromData ( *par1,  (const char *) par2 );
-    hb_retl( b );
+    hb_retl( obj->loadFromData ( *par1,  (const char *) par2 ) );
   }
 }
 
@@ -1052,8 +1044,7 @@ HB_FUNC_STATIC( QIMAGE_SAVE1 )
     QString par1 = hb_parc(1);
     const char * par2 = ISNIL(2)? 0 : hb_parc(2);
     int par3 = ISNIL(3)? -1 : hb_parni(3);
-    bool b = obj->save ( par1,  (const char *) par2, par3 );
-    hb_retl( b );
+    hb_retl( obj->save ( par1,  (const char *) par2, par3 ) );
   }
 }
 
@@ -1069,8 +1060,7 @@ HB_FUNC_STATIC( QIMAGE_SAVE2 )
     QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     const char * par2 = ISNIL(2)? 0 : hb_parc(2);
     int par3 = ISNIL(3)? -1 : hb_parni(3);
-    bool b = obj->save ( par1,  (const char *) par2, par3 );
-    hb_retl( b );
+    hb_retl( obj->save ( par1,  (const char *) par2, par3 ) );
   }
 }
 
@@ -1444,8 +1434,7 @@ HB_FUNC_STATIC( QIMAGE_VALID1 )
   if( obj )
   {
     QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->valid ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->valid ( *par1 ) );
   }
 }
 
@@ -1460,8 +1449,7 @@ HB_FUNC_STATIC( QIMAGE_VALID2 )
   {
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
-    bool b = obj->valid ( par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->valid ( par1, par2 ) );
   }
 }
 

@@ -242,8 +242,7 @@ HB_FUNC_STATIC( QPAINTDEVICE_PAINTINGACTIVE )
   QPaintDevice * obj = (QPaintDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->paintingActive (  );
-    hb_retl( b );
+    hb_retl( obj->paintingActive (  ) );
   }
 }
 

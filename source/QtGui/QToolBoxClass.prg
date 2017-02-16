@@ -280,8 +280,7 @@ HB_FUNC_STATIC( QTOOLBOX_ISITEMENABLED )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->isItemEnabled ( par1 );
-    hb_retl( b );
+    hb_retl( obj->isItemEnabled ( par1 ) );
   }
 }
 

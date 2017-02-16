@@ -150,8 +150,7 @@ HB_FUNC_STATIC( QUNDOGROUP_CANREDO )
   QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->canRedo (  );
-    hb_retl( b );
+    hb_retl( obj->canRedo (  ) );
   }
 }
 
@@ -164,8 +163,7 @@ HB_FUNC_STATIC( QUNDOGROUP_CANUNDO )
   QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->canUndo (  );
-    hb_retl( b );
+    hb_retl( obj->canUndo (  ) );
   }
 }
 
@@ -210,8 +208,7 @@ HB_FUNC_STATIC( QUNDOGROUP_ISCLEAN )
   QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isClean (  );
-    hb_retl( b );
+    hb_retl( obj->isClean (  ) );
   }
 }
 

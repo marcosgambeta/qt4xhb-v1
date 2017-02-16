@@ -189,8 +189,7 @@ HB_FUNC_STATIC( QFONTINFO_BOLD )
   QFontInfo * obj = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->bold (  );
-    hb_retl( b );
+    hb_retl( obj->bold (  ) );
   }
 }
 
@@ -203,8 +202,7 @@ HB_FUNC_STATIC( QFONTINFO_EXACTMATCH )
   QFontInfo * obj = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->exactMatch (  );
-    hb_retl( b );
+    hb_retl( obj->exactMatch (  ) );
   }
 }
 
@@ -231,8 +229,7 @@ HB_FUNC_STATIC( QFONTINFO_FIXEDPITCH )
   QFontInfo * obj = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->fixedPitch (  );
-    hb_retl( b );
+    hb_retl( obj->fixedPitch (  ) );
   }
 }
 
@@ -245,8 +242,7 @@ HB_FUNC_STATIC( QFONTINFO_ITALIC )
   QFontInfo * obj = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->italic (  );
-    hb_retl( b );
+    hb_retl( obj->italic (  ) );
   }
 }
 
@@ -301,8 +297,7 @@ HB_FUNC_STATIC( QFONTINFO_RAWMODE )
   QFontInfo * obj = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->rawMode (  );
-    hb_retl( b );
+    hb_retl( obj->rawMode (  ) );
   }
 }
 

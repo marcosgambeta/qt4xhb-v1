@@ -139,8 +139,7 @@ HB_FUNC_STATIC( QWIDGETITEM_HASHEIGHTFORWIDTH )
   QWidgetItem * obj = (QWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->hasHeightForWidth (  );
-    hb_retl( b );
+    hb_retl( obj->hasHeightForWidth (  ) );
   }
 }
 
@@ -168,8 +167,7 @@ HB_FUNC_STATIC( QWIDGETITEM_ISEMPTY )
   QWidgetItem * obj = (QWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isEmpty (  );
-    hb_retl( b );
+    hb_retl( obj->isEmpty (  ) );
   }
 }
 

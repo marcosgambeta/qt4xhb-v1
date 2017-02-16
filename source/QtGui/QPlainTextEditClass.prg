@@ -225,8 +225,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_BACKGROUNDVISIBLE )
   QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->backgroundVisible (  );
-    hb_retl( b );
+    hb_retl( obj->backgroundVisible (  ) );
   }
 }
 
@@ -253,8 +252,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_CANPASTE )
   QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->canPaste (  );
-    hb_retl( b );
+    hb_retl( obj->canPaste (  ) );
   }
 }
 
@@ -267,8 +265,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_CENTERONSCROLL )
   QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->centerOnScroll (  );
-    hb_retl( b );
+    hb_retl( obj->centerOnScroll (  ) );
   }
 }
 
@@ -427,8 +424,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_FIND )
   {
     QString par1 = hb_parc(1);
     int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-    bool b = obj->find ( par1,  (QTextDocument::FindFlags) par2 );
-    hb_retl( b );
+    hb_retl( obj->find ( par1,  (QTextDocument::FindFlags) par2 ) );
   }
 }
 
@@ -441,8 +437,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_ISREADONLY )
   QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isReadOnly (  );
-    hb_retl( b );
+    hb_retl( obj->isReadOnly (  ) );
   }
 }
 
@@ -455,8 +450,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_ISUNDOREDOENABLED )
   QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isUndoRedoEnabled (  );
-    hb_retl( b );
+    hb_retl( obj->isUndoRedoEnabled (  ) );
   }
 }
 
@@ -544,8 +538,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_OVERWRITEMODE )
   QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->overwriteMode (  );
-    hb_retl( b );
+    hb_retl( obj->overwriteMode (  ) );
   }
 }
 
@@ -814,8 +807,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_TABCHANGESFOCUS )
   QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->tabChangesFocus (  );
-    hb_retl( b );
+    hb_retl( obj->tabChangesFocus (  ) );
   }
 }
 

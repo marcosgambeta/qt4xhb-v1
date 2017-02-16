@@ -173,8 +173,7 @@ HB_FUNC_STATIC( QHEADERVIEW_CASCADINGSECTIONRESIZES )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->cascadingSectionResizes (  );
-    hb_retl( b );
+    hb_retl( obj->cascadingSectionResizes (  ) );
   }
 }
 
@@ -258,8 +257,7 @@ HB_FUNC_STATIC( QHEADERVIEW_HIGHLIGHTSECTIONS )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->highlightSections (  );
-    hb_retl( b );
+    hb_retl( obj->highlightSections (  ) );
   }
 }
 
@@ -272,8 +270,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ISCLICKABLE )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isClickable (  );
-    hb_retl( b );
+    hb_retl( obj->isClickable (  ) );
   }
 }
 
@@ -286,8 +283,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ISMOVABLE )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isMovable (  );
-    hb_retl( b );
+    hb_retl( obj->isMovable (  ) );
   }
 }
 
@@ -301,8 +297,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ISSECTIONHIDDEN )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool b = obj->isSectionHidden ( par1 );
-    hb_retl( b );
+    hb_retl( obj->isSectionHidden ( par1 ) );
   }
 }
 
@@ -315,8 +310,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ISSORTINDICATORSHOWN )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isSortIndicatorShown (  );
-    hb_retl( b );
+    hb_retl( obj->isSortIndicatorShown (  ) );
   }
 }
 
@@ -529,8 +523,7 @@ HB_FUNC_STATIC( QHEADERVIEW_RESTORESTATE )
   if( obj )
   {
     QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->restoreState ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->restoreState ( *par1 ) );
   }
 }
 
@@ -617,8 +610,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONSHIDDEN )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->sectionsHidden (  );
-    hb_retl( b );
+    hb_retl( obj->sectionsHidden (  ) );
   }
 }
 
@@ -631,8 +623,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONSMOVED )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->sectionsMoved (  );
-    hb_retl( b );
+    hb_retl( obj->sectionsMoved (  ) );
   }
 }
 
@@ -901,8 +892,7 @@ HB_FUNC_STATIC( QHEADERVIEW_STRETCHLASTSECTION )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->stretchLastSection (  );
-    hb_retl( b );
+    hb_retl( obj->stretchLastSection (  ) );
   }
 }
 

@@ -155,8 +155,7 @@ HB_FUNC_STATIC( QSHORTCUT_AUTOREPEAT )
   QShortcut * obj = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->autoRepeat (  );
-    hb_retl( b );
+    hb_retl( obj->autoRepeat (  ) );
   }
 }
 
@@ -197,8 +196,7 @@ HB_FUNC_STATIC( QSHORTCUT_ISENABLED )
   QShortcut * obj = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isEnabled (  );
-    hb_retl( b );
+    hb_retl( obj->isEnabled (  ) );
   }
 }
 

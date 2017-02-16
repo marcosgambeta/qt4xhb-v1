@@ -114,8 +114,7 @@ bool openUrl ( const QUrl & url )
 HB_FUNC_STATIC( QDESKTOPSERVICES_OPENURL )
 {
   QUrl * par1 = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  bool b = QDesktopServices::openUrl ( *par1 );
-  hb_retl( b );
+  hb_retl( QDesktopServices::openUrl ( *par1 ) );
 }
 
 

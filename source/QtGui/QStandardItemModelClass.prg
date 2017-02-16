@@ -293,8 +293,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_HASCHILDREN )
   if( obj )
   {
     QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->hasChildren ( par1 );
-    hb_retl( b );
+    hb_retl( obj->hasChildren ( par1 ) );
   }
 }
 
@@ -326,8 +325,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETDATA )
     QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QVariant * par2 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par3 = ISNIL(3)? Qt::EditRole : hb_parni(3);
-    bool b = obj->setData ( *par1, *par2, par3 );
-    hb_retl( b );
+    hb_retl( obj->setData ( *par1, *par2, par3 ) );
   }
 }
 
@@ -361,8 +359,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETHEADERDATA )
     int par2 = hb_parni(2);
     QVariant * par3 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par4 = ISNIL(4)? Qt::EditRole : hb_parni(4);
-    bool b = obj->setHeaderData ( par1,  (Qt::Orientation) par2, *par3, par4 );
-    hb_retl( b );
+    hb_retl( obj->setHeaderData ( par1,  (Qt::Orientation) par2, *par3, par4 ) );
   }
 }
 
@@ -378,8 +375,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_INSERTROWS )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->insertRows ( par1, par2, par3 );
-    hb_retl( b );
+    hb_retl( obj->insertRows ( par1, par2, par3 ) );
   }
 }
 
@@ -395,8 +391,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_INSERTCOLUMNS )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->insertColumns ( par1, par2, par3 );
-    hb_retl( b );
+    hb_retl( obj->insertColumns ( par1, par2, par3 ) );
   }
 }
 
@@ -412,8 +407,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_REMOVEROWS )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->removeRows ( par1, par2, par3 );
-    hb_retl( b );
+    hb_retl( obj->removeRows ( par1, par2, par3 ) );
   }
 }
 
@@ -429,8 +423,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_REMOVECOLUMNS )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->removeColumns ( par1, par2, par3 );
-    hb_retl( b );
+    hb_retl( obj->removeColumns ( par1, par2, par3 ) );
   }
 }
 
@@ -863,8 +856,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_INSERTROW3 )
   {
     int par1 = hb_parni(1);
     QModelIndex par2 = ISNIL(2)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->insertRow ( par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->insertRow ( par1, par2 ) );
   }
 }
 
@@ -921,8 +913,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_INSERTCOLUMN2 )
   {
     int par1 = hb_parni(1);
     QModelIndex par2 = ISNIL(2)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->insertColumn ( par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->insertColumn ( par1, par2 ) );
   }
 }
 
@@ -1234,8 +1225,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_DROPMIMEDATA )
     int par3 = hb_parni(3);
     int par4 = hb_parni(4);
     QModelIndex * par5 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(5, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->dropMimeData ( par1,  (Qt::DropAction) par2, par3, par4, *par5 );
-    hb_retl( b );
+    hb_retl( obj->dropMimeData ( par1,  (Qt::DropAction) par2, par3, par4, *par5 ) );
   }
 }
 

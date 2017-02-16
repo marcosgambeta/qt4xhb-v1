@@ -131,8 +131,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_AUTORAISE )
   QToolButton * obj = (QToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->autoRaise (  );
-    hb_retl( b );
+    hb_retl( obj->autoRaise (  ) );
   }
 }
 

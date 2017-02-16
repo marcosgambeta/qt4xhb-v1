@@ -183,8 +183,7 @@ HB_FUNC_STATIC( QICONENGINEV2_READ )
   if( obj )
   {
     QDataStream * par1 = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->read ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->read ( *par1 ) );
   }
 }
 
@@ -214,8 +213,7 @@ HB_FUNC_STATIC( QICONENGINEV2_WRITE )
   if( obj )
   {
     QDataStream * par1 = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->write ( *par1 );
-    hb_retl( b );
+    hb_retl( obj->write ( *par1 ) );
   }
 }
 

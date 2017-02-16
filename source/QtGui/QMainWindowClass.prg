@@ -359,8 +359,7 @@ HB_FUNC_STATIC( QMAINWINDOW_DOCUMENTMODE )
   QMainWindow * obj = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->documentMode (  );
-    hb_retl( b );
+    hb_retl( obj->documentMode (  ) );
   }
 }
 
@@ -418,8 +417,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ISANIMATED )
   QMainWindow * obj = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isAnimated (  );
-    hb_retl( b );
+    hb_retl( obj->isAnimated (  ) );
   }
 }
 
@@ -432,8 +430,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ISDOCKNESTINGENABLED )
   QMainWindow * obj = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool b = obj->isDockNestingEnabled (  );
-    hb_retl( b );
+    hb_retl( obj->isDockNestingEnabled (  ) );
   }
 }
 
@@ -520,8 +517,7 @@ HB_FUNC_STATIC( QMAINWINDOW_RESTOREDOCKWIDGET )
   if( obj )
   {
     QDockWidget * par1 = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->restoreDockWidget ( par1 );
-    hb_retl( b );
+    hb_retl( obj->restoreDockWidget ( par1 ) );
   }
 }
 
@@ -536,8 +532,7 @@ HB_FUNC_STATIC( QMAINWINDOW_RESTORESTATE )
   {
     QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = ISNIL(2)? 0 : hb_parni(2);
-    bool b = obj->restoreState ( *par1, par2 );
-    hb_retl( b );
+    hb_retl( obj->restoreState ( *par1, par2 ) );
   }
 }
 
@@ -870,8 +865,7 @@ HB_FUNC_STATIC( QMAINWINDOW_TOOLBARBREAK )
   if( obj )
   {
     QToolBar * par1 = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool b = obj->toolBarBreak ( par1 );
-    hb_retl( b );
+    hb_retl( obj->toolBarBreak ( par1 ) );
   }
 }
 
