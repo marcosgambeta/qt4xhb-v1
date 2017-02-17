@@ -137,8 +137,7 @@ HB_FUNC_STATIC( QPRINTENGINE_METRIC )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->metric (  (QPaintDevice::PaintDeviceMetric) par1 );
-    hb_retni( i );
+    hb_retni( obj->metric (  (QPaintDevice::PaintDeviceMetric) par1 ) );
   }
 }
 
@@ -164,8 +163,7 @@ HB_FUNC_STATIC( QPRINTENGINE_PRINTERSTATE )
   QPrintEngine * obj = (QPrintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->printerState (  );
-    hb_retni( i );
+    hb_retni( (int) obj->printerState (  ) );
   }
 }
 

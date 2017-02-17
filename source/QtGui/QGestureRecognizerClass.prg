@@ -141,8 +141,7 @@ HB_FUNC_STATIC( QGESTURERECOGNIZER_RECOGNIZE )
     QGesture * par1 = (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QObject * par2 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     QEvent * par3 = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->recognize ( par1, par2, par3 );
-    hb_retni( i );
+    hb_retni( (int) obj->recognize ( par1, par2, par3 ) );
   }
 }
 
@@ -169,8 +168,7 @@ Qt::GestureType registerRecognizer ( QGestureRecognizer * recognizer )
 HB_FUNC_STATIC( QGESTURERECOGNIZER_REGISTERRECOGNIZER )
 {
   QGestureRecognizer * par1 = (QGestureRecognizer *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  int i = QGestureRecognizer::registerRecognizer ( par1 );
-  hb_retni( i );
+  hb_retni( (int) QGestureRecognizer::registerRecognizer ( par1 ) );
 }
 
 

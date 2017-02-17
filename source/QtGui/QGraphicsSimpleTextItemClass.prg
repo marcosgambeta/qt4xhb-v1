@@ -297,8 +297,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_TYPE )
   QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->type (  );
-    hb_retni( i );
+    hb_retni( obj->type (  ) );
   }
 }
 

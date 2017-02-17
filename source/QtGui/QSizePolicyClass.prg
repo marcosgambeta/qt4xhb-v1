@@ -219,8 +219,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_CONTROLTYPE )
   QSizePolicy * obj = (QSizePolicy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->controlType (  );
-    hb_retni( i );
+    hb_retni( (int) obj->controlType (  ) );
   }
 }
 
@@ -233,8 +232,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_EXPANDINGDIRECTIONS )
   QSizePolicy * obj = (QSizePolicy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->expandingDirections (  );
-    hb_retni( i );
+    hb_retni( (int) obj->expandingDirections (  ) );
   }
 }
 
@@ -273,8 +271,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_HORIZONTALPOLICY )
   QSizePolicy * obj = (QSizePolicy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->horizontalPolicy (  );
-    hb_retni( i );
+    hb_retni( (int) obj->horizontalPolicy (  ) );
   }
 }
 
@@ -287,8 +284,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_HORIZONTALSTRETCH )
   QSizePolicy * obj = (QSizePolicy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->horizontalStretch (  );
-    hb_retni( i );
+    hb_retni( obj->horizontalStretch (  ) );
   }
 }
 
@@ -420,8 +416,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_VERTICALPOLICY )
   QSizePolicy * obj = (QSizePolicy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->verticalPolicy (  );
-    hb_retni( i );
+    hb_retni( (int) obj->verticalPolicy (  ) );
   }
 }
 
@@ -434,8 +429,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_VERTICALSTRETCH )
   QSizePolicy * obj = (QSizePolicy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->verticalStretch (  );
-    hb_retni( i );
+    hb_retni( obj->verticalStretch (  ) );
   }
 }
 

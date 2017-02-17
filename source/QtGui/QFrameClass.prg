@@ -129,8 +129,7 @@ HB_FUNC_STATIC( QFRAME_FRAMESHADOW )
   QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->frameShadow (  );
-    hb_retni( i );
+    hb_retni( (int) obj->frameShadow (  ) );
   }
 }
 
@@ -143,8 +142,7 @@ HB_FUNC_STATIC( QFRAME_FRAMESHAPE )
   QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->frameShape (  );
-    hb_retni( i );
+    hb_retni( (int) obj->frameShape (  ) );
   }
 }
 
@@ -157,8 +155,7 @@ HB_FUNC_STATIC( QFRAME_FRAMESTYLE )
   QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->frameStyle (  );
-    hb_retni( i );
+    hb_retni( obj->frameStyle (  ) );
   }
 }
 
@@ -171,8 +168,7 @@ HB_FUNC_STATIC( QFRAME_FRAMEWIDTH )
   QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->frameWidth (  );
-    hb_retni( i );
+    hb_retni( obj->frameWidth (  ) );
   }
 }
 
@@ -185,8 +181,7 @@ HB_FUNC_STATIC( QFRAME_LINEWIDTH )
   QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->lineWidth (  );
-    hb_retni( i );
+    hb_retni( obj->lineWidth (  ) );
   }
 }
 
@@ -199,8 +194,7 @@ HB_FUNC_STATIC( QFRAME_MIDLINEWIDTH )
   QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->midLineWidth (  );
-    hb_retni( i );
+    hb_retni( obj->midLineWidth (  ) );
   }
 }
 

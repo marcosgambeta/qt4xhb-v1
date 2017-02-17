@@ -211,8 +211,7 @@ HB_FUNC_STATIC( QLINEEDIT_ALIGNMENT )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->alignment (  );
-    hb_retni( i );
+    hb_retni( (int) obj->alignment (  ) );
   }
 }
 
@@ -299,8 +298,7 @@ HB_FUNC_STATIC( QLINEEDIT_CURSORPOSITION )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->cursorPosition (  );
-    hb_retni( i );
+    hb_retni( obj->cursorPosition (  ) );
   }
 }
 
@@ -314,8 +312,7 @@ HB_FUNC_STATIC( QLINEEDIT_CURSORPOSITIONAT )
   if( obj )
   {
     QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->cursorPositionAt ( *par1 );
-    hb_retni( i );
+    hb_retni( obj->cursorPositionAt ( *par1 ) );
   }
 }
 
@@ -413,8 +410,7 @@ HB_FUNC_STATIC( QLINEEDIT_ECHOMODE )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->echoMode (  );
-    hb_retni( i );
+    hb_retni( (int) obj->echoMode (  ) );
   }
 }
 
@@ -599,8 +595,7 @@ HB_FUNC_STATIC( QLINEEDIT_MAXLENGTH )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->maxLength (  );
-    hb_retni( i );
+    hb_retni( obj->maxLength (  ) );
   }
 }
 
@@ -655,8 +650,7 @@ HB_FUNC_STATIC( QLINEEDIT_SELECTIONSTART )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->selectionStart (  );
-    hb_retni( i );
+    hb_retni( obj->selectionStart (  ) );
   }
 }
 

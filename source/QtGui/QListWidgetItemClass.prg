@@ -275,8 +275,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_CHECKSTATE )
   QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->checkState (  );
-    hb_retni( i );
+    hb_retni( (int) obj->checkState (  ) );
   }
 }
 
@@ -318,8 +317,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_FLAGS )
   QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->flags (  );
-    hb_retni( i );
+    hb_retni( (int) obj->flags (  ) );
   }
 }
 
@@ -697,8 +695,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_TEXTALIGNMENT )
   QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->textAlignment (  );
-    hb_retni( i );
+    hb_retni( obj->textAlignment (  ) );
   }
 }
 
@@ -725,8 +722,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_TYPE )
   QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->type (  );
-    hb_retni( i );
+    hb_retni( obj->type (  ) );
   }
 }
 

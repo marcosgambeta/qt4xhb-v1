@@ -232,8 +232,7 @@ HB_FUNC_STATIC( QPRINTER_COLORMODE )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->colorMode (  );
-    hb_retni( i );
+    hb_retni( (int) obj->colorMode (  ) );
   }
 }
 
@@ -246,8 +245,7 @@ HB_FUNC_STATIC( QPRINTER_COPYCOUNT )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->copyCount (  );
-    hb_retni( i );
+    hb_retni( obj->copyCount (  ) );
   }
 }
 
@@ -301,8 +299,7 @@ HB_FUNC_STATIC( QPRINTER_DUPLEX )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->duplex (  );
-    hb_retni( i );
+    hb_retni( (int) obj->duplex (  ) );
   }
 }
 
@@ -328,8 +325,7 @@ HB_FUNC_STATIC( QPRINTER_FROMPAGE )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->fromPage (  );
-    hb_retni( i );
+    hb_retni( obj->fromPage (  ) );
   }
 }
 
@@ -382,8 +378,7 @@ HB_FUNC_STATIC( QPRINTER_ORIENTATION )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->orientation (  );
-    hb_retni( i );
+    hb_retni( (int) obj->orientation (  ) );
   }
 }
 
@@ -410,8 +405,7 @@ HB_FUNC_STATIC( QPRINTER_OUTPUTFORMAT )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->outputFormat (  );
-    hb_retni( i );
+    hb_retni( (int) obj->outputFormat (  ) );
   }
 }
 
@@ -424,8 +418,7 @@ HB_FUNC_STATIC( QPRINTER_PAGEORDER )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->pageOrder (  );
-    hb_retni( i );
+    hb_retni( (int) obj->pageOrder (  ) );
   }
 }
 
@@ -526,8 +519,7 @@ HB_FUNC_STATIC( QPRINTER_PAPERSIZE1 )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->paperSize (  );
-    hb_retni( i );
+    hb_retni( (int) obj->paperSize (  ) );
   }
 }
 
@@ -570,8 +562,7 @@ HB_FUNC_STATIC( QPRINTER_PAPERSOURCE )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->paperSource (  );
-    hb_retni( i );
+    hb_retni( (int) obj->paperSource (  ) );
   }
 }
 
@@ -612,8 +603,7 @@ HB_FUNC_STATIC( QPRINTER_PRINTRANGE )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->printRange (  );
-    hb_retni( i );
+    hb_retni( (int) obj->printRange (  ) );
   }
 }
 
@@ -641,8 +631,7 @@ HB_FUNC_STATIC( QPRINTER_PRINTERSTATE )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->printerState (  );
-    hb_retni( i );
+    hb_retni( (int) obj->printerState (  ) );
   }
 }
 
@@ -655,8 +644,7 @@ HB_FUNC_STATIC( QPRINTER_RESOLUTION )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->resolution (  );
-    hb_retni( i );
+    hb_retni( obj->resolution (  ) );
   }
 }
 
@@ -1095,8 +1083,7 @@ HB_FUNC_STATIC( QPRINTER_TOPAGE )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->toPage (  );
-    hb_retni( i );
+    hb_retni( obj->toPage (  ) );
   }
 }
 
@@ -1109,8 +1096,7 @@ HB_FUNC_STATIC( QPRINTER_WINPAGESIZE )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->winPageSize (  );
-    hb_retni( i );
+    hb_retni( obj->winPageSize (  ) );
   }
 }
 

@@ -406,8 +406,7 @@ HB_FUNC_STATIC( QMENUBAR_HEIGHTFORWIDTH )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->heightForWidth ( par1 );
-    hb_retni( i );
+    hb_retni( obj->heightForWidth ( par1 ) );
   }
 }
 

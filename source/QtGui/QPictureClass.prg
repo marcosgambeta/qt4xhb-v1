@@ -333,8 +333,7 @@ HB_FUNC_STATIC( QPICTURE_SIZE )
   QPicture * obj = (QPicture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    uint i = obj->size (  );
-    hb_retni( i );
+    hb_retni( (uint) obj->size (  ) );
   }
 }
 

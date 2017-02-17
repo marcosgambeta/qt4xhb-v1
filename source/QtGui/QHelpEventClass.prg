@@ -121,8 +121,7 @@ HB_FUNC_STATIC( QHELPEVENT_GLOBALX )
   QHelpEvent * obj = (QHelpEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->globalX (  );
-    hb_retni( i );
+    hb_retni( obj->globalX (  ) );
   }
 }
 
@@ -135,8 +134,7 @@ HB_FUNC_STATIC( QHELPEVENT_GLOBALY )
   QHelpEvent * obj = (QHelpEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->globalY (  );
-    hb_retni( i );
+    hb_retni( obj->globalY (  ) );
   }
 }
 
@@ -163,8 +161,7 @@ HB_FUNC_STATIC( QHELPEVENT_X )
   QHelpEvent * obj = (QHelpEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->x (  );
-    hb_retni( i );
+    hb_retni( obj->x (  ) );
   }
 }
 
@@ -177,8 +174,7 @@ HB_FUNC_STATIC( QHELPEVENT_Y )
   QHelpEvent * obj = (QHelpEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->y (  );
-    hb_retni( i );
+    hb_retni( obj->y (  ) );
   }
 }
 

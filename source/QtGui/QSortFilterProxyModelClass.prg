@@ -173,8 +173,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_FILTERCASESENSITIVITY )
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->filterCaseSensitivity (  );
-    hb_retni( i );
+    hb_retni( (int) obj->filterCaseSensitivity (  ) );
   }
 }
 
@@ -187,8 +186,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_FILTERKEYCOLUMN )
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->filterKeyColumn (  );
-    hb_retni( i );
+    hb_retni( obj->filterKeyColumn (  ) );
   }
 }
 
@@ -215,8 +213,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_FILTERROLE )
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->filterRole (  );
-    hb_retni( i );
+    hb_retni( obj->filterRole (  ) );
   }
 }
 
@@ -362,8 +359,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SORTCASESENSITIVITY )
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->sortCaseSensitivity (  );
-    hb_retni( i );
+    hb_retni( (int) obj->sortCaseSensitivity (  ) );
   }
 }
 
@@ -376,8 +372,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SORTCOLUMN )
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->sortColumn (  );
-    hb_retni( i );
+    hb_retni( obj->sortColumn (  ) );
   }
 }
 
@@ -390,8 +385,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SORTORDER )
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->sortOrder (  );
-    hb_retni( i );
+    hb_retni( (int) obj->sortOrder (  ) );
   }
 }
 
@@ -404,8 +398,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SORTROLE )
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->sortRole (  );
-    hb_retni( i );
+    hb_retni( obj->sortRole (  ) );
   }
 }
 
@@ -448,8 +441,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_COLUMNCOUNT )
   if( obj )
   {
     QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->columnCount ( par1 );
-    hb_retni( i );
+    hb_retni( obj->columnCount ( par1 ) );
   }
 }
 
@@ -512,8 +504,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_FLAGS )
   if( obj )
   {
     QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->flags ( *par1 );
-    hb_retni( i );
+    hb_retni( (int) obj->flags ( *par1 ) );
   }
 }
 
@@ -801,8 +792,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_ROWCOUNT )
   if( obj )
   {
     QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->rowCount ( par1 );
-    hb_retni( i );
+    hb_retni( obj->rowCount ( par1 ) );
   }
 }
 
@@ -894,8 +884,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SUPPORTEDDROPACTIONS )
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->supportedDropActions (  );
-    hb_retni( i );
+    hb_retni( (int) obj->supportedDropActions (  ) );
   }
 }
 

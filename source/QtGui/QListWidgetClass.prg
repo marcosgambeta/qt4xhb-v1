@@ -232,8 +232,7 @@ HB_FUNC_STATIC( QLISTWIDGET_COUNT )
   QListWidget * obj = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->count (  );
-    hb_retni( i );
+    hb_retni( obj->count (  ) );
   }
 }
 
@@ -260,8 +259,7 @@ HB_FUNC_STATIC( QLISTWIDGET_CURRENTROW )
   QListWidget * obj = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->currentRow (  );
-    hb_retni( i );
+    hb_retni( obj->currentRow (  ) );
   }
 }
 
@@ -526,8 +524,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ROW )
   if( obj )
   {
     const QListWidgetItem * par1 = (const QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->row ( par1 );
-    hb_retni( i );
+    hb_retni( obj->row ( par1 ) );
   }
 }
 

@@ -499,8 +499,7 @@ HB_FUNC_STATIC( QPALETTE_CURRENTCOLORGROUP )
   QPalette * obj = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->currentColorGroup (  );
-    hb_retni( i );
+    hb_retni( (int) obj->currentColorGroup (  ) );
   }
 }
 

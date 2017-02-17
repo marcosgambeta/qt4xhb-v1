@@ -107,8 +107,7 @@ HB_FUNC_STATIC( QGESTURE_GESTURECANCELPOLICY )
   QGesture * obj = (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->gestureCancelPolicy (  );
-    hb_retni( i );
+    hb_retni( (int) obj->gestureCancelPolicy (  ) );
   }
 }
 
@@ -121,8 +120,7 @@ HB_FUNC_STATIC( QGESTURE_GESTURETYPE )
   QGesture * obj = (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->gestureType (  );
-    hb_retni( i );
+    hb_retni( (int) obj->gestureType (  ) );
   }
 }
 
@@ -192,8 +190,7 @@ HB_FUNC_STATIC( QGESTURE_STATE )
   QGesture * obj = (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->state (  );
-    hb_retni( i );
+    hb_retni( (int) obj->state (  ) );
   }
 }
 

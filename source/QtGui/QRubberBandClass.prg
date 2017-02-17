@@ -248,8 +248,7 @@ HB_FUNC_STATIC( QRUBBERBAND_SHAPE )
   QRubberBand * obj = (QRubberBand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->shape (  );
-    hb_retni( i );
+    hb_retni( (int) obj->shape (  ) );
   }
 }
 

@@ -88,8 +88,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_MODIFIERS )
   QGraphicsSceneContextMenuEvent * obj = (QGraphicsSceneContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->modifiers (  );
-    hb_retni( i );
+    hb_retni( (int) obj->modifiers (  ) );
   }
 }
 
@@ -116,8 +115,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_REASON )
   QGraphicsSceneContextMenuEvent * obj = (QGraphicsSceneContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->reason (  );
-    hb_retni( i );
+    hb_retni( (int) obj->reason (  ) );
   }
 }
 

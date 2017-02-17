@@ -849,8 +849,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ELEMENTCOUNT )
   QPainterPath * obj = (QPainterPath *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->elementCount (  );
-    hb_retni( i );
+    hb_retni( obj->elementCount (  ) );
   }
 }
 
@@ -863,8 +862,7 @@ HB_FUNC_STATIC( QPAINTERPATH_FILLRULE )
   QPainterPath * obj = (QPainterPath *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->fillRule (  );
-    hb_retni( i );
+    hb_retni( (int) obj->fillRule (  ) );
   }
 }
 

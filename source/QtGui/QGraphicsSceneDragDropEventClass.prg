@@ -111,8 +111,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_BUTTONS )
   QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->buttons (  );
-    hb_retni( i );
+    hb_retni( (int) obj->buttons (  ) );
   }
 }
 
@@ -125,8 +124,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_DROPACTION )
   QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->dropAction (  );
-    hb_retni( i );
+    hb_retni( (int) obj->dropAction (  ) );
   }
 }
 
@@ -153,8 +151,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_MODIFIERS )
   QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->modifiers (  );
-    hb_retni( i );
+    hb_retni( (int) obj->modifiers (  ) );
   }
 }
 
@@ -181,8 +178,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_POSSIBLEACTIONS )
   QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->possibleActions (  );
-    hb_retni( i );
+    hb_retni( (int) obj->possibleActions (  ) );
   }
 }
 
@@ -195,8 +191,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_PROPOSEDACTION )
   QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->proposedAction (  );
-    hb_retni( i );
+    hb_retni( (int) obj->proposedAction (  ) );
   }
 }
 

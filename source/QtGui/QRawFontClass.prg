@@ -441,8 +441,7 @@ HB_FUNC_STATIC( QRAWFONT_HINTINGPREFERENCE )
   QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->hintingPreference (  );
-    hb_retni( i );
+    hb_retni( (int) obj->hintingPreference (  ) );
   }
 }
 
@@ -574,8 +573,7 @@ HB_FUNC_STATIC( QRAWFONT_STYLE )
   QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->style (  );
-    hb_retni( i );
+    hb_retni( (int) obj->style (  ) );
   }
 }
 
@@ -682,8 +680,7 @@ HB_FUNC_STATIC( QRAWFONT_WEIGHT )
   QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->weight (  );
-    hb_retni( i );
+    hb_retni( obj->weight (  ) );
   }
 }
 

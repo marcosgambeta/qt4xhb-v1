@@ -401,8 +401,7 @@ HB_FUNC_STATIC( QPAINTENGINE_TYPE )
   QPaintEngine * obj = (QPaintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->type (  );
-    hb_retni( i );
+    hb_retni( (int) obj->type (  ) );
   }
 }
 

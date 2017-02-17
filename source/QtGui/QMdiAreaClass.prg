@@ -130,8 +130,7 @@ HB_FUNC_STATIC( QMDIAREA_ACTIVATIONORDER )
   QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->activationOrder (  );
-    hb_retni( i );
+    hb_retni( (int) obj->activationOrder (  ) );
   }
 }
 
@@ -381,8 +380,7 @@ HB_FUNC_STATIC( QMDIAREA_TABPOSITION )
   QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->tabPosition (  );
-    hb_retni( i );
+    hb_retni( (int) obj->tabPosition (  ) );
   }
 }
 
@@ -395,8 +393,7 @@ HB_FUNC_STATIC( QMDIAREA_TABSHAPE )
   QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->tabShape (  );
-    hb_retni( i );
+    hb_retni( (int) obj->tabShape (  ) );
   }
 }
 
@@ -423,8 +420,7 @@ HB_FUNC_STATIC( QMDIAREA_VIEWMODE )
   QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->viewMode (  );
-    hb_retni( i );
+    hb_retni( (int) obj->viewMode (  ) );
   }
 }
 

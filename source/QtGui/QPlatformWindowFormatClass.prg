@@ -252,8 +252,7 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_ACCUMBUFFERSIZE )
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->accumBufferSize (  );
-    hb_retni( i );
+    hb_retni( obj->accumBufferSize (  ) );
   }
 }
 
@@ -279,8 +278,7 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_ALPHABUFFERSIZE )
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->alphaBufferSize (  );
-    hb_retni( i );
+    hb_retni( obj->alphaBufferSize (  ) );
   }
 }
 
@@ -293,8 +291,7 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_BLUEBUFFERSIZE )
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->blueBufferSize (  );
-    hb_retni( i );
+    hb_retni( obj->blueBufferSize (  ) );
   }
 }
 
@@ -320,8 +317,7 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_DEPTHBUFFERSIZE )
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->depthBufferSize (  );
-    hb_retni( i );
+    hb_retni( obj->depthBufferSize (  ) );
   }
 }
 
@@ -360,8 +356,7 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_GREENBUFFERSIZE )
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->greenBufferSize (  );
-    hb_retni( i );
+    hb_retni( obj->greenBufferSize (  ) );
   }
 }
 
@@ -387,8 +382,7 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_REDBUFFERSIZE )
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->redBufferSize (  );
-    hb_retni( i );
+    hb_retni( obj->redBufferSize (  ) );
   }
 }
 
@@ -427,8 +421,7 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SAMPLES )
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->samples (  );
-    hb_retni( i );
+    hb_retni( obj->samples (  ) );
   }
 }
 
@@ -798,8 +791,7 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_STENCILBUFFERSIZE )
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->stencilBufferSize (  );
-    hb_retni( i );
+    hb_retni( obj->stencilBufferSize (  ) );
   }
 }
 
@@ -825,8 +817,7 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SWAPINTERVAL )
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->swapInterval (  );
-    hb_retni( i );
+    hb_retni( obj->swapInterval (  ) );
   }
 }
 
@@ -853,8 +844,7 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_WINDOWAPI )
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->windowApi (  );
-    hb_retni( i );
+    hb_retni( (int) obj->windowApi (  ) );
   }
 }
 

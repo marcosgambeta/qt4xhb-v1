@@ -139,8 +139,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_ALIGNMENT )
   QLayoutItem * obj = (QLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->alignment (  );
-    hb_retni( i );
+    hb_retni( (int) obj->alignment (  ) );
   }
 }
 
@@ -153,8 +152,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_CONTROLTYPES )
   QLayoutItem * obj = (QLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->controlTypes (  );
-    hb_retni( i );
+    hb_retni( (int) obj->controlTypes (  ) );
   }
 }
 
@@ -167,8 +165,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_EXPANDINGDIRECTIONS )
   QLayoutItem * obj = (QLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->expandingDirections (  );
-    hb_retni( i );
+    hb_retni( (int) obj->expandingDirections (  ) );
   }
 }
 
@@ -209,8 +206,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_HEIGHTFORWIDTH )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->heightForWidth ( par1 );
-    hb_retni( i );
+    hb_retni( obj->heightForWidth ( par1 ) );
   }
 }
 
@@ -279,8 +275,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_MINIMUMHEIGHTFORWIDTH )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->minimumHeightForWidth ( par1 );
-    hb_retni( i );
+    hb_retni( obj->minimumHeightForWidth ( par1 ) );
   }
 }
 

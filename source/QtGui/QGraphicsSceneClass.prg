@@ -581,8 +581,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_BSPTREEDEPTH )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->bspTreeDepth (  );
-    hb_retni( i );
+    hb_retni( obj->bspTreeDepth (  ) );
   }
 }
 
@@ -899,8 +898,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMINDEXMETHOD )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->itemIndexMethod (  );
-    hb_retni( i );
+    hb_retni( (int) obj->itemIndexMethod (  ) );
   }
 }
 

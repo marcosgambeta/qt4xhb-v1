@@ -255,8 +255,7 @@ HB_FUNC_STATIC( QFONTINFO_PIXELSIZE )
   QFontInfo * obj = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->pixelSize (  );
-    hb_retni( i );
+    hb_retni( obj->pixelSize (  ) );
   }
 }
 
@@ -269,8 +268,7 @@ HB_FUNC_STATIC( QFONTINFO_POINTSIZE )
   QFontInfo * obj = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->pointSize (  );
-    hb_retni( i );
+    hb_retni( obj->pointSize (  ) );
   }
 }
 
@@ -310,8 +308,7 @@ HB_FUNC_STATIC( QFONTINFO_STYLE )
   QFontInfo * obj = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->style (  );
-    hb_retni( i );
+    hb_retni( (int) obj->style (  ) );
   }
 }
 
@@ -324,8 +321,7 @@ HB_FUNC_STATIC( QFONTINFO_STYLEHINT )
   QFontInfo * obj = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->styleHint (  );
-    hb_retni( i );
+    hb_retni( (int) obj->styleHint (  ) );
   }
 }
 
@@ -352,8 +348,7 @@ HB_FUNC_STATIC( QFONTINFO_WEIGHT )
   QFontInfo * obj = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->weight (  );
-    hb_retni( i );
+    hb_retni( obj->weight (  ) );
   }
 }
 

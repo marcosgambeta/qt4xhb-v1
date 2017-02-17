@@ -223,8 +223,7 @@ HB_FUNC_STATIC( QMOVIE_CACHEMODE )
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->cacheMode (  );
-    hb_retni( i );
+    hb_retni( (int) obj->cacheMode (  ) );
   }
 }
 
@@ -237,8 +236,7 @@ HB_FUNC_STATIC( QMOVIE_CURRENTFRAMENUMBER )
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->currentFrameNumber (  );
-    hb_retni( i );
+    hb_retni( obj->currentFrameNumber (  ) );
   }
 }
 
@@ -321,8 +319,7 @@ HB_FUNC_STATIC( QMOVIE_FRAMECOUNT )
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->frameCount (  );
-    hb_retni( i );
+    hb_retni( obj->frameCount (  ) );
   }
 }
 
@@ -376,8 +373,7 @@ HB_FUNC_STATIC( QMOVIE_LOOPCOUNT )
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->loopCount (  );
-    hb_retni( i );
+    hb_retni( obj->loopCount (  ) );
   }
 }
 
@@ -390,8 +386,7 @@ HB_FUNC_STATIC( QMOVIE_NEXTFRAMEDELAY )
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->nextFrameDelay (  );
-    hb_retni( i );
+    hb_retni( obj->nextFrameDelay (  ) );
   }
 }
 
@@ -508,8 +503,7 @@ HB_FUNC_STATIC( QMOVIE_SPEED )
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->speed (  );
-    hb_retni( i );
+    hb_retni( obj->speed (  ) );
   }
 }
 
@@ -522,8 +516,7 @@ HB_FUNC_STATIC( QMOVIE_STATE )
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->state (  );
-    hb_retni( i );
+    hb_retni( (int) obj->state (  ) );
   }
 }
 

@@ -163,8 +163,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_OPTIONS )
   QPrintDialog * obj = (QPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->options (  );
-    hb_retni( i );
+    hb_retni( (int) obj->options (  ) );
   }
 }
 
@@ -251,8 +250,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_EXEC )
   QPrintDialog * obj = (QPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->exec (  );
-    hb_retni( i );
+    hb_retni( obj->exec (  ) );
   }
 }
 

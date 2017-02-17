@@ -470,8 +470,7 @@ HB_FUNC_STATIC( QREGION_RECTCOUNT )
   QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->rectCount (  );
-    hb_retni( i );
+    hb_retni( obj->rectCount (  ) );
   }
 }
 

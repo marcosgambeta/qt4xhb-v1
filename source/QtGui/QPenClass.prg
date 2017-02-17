@@ -294,8 +294,7 @@ HB_FUNC_STATIC( QPEN_CAPSTYLE )
   QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->capStyle (  );
-    hb_retni( i );
+    hb_retni( (int) obj->capStyle (  ) );
   }
 }
 
@@ -385,8 +384,7 @@ HB_FUNC_STATIC( QPEN_JOINSTYLE )
   QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->joinStyle (  );
-    hb_retni( i );
+    hb_retni( (int) obj->joinStyle (  ) );
   }
 }
 
@@ -587,8 +585,7 @@ HB_FUNC_STATIC( QPEN_STYLE )
   QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->style (  );
-    hb_retni( i );
+    hb_retni( (int) obj->style (  ) );
   }
 }
 
@@ -601,8 +598,7 @@ HB_FUNC_STATIC( QPEN_WIDTH )
   QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->width (  );
-    hb_retni( i );
+    hb_retni( obj->width (  ) );
   }
 }
 

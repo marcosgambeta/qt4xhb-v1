@@ -114,8 +114,7 @@ HB_FUNC_STATIC( QKEYEVENT_COUNT )
   QKeyEvent * obj = (QKeyEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->count (  );
-    hb_retni( i );
+    hb_retni( obj->count (  ) );
   }
 }
 
@@ -141,8 +140,7 @@ HB_FUNC_STATIC( QKEYEVENT_KEY )
   QKeyEvent * obj = (QKeyEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->key (  );
-    hb_retni( i );
+    hb_retni( obj->key (  ) );
   }
 }
 
@@ -169,8 +167,7 @@ HB_FUNC_STATIC( QKEYEVENT_MODIFIERS )
   QKeyEvent * obj = (QKeyEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->modifiers (  );
-    hb_retni( i );
+    hb_retni( (int) obj->modifiers (  ) );
   }
 }
 

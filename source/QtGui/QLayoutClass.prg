@@ -202,8 +202,7 @@ HB_FUNC_STATIC( QLAYOUT_COUNT )
   QLayout * obj = (QLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->count (  );
-    hb_retni( i );
+    hb_retni( obj->count (  ) );
   }
 }
 
@@ -216,8 +215,7 @@ HB_FUNC_STATIC( QLAYOUT_EXPANDINGDIRECTIONS )
   QLayout * obj = (QLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->expandingDirections (  );
-    hb_retni( i );
+    hb_retni( (int) obj->expandingDirections (  ) );
   }
 }
 
@@ -253,8 +251,7 @@ HB_FUNC_STATIC( QLAYOUT_INDEXOF )
   if( obj )
   {
     QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->indexOf ( par1 );
-    hb_retni( i );
+    hb_retni( obj->indexOf ( par1 ) );
   }
 }
 
@@ -554,8 +551,7 @@ HB_FUNC_STATIC( QLAYOUT_SIZECONSTRAINT )
   QLayout * obj = (QLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->sizeConstraint (  );
-    hb_retni( i );
+    hb_retni( (int) obj->sizeConstraint (  ) );
   }
 }
 
@@ -568,8 +564,7 @@ HB_FUNC_STATIC( QLAYOUT_SPACING )
   QLayout * obj = (QLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->spacing (  );
-    hb_retni( i );
+    hb_retni( obj->spacing (  ) );
   }
 }
 

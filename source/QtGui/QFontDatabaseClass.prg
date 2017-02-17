@@ -402,8 +402,7 @@ HB_FUNC_STATIC( QFONTDATABASE_WEIGHT )
   {
     QString par1 = hb_parc(1);
     QString par2 = hb_parc(2);
-    int i = obj->weight ( par1, par2 );
-    hb_retni( i );
+    hb_retni( obj->weight ( par1, par2 ) );
   }
 }
 
@@ -477,8 +476,7 @@ int addApplicationFont ( const QString & fileName )
 HB_FUNC_STATIC( QFONTDATABASE_ADDAPPLICATIONFONT )
 {
   QString par1 = hb_parc(1);
-  int i = QFontDatabase::addApplicationFont ( par1 );
-  hb_retni( i );
+  hb_retni( QFontDatabase::addApplicationFont ( par1 ) );
 }
 
 
@@ -488,8 +486,7 @@ int addApplicationFontFromData ( const QByteArray & fontData )
 HB_FUNC_STATIC( QFONTDATABASE_ADDAPPLICATIONFONTFROMDATA )
 {
   QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  int i = QFontDatabase::addApplicationFontFromData ( *par1 );
-  hb_retni( i );
+  hb_retni( QFontDatabase::addApplicationFontFromData ( *par1 ) );
 }
 
 

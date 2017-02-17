@@ -174,8 +174,7 @@ HB_FUNC_STATIC( QSLIDER_TICKINTERVAL )
   QSlider * obj = (QSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->tickInterval (  );
-    hb_retni( i );
+    hb_retni( obj->tickInterval (  ) );
   }
 }
 
@@ -188,8 +187,7 @@ HB_FUNC_STATIC( QSLIDER_TICKPOSITION )
   QSlider * obj = (QSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->tickPosition (  );
-    hb_retni( i );
+    hb_retni( (int) obj->tickPosition (  ) );
   }
 }
 

@@ -238,8 +238,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_BLOCKCOUNT )
   QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->blockCount (  );
-    hb_retni( i );
+    hb_retni( obj->blockCount (  ) );
   }
 }
 
@@ -365,8 +364,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_CURSORWIDTH )
   QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->cursorWidth (  );
-    hb_retni( i );
+    hb_retni( obj->cursorWidth (  ) );
   }
 }
 
@@ -463,8 +461,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_LINEWRAPMODE )
   QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->lineWrapMode (  );
-    hb_retni( i );
+    hb_retni( (int) obj->lineWrapMode (  ) );
   }
 }
 
@@ -493,8 +490,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_MAXIMUMBLOCKCOUNT )
   QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->maximumBlockCount (  );
-    hb_retni( i );
+    hb_retni( obj->maximumBlockCount (  ) );
   }
 }
 
@@ -820,8 +816,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_TABSTOPWIDTH )
   QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->tabStopWidth (  );
-    hb_retni( i );
+    hb_retni( obj->tabStopWidth (  ) );
   }
 }
 
@@ -848,8 +843,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_TEXTINTERACTIONFLAGS )
   QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->textInteractionFlags (  );
-    hb_retni( i );
+    hb_retni( (int) obj->textInteractionFlags (  ) );
   }
 }
 
@@ -876,8 +870,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_WORDWRAPMODE )
   QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->wordWrapMode (  );
-    hb_retni( i );
+    hb_retni( (int) obj->wordWrapMode (  ) );
   }
 }
 

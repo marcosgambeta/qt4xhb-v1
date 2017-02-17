@@ -118,8 +118,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_KEYBOARDPAGESTEP )
   QMdiSubWindow * obj = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->keyboardPageStep (  );
-    hb_retni( i );
+    hb_retni( obj->keyboardPageStep (  ) );
   }
 }
 
@@ -132,8 +131,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_KEYBOARDSINGLESTEP )
   QMdiSubWindow * obj = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->keyboardSingleStep (  );
-    hb_retni( i );
+    hb_retni( obj->keyboardSingleStep (  ) );
   }
 }
 

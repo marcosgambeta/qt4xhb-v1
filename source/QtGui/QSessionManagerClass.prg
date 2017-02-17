@@ -209,8 +209,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_RESTARTHINT )
   QSessionManager * obj = (QSessionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->restartHint (  );
-    hb_retni( i );
+    hb_retni( (int) obj->restartHint (  ) );
   }
 }
 

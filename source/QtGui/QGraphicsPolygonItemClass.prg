@@ -150,8 +150,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_FILLRULE )
   QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->fillRule (  );
-    hb_retni( i );
+    hb_retni( (int) obj->fillRule (  ) );
   }
 }
 
@@ -295,8 +294,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_TYPE )
   QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->type (  );
-    hb_retni( i );
+    hb_retni( obj->type (  ) );
   }
 }
 

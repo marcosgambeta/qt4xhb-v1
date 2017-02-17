@@ -169,8 +169,7 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_REPLACEMENTLENGTH )
   QInputMethodEvent * obj = (QInputMethodEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->replacementLength (  );
-    hb_retni( i );
+    hb_retni( obj->replacementLength (  ) );
   }
 }
 
@@ -183,8 +182,7 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_REPLACEMENTSTART )
   QInputMethodEvent * obj = (QInputMethodEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->replacementStart (  );
-    hb_retni( i );
+    hb_retni( obj->replacementStart (  ) );
   }
 }
 

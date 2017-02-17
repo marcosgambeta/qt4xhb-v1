@@ -201,8 +201,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ALIGNMENT )
   if( obj )
   {
     QGraphicsLayoutItem * par1 = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->alignment ( par1 );
-    hb_retni( i );
+    hb_retni( (int) obj->alignment ( par1 ) );
   }
 }
 
@@ -216,8 +215,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_COLUMNALIGNMENT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->columnAlignment ( par1 );
-    hb_retni( i );
+    hb_retni( (int) obj->columnAlignment ( par1 ) );
   }
 }
 
@@ -230,8 +228,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_COLUMNCOUNT )
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->columnCount (  );
-    hb_retni( i );
+    hb_retni( obj->columnCount (  ) );
   }
 }
 
@@ -305,8 +302,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_COLUMNSTRETCHFACTOR )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->columnStretchFactor ( par1 );
-    hb_retni( i );
+    hb_retni( obj->columnStretchFactor ( par1 ) );
   }
 }
 
@@ -395,8 +391,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ROWALIGNMENT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->rowAlignment ( par1 );
-    hb_retni( i );
+    hb_retni( (int) obj->rowAlignment ( par1 ) );
   }
 }
 
@@ -409,8 +404,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ROWCOUNT )
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->rowCount (  );
-    hb_retni( i );
+    hb_retni( obj->rowCount (  ) );
   }
 }
 
@@ -484,8 +478,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ROWSTRETCHFACTOR )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->rowStretchFactor ( par1 );
-    hb_retni( i );
+    hb_retni( obj->rowStretchFactor ( par1 ) );
   }
 }
 
@@ -797,8 +790,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_COUNT )
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->count (  );
-    hb_retni( i );
+    hb_retni( obj->count (  ) );
   }
 }
 

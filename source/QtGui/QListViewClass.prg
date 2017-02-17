@@ -134,8 +134,7 @@ HB_FUNC_STATIC( QLISTVIEW_BATCHSIZE )
   QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->batchSize (  );
-    hb_retni( i );
+    hb_retni( obj->batchSize (  ) );
   }
 }
 
@@ -162,8 +161,7 @@ HB_FUNC_STATIC( QLISTVIEW_FLOW )
   QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->flow (  );
-    hb_retni( i );
+    hb_retni( (int) obj->flow (  ) );
   }
 }
 
@@ -230,8 +228,7 @@ HB_FUNC_STATIC( QLISTVIEW_LAYOUTMODE )
   QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->layoutMode (  );
-    hb_retni( i );
+    hb_retni( (int) obj->layoutMode (  ) );
   }
 }
 
@@ -244,8 +241,7 @@ HB_FUNC_STATIC( QLISTVIEW_MODELCOLUMN )
   QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->modelColumn (  );
-    hb_retni( i );
+    hb_retni( obj->modelColumn (  ) );
   }
 }
 
@@ -258,8 +254,7 @@ HB_FUNC_STATIC( QLISTVIEW_MOVEMENT )
   QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->movement (  );
-    hb_retni( i );
+    hb_retni( (int) obj->movement (  ) );
   }
 }
 
@@ -272,8 +267,7 @@ HB_FUNC_STATIC( QLISTVIEW_RESIZEMODE )
   QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->resizeMode (  );
-    hb_retni( i );
+    hb_retni( (int) obj->resizeMode (  ) );
   }
 }
 
@@ -497,8 +491,7 @@ HB_FUNC_STATIC( QLISTVIEW_SPACING )
   QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->spacing (  );
-    hb_retni( i );
+    hb_retni( obj->spacing (  ) );
   }
 }
 
@@ -524,8 +517,7 @@ HB_FUNC_STATIC( QLISTVIEW_VIEWMODE )
   QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->viewMode (  );
-    hb_retni( i );
+    hb_retni( (int) obj->viewMode (  ) );
   }
 }
 

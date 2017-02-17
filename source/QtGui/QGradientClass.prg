@@ -105,8 +105,7 @@ HB_FUNC_STATIC( QGRADIENT_COORDINATEMODE )
   QGradient * obj = (QGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->coordinateMode (  );
-    hb_retni( i );
+    hb_retni( (int) obj->coordinateMode (  ) );
   }
 }
 
@@ -166,8 +165,7 @@ HB_FUNC_STATIC( QGRADIENT_SPREAD )
   QGradient * obj = (QGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->spread (  );
-    hb_retni( i );
+    hb_retni( (int) obj->spread (  ) );
   }
 }
 
@@ -181,8 +179,7 @@ HB_FUNC_STATIC( QGRADIENT_TYPE )
   QGradient * obj = (QGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->type (  );
-    hb_retni( i );
+    hb_retni( (int) obj->type (  ) );
   }
 }
 

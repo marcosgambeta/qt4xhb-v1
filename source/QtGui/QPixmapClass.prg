@@ -420,8 +420,7 @@ HB_FUNC_STATIC( QPIXMAP_DEPTH )
   QPixmap * obj = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->depth (  );
-    hb_retni( i );
+    hb_retni( obj->depth (  ) );
   }
 }
 
@@ -543,8 +542,7 @@ HB_FUNC_STATIC( QPIXMAP_HEIGHT )
   QPixmap * obj = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->height (  );
-    hb_retni( i );
+    hb_retni( obj->height (  ) );
   }
 }
 
@@ -953,8 +951,7 @@ HB_FUNC_STATIC( QPIXMAP_WIDTH )
   QPixmap * obj = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->width (  );
-    hb_retni( i );
+    hb_retni( obj->width (  ) );
   }
 }
 
@@ -973,8 +970,7 @@ int defaultDepth ()
 */
 HB_FUNC_STATIC( QPIXMAP_DEFAULTDEPTH )
 {
-  int i = QPixmap::defaultDepth (  );
-  hb_retni( i );
+  hb_retni( QPixmap::defaultDepth (  ) );
 }
 
 

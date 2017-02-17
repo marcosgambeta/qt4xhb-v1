@@ -297,8 +297,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_COUNT )
   QKeySequence * obj = (QKeySequence *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    uint i = obj->count (  );
-    hb_retni( i );
+    hb_retni( (uint) obj->count (  ) );
   }
 }
 
@@ -325,8 +324,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_MATCHES )
   if( obj )
   {
     QKeySequence * par1 = (QKeySequence *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->matches ( *par1 );
-    hb_retni( i );
+    hb_retni( (int) obj->matches ( *par1 ) );
   }
 }
 

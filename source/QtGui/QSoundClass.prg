@@ -135,8 +135,7 @@ HB_FUNC_STATIC( QSOUND_LOOPS )
   QSound * obj = (QSound *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->loops (  );
-    hb_retni( i );
+    hb_retni( obj->loops (  ) );
   }
 }
 
@@ -149,8 +148,7 @@ HB_FUNC_STATIC( QSOUND_LOOPSREMAINING )
   QSound * obj = (QSound *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->loopsRemaining (  );
-    hb_retni( i );
+    hb_retni( obj->loopsRemaining (  ) );
   }
 }
 

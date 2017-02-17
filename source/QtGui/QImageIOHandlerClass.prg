@@ -154,8 +154,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_CURRENTIMAGENUMBER )
   QImageIOHandler * obj = (QImageIOHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->currentImageNumber (  );
-    hb_retni( i );
+    hb_retni( obj->currentImageNumber (  ) );
   }
 }
 
@@ -210,8 +209,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_IMAGECOUNT )
   QImageIOHandler * obj = (QImageIOHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->imageCount (  );
-    hb_retni( i );
+    hb_retni( obj->imageCount (  ) );
   }
 }
 
@@ -251,8 +249,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_LOOPCOUNT )
   QImageIOHandler * obj = (QImageIOHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->loopCount (  );
-    hb_retni( i );
+    hb_retni( obj->loopCount (  ) );
   }
 }
 
@@ -265,8 +262,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_NEXTIMAGEDELAY )
   QImageIOHandler * obj = (QImageIOHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->nextImageDelay (  );
-    hb_retni( i );
+    hb_retni( obj->nextImageDelay (  ) );
   }
 }
 

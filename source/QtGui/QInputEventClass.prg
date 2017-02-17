@@ -101,8 +101,7 @@ HB_FUNC_STATIC( QINPUTEVENT_MODIFIERS )
   QInputEvent * obj = (QInputEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->modifiers (  );
-    hb_retni( i );
+    hb_retni( (int) obj->modifiers (  ) );
   }
 }
 

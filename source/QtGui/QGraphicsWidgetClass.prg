@@ -273,8 +273,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_FOCUSPOLICY )
   QGraphicsWidget * obj = (QGraphicsWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->focusPolicy (  );
-    hb_retni( i );
+    hb_retni( (int) obj->focusPolicy (  ) );
   }
 }
 
@@ -339,8 +338,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_GRABSHORTCUT )
   {
     QKeySequence * par1 = (QKeySequence *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = ISNIL(2)? (int) Qt::WindowShortcut : hb_parni(2);
-    int i = obj->grabShortcut ( *par1,  (Qt::ShortcutContext) par2 );
-    hb_retni( i );
+    hb_retni( obj->grabShortcut ( *par1,  (Qt::ShortcutContext) par2 ) );
   }
 }
 
@@ -418,8 +416,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_LAYOUTDIRECTION )
   QGraphicsWidget * obj = (QGraphicsWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->layoutDirection (  );
-    hb_retni( i );
+    hb_retni( (int) obj->layoutDirection (  ) );
   }
 }
 
@@ -860,8 +857,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_WINDOWFLAGS )
   QGraphicsWidget * obj = (QGraphicsWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->windowFlags (  );
-    hb_retni( i );
+    hb_retni( (int) obj->windowFlags (  ) );
   }
 }
 
@@ -916,8 +912,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_WINDOWTYPE )
   QGraphicsWidget * obj = (QGraphicsWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->windowType (  );
-    hb_retni( i );
+    hb_retni( (int) obj->windowType (  ) );
   }
 }
 
@@ -1027,8 +1022,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_TYPE )
   QGraphicsWidget * obj = (QGraphicsWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->type (  );
-    hb_retni( i );
+    hb_retni( obj->type (  ) );
   }
 }
 

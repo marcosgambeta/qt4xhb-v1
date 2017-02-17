@@ -367,8 +367,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ACCEPTEDMOUSEBUTTONS )
   QGraphicsItem * obj = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->acceptedMouseButtons (  );
-    hb_retni( i );
+    hb_retni( (int) obj->acceptedMouseButtons (  ) );
   }
 }
 
@@ -439,8 +438,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_CACHEMODE )
   QGraphicsItem * obj = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->cacheMode (  );
-    hb_retni( i );
+    hb_retni( (int) obj->cacheMode (  ) );
   }
 }
 
@@ -766,8 +764,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_FLAGS )
   QGraphicsItem * obj = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->flags (  );
-    hb_retni( i );
+    hb_retni( (int) obj->flags (  ) );
   }
 }
 
@@ -904,8 +901,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_INPUTMETHODHINTS )
   QGraphicsItem * obj = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->inputMethodHints (  );
-    hb_retni( i );
+    hb_retni( (int) obj->inputMethodHints (  ) );
   }
 }
 
@@ -2327,8 +2323,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_PANELMODALITY )
   QGraphicsItem * obj = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->panelModality (  );
-    hb_retni( i );
+    hb_retni( (int) obj->panelModality (  ) );
   }
 }
 
@@ -3287,8 +3282,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_TYPE )
   QGraphicsItem * obj = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->type (  );
-    hb_retni( i );
+    hb_retni( obj->type (  ) );
   }
 }
 

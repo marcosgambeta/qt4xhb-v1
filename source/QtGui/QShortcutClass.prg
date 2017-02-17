@@ -168,8 +168,7 @@ HB_FUNC_STATIC( QSHORTCUT_CONTEXT )
   QShortcut * obj = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->context (  );
-    hb_retni( i );
+    hb_retni( (int) obj->context (  ) );
   }
 }
 
@@ -182,8 +181,7 @@ HB_FUNC_STATIC( QSHORTCUT_ID )
   QShortcut * obj = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->id (  );
-    hb_retni( i );
+    hb_retni( obj->id (  ) );
   }
 }
 

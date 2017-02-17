@@ -308,8 +308,7 @@ HB_FUNC_STATIC( QIMAGEREADER_CURRENTIMAGENUMBER )
   QImageReader * obj = (QImageReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->currentImageNumber (  );
-    hb_retni( i );
+    hb_retni( obj->currentImageNumber (  ) );
   }
 }
 
@@ -363,8 +362,7 @@ HB_FUNC_STATIC( QIMAGEREADER_ERROR )
   QImageReader * obj = (QImageReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->error (  );
-    hb_retni( i );
+    hb_retni( (int) obj->error (  ) );
   }
 }
 
@@ -419,8 +417,7 @@ HB_FUNC_STATIC( QIMAGEREADER_IMAGECOUNT )
   QImageReader * obj = (QImageReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->imageCount (  );
-    hb_retni( i );
+    hb_retni( obj->imageCount (  ) );
   }
 }
 
@@ -433,8 +430,7 @@ HB_FUNC_STATIC( QIMAGEREADER_IMAGEFORMAT1 )
   QImageReader * obj = (QImageReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->imageFormat (  );
-    hb_retni( i );
+    hb_retni( (int) obj->imageFormat (  ) );
   }
 }
 
@@ -474,8 +470,7 @@ HB_FUNC_STATIC( QIMAGEREADER_LOOPCOUNT )
   QImageReader * obj = (QImageReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->loopCount (  );
-    hb_retni( i );
+    hb_retni( obj->loopCount (  ) );
   }
 }
 
@@ -488,8 +483,7 @@ HB_FUNC_STATIC( QIMAGEREADER_NEXTIMAGEDELAY )
   QImageReader * obj = (QImageReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->nextImageDelay (  );
-    hb_retni( i );
+    hb_retni( obj->nextImageDelay (  ) );
   }
 }
 
@@ -502,8 +496,7 @@ HB_FUNC_STATIC( QIMAGEREADER_QUALITY )
   QImageReader * obj = (QImageReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->quality (  );
-    hb_retni( i );
+    hb_retni( obj->quality (  ) );
   }
 }
 

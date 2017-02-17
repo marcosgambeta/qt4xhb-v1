@@ -205,8 +205,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ACCEPTMODE )
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->acceptMode (  );
-    hb_retni( i );
+    hb_retni( (int) obj->acceptMode (  ) );
   }
 }
 
@@ -260,8 +259,7 @@ HB_FUNC_STATIC( QFILEDIALOG_FILEMODE )
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->fileMode (  );
-    hb_retni( i );
+    hb_retni( (int) obj->fileMode (  ) );
   }
 }
 
@@ -274,8 +272,7 @@ HB_FUNC_STATIC( QFILEDIALOG_FILTER )
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->filter (  );
-    hb_retni( i );
+    hb_retni( (int) obj->filter (  ) );
   }
 }
 
@@ -419,8 +416,7 @@ HB_FUNC_STATIC( QFILEDIALOG_OPTIONS )
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->options (  );
-    hb_retni( i );
+    hb_retni( (int) obj->options (  ) );
   }
 }
 
@@ -972,8 +968,7 @@ HB_FUNC_STATIC( QFILEDIALOG_VIEWMODE )
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->viewMode (  );
-    hb_retni( i );
+    hb_retni( (int) obj->viewMode (  ) );
   }
 }
 

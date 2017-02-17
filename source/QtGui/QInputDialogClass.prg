@@ -190,8 +190,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_DOUBLEDECIMALS )
   QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->doubleDecimals (  );
-    hb_retni( i );
+    hb_retni( obj->doubleDecimals (  ) );
   }
 }
 
@@ -246,8 +245,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_INPUTMODE )
   QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->inputMode (  );
-    hb_retni( i );
+    hb_retni( (int) obj->inputMode (  ) );
   }
 }
 
@@ -260,8 +258,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_INTMAXIMUM )
   QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->intMaximum (  );
-    hb_retni( i );
+    hb_retni( obj->intMaximum (  ) );
   }
 }
 
@@ -274,8 +271,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_INTMINIMUM )
   QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->intMinimum (  );
-    hb_retni( i );
+    hb_retni( obj->intMinimum (  ) );
   }
 }
 
@@ -288,8 +284,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_INTSTEP )
   QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->intStep (  );
-    hb_retni( i );
+    hb_retni( obj->intStep (  ) );
   }
 }
 
@@ -302,8 +297,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_INTVALUE )
   QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->intValue (  );
-    hb_retni( i );
+    hb_retni( obj->intValue (  ) );
   }
 }
 
@@ -373,8 +367,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_OPTIONS )
   QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->options (  );
-    hb_retni( i );
+    hb_retni( (int) obj->options (  ) );
   }
 }
 
@@ -712,8 +705,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_TEXTECHOMODE )
   QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->textEchoMode (  );
-    hb_retni( i );
+    hb_retni( (int) obj->textEchoMode (  ) );
   }
 }
 
@@ -825,8 +817,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_GETINT )
   int par7 = ISNIL(7)? 1 : hb_parni(7);
   bool par8;
   int par9 = ISNIL(9)? (int) 0 : hb_parni(9);
-  int i = QInputDialog::getInt ( par1, par2, par3, par4, par5, par6, par7, &par8,  (Qt::WindowFlags) par9 );
-  hb_retni( i );
+  hb_retni( QInputDialog::getInt ( par1, par2, par3, par4, par5, par6, par7, &par8,  (Qt::WindowFlags) par9 ) );
   hb_storl( par8, 8 );
 }
 

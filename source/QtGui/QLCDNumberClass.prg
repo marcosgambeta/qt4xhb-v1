@@ -200,8 +200,7 @@ HB_FUNC_STATIC( QLCDNUMBER_DIGITCOUNT )
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->digitCount (  );
-    hb_retni( i );
+    hb_retni( obj->digitCount (  ) );
   }
 }
 
@@ -214,8 +213,7 @@ HB_FUNC_STATIC( QLCDNUMBER_INTVALUE )
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->intValue (  );
-    hb_retni( i );
+    hb_retni( obj->intValue (  ) );
   }
 }
 
@@ -228,8 +226,7 @@ HB_FUNC_STATIC( QLCDNUMBER_MODE )
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->mode (  );
-    hb_retni( i );
+    hb_retni( (int) obj->mode (  ) );
   }
 }
 
@@ -242,8 +239,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SEGMENTSTYLE )
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->segmentStyle (  );
-    hb_retni( i );
+    hb_retni( (int) obj->segmentStyle (  ) );
   }
 }
 

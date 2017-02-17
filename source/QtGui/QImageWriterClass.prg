@@ -237,8 +237,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_COMPRESSION )
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->compression (  );
-    hb_retni( i );
+    hb_retni( obj->compression (  ) );
   }
 }
 
@@ -265,8 +264,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_ERROR )
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->error (  );
-    hb_retni( i );
+    hb_retni( (int) obj->error (  ) );
   }
 }
 
@@ -335,8 +333,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_QUALITY )
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->quality (  );
-    hb_retni( i );
+    hb_retni( obj->quality (  ) );
   }
 }
 

@@ -312,8 +312,7 @@ HB_FUNC_STATIC( QFONTENGINEINFO_STYLE )
   QFontEngineInfo * obj = (QFontEngineInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->style (  );
-    hb_retni( i );
+    hb_retni( (int) obj->style (  ) );
   }
 }
 
@@ -326,8 +325,7 @@ HB_FUNC_STATIC( QFONTENGINEINFO_WEIGHT )
   QFontEngineInfo * obj = (QFontEngineInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->weight (  );
-    hb_retni( i );
+    hb_retni( obj->weight (  ) );
   }
 }
 

@@ -195,8 +195,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_CURRENTINDEX )
   QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->currentIndex (  );
-    hb_retni( i );
+    hb_retni( obj->currentIndex (  ) );
   }
 }
 
@@ -239,8 +238,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDSECTION )
   if( obj )
   {
     QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->mappedSection ( par1 );
-    hb_retni( i );
+    hb_retni( obj->mappedSection ( par1 ) );
   }
 }
 
@@ -282,8 +280,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ORIENTATION )
   QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->orientation (  );
-    hb_retni( i );
+    hb_retni( (int) obj->orientation (  ) );
   }
 }
 
@@ -400,8 +397,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SUBMITPOLICY )
   QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->submitPolicy (  );
-    hb_retni( i );
+    hb_retni( (int) obj->submitPolicy (  ) );
   }
 }
 

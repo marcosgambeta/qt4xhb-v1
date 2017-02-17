@@ -88,8 +88,7 @@ HB_FUNC_STATIC( QIMAGEIOPLUGIN_CAPABILITIES )
   {
     QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QByteArray * par2 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->capabilities ( par1, *par2 );
-    hb_retni( i );
+    hb_retni( (int) obj->capabilities ( par1, *par2 ) );
   }
 }
 

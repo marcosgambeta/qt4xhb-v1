@@ -190,8 +190,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ALIGNMENT )
   if( obj )
   {
     QGraphicsLayoutItem * par1 = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->alignment ( par1 );
-    hb_retni( i );
+    hb_retni( (int) obj->alignment ( par1 ) );
   }
 }
 
@@ -251,8 +250,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ORIENTATION )
   QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->orientation (  );
-    hb_retni( i );
+    hb_retni( (int) obj->orientation (  ) );
   }
 }
 
@@ -373,8 +371,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_STRETCHFACTOR )
   if( obj )
   {
     QGraphicsLayoutItem * par1 = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->stretchFactor ( par1 );
-    hb_retni( i );
+    hb_retni( obj->stretchFactor ( par1 ) );
   }
 }
 
@@ -387,8 +384,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_COUNT )
   QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->count (  );
-    hb_retni( i );
+    hb_retni( obj->count (  ) );
   }
 }
 

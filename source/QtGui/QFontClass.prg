@@ -304,8 +304,7 @@ HB_FUNC_STATIC( QFONT_CAPITALIZATION )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->capitalization (  );
-    hb_retni( i );
+    hb_retni( (int) obj->capitalization (  ) );
   }
 }
 
@@ -484,8 +483,7 @@ HB_FUNC_STATIC( QFONT_LETTERSPACINGTYPE )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->letterSpacingType (  );
-    hb_retni( i );
+    hb_retni( (int) obj->letterSpacingType (  ) );
   }
 }
 
@@ -512,8 +510,7 @@ HB_FUNC_STATIC( QFONT_PIXELSIZE )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->pixelSize (  );
-    hb_retni( i );
+    hb_retni( obj->pixelSize (  ) );
   }
 }
 
@@ -526,8 +523,7 @@ HB_FUNC_STATIC( QFONT_POINTSIZE )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->pointSize (  );
-    hb_retni( i );
+    hb_retni( obj->pointSize (  ) );
   }
 }
 
@@ -913,8 +909,7 @@ HB_FUNC_STATIC( QFONT_STRETCH )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->stretch (  );
-    hb_retni( i );
+    hb_retni( obj->stretch (  ) );
   }
 }
 
@@ -940,8 +935,7 @@ HB_FUNC_STATIC( QFONT_STYLE )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->style (  );
-    hb_retni( i );
+    hb_retni( (int) obj->style (  ) );
   }
 }
 
@@ -954,8 +948,7 @@ HB_FUNC_STATIC( QFONT_STYLEHINT )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->styleHint (  );
-    hb_retni( i );
+    hb_retni( (int) obj->styleHint (  ) );
   }
 }
 
@@ -968,8 +961,7 @@ HB_FUNC_STATIC( QFONT_STYLESTRATEGY )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->styleStrategy (  );
-    hb_retni( i );
+    hb_retni( (int) obj->styleStrategy (  ) );
   }
 }
 
@@ -1009,8 +1001,7 @@ HB_FUNC_STATIC( QFONT_WEIGHT )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->weight (  );
-    hb_retni( i );
+    hb_retni( obj->weight (  ) );
   }
 }
 

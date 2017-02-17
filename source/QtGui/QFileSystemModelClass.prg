@@ -217,8 +217,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FILTER )
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->filter (  );
-    hb_retni( i );
+    hb_retni( (int) obj->filter (  ) );
   }
 }
 
@@ -371,8 +370,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_PERMISSIONS )
   if( obj )
   {
     QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->permissions ( *par1 );
-    hb_retni( i );
+    hb_retni( (int) obj->permissions ( *par1 ) );
   }
 }
 
@@ -612,8 +610,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_COLUMNCOUNT )
   if( obj )
   {
     QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->columnCount ( par1 );
-    hb_retni( i );
+    hb_retni( obj->columnCount ( par1 ) );
   }
 }
 
@@ -676,8 +673,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FLAGS )
   if( obj )
   {
     QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->flags ( *par1 );
-    hb_retni( i );
+    hb_retni( (int) obj->flags ( *par1 ) );
   }
 }
 
@@ -807,8 +803,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ROWCOUNT )
   if( obj )
   {
     QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->rowCount ( par1 );
-    hb_retni( i );
+    hb_retni( obj->rowCount ( par1 ) );
   }
 }
 
@@ -853,8 +848,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SUPPORTEDDROPACTIONS )
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->supportedDropActions (  );
-    hb_retni( i );
+    hb_retni( (int) obj->supportedDropActions (  ) );
   }
 }
 

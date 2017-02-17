@@ -107,8 +107,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_OPTIONS )
   QPageSetupDialog * obj = (QPageSetupDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->options (  );
-    hb_retni( i );
+    hb_retni( (int) obj->options (  ) );
   }
 }
 
