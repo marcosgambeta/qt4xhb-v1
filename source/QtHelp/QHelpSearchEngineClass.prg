@@ -114,8 +114,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_HITCOUNT )
   QHelpSearchEngine * obj = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->hitCount (  );
-    hb_retni( i );
+    hb_retni( obj->hitCount (  ) );
   }
 }
 

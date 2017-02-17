@@ -226,8 +226,7 @@ HB_FUNC_STATIC( QSCRIPTCLASS_PROPERTYFLAGS )
     QScriptValue * par1 = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QScriptString * par2 = (QScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     uint par3 = hb_parni(3);
-    int i = obj->propertyFlags ( *par1, *par2, par3 );
-    hb_retni( i );
+    hb_retni( (int) obj->propertyFlags ( *par1, *par2, par3 ) );
   }
 }
 
@@ -258,8 +257,7 @@ HB_FUNC_STATIC( QSCRIPTCLASS_QUERYPROPERTY )
     QScriptString * par2 = (QScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par3 = hb_parni(3);
     uint * par4 = (uint *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->queryProperty ( *par1, *par2,  (QScriptClass::QueryFlags) par3, par4 );
-    hb_retni( i );
+    hb_retni( (int) obj->queryProperty ( *par1, *par2,  (QScriptClass::QueryFlags) par3, par4 ) );
   }
 }
 

@@ -117,8 +117,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_DECIMALS )
   QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->decimals (  );
-    hb_retni( i );
+    hb_retni( obj->decimals (  ) );
   }
 }
 
@@ -368,8 +367,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_VALIDATE )
   {
     QString par1 = hb_parc(1);
     int par2 = hb_parni(2);
-    int i = obj->validate ( par1, par2 );
-    hb_retni( i );
+    hb_retni( (int) obj->validate ( par1, par2 ) );
   }
 }
 

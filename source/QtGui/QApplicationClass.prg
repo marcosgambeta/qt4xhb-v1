@@ -518,8 +518,7 @@ int colorSpec ()
 */
 HB_FUNC_STATIC( QAPPLICATION_COLORSPEC )
 {
-  int i = QApplication::colorSpec (  );
-  hb_retni( i );
+  hb_retni( QApplication::colorSpec (  ) );
 }
 
 
@@ -528,8 +527,7 @@ int cursorFlashTime ()
 */
 HB_FUNC_STATIC( QAPPLICATION_CURSORFLASHTIME )
 {
-  int i = QApplication::cursorFlashTime (  );
-  hb_retni( i );
+  hb_retni( QApplication::cursorFlashTime (  ) );
 }
 
 
@@ -557,8 +555,7 @@ int doubleClickInterval ()
 */
 HB_FUNC_STATIC( QAPPLICATION_DOUBLECLICKINTERVAL )
 {
-  int i = QApplication::doubleClickInterval (  );
-  hb_retni( i );
+  hb_retni( QApplication::doubleClickInterval (  ) );
 }
 
 
@@ -567,8 +564,7 @@ int exec ()
 */
 HB_FUNC_STATIC( QAPPLICATION_EXEC )
 {
-  int i = QApplication::exec (  );
-  hb_retni( i );
+  hb_retni( QApplication::exec (  ) );
 }
 
 
@@ -687,8 +683,7 @@ Qt::LayoutDirection keyboardInputDirection ()
 */
 HB_FUNC_STATIC( QAPPLICATION_KEYBOARDINPUTDIRECTION )
 {
-  int i = QApplication::keyboardInputDirection (  );
-  hb_retni( i );
+  hb_retni( (int) QApplication::keyboardInputDirection (  ) );
 }
 
 
@@ -697,8 +692,7 @@ int keyboardInputInterval ()
 */
 HB_FUNC_STATIC( QAPPLICATION_KEYBOARDINPUTINTERVAL )
 {
-  int i = QApplication::keyboardInputInterval (  );
-  hb_retni( i );
+  hb_retni( QApplication::keyboardInputInterval (  ) );
 }
 
 
@@ -717,8 +711,7 @@ Qt::KeyboardModifiers keyboardModifiers ()
 */
 HB_FUNC_STATIC( QAPPLICATION_KEYBOARDMODIFIERS )
 {
-  int i = QApplication::keyboardModifiers (  );
-  hb_retni( i );
+  hb_retni( (int) QApplication::keyboardModifiers (  ) );
 }
 
 
@@ -728,8 +721,7 @@ Qt::LayoutDirection layoutDirection ()
 */
 HB_FUNC_STATIC( QAPPLICATION_LAYOUTDIRECTION )
 {
-  int i = QApplication::layoutDirection (  );
-  hb_retni( i );
+  hb_retni( (int) QApplication::layoutDirection (  ) );
 }
 
 
@@ -738,8 +730,7 @@ Qt::MouseButtons mouseButtons ()
 */
 HB_FUNC_STATIC( QAPPLICATION_MOUSEBUTTONS )
 {
-  int i = QApplication::mouseButtons (  );
-  hb_retni( i );
+  hb_retni( (int) QApplication::mouseButtons (  ) );
 }
 
 
@@ -811,8 +802,7 @@ Qt::KeyboardModifiers queryKeyboardModifiers ()
 */
 HB_FUNC_STATIC( QAPPLICATION_QUERYKEYBOARDMODIFIERS )
 {
-  int i = QApplication::queryKeyboardModifiers (  );
-  hb_retni( i );
+  hb_retni( (int) QApplication::queryKeyboardModifiers (  ) );
 }
 
 
@@ -1082,8 +1072,7 @@ int startDragDistance ()
 */
 HB_FUNC_STATIC( QAPPLICATION_STARTDRAGDISTANCE )
 {
-  int i = QApplication::startDragDistance (  );
-  hb_retni( i );
+  hb_retni( QApplication::startDragDistance (  ) );
 }
 
 
@@ -1092,8 +1081,7 @@ int startDragTime ()
 */
 HB_FUNC_STATIC( QAPPLICATION_STARTDRAGTIME )
 {
-  int i = QApplication::startDragTime (  );
-  hb_retni( i );
+  hb_retni( QApplication::startDragTime (  ) );
 }
 
 
@@ -1200,8 +1188,7 @@ QApplication::Type type ()
 */
 HB_FUNC_STATIC( QAPPLICATION_TYPE )
 {
-  int i = QApplication::type (  );
-  hb_retni( i );
+  hb_retni( (int) QApplication::type (  ) );
 }
 
 
@@ -1210,8 +1197,7 @@ int wheelScrollLines ()
 */
 HB_FUNC_STATIC( QAPPLICATION_WHEELSCROLLLINES )
 {
-  int i = QApplication::wheelScrollLines (  );
-  hb_retni( i );
+  hb_retni( QApplication::wheelScrollLines (  ) );
 }
 
 

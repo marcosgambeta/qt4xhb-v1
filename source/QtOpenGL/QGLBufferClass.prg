@@ -267,8 +267,7 @@ HB_FUNC_STATIC( QGLBUFFER_BUFFERID )
   QGLBuffer * obj = (QGLBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    GLuint i = obj->bufferId (  );
-    hb_retni( i );
+    hb_retni( (GLuint) obj->bufferId (  ) );
   }
 }
 
@@ -381,8 +380,7 @@ HB_FUNC_STATIC( QGLBUFFER_SIZE )
   QGLBuffer * obj = (QGLBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->size (  );
-    hb_retni( i );
+    hb_retni( obj->size (  ) );
   }
 }
 
@@ -395,8 +393,7 @@ HB_FUNC_STATIC( QGLBUFFER_TYPE )
   QGLBuffer * obj = (QGLBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->type (  );
-    hb_retni( i );
+    hb_retni( (int) obj->type (  ) );
   }
 }
 
@@ -422,8 +419,7 @@ HB_FUNC_STATIC( QGLBUFFER_USAGEPATTERN )
   QGLBuffer * obj = (QGLBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->usagePattern (  );
-    hb_retni( i );
+    hb_retni( (int) obj->usagePattern (  ) );
   }
 }
 

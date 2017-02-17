@@ -210,8 +210,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_FIND )
   if( obj )
   {
     QRgb par1 = hb_parni(1);
-    int i = obj->find ( par1 );
-    hb_retni( i );
+    hb_retni( (int) obj->find ( par1 ) );
   }
 }
 
@@ -225,8 +224,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_FINDNEAREST )
   if( obj )
   {
     QRgb par1 = hb_parni(1);
-    int i = obj->findNearest ( par1 );
-    hb_retni( i );
+    hb_retni( (int) obj->findNearest ( par1 ) );
   }
 }
 
@@ -300,8 +298,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_SIZE )
   QGLColormap * obj = (QGLColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->size (  );
-    hb_retni( i );
+    hb_retni( obj->size (  ) );
   }
 }
 

@@ -259,8 +259,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_PRIORITY )
   QNetworkRequest * obj = (QNetworkRequest *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->priority (  );
-    hb_retni( i );
+    hb_retni( (int) obj->priority (  ) );
   }
 }
 

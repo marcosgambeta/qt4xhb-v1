@@ -264,8 +264,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_FLAGS )
   if( obj )
   {
     QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->flags ( *par1 );
-    hb_retni( i );
+    hb_retni( (int) obj->flags ( *par1 ) );
   }
 }
 
@@ -440,8 +439,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SUPPORTEDDROPACTIONS )
   QAbstractProxyModel * obj = (QAbstractProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->supportedDropActions (  );
-    hb_retni( i );
+    hb_retni( (int) obj->supportedDropActions (  ) );
   }
 }
 

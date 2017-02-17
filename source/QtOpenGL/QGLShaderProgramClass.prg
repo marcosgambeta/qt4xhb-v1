@@ -314,8 +314,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_ATTRIBUTELOCATION1 )
   if( obj )
   {
     const char * par1 = hb_parc(1);
-    int i = obj->attributeLocation (  (const char *) par1 );
-    hb_retni( i );
+    hb_retni( obj->attributeLocation (  (const char *) par1 ) );
   }
 }
 
@@ -329,8 +328,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_ATTRIBUTELOCATION2 )
   if( obj )
   {
     QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->attributeLocation ( *par1 );
-    hb_retni( i );
+    hb_retni( obj->attributeLocation ( *par1 ) );
   }
 }
 
@@ -344,8 +342,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_ATTRIBUTELOCATION3 )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    int i = obj->attributeLocation ( par1 );
-    hb_retni( i );
+    hb_retni( obj->attributeLocation ( par1 ) );
   }
 }
 
@@ -577,8 +574,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_GEOMETRYOUTPUTVERTEXCOUNT )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->geometryOutputVertexCount (  );
-    hb_retni( i );
+    hb_retni( obj->geometryOutputVertexCount (  ) );
   }
 }
 
@@ -631,8 +627,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_MAXGEOMETRYOUTPUTVERTICES )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->maxGeometryOutputVertices (  );
-    hb_retni( i );
+    hb_retni( obj->maxGeometryOutputVertices (  ) );
   }
 }
 
@@ -645,8 +640,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_PROGRAMID )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    GLuint i = obj->programId (  );
-    hb_retni( i );
+    hb_retni( (GLuint) obj->programId (  ) );
   }
 }
 
@@ -1677,8 +1671,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_UNIFORMLOCATION1 )
   if( obj )
   {
     const char * par1 = hb_parc(1);
-    int i = obj->uniformLocation (  (const char *) par1 );
-    hb_retni( i );
+    hb_retni( obj->uniformLocation (  (const char *) par1 ) );
   }
 }
 
@@ -1692,8 +1685,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_UNIFORMLOCATION2 )
   if( obj )
   {
     QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->uniformLocation ( *par1 );
-    hb_retni( i );
+    hb_retni( obj->uniformLocation ( *par1 ) );
   }
 }
 
@@ -1707,8 +1699,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_UNIFORMLOCATION3 )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    int i = obj->uniformLocation ( par1 );
-    hb_retni( i );
+    hb_retni( obj->uniformLocation ( par1 ) );
   }
 }
 

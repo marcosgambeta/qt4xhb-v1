@@ -388,8 +388,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_PEERVERIFYDEPTH )
   QSslConfiguration * obj = (QSslConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->peerVerifyDepth (  );
-    hb_retni( i );
+    hb_retni( obj->peerVerifyDepth (  ) );
   }
 }
 
@@ -402,8 +401,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_PEERVERIFYMODE )
   QSslConfiguration * obj = (QSslConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->peerVerifyMode (  );
-    hb_retni( i );
+    hb_retni( (int) obj->peerVerifyMode (  ) );
   }
 }
 
@@ -430,8 +428,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_PROTOCOL )
   QSslConfiguration * obj = (QSslConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->protocol (  );
-    hb_retni( i );
+    hb_retni( (int) obj->protocol (  ) );
   }
 }
 

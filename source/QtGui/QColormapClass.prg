@@ -203,8 +203,7 @@ HB_FUNC_STATIC( QCOLORMAP_DEPTH )
   QColormap * obj = (QColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->depth (  );
-    hb_retni( i );
+    hb_retni( obj->depth (  ) );
   }
 }
 
@@ -217,8 +216,7 @@ HB_FUNC_STATIC( QCOLORMAP_MODE )
   QColormap * obj = (QColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->mode (  );
-    hb_retni( i );
+    hb_retni( (int) obj->mode (  ) );
   }
 }
 
@@ -232,8 +230,7 @@ HB_FUNC_STATIC( QCOLORMAP_PIXEL )
   if( obj )
   {
     QColor par1 = ISOBJECT(1)? *(QColor *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QColor(hb_parc(1));
-    uint i = obj->pixel ( par1 );
-    hb_retni( i );
+    hb_retni( (uint) obj->pixel ( par1 ) );
   }
 }
 
@@ -246,8 +243,7 @@ HB_FUNC_STATIC( QCOLORMAP_SIZE )
   QColormap * obj = (QColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->size (  );
-    hb_retni( i );
+    hb_retni( obj->size (  ) );
   }
 }
 

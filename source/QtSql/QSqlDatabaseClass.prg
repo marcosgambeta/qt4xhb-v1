@@ -403,8 +403,7 @@ HB_FUNC_STATIC( QSQLDATABASE_NUMERICALPRECISIONPOLICY )
   QSqlDatabase * obj = (QSqlDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->numericalPrecisionPolicy (  );
-    hb_retni( i );
+    hb_retni( (int) obj->numericalPrecisionPolicy (  ) );
   }
 }
 
@@ -474,8 +473,7 @@ HB_FUNC_STATIC( QSQLDATABASE_PORT )
   QSqlDatabase * obj = (QSqlDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->port (  );
-    hb_retni( i );
+    hb_retni( obj->port (  ) );
   }
 }
 

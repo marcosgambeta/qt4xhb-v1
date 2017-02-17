@@ -166,8 +166,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_BINDTEXTURE1 )
   {
     QImage * par1 = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     GLenum par2 = ISNIL(2)? GL_TEXTURE_2D : hb_parni(2);
-    GLuint i = obj->bindTexture ( *par1, par2 );
-    hb_retni( i );
+    hb_retni( (GLuint) obj->bindTexture ( *par1, par2 ) );
   }
 }
 
@@ -182,8 +181,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_BINDTEXTURE2 )
   {
     QPixmap * par1 = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     GLenum par2 = ISNIL(2)? GL_TEXTURE_2D : hb_parni(2);
-    GLint i = obj->bindTexture ( *par1, par2 );
-    hb_retni( i );
+    hb_retni( (GLint) obj->bindTexture ( *par1, par2 ) );
   }
 }
 
@@ -197,8 +195,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_BINDTEXTURE3 )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    GLuint i = obj->bindTexture ( par1 );
-    hb_retni( i );
+    hb_retni( (GLuint) obj->bindTexture ( par1 ) );
   }
 }
 
@@ -316,8 +313,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_GENERATEDYNAMICTEXTURE )
   QGLPixelBuffer * obj = (QGLPixelBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    GLuint i = obj->generateDynamicTexture (  );
-    hb_retni( i );
+    hb_retni( (GLuint) obj->generateDynamicTexture (  ) );
   }
 }
 

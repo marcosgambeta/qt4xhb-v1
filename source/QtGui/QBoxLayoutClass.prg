@@ -227,8 +227,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_DIRECTION )
   QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->direction (  );
-    hb_retni( i );
+    hb_retni( (int) obj->direction (  ) );
   }
 }
 
@@ -415,8 +414,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_SPACING )
   QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->spacing (  );
-    hb_retni( i );
+    hb_retni( obj->spacing (  ) );
   }
 }
 
@@ -430,8 +428,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_STRETCH )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->stretch ( par1 );
-    hb_retni( i );
+    hb_retni( obj->stretch ( par1 ) );
   }
 }
 
@@ -459,8 +456,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_COUNT )
   QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->count (  );
-    hb_retni( i );
+    hb_retni( obj->count (  ) );
   }
 }
 
@@ -473,8 +469,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_EXPANDINGDIRECTIONS )
   QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->expandingDirections (  );
-    hb_retni( i );
+    hb_retni( (int) obj->expandingDirections (  ) );
   }
 }
 
@@ -501,8 +496,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_HEIGHTFORWIDTH )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->heightForWidth ( par1 );
-    hb_retni( i );
+    hb_retni( obj->heightForWidth ( par1 ) );
   }
 }
 
@@ -559,8 +553,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_MINIMUMHEIGHTFORWIDTH )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->minimumHeightForWidth ( par1 );
-    hb_retni( i );
+    hb_retni( obj->minimumHeightForWidth ( par1 ) );
   }
 }
 

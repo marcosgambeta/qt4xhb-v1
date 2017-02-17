@@ -195,8 +195,7 @@ HB_FUNC_STATIC( QLOCALSERVER_MAXPENDINGCONNECTIONS )
   QLocalServer * obj = (QLocalServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->maxPendingConnections (  );
-    hb_retni( i );
+    hb_retni( obj->maxPendingConnections (  ) );
   }
 }
 
@@ -223,8 +222,7 @@ HB_FUNC_STATIC( QLOCALSERVER_SERVERERROR )
   QLocalServer * obj = (QLocalServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->serverError (  );
-    hb_retni( i );
+    hb_retni( (int) obj->serverError (  ) );
   }
 }
 

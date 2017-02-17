@@ -338,8 +338,7 @@ HB_FUNC_STATIC( QDIR_COUNT )
   QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    uint i = obj->count (  );
-    hb_retni( i );
+    hb_retni( (uint) obj->count (  ) );
   }
 }
 

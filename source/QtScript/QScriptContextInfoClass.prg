@@ -214,8 +214,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONENDLINENUMBER )
   QScriptContextInfo * obj = (QScriptContextInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->functionEndLineNumber (  );
-    hb_retni( i );
+    hb_retni( obj->functionEndLineNumber (  ) );
   }
 }
 
@@ -228,8 +227,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONMETAINDEX )
   QScriptContextInfo * obj = (QScriptContextInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->functionMetaIndex (  );
-    hb_retni( i );
+    hb_retni( obj->functionMetaIndex (  ) );
   }
 }
 
@@ -279,8 +277,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONSTARTLINENUMBER )
   QScriptContextInfo * obj = (QScriptContextInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->functionStartLineNumber (  );
-    hb_retni( i );
+    hb_retni( obj->functionStartLineNumber (  ) );
   }
 }
 
@@ -293,8 +290,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONTYPE )
   QScriptContextInfo * obj = (QScriptContextInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->functionType (  );
-    hb_retni( i );
+    hb_retni( (int) obj->functionType (  ) );
   }
 }
 
@@ -320,8 +316,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_LINENUMBER )
   QScriptContextInfo * obj = (QScriptContextInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->lineNumber (  );
-    hb_retni( i );
+    hb_retni( obj->lineNumber (  ) );
   }
 }
 

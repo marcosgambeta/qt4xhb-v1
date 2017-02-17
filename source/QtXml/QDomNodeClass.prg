@@ -328,8 +328,7 @@ HB_FUNC_STATIC( QDOMNODE_COLUMNNUMBER )
   QDomNode * obj = (QDomNode *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->columnNumber (  );
-    hb_retni( i );
+    hb_retni( obj->columnNumber (  ) );
   }
 }
 
@@ -655,8 +654,7 @@ HB_FUNC_STATIC( QDOMNODE_LINENUMBER )
   QDomNode * obj = (QDomNode *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->lineNumber (  );
-    hb_retni( i );
+    hb_retni( obj->lineNumber (  ) );
   }
 }
 
@@ -755,8 +753,7 @@ HB_FUNC_STATIC( QDOMNODE_NODETYPE )
   QDomNode * obj = (QDomNode *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->nodeType (  );
-    hb_retni( i );
+    hb_retni( (int) obj->nodeType (  ) );
   }
 }
 

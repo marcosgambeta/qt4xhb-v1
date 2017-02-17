@@ -133,8 +133,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_ALIGNMENT )
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->alignment (  );
-    hb_retni( i );
+    hb_retni( (int) obj->alignment (  ) );
   }
 }
 
@@ -147,8 +146,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_BUTTONSYMBOLS )
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->buttonSymbols (  );
-    hb_retni( i );
+    hb_retni( (int) obj->buttonSymbols (  ) );
   }
 }
 
@@ -161,8 +159,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_CORRECTIONMODE )
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->correctionMode (  );
-    hb_retni( i );
+    hb_retni( (int) obj->correctionMode (  ) );
   }
 }
 
@@ -449,8 +446,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_VALIDATE )
   {
     QString par1 = hb_parc(1);
     int par2 = hb_parni(2);
-    int i = obj->validate ( par1, par2 );
-    hb_retni( i );
+    hb_retni( (int) obj->validate ( par1, par2 ) );
   }
 }
 

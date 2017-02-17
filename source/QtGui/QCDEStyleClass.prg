@@ -142,8 +142,7 @@ HB_FUNC_STATIC( QCDESTYLE_PIXELMETRIC )
     int par1 = hb_parni(1);
     const QStyleOption * par2 = ISNIL(2)? 0 : (const QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     const QWidget * par3 = ISNIL(3)? 0 : (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->pixelMetric (  (QStyle::PixelMetric) par1, par2, par3 );
-    hb_retni( i );
+    hb_retni( obj->pixelMetric (  (QStyle::PixelMetric) par1, par2, par3 ) );
   }
 }
 

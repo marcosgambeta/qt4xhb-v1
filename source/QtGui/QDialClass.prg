@@ -108,8 +108,7 @@ HB_FUNC_STATIC( QDIAL_NOTCHSIZE )
   QDial * obj = (QDial *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->notchSize (  );
-    hb_retni( i );
+    hb_retni( obj->notchSize (  ) );
   }
 }
 

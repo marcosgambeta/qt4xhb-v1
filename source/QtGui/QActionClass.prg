@@ -507,8 +507,7 @@ HB_FUNC_STATIC( QACTION_MENUROLE )
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->menuRole (  );
-    hb_retni( i );
+    hb_retni( (int) obj->menuRole (  ) );
   }
 }
 
@@ -535,8 +534,7 @@ HB_FUNC_STATIC( QACTION_PRIORITY )
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->priority (  );
-    hb_retni( i );
+    hb_retni( (int) obj->priority (  ) );
   }
 }
 
@@ -900,8 +898,7 @@ HB_FUNC_STATIC( QACTION_SHORTCUTCONTEXT )
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->shortcutContext (  );
-    hb_retni( i );
+    hb_retni( (int) obj->shortcutContext (  ) );
   }
 }
 
@@ -976,8 +973,7 @@ HB_FUNC_STATIC( QACTION_SOFTKEYROLE )
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->softKeyRole (  );
-    hb_retni( i );
+    hb_retni( (int) obj->softKeyRole (  ) );
   }
 }
 

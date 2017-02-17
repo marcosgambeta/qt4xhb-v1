@@ -177,8 +177,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_HITTEST )
   {
     QPointF * par1 = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
-    int i = obj->hitTest ( *par1,  (Qt::HitTestAccuracy) par2 );
-    hb_retni( i );
+    hb_retni( obj->hitTest ( *par1,  (Qt::HitTestAccuracy) par2 ) );
   }
 }
 
@@ -191,8 +190,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_PAGECOUNT )
   QAbstractTextDocumentLayout * obj = (QAbstractTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->pageCount (  );
-    hb_retni( i );
+    hb_retni( obj->pageCount (  ) );
   }
 }
 

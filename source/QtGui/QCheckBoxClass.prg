@@ -128,8 +128,7 @@ HB_FUNC_STATIC( QCHECKBOX_CHECKSTATE )
   QCheckBox * obj = (QCheckBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->checkState (  );
-    hb_retni( i );
+    hb_retni( (int) obj->checkState (  ) );
   }
 }
 

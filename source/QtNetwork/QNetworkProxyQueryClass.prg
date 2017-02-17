@@ -356,8 +356,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_LOCALPORT )
   QNetworkProxyQuery * obj = (QNetworkProxyQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->localPort (  );
-    hb_retni( i );
+    hb_retni( obj->localPort (  ) );
   }
 }
 
@@ -384,8 +383,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_PEERPORT )
   QNetworkProxyQuery * obj = (QNetworkProxyQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->peerPort (  );
-    hb_retni( i );
+    hb_retni( obj->peerPort (  ) );
   }
 }
 
@@ -412,8 +410,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_QUERYTYPE )
   QNetworkProxyQuery * obj = (QNetworkProxyQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->queryType (  );
-    hb_retni( i );
+    hb_retni( (int) obj->queryType (  ) );
   }
 }
 

@@ -163,8 +163,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_PRIMARYSCREEN )
   QDesktopWidget * obj = (QDesktopWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->primaryScreen (  );
-    hb_retni( i );
+    hb_retni( obj->primaryScreen (  ) );
   }
 }
 
@@ -192,8 +191,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENCOUNT )
   QDesktopWidget * obj = (QDesktopWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->screenCount (  );
-    hb_retni( i );
+    hb_retni( obj->screenCount (  ) );
   }
 }
 
@@ -272,8 +270,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENNUMBER1 )
   if( obj )
   {
     const QWidget * par1 = ISNIL(1)? 0 : (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->screenNumber ( par1 );
-    hb_retni( i );
+    hb_retni( obj->screenNumber ( par1 ) );
   }
 }
 
@@ -287,8 +284,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENNUMBER2 )
   if( obj )
   {
     QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->screenNumber ( *par1 );
-    hb_retni( i );
+    hb_retni( obj->screenNumber ( *par1 ) );
   }
 }
 

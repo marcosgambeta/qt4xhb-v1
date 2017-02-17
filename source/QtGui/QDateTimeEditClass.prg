@@ -349,8 +349,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CURRENTSECTION )
   QDateTimeEdit * obj = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->currentSection (  );
-    hb_retni( i );
+    hb_retni( (int) obj->currentSection (  ) );
   }
 }
 
@@ -363,8 +362,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CURRENTSECTIONINDEX )
   QDateTimeEdit * obj = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->currentSectionIndex (  );
-    hb_retni( i );
+    hb_retni( obj->currentSectionIndex (  ) );
   }
 }
 
@@ -419,8 +417,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_DISPLAYEDSECTIONS )
   QDateTimeEdit * obj = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->displayedSections (  );
-    hb_retni( i );
+    hb_retni( (int) obj->displayedSections (  ) );
   }
 }
 
@@ -518,8 +515,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SECTIONAT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->sectionAt ( par1 );
-    hb_retni( i );
+    hb_retni( (int) obj->sectionAt ( par1 ) );
   }
 }
 
@@ -532,8 +528,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SECTIONCOUNT )
   QDateTimeEdit * obj = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->sectionCount (  );
-    hb_retni( i );
+    hb_retni( obj->sectionCount (  ) );
   }
 }
 
@@ -818,8 +813,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_TIMESPEC )
   QDateTimeEdit * obj = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->timeSpec (  );
-    hb_retni( i );
+    hb_retni( (int) obj->timeSpec (  ) );
   }
 }
 

@@ -260,8 +260,7 @@ HB_FUNC_STATIC( QGLFORMAT_ACCUMBUFFERSIZE )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->accumBufferSize (  );
-    hb_retni( i );
+    hb_retni( obj->accumBufferSize (  ) );
   }
 }
 
@@ -287,8 +286,7 @@ HB_FUNC_STATIC( QGLFORMAT_ALPHABUFFERSIZE )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->alphaBufferSize (  );
-    hb_retni( i );
+    hb_retni( obj->alphaBufferSize (  ) );
   }
 }
 
@@ -301,8 +299,7 @@ HB_FUNC_STATIC( QGLFORMAT_BLUEBUFFERSIZE )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->blueBufferSize (  );
-    hb_retni( i );
+    hb_retni( obj->blueBufferSize (  ) );
   }
 }
 
@@ -328,8 +325,7 @@ HB_FUNC_STATIC( QGLFORMAT_DEPTHBUFFERSIZE )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->depthBufferSize (  );
-    hb_retni( i );
+    hb_retni( obj->depthBufferSize (  ) );
   }
 }
 
@@ -368,8 +364,7 @@ HB_FUNC_STATIC( QGLFORMAT_GREENBUFFERSIZE )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->greenBufferSize (  );
-    hb_retni( i );
+    hb_retni( obj->greenBufferSize (  ) );
   }
 }
 
@@ -395,8 +390,7 @@ HB_FUNC_STATIC( QGLFORMAT_MAJORVERSION )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->majorVersion (  );
-    hb_retni( i );
+    hb_retni( obj->majorVersion (  ) );
   }
 }
 
@@ -409,8 +403,7 @@ HB_FUNC_STATIC( QGLFORMAT_MINORVERSION )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->minorVersion (  );
-    hb_retni( i );
+    hb_retni( obj->minorVersion (  ) );
   }
 }
 
@@ -423,8 +416,7 @@ HB_FUNC_STATIC( QGLFORMAT_PLANE )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->plane (  );
-    hb_retni( i );
+    hb_retni( obj->plane (  ) );
   }
 }
 
@@ -437,8 +429,7 @@ HB_FUNC_STATIC( QGLFORMAT_PROFILE )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->profile (  );
-    hb_retni( i );
+    hb_retni( (int) obj->profile (  ) );
   }
 }
 
@@ -451,8 +442,7 @@ HB_FUNC_STATIC( QGLFORMAT_REDBUFFERSIZE )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->redBufferSize (  );
-    hb_retni( i );
+    hb_retni( obj->redBufferSize (  ) );
   }
 }
 
@@ -491,8 +481,7 @@ HB_FUNC_STATIC( QGLFORMAT_SAMPLES )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->samples (  );
-    hb_retni( i );
+    hb_retni( obj->samples (  ) );
   }
 }
 
@@ -864,8 +853,7 @@ HB_FUNC_STATIC( QGLFORMAT_STENCILBUFFERSIZE )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->stencilBufferSize (  );
-    hb_retni( i );
+    hb_retni( obj->stencilBufferSize (  ) );
   }
 }
 
@@ -891,8 +879,7 @@ HB_FUNC_STATIC( QGLFORMAT_SWAPINTERVAL )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->swapInterval (  );
-    hb_retni( i );
+    hb_retni( obj->swapInterval (  ) );
   }
 }
 
@@ -955,8 +942,7 @@ OpenGLVersionFlags openGLVersionFlags ()
 */
 HB_FUNC_STATIC( QGLFORMAT_OPENGLVERSIONFLAGS )
 {
-  int i = QGLFormat::openGLVersionFlags (  );
-  hb_retni( i );
+  hb_retni( (int) QGLFormat::openGLVersionFlags (  ) );
 }
 
 

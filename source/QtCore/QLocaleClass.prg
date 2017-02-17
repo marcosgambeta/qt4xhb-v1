@@ -1418,8 +1418,7 @@ HB_FUNC_STATIC( QLOCALE_TOUINT )
     QString par1 = hb_parc(1);
     bool par2;
     int par3 = ISNIL(3)? 0 : hb_parni(3);
-    uint i = obj->toUInt ( par1, &par2, par3 );
-    hb_retni( i );
+    hb_retni( (uint) obj->toUInt ( par1, &par2, par3 ) );
     hb_storl( par2, 2 );
   }
 }

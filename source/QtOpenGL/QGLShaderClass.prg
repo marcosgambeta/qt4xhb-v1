@@ -253,8 +253,7 @@ HB_FUNC_STATIC( QGLSHADER_SHADERID )
   QGLShader * obj = (QGLShader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    GLuint i = obj->shaderId (  );
-    hb_retni( i );
+    hb_retni( (GLuint) obj->shaderId (  ) );
   }
 }
 
@@ -267,8 +266,7 @@ HB_FUNC_STATIC( QGLSHADER_SHADERTYPE )
   QGLShader * obj = (QGLShader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->shaderType (  );
-    hb_retni( i );
+    hb_retni( (int) obj->shaderType (  ) );
   }
 }
 

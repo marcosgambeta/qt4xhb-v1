@@ -594,8 +594,7 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARMAXIMUM )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->scrollBarMaximum (  (Qt::Orientation) par1 );
-    hb_retni( i );
+    hb_retni( obj->scrollBarMaximum (  (Qt::Orientation) par1 ) );
   }
 }
 
@@ -609,8 +608,7 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARMINIMUM )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->scrollBarMinimum (  (Qt::Orientation) par1 );
-    hb_retni( i );
+    hb_retni( obj->scrollBarMinimum (  (Qt::Orientation) par1 ) );
   }
 }
 
@@ -624,8 +622,7 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARPOLICY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->scrollBarPolicy (  (Qt::Orientation) par1 );
-    hb_retni( i );
+    hb_retni( (int) obj->scrollBarPolicy (  (Qt::Orientation) par1 ) );
   }
 }
 
@@ -639,8 +636,7 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARVALUE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->scrollBarValue (  (Qt::Orientation) par1 );
-    hb_retni( i );
+    hb_retni( obj->scrollBarValue (  (Qt::Orientation) par1 ) );
   }
 }
 

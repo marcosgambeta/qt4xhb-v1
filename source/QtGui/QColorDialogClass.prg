@@ -216,8 +216,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_OPTIONS )
   QColorDialog * obj = (QColorDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->options (  );
-    hb_retni( i );
+    hb_retni( (int) obj->options (  ) );
   }
 }
 
@@ -328,8 +327,7 @@ int customCount ()
 */
 HB_FUNC_STATIC( QCOLORDIALOG_CUSTOMCOUNT )
 {
-  int i = QColorDialog::customCount (  );
-  hb_retni( i );
+  hb_retni( QColorDialog::customCount (  ) );
 }
 
 

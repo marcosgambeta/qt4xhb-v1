@@ -189,8 +189,7 @@ HB_FUNC_STATIC( QTCPSERVER_MAXPENDINGCONNECTIONS )
   QTcpServer * obj = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->maxPendingConnections (  );
-    hb_retni( i );
+    hb_retni( obj->maxPendingConnections (  ) );
   }
 }
 
@@ -245,8 +244,7 @@ HB_FUNC_STATIC( QTCPSERVER_SERVERERROR )
   QTcpServer * obj = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->serverError (  );
-    hb_retni( i );
+    hb_retni( (int) obj->serverError (  ) );
   }
 }
 
@@ -317,8 +315,7 @@ HB_FUNC_STATIC( QTCPSERVER_SOCKETDESCRIPTOR )
   QTcpServer * obj = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->socketDescriptor (  );
-    hb_retni( i );
+    hb_retni( obj->socketDescriptor (  ) );
   }
 }
 

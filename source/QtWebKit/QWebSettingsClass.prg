@@ -173,8 +173,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_FONTSIZE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->fontSize (  (QWebSettings::FontSize) par1 );
-    hb_retni( i );
+    hb_retni( obj->fontSize (  (QWebSettings::FontSize) par1 ) );
   }
 }
 
@@ -427,8 +426,7 @@ int maximumPagesInCache ()
 */
 HB_FUNC_STATIC( QWEBSETTINGS_MAXIMUMPAGESINCACHE )
 {
-  int i = QWebSettings::maximumPagesInCache (  );
-  hb_retni( i );
+  hb_retni( QWebSettings::maximumPagesInCache (  ) );
 }
 
 

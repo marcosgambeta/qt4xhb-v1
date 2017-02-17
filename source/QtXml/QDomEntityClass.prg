@@ -129,8 +129,7 @@ HB_FUNC_STATIC( QDOMENTITY_NODETYPE )
   QDomEntity * obj = (QDomEntity *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->nodeType (  );
-    hb_retni( i );
+    hb_retni( (int) obj->nodeType (  ) );
   }
 }
 

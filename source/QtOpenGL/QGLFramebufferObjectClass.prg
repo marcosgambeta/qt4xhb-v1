@@ -229,8 +229,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_ATTACHMENT )
   QGLFramebufferObject * obj = (QGLFramebufferObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->attachment (  );
-    hb_retni( i );
+    hb_retni( (int) obj->attachment (  )i );
   }
 }
 
@@ -318,8 +317,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_HANDLE )
   QGLFramebufferObject * obj = (QGLFramebufferObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    GLuint i = obj->handle (  );
-    hb_retni( i );
+    hb_retni( (GLuint) obj->handle (  ) );
   }
 }
 
@@ -385,8 +383,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_TEXTURE )
   QGLFramebufferObject * obj = (QGLFramebufferObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    GLuint i = obj->texture (  );
-    hb_retni( i );
+    hb_retni( (GLuint) obj->texture (  ) );
   }
 }
 

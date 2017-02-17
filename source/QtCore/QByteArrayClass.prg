@@ -2249,8 +2249,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOUINT )
   {
     bool par1;
     int par2 = ISNIL(2)? 10 : hb_parni(2);
-    uint i = obj->toUInt ( &par1, par2 );
-    hb_retni( i );
+    hb_retni( (uint) obj->toUInt ( &par1, par2 ) );
     hb_storl( par1, 1 );
   }
 }

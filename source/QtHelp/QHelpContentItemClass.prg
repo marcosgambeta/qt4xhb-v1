@@ -142,8 +142,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_CHILDCOUNT )
   QHelpContentItem * obj = (QHelpContentItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->childCount (  );
-    hb_retni( i );
+    hb_retni( obj->childCount (  ) );
   }
 }
 
@@ -157,8 +156,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_CHILDPOSITION )
   if( obj )
   {
     QHelpContentItem * par1 = (QHelpContentItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->childPosition ( par1 );
-    hb_retni( i );
+    hb_retni( obj->childPosition ( par1 ) );
   }
 }
 
@@ -185,8 +183,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_ROW )
   QHelpContentItem * obj = (QHelpContentItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->row (  );
-    hb_retni( i );
+    hb_retni( obj->row (  ) );
   }
 }
 

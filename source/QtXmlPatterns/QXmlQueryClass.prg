@@ -554,8 +554,7 @@ HB_FUNC_STATIC( QXMLQUERY_QUERYLANGUAGE )
   QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->queryLanguage (  );
-    hb_retni( i );
+    hb_retni( (int) obj->queryLanguage (  ) );
   }
 }
 

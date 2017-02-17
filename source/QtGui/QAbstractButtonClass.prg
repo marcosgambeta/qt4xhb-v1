@@ -142,8 +142,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEATDELAY )
   QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->autoRepeatDelay (  );
-    hb_retni( i );
+    hb_retni( obj->autoRepeatDelay (  ) );
   }
 }
 
@@ -156,8 +155,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEATINTERVAL )
   QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->autoRepeatInterval (  );
-    hb_retni( i );
+    hb_retni( obj->autoRepeatInterval (  ) );
   }
 }
 

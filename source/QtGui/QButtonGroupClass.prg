@@ -236,8 +236,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_CHECKEDID )
   QButtonGroup * obj = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->checkedId (  );
-    hb_retni( i );
+    hb_retni( obj->checkedId (  ) );
   }
 }
 
@@ -264,8 +263,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ID )
   if( obj )
   {
     QAbstractButton * par1 = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->id ( par1 );
-    hb_retni( i );
+    hb_retni( obj->id ( par1 ) );
   }
 }
 

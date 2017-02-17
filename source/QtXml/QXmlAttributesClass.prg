@@ -187,8 +187,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_COUNT )
   QXmlAttributes * obj = (QXmlAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->count (  );
-    hb_retni( i );
+    hb_retni( obj->count (  ) );
   }
 }
 
@@ -202,8 +201,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_INDEX1 )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    int i = obj->index ( par1 );
-    hb_retni( i );
+    hb_retni( obj->index ( par1 ) );
   }
 }
 
@@ -217,8 +215,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_INDEX2 )
   if( obj )
   {
     QLatin1String * par1 = (QLatin1String *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->index ( *par1 );
-    hb_retni( i );
+    hb_retni( obj->index ( *par1 ) );
   }
 }
 
@@ -233,8 +230,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_INDEX3 )
   {
     QString par1 = hb_parc(1);
     QString par2 = hb_parc(2);
-    int i = obj->index ( par1, par2 );
-    hb_retni( i );
+    hb_retni( obj->index ( par1, par2 ) );
   }
 }
 
@@ -267,8 +263,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_LENGTH )
   QXmlAttributes * obj = (QXmlAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->length (  );
-    hb_retni( i );
+    hb_retni( obj->length (  ) );
   }
 }
 

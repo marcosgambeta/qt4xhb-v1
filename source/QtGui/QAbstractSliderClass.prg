@@ -163,8 +163,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_MAXIMUM )
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->maximum (  );
-    hb_retni( i );
+    hb_retni( obj->maximum (  ) );
   }
 }
 
@@ -177,8 +176,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_MINIMUM )
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->minimum (  );
-    hb_retni( i );
+    hb_retni( obj->minimum (  ) );
   }
 }
 
@@ -191,8 +189,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ORIENTATION )
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->orientation (  );
-    hb_retni( i );
+    hb_retni( (int) obj->orientation (  ) );
   }
 }
 
@@ -205,8 +202,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_PAGESTEP )
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->pageStep (  );
-    hb_retni( i );
+    hb_retni( (int) obj->pageStep (  ) );
   }
 }
 
@@ -370,8 +366,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SINGLESTEP )
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->singleStep (  );
-    hb_retni( i );
+    hb_retni( obj->singleStep (  ) );
   }
 }
 
@@ -384,8 +379,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SLIDERPOSITION )
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->sliderPosition (  );
-    hb_retni( i );
+    hb_retni( obj->sliderPosition (  ) );
   }
 }
 
@@ -413,8 +407,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_VALUE )
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->value (  );
-    hb_retni( i );
+    hb_retni( obj->value (  ) );
   }
 }
 

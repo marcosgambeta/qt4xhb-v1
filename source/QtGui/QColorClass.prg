@@ -391,8 +391,7 @@ HB_FUNC_STATIC( QCOLOR_ALPHA )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->alpha (  );
-    hb_retni( i );
+    hb_retni( obj->alpha (  ) );
   }
 }
 
@@ -419,8 +418,7 @@ HB_FUNC_STATIC( QCOLOR_BLACK )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->black (  );
-    hb_retni( i );
+    hb_retni( obj->black (  ) );
   }
 }
 
@@ -447,8 +445,7 @@ HB_FUNC_STATIC( QCOLOR_BLUE )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->blue (  );
-    hb_retni( i );
+    hb_retni( obj->blue (  ) );
   }
 }
 
@@ -490,8 +487,7 @@ HB_FUNC_STATIC( QCOLOR_CYAN )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->cyan (  );
-    hb_retni( i );
+    hb_retni( obj->cyan (  ) );
   }
 }
 
@@ -713,8 +709,7 @@ HB_FUNC_STATIC( QCOLOR_GREEN )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->green (  );
-    hb_retni( i );
+    hb_retni( obj->green (  ) );
   }
 }
 
@@ -741,8 +736,7 @@ HB_FUNC_STATIC( QCOLOR_HSLHUE )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->hslHue (  );
-    hb_retni( i );
+    hb_retni( obj->hslHue (  ) );
   }
 }
 
@@ -769,8 +763,7 @@ HB_FUNC_STATIC( QCOLOR_HSLSATURATION )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->hslSaturation (  );
-    hb_retni( i );
+    hb_retni( obj->hslSaturation (  ) );
   }
 }
 
@@ -797,8 +790,7 @@ HB_FUNC_STATIC( QCOLOR_HSVHUE )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->hsvHue (  );
-    hb_retni( i );
+    hb_retni( obj->hsvHue (  ) );
   }
 }
 
@@ -825,8 +817,7 @@ HB_FUNC_STATIC( QCOLOR_HSVSATURATION )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->hsvSaturation (  );
-    hb_retni( i );
+    hb_retni( obj->hsvSaturation (  ) );
   }
 }
 
@@ -853,8 +844,7 @@ HB_FUNC_STATIC( QCOLOR_HUE )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->hue (  );
-    hb_retni( i );
+    hb_retni( obj->hue (  ) );
   }
 }
 
@@ -909,8 +899,7 @@ HB_FUNC_STATIC( QCOLOR_LIGHTNESS )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->lightness (  );
-    hb_retni( i );
+    hb_retni( obj->lightness (  ) );
   }
 }
 
@@ -937,8 +926,7 @@ HB_FUNC_STATIC( QCOLOR_MAGENTA )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->magenta (  );
-    hb_retni( i );
+    hb_retni( obj->magenta (  ) );
   }
 }
 
@@ -979,8 +967,7 @@ HB_FUNC_STATIC( QCOLOR_RED )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->red (  );
-    hb_retni( i );
+    hb_retni( obj->red (  ) );
   }
 }
 
@@ -1035,8 +1022,7 @@ HB_FUNC_STATIC( QCOLOR_SATURATION )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->saturation (  );
-    hb_retni( i );
+    hb_retni( obj->saturation (  ) );
   }
 }
 
@@ -1393,8 +1379,7 @@ HB_FUNC_STATIC( QCOLOR_SPEC )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->spec (  );
-    hb_retni( i );
+    hb_retni( (int) obj->spec (  ) );
   }
 }
 
@@ -1463,8 +1448,7 @@ HB_FUNC_STATIC( QCOLOR_VALUE )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->value (  );
-    hb_retni( i );
+    hb_retni( obj->value (  ) );
   }
 }
 
@@ -1491,8 +1475,7 @@ HB_FUNC_STATIC( QCOLOR_YELLOW )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->yellow (  );
-    hb_retni( i );
+    hb_retni( obj->yellow (  ) );
   }
 }
 

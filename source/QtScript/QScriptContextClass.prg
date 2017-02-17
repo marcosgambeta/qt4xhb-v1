@@ -168,8 +168,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_ARGUMENTCOUNT )
   QScriptContext * obj = (QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->argumentCount (  );
-    hb_retni( i );
+    hb_retni( (int) obj->argumentCount (  ) );
   }
 }
 
@@ -304,8 +303,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_STATE )
   QScriptContext * obj = (QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->state (  );
-    hb_retni( i );
+    hb_retni( (int) obj->state (  ) );
   }
 }
 

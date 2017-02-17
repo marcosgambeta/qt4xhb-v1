@@ -271,8 +271,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_COLUMNCOUNT )
   if( obj )
   {
     QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->columnCount ( par1 );
-    hb_retni( i );
+    hb_retni( obj->columnCount ( par1 ) );
   }
 }
 
@@ -366,8 +365,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_ROWCOUNT )
   if( obj )
   {
     QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->rowCount ( par1 );
-    hb_retni( i );
+    hb_retni( obj->rowCount ( par1 ) );
   }
 }
 

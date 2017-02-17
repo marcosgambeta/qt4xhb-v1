@@ -175,8 +175,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_USERACTIONCOUNT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->userActionCount ( par1 );
-    hb_retni( i );
+    hb_retni( (int) obj->userActionCount ( par1 ) );
   }
 }
 

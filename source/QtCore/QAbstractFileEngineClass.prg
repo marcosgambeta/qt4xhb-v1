@@ -423,8 +423,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_OWNERID )
   if( obj )
   {
     int par1 = hb_parni(1);
-    uint i = obj->ownerId (  (QAbstractFileEngine::FileOwner) par1 );
-    hb_retni( i );
+    hb_retni( (uint) obj->ownerId (  (QAbstractFileEngine::FileOwner) par1 ) );
   }
 }
 

@@ -146,8 +146,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_HORIZONTALSCROLLBARPOLICY )
   QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->horizontalScrollBarPolicy (  );
-    hb_retni( i );
+    hb_retni( (int) obj->horizontalScrollBarPolicy (  ) );
   }
 }
 
@@ -323,8 +322,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VERTICALSCROLLBARPOLICY )
   QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->verticalScrollBarPolicy (  );
-    hb_retni( i );
+    hb_retni( (int) obj->verticalScrollBarPolicy (  ) );
   }
 }
 

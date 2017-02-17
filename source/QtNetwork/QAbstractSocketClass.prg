@@ -205,8 +205,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ERROR )
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->error (  );
-    hb_retni( i );
+    hb_retni( (int) obj->error (  ) );
   }
 }
 
@@ -405,8 +404,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SOCKETDESCRIPTOR )
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->socketDescriptor (  );
-    hb_retni( i );
+    hb_retni( obj->socketDescriptor (  ) );
   }
 }
 
@@ -434,8 +432,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SOCKETTYPE )
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->socketType (  );
-    hb_retni( i );
+    hb_retni( (int) obj->socketType (  ) );
   }
 }
 
@@ -448,8 +445,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_STATE )
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->state (  );
-    hb_retni( i );
+    hb_retni( (int) obj->state (  ) );
   }
 }
 

@@ -236,8 +236,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_NETWORKACCESSIBLE )
   QNetworkAccessManager * obj = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->networkAccessible (  );
-    hb_retni( i );
+    hb_retni( (int) obj->networkAccessible (  ) );
   }
 }
 

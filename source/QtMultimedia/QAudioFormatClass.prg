@@ -213,8 +213,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_FREQUENCY )
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->frequency (  );
-    hb_retni( i );
+    hb_retni( obj->frequency (  ) );
   }
 }
 
@@ -242,8 +241,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SAMPLERATE )
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->sampleRate (  );
-    hb_retni( i );
+    hb_retni( obj->sampleRate (  ) );
   }
 }
 
@@ -271,8 +269,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_CHANNELS )
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->channels (  );
-    hb_retni( i );
+    hb_retni( obj->channels (  ) );
   }
 }
 
@@ -300,8 +297,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_CHANNELCOUNT )
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->channelCount (  );
-    hb_retni( i );
+    hb_retni( obj->channelCount (  ) );
   }
 }
 
@@ -329,8 +325,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SAMPLESIZE )
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->sampleSize (  );
-    hb_retni( i );
+    hb_retni( obj->sampleSize (  ) );
   }
 }
 
@@ -387,8 +382,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_BYTEORDER )
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->byteOrder (  );
-    hb_retni( i );
+    hb_retni( (int) obj->byteOrder (  ) );
   }
 }
 
@@ -401,8 +395,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SAMPLETYPE )
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->sampleType (  );
-    hb_retni( i );
+    hb_retni( (int) obj->sampleType (  ) );
   }
 }
 

@@ -160,8 +160,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_BUFFERSIZE )
   QAudioOutput * obj = (QAudioOutput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->bufferSize (  );
-    hb_retni( i );
+    hb_retni( obj->bufferSize (  ) );
   }
 }
 
@@ -174,8 +173,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_BYTESFREE )
   QAudioOutput * obj = (QAudioOutput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->bytesFree (  );
-    hb_retni( i );
+    hb_retni( obj->bytesFree (  ) );
   }
 }
 
@@ -202,8 +200,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_ERROR )
   QAudioOutput * obj = (QAudioOutput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->error (  );
-    hb_retni( i );
+    hb_retni( (int) obj->error (  ) );
   }
 }
 
@@ -230,8 +227,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_NOTIFYINTERVAL )
   QAudioOutput * obj = (QAudioOutput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->notifyInterval (  );
-    hb_retni( i );
+    hb_retni( obj->notifyInterval (  ) );
   }
 }
 
@@ -244,8 +240,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_PERIODSIZE )
   QAudioOutput * obj = (QAudioOutput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->periodSize (  );
-    hb_retni( i );
+    hb_retni( obj->periodSize (  ) );
   }
 }
 
@@ -374,8 +369,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_STATE )
   QAudioOutput * obj = (QAudioOutput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->state (  );
-    hb_retni( i );
+    hb_retni( (int) obj->state (  ) );
   }
 }
 

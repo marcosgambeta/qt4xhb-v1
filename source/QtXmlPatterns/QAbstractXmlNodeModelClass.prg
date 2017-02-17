@@ -122,8 +122,7 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_COMPAREORDER )
   {
     QXmlNodeModelIndex * par1 = (QXmlNodeModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QXmlNodeModelIndex * par2 = (QXmlNodeModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->compareOrder ( *par1, *par2 );
-    hb_retni( i );
+    hb_retni( (int) obj->compareOrder ( *par1, *par2 ) );
   }
 }
 
@@ -167,8 +166,7 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_KIND )
   if( obj )
   {
     QXmlNodeModelIndex * par1 = (QXmlNodeModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->kind ( *par1 );
-    hb_retni( i );
+    hb_retni( (int) obj->kind ( *par1 ) );
   }
 }
 

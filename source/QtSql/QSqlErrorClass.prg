@@ -230,8 +230,7 @@ HB_FUNC_STATIC( QSQLERROR_NUMBER )
   QSqlError * obj = (QSqlError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->number (  );
-    hb_retni( i );
+    hb_retni( obj->number (  ) );
   }
 }
 
@@ -318,8 +317,7 @@ HB_FUNC_STATIC( QSQLERROR_TYPE )
   QSqlError * obj = (QSqlError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->type (  );
-    hb_retni( i );
+    hb_retni( (int) obj->type (  ) );
   }
 }
 

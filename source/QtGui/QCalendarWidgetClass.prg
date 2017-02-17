@@ -148,8 +148,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_DATEEDITACCEPTDELAY )
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->dateEditAcceptDelay (  );
-    hb_retni( i );
+    hb_retni( obj->dateEditAcceptDelay (  ) );
   }
 }
 
@@ -193,8 +192,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_FIRSTDAYOFWEEK )
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->firstDayOfWeek (  );
-    hb_retni( i );
+    hb_retni( (int) obj->firstDayOfWeek (  ) );
   }
 }
 
@@ -221,8 +219,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_HORIZONTALHEADERFORMAT )
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->horizontalHeaderFormat (  );
-    hb_retni( i );
+    hb_retni( (int) obj->horizontalHeaderFormat (  ) );
   }
 }
 
@@ -302,8 +299,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_MONTHSHOWN )
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->monthShown (  );
-    hb_retni( i );
+    hb_retni( obj->monthShown (  ) );
   }
 }
 
@@ -330,8 +326,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SELECTIONMODE )
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->selectionMode (  );
-    hb_retni( i );
+    hb_retni( (int) obj->selectionMode (  ) );
   }
 }
 
@@ -511,8 +506,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_VERTICALHEADERFORMAT )
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->verticalHeaderFormat (  );
-    hb_retni( i );
+    hb_retni( (int) obj->verticalHeaderFormat (  ) );
   }
 }
 
@@ -540,8 +534,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_YEARSHOWN )
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->yearShown (  );
-    hb_retni( i );
+    hb_retni( obj->yearShown (  ) );
   }
 }
 

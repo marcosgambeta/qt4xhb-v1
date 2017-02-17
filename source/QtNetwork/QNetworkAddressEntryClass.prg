@@ -227,8 +227,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_PREFIXLENGTH )
   QNetworkAddressEntry * obj = (QNetworkAddressEntry *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->prefixLength (  );
-    hb_retni( i );
+    hb_retni( (int) obj->prefixLength (  ) );
   }
 }
 

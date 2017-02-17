@@ -238,8 +238,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_FLAGS )
   QNetworkInterface * obj = (QNetworkInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->flags (  );
-    hb_retni( i );
+    hb_retni( (int) obj->flags (  ) );
   }
 }
 
@@ -280,8 +279,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_INDEX )
   QNetworkInterface * obj = (QNetworkInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->index (  );
-    hb_retni( i );
+    hb_retni( obj->index (  ) );
   }
 }
 

@@ -234,8 +234,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_FRAMEHEIGHT )
   QVideoSurfaceFormat * obj = (QVideoSurfaceFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->frameHeight (  );
-    hb_retni( i );
+    hb_retni( obj->frameHeight (  ) );
   }
 }
 
@@ -276,8 +275,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_FRAMEWIDTH )
   QVideoSurfaceFormat * obj = (QVideoSurfaceFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->frameWidth (  );
-    hb_retni( i );
+    hb_retni( obj->frameWidth (  ) );
   }
 }
 
@@ -290,8 +288,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_HANDLETYPE )
   QVideoSurfaceFormat * obj = (QVideoSurfaceFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->handleType (  );
-    hb_retni( i );
+    hb_retni( (int) obj->handleType (  ) );
   }
 }
 
@@ -331,8 +328,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_PIXELFORMAT )
   QVideoSurfaceFormat * obj = (QVideoSurfaceFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->pixelFormat (  );
-    hb_retni( i );
+    hb_retni( (int) obj->pixelFormat (  ) );
   }
 }
 
@@ -404,8 +400,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SCANLINEDIRECTION )
   QVideoSurfaceFormat * obj = (QVideoSurfaceFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->scanLineDirection (  );
-    hb_retni( i );
+    hb_retni( (int) obj->scanLineDirection (  ) );
   }
 }
 
@@ -614,8 +609,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_YCBCRCOLORSPACE )
   QVideoSurfaceFormat * obj = (QVideoSurfaceFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->yCbCrColorSpace (  );
-    hb_retni( i );
+    hb_retni( (int) obj->yCbCrColorSpace (  ) );
   }
 }
 

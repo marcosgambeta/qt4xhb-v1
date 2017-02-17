@@ -296,8 +296,7 @@ HB_FUNC_STATIC( QSQLFIELD_LENGTH )
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->length (  );
-    hb_retni( i );
+    hb_retni( obj->length (  ) );
   }
 }
 
@@ -324,8 +323,7 @@ HB_FUNC_STATIC( QSQLFIELD_PRECISION )
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->precision (  );
-    hb_retni( i );
+    hb_retni( obj->precision (  ) );
   }
 }
 
@@ -338,8 +336,7 @@ HB_FUNC_STATIC( QSQLFIELD_REQUIREDSTATUS )
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->requiredStatus (  );
-    hb_retni( i );
+    hb_retni( (int) obj->requiredStatus (  ) );
   }
 }
 
@@ -517,8 +514,7 @@ HB_FUNC_STATIC( QSQLFIELD_TYPE )
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->type (  );
-    hb_retni( i );
+    hb_retni( (int) obj->type (  ) );
   }
 }
 

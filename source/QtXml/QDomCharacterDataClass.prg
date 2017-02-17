@@ -195,8 +195,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_LENGTH )
   QDomCharacterData * obj = (QDomCharacterData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    uint i = obj->length (  );
-    hb_retni( i );
+    hb_retni( (uint) obj->length (  ) );
   }
 }
 
@@ -209,8 +208,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_NODETYPE )
   QDomCharacterData * obj = (QDomCharacterData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->nodeType (  );
-    hb_retni( i );
+    hb_retni( (int) obj->nodeType (  ) );
   }
 }
 

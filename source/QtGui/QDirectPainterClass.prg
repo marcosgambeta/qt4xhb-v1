@@ -320,8 +320,7 @@ int linestep ()
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_LINESTEP )
 {
-  int i = QDirectPainter::linestep (  );
-  hb_retni( i );
+  hb_retni( QDirectPainter::linestep (  ) );
 }
 
 
@@ -340,8 +339,7 @@ int screenDepth ()
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_SCREENDEPTH )
 {
-  int i = QDirectPainter::screenDepth (  );
-  hb_retni( i );
+  hb_retni( QDirectPainter::screenDepth (  ) );
 }
 
 
@@ -350,8 +348,7 @@ int screenHeight ()
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_SCREENHEIGHT )
 {
-  int i = QDirectPainter::screenHeight (  );
-  hb_retni( i );
+  hb_retni( QDirectPainter::screenHeight (  ) );
 }
 
 
@@ -360,8 +357,7 @@ int screenWidth ()
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_SCREENWIDTH )
 {
-  int i = QDirectPainter::screenWidth (  );
-  hb_retni( i );
+  hb_retni( QDirectPainter::screenWidth (  ) );
 }
 
 

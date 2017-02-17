@@ -129,8 +129,7 @@ HB_FUNC_STATIC( QDIALOG_RESULT )
   QDialog * obj = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->result (  );
-    hb_retni( i );
+    hb_retni( obj->result (  ) );
   }
 }
 
@@ -260,8 +259,7 @@ HB_FUNC_STATIC( QDIALOG_EXEC )
   QDialog * obj = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->exec (  );
-    hb_retni( i );
+    hb_retni( obj->exec (  ) );
   }
 }
 

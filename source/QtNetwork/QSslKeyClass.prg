@@ -242,8 +242,7 @@ HB_FUNC_STATIC( QSSLKEY_ALGORITHM )
   QSslKey * obj = (QSslKey *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->algorithm (  );
-    hb_retni( i );
+    hb_retni( (int) obj->algorithm (  ) );
   }
 }
 
@@ -284,8 +283,7 @@ HB_FUNC_STATIC( QSSLKEY_LENGTH )
   QSslKey * obj = (QSslKey *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->length (  );
-    hb_retni( i );
+    hb_retni( obj->length (  ) );
   }
 }
 
@@ -328,8 +326,7 @@ HB_FUNC_STATIC( QSSLKEY_TYPE )
   QSslKey * obj = (QSslKey *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->type (  );
-    hb_retni( i );
+    hb_retni( (int) obj->type (  ) );
   }
 }
 

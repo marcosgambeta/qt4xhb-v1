@@ -203,8 +203,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_COUNT )
   QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->count (  );
-    hb_retni( i );
+    hb_retni( obj->count (  ) );
   }
 }
 
@@ -245,8 +244,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_LENGTH )
   QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    uint i = obj->length (  );
-    hb_retni( i );
+    hb_retni( (uint) obj->length (  ) );
   }
 }
 
@@ -351,8 +349,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_SIZE )
   QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->size (  );
-    hb_retni( i );
+    hb_retni( obj->size (  ) );
   }
 }
 

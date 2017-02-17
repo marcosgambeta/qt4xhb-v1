@@ -202,8 +202,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERTYPE )
   QNetworkConfiguration * obj = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->bearerType (  );
-    hb_retni( i );
+    hb_retni( (int) obj->bearerType (  ) );
   }
 }
 
@@ -332,8 +331,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_PURPOSE )
   QNetworkConfiguration * obj = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->purpose (  );
-    hb_retni( i );
+    hb_retni( (int) obj->purpose (  ) );
   }
 }
 
@@ -346,8 +344,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_STATE )
   QNetworkConfiguration * obj = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->state (  );
-    hb_retni( i );
+    hb_retni( (int) obj->state (  ) );
   }
 }
 
@@ -360,8 +357,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_TYPE )
   QNetworkConfiguration * obj = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->type (  );
-    hb_retni( i );
+    hb_retni( (int) obj->type (  ) );
   }
 }
 

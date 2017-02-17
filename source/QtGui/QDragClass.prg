@@ -120,8 +120,7 @@ HB_FUNC_STATIC( QDRAG_EXEC1 )
   if( obj )
   {
     int par1 = ISNIL(1)? (int) Qt::MoveAction : hb_parni(1);
-    int i = obj->exec (  (Qt::DropActions) par1 );
-    hb_retni( i );
+    hb_retni( (int) obj->exec (  (Qt::DropActions) par1 ) );
   }
 }
 
@@ -136,8 +135,7 @@ HB_FUNC_STATIC( QDRAG_EXEC2 )
   {
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
-    int i = obj->exec (  (Qt::DropActions) par1,  (Qt::DropAction) par2 );
-    hb_retni( i );
+    hb_retni( (int) obj->exec (  (Qt::DropActions) par1,  (Qt::DropAction) par2 ) );
   }
 }
 

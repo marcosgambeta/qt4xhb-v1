@@ -279,8 +279,7 @@ HB_FUNC_STATIC( QSSLCIPHER_PROTOCOL )
   QSslCipher * obj = (QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->protocol (  );
-    hb_retni( i );
+    hb_retni( (int) obj->protocol (  ) );
   }
 }
 
@@ -307,8 +306,7 @@ HB_FUNC_STATIC( QSSLCIPHER_SUPPORTEDBITS )
   QSslCipher * obj = (QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->supportedBits (  );
-    hb_retni( i );
+    hb_retni( obj->supportedBits (  ) );
   }
 }
 
@@ -321,8 +319,7 @@ HB_FUNC_STATIC( QSSLCIPHER_USEDBITS )
   QSslCipher * obj = (QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->usedBits (  );
-    hb_retni( i );
+    hb_retni( obj->usedBits (  ) );
   }
 }
 

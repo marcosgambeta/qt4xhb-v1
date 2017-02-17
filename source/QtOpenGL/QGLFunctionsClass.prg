@@ -481,8 +481,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_GLCREATEPROGRAM )
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    GLuint i = obj->glCreateProgram (  );
-    hb_retni( i );
+    hb_retni( (GLuint) obj->glCreateProgram (  ) );
   }
 }
 
@@ -496,8 +495,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_GLCREATESHADER )
   if( obj )
   {
     GLenum par1 = hb_parni(1);
-    GLuint i = obj->glCreateShader ( par1 );
-    hb_retni( i );
+    hb_retni( (GLuint) obj->glCreateShader ( par1 ) );
   }
 }
 
@@ -665,8 +663,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_GLGETATTRIBLOCATION )
   {
     GLuint par1 = hb_parni(1);
     const char * par2 = hb_parc(2);
-    int i = obj->glGetAttribLocation ( par1,  (const char *) par2 );
-    hb_retni( i );
+    hb_retni( obj->glGetAttribLocation ( par1,  (const char *) par2 ) );
   }
 }
 
@@ -690,8 +687,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_GLGETUNIFORMLOCATION )
   {
     GLuint par1 = hb_parni(1);
     const char * par2 = hb_parc(2);
-    int i = obj->glGetUniformLocation ( par1,  (const char *) par2 );
-    hb_retni( i );
+    hb_retni( obj->glGetUniformLocation ( par1,  (const char *) par2 ) );
   }
 }
 
@@ -1205,8 +1201,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_OPENGLFEATURES )
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->openGLFeatures (  );
-    hb_retni( i );
+    hb_retni( (int) obj->openGLFeatures (  ) );
   }
 }
 

@@ -441,8 +441,7 @@ HB_FUNC_STATIC( QURLINFO_PERMISSIONS )
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->permissions (  );
-    hb_retni( i );
+    hb_retni( obj->permissions (  ) );
   }
 }
 

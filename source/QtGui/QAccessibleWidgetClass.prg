@@ -115,8 +115,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_CHILDAT )
   {
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
-    int i = obj->childAt ( par1, par2 );
-    hb_retni( i );
+    hb_retni( obj->childAt ( par1, par2 ) );
   }
 }
 
@@ -129,8 +128,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_CHILDCOUNT )
   QAccessibleWidget * obj = (QAccessibleWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->childCount (  );
-    hb_retni( i );
+    hb_retni( obj->childCount (  ) );
   }
 }
 
@@ -167,8 +165,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_INDEXOFCHILD )
   if( obj )
   {
     const QAccessibleInterface * par1 = (const QAccessibleInterface *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->indexOfChild ( par1 );
-    hb_retni( i );
+    hb_retni( obj->indexOfChild ( par1 ) );
   }
 }
 
@@ -200,8 +197,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_RELATIONTO )
     int par1 = hb_parni(1);
     const QAccessibleInterface * par2 = (const QAccessibleInterface *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par3 = hb_parni(3);
-    int i = obj->relationTo ( par1, par2, par3 );
-    hb_retni( i );
+    hb_retni( (int) obj->relationTo ( par1, par2, par3 ) );
   }
 }
 
@@ -215,8 +211,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_ROLE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->role ( par1 );
-    hb_retni( i );
+    hb_retni( (int) obj->role ( par1 ) );
   }
 }
 
@@ -230,8 +225,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_STATE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->state ( par1 );
-    hb_retni( i );
+    hb_retni( (int) obj->state ( par1 ) );
   }
 }
 
@@ -261,8 +255,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_USERACTIONCOUNT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->userActionCount ( par1 );
-    hb_retni( i );
+    hb_retni( obj->userActionCount ( par1 ) );
   }
 }
 

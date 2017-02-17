@@ -292,8 +292,7 @@ HB_FUNC_STATIC( QSQLQUERY_AT )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->at (  );
-    hb_retni( i );
+    hb_retni( obj->at (  ) );
   }
 }
 
@@ -673,8 +672,7 @@ HB_FUNC_STATIC( QSQLQUERY_NUMROWSAFFECTED )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->numRowsAffected (  );
-    hb_retni( i );
+    hb_retni( obj->numRowsAffected (  ) );
   }
 }
 
@@ -687,8 +685,7 @@ HB_FUNC_STATIC( QSQLQUERY_NUMERICALPRECISIONPOLICY )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->numericalPrecisionPolicy (  );
-    hb_retni( i );
+    hb_retni( (int) obj->numericalPrecisionPolicy (  ) );
   }
 }
 
@@ -801,8 +798,7 @@ HB_FUNC_STATIC( QSQLQUERY_SIZE )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->size (  );
-    hb_retni( i );
+    hb_retni( obj->size (  ) );
   }
 }
 

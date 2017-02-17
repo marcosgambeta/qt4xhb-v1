@@ -614,8 +614,7 @@ HB_FUNC_STATIC( QDATETIME_TOTIME_T )
   QDateTime * obj = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    uint i = obj->toTime_t (  );
-    hb_retni( i );
+    hb_retni( (uint) obj->toTime_t (  ) );
   }
 }
 

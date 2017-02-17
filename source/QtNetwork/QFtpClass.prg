@@ -151,8 +151,7 @@ HB_FUNC_STATIC( QFTP_CD )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    int i = obj->cd ( par1 );
-    hb_retni( i );
+    hb_retni( obj->cd ( par1 ) );
   }
 }
 
@@ -179,8 +178,7 @@ HB_FUNC_STATIC( QFTP_CLOSE )
   QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->close (  );
-    hb_retni( i );
+    hb_retni( obj->close (  ) );
   }
 }
 
@@ -195,8 +193,7 @@ HB_FUNC_STATIC( QFTP_CONNECTTOHOST )
   {
     QString par1 = hb_parc(1);
     quint16 par2 = ISNIL(2)? 21 : hb_parni(2);
-    int i = obj->connectToHost ( par1, par2 );
-    hb_retni( i );
+    hb_retni( obj->connectToHost ( par1, par2 ) );
   }
 }
 
@@ -209,8 +206,7 @@ HB_FUNC_STATIC( QFTP_CURRENTCOMMAND )
   QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->currentCommand (  );
-    hb_retni( i );
+    hb_retni( (int) obj->currentCommand (  ) );
   }
 }
 
@@ -237,8 +233,7 @@ HB_FUNC_STATIC( QFTP_CURRENTID )
   QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->currentId (  );
-    hb_retni( i );
+    hb_retni( obj->currentId (  ) );
   }
 }
 
@@ -251,8 +246,7 @@ HB_FUNC_STATIC( QFTP_ERROR )
   QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->error (  );
-    hb_retni( i );
+    hb_retni( (int) obj->error (  ) );
   }
 }
 
@@ -282,8 +276,7 @@ HB_FUNC_STATIC( QFTP_GET )
     QString par1 = hb_parc(1);
     QIODevice * par2 = ISNIL(2)? 0 : (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par3 = ISNIL(3)? (int) QFtp::Binary : hb_parni(3);
-    int i = obj->get ( par1, par2,  (QFtp::TransferType) par3 );
-    hb_retni( i );
+    hb_retni( obj->get ( par1, par2,  (QFtp::TransferType) par3 ) );
   }
 }
 
@@ -310,8 +303,7 @@ HB_FUNC_STATIC( QFTP_LIST )
   if( obj )
   {
     QString par1 = ISNIL(1)? QString() : hb_parc(1);
-    int i = obj->list ( par1 );
-    hb_retni( i );
+    hb_retni( obj->list ( par1 ) );
   }
 }
 
@@ -326,8 +318,7 @@ HB_FUNC_STATIC( QFTP_LOGIN )
   {
     QString par1 = ISNIL(1)? QString() : hb_parc(1);
     QString par2 = ISNIL(2)? QString() : hb_parc(2);
-    int i = obj->login ( par1, par2 );
-    hb_retni( i );
+    hb_retni( obj->login ( par1, par2 ) );
   }
 }
 
@@ -341,8 +332,7 @@ HB_FUNC_STATIC( QFTP_MKDIR )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    int i = obj->mkdir ( par1 );
-    hb_retni( i );
+    hb_retni( obj->mkdir ( par1 ) );
   }
 }
 
@@ -358,8 +348,7 @@ HB_FUNC_STATIC( QFTP_PUT1 )
     QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QString par2 = hb_parc(2);
     int par3 = ISNIL(3)? (int) QFtp::Binary : hb_parni(3);
-    int i = obj->put ( par1, par2,  (QFtp::TransferType) par3 );
-    hb_retni( i );
+    hb_retni( obj->put ( par1, par2,  (QFtp::TransferType) par3 ) );
   }
 }
 
@@ -375,8 +364,7 @@ HB_FUNC_STATIC( QFTP_PUT2 )
     QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QString par2 = hb_parc(2);
     int par3 = ISNIL(3)? (int) QFtp::Binary : hb_parni(3);
-    int i = obj->put ( *par1, par2,  (QFtp::TransferType) par3 );
-    hb_retni( i );
+    hb_retni( obj->put ( *par1, par2,  (QFtp::TransferType) par3 ) );
   }
 }
 
@@ -405,8 +393,7 @@ HB_FUNC_STATIC( QFTP_RAWCOMMAND )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    int i = obj->rawCommand ( par1 );
-    hb_retni( i );
+    hb_retni( obj->rawCommand ( par1 ) );
   }
 }
 
@@ -450,8 +437,7 @@ HB_FUNC_STATIC( QFTP_REMOVE )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    int i = obj->remove ( par1 );
-    hb_retni( i );
+    hb_retni( obj->remove ( par1 ) );
   }
 }
 
@@ -466,8 +452,7 @@ HB_FUNC_STATIC( QFTP_RENAME )
   {
     QString par1 = hb_parc(1);
     QString par2 = hb_parc(2);
-    int i = obj->rename ( par1, par2 );
-    hb_retni( i );
+    hb_retni( obj->rename ( par1, par2 ) );
   }
 }
 
@@ -481,8 +466,7 @@ HB_FUNC_STATIC( QFTP_RMDIR )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    int i = obj->rmdir ( par1 );
-    hb_retni( i );
+    hb_retni( obj->rmdir ( par1 ) );
   }
 }
 
@@ -497,8 +481,7 @@ HB_FUNC_STATIC( QFTP_SETPROXY )
   {
     QString par1 = hb_parc(1);
     quint16 par2 = hb_parni(2);
-    int i = obj->setProxy ( par1, par2 );
-    hb_retni( i );
+    hb_retni( obj->setProxy ( par1, par2 ) );
   }
 }
 
@@ -512,8 +495,7 @@ HB_FUNC_STATIC( QFTP_SETTRANSFERMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->setTransferMode (  (QFtp::TransferMode) par1 );
-    hb_retni( i );
+    hb_retni( obj->setTransferMode (  (QFtp::TransferMode) par1 ) );
   }
 }
 
@@ -526,8 +508,7 @@ HB_FUNC_STATIC( QFTP_STATE )
   QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->state (  );
-    hb_retni( i );
+    hb_retni( (int) obj->state (  ) );
   }
 }
 

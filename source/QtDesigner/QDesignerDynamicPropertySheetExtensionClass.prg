@@ -122,8 +122,7 @@ HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_ADDDYNAMICPROPERTY )
   {
     QString par1 = hb_parc(1);
     QVariant * par2 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->addDynamicProperty ( par1, *par2 );
-    hb_retni( i );
+    hb_retni( obj->addDynamicProperty ( par1, *par2 ) );
   }
 }
 

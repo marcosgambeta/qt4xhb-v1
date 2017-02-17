@@ -524,8 +524,7 @@ HB_FUNC_STATIC( QFILEINFO_GROUPID )
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    uint i = obj->groupId (  );
-    hb_retni( i );
+    hb_retni( (uint) obj->groupId (  ) );
   }
 }
 
@@ -737,8 +736,7 @@ HB_FUNC_STATIC( QFILEINFO_OWNERID )
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    uint i = obj->ownerId (  );
-    hb_retni( i );
+    hb_retni( (uint) obj->ownerId (  ) );
   }
 }
 

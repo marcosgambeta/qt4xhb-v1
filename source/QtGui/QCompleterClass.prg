@@ -208,8 +208,7 @@ HB_FUNC_STATIC( QCOMPLETER_CASESENSITIVITY )
   QCompleter * obj = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->caseSensitivity (  );
-    hb_retni( i );
+    hb_retni( (int) obj->caseSensitivity (  ) );
   }
 }
 
@@ -222,8 +221,7 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONCOLUMN )
   QCompleter * obj = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->completionColumn (  );
-    hb_retni( i );
+    hb_retni( obj->completionColumn (  ) );
   }
 }
 
@@ -236,8 +234,7 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONCOUNT )
   QCompleter * obj = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->completionCount (  );
-    hb_retni( i );
+    hb_retni( obj->completionCount (  ) );
   }
 }
 
@@ -250,8 +247,7 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONMODE )
   QCompleter * obj = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->completionMode (  );
-    hb_retni( i );
+    hb_retni( (int) obj->completionMode (  ) );
   }
 }
 
@@ -292,8 +288,7 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONROLE )
   QCompleter * obj = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->completionRole (  );
-    hb_retni( i );
+    hb_retni( obj->completionRole (  ) );
   }
 }
 
@@ -334,8 +329,7 @@ HB_FUNC_STATIC( QCOMPLETER_CURRENTROW )
   QCompleter * obj = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->currentRow (  );
-    hb_retni( i );
+    hb_retni( obj->currentRow (  ) );
   }
 }
 
@@ -348,8 +342,7 @@ HB_FUNC_STATIC( QCOMPLETER_MAXVISIBLEITEMS )
   QCompleter * obj = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->maxVisibleItems (  );
-    hb_retni( i );
+    hb_retni( obj->maxVisibleItems (  ) );
   }
 }
 
@@ -376,8 +369,7 @@ HB_FUNC_STATIC( QCOMPLETER_MODELSORTING )
   QCompleter * obj = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->modelSorting (  );
-    hb_retni( i );
+    hb_retni( (int) obj->modelSorting (  ) );
   }
 }
 
