@@ -113,9 +113,7 @@ HB_FUNC_STATIC( QSQLERROR_NEW1 )
   QSqlError * o = NULL;
   QString par1 = ISNIL(1)? QString() : hb_parc(1);
   QString par2 = ISNIL(2)? QString() : hb_parc(2);
-  int par3 = ISNIL(3)? (int) QSqlError::NoError : hb_parni(3);
-  int par4 = ISNIL(4)? -1 : hb_parni(4);
-  o = new QSqlError ( par1, par2,  (QSqlError::ErrorType) par3, par4 );
+  o = new QSqlError ( par1, par2,  (QSqlError::ErrorType) ISNIL(3)? (int) QSqlError::NoError : hb_parni(3), ISNIL(4)? -1 : hb_parni(4) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSqlError *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -273,8 +271,7 @@ HB_FUNC_STATIC( QSQLERROR_SETNUMBER )
   QSqlError * obj = (QSqlError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setNumber ( par1 );
+    obj->setNumber ( hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -288,8 +285,7 @@ HB_FUNC_STATIC( QSQLERROR_SETTYPE )
   QSqlError * obj = (QSqlError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setType (  (QSqlError::ErrorType) par1 );
+    obj->setType (  (QSqlError::ErrorType) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

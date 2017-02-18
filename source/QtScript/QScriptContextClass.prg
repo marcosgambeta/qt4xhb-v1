@@ -153,8 +153,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_ARGUMENT )
   QScriptContext * obj = (QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QScriptValue * ptr = new QScriptValue( obj->argument ( par1 ) );
+    QScriptValue * ptr = new QScriptValue( obj->argument ( hb_parni(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
@@ -330,9 +329,8 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_THROWERROR1 )
   QScriptContext * obj = (QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
     QString par2 = hb_parc(2);
-    QScriptValue * ptr = new QScriptValue( obj->throwError (  (QScriptContext::Error) par1, par2 ) );
+    QScriptValue * ptr = new QScriptValue( obj->throwError (  (QScriptContext::Error) hb_parni(1), par2 ) );
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }

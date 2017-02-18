@@ -156,8 +156,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_NEW2 )
   QVideoFrame * o = NULL;
   QAbstractVideoBuffer * par1 = (QAbstractVideoBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QSize * par2 = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  int par3 = hb_parni(3);
-  o = new QVideoFrame ( par1, *par2,  (QVideoFrame::PixelFormat) par3 );
+  o = new QVideoFrame ( par1, *par2,  (QVideoFrame::PixelFormat) hb_parni(3) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QVideoFrame *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -175,11 +174,8 @@ QVideoFrame ( int bytes, const QSize & size, int bytesPerLine, PixelFormat forma
 HB_FUNC_STATIC( QVIDEOFRAME_NEW3 )
 {
   QVideoFrame * o = NULL;
-  int par1 = hb_parni(1);
   QSize * par2 = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  int par3 = hb_parni(3);
-  int par4 = hb_parni(4);
-  o = new QVideoFrame ( par1, *par2, par3,  (QVideoFrame::PixelFormat) par4 );
+  o = new QVideoFrame ( hb_parni(1), *par2, hb_parni(3),  (QVideoFrame::PixelFormat) hb_parni(4) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QVideoFrame *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -455,8 +451,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_MAP )
   QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->map (  (QAbstractVideoBuffer::MapMode) par1 ) );
+    hb_retl( obj->map (  (QAbstractVideoBuffer::MapMode) hb_parni(1) ) );
   }
 }
 
@@ -523,8 +518,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_SETFIELDTYPE )
   QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setFieldType (  (QVideoFrame::FieldType) par1 );
+    obj->setFieldType (  (QVideoFrame::FieldType) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -606,8 +600,7 @@ QImage::Format imageFormatFromPixelFormat ( PixelFormat format )
 */
 HB_FUNC_STATIC( QVIDEOFRAME_IMAGEFORMATFROMPIXELFORMAT )
 {
-  int par1 = hb_parni(1);
-  hb_retni( (int) QVideoFrame::imageFormatFromPixelFormat (  (QVideoFrame::PixelFormat) par1 ) );
+  hb_retni( (int) QVideoFrame::imageFormatFromPixelFormat (  (QVideoFrame::PixelFormat) hb_parni(1) ) );
 }
 
 
@@ -616,8 +609,7 @@ PixelFormat pixelFormatFromImageFormat ( QImage::Format format )
 */
 HB_FUNC_STATIC( QVIDEOFRAME_PIXELFORMATFROMIMAGEFORMAT )
 {
-  int par1 = hb_parni(1);
-  hb_retni( (int) QVideoFrame::pixelFormatFromImageFormat (  (QImage::Format) par1 ) );
+  hb_retni( (int) QVideoFrame::pixelFormatFromImageFormat (  (QImage::Format) hb_parni(1) ) );
 }
 
 

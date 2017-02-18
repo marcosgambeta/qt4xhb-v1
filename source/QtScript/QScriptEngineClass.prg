@@ -275,8 +275,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_DEFAULTPROTOTYPE )
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QScriptValue * ptr = new QScriptValue( obj->defaultPrototype ( par1 ) );
+    QScriptValue * ptr = new QScriptValue( obj->defaultPrototype ( hb_parni(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
@@ -292,8 +291,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_EVALUATE1 )
   {
     QString par1 = hb_parc(1);
     QString par2 = ISNIL(2)? QString() : hb_parc(2);
-    int par3 = ISNIL(3)? 1 : hb_parni(3);
-    QScriptValue * ptr = new QScriptValue( obj->evaluate ( par1, par2, par3 ) );
+    QScriptValue * ptr = new QScriptValue( obj->evaluate ( par1, par2, ISNIL(3)? 1 : hb_parni(3) ) );
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
@@ -431,8 +429,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWARRAY )
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    uint par1 = ISNIL(1)? 0 : hb_parni(1);
-    QScriptValue * ptr = new QScriptValue( obj->newArray ( par1 ) );
+    QScriptValue * ptr = new QScriptValue( obj->newArray ( (uint) ISNIL(1)? 0 : hb_parni(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
@@ -602,8 +599,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_REPORTADDITIONALMEMORYCOST )
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->reportAdditionalMemoryCost ( par1 );
+    obj->reportAdditionalMemoryCost ( hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -633,9 +629,8 @@ HB_FUNC_STATIC( QSCRIPTENGINE_SETDEFAULTPROTOTYPE )
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
     QScriptValue * par2 = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setDefaultPrototype ( par1, *par2 );
+    obj->setDefaultPrototype ( hb_parni(1), *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -664,8 +659,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_SETPROCESSEVENTSINTERVAL )
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setProcessEventsInterval ( par1 );
+    obj->setProcessEventsInterval ( hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

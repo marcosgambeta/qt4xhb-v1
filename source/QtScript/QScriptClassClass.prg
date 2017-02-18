@@ -161,9 +161,8 @@ HB_FUNC_STATIC( QSCRIPTCLASS_EXTENSION )
   QScriptClass * obj = (QScriptClass *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
     QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QVariant * ptr = new QVariant( obj->extension (  (QScriptClass::Extension) par1, par2 ) );
+    QVariant * ptr = new QVariant( obj->extension (  (QScriptClass::Extension) hb_parni(1), par2 ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -208,8 +207,7 @@ HB_FUNC_STATIC( QSCRIPTCLASS_PROPERTY )
   {
     QScriptValue * par1 = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QScriptString * par2 = (QScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    uint par3 = hb_parni(3);
-    QScriptValue * ptr = new QScriptValue( obj->property ( *par1, *par2, par3 ) );
+    QScriptValue * ptr = new QScriptValue( obj->property ( *par1, *par2, (uint) hb_parni(3) ) );
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
@@ -225,8 +223,7 @@ HB_FUNC_STATIC( QSCRIPTCLASS_PROPERTYFLAGS )
   {
     QScriptValue * par1 = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QScriptString * par2 = (QScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    uint par3 = hb_parni(3);
-    hb_retni( (int) obj->propertyFlags ( *par1, *par2, par3 ) );
+    hb_retni( (int) obj->propertyFlags ( *par1, *par2, (uint) hb_parni(3) ) );
   }
 }
 
@@ -255,9 +252,8 @@ HB_FUNC_STATIC( QSCRIPTCLASS_QUERYPROPERTY )
   {
     QScriptValue * par1 = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QScriptString * par2 = (QScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par3 = hb_parni(3);
-    uint * par4 = (uint *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retni( (int) obj->queryProperty ( *par1, *par2,  (QScriptClass::QueryFlags) par3, par4 ) );
+    uint * par4 = (uint *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) ); // TODO: corrigir
+    hb_retni( (int) obj->queryProperty ( *par1, *par2,  (QScriptClass::QueryFlags) hb_parni(3), par4 ) );
   }
 }
 
@@ -272,9 +268,8 @@ HB_FUNC_STATIC( QSCRIPTCLASS_SETPROPERTY )
   {
     QScriptValue * par1 = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QScriptString * par2 = (QScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    uint par3 = hb_parni(3);
     QScriptValue * par4 = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setProperty ( *par1, *par2, par3, *par4 );
+    obj->setProperty ( *par1, *par2, (uint) hb_parni(3), *par4 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -288,8 +283,7 @@ HB_FUNC_STATIC( QSCRIPTCLASS_SUPPORTSEXTENSION )
   QScriptClass * obj = (QScriptClass *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->supportsExtension (  (QScriptClass::Extension) par1 ) );
+    hb_retl( obj->supportsExtension (  (QScriptClass::Extension) hb_parni(1) ) );
   }
 }
 

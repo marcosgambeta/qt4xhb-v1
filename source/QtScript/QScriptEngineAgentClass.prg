@@ -222,9 +222,8 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_EXTENSION )
   QScriptEngineAgent * obj = (QScriptEngineAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
     QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QVariant * ptr = new QVariant( obj->extension (  (QScriptEngineAgent::Extension) par1, par2 ) );
+    QVariant * ptr = new QVariant( obj->extension (  (QScriptEngineAgent::Extension) hb_parni(1), par2 ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -270,9 +269,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_POSITIONCHANGE )
   if( obj )
   {
     qint64 par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    int par3 = hb_parni(3);
-    obj->positionChange ( par1, par2, par3 );
+    obj->positionChange ( par1, hb_parni(2), hb_parni(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -289,8 +286,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_SCRIPTLOAD )
     qint64 par1 = hb_parni(1);
     QString par2 = hb_parc(2);
     QString par3 = hb_parc(3);
-    int par4 = hb_parni(4);
-    obj->scriptLoad ( par1, par2, par3, par4 );
+    obj->scriptLoad ( par1, par2, par3, hb_parni(4) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -319,8 +315,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_SUPPORTSEXTENSION )
   QScriptEngineAgent * obj = (QScriptEngineAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->supportsExtension (  (QScriptEngineAgent::Extension) par1 ) );
+    hb_retl( obj->supportsExtension (  (QScriptEngineAgent::Extension) hb_parni(1) ) );
   }
 }
 

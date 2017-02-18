@@ -153,9 +153,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_NEW2 )
 {
   QVideoSurfaceFormat * o = NULL;
   QSize * par1 = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  int par2 = hb_parni(2);
-  int par3 = ISNIL(3)? (int) QAbstractVideoBuffer::NoHandle : hb_parni(3);
-  o = new QVideoSurfaceFormat ( *par1,  (QVideoFrame::PixelFormat) par2,  (QAbstractVideoBuffer::HandleType) par3 );
+  o = new QVideoSurfaceFormat ( *par1,  (QVideoFrame::PixelFormat) hb_parni(2),  (QAbstractVideoBuffer::HandleType) ISNIL(3)? (int) QAbstractVideoBuffer::NoHandle : hb_parni(3) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QVideoSurfaceFormat *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -443,9 +441,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETFRAMESIZE2 )
   QVideoSurfaceFormat * obj = (QVideoSurfaceFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    obj->setFrameSize ( par1, par2 );
+    obj->setFrameSize ( hb_parni(1), hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -489,9 +485,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETPIXELASPECTRATIO2 )
   QVideoSurfaceFormat * obj = (QVideoSurfaceFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    obj->setPixelAspectRatio ( par1, par2 );
+    obj->setPixelAspectRatio ( hb_parni(1), hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -536,8 +530,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETSCANLINEDIRECTION )
   QVideoSurfaceFormat * obj = (QVideoSurfaceFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setScanLineDirection (  (QVideoSurfaceFormat::Direction) par1 );
+    obj->setScanLineDirection (  (QVideoSurfaceFormat::Direction) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -566,8 +559,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETYCBCRCOLORSPACE )
   QVideoSurfaceFormat * obj = (QVideoSurfaceFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setYCbCrColorSpace (  (QVideoSurfaceFormat::YCbCrColorSpace) par1 );
+    obj->setYCbCrColorSpace (  (QVideoSurfaceFormat::YCbCrColorSpace) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

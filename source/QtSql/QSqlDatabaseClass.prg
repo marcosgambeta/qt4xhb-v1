@@ -574,8 +574,7 @@ HB_FUNC_STATIC( QSQLDATABASE_SETNUMERICALPRECISIONPOLICY )
   QSqlDatabase * obj = (QSqlDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setNumericalPrecisionPolicy (  (QSql::NumericalPrecisionPolicy) par1 );
+    obj->setNumericalPrecisionPolicy (  (QSql::NumericalPrecisionPolicy) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -604,8 +603,7 @@ HB_FUNC_STATIC( QSQLDATABASE_SETPORT )
   QSqlDatabase * obj = (QSqlDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setPort ( par1 );
+    obj->setPort ( hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -634,8 +632,7 @@ HB_FUNC_STATIC( QSQLDATABASE_TABLES )
   QSqlDatabase * obj = (QSqlDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = ISNIL(1)? (int) QSql::Tables : hb_parni(1);
-    QStringList strl = obj->tables (  (QSql::TableType) par1 );
+    QStringList strl = obj->tables (  (QSql::TableType) ISNIL(1)? (int) QSql::Tables : hb_parni(1) );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

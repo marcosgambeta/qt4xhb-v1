@@ -283,8 +283,7 @@ HB_FUNC_STATIC( QSQLRECORD_FIELD1 )
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QSqlField * ptr = new QSqlField( obj->field ( par1 ) );
+    QSqlField * ptr = new QSqlField( obj->field ( hb_parni(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QSQLFIELD", true );
   }
 }
@@ -328,8 +327,7 @@ HB_FUNC_STATIC( QSQLRECORD_FIELDNAME )
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QString str1 = obj->fieldName ( par1 );
+    QString str1 = obj->fieldName ( hb_parni(1) );
     hb_retc( (const char *) str1.toLatin1().data() );
   }
 }
@@ -357,9 +355,8 @@ HB_FUNC_STATIC( QSQLRECORD_INSERT )
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
     QSqlField * par2 = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->insert ( par1, *par2 );
+    obj->insert ( hb_parni(1), *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -400,8 +397,7 @@ HB_FUNC_STATIC( QSQLRECORD_ISGENERATED2 )
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->isGenerated ( par1 ) );
+    hb_retl( obj->isGenerated ( hb_parni(1) ) );
   }
 }
 
@@ -443,8 +439,7 @@ HB_FUNC_STATIC( QSQLRECORD_ISNULL2 )
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->isNull ( par1 ) );
+    hb_retl( obj->isNull ( hb_parni(1) ) );
   }
 }
 
@@ -472,8 +467,7 @@ HB_FUNC_STATIC( QSQLRECORD_REMOVE )
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->remove ( par1 );
+    obj->remove ( hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -487,9 +481,8 @@ HB_FUNC_STATIC( QSQLRECORD_REPLACE )
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
     QSqlField * par2 = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->replace ( par1, *par2 );
+    obj->replace ( hb_parni(1), *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -519,9 +512,8 @@ HB_FUNC_STATIC( QSQLRECORD_SETGENERATED2 )
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
     bool par2 = hb_parl(2);
-    obj->setGenerated ( par1, par2 );
+    obj->setGenerated ( hb_parni(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -550,8 +542,7 @@ HB_FUNC_STATIC( QSQLRECORD_SETNULL1 )
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setNull ( par1 );
+    obj->setNull ( hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -595,9 +586,8 @@ HB_FUNC_STATIC( QSQLRECORD_SETVALUE1 )
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
     QVariant * par2 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setValue ( par1, *par2 );
+    obj->setValue ( hb_parni(1), *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -642,8 +632,7 @@ HB_FUNC_STATIC( QSQLRECORD_VALUE1 )
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QVariant * ptr = new QVariant( obj->value ( par1 ) );
+    QVariant * ptr = new QVariant( obj->value ( hb_parni(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }

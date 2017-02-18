@@ -126,8 +126,7 @@ HB_FUNC_STATIC( QSCRIPTABLE_ARGUMENT )
   QScriptable * obj = (QScriptable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QScriptValue * ptr = new QScriptValue( obj->argument ( par1 ) );
+    QScriptValue * ptr = new QScriptValue( obj->argument ( hb_parni(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }

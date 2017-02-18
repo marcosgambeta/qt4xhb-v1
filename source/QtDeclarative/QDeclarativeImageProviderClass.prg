@@ -104,8 +104,7 @@ QDeclarativeImageProvider ( ImageType type )
 HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_NEW )
 {
   QDeclarativeImageProvider * o = NULL;
-  int par1 = hb_parni(1);
-  o = new QDeclarativeImageProvider (  (QDeclarativeImageProvider::ImageType) par1 );
+  o = new QDeclarativeImageProvider (  (QDeclarativeImageProvider::ImageType) hb_parni(1) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDeclarativeImageProvider *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );

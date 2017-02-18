@@ -122,8 +122,7 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW2 )
   QScriptProgram * o = NULL;
   QString par1 = hb_parc(1);
   QString par2 = ISNIL(2)? QString() : hb_parc(2);
-  int par3 = ISNIL(3)? 1 : hb_parni(3);
-  o = new QScriptProgram ( par1, par2, par3 );
+  o = new QScriptProgram ( par1, par2, ISNIL(3)? 1 : hb_parni(3) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QScriptProgram *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );

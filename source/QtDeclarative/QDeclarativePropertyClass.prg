@@ -343,8 +343,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_CONNECTNOTIFYSIGNAL2 )
   if( obj )
   {
     QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par2 = hb_parni(2);
-    hb_retl( obj->connectNotifySignal ( par1, par2 ) );
+    hb_retl( obj->connectNotifySignal ( par1, hb_parni(2) ) );
   }
 }
 

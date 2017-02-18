@@ -184,9 +184,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_MOVEPOSITION )
   QDesignerFormWindowCursorInterface * obj = (QDesignerFormWindowCursorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = ISNIL(2)? (int) QDesignerFormWindowCursorInterface::MoveAnchor : hb_parni(2);
-    hb_retl( obj->movePosition (  (QDesignerFormWindowCursorInterface::MoveOperation) par1,  (QDesignerFormWindowCursorInterface::MoveMode) par2 ) );
+    hb_retl( obj->movePosition (  (QDesignerFormWindowCursorInterface::MoveOperation) hb_parni(1),  (QDesignerFormWindowCursorInterface::MoveMode) ISNIL(2)? (int) QDesignerFormWindowCursorInterface::MoveAnchor : hb_parni(2) ) );
   }
 }
 
@@ -213,8 +211,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_SELECTEDWIDGET )
   QDesignerFormWindowCursorInterface * obj = (QDesignerFormWindowCursorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QWidget * ptr = obj->selectedWidget ( par1 );
+    QWidget * ptr = obj->selectedWidget ( hb_parni(1) );
     _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
@@ -241,9 +238,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_SETPOSITION )
   QDesignerFormWindowCursorInterface * obj = (QDesignerFormWindowCursorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = ISNIL(2)? (int) QDesignerFormWindowCursorInterface::MoveAnchor : hb_parni(2);
-    obj->setPosition ( par1,  (QDesignerFormWindowCursorInterface::MoveMode) par2 );
+    obj->setPosition ( hb_parni(1),  (QDesignerFormWindowCursorInterface::MoveMode) ISNIL(2)? (int) QDesignerFormWindowCursorInterface::MoveAnchor : hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -259,8 +254,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_WIDGET )
   QDesignerFormWindowCursorInterface * obj = (QDesignerFormWindowCursorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QWidget * ptr = obj->widget ( par1 );
+    QWidget * ptr = obj->widget ( hb_parni(1) );
     _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }

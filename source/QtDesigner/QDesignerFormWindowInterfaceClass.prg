@@ -312,8 +312,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_HASFEATURE )
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->hasFeature (  (QDesignerFormWindowInterface::Feature) par1 ) );
+    hb_retl( obj->hasFeature (  (QDesignerFormWindowInterface::Feature) hb_parni(1) ) );
   }
 }
 
@@ -544,9 +543,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETLAYOUTDEFAULT )
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    obj->setLayoutDefault ( par1, par2 );
+    obj->setLayoutDefault ( hb_parni(1), hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -697,8 +694,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETFEATURES )
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setFeatures (  (QDesignerFormWindowInterface::Feature) par1 );
+    obj->setFeatures (  (QDesignerFormWindowInterface::Feature) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

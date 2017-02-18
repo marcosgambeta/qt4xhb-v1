@@ -153,10 +153,9 @@ HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_MAP )
   QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
     int par2;
     int par3;
-    uchar * ptr = obj->map (  (QAbstractVideoBuffer::MapMode) par1, &par2, &par3 );
+    uchar * ptr = obj->map (  (QAbstractVideoBuffer::MapMode) hb_parni(1), &par2, &par3 );
     _qt4xhb_createReturnClass ( ptr, "UCHAR" );
     hb_storni( par2, 2 );
     hb_storni( par3, 3 );

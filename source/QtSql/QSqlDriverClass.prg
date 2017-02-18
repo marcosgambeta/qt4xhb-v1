@@ -172,8 +172,7 @@ HB_FUNC_STATIC( QSQLDRIVER_ESCAPEIDENTIFIER )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    int par2 = hb_parni(2);
-    QString str1 = obj->escapeIdentifier ( par1,  (QSqlDriver::IdentifierType) par2 );
+    QString str1 = obj->escapeIdentifier ( par1,  (QSqlDriver::IdentifierType) hb_parni(2) );
     hb_retc( (const char *) str1.toLatin1().data() );
   }
 }
@@ -217,8 +216,7 @@ HB_FUNC_STATIC( QSQLDRIVER_HASFEATURE )
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->hasFeature (  (QSqlDriver::DriverFeature) par1 ) );
+    hb_retl( obj->hasFeature (  (QSqlDriver::DriverFeature) hb_parni(1) ) );
   }
 }
 
@@ -232,8 +230,7 @@ HB_FUNC_STATIC( QSQLDRIVER_ISIDENTIFIERESCAPED )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    int par2 = hb_parni(2);
-    hb_retl( obj->isIdentifierEscaped ( par1,  (QSqlDriver::IdentifierType) par2 ) );
+    hb_retl( obj->isIdentifierEscaped ( par1,  (QSqlDriver::IdentifierType) hb_parni(2) ) );
   }
 }
 
@@ -303,9 +300,8 @@ HB_FUNC_STATIC( QSQLDRIVER_OPEN )
     QString par2 = ISNIL(2)? QString() : hb_parc(2);
     QString par3 = ISNIL(3)? QString() : hb_parc(3);
     QString par4 = ISNIL(4)? QString() : hb_parc(4);
-    int par5 = ISNIL(5)? -1 : hb_parni(5);
     QString par6 = ISNIL(6)? QString() : hb_parc(6);
-    hb_retl( obj->open ( par1, par2, par3, par4, par5, par6 ) );
+    hb_retl( obj->open ( par1, par2, par3, par4, ISNIL(5)? -1 : hb_parni(5), par6 ) );
   }
 }
 
@@ -361,8 +357,7 @@ HB_FUNC_STATIC( QSQLDRIVER_SETNUMERICALPRECISIONPOLICY )
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setNumericalPrecisionPolicy (  (QSql::NumericalPrecisionPolicy) par1 );
+    obj->setNumericalPrecisionPolicy (  (QSql::NumericalPrecisionPolicy) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -376,11 +371,10 @@ HB_FUNC_STATIC( QSQLDRIVER_SQLSTATEMENT )
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
     QString par2 = hb_parc(2);
     QSqlRecord * par3 = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     bool par4 = hb_parl(4);
-    QString str1 = obj->sqlStatement (  (QSqlDriver::StatementType) par1, par2, *par3, par4 );
+    QString str1 = obj->sqlStatement (  (QSqlDriver::StatementType) hb_parni(1), par2, *par3, par4 );
     hb_retc( (const char *) str1.toLatin1().data() );
   }
 }
@@ -395,8 +389,7 @@ HB_FUNC_STATIC( QSQLDRIVER_STRIPDELIMITERS )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    int par2 = hb_parni(2);
-    QString str1 = obj->stripDelimiters ( par1,  (QSqlDriver::IdentifierType) par2 );
+    QString str1 = obj->stripDelimiters ( par1,  (QSqlDriver::IdentifierType) hb_parni(2) );
     hb_retc( (const char *) str1.toLatin1().data() );
   }
 }
@@ -447,8 +440,7 @@ HB_FUNC_STATIC( QSQLDRIVER_TABLES )
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QStringList strl = obj->tables (  (QSql::TableType) par1 );
+    QStringList strl = obj->tables (  (QSql::TableType) hb_parni(1) );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

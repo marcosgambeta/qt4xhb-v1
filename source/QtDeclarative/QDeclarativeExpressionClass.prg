@@ -327,8 +327,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SETSOURCELOCATION )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    int par2 = hb_parni(2);
-    obj->setSourceLocation ( par1, par2 );
+    obj->setSourceLocation ( par1, hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

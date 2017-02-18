@@ -193,8 +193,7 @@ QScriptValue ( SpecialValue value )
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW3 )
 {
   QScriptValue * o = NULL;
-  int par1 = hb_parni(1);
-  o = new QScriptValue (  (QScriptValue::SpecialValue) par1 );
+  o = new QScriptValue (  (QScriptValue::SpecialValue) hb_parni(1) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QScriptValue *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -225,8 +224,7 @@ QScriptValue ( int value )
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW5 )
 {
   QScriptValue * o = NULL;
-  int par1 = hb_parni(1);
-  o = new QScriptValue ( par1 );
+  o = new QScriptValue ( hb_parni(1) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QScriptValue *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -241,8 +239,7 @@ QScriptValue ( uint value )
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW6 )
 {
   QScriptValue * o = NULL;
-  uint par1 = hb_parni(1);
-  o = new QScriptValue ( par1 );
+  o = new QScriptValue ( (uint) hb_parni(1) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QScriptValue *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );

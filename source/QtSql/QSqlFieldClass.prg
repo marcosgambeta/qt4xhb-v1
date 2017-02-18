@@ -128,8 +128,7 @@ HB_FUNC_STATIC( QSQLFIELD_NEW1 )
 {
   QSqlField * o = NULL;
   QString par1 = ISNIL(1)? QString() : hb_parc(1);
-  int par2 = ISNIL(2)? (int) QVariant::Invalid : hb_parni(2);
-  o = new QSqlField ( par1,  (QVariant::Type) par2 );
+  o = new QSqlField ( par1,  (QVariant::Type) ISNIL(2)? (int) QVariant::Invalid : hb_parni(2) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSqlField *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -394,8 +393,7 @@ HB_FUNC_STATIC( QSQLFIELD_SETLENGTH )
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setLength ( par1 );
+    obj->setLength ( hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -424,8 +422,7 @@ HB_FUNC_STATIC( QSQLFIELD_SETPRECISION )
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setPrecision ( par1 );
+    obj->setPrecision ( hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -469,8 +466,7 @@ HB_FUNC_STATIC( QSQLFIELD_SETREQUIREDSTATUS )
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setRequiredStatus (  (QSqlField::RequiredStatus) par1 );
+    obj->setRequiredStatus (  (QSqlField::RequiredStatus) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -484,8 +480,7 @@ HB_FUNC_STATIC( QSQLFIELD_SETTYPE )
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setType (  (QVariant::Type) par1 );
+    obj->setType (  (QVariant::Type) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -218,8 +218,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_SETRESOLUTION )
   QSvgGenerator * obj = (QSvgGenerator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setResolution ( par1 );
+    obj->setResolution ( hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -186,8 +186,7 @@ HB_FUNC_STATIC( QMETAENUM_KEY )
   QMetaEnum * obj = (QMetaEnum *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    const char * str1 = obj->key ( par1 );
+    const char * str1 = obj->key ( hb_parni(1) );
     hb_retc( str1 );
   }
 }
@@ -201,8 +200,7 @@ HB_FUNC_STATIC( QMETAENUM_VALUE )
   QMetaEnum * obj = (QMetaEnum *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retni( obj->value ( par1 ) );
+    hb_retni( obj->value ( hb_parni(1) ) );
   }
 }
 
@@ -243,8 +241,7 @@ HB_FUNC_STATIC( QMETAENUM_VALUETOKEY )
   QMetaEnum * obj = (QMetaEnum *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    const char * str1 = obj->valueToKey ( par1 );
+    const char * str1 = obj->valueToKey ( hb_parni(1) );
     hb_retc( str1 );
   }
 }
@@ -272,8 +269,7 @@ HB_FUNC_STATIC( QMETAENUM_VALUETOKEYS )
   QMetaEnum * obj = (QMetaEnum *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QByteArray * ptr = new QByteArray( obj->valueToKeys ( par1 ) );
+    QByteArray * ptr = new QByteArray( obj->valueToKeys ( hb_parni(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
