@@ -176,9 +176,8 @@ HB_FUNC_STATIC( QFSFILEENGINE_OPEN1 )
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
     FILE * par2 = (FILE *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->open (  (QIODevice::OpenMode) par1, par2 ) );
+    hb_retl( obj->open (  (QIODevice::OpenMode) hb_parni(1), par2 ) );
   }
 }
 
@@ -191,9 +190,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_OPEN2 )
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    hb_retl( obj->open (  (QIODevice::OpenMode) par1, par2 ) );
+    hb_retl( obj->open (  (QIODevice::OpenMode) hb_parni(1), hb_parni(2) ) );
   }
 }
 
@@ -206,10 +203,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_OPEN3 )
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    int par3 = hb_parni(3);
-    hb_retl( obj->open (  (QIODevice::OpenMode) par1, par2,  (QFile::FileHandleFlags) par3 ) );
+    hb_retl( obj->open (  (QIODevice::OpenMode) hb_parni(1), hb_parni(2),  (QFile::FileHandleFlags) hb_parni(3) ) );
   }
 }
 
@@ -222,10 +216,8 @@ HB_FUNC_STATIC( QFSFILEENGINE_OPEN4 )
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
     FILE * par2 = (FILE *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par3 = hb_parni(3);
-    hb_retl( obj->open (  (QIODevice::OpenMode) par1, par2,  (QFile::FileHandleFlags) par3 ) );
+    hb_retl( obj->open (  (QIODevice::OpenMode) hb_parni(1), par2,  (QFile::FileHandleFlags) hb_parni(3) ) );
   }
 }
 
@@ -306,8 +298,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_FILEFLAGS )
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retni( (int) obj->fileFlags (  (QAbstractFileEngine::FileFlags) par1 ) );
+    hb_retni( (int) obj->fileFlags (  (QAbstractFileEngine::FileFlags) hb_parni(1) ) );
   }
 }
 
@@ -320,8 +311,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_FILENAME )
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QString str1 = obj->fileName (  (QAbstractFileEngine::FileName) par1 );
+    QString str1 = obj->fileName (  (QAbstractFileEngine::FileName) hb_parni(1) );
     hb_retc( (const char *) str1.toLatin1().data() );
   }
 }
@@ -335,8 +325,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_FILETIME )
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QDateTime * ptr = new QDateTime( obj->fileTime (  (QAbstractFileEngine::FileTime) par1 ) );
+    QDateTime * ptr = new QDateTime( obj->fileTime (  (QAbstractFileEngine::FileTime) hb_parni(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
@@ -432,8 +421,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_OWNER )
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QString str1 = obj->owner (  (QAbstractFileEngine::FileOwner) par1 );
+    QString str1 = obj->owner (  (QAbstractFileEngine::FileOwner) hb_parni(1) );
     hb_retc( (const char *) str1.toLatin1().data() );
   }
 }
@@ -447,8 +435,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_OWNERID )
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retni( (uint) obj->ownerId (  (QAbstractFileEngine::FileOwner) par1 ) );
+    hb_retni( (uint) obj->ownerId (  (QAbstractFileEngine::FileOwner) hb_parni(1) ) );
   }
 }
 
@@ -578,8 +565,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_SETPERMISSIONS )
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    uint par1 = hb_parni(1);
-    hb_retl( obj->setPermissions ( par1 ) );
+    hb_retl( obj->setPermissions ( (uint) hb_parni(1) ) );
   }
 }
 
@@ -620,8 +606,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_SUPPORTSEXTENSION )
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->supportsExtension (  (QAbstractFileEngine::Extension) par1 ) );
+    hb_retl( obj->supportsExtension (  (QAbstractFileEngine::Extension) hb_parni(1) ) );
   }
 }
 

@@ -249,8 +249,7 @@ QChar ( uint code )
 HB_FUNC_STATIC( QCHAR_NEW8 )
 {
   QChar * o = NULL;
-  uint par1 = hb_parni(1);
-  o = new QChar ( par1 );
+  o = new QChar ( (uint) hb_parni(1) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QChar *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -265,8 +264,7 @@ QChar ( int code )
 HB_FUNC_STATIC( QCHAR_NEW9 )
 {
   QChar * o = NULL;
-  int par1 = hb_parni(1);
-  o = new QChar ( par1 );
+  o = new QChar ( hb_parni(1) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QChar *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -281,8 +279,7 @@ QChar ( SpecialCharacter ch )
 HB_FUNC_STATIC( QCHAR_NEW10 )
 {
   QChar * o = NULL;
-  int par1 = hb_parni(1);
-  o = new QChar (  (QChar::SpecialCharacter) par1 );
+  o = new QChar (  (QChar::SpecialCharacter) hb_parni(1) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QChar *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );

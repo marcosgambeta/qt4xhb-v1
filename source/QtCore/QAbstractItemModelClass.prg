@@ -185,8 +185,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_DATA )
   if( obj )
   {
     QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par2 = ISNIL(2)? Qt::DisplayRole : hb_parni(2);
-    QVariant * ptr = new QVariant( obj->data ( *par1, par2 ) );
+    QVariant * ptr = new QVariant( obj->data ( *par1, ISNIL(2)? Qt::DisplayRole : hb_parni(2) ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -201,11 +200,8 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_DROPMIMEDATA )
   if( obj )
   {
     const QMimeData * par1 = (const QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par2 = hb_parni(2);
-    int par3 = hb_parni(3);
-    int par4 = hb_parni(4);
     QModelIndex * par5 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(5, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->dropMimeData ( par1,  (Qt::DropAction) par2, par3, par4, *par5 ) );
+    hb_retl( obj->dropMimeData ( par1,  (Qt::DropAction) hb_parni(2), hb_parni(3), hb_parni(4), *par5 ) );
   }
 }
 
@@ -261,10 +257,8 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_HASINDEX )
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
     QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->hasIndex ( par1, par2, par3 ) );
+    hb_retl( obj->hasIndex ( hb_parni(1), hb_parni(2), par3 ) );
   }
 }
 
@@ -277,10 +271,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_HEADERDATA )
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    int par3 = ISNIL(3)? Qt::DisplayRole : hb_parni(3);
-    QVariant * ptr = new QVariant( obj->headerData ( par1,  (Qt::Orientation) par2, par3 ) );
+    QVariant * ptr = new QVariant( obj->headerData ( hb_parni(1),  (Qt::Orientation) hb_parni(2), ISNIL(3)? Qt::DisplayRole : hb_parni(3) ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -294,10 +285,8 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_INDEX )
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
     QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QModelIndex * ptr = new QModelIndex( obj->index ( par1, par2, par3 ) );
+    QModelIndex * ptr = new QModelIndex( obj->index ( hb_parni(1), hb_parni(2), par3 ) );
     _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
@@ -311,9 +300,8 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTCOLUMN )
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
     QModelIndex par2 = ISNIL(2)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->insertColumn ( par1, par2 ) );
+    hb_retl( obj->insertColumn ( hb_parni(1), par2 ) );
   }
 }
 
@@ -326,10 +314,8 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTCOLUMNS )
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
     QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->insertColumns ( par1, par2, par3 ) );
+    hb_retl( obj->insertColumns ( hb_parni(1), hb_parni(2), par3 ) );
   }
 }
 
@@ -342,9 +328,8 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTROW )
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
     QModelIndex par2 = ISNIL(2)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->insertRow ( par1, par2 ) );
+    hb_retl( obj->insertRow ( hb_parni(1), par2 ) );
   }
 }
 
@@ -357,10 +342,8 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTROWS )
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
     QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->insertRows ( par1, par2, par3 ) );
+    hb_retl( obj->insertRows ( hb_parni(1), hb_parni(2), par3 ) );
   }
 }
 
@@ -375,11 +358,8 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_MATCH )
   if( obj )
   {
     QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par2 = hb_parni(2);
     QVariant * par3 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par4 = ISNIL(4)? 1 : hb_parni(4);
-    int par5 = ISNIL(5)? (int) Qt::MatchStartsWith | Qt::MatchWrap : hb_parni(5);
-    QModelIndexList list = obj->match ( *par1, par2, *par3, par4,  (Qt::MatchFlags) par5 );
+    QModelIndexList list = obj->match ( *par1, hb_parni(2), *par3, ISNIL(4)? 1 : hb_parni(4),  (Qt::MatchFlags) ISNIL(5)? (int) Qt::MatchStartsWith | Qt::MatchWrap : hb_parni(5) );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QMODELINDEX" );
@@ -476,9 +456,8 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVECOLUMN )
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
     QModelIndex par2 = ISNIL(2)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->removeColumn ( par1, par2 ) );
+    hb_retl( obj->removeColumn ( hb_parni(1), par2 ) );
   }
 }
 
@@ -491,10 +470,8 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVECOLUMNS )
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
     QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->removeColumns ( par1, par2, par3 ) );
+    hb_retl( obj->removeColumns ( hb_parni(1), hb_parni(2), par3 ) );
   }
 }
 
@@ -507,9 +484,8 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVEROW )
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
     QModelIndex par2 = ISNIL(2)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->removeRow ( par1, par2 ) );
+    hb_retl( obj->removeRow ( hb_parni(1), par2 ) );
   }
 }
 
@@ -522,10 +498,8 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVEROWS )
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
     QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->removeRows ( par1, par2, par3 ) );
+    hb_retl( obj->removeRows ( hb_parni(1), hb_parni(2), par3 ) );
   }
 }
 
@@ -555,8 +529,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SETDATA )
   {
     QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QVariant * par2 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par3 = ISNIL(3)? Qt::EditRole : hb_parni(3);
-    hb_retl( obj->setData ( *par1, *par2, par3 ) );
+    hb_retl( obj->setData ( *par1, *par2, ISNIL(3)? Qt::EditRole : hb_parni(3) ) );
   }
 }
 
@@ -569,11 +542,8 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SETHEADERDATA )
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
     QVariant * par3 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par4 = ISNIL(4)? Qt::EditRole : hb_parni(4);
-    hb_retl( obj->setHeaderData ( par1,  (Qt::Orientation) par2, *par3, par4 ) );
+    hb_retl( obj->setHeaderData ( hb_parni(1),  (Qt::Orientation) hb_parni(2), *par3, ISNIL(4)? Qt::EditRole : hb_parni(4) ) );
   }
 }
 
@@ -587,8 +557,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SETSUPPORTEDDRAGACTIONS )
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setSupportedDragActions (  (Qt::DropActions) par1 );
+    obj->setSupportedDragActions (  (Qt::DropActions) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -602,10 +571,8 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SIBLING )
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
     QModelIndex * par3 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QModelIndex * ptr = new QModelIndex( obj->sibling ( par1, par2, *par3 ) );
+    QModelIndex * ptr = new QModelIndex( obj->sibling ( hb_parni(1), hb_parni(2), *par3 ) );
     _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
@@ -619,9 +586,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SORT )
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = ISNIL(2)? (int) Qt::AscendingOrder : hb_parni(2);
-    obj->sort ( par1,  (Qt::SortOrder) par2 );
+    obj->sort ( hb_parni(1),  (Qt::SortOrder) ISNIL(2)? (int) Qt::AscendingOrder : hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

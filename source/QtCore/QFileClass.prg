@@ -306,8 +306,7 @@ HB_FUNC_STATIC( QFILE_OPEN1 )
   if( obj )
   {
     FILE * par1 = (FILE *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par2 = hb_parni(2);
-    hb_retl( obj->open ( par1,  (QFile::OpenMode) par2 ) );
+    hb_retl( obj->open ( par1,  (QFile::OpenMode) hb_parni(2) ) );
   }
 }
 
@@ -321,9 +320,7 @@ HB_FUNC_STATIC( QFILE_OPEN2 )
   if( obj )
   {
     FILE * par1 = (FILE *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par2 = hb_parni(2);
-    int par3 = hb_parni(3);
-    hb_retl( obj->open ( par1,  (QFile::OpenMode) par2,  (QFile::FileHandleFlags) par3 ) );
+    hb_retl( obj->open ( par1,  (QFile::OpenMode) hb_parni(2),  (QFile::FileHandleFlags) hb_parni(3) ) );
   }
 }
 
@@ -336,9 +333,7 @@ HB_FUNC_STATIC( QFILE_OPEN3 )
   QFile * obj = (QFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    hb_retl( obj->open ( par1,  (QFile::OpenMode) par2 ) );
+    hb_retl( obj->open ( hb_parni(1),  (QFile::OpenMode) hb_parni(2) ) );
   }
 }
 
@@ -351,10 +346,7 @@ HB_FUNC_STATIC( QFILE_OPEN4 )
   QFile * obj = (QFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    int par3 = hb_parni(3);
-    hb_retl( obj->open ( par1,  (QFile::OpenMode) par2,  (QFile::FileHandleFlags) par3 ) );
+    hb_retl( obj->open ( hb_parni(1),  (QFile::OpenMode) hb_parni(2),  (QFile::FileHandleFlags) hb_parni(3) ) );
   }
 }
 
@@ -437,8 +429,7 @@ HB_FUNC_STATIC( QFILE_SETPERMISSIONS1 )
   QFile * obj = (QFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->setPermissions (  (QFile::Permissions) par1 ) );
+    hb_retl( obj->setPermissions (  (QFile::Permissions) hb_parni(1) ) );
   }
 }
 
@@ -535,8 +526,7 @@ HB_FUNC_STATIC( QFILE_OPEN6 )
   QFile * obj = (QFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->open (  (QFile::OpenMode) par1 ) );
+    hb_retl( obj->open (  (QFile::OpenMode) hb_parni(1) ) );
   }
 }
 
@@ -833,8 +823,7 @@ bool setPermissions ( const QString & fileName, Permissions permissions )
 HB_FUNC_STATIC( QFILE_SETPERMISSIONS2 )
 {
   QString par1 = hb_parc(1);
-  int par2 = hb_parni(2);
-  hb_retl( QFile::setPermissions ( par1,  (QFile::Permissions) par2 ) );
+  hb_retl( QFile::setPermissions ( par1,  (QFile::Permissions) hb_parni(2) ) );
 }
 
 

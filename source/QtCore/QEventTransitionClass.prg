@@ -88,9 +88,8 @@ HB_FUNC_STATIC( QEVENTTRANSITION_NEW2 )
 {
   QEventTransition * o = NULL;
   QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  int par2 = hb_parni(2);
   QState * par3 = ISNIL(3)? 0 : (QState *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QEventTransition ( par1,  (QEvent::Type) par2, par3 );
+  o = new QEventTransition ( par1,  (QEvent::Type) hb_parni(2), par3 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QEventTransition *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -184,8 +183,7 @@ HB_FUNC_STATIC( QEVENTTRANSITION_SETEVENTTYPE )
   QEventTransition * obj = (QEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setEventType (  (QEvent::Type) par1 );
+    obj->setEventType (  (QEvent::Type) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

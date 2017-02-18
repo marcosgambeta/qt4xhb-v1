@@ -166,11 +166,10 @@ HB_FUNC_STATIC( QAXBINDABLE_REPORTERROR )
   QAxBindable * obj = (QAxBindable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
     QString par2 = hb_parc(2);
     QString par3 = hb_parc(3);
     QString par4 = ISNIL(4)? QString() : hb_parc(4);
-    obj->reportError ( par1, par2, par3, par4 );
+    obj->reportError ( hb_parni(1), par2, par3, par4 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

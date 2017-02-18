@@ -240,8 +240,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_SETPENDINGRESULTSLIMIT )
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setPendingResultsLimit ( par1 );
+    obj->setPendingResultsLimit ( hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -160,8 +160,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_SETSTATE )
   QAxScriptEngine * obj = (QAxScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setState (  (QAxScriptEngine::State) par1 );
+    obj->setState (  (QAxScriptEngine::State) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

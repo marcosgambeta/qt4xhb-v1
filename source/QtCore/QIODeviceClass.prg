@@ -307,8 +307,7 @@ HB_FUNC_STATIC( QIODEVICE_OPEN )
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->open (  (QIODevice::OpenMode) par1 ) );
+    hb_retl( obj->open (  (QIODevice::OpenMode) hb_parni(1) ) );
   }
 }
 
@@ -585,8 +584,7 @@ HB_FUNC_STATIC( QIODEVICE_WAITFORBYTESWRITTEN )
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->waitForBytesWritten ( par1 ) );
+    hb_retl( obj->waitForBytesWritten ( hb_parni(1) ) );
   }
 }
 
@@ -599,8 +597,7 @@ HB_FUNC_STATIC( QIODEVICE_WAITFORREADYREAD )
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->waitForReadyRead ( par1 ) );
+    hb_retl( obj->waitForReadyRead ( hb_parni(1) ) );
   }
 }
 

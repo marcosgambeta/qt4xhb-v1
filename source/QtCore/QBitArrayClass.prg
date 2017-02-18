@@ -134,9 +134,8 @@ QBitArray ( int size, bool value = false )
 HB_FUNC_STATIC( QBITARRAY_NEW2 )
 {
   QBitArray * o = NULL;
-  int par1 = hb_parni(1);
   bool par2 = ISNIL(2)? false : hb_parl(2);
-  o = new QBitArray ( par1, par2 );
+  o = new QBitArray ( hb_parni(1), par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QBitArray *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -195,8 +194,7 @@ HB_FUNC_STATIC( QBITARRAY_AT )
   QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->at ( par1 ) );
+    hb_retl( obj->at ( hb_parni(1) ) );
   }
 }
 
@@ -223,8 +221,7 @@ HB_FUNC_STATIC( QBITARRAY_CLEARBIT )
   QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->clearBit ( par1 );
+    obj->clearBit ( hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -281,8 +278,7 @@ HB_FUNC_STATIC( QBITARRAY_FILL1 )
   if( obj )
   {
     bool par1 = hb_parl(1);
-    int par2 = ISNIL(2)? -1 : hb_parni(2);
-    hb_retl( obj->fill ( par1, par2 ) );
+    hb_retl( obj->fill ( par1, ISNIL(2)? -1 : hb_parni(2) ) );
   }
 }
 
@@ -296,9 +292,7 @@ HB_FUNC_STATIC( QBITARRAY_FILL2 )
   if( obj )
   {
     bool par1 = hb_parl(1);
-    int par2 = hb_parni(2);
-    int par3 = hb_parni(3);
-    obj->fill ( par1, par2, par3 );
+    obj->fill ( par1, hb_parni(2), hb_parni(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -353,8 +347,7 @@ HB_FUNC_STATIC( QBITARRAY_RESIZE )
   QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->resize ( par1 );
+    obj->resize ( hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -368,8 +361,7 @@ HB_FUNC_STATIC( QBITARRAY_SETBIT1 )
   QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setBit ( par1 );
+    obj->setBit ( hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -383,9 +375,8 @@ HB_FUNC_STATIC( QBITARRAY_SETBIT2 )
   QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
     bool par2 = hb_parl(2);
-    obj->setBit ( par1, par2 );
+    obj->setBit ( hb_parni(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -427,8 +418,7 @@ HB_FUNC_STATIC( QBITARRAY_TESTBIT )
   QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->testBit ( par1 ) );
+    hb_retl( obj->testBit ( hb_parni(1) ) );
   }
 }
 
@@ -441,8 +431,7 @@ HB_FUNC_STATIC( QBITARRAY_TOGGLEBIT )
   QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->toggleBit ( par1 ) );
+    hb_retl( obj->toggleBit ( hb_parni(1) ) );
   }
 }
 
@@ -455,8 +444,7 @@ HB_FUNC_STATIC( QBITARRAY_TRUNCATE )
   QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->truncate ( par1 );
+    obj->truncate ( hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

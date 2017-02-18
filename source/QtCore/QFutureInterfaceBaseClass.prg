@@ -136,8 +136,7 @@ QFutureInterfaceBase(State initialState = NoState)
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_NEW1 )
 {
   QFutureInterfaceBase * o = NULL;
-  int par1 = ISNIL(1)? (int) QFutureInterfaceBase::NoState : hb_parni(1);
-  o = new QFutureInterfaceBase (  (QFutureInterfaceBase::State) par1 );
+  o = new QFutureInterfaceBase (  (QFutureInterfaceBase::State) ISNIL(1)? (int) QFutureInterfaceBase::NoState : hb_parni(1) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QFutureInterfaceBase *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -248,9 +247,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_REPORTRESULTSREADY )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    obj->reportResultsReady ( par1, par2 );
+    obj->reportResultsReady ( hb_parni(1), hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -294,9 +291,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETPROGRESSRANGE )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    obj->setProgressRange ( par1, par2 );
+    obj->setProgressRange ( hb_parni(1), hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -349,8 +344,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETPROGRESSVALUE )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setProgressValue ( par1 );
+    obj->setProgressValue ( hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -377,9 +371,8 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETPROGRESSVALUEANDTEXT )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
     QString par2 = hb_parc(2);
-    obj->setProgressValueAndText ( par1, par2 );
+    obj->setProgressValueAndText ( hb_parni(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -407,8 +400,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETEXPECTEDRESULTCOUNT )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setExpectedResultCount ( par1 );
+    obj->setExpectedResultCount ( hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -448,8 +440,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_QUERYSTATE )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->queryState (  (QFutureInterfaceBase::State) par1 ) );
+    hb_retl( obj->queryState (  (QFutureInterfaceBase::State) hb_parni(1) ) );
   }
 }
 
@@ -540,8 +531,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISRESULTREADYAT )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->isResultReadyAt ( par1 ) );
+    hb_retl( obj->isResultReadyAt ( hb_parni(1) ) );
   }
 }
 
@@ -639,8 +629,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_WAITFORRESULT )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->waitForResult ( par1 );
+    obj->waitForResult ( hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

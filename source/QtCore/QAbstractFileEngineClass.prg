@@ -206,7 +206,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_ENTRYLIST )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
 QStringList par2;
 PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
 int i2;
@@ -216,7 +215,7 @@ for (i2=0;i2<nLen2;i2++)
 QString temp = hb_arrayGetCPtr(aStrings2, i2+1);
 par2 << temp;
 }
-    QStringList strl = obj->entryList (  (QDir::Filters) par1, par2 );
+    QStringList strl = obj->entryList (  (QDir::Filters) hb_parni(1), par2 );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -267,8 +266,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_FILEFLAGS )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = ISNIL(1)? (int) QAbstractFileEngine::FileInfoAll : hb_parni(1);
-    hb_retni( (int) obj->fileFlags (  (QAbstractFileEngine::FileFlags) par1 ) );
+    hb_retni( (int) obj->fileFlags (  (QAbstractFileEngine::FileFlags) ISNIL(1)? (int) QAbstractFileEngine::FileInfoAll : hb_parni(1) ) );
   }
 }
 
@@ -281,8 +279,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_FILENAME )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = ISNIL(1)? (int) QAbstractFileEngine::DefaultName : hb_parni(1);
-    QString str1 = obj->fileName (  (QAbstractFileEngine::FileName) par1 );
+    QString str1 = obj->fileName (  (QAbstractFileEngine::FileName) ISNIL(1)? (int) QAbstractFileEngine::DefaultName : hb_parni(1) );
     hb_retc( (const char *) str1.toLatin1().data() );
   }
 }
@@ -296,8 +293,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_FILETIME )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QDateTime * ptr = new QDateTime( obj->fileTime (  (QAbstractFileEngine::FileTime) par1 ) );
+    QDateTime * ptr = new QDateTime( obj->fileTime (  (QAbstractFileEngine::FileTime) hb_parni(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
@@ -393,8 +389,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_OPEN )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->open (  (QIODevice::OpenMode) par1 ) );
+    hb_retl( obj->open (  (QIODevice::OpenMode) hb_parni(1) ) );
   }
 }
 
@@ -407,8 +402,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_OWNER )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QString str1 = obj->owner (  (QAbstractFileEngine::FileOwner) par1 );
+    QString str1 = obj->owner (  (QAbstractFileEngine::FileOwner) hb_parni(1) );
     hb_retc( (const char *) str1.toLatin1().data() );
   }
 }
@@ -422,8 +416,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_OWNERID )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retni( (uint) obj->ownerId (  (QAbstractFileEngine::FileOwner) par1 ) );
+    hb_retni( (uint) obj->ownerId (  (QAbstractFileEngine::FileOwner) hb_parni(1) ) );
   }
 }
 
@@ -538,8 +531,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_SETPERMISSIONS )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    uint par1 = hb_parni(1);
-    hb_retl( obj->setPermissions ( par1 ) );
+    hb_retl( obj->setPermissions ( (uint) hb_parni(1) ) );
   }
 }
 
@@ -580,8 +572,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_SUPPORTSEXTENSION )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->supportsExtension (  (QAbstractFileEngine::Extension) par1 ) );
+    hb_retl( obj->supportsExtension (  (QAbstractFileEngine::Extension) hb_parni(1) ) );
   }
 }
 

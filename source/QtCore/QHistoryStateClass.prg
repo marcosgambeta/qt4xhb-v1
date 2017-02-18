@@ -87,9 +87,8 @@ QHistoryState(HistoryType type, QState *parent = 0)
 HB_FUNC_STATIC( QHISTORYSTATE_NEW2 )
 {
   QHistoryState * o = NULL;
-  int par1 = hb_parni(1);
   QState * par2 = ISNIL(2)? 0 : (QState *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QHistoryState (  (QHistoryState::HistoryType) par1, par2 );
+  o = new QHistoryState (  (QHistoryState::HistoryType) hb_parni(1), par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QHistoryState *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -183,8 +182,7 @@ HB_FUNC_STATIC( QHISTORYSTATE_SETHISTORYTYPE )
   QHistoryState * obj = (QHistoryState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setHistoryType (  (QHistoryState::HistoryType) par1 );
+    obj->setHistoryType (  (QHistoryState::HistoryType) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

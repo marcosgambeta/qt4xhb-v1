@@ -145,8 +145,7 @@ static QString location(LibraryLocation)
 */
 HB_FUNC_STATIC( QLIBRARYINFO_LOCATION )
 {
-  int par1 = hb_parni(1);
-  QString str1 = QLibraryInfo::location (  (QLibraryInfo::LibraryLocation) par1 );
+  QString str1 = QLibraryInfo::location (  (QLibraryInfo::LibraryLocation) hb_parni(1) );
   hb_retc( (const char *) str1.toLatin1().data() );
 }
 

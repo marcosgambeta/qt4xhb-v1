@@ -106,8 +106,7 @@ HB_FUNC_STATIC( QEVENTLOOP_EXEC )
   QEventLoop * obj = (QEventLoop *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = ISNIL(1)? (int) QEventLoop::AllEvents : hb_parni(1);
-    hb_retni( obj->exec (  (QEventLoop::ProcessEventsFlags) par1 ) );
+    hb_retni( obj->exec (  (QEventLoop::ProcessEventsFlags) ISNIL(1)? (int) QEventLoop::AllEvents : hb_parni(1) ) );
   }
 }
 
@@ -120,8 +119,7 @@ HB_FUNC_STATIC( QEVENTLOOP_EXIT )
   QEventLoop * obj = (QEventLoop *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = ISNIL(1)? 0 : hb_parni(1);
-    obj->exit ( par1 );
+    obj->exit ( ISNIL(1)? 0 : hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -148,8 +146,7 @@ HB_FUNC_STATIC( QEVENTLOOP_PROCESSEVENTS1 )
   QEventLoop * obj = (QEventLoop *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = ISNIL(1)? (int) QEventLoop::AllEvents : hb_parni(1);
-    hb_retl( obj->processEvents (  (QEventLoop::ProcessEventsFlags) par1 ) );
+    hb_retl( obj->processEvents (  (QEventLoop::ProcessEventsFlags) ISNIL(1)? (int) QEventLoop::AllEvents : hb_parni(1) ) );
   }
 }
 
@@ -162,9 +159,7 @@ HB_FUNC_STATIC( QEVENTLOOP_PROCESSEVENTS2 )
   QEventLoop * obj = (QEventLoop *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    obj->processEvents (  (QEventLoop::ProcessEventsFlags) par1, par2 );
+    obj->processEvents (  (QEventLoop::ProcessEventsFlags) hb_parni(1), hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

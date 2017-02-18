@@ -112,8 +112,7 @@ HB_FUNC_STATIC( QDIRITERATOR_NEW1 )
 {
   QDirIterator * o = NULL;
   QDir * par1 = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  int par2 = ISNIL(2)? (int) QDirIterator::NoIteratorFlags : hb_parni(2);
-  o = new QDirIterator ( *par1,  (QDirIterator::IteratorFlags) par2 );
+  o = new QDirIterator ( *par1,  (QDirIterator::IteratorFlags) ISNIL(2)? (int) QDirIterator::NoIteratorFlags : hb_parni(2) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDirIterator *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -132,8 +131,7 @@ HB_FUNC_STATIC( QDIRITERATOR_NEW2 )
 {
   QDirIterator * o = NULL;
   QString par1 = hb_parc(1);
-  int par2 = ISNIL(2)? (int) QDirIterator::NoIteratorFlags : hb_parni(2);
-  o = new QDirIterator ( par1,  (QDirIterator::IteratorFlags) par2 );
+  o = new QDirIterator ( par1,  (QDirIterator::IteratorFlags) ISNIL(2)? (int) QDirIterator::NoIteratorFlags : hb_parni(2) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDirIterator *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -152,9 +150,7 @@ HB_FUNC_STATIC( QDIRITERATOR_NEW3 )
 {
   QDirIterator * o = NULL;
   QString par1 = hb_parc(1);
-  int par2 = hb_parni(2);
-  int par3 = ISNIL(3)? (int) QDirIterator::NoIteratorFlags : hb_parni(3);
-  o = new QDirIterator ( par1,  (QDir::Filters) par2,  (QDirIterator::IteratorFlags) par3 );
+  o = new QDirIterator ( par1,  (QDir::Filters) hb_parni(2),  (QDirIterator::IteratorFlags) ISNIL(3)? (int) QDirIterator::NoIteratorFlags : hb_parni(3) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDirIterator *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -182,9 +178,7 @@ for (i2=0;i2<nLen2;i2++)
 QString temp = hb_arrayGetCPtr(aStrings2, i2+1);
 par2 << temp;
 }
-  int par3 = ISNIL(3)? (int) QDir::NoFilter : hb_parni(3);
-  int par4 = ISNIL(4)? (int) QDirIterator::NoIteratorFlags : hb_parni(4);
-  o = new QDirIterator ( par1, par2,  (QDir::Filters) par3,  (QDirIterator::IteratorFlags) par4 );
+  o = new QDirIterator ( par1, par2,  (QDir::Filters) ISNIL(3)? (int) QDir::NoFilter : hb_parni(3),  (QDirIterator::IteratorFlags) ISNIL(4)? (int) QDirIterator::NoIteratorFlags : hb_parni(4) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDirIterator *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );

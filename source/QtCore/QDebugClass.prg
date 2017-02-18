@@ -139,8 +139,7 @@ QDebug ( QtMsgType type )
 HB_FUNC_STATIC( QDEBUG_NEW3 )
 {
   QDebug * o = NULL;
-  int par1 = hb_parni(1);
-  o = new QDebug (  (QtMsgType) par1 );
+  o = new QDebug (  (QtMsgType) hb_parni(1) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDebug *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );

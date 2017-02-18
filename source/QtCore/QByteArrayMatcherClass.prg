@@ -141,8 +141,7 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW3 )
 {
   QByteArrayMatcher * o = NULL;
   const char * par1 = hb_parc(1);
-  int par2 = hb_parni(2);
-  o = new QByteArrayMatcher (  (const char *) par1, par2 );
+  o = new QByteArrayMatcher (  (const char *) par1, hb_parni(2) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QByteArrayMatcher *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -221,8 +220,7 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_INDEXIN1 )
   if( obj )
   {
     QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par2 = ISNIL(2)? 0 : hb_parni(2);
-    hb_retni( obj->indexIn ( *par1, par2 ) );
+    hb_retni( obj->indexIn ( *par1, ISNIL(2)? 0 : hb_parni(2) ) );
   }
 }
 
@@ -236,9 +234,7 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_INDEXIN2 )
   if( obj )
   {
     const char * par1 = hb_parc(1);
-    int par2 = hb_parni(2);
-    int par3 = ISNIL(3)? 0 : hb_parni(3);
-    hb_retni( obj->indexIn (  (const char *) par1, par2, par3 ) );
+    hb_retni( obj->indexIn (  (const char *) par1, hb_parni(2), ISNIL(3)? 0 : hb_parni(3) ) );
   }
 }
 

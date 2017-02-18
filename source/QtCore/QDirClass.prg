@@ -206,9 +206,7 @@ HB_FUNC_STATIC( QDIR_NEW3 )
   QDir * o = NULL;
   QString par1 = hb_parc(1);
   QString par2 = hb_parc(2);
-  int par3 = ISNIL(3)? (int) QDir::Name | QDir::IgnoreCase : hb_parni(3);
-  int par4 = ISNIL(4)? (int) QDir::AllEntries : hb_parni(4);
-  o = new QDir ( par1, par2,  (QDir::SortFlags) par3,  (QDir::Filters) par4 );
+  o = new QDir ( par1, par2,  (QDir::SortFlags) ISNIL(3)? (int) QDir::Name | QDir::IgnoreCase : hb_parni(3),  (QDir::Filters) ISNIL(4)? (int) QDir::AllEntries : hb_parni(4) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDir *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -374,9 +372,7 @@ for (i1=0;i1<nLen1;i1++)
 QString temp = hb_arrayGetCPtr(aStrings1, i1+1);
 par1 << temp;
 }
-    int par2 = ISNIL(2)? (int) QDir::NoFilter : hb_parni(2);
-    int par3 = ISNIL(3)? (int) QDir::NoSort : hb_parni(3);
-    QFileInfoList list = obj->entryInfoList ( par1,  (QDir::Filters) par2,  (QDir::SortFlags) par3 );
+    QFileInfoList list = obj->entryInfoList ( par1,  (QDir::Filters) ISNIL(2)? (int) QDir::NoFilter : hb_parni(2),  (QDir::SortFlags) ISNIL(3)? (int) QDir::NoSort : hb_parni(3) );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QFILEINFO" );
@@ -420,9 +416,7 @@ HB_FUNC_STATIC( QDIR_ENTRYINFOLIST2 )
   QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = ISNIL(1)? (int) QDir::NoFilter : hb_parni(1);
-    int par2 = ISNIL(2)? (int) QDir::NoSort : hb_parni(2);
-    QFileInfoList list = obj->entryInfoList (  (QDir::Filters) par1,  (QDir::SortFlags) par2 );
+    QFileInfoList list = obj->entryInfoList (  (QDir::Filters) ISNIL(1)? (int) QDir::NoFilter : hb_parni(1),  (QDir::SortFlags) ISNIL(2)? (int) QDir::NoSort : hb_parni(2) );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QFILEINFO" );
@@ -490,9 +484,7 @@ for (i1=0;i1<nLen1;i1++)
 QString temp = hb_arrayGetCPtr(aStrings1, i1+1);
 par1 << temp;
 }
-    int par2 = ISNIL(2)? (int) QDir::NoFilter : hb_parni(2);
-    int par3 = ISNIL(3)? (int) QDir::NoSort : hb_parni(3);
-    QStringList strl = obj->entryList ( par1,  (QDir::Filters) par2,  (QDir::SortFlags) par3 );
+    QStringList strl = obj->entryList ( par1,  (QDir::Filters) ISNIL(2)? (int) QDir::NoFilter : hb_parni(2),  (QDir::SortFlags) ISNIL(3)? (int) QDir::NoSort : hb_parni(3) );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -515,9 +507,7 @@ HB_FUNC_STATIC( QDIR_ENTRYLIST2 )
   QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = ISNIL(1)? (int) QDir::NoFilter : hb_parni(1);
-    int par2 = ISNIL(2)? (int) QDir::NoSort : hb_parni(2);
-    QStringList strl = obj->entryList (  (QDir::Filters) par1,  (QDir::SortFlags) par2 );
+    QStringList strl = obj->entryList (  (QDir::Filters) ISNIL(1)? (int) QDir::NoFilter : hb_parni(1),  (QDir::SortFlags) ISNIL(2)? (int) QDir::NoSort : hb_parni(2) );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -842,8 +832,7 @@ HB_FUNC_STATIC( QDIR_SETFILTER )
   QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setFilter (  (QDir::Filters) par1 );
+    obj->setFilter (  (QDir::Filters) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -895,8 +884,7 @@ HB_FUNC_STATIC( QDIR_SETSORTING )
   QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setSorting (  (QDir::SortFlags) par1 );
+    obj->setSorting (  (QDir::SortFlags) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

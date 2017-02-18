@@ -149,9 +149,8 @@ HB_FUNC_STATIC( QBASICTIMER_START )
   QBasicTimer * obj = (QBasicTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
     QObject * par2 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->start ( par1, par2 );
+    obj->start ( hb_parni(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

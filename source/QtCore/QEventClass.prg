@@ -105,8 +105,7 @@ QEvent ( Type type )
 HB_FUNC_STATIC( QEVENT_NEW )
 {
   QEvent * o = NULL;
-  int par1 = hb_parni(1);
-  o = new QEvent (  (QEvent::Type) par1 );
+  o = new QEvent (  (QEvent::Type) hb_parni(1) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QEvent *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -220,8 +219,7 @@ int registerEventType ( int hint = -1 )
 */
 HB_FUNC_STATIC( QEVENT_REGISTEREVENTTYPE )
 {
-  int par1 = ISNIL(1)? -1 : hb_parni(1);
-  hb_retni( QEvent::registerEventType ( par1 ) );
+  hb_retni( QEvent::registerEventType ( ISNIL(1)? -1 : hb_parni(1) ) );
 }
 
 
