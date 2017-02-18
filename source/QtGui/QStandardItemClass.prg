@@ -540,8 +540,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_TEXTALIGNMENT )
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->textAlignment (  );
-    hb_retni( i );
+    hb_retni( (int) obj->textAlignment (  ) );
   }
 }
 
@@ -627,8 +626,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_CHECKSTATE )
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->checkState (  );
-    hb_retni( i );
+    hb_retni( (int) obj->checkState (  ) );
   }
 }
 
@@ -714,8 +712,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_FLAGS )
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->flags (  );
-    hb_retni( i );
+    hb_retni( (int) obj->flags (  ) );
   }
 }
 
@@ -953,8 +950,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ROW )
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->row (  );
-    hb_retni( i );
+    hb_retni( obj->row (  ) );
   }
 }
 
@@ -967,8 +963,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_COLUMN )
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->column (  );
-    hb_retni( i );
+    hb_retni( obj->column (  ) );
   }
 }
 
@@ -1009,8 +1004,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ROWCOUNT )
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->rowCount (  );
-    hb_retni( i );
+    hb_retni( obj->rowCount (  ) );
   }
 }
 
@@ -1038,8 +1032,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_COLUMNCOUNT )
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->columnCount (  );
-    hb_retni( i );
+    hb_retni( obj->columnCount (  ) );
   }
 }
 
@@ -1579,8 +1572,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_TYPE )
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->type (  );
-    hb_retni( i );
+    hb_retni( obj->type (  ) );
   }
 }
 

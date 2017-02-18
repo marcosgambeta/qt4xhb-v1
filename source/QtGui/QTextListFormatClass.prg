@@ -105,8 +105,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_INDENT )
   QTextListFormat * obj = (QTextListFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->indent (  );
-    hb_retni( i );
+    hb_retni( obj->indent (  ) );
   }
 }
 
@@ -220,8 +219,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_STYLE )
   QTextListFormat * obj = (QTextListFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->style (  );
-    hb_retni( i );
+    hb_retni( (int) obj->style (  ) );
   }
 }
 

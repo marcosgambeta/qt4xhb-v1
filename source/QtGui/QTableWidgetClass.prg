@@ -239,8 +239,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_COLUMN )
   if( obj )
   {
     const QTableWidgetItem * par1 = (const QTableWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->column ( par1 );
-    hb_retni( i );
+    hb_retni( obj->column ( par1 ) );
   }
 }
 
@@ -253,8 +252,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_COLUMNCOUNT )
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->columnCount (  );
-    hb_retni( i );
+    hb_retni( obj->columnCount (  ) );
   }
 }
 
@@ -267,8 +265,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_CURRENTCOLUMN )
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->currentColumn (  );
-    hb_retni( i );
+    hb_retni( obj->currentColumn (  ) );
   }
 }
 
@@ -295,8 +292,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_CURRENTROW )
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->currentRow (  );
-    hb_retni( i );
+    hb_retni( obj->currentRow (  ) );
   }
 }
 
@@ -480,8 +476,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ROW )
   if( obj )
   {
     const QTableWidgetItem * par1 = (const QTableWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->row ( par1 );
-    hb_retni( i );
+    hb_retni( obj->row ( par1 ) );
   }
 }
 
@@ -494,8 +489,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ROWCOUNT )
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->rowCount (  );
-    hb_retni( i );
+    hb_retni( obj->rowCount (  ) );
   }
 }
 
@@ -941,8 +935,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_VISUALCOLUMN )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->visualColumn ( par1 );
-    hb_retni( i );
+    hb_retni( obj->visualColumn ( par1 ) );
   }
 }
 
@@ -971,8 +964,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_VISUALROW )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->visualRow ( par1 );
-    hb_retni( i );
+    hb_retni( obj->visualRow ( par1 ) );
   }
 }
 

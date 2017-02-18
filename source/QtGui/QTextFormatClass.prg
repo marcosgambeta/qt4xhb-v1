@@ -393,8 +393,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_INTPROPERTY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->intProperty ( par1 );
-    hb_retni( i );
+    hb_retni( obj->intProperty ( par1 ) );
   }
 }
 
@@ -511,8 +510,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_LAYOUTDIRECTION )
   QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->layoutDirection (  );
-    hb_retni( i );
+    hb_retni( (int) obj->layoutDirection (  ) );
   }
 }
 
@@ -600,8 +598,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_OBJECTINDEX )
   QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->objectIndex (  );
-    hb_retni( i );
+    hb_retni( obj->objectIndex (  ) );
   }
 }
 
@@ -614,8 +611,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_OBJECTTYPE )
   QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->objectType (  );
-    hb_retni( i );
+    hb_retni( obj->objectType (  ) );
   }
 }
 
@@ -659,8 +655,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_PROPERTYCOUNT )
   QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->propertyCount (  );
-    hb_retni( i );
+    hb_retni( obj->propertyCount (  ) );
   }
 }
 
@@ -915,8 +910,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_TYPE )
   QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->type (  );
-    hb_retni( i );
+    hb_retni( obj->type (  ) );
   }
 }
 

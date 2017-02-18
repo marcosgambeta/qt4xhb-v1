@@ -313,8 +313,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_AVAILABLEREDOSTEPS )
   QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->availableRedoSteps (  );
-    hb_retni( i );
+    hb_retni( obj->availableRedoSteps (  ) );
   }
 }
 
@@ -327,8 +326,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_AVAILABLEUNDOSTEPS )
   QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->availableUndoSteps (  );
-    hb_retni( i );
+    hb_retni( obj->availableUndoSteps (  ) );
   }
 }
 
@@ -355,8 +353,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_BLOCKCOUNT )
   QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->blockCount (  );
-    hb_retni( i );
+    hb_retni( obj->blockCount (  ) );
   }
 }
 
@@ -384,8 +381,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_CHARACTERCOUNT )
   QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->characterCount (  );
-    hb_retni( i );
+    hb_retni( obj->characterCount (  ) );
   }
 }
 
@@ -442,8 +438,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DEFAULTCURSORMOVESTYLE )
   QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->defaultCursorMoveStyle (  );
-    hb_retni( i );
+    hb_retni( (int) obj->defaultCursorMoveStyle (  ) );
   }
 }
 
@@ -815,8 +810,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_LINECOUNT )
   QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->lineCount (  );
-    hb_retni( i );
+    hb_retni( obj->lineCount (  ) );
   }
 }
 
@@ -845,8 +839,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_MAXIMUMBLOCKCOUNT )
   QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->maximumBlockCount (  );
-    hb_retni( i );
+    hb_retni( obj->maximumBlockCount (  ) );
   }
 }
 
@@ -904,8 +897,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_PAGECOUNT )
   QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->pageCount (  );
-    hb_retni( i );
+    hb_retni( obj->pageCount (  ) );
   }
 }
 
@@ -978,8 +970,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_REVISION )
   QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->revision (  );
-    hb_retni( i );
+    hb_retni( obj->revision (  ) );
   }
 }
 

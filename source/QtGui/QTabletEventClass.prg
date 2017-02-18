@@ -173,8 +173,7 @@ HB_FUNC_STATIC( QTABLETEVENT_X )
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->x (  );
-    hb_retni( i );
+    hb_retni( obj->x (  ) );
   }
 }
 
@@ -187,8 +186,7 @@ HB_FUNC_STATIC( QTABLETEVENT_Y )
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->y (  );
-    hb_retni( i );
+    hb_retni( obj->y (  ) );
   }
 }
 
@@ -201,8 +199,7 @@ HB_FUNC_STATIC( QTABLETEVENT_GLOBALX )
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->globalX (  );
-    hb_retni( i );
+    hb_retni( obj->globalX (  ) );
   }
 }
 
@@ -215,8 +212,7 @@ HB_FUNC_STATIC( QTABLETEVENT_GLOBALY )
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->globalY (  );
-    hb_retni( i );
+    hb_retni( obj->globalY (  ) );
   }
 }
 
@@ -257,8 +253,7 @@ HB_FUNC_STATIC( QTABLETEVENT_DEVICE )
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->device (  );
-    hb_retni( i );
+    hb_retni( (int) obj->device (  ) );
   }
 }
 
@@ -271,8 +266,7 @@ HB_FUNC_STATIC( QTABLETEVENT_POINTERTYPE )
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->pointerType (  );
-    hb_retni( i );
+    hb_retni( (int) obj->pointerType (  ) );
   }
 }
 
@@ -313,8 +307,7 @@ HB_FUNC_STATIC( QTABLETEVENT_Z )
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->z (  );
-    hb_retni( i );
+    hb_retni( obj->z (  ) );
   }
 }
 
@@ -355,8 +348,7 @@ HB_FUNC_STATIC( QTABLETEVENT_XTILT )
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->xTilt (  );
-    hb_retni( i );
+    hb_retni( obj->xTilt (  ) );
   }
 }
 
@@ -369,8 +361,7 @@ HB_FUNC_STATIC( QTABLETEVENT_YTILT )
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->yTilt (  );
-    hb_retni( i );
+    hb_retni( obj->yTilt (  ) );
   }
 }
 

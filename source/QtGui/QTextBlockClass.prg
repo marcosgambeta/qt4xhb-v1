@@ -183,8 +183,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_BLOCKFORMATINDEX )
   QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->blockFormatIndex (  );
-    hb_retni( i );
+    hb_retni( obj->blockFormatIndex (  ) );
   }
 }
 
@@ -197,8 +196,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_BLOCKNUMBER )
   QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->blockNumber (  );
-    hb_retni( i );
+    hb_retni( obj->blockNumber (  ) );
   }
 }
 
@@ -225,8 +223,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_CHARFORMATINDEX )
   QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->charFormatIndex (  );
-    hb_retni( i );
+    hb_retni( obj->charFormatIndex (  ) );
   }
 }
 
@@ -282,8 +279,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_FIRSTLINENUMBER )
   QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->firstLineNumber (  );
-    hb_retni( i );
+    hb_retni( obj->firstLineNumber (  ) );
   }
 }
 
@@ -336,8 +332,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_LENGTH )
   QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->length (  );
-    hb_retni( i );
+    hb_retni( obj->length (  ) );
   }
 }
 
@@ -350,8 +345,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_LINECOUNT )
   QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->lineCount (  );
-    hb_retni( i );
+    hb_retni( obj->lineCount (  ) );
   }
 }
 
@@ -378,8 +372,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_POSITION )
   QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->position (  );
-    hb_retni( i );
+    hb_retni( obj->position (  ) );
   }
 }
 
@@ -406,8 +399,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_REVISION )
   QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->revision (  );
-    hb_retni( i );
+    hb_retni( obj->revision (  ) );
   }
 }
 
@@ -509,8 +501,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_TEXTDIRECTION )
   QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->textDirection (  );
-    hb_retni( i );
+    hb_retni( (int) obj->textDirection (  ) );
   }
 }
 
@@ -551,8 +542,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_USERSTATE )
   QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->userState (  );
-    hb_retni( i );
+    hb_retni( obj->userState (  ) );
   }
 }
 

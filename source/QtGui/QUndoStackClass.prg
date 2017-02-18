@@ -171,8 +171,7 @@ HB_FUNC_STATIC( QUNDOSTACK_CLEANINDEX )
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->cleanIndex (  );
-    hb_retni( i );
+    hb_retni( obj->cleanIndex (  ) );
   }
 }
 
@@ -214,8 +213,7 @@ HB_FUNC_STATIC( QUNDOSTACK_COUNT )
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->count (  );
-    hb_retni( i );
+    hb_retni( obj->count (  ) );
   }
 }
 
@@ -274,8 +272,7 @@ HB_FUNC_STATIC( QUNDOSTACK_INDEX )
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->index (  );
-    hb_retni( i );
+    hb_retni( obj->index (  ) );
   }
 }
 
@@ -373,8 +370,7 @@ HB_FUNC_STATIC( QUNDOSTACK_UNDOLIMIT )
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->undoLimit (  );
-    hb_retni( i );
+    hb_retni( obj->undoLimit (  ) );
   }
 }
 

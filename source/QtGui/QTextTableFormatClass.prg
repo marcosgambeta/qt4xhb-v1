@@ -111,8 +111,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_ALIGNMENT )
   QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->alignment (  );
-    hb_retni( i );
+    hb_retni( (int) obj->alignment (  ) );
   }
 }
 
@@ -211,8 +210,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_COLUMNS )
   QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->columns (  );
-    hb_retni( i );
+    hb_retni( obj->columns (  ) );
   }
 }
 
@@ -225,8 +223,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_HEADERROWCOUNT )
   QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->headerRowCount (  );
-    hb_retni( i );
+    hb_retni( obj->headerRowCount (  ) );
   }
 }
 

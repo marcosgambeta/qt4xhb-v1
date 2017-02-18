@@ -150,8 +150,7 @@ HB_FUNC_STATIC( QTABWIDGET_ADDTAB1 )
   {
     QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QString par2 = hb_parc(2);
-    int i = obj->addTab ( par1, par2 );
-    hb_retni( i );
+    hb_retni( obj->addTab ( par1, par2 ) );
   }
 }
 
@@ -167,8 +166,7 @@ HB_FUNC_STATIC( QTABWIDGET_ADDTAB2 )
     QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QIcon par2 = ISOBJECT(2)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(2));
     QString par3 = hb_parc(3);
-    int i = obj->addTab ( par1, par2, par3 );
-    hb_retni( i );
+    hb_retni( obj->addTab ( par1, par2, par3 ) );
   }
 }
 
@@ -225,8 +223,7 @@ HB_FUNC_STATIC( QTABWIDGET_COUNT )
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->count (  );
-    hb_retni( i );
+    hb_retni( obj->count (  ) );
   }
 }
 
@@ -239,8 +236,7 @@ HB_FUNC_STATIC( QTABWIDGET_CURRENTINDEX )
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->currentIndex (  );
-    hb_retni( i );
+    hb_retni( obj->currentIndex (  ) );
   }
 }
 
@@ -280,8 +276,7 @@ HB_FUNC_STATIC( QTABWIDGET_ELIDEMODE )
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->elideMode (  );
-    hb_retni( i );
+    hb_retni( (int) obj->elideMode (  ) );
   }
 }
 
@@ -309,8 +304,7 @@ HB_FUNC_STATIC( QTABWIDGET_INDEXOF )
   if( obj )
   {
     QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->indexOf ( par1 );
-    hb_retni( i );
+    hb_retni( obj->indexOf ( par1 ) );
   }
 }
 
@@ -326,8 +320,7 @@ HB_FUNC_STATIC( QTABWIDGET_INSERTTAB1 )
     int par1 = hb_parni(1);
     QWidget * par2 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     QString par3 = hb_parc(3);
-    int i = obj->insertTab ( par1, par2, par3 );
-    hb_retni( i );
+    hb_retni( obj->insertTab ( par1, par2, par3 ) );
   }
 }
 
@@ -344,8 +337,7 @@ HB_FUNC_STATIC( QTABWIDGET_INSERTTAB2 )
     QWidget * par2 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     QIcon par3 = ISOBJECT(3)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(3));
     QString par4 = hb_parc(4);
-    int i = obj->insertTab ( par1, par2, par3, par4 );
-    hb_retni( i );
+    hb_retni( obj->insertTab ( par1, par2, par3, par4 ) );
   }
 }
 
@@ -646,8 +638,7 @@ HB_FUNC_STATIC( QTABWIDGET_TABPOSITION )
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->tabPosition (  );
-    hb_retni( i );
+    hb_retni( (int) obj->tabPosition (  ) );
   }
 }
 
@@ -660,8 +651,7 @@ HB_FUNC_STATIC( QTABWIDGET_TABSHAPE )
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->tabShape (  );
-    hb_retni( i );
+    hb_retni( (int) obj->tabShape (  ) );
   }
 }
 

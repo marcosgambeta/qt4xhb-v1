@@ -215,8 +215,7 @@ HB_FUNC_STATIC( QSTATICTEXT_PERFORMANCEHINT )
   QStaticText * obj = (QStaticText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->performanceHint (  );
-    hb_retni( i );
+    hb_retni( (int) obj->performanceHint (  ) );
   }
 }
 
@@ -348,8 +347,7 @@ HB_FUNC_STATIC( QSTATICTEXT_TEXTFORMAT )
   QStaticText * obj = (QStaticText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->textFormat (  );
-    hb_retni( i );
+    hb_retni( (int) obj->textFormat (  ) );
   }
 }
 

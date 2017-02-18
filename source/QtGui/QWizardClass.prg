@@ -153,8 +153,7 @@ HB_FUNC_STATIC( QWIZARD_ADDPAGE )
   if( obj )
   {
     QWizardPage * par1 = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->addPage ( par1 );
-    hb_retni( i );
+    hb_retni( obj->addPage ( par1 ) );
   }
 }
 
@@ -197,8 +196,7 @@ HB_FUNC_STATIC( QWIZARD_CURRENTID )
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->currentId (  );
-    hb_retni( i );
+    hb_retni( obj->currentId (  ) );
   }
 }
 
@@ -254,8 +252,7 @@ HB_FUNC_STATIC( QWIZARD_NEXTID )
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->nextId (  );
-    hb_retni( i );
+    hb_retni( obj->nextId (  ) );
   }
 }
 
@@ -268,8 +265,7 @@ HB_FUNC_STATIC( QWIZARD_OPTIONS )
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->options (  );
-    hb_retni( i );
+    hb_retni( (int) obj->options (  ) );
   }
 }
 
@@ -591,8 +587,7 @@ HB_FUNC_STATIC( QWIZARD_STARTID )
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->startId (  );
-    hb_retni( i );
+    hb_retni( obj->startId (  ) );
   }
 }
 
@@ -605,8 +600,7 @@ HB_FUNC_STATIC( QWIZARD_SUBTITLEFORMAT )
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->subTitleFormat (  );
-    hb_retni( i );
+    hb_retni( (int) obj->subTitleFormat (  ) );
   }
 }
 
@@ -633,8 +627,7 @@ HB_FUNC_STATIC( QWIZARD_TITLEFORMAT )
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->titleFormat (  );
-    hb_retni( i );
+    hb_retni( (int) obj->titleFormat (  ) );
   }
 }
 
@@ -683,8 +676,7 @@ HB_FUNC_STATIC( QWIZARD_WIZARDSTYLE )
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->wizardStyle (  );
-    hb_retni( i );
+    hb_retni( (int) obj->wizardStyle (  ) );
   }
 }
 

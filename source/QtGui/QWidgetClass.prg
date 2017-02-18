@@ -547,8 +547,7 @@ HB_FUNC_STATIC( QWIDGET_BACKGROUNDROLE )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->backgroundRole (  );
-    hb_retni( i );
+    hb_retni( (int) obj->backgroundRole (  ) );
   }
 }
 
@@ -705,8 +704,7 @@ HB_FUNC_STATIC( QWIDGET_CONTEXTMENUPOLICY )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->contextMenuPolicy (  );
-    hb_retni( i );
+    hb_retni( (int) obj->contextMenuPolicy (  ) );
   }
 }
 
@@ -761,8 +759,7 @@ HB_FUNC_STATIC( QWIDGET_FOCUSPOLICY )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->focusPolicy (  );
-    hb_retni( i );
+    hb_retni( (int) obj->focusPolicy (  ) );
   }
 }
 
@@ -845,8 +842,7 @@ HB_FUNC_STATIC( QWIDGET_FOREGROUNDROLE )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->foregroundRole (  );
-    hb_retni( i );
+    hb_retni( (int) obj->foregroundRole (  ) );
   }
 }
 
@@ -999,8 +995,7 @@ HB_FUNC_STATIC( QWIDGET_GRABSHORTCUT )
   {
     QKeySequence * par1 = (QKeySequence *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = ISNIL(2)? (int) Qt::WindowShortcut : hb_parni(2);
-    int i = obj->grabShortcut ( *par1,  (Qt::ShortcutContext) par2 );
-    hb_retni( i );
+    hb_retni( obj->grabShortcut ( *par1,  (Qt::ShortcutContext) par2 ) );
   }
 }
 
@@ -1068,8 +1063,7 @@ HB_FUNC_STATIC( QWIDGET_HEIGHT )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->height (  );
-    hb_retni( i );
+    hb_retni( obj->height (  ) );
   }
 }
 
@@ -1083,8 +1077,7 @@ HB_FUNC_STATIC( QWIDGET_HEIGHTFORWIDTH )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->heightForWidth ( par1 );
-    hb_retni( i );
+    hb_retni( obj->heightForWidth ( par1 ) );
   }
 }
 
@@ -1111,8 +1104,7 @@ HB_FUNC_STATIC( QWIDGET_INPUTMETHODHINTS )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->inputMethodHints (  );
-    hb_retni( i );
+    hb_retni( (int) obj->inputMethodHints (  ) );
   }
 }
 
@@ -1364,8 +1356,7 @@ HB_FUNC_STATIC( QWIDGET_LAYOUTDIRECTION )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->layoutDirection (  );
-    hb_retni( i );
+    hb_retni( (int) obj->layoutDirection (  ) );
   }
 }
 
@@ -1500,8 +1491,7 @@ HB_FUNC_STATIC( QWIDGET_MAXIMUMHEIGHT )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->maximumHeight (  );
-    hb_retni( i );
+    hb_retni( obj->maximumHeight (  ) );
   }
 }
 
@@ -1528,8 +1518,7 @@ HB_FUNC_STATIC( QWIDGET_MAXIMUMWIDTH )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->maximumWidth (  );
-    hb_retni( i );
+    hb_retni( obj->maximumWidth (  ) );
   }
 }
 
@@ -1542,8 +1531,7 @@ HB_FUNC_STATIC( QWIDGET_MINIMUMHEIGHT )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->minimumHeight (  );
-    hb_retni( i );
+    hb_retni( obj->minimumHeight (  ) );
   }
 }
 
@@ -1584,8 +1572,7 @@ HB_FUNC_STATIC( QWIDGET_MINIMUMWIDTH )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->minimumWidth (  );
-    hb_retni( i );
+    hb_retni( obj->minimumWidth (  ) );
   }
 }
 
@@ -3553,8 +3540,7 @@ HB_FUNC_STATIC( QWIDGET_WIDTH )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->width (  );
-    hb_retni( i );
+    hb_retni( obj->width (  ) );
   }
 }
 
@@ -3609,8 +3595,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOWFLAGS )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->windowFlags (  );
-    hb_retni( i );
+    hb_retni( (int) obj->windowFlags (  ) );
   }
 }
 
@@ -3651,8 +3636,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOWMODALITY )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->windowModality (  );
-    hb_retni( i );
+    hb_retni( (int) obj->windowModality (  ) );
   }
 }
 
@@ -3693,8 +3677,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOWSTATE )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->windowState (  );
-    hb_retni( i );
+    hb_retni( (int) obj->windowState (  ) );
   }
 }
 
@@ -3722,8 +3705,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOWTYPE )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->windowType (  );
-    hb_retni( i );
+    hb_retni( (int) obj->windowType (  ) );
   }
 }
 
@@ -3736,8 +3718,7 @@ HB_FUNC_STATIC( QWIDGET_X )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->x (  );
-    hb_retni( i );
+    hb_retni( obj->x (  ) );
   }
 }
 
@@ -3752,8 +3733,7 @@ HB_FUNC_STATIC( QWIDGET_Y )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->y (  );
-    hb_retni( i );
+    hb_retni( obj->y (  ) );
   }
 }
 
@@ -4018,8 +3998,7 @@ HB_FUNC_STATIC( QWIDGET_COLORCOUNT )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->colorCount (  );
-    hb_retni( i );
+    hb_retni( obj->colorCount (  ) );
   }
 }
 
@@ -4032,8 +4011,7 @@ HB_FUNC_STATIC( QWIDGET_DEPTH )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->depth (  );
-    hb_retni( i );
+    hb_retni( obj->depth (  ) );
   }
 }
 
@@ -4047,8 +4025,7 @@ HB_FUNC_STATIC( QWIDGET_HEIGHTMM )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->heightMM (  );
-    hb_retni( i );
+    hb_retni( obj->heightMM (  ) );
   }
 }
 
@@ -4061,8 +4038,7 @@ HB_FUNC_STATIC( QWIDGET_LOGICALDPIX )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->logicalDpiX (  );
-    hb_retni( i );
+    hb_retni( obj->logicalDpiX (  ) );
   }
 }
 
@@ -4075,8 +4051,7 @@ HB_FUNC_STATIC( QWIDGET_LOGICALDPIY )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->logicalDpiY (  );
-    hb_retni( i );
+    hb_retni( obj->logicalDpiY (  ) );
   }
 }
 
@@ -4089,8 +4064,7 @@ HB_FUNC_STATIC( QWIDGET_NUMCOLORS )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->numColors (  );
-    hb_retni( i );
+    hb_retni( obj->numColors (  ) );
   }
 }
 
@@ -4117,8 +4091,7 @@ HB_FUNC_STATIC( QWIDGET_PHYSICALDPIX )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->physicalDpiX (  );
-    hb_retni( i );
+    hb_retni( obj->physicalDpiX (  ) );
   }
 }
 
@@ -4131,8 +4104,7 @@ HB_FUNC_STATIC( QWIDGET_PHYSICALDPIY )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->physicalDpiY (  );
-    hb_retni( i );
+    hb_retni( obj->physicalDpiY (  ) );
   }
 }
 
@@ -4146,8 +4118,7 @@ HB_FUNC_STATIC( QWIDGET_WIDTHMM )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->widthMM (  );
-    hb_retni( i );
+    hb_retni( obj->widthMM (  ) );
   }
 }
 

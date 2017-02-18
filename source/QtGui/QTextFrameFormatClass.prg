@@ -158,8 +158,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_BORDERSTYLE )
   QTextFrameFormat * obj = (QTextFrameFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->borderStyle (  );
-    hb_retni( i );
+    hb_retni( (int) obj->borderStyle (  ) );
   }
 }
 
@@ -255,8 +254,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_PAGEBREAKPOLICY )
   QTextFrameFormat * obj = (QTextFrameFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->pageBreakPolicy (  );
-    hb_retni( i );
+    hb_retni( (int) obj->pageBreakPolicy (  ) );
   }
 }
 
@@ -269,8 +267,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_POSITION )
   QTextFrameFormat * obj = (QTextFrameFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->position (  );
-    hb_retni( i );
+    hb_retni( (int) obj->position (  ) );
   }
 }
 

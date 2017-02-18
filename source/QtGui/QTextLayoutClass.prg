@@ -318,8 +318,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_CURSORMOVESTYLE )
   QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->cursorMoveStyle (  );
-    hb_retni( i );
+    hb_retni( (int) obj->cursorMoveStyle (  ) );
   }
 }
 
@@ -470,8 +469,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_LEFTCURSORPOSITION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->leftCursorPosition ( par1 );
-    hb_retni( i );
+    hb_retni( obj->leftCursorPosition ( par1 ) );
   }
 }
 
@@ -499,8 +497,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_LINECOUNT )
   QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->lineCount (  );
-    hb_retni( i );
+    hb_retni( obj->lineCount (  ) );
   }
 }
 
@@ -558,8 +555,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_NEXTCURSORPOSITION )
   {
     int par1 = hb_parni(1);
     int par2 = ISNIL(2)? (int) QTextLayout::SkipCharacters : hb_parni(2);
-    int i = obj->nextCursorPosition ( par1,  (QTextLayout::CursorMode) par2 );
-    hb_retni( i );
+    hb_retni( obj->nextCursorPosition ( par1,  (QTextLayout::CursorMode) par2 ) );
   }
 }
 
@@ -586,8 +582,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_PREEDITAREAPOSITION )
   QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->preeditAreaPosition (  );
-    hb_retni( i );
+    hb_retni( obj->preeditAreaPosition (  ) );
   }
 }
 
@@ -616,8 +611,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_PREVIOUSCURSORPOSITION )
   {
     int par1 = hb_parni(1);
     int par2 = ISNIL(2)? (int) QTextLayout::SkipCharacters : hb_parni(2);
-    int i = obj->previousCursorPosition ( par1,  (QTextLayout::CursorMode) par2 );
-    hb_retni( i );
+    hb_retni( obj->previousCursorPosition ( par1,  (QTextLayout::CursorMode) par2 ) );
   }
 }
 
@@ -631,8 +625,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_RIGHTCURSORPOSITION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->rightCursorPosition ( par1 );
-    hb_retni( i );
+    hb_retni( obj->rightCursorPosition ( par1 ) );
   }
 }
 

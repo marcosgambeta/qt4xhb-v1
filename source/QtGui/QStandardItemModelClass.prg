@@ -263,8 +263,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_ROWCOUNT )
   if( obj )
   {
     QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->rowCount ( par1 );
-    hb_retni( i );
+    hb_retni( obj->rowCount ( par1 ) );
   }
 }
 
@@ -278,8 +277,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_COLUMNCOUNT )
   if( obj )
   {
     QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->columnCount ( par1 );
-    hb_retni( i );
+    hb_retni( obj->columnCount ( par1 ) );
   }
 }
 
@@ -437,8 +435,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_FLAGS )
   if( obj )
   {
     QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->flags ( *par1 );
-    hb_retni( i );
+    hb_retni( (int) obj->flags ( *par1 ) );
   }
 }
 
@@ -451,8 +448,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SUPPORTEDDROPACTIONS )
   QStandardItemModel * obj = (QStandardItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->supportedDropActions (  );
-    hb_retni( i );
+    hb_retni( (int) obj->supportedDropActions (  ) );
   }
 }
 
@@ -1153,8 +1149,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SORTROLE )
   QStandardItemModel * obj = (QStandardItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->sortRole (  );
-    hb_retni( i );
+    hb_retni( obj->sortRole (  ) );
   }
 }
 

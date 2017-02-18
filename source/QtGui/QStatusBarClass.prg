@@ -157,8 +157,7 @@ HB_FUNC_STATIC( QSTATUSBAR_INSERTPERMANENTWIDGET )
     int par1 = hb_parni(1);
     QWidget * par2 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par3 = ISNIL(3)? 0 : hb_parni(3);
-    int i = obj->insertPermanentWidget ( par1, par2, par3 );
-    hb_retni( i );
+    hb_retni( obj->insertPermanentWidget ( par1, par2, par3 ) );
   }
 }
 
@@ -174,8 +173,7 @@ HB_FUNC_STATIC( QSTATUSBAR_INSERTWIDGET )
     int par1 = hb_parni(1);
     QWidget * par2 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par3 = ISNIL(3)? 0 : hb_parni(3);
-    int i = obj->insertWidget ( par1, par2, par3 );
-    hb_retni( i );
+    hb_retni( obj->insertWidget ( par1, par2, par3 ) );
   }
 }
 

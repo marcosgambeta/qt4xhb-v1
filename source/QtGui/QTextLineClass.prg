@@ -308,8 +308,7 @@ HB_FUNC_STATIC( QTEXTLINE_LINENUMBER )
   QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->lineNumber (  );
-    hb_retni( i );
+    hb_retni( obj->lineNumber (  ) );
   }
 }
 
@@ -469,8 +468,7 @@ HB_FUNC_STATIC( QTEXTLINE_TEXTLENGTH )
   QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->textLength (  );
-    hb_retni( i );
+    hb_retni( obj->textLength (  ) );
   }
 }
 
@@ -483,8 +481,7 @@ HB_FUNC_STATIC( QTEXTLINE_TEXTSTART )
   QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->textStart (  );
-    hb_retni( i );
+    hb_retni( obj->textStart (  ) );
   }
 }
 
@@ -527,8 +524,7 @@ HB_FUNC_STATIC( QTEXTLINE_XTOCURSOR )
   {
     qreal par1 = hb_parnd(1);
     int par2 = ISNIL(2)? (int) QTextLine::CursorBetweenCharacters : hb_parni(2);
-    int i = obj->xToCursor ( par1,  (QTextLine::CursorPosition) par2 );
-    hb_retni( i );
+    hb_retni( obj->xToCursor ( par1,  (QTextLine::CursorPosition) par2 ) );
   }
 }
 

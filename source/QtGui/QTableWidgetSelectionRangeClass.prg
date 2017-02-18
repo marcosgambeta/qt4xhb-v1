@@ -199,8 +199,7 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_BOTTOMROW )
   QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->bottomRow (  );
-    hb_retni( i );
+    hb_retni( obj->bottomRow (  ) );
   }
 }
 
@@ -213,8 +212,7 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_COLUMNCOUNT )
   QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->columnCount (  );
-    hb_retni( i );
+    hb_retni( obj->columnCount (  ) );
   }
 }
 
@@ -227,8 +225,7 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_LEFTCOLUMN )
   QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->leftColumn (  );
-    hb_retni( i );
+    hb_retni( obj->leftColumn (  ) );
   }
 }
 
@@ -241,8 +238,7 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_RIGHTCOLUMN )
   QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->rightColumn (  );
-    hb_retni( i );
+    hb_retni( obj->rightColumn (  ) );
   }
 }
 
@@ -255,8 +251,7 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_ROWCOUNT )
   QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->rowCount (  );
-    hb_retni( i );
+    hb_retni( obj->rowCount (  ) );
   }
 }
 
@@ -269,8 +264,7 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_TOPROW )
   QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->topRow (  );
-    hb_retni( i );
+    hb_retni( obj->topRow (  ) );
   }
 }
 

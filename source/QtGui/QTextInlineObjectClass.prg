@@ -191,8 +191,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_FORMATINDEX )
   QTextInlineObject * obj = (QTextInlineObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->formatIndex (  );
-    hb_retni( i );
+    hb_retni( obj->formatIndex (  ) );
   }
 }
 
@@ -291,8 +290,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_TEXTDIRECTION )
   QTextInlineObject * obj = (QTextInlineObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->textDirection (  );
-    hb_retni( i );
+    hb_retni( (int) obj->textDirection (  ) );
   }
 }
 
@@ -305,8 +303,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_TEXTPOSITION )
   QTextInlineObject * obj = (QTextInlineObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->textPosition (  );
-    hb_retni( i );
+    hb_retni( obj->textPosition (  ) );
   }
 }
 

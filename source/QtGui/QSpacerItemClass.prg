@@ -115,8 +115,7 @@ HB_FUNC_STATIC( QSPACERITEM_EXPANDINGDIRECTIONS )
   QSpacerItem * obj = (QSpacerItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->expandingDirections (  );
-    hb_retni( i );
+    hb_retni( (int) obj->expandingDirections (  ) );
   }
 }
 

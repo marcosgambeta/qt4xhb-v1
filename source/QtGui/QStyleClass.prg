@@ -129,8 +129,7 @@ HB_FUNC_STATIC( QSTYLE_COMBINEDLAYOUTSPACING )
     int par3 = hb_parni(3);
     QStyleOption * par4 = ISNIL(4)? 0 : (QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
     QWidget * par5 = ISNIL(5)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(5, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->combinedLayoutSpacing (  (QSizePolicy::ControlTypes) par1,  (QSizePolicy::ControlTypes) par2,  (Qt::Orientation) par3, par4, par5 );
-    hb_retni( i );
+    hb_retni( obj->combinedLayoutSpacing (  (QSizePolicy::ControlTypes) par1,  (QSizePolicy::ControlTypes) par2,  (Qt::Orientation) par3, par4, par5 ) );
   }
 }
 
@@ -257,8 +256,7 @@ HB_FUNC_STATIC( QSTYLE_HITTESTCOMPLEXCONTROL )
     const QStyleOptionComplex * par2 = (const QStyleOptionComplex *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     QPoint * par3 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     const QWidget * par4 = ISNIL(4)? 0 : (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->hitTestComplexControl (  (QStyle::ComplexControl) par1, par2, *par3, par4 );
-    hb_retni( i );
+    hb_retni( (int) obj->hitTestComplexControl (  (QStyle::ComplexControl) par1, par2, *par3, par4 ) );
   }
 }
 
@@ -312,8 +310,7 @@ HB_FUNC_STATIC( QSTYLE_LAYOUTSPACING )
     int par3 = hb_parni(3);
     const QStyleOption * par4 = ISNIL(4)? 0 : (const QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
     const QWidget * par5 = ISNIL(5)? 0 : (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(5, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->layoutSpacing (  (QSizePolicy::ControlType) par1,  (QSizePolicy::ControlType) par2,  (Qt::Orientation) par3, par4, par5 );
-    hb_retni( i );
+    hb_retni( obj->layoutSpacing (  (QSizePolicy::ControlType) par1,  (QSizePolicy::ControlType) par2,  (Qt::Orientation) par3, par4, par5 ) );
   }
 }
 
@@ -329,8 +326,7 @@ HB_FUNC_STATIC( QSTYLE_PIXELMETRIC )
     int par1 = hb_parni(1);
     const QStyleOption * par2 = ISNIL(2)? 0 : (const QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     const QWidget * par3 = ISNIL(3)? 0 : (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->pixelMetric (  (QStyle::PixelMetric) par1, par2, par3 );
-    hb_retni( i );
+    hb_retni( obj->pixelMetric (  (QStyle::PixelMetric) par1, par2, par3 ) );
   }
 }
 
@@ -475,8 +471,7 @@ HB_FUNC_STATIC( QSTYLE_STYLEHINT )
     const QStyleOption * par2 = ISNIL(2)? 0 : (const QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     const QWidget * par3 = ISNIL(3)? 0 : (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     QStyleHintReturn * par4 = ISNIL(4)? 0 : (QStyleHintReturn *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->styleHint (  (QStyle::StyleHint) par1, par2, par3, par4 );
-    hb_retni( i );
+    hb_retni( obj->styleHint (  (QStyle::StyleHint) par1, par2, par3, par4 ) );
   }
 }
 
@@ -588,8 +583,7 @@ HB_FUNC_STATIC( QSTYLE_SLIDERPOSITIONFROMVALUE )
   int par3 = hb_parni(3);
   int par4 = hb_parni(4);
   bool par5 = ISNIL(5)? false : hb_parl(5);
-  int i = QStyle::sliderPositionFromValue ( par1, par2, par3, par4, par5 );
-  hb_retni( i );
+  hb_retni( QStyle::sliderPositionFromValue ( par1, par2, par3, par4, par5 ) );
 }
 
 
@@ -603,8 +597,7 @@ HB_FUNC_STATIC( QSTYLE_SLIDERVALUEFROMPOSITION )
   int par3 = hb_parni(3);
   int par4 = hb_parni(4);
   bool par5 = ISNIL(5)? false : hb_parl(5);
-  int i = QStyle::sliderValueFromPosition ( par1, par2, par3, par4, par5 );
-  hb_retni( i );
+  hb_retni( QStyle::sliderValueFromPosition ( par1, par2, par3, par4, par5 ) );
 }
 
 
@@ -615,8 +608,7 @@ HB_FUNC_STATIC( QSTYLE_VISUALALIGNMENT )
 {
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
-  int i = QStyle::visualAlignment (  (Qt::LayoutDirection) par1,  (Qt::Alignment) par2 );
-  hb_retni( i );
+  hb_retni( (int) QStyle::visualAlignment (  (Qt::LayoutDirection) par1,  (Qt::Alignment) par2 ) );
 }
 
 

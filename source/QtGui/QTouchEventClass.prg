@@ -100,8 +100,7 @@ HB_FUNC_STATIC( QTOUCHEVENT_DEVICETYPE )
   QTouchEvent * obj = (QTouchEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->deviceType (  );
-    hb_retni( i );
+    hb_retni( (int) obj->deviceType (  ) );
   }
 }
 
@@ -114,8 +113,7 @@ HB_FUNC_STATIC( QTOUCHEVENT_TOUCHPOINTSTATES )
   QTouchEvent * obj = (QTouchEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->touchPointStates (  );
-    hb_retni( i );
+    hb_retni( (int) obj->touchPointStates (  ) );
   }
 }
 

@@ -183,8 +183,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_NEXTID )
   QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->nextId (  );
-    hb_retni( i );
+    hb_retni( obj->nextId (  ) );
   }
 }
 

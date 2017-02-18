@@ -193,8 +193,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_CHARFORMATINDEX )
   QTextFragment * obj = (QTextFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->charFormatIndex (  );
-    hb_retni( i );
+    hb_retni( obj->charFormatIndex (  ) );
   }
 }
 
@@ -278,8 +277,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_LENGTH )
   QTextFragment * obj = (QTextFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->length (  );
-    hb_retni( i );
+    hb_retni( obj->length (  ) );
   }
 }
 
@@ -292,8 +290,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_POSITION )
   QTextFragment * obj = (QTextFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->position (  );
-    hb_retni( i );
+    hb_retni( obj->position (  ) );
   }
 }
 

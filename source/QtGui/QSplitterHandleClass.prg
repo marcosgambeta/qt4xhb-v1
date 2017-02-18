@@ -103,8 +103,7 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_ORIENTATION )
   QSplitterHandle * obj = (QSplitterHandle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->orientation (  );
-    hb_retni( i );
+    hb_retni( (int) obj->orientation (  ) );
   }
 }
 

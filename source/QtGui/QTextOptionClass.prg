@@ -204,8 +204,7 @@ HB_FUNC_STATIC( QTEXTOPTION_ALIGNMENT )
   QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->alignment (  );
-    hb_retni( i );
+    hb_retni( (int) obj->alignment (  ) );
   }
 }
 
@@ -218,8 +217,7 @@ HB_FUNC_STATIC( QTEXTOPTION_FLAGS )
   QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->flags (  );
-    hb_retni( i );
+    hb_retni( (int) obj->flags (  ) );
   }
 }
 
@@ -385,8 +383,7 @@ HB_FUNC_STATIC( QTEXTOPTION_TEXTDIRECTION )
   QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->textDirection (  );
-    hb_retni( i );
+    hb_retni( (int) obj->textDirection (  ) );
   }
 }
 
@@ -412,8 +409,7 @@ HB_FUNC_STATIC( QTEXTOPTION_WRAPMODE )
   QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->wrapMode (  );
-    hb_retni( i );
+    hb_retni( (int) obj->wrapMode (  ) );
   }
 }
 

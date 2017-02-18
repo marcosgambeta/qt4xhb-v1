@@ -194,8 +194,7 @@ HB_FUNC_STATIC( QSPLITTER_COUNT )
   QSplitter * obj = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->count (  );
-    hb_retni( i );
+    hb_retni( obj->count (  ) );
   }
 }
 
@@ -242,8 +241,7 @@ HB_FUNC_STATIC( QSPLITTER_HANDLEWIDTH )
   QSplitter * obj = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->handleWidth (  );
-    hb_retni( i );
+    hb_retni( obj->handleWidth (  ) );
   }
 }
 
@@ -257,8 +255,7 @@ HB_FUNC_STATIC( QSPLITTER_INDEXOF )
   if( obj )
   {
     QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->indexOf ( par1 );
-    hb_retni( i );
+    hb_retni( obj->indexOf ( par1 ) );
   }
 }
 
@@ -314,8 +311,7 @@ HB_FUNC_STATIC( QSPLITTER_ORIENTATION )
   QSplitter * obj = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->orientation (  );
-    hb_retni( i );
+    hb_retni( (int) obj->orientation (  ) );
   }
 }
 

@@ -184,8 +184,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_COLUMN )
   QTextTableCell * obj = (QTextTableCell *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->column (  );
-    hb_retni( i );
+    hb_retni( obj->column (  ) );
   }
 }
 
@@ -198,8 +197,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_COLUMNSPAN )
   QTextTableCell * obj = (QTextTableCell *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->columnSpan (  );
-    hb_retni( i );
+    hb_retni( obj->columnSpan (  ) );
   }
 }
 
@@ -268,8 +266,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_ROW )
   QTextTableCell * obj = (QTextTableCell *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->row (  );
-    hb_retni( i );
+    hb_retni( obj->row (  ) );
   }
 }
 
@@ -282,8 +279,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_ROWSPAN )
   QTextTableCell * obj = (QTextTableCell *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->rowSpan (  );
-    hb_retni( i );
+    hb_retni( obj->rowSpan (  ) );
   }
 }
 
@@ -311,8 +307,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_TABLECELLFORMATINDEX )
   QTextTableCell * obj = (QTextTableCell *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->tableCellFormatIndex (  );
-    hb_retni( i );
+    hb_retni( obj->tableCellFormatIndex (  ) );
   }
 }
 

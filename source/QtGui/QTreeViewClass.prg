@@ -173,8 +173,7 @@ HB_FUNC_STATIC( QTREEVIEW_AUTOEXPANDDELAY )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->autoExpandDelay (  );
-    hb_retni( i );
+    hb_retni( obj->autoExpandDelay (  ) );
   }
 }
 
@@ -188,8 +187,7 @@ HB_FUNC_STATIC( QTREEVIEW_COLUMNAT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->columnAt ( par1 );
-    hb_retni( i );
+    hb_retni( obj->columnAt ( par1 ) );
   }
 }
 
@@ -203,8 +201,7 @@ HB_FUNC_STATIC( QTREEVIEW_COLUMNVIEWPORTPOSITION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->columnViewportPosition ( par1 );
-    hb_retni( i );
+    hb_retni( obj->columnViewportPosition ( par1 ) );
   }
 }
 
@@ -218,8 +215,7 @@ HB_FUNC_STATIC( QTREEVIEW_COLUMNWIDTH )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->columnWidth ( par1 );
-    hb_retni( i );
+    hb_retni( obj->columnWidth ( par1 ) );
   }
 }
 
@@ -259,8 +255,7 @@ HB_FUNC_STATIC( QTREEVIEW_INDENTATION )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->indentation (  );
-    hb_retni( i );
+    hb_retni( obj->indentation (  ) );
   }
 }
 

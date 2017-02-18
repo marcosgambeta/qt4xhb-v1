@@ -334,8 +334,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_ANCHOR )
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->anchor (  );
-    hb_retni( i );
+    hb_retni( obj->anchor (  ) );
   }
 }
 
@@ -456,8 +455,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_BLOCKNUMBER )
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->blockNumber (  );
-    hb_retni( i );
+    hb_retni( obj->blockNumber (  ) );
   }
 }
 
@@ -498,8 +496,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_COLUMNNUMBER )
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->columnNumber (  );
-    hb_retni( i );
+    hb_retni( obj->columnNumber (  ) );
   }
 }
 
@@ -1131,8 +1128,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_POSITION )
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->position (  );
-    hb_retni( i );
+    hb_retni( obj->position (  ) );
   }
 }
 
@@ -1145,8 +1141,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_POSITIONINBLOCK )
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->positionInBlock (  );
-    hb_retni( i );
+    hb_retni( obj->positionInBlock (  ) );
   }
 }
 
@@ -1238,8 +1233,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_SELECTIONEND )
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->selectionEnd (  );
-    hb_retni( i );
+    hb_retni( obj->selectionEnd (  ) );
   }
 }
 
@@ -1252,8 +1246,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_SELECTIONSTART )
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->selectionStart (  );
-    hb_retni( i );
+    hb_retni( obj->selectionStart (  ) );
   }
 }
 
@@ -1372,8 +1365,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_VERTICALMOVEMENTX )
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->verticalMovementX (  );
-    hb_retni( i );
+    hb_retni( obj->verticalMovementX (  ) );
   }
 }
 

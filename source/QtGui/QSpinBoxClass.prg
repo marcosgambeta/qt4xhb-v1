@@ -127,8 +127,7 @@ HB_FUNC_STATIC( QSPINBOX_MAXIMUM )
   QSpinBox * obj = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->maximum (  );
-    hb_retni( i );
+    hb_retni( obj->maximum (  ) );
   }
 }
 
@@ -141,8 +140,7 @@ HB_FUNC_STATIC( QSPINBOX_MINIMUM )
   QSpinBox * obj = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->minimum (  );
-    hb_retni( i );
+    hb_retni( obj->minimum (  ) );
   }
 }
 
@@ -260,8 +258,7 @@ HB_FUNC_STATIC( QSPINBOX_SINGLESTEP )
   QSpinBox * obj = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->singleStep (  );
-    hb_retni( i );
+    hb_retni( obj->singleStep (  ) );
   }
 }
 
@@ -288,8 +285,7 @@ HB_FUNC_STATIC( QSPINBOX_VALUE )
   QSpinBox * obj = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->value (  );
-    hb_retni( i );
+    hb_retni( obj->value (  ) );
   }
 }
 

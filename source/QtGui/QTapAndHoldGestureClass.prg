@@ -125,8 +125,7 @@ int timeout ()
 */
 HB_FUNC_STATIC( QTAPANDHOLDGESTURE_TIMEOUT )
 {
-  int i = QTapAndHoldGesture::timeout (  );
-  hb_retni( i );
+  hb_retni( QTapAndHoldGesture::timeout (  ) );
 }
 
 

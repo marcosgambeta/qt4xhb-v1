@@ -111,8 +111,7 @@ HB_FUNC_STATIC( QWIDGETITEM_EXPANDINGDIRECTIONS )
   QWidgetItem * obj = (QWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->expandingDirections (  );
-    hb_retni( i );
+    hb_retni( (int) obj->expandingDirections (  ) );
   }
 }
 
@@ -153,8 +152,7 @@ HB_FUNC_STATIC( QWIDGETITEM_HEIGHTFORWIDTH )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->heightForWidth ( par1 );
-    hb_retni( i );
+    hb_retni( obj->heightForWidth ( par1 ) );
   }
 }
 

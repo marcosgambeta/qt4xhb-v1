@@ -120,8 +120,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_ALIGNMENT )
   QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->alignment (  );
-    hb_retni( i );
+    hb_retni( (int) obj->alignment (  ) );
   }
 }
 
@@ -148,8 +147,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_INDENT )
   QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->indent (  );
-    hb_retni( i );
+    hb_retni( obj->indent (  ) );
   }
 }
 
@@ -234,8 +232,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LINEHEIGHTTYPE )
   QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->lineHeightType (  );
-    hb_retni( i );
+    hb_retni( obj->lineHeightType (  ) );
   }
 }
 
@@ -261,8 +258,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_PAGEBREAKPOLICY )
   QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->pageBreakPolicy (  );
-    hb_retni( i );
+    hb_retni( (int) obj->pageBreakPolicy (  ) );
   }
 }
 

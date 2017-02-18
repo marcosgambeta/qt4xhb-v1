@@ -203,8 +203,7 @@ HB_FUNC_STATIC( QTEXTTABLE_COLUMNS )
   QTextTable * obj = (QTextTable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->columns (  );
-    hb_retni( i );
+    hb_retni( obj->columns (  ) );
   }
 }
 
@@ -389,8 +388,7 @@ HB_FUNC_STATIC( QTEXTTABLE_ROWS )
   QTextTable * obj = (QTextTable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->rows (  );
-    hb_retni( i );
+    hb_retni( obj->rows (  ) );
   }
 }
 

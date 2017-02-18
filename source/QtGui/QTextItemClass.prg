@@ -165,8 +165,7 @@ HB_FUNC_STATIC( QTEXTITEM_RENDERFLAGS )
   QTextItem * obj = (QTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->renderFlags (  );
-    hb_retni( i );
+    hb_retni( (int) obj->renderFlags (  ) );
   }
 }
 

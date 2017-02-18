@@ -100,8 +100,7 @@ HB_FUNC_STATIC( QTEXTOBJECT_FORMATINDEX )
   QTextObject * obj = (QTextObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->formatIndex (  );
-    hb_retni( i );
+    hb_retni( obj->formatIndex (  ) );
   }
 }
 
@@ -114,8 +113,7 @@ HB_FUNC_STATIC( QTEXTOBJECT_OBJECTINDEX )
   QTextObject * obj = (QTextObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->objectIndex (  );
-    hb_retni( i );
+    hb_retni( obj->objectIndex (  ) );
   }
 }
 

@@ -160,8 +160,7 @@ HB_FUNC_STATIC( QTABLEVIEW_COLUMNAT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->columnAt ( par1 );
-    hb_retni( i );
+    hb_retni( obj->columnAt ( par1 ) );
   }
 }
 
@@ -176,8 +175,7 @@ HB_FUNC_STATIC( QTABLEVIEW_COLUMNSPAN )
   {
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
-    int i = obj->columnSpan ( par1, par2 );
-    hb_retni( i );
+    hb_retni( obj->columnSpan ( par1, par2 ) );
   }
 }
 
@@ -191,8 +189,7 @@ HB_FUNC_STATIC( QTABLEVIEW_COLUMNVIEWPORTPOSITION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->columnViewportPosition ( par1 );
-    hb_retni( i );
+    hb_retni( obj->columnViewportPosition ( par1 ) );
   }
 }
 
@@ -206,8 +203,7 @@ HB_FUNC_STATIC( QTABLEVIEW_COLUMNWIDTH )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->columnWidth ( par1 );
-    hb_retni( i );
+    hb_retni( obj->columnWidth ( par1 ) );
   }
 }
 
@@ -220,8 +216,7 @@ HB_FUNC_STATIC( QTABLEVIEW_GRIDSTYLE )
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->gridStyle (  );
-    hb_retni( i );
+    hb_retni( (int) obj->gridStyle (  ) );
   }
 }
 
@@ -303,8 +298,7 @@ HB_FUNC_STATIC( QTABLEVIEW_ROWAT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->rowAt ( par1 );
-    hb_retni( i );
+    hb_retni( obj->rowAt ( par1 ) );
   }
 }
 
@@ -318,8 +312,7 @@ HB_FUNC_STATIC( QTABLEVIEW_ROWHEIGHT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->rowHeight ( par1 );
-    hb_retni( i );
+    hb_retni( obj->rowHeight ( par1 ) );
   }
 }
 
@@ -334,8 +327,7 @@ HB_FUNC_STATIC( QTABLEVIEW_ROWSPAN )
   {
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
-    int i = obj->rowSpan ( par1, par2 );
-    hb_retni( i );
+    hb_retni( obj->rowSpan ( par1, par2 ) );
   }
 }
 
@@ -349,8 +341,7 @@ HB_FUNC_STATIC( QTABLEVIEW_ROWVIEWPORTPOSITION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->rowViewportPosition ( par1 );
-    hb_retni( i );
+    hb_retni( obj->rowViewportPosition ( par1 ) );
   }
 }
 

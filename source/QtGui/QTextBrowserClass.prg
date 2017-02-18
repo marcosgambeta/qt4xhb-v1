@@ -111,8 +111,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_BACKWARDHISTORYCOUNT )
   QTextBrowser * obj = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->backwardHistoryCount (  );
-    hb_retni( i );
+    hb_retni( obj->backwardHistoryCount (  ) );
   }
 }
 
@@ -139,8 +138,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_FORWARDHISTORYCOUNT )
   QTextBrowser * obj = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->forwardHistoryCount (  );
-    hb_retni( i );
+    hb_retni( obj->forwardHistoryCount (  ) );
   }
 }
 

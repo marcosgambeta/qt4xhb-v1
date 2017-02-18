@@ -195,8 +195,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_CHILDCOUNT )
   QUndoCommand * obj = (QUndoCommand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->childCount (  );
-    hb_retni( i );
+    hb_retni( obj->childCount (  ) );
   }
 }
 
@@ -209,8 +208,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_ID )
   QUndoCommand * obj = (QUndoCommand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->id (  );
-    hb_retni( i );
+    hb_retni( obj->id (  ) );
   }
 }
 

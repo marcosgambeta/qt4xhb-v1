@@ -474,8 +474,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_CHECKSTATE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->checkState ( par1 );
-    hb_retni( i );
+    hb_retni( (int) obj->checkState ( par1 ) );
   }
 }
 
@@ -503,8 +502,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_CHILDCOUNT )
   QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->childCount (  );
-    hb_retni( i );
+    hb_retni( obj->childCount (  ) );
   }
 }
 
@@ -517,8 +515,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_CHILDINDICATORPOLICY )
   QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->childIndicatorPolicy (  );
-    hb_retni( i );
+    hb_retni( (int) obj->childIndicatorPolicy (  ) );
   }
 }
 
@@ -545,8 +542,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_COLUMNCOUNT )
   QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->columnCount (  );
-    hb_retni( i );
+    hb_retni( obj->columnCount (  ) );
   }
 }
 
@@ -575,8 +571,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_FLAGS )
   QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->flags (  );
-    hb_retni( i );
+    hb_retni( (int) obj->flags (  ) );
   }
 }
 
@@ -635,8 +630,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_INDEXOFCHILD )
   if( obj )
   {
     QTreeWidgetItem * par1 = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int i = obj->indexOfChild ( par1 );
-    hb_retni( i );
+    hb_retni( obj->indexOfChild ( par1 ) );
   }
 }
 
@@ -1215,8 +1209,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_TEXTALIGNMENT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int i = obj->textAlignment ( par1 );
-    hb_retni( i );
+    hb_retni( obj->textAlignment ( par1 ) );
   }
 }
 
@@ -1258,8 +1251,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_TYPE )
   QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->type (  );
-    hb_retni( i );
+    hb_retni( obj->type (  ) );
   }
 }
 

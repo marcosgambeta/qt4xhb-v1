@@ -200,8 +200,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTCAPITALIZATION )
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->fontCapitalization (  );
-    hb_retni( i );
+    hb_retni( (int) obj->fontCapitalization (  ) );
   }
 }
 
@@ -241,8 +240,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTHINTINGPREFERENCE )
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->fontHintingPreference (  );
-    hb_retni( i );
+    hb_retni( (int) obj->fontHintingPreference (  ) );
   }
 }
 
@@ -335,8 +333,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTSTYLEHINT )
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->fontStyleHint (  );
-    hb_retni( i );
+    hb_retni( (int) obj->fontStyleHint (  ) );
   }
 }
 
@@ -349,8 +346,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTSTYLESTRATEGY )
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->fontStyleStrategy (  );
-    hb_retni( i );
+    hb_retni( (int) obj->fontStyleStrategy (  ) );
   }
 }
 
@@ -376,8 +372,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTWEIGHT )
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->fontWeight (  );
-    hb_retni( i );
+    hb_retni( obj->fontWeight (  ) );
   }
 }
 
@@ -841,8 +836,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_UNDERLINESTYLE )
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->underlineStyle (  );
-    hb_retni( i );
+    hb_retni( (int) obj->underlineStyle (  ) );
   }
 }
 
@@ -855,8 +849,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_VERTICALALIGNMENT )
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int i = obj->verticalAlignment (  );
-    hb_retni( i );
+    hb_retni( (int) obj->verticalAlignment (  ) );
   }
 }
 
