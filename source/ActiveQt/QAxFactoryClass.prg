@@ -373,7 +373,7 @@ bool startServer ( ServerType type = MultipleInstances )
 */
 HB_FUNC_STATIC( QAXFACTORY_STARTSERVER )
 {
-  hb_retl( QAxFactory::startServer (  (QAxFactory::ServerType) ISNIL(1)? (int) QAxFactory::MultipleInstances : hb_parni(1) ) );
+  hb_retl( QAxFactory::startServer ( ISNIL(1)? QAxFactory::MultipleInstances : (QAxFactory::ServerType) hb_parni(1) ) );
 }
 
 

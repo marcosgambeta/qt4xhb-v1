@@ -1227,8 +1227,7 @@ HB_FUNC_STATIC( QURL_TOENCODED )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = ISNIL(1)? (int) QUrl::None : hb_parni(1);
-    QByteArray * ptr = new QByteArray( obj->toEncoded (  (QUrl::FormattingOptions) par1 ) );
+    QByteArray * ptr = new QByteArray( obj->toEncoded ( ISNIL(1)? QUrl::None : (QUrl::FormattingOptions) hb_parni(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -1256,8 +1255,7 @@ HB_FUNC_STATIC( QURL_TOSTRING )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = ISNIL(1)? (int) QUrl::None : hb_parni(1);
-    QString str1 = obj->toString (  (QUrl::FormattingOptions) par1 );
+    QString str1 = obj->toString ( ISNIL(1)? QUrl::None : (QUrl::FormattingOptions) hb_parni(1) );
     hb_retc( (const char *) str1.toLatin1().data() );
   }
 }

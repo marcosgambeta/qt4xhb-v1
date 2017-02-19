@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_ATTACH )
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->attach (  (QSharedMemory::AccessMode) ISNIL(1)? (int) QSharedMemory::ReadWrite : hb_parni(1) ) );
+    hb_retl( obj->attach ( ISNIL(1)? QSharedMemory::ReadWrite : (QSharedMemory::AccessMode) hb_parni(1) ) );
   }
 }
 

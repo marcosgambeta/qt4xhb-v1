@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QDATETIME_NEW3 )
   QDateTime * o = NULL;
   QDate * par1 = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QTime * par2 = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDateTime ( *par1, *par2,  (Qt::TimeSpec) ISNIL(3)? (int) Qt::LocalTime : hb_parni(3) );
+  o = new QDateTime ( *par1, *par2, ISNIL(3)? Qt::LocalTime : (Qt::TimeSpec) hb_parni(3) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDateTime *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -562,7 +562,7 @@ HB_FUNC_STATIC( QDATETIME_TOSTRING2 )
   QDateTime * obj = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toString (  (Qt::DateFormat) ISNIL(1)? (int) Qt::TextDate : hb_parni(1) );
+    QString str1 = obj->toString ( ISNIL(1)? Qt::TextDate : (Qt::DateFormat) hb_parni(1) );
     hb_retc( (const char *) str1.toLatin1().data() );
   }
 }
@@ -672,7 +672,7 @@ QDateTime fromString ( const QString & string, Qt::DateFormat format = Qt::TextD
 HB_FUNC_STATIC( QDATETIME_FROMSTRING1 )
 {
   QString par1 = hb_parc(1);
-  QDateTime * ptr = new QDateTime( QDateTime::fromString ( par1,  (Qt::DateFormat) ISNIL(2)? (int) Qt::TextDate : hb_parni(2) ) );
+  QDateTime * ptr = new QDateTime( QDateTime::fromString ( par1, ISNIL(2)? Qt::TextDate : (Qt::DateFormat) hb_parni(2) ) );
   _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
 }
 

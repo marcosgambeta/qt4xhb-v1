@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_FILEFLAGS )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->fileFlags (  (QAbstractFileEngine::FileFlags) ISNIL(1)? (int) QAbstractFileEngine::FileInfoAll : hb_parni(1) ) );
+    hb_retni( (int) obj->fileFlags ( ISNIL(1)? QAbstractFileEngine::FileInfoAll : (QAbstractFileEngine::FileFlags) hb_parni(1) ) );
   }
 }
 
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_FILENAME )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->fileName (  (QAbstractFileEngine::FileName) ISNIL(1)? (int) QAbstractFileEngine::DefaultName : hb_parni(1) );
+    QString str1 = obj->fileName ( ISNIL(1)? QAbstractFileEngine::DefaultName : (QAbstractFileEngine::FileName) hb_parni(1) );
     hb_retc( (const char *) str1.toLatin1().data() );
   }
 }

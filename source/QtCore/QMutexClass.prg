@@ -104,7 +104,7 @@ QMutex ( RecursionMode mode = NonRecursive )
 HB_FUNC_STATIC( QMUTEX_NEW )
 {
   QMutex * o = NULL;
-  o = new QMutex (  (QMutex::RecursionMode) ISNIL(1)? (int) QMutex::NonRecursive : hb_parni(1) );
+  o = new QMutex ( ISNIL(1)? QMutex::NonRecursive : (QMutex::RecursionMode) hb_parni(1) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMutex *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );

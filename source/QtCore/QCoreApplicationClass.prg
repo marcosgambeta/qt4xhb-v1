@@ -423,7 +423,7 @@ void processEvents ( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvent
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_PROCESSEVENTS1 )
 {
-  QCoreApplication::processEvents (  (QEventLoop::ProcessEventsFlags) ISNIL(1)? (int) QEventLoop::AllEvents : hb_parni(1) );
+  QCoreApplication::processEvents ( ISNIL(1)? QEventLoop::AllEvents : (QEventLoop::ProcessEventsFlags) hb_parni(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -672,7 +672,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE2 )
   const char * par1 = hb_parc(1);
   const char * par2 = hb_parc(2);
   const char * par3 = hb_parc(3);
-  QString str1 = QCoreApplication::translate (  (const char *) par1,  (const char *) par2,  (const char *) par3,  (QCoreApplication::Encoding) ISNIL(4)? (int) QCoreApplication::CodecForTr : hb_parni(4) );
+  QString str1 = QCoreApplication::translate (  (const char *) par1,  (const char *) par2,  (const char *) par3, ISNIL(4)? QCoreApplication::CodecForTr : (QCoreApplication::Encoding) hb_parni(4) );
   hb_retc( (const char *) str1.toLatin1().data() );
 }
 

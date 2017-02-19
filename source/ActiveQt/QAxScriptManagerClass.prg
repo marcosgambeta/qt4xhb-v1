@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_FUNCTIONS )
   QAxScriptManager * obj = (QAxScriptManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList strl = obj->functions (  (QAxScript::FunctionFlags) ISNIL(1)? (int) QAxScript::FunctionNames : hb_parni(1) );
+    QStringList strl = obj->functions ( ISNIL(1)? QAxScript::FunctionNames : (QAxScript::FunctionFlags) hb_parni(1) );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

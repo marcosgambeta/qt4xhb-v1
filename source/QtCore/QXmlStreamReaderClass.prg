@@ -935,8 +935,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_READELEMENTTEXT )
   QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = ISNIL(1)? (int) QXmlStreamReader::ErrorOnUnexpectedElement : hb_parni(1);
-    QString str1 = obj->readElementText (  (QXmlStreamReader::ReadElementTextBehaviour) par1 );
+    QString str1 = obj->readElementText ( ISNIL(1)? QXmlStreamReader::ErrorOnUnexpectedElement : (QXmlStreamReader::ReadElementTextBehaviour) hb_parni(1) );
     hb_retc( (const char *) str1.toLatin1().data() );
   }
 }

@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_START )
   QAbstractAnimation * obj = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->start (  (QAbstractAnimation::DeletionPolicy) ISNIL(1)? (int) QAbstractAnimation::KeepWhenStopped : hb_parni(1) );
+    obj->start ( ISNIL(1)? QAbstractAnimation::KeepWhenStopped : (QAbstractAnimation::DeletionPolicy) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

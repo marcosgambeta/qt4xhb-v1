@@ -136,7 +136,7 @@ QFutureInterfaceBase(State initialState = NoState)
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_NEW1 )
 {
   QFutureInterfaceBase * o = NULL;
-  o = new QFutureInterfaceBase (  (QFutureInterfaceBase::State) ISNIL(1)? (int) QFutureInterfaceBase::NoState : hb_parni(1) );
+  o = new QFutureInterfaceBase ( ISNIL(1)? QFutureInterfaceBase::NoState : (QFutureInterfaceBase::State) hb_parni(1) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QFutureInterfaceBase *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );

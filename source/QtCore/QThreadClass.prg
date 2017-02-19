@@ -243,8 +243,7 @@ HB_FUNC_STATIC( QTHREAD_START )
   QThread * obj = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = ISNIL(1)? (int) QThread::InheritPriority : hb_parni(1);
-    obj->start (  (QThread::Priority) par1 );
+    obj->start ( ISNIL(1)? QThread::InheritPriority : (QThread::Priority) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

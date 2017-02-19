@@ -97,7 +97,8 @@ HB_FUNC_STATIC( QAXWIDGET_NEW1 )
 {
   QAxWidget * o = NULL;
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QAxWidget ( par1,  (Qt::WindowFlags) ISNIL(2)? (int) 0 : hb_parni(2) );
+  int par2 = ISNIL(2)? 0 : hb_parni(2);
+  o = new QAxWidget ( par1,  (Qt::WindowFlags) par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QAxWidget *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -114,7 +115,8 @@ HB_FUNC_STATIC( QAXWIDGET_NEW2 )
   QAxWidget * o = NULL;
   QString par1 = hb_parc(1);
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QAxWidget ( par1, par2,  (Qt::WindowFlags) ISNIL(3)? (int) 0 : hb_parni(3) );
+  int par3 = ISNIL(3)? 0 : hb_parni(3);
+  o = new QAxWidget ( par1, par2, (Qt::WindowFlags) par3 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QAxWidget *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -131,7 +133,8 @@ HB_FUNC_STATIC( QAXWIDGET_NEW3 )
   QAxWidget * o = NULL;
   IUnknown * par1 = (IUnknown *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QAxWidget ( par1, par2,  (Qt::WindowFlags) ISNIL(3)? (int) 0 : hb_parni(3) );
+  int par3 = ISNIL(3)? 0 : hb_parni(3);
+  o = new QAxWidget ( par1, par2, (Qt::WindowFlags) par3 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QAxWidget *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
