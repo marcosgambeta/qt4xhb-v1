@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_NEW2 )
 {
   QVideoSurfaceFormat * o = NULL;
   QSize * par1 = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QVideoSurfaceFormat ( *par1,  (QVideoFrame::PixelFormat) hb_parni(2),  (QAbstractVideoBuffer::HandleType) ISNIL(3)? (int) QAbstractVideoBuffer::NoHandle : hb_parni(3) );
+  o = new QVideoSurfaceFormat ( *par1,  (QVideoFrame::PixelFormat) hb_parni(2), ISNIL(3)? QAbstractVideoBuffer::NoHandle : (QAbstractVideoBuffer::HandleType) hb_parni(3) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QVideoSurfaceFormat *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );

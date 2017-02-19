@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QSQLFIELD_NEW1 )
 {
   QSqlField * o = NULL;
   QString par1 = ISNIL(1)? QString() : hb_parc(1);
-  o = new QSqlField ( par1,  (QVariant::Type) ISNIL(2)? (int) QVariant::Invalid : hb_parni(2) );
+  o = new QSqlField ( par1, ISNIL(2)? QVariant::Invalid : (QVariant::Type) hb_parni(2) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSqlField *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );

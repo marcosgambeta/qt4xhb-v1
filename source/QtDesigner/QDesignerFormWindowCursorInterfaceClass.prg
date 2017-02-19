@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_MOVEPOSITION )
   QDesignerFormWindowCursorInterface * obj = (QDesignerFormWindowCursorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->movePosition (  (QDesignerFormWindowCursorInterface::MoveOperation) hb_parni(1),  (QDesignerFormWindowCursorInterface::MoveMode) ISNIL(2)? (int) QDesignerFormWindowCursorInterface::MoveAnchor : hb_parni(2) ) );
+    hb_retl( obj->movePosition ( (QDesignerFormWindowCursorInterface::MoveOperation) hb_parni(1), ISNIL(2)? QDesignerFormWindowCursorInterface::MoveAnchor : (QDesignerFormWindowCursorInterface::MoveMode) hb_parni(2) ) );
   }
 }
 
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_SETPOSITION )
   QDesignerFormWindowCursorInterface * obj = (QDesignerFormWindowCursorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setPosition ( hb_parni(1),  (QDesignerFormWindowCursorInterface::MoveMode) ISNIL(2)? (int) QDesignerFormWindowCursorInterface::MoveAnchor : hb_parni(2) );
+    obj->setPosition ( hb_parni(1), ISNIL(2)? QDesignerFormWindowCursorInterface::MoveAnchor : (QDesignerFormWindowCursorInterface::MoveMode) hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

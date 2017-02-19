@@ -409,7 +409,7 @@ HB_FUNC_STATIC( QPROCESS_SETSTANDARDERRORFILE )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    obj->setStandardErrorFile ( par1,  (QIODevice::OpenMode) ISNIL(2)? (int) QIODevice::Truncate : hb_parni(2) );
+    obj->setStandardErrorFile ( par1, ISNIL(2)? QIODevice::Truncate : (QIODevice::OpenMode) hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QPROCESS_SETSTANDARDOUTPUTFILE )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    obj->setStandardOutputFile ( par1,  (QIODevice::OpenMode) ISNIL(2)? (int) QIODevice::Truncate : hb_parni(2) );
+    obj->setStandardOutputFile ( par1, ISNIL(2)? QIODevice::Truncate : (QIODevice::OpenMode) hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -493,7 +493,7 @@ for (i2=0;i2<nLen2;i2++)
 QString temp = hb_arrayGetCPtr(aStrings2, i2+1);
 par2 << temp;
 }
-    obj->start ( par1, par2,  (QIODevice::OpenMode) ISNIL(3)? (int) QIODevice::ReadWrite : hb_parni(3) );
+    obj->start ( par1, par2, ISNIL(3)? QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -508,7 +508,7 @@ HB_FUNC_STATIC( QPROCESS_START2 )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    obj->start ( par1,  (QIODevice::OpenMode) ISNIL(2)? (int) QIODevice::ReadWrite : hb_parni(2) );
+    obj->start ( par1, ISNIL(2)? QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

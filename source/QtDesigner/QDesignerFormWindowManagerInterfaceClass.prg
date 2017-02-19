@@ -392,10 +392,11 @@ virtual QDesignerFormWindowInterface * createFormWindow ( QWidget * parent = 0, 
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_CREATEFORMWINDOW )
 {
   QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  int par2 = ISNIL(2)? 0 : hb_parni(2);
   if( obj )
   {
     QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QDesignerFormWindowInterface * ptr = obj->createFormWindow ( par1,  (Qt::WindowFlags) ISNIL(2)? (int) 0 : hb_parni(2) );
+    QDesignerFormWindowInterface * ptr = obj->createFormWindow ( par1, (Qt::WindowFlags) par2 );
     _qt4xhb_createReturnClass ( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
   }
 }

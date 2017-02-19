@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QREGEXP_NEW2 )
 {
   QRegExp * o = NULL;
   QString par1 = hb_parc(1);
-  o = new QRegExp ( par1,  (Qt::CaseSensitivity) ISNIL(2)? (int) Qt::CaseSensitive : hb_parni(2),  (QRegExp::PatternSyntax) ISNIL(3)? (int) QRegExp::RegExp : hb_parni(3) );
+  o = new QRegExp ( par1, ISNIL(2)? Qt::CaseSensitive : (Qt::CaseSensitivity) hb_parni(2), ISNIL(3)? QRegExp::RegExp : (QRegExp::PatternSyntax) hb_parni(3) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QRegExp *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QREGEXP_INDEXIN )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    hb_retni( obj->indexIn ( par1, ISNIL(2)? 0 : hb_parni(2),  (QRegExp::CaretMode) ISNIL(3)? (int) QRegExp::CaretAtZero : hb_parni(3) ) );
+    hb_retni( obj->indexIn ( par1, ISNIL(2)? 0 : hb_parni(2), ISNIL(3)? QRegExp::CaretAtZero : (QRegExp::CaretMode) hb_parni(3) ) );
   }
 }
 
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QREGEXP_LASTINDEXIN )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    hb_retni( obj->lastIndexIn ( par1, ISNIL(2)? -1 : hb_parni(2),  (QRegExp::CaretMode) ISNIL(3)? (int) QRegExp::CaretAtZero : hb_parni(3) ) );
+    hb_retni( obj->lastIndexIn ( par1, ISNIL(2)? -1 : hb_parni(2), ISNIL(3)? QRegExp::CaretAtZero : (QRegExp::CaretMode) hb_parni(3) ) );
   }
 }
 

@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QSQLQUERY_ADDBINDVALUE )
   if( obj )
   {
     QVariant * par1 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->addBindValue ( *par1,  (QSql::ParamType) ISNIL(2)? (int) QSql::In : hb_parni(2) );
+    obj->addBindValue ( *par1, ISNIL(2)? QSql::In : (QSql::ParamType) hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QSQLQUERY_BINDVALUE1 )
   {
     QString par1 = hb_parc(1);
     QVariant * par2 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->bindValue ( par1, *par2,  (QSql::ParamType) ISNIL(3)? (int) QSql::In : hb_parni(3) );
+    obj->bindValue ( par1, *par2, ISNIL(3)? QSql::In : (QSql::ParamType) hb_parni(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QSQLQUERY_BINDVALUE2 )
   if( obj )
   {
     QVariant * par2 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->bindValue ( hb_parni(1), *par2,  (QSql::ParamType) ISNIL(3)? (int) QSql::In : hb_parni(3) );
+    obj->bindValue ( hb_parni(1), *par2, ISNIL(3)? QSql::In : (QSql::ParamType) hb_parni(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

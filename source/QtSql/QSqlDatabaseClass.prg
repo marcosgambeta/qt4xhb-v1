@@ -632,7 +632,7 @@ HB_FUNC_STATIC( QSQLDATABASE_TABLES )
   QSqlDatabase * obj = (QSqlDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList strl = obj->tables (  (QSql::TableType) ISNIL(1)? (int) QSql::Tables : hb_parni(1) );
+    QStringList strl = obj->tables ( ISNIL(1)? QSql::Tables : (QSql::TableType) hb_parni(1) );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
