@@ -125,9 +125,7 @@ QPoint(int xpos, int ypos)
 HB_FUNC_STATIC( QPOINT_NEW2 )
 {
   QPoint * o = NULL;
-  int par1 = hb_parni(1);
-  int par2 = hb_parni(2);
-  o = new QPoint ( par1, par2 );
+  o = new QPoint ( hb_parni(1), hb_parni(2) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPoint *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -210,8 +208,7 @@ HB_FUNC_STATIC( QPOINT_SETX )
   QPoint * obj = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setX ( par1 );
+    obj->setX ( hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -225,8 +222,7 @@ HB_FUNC_STATIC( QPOINT_SETY )
   QPoint * obj = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setY ( par1 );
+    obj->setY ( hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

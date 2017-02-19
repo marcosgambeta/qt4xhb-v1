@@ -207,9 +207,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_CREATE )
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = ISNIL(2)? (int) QSharedMemory::ReadWrite : hb_parni(2);
-    hb_retl( obj->create ( par1,  (QSharedMemory::AccessMode) par2 ) );
+    hb_retl( obj->create ( hb_parni(1),  (QSharedMemory::AccessMode) ISNIL(2)? (int) QSharedMemory::ReadWrite : hb_parni(2) ) );
   }
 }
 
@@ -235,8 +233,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_ATTACH )
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = ISNIL(1)? (int) QSharedMemory::ReadWrite : hb_parni(1);
-    hb_retl( obj->attach (  (QSharedMemory::AccessMode) par1 ) );
+    hb_retl( obj->attach (  (QSharedMemory::AccessMode) ISNIL(1)? (int) QSharedMemory::ReadWrite : hb_parni(1) ) );
   }
 }
 

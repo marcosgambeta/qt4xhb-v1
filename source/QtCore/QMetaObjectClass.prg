@@ -164,8 +164,7 @@ HB_FUNC_STATIC( QMETAOBJECT_CLASSINFO )
   QMetaObject * obj = (QMetaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QMetaClassInfo * ptr = new QMetaClassInfo( obj->classInfo ( par1 ) );
+    QMetaClassInfo * ptr = new QMetaClassInfo( obj->classInfo ( hb_parni(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QMETACLASSINFO" );
   }
 }
@@ -219,8 +218,7 @@ HB_FUNC_STATIC( QMETAOBJECT_CONSTRUCTOR )
   QMetaObject * obj = (QMetaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QMetaMethod * ptr = new QMetaMethod( obj->constructor ( par1 ) );
+    QMetaMethod * ptr = new QMetaMethod( obj->constructor ( hb_parni(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QMETAMETHOD" );
   }
 }
@@ -247,8 +245,7 @@ HB_FUNC_STATIC( QMETAOBJECT_ENUMERATOR )
   QMetaObject * obj = (QMetaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QMetaEnum * ptr = new QMetaEnum( obj->enumerator ( par1 ) );
+    QMetaEnum * ptr = new QMetaEnum( obj->enumerator ( hb_parni(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QMETAENUM" );
   }
 }
@@ -386,8 +383,7 @@ HB_FUNC_STATIC( QMETAOBJECT_METHOD )
   QMetaObject * obj = (QMetaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QMetaMethod * ptr = new QMetaMethod( obj->method ( par1 ) );
+    QMetaMethod * ptr = new QMetaMethod( obj->method ( hb_parni(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QMETAMETHOD" );
   }
 }
@@ -451,8 +447,7 @@ HB_FUNC_STATIC( QMETAOBJECT_PROPERTY )
   QMetaObject * obj = (QMetaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QMetaProperty * ptr = new QMetaProperty( obj->property ( par1 ) );
+    QMetaProperty * ptr = new QMetaProperty( obj->property ( hb_parni(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QMETAPROPERTY" );
   }
 }
@@ -542,7 +537,6 @@ HB_FUNC_STATIC( QMETAOBJECT_INVOKEMETHOD1 )
 {
   QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   const char * par2 = hb_parc(2);
-  int par3 = hb_parni(3);
   QGenericReturnArgument * par4 = (QGenericReturnArgument *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
   QGenericArgument par5 = ISNIL(5)? QGenericArgument(0) : *(QGenericArgument *) hb_itemGetPtr( hb_objSendMsg( hb_param(5, HB_IT_OBJECT ), "POINTER", 0 ) );
   QGenericArgument par6 = ISNIL(6)? QGenericArgument() : *(QGenericArgument *) hb_itemGetPtr( hb_objSendMsg( hb_param(6, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -554,7 +548,7 @@ HB_FUNC_STATIC( QMETAOBJECT_INVOKEMETHOD1 )
   QGenericArgument par12 = ISNIL(12)? QGenericArgument() : *(QGenericArgument *) hb_itemGetPtr( hb_objSendMsg( hb_param(12, HB_IT_OBJECT ), "POINTER", 0 ) );
   QGenericArgument par13 = ISNIL(13)? QGenericArgument() : *(QGenericArgument *) hb_itemGetPtr( hb_objSendMsg( hb_param(13, HB_IT_OBJECT ), "POINTER", 0 ) );
   QGenericArgument par14 = ISNIL(14)? QGenericArgument() : *(QGenericArgument *) hb_itemGetPtr( hb_objSendMsg( hb_param(14, HB_IT_OBJECT ), "POINTER", 0 ) );
-  hb_retl( QMetaObject::invokeMethod ( par1,  (const char *) par2,  (Qt::ConnectionType) par3, *par4, par5, par6, par7, par8, par9, par10, par11, par12, par13, par14 ) );
+  hb_retl( QMetaObject::invokeMethod ( par1,  (const char *) par2,  (Qt::ConnectionType) hb_parni(3), *par4, par5, par6, par7, par8, par9, par10, par11, par12, par13, par14 ) );
 }
 
 
@@ -587,7 +581,6 @@ HB_FUNC_STATIC( QMETAOBJECT_INVOKEMETHOD3 )
 {
   QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   const char * par2 = hb_parc(2);
-  int par3 = hb_parni(3);
   QGenericArgument par4 = ISNIL(4)? QGenericArgument(0) : *(QGenericArgument *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
   QGenericArgument par5 = ISNIL(5)? QGenericArgument() : *(QGenericArgument *) hb_itemGetPtr( hb_objSendMsg( hb_param(5, HB_IT_OBJECT ), "POINTER", 0 ) );
   QGenericArgument par6 = ISNIL(6)? QGenericArgument() : *(QGenericArgument *) hb_itemGetPtr( hb_objSendMsg( hb_param(6, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -598,7 +591,7 @@ HB_FUNC_STATIC( QMETAOBJECT_INVOKEMETHOD3 )
   QGenericArgument par11 = ISNIL(11)? QGenericArgument() : *(QGenericArgument *) hb_itemGetPtr( hb_objSendMsg( hb_param(11, HB_IT_OBJECT ), "POINTER", 0 ) );
   QGenericArgument par12 = ISNIL(12)? QGenericArgument() : *(QGenericArgument *) hb_itemGetPtr( hb_objSendMsg( hb_param(12, HB_IT_OBJECT ), "POINTER", 0 ) );
   QGenericArgument par13 = ISNIL(13)? QGenericArgument() : *(QGenericArgument *) hb_itemGetPtr( hb_objSendMsg( hb_param(13, HB_IT_OBJECT ), "POINTER", 0 ) );
-  hb_retl( QMetaObject::invokeMethod ( par1,  (const char *) par2,  (Qt::ConnectionType) par3, par4, par5, par6, par7, par8, par9, par10, par11, par12, par13 ) );
+  hb_retl( QMetaObject::invokeMethod ( par1,  (const char *) par2,  (Qt::ConnectionType) hb_parni(3), par4, par5, par6, par7, par8, par9, par10, par11, par12, par13 ) );
 }
 
 

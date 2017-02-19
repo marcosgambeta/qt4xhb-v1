@@ -154,8 +154,7 @@ HB_FUNC_STATIC( QPROCESS_CLOSEREADCHANNEL )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->closeReadChannel (  (QProcess::ProcessChannel) par1 );
+    obj->closeReadChannel (  (QProcess::ProcessChannel) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -366,8 +365,7 @@ HB_FUNC_STATIC( QPROCESS_SETPROCESSCHANNELMODE )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setProcessChannelMode (  (QProcess::ProcessChannelMode) par1 );
+    obj->setProcessChannelMode (  (QProcess::ProcessChannelMode) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -396,8 +394,7 @@ HB_FUNC_STATIC( QPROCESS_SETREADCHANNEL )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setReadChannel (  (QProcess::ProcessChannel) par1 );
+    obj->setReadChannel (  (QProcess::ProcessChannel) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -412,8 +409,7 @@ HB_FUNC_STATIC( QPROCESS_SETSTANDARDERRORFILE )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    int par2 = ISNIL(2)? (int) QIODevice::Truncate : hb_parni(2);
-    obj->setStandardErrorFile ( par1,  (QIODevice::OpenMode) par2 );
+    obj->setStandardErrorFile ( par1,  (QIODevice::OpenMode) ISNIL(2)? (int) QIODevice::Truncate : hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -443,8 +439,7 @@ HB_FUNC_STATIC( QPROCESS_SETSTANDARDOUTPUTFILE )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    int par2 = ISNIL(2)? (int) QIODevice::Truncate : hb_parni(2);
-    obj->setStandardOutputFile ( par1,  (QIODevice::OpenMode) par2 );
+    obj->setStandardOutputFile ( par1,  (QIODevice::OpenMode) ISNIL(2)? (int) QIODevice::Truncate : hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -498,8 +493,7 @@ for (i2=0;i2<nLen2;i2++)
 QString temp = hb_arrayGetCPtr(aStrings2, i2+1);
 par2 << temp;
 }
-    int par3 = ISNIL(3)? (int) QIODevice::ReadWrite : hb_parni(3);
-    obj->start ( par1, par2,  (QIODevice::OpenMode) par3 );
+    obj->start ( par1, par2,  (QIODevice::OpenMode) ISNIL(3)? (int) QIODevice::ReadWrite : hb_parni(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -514,8 +508,7 @@ HB_FUNC_STATIC( QPROCESS_START2 )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    int par2 = ISNIL(2)? (int) QIODevice::ReadWrite : hb_parni(2);
-    obj->start ( par1,  (QIODevice::OpenMode) par2 );
+    obj->start ( par1,  (QIODevice::OpenMode) ISNIL(2)? (int) QIODevice::ReadWrite : hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -558,8 +551,7 @@ HB_FUNC_STATIC( QPROCESS_WAITFORFINISHED )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = ISNIL(1)? 30000 : hb_parni(1);
-    hb_retl( obj->waitForFinished ( par1 ) );
+    hb_retl( obj->waitForFinished ( ISNIL(1)? 30000 : hb_parni(1) ) );
   }
 }
 
@@ -572,8 +564,7 @@ HB_FUNC_STATIC( QPROCESS_WAITFORSTARTED )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = ISNIL(1)? 30000 : hb_parni(1);
-    hb_retl( obj->waitForStarted ( par1 ) );
+    hb_retl( obj->waitForStarted ( ISNIL(1)? 30000 : hb_parni(1) ) );
   }
 }
 
@@ -681,8 +672,7 @@ HB_FUNC_STATIC( QPROCESS_WAITFORBYTESWRITTEN )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = ISNIL(1)? 30000 : hb_parni(1);
-    hb_retl( obj->waitForBytesWritten ( par1 ) );
+    hb_retl( obj->waitForBytesWritten ( ISNIL(1)? 30000 : hb_parni(1) ) );
   }
 }
 
@@ -695,8 +685,7 @@ HB_FUNC_STATIC( QPROCESS_WAITFORREADYREAD )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = ISNIL(1)? 30000 : hb_parni(1);
-    hb_retl( obj->waitForReadyRead ( par1 ) );
+    hb_retl( obj->waitForReadyRead ( ISNIL(1)? 30000 : hb_parni(1) ) );
   }
 }
 

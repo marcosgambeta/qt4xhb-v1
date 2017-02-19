@@ -106,8 +106,7 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_ADDPAUSE )
   QSequentialAnimationGroup * obj = (QSequentialAnimationGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QPauseAnimation * ptr = obj->addPause ( par1 );
+    QPauseAnimation * ptr = obj->addPause ( hb_parni(1) );
     _qt4xhb_createReturnClass ( ptr, "QPAUSEANIMATION" );
   }
 }
@@ -135,9 +134,7 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_INSERTPAUSE )
   QSequentialAnimationGroup * obj = (QSequentialAnimationGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    QPauseAnimation * ptr = obj->insertPause ( par1, par2 );
+    QPauseAnimation * ptr = obj->insertPause ( hb_parni(1), hb_parni(2) );
     _qt4xhb_createReturnClass ( ptr, "QPAUSEANIMATION" );
   }
 }

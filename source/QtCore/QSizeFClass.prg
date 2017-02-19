@@ -305,8 +305,7 @@ HB_FUNC_STATIC( QSIZEF_SCALE1 )
   {
     qreal par1 = hb_parnd(1);
     qreal par2 = hb_parnd(2);
-    int par3 = hb_parni(3);
-    obj->scale ( par1, par2,  (Qt::AspectRatioMode) par3 );
+    obj->scale ( par1, par2,  (Qt::AspectRatioMode) hb_parni(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -321,8 +320,7 @@ HB_FUNC_STATIC( QSIZEF_SCALE2 )
   if( obj )
   {
     QSizeF * par1 = (QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par2 = hb_parni(2);
-    obj->scale ( *par1,  (Qt::AspectRatioMode) par2 );
+    obj->scale ( *par1,  (Qt::AspectRatioMode) hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

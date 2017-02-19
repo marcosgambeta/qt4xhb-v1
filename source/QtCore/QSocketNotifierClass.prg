@@ -68,10 +68,8 @@ QSocketNotifier(int socket, Type, QObject *parent = 0)
 HB_FUNC_STATIC( QSOCKETNOTIFIER_NEW )
 {
   QSocketNotifier * o = NULL;
-  int par1 = hb_parni(1);
-  int par2 = hb_parni(2);
   QObject * par3 = ISNIL(3)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSocketNotifier ( par1,  (QSocketNotifier::Type) par2, par3 );
+  o = new QSocketNotifier ( hb_parni(1), (QSocketNotifier::Type) hb_parni(2), par3 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSocketNotifier *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );

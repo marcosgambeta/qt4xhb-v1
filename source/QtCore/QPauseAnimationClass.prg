@@ -83,9 +83,8 @@ QPauseAnimation ( int msecs, QObject * parent = 0 )
 HB_FUNC_STATIC( QPAUSEANIMATION_NEW2 )
 {
   QPauseAnimation * o = NULL;
-  int par1 = hb_parni(1);
   QObject * par2 = ISNIL(2)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QPauseAnimation ( par1, par2 );
+  o = new QPauseAnimation ( hb_parni(1), par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPauseAnimation *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -138,8 +137,7 @@ HB_FUNC_STATIC( QPAUSEANIMATION_SETDURATION )
   QPauseAnimation * obj = (QPauseAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setDuration ( par1 );
+    obj->setDuration ( hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

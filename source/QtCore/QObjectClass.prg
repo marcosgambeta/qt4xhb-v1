@@ -1880,8 +1880,7 @@ HB_FUNC_STATIC( QOBJECT_KILLTIMER )
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->killTimer ( par1 );
+    obj->killTimer ( hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -2040,8 +2039,7 @@ HB_FUNC_STATIC( QOBJECT_STARTTIMER )
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retni( obj->startTimer ( par1 ) );
+    hb_retni( obj->startTimer ( hb_parni(1) ) );
   }
 }
 

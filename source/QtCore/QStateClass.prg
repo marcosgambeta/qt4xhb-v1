@@ -102,9 +102,8 @@ QState ( ChildMode childMode, QState * parent = 0 )
 HB_FUNC_STATIC( QSTATE_NEW2 )
 {
   QState * o = NULL;
-  int par1 = hb_parni(1);
   QState * par2 = ISNIL(2)? 0 : (QState *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QState (  (QState::ChildMode) par1, par2 );
+  o = new QState (  (QState::ChildMode) hb_parni(1), par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QState *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -296,8 +295,7 @@ HB_FUNC_STATIC( QSTATE_SETCHILDMODE )
   QState * obj = (QState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setChildMode (  (QState::ChildMode) par1 );
+    obj->setChildMode (  (QState::ChildMode) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

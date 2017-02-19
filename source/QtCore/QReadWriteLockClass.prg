@@ -128,8 +128,7 @@ QReadWriteLock ( RecursionMode recursionMode )
 HB_FUNC_STATIC( QREADWRITELOCK_NEW2 )
 {
   QReadWriteLock * o = NULL;
-  int par1 = hb_parni(1);
-  o = new QReadWriteLock (  (QReadWriteLock::RecursionMode) par1 );
+  o = new QReadWriteLock (  (QReadWriteLock::RecursionMode) hb_parni(1) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QReadWriteLock *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -225,8 +224,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORREAD2 )
   QReadWriteLock * obj = (QReadWriteLock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->tryLockForRead ( par1 ) );
+    hb_retl( obj->tryLockForRead ( hb_parni(1) ) );
   }
 }
 
@@ -267,8 +265,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORWRITE2 )
   QReadWriteLock * obj = (QReadWriteLock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->tryLockForWrite ( par1 ) );
+    hb_retl( obj->tryLockForWrite ( hb_parni(1) ) );
   }
 }
 

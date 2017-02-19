@@ -243,8 +243,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_SETLOADHINTS )
   QPluginLoader * obj = (QPluginLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setLoadHints (  (QLibrary::LoadHints) par1 );
+    obj->setLoadHints (  (QLibrary::LoadHints) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

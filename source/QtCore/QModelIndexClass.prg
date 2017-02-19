@@ -190,9 +190,7 @@ HB_FUNC_STATIC( QMODELINDEX_CHILD )
   QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    QModelIndex * ptr = new QModelIndex( obj->child ( par1, par2 ) );
+    QModelIndex * ptr = new QModelIndex( obj->child ( hb_parni(1), hb_parni(2) ) );
     _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
@@ -219,8 +217,7 @@ HB_FUNC_STATIC( QMODELINDEX_DATA )
   QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = ISNIL(1)? Qt::DisplayRole : hb_parni(1);
-    QVariant * ptr = new QVariant( obj->data ( par1 ) );
+    QVariant * ptr = new QVariant( obj->data ( ISNIL(1)? Qt::DisplayRole : hb_parni(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -329,9 +326,7 @@ HB_FUNC_STATIC( QMODELINDEX_SIBLING )
   QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    QModelIndex * ptr = new QModelIndex( obj->sibling ( par1, par2 ) );
+    QModelIndex * ptr = new QModelIndex( obj->sibling ( hb_parni(1), hb_parni(2) ) );
     _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
