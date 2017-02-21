@@ -59,35 +59,6 @@ CLASS QGLContext
 
 END CLASS
 
-METHOD newFrom (p) CLASS QGLContext
-   IF valtype(p) == "O"
-      ::pointer := p:pointer
-      ::self_destruction := .f.
-   ELSEIF valtype(p) == "P"
-      ::pointer := p
-      ::self_destruction := .f.
-   ENDIF
-RETURN self
-
-METHOD newFromObject (p) CLASS QGLContext
-   ::pointer := p:pointer
-   ::self_destruction := .f.
-RETURN self
-
-METHOD newFromPointer (p) CLASS QGLContext
-   ::pointer := p
-   ::self_destruction := .f.
-RETURN self
-
-METHOD selfDestruction () CLASS QGLContext
-RETURN ::self_destruction
-
-METHOD setSelfDestruction (p) CLASS QGLContext
-   IF valtype(p) == "L"
-      ::self_destruction := p
-   ENDIF
-RETURN self
-
 PROCEDURE destroyObject () CLASS QGLContext
    IF ::self_destruction
       ::delete()
@@ -545,6 +516,60 @@ HB_FUNC_STATIC( QGLCONTEXT_TEXTURECACHELIMIT )
 }
 
 
+HB_FUNC_STATIC( QGLCONTEXT_NEWFROM )
+{
+  PHB_ITEM self = hb_stackSelfItem();
+
+  if( hb_pcount() == 1 && ISOBJECT(1) )
+  {
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    hb_objSendMsg( self, "_pointer", 1, ptr );
+    hb_itemRelease( ptr );
+    PHB_ITEM des = hb_itemPutL( NULL, false );
+    hb_objSendMsg( self, "_self_destruction", 1, des );
+    hb_itemRelease( des );
+  }
+  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  {
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    hb_objSendMsg( self, "_pointer", 1, ptr );
+    hb_itemRelease( ptr );
+    PHB_ITEM des = hb_itemPutL( NULL, false );
+    hb_objSendMsg( self, "_self_destruction", 1, des );
+    hb_itemRelease( des );
+  }
+
+  hb_itemReturn( self );
+}
+
+HB_FUNC_STATIC( QGLCONTEXT_NEWFROMOBJECT )
+{
+  HB_FUNC_EXEC( QGLCONTEXT_NEWFROM );
+}
+
+HB_FUNC_STATIC( QGLCONTEXT_NEWFROMPOINTER )
+{
+  HB_FUNC_EXEC( QGLCONTEXT_NEWFROM );
+}
+
+HB_FUNC_STATIC( QGLCONTEXT_SELFDESTRUCTION )
+{
+  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+}
+
+HB_FUNC_STATIC( QGLCONTEXT_SETSELFDESTRUCTION )
+{
+  PHB_ITEM self = hb_stackSelfItem();
+
+  if( hb_pcount() == 1 && ISLOG(1) )
+  {
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
+    hb_objSendMsg( self, "_self_destruction", 1, des );
+    hb_itemRelease( des );
+  }
+
+  hb_itemReturn( self );
+}
 
 
 #pragma ENDDUMP
