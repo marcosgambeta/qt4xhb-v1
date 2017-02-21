@@ -55,35 +55,6 @@ CLASS QSslConfiguration
 
 END CLASS
 
-METHOD newFrom (p) CLASS QSslConfiguration
-   IF valtype(p) == "O"
-      ::pointer := p:pointer
-      ::self_destruction := .f.
-   ELSEIF valtype(p) == "P"
-      ::pointer := p
-      ::self_destruction := .f.
-   ENDIF
-RETURN self
-
-METHOD newFromObject (p) CLASS QSslConfiguration
-   ::pointer := p:pointer
-   ::self_destruction := .f.
-RETURN self
-
-METHOD newFromPointer (p) CLASS QSslConfiguration
-   ::pointer := p
-   ::self_destruction := .f.
-RETURN self
-
-METHOD selfDestruction () CLASS QSslConfiguration
-RETURN ::self_destruction
-
-METHOD setSelfDestruction (p) CLASS QSslConfiguration
-   IF valtype(p) == "L"
-      ::self_destruction := p
-   ENDIF
-RETURN self
-
 PROCEDURE destroyObject () CLASS QSslConfiguration
    IF ::self_destruction
       ::delete()
@@ -580,6 +551,60 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SETDEFAULTCONFIGURATION )
 }
 
 
+HB_FUNC_STATIC( QSSLCONFIGURATION_NEWFROM )
+{
+  PHB_ITEM self = hb_stackSelfItem();
+
+  if( hb_pcount() == 1 && ISOBJECT(1) )
+  {
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    hb_objSendMsg( self, "_pointer", 1, ptr );
+    hb_itemRelease( ptr );
+    PHB_ITEM des = hb_itemPutL( NULL, false );
+    hb_objSendMsg( self, "_self_destruction", 1, des );
+    hb_itemRelease( des );
+  }
+  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  {
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    hb_objSendMsg( self, "_pointer", 1, ptr );
+    hb_itemRelease( ptr );
+    PHB_ITEM des = hb_itemPutL( NULL, false );
+    hb_objSendMsg( self, "_self_destruction", 1, des );
+    hb_itemRelease( des );
+  }
+
+  hb_itemReturn( self );
+}
+
+HB_FUNC_STATIC( QSSLCONFIGURATION_NEWFROMOBJECT )
+{
+  HB_FUNC_EXEC( QSSLCONFIGURATION_NEWFROM );
+}
+
+HB_FUNC_STATIC( QSSLCONFIGURATION_NEWFROMPOINTER )
+{
+  HB_FUNC_EXEC( QSSLCONFIGURATION_NEWFROM );
+}
+
+HB_FUNC_STATIC( QSSLCONFIGURATION_SELFDESTRUCTION )
+{
+  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+}
+
+HB_FUNC_STATIC( QSSLCONFIGURATION_SETSELFDESTRUCTION )
+{
+  PHB_ITEM self = hb_stackSelfItem();
+
+  if( hb_pcount() == 1 && ISLOG(1) )
+  {
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
+    hb_objSendMsg( self, "_self_destruction", 1, des );
+    hb_itemRelease( des );
+  }
+
+  hb_itemReturn( self );
+}
 
 
 #pragma ENDDUMP
