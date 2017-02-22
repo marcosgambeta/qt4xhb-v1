@@ -381,8 +381,7 @@ HB_FUNC_STATIC( QLABEL_SETOPENEXTERNALLINKS )
   QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setOpenExternalLinks ( par1 );
+    obj->setOpenExternalLinks ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -396,8 +395,7 @@ HB_FUNC_STATIC( QLABEL_SETSCALEDCONTENTS )
   QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setScaledContents ( par1 );
+    obj->setScaledContents ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -457,8 +455,7 @@ HB_FUNC_STATIC( QLABEL_SETWORDWRAP )
   QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setWordWrap ( par1 );
+    obj->setWordWrap ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

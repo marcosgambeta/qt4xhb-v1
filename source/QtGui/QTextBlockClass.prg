@@ -435,8 +435,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_SETVISIBLE )
   QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setVisible ( par1 );
+    obj->setVisible ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

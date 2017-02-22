@@ -170,8 +170,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_EXCEPTIONTHROW )
   {
     qint64 par1 = hb_parni(1);
     QScriptValue * par2 = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool par3 = hb_parl(3);
-    obj->exceptionThrow ( par1, *par2, par3 );
+    obj->exceptionThrow ( par1, *par2, (bool) hb_parl(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

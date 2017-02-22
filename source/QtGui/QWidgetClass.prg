@@ -2051,8 +2051,7 @@ HB_FUNC_STATIC( QWIDGET_SETACCEPTDROPS )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setAcceptDrops ( par1 );
+    obj->setAcceptDrops ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -2097,8 +2096,7 @@ HB_FUNC_STATIC( QWIDGET_SETATTRIBUTE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool par2 = ISNIL(2)? true : hb_parl(2);
-    obj->setAttribute (  (Qt::WidgetAttribute) par1, par2 );
+    obj->setAttribute (  (Qt::WidgetAttribute) par1, ISNIL(2)? true : hb_parl(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -2112,8 +2110,7 @@ HB_FUNC_STATIC( QWIDGET_SETAUTOFILLBACKGROUND )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setAutoFillBackground ( par1 );
+    obj->setAutoFillBackground ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -2782,8 +2779,7 @@ HB_FUNC_STATIC( QWIDGET_SETMOUSETRACKING )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setMouseTracking ( par1 );
+    obj->setMouseTracking ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -2859,8 +2855,7 @@ HB_FUNC_STATIC( QWIDGET_SETSHORTCUTAUTOREPEAT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool par2 = ISNIL(2)? true : hb_parl(2);
-    obj->setShortcutAutoRepeat ( par1, par2 );
+    obj->setShortcutAutoRepeat ( par1, ISNIL(2)? true : hb_parl(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -2875,8 +2870,7 @@ HB_FUNC_STATIC( QWIDGET_SETSHORTCUTENABLED )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool par2 = ISNIL(2)? true : hb_parl(2);
-    obj->setShortcutEnabled ( par1, par2 );
+    obj->setShortcutEnabled ( par1, ISNIL(2)? true : hb_parl(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -3027,8 +3021,7 @@ HB_FUNC_STATIC( QWIDGET_SETUPDATESENABLED )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setUpdatesEnabled ( par1 );
+    obj->setUpdatesEnabled ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -3810,8 +3803,7 @@ HB_FUNC_STATIC( QWIDGET_SETDISABLED )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setDisabled ( par1 );
+    obj->setDisabled ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -3825,8 +3817,7 @@ HB_FUNC_STATIC( QWIDGET_SETENABLED )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setEnabled ( par1 );
+    obj->setEnabled ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -3840,8 +3831,7 @@ HB_FUNC_STATIC( QWIDGET_SETHIDDEN )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setHidden ( par1 );
+    obj->setHidden ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -3870,8 +3860,7 @@ HB_FUNC_STATIC( QWIDGET_SETVISIBLE )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setVisible ( par1 );
+    obj->setVisible ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -3885,8 +3874,7 @@ HB_FUNC_STATIC( QWIDGET_SETWINDOWMODIFIED )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setWindowModified ( par1 );
+    obj->setWindowModified ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

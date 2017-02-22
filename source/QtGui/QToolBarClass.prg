@@ -510,8 +510,7 @@ HB_FUNC_STATIC( QTOOLBAR_SETFLOATABLE )
   QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setFloatable ( par1 );
+    obj->setFloatable ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -525,8 +524,7 @@ HB_FUNC_STATIC( QTOOLBAR_SETMOVABLE )
   QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setMovable ( par1 );
+    obj->setMovable ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -173,10 +173,9 @@ HB_FUNC_STATIC( QCLEANLOOKSSTYLE_DRAWITEMTEXT )
     QRect * par2 = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par3 = hb_parni(3);
     QPalette * par4 = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool par5 = hb_parl(5);
     QString par6 = hb_parc(6);
     int par7 = ISNIL(7)? (int) QPalette::NoRole : hb_parni(7);
-    obj->drawItemText ( par1, *par2, par3, *par4, par5, par6,  (QPalette::ColorRole) par7 );
+    obj->drawItemText ( par1, *par2, par3, *par4, (bool) hb_parl(5), par6,  (QPalette::ColorRole) par7 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

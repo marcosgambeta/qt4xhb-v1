@@ -633,8 +633,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETWRAPAROUND )
   QCompleter * obj = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setWrapAround ( par1 );
+    obj->setWrapAround ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

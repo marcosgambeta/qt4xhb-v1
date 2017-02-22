@@ -1461,8 +1461,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETINTERACTIVE )
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setInteractive ( par1 );
+    obj->setInteractive ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1477,8 +1476,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETMATRIX )
   if( obj )
   {
     QMatrix * par1 = (QMatrix *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool par2 = ISNIL(2)? false : hb_parl(2);
-    obj->setMatrix ( *par1, par2 );
+    obj->setMatrix ( *par1, ISNIL(2)? false : hb_parl(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1493,8 +1491,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETOPTIMIZATIONFLAG )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool par2 = ISNIL(2)? true : hb_parl(2);
-    obj->setOptimizationFlag (  (QGraphicsView::OptimizationFlag) par1, par2 );
+    obj->setOptimizationFlag (  (QGraphicsView::OptimizationFlag) par1, ISNIL(2)? true : hb_parl(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1524,8 +1521,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETRENDERHINT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool par2 = ISNIL(2)? true : hb_parl(2);
-    obj->setRenderHint (  (QPainter::RenderHint) par1, par2 );
+    obj->setRenderHint (  (QPainter::RenderHint) par1, ISNIL(2)? true : hb_parl(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1648,8 +1644,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETTRANSFORM )
   if( obj )
   {
     QTransform * par1 = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool par2 = ISNIL(2)? false : hb_parl(2);
-    obj->setTransform ( *par1, par2 );
+    obj->setTransform ( *par1, ISNIL(2)? false : hb_parl(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

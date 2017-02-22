@@ -274,8 +274,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_SETPAUSED )
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setPaused ( par1 );
+    obj->setPaused ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -337,8 +337,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETRESIZESTOCONTENTS )
   QGraphicsWebView * obj = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setResizesToContents ( par1 );
+    obj->setResizesToContents ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -352,8 +351,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETTILEDBACKINGSTOREFROZEN )
   QGraphicsWebView * obj = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setTiledBackingStoreFrozen ( par1 );
+    obj->setTiledBackingStoreFrozen ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -426,8 +424,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_TRIGGERPAGEACTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool par2 = ISNIL(2)? false : hb_parl(2);
-    obj->triggerPageAction (  (QWebPage::WebAction) par1, par2 );
+    obj->triggerPageAction (  (QWebPage::WebAction) par1, ISNIL(2)? false : hb_parl(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

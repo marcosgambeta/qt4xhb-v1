@@ -178,12 +178,10 @@ HB_FUNC_STATIC( QPLATFORMFONTDATABASE_REGISTERFONT )
   int par3 = hb_parni(3);
   int par4 = hb_parni(4);
   int par5 = hb_parni(5);
-  bool par6 = hb_parl(6);
-  bool par7 = hb_parl(7);
   int par8 = hb_parni(8);
   QSupportedWritingSystems * par9 = (QSupportedWritingSystems *) hb_itemGetPtr( hb_objSendMsg( hb_param(9, HB_IT_OBJECT ), "POINTER", 0 ) );
   void * par10 = (void *) hb_parptr(10);
-  QPlatformFontDatabase::registerFont ( par1, par2,  (QFont::Weight) par3,  (QFont::Style) par4,  (QFont::Stretch) par5, par6, par7, par8, *par9, par10 );
+  QPlatformFontDatabase::registerFont ( par1, par2,  (QFont::Weight) par3,  (QFont::Style) par4,  (QFont::Stretch) par5, (bool) hb_parl(6), (bool) hb_parl(7), par8, *par9, par10 );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

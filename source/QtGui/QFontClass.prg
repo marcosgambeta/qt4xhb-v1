@@ -149,8 +149,7 @@ HB_FUNC_STATIC( QFONT_NEW2 )
   QString par1 = hb_parc(1);
   int par2 = ISNIL(2)? -1 : hb_parni(2);
   int par3 = ISNIL(3)? -1 : hb_parni(3);
-  bool par4 = ISNIL(4)? false : hb_parl(4);
-  o = new QFont ( par1, par2, par3, par4 );
+  o = new QFont ( par1, par2, par3, ISNIL(4)? false : hb_parl(4) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QFont *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -555,8 +554,7 @@ HB_FUNC_STATIC( QFONT_SETBOLD )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setBold ( par1 );
+    obj->setBold ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -600,8 +598,7 @@ HB_FUNC_STATIC( QFONT_SETFIXEDPITCH )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setFixedPitch ( par1 );
+    obj->setFixedPitch ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -615,8 +612,7 @@ HB_FUNC_STATIC( QFONT_SETITALIC )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setItalic ( par1 );
+    obj->setItalic ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -630,8 +626,7 @@ HB_FUNC_STATIC( QFONT_SETKERNING )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setKerning ( par1 );
+    obj->setKerning ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -661,8 +656,7 @@ HB_FUNC_STATIC( QFONT_SETOVERLINE )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setOverline ( par1 );
+    obj->setOverline ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -721,8 +715,7 @@ HB_FUNC_STATIC( QFONT_SETRAWMODE )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setRawMode ( par1 );
+    obj->setRawMode ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -766,8 +759,7 @@ HB_FUNC_STATIC( QFONT_SETSTRIKEOUT )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setStrikeOut ( par1 );
+    obj->setStrikeOut ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -827,8 +819,7 @@ HB_FUNC_STATIC( QFONT_SETUNDERLINE )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setUnderline ( par1 );
+    obj->setUnderline ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

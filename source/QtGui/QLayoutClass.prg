@@ -483,8 +483,7 @@ HB_FUNC_STATIC( QLAYOUT_SETENABLED )
   QLayout * obj = (QLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setEnabled ( par1 );
+    obj->setEnabled ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

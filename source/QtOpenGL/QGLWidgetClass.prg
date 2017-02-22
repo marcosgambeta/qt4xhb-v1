@@ -439,8 +439,7 @@ HB_FUNC_STATIC( QGLWIDGET_GRABFRAMEBUFFER )
   QGLWidget * obj = (QGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = ISNIL(1)? false : hb_parl(1);
-    QImage * ptr = new QImage( obj->grabFrameBuffer ( par1 ) );
+    QImage * ptr = new QImage( obj->grabFrameBuffer ( ISNIL(1)? false : hb_parl(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );
   }
 }
@@ -554,8 +553,7 @@ HB_FUNC_STATIC( QGLWIDGET_RENDERPIXMAP )
   {
     int par1 = ISNIL(1)? 0 : hb_parni(1);
     int par2 = ISNIL(2)? 0 : hb_parni(2);
-    bool par3 = ISNIL(3)? false : hb_parl(3);
-    QPixmap * ptr = new QPixmap( obj->renderPixmap ( par1, par2, par3 ) );
+    QPixmap * ptr = new QPixmap( obj->renderPixmap ( par1, par2, ISNIL(3)? false : hb_parl(3) ) );
     _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
@@ -637,8 +635,7 @@ HB_FUNC_STATIC( QGLWIDGET_SETMOUSETRACKING )
   QGLWidget * obj = (QGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setMouseTracking ( par1 );
+    obj->setMouseTracking ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -406,8 +406,7 @@ HB_FUNC_STATIC( QTABBAR_SETDOCUMENTMODE )
   QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setDocumentMode ( par1 );
+    obj->setDocumentMode ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -421,8 +420,7 @@ HB_FUNC_STATIC( QTABBAR_SETDRAWBASE )
   QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setDrawBase ( par1 );
+    obj->setDrawBase ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -451,8 +449,7 @@ HB_FUNC_STATIC( QTABBAR_SETEXPANDING )
   QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setExpanding ( par1 );
+    obj->setExpanding ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -481,8 +478,7 @@ HB_FUNC_STATIC( QTABBAR_SETMOVABLE )
   QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setMovable ( par1 );
+    obj->setMovable ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -560,8 +556,7 @@ HB_FUNC_STATIC( QTABBAR_SETTABENABLED )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool par2 = hb_parl(2);
-    obj->setTabEnabled ( par1, par2 );
+    obj->setTabEnabled ( par1, (bool) hb_parl(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -655,8 +650,7 @@ HB_FUNC_STATIC( QTABBAR_SETTABSCLOSABLE )
   QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setTabsClosable ( par1 );
+    obj->setTabsClosable ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -670,8 +664,7 @@ HB_FUNC_STATIC( QTABBAR_SETUSESSCROLLBUTTONS )
   QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setUsesScrollButtons ( par1 );
+    obj->setUsesScrollButtons ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

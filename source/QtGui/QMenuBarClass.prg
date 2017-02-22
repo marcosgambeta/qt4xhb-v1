@@ -367,8 +367,7 @@ HB_FUNC_STATIC( QMENUBAR_SETDEFAULTUP )
   QMenuBar * obj = (QMenuBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setDefaultUp ( par1 );
+    obj->setDefaultUp ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -382,8 +381,7 @@ HB_FUNC_STATIC( QMENUBAR_SETNATIVEMENUBAR )
   QMenuBar * obj = (QMenuBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setNativeMenuBar ( par1 );
+    obj->setNativeMenuBar ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -439,8 +437,7 @@ HB_FUNC_STATIC( QMENUBAR_SETVISIBLE )
   QMenuBar * obj = (QMenuBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setVisible ( par1 );
+    obj->setVisible ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

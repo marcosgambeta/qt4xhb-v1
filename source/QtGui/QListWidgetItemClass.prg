@@ -481,8 +481,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETHIDDEN )
   QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setHidden ( par1 );
+    obj->setHidden ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -511,8 +510,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETSELECTED )
   QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setSelected ( par1 );
+    obj->setSelected ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

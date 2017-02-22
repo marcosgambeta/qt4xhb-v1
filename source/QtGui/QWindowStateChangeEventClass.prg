@@ -76,8 +76,7 @@ HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_NEW2 )
 {
   QWindowStateChangeEvent * o = NULL;
   int par1 = hb_parni(1);
-  bool par2 = hb_parl(2);
-  o = new QWindowStateChangeEvent (  (Qt::WindowStates) par1, par2 );
+  o = new QWindowStateChangeEvent (  (Qt::WindowStates) par1, (bool) hb_parl(2) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QWindowStateChangeEvent *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );

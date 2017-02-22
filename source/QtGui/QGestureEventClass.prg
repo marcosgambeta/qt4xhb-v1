@@ -473,8 +473,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_SETACCEPTED1 )
   QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setAccepted ( par1 );
+    obj->setAccepted ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -489,8 +488,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_SETACCEPTED2 )
   if( obj )
   {
     QGesture * par1 = (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool par2 = hb_parl(2);
-    obj->setAccepted ( par1, par2 );
+    obj->setAccepted ( par1, (bool) hb_parl(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -505,8 +503,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_SETACCEPTED3 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool par2 = hb_parl(2);
-    obj->setAccepted (  (Qt::GestureType) par1, par2 );
+    obj->setAccepted (  (Qt::GestureType) par1, (bool) hb_parl(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -458,8 +458,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_IMPORTNODE )
   if( obj )
   {
     QDomNode * par1 = (QDomNode *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool par2 = hb_parl(2);
-    QDomNode * ptr = new QDomNode( obj->importNode ( *par1, par2 ) );
+    QDomNode * ptr = new QDomNode( obj->importNode ( *par1, (bool) hb_parl(2) ) );
     _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
   }
 }

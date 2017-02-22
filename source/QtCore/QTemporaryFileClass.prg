@@ -216,8 +216,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_SETAUTOREMOVE )
   QTemporaryFile * obj = (QTemporaryFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setAutoRemove ( par1 );
+    obj->setAutoRemove ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -340,8 +340,7 @@ HB_FUNC_STATIC( QTEXTLINE_SETLEADINGINCLUDED )
   QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setLeadingIncluded ( par1 );
+    obj->setLeadingIncluded ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

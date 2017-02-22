@@ -347,8 +347,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETCOLUMNHIDDEN )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool par2 = hb_parl(2);
-    obj->setColumnHidden ( par1, par2 );
+    obj->setColumnHidden ( par1, (bool) hb_parl(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -378,8 +377,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETCORNERBUTTONENABLED )
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setCornerButtonEnabled ( par1 );
+    obj->setCornerButtonEnabled ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -440,8 +438,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETROWHIDDEN )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool par2 = hb_parl(2);
-    obj->setRowHidden ( par1, par2 );
+    obj->setRowHidden ( par1, (bool) hb_parl(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -455,8 +452,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETSORTINGENABLED )
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setSortingEnabled ( par1 );
+    obj->setSortingEnabled ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -503,8 +499,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETWORDWRAP )
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setWordWrap ( par1 );
+    obj->setWordWrap ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -752,8 +747,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETSHOWGRID )
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setShowGrid ( par1 );
+    obj->setShowGrid ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

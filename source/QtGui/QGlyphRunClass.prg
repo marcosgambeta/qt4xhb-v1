@@ -279,8 +279,7 @@ HB_FUNC_STATIC( QGLYPHRUN_SETOVERLINE )
   QGlyphRun * obj = (QGlyphRun *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setOverline ( par1 );
+    obj->setOverline ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -332,8 +331,7 @@ HB_FUNC_STATIC( QGLYPHRUN_SETSTRIKEOUT )
   QGlyphRun * obj = (QGlyphRun *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setStrikeOut ( par1 );
+    obj->setStrikeOut ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -347,8 +345,7 @@ HB_FUNC_STATIC( QGLYPHRUN_SETUNDERLINE )
   QGlyphRun * obj = (QGlyphRun *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setUnderline ( par1 );
+    obj->setUnderline ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

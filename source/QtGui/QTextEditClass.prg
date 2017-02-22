@@ -689,8 +689,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETACCEPTRICHTEXT )
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setAcceptRichText ( par1 );
+    obj->setAcceptRichText ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -810,8 +809,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETOVERWRITEMODE )
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setOverwriteMode ( par1 );
+    obj->setOverwriteMode ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -825,8 +823,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETREADONLY )
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setReadOnly ( par1 );
+    obj->setReadOnly ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -840,8 +837,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETTABCHANGESFOCUS )
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setTabChangesFocus ( par1 );
+    obj->setTabChangesFocus ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -900,8 +896,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETUNDOREDOENABLED )
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setUndoRedoEnabled ( par1 );
+    obj->setUndoRedoEnabled ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1241,8 +1236,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETFONTITALIC )
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setFontItalic ( par1 );
+    obj->setFontItalic ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1271,8 +1265,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETFONTUNDERLINE )
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setFontUnderline ( par1 );
+    obj->setFontUnderline ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

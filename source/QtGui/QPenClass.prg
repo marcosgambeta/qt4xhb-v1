@@ -419,8 +419,7 @@ HB_FUNC_STATIC( QPEN_SETCOSMETIC )
   QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setCosmetic ( par1 );
+    obj->setCosmetic ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

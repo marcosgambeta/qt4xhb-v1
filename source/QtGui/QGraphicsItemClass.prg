@@ -2485,8 +2485,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETACCEPTDROPS )
   QGraphicsItem * obj = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setAcceptDrops ( par1 );
+    obj->setAcceptDrops ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -2500,8 +2499,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETACCEPTHOVEREVENTS )
   QGraphicsItem * obj = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setAcceptHoverEvents ( par1 );
+    obj->setAcceptHoverEvents ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -2515,8 +2513,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETACCEPTTOUCHEVENTS )
   QGraphicsItem * obj = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setAcceptTouchEvents ( par1 );
+    obj->setAcceptTouchEvents ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -2545,8 +2542,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETACTIVE )
   QGraphicsItem * obj = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setActive ( par1 );
+    obj->setActive ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -2622,8 +2618,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETENABLED )
   QGraphicsItem * obj = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setEnabled ( par1 );
+    obj->setEnabled ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -2637,8 +2632,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETFILTERSCHILDEVENTS )
   QGraphicsItem * obj = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setFiltersChildEvents ( par1 );
+    obj->setFiltersChildEvents ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -2653,8 +2647,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETFLAG )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool par2 = ISNIL(2)? true : hb_parl(2);
-    obj->setFlag (  (QGraphicsItem::GraphicsItemFlag) par1, par2 );
+    obj->setFlag (  (QGraphicsItem::GraphicsItemFlag) par1, ISNIL(2)? true : hb_parl(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -2879,8 +2872,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETSELECTED )
   QGraphicsItem * obj = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setSelected ( par1 );
+    obj->setSelected ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -2910,8 +2902,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETTRANSFORM )
   if( obj )
   {
     QTransform * par1 = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool par2 = ISNIL(2)? false : hb_parl(2);
-    obj->setTransform ( *par1, par2 );
+    obj->setTransform ( *par1, ISNIL(2)? false : hb_parl(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -2992,8 +2983,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETVISIBLE )
   QGraphicsItem * obj = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setVisible ( par1 );
+    obj->setVisible ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -311,8 +311,7 @@ HB_FUNC_STATIC( QSQLFIELD_SETAUTOVALUE )
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setAutoValue ( par1 );
+    obj->setAutoValue ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -341,8 +340,7 @@ HB_FUNC_STATIC( QSQLFIELD_SETGENERATED )
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setGenerated ( par1 );
+    obj->setGenerated ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -399,8 +397,7 @@ HB_FUNC_STATIC( QSQLFIELD_SETREADONLY )
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setReadOnly ( par1 );
+    obj->setReadOnly ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -414,8 +411,7 @@ HB_FUNC_STATIC( QSQLFIELD_SETREQUIRED )
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setRequired ( par1 );
+    obj->setRequired ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

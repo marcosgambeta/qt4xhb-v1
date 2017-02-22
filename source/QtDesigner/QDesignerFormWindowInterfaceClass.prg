@@ -595,8 +595,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_CLEARSELECTION )
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = ISNIL(1)? true : hb_parl(1);
-    obj->clearSelection ( par1 );
+    obj->clearSelection ( ISNIL(1)? true : hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -626,8 +625,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SELECTWIDGET )
   if( obj )
   {
     QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool par2 = ISNIL(2)? true : hb_parl(2);
-    obj->selectWidget ( par1, par2 );
+    obj->selectWidget ( par1, ISNIL(2)? true : hb_parl(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -671,8 +669,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETDIRTY )
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setDirty ( par1 );
+    obj->setDirty ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

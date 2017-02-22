@@ -709,8 +709,7 @@ HB_FUNC_STATIC( QSQLQUERY_SEEK )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par2 = ISNIL(2)? false : hb_parl(2);
-    hb_retl( obj->seek ( hb_parni(1), par2 ) );
+    hb_retl( obj->seek ( hb_parni(1), ISNIL(2)? false : hb_parl(2) ) );
   }
 }
 
@@ -723,8 +722,7 @@ HB_FUNC_STATIC( QSQLQUERY_SETFORWARDONLY )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setForwardOnly ( par1 );
+    obj->setForwardOnly ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

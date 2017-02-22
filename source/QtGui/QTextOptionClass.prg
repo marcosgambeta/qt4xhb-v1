@@ -278,8 +278,7 @@ HB_FUNC_STATIC( QTEXTOPTION_SETUSEDESIGNMETRICS )
   QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setUseDesignMetrics ( par1 );
+    obj->setUseDesignMetrics ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

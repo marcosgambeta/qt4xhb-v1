@@ -419,8 +419,7 @@ QVariant ( bool val )
 HB_FUNC_STATIC( QVARIANT_NEW14 )
 {
   QVariant * o = NULL;
-  bool par1 = hb_parl(1);
-  o = new QVariant ( par1 );
+  o = new QVariant ( (bool) hb_parl(1) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QVariant *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );

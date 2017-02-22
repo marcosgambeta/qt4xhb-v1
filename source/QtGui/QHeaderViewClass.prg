@@ -611,8 +611,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETCASCADINGSECTIONRESIZES )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setCascadingSectionResizes ( par1 );
+    obj->setCascadingSectionResizes ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -626,8 +625,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETCLICKABLE )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setClickable ( par1 );
+    obj->setClickable ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -671,8 +669,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETHIGHLIGHTSECTIONS )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setHighlightSections ( par1 );
+    obj->setHighlightSections ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -701,8 +698,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETMOVABLE )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setMovable ( par1 );
+    obj->setMovable ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -763,8 +759,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETSECTIONHIDDEN )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool par2 = hb_parl(2);
-    obj->setSectionHidden ( par1, par2 );
+    obj->setSectionHidden ( par1, (bool) hb_parl(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -794,8 +789,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETSORTINDICATORSHOWN )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setSortIndicatorShown ( par1 );
+    obj->setSortIndicatorShown ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -809,8 +803,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETSTRETCHLASTSECTION )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setStretchLastSection ( par1 );
+    obj->setStretchLastSection ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

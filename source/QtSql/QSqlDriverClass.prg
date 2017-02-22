@@ -179,8 +179,7 @@ HB_FUNC_STATIC( QSQLDRIVER_FORMATVALUE )
   if( obj )
   {
     QSqlField * par1 = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool par2 = ISNIL(2)? false : hb_parl(2);
-    QString str1 = obj->formatValue ( *par1, par2 );
+    QString str1 = obj->formatValue ( *par1, ISNIL(2)? false : hb_parl(2) );
     hb_retc( (const char *) str1.toLatin1().data() );
   }
 }
@@ -365,8 +364,7 @@ HB_FUNC_STATIC( QSQLDRIVER_SQLSTATEMENT )
   {
     QString par2 = hb_parc(2);
     QSqlRecord * par3 = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool par4 = hb_parl(4);
-    QString str1 = obj->sqlStatement (  (QSqlDriver::StatementType) hb_parni(1), par2, *par3, par4 );
+    QString str1 = obj->sqlStatement (  (QSqlDriver::StatementType) hb_parni(1), par2, *par3, (bool) hb_parl(4) );
     hb_retc( (const char *) str1.toLatin1().data() );
   }
 }

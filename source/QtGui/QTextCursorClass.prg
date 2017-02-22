@@ -1267,8 +1267,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_SETKEEPPOSITIONONINSERT )
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setKeepPositionOnInsert ( par1 );
+    obj->setKeepPositionOnInsert ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1313,8 +1312,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_SETVISUALNAVIGATION )
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setVisualNavigation ( par1 );
+    obj->setVisualNavigation ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

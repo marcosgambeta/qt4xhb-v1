@@ -231,8 +231,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETATTRIBUTE )
   QDesignerPropertySheetExtension * obj = (QDesignerPropertySheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par2 = hb_parl(2);
-    obj->setAttribute ( hb_parni(1), par2 );
+    obj->setAttribute ( hb_parni(1), (bool) hb_parl(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -246,8 +245,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETCHANGED )
   QDesignerPropertySheetExtension * obj = (QDesignerPropertySheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par2 = hb_parl(2);
-    obj->setChanged ( hb_parni(1), par2 );
+    obj->setChanged ( hb_parni(1), (bool) hb_parl(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -291,8 +289,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETVISIBLE )
   QDesignerPropertySheetExtension * obj = (QDesignerPropertySheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par2 = hb_parl(2);
-    obj->setVisible ( hb_parni(1), par2 );
+    obj->setVisible ( hb_parni(1), (bool) hb_parl(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

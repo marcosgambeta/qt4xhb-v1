@@ -578,8 +578,7 @@ void setAttribute ( Qt::ApplicationAttribute attribute, bool on = true )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_SETATTRIBUTE )
 {
-  bool par2 = ISNIL(2)? true : hb_parl(2);
-  QCoreApplication::setAttribute (  (Qt::ApplicationAttribute) hb_parni(1), par2 );
+  QCoreApplication::setAttribute (  (Qt::ApplicationAttribute) hb_parni(1), ISNIL(2)? true : hb_parl(2) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

@@ -74,8 +74,7 @@ QMotifStyle ( bool useHighlightCols = false )
 HB_FUNC_STATIC( QMOTIFSTYLE_NEW )
 {
   QMotifStyle * o = NULL;
-  bool par1 = ISNIL(1)? false : hb_parl(1);
-  o = new QMotifStyle ( par1 );
+  o = new QMotifStyle ( ISNIL(1)? false : hb_parl(1) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMotifStyle *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -108,8 +107,7 @@ HB_FUNC_STATIC( QMOTIFSTYLE_SETUSEHIGHLIGHTCOLORS )
   QMotifStyle * obj = (QMotifStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setUseHighlightColors ( par1 );
+    obj->setUseHighlightColors ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -1185,8 +1185,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETUNDOREDOENABLED )
   QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setUndoRedoEnabled ( par1 );
+    obj->setUndoRedoEnabled ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1200,8 +1199,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETUSEDESIGNMETRICS )
   QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setUseDesignMetrics ( par1 );
+    obj->setUseDesignMetrics ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1329,8 +1327,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETMODIFIED )
   QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = ISNIL(1)? true : hb_parl(1);
-    obj->setModified ( par1 );
+    obj->setModified ( ISNIL(1)? true : hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

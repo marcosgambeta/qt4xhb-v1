@@ -238,8 +238,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETINVERTEDAPPEARANCE )
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setInvertedAppearance ( par1 );
+    obj->setInvertedAppearance ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -268,8 +267,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETTEXTVISIBLE )
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setTextVisible ( par1 );
+    obj->setTextVisible ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

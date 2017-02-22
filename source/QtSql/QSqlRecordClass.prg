@@ -460,8 +460,7 @@ HB_FUNC_STATIC( QSQLRECORD_SETGENERATED1 )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    bool par2 = hb_parl(2);
-    obj->setGenerated ( par1, par2 );
+    obj->setGenerated ( par1, (bool) hb_parl(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -475,8 +474,7 @@ HB_FUNC_STATIC( QSQLRECORD_SETGENERATED2 )
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par2 = hb_parl(2);
-    obj->setGenerated ( hb_parni(1), par2 );
+    obj->setGenerated ( hb_parni(1), (bool) hb_parl(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

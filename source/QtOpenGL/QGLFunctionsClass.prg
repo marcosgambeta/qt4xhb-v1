@@ -790,9 +790,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_GLSAMPLECOVERAGE )
   QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    GLclampf par1 = hb_parnd(1);
-    GLboolean par2 = hb_parl(2);
-    obj->glSampleCoverage ( par1, par2 );
+    obj->glSampleCoverage ( (GLclampf) hb_parnd(1), (GLboolean) hb_parl(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1118,10 +1116,9 @@ HB_FUNC_STATIC( QGLFUNCTIONS_GLVERTEXATTRIBPOINTER )
     GLuint par1 = hb_parni(1);
     GLint par2 = hb_parni(2);
     GLenum par3 = hb_parni(3);
-    GLboolean par4 = hb_parl(4);
     GLsizei par5 = hb_parni(5);
     const void * par6 = (const void *) hb_parptr(6);
-    obj->glVertexAttribPointer ( par1, par2, par3, par4, par5, par6 );
+    obj->glVertexAttribPointer ( par1, par2, par3, (GLboolean) hb_parl(4), par5, par6 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

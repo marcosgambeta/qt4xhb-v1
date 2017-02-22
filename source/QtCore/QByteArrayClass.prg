@@ -1031,8 +1031,7 @@ HB_FUNC_STATIC( QBYTEARRAY_LEFTJUSTIFIED )
   if( obj )
   {
     char par2 = ISNIL(2)? 32 : (ISCHAR(2)? (char) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0));
-    bool par3 = ISNIL(3)? false : hb_parl(3);
-    QByteArray * ptr = new QByteArray( obj->leftJustified ( hb_parni(1), par2, par3 ) );
+    QByteArray * ptr = new QByteArray( obj->leftJustified ( hb_parni(1), par2, ISNIL(3)? false : hb_parl(3) ) );
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -1655,8 +1654,7 @@ HB_FUNC_STATIC( QBYTEARRAY_RIGHTJUSTIFIED )
   if( obj )
   {
     char par2 = ISNIL(2)? 32 : (ISCHAR(2)? (char) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0));
-    bool par3 = ISNIL(3)? false : hb_parl(3);
-    QByteArray * ptr = new QByteArray( obj->rightJustified ( hb_parni(1), par2, par3 ) );
+    QByteArray * ptr = new QByteArray( obj->rightJustified ( hb_parni(1), par2, ISNIL(3)? false : hb_parl(3) ) );
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }

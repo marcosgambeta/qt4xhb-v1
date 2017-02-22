@@ -858,8 +858,7 @@ void setDesktopSettingsAware ( bool on )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETDESKTOPSETTINGSAWARE )
 {
-  bool par1 = hb_parl(1);
-  QApplication::setDesktopSettingsAware ( par1 );
+  QApplication::setDesktopSettingsAware ( (bool) hb_parl(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -881,8 +880,7 @@ void setEffectEnabled ( Qt::UIEffect effect, bool enable = true )
 HB_FUNC_STATIC( QAPPLICATION_SETEFFECTENABLED )
 {
   int par1 = hb_parni(1);
-  bool par2 = ISNIL(2)? true : hb_parl(2);
-  QApplication::setEffectEnabled (  (Qt::UIEffect) par1, par2 );
+  QApplication::setEffectEnabled (  (Qt::UIEffect) par1, ISNIL(2)? true : hb_parl(2) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -972,8 +970,7 @@ void setQuitOnLastWindowClosed ( bool quit )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETQUITONLASTWINDOWCLOSED )
 {
-  bool par1 = hb_parl(1);
-  QApplication::setQuitOnLastWindowClosed ( par1 );
+  QApplication::setQuitOnLastWindowClosed ( (bool) hb_parl(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

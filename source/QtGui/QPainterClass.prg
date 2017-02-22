@@ -3334,8 +3334,7 @@ HB_FUNC_STATIC( QPAINTER_SETCLIPPING )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setClipping ( par1 );
+    obj->setClipping ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -3475,8 +3474,7 @@ HB_FUNC_STATIC( QPAINTER_SETRENDERHINT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool par2 = ISNIL(2)? true : hb_parl(2);
-    obj->setRenderHint (  (QPainter::RenderHint) par1, par2 );
+    obj->setRenderHint (  (QPainter::RenderHint) par1, ISNIL(2)? true : hb_parl(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -3491,8 +3489,7 @@ HB_FUNC_STATIC( QPAINTER_SETRENDERHINTS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool par2 = ISNIL(2)? true : hb_parl(2);
-    obj->setRenderHints (  (QPainter::RenderHints) par1, par2 );
+    obj->setRenderHints (  (QPainter::RenderHints) par1, ISNIL(2)? true : hb_parl(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -3507,8 +3504,7 @@ HB_FUNC_STATIC( QPAINTER_SETTRANSFORM )
   if( obj )
   {
     QTransform * par1 = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool par2 = ISNIL(2)? false : hb_parl(2);
-    obj->setTransform ( *par1, par2 );
+    obj->setTransform ( *par1, ISNIL(2)? false : hb_parl(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -3522,8 +3518,7 @@ HB_FUNC_STATIC( QPAINTER_SETVIEWTRANSFORMENABLED )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setViewTransformEnabled ( par1 );
+    obj->setViewTransformEnabled ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -3633,8 +3628,7 @@ HB_FUNC_STATIC( QPAINTER_SETWORLDMATRIXENABLED )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setWorldMatrixEnabled ( par1 );
+    obj->setWorldMatrixEnabled ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -3649,8 +3643,7 @@ HB_FUNC_STATIC( QPAINTER_SETWORLDTRANSFORM )
   if( obj )
   {
     QTransform * par1 = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool par2 = ISNIL(2)? false : hb_parl(2);
-    obj->setWorldTransform ( *par1, par2 );
+    obj->setWorldTransform ( *par1, ISNIL(2)? false : hb_parl(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -318,8 +318,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_SETVISIBLE )
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par2 = hb_parl(2);
-    obj->setVisible ( hb_parni(1), par2 );
+    obj->setVisible ( hb_parni(1), (bool) hb_parl(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

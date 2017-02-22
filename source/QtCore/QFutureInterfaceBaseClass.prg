@@ -239,8 +239,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETFILTERMODE )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setFilterMode ( par1 );
+    obj->setFilterMode ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -521,8 +520,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETPAUSED )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setPaused ( par1 );
+    obj->setPaused ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -550,8 +548,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETTHROTTLED )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setThrottled ( par1 );
+    obj->setThrottled ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

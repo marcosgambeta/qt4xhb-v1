@@ -387,8 +387,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETCOMBOBOXEDITABLE )
   QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setComboBoxEditable ( par1 );
+    obj->setComboBoxEditable ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -623,8 +622,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool par2 = ISNIL(2)? true : hb_parl(2);
-    obj->setOption (  (QInputDialog::InputDialogOption) par1, par2 );
+    obj->setOption (  (QInputDialog::InputDialogOption) par1, ISNIL(2)? true : hb_parl(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -753,8 +751,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETVISIBLE )
   QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setVisible ( par1 );
+    obj->setVisible ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -832,10 +829,9 @@ QString temp = hb_arrayGetCPtr(aStrings4, i4+1);
 par4 << temp;
 }
   int par5 = ISNIL(5)? 0 : hb_parni(5);
-  bool par6 = ISNIL(6)? true : hb_parl(6);
   bool par7;
   int par8 = ISNIL(8)? (int) 0 : hb_parni(8);
-  QString str1 = QInputDialog::getItem ( par1, par2, par3, par4, par5, par6, &par7,  (Qt::WindowFlags) par8 );
+  QString str1 = QInputDialog::getItem ( par1, par2, par3, par4, par5, ISNIL(6)? true : hb_parl(6), &par7,  (Qt::WindowFlags) par8 );
   hb_retc( (const char *) str1.toLatin1().data() );
   hb_storl( par7, 7 );
 }

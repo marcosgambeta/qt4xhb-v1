@@ -141,13 +141,7 @@ HB_FUNC_STATIC( QURLINFO_NEW3 )
   qint64 par5 = hb_parni(5);
   QDateTime * par6 = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_param(6, HB_IT_OBJECT ), "POINTER", 0 ) );
   QDateTime * par7 = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_param(7, HB_IT_OBJECT ), "POINTER", 0 ) );
-  bool par8 = hb_parl(8);
-  bool par9 = hb_parl(9);
-  bool par10 = hb_parl(10);
-  bool par11 = hb_parl(11);
-  bool par12 = hb_parl(12);
-  bool par13 = hb_parl(13);
-  o = new QUrlInfo ( par1, par2, par3, par4, par5, *par6, *par7, par8, par9, par10, par11, par12, par13 );
+  o = new QUrlInfo ( par1, par2, par3, par4, par5, *par6, *par7, (bool) hb_parl(8), (bool) hb_parl(9), (bool) hb_parl(10), (bool) hb_parl(11), (bool) hb_parl(12), (bool) hb_parl(13) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QUrlInfo *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -172,13 +166,7 @@ HB_FUNC_STATIC( QURLINFO_NEW4 )
   qint64 par5 = hb_parni(5);
   QDateTime * par6 = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_param(6, HB_IT_OBJECT ), "POINTER", 0 ) );
   QDateTime * par7 = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_param(7, HB_IT_OBJECT ), "POINTER", 0 ) );
-  bool par8 = hb_parl(8);
-  bool par9 = hb_parl(9);
-  bool par10 = hb_parl(10);
-  bool par11 = hb_parl(11);
-  bool par12 = hb_parl(12);
-  bool par13 = hb_parl(13);
-  o = new QUrlInfo ( *par1, par2, par3, par4, par5, *par6, *par7, par8, par9, par10, par11, par12, par13 );
+  o = new QUrlInfo ( *par1, par2, par3, par4, par5, *par6, *par7, (bool) hb_parl(8), (bool) hb_parl(9), (bool) hb_parl(10), (bool) hb_parl(11), (bool) hb_parl(12), (bool) hb_parl(13) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QUrlInfo *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -417,8 +405,7 @@ HB_FUNC_STATIC( QURLINFO_SETDIR )
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setDir ( par1 );
+    obj->setDir ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -432,8 +419,7 @@ HB_FUNC_STATIC( QURLINFO_SETFILE )
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setFile ( par1 );
+    obj->setFile ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -537,8 +523,7 @@ HB_FUNC_STATIC( QURLINFO_SETREADABLE )
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setReadable ( par1 );
+    obj->setReadable ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -567,8 +552,7 @@ HB_FUNC_STATIC( QURLINFO_SETSYMLINK )
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setSymLink ( par1 );
+    obj->setSymLink ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -582,8 +566,7 @@ HB_FUNC_STATIC( QURLINFO_SETWRITABLE )
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setWritable ( par1 );
+    obj->setWritable ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

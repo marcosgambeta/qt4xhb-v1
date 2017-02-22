@@ -251,8 +251,7 @@ HB_FUNC_STATIC( QMDIAREA_SETDOCUMENTMODE )
   QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setDocumentMode ( par1 );
+    obj->setDocumentMode ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -267,8 +266,7 @@ HB_FUNC_STATIC( QMDIAREA_SETOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool par2 = ISNIL(2)? true : hb_parl(2);
-    obj->setOption (  (QMdiArea::AreaOption) par1, par2 );
+    obj->setOption (  (QMdiArea::AreaOption) par1, ISNIL(2)? true : hb_parl(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

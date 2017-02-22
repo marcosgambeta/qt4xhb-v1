@@ -247,8 +247,7 @@ void setInstantInvalidatePropagation ( bool enable )
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUT_SETINSTANTINVALIDATEPROPAGATION )
 {
-  bool par1 = hb_parl(1);
-  QGraphicsLayout::setInstantInvalidatePropagation ( par1 );
+  QGraphicsLayout::setInstantInvalidatePropagation ( (bool) hb_parl(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

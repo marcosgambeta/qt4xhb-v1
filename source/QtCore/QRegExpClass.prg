@@ -410,8 +410,7 @@ HB_FUNC_STATIC( QREGEXP_SETMINIMAL )
   QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setMinimal ( par1 );
+    obj->setMinimal ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

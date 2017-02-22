@@ -340,8 +340,7 @@ HB_FUNC_STATIC( QRECT_CONTAINS1 )
   if( obj )
   {
     QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool par2 = ISNIL(2)? false : hb_parl(2);
-    hb_retl( obj->contains ( *par1, par2 ) );
+    hb_retl( obj->contains ( *par1, ISNIL(2)? false : hb_parl(2) ) );
   }
 }
 
@@ -354,8 +353,7 @@ HB_FUNC_STATIC( QRECT_CONTAINS2 )
   QRect * obj = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par3 = hb_parl(3);
-    hb_retl( obj->contains ( hb_parni(1), hb_parni(2), par3 ) );
+    hb_retl( obj->contains ( hb_parni(1), hb_parni(2), (bool) hb_parl(3) ) );
   }
 }
 
@@ -382,8 +380,7 @@ HB_FUNC_STATIC( QRECT_CONTAINS4 )
   if( obj )
   {
     QRect * par1 = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    bool par2 = ISNIL(2)? false : hb_parl(2);
-    hb_retl( obj->contains ( *par1, par2 ) );
+    hb_retl( obj->contains ( *par1, ISNIL(2)? false : hb_parl(2) ) );
   }
 }
 

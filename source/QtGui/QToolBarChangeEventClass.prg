@@ -56,8 +56,7 @@ QToolBarChangeEvent(bool t)
 HB_FUNC_STATIC( QTOOLBARCHANGEEVENT_NEW )
 {
   QToolBarChangeEvent * o = NULL;
-  bool par1 = hb_parl(1);
-  o = new QToolBarChangeEvent ( par1 );
+  o = new QToolBarChangeEvent ( (bool) hb_parl(1) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QToolBarChangeEvent *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );

@@ -649,8 +649,7 @@ HB_FUNC_STATIC( QPRINTER_SETCOLLATECOPIES )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setCollateCopies ( par1 );
+    obj->setCollateCopies ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -724,8 +723,7 @@ HB_FUNC_STATIC( QPRINTER_SETDOUBLESIDEDPRINTING )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setDoubleSidedPrinting ( par1 );
+    obj->setDoubleSidedPrinting ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -754,8 +752,7 @@ HB_FUNC_STATIC( QPRINTER_SETFONTEMBEDDINGENABLED )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setFontEmbeddingEnabled ( par1 );
+    obj->setFontEmbeddingEnabled ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -785,8 +782,7 @@ HB_FUNC_STATIC( QPRINTER_SETFULLPAGE )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->setFullPage ( par1 );
+    obj->setFullPage ( (bool) hb_parl(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

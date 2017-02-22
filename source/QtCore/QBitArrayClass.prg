@@ -211,8 +211,7 @@ HB_FUNC_STATIC( QBITARRAY_COUNT2 )
   QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    hb_retni( obj->count ( par1 ) );
+    hb_retni( obj->count ( (bool) hb_parl(1) ) );
   }
 }
 
@@ -240,8 +239,7 @@ HB_FUNC_STATIC( QBITARRAY_FILL1 )
   QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    hb_retl( obj->fill ( par1, ISNIL(2)? -1 : hb_parni(2) ) );
+    hb_retl( obj->fill ( (bool) hb_parl(1), ISNIL(2)? -1 : hb_parni(2) ) );
   }
 }
 
@@ -254,8 +252,7 @@ HB_FUNC_STATIC( QBITARRAY_FILL2 )
   QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = hb_parl(1);
-    obj->fill ( par1, hb_parni(2), hb_parni(3) );
+    obj->fill ( (bool) hb_parl(1), hb_parni(2), hb_parni(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -338,8 +335,7 @@ HB_FUNC_STATIC( QBITARRAY_SETBIT2 )
   QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par2 = hb_parl(2);
-    obj->setBit ( hb_parni(1), par2 );
+    obj->setBit ( hb_parni(1), (bool) hb_parl(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
