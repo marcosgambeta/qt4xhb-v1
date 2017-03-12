@@ -9,10 +9,11 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QT4XHB_NO_REQUESTS
 REQUEST QNETWORKCONFIGURATION
 REQUEST QNETWORKINTERFACE
 REQUEST QVARIANT
+#endif
 
 CLASS QNetworkSession INHERIT QObject
 
