@@ -9,7 +9,7 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QT4XHB_NO_REQUESTS
 REQUEST QBITARRAY
 REQUEST QBYTEARRAY
 REQUEST QCHAR
@@ -29,6 +29,7 @@ REQUEST QSIZE
 REQUEST QSIZEF
 REQUEST QTIME
 REQUEST QURL
+#endif
 
 CLASS QVariant
 
