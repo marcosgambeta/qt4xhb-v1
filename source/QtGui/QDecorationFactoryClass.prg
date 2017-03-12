@@ -17,7 +17,7 @@ CLASS QDecorationFactory
 
    DATA pointer
    DATA class_id INIT Class_Id_QDecorationFactory
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD create
    METHOD keys

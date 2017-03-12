@@ -13,7 +13,7 @@
 CLASS QFinalState INHERIT QAbstractState
 
    DATA class_id INIT Class_Id_QFinalState
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD new
    METHOD delete

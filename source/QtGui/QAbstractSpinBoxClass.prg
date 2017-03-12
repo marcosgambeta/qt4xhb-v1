@@ -17,7 +17,7 @@ REQUEST QSIZE
 CLASS QAbstractSpinBox INHERIT QWidget
 
    DATA class_id INIT Class_Id_QAbstractSpinBox
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD new
    METHOD delete

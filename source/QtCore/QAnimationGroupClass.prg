@@ -16,7 +16,7 @@ REQUEST QABSTRACTANIMATION
 CLASS QAnimationGroup INHERIT QAbstractAnimation
 
    DATA class_id INIT Class_Id_QAnimationGroup
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD delete
    METHOD addAnimation

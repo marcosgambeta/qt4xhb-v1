@@ -18,7 +18,7 @@ REQUEST QTEXTCURSOR
 CLASS QTextTable INHERIT QTextFrame
 
    DATA class_id INIT Class_Id_QTextTable
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD delete
    METHOD appendColumns

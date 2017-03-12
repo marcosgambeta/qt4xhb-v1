@@ -16,7 +16,7 @@ REQUEST QLOCALE
 CLASS QValidator INHERIT QObject
 
    DATA class_id INIT Class_Id_QValidator
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD delete
    METHOD fixup

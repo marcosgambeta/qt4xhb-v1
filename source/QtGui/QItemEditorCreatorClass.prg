@@ -13,7 +13,7 @@
 CLASS QItemEditorCreator INHERIT QItemEditorCreatorBase
 
    DATA class_id INIT Class_Id_QItemEditorCreator
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    DESTRUCTOR destroyObject
 

@@ -14,7 +14,7 @@ CLASS QDeclarativeParserStatus
 
    DATA pointer
    DATA class_id INIT Class_Id_QDeclarativeParserStatus
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD classBegin
    METHOD componentComplete

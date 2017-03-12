@@ -13,7 +13,7 @@
 CLASS QTextBlockFormat INHERIT QTextFormat
 
    DATA class_id INIT Class_Id_QTextBlockFormat
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD new
    METHOD delete

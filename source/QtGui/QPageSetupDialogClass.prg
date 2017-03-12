@@ -16,7 +16,7 @@ REQUEST QPRINTER
 CLASS QPageSetupDialog INHERIT QDialog
 
    DATA class_id INIT Class_Id_QPageSetupDialog
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD new
    METHOD open

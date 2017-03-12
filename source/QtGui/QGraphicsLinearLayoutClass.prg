@@ -17,7 +17,7 @@ REQUEST QSIZEF
 CLASS QGraphicsLinearLayout INHERIT QGraphicsLayout
 
    DATA class_id INIT Class_Id_QGraphicsLinearLayout
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD new1
    METHOD new2

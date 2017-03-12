@@ -20,7 +20,7 @@ CLASS QTextCodec
 
    DATA pointer
    DATA class_id INIT Class_Id_QTextCodec
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD canEncode1
    METHOD canEncode2

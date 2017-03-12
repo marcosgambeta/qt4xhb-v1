@@ -18,7 +18,7 @@ REQUEST QPIXMAP
 CLASS QClipboard INHERIT QObject
 
    DATA class_id INIT Class_Id_QClipboard
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD clear
    METHOD image

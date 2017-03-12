@@ -13,7 +13,7 @@
 CLASS QDateEdit INHERIT QDateTimeEdit
 
    DATA class_id INIT Class_Id_QDateEdit
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD new1
    METHOD new2

@@ -14,7 +14,7 @@ CLASS QBasicTimer
 
    DATA pointer
    DATA class_id INIT Class_Id_QBasicTimer
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD new
    METHOD delete

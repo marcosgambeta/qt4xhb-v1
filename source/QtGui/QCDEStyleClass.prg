@@ -16,7 +16,7 @@ REQUEST QPALETTE
 CLASS QCDEStyle INHERIT QMotifStyle
 
    DATA class_id INIT Class_Id_QCDEStyle
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD new
    METHOD delete

@@ -13,7 +13,7 @@
 CLASS QTextBlockGroup INHERIT QTextObject
 
    DATA class_id INIT Class_Id_QTextBlockGroup
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    DESTRUCTOR destroyObject
 

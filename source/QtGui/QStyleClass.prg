@@ -22,7 +22,7 @@ REQUEST QPOINT
 CLASS QStyle INHERIT QObject
 
    DATA class_id INIT Class_Id_QStyle
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD delete
    METHOD combinedLayoutSpacing

@@ -16,7 +16,7 @@ REQUEST QSIZE
 CLASS QProgressDialog INHERIT QDialog
 
    DATA class_id INIT Class_Id_QProgressDialog
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD new1
    METHOD new2

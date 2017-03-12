@@ -20,7 +20,7 @@ REQUEST QPAINTDEVICE
 CLASS QAbstractTextDocumentLayout INHERIT QObject
 
    DATA class_id INIT Class_Id_QAbstractTextDocumentLayout
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD anchorAt
    METHOD blockBoundingRect

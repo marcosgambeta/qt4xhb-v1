@@ -17,7 +17,7 @@ REQUEST QVARIANT
 CLASS QTextBrowser INHERIT QTextEdit
 
    DATA class_id INIT Class_Id_QTextBrowser
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD new
    METHOD backwardHistoryCount

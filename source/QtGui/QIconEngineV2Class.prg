@@ -17,7 +17,7 @@ REQUEST QICONENGINEV2
 CLASS QIconEngineV2 INHERIT QIconEngine
 
    DATA class_id INIT Class_Id_QIconEngineV2
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD delete
    METHOD availableSizes

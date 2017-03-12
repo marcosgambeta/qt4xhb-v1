@@ -16,7 +16,7 @@ REQUEST QWIDGET
 CLASS QStackedWidget INHERIT QFrame
 
    DATA class_id INIT Class_Id_QStackedWidget
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD new
    METHOD delete

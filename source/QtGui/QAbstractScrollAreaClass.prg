@@ -18,7 +18,7 @@ REQUEST QSIZE
 CLASS QAbstractScrollArea INHERIT QFrame
 
    DATA class_id INIT Class_Id_QAbstractScrollArea
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD delete
    METHOD addScrollBarWidget

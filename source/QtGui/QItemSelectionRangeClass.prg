@@ -19,7 +19,7 @@ CLASS QItemSelectionRange
 
    DATA pointer
    DATA class_id INIT Class_Id_QItemSelectionRange
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD new1
    METHOD new2

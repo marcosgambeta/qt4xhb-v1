@@ -16,7 +16,7 @@ REQUEST QMODELINDEX
 CLASS QAbstractTableModel INHERIT QAbstractItemModel
 
    DATA class_id INIT Class_Id_QAbstractTableModel
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD delete
    METHOD dropMimeData

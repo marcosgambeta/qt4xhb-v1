@@ -17,7 +17,7 @@ CLASS QDecoration
 
    DATA pointer
    DATA class_id INIT Class_Id_QDecoration
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD delete
    METHOD buildSysMenu

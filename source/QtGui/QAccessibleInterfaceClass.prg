@@ -18,7 +18,7 @@ REQUEST QRECT
 CLASS QAccessibleInterface INHERIT QAccessible
 
    DATA class_id INIT Class_Id_QAccessibleInterface
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD delete
    METHOD actionText

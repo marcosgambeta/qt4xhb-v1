@@ -19,7 +19,7 @@ REQUEST QSIZE
 CLASS QAbstractItemModel INHERIT QObject
 
    DATA class_id INIT Class_Id_QAbstractItemModel
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD delete
    METHOD buddy

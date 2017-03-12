@@ -17,7 +17,7 @@ REQUEST QGRAPHICSLAYOUTITEM
 CLASS QGraphicsAnchorLayout INHERIT QGraphicsLayout
 
    DATA class_id INIT Class_Id_QGraphicsAnchorLayout
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD new
    METHOD delete

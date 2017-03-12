@@ -13,7 +13,7 @@
 CLASS QSessionManager INHERIT QObject
 
    DATA class_id INIT Class_Id_QSessionManager
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD allowsErrorInteraction
    METHOD allowsInteraction

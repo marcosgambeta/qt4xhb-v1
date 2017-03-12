@@ -17,7 +17,7 @@ REQUEST QPOINT
 CLASS QGraphicsSceneHoverEvent INHERIT QGraphicsSceneEvent
 
    DATA class_id INIT Class_Id_QGraphicsSceneHoverEvent
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD delete
    METHOD lastPos

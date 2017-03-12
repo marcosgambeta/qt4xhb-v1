@@ -17,7 +17,7 @@ CLASS QDesignerTaskMenuExtension
 
    DATA pointer
    DATA class_id INIT Class_Id_QDesignerTaskMenuExtension
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD delete
    METHOD preferredEditAction

@@ -16,7 +16,7 @@ REQUEST QPIXMAP
 CLASS QSplashScreen INHERIT QWidget
 
    DATA class_id INIT Class_Id_QSplashScreen
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD new1
    METHOD new2

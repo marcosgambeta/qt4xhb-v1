@@ -17,7 +17,7 @@ REQUEST QBYTEARRAY
 CLASS QFtp INHERIT QObject
 
    DATA class_id INIT Class_Id_QFtp
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD new
    METHOD delete

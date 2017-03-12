@@ -18,7 +18,7 @@ REQUEST QWIDGET
 CLASS QGraphicsProxyWidget INHERIT QGraphicsWidget
 
    DATA class_id INIT Class_Id_QGraphicsProxyWidget
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD new
    METHOD delete

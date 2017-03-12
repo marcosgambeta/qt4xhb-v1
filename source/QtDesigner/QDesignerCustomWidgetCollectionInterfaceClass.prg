@@ -17,7 +17,7 @@ CLASS QDesignerCustomWidgetCollectionInterface
 
    DATA pointer
    DATA class_id INIT Class_Id_QDesignerCustomWidgetCollectionInterface
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD delete
    METHOD customWidgets

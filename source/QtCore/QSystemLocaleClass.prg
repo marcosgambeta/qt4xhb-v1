@@ -18,7 +18,7 @@ CLASS QSystemLocale
 
    DATA pointer
    DATA class_id INIT Class_Id_QSystemLocale
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD new
    METHOD fallbackLocale

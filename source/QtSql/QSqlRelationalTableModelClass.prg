@@ -18,7 +18,7 @@ REQUEST QVARIANT
 CLASS QSqlRelationalTableModel INHERIT QSqlTableModel
 
    DATA class_id INIT Class_Id_QSqlRelationalTableModel
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD new
    METHOD delete

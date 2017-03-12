@@ -13,7 +13,7 @@
 CLASS QDeclarativeExtensionPlugin INHERIT QObject
 
    DATA class_id INIT Class_Id_QDeclarativeExtensionPlugin
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD initializeEngine
    METHOD registerTypes

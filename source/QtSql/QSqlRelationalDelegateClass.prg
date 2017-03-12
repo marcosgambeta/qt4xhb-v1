@@ -16,7 +16,7 @@ REQUEST QWIDGET
 CLASS QSqlRelationalDelegate INHERIT QItemDelegate
 
    DATA class_id INIT Class_Id_QSqlRelationalDelegate
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD new
    METHOD delete

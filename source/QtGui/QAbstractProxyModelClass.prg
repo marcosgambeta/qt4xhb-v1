@@ -21,7 +21,7 @@ REQUEST QSIZE
 CLASS QAbstractProxyModel INHERIT QAbstractItemModel
 
    DATA class_id INIT Class_Id_QAbstractProxyModel
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD delete
    METHOD mapFromSource

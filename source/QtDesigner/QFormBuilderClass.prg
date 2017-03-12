@@ -16,7 +16,7 @@ REQUEST QDESIGNERCUSTOMWIDGETINTERFACE
 CLASS QFormBuilder INHERIT QAbstractFormBuilder
 
    DATA class_id INIT Class_Id_QFormBuilder
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD new
    METHOD delete

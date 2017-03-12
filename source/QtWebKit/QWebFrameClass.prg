@@ -27,7 +27,7 @@ REQUEST QVARIANT
 CLASS QWebFrame INHERIT QObject
 
    DATA class_id INIT Class_Id_QWebFrame
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD addToJavaScriptWindowObject1
    METHOD addToJavaScriptWindowObject2

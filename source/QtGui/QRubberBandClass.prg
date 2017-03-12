@@ -13,7 +13,7 @@
 CLASS QRubberBand INHERIT QWidget
 
    DATA class_id INIT Class_Id_QRubberBand
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD new
    METHOD delete

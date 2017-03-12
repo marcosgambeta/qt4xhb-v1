@@ -18,7 +18,7 @@ REQUEST QTEXTFRAMEFORMAT
 CLASS QTextFrame INHERIT QTextObject
 
    DATA class_id INIT Class_Id_QTextFrame
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD new
    METHOD delete

@@ -17,7 +17,7 @@ REQUEST QWIDGET
 CLASS QDesktopWidget INHERIT QWidget
 
    DATA class_id INIT Class_Id_QDesktopWidget
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD availableGeometry1
    METHOD availableGeometry2

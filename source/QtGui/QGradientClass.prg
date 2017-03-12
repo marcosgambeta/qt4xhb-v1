@@ -14,7 +14,7 @@ CLASS QGradient
 
    DATA pointer
    DATA class_id INIT Class_Id_QGradient
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD coordinateMode
    METHOD setColorAt

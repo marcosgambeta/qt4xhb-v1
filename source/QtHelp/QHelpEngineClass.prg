@@ -20,7 +20,7 @@ REQUEST QHELPSEARCHENGINE
 CLASS QHelpEngine INHERIT QHelpEngineCore
 
    DATA class_id INIT Class_Id_QHelpEngine
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD new
    METHOD delete

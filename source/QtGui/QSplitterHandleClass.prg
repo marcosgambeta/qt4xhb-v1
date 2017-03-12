@@ -17,7 +17,7 @@ REQUEST QSIZE
 CLASS QSplitterHandle INHERIT QWidget
 
    DATA class_id INIT Class_Id_QSplitterHandle
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD new
    METHOD opaqueResize

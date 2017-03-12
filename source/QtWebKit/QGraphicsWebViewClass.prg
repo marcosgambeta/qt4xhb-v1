@@ -21,7 +21,7 @@ REQUEST QURL
 CLASS QGraphicsWebView INHERIT QGraphicsWidget
 
    DATA class_id INIT Class_Id_QGraphicsWebView
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD new
    METHOD delete

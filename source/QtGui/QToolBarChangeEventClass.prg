@@ -13,7 +13,7 @@
 CLASS QToolBarChangeEvent INHERIT QEvent
 
    DATA class_id INIT Class_Id_QToolBarChangeEvent
-   DATA self_destruction INIT .f.
+   DATA self_destruction INIT .F.
 
    METHOD new
    METHOD delete
