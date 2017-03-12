@@ -9,11 +9,12 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QT4XHB_NO_REQUESTS
 REQUEST QSIZE
 REQUEST QPALETTE
 REQUEST QPIXMAP
 REQUEST QRECT
+#endif
 
 CLASS QMotifStyle INHERIT QCommonStyle
 

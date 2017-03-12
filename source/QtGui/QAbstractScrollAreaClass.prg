@@ -9,10 +9,11 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QT4XHB_NO_REQUESTS
 REQUEST QWIDGET
 REQUEST QSCROLLBAR
 REQUEST QSIZE
+#endif
 
 CLASS QAbstractScrollArea INHERIT QFrame
 

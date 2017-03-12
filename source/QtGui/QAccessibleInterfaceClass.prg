@@ -9,10 +9,11 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QT4XHB_NO_REQUESTS
 REQUEST QVARIANT
 REQUEST QOBJECT
 REQUEST QRECT
+#endif
 
 CLASS QAccessibleInterface INHERIT QAccessible
 

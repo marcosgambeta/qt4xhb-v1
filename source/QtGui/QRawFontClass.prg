@@ -9,12 +9,13 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QT4XHB_NO_REQUESTS
 REQUEST QPOINTF
 REQUEST QIMAGE
 REQUEST QBYTEARRAY
 REQUEST QPAINTERPATH
 REQUEST QRAWFONT
+#endif
 
 CLASS QRawFont
 

@@ -9,13 +9,14 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QT4XHB_NO_REQUESTS
 REQUEST QREGEXP
 REQUEST QMODELINDEX
 REQUEST QVARIANT
 REQUEST QITEMSELECTION
 REQUEST QMIMEDATA
 REQUEST QSIZE
+#endif
 
 CLASS QSortFilterProxyModel INHERIT QAbstractProxyModel
 

@@ -9,13 +9,14 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QT4XHB_NO_REQUESTS
 REQUEST QMARGINS
 REQUEST QRECT
 REQUEST QLAYOUTITEM
 REQUEST QSIZE
 REQUEST QWIDGET
 REQUEST QLAYOUT
+#endif
 
 CLASS QLayout INHERIT QObject,QLayoutItem
 

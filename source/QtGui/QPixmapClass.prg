@@ -9,13 +9,14 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QT4XHB_NO_REQUESTS
 REQUEST QPIXMAP
 REQUEST QBITMAP
 REQUEST QRECT
 REQUEST QSIZE
 REQUEST QIMAGE
 REQUEST QTRANSFORM
+#endif
 
 CLASS QPixmap INHERIT QPaintDevice
 

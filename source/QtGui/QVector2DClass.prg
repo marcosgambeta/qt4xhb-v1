@@ -9,12 +9,13 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QT4XHB_NO_REQUESTS
 REQUEST QVECTOR2D
 REQUEST QPOINT
 REQUEST QPOINTF
 REQUEST QVECTOR3D
 REQUEST QVECTOR4D
+#endif
 
 CLASS QVector2D
 

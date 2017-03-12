@@ -9,7 +9,7 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
+#ifndef QT4XHB_NO_REQUESTS
 REQUEST QPIXMAP
 REQUEST QRECT
 REQUEST QSTYLE
@@ -17,6 +17,7 @@ REQUEST QSIZE
 REQUEST QICON
 REQUEST QPALETTE
 REQUEST QPOINT
+#endif
 
 CLASS QStyle INHERIT QObject
 
