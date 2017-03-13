@@ -18,8 +18,6 @@ CLASS QRadioButton INHERIT QAbstractButton
    DATA class_id INIT Class_Id_QRadioButton
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD sizeHint
    DESTRUCTOR destroyObject
@@ -43,7 +41,7 @@ RETURN
 /*
 QRadioButton ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QRADIOBUTTON_NEW1 )
+void QRadioButton_new1 ()
 {
   QRadioButton * o = NULL;
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -59,7 +57,7 @@ HB_FUNC_STATIC( QRADIOBUTTON_NEW1 )
 /*
 QRadioButton ( const QString & text, QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QRADIOBUTTON_NEW2 )
+void QRadioButton_new2 ()
 {
   QRadioButton * o = NULL;
   QString par1 = hb_parc(1);
@@ -72,7 +70,6 @@ HB_FUNC_STATIC( QRADIOBUTTON_NEW2 )
   hb_itemReturn( self );
 }
 
-
 //[1]QRadioButton ( QWidget * parent = 0 )
 //[2]QRadioButton ( const QString & text, QWidget * parent = 0 )
 
@@ -80,11 +77,11 @@ HB_FUNC_STATIC( QRADIOBUTTON_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QRADIOBUTTON_NEW1 );
+    QRadioButton_new1();
   }
   else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QRADIOBUTTON_NEW2 );
+    QRadioButton_new2();
   }
   else
   {
@@ -92,21 +89,18 @@ HB_FUNC_STATIC( QRADIOBUTTON_NEW )
   }
 }
 
-
 /*
 virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QRADIOBUTTON_SIZEHINT )
 {
   QRadioButton * obj = (QRadioButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizeHint (  ) );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
-
-
-
 
 #pragma ENDDUMP

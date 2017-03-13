@@ -9,15 +9,11 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
 CLASS QPushButton INHERIT QAbstractButton
 
    DATA class_id INIT Class_Id_QPushButton
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD autoDefault
@@ -48,7 +44,7 @@ RETURN
 /*
 QPushButton ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QPUSHBUTTON_NEW1 )
+void QPushButton_new1 ()
 {
   QPushButton * o = NULL;
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -60,11 +56,10 @@ HB_FUNC_STATIC( QPUSHBUTTON_NEW1 )
   hb_itemReturn( self );
 }
 
-
 /*
 QPushButton ( const QString & text, QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QPUSHBUTTON_NEW2 )
+void QPushButton_new2 ()
 {
   QPushButton * o = NULL;
   QString par1 = hb_parc(1);
@@ -77,11 +72,10 @@ HB_FUNC_STATIC( QPUSHBUTTON_NEW2 )
   hb_itemReturn( self );
 }
 
-
 /*
 QPushButton ( const QIcon & icon, const QString & text, QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QPUSHBUTTON_NEW3 )
+void QPushButton_new3 ()
 {
   QPushButton * o = NULL;
   QIcon par1 = ISOBJECT(1)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(1));
@@ -95,7 +89,6 @@ HB_FUNC_STATIC( QPUSHBUTTON_NEW3 )
   hb_itemReturn( self );
 }
 
-
 //[1]QPushButton ( QWidget * parent = 0 )
 //[2]QPushButton ( const QString & text, QWidget * parent = 0 )
 //[3]QPushButton ( const QIcon & icon, const QString & text, QWidget * parent = 0 )
@@ -104,15 +97,15 @@ HB_FUNC_STATIC( QPUSHBUTTON_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QPUSHBUTTON_NEW1 );
+    QPushButton_new1();
   }
   else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QPUSHBUTTON_NEW2 );
+    QPushButton_new2();
   }
   else if( ISBETWEEN(2,3) && (ISQICON(1)||ISCHAR(1)) && ISCHAR(2) && (ISQWIDGET(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QPUSHBUTTON_NEW3 );
+    QPushButton_new3();
   }
   else
   {
@@ -123,6 +116,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_NEW )
 HB_FUNC_STATIC( QPUSHBUTTON_DELETE )
 {
   QPushButton * obj = (QPushButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -132,9 +126,9 @@ HB_FUNC_STATIC( QPUSHBUTTON_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 bool autoDefault () const
@@ -142,12 +136,12 @@ bool autoDefault () const
 HB_FUNC_STATIC( QPUSHBUTTON_AUTODEFAULT )
 {
   QPushButton * obj = (QPushButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     hb_retl( obj->autoDefault (  ) );
   }
 }
-
 
 /*
 bool isDefault () const
@@ -155,12 +149,12 @@ bool isDefault () const
 HB_FUNC_STATIC( QPUSHBUTTON_ISDEFAULT )
 {
   QPushButton * obj = (QPushButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     hb_retl( obj->isDefault (  ) );
   }
 }
-
 
 /*
 bool isFlat () const
@@ -168,13 +162,12 @@ bool isFlat () const
 HB_FUNC_STATIC( QPUSHBUTTON_ISFLAT )
 {
   QPushButton * obj = (QPushButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     hb_retl( obj->isFlat (  ) );
   }
 }
-
-
 
 /*
 void setAutoDefault ( bool )
@@ -182,13 +175,14 @@ void setAutoDefault ( bool )
 HB_FUNC_STATIC( QPUSHBUTTON_SETAUTODEFAULT )
 {
   QPushButton * obj = (QPushButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     obj->setAutoDefault ( (bool) hb_parl(1) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setDefault ( bool )
@@ -196,13 +190,14 @@ void setDefault ( bool )
 HB_FUNC_STATIC( QPUSHBUTTON_SETDEFAULT )
 {
   QPushButton * obj = (QPushButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     obj->setDefault ( (bool) hb_parl(1) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setFlat ( bool )
@@ -210,31 +205,28 @@ void setFlat ( bool )
 HB_FUNC_STATIC( QPUSHBUTTON_SETFLAT )
 {
   QPushButton * obj = (QPushButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     obj->setFlat ( (bool) hb_parl(1) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
-
-
 /*
-void showMenu () 
+void showMenu ()
 */
 HB_FUNC_STATIC( QPUSHBUTTON_SHOWMENU )
 {
   QPushButton * obj = (QPushButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     obj->showMenu (  );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
 
 #pragma ENDDUMP

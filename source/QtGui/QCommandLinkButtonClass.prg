@@ -9,15 +9,11 @@
 #include "hbclass.ch"
 #include "qt4xhb_clsid.ch"
 
-
 CLASS QCommandLinkButton INHERIT QPushButton
 
    DATA class_id INIT Class_Id_QCommandLinkButton
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD description
    METHOD setDescription
@@ -44,7 +40,7 @@ RETURN
 /*
 QCommandLinkButton ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QCOMMANDLINKBUTTON_NEW1 )
+void QCommandLinkButton_new1 ()
 {
   QCommandLinkButton * o = NULL;
   QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -56,11 +52,10 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_NEW1 )
   hb_itemReturn( self );
 }
 
-
 /*
 QCommandLinkButton ( const QString & text, QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QCOMMANDLINKBUTTON_NEW2 )
+void QCommandLinkButton_new2 ()
 {
   QCommandLinkButton * o = NULL;
   QString par1 = hb_parc(1);
@@ -73,11 +68,10 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_NEW2 )
   hb_itemReturn( self );
 }
 
-
 /*
 QCommandLinkButton ( const QString & text, const QString & description, QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QCOMMANDLINKBUTTON_NEW3 )
+void QCommandLinkButton_new3 ()
 {
   QCommandLinkButton * o = NULL;
   QString par1 = hb_parc(1);
@@ -91,7 +85,6 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_NEW3 )
   hb_itemReturn( self );
 }
 
-
 //[1]QCommandLinkButton ( QWidget * parent = 0 )
 //[2]QCommandLinkButton ( const QString & text, QWidget * parent = 0 )
 //[3]QCommandLinkButton ( const QString & text, const QString & description, QWidget * parent = 0 )
@@ -100,15 +93,15 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    HB_FUNC_EXEC( QCOMMANDLINKBUTTON_NEW1 );
+    QCommandLinkButton_new1();
   }
   else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QCOMMANDLINKBUTTON_NEW2 );
+    QCommandLinkButton_new2();
   }
   else if( ISBETWEEN(2,3) && ISCHAR(1) && ISCHAR(2) && (ISQWIDGET(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QCOMMANDLINKBUTTON_NEW3 );
+    QCommandLinkButton_new3();
   }
   else
   {
@@ -116,13 +109,13 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_NEW )
   }
 }
 
-
 /*
 QString description () const
 */
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_DESCRIPTION )
 {
   QCommandLinkButton * obj = (QCommandLinkButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QString str1 = obj->description (  );
@@ -130,13 +123,13 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_DESCRIPTION )
   }
 }
 
-
 /*
 void setDescription ( const QString & description )
 */
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_SETDESCRIPTION )
 {
   QCommandLinkButton * obj = (QCommandLinkButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QString par1 = hb_parc(1);
@@ -145,19 +138,18 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_SETDESCRIPTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool isFlat () const
 */
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_ISFLAT )
 {
   QCommandLinkButton * obj = (QCommandLinkButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     hb_retl( obj->isFlat (  ) );
   }
 }
-
 
 /*
 void setFlat ( bool )
@@ -165,14 +157,13 @@ void setFlat ( bool )
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_SETFLAT )
 {
   QCommandLinkButton * obj = (QCommandLinkButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     obj->setFlat ( (bool) hb_parl(1) );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
 
 #pragma ENDDUMP
