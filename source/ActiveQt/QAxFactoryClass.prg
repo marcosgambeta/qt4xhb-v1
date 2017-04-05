@@ -42,6 +42,7 @@ CLASS QAxFactory INHERIT QObject
    METHOD serverFilePath
    METHOD startServer
    METHOD stopServer
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -60,10 +61,10 @@ RETURN
 #include "qt4xhb_clsid.h"
 #include "qt4xhb_utils.h"
 
-
 HB_FUNC_STATIC( QAXFACTORY_DELETE )
 {
   QAxFactory * obj = (QAxFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -73,9 +74,9 @@ HB_FUNC_STATIC( QAXFACTORY_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual QUuid appID () const
@@ -83,6 +84,7 @@ virtual QUuid appID () const
 HB_FUNC_STATIC( QAXFACTORY_APPID )
 {
   QAxFactory * obj = (QAxFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QUuid * ptr = new QUuid( obj->appID (  ) );
@@ -90,21 +92,27 @@ HB_FUNC_STATIC( QAXFACTORY_APPID )
   }
 }
 
-
 /*
 virtual QUuid classID ( const QString & key ) const
 */
 HB_FUNC_STATIC( QAXFACTORY_CLASSID )
 {
   QAxFactory * obj = (QAxFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QUuid * ptr = new QUuid( obj->classID ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QUUID", true );
+    if( ISCHAR(1) )
+    {
+      QString par1 = hb_parc(1);
+      QUuid * ptr = new QUuid( obj->classID ( par1 ) );
+      _qt4xhb_createReturnClass ( ptr, "QUUID", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 virtual QObject * createObject ( const QString & key ) = 0
@@ -112,15 +120,21 @@ virtual QObject * createObject ( const QString & key ) = 0
 HB_FUNC_STATIC( QAXFACTORY_CREATEOBJECT )
 {
   QAxFactory * obj = (QAxFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QObject * ptr = obj->createObject ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    if( ISCHAR(1) )
+    {
+      QString par1 = hb_parc(1);
+      QObject * ptr = obj->createObject ( par1 );
+      _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
-
 
 /*
 virtual QUuid eventsID ( const QString & key ) const
@@ -128,14 +142,21 @@ virtual QUuid eventsID ( const QString & key ) const
 HB_FUNC_STATIC( QAXFACTORY_EVENTSID )
 {
   QAxFactory * obj = (QAxFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QUuid * ptr = new QUuid( obj->eventsID ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QUUID", true );
+    if( ISCHAR(1) )
+    {
+      QString par1 = hb_parc(1);
+      QUuid * ptr = new QUuid( obj->eventsID ( par1 ) );
+      _qt4xhb_createReturnClass ( ptr, "QUUID", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 virtual QString exposeToSuperClass ( const QString & key ) const
@@ -143,14 +164,21 @@ virtual QString exposeToSuperClass ( const QString & key ) const
 HB_FUNC_STATIC( QAXFACTORY_EXPOSETOSUPERCLASS )
 {
   QAxFactory * obj = (QAxFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QString str1 = obj->exposeToSuperClass ( par1 );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    if( ISCHAR(1) )
+    {
+      QString par1 = hb_parc(1);
+      QString str1 = obj->exposeToSuperClass ( par1 );
+      hb_retc( (const char *) str1.toLatin1().data() );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 virtual QStringList featureList () const = 0
@@ -158,6 +186,7 @@ virtual QStringList featureList () const = 0
 HB_FUNC_STATIC( QAXFACTORY_FEATURELIST )
 {
   QAxFactory * obj = (QAxFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QStringList strl = obj->featureList (  );
@@ -174,20 +203,26 @@ HB_FUNC_STATIC( QAXFACTORY_FEATURELIST )
   }
 }
 
-
 /*
 virtual bool hasStockEvents ( const QString & key ) const
 */
 HB_FUNC_STATIC( QAXFACTORY_HASSTOCKEVENTS )
 {
   QAxFactory * obj = (QAxFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    hb_retl( obj->hasStockEvents ( par1 ) );
+    if( ISCHAR(1) )
+    {
+      QString par1 = hb_parc(1);
+      hb_retl( obj->hasStockEvents ( par1 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 virtual QUuid interfaceID ( const QString & key ) const
@@ -195,14 +230,21 @@ virtual QUuid interfaceID ( const QString & key ) const
 HB_FUNC_STATIC( QAXFACTORY_INTERFACEID )
 {
   QAxFactory * obj = (QAxFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QUuid * ptr = new QUuid( obj->interfaceID ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QUUID", true );
+    if( ISCHAR(1) )
+    {
+      QString par1 = hb_parc(1);
+      QUuid * ptr = new QUuid( obj->interfaceID ( par1 ) );
+      _qt4xhb_createReturnClass ( ptr, "QUUID", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 virtual bool isService () const
@@ -210,12 +252,12 @@ virtual bool isService () const
 HB_FUNC_STATIC( QAXFACTORY_ISSERVICE )
 {
   QAxFactory * obj = (QAxFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     hb_retl( obj->isService (  ) );
   }
 }
-
 
 /*
 virtual const QMetaObject * metaObject ( const QString & key ) const = 0
@@ -223,14 +265,21 @@ virtual const QMetaObject * metaObject ( const QString & key ) const = 0
 HB_FUNC_STATIC( QAXFACTORY_METAOBJECT )
 {
   QAxFactory * obj = (QAxFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    const QMetaObject * ptr = obj->metaObject ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QMETAOBJECT" );
+    if( ISCHAR(1) )
+    {
+      QString par1 = hb_parc(1);
+      const QMetaObject * ptr = obj->metaObject ( par1 );
+      _qt4xhb_createReturnClass ( ptr, "QMETAOBJECT" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 virtual void registerClass ( const QString & key, QSettings * settings ) const
@@ -238,15 +287,23 @@ virtual void registerClass ( const QString & key, QSettings * settings ) const
 HB_FUNC_STATIC( QAXFACTORY_REGISTERCLASS )
 {
   QAxFactory * obj = (QAxFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QSettings * par2 = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->registerClass ( par1, par2 );
+    if( ISCHAR(1) && ISQSETTINGS(2) )
+    {
+      QString par1 = hb_parc(1);
+      QSettings * par2 = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
+      obj->registerClass ( par1, par2 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual bool stayTopLevel ( const QString & key ) const
@@ -254,13 +311,20 @@ virtual bool stayTopLevel ( const QString & key ) const
 HB_FUNC_STATIC( QAXFACTORY_STAYTOPLEVEL )
 {
   QAxFactory * obj = (QAxFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    hb_retl( obj->stayTopLevel ( par1 ) );
+    if( ISCHAR(1) )
+    {
+      QString par1 = hb_parc(1);
+      hb_retl( obj->stayTopLevel ( par1 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
 
 /*
 virtual QUuid typeLibID () const
@@ -268,6 +332,7 @@ virtual QUuid typeLibID () const
 HB_FUNC_STATIC( QAXFACTORY_TYPELIBID )
 {
   QAxFactory * obj = (QAxFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     QUuid * ptr = new QUuid( obj->typeLibID (  ) );
@@ -275,22 +340,29 @@ HB_FUNC_STATIC( QAXFACTORY_TYPELIBID )
   }
 }
 
-
 /*
 virtual void unregisterClass ( const QString & key, QSettings * settings ) const
 */
 HB_FUNC_STATIC( QAXFACTORY_UNREGISTERCLASS )
 {
   QAxFactory * obj = (QAxFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QSettings * par2 = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->unregisterClass ( par1, par2 );
+    if( ISCHAR(1) && ISQSETTINGS(2) )
+    {
+      QString par1 = hb_parc(1);
+      QSettings * par2 = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
+      obj->unregisterClass ( par1, par2 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual bool validateLicenseKey ( const QString & key, const QString & licenseKey ) const
@@ -298,15 +370,21 @@ virtual bool validateLicenseKey ( const QString & key, const QString & licenseKe
 HB_FUNC_STATIC( QAXFACTORY_VALIDATELICENSEKEY )
 {
   QAxFactory * obj = (QAxFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QString par2 = hb_parc(2);
-    hb_retl( obj->validateLicenseKey ( par1, par2 ) );
+    if( ISCHAR(1) && ISCHAR(2) )
+    {
+      QString par1 = hb_parc(1);
+      QString par2 = hb_parc(2);
+      hb_retl( obj->validateLicenseKey ( par1, par2 ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
-
-
 
 /*
 bool isServer ()
@@ -316,16 +394,21 @@ HB_FUNC_STATIC( QAXFACTORY_ISSERVER )
   hb_retl( QAxFactory::isServer (  ) );
 }
 
-
 /*
 bool registerActiveObject ( QObject * object )
 */
 HB_FUNC_STATIC( QAXFACTORY_REGISTERACTIVEOBJECT )
 {
-  QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  hb_retl( QAxFactory::registerActiveObject ( par1 ) );
+  if( ISQOBJECT(1) )
+  {
+    QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
+    hb_retl( QAxFactory::registerActiveObject ( par1 ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
-
 
 /*
 QString serverDirPath ()
@@ -336,7 +419,6 @@ HB_FUNC_STATIC( QAXFACTORY_SERVERDIRPATH )
   hb_retc( (const char *) str1.toLatin1().data() );
 }
 
-
 /*
 QString serverFilePath ()
 */
@@ -346,15 +428,20 @@ HB_FUNC_STATIC( QAXFACTORY_SERVERFILEPATH )
   hb_retc( (const char *) str1.toLatin1().data() );
 }
 
-
 /*
 bool startServer ( ServerType type = MultipleInstances )
 */
 HB_FUNC_STATIC( QAXFACTORY_STARTSERVER )
 {
-  hb_retl( QAxFactory::startServer ( ISNIL(1)? QAxFactory::MultipleInstances : (QAxFactory::ServerType) hb_parni(1) ) );
+  if( ISNUM(1) )
+  {
+    hb_retl( QAxFactory::startServer ( ISNIL(1)? QAxFactory::MultipleInstances : (QAxFactory::ServerType) hb_parni(1) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
-
 
 /*
 bool stopServer ()
@@ -363,8 +450,5 @@ HB_FUNC_STATIC( QAXFACTORY_STOPSERVER )
 {
   hb_retl( QAxFactory::stopServer (  ) );
 }
-
-
-
 
 #pragma ENDDUMP
