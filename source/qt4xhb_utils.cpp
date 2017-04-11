@@ -21,7 +21,9 @@
 #define ISARRAY HB_ISARRAY
 #endif
 #include "qt4xhb_clsid.h"
+
 #include <QObject>
+#include <QStringList>
 
 void _qt4xhb_createReturnClass ( void * ptr, const char * classname )
 {
@@ -198,12 +200,16 @@ bool _qt4xhb_inherits ( int iPar, const char * classname )
   }
 }
 
+/*
+*/
 bool _qt4xhb_isClassDerivedFrom ( const char * className1, const char * className2 )
 {
   HB_USHORT uiClass = hb_clsFindClass( className1, NULL );
   return hb_clsIsParent( uiClass, className2 );
 }
 
+/*
+*/
 bool _qt4xhb_isObjectDerivedFrom ( int numpar, const QString className )
 {
   PHB_ITEM pItem = hb_param( numpar, HB_IT_OBJECT );
@@ -216,4 +222,27 @@ bool _qt4xhb_isObjectDerivedFrom ( int numpar, const QString className )
   {
     return false;
   }
+}
+
+/*
+  converte parametro 'n' de array (Harbour) para QStrinList (Qt)
+*/
+QStringList _qt4xhb_convert_array_parameter_to_qstringlist ( int numpar )
+{
+  QStringList list;
+
+  PHB_ITEM pArray = hb_param(numpar, HB_IT_ARRAY);
+
+  if( pArray )
+  {
+    int i;
+    int nLen = hb_arrayLen(pArray);
+    for (i=0; i<nLen; i++)
+    {
+      QString temp = hb_arrayGetCPtr(pArray, i+1);
+      list << temp;
+    }
+  }
+
+  return list;
 }
