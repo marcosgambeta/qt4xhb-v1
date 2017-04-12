@@ -246,6 +246,7 @@ OBJECTS += $(QT4XHB_OBJ_DIR)/habstracttablemodel$(OBJEXT)
 OBJECTS += $(QT4XHB_OBJ_DIR)/habstracttablemodelMoc$(OBJEXT)
 OBJECTS += $(QT4XHB_OBJ_DIR)/habstracttablemodelbin$(OBJEXT)
 OBJECTS += $(QT4XHB_OBJ_DIR)/habstracttablemodelcls$(OBJEXT)
+OBJECTS += $(QT4XHB_OBJ_DIR)/qt4xhbbase$(OBJEXT)
 
 ifeq ($(MODULE_ACTIVEQT),yes)
    include mak/QAxContainer.mak
