@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QSVGRENDERER_SETFRAMESPERSECOND )
   QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setFramesPerSecond ( hb_parni(1) );
+    obj->setFramesPerSecond ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
