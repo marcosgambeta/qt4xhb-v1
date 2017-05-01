@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SETSAVETODISK )
   QNetworkCacheMetaData * obj = (QNetworkCacheMetaData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setSaveToDisk ( (bool) hb_parl(1) );
+    obj->setSaveToDisk ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
