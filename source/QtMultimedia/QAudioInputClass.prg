@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QAUDIOINPUT_SETBUFFERSIZE )
   QAudioInput * obj = (QAudioInput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setBufferSize ( hb_parni(1) );
+    obj->setBufferSize ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QAUDIOINPUT_SETNOTIFYINTERVAL )
   QAudioInput * obj = (QAudioInput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setNotifyInterval ( hb_parni(1) );
+    obj->setNotifyInterval ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

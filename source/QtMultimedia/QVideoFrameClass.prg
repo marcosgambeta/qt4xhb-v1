@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_NEW3 )
 {
   QVideoFrame * o = NULL;
   QSize * par2 = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QVideoFrame ( hb_parni(1), *par2, hb_parni(3),  (QVideoFrame::PixelFormat) hb_parni(4) );
+  o = new QVideoFrame ( PINT(1), *par2, PINT(3),  (QVideoFrame::PixelFormat) hb_parni(4) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QVideoFrame *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );

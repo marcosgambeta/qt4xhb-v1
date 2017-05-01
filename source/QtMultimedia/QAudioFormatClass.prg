@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SETFREQUENCY )
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setFrequency ( hb_parni(1) );
+    obj->setFrequency ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SETSAMPLERATE )
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setSampleRate ( hb_parni(1) );
+    obj->setSampleRate ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SETCHANNELS )
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setChannels ( hb_parni(1) );
+    obj->setChannels ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SETCHANNELCOUNT )
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setChannelCount ( hb_parni(1) );
+    obj->setChannelCount ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SETSAMPLESIZE )
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setSampleSize ( hb_parni(1) );
+    obj->setSampleSize ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
