@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QSQLINDEX_APPEND2 )
   if( obj )
   {
     QSqlField * par1 = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->append ( *par1, (bool) hb_parl(2) );
+    obj->append ( *par1, PBOOL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QSQLINDEX_ISDESCENDING )
   QSqlIndex * obj = (QSqlIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isDescending ( hb_parni(1) ) );
+    hb_retl( obj->isDescending ( PINT(1) ) );
   }
 }
 
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QSQLINDEX_SETDESCENDING )
   QSqlIndex * obj = (QSqlIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setDescending ( hb_parni(1), (bool) hb_parl(2) );
+    obj->setDescending ( PINT(1), PBOOL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

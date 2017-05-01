@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QSQLERROR_SETNUMBER )
   QSqlError * obj = (QSqlError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setNumber ( hb_parni(1) );
+    obj->setNumber ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_INSERTRECORD )
   if( obj )
   {
     QSqlRecord * par2 = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->insertRecord ( hb_parni(1), *par2 ) );
+    hb_retl( obj->insertRecord ( PINT(1), *par2 ) );
   }
 }
 
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_REVERTROW )
   QSqlTableModel * obj = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->revertRow ( hb_parni(1) );
+    obj->revertRow ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SETRECORD )
   if( obj )
   {
     QSqlRecord * par2 = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->setRecord ( hb_parni(1), *par2 ) );
+    hb_retl( obj->setRecord ( PINT(1), *par2 ) );
   }
 }
 
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SETSORT )
   QSqlTableModel * obj = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setSort ( hb_parni(1),  (Qt::SortOrder) hb_parni(2) );
+    obj->setSort ( PINT(1),  (Qt::SortOrder) hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_HEADERDATA )
   QSqlTableModel * obj = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->headerData ( hb_parni(1),  (Qt::Orientation) hb_parni(2), ISNIL(3)? Qt::DisplayRole : hb_parni(3) ) );
+    QVariant * ptr = new QVariant( obj->headerData ( PINT(1),  (Qt::Orientation) hb_parni(2), ISNIL(3)? Qt::DisplayRole : hb_parni(3) ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_INSERTROWS )
   if( obj )
   {
     QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->insertRows ( hb_parni(1), hb_parni(2), par3 ) );
+    hb_retl( obj->insertRows ( PINT(1), PINT(2), par3 ) );
   }
 }
 
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_REMOVECOLUMNS )
   if( obj )
   {
     QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->removeColumns ( hb_parni(1), hb_parni(2), par3 ) );
+    hb_retl( obj->removeColumns ( PINT(1), PINT(2), par3 ) );
   }
 }
 
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_REMOVEROWS )
   if( obj )
   {
     QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->removeRows ( hb_parni(1), hb_parni(2), par3 ) );
+    hb_retl( obj->removeRows ( PINT(1), PINT(2), par3 ) );
   }
 }
 
@@ -454,7 +454,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SORT )
   QSqlTableModel * obj = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->sort ( hb_parni(1),  (Qt::SortOrder) hb_parni(2) );
+    obj->sort ( PINT(1),  (Qt::SortOrder) hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

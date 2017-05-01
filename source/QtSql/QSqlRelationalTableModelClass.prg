@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_RELATION )
   QSqlRelationalTableModel * obj = (QSqlRelationalTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSqlRelation * ptr = new QSqlRelation( obj->relation ( hb_parni(1) ) );
+    QSqlRelation * ptr = new QSqlRelation( obj->relation ( PINT(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QSQLRELATION", true );
   }
 }
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_RELATIONMODEL )
   QSqlRelationalTableModel * obj = (QSqlRelationalTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSqlTableModel * ptr = obj->relationModel ( hb_parni(1) );
+    QSqlTableModel * ptr = obj->relationModel ( PINT(1) );
     _qt4xhb_createReturnClass ( ptr, "QSQLTABLEMODEL" );
   }
 }
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SETRELATION )
   if( obj )
   {
     QSqlRelation * par2 = (QSqlRelation *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setRelation ( hb_parni(1), *par2 );
+    obj->setRelation ( PINT(1), *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_REMOVECOLUMNS )
   if( obj )
   {
     QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->removeColumns ( hb_parni(1), hb_parni(2), par3 ) );
+    hb_retl( obj->removeColumns ( PINT(1), PINT(2), par3 ) );
   }
 }
 
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_REVERTROW )
   QSqlRelationalTableModel * obj = (QSqlRelationalTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->revertRow ( hb_parni(1) );
+    obj->revertRow ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QSQLQUERY_BINDVALUE2 )
   if( obj )
   {
     QVariant * par2 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->bindValue ( hb_parni(1), *par2, ISNIL(3)? QSql::In : (QSql::ParamType) hb_parni(3) );
+    obj->bindValue ( PINT(1), *par2, ISNIL(3)? QSql::In : (QSql::ParamType) hb_parni(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QSQLQUERY_BOUNDVALUE2 )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->boundValue ( hb_parni(1) ) );
+    QVariant * ptr = new QVariant( obj->boundValue ( PINT(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QSQLQUERY_ISNULL )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNull ( hb_parni(1) ) );
+    hb_retl( obj->isNull ( PINT(1) ) );
   }
 }
 
@@ -696,7 +696,7 @@ HB_FUNC_STATIC( QSQLQUERY_SEEK )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->seek ( hb_parni(1), ISNIL(2)? false : hb_parl(2) ) );
+    hb_retl( obj->seek ( PINT(1), ISNIL(2)? false : hb_parl(2) ) );
   }
 }
 
@@ -709,7 +709,7 @@ HB_FUNC_STATIC( QSQLQUERY_SETFORWARDONLY )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setForwardOnly ( (bool) hb_parl(1) );
+    obj->setForwardOnly ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -750,7 +750,7 @@ HB_FUNC_STATIC( QSQLQUERY_VALUE )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->value ( hb_parni(1) ) );
+    QVariant * ptr = new QVariant( obj->value ( PINT(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }

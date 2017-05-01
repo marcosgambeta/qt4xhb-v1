@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_RECORD1 )
   QSqlQueryModel * obj = (QSqlQueryModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSqlRecord * ptr = new QSqlRecord( obj->record ( hb_parni(1) ) );
+    QSqlRecord * ptr = new QSqlRecord( obj->record ( PINT(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QSQLRECORD", true );
   }
 }
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_HEADERDATA )
   QSqlQueryModel * obj = (QSqlQueryModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->headerData ( hb_parni(1),  (Qt::Orientation) hb_parni(2), ISNIL(3)? Qt::DisplayRole : hb_parni(3) ) );
+    QVariant * ptr = new QVariant( obj->headerData ( PINT(1),  (Qt::Orientation) hb_parni(2), ISNIL(3)? Qt::DisplayRole : hb_parni(3) ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_INSERTCOLUMNS )
   if( obj )
   {
     QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->insertColumns ( hb_parni(1), hb_parni(2), par3 ) );
+    hb_retl( obj->insertColumns ( PINT(1), PINT(2), par3 ) );
   }
 }
 
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_REMOVECOLUMNS )
   if( obj )
   {
     QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->removeColumns ( hb_parni(1), hb_parni(2), par3 ) );
+    hb_retl( obj->removeColumns ( PINT(1), PINT(2), par3 ) );
   }
 }
 
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_SETHEADERDATA )
   if( obj )
   {
     QVariant * par3 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->setHeaderData ( hb_parni(1),  (Qt::Orientation) hb_parni(2), *par3, ISNIL(4)? Qt::EditRole : hb_parni(4) ) );
+    hb_retl( obj->setHeaderData ( PINT(1),  (Qt::Orientation) hb_parni(2), *par3, ISNIL(4)? Qt::EditRole : hb_parni(4) ) );
   }
 }
 

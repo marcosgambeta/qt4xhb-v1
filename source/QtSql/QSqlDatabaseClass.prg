@@ -553,7 +553,7 @@ HB_FUNC_STATIC( QSQLDATABASE_SETPORT )
   QSqlDatabase * obj = (QSqlDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setPort ( hb_parni(1) );
+    obj->setPort ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -794,7 +794,7 @@ HB_FUNC_STATIC( QSQLDATABASE_DATABASE )
   {
     par1 = hb_parc(1);
   }
-  QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::database ( par1, (bool) hb_parl(2) ) );
+  QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::database ( par1, PBOOL(2) ) );
   PHB_DYNS pDynSym;
   #ifdef __XHARBOUR__
   pDynSym = hb_dynsymFind( "QSQLDATABASE" );
