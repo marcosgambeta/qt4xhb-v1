@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_SETAUTOSHOWSTANDARDWINDOW )
   QScriptEngineDebugger * obj = (QScriptEngineDebugger *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setAutoShowStandardWindow ( (bool) hb_parl(1) );
+    obj->setAutoShowStandardWindow ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
