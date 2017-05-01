@@ -444,7 +444,7 @@ HB_FUNC_STATIC( QGLFORMAT_SETACCUM )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setAccum ( (bool) hb_parl(1) );
+    obj->setAccum ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QGLFORMAT_SETALPHA )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setAlpha ( (bool) hb_parl(1) );
+    obj->setAlpha ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -517,7 +517,7 @@ HB_FUNC_STATIC( QGLFORMAT_SETDEPTH )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setDepth ( (bool) hb_parl(1) );
+    obj->setDepth ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -546,7 +546,7 @@ HB_FUNC_STATIC( QGLFORMAT_SETDIRECTRENDERING )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setDirectRendering ( (bool) hb_parl(1) );
+    obj->setDirectRendering ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -560,7 +560,7 @@ HB_FUNC_STATIC( QGLFORMAT_SETDOUBLEBUFFER )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setDoubleBuffer ( (bool) hb_parl(1) );
+    obj->setDoubleBuffer ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -604,7 +604,7 @@ HB_FUNC_STATIC( QGLFORMAT_SETOVERLAY )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setOverlay ( (bool) hb_parl(1) );
+    obj->setOverlay ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -663,7 +663,7 @@ HB_FUNC_STATIC( QGLFORMAT_SETRGBA )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setRgba ( (bool) hb_parl(1) );
+    obj->setRgba ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -677,7 +677,7 @@ HB_FUNC_STATIC( QGLFORMAT_SETSAMPLEBUFFERS )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setSampleBuffers ( (bool) hb_parl(1) );
+    obj->setSampleBuffers ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -706,7 +706,7 @@ HB_FUNC_STATIC( QGLFORMAT_SETSTENCIL )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setStencil ( (bool) hb_parl(1) );
+    obj->setStencil ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -735,7 +735,7 @@ HB_FUNC_STATIC( QGLFORMAT_SETSTEREO )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setStereo ( (bool) hb_parl(1) );
+    obj->setStereo ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

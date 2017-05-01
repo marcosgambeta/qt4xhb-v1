@@ -573,12 +573,10 @@ HB_FUNC_STATIC( QGLWIDGET_RENDERTEXT2 )
   QGLWidget * obj = (QGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    double par1 = hb_parnd(1);
-    double par2 = hb_parnd(2);
     QString par3 = hb_parc(3);
     QFont par4 = ISNIL(4)? QFont() : *(QFont *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par5 = ISNIL(5)? 2000 : hb_parni(5);
-    obj->renderText ( par1, par2, par3, par4, par5 );
+    obj->renderText ( PDOUBLE(1), PDOUBLE(2), par3, par4, par5 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -622,7 +620,7 @@ HB_FUNC_STATIC( QGLWIDGET_SETMOUSETRACKING )
   QGLWidget * obj = (QGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setMouseTracking ( (bool) hb_parl(1) );
+    obj->setMouseTracking ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
