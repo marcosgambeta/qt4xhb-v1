@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QSETTINGS_SETARRAYINDEX )
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setArrayIndex ( hb_parni(1) );
+    obj->setArrayIndex ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -544,7 +544,7 @@ HB_FUNC_STATIC( QSETTINGS_SETFALLBACKSENABLED )
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setFallbacksEnabled ( (bool) hb_parl(1) );
+    obj->setFallbacksEnabled ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

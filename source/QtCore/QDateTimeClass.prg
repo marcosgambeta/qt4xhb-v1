@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QDATETIME_ADDDAYS )
   QDateTime * obj = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDateTime * ptr = new QDateTime( obj->addDays ( hb_parni(1) ) );
+    QDateTime * ptr = new QDateTime( obj->addDays ( PINT(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QDATETIME_ADDMONTHS )
   QDateTime * obj = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDateTime * ptr = new QDateTime( obj->addMonths ( hb_parni(1) ) );
+    QDateTime * ptr = new QDateTime( obj->addMonths ( PINT(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QDATETIME_ADDSECS )
   QDateTime * obj = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDateTime * ptr = new QDateTime( obj->addSecs ( hb_parni(1) ) );
+    QDateTime * ptr = new QDateTime( obj->addSecs ( PINT(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QDATETIME_ADDYEARS )
   QDateTime * obj = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDateTime * ptr = new QDateTime( obj->addYears ( hb_parni(1) ) );
+    QDateTime * ptr = new QDateTime( obj->addYears ( PINT(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }

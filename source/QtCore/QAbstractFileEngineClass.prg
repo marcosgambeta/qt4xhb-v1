@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_MKDIR )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    hb_retl( obj->mkdir ( par1, (bool) hb_parl(2) ) );
+    hb_retl( obj->mkdir ( par1, PBOOL(2) ) );
   }
 }
 
@@ -437,7 +437,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_RMDIR )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    hb_retl( obj->rmdir ( par1, (bool) hb_parl(2) ) );
+    hb_retl( obj->rmdir ( par1, PBOOL(2) ) );
   }
 }
 

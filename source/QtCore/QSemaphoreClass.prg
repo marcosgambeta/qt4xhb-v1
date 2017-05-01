@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QSEMAPHORE_TRYACQUIRE2 )
   QSemaphore * obj = (QSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->tryAcquire ( hb_parni(1), hb_parni(2) ) );
+    hb_retl( obj->tryAcquire ( PINT(1), PINT(2) ) );
   }
 }
 

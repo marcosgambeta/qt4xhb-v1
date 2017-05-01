@@ -112,7 +112,7 @@ QLine(int x1, int y1, int x2, int y2)
 HB_FUNC_STATIC( QLINE_NEW3 )
 {
   QLine * o = NULL;
-  o = new QLine ( hb_parni(1), hb_parni(2), hb_parni(3), hb_parni(4) );
+  o = new QLine ( PINT(1), PINT(2), PINT(3), PINT(4) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QLine *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QLINE_SETLINE )
   QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setLine ( hb_parni(1), hb_parni(2), hb_parni(3), hb_parni(4) );
+    obj->setLine ( PINT(1), PINT(2), PINT(3), PINT(4) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QLINE_TRANSLATE2 )
   QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->translate ( hb_parni(1), hb_parni(2) );
+    obj->translate ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QLINE_TRANSLATED2 )
   QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QLine * ptr = new QLine( obj->translated ( hb_parni(1), hb_parni(2) ) );
+    QLine * ptr = new QLine( obj->translated ( PINT(1), PINT(2) ) );
     _qt4xhb_createReturnClass ( ptr, "QLINE", true );
   }
 }

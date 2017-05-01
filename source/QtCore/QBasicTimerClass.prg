@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QBASICTIMER_START )
   if( obj )
   {
     QObject * par2 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->start ( hb_parni(1), par2 );
+    obj->start ( PINT(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

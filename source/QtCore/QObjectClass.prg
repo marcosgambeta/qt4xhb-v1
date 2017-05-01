@@ -1505,7 +1505,7 @@ HB_FUNC_STATIC( QOBJECT_BLOCKSIGNALS )
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->blockSignals ( (bool) hb_parl(1) ) );
+    hb_retl( obj->blockSignals ( PBOOL(1) ) );
   }
 }
 
@@ -1829,7 +1829,7 @@ HB_FUNC_STATIC( QOBJECT_KILLTIMER )
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->killTimer ( hb_parni(1) );
+    obj->killTimer ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1988,7 +1988,7 @@ HB_FUNC_STATIC( QOBJECT_STARTTIMER )
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->startTimer ( hb_parni(1) ) );
+    hb_retni( obj->startTimer ( PINT(1) ) );
   }
 }
 

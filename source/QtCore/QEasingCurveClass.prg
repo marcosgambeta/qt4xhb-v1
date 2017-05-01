@@ -172,8 +172,7 @@ HB_FUNC_STATIC( QEASINGCURVE_SETAMPLITUDE )
   QEasingCurve * obj = (QEasingCurve *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setAmplitude ( par1 );
+    obj->setAmplitude ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -188,8 +187,7 @@ HB_FUNC_STATIC( QEASINGCURVE_SETOVERSHOOT )
   QEasingCurve * obj = (QEasingCurve *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setOvershoot ( par1 );
+    obj->setOvershoot ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -203,8 +201,7 @@ HB_FUNC_STATIC( QEASINGCURVE_SETPERIOD )
   QEasingCurve * obj = (QEasingCurve *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setPeriod ( par1 );
+    obj->setPeriod ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

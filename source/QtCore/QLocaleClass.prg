@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QLOCALE_DAYNAME )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->dayName ( hb_parni(1), ISNIL(2)? QLocale::LongFormat : (QLocale::FormatType) hb_parni(2) );
+    QString str1 = obj->dayName ( PINT(1), ISNIL(2)? QLocale::LongFormat : (QLocale::FormatType) hb_parni(2) );
     hb_retc( (const char *) str1.toLatin1().data() );
   }
 }
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QLOCALE_MONTHNAME )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->monthName ( hb_parni(1), ISNIL(2)? QLocale::LongFormat : (QLocale::FormatType) hb_parni(2) );
+    QString str1 = obj->monthName ( PINT(1), ISNIL(2)? QLocale::LongFormat : (QLocale::FormatType) hb_parni(2) );
     hb_retc( (const char *) str1.toLatin1().data() );
   }
 }
@@ -655,7 +655,7 @@ HB_FUNC_STATIC( QLOCALE_STANDALONEDAYNAME )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->standaloneDayName ( hb_parni(1), ISNIL(2)? QLocale::LongFormat : (QLocale::FormatType) hb_parni(2) );
+    QString str1 = obj->standaloneDayName ( PINT(1), ISNIL(2)? QLocale::LongFormat : (QLocale::FormatType) hb_parni(2) );
     hb_retc( (const char *) str1.toLatin1().data() );
   }
 }
@@ -669,7 +669,7 @@ HB_FUNC_STATIC( QLOCALE_STANDALONEMONTHNAME )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->standaloneMonthName ( hb_parni(1), ISNIL(2)? QLocale::LongFormat : (QLocale::FormatType) hb_parni(2) );
+    QString str1 = obj->standaloneMonthName ( PINT(1), ISNIL(2)? QLocale::LongFormat : (QLocale::FormatType) hb_parni(2) );
     hb_retc( (const char *) str1.toLatin1().data() );
   }
 }
@@ -759,7 +759,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING4 )
   if( obj )
   {
     QString par2 = ISNIL(2)? QString() : hb_parc(2);
-    QString str1 = obj->toCurrencyString ( hb_parni(1), par2 );
+    QString str1 = obj->toCurrencyString ( PINT(1), par2 );
     hb_retc( (const char *) str1.toLatin1().data() );
   }
 }
@@ -788,9 +788,8 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING6 )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    float par1 = hb_parnd(1);
     QString par2 = ISNIL(2)? QString() : hb_parc(2);
-    QString str1 = obj->toCurrencyString ( par1, par2 );
+    QString str1 = obj->toCurrencyString ( PFLOAT(1), par2 );
     hb_retc( (const char *) str1.toLatin1().data() );
   }
 }
@@ -820,9 +819,8 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING8 )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    double par1 = hb_parnd(1);
     QString par2 = ISNIL(2)? QString() : hb_parc(2);
-    QString str1 = obj->toCurrencyString ( par1, par2 );
+    QString str1 = obj->toCurrencyString ( PDOUBLE(1), par2 );
     hb_retc( (const char *) str1.toLatin1().data() );
   }
 }
@@ -1184,7 +1182,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING10 )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toString ( hb_parni(1) );
+    QString str1 = obj->toString ( PINT(1) );
     hb_retc( (const char *) str1.toLatin1().data() );
   }
 }
@@ -1212,9 +1210,8 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING12 )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    float par1 = hb_parnd(1);
     char par2 = ISNIL(2)? 103 : (ISCHAR(2)? (char) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0));
-    QString str1 = obj->toString ( par1, par2, ISNIL(3)? 6 : hb_parni(3) );
+    QString str1 = obj->toString ( PFLOAT(1), par2, ISNIL(3)? 6 : hb_parni(3) );
     hb_retc( (const char *) str1.toLatin1().data() );
   }
 }
@@ -1243,9 +1240,8 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING14 )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    double par1 = hb_parnd(1);
     char par2 = ISNIL(2)? 103 : (ISCHAR(2)? (char) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0));
-    QString str1 = obj->toString ( par1, par2, ISNIL(3)? 6 : hb_parni(3) );
+    QString str1 = obj->toString ( PDOUBLE(1), par2, ISNIL(3)? 6 : hb_parni(3) );
     hb_retc( (const char *) str1.toLatin1().data() );
   }
 }

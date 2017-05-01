@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SETAUTODETECTUNICODE )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setAutoDetectUnicode ( (bool) hb_parl(1) );
+    obj->setAutoDetectUnicode ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SETGENERATEBYTEORDERMARK )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setGenerateByteOrderMark ( (bool) hb_parl(1) );
+    obj->setGenerateByteOrderMark ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

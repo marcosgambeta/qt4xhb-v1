@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QFILE_OPEN3 )
   QFile * obj = (QFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->open ( hb_parni(1),  (QFile::OpenMode) hb_parni(2) ) );
+    hb_retl( obj->open ( PINT(1),  (QFile::OpenMode) hb_parni(2) ) );
   }
 }
 
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QFILE_OPEN4 )
   QFile * obj = (QFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->open ( hb_parni(1),  (QFile::OpenMode) hb_parni(2),  (QFile::FileHandleFlags) hb_parni(3) ) );
+    hb_retl( obj->open ( PINT(1),  (QFile::OpenMode) hb_parni(2),  (QFile::FileHandleFlags) hb_parni(3) ) );
   }
 }
 

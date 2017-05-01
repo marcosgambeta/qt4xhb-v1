@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_REPORTRESULTSREADY )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->reportResultsReady ( hb_parni(1), hb_parni(2) );
+    obj->reportResultsReady ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETFILTERMODE )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setFilterMode ( (bool) hb_parl(1) );
+    obj->setFilterMode ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETPROGRESSRANGE )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setProgressRange ( hb_parni(1), hb_parni(2) );
+    obj->setProgressRange ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETPROGRESSVALUE )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setProgressValue ( hb_parni(1) );
+    obj->setProgressValue ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETPROGRESSVALUEANDTEXT )
   if( obj )
   {
     QString par2 = hb_parc(2);
-    obj->setProgressValueAndText ( hb_parni(1), par2 );
+    obj->setProgressValueAndText ( PINT(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETEXPECTEDRESULTCOUNT )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setExpectedResultCount ( hb_parni(1) );
+    obj->setExpectedResultCount ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISRESULTREADYAT )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isResultReadyAt ( hb_parni(1) ) );
+    hb_retl( obj->isResultReadyAt ( PINT(1) ) );
   }
 }
 
@@ -507,7 +507,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETPAUSED )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setPaused ( (bool) hb_parl(1) );
+    obj->setPaused ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -535,7 +535,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETTHROTTLED )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setThrottled ( (bool) hb_parl(1) );
+    obj->setThrottled ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -576,7 +576,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_WAITFORRESULT )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->waitForResult ( hb_parni(1) );
+    obj->waitForResult ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

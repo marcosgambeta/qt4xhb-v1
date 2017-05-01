@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW3 )
 {
   QByteArrayMatcher * o = NULL;
   const char * par1 = hb_parc(1);
-  o = new QByteArrayMatcher (  (const char *) par1, hb_parni(2) );
+  o = new QByteArrayMatcher (  (const char *) par1, PINT(2) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QByteArrayMatcher *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_INDEXIN2 )
   if( obj )
   {
     const char * par1 = hb_parc(1);
-    hb_retni( obj->indexIn (  (const char *) par1, hb_parni(2), ISNIL(3)? 0 : hb_parni(3) ) );
+    hb_retni( obj->indexIn (  (const char *) par1, PINT(2), ISNIL(3)? 0 : hb_parni(3) ) );
   }
 }
 

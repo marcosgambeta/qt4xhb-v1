@@ -47,7 +47,7 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_NEW )
 {
   QSocketNotifier * o = NULL;
   QObject * par3 = ISNIL(3)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSocketNotifier ( hb_parni(1), (QSocketNotifier::Type) hb_parni(2), par3 );
+  o = new QSocketNotifier ( PINT(1), (QSocketNotifier::Type) hb_parni(2), par3 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSocketNotifier *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_SETENABLED )
   QSocketNotifier * obj = (QSocketNotifier *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setEnabled ( (bool) hb_parl(1) );
+    obj->setEnabled ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

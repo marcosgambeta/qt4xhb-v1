@@ -178,7 +178,7 @@ QRect ( int x, int y, int width, int height )
 HB_FUNC_STATIC( QRECT_NEW4 )
 {
   QRect * o = NULL;
-  o = new QRect ( hb_parni(1), hb_parni(2), hb_parni(3), hb_parni(4) );
+  o = new QRect ( PINT(1), PINT(2), PINT(3), PINT(4) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QRect *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QRECT_ADJUST )
   QRect * obj = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->adjust ( hb_parni(1), hb_parni(2), hb_parni(3), hb_parni(4) );
+    obj->adjust ( PINT(1), PINT(2), PINT(3), PINT(4) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QRECT_ADJUSTED )
   QRect * obj = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRect * ptr = new QRect( obj->adjusted ( hb_parni(1), hb_parni(2), hb_parni(3), hb_parni(4) ) );
+    QRect * ptr = new QRect( obj->adjusted ( PINT(1), PINT(2), PINT(3), PINT(4) ) );
     _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QRECT_CONTAINS2 )
   QRect * obj = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->contains ( hb_parni(1), hb_parni(2), (bool) hb_parl(3) ) );
+    hb_retl( obj->contains ( PINT(1), PINT(2), PBOOL(3) ) );
   }
 }
 
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QRECT_CONTAINS3 )
   QRect * obj = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->contains ( hb_parni(1), hb_parni(2) ) );
+    hb_retl( obj->contains ( PINT(1), PINT(2) ) );
   }
 }
 
@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QRECT_MOVEBOTTOM )
   QRect * obj = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->moveBottom ( hb_parni(1) );
+    obj->moveBottom ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -602,7 +602,7 @@ HB_FUNC_STATIC( QRECT_MOVELEFT )
   QRect * obj = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->moveLeft ( hb_parni(1) );
+    obj->moveLeft ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -616,7 +616,7 @@ HB_FUNC_STATIC( QRECT_MOVERIGHT )
   QRect * obj = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->moveRight ( hb_parni(1) );
+    obj->moveRight ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -630,7 +630,7 @@ HB_FUNC_STATIC( QRECT_MOVETO1 )
   QRect * obj = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->moveTo ( hb_parni(1), hb_parni(2) );
+    obj->moveTo ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -674,7 +674,7 @@ HB_FUNC_STATIC( QRECT_MOVETOP )
   QRect * obj = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->moveTop ( hb_parni(1) );
+    obj->moveTop ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -745,7 +745,7 @@ HB_FUNC_STATIC( QRECT_SETBOTTOM )
   QRect * obj = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setBottom ( hb_parni(1) );
+    obj->setBottom ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -789,7 +789,7 @@ HB_FUNC_STATIC( QRECT_SETCOORDS )
   QRect * obj = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setCoords ( hb_parni(1), hb_parni(2), hb_parni(3), hb_parni(4) );
+    obj->setCoords ( PINT(1), PINT(2), PINT(3), PINT(4) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -803,7 +803,7 @@ HB_FUNC_STATIC( QRECT_SETHEIGHT )
   QRect * obj = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setHeight ( hb_parni(1) );
+    obj->setHeight ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -817,7 +817,7 @@ HB_FUNC_STATIC( QRECT_SETLEFT )
   QRect * obj = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setLeft ( hb_parni(1) );
+    obj->setLeft ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -831,7 +831,7 @@ HB_FUNC_STATIC( QRECT_SETRECT )
   QRect * obj = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setRect ( hb_parni(1), hb_parni(2), hb_parni(3), hb_parni(4) );
+    obj->setRect ( PINT(1), PINT(2), PINT(3), PINT(4) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -845,7 +845,7 @@ HB_FUNC_STATIC( QRECT_SETRIGHT )
   QRect * obj = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setRight ( hb_parni(1) );
+    obj->setRight ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -874,7 +874,7 @@ HB_FUNC_STATIC( QRECT_SETTOP )
   QRect * obj = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setTop ( hb_parni(1) );
+    obj->setTop ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -918,7 +918,7 @@ HB_FUNC_STATIC( QRECT_SETWIDTH )
   QRect * obj = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setWidth ( hb_parni(1) );
+    obj->setWidth ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -932,7 +932,7 @@ HB_FUNC_STATIC( QRECT_SETX )
   QRect * obj = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setX ( hb_parni(1) );
+    obj->setX ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -946,7 +946,7 @@ HB_FUNC_STATIC( QRECT_SETY )
   QRect * obj = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setY ( hb_parni(1) );
+    obj->setY ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1015,7 +1015,7 @@ HB_FUNC_STATIC( QRECT_TRANSLATE1 )
   QRect * obj = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->translate ( hb_parni(1), hb_parni(2) );
+    obj->translate ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1059,7 +1059,7 @@ HB_FUNC_STATIC( QRECT_TRANSLATED1 )
   QRect * obj = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRect * ptr = new QRect( obj->translated ( hb_parni(1), hb_parni(2) ) );
+    QRect * ptr = new QRect( obj->translated ( PINT(1), PINT(2) ) );
     _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }

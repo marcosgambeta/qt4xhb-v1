@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QEVENT_SETACCEPTED )
   QEvent * obj = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setAccepted ( (bool) hb_parl(1) );
+    obj->setAccepted ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

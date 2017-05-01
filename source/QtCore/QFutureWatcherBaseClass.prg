@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_SETPENDINGRESULTSLIMIT )
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setPendingResultsLimit ( hb_parni(1) );
+    obj->setPendingResultsLimit ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_SETPAUSED )
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setPaused ( (bool) hb_parl(1) );
+    obj->setPaused ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

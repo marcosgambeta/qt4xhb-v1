@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_CANCELDELAYEDEVENT )
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->cancelDelayedEvent ( hb_parni(1) ) );
+    hb_retl( obj->cancelDelayedEvent ( PINT(1) ) );
   }
 }
 
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_POSTDELAYEDEVENT )
   if( obj )
   {
     QEvent * par1 = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retni( obj->postDelayedEvent ( par1, hb_parni(2) ) );
+    hb_retni( obj->postDelayedEvent ( par1, PINT(2) ) );
   }
 }
 
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_SETANIMATED )
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setAnimated ( (bool) hb_parl(1) );
+    obj->setAnimated ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -117,8 +117,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_KEYVALUEAT )
   QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    QVariant * ptr = new QVariant( obj->keyValueAt ( par1 ) );
+    QVariant * ptr = new QVariant( obj->keyValueAt ( PQREAL(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -178,9 +177,8 @@ HB_FUNC_STATIC( QVARIANTANIMATION_SETKEYVALUEAT )
   QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
     QVariant * par2 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setKeyValueAt ( par1, *par2 );
+    obj->setKeyValueAt ( PQREAL(1), *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

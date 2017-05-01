@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QMETAOBJECT_CLASSINFO )
   QMetaObject * obj = (QMetaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QMetaClassInfo * ptr = new QMetaClassInfo( obj->classInfo ( hb_parni(1) ) );
+    QMetaClassInfo * ptr = new QMetaClassInfo( obj->classInfo ( PINT(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QMETACLASSINFO" );
   }
 }
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QMETAOBJECT_CONSTRUCTOR )
   QMetaObject * obj = (QMetaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QMetaMethod * ptr = new QMetaMethod( obj->constructor ( hb_parni(1) ) );
+    QMetaMethod * ptr = new QMetaMethod( obj->constructor ( PINT(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QMETAMETHOD" );
   }
 }
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QMETAOBJECT_ENUMERATOR )
   QMetaObject * obj = (QMetaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QMetaEnum * ptr = new QMetaEnum( obj->enumerator ( hb_parni(1) ) );
+    QMetaEnum * ptr = new QMetaEnum( obj->enumerator ( PINT(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QMETAENUM" );
   }
 }
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QMETAOBJECT_METHOD )
   QMetaObject * obj = (QMetaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QMetaMethod * ptr = new QMetaMethod( obj->method ( hb_parni(1) ) );
+    QMetaMethod * ptr = new QMetaMethod( obj->method ( PINT(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QMETAMETHOD" );
   }
 }
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QMETAOBJECT_PROPERTY )
   QMetaObject * obj = (QMetaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QMetaProperty * ptr = new QMetaProperty( obj->property ( hb_parni(1) ) );
+    QMetaProperty * ptr = new QMetaProperty( obj->property ( PINT(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QMETAPROPERTY" );
   }
 }

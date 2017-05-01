@@ -99,9 +99,7 @@ QPointF(qreal xpos, qreal ypos)
 HB_FUNC_STATIC( QPOINTF_NEW3 )
 {
   QPointF * o = NULL;
-  qreal par1 = hb_parnd(1);
-  qreal par2 = hb_parnd(2);
-  o = new QPointF ( par1, par2 );
+  o = new QPointF ( PQREAL(1), PQREAL(2) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPointF *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -190,8 +188,7 @@ HB_FUNC_STATIC( QPOINTF_SETX )
   QPointF * obj = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setX ( par1 );
+    obj->setX ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -205,8 +202,7 @@ HB_FUNC_STATIC( QPOINTF_SETY )
   QPointF * obj = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setY ( par1 );
+    obj->setY ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

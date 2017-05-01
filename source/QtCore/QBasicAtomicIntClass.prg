@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QBASICATOMICINT_TESTANDSETRELAXED )
   QBasicAtomicInt * obj = (QBasicAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->testAndSetRelaxed ( hb_parni(1), hb_parni(2) ) );
+    hb_retl( obj->testAndSetRelaxed ( PINT(1), PINT(2) ) );
   }
 }
 
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QBASICATOMICINT_TESTANDSETACQUIRE )
   QBasicAtomicInt * obj = (QBasicAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->testAndSetAcquire ( hb_parni(1), hb_parni(2) ) );
+    hb_retl( obj->testAndSetAcquire ( PINT(1), PINT(2) ) );
   }
 }
 
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QBASICATOMICINT_TESTANDSETRELEASE )
   QBasicAtomicInt * obj = (QBasicAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->testAndSetRelease ( hb_parni(1), hb_parni(2) ) );
+    hb_retl( obj->testAndSetRelease ( PINT(1), PINT(2) ) );
   }
 }
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QBASICATOMICINT_TESTANDSETORDERED )
   QBasicAtomicInt * obj = (QBasicAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->testAndSetOrdered ( hb_parni(1), hb_parni(2) ) );
+    hb_retl( obj->testAndSetOrdered ( PINT(1), PINT(2) ) );
   }
 }
 
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDSTORERELAXED )
   QBasicAtomicInt * obj = (QBasicAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->fetchAndStoreRelaxed ( hb_parni(1) ) );
+    hb_retni( obj->fetchAndStoreRelaxed ( PINT(1) ) );
   }
 }
 
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDSTOREACQUIRE )
   QBasicAtomicInt * obj = (QBasicAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->fetchAndStoreAcquire ( hb_parni(1) ) );
+    hb_retni( obj->fetchAndStoreAcquire ( PINT(1) ) );
   }
 }
 
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDSTORERELEASE )
   QBasicAtomicInt * obj = (QBasicAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->fetchAndStoreRelease ( hb_parni(1) ) );
+    hb_retni( obj->fetchAndStoreRelease ( PINT(1) ) );
   }
 }
 
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDSTOREORDERED )
   QBasicAtomicInt * obj = (QBasicAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->fetchAndStoreOrdered ( hb_parni(1) ) );
+    hb_retni( obj->fetchAndStoreOrdered ( PINT(1) ) );
   }
 }
 
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDADDRELAXED )
   QBasicAtomicInt * obj = (QBasicAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->fetchAndAddRelaxed ( hb_parni(1) ) );
+    hb_retni( obj->fetchAndAddRelaxed ( PINT(1) ) );
   }
 }
 
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDADDACQUIRE )
   QBasicAtomicInt * obj = (QBasicAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->fetchAndAddAcquire ( hb_parni(1) ) );
+    hb_retni( obj->fetchAndAddAcquire ( PINT(1) ) );
   }
 }
 
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDADDRELEASE )
   QBasicAtomicInt * obj = (QBasicAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->fetchAndAddRelease ( hb_parni(1) ) );
+    hb_retni( obj->fetchAndAddRelease ( PINT(1) ) );
   }
 }
 
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDADDORDERED )
   QBasicAtomicInt * obj = (QBasicAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->fetchAndAddOrdered ( hb_parni(1) ) );
+    hb_retni( obj->fetchAndAddOrdered ( PINT(1) ) );
   }
 }
 

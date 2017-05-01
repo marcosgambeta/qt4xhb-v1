@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_OPEN2 )
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->open (  (QIODevice::OpenMode) hb_parni(1), hb_parni(2) ) );
+    hb_retl( obj->open (  (QIODevice::OpenMode) hb_parni(1), PINT(2) ) );
   }
 }
 
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_OPEN3 )
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->open (  (QIODevice::OpenMode) hb_parni(1), hb_parni(2),  (QFile::FileHandleFlags) hb_parni(3) ) );
+    hb_retl( obj->open (  (QIODevice::OpenMode) hb_parni(1), PINT(2),  (QFile::FileHandleFlags) hb_parni(3) ) );
   }
 }
 
@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_MKDIR )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    hb_retl( obj->mkdir ( par1, (bool) hb_parl(2) ) );
+    hb_retl( obj->mkdir ( par1, PBOOL(2) ) );
   }
 }
 
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_RMDIR )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    hb_retl( obj->rmdir ( par1, (bool) hb_parl(2) ) );
+    hb_retl( obj->rmdir ( par1, PBOOL(2) ) );
   }
 }
 

@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_SETLOOPCOUNT )
   QAbstractAnimation * obj = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setLoopCount ( hb_parni(1) );
+    obj->setLoopCount ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_SETCURRENTTIME )
   QAbstractAnimation * obj = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setCurrentTime ( hb_parni(1) );
+    obj->setCurrentTime ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_SETPAUSED )
   QAbstractAnimation * obj = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setPaused ( (bool) hb_parl(1) );
+    obj->setPaused ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

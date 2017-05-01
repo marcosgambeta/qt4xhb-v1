@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORREAD2 )
   QReadWriteLock * obj = (QReadWriteLock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->tryLockForRead ( hb_parni(1) ) );
+    hb_retl( obj->tryLockForRead ( PINT(1) ) );
   }
 }
 
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORWRITE2 )
   QReadWriteLock * obj = (QReadWriteLock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->tryLockForWrite ( hb_parni(1) ) );
+    hb_retl( obj->tryLockForWrite ( PINT(1) ) );
   }
 }
 

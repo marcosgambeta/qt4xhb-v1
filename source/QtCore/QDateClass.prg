@@ -111,7 +111,7 @@ QDate ( int y, int m, int d )
 HB_FUNC_STATIC( QDATE_NEW2 )
 {
   QDate * o = NULL;
-  o = new QDate ( hb_parni(1), hb_parni(2), hb_parni(3) );
+  o = new QDate ( PINT(1), PINT(2), PINT(3) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDate *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QDATE_ADDDAYS )
   QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDate * ptr = new QDate( obj->addDays ( hb_parni(1) ) );
+    QDate * ptr = new QDate( obj->addDays ( PINT(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QDATE", true );
   }
 }
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QDATE_ADDMONTHS )
   QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDate * ptr = new QDate( obj->addMonths ( hb_parni(1) ) );
+    QDate * ptr = new QDate( obj->addMonths ( PINT(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QDATE", true );
   }
 }
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QDATE_ADDYEARS )
   QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDate * ptr = new QDate( obj->addYears ( hb_parni(1) ) );
+    QDate * ptr = new QDate( obj->addYears ( PINT(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QDATE", true );
   }
 }
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QDATE_SETDATE )
   QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->setDate ( hb_parni(1), hb_parni(2), hb_parni(3) ) );
+    hb_retl( obj->setDate ( PINT(1), PINT(2), PINT(3) ) );
   }
 }
 
@@ -453,7 +453,7 @@ QDate fromJulianDay ( int jd )
 */
 HB_FUNC_STATIC( QDATE_FROMJULIANDAY )
 {
-  QDate * ptr = new QDate( QDate::fromJulianDay ( hb_parni(1) ) );
+  QDate * ptr = new QDate( QDate::fromJulianDay ( PINT(1) ) );
   _qt4xhb_createReturnClass ( ptr, "QDATE", true );
 }
 
@@ -501,7 +501,7 @@ bool isLeapYear ( int year )
 */
 HB_FUNC_STATIC( QDATE_ISLEAPYEAR )
 {
-  hb_retl( QDate::isLeapYear ( hb_parni(1) ) );
+  hb_retl( QDate::isLeapYear ( PINT(1) ) );
 }
 
 
@@ -510,7 +510,7 @@ bool isValid ( int year, int month, int day )
 */
 HB_FUNC_STATIC( QDATE_ISVALID2 )
 {
-  hb_retl( QDate::isValid ( hb_parni(1), hb_parni(2), hb_parni(3) ) );
+  hb_retl( QDate::isValid ( PINT(1), PINT(2), PINT(3) ) );
 }
 
 
@@ -534,7 +534,7 @@ QString longDayName ( int weekday )
 */
 HB_FUNC_STATIC( QDATE_LONGDAYNAME1 )
 {
-  QString str1 = QDate::longDayName ( hb_parni(1) );
+  QString str1 = QDate::longDayName ( PINT(1) );
   hb_retc( (const char *) str1.toLatin1().data() );
 }
 
@@ -544,7 +544,7 @@ QString longDayName ( int weekday, MonthNameType type )
 */
 HB_FUNC_STATIC( QDATE_LONGDAYNAME2 )
 {
-  QString str1 = QDate::longDayName ( hb_parni(1),  (QDate::MonthNameType) hb_parni(2) );
+  QString str1 = QDate::longDayName ( PINT(1),  (QDate::MonthNameType) hb_parni(2) );
   hb_retc( (const char *) str1.toLatin1().data() );
 }
 
@@ -569,7 +569,7 @@ QString longMonthName ( int month )
 */
 HB_FUNC_STATIC( QDATE_LONGMONTHNAME1 )
 {
-  QString str1 = QDate::longMonthName ( hb_parni(1) );
+  QString str1 = QDate::longMonthName ( PINT(1) );
   hb_retc( (const char *) str1.toLatin1().data() );
 }
 
@@ -579,7 +579,7 @@ QString longMonthName ( int month, MonthNameType type )
 */
 HB_FUNC_STATIC( QDATE_LONGMONTHNAME2 )
 {
-  QString str1 = QDate::longMonthName ( hb_parni(1),  (QDate::MonthNameType) hb_parni(2) );
+  QString str1 = QDate::longMonthName ( PINT(1),  (QDate::MonthNameType) hb_parni(2) );
   hb_retc( (const char *) str1.toLatin1().data() );
 }
 
@@ -604,7 +604,7 @@ QString shortDayName ( int weekday )
 */
 HB_FUNC_STATIC( QDATE_SHORTDAYNAME1 )
 {
-  QString str1 = QDate::shortDayName ( hb_parni(1) );
+  QString str1 = QDate::shortDayName ( PINT(1) );
   hb_retc( (const char *) str1.toLatin1().data() );
 }
 
@@ -614,7 +614,7 @@ QString shortDayName ( int weekday, MonthNameType type )
 */
 HB_FUNC_STATIC( QDATE_SHORTDAYNAME2 )
 {
-  QString str1 = QDate::shortDayName ( hb_parni(1),  (QDate::MonthNameType) hb_parni(2) );
+  QString str1 = QDate::shortDayName ( PINT(1),  (QDate::MonthNameType) hb_parni(2) );
   hb_retc( (const char *) str1.toLatin1().data() );
 }
 
@@ -639,7 +639,7 @@ QString shortMonthName ( int month )
 */
 HB_FUNC_STATIC( QDATE_SHORTMONTHNAME1 )
 {
-  QString str1 = QDate::shortMonthName ( hb_parni(1) );
+  QString str1 = QDate::shortMonthName ( PINT(1) );
   hb_retc( (const char *) str1.toLatin1().data() );
 }
 
@@ -649,7 +649,7 @@ QString shortMonthName ( int month, MonthNameType type )
 */
 HB_FUNC_STATIC( QDATE_SHORTMONTHNAME2 )
 {
-  QString str1 = QDate::shortMonthName ( hb_parni(1),  (QDate::MonthNameType) hb_parni(2) );
+  QString str1 = QDate::shortMonthName ( PINT(1),  (QDate::MonthNameType) hb_parni(2) );
   hb_retc( (const char *) str1.toLatin1().data() );
 }
 

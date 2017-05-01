@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QANIMATIONGROUP_ANIMATIONAT )
   QAnimationGroup * obj = (QAnimationGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QAbstractAnimation * ptr = obj->animationAt ( hb_parni(1) );
+    QAbstractAnimation * ptr = obj->animationAt ( PINT(1) );
     _qt4xhb_createReturnClass ( ptr, "QABSTRACTANIMATION" );
   }
 }
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QANIMATIONGROUP_INSERTANIMATION )
   if( obj )
   {
     QAbstractAnimation * par2 = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->insertAnimation ( hb_parni(1), par2 );
+    obj->insertAnimation ( PINT(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QANIMATIONGROUP_TAKEANIMATION )
   QAnimationGroup * obj = (QAnimationGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QAbstractAnimation * ptr = obj->takeAnimation ( hb_parni(1) );
+    QAbstractAnimation * ptr = obj->takeAnimation ( PINT(1) );
     _qt4xhb_createReturnClass ( ptr, "QABSTRACTANIMATION" );
   }
 }

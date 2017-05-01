@@ -214,7 +214,7 @@ QChar ( int code )
 HB_FUNC_STATIC( QCHAR_NEW9 )
 {
   QChar * o = NULL;
-  o = new QChar ( hb_parni(1) );
+  o = new QChar ( PINT(1) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QChar *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );

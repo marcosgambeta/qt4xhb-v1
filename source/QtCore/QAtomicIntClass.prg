@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QATOMICINT_FETCHANDADDACQUIRE )
   QAtomicInt * obj = (QAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->fetchAndAddAcquire ( hb_parni(1) ) );
+    hb_retni( obj->fetchAndAddAcquire ( PINT(1) ) );
   }
 }
 
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QATOMICINT_FETCHANDADDORDERED )
   QAtomicInt * obj = (QAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->fetchAndAddOrdered ( hb_parni(1) ) );
+    hb_retni( obj->fetchAndAddOrdered ( PINT(1) ) );
   }
 }
 
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QATOMICINT_FETCHANDADDRELAXED )
   QAtomicInt * obj = (QAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->fetchAndAddRelaxed ( hb_parni(1) ) );
+    hb_retni( obj->fetchAndAddRelaxed ( PINT(1) ) );
   }
 }
 
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QATOMICINT_FETCHANDADDRELEASE )
   QAtomicInt * obj = (QAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->fetchAndAddRelease ( hb_parni(1) ) );
+    hb_retni( obj->fetchAndAddRelease ( PINT(1) ) );
   }
 }
 
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QATOMICINT_FETCHANDSTOREACQUIRE )
   QAtomicInt * obj = (QAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->fetchAndStoreAcquire ( hb_parni(1) ) );
+    hb_retni( obj->fetchAndStoreAcquire ( PINT(1) ) );
   }
 }
 
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QATOMICINT_FETCHANDSTOREORDERED )
   QAtomicInt * obj = (QAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->fetchAndStoreOrdered ( hb_parni(1) ) );
+    hb_retni( obj->fetchAndStoreOrdered ( PINT(1) ) );
   }
 }
 
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QATOMICINT_FETCHANDSTORERELAXED )
   QAtomicInt * obj = (QAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->fetchAndStoreRelaxed ( hb_parni(1) ) );
+    hb_retni( obj->fetchAndStoreRelaxed ( PINT(1) ) );
   }
 }
 
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QATOMICINT_FETCHANDSTORERELEASE )
   QAtomicInt * obj = (QAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->fetchAndStoreRelease ( hb_parni(1) ) );
+    hb_retni( obj->fetchAndStoreRelease ( PINT(1) ) );
   }
 }
 
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QATOMICINT_TESTANDSETACQUIRE )
   QAtomicInt * obj = (QAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->testAndSetAcquire ( hb_parni(1), hb_parni(2) ) );
+    hb_retl( obj->testAndSetAcquire ( PINT(1), PINT(2) ) );
   }
 }
 
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QATOMICINT_TESTANDSETORDERED )
   QAtomicInt * obj = (QAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->testAndSetOrdered ( hb_parni(1), hb_parni(2) ) );
+    hb_retl( obj->testAndSetOrdered ( PINT(1), PINT(2) ) );
   }
 }
 
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QATOMICINT_TESTANDSETRELAXED )
   QAtomicInt * obj = (QAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->testAndSetRelaxed ( hb_parni(1), hb_parni(2) ) );
+    hb_retl( obj->testAndSetRelaxed ( PINT(1), PINT(2) ) );
   }
 }
 
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QATOMICINT_TESTANDSETRELEASE )
   QAtomicInt * obj = (QAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->testAndSetRelease ( hb_parni(1), hb_parni(2) ) );
+    hb_retl( obj->testAndSetRelease ( PINT(1), PINT(2) ) );
   }
 }
 

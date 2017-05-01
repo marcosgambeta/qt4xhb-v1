@@ -406,7 +406,7 @@ QVariant ( bool val )
 HB_FUNC_STATIC( QVARIANT_NEW14 )
 {
   QVariant * o = NULL;
-  o = new QVariant ( (bool) hb_parl(1) );
+  o = new QVariant ( PBOOL(1) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QVariant *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -424,8 +424,7 @@ QVariant ( double val )
 HB_FUNC_STATIC( QVARIANT_NEW15 )
 {
   QVariant * o = NULL;
-  double par1 = hb_parnd(1);
-  o = new QVariant ( par1 );
+  o = new QVariant ( PDOUBLE(1) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QVariant *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -443,8 +442,7 @@ QVariant ( float val )
 HB_FUNC_STATIC( QVARIANT_NEW16 )
 {
   QVariant * o = NULL;
-  float par1 = hb_parnd(1);
-  o = new QVariant ( par1 );
+  o = new QVariant ( PFLOAT(1) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QVariant *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );

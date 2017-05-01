@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QMODELINDEX_CHILD )
   QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QModelIndex * ptr = new QModelIndex( obj->child ( hb_parni(1), hb_parni(2) ) );
+    QModelIndex * ptr = new QModelIndex( obj->child ( PINT(1), PINT(2) ) );
     _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QMODELINDEX_SIBLING )
   QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QModelIndex * ptr = new QModelIndex( obj->sibling ( hb_parni(1), hb_parni(2) ) );
+    QModelIndex * ptr = new QModelIndex( obj->sibling ( PINT(1), PINT(2) ) );
     _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }

@@ -955,7 +955,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_SETNAMESPACEPROCESSING )
   QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setNamespaceProcessing ( (bool) hb_parl(1) );
+    obj->setNamespaceProcessing ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

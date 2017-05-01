@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_POSTEVENT2 )
 {
   QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QEvent * par2 = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QCoreApplication::postEvent ( par1, par2, hb_parni(3) );
+  QCoreApplication::postEvent ( par1, par2, PINT(3) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -412,7 +412,7 @@ void processEvents ( QEventLoop::ProcessEventsFlags flags, int maxtime )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_PROCESSEVENTS2 )
 {
-  QCoreApplication::processEvents (  (QEventLoop::ProcessEventsFlags) hb_parni(1), hb_parni(2) );
+  QCoreApplication::processEvents (  (QEventLoop::ProcessEventsFlags) hb_parni(1), PINT(2) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -460,7 +460,7 @@ void removePostedEvents ( QObject * receiver, int eventType )
 HB_FUNC_STATIC( QCOREAPPLICATION_REMOVEPOSTEDEVENTS2 )
 {
   QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QCoreApplication::removePostedEvents ( par1, hb_parni(2) );
+  QCoreApplication::removePostedEvents ( par1, PINT(2) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -508,7 +508,7 @@ void sendPostedEvents ( QObject * receiver, int event_type )
 HB_FUNC_STATIC( QCOREAPPLICATION_SENDPOSTEDEVENTS1 )
 {
   QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QCoreApplication::sendPostedEvents ( par1, hb_parni(2) );
+  QCoreApplication::sendPostedEvents ( par1, PINT(2) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -637,7 +637,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE1 )
   const char * par1 = hb_parc(1);
   const char * par2 = hb_parc(2);
   const char * par3 = hb_parc(3);
-  QString str1 = QCoreApplication::translate (  (const char *) par1,  (const char *) par2,  (const char *) par3,  (QCoreApplication::Encoding) hb_parni(4), hb_parni(5) );
+  QString str1 = QCoreApplication::translate (  (const char *) par1,  (const char *) par2,  (const char *) par3,  (QCoreApplication::Encoding) hb_parni(4), PINT(5) );
   hb_retc( (const char *) str1.toLatin1().data() );
 }
 

@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QTIMELINE_SETPAUSED )
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setPaused ( (bool) hb_parl(1) );
+    obj->setPaused ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -753,7 +753,7 @@ HB_FUNC_STATIC( QFILEINFO_SETCACHING )
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setCaching ( (bool) hb_parl(1) );
+    obj->setCaching ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

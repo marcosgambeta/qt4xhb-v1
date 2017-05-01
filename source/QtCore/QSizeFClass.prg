@@ -106,9 +106,7 @@ QSizeF ( qreal width, qreal height )
 HB_FUNC_STATIC( QSIZEF_NEW3 )
 {
   QSizeF * o = NULL;
-  qreal par1 = hb_parnd(1);
-  qreal par2 = hb_parnd(2);
-  o = new QSizeF ( par1, par2 );
+  o = new QSizeF ( PQREAL(1), PQREAL(2) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSizeF *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -253,9 +251,7 @@ HB_FUNC_STATIC( QSIZEF_SCALE1 )
   QSizeF * obj = (QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    obj->scale ( par1, par2,  (Qt::AspectRatioMode) hb_parni(3) );
+    obj->scale ( PQREAL(1), PQREAL(2),  (Qt::AspectRatioMode) hb_parni(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -299,8 +295,7 @@ HB_FUNC_STATIC( QSIZEF_SETHEIGHT )
   QSizeF * obj = (QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setHeight ( par1 );
+    obj->setHeight ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -314,8 +309,7 @@ HB_FUNC_STATIC( QSIZEF_SETWIDTH )
   QSizeF * obj = (QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setWidth ( par1 );
+    obj->setWidth ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

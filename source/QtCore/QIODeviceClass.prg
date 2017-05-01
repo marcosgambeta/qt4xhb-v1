@@ -519,7 +519,7 @@ HB_FUNC_STATIC( QIODEVICE_SETTEXTMODEENABLED )
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setTextModeEnabled ( (bool) hb_parl(1) );
+    obj->setTextModeEnabled ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -562,7 +562,7 @@ HB_FUNC_STATIC( QIODEVICE_WAITFORBYTESWRITTEN )
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->waitForBytesWritten ( hb_parni(1) ) );
+    hb_retl( obj->waitForBytesWritten ( PINT(1) ) );
   }
 }
 
@@ -575,7 +575,7 @@ HB_FUNC_STATIC( QIODEVICE_WAITFORREADYREAD )
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->waitForReadyRead ( hb_parni(1) ) );
+    hb_retl( obj->waitForReadyRead ( PINT(1) ) );
   }
 }
 
