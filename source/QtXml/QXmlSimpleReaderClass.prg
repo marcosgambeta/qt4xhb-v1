@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QXMLSIMPLEREADER_PARSE )
   if( obj )
   {
     const QXmlInputSource * par1 = (const QXmlInputSource *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->parse ( par1, (bool) hb_parl(2) ) );
+    hb_retl( obj->parse ( par1, PBOOL(2) ) );
   }
 }
 

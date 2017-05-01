@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PROCESSNAME )
     QString par1 = hb_parc(1);
     QString par3 = hb_parc(3);
     QString par4 = hb_parc(4);
-    obj->processName ( par1, (bool) hb_parl(2), par3, par4 );
+    obj->processName ( par1, PBOOL(2), par3, par4 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

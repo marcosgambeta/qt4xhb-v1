@@ -419,8 +419,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE6 )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    float par2 = hb_parnd(2);
-    obj->setAttribute ( par1, par2 );
+    obj->setAttribute ( par1, PFLOAT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -435,8 +434,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE7 )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    double par2 = hb_parnd(2);
-    obj->setAttribute ( par1, par2 );
+    obj->setAttribute ( par1, PDOUBLE(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -558,8 +556,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS6 )
   {
     QString par1 = hb_parc(1);
     QString par2 = hb_parc(2);
-    double par3 = hb_parnd(3);
-    obj->setAttributeNS ( par1, par2, par3 );
+    obj->setAttributeNS ( par1, par2, PDOUBLE(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

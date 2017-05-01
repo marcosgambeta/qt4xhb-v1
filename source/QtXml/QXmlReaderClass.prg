@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QXMLREADER_SETFEATURE )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    obj->setFeature ( par1, (bool) hb_parl(2) );
+    obj->setFeature ( par1, PBOOL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
