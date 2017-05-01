@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDDELAY )
   QTestEventList * obj = (QTestEventList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->addDelay ( hb_parni(1) );
+    obj->addDelay ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
