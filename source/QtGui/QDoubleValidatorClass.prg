@@ -69,11 +69,9 @@ QDoubleValidator ( double bottom, double top, int decimals, QObject * parent )
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_NEW2 )
 {
   QDoubleValidator * o = NULL;
-  double par1 = hb_parnd(1);
-  double par2 = hb_parnd(2);
   int par3 = hb_parni(3);
   QObject * par4 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDoubleValidator ( par1, par2, par3, par4 );
+  o = new QDoubleValidator ( PDOUBLE(1), PDOUBLE(2), par3, par4 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDoubleValidator *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -165,8 +163,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETBOTTOM )
   QDoubleValidator * obj = (QDoubleValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    double par1 = hb_parnd(1);
-    obj->setBottom ( par1 );
+    obj->setBottom ( PDOUBLE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -210,10 +207,8 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETRANGE )
   QDoubleValidator * obj = (QDoubleValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    double par1 = hb_parnd(1);
-    double par2 = hb_parnd(2);
     int par3 = ISNIL(3)? 0 : hb_parni(3);
-    obj->setRange ( par1, par2, par3 );
+    obj->setRange ( PDOUBLE(1), PDOUBLE(2), par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -227,8 +222,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETTOP )
   QDoubleValidator * obj = (QDoubleValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    double par1 = hb_parnd(1);
-    obj->setTop ( par1 );
+    obj->setTop ( PDOUBLE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

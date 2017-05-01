@@ -1051,8 +1051,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETDOCUMENTMARGIN )
   QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setDocumentMargin ( par1 );
+    obj->setDocumentMargin ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1081,8 +1080,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETINDENTWIDTH )
   QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setIndentWidth ( par1 );
+    obj->setIndentWidth ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1157,8 +1155,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETTEXTWIDTH )
   QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setTextWidth ( par1 );
+    obj->setTextWidth ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1172,7 +1169,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETUNDOREDOENABLED )
   QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setUndoRedoEnabled ( (bool) hb_parl(1) );
+    obj->setUndoRedoEnabled ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1186,7 +1183,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETUSEDESIGNMETRICS )
   QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setUseDesignMetrics ( (bool) hb_parl(1) );
+    obj->setUseDesignMetrics ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -92,9 +92,7 @@ QVector2D ( qreal xpos, qreal ypos )
 HB_FUNC_STATIC( QVECTOR2D_NEW2 )
 {
   QVector2D * o = NULL;
-  qreal par1 = hb_parnd(1);
-  qreal par2 = hb_parnd(2);
-  o = new QVector2D ( par1, par2 );
+  o = new QVector2D ( PQREAL(1), PQREAL(2) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QVector2D *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -299,8 +297,7 @@ HB_FUNC_STATIC( QVECTOR2D_SETX )
   QVector2D * obj = (QVector2D *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setX ( par1 );
+    obj->setX ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -314,8 +311,7 @@ HB_FUNC_STATIC( QVECTOR2D_SETY )
   QVector2D * obj = (QVector2D *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setY ( par1 );
+    obj->setY ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

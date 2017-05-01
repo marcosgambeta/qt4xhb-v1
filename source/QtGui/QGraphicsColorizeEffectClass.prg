@@ -127,8 +127,7 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_SETSTRENGTH )
   QGraphicsColorizeEffect * obj = (QGraphicsColorizeEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setStrength ( par1 );
+    obj->setStrength ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

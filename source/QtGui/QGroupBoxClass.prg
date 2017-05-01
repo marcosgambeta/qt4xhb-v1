@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QGROUPBOX_SETCHECKABLE )
   QGroupBox * obj = (QGroupBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setCheckable ( (bool) hb_parl(1) );
+    obj->setCheckable ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QGROUPBOX_SETFLAT )
   QGroupBox * obj = (QGroupBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setFlat ( (bool) hb_parl(1) );
+    obj->setFlat ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QGROUPBOX_SETCHECKED )
   QGroupBox * obj = (QGroupBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setChecked ( (bool) hb_parl(1) );
+    obj->setChecked ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

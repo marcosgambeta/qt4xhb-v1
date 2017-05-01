@@ -503,8 +503,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETCOLUMNFIXEDWIDTH )
   if( obj )
   {
     int par1 = hb_parni(1);
-    qreal par2 = hb_parnd(2);
-    obj->setColumnFixedWidth ( par1, par2 );
+    obj->setColumnFixedWidth ( par1, PQREAL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -519,8 +518,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETCOLUMNMAXIMUMWIDTH )
   if( obj )
   {
     int par1 = hb_parni(1);
-    qreal par2 = hb_parnd(2);
-    obj->setColumnMaximumWidth ( par1, par2 );
+    obj->setColumnMaximumWidth ( par1, PQREAL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -535,8 +533,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETCOLUMNMINIMUMWIDTH )
   if( obj )
   {
     int par1 = hb_parni(1);
-    qreal par2 = hb_parnd(2);
-    obj->setColumnMinimumWidth ( par1, par2 );
+    obj->setColumnMinimumWidth ( par1, PQREAL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -551,8 +548,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETCOLUMNPREFERREDWIDTH )
   if( obj )
   {
     int par1 = hb_parni(1);
-    qreal par2 = hb_parnd(2);
-    obj->setColumnPreferredWidth ( par1, par2 );
+    obj->setColumnPreferredWidth ( par1, PQREAL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -567,8 +563,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETCOLUMNSPACING )
   if( obj )
   {
     int par1 = hb_parni(1);
-    qreal par2 = hb_parnd(2);
-    obj->setColumnSpacing ( par1, par2 );
+    obj->setColumnSpacing ( par1, PQREAL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -598,8 +593,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETHORIZONTALSPACING )
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setHorizontalSpacing ( par1 );
+    obj->setHorizontalSpacing ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -630,8 +624,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETROWFIXEDHEIGHT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    qreal par2 = hb_parnd(2);
-    obj->setRowFixedHeight ( par1, par2 );
+    obj->setRowFixedHeight ( par1, PQREAL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -646,8 +639,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETROWMAXIMUMHEIGHT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    qreal par2 = hb_parnd(2);
-    obj->setRowMaximumHeight ( par1, par2 );
+    obj->setRowMaximumHeight ( par1, PQREAL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -662,8 +654,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETROWMINIMUMHEIGHT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    qreal par2 = hb_parnd(2);
-    obj->setRowMinimumHeight ( par1, par2 );
+    obj->setRowMinimumHeight ( par1, PQREAL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -678,8 +669,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETROWPREFERREDHEIGHT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    qreal par2 = hb_parnd(2);
-    obj->setRowPreferredHeight ( par1, par2 );
+    obj->setRowPreferredHeight ( par1, PQREAL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -694,8 +684,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETROWSPACING )
   if( obj )
   {
     int par1 = hb_parni(1);
-    qreal par2 = hb_parnd(2);
-    obj->setRowSpacing ( par1, par2 );
+    obj->setRowSpacing ( par1, PQREAL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -725,8 +714,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETSPACING )
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setSpacing ( par1 );
+    obj->setSpacing ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -740,8 +728,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETVERTICALSPACING )
   QGraphicsGridLayout * obj = (QGraphicsGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setVerticalSpacing ( par1 );
+    obj->setVerticalSpacing ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -1014,8 +1014,7 @@ HB_FUNC_STATIC( QCOLOR_SETALPHAF )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setAlphaF ( par1 );
+    obj->setAlphaF ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1044,8 +1043,7 @@ HB_FUNC_STATIC( QCOLOR_SETBLUEF )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setBlueF ( par1 );
+    obj->setBlueF ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1078,12 +1076,7 @@ HB_FUNC_STATIC( QCOLOR_SETCMYKF )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    qreal par4 = hb_parnd(4);
-    qreal par5 = ISNIL(5)? 1.0 : hb_parnd(5);
-    obj->setCmykF ( par1, par2, par3, par4, par5 );
+    obj->setCmykF ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), (qreal) ISNIL(5)? 1.0 : hb_parnd(5) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1112,8 +1105,7 @@ HB_FUNC_STATIC( QCOLOR_SETGREENF )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setGreenF ( par1 );
+    obj->setGreenF ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1145,11 +1137,7 @@ HB_FUNC_STATIC( QCOLOR_SETHSLF )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    qreal par4 = ISNIL(4)? 1.0 : hb_parnd(4);
-    obj->setHslF ( par1, par2, par3, par4 );
+    obj->setHslF ( PQREAL(1), PQREAL(2), PQREAL(3), (qreal) ISNIL(4)? 1.0 : hb_parnd(4) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1181,11 +1169,7 @@ HB_FUNC_STATIC( QCOLOR_SETHSVF )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    qreal par4 = ISNIL(4)? 1.0 : hb_parnd(4);
-    obj->setHsvF ( par1, par2, par3, par4 );
+    obj->setHsvF ( PQREAL(1), PQREAL(2), PQREAL(3), (qreal) ISNIL(4)? 1.0 : hb_parnd(4) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1229,8 +1213,7 @@ HB_FUNC_STATIC( QCOLOR_SETREDF )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setRedF ( par1 );
+    obj->setRedF ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1296,11 +1279,7 @@ HB_FUNC_STATIC( QCOLOR_SETRGBF )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    qreal par4 = ISNIL(4)? 1.0 : hb_parnd(4);
-    obj->setRgbF ( par1, par2, par3, par4 );
+    obj->setRgbF ( PQREAL(1), PQREAL(2), PQREAL(3), (qreal) ISNIL(4)? 1.0 : hb_parnd(4) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1485,12 +1464,7 @@ QColor fromCmykF ( qreal c, qreal m, qreal y, qreal k, qreal a = 1.0 )
 */
 HB_FUNC_STATIC( QCOLOR_FROMCMYKF )
 {
-  qreal par1 = hb_parnd(1);
-  qreal par2 = hb_parnd(2);
-  qreal par3 = hb_parnd(3);
-  qreal par4 = hb_parnd(4);
-  qreal par5 = ISNIL(5)? 1.0 : hb_parnd(5);
-  QColor * ptr = new QColor( QColor::fromCmykF ( par1, par2, par3, par4, par5 ) );
+  QColor * ptr = new QColor( QColor::fromCmykF ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), (qreal) ISNIL(5)? 1.0 : hb_parnd(5) ) );
   _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
 }
 
@@ -1514,11 +1488,7 @@ QColor fromHslF ( qreal h, qreal s, qreal l, qreal a = 1.0 )
 */
 HB_FUNC_STATIC( QCOLOR_FROMHSLF )
 {
-  qreal par1 = hb_parnd(1);
-  qreal par2 = hb_parnd(2);
-  qreal par3 = hb_parnd(3);
-  qreal par4 = ISNIL(4)? 1.0 : hb_parnd(4);
-  QColor * ptr = new QColor( QColor::fromHslF ( par1, par2, par3, par4 ) );
+  QColor * ptr = new QColor( QColor::fromHslF ( PQREAL(1), PQREAL(2), PQREAL(3), (qreal) ISNIL(4)? 1.0 : hb_parnd(4) ) );
   _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
 }
 
@@ -1542,11 +1512,7 @@ QColor fromHsvF ( qreal h, qreal s, qreal v, qreal a = 1.0 )
 */
 HB_FUNC_STATIC( QCOLOR_FROMHSVF )
 {
-  qreal par1 = hb_parnd(1);
-  qreal par2 = hb_parnd(2);
-  qreal par3 = hb_parnd(3);
-  qreal par4 = ISNIL(4)? 1.0 : hb_parnd(4);
-  QColor * ptr = new QColor( QColor::fromHsvF ( par1, par2, par3, par4 ) );
+  QColor * ptr = new QColor( QColor::fromHsvF ( PQREAL(1), PQREAL(2), PQREAL(3), (qreal) ISNIL(4)? 1.0 : hb_parnd(4) ) );
   _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
 }
 
@@ -1581,11 +1547,7 @@ QColor fromRgbF ( qreal r, qreal g, qreal b, qreal a = 1.0 )
 */
 HB_FUNC_STATIC( QCOLOR_FROMRGBF )
 {
-  qreal par1 = hb_parnd(1);
-  qreal par2 = hb_parnd(2);
-  qreal par3 = hb_parnd(3);
-  qreal par4 = ISNIL(4)? 1.0 : hb_parnd(4);
-  QColor * ptr = new QColor( QColor::fromRgbF ( par1, par2, par3, par4 ) );
+  QColor * ptr = new QColor( QColor::fromRgbF ( PQREAL(1), PQREAL(2), PQREAL(3), (qreal) ISNIL(4)? 1.0 : hb_parnd(4) ) );
   _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
 }
 
@@ -1633,7 +1595,7 @@ int qGray ( int r, int g, int b )
 */
 HB_FUNC( QGRAY1 )
 {
-  hb_retni( qGray ( hb_parni(1), hb_parni(2), hb_parni(3) ) );
+  hb_retni( qGray ( PINT(1), PINT(2), PINT(3) ) );
 }
 
 /*
@@ -1680,7 +1642,7 @@ QRgb qRgb ( int r, int g, int b )
 */
 HB_FUNC( QRGB )
 {
-  hb_retni( qRgb ( hb_parni(1), hb_parni(2), hb_parni(3) ) );
+  hb_retni( qRgb ( PINT(1), PINT(2), PINT(3) ) );
 }
 
 /*
@@ -1688,7 +1650,7 @@ QRgb qRgba ( int r, int g, int b, int a )
 */
 HB_FUNC( QRGBA )
 {
-  hb_retni( qRgba ( hb_parni(1), hb_parni(2), hb_parni(3), hb_parni(4) ) );
+  hb_retni( qRgba ( PINT(1), PINT(2), PINT(3), PINT(4) ) );
 }
 
 

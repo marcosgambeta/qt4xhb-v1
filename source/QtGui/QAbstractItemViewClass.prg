@@ -520,7 +520,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETALTERNATINGROWCOLORS )
   QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setAlternatingRowColors ( (bool) hb_parl(1) );
+    obj->setAlternatingRowColors ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -534,7 +534,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETAUTOSCROLL )
   QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setAutoScroll ( (bool) hb_parl(1) );
+    obj->setAutoScroll ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -593,7 +593,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETDRAGDROPOVERWRITEMODE )
   QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setDragDropOverwriteMode ( (bool) hb_parl(1) );
+    obj->setDragDropOverwriteMode ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -607,7 +607,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETDRAGENABLED )
   QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setDragEnabled ( (bool) hb_parl(1) );
+    obj->setDragEnabled ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -621,7 +621,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETDROPINDICATORSHOWN )
   QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setDropIndicatorShown ( (bool) hb_parl(1) );
+    obj->setDropIndicatorShown ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -803,7 +803,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETTABKEYNAVIGATION )
   QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setTabKeyNavigation ( (bool) hb_parl(1) );
+    obj->setTabKeyNavigation ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -129,23 +129,7 @@ QMatrix4x4 ( qreal m11, qreal m12, qreal m13, qreal m14, qreal m21, qreal m22, q
 HB_FUNC_STATIC( QMATRIX4X4_NEW3 )
 {
   QMatrix4x4 * o = NULL;
-  qreal par1 = hb_parnd(1);
-  qreal par2 = hb_parnd(2);
-  qreal par3 = hb_parnd(3);
-  qreal par4 = hb_parnd(4);
-  qreal par5 = hb_parnd(5);
-  qreal par6 = hb_parnd(6);
-  qreal par7 = hb_parnd(7);
-  qreal par8 = hb_parnd(8);
-  qreal par9 = hb_parnd(9);
-  qreal par10 = hb_parnd(10);
-  qreal par11 = hb_parnd(11);
-  qreal par12 = hb_parnd(12);
-  qreal par13 = hb_parnd(13);
-  qreal par14 = hb_parnd(14);
-  qreal par15 = hb_parnd(15);
-  qreal par16 = hb_parnd(16);
-  o = new QMatrix4x4 ( par1, par2, par3, par4, par5, par6, par7, par8, par9, par10, par11, par12, par13, par14, par15, par16 );
+  o = new QMatrix4x4 ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6), PQREAL(7), PQREAL(8), PQREAL(9), PQREAL(10), PQREAL(11), PQREAL(12), PQREAL(13), PQREAL(14), PQREAL(15), PQREAL(16) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMatrix4x4 *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -268,8 +252,7 @@ HB_FUNC_STATIC( QMATRIX4X4_FILL )
   QMatrix4x4 * obj = (QMatrix4x4 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->fill ( par1 );
+    obj->fill ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -297,13 +280,7 @@ HB_FUNC_STATIC( QMATRIX4X4_FRUSTUM )
   QMatrix4x4 * obj = (QMatrix4x4 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    qreal par4 = hb_parnd(4);
-    qreal par5 = hb_parnd(5);
-    qreal par6 = hb_parnd(6);
-    obj->frustum ( par1, par2, par3, par4, par5, par6 );
+    obj->frustum ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -536,13 +513,7 @@ HB_FUNC_STATIC( QMATRIX4X4_ORTHO1 )
   QMatrix4x4 * obj = (QMatrix4x4 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    qreal par4 = hb_parnd(4);
-    qreal par5 = hb_parnd(5);
-    qreal par6 = hb_parnd(6);
-    obj->ortho ( par1, par2, par3, par4, par5, par6 );
+    obj->ortho ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -606,11 +577,7 @@ HB_FUNC_STATIC( QMATRIX4X4_PERSPECTIVE )
   QMatrix4x4 * obj = (QMatrix4x4 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    qreal par4 = hb_parnd(4);
-    obj->perspective ( par1, par2, par3, par4 );
+    obj->perspective ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -624,9 +591,8 @@ HB_FUNC_STATIC( QMATRIX4X4_ROTATE1 )
   QMatrix4x4 * obj = (QMatrix4x4 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
     QVector3D * par2 = (QVector3D *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->rotate ( par1, *par2 );
+    obj->rotate ( PQREAL(1), *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -655,11 +621,7 @@ HB_FUNC_STATIC( QMATRIX4X4_ROTATE3 )
   QMatrix4x4 * obj = (QMatrix4x4 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    qreal par4 = ISNIL(4)? 0.0f : hb_parnd(4);
-    obj->rotate ( par1, par2, par3, par4 );
+    obj->rotate ( PQREAL(1), PQREAL(2), PQREAL(3), (qreal) ISNIL(4)? 0.0f : hb_parnd(4) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -723,9 +685,7 @@ HB_FUNC_STATIC( QMATRIX4X4_SCALE2 )
   QMatrix4x4 * obj = (QMatrix4x4 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    obj->scale ( par1, par2 );
+    obj->scale ( PQREAL(1), PQREAL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -739,10 +699,7 @@ HB_FUNC_STATIC( QMATRIX4X4_SCALE3 )
   QMatrix4x4 * obj = (QMatrix4x4 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    obj->scale ( par1, par2, par3 );
+    obj->scale ( PQREAL(1), PQREAL(2), PQREAL(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -756,8 +713,7 @@ HB_FUNC_STATIC( QMATRIX4X4_SCALE4 )
   QMatrix4x4 * obj = (QMatrix4x4 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->scale ( par1 );
+    obj->scale ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -858,8 +814,7 @@ HB_FUNC_STATIC( QMATRIX4X4_TOTRANSFORM2 )
   QMatrix4x4 * obj = (QMatrix4x4 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    QTransform * ptr = new QTransform( obj->toTransform ( par1 ) );
+    QTransform * ptr = new QTransform( obj->toTransform ( PQREAL(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );
   }
 }
@@ -903,9 +858,7 @@ HB_FUNC_STATIC( QMATRIX4X4_TRANSLATE2 )
   QMatrix4x4 * obj = (QMatrix4x4 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    obj->translate ( par1, par2 );
+    obj->translate ( PQREAL(1), PQREAL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -919,10 +872,7 @@ HB_FUNC_STATIC( QMATRIX4X4_TRANSLATE3 )
   QMatrix4x4 * obj = (QMatrix4x4 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    obj->translate ( par1, par2, par3 );
+    obj->translate ( PQREAL(1), PQREAL(2), PQREAL(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

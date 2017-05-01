@@ -848,9 +848,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWELLIPSE4 )
   if( obj )
   {
     QPointF * par1 = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    obj->drawEllipse ( *par1, par2, par3 );
+    obj->drawEllipse ( *par1, PQREAL(2), PQREAL(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -2090,10 +2088,8 @@ HB_FUNC_STATIC( QPAINTER_DRAWROUNDEDRECT1 )
   if( obj )
   {
     QRectF * par1 = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
     int par4 = ISNIL(4)? (int) Qt::AbsoluteSize : hb_parni(4);
-    obj->drawRoundedRect ( *par1, par2, par3,  (Qt::SizeMode) par4 );
+    obj->drawRoundedRect ( *par1, PQREAL(2), PQREAL(3),  (Qt::SizeMode) par4 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -2108,10 +2104,8 @@ HB_FUNC_STATIC( QPAINTER_DRAWROUNDEDRECT2 )
   if( obj )
   {
     QRect * par1 = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
     int par4 = ISNIL(4)? (int) Qt::AbsoluteSize : hb_parni(4);
-    obj->drawRoundedRect ( *par1, par2, par3,  (Qt::SizeMode) par4 );
+    obj->drawRoundedRect ( *par1, PQREAL(2), PQREAL(3),  (Qt::SizeMode) par4 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -2129,10 +2123,8 @@ HB_FUNC_STATIC( QPAINTER_DRAWROUNDEDRECT3 )
     int par2 = hb_parni(2);
     int par3 = hb_parni(3);
     int par4 = hb_parni(4);
-    qreal par5 = hb_parnd(5);
-    qreal par6 = hb_parnd(6);
     int par7 = ISNIL(7)? (int) Qt::AbsoluteSize : hb_parni(7);
-    obj->drawRoundedRect ( par1, par2, par3, par4, par5, par6,  (Qt::SizeMode) par7 );
+    obj->drawRoundedRect ( par1, par2, par3, par4, PQREAL(5), PQREAL(6),  (Qt::SizeMode) par7 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -3032,8 +3024,7 @@ HB_FUNC_STATIC( QPAINTER_ROTATE )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->rotate ( par1 );
+    obj->rotate ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -3061,9 +3052,7 @@ HB_FUNC_STATIC( QPAINTER_SCALE )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    obj->scale ( par1, par2 );
+    obj->scale ( PQREAL(1), PQREAL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -3321,7 +3310,7 @@ HB_FUNC_STATIC( QPAINTER_SETCLIPPING )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setClipping ( (bool) hb_parl(1) );
+    obj->setClipping ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -3380,8 +3369,7 @@ HB_FUNC_STATIC( QPAINTER_SETOPACITY )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setOpacity ( par1 );
+    obj->setOpacity ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -3505,7 +3493,7 @@ HB_FUNC_STATIC( QPAINTER_SETVIEWTRANSFORMENABLED )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setViewTransformEnabled ( (bool) hb_parl(1) );
+    obj->setViewTransformEnabled ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -3615,7 +3603,7 @@ HB_FUNC_STATIC( QPAINTER_SETWORLDMATRIXENABLED )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setWorldMatrixEnabled ( (bool) hb_parl(1) );
+    obj->setWorldMatrixEnabled ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -3644,9 +3632,7 @@ HB_FUNC_STATIC( QPAINTER_SHEAR )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    obj->shear ( par1, par2 );
+    obj->shear ( PQREAL(1), PQREAL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -3734,9 +3720,7 @@ HB_FUNC_STATIC( QPAINTER_TRANSLATE3 )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    obj->translate ( par1, par2 );
+    obj->translate ( PQREAL(1), PQREAL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

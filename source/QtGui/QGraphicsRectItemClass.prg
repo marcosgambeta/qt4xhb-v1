@@ -92,12 +92,8 @@ QGraphicsRectItem ( qreal x, qreal y, qreal width, qreal height, QGraphicsItem *
 HB_FUNC_STATIC( QGRAPHICSRECTITEM_NEW3 )
 {
   QGraphicsRectItem * o = NULL;
-  qreal par1 = hb_parnd(1);
-  qreal par2 = hb_parnd(2);
-  qreal par3 = hb_parnd(3);
-  qreal par4 = hb_parnd(4);
   QGraphicsItem * par5 = ISNIL(5)? 0 : (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(5, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QGraphicsRectItem ( par1, par2, par3, par4, par5 );
+  o = new QGraphicsRectItem ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), par5 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QGraphicsRectItem *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -183,11 +179,7 @@ HB_FUNC_STATIC( QGRAPHICSRECTITEM_SETRECT2 )
   QGraphicsRectItem * obj = (QGraphicsRectItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    qreal par4 = hb_parnd(4);
-    obj->setRect ( par1, par2, par3, par4 );
+    obj->setRect ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

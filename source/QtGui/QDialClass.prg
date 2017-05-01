@@ -127,8 +127,7 @@ HB_FUNC_STATIC( QDIAL_SETNOTCHTARGET )
   QDial * obj = (QDial *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    double par1 = hb_parnd(1);
-    obj->setNotchTarget ( par1 );
+    obj->setNotchTarget ( PDOUBLE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -183,7 +182,7 @@ HB_FUNC_STATIC( QDIAL_SETNOTCHESVISIBLE )
   QDial * obj = (QDial *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setNotchesVisible ( (bool) hb_parl(1) );
+    obj->setNotchesVisible ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -197,7 +196,7 @@ HB_FUNC_STATIC( QDIAL_SETWRAPPING )
   QDial * obj = (QDial *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setWrapping ( (bool) hb_parl(1) );
+    obj->setWrapping ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

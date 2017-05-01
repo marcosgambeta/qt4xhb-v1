@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETACCUM )
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setAccum ( (bool) hb_parl(1) );
+    obj->setAccum ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETALPHA )
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setAlpha ( (bool) hb_parl(1) );
+    obj->setAlpha ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETDEPTH )
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setDepth ( (bool) hb_parl(1) );
+    obj->setDepth ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETDIRECTRENDERING )
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setDirectRendering ( (bool) hb_parl(1) );
+    obj->setDirectRendering ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETDOUBLEBUFFER )
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setDoubleBuffer ( (bool) hb_parl(1) );
+    obj->setDoubleBuffer ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -559,7 +559,7 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETRGBA )
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setRgba ( (bool) hb_parl(1) );
+    obj->setRgba ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -573,7 +573,7 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETSAMPLEBUFFERS )
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setSampleBuffers ( (bool) hb_parl(1) );
+    obj->setSampleBuffers ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -617,7 +617,7 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETSTENCIL )
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setStencil ( (bool) hb_parl(1) );
+    obj->setStencil ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -646,7 +646,7 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETSTEREO )
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setStereo ( (bool) hb_parl(1) );
+    obj->setStereo ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -690,7 +690,7 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETWINDOWSURFACE )
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setWindowSurface ( (bool) hb_parl(1) );
+    obj->setWindowSurface ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

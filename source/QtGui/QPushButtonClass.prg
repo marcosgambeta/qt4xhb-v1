@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_SETAUTODEFAULT )
 
   if( obj )
   {
-    obj->setAutoDefault ( (bool) hb_parl(1) );
+    obj->setAutoDefault ( PBOOL(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_SETDEFAULT )
 
   if( obj )
   {
-    obj->setDefault ( (bool) hb_parl(1) );
+    obj->setDefault ( PBOOL(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_SETFLAT )
 
   if( obj )
   {
-    obj->setFlat ( (bool) hb_parl(1) );
+    obj->setFlat ( PBOOL(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

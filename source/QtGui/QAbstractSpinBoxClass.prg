@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETACCELERATED )
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setAccelerated ( (bool) hb_parl(1) );
+    obj->setAccelerated ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETFRAME )
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setFrame ( (bool) hb_parl(1) );
+    obj->setFrame ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETKEYBOARDTRACKING )
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setKeyboardTracking ( (bool) hb_parl(1) );
+    obj->setKeyboardTracking ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETREADONLY )
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setReadOnly ( (bool) hb_parl(1) );
+    obj->setReadOnly ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETWRAPPING )
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setWrapping ( (bool) hb_parl(1) );
+    obj->setWrapping ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

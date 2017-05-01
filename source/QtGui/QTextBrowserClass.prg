@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_SETOPENEXTERNALLINKS )
   QTextBrowser * obj = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setOpenExternalLinks ( (bool) hb_parl(1) );
+    obj->setOpenExternalLinks ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_SETOPENLINKS )
   QTextBrowser * obj = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setOpenLinks ( (bool) hb_parl(1) );
+    obj->setOpenLinks ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

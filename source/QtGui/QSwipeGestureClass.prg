@@ -76,8 +76,7 @@ HB_FUNC_STATIC( QSWIPEGESTURE_SETSWIPEANGLE )
   QSwipeGesture * obj = (QSwipeGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setSwipeAngle ( par1 );
+    obj->setSwipeAngle ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

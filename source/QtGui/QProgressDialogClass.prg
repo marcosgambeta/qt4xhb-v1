@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETAUTOCLOSE )
   QProgressDialog * obj = (QProgressDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setAutoClose ( (bool) hb_parl(1) );
+    obj->setAutoClose ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETAUTORESET )
   QProgressDialog * obj = (QProgressDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setAutoReset ( (bool) hb_parl(1) );
+    obj->setAutoReset ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

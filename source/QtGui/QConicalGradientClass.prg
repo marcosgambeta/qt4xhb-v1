@@ -68,8 +68,7 @@ HB_FUNC_STATIC( QCONICALGRADIENT_NEW2 )
 {
   QConicalGradient * o = NULL;
   QPointF * par1 = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  qreal par2 = hb_parnd(2);
-  o = new QConicalGradient ( *par1, par2 );
+  o = new QConicalGradient ( *par1, PQREAL(2) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QConicalGradient *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -84,10 +83,7 @@ QConicalGradient(qreal cx, qreal cy, qreal startAngle)
 HB_FUNC_STATIC( QCONICALGRADIENT_NEW3 )
 {
   QConicalGradient * o = NULL;
-  qreal par1 = hb_parnd(1);
-  qreal par2 = hb_parnd(2);
-  qreal par3 = hb_parnd(3);
-  o = new QConicalGradient ( par1, par2, par3 );
+  o = new QConicalGradient ( PQREAL(1), PQREAL(2), PQREAL(3) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QConicalGradient *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -157,8 +153,7 @@ HB_FUNC_STATIC( QCONICALGRADIENT_SETANGLE )
   QConicalGradient * obj = (QConicalGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setAngle ( par1 );
+    obj->setAngle ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -187,9 +182,7 @@ HB_FUNC_STATIC( QCONICALGRADIENT_SETCENTER2 )
   QConicalGradient * obj = (QConicalGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    obj->setCenter ( par1, par2 );
+    obj->setCenter ( PQREAL(1), PQREAL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -103,10 +103,7 @@ QVector3D ( qreal xpos, qreal ypos, qreal zpos )
 HB_FUNC_STATIC( QVECTOR3D_NEW2 )
 {
   QVector3D * o = NULL;
-  qreal par1 = hb_parnd(1);
-  qreal par2 = hb_parnd(2);
-  qreal par3 = hb_parnd(3);
-  o = new QVector3D ( par1, par2, par3 );
+  o = new QVector3D ( PQREAL(1), PQREAL(2), PQREAL(3) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QVector3D *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -170,8 +167,7 @@ HB_FUNC_STATIC( QVECTOR3D_NEW6 )
 {
   QVector3D * o = NULL;
   QVector2D * par1 = (QVector2D *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  qreal par2 = hb_parnd(2);
-  o = new QVector3D ( *par1, par2 );
+  o = new QVector3D ( *par1, PQREAL(2) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QVector3D *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -397,8 +393,7 @@ HB_FUNC_STATIC( QVECTOR3D_SETX )
   QVector3D * obj = (QVector3D *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setX ( par1 );
+    obj->setX ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -412,8 +407,7 @@ HB_FUNC_STATIC( QVECTOR3D_SETY )
   QVector3D * obj = (QVector3D *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setY ( par1 );
+    obj->setY ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -427,8 +421,7 @@ HB_FUNC_STATIC( QVECTOR3D_SETZ )
   QVector3D * obj = (QVector3D *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setZ ( par1 );
+    obj->setZ ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

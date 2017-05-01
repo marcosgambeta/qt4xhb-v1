@@ -192,8 +192,7 @@ HB_FUNC_STATIC( QFONTENGINEINFO_SETPIXELSIZE )
   QFontEngineInfo * obj = (QFontEngineInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setPixelSize ( par1 );
+    obj->setPixelSize ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

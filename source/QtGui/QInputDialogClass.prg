@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETCOMBOBOXEDITABLE )
   QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setComboBoxEditable ( (bool) hb_parl(1) );
+    obj->setComboBoxEditable ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -426,8 +426,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETDOUBLEMAXIMUM )
   QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    double par1 = hb_parnd(1);
-    obj->setDoubleMaximum ( par1 );
+    obj->setDoubleMaximum ( PDOUBLE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -441,8 +440,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETDOUBLEMINIMUM )
   QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    double par1 = hb_parnd(1);
-    obj->setDoubleMinimum ( par1 );
+    obj->setDoubleMinimum ( PDOUBLE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -456,9 +454,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETDOUBLERANGE )
   QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    double par1 = hb_parnd(1);
-    double par2 = hb_parnd(2);
-    obj->setDoubleRange ( par1, par2 );
+    obj->setDoubleRange ( PDOUBLE(1), PDOUBLE(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -472,8 +468,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETDOUBLEVALUE )
   QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    double par1 = hb_parnd(1);
-    obj->setDoubleValue ( par1 );
+    obj->setDoubleValue ( PDOUBLE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -738,7 +733,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETVISIBLE )
   QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setVisible ( (bool) hb_parl(1) );
+    obj->setVisible ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

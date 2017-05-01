@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETOPENEXTERNALLINKS )
   QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setOpenExternalLinks ( (bool) hb_parl(1) );
+    obj->setOpenExternalLinks ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTABCHANGESFOCUS )
   QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setTabChangesFocus ( (bool) hb_parl(1) );
+    obj->setTabChangesFocus ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -356,8 +356,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTEXTWIDTH )
   QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setTextWidth ( par1 );
+    obj->setTextWidth ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

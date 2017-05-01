@@ -274,8 +274,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SETITEMSPACING )
   if( obj )
   {
     int par1 = hb_parni(1);
-    qreal par2 = hb_parnd(2);
-    obj->setItemSpacing ( par1, par2 );
+    obj->setItemSpacing ( par1, PQREAL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -304,8 +303,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SETSPACING )
   QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setSpacing ( par1 );
+    obj->setSpacing ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

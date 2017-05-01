@@ -190,12 +190,8 @@ QGraphicsScene ( qreal x, qreal y, qreal width, qreal height, QObject * parent =
 HB_FUNC_STATIC( QGRAPHICSSCENE_NEW3 )
 {
   QGraphicsScene * o = NULL;
-  qreal par1 = hb_parnd(1);
-  qreal par2 = hb_parnd(2);
-  qreal par3 = hb_parnd(3);
-  qreal par4 = hb_parnd(4);
   QObject * par5 = ISNIL(5)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(5, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QGraphicsScene ( par1, par2, par3, par4, par5 );
+  o = new QGraphicsScene ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), par5 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QGraphicsScene *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -297,13 +293,9 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDELLIPSE2 )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    qreal par4 = hb_parnd(4);
     QPen par5 = ISNIL(5)? QPen() : *(QPen *) hb_itemGetPtr( hb_objSendMsg( hb_param(5, HB_IT_OBJECT ), "POINTER", 0 ) );
     QBrush par6 = ISNIL(6)? QBrush() : *(QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_param(6, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QGraphicsEllipseItem * ptr = obj->addEllipse ( par1, par2, par3, par4, par5, par6 );
+    QGraphicsEllipseItem * ptr = obj->addEllipse ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), par5, par6 );
     _qt4xhb_createReturnClass ( ptr, "QGRAPHICSELLIPSEITEM" );
   }
 }
@@ -363,12 +355,8 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDLINE2 )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    qreal par4 = hb_parnd(4);
     QPen par5 = ISNIL(5)? QPen() : *(QPen *) hb_itemGetPtr( hb_objSendMsg( hb_param(5, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QGraphicsLineItem * ptr = obj->addLine ( par1, par2, par3, par4, par5 );
+    QGraphicsLineItem * ptr = obj->addLine ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), par5 );
     _qt4xhb_createReturnClass ( ptr, "QGRAPHICSLINEITEM" );
   }
 }
@@ -463,13 +451,9 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDRECT2 )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    qreal par4 = hb_parnd(4);
     QPen par5 = ISNIL(5)? QPen() : *(QPen *) hb_itemGetPtr( hb_objSendMsg( hb_param(5, HB_IT_OBJECT ), "POINTER", 0 ) );
     QBrush par6 = ISNIL(6)? QBrush() : *(QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_param(6, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QGraphicsRectItem * ptr = obj->addRect ( par1, par2, par3, par4, par5, par6 );
+    QGraphicsRectItem * ptr = obj->addRect ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), par5, par6 );
     _qt4xhb_createReturnClass ( ptr, "QGRAPHICSRECTITEM" );
   }
 }
@@ -753,12 +737,8 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_INVALIDATE1 )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    qreal par4 = hb_parnd(4);
     int par5 = ISNIL(5)? (int) QGraphicsScene::AllLayers : hb_parni(5);
-    obj->invalidate ( par1, par2, par3, par4,  (QGraphicsScene::SceneLayers) par5 );
+    obj->invalidate ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4),  (QGraphicsScene::SceneLayers) par5 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -845,10 +825,8 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMAT2 )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
     QTransform * par3 = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QGraphicsItem * ptr = obj->itemAt ( par1, par2, *par3 );
+    QGraphicsItem * ptr = obj->itemAt ( PQREAL(1), PQREAL(2), *par3 );
     _qt4xhb_createReturnClass ( ptr, "QGRAPHICSITEM" );
   }
 }
@@ -1027,14 +1005,10 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMS4 )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    qreal par4 = hb_parnd(4);
     int par5 = hb_parni(5);
     int par6 = hb_parni(6);
     QTransform par7 = ISNIL(7)? QTransform() : *(QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_param(7, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QList<QGraphicsItem *> list = obj->items ( par1, par2, par3, par4,  (Qt::ItemSelectionMode) par5,  (Qt::SortOrder) par6, par7 );
+    QList<QGraphicsItem *> list = obj->items ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4),  (Qt::ItemSelectionMode) par5,  (Qt::SortOrder) par6, par7 );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QGRAPHICSITEM" );
@@ -1590,11 +1564,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETSCENERECT2 )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    qreal par4 = hb_parnd(4);
-    obj->setSceneRect ( par1, par2, par3, par4 );
+    obj->setSceneRect ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1671,7 +1641,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETSORTCACHEENABLED )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setSortCacheEnabled ( (bool) hb_parl(1) );
+    obj->setSortCacheEnabled ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1685,7 +1655,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETSTICKYFOCUS )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setStickyFocus ( (bool) hb_parl(1) );
+    obj->setStickyFocus ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1741,11 +1711,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_UPDATE1 )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    qreal par4 = hb_parnd(4);
-    obj->update ( par1, par2, par3, par4 );
+    obj->update ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

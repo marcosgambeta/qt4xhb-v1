@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETDYNAMICSORTFILTER )
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setDynamicSortFilter ( (bool) hb_parl(1) );
+    obj->setDynamicSortFilter ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETSORTLOCALEAWARE )
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setSortLocaleAware ( (bool) hb_parl(1) );
+    obj->setSortLocaleAware ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_SETAUTORAISE )
 
   if( obj )
   {
-    obj->setAutoRaise ( (bool) hb_parl(1) );
+    obj->setAutoRaise ( PBOOL(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

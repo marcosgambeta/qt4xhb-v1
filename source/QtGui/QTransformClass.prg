@@ -127,16 +127,7 @@ QTransform ( qreal m11, qreal m12, qreal m13, qreal m21, qreal m22, qreal m23, q
 HB_FUNC_STATIC( QTRANSFORM_NEW2 )
 {
   QTransform * o = NULL;
-  qreal par1 = hb_parnd(1);
-  qreal par2 = hb_parnd(2);
-  qreal par3 = hb_parnd(3);
-  qreal par4 = hb_parnd(4);
-  qreal par5 = hb_parnd(5);
-  qreal par6 = hb_parnd(6);
-  qreal par7 = hb_parnd(7);
-  qreal par8 = hb_parnd(8);
-  qreal par9 = ISNIL(9)? 1.0 : hb_parnd(9);
-  o = new QTransform ( par1, par2, par3, par4, par5, par6, par7, par8, par9 );
+  o = new QTransform ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6), PQREAL(7), PQREAL(8), (qreal) ISNIL(9)? 1.0 : hb_parnd(9) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTransform *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -154,13 +145,7 @@ QTransform ( qreal m11, qreal m12, qreal m21, qreal m22, qreal dx, qreal dy )
 HB_FUNC_STATIC( QTRANSFORM_NEW3 )
 {
   QTransform * o = NULL;
-  qreal par1 = hb_parnd(1);
-  qreal par2 = hb_parnd(2);
-  qreal par3 = hb_parnd(3);
-  qreal par4 = hb_parnd(4);
-  qreal par5 = hb_parnd(5);
-  qreal par6 = hb_parnd(6);
-  o = new QTransform ( par1, par2, par3, par4, par5, par6 );
+  o = new QTransform ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTransform *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -520,11 +505,9 @@ HB_FUNC_STATIC( QTRANSFORM_MAP1 )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
     qreal par3;
     qreal par4;
-    obj->map ( par1, par2, &par3, &par4 );
+    obj->map ( PQREAL(1), PQREAL(2), &par3, &par4 );
     hb_stornd( par3, 3 );
     hb_stornd( par4, 4 );
   }
@@ -814,16 +797,7 @@ HB_FUNC_STATIC( QTRANSFORM_SETMATRIX )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    qreal par4 = hb_parnd(4);
-    qreal par5 = hb_parnd(5);
-    qreal par6 = hb_parnd(6);
-    qreal par7 = hb_parnd(7);
-    qreal par8 = hb_parnd(8);
-    qreal par9 = hb_parnd(9);
-    obj->setMatrix ( par1, par2, par3, par4, par5, par6, par7, par8, par9 );
+    obj->setMatrix ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6), PQREAL(7), PQREAL(8), PQREAL(9) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -865,9 +839,7 @@ QTransform fromScale ( qreal sx, qreal sy )
 */
 HB_FUNC_STATIC( QTRANSFORM_FROMSCALE )
 {
-  qreal par1 = hb_parnd(1);
-  qreal par2 = hb_parnd(2);
-  QTransform * ptr = new QTransform( QTransform::fromScale ( par1, par2 ) );
+  QTransform * ptr = new QTransform( QTransform::fromScale ( PQREAL(1), PQREAL(2) ) );
   _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );
 }
 
@@ -877,9 +849,7 @@ QTransform fromTranslate ( qreal dx, qreal dy )
 */
 HB_FUNC_STATIC( QTRANSFORM_FROMTRANSLATE )
 {
-  qreal par1 = hb_parnd(1);
-  qreal par2 = hb_parnd(2);
-  QTransform * ptr = new QTransform( QTransform::fromTranslate ( par1, par2 ) );
+  QTransform * ptr = new QTransform( QTransform::fromTranslate ( PQREAL(1), PQREAL(2) ) );
   _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );
 }
 

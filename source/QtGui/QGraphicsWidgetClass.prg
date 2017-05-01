@@ -498,9 +498,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_RESIZE2 )
   QGraphicsWidget * obj = (QGraphicsWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    obj->resize ( par1, par2 );
+    obj->resize ( PQREAL(1), PQREAL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -544,7 +542,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETAUTOFILLBACKGROUND )
   QGraphicsWidget * obj = (QGraphicsWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setAutoFillBackground ( (bool) hb_parl(1) );
+    obj->setAutoFillBackground ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -558,11 +556,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETCONTENTSMARGINS )
   QGraphicsWidget * obj = (QGraphicsWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    qreal par4 = hb_parnd(4);
-    obj->setContentsMargins ( par1, par2, par3, par4 );
+    obj->setContentsMargins ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -606,11 +600,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETGEOMETRY1 )
   QGraphicsWidget * obj = (QGraphicsWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    qreal par4 = hb_parnd(4);
-    obj->setGeometry ( par1, par2, par3, par4 );
+    obj->setGeometry ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -729,11 +719,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETWINDOWFRAMEMARGINS )
   QGraphicsWidget * obj = (QGraphicsWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    qreal par4 = hb_parnd(4);
-    obj->setWindowFrameMargins ( par1, par2, par3, par4 );
+    obj->setWindowFrameMargins ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

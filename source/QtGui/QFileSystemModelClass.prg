@@ -461,7 +461,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETNAMEFILTERDISABLES )
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setNameFilterDisables ( (bool) hb_parl(1) );
+    obj->setNameFilterDisables ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETREADONLY )
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setReadOnly ( (bool) hb_parl(1) );
+    obj->setReadOnly ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -512,7 +512,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETRESOLVESYMLINKS )
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setResolveSymlinks ( (bool) hb_parl(1) );
+    obj->setResolveSymlinks ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

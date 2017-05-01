@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QTEXTLINE_SETLEADINGINCLUDED )
   QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setLeadingIncluded ( (bool) hb_parl(1) );
+    obj->setLeadingIncluded ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -341,8 +341,7 @@ HB_FUNC_STATIC( QTEXTLINE_SETLINEWIDTH )
   QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setLineWidth ( par1 );
+    obj->setLineWidth ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -372,8 +371,7 @@ HB_FUNC_STATIC( QTEXTLINE_SETNUMCOLUMNS2 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    qreal par2 = hb_parnd(2);
-    obj->setNumColumns ( par1, par2 );
+    obj->setNumColumns ( par1, PQREAL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -471,9 +469,8 @@ HB_FUNC_STATIC( QTEXTLINE_XTOCURSOR )
   QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
     int par2 = ISNIL(2)? (int) QTextLine::CursorBetweenCharacters : hb_parni(2);
-    hb_retni( obj->xToCursor ( par1,  (QTextLine::CursorPosition) par2 ) );
+    hb_retni( obj->xToCursor ( PQREAL(1),  (QTextLine::CursorPosition) par2 ) );
   }
 }
 

@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QSPLITTER_SETCHILDRENCOLLAPSIBLE )
   QSplitter * obj = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setChildrenCollapsible ( (bool) hb_parl(1) );
+    obj->setChildrenCollapsible ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QSPLITTER_SETCOLLAPSIBLE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setCollapsible ( par1, (bool) hb_parl(2) );
+    obj->setCollapsible ( par1, PBOOL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

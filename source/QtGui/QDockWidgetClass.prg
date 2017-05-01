@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_SETFLOATING )
   QDockWidget * obj = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setFloating ( (bool) hb_parl(1) );
+    obj->setFloating ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

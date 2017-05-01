@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QTABBAR_SETDOCUMENTMODE )
   QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setDocumentMode ( (bool) hb_parl(1) );
+    obj->setDocumentMode ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QTABBAR_SETDRAWBASE )
   QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setDrawBase ( (bool) hb_parl(1) );
+    obj->setDrawBase ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QTABBAR_SETEXPANDING )
   QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setExpanding ( (bool) hb_parl(1) );
+    obj->setExpanding ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QTABBAR_SETMOVABLE )
   QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setMovable ( (bool) hb_parl(1) );
+    obj->setMovable ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QTABBAR_SETTABENABLED )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setTabEnabled ( par1, (bool) hb_parl(2) );
+    obj->setTabEnabled ( par1, PBOOL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -637,7 +637,7 @@ HB_FUNC_STATIC( QTABBAR_SETTABSCLOSABLE )
   QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setTabsClosable ( (bool) hb_parl(1) );
+    obj->setTabsClosable ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -651,7 +651,7 @@ HB_FUNC_STATIC( QTABBAR_SETUSESSCROLLBUTTONS )
   QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setUsesScrollButtons ( (bool) hb_parl(1) );
+    obj->setUsesScrollButtons ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

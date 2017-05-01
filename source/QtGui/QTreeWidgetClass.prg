@@ -635,7 +635,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SETFIRSTITEMCOLUMNSPANNED )
   if( obj )
   {
     QTreeWidgetItem * par1 = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setFirstItemColumnSpanned ( par1, (bool) hb_parl(2) );
+    obj->setFirstItemColumnSpanned ( par1, PBOOL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

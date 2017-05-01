@@ -582,7 +582,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETDOCUMENTMODE )
   QMainWindow * obj = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setDocumentMode ( (bool) hb_parl(1) );
+    obj->setDocumentMode ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -864,7 +864,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETANIMATED )
   QMainWindow * obj = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setAnimated ( (bool) hb_parl(1) );
+    obj->setAnimated ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -878,7 +878,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETDOCKNESTINGENABLED )
   QMainWindow * obj = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setDockNestingEnabled ( (bool) hb_parl(1) );
+    obj->setDockNestingEnabled ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -78,8 +78,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_SETSPACING )
   QGraphicsAnchor * obj = (QGraphicsAnchor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setSpacing ( par1 );
+    obj->setSpacing ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

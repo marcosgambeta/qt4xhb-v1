@@ -356,8 +356,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_SETGAMMA )
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    float par1 = hb_parnd(1);
-    obj->setGamma ( par1 );
+    obj->setGamma ( PFLOAT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

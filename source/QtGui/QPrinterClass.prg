@@ -636,7 +636,7 @@ HB_FUNC_STATIC( QPRINTER_SETCOLLATECOPIES )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setCollateCopies ( (bool) hb_parl(1) );
+    obj->setCollateCopies ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -710,7 +710,7 @@ HB_FUNC_STATIC( QPRINTER_SETDOUBLESIDEDPRINTING )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setDoubleSidedPrinting ( (bool) hb_parl(1) );
+    obj->setDoubleSidedPrinting ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -739,7 +739,7 @@ HB_FUNC_STATIC( QPRINTER_SETFONTEMBEDDINGENABLED )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setFontEmbeddingEnabled ( (bool) hb_parl(1) );
+    obj->setFontEmbeddingEnabled ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -769,7 +769,7 @@ HB_FUNC_STATIC( QPRINTER_SETFULLPAGE )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setFullPage ( (bool) hb_parl(1) );
+    obj->setFullPage ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -828,12 +828,8 @@ HB_FUNC_STATIC( QPRINTER_SETPAGEMARGINS )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    qreal par2 = hb_parnd(2);
-    qreal par3 = hb_parnd(3);
-    qreal par4 = hb_parnd(4);
     int par5 = hb_parni(5);
-    obj->setPageMargins ( par1, par2, par3, par4,  (QPrinter::Unit) par5 );
+    obj->setPageMargins ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4),  (QPrinter::Unit) par5 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

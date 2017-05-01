@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_SETRESIZEGRIPSVISIBLE )
   QColumnView * obj = (QColumnView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setResizeGripsVisible ( (bool) hb_parl(1) );
+    obj->setResizeGripsVisible ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

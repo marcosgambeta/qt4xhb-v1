@@ -233,8 +233,7 @@ HB_FUNC_STATIC( QTEXTOPTION_SETTABSTOP )
   QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setTabStop ( par1 );
+    obj->setTabStop ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -264,7 +263,7 @@ HB_FUNC_STATIC( QTEXTOPTION_SETUSEDESIGNMETRICS )
   QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setUseDesignMetrics ( (bool) hb_parl(1) );
+    obj->setUseDesignMetrics ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

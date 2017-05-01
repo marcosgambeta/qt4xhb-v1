@@ -225,8 +225,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETCURVETHRESHOLD )
   QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setCurveThreshold ( par1 );
+    obj->setCurveThreshold ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -240,8 +239,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETDASHOFFSET )
   QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setDashOffset ( par1 );
+    obj->setDashOffset ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -324,8 +322,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETMITERLIMIT )
   QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setMiterLimit ( par1 );
+    obj->setMiterLimit ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -339,8 +336,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETWIDTH )
   QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setWidth ( par1 );
+    obj->setWidth ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -195,8 +195,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_SETASCENT )
   QTextInlineObject * obj = (QTextInlineObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setAscent ( par1 );
+    obj->setAscent ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -210,8 +209,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_SETDESCENT )
   QTextInlineObject * obj = (QTextInlineObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setDescent ( par1 );
+    obj->setDescent ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -225,8 +223,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_SETWIDTH )
   QTextInlineObject * obj = (QTextInlineObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setWidth ( par1 );
+    obj->setWidth ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

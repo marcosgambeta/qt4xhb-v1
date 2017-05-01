@@ -142,8 +142,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_SETBLURRADIUS )
   QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setBlurRadius ( par1 );
+    obj->setBlurRadius ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

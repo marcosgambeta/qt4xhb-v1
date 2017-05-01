@@ -139,8 +139,7 @@ HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW1 )
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    double par1 = hb_parnd(1);
-    hb_retl( obj->checkOverflow ( par1 ) );
+    hb_retl( obj->checkOverflow ( PDOUBLE(1) ) );
   }
 }
 
@@ -332,8 +331,7 @@ HB_FUNC_STATIC( QLCDNUMBER_DISPLAY2 )
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    double par1 = hb_parnd(1);
-    obj->display ( par1 );
+    obj->display ( PDOUBLE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -436,7 +434,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETSMALLDECIMALPOINT )
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setSmallDecimalPoint ( (bool) hb_parl(1) );
+    obj->setSmallDecimalPoint ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

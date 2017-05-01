@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QACTIONGROUP_SETDISABLED )
   QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setDisabled ( (bool) hb_parl(1) );
+    obj->setDisabled ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QACTIONGROUP_SETENABLED )
   QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setEnabled ( (bool) hb_parl(1) );
+    obj->setEnabled ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QACTIONGROUP_SETEXCLUSIVE )
   QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setExclusive ( (bool) hb_parl(1) );
+    obj->setExclusive ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QACTIONGROUP_SETVISIBLE )
   QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setVisible ( (bool) hb_parl(1) );
+    obj->setVisible ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

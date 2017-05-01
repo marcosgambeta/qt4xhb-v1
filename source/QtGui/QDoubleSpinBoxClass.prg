@@ -165,8 +165,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETMAXIMUM )
   QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    double par1 = hb_parnd(1);
-    obj->setMaximum ( par1 );
+    obj->setMaximum ( PDOUBLE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -180,8 +179,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETMINIMUM )
   QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    double par1 = hb_parnd(1);
-    obj->setMinimum ( par1 );
+    obj->setMinimum ( PDOUBLE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -210,9 +208,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETRANGE )
   QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    double par1 = hb_parnd(1);
-    double par2 = hb_parnd(2);
-    obj->setRange ( par1, par2 );
+    obj->setRange ( PDOUBLE(1), PDOUBLE(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -226,8 +222,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETSINGLESTEP )
   QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    double par1 = hb_parnd(1);
-    obj->setSingleStep ( par1 );
+    obj->setSingleStep ( PDOUBLE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -284,8 +279,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_TEXTFROMVALUE )
   QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    double par1 = hb_parnd(1);
-    QString str1 = obj->textFromValue ( par1 );
+    QString str1 = obj->textFromValue ( PDOUBLE(1) );
     hb_retc( (const char *) str1.toLatin1().data() );
   }
 }
@@ -358,8 +352,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETVALUE )
   QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    double par1 = hb_parnd(1);
-    obj->setValue ( par1 );
+    obj->setValue ( PDOUBLE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

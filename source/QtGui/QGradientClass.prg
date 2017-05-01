@@ -67,9 +67,8 @@ HB_FUNC_STATIC( QGRADIENT_SETCOLORAT )
   QGradient * obj = (QGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
     QColor par2 = ISOBJECT(2)? *(QColor *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) ) : QColor(hb_parc(2));
-    obj->setColorAt ( par1, par2 );
+    obj->setColorAt ( PQREAL(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

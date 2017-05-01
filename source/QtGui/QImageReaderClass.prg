@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SETAUTODETECTIMAGEFORMAT )
   QImageReader * obj = (QImageReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setAutoDetectImageFormat ( (bool) hb_parl(1) );
+    obj->setAutoDetectImageFormat ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -574,7 +574,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SETDECIDEFORMATFROMCONTENT )
   QImageReader * obj = (QImageReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setDecideFormatFromContent ( (bool) hb_parl(1) );
+    obj->setDecideFormatFromContent ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

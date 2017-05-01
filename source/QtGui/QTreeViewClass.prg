@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETALLCOLUMNSSHOWFOCUS )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setAllColumnsShowFocus ( (bool) hb_parl(1) );
+    obj->setAllColumnsShowFocus ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETANIMATED )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setAnimated ( (bool) hb_parl(1) );
+    obj->setAnimated ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -444,7 +444,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETCOLUMNHIDDEN )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setColumnHidden ( par1, (bool) hb_parl(2) );
+    obj->setColumnHidden ( par1, PBOOL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -475,7 +475,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETEXPANDED )
   if( obj )
   {
     QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setExpanded ( *par1, (bool) hb_parl(2) );
+    obj->setExpanded ( *par1, PBOOL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETEXPANDSONDOUBLECLICK )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setExpandsOnDoubleClick ( (bool) hb_parl(1) );
+    obj->setExpandsOnDoubleClick ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -505,7 +505,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETFIRSTCOLUMNSPANNED )
   {
     int par1 = hb_parni(1);
     QModelIndex * par2 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setFirstColumnSpanned ( par1, *par2, (bool) hb_parl(3) );
+    obj->setFirstColumnSpanned ( par1, *par2, PBOOL(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -534,7 +534,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETHEADERHIDDEN )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setHeaderHidden ( (bool) hb_parl(1) );
+    obj->setHeaderHidden ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -563,7 +563,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETITEMSEXPANDABLE )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setItemsExpandable ( (bool) hb_parl(1) );
+    obj->setItemsExpandable ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -577,7 +577,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETROOTISDECORATED )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setRootIsDecorated ( (bool) hb_parl(1) );
+    obj->setRootIsDecorated ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -593,7 +593,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETROWHIDDEN )
   {
     int par1 = hb_parni(1);
     QModelIndex * par2 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setRowHidden ( par1, *par2, (bool) hb_parl(3) );
+    obj->setRowHidden ( par1, *par2, PBOOL(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -607,7 +607,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETSORTINGENABLED )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setSortingEnabled ( (bool) hb_parl(1) );
+    obj->setSortingEnabled ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -621,7 +621,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETUNIFORMROWHEIGHTS )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setUniformRowHeights ( (bool) hb_parl(1) );
+    obj->setUniformRowHeights ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -635,7 +635,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETWORDWRAP )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setWordWrap ( (bool) hb_parl(1) );
+    obj->setWordWrap ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

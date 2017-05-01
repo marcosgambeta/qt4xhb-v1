@@ -137,11 +137,10 @@ HB_FUNC_STATIC( QPEN_NEW4 )
 {
   QPen * o = NULL;
   QBrush * par1 = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  qreal par2 = hb_parnd(2);
   int par3 = ISNIL(3)? (int) Qt::SolidLine : hb_parni(3);
   int par4 = ISNIL(4)? (int) Qt::SquareCap : hb_parni(4);
   int par5 = ISNIL(5)? (int) Qt::BevelJoin : hb_parni(5);
-  o = new QPen ( *par1, par2,  (Qt::PenStyle) par3,  (Qt::PenCapStyle) par4,  (Qt::PenJoinStyle) par5 );
+  o = new QPen ( *par1, PQREAL(2),  (Qt::PenStyle) par3,  (Qt::PenCapStyle) par4,  (Qt::PenJoinStyle) par5 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPen *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -406,7 +405,7 @@ HB_FUNC_STATIC( QPEN_SETCOSMETIC )
   QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setCosmetic ( (bool) hb_parl(1) );
+    obj->setCosmetic ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -420,8 +419,7 @@ HB_FUNC_STATIC( QPEN_SETDASHOFFSET )
   QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setDashOffset ( par1 );
+    obj->setDashOffset ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -474,8 +472,7 @@ HB_FUNC_STATIC( QPEN_SETMITERLIMIT )
   QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setMiterLimit ( par1 );
+    obj->setMiterLimit ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -519,8 +516,7 @@ HB_FUNC_STATIC( QPEN_SETWIDTHF )
   QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setWidthF ( par1 );
+    obj->setWidthF ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

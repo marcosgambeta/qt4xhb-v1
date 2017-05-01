@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_SETFLAT )
 
   if( obj )
   {
-    obj->setFlat ( (bool) hb_parl(1) );
+    obj->setFlat ( PBOOL(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

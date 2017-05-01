@@ -541,7 +541,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETBACKGROUNDVISIBLE )
   QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setBackgroundVisible ( (bool) hb_parl(1) );
+    obj->setBackgroundVisible ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -555,7 +555,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETCENTERONSCROLL )
   QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setCenterOnScroll ( (bool) hb_parl(1) );
+    obj->setCenterOnScroll ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -660,7 +660,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETOVERWRITEMODE )
   QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setOverwriteMode ( (bool) hb_parl(1) );
+    obj->setOverwriteMode ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -674,7 +674,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETREADONLY )
   QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setReadOnly ( (bool) hb_parl(1) );
+    obj->setReadOnly ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -688,7 +688,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETTABCHANGESFOCUS )
   QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setTabChangesFocus ( (bool) hb_parl(1) );
+    obj->setTabChangesFocus ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -747,7 +747,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETUNDOREDOENABLED )
   QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setUndoRedoEnabled ( (bool) hb_parl(1) );
+    obj->setUndoRedoEnabled ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

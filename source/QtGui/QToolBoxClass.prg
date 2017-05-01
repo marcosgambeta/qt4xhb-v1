@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QTOOLBOX_SETITEMENABLED )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setItemEnabled ( par1, (bool) hb_parl(2) );
+    obj->setItemEnabled ( par1, PBOOL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

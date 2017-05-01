@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QWORKSPACE_SETSCROLLBARSENABLED )
   QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setScrollBarsEnabled ( (bool) hb_parl(1) );
+    obj->setScrollBarsEnabled ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETDATEEDITENABLED )
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setDateEditEnabled ( (bool) hb_parl(1) );
+    obj->setDateEditEnabled ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -585,7 +585,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETGRIDVISIBLE )
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setGridVisible ( (bool) hb_parl(1) );
+    obj->setGridVisible ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -599,7 +599,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETNAVIGATIONBARVISIBLE )
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setNavigationBarVisible ( (bool) hb_parl(1) );
+    obj->setNavigationBarVisible ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

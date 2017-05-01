@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QMOTIFSTYLE_SETUSEHIGHLIGHTCOLORS )
   QMotifStyle * obj = (QMotifStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setUseHighlightColors ( (bool) hb_parl(1) );
+    obj->setUseHighlightColors ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

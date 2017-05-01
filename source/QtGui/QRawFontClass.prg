@@ -108,9 +108,8 @@ HB_FUNC_STATIC( QRAWFONT_NEW2 )
 {
   QRawFont * o = NULL;
   QString par1 = hb_parc(1);
-  qreal par2 = hb_parnd(2);
   int par3 = ISNIL(3)? (int) QFont::PreferDefaultHinting : hb_parni(3);
-  o = new QRawFont ( par1, par2,  (QFont::HintingPreference) par3 );
+  o = new QRawFont ( par1, PQREAL(2),  (QFont::HintingPreference) par3 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QRawFont *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -129,9 +128,8 @@ HB_FUNC_STATIC( QRAWFONT_NEW3 )
 {
   QRawFont * o = NULL;
   QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  qreal par2 = hb_parnd(2);
   int par3 = ISNIL(3)? (int) QFont::PreferDefaultHinting : hb_parni(3);
-  o = new QRawFont ( *par1, par2,  (QFont::HintingPreference) par3 );
+  o = new QRawFont ( *par1, PQREAL(2),  (QFont::HintingPreference) par3 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QRawFont *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -432,9 +430,8 @@ HB_FUNC_STATIC( QRAWFONT_LOADFROMDATA )
   if( obj )
   {
     QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    qreal par2 = hb_parnd(2);
     int par3 = hb_parni(3);
-    obj->loadFromData ( *par1, par2,  (QFont::HintingPreference) par3 );
+    obj->loadFromData ( *par1, PQREAL(2),  (QFont::HintingPreference) par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -449,9 +446,8 @@ HB_FUNC_STATIC( QRAWFONT_LOADFROMFILE )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    qreal par2 = hb_parnd(2);
     int par3 = hb_parni(3);
-    obj->loadFromFile ( par1, par2,  (QFont::HintingPreference) par3 );
+    obj->loadFromFile ( par1, PQREAL(2),  (QFont::HintingPreference) par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -508,8 +504,7 @@ HB_FUNC_STATIC( QRAWFONT_SETPIXELSIZE )
   QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal par1 = hb_parnd(1);
-    obj->setPixelSize ( par1 );
+    obj->setPixelSize ( PQREAL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_SETEXCLUSIVE )
   QButtonGroup * obj = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setExclusive ( (bool) hb_parl(1) );
+    obj->setExclusive ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

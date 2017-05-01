@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_SETENABLED )
   QGraphicsEffect * obj = (QGraphicsEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setEnabled ( (bool) hb_parl(1) );
+    obj->setEnabled ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

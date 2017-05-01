@@ -69,15 +69,12 @@ HB_FUNC_STATIC( QTABLETEVENT_NEW )
   QPointF * par4 = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par5 = hb_parni(5);
   int par6 = hb_parni(6);
-  qreal par7 = hb_parnd(7);
   int par8 = hb_parni(8);
   int par9 = hb_parni(9);
-  qreal par10 = hb_parnd(10);
-  qreal par11 = hb_parnd(11);
   int par12 = hb_parni(12);
   int par13 = hb_parni(13);
   qint64 par14 = hb_parni(14);
-  o = new QTabletEvent (  (QEvent::Type) par1, *par2, *par3, *par4, par5, par6, par7, par8, par9, par10, par11, par12,  (Qt::KeyboardModifiers) par13, par14 );
+  o = new QTabletEvent (  (QEvent::Type) par1, *par2, *par3, *par4, par5, par6, PQREAL(7), par8, par9, PQREAL(10), PQREAL(11), par12,  (Qt::KeyboardModifiers) par13, par14 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTabletEvent *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );

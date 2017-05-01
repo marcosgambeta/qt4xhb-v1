@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETROWHIDDEN )
   QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setRowHidden ( (int) hb_parni(1), (bool) hb_parl(2) );
+    obj->setRowHidden ( (int) hb_parni(1), PBOOL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETSELECTIONRECTVISIBLE )
   QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setSelectionRectVisible ( (bool) hb_parl(1) );
+    obj->setSelectionRectVisible ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETUNIFORMITEMSIZES )
   QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setUniformItemSizes ( (bool) hb_parl(1) );
+    obj->setUniformItemSizes ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETWORDWRAP )
   QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setWordWrap ( (bool) hb_parl(1) );
+    obj->setWordWrap ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -450,7 +450,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETWRAPPING )
   QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setWrapping ( (bool) hb_parl(1) );
+    obj->setWrapping ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

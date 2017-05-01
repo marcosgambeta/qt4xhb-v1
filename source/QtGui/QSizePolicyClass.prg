@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_SETHEIGHTFORWIDTH )
   QSizePolicy * obj = (QSizePolicy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setHeightForWidth ( (bool) hb_parl(1) );
+    obj->setHeightForWidth ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_SETWIDTHFORHEIGHT )
   QSizePolicy * obj = (QSizePolicy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setWidthForHeight ( (bool) hb_parl(1) );
+    obj->setWidthForHeight ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
