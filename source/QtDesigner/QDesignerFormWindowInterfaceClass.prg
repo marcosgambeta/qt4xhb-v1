@@ -522,7 +522,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETLAYOUTDEFAULT )
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setLayoutDefault ( hb_parni(1), hb_parni(2) );
+    obj->setLayoutDefault ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -656,7 +656,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETDIRTY )
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setDirty ( (bool) hb_parl(1) );
+    obj->setDirty ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

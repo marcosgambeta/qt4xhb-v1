@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_ISDYNAMICPROPERTY )
   QDesignerDynamicPropertySheetExtension * obj = (QDesignerDynamicPropertySheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isDynamicProperty ( hb_parni(1) ) );
+    hb_retl( obj->isDynamicProperty ( PINT(1) ) );
   }
 }
 
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_REMOVEDYNAMICPROPERTY )
   QDesignerDynamicPropertySheetExtension * obj = (QDesignerDynamicPropertySheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->removeDynamicProperty ( hb_parni(1) ) );
+    hb_retl( obj->removeDynamicProperty ( PINT(1) ) );
   }
 }
 

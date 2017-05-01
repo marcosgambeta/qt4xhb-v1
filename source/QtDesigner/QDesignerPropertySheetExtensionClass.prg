@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_HASRESET )
   QDesignerPropertySheetExtension * obj = (QDesignerPropertySheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasReset ( hb_parni(1) ) );
+    hb_retl( obj->hasReset ( PINT(1) ) );
   }
 }
 
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_ISATTRIBUTE )
   QDesignerPropertySheetExtension * obj = (QDesignerPropertySheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isAttribute ( hb_parni(1) ) );
+    hb_retl( obj->isAttribute ( PINT(1) ) );
   }
 }
 
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_ISCHANGED )
   QDesignerPropertySheetExtension * obj = (QDesignerPropertySheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isChanged ( hb_parni(1) ) );
+    hb_retl( obj->isChanged ( PINT(1) ) );
   }
 }
 
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_ISVISIBLE )
   QDesignerPropertySheetExtension * obj = (QDesignerPropertySheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isVisible ( hb_parni(1) ) );
+    hb_retl( obj->isVisible ( PINT(1) ) );
   }
 }
 
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_PROPERTY )
   QDesignerPropertySheetExtension * obj = (QDesignerPropertySheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->property ( hb_parni(1) ) );
+    QVariant * ptr = new QVariant( obj->property ( PINT(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_PROPERTYGROUP )
   QDesignerPropertySheetExtension * obj = (QDesignerPropertySheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->propertyGroup ( hb_parni(1) );
+    QString str1 = obj->propertyGroup ( PINT(1) );
     hb_retc( (const char *) str1.toLatin1().data() );
   }
 }
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_PROPERTYNAME )
   QDesignerPropertySheetExtension * obj = (QDesignerPropertySheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->propertyName ( hb_parni(1) );
+    QString str1 = obj->propertyName ( PINT(1) );
     hb_retc( (const char *) str1.toLatin1().data() );
   }
 }
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_RESET )
   QDesignerPropertySheetExtension * obj = (QDesignerPropertySheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->reset ( hb_parni(1) ) );
+    hb_retl( obj->reset ( PINT(1) ) );
   }
 }
 
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETATTRIBUTE )
   QDesignerPropertySheetExtension * obj = (QDesignerPropertySheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setAttribute ( hb_parni(1), (bool) hb_parl(2) );
+    obj->setAttribute ( PINT(1), PBOOL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETCHANGED )
   QDesignerPropertySheetExtension * obj = (QDesignerPropertySheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setChanged ( hb_parni(1), (bool) hb_parl(2) );
+    obj->setChanged ( PINT(1), PBOOL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETPROPERTY )
   if( obj )
   {
     QVariant * par2 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setProperty ( hb_parni(1), *par2 );
+    obj->setProperty ( PINT(1), *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETPROPERTYGROUP )
   if( obj )
   {
     QString par2 = hb_parc(2);
-    obj->setPropertyGroup ( hb_parni(1), par2 );
+    obj->setPropertyGroup ( PINT(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETVISIBLE )
   QDesignerPropertySheetExtension * obj = (QDesignerPropertySheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setVisible ( hb_parni(1), (bool) hb_parl(2) );
+    obj->setVisible ( PINT(1), PBOOL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
