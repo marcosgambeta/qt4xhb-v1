@@ -158,7 +158,7 @@ QScriptValue ( bool value )
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW4 )
 {
   QScriptValue * o = NULL;
-  o = new QScriptValue ( (bool) hb_parl(1) );
+  o = new QScriptValue ( PBOOL(1) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QScriptValue *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -173,7 +173,7 @@ QScriptValue ( int value )
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW5 )
 {
   QScriptValue * o = NULL;
-  o = new QScriptValue ( hb_parni(1) );
+  o = new QScriptValue ( PINT(1) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QScriptValue *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );

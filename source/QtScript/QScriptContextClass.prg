@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_ARGUMENT )
   QScriptContext * obj = (QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QScriptValue * ptr = new QScriptValue( obj->argument ( hb_parni(1) ) );
+    QScriptValue * ptr = new QScriptValue( obj->argument ( PINT(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }

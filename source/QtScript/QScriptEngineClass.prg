@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_DEFAULTPROTOTYPE )
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QScriptValue * ptr = new QScriptValue( obj->defaultPrototype ( hb_parni(1) ) );
+    QScriptValue * ptr = new QScriptValue( obj->defaultPrototype ( PINT(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
@@ -578,7 +578,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_REPORTADDITIONALMEMORYCOST )
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->reportAdditionalMemoryCost ( hb_parni(1) );
+    obj->reportAdditionalMemoryCost ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -609,7 +609,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_SETDEFAULTPROTOTYPE )
   if( obj )
   {
     QScriptValue * par2 = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setDefaultPrototype ( hb_parni(1), *par2 );
+    obj->setDefaultPrototype ( PINT(1), *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -638,7 +638,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_SETPROCESSEVENTSINTERVAL )
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setProcessEventsInterval ( hb_parni(1) );
+    obj->setProcessEventsInterval ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
