@@ -478,7 +478,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_SETAUTOSAVEFILTER )
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setAutoSaveFilter ( (bool) hb_parl(1) );
+    obj->setAutoSaveFilter ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

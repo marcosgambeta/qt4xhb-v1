@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_CHILD )
   QHelpContentItem * obj = (QHelpContentItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QHelpContentItem * ptr = obj->child ( hb_parni(1) );
+    QHelpContentItem * ptr = obj->child ( PINT(1) );
     _qt4xhb_createReturnClass ( ptr, "QHELPCONTENTITEM" );
   }
 }
