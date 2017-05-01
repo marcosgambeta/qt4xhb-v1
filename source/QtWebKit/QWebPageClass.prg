@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QWEBPAGE_FOCUSNEXTPREVCHILD )
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->focusNextPrevChild ( (bool) hb_parl(1) ) );
+    hb_retl( obj->focusNextPrevChild ( PBOOL(1) ) );
   }
 }
 
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QWEBPAGE_SETCONTENTEDITABLE )
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setContentEditable ( (bool) hb_parl(1) );
+    obj->setContentEditable ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QWEBPAGE_SETFORWARDUNSUPPORTEDCONTENT )
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setForwardUnsupportedContent ( (bool) hb_parl(1) );
+    obj->setForwardUnsupportedContent ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
