@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SETNOTIFYONVALUECHANGED )
   QDeclarativeExpression * obj = (QDeclarativeExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setNotifyOnValueChanged ( (bool) hb_parl(1) );
+    obj->setNotifyOnValueChanged ( PBOOL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SETSOURCELOCATION )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    obj->setSourceLocation ( par1, hb_parni(2) );
+    obj->setSourceLocation ( par1, PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

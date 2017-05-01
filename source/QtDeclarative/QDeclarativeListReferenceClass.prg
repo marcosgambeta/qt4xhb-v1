@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_AT )
   QDeclarativeListReference * obj = (QDeclarativeListReference *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * ptr = obj->at ( hb_parni(1) );
+    QObject * ptr = obj->at ( PINT(1) );
     _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }
