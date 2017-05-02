@@ -49,9 +49,8 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_NEW )
   if( ISNUMPAR(2) && ISCHAR(1) && ISQAXSCRIPT(2) )
   {
     QAxScriptEngine * o = NULL;
-    QString par1 = hb_parc(1);
     QAxScript * par2 = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    o = new QAxScriptEngine ( par1, par2 );
+    o = new QAxScriptEngine ( PQSTRING(1), par2 );
     PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr( NULL,(QAxScriptEngine *) o );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -92,8 +91,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_ADDITEM )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = hb_parc(1);
-      obj->addItem ( par1 );
+      obj->addItem ( PQSTRING(1) );
     }
     else
     {

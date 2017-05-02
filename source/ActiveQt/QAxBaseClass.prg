@@ -361,8 +361,7 @@ HB_FUNC_STATIC( QAXBASE_SETCONTROL )
   {
     if( ISCHAR(1) )
     {
-      QString par1 = hb_parc(1);
-      hb_retl( obj->setControl ( par1 ) );
+      hb_retl( obj->setControl ( PQSTRING(1) ) );
     }
     else
     {

@@ -107,8 +107,7 @@ HB_FUNC_STATIC( QAXBINDABLE_READDATA )
     if( ISQIODEVICE(1) && ISCHAR(2) )
     {
       QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-      QString par2 = hb_parc(2);
-      hb_retl( obj->readData ( par1, par2 ) );
+      hb_retl( obj->readData ( par1, PQSTRING(2) ) );
     }
     else
     {
@@ -128,10 +127,8 @@ HB_FUNC_STATIC( QAXBINDABLE_REPORTERROR )
   {
     if( ISNUM(1) && ISCHAR(2) && ISCHAR(3) && (ISCHAR(4)||ISNIL(4)) )
     {
-      QString par2 = hb_parc(2);
-      QString par3 = hb_parc(3);
       QString par4 = ISNIL(4)? QString() : hb_parc(4);
-      obj->reportError ( PINT(1), par2, par3, par4 );
+      obj->reportError ( PINT(1), PQSTRING(2), PQSTRING(3), par4 );
     }
     else
     {
