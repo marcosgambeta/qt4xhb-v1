@@ -143,8 +143,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_FIELDINDEX )
   QSqlTableModel * obj = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    hb_retni( obj->fieldIndex ( par1 ) );
+    hb_retni( obj->fieldIndex ( PQSTRING(1) ) );
   }
 }
 
@@ -254,8 +253,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SETFILTER )
   QSqlTableModel * obj = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setFilter ( par1 );
+    obj->setFilter ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -297,8 +295,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SETTABLE )
   QSqlTableModel * obj = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setTable ( par1 );
+    obj->setTable ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

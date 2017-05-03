@@ -203,9 +203,8 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_SETQUERY2 )
   QSqlQueryModel * obj = (QSqlQueryModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
     QSqlDatabase par2 = ISNIL(2)? QSqlDatabase() : *(QSqlDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setQuery ( par1, par2 );
+    obj->setQuery ( PQSTRING(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

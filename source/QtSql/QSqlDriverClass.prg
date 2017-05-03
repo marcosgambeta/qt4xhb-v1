@@ -150,8 +150,7 @@ HB_FUNC_STATIC( QSQLDRIVER_ESCAPEIDENTIFIER )
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QString str1 = obj->escapeIdentifier ( par1,  (QSqlDriver::IdentifierType) hb_parni(2) );
+    QString str1 = obj->escapeIdentifier ( PQSTRING(1),  (QSqlDriver::IdentifierType) hb_parni(2) );
     hb_retc( (const char *) str1.toLatin1().data() );
   }
 }
@@ -207,8 +206,7 @@ HB_FUNC_STATIC( QSQLDRIVER_ISIDENTIFIERESCAPED )
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    hb_retl( obj->isIdentifierEscaped ( par1,  (QSqlDriver::IdentifierType) hb_parni(2) ) );
+    hb_retl( obj->isIdentifierEscaped ( PQSTRING(1),  (QSqlDriver::IdentifierType) hb_parni(2) ) );
   }
 }
 
@@ -274,12 +272,11 @@ HB_FUNC_STATIC( QSQLDRIVER_OPEN )
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
     QString par2 = ISNIL(2)? QString() : hb_parc(2);
     QString par3 = ISNIL(3)? QString() : hb_parc(3);
     QString par4 = ISNIL(4)? QString() : hb_parc(4);
     QString par6 = ISNIL(6)? QString() : hb_parc(6);
-    hb_retl( obj->open ( par1, par2, par3, par4, ISNIL(5)? -1 : hb_parni(5), par6 ) );
+    hb_retl( obj->open ( PQSTRING(1), par2, par3, par4, ISNIL(5)? -1 : hb_parni(5), par6 ) );
   }
 }
 
@@ -292,8 +289,7 @@ HB_FUNC_STATIC( QSQLDRIVER_PRIMARYINDEX )
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QSqlIndex * ptr = new QSqlIndex( obj->primaryIndex ( par1 ) );
+    QSqlIndex * ptr = new QSqlIndex( obj->primaryIndex ( PQSTRING(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QSQLINDEX", true );
   }
 }
@@ -307,8 +303,7 @@ HB_FUNC_STATIC( QSQLDRIVER_RECORD )
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QSqlRecord * ptr = new QSqlRecord( obj->record ( par1 ) );
+    QSqlRecord * ptr = new QSqlRecord( obj->record ( PQSTRING(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QSQLRECORD", true );
   }
 }
@@ -349,9 +344,8 @@ HB_FUNC_STATIC( QSQLDRIVER_SQLSTATEMENT )
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par2 = hb_parc(2);
     QSqlRecord * par3 = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString str1 = obj->sqlStatement (  (QSqlDriver::StatementType) hb_parni(1), par2, *par3, PBOOL(4) );
+    QString str1 = obj->sqlStatement (  (QSqlDriver::StatementType) hb_parni(1), PQSTRING(2), *par3, PBOOL(4) );
     hb_retc( (const char *) str1.toLatin1().data() );
   }
 }
@@ -365,8 +359,7 @@ HB_FUNC_STATIC( QSQLDRIVER_STRIPDELIMITERS )
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QString str1 = obj->stripDelimiters ( par1,  (QSqlDriver::IdentifierType) hb_parni(2) );
+    QString str1 = obj->stripDelimiters ( PQSTRING(1),  (QSqlDriver::IdentifierType) hb_parni(2) );
     hb_retc( (const char *) str1.toLatin1().data() );
   }
 }
@@ -380,8 +373,7 @@ HB_FUNC_STATIC( QSQLDRIVER_SUBSCRIBETONOTIFICATION )
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    hb_retl( obj->subscribeToNotification ( par1 ) );
+    hb_retl( obj->subscribeToNotification ( PQSTRING(1) ) );
   }
 }
 
@@ -440,8 +432,7 @@ HB_FUNC_STATIC( QSQLDRIVER_UNSUBSCRIBEFROMNOTIFICATION )
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    hb_retl( obj->unsubscribeFromNotification ( par1 ) );
+    hb_retl( obj->unsubscribeFromNotification ( PQSTRING(1) ) );
   }
 }
 

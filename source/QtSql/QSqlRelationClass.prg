@@ -71,10 +71,7 @@ QSqlRelation ( const QString & tableName, const QString & indexColumn, const QSt
 HB_FUNC_STATIC( QSQLRELATION_NEW2 )
 {
   QSqlRelation * o = NULL;
-  QString par1 = hb_parc(1);
-  QString par2 = hb_parc(2);
-  QString par3 = hb_parc(3);
-  o = new QSqlRelation ( par1, par2, par3 );
+  o = new QSqlRelation ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSqlRelation *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
