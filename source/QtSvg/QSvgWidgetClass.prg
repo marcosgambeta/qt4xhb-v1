@@ -68,9 +68,8 @@ QSvgWidget ( const QString & file, QWidget * parent = 0 )
 HB_FUNC_STATIC( QSVGWIDGET_NEW2 )
 {
   QSvgWidget * o = NULL;
-  QString par1 = hb_parc(1);
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSvgWidget ( par1, par2 );
+  o = new QSvgWidget ( PQSTRING(1), par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSvgWidget *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -150,8 +149,7 @@ HB_FUNC_STATIC( QSVGWIDGET_LOAD1 )
   QSvgWidget * obj = (QSvgWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->load ( par1 );
+    obj->load ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

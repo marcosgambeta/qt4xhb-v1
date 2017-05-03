@@ -89,9 +89,8 @@ QSvgRenderer ( const QString & filename, QObject * parent = 0 )
 HB_FUNC_STATIC( QSVGRENDERER_NEW2 )
 {
   QSvgRenderer * o = NULL;
-  QString par1 = hb_parc(1);
   QObject * par2 = ISNIL(2)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSvgRenderer ( par1, par2 );
+  o = new QSvgRenderer ( PQSTRING(1), par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSvgRenderer *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -200,8 +199,7 @@ HB_FUNC_STATIC( QSVGRENDERER_BOUNDSONELEMENT )
   QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QRectF * ptr = new QRectF( obj->boundsOnElement ( par1 ) );
+    QRectF * ptr = new QRectF( obj->boundsOnElement ( PQSTRING(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -229,8 +227,7 @@ HB_FUNC_STATIC( QSVGRENDERER_ELEMENTEXISTS )
   QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    hb_retl( obj->elementExists ( par1 ) );
+    hb_retl( obj->elementExists ( PQSTRING(1) ) );
   }
 }
 
@@ -269,8 +266,7 @@ HB_FUNC_STATIC( QSVGRENDERER_MATRIXFORELEMENT )
   QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QMatrix * ptr = new QMatrix( obj->matrixForElement ( par1 ) );
+    QMatrix * ptr = new QMatrix( obj->matrixForElement ( PQSTRING(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QMATRIX" );
   }
 }
@@ -371,8 +367,7 @@ HB_FUNC_STATIC( QSVGRENDERER_LOAD1 )
   QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    hb_retl( obj->load ( par1 ) );
+    hb_retl( obj->load ( PQSTRING(1) ) );
   }
 }
 
@@ -465,9 +460,8 @@ HB_FUNC_STATIC( QSVGRENDERER_RENDER3 )
   if( obj )
   {
     QPainter * par1 = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString par2 = hb_parc(2);
     QRectF par3 = ISNIL(3)? QRectF() : *(QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->render ( par1, par2, par3 );
+    obj->render ( par1, PQSTRING(2), par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

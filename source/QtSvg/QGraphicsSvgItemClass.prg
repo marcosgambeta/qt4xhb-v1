@@ -72,9 +72,8 @@ QGraphicsSvgItem ( const QString & fileName, QGraphicsItem * parent = 0 )
 HB_FUNC_STATIC( QGRAPHICSSVGITEM_NEW2 )
 {
   QGraphicsSvgItem * o = NULL;
-  QString par1 = hb_parc(1);
   QGraphicsItem * par2 = ISNIL(2)? 0 : (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QGraphicsSvgItem ( par1, par2 );
+  o = new QGraphicsSvgItem ( PQSTRING(1), par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QGraphicsSvgItem *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -153,8 +152,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_SETELEMENTID )
   QGraphicsSvgItem * obj = (QGraphicsSvgItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setElementId ( par1 );
+    obj->setElementId ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

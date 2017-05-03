@@ -152,8 +152,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_SETDESCRIPTION )
   QSvgGenerator * obj = (QSvgGenerator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setDescription ( par1 );
+    obj->setDescription ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -167,8 +166,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_SETFILENAME )
   QSvgGenerator * obj = (QSvgGenerator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setFileName ( par1 );
+    obj->setFileName ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -226,8 +224,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_SETTITLE )
   QSvgGenerator * obj = (QSvgGenerator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setTitle ( par1 );
+    obj->setTitle ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
