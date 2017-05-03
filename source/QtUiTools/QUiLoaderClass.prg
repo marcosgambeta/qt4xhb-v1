@@ -99,8 +99,7 @@ HB_FUNC_STATIC( QUILOADER_ADDPLUGINPATH )
   QUiLoader * obj = (QUiLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->addPluginPath ( par1 );
+    obj->addPluginPath ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -206,10 +205,9 @@ HB_FUNC_STATIC( QUILOADER_CREATELAYOUT )
   QUiLoader * obj = (QUiLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
     QObject * par2 = ISNIL(2)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     QString par3 = ISNIL(3)? QString() : hb_parc(3);
-    QLayout * ptr = obj->createLayout ( par1, par2, par3 );
+    QLayout * ptr = obj->createLayout ( PQSTRING(1), par2, par3 );
     _qt4xhb_createReturnClass ( ptr, "QLAYOUT" );
   }
 }
@@ -223,10 +221,9 @@ HB_FUNC_STATIC( QUILOADER_CREATEWIDGET )
   QUiLoader * obj = (QUiLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
     QWidget * par2 = ISNIL(2)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     QString par3 = ISNIL(3)? QString() : hb_parc(3);
-    QWidget * ptr = obj->createWidget ( par1, par2, par3 );
+    QWidget * ptr = obj->createWidget ( PQSTRING(1), par2, par3 );
     _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
