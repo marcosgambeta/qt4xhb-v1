@@ -79,8 +79,7 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW2 )
 {
   QWebElementCollection * o = NULL;
   QWebElement * par1 = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QString par2 = hb_parc(2);
-  o = new QWebElementCollection ( *par1, par2 );
+  o = new QWebElementCollection ( *par1, PQSTRING(2) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QWebElementCollection *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );

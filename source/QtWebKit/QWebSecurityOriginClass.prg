@@ -233,8 +233,7 @@ void addLocalScheme ( const QString & scheme )
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_ADDLOCALSCHEME )
 {
-  QString par1 = hb_parc(1);
-  QWebSecurityOrigin::addLocalScheme ( par1 );
+  QWebSecurityOrigin::addLocalScheme ( PQSTRING(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -307,8 +306,7 @@ void removeLocalScheme ( const QString & scheme )
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_REMOVELOCALSCHEME )
 {
-  QString par1 = hb_parc(1);
-  QWebSecurityOrigin::removeLocalScheme ( par1 );
+  QWebSecurityOrigin::removeLocalScheme ( PQSTRING(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

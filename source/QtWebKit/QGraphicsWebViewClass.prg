@@ -118,9 +118,8 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_FINDTEXT )
   QGraphicsWebView * obj = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
     int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-    hb_retl( obj->findText ( par1,  (QWebPage::FindFlags) par2 ) );
+    hb_retl( obj->findText ( PQSTRING(1),  (QWebPage::FindFlags) par2 ) );
   }
 }
 
@@ -293,9 +292,8 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETHTML )
   QGraphicsWebView * obj = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
     QUrl par2 = ISNIL(2)? QUrl() : *(QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setHtml ( par1, par2 );
+    obj->setHtml ( PQSTRING(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
