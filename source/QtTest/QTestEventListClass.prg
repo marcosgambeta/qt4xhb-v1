@@ -193,8 +193,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYCLICKS )
   QTestEventList * obj = (QTestEventList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->addKeyClicks ( par1, ISNIL(2)? Qt::NoModifier : (Qt::KeyboardModifiers) hb_parni(2), ISNIL(3)? -1 : hb_parni(3) );
+    obj->addKeyClicks ( PQSTRING(1), ISNIL(2)? Qt::NoModifier : (Qt::KeyboardModifiers) hb_parni(2), ISNIL(3)? -1 : hb_parni(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
