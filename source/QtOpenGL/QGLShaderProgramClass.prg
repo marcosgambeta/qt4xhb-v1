@@ -243,8 +243,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE3 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QString par2 = hb_parc(2);
-    hb_retl( obj->addShaderFromSourceCode (  (QGLShader::ShaderType) par1, par2 ) );
+    hb_retl( obj->addShaderFromSourceCode (  (QGLShader::ShaderType) par1, PQSTRING(2) ) );
   }
 }
 
@@ -278,8 +277,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_ADDSHADERFROMSOURCEFILE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QString par2 = hb_parc(2);
-    hb_retl( obj->addShaderFromSourceFile (  (QGLShader::ShaderType) par1, par2 ) );
+    hb_retl( obj->addShaderFromSourceFile (  (QGLShader::ShaderType) par1, PQSTRING(2) ) );
   }
 }
 
@@ -320,8 +318,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_ATTRIBUTELOCATION3 )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    hb_retni( obj->attributeLocation ( par1 ) );
+    hb_retni( obj->attributeLocation ( PQSTRING(1) ) );
   }
 }
 
@@ -399,9 +396,8 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_BINDATTRIBUTELOCATION3 )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
     int par2 = hb_parni(2);
-    obj->bindAttributeLocation ( par1, par2 );
+    obj->bindAttributeLocation ( PQSTRING(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1677,8 +1673,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_UNIFORMLOCATION3 )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    hb_retni( obj->uniformLocation ( par1 ) );
+    hb_retni( obj->uniformLocation ( PQSTRING(1) ) );
   }
 }
 

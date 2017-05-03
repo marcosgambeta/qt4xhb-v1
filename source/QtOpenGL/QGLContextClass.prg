@@ -130,8 +130,7 @@ HB_FUNC_STATIC( QGLCONTEXT_BINDTEXTURE2 )
   QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    hb_retni( (GLuint) obj->bindTexture ( par1 ) );
+    hb_retni( (GLuint) obj->bindTexture ( PQSTRING(1) ) );
   }
 }
 
@@ -343,9 +342,8 @@ HB_FUNC_STATIC( QGLCONTEXT_GETPROCADDRESS )
   QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    void * retptr = obj->getProcAddress ( par1 );
-  hb_retptr( (void *) retptr );
+    void * retptr = obj->getProcAddress ( PQSTRING(1) );
+    hb_retptr( (void *) retptr );
   }
 }
 

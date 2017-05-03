@@ -157,8 +157,7 @@ HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE3 )
   QGLShader * obj = (QGLShader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    hb_retl( obj->compileSourceCode ( par1 ) );
+    hb_retl( obj->compileSourceCode ( PQSTRING(1) ) );
   }
 }
 
@@ -191,8 +190,7 @@ HB_FUNC_STATIC( QGLSHADER_COMPILESOURCEFILE )
   QGLShader * obj = (QGLShader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    hb_retl( obj->compileSourceFile ( par1 ) );
+    hb_retl( obj->compileSourceFile ( PQSTRING(1) ) );
   }
 }
 

@@ -173,8 +173,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_BINDTEXTURE3 )
   QGLPixelBuffer * obj = (QGLPixelBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    hb_retni( (GLuint) obj->bindTexture ( par1 ) );
+    hb_retni( (GLuint) obj->bindTexture ( PQSTRING(1) ) );
   }
 }
 
