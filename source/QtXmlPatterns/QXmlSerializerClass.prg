@@ -173,8 +173,7 @@ HB_FUNC_STATIC( QXMLSERIALIZER_COMMENT )
   QXmlSerializer * obj = (QXmlSerializer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->comment ( par1 );
+    obj->comment ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -246,8 +245,7 @@ HB_FUNC_STATIC( QXMLSERIALIZER_PROCESSINGINSTRUCTION )
   if( obj )
   {
     QXmlName * par1 = (QXmlName *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString par2 = hb_parc(2);
-    obj->processingInstruction ( *par1, par2 );
+    obj->processingInstruction ( *par1, PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

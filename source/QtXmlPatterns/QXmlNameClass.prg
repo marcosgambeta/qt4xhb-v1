@@ -80,10 +80,9 @@ HB_FUNC_STATIC( QXMLNAME_NEW2 )
 {
   QXmlName * o = NULL;
   QXmlNamePool * par1 = (QXmlNamePool *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QString par2 = hb_parc(2);
   QString par3 = ISNIL(3)? QString() : hb_parc(3);
   QString par4 = ISNIL(4)? QString() : hb_parc(4);
-  o = new QXmlName ( *par1, par2, par3, par4 );
+  o = new QXmlName ( *par1, PQSTRING(2), par3, par4 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QXmlName *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -195,9 +194,8 @@ QXmlName fromClarkName ( const QString & clarkName, const QXmlNamePool & namePoo
 */
 HB_FUNC_STATIC( QXMLNAME_FROMCLARKNAME )
 {
-  QString par1 = hb_parc(1);
   QXmlNamePool * par2 = (QXmlNamePool *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QXmlName * ptr = new QXmlName( QXmlName::fromClarkName ( par1, *par2 ) );
+  QXmlName * ptr = new QXmlName( QXmlName::fromClarkName ( PQSTRING(1), *par2 ) );
   _qt4xhb_createReturnClass ( ptr, "QXMLNAME", true );
 }
 
@@ -207,8 +205,7 @@ bool isNCName ( const QString & candidate )
 */
 HB_FUNC_STATIC( QXMLNAME_ISNCNAME )
 {
-  QString par1 = hb_parc(1);
-  hb_retl( QXmlName::isNCName ( par1 ) );
+  hb_retl( QXmlName::isNCName ( PQSTRING(1) ) );
 }
 
 

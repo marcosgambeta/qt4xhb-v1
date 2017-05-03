@@ -61,10 +61,9 @@ HB_FUNC_STATIC( QABSTRACTMESSAGEHANDLER_MESSAGE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QString par2 = hb_parc(2);
     QUrl par3 = ISNIL(3)? QUrl() : *(QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     QSourceLocation par4 = ISNIL(4)? QSourceLocation() : *(QSourceLocation *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->message (  (QtMsgType) par1, par2, par3, par4 );
+    obj->message (  (QtMsgType) par1, PQSTRING(2), par3, par4 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
