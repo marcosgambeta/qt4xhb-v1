@@ -1345,3 +1345,4 @@
 #define PQSTRING(n)                                         QString::fromAscii( hb_parc(n) )
 //#define PQSTRING(n)                                         QString::fromLatin1( hb_parc(n) )
 //#define PQSTRING(n)                                         QString::fromUtf8( hb_parc(n) )
+#define PQSTRINGLIST(n)                                     _qt4xhb_convert_array_parameter_to_qstringlist(n)
