@@ -51,8 +51,7 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_CREATEINDEX )
   QHelpIndexModel * obj = (QHelpIndexModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->createIndex ( par1 );
+    obj->createIndex ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -66,9 +65,8 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_FILTER )
   QHelpIndexModel * obj = (QHelpIndexModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
     QString par2 = ISNIL(2)? QString() : hb_parc(2);
-    QModelIndex * ptr = new QModelIndex( obj->filter ( par1, par2 ) );
+    QModelIndex * ptr = new QModelIndex( obj->filter ( PQSTRING(1), par2 ) );
     _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }

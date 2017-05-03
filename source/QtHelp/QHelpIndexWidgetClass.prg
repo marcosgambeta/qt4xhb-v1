@@ -60,9 +60,8 @@ HB_FUNC_STATIC( QHELPINDEXWIDGET_FILTERINDICES )
   QHelpIndexWidget * obj = (QHelpIndexWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
     QString par2 = ISNIL(2)? QString() : hb_parc(2);
-    obj->filterIndices ( par1, par2 );
+    obj->filterIndices ( PQSTRING(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
