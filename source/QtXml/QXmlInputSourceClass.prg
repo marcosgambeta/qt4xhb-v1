@@ -190,8 +190,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_SETDATA1 )
   QXmlInputSource * obj = (QXmlInputSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setData ( par1 );
+    obj->setData ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

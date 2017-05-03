@@ -153,8 +153,7 @@ HB_FUNC_STATIC( QDOMATTR_SETVALUE )
   QDomAttr * obj = (QDomAttr *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setValue ( par1 );
+    obj->setValue ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

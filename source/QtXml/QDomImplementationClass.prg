@@ -134,10 +134,8 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_CREATEDOCUMENT )
   QDomImplementation * obj = (QDomImplementation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QString par2 = hb_parc(2);
     QDomDocumentType * par3 = (QDomDocumentType *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QDomDocument * ptr = new QDomDocument( obj->createDocument ( par1, par2, *par3 ) );
+    QDomDocument * ptr = new QDomDocument( obj->createDocument ( PQSTRING(1), PQSTRING(2), *par3 ) );
     _qt4xhb_createReturnClass ( ptr, "QDOMDOCUMENT", true );
   }
 }
@@ -151,10 +149,7 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_CREATEDOCUMENTTYPE )
   QDomImplementation * obj = (QDomImplementation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QString par2 = hb_parc(2);
-    QString par3 = hb_parc(3);
-    QDomDocumentType * ptr = new QDomDocumentType( obj->createDocumentType ( par1, par2, par3 ) );
+    QDomDocumentType * ptr = new QDomDocumentType( obj->createDocumentType ( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
     _qt4xhb_createReturnClass ( ptr, "QDOMDOCUMENTTYPE", true );
   }
 }
@@ -168,9 +163,7 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_HASFEATURE )
   QDomImplementation * obj = (QDomImplementation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QString par2 = hb_parc(2);
-    hb_retl( obj->hasFeature ( par1, par2 ) );
+    hb_retl( obj->hasFeature ( PQSTRING(1), PQSTRING(2) ) );
   }
 }
 

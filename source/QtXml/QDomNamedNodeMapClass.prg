@@ -139,8 +139,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_CONTAINS )
   QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    hb_retl( obj->contains ( par1 ) );
+    hb_retl( obj->contains ( PQSTRING(1) ) );
   }
 }
 
@@ -207,8 +206,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NAMEDITEM )
   QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QDomNode * ptr = new QDomNode( obj->namedItem ( par1 ) );
+    QDomNode * ptr = new QDomNode( obj->namedItem ( PQSTRING(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
   }
 }
@@ -222,9 +220,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NAMEDITEMNS )
   QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QString par2 = hb_parc(2);
-    QDomNode * ptr = new QDomNode( obj->namedItemNS ( par1, par2 ) );
+    QDomNode * ptr = new QDomNode( obj->namedItemNS ( PQSTRING(1), PQSTRING(2) ) );
     _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
   }
 }
@@ -238,8 +234,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_REMOVENAMEDITEM )
   QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QDomNode * ptr = new QDomNode( obj->removeNamedItem ( par1 ) );
+    QDomNode * ptr = new QDomNode( obj->removeNamedItem ( PQSTRING(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
   }
 }
@@ -253,9 +248,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_REMOVENAMEDITEMNS )
   QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QString par2 = hb_parc(2);
-    QDomNode * ptr = new QDomNode( obj->removeNamedItemNS ( par1, par2 ) );
+    QDomNode * ptr = new QDomNode( obj->removeNamedItemNS ( PQSTRING(1), PQSTRING(2) ) );
     _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
   }
 }

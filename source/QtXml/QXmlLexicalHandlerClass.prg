@@ -73,8 +73,7 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_COMMENT )
   QXmlLexicalHandler * obj = (QXmlLexicalHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    hb_retl( obj->comment ( par1 ) );
+    hb_retl( obj->comment ( PQSTRING(1) ) );
   }
 }
 
@@ -113,8 +112,7 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_ENDENTITY )
   QXmlLexicalHandler * obj = (QXmlLexicalHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    hb_retl( obj->endEntity ( par1 ) );
+    hb_retl( obj->endEntity ( PQSTRING(1) ) );
   }
 }
 
@@ -154,10 +152,7 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_STARTDTD )
   QXmlLexicalHandler * obj = (QXmlLexicalHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QString par2 = hb_parc(2);
-    QString par3 = hb_parc(3);
-    hb_retl( obj->startDTD ( par1, par2, par3 ) );
+    hb_retl( obj->startDTD ( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
   }
 }
 
@@ -170,8 +165,7 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_STARTENTITY )
   QXmlLexicalHandler * obj = (QXmlLexicalHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    hb_retl( obj->startEntity ( par1 ) );
+    hb_retl( obj->startEntity ( PQSTRING(1) ) );
   }
 }
 
