@@ -113,9 +113,8 @@ HB_FUNC_STATIC( QLOCALSOCKET_CONNECTTOSERVER )
   QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
     int par2 = ISNIL(2)? (int) QLocalSocket::ReadWrite : hb_parni(2);
-    obj->connectToServer ( par1,  (QLocalSocket::OpenMode) par2 );
+    obj->connectToServer ( PQSTRING(1),  (QLocalSocket::OpenMode) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

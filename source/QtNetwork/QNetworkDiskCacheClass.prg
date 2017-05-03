@@ -106,8 +106,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_FILEMETADATA )
   QNetworkDiskCache * obj = (QNetworkDiskCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QNetworkCacheMetaData * ptr = new QNetworkCacheMetaData( obj->fileMetaData ( par1 ) );
+    QNetworkCacheMetaData * ptr = new QNetworkCacheMetaData( obj->fileMetaData ( PQSTRING(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QNETWORKCACHEMETADATA", true );
   }
 }
@@ -135,8 +134,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_SETCACHEDIRECTORY )
   QNetworkDiskCache * obj = (QNetworkDiskCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setCacheDirectory ( par1 );
+    obj->setCacheDirectory ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

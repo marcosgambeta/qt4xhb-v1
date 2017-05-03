@@ -111,8 +111,7 @@ QHostAddress ( const QString & address )
 HB_FUNC_STATIC( QHOSTADDRESS_NEW6 )
 {
   QHostAddress * o = NULL;
-  QString par1 = hb_parc(1);
-  o = new QHostAddress ( par1 );
+  o = new QHostAddress ( PQSTRING(1) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QHostAddress *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -340,8 +339,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_SETADDRESS4 )
   QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    hb_retl( obj->setAddress ( par1 ) );
+    hb_retl( obj->setAddress ( PQSTRING(1) ) );
   }
 }
 
@@ -388,8 +386,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_SETSCOPEID )
   QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setScopeId ( par1 );
+    obj->setScopeId ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

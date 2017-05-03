@@ -78,9 +78,8 @@ QSslCipher ( const QString & name, QSsl::SslProtocol protocol )
 HB_FUNC_STATIC( QSSLCIPHER_NEW2 )
 {
   QSslCipher * o = NULL;
-  QString par1 = hb_parc(1);
   int par2 = hb_parni(2);
-  o = new QSslCipher ( par1,  (QSsl::SslProtocol) par2 );
+  o = new QSslCipher ( PQSTRING(1),  (QSsl::SslProtocol) par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSslCipher *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );

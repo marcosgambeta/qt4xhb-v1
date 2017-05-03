@@ -216,8 +216,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_SESSIONPROPERTY )
   QNetworkSession * obj = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QVariant * ptr = new QVariant( obj->sessionProperty ( par1 ) );
+    QVariant * ptr = new QVariant( obj->sessionProperty ( PQSTRING(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -231,9 +230,8 @@ HB_FUNC_STATIC( QNETWORKSESSION_SETSESSIONPROPERTY )
   QNetworkSession * obj = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
     QVariant * par2 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setSessionProperty ( par1, *par2 );
+    obj->setSessionProperty ( PQSTRING(1), *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
