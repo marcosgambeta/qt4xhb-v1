@@ -82,8 +82,7 @@ HB_FUNC_STATIC( QEXTENSIONMANAGER_EXTENSION )
   if( obj )
   {
     QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString par2 = hb_parc(2);
-    QObject * ptr = obj->extension ( par1, par2 );
+    QObject * ptr = obj->extension ( par1, PQSTRING(2) );
     _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }

@@ -108,8 +108,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_INDEXOF )
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    hb_retni( obj->indexOf ( par1 ) );
+    hb_retni( obj->indexOf ( PQSTRING(1) ) );
   }
 }
 
@@ -290,8 +289,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_SETMEMBERGROUP )
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par2 = hb_parc(2);
-    obj->setMemberGroup ( PINT(1), par2 );
+    obj->setMemberGroup ( PINT(1), PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

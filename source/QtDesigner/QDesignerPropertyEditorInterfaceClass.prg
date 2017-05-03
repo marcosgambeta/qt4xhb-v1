@@ -141,9 +141,8 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETPROPERTYVALUE )
   QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
     QVariant * par2 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setPropertyValue ( par1, *par2, ISNIL(3)? true : hb_parl(3) );
+    obj->setPropertyValue ( PQSTRING(1), *par2, ISNIL(3)? true : hb_parl(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
