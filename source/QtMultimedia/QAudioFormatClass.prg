@@ -282,8 +282,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SETCODEC )
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setCodec ( par1 );
+    obj->setCodec ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
