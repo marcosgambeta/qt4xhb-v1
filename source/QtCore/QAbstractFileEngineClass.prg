@@ -155,15 +155,15 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_ENTRYLIST )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-QStringList par2;
-PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
-int i2;
-int nLen2 = hb_arrayLen(aStrings2);
-for (i2=0;i2<nLen2;i2++)
-{
-QString temp = hb_arrayGetCPtr(aStrings2, i2+1);
-par2 << temp;
-}
+    QStringList par2 = _qt4xhb_convert_array_parameter_to_qstringlist(2);
+    //PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
+    //int i2;
+    //int nLen2 = hb_arrayLen(aStrings2);
+    //for (i2=0;i2<nLen2;i2++)
+    //{
+    //  QString temp = hb_arrayGetCPtr(aStrings2, i2+1);
+    //  par2 << temp;
+    //}
     QStringList strl = obj->entryList (  (QDir::Filters) hb_parni(1), par2 );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);

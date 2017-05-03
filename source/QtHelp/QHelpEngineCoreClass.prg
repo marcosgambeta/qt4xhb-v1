@@ -113,15 +113,15 @@ HB_FUNC_STATIC( QHELPENGINECORE_ADDCUSTOMFILTER )
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-QStringList par2;
-PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
-int i2;
-int nLen2 = hb_arrayLen(aStrings2);
-for (i2=0;i2<nLen2;i2++)
-{
-QString temp = hb_arrayGetCPtr(aStrings2, i2+1);
-par2 << temp;
-}
+    QStringList par2 = _qt4xhb_convert_array_parameter_to_qstringlist(2);
+    //PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
+    //int i2;
+    //int nLen2 = hb_arrayLen(aStrings2);
+    //for (i2=0;i2<nLen2;i2++)
+    //{
+    //  QString temp = hb_arrayGetCPtr(aStrings2, i2+1);
+    //  par2 << temp;
+    //}
     hb_retl( obj->addCustomFilter ( PQSTRING(1), par2 ) );
   }
 }
@@ -270,15 +270,15 @@ HB_FUNC_STATIC( QHELPENGINECORE_FILES )
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-QStringList par2;
-PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
-int i2;
-int nLen2 = hb_arrayLen(aStrings2);
-for (i2=0;i2<nLen2;i2++)
-{
-QString temp = hb_arrayGetCPtr(aStrings2, i2+1);
-par2 << temp;
-}
+    QStringList par2 = _qt4xhb_convert_array_parameter_to_qstringlist(2);
+    //PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
+    //int i2;
+    //int nLen2 = hb_arrayLen(aStrings2);
+    //for (i2=0;i2<nLen2;i2++)
+    //{
+    //  QString temp = hb_arrayGetCPtr(aStrings2, i2+1);
+    //  par2 << temp;
+    //}
     QString par3 = ISNIL(3)? QString() : hb_parc(3);
     QList<QUrl> list = obj->files ( PQSTRING(1), par2, par3 );
     PHB_DYNS pDynSym;
