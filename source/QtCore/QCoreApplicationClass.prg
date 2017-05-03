@@ -176,8 +176,7 @@ void addLibraryPath ( const QString & path )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_ADDLIBRARYPATH )
 {
-  QString par1 = hb_parc(1);
-  QCoreApplication::addLibraryPath ( par1 );
+  QCoreApplication::addLibraryPath ( PQSTRING(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -437,8 +436,7 @@ void removeLibraryPath ( const QString & path )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_REMOVELIBRARYPATH )
 {
-  QString par1 = hb_parc(1);
-  QCoreApplication::removeLibraryPath ( par1 );
+  QCoreApplication::removeLibraryPath ( PQSTRING(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -543,8 +541,7 @@ void setApplicationName ( const QString & application )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_SETAPPLICATIONNAME )
 {
-  QString par1 = hb_parc(1);
-  QCoreApplication::setApplicationName ( par1 );
+  QCoreApplication::setApplicationName ( PQSTRING(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -554,8 +551,7 @@ void setApplicationVersion ( const QString & version )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_SETAPPLICATIONVERSION )
 {
-  QString par1 = hb_parc(1);
-  QCoreApplication::setApplicationVersion ( par1 );
+  QCoreApplication::setApplicationVersion ( PQSTRING(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -594,8 +590,7 @@ void setOrganizationDomain ( const QString & orgDomain )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_SETORGANIZATIONDOMAIN )
 {
-  QString par1 = hb_parc(1);
-  QCoreApplication::setOrganizationDomain ( par1 );
+  QCoreApplication::setOrganizationDomain ( PQSTRING(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -605,8 +600,7 @@ void setOrganizationName ( const QString & orgName )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_SETORGANIZATIONNAME )
 {
-  QString par1 = hb_parc(1);
-  QCoreApplication::setOrganizationName ( par1 );
+  QCoreApplication::setOrganizationName ( PQSTRING(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

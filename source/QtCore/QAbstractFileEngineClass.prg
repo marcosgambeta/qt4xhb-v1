@@ -142,8 +142,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_COPY )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    hb_retl( obj->copy ( par1 ) );
+    hb_retl( obj->copy ( PQSTRING(1) ) );
   }
 }
 
@@ -309,8 +308,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_LINK )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    hb_retl( obj->link ( par1 ) );
+    hb_retl( obj->link ( PQSTRING(1) ) );
   }
 }
 
@@ -324,8 +322,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_MKDIR )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    hb_retl( obj->mkdir ( par1, PBOOL(2) ) );
+    hb_retl( obj->mkdir ( PQSTRING(1), PBOOL(2) ) );
   }
 }
 
@@ -422,8 +419,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_RENAME )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    hb_retl( obj->rename ( par1 ) );
+    hb_retl( obj->rename ( PQSTRING(1) ) );
   }
 }
 
@@ -436,8 +432,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_RMDIR )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    hb_retl( obj->rmdir ( par1, PBOOL(2) ) );
+    hb_retl( obj->rmdir ( PQSTRING(1), PBOOL(2) ) );
   }
 }
 
@@ -464,8 +459,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_SETFILENAME )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setFileName ( par1 );
+    obj->setFileName ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -548,8 +542,7 @@ QAbstractFileEngine * create ( const QString & fileName )
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_CREATE )
 {
-  QString par1 = hb_parc(1);
-  QAbstractFileEngine * ptr = QAbstractFileEngine::create ( par1 );
+  QAbstractFileEngine * ptr = QAbstractFileEngine::create ( PQSTRING(1) );
   _qt4xhb_createReturnClass ( ptr, "QABSTRACTFILEENGINE" );
 }
 

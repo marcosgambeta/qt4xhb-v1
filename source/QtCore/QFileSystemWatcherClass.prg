@@ -131,8 +131,7 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_ADDPATH )
   QFileSystemWatcher * obj = (QFileSystemWatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->addPath ( par1 );
+    obj->addPath ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -215,8 +214,7 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_REMOVEPATH )
   QFileSystemWatcher * obj = (QFileSystemWatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->removePath ( par1 );
+    obj->removePath ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

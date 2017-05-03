@@ -131,8 +131,7 @@ HB_FUNC_STATIC( QMIMEDATA_DATA )
   QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QByteArray * ptr = new QByteArray( obj->data ( par1 ) );
+    QByteArray * ptr = new QByteArray( obj->data ( PQSTRING(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -182,8 +181,7 @@ HB_FUNC_STATIC( QMIMEDATA_HASFORMAT )
   QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    hb_retl( obj->hasFormat ( par1 ) );
+    hb_retl( obj->hasFormat ( PQSTRING(1) ) );
   }
 }
 
@@ -276,8 +274,7 @@ HB_FUNC_STATIC( QMIMEDATA_REMOVEFORMAT )
   QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->removeFormat ( par1 );
+    obj->removeFormat ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -306,9 +303,8 @@ HB_FUNC_STATIC( QMIMEDATA_SETDATA )
   QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
     QByteArray * par2 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setData ( par1, *par2 );
+    obj->setData ( PQSTRING(1), *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -322,8 +318,7 @@ HB_FUNC_STATIC( QMIMEDATA_SETHTML )
   QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setHtml ( par1 );
+    obj->setHtml ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -352,8 +347,7 @@ HB_FUNC_STATIC( QMIMEDATA_SETTEXT )
   QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setText ( par1 );
+    obj->setText ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

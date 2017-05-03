@@ -69,8 +69,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEHANDLER_CREATE )
   QAbstractFileEngineHandler * obj = (QAbstractFileEngineHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QAbstractFileEngine * ptr = obj->create ( par1 );
+    QAbstractFileEngine * ptr = obj->create ( PQSTRING(1) );
     _qt4xhb_createReturnClass ( ptr, "QABSTRACTFILEENGINE" );
   }
 }

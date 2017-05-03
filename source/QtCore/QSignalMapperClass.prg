@@ -112,8 +112,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_SETMAPPING2 )
   if( obj )
   {
     QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString par2 = hb_parc(2);
-    obj->setMapping ( par1, par2 );
+    obj->setMapping ( par1, PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -213,8 +212,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING2 )
   QSignalMapper * obj = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QObject * ptr = obj->mapping ( par1 );
+    QObject * ptr = obj->mapping ( PQSTRING(1) );
     _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }

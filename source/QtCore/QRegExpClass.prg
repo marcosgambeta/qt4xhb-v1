@@ -91,8 +91,7 @@ QRegExp ( const QString & pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive, P
 HB_FUNC_STATIC( QREGEXP_NEW2 )
 {
   QRegExp * o = NULL;
-  QString par1 = hb_parc(1);
-  o = new QRegExp ( par1, ISNIL(2)? Qt::CaseSensitive : (Qt::CaseSensitivity) hb_parni(2), ISNIL(3)? QRegExp::RegExp : (QRegExp::PatternSyntax) hb_parni(3) );
+  o = new QRegExp ( PQSTRING(1), ISNIL(2)? Qt::CaseSensitive : (Qt::CaseSensitivity) hb_parni(2), ISNIL(3)? QRegExp::RegExp : (QRegExp::PatternSyntax) hb_parni(3) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QRegExp *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -248,8 +247,7 @@ HB_FUNC_STATIC( QREGEXP_EXACTMATCH )
   QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    hb_retl( obj->exactMatch ( par1 ) );
+    hb_retl( obj->exactMatch ( PQSTRING(1) ) );
   }
 }
 
@@ -262,8 +260,7 @@ HB_FUNC_STATIC( QREGEXP_INDEXIN )
   QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    hb_retni( obj->indexIn ( par1, ISNIL(2)? 0 : hb_parni(2), ISNIL(3)? QRegExp::CaretAtZero : (QRegExp::CaretMode) hb_parni(3) ) );
+    hb_retni( obj->indexIn ( PQSTRING(1), ISNIL(2)? 0 : hb_parni(2), ISNIL(3)? QRegExp::CaretAtZero : (QRegExp::CaretMode) hb_parni(3) ) );
   }
 }
 
@@ -315,8 +312,7 @@ HB_FUNC_STATIC( QREGEXP_LASTINDEXIN )
   QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    hb_retni( obj->lastIndexIn ( par1, ISNIL(2)? -1 : hb_parni(2), ISNIL(3)? QRegExp::CaretAtZero : (QRegExp::CaretMode) hb_parni(3) ) );
+    hb_retni( obj->lastIndexIn ( PQSTRING(1), ISNIL(2)? -1 : hb_parni(2), ISNIL(3)? QRegExp::CaretAtZero : (QRegExp::CaretMode) hb_parni(3) ) );
   }
 }
 
@@ -410,8 +406,7 @@ HB_FUNC_STATIC( QREGEXP_SETPATTERN )
   QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setPattern ( par1 );
+    obj->setPattern ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -437,8 +432,7 @@ QString escape ( const QString & str )
 */
 HB_FUNC_STATIC( QREGEXP_ESCAPE )
 {
-  QString par1 = hb_parc(1);
-  QString str1 = QRegExp::escape ( par1 );
+  QString str1 = QRegExp::escape ( PQSTRING(1) );
   hb_retc( (const char *) str1.toLatin1().data() );
 }
 

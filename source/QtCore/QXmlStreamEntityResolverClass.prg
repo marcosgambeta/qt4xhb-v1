@@ -66,8 +66,7 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYRESOLVER_RESOLVEUNDECLAREDENTITY )
   QXmlStreamEntityResolver * obj = (QXmlStreamEntityResolver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QString str1 = obj->resolveUndeclaredEntity ( par1 );
+    QString str1 = obj->resolveUndeclaredEntity ( PQSTRING(1) );
     hb_retc( (const char *) str1.toLatin1().data() );
   }
 }

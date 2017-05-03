@@ -112,8 +112,7 @@ QUuid(const QString &)
 HB_FUNC_STATIC( QUUID_NEW3 )
 {
   QUuid * o = NULL;
-  QString par1 = hb_parc(1);
-  o = new QUuid ( par1 );
+  o = new QUuid ( PQSTRING(1) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QUuid *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );

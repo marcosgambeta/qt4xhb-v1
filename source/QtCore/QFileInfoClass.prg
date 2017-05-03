@@ -123,8 +123,7 @@ QFileInfo(const QString & file)
 HB_FUNC_STATIC( QFILEINFO_NEW2 )
 {
   QFileInfo * o = NULL;
-  QString par1 = hb_parc(1);
-  o = new QFileInfo ( par1 );
+  o = new QFileInfo ( PQSTRING(1) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QFileInfo *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -162,8 +161,7 @@ HB_FUNC_STATIC( QFILEINFO_NEW4 )
 {
   QFileInfo * o = NULL;
   QDir * par1 = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QString par2 = hb_parc(2);
-  o = new QFileInfo ( *par1, par2 );
+  o = new QFileInfo ( *par1, PQSTRING(2) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QFileInfo *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -767,8 +765,7 @@ HB_FUNC_STATIC( QFILEINFO_SETFILE1 )
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setFile ( par1 );
+    obj->setFile ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -798,8 +795,7 @@ HB_FUNC_STATIC( QFILEINFO_SETFILE3 )
   if( obj )
   {
     QDir * par1 = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString par2 = hb_parc(2);
-    obj->setFile ( *par1, par2 );
+    obj->setFile ( *par1, PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

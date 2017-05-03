@@ -73,9 +73,8 @@ QSharedMemory(const QString &key, QObject *parent = 0)
 HB_FUNC_STATIC( QSHAREDMEMORY_NEW2 )
 {
   QSharedMemory * o = NULL;
-  QString par1 = hb_parc(1);
   QObject * par2 = ISNIL(2)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSharedMemory ( par1, par2 );
+  o = new QSharedMemory ( PQSTRING(1), par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSharedMemory *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -127,8 +126,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_SETKEY )
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setKey ( par1 );
+    obj->setKey ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -156,8 +154,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_SETNATIVEKEY )
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setNativeKey ( par1 );
+    obj->setNativeKey ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -373,8 +373,7 @@ HB_FUNC_STATIC( QDATE_TOSTRING1 )
   QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QString str1 = obj->toString ( par1 );
+    QString str1 = obj->toString ( PQSTRING(1) );
     hb_retc( (const char *) str1.toLatin1().data() );
   }
 }
@@ -463,8 +462,7 @@ QDate fromString ( const QString & string, Qt::DateFormat format = Qt::TextDate 
 */
 HB_FUNC_STATIC( QDATE_FROMSTRING1 )
 {
-  QString par1 = hb_parc(1);
-  QDate * ptr = new QDate( QDate::fromString ( par1, ISNIL(2)? Qt::TextDate : (Qt::DateFormat) hb_parni(2) ) );
+  QDate * ptr = new QDate( QDate::fromString ( PQSTRING(1), ISNIL(2)? Qt::TextDate : (Qt::DateFormat) hb_parni(2) ) );
   _qt4xhb_createReturnClass ( ptr, "QDATE", true );
 }
 
@@ -474,9 +472,7 @@ QDate fromString ( const QString & string, const QString & format )
 */
 HB_FUNC_STATIC( QDATE_FROMSTRING2 )
 {
-  QString par1 = hb_parc(1);
-  QString par2 = hb_parc(2);
-  QDate * ptr = new QDate( QDate::fromString ( par1, par2 ) );
+  QDate * ptr = new QDate( QDate::fromString ( PQSTRING(1), PQSTRING(2) ) );
   _qt4xhb_createReturnClass ( ptr, "QDATE", true );
 }
 

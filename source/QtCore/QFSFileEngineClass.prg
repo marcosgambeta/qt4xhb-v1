@@ -102,8 +102,7 @@ QFSFileEngine ( const QString & file )
 HB_FUNC_STATIC( QFSFILEENGINE_NEW2 )
 {
   QFSFileEngine * o = NULL;
-  QString par1 = hb_parc(1);
-  o = new QFSFileEngine ( par1 );
+  o = new QFSFileEngine ( PQSTRING(1) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QFSFileEngine *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -262,8 +261,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_COPY )
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    hb_retl( obj->copy ( par1 ) );
+    hb_retl( obj->copy ( PQSTRING(1) ) );
   }
 }
 
@@ -370,8 +368,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_LINK )
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    hb_retl( obj->link ( par1 ) );
+    hb_retl( obj->link ( PQSTRING(1) ) );
   }
 }
 
@@ -384,8 +381,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_MKDIR )
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    hb_retl( obj->mkdir ( par1, PBOOL(2) ) );
+    hb_retl( obj->mkdir ( PQSTRING(1), PBOOL(2) ) );
   }
 }
 
@@ -485,8 +481,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_RENAME )
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    hb_retl( obj->rename ( par1 ) );
+    hb_retl( obj->rename ( PQSTRING(1) ) );
   }
 }
 
@@ -499,8 +494,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_RMDIR )
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    hb_retl( obj->rmdir ( par1, PBOOL(2) ) );
+    hb_retl( obj->rmdir ( PQSTRING(1), PBOOL(2) ) );
   }
 }
 
@@ -527,8 +521,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_SETFILENAME )
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setFileName ( par1 );
+    obj->setFileName ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -681,8 +674,7 @@ bool setCurrentPath ( const QString & path )
 */
 HB_FUNC_STATIC( QFSFILEENGINE_SETCURRENTPATH )
 {
-  QString par1 = hb_parc(1);
-  hb_retl( QFSFileEngine::setCurrentPath ( par1 ) );
+  hb_retl( QFSFileEngine::setCurrentPath ( PQSTRING(1) ) );
 }
 
 

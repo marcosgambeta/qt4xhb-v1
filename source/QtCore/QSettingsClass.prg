@@ -84,10 +84,9 @@ QSettings ( const QString & organization, const QString & application = QString(
 HB_FUNC_STATIC( QSETTINGS_NEW1 )
 {
   QSettings * o = NULL;
-  QString par1 = hb_parc(1);
   QString par2 = ISNIL(2)? QString() : hb_parc(2);
   QObject * par3 = ISNIL(3)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSettings ( par1, par2, par3 );
+  o = new QSettings ( PQSTRING(1), par2, par3 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSettings *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -102,10 +101,9 @@ QSettings ( Scope scope, const QString & organization, const QString & applicati
 HB_FUNC_STATIC( QSETTINGS_NEW2 )
 {
   QSettings * o = NULL;
-  QString par2 = hb_parc(2);
   QString par3 = ISNIL(3)? QString() : hb_parc(3);
   QObject * par4 = ISNIL(4)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSettings (  (QSettings::Scope) hb_parni(1), par2, par3, par4 );
+  o = new QSettings (  (QSettings::Scope) hb_parni(1), PQSTRING(2), par3, par4 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSettings *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -120,10 +118,9 @@ QSettings ( Format format, Scope scope, const QString & organization, const QStr
 HB_FUNC_STATIC( QSETTINGS_NEW3 )
 {
   QSettings * o = NULL;
-  QString par3 = hb_parc(3);
   QString par4 = ISNIL(4)? QString() : hb_parc(4);
   QObject * par5 = ISNIL(5)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(5, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSettings (  (QSettings::Format) hb_parni(1),  (QSettings::Scope) hb_parni(2), par3, par4, par5 );
+  o = new QSettings (  (QSettings::Format) hb_parni(1),  (QSettings::Scope) hb_parni(2), PQSTRING(3), par4, par5 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSettings *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -138,9 +135,8 @@ QSettings ( const QString & fileName, Format format, QObject * parent = 0 )
 HB_FUNC_STATIC( QSETTINGS_NEW4 )
 {
   QSettings * o = NULL;
-  QString par1 = hb_parc(1);
   QObject * par3 = ISNIL(3)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSettings ( par1,  (QSettings::Format) hb_parni(2), par3 );
+  o = new QSettings ( PQSTRING(1),  (QSettings::Format) hb_parni(2), par3 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSettings *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -261,8 +257,7 @@ HB_FUNC_STATIC( QSETTINGS_BEGINGROUP )
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->beginGroup ( par1 );
+    obj->beginGroup ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -276,8 +271,7 @@ HB_FUNC_STATIC( QSETTINGS_BEGINREADARRAY )
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    hb_retni( obj->beginReadArray ( par1 ) );
+    hb_retni( obj->beginReadArray ( PQSTRING(1) ) );
   }
 }
 
@@ -290,8 +284,7 @@ HB_FUNC_STATIC( QSETTINGS_BEGINWRITEARRAY )
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->beginWriteArray ( par1, ISNIL(2)? -1 : hb_parni(2) );
+    obj->beginWriteArray ( PQSTRING(1), ISNIL(2)? -1 : hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -365,8 +358,7 @@ HB_FUNC_STATIC( QSETTINGS_CONTAINS )
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    hb_retl( obj->contains ( par1 ) );
+    hb_retl( obj->contains ( PQSTRING(1) ) );
   }
 }
 
@@ -502,8 +494,7 @@ HB_FUNC_STATIC( QSETTINGS_REMOVE )
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->remove ( par1 );
+    obj->remove ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -600,9 +591,8 @@ HB_FUNC_STATIC( QSETTINGS_SETVALUE )
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
     QVariant * par2 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setValue ( par1, *par2 );
+    obj->setValue ( PQSTRING(1), *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -643,9 +633,8 @@ HB_FUNC_STATIC( QSETTINGS_VALUE )
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
     QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QVariant * ptr = new QVariant( obj->value ( par1, par2 ) );
+    QVariant * ptr = new QVariant( obj->value ( PQSTRING(1), par2 ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -677,8 +666,7 @@ void setPath ( Format format, Scope scope, const QString & path )
 */
 HB_FUNC_STATIC( QSETTINGS_SETPATH )
 {
-  QString par3 = hb_parc(3);
-  QSettings::setPath (  (QSettings::Format) hb_parni(1),  (QSettings::Scope) hb_parni(2), par3 );
+  QSettings::setPath (  (QSettings::Format) hb_parni(1),  (QSettings::Scope) hb_parni(2), PQSTRING(3) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

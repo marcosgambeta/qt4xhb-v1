@@ -94,8 +94,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW3 )
 {
   QTextBoundaryFinder * o = NULL;
   int par1 = hb_parni(1);
-  QString par2 = hb_parc(2);
-  o = new QTextBoundaryFinder (  (QTextBoundaryFinder::BoundaryType) par1, par2 );
+  o = new QTextBoundaryFinder (  (QTextBoundaryFinder::BoundaryType) par1, PQSTRING(2) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextBoundaryFinder *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );

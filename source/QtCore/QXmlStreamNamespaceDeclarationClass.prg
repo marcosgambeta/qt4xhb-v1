@@ -93,9 +93,7 @@ QXmlStreamNamespaceDeclaration(const QString & prefix, const QString & namespace
 HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NEW3 )
 {
   QXmlStreamNamespaceDeclaration * o = NULL;
-  QString par1 = hb_parc(1);
-  QString par2 = hb_parc(2);
-  o = new QXmlStreamNamespaceDeclaration ( par1, par2 );
+  o = new QXmlStreamNamespaceDeclaration ( PQSTRING(1), PQSTRING(2) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QXmlStreamNamespaceDeclaration *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );

@@ -329,8 +329,7 @@ HB_FUNC_STATIC( QPROCESS_SETNATIVEARGUMENTS )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setNativeArguments ( par1 );
+    obj->setNativeArguments ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -387,8 +386,7 @@ HB_FUNC_STATIC( QPROCESS_SETSTANDARDERRORFILE )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setStandardErrorFile ( par1, ISNIL(2)? QIODevice::Truncate : (QIODevice::OpenMode) hb_parni(2) );
+    obj->setStandardErrorFile ( PQSTRING(1), ISNIL(2)? QIODevice::Truncate : (QIODevice::OpenMode) hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -402,8 +400,7 @@ HB_FUNC_STATIC( QPROCESS_SETSTANDARDINPUTFILE )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setStandardInputFile ( par1 );
+    obj->setStandardInputFile ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -417,8 +414,7 @@ HB_FUNC_STATIC( QPROCESS_SETSTANDARDOUTPUTFILE )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setStandardOutputFile ( par1, ISNIL(2)? QIODevice::Truncate : (QIODevice::OpenMode) hb_parni(2) );
+    obj->setStandardOutputFile ( PQSTRING(1), ISNIL(2)? QIODevice::Truncate : (QIODevice::OpenMode) hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -447,8 +443,7 @@ HB_FUNC_STATIC( QPROCESS_SETWORKINGDIRECTORY )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setWorkingDirectory ( par1 );
+    obj->setWorkingDirectory ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -462,7 +457,6 @@ HB_FUNC_STATIC( QPROCESS_START1 )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
 QStringList par2;
 PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
 int i2;
@@ -472,7 +466,7 @@ for (i2=0;i2<nLen2;i2++)
 QString temp = hb_arrayGetCPtr(aStrings2, i2+1);
 par2 << temp;
 }
-    obj->start ( par1, par2, ISNIL(3)? QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3) );
+    obj->start ( PQSTRING(1), par2, ISNIL(3)? QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -486,8 +480,7 @@ HB_FUNC_STATIC( QPROCESS_START2 )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->start ( par1, ISNIL(2)? QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(2) );
+    obj->start ( PQSTRING(1), ISNIL(2)? QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -703,7 +696,6 @@ int execute ( const QString & program, const QStringList & arguments )
 */
 HB_FUNC_STATIC( QPROCESS_EXECUTE1 )
 {
-  QString par1 = hb_parc(1);
 QStringList par2;
 PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
 int i2;
@@ -713,7 +705,7 @@ for (i2=0;i2<nLen2;i2++)
 QString temp = hb_arrayGetCPtr(aStrings2, i2+1);
 par2 << temp;
 }
-  hb_retni( QProcess::execute ( par1, par2 ) );
+  hb_retni( QProcess::execute ( PQSTRING(1), par2 ) );
 }
 
 
@@ -722,8 +714,7 @@ int execute ( const QString & program )
 */
 HB_FUNC_STATIC( QPROCESS_EXECUTE2 )
 {
-  QString par1 = hb_parc(1);
-  hb_retni( QProcess::execute ( par1 ) );
+  hb_retni( QProcess::execute ( PQSTRING(1) ) );
 }
 
 
@@ -747,7 +738,6 @@ bool startDetached ( const QString & program, const QStringList & arguments, con
 */
 HB_FUNC_STATIC( QPROCESS_STARTDETACHED1 )
 {
-  QString par1 = hb_parc(1);
 QStringList par2;
 PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
 int i2;
@@ -757,9 +747,8 @@ for (i2=0;i2<nLen2;i2++)
 QString temp = hb_arrayGetCPtr(aStrings2, i2+1);
 par2 << temp;
 }
-  QString par3 = hb_parc(3);
   qint64 * par4 = (qint64 *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-  hb_retl( QProcess::startDetached ( par1, par2, par3, par4 ) );
+  hb_retl( QProcess::startDetached ( PQSTRING(1), par2, PQSTRING(3), par4 ) );
 }
 
 
@@ -768,7 +757,6 @@ bool startDetached ( const QString & program, const QStringList & arguments )
 */
 HB_FUNC_STATIC( QPROCESS_STARTDETACHED2 )
 {
-  QString par1 = hb_parc(1);
 QStringList par2;
 PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
 int i2;
@@ -778,7 +766,7 @@ for (i2=0;i2<nLen2;i2++)
 QString temp = hb_arrayGetCPtr(aStrings2, i2+1);
 par2 << temp;
 }
-  hb_retl( QProcess::startDetached ( par1, par2 ) );
+  hb_retl( QProcess::startDetached ( PQSTRING(1), par2 ) );
 }
 
 
@@ -787,8 +775,7 @@ bool startDetached ( const QString & program )
 */
 HB_FUNC_STATIC( QPROCESS_STARTDETACHED3 )
 {
-  QString par1 = hb_parc(1);
-  hb_retl( QProcess::startDetached ( par1 ) );
+  hb_retl( QProcess::startDetached ( PQSTRING(1) ) );
 }
 
 

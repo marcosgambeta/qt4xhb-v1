@@ -105,8 +105,7 @@ HB_FUNC_STATIC( QTEXTCODEC_CANENCODE2 )
   QTextCodec * obj = (QTextCodec *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    hb_retl( obj->canEncode ( par1 ) );
+    hb_retl( obj->canEncode ( PQSTRING(1) ) );
   }
 }
 
@@ -181,8 +180,7 @@ HB_FUNC_STATIC( QTEXTCODEC_FROMUNICODE1 )
   QTextCodec * obj = (QTextCodec *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QByteArray * ptr = new QByteArray( obj->fromUnicode ( par1 ) );
+    QByteArray * ptr = new QByteArray( obj->fromUnicode ( PQSTRING(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }

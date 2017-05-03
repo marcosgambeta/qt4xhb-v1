@@ -1930,8 +1930,7 @@ HB_FUNC_STATIC( QOBJECT_SETOBJECTNAME )
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setObjectName ( par1 );
+    obj->setObjectName ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

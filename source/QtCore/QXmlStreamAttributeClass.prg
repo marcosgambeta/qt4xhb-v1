@@ -79,9 +79,7 @@ QXmlStreamAttribute(const QString & qualifiedName, const QString & value)
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NEW2 )
 {
   QXmlStreamAttribute * o = NULL;
-  QString par1 = hb_parc(1);
-  QString par2 = hb_parc(2);
-  o = new QXmlStreamAttribute ( par1, par2 );
+  o = new QXmlStreamAttribute ( PQSTRING(1), PQSTRING(2) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QXmlStreamAttribute *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -99,10 +97,7 @@ QXmlStreamAttribute(const QString & namespaceUri, const QString & name, const QS
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NEW3 )
 {
   QXmlStreamAttribute * o = NULL;
-  QString par1 = hb_parc(1);
-  QString par2 = hb_parc(2);
-  QString par3 = hb_parc(3);
-  o = new QXmlStreamAttribute ( par1, par2, par3 );
+  o = new QXmlStreamAttribute ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QXmlStreamAttribute *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );

@@ -183,8 +183,7 @@ HB_FUNC_STATIC( QRESOURCE_SETFILENAME )
   QResource * obj = (QResource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setFileName ( par1 );
+    obj->setFileName ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -225,9 +224,8 @@ bool registerResource ( const QString & rccFileName, const QString & mapRoot = Q
 */
 HB_FUNC_STATIC( QRESOURCE_REGISTERRESOURCE )
 {
-  QString par1 = hb_parc(1);
   QString par2 = ISNIL(2)? QString() : hb_parc(2);
-  hb_retl( QResource::registerResource ( par1, par2 ) );
+  hb_retl( QResource::registerResource ( PQSTRING(1), par2 ) );
 }
 
 
@@ -237,9 +235,8 @@ bool unregisterResource ( const QString & rccFileName, const QString & mapRoot =
 */
 HB_FUNC_STATIC( QRESOURCE_UNREGISTERRESOURCE )
 {
-  QString par1 = hb_parc(1);
   QString par2 = ISNIL(2)? QString() : hb_parc(2);
-  hb_retl( QResource::unregisterResource ( par1, par2 ) );
+  hb_retl( QResource::unregisterResource ( PQSTRING(1), par2 ) );
 }
 
 
