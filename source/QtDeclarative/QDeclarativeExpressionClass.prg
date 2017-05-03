@@ -82,9 +82,8 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NEW2 )
   QDeclarativeExpression * o = NULL;
   QDeclarativeContext * par1 = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QObject * par2 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QString par3 = hb_parc(3);
   QObject * par4 = ISNIL(4)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDeclarativeExpression ( par1, par2, par3, par4 );
+  o = new QDeclarativeExpression ( par1, par2, PQSTRING(3), par4 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDeclarativeExpression *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -275,8 +274,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SETEXPRESSION )
   QDeclarativeExpression * obj = (QDeclarativeExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setExpression ( par1 );
+    obj->setExpression ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -304,8 +302,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SETSOURCELOCATION )
   QDeclarativeExpression * obj = (QDeclarativeExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setSourceLocation ( par1, PINT(2) );
+    obj->setSourceLocation ( PQSTRING(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
