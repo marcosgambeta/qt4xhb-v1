@@ -268,9 +268,8 @@ HB_FUNC_STATIC( QSCRIPTENGINE_EVALUATE1 )
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
     QString par2 = ISNIL(2)? QString() : hb_parc(2);
-    QScriptValue * ptr = new QScriptValue( obj->evaluate ( par1, par2, ISNIL(3)? 1 : hb_parni(3) ) );
+    QScriptValue * ptr = new QScriptValue( obj->evaluate ( PQSTRING(1), par2, ISNIL(3)? 1 : hb_parni(3) ) );
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
@@ -342,8 +341,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_IMPORTEXTENSION )
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QScriptValue * ptr = new QScriptValue( obj->importExtension ( par1 ) );
+    QScriptValue * ptr = new QScriptValue( obj->importExtension ( PQSTRING(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
@@ -446,9 +444,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWREGEXP2 )
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QString par2 = hb_parc(2);
-    QScriptValue * ptr = new QScriptValue( obj->newRegExp ( par1, par2 ) );
+    QScriptValue * ptr = new QScriptValue( obj->newRegExp ( PQSTRING(1), PQSTRING(2) ) );
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
@@ -668,8 +664,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_TOSTRINGHANDLE )
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QScriptString * ptr = new QScriptString( obj->toStringHandle ( par1 ) );
+    QScriptString * ptr = new QScriptString( obj->toStringHandle ( PQSTRING(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTSTRING" );
   }
 }
@@ -745,8 +740,7 @@ QScriptSyntaxCheckResult checkSyntax ( const QString & program )
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_CHECKSYNTAX )
 {
-  QString par1 = hb_parc(1);
-  QScriptSyntaxCheckResult * ptr = new QScriptSyntaxCheckResult( QScriptEngine::checkSyntax ( par1 ) );
+  QScriptSyntaxCheckResult * ptr = new QScriptSyntaxCheckResult( QScriptEngine::checkSyntax ( PQSTRING(1) ) );
   _qt4xhb_createReturnClass ( ptr, "QSCRIPTSYNTAXCHECKRESULT" );
 }
 

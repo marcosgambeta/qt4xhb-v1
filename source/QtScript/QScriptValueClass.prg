@@ -219,8 +219,7 @@ QScriptValue ( const QString & value )
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW8 )
 {
   QScriptValue * o = NULL;
-  QString par1 = hb_parc(1);
-  o = new QScriptValue ( par1 );
+  o = new QScriptValue ( PQSTRING(1) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QScriptValue *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
