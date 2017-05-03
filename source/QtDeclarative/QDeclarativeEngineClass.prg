@@ -354,8 +354,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETIMPORTPATHLIST )
   QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList par1 = _qt4xhb_convert_array_parameter_to_qstringlist(1);
-    obj->setImportPathList ( par1 );
+    obj->setImportPathList ( PQSTRINGLIST(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -412,8 +411,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETPLUGINPATHLIST )
   QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList par1 = _qt4xhb_convert_array_parameter_to_qstringlist(1);
-    obj->setPluginPathList ( par1 );
+    obj->setPluginPathList ( PQSTRINGLIST(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

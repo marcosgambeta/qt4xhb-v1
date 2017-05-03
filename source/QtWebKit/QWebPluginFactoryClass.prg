@@ -65,9 +65,7 @@ HB_FUNC_STATIC( QWEBPLUGINFACTORY_CREATE )
   if( obj )
   {
     QUrl * par2 = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QStringList par3 = _qt4xhb_convert_array_parameter_to_qstringlist(3);
-    QStringList par4 = _qt4xhb_convert_array_parameter_to_qstringlist(4);
-    QObject * ptr = obj->create ( PQSTRING(1), *par2, par3, par4 );
+    QObject * ptr = obj->create ( PQSTRING(1), *par2, PQSTRINGLIST(3), PQSTRINGLIST(4) );
     _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }

@@ -1339,8 +1339,7 @@ void setIdnWhitelist ( const QStringList & list )
 */
 HB_FUNC_STATIC( QURL_SETIDNWHITELIST )
 {
-  QStringList par1 = _qt4xhb_convert_array_parameter_to_qstringlist(1);
-  QUrl::setIdnWhitelist ( par1 );
+  QUrl::setIdnWhitelist ( PQSTRINGLIST(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

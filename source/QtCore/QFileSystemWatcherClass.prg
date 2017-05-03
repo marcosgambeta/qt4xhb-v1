@@ -69,9 +69,8 @@ QFileSystemWatcher(const QStringList & paths, QObject * parent = 0)
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_NEW2 )
 {
   QFileSystemWatcher * o = NULL;
-  QStringList par1 = _qt4xhb_convert_array_parameter_to_qstringlist(1);
   QObject * par2 = ISNIL(2)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QFileSystemWatcher ( par1, par2 );
+  o = new QFileSystemWatcher ( PQSTRINGLIST(1), par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QFileSystemWatcher *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -137,8 +136,7 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_ADDPATHS )
   QFileSystemWatcher * obj = (QFileSystemWatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList par1 = _qt4xhb_convert_array_parameter_to_qstringlist(1);
-    obj->addPaths ( par1 );
+    obj->addPaths ( PQSTRINGLIST(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -212,8 +210,7 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_REMOVEPATHS )
   QFileSystemWatcher * obj = (QFileSystemWatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList par1 = _qt4xhb_convert_array_parameter_to_qstringlist(1);
-    obj->removePaths ( par1 );
+    obj->removePaths ( PQSTRINGLIST(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -970,8 +970,7 @@ void insertSubstitutions ( const QString & familyName, const QStringList & subst
 */
 HB_FUNC_STATIC( QFONT_INSERTSUBSTITUTIONS )
 {
-  QStringList par2 = _qt4xhb_convert_array_parameter_to_qstringlist(2);
-  QFont::insertSubstitutions ( PQSTRING(1), par2 );
+  QFont::insertSubstitutions ( PQSTRING(1), PQSTRINGLIST(2) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

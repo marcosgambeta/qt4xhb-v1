@@ -63,8 +63,7 @@ QHelpSearchQuery ( FieldName field, const QStringList & wordList )
 HB_FUNC_STATIC( QHELPSEARCHQUERY_NEW2 )
 {
   QHelpSearchQuery * o = NULL;
-  QStringList par2 = _qt4xhb_convert_array_parameter_to_qstringlist(2);
-  o = new QHelpSearchQuery (  (QHelpSearchQuery::FieldName) hb_parni(1), par2 );
+  o = new QHelpSearchQuery (  (QHelpSearchQuery::FieldName) hb_parni(1), PQSTRINGLIST(2) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QHelpSearchQuery *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );

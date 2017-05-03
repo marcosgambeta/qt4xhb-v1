@@ -313,8 +313,7 @@ HB_FUNC_STATIC( QDIR_ENTRYINFOLIST1 )
   int par3 = ISNIL(3)? (int) QDir::NoSort : hb_parni(3);
   if( obj )
   {
-    QStringList par1 = _qt4xhb_convert_array_parameter_to_qstringlist(1);
-    QFileInfoList list = obj->entryInfoList ( par1, (QDir::Filters) par2, (QDir::SortFlags) par3 );
+    QFileInfoList list = obj->entryInfoList ( PQSTRINGLIST(1), (QDir::Filters) par2, (QDir::SortFlags) par3 );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QFILEINFO" );
@@ -418,8 +417,7 @@ HB_FUNC_STATIC( QDIR_ENTRYLIST1 )
   int par3 = ISNIL(3)? (int) QDir::NoSort : hb_parni(3);
   if( obj )
   {
-    QStringList par1 = _qt4xhb_convert_array_parameter_to_qstringlist(1);
-    QStringList strl = obj->entryList ( par1, ISNIL(2)? QDir::NoFilter : (QDir::Filters) hb_parni(2), (QDir::SortFlags) par3 );
+    QStringList strl = obj->entryList ( PQSTRINGLIST(1), ISNIL(2)? QDir::NoFilter : (QDir::Filters) hb_parni(2), (QDir::SortFlags) par3 );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -772,8 +770,7 @@ HB_FUNC_STATIC( QDIR_SETNAMEFILTERS )
   QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList par1 = _qt4xhb_convert_array_parameter_to_qstringlist(1);
-    obj->setNameFilters ( par1 );
+    obj->setNameFilters ( PQSTRINGLIST(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -964,8 +961,7 @@ bool match(const QStringList & filters, const QString & fileName)
 */
 HB_FUNC_STATIC( QDIR_MATCH2 )
 {
-  QStringList par1 = _qt4xhb_convert_array_parameter_to_qstringlist(1);
-  hb_retl( QDir::match ( par1, PQSTRING(2) ) );
+  hb_retl( QDir::match ( PQSTRINGLIST(1), PQSTRING(2) ) );
 }
 
 
@@ -1047,8 +1043,7 @@ void setSearchPaths(const QString & prefix, const QStringList & searchPaths)
 */
 HB_FUNC_STATIC( QDIR_SETSEARCHPATHS )
 {
-  QStringList par2 = _qt4xhb_convert_array_parameter_to_qstringlist(2);
-  QDir::setSearchPaths ( PQSTRING(1), par2 );
+  QDir::setSearchPaths ( PQSTRING(1), PQSTRINGLIST(2) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

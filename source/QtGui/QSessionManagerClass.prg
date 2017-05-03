@@ -228,8 +228,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SETDISCARDCOMMAND )
   QSessionManager * obj = (QSessionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList par1 = _qt4xhb_convert_array_parameter_to_qstringlist(1);
-    obj->setDiscardCommand ( par1 );
+    obj->setDiscardCommand ( PQSTRINGLIST(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -243,8 +242,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SETMANAGERPROPERTY1 )
   QSessionManager * obj = (QSessionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList par2 = _qt4xhb_convert_array_parameter_to_qstringlist(2);
-    obj->setManagerProperty ( PQSTRING(1), par2 );
+    obj->setManagerProperty ( PQSTRING(1), PQSTRINGLIST(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -287,8 +285,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SETRESTARTCOMMAND )
   QSessionManager * obj = (QSessionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList par1 = _qt4xhb_convert_array_parameter_to_qstringlist(1);
-    obj->setRestartCommand ( par1 );
+    obj->setRestartCommand ( PQSTRINGLIST(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

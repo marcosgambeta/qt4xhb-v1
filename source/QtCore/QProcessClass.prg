@@ -306,8 +306,7 @@ HB_FUNC_STATIC( QPROCESS_SETENVIRONMENT )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList par1 = _qt4xhb_convert_array_parameter_to_qstringlist(1);
-    obj->setEnvironment ( par1 );
+    obj->setEnvironment ( PQSTRINGLIST(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -449,8 +448,7 @@ HB_FUNC_STATIC( QPROCESS_START1 )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList par2 = _qt4xhb_convert_array_parameter_to_qstringlist(2);
-    obj->start ( PQSTRING(1), par2, ISNIL(3)? QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3) );
+    obj->start ( PQSTRING(1), PQSTRINGLIST(2), ISNIL(3)? QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -680,8 +678,7 @@ int execute ( const QString & program, const QStringList & arguments )
 */
 HB_FUNC_STATIC( QPROCESS_EXECUTE1 )
 {
-  QStringList par2 = _qt4xhb_convert_array_parameter_to_qstringlist(2);
-  hb_retni( QProcess::execute ( PQSTRING(1), par2 ) );
+  hb_retni( QProcess::execute ( PQSTRING(1), PQSTRINGLIST(2) ) );
 }
 
 
@@ -714,9 +711,8 @@ bool startDetached ( const QString & program, const QStringList & arguments, con
 */
 HB_FUNC_STATIC( QPROCESS_STARTDETACHED1 )
 {
-  QStringList par2 = _qt4xhb_convert_array_parameter_to_qstringlist(2);
   qint64 * par4 = (qint64 *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-  hb_retl( QProcess::startDetached ( PQSTRING(1), par2, PQSTRING(3), par4 ) );
+  hb_retl( QProcess::startDetached ( PQSTRING(1), PQSTRINGLIST(2), PQSTRING(3), par4 ) );
 }
 
 
@@ -725,8 +721,7 @@ bool startDetached ( const QString & program, const QStringList & arguments )
 */
 HB_FUNC_STATIC( QPROCESS_STARTDETACHED2 )
 {
-  QStringList par2 = _qt4xhb_convert_array_parameter_to_qstringlist(2);
-  hb_retl( QProcess::startDetached ( PQSTRING(1), par2 ) );
+  hb_retl( QProcess::startDetached ( PQSTRING(1), PQSTRINGLIST(2) ) );
 }
 
 

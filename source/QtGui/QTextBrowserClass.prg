@@ -263,8 +263,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_SETSEARCHPATHS )
   QTextBrowser * obj = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList par1 = _qt4xhb_convert_array_parameter_to_qstringlist(1);
-    obj->setSearchPaths ( par1 );
+    obj->setSearchPaths ( PQSTRINGLIST(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

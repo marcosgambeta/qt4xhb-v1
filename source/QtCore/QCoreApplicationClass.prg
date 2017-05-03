@@ -571,8 +571,7 @@ void setLibraryPaths ( const QStringList & paths )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_SETLIBRARYPATHS )
 {
-  QStringList par1 = _qt4xhb_convert_array_parameter_to_qstringlist(1);
-  QCoreApplication::setLibraryPaths ( par1 );
+  QCoreApplication::setLibraryPaths ( PQSTRINGLIST(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

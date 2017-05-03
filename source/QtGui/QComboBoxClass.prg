@@ -204,8 +204,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ADDITEMS )
   QComboBox * obj = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList par1 = _qt4xhb_convert_array_parameter_to_qstringlist(1);
-    obj->addItems ( par1 );
+    obj->addItems ( PQSTRINGLIST(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -408,8 +407,7 @@ HB_FUNC_STATIC( QCOMBOBOX_INSERTITEMS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QStringList par2 = _qt4xhb_convert_array_parameter_to_qstringlist(2);
-    obj->insertItems ( par1, par2 );
+    obj->insertItems ( par1, PQSTRINGLIST(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

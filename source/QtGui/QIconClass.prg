@@ -546,8 +546,7 @@ void setThemeSearchPaths ( const QStringList & paths )
 */
 HB_FUNC_STATIC( QICON_SETTHEMESEARCHPATHS )
 {
-  QStringList par1 = _qt4xhb_convert_array_parameter_to_qstringlist(1);
-  QIcon::setThemeSearchPaths ( par1 );
+  QIcon::setThemeSearchPaths ( PQSTRINGLIST(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

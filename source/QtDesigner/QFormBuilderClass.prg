@@ -177,8 +177,7 @@ HB_FUNC_STATIC( QFORMBUILDER_SETPLUGINPATH )
   QFormBuilder * obj = (QFormBuilder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList par1 = _qt4xhb_convert_array_parameter_to_qstringlist(1);
-    obj->setPluginPath ( par1 );
+    obj->setPluginPath ( PQSTRINGLIST(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

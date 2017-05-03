@@ -536,8 +536,7 @@ QVariant ( const QStringList & val )
 HB_FUNC_STATIC( QVARIANT_NEW22 )
 {
   QVariant * o = NULL;
-  QStringList par1 = _qt4xhb_convert_array_parameter_to_qstringlist(1);
-  o = new QVariant ( par1 );
+  o = new QVariant ( PQSTRINGLIST(1) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QVariant *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );

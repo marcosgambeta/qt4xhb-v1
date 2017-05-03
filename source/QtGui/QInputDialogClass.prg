@@ -387,8 +387,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETCOMBOBOXITEMS )
   QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList par1 = _qt4xhb_convert_array_parameter_to_qstringlist(1);
-    obj->setComboBoxItems ( par1 );
+    obj->setComboBoxItems ( PQSTRINGLIST(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -783,11 +782,10 @@ QString getItem ( QWidget * parent, const QString & title, const QString & label
 HB_FUNC_STATIC( QINPUTDIALOG_GETITEM )
 {
   QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QStringList par4 = _qt4xhb_convert_array_parameter_to_qstringlist(4);
   int par5 = ISNIL(5)? 0 : hb_parni(5);
   bool par7;
   int par8 = ISNIL(8)? (int) 0 : hb_parni(8);
-  QString str1 = QInputDialog::getItem ( par1, PQSTRING(2), PQSTRING(3), par4, par5, ISNIL(6)? true : hb_parl(6), &par7,  (Qt::WindowFlags) par8 );
+  QString str1 = QInputDialog::getItem ( par1, PQSTRING(2), PQSTRING(3), PQSTRINGLIST(4), par5, ISNIL(6)? true : hb_parl(6), &par7,  (Qt::WindowFlags) par8 );
   hb_retc( (const char *) str1.toLatin1().data() );
   hb_storl( par7, 7 );
 }

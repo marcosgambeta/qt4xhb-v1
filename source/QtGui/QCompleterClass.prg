@@ -120,9 +120,8 @@ QCompleter ( const QStringList & list, QObject * parent = 0 )
 HB_FUNC_STATIC( QCOMPLETER_NEW3 )
 {
   QCompleter * o = NULL;
-  QStringList par1 = _qt4xhb_convert_array_parameter_to_qstringlist(1);
   QObject * par2 = ISNIL(2)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QCompleter ( par1, par2 );
+  o = new QCompleter ( PQSTRINGLIST(1), par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QCompleter *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );

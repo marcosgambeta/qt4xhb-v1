@@ -113,8 +113,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_ADDCUSTOMFILTER )
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList par2 = _qt4xhb_convert_array_parameter_to_qstringlist(2);
-    hb_retl( obj->addCustomFilter ( PQSTRING(1), par2 ) );
+    hb_retl( obj->addCustomFilter ( PQSTRING(1), PQSTRINGLIST(2) ) );
   }
 }
 
@@ -262,9 +261,8 @@ HB_FUNC_STATIC( QHELPENGINECORE_FILES )
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList par2 = _qt4xhb_convert_array_parameter_to_qstringlist(2);
     QString par3 = ISNIL(3)? QString() : hb_parc(3);
-    QList<QUrl> list = obj->files ( PQSTRING(1), par2, par3 );
+    QList<QUrl> list = obj->files ( PQSTRING(1), PQSTRINGLIST(2), par3 );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QURL" );
