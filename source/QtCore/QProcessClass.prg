@@ -307,14 +307,6 @@ HB_FUNC_STATIC( QPROCESS_SETENVIRONMENT )
   if( obj )
   {
     QStringList par1 = _qt4xhb_convert_array_parameter_to_qstringlist(1);
-    //PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-    //int i1;
-    //int nLen1 = hb_arrayLen(aStrings1);
-    //for (i1=0;i1<nLen1;i1++)
-    //{
-    //  QString temp = hb_arrayGetCPtr(aStrings1, i1+1);
-    //  par1 << temp;
-    //}
     obj->setEnvironment ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -458,14 +450,6 @@ HB_FUNC_STATIC( QPROCESS_START1 )
   if( obj )
   {
     QStringList par2 = _qt4xhb_convert_array_parameter_to_qstringlist(2);
-    //PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
-    //int i2;
-    //int nLen2 = hb_arrayLen(aStrings2);
-    //for (i2=0;i2<nLen2;i2++)
-    //{
-    //  QString temp = hb_arrayGetCPtr(aStrings2, i2+1);
-    //  par2 << temp;
-    //}
     obj->start ( PQSTRING(1), par2, ISNIL(3)? QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -697,14 +681,6 @@ int execute ( const QString & program, const QStringList & arguments )
 HB_FUNC_STATIC( QPROCESS_EXECUTE1 )
 {
   QStringList par2 = _qt4xhb_convert_array_parameter_to_qstringlist(2);
-  //PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
-  //int i2;
-  //int nLen2 = hb_arrayLen(aStrings2);
-  //for (i2=0;i2<nLen2;i2++)
-  //{
-  //  QString temp = hb_arrayGetCPtr(aStrings2, i2+1);
-  //  par2 << temp;
-  //}
   hb_retni( QProcess::execute ( PQSTRING(1), par2 ) );
 }
 
@@ -739,14 +715,6 @@ bool startDetached ( const QString & program, const QStringList & arguments, con
 HB_FUNC_STATIC( QPROCESS_STARTDETACHED1 )
 {
   QStringList par2 = _qt4xhb_convert_array_parameter_to_qstringlist(2);
-  //PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
-  //int i2;
-  //int nLen2 = hb_arrayLen(aStrings2);
-  //for (i2=0;i2<nLen2;i2++)
-  //{
-  //  QString temp = hb_arrayGetCPtr(aStrings2, i2+1);
-  //  par2 << temp;
-  //}
   qint64 * par4 = (qint64 *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
   hb_retl( QProcess::startDetached ( PQSTRING(1), par2, PQSTRING(3), par4 ) );
 }
@@ -758,14 +726,6 @@ bool startDetached ( const QString & program, const QStringList & arguments )
 HB_FUNC_STATIC( QPROCESS_STARTDETACHED2 )
 {
   QStringList par2 = _qt4xhb_convert_array_parameter_to_qstringlist(2);
-  //PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
-  //int i2;
-  //int nLen2 = hb_arrayLen(aStrings2);
-  //for (i2=0;i2<nLen2;i2++)
-  //{
-  //  QString temp = hb_arrayGetCPtr(aStrings2, i2+1);
-  //  par2 << temp;
-  //}
   hb_retl( QProcess::startDetached ( PQSTRING(1), par2 ) );
 }
 

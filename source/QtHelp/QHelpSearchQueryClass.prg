@@ -64,14 +64,6 @@ HB_FUNC_STATIC( QHELPSEARCHQUERY_NEW2 )
 {
   QHelpSearchQuery * o = NULL;
   QStringList par2 = _qt4xhb_convert_array_parameter_to_qstringlist(2);
-  //PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
-  //int i2;
-  //int nLen2 = hb_arrayLen(aStrings2);
-  //for (i2=0;i2<nLen2;i2++)
-  //{
-  //  QString temp = hb_arrayGetCPtr(aStrings2, i2+1);
-  //  par2 << temp;
-  //}
   o = new QHelpSearchQuery (  (QHelpSearchQuery::FieldName) hb_parni(1), par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QHelpSearchQuery *) o );

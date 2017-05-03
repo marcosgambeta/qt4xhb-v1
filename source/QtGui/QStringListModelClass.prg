@@ -72,14 +72,6 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_NEW2 )
 {
   QStringListModel * o = NULL;
   QStringList par1 = _qt4xhb_convert_array_parameter_to_qstringlist(1);
-  //PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-  //int i1;
-  //int nLen1 = hb_arrayLen(aStrings1);
-  //for (i1=0;i1<nLen1;i1++)
-  //{
-  //  QString temp = hb_arrayGetCPtr(aStrings1, i1+1);
-  //  par1 << temp;
-  //}
   QObject * par2 = ISNIL(2)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
   o = new QStringListModel ( par1, par2 );
   PHB_ITEM self = hb_stackSelfItem();
@@ -120,14 +112,6 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_SETSTRINGLIST )
   if( obj )
   {
     QStringList par1 = _qt4xhb_convert_array_parameter_to_qstringlist(1);
-    //PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-    //int i1;
-    //int nLen1 = hb_arrayLen(aStrings1);
-    //for (i1=0;i1<nLen1;i1++)
-    //{
-    //  QString temp = hb_arrayGetCPtr(aStrings1, i1+1);
-    //  par1 << temp;
-    //}
     obj->setStringList ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );

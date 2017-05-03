@@ -173,14 +173,6 @@ HB_FUNC_STATIC( QLISTWIDGET_ADDITEMS )
   if( obj )
   {
     QStringList par1 = _qt4xhb_convert_array_parameter_to_qstringlist(1);
-    //PHB_ITEM aStrings1 = hb_param(1, HB_IT_ARRAY);
-    //int i1;
-    //int nLen1 = hb_arrayLen(aStrings1);
-    //for (i1=0;i1<nLen1;i1++)
-    //{
-    //  QString temp = hb_arrayGetCPtr(aStrings1, i1+1);
-    //  par1 << temp;
-    //}
     obj->addItems ( par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
@@ -358,14 +350,6 @@ HB_FUNC_STATIC( QLISTWIDGET_INSERTITEMS )
   {
     int par1 = hb_parni(1);
     QStringList par2 = _qt4xhb_convert_array_parameter_to_qstringlist(2);
-    //PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
-    //int i2;
-    //int nLen2 = hb_arrayLen(aStrings2);
-    //for (i2=0;i2<nLen2;i2++)
-    //{
-    //  QString temp = hb_arrayGetCPtr(aStrings2, i2+1);
-    //  par2 << temp;
-    //}
     obj->insertItems ( par1, par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
