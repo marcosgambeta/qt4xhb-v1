@@ -60,9 +60,8 @@ QRadioButton ( const QString & text, QWidget * parent = 0 )
 void QRadioButton_new2 ()
 {
   QRadioButton * o = NULL;
-  QString par1 = hb_parc(1);
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QRadioButton ( par1, par2 );
+  o = new QRadioButton ( PQSTRING(1), par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QRadioButton *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );

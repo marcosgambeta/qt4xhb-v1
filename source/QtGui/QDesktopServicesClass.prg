@@ -72,10 +72,9 @@ void setUrlHandler ( const QString & scheme, QObject * receiver, const char * me
 */
 HB_FUNC_STATIC( QDESKTOPSERVICES_SETURLHANDLER )
 {
-  QString par1 = hb_parc(1);
   QObject * par2 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
   const char * par3 = hb_parc(3);
-  QDesktopServices::setUrlHandler ( par1, par2,  (const char *) par3 );
+  QDesktopServices::setUrlHandler ( PQSTRING(1), par2,  (const char *) par3 );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -96,8 +95,7 @@ void unsetUrlHandler ( const QString & scheme )
 */
 HB_FUNC_STATIC( QDESKTOPSERVICES_UNSETURLHANDLER )
 {
-  QString par1 = hb_parc(1);
-  QDesktopServices::unsetUrlHandler ( par1 );
+  QDesktopServices::unsetUrlHandler ( PQSTRING(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

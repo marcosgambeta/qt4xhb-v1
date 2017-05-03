@@ -64,9 +64,8 @@ HB_FUNC_STATIC( QACCESSIBLEPLUGIN_CREATE )
   QAccessiblePlugin * obj = (QAccessiblePlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
     QObject * par2 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QAccessibleInterface * ptr = obj->create ( par1, par2 );
+    QAccessibleInterface * ptr = obj->create ( PQSTRING(1), par2 );
     _qt4xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
   }
 }

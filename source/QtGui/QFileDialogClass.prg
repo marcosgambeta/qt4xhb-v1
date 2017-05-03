@@ -463,8 +463,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SELECTFILE )
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->selectFile ( par1 );
+    obj->selectFile ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -478,8 +477,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SELECTNAMEFILTER )
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->selectNameFilter ( par1 );
+    obj->selectNameFilter ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -559,8 +557,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETDEFAULTSUFFIX )
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setDefaultSuffix ( par1 );
+    obj->setDefaultSuffix ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -574,8 +571,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETDIRECTORY1 )
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setDirectory ( par1 );
+    obj->setDirectory ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -703,8 +699,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETLABELTEXT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QString par2 = hb_parc(2);
-    obj->setLabelText (  (QFileDialog::DialogLabel) par1, par2 );
+    obj->setLabelText (  (QFileDialog::DialogLabel) par1, PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -718,8 +713,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETNAMEFILTER )
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setNameFilter ( par1 );
+    obj->setNameFilter ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

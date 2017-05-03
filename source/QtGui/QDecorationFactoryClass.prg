@@ -50,8 +50,7 @@ QDecoration * create ( const QString & key )
 */
 HB_FUNC_STATIC( QDECORATIONFACTORY_CREATE )
 {
-  QString par1 = hb_parc(1);
-  QDecoration * ptr = QDecorationFactory::create ( par1 );
+  QDecoration * ptr = QDecorationFactory::create ( PQSTRING(1) );
   _qt4xhb_createReturnClass ( ptr, "QDECORATION" );
 }
 

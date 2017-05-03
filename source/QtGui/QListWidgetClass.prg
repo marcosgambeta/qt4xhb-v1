@@ -128,8 +128,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ADDITEM1 )
   QListWidget * obj = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->addItem ( par1 );
+    obj->addItem ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -266,9 +265,8 @@ HB_FUNC_STATIC( QLISTWIDGET_FINDITEMS )
   QListWidget * obj = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
     int par2 = hb_parni(2);
-    QList<QListWidgetItem *> list = obj->findItems ( par1,  (Qt::MatchFlags) par2 );
+    QList<QListWidgetItem *> list = obj->findItems ( PQSTRING(1),  (Qt::MatchFlags) par2 );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QLISTWIDGETITEM" );
@@ -329,8 +327,7 @@ HB_FUNC_STATIC( QLISTWIDGET_INSERTITEM2 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QString par2 = hb_parc(2);
-    obj->insertItem ( par1, par2 );
+    obj->insertItem ( par1, PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

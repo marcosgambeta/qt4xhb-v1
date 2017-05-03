@@ -64,8 +64,7 @@ HB_FUNC_STATIC( QACCESSIBLEBRIDGEPLUGIN_CREATE )
   QAccessibleBridgePlugin * obj = (QAccessibleBridgePlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QAccessibleBridge * ptr = obj->create ( par1 );
+    QAccessibleBridge * ptr = obj->create ( PQSTRING(1) );
     _qt4xhb_createReturnClass ( ptr, "QACCESSIBLEBRIDGE" );
   }
 }

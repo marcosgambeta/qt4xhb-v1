@@ -369,8 +369,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETSTYLESHEET )
   QApplication * obj = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setStyleSheet ( par1 );
+    obj->setStyleSheet ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -900,8 +899,7 @@ void setGraphicsSystem ( const QString & system )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETGRAPHICSSYSTEM )
 {
-  QString par1 = hb_parc(1);
-  QApplication::setGraphicsSystem ( par1 );
+  QApplication::setGraphicsSystem ( PQSTRING(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -1000,8 +998,7 @@ QStyle * setStyle ( const QString & style )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETSTYLE2 )
 {
-  QString par1 = hb_parc(1);
-  QStyle * ptr = QApplication::setStyle ( par1 );
+  QStyle * ptr = QApplication::setStyle ( PQSTRING(1) );
   _qt4xhb_createReturnClass ( ptr, "QSTYLE" );
 }
 

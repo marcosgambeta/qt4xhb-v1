@@ -247,9 +247,8 @@ HB_FUNC_STATIC( QFONTDIALOG_GETFONT1 )
   bool par1;
   QFont * par2 = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
   QWidget * par3 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QString par4 = hb_parc(4);
   int par5 = hb_parni(5);
-  QFont * ptr = new QFont( QFontDialog::getFont ( &par1, *par2, par3, par4,  (QFontDialog::FontDialogOptions) par5 ) );
+  QFont * ptr = new QFont( QFontDialog::getFont ( &par1, *par2, par3, PQSTRING(4),  (QFontDialog::FontDialogOptions) par5 ) );
   _qt4xhb_createReturnClass ( ptr, "QFONT", true );
   hb_storl( par1, 1 );
 }
@@ -263,8 +262,7 @@ HB_FUNC_STATIC( QFONTDIALOG_GETFONT2 )
   bool par1;
   QFont * par2 = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
   QWidget * par3 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QString par4 = hb_parc(4);
-  QFont * ptr = new QFont( QFontDialog::getFont ( &par1, *par2, par3, par4 ) );
+  QFont * ptr = new QFont( QFontDialog::getFont ( &par1, *par2, par3, PQSTRING(4) ) );
   _qt4xhb_createReturnClass ( ptr, "QFONT", true );
   hb_storl( par1, 1 );
 }

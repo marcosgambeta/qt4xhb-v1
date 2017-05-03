@@ -206,8 +206,7 @@ HB_FUNC_STATIC( QUNDOVIEW_SETEMPTYLABEL )
   QUndoView * obj = (QUndoView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setEmptyLabel ( par1 );
+    obj->setEmptyLabel ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -76,8 +76,7 @@ HB_FUNC_STATIC( QPLATFORMFONTDATABASE_ADDAPPLICATIONFONT )
   if( obj )
   {
     QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString par2 = hb_parc(2);
-    QStringList strl = obj->addApplicationFont ( *par1, par2 );
+    QStringList strl = obj->addApplicationFont ( *par1, PQSTRING(2) );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -159,15 +158,13 @@ void registerFont ( const QString & familyName, const QString & foundryName, QFo
 */
 HB_FUNC_STATIC( QPLATFORMFONTDATABASE_REGISTERFONT )
 {
-  QString par1 = hb_parc(1);
-  QString par2 = hb_parc(2);
   int par3 = hb_parni(3);
   int par4 = hb_parni(4);
   int par5 = hb_parni(5);
   int par8 = hb_parni(8);
   QSupportedWritingSystems * par9 = (QSupportedWritingSystems *) hb_itemGetPtr( hb_objSendMsg( hb_param(9, HB_IT_OBJECT ), "POINTER", 0 ) );
   void * par10 = (void *) hb_parptr(10);
-  QPlatformFontDatabase::registerFont ( par1, par2,  (QFont::Weight) par3,  (QFont::Style) par4,  (QFont::Stretch) par5, PBOOL(6), PBOOL(7), par8, *par9, par10 );
+  QPlatformFontDatabase::registerFont ( PQSTRING(1), PQSTRING(2),  (QFont::Weight) par3,  (QFont::Style) par4,  (QFont::Stretch) par5, PBOOL(6), PBOOL(7), par8, *par9, par10 );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

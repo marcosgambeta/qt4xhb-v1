@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_SETREGEXP )
 /*
 virtual QValidator::State validate ( QString & input, int & pos ) const
 */
-HB_FUNC_STATIC( QREGEXPVALIDATOR_VALIDATE )
+HB_FUNC_STATIC( QREGEXPVALIDATOR_VALIDATE ) // TODO: revisar implementacao e corrigir
 {
   QRegExpValidator * obj = (QRegExpValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

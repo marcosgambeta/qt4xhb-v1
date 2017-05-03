@@ -69,9 +69,8 @@ QInputContext * create ( const QString & key, QObject * parent )
 */
 HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_CREATE )
 {
-  QString par1 = hb_parc(1);
   QObject * par2 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QInputContext * ptr = QInputContextFactory::create ( par1, par2 );
+  QInputContext * ptr = QInputContextFactory::create ( PQSTRING(1), par2 );
   _qt4xhb_createReturnClass ( ptr, "QINPUTCONTEXT" );
 }
 
@@ -81,8 +80,7 @@ QString description ( const QString & key )
 */
 HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_DESCRIPTION )
 {
-  QString par1 = hb_parc(1);
-  QString str1 = QInputContextFactory::description ( par1 );
+  QString str1 = QInputContextFactory::description ( PQSTRING(1) );
   hb_retc( (const char *) str1.toLatin1().data() );
 }
 
@@ -92,8 +90,7 @@ QString displayName ( const QString & key )
 */
 HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_DISPLAYNAME )
 {
-  QString par1 = hb_parc(1);
-  QString str1 = QInputContextFactory::displayName ( par1 );
+  QString str1 = QInputContextFactory::displayName ( PQSTRING(1) );
   hb_retc( (const char *) str1.toLatin1().data() );
 }
 
@@ -122,8 +119,7 @@ QStringList languages ( const QString & key )
 */
 HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_LANGUAGES )
 {
-  QString par1 = hb_parc(1);
-  QStringList strl = QInputContextFactory::languages ( par1 );
+  QStringList strl = QInputContextFactory::languages ( PQSTRING(1) );
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;

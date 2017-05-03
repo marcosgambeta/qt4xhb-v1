@@ -82,8 +82,7 @@ HB_FUNC_STATIC( QERRORMESSAGE_SHOWMESSAGE1 )
   QErrorMessage * obj = (QErrorMessage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->showMessage ( par1 );
+    obj->showMessage ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -97,9 +96,7 @@ HB_FUNC_STATIC( QERRORMESSAGE_SHOWMESSAGE2 )
   QErrorMessage * obj = (QErrorMessage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QString par2 = hb_parc(2);
-    obj->showMessage ( par1, par2 );
+    obj->showMessage ( PQSTRING(1), PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

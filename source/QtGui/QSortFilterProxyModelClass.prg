@@ -888,8 +888,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERFIXEDSTRING )
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setFilterFixedString ( par1 );
+    obj->setFilterFixedString ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -903,8 +902,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERREGEXP2 )
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setFilterRegExp ( par1 );
+    obj->setFilterRegExp ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -933,8 +931,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERWILDCARD )
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setFilterWildcard ( par1 );
+    obj->setFilterWildcard ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -2052,8 +2052,7 @@ HB_FUNC_STATIC( QWIDGET_SETACCESSIBLEDESCRIPTION )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setAccessibleDescription ( par1 );
+    obj->setAccessibleDescription ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -2067,8 +2066,7 @@ HB_FUNC_STATIC( QWIDGET_SETACCESSIBLENAME )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setAccessibleName ( par1 );
+    obj->setAccessibleName ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -2963,8 +2961,7 @@ HB_FUNC_STATIC( QWIDGET_SETSTATUSTIP )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setStatusTip ( par1 );
+    obj->setStatusTip ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -2993,8 +2990,7 @@ HB_FUNC_STATIC( QWIDGET_SETTOOLTIP )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setToolTip ( par1 );
+    obj->setToolTip ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -3022,8 +3018,7 @@ HB_FUNC_STATIC( QWIDGET_SETWHATSTHIS )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setWhatsThis ( par1 );
+    obj->setWhatsThis ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -3037,8 +3032,7 @@ HB_FUNC_STATIC( QWIDGET_SETWINDOWFILEPATH )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setWindowFilePath ( par1 );
+    obj->setWindowFilePath ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -3082,8 +3076,7 @@ HB_FUNC_STATIC( QWIDGET_SETWINDOWICONTEXT )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setWindowIconText ( par1 );
+    obj->setWindowIconText ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -3126,8 +3119,7 @@ HB_FUNC_STATIC( QWIDGET_SETWINDOWROLE )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setWindowRole ( par1 );
+    obj->setWindowRole ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -3831,8 +3823,7 @@ HB_FUNC_STATIC( QWIDGET_SETSTYLESHEET )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setStyleSheet ( par1 );
+    obj->setStyleSheet ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -3874,8 +3865,7 @@ HB_FUNC_STATIC( QWIDGET_SETWINDOWTITLE )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setWindowTitle ( par1 );
+    obj->setWindowTitle ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

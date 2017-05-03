@@ -359,8 +359,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETCANCELBUTTONTEXT )
   QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setCancelButtonText ( par1 );
+    obj->setCancelButtonText ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -573,8 +572,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETLABELTEXT )
   QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setLabelText ( par1 );
+    obj->setLabelText ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -588,8 +586,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETOKBUTTONTEXT )
   QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setOkButtonText ( par1 );
+    obj->setOkButtonText ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -648,8 +645,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETTEXTVALUE )
   QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setTextValue ( par1 );
+    obj->setTextValue ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -760,15 +756,13 @@ double getDouble ( QWidget * parent, const QString & title, const QString & labe
 HB_FUNC_STATIC( QINPUTDIALOG_GETDOUBLE )
 {
   QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QString par2 = hb_parc(2);
-  QString par3 = hb_parc(3);
   double par4 = ISNIL(4)? 0 : hb_parnd(4);
   double par5 = ISNIL(5)? -2147483647 : hb_parnd(5);
   double par6 = ISNIL(6)? 2147483647 : hb_parnd(6);
   int par7 = ISNIL(7)? 1 : hb_parni(7);
   bool par8;
   int par9 = ISNIL(9)? (int) 0 : hb_parni(9);
-  double r = QInputDialog::getDouble ( par1, par2, par3, par4, par5, par6, par7, &par8,  (Qt::WindowFlags) par9 );
+  double r = QInputDialog::getDouble ( par1, PQSTRING(2), PQSTRING(3), par4, par5, par6, par7, &par8,  (Qt::WindowFlags) par9 );
   hb_retnd( r );
   hb_storl( par8, 8 );
 }
@@ -780,15 +774,13 @@ int getInt ( QWidget * parent, const QString & title, const QString & label, int
 HB_FUNC_STATIC( QINPUTDIALOG_GETINT )
 {
   QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QString par2 = hb_parc(2);
-  QString par3 = hb_parc(3);
   int par4 = ISNIL(4)? 0 : hb_parni(4);
   int par5 = ISNIL(5)? -2147483647 : hb_parni(5);
   int par6 = ISNIL(6)? 2147483647 : hb_parni(6);
   int par7 = ISNIL(7)? 1 : hb_parni(7);
   bool par8;
   int par9 = ISNIL(9)? (int) 0 : hb_parni(9);
-  hb_retni( QInputDialog::getInt ( par1, par2, par3, par4, par5, par6, par7, &par8,  (Qt::WindowFlags) par9 ) );
+  hb_retni( QInputDialog::getInt ( par1, PQSTRING(2), PQSTRING(3), par4, par5, par6, par7, &par8,  (Qt::WindowFlags) par9 ) );
   hb_storl( par8, 8 );
 }
 
@@ -799,8 +791,6 @@ QString getItem ( QWidget * parent, const QString & title, const QString & label
 HB_FUNC_STATIC( QINPUTDIALOG_GETITEM )
 {
   QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QString par2 = hb_parc(2);
-  QString par3 = hb_parc(3);
 QStringList par4;
 PHB_ITEM aStrings4 = hb_param(4, HB_IT_ARRAY);
 int i4;
@@ -813,7 +803,7 @@ par4 << temp;
   int par5 = ISNIL(5)? 0 : hb_parni(5);
   bool par7;
   int par8 = ISNIL(8)? (int) 0 : hb_parni(8);
-  QString str1 = QInputDialog::getItem ( par1, par2, par3, par4, par5, ISNIL(6)? true : hb_parl(6), &par7,  (Qt::WindowFlags) par8 );
+  QString str1 = QInputDialog::getItem ( par1, PQSTRING(2), PQSTRING(3), par4, par5, ISNIL(6)? true : hb_parl(6), &par7,  (Qt::WindowFlags) par8 );
   hb_retc( (const char *) str1.toLatin1().data() );
   hb_storl( par7, 7 );
 }
@@ -825,13 +815,11 @@ QString getText ( QWidget * parent, const QString & title, const QString & label
 HB_FUNC_STATIC( QINPUTDIALOG_GETTEXT )
 {
   QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QString par2 = hb_parc(2);
-  QString par3 = hb_parc(3);
   int par4 = ISNIL(4)? (int) QLineEdit::Normal : hb_parni(4);
   QString par5 = ISNIL(5)? QString() : hb_parc(5);
   bool par6;
   int par7 = ISNIL(7)? (int) 0 : hb_parni(7);
-  QString str1 = QInputDialog::getText ( par1, par2, par3,  (QLineEdit::EchoMode) par4, par5, &par6,  (Qt::WindowFlags) par7 );
+  QString str1 = QInputDialog::getText ( par1, PQSTRING(2), PQSTRING(3),  (QLineEdit::EchoMode) par4, par5, &par6,  (Qt::WindowFlags) par7 );
   hb_retc( (const char *) str1.toLatin1().data() );
   hb_storl( par6, 6 );
 }

@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_TOP )
 /*
 virtual QValidator::State validate ( QString & input, int & pos ) const
 */
-HB_FUNC_STATIC( QDOUBLEVALIDATOR_VALIDATE )
+HB_FUNC_STATIC( QDOUBLEVALIDATOR_VALIDATE ) // TODO: revisar implementacao e corrigir
 {
   QDoubleValidator * obj = (QDoubleValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

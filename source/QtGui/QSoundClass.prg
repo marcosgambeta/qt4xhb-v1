@@ -51,9 +51,8 @@ QSound ( const QString & filename, QObject * parent = 0 )
 HB_FUNC_STATIC( QSOUND_NEW )
 {
   QSound * o = NULL;
-  QString par1 = hb_parc(1);
   QObject * par2 = ISNIL(2)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSound ( par1, par2 );
+  o = new QSound ( PQSTRING(1), par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSound *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -189,8 +188,7 @@ void play ( const QString & filename )
 */
 HB_FUNC_STATIC( QSOUND_PLAY2 )
 {
-  QString par1 = hb_parc(1);
-  QSound::play ( par1 );
+  QSound::play ( PQSTRING(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

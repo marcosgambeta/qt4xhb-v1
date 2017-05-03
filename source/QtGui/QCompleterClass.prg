@@ -539,8 +539,7 @@ HB_FUNC_STATIC( QCOMPLETER_SPLITPATH )
   QCompleter * obj = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QStringList strl = obj->splitPath ( par1 );
+    QStringList strl = obj->splitPath ( PQSTRING(1) );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -605,8 +604,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETCOMPLETIONPREFIX )
   QCompleter * obj = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setCompletionPrefix ( par1 );
+    obj->setCompletionPrefix ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

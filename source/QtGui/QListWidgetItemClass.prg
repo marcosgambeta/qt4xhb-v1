@@ -112,10 +112,9 @@ QListWidgetItem ( const QString & text, QListWidget * parent = 0, int type = Typ
 HB_FUNC_STATIC( QLISTWIDGETITEM_NEW2 )
 {
   QListWidgetItem * o = NULL;
-  QString par1 = hb_parc(1);
   QListWidget * par2 = ISNIL(2)? 0 : (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par3 = ISNIL(3)? QListWidgetItem::Type : hb_parni(3);
-  o = new QListWidgetItem ( par1, par2, par3 );
+  o = new QListWidgetItem ( PQSTRING(1), par2, par3 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QListWidgetItem *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -131,9 +130,8 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_NEW3 )
 {
   QListWidgetItem * o = NULL;
   QIcon par1 = ISOBJECT(1)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(1));
-  QString par2 = hb_parc(2);
   QListWidget * par3 = ISNIL(3)? 0 : (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QListWidgetItem ( par1, par2, par3 );
+  o = new QListWidgetItem ( par1, PQSTRING(2), par3 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QListWidgetItem *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -526,8 +524,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETSTATUSTIP )
   QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setStatusTip ( par1 );
+    obj->setStatusTip ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -541,8 +538,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETTEXT )
   QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setText ( par1 );
+    obj->setText ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -571,8 +567,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETTOOLTIP )
   QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setToolTip ( par1 );
+    obj->setToolTip ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -586,8 +581,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETWHATSTHIS )
   QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setWhatsThis ( par1 );
+    obj->setWhatsThis ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

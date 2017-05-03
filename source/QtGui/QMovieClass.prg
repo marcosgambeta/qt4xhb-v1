@@ -126,10 +126,9 @@ QMovie ( const QString & fileName, const QByteArray & format = QByteArray(), QOb
 HB_FUNC_STATIC( QMOVIE_NEW3 )
 {
   QMovie * o = NULL;
-  QString par1 = hb_parc(1);
   QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
   QObject * par3 = ISNIL(3)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QMovie ( par1, par2, par3 );
+  o = new QMovie ( PQSTRING(1), par2, par3 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMovie *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -437,8 +436,7 @@ HB_FUNC_STATIC( QMOVIE_SETFILENAME )
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setFileName ( par1 );
+    obj->setFileName ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -954,8 +954,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETSTATUSTIP )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QString par2 = hb_parc(2);
-    obj->setStatusTip ( par1, par2 );
+    obj->setStatusTip ( par1, PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -970,8 +969,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETTEXT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QString par2 = hb_parc(2);
-    obj->setText ( par1, par2 );
+    obj->setText ( par1, PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1002,8 +1000,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETTOOLTIP )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QString par2 = hb_parc(2);
-    obj->setToolTip ( par1, par2 );
+    obj->setToolTip ( par1, PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1018,8 +1015,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETWHATSTHIS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QString par2 = hb_parc(2);
-    obj->setWhatsThis ( par1, par2 );
+    obj->setWhatsThis ( par1, PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

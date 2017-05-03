@@ -251,7 +251,6 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SETMANAGERPROPERTY1 )
   QSessionManager * obj = (QSessionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
 QStringList par2;
 PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
 int i2;
@@ -261,7 +260,7 @@ for (i2=0;i2<nLen2;i2++)
 QString temp = hb_arrayGetCPtr(aStrings2, i2+1);
 par2 << temp;
 }
-    obj->setManagerProperty ( par1, par2 );
+    obj->setManagerProperty ( PQSTRING(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -275,9 +274,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SETMANAGERPROPERTY2 )
   QSessionManager * obj = (QSessionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QString par2 = hb_parc(2);
-    obj->setManagerProperty ( par1, par2 );
+    obj->setManagerProperty ( PQSTRING(1), PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

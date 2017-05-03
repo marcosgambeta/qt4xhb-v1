@@ -133,10 +133,9 @@ QFont ( const QString & family, int pointSize = -1, int weight = -1, bool italic
 HB_FUNC_STATIC( QFONT_NEW2 )
 {
   QFont * o = NULL;
-  QString par1 = hb_parc(1);
   int par2 = ISNIL(2)? -1 : hb_parni(2);
   int par3 = ISNIL(3)? -1 : hb_parni(3);
-  o = new QFont ( par1, par2, par3, ISNIL(4)? false : hb_parl(4) );
+  o = new QFont ( PQSTRING(1), par2, par3, ISNIL(4)? false : hb_parl(4) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QFont *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -321,8 +320,7 @@ HB_FUNC_STATIC( QFONT_FROMSTRING )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    hb_retl( obj->fromString ( par1 ) );
+    hb_retl( obj->fromString ( PQSTRING(1) ) );
   }
 }
 
@@ -570,8 +568,7 @@ HB_FUNC_STATIC( QFONT_SETFAMILY )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setFamily ( par1 );
+    obj->setFamily ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -714,8 +711,7 @@ HB_FUNC_STATIC( QFONT_SETRAWNAME )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setRawName ( par1 );
+    obj->setRawName ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -964,9 +960,7 @@ void insertSubstitution ( const QString & familyName, const QString & substitute
 */
 HB_FUNC_STATIC( QFONT_INSERTSUBSTITUTION )
 {
-  QString par1 = hb_parc(1);
-  QString par2 = hb_parc(2);
-  QFont::insertSubstitution ( par1, par2 );
+  QFont::insertSubstitution ( PQSTRING(1), PQSTRING(2) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -976,7 +970,6 @@ void insertSubstitutions ( const QString & familyName, const QStringList & subst
 */
 HB_FUNC_STATIC( QFONT_INSERTSUBSTITUTIONS )
 {
-  QString par1 = hb_parc(1);
 QStringList par2;
 PHB_ITEM aStrings2 = hb_param(2, HB_IT_ARRAY);
 int i2;
@@ -986,7 +979,7 @@ for (i2=0;i2<nLen2;i2++)
 QString temp = hb_arrayGetCPtr(aStrings2, i2+1);
 par2 << temp;
 }
-  QFont::insertSubstitutions ( par1, par2 );
+  QFont::insertSubstitutions ( PQSTRING(1), par2 );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -996,8 +989,7 @@ void removeSubstitution ( const QString & familyName )
 */
 HB_FUNC_STATIC( QFONT_REMOVESUBSTITUTION )
 {
-  QString par1 = hb_parc(1);
-  QFont::removeSubstitution ( par1 );
+  QFont::removeSubstitution ( PQSTRING(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -1007,8 +999,7 @@ QString substitute ( const QString & familyName )
 */
 HB_FUNC_STATIC( QFONT_SUBSTITUTE )
 {
-  QString par1 = hb_parc(1);
-  QString str1 = QFont::substitute ( par1 );
+  QString str1 = QFont::substitute ( PQSTRING(1) );
   hb_retc( (const char *) str1.toLatin1().data() );
 }
 
@@ -1018,8 +1009,7 @@ QStringList substitutes ( const QString & familyName )
 */
 HB_FUNC_STATIC( QFONT_SUBSTITUTES )
 {
-  QString par1 = hb_parc(1);
-  QStringList strl = QFont::substitutes ( par1 );
+  QStringList strl = QFont::substitutes ( PQSTRING(1) );
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;

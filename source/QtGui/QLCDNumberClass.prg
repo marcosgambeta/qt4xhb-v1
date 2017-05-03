@@ -316,8 +316,7 @@ HB_FUNC_STATIC( QLCDNUMBER_DISPLAY1 )
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->display ( par1 );
+    obj->display ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

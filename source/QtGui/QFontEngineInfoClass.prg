@@ -75,8 +75,7 @@ QFontEngineInfo ( const QString & family )
 HB_FUNC_STATIC( QFONTENGINEINFO_NEW2 )
 {
   QFontEngineInfo * o = NULL;
-  QString par1 = hb_parc(1);
-  o = new QFontEngineInfo ( par1 );
+  o = new QFontEngineInfo ( PQSTRING(1) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QFontEngineInfo *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -177,8 +176,7 @@ HB_FUNC_STATIC( QFONTENGINEINFO_SETFAMILY )
   QFontEngineInfo * obj = (QFontEngineInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setFamily ( par1 );
+    obj->setFamily ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

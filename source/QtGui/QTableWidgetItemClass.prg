@@ -111,9 +111,8 @@ QTableWidgetItem ( const QString & text, int type = Type )
 HB_FUNC_STATIC( QTABLEWIDGETITEM_NEW2 )
 {
   QTableWidgetItem * o = NULL;
-  QString par1 = hb_parc(1);
   int par2 = ISNIL(2)? QTableWidgetItem::Type : hb_parni(2);
-  o = new QTableWidgetItem ( par1, par2 );
+  o = new QTableWidgetItem ( PQSTRING(1), par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTableWidgetItem *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -129,9 +128,8 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_NEW3 )
 {
   QTableWidgetItem * o = NULL;
   QIcon par1 = ISOBJECT(1)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(1));
-  QString par2 = hb_parc(2);
   int par3 = ISNIL(3)? QTableWidgetItem::Type : hb_parni(3);
-  o = new QTableWidgetItem ( par1, par2, par3 );
+  o = new QTableWidgetItem ( par1, PQSTRING(2), par3 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTableWidgetItem *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -509,8 +507,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_SETSTATUSTIP )
   QTableWidgetItem * obj = (QTableWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setStatusTip ( par1 );
+    obj->setStatusTip ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -524,8 +521,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_SETTEXT )
   QTableWidgetItem * obj = (QTableWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setText ( par1 );
+    obj->setText ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -554,8 +550,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_SETTOOLTIP )
   QTableWidgetItem * obj = (QTableWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setToolTip ( par1 );
+    obj->setToolTip ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -569,8 +564,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_SETWHATSTHIS )
   QTableWidgetItem * obj = (QTableWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setWhatsThis ( par1 );
+    obj->setWhatsThis ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -193,8 +193,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETPREFIX )
   QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setPrefix ( par1 );
+    obj->setPrefix ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -236,8 +235,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETSUFFIX )
   QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setSuffix ( par1 );
+    obj->setSuffix ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -307,8 +305,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_VALUEFROMTEXT )
   QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    double r = obj->valueFromText ( par1 );
+    double r = obj->valueFromText ( PQSTRING(1) );
     hb_retnd( r );
   }
 }
@@ -317,7 +314,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_VALUEFROMTEXT )
 /*
 virtual void fixup ( QString & input ) const
 */
-HB_FUNC_STATIC( QDOUBLESPINBOX_FIXUP )
+HB_FUNC_STATIC( QDOUBLESPINBOX_FIXUP ) // TODO: revisar implementacao e corrigir
 {
   QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -332,7 +329,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_FIXUP )
 /*
 virtual QValidator::State validate ( QString & text, int & pos ) const
 */
-HB_FUNC_STATIC( QDOUBLESPINBOX_VALIDATE )
+HB_FUNC_STATIC( QDOUBLESPINBOX_VALIDATE ) // TODO: revisar implementacao e corrigir
 {
   QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

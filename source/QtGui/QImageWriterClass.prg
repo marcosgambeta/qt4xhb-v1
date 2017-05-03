@@ -112,9 +112,8 @@ QImageWriter ( const QString & fileName, const QByteArray & format = QByteArray(
 HB_FUNC_STATIC( QIMAGEWRITER_NEW3 )
 {
   QImageWriter * o = NULL;
-  QString par1 = hb_parc(1);
   QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QImageWriter ( par1, par2 );
+  o = new QImageWriter ( PQSTRING(1), par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QImageWriter *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -326,8 +325,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_SETFILENAME )
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setFileName ( par1 );
+    obj->setFileName ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -385,9 +383,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_SETTEXT )
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QString par2 = hb_parc(2);
-    obj->setText ( par1, par2 );
+    obj->setText ( PQSTRING(1), PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

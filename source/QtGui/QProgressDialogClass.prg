@@ -88,13 +88,11 @@ QProgressDialog ( const QString & labelText, const QString & cancelButtonText, i
 HB_FUNC_STATIC( QPROGRESSDIALOG_NEW2 )
 {
   QProgressDialog * o = NULL;
-  QString par1 = hb_parc(1);
-  QString par2 = hb_parc(2);
   int par3 = hb_parni(3);
   int par4 = hb_parni(4);
   QWidget * par5 = ISNIL(5)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(5, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par6 = ISNIL(6)? (int) 0 : hb_parni(6);
-  o = new QProgressDialog ( par1, par2, par3, par4, par5,  (Qt::WindowFlags) par6 );
+  o = new QProgressDialog ( PQSTRING(1), PQSTRING(2), par3, par4, par5,  (Qt::WindowFlags) par6 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QProgressDialog *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -382,8 +380,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETCANCELBUTTONTEXT )
   QProgressDialog * obj = (QProgressDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setCancelButtonText ( par1 );
+    obj->setCancelButtonText ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -397,8 +394,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETLABELTEXT )
   QProgressDialog * obj = (QProgressDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setLabelText ( par1 );
+    obj->setLabelText ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

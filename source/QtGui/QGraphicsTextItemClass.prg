@@ -100,9 +100,8 @@ QGraphicsTextItem ( const QString & text, QGraphicsItem * parent = 0 )
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_NEW2 )
 {
   QGraphicsTextItem * o = NULL;
-  QString par1 = hb_parc(1);
   QGraphicsItem * par2 = ISNIL(2)? 0 : (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QGraphicsTextItem ( par1, par2 );
+  o = new QGraphicsTextItem ( PQSTRING(1), par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QGraphicsTextItem *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -268,8 +267,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETHTML )
   QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setHtml ( par1 );
+    obj->setHtml ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -297,8 +295,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETPLAINTEXT )
   QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setPlainText ( par1 );
+    obj->setPlainText ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

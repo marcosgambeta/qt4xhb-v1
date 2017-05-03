@@ -88,9 +88,8 @@ QToolBar ( const QString & title, QWidget * parent = 0 )
 HB_FUNC_STATIC( QTOOLBAR_NEW1 )
 {
   QToolBar * o = NULL;
-  QString par1 = hb_parc(1);
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QToolBar ( par1, par2 );
+  o = new QToolBar ( PQSTRING(1), par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QToolBar *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -219,8 +218,7 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION2 )
   QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QAction * ptr = obj->addAction ( par1 );
+    QAction * ptr = obj->addAction ( PQSTRING(1) );
     _qt4xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -235,8 +233,7 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION3 )
   if( obj )
   {
     QIcon par1 = ISOBJECT(1)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(1));
-    QString par2 = hb_parc(2);
-    QAction * ptr = obj->addAction ( par1, par2 );
+    QAction * ptr = obj->addAction ( par1, PQSTRING(2) );
     _qt4xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -250,10 +247,9 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION4 )
   QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
     const QObject * par2 = (const QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     const char * par3 = hb_parc(3);
-    QAction * ptr = obj->addAction ( par1, par2,  (const char *) par3 );
+    QAction * ptr = obj->addAction ( PQSTRING(1), par2,  (const char *) par3 );
     _qt4xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -268,10 +264,9 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION5 )
   if( obj )
   {
     QIcon par1 = ISOBJECT(1)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(1));
-    QString par2 = hb_parc(2);
     const QObject * par3 = (const QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     const char * par4 = hb_parc(4);
-    QAction * ptr = obj->addAction ( par1, par2, par3,  (const char *) par4 );
+    QAction * ptr = obj->addAction ( par1, PQSTRING(2), par3,  (const char *) par4 );
     _qt4xhb_createReturnClass ( ptr, "QACTION" );
   }
 }

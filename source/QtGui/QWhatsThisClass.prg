@@ -123,9 +123,8 @@ void showText ( const QPoint & pos, const QString & text, QWidget * w = 0 )
 HB_FUNC_STATIC( QWHATSTHIS_SHOWTEXT )
 {
   QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QString par2 = hb_parc(2);
   QWidget * par3 = ISNIL(3)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QWhatsThis::showText ( *par1, par2, par3 );
+  QWhatsThis::showText ( *par1, PQSTRING(2), par3 );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

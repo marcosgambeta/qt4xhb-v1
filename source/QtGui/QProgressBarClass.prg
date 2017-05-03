@@ -210,8 +210,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETFORMAT )
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setFormat ( par1 );
+    obj->setFormat ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

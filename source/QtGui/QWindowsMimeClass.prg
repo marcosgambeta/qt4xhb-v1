@@ -70,8 +70,7 @@ int registerMimeType ( const QString & mime )
 */
 HB_FUNC_STATIC( QWINDOWSMIME_REGISTERMIMETYPE )
 {
-  QString par1 = hb_parc(1);
-  hb_retni( QWindowsMime::registerMimeType ( par1 ) );
+  hb_retni( QWindowsMime::registerMimeType ( PQSTRING(1) ) );
 }
 
 

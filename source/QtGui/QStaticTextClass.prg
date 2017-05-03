@@ -85,8 +85,7 @@ QStaticText ( const QString & text )
 HB_FUNC_STATIC( QSTATICTEXT_NEW2 )
 {
   QStaticText * o = NULL;
-  QString par1 = hb_parc(1);
-  o = new QStaticText ( par1 );
+  o = new QStaticText ( PQSTRING(1) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QStaticText *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -209,8 +208,7 @@ HB_FUNC_STATIC( QSTATICTEXT_SETTEXT )
   QStaticText * obj = (QStaticText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setText ( par1 );
+    obj->setText ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

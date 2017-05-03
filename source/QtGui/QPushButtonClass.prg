@@ -62,9 +62,8 @@ QPushButton ( const QString & text, QWidget * parent = 0 )
 void QPushButton_new2 ()
 {
   QPushButton * o = NULL;
-  QString par1 = hb_parc(1);
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QPushButton ( par1, par2 );
+  o = new QPushButton ( PQSTRING(1), par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPushButton *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -79,9 +78,8 @@ void QPushButton_new3 ()
 {
   QPushButton * o = NULL;
   QIcon par1 = ISOBJECT(1)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(1));
-  QString par2 = hb_parc(2);
   QWidget * par3 = ISNIL(3)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QPushButton ( par1, par2, par3 );
+  o = new QPushButton ( par1, PQSTRING(2), par3 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPushButton *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );

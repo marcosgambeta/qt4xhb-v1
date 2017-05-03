@@ -197,10 +197,9 @@ HB_FUNC_STATIC( QSPLASHSCREEN_SHOWMESSAGE )
   QSplashScreen * obj = (QSplashScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
     int par2 = ISNIL(2)? Qt::AlignLeft : hb_parni(2);
     QColor par3 = ISNIL(3)? Qt::black : ISOBJECT(3)? *(QColor *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) ) : QColor(hb_parc(3));
-    obj->showMessage ( par1, par2, par3 );
+    obj->showMessage ( PQSTRING(1), par2, par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

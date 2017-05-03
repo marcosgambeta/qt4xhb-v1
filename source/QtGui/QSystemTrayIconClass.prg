@@ -218,8 +218,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SETTOOLTIP )
   QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setToolTip ( par1 );
+    obj->setToolTip ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -233,11 +232,9 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SHOWMESSAGE )
   QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QString par2 = hb_parc(2);
     int par3 = ISNIL(3)? (int) QSystemTrayIcon::Information : hb_parni(3);
     int par4 = ISNIL(4)? 10000 : hb_parni(4);
-    obj->showMessage ( par1, par2,  (QSystemTrayIcon::MessageIcon) par3, par4 );
+    obj->showMessage ( PQSTRING(1), PQSTRING(2),  (QSystemTrayIcon::MessageIcon) par3, par4 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

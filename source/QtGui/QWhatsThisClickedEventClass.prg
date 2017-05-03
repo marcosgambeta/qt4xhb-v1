@@ -42,8 +42,7 @@ QWhatsThisClickedEvent(const QString &href)
 HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_NEW )
 {
   QWhatsThisClickedEvent * o = NULL;
-  QString par1 = hb_parc(1);
-  o = new QWhatsThisClickedEvent ( par1 );
+  o = new QWhatsThisClickedEvent ( PQSTRING(1) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QWhatsThisClickedEvent *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );

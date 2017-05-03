@@ -353,8 +353,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETTEXT )
 
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setText ( par1 );
+    obj->setText ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

@@ -138,8 +138,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_SETTEXT )
   {
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
-    QString par3 = hb_parc(3);
-    obj->setText (  (QAccessibleObject::Text) par1, par2, par3 );
+    obj->setText (  (QAccessibleObject::Text) par1, par2, PQSTRING(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

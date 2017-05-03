@@ -223,9 +223,8 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_INDEX1 )
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
     int par2 = ISNIL(2)? 0 : hb_parni(2);
-    QModelIndex * ptr = new QModelIndex( obj->index ( par1, par2 ) );
+    QModelIndex * ptr = new QModelIndex( obj->index ( PQSTRING(1), par2 ) );
     _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
@@ -282,8 +281,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_MKDIR )
   if( obj )
   {
     QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString par2 = hb_parc(2);
-    QModelIndex * ptr = new QModelIndex( obj->mkdir ( *par1, par2 ) );
+    QModelIndex * ptr = new QModelIndex( obj->mkdir ( *par1, PQSTRING(2) ) );
     _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
@@ -526,8 +524,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETROOTPATH )
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QModelIndex * ptr = new QModelIndex( obj->setRootPath ( par1 ) );
+    QModelIndex * ptr = new QModelIndex( obj->setRootPath ( PQSTRING(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }

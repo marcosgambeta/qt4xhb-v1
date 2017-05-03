@@ -216,8 +216,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ADDTOOLBAR3 )
   QMainWindow * obj = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QToolBar * ptr = obj->addToolBar ( par1 );
+    QToolBar * ptr = obj->addToolBar ( PQSTRING(1) );
     _qt4xhb_createReturnClass ( ptr, "QTOOLBAR" );
   }
 }

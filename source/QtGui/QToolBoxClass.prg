@@ -105,8 +105,7 @@ HB_FUNC_STATIC( QTOOLBOX_ADDITEM1 )
   {
     QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QIcon par2 = ISOBJECT(2)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(2));
-    QString par3 = hb_parc(3);
-    hb_retni( obj->addItem ( par1, par2, par3 ) );
+    hb_retni( obj->addItem ( par1, par2, PQSTRING(3) ) );
   }
 }
 
@@ -120,8 +119,7 @@ HB_FUNC_STATIC( QTOOLBOX_ADDITEM2 )
   if( obj )
   {
     QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString par2 = hb_parc(2);
-    hb_retni( obj->addItem ( par1, par2 ) );
+    hb_retni( obj->addItem ( par1, PQSTRING(2) ) );
   }
 }
 
@@ -206,8 +204,7 @@ HB_FUNC_STATIC( QTOOLBOX_INSERTITEM1 )
     int par1 = hb_parni(1);
     QWidget * par2 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     QIcon par3 = ISOBJECT(3)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(3));
-    QString par4 = hb_parc(4);
-    hb_retni( obj->insertItem ( par1, par2, par3, par4 ) );
+    hb_retni( obj->insertItem ( par1, par2, par3, PQSTRING(4) ) );
   }
 }
 
@@ -222,8 +219,7 @@ HB_FUNC_STATIC( QTOOLBOX_INSERTITEM2 )
   {
     int par1 = hb_parni(1);
     QWidget * par2 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString par3 = hb_parc(3);
-    hb_retni( obj->insertItem ( par1, par2, par3 ) );
+    hb_retni( obj->insertItem ( par1, par2, PQSTRING(3) ) );
   }
 }
 
@@ -357,8 +353,7 @@ HB_FUNC_STATIC( QTOOLBOX_SETITEMTEXT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QString par2 = hb_parc(2);
-    obj->setItemText ( par1, par2 );
+    obj->setItemText ( par1, PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -373,8 +368,7 @@ HB_FUNC_STATIC( QTOOLBOX_SETITEMTOOLTIP )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QString par2 = hb_parc(2);
-    obj->setItemToolTip ( par1, par2 );
+    obj->setItemToolTip ( par1, PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

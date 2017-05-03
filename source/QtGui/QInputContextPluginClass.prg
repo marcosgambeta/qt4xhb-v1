@@ -67,8 +67,7 @@ HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_CREATE )
   QInputContextPlugin * obj = (QInputContextPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QInputContext * ptr = obj->create ( par1 );
+    QInputContext * ptr = obj->create ( PQSTRING(1) );
     _qt4xhb_createReturnClass ( ptr, "QINPUTCONTEXT" );
   }
 }
@@ -82,8 +81,7 @@ HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_DESCRIPTION )
   QInputContextPlugin * obj = (QInputContextPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QString str1 = obj->description ( par1 );
+    QString str1 = obj->description ( PQSTRING(1) );
     hb_retc( (const char *) str1.toLatin1().data() );
   }
 }
@@ -97,8 +95,7 @@ HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_DISPLAYNAME )
   QInputContextPlugin * obj = (QInputContextPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QString str1 = obj->displayName ( par1 );
+    QString str1 = obj->displayName ( PQSTRING(1) );
     hb_retc( (const char *) str1.toLatin1().data() );
   }
 }
@@ -135,8 +132,7 @@ HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_LANGUAGES )
   QInputContextPlugin * obj = (QInputContextPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QStringList strl = obj->languages ( par1 );
+    QStringList strl = obj->languages ( PQSTRING(1) );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

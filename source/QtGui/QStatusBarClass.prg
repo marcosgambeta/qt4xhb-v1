@@ -220,9 +220,8 @@ HB_FUNC_STATIC( QSTATUSBAR_SHOWMESSAGE )
   QStatusBar * obj = (QStatusBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
     int par2 = ISNIL(2)? 0 : hb_parni(2);
-    obj->showMessage ( par1, par2 );
+    obj->showMessage ( PQSTRING(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

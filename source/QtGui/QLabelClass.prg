@@ -105,10 +105,9 @@ QLabel ( const QString & text, QWidget * parent = 0, Qt::WindowFlags f = 0 )
 HB_FUNC_STATIC( QLABEL_NEW2 )
 {
   QLabel * o = NULL;
-  QString par1 = hb_parc(1);
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-  o = new QLabel ( par1, par2,  (Qt::WindowFlags) par3 );
+  o = new QLabel ( PQSTRING(1), par2,  (Qt::WindowFlags) par3 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QLabel *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -651,8 +650,7 @@ HB_FUNC_STATIC( QLABEL_SETTEXT )
   QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setText ( par1 );
+    obj->setText ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

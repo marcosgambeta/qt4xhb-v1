@@ -64,10 +64,9 @@ QDockWidget ( const QString & title, QWidget * parent = 0, Qt::WindowFlags flags
 HB_FUNC_STATIC( QDOCKWIDGET_NEW1 )
 {
   QDockWidget * o = NULL;
-  QString par1 = hb_parc(1);
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-  o = new QDockWidget ( par1, par2,  (Qt::WindowFlags) par3 );
+  o = new QDockWidget ( PQSTRING(1), par2,  (Qt::WindowFlags) par3 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDockWidget *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );

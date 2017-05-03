@@ -58,9 +58,8 @@ QCommandLinkButton ( const QString & text, QWidget * parent = 0 )
 void QCommandLinkButton_new2 ()
 {
   QCommandLinkButton * o = NULL;
-  QString par1 = hb_parc(1);
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QCommandLinkButton ( par1, par2 );
+  o = new QCommandLinkButton ( PQSTRING(1), par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QCommandLinkButton *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -74,10 +73,8 @@ QCommandLinkButton ( const QString & text, const QString & description, QWidget 
 void QCommandLinkButton_new3 ()
 {
   QCommandLinkButton * o = NULL;
-  QString par1 = hb_parc(1);
-  QString par2 = hb_parc(2);
   QWidget * par3 = ISNIL(3)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QCommandLinkButton ( par1, par2, par3 );
+  o = new QCommandLinkButton ( PQSTRING(1), PQSTRING(2), par3 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QCommandLinkButton *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -132,8 +129,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_SETDESCRIPTION )
 
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setDescription ( par1 );
+    obj->setDescription ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

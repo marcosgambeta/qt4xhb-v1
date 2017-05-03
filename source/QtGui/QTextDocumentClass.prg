@@ -163,9 +163,8 @@ QTextDocument ( const QString & text, QObject * parent = 0 )
 HB_FUNC_STATIC( QTEXTDOCUMENT_NEW2 )
 {
   QTextDocument * o = NULL;
-  QString par1 = hb_parc(1);
   QObject * par2 = ISNIL(2)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QTextDocument ( par1, par2 );
+  o = new QTextDocument ( PQSTRING(1), par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextDocument *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -530,10 +529,9 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FIND1 )
   QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
     QTextCursor * par2 = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-    QTextCursor * ptr = new QTextCursor( obj->find ( par1, *par2,  (QTextDocument::FindFlags) par3 ) );
+    QTextCursor * ptr = new QTextCursor( obj->find ( PQSTRING(1), *par2,  (QTextDocument::FindFlags) par3 ) );
     _qt4xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
   }
 }
@@ -564,10 +562,9 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FIND3 )
   QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
     int par2 = ISNIL(2)? 0 : hb_parni(2);
     int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-    QTextCursor * ptr = new QTextCursor( obj->find ( par1, par2,  (QTextDocument::FindFlags) par3 ) );
+    QTextCursor * ptr = new QTextCursor( obj->find ( PQSTRING(1), par2,  (QTextDocument::FindFlags) par3 ) );
     _qt4xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
   }
 }
@@ -1006,8 +1003,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETDEFAULTSTYLESHEET )
   QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setDefaultStyleSheet ( par1 );
+    obj->setDefaultStyleSheet ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1065,8 +1061,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETHTML )
   QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setHtml ( par1 );
+    obj->setHtml ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1110,8 +1105,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETMETAINFORMATION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QString par2 = hb_parc(2);
-    obj->setMetaInformation (  (QTextDocument::MetaInformation) par1, par2 );
+    obj->setMetaInformation (  (QTextDocument::MetaInformation) par1, PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1140,8 +1134,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETPLAINTEXT )
   QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setPlainText ( par1 );
+    obj->setPlainText ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -65,9 +65,8 @@ QCheckBox ( const QString & text, QWidget * parent = 0 )
 void QCheckBox_new2 ()
 {
   QCheckBox * o = NULL;
-  QString par1 = hb_parc(1);
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QCheckBox ( par1, par2 );
+  o = new QCheckBox ( PQSTRING(1), par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QCheckBox *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );

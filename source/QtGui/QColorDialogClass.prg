@@ -315,9 +315,8 @@ HB_FUNC_STATIC( QCOLORDIALOG_GETCOLOR1 )
 {
   QColor par1 = ISOBJECT(1)? *(QColor *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QColor(hb_parc(1));
   QWidget * par2 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QString par3 = hb_parc(3);
   int par4 = ISNIL(4)? (int) 0 : hb_parni(4);
-  QColor * ptr = new QColor( QColorDialog::getColor ( par1, par2, par3,  (QColorDialog::ColorDialogOptions) par4 ) );
+  QColor * ptr = new QColor( QColorDialog::getColor ( par1, par2, PQSTRING(3),  (QColorDialog::ColorDialogOptions) par4 ) );
   _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
 }
 

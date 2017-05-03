@@ -242,10 +242,9 @@ HB_FUNC_STATIC( QTREEWIDGET_FINDITEMS )
   QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
     int par2 = hb_parni(2);
     int par3 = ISNIL(3)? 0 : hb_parni(3);
-    QList<QTreeWidgetItem *> list = obj->findItems ( par1,  (Qt::MatchFlags) par2, par3 );
+    QList<QTreeWidgetItem *> list = obj->findItems ( PQSTRING(1),  (Qt::MatchFlags) par2, par3 );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QTREEWIDGETITEM" );
@@ -664,8 +663,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SETHEADERLABEL )
   QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setHeaderLabel ( par1 );
+    obj->setHeaderLabel ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

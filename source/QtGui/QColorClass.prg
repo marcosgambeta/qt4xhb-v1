@@ -201,8 +201,7 @@ QColor ( const QString & name )
 HB_FUNC_STATIC( QCOLOR_NEW4 )
 {
   QColor * o = NULL;
-  QString par1 = hb_parc(1);
-  o = new QColor ( par1 );
+  o = new QColor ( PQSTRING(1) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QColor *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -1183,8 +1182,7 @@ HB_FUNC_STATIC( QCOLOR_SETNAMEDCOLOR )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setNamedColor ( par1 );
+    obj->setNamedColor ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1568,8 +1566,7 @@ bool isValidColor ( const QString & name )
 */
 HB_FUNC_STATIC( QCOLOR_ISVALIDCOLOR )
 {
-  QString par1 = hb_parc(1);
-  hb_retl( QColor::isValidColor ( par1 ) );
+  hb_retl( QColor::isValidColor ( PQSTRING(1) ) );
 }
 
 

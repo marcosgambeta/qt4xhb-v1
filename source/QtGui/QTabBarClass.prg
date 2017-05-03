@@ -140,8 +140,7 @@ HB_FUNC_STATIC( QTABBAR_ADDTAB1 )
   QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    hb_retni( obj->addTab ( par1 ) );
+    hb_retni( obj->addTab ( PQSTRING(1) ) );
   }
 }
 
@@ -155,8 +154,7 @@ HB_FUNC_STATIC( QTABBAR_ADDTAB2 )
   if( obj )
   {
     QIcon par1 = ISOBJECT(1)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(1));
-    QString par2 = hb_parc(2);
-    hb_retni( obj->addTab ( par1, par2 ) );
+    hb_retni( obj->addTab ( par1, PQSTRING(2) ) );
   }
 }
 
@@ -277,8 +275,7 @@ HB_FUNC_STATIC( QTABBAR_INSERTTAB1 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QString par2 = hb_parc(2);
-    hb_retni( obj->insertTab ( par1, par2 ) );
+    hb_retni( obj->insertTab ( par1, PQSTRING(2) ) );
   }
 }
 
@@ -293,8 +290,7 @@ HB_FUNC_STATIC( QTABBAR_INSERTTAB2 )
   {
     int par1 = hb_parni(1);
     QIcon par2 = ISOBJECT(2)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(2));
-    QString par3 = hb_parc(3);
-    hb_retni( obj->insertTab ( par1, par2, par3 ) );
+    hb_retni( obj->insertTab ( par1, par2, PQSTRING(3) ) );
   }
 }
 
@@ -574,8 +570,7 @@ HB_FUNC_STATIC( QTABBAR_SETTABTEXT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QString par2 = hb_parc(2);
-    obj->setTabText ( par1, par2 );
+    obj->setTabText ( par1, PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -606,8 +601,7 @@ HB_FUNC_STATIC( QTABBAR_SETTABTOOLTIP )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QString par2 = hb_parc(2);
-    obj->setTabToolTip ( par1, par2 );
+    obj->setTabToolTip ( par1, PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -622,8 +616,7 @@ HB_FUNC_STATIC( QTABBAR_SETTABWHATSTHIS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QString par2 = hb_parc(2);
-    obj->setTabWhatsThis ( par1, par2 );
+    obj->setTabWhatsThis ( par1, PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

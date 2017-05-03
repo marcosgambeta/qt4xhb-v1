@@ -397,8 +397,7 @@ HB_FUNC_STATIC( QPAINTER_BOUNDINGRECT1 )
   {
     QRectF * par1 = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
-    QString par3 = hb_parc(3);
-    QRectF * ptr = new QRectF( obj->boundingRect ( *par1, par2, par3 ) );
+    QRectF * ptr = new QRectF( obj->boundingRect ( *par1, par2, PQSTRING(3) ) );
     _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -414,8 +413,7 @@ HB_FUNC_STATIC( QPAINTER_BOUNDINGRECT2 )
   {
     QRect * par1 = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
-    QString par3 = hb_parc(3);
-    QRect * ptr = new QRect( obj->boundingRect ( *par1, par2, par3 ) );
+    QRect * ptr = new QRect( obj->boundingRect ( *par1, par2, PQSTRING(3) ) );
     _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -434,8 +432,7 @@ HB_FUNC_STATIC( QPAINTER_BOUNDINGRECT3 )
     int par3 = hb_parni(3);
     int par4 = hb_parni(4);
     int par5 = hb_parni(5);
-    QString par6 = hb_parc(6);
-    QRect * ptr = new QRect( obj->boundingRect ( par1, par2, par3, par4, par5, par6 ) );
+    QRect * ptr = new QRect( obj->boundingRect ( par1, par2, par3, par4, par5, PQSTRING(6) ) );
     _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -450,9 +447,8 @@ HB_FUNC_STATIC( QPAINTER_BOUNDINGRECT4 )
   if( obj )
   {
     QRectF * par1 = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString par2 = hb_parc(2);
     QTextOption par3 = ISNIL(3)? QTextOption() : *(QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QRectF * ptr = new QRectF( obj->boundingRect ( *par1, par2, par3 ) );
+    QRectF * ptr = new QRectF( obj->boundingRect ( *par1, PQSTRING(2), par3 ) );
     _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -2228,8 +2224,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWTEXT1 )
   if( obj )
   {
     QPointF * par1 = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString par2 = hb_parc(2);
-    obj->drawText ( *par1, par2 );
+    obj->drawText ( *par1, PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -2244,8 +2239,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWTEXT2 )
   if( obj )
   {
     QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString par2 = hb_parc(2);
-    obj->drawText ( *par1, par2 );
+    obj->drawText ( *par1, PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -2261,9 +2255,8 @@ HB_FUNC_STATIC( QPAINTER_DRAWTEXT3 )
   {
     QRectF * par1 = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
-    QString par3 = hb_parc(3);
     QRectF * par4 = ISNIL(4)? 0 : (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->drawText ( *par1, par2, par3, par4 );
+    obj->drawText ( *par1, par2, PQSTRING(3), par4 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -2279,9 +2272,8 @@ HB_FUNC_STATIC( QPAINTER_DRAWTEXT4 )
   {
     QRect * par1 = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
-    QString par3 = hb_parc(3);
     QRect * par4 = ISNIL(4)? 0 : (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->drawText ( *par1, par2, par3, par4 );
+    obj->drawText ( *par1, par2, PQSTRING(3), par4 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -2297,8 +2289,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWTEXT5 )
   {
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
-    QString par3 = hb_parc(3);
-    obj->drawText ( par1, par2, par3 );
+    obj->drawText ( par1, par2, PQSTRING(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -2317,9 +2308,8 @@ HB_FUNC_STATIC( QPAINTER_DRAWTEXT6 )
     int par3 = hb_parni(3);
     int par4 = hb_parni(4);
     int par5 = hb_parni(5);
-    QString par6 = hb_parc(6);
     QRect * par7 = ISNIL(7)? 0 : (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(7, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->drawText ( par1, par2, par3, par4, par5, par6, par7 );
+    obj->drawText ( par1, par2, par3, par4, par5, PQSTRING(6), par7 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -2334,9 +2324,8 @@ HB_FUNC_STATIC( QPAINTER_DRAWTEXT7 )
   if( obj )
   {
     QRectF * par1 = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString par2 = hb_parc(2);
     QTextOption par3 = ISNIL(3)? QTextOption() : *(QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->drawText ( *par1, par2, par3 );
+    obj->drawText ( *par1, PQSTRING(2), par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

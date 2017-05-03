@@ -299,9 +299,8 @@ HB_FUNC_STATIC( QTABLEWIDGET_FINDITEMS )
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
     int par2 = hb_parni(2);
-    QList<QTableWidgetItem *> list = obj->findItems ( par1,  (Qt::MatchFlags) par2 );
+    QList<QTableWidgetItem *> list = obj->findItems ( PQSTRING(1),  (Qt::MatchFlags) par2 );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QTABLEWIDGETITEM" );

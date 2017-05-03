@@ -42,8 +42,7 @@ QStatusTipEvent(const QString &tip)
 HB_FUNC_STATIC( QSTATUSTIPEVENT_NEW )
 {
   QStatusTipEvent * o = NULL;
-  QString par1 = hb_parc(1);
-  o = new QStatusTipEvent ( par1 );
+  o = new QStatusTipEvent ( PQSTRING(1) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QStatusTipEvent *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );

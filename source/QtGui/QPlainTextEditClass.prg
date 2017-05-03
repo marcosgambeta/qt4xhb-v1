@@ -135,9 +135,8 @@ QPlainTextEdit ( const QString & text, QWidget * parent = 0 )
 HB_FUNC_STATIC( QPLAINTEXTEDIT_NEW2 )
 {
   QPlainTextEdit * o = NULL;
-  QString par1 = hb_parc(1);
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QPlainTextEdit ( par1, par2 );
+  o = new QPlainTextEdit ( PQSTRING(1), par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPlainTextEdit *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -399,9 +398,8 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_FIND )
   QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
     int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-    hb_retl( obj->find ( par1,  (QTextDocument::FindFlags) par2 ) );
+    hb_retl( obj->find ( PQSTRING(1),  (QTextDocument::FindFlags) par2 ) );
   }
 }
 
@@ -614,8 +612,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETDOCUMENTTITLE )
   QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setDocumentTitle ( par1 );
+    obj->setDocumentTitle ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -856,8 +853,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_APPENDHTML )
   QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->appendHtml ( par1 );
+    obj->appendHtml ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -871,8 +867,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_APPENDPLAINTEXT )
   QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->appendPlainText ( par1 );
+    obj->appendPlainText ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -942,8 +937,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_INSERTPLAINTEXT )
   QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->insertPlainText ( par1 );
+    obj->insertPlainText ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -999,8 +993,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETPLAINTEXT )
   QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setPlainText ( par1 );
+    obj->setPlainText ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

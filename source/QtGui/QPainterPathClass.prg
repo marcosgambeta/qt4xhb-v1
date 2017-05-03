@@ -430,8 +430,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDTEXT1 )
   {
     QPointF * par1 = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QFont * par2 = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString par3 = hb_parc(3);
-    obj->addText ( *par1, *par2, par3 );
+    obj->addText ( *par1, *par2, PQSTRING(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -446,8 +445,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDTEXT2 )
   if( obj )
   {
     QFont * par3 = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString par4 = hb_parc(4);
-    obj->addText ( PQREAL(1), PQREAL(2), *par3, par4 );
+    obj->addText ( PQREAL(1), PQREAL(2), *par3, PQSTRING(4) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

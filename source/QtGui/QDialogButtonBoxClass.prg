@@ -177,9 +177,8 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ADDBUTTON2 )
   QDialogButtonBox * obj = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
     int par2 = hb_parni(2);
-    QPushButton * ptr = obj->addButton ( par1,  (QDialogButtonBox::ButtonRole) par2 );
+    QPushButton * ptr = obj->addButton ( PQSTRING(1),  (QDialogButtonBox::ButtonRole) par2 );
     _qt4xhb_createReturnClass ( ptr, "QPUSHBUTTON" );
   }
 }

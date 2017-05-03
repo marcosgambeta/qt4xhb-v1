@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_TOP )
 /*
 virtual void fixup ( QString & input ) const
 */
-HB_FUNC_STATIC( QINTVALIDATOR_FIXUP )
+HB_FUNC_STATIC( QINTVALIDATOR_FIXUP ) // TODO: revisar a implementacao e corrigir
 {
   QIntValidator * obj = (QIntValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_FIXUP )
 /*
 virtual QValidator::State validate ( QString & input, int & pos ) const
 */
-HB_FUNC_STATIC( QINTVALIDATOR_VALIDATE )
+HB_FUNC_STATIC( QINTVALIDATOR_VALIDATE ) // TODO: revisar a implementacao e corrigir
 {
   QIntValidator * obj = (QIntValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )

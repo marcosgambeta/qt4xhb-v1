@@ -136,9 +136,8 @@ QLineEdit ( const QString & contents, QWidget * parent = 0 )
 HB_FUNC_STATIC( QLINEEDIT_NEW2 )
 {
   QLineEdit * o = NULL;
-  QString par1 = hb_parc(1);
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QLineEdit ( par1, par2 );
+  o = new QLineEdit ( PQSTRING(1), par2 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QLineEdit *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -499,8 +498,7 @@ HB_FUNC_STATIC( QLINEEDIT_INSERT )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->insert ( par1 );
+    obj->insert ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -722,8 +720,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETINPUTMASK )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setInputMask ( par1 );
+    obj->setInputMask ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -766,8 +763,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETPLACEHOLDERTEXT )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setPlaceholderText ( par1 );
+    obj->setPlaceholderText ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1031,8 +1027,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETTEXT )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setText ( par1 );
+    obj->setText ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

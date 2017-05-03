@@ -159,8 +159,7 @@ QStandardItem(const QString &text)
 HB_FUNC_STATIC( QSTANDARDITEM_NEW2 )
 {
   QStandardItem * o = NULL;
-  QString par1 = hb_parc(1);
-  o = new QStandardItem ( par1 );
+  o = new QStandardItem ( PQSTRING(1) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QStandardItem *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -176,8 +175,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_NEW3 )
 {
   QStandardItem * o = NULL;
   QIcon par1 = ISOBJECT(1)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(1));
-  QString par2 = hb_parc(2);
-  o = new QStandardItem ( par1, par2 );
+  o = new QStandardItem ( par1, PQSTRING(2) );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QStandardItem *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -301,8 +299,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETTEXT )
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setText ( par1 );
+    obj->setText ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -359,8 +356,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETTOOLTIP )
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setToolTip ( par1 );
+    obj->setToolTip ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -388,8 +384,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETSTATUSTIP )
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setStatusTip ( par1 );
+    obj->setStatusTip ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -417,8 +412,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETWHATSTHIS )
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setWhatsThis ( par1 );
+    obj->setWhatsThis ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -618,8 +612,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETACCESSIBLETEXT )
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setAccessibleText ( par1 );
+    obj->setAccessibleText ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -647,8 +640,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETACCESSIBLEDESCRIPTION )
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setAccessibleDescription ( par1 );
+    obj->setAccessibleDescription ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

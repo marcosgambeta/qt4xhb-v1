@@ -175,8 +175,7 @@ HB_FUNC_STATIC( QSPINBOX_SETPREFIX )
   QSpinBox * obj = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setPrefix ( par1 );
+    obj->setPrefix ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -221,8 +220,7 @@ HB_FUNC_STATIC( QSPINBOX_SETSUFFIX )
   QSpinBox * obj = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setSuffix ( par1 );
+    obj->setSuffix ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

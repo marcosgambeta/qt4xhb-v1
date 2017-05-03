@@ -418,8 +418,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETANCHORHREF )
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setAnchorHref ( par1 );
+    obj->setAnchorHref ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -486,8 +485,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTFAMILY )
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setFontFamily ( par1 );
+    obj->setFontFamily ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -703,8 +701,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETTOOLTIP )
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setToolTip ( par1 );
+    obj->setToolTip ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -158,9 +158,8 @@ HB_FUNC_STATIC( QCOMBOBOX_ADDITEM1 )
   QComboBox * obj = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
     QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->addItem ( par1, par2 );
+    obj->addItem ( PQSTRING(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -175,9 +174,8 @@ HB_FUNC_STATIC( QCOMBOBOX_ADDITEM2 )
   if( obj )
   {
     QIcon par1 = ISOBJECT(1)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(1));
-    QString par2 = hb_parc(2);
     QVariant par3 = ISNIL(3)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->addItem ( par1, par2, par3 );
+    obj->addItem ( par1, PQSTRING(2), par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -313,9 +311,8 @@ HB_FUNC_STATIC( QCOMBOBOX_FINDTEXT )
   QComboBox * obj = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
     int par2 = ISNIL(2)? (int) Qt::MatchExactly | Qt::MatchCaseSensitive : hb_parni(2);
-    hb_retni( obj->findText ( par1,  (Qt::MatchFlags) par2 ) );
+    hb_retni( obj->findText ( PQSTRING(1),  (Qt::MatchFlags) par2 ) );
   }
 }
 
@@ -371,9 +368,8 @@ HB_FUNC_STATIC( QCOMBOBOX_INSERTITEM1 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QString par2 = hb_parc(2);
     QVariant par3 = ISNIL(3)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->insertItem ( par1, par2, par3 );
+    obj->insertItem ( par1, PQSTRING(2), par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -389,9 +385,8 @@ HB_FUNC_STATIC( QCOMBOBOX_INSERTITEM2 )
   {
     int par1 = hb_parni(1);
     QIcon par2 = ISOBJECT(2)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(2));
-    QString par3 = hb_parc(3);
     QVariant par4 = ISNIL(4)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->insertItem ( par1, par2, par3, par4 );
+    obj->insertItem ( par1, par2, PQSTRING(3), par4 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -790,8 +785,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETITEMTEXT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QString par2 = hb_parc(2);
-    obj->setItemText ( par1, par2 );
+    obj->setItemText ( par1, PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1095,8 +1089,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETEDITTEXT )
   QComboBox * obj = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setEditText ( par1 );
+    obj->setEditText ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -191,8 +191,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_SETBUTTONTEXT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QString par2 = hb_parc(2);
-    obj->setButtonText (  (QWizard::WizardButton) par1, par2 );
+    obj->setButtonText (  (QWizard::WizardButton) par1, PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -250,8 +249,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_SETSUBTITLE )
   QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setSubTitle ( par1 );
+    obj->setSubTitle ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -265,8 +263,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_SETTITLE )
   QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setTitle ( par1 );
+    obj->setTitle ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

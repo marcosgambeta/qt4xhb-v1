@@ -202,8 +202,7 @@ HB_FUNC_STATIC( QWIZARD_FIELD )
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QVariant * ptr = new QVariant( obj->field ( par1 ) );
+    QVariant * ptr = new QVariant( obj->field ( PQSTRING(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -366,8 +365,7 @@ HB_FUNC_STATIC( QWIZARD_SETBUTTONTEXT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QString par2 = hb_parc(2);
-    obj->setButtonText (  (QWizard::WizardButton) par1, par2 );
+    obj->setButtonText (  (QWizard::WizardButton) par1, PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -398,9 +396,8 @@ HB_FUNC_STATIC( QWIZARD_SETFIELD )
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
     QVariant * par2 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setField ( par1, *par2 );
+    obj->setField ( PQSTRING(1), *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

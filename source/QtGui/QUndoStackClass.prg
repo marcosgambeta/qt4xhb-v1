@@ -109,8 +109,7 @@ HB_FUNC_STATIC( QUNDOSTACK_BEGINMACRO )
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->beginMacro ( par1 );
+    obj->beginMacro ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

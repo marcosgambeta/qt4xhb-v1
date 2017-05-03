@@ -107,9 +107,8 @@ QRawFont ( const QString & fileName, qreal pixelSize, QFont::HintingPreference h
 HB_FUNC_STATIC( QRAWFONT_NEW2 )
 {
   QRawFont * o = NULL;
-  QString par1 = hb_parc(1);
   int par3 = ISNIL(3)? (int) QFont::PreferDefaultHinting : hb_parni(3);
-  o = new QRawFont ( par1, PQREAL(2),  (QFont::HintingPreference) par3 );
+  o = new QRawFont ( PQSTRING(1), PQREAL(2),  (QFont::HintingPreference) par3 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QRawFont *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -365,8 +364,7 @@ HB_FUNC_STATIC( QRAWFONT_GLYPHINDEXESFORSTRING )
   QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    QVector<quint32> list = obj->glyphIndexesForString ( par1 );
+    QVector<quint32> list = obj->glyphIndexesForString ( PQSTRING(1) );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -445,9 +443,8 @@ HB_FUNC_STATIC( QRAWFONT_LOADFROMFILE )
   QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
     int par3 = hb_parni(3);
-    obj->loadFromFile ( par1, PQREAL(2),  (QFont::HintingPreference) par3 );
+    obj->loadFromFile ( PQSTRING(1), PQREAL(2),  (QFont::HintingPreference) par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

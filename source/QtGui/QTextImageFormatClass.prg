@@ -136,8 +136,7 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETNAME )
   QTextImageFormat * obj = (QTextImageFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setName ( par1 );
+    obj->setName ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

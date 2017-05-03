@@ -218,9 +218,8 @@ HB_FUNC_STATIC( QCLIPBOARD_SETTEXT )
   QClipboard * obj = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
     int par2 = hb_parni(2);
-    obj->setText ( par1,  (QClipboard::Mode) par2 );
+    obj->setText ( PQSTRING(1),  (QClipboard::Mode) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

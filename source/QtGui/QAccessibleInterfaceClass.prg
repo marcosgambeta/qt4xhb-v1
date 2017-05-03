@@ -258,9 +258,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_SETTEXT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    QString par3 = hb_parc(3);
-    obj->setText (  (QAccessibleInterface::Text) par1, par2, par3 );
+    obj->setText (  (QAccessibleInterface::Text) par1, PINT(2), PQSTRING(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -274,8 +272,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_STATE )
   QAccessibleInterface * obj = (QAccessibleInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retni( (int) obj->state ( par1 ) );
+    hb_retni( (int) obj->state ( PINT(1) ) );
   }
 }
 

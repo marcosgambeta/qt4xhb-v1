@@ -482,9 +482,8 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDSIMPLETEXT )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
     QFont par2 = ISNIL(2)? QFont() : *(QFont *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QGraphicsSimpleTextItem * ptr = obj->addSimpleText ( par1, par2 );
+    QGraphicsSimpleTextItem * ptr = obj->addSimpleText ( PQSTRING(1), par2 );
     _qt4xhb_createReturnClass ( ptr, "QGRAPHICSSIMPLETEXTITEM" );
   }
 }
@@ -498,9 +497,8 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDTEXT )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
     QFont par2 = ISNIL(2)? QFont() : *(QFont *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QGraphicsTextItem * ptr = obj->addText ( par1, par2 );
+    QGraphicsTextItem * ptr = obj->addText ( PQSTRING(1), par2 );
     _qt4xhb_createReturnClass ( ptr, "QGRAPHICSTEXTITEM" );
   }
 }

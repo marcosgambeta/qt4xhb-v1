@@ -109,12 +109,10 @@ HB_FUNC_STATIC( QMESSAGEBOX_NEW2 )
 {
   QMessageBox * o = NULL;
   int par1 = hb_parni(1);
-  QString par2 = hb_parc(2);
-  QString par3 = hb_parc(3);
   int par4 = ISNIL(4)? (int) QMessageBox::NoButton : hb_parni(4);
   QWidget * par5 = ISNIL(5)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(5, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par6 = ISNIL(6)? (int) Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint : hb_parni(6);
-  o = new QMessageBox (  (QMessageBox::Icon) par1, par2, par3,  (QMessageBox::StandardButtons) par4, par5,  (Qt::WindowFlags) par6 );
+  o = new QMessageBox (  (QMessageBox::Icon) par1, PQSTRING(2), PQSTRING(3),  (QMessageBox::StandardButtons) par4, par5,  (Qt::WindowFlags) par6 );
   PHB_ITEM self = hb_stackSelfItem();
   PHB_ITEM ptr = hb_itemPutPtr( NULL,(QMessageBox *) o );
   hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -182,9 +180,8 @@ HB_FUNC_STATIC( QMESSAGEBOX_ADDBUTTON2 )
   QMessageBox * obj = (QMessageBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
     int par2 = hb_parni(2);
-    QPushButton * ptr = obj->addButton ( par1,  (QMessageBox::ButtonRole) par2 );
+    QPushButton * ptr = obj->addButton ( PQSTRING(1),  (QMessageBox::ButtonRole) par2 );
     _qt4xhb_createReturnClass ( ptr, "QPUSHBUTTON" );
   }
 }
@@ -479,8 +476,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETDETAILEDTEXT )
   QMessageBox * obj = (QMessageBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setDetailedText ( par1 );
+    obj->setDetailedText ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -569,8 +565,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETINFORMATIVETEXT )
   QMessageBox * obj = (QMessageBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setInformativeText ( par1 );
+    obj->setInformativeText ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -599,8 +594,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETTEXT )
   QMessageBox * obj = (QMessageBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setText ( par1 );
+    obj->setText ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -644,8 +638,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETWINDOWTITLE )
   QMessageBox * obj = (QMessageBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->setWindowTitle ( par1 );
+    obj->setWindowTitle ( PQSTRING(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -739,9 +732,7 @@ void about ( QWidget * parent, const QString & title, const QString & text )
 HB_FUNC_STATIC( QMESSAGEBOX_ABOUT )
 {
   QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QString par2 = hb_parc(2);
-  QString par3 = hb_parc(3);
-  QMessageBox::about ( par1, par2, par3 );
+  QMessageBox::about ( par1, PQSTRING(2), PQSTRING(3) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -764,11 +755,9 @@ StandardButton critical ( QWidget * parent, const QString & title, const QString
 HB_FUNC_STATIC( QMESSAGEBOX_CRITICAL )
 {
   QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QString par2 = hb_parc(2);
-  QString par3 = hb_parc(3);
   int par4 = ISNIL(4)? (int) QMessageBox::Ok : hb_parni(4);
   int par5 = ISNIL(5)? (int) QMessageBox::NoButton : hb_parni(5);
-  hb_retni( (int) QMessageBox::critical ( par1, par2, par3,  (QMessageBox::StandardButtons) par4,  (QMessageBox::StandardButton) par5 ) );
+  hb_retni( (int) QMessageBox::critical ( par1, PQSTRING(2), PQSTRING(3),  (QMessageBox::StandardButtons) par4,  (QMessageBox::StandardButton) par5 ) );
 }
 
 
@@ -778,11 +767,9 @@ StandardButton information ( QWidget * parent, const QString & title, const QStr
 HB_FUNC_STATIC( QMESSAGEBOX_INFORMATION )
 {
   QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QString par2 = hb_parc(2);
-  QString par3 = hb_parc(3);
   int par4 = ISNIL(4)? (int) QMessageBox::Ok : hb_parni(4);
   int par5 = ISNIL(5)? (int) QMessageBox::NoButton : hb_parni(5);
-  hb_retni( (int) QMessageBox::information ( par1, par2, par3,  (QMessageBox::StandardButtons) par4,  (QMessageBox::StandardButton) par5 ) );
+  hb_retni( (int) QMessageBox::information ( par1, PQSTRING(2), PQSTRING(3),  (QMessageBox::StandardButtons) par4,  (QMessageBox::StandardButton) par5 ) );
 }
 
 
@@ -792,11 +779,9 @@ StandardButton question ( QWidget * parent, const QString & title, const QString
 HB_FUNC_STATIC( QMESSAGEBOX_QUESTION )
 {
   QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QString par2 = hb_parc(2);
-  QString par3 = hb_parc(3);
   int par4 = ISNIL(4)? (int) QMessageBox::Ok : hb_parni(4);
   int par5 = ISNIL(5)? (int) QMessageBox::NoButton : hb_parni(5);
-  hb_retni( (int) QMessageBox::question ( par1, par2, par3,  (QMessageBox::StandardButtons) par4,  (QMessageBox::StandardButton) par5 ) );
+  hb_retni( (int) QMessageBox::question ( par1, PQSTRING(2), PQSTRING(3),  (QMessageBox::StandardButtons) par4,  (QMessageBox::StandardButton) par5 ) );
 }
 
 
@@ -806,11 +791,9 @@ StandardButton warning ( QWidget * parent, const QString & title, const QString 
 HB_FUNC_STATIC( QMESSAGEBOX_WARNING )
 {
   QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QString par2 = hb_parc(2);
-  QString par3 = hb_parc(3);
   int par4 = ISNIL(4)? (int) QMessageBox::Ok : hb_parni(4);
   int par5 = ISNIL(5)? (int) QMessageBox::NoButton : hb_parni(5);
-  hb_retni( (int) QMessageBox::warning ( par1, par2, par3,  (QMessageBox::StandardButtons) par4,  (QMessageBox::StandardButton) par5 ) );
+  hb_retni( (int) QMessageBox::warning ( par1, PQSTRING(2), PQSTRING(3),  (QMessageBox::StandardButtons) par4,  (QMessageBox::StandardButton) par5 ) );
 }
 
 

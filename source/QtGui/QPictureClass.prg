@@ -177,9 +177,8 @@ HB_FUNC_STATIC( QPICTURE_LOAD1 )
   QPicture * obj = (QPicture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
     const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    hb_retl( obj->load ( par1,  (const char *) par2 ) );
+    hb_retl( obj->load ( PQSTRING(1),  (const char *) par2 ) );
   }
 }
 
@@ -236,9 +235,8 @@ HB_FUNC_STATIC( QPICTURE_SAVE1 )
   QPicture * obj = (QPicture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = hb_parc(1);
     const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    hb_retl( obj->save ( par1,  (const char *) par2 ) );
+    hb_retl( obj->save ( PQSTRING(1),  (const char *) par2 ) );
   }
 }
 
