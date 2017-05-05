@@ -113,11 +113,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW1 )
 {
   QScriptValue * o = NULL;
   o = new QScriptValue (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QScriptValue *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 
@@ -129,11 +125,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW2 )
   QScriptValue * o = NULL;
   QScriptValue * par1 = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   o = new QScriptValue ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QScriptValue *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 
@@ -144,11 +136,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW3 )
 {
   QScriptValue * o = NULL;
   o = new QScriptValue (  (QScriptValue::SpecialValue) hb_parni(1) );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QScriptValue *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 
@@ -159,11 +147,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW4 )
 {
   QScriptValue * o = NULL;
   o = new QScriptValue ( PBOOL(1) );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QScriptValue *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 
@@ -174,11 +158,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW5 )
 {
   QScriptValue * o = NULL;
   o = new QScriptValue ( PINT(1) );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QScriptValue *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 
@@ -189,11 +169,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW6 )
 {
   QScriptValue * o = NULL;
   o = new QScriptValue ( (uint) hb_parni(1) );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QScriptValue *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 
@@ -205,11 +181,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW7 )
   QScriptValue * o = NULL;
   qsreal par1 = hb_parnd(1);
   o = new QScriptValue ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QScriptValue *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 
@@ -220,11 +192,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW8 )
 {
   QScriptValue * o = NULL;
   o = new QScriptValue ( PQSTRING(1) );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QScriptValue *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 
@@ -237,11 +205,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW10 )
   QScriptValue * o = NULL;
   const char * par1 = hb_parc(1);
   o = new QScriptValue (  (const char *) par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QScriptValue *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 

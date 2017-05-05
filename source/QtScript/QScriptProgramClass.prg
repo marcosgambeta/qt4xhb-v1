@@ -55,11 +55,7 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW1 )
 {
   QScriptProgram * o = NULL;
   o = new QScriptProgram (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QScriptProgram *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 
@@ -71,11 +67,7 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW2 )
   QScriptProgram * o = NULL;
   QString par2 = ISNIL(2)? QString() : hb_parc(2);
   o = new QScriptProgram ( PQSTRING(1), par2, ISNIL(3)? 1 : hb_parni(3) );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QScriptProgram *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 
@@ -87,11 +79,7 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW3 )
   QScriptProgram * o = NULL;
   QScriptProgram * par1 = (QScriptProgram *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   o = new QScriptProgram ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QScriptProgram *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 
