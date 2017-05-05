@@ -57,11 +57,7 @@ HB_FUNC_STATIC( QAXBINDABLE_NEW )
 {
   QAxBindable * o = NULL;
   o = new QAxBindable (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QAxBindable *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 HB_FUNC_STATIC( QAXBINDABLE_DELETE )
