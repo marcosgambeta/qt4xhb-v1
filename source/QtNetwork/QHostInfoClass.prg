@@ -71,14 +71,7 @@ HB_FUNC_STATIC( QHOSTINFO_NEW1 )
   QHostInfo * o = NULL;
   int par1 = ISNIL(1)? -1 : hb_parni(1);
   o = new QHostInfo ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QHostInfo *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, true );
 }
 
 
@@ -90,14 +83,7 @@ HB_FUNC_STATIC( QHOSTINFO_NEW2 )
   QHostInfo * o = NULL;
   QHostInfo * par1 = (QHostInfo *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   o = new QHostInfo ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QHostInfo *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, true );
 }
 
 

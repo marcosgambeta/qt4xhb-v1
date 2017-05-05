@@ -85,14 +85,7 @@ HB_FUNC_STATIC( QURLINFO_NEW1 )
 {
   QUrlInfo * o = NULL;
   o = new QUrlInfo (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QUrlInfo *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, true );
 }
 
 
@@ -104,14 +97,7 @@ HB_FUNC_STATIC( QURLINFO_NEW2 )
   QUrlInfo * o = NULL;
   QUrlInfo * par1 = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   o = new QUrlInfo ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QUrlInfo *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, true );
 }
 
 
@@ -126,14 +112,7 @@ HB_FUNC_STATIC( QURLINFO_NEW3 )
   QDateTime * par6 = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_param(6, HB_IT_OBJECT ), "POINTER", 0 ) );
   QDateTime * par7 = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_param(7, HB_IT_OBJECT ), "POINTER", 0 ) );
   o = new QUrlInfo ( PQSTRING(1), par2, PQSTRING(3), PQSTRING(4), par5, *par6, *par7, PBOOL(8), PBOOL(9), PBOOL(10), PBOOL(11), PBOOL(12), PBOOL(13) );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QUrlInfo *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, true );
 }
 
 
@@ -149,14 +128,7 @@ HB_FUNC_STATIC( QURLINFO_NEW4 )
   QDateTime * par6 = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_param(6, HB_IT_OBJECT ), "POINTER", 0 ) );
   QDateTime * par7 = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_param(7, HB_IT_OBJECT ), "POINTER", 0 ) );
   o = new QUrlInfo ( *par1, par2, PQSTRING(3), PQSTRING(4), par5, *par6, *par7, PBOOL(8), PBOOL(9), PBOOL(10), PBOOL(11), PBOOL(12), PBOOL(13) );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QUrlInfo *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, true );
 }
 
 

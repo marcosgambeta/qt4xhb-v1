@@ -72,14 +72,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_NEW1 )
 {
   QHostAddress * o = NULL;
   o = new QHostAddress (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QHostAddress *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, true );
 }
 
 
@@ -91,14 +84,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_NEW2 )
   QHostAddress * o = NULL;
   quint32 par1 = hb_parni(1);
   o = new QHostAddress ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QHostAddress *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, true );
 }
 
 
@@ -112,14 +98,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_NEW6 )
 {
   QHostAddress * o = NULL;
   o = new QHostAddress ( PQSTRING(1) );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QHostAddress *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, true );
 }
 
 
@@ -131,14 +110,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_NEW7 )
   QHostAddress * o = NULL;
   QHostAddress * par1 = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   o = new QHostAddress ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QHostAddress *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, true );
 }
 
 
@@ -150,14 +122,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_NEW8 )
   QHostAddress * o = NULL;
   int par1 = hb_parni(1);
   o = new QHostAddress (  (QHostAddress::SpecialAddress) par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QHostAddress *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, true );
 }
 
 

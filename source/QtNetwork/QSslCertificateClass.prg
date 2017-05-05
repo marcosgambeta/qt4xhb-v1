@@ -81,14 +81,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_NEW1 )
   QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = ISNIL(2)? (int) QSsl::Pem : hb_parni(2);
   o = new QSslCertificate ( par1,  (QSsl::EncodingFormat) par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSslCertificate *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, true );
 }
 
 
@@ -101,14 +94,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_NEW2 )
   QByteArray par1 = ISNIL(1)? QByteArray() : *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = ISNIL(2)? (int) QSsl::Pem : hb_parni(2);
   o = new QSslCertificate ( par1,  (QSsl::EncodingFormat) par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSslCertificate *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, true );
 }
 
 
@@ -120,14 +106,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_NEW3 )
   QSslCertificate * o = NULL;
   QSslCertificate * par1 = (QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   o = new QSslCertificate ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSslCertificate *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, true );
 }
 
 

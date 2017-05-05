@@ -63,14 +63,7 @@ HB_FUNC_STATIC( QSSLKEY_NEW1 )
 {
   QSslKey * o = NULL;
   o = new QSslKey (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSslKey *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, true );
 }
 
 
@@ -86,14 +79,7 @@ HB_FUNC_STATIC( QSSLKEY_NEW2 )
   int par4 = ISNIL(4)? (int) QSsl::PrivateKey : hb_parni(4);
   QByteArray par5 = ISNIL(5)? QByteArray() : *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(5, HB_IT_OBJECT ), "POINTER", 0 ) );
   o = new QSslKey ( *par1,  (QSsl::KeyAlgorithm) par2,  (QSsl::EncodingFormat) par3,  (QSsl::KeyType) par4, par5 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSslKey *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, true );
 }
 
 
@@ -109,14 +95,7 @@ HB_FUNC_STATIC( QSSLKEY_NEW3 )
   int par4 = ISNIL(4)? (int) QSsl::PrivateKey : hb_parni(4);
   QByteArray par5 = ISNIL(5)? QByteArray() : *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(5, HB_IT_OBJECT ), "POINTER", 0 ) );
   o = new QSslKey ( par1,  (QSsl::KeyAlgorithm) par2,  (QSsl::EncodingFormat) par3,  (QSsl::KeyType) par4, par5 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSslKey *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, true );
 }
 
 
@@ -128,14 +107,7 @@ HB_FUNC_STATIC( QSSLKEY_NEW4 )
   QSslKey * o = NULL;
   QSslKey * par1 = (QSslKey *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   o = new QSslKey ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSslKey *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, true );
 }
 
 
