@@ -46,11 +46,7 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_NEW )
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
   o = new QAccessibleEvent (  (QAccessibleEvent::Type) par1, par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QAccessibleEvent *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 

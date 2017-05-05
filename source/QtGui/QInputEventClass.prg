@@ -46,11 +46,7 @@ HB_FUNC_STATIC( QINPUTEVENT_NEW )
   int par1 = hb_parni(1);
   int par2 = ISNIL(2)? (int) Qt::NoModifier : hb_parni(2);
   o = new QInputEvent (  (QEvent::Type) par1,  (Qt::KeyboardModifiers) par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QInputEvent *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 

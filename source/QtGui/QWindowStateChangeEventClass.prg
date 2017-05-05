@@ -47,11 +47,7 @@ HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_NEW1 )
   QWindowStateChangeEvent * o = NULL;
   int par1 = hb_parni(1);
   o = new QWindowStateChangeEvent (  (Qt::WindowStates) par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QWindowStateChangeEvent *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 
@@ -63,11 +59,7 @@ HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_NEW2 )
   QWindowStateChangeEvent * o = NULL;
   int par1 = hb_parni(1);
   o = new QWindowStateChangeEvent (  (Qt::WindowStates) par1, PBOOL(2) );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QWindowStateChangeEvent *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 

@@ -50,11 +50,7 @@ HB_FUNC_STATIC( QCDESTYLE_NEW )
   QCDEStyle * o = NULL;
   bool par1 = ISNIL(1)? false : hb_parl(1);
   o = new QCDEStyle ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QCDEStyle *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 

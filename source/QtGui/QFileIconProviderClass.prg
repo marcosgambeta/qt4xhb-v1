@@ -55,11 +55,7 @@ HB_FUNC_STATIC( QFILEICONPROVIDER_NEW )
 {
   QFileIconProvider * o = NULL;
   o = new QFileIconProvider (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QFileIconProvider *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 

@@ -101,11 +101,7 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_NEW1 )
 {
   QPlatformWindowFormat * o = NULL;
   o = new QPlatformWindowFormat (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPlatformWindowFormat *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 
@@ -117,11 +113,7 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_NEW2 )
   QPlatformWindowFormat * o = NULL;
   int par1 = hb_parni(1);
   o = new QPlatformWindowFormat (  (QPlatformWindowFormat::FormatOptions) par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPlatformWindowFormat *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 
@@ -133,11 +125,7 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_NEW3 )
   QPlatformWindowFormat * o = NULL;
   QPlatformWindowFormat * par1 = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   o = new QPlatformWindowFormat ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPlatformWindowFormat *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 

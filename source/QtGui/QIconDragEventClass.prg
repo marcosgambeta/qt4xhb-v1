@@ -42,11 +42,7 @@ HB_FUNC_STATIC( QICONDRAGEVENT_NEW )
 {
   QIconDragEvent * o = NULL;
   o = new QIconDragEvent (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QIconDragEvent *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 

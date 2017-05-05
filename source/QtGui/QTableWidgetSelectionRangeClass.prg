@@ -57,11 +57,7 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_NEW1 )
 {
   QTableWidgetSelectionRange * o = NULL;
   o = new QTableWidgetSelectionRange (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTableWidgetSelectionRange *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 
@@ -76,11 +72,7 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_NEW2 )
   int par3 = hb_parni(3);
   int par4 = hb_parni(4);
   o = new QTableWidgetSelectionRange ( par1, par2, par3, par4 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTableWidgetSelectionRange *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 
@@ -92,11 +84,7 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_NEW3 )
   QTableWidgetSelectionRange * o = NULL;
   QTableWidgetSelectionRange * par1 = (QTableWidgetSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   o = new QTableWidgetSelectionRange ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTableWidgetSelectionRange *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 

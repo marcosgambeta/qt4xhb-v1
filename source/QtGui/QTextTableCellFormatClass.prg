@@ -52,11 +52,7 @@ HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_NEW )
 {
   QTextTableCellFormat * o = NULL;
   o = new QTextTableCellFormat (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextTableCellFormat *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 

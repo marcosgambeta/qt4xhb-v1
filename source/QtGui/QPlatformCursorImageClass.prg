@@ -64,11 +64,7 @@ HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_NEW )
   int par5 = hb_parni(5);
   int par6 = hb_parni(6);
   o = new QPlatformCursorImage ( par1, par2, par3, par4, par5, par6 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QPlatformCursorImage *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 
