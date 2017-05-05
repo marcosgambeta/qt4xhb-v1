@@ -56,11 +56,7 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_NEW )
 {
   QAbstractFormBuilder * o = NULL;
   o = new QAbstractFormBuilder (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QAbstractFormBuilder *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 
