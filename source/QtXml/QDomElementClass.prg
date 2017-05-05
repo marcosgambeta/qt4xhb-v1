@@ -82,14 +82,7 @@ HB_FUNC_STATIC( QDOMELEMENT_NEW1 )
 {
   QDomElement * o = NULL;
   o = new QDomElement (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDomElement *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, true );
 }
 
 
@@ -101,14 +94,7 @@ HB_FUNC_STATIC( QDOMELEMENT_NEW2 )
   QDomElement * o = NULL;
   QDomElement * par1 = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   o = new QDomElement ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDomElement *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, true );
 }
 
 
