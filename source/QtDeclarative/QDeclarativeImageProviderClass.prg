@@ -55,11 +55,7 @@ HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_NEW )
 {
   QDeclarativeImageProvider * o = NULL;
   o = new QDeclarativeImageProvider (  (QDeclarativeImageProvider::ImageType) hb_parni(1) );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDeclarativeImageProvider *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 

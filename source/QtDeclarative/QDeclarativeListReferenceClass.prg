@@ -64,11 +64,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_NEW1 )
 {
   QDeclarativeListReference * o = NULL;
   o = new QDeclarativeListReference (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDeclarativeListReference *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 
@@ -82,11 +78,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_NEW2 )
   const char * par2 = hb_parc(2);
   QDeclarativeEngine * par3 = ISNIL(3)? 0 : (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
   o = new QDeclarativeListReference ( par1,  (const char *) par2, par3 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDeclarativeListReference *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 

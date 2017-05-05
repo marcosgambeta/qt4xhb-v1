@@ -92,11 +92,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW1 )
 {
   QDeclarativeProperty * o = NULL;
   o = new QDeclarativeProperty (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDeclarativeProperty *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 
@@ -108,11 +104,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW2 )
   QDeclarativeProperty * o = NULL;
   QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   o = new QDeclarativeProperty ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDeclarativeProperty *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 
@@ -125,11 +117,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW3 )
   QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QDeclarativeContext * par2 = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
   o = new QDeclarativeProperty ( par1, par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDeclarativeProperty *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 
@@ -142,11 +130,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW4 )
   QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QDeclarativeEngine * par2 = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
   o = new QDeclarativeProperty ( par1, par2 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDeclarativeProperty *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 
@@ -158,11 +142,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW5 )
   QDeclarativeProperty * o = NULL;
   QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   o = new QDeclarativeProperty ( par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDeclarativeProperty *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 
@@ -175,11 +155,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW6 )
   QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QDeclarativeContext * par3 = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
   o = new QDeclarativeProperty ( par1, PQSTRING(2), par3 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDeclarativeProperty *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 
@@ -192,11 +168,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW7 )
   QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QDeclarativeEngine * par3 = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
   o = new QDeclarativeProperty ( par1, PQSTRING(2), par3 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDeclarativeProperty *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 
@@ -208,11 +180,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW8 )
   QDeclarativeProperty * o = NULL;
   QDeclarativeProperty * par1 = (QDeclarativeProperty *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   o = new QDeclarativeProperty ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDeclarativeProperty *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 

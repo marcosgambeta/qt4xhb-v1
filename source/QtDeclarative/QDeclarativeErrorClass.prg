@@ -63,11 +63,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_NEW1 )
 {
   QDeclarativeError * o = NULL;
   o = new QDeclarativeError (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDeclarativeError *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 
@@ -79,11 +75,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_NEW2 )
   QDeclarativeError * o = NULL;
   QDeclarativeError * par1 = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   o = new QDeclarativeError ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QDeclarativeError *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 
