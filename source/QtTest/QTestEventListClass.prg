@@ -68,11 +68,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_NEW1 )
 {
   QTestEventList * o = NULL;
   o = new QTestEventList (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTestEventList *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 
@@ -84,11 +80,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_NEW2 )
   QTestEventList * o = NULL;
   QTestEventList * par1 = (QTestEventList *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   o = new QTestEventList ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTestEventList *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 
