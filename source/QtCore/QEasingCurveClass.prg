@@ -58,11 +58,7 @@ HB_FUNC_STATIC( QEASINGCURVE_NEW1 )
 {
   QEasingCurve * o = NULL;
   o = new QEasingCurve (  (QEasingCurve::Type) hb_parni(1) );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QEasingCurve *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 
@@ -74,11 +70,7 @@ HB_FUNC_STATIC( QEASINGCURVE_NEW2 )
   QEasingCurve * o = NULL;
   QEasingCurve * par1 = (QEasingCurve *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   o = new QEasingCurve ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QEasingCurve *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 

@@ -87,11 +87,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_NEW1 )
 {
   QFutureInterfaceBase * o = NULL;
   o = new QFutureInterfaceBase ( ISNIL(1)? QFutureInterfaceBase::NoState : (QFutureInterfaceBase::State) hb_parni(1) );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QFutureInterfaceBase *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 
@@ -103,11 +99,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_NEW2 )
   QFutureInterfaceBase * o = NULL;
   QFutureInterfaceBase * par1 = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   o = new QFutureInterfaceBase ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QFutureInterfaceBase *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 

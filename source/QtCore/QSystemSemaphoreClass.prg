@@ -56,11 +56,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_NEW )
   int par2 = ISNIL(2)? 0 : hb_parni(2);
   int par3 = ISNIL(3)? (int) QSystemSemaphore::Open : hb_parni(3);
   o = new QSystemSemaphore ( PQSTRING(1), par2,  (QSystemSemaphore::AccessMode) par3 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSystemSemaphore *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 

@@ -88,11 +88,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_NEW1 )
 {
   QFSFileEngine * o = NULL;
   o = new QFSFileEngine (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QFSFileEngine *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 
@@ -103,11 +99,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_NEW2 )
 {
   QFSFileEngine * o = NULL;
   o = new QFSFileEngine ( PQSTRING(1) );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QFSFileEngine *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 

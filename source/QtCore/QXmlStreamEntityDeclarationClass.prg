@@ -59,14 +59,7 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NEW1 )
 {
   QXmlStreamEntityDeclaration * o = NULL;
   o = new QXmlStreamEntityDeclaration (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QXmlStreamEntityDeclaration *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, true );
 }
 
 
@@ -78,14 +71,7 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NEW2 )
   QXmlStreamEntityDeclaration * o = NULL;
   QXmlStreamEntityDeclaration * par1 = (QXmlStreamEntityDeclaration *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   o = new QXmlStreamEntityDeclaration ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QXmlStreamEntityDeclaration *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  PHB_ITEM des = hb_itemPutL( NULL, true );
-  hb_objSendMsg( self, "_SELF_DESTRUCTION", 1, des );
-  hb_itemRelease( des );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, true );
 }
 
 

@@ -53,11 +53,7 @@ HB_FUNC_STATIC( QSYSTEMLOCALE_NEW )
 {
   QSystemLocale * o = NULL;
   o = new QSystemLocale (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QSystemLocale *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 

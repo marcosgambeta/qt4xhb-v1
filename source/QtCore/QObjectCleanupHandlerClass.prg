@@ -49,11 +49,7 @@ HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_NEW )
 {
   QObjectCleanupHandler * o = NULL;
   o = new QObjectCleanupHandler (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QObjectCleanupHandler *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 

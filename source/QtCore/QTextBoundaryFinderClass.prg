@@ -63,11 +63,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW1 )
 {
   QTextBoundaryFinder * o = NULL;
   o = new QTextBoundaryFinder (  );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextBoundaryFinder *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 
@@ -79,11 +75,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW2 )
   QTextBoundaryFinder * o = NULL;
   QTextBoundaryFinder * par1 = (QTextBoundaryFinder *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   o = new QTextBoundaryFinder ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextBoundaryFinder *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 
@@ -95,11 +87,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW3 )
   QTextBoundaryFinder * o = NULL;
   int par1 = hb_parni(1);
   o = new QTextBoundaryFinder (  (QTextBoundaryFinder::BoundaryType) par1, PQSTRING(2) );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextBoundaryFinder *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 
@@ -115,11 +103,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW4 )
   unsigned char * par4 = ISNIL(4)? 0 : (unsigned char *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par5 = ISNIL(5)? 0 : hb_parni(5);
   o = new QTextBoundaryFinder (  (QTextBoundaryFinder::BoundaryType) par1, par2, par3, par4, par5 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextBoundaryFinder *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 
