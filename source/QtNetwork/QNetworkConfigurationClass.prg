@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERNAME )
   if( obj )
   {
     QString str1 = obj->bearerName (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERTYPENAME )
   if( obj )
   {
     QString str1 = obj->bearerTypeName (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_IDENTIFIER )
   if( obj )
   {
     QString str1 = obj->identifier (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_NAME )
   if( obj )
   {
     QString str1 = obj->name (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

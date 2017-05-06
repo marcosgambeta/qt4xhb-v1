@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_DOMAIN )
   if( obj )
   {
     QString str1 = obj->domain (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_PATH )
   if( obj )
   {
     QString str1 = obj->path (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

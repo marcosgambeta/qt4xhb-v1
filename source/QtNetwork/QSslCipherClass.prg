@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QSSLCIPHER_AUTHENTICATIONMETHOD )
   if( obj )
   {
     QString str1 = obj->authenticationMethod (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QSSLCIPHER_ENCRYPTIONMETHOD )
   if( obj )
   {
     QString str1 = obj->encryptionMethod (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QSSLCIPHER_KEYEXCHANGEMETHOD )
   if( obj )
   {
     QString str1 = obj->keyExchangeMethod (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QSSLCIPHER_NAME )
   if( obj )
   {
     QString str1 = obj->name (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QSSLCIPHER_PROTOCOLSTRING )
   if( obj )
   {
     QString str1 = obj->protocolString (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

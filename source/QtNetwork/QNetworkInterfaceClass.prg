@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_HARDWAREADDRESS )
   if( obj )
   {
     QString str1 = obj->hardwareAddress (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_HUMANREADABLENAME )
   if( obj )
   {
     QString str1 = obj->humanReadableName (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_NAME )
   if( obj )
   {
     QString str1 = obj->name (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

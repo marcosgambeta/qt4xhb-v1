@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_HOSTNAME )
   if( obj )
   {
     QString str1 = obj->hostName (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_PASSWORD )
   if( obj )
   {
     QString str1 = obj->password (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_USER )
   if( obj )
   {
     QString str1 = obj->user (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
