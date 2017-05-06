@@ -1346,3 +1346,11 @@
 //#define PQSTRING(n)                                         QString::fromLatin1( hb_parc(n) )
 //#define PQSTRING(n)                                         QString::fromUtf8( hb_parc(n) )
 #define PQSTRINGLIST(n)                                     _qt4xhb_convert_array_parameter_to_qstringlist(n)
+
+// macros for optional parameters
+//#define OPBOOL(n,v)                                         (bool) ISNIL(n)? v : hb_parl(n)
+
+// macros por return's
+#define RQSTRING(x)                                         (const char *) x.toAscii().data()
+//#define RQSTRING(x)                                         (const char *) x.toLatin1().data()
+//#define RQSTRING(x)                                         (const char *) x.toUtf8().data()
