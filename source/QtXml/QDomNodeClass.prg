@@ -602,7 +602,7 @@ HB_FUNC_STATIC( QDOMNODE_LOCALNAME )
   if( obj )
   {
     QString str1 = obj->localName (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -630,7 +630,7 @@ HB_FUNC_STATIC( QDOMNODE_NAMESPACEURI )
   if( obj )
   {
     QString str1 = obj->namespaceURI (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -673,7 +673,7 @@ HB_FUNC_STATIC( QDOMNODE_NODENAME )
   if( obj )
   {
     QString str1 = obj->nodeName (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -700,7 +700,7 @@ HB_FUNC_STATIC( QDOMNODE_NODEVALUE )
   if( obj )
   {
     QString str1 = obj->nodeValue (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -756,7 +756,7 @@ HB_FUNC_STATIC( QDOMNODE_PREFIX )
   if( obj )
   {
     QString str1 = obj->prefix (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

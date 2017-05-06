@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_LOCALNAME )
   {
     int par1 = hb_parni(1);
     QString str1 = obj->localName ( par1 );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_QNAME )
   {
     int par1 = hb_parni(1);
     QString str1 = obj->qName ( par1 );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_TYPE1 )
   {
     int par1 = hb_parni(1);
     QString str1 = obj->type ( par1 );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_TYPE2 )
   if( obj )
   {
     QString str1 = obj->type ( PQSTRING(1) );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_TYPE3 )
   if( obj )
   {
     QString str1 = obj->type ( PQSTRING(1), PQSTRING(2) );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_URI )
   {
     int par1 = hb_parni(1);
     QString str1 = obj->uri ( par1 );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_VALUE1 )
   {
     int par1 = hb_parni(1);
     QString str1 = obj->value ( par1 );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_VALUE2 )
   if( obj )
   {
     QString str1 = obj->value ( PQSTRING(1) );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_VALUE3 )
   {
     QLatin1String * par1 = (QLatin1String *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QString str1 = obj->value ( *par1 );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_VALUE4 )
   if( obj )
   {
     QString str1 = obj->value ( PQSTRING(1), PQSTRING(2) );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

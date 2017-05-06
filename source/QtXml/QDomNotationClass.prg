@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QDOMNOTATION_PUBLICID )
   if( obj )
   {
     QString str1 = obj->publicId (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QDOMNOTATION_SYSTEMID )
   if( obj )
   {
     QString str1 = obj->systemId (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

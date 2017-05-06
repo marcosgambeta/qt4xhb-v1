@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_DATA )
   if( obj )
   {
     QString str1 = obj->data (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_SUBSTRINGDATA )
     unsigned long par1 = hb_parnl(1);
     unsigned long par2 = hb_parnl(2);
     QString str1 = obj->substringData ( par1, par2 );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

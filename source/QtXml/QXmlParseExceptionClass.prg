@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_MESSAGE )
   if( obj )
   {
     QString str1 = obj->message (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_PUBLICID )
   if( obj )
   {
     QString str1 = obj->publicId (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_SYSTEMID )
   if( obj )
   {
     QString str1 = obj->systemId (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

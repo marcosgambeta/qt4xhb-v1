@@ -466,7 +466,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_TOSTRING )
   {
     int par1 = ISNIL(1)? 1 : hb_parni(1);
     QString str1 = obj->toString ( par1 );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
