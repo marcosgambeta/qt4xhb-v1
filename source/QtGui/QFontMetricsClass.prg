@@ -339,8 +339,7 @@ HB_FUNC_STATIC( QFONTMETRICS_INFONTUCS4 )
   QFontMetrics * obj = (QFontMetrics *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    uint par1 = hb_parni(1);
-    hb_retl( obj->inFontUcs4 ( par1 ) );
+    hb_retl( obj->inFontUcs4 ( PUINT(1) ) );
   }
 }
 

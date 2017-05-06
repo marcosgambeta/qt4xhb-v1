@@ -161,8 +161,7 @@ HB_FUNC_STATIC( QTHREAD_SETSTACKSIZE )
   QThread * obj = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    uint par1 = hb_parni(1);
-    obj->setStackSize ( par1 );
+    obj->setStackSize ( PUINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QABSTRACTFONTENGINE_DELETE )
 /*
 virtual void addGlyphOutlinesToPath ( uint * glyphs, int numGlyphs, FixedPoint * positions, QPainterPath * path )
 */
-HB_FUNC_STATIC( QABSTRACTFONTENGINE_ADDGLYPHOUTLINESTOPATH )
+HB_FUNC_STATIC( QABSTRACTFONTENGINE_ADDGLYPHOUTLINESTOPATH ) // TODO: revisar e corrigir implementacao
 {
   QAbstractFontEngine * obj = (QAbstractFontEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QABSTRACTFONTENGINE_CAPABILITIES )
 /*
 virtual bool convertStringToGlyphIndices ( const QChar * string, int length, uint * glyphs, int * numGlyphs, TextShapingFlags flags ) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTFONTENGINE_CONVERTSTRINGTOGLYPHINDICES )
+HB_FUNC_STATIC( QABSTRACTFONTENGINE_CONVERTSTRINGTOGLYPHINDICES ) // TODO: revisar e corrigir implementacao
 {
   QAbstractFontEngine * obj = (QAbstractFontEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QABSTRACTFONTENGINE_FONTPROPERTY )
 /*
 virtual void getGlyphAdvances ( const uint * glyphs, int numGlyphs, Fixed * advances, TextShapingFlags flags ) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTFONTENGINE_GETGLYPHADVANCES )
+HB_FUNC_STATIC( QABSTRACTFONTENGINE_GETGLYPHADVANCES ) // TODO: revisar e corrigir implementacao
 {
   QAbstractFontEngine * obj = (QAbstractFontEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -152,12 +152,11 @@ HB_FUNC_STATIC( QABSTRACTFONTENGINE_RENDERGLYPH )
   QAbstractFontEngine * obj = (QAbstractFontEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    uint par1 = hb_parni(1);
     int par2 = hb_parni(2);
     int par3 = hb_parni(3);
     int par4 = hb_parni(4);
     uchar * par5 = (uchar *) hb_itemGetPtr( hb_objSendMsg( hb_param(5, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->renderGlyph ( par1, par2, par3, par4, par5 ) );
+    hb_retl( obj->renderGlyph ( PUINT(1), par2, par3, par4, par5 ) );
   }
 }
 

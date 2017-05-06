@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QDATETIME_SETTIME_T )
   QDateTime * obj = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setTime_t ( (uint) hb_parni(1) );
+    obj->setTime_t ( PUINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -627,7 +627,7 @@ QDateTime fromTime_t ( uint seconds )
 */
 HB_FUNC_STATIC( QDATETIME_FROMTIME_T )
 {
-  QDateTime * ptr = new QDateTime( QDateTime::fromTime_t ( (uint) hb_parni(1) ) );
+  QDateTime * ptr = new QDateTime( QDateTime::fromTime_t ( PUINT(1) ) );
   _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
 }
 

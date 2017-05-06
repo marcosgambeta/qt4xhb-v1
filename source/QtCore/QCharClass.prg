@@ -171,7 +171,7 @@ QChar ( uint code )
 HB_FUNC_STATIC( QCHAR_NEW8 )
 {
   QChar * o = NULL;
-  o = new QChar ( (uint) hb_parni(1) );
+  o = new QChar ( PUINT(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

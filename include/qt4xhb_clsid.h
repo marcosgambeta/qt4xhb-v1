@@ -1337,6 +1337,7 @@
 // macros for parameters
 #define PBOOL(n)                                            (bool) hb_parl(n)
 #define PINT(n)                                             (int) hb_parni(n)
+#define PUINT(n)                                            (uint) hb_parni(n)
 #define PDOUBLE(n)                                          (double) hb_parnd(n)
 #define PFLOAT(n)                                           (float) hb_parnd(n)
 #define PQREAL(n)                                           (qreal) hb_parnd(n)
@@ -1350,7 +1351,7 @@
 // macros for optional parameters
 //#define OPBOOL(n,v)                                         (bool) ISNIL(n)? v : hb_parl(n)
 
-// macros por return's
+// macros for return's
 #define RQSTRING(x)                                         (const char *) x.toAscii().data()
 //#define RQSTRING(x)                                         (const char *) x.toLatin1().data()
 //#define RQSTRING(x)                                         (const char *) x.toUtf8().data()

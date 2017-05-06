@@ -90,8 +90,7 @@ HB_FUNC_STATIC( QCOLORMAP_COLORAT )
   QColormap * obj = (QColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    uint par1 = hb_parni(1);
-    QColor * ptr = new QColor( obj->colorAt ( par1 ) );
+    QColor * ptr = new QColor( obj->colorAt ( PUINT(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }

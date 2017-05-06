@@ -281,8 +281,7 @@ HB_FUNC_STATIC( QPICTURE_SETDATA )
   if( obj )
   {
     const char * par1 = hb_parc(1);
-    uint par2 = hb_parni(2);
-    obj->setData (  (const char *) par1, par2 );
+    obj->setData (  (const char *) par1, PUINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

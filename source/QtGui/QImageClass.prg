@@ -589,8 +589,7 @@ HB_FUNC_STATIC( QIMAGE_FILL1 )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    uint par1 = hb_parni(1);
-    obj->fill ( par1 );
+    obj->fill ( PUINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1200,8 +1199,7 @@ HB_FUNC_STATIC( QIMAGE_SETPIXEL1 )
   if( obj )
   {
     QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    uint par2 = hb_parni(2);
-    obj->setPixel ( *par1, par2 );
+    obj->setPixel ( *par1, PUINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1217,8 +1215,7 @@ HB_FUNC_STATIC( QIMAGE_SETPIXEL2 )
   {
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
-    uint par3 = hb_parni(3);
-    obj->setPixel ( par1, par2, par3 );
+    obj->setPixel ( par1, par2, PUINT(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

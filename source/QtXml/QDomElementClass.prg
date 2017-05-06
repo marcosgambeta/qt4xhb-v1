@@ -338,8 +338,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE3 )
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    uint par2 = hb_parni(2);
-    obj->setAttribute ( PQSTRING(1), par2 );
+    obj->setAttribute ( PQSTRING(1), PUINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -461,8 +460,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS3 )
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    uint par3 = hb_parni(3);
-    obj->setAttributeNS ( PQSTRING(1), PQSTRING(2), par3 );
+    obj->setAttributeNS ( PQSTRING(1), PQSTRING(2), PUINT(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

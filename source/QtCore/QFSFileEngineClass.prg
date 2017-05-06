@@ -527,7 +527,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_SETPERMISSIONS )
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->setPermissions ( (uint) hb_parni(1) ) );
+    hb_retl( obj->setPermissions ( PUINT(1) ) );
   }
 }
 

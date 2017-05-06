@@ -743,7 +743,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING5 )
   if( obj )
   {
     QString par2 = ISNIL(2)? QString() : hb_parc(2);
-    QString str1 = obj->toCurrencyString ( (uint) hb_parni(1), par2 );
+    QString str1 = obj->toCurrencyString ( PUINT(1), par2 );
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -1150,7 +1150,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING11 )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toString ( (uint) hb_parni(1) );
+    QString str1 = obj->toString ( PUINT(1) );
     hb_retc( RQSTRING(str1) );
   }
 }

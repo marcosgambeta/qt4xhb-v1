@@ -1642,7 +1642,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM2 )
   QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->setNum ( (uint) hb_parni(1), ISNIL(2)? 10 : hb_parni(2) ) );
+    QByteArray * ptr = new QByteArray( obj->setNum ( PUINT(1), ISNIL(2)? 10 : hb_parni(2) ) );
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -1794,7 +1794,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETRAWDATA )
   if( obj )
   {
     const char * par1 = hb_parc(1);
-    QByteArray * ptr = new QByteArray( obj->setRawData (  (const char *) par1, (uint) hb_parni(2) ) );
+    QByteArray * ptr = new QByteArray( obj->setRawData (  (const char *) par1, PUINT(2) ) );
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -2268,7 +2268,7 @@ QByteArray number ( uint n, int base = 10 )
 */
 HB_FUNC_STATIC( QBYTEARRAY_NUMBER2 )
 {
-  QByteArray * ptr = new QByteArray( QByteArray::number ( (uint) hb_parni(1), ISNIL(2)? 10 : hb_parni(2) ) );
+  QByteArray * ptr = new QByteArray( QByteArray::number ( PUINT(1), ISNIL(2)? 10 : hb_parni(2) ) );
   _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
 }
 

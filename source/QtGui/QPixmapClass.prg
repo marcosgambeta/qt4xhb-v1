@@ -540,10 +540,9 @@ HB_FUNC_STATIC( QPIXMAP_LOADFROMDATA1 )
   if( obj )
   {
     const uchar * par1 = (const uchar *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    uint par2 = hb_parni(2);
     const char * par3 = ISNIL(3)? 0 : hb_parc(3);
     int par4 = ISNIL(4)? (int) Qt::AutoColor : hb_parni(4);
-    hb_retl( obj->loadFromData ( par1, par2,  (const char *) par3,  (Qt::ImageConversionFlags) par4 ) );
+    hb_retl( obj->loadFromData ( par1, PUINT(2),  (const char *) par3,  (Qt::ImageConversionFlags) par4 ) );
   }
 }
 

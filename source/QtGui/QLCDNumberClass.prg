@@ -81,9 +81,8 @@ QLCDNumber ( uint numDigits, QWidget * parent = 0 )
 HB_FUNC_STATIC( QLCDNUMBER_NEW2 )
 {
   QLCDNumber * o = NULL;
-  uint par1 = hb_parni(1);
   QWidget * par2 = ISNIL(2)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QLCDNumber ( par1, par2 );
+  o = new QLCDNumber ( PUINT(1), par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

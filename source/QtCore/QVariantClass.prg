@@ -279,8 +279,7 @@ QVariant ( uint val )
 HB_FUNC_STATIC( QVARIANT_NEW11 )
 {
   QVariant * o = NULL;
-  uint par1 = hb_parni(1);
-  o = new QVariant ( par1 );
+  o = new QVariant ( PUINT(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 

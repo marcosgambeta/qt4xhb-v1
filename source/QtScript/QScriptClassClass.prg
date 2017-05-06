@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QSCRIPTCLASS_PROPERTY )
   {
     QScriptValue * par1 = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QScriptString * par2 = (QScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QScriptValue * ptr = new QScriptValue( obj->property ( *par1, *par2, (uint) hb_parni(3) ) );
+    QScriptValue * ptr = new QScriptValue( obj->property ( *par1, *par2, PUINT(3) ) );
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QSCRIPTCLASS_PROPERTYFLAGS )
   {
     QScriptValue * par1 = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QScriptString * par2 = (QScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retni( (int) obj->propertyFlags ( *par1, *par2, (uint) hb_parni(3) ) );
+    hb_retni( (int) obj->propertyFlags ( *par1, *par2, PUINT(3) ) );
   }
 }
 
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QSCRIPTCLASS_PROTOTYPE )
 /*
 virtual QueryFlags queryProperty ( const QScriptValue & object, const QScriptString & name, QueryFlags flags, uint * id )
 */
-HB_FUNC_STATIC( QSCRIPTCLASS_QUERYPROPERTY )
+HB_FUNC_STATIC( QSCRIPTCLASS_QUERYPROPERTY ) // TODO: revisar e corrigir implementacao
 {
   QScriptClass * obj = (QScriptClass *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QSCRIPTCLASS_SETPROPERTY )
     QScriptValue * par1 = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QScriptString * par2 = (QScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     QScriptValue * par4 = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setProperty ( *par1, *par2, (uint) hb_parni(3), *par4 );
+    obj->setProperty ( *par1, *par2, PUINT(3), *par4 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

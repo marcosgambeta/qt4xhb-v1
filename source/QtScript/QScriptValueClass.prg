@@ -168,7 +168,7 @@ QScriptValue ( uint value )
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW6 )
 {
   QScriptValue * o = NULL;
-  o = new QScriptValue ( (uint) hb_parni(1) );
+  o = new QScriptValue ( PUINT(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
