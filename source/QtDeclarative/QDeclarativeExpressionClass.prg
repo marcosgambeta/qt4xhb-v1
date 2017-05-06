@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_EXPRESSION )
   if( obj )
   {
     QString str1 = obj->expression (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SOURCEFILE )
   if( obj )
   {
     QString str1 = obj->sourceFile (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
