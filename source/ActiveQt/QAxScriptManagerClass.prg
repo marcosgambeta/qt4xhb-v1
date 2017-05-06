@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_FUNCTIONS )
       int i;
       for(i=0;i<strl.count();i++)
       {
-        PHB_ITEM pItem = hb_itemPutC( NULL, (const char *) strl[i].toLatin1().data() );
+        PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
         hb_arrayAddForward( pArray, pItem );
         hb_itemRelease(pItem);
       }
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_SCRIPTNAMES )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, (const char *) strl[i].toLatin1().data() );
+      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }
@@ -345,7 +345,7 @@ QString scriptFileFilter ()
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_SCRIPTFILEFILTER )
 {
   QString str1 = QAxScriptManager::scriptFileFilter (  );
-  hb_retc( (const char *) str1.toLatin1().data() );
+  hb_retc( RQSTRING(str1) );
 }
 
 #pragma ENDDUMP
