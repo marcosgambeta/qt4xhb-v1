@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_AUTHOR )
   if( obj )
   {
     QString str1 = obj->author (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_COMMENT )
   if( obj )
   {
     QString str1 = obj->comment (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_CONTENTS )
   if( obj )
   {
     QString str1 = obj->contents (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_EXPORTMACRO )
   if( obj )
   {
     QString str1 = obj->exportMacro (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_FILENAME )
   if( obj )
   {
     QString str1 = obj->fileName (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_INCLUDEHINTS )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, (const char *) strl[i].toLatin1().data() );
+      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_PIXMAPFUNCTION )
   if( obj )
   {
     QString str1 = obj->pixmapFunction (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_RESOURCEFILES )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, (const char *) strl[i].toLatin1().data() );
+      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }
