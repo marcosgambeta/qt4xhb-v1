@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_FILTER )
   if( obj )
   {
     QString str1 = obj->filter (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_TABLENAME )
   if( obj )
   {
     QString str1 = obj->tableName (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

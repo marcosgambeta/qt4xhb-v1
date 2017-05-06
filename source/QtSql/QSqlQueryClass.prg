@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QSQLQUERY_EXECUTEDQUERY )
   if( obj )
   {
     QString str1 = obj->executedQuery (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -545,7 +545,7 @@ HB_FUNC_STATIC( QSQLQUERY_LASTQUERY )
   if( obj )
   {
     QString str1 = obj->lastQuery (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

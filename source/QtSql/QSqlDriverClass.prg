@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QSQLDRIVER_ESCAPEIDENTIFIER )
   if( obj )
   {
     QString str1 = obj->escapeIdentifier ( PQSTRING(1),  (QSqlDriver::IdentifierType) hb_parni(2) );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QSQLDRIVER_FORMATVALUE )
   {
     QSqlField * par1 = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QString str1 = obj->formatValue ( *par1, ISNIL(2)? false : hb_parl(2) );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QSQLDRIVER_SQLSTATEMENT )
   {
     QSqlRecord * par3 = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     QString str1 = obj->sqlStatement (  (QSqlDriver::StatementType) hb_parni(1), PQSTRING(2), *par3, PBOOL(4) );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QSQLDRIVER_STRIPDELIMITERS )
   if( obj )
   {
     QString str1 = obj->stripDelimiters ( PQSTRING(1),  (QSqlDriver::IdentifierType) hb_parni(2) );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QSQLDRIVER_SUBSCRIBEDTONOTIFICATIONS )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, (const char *) strl[i].toLatin1().data() );
+      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QSQLDRIVER_TABLES )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, (const char *) strl[i].toLatin1().data() );
+      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }

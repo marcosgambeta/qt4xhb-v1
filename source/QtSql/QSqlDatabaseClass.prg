@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QSQLDATABASE_CONNECTOPTIONS )
   if( obj )
   {
     QString str1 = obj->connectOptions (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QSQLDATABASE_CONNECTIONNAME )
   if( obj )
   {
     QString str1 = obj->connectionName (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QSQLDATABASE_DATABASENAME )
   if( obj )
   {
     QString str1 = obj->databaseName (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QSQLDATABASE_DRIVERNAME )
   if( obj )
   {
     QString str1 = obj->driverName (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QSQLDATABASE_HOSTNAME )
   if( obj )
   {
     QString str1 = obj->hostName (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QSQLDATABASE_PASSWORD )
   if( obj )
   {
     QString str1 = obj->password (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -572,7 +572,7 @@ HB_FUNC_STATIC( QSQLDATABASE_TABLES )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, (const char *) strl[i].toLatin1().data() );
+      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }
@@ -603,7 +603,7 @@ HB_FUNC_STATIC( QSQLDATABASE_USERNAME )
   if( obj )
   {
     QString str1 = obj->userName (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -735,7 +735,7 @@ HB_FUNC_STATIC( QSQLDATABASE_CONNECTIONNAMES )
   int i;
   for(i=0;i<strl.count();i++)
   {
-    PHB_ITEM pItem = hb_itemPutC( NULL, (const char *) strl[i].toLatin1().data() );
+    PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
     hb_arrayAddForward( pArray, pItem );
     hb_itemRelease(pItem);
   }
@@ -814,7 +814,7 @@ HB_FUNC_STATIC( QSQLDATABASE_DRIVERS )
   int i;
   for(i=0;i<strl.count();i++)
   {
-    PHB_ITEM pItem = hb_itemPutC( NULL, (const char *) strl[i].toLatin1().data() );
+    PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
     hb_arrayAddForward( pArray, pItem );
     hb_itemRelease(pItem);
   }
