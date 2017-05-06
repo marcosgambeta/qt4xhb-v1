@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_COLLECTIONFILE )
   if( obj )
   {
     QString str1 = obj->collectionFile (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_CURRENTFILTER )
   if( obj )
   {
     QString str1 = obj->currentFilter (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_CUSTOMFILTERS )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, (const char *) strl[i].toLatin1().data() );
+      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_DOCUMENTATIONFILENAME )
   if( obj )
   {
     QString str1 = obj->documentationFileName ( PQSTRING(1) );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_ERROR )
   if( obj )
   {
     QString str1 = obj->error (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_FILTERATTRIBUTES1 )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, (const char *) strl[i].toLatin1().data() );
+      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_FILTERATTRIBUTES2 )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, (const char *) strl[i].toLatin1().data() );
+      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_REGISTEREDDOCUMENTATIONS )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, (const char *) strl[i].toLatin1().data() );
+      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }
@@ -537,7 +537,7 @@ QString namespaceName ( const QString & documentationFileName )
 HB_FUNC_STATIC( QHELPENGINECORE_NAMESPACENAME )
 {
   QString str1 = QHelpEngineCore::namespaceName ( PQSTRING(1) );
-  hb_retc( (const char *) str1.toLatin1().data() );
+  hb_retc( RQSTRING(str1) );
 }
 
 

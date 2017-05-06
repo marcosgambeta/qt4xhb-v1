@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_TITLE )
   if( obj )
   {
     QString str1 = obj->title (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
