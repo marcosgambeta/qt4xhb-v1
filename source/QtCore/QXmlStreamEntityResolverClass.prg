@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYRESOLVER_RESOLVEUNDECLAREDENTITY )
   if( obj )
   {
     QString str1 = obj->resolveUndeclaredEntity ( PQSTRING(1) );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

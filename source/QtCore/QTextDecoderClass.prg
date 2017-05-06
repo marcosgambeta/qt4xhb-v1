@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QTEXTDECODER_TOUNICODE1 )
     const char * par1 = hb_parc(1);
     int par2 = hb_parni(2);
     QString str1 = obj->toUnicode (  (const char *) par1, par2 );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QTEXTDECODER_TOUNICODE3 )
   {
     QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QString str1 = obj->toUnicode ( *par1 );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

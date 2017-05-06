@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_FILENAME )
   if( obj )
   {
     QString str1 = obj->fileName (  (QAbstractFileEngine::FileName) hb_parni(1) );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_OWNER )
   if( obj )
   {
     QString str1 = obj->owner (  (QAbstractFileEngine::FileOwner) hb_parni(1) );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -597,7 +597,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_CURRENTPATH )
 {
   QString par1 = ISNIL(1)? QString() : hb_parc(1);
   QString str1 = QFSFileEngine::currentPath ( par1 );
-  hb_retc( (const char *) str1.toLatin1().data() );
+  hb_retc( RQSTRING(str1) );
 }
 
 
@@ -647,7 +647,7 @@ QString homePath ()
 HB_FUNC_STATIC( QFSFILEENGINE_HOMEPATH )
 {
   QString str1 = QFSFileEngine::homePath (  );
-  hb_retc( (const char *) str1.toLatin1().data() );
+  hb_retc( RQSTRING(str1) );
 }
 
 
@@ -657,7 +657,7 @@ QString rootPath ()
 HB_FUNC_STATIC( QFSFILEENGINE_ROOTPATH )
 {
   QString str1 = QFSFileEngine::rootPath (  );
-  hb_retc( (const char *) str1.toLatin1().data() );
+  hb_retc( RQSTRING(str1) );
 }
 
 
@@ -676,7 +676,7 @@ QString tempPath ()
 HB_FUNC_STATIC( QFSFILEENGINE_TEMPPATH )
 {
   QString str1 = QFSFileEngine::tempPath (  );
-  hb_retc( (const char *) str1.toLatin1().data() );
+  hb_retc( RQSTRING(str1) );
 }
 
 

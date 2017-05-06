@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QTIME_TOSTRING1 )
   if( obj )
   {
     QString str1 = obj->toString ( PQSTRING(1) );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QTIME_TOSTRING2 )
   if( obj )
   {
     QString str1 = obj->toString ( ISNIL(1)? Qt::TextDate : (Qt::DateFormat) hb_parni(1) );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

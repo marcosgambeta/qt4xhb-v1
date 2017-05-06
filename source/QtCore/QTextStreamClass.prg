@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_READLINE )
   {
     qint64 par1 = ISNIL(1)? 0 : hb_parni(1);
     QString str1 = obj->readLine ( par1 );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_READALL )
   if( obj )
   {
     QString str1 = obj->readAll (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -572,7 +572,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_READ )
   {
     qint64 par1 = hb_parni(1);
     QString str1 = obj->read ( par1 );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

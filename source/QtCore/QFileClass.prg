@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QFILE_FILENAME )
   if( obj )
   {
     QString str1 = obj->fileName (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QFILE_SYMLINKTARGET1 )
   if( obj )
   {
     QString str1 = obj->symLinkTarget (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -580,7 +580,7 @@ HB_FUNC_STATIC( QFILE_DECODENAME1 )
 {
   QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QString str1 = QFile::decodeName ( *par1 );
-  hb_retc( (const char *) str1.toLatin1().data() );
+  hb_retc( RQSTRING(str1) );
 }
 
 
@@ -591,7 +591,7 @@ HB_FUNC_STATIC( QFILE_DECODENAME2 )
 {
   const char * par1 = hb_parc(1);
   QString str1 = QFile::decodeName (  (const char *) par1 );
-  hb_retc( (const char *) str1.toLatin1().data() );
+  hb_retc( RQSTRING(str1) );
 }
 
 
@@ -797,7 +797,7 @@ QString symLinkTarget ( const QString & fileName )
 HB_FUNC_STATIC( QFILE_SYMLINKTARGET2 )
 {
   QString str1 = QFile::symLinkTarget ( PQSTRING(1) );
-  hb_retc( (const char *) str1.toLatin1().data() );
+  hb_retc( RQSTRING(str1) );
 }
 
 

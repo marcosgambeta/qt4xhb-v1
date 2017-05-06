@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_STRING )
   if( obj )
   {
     QString str1 = obj->string (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

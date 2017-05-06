@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QREGEXP_CAP )
   if( obj )
   {
     QString str1 = obj->cap ( ISNIL(1)? 0 : hb_parni(1) );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QREGEXP_CAPTUREDTEXTS )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, (const char *) strl[i].toLatin1().data() );
+      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QREGEXP_ERRORSTRING )
   if( obj )
   {
     QString str1 = obj->errorString (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QREGEXP_PATTERN )
   if( obj )
   {
     QString str1 = obj->pattern (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -412,7 +412,7 @@ QString escape ( const QString & str )
 HB_FUNC_STATIC( QREGEXP_ESCAPE )
 {
   QString str1 = QRegExp::escape ( PQSTRING(1) );
-  hb_retc( (const char *) str1.toLatin1().data() );
+  hb_retc( RQSTRING(str1) );
 }
 
 

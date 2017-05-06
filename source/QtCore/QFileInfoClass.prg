@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QFILEINFO_ABSOLUTEFILEPATH )
   if( obj )
   {
     QString str1 = obj->absoluteFilePath (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QFILEINFO_ABSOLUTEPATH )
   if( obj )
   {
     QString str1 = obj->absolutePath (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QFILEINFO_BASENAME )
   if( obj )
   {
     QString str1 = obj->baseName (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QFILEINFO_BUNDLENAME )
   if( obj )
   {
     QString str1 = obj->bundleName (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QFILEINFO_CANONICALFILEPATH )
   if( obj )
   {
     QString str1 = obj->canonicalFilePath (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QFILEINFO_CANONICALPATH )
   if( obj )
   {
     QString str1 = obj->canonicalPath (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QFILEINFO_COMPLETEBASENAME )
   if( obj )
   {
     QString str1 = obj->completeBaseName (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QFILEINFO_COMPLETESUFFIX )
   if( obj )
   {
     QString str1 = obj->completeSuffix (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QFILEINFO_FILENAME )
   if( obj )
   {
     QString str1 = obj->fileName (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QFILEINFO_FILEPATH )
   if( obj )
   {
     QString str1 = obj->filePath (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QFILEINFO_GROUP )
   if( obj )
   {
     QString str1 = obj->group (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -636,7 +636,7 @@ HB_FUNC_STATIC( QFILEINFO_OWNER )
   if( obj )
   {
     QString str1 = obj->owner (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -663,7 +663,7 @@ HB_FUNC_STATIC( QFILEINFO_PATH )
   if( obj )
   {
     QString str1 = obj->path (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -809,7 +809,7 @@ HB_FUNC_STATIC( QFILEINFO_SUFFIX )
   if( obj )
   {
     QString str1 = obj->suffix (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -824,7 +824,7 @@ HB_FUNC_STATIC( QFILEINFO_SYMLINKTARGET )
   if( obj )
   {
     QString str1 = obj->symLinkTarget (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

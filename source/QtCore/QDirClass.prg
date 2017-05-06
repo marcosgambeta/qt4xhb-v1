@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QDIR_ABSOLUTEFILEPATH )
   if( obj )
   {
     QString str1 = obj->absoluteFilePath ( PQSTRING(1) );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QDIR_ABSOLUTEPATH )
   if( obj )
   {
     QString str1 = obj->absolutePath (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QDIR_CANONICALPATH )
   if( obj )
   {
     QString str1 = obj->canonicalPath (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QDIR_DIRNAME )
   if( obj )
   {
     QString str1 = obj->dirName (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QDIR_ENTRYLIST1 )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, (const char *) strl[i].toLatin1().data() );
+      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }
@@ -426,7 +426,7 @@ HB_FUNC_STATIC( QDIR_ENTRYLIST2 )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, (const char *) strl[i].toLatin1().data() );
+      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QDIR_FILEPATH )
   if( obj )
   {
     QString str1 = obj->filePath ( PQSTRING(1) );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -623,7 +623,7 @@ HB_FUNC_STATIC( QDIR_NAMEFILTERS )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, (const char *) strl[i].toLatin1().data() );
+      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }
@@ -641,7 +641,7 @@ HB_FUNC_STATIC( QDIR_PATH )
   if( obj )
   {
     QString str1 = obj->path (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -669,7 +669,7 @@ HB_FUNC_STATIC( QDIR_RELATIVEFILEPATH )
   if( obj )
   {
     QString str1 = obj->relativeFilePath ( PQSTRING(1) );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -814,7 +814,7 @@ QString cleanPath(const QString & path)
 HB_FUNC_STATIC( QDIR_CLEANPATH )
 {
   QString str1 = QDir::cleanPath ( PQSTRING(1) );
-  hb_retc( (const char *) str1.toLatin1().data() );
+  hb_retc( RQSTRING(str1) );
 }
 
 
@@ -834,7 +834,7 @@ QString currentPath()
 HB_FUNC_STATIC( QDIR_CURRENTPATH )
 {
   QString str1 = QDir::currentPath (  );
-  hb_retc( (const char *) str1.toLatin1().data() );
+  hb_retc( RQSTRING(str1) );
 }
 
 
@@ -884,7 +884,7 @@ QString fromNativeSeparators(const QString & pathName)
 HB_FUNC_STATIC( QDIR_FROMNATIVESEPARATORS )
 {
   QString str1 = QDir::fromNativeSeparators ( PQSTRING(1) );
-  hb_retc( (const char *) str1.toLatin1().data() );
+  hb_retc( RQSTRING(str1) );
 }
 
 
@@ -904,7 +904,7 @@ QString homePath()
 HB_FUNC_STATIC( QDIR_HOMEPATH )
 {
   QString str1 = QDir::homePath (  );
-  hb_retc( (const char *) str1.toLatin1().data() );
+  hb_retc( RQSTRING(str1) );
 }
 
 
@@ -975,7 +975,7 @@ QString rootPath()
 HB_FUNC_STATIC( QDIR_ROOTPATH )
 {
   QString str1 = QDir::rootPath (  );
-  hb_retc( (const char *) str1.toLatin1().data() );
+  hb_retc( RQSTRING(str1) );
 }
 
 
@@ -990,7 +990,7 @@ HB_FUNC_STATIC( QDIR_SEARCHPATHS )
   int i;
   for(i=0;i<strl.count();i++)
   {
-    PHB_ITEM pItem = hb_itemPutC( NULL, (const char *) strl[i].toLatin1().data() );
+    PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
     hb_arrayAddForward( pArray, pItem );
     hb_itemRelease(pItem);
   }
@@ -1043,7 +1043,7 @@ QString tempPath()
 HB_FUNC_STATIC( QDIR_TEMPPATH )
 {
   QString str1 = QDir::tempPath (  );
-  hb_retc( (const char *) str1.toLatin1().data() );
+  hb_retc( RQSTRING(str1) );
 }
 
 
@@ -1053,7 +1053,7 @@ QString toNativeSeparators(const QString & pathName)
 HB_FUNC_STATIC( QDIR_TONATIVESEPARATORS )
 {
   QString str1 = QDir::toNativeSeparators ( PQSTRING(1) );
-  hb_retc( (const char *) str1.toLatin1().data() );
+  hb_retc( RQSTRING(str1) );
 }
 
 

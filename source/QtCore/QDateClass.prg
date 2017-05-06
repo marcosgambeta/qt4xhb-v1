@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QDATE_TOSTRING1 )
   if( obj )
   {
     QString str1 = obj->toString ( PQSTRING(1) );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QDATE_TOSTRING2 )
   if( obj )
   {
     QString str1 = obj->toString ( ISNIL(1)? Qt::TextDate : (Qt::DateFormat) hb_parni(1) );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -517,7 +517,7 @@ QString longDayName ( int weekday )
 HB_FUNC_STATIC( QDATE_LONGDAYNAME1 )
 {
   QString str1 = QDate::longDayName ( PINT(1) );
-  hb_retc( (const char *) str1.toLatin1().data() );
+  hb_retc( RQSTRING(str1) );
 }
 
 
@@ -527,7 +527,7 @@ QString longDayName ( int weekday, MonthNameType type )
 HB_FUNC_STATIC( QDATE_LONGDAYNAME2 )
 {
   QString str1 = QDate::longDayName ( PINT(1),  (QDate::MonthNameType) hb_parni(2) );
-  hb_retc( (const char *) str1.toLatin1().data() );
+  hb_retc( RQSTRING(str1) );
 }
 
 
@@ -552,7 +552,7 @@ QString longMonthName ( int month )
 HB_FUNC_STATIC( QDATE_LONGMONTHNAME1 )
 {
   QString str1 = QDate::longMonthName ( PINT(1) );
-  hb_retc( (const char *) str1.toLatin1().data() );
+  hb_retc( RQSTRING(str1) );
 }
 
 
@@ -562,7 +562,7 @@ QString longMonthName ( int month, MonthNameType type )
 HB_FUNC_STATIC( QDATE_LONGMONTHNAME2 )
 {
   QString str1 = QDate::longMonthName ( PINT(1),  (QDate::MonthNameType) hb_parni(2) );
-  hb_retc( (const char *) str1.toLatin1().data() );
+  hb_retc( RQSTRING(str1) );
 }
 
 
@@ -587,7 +587,7 @@ QString shortDayName ( int weekday )
 HB_FUNC_STATIC( QDATE_SHORTDAYNAME1 )
 {
   QString str1 = QDate::shortDayName ( PINT(1) );
-  hb_retc( (const char *) str1.toLatin1().data() );
+  hb_retc( RQSTRING(str1) );
 }
 
 
@@ -597,7 +597,7 @@ QString shortDayName ( int weekday, MonthNameType type )
 HB_FUNC_STATIC( QDATE_SHORTDAYNAME2 )
 {
   QString str1 = QDate::shortDayName ( PINT(1),  (QDate::MonthNameType) hb_parni(2) );
-  hb_retc( (const char *) str1.toLatin1().data() );
+  hb_retc( RQSTRING(str1) );
 }
 
 
@@ -622,7 +622,7 @@ QString shortMonthName ( int month )
 HB_FUNC_STATIC( QDATE_SHORTMONTHNAME1 )
 {
   QString str1 = QDate::shortMonthName ( PINT(1) );
-  hb_retc( (const char *) str1.toLatin1().data() );
+  hb_retc( RQSTRING(str1) );
 }
 
 
@@ -632,7 +632,7 @@ QString shortMonthName ( int month, MonthNameType type )
 HB_FUNC_STATIC( QDATE_SHORTMONTHNAME2 )
 {
   QString str1 = QDate::shortMonthName ( PINT(1),  (QDate::MonthNameType) hb_parni(2) );
-  hb_retc( (const char *) str1.toLatin1().data() );
+  hb_retc( RQSTRING(str1) );
 }
 
 
