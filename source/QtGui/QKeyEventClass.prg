@@ -212,13 +212,10 @@ HB_FUNC_STATIC( QKEYEVENT_CREATEEXTENDEDKEYEVENT )
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
   int par3 = hb_parni(3);
-  quint32 par4 = hb_parni(4);
-  quint32 par5 = hb_parni(5);
-  quint32 par6 = hb_parni(6);
   QString par7 = ISNIL(7)? QString() : hb_parc(7);
   bool par8 = ISNIL(8)? false : hb_parl(8);
   ushort par9 = ISNIL(9)? 1 : hb_parni(9);
-  QKeyEvent * ptr = QKeyEvent::createExtendedKeyEvent (  (QEvent::Type) par1, par2,  (Qt::KeyboardModifiers) par3, par4, par5, par6, par7, par8, par9 );
+  QKeyEvent * ptr = QKeyEvent::createExtendedKeyEvent (  (QEvent::Type) par1, par2,  (Qt::KeyboardModifiers) par3, PQUINT32(4), PQUINT32(5), PQUINT32(6), par7, par8, par9 );
   _qt4xhb_createReturnClass ( ptr, "QKEYEVENT" );
 }
 

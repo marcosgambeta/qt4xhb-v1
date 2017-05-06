@@ -132,9 +132,8 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_CONNECTTOHOST1 )
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    quint16 par2 = hb_parni(2);
     int par3 = ISNIL(3)? (int) QAbstractSocket::ReadWrite : hb_parni(3);
-    obj->connectToHost ( PQSTRING(1), par2,  (QAbstractSocket::OpenMode) par3 );
+    obj->connectToHost ( PQSTRING(1), PQUINT16(2),  (QAbstractSocket::OpenMode) par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -149,9 +148,8 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_CONNECTTOHOST2 )
   if( obj )
   {
     QHostAddress * par1 = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    quint16 par2 = hb_parni(2);
     int par3 = ISNIL(3)? (int) QAbstractSocket::ReadWrite : hb_parni(3);
-    obj->connectToHost ( *par1, par2,  (QAbstractSocket::OpenMode) par3 );
+    obj->connectToHost ( *par1, PQUINT16(2),  (QAbstractSocket::OpenMode) par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

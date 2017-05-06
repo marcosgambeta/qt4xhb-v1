@@ -1340,6 +1340,8 @@
 #define PUINT(n)                                            (uint) hb_parni(n)
 #define PDOUBLE(n)                                          (double) hb_parnd(n)
 #define PFLOAT(n)                                           (float) hb_parnd(n)
+#define PQUINT16(n)                                         (quint16) hb_parni(n)
+#define PQUINT32(n)                                         (quint32) hb_parni(n)
 #define PQREAL(n)                                           (qreal) hb_parnd(n)
 //#define PQREAL(n,d)                                         (qreal) ISNIL(n)? d : hb_parnd(n)
 //#define PQSTRING(n)                                         _qt5xhb_convert_string_parameter_to_qstring(n)

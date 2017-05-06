@@ -275,8 +275,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_SETPORT )
   QNetworkProxy * obj = (QNetworkProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    quint16 par1 = hb_parni(1);
-    obj->setPort ( par1 );
+    obj->setPort ( PQUINT16(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

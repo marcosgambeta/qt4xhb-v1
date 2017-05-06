@@ -443,8 +443,7 @@ HB_FUNC_STATIC( QFTP_SETPROXY )
   QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    quint16 par2 = hb_parni(2);
-    hb_retni( obj->setProxy ( PQSTRING(1), par2 ) );
+    hb_retni( obj->setProxy ( PQSTRING(1), PQUINT16(2) ) );
   }
 }
 

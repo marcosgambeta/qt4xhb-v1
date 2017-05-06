@@ -83,8 +83,7 @@ HB_FUNC_STATIC( QUDPSOCKET_BIND1 )
   if( obj )
   {
     QHostAddress * par1 = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    quint16 par2 = hb_parni(2);
-    hb_retl( obj->bind ( *par1, par2 ) );
+    hb_retl( obj->bind ( *par1, PQUINT16(2) ) );
   }
 }
 
@@ -98,9 +97,8 @@ HB_FUNC_STATIC( QUDPSOCKET_BIND2 )
   if( obj )
   {
     QHostAddress * par1 = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    quint16 par2 = hb_parni(2);
     int par3 = hb_parni(3);
-    hb_retl( obj->bind ( *par1, par2,  (QUdpSocket::BindMode) par3 ) );
+    hb_retl( obj->bind ( *par1, PQUINT16(2),  (QUdpSocket::BindMode) par3 ) );
   }
 }
 
@@ -127,9 +125,8 @@ HB_FUNC_STATIC( QUDPSOCKET_BIND4 )
   QUdpSocket * obj = (QUdpSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    quint16 par1 = hb_parni(1);
     int par2 = hb_parni(2);
-    hb_retl( obj->bind ( par1,  (QUdpSocket::BindMode) par2 ) );
+    hb_retl( obj->bind ( PQUINT16(1),  (QUdpSocket::BindMode) par2 ) );
   }
 }
 
@@ -215,8 +212,7 @@ HB_FUNC_STATIC( QUDPSOCKET_WRITEDATAGRAM1 )
     const char * par1 = hb_parc(1);
     qint64 par2 = hb_parni(2);
     QHostAddress * par3 = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    quint16 par4 = hb_parni(4);
-    qint64 i = obj->writeDatagram (  (const char *) par1, par2, *par3, par4 );
+    qint64 i = obj->writeDatagram (  (const char *) par1, par2, *par3, PQUINT16(4) );
     hb_retni( i );
   }
 }
@@ -232,8 +228,7 @@ HB_FUNC_STATIC( QUDPSOCKET_WRITEDATAGRAM2 )
   {
     QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QHostAddress * par2 = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    quint16 par3 = hb_parni(3);
-    qint64 i = obj->writeDatagram ( *par1, *par2, par3 );
+    qint64 i = obj->writeDatagram ( *par1, *par2, PQUINT16(3) );
     hb_retni( i );
   }
 }

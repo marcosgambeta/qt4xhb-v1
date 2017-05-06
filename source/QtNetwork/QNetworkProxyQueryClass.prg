@@ -111,10 +111,9 @@ QNetworkProxyQuery ( quint16 bindPort, const QString & protocolTag = QString(), 
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW4 )
 {
   QNetworkProxyQuery * o = NULL;
-  quint16 par1 = hb_parni(1);
   QString par2 = ISNIL(2)? QString() : hb_parc(2);
   int par3 = ISNIL(3)? (int) QNetworkProxyQuery::TcpServer : hb_parni(3);
-  o = new QNetworkProxyQuery ( par1, par2,  (QNetworkProxyQuery::QueryType) par3 );
+  o = new QNetworkProxyQuery ( PQUINT16(1), par2,  (QNetworkProxyQuery::QueryType) par3 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -167,10 +166,9 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW8 )
 {
   QNetworkProxyQuery * o = NULL;
   QNetworkConfiguration * par1 = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  quint16 par2 = hb_parni(2);
   QString par3 = ISNIL(3)? QString() : hb_parc(3);
   int par4 = ISNIL(4)? (int) QNetworkProxyQuery::TcpServer : hb_parni(4);
-  o = new QNetworkProxyQuery ( *par1, par2, par3,  (QNetworkProxyQuery::QueryType) par4 );
+  o = new QNetworkProxyQuery ( *par1, PQUINT16(2), par3,  (QNetworkProxyQuery::QueryType) par4 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 

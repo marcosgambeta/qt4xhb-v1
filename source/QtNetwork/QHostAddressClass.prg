@@ -82,8 +82,7 @@ QHostAddress ( quint32 ip4Addr )
 HB_FUNC_STATIC( QHOSTADDRESS_NEW2 )
 {
   QHostAddress * o = NULL;
-  quint32 par1 = hb_parni(1);
-  o = new QHostAddress ( par1 );
+  o = new QHostAddress ( PQUINT32(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -273,8 +272,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_SETADDRESS1 )
   QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    quint32 par1 = hb_parni(1);
-    obj->setAddress ( par1 );
+    obj->setAddress ( PQUINT32(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

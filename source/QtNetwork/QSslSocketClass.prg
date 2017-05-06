@@ -334,9 +334,8 @@ HB_FUNC_STATIC( QSSLSOCKET_CONNECTTOHOSTENCRYPTED1 )
   QSslSocket * obj = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    quint16 par2 = hb_parni(2);
     int par3 = ISNIL(3)? (int) QIODevice::ReadWrite : hb_parni(3);
-    obj->connectToHostEncrypted ( PQSTRING(1), par2,  (QIODevice::OpenMode) par3 );
+    obj->connectToHostEncrypted ( PQSTRING(1), PQUINT16(2),  (QIODevice::OpenMode) par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -350,9 +349,8 @@ HB_FUNC_STATIC( QSSLSOCKET_CONNECTTOHOSTENCRYPTED2 )
   QSslSocket * obj = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    quint16 par2 = hb_parni(2);
     int par4 = ISNIL(4)? (int) QIODevice::ReadWrite : hb_parni(4);
-    obj->connectToHostEncrypted ( PQSTRING(1), par2, PQSTRING(3),  (QIODevice::OpenMode) par4 );
+    obj->connectToHostEncrypted ( PQSTRING(1), PQUINT16(2), PQSTRING(3),  (QIODevice::OpenMode) par4 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

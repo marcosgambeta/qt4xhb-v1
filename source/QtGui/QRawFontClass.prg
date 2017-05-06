@@ -247,10 +247,9 @@ HB_FUNC_STATIC( QRAWFONT_ALPHAMAPFORGLYPH )
   QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    quint32 par1 = hb_parni(1);
     int par2 = ISNIL(2)? (int) QRawFont::SubPixelAntialiasing : hb_parni(2);
     QTransform par3 = ISNIL(3)? QTransform() : *(QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QImage * ptr = new QImage( obj->alphaMapForGlyph ( par1,  (QRawFont::AntialiasingType) par2, par3 ) );
+    QImage * ptr = new QImage( obj->alphaMapForGlyph ( PQUINT32(1),  (QRawFont::AntialiasingType) par2, par3 ) );
     _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );
   }
 }
@@ -444,8 +443,7 @@ HB_FUNC_STATIC( QRAWFONT_PATHFORGLYPH )
   QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    quint32 par1 = hb_parni(1);
-    QPainterPath * ptr = new QPainterPath( obj->pathForGlyph ( par1 ) );
+    QPainterPath * ptr = new QPainterPath( obj->pathForGlyph ( PQUINT32(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
@@ -551,8 +549,7 @@ HB_FUNC_STATIC( QRAWFONT_SUPPORTSCHARACTER2 )
   QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    quint32 par1 = hb_parni(1);
-    hb_retl( obj->supportsCharacter ( par1 ) );
+    hb_retl( obj->supportsCharacter ( PQUINT32(1) ) );
   }
 }
 
