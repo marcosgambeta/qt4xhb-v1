@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QWEBDATABASE_DISPLAYNAME )
   if( obj )
   {
     QString str1 = obj->displayName (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QWEBDATABASE_FILENAME )
   if( obj )
   {
     QString str1 = obj->fileName (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QWEBDATABASE_NAME )
   if( obj )
   {
     QString str1 = obj->name (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

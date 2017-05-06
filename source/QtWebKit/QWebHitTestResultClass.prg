@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_ALTERNATETEXT )
   if( obj )
   {
     QString str1 = obj->alternateText (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKTEXT )
   if( obj )
   {
     QString str1 = obj->linkText (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_TITLE )
   if( obj )
   {
     QString str1 = obj->title (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

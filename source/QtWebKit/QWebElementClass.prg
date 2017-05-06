@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QWEBELEMENT_ATTRIBUTE )
   {
     QString par2 = ISNIL(2)? QString() : hb_parc(2);
     QString str1 = obj->attribute ( PQSTRING(1), par2 );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QWEBELEMENT_ATTRIBUTENS )
   {
     QString par3 = ISNIL(3)? QString() : hb_parc(3);
     QString str1 = obj->attributeNS ( PQSTRING(1), PQSTRING(2), par3 );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QWEBELEMENT_ATTRIBUTENAMES )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, (const char *) strl[i].toLatin1().data() );
+      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QWEBELEMENT_CLASSES )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, (const char *) strl[i].toLatin1().data() );
+      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }
@@ -644,7 +644,7 @@ HB_FUNC_STATIC( QWEBELEMENT_LOCALNAME )
   if( obj )
   {
     QString str1 = obj->localName (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -658,7 +658,7 @@ HB_FUNC_STATIC( QWEBELEMENT_NAMESPACEURI )
   if( obj )
   {
     QString str1 = obj->namespaceUri (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -700,7 +700,7 @@ HB_FUNC_STATIC( QWEBELEMENT_PREFIX )
   if( obj )
   {
     QString str1 = obj->prefix (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -1075,7 +1075,7 @@ HB_FUNC_STATIC( QWEBELEMENT_STYLEPROPERTY )
   {
     int par2 = hb_parni(2);
     QString str1 = obj->styleProperty ( PQSTRING(1),  (QWebElement::StyleResolveStrategy) par2 );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -1089,7 +1089,7 @@ HB_FUNC_STATIC( QWEBELEMENT_TAGNAME )
   if( obj )
   {
     QString str1 = obj->tagName (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -1117,7 +1117,7 @@ HB_FUNC_STATIC( QWEBELEMENT_TOINNERXML )
   if( obj )
   {
     QString str1 = obj->toInnerXml (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -1131,7 +1131,7 @@ HB_FUNC_STATIC( QWEBELEMENT_TOOUTERXML )
   if( obj )
   {
     QString str1 = obj->toOuterXml (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -1145,7 +1145,7 @@ HB_FUNC_STATIC( QWEBELEMENT_TOPLAINTEXT )
   if( obj )
   {
     QString str1 = obj->toPlainText (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

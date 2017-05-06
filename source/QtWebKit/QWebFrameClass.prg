@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QWEBFRAME_FRAMENAME )
   if( obj )
   {
     QString str1 = obj->frameName (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QWEBFRAME_RENDERTREEDUMP )
   if( obj )
   {
     QString str1 = obj->renderTreeDump (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -817,7 +817,7 @@ HB_FUNC_STATIC( QWEBFRAME_TITLE )
   if( obj )
   {
     QString str1 = obj->title (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -831,7 +831,7 @@ HB_FUNC_STATIC( QWEBFRAME_TOHTML )
   if( obj )
   {
     QString str1 = obj->toHtml (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -845,7 +845,7 @@ HB_FUNC_STATIC( QWEBFRAME_TOPLAINTEXT )
   if( obj )
   {
     QString str1 = obj->toPlainText (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

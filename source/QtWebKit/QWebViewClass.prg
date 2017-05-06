@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QWEBVIEW_SELECTEDTEXT )
   if( obj )
   {
     QString str1 = obj->selectedText (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -430,7 +430,7 @@ HB_FUNC_STATIC( QWEBVIEW_TITLE )
   if( obj )
   {
     QString str1 = obj->title (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
