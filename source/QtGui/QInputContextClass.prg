@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_IDENTIFIERNAME )
   if( obj )
   {
     QString str1 = obj->identifierName (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_LANGUAGE )
   if( obj )
   {
     QString str1 = obj->language (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

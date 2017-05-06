@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QCLIPBOARD_TEXT1 )
   {
     int par1 = hb_parni(1);
     QString str1 = obj->text (  (QClipboard::Mode) par1 );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QCLIPBOARD_TEXT2 )
     QString par1 = hb_parc(1);
     int par2 = hb_parni(2);
     QString str1 = obj->text ( par1,  (QClipboard::Mode) par2 );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

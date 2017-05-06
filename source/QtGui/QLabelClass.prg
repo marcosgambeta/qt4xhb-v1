@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QLABEL_SELECTEDTEXT )
   if( obj )
   {
     QString str1 = obj->selectedText (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -448,7 +448,7 @@ HB_FUNC_STATIC( QLABEL_TEXT )
   if( obj )
   {
     QString str1 = obj->text (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

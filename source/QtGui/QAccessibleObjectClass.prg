@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_ACTIONTEXT )
     int par2 = hb_parni(2);
     int par3 = hb_parni(3);
     QString str1 = obj->actionText ( par1,  (QAccessibleObject::Text) par2, par3 );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

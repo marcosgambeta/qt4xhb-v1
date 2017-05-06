@@ -81,7 +81,7 @@ QString description ( const QString & key )
 HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_DESCRIPTION )
 {
   QString str1 = QInputContextFactory::description ( PQSTRING(1) );
-  hb_retc( (const char *) str1.toLatin1().data() );
+  hb_retc( RQSTRING(str1) );
 }
 
 
@@ -91,7 +91,7 @@ QString displayName ( const QString & key )
 HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_DISPLAYNAME )
 {
   QString str1 = QInputContextFactory::displayName ( PQSTRING(1) );
-  hb_retc( (const char *) str1.toLatin1().data() );
+  hb_retc( RQSTRING(str1) );
 }
 
 
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_KEYS )
   int i;
   for(i=0;i<strl.count();i++)
   {
-    PHB_ITEM pItem = hb_itemPutC( NULL, (const char *) strl[i].toLatin1().data() );
+    PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
     hb_arrayAddForward( pArray, pItem );
     hb_itemRelease(pItem);
   }
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_LANGUAGES )
   int i;
   for(i=0;i<strl.count();i++)
   {
-    PHB_ITEM pItem = hb_itemPutC( NULL, (const char *) strl[i].toLatin1().data() );
+    PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
     hb_arrayAddForward( pArray, pItem );
     hb_itemRelease(pItem);
   }

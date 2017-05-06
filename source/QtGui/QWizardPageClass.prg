@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_BUTTONTEXT )
   {
     int par1 = hb_parni(1);
     QString str1 = obj->buttonText (  (QWizard::WizardButton) par1 );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_SUBTITLE )
   if( obj )
   {
     QString str1 = obj->subTitle (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_TITLE )
   if( obj )
   {
     QString str1 = obj->title (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

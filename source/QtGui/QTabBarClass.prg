@@ -744,7 +744,7 @@ HB_FUNC_STATIC( QTABBAR_TABTEXT )
   {
     int par1 = hb_parni(1);
     QString str1 = obj->tabText ( par1 );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -774,7 +774,7 @@ HB_FUNC_STATIC( QTABBAR_TABTOOLTIP )
   {
     int par1 = hb_parni(1);
     QString str1 = obj->tabToolTip ( par1 );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -789,7 +789,7 @@ HB_FUNC_STATIC( QTABBAR_TABWHATSTHIS )
   {
     int par1 = hb_parni(1);
     QString str1 = obj->tabWhatsThis ( par1 );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

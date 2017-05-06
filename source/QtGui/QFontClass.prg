@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QFONT_DEFAULTFAMILY )
   if( obj )
   {
     QString str1 = obj->defaultFamily (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QFONT_FAMILY )
   if( obj )
   {
     QString str1 = obj->family (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QFONT_KEY )
   if( obj )
   {
     QString str1 = obj->key (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QFONT_LASTRESORTFAMILY )
   if( obj )
   {
     QString str1 = obj->lastResortFamily (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -375,7 +375,7 @@ HB_FUNC_STATIC( QFONT_LASTRESORTFONT )
   if( obj )
   {
     QString str1 = obj->lastResortFont (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -483,7 +483,7 @@ HB_FUNC_STATIC( QFONT_RAWNAME )
   if( obj )
   {
     QString str1 = obj->rawName (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -881,7 +881,7 @@ HB_FUNC_STATIC( QFONT_TOSTRING )
   if( obj )
   {
     QString str1 = obj->toString (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -963,7 +963,7 @@ QString substitute ( const QString & familyName )
 HB_FUNC_STATIC( QFONT_SUBSTITUTE )
 {
   QString str1 = QFont::substitute ( PQSTRING(1) );
-  hb_retc( (const char *) str1.toLatin1().data() );
+  hb_retc( RQSTRING(str1) );
 }
 
 
@@ -978,7 +978,7 @@ HB_FUNC_STATIC( QFONT_SUBSTITUTES )
   int i;
   for(i=0;i<strl.count();i++)
   {
-    PHB_ITEM pItem = hb_itemPutC( NULL, (const char *) strl[i].toLatin1().data() );
+    PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
     hb_arrayAddForward( pArray, pItem );
     hb_itemRelease(pItem);
   }
@@ -997,7 +997,7 @@ HB_FUNC_STATIC( QFONT_SUBSTITUTIONS )
   int i;
   for(i=0;i<strl.count();i++)
   {
-    PHB_ITEM pItem = hb_itemPutC( NULL, (const char *) strl[i].toLatin1().data() );
+    PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
     hb_arrayAddForward( pArray, pItem );
     hb_itemRelease(pItem);
   }

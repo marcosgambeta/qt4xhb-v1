@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QFILEOPENEVENT_FILE )
   if( obj )
   {
     QString str1 = obj->file (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

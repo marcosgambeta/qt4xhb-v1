@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_DETAILEDTEXT )
   if( obj )
   {
     QString str1 = obj->detailedText (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_INFORMATIVETEXT )
   if( obj )
   {
     QString str1 = obj->informativeText (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -672,7 +672,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_TEXT )
   if( obj )
   {
     QString str1 = obj->text (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

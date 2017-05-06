@@ -577,7 +577,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_STATUSTIP )
   if( obj )
   {
     QString str1 = obj->statusTip (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -605,7 +605,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_TEXT )
   if( obj )
   {
     QString str1 = obj->text (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -632,7 +632,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_TOOLTIP )
   if( obj )
   {
     QString str1 = obj->toolTip (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -659,7 +659,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_WHATSTHIS )
   if( obj )
   {
     QString str1 = obj->whatsThis (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

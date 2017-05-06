@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QSTATICTEXT_TEXT )
   if( obj )
   {
     QString str1 = obj->text (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

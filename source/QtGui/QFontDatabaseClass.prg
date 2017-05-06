@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QFONTDATABASE_FAMILIES )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, (const char *) strl[i].toLatin1().data() );
+      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QFONTDATABASE_STYLESTRING1 )
   {
     QFont * par1 = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QString str1 = obj->styleString ( *par1 );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QFONTDATABASE_STYLESTRING2 )
   {
     QFontInfo * par1 = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QString str1 = obj->styleString ( *par1 );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QFONTDATABASE_STYLES )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, (const char *) strl[i].toLatin1().data() );
+      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QFONTDATABASE_APPLICATIONFONTFAMILIES )
   int i;
   for(i=0;i<strl.count();i++)
   {
-    PHB_ITEM pItem = hb_itemPutC( NULL, (const char *) strl[i].toLatin1().data() );
+    PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
     hb_arrayAddForward( pArray, pItem );
     hb_itemRelease(pItem);
   }
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMNAME )
 {
   int par1 = hb_parni(1);
   QString str1 = QFontDatabase::writingSystemName (  (QFontDatabase::WritingSystem) par1 );
-  hb_retc( (const char *) str1.toLatin1().data() );
+  hb_retc( RQSTRING(str1) );
 }
 
 
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMSAMPLE )
 {
   int par1 = hb_parni(1);
   QString str1 = QFontDatabase::writingSystemSample (  (QFontDatabase::WritingSystem) par1 );
-  hb_retc( (const char *) str1.toLatin1().data() );
+  hb_retc( RQSTRING(str1) );
 }
 
 

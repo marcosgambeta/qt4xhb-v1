@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QSHORTCUT_WHATSTHIS )
   if( obj )
   {
     QString str1 = obj->whatsThis (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

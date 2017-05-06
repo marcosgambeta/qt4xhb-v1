@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SPECIALVALUETEXT )
   if( obj )
   {
     QString str1 = obj->specialValueText (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_TEXT )
   if( obj )
   {
     QString str1 = obj->text (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

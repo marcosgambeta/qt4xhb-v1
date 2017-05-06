@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QICONENGINEV2_ICONNAME )
   if( obj )
   {
     QString str1 = obj->iconName (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QICONENGINEV2_KEY )
   if( obj )
   {
     QString str1 = obj->key (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

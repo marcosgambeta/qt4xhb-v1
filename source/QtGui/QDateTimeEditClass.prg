@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_DISPLAYFORMAT )
   if( obj )
   {
     QString str1 = obj->displayFormat (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -506,7 +506,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SECTIONTEXT )
   {
     int par1 = hb_parni(1);
     QString str1 = obj->sectionText (  (QDateTimeEdit::Section) par1 );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

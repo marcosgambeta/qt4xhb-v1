@@ -532,7 +532,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_PREEDITAREATEXT )
   if( obj )
   {
     QString str1 = obj->preeditAreaText (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -679,7 +679,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_TEXT )
   if( obj )
   {
     QString str1 = obj->text (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QTEXTEDIT_ANCHORAT )
   {
     QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QString str1 = obj->anchorAt ( *par1 );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -430,7 +430,7 @@ HB_FUNC_STATIC( QTEXTEDIT_DOCUMENTTITLE )
   if( obj )
   {
     QString str1 = obj->documentTitle (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QTEXTEDIT_FONTFAMILY )
   if( obj )
   {
     QString str1 = obj->fontFamily (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -983,7 +983,7 @@ HB_FUNC_STATIC( QTEXTEDIT_TOHTML )
   if( obj )
   {
     QString str1 = obj->toHtml (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -997,7 +997,7 @@ HB_FUNC_STATIC( QTEXTEDIT_TOPLAINTEXT )
   if( obj )
   {
     QString str1 = obj->toPlainText (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

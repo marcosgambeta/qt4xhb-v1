@@ -999,7 +999,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_STATUSTIP )
   {
     int par1 = hb_parni(1);
     QString str1 = obj->statusTip ( par1 );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -1073,7 +1073,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_TEXT )
   {
     int par1 = hb_parni(1);
     QString str1 = obj->text ( par1 );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -1102,7 +1102,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_TOOLTIP )
   {
     int par1 = hb_parni(1);
     QString str1 = obj->toolTip ( par1 );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -1144,7 +1144,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_WHATSTHIS )
   {
     int par1 = hb_parni(1);
     QString str1 = obj->whatsThis ( par1 );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

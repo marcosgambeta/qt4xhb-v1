@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QLINEEDIT_DISPLAYTEXT )
   if( obj )
   {
     QString str1 = obj->displayText (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QLINEEDIT_INPUTMASK )
   if( obj )
   {
     QString str1 = obj->inputMask (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -570,7 +570,7 @@ HB_FUNC_STATIC( QLINEEDIT_PLACEHOLDERTEXT )
   if( obj )
   {
     QString str1 = obj->placeholderText (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -598,7 +598,7 @@ HB_FUNC_STATIC( QLINEEDIT_SELECTEDTEXT )
   if( obj )
   {
     QString str1 = obj->selectedText (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -877,7 +877,7 @@ HB_FUNC_STATIC( QLINEEDIT_TEXT )
   if( obj )
   {
     QString str1 = obj->text (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

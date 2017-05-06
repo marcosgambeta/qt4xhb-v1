@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QCOMBOBOX_CURRENTTEXT )
   if( obj )
   {
     QString str1 = obj->currentText (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -505,7 +505,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ITEMTEXT )
   {
     int par1 = hb_parni(1);
     QString str1 = obj->itemText ( par1 );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_FORMAT )
   if( obj )
   {
     QString str1 = obj->format (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_TEXT )
   if( obj )
   {
     QString str1 = obj->text (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

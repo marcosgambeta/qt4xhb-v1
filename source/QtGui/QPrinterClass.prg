@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QPRINTER_CREATOR )
   if( obj )
   {
     QString str1 = obj->creator (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QPRINTER_DOCNAME )
   if( obj )
   {
     QString str1 = obj->docName (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QPRINTER_OUTPUTFILENAME )
   if( obj )
   {
     QString str1 = obj->outputFileName (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -561,7 +561,7 @@ HB_FUNC_STATIC( QPRINTER_PRINTPROGRAM )
   if( obj )
   {
     QString str1 = obj->printProgram (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -588,7 +588,7 @@ HB_FUNC_STATIC( QPRINTER_PRINTERNAME )
   if( obj )
   {
     QString str1 = obj->printerName (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

@@ -855,7 +855,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_WINDOWTITLE )
   if( obj )
   {
     QString str1 = obj->windowTitle (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

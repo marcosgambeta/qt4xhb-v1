@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_TOHTML1 )
   {
     QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QString str1 = obj->toHtml ( *par1 );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_TOHTML2 )
   if( obj )
   {
     QString str1 = obj->toHtml (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_TOPLAINTEXT )
   if( obj )
   {
     QString str1 = obj->toPlainText (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

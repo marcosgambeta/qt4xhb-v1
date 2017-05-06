@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DEFAULTSTYLESHEET )
   if( obj )
   {
     QString str1 = obj->defaultStyleSheet (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -822,7 +822,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_METAINFORMATION )
   {
     int par1 = hb_parni(1);
     QString str1 = obj->metaInformation (  (QTextDocument::MetaInformation) par1 );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -1212,7 +1212,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_TOHTML )
   {
     QByteArray par1 = ISNIL(1)? QByteArray() : *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QString str1 = obj->toHtml ( par1 );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -1226,7 +1226,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_TOPLAINTEXT )
   if( obj )
   {
     QString str1 = obj->toPlainText (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

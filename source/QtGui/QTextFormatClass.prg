@@ -737,7 +737,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_STRINGPROPERTY )
   {
     int par1 = hb_parni(1);
     QString str1 = obj->stringProperty ( par1 );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

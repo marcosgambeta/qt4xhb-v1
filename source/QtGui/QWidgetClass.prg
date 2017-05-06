@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QWIDGET_ACCESSIBLEDESCRIPTION )
   if( obj )
   {
     QString str1 = obj->accessibleDescription (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QWIDGET_ACCESSIBLENAME )
   if( obj )
   {
     QString str1 = obj->accessibleName (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -3218,7 +3218,7 @@ HB_FUNC_STATIC( QWIDGET_STATUSTIP )
   if( obj )
   {
     QString str1 = obj->statusTip (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -3246,7 +3246,7 @@ HB_FUNC_STATIC( QWIDGET_STYLESHEET )
   if( obj )
   {
     QString str1 = obj->styleSheet (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -3274,7 +3274,7 @@ HB_FUNC_STATIC( QWIDGET_TOOLTIP )
   if( obj )
   {
     QString str1 = obj->toolTip (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -3486,7 +3486,7 @@ HB_FUNC_STATIC( QWIDGET_WHATSTHIS )
   if( obj )
   {
     QString str1 = obj->whatsThis (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -3541,7 +3541,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOWFILEPATH )
   if( obj )
   {
     QString str1 = obj->windowFilePath (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -3582,7 +3582,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOWICONTEXT )
   if( obj )
   {
     QString str1 = obj->windowIconText (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -3623,7 +3623,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOWROLE )
   if( obj )
   {
     QString str1 = obj->windowRole (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -3651,7 +3651,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOWTITLE )
   if( obj )
   {
     QString str1 = obj->windowTitle (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

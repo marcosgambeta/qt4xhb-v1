@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QAPPLICATION_SESSIONID )
   if( obj )
   {
     QString str1 = obj->sessionId (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QAPPLICATION_SESSIONKEY )
   if( obj )
   {
     QString str1 = obj->sessionKey (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QAPPLICATION_STYLESHEET )
   if( obj )
   {
     QString str1 = obj->styleSheet (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 

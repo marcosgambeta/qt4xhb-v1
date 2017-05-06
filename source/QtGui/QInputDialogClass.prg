@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_CANCELBUTTONTEXT )
   if( obj )
   {
     QString str1 = obj->cancelButtonText (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_COMBOBOXITEMS )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, (const char *) strl[i].toLatin1().data() );
+      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_LABELTEXT )
   if( obj )
   {
     QString str1 = obj->labelText (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_OKBUTTONTEXT )
   if( obj )
   {
     QString str1 = obj->okButtonText (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -674,7 +674,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_TEXTVALUE )
   if( obj )
   {
     QString str1 = obj->textValue (  );
-    hb_retc( (const char *) str1.toLatin1().data() );
+    hb_retc( RQSTRING(str1) );
   }
 }
 
@@ -782,7 +782,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_GETITEM )
   bool par7;
   int par8 = ISNIL(8)? (int) 0 : hb_parni(8);
   QString str1 = QInputDialog::getItem ( par1, PQSTRING(2), PQSTRING(3), PQSTRINGLIST(4), par5, ISNIL(6)? true : hb_parl(6), &par7,  (Qt::WindowFlags) par8 );
-  hb_retc( (const char *) str1.toLatin1().data() );
+  hb_retc( RQSTRING(str1) );
   hb_storl( par7, 7 );
 }
 
@@ -798,7 +798,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_GETTEXT )
   bool par6;
   int par7 = ISNIL(7)? (int) 0 : hb_parni(7);
   QString str1 = QInputDialog::getText ( par1, PQSTRING(2), PQSTRING(3),  (QLineEdit::EchoMode) par4, par5, &par6,  (Qt::WindowFlags) par7 );
-  hb_retc( (const char *) str1.toLatin1().data() );
+  hb_retc( RQSTRING(str1) );
   hb_storl( par6, 6 );
 }
 
