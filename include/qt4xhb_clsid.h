@@ -1351,7 +1351,7 @@
 #define PQSTRINGLIST(n)                                     _qt4xhb_convert_array_parameter_to_qstringlist(n)
 
 // macros for optional parameters
-//#define OPBOOL(n,v)                                         (bool) ISNIL(n)? v : hb_parl(n)
+#define OPBOOL(n,v)                                         (bool) ISNIL(n)? v : hb_parl(n)
 
 // macros for return's
 #define RQSTRING(x)                                         (const char *) x.toAscii().data()

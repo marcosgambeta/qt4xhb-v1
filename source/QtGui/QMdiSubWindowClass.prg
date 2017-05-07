@@ -164,8 +164,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SETOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool par2 = ISNIL(2)? true : hb_parl(2);
-    obj->setOption (  (QMdiSubWindow::SubWindowOption) par1, par2 );
+    obj->setOption (  (QMdiSubWindow::SubWindowOption) par1, OPBOOL(2,true) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

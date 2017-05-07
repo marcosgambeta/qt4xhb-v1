@@ -588,7 +588,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setOption (  (QInputDialog::InputDialogOption) par1, ISNIL(2)? true : hb_parl(2) );
+    obj->setOption (  (QInputDialog::InputDialogOption) par1, OPBOOL(2,true) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -781,7 +781,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_GETITEM )
   int par5 = ISNIL(5)? 0 : hb_parni(5);
   bool par7;
   int par8 = ISNIL(8)? (int) 0 : hb_parni(8);
-  QString str1 = QInputDialog::getItem ( par1, PQSTRING(2), PQSTRING(3), PQSTRINGLIST(4), par5, ISNIL(6)? true : hb_parl(6), &par7,  (Qt::WindowFlags) par8 );
+  QString str1 = QInputDialog::getItem ( par1, PQSTRING(2), PQSTRING(3), PQSTRINGLIST(4), par5, OPBOOL(6,true), &par7,  (Qt::WindowFlags) par8 );
   hb_retc( RQSTRING(str1) );
   hb_storl( par7, 7 );
 }

@@ -664,7 +664,7 @@ HB_FUNC_STATIC( QSQLQUERY_SEEK )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->seek ( PINT(1), ISNIL(2)? false : hb_parl(2) ) );
+    hb_retl( obj->seek ( PINT(1), OPBOOL(2,false) ) );
   }
 }
 

@@ -48,8 +48,7 @@ QCDEStyle ( bool useHighlightCols = false )
 HB_FUNC_STATIC( QCDESTYLE_NEW )
 {
   QCDEStyle * o = NULL;
-  bool par1 = ISNIL(1)? false : hb_parl(1);
-  o = new QCDEStyle ( par1 );
+  o = new QCDEStyle ( OPBOOL(1,false) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

@@ -2077,7 +2077,7 @@ HB_FUNC_STATIC( QWIDGET_SETATTRIBUTE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setAttribute (  (Qt::WidgetAttribute) par1, ISNIL(2)? true : hb_parl(2) );
+    obj->setAttribute (  (Qt::WidgetAttribute) par1, OPBOOL(2,true) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -2836,7 +2836,7 @@ HB_FUNC_STATIC( QWIDGET_SETSHORTCUTAUTOREPEAT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setShortcutAutoRepeat ( par1, ISNIL(2)? true : hb_parl(2) );
+    obj->setShortcutAutoRepeat ( par1, OPBOOL(2,true) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -2851,7 +2851,7 @@ HB_FUNC_STATIC( QWIDGET_SETSHORTCUTENABLED )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setShortcutEnabled ( par1, ISNIL(2)? true : hb_parl(2) );
+    obj->setShortcutEnabled ( par1, OPBOOL(2,true) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

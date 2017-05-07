@@ -271,8 +271,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_STARTPAINTING )
   QDirectPainter * obj = (QDirectPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = ISNIL(1)? true : hb_parl(1);
-    obj->startPainting ( par1 );
+    obj->startPainting ( OPBOOL(1,true) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_SETOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setOption (  (QColorDialog::ColorDialogOption) par1, ISNIL(2)? true : hb_parl(2) );
+    obj->setOption (  (QColorDialog::ColorDialogOption) par1, OPBOOL(2,true) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

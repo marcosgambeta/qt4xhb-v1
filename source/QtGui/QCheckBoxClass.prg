@@ -136,8 +136,7 @@ HB_FUNC_STATIC( QCHECKBOX_SETTRISTATE )
 
   if( obj )
   {
-    bool par1 = ISNIL(1)? true : hb_parl(1);
-    obj->setTristate ( par1 );
+    obj->setTristate ( OPBOOL(1,true) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

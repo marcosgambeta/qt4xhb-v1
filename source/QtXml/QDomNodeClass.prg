@@ -249,8 +249,7 @@ HB_FUNC_STATIC( QDOMNODE_CLONENODE )
   QDomNode * obj = (QDomNode *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = ISNIL(1)? true : hb_parl(1);
-    QDomNode * ptr = new QDomNode( obj->cloneNode ( par1 ) );
+    QDomNode * ptr = new QDomNode( obj->cloneNode ( OPBOOL(1,true) ) );
     _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
   }
 }

@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QSPLITTER_SETOPAQUERESIZE )
   QSplitter * obj = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setOpaqueResize ( ISNIL(1)? true : hb_parl(1) );
+    obj->setOpaqueResize ( OPBOOL(1,true) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

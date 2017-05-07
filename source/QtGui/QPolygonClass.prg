@@ -133,8 +133,7 @@ HB_FUNC_STATIC( QPOLYGON_NEW5 )
 {
   QPolygon * o = NULL;
   QRect * par1 = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  bool par2 = ISNIL(2)? false : hb_parl(2);
-  o = new QPolygon ( *par1, par2 );
+  o = new QPolygon ( *par1, OPBOOL(2,false) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 

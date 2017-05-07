@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QFONT_NEW2 )
   QFont * o = NULL;
   int par2 = ISNIL(2)? -1 : hb_parni(2);
   int par3 = ISNIL(3)? -1 : hb_parni(3);
-  o = new QFont ( PQSTRING(1), par2, par3, ISNIL(4)? false : hb_parl(4) );
+  o = new QFont ( PQSTRING(1), par2, par3, OPBOOL(4,false) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 

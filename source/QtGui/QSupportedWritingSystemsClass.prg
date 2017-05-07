@@ -112,8 +112,7 @@ HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_SETSUPPORTED )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool par2 = ISNIL(2)? true : hb_parl(2);
-    obj->setSupported (  (QFontDatabase::WritingSystem) par1, par2 );
+    obj->setSupported (  (QFontDatabase::WritingSystem) par1, OPBOOL(2,true) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

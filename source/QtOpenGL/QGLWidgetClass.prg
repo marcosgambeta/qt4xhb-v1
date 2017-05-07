@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QGLWIDGET_GRABFRAMEBUFFER )
   QGLWidget * obj = (QGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QImage * ptr = new QImage( obj->grabFrameBuffer ( ISNIL(1)? false : hb_parl(1) ) );
+    QImage * ptr = new QImage( obj->grabFrameBuffer ( OPBOOL(1,false) ) );
     _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );
   }
 }
@@ -527,7 +527,7 @@ HB_FUNC_STATIC( QGLWIDGET_RENDERPIXMAP )
   {
     int par1 = ISNIL(1)? 0 : hb_parni(1);
     int par2 = ISNIL(2)? 0 : hb_parni(2);
-    QPixmap * ptr = new QPixmap( obj->renderPixmap ( par1, par2, ISNIL(3)? false : hb_parl(3) ) );
+    QPixmap * ptr = new QPixmap( obj->renderPixmap ( par1, par2, OPBOOL(3,false) ) );
     _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }

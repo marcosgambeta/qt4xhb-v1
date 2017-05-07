@@ -2561,7 +2561,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETFLAG )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setFlag (  (QGraphicsItem::GraphicsItemFlag) par1, ISNIL(2)? true : hb_parl(2) );
+    obj->setFlag (  (QGraphicsItem::GraphicsItemFlag) par1, OPBOOL(2,true) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -2810,7 +2810,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETTRANSFORM )
   if( obj )
   {
     QTransform * par1 = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setTransform ( *par1, ISNIL(2)? false : hb_parl(2) );
+    obj->setTransform ( *par1, OPBOOL(2,false) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

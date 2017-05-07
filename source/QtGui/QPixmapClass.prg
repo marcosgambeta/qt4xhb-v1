@@ -302,8 +302,7 @@ HB_FUNC_STATIC( QPIXMAP_CREATEHEURISTICMASK )
   QPixmap * obj = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    bool par1 = ISNIL(1)? true : hb_parl(1);
-    QBitmap * ptr = new QBitmap( obj->createHeuristicMask ( par1 ) );
+    QBitmap * ptr = new QBitmap( obj->createHeuristicMask ( OPBOOL(1,true) ) );
     _qt4xhb_createReturnClass ( ptr, "QBITMAP", true );
   }
 }

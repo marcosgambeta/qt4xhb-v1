@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QSTYLE_SLIDERPOSITIONFROMVALUE )
   int par2 = hb_parni(2);
   int par3 = hb_parni(3);
   int par4 = hb_parni(4);
-  hb_retni( QStyle::sliderPositionFromValue ( par1, par2, par3, par4, ISNIL(5)? false : hb_parl(5) ) );
+  hb_retni( QStyle::sliderPositionFromValue ( par1, par2, par3, par4, OPBOOL(5,false) ) );
 }
 
 
@@ -570,7 +570,7 @@ HB_FUNC_STATIC( QSTYLE_SLIDERVALUEFROMPOSITION )
   int par2 = hb_parni(2);
   int par3 = hb_parni(3);
   int par4 = hb_parni(4);
-  hb_retni( QStyle::sliderValueFromPosition ( par1, par2, par3, par4, ISNIL(5)? false : hb_parl(5) ) );
+  hb_retni( QStyle::sliderValueFromPosition ( par1, par2, par3, par4, OPBOOL(5,false) ) );
 }
 
 

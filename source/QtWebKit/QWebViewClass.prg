@@ -328,8 +328,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETRENDERHINT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool par2 = ISNIL(2)? true : hb_parl(2);
-    obj->setRenderHint (  (QPainter::RenderHint) par1, par2 );
+    obj->setRenderHint (  (QPainter::RenderHint) par1, OPBOOL(2,true) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -444,8 +443,7 @@ HB_FUNC_STATIC( QWEBVIEW_TRIGGERPAGEACTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    bool par2 = ISNIL(2)? false : hb_parl(2);
-    obj->triggerPageAction (  (QWebPage::WebAction) par1, par2 );
+    obj->triggerPageAction (  (QWebPage::WebAction) par1, OPBOOL(2,false) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

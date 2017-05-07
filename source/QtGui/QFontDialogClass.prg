@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QFONTDIALOG_SETOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setOption (  (QFontDialog::FontDialogOption) par1, ISNIL(2)? true : hb_parl(2) );
+    obj->setOption (  (QFontDialog::FontDialogOption) par1, OPBOOL(2,true) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -3424,7 +3424,7 @@ HB_FUNC_STATIC( QPAINTER_SETRENDERHINT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setRenderHint (  (QPainter::RenderHint) par1, ISNIL(2)? true : hb_parl(2) );
+    obj->setRenderHint (  (QPainter::RenderHint) par1, OPBOOL(2,true) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -3439,7 +3439,7 @@ HB_FUNC_STATIC( QPAINTER_SETRENDERHINTS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setRenderHints (  (QPainter::RenderHints) par1, ISNIL(2)? true : hb_parl(2) );
+    obj->setRenderHints (  (QPainter::RenderHints) par1, OPBOOL(2,true) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -3454,7 +3454,7 @@ HB_FUNC_STATIC( QPAINTER_SETTRANSFORM )
   if( obj )
   {
     QTransform * par1 = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setTransform ( *par1, ISNIL(2)? false : hb_parl(2) );
+    obj->setTransform ( *par1, OPBOOL(2,false) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -3593,7 +3593,7 @@ HB_FUNC_STATIC( QPAINTER_SETWORLDTRANSFORM )
   if( obj )
   {
     QTransform * par1 = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setWorldTransform ( *par1, ISNIL(2)? false : hb_parl(2) );
+    obj->setWorldTransform ( *par1, OPBOOL(2,false) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

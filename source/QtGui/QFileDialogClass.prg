@@ -739,7 +739,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setOption ( (QFileDialog::Option) par1, ISNIL(2)? true : hb_parl(2) );
+    obj->setOption ( (QFileDialog::Option) par1, OPBOOL(2,true) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

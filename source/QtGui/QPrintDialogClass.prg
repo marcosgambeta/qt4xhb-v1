@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_SETOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setOption (  (QPrintDialog::PrintDialogOption) par1, ISNIL(2)? true : hb_parl(2) );
+    obj->setOption (  (QPrintDialog::PrintDialogOption) par1, OPBOOL(2,true) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -1296,7 +1296,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETMODIFIED )
   QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setModified ( ISNIL(1)? true : hb_parl(1) );
+    obj->setModified ( OPBOOL(1,true) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

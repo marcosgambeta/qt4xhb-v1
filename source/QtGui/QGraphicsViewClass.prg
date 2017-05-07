@@ -1436,7 +1436,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETMATRIX )
   if( obj )
   {
     QMatrix * par1 = (QMatrix *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setMatrix ( *par1, ISNIL(2)? false : hb_parl(2) );
+    obj->setMatrix ( *par1, OPBOOL(2,false) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1451,7 +1451,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETOPTIMIZATIONFLAG )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setOptimizationFlag (  (QGraphicsView::OptimizationFlag) par1, ISNIL(2)? true : hb_parl(2) );
+    obj->setOptimizationFlag (  (QGraphicsView::OptimizationFlag) par1, OPBOOL(2,true) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1481,7 +1481,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETRENDERHINT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setRenderHint (  (QPainter::RenderHint) par1, ISNIL(2)? true : hb_parl(2) );
+    obj->setRenderHint (  (QPainter::RenderHint) par1, OPBOOL(2,true) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1600,7 +1600,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETTRANSFORM )
   if( obj )
   {
     QTransform * par1 = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setTransform ( *par1, ISNIL(2)? false : hb_parl(2) );
+    obj->setTransform ( *par1, OPBOOL(2,false) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

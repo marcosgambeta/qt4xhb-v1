@@ -49,8 +49,7 @@ HB_FUNC_STATIC( QSHORTCUTEVENT_NEW )
   QShortcutEvent * o = NULL;
   QKeySequence * par1 = (QKeySequence *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = hb_parni(2);
-  bool par3 = ISNIL(3)? false : hb_parl(3);
-  o = new QShortcutEvent ( *par1, par2, par3 );
+  o = new QShortcutEvent ( *par1, par2, OPBOOL(3,false) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

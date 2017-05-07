@@ -79,8 +79,7 @@ QBitArray ( int size, bool value = false )
 HB_FUNC_STATIC( QBITARRAY_NEW2 )
 {
   QBitArray * o = NULL;
-  bool par2 = ISNIL(2)? false : hb_parl(2);
-  o = new QBitArray ( PINT(1), par2 );
+  o = new QBitArray ( PINT(1), OPBOOL(2,false) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

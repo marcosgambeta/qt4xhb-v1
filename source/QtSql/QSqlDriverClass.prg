@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QSQLDRIVER_FORMATVALUE )
   if( obj )
   {
     QSqlField * par1 = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString str1 = obj->formatValue ( *par1, ISNIL(2)? false : hb_parl(2) );
+    QString str1 = obj->formatValue ( *par1, OPBOOL(2,false) );
     hb_retc( RQSTRING(str1) );
   }
 }
