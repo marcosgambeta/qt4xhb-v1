@@ -123,8 +123,7 @@ HB_FUNC_STATIC( QAXBINDABLE_REPORTERROR )
   {
     if( ISNUM(1) && ISCHAR(2) && ISCHAR(3) && (ISCHAR(4)||ISNIL(4)) )
     {
-      QString par4 = ISNIL(4)? QString() : hb_parc(4);
-      obj->reportError ( PINT(1), PQSTRING(2), PQSTRING(3), par4 );
+      obj->reportError ( PINT(1), PQSTRING(2), PQSTRING(3), OPQSTRING(4,QString()) );
     }
     else
     {

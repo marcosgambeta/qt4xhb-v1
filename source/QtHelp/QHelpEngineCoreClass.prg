@@ -257,8 +257,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_FILES )
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par3 = ISNIL(3)? QString() : hb_parc(3);
-    QList<QUrl> list = obj->files ( PQSTRING(1), PQSTRINGLIST(2), par3 );
+    QList<QUrl> list = obj->files ( PQSTRING(1), PQSTRINGLIST(2), OPQSTRING(3,QString()) );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QURL" );

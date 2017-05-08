@@ -330,8 +330,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_REGISTERENGINE )
 {
   if( ISCHAR(1) && ISCHAR(2) && (ISCHAR(3)||ISNIL(3)) )
   {
-    QString par3 = ISNIL(3)? QString() : hb_parc(3);
-    hb_retl( QAxScriptManager::registerEngine ( PQSTRING(1), PQSTRING(2), par3 ) );
+    hb_retl( QAxScriptManager::registerEngine ( PQSTRING(1), PQSTRING(2), OPQSTRING(3,QString()) ) );
   }
   else
   {

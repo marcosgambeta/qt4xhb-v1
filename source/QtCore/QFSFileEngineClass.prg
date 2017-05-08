@@ -595,8 +595,7 @@ QString currentPath ( const QString & fileName = QString() )
 */
 HB_FUNC_STATIC( QFSFILEENGINE_CURRENTPATH )
 {
-  QString par1 = ISNIL(1)? QString() : hb_parc(1);
-  QString str1 = QFSFileEngine::currentPath ( par1 );
+  QString str1 = QFSFileEngine::currentPath ( OPQSTRING(1,QString()) );
   hb_retc( RQSTRING(str1) );
 }
 

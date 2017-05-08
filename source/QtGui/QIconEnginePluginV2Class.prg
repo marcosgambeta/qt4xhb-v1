@@ -64,8 +64,7 @@ HB_FUNC_STATIC( QICONENGINEPLUGINV2_CREATE )
   QIconEnginePluginV2 * obj = (QIconEnginePluginV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = ISNIL(1)? QString() : hb_parc(1);
-    QIconEngineV2 * ptr = obj->create ( par1 );
+    QIconEngineV2 * ptr = obj->create ( OPQSTRING(1,QString()) );
     _qt4xhb_createReturnClass ( ptr, "QICONENGINEV2" );
   }
 }

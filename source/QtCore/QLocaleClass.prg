@@ -680,8 +680,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING1 )
   if( obj )
   {
     qlonglong par1 = hb_parnl(1);
-    QString par2 = ISNIL(2)? QString() : hb_parc(2);
-    QString str1 = obj->toCurrencyString ( par1, par2 );
+    QString str1 = obj->toCurrencyString ( par1, OPQSTRING(2,QString()) );
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -696,8 +695,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING2 )
   if( obj )
   {
     short par1 = hb_parni(1);
-    QString par2 = ISNIL(2)? QString() : hb_parc(2);
-    QString str1 = obj->toCurrencyString ( par1, par2 );
+    QString str1 = obj->toCurrencyString ( par1, OPQSTRING(2,QString()) );
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -712,8 +710,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING3 )
   if( obj )
   {
     ushort par1 = hb_parni(1);
-    QString par2 = ISNIL(2)? QString() : hb_parc(2);
-    QString str1 = obj->toCurrencyString ( par1, par2 );
+    QString str1 = obj->toCurrencyString ( par1, OPQSTRING(2,QString()) );
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -727,8 +724,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING4 )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par2 = ISNIL(2)? QString() : hb_parc(2);
-    QString str1 = obj->toCurrencyString ( PINT(1), par2 );
+    QString str1 = obj->toCurrencyString ( PINT(1), OPQSTRING(2,QString()) );
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -742,8 +738,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING5 )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par2 = ISNIL(2)? QString() : hb_parc(2);
-    QString str1 = obj->toCurrencyString ( PUINT(1), par2 );
+    QString str1 = obj->toCurrencyString ( PUINT(1), OPQSTRING(2,QString()) );
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -757,8 +752,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING6 )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par2 = ISNIL(2)? QString() : hb_parc(2);
-    QString str1 = obj->toCurrencyString ( PFLOAT(1), par2 );
+    QString str1 = obj->toCurrencyString ( PFLOAT(1), OPQSTRING(2,QString()) );
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -773,8 +767,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING7 )
   if( obj )
   {
     qulonglong par1 = hb_parnl(1);
-    QString par2 = ISNIL(2)? QString() : hb_parc(2);
-    QString str1 = obj->toCurrencyString ( par1, par2 );
+    QString str1 = obj->toCurrencyString ( par1, OPQSTRING(2,QString()) );
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -788,8 +781,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING8 )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par2 = ISNIL(2)? QString() : hb_parc(2);
-    QString str1 = obj->toCurrencyString ( PDOUBLE(1), par2 );
+    QString str1 = obj->toCurrencyString ( PDOUBLE(1), OPQSTRING(2,QString()) );
     hb_retc( RQSTRING(str1) );
   }
 }

@@ -192,8 +192,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_VALUE )
   QProcessEnvironment * obj = (QProcessEnvironment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par2 = ISNIL(2)? QString() : hb_parc(2);
-    QString str1 = obj->value ( PQSTRING(1), par2 );
+    QString str1 = obj->value ( PQSTRING(1), OPQSTRING(2,QString()) );
     hb_retc( RQSTRING(str1) );
   }
 }

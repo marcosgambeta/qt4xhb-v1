@@ -833,8 +833,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_RAISEERROR )
   QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = ISNIL(1)? QString() : hb_parc(1);
-    obj->raiseError ( par1 );
+    obj->raiseError ( OPQSTRING(1,QString()) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

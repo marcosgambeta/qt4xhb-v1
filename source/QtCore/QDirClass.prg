@@ -128,8 +128,7 @@ QDir(const QString & path = QString())
 HB_FUNC_STATIC( QDIR_NEW2 )
 {
   QDir * o = NULL;
-  QString par1 = ISNIL(1)? QString() : hb_parc(1);
-  o = new QDir ( par1 );
+  o = new QDir ( OPQSTRING(1,QString()) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 

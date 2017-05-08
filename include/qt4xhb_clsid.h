@@ -1353,6 +1353,9 @@
 // macros for optional parameters
 #define OPBOOL(n,v)                                         (bool) ISNIL(n)? v : hb_parl(n)
 #define OPINT(n,v)                                          (int) ISNIL(n)? v : hb_parni(n)
+#define OPQSTRING(n,v)                                      ISNIL(n)? v : QString::fromAscii( hb_parc(n) )
+//#define OPQSTRING(n,v)                                      ISNIL(n)? v : QString::fromLatin1( hb_parc(n) )
+//#define OPQSTRING(n,v)                                      ISNIL(n)? v : QString::fromUtf8( hb_parc(n) )
 
 // macros for return's
 #define RQSTRING(x)                                         (const char *) x.toAscii().data()

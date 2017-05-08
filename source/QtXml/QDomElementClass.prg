@@ -127,8 +127,7 @@ HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTE )
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par2 = ISNIL(2)? QString() : hb_parc(2);
-    QString str1 = obj->attribute ( PQSTRING(1), par2 );
+    QString str1 = obj->attribute ( PQSTRING(1), OPQSTRING(2,QString()) );
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -142,8 +141,7 @@ HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTENS )
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par3 = ISNIL(3)? QString() : hb_parc(3);
-    QString str1 = obj->attributeNS ( PQSTRING(1), PQSTRING(2), par3 );
+    QString str1 = obj->attributeNS ( PQSTRING(1), PQSTRING(2), OPQSTRING(3,QString()) );
     hb_retc( RQSTRING(str1) );
   }
 }

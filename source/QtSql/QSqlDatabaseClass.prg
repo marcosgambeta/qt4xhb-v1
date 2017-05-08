@@ -263,8 +263,7 @@ HB_FUNC_STATIC( QSQLDATABASE_EXEC )
   QSqlDatabase * obj = (QSqlDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = ISNIL(1)? QString() : hb_parc(1);
-    QSqlQuery * ptr = new QSqlQuery( obj->exec ( par1 ) );
+    QSqlQuery * ptr = new QSqlQuery( obj->exec ( OPQSTRING(1,QString()) ) );
     _qt4xhb_createReturnClass ( ptr, "QSQLQUERY", true );
   }
 }
@@ -467,8 +466,7 @@ HB_FUNC_STATIC( QSQLDATABASE_SETCONNECTOPTIONS )
   QSqlDatabase * obj = (QSqlDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = ISNIL(1)? QString() : hb_parc(1);
-    obj->setConnectOptions ( par1 );
+    obj->setConnectOptions ( OPQSTRING(1,QString()) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -619,7 +617,7 @@ QSqlDatabase addDatabase ( const QString & type, const QString & connectionName 
 */
 HB_FUNC_STATIC( QSQLDATABASE_ADDDATABASE1 )
 {
-  QString par2;
+  QString par2; // TODO: revisar
   if( ISNIL(2) )
   {
     par2 = QLatin1String(QSqlDatabase::defaultConnection);
@@ -662,7 +660,7 @@ QSqlDatabase addDatabase ( QSqlDriver * driver, const QString & connectionName =
 HB_FUNC_STATIC( QSQLDATABASE_ADDDATABASE2 )
 {
   QSqlDriver * par1 = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QString par2;
+  QString par2; // TODO: revisar
   if( ISNIL(2) )
   {
     par2 = QLatin1String(QSqlDatabase::defaultConnection);
@@ -749,7 +747,7 @@ bool contains ( const QString & connectionName = QLatin1String( defaultConnectio
 */
 HB_FUNC_STATIC( QSQLDATABASE_CONTAINS )
 {
-  QString par1;
+  QString par1; // TODO: revisar
   if( ISNIL(1) )
   {
     par1 = QLatin1String(QSqlDatabase::defaultConnection);
@@ -767,7 +765,7 @@ QSqlDatabase database ( const QString & connectionName = QLatin1String( defaultC
 */
 HB_FUNC_STATIC( QSQLDATABASE_DATABASE )
 {
-  QString par1;
+  QString par1; // TODO: revisar
   if( ISNIL(1) )
   {
     par1 = QLatin1String(QSqlDatabase::defaultConnection);
@@ -776,7 +774,7 @@ HB_FUNC_STATIC( QSQLDATABASE_DATABASE )
   {
     par1 = hb_parc(1);
   }
-  QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::database ( par1, PBOOL(2) ) );
+  QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::database ( par1, OPBOOL(2,true) ) );
   PHB_DYNS pDynSym;
   #ifdef __XHARBOUR__
   pDynSym = hb_dynsymFind( "QSQLDATABASE" );

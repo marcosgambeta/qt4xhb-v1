@@ -82,11 +82,8 @@ HB_FUNC_STATIC( QNETWORKPROXY_NEW2 )
 {
   QNetworkProxy * o = NULL;
   int par1 = hb_parni(1);
-  QString par2 = ISNIL(2)? QString() : hb_parc(2);
   quint16 par3 = ISNIL(3)? 0 : hb_parni(3);
-  QString par4 = ISNIL(4)? QString() : hb_parc(4);
-  QString par5 = ISNIL(5)? QString() : hb_parc(5);
-  o = new QNetworkProxy (  (QNetworkProxy::ProxyType) par1, par2, par3, par4, par5 );
+  o = new QNetworkProxy (  (QNetworkProxy::ProxyType) par1, OPQSTRING(2,QString()), par3, OPQSTRING(4,QString()), OPQSTRING(5,QString()) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 

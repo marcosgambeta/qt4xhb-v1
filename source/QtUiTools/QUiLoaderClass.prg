@@ -170,8 +170,7 @@ HB_FUNC_STATIC( QUILOADER_CREATEACTION )
   if( obj )
   {
     QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString par2 = ISNIL(2)? QString() : hb_parc(2);
-    QAction * ptr = obj->createAction ( par1, par2 );
+    QAction * ptr = obj->createAction ( par1, OPQSTRING(2,QString()) );
     _qt4xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -186,8 +185,7 @@ HB_FUNC_STATIC( QUILOADER_CREATEACTIONGROUP )
   if( obj )
   {
     QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString par2 = ISNIL(2)? QString() : hb_parc(2);
-    QActionGroup * ptr = obj->createActionGroup ( par1, par2 );
+    QActionGroup * ptr = obj->createActionGroup ( par1, OPQSTRING(2,QString()) );
     _qt4xhb_createReturnClass ( ptr, "QACTIONGROUP" );
   }
 }
@@ -202,8 +200,7 @@ HB_FUNC_STATIC( QUILOADER_CREATELAYOUT )
   if( obj )
   {
     QObject * par2 = ISNIL(2)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString par3 = ISNIL(3)? QString() : hb_parc(3);
-    QLayout * ptr = obj->createLayout ( PQSTRING(1), par2, par3 );
+    QLayout * ptr = obj->createLayout ( PQSTRING(1), par2, OPQSTRING(3,QString()) );
     _qt4xhb_createReturnClass ( ptr, "QLAYOUT" );
   }
 }
@@ -218,8 +215,7 @@ HB_FUNC_STATIC( QUILOADER_CREATEWIDGET )
   if( obj )
   {
     QWidget * par2 = ISNIL(2)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString par3 = ISNIL(3)? QString() : hb_parc(3);
-    QWidget * ptr = obj->createWidget ( PQSTRING(1), par2, par3 );
+    QWidget * ptr = obj->createWidget ( PQSTRING(1), par2, OPQSTRING(3,QString()) );
     _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }

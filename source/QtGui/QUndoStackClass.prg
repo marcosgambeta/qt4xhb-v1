@@ -201,8 +201,7 @@ HB_FUNC_STATIC( QUNDOSTACK_CREATEREDOACTION )
   if( obj )
   {
     QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString par2 = ISNIL(2)? QString() : hb_parc(2);
-    QAction * ptr = obj->createRedoAction ( par1, par2 );
+    QAction * ptr = obj->createRedoAction ( par1, OPQSTRING(2,QString()) );
     _qt4xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -217,8 +216,7 @@ HB_FUNC_STATIC( QUNDOSTACK_CREATEUNDOACTION )
   if( obj )
   {
     QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString par2 = ISNIL(2)? QString() : hb_parc(2);
-    QAction * ptr = obj->createUndoAction ( par1, par2 );
+    QAction * ptr = obj->createUndoAction ( par1, OPQSTRING(2,QString()) );
     _qt4xhb_createReturnClass ( ptr, "QACTION" );
   }
 }

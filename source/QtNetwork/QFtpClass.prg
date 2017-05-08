@@ -274,8 +274,7 @@ HB_FUNC_STATIC( QFTP_LIST )
   QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = ISNIL(1)? QString() : hb_parc(1);
-    hb_retni( obj->list ( par1 ) );
+    hb_retni( obj->list ( OPQSTRING(1,QString()) ) );
   }
 }
 
@@ -288,9 +287,7 @@ HB_FUNC_STATIC( QFTP_LOGIN )
   QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = ISNIL(1)? QString() : hb_parc(1);
-    QString par2 = ISNIL(2)? QString() : hb_parc(2);
-    hb_retni( obj->login ( par1, par2 ) );
+    hb_retni( obj->login ( OPQSTRING(1,QString()), OPQSTRING(2,QString()) ) );
   }
 }
 

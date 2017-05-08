@@ -93,8 +93,7 @@ HB_FUNC_STATIC( QEXTENSIONMANAGER_REGISTEREXTENSIONS )
   if( obj )
   {
     QAbstractExtensionFactory * par1 = (QAbstractExtensionFactory *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString par2 = ISNIL(2)? QString() : hb_parc(2);
-    obj->registerExtensions ( par1, par2 );
+    obj->registerExtensions ( par1, OPQSTRING(2,QString()) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -109,8 +108,7 @@ HB_FUNC_STATIC( QEXTENSIONMANAGER_UNREGISTEREXTENSIONS )
   if( obj )
   {
     QAbstractExtensionFactory * par1 = (QAbstractExtensionFactory *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString par2 = ISNIL(2)? QString() : hb_parc(2);
-    obj->unregisterExtensions ( par1, par2 );
+    obj->unregisterExtensions ( par1, OPQSTRING(2,QString()) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

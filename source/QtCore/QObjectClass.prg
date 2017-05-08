@@ -1662,8 +1662,7 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILD )
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = ISNIL(1)? QString() : hb_parc(1);
-    QObject * ptr = obj->findChild<QObject *> ( par1 );
+    QObject * ptr = obj->findChild<QObject *> ( OPQSTRING(1,QString()) );
     _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }
@@ -1678,8 +1677,7 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILDREN1 )
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = ISNIL(1)? QString() : hb_parc(1);
-    QList<QObject *> list = obj->findChildren<QObject *> ( par1 );
+    QList<QObject *> list = obj->findChildren<QObject *> ( OPQSTRING(1,QString()) );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QOBJECT" );

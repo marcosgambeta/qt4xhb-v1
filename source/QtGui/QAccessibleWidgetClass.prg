@@ -56,8 +56,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_NEW )
   QAccessibleWidget * o = NULL;
   QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = ISNIL(2)? (int) QAccessible::Client : hb_parni(2);
-  QString par3 = ISNIL(3)? QString() : hb_parc(3);
-  o = new QAccessibleWidget ( par1,  (QAccessible::Role) par2, par3 );
+  o = new QAccessibleWidget ( par1,  (QAccessible::Role) par2, OPQSTRING(3,QString()) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

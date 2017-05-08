@@ -65,8 +65,7 @@ QScriptProgram ( const QString & sourceCode, const QString fileName = QString(),
 HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW2 )
 {
   QScriptProgram * o = NULL;
-  QString par2 = ISNIL(2)? QString() : hb_parc(2);
-  o = new QScriptProgram ( PQSTRING(1), par2, OPINT(3,1) );
+  o = new QScriptProgram ( PQSTRING(1), OPQSTRING(2,QString()), OPINT(3,1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

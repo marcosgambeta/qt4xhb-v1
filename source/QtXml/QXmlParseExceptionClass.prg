@@ -55,10 +55,7 @@ QXmlParseException ( const QString & name = QString(), int c = -1, int l = -1, c
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEW1 )
 {
   QXmlParseException * o = NULL;
-  QString par1 = ISNIL(1)? QString() : hb_parc(1);
-  QString par4 = ISNIL(4)? QString() : hb_parc(4);
-  QString par5 = ISNIL(5)? QString() : hb_parc(5);
-  o = new QXmlParseException ( par1, OPINT(2,-1), OPINT(3,-1), par4, par5 );
+  o = new QXmlParseException ( OPQSTRING(1,QString()), OPINT(2,-1), OPINT(3,-1), OPQSTRING(4,QString()), OPQSTRING(5,QString()) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 

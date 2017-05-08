@@ -53,9 +53,7 @@ QSqlIndex ( const QString & cursorname = QString(), const QString & name = QStri
 HB_FUNC_STATIC( QSQLINDEX_NEW1 )
 {
   QSqlIndex * o = NULL;
-  QString par1 = ISNIL(1)? QString() : hb_parc(1);
-  QString par2 = ISNIL(2)? QString() : hb_parc(2);
-  o = new QSqlIndex ( par1, par2 );
+  o = new QSqlIndex ( OPQSTRING(1,QString()), OPQSTRING(2,QString()) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 

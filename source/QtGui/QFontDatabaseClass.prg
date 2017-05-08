@@ -145,8 +145,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ISBITMAPSCALABLE )
   QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par2 = ISNIL(2)? QString() : hb_parc(2);
-    hb_retl( obj->isBitmapScalable ( PQSTRING(1), par2 ) );
+    hb_retl( obj->isBitmapScalable ( PQSTRING(1), OPQSTRING(2,QString()) ) );
   }
 }
 
@@ -159,8 +158,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ISFIXEDPITCH )
   QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par2 = ISNIL(2)? QString() : hb_parc(2);
-    hb_retl( obj->isFixedPitch ( PQSTRING(1), par2 ) );
+    hb_retl( obj->isFixedPitch ( PQSTRING(1), OPQSTRING(2,QString()) ) );
   }
 }
 
@@ -173,8 +171,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ISSCALABLE )
   QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par2 = ISNIL(2)? QString() : hb_parc(2);
-    hb_retl( obj->isScalable ( PQSTRING(1), par2 ) );
+    hb_retl( obj->isScalable ( PQSTRING(1), OPQSTRING(2,QString()) ) );
   }
 }
 
@@ -187,8 +184,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ISSMOOTHLYSCALABLE )
   QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par2 = ISNIL(2)? QString() : hb_parc(2);
-    hb_retl( obj->isSmoothlyScalable ( PQSTRING(1), par2 ) );
+    hb_retl( obj->isSmoothlyScalable ( PQSTRING(1), OPQSTRING(2,QString()) ) );
   }
 }
 
@@ -214,8 +210,7 @@ HB_FUNC_STATIC( QFONTDATABASE_POINTSIZES )
   QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par2 = ISNIL(2)? QString() : hb_parc(2);
-    QList<int> list = obj->pointSizes ( PQSTRING(1), par2 );
+    QList<int> list = obj->pointSizes ( PQSTRING(1), OPQSTRING(2,QString()) );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

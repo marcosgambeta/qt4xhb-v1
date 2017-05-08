@@ -63,9 +63,8 @@ QResource ( const QString & file = QString(), const QLocale & locale = QLocale()
 HB_FUNC_STATIC( QRESOURCE_NEW )
 {
   QResource * o = NULL;
-  QString par1 = ISNIL(1)? QString() : hb_parc(1);
   QLocale par2 = ISNIL(2)? QLocale() : *(QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QResource ( par1, par2 );
+  o = new QResource ( OPQSTRING(1,QString()), par2 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -217,8 +216,7 @@ bool registerResource ( const QString & rccFileName, const QString & mapRoot = Q
 */
 HB_FUNC_STATIC( QRESOURCE_REGISTERRESOURCE )
 {
-  QString par2 = ISNIL(2)? QString() : hb_parc(2);
-  hb_retl( QResource::registerResource ( PQSTRING(1), par2 ) );
+  hb_retl( QResource::registerResource ( PQSTRING(1), OPQSTRING(2,QString()) ) );
 }
 
 
@@ -228,8 +226,7 @@ bool unregisterResource ( const QString & rccFileName, const QString & mapRoot =
 */
 HB_FUNC_STATIC( QRESOURCE_UNREGISTERRESOURCE )
 {
-  QString par2 = ISNIL(2)? QString() : hb_parc(2);
-  hb_retl( QResource::unregisterResource ( PQSTRING(1), par2 ) );
+  hb_retl( QResource::unregisterResource ( PQSTRING(1), OPQSTRING(2,QString()) ) );
 }
 
 

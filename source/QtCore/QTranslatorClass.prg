@@ -91,10 +91,7 @@ HB_FUNC_STATIC( QTRANSLATOR_LOAD1 )
   QTranslator * obj = (QTranslator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par2 = ISNIL(2)? QString() : hb_parc(2);
-    QString par3 = ISNIL(3)? QString() : hb_parc(3);
-    QString par4 = ISNIL(4)? QString() : hb_parc(4);
-    hb_retl( obj->load ( PQSTRING(1), par2, par3, par4 ) );
+    hb_retl( obj->load ( PQSTRING(1), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()) ) );
   }
 }
 
@@ -108,10 +105,7 @@ HB_FUNC_STATIC( QTRANSLATOR_LOAD2 )
   if( obj )
   {
     QLocale * par1 = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString par3 = ISNIL(3)? QString() : hb_parc(3);
-    QString par4 = ISNIL(4)? QString() : hb_parc(4);
-    QString par5 = ISNIL(5)? QString() : hb_parc(5);
-    hb_retl( obj->load ( *par1, PQSTRING(2), par3, par4, par5 ) );
+    hb_retl( obj->load ( *par1, PQSTRING(2), OPQSTRING(3,QString()), OPQSTRING(4,QString()), OPQSTRING(5,QString()) ) );
   }
 }
 

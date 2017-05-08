@@ -748,8 +748,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTIMAGE4 )
   if( obj )
   {
     QImage * par1 = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString par2 = ISNIL(2)? QString() : hb_parc(2);
-    obj->insertImage ( *par1, par2 );
+    obj->insertImage ( *par1, OPQSTRING(2,QString()) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

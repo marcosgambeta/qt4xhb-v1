@@ -788,10 +788,9 @@ HB_FUNC_STATIC( QINPUTDIALOG_GETTEXT )
 {
   QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par4 = ISNIL(4)? (int) QLineEdit::Normal : hb_parni(4);
-  QString par5 = ISNIL(5)? QString() : hb_parc(5);
   bool par6;
   int par7 = ISNIL(7)? (int) 0 : hb_parni(7);
-  QString str1 = QInputDialog::getText ( par1, PQSTRING(2), PQSTRING(3),  (QLineEdit::EchoMode) par4, par5, &par6,  (Qt::WindowFlags) par7 );
+  QString str1 = QInputDialog::getText ( par1, PQSTRING(2), PQSTRING(3),  (QLineEdit::EchoMode) par4, OPQSTRING(5,QString()), &par6,  (Qt::WindowFlags) par7 );
   hb_retc( RQSTRING(str1) );
   hb_storl( par6, 6 );
 }

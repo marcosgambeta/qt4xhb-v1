@@ -1281,8 +1281,7 @@ HB_FUNC_STATIC( QIMAGE_TEXT )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = ISNIL(1)? QString() : hb_parc(1);
-    QString str1 = obj->text ( par1 );
+    QString str1 = obj->text ( OPQSTRING(1,QString()) );
     hb_retc( RQSTRING(str1) );
   }
 }

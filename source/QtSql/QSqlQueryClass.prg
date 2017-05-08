@@ -114,9 +114,8 @@ QSqlQuery ( const QString & query = QString(), QSqlDatabase db = QSqlDatabase() 
 HB_FUNC_STATIC( QSQLQUERY_NEW2 )
 {
   QSqlQuery * o = NULL;
-  QString par1 = ISNIL(1)? QString() : hb_parc(1);
   QSqlDatabase par2 = ISNIL(2)? QSqlDatabase() : *(QSqlDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSqlQuery ( par1, par2 );
+  o = new QSqlQuery ( OPQSTRING(1,QString()), par2 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 

@@ -330,8 +330,7 @@ void enablePersistentStorage ( const QString & path = QString() )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_ENABLEPERSISTENTSTORAGE )
 {
-  QString par1 = ISNIL(1)? QString() : hb_parc(1);
-  QWebSettings::enablePersistentStorage ( par1 );
+  QWebSettings::enablePersistentStorage ( OPQSTRING(1,QString()) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

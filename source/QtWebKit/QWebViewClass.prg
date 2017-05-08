@@ -281,9 +281,8 @@ HB_FUNC_STATIC( QWEBVIEW_SETCONTENT )
   if( obj )
   {
     QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString par2 = ISNIL(2)? QString() : hb_parc(2);
     QUrl par3 = ISNIL(3)? QUrl() : *(QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setContent ( *par1, par2, par3 );
+    obj->setContent ( *par1, OPQSTRING(2,QString()), par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -288,8 +288,7 @@ HB_FUNC_STATIC( QWEBELEMENT_ATTRIBUTE )
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par2 = ISNIL(2)? QString() : hb_parc(2);
-    QString str1 = obj->attribute ( PQSTRING(1), par2 );
+    QString str1 = obj->attribute ( PQSTRING(1), OPQSTRING(2,QString()) );
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -303,8 +302,7 @@ HB_FUNC_STATIC( QWEBELEMENT_ATTRIBUTENS )
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par3 = ISNIL(3)? QString() : hb_parc(3);
-    QString str1 = obj->attributeNS ( PQSTRING(1), PQSTRING(2), par3 );
+    QString str1 = obj->attributeNS ( PQSTRING(1), PQSTRING(2), OPQSTRING(3,QString()) );
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -318,8 +316,7 @@ HB_FUNC_STATIC( QWEBELEMENT_ATTRIBUTENAMES )
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par1 = ISNIL(1)? QString() : hb_parc(1);
-    QStringList strl = obj->attributeNames ( par1 );
+    QStringList strl = obj->attributeNames ( OPQSTRING(1,QString()) );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

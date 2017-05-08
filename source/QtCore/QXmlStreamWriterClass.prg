@@ -594,8 +594,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITENAMESPACE )
   QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par2 = ISNIL(2)? QString() : hb_parc(2);
-    obj->writeNamespace ( PQSTRING(1), par2 );
+    obj->writeNamespace ( PQSTRING(1), OPQSTRING(2,QString()) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -609,8 +608,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEPROCESSINGINSTRUCTION )
   QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par2 = ISNIL(2)? QString() : hb_parc(2);
-    obj->writeProcessingInstruction ( PQSTRING(1), par2 );
+    obj->writeProcessingInstruction ( PQSTRING(1), OPQSTRING(2,QString()) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

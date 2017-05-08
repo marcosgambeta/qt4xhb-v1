@@ -77,8 +77,7 @@ QSqlField ( const QString & fieldName = QString(), QVariant::Type type = QVarian
 HB_FUNC_STATIC( QSQLFIELD_NEW1 )
 {
   QSqlField * o = NULL;
-  QString par1 = ISNIL(1)? QString() : hb_parc(1);
-  o = new QSqlField ( par1, ISNIL(2)? QVariant::Invalid : (QVariant::Type) hb_parni(2) );
+  o = new QSqlField ( OPQSTRING(1,QString()), ISNIL(2)? QVariant::Invalid : (QVariant::Type) hb_parni(2) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 

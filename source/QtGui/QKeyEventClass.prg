@@ -57,9 +57,8 @@ HB_FUNC_STATIC( QKEYEVENT_NEW )
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
   int par3 = hb_parni(3);
-  QString par4 = ISNIL(4)? QString() : hb_parc(4);
   ushort par6 = ISNIL(6)? 1 : hb_parni(6);
-  o = new QKeyEvent (  (QEvent::Type) par1, par2,  (Qt::KeyboardModifiers) par3, par4, OPBOOL(5,false), par6 );
+  o = new QKeyEvent (  (QEvent::Type) par1, par2,  (Qt::KeyboardModifiers) par3, OPQSTRING(4,QString()), OPBOOL(5,false), par6 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -211,9 +210,8 @@ HB_FUNC_STATIC( QKEYEVENT_CREATEEXTENDEDKEYEVENT )
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
   int par3 = hb_parni(3);
-  QString par7 = ISNIL(7)? QString() : hb_parc(7);
   ushort par9 = ISNIL(9)? 1 : hb_parni(9);
-  QKeyEvent * ptr = QKeyEvent::createExtendedKeyEvent (  (QEvent::Type) par1, par2,  (Qt::KeyboardModifiers) par3, PQUINT32(4), PQUINT32(5), PQUINT32(6), par7, OPBOOL(8,false), par9 );
+  QKeyEvent * ptr = QKeyEvent::createExtendedKeyEvent (  (QEvent::Type) par1, par2,  (Qt::KeyboardModifiers) par3, PQUINT32(4), PQUINT32(5), PQUINT32(6), OPQSTRING(7,QString()), OPBOOL(8,false), par9 );
   _qt4xhb_createReturnClass ( ptr, "QKEYEVENT" );
 }
 

@@ -84,9 +84,8 @@ QSettings ( const QString & organization, const QString & application = QString(
 HB_FUNC_STATIC( QSETTINGS_NEW1 )
 {
   QSettings * o = NULL;
-  QString par2 = ISNIL(2)? QString() : hb_parc(2);
   QObject * par3 = ISNIL(3)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSettings ( PQSTRING(1), par2, par3 );
+  o = new QSettings ( PQSTRING(1), OPQSTRING(2,QString()), par3 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -97,9 +96,8 @@ QSettings ( Scope scope, const QString & organization, const QString & applicati
 HB_FUNC_STATIC( QSETTINGS_NEW2 )
 {
   QSettings * o = NULL;
-  QString par3 = ISNIL(3)? QString() : hb_parc(3);
   QObject * par4 = ISNIL(4)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSettings (  (QSettings::Scope) hb_parni(1), PQSTRING(2), par3, par4 );
+  o = new QSettings (  (QSettings::Scope) hb_parni(1), PQSTRING(2), OPQSTRING(3,QString()), par4 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -110,9 +108,8 @@ QSettings ( Format format, Scope scope, const QString & organization, const QStr
 HB_FUNC_STATIC( QSETTINGS_NEW3 )
 {
   QSettings * o = NULL;
-  QString par4 = ISNIL(4)? QString() : hb_parc(4);
   QObject * par5 = ISNIL(5)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(5, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSettings (  (QSettings::Format) hb_parni(1),  (QSettings::Scope) hb_parni(2), PQSTRING(3), par4, par5 );
+  o = new QSettings (  (QSettings::Format) hb_parni(1),  (QSettings::Scope) hb_parni(2), PQSTRING(3), OPQSTRING(4,QString()), par5 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

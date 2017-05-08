@@ -73,9 +73,7 @@ HB_FUNC_STATIC( QXMLNAME_NEW2 )
 {
   QXmlName * o = NULL;
   QXmlNamePool * par1 = (QXmlNamePool *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QString par3 = ISNIL(3)? QString() : hb_parc(3);
-  QString par4 = ISNIL(4)? QString() : hb_parc(4);
-  o = new QXmlName ( *par1, PQSTRING(2), par3, par4 );
+  o = new QXmlName ( *par1, PQSTRING(2), OPQSTRING(3,QString()), OPQSTRING(4,QString()) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 

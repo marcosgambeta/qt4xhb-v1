@@ -272,11 +272,7 @@ HB_FUNC_STATIC( QSQLDRIVER_OPEN )
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString par2 = ISNIL(2)? QString() : hb_parc(2);
-    QString par3 = ISNIL(3)? QString() : hb_parc(3);
-    QString par4 = ISNIL(4)? QString() : hb_parc(4);
-    QString par6 = ISNIL(6)? QString() : hb_parc(6);
-    hb_retl( obj->open ( PQSTRING(1), par2, par3, par4, OPINT(5,-1), par6 ) );
+    hb_retl( obj->open ( PQSTRING(1), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()), OPINT(5,-1), OPQSTRING(6,QString()) ) );
   }
 }
 
