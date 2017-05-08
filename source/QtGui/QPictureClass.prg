@@ -61,8 +61,7 @@ QPicture ( int formatVersion = -1 )
 HB_FUNC_STATIC( QPICTURE_NEW1 )
 {
   QPicture * o = NULL;
-  int par1 = ISNIL(1)? -1 : hb_parni(1);
-  o = new QPicture ( par1 );
+  o = new QPicture ( OPINT(1,-1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 

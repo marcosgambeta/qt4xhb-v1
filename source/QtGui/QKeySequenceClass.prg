@@ -101,10 +101,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_NEW4 )
 {
   QKeySequence * o = NULL;
   int par1 = hb_parni(1);
-  int par2 = ISNIL(2)? 0 : hb_parni(2);
-  int par3 = ISNIL(3)? 0 : hb_parni(3);
-  int par4 = ISNIL(4)? 0 : hb_parni(4);
-  o = new QKeySequence ( par1, par2, par3, par4 );
+  o = new QKeySequence ( par1, OPINT(2,0), OPINT(3,0), OPINT(4,0) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 

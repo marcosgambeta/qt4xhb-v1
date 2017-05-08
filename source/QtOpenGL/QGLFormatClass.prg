@@ -119,8 +119,7 @@ HB_FUNC_STATIC( QGLFORMAT_NEW2 )
 {
   QGLFormat * o = NULL;
   int par1 = hb_parni(1);
-  int par2 = ISNIL(2)? 0 : hb_parni(2);
-  o = new QGLFormat (  (QGL::FormatOptions) par1, par2 );
+  o = new QGLFormat (  (QGL::FormatOptions) par1, OPINT(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

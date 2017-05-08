@@ -181,8 +181,7 @@ HB_FUNC_STATIC( QSTRINGMATCHER_INDEXIN1 )
   QStringMatcher * obj = (QStringMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par2 = ISNIL(2)? 0 : hb_parni(2);
-    hb_retni( obj->indexIn ( PQSTRING(1), par2 ) );
+    hb_retni( obj->indexIn ( PQSTRING(1), OPINT(2,0) ) );
   }
 }
 
@@ -196,8 +195,7 @@ HB_FUNC_STATIC( QSTRINGMATCHER_INDEXIN2 )
   if( obj )
   {
     const QChar * par1 = (const QChar *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par3 = ISNIL(3)? 0 : hb_parni(3);
-    hb_retni( obj->indexIn ( par1, PINT(2), par3 ) );
+    hb_retni( obj->indexIn ( par1, PINT(2), OPINT(3,0) ) );
   }
 }
 

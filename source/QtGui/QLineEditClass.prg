@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QLINEEDIT_CURSORBACKWARD )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->cursorBackward ( PBOOL(1), ISNIL(2)? 1 : hb_parni(2) );
+    obj->cursorBackward ( PBOOL(1), OPINT(2,1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QLINEEDIT_CURSORFORWARD )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->cursorForward ( PBOOL(1), ISNIL(2)? 1 : hb_parni(2) );
+    obj->cursorForward ( PBOOL(1), OPINT(2,1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

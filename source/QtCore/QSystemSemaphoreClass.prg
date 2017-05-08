@@ -53,9 +53,8 @@ QSystemSemaphore ( const QString & key, int initialValue = 0, AccessMode mode = 
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_NEW )
 {
   QSystemSemaphore * o = NULL;
-  int par2 = ISNIL(2)? 0 : hb_parni(2);
   int par3 = ISNIL(3)? (int) QSystemSemaphore::Open : hb_parni(3);
-  o = new QSystemSemaphore ( PQSTRING(1), par2,  (QSystemSemaphore::AccessMode) par3 );
+  o = new QSystemSemaphore ( PQSTRING(1), OPINT(2,0),  (QSystemSemaphore::AccessMode) par3 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -138,8 +137,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_RELEASE )
   QSystemSemaphore * obj = (QSystemSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = ISNIL(1)? 1 : hb_parni(1);
-    hb_retl( obj->release ( par1 ) );
+    hb_retl( obj->release ( OPINT(1,1) ) );
   }
 }
 
@@ -152,9 +150,8 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_SETKEY )
   QSystemSemaphore * obj = (QSystemSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par2 = ISNIL(2)? 0 : hb_parni(2);
     int par3 = ISNIL(3)? (int) QSystemSemaphore::Open : hb_parni(3);
-    obj->setKey ( PQSTRING(1), par2,  (QSystemSemaphore::AccessMode) par3 );
+    obj->setKey ( PQSTRING(1), OPINT(2,0),  (QSystemSemaphore::AccessMode) par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

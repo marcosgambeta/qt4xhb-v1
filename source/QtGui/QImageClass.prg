@@ -962,8 +962,7 @@ HB_FUNC_STATIC( QIMAGE_SAVE1 )
   if( obj )
   {
     const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    int par3 = ISNIL(3)? -1 : hb_parni(3);
-    hb_retl( obj->save ( PQSTRING(1),  (const char *) par2, par3 ) );
+    hb_retl( obj->save ( PQSTRING(1),  (const char *) par2, OPINT(3,-1) ) );
   }
 }
 
@@ -978,8 +977,7 @@ HB_FUNC_STATIC( QIMAGE_SAVE2 )
   {
     QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    int par3 = ISNIL(3)? -1 : hb_parni(3);
-    hb_retl( obj->save ( par1,  (const char *) par2, par3 ) );
+    hb_retl( obj->save ( par1,  (const char *) par2, OPINT(3,-1) ) );
   }
 }
 

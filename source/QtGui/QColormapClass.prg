@@ -200,8 +200,7 @@ QColormap instance ( int screen = -1 )
 */
 HB_FUNC_STATIC( QCOLORMAP_INSTANCE )
 {
-  int par1 = ISNIL(1)? -1 : hb_parni(1);
-  QColormap * ptr = new QColormap( QColormap::instance ( par1 ) );
+  QColormap * ptr = new QColormap( QColormap::instance ( OPINT(1,-1) ) );
   _qt4xhb_createReturnClass ( ptr, "QCOLORMAP" );
 }
 

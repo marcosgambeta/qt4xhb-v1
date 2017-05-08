@@ -101,8 +101,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW4 )
   const QChar * par2 = (const QChar *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par3 = hb_parni(3);
   unsigned char * par4 = ISNIL(4)? 0 : (unsigned char *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-  int par5 = ISNIL(5)? 0 : hb_parni(5);
-  o = new QTextBoundaryFinder (  (QTextBoundaryFinder::BoundaryType) par1, par2, par3, par4, par5 );
+  o = new QTextBoundaryFinder (  (QTextBoundaryFinder::BoundaryType) par1, par2, par3, par4, OPINT(5,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

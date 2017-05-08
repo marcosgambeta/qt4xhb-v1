@@ -941,7 +941,7 @@ HB_FUNC_STATIC( QLOCALE_TOINT )
   if( obj )
   {
     bool par2;
-    hb_retni( obj->toInt ( PQSTRING(1), &par2, ISNIL(3)? 0 : hb_parni(3) ) );
+    hb_retni( obj->toInt ( PQSTRING(1), &par2, OPINT(3,0) ) );
     hb_storl( par2, 2 );
   }
 }
@@ -956,7 +956,7 @@ HB_FUNC_STATIC( QLOCALE_TOLONGLONG )
   if( obj )
   {
     bool par2;
-    qlonglong l = obj->toLongLong ( PQSTRING(1), &par2, ISNIL(3)? 0 : hb_parni(3) );
+    qlonglong l = obj->toLongLong ( PQSTRING(1), &par2, OPINT(3,0) );
     hb_retnl( l );
     hb_storl( par2, 2 );
   }
@@ -986,7 +986,7 @@ HB_FUNC_STATIC( QLOCALE_TOSHORT )
   if( obj )
   {
     bool par2;
-    short i = obj->toShort ( PQSTRING(1), &par2, ISNIL(3)? 0 : hb_parni(3) );
+    short i = obj->toShort ( PQSTRING(1), &par2, OPINT(3,0) );
     hb_retni( i );
     hb_storl( par2, 2 );
   }
@@ -1165,7 +1165,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING12 )
   if( obj )
   {
     char par2 = ISNIL(2)? 103 : (ISCHAR(2)? (char) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0));
-    QString str1 = obj->toString ( PFLOAT(1), par2, ISNIL(3)? 6 : hb_parni(3) );
+    QString str1 = obj->toString ( PFLOAT(1), par2, OPINT(3,6) );
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -1195,7 +1195,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING14 )
   if( obj )
   {
     char par2 = ISNIL(2)? 103 : (ISCHAR(2)? (char) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0));
-    QString str1 = obj->toString ( PDOUBLE(1), par2, ISNIL(3)? 6 : hb_parni(3) );
+    QString str1 = obj->toString ( PDOUBLE(1), par2, OPINT(3,6) );
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -1278,7 +1278,7 @@ HB_FUNC_STATIC( QLOCALE_TOUINT )
   if( obj )
   {
     bool par2;
-    hb_retni( (uint) obj->toUInt ( PQSTRING(1), &par2, ISNIL(3)? 0 : hb_parni(3) ) );
+    hb_retni( (uint) obj->toUInt ( PQSTRING(1), &par2, OPINT(3,0) ) );
     hb_storl( par2, 2 );
   }
 }
@@ -1293,7 +1293,7 @@ HB_FUNC_STATIC( QLOCALE_TOULONGLONG )
   if( obj )
   {
     bool par2;
-    qlonglong l = obj->toULongLong ( PQSTRING(1), &par2, ISNIL(3)? 0 : hb_parni(3) );
+    qlonglong l = obj->toULongLong ( PQSTRING(1), &par2, OPINT(3,0) );
     hb_retnl( l );
     hb_storl( par2, 2 );
   }
@@ -1309,7 +1309,7 @@ HB_FUNC_STATIC( QLOCALE_TOUSHORT )
   if( obj )
   {
     bool par2;
-    ushort i = obj->toUShort ( PQSTRING(1), &par2, ISNIL(3)? 0 : hb_parni(3) );
+    ushort i = obj->toUShort ( PQSTRING(1), &par2, OPINT(3,0) );
     hb_retni( i );
     hb_storl( par2, 2 );
   }

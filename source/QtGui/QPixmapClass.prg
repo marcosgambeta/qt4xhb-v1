@@ -614,8 +614,7 @@ HB_FUNC_STATIC( QPIXMAP_SAVE1 )
   if( obj )
   {
     const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    int par3 = ISNIL(3)? -1 : hb_parni(3);
-    hb_retl( obj->save ( PQSTRING(1),  (const char *) par2, par3 ) );
+    hb_retl( obj->save ( PQSTRING(1),  (const char *) par2, OPINT(3,-1) ) );
   }
 }
 
@@ -630,8 +629,7 @@ HB_FUNC_STATIC( QPIXMAP_SAVE2 )
   {
     QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    int par3 = ISNIL(3)? -1 : hb_parni(3);
-    hb_retl( obj->save ( par1,  (const char *) par2, par3 ) );
+    hb_retl( obj->save ( par1,  (const char *) par2, OPINT(3,-1) ) );
   }
 }
 
@@ -961,11 +959,7 @@ QPixmap grabWidget ( QWidget * widget, int x = 0, int y = 0, int width = -1, int
 HB_FUNC_STATIC( QPIXMAP_GRABWIDGET2 )
 {
   QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  int par2 = ISNIL(2)? 0 : hb_parni(2);
-  int par3 = ISNIL(3)? 0 : hb_parni(3);
-  int par4 = ISNIL(4)? -1 : hb_parni(4);
-  int par5 = ISNIL(5)? -1 : hb_parni(5);
-  QPixmap * ptr = new QPixmap( QPixmap::grabWidget ( par1, par2, par3, par4, par5 ) );
+  QPixmap * ptr = new QPixmap( QPixmap::grabWidget ( par1, OPINT(2,0), OPINT(3,0), OPINT(4,-1), OPINT(5,-1) ) );
   _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
 }
 
@@ -991,11 +985,7 @@ QPixmap grabWindow ( WId window, int x = 0, int y = 0, int width = -1, int heigh
 HB_FUNC_STATIC( QPIXMAP_GRABWINDOW )
 {
   WId par1 = (WId) hb_parptr(1);
-  int par2 = ISNIL(2)? 0 : hb_parni(2);
-  int par3 = ISNIL(3)? 0 : hb_parni(3);
-  int par4 = ISNIL(4)? -1 : hb_parni(4);
-  int par5 = ISNIL(5)? -1 : hb_parni(5);
-  QPixmap * ptr = new QPixmap( QPixmap::grabWindow ( par1, par2, par3, par4, par5 ) );
+  QPixmap * ptr = new QPixmap( QPixmap::grabWindow ( par1, OPINT(2,0), OPINT(3,0), OPINT(4,-1), OPINT(5,-1) ) );
   _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
 }
 

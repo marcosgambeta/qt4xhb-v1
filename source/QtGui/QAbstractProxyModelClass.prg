@@ -212,8 +212,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_DATA )
   if( obj )
   {
     QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par2 = ISNIL(2)? Qt::DisplayRole : hb_parni(2);
-    QVariant * ptr = new QVariant( obj->data ( *par1, par2 ) );
+    QVariant * ptr = new QVariant( obj->data ( *par1, OPINT(2,Qt::DisplayRole) ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -342,8 +341,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SETDATA )
   {
     QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QVariant * par2 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par3 = ISNIL(3)? Qt::EditRole : hb_parni(3);
-    hb_retl( obj->setData ( *par1, *par2, par3 ) );
+    hb_retl( obj->setData ( *par1, *par2, OPINT(3,Qt::EditRole) ) );
   }
 }
 
@@ -359,8 +357,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SETHEADERDATA )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     QVariant * par3 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par4 = ISNIL(4)? Qt::EditRole : hb_parni(4);
-    hb_retl( obj->setHeaderData ( par1,  (Qt::Orientation) par2, *par3, par4 ) );
+    hb_retl( obj->setHeaderData ( par1,  (Qt::Orientation) par2, *par3, OPINT(4,Qt::EditRole) ) );
   }
 }
 

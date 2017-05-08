@@ -693,8 +693,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEBUFFER1 )
     GLenum par2 = hb_parni(2);
     int par3 = hb_parni(3);
     int par4 = hb_parni(4);
-    int par5 = ISNIL(5)? 0 : hb_parni(5);
-    obj->setAttributeBuffer ( par1, par2, par3, par4, par5 );
+    obj->setAttributeBuffer ( par1, par2, par3, par4, OPINT(5,0) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -712,8 +711,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEBUFFER2 )
     GLenum par2 = hb_parni(2);
     int par3 = hb_parni(3);
     int par4 = hb_parni(4);
-    int par5 = ISNIL(5)? 0 : hb_parni(5);
-    obj->setAttributeBuffer (  (const char *) par1, par2, par3, par4, par5 );
+    obj->setAttributeBuffer (  (const char *) par1, par2, par3, par4, OPINT(5,0) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -199,8 +199,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETRANGE )
   QDoubleValidator * obj = (QDoubleValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par3 = ISNIL(3)? 0 : hb_parni(3);
-    obj->setRange ( PDOUBLE(1), PDOUBLE(2), par3 );
+    obj->setRange ( PDOUBLE(1), PDOUBLE(2), OPINT(3,0) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

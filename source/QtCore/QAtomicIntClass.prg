@@ -71,7 +71,7 @@ QAtomicInt ( int value = 0 )
 HB_FUNC_STATIC( QATOMICINT_NEW1 )
 {
   QAtomicInt * o = NULL;
-  o = new QAtomicInt ( ISNIL(1)? 0 : hb_parni(1) );
+  o = new QAtomicInt ( OPINT(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

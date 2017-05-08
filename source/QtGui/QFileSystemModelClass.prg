@@ -219,8 +219,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_INDEX1 )
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par2 = ISNIL(2)? 0 : hb_parni(2);
-    QModelIndex * ptr = new QModelIndex( obj->index ( PQSTRING(1), par2 ) );
+    QModelIndex * ptr = new QModelIndex( obj->index ( PQSTRING(1), OPINT(2,0) ) );
     _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
@@ -291,8 +290,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_MYCOMPUTER )
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = ISNIL(1)? Qt::DisplayRole : hb_parni(1);
-    QVariant * ptr = new QVariant( obj->myComputer ( par1 ) );
+    QVariant * ptr = new QVariant( obj->myComputer ( OPINT(1,Qt::DisplayRole) ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -584,8 +582,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_DATA )
   if( obj )
   {
     QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par2 = ISNIL(2)? Qt::DisplayRole : hb_parni(2);
-    QVariant * ptr = new QVariant( obj->data ( *par1, par2 ) );
+    QVariant * ptr = new QVariant( obj->data ( *par1, OPINT(2,Qt::DisplayRole) ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -662,8 +659,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_HEADERDATA )
   {
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
-    int par3 = ISNIL(3)? Qt::DisplayRole : hb_parni(3);
-    QVariant * ptr = new QVariant( obj->headerData ( par1,  (Qt::Orientation) par2, par3 ) );
+    QVariant * ptr = new QVariant( obj->headerData ( par1,  (Qt::Orientation) par2, OPINT(3,Qt::DisplayRole) ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -778,8 +774,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETDATA )
   {
     QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QVariant * par2 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par3 = ISNIL(3)? Qt::EditRole : hb_parni(3);
-    hb_retl( obj->setData ( *par1, *par2, par3 ) );
+    hb_retl( obj->setData ( *par1, *par2, OPINT(3,Qt::EditRole) ) );
   }
 }
 

@@ -73,9 +73,8 @@ QTimeLine ( int duration = 1000, QObject * parent = 0 )
 HB_FUNC_STATIC( QTIMELINE_NEW )
 {
   QTimeLine * o = NULL;
-  int par1 = ISNIL(1)? 1000 : hb_parni(1);
   QObject * par2 = ISNIL(2)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QTimeLine ( par1, par2 );
+  o = new QTimeLine ( OPINT(1,1000), par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

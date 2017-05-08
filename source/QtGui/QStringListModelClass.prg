@@ -217,8 +217,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_SETDATA )
   {
     QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QVariant * par2 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par3 = ISNIL(3)? Qt::EditRole : hb_parni(3);
-    hb_retl( obj->setData ( *par1, *par2, par3 ) );
+    hb_retl( obj->setData ( *par1, *par2, OPINT(3,Qt::EditRole) ) );
   }
 }
 

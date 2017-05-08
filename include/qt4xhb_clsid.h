@@ -1352,6 +1352,7 @@
 
 // macros for optional parameters
 #define OPBOOL(n,v)                                         (bool) ISNIL(n)? v : hb_parl(n)
+#define OPINT(n,v)                                          (int) ISNIL(n)? v : hb_parni(n)
 
 // macros for return's
 #define RQSTRING(x)                                         (const char *) x.toAscii().data()

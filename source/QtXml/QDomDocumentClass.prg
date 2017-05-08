@@ -449,8 +449,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_TOBYTEARRAY )
   QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = ISNIL(1)? 1 : hb_parni(1);
-    QByteArray * ptr = new QByteArray( obj->toByteArray ( par1 ) );
+    QByteArray * ptr = new QByteArray( obj->toByteArray ( OPINT(1,1) ) );
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -464,8 +463,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_TOSTRING )
   QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = ISNIL(1)? 1 : hb_parni(1);
-    QString str1 = obj->toString ( par1 );
+    QString str1 = obj->toString ( OPINT(1,1) );
     hb_retc( RQSTRING(str1) );
   }
 }

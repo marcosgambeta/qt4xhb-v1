@@ -396,8 +396,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ANIMATECLICK )
 
   if( obj )
   {
-    int par1 = ISNIL(1)? 100 : hb_parni(1);
-    obj->animateClick ( par1 );
+    obj->animateClick ( OPINT(1,100) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

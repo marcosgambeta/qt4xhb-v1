@@ -163,7 +163,7 @@ int registerEventType ( int hint = -1 )
 */
 HB_FUNC_STATIC( QEVENT_REGISTEREVENTTYPE )
 {
-  hb_retni( QEvent::registerEventType ( ISNIL(1)? -1 : hb_parni(1) ) );
+  hb_retni( QEvent::registerEventType ( OPINT(1,-1) ) );
 }
 
 

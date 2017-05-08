@@ -85,9 +85,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_NEW3 )
 {
   QSourceLocation * o = NULL;
   QUrl * par1 = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  int par2 = ISNIL(2)? -1 : hb_parni(2);
-  int par3 = ISNIL(3)? -1 : hb_parni(3);
-  o = new QSourceLocation ( *par1, par2, par3 );
+  o = new QSourceLocation ( *par1, OPINT(2,-1), OPINT(3,-1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 

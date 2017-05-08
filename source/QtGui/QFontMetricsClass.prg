@@ -297,8 +297,7 @@ HB_FUNC_STATIC( QFONTMETRICS_ELIDEDTEXT )
   {
     int par2 = hb_parni(2);
     int par3 = hb_parni(3);
-    int par4 = ISNIL(4)? 0 : hb_parni(4);
-    QString str1 = obj->elidedText ( PQSTRING(1),  (Qt::TextElideMode) par2, par3, par4 );
+    QString str1 = obj->elidedText ( PQSTRING(1),  (Qt::TextElideMode) par2, par3, OPINT(4,0) );
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -472,9 +471,8 @@ HB_FUNC_STATIC( QFONTMETRICS_SIZE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int par3 = ISNIL(3)? 0 : hb_parni(3);
     int* par4 = (int*) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QSize * ptr = new QSize( obj->size ( par1, PQSTRING(2), par3, par4 ) );
+    QSize * ptr = new QSize( obj->size ( par1, PQSTRING(2), OPINT(3,0), par4 ) );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -528,8 +526,7 @@ HB_FUNC_STATIC( QFONTMETRICS_WIDTH1 )
   QFontMetrics * obj = (QFontMetrics *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par2 = ISNIL(2)? -1 : hb_parni(2);
-    hb_retni( obj->width ( PQSTRING(1), par2 ) );
+    hb_retni( obj->width ( PQSTRING(1), OPINT(2,-1) ) );
   }
 }
 

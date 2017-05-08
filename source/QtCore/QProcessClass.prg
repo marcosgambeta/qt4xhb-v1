@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QPROCESS_WAITFORFINISHED )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->waitForFinished ( ISNIL(1)? 30000 : hb_parni(1) ) );
+    hb_retl( obj->waitForFinished ( OPINT(1,30000) ) );
   }
 }
 
@@ -514,7 +514,7 @@ HB_FUNC_STATIC( QPROCESS_WAITFORSTARTED )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->waitForStarted ( ISNIL(1)? 30000 : hb_parni(1) ) );
+    hb_retl( obj->waitForStarted ( OPINT(1,30000) ) );
   }
 }
 
@@ -622,7 +622,7 @@ HB_FUNC_STATIC( QPROCESS_WAITFORBYTESWRITTEN )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->waitForBytesWritten ( ISNIL(1)? 30000 : hb_parni(1) ) );
+    hb_retl( obj->waitForBytesWritten ( OPINT(1,30000) ) );
   }
 }
 
@@ -635,7 +635,7 @@ HB_FUNC_STATIC( QPROCESS_WAITFORREADYREAD )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->waitForReadyRead ( ISNIL(1)? 30000 : hb_parni(1) ) );
+    hb_retl( obj->waitForReadyRead ( OPINT(1,30000) ) );
   }
 }
 

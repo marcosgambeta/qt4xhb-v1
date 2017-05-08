@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QBITARRAY_FILL1 )
   QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->fill ( PBOOL(1), ISNIL(2)? -1 : hb_parni(2) ) );
+    hb_retl( obj->fill ( PBOOL(1), OPINT(2,-1) ) );
   }
 }
 

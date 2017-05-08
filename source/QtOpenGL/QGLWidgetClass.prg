@@ -525,9 +525,7 @@ HB_FUNC_STATIC( QGLWIDGET_RENDERPIXMAP )
   QGLWidget * obj = (QGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = ISNIL(1)? 0 : hb_parni(1);
-    int par2 = ISNIL(2)? 0 : hb_parni(2);
-    QPixmap * ptr = new QPixmap( obj->renderPixmap ( par1, par2, OPBOOL(3,false) ) );
+    QPixmap * ptr = new QPixmap( obj->renderPixmap ( OPINT(1,0), OPINT(2,0), OPBOOL(3,false) ) );
     _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
@@ -544,8 +542,7 @@ HB_FUNC_STATIC( QGLWIDGET_RENDERTEXT1 )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     QFont par4 = ISNIL(4)? QFont() : *(QFont *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par5 = ISNIL(5)? 2000 : hb_parni(5);
-    obj->renderText ( par1, par2, PQSTRING(3), par4, par5 );
+    obj->renderText ( par1, par2, PQSTRING(3), par4, OPINT(5,2000) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -560,8 +557,7 @@ HB_FUNC_STATIC( QGLWIDGET_RENDERTEXT2 )
   if( obj )
   {
     QFont par5 = ISNIL(5)? QFont() : *(QFont *) hb_itemGetPtr( hb_objSendMsg( hb_param(5, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par6 = ISNIL(6)? 2000 : hb_parni(6);
-    obj->renderText ( PDOUBLE(1), PDOUBLE(2), PDOUBLE(3), PQSTRING(4), par5, par6 );
+    obj->renderText ( PDOUBLE(1), PDOUBLE(2), PDOUBLE(3), PQSTRING(4), par5, OPINT(6,2000) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

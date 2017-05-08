@@ -239,9 +239,8 @@ HB_FUNC_STATIC( QFONTMETRICSF_BOUNDINGRECT3 )
   {
     QRectF * par1 = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
-    int par4 = ISNIL(4)? 0 : hb_parni(4);
     int par5;
-    QRectF * ptr = new QRectF( obj->boundingRect ( *par1, par2, PQSTRING(3), par4, &par5 ) );
+    QRectF * ptr = new QRectF( obj->boundingRect ( *par1, par2, PQSTRING(3), OPINT(4,0), &par5 ) );
     _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
     hb_storni( par5, 5 );
   }
@@ -291,8 +290,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_ELIDEDTEXT )
   if( obj )
   {
     int par2 = hb_parni(2);
-    int par4 = ISNIL(4)? 0 : hb_parni(4);
-    QString str1 = obj->elidedText ( PQSTRING(1),  (Qt::TextElideMode) par2, PQREAL(3), par4 );
+    QString str1 = obj->elidedText ( PQSTRING(1),  (Qt::TextElideMode) par2, PQREAL(3), OPINT(4,0) );
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -476,9 +474,8 @@ HB_FUNC_STATIC( QFONTMETRICSF_SIZE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int par3 = ISNIL(3)? 0 : hb_parni(3);
     int par4;
-    QSizeF * ptr = new QSizeF( obj->size ( par1, PQSTRING(2), par3, &par4 ) );
+    QSizeF * ptr = new QSizeF( obj->size ( par1, PQSTRING(2), OPINT(3,0), &par4 ) );
     _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
     hb_storni( par4, 4 );
   }

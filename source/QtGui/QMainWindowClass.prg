@@ -502,8 +502,7 @@ HB_FUNC_STATIC( QMAINWINDOW_RESTORESTATE )
   if( obj )
   {
     QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par2 = ISNIL(2)? 0 : hb_parni(2);
-    hb_retl( obj->restoreState ( *par1, par2 ) );
+    hb_retl( obj->restoreState ( *par1, OPINT(2,0)) );
   }
 }
 
@@ -516,8 +515,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SAVESTATE )
   QMainWindow * obj = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = ISNIL(1)? 0 : hb_parni(1);
-    QByteArray * ptr = new QByteArray( obj->saveState ( par1 ) );
+    QByteArray * ptr = new QByteArray( obj->saveState ( OPINT(1,0) ) );
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }

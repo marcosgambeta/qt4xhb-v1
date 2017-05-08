@@ -161,7 +161,6 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_INVOKEMETHOD )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int par2 = ISNIL(2)? 0 : hb_parni(2);
 QVariantList par3;
 PHB_ITEM aList3 = hb_param(3, HB_IT_ARRAY);
 int i3;
@@ -170,7 +169,7 @@ for (i3=0;i3<nLen3;i3++)
 {
 par3 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList3, i3+1 ), "POINTER", 0 ) );
 }
-    QVariant * ptr = new QVariant( obj->invokeMethod (  (QAccessibleInterface::Method) par1, par2, par3 ) );
+    QVariant * ptr = new QVariant( obj->invokeMethod (  (QAccessibleInterface::Method) par1, OPINT(2,0), par3 ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }

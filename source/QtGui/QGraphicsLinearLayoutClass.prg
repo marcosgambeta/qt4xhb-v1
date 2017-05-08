@@ -145,8 +145,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ADDSTRETCH )
   QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = ISNIL(1)? 1 : hb_parni(1);
-    obj->addStretch ( par1 );
+    obj->addStretch ( OPINT(1,1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -191,8 +190,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_INSERTSTRETCH )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int par2 = ISNIL(2)? 1 : hb_parni(2);
-    obj->insertStretch ( par1, par2 );
+    obj->insertStretch ( par1, OPINT(2,1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

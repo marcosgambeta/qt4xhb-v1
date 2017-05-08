@@ -110,8 +110,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_ADDLAYOUT )
   if( obj )
   {
     QLayout * par1 = (QLayout *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par2 = ISNIL(2)? 0 : hb_parni(2);
-    obj->addLayout ( par1, par2 );
+    obj->addLayout ( par1, OPINT(2,0) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -155,8 +154,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_ADDSTRETCH )
   QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = ISNIL(1)? 0 : hb_parni(1);
-    obj->addStretch ( par1 );
+    obj->addStretch ( OPINT(1,0) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -186,9 +184,8 @@ HB_FUNC_STATIC( QBOXLAYOUT_ADDWIDGET )
   if( obj )
   {
     QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par2 = ISNIL(2)? 0 : hb_parni(2);
     int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-    obj->addWidget ( par1, par2,  (Qt::Alignment) par3 );
+    obj->addWidget ( par1, OPINT(2,0),  (Qt::Alignment) par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -217,8 +214,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_INSERTLAYOUT )
   {
     int par1 = hb_parni(1);
     QLayout * par2 = (QLayout *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par3 = ISNIL(3)? 0 : hb_parni(3);
-    obj->insertLayout ( par1, par2, par3 );
+    obj->insertLayout ( par1, par2, OPINT(3,0) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -265,8 +261,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_INSERTSTRETCH )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int par2 = ISNIL(2)? 0 : hb_parni(2);
-    obj->insertStretch ( par1, par2 );
+    obj->insertStretch ( par1, OPINT(2,0) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -282,9 +277,8 @@ HB_FUNC_STATIC( QBOXLAYOUT_INSERTWIDGET )
   {
     int par1 = hb_parni(1);
     QWidget * par2 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par3 = ISNIL(3)? 0 : hb_parni(3);
     int par4 = ISNIL(4)? (int) 0 : hb_parni(4);
-    obj->insertWidget ( par1, par2, par3,  (Qt::Alignment) par4 );
+    obj->insertWidget ( par1, par2, OPINT(3,0),  (Qt::Alignment) par4 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

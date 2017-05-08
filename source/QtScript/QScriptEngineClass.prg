@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_EVALUATE1 )
   if( obj )
   {
     QString par2 = ISNIL(2)? QString() : hb_parc(2);
-    QScriptValue * ptr = new QScriptValue( obj->evaluate ( PQSTRING(1), par2, ISNIL(3)? 1 : hb_parni(3) ) );
+    QScriptValue * ptr = new QScriptValue( obj->evaluate ( PQSTRING(1), par2, OPINT(3,1) ) );
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }

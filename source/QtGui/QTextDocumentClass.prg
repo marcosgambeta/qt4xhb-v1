@@ -554,9 +554,8 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FIND3 )
   QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par2 = ISNIL(2)? 0 : hb_parni(2);
     int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-    QTextCursor * ptr = new QTextCursor( obj->find ( PQSTRING(1), par2,  (QTextDocument::FindFlags) par3 ) );
+    QTextCursor * ptr = new QTextCursor( obj->find ( PQSTRING(1), OPINT(2,0),  (QTextDocument::FindFlags) par3 ) );
     _qt4xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
   }
 }
@@ -571,9 +570,8 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FIND4 )
   if( obj )
   {
     QRegExp * par1 = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par2 = ISNIL(2)? 0 : hb_parni(2);
     int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-    QTextCursor * ptr = new QTextCursor( obj->find ( *par1, par2,  (QTextDocument::FindFlags) par3 ) );
+    QTextCursor * ptr = new QTextCursor( obj->find ( *par1, OPINT(2,0),  (QTextDocument::FindFlags) par3 ) );
     _qt4xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
   }
 }

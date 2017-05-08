@@ -282,9 +282,8 @@ HB_FUNC_STATIC( QCOMBOBOX_FINDDATA )
   if( obj )
   {
     QVariant * par1 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par2 = ISNIL(2)? Qt::UserRole : hb_parni(2);
     int par3 = ISNIL(3)? (int) Qt::MatchExactly | Qt::MatchCaseSensitive : hb_parni(3);
-    hb_retni( obj->findData ( *par1, par2,  (Qt::MatchFlags) par3 ) );
+    hb_retni( obj->findData ( *par1, OPINT(2,Qt::UserRole),  (Qt::MatchFlags) par3 ) );
   }
 }
 
@@ -459,8 +458,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ITEMDATA )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int par2 = ISNIL(2)? Qt::UserRole : hb_parni(2);
-    QVariant * ptr = new QVariant( obj->itemData ( par1, par2 ) );
+    QVariant * ptr = new QVariant( obj->itemData ( par1, OPINT(2,Qt::UserRole) ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -716,8 +714,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETITEMDATA )
   {
     int par1 = hb_parni(1);
     QVariant * par2 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par3 = ISNIL(3)? Qt::UserRole : hb_parni(3);
-    obj->setItemData ( par1, *par2, par3 );
+    obj->setItemData ( par1, *par2, OPINT(3,Qt::UserRole) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

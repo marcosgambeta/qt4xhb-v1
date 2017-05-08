@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QREGEXP_CAP )
   QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->cap ( ISNIL(1)? 0 : hb_parni(1) );
+    QString str1 = obj->cap ( OPINT(1,0) );
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QREGEXP_INDEXIN )
   QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->indexIn ( PQSTRING(1), ISNIL(2)? 0 : hb_parni(2), ISNIL(3)? QRegExp::CaretAtZero : (QRegExp::CaretMode) hb_parni(3) ) );
+    hb_retni( obj->indexIn ( PQSTRING(1), OPINT(2,0), ISNIL(3)? QRegExp::CaretAtZero : (QRegExp::CaretMode) hb_parni(3) ) );
   }
 }
 
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QREGEXP_LASTINDEXIN )
   QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->lastIndexIn ( PQSTRING(1), ISNIL(2)? -1 : hb_parni(2), ISNIL(3)? QRegExp::CaretAtZero : (QRegExp::CaretMode) hb_parni(3) ) );
+    hb_retni( obj->lastIndexIn ( PQSTRING(1), OPINT(2,-1), ISNIL(3)? QRegExp::CaretAtZero : (QRegExp::CaretMode) hb_parni(3) ) );
   }
 }
 
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QREGEXP_POS )
   QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->pos ( ISNIL(1)? 0 : hb_parni(1) ) );
+    hb_retni( obj->pos ( OPINT(1,0) ) );
   }
 }
 

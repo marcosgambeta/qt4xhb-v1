@@ -91,8 +91,7 @@ HB_FUNC_STATIC( QTHREAD_EXIT )
   QThread * obj = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = ISNIL(1)? 0 : hb_parni(1);
-    obj->exit ( par1 );
+    obj->exit ( OPINT(1,0) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

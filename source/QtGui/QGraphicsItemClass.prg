@@ -650,9 +650,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ENSUREVISIBLE1 )
   if( obj )
   {
     QRectF par1 = ISNIL(1)? QRectF() : *(QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par2 = ISNIL(2)? 50 : hb_parni(2);
-    int par3 = ISNIL(3)? 50 : hb_parni(3);
-    obj->ensureVisible ( par1, par2, par3 );
+    obj->ensureVisible ( par1, OPINT(2,50), OPINT(3,50) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -666,9 +664,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ENSUREVISIBLE2 )
   QGraphicsItem * obj = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par5 = ISNIL(5)? 50 : hb_parni(5);
-    int par6 = ISNIL(6)? 50 : hb_parni(6);
-    obj->ensureVisible ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), par5, par6 );
+    obj->ensureVisible ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPINT(5,50), OPINT(6,50) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

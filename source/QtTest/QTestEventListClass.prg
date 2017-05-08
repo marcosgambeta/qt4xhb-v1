@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYCLICK1 )
   QTestEventList * obj = (QTestEventList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->addKeyClick (  (Qt::Key) hb_parni(1), ISNIL(2)? Qt::NoModifier : (Qt::KeyboardModifiers) hb_parni(2), ISNIL(3)? -1 : hb_parni(3) );
+    obj->addKeyClick (  (Qt::Key) hb_parni(1), ISNIL(2)? Qt::NoModifier : (Qt::KeyboardModifiers) hb_parni(2), OPINT(3,-1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYCLICK2 )
   if( obj )
   {
     char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
-    obj->addKeyClick ( par1, ISNIL(2)? Qt::NoModifier : (Qt::KeyboardModifiers) hb_parni(2), ISNIL(3)? -1 : hb_parni(3) );
+    obj->addKeyClick ( par1, ISNIL(2)? Qt::NoModifier : (Qt::KeyboardModifiers) hb_parni(2), OPINT(3,-1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYCLICKS )
   QTestEventList * obj = (QTestEventList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->addKeyClicks ( PQSTRING(1), ISNIL(2)? Qt::NoModifier : (Qt::KeyboardModifiers) hb_parni(2), ISNIL(3)? -1 : hb_parni(3) );
+    obj->addKeyClicks ( PQSTRING(1), ISNIL(2)? Qt::NoModifier : (Qt::KeyboardModifiers) hb_parni(2), OPINT(3,-1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYPRESS1 )
   QTestEventList * obj = (QTestEventList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->addKeyPress (  (Qt::Key) hb_parni(1), ISNIL(2)? Qt::NoModifier : (Qt::KeyboardModifiers) hb_parni(2), ISNIL(3)? -1 : hb_parni(3) );
+    obj->addKeyPress (  (Qt::Key) hb_parni(1), ISNIL(2)? Qt::NoModifier : (Qt::KeyboardModifiers) hb_parni(2), OPINT(3,-1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYPRESS2 )
   if( obj )
   {
     char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
-    obj->addKeyPress ( par1, ISNIL(2)? Qt::NoModifier : (Qt::KeyboardModifiers) hb_parni(2), ISNIL(3)? -1 : hb_parni(3) );
+    obj->addKeyPress ( par1, ISNIL(2)? Qt::NoModifier : (Qt::KeyboardModifiers) hb_parni(2), OPINT(3,-1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYRELEASE1 )
   QTestEventList * obj = (QTestEventList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->addKeyRelease (  (Qt::Key) hb_parni(1), ISNIL(2)? Qt::NoModifier : (Qt::KeyboardModifiers) hb_parni(2), ISNIL(3)? -1 : hb_parni(3) );
+    obj->addKeyRelease (  (Qt::Key) hb_parni(1), ISNIL(2)? Qt::NoModifier : (Qt::KeyboardModifiers) hb_parni(2), OPINT(3,-1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYRELEASE2 )
   if( obj )
   {
     char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
-    obj->addKeyRelease ( par1, ISNIL(2)? Qt::NoModifier : (Qt::KeyboardModifiers) hb_parni(2), ISNIL(3)? -1 : hb_parni(3) );
+    obj->addKeyRelease ( par1, ISNIL(2)? Qt::NoModifier : (Qt::KeyboardModifiers) hb_parni(2), OPINT(3,-1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDMOUSECLICK )
   if( obj )
   {
     QPoint par3 = ISNIL(3)? QPoint() : *(QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->addMouseClick (  (Qt::MouseButton) hb_parni(1), (Qt::KeyboardModifiers) par2, par3, ISNIL(4)? -1 : hb_parni(4) );
+    obj->addMouseClick (  (Qt::MouseButton) hb_parni(1), (Qt::KeyboardModifiers) par2, par3, OPINT(4,-1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDMOUSEDCLICK )
   if( obj )
   {
     QPoint par3 = ISNIL(3)? QPoint() : *(QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->addMouseDClick (  (Qt::MouseButton) hb_parni(1), (Qt::KeyboardModifiers) par2, par3, ISNIL(4)? -1 : hb_parni(4) );
+    obj->addMouseDClick (  (Qt::MouseButton) hb_parni(1), (Qt::KeyboardModifiers) par2, par3, OPINT(4,-1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDMOUSEMOVE )
   if( obj )
   {
     QPoint par1 = ISNIL(1)? QPoint() : *(QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->addMouseMove ( par1, ISNIL(2)? -1 : hb_parni(2) );
+    obj->addMouseMove ( par1, OPINT(2,-1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDMOUSEPRESS )
   if( obj )
   {
     QPoint par3 = ISNIL(3)? QPoint() : *(QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->addMousePress (  (Qt::MouseButton) hb_parni(1), (Qt::KeyboardModifiers) par2, par3, ISNIL(4)? -1 : hb_parni(4) );
+    obj->addMousePress (  (Qt::MouseButton) hb_parni(1), (Qt::KeyboardModifiers) par2, par3, OPINT(4,-1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDMOUSERELEASE )
   if( obj )
   {
     QPoint par3 = ISNIL(3)? QPoint() : *(QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->addMouseRelease (  (Qt::MouseButton) hb_parni(1), (Qt::KeyboardModifiers) par2, par3, ISNIL(4)? -1 : hb_parni(4) );
+    obj->addMouseRelease (  (Qt::MouseButton) hb_parni(1), (Qt::KeyboardModifiers) par2, par3, OPINT(4,-1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

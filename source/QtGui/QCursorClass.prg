@@ -95,9 +95,7 @@ HB_FUNC_STATIC( QCURSOR_NEW3 )
   QCursor * o = NULL;
   QBitmap * par1 = (QBitmap *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QBitmap * par2 = (QBitmap *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  int par3 = ISNIL(3)? -1 : hb_parni(3);
-  int par4 = ISNIL(4)? -1 : hb_parni(4);
-  o = new QCursor ( *par1, *par2, par3, par4 );
+  o = new QCursor ( *par1, *par2, OPINT(3,-1), OPINT(4,-1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -109,9 +107,7 @@ HB_FUNC_STATIC( QCURSOR_NEW4 )
 {
   QCursor * o = NULL;
   QPixmap * par1 = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  int par2 = ISNIL(2)? -1 : hb_parni(2);
-  int par3 = ISNIL(3)? -1 : hb_parni(3);
-  o = new QCursor ( *par1, par2, par3 );
+  o = new QCursor ( *par1, OPINT(2,-1), OPINT(3,-1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 

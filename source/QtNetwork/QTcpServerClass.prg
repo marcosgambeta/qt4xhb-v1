@@ -303,9 +303,8 @@ HB_FUNC_STATIC( QTCPSERVER_WAITFORNEWCONNECTION )
   QTcpServer * obj = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = ISNIL(1)? 0 : hb_parni(1);
     bool par2;
-    hb_retl( obj->waitForNewConnection ( par1, &par2 ) );
+    hb_retl( obj->waitForNewConnection ( OPINT(1,0), &par2 ) );
     hb_storl( par2, 2 );
   }
 }

@@ -56,11 +56,9 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEW1 )
 {
   QXmlParseException * o = NULL;
   QString par1 = ISNIL(1)? QString() : hb_parc(1);
-  int par2 = ISNIL(2)? -1 : hb_parni(2);
-  int par3 = ISNIL(3)? -1 : hb_parni(3);
   QString par4 = ISNIL(4)? QString() : hb_parc(4);
   QString par5 = ISNIL(5)? QString() : hb_parc(5);
-  o = new QXmlParseException ( par1, par2, par3, par4, par5 );
+  o = new QXmlParseException ( par1, OPINT(2,-1), OPINT(3,-1), par4, par5 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 

@@ -167,8 +167,7 @@ HB_FUNC_STATIC( QTREEWIDGET_CLOSEPERSISTENTEDITOR )
   if( obj )
   {
     QTreeWidgetItem * par1 = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par2 = ISNIL(2)? 0 : hb_parni(2);
-    obj->closePersistentEditor ( par1, par2 );
+    obj->closePersistentEditor ( par1, OPINT(2,0) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -223,8 +222,7 @@ HB_FUNC_STATIC( QTREEWIDGET_EDITITEM )
   if( obj )
   {
     QTreeWidgetItem * par1 = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par2 = ISNIL(2)? 0 : hb_parni(2);
-    obj->editItem ( par1, par2 );
+    obj->editItem ( par1, OPINT(2,0) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -239,8 +237,7 @@ HB_FUNC_STATIC( QTREEWIDGET_FINDITEMS )
   if( obj )
   {
     int par2 = hb_parni(2);
-    int par3 = ISNIL(3)? 0 : hb_parni(3);
-    QList<QTreeWidgetItem *> list = obj->findItems ( PQSTRING(1),  (Qt::MatchFlags) par2, par3 );
+    QList<QTreeWidgetItem *> list = obj->findItems ( PQSTRING(1),  (Qt::MatchFlags) par2, OPINT(3,0) );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QTREEWIDGETITEM" );
@@ -471,8 +468,7 @@ HB_FUNC_STATIC( QTREEWIDGET_OPENPERSISTENTEDITOR )
   if( obj )
   {
     QTreeWidgetItem * par1 = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par2 = ISNIL(2)? 0 : hb_parni(2);
-    obj->openPersistentEditor ( par1, par2 );
+    obj->openPersistentEditor ( par1, OPINT(2,0) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

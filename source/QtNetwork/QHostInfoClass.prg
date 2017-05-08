@@ -69,8 +69,7 @@ QHostInfo ( int id = -1 )
 HB_FUNC_STATIC( QHOSTINFO_NEW1 )
 {
   QHostInfo * o = NULL;
-  int par1 = ISNIL(1)? -1 : hb_parni(1);
-  o = new QHostInfo ( par1 );
+  o = new QHostInfo ( OPINT(1,-1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 

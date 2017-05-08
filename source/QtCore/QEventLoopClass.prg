@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QEVENTLOOP_EXIT )
   QEventLoop * obj = (QEventLoop *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->exit ( ISNIL(1)? 0 : hb_parni(1) );
+    obj->exit ( OPINT(1,0) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

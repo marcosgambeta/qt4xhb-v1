@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QMODELINDEX_DATA )
   QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->data ( ISNIL(1)? Qt::DisplayRole : hb_parni(1) ) );
+    QVariant * ptr = new QVariant( obj->data ( OPINT(1,Qt::DisplayRole) ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }

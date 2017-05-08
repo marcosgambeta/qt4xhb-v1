@@ -1030,12 +1030,8 @@ HB_FUNC_STATIC( QPAINTER_DRAWIMAGE9 )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     QImage * par3 = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par4 = ISNIL(4)? 0 : hb_parni(4);
-    int par5 = ISNIL(5)? 0 : hb_parni(5);
-    int par6 = ISNIL(6)? -1 : hb_parni(6);
-    int par7 = ISNIL(7)? -1 : hb_parni(7);
     int par8 = ISNIL(8)? (int) Qt::AutoColor : hb_parni(8);
-    obj->drawImage ( par1, par2, *par3, par4, par5, par6, par7,  (Qt::ImageConversionFlags) par8 );
+    obj->drawImage ( par1, par2, *par3, OPINT(4,0), OPINT(5,0), OPINT(6,-1), OPINT(7,-1),  (Qt::ImageConversionFlags) par8 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -2404,9 +2400,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWTILEDPIXMAP3 )
     int par3 = hb_parni(3);
     int par4 = hb_parni(4);
     QPixmap * par5 = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_param(5, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par6 = ISNIL(6)? 0 : hb_parni(6);
-    int par7 = ISNIL(7)? 0 : hb_parni(7);
-    obj->drawTiledPixmap ( par1, par2, par3, par4, *par5, par6, par7 );
+    obj->drawTiledPixmap ( par1, par2, par3, par4, *par5, OPINT(6,0), OPINT(7,0) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

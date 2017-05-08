@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QSQLERROR_NEW1 )
   QSqlError * o = NULL;
   QString par1 = ISNIL(1)? QString() : hb_parc(1);
   QString par2 = ISNIL(2)? QString() : hb_parc(2);
-  o = new QSqlError ( par1, par2, ISNIL(3)? QSqlError::NoError : (QSqlError::ErrorType) hb_parni(3), ISNIL(4)? -1 : hb_parni(4) );
+  o = new QSqlError ( par1, par2, ISNIL(3)? QSqlError::NoError : (QSqlError::ErrorType) hb_parni(3), OPINT(4,-1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 

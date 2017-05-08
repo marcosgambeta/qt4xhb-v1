@@ -121,8 +121,7 @@ QTreeWidgetItem ( int type = Type )
 HB_FUNC_STATIC( QTREEWIDGETITEM_NEW1 )
 {
   QTreeWidgetItem * o = NULL;
-  int par1 = ISNIL(1)? QTreeWidgetItem::Type : hb_parni(1);
-  o = new QTreeWidgetItem ( par1 );
+  o = new QTreeWidgetItem ( OPINT(1,QTreeWidgetItem::Type) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -133,8 +132,7 @@ QTreeWidgetItem ( const QStringList & strings, int type = Type )
 HB_FUNC_STATIC( QTREEWIDGETITEM_NEW2 )
 {
   QTreeWidgetItem * o = NULL;
-  int par2 = ISNIL(2)? QTreeWidgetItem::Type : hb_parni(2);
-  o = new QTreeWidgetItem ( PQSTRINGLIST(1), par2 );
+  o = new QTreeWidgetItem ( PQSTRINGLIST(1), OPINT(2,QTreeWidgetItem::Type) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -146,8 +144,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_NEW3 )
 {
   QTreeWidgetItem * o = NULL;
   QTreeWidget * par1 = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  int par2 = ISNIL(2)? QTreeWidgetItem::Type : hb_parni(2);
-  o = new QTreeWidgetItem ( par1, par2 );
+  o = new QTreeWidgetItem ( par1, OPINT(2,QTreeWidgetItem::Type) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -159,8 +156,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_NEW4 )
 {
   QTreeWidgetItem * o = NULL;
   QTreeWidget * par1 = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  int par3 = ISNIL(3)? QTreeWidgetItem::Type : hb_parni(3);
-  o = new QTreeWidgetItem ( par1, PQSTRINGLIST(2), par3 );
+  o = new QTreeWidgetItem ( par1, PQSTRINGLIST(2), OPINT(3,QTreeWidgetItem::Type) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -173,8 +169,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_NEW5 )
   QTreeWidgetItem * o = NULL;
   QTreeWidget * par1 = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QTreeWidgetItem * par2 = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  int par3 = ISNIL(3)? QTreeWidgetItem::Type : hb_parni(3);
-  o = new QTreeWidgetItem ( par1, par2, par3 );
+  o = new QTreeWidgetItem ( par1, par2, OPINT(3,QTreeWidgetItem::Type) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -186,8 +181,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_NEW6 )
 {
   QTreeWidgetItem * o = NULL;
   QTreeWidgetItem * par1 = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  int par2 = ISNIL(2)? QTreeWidgetItem::Type : hb_parni(2);
-  o = new QTreeWidgetItem ( par1, par2 );
+  o = new QTreeWidgetItem ( par1, OPINT(2,QTreeWidgetItem::Type) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -199,8 +193,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_NEW7 )
 {
   QTreeWidgetItem * o = NULL;
   QTreeWidgetItem * par1 = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  int par3 = ISNIL(3)? QTreeWidgetItem::Type : hb_parni(3);
-  o = new QTreeWidgetItem ( par1, PQSTRINGLIST(2), par3 );
+  o = new QTreeWidgetItem ( par1, PQSTRINGLIST(2), OPINT(3,QTreeWidgetItem::Type) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -213,8 +206,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_NEW8 )
   QTreeWidgetItem * o = NULL;
   QTreeWidgetItem * par1 = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QTreeWidgetItem * par2 = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  int par3 = ISNIL(3)? QTreeWidgetItem::Type : hb_parni(3);
-  o = new QTreeWidgetItem ( par1, par2, par3 );
+  o = new QTreeWidgetItem ( par1, par2, OPINT(3,QTreeWidgetItem::Type) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

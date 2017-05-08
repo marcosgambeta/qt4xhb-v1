@@ -152,8 +152,7 @@ HB_FUNC_STATIC( QTRANSLATOR_TRANSLATE )
     const char * par1 = hb_parc(1);
     const char * par2 = hb_parc(2);
     const char * par3 = hb_parc(3);
-    int par4 = ISNIL(4)? -1 : hb_parni(4);
-    QString str1 = obj->translate (  (const char *) par1,  (const char *) par2,  (const char *) par3, par4 );
+    QString str1 = obj->translate (  (const char *) par1,  (const char *) par2,  (const char *) par3, OPINT(4,-1) );
     hb_retc( RQSTRING(str1) );
   }
 }

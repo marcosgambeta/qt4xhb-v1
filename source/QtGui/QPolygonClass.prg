@@ -293,8 +293,7 @@ HB_FUNC_STATIC( QPOLYGON_PUTPOINTS2 )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     QPolygon * par3 = (QPolygon *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par4 = ISNIL(4)? 0 : hb_parni(4);
-    obj->putPoints ( par1, par2, *par3, par4 );
+    obj->putPoints ( par1, par2, *par3, OPINT(4,0) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

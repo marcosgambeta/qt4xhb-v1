@@ -269,7 +269,7 @@ void exit ( int returnCode = 0 )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_EXIT )
 {
-  QCoreApplication::exit ( ISNIL(1)? 0 : hb_parni(1) );
+  QCoreApplication::exit ( OPINT(1,0) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

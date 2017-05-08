@@ -1350,8 +1350,7 @@ HB_FUNC_STATIC( QTEXTEDIT_ZOOMIN )
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = ISNIL(1)? 1 : hb_parni(1);
-    obj->zoomIn ( par1 );
+    obj->zoomIn ( OPINT(1,1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1365,8 +1364,7 @@ HB_FUNC_STATIC( QTEXTEDIT_ZOOMOUT )
   QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = ISNIL(1)? 1 : hb_parni(1);
-    obj->zoomOut ( par1 );
+    obj->zoomOut ( OPINT(1,1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

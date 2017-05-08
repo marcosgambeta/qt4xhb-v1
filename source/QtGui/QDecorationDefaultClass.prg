@@ -77,9 +77,8 @@ HB_FUNC_STATIC( QDECORATIONDEFAULT_PAINT )
   {
     QPainter * par1 = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     const QWidget * par2 = (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par3 = ISNIL(3)? QDecoration::All : hb_parni(3);
     int par4 = ISNIL(4)? (int) QDecoration::Normal : hb_parni(4);
-    hb_retl( obj->paint ( par1, par2, par3,  (QDecoration::DecorationState) par4 ) );
+    hb_retl( obj->paint ( par1, par2, OPINT(3,QDecoration::All),  (QDecoration::DecorationState) par4 ) );
   }
 }
 
@@ -94,8 +93,7 @@ HB_FUNC_STATIC( QDECORATIONDEFAULT_REGION )
   {
     const QWidget * par1 = (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QRect * par2 = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par3 = ISNIL(3)? QDecoration::All : hb_parni(3);
-    QRegion * ptr = new QRegion( obj->region ( par1, *par2, par3 ) );
+    QRegion * ptr = new QRegion( obj->region ( par1, *par2, OPINT(3,QDecoration::All) ) );
     _qt4xhb_createReturnClass ( ptr, "QREGION", true );
   }
 }

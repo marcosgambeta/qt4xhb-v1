@@ -179,8 +179,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_NEW4 )
 {
   QStandardItem * o = NULL;
   int par1 = hb_parni(1);
-  int par2 = ISNIL(2)? 1 : hb_parni(2);
-  o = new QStandardItem ( par1, par2 );
+  o = new QStandardItem ( par1, OPINT(2,1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -238,8 +237,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_DATA )
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = ISNIL(1)? Qt::UserRole+1 : hb_parni(1);
-    QVariant * ptr = new QVariant( obj->data ( par1 ) );
+    QVariant * ptr = new QVariant( obj->data ( OPINT(1,Qt::UserRole+1) ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -254,8 +252,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETDATA )
   if( obj )
   {
     QVariant * par1 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par2 = ISNIL(2)? Qt::UserRole+1 : hb_parni(2);
-    obj->setData ( *par1, par2 );
+    obj->setData ( *par1, OPINT(2,Qt::UserRole+1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -993,8 +990,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_CHILD )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int par2 = ISNIL(2)? 0 : hb_parni(2);
-    QStandardItem * ptr = obj->child ( par1, par2 );
+    QStandardItem * ptr = obj->child ( par1, OPINT(2,0) );
     _qt4xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
   }
 }
@@ -1356,8 +1352,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_TAKECHILD )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int par2 = ISNIL(2)? 0 : hb_parni(2);
-    QStandardItem * ptr = obj->takeChild ( par1, par2 );
+    QStandardItem * ptr = obj->takeChild ( par1, OPINT(2,0) );
     _qt4xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
   }
 }

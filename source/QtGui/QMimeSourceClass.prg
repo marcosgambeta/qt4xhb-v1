@@ -86,8 +86,7 @@ HB_FUNC_STATIC( QMIMESOURCE_FORMAT )
   QMimeSource * obj = (QMimeSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = ISNIL(1)? 0 : hb_parni(1);
-    const char * str1 = obj->format ( par1 );
+    const char * str1 = obj->format ( OPINT(1,0) );
     hb_retc( str1 );
   }
 }

@@ -276,8 +276,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_DATA )
   if( obj )
   {
     QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par2 = ISNIL(2)? Qt::DisplayRole : hb_parni(2);
-    QVariant * ptr = new QVariant( obj->data ( *par1, par2 ) );
+    QVariant * ptr = new QVariant( obj->data ( *par1, OPINT(2,Qt::DisplayRole) ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -293,8 +292,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETDATA )
   {
     QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QVariant * par2 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par3 = ISNIL(3)? Qt::EditRole : hb_parni(3);
-    hb_retl( obj->setData ( *par1, *par2, par3 ) );
+    hb_retl( obj->setData ( *par1, *par2, OPINT(3,Qt::EditRole) ) );
   }
 }
 
@@ -309,8 +307,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_HEADERDATA )
   {
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
-    int par3 = ISNIL(3)? Qt::DisplayRole : hb_parni(3);
-    QVariant * ptr = new QVariant( obj->headerData ( par1,  (Qt::Orientation) par2, par3 ) );
+    QVariant * ptr = new QVariant( obj->headerData ( par1,  (Qt::Orientation) par2, OPINT(3,Qt::DisplayRole) ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -327,8 +324,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETHEADERDATA )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     QVariant * par3 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par4 = ISNIL(4)? Qt::EditRole : hb_parni(4);
-    hb_retl( obj->setHeaderData ( par1,  (Qt::Orientation) par2, *par3, par4 ) );
+    hb_retl( obj->setHeaderData ( par1,  (Qt::Orientation) par2, *par3, OPINT(4,Qt::EditRole) ) );
   }
 }
 
@@ -495,8 +491,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_ITEM )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int par2 = ISNIL(2)? 0 : hb_parni(2);
-    QStandardItem * ptr = obj->item ( par1, par2 );
+    QStandardItem * ptr = obj->item ( par1, OPINT(2,0) );
     _qt4xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
   }
 }
@@ -891,8 +886,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_TAKEITEM )
   if( obj )
   {
     int par1 = hb_parni(1);
-    int par2 = ISNIL(2)? 0 : hb_parni(2);
-    QStandardItem * ptr = obj->takeItem ( par1, par2 );
+    QStandardItem * ptr = obj->takeItem ( par1, OPINT(2,0) );
     _qt4xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
   }
 }
@@ -1056,8 +1050,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_FINDITEMS )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) Qt::MatchExactly : hb_parni(2);
-    int par3 = ISNIL(3)? 0 : hb_parni(3);
-    QList<QStandardItem *> list = obj->findItems ( PQSTRING(1),  (Qt::MatchFlags) par2, par3 );
+    QList<QStandardItem *> list = obj->findItems ( PQSTRING(1),  (Qt::MatchFlags) par2, OPINT(3,0) );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QSTANDARDITEM" );

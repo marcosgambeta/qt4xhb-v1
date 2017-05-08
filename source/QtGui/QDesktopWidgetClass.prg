@@ -64,8 +64,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY1 )
   QDesktopWidget * obj = (QDesktopWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = ISNIL(1)? -1 : hb_parni(1);
-    QRect * ptr = new QRect( obj->availableGeometry ( par1 ) );
+    QRect * ptr = new QRect( obj->availableGeometry ( OPINT(1,-1) ) );
     _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -155,8 +154,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREEN )
   QDesktopWidget * obj = (QDesktopWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = ISNIL(1)? -1 : hb_parni(1);
-    QWidget * ptr = obj->screen ( par1 );
+    QWidget * ptr = obj->screen ( OPINT(1,-1) );
     _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
@@ -183,8 +181,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY1 )
   QDesktopWidget * obj = (QDesktopWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = ISNIL(1)? -1 : hb_parni(1);
-    QRect * ptr = new QRect( obj->screenGeometry ( par1 ) );
+    QRect * ptr = new QRect( obj->screenGeometry ( OPINT(1,-1) ) );
     _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }

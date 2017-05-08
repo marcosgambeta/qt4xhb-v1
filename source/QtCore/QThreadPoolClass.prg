@@ -185,8 +185,7 @@ HB_FUNC_STATIC( QTHREADPOOL_START )
   if( obj )
   {
     QRunnable * par1 = (QRunnable *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par2 = ISNIL(2)? 0 : hb_parni(2);
-    obj->start ( par1, par2 );
+    obj->start ( par1, OPINT(2,0) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

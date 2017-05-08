@@ -101,9 +101,7 @@ HB_FUNC_STATIC( QSCROLLAREA_ENSUREVISIBLE )
   {
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
-    int par3 = ISNIL(3)? 50 : hb_parni(3);
-    int par4 = ISNIL(4)? 50 : hb_parni(4);
-    obj->ensureVisible ( par1, par2, par3, par4 );
+    obj->ensureVisible ( par1, par2, OPINT(3,50), OPINT(4,50) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -118,9 +116,7 @@ HB_FUNC_STATIC( QSCROLLAREA_ENSUREWIDGETVISIBLE )
   if( obj )
   {
     QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par2 = ISNIL(2)? 50 : hb_parni(2);
-    int par3 = ISNIL(3)? 50 : hb_parni(3);
-    obj->ensureWidgetVisible ( par1, par2, par3 );
+    obj->ensureWidgetVisible ( par1, OPINT(2,50), OPINT(3,50) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -47,9 +47,7 @@ QStyleHintReturn ( int version = QStyleOption::Version, int type = SH_Default )
 HB_FUNC_STATIC( QSTYLEHINTRETURN_NEW )
 {
   QStyleHintReturn * o = NULL;
-  int par1 = ISNIL(1)? QStyleOption::Version : hb_parni(1);
-  int par2 = ISNIL(2)? QStyleHintReturn::SH_Default : hb_parni(2);
-  o = new QStyleHintReturn ( par1, par2 );
+  o = new QStyleHintReturn ( OPINT(1,QStyleOption::Version), OPINT(2,QStyleHintReturn::SH_Default) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

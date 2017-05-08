@@ -95,8 +95,7 @@ QTableWidgetItem ( int type = Type )
 HB_FUNC_STATIC( QTABLEWIDGETITEM_NEW1 )
 {
   QTableWidgetItem * o = NULL;
-  int par1 = ISNIL(1)? QTableWidgetItem::Type : hb_parni(1);
-  o = new QTableWidgetItem ( par1 );
+  o = new QTableWidgetItem ( OPINT(1,QTableWidgetItem::Type) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -107,8 +106,7 @@ QTableWidgetItem ( const QString & text, int type = Type )
 HB_FUNC_STATIC( QTABLEWIDGETITEM_NEW2 )
 {
   QTableWidgetItem * o = NULL;
-  int par2 = ISNIL(2)? QTableWidgetItem::Type : hb_parni(2);
-  o = new QTableWidgetItem ( PQSTRING(1), par2 );
+  o = new QTableWidgetItem ( PQSTRING(1), OPINT(2,QTableWidgetItem::Type) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -120,8 +118,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_NEW3 )
 {
   QTableWidgetItem * o = NULL;
   QIcon par1 = ISOBJECT(1)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(1));
-  int par3 = ISNIL(3)? QTableWidgetItem::Type : hb_parni(3);
-  o = new QTableWidgetItem ( par1, PQSTRING(2), par3 );
+  o = new QTableWidgetItem ( par1, PQSTRING(2), OPINT(3,QTableWidgetItem::Type) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

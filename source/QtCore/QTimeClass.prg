@@ -89,9 +89,7 @@ HB_FUNC_STATIC( QTIME_NEW2 )
   QTime * o = NULL;
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
-  int par3 = ISNIL(3)? 0 : hb_parni(3);
-  int par4 = ISNIL(4)? 0 : hb_parni(4);
-  o = new QTime ( par1, par2, par3, par4 );
+  o = new QTime ( par1, par2, OPINT(3,0), OPINT(4,0) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -316,8 +314,7 @@ HB_FUNC_STATIC( QTIME_SETHMS )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     int par3 = hb_parni(3);
-    int par4 = ISNIL(4)? 0 : hb_parni(4);
-    hb_retl( obj->setHMS ( par1, par2, par3, par4 ) );
+    hb_retl( obj->setHMS ( par1, par2, par3, OPINT(4,0) ) );
   }
 }
 
@@ -434,8 +431,7 @@ HB_FUNC_STATIC( QTIME_ISVALID2 )
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
   int par3 = hb_parni(3);
-  int par4 = ISNIL(4)? 0 : hb_parni(4);
-  hb_retl( QTime::isValid ( par1, par2, par3, par4 ) );
+  hb_retl( QTime::isValid ( par1, par2, par3, OPINT(4,0) ) );
 }
 
 

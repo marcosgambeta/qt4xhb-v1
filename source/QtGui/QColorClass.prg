@@ -156,8 +156,7 @@ HB_FUNC_STATIC( QCOLOR_NEW2 )
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
   int par3 = hb_parni(3);
-  int par4 = ISNIL(4)? 255 : hb_parni(4);
-  o = new QColor ( par1, par2, par3, par4 );
+  o = new QColor ( par1, par2, par3, OPINT(4,255) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -414,8 +413,7 @@ HB_FUNC_STATIC( QCOLOR_DARKER )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = ISNIL(1)? 200 : hb_parni(1);
-    QColor * ptr = new QColor( obj->darker ( par1 ) );
+    QColor * ptr = new QColor( obj->darker ( OPINT(1,200) ) );
     _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }
@@ -784,8 +782,7 @@ HB_FUNC_STATIC( QCOLOR_LIGHTER )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = ISNIL(1)? 150 : hb_parni(1);
-    QColor * ptr = new QColor( obj->lighter ( par1 ) );
+    QColor * ptr = new QColor( obj->lighter ( OPINT(1,150) ) );
     _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }
@@ -1011,8 +1008,7 @@ HB_FUNC_STATIC( QCOLOR_SETCMYK )
     int par2 = hb_parni(2);
     int par3 = hb_parni(3);
     int par4 = hb_parni(4);
-    int par5 = ISNIL(5)? 255 : hb_parni(5);
-    obj->setCmyk ( par1, par2, par3, par4, par5 );
+    obj->setCmyk ( par1, par2, par3, par4, OPINT(5,255) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1072,8 +1068,7 @@ HB_FUNC_STATIC( QCOLOR_SETHSL )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     int par3 = hb_parni(3);
-    int par4 = ISNIL(4)? 255 : hb_parni(4);
-    obj->setHsl ( par1, par2, par3, par4 );
+    obj->setHsl ( par1, par2, par3, OPINT(4,255) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1104,8 +1099,7 @@ HB_FUNC_STATIC( QCOLOR_SETHSV )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     int par3 = hb_parni(3);
-    int par4 = ISNIL(4)? 255 : hb_parni(4);
-    obj->setHsv ( par1, par2, par3, par4 );
+    obj->setHsv ( par1, par2, par3, OPINT(4,255) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1179,8 +1173,7 @@ HB_FUNC_STATIC( QCOLOR_SETRGB1 )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     int par3 = hb_parni(3);
-    int par4 = ISNIL(4)? 255 : hb_parni(4);
-    obj->setRgb ( par1, par2, par3, par4 );
+    obj->setRgb ( par1, par2, par3, OPINT(4,255) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1402,8 +1395,7 @@ HB_FUNC_STATIC( QCOLOR_FROMCMYK )
   int par2 = hb_parni(2);
   int par3 = hb_parni(3);
   int par4 = hb_parni(4);
-  int par5 = ISNIL(5)? 255 : hb_parni(5);
-  QColor * ptr = new QColor( QColor::fromCmyk ( par1, par2, par3, par4, par5 ) );
+  QColor * ptr = new QColor( QColor::fromCmyk ( par1, par2, par3, par4, OPINT(5,255) ) );
   _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
 }
 
@@ -1426,8 +1418,7 @@ HB_FUNC_STATIC( QCOLOR_FROMHSL )
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
   int par3 = hb_parni(3);
-  int par4 = ISNIL(4)? 255 : hb_parni(4);
-  QColor * ptr = new QColor( QColor::fromHsl ( par1, par2, par3, par4 ) );
+  QColor * ptr = new QColor( QColor::fromHsl ( par1, par2, par3, OPINT(4,255) ) );
   _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
 }
 
@@ -1450,8 +1441,7 @@ HB_FUNC_STATIC( QCOLOR_FROMHSV )
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
   int par3 = hb_parni(3);
-  int par4 = ISNIL(4)? 255 : hb_parni(4);
-  QColor * ptr = new QColor( QColor::fromHsv ( par1, par2, par3, par4 ) );
+  QColor * ptr = new QColor( QColor::fromHsv ( par1, par2, par3, OPINT(4,255) ) );
   _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
 }
 
@@ -1485,8 +1475,7 @@ HB_FUNC_STATIC( QCOLOR_FROMRGB2 )
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
   int par3 = hb_parni(3);
-  int par4 = ISNIL(4)? 255 : hb_parni(4);
-  QColor * ptr = new QColor( QColor::fromRgb ( par1, par2, par3, par4 ) );
+  QColor * ptr = new QColor( QColor::fromRgb ( par1, par2, par3, OPINT(4,255) ) );
   _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
 }
 
