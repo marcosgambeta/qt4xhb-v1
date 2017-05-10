@@ -15,7 +15,7 @@
 #include <QAbstractSpinBox>
 
 #include "qt4xhb_common.h"
-#include "qt4xhb_clsid.h"
+#include "qt4xhb_macros.h"
 
 void QAbstractSpinBox_release_codeblocks ();
 

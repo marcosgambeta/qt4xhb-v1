@@ -15,7 +15,7 @@
 #include <QFutureWatcherBase>
 
 #include "qt4xhb_common.h"
-#include "qt4xhb_clsid.h"
+#include "qt4xhb_macros.h"
 
 void QFutureWatcherBase_release_codeblocks ();
 

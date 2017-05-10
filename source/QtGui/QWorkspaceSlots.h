@@ -15,7 +15,7 @@
 #include <QWorkspace>
 
 #include "qt4xhb_common.h"
-#include "qt4xhb_clsid.h"
+#include "qt4xhb_macros.h"
 
 void QWorkspace_release_codeblocks ();
 

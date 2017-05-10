@@ -16,7 +16,7 @@
 #include <QSslError>
 
 #include "qt4xhb_common.h"
-#include "qt4xhb_clsid.h"
+#include "qt4xhb_macros.h"
 
 void QSslSocket_release_codeblocks ();
 

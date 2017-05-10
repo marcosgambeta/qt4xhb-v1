@@ -15,7 +15,7 @@
 #include <QDesignerPropertyEditorInterface>
 
 #include "qt4xhb_common.h"
-#include "qt4xhb_clsid.h"
+#include "qt4xhb_macros.h"
 
 void QDesignerPropertyEditorInterface_release_codeblocks ();
 

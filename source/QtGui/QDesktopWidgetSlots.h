@@ -15,7 +15,7 @@
 #include <QDesktopWidget>
 
 #include "qt4xhb_common.h"
-#include "qt4xhb_clsid.h"
+#include "qt4xhb_macros.h"
 
 void QDesktopWidget_release_codeblocks ();
 

@@ -15,7 +15,7 @@
 #include <QGraphicsDropShadowEffect>
 
 #include "qt4xhb_common.h"
-#include "qt4xhb_clsid.h"
+#include "qt4xhb_macros.h"
 
 void QGraphicsDropShadowEffect_release_codeblocks ();
 

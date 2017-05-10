@@ -15,7 +15,7 @@
 #include <QToolBar>
 
 #include "qt4xhb_common.h"
-#include "qt4xhb_clsid.h"
+#include "qt4xhb_macros.h"
 
 void QToolBar_release_codeblocks ();
 

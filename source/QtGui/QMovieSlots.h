@@ -15,7 +15,7 @@
 #include <QMovie>
 
 #include "qt4xhb_common.h"
-#include "qt4xhb_clsid.h"
+#include "qt4xhb_macros.h"
 
 void QMovie_release_codeblocks ();
 

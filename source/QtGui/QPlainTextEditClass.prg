@@ -110,7 +110,7 @@ RETURN
 #include <QPlainTextEdit>
 
 #include "qt4xhb_common.h"
-#include "qt4xhb_clsid.h"
+#include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
 /*

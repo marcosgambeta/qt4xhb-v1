@@ -15,7 +15,7 @@
 #include <QSqlDriver>
 
 #include "qt4xhb_common.h"
-#include "qt4xhb_clsid.h"
+#include "qt4xhb_macros.h"
 
 void QSqlDriver_release_codeblocks ();
 

@@ -15,7 +15,7 @@
 #include <QMdiSubWindow>
 
 #include "qt4xhb_common.h"
-#include "qt4xhb_clsid.h"
+#include "qt4xhb_macros.h"
 
 void QMdiSubWindow_release_codeblocks ();
 

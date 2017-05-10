@@ -15,7 +15,7 @@
 #include <QAbstractTransition>
 
 #include "qt4xhb_common.h"
-#include "qt4xhb_clsid.h"
+#include "qt4xhb_macros.h"
 
 void QAbstractTransition_release_codeblocks ();
 

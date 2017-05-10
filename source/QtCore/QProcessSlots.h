@@ -15,7 +15,7 @@
 #include <QProcess>
 
 #include "qt4xhb_common.h"
-#include "qt4xhb_clsid.h"
+#include "qt4xhb_macros.h"
 
 void QProcess_release_codeblocks ();
 

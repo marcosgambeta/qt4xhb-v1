@@ -15,7 +15,7 @@
 #include <QDeclarativeComponent>
 
 #include "qt4xhb_common.h"
-#include "qt4xhb_clsid.h"
+#include "qt4xhb_macros.h"
 
 void QDeclarativeComponent_release_codeblocks ();
 

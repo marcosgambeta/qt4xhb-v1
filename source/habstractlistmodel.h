@@ -30,7 +30,7 @@
 #define ISOBJECT HB_ISOBJECT
 #define ISARRAY HB_ISARRAY
 #endif
-#include "qt4xhb_clsid.h"
+#include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
 class HAbstractListModel : public QAbstractListModel

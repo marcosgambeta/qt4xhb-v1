@@ -15,7 +15,7 @@
 #include <QDrag>
 
 #include "qt4xhb_common.h"
-#include "qt4xhb_clsid.h"
+#include "qt4xhb_macros.h"
 
 void QDrag_release_codeblocks ();
 

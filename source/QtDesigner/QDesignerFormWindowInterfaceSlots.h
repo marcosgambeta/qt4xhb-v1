@@ -15,7 +15,7 @@
 #include <QDesignerFormWindowInterface>
 
 #include "qt4xhb_common.h"
-#include "qt4xhb_clsid.h"
+#include "qt4xhb_macros.h"
 
 void QDesignerFormWindowInterface_release_codeblocks ();
 

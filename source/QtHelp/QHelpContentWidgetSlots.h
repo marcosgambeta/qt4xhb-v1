@@ -15,7 +15,7 @@
 #include <QHelpContentWidget>
 
 #include "qt4xhb_common.h"
-#include "qt4xhb_clsid.h"
+#include "qt4xhb_macros.h"
 
 void QHelpContentWidget_release_codeblocks ();
 

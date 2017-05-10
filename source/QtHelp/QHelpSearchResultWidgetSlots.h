@@ -15,7 +15,7 @@
 #include <QHelpSearchResultWidget>
 
 #include "qt4xhb_common.h"
-#include "qt4xhb_clsid.h"
+#include "qt4xhb_macros.h"
 
 void QHelpSearchResultWidget_release_codeblocks ();
 

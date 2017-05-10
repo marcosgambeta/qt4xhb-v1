@@ -15,7 +15,7 @@
 #include <QStatusBar>
 
 #include "qt4xhb_common.h"
-#include "qt4xhb_clsid.h"
+#include "qt4xhb_macros.h"
 
 void QStatusBar_release_codeblocks ();
 

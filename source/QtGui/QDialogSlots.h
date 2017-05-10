@@ -15,7 +15,7 @@
 #include <QDialog>
 
 #include "qt4xhb_common.h"
-#include "qt4xhb_clsid.h"
+#include "qt4xhb_macros.h"
 
 void QDialog_release_codeblocks ();
 

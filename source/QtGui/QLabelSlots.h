@@ -15,7 +15,7 @@
 #include <QLabel>
 
 #include "qt4xhb_common.h"
-#include "qt4xhb_clsid.h"
+#include "qt4xhb_macros.h"
 
 void QLabel_release_codeblocks ();
 

@@ -15,7 +15,7 @@
 #include <QDeclarativePropertyMap>
 
 #include "qt4xhb_common.h"
-#include "qt4xhb_clsid.h"
+#include "qt4xhb_macros.h"
 
 void QDeclarativePropertyMap_release_codeblocks ();
 

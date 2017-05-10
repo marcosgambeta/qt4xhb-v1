@@ -15,7 +15,7 @@
 #include <QWebPage>
 
 #include "qt4xhb_common.h"
-#include "qt4xhb_clsid.h"
+#include "qt4xhb_macros.h"
 
 void QWebPage_release_codeblocks ();
 

@@ -15,7 +15,7 @@
 #include <QVariantAnimation>
 
 #include "qt4xhb_common.h"
-#include "qt4xhb_clsid.h"
+#include "qt4xhb_macros.h"
 
 void QVariantAnimation_release_codeblocks ();
 

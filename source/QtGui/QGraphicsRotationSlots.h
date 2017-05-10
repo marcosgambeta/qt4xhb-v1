@@ -15,7 +15,7 @@
 #include <QGraphicsRotation>
 
 #include "qt4xhb_common.h"
-#include "qt4xhb_clsid.h"
+#include "qt4xhb_macros.h"
 
 void QGraphicsRotation_release_codeblocks ();
 

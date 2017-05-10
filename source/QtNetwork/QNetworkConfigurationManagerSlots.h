@@ -15,7 +15,7 @@
 #include <QNetworkConfigurationManager>
 
 #include "qt4xhb_common.h"
-#include "qt4xhb_clsid.h"
+#include "qt4xhb_macros.h"
 
 void QNetworkConfigurationManager_release_codeblocks ();
 

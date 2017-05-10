@@ -15,7 +15,7 @@
 #include <QAxScript>
 
 #include "qt4xhb_common.h"
-#include "qt4xhb_clsid.h"
+#include "qt4xhb_macros.h"
 
 void QAxScript_release_codeblocks ();
 

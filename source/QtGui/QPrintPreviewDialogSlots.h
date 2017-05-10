@@ -15,7 +15,7 @@
 #include <QPrintPreviewDialog>
 
 #include "qt4xhb_common.h"
-#include "qt4xhb_clsid.h"
+#include "qt4xhb_macros.h"
 
 void QPrintPreviewDialog_release_codeblocks ();
 

@@ -15,7 +15,7 @@
 #include <QTcpServer>
 
 #include "qt4xhb_common.h"
-#include "qt4xhb_clsid.h"
+#include "qt4xhb_macros.h"
 
 void QTcpServer_release_codeblocks ();
 

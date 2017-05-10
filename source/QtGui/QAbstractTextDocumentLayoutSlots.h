@@ -15,7 +15,7 @@
 #include <QAbstractTextDocumentLayout>
 
 #include "qt4xhb_common.h"
-#include "qt4xhb_clsid.h"
+#include "qt4xhb_macros.h"
 
 void QAbstractTextDocumentLayout_release_codeblocks ();
 

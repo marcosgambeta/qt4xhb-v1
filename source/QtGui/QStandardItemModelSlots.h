@@ -15,7 +15,7 @@
 #include <QStandardItemModel>
 
 #include "qt4xhb_common.h"
-#include "qt4xhb_clsid.h"
+#include "qt4xhb_macros.h"
 
 void QStandardItemModel_release_codeblocks ();
 
