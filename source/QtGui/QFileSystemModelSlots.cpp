@@ -27,7 +27,7 @@ void SlotsQFileSystemModel::directoryLoaded ( const QString & path )
       if( ( (QString) list2.at(i) == (QString) "directoryLoaded(QString)" ) && ( (bool) list4.at(i) == true ) )
       {
         PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-        PHB_ITEM ppath = hb_itemPutC( NULL, (const char *) path.toLatin1().data() );
+        PHB_ITEM ppath = hb_itemPutC( NULL, RQSTRING(path) );
         hb_vmEvalBlockV( (PHB_ITEM) list3.at(i), 2, psender, ppath );
         hb_itemRelease( psender );
         hb_itemRelease( ppath );
@@ -45,9 +45,9 @@ void SlotsQFileSystemModel::fileRenamed ( const QString & path, const QString & 
       if( ( (QString) list2.at(i) == (QString) "fileRenamed(QString,QString,QString)" ) && ( (bool) list4.at(i) == true ) )
       {
         PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-        PHB_ITEM ppath = hb_itemPutC( NULL, (const char *) path.toLatin1().data() );
-        PHB_ITEM poldName = hb_itemPutC( NULL, (const char *) oldName.toLatin1().data() );
-        PHB_ITEM pnewName = hb_itemPutC( NULL, (const char *) newName.toLatin1().data() );
+        PHB_ITEM ppath = hb_itemPutC( NULL, RQSTRING(path) );
+        PHB_ITEM poldName = hb_itemPutC( NULL, RQSTRING(oldName) );
+        PHB_ITEM pnewName = hb_itemPutC( NULL, RQSTRING(newName) );
         hb_vmEvalBlockV( (PHB_ITEM) list3.at(i), 4, psender, ppath, poldName, pnewName );
         hb_itemRelease( psender );
         hb_itemRelease( ppath );
@@ -67,7 +67,7 @@ void SlotsQFileSystemModel::rootPathChanged ( const QString & newPath )
       if( ( (QString) list2.at(i) == (QString) "rootPathChanged(QString)" ) && ( (bool) list4.at(i) == true ) )
       {
         PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-        PHB_ITEM pnewPath = hb_itemPutC( NULL, (const char *) newPath.toLatin1().data() );
+        PHB_ITEM pnewPath = hb_itemPutC( NULL, RQSTRING(newPath) );
         hb_vmEvalBlockV( (PHB_ITEM) list3.at(i), 2, psender, pnewPath );
         hb_itemRelease( psender );
         hb_itemRelease( pnewPath );

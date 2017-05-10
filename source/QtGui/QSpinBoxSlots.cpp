@@ -45,7 +45,7 @@ void SlotsQSpinBox::valueChanged ( const QString & text )
       if( ( (QString) list2.at(i) == (QString) "valueChanged(QString)" ) && ( (bool) list4.at(i) == true ) )
       {
         PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-        PHB_ITEM ptext = hb_itemPutC( NULL, (const char *) text.toLatin1().data() );
+        PHB_ITEM ptext = hb_itemPutC( NULL, RQSTRING(text) );
         hb_vmEvalBlockV( (PHB_ITEM) list3.at(i), 2, psender, ptext );
         hb_itemRelease( psender );
         hb_itemRelease( ptext );

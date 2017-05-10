@@ -27,7 +27,7 @@ void SlotsQDesignerPropertyEditorInterface::propertyChanged ( const QString & na
       if( ( (QString) list2.at(i) == (QString) "propertyChanged(QString,QVariant)" ) && ( (bool) list4.at(i) == true ) )
       {
         PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-        PHB_ITEM pname = hb_itemPutC( NULL, (const char *) name.toLatin1().data() );
+        PHB_ITEM pname = hb_itemPutC( NULL, RQSTRING(name) );
         PHB_ITEM pvalue = hb_itemPutPtr( NULL, (QVariant *) &value );
         hb_vmEvalBlockV( (PHB_ITEM) list3.at(i), 3, psender, pname, pvalue );
         hb_itemRelease( psender );

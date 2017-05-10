@@ -27,7 +27,7 @@ void SlotsQSqlDriver::notification ( const QString & name )
       if( ( (QString) list2.at(i) == (QString) "notification(QString)" ) && ( (bool) list4.at(i) == true ) )
       {
         PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-        PHB_ITEM pname = hb_itemPutC( NULL, (const char *) name.toLatin1().data() );
+        PHB_ITEM pname = hb_itemPutC( NULL, RQSTRING(name) );
         hb_vmEvalBlockV( (PHB_ITEM) list3.at(i), 2, psender, pname );
         hb_itemRelease( psender );
         hb_itemRelease( pname );

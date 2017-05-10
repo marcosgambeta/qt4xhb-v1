@@ -122,7 +122,7 @@ void SlotsQFtp::rawCommandReply ( int replyCode, const QString & detail )
       {
         PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
         PHB_ITEM preplyCode = hb_itemPutNI( NULL, replyCode );
-        PHB_ITEM pdetail = hb_itemPutC( NULL, (const char *) detail.toLatin1().data() );
+        PHB_ITEM pdetail = hb_itemPutC( NULL, RQSTRING(detail) );
         hb_vmEvalBlockV( (PHB_ITEM) list3.at(i), 3, psender, preplyCode, pdetail );
         hb_itemRelease( psender );
         hb_itemRelease( preplyCode );

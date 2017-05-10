@@ -45,7 +45,7 @@ void SlotsQSignalMapper::mapped(const QString & s)
       if( ( (QString) list2.at(i) == (QString) "mapped(QString)" ) && ( (bool) list4.at(i) == true ) )
       {
         PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-        PHB_ITEM ps = hb_itemPutC( NULL, (const char *) s.toLatin1().data() );
+        PHB_ITEM ps = hb_itemPutC( NULL, RQSTRING(s) );
         hb_vmEvalBlockV( (PHB_ITEM) list3.at(i), 2, psender, ps );
         hb_itemRelease( psender );
         hb_itemRelease( ps );

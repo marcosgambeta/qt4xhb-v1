@@ -44,7 +44,7 @@ void SlotsQWebPage::databaseQuotaExceeded ( QWebFrame * frame, QString databaseN
       {
         PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
         PHB_ITEM pframe = hb_itemPutPtr( NULL, (QWebFrame *) frame );
-        PHB_ITEM pdatabaseName = hb_itemPutC( NULL, (const char *) databaseName.toLatin1().data() );
+        PHB_ITEM pdatabaseName = hb_itemPutC( NULL, RQSTRING(databaseName) );
         hb_vmEvalBlockV( (PHB_ITEM) list3.at(i), 3, psender, pframe, pdatabaseName );
         hb_itemRelease( psender );
         hb_itemRelease( pframe );
@@ -135,9 +135,9 @@ void SlotsQWebPage::linkHovered ( const QString & link, const QString & title, c
       if( ( (QString) list2.at(i) == (QString) "linkHovered(QString,QString,QString)" ) && ( (bool) list4.at(i) == true ) )
       {
         PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-        PHB_ITEM plink = hb_itemPutC( NULL, (const char *) link.toLatin1().data() );
-        PHB_ITEM ptitle = hb_itemPutC( NULL, (const char *) title.toLatin1().data() );
-        PHB_ITEM ptextContent = hb_itemPutC( NULL, (const char *) textContent.toLatin1().data() );
+        PHB_ITEM plink = hb_itemPutC( NULL, RQSTRING(link) );
+        PHB_ITEM ptitle = hb_itemPutC( NULL, RQSTRING(title) );
+        PHB_ITEM ptextContent = hb_itemPutC( NULL, RQSTRING(textContent) );
         hb_vmEvalBlockV( (PHB_ITEM) list3.at(i), 4, psender, plink, ptitle, ptextContent );
         hb_itemRelease( psender );
         hb_itemRelease( plink );
@@ -355,7 +355,7 @@ void SlotsQWebPage::statusBarMessage ( const QString & text )
       if( ( (QString) list2.at(i) == (QString) "statusBarMessage(QString)" ) && ( (bool) list4.at(i) == true ) )
       {
         PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-        PHB_ITEM ptext = hb_itemPutC( NULL, (const char *) text.toLatin1().data() );
+        PHB_ITEM ptext = hb_itemPutC( NULL, RQSTRING(text) );
         hb_vmEvalBlockV( (PHB_ITEM) list3.at(i), 2, psender, ptext );
         hb_itemRelease( psender );
         hb_itemRelease( ptext );

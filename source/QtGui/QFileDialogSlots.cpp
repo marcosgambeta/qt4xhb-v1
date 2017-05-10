@@ -27,7 +27,7 @@ void SlotsQFileDialog::currentChanged ( const QString & path )
       if( ( (QString) list2.at(i) == (QString) "currentChanged(QString)" ) && ( (bool) list4.at(i) == true ) )
       {
         PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-        PHB_ITEM ppath = hb_itemPutC( NULL, (const char *) path.toLatin1().data() );
+        PHB_ITEM ppath = hb_itemPutC( NULL, RQSTRING(path) );
         hb_vmEvalBlockV( (PHB_ITEM) list3.at(i), 2, psender, ppath );
         hb_itemRelease( psender );
         hb_itemRelease( ppath );
@@ -45,7 +45,7 @@ void SlotsQFileDialog::directoryEntered ( const QString & directory )
       if( ( (QString) list2.at(i) == (QString) "directoryEntered(QString)" ) && ( (bool) list4.at(i) == true ) )
       {
         PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-        PHB_ITEM pdirectory = hb_itemPutC( NULL, (const char *) directory.toLatin1().data() );
+        PHB_ITEM pdirectory = hb_itemPutC( NULL, RQSTRING(directory) );
         hb_vmEvalBlockV( (PHB_ITEM) list3.at(i), 2, psender, pdirectory );
         hb_itemRelease( psender );
         hb_itemRelease( pdirectory );
@@ -63,7 +63,7 @@ void SlotsQFileDialog::fileSelected ( const QString & file )
       if( ( (QString) list2.at(i) == (QString) "fileSelected(QString)" ) && ( (bool) list4.at(i) == true ) )
       {
         PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-        PHB_ITEM pfile = hb_itemPutC( NULL, (const char *) file.toLatin1().data() );
+        PHB_ITEM pfile = hb_itemPutC( NULL, RQSTRING(file) );
         hb_vmEvalBlockV( (PHB_ITEM) list3.at(i), 2, psender, pfile );
         hb_itemRelease( psender );
         hb_itemRelease( pfile );
@@ -99,7 +99,7 @@ void SlotsQFileDialog::filterSelected ( const QString & filter )
       if( ( (QString) list2.at(i) == (QString) "filterSelected(QString)" ) && ( (bool) list4.at(i) == true ) )
       {
         PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-        PHB_ITEM pfilter = hb_itemPutC( NULL, (const char *) filter.toLatin1().data() );
+        PHB_ITEM pfilter = hb_itemPutC( NULL, RQSTRING(filter) );
         hb_vmEvalBlockV( (PHB_ITEM) list3.at(i), 2, psender, pfilter );
         hb_itemRelease( psender );
         hb_itemRelease( pfilter );

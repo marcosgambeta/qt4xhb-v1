@@ -99,7 +99,7 @@ void SlotsQUndoStack::redoTextChanged ( const QString & redoText )
       if( ( (QString) list2.at(i) == (QString) "redoTextChanged(QString)" ) && ( (bool) list4.at(i) == true ) )
       {
         PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-        PHB_ITEM predoText = hb_itemPutC( NULL, (const char *) redoText.toLatin1().data() );
+        PHB_ITEM predoText = hb_itemPutC( NULL, RQSTRING(redoText) );
         hb_vmEvalBlockV( (PHB_ITEM) list3.at(i), 2, psender, predoText );
         hb_itemRelease( psender );
         hb_itemRelease( predoText );
@@ -117,7 +117,7 @@ void SlotsQUndoStack::undoTextChanged ( const QString & undoText )
       if( ( (QString) list2.at(i) == (QString) "undoTextChanged(QString)" ) && ( (bool) list4.at(i) == true ) )
       {
         PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-        PHB_ITEM pundoText = hb_itemPutC( NULL, (const char *) undoText.toLatin1().data() );
+        PHB_ITEM pundoText = hb_itemPutC( NULL, RQSTRING(undoText) );
         hb_vmEvalBlockV( (PHB_ITEM) list3.at(i), 2, psender, pundoText );
         hb_itemRelease( psender );
         hb_itemRelease( pundoText );

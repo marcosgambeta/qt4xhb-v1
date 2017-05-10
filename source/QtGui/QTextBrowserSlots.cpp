@@ -99,7 +99,7 @@ void SlotsQTextBrowser::highlighted ( const QString & link )
       if( ( (QString) list2.at(i) == (QString) "highlighted(QString)" ) && ( (bool) list4.at(i) == true ) )
       {
         PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-        PHB_ITEM plink = hb_itemPutC( NULL, (const char *) link.toLatin1().data() );
+        PHB_ITEM plink = hb_itemPutC( NULL, RQSTRING(link) );
         hb_vmEvalBlockV( (PHB_ITEM) list3.at(i), 2, psender, plink );
         hb_itemRelease( psender );
         hb_itemRelease( plink );

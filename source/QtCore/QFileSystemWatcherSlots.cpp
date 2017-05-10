@@ -27,7 +27,7 @@ void SlotsQFileSystemWatcher::directoryChanged(const QString & path)
       if( ( (QString) list2.at(i) == (QString) "directoryChanged(QString)" ) && ( (bool) list4.at(i) == true ) )
       {
         PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-        PHB_ITEM ppath = hb_itemPutC( NULL, (const char *) path.toLatin1().data() );
+        PHB_ITEM ppath = hb_itemPutC( NULL, RQSTRING(path) );
         hb_vmEvalBlockV( (PHB_ITEM) list3.at(i), 2, psender, ppath );
         hb_itemRelease( psender );
         hb_itemRelease( ppath );
@@ -45,7 +45,7 @@ void SlotsQFileSystemWatcher::fileChanged(const QString & path)
       if( ( (QString) list2.at(i) == (QString) "fileChanged(QString)" ) && ( (bool) list4.at(i) == true ) )
       {
         PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-        PHB_ITEM ppath = hb_itemPutC( NULL, (const char *) path.toLatin1().data() );
+        PHB_ITEM ppath = hb_itemPutC( NULL, RQSTRING(path) );
         hb_vmEvalBlockV( (PHB_ITEM) list3.at(i), 2, psender, ppath );
         hb_itemRelease( psender );
         hb_itemRelease( ppath );

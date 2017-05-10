@@ -28,9 +28,9 @@ void SlotsQAxObject::exception ( int code, const QString & source, const QString
       {
         PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
         PHB_ITEM pcode = hb_itemPutNI( NULL, code );
-        PHB_ITEM psource = hb_itemPutC( NULL, (const char *) source.toLatin1().data() );
-        PHB_ITEM pdesc = hb_itemPutC( NULL, (const char *) desc.toLatin1().data() );
-        PHB_ITEM phelp = hb_itemPutC( NULL, (const char *) help.toLatin1().data() );
+        PHB_ITEM psource = hb_itemPutC( NULL, RQSTRING(source) );
+        PHB_ITEM pdesc = hb_itemPutC( NULL, RQSTRING(desc) );
+        PHB_ITEM phelp = hb_itemPutC( NULL, RQSTRING(help) );
         hb_vmEvalBlockV( (PHB_ITEM) list3.at(i), 5, psender, pcode, psource, pdesc, phelp );
         hb_itemRelease( psender );
         hb_itemRelease( pcode );
@@ -51,7 +51,7 @@ void SlotsQAxObject::propertyChanged ( const QString & name )
       if( ( (QString) list2.at(i) == (QString) "propertyChanged(QString)" ) && ( (bool) list4.at(i) == true ) )
       {
         PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-        PHB_ITEM pname = hb_itemPutC( NULL, (const char *) name.toLatin1().data() );
+        PHB_ITEM pname = hb_itemPutC( NULL, RQSTRING(name) );
         hb_vmEvalBlockV( (PHB_ITEM) list3.at(i), 2, psender, pname );
         hb_itemRelease( psender );
         hb_itemRelease( pname );
@@ -69,7 +69,7 @@ void SlotsQAxObject::signal ( const QString & name, int argc, void * argv )
       if( ( (QString) list2.at(i) == (QString) "signal(QString,int,void *)" ) && ( (bool) list4.at(i) == true ) )
       {
         PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-        PHB_ITEM pname = hb_itemPutC( NULL, (const char *) name.toLatin1().data() );
+        PHB_ITEM pname = hb_itemPutC( NULL, RQSTRING(name) );
         PHB_ITEM pargc = hb_itemPutNI( NULL, argc );
         PHB_ITEM pargv = hb_itemPutPtr( NULL, (void *) argv );
         hb_vmEvalBlockV( (PHB_ITEM) list3.at(i), 4, psender, pname, pargc, pargv );

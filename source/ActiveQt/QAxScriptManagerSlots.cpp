@@ -29,9 +29,9 @@ void SlotsQAxScriptManager::error ( QAxScript * script, int code, const QString 
         PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
         PHB_ITEM pscript = hb_itemPutPtr( NULL, (QAxScript *) script );
         PHB_ITEM pcode = hb_itemPutNI( NULL, code );
-        PHB_ITEM pdescription = hb_itemPutC( NULL, (const char *) description.toLatin1().data() );
+        PHB_ITEM pdescription = hb_itemPutC( NULL, RQSTRING(description) );
         PHB_ITEM psourcePosition = hb_itemPutNI( NULL, sourcePosition );
-        PHB_ITEM psourceText = hb_itemPutC( NULL, (const char *) sourceText.toLatin1().data() );
+        PHB_ITEM psourceText = hb_itemPutC( NULL, RQSTRING(sourceText) );
         hb_vmEvalBlockV( (PHB_ITEM) list3.at(i), 6, psender, pscript, pcode, pdescription, psourcePosition, psourceText );
         hb_itemRelease( psender );
         hb_itemRelease( pscript );

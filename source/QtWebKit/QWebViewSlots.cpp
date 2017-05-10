@@ -129,7 +129,7 @@ void SlotsQWebView::statusBarMessage ( const QString & text )
       if( ( (QString) list2.at(i) == (QString) "statusBarMessage(QString)" ) && ( (bool) list4.at(i) == true ) )
       {
         PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-        PHB_ITEM ptext = hb_itemPutC( NULL, (const char *) text.toLatin1().data() );
+        PHB_ITEM ptext = hb_itemPutC( NULL, RQSTRING(text) );
         hb_vmEvalBlockV( (PHB_ITEM) list3.at(i), 2, psender, ptext );
         hb_itemRelease( psender );
         hb_itemRelease( ptext );
@@ -147,7 +147,7 @@ void SlotsQWebView::titleChanged ( const QString & title )
       if( ( (QString) list2.at(i) == (QString) "titleChanged(QString)" ) && ( (bool) list4.at(i) == true ) )
       {
         PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-        PHB_ITEM ptitle = hb_itemPutC( NULL, (const char *) title.toLatin1().data() );
+        PHB_ITEM ptitle = hb_itemPutC( NULL, RQSTRING(title) );
         hb_vmEvalBlockV( (PHB_ITEM) list3.at(i), 2, psender, ptitle );
         hb_itemRelease( psender );
         hb_itemRelease( ptitle );
