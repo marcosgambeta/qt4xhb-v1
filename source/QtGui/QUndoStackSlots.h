@@ -8,22 +8,21 @@
 
 #ifndef SLOTSQUNDOSTACK_H
 #define SLOTSQUNDOSTACK_H
+
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
 #include <QUndoStack>
-#include "hbapi.h"
-#include "hbapiitm.h"
-#include "hbvm.h"
-#include "hbstack.h"
-#ifndef __XHARBOUR__
-#include "hbapicls.h"
-#endif
+
+#include "qt4xhb_common.h"
+#include "qt4xhb_clsid.h"
 
 void QUndoStack_release_codeblocks ();
+
 class SlotsQUndoStack: public QObject
 {
   Q_OBJECT
+
   public:
   SlotsQUndoStack(QObject *parent = 0);
   ~SlotsQUndoStack();
@@ -31,6 +30,7 @@ class SlotsQUndoStack: public QObject
   QList<QString> list2;
   QList<PHB_ITEM> list3;
   QList<bool> list4;
+
   public slots:
   void canRedoChanged ( bool canRedo );
   void canUndoChanged ( bool canUndo );
@@ -39,4 +39,5 @@ class SlotsQUndoStack: public QObject
   void redoTextChanged ( const QString & redoText );
   void undoTextChanged ( const QString & undoText );
 };
+
 #endif

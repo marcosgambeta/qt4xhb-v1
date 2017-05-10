@@ -8,22 +8,21 @@
 
 #ifndef SLOTSQDOCKWIDGET_H
 #define SLOTSQDOCKWIDGET_H
+
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
 #include <QDockWidget>
-#include "hbapi.h"
-#include "hbapiitm.h"
-#include "hbvm.h"
-#include "hbstack.h"
-#ifndef __XHARBOUR__
-#include "hbapicls.h"
-#endif
+
+#include "qt4xhb_common.h"
+#include "qt4xhb_clsid.h"
 
 void QDockWidget_release_codeblocks ();
+
 class SlotsQDockWidget: public QObject
 {
   Q_OBJECT
+
   public:
   SlotsQDockWidget(QObject *parent = 0);
   ~SlotsQDockWidget();
@@ -31,6 +30,7 @@ class SlotsQDockWidget: public QObject
   QList<QString> list2;
   QList<PHB_ITEM> list3;
   QList<bool> list4;
+
   public slots:
   void allowedAreasChanged ( Qt::DockWidgetAreas allowedAreas );
   void dockLocationChanged ( Qt::DockWidgetArea area );
@@ -38,4 +38,5 @@ class SlotsQDockWidget: public QObject
   void topLevelChanged ( bool topLevel );
   void visibilityChanged ( bool visible );
 };
+
 #endif

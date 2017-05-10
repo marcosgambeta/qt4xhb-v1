@@ -8,22 +8,21 @@
 
 #ifndef SLOTSQITEMSELECTIONMODEL_H
 #define SLOTSQITEMSELECTIONMODEL_H
+
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
 #include <QItemSelectionModel>
-#include "hbapi.h"
-#include "hbapiitm.h"
-#include "hbvm.h"
-#include "hbstack.h"
-#ifndef __XHARBOUR__
-#include "hbapicls.h"
-#endif
+
+#include "qt4xhb_common.h"
+#include "qt4xhb_clsid.h"
 
 void QItemSelectionModel_release_codeblocks ();
+
 class SlotsQItemSelectionModel: public QObject
 {
   Q_OBJECT
+
   public:
   SlotsQItemSelectionModel(QObject *parent = 0);
   ~SlotsQItemSelectionModel();
@@ -31,10 +30,12 @@ class SlotsQItemSelectionModel: public QObject
   QList<QString> list2;
   QList<PHB_ITEM> list3;
   QList<bool> list4;
+
   public slots:
   void currentChanged ( const QModelIndex & current, const QModelIndex & previous );
   void currentColumnChanged ( const QModelIndex & current, const QModelIndex & previous );
   void currentRowChanged ( const QModelIndex & current, const QModelIndex & previous );
   void selectionChanged ( const QItemSelection & selected, const QItemSelection & deselected );
 };
+
 #endif

@@ -8,22 +8,21 @@
 
 #ifndef SLOTSQSTYLE_H
 #define SLOTSQSTYLE_H
+
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
 #include <QStyle>
-#include "hbapi.h"
-#include "hbapiitm.h"
-#include "hbvm.h"
-#include "hbstack.h"
-#ifndef __XHARBOUR__
-#include "hbapicls.h"
-#endif
+
+#include "qt4xhb_common.h"
+#include "qt4xhb_clsid.h"
 
 void QStyle_release_codeblocks ();
+
 class SlotsQStyle: public QObject
 {
   Q_OBJECT
+
   public:
   SlotsQStyle(QObject *parent = 0);
   ~SlotsQStyle();
@@ -31,9 +30,11 @@ class SlotsQStyle: public QObject
   QList<QString> list2;
   QList<PHB_ITEM> list3;
   QList<bool> list4;
+
   public slots:
   void currentChanged ( int index );
   void tabCloseRequested ( int index );
   void tabMoved ( int from, int to );
 };
+
 #endif

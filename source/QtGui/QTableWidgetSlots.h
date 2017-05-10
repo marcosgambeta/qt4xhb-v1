@@ -8,22 +8,21 @@
 
 #ifndef SLOTSQTABLEWIDGET_H
 #define SLOTSQTABLEWIDGET_H
+
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
 #include <QTableWidget>
-#include "hbapi.h"
-#include "hbapiitm.h"
-#include "hbvm.h"
-#include "hbstack.h"
-#ifndef __XHARBOUR__
-#include "hbapicls.h"
-#endif
+
+#include "qt4xhb_common.h"
+#include "qt4xhb_clsid.h"
 
 void QTableWidget_release_codeblocks ();
+
 class SlotsQTableWidget: public QObject
 {
   Q_OBJECT
+
   public:
   SlotsQTableWidget(QObject *parent = 0);
   ~SlotsQTableWidget();
@@ -31,6 +30,7 @@ class SlotsQTableWidget: public QObject
   QList<QString> list2;
   QList<PHB_ITEM> list3;
   QList<bool> list4;
+
   public slots:
   void cellActivated ( int row, int column );
   void cellChanged ( int row, int column );
@@ -48,4 +48,5 @@ class SlotsQTableWidget: public QObject
   void itemPressed ( QTableWidgetItem * item );
   void itemSelectionChanged ();
 };
+
 #endif

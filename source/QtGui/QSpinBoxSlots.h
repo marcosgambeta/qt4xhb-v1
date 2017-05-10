@@ -8,22 +8,21 @@
 
 #ifndef SLOTSQSPINBOX_H
 #define SLOTSQSPINBOX_H
+
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
 #include <QSpinBox>
-#include "hbapi.h"
-#include "hbapiitm.h"
-#include "hbvm.h"
-#include "hbstack.h"
-#ifndef __XHARBOUR__
-#include "hbapicls.h"
-#endif
+
+#include "qt4xhb_common.h"
+#include "qt4xhb_clsid.h"
 
 void QSpinBox_release_codeblocks ();
+
 class SlotsQSpinBox: public QObject
 {
   Q_OBJECT
+
   public:
   SlotsQSpinBox(QObject *parent = 0);
   ~SlotsQSpinBox();
@@ -31,8 +30,10 @@ class SlotsQSpinBox: public QObject
   QList<QString> list2;
   QList<PHB_ITEM> list3;
   QList<bool> list4;
+
   public slots:
   void valueChanged ( int i );
   void valueChanged ( const QString & text );
 };
+
 #endif

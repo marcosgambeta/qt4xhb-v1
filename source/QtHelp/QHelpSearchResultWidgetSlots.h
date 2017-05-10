@@ -8,22 +8,21 @@
 
 #ifndef SLOTSQHELPSEARCHRESULTWIDGET_H
 #define SLOTSQHELPSEARCHRESULTWIDGET_H
+
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
 #include <QHelpSearchResultWidget>
-#include "hbapi.h"
-#include "hbapiitm.h"
-#include "hbvm.h"
-#include "hbstack.h"
-#ifndef __XHARBOUR__
-#include "hbapicls.h"
-#endif
+
+#include "qt4xhb_common.h"
+#include "qt4xhb_clsid.h"
 
 void QHelpSearchResultWidget_release_codeblocks ();
+
 class SlotsQHelpSearchResultWidget: public QObject
 {
   Q_OBJECT
+
   public:
   SlotsQHelpSearchResultWidget(QObject *parent = 0);
   ~SlotsQHelpSearchResultWidget();
@@ -31,7 +30,9 @@ class SlotsQHelpSearchResultWidget: public QObject
   QList<QString> list2;
   QList<PHB_ITEM> list3;
   QList<bool> list4;
+
   public slots:
   void requestShowLink ( const QUrl & link );
 };
+
 #endif

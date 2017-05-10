@@ -8,22 +8,21 @@
 
 #ifndef SLOTSQCALENDARWIDGET_H
 #define SLOTSQCALENDARWIDGET_H
+
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
 #include <QCalendarWidget>
-#include "hbapi.h"
-#include "hbapiitm.h"
-#include "hbvm.h"
-#include "hbstack.h"
-#ifndef __XHARBOUR__
-#include "hbapicls.h"
-#endif
+
+#include "qt4xhb_common.h"
+#include "qt4xhb_clsid.h"
 
 void QCalendarWidget_release_codeblocks ();
+
 class SlotsQCalendarWidget: public QObject
 {
   Q_OBJECT
+
   public:
   SlotsQCalendarWidget(QObject *parent = 0);
   ~SlotsQCalendarWidget();
@@ -31,10 +30,12 @@ class SlotsQCalendarWidget: public QObject
   QList<QString> list2;
   QList<PHB_ITEM> list3;
   QList<bool> list4;
+
   public slots:
   void activated ( const QDate & date );
   void clicked ( const QDate & date );
   void currentPageChanged ( int year, int month );
   void selectionChanged ();
 };
+
 #endif

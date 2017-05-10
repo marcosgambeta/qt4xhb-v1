@@ -8,22 +8,21 @@
 
 #ifndef SLOTSQGRAPHICSSCALE_H
 #define SLOTSQGRAPHICSSCALE_H
+
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
 #include <QGraphicsScale>
-#include "hbapi.h"
-#include "hbapiitm.h"
-#include "hbvm.h"
-#include "hbstack.h"
-#ifndef __XHARBOUR__
-#include "hbapicls.h"
-#endif
+
+#include "qt4xhb_common.h"
+#include "qt4xhb_clsid.h"
 
 void QGraphicsScale_release_codeblocks ();
+
 class SlotsQGraphicsScale: public QObject
 {
   Q_OBJECT
+
   public:
   SlotsQGraphicsScale(QObject *parent = 0);
   ~SlotsQGraphicsScale();
@@ -31,6 +30,7 @@ class SlotsQGraphicsScale: public QObject
   QList<QString> list2;
   QList<PHB_ITEM> list3;
   QList<bool> list4;
+
   public slots:
   void originChanged ();
   void scaleChanged ();
@@ -38,4 +38,5 @@ class SlotsQGraphicsScale: public QObject
   void yScaleChanged ();
   void zScaleChanged ();
 };
+
 #endif

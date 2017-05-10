@@ -8,22 +8,21 @@
 
 #ifndef SLOTSQHELPENGINECORE_H
 #define SLOTSQHELPENGINECORE_H
+
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
 #include <QHelpEngineCore>
-#include "hbapi.h"
-#include "hbapiitm.h"
-#include "hbvm.h"
-#include "hbstack.h"
-#ifndef __XHARBOUR__
-#include "hbapicls.h"
-#endif
+
+#include "qt4xhb_common.h"
+#include "qt4xhb_clsid.h"
 
 void QHelpEngineCore_release_codeblocks ();
+
 class SlotsQHelpEngineCore: public QObject
 {
   Q_OBJECT
+
   public:
   SlotsQHelpEngineCore(QObject *parent = 0);
   ~SlotsQHelpEngineCore();
@@ -31,10 +30,12 @@ class SlotsQHelpEngineCore: public QObject
   QList<QString> list2;
   QList<PHB_ITEM> list3;
   QList<bool> list4;
+
   public slots:
   void currentFilterChanged ( const QString & newFilter );
   void setupFinished ();
   void setupStarted ();
   void warning ( const QString & msg );
 };
+
 #endif

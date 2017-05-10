@@ -8,22 +8,21 @@
 
 #ifndef SLOTSQWEBPAGE_H
 #define SLOTSQWEBPAGE_H
+
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
 #include <QWebPage>
-#include "hbapi.h"
-#include "hbapiitm.h"
-#include "hbvm.h"
-#include "hbstack.h"
-#ifndef __XHARBOUR__
-#include "hbapicls.h"
-#endif
+
+#include "qt4xhb_common.h"
+#include "qt4xhb_clsid.h"
 
 void QWebPage_release_codeblocks ();
+
 class SlotsQWebPage: public QObject
 {
   Q_OBJECT
+
   public:
   SlotsQWebPage(QObject *parent = 0);
   ~SlotsQWebPage();
@@ -31,6 +30,7 @@ class SlotsQWebPage: public QObject
   QList<QString> list2;
   QList<PHB_ITEM> list3;
   QList<bool> list4;
+
   public slots:
   void contentsChanged ();
   void databaseQuotaExceeded ( QWebFrame * frame, QString databaseName );
@@ -56,4 +56,5 @@ class SlotsQWebPage: public QObject
   void unsupportedContent ( QNetworkReply * reply );
   void windowCloseRequested ();
 };
+
 #endif

@@ -8,22 +8,21 @@
 
 #ifndef SLOTSQFILESYSTEMWATCHER_H
 #define SLOTSQFILESYSTEMWATCHER_H
+
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
 #include <QFileSystemWatcher>
-#include "hbapi.h"
-#include "hbapiitm.h"
-#include "hbvm.h"
-#include "hbstack.h"
-#ifndef __XHARBOUR__
-#include "hbapicls.h"
-#endif
+
+#include "qt4xhb_common.h"
+#include "qt4xhb_clsid.h"
 
 void QFileSystemWatcher_release_codeblocks ();
+
 class SlotsQFileSystemWatcher: public QObject
 {
   Q_OBJECT
+
   public:
   SlotsQFileSystemWatcher(QObject *parent = 0);
   ~SlotsQFileSystemWatcher();
@@ -31,8 +30,10 @@ class SlotsQFileSystemWatcher: public QObject
   QList<QString> list2;
   QList<PHB_ITEM> list3;
   QList<bool> list4;
+
   public slots:
   void directoryChanged(const QString & path);
   void fileChanged(const QString & path);
 };
+
 #endif

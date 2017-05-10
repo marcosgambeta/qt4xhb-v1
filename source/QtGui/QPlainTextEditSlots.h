@@ -8,22 +8,21 @@
 
 #ifndef SLOTSQPLAINTEXTEDIT_H
 #define SLOTSQPLAINTEXTEDIT_H
+
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
 #include <QPlainTextEdit>
-#include "hbapi.h"
-#include "hbapiitm.h"
-#include "hbvm.h"
-#include "hbstack.h"
-#ifndef __XHARBOUR__
-#include "hbapicls.h"
-#endif
+
+#include "qt4xhb_common.h"
+#include "qt4xhb_clsid.h"
 
 void QPlainTextEdit_release_codeblocks ();
+
 class SlotsQPlainTextEdit: public QObject
 {
   Q_OBJECT
+
   public:
   SlotsQPlainTextEdit(QObject *parent = 0);
   ~SlotsQPlainTextEdit();
@@ -31,6 +30,7 @@ class SlotsQPlainTextEdit: public QObject
   QList<QString> list2;
   QList<PHB_ITEM> list3;
   QList<bool> list4;
+
   public slots:
   void blockCountChanged ( int newBlockCount );
   void copyAvailable ( bool yes );
@@ -42,4 +42,5 @@ class SlotsQPlainTextEdit: public QObject
   void undoAvailable ( bool available );
   void updateRequest ( const QRect & rect, int dy );
 };
+
 #endif

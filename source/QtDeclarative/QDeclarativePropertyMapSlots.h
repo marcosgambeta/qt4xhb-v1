@@ -8,22 +8,21 @@
 
 #ifndef SLOTSQDECLARATIVEPROPERTYMAP_H
 #define SLOTSQDECLARATIVEPROPERTYMAP_H
+
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
 #include <QDeclarativePropertyMap>
-#include "hbapi.h"
-#include "hbapiitm.h"
-#include "hbvm.h"
-#include "hbstack.h"
-#ifndef __XHARBOUR__
-#include "hbapicls.h"
-#endif
+
+#include "qt4xhb_common.h"
+#include "qt4xhb_clsid.h"
 
 void QDeclarativePropertyMap_release_codeblocks ();
+
 class SlotsQDeclarativePropertyMap: public QObject
 {
   Q_OBJECT
+
   public:
   SlotsQDeclarativePropertyMap(QObject *parent = 0);
   ~SlotsQDeclarativePropertyMap();
@@ -31,7 +30,9 @@ class SlotsQDeclarativePropertyMap: public QObject
   QList<QString> list2;
   QList<PHB_ITEM> list3;
   QList<bool> list4;
+
   public slots:
   void valueChanged ( const QString & key, const QVariant & value );
 };
+
 #endif

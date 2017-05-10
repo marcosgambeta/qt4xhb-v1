@@ -8,22 +8,21 @@
 
 #ifndef SLOTSQGRAPHICSCOLORIZEEFFECT_H
 #define SLOTSQGRAPHICSCOLORIZEEFFECT_H
+
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
 #include <QGraphicsColorizeEffect>
-#include "hbapi.h"
-#include "hbapiitm.h"
-#include "hbvm.h"
-#include "hbstack.h"
-#ifndef __XHARBOUR__
-#include "hbapicls.h"
-#endif
+
+#include "qt4xhb_common.h"
+#include "qt4xhb_clsid.h"
 
 void QGraphicsColorizeEffect_release_codeblocks ();
+
 class SlotsQGraphicsColorizeEffect: public QObject
 {
   Q_OBJECT
+
   public:
   SlotsQGraphicsColorizeEffect(QObject *parent = 0);
   ~SlotsQGraphicsColorizeEffect();
@@ -31,8 +30,10 @@ class SlotsQGraphicsColorizeEffect: public QObject
   QList<QString> list2;
   QList<PHB_ITEM> list3;
   QList<bool> list4;
+
   public slots:
   void colorChanged ( const QColor & color );
   void strengthChanged ( qreal strength );
 };
+
 #endif

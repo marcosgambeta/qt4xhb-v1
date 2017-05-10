@@ -8,22 +8,21 @@
 
 #ifndef SLOTSQDIALOGBUTTONBOX_H
 #define SLOTSQDIALOGBUTTONBOX_H
+
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
 #include <QDialogButtonBox>
-#include "hbapi.h"
-#include "hbapiitm.h"
-#include "hbvm.h"
-#include "hbstack.h"
-#ifndef __XHARBOUR__
-#include "hbapicls.h"
-#endif
+
+#include "qt4xhb_common.h"
+#include "qt4xhb_clsid.h"
 
 void QDialogButtonBox_release_codeblocks ();
+
 class SlotsQDialogButtonBox: public QObject
 {
   Q_OBJECT
+
   public:
   SlotsQDialogButtonBox(QObject *parent = 0);
   ~SlotsQDialogButtonBox();
@@ -31,10 +30,12 @@ class SlotsQDialogButtonBox: public QObject
   QList<QString> list2;
   QList<PHB_ITEM> list3;
   QList<bool> list4;
+
   public slots:
   void accepted ();
   void clicked ( QAbstractButton * button );
   void helpRequested ();
   void rejected ();
 };
+
 #endif

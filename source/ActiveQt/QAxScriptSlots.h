@@ -8,22 +8,21 @@
 
 #ifndef SLOTSQAXSCRIPT_H
 #define SLOTSQAXSCRIPT_H
+
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
 #include <QAxScript>
-#include "hbapi.h"
-#include "hbapiitm.h"
-#include "hbvm.h"
-#include "hbstack.h"
-#ifndef __XHARBOUR__
-#include "hbapicls.h"
-#endif
+
+#include "qt4xhb_common.h"
+#include "qt4xhb_clsid.h"
 
 void QAxScript_release_codeblocks ();
+
 class SlotsQAxScript: public QObject
 {
   Q_OBJECT
+
   public:
   SlotsQAxScript(QObject *parent = 0);
   ~SlotsQAxScript();
@@ -31,6 +30,7 @@ class SlotsQAxScript: public QObject
   QList<QString> list2;
   QList<PHB_ITEM> list3;
   QList<bool> list4;
+
   public slots:
   void entered ();
   void error ( int code, const QString & description, int sourcePosition, const QString & sourceText );
@@ -39,4 +39,5 @@ class SlotsQAxScript: public QObject
   void finished ( int code, const QString & source, const QString & description, const QString & help );
   void stateChanged ( int state );
 };
+
 #endif

@@ -8,22 +8,21 @@
 
 #ifndef SLOTSQACTION_H
 #define SLOTSQACTION_H
+
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
 #include <QAction>
-#include "hbapi.h"
-#include "hbapiitm.h"
-#include "hbvm.h"
-#include "hbstack.h"
-#ifndef __XHARBOUR__
-#include "hbapicls.h"
-#endif
+
+#include "qt4xhb_common.h"
+#include "qt4xhb_clsid.h"
 
 void QAction_release_codeblocks ();
+
 class SlotsQAction: public QObject
 {
   Q_OBJECT
+
   public:
   SlotsQAction(QObject *parent = 0);
   ~SlotsQAction();
@@ -31,10 +30,12 @@ class SlotsQAction: public QObject
   QList<QString> list2;
   QList<PHB_ITEM> list3;
   QList<bool> list4;
+
   public slots:
   void changed ();
   void hovered ();
   void toggled ( bool checked );
   void triggered ( bool checked = false );
 };
+
 #endif

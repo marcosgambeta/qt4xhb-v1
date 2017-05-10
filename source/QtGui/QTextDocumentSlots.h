@@ -8,22 +8,21 @@
 
 #ifndef SLOTSQTEXTDOCUMENT_H
 #define SLOTSQTEXTDOCUMENT_H
+
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
 #include <QTextDocument>
-#include "hbapi.h"
-#include "hbapiitm.h"
-#include "hbvm.h"
-#include "hbstack.h"
-#ifndef __XHARBOUR__
-#include "hbapicls.h"
-#endif
+
+#include "qt4xhb_common.h"
+#include "qt4xhb_clsid.h"
 
 void QTextDocument_release_codeblocks ();
+
 class SlotsQTextDocument: public QObject
 {
   Q_OBJECT
+
   public:
   SlotsQTextDocument(QObject *parent = 0);
   ~SlotsQTextDocument();
@@ -31,6 +30,7 @@ class SlotsQTextDocument: public QObject
   QList<QString> list2;
   QList<PHB_ITEM> list3;
   QList<bool> list4;
+
   public slots:
   void blockCountChanged ( int newBlockCount );
   void contentsChange ( int position, int charsRemoved, int charsAdded );
@@ -42,4 +42,5 @@ class SlotsQTextDocument: public QObject
   void undoAvailable ( bool available );
   void undoCommandAdded ();
 };
+
 #endif

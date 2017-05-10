@@ -8,22 +8,21 @@
 
 #ifndef SLOTSQTEXTEDIT_H
 #define SLOTSQTEXTEDIT_H
+
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
 #include <QTextEdit>
-#include "hbapi.h"
-#include "hbapiitm.h"
-#include "hbvm.h"
-#include "hbstack.h"
-#ifndef __XHARBOUR__
-#include "hbapicls.h"
-#endif
+
+#include "qt4xhb_common.h"
+#include "qt4xhb_clsid.h"
 
 void QTextEdit_release_codeblocks ();
+
 class SlotsQTextEdit: public QObject
 {
   Q_OBJECT
+
   public:
   SlotsQTextEdit(QObject *parent = 0);
   ~SlotsQTextEdit();
@@ -31,6 +30,7 @@ class SlotsQTextEdit: public QObject
   QList<QString> list2;
   QList<PHB_ITEM> list3;
   QList<bool> list4;
+
   public slots:
   void copyAvailable ( bool yes );
   void currentCharFormatChanged ( const QTextCharFormat & f );
@@ -40,4 +40,5 @@ class SlotsQTextEdit: public QObject
   void textChanged ();
   void undoAvailable ( bool available );
 };
+
 #endif

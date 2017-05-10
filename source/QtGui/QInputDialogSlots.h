@@ -8,22 +8,21 @@
 
 #ifndef SLOTSQINPUTDIALOG_H
 #define SLOTSQINPUTDIALOG_H
+
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
 #include <QInputDialog>
-#include "hbapi.h"
-#include "hbapiitm.h"
-#include "hbvm.h"
-#include "hbstack.h"
-#ifndef __XHARBOUR__
-#include "hbapicls.h"
-#endif
+
+#include "qt4xhb_common.h"
+#include "qt4xhb_clsid.h"
 
 void QInputDialog_release_codeblocks ();
+
 class SlotsQInputDialog: public QObject
 {
   Q_OBJECT
+
   public:
   SlotsQInputDialog(QObject *parent = 0);
   ~SlotsQInputDialog();
@@ -31,6 +30,7 @@ class SlotsQInputDialog: public QObject
   QList<QString> list2;
   QList<PHB_ITEM> list3;
   QList<bool> list4;
+
   public slots:
   void doubleValueChanged ( double value );
   void doubleValueSelected ( double value );
@@ -39,4 +39,5 @@ class SlotsQInputDialog: public QObject
   void textValueChanged ( const QString & text );
   void textValueSelected ( const QString & text );
 };
+
 #endif

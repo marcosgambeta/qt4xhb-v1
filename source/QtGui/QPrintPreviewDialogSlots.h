@@ -8,22 +8,21 @@
 
 #ifndef SLOTSQPRINTPREVIEWDIALOG_H
 #define SLOTSQPRINTPREVIEWDIALOG_H
+
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
 #include <QPrintPreviewDialog>
-#include "hbapi.h"
-#include "hbapiitm.h"
-#include "hbvm.h"
-#include "hbstack.h"
-#ifndef __XHARBOUR__
-#include "hbapicls.h"
-#endif
+
+#include "qt4xhb_common.h"
+#include "qt4xhb_clsid.h"
 
 void QPrintPreviewDialog_release_codeblocks ();
+
 class SlotsQPrintPreviewDialog: public QObject
 {
   Q_OBJECT
+
   public:
   SlotsQPrintPreviewDialog(QObject *parent = 0);
   ~SlotsQPrintPreviewDialog();
@@ -31,7 +30,9 @@ class SlotsQPrintPreviewDialog: public QObject
   QList<QString> list2;
   QList<PHB_ITEM> list3;
   QList<bool> list4;
+
   public slots:
   void paintRequested ( QPrinter * printer );
 };
+
 #endif

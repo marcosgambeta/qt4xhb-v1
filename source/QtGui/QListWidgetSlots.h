@@ -8,22 +8,21 @@
 
 #ifndef SLOTSQLISTWIDGET_H
 #define SLOTSQLISTWIDGET_H
+
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
 #include <QListWidget>
-#include "hbapi.h"
-#include "hbapiitm.h"
-#include "hbvm.h"
-#include "hbstack.h"
-#ifndef __XHARBOUR__
-#include "hbapicls.h"
-#endif
+
+#include "qt4xhb_common.h"
+#include "qt4xhb_clsid.h"
 
 void QListWidget_release_codeblocks ();
+
 class SlotsQListWidget: public QObject
 {
   Q_OBJECT
+
   public:
   SlotsQListWidget(QObject *parent = 0);
   ~SlotsQListWidget();
@@ -31,6 +30,7 @@ class SlotsQListWidget: public QObject
   QList<QString> list2;
   QList<PHB_ITEM> list3;
   QList<bool> list4;
+
   public slots:
   void currentItemChanged ( QListWidgetItem * current, QListWidgetItem * previous );
   void currentRowChanged ( int currentRow );
@@ -43,4 +43,5 @@ class SlotsQListWidget: public QObject
   void itemPressed ( QListWidgetItem * item );
   void itemSelectionChanged ();
 };
+
 #endif

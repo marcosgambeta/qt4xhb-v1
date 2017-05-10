@@ -8,22 +8,21 @@
 
 #ifndef SLOTSQFTP_H
 #define SLOTSQFTP_H
+
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
 #include <QFtp>
-#include "hbapi.h"
-#include "hbapiitm.h"
-#include "hbvm.h"
-#include "hbstack.h"
-#ifndef __XHARBOUR__
-#include "hbapicls.h"
-#endif
+
+#include "qt4xhb_common.h"
+#include "qt4xhb_clsid.h"
 
 void QFtp_release_codeblocks ();
+
 class SlotsQFtp: public QObject
 {
   Q_OBJECT
+
   public:
   SlotsQFtp(QObject *parent = 0);
   ~SlotsQFtp();
@@ -31,6 +30,7 @@ class SlotsQFtp: public QObject
   QList<QString> list2;
   QList<PHB_ITEM> list3;
   QList<bool> list4;
+
   public slots:
   void commandFinished ( int id, bool error );
   void commandStarted ( int id );
@@ -41,4 +41,5 @@ class SlotsQFtp: public QObject
   void readyRead ();
   void stateChanged ( int state );
 };
+
 #endif

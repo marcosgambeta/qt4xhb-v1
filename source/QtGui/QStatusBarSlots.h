@@ -8,22 +8,21 @@
 
 #ifndef SLOTSQSTATUSBAR_H
 #define SLOTSQSTATUSBAR_H
+
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
 #include <QStatusBar>
-#include "hbapi.h"
-#include "hbapiitm.h"
-#include "hbvm.h"
-#include "hbstack.h"
-#ifndef __XHARBOUR__
-#include "hbapicls.h"
-#endif
+
+#include "qt4xhb_common.h"
+#include "qt4xhb_clsid.h"
 
 void QStatusBar_release_codeblocks ();
+
 class SlotsQStatusBar: public QObject
 {
   Q_OBJECT
+
   public:
   SlotsQStatusBar(QObject *parent = 0);
   ~SlotsQStatusBar();
@@ -31,7 +30,9 @@ class SlotsQStatusBar: public QObject
   QList<QString> list2;
   QList<PHB_ITEM> list3;
   QList<bool> list4;
+
   public slots:
   void messageChanged ( const QString & message );
 };
+
 #endif

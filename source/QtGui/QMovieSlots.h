@@ -8,22 +8,21 @@
 
 #ifndef SLOTSQMOVIE_H
 #define SLOTSQMOVIE_H
+
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
 #include <QMovie>
-#include "hbapi.h"
-#include "hbapiitm.h"
-#include "hbvm.h"
-#include "hbstack.h"
-#ifndef __XHARBOUR__
-#include "hbapicls.h"
-#endif
+
+#include "qt4xhb_common.h"
+#include "qt4xhb_clsid.h"
 
 void QMovie_release_codeblocks ();
+
 class SlotsQMovie: public QObject
 {
   Q_OBJECT
+
   public:
   SlotsQMovie(QObject *parent = 0);
   ~SlotsQMovie();
@@ -31,7 +30,9 @@ class SlotsQMovie: public QObject
   QList<QString> list2;
   QList<PHB_ITEM> list3;
   QList<bool> list4;
+
   public slots:
   void updated ( const QRect & rect );
 };
+
 #endif

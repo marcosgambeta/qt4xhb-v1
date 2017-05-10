@@ -8,22 +8,21 @@
 
 #ifndef SLOTSQNETWORKCONFIGURATIONMANAGER_H
 #define SLOTSQNETWORKCONFIGURATIONMANAGER_H
+
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
 #include <QNetworkConfigurationManager>
-#include "hbapi.h"
-#include "hbapiitm.h"
-#include "hbvm.h"
-#include "hbstack.h"
-#ifndef __XHARBOUR__
-#include "hbapicls.h"
-#endif
+
+#include "qt4xhb_common.h"
+#include "qt4xhb_clsid.h"
 
 void QNetworkConfigurationManager_release_codeblocks ();
+
 class SlotsQNetworkConfigurationManager: public QObject
 {
   Q_OBJECT
+
   public:
   SlotsQNetworkConfigurationManager(QObject *parent = 0);
   ~SlotsQNetworkConfigurationManager();
@@ -31,6 +30,7 @@ class SlotsQNetworkConfigurationManager: public QObject
   QList<QString> list2;
   QList<PHB_ITEM> list3;
   QList<bool> list4;
+
   public slots:
   void configurationAdded ( const QNetworkConfiguration & config );
   void configurationChanged ( const QNetworkConfiguration & config );
@@ -38,4 +38,5 @@ class SlotsQNetworkConfigurationManager: public QObject
   void onlineStateChanged ( bool isOnline );
   void updateCompleted ();
 };
+
 #endif

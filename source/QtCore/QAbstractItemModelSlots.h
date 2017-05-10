@@ -8,22 +8,21 @@
 
 #ifndef SLOTSQABSTRACTITEMMODEL_H
 #define SLOTSQABSTRACTITEMMODEL_H
+
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
 #include <QAbstractItemModel>
-#include "hbapi.h"
-#include "hbapiitm.h"
-#include "hbvm.h"
-#include "hbstack.h"
-#ifndef __XHARBOUR__
-#include "hbapicls.h"
-#endif
+
+#include "qt4xhb_common.h"
+#include "qt4xhb_clsid.h"
 
 void QAbstractItemModel_release_codeblocks ();
+
 class SlotsQAbstractItemModel: public QObject
 {
   Q_OBJECT
+
   public:
   SlotsQAbstractItemModel(QObject *parent = 0);
   ~SlotsQAbstractItemModel();
@@ -31,6 +30,7 @@ class SlotsQAbstractItemModel: public QObject
   QList<QString> list2;
   QList<PHB_ITEM> list3;
   QList<bool> list4;
+
   public slots:
   void columnsAboutToBeInserted ( const QModelIndex & parent, int start, int end );
   void columnsAboutToBeMoved ( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationColumn );
@@ -51,4 +51,5 @@ class SlotsQAbstractItemModel: public QObject
   void rowsMoved ( const QModelIndex & sourceParent, int sourceStart, int sourceEnd, const QModelIndex & destinationParent, int destinationRow );
   void rowsRemoved ( const QModelIndex & parent, int start, int end );
 };
+
 #endif

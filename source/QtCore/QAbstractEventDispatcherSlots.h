@@ -8,22 +8,21 @@
 
 #ifndef SLOTSQABSTRACTEVENTDISPATCHER_H
 #define SLOTSQABSTRACTEVENTDISPATCHER_H
+
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
 #include <QAbstractEventDispatcher>
-#include "hbapi.h"
-#include "hbapiitm.h"
-#include "hbvm.h"
-#include "hbstack.h"
-#ifndef __XHARBOUR__
-#include "hbapicls.h"
-#endif
+
+#include "qt4xhb_common.h"
+#include "qt4xhb_clsid.h"
 
 void QAbstractEventDispatcher_release_codeblocks ();
+
 class SlotsQAbstractEventDispatcher: public QObject
 {
   Q_OBJECT
+
   public:
   SlotsQAbstractEventDispatcher(QObject *parent = 0);
   ~SlotsQAbstractEventDispatcher();
@@ -31,8 +30,10 @@ class SlotsQAbstractEventDispatcher: public QObject
   QList<QString> list2;
   QList<PHB_ITEM> list3;
   QList<bool> list4;
+
   public slots:
   void aboutToBlock ();
   void awake ();
 };
+
 #endif

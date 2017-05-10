@@ -8,22 +8,21 @@
 
 #ifndef SLOTSQABSTRACTSPINBOX_H
 #define SLOTSQABSTRACTSPINBOX_H
+
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
 #include <QAbstractSpinBox>
-#include "hbapi.h"
-#include "hbapiitm.h"
-#include "hbvm.h"
-#include "hbstack.h"
-#ifndef __XHARBOUR__
-#include "hbapicls.h"
-#endif
+
+#include "qt4xhb_common.h"
+#include "qt4xhb_clsid.h"
 
 void QAbstractSpinBox_release_codeblocks ();
+
 class SlotsQAbstractSpinBox: public QObject
 {
   Q_OBJECT
+
   public:
   SlotsQAbstractSpinBox(QObject *parent = 0);
   ~SlotsQAbstractSpinBox();
@@ -31,7 +30,9 @@ class SlotsQAbstractSpinBox: public QObject
   QList<QString> list2;
   QList<PHB_ITEM> list3;
   QList<bool> list4;
+
   public slots:
   void editingFinished ();
 };
+
 #endif

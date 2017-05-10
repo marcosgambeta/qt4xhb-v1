@@ -8,22 +8,21 @@
 
 #ifndef SLOTSQSTATEMACHINE_H
 #define SLOTSQSTATEMACHINE_H
+
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
 #include <QStateMachine>
-#include "hbapi.h"
-#include "hbapiitm.h"
-#include "hbvm.h"
-#include "hbstack.h"
-#ifndef __XHARBOUR__
-#include "hbapicls.h"
-#endif
+
+#include "qt4xhb_common.h"
+#include "qt4xhb_clsid.h"
 
 void QStateMachine_release_codeblocks ();
+
 class SlotsQStateMachine: public QObject
 {
   Q_OBJECT
+
   public:
   SlotsQStateMachine(QObject *parent = 0);
   ~SlotsQStateMachine();
@@ -31,8 +30,10 @@ class SlotsQStateMachine: public QObject
   QList<QString> list2;
   QList<PHB_ITEM> list3;
   QList<bool> list4;
+
   public slots:
   void started ();
   void stopped ();
 };
+
 #endif

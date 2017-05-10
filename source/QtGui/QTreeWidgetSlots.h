@@ -8,22 +8,21 @@
 
 #ifndef SLOTSQTREEWIDGET_H
 #define SLOTSQTREEWIDGET_H
+
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
 #include <QTreeWidget>
-#include "hbapi.h"
-#include "hbapiitm.h"
-#include "hbvm.h"
-#include "hbstack.h"
-#ifndef __XHARBOUR__
-#include "hbapicls.h"
-#endif
+
+#include "qt4xhb_common.h"
+#include "qt4xhb_clsid.h"
 
 void QTreeWidget_release_codeblocks ();
+
 class SlotsQTreeWidget: public QObject
 {
   Q_OBJECT
+
   public:
   SlotsQTreeWidget(QObject *parent = 0);
   ~SlotsQTreeWidget();
@@ -31,6 +30,7 @@ class SlotsQTreeWidget: public QObject
   QList<QString> list2;
   QList<PHB_ITEM> list3;
   QList<bool> list4;
+
   public slots:
   void currentItemChanged ( QTreeWidgetItem * current, QTreeWidgetItem * previous );
   void itemActivated ( QTreeWidgetItem * item, int column );
@@ -43,4 +43,5 @@ class SlotsQTreeWidget: public QObject
   void itemPressed ( QTreeWidgetItem * item, int column );
   void itemSelectionChanged ();
 };
+
 #endif

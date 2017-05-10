@@ -8,22 +8,21 @@
 
 #ifndef SLOTSQTOOLBAR_H
 #define SLOTSQTOOLBAR_H
+
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
 #include <QToolBar>
-#include "hbapi.h"
-#include "hbapiitm.h"
-#include "hbvm.h"
-#include "hbstack.h"
-#ifndef __XHARBOUR__
-#include "hbapicls.h"
-#endif
+
+#include "qt4xhb_common.h"
+#include "qt4xhb_clsid.h"
 
 void QToolBar_release_codeblocks ();
+
 class SlotsQToolBar: public QObject
 {
   Q_OBJECT
+
   public:
   SlotsQToolBar(QObject *parent = 0);
   ~SlotsQToolBar();
@@ -31,6 +30,7 @@ class SlotsQToolBar: public QObject
   QList<QString> list2;
   QList<PHB_ITEM> list3;
   QList<bool> list4;
+
   public slots:
   void actionTriggered ( QAction * action );
   void allowedAreasChanged ( Qt::ToolBarAreas allowedAreas );
@@ -41,4 +41,5 @@ class SlotsQToolBar: public QObject
   void topLevelChanged ( bool topLevel );
   void visibilityChanged ( bool visible );
 };
+
 #endif

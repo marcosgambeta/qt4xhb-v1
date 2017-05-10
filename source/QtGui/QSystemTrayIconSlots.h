@@ -8,22 +8,21 @@
 
 #ifndef SLOTSQSYSTEMTRAYICON_H
 #define SLOTSQSYSTEMTRAYICON_H
+
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
 #include <QSystemTrayIcon>
-#include "hbapi.h"
-#include "hbapiitm.h"
-#include "hbvm.h"
-#include "hbstack.h"
-#ifndef __XHARBOUR__
-#include "hbapicls.h"
-#endif
+
+#include "qt4xhb_common.h"
+#include "qt4xhb_clsid.h"
 
 void QSystemTrayIcon_release_codeblocks ();
+
 class SlotsQSystemTrayIcon: public QObject
 {
   Q_OBJECT
+
   public:
   SlotsQSystemTrayIcon(QObject *parent = 0);
   ~SlotsQSystemTrayIcon();
@@ -31,8 +30,10 @@ class SlotsQSystemTrayIcon: public QObject
   QList<QString> list2;
   QList<PHB_ITEM> list3;
   QList<bool> list4;
+
   public slots:
   void activated ( QSystemTrayIcon::ActivationReason reason );
   void messageClicked ();
 };
+
 #endif

@@ -8,22 +8,21 @@
 
 #ifndef SLOTSQAPPLICATION_H
 #define SLOTSQAPPLICATION_H
+
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
 #include <QApplication>
-#include "hbapi.h"
-#include "hbapiitm.h"
-#include "hbvm.h"
-#include "hbstack.h"
-#ifndef __XHARBOUR__
-#include "hbapicls.h"
-#endif
+
+#include "qt4xhb_common.h"
+#include "qt4xhb_clsid.h"
 
 void QApplication_release_codeblocks ();
+
 class SlotsQApplication: public QObject
 {
   Q_OBJECT
+
   public:
   SlotsQApplication(QObject *parent = 0);
   ~SlotsQApplication();
@@ -31,6 +30,7 @@ class SlotsQApplication: public QObject
   QList<QString> list2;
   QList<PHB_ITEM> list3;
   QList<bool> list4;
+
   public slots:
   void aboutToReleaseGpuResources ();
   void aboutToUseGpuResources ();
@@ -40,4 +40,5 @@ class SlotsQApplication: public QObject
   void lastWindowClosed ();
   void saveStateRequest ( QSessionManager & manager );
 };
+
 #endif

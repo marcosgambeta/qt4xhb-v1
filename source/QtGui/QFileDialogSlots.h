@@ -8,22 +8,21 @@
 
 #ifndef SLOTSQFILEDIALOG_H
 #define SLOTSQFILEDIALOG_H
+
 #include <QObject>
 #include <QCoreApplication>
 #include <QList>
 #include <QFileDialog>
-#include "hbapi.h"
-#include "hbapiitm.h"
-#include "hbvm.h"
-#include "hbstack.h"
-#ifndef __XHARBOUR__
-#include "hbapicls.h"
-#endif
+
+#include "qt4xhb_common.h"
+#include "qt4xhb_clsid.h"
 
 void QFileDialog_release_codeblocks ();
+
 class SlotsQFileDialog: public QObject
 {
   Q_OBJECT
+
   public:
   SlotsQFileDialog(QObject *parent = 0);
   ~SlotsQFileDialog();
@@ -31,6 +30,7 @@ class SlotsQFileDialog: public QObject
   QList<QString> list2;
   QList<PHB_ITEM> list3;
   QList<bool> list4;
+
   public slots:
   void currentChanged ( const QString & path );
   void directoryEntered ( const QString & directory );
@@ -38,4 +38,5 @@ class SlotsQFileDialog: public QObject
   void filesSelected ( const QStringList & selected );
   void filterSelected ( const QString & filter );
 };
+
 #endif
