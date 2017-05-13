@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_CLEAR )
   QSslCertificate * obj = (QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_EFFECTIVEDATE )
   QSslCertificate * obj = (QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDateTime * ptr = new QDateTime( obj->effectiveDate (  ) );
+    QDateTime * ptr = new QDateTime( obj->effectiveDate () );
     _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_EXPIRYDATE )
   QSslCertificate * obj = (QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDateTime * ptr = new QDateTime( obj->expiryDate (  ) );
+    QDateTime * ptr = new QDateTime( obj->expiryDate () );
     _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISNULL )
   QSslCertificate * obj = (QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISVALID )
   QSslCertificate * obj = (QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_PUBLICKEY )
   QSslCertificate * obj = (QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSslKey * ptr = new QSslKey( obj->publicKey (  ) );
+    QSslKey * ptr = new QSslKey( obj->publicKey () );
     _qt4xhb_createReturnClass ( ptr, "QSSLKEY", true );
   }
 }
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_SERIALNUMBER )
   QSslCertificate * obj = (QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->serialNumber (  ) );
+    QByteArray * ptr = new QByteArray( obj->serialNumber () );
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_TODER )
   QSslCertificate * obj = (QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->toDer (  ) );
+    QByteArray * ptr = new QByteArray( obj->toDer () );
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_TOPEM )
   QSslCertificate * obj = (QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->toPem (  ) );
+    QByteArray * ptr = new QByteArray( obj->toPem () );
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_VERSION )
   QSslCertificate * obj = (QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->version (  ) );
+    QByteArray * ptr = new QByteArray( obj->version () );
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }

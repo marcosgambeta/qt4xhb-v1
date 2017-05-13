@@ -54,7 +54,7 @@ QHttpPart ()
 HB_FUNC_STATIC( QHTTPPART_NEW1 )
 {
   QHttpPart * o = NULL;
-  o = new QHttpPart (  );
+  o = new QHttpPart ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 

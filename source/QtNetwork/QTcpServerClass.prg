@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QTCPSERVER_CLOSE )
   QTcpServer * obj = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->close (  );
+    obj->close ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QTCPSERVER_ERRORSTRING )
   QTcpServer * obj = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->errorString (  );
+    QString str1 = obj->errorString ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QTCPSERVER_HASPENDINGCONNECTIONS )
   QTcpServer * obj = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasPendingConnections (  ) );
+    hb_retl( obj->hasPendingConnections () );
   }
 }
 
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QTCPSERVER_ISLISTENING )
   QTcpServer * obj = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isListening (  ) );
+    hb_retl( obj->isListening () );
   }
 }
 
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QTCPSERVER_MAXPENDINGCONNECTIONS )
   QTcpServer * obj = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->maxPendingConnections (  ) );
+    hb_retni( obj->maxPendingConnections () );
   }
 }
 
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QTCPSERVER_NEXTPENDINGCONNECTION )
   QTcpServer * obj = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTcpSocket * ptr = obj->nextPendingConnection (  );
+    QTcpSocket * ptr = obj->nextPendingConnection ();
     _qt4xhb_createReturnClass ( ptr, "QTCPSOCKET" );
   }
 }
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QTCPSERVER_PROXY )
   QTcpServer * obj = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QNetworkProxy * ptr = new QNetworkProxy( obj->proxy (  ) );
+    QNetworkProxy * ptr = new QNetworkProxy( obj->proxy () );
     _qt4xhb_createReturnClass ( ptr, "QNETWORKPROXY", true );
   }
 }
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QTCPSERVER_SERVERADDRESS )
   QTcpServer * obj = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QHostAddress * ptr = new QHostAddress( obj->serverAddress (  ) );
+    QHostAddress * ptr = new QHostAddress( obj->serverAddress () );
     _qt4xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
   }
 }
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QTCPSERVER_SERVERERROR )
   QTcpServer * obj = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->serverError (  ) );
+    hb_retni( (int) obj->serverError () );
   }
 }
 
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QTCPSERVER_SERVERPORT )
   QTcpServer * obj = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    quint16 i = obj->serverPort (  );
+    quint16 i = obj->serverPort ();
     hb_retni( i );
   }
 }
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QTCPSERVER_SOCKETDESCRIPTOR )
   QTcpServer * obj = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->socketDescriptor (  ) );
+    hb_retni( obj->socketDescriptor () );
   }
 }
 

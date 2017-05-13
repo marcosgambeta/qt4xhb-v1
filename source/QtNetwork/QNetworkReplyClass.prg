@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ABORT )
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->abort (  );
+    obj->abort ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ERROR )
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->error (  ) );
+    hb_retni( (int) obj->error () );
   }
 }
 
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_IGNORESSLERRORS2 )
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->ignoreSslErrors (  );
+    obj->ignoreSslErrors ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ISFINISHED )
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isFinished (  ) );
+    hb_retl( obj->isFinished () );
   }
 }
 
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ISRUNNING )
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isRunning (  ) );
+    hb_retl( obj->isRunning () );
   }
 }
 
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_MANAGER )
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QNetworkAccessManager * ptr = obj->manager (  );
+    QNetworkAccessManager * ptr = obj->manager ();
     _qt4xhb_createReturnClass ( ptr, "QNETWORKACCESSMANAGER" );
   }
 }
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_OPERATION )
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->operation (  ) );
+    hb_retni( (int) obj->operation () );
   }
 }
 
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_RAWHEADERLIST )
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QList<QByteArray> list = obj->rawHeaderList (  );
+    QList<QByteArray> list = obj->rawHeaderList ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QBYTEARRAY" );
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_READBUFFERSIZE )
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->readBufferSize (  );
+    qint64 i = obj->readBufferSize ();
     hb_retni( i );
   }
 }
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_REQUEST )
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QNetworkRequest * ptr = new QNetworkRequest( obj->request (  ) );
+    QNetworkRequest * ptr = new QNetworkRequest( obj->request () );
     _qt4xhb_createReturnClass ( ptr, "QNETWORKREQUEST", true );
   }
 }
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_SSLCONFIGURATION )
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSslConfiguration * ptr = new QSslConfiguration( obj->sslConfiguration (  ) );
+    QSslConfiguration * ptr = new QSslConfiguration( obj->sslConfiguration () );
     _qt4xhb_createReturnClass ( ptr, "QSSLCONFIGURATION", true );
   }
 }
@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_URL )
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->url (  ) );
+    QUrl * ptr = new QUrl( obj->url () );
     _qt4xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_CLOSE )
   QNetworkReply * obj = (QNetworkReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->close (  );
+    obj->close ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

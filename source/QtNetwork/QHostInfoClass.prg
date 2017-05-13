@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QHOSTINFO_ADDRESSES )
   QHostInfo * obj = (QHostInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QList<QHostAddress> list = obj->addresses (  );
+    QList<QHostAddress> list = obj->addresses ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QHOSTADDRESS" );
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QHOSTINFO_ERROR )
   QHostInfo * obj = (QHostInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->error (  ) );
+    hb_retni( (int) obj->error () );
   }
 }
 
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QHOSTINFO_ERRORSTRING )
   QHostInfo * obj = (QHostInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->errorString (  );
+    QString str1 = obj->errorString ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QHOSTINFO_HOSTNAME )
   QHostInfo * obj = (QHostInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->hostName (  );
+    QString str1 = obj->hostName ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QHOSTINFO_LOOKUPID )
   QHostInfo * obj = (QHostInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->lookupId (  ) );
+    hb_retni( obj->lookupId () );
   }
 }
 
@@ -334,7 +334,7 @@ QString localDomainName ()
 */
 HB_FUNC_STATIC( QHOSTINFO_LOCALDOMAINNAME )
 {
-  QString str1 = QHostInfo::localDomainName (  );
+  QString str1 = QHostInfo::localDomainName ();
   hb_retc( RQSTRING(str1) );
 }
 
@@ -344,7 +344,7 @@ QString localHostName ()
 */
 HB_FUNC_STATIC( QHOSTINFO_LOCALHOSTNAME )
 {
-  QString str1 = QHostInfo::localHostName (  );
+  QString str1 = QHostInfo::localHostName ();
   hb_retc( RQSTRING(str1) );
 }
 

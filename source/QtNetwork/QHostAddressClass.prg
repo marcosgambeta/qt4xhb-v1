@@ -71,7 +71,7 @@ QHostAddress ()
 HB_FUNC_STATIC( QHOSTADDRESS_NEW1 )
 {
   QHostAddress * o = NULL;
-  o = new QHostAddress (  );
+  o = new QHostAddress ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_CLEAR )
   QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_ISNULL )
   QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_PROTOCOL )
   QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->protocol (  ) );
+    hb_retni( (int) obj->protocol () );
   }
 }
 
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_SCOPEID )
   QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->scopeId (  );
+    QString str1 = obj->scopeId ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_TOIPV4ADDRESS )
   QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    quint32 i = obj->toIPv4Address (  );
+    quint32 i = obj->toIPv4Address ();
     hb_retni( i );
   }
 }
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_TOIPV6ADDRESS )
   QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    Q_IPV6ADDR * ptr = new Q_IPV6ADDR( obj->toIPv6Address (  ) );
+    Q_IPV6ADDR * ptr = new Q_IPV6ADDR( obj->toIPv6Address () );
     _qt4xhb_createReturnClass ( ptr, "Q_IPV6ADDR" );
   }
 }
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_TOSTRING )
   QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toString (  );
+    QString str1 = obj->toString ();
     hb_retc( RQSTRING(str1) );
   }
 }

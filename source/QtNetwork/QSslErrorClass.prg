@@ -58,7 +58,7 @@ QSslError ()
 HB_FUNC_STATIC( QSSLERROR_NEW1 )
 {
   QSslError * o = NULL;
-  o = new QSslError (  );
+  o = new QSslError ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QSSLERROR_CERTIFICATE )
   QSslError * obj = (QSslError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSslCertificate * ptr = new QSslCertificate( obj->certificate (  ) );
+    QSslCertificate * ptr = new QSslCertificate( obj->certificate () );
     _qt4xhb_createReturnClass ( ptr, "QSSLCERTIFICATE", true );
   }
 }
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QSSLERROR_ERROR )
   QSslError * obj = (QSslError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->error (  ) );
+    hb_retni( (int) obj->error () );
   }
 }
 
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QSSLERROR_ERRORSTRING )
   QSslError * obj = (QSslError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->errorString (  );
+    QString str1 = obj->errorString ();
     hb_retc( RQSTRING(str1) );
   }
 }

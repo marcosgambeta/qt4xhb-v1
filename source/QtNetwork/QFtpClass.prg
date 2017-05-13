@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QFTP_BYTESAVAILABLE )
   QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->bytesAvailable (  );
+    qint64 i = obj->bytesAvailable ();
     hb_retni( i );
   }
 }
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QFTP_CLEARPENDINGCOMMANDS )
   QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clearPendingCommands (  );
+    obj->clearPendingCommands ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QFTP_CLOSE )
   QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->close (  ) );
+    hb_retni( obj->close () );
   }
 }
 
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QFTP_CURRENTCOMMAND )
   QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->currentCommand (  ) );
+    hb_retni( (int) obj->currentCommand () );
   }
 }
 
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QFTP_CURRENTDEVICE )
   QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QIODevice * ptr = obj->currentDevice (  );
+    QIODevice * ptr = obj->currentDevice ();
     _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );
   }
 }
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QFTP_CURRENTID )
   QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->currentId (  ) );
+    hb_retni( obj->currentId () );
   }
 }
 
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QFTP_ERROR )
   QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->error (  ) );
+    hb_retni( (int) obj->error () );
   }
 }
 
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QFTP_ERRORSTRING )
   QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->errorString (  );
+    QString str1 = obj->errorString ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QFTP_HASPENDINGCOMMANDS )
   QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasPendingCommands (  ) );
+    hb_retl( obj->hasPendingCommands () );
   }
 }
 
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QFTP_READALL )
   QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->readAll (  ) );
+    QByteArray * ptr = new QByteArray( obj->readAll () );
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -467,7 +467,7 @@ HB_FUNC_STATIC( QFTP_STATE )
   QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->state (  ) );
+    hb_retni( (int) obj->state () );
   }
 }
 
@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QFTP_ABORT )
   QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->abort (  );
+    obj->abort ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

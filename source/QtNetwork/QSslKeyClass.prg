@@ -62,7 +62,7 @@ QSslKey ()
 HB_FUNC_STATIC( QSSLKEY_NEW1 )
 {
   QSslKey * o = NULL;
-  o = new QSslKey (  );
+  o = new QSslKey ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QSSLKEY_ALGORITHM )
   QSslKey * obj = (QSslKey *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->algorithm (  ) );
+    hb_retni( (int) obj->algorithm () );
   }
 }
 
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QSSLKEY_CLEAR )
   QSslKey * obj = (QSslKey *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QSSLKEY_ISNULL )
   QSslKey * obj = (QSslKey *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QSSLKEY_LENGTH )
   QSslKey * obj = (QSslKey *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->length (  ) );
+    hb_retni( obj->length () );
   }
 }
 
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QSSLKEY_TYPE )
   QSslKey * obj = (QSslKey *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->type (  ) );
+    hb_retni( (int) obj->type () );
   }
 }
 

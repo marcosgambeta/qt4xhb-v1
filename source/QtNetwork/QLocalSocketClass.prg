@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_ABORT )
   QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->abort (  );
+    obj->abort ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_DISCONNECTFROMSERVER )
   QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->disconnectFromServer (  );
+    obj->disconnectFromServer ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_ERROR )
   QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->error (  ) );
+    hb_retni( (int) obj->error () );
   }
 }
 
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_FLUSH )
   QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->flush (  ) );
+    hb_retl( obj->flush () );
   }
 }
 
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_FULLSERVERNAME )
   QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->fullServerName (  );
+    QString str1 = obj->fullServerName ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_ISVALID )
   QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_READBUFFERSIZE )
   QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->readBufferSize (  );
+    qint64 i = obj->readBufferSize ();
     hb_retni( i );
   }
 }
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_SERVERNAME )
   QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->serverName (  );
+    QString str1 = obj->serverName ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_STATE )
   QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->state (  ) );
+    hb_retni( (int) obj->state () );
   }
 }
 
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_BYTESAVAILABLE )
   QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->bytesAvailable (  );
+    qint64 i = obj->bytesAvailable ();
     hb_retni( i );
   }
 }
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_BYTESTOWRITE )
   QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->bytesToWrite (  );
+    qint64 i = obj->bytesToWrite ();
     hb_retni( i );
   }
 }
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_CANREADLINE )
   QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->canReadLine (  ) );
+    hb_retl( obj->canReadLine () );
   }
 }
 
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_CLOSE )
   QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->close (  );
+    obj->close ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_ISSEQUENTIAL )
   QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isSequential (  ) );
+    hb_retl( obj->isSequential () );
   }
 }
 

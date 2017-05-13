@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_CACHEDIRECTORY )
   QNetworkDiskCache * obj = (QNetworkDiskCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->cacheDirectory (  );
+    QString str1 = obj->cacheDirectory ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_MAXIMUMCACHESIZE )
   QNetworkDiskCache * obj = (QNetworkDiskCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->maximumCacheSize (  );
+    qint64 i = obj->maximumCacheSize ();
     hb_retni( i );
   }
 }
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_CACHESIZE )
   QNetworkDiskCache * obj = (QNetworkDiskCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->cacheSize (  );
+    qint64 i = obj->cacheSize ();
     hb_retni( i );
   }
 }
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_CLEAR )
   QNetworkDiskCache * obj = (QNetworkDiskCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

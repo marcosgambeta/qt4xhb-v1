@@ -61,7 +61,7 @@ QNetworkAddressEntry ()
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NEW1 )
 {
   QNetworkAddressEntry * o = NULL;
-  o = new QNetworkAddressEntry (  );
+  o = new QNetworkAddressEntry ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_BROADCAST )
   QNetworkAddressEntry * obj = (QNetworkAddressEntry *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QHostAddress * ptr = new QHostAddress( obj->broadcast (  ) );
+    QHostAddress * ptr = new QHostAddress( obj->broadcast () );
     _qt4xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
   }
 }
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_IP )
   QNetworkAddressEntry * obj = (QNetworkAddressEntry *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QHostAddress * ptr = new QHostAddress( obj->ip (  ) );
+    QHostAddress * ptr = new QHostAddress( obj->ip () );
     _qt4xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
   }
 }
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NETMASK )
   QNetworkAddressEntry * obj = (QNetworkAddressEntry *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QHostAddress * ptr = new QHostAddress( obj->netmask (  ) );
+    QHostAddress * ptr = new QHostAddress( obj->netmask () );
     _qt4xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
   }
 }
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_PREFIXLENGTH )
   QNetworkAddressEntry * obj = (QNetworkAddressEntry *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->prefixLength (  ) );
+    hb_retni( (int) obj->prefixLength () );
   }
 }
 

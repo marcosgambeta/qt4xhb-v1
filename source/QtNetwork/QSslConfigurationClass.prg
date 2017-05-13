@@ -79,7 +79,7 @@ QSslConfiguration ()
 HB_FUNC_STATIC( QSSLCONFIGURATION_NEW1 )
 {
   QSslConfiguration * o = NULL;
-  o = new QSslConfiguration (  );
+  o = new QSslConfiguration ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_CACERTIFICATES )
   QSslConfiguration * obj = (QSslConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QList<QSslCertificate> list = obj->caCertificates (  );
+    QList<QSslCertificate> list = obj->caCertificates ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QSSLCERTIFICATE" );
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_CIPHERS )
   QSslConfiguration * obj = (QSslConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QList<QSslCipher> list = obj->ciphers (  );
+    QList<QSslCipher> list = obj->ciphers ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QSSLCIPHER" );
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_ISNULL )
   QSslConfiguration * obj = (QSslConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_LOCALCERTIFICATE )
   QSslConfiguration * obj = (QSslConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSslCertificate * ptr = new QSslCertificate( obj->localCertificate (  ) );
+    QSslCertificate * ptr = new QSslCertificate( obj->localCertificate () );
     _qt4xhb_createReturnClass ( ptr, "QSSLCERTIFICATE", true );
   }
 }
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_PEERCERTIFICATE )
   QSslConfiguration * obj = (QSslConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSslCertificate * ptr = new QSslCertificate( obj->peerCertificate (  ) );
+    QSslCertificate * ptr = new QSslCertificate( obj->peerCertificate () );
     _qt4xhb_createReturnClass ( ptr, "QSSLCERTIFICATE", true );
   }
 }
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_PEERCERTIFICATECHAIN )
   QSslConfiguration * obj = (QSslConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QList<QSslCertificate> list = obj->peerCertificateChain (  );
+    QList<QSslCertificate> list = obj->peerCertificateChain ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QSSLCERTIFICATE" );
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_PEERVERIFYDEPTH )
   QSslConfiguration * obj = (QSslConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->peerVerifyDepth (  ) );
+    hb_retni( obj->peerVerifyDepth () );
   }
 }
 
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_PEERVERIFYMODE )
   QSslConfiguration * obj = (QSslConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->peerVerifyMode (  ) );
+    hb_retni( (int) obj->peerVerifyMode () );
   }
 }
 
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_PRIVATEKEY )
   QSslConfiguration * obj = (QSslConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSslKey * ptr = new QSslKey( obj->privateKey (  ) );
+    QSslKey * ptr = new QSslKey( obj->privateKey () );
     _qt4xhb_createReturnClass ( ptr, "QSSLKEY", true );
   }
 }
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_PROTOCOL )
   QSslConfiguration * obj = (QSslConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->protocol (  ) );
+    hb_retni( (int) obj->protocol () );
   }
 }
 
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SESSIONCIPHER )
   QSslConfiguration * obj = (QSslConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSslCipher * ptr = new QSslCipher( obj->sessionCipher (  ) );
+    QSslCipher * ptr = new QSslCipher( obj->sessionCipher () );
     _qt4xhb_createReturnClass ( ptr, "QSSLCIPHER", true );
   }
 }
@@ -508,7 +508,7 @@ QSslConfiguration defaultConfiguration ()
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_DEFAULTCONFIGURATION )
 {
-  QSslConfiguration * ptr = new QSslConfiguration( QSslConfiguration::defaultConfiguration (  ) );
+  QSslConfiguration * ptr = new QSslConfiguration( QSslConfiguration::defaultConfiguration () );
   _qt4xhb_createReturnClass ( ptr, "QSSLCONFIGURATION", true );
 }
 

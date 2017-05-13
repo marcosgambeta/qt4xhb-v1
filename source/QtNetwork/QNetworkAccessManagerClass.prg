@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ACTIVECONFIGURATION )
   QNetworkAccessManager * obj = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->activeConfiguration (  ) );
+    QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->activeConfiguration () );
     _qt4xhb_createReturnClass ( ptr, "QNETWORKCONFIGURATION", true );
   }
 }
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_CACHE )
   QNetworkAccessManager * obj = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QAbstractNetworkCache * ptr = obj->cache (  );
+    QAbstractNetworkCache * ptr = obj->cache ();
     _qt4xhb_createReturnClass ( ptr, "QABSTRACTNETWORKCACHE" );
   }
 }
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_CONFIGURATION )
   QNetworkAccessManager * obj = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->configuration (  ) );
+    QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->configuration () );
     _qt4xhb_createReturnClass ( ptr, "QNETWORKCONFIGURATION", true );
   }
 }
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_COOKIEJAR )
   QNetworkAccessManager * obj = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QNetworkCookieJar * ptr = obj->cookieJar (  );
+    QNetworkCookieJar * ptr = obj->cookieJar ();
     _qt4xhb_createReturnClass ( ptr, "QNETWORKCOOKIEJAR" );
   }
 }
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_NETWORKACCESSIBLE )
   QNetworkAccessManager * obj = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->networkAccessible (  ) );
+    hb_retni( (int) obj->networkAccessible () );
   }
 }
 
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_PROXY )
   QNetworkAccessManager * obj = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QNetworkProxy * ptr = new QNetworkProxy( obj->proxy (  ) );
+    QNetworkProxy * ptr = new QNetworkProxy( obj->proxy () );
     _qt4xhb_createReturnClass ( ptr, "QNETWORKPROXY", true );
   }
 }
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_PROXYFACTORY )
   QNetworkAccessManager * obj = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QNetworkProxyFactory * ptr = obj->proxyFactory (  );
+    QNetworkProxyFactory * ptr = obj->proxyFactory ();
     _qt4xhb_createReturnClass ( ptr, "QNETWORKPROXYFACTORY" );
   }
 }
