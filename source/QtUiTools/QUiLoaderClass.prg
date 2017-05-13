@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QUILOADER_AVAILABLELAYOUTS )
   QUiLoader * obj = (QUiLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList strl = obj->availableLayouts (  );
+    QStringList strl = obj->availableLayouts ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QUILOADER_AVAILABLEWIDGETS )
   QUiLoader * obj = (QUiLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList strl = obj->availableWidgets (  );
+    QStringList strl = obj->availableWidgets ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QUILOADER_CLEARPLUGINPATHS )
   QUiLoader * obj = (QUiLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clearPluginPaths (  );
+    obj->clearPluginPaths ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QUILOADER_ISLANGUAGECHANGEENABLED )
   QUiLoader * obj = (QUiLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isLanguageChangeEnabled (  ) );
+    hb_retl( obj->isLanguageChangeEnabled () );
   }
 }
 
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QUILOADER_PLUGINPATHS )
   QUiLoader * obj = (QUiLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList strl = obj->pluginPaths (  );
+    QStringList strl = obj->pluginPaths ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QUILOADER_WORKINGDIRECTORY )
   QUiLoader * obj = (QUiLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDir * ptr = new QDir( obj->workingDirectory (  ) );
+    QDir * ptr = new QDir( obj->workingDirectory () );
     _qt4xhb_createReturnClass ( ptr, "QDIR", true );
   }
 }
