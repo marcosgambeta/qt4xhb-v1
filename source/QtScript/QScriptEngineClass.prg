@@ -92,7 +92,7 @@ QScriptEngine ()
 HB_FUNC_STATIC( QSCRIPTENGINE_NEW1 )
 {
   QScriptEngine * o = NULL;
-  o = new QScriptEngine (  );
+  o = new QScriptEngine ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_AGENT )
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QScriptEngineAgent * ptr = obj->agent (  );
+    QScriptEngineAgent * ptr = obj->agent ();
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTENGINEAGENT" );
   }
 }
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_AVAILABLEEXTENSIONS )
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList strl = obj->availableExtensions (  );
+    QStringList strl = obj->availableExtensions ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_CLEAREXCEPTIONS )
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clearExceptions (  );
+    obj->clearExceptions ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_COLLECTGARBAGE )
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->collectGarbage (  );
+    obj->collectGarbage ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_CURRENTCONTEXT )
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QScriptContext * ptr = obj->currentContext (  );
+    QScriptContext * ptr = obj->currentContext ();
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTCONTEXT" );
   }
 }
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_GLOBALOBJECT )
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QScriptValue * ptr = new QScriptValue( obj->globalObject (  ) );
+    QScriptValue * ptr = new QScriptValue( obj->globalObject () );
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_HASUNCAUGHTEXCEPTION )
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasUncaughtException (  ) );
+    hb_retl( obj->hasUncaughtException () );
   }
 }
 
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_IMPORTEDEXTENSIONS )
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList strl = obj->importedExtensions (  );
+    QStringList strl = obj->importedExtensions ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_ISEVALUATING )
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isEvaluating (  ) );
+    hb_retl( obj->isEvaluating () );
   }
 }
 
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NULLVALUE )
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QScriptValue * ptr = new QScriptValue( obj->nullValue (  ) );
+    QScriptValue * ptr = new QScriptValue( obj->nullValue () );
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
@@ -524,7 +524,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_POPCONTEXT )
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->popContext (  );
+    obj->popContext ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -538,7 +538,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_PROCESSEVENTSINTERVAL )
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->processEventsInterval (  ) );
+    hb_retni( obj->processEventsInterval () );
   }
 }
 
@@ -551,7 +551,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_PUSHCONTEXT )
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QScriptContext * ptr = obj->pushContext (  );
+    QScriptContext * ptr = obj->pushContext ();
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTCONTEXT" );
   }
 }
@@ -669,7 +669,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_UNCAUGHTEXCEPTION )
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QScriptValue * ptr = new QScriptValue( obj->uncaughtException (  ) );
+    QScriptValue * ptr = new QScriptValue( obj->uncaughtException () );
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
@@ -683,7 +683,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_UNCAUGHTEXCEPTIONBACKTRACE )
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList strl = obj->uncaughtExceptionBacktrace (  );
+    QStringList strl = obj->uncaughtExceptionBacktrace ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -706,7 +706,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_UNCAUGHTEXCEPTIONLINENUMBER )
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->uncaughtExceptionLineNumber (  ) );
+    hb_retni( obj->uncaughtExceptionLineNumber () );
   }
 }
 
@@ -719,7 +719,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_UNDEFINEDVALUE )
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QScriptValue * ptr = new QScriptValue( obj->undefinedValue (  ) );
+    QScriptValue * ptr = new QScriptValue( obj->undefinedValue () );
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }

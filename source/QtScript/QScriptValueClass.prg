@@ -112,7 +112,7 @@ QScriptValue ()
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW1 )
 {
   QScriptValue * o = NULL;
-  o = new QScriptValue (  );
+  o = new QScriptValue ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_DATA )
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QScriptValue * ptr = new QScriptValue( obj->data (  ) );
+    QScriptValue * ptr = new QScriptValue( obj->data () );
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ENGINE )
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QScriptEngine * ptr = obj->engine (  );
+    QScriptEngine * ptr = obj->engine ();
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTENGINE" );
   }
 }
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISARRAY )
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isArray (  ) );
+    hb_retl( obj->isArray () );
   }
 }
 
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISBOOL )
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isBool (  ) );
+    hb_retl( obj->isBool () );
   }
 }
 
@@ -466,7 +466,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISDATE )
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isDate (  ) );
+    hb_retl( obj->isDate () );
   }
 }
 
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISERROR )
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isError (  ) );
+    hb_retl( obj->isError () );
   }
 }
 
@@ -492,7 +492,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISFUNCTION )
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isFunction (  ) );
+    hb_retl( obj->isFunction () );
   }
 }
 
@@ -505,7 +505,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISNULL )
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -518,7 +518,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISNUMBER )
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNumber (  ) );
+    hb_retl( obj->isNumber () );
   }
 }
 
@@ -531,7 +531,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISOBJECT )
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isObject (  ) );
+    hb_retl( obj->isObject () );
   }
 }
 
@@ -544,7 +544,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISQMETAOBJECT )
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isQMetaObject (  ) );
+    hb_retl( obj->isQMetaObject () );
   }
 }
 
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISQOBJECT )
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isQObject (  ) );
+    hb_retl( obj->isQObject () );
   }
 }
 
@@ -570,7 +570,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISREGEXP )
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isRegExp (  ) );
+    hb_retl( obj->isRegExp () );
   }
 }
 
@@ -583,7 +583,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISSTRING )
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isString (  ) );
+    hb_retl( obj->isString () );
   }
 }
 
@@ -596,7 +596,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISUNDEFINED )
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isUndefined (  ) );
+    hb_retl( obj->isUndefined () );
   }
 }
 
@@ -609,7 +609,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISVALID )
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -622,7 +622,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISVARIANT )
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isVariant (  ) );
+    hb_retl( obj->isVariant () );
   }
 }
 
@@ -654,7 +654,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_PROTOTYPE )
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QScriptValue * ptr = new QScriptValue( obj->prototype (  ) );
+    QScriptValue * ptr = new QScriptValue( obj->prototype () );
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
@@ -668,7 +668,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_SCRIPTCLASS )
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QScriptClass * ptr = obj->scriptClass (  );
+    QScriptClass * ptr = obj->scriptClass ();
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTCLASS" );
   }
 }
@@ -744,7 +744,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOBOOL )
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->toBool (  ) );
+    hb_retl( obj->toBool () );
   }
 }
 
@@ -757,7 +757,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TODATETIME )
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDateTime * ptr = new QDateTime( obj->toDateTime (  ) );
+    QDateTime * ptr = new QDateTime( obj->toDateTime () );
     _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
@@ -771,7 +771,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOINT32 )
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint32 i = obj->toInt32 (  );
+    qint32 i = obj->toInt32 ();
     hb_retni( i );
   }
 }
@@ -785,7 +785,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOINTEGER )
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qsreal r = obj->toInteger (  );
+    qsreal r = obj->toInteger ();
     hb_retnd( r );
   }
 }
@@ -799,7 +799,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TONUMBER )
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qsreal r = obj->toNumber (  );
+    qsreal r = obj->toNumber ();
     hb_retnd( r );
   }
 }
@@ -814,7 +814,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOQOBJECT )
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * ptr = obj->toQObject (  );
+    QObject * ptr = obj->toQObject ();
     _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }
@@ -828,7 +828,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOREGEXP )
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRegExp * ptr = new QRegExp( obj->toRegExp (  ) );
+    QRegExp * ptr = new QRegExp( obj->toRegExp () );
     _qt4xhb_createReturnClass ( ptr, "QREGEXP", true );
   }
 }
@@ -842,7 +842,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOSTRING )
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toString (  );
+    QString str1 = obj->toString ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -856,7 +856,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOUINT16 )
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    quint16 i = obj->toUInt16 (  );
+    quint16 i = obj->toUInt16 ();
     hb_retni( i );
   }
 }
@@ -870,7 +870,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOUINT32 )
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    quint32 i = obj->toUInt32 (  );
+    quint32 i = obj->toUInt32 ();
     hb_retni( i );
   }
 }
@@ -884,7 +884,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOVARIANT )
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->toVariant (  ) );
+    QVariant * ptr = new QVariant( obj->toVariant () );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }

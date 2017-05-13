@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_ERRORCOLUMNNUMBER )
   QScriptSyntaxCheckResult * obj = (QScriptSyntaxCheckResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->errorColumnNumber (  ) );
+    hb_retni( obj->errorColumnNumber () );
   }
 }
 
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_ERRORLINENUMBER )
   QScriptSyntaxCheckResult * obj = (QScriptSyntaxCheckResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->errorLineNumber (  ) );
+    hb_retni( obj->errorLineNumber () );
   }
 }
 
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_ERRORMESSAGE )
   QScriptSyntaxCheckResult * obj = (QScriptSyntaxCheckResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->errorMessage (  );
+    QString str1 = obj->errorMessage ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_STATE )
   QScriptSyntaxCheckResult * obj = (QScriptSyntaxCheckResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->state (  ) );
+    hb_retni( (int) obj->state () );
   }
 }
 

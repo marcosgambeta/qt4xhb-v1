@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_FLAGS )
   QScriptClassPropertyIterator * obj = (QScriptClassPropertyIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->flags (  ) );
+    hb_retni( (int) obj->flags () );
   }
 }
 
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_HASNEXT )
   QScriptClassPropertyIterator * obj = (QScriptClassPropertyIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasNext (  ) );
+    hb_retl( obj->hasNext () );
   }
 }
 
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_HASPREVIOUS )
   QScriptClassPropertyIterator * obj = (QScriptClassPropertyIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasPrevious (  ) );
+    hb_retl( obj->hasPrevious () );
   }
 }
 
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_ID )
   QScriptClassPropertyIterator * obj = (QScriptClassPropertyIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (uint) obj->id (  ) );
+    hb_retni( (uint) obj->id () );
   }
 }
 
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_NAME )
   QScriptClassPropertyIterator * obj = (QScriptClassPropertyIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QScriptString * ptr = new QScriptString( obj->name (  ) );
+    QScriptString * ptr = new QScriptString( obj->name () );
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTSTRING" );
   }
 }
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_NEXT )
   QScriptClassPropertyIterator * obj = (QScriptClassPropertyIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->next (  );
+    obj->next ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_OBJECT )
   QScriptClassPropertyIterator * obj = (QScriptClassPropertyIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QScriptValue * ptr = new QScriptValue( obj->object (  ) );
+    QScriptValue * ptr = new QScriptValue( obj->object () );
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_PREVIOUS )
   QScriptClassPropertyIterator * obj = (QScriptClassPropertyIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->previous (  );
+    obj->previous ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_TOBACK )
   QScriptClassPropertyIterator * obj = (QScriptClassPropertyIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->toBack (  );
+    obj->toBack ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_TOFRONT )
   QScriptClassPropertyIterator * obj = (QScriptClassPropertyIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->toFront (  );
+    obj->toFront ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

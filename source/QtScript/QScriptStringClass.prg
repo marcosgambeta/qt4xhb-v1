@@ -51,7 +51,7 @@ QScriptString ()
 HB_FUNC_STATIC( QSCRIPTSTRING_NEW1 )
 {
   QScriptString * o = NULL;
-  o = new QScriptString (  );
+  o = new QScriptString ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QSCRIPTSTRING_ISVALID )
   QScriptString * obj = (QScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QSCRIPTSTRING_TOSTRING )
   QScriptString * obj = (QScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toString (  );
+    QString str1 = obj->toString ();
     hb_retc( RQSTRING(str1) );
   }
 }

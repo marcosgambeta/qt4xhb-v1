@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QSCRIPTABLE_ARGUMENTCOUNT )
   QScriptable * obj = (QScriptable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->argumentCount (  ) );
+    hb_retni( obj->argumentCount () );
   }
 }
 
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QSCRIPTABLE_CONTEXT )
   QScriptable * obj = (QScriptable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QScriptContext * ptr = obj->context (  );
+    QScriptContext * ptr = obj->context ();
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTCONTEXT" );
   }
 }
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QSCRIPTABLE_ENGINE )
   QScriptable * obj = (QScriptable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QScriptEngine * ptr = obj->engine (  );
+    QScriptEngine * ptr = obj->engine ();
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTENGINE" );
   }
 }
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QSCRIPTABLE_THISOBJECT )
   QScriptable * obj = (QScriptable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QScriptValue * ptr = new QScriptValue( obj->thisObject (  ) );
+    QScriptValue * ptr = new QScriptValue( obj->thisObject () );
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }

@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QSCRIPTCLASS_ENGINE )
   QScriptClass * obj = (QScriptClass *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QScriptEngine * ptr = obj->engine (  );
+    QScriptEngine * ptr = obj->engine ();
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTENGINE" );
   }
 }
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QSCRIPTCLASS_NAME )
   QScriptClass * obj = (QScriptClass *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->name (  );
+    QString str1 = obj->name ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QSCRIPTCLASS_PROTOTYPE )
   QScriptClass * obj = (QScriptClass *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QScriptValue * ptr = new QScriptValue( obj->prototype (  ) );
+    QScriptValue * ptr = new QScriptValue( obj->prototype () );
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
