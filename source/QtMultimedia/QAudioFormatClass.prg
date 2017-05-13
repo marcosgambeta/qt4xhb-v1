@@ -66,7 +66,7 @@ QAudioFormat ()
 HB_FUNC_STATIC( QAUDIOFORMAT_NEW1 )
 {
   QAudioFormat * o = NULL;
-  o = new QAudioFormat (  );
+  o = new QAudioFormat ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_ISVALID )
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_FREQUENCY )
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->frequency (  ) );
+    hb_retni( obj->frequency () );
   }
 }
 
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SAMPLERATE )
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->sampleRate (  ) );
+    hb_retni( obj->sampleRate () );
   }
 }
 
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_CHANNELS )
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->channels (  ) );
+    hb_retni( obj->channels () );
   }
 }
 
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_CHANNELCOUNT )
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->channelCount (  ) );
+    hb_retni( obj->channelCount () );
   }
 }
 
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SAMPLESIZE )
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->sampleSize (  ) );
+    hb_retni( obj->sampleSize () );
   }
 }
 
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_CODEC )
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->codec (  );
+    QString str1 = obj->codec ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_BYTEORDER )
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->byteOrder (  ) );
+    hb_retni( (int) obj->byteOrder () );
   }
 }
 
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SAMPLETYPE )
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->sampleType (  ) );
+    hb_retni( (int) obj->sampleType () );
   }
 }
 

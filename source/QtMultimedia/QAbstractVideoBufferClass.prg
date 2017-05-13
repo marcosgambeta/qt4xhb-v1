@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_HANDLE )
   QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->handle (  ) );
+    QVariant * ptr = new QVariant( obj->handle () );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_HANDLETYPE )
   QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->handleType (  ) );
+    hb_retni( (int) obj->handleType () );
   }
 }
 
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_MAPMODE )
   QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->mapMode (  ) );
+    hb_retni( (int) obj->mapMode () );
   }
 }
 
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_UNMAP )
   QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->unmap (  );
+    obj->unmap ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

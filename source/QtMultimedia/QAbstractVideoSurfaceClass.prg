@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ERROR )
   QAbstractVideoSurface * obj = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->error (  ) );
+    hb_retni( (int) obj->error () );
   }
 }
 
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ISACTIVE )
   QAbstractVideoSurface * obj = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isActive (  ) );
+    hb_retl( obj->isActive () );
   }
 }
 
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_STOP )
   QAbstractVideoSurface * obj = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->stop (  );
+    obj->stop ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_SURFACEFORMAT )
   QAbstractVideoSurface * obj = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVideoSurfaceFormat * ptr = new QVideoSurfaceFormat( obj->surfaceFormat (  ) );
+    QVideoSurfaceFormat * ptr = new QVideoSurfaceFormat( obj->surfaceFormat () );
     _qt4xhb_createReturnClass ( ptr, "QVIDEOSURFACEFORMAT", true );
   }
 }

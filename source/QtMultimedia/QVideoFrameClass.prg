@@ -86,7 +86,7 @@ QVideoFrame ()
 HB_FUNC_STATIC( QVIDEOFRAME_NEW1 )
 {
   QVideoFrame * o = NULL;
-  o = new QVideoFrame (  );
+  o = new QVideoFrame ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_BITS1 )
   QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    uchar * ptr = obj->bits (  );
+    uchar * ptr = obj->bits ();
     _qt4xhb_createReturnClass ( ptr, "UCHAR" );
   }
 }
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_BITS2 )
   QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const uchar * ptr = obj->bits (  );
+    const uchar * ptr = obj->bits ();
     _qt4xhb_createReturnClass ( ptr, "UCHAR" );
   }
 }
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_BYTESPERLINE )
   QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->bytesPerLine (  ) );
+    hb_retni( obj->bytesPerLine () );
   }
 }
 
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_ENDTIME )
   QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->endTime (  );
+    qint64 i = obj->endTime ();
     hb_retni( i );
   }
 }
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_FIELDTYPE )
   QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->fieldType (  ) );
+    hb_retni( (int) obj->fieldType () );
   }
 }
 
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_HANDLE )
   QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->handle (  ) );
+    QVariant * ptr = new QVariant( obj->handle () );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_HANDLETYPE )
   QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->handleType (  ) );
+    hb_retni( (int) obj->handleType () );
   }
 }
 
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_HEIGHT )
   QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->height (  ) );
+    hb_retni( obj->height () );
   }
 }
 
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_ISMAPPED )
   QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isMapped (  ) );
+    hb_retl( obj->isMapped () );
   }
 }
 
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_ISREADABLE )
   QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isReadable (  ) );
+    hb_retl( obj->isReadable () );
   }
 }
 
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_ISVALID )
   QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_ISWRITABLE )
   QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isWritable (  ) );
+    hb_retl( obj->isWritable () );
   }
 }
 
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_MAPMODE )
   QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->mapMode (  ) );
+    hb_retni( (int) obj->mapMode () );
   }
 }
 
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_MAPPEDBYTES )
   QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->mappedBytes (  ) );
+    hb_retni( obj->mappedBytes () );
   }
 }
 
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_PIXELFORMAT )
   QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->pixelFormat (  ) );
+    hb_retni( (int) obj->pixelFormat () );
   }
 }
 
@@ -462,7 +462,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_SIZE )
   QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->size (  ) );
+    QSize * ptr = new QSize( obj->size () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_STARTTIME )
   QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->startTime (  );
+    qint64 i = obj->startTime ();
     hb_retni( i );
   }
 }
@@ -490,7 +490,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_UNMAP )
   QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->unmap (  );
+    obj->unmap ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -504,7 +504,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_WIDTH )
   QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->width (  ) );
+    hb_retni( obj->width () );
   }
 }
 
