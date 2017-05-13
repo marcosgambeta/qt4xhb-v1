@@ -67,7 +67,7 @@ QTestEventList ()
 HB_FUNC_STATIC( QTESTEVENTLIST_NEW1 )
 {
   QTestEventList * o = NULL;
-  o = new QTestEventList (  );
+  o = new QTestEventList ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_CLEAR )
   QTestEventList * obj = (QTestEventList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
