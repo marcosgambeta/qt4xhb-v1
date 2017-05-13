@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QEXTENSIONFACTORY_EXTENSIONMANAGER )
   QExtensionFactory * obj = (QExtensionFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QExtensionManager * ptr = obj->extensionManager (  );
+    QExtensionManager * ptr = obj->extensionManager ();
     _qt4xhb_createReturnClass ( ptr, "QEXTENSIONMANAGER" );
   }
 }

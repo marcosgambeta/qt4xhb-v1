@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_COUNT )
   QDesignerContainerExtension * obj = (QDesignerContainerExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->count (  ) );
+    hb_retni( (int) obj->count () );
   }
 }
 
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_CURRENTINDEX )
   QDesignerContainerExtension * obj = (QDesignerContainerExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->currentIndex (  ) );
+    hb_retni( (int) obj->currentIndex () );
   }
 }
 

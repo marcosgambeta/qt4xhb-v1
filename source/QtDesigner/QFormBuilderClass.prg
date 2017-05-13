@@ -49,7 +49,7 @@ QFormBuilder ()
 HB_FUNC_STATIC( QFORMBUILDER_NEW )
 {
   QFormBuilder * o = NULL;
-  o = new QFormBuilder (  );
+  o = new QFormBuilder ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QFORMBUILDER_CLEARPLUGINPATHS )
   QFormBuilder * obj = (QFormBuilder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clearPluginPaths (  );
+    obj->clearPluginPaths ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QFORMBUILDER_CUSTOMWIDGETS )
   QFormBuilder * obj = (QFormBuilder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QList<QDesignerCustomWidgetInterface *> list = obj->customWidgets (  );
+    QList<QDesignerCustomWidgetInterface *> list = obj->customWidgets ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QDESIGNERCUSTOMWIDGETINTERFACE" );
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QFORMBUILDER_PLUGINPATHS )
   QFormBuilder * obj = (QFormBuilder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList strl = obj->pluginPaths (  );
+    QStringList strl = obj->pluginPaths ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

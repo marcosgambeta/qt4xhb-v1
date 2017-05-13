@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_FILENAME )
   QDesignerWidgetBoxInterface * obj = (QDesignerWidgetBoxInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->fileName (  );
+    QString str1 = obj->fileName ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_LOAD )
   QDesignerWidgetBoxInterface * obj = (QDesignerWidgetBoxInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->load (  ) );
+    hb_retl( obj->load () );
   }
 }
 
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_SAVE )
   QDesignerWidgetBoxInterface * obj = (QDesignerWidgetBoxInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->save (  ) );
+    hb_retl( obj->save () );
   }
 }
 

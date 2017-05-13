@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_COUNT )
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->count (  ) );
+    hb_retni( obj->count () );
   }
 }
 

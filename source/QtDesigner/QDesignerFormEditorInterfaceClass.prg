@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_ACTIONEDITOR )
   QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDesignerActionEditorInterface * ptr = obj->actionEditor (  );
+    QDesignerActionEditorInterface * ptr = obj->actionEditor ();
     _qt4xhb_createReturnClass ( ptr, "QDESIGNERACTIONEDITORINTERFACE" );
   }
 }
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_EXTENSIONMANAGER )
   QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QExtensionManager * ptr = obj->extensionManager (  );
+    QExtensionManager * ptr = obj->extensionManager ();
     _qt4xhb_createReturnClass ( ptr, "QEXTENSIONMANAGER" );
   }
 }
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_FORMWINDOWMANAGER )
   QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDesignerFormWindowManagerInterface * ptr = obj->formWindowManager (  );
+    QDesignerFormWindowManagerInterface * ptr = obj->formWindowManager ();
     _qt4xhb_createReturnClass ( ptr, "QDESIGNERFORMWINDOWMANAGERINTERFACE" );
   }
 }
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_OBJECTINSPECTOR )
   QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDesignerObjectInspectorInterface * ptr = obj->objectInspector (  );
+    QDesignerObjectInspectorInterface * ptr = obj->objectInspector ();
     _qt4xhb_createReturnClass ( ptr, "QDESIGNEROBJECTINSPECTORINTERFACE" );
   }
 }
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_PROPERTYEDITOR )
   QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDesignerPropertyEditorInterface * ptr = obj->propertyEditor (  );
+    QDesignerPropertyEditorInterface * ptr = obj->propertyEditor ();
     _qt4xhb_createReturnClass ( ptr, "QDESIGNERPROPERTYEDITORINTERFACE" );
   }
 }
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_TOPLEVEL )
   QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * ptr = obj->topLevel (  );
+    QWidget * ptr = obj->topLevel ();
     _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_WIDGETBOX )
   QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDesignerWidgetBoxInterface * ptr = obj->widgetBox (  );
+    QDesignerWidgetBoxInterface * ptr = obj->widgetBox ();
     _qt4xhb_createReturnClass ( ptr, "QDESIGNERWIDGETBOXINTERFACE" );
   }
 }

@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_CUSTOMWIDGETS )
   QDesignerCustomWidgetCollectionInterface * obj = (QDesignerCustomWidgetCollectionInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QList<QDesignerCustomWidgetInterface *> list = obj->customWidgets (  );
+    QList<QDesignerCustomWidgetInterface *> list = obj->customWidgets ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QDESIGNERCUSTOMWIDGETINTERFACE" );
