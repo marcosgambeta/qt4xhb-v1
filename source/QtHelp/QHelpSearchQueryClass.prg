@@ -48,7 +48,7 @@ QHelpSearchQuery ()
 HB_FUNC_STATIC( QHELPSEARCHQUERY_NEW1 )
 {
   QHelpSearchQuery * o = NULL;
-  o = new QHelpSearchQuery (  );
+  o = new QHelpSearchQuery ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

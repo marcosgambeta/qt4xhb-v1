@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_AUTOSAVEFILTER )
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->autoSaveFilter (  ) );
+    hb_retl( obj->autoSaveFilter () );
   }
 }
 
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_COLLECTIONFILE )
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->collectionFile (  );
+    QString str1 = obj->collectionFile ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_CURRENTFILTER )
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->currentFilter (  );
+    QString str1 = obj->currentFilter ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_CUSTOMFILTERS )
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList strl = obj->customFilters (  );
+    QStringList strl = obj->customFilters ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_ERROR )
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->error (  );
+    QString str1 = obj->error ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_FILTERATTRIBUTES1 )
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList strl = obj->filterAttributes (  );
+    QStringList strl = obj->filterAttributes ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_REGISTEREDDOCUMENTATIONS )
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList strl = obj->registeredDocumentations (  );
+    QStringList strl = obj->registeredDocumentations ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_SETUPDATA )
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->setupData (  ) );
+    hb_retl( obj->setupData () );
   }
 }
 

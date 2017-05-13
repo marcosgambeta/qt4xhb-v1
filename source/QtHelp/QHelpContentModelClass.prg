@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_ISCREATINGCONTENTS )
   QHelpContentModel * obj = (QHelpContentModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isCreatingContents (  ) );
+    hb_retl( obj->isCreatingContents () );
   }
 }
 

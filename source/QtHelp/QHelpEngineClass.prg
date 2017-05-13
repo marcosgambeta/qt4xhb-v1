@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QHELPENGINE_CONTENTMODEL )
   QHelpEngine * obj = (QHelpEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QHelpContentModel * ptr = obj->contentModel (  );
+    QHelpContentModel * ptr = obj->contentModel ();
     _qt4xhb_createReturnClass ( ptr, "QHELPCONTENTMODEL" );
   }
 }
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QHELPENGINE_CONTENTWIDGET )
   QHelpEngine * obj = (QHelpEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QHelpContentWidget * ptr = obj->contentWidget (  );
+    QHelpContentWidget * ptr = obj->contentWidget ();
     _qt4xhb_createReturnClass ( ptr, "QHELPCONTENTWIDGET" );
   }
 }
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QHELPENGINE_INDEXMODEL )
   QHelpEngine * obj = (QHelpEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QHelpIndexModel * ptr = obj->indexModel (  );
+    QHelpIndexModel * ptr = obj->indexModel ();
     _qt4xhb_createReturnClass ( ptr, "QHELPINDEXMODEL" );
   }
 }
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QHELPENGINE_INDEXWIDGET )
   QHelpEngine * obj = (QHelpEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QHelpIndexWidget * ptr = obj->indexWidget (  );
+    QHelpIndexWidget * ptr = obj->indexWidget ();
     _qt4xhb_createReturnClass ( ptr, "QHELPINDEXWIDGET" );
   }
 }
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QHELPENGINE_SEARCHENGINE )
   QHelpEngine * obj = (QHelpEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QHelpSearchEngine * ptr = obj->searchEngine (  );
+    QHelpSearchEngine * ptr = obj->searchEngine ();
     _qt4xhb_createReturnClass ( ptr, "QHELPSEARCHENGINE" );
   }
 }

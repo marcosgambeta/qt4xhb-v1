@@ -46,7 +46,7 @@ HB_FUNC_STATIC( QHELPINDEXWIDGET_ACTIVATECURRENTITEM )
   QHelpIndexWidget * obj = (QHelpIndexWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->activateCurrentItem (  );
+    obj->activateCurrentItem ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
