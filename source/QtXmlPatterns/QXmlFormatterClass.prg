@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_INDENTATIONDEPTH )
   QXmlFormatter * obj = (QXmlFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->indentationDepth (  ) );
+    hb_retni( obj->indentationDepth () );
   }
 }
 
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_ENDDOCUMENT )
   QXmlFormatter * obj = (QXmlFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->endDocument (  );
+    obj->endDocument ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_ENDELEMENT )
   QXmlFormatter * obj = (QXmlFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->endElement (  );
+    obj->endElement ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_ENDOFSEQUENCE )
   QXmlFormatter * obj = (QXmlFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->endOfSequence (  );
+    obj->endOfSequence ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_STARTDOCUMENT )
   QXmlFormatter * obj = (QXmlFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->startDocument (  );
+    obj->startDocument ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_STARTOFSEQUENCE )
   QXmlFormatter * obj = (QXmlFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->startOfSequence (  );
+    obj->startOfSequence ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NAMEPOOL )
   QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QXmlNamePool * ptr = &obj->namePool (  );
+    QXmlNamePool * ptr = &obj->namePool ();
     _qt4xhb_createReturnClass ( ptr, "QXMLNAMEPOOL" );
   }
 }

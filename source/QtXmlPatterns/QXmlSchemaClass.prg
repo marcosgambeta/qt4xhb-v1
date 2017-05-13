@@ -70,7 +70,7 @@ QXmlSchema ()
 HB_FUNC_STATIC( QXMLSCHEMA_NEW1 )
 {
   QXmlSchema * o = NULL;
-  o = new QXmlSchema (  );
+  o = new QXmlSchema ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_DOCUMENTURI )
   QXmlSchema * obj = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->documentUri (  ) );
+    QUrl * ptr = new QUrl( obj->documentUri () );
     _qt4xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_ISVALID )
   QXmlSchema * obj = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_MESSAGEHANDLER )
   QXmlSchema * obj = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QAbstractMessageHandler * ptr = obj->messageHandler (  );
+    QAbstractMessageHandler * ptr = obj->messageHandler ();
     _qt4xhb_createReturnClass ( ptr, "QABSTRACTMESSAGEHANDLER" );
   }
 }
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_NAMEPOOL )
   QXmlSchema * obj = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QXmlNamePool * ptr = new QXmlNamePool( obj->namePool (  ) );
+    QXmlNamePool * ptr = new QXmlNamePool( obj->namePool () );
     _qt4xhb_createReturnClass ( ptr, "QXMLNAMEPOOL", true );
   }
 }
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_NETWORKACCESSMANAGER )
   QXmlSchema * obj = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QNetworkAccessManager * ptr = obj->networkAccessManager (  );
+    QNetworkAccessManager * ptr = obj->networkAccessManager ();
     _qt4xhb_createReturnClass ( ptr, "QNETWORKACCESSMANAGER" );
   }
 }
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_URIRESOLVER )
   QXmlSchema * obj = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QAbstractUriResolver * ptr = obj->uriResolver (  );
+    const QAbstractUriResolver * ptr = obj->uriResolver ();
     _qt4xhb_createReturnClass ( ptr, "QABSTRACTURIRESOLVER" );
   }
 }

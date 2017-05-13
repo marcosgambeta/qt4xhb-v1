@@ -57,7 +57,7 @@ QXmlNodeModelIndex ()
 HB_FUNC_STATIC( QXMLNODEMODELINDEX_NEW1 )
 {
   QXmlNodeModelIndex * o = NULL;
-  o = new QXmlNodeModelIndex (  );
+  o = new QXmlNodeModelIndex ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_ADDITIONALDATA )
   QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->additionalData (  );
+    qint64 i = obj->additionalData ();
     hb_retni( i );
   }
 }
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_DATA )
   QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->data (  );
+    qint64 i = obj->data ();
     hb_retni( i );
   }
 }
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_INTERNALPOINTER )
   QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    void * retptr = obj->internalPointer (  );
+    void * retptr = obj->internalPointer ();
   hb_retptr( (void *) retptr );
   }
 }
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_ISNULL )
   QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_MODEL )
   QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QAbstractXmlNodeModel * ptr = obj->model (  );
+    const QAbstractXmlNodeModel * ptr = obj->model ();
     _qt4xhb_createReturnClass ( ptr, "QABSTRACTXMLNODEMODEL" );
   }
 }

@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QXMLSERIALIZER_CODEC )
   QXmlSerializer * obj = (QXmlSerializer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QTextCodec * ptr = obj->codec (  );
+    const QTextCodec * ptr = obj->codec ();
     _qt4xhb_createReturnClass ( ptr, "QTEXTCODEC" );
   }
 }
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QXMLSERIALIZER_OUTPUTDEVICE )
   QXmlSerializer * obj = (QXmlSerializer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QIODevice * ptr = obj->outputDevice (  );
+    QIODevice * ptr = obj->outputDevice ();
     _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );
   }
 }
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QXMLSERIALIZER_ENDDOCUMENT )
   QXmlSerializer * obj = (QXmlSerializer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->endDocument (  );
+    obj->endDocument ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QXMLSERIALIZER_ENDELEMENT )
   QXmlSerializer * obj = (QXmlSerializer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->endElement (  );
+    obj->endElement ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QXMLSERIALIZER_ENDOFSEQUENCE )
   QXmlSerializer * obj = (QXmlSerializer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->endOfSequence (  );
+    obj->endOfSequence ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QXMLSERIALIZER_STARTDOCUMENT )
   QXmlSerializer * obj = (QXmlSerializer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->startDocument (  );
+    obj->startDocument ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QXMLSERIALIZER_STARTOFSEQUENCE )
   QXmlSerializer * obj = (QXmlSerializer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->startOfSequence (  );
+    obj->startOfSequence ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

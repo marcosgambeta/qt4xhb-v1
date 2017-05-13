@@ -93,7 +93,7 @@ QXmlQuery ()
 HB_FUNC_STATIC( QXMLQUERY_NEW1 )
 {
   QXmlQuery * o = NULL;
-  o = new QXmlQuery (  );
+  o = new QXmlQuery ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QXMLQUERY_INITIALTEMPLATENAME )
   QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QXmlName * ptr = new QXmlName( obj->initialTemplateName (  ) );
+    QXmlName * ptr = new QXmlName( obj->initialTemplateName () );
     _qt4xhb_createReturnClass ( ptr, "QXMLNAME", true );
   }
 }
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QXMLQUERY_ISVALID )
   QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QXMLQUERY_MESSAGEHANDLER )
   QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QAbstractMessageHandler * ptr = obj->messageHandler (  );
+    QAbstractMessageHandler * ptr = obj->messageHandler ();
     _qt4xhb_createReturnClass ( ptr, "QABSTRACTMESSAGEHANDLER" );
   }
 }
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QXMLQUERY_NAMEPOOL )
   QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QXmlNamePool * ptr = new QXmlNamePool( obj->namePool (  ) );
+    QXmlNamePool * ptr = new QXmlNamePool( obj->namePool () );
     _qt4xhb_createReturnClass ( ptr, "QXMLNAMEPOOL", true );
   }
 }
@@ -459,7 +459,7 @@ HB_FUNC_STATIC( QXMLQUERY_NETWORKACCESSMANAGER )
   QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QNetworkAccessManager * ptr = obj->networkAccessManager (  );
+    QNetworkAccessManager * ptr = obj->networkAccessManager ();
     _qt4xhb_createReturnClass ( ptr, "QNETWORKACCESSMANAGER" );
   }
 }
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QXMLQUERY_QUERYLANGUAGE )
   QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->queryLanguage (  ) );
+    hb_retni( (int) obj->queryLanguage () );
   }
 }
 
@@ -723,7 +723,7 @@ HB_FUNC_STATIC( QXMLQUERY_URIRESOLVER )
   QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QAbstractUriResolver * ptr = obj->uriResolver (  );
+    const QAbstractUriResolver * ptr = obj->uriResolver ();
     _qt4xhb_createReturnClass ( ptr, "QABSTRACTURIRESOLVER" );
   }
 }

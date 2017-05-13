@@ -61,7 +61,7 @@ QSourceLocation ()
 HB_FUNC_STATIC( QSOURCELOCATION_NEW1 )
 {
   QSourceLocation * o = NULL;
-  o = new QSourceLocation (  );
+  o = new QSourceLocation ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_COLUMN )
   QSourceLocation * obj = (QSourceLocation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->column (  );
+    qint64 i = obj->column ();
     hb_retni( i );
   }
 }
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_ISNULL )
   QSourceLocation * obj = (QSourceLocation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_LINE )
   QSourceLocation * obj = (QSourceLocation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->line (  );
+    qint64 i = obj->line ();
     hb_retni( i );
   }
 }
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_URI )
   QSourceLocation * obj = (QSourceLocation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->uri (  ) );
+    QUrl * ptr = new QUrl( obj->uri () );
     _qt4xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
