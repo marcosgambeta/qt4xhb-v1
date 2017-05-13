@@ -69,7 +69,7 @@ QDataStream ()
 HB_FUNC_STATIC( QDATASTREAM_NEW1 )
 {
   QDataStream * o = NULL;
-  o = new QDataStream (  );
+  o = new QDataStream ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QDATASTREAM_ATEND )
   QDataStream * obj = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->atEnd (  ) );
+    hb_retl( obj->atEnd () );
   }
 }
 
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QDATASTREAM_BYTEORDER )
   QDataStream * obj = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->byteOrder (  ) );
+    hb_retni( (int) obj->byteOrder () );
   }
 }
 
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QDATASTREAM_DEVICE )
   QDataStream * obj = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QIODevice * ptr = obj->device (  );
+    QIODevice * ptr = obj->device ();
     _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );
   }
 }
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QDATASTREAM_FLOATINGPOINTPRECISION )
   QDataStream * obj = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->floatingPointPrecision (  ) );
+    hb_retni( (int) obj->floatingPointPrecision () );
   }
 }
 
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QDATASTREAM_RESETSTATUS )
   QDataStream * obj = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->resetStatus (  );
+    obj->resetStatus ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QDATASTREAM_STATUS )
   QDataStream * obj = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->status (  ) );
+    hb_retni( (int) obj->status () );
   }
 }
 
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QDATASTREAM_VERSION )
   QDataStream * obj = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->version (  ) );
+    hb_retni( obj->version () );
   }
 }
 

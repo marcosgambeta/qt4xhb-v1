@@ -63,7 +63,7 @@ QMetaEnum()
 HB_FUNC_STATIC( QMETAENUM_NEW )
 {
   QMetaEnum * o = NULL;
-  o = new QMetaEnum (  );
+  o = new QMetaEnum ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QMETAENUM_NAME )
   QMetaEnum * obj = (QMetaEnum *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const char * str1 = obj->name (  );
+    const char * str1 = obj->name ();
     hb_retc( str1 );
   }
 }
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QMETAENUM_ISFLAG )
   QMetaEnum * obj = (QMetaEnum *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isFlag (  ) );
+    hb_retl( obj->isFlag () );
   }
 }
 
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QMETAENUM_KEYCOUNT )
   QMetaEnum * obj = (QMetaEnum *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->keyCount (  ) );
+    hb_retni( obj->keyCount () );
   }
 }
 
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QMETAENUM_SCOPE )
   QMetaEnum * obj = (QMetaEnum *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const char * str1 = obj->scope (  );
+    const char * str1 = obj->scope ();
     hb_retc( str1 );
   }
 }
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QMETAENUM_ENCLOSINGMETAOBJECT )
   QMetaEnum * obj = (QMetaEnum *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QMetaObject * ptr = obj->enclosingMetaObject (  );
+    const QMetaObject * ptr = obj->enclosingMetaObject ();
     _qt4xhb_createReturnClass ( ptr, "QMETAOBJECT" );
   }
 }
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QMETAENUM_ISVALID )
   QMetaEnum * obj = (QMetaEnum *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 

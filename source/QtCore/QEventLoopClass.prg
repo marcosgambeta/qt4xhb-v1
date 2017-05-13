@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QEVENTLOOP_ISRUNNING )
   QEventLoop * obj = (QEventLoop *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isRunning (  ) );
+    hb_retl( obj->isRunning () );
   }
 }
 
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QEVENTLOOP_WAKEUP )
   QEventLoop * obj = (QEventLoop *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->wakeUp (  );
+    obj->wakeUp ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QEVENTLOOP_QUIT )
   QEventLoop * obj = (QEventLoop *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->quit (  );
+    obj->quit ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

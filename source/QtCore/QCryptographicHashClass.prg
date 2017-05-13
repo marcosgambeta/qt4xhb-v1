@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_RESET )
   QCryptographicHash * obj = (QCryptographicHash *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->reset (  );
+    obj->reset ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_RESULT )
   QCryptographicHash * obj = (QCryptographicHash *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->result (  ) );
+    QByteArray * ptr = new QByteArray( obj->result () );
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }

@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QBUFFER_BUFFER1 )
   QBuffer * obj = (QBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * ptr = &obj->buffer (  );
+    QByteArray * ptr = &obj->buffer ();
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QBUFFER_BUFFER2 )
   QBuffer * obj = (QBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QByteArray * ptr = &obj->buffer (  );
+    const QByteArray * ptr = &obj->buffer ();
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QBUFFER_DATA )
   QBuffer * obj = (QBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QByteArray * ptr = &obj->data (  );
+    const QByteArray * ptr = &obj->data ();
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QBUFFER_ATEND )
   QBuffer * obj = (QBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->atEnd (  ) );
+    hb_retl( obj->atEnd () );
   }
 }
 
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QBUFFER_CANREADLINE )
   QBuffer * obj = (QBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->canReadLine (  ) );
+    hb_retl( obj->canReadLine () );
   }
 }
 
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QBUFFER_CLOSE )
   QBuffer * obj = (QBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->close (  );
+    obj->close ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QBUFFER_POS )
   QBuffer * obj = (QBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->pos (  );
+    qint64 i = obj->pos ();
     hb_retni( i );
   }
 }
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QBUFFER_SIZE )
   QBuffer * obj = (QBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->size (  );
+    qint64 i = obj->size ();
     hb_retni( i );
   }
 }

@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_PROPERTYNAME )
   QPropertyAnimation * obj = (QPropertyAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->propertyName (  ) );
+    QByteArray * ptr = new QByteArray( obj->propertyName () );
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_TARGETOBJECT )
   QPropertyAnimation * obj = (QPropertyAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * ptr = obj->targetObject (  );
+    QObject * ptr = obj->targetObject ();
     _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }

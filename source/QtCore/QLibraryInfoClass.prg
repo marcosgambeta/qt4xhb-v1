@@ -55,7 +55,7 @@ static QString licensee()
 */
 HB_FUNC_STATIC( QLIBRARYINFO_LICENSEE )
 {
-  QString str1 = QLibraryInfo::licensee (  );
+  QString str1 = QLibraryInfo::licensee ();
   hb_retc( RQSTRING(str1) );
 }
 
@@ -65,7 +65,7 @@ static QString licensedProducts()
 */
 HB_FUNC_STATIC( QLIBRARYINFO_LICENSEDPRODUCTS )
 {
-  QString str1 = QLibraryInfo::licensedProducts (  );
+  QString str1 = QLibraryInfo::licensedProducts ();
   hb_retc( RQSTRING(str1) );
 }
 
@@ -75,7 +75,7 @@ static QString buildKey()
 */
 HB_FUNC_STATIC( QLIBRARYINFO_BUILDKEY )
 {
-  QString str1 = QLibraryInfo::buildKey (  );
+  QString str1 = QLibraryInfo::buildKey ();
   hb_retc( RQSTRING(str1) );
 }
 
@@ -85,7 +85,7 @@ static QDate buildDate()
 */
 HB_FUNC_STATIC( QLIBRARYINFO_BUILDDATE )
 {
-  QDate * ptr = new QDate( QLibraryInfo::buildDate (  ) );
+  QDate * ptr = new QDate( QLibraryInfo::buildDate () );
   _qt4xhb_createReturnClass ( ptr, "QDATE", true );
 }
 

@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QPOINTF_ISNULL )
   QPointF * obj = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QPOINTF_MANHATTANLENGTH )
   QPointF * obj = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->manhattanLength (  );
+    qreal r = obj->manhattanLength ();
     hb_retnd( r );
   }
 }
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QPOINTF_TOPOINT )
   QPointF * obj = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPoint * ptr = new QPoint( obj->toPoint (  ) );
+    QPoint * ptr = new QPoint( obj->toPoint () );
     _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QPOINTF_X )
   QPointF * obj = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->x (  );
+    qreal r = obj->x ();
     hb_retnd( r );
   }
 }
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QPOINTF_Y )
   QPointF * obj = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->y (  );
+    qreal r = obj->y ();
     hb_retnd( r );
   }
 }

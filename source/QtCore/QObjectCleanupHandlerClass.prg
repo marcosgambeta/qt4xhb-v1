@@ -48,7 +48,7 @@ QObjectCleanupHandler()
 HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_NEW )
 {
   QObjectCleanupHandler * o = NULL;
-  o = new QObjectCleanupHandler (  );
+  o = new QObjectCleanupHandler ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_ISEMPTY )
   QObjectCleanupHandler * obj = (QObjectCleanupHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 }
 
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_CLEAR )
   QObjectCleanupHandler * obj = (QObjectCleanupHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -51,7 +51,7 @@ QTemporaryFile()
 HB_FUNC_STATIC( QTEMPORARYFILE_NEW1 )
 {
   QTemporaryFile * o = NULL;
-  o = new QTemporaryFile (  );
+  o = new QTemporaryFile ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_AUTOREMOVE )
   QTemporaryFile * obj = (QTemporaryFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->autoRemove (  ) );
+    hb_retl( obj->autoRemove () );
   }
 }
 
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_FILETEMPLATE )
   QTemporaryFile * obj = (QTemporaryFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->fileTemplate (  );
+    QString str1 = obj->fileTemplate ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_OPEN )
   QTemporaryFile * obj = (QTemporaryFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->open (  ) );
+    hb_retl( obj->open () );
   }
 }
 
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_FILENAME )
   QTemporaryFile * obj = (QTemporaryFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->fileName (  );
+    QString str1 = obj->fileName ();
     hb_retc( RQSTRING(str1) );
   }
 }

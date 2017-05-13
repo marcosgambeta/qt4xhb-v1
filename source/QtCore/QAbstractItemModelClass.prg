@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_MIMETYPES )
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList strl = obj->mimeTypes (  );
+    QStringList strl = obj->mimeTypes ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -594,7 +594,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SUPPORTEDDRAGACTIONS )
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->supportedDragActions (  ) );
+    hb_retni( (int) obj->supportedDragActions () );
   }
 }
 
@@ -607,7 +607,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SUPPORTEDDROPACTIONS )
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->supportedDropActions (  ) );
+    hb_retni( (int) obj->supportedDropActions () );
   }
 }
 
@@ -620,7 +620,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_REVERT )
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->revert (  );
+    obj->revert ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -634,7 +634,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SUBMIT )
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->submit (  ) );
+    hb_retl( obj->submit () );
   }
 }
 

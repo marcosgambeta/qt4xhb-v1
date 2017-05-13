@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QTIMER_INTERVAL )
   QTimer * obj = (QTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->interval (  ) );
+    hb_retni( obj->interval () );
   }
 }
 
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QTIMER_ISACTIVE )
   QTimer * obj = (QTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isActive (  ) );
+    hb_retl( obj->isActive () );
   }
 }
 
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QTIMER_ISSINGLESHOT )
   QTimer * obj = (QTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isSingleShot (  ) );
+    hb_retl( obj->isSingleShot () );
   }
 }
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QTIMER_TIMERID )
   QTimer * obj = (QTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->timerId (  ) );
+    hb_retni( obj->timerId () );
   }
 }
 
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QTIMER_START2 )
   QTimer * obj = (QTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->start (  );
+    obj->start ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QTIMER_STOP )
   QTimer * obj = (QTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->stop (  );
+    obj->stop ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

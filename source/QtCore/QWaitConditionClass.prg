@@ -50,7 +50,7 @@ QWaitCondition ()
 HB_FUNC_STATIC( QWAITCONDITION_NEW )
 {
   QWaitCondition * o = NULL;
-  o = new QWaitCondition (  );
+  o = new QWaitCondition ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QWAITCONDITION_WAKEALL )
   QWaitCondition * obj = (QWaitCondition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->wakeAll (  );
+    obj->wakeAll ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QWAITCONDITION_WAKEONE )
   QWaitCondition * obj = (QWaitCondition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->wakeOne (  );
+    obj->wakeOne ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

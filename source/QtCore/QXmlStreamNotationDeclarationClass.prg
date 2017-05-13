@@ -56,7 +56,7 @@ QXmlStreamNotationDeclaration()
 HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_NEW1 )
 {
   QXmlStreamNotationDeclaration * o = NULL;
-  o = new QXmlStreamNotationDeclaration (  );
+  o = new QXmlStreamNotationDeclaration ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_NAME )
   QXmlStreamNotationDeclaration * obj = (QXmlStreamNotationDeclaration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringRef * ptr = new QStringRef( obj->name (  ) );
+    QStringRef * ptr = new QStringRef( obj->name () );
     _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_PUBLICID )
   QXmlStreamNotationDeclaration * obj = (QXmlStreamNotationDeclaration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringRef * ptr = new QStringRef( obj->publicId (  ) );
+    QStringRef * ptr = new QStringRef( obj->publicId () );
     _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_SYSTEMID )
   QXmlStreamNotationDeclaration * obj = (QXmlStreamNotationDeclaration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringRef * ptr = new QStringRef( obj->systemId (  ) );
+    QStringRef * ptr = new QStringRef( obj->systemId () );
     _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }

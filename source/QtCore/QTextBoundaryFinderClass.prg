@@ -62,7 +62,7 @@ QTextBoundaryFinder()
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW1 )
 {
   QTextBoundaryFinder * o = NULL;
-  o = new QTextBoundaryFinder (  );
+  o = new QTextBoundaryFinder ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_ISVALID )
   QTextBoundaryFinder * obj = (QTextBoundaryFinder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TYPE )
   QTextBoundaryFinder * obj = (QTextBoundaryFinder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->type (  ) );
+    hb_retni( (int) obj->type () );
   }
 }
 
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_STRING )
   QTextBoundaryFinder * obj = (QTextBoundaryFinder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->string (  );
+    QString str1 = obj->string ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TOSTART )
   QTextBoundaryFinder * obj = (QTextBoundaryFinder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->toStart (  );
+    obj->toStart ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TOEND )
   QTextBoundaryFinder * obj = (QTextBoundaryFinder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->toEnd (  );
+    obj->toEnd ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_POSITION )
   QTextBoundaryFinder * obj = (QTextBoundaryFinder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->position (  ) );
+    hb_retni( obj->position () );
   }
 }
 
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TONEXTBOUNDARY )
   QTextBoundaryFinder * obj = (QTextBoundaryFinder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->toNextBoundary (  ) );
+    hb_retni( obj->toNextBoundary () );
   }
 }
 
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TOPREVIOUSBOUNDARY )
   QTextBoundaryFinder * obj = (QTextBoundaryFinder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->toPreviousBoundary (  ) );
+    hb_retni( obj->toPreviousBoundary () );
   }
 }
 
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_ISATBOUNDARY )
   QTextBoundaryFinder * obj = (QTextBoundaryFinder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isAtBoundary (  ) );
+    hb_retl( obj->isAtBoundary () );
   }
 }
 
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_BOUNDARYREASONS )
   QTextBoundaryFinder * obj = (QTextBoundaryFinder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->boundaryReasons (  ) );
+    hb_retni( (int) obj->boundaryReasons () );
   }
 }
 

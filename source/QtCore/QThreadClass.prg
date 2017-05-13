@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QTHREAD_ISFINISHED )
   QThread * obj = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isFinished (  ) );
+    hb_retl( obj->isFinished () );
   }
 }
 
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QTHREAD_ISRUNNING )
   QThread * obj = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isRunning (  ) );
+    hb_retl( obj->isRunning () );
   }
 }
 
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QTHREAD_PRIORITY )
   QThread * obj = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->priority (  ) );
+    hb_retni( (int) obj->priority () );
   }
 }
 
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QTHREAD_STACKSIZE )
   QThread * obj = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (uint) obj->stackSize (  ) );
+    hb_retni( (uint) obj->stackSize () );
   }
 }
 
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QTHREAD_QUIT )
   QThread * obj = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->quit (  );
+    obj->quit ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QTHREAD_TERMINATE )
   QThread * obj = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->terminate (  );
+    obj->terminate ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -242,7 +242,7 @@ QThread * currentThread()
 */
 HB_FUNC_STATIC( QTHREAD_CURRENTTHREAD )
 {
-  QThread * ptr = QThread::currentThread (  );
+  QThread * ptr = QThread::currentThread ();
   _qt4xhb_createReturnClass ( ptr, "QTHREAD" );
 }
 
@@ -253,7 +253,7 @@ int idealThreadCount()
 */
 HB_FUNC_STATIC( QTHREAD_IDEALTHREADCOUNT )
 {
-  hb_retni( QThread::idealThreadCount (  ) );
+  hb_retni( QThread::idealThreadCount () );
 }
 
 
@@ -265,7 +265,7 @@ void yieldCurrentThread()
 */
 HB_FUNC_STATIC( QTHREAD_YIELDCURRENTTHREAD )
 {
-  QThread::yieldCurrentThread (  );
+  QThread::yieldCurrentThread ();
   hb_itemReturn( hb_stackSelfItem() );
 }
 

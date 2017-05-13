@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QPROCESS_CLOSEWRITECHANNEL )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->closeWriteChannel (  );
+    obj->closeWriteChannel ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QPROCESS_ENVIRONMENT )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList strl = obj->environment (  );
+    QStringList strl = obj->environment ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QPROCESS_ERROR )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->error (  ) );
+    hb_retni( (int) obj->error () );
   }
 }
 
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QPROCESS_EXITCODE )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->exitCode (  ) );
+    hb_retni( obj->exitCode () );
   }
 }
 
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QPROCESS_EXITSTATUS )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->exitStatus (  ) );
+    hb_retni( (int) obj->exitStatus () );
   }
 }
 
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QPROCESS_NATIVEARGUMENTS )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->nativeArguments (  );
+    QString str1 = obj->nativeArguments ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QPROCESS_PROCESSCHANNELMODE )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->processChannelMode (  ) );
+    hb_retni( (int) obj->processChannelMode () );
   }
 }
 
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QPROCESS_PROCESSENVIRONMENT )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QProcessEnvironment * ptr = new QProcessEnvironment( obj->processEnvironment (  ) );
+    QProcessEnvironment * ptr = new QProcessEnvironment( obj->processEnvironment () );
     _qt4xhb_createReturnClass ( ptr, "QPROCESSENVIRONMENT", true );
   }
 }
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QPROCESS_READALLSTANDARDERROR )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->readAllStandardError (  ) );
+    QByteArray * ptr = new QByteArray( obj->readAllStandardError () );
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QPROCESS_READALLSTANDARDOUTPUT )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->readAllStandardOutput (  ) );
+    QByteArray * ptr = new QByteArray( obj->readAllStandardOutput () );
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QPROCESS_READCHANNEL )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->readChannel (  ) );
+    hb_retni( (int) obj->readChannel () );
   }
 }
 
@@ -488,7 +488,7 @@ HB_FUNC_STATIC( QPROCESS_STATE )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->state (  ) );
+    hb_retni( (int) obj->state () );
   }
 }
 
@@ -527,7 +527,7 @@ HB_FUNC_STATIC( QPROCESS_WORKINGDIRECTORY )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->workingDirectory (  );
+    QString str1 = obj->workingDirectory ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -541,7 +541,7 @@ HB_FUNC_STATIC( QPROCESS_ATEND )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->atEnd (  ) );
+    hb_retl( obj->atEnd () );
   }
 }
 
@@ -554,7 +554,7 @@ HB_FUNC_STATIC( QPROCESS_BYTESAVAILABLE )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->bytesAvailable (  );
+    qint64 i = obj->bytesAvailable ();
     hb_retni( i );
   }
 }
@@ -568,7 +568,7 @@ HB_FUNC_STATIC( QPROCESS_BYTESTOWRITE )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->bytesToWrite (  );
+    qint64 i = obj->bytesToWrite ();
     hb_retni( i );
   }
 }
@@ -582,7 +582,7 @@ HB_FUNC_STATIC( QPROCESS_CANREADLINE )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->canReadLine (  ) );
+    hb_retl( obj->canReadLine () );
   }
 }
 
@@ -595,7 +595,7 @@ HB_FUNC_STATIC( QPROCESS_CLOSE )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->close (  );
+    obj->close ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -609,7 +609,7 @@ HB_FUNC_STATIC( QPROCESS_ISSEQUENTIAL )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isSequential (  ) );
+    hb_retl( obj->isSequential () );
   }
 }
 
@@ -648,7 +648,7 @@ HB_FUNC_STATIC( QPROCESS_KILL )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->kill (  );
+    obj->kill ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -662,7 +662,7 @@ HB_FUNC_STATIC( QPROCESS_TERMINATE )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->terminate (  );
+    obj->terminate ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -755,7 +755,7 @@ QStringList systemEnvironment ()
 */
 HB_FUNC_STATIC( QPROCESS_SYSTEMENVIRONMENT )
 {
-  QStringList strl = QProcess::systemEnvironment (  );
+  QStringList strl = QProcess::systemEnvironment ();
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;

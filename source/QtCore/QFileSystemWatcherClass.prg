@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_DIRECTORIES )
   QFileSystemWatcher * obj = (QFileSystemWatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList strl = obj->directories (  );
+    QStringList strl = obj->directories ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_FILES )
   QFileSystemWatcher * obj = (QFileSystemWatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList strl = obj->files (  );
+    QStringList strl = obj->files ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

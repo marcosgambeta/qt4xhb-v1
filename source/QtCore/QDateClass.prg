@@ -93,7 +93,7 @@ QDate ()
 HB_FUNC_STATIC( QDATE_NEW1 )
 {
   QDate * o = NULL;
-  o = new QDate (  );
+  o = new QDate ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QDATE_DAY )
   QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->day (  ) );
+    hb_retni( obj->day () );
   }
 }
 
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QDATE_DAYOFWEEK )
   QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->dayOfWeek (  ) );
+    hb_retni( obj->dayOfWeek () );
   }
 }
 
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QDATE_DAYOFYEAR )
   QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->dayOfYear (  ) );
+    hb_retni( obj->dayOfYear () );
   }
 }
 
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QDATE_DAYSINMONTH )
   QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->daysInMonth (  ) );
+    hb_retni( obj->daysInMonth () );
   }
 }
 
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QDATE_DAYSINYEAR )
   QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->daysInYear (  ) );
+    hb_retni( obj->daysInYear () );
   }
 }
 
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QDATE_ISNULL )
   QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QDATE_ISVALID1 )
   QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QDATE_MONTH )
   QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->month (  ) );
+    hb_retni( obj->month () );
   }
 }
 
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QDATE_TOJULIANDAY )
   QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->toJulianDay (  ) );
+    hb_retni( obj->toJulianDay () );
   }
 }
 
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QDATE_YEAR )
   QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->year (  ) );
+    hb_retni( obj->year () );
   }
 }
 
@@ -428,7 +428,7 @@ QDate currentDate ()
 */
 HB_FUNC_STATIC( QDATE_CURRENTDATE )
 {
-  QDate * ptr = new QDate( QDate::currentDate (  ) );
+  QDate * ptr = new QDate( QDate::currentDate () );
   _qt4xhb_createReturnClass ( ptr, "QDATE", true );
 }
 

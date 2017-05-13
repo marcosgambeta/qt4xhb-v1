@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QHISTORYSTATE_DEFAULTSTATE )
   QHistoryState * obj = (QHistoryState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QAbstractState * ptr = obj->defaultState (  );
+    QAbstractState * ptr = obj->defaultState ();
     _qt4xhb_createReturnClass ( ptr, "QABSTRACTSTATE" );
   }
 }
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QHISTORYSTATE_HISTORYTYPE )
   QHistoryState * obj = (QHistoryState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->historyType (  ) );
+    hb_retni( (int) obj->historyType () );
   }
 }
 

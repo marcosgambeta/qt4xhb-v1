@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QTIMELINE_CURRENTFRAME )
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->currentFrame (  ) );
+    hb_retni( obj->currentFrame () );
   }
 }
 
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QTIMELINE_CURRENTTIME )
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->currentTime (  ) );
+    hb_retni( obj->currentTime () );
   }
 }
 
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QTIMELINE_CURRENTVALUE )
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->currentValue (  );
+    qreal r = obj->currentValue ();
     hb_retnd( r );
   }
 }
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QTIMELINE_CURVESHAPE )
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->curveShape (  ) );
+    hb_retni( (int) obj->curveShape () );
   }
 }
 
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QTIMELINE_DIRECTION )
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->direction (  ) );
+    hb_retni( (int) obj->direction () );
   }
 }
 
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QTIMELINE_DURATION )
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->duration (  ) );
+    hb_retni( obj->duration () );
   }
 }
 
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QTIMELINE_ENDFRAME )
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->endFrame (  ) );
+    hb_retni( obj->endFrame () );
   }
 }
 
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QTIMELINE_LOOPCOUNT )
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->loopCount (  ) );
+    hb_retni( obj->loopCount () );
   }
 }
 
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QTIMELINE_STARTFRAME )
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->startFrame (  ) );
+    hb_retni( obj->startFrame () );
   }
 }
 
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QTIMELINE_STATE )
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->state (  ) );
+    hb_retni( (int) obj->state () );
   }
 }
 
@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QTIMELINE_UPDATEINTERVAL )
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->updateInterval (  ) );
+    hb_retni( obj->updateInterval () );
   }
 }
 
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QTIMELINE_RESUME )
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->resume (  );
+    obj->resume ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -456,7 +456,7 @@ HB_FUNC_STATIC( QTIMELINE_START )
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->start (  );
+    obj->start ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QTIMELINE_STOP )
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->stop (  );
+    obj->stop ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -484,7 +484,7 @@ HB_FUNC_STATIC( QTIMELINE_TOGGLEDIRECTION )
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->toggleDirection (  );
+    obj->toggleDirection ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

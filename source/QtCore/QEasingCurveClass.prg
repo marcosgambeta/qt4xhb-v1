@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QEASINGCURVE_AMPLITUDE )
   QEasingCurve * obj = (QEasingCurve *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->amplitude (  );
+    qreal r = obj->amplitude ();
     hb_retnd( r );
   }
 }
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QEASINGCURVE_OVERSHOOT )
   QEasingCurve * obj = (QEasingCurve *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->overshoot (  );
+    qreal r = obj->overshoot ();
     hb_retnd( r );
   }
 }
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QEASINGCURVE_PERIOD )
   QEasingCurve * obj = (QEasingCurve *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->period (  );
+    qreal r = obj->period ();
     hb_retnd( r );
   }
 }
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QEASINGCURVE_TYPE )
   QEasingCurve * obj = (QEasingCurve *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->type (  ) );
+    hb_retni( (int) obj->type () );
   }
 }
 

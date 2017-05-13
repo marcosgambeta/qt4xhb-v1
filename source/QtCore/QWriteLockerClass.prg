@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QWRITELOCKER_READWRITELOCK )
   QWriteLocker * obj = (QWriteLocker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QReadWriteLock * ptr = obj->readWriteLock (  );
+    QReadWriteLock * ptr = obj->readWriteLock ();
     _qt4xhb_createReturnClass ( ptr, "QREADWRITELOCK" );
   }
 }
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QWRITELOCKER_RELOCK )
   QWriteLocker * obj = (QWriteLocker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->relock (  );
+    obj->relock ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QWRITELOCKER_UNLOCK )
   QWriteLocker * obj = (QWriteLocker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->unlock (  );
+    obj->unlock ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

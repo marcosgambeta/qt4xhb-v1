@@ -52,7 +52,7 @@ QSystemLocale ()
 HB_FUNC_STATIC( QSYSTEMLOCALE_NEW )
 {
   QSystemLocale * o = NULL;
-  o = new QSystemLocale (  );
+  o = new QSystemLocale ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QSYSTEMLOCALE_FALLBACKLOCALE )
   QSystemLocale * obj = (QSystemLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QLocale * ptr = new QLocale( obj->fallbackLocale (  ) );
+    QLocale * ptr = new QLocale( obj->fallbackLocale () );
     _qt4xhb_createReturnClass ( ptr, "QLOCALE" );
   }
 }

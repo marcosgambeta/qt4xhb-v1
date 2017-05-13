@@ -69,7 +69,7 @@ QSizeF ()
 HB_FUNC_STATIC( QSIZEF_NEW1 )
 {
   QSizeF * o = NULL;
-  o = new QSizeF (  );
+  o = new QSizeF ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QSIZEF_HEIGHT )
   QSizeF * obj = (QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->height (  );
+    qreal r = obj->height ();
     hb_retnd( r );
   }
 }
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QSIZEF_ISEMPTY )
   QSizeF * obj = (QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 }
 
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QSIZEF_ISNULL )
   QSizeF * obj = (QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QSIZEF_ISVALID )
   QSizeF * obj = (QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QSIZEF_TOSIZE )
   QSizeF * obj = (QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->toSize (  ) );
+    QSize * ptr = new QSize( obj->toSize () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QSIZEF_TRANSPOSE )
   QSizeF * obj = (QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->transpose (  );
+    obj->transpose ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QSIZEF_WIDTH )
   QSizeF * obj = (QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->width (  );
+    qreal r = obj->width ();
     hb_retnd( r );
   }
 }

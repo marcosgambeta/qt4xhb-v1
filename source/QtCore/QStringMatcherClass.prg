@@ -58,7 +58,7 @@ QStringMatcher()
 HB_FUNC_STATIC( QSTRINGMATCHER_NEW1 )
 {
   QStringMatcher * o = NULL;
-  o = new QStringMatcher (  );
+  o = new QStringMatcher ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QSTRINGMATCHER_PATTERN )
   QStringMatcher * obj = (QStringMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->pattern (  );
+    QString str1 = obj->pattern ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QSTRINGMATCHER_CASESENSITIVITY )
   QStringMatcher * obj = (QStringMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->caseSensitivity (  ) );
+    hb_retni( (int) obj->caseSensitivity () );
   }
 }
 

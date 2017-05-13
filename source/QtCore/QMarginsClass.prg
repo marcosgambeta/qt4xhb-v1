@@ -59,7 +59,7 @@ QMargins ()
 HB_FUNC_STATIC( QMARGINS_NEW1 )
 {
   QMargins * o = NULL;
-  o = new QMargins (  );
+  o = new QMargins ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QMARGINS_BOTTOM )
   QMargins * obj = (QMargins *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->bottom (  ) );
+    hb_retni( obj->bottom () );
   }
 }
 
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QMARGINS_ISNULL )
   QMargins * obj = (QMargins *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QMARGINS_LEFT )
   QMargins * obj = (QMargins *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->left (  ) );
+    hb_retni( obj->left () );
   }
 }
 
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QMARGINS_RIGHT )
   QMargins * obj = (QMargins *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->right (  ) );
+    hb_retni( obj->right () );
   }
 }
 
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QMARGINS_TOP )
   QMargins * obj = (QMargins *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->top (  ) );
+    hb_retni( obj->top () );
   }
 }
 

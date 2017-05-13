@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_SENDEROBJECT )
   QSignalTransition * obj = (QSignalTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * ptr = obj->senderObject (  );
+    QObject * ptr = obj->senderObject ();
     _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_SIGNAL )
   QSignalTransition * obj = (QSignalTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->signal (  ) );
+    QByteArray * ptr = new QByteArray( obj->signal () );
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }

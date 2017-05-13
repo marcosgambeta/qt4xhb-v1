@@ -65,7 +65,7 @@ QUuid()
 HB_FUNC_STATIC( QUUID_NEW1 )
 {
   QUuid * o = NULL;
-  o = new QUuid (  );
+  o = new QUuid ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QUUID_TOSTRING )
   QUuid * obj = (QUuid *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toString (  );
+    QString str1 = obj->toString ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QUUID_TOBYTEARRAY )
   QUuid * obj = (QUuid *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->toByteArray (  ) );
+    QByteArray * ptr = new QByteArray( obj->toByteArray () );
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QUUID_TORFC4122 )
   QUuid * obj = (QUuid *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->toRfc4122 (  ) );
+    QByteArray * ptr = new QByteArray( obj->toRfc4122 () );
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QUUID_ISNULL )
   QUuid * obj = (QUuid *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QUUID_VARIANT )
   QUuid * obj = (QUuid *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->variant (  ) );
+    hb_retni( (int) obj->variant () );
   }
 }
 
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QUUID_VERSION )
   QUuid * obj = (QUuid *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->version (  ) );
+    hb_retni( (int) obj->version () );
   }
 }
 
@@ -273,7 +273,7 @@ static QUuid createUuid()
 */
 HB_FUNC_STATIC( QUUID_CREATEUUID )
 {
-  QUuid * ptr = new QUuid( QUuid::createUuid (  ) );
+  QUuid * ptr = new QUuid( QUuid::createUuid () );
   _qt4xhb_createReturnClass ( ptr, "QUUID", true );
 }
 

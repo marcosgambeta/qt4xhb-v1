@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_ERRORSTRING )
   QPluginLoader * obj = (QPluginLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->errorString (  );
+    QString str1 = obj->errorString ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_FILENAME )
   QPluginLoader * obj = (QPluginLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->fileName (  );
+    QString str1 = obj->fileName ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_INSTANCE )
   QPluginLoader * obj = (QPluginLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * ptr = obj->instance (  );
+    QObject * ptr = obj->instance ();
     _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_ISLOADED )
   QPluginLoader * obj = (QPluginLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isLoaded (  ) );
+    hb_retl( obj->isLoaded () );
   }
 }
 
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_LOAD )
   QPluginLoader * obj = (QPluginLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->load (  ) );
+    hb_retl( obj->load () );
   }
 }
 
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_LOADHINTS )
   QPluginLoader * obj = (QPluginLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->loadHints (  ) );
+    hb_retni( (int) obj->loadHints () );
   }
 }
 
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_UNLOAD )
   QPluginLoader * obj = (QPluginLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->unload (  ) );
+    hb_retl( obj->unload () );
   }
 }
 

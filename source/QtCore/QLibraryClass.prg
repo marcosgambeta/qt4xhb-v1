@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QLIBRARY_LOAD )
   QLibrary * obj = (QLibrary *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->load (  ) );
+    hb_retl( obj->load () );
   }
 }
 
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QLIBRARY_UNLOAD )
   QLibrary * obj = (QLibrary *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->unload (  ) );
+    hb_retl( obj->unload () );
   }
 }
 
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QLIBRARY_ISLOADED )
   QLibrary * obj = (QLibrary *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isLoaded (  ) );
+    hb_retl( obj->isLoaded () );
   }
 }
 
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QLIBRARY_FILENAME )
   QLibrary * obj = (QLibrary *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->fileName (  );
+    QString str1 = obj->fileName ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QLIBRARY_ERRORSTRING )
   QLibrary * obj = (QLibrary *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->errorString (  );
+    QString str1 = obj->errorString ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QLIBRARY_LOADHINTS )
   QLibrary * obj = (QLibrary *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->loadHints (  ) );
+    hb_retni( (int) obj->loadHints () );
   }
 }
 

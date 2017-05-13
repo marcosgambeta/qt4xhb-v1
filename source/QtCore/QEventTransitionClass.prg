@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QEVENTTRANSITION_EVENTSOURCE )
   QEventTransition * obj = (QEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * ptr = obj->eventSource (  );
+    QObject * ptr = obj->eventSource ();
     _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QEVENTTRANSITION_EVENTTYPE )
   QEventTransition * obj = (QEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->eventType (  ) );
+    hb_retni( (int) obj->eventType () );
   }
 }
 

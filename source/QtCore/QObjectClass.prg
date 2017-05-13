@@ -1514,7 +1514,7 @@ HB_FUNC_STATIC( QOBJECT_CHILDREN )
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObjectList list = obj->children (  );
+    QObjectList list = obj->children ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QOBJECT" );
@@ -1561,7 +1561,7 @@ HB_FUNC_STATIC( QOBJECT_DUMPOBJECTINFO )
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->dumpObjectInfo (  );
+    obj->dumpObjectInfo ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1575,7 +1575,7 @@ HB_FUNC_STATIC( QOBJECT_DUMPOBJECTTREE )
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->dumpObjectTree (  );
+    obj->dumpObjectTree ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1589,7 +1589,7 @@ HB_FUNC_STATIC( QOBJECT_DYNAMICPROPERTYNAMES )
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QList<QByteArray> list = obj->dynamicPropertyNames (  );
+    QList<QByteArray> list = obj->dynamicPropertyNames ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QBYTEARRAY" );
@@ -1810,7 +1810,7 @@ HB_FUNC_STATIC( QOBJECT_ISWIDGETTYPE )
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isWidgetType (  ) );
+    hb_retl( obj->isWidgetType () );
   }
 }
 
@@ -1837,7 +1837,7 @@ HB_FUNC_STATIC( QOBJECT_METAOBJECT )
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QMetaObject * ptr = obj->metaObject (  );
+    const QMetaObject * ptr = obj->metaObject ();
     _qt4xhb_createReturnClass ( ptr, "QMETAOBJECT" );
   }
 }
@@ -1866,7 +1866,7 @@ HB_FUNC_STATIC( QOBJECT_OBJECTNAME )
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->objectName (  );
+    QString str1 = obj->objectName ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -1880,7 +1880,7 @@ HB_FUNC_STATIC( QOBJECT_PARENT )
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * ptr = obj->parent (  );
+    QObject * ptr = obj->parent ();
     _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }
@@ -1968,7 +1968,7 @@ HB_FUNC_STATIC( QOBJECT_SIGNALSBLOCKED )
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->signalsBlocked (  ) );
+    hb_retl( obj->signalsBlocked () );
   }
 }
 
@@ -1994,7 +1994,7 @@ HB_FUNC_STATIC( QOBJECT_THREAD )
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QThread * ptr = obj->thread (  );
+    QThread * ptr = obj->thread ();
     _qt4xhb_createReturnClass ( ptr, "QTHREAD" );
   }
 }
@@ -2008,7 +2008,7 @@ HB_FUNC_STATIC( QOBJECT_DELETELATER )
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->deleteLater (  );
+    obj->deleteLater ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

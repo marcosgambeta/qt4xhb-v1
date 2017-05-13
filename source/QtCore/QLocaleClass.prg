@@ -145,7 +145,7 @@ QLocale ()
 HB_FUNC_STATIC( QLOCALE_NEW1 )
 {
   QLocale * o = NULL;
-  o = new QLocale (  );
+  o = new QLocale ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QLOCALE_AMTEXT )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->amText (  );
+    QString str1 = obj->amText ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QLOCALE_BCP47NAME )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->bcp47Name (  );
+    QString str1 = obj->bcp47Name ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QLOCALE_COUNTRY )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->country (  ) );
+    hb_retni( (int) obj->country () );
   }
 }
 
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QLOCALE_DECIMALPOINT )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QChar * ptr = new QChar( obj->decimalPoint (  ) );
+    QChar * ptr = new QChar( obj->decimalPoint () );
     _qt4xhb_createReturnClass ( ptr, "QCHAR" );
   }
 }
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QLOCALE_EXPONENTIAL )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QChar * ptr = new QChar( obj->exponential (  ) );
+    QChar * ptr = new QChar( obj->exponential () );
     _qt4xhb_createReturnClass ( ptr, "QCHAR" );
   }
 }
@@ -382,7 +382,7 @@ HB_FUNC_STATIC( QLOCALE_FIRSTDAYOFWEEK )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->firstDayOfWeek (  ) );
+    hb_retni( (int) obj->firstDayOfWeek () );
   }
 }
 
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QLOCALE_GROUPSEPARATOR )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QChar * ptr = new QChar( obj->groupSeparator (  ) );
+    QChar * ptr = new QChar( obj->groupSeparator () );
     _qt4xhb_createReturnClass ( ptr, "QCHAR" );
   }
 }
@@ -409,7 +409,7 @@ HB_FUNC_STATIC( QLOCALE_LANGUAGE )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->language (  ) );
+    hb_retni( (int) obj->language () );
   }
 }
 
@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QLOCALE_MEASUREMENTSYSTEM )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->measurementSystem (  ) );
+    hb_retni( (int) obj->measurementSystem () );
   }
 }
 
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QLOCALE_NAME )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->name (  );
+    QString str1 = obj->name ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -463,7 +463,7 @@ HB_FUNC_STATIC( QLOCALE_NATIVECOUNTRYNAME )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->nativeCountryName (  );
+    QString str1 = obj->nativeCountryName ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QLOCALE_NATIVELANGUAGENAME )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->nativeLanguageName (  );
+    QString str1 = obj->nativeLanguageName ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QLOCALE_NEGATIVESIGN )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QChar * ptr = new QChar( obj->negativeSign (  ) );
+    QChar * ptr = new QChar( obj->negativeSign () );
     _qt4xhb_createReturnClass ( ptr, "QCHAR" );
   }
 }
@@ -505,7 +505,7 @@ HB_FUNC_STATIC( QLOCALE_NUMBEROPTIONS )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->numberOptions (  ) );
+    hb_retni( (int) obj->numberOptions () );
   }
 }
 
@@ -518,7 +518,7 @@ HB_FUNC_STATIC( QLOCALE_PERCENT )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QChar * ptr = new QChar( obj->percent (  ) );
+    QChar * ptr = new QChar( obj->percent () );
     _qt4xhb_createReturnClass ( ptr, "QCHAR" );
   }
 }
@@ -532,7 +532,7 @@ HB_FUNC_STATIC( QLOCALE_PMTEXT )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->pmText (  );
+    QString str1 = obj->pmText ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -546,7 +546,7 @@ HB_FUNC_STATIC( QLOCALE_POSITIVESIGN )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QChar * ptr = new QChar( obj->positiveSign (  ) );
+    QChar * ptr = new QChar( obj->positiveSign () );
     _qt4xhb_createReturnClass ( ptr, "QCHAR" );
   }
 }
@@ -597,7 +597,7 @@ HB_FUNC_STATIC( QLOCALE_SCRIPT )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->script (  ) );
+    hb_retni( (int) obj->script () );
   }
 }
 
@@ -652,7 +652,7 @@ HB_FUNC_STATIC( QLOCALE_TEXTDIRECTION )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->textDirection (  ) );
+    hb_retni( (int) obj->textDirection () );
   }
 }
 
@@ -1330,7 +1330,7 @@ HB_FUNC_STATIC( QLOCALE_UILANGUAGES )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList strl = obj->uiLanguages (  );
+    QStringList strl = obj->uiLanguages ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -1353,7 +1353,7 @@ HB_FUNC_STATIC( QLOCALE_WEEKDAYS )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QList<Qt::DayOfWeek> list = obj->weekdays (  );
+    QList<Qt::DayOfWeek> list = obj->weekdays ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -1375,7 +1375,7 @@ QLocale c ()
 */
 HB_FUNC_STATIC( QLOCALE_C )
 {
-  QLocale * ptr = new QLocale( QLocale::c (  ) );
+  QLocale * ptr = new QLocale( QLocale::c () );
   _qt4xhb_createReturnClass ( ptr, "QLOCALE" );
 }
 
@@ -1466,7 +1466,7 @@ QLocale system ()
 */
 HB_FUNC_STATIC( QLOCALE_SYSTEM )
 {
-  QLocale * ptr = new QLocale( QLocale::system (  ) );
+  QLocale * ptr = new QLocale( QLocale::system () );
   _qt4xhb_createReturnClass ( ptr, "QLOCALE" );
 }
 

@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_CURRENTVALUE )
   QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->currentValue (  ) );
+    QVariant * ptr = new QVariant( obj->currentValue () );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_EASINGCURVE )
   QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QEasingCurve * ptr = new QEasingCurve( obj->easingCurve (  ) );
+    QEasingCurve * ptr = new QEasingCurve( obj->easingCurve () );
     _qt4xhb_createReturnClass ( ptr, "QEASINGCURVE" );
   }
 }
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_ENDVALUE )
   QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->endValue (  ) );
+    QVariant * ptr = new QVariant( obj->endValue () );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_STARTVALUE )
   QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->startValue (  ) );
+    QVariant * ptr = new QVariant( obj->startValue () );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }

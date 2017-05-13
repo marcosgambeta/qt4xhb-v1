@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QEVENT_ACCEPT )
   QEvent * obj = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->accept (  );
+    obj->accept ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QEVENT_IGNORE )
   QEvent * obj = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->ignore (  );
+    obj->ignore ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QEVENT_ISACCEPTED )
   QEvent * obj = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isAccepted (  ) );
+    hb_retl( obj->isAccepted () );
   }
 }
 
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QEVENT_SPONTANEOUS )
   QEvent * obj = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->spontaneous (  ) );
+    hb_retl( obj->spontaneous () );
   }
 }
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QEVENT_TYPE )
   QEvent * obj = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->type (  ) );
+    hb_retni( (int) obj->type () );
   }
 }
 

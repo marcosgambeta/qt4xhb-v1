@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_QUIT )
   QCoreApplication * obj = (QCoreApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->quit (  );
+    obj->quit ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -182,7 +182,7 @@ QString applicationDirPath ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONDIRPATH )
 {
-  QString str1 = QCoreApplication::applicationDirPath (  );
+  QString str1 = QCoreApplication::applicationDirPath ();
   hb_retc( RQSTRING(str1) );
 }
 
@@ -192,7 +192,7 @@ QString applicationFilePath ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONFILEPATH )
 {
-  QString str1 = QCoreApplication::applicationFilePath (  );
+  QString str1 = QCoreApplication::applicationFilePath ();
   hb_retc( RQSTRING(str1) );
 }
 
@@ -202,7 +202,7 @@ QString applicationName ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONNAME )
 {
-  QString str1 = QCoreApplication::applicationName (  );
+  QString str1 = QCoreApplication::applicationName ();
   hb_retc( RQSTRING(str1) );
 }
 
@@ -212,7 +212,7 @@ qint64 applicationPid ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONPID )
 {
-  qint64 i = QCoreApplication::applicationPid (  );
+  qint64 i = QCoreApplication::applicationPid ();
   hb_retni( i );
 }
 
@@ -222,7 +222,7 @@ QString applicationVersion ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONVERSION )
 {
-  QString str1 = QCoreApplication::applicationVersion (  );
+  QString str1 = QCoreApplication::applicationVersion ();
   hb_retc( RQSTRING(str1) );
 }
 
@@ -232,7 +232,7 @@ QStringList arguments ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_ARGUMENTS )
 {
-  QStringList strl = QCoreApplication::arguments (  );
+  QStringList strl = QCoreApplication::arguments ();
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;
@@ -251,7 +251,7 @@ bool closingDown ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_CLOSINGDOWN )
 {
-  hb_retl( QCoreApplication::closingDown (  ) );
+  hb_retl( QCoreApplication::closingDown () );
 }
 
 
@@ -260,7 +260,7 @@ int exec ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_EXEC )
 {
-  hb_retni( QCoreApplication::exec (  ) );
+  hb_retni( QCoreApplication::exec () );
 }
 
 
@@ -279,7 +279,7 @@ void flush ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_FLUSH )
 {
-  QCoreApplication::flush (  );
+  QCoreApplication::flush ();
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -289,7 +289,7 @@ bool hasPendingEvents ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_HASPENDINGEVENTS )
 {
-  hb_retl( QCoreApplication::hasPendingEvents (  ) );
+  hb_retl( QCoreApplication::hasPendingEvents () );
 }
 
 
@@ -309,7 +309,7 @@ QCoreApplication * instance ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_INSTANCE )
 {
-  QCoreApplication * ptr = QCoreApplication::instance (  );
+  QCoreApplication * ptr = QCoreApplication::instance ();
   _qt4xhb_createReturnClass ( ptr, "QCOREAPPLICATION" );
 }
 
@@ -319,7 +319,7 @@ QStringList libraryPaths ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_LIBRARYPATHS )
 {
-  QStringList strl = QCoreApplication::libraryPaths (  );
+  QStringList strl = QCoreApplication::libraryPaths ();
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;
@@ -338,7 +338,7 @@ QString organizationDomain ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_ORGANIZATIONDOMAIN )
 {
-  QString str1 = QCoreApplication::organizationDomain (  );
+  QString str1 = QCoreApplication::organizationDomain ();
   hb_retc( RQSTRING(str1) );
 }
 
@@ -348,7 +348,7 @@ QString organizationName ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_ORGANIZATIONNAME )
 {
-  QString str1 = QCoreApplication::organizationName (  );
+  QString str1 = QCoreApplication::organizationName ();
   hb_retc( RQSTRING(str1) );
 }
 
@@ -512,7 +512,7 @@ void sendPostedEvents ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_SENDPOSTEDEVENTS2 )
 {
-  QCoreApplication::sendPostedEvents (  );
+  QCoreApplication::sendPostedEvents ();
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -597,7 +597,7 @@ bool startingUp ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_STARTINGUP )
 {
-  hb_retl( QCoreApplication::startingUp (  ) );
+  hb_retl( QCoreApplication::startingUp () );
 }
 
 

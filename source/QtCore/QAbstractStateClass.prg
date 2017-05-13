@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QABSTRACTSTATE_MACHINE )
   QAbstractState * obj = (QAbstractState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStateMachine * ptr = obj->machine (  );
+    QStateMachine * ptr = obj->machine ();
     _qt4xhb_createReturnClass ( ptr, "QSTATEMACHINE" );
   }
 }
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QABSTRACTSTATE_PARENTSTATE )
   QAbstractState * obj = (QAbstractState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QState * ptr = obj->parentState (  );
+    QState * ptr = obj->parentState ();
     _qt4xhb_createReturnClass ( ptr, "QSTATE" );
   }
 }

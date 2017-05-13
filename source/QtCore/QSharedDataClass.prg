@@ -50,7 +50,7 @@ QSharedData ()
 HB_FUNC_STATIC( QSHAREDDATA_NEW1 )
 {
   QSharedData * o = NULL;
-  o = new QSharedData (  );
+  o = new QSharedData ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 

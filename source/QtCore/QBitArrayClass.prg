@@ -68,7 +68,7 @@ QBitArray ()
 HB_FUNC_STATIC( QBITARRAY_NEW1 )
 {
   QBitArray * o = NULL;
-  o = new QBitArray (  );
+  o = new QBitArray ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QBITARRAY_CLEAR )
   QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QBITARRAY_COUNT1 )
   QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->count (  ) );
+    hb_retni( obj->count () );
   }
 }
 
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QBITARRAY_ISEMPTY )
   QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 }
 
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QBITARRAY_ISNULL )
   QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QBITARRAY_SIZE )
   QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->size (  ) );
+    hb_retni( obj->size () );
   }
 }
 

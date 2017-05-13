@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QTIMEREVENT_TIMERID )
   QTimerEvent * obj = (QTimerEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->timerId (  ) );
+    hb_retni( obj->timerId () );
   }
 }
 

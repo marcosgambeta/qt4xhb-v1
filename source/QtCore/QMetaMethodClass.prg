@@ -67,7 +67,7 @@ QMetaMethod()
 HB_FUNC_STATIC( QMETAMETHOD_NEW )
 {
   QMetaMethod * o = NULL;
-  o = new QMetaMethod (  );
+  o = new QMetaMethod ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QMETAMETHOD_SIGNATURE )
   QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const char * str1 = obj->signature (  );
+    const char * str1 = obj->signature ();
     hb_retc( str1 );
   }
 }
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QMETAMETHOD_TYPENAME )
   QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const char * str1 = obj->typeName (  );
+    const char * str1 = obj->typeName ();
     hb_retc( str1 );
   }
 }
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QMETAMETHOD_PARAMETERTYPES )
   QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QList<QByteArray> list = obj->parameterTypes (  );
+    QList<QByteArray> list = obj->parameterTypes ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QBYTEARRAY" );
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QMETAMETHOD_PARAMETERNAMES )
   QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QList<QByteArray> list = obj->parameterNames (  );
+    QList<QByteArray> list = obj->parameterNames ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QBYTEARRAY" );
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QMETAMETHOD_TAG )
   QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const char * str1 = obj->tag (  );
+    const char * str1 = obj->tag ();
     hb_retc( str1 );
   }
 }
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QMETAMETHOD_ACCESS )
   QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->access (  ) );
+    hb_retni( (int) obj->access () );
   }
 }
 
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QMETAMETHOD_METHODTYPE )
   QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->methodType (  ) );
+    hb_retni( (int) obj->methodType () );
   }
 }
 
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QMETAMETHOD_ATTRIBUTES )
   QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->attributes (  ) );
+    hb_retni( obj->attributes () );
   }
 }
 
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QMETAMETHOD_METHODINDEX )
   QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->methodIndex (  ) );
+    hb_retni( obj->methodIndex () );
   }
 }
 
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QMETAMETHOD_REVISION )
   QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->revision (  ) );
+    hb_retni( obj->revision () );
   }
 }
 
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QMETAMETHOD_ENCLOSINGMETAOBJECT )
   QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QMetaObject * ptr = obj->enclosingMetaObject (  );
+    const QMetaObject * ptr = obj->enclosingMetaObject ();
     _qt4xhb_createReturnClass ( ptr, "QMETAOBJECT" );
   }
 }

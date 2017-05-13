@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_ATEND )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->atEnd (  ) );
+    hb_retl( obj->atEnd () );
   }
 }
 
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_CASESENSITIVE )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->caseSensitive (  ) );
+    hb_retl( obj->caseSensitive () );
   }
 }
 
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_CLOSE )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->close (  ) );
+    hb_retl( obj->close () );
   }
 }
 
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_ERROR )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->error (  ) );
+    hb_retni( (int) obj->error () );
   }
 }
 
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_ERRORSTRING )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->errorString (  );
+    QString str1 = obj->errorString ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_FLUSH )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->flush (  ) );
+    hb_retl( obj->flush () );
   }
 }
 
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_HANDLE )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->handle (  ) );
+    hb_retni( obj->handle () );
   }
 }
 
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_ISRELATIVEPATH )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isRelativePath (  ) );
+    hb_retl( obj->isRelativePath () );
   }
 }
 
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_ISSEQUENTIAL )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isSequential (  ) );
+    hb_retl( obj->isSequential () );
   }
 }
 
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_POS )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->pos (  );
+    qint64 i = obj->pos ();
     hb_retni( i );
   }
 }
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_REMOVE )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->remove (  ) );
+    hb_retl( obj->remove () );
   }
 }
 
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_SIZE )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->size (  );
+    qint64 i = obj->size ();
     hb_retni( i );
   }
 }

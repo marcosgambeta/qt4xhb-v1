@@ -65,7 +65,7 @@ QXmlStreamAttributes()
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_NEW )
 {
   QXmlStreamAttributes * o = NULL;
-  o = new QXmlStreamAttributes (  );
+  o = new QXmlStreamAttributes ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 

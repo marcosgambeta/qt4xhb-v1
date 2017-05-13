@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QDIR_ABSOLUTEPATH )
   QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->absolutePath (  );
+    QString str1 = obj->absolutePath ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QDIR_CANONICALPATH )
   QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->canonicalPath (  );
+    QString str1 = obj->canonicalPath ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QDIR_CDUP )
   QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->cdUp (  ) );
+    hb_retl( obj->cdUp () );
   }
 }
 
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QDIR_COUNT )
   QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (uint) obj->count (  ) );
+    hb_retni( (uint) obj->count () );
   }
 }
 
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QDIR_DIRNAME )
   QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->dirName (  );
+    QString str1 = obj->dirName ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QDIR_EXISTS2 )
   QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->exists (  ) );
+    hb_retl( obj->exists () );
   }
 }
 
@@ -512,7 +512,7 @@ HB_FUNC_STATIC( QDIR_FILTER )
   QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->filter (  ) );
+    hb_retni( (int) obj->filter () );
   }
 }
 
@@ -525,7 +525,7 @@ HB_FUNC_STATIC( QDIR_ISABSOLUTE )
   QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isAbsolute (  ) );
+    hb_retl( obj->isAbsolute () );
   }
 }
 
@@ -538,7 +538,7 @@ HB_FUNC_STATIC( QDIR_ISREADABLE )
   QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isReadable (  ) );
+    hb_retl( obj->isReadable () );
   }
 }
 
@@ -551,7 +551,7 @@ HB_FUNC_STATIC( QDIR_ISRELATIVE )
   QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isRelative (  ) );
+    hb_retl( obj->isRelative () );
   }
 }
 
@@ -564,7 +564,7 @@ HB_FUNC_STATIC( QDIR_ISROOT )
   QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isRoot (  ) );
+    hb_retl( obj->isRoot () );
   }
 }
 
@@ -577,7 +577,7 @@ HB_FUNC_STATIC( QDIR_MAKEABSOLUTE )
   QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->makeAbsolute (  ) );
+    hb_retl( obj->makeAbsolute () );
   }
 }
 
@@ -616,7 +616,7 @@ HB_FUNC_STATIC( QDIR_NAMEFILTERS )
   QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList strl = obj->nameFilters (  );
+    QStringList strl = obj->nameFilters ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -639,7 +639,7 @@ HB_FUNC_STATIC( QDIR_PATH )
   QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->path (  );
+    QString str1 = obj->path ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -653,7 +653,7 @@ HB_FUNC_STATIC( QDIR_REFRESH )
   QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->refresh (  );
+    obj->refresh ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -790,7 +790,7 @@ HB_FUNC_STATIC( QDIR_SORTING )
   QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->sorting (  ) );
+    hb_retni( (int) obj->sorting () );
   }
 }
 
@@ -822,7 +822,7 @@ QDir current()
 */
 HB_FUNC_STATIC( QDIR_CURRENT )
 {
-  QDir * ptr = new QDir( QDir::current (  ) );
+  QDir * ptr = new QDir( QDir::current () );
   _qt4xhb_createReturnClass ( ptr, "QDIR", true );
 }
 
@@ -832,7 +832,7 @@ QString currentPath()
 */
 HB_FUNC_STATIC( QDIR_CURRENTPATH )
 {
-  QString str1 = QDir::currentPath (  );
+  QString str1 = QDir::currentPath ();
   hb_retc( RQSTRING(str1) );
 }
 
@@ -842,7 +842,7 @@ QFileInfoList drives()
 */
 HB_FUNC_STATIC( QDIR_DRIVES )
 {
-  QFileInfoList list = QDir::drives (  );
+  QFileInfoList list = QDir::drives ();
   PHB_DYNS pDynSym;
   #ifdef __XHARBOUR__
   pDynSym = hb_dynsymFind( "QFILEINFO" );
@@ -892,7 +892,7 @@ QDir home()
 */
 HB_FUNC_STATIC( QDIR_HOME )
 {
-  QDir * ptr = new QDir( QDir::home (  ) );
+  QDir * ptr = new QDir( QDir::home () );
   _qt4xhb_createReturnClass ( ptr, "QDIR", true );
 }
 
@@ -902,7 +902,7 @@ QString homePath()
 */
 HB_FUNC_STATIC( QDIR_HOMEPATH )
 {
-  QString str1 = QDir::homePath (  );
+  QString str1 = QDir::homePath ();
   hb_retc( RQSTRING(str1) );
 }
 
@@ -963,7 +963,7 @@ QDir root()
 */
 HB_FUNC_STATIC( QDIR_ROOT )
 {
-  QDir * ptr = new QDir( QDir::root (  ) );
+  QDir * ptr = new QDir( QDir::root () );
   _qt4xhb_createReturnClass ( ptr, "QDIR", true );
 }
 
@@ -973,7 +973,7 @@ QString rootPath()
 */
 HB_FUNC_STATIC( QDIR_ROOTPATH )
 {
-  QString str1 = QDir::rootPath (  );
+  QString str1 = QDir::rootPath ();
   hb_retc( RQSTRING(str1) );
 }
 
@@ -1002,7 +1002,7 @@ QChar separator()
 */
 HB_FUNC_STATIC( QDIR_SEPARATOR )
 {
-  QChar * ptr = new QChar( QDir::separator (  ) );
+  QChar * ptr = new QChar( QDir::separator () );
   _qt4xhb_createReturnClass ( ptr, "QCHAR" );
 }
 
@@ -1031,7 +1031,7 @@ QDir temp()
 */
 HB_FUNC_STATIC( QDIR_TEMP )
 {
-  QDir * ptr = new QDir( QDir::temp (  ) );
+  QDir * ptr = new QDir( QDir::temp () );
   _qt4xhb_createReturnClass ( ptr, "QDIR", true );
 }
 
@@ -1041,7 +1041,7 @@ QString tempPath()
 */
 HB_FUNC_STATIC( QDIR_TEMPPATH )
 {
-  QString str1 = QDir::tempPath (  );
+  QString str1 = QDir::tempPath ();
   hb_retc( RQSTRING(str1) );
 }
 

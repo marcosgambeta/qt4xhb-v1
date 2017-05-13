@@ -60,7 +60,7 @@ QElapsedTimer()
 HB_FUNC_STATIC( QELAPSEDTIMER_NEW )
 {
   QElapsedTimer * o = NULL;
-  o = new QElapsedTimer (  );
+  o = new QElapsedTimer ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_ELAPSED )
   QElapsedTimer * obj = (QElapsedTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->elapsed (  );
+    qint64 i = obj->elapsed ();
     hb_retni( i );
   }
 }
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_INVALIDATE )
   QElapsedTimer * obj = (QElapsedTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->invalidate (  );
+    obj->invalidate ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_ISVALID )
   QElapsedTimer * obj = (QElapsedTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_MSECSSINCEREFERENCE )
   QElapsedTimer * obj = (QElapsedTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->msecsSinceReference (  );
+    qint64 i = obj->msecsSinceReference ();
     hb_retni( i );
   }
 }
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_NSECSELAPSED )
   QElapsedTimer * obj = (QElapsedTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->nsecsElapsed (  );
+    qint64 i = obj->nsecsElapsed ();
     hb_retni( i );
   }
 }
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_RESTART )
   QElapsedTimer * obj = (QElapsedTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->restart (  );
+    qint64 i = obj->restart ();
     hb_retni( i );
   }
 }
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_START )
   QElapsedTimer * obj = (QElapsedTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->start (  );
+    obj->start ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -228,7 +228,7 @@ ClockType clockType()
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_CLOCKTYPE )
 {
-  hb_retni( (int) QElapsedTimer::clockType (  ) );
+  hb_retni( (int) QElapsedTimer::clockType () );
 }
 
 
@@ -237,7 +237,7 @@ bool isMonotonic()
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_ISMONOTONIC )
 {
-  hb_retl( QElapsedTimer::isMonotonic (  ) );
+  hb_retl( QElapsedTimer::isMonotonic () );
 }
 
 

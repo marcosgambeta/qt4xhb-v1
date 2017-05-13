@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QMUTEX_LOCK )
   QMutex * obj = (QMutex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->lock (  );
+    obj->lock ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QMUTEX_TRYLOCK1 )
   QMutex * obj = (QMutex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->tryLock (  ) );
+    hb_retl( obj->tryLock () );
   }
 }
 
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QMUTEX_UNLOCK )
   QMutex * obj = (QMutex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->unlock (  );
+    obj->unlock ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

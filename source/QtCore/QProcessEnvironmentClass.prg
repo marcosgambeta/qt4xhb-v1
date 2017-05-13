@@ -64,7 +64,7 @@ QProcessEnvironment()
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEW1 )
 {
   QProcessEnvironment * o = NULL;
-  o = new QProcessEnvironment (  );
+  o = new QProcessEnvironment ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_ISEMPTY )
   QProcessEnvironment * obj = (QProcessEnvironment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 }
 
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_CLEAR )
   QProcessEnvironment * obj = (QProcessEnvironment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_TOSTRINGLIST )
   QProcessEnvironment * obj = (QProcessEnvironment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList strl = obj->toStringList (  );
+    QStringList strl = obj->toStringList ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_KEYS )
   QProcessEnvironment * obj = (QProcessEnvironment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList strl = obj->keys (  );
+    QStringList strl = obj->keys ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -280,7 +280,7 @@ static QProcessEnvironment systemEnvironment()
 */
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_SYSTEMENVIRONMENT )
 {
-  QProcessEnvironment * ptr = new QProcessEnvironment( QProcessEnvironment::systemEnvironment (  ) );
+  QProcessEnvironment * ptr = new QProcessEnvironment( QProcessEnvironment::systemEnvironment () );
   _qt4xhb_createReturnClass ( ptr, "QPROCESSENVIRONMENT", true );
 }
 

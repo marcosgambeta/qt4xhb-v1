@@ -59,7 +59,7 @@ QByteArrayMatcher ()
 HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW1 )
 {
   QByteArrayMatcher * o = NULL;
-  o = new QByteArrayMatcher (  );
+  o = new QByteArrayMatcher ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_PATTERN )
   QByteArrayMatcher * obj = (QByteArrayMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->pattern (  ) );
+    QByteArray * ptr = new QByteArray( obj->pattern () );
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }

@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_REPORTSTARTED )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->reportStarted (  );
+    obj->reportStarted ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_REPORTFINISHED )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->reportFinished (  );
+    obj->reportFinished ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_REPORTCANCELED )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->reportCanceled (  );
+    obj->reportCanceled ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_PROGRESSMINIMUM )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->progressMinimum (  ) );
+    hb_retni( obj->progressMinimum () );
   }
 }
 
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_PROGRESSMAXIMUM )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->progressMaximum (  ) );
+    hb_retni( obj->progressMaximum () );
   }
 }
 
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISPROGRESSUPDATENEEDED )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isProgressUpdateNeeded (  ) );
+    hb_retl( obj->isProgressUpdateNeeded () );
   }
 }
 
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_PROGRESSVALUE )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->progressValue (  ) );
+    hb_retni( obj->progressValue () );
   }
 }
 
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_PROGRESSTEXT )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->progressText (  );
+    QString str1 = obj->progressText ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_EXPECTEDRESULTCOUNT )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->expectedResultCount (  ) );
+    hb_retni( obj->expectedResultCount () );
   }
 }
 
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_RESULTCOUNT )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->resultCount (  ) );
+    hb_retni( obj->resultCount () );
   }
 }
 
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISRUNNING )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isRunning (  ) );
+    hb_retl( obj->isRunning () );
   }
 }
 
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISSTARTED )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isStarted (  ) );
+    hb_retl( obj->isStarted () );
   }
 }
 
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISCANCELED )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isCanceled (  ) );
+    hb_retl( obj->isCanceled () );
   }
 }
 
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISFINISHED )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isFinished (  ) );
+    hb_retl( obj->isFinished () );
   }
 }
 
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISPAUSED )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isPaused (  ) );
+    hb_retl( obj->isPaused () );
   }
 }
 
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISTHROTTLED )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isThrottled (  ) );
+    hb_retl( obj->isThrottled () );
   }
 }
 
@@ -484,7 +484,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_CANCEL )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->cancel (  );
+    obj->cancel ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -512,7 +512,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_TOGGLEPAUSED )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->togglePaused (  );
+    obj->togglePaused ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -540,7 +540,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_WAITFORFINISHED )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->waitForFinished (  );
+    obj->waitForFinished ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -554,7 +554,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_WAITFORNEXTRESULT )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->waitForNextResult (  ) );
+    hb_retl( obj->waitForNextResult () );
   }
 }
 
@@ -581,7 +581,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_WAITFORRESUME )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->waitForResume (  );
+    obj->waitForResume ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -595,7 +595,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_MUTEX )
   QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QMutex * ptr = obj->mutex (  );
+    QMutex * ptr = obj->mutex ();
     _qt4xhb_createReturnClass ( ptr, "QMUTEX" );
   }
 }

@@ -74,7 +74,7 @@ QLine()
 HB_FUNC_STATIC( QLINE_NEW1 )
 {
   QLine * o = NULL;
-  o = new QLine (  );
+  o = new QLine ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QLINE_P1 )
   QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPoint * ptr = new QPoint( obj->p1 (  ) );
+    QPoint * ptr = new QPoint( obj->p1 () );
     _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QLINE_P2 )
   QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPoint * ptr = new QPoint( obj->p2 (  ) );
+    QPoint * ptr = new QPoint( obj->p2 () );
     _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QLINE_X1 )
   QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->x1 (  ) );
+    hb_retni( obj->x1 () );
   }
 }
 
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QLINE_X2 )
   QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->x2 (  ) );
+    hb_retni( obj->x2 () );
   }
 }
 
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QLINE_Y1 )
   QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->y1 (  ) );
+    hb_retni( obj->y1 () );
   }
 }
 
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QLINE_Y2 )
   QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->y2 (  ) );
+    hb_retni( obj->y2 () );
   }
 }
 
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QLINE_DX )
   QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->dx (  ) );
+    hb_retni( obj->dx () );
   }
 }
 
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QLINE_DY )
   QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->dy (  ) );
+    hb_retni( obj->dy () );
   }
 }
 
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QLINE_ISNULL )
   QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 

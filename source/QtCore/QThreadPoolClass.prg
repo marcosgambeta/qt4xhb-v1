@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QTHREADPOOL_ACTIVETHREADCOUNT )
   QThreadPool * obj = (QThreadPool *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->activeThreadCount (  ) );
+    hb_retni( obj->activeThreadCount () );
   }
 }
 
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QTHREADPOOL_EXPIRYTIMEOUT )
   QThreadPool * obj = (QThreadPool *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->expiryTimeout (  ) );
+    hb_retni( obj->expiryTimeout () );
   }
 }
 
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QTHREADPOOL_MAXTHREADCOUNT )
   QThreadPool * obj = (QThreadPool *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->maxThreadCount (  ) );
+    hb_retni( obj->maxThreadCount () );
   }
 }
 
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QTHREADPOOL_RELEASETHREAD )
   QThreadPool * obj = (QThreadPool *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->releaseThread (  );
+    obj->releaseThread ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QTHREADPOOL_RESERVETHREAD )
   QThreadPool * obj = (QThreadPool *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->reserveThread (  );
+    obj->reserveThread ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QTHREADPOOL_WAITFORDONE1 )
   QThreadPool * obj = (QThreadPool *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->waitForDone (  );
+    obj->waitForDone ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -254,7 +254,7 @@ QThreadPool * globalInstance ()
 */
 HB_FUNC_STATIC( QTHREADPOOL_GLOBALINSTANCE )
 {
-  QThreadPool * ptr = QThreadPool::globalInstance (  );
+  QThreadPool * ptr = QThreadPool::globalInstance ();
   _qt4xhb_createReturnClass ( ptr, "QTHREADPOOL" );
 }
 

@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_PROGRESSVALUE )
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->progressValue (  ) );
+    hb_retni( obj->progressValue () );
   }
 }
 
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_PROGRESSMINIMUM )
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->progressMinimum (  ) );
+    hb_retni( obj->progressMinimum () );
   }
 }
 
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_PROGRESSMAXIMUM )
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->progressMaximum (  ) );
+    hb_retni( obj->progressMaximum () );
   }
 }
 
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_PROGRESSTEXT )
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->progressText (  );
+    QString str1 = obj->progressText ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISSTARTED )
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isStarted (  ) );
+    hb_retl( obj->isStarted () );
   }
 }
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISFINISHED )
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isFinished (  ) );
+    hb_retl( obj->isFinished () );
   }
 }
 
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISRUNNING )
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isRunning (  ) );
+    hb_retl( obj->isRunning () );
   }
 }
 
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISCANCELED )
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isCanceled (  ) );
+    hb_retl( obj->isCanceled () );
   }
 }
 
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISPAUSED )
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isPaused (  ) );
+    hb_retl( obj->isPaused () );
   }
 }
 
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_WAITFORFINISHED )
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->waitForFinished (  );
+    obj->waitForFinished ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_CANCEL )
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->cancel (  );
+    obj->cancel ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_PAUSE )
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->pause (  );
+    obj->pause ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_RESUME )
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->resume (  );
+    obj->resume ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_TOGGLEPAUSED )
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->togglePaused (  );
+    obj->togglePaused ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

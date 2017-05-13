@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QSEMAPHORE_AVAILABLE )
   QSemaphore * obj = (QSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->available (  ) );
+    hb_retni( obj->available () );
   }
 }
 

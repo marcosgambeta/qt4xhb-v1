@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_SOCKET )
   QSocketNotifier * obj = (QSocketNotifier *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->socket (  ) );
+    hb_retni( obj->socket () );
   }
 }
 
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_TYPE )
   QSocketNotifier * obj = (QSocketNotifier *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->type (  ) );
+    hb_retni( (int) obj->type () );
   }
 }
 
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_ISENABLED )
   QSocketNotifier * obj = (QSocketNotifier *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isEnabled (  ) );
+    hb_retl( obj->isEnabled () );
   }
 }
 

@@ -61,7 +61,7 @@ QXmlStreamAttribute()
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NEW1 )
 {
   QXmlStreamAttribute * o = NULL;
-  o = new QXmlStreamAttribute (  );
+  o = new QXmlStreamAttribute ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_ISDEFAULT )
   QXmlStreamAttribute * obj = (QXmlStreamAttribute *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isDefault (  ) );
+    hb_retl( obj->isDefault () );
   }
 }
 
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NAME )
   QXmlStreamAttribute * obj = (QXmlStreamAttribute *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringRef * ptr = new QStringRef( obj->name (  ) );
+    QStringRef * ptr = new QStringRef( obj->name () );
     _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NAMESPACEURI )
   QXmlStreamAttribute * obj = (QXmlStreamAttribute *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringRef * ptr = new QStringRef( obj->namespaceUri (  ) );
+    QStringRef * ptr = new QStringRef( obj->namespaceUri () );
     _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_PREFIX )
   QXmlStreamAttribute * obj = (QXmlStreamAttribute *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringRef * ptr = new QStringRef( obj->prefix (  ) );
+    QStringRef * ptr = new QStringRef( obj->prefix () );
     _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_QUALIFIEDNAME )
   QXmlStreamAttribute * obj = (QXmlStreamAttribute *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringRef * ptr = new QStringRef( obj->qualifiedName (  ) );
+    QStringRef * ptr = new QStringRef( obj->qualifiedName () );
     _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_VALUE )
   QXmlStreamAttribute * obj = (QXmlStreamAttribute *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringRef * ptr = new QStringRef( obj->value (  ) );
+    QStringRef * ptr = new QStringRef( obj->value () );
     _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }

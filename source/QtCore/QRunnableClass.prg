@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QRUNNABLE_AUTODELETE )
   QRunnable * obj = (QRunnable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->autoDelete (  ) );
+    hb_retl( obj->autoDelete () );
   }
 }
 
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QRUNNABLE_RUN )
   QRunnable * obj = (QRunnable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->run (  );
+    obj->run ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

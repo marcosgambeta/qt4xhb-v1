@@ -53,7 +53,7 @@ QMetaClassInfo()
 HB_FUNC_STATIC( QMETACLASSINFO_NEW )
 {
   QMetaClassInfo * o = NULL;
-  o = new QMetaClassInfo (  );
+  o = new QMetaClassInfo ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QMETACLASSINFO_NAME )
   QMetaClassInfo * obj = (QMetaClassInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const char * str1 = obj->name (  );
+    const char * str1 = obj->name ();
     hb_retc( str1 );
   }
 }
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QMETACLASSINFO_VALUE )
   QMetaClassInfo * obj = (QMetaClassInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const char * str1 = obj->value (  );
+    const char * str1 = obj->value ();
     hb_retc( str1 );
   }
 }
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QMETACLASSINFO_ENCLOSINGMETAOBJECT )
   QMetaClassInfo * obj = (QMetaClassInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QMetaObject * ptr = obj->enclosingMetaObject (  );
+    const QMetaObject * ptr = obj->enclosingMetaObject ();
     _qt4xhb_createReturnClass ( ptr, "QMETAOBJECT" );
   }
 }

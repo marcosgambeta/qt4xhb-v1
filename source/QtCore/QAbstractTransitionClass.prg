@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_ANIMATIONS )
   QAbstractTransition * obj = (QAbstractTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QList<QAbstractAnimation *> list = obj->animations (  );
+    QList<QAbstractAnimation *> list = obj->animations ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QABSTRACTANIMATION" );
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_MACHINE )
   QAbstractTransition * obj = (QAbstractTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStateMachine * ptr = obj->machine (  );
+    QStateMachine * ptr = obj->machine ();
     _qt4xhb_createReturnClass ( ptr, "QSTATEMACHINE" );
   }
 }
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_SOURCESTATE )
   QAbstractTransition * obj = (QAbstractTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QState * ptr = obj->sourceState (  );
+    QState * ptr = obj->sourceState ();
     _qt4xhb_createReturnClass ( ptr, "QSTATE" );
   }
 }
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATE )
   QAbstractTransition * obj = (QAbstractTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QAbstractState * ptr = obj->targetState (  );
+    QAbstractState * ptr = obj->targetState ();
     _qt4xhb_createReturnClass ( ptr, "QABSTRACTSTATE" );
   }
 }
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATES )
   QAbstractTransition * obj = (QAbstractTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QList<QAbstractState *> list = obj->targetStates (  );
+    QList<QAbstractState *> list = obj->targetStates ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QABSTRACTSTATE" );

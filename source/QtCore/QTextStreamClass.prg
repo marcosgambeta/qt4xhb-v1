@@ -99,7 +99,7 @@ QTextStream()
 HB_FUNC_STATIC( QTEXTSTREAM_NEW1 )
 {
   QTextStream * o = NULL;
-  o = new QTextStream (  );
+  o = new QTextStream ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_CODEC )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTextCodec * ptr = obj->codec (  );
+    QTextCodec * ptr = obj->codec ();
     _qt4xhb_createReturnClass ( ptr, "QTEXTCODEC" );
   }
 }
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_AUTODETECTUNICODE )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->autoDetectUnicode (  ) );
+    hb_retl( obj->autoDetectUnicode () );
   }
 }
 
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_GENERATEBYTEORDERMARK )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->generateByteOrderMark (  ) );
+    hb_retl( obj->generateByteOrderMark () );
   }
 }
 
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_LOCALE )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QLocale * ptr = new QLocale( obj->locale (  ) );
+    QLocale * ptr = new QLocale( obj->locale () );
     _qt4xhb_createReturnClass ( ptr, "QLOCALE" );
   }
 }
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_DEVICE )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QIODevice * ptr = obj->device (  );
+    QIODevice * ptr = obj->device ();
     _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );
   }
 }
@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_STRING )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString * ptr = obj->string (  );
+    QString * ptr = obj->string ();
     _qt4xhb_createReturnClass ( ptr, "QSTRING" );
   }
 }
@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_STATUS )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->status (  ) );
+    hb_retni( (int) obj->status () );
   }
 }
 
@@ -444,7 +444,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_RESETSTATUS )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->resetStatus (  );
+    obj->resetStatus ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_ATEND )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->atEnd (  ) );
+    hb_retl( obj->atEnd () );
   }
 }
 
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_RESET )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->reset (  );
+    obj->reset ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_FLUSH )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->flush (  );
+    obj->flush ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -513,7 +513,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_POS )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->pos (  );
+    qint64 i = obj->pos ();
     hb_retni( i );
   }
 }
@@ -527,7 +527,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SKIPWHITESPACE )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->skipWhiteSpace (  );
+    obj->skipWhiteSpace ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -556,7 +556,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_READALL )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->readAll (  );
+    QString str1 = obj->readAll ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -600,7 +600,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_FIELDALIGNMENT )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->fieldAlignment (  ) );
+    hb_retni( (int) obj->fieldAlignment () );
   }
 }
 
@@ -628,7 +628,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_PADCHAR )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QChar * ptr = new QChar( obj->padChar (  ) );
+    QChar * ptr = new QChar( obj->padChar () );
     _qt4xhb_createReturnClass ( ptr, "QCHAR" );
   }
 }
@@ -657,7 +657,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_FIELDWIDTH )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->fieldWidth (  ) );
+    hb_retni( obj->fieldWidth () );
   }
 }
 
@@ -685,7 +685,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_NUMBERFLAGS )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->numberFlags (  ) );
+    hb_retni( (int) obj->numberFlags () );
   }
 }
 
@@ -713,7 +713,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_INTEGERBASE )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->integerBase (  ) );
+    hb_retni( obj->integerBase () );
   }
 }
 
@@ -741,7 +741,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_REALNUMBERNOTATION )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->realNumberNotation (  ) );
+    hb_retni( (int) obj->realNumberNotation () );
   }
 }
 
@@ -769,7 +769,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_REALNUMBERPRECISION )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->realNumberPrecision (  ) );
+    hb_retni( obj->realNumberPrecision () );
   }
 }
 

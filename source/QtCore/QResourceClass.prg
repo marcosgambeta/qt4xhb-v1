@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QRESOURCE_ABSOLUTEFILEPATH )
   QResource * obj = (QResource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->absoluteFilePath (  );
+    QString str1 = obj->absoluteFilePath ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QRESOURCE_DATA )
   QResource * obj = (QResource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const uchar * ptr = obj->data (  );
+    const uchar * ptr = obj->data ();
     _qt4xhb_createReturnClass ( ptr, "UCHAR" );
   }
 }
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QRESOURCE_FILENAME )
   QResource * obj = (QResource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->fileName (  );
+    QString str1 = obj->fileName ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QRESOURCE_ISCOMPRESSED )
   QResource * obj = (QResource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isCompressed (  ) );
+    hb_retl( obj->isCompressed () );
   }
 }
 
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QRESOURCE_ISVALID )
   QResource * obj = (QResource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QRESOURCE_LOCALE )
   QResource * obj = (QResource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QLocale * ptr = new QLocale( obj->locale (  ) );
+    QLocale * ptr = new QLocale( obj->locale () );
     _qt4xhb_createReturnClass ( ptr, "QLOCALE" );
   }
 }
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QRESOURCE_SIZE )
   QResource * obj = (QResource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->size (  );
+    qint64 i = obj->size ();
     hb_retni( i );
   }
 }

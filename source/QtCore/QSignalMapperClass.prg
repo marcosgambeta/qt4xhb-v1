@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAP1 )
   QSignalMapper * obj = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->map (  );
+    obj->map ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

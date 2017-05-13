@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_FLUSH )
   QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->flush (  );
+    obj->flush ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_HASPENDINGEVENTS )
   QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasPendingEvents (  ) );
+    hb_retl( obj->hasPendingEvents () );
   }
 }
 
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_INTERRUPT )
   QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->interrupt (  );
+    obj->interrupt ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_WAKEUP )
   QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->wakeUp (  );
+    obj->wakeUp ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

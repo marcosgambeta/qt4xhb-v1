@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_CURRENTFILEINFO )
   QAbstractFileEngineIterator * obj = (QAbstractFileEngineIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QFileInfo * ptr = new QFileInfo( obj->currentFileInfo (  ) );
+    QFileInfo * ptr = new QFileInfo( obj->currentFileInfo () );
     _qt4xhb_createReturnClass ( ptr, "QFILEINFO", true );
   }
 }
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_CURRENTFILENAME )
   QAbstractFileEngineIterator * obj = (QAbstractFileEngineIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->currentFileName (  );
+    QString str1 = obj->currentFileName ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_CURRENTFILEPATH )
   QAbstractFileEngineIterator * obj = (QAbstractFileEngineIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->currentFilePath (  );
+    QString str1 = obj->currentFilePath ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_FILTERS )
   QAbstractFileEngineIterator * obj = (QAbstractFileEngineIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->filters (  ) );
+    hb_retni( (int) obj->filters () );
   }
 }
 
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_HASNEXT )
   QAbstractFileEngineIterator * obj = (QAbstractFileEngineIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasNext (  ) );
+    hb_retl( obj->hasNext () );
   }
 }
 
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_NAMEFILTERS )
   QAbstractFileEngineIterator * obj = (QAbstractFileEngineIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList strl = obj->nameFilters (  );
+    QStringList strl = obj->nameFilters ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_NEXT )
   QAbstractFileEngineIterator * obj = (QAbstractFileEngineIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->next (  );
+    QString str1 = obj->next ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_PATH )
   QAbstractFileEngineIterator * obj = (QAbstractFileEngineIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->path (  );
+    QString str1 = obj->path ();
     hb_retc( RQSTRING(str1) );
   }
 }

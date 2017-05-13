@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QSTATE_CHILDMODE )
   QState * obj = (QState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->childMode (  ) );
+    hb_retni( (int) obj->childMode () );
   }
 }
 
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QSTATE_ERRORSTATE )
   QState * obj = (QState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QAbstractState * ptr = obj->errorState (  );
+    QAbstractState * ptr = obj->errorState ();
     _qt4xhb_createReturnClass ( ptr, "QABSTRACTSTATE" );
   }
 }
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QSTATE_INITIALSTATE )
   QState * obj = (QState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QAbstractState * ptr = obj->initialState (  );
+    QAbstractState * ptr = obj->initialState ();
     _qt4xhb_createReturnClass ( ptr, "QABSTRACTSTATE" );
   }
 }
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QSTATE_TRANSITIONS )
   QState * obj = (QState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QList<QAbstractTransition *> list = obj->transitions (  );
+    QList<QAbstractTransition *> list = obj->transitions ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QABSTRACTTRANSITION" );

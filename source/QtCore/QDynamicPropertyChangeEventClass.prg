@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QDYNAMICPROPERTYCHANGEEVENT_PROPERTYNAME )
   QDynamicPropertyChangeEvent * obj = (QDynamicPropertyChangeEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->propertyName (  ) );
+    QByteArray * ptr = new QByteArray( obj->propertyName () );
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
