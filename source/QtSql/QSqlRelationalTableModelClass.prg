@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_CLEAR )
   QSqlRelationalTableModel * obj = (QSqlRelationalTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SELECT )
   QSqlRelationalTableModel * obj = (QSqlRelationalTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->select (  ) );
+    hb_retl( obj->select () );
   }
 }
 

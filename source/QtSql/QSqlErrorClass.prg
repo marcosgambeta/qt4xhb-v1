@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QSQLERROR_DATABASETEXT )
   QSqlError * obj = (QSqlError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->databaseText (  );
+    QString str1 = obj->databaseText ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QSQLERROR_DRIVERTEXT )
   QSqlError * obj = (QSqlError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->driverText (  );
+    QString str1 = obj->driverText ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QSQLERROR_ISVALID )
   QSqlError * obj = (QSqlError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QSQLERROR_NUMBER )
   QSqlError * obj = (QSqlError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->number (  ) );
+    hb_retni( obj->number () );
   }
 }
 
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QSQLERROR_TEXT )
   QSqlError * obj = (QSqlError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->text (  );
+    QString str1 = obj->text ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QSQLERROR_TYPE )
   QSqlError * obj = (QSqlError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->type (  ) );
+    hb_retni( (int) obj->type () );
   }
 }
 

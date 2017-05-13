@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QSQLRESULT_HANDLE )
   QSqlResult * obj = (QSqlResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->handle (  ) );
+    QVariant * ptr = new QVariant( obj->handle () );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }

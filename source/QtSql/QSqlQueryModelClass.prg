@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_CLEAR )
   QSqlQueryModel * obj = (QSqlQueryModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_LASTERROR )
   QSqlQueryModel * obj = (QSqlQueryModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSqlError * ptr = new QSqlError( obj->lastError (  ) );
+    QSqlError * ptr = new QSqlError( obj->lastError () );
     _qt4xhb_createReturnClass ( ptr, "QSQLERROR", true );
   }
 }
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_QUERY )
   QSqlQueryModel * obj = (QSqlQueryModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSqlQuery * ptr = new QSqlQuery( obj->query (  ) );
+    QSqlQuery * ptr = new QSqlQuery( obj->query () );
     _qt4xhb_createReturnClass ( ptr, "QSQLQUERY", true );
   }
 }
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_RECORD2 )
   QSqlQueryModel * obj = (QSqlQueryModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSqlRecord * ptr = new QSqlRecord( obj->record (  ) );
+    QSqlRecord * ptr = new QSqlRecord( obj->record () );
     _qt4xhb_createReturnClass ( ptr, "QSQLRECORD", true );
   }
 }

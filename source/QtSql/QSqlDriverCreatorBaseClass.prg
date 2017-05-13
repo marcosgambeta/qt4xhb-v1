@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QSQLDRIVERCREATORBASE_CREATEOBJECT )
   QSqlDriverCreatorBase * obj = (QSqlDriverCreatorBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSqlDriver * ptr = obj->createObject (  );
+    QSqlDriver * ptr = obj->createObject ();
     _qt4xhb_createReturnClass ( ptr, "QSQLDRIVER" );
   }
 }

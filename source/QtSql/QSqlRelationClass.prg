@@ -53,7 +53,7 @@ QSqlRelation ()
 HB_FUNC_STATIC( QSQLRELATION_NEW1 )
 {
   QSqlRelation * o = NULL;
-  o = new QSqlRelation (  );
+  o = new QSqlRelation ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QSQLRELATION_DISPLAYCOLUMN )
   QSqlRelation * obj = (QSqlRelation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->displayColumn (  );
+    QString str1 = obj->displayColumn ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QSQLRELATION_INDEXCOLUMN )
   QSqlRelation * obj = (QSqlRelation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->indexColumn (  );
+    QString str1 = obj->indexColumn ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QSQLRELATION_ISVALID )
   QSqlRelation * obj = (QSqlRelation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QSQLRELATION_TABLENAME )
   QSqlRelation * obj = (QSqlRelation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->tableName (  );
+    QString str1 = obj->tableName ();
     hb_retc( RQSTRING(str1) );
   }
 }

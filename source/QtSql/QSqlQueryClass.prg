@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QSQLQUERY_AT )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->at (  ) );
+    hb_retni( obj->at () );
   }
 }
 
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QSQLQUERY_CLEAR )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QSQLQUERY_DRIVER )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QSqlDriver * ptr = obj->driver (  );
+    const QSqlDriver * ptr = obj->driver ();
     _qt4xhb_createReturnClass ( ptr, "QSQLDRIVER" );
   }
 }
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QSQLQUERY_EXEC2 )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->exec (  ) );
+    hb_retl( obj->exec () );
   }
 }
 
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QSQLQUERY_EXECUTEDQUERY )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->executedQuery (  );
+    QString str1 = obj->executedQuery ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QSQLQUERY_FINISH )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->finish (  );
+    obj->finish ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QSQLQUERY_FIRST )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->first (  ) );
+    hb_retl( obj->first () );
   }
 }
 
@@ -437,7 +437,7 @@ HB_FUNC_STATIC( QSQLQUERY_ISACTIVE )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isActive (  ) );
+    hb_retl( obj->isActive () );
   }
 }
 
@@ -450,7 +450,7 @@ HB_FUNC_STATIC( QSQLQUERY_ISFORWARDONLY )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isForwardOnly (  ) );
+    hb_retl( obj->isForwardOnly () );
   }
 }
 
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QSQLQUERY_ISSELECT )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isSelect (  ) );
+    hb_retl( obj->isSelect () );
   }
 }
 
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QSQLQUERY_ISVALID )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -502,7 +502,7 @@ HB_FUNC_STATIC( QSQLQUERY_LAST )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->last (  ) );
+    hb_retl( obj->last () );
   }
 }
 
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QSQLQUERY_LASTERROR )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSqlError * ptr = new QSqlError( obj->lastError (  ) );
+    QSqlError * ptr = new QSqlError( obj->lastError () );
     _qt4xhb_createReturnClass ( ptr, "QSQLERROR", true );
   }
 }
@@ -529,7 +529,7 @@ HB_FUNC_STATIC( QSQLQUERY_LASTINSERTID )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->lastInsertId (  ) );
+    QVariant * ptr = new QVariant( obj->lastInsertId () );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QSQLQUERY_LASTQUERY )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->lastQuery (  );
+    QString str1 = obj->lastQuery ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QSQLQUERY_NEXT )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->next (  ) );
+    hb_retl( obj->next () );
   }
 }
 
@@ -570,7 +570,7 @@ HB_FUNC_STATIC( QSQLQUERY_NEXTRESULT )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->nextResult (  ) );
+    hb_retl( obj->nextResult () );
   }
 }
 
@@ -583,7 +583,7 @@ HB_FUNC_STATIC( QSQLQUERY_NUMROWSAFFECTED )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->numRowsAffected (  ) );
+    hb_retni( obj->numRowsAffected () );
   }
 }
 
@@ -596,7 +596,7 @@ HB_FUNC_STATIC( QSQLQUERY_NUMERICALPRECISIONPOLICY )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->numericalPrecisionPolicy (  ) );
+    hb_retni( (int) obj->numericalPrecisionPolicy () );
   }
 }
 
@@ -622,7 +622,7 @@ HB_FUNC_STATIC( QSQLQUERY_PREVIOUS )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->previous (  ) );
+    hb_retl( obj->previous () );
   }
 }
 
@@ -635,7 +635,7 @@ HB_FUNC_STATIC( QSQLQUERY_RECORD )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSqlRecord * ptr = new QSqlRecord( obj->record (  ) );
+    QSqlRecord * ptr = new QSqlRecord( obj->record () );
     _qt4xhb_createReturnClass ( ptr, "QSQLRECORD", true );
   }
 }
@@ -649,7 +649,7 @@ HB_FUNC_STATIC( QSQLQUERY_RESULT )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QSqlResult * ptr = obj->result (  );
+    const QSqlResult * ptr = obj->result ();
     _qt4xhb_createReturnClass ( ptr, "QSQLRESULT" );
   }
 }
@@ -704,7 +704,7 @@ HB_FUNC_STATIC( QSQLQUERY_SIZE )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->size (  ) );
+    hb_retni( obj->size () );
   }
 }
 

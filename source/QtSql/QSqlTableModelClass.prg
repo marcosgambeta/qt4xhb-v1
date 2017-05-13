@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_DATABASE )
   QSqlTableModel * obj = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSqlDatabase * ptr = new QSqlDatabase( obj->database (  ) );
+    QSqlDatabase * ptr = new QSqlDatabase( obj->database () );
     _qt4xhb_createReturnClass ( ptr, "QSQLDATABASE" );
   }
 }
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_EDITSTRATEGY )
   QSqlTableModel * obj = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->editStrategy (  ) );
+    hb_retni( (int) obj->editStrategy () );
   }
 }
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_FILTER )
   QSqlTableModel * obj = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->filter (  );
+    QString str1 = obj->filter ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_PRIMARYKEY )
   QSqlTableModel * obj = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSqlIndex * ptr = new QSqlIndex( obj->primaryKey (  ) );
+    QSqlIndex * ptr = new QSqlIndex( obj->primaryKey () );
     _qt4xhb_createReturnClass ( ptr, "QSQLINDEX", true );
   }
 }
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SELECT )
   QSqlTableModel * obj = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->select (  ) );
+    hb_retl( obj->select () );
   }
 }
 
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_TABLENAME )
   QSqlTableModel * obj = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->tableName (  );
+    QString str1 = obj->tableName ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_CLEAR )
   QSqlTableModel * obj = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -461,7 +461,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_REVERT )
   QSqlTableModel * obj = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->revert (  );
+    obj->revert ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -475,7 +475,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_REVERTALL )
   QSqlTableModel * obj = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->revertAll (  );
+    obj->revertAll ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SUBMIT )
   QSqlTableModel * obj = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->submit (  ) );
+    hb_retl( obj->submit () );
   }
 }
 
@@ -502,7 +502,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SUBMITALL )
   QSqlTableModel * obj = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->submitAll (  ) );
+    hb_retl( obj->submitAll () );
   }
 }
 

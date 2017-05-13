@@ -89,7 +89,7 @@ QSqlRecord ()
 HB_FUNC_STATIC( QSQLRECORD_NEW1 )
 {
   QSqlRecord * o = NULL;
-  o = new QSqlRecord (  );
+  o = new QSqlRecord ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QSQLRECORD_CLEAR )
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QSQLRECORD_CLEARVALUES )
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clearValues (  );
+    obj->clearValues ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QSQLRECORD_COUNT )
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->count (  ) );
+    hb_retni( obj->count () );
   }
 }
 
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QSQLRECORD_ISEMPTY )
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 }
 
