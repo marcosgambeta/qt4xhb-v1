@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_AUTOSHOWSTANDARDWINDOW )
   QScriptEngineDebugger * obj = (QScriptEngineDebugger *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->autoShowStandardWindow (  ) );
+    hb_retl( obj->autoShowStandardWindow () );
   }
 }
 
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_DETACH )
   QScriptEngineDebugger * obj = (QScriptEngineDebugger *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->detach (  );
+    obj->detach ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_STANDARDWINDOW )
   QScriptEngineDebugger * obj = (QScriptEngineDebugger *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QMainWindow * ptr = obj->standardWindow (  );
+    QMainWindow * ptr = obj->standardWindow ();
     _qt4xhb_createReturnClass ( ptr, "QMAINWINDOW" );
   }
 }
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_STATE )
   QScriptEngineDebugger * obj = (QScriptEngineDebugger *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->state (  ) );
+    hb_retni( (int) obj->state () );
   }
 }
 
