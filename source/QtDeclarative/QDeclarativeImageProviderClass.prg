@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_IMAGETYPE )
   QDeclarativeImageProvider * obj = (QDeclarativeImageProvider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->imageType (  ) );
+    hb_retni( (int) obj->imageType () );
   }
 }
 

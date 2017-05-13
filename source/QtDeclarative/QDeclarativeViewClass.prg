@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ENGINE )
   QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDeclarativeEngine * ptr = obj->engine (  );
+    QDeclarativeEngine * ptr = obj->engine ();
     _qt4xhb_createReturnClass ( ptr, "QDECLARATIVEENGINE" );
   }
 }
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ERRORS )
   QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QList<QDeclarativeError> list = obj->errors (  );
+    QList<QDeclarativeError> list = obj->errors ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QDECLARATIVEERROR" );
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_INITIALSIZE )
   QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->initialSize (  ) );
+    QSize * ptr = new QSize( obj->initialSize () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_RESIZEMODE )
   QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->resizeMode (  ) );
+    hb_retni( (int) obj->resizeMode () );
   }
 }
 
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTCONTEXT )
   QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDeclarativeContext * ptr = obj->rootContext (  );
+    QDeclarativeContext * ptr = obj->rootContext ();
     _qt4xhb_createReturnClass ( ptr, "QDECLARATIVECONTEXT" );
   }
 }
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTOBJECT )
   QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QGraphicsObject * ptr = obj->rootObject (  );
+    QGraphicsObject * ptr = obj->rootObject ();
     _qt4xhb_createReturnClass ( ptr, "QGRAPHICSOBJECT" );
   }
 }
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_SOURCE )
   QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->source (  ) );
+    QUrl * ptr = new QUrl( obj->source () );
     _qt4xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_STATUS )
   QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->status (  ) );
+    hb_retni( (int) obj->status () );
   }
 }
 

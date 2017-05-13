@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_BASEURL )
   QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->baseUrl (  ) );
+    QUrl * ptr = new QUrl( obj->baseUrl () );
     _qt4xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_CLEARCOMPONENTCACHE )
   QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clearComponentCache (  );
+    obj->clearComponentCache ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_IMPORTPATHLIST )
   QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList strl = obj->importPathList (  );
+    QStringList strl = obj->importPathList ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_NETWORKACCESSMANAGER )
   QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QNetworkAccessManager * ptr = obj->networkAccessManager (  );
+    QNetworkAccessManager * ptr = obj->networkAccessManager ();
     _qt4xhb_createReturnClass ( ptr, "QNETWORKACCESSMANAGER" );
   }
 }
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_NETWORKACCESSMANAGERFACTORY )
   QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDeclarativeNetworkAccessManagerFactory * ptr = obj->networkAccessManagerFactory (  );
+    QDeclarativeNetworkAccessManagerFactory * ptr = obj->networkAccessManagerFactory ();
     _qt4xhb_createReturnClass ( ptr, "QDECLARATIVENETWORKACCESSMANAGERFACTORY" );
   }
 }
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_OFFLINESTORAGEPATH )
   QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->offlineStoragePath (  );
+    QString str1 = obj->offlineStoragePath ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_OUTPUTWARNINGSTOSTANDARDERROR )
   QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->outputWarningsToStandardError (  ) );
+    hb_retl( obj->outputWarningsToStandardError () );
   }
 }
 
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_PLUGINPATHLIST )
   QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList strl = obj->pluginPathList (  );
+    QStringList strl = obj->pluginPathList ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_ROOTCONTEXT )
   QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDeclarativeContext * ptr = obj->rootContext (  );
+    QDeclarativeContext * ptr = obj->rootContext ();
     _qt4xhb_createReturnClass ( ptr, "QDECLARATIVECONTEXT" );
   }
 }

@@ -63,7 +63,7 @@ QDeclarativeListReference ()
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_NEW1 )
 {
   QDeclarativeListReference * o = NULL;
-  o = new QDeclarativeListReference (  );
+  o = new QDeclarativeListReference ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANAPPEND )
   QDeclarativeListReference * obj = (QDeclarativeListReference *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->canAppend (  ) );
+    hb_retl( obj->canAppend () );
   }
 }
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANAT )
   QDeclarativeListReference * obj = (QDeclarativeListReference *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->canAt (  ) );
+    hb_retl( obj->canAt () );
   }
 }
 
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANCLEAR )
   QDeclarativeListReference * obj = (QDeclarativeListReference *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->canClear (  ) );
+    hb_retl( obj->canClear () );
   }
 }
 
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANCOUNT )
   QDeclarativeListReference * obj = (QDeclarativeListReference *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->canCount (  ) );
+    hb_retl( obj->canCount () );
   }
 }
 
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CLEAR )
   QDeclarativeListReference * obj = (QDeclarativeListReference *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->clear (  ) );
+    hb_retl( obj->clear () );
   }
 }
 
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_COUNT )
   QDeclarativeListReference * obj = (QDeclarativeListReference *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->count (  ) );
+    hb_retni( obj->count () );
   }
 }
 
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_ISVALID )
   QDeclarativeListReference * obj = (QDeclarativeListReference *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_LISTELEMENTTYPE )
   QDeclarativeListReference * obj = (QDeclarativeListReference *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QMetaObject * ptr = obj->listElementType (  );
+    const QMetaObject * ptr = obj->listElementType ();
     _qt4xhb_createReturnClass ( ptr, "QMETAOBJECT" );
   }
 }
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_OBJECT )
   QDeclarativeListReference * obj = (QDeclarativeListReference *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * ptr = obj->object (  );
+    QObject * ptr = obj->object ();
     _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }

@@ -65,7 +65,7 @@ QDeclarativeExpression ()
 HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NEW1 )
 {
   QDeclarativeExpression * o = NULL;
-  o = new QDeclarativeExpression (  );
+  o = new QDeclarativeExpression ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_CLEARERROR )
   QDeclarativeExpression * obj = (QDeclarativeExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clearError (  );
+    obj->clearError ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_CONTEXT )
   QDeclarativeExpression * obj = (QDeclarativeExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDeclarativeContext * ptr = obj->context (  );
+    QDeclarativeContext * ptr = obj->context ();
     _qt4xhb_createReturnClass ( ptr, "QDECLARATIVECONTEXT" );
   }
 }
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_ENGINE )
   QDeclarativeExpression * obj = (QDeclarativeExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDeclarativeEngine * ptr = obj->engine (  );
+    QDeclarativeEngine * ptr = obj->engine ();
     _qt4xhb_createReturnClass ( ptr, "QDECLARATIVEENGINE" );
   }
 }
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_ERROR )
   QDeclarativeExpression * obj = (QDeclarativeExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDeclarativeError * ptr = new QDeclarativeError( obj->error (  ) );
+    QDeclarativeError * ptr = new QDeclarativeError( obj->error () );
     _qt4xhb_createReturnClass ( ptr, "QDECLARATIVEERROR" );
   }
 }
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_EXPRESSION )
   QDeclarativeExpression * obj = (QDeclarativeExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->expression (  );
+    QString str1 = obj->expression ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_HASERROR )
   QDeclarativeExpression * obj = (QDeclarativeExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasError (  ) );
+    hb_retl( obj->hasError () );
   }
 }
 
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_LINENUMBER )
   QDeclarativeExpression * obj = (QDeclarativeExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->lineNumber (  ) );
+    hb_retni( obj->lineNumber () );
   }
 }
 
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NOTIFYONVALUECHANGED )
   QDeclarativeExpression * obj = (QDeclarativeExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->notifyOnValueChanged (  ) );
+    hb_retl( obj->notifyOnValueChanged () );
   }
 }
 
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SCOPEOBJECT )
   QDeclarativeExpression * obj = (QDeclarativeExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * ptr = obj->scopeObject (  );
+    QObject * ptr = obj->scopeObject ();
     _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SOURCEFILE )
   QDeclarativeExpression * obj = (QDeclarativeExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->sourceFile (  );
+    QString str1 = obj->sourceFile ();
     hb_retc( RQSTRING(str1) );
   }
 }

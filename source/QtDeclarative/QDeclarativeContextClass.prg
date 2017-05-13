@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_BASEURL )
   QDeclarativeContext * obj = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->baseUrl (  ) );
+    QUrl * ptr = new QUrl( obj->baseUrl () );
     _qt4xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_CONTEXTOBJECT )
   QDeclarativeContext * obj = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * ptr = obj->contextObject (  );
+    QObject * ptr = obj->contextObject ();
     _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_ENGINE )
   QDeclarativeContext * obj = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDeclarativeEngine * ptr = obj->engine (  );
+    QDeclarativeEngine * ptr = obj->engine ();
     _qt4xhb_createReturnClass ( ptr, "QDECLARATIVEENGINE" );
   }
 }
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_ISVALID )
   QDeclarativeContext * obj = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_PARENTCONTEXT )
   QDeclarativeContext * obj = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDeclarativeContext * ptr = obj->parentContext (  );
+    QDeclarativeContext * ptr = obj->parentContext ();
     _qt4xhb_createReturnClass ( ptr, "QDECLARATIVECONTEXT" );
   }
 }

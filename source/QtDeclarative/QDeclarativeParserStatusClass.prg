@@ -51,7 +51,7 @@ HB_FUNC_STATIC( QDECLARATIVEPARSERSTATUS_CLASSBEGIN )
   QDeclarativeParserStatus * obj = (QDeclarativeParserStatus *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->classBegin (  );
+    obj->classBegin ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QDECLARATIVEPARSERSTATUS_COMPONENTCOMPLETE )
   QDeclarativeParserStatus * obj = (QDeclarativeParserStatus *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->componentComplete (  );
+    obj->componentComplete ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

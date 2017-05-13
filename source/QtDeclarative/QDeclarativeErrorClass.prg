@@ -62,7 +62,7 @@ QDeclarativeError ()
 HB_FUNC_STATIC( QDECLARATIVEERROR_NEW1 )
 {
   QDeclarativeError * o = NULL;
-  o = new QDeclarativeError (  );
+  o = new QDeclarativeError ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_COLUMN )
   QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->column (  ) );
+    hb_retni( obj->column () );
   }
 }
 
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_DESCRIPTION )
   QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->description (  );
+    QString str1 = obj->description ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_ISVALID )
   QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_LINE )
   QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->line (  ) );
+    hb_retni( obj->line () );
   }
 }
 
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_TOSTRING )
   QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toString (  );
+    QString str1 = obj->toString ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_URL )
   QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->url (  ) );
+    QUrl * ptr = new QUrl( obj->url () );
     _qt4xhb_createReturnClass ( ptr, "QURL", true );
   }
 }

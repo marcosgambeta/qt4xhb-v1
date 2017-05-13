@@ -58,7 +58,7 @@ QDeclarativeScriptString ()
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEW1 )
 {
   QDeclarativeScriptString * o = NULL;
-  o = new QDeclarativeScriptString (  );
+  o = new QDeclarativeScriptString ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_CONTEXT )
   QDeclarativeScriptString * obj = (QDeclarativeScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDeclarativeContext * ptr = obj->context (  );
+    QDeclarativeContext * ptr = obj->context ();
     _qt4xhb_createReturnClass ( ptr, "QDECLARATIVECONTEXT" );
   }
 }
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SCOPEOBJECT )
   QDeclarativeScriptString * obj = (QDeclarativeScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * ptr = obj->scopeObject (  );
+    QObject * ptr = obj->scopeObject ();
     _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SCRIPT )
   QDeclarativeScriptString * obj = (QDeclarativeScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->script (  );
+    QString str1 = obj->script ();
     hb_retc( RQSTRING(str1) );
   }
 }

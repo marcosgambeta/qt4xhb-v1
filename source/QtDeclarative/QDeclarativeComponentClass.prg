@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_COMPLETECREATE )
   QDeclarativeComponent * obj = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->completeCreate (  );
+    obj->completeCreate ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATIONCONTEXT )
   QDeclarativeComponent * obj = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDeclarativeContext * ptr = obj->creationContext (  );
+    QDeclarativeContext * ptr = obj->creationContext ();
     _qt4xhb_createReturnClass ( ptr, "QDECLARATIVECONTEXT" );
   }
 }
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ERRORS )
   QDeclarativeComponent * obj = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QList<QDeclarativeError> list = obj->errors (  );
+    QList<QDeclarativeError> list = obj->errors ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QDECLARATIVEERROR" );
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISERROR )
   QDeclarativeComponent * obj = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isError (  ) );
+    hb_retl( obj->isError () );
   }
 }
 
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISLOADING )
   QDeclarativeComponent * obj = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isLoading (  ) );
+    hb_retl( obj->isLoading () );
   }
 }
 
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISNULL )
   QDeclarativeComponent * obj = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISREADY )
   QDeclarativeComponent * obj = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isReady (  ) );
+    hb_retl( obj->isReady () );
   }
 }
 
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_PROGRESS )
   QDeclarativeComponent * obj = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->progress (  );
+    qreal r = obj->progress ();
     hb_retnd( r );
   }
 }
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_STATUS )
   QDeclarativeComponent * obj = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->status (  ) );
+    hb_retni( (int) obj->status () );
   }
 }
 
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_URL )
   QDeclarativeComponent * obj = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->url (  ) );
+    QUrl * ptr = new QUrl( obj->url () );
     _qt4xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ERRORSTRING )
   QDeclarativeComponent * obj = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->errorString (  );
+    QString str1 = obj->errorString ();
     hb_retc( RQSTRING(str1) );
   }
 }
