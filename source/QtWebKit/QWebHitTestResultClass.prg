@@ -77,7 +77,7 @@ QWebHitTestResult ()
 HB_FUNC_STATIC( QWEBHITTESTRESULT_NEW1 )
 {
   QWebHitTestResult * o = NULL;
-  o = new QWebHitTestResult (  );
+  o = new QWebHitTestResult ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_ALTERNATETEXT )
   QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->alternateText (  );
+    QString str1 = obj->alternateText ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_BOUNDINGRECT )
   QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRect * ptr = new QRect( obj->boundingRect (  ) );
+    QRect * ptr = new QRect( obj->boundingRect () );
     _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_ELEMENT )
   QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWebElement * ptr = new QWebElement( obj->element (  ) );
+    QWebElement * ptr = new QWebElement( obj->element () );
     _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
   }
 }
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_ENCLOSINGBLOCKELEMENT )
   QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWebElement * ptr = new QWebElement( obj->enclosingBlockElement (  ) );
+    QWebElement * ptr = new QWebElement( obj->enclosingBlockElement () );
     _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
   }
 }
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_FRAME )
   QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWebFrame * ptr = obj->frame (  );
+    QWebFrame * ptr = obj->frame ();
     _qt4xhb_createReturnClass ( ptr, "QWEBFRAME" );
   }
 }
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_IMAGEURL )
   QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->imageUrl (  ) );
+    QUrl * ptr = new QUrl( obj->imageUrl () );
     _qt4xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_ISCONTENTEDITABLE )
   QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isContentEditable (  ) );
+    hb_retl( obj->isContentEditable () );
   }
 }
 
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_ISCONTENTSELECTED )
   QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isContentSelected (  ) );
+    hb_retl( obj->isContentSelected () );
   }
 }
 
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_ISNULL )
   QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKELEMENT )
   QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWebElement * ptr = new QWebElement( obj->linkElement (  ) );
+    QWebElement * ptr = new QWebElement( obj->linkElement () );
     _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
   }
 }
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKTARGETFRAME )
   QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWebFrame * ptr = obj->linkTargetFrame (  );
+    QWebFrame * ptr = obj->linkTargetFrame ();
     _qt4xhb_createReturnClass ( ptr, "QWEBFRAME" );
   }
 }
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKTEXT )
   QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->linkText (  );
+    QString str1 = obj->linkText ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKTITLE )
   QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->linkTitle (  ) );
+    QUrl * ptr = new QUrl( obj->linkTitle () );
     _qt4xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKURL )
   QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->linkUrl (  ) );
+    QUrl * ptr = new QUrl( obj->linkUrl () );
     _qt4xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_PIXMAP )
   QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPixmap * ptr = new QPixmap( obj->pixmap (  ) );
+    QPixmap * ptr = new QPixmap( obj->pixmap () );
     _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_POS )
   QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPoint * ptr = new QPoint( obj->pos (  ) );
+    QPoint * ptr = new QPoint( obj->pos () );
     _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_TITLE )
   QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->title (  );
+    QString str1 = obj->title ();
     hb_retc( RQSTRING(str1) );
   }
 }

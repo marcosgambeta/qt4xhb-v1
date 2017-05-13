@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_ICON )
   QWebHistoryItem * obj = (QWebHistoryItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QIcon * ptr = new QIcon( obj->icon (  ) );
+    QIcon * ptr = new QIcon( obj->icon () );
     _qt4xhb_createReturnClass ( ptr, "QICON", true );
   }
 }
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_ISVALID )
   QWebHistoryItem * obj = (QWebHistoryItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_LASTVISITED )
   QWebHistoryItem * obj = (QWebHistoryItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDateTime * ptr = new QDateTime( obj->lastVisited (  ) );
+    QDateTime * ptr = new QDateTime( obj->lastVisited () );
     _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_ORIGINALURL )
   QWebHistoryItem * obj = (QWebHistoryItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->originalUrl (  ) );
+    QUrl * ptr = new QUrl( obj->originalUrl () );
     _qt4xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_TITLE )
   QWebHistoryItem * obj = (QWebHistoryItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->title (  );
+    QString str1 = obj->title ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_URL )
   QWebHistoryItem * obj = (QWebHistoryItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->url (  ) );
+    QUrl * ptr = new QUrl( obj->url () );
     _qt4xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_USERDATA )
   QWebHistoryItem * obj = (QWebHistoryItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->userData (  ) );
+    QVariant * ptr = new QVariant( obj->userData () );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }

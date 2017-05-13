@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QWEBPLUGINFACTORY_REFRESHPLUGINS )
   QWebPluginFactory * obj = (QWebPluginFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->refreshPlugins (  );
+    obj->refreshPlugins ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

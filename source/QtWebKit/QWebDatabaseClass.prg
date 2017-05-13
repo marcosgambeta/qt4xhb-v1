@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QWEBDATABASE_DISPLAYNAME )
   QWebDatabase * obj = (QWebDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->displayName (  );
+    QString str1 = obj->displayName ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QWEBDATABASE_EXPECTEDSIZE )
   QWebDatabase * obj = (QWebDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->expectedSize (  );
+    qint64 i = obj->expectedSize ();
     hb_retni( i );
   }
 }
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QWEBDATABASE_FILENAME )
   QWebDatabase * obj = (QWebDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->fileName (  );
+    QString str1 = obj->fileName ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QWEBDATABASE_NAME )
   QWebDatabase * obj = (QWebDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->name (  );
+    QString str1 = obj->name ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QWEBDATABASE_ORIGIN )
   QWebDatabase * obj = (QWebDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWebSecurityOrigin * ptr = new QWebSecurityOrigin( obj->origin (  ) );
+    QWebSecurityOrigin * ptr = new QWebSecurityOrigin( obj->origin () );
     _qt4xhb_createReturnClass ( ptr, "QWEBSECURITYORIGIN", true );
   }
 }
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QWEBDATABASE_SIZE )
   QWebDatabase * obj = (QWebDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->size (  );
+    qint64 i = obj->size ();
     hb_retni( i );
   }
 }
@@ -173,7 +173,7 @@ void removeAllDatabases ()
 */
 HB_FUNC_STATIC( QWEBDATABASE_REMOVEALLDATABASES )
 {
-  QWebDatabase::removeAllDatabases (  );
+  QWebDatabase::removeAllDatabases ();
   hb_itemReturn( hb_stackSelfItem() );
 }
 
