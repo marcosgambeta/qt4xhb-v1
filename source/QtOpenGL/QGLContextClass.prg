@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QGLCONTEXT_DEVICE )
   QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPaintDevice * ptr = obj->device (  );
+    QPaintDevice * ptr = obj->device ();
     _qt4xhb_createReturnClass ( ptr, "QPAINTDEVICE" );
   }
 }
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QGLCONTEXT_DONECURRENT )
   QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->doneCurrent (  );
+    obj->doneCurrent ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QGLCONTEXT_FORMAT )
   QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QGLFormat * ptr = new QGLFormat( obj->format (  ) );
+    QGLFormat * ptr = new QGLFormat( obj->format () );
     _qt4xhb_createReturnClass ( ptr, "QGLFORMAT" );
   }
 }
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QGLCONTEXT_ISSHARING )
   QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isSharing (  ) );
+    hb_retl( obj->isSharing () );
   }
 }
 
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QGLCONTEXT_ISVALID )
   QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QGLCONTEXT_MAKECURRENT )
   QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->makeCurrent (  );
+    obj->makeCurrent ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QGLCONTEXT_OVERLAYTRANSPARENTCOLOR )
   QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QColor * ptr = new QColor( obj->overlayTransparentColor (  ) );
+    QColor * ptr = new QColor( obj->overlayTransparentColor () );
     _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QGLCONTEXT_REQUESTEDFORMAT )
   QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QGLFormat * ptr = new QGLFormat( obj->requestedFormat (  ) );
+    QGLFormat * ptr = new QGLFormat( obj->requestedFormat () );
     _qt4xhb_createReturnClass ( ptr, "QGLFORMAT" );
   }
 }
@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QGLCONTEXT_RESET )
   QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->reset (  );
+    obj->reset ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QGLCONTEXT_SWAPBUFFERS )
   QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->swapBuffers (  );
+    obj->swapBuffers ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -472,7 +472,7 @@ const QGLContext * currentContext ()
 */
 HB_FUNC_STATIC( QGLCONTEXT_CURRENTCONTEXT )
 {
-  const QGLContext * ptr = QGLContext::currentContext (  );
+  const QGLContext * ptr = QGLContext::currentContext ();
   _qt4xhb_createReturnClass ( ptr, "QGLCONTEXT" );
 }
 
@@ -493,7 +493,7 @@ int textureCacheLimit ()
 */
 HB_FUNC_STATIC( QGLCONTEXT_TEXTURECACHELIMIT )
 {
-  hb_retni( QGLContext::textureCacheLimit (  ) );
+  hb_retni( QGLContext::textureCacheLimit () );
 }
 
 

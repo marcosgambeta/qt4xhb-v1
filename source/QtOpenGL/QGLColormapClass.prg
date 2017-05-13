@@ -61,7 +61,7 @@ QGLColormap ()
 HB_FUNC_STATIC( QGLCOLORMAP_NEW1 )
 {
   QGLColormap * o = NULL;
-  o = new QGLColormap (  );
+  o = new QGLColormap ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_ISEMPTY )
   QGLColormap * obj = (QGLColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 }
 
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_SIZE )
   QGLColormap * obj = (QGLColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->size (  ) );
+    hb_retni( obj->size () );
   }
 }
 

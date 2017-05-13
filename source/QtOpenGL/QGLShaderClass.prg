@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QGLSHADER_ISCOMPILED )
   QGLShader * obj = (QGLShader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isCompiled (  ) );
+    hb_retl( obj->isCompiled () );
   }
 }
 
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QGLSHADER_LOG )
   QGLShader * obj = (QGLShader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->log (  );
+    QString str1 = obj->log ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QGLSHADER_SHADERID )
   QGLShader * obj = (QGLShader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (GLuint) obj->shaderId (  ) );
+    hb_retni( (GLuint) obj->shaderId () );
   }
 }
 
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QGLSHADER_SHADERTYPE )
   QGLShader * obj = (QGLShader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->shaderType (  ) );
+    hb_retni( (int) obj->shaderType () );
   }
 }
 
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QGLSHADER_SOURCECODE )
   QGLShader * obj = (QGLShader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->sourceCode (  ) );
+    QByteArray * ptr = new QByteArray( obj->sourceCode () );
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }

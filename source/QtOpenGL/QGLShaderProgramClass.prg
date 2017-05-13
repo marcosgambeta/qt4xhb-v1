@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_BIND )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->bind (  ) );
+    hb_retl( obj->bind () );
   }
 }
 
@@ -513,7 +513,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_GEOMETRYINPUTTYPE )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    GLenum i = obj->geometryInputType (  );
+    GLenum i = obj->geometryInputType ();
     hb_retni( i );
   }
 }
@@ -527,7 +527,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_GEOMETRYOUTPUTTYPE )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    GLenum i = obj->geometryOutputType (  );
+    GLenum i = obj->geometryOutputType ();
     hb_retni( i );
   }
 }
@@ -541,7 +541,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_GEOMETRYOUTPUTVERTEXCOUNT )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->geometryOutputVertexCount (  ) );
+    hb_retni( obj->geometryOutputVertexCount () );
   }
 }
 
@@ -554,7 +554,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_ISLINKED )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isLinked (  ) );
+    hb_retl( obj->isLinked () );
   }
 }
 
@@ -567,7 +567,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_LINK )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->link (  ) );
+    hb_retl( obj->link () );
   }
 }
 
@@ -580,7 +580,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_LOG )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->log (  );
+    QString str1 = obj->log ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -594,7 +594,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_MAXGEOMETRYOUTPUTVERTICES )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->maxGeometryOutputVertices (  ) );
+    hb_retni( obj->maxGeometryOutputVertices () );
   }
 }
 
@@ -607,7 +607,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_PROGRAMID )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (GLuint) obj->programId (  ) );
+    hb_retni( (GLuint) obj->programId () );
   }
 }
 
@@ -620,7 +620,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_RELEASE )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->release (  );
+    obj->release ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -634,7 +634,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_REMOVEALLSHADERS )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->removeAllShaders (  );
+    obj->removeAllShaders ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1591,7 +1591,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SHADERS )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QList<QGLShader *> list = obj->shaders (  );
+    QList<QGLShader *> list = obj->shaders ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QGLSHADER" );

@@ -51,7 +51,7 @@ QGLFramebufferObjectFormat ()
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_NEW1 )
 {
   QGLFramebufferObjectFormat * o = NULL;
-  o = new QGLFramebufferObjectFormat (  );
+  o = new QGLFramebufferObjectFormat ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_ATTACHMENT )
   QGLFramebufferObjectFormat * obj = (QGLFramebufferObjectFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->attachment (  ) );
+    hb_retni( (int) obj->attachment () );
   }
 }
 
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_INTERNALTEXTUREFORMAT )
   QGLFramebufferObjectFormat * obj = (QGLFramebufferObjectFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    GLenum i = obj->internalTextureFormat (  );
+    GLenum i = obj->internalTextureFormat ();
     hb_retni( i );
   }
 }
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_SAMPLES )
   QGLFramebufferObjectFormat * obj = (QGLFramebufferObjectFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->samples (  ) );
+    hb_retni( obj->samples () );
   }
 }
 
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_TEXTURETARGET )
   QGLFramebufferObjectFormat * obj = (QGLFramebufferObjectFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    GLenum i = obj->textureTarget (  );
+    GLenum i = obj->textureTarget ();
     hb_retni( i );
   }
 }

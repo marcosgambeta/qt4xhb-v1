@@ -107,7 +107,7 @@ QGLFormat ()
 HB_FUNC_STATIC( QGLFORMAT_NEW1 )
 {
   QGLFormat * o = NULL;
-  o = new QGLFormat (  );
+  o = new QGLFormat ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QGLFORMAT_ACCUM )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->accum (  ) );
+    hb_retl( obj->accum () );
   }
 }
 
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QGLFORMAT_ACCUMBUFFERSIZE )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->accumBufferSize (  ) );
+    hb_retni( obj->accumBufferSize () );
   }
 }
 
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QGLFORMAT_ALPHA )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->alpha (  ) );
+    hb_retl( obj->alpha () );
   }
 }
 
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QGLFORMAT_ALPHABUFFERSIZE )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->alphaBufferSize (  ) );
+    hb_retni( obj->alphaBufferSize () );
   }
 }
 
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QGLFORMAT_BLUEBUFFERSIZE )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->blueBufferSize (  ) );
+    hb_retni( obj->blueBufferSize () );
   }
 }
 
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QGLFORMAT_DEPTH )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->depth (  ) );
+    hb_retl( obj->depth () );
   }
 }
 
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QGLFORMAT_DEPTHBUFFERSIZE )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->depthBufferSize (  ) );
+    hb_retni( obj->depthBufferSize () );
   }
 }
 
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QGLFORMAT_DIRECTRENDERING )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->directRendering (  ) );
+    hb_retl( obj->directRendering () );
   }
 }
 
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QGLFORMAT_DOUBLEBUFFER )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->doubleBuffer (  ) );
+    hb_retl( obj->doubleBuffer () );
   }
 }
 
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QGLFORMAT_GREENBUFFERSIZE )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->greenBufferSize (  ) );
+    hb_retni( obj->greenBufferSize () );
   }
 }
 
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QGLFORMAT_HASOVERLAY )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasOverlay (  ) );
+    hb_retl( obj->hasOverlay () );
   }
 }
 
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QGLFORMAT_MAJORVERSION )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->majorVersion (  ) );
+    hb_retni( obj->majorVersion () );
   }
 }
 
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QGLFORMAT_MINORVERSION )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->minorVersion (  ) );
+    hb_retni( obj->minorVersion () );
   }
 }
 
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QGLFORMAT_PLANE )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->plane (  ) );
+    hb_retni( obj->plane () );
   }
 }
 
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QGLFORMAT_PROFILE )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->profile (  ) );
+    hb_retni( (int) obj->profile () );
   }
 }
 
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QGLFORMAT_REDBUFFERSIZE )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->redBufferSize (  ) );
+    hb_retni( obj->redBufferSize () );
   }
 }
 
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QGLFORMAT_RGBA )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->rgba (  ) );
+    hb_retl( obj->rgba () );
   }
 }
 
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QGLFORMAT_SAMPLEBUFFERS )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->sampleBuffers (  ) );
+    hb_retl( obj->sampleBuffers () );
   }
 }
 
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QGLFORMAT_SAMPLES )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->samples (  ) );
+    hb_retni( obj->samples () );
   }
 }
 
@@ -767,7 +767,7 @@ HB_FUNC_STATIC( QGLFORMAT_STENCIL )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->stencil (  ) );
+    hb_retl( obj->stencil () );
   }
 }
 
@@ -780,7 +780,7 @@ HB_FUNC_STATIC( QGLFORMAT_STENCILBUFFERSIZE )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->stencilBufferSize (  ) );
+    hb_retni( obj->stencilBufferSize () );
   }
 }
 
@@ -793,7 +793,7 @@ HB_FUNC_STATIC( QGLFORMAT_STEREO )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->stereo (  ) );
+    hb_retl( obj->stereo () );
   }
 }
 
@@ -806,7 +806,7 @@ HB_FUNC_STATIC( QGLFORMAT_SWAPINTERVAL )
   QGLFormat * obj = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->swapInterval (  ) );
+    hb_retni( obj->swapInterval () );
   }
 }
 
@@ -831,7 +831,7 @@ QGLFormat defaultFormat ()
 */
 HB_FUNC_STATIC( QGLFORMAT_DEFAULTFORMAT )
 {
-  QGLFormat * ptr = new QGLFormat( QGLFormat::defaultFormat (  ) );
+  QGLFormat * ptr = new QGLFormat( QGLFormat::defaultFormat () );
   _qt4xhb_createReturnClass ( ptr, "QGLFORMAT" );
 }
 
@@ -841,7 +841,7 @@ QGLFormat defaultOverlayFormat ()
 */
 HB_FUNC_STATIC( QGLFORMAT_DEFAULTOVERLAYFORMAT )
 {
-  QGLFormat * ptr = new QGLFormat( QGLFormat::defaultOverlayFormat (  ) );
+  QGLFormat * ptr = new QGLFormat( QGLFormat::defaultOverlayFormat () );
   _qt4xhb_createReturnClass ( ptr, "QGLFORMAT" );
 }
 
@@ -851,7 +851,7 @@ bool hasOpenGL ()
 */
 HB_FUNC_STATIC( QGLFORMAT_HASOPENGL )
 {
-  hb_retl( QGLFormat::hasOpenGL (  ) );
+  hb_retl( QGLFormat::hasOpenGL () );
 }
 
 
@@ -860,7 +860,7 @@ bool hasOpenGLOverlays ()
 */
 HB_FUNC_STATIC( QGLFORMAT_HASOPENGLOVERLAYS )
 {
-  hb_retl( QGLFormat::hasOpenGLOverlays (  ) );
+  hb_retl( QGLFormat::hasOpenGLOverlays () );
 }
 
 
@@ -869,7 +869,7 @@ OpenGLVersionFlags openGLVersionFlags ()
 */
 HB_FUNC_STATIC( QGLFORMAT_OPENGLVERSIONFLAGS )
 {
-  hb_retni( (int) QGLFormat::openGLVersionFlags (  ) );
+  hb_retni( (int) QGLFormat::openGLVersionFlags () );
 }
 
 
