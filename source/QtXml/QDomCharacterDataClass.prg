@@ -52,7 +52,7 @@ QDomCharacterData ()
 HB_FUNC_STATIC( QDOMCHARACTERDATA_NEW1 )
 {
   QDomCharacterData * o = NULL;
-  o = new QDomCharacterData (  );
+  o = new QDomCharacterData ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_DATA )
   QDomCharacterData * obj = (QDomCharacterData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->data (  );
+    QString str1 = obj->data ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_LENGTH )
   QDomCharacterData * obj = (QDomCharacterData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (uint) obj->length (  ) );
+    hb_retni( (uint) obj->length () );
   }
 }
 
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_NODETYPE )
   QDomCharacterData * obj = (QDomCharacterData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->nodeType (  ) );
+    hb_retni( (int) obj->nodeType () );
   }
 }
 

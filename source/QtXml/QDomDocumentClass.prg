@@ -82,7 +82,7 @@ QDomDocument ()
 HB_FUNC_STATIC( QDOMDOCUMENT_NEW1 )
 {
   QDomDocument * o = NULL;
-  o = new QDomDocument (  );
+  o = new QDomDocument ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEDOCUMENTFRAGMENT )
   QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDomDocumentFragment * ptr = new QDomDocumentFragment( obj->createDocumentFragment (  ) );
+    QDomDocumentFragment * ptr = new QDomDocumentFragment( obj->createDocumentFragment () );
     _qt4xhb_createReturnClass ( ptr, "QDOMDOCUMENTFRAGMENT", true );
   }
 }
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_DOCTYPE )
   QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDomDocumentType * ptr = new QDomDocumentType( obj->doctype (  ) );
+    QDomDocumentType * ptr = new QDomDocumentType( obj->doctype () );
     _qt4xhb_createReturnClass ( ptr, "QDOMDOCUMENTTYPE", true );
   }
 }
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_DOCUMENTELEMENT )
   QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDomElement * ptr = new QDomElement( obj->documentElement (  ) );
+    QDomElement * ptr = new QDomElement( obj->documentElement () );
     _qt4xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
   }
 }
@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_IMPLEMENTATION )
   QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDomImplementation * ptr = new QDomImplementation( obj->implementation (  ) );
+    QDomImplementation * ptr = new QDomImplementation( obj->implementation () );
     _qt4xhb_createReturnClass ( ptr, "QDOMIMPLEMENTATION", true );
   }
 }
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_NODETYPE )
   QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->nodeType (  ) );
+    hb_retni( (int) obj->nodeType () );
   }
 }
 

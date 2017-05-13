@@ -44,7 +44,7 @@ QDomComment ()
 HB_FUNC_STATIC( QDOMCOMMENT_NEW1 )
 {
   QDomComment * o = NULL;
-  o = new QDomComment (  );
+  o = new QDomComment ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QDOMCOMMENT_NODETYPE )
   QDomComment * obj = (QDomComment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->nodeType (  ) );
+    hb_retni( (int) obj->nodeType () );
   }
 }
 

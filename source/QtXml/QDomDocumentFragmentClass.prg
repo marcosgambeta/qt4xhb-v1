@@ -44,7 +44,7 @@ QDomDocumentFragment ()
 HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NEW1 )
 {
   QDomDocumentFragment * o = NULL;
-  o = new QDomDocumentFragment (  );
+  o = new QDomDocumentFragment ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NODETYPE )
   QDomDocumentFragment * obj = (QDomDocumentFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->nodeType (  ) );
+    hb_retni( (int) obj->nodeType () );
   }
 }
 

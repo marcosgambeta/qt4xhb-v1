@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_COLUMNNUMBER )
   QXmlParseException * obj = (QXmlParseException *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->columnNumber (  ) );
+    hb_retni( obj->columnNumber () );
   }
 }
 
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_LINENUMBER )
   QXmlParseException * obj = (QXmlParseException *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->lineNumber (  ) );
+    hb_retni( obj->lineNumber () );
   }
 }
 
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_MESSAGE )
   QXmlParseException * obj = (QXmlParseException *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->message (  );
+    QString str1 = obj->message ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_PUBLICID )
   QXmlParseException * obj = (QXmlParseException *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->publicId (  );
+    QString str1 = obj->publicId ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_SYSTEMID )
   QXmlParseException * obj = (QXmlParseException *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->systemId (  );
+    QString str1 = obj->systemId ();
     hb_retc( RQSTRING(str1) );
   }
 }

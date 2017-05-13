@@ -48,7 +48,7 @@ QDomText ()
 HB_FUNC_STATIC( QDOMTEXT_NEW1 )
 {
   QDomText * o = NULL;
-  o = new QDomText (  );
+  o = new QDomText ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QDOMTEXT_NODETYPE )
   QDomText * obj = (QDomText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->nodeType (  ) );
+    hb_retni( (int) obj->nodeType () );
   }
 }
 

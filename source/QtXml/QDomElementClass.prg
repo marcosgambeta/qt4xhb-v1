@@ -81,7 +81,7 @@ QDomElement ()
 HB_FUNC_STATIC( QDOMELEMENT_NEW1 )
 {
   QDomElement * o = NULL;
-  o = new QDomElement (  );
+  o = new QDomElement ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTES )
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDomNamedNodeMap * ptr = new QDomNamedNodeMap( obj->attributes (  ) );
+    QDomNamedNodeMap * ptr = new QDomNamedNodeMap( obj->attributes () );
     _qt4xhb_createReturnClass ( ptr, "QDOMNAMEDNODEMAP", true );
   }
 }
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QDOMELEMENT_NODETYPE )
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->nodeType (  ) );
+    hb_retni( (int) obj->nodeType () );
   }
 }
 
@@ -579,7 +579,7 @@ HB_FUNC_STATIC( QDOMELEMENT_TAGNAME )
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->tagName (  );
+    QString str1 = obj->tagName ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -593,7 +593,7 @@ HB_FUNC_STATIC( QDOMELEMENT_TEXT )
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->text (  );
+    QString str1 = obj->text ();
     hb_retc( RQSTRING(str1) );
   }
 }

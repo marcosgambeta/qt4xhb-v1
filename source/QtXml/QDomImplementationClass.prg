@@ -60,7 +60,7 @@ QDomImplementation ()
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_NEW1 )
 {
   QDomImplementation * o = NULL;
-  o = new QDomImplementation (  );
+  o = new QDomImplementation ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_ISNULL )
   QDomImplementation * obj = (QDomImplementation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -173,7 +173,7 @@ InvalidDataPolicy invalidDataPolicy ()
 */
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_INVALIDDATAPOLICY )
 {
-  hb_retni( (int) QDomImplementation::invalidDataPolicy (  ) );
+  hb_retni( (int) QDomImplementation::invalidDataPolicy () );
 }
 
 

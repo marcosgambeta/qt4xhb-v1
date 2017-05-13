@@ -59,7 +59,7 @@ QXmlNamespaceSupport ()
 HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_NEW )
 {
   QXmlNamespaceSupport * o = NULL;
-  o = new QXmlNamespaceSupport (  );
+  o = new QXmlNamespaceSupport ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_POPCONTEXT )
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->popContext (  );
+    obj->popContext ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIXES1 )
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList strl = obj->prefixes (  );
+    QStringList strl = obj->prefixes ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PUSHCONTEXT )
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->pushContext (  );
+    obj->pushContext ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_RESET )
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->reset (  );
+    obj->reset ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

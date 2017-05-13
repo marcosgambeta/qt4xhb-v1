@@ -60,7 +60,7 @@ QXmlInputSource ()
 HB_FUNC_STATIC( QXMLINPUTSOURCE_NEW1 )
 {
   QXmlInputSource * o = NULL;
-  o = new QXmlInputSource (  );
+  o = new QXmlInputSource ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_DATA )
   QXmlInputSource * obj = (QXmlInputSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->data (  );
+    QString str1 = obj->data ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_FETCHDATA )
   QXmlInputSource * obj = (QXmlInputSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->fetchData (  );
+    obj->fetchData ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_NEXT )
   QXmlInputSource * obj = (QXmlInputSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QChar * ptr = new QChar( obj->next (  ) );
+    QChar * ptr = new QChar( obj->next () );
     _qt4xhb_createReturnClass ( ptr, "QCHAR" );
   }
 }
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_RESET )
   QXmlInputSource * obj = (QXmlInputSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->reset (  );
+    obj->reset ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QXMLREADER_DTDHANDLER )
   QXmlReader * obj = (QXmlReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QXmlDTDHandler * ptr = obj->DTDHandler (  );
+    QXmlDTDHandler * ptr = obj->DTDHandler ();
     _qt4xhb_createReturnClass ( ptr, "QXMLDTDHANDLER" );
   }
 }
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QXMLREADER_CONTENTHANDLER )
   QXmlReader * obj = (QXmlReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QXmlContentHandler * ptr = obj->contentHandler (  );
+    QXmlContentHandler * ptr = obj->contentHandler ();
     _qt4xhb_createReturnClass ( ptr, "QXMLCONTENTHANDLER" );
   }
 }
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QXMLREADER_DECLHANDLER )
   QXmlReader * obj = (QXmlReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QXmlDeclHandler * ptr = obj->declHandler (  );
+    QXmlDeclHandler * ptr = obj->declHandler ();
     _qt4xhb_createReturnClass ( ptr, "QXMLDECLHANDLER" );
   }
 }
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QXMLREADER_ENTITYRESOLVER )
   QXmlReader * obj = (QXmlReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QXmlEntityResolver * ptr = obj->entityResolver (  );
+    QXmlEntityResolver * ptr = obj->entityResolver ();
     _qt4xhb_createReturnClass ( ptr, "QXMLENTITYRESOLVER" );
   }
 }
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QXMLREADER_ERRORHANDLER )
   QXmlReader * obj = (QXmlReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QXmlErrorHandler * ptr = obj->errorHandler (  );
+    QXmlErrorHandler * ptr = obj->errorHandler ();
     _qt4xhb_createReturnClass ( ptr, "QXMLERRORHANDLER" );
   }
 }
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QXMLREADER_LEXICALHANDLER )
   QXmlReader * obj = (QXmlReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QXmlLexicalHandler * ptr = obj->lexicalHandler (  );
+    QXmlLexicalHandler * ptr = obj->lexicalHandler ();
     _qt4xhb_createReturnClass ( ptr, "QXMLLEXICALHANDLER" );
   }
 }

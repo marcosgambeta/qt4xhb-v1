@@ -68,7 +68,7 @@ QXmlAttributes ()
 HB_FUNC_STATIC( QXMLATTRIBUTES_NEW )
 {
   QXmlAttributes * o = NULL;
-  o = new QXmlAttributes (  );
+  o = new QXmlAttributes ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_CLEAR )
   QXmlAttributes * obj = (QXmlAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_COUNT )
   QXmlAttributes * obj = (QXmlAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->count (  ) );
+    hb_retni( obj->count () );
   }
 }
 
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_LENGTH )
   QXmlAttributes * obj = (QXmlAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->length (  ) );
+    hb_retni( obj->length () );
   }
 }
 
