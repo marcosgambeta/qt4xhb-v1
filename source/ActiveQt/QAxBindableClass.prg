@@ -56,7 +56,7 @@ QAxBindable ()
 HB_FUNC_STATIC( QAXBINDABLE_NEW )
 {
   QAxBindable * o = NULL;
-  o = new QAxBindable (  );
+  o = new QAxBindable ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QAXBINDABLE_CREATEAGGREGATE )
 
   if( obj )
   {
-    QAxAggregated * ptr = obj->createAggregate (  );
+    QAxAggregated * ptr = obj->createAggregate ();
     _qt4xhb_createReturnClass ( ptr, "QAXAGGREGATED" );
   }
 }

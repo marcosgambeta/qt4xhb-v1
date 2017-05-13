@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QAXSCRIPT_SCRIPTCODE )
 
   if( obj )
   {
-    QString str1 = obj->scriptCode (  );
+    QString str1 = obj->scriptCode ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QAXSCRIPT_SCRIPTENGINE )
 
   if( obj )
   {
-    QAxScriptEngine * ptr = obj->scriptEngine (  );
+    QAxScriptEngine * ptr = obj->scriptEngine ();
     _qt4xhb_createReturnClass ( ptr, "QAXSCRIPTENGINE" );
   }
 }
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QAXSCRIPT_SCRIPTNAME )
 
   if( obj )
   {
-    QString str1 = obj->scriptName (  );
+    QString str1 = obj->scriptName ();
     hb_retc( RQSTRING(str1) );
   }
 }

@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QAXWIDGET_CREATEAGGREGATE )
 
   if( obj )
   {
-    QAxAggregated * ptr = obj->createAggregate (  );
+    QAxAggregated * ptr = obj->createAggregate ();
     _qt4xhb_createReturnClass ( ptr, "QAXAGGREGATED" );
   }
 }
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QAXWIDGET_CLEAR )
 
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QAXWIDGET_MINIMUMSIZEHINT )
 
   if( obj )
   {
-    QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
+    QSize * ptr = new QSize( obj->minimumSizeHint () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QAXWIDGET_SIZEHINT )
 
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QAXWIDGET_ASVARIANT )
 
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->asVariant (  ) );
+    QVariant * ptr = new QVariant( obj->asVariant () );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QAXWIDGET_CONTROL )
 
   if( obj )
   {
-    QString str1 = obj->control (  );
+    QString str1 = obj->control ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QAXWIDGET_DISABLECLASSINFO )
 
   if( obj )
   {
-    obj->disableClassInfo (  );
+    obj->disableClassInfo ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QAXWIDGET_DISABLEEVENTSINK )
 
   if( obj )
   {
-    obj->disableEventSink (  );
+    obj->disableEventSink ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QAXWIDGET_DISABLEMETAOBJECT )
 
   if( obj )
   {
-    obj->disableMetaObject (  );
+    obj->disableMetaObject ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QAXWIDGET_GENERATEDOCUMENTATION )
 
   if( obj )
   {
-    QString str1 = obj->generateDocumentation (  );
+    QString str1 = obj->generateDocumentation ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QAXWIDGET_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -525,7 +525,7 @@ HB_FUNC_STATIC( QAXWIDGET_VERBS )
 
   if( obj )
   {
-    QStringList strl = obj->verbs (  );
+    QStringList strl = obj->verbs ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

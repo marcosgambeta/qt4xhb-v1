@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_SCRIPTNAMES )
 
   if( obj )
   {
-    QStringList strl = obj->scriptNames (  );
+    QStringList strl = obj->scriptNames ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -343,7 +343,7 @@ QString scriptFileFilter ()
 */
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_SCRIPTFILEFILTER )
 {
-  QString str1 = QAxScriptManager::scriptFileFilter (  );
+  QString str1 = QAxScriptManager::scriptFileFilter ();
   hb_retc( RQSTRING(str1) );
 }
 

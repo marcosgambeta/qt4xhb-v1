@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QAXFACTORY_APPID )
 
   if( obj )
   {
-    QUuid * ptr = new QUuid( obj->appID (  ) );
+    QUuid * ptr = new QUuid( obj->appID () );
     _qt4xhb_createReturnClass ( ptr, "QUUID", true );
   }
 }
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QAXFACTORY_FEATURELIST )
 
   if( obj )
   {
-    QStringList strl = obj->featureList (  );
+    QStringList strl = obj->featureList ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QAXFACTORY_ISSERVICE )
 
   if( obj )
   {
-    hb_retl( obj->isService (  ) );
+    hb_retl( obj->isService () );
   }
 }
 
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QAXFACTORY_TYPELIBID )
 
   if( obj )
   {
-    QUuid * ptr = new QUuid( obj->typeLibID (  ) );
+    QUuid * ptr = new QUuid( obj->typeLibID () );
     _qt4xhb_createReturnClass ( ptr, "QUUID", true );
   }
 }
@@ -379,7 +379,7 @@ bool isServer ()
 */
 HB_FUNC_STATIC( QAXFACTORY_ISSERVER )
 {
-  hb_retl( QAxFactory::isServer (  ) );
+  hb_retl( QAxFactory::isServer () );
 }
 
 /*
@@ -403,7 +403,7 @@ QString serverDirPath ()
 */
 HB_FUNC_STATIC( QAXFACTORY_SERVERDIRPATH )
 {
-  QString str1 = QAxFactory::serverDirPath (  );
+  QString str1 = QAxFactory::serverDirPath ();
   hb_retc( RQSTRING(str1) );
 }
 
@@ -412,7 +412,7 @@ QString serverFilePath ()
 */
 HB_FUNC_STATIC( QAXFACTORY_SERVERFILEPATH )
 {
-  QString str1 = QAxFactory::serverFilePath (  );
+  QString str1 = QAxFactory::serverFilePath ();
   hb_retc( RQSTRING(str1) );
 }
 
@@ -436,7 +436,7 @@ bool stopServer ()
 */
 HB_FUNC_STATIC( QAXFACTORY_STOPSERVER )
 {
-  hb_retl( QAxFactory::stopServer (  ) );
+  hb_retl( QAxFactory::stopServer () );
 }
 
 #pragma ENDDUMP

@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QAXBASE_ASVARIANT )
 
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->asVariant (  ) );
+    QVariant * ptr = new QVariant( obj->asVariant () );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QAXBASE_CLEAR )
 
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QAXBASE_CONTROL )
 
   if( obj )
   {
-    QString str1 = obj->control (  );
+    QString str1 = obj->control ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QAXBASE_DISABLECLASSINFO )
 
   if( obj )
   {
-    obj->disableClassInfo (  );
+    obj->disableClassInfo ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QAXBASE_DISABLEEVENTSINK )
 
   if( obj )
   {
-    obj->disableEventSink (  );
+    obj->disableEventSink ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QAXBASE_DISABLEMETAOBJECT )
 
   if( obj )
   {
-    obj->disableMetaObject (  );
+    obj->disableMetaObject ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QAXBASE_GENERATEDOCUMENTATION )
 
   if( obj )
   {
-    QString str1 = obj->generateDocumentation (  );
+    QString str1 = obj->generateDocumentation ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QAXBASE_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QAXBASE_VERBS )
 
   if( obj )
   {
-    QStringList strl = obj->verbs (  );
+    QStringList strl = obj->verbs ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
