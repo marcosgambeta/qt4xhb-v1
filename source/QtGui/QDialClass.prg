@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QDIAL_NOTCHSIZE )
   QDial * obj = (QDial *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->notchSize (  ) );
+    hb_retni( obj->notchSize () );
   }
 }
 
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QDIAL_NOTCHTARGET )
   QDial * obj = (QDial *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->notchTarget (  );
+    qreal r = obj->notchTarget ();
     hb_retnd( r );
   }
 }
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QDIAL_NOTCHESVISIBLE )
   QDial * obj = (QDial *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->notchesVisible (  ) );
+    hb_retl( obj->notchesVisible () );
   }
 }
 
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QDIAL_WRAPPING )
   QDial * obj = (QDial *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->wrapping (  ) );
+    hb_retl( obj->wrapping () );
   }
 }
 
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QDIAL_MINIMUMSIZEHINT )
   QDial * obj = (QDial *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
+    QSize * ptr = new QSize( obj->minimumSizeHint () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QDIAL_SIZEHINT )
   QDial * obj = (QDial *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }

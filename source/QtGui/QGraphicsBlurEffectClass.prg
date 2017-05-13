@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BLURHINTS )
   QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->blurHints (  ) );
+    hb_retni( (int) obj->blurHints () );
   }
 }
 
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BLURRADIUS )
   QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->blurRadius (  );
+    qreal r = obj->blurRadius ();
     hb_retnd( r );
   }
 }

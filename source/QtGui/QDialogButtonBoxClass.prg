@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_BUTTONS )
   QDialogButtonBox * obj = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QList<QAbstractButton *> list = obj->buttons (  );
+    QList<QAbstractButton *> list = obj->buttons ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QABSTRACTBUTTON" );
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_CENTERBUTTONS )
   QDialogButtonBox * obj = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->centerButtons (  ) );
+    hb_retl( obj->centerButtons () );
   }
 }
 
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_CLEAR )
   QDialogButtonBox * obj = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ORIENTATION )
   QDialogButtonBox * obj = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->orientation (  ) );
+    hb_retni( (int) obj->orientation () );
   }
 }
 
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_STANDARDBUTTONS )
   QDialogButtonBox * obj = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->standardButtons (  ) );
+    hb_retni( (int) obj->standardButtons () );
   }
 }
 

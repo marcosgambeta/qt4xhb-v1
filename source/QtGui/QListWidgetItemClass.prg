@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_BACKGROUND )
   QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QBrush * ptr = new QBrush( obj->background (  ) );
+    QBrush * ptr = new QBrush( obj->background () );
     _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
   }
 }
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_CHECKSTATE )
   QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->checkState (  ) );
+    hb_retni( (int) obj->checkState () );
   }
 }
 
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_CLONE )
   QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QListWidgetItem * ptr = obj->clone (  );
+    QListWidgetItem * ptr = obj->clone ();
     _qt4xhb_createReturnClass ( ptr, "QLISTWIDGETITEM" );
   }
 }
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_FLAGS )
   QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->flags (  ) );
+    hb_retni( (int) obj->flags () );
   }
 }
 
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_FONT )
   QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QFont * ptr = new QFont( obj->font (  ) );
+    QFont * ptr = new QFont( obj->font () );
     _qt4xhb_createReturnClass ( ptr, "QFONT", true );
   }
 }
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_FOREGROUND )
   QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QBrush * ptr = new QBrush( obj->foreground (  ) );
+    QBrush * ptr = new QBrush( obj->foreground () );
     _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
   }
 }
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_ICON )
   QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QIcon * ptr = new QIcon( obj->icon (  ) );
+    QIcon * ptr = new QIcon( obj->icon () );
     _qt4xhb_createReturnClass ( ptr, "QICON", true );
   }
 }
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_ISHIDDEN )
   QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isHidden (  ) );
+    hb_retl( obj->isHidden () );
   }
 }
 
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_ISSELECTED )
   QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isSelected (  ) );
+    hb_retl( obj->isSelected () );
   }
 }
 
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_LISTWIDGET )
   QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QListWidget * ptr = obj->listWidget (  );
+    QListWidget * ptr = obj->listWidget ();
     _qt4xhb_createReturnClass ( ptr, "QLISTWIDGET" );
   }
 }
@@ -577,7 +577,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SIZEHINT )
   QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -591,7 +591,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_STATUSTIP )
   QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->statusTip (  );
+    QString str1 = obj->statusTip ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -605,7 +605,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_TEXT )
   QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->text (  );
+    QString str1 = obj->text ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -619,7 +619,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_TEXTALIGNMENT )
   QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->textAlignment (  ) );
+    hb_retni( obj->textAlignment () );
   }
 }
 
@@ -632,7 +632,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_TOOLTIP )
   QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toolTip (  );
+    QString str1 = obj->toolTip ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -646,7 +646,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_TYPE )
   QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 }
 
@@ -659,7 +659,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_WHATSTHIS )
   QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->whatsThis (  );
+    QString str1 = obj->whatsThis ();
     hb_retc( RQSTRING(str1) );
   }
 }

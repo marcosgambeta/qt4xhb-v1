@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QFONTENGINEPLUGIN_AVAILABLEFONTENGINES )
   QFontEnginePlugin * obj = (QFontEnginePlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QList<QFontEngineInfo> list = obj->availableFontEngines (  );
+    QList<QFontEngineInfo> list = obj->availableFontEngines ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QFONTENGINEINFO" );
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QFONTENGINEPLUGIN_KEYS )
   QFontEnginePlugin * obj = (QFontEnginePlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList strl = obj->keys (  );
+    QStringList strl = obj->keys ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

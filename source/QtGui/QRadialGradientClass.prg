@@ -65,7 +65,7 @@ QRadialGradient()
 HB_FUNC_STATIC( QRADIALGRADIENT_NEW1 )
 {
   QRadialGradient * o = NULL;
-  o = new QRadialGradient (  );
+  o = new QRadialGradient ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QRADIALGRADIENT_CENTER )
   QRadialGradient * obj = (QRadialGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->center (  ) );
+    QPointF * ptr = new QPointF( obj->center () );
     _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QRADIALGRADIENT_FOCALPOINT )
   QRadialGradient * obj = (QRadialGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->focalPoint (  ) );
+    QPointF * ptr = new QPointF( obj->focalPoint () );
     _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QRADIALGRADIENT_RADIUS )
   QRadialGradient * obj = (QRadialGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->radius (  );
+    qreal r = obj->radius ();
     hb_retnd( r );
   }
 }
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QRADIALGRADIENT_CENTERRADIUS )
   QRadialGradient * obj = (QRadialGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->centerRadius (  );
+    qreal r = obj->centerRadius ();
     hb_retnd( r );
   }
 }
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QRADIALGRADIENT_FOCALRADIUS )
   QRadialGradient * obj = (QRadialGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->focalRadius (  );
+    qreal r = obj->focalRadius ();
     hb_retnd( r );
   }
 }

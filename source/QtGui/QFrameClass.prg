@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QFRAME_FRAMERECT )
   QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRect * ptr = new QRect( obj->frameRect (  ) );
+    QRect * ptr = new QRect( obj->frameRect () );
     _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QFRAME_FRAMESHADOW )
   QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->frameShadow (  ) );
+    hb_retni( (int) obj->frameShadow () );
   }
 }
 
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QFRAME_FRAMESHAPE )
   QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->frameShape (  ) );
+    hb_retni( (int) obj->frameShape () );
   }
 }
 
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QFRAME_FRAMESTYLE )
   QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->frameStyle (  ) );
+    hb_retni( obj->frameStyle () );
   }
 }
 
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QFRAME_FRAMEWIDTH )
   QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->frameWidth (  ) );
+    hb_retni( obj->frameWidth () );
   }
 }
 
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QFRAME_LINEWIDTH )
   QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->lineWidth (  ) );
+    hb_retni( obj->lineWidth () );
   }
 }
 
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QFRAME_MIDLINEWIDTH )
   QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->midLineWidth (  ) );
+    hb_retni( obj->midLineWidth () );
   }
 }
 
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QFRAME_SIZEHINT )
   QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }

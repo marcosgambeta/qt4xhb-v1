@@ -83,7 +83,7 @@ void enterWhatsThisMode ()
 */
 HB_FUNC_STATIC( QWHATSTHIS_ENTERWHATSTHISMODE )
 {
-  QWhatsThis::enterWhatsThisMode (  );
+  QWhatsThis::enterWhatsThisMode ();
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -93,7 +93,7 @@ void hideText ()
 */
 HB_FUNC_STATIC( QWHATSTHIS_HIDETEXT )
 {
-  QWhatsThis::hideText (  );
+  QWhatsThis::hideText ();
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -103,7 +103,7 @@ bool inWhatsThisMode ()
 */
 HB_FUNC_STATIC( QWHATSTHIS_INWHATSTHISMODE )
 {
-  hb_retl( QWhatsThis::inWhatsThisMode (  ) );
+  hb_retl( QWhatsThis::inWhatsThisMode () );
 }
 
 
@@ -112,7 +112,7 @@ void leaveWhatsThisMode ()
 */
 HB_FUNC_STATIC( QWHATSTHIS_LEAVEWHATSTHISMODE )
 {
-  QWhatsThis::leaveWhatsThisMode (  );
+  QWhatsThis::leaveWhatsThisMode ();
   hb_itemReturn( hb_stackSelfItem() );
 }
 

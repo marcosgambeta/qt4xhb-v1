@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_DIRECTION )
   QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->direction (  ) );
+    hb_retni( (int) obj->direction () );
   }
 }
 
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_SPACING )
   QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->spacing (  ) );
+    hb_retni( obj->spacing () );
   }
 }
 
@@ -425,7 +425,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_COUNT )
   QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->count (  ) );
+    hb_retni( obj->count () );
   }
 }
 
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_EXPANDINGDIRECTIONS )
   QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->expandingDirections (  ) );
+    hb_retni( (int) obj->expandingDirections () );
   }
 }
 
@@ -451,7 +451,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_HASHEIGHTFORWIDTH )
   QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasHeightForWidth (  ) );
+    hb_retl( obj->hasHeightForWidth () );
   }
 }
 
@@ -478,7 +478,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_INVALIDATE )
   QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->invalidate (  );
+    obj->invalidate ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -507,7 +507,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_MAXIMUMSIZE )
   QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->maximumSize (  ) );
+    QSize * ptr = new QSize( obj->maximumSize () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -535,7 +535,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_MINIMUMSIZE )
   QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->minimumSize (  ) );
+    QSize * ptr = new QSize( obj->minimumSize () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -564,7 +564,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_SIZEHINT )
   QBoxLayout * obj = (QBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }

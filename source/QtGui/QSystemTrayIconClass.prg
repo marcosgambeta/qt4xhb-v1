@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_CONTEXTMENU )
   QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QMenu * ptr = obj->contextMenu (  );
+    QMenu * ptr = obj->contextMenu ();
     _qt4xhb_createReturnClass ( ptr, "QMENU" );
   }
 }
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_GEOMETRY )
   QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRect * ptr = new QRect( obj->geometry (  ) );
+    QRect * ptr = new QRect( obj->geometry () );
     _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_ICON )
   QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QIcon * ptr = new QIcon( obj->icon (  ) );
+    QIcon * ptr = new QIcon( obj->icon () );
     _qt4xhb_createReturnClass ( ptr, "QICON", true );  }
 }
 
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_ISVISIBLE )
   QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isVisible (  ) );
+    hb_retl( obj->isVisible () );
   }
 }
 
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_TOOLTIP )
   QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toolTip (  );
+    QString str1 = obj->toolTip ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_HIDE )
   QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->hide (  );
+    obj->hide ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SHOW )
   QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->show (  );
+    obj->show ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -293,7 +293,7 @@ bool isSystemTrayAvailable ()
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_ISSYSTEMTRAYAVAILABLE )
 {
-  hb_retl( QSystemTrayIcon::isSystemTrayAvailable (  ) );
+  hb_retl( QSystemTrayIcon::isSystemTrayAvailable () );
 }
 
 
@@ -302,7 +302,7 @@ bool supportsMessages ()
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SUPPORTSMESSAGES )
 {
-  hb_retl( QSystemTrayIcon::supportsMessages (  ) );
+  hb_retl( QSystemTrayIcon::supportsMessages () );
 }
 
 

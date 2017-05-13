@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_PRINTER )
   QPrintPreviewDialog * obj = (QPrintPreviewDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPrinter * ptr = obj->printer (  );
+    QPrinter * ptr = obj->printer ();
     _qt4xhb_createReturnClass ( ptr, "QPRINTER" );
   }
 }

@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_CORNERWIDGET )
   QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * ptr = obj->cornerWidget (  );
+    QWidget * ptr = obj->cornerWidget ();
     _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_HORIZONTALSCROLLBAR )
   QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QScrollBar * ptr = obj->horizontalScrollBar (  );
+    QScrollBar * ptr = obj->horizontalScrollBar ();
     _qt4xhb_createReturnClass ( ptr, "QSCROLLBAR" );
   }
 }
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_HORIZONTALSCROLLBARPOLICY )
   QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->horizontalScrollBarPolicy (  ) );
+    hb_retni( (int) obj->horizontalScrollBarPolicy () );
   }
 }
 
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_MAXIMUMVIEWPORTSIZE )
   QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->maximumViewportSize (  ) );
+    QSize * ptr = new QSize( obj->maximumViewportSize () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VERTICALSCROLLBAR )
   QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QScrollBar * ptr = obj->verticalScrollBar (  );
+    QScrollBar * ptr = obj->verticalScrollBar ();
     _qt4xhb_createReturnClass ( ptr, "QSCROLLBAR" );
   }
 }
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VERTICALSCROLLBARPOLICY )
   QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->verticalScrollBarPolicy (  ) );
+    hb_retni( (int) obj->verticalScrollBarPolicy () );
   }
 }
 
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VIEWPORT )
   QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * ptr = obj->viewport (  );
+    QWidget * ptr = obj->viewport ();
     _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_MINIMUMSIZEHINT )
   QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
+    QSize * ptr = new QSize( obj->minimumSizeHint () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SIZEHINT )
   QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }

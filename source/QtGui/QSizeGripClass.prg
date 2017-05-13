@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QSIZEGRIP_SIZEHINT )
   QSizeGrip * obj = (QSizeGrip *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }

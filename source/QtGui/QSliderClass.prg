@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QSLIDER_TICKINTERVAL )
   QSlider * obj = (QSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->tickInterval (  ) );
+    hb_retni( obj->tickInterval () );
   }
 }
 
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QSLIDER_TICKPOSITION )
   QSlider * obj = (QSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->tickPosition (  ) );
+    hb_retni( (int) obj->tickPosition () );
   }
 }
 
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QSLIDER_MINIMUMSIZEHINT )
   QSlider * obj = (QSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
+    QSize * ptr = new QSize( obj->minimumSizeHint () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QSLIDER_SIZEHINT )
   QSlider * obj = (QSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }

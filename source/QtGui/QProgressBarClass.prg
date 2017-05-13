@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_ALIGNMENT )
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->alignment (  ) );
+    hb_retni( (int) obj->alignment () );
   }
 }
 
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_FORMAT )
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->format (  );
+    QString str1 = obj->format ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_INVERTEDAPPEARANCE )
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->invertedAppearance (  ) );
+    hb_retl( obj->invertedAppearance () );
   }
 }
 
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_ISTEXTVISIBLE )
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isTextVisible (  ) );
+    hb_retl( obj->isTextVisible () );
   }
 }
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_MAXIMUM )
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->maximum (  ) );
+    hb_retni( obj->maximum () );
   }
 }
 
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_MINIMUM )
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->minimum (  ) );
+    hb_retni( obj->minimum () );
   }
 }
 
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_ORIENTATION )
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->orientation (  ) );
+    hb_retni( (int) obj->orientation () );
   }
 }
 
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_TEXT )
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->text (  );
+    QString str1 = obj->text ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_TEXTDIRECTION )
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->textDirection (  ) );
+    hb_retni( (int) obj->textDirection () );
   }
 }
 
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_VALUE )
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->value (  ) );
+    hb_retni( obj->value () );
   }
 }
 
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_MINIMUMSIZEHINT )
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
+    QSize * ptr = new QSize( obj->minimumSizeHint () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_SIZEHINT )
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_RESET )
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->reset (  );
+    obj->reset ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

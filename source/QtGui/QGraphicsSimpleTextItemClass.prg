@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_FONT )
   QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QFont * ptr = new QFont( obj->font (  ) );
+    QFont * ptr = new QFont( obj->font () );
     _qt4xhb_createReturnClass ( ptr, "QFONT", true );
   }
 }
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_TEXT )
   QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->text (  );
+    QString str1 = obj->text ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_BOUNDINGRECT )
   QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRectF * ptr = new QRectF( obj->boundingRect (  ) );
+    QRectF * ptr = new QRectF( obj->boundingRect () );
     _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_OPAQUEAREA )
   QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPainterPath * ptr = new QPainterPath( obj->opaqueArea (  ) );
+    QPainterPath * ptr = new QPainterPath( obj->opaqueArea () );
     _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_SHAPE )
   QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPainterPath * ptr = new QPainterPath( obj->shape (  ) );
+    QPainterPath * ptr = new QPainterPath( obj->shape () );
     _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_TYPE )
   QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 }
 

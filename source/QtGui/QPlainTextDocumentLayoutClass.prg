@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_CURSORWIDTH )
   QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->cursorWidth (  ) );
+    hb_retni( obj->cursorWidth () );
   }
 }
 
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_REQUESTUPDATE )
   QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->requestUpdate (  );
+    obj->requestUpdate ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_DOCUMENTSIZE )
   QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSizeF * ptr = new QSizeF( obj->documentSize (  ) );
+    QSizeF * ptr = new QSizeF( obj->documentSize () );
     _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_PAGECOUNT )
   QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->pageCount (  ) );
+    hb_retni( obj->pageCount () );
   }
 }
 

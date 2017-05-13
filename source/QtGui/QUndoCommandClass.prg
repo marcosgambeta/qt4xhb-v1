@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_CHILDCOUNT )
   QUndoCommand * obj = (QUndoCommand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->childCount (  ) );
+    hb_retni( obj->childCount () );
   }
 }
 
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_ID )
   QUndoCommand * obj = (QUndoCommand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->id (  ) );
+    hb_retni( obj->id () );
   }
 }
 
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_REDO )
   QUndoCommand * obj = (QUndoCommand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->redo (  );
+    obj->redo ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_TEXT )
   QUndoCommand * obj = (QUndoCommand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->text (  );
+    QString str1 = obj->text ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_UNDO )
   QUndoCommand * obj = (QUndoCommand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->undo (  );
+    obj->undo ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

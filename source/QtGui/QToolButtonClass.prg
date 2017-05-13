@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_ARROWTYPE )
 
   if( obj )
   {
-    hb_retni( (int) obj->arrowType (  ) );
+    hb_retni( (int) obj->arrowType () );
   }
 }
 
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_AUTORAISE )
 
   if( obj )
   {
-    hb_retl( obj->autoRaise (  ) );
+    hb_retl( obj->autoRaise () );
   }
 }
 
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_DEFAULTACTION )
 
   if( obj )
   {
-    QAction * ptr = obj->defaultAction (  );
+    QAction * ptr = obj->defaultAction ();
     _qt4xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_MENU )
 
   if( obj )
   {
-    QMenu * ptr = obj->menu (  );
+    QMenu * ptr = obj->menu ();
     _qt4xhb_createReturnClass ( ptr, "QMENU" );
   }
 }
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_POPUPMODE )
 
   if( obj )
   {
-    hb_retni( (int) obj->popupMode (  ) );
+    hb_retni( (int) obj->popupMode () );
   }
 }
 
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_TOOLBUTTONSTYLE )
 
   if( obj )
   {
-    hb_retni( (int) obj->toolButtonStyle (  ) );
+    hb_retni( (int) obj->toolButtonStyle () );
   }
 }
 
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_MINIMUMSIZEHINT )
 
   if( obj )
   {
-    QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
+    QSize * ptr = new QSize( obj->minimumSizeHint () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_SIZEHINT )
 
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_SHOWMENU )
 
   if( obj )
   {
-    obj->showMenu (  );
+    obj->showMenu ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );

@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_ALIGNMENT )
   QLayoutItem * obj = (QLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->alignment (  ) );
+    hb_retni( (int) obj->alignment () );
   }
 }
 
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_CONTROLTYPES )
   QLayoutItem * obj = (QLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->controlTypes (  ) );
+    hb_retni( (int) obj->controlTypes () );
   }
 }
 
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_EXPANDINGDIRECTIONS )
   QLayoutItem * obj = (QLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->expandingDirections (  ) );
+    hb_retni( (int) obj->expandingDirections () );
   }
 }
 
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_GEOMETRY )
   QLayoutItem * obj = (QLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRect * ptr = new QRect( obj->geometry (  ) );
+    QRect * ptr = new QRect( obj->geometry () );
     _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_HASHEIGHTFORWIDTH )
   QLayoutItem * obj = (QLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasHeightForWidth (  ) );
+    hb_retl( obj->hasHeightForWidth () );
   }
 }
 
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_INVALIDATE )
   QLayoutItem * obj = (QLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->invalidate (  );
+    obj->invalidate ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_ISEMPTY )
   QLayoutItem * obj = (QLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 }
 
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_LAYOUT )
   QLayoutItem * obj = (QLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QLayout * ptr = obj->layout (  );
+    QLayout * ptr = obj->layout ();
     _qt4xhb_createReturnClass ( ptr, "QLAYOUT" );
   }
 }
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_MAXIMUMSIZE )
   QLayoutItem * obj = (QLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->maximumSize (  ) );
+    QSize * ptr = new QSize( obj->maximumSize () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_MINIMUMSIZE )
   QLayoutItem * obj = (QLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->minimumSize (  ) );
+    QSize * ptr = new QSize( obj->minimumSize () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_SIZEHINT )
   QLayoutItem * obj = (QLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_SPACERITEM )
   QLayoutItem * obj = (QLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSpacerItem * ptr = obj->spacerItem (  );
+    QSpacerItem * ptr = obj->spacerItem ();
     _qt4xhb_createReturnClass ( ptr, "QSPACERITEM" );
   }
 }
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QLAYOUTITEM_WIDGET )
   QLayoutItem * obj = (QLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * ptr = obj->widget (  );
+    QWidget * ptr = obj->widget ();
     _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }

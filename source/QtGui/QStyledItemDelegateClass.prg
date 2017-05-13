@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_ITEMEDITORFACTORY )
   QStyledItemDelegate * obj = (QStyledItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QItemEditorFactory * ptr = obj->itemEditorFactory (  );
+    QItemEditorFactory * ptr = obj->itemEditorFactory ();
     _qt4xhb_createReturnClass ( ptr, "QITEMEDITORFACTORY" );
   }
 }

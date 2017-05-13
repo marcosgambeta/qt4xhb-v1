@@ -100,7 +100,7 @@ QStringList keys ()
 */
 HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_KEYS )
 {
-  QStringList strl = QInputContextFactory::keys (  );
+  QStringList strl = QInputContextFactory::keys ();
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;

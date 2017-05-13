@@ -60,7 +60,7 @@ QStringList keys ()
 */
 HB_FUNC_STATIC( QDECORATIONFACTORY_KEYS )
 {
-  QStringList strl = QDecorationFactory::keys (  );
+  QStringList strl = QDecorationFactory::keys ();
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;

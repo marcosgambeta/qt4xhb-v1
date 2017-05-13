@@ -64,7 +64,7 @@ QTextDocumentFragment ()
 HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW1 )
 {
   QTextDocumentFragment * o = NULL;
-  o = new QTextDocumentFragment (  );
+  o = new QTextDocumentFragment ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_ISEMPTY )
   QTextDocumentFragment * obj = (QTextDocumentFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 }
 
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_TOHTML2 )
   QTextDocumentFragment * obj = (QTextDocumentFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toHtml (  );
+    QString str1 = obj->toHtml ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_TOPLAINTEXT )
   QTextDocumentFragment * obj = (QTextDocumentFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toPlainText (  );
+    QString str1 = obj->toPlainText ();
     hb_retc( RQSTRING(str1) );
   }
 }

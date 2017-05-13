@@ -46,7 +46,7 @@ QDecorationDefault ()
 HB_FUNC_STATIC( QDECORATIONDEFAULT_NEW )
 {
   QDecorationDefault * o = NULL;
-  o = new QDecorationDefault (  );
+  o = new QDecorationDefault ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

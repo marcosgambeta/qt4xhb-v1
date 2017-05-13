@@ -82,7 +82,7 @@ QBrush ()
 HB_FUNC_STATIC( QBRUSH_NEW1 )
 {
   QBrush * o = NULL;
-  o = new QBrush (  );
+  o = new QBrush ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QBRUSH_COLOR )
   QBrush * obj = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QColor * ptr = &obj->color (  );
+    const QColor * ptr = &obj->color ();
     _qt4xhb_createReturnClass ( ptr, "QCOLOR" );
   }
 }
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QBRUSH_GRADIENT )
   QBrush * obj = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QGradient * ptr = obj->gradient (  );
+    const QGradient * ptr = obj->gradient ();
     _qt4xhb_createReturnClass ( ptr, "QGRADIENT" );
   }
 }
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QBRUSH_ISOPAQUE )
   QBrush * obj = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isOpaque (  ) );
+    hb_retl( obj->isOpaque () );
   }
 }
 
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QBRUSH_MATRIX )
   QBrush * obj = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QMatrix * ptr = &obj->matrix (  );
+    const QMatrix * ptr = &obj->matrix ();
     _qt4xhb_createReturnClass ( ptr, "QMATRIX" );
   }
 }
@@ -459,7 +459,7 @@ HB_FUNC_STATIC( QBRUSH_STYLE )
   QBrush * obj = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->style (  ) );
+    hb_retni( (int) obj->style () );
   }
 }
 
@@ -472,7 +472,7 @@ HB_FUNC_STATIC( QBRUSH_TEXTURE )
   QBrush * obj = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPixmap * ptr = new QPixmap( obj->texture (  ) );
+    QPixmap * ptr = new QPixmap( obj->texture () );
     _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QBRUSH_TEXTUREIMAGE )
   QBrush * obj = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QImage * ptr = new QImage( obj->textureImage (  ) );
+    QImage * ptr = new QImage( obj->textureImage () );
     _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );
   }
 }
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QBRUSH_TRANSFORM )
   QBrush * obj = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTransform * ptr = new QTransform( obj->transform (  ) );
+    QTransform * ptr = new QTransform( obj->transform () );
     _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );
   }
 }

@@ -115,7 +115,7 @@ QFont ()
 HB_FUNC_STATIC( QFONT_NEW1 )
 {
   QFont * o = NULL;
-  o = new QFont (  );
+  o = new QFont ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QFONT_BOLD )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->bold (  ) );
+    hb_retl( obj->bold () );
   }
 }
 
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QFONT_CAPITALIZATION )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->capitalization (  ) );
+    hb_retni( (int) obj->capitalization () );
   }
 }
 
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QFONT_DEFAULTFAMILY )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->defaultFamily (  );
+    QString str1 = obj->defaultFamily ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QFONT_EXACTMATCH )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->exactMatch (  ) );
+    hb_retl( obj->exactMatch () );
   }
 }
 
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QFONT_FAMILY )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->family (  );
+    QString str1 = obj->family ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QFONT_FIXEDPITCH )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->fixedPitch (  ) );
+    hb_retl( obj->fixedPitch () );
   }
 }
 
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QFONT_ITALIC )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->italic (  ) );
+    hb_retl( obj->italic () );
   }
 }
 
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QFONT_KERNING )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->kerning (  ) );
+    hb_retl( obj->kerning () );
   }
 }
 
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QFONT_KEY )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->key (  );
+    QString str1 = obj->key ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QFONT_LASTRESORTFAMILY )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->lastResortFamily (  );
+    QString str1 = obj->lastResortFamily ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QFONT_LASTRESORTFONT )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->lastResortFont (  );
+    QString str1 = obj->lastResortFont ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QFONT_LETTERSPACING )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->letterSpacing (  );
+    qreal r = obj->letterSpacing ();
     hb_retnd( r );
   }
 }
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QFONT_LETTERSPACINGTYPE )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->letterSpacingType (  ) );
+    hb_retni( (int) obj->letterSpacingType () );
   }
 }
 
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QFONT_OVERLINE )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->overline (  ) );
+    hb_retl( obj->overline () );
   }
 }
 
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QFONT_PIXELSIZE )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->pixelSize (  ) );
+    hb_retni( obj->pixelSize () );
   }
 }
 
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QFONT_POINTSIZE )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->pointSize (  ) );
+    hb_retni( obj->pointSize () );
   }
 }
 
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QFONT_POINTSIZEF )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->pointSizeF (  );
+    qreal r = obj->pointSizeF ();
     hb_retnd( r );
   }
 }
@@ -467,7 +467,7 @@ HB_FUNC_STATIC( QFONT_RAWMODE )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->rawMode (  ) );
+    hb_retl( obj->rawMode () );
   }
 }
 
@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QFONT_RAWNAME )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->rawName (  );
+    QString str1 = obj->rawName ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -813,7 +813,7 @@ HB_FUNC_STATIC( QFONT_STRETCH )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->stretch (  ) );
+    hb_retni( obj->stretch () );
   }
 }
 
@@ -826,7 +826,7 @@ HB_FUNC_STATIC( QFONT_STRIKEOUT )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->strikeOut (  ) );
+    hb_retl( obj->strikeOut () );
   }
 }
 
@@ -839,7 +839,7 @@ HB_FUNC_STATIC( QFONT_STYLE )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->style (  ) );
+    hb_retni( (int) obj->style () );
   }
 }
 
@@ -852,7 +852,7 @@ HB_FUNC_STATIC( QFONT_STYLEHINT )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->styleHint (  ) );
+    hb_retni( (int) obj->styleHint () );
   }
 }
 
@@ -865,7 +865,7 @@ HB_FUNC_STATIC( QFONT_STYLESTRATEGY )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->styleStrategy (  ) );
+    hb_retni( (int) obj->styleStrategy () );
   }
 }
 
@@ -878,7 +878,7 @@ HB_FUNC_STATIC( QFONT_TOSTRING )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toString (  );
+    QString str1 = obj->toString ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -892,7 +892,7 @@ HB_FUNC_STATIC( QFONT_UNDERLINE )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->underline (  ) );
+    hb_retl( obj->underline () );
   }
 }
 
@@ -905,7 +905,7 @@ HB_FUNC_STATIC( QFONT_WEIGHT )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->weight (  ) );
+    hb_retni( obj->weight () );
   }
 }
 
@@ -918,7 +918,7 @@ HB_FUNC_STATIC( QFONT_WORDSPACING )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->wordSpacing (  );
+    qreal r = obj->wordSpacing ();
     hb_retnd( r );
   }
 }
@@ -989,7 +989,7 @@ QStringList substitutions ()
 */
 HB_FUNC_STATIC( QFONT_SUBSTITUTIONS )
 {
-  QStringList strl = QFont::substitutions (  );
+  QStringList strl = QFont::substitutions ();
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;

@@ -131,7 +131,7 @@ QPainterPath ()
 HB_FUNC_STATIC( QPAINTERPATH_NEW1 )
 {
   QPainterPath * o = NULL;
-  o = new QPainterPath (  );
+  o = new QPainterPath ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -555,7 +555,7 @@ HB_FUNC_STATIC( QPAINTERPATH_BOUNDINGRECT )
   QPainterPath * obj = (QPainterPath *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRectF * ptr = new QRectF( obj->boundingRect (  ) );
+    QRectF * ptr = new QRectF( obj->boundingRect () );
     _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -569,7 +569,7 @@ HB_FUNC_STATIC( QPAINTERPATH_CLOSESUBPATH )
   QPainterPath * obj = (QPainterPath *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->closeSubpath (  );
+    obj->closeSubpath ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -660,7 +660,7 @@ HB_FUNC_STATIC( QPAINTERPATH_CONTROLPOINTRECT )
   QPainterPath * obj = (QPainterPath *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRectF * ptr = new QRectF( obj->controlPointRect (  ) );
+    QRectF * ptr = new QRectF( obj->controlPointRect () );
     _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -720,7 +720,7 @@ HB_FUNC_STATIC( QPAINTERPATH_CURRENTPOSITION )
   QPainterPath * obj = (QPainterPath *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->currentPosition (  ) );
+    QPointF * ptr = new QPointF( obj->currentPosition () );
     _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -735,7 +735,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ELEMENTCOUNT )
   QPainterPath * obj = (QPainterPath *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->elementCount (  ) );
+    hb_retni( obj->elementCount () );
   }
 }
 
@@ -748,7 +748,7 @@ HB_FUNC_STATIC( QPAINTERPATH_FILLRULE )
   QPainterPath * obj = (QPainterPath *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->fillRule (  ) );
+    hb_retni( (int) obj->fillRule () );
   }
 }
 
@@ -819,7 +819,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ISEMPTY )
   QPainterPath * obj = (QPainterPath *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 }
 
@@ -832,7 +832,7 @@ HB_FUNC_STATIC( QPAINTERPATH_LENGTH )
   QPainterPath * obj = (QPainterPath *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->length (  );
+    qreal r = obj->length ();
     hb_retnd( r );
   }
 }
@@ -1037,7 +1037,7 @@ HB_FUNC_STATIC( QPAINTERPATH_SIMPLIFIED )
   QPainterPath * obj = (QPainterPath *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPainterPath * ptr = new QPainterPath( obj->simplified (  ) );
+    QPainterPath * ptr = new QPainterPath( obj->simplified () );
     _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
@@ -1183,7 +1183,7 @@ HB_FUNC_STATIC( QPAINTERPATH_TOREVERSED )
   QPainterPath * obj = (QPainterPath *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPainterPath * ptr = new QPainterPath( obj->toReversed (  ) );
+    QPainterPath * ptr = new QPainterPath( obj->toReversed () );
     _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }

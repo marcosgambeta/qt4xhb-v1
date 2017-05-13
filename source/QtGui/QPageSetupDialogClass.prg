@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_OPTIONS )
   QPageSetupDialog * obj = (QPageSetupDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->options (  ) );
+    hb_retni( (int) obj->options () );
   }
 }
 
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_PRINTER )
   QPageSetupDialog * obj = (QPageSetupDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPrinter * ptr = obj->printer (  );
+    QPrinter * ptr = obj->printer ();
     _qt4xhb_createReturnClass ( ptr, "QPRINTER" );
   }
 }

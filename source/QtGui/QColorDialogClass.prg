@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_CURRENTCOLOR )
   QColorDialog * obj = (QColorDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QColor * ptr = new QColor( obj->currentColor (  ) );
+    QColor * ptr = new QColor( obj->currentColor () );
     _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_OPEN1 )
   QColorDialog * obj = (QColorDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->open (  );
+    obj->open ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_OPTIONS )
   QColorDialog * obj = (QColorDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->options (  ) );
+    hb_retni( (int) obj->options () );
   }
 }
 
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_SELECTEDCOLOR )
   QColorDialog * obj = (QColorDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QColor * ptr = new QColor( obj->selectedColor (  ) );
+    QColor * ptr = new QColor( obj->selectedColor () );
     _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }
@@ -296,7 +296,7 @@ int customCount ()
 */
 HB_FUNC_STATIC( QCOLORDIALOG_CUSTOMCOUNT )
 {
-  hb_retni( QColorDialog::customCount (  ) );
+  hb_retni( QColorDialog::customCount () );
 }
 
 

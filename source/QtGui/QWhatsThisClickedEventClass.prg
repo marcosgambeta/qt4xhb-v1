@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_HREF )
   QWhatsThisClickedEvent * obj = (QWhatsThisClickedEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->href (  );
+    QString str1 = obj->href ();
     hb_retc( RQSTRING(str1) );
   }
 }

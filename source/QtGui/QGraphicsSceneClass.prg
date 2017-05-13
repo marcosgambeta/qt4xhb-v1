@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ACTIVEPANEL )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QGraphicsItem * ptr = obj->activePanel (  );
+    QGraphicsItem * ptr = obj->activePanel ();
     _qt4xhb_createReturnClass ( ptr, "QGRAPHICSITEM" );
   }
 }
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ACTIVEWINDOW )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QGraphicsWidget * ptr = obj->activeWindow (  );
+    QGraphicsWidget * ptr = obj->activeWindow ();
     _qt4xhb_createReturnClass ( ptr, "QGRAPHICSWIDGET" );
   }
 }
@@ -516,7 +516,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_BACKGROUNDBRUSH )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QBrush * ptr = new QBrush( obj->backgroundBrush (  ) );
+    QBrush * ptr = new QBrush( obj->backgroundBrush () );
     _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
   }
 }
@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_BSPTREEDEPTH )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->bspTreeDepth (  ) );
+    hb_retni( obj->bspTreeDepth () );
   }
 }
 
@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_CLEARFOCUS )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clearFocus (  );
+    obj->clearFocus ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -639,7 +639,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_FOCUSITEM )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QGraphicsItem * ptr = obj->focusItem (  );
+    QGraphicsItem * ptr = obj->focusItem ();
     _qt4xhb_createReturnClass ( ptr, "QGRAPHICSITEM" );
   }
 }
@@ -653,7 +653,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_FONT )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QFont * ptr = new QFont( obj->font (  ) );
+    QFont * ptr = new QFont( obj->font () );
     _qt4xhb_createReturnClass ( ptr, "QFONT", true );
   }
 }
@@ -667,7 +667,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_FOREGROUNDBRUSH )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QBrush * ptr = new QBrush( obj->foregroundBrush (  ) );
+    QBrush * ptr = new QBrush( obj->foregroundBrush () );
     _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
   }
 }
@@ -681,7 +681,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_HASFOCUS )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasFocus (  ) );
+    hb_retl( obj->hasFocus () );
   }
 }
 
@@ -694,7 +694,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_HEIGHT )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->height (  );
+    qreal r = obj->height ();
     hb_retnd( r );
   }
 }
@@ -769,7 +769,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ISACTIVE )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isActive (  ) );
+    hb_retl( obj->isActive () );
   }
 }
 
@@ -782,7 +782,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ISSORTCACHEENABLED )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isSortCacheEnabled (  ) );
+    hb_retl( obj->isSortCacheEnabled () );
   }
 }
 
@@ -841,7 +841,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMINDEXMETHOD )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->itemIndexMethod (  ) );
+    hb_retni( (int) obj->itemIndexMethod () );
   }
 }
 
@@ -854,7 +854,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMS1 )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QList<QGraphicsItem *> list = obj->items (  );
+    QList<QGraphicsItem *> list = obj->items ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QGRAPHICSITEM" );
@@ -1222,7 +1222,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMSBOUNDINGRECT )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRectF * ptr = new QRectF( obj->itemsBoundingRect (  ) );
+    QRectF * ptr = new QRectF( obj->itemsBoundingRect () );
     _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -1236,7 +1236,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_MOUSEGRABBERITEM )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QGraphicsItem * ptr = obj->mouseGrabberItem (  );
+    QGraphicsItem * ptr = obj->mouseGrabberItem ();
     _qt4xhb_createReturnClass ( ptr, "QGRAPHICSITEM" );
   }
 }
@@ -1250,7 +1250,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_PALETTE )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPalette * ptr = new QPalette( obj->palette (  ) );
+    QPalette * ptr = new QPalette( obj->palette () );
     _qt4xhb_createReturnClass ( ptr, "QPALETTE", true );
   }
 }
@@ -1297,7 +1297,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SCENERECT )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRectF * ptr = new QRectF( obj->sceneRect (  ) );
+    QRectF * ptr = new QRectF( obj->sceneRect () );
     _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -1311,7 +1311,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SELECTEDITEMS )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QList<QGraphicsItem *> list = obj->selectedItems (  );
+    QList<QGraphicsItem *> list = obj->selectedItems ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QGRAPHICSITEM" );
@@ -1355,7 +1355,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SELECTIONAREA )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPainterPath * ptr = new QPainterPath( obj->selectionArea (  ) );
+    QPainterPath * ptr = new QPainterPath( obj->selectionArea () );
     _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
@@ -1670,7 +1670,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_STICKYFOCUS )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->stickyFocus (  ) );
+    hb_retl( obj->stickyFocus () );
   }
 }
 
@@ -1683,7 +1683,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_STYLE )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStyle * ptr = obj->style (  );
+    QStyle * ptr = obj->style ();
     _qt4xhb_createReturnClass ( ptr, "QSTYLE" );
   }
 }
@@ -1741,7 +1741,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_VIEWS )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QList<QGraphicsView *> list = obj->views (  );
+    QList<QGraphicsView *> list = obj->views ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QGRAPHICSVIEW" );
@@ -1785,7 +1785,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_WIDTH )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->width (  );
+    qreal r = obj->width ();
     hb_retnd( r );
   }
 }
@@ -1799,7 +1799,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADVANCE )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->advance (  );
+    obj->advance ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1813,7 +1813,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_CLEAR )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1827,7 +1827,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_CLEARSELECTION )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clearSelection (  );
+    obj->clearSelection ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

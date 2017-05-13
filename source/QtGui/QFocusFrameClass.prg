@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QFOCUSFRAME_WIDGET )
   QFocusFrame * obj = (QFocusFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * ptr = obj->widget (  );
+    QWidget * ptr = obj->widget ();
     _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }

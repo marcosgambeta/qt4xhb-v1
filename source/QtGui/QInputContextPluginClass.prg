@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_KEYS )
   QInputContextPlugin * obj = (QInputContextPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList strl = obj->keys (  );
+    QStringList strl = obj->keys ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

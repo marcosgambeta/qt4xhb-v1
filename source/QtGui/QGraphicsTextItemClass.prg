@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ADJUSTSIZE )
   QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->adjustSize (  );
+    obj->adjustSize ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DEFAULTTEXTCOLOR )
   QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QColor * ptr = new QColor( obj->defaultTextColor (  ) );
+    QColor * ptr = new QColor( obj->defaultTextColor () );
     _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DOCUMENT )
   QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTextDocument * ptr = obj->document (  );
+    QTextDocument * ptr = obj->document ();
     _qt4xhb_createReturnClass ( ptr, "QTEXTDOCUMENT" );
   }
 }
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_FONT )
   QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QFont * ptr = new QFont( obj->font (  ) );
+    QFont * ptr = new QFont( obj->font () );
     _qt4xhb_createReturnClass ( ptr, "QFONT", true );
   }
 }
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_OPENEXTERNALLINKS )
   QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->openExternalLinks (  ) );
+    hb_retl( obj->openExternalLinks () );
   }
 }
 
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TABCHANGESFOCUS )
   QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->tabChangesFocus (  ) );
+    hb_retl( obj->tabChangesFocus () );
   }
 }
 
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTCURSOR )
   QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTextCursor * ptr = new QTextCursor( obj->textCursor (  ) );
+    QTextCursor * ptr = new QTextCursor( obj->textCursor () );
     _qt4xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
   }
 }
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTINTERACTIONFLAGS )
   QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->textInteractionFlags (  ) );
+    hb_retni( (int) obj->textInteractionFlags () );
   }
 }
 
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTWIDTH )
   QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->textWidth (  );
+    qreal r = obj->textWidth ();
     hb_retnd( r );
   }
 }
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TOHTML )
   QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toHtml (  );
+    QString str1 = obj->toHtml ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TOPLAINTEXT )
   QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toPlainText (  );
+    QString str1 = obj->toPlainText ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -441,7 +441,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_BOUNDINGRECT )
   QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRectF * ptr = new QRectF( obj->boundingRect (  ) );
+    QRectF * ptr = new QRectF( obj->boundingRect () );
     _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -483,7 +483,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_OPAQUEAREA )
   QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPainterPath * ptr = new QPainterPath( obj->opaqueArea (  ) );
+    QPainterPath * ptr = new QPainterPath( obj->opaqueArea () );
     _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
@@ -514,7 +514,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SHAPE )
   QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPainterPath * ptr = new QPainterPath( obj->shape (  ) );
+    QPainterPath * ptr = new QPainterPath( obj->shape () );
     _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TYPE )
   QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 }
 

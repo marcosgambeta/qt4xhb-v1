@@ -41,7 +41,7 @@ QIconDragEvent ()
 HB_FUNC_STATIC( QICONDRAGEVENT_NEW )
 {
   QIconDragEvent * o = NULL;
-  o = new QIconDragEvent (  );
+  o = new QIconDragEvent ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

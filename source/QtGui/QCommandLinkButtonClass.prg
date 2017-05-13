@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_DESCRIPTION )
 
   if( obj )
   {
-    QString str1 = obj->description (  );
+    QString str1 = obj->description ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_ISFLAT )
 
   if( obj )
   {
-    hb_retl( obj->isFlat (  ) );
+    hb_retl( obj->isFlat () );
   }
 }
 

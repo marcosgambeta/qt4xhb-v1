@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_ASCENT )
   QTextInlineObject * obj = (QTextInlineObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->ascent (  );
+    qreal r = obj->ascent ();
     hb_retnd( r );
   }
 }
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_DESCENT )
   QTextInlineObject * obj = (QTextInlineObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->descent (  );
+    qreal r = obj->descent ();
     hb_retnd( r );
   }
 }
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_FORMAT )
   QTextInlineObject * obj = (QTextInlineObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTextFormat * ptr = new QTextFormat( obj->format (  ) );
+    QTextFormat * ptr = new QTextFormat( obj->format () );
     _qt4xhb_createReturnClass ( ptr, "QTEXTFORMAT" );
   }
 }
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_FORMATINDEX )
   QTextInlineObject * obj = (QTextInlineObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->formatIndex (  ) );
+    hb_retni( obj->formatIndex () );
   }
 }
 
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_HEIGHT )
   QTextInlineObject * obj = (QTextInlineObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->height (  );
+    qreal r = obj->height ();
     hb_retnd( r );
   }
 }
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_ISVALID )
   QTextInlineObject * obj = (QTextInlineObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_RECT )
   QTextInlineObject * obj = (QTextInlineObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRectF * ptr = new QRectF( obj->rect (  ) );
+    QRectF * ptr = new QRectF( obj->rect () );
     _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_TEXTDIRECTION )
   QTextInlineObject * obj = (QTextInlineObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->textDirection (  ) );
+    hb_retni( (int) obj->textDirection () );
   }
 }
 
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_TEXTPOSITION )
   QTextInlineObject * obj = (QTextInlineObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->textPosition (  ) );
+    hb_retni( obj->textPosition () );
   }
 }
 
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_WIDTH )
   QTextInlineObject * obj = (QTextInlineObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->width (  );
+    qreal r = obj->width ();
     hb_retnd( r );
   }
 }

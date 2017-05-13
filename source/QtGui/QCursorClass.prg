@@ -70,7 +70,7 @@ QCursor ()
 HB_FUNC_STATIC( QCURSOR_NEW1 )
 {
   QCursor * o = NULL;
-  o = new QCursor (  );
+  o = new QCursor ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QCURSOR_BITMAP )
   QCursor * obj = (QCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QBitmap * ptr = obj->bitmap (  );
+    const QBitmap * ptr = obj->bitmap ();
     _qt4xhb_createReturnClass ( ptr, "QBITMAP" );
   }
 }
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QCURSOR_HOTSPOT )
   QCursor * obj = (QCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPoint * ptr = new QPoint( obj->hotSpot (  ) );
+    QPoint * ptr = new QPoint( obj->hotSpot () );
     _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QCURSOR_MASK )
   QCursor * obj = (QCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QBitmap * ptr = obj->mask (  );
+    const QBitmap * ptr = obj->mask ();
     _qt4xhb_createReturnClass ( ptr, "QBITMAP" );
   }
 }
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QCURSOR_PIXMAP )
   QCursor * obj = (QCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPixmap * ptr = new QPixmap( obj->pixmap (  ) );
+    QPixmap * ptr = new QPixmap( obj->pixmap () );
     _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QCURSOR_SHAPE )
   QCursor * obj = (QCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->shape (  ) );
+    hb_retni( (int) obj->shape () );
   }
 }
 
@@ -269,7 +269,7 @@ QPoint pos ()
 */
 HB_FUNC_STATIC( QCURSOR_POS )
 {
-  QPoint * ptr = new QPoint( QCursor::pos (  ) );
+  QPoint * ptr = new QPoint( QCursor::pos () );
   _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
 }
 

@@ -64,7 +64,7 @@ QWindowsXPStyle ()
 HB_FUNC_STATIC( QWINDOWSXPSTYLE_NEW )
 {
   QWindowsXPStyle * o = NULL;
-  o = new QWindowsXPStyle (  );
+  o = new QWindowsXPStyle ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QWINDOWSXPSTYLE_STANDARDPALETTE )
   QWindowsXPStyle * obj = (QWindowsXPStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPalette * ptr = new QPalette( obj->standardPalette (  ) );
+    QPalette * ptr = new QPalette( obj->standardPalette () );
     _qt4xhb_createReturnClass ( ptr, "QPALETTE", true );
   }
 }

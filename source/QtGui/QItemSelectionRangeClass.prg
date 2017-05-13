@@ -74,7 +74,7 @@ QItemSelectionRange ()
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW1 )
 {
   QItemSelectionRange * o = NULL;
-  o = new QItemSelectionRange (  );
+  o = new QItemSelectionRange ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_BOTTOM )
   QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->bottom (  ) );
+    hb_retni( obj->bottom () );
   }
 }
 
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_BOTTOMRIGHT )
   QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QModelIndex * ptr = new QModelIndex( obj->bottomRight (  ) );
+    QModelIndex * ptr = new QModelIndex( obj->bottomRight () );
     _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_HEIGHT )
   QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->height (  ) );
+    hb_retni( obj->height () );
   }
 }
 
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_INDEXES )
   QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QModelIndexList list = obj->indexes (  );
+    QModelIndexList list = obj->indexes ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QMODELINDEX" );
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_ISEMPTY )
   QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 }
 
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_ISVALID )
   QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_LEFT )
   QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->left (  ) );
+    hb_retni( obj->left () );
   }
 }
 
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_MODEL )
   QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QAbstractItemModel * ptr = obj->model (  );
+    const QAbstractItemModel * ptr = obj->model ();
     _qt4xhb_createReturnClass ( ptr, "QABSTRACTITEMMODEL" );
   }
 }
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_PARENT )
   QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QModelIndex * ptr = new QModelIndex( obj->parent (  ) );
+    QModelIndex * ptr = new QModelIndex( obj->parent () );
     _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_RIGHT )
   QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->right (  ) );
+    hb_retni( obj->right () );
   }
 }
 
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_TOP )
   QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->top (  ) );
+    hb_retni( obj->top () );
   }
 }
 
@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_TOPLEFT )
   QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QModelIndex * ptr = new QModelIndex( obj->topLeft (  ) );
+    QModelIndex * ptr = new QModelIndex( obj->topLeft () );
     _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_WIDTH )
   QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->width (  ) );
+    hb_retni( obj->width () );
   }
 }
 

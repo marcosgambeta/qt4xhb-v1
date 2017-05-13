@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QDRAG_HOTSPOT )
   QDrag * obj = (QDrag *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPoint * ptr = new QPoint( obj->hotSpot (  ) );
+    QPoint * ptr = new QPoint( obj->hotSpot () );
     _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QDRAG_MIMEDATA )
   QDrag * obj = (QDrag *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QMimeData * ptr = obj->mimeData (  );
+    QMimeData * ptr = obj->mimeData ();
     _qt4xhb_createReturnClass ( ptr, "QMIMEDATA" );
   }
 }
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QDRAG_PIXMAP )
   QDrag * obj = (QDrag *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPixmap * ptr = new QPixmap( obj->pixmap (  ) );
+    QPixmap * ptr = new QPixmap( obj->pixmap () );
     _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QDRAG_SOURCE )
   QDrag * obj = (QDrag *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * ptr = obj->source (  );
+    QWidget * ptr = obj->source ();
     _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QDRAG_TARGET )
   QDrag * obj = (QDrag *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * ptr = obj->target (  );
+    QWidget * ptr = obj->target ();
     _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }

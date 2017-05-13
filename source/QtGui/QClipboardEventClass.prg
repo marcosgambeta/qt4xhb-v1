@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QCLIPBOARDEVENT_DATA )
   QClipboardEvent * obj = (QClipboardEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QEventPrivate * ptr = obj->data (  );
+    QEventPrivate * ptr = obj->data ();
     _qt4xhb_createReturnClass ( ptr, "QEVENTPRIVATE" );
   }
 }

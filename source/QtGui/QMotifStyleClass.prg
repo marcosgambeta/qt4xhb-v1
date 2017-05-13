@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QMOTIFSTYLE_USEHIGHLIGHTCOLORS )
   QMotifStyle * obj = (QMotifStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->useHighlightColors (  ) );
+    hb_retl( obj->useHighlightColors () );
   }
 }
 
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QMOTIFSTYLE_STANDARDPALETTE )
   QMotifStyle * obj = (QMotifStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPalette * ptr = new QPalette( obj->standardPalette (  ) );
+    QPalette * ptr = new QPalette( obj->standardPalette () );
     _qt4xhb_createReturnClass ( ptr, "QPALETTE", true );
   }
 }

@@ -67,7 +67,7 @@ QStaticText ()
 HB_FUNC_STATIC( QSTATICTEXT_NEW1 )
 {
   QStaticText * o = NULL;
-  o = new QStaticText (  );
+  o = new QStaticText ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QSTATICTEXT_PERFORMANCEHINT )
   QStaticText * obj = (QStaticText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->performanceHint (  ) );
+    hb_retni( (int) obj->performanceHint () );
   }
 }
 
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QSTATICTEXT_SIZE )
   QStaticText * obj = (QStaticText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSizeF * ptr = new QSizeF( obj->size (  ) );
+    QSizeF * ptr = new QSizeF( obj->size () );
     _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QSTATICTEXT_TEXT )
   QStaticText * obj = (QStaticText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->text (  );
+    QString str1 = obj->text ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QSTATICTEXT_TEXTFORMAT )
   QStaticText * obj = (QStaticText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->textFormat (  ) );
+    hb_retni( (int) obj->textFormat () );
   }
 }
 
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QSTATICTEXT_TEXTOPTION )
   QStaticText * obj = (QStaticText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTextOption * ptr = new QTextOption( obj->textOption (  ) );
+    QTextOption * ptr = new QTextOption( obj->textOption () );
     _qt4xhb_createReturnClass ( ptr, "QTEXTOPTION" );
   }
 }
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QSTATICTEXT_TEXTWIDTH )
   QStaticText * obj = (QStaticText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->textWidth (  );
+    qreal r = obj->textWidth ();
     hb_retnd( r );
   }
 }

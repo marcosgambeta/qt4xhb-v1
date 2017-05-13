@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_WIDGET )
   QGraphicsProxyWidget * obj = (QGraphicsProxyWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * ptr = obj->widget (  );
+    QWidget * ptr = obj->widget ();
     _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_TYPE )
   QGraphicsProxyWidget * obj = (QGraphicsProxyWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 }
 

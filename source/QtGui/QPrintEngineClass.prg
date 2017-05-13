@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QPRINTENGINE_ABORT )
   QPrintEngine * obj = (QPrintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->abort (  ) );
+    hb_retl( obj->abort () );
   }
 }
 
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QPRINTENGINE_NEWPAGE )
   QPrintEngine * obj = (QPrintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->newPage (  ) );
+    hb_retl( obj->newPage () );
   }
 }
 
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QPRINTENGINE_PRINTERSTATE )
   QPrintEngine * obj = (QPrintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->printerState (  ) );
+    hb_retni( (int) obj->printerState () );
   }
 }
 

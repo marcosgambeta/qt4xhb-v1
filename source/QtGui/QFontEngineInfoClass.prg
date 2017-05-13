@@ -60,7 +60,7 @@ QFontEngineInfo ()
 HB_FUNC_STATIC( QFONTENGINEINFO_NEW1 )
 {
   QFontEngineInfo * o = NULL;
-  o = new QFontEngineInfo (  );
+  o = new QFontEngineInfo ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QFONTENGINEINFO_FAMILY )
   QFontEngineInfo * obj = (QFontEngineInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->family (  );
+    QString str1 = obj->family ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QFONTENGINEINFO_PIXELSIZE )
   QFontEngineInfo * obj = (QFontEngineInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->pixelSize (  );
+    qreal r = obj->pixelSize ();
     hb_retnd( r );
   }
 }
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QFONTENGINEINFO_STYLE )
   QFontEngineInfo * obj = (QFontEngineInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->style (  ) );
+    hb_retni( (int) obj->style () );
   }
 }
 
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QFONTENGINEINFO_WEIGHT )
   QFontEngineInfo * obj = (QFontEngineInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->weight (  ) );
+    hb_retni( obj->weight () );
   }
 }
 
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QFONTENGINEINFO_WRITINGSYSTEMS )
   QFontEngineInfo * obj = (QFontEngineInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QList<QFontDatabase::WritingSystem> list = obj->writingSystems (  );
+    QList<QFontDatabase::WritingSystem> list = obj->writingSystems ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

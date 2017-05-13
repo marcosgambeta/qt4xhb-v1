@@ -41,7 +41,7 @@ QCloseEvent ()
 HB_FUNC_STATIC( QCLOSEEVENT_NEW )
 {
   QCloseEvent * o = NULL;
-  o = new QCloseEvent (  );
+  o = new QCloseEvent ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

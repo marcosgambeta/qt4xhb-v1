@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_COLOR )
   QGraphicsColorizeEffect * obj = (QGraphicsColorizeEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QColor * ptr = new QColor( obj->color (  ) );
+    QColor * ptr = new QColor( obj->color () );
     _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_STRENGTH )
   QGraphicsColorizeEffect * obj = (QGraphicsColorizeEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->strength (  );
+    qreal r = obj->strength ();
     hb_retnd( r );
   }
 }

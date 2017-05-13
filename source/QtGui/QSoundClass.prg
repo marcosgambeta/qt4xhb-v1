@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QSOUND_FILENAME )
   QSound * obj = (QSound *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->fileName (  );
+    QString str1 = obj->fileName ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QSOUND_ISFINISHED )
   QSound * obj = (QSound *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isFinished (  ) );
+    hb_retl( obj->isFinished () );
   }
 }
 
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QSOUND_LOOPS )
   QSound * obj = (QSound *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->loops (  ) );
+    hb_retni( obj->loops () );
   }
 }
 
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QSOUND_LOOPSREMAINING )
   QSound * obj = (QSound *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->loopsRemaining (  ) );
+    hb_retni( obj->loopsRemaining () );
   }
 }
 
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QSOUND_PLAY1 )
   QSound * obj = (QSound *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->play (  );
+    obj->play ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QSOUND_STOP )
   QSound * obj = (QSound *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->stop (  );
+    obj->stop ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -175,7 +175,7 @@ bool isAvailable ()
 */
 HB_FUNC_STATIC( QSOUND_ISAVAILABLE )
 {
-  hb_retl( QSound::isAvailable (  ) );
+  hb_retl( QSound::isAvailable () );
 }
 
 

@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_OPACITY )
   QGraphicsOpacityEffect * obj = (QGraphicsOpacityEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->opacity (  );
+    qreal r = obj->opacity ();
     hb_retnd( r );
   }
 }
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_OPACITYMASK )
   QGraphicsOpacityEffect * obj = (QGraphicsOpacityEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QBrush * ptr = new QBrush( obj->opacityMask (  ) );
+    QBrush * ptr = new QBrush( obj->opacityMask () );
     _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
   }
 }

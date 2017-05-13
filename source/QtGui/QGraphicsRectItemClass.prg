@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QGRAPHICSRECTITEM_RECT )
   QGraphicsRectItem * obj = (QGraphicsRectItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRectF * ptr = new QRectF( obj->rect (  ) );
+    QRectF * ptr = new QRectF( obj->rect () );
     _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QGRAPHICSRECTITEM_BOUNDINGRECT )
   QGraphicsRectItem * obj = (QGraphicsRectItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRectF * ptr = new QRectF( obj->boundingRect (  ) );
+    QRectF * ptr = new QRectF( obj->boundingRect () );
     _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QGRAPHICSRECTITEM_OPAQUEAREA )
   QGraphicsRectItem * obj = (QGraphicsRectItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPainterPath * ptr = new QPainterPath( obj->opaqueArea (  ) );
+    QPainterPath * ptr = new QPainterPath( obj->opaqueArea () );
     _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QGRAPHICSRECTITEM_SHAPE )
   QGraphicsRectItem * obj = (QGraphicsRectItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPainterPath * ptr = new QPainterPath( obj->shape (  ) );
+    QPainterPath * ptr = new QPainterPath( obj->shape () );
     _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QGRAPHICSRECTITEM_TYPE )
   QGraphicsRectItem * obj = (QGraphicsRectItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 }
 

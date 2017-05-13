@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QSHORTCUTEVENT_KEY )
   QShortcutEvent * obj = (QShortcutEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QKeySequence * ptr = &obj->key (  );
+    const QKeySequence * ptr = &obj->key ();
     _qt4xhb_createReturnClass ( ptr, "QKEYSEQUENCE" );
   }
 }
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QSHORTCUTEVENT_SHORTCUTID )
   QShortcutEvent * obj = (QShortcutEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->shortcutId (  ) );
+    hb_retni( obj->shortcutId () );
   }
 }
 
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QSHORTCUTEVENT_ISAMBIGUOUS )
   QShortcutEvent * obj = (QShortcutEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isAmbiguous (  ) );
+    hb_retl( obj->isAmbiguous () );
   }
 }
 

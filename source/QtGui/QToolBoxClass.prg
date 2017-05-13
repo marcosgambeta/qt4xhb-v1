@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QTOOLBOX_COUNT )
   QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->count (  ) );
+    hb_retni( obj->count () );
   }
 }
 
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QTOOLBOX_CURRENTINDEX )
   QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->currentIndex (  ) );
+    hb_retni( obj->currentIndex () );
   }
 }
 
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QTOOLBOX_CURRENTWIDGET )
   QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * ptr = obj->currentWidget (  );
+    QWidget * ptr = obj->currentWidget ();
     _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }

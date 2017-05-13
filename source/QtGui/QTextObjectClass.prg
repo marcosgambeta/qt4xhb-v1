@@ -51,7 +51,7 @@ HB_FUNC_STATIC( QTEXTOBJECT_DOCUMENT )
   QTextObject * obj = (QTextObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTextDocument * ptr = obj->document (  );
+    QTextDocument * ptr = obj->document ();
     _qt4xhb_createReturnClass ( ptr, "QTEXTDOCUMENT" );
   }
 }
@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QTEXTOBJECT_FORMAT )
   QTextObject * obj = (QTextObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTextFormat * ptr = new QTextFormat( obj->format (  ) );
+    QTextFormat * ptr = new QTextFormat( obj->format () );
     _qt4xhb_createReturnClass ( ptr, "QTEXTFORMAT" );
   }
 }
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QTEXTOBJECT_FORMATINDEX )
   QTextObject * obj = (QTextObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->formatIndex (  ) );
+    hb_retni( obj->formatIndex () );
   }
 }
 
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QTEXTOBJECT_OBJECTINDEX )
   QTextObject * obj = (QTextObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->objectIndex (  ) );
+    hb_retni( obj->objectIndex () );
   }
 }
 

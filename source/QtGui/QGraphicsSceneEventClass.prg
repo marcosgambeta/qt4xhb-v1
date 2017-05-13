@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEEVENT_WIDGET )
   QGraphicsSceneEvent * obj = (QGraphicsSceneEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * ptr = obj->widget (  );
+    QWidget * ptr = obj->widget ();
     _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }

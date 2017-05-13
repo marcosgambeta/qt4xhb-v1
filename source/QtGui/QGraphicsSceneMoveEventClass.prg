@@ -46,7 +46,7 @@ QGraphicsSceneMoveEvent ()
 HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_NEW )
 {
   QGraphicsSceneMoveEvent * o = NULL;
-  o = new QGraphicsSceneMoveEvent (  );
+  o = new QGraphicsSceneMoveEvent ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_NEWPOS )
   QGraphicsSceneMoveEvent * obj = (QGraphicsSceneMoveEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->newPos (  ) );
+    QPointF * ptr = new QPointF( obj->newPos () );
     _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_OLDPOS )
   QGraphicsSceneMoveEvent * obj = (QGraphicsSceneMoveEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->oldPos (  ) );
+    QPointF * ptr = new QPointF( obj->oldPos () );
     _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }

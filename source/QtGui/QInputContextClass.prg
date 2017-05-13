@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_ACTIONS )
   QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QList<QAction *> list = obj->actions (  );
+    QList<QAction *> list = obj->actions ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QACTION" );
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_FOCUSWIDGET )
   QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * ptr = obj->focusWidget (  );
+    QWidget * ptr = obj->focusWidget ();
     _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_FONT )
   QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QFont * ptr = new QFont( obj->font (  ) );
+    QFont * ptr = new QFont( obj->font () );
     _qt4xhb_createReturnClass ( ptr, "QFONT", true );
   }
 }
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_IDENTIFIERNAME )
   QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->identifierName (  );
+    QString str1 = obj->identifierName ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_ISCOMPOSING )
   QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isComposing (  ) );
+    hb_retl( obj->isComposing () );
   }
 }
 
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_LANGUAGE )
   QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->language (  );
+    QString str1 = obj->language ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_RESET )
   QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->reset (  );
+    obj->reset ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_UPDATE )
   QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->update (  );
+    obj->update ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

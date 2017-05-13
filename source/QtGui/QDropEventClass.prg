@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QDROPEVENT_ACCEPTPROPOSEDACTION )
   QDropEvent * obj = (QDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->acceptProposedAction (  );
+    obj->acceptProposedAction ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QDROPEVENT_DROPACTION )
   QDropEvent * obj = (QDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->dropAction (  ) );
+    hb_retni( (int) obj->dropAction () );
   }
 }
 
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QDROPEVENT_KEYBOARDMODIFIERS )
   QDropEvent * obj = (QDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->keyboardModifiers (  ) );
+    hb_retni( (int) obj->keyboardModifiers () );
   }
 }
 
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QDROPEVENT_MIMEDATA )
   QDropEvent * obj = (QDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QMimeData * ptr = obj->mimeData (  );
+    const QMimeData * ptr = obj->mimeData ();
     _qt4xhb_createReturnClass ( ptr, "QMIMEDATA" );
   }
 }
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QDROPEVENT_MOUSEBUTTONS )
   QDropEvent * obj = (QDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->mouseButtons (  ) );
+    hb_retni( (int) obj->mouseButtons () );
   }
 }
 
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QDROPEVENT_POS )
   QDropEvent * obj = (QDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QPoint * ptr = &obj->pos (  );
+    const QPoint * ptr = &obj->pos ();
     _qt4xhb_createReturnClass ( ptr, "QPOINT" );
   }
 }
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QDROPEVENT_POSSIBLEACTIONS )
   QDropEvent * obj = (QDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->possibleActions (  ) );
+    hb_retni( (int) obj->possibleActions () );
   }
 }
 
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QDROPEVENT_PROPOSEDACTION )
   QDropEvent * obj = (QDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->proposedAction (  ) );
+    hb_retni( (int) obj->proposedAction () );
   }
 }
 
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QDROPEVENT_SOURCE )
   QDropEvent * obj = (QDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * ptr = obj->source (  );
+    QWidget * ptr = obj->source ();
     _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }

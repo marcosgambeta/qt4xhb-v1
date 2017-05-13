@@ -78,7 +78,7 @@ QPolygon ()
 HB_FUNC_STATIC( QPOLYGON_NEW1 )
 {
   QPolygon * o = NULL;
-  o = new QPolygon (  );
+  o = new QPolygon ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QPOLYGON_BOUNDINGRECT )
   QPolygon * obj = (QPolygon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRect * ptr = new QRect( obj->boundingRect (  ) );
+    QRect * ptr = new QRect( obj->boundingRect () );
     _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }

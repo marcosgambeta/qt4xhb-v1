@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QWORKSPACE_ACTIVEWINDOW )
   QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * ptr = obj->activeWindow (  );
+    QWidget * ptr = obj->activeWindow ();
     _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QWORKSPACE_BACKGROUND )
   QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QBrush * ptr = new QBrush( obj->background (  ) );
+    QBrush * ptr = new QBrush( obj->background () );
     _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
   }
 }
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QWORKSPACE_SCROLLBARSENABLED )
   QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->scrollBarsEnabled (  ) );
+    hb_retl( obj->scrollBarsEnabled () );
   }
 }
 
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QWORKSPACE_SIZEHINT )
   QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QWORKSPACE_ACTIVATENEXTWINDOW )
   QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->activateNextWindow (  );
+    obj->activateNextWindow ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QWORKSPACE_ACTIVATEPREVIOUSWINDOW )
   QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->activatePreviousWindow (  );
+    obj->activatePreviousWindow ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QWORKSPACE_ARRANGEICONS )
   QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->arrangeIcons (  );
+    obj->arrangeIcons ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QWORKSPACE_CASCADE )
   QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->cascade (  );
+    obj->cascade ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QWORKSPACE_CLOSEACTIVEWINDOW )
   QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->closeActiveWindow (  );
+    obj->closeActiveWindow ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QWORKSPACE_CLOSEALLWINDOWS )
   QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->closeAllWindows (  );
+    obj->closeAllWindows ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QWORKSPACE_TILE )
   QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->tile (  );
+    obj->tile ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_FILLRULE )
   QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->fillRule (  ) );
+    hb_retni( (int) obj->fillRule () );
   }
 }
 
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_POLYGON )
   QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPolygonF * ptr = new QPolygonF( obj->polygon (  ) );
+    QPolygonF * ptr = new QPolygonF( obj->polygon () );
     _qt4xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_BOUNDINGRECT )
   QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRectF * ptr = new QRectF( obj->boundingRect (  ) );
+    QRectF * ptr = new QRectF( obj->boundingRect () );
     _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_OPAQUEAREA )
   QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPainterPath * ptr = new QPainterPath( obj->opaqueArea (  ) );
+    QPainterPath * ptr = new QPainterPath( obj->opaqueArea () );
     _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_SHAPE )
   QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPainterPath * ptr = new QPainterPath( obj->shape (  ) );
+    QPainterPath * ptr = new QPainterPath( obj->shape () );
     _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_TYPE )
   QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 }
 

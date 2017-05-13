@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_ALIGNMENT )
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->alignment (  ) );
+    hb_retni( (int) obj->alignment () );
   }
 }
 
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_BUTTONSYMBOLS )
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->buttonSymbols (  ) );
+    hb_retni( (int) obj->buttonSymbols () );
   }
 }
 
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_CORRECTIONMODE )
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->correctionMode (  ) );
+    hb_retni( (int) obj->correctionMode () );
   }
 }
 
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_HASACCEPTABLEINPUT )
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasAcceptableInput (  ) );
+    hb_retl( obj->hasAcceptableInput () );
   }
 }
 
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_HASFRAME )
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasFrame (  ) );
+    hb_retl( obj->hasFrame () );
   }
 }
 
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_INTERPRETTEXT )
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->interpretText (  );
+    obj->interpretText ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_ISACCELERATED )
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isAccelerated (  ) );
+    hb_retl( obj->isAccelerated () );
   }
 }
 
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_ISREADONLY )
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isReadOnly (  ) );
+    hb_retl( obj->isReadOnly () );
   }
 }
 
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_KEYBOARDTRACKING )
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->keyboardTracking (  ) );
+    hb_retl( obj->keyboardTracking () );
   }
 }
 
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SPECIALVALUETEXT )
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->specialValueText (  );
+    QString str1 = obj->specialValueText ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_TEXT )
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->text (  );
+    QString str1 = obj->text ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -428,7 +428,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_WRAPPING )
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->wrapping (  ) );
+    hb_retl( obj->wrapping () );
   }
 }
 
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_MINIMUMSIZEHINT )
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
+    QSize * ptr = new QSize( obj->minimumSizeHint () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -484,7 +484,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SIZEHINT )
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_CLEAR )
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -512,7 +512,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SELECTALL )
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->selectAll (  );
+    obj->selectAll ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -526,7 +526,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_STEPDOWN )
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->stepDown (  );
+    obj->stepDown ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -540,7 +540,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_STEPUP )
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->stepUp (  );
+    obj->stepUp ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

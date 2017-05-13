@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QGESTURE_GESTURECANCELPOLICY )
   QGesture * obj = (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->gestureCancelPolicy (  ) );
+    hb_retni( (int) obj->gestureCancelPolicy () );
   }
 }
 
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QGESTURE_GESTURETYPE )
   QGesture * obj = (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->gestureType (  ) );
+    hb_retni( (int) obj->gestureType () );
   }
 }
 
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QGESTURE_HASHOTSPOT )
   QGesture * obj = (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasHotSpot (  ) );
+    hb_retl( obj->hasHotSpot () );
   }
 }
 
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QGESTURE_HOTSPOT )
   QGesture * obj = (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->hotSpot (  ) );
+    QPointF * ptr = new QPointF( obj->hotSpot () );
     _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QGESTURE_STATE )
   QGesture * obj = (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->state (  ) );
+    hb_retni( (int) obj->state () );
   }
 }
 
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QGESTURE_UNSETHOTSPOT )
   QGesture * obj = (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->unsetHotSpot (  );
+    obj->unsetHotSpot ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

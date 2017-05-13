@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_CLEAR )
   QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_ITEM )
   QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QGraphicsItem * ptr = obj->item (  );
+    QGraphicsItem * ptr = obj->item ();
     _qt4xhb_createReturnClass ( ptr, "QGRAPHICSITEM" );
   }
 }
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_TIMELINE )
   QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTimeLine * ptr = obj->timeLine (  );
+    QTimeLine * ptr = obj->timeLine ();
     _qt4xhb_createReturnClass ( ptr, "QTIMELINE" );
   }
 }

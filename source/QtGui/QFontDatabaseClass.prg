@@ -79,7 +79,7 @@ QFontDatabase ()
 HB_FUNC_STATIC( QFONTDATABASE_NEW )
 {
   QFontDatabase * o = NULL;
-  o = new QFontDatabase (  );
+  o = new QFontDatabase ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMS1 )
   QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QList<QFontDatabase::WritingSystem> list = obj->writingSystems (  );
+    QList<QFontDatabase::WritingSystem> list = obj->writingSystems ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -435,7 +435,7 @@ bool removeAllApplicationFonts ()
 */
 HB_FUNC_STATIC( QFONTDATABASE_REMOVEALLAPPLICATIONFONTS )
 {
-  hb_retl( QFontDatabase::removeAllApplicationFonts (  ) );
+  hb_retl( QFontDatabase::removeAllApplicationFonts () );
 }
 
 
@@ -454,7 +454,7 @@ QList<int> standardSizes ()
 */
 HB_FUNC_STATIC( QFONTDATABASE_STANDARDSIZES )
 {
-  QList<int> list = QFontDatabase::standardSizes (  );
+  QList<int> list = QFontDatabase::standardSizes ();
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;
@@ -473,7 +473,7 @@ bool supportsThreadedFontRendering ()
 */
 HB_FUNC_STATIC( QFONTDATABASE_SUPPORTSTHREADEDFONTRENDERING )
 {
-  hb_retl( QFontDatabase::supportsThreadedFontRendering (  ) );
+  hb_retl( QFontDatabase::supportsThreadedFontRendering () );
 }
 
 

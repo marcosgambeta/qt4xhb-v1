@@ -51,7 +51,7 @@ QSupportedWritingSystems ()
 HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_NEW1 )
 {
   QSupportedWritingSystems * o = NULL;
-  o = new QSupportedWritingSystems (  );
+  o = new QSupportedWritingSystems ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

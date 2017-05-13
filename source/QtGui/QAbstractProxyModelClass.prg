@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SOURCEMODEL )
   QAbstractProxyModel * obj = (QAbstractProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QAbstractItemModel * ptr = obj->sourceModel (  );
+    QAbstractItemModel * ptr = obj->sourceModel ();
     _qt4xhb_createReturnClass ( ptr, "QABSTRACTITEMMODEL" );
   }
 }
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MIMETYPES )
   QAbstractProxyModel * obj = (QAbstractProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList strl = obj->mimeTypes (  );
+    QStringList strl = obj->mimeTypes ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_REVERT )
   QAbstractProxyModel * obj = (QAbstractProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->revert (  );
+    obj->revert ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SUBMIT )
   QAbstractProxyModel * obj = (QAbstractProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->submit (  ) );
+    hb_retl( obj->submit () );
   }
 }
 
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SUPPORTEDDROPACTIONS )
   QAbstractProxyModel * obj = (QAbstractProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->supportedDropActions (  ) );
+    hb_retni( (int) obj->supportedDropActions () );
   }
 }
 

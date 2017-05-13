@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_BUTTONS )
   QGraphicsSceneWheelEvent * obj = (QGraphicsSceneWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->buttons (  ) );
+    hb_retni( (int) obj->buttons () );
   }
 }
 
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_DELTA )
   QGraphicsSceneWheelEvent * obj = (QGraphicsSceneWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->delta (  ) );
+    hb_retni( obj->delta () );
   }
 }
 
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_MODIFIERS )
   QGraphicsSceneWheelEvent * obj = (QGraphicsSceneWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->modifiers (  ) );
+    hb_retni( (int) obj->modifiers () );
   }
 }
 
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_ORIENTATION )
   QGraphicsSceneWheelEvent * obj = (QGraphicsSceneWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->orientation (  ) );
+    hb_retni( (int) obj->orientation () );
   }
 }
 
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_POS )
   QGraphicsSceneWheelEvent * obj = (QGraphicsSceneWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->pos (  ) );
+    QPointF * ptr = new QPointF( obj->pos () );
     _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_SCENEPOS )
   QGraphicsSceneWheelEvent * obj = (QGraphicsSceneWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->scenePos (  ) );
+    QPointF * ptr = new QPointF( obj->scenePos () );
     _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_SCREENPOS )
   QGraphicsSceneWheelEvent * obj = (QGraphicsSceneWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPoint * ptr = new QPoint( obj->screenPos (  ) );
+    QPoint * ptr = new QPoint( obj->screenPos () );
     _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }

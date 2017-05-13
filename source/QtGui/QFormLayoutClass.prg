@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_FIELDGROWTHPOLICY )
   QFormLayout * obj = (QFormLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->fieldGrowthPolicy (  ) );
+    hb_retni( (int) obj->fieldGrowthPolicy () );
   }
 }
 
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_FORMALIGNMENT )
   QFormLayout * obj = (QFormLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->formAlignment (  ) );
+    hb_retni( (int) obj->formAlignment () );
   }
 }
 
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_HORIZONTALSPACING )
   QFormLayout * obj = (QFormLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->horizontalSpacing (  ) );
+    hb_retni( obj->horizontalSpacing () );
   }
 }
 
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_LABELALIGNMENT )
   QFormLayout * obj = (QFormLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->labelAlignment (  ) );
+    hb_retni( (int) obj->labelAlignment () );
   }
 }
 
@@ -553,7 +553,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_ROWCOUNT )
   QFormLayout * obj = (QFormLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->rowCount (  ) );
+    hb_retni( obj->rowCount () );
   }
 }
 
@@ -566,7 +566,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_ROWWRAPPOLICY )
   QFormLayout * obj = (QFormLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->rowWrapPolicy (  ) );
+    hb_retni( (int) obj->rowWrapPolicy () );
   }
 }
 
@@ -735,7 +735,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SPACING )
   QFormLayout * obj = (QFormLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->spacing (  ) );
+    hb_retni( obj->spacing () );
   }
 }
 
@@ -748,7 +748,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_VERTICALSPACING )
   QFormLayout * obj = (QFormLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->verticalSpacing (  ) );
+    hb_retni( obj->verticalSpacing () );
   }
 }
 
@@ -776,7 +776,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_COUNT )
   QFormLayout * obj = (QFormLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->count (  ) );
+    hb_retni( obj->count () );
   }
 }
 
@@ -789,7 +789,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_EXPANDINGDIRECTIONS )
   QFormLayout * obj = (QFormLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->expandingDirections (  ) );
+    hb_retni( (int) obj->expandingDirections () );
   }
 }
 
@@ -802,7 +802,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_HASHEIGHTFORWIDTH )
   QFormLayout * obj = (QFormLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasHeightForWidth (  ) );
+    hb_retl( obj->hasHeightForWidth () );
   }
 }
 
@@ -829,7 +829,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_INVALIDATE )
   QFormLayout * obj = (QFormLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->invalidate (  );
+    obj->invalidate ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -858,7 +858,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_MINIMUMSIZE )
   QFormLayout * obj = (QFormLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->minimumSize (  ) );
+    QSize * ptr = new QSize( obj->minimumSize () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -887,7 +887,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SIZEHINT )
   QFormLayout * obj = (QFormLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }

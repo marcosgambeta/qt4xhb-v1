@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ORIGIN )
   QGraphicsScale * obj = (QGraphicsScale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVector3D * ptr = new QVector3D( obj->origin (  ) );
+    QVector3D * ptr = new QVector3D( obj->origin () );
     _qt4xhb_createReturnClass ( ptr, "QVECTOR3D" );
   }
 }
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_XSCALE )
   QGraphicsScale * obj = (QGraphicsScale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->xScale (  );
+    qreal r = obj->xScale ();
     hb_retnd( r );
   }
 }
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_YSCALE )
   QGraphicsScale * obj = (QGraphicsScale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->yScale (  );
+    qreal r = obj->yScale ();
     hb_retnd( r );
   }
 }
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ZSCALE )
   QGraphicsScale * obj = (QGraphicsScale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->zScale (  );
+    qreal r = obj->zScale ();
     hb_retnd( r );
   }
 }

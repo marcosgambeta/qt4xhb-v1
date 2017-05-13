@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_PIXMAP )
   QSplashScreen * obj = (QSplashScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPixmap * ptr = new QPixmap( obj->pixmap (  ) );
+    QPixmap * ptr = new QPixmap( obj->pixmap () );
     _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_REPAINT )
   QSplashScreen * obj = (QSplashScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->repaint (  );
+    obj->repaint ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_CLEARMESSAGE )
   QSplashScreen * obj = (QSplashScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clearMessage (  );
+    obj->clearMessage ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

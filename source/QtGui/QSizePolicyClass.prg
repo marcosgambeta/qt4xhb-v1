@@ -67,7 +67,7 @@ QSizePolicy ()
 HB_FUNC_STATIC( QSIZEPOLICY_NEW1 )
 {
   QSizePolicy * o = NULL;
-  o = new QSizePolicy (  );
+  o = new QSizePolicy ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_CONTROLTYPE )
   QSizePolicy * obj = (QSizePolicy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->controlType (  ) );
+    hb_retni( (int) obj->controlType () );
   }
 }
 
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_EXPANDINGDIRECTIONS )
   QSizePolicy * obj = (QSizePolicy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->expandingDirections (  ) );
+    hb_retni( (int) obj->expandingDirections () );
   }
 }
 
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_HASHEIGHTFORWIDTH )
   QSizePolicy * obj = (QSizePolicy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasHeightForWidth (  ) );
+    hb_retl( obj->hasHeightForWidth () );
   }
 }
 
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_HASWIDTHFORHEIGHT )
   QSizePolicy * obj = (QSizePolicy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasWidthForHeight (  ) );
+    hb_retl( obj->hasWidthForHeight () );
   }
 }
 
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_HORIZONTALPOLICY )
   QSizePolicy * obj = (QSizePolicy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->horizontalPolicy (  ) );
+    hb_retni( (int) obj->horizontalPolicy () );
   }
 }
 
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_HORIZONTALSTRETCH )
   QSizePolicy * obj = (QSizePolicy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->horizontalStretch (  ) );
+    hb_retni( obj->horizontalStretch () );
   }
 }
 
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_TRANSPOSE )
   QSizePolicy * obj = (QSizePolicy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->transpose (  );
+    obj->transpose ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_VERTICALPOLICY )
   QSizePolicy * obj = (QSizePolicy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->verticalPolicy (  ) );
+    hb_retni( (int) obj->verticalPolicy () );
   }
 }
 
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_VERTICALSTRETCH )
   QSizePolicy * obj = (QSizePolicy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->verticalStretch (  ) );
+    hb_retni( obj->verticalStretch () );
   }
 }
 

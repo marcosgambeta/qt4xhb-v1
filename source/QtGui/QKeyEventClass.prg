@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QKEYEVENT_COUNT )
   QKeyEvent * obj = (QKeyEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->count (  ) );
+    hb_retni( obj->count () );
   }
 }
 
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QKEYEVENT_ISAUTOREPEAT )
   QKeyEvent * obj = (QKeyEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isAutoRepeat (  ) );
+    hb_retl( obj->isAutoRepeat () );
   }
 }
 
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QKEYEVENT_KEY )
   QKeyEvent * obj = (QKeyEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->key (  ) );
+    hb_retni( obj->key () );
   }
 }
 
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QKEYEVENT_MODIFIERS )
   QKeyEvent * obj = (QKeyEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->modifiers (  ) );
+    hb_retni( (int) obj->modifiers () );
   }
 }
 
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QKEYEVENT_NATIVEMODIFIERS )
   QKeyEvent * obj = (QKeyEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    quint32 i = obj->nativeModifiers (  );
+    quint32 i = obj->nativeModifiers ();
     hb_retni( i );
   }
 }
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QKEYEVENT_NATIVESCANCODE )
   QKeyEvent * obj = (QKeyEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    quint32 i = obj->nativeScanCode (  );
+    quint32 i = obj->nativeScanCode ();
     hb_retni( i );
   }
 }
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QKEYEVENT_NATIVEVIRTUALKEY )
   QKeyEvent * obj = (QKeyEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    quint32 i = obj->nativeVirtualKey (  );
+    quint32 i = obj->nativeVirtualKey ();
     hb_retni( i );
   }
 }
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QKEYEVENT_TEXT )
   QKeyEvent * obj = (QKeyEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->text (  );
+    QString str1 = obj->text ();
     hb_retc( RQSTRING(str1) );
   }
 }

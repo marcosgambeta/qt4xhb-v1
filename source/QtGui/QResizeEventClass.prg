@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QRESIZEEVENT_SIZE )
   QResizeEvent * obj = (QResizeEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QSize * ptr = &obj->size (  );
+    const QSize * ptr = &obj->size ();
     _qt4xhb_createReturnClass ( ptr, "QSIZE" );
   }
 }
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QRESIZEEVENT_OLDSIZE )
   QResizeEvent * obj = (QResizeEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QSize * ptr = &obj->oldSize (  );
+    const QSize * ptr = &obj->oldSize ();
     _qt4xhb_createReturnClass ( ptr, "QSIZE" );
   }
 }

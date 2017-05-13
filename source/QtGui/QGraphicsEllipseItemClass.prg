@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_RECT )
   QGraphicsEllipseItem * obj = (QGraphicsEllipseItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRectF * ptr = new QRectF( obj->rect (  ) );
+    QRectF * ptr = new QRectF( obj->rect () );
     _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SPANANGLE )
   QGraphicsEllipseItem * obj = (QGraphicsEllipseItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->spanAngle (  ) );
+    hb_retni( obj->spanAngle () );
   }
 }
 
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_STARTANGLE )
   QGraphicsEllipseItem * obj = (QGraphicsEllipseItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->startAngle (  ) );
+    hb_retni( obj->startAngle () );
   }
 }
 
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_BOUNDINGRECT )
   QGraphicsEllipseItem * obj = (QGraphicsEllipseItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRectF * ptr = new QRectF( obj->boundingRect (  ) );
+    QRectF * ptr = new QRectF( obj->boundingRect () );
     _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_OPAQUEAREA )
   QGraphicsEllipseItem * obj = (QGraphicsEllipseItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPainterPath * ptr = new QPainterPath( obj->opaqueArea (  ) );
+    QPainterPath * ptr = new QPainterPath( obj->opaqueArea () );
     _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SHAPE )
   QGraphicsEllipseItem * obj = (QGraphicsEllipseItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPainterPath * ptr = new QPainterPath( obj->shape (  ) );
+    QPainterPath * ptr = new QPainterPath( obj->shape () );
     _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_TYPE )
   QGraphicsEllipseItem * obj = (QGraphicsEllipseItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 }
 

@@ -60,7 +60,7 @@ QPrinterInfo ()
 HB_FUNC_STATIC( QPRINTERINFO_NEW1 )
 {
   QPrinterInfo * o = NULL;
-  o = new QPrinterInfo (  );
+  o = new QPrinterInfo ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QPRINTERINFO_ISDEFAULT )
   QPrinterInfo * obj = (QPrinterInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isDefault (  ) );
+    hb_retl( obj->isDefault () );
   }
 }
 
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QPRINTERINFO_ISNULL )
   QPrinterInfo * obj = (QPrinterInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QPRINTERINFO_PRINTERNAME )
   QPrinterInfo * obj = (QPrinterInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->printerName (  );
+    QString str1 = obj->printerName ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDPAPERSIZES )
   QPrinterInfo * obj = (QPrinterInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QList<QPrinter::PaperSize> list = obj->supportedPaperSizes (  );
+    QList<QPrinter::PaperSize> list = obj->supportedPaperSizes ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -198,7 +198,7 @@ QList<QPrinterInfo> availablePrinters ()
 */
 HB_FUNC_STATIC( QPRINTERINFO_AVAILABLEPRINTERS )
 {
-  QList<QPrinterInfo> list = QPrinterInfo::availablePrinters (  );
+  QList<QPrinterInfo> list = QPrinterInfo::availablePrinters ();
   PHB_DYNS pDynSym;
   #ifdef __XHARBOUR__
   pDynSym = hb_dynsymFind( "QPRINTERINFO" );
@@ -242,7 +242,7 @@ QPrinterInfo defaultPrinter ()
 */
 HB_FUNC_STATIC( QPRINTERINFO_DEFAULTPRINTER )
 {
-  QPrinterInfo * ptr = new QPrinterInfo( QPrinterInfo::defaultPrinter (  ) );
+  QPrinterInfo * ptr = new QPrinterInfo( QPrinterInfo::defaultPrinter () );
   _qt4xhb_createReturnClass ( ptr, "QPRINTERINFO", true );
 }
 

@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QACTIONEVENT_ACTION )
   QActionEvent * obj = (QActionEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QAction * ptr = obj->action (  );
+    QAction * ptr = obj->action ();
     _qt4xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QACTIONEVENT_BEFORE )
   QActionEvent * obj = (QActionEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QAction * ptr = obj->before (  );
+    QAction * ptr = obj->before ();
     _qt4xhb_createReturnClass ( ptr, "QACTION" );
   }
 }

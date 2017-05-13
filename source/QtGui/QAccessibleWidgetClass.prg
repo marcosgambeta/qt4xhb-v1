@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_CHILDCOUNT )
   QAccessibleWidget * obj = (QAccessibleWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->childCount (  ) );
+    hb_retni( obj->childCount () );
   }
 }
 

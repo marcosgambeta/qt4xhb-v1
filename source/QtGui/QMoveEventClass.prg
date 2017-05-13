@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QMOVEEVENT_OLDPOS )
   QMoveEvent * obj = (QMoveEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QPoint * ptr = &obj->oldPos (  );
+    const QPoint * ptr = &obj->oldPos ();
     _qt4xhb_createReturnClass ( ptr, "QPOINT" );
   }
 }
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QMOVEEVENT_POS )
   QMoveEvent * obj = (QMoveEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QPoint * ptr = &obj->pos (  );
+    const QPoint * ptr = &obj->pos ();
     _qt4xhb_createReturnClass ( ptr, "QPOINT" );
   }
 }

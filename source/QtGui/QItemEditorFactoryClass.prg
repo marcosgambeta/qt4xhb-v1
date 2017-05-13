@@ -57,7 +57,7 @@ QItemEditorFactory ()
 HB_FUNC_STATIC( QITEMEDITORFACTORY_NEW )
 {
   QItemEditorFactory * o = NULL;
-  o = new QItemEditorFactory (  );
+  o = new QItemEditorFactory ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -131,7 +131,7 @@ const QItemEditorFactory * defaultFactory ()
 */
 HB_FUNC_STATIC( QITEMEDITORFACTORY_DEFAULTFACTORY )
 {
-  const QItemEditorFactory * ptr = QItemEditorFactory::defaultFactory (  );
+  const QItemEditorFactory * ptr = QItemEditorFactory::defaultFactory ();
   _qt4xhb_createReturnClass ( ptr, "QITEMEDITORFACTORY" );
 }
 

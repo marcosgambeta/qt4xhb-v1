@@ -61,7 +61,7 @@ QTextFragment ()
 HB_FUNC_STATIC( QTEXTFRAGMENT_NEW1 )
 {
   QTextFragment * o = NULL;
-  o = new QTextFragment (  );
+  o = new QTextFragment ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_CHARFORMAT )
   QTextFragment * obj = (QTextFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTextCharFormat * ptr = new QTextCharFormat( obj->charFormat (  ) );
+    QTextCharFormat * ptr = new QTextCharFormat( obj->charFormat () );
     _qt4xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT" );
   }
 }
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_CHARFORMATINDEX )
   QTextFragment * obj = (QTextFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->charFormatIndex (  ) );
+    hb_retni( obj->charFormatIndex () );
   }
 }
 
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_GLYPHRUNS )
   QTextFragment * obj = (QTextFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QList<QGlyphRun> list = obj->glyphRuns (  );
+    QList<QGlyphRun> list = obj->glyphRuns ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QGLYPHRUN" );
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_ISVALID )
   QTextFragment * obj = (QTextFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_LENGTH )
   QTextFragment * obj = (QTextFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->length (  ) );
+    hb_retni( obj->length () );
   }
 }
 
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_POSITION )
   QTextFragment * obj = (QTextFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->position (  ) );
+    hb_retni( obj->position () );
   }
 }
 
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_TEXT )
   QTextFragment * obj = (QTextFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->text (  );
+    QString str1 = obj->text ();
     hb_retc( RQSTRING(str1) );
   }
 }

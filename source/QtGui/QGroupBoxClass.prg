@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QGROUPBOX_ALIGNMENT )
   QGroupBox * obj = (QGroupBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->alignment (  ) );
+    hb_retni( (int) obj->alignment () );
   }
 }
 
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QGROUPBOX_ISCHECKABLE )
   QGroupBox * obj = (QGroupBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isCheckable (  ) );
+    hb_retl( obj->isCheckable () );
   }
 }
 
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QGROUPBOX_ISCHECKED )
   QGroupBox * obj = (QGroupBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isChecked (  ) );
+    hb_retl( obj->isChecked () );
   }
 }
 
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QGROUPBOX_ISFLAT )
   QGroupBox * obj = (QGroupBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isFlat (  ) );
+    hb_retl( obj->isFlat () );
   }
 }
 
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QGROUPBOX_TITLE )
   QGroupBox * obj = (QGroupBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->title (  );
+    QString str1 = obj->title ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QGROUPBOX_MINIMUMSIZEHINT )
   QGroupBox * obj = (QGroupBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
+    QSize * ptr = new QSize( obj->minimumSizeHint () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }

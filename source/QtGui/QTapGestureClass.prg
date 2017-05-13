@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QTAPGESTURE_POSITION )
   QTapGesture * obj = (QTapGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->position (  ) );
+    QPointF * ptr = new QPointF( obj->position () );
     _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }

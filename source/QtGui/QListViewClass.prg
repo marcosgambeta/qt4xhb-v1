@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QLISTVIEW_BATCHSIZE )
   QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->batchSize (  ) );
+    hb_retni( obj->batchSize () );
   }
 }
 
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QLISTVIEW_CLEARPROPERTYFLAGS )
   QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clearPropertyFlags (  );
+    obj->clearPropertyFlags ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QLISTVIEW_FLOW )
   QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->flow (  ) );
+    hb_retni( (int) obj->flow () );
   }
 }
 
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QLISTVIEW_GRIDSIZE )
   QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->gridSize (  ) );
+    QSize * ptr = new QSize( obj->gridSize () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QLISTVIEW_ISSELECTIONRECTVISIBLE )
   QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isSelectionRectVisible (  ) );
+    hb_retl( obj->isSelectionRectVisible () );
   }
 }
 
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QLISTVIEW_ISWRAPPING )
   QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isWrapping (  ) );
+    hb_retl( obj->isWrapping () );
   }
 }
 
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QLISTVIEW_LAYOUTMODE )
   QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->layoutMode (  ) );
+    hb_retni( (int) obj->layoutMode () );
   }
 }
 
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QLISTVIEW_MODELCOLUMN )
   QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->modelColumn (  ) );
+    hb_retni( obj->modelColumn () );
   }
 }
 
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QLISTVIEW_MOVEMENT )
   QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->movement (  ) );
+    hb_retni( (int) obj->movement () );
   }
 }
 
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QLISTVIEW_RESIZEMODE )
   QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->resizeMode (  ) );
+    hb_retni( (int) obj->resizeMode () );
   }
 }
 
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QLISTVIEW_SPACING )
   QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->spacing (  ) );
+    hb_retni( obj->spacing () );
   }
 }
 
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QLISTVIEW_UNIFORMITEMSIZES )
   QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->uniformItemSizes (  ) );
+    hb_retl( obj->uniformItemSizes () );
   }
 }
 
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QLISTVIEW_VIEWMODE )
   QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->viewMode (  ) );
+    hb_retni( (int) obj->viewMode () );
   }
 }
 
@@ -499,7 +499,7 @@ HB_FUNC_STATIC( QLISTVIEW_WORDWRAP )
   QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->wordWrap (  ) );
+    hb_retl( obj->wordWrap () );
   }
 }
 

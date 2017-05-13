@@ -110,7 +110,7 @@ QMatrix4x4 ()
 HB_FUNC_STATIC( QMATRIX4X4_NEW1 )
 {
   QMatrix4x4 * o = NULL;
-  o = new QMatrix4x4 (  );
+  o = new QMatrix4x4 ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QMATRIX4X4_DETERMINANT )
   QMatrix4x4 * obj = (QMatrix4x4 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->determinant (  );
+    qreal r = obj->determinant ();
     hb_retnd( r );
   }
 }
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QMATRIX4X4_FLIPCOORDINATES )
   QMatrix4x4 * obj = (QMatrix4x4 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->flipCoordinates (  );
+    obj->flipCoordinates ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QMATRIX4X4_ISIDENTITY )
   QMatrix4x4 * obj = (QMatrix4x4 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isIdentity (  ) );
+    hb_retl( obj->isIdentity () );
   }
 }
 
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QMATRIX4X4_NORMALMATRIX )
   QMatrix4x4 * obj = (QMatrix4x4 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QMatrix3x3 * ptr = new QMatrix3x3( obj->normalMatrix (  ) );
+    QMatrix3x3 * ptr = new QMatrix3x3( obj->normalMatrix () );
     _qt4xhb_createReturnClass ( ptr, "QMATRIX3X3" );
   }
 }
@@ -478,7 +478,7 @@ HB_FUNC_STATIC( QMATRIX4X4_OPTIMIZE )
   QMatrix4x4 * obj = (QMatrix4x4 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->optimize (  );
+    obj->optimize ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -763,7 +763,7 @@ HB_FUNC_STATIC( QMATRIX4X4_SETTOIDENTITY )
   QMatrix4x4 * obj = (QMatrix4x4 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setToIdentity (  );
+    obj->setToIdentity ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -779,7 +779,7 @@ HB_FUNC_STATIC( QMATRIX4X4_TOTRANSFORM1 )
   QMatrix4x4 * obj = (QMatrix4x4 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTransform * ptr = new QTransform( obj->toTransform (  ) );
+    QTransform * ptr = new QTransform( obj->toTransform () );
     _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );
   }
 }
@@ -885,7 +885,7 @@ HB_FUNC_STATIC( QMATRIX4X4_TRANSPOSED )
   QMatrix4x4 * obj = (QMatrix4x4 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QMatrix4x4 * ptr = new QMatrix4x4( obj->transposed (  ) );
+    QMatrix4x4 * ptr = new QMatrix4x4( obj->transposed () );
     _qt4xhb_createReturnClass ( ptr, "QMATRIX4X4", true );
   }
 }

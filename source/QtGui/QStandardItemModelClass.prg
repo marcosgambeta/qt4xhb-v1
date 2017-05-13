@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_PARENT2 )
   QStandardItemModel * obj = (QStandardItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * ptr = obj->parent (  );
+    QObject * ptr = obj->parent ();
     _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SUPPORTEDDROPACTIONS )
   QStandardItemModel * obj = (QStandardItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->supportedDropActions (  ) );
+    hb_retni( (int) obj->supportedDropActions () );
   }
 }
 
@@ -430,7 +430,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_CLEAR )
   QStandardItemModel * obj = (QStandardItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -553,7 +553,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_INVISIBLEROOTITEM )
   QStandardItemModel * obj = (QStandardItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStandardItem * ptr = obj->invisibleRootItem (  );
+    QStandardItem * ptr = obj->invisibleRootItem ();
     _qt4xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
   }
 }
@@ -1020,7 +1020,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_ITEMPROTOTYPE )
   QStandardItemModel * obj = (QStandardItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QStandardItem * ptr = obj->itemPrototype (  );
+    const QStandardItem * ptr = obj->itemPrototype ();
     _qt4xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
   }
 }
@@ -1094,7 +1094,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SORTROLE )
   QStandardItemModel * obj = (QStandardItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->sortRole (  ) );
+    hb_retni( obj->sortRole () );
   }
 }
 
@@ -1122,7 +1122,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_MIMETYPES )
   QStandardItemModel * obj = (QStandardItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList strl = obj->mimeTypes (  );
+    QStringList strl = obj->mimeTypes ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;

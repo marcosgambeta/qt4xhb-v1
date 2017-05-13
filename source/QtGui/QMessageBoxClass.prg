@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_BUTTONS )
   QMessageBox * obj = (QMessageBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QList<QAbstractButton *> list = obj->buttons (  );
+    QList<QAbstractButton *> list = obj->buttons ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QABSTRACTBUTTON" );
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_CLICKEDBUTTON )
   QMessageBox * obj = (QMessageBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QAbstractButton * ptr = obj->clickedButton (  );
+    QAbstractButton * ptr = obj->clickedButton ();
     _qt4xhb_createReturnClass ( ptr, "QABSTRACTBUTTON" );
   }
 }
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_DEFAULTBUTTON )
   QMessageBox * obj = (QMessageBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPushButton * ptr = obj->defaultButton (  );
+    QPushButton * ptr = obj->defaultButton ();
     _qt4xhb_createReturnClass ( ptr, "QPUSHBUTTON" );
   }
 }
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_DETAILEDTEXT )
   QMessageBox * obj = (QMessageBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->detailedText (  );
+    QString str1 = obj->detailedText ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_ESCAPEBUTTON )
   QMessageBox * obj = (QMessageBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QAbstractButton * ptr = obj->escapeButton (  );
+    QAbstractButton * ptr = obj->escapeButton ();
     _qt4xhb_createReturnClass ( ptr, "QABSTRACTBUTTON" );
   }
 }
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_ICON )
   QMessageBox * obj = (QMessageBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->icon (  ) );
+    hb_retni( (int) obj->icon () );
   }
 }
 
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_ICONPIXMAP )
   QMessageBox * obj = (QMessageBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPixmap * ptr = new QPixmap( obj->iconPixmap (  ) );
+    QPixmap * ptr = new QPixmap( obj->iconPixmap () );
     _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_INFORMATIVETEXT )
   QMessageBox * obj = (QMessageBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->informativeText (  );
+    QString str1 = obj->informativeText ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -658,7 +658,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_STANDARDBUTTONS )
   QMessageBox * obj = (QMessageBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->standardButtons (  ) );
+    hb_retni( (int) obj->standardButtons () );
   }
 }
 
@@ -671,7 +671,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_TEXT )
   QMessageBox * obj = (QMessageBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->text (  );
+    QString str1 = obj->text ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -685,7 +685,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_TEXTFORMAT )
   QMessageBox * obj = (QMessageBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->textFormat (  ) );
+    hb_retni( (int) obj->textFormat () );
   }
 }
 
@@ -712,7 +712,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_EXEC )
   QMessageBox * obj = (QMessageBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->exec (  ) );
+    hb_retni( obj->exec () );
   }
 }
 

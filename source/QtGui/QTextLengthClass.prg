@@ -52,7 +52,7 @@ QTextLength ()
 HB_FUNC_STATIC( QTEXTLENGTH_NEW1 )
 {
   QTextLength * o = NULL;
-  o = new QTextLength (  );
+  o = new QTextLength ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QTEXTLENGTH_RAWVALUE )
   QTextLength * obj = (QTextLength *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->rawValue (  );
+    qreal r = obj->rawValue ();
     hb_retnd( r );
   }
 }
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QTEXTLENGTH_TYPE )
   QTextLength * obj = (QTextLength *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->type (  ) );
+    hb_retni( (int) obj->type () );
   }
 }
 

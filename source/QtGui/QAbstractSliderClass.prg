@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_HASTRACKING )
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasTracking (  ) );
+    hb_retl( obj->hasTracking () );
   }
 }
 
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_INVERTEDAPPEARANCE )
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->invertedAppearance (  ) );
+    hb_retl( obj->invertedAppearance () );
   }
 }
 
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_INVERTEDCONTROLS )
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->invertedControls (  ) );
+    hb_retl( obj->invertedControls () );
   }
 }
 
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ISSLIDERDOWN )
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isSliderDown (  ) );
+    hb_retl( obj->isSliderDown () );
   }
 }
 
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_MAXIMUM )
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->maximum (  ) );
+    hb_retni( obj->maximum () );
   }
 }
 
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_MINIMUM )
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->minimum (  ) );
+    hb_retni( obj->minimum () );
   }
 }
 
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ORIENTATION )
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->orientation (  ) );
+    hb_retni( (int) obj->orientation () );
   }
 }
 
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_PAGESTEP )
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->pageStep (  ) );
+    hb_retni( (int) obj->pageStep () );
   }
 }
 
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SINGLESTEP )
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->singleStep (  ) );
+    hb_retni( obj->singleStep () );
   }
 }
 
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SLIDERPOSITION )
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->sliderPosition (  ) );
+    hb_retni( obj->sliderPosition () );
   }
 }
 
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_VALUE )
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->value (  ) );
+    hb_retni( obj->value () );
   }
 }
 

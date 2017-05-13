@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_LINE )
   QGraphicsLineItem * obj = (QGraphicsLineItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QLineF * ptr = new QLineF( obj->line (  ) );
+    QLineF * ptr = new QLineF( obj->line () );
     _qt4xhb_createReturnClass ( ptr, "QLINEF", true );
   }
 }
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_PEN )
   QGraphicsLineItem * obj = (QGraphicsLineItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPen * ptr = new QPen( obj->pen (  ) );
+    QPen * ptr = new QPen( obj->pen () );
     _qt4xhb_createReturnClass ( ptr, "QPEN", true );
   }
 }
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_BOUNDINGRECT )
   QGraphicsLineItem * obj = (QGraphicsLineItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRectF * ptr = new QRectF( obj->boundingRect (  ) );
+    QRectF * ptr = new QRectF( obj->boundingRect () );
     _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_OPAQUEAREA )
   QGraphicsLineItem * obj = (QGraphicsLineItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPainterPath * ptr = new QPainterPath( obj->opaqueArea (  ) );
+    QPainterPath * ptr = new QPainterPath( obj->opaqueArea () );
     _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_SHAPE )
   QGraphicsLineItem * obj = (QGraphicsLineItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPainterPath * ptr = new QPainterPath( obj->shape (  ) );
+    QPainterPath * ptr = new QPainterPath( obj->shape () );
     _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_TYPE )
   QGraphicsLineItem * obj = (QGraphicsLineItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->type (  ) );
+    hb_retni( obj->type () );
   }
 }
 

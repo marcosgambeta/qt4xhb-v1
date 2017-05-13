@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QMENU_ACTIVEACTION )
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QAction * ptr = obj->activeAction (  );
+    QAction * ptr = obj->activeAction ();
     _qt4xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QMENU_ADDSEPARATOR )
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QAction * ptr = obj->addSeparator (  );
+    QAction * ptr = obj->addSeparator ();
     _qt4xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QMENU_CLEAR )
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QMENU_DEFAULTACTION )
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QAction * ptr = obj->defaultAction (  );
+    QAction * ptr = obj->defaultAction ();
     _qt4xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QMENU_EXEC1 )
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QAction * ptr = obj->exec (  );
+    QAction * ptr = obj->exec ();
     _qt4xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QMENU_HIDETEAROFFMENU )
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->hideTearOffMenu (  );
+    obj->hideTearOffMenu ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QMENU_ICON )
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QIcon * ptr = new QIcon( obj->icon (  ) );
+    QIcon * ptr = new QIcon( obj->icon () );
     _qt4xhb_createReturnClass ( ptr, "QICON", true );
   }
 }
@@ -502,7 +502,7 @@ HB_FUNC_STATIC( QMENU_ISEMPTY )
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 }
 
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QMENU_ISTEAROFFENABLED )
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isTearOffEnabled (  ) );
+    hb_retl( obj->isTearOffEnabled () );
   }
 }
 
@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QMENU_ISTEAROFFMENUVISIBLE )
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isTearOffMenuVisible (  ) );
+    hb_retl( obj->isTearOffMenuVisible () );
   }
 }
 
@@ -542,7 +542,7 @@ HB_FUNC_STATIC( QMENU_MENUACTION )
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QAction * ptr = obj->menuAction (  );
+    QAction * ptr = obj->menuAction ();
     _qt4xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -572,7 +572,7 @@ HB_FUNC_STATIC( QMENU_SEPARATORSCOLLAPSIBLE )
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->separatorsCollapsible (  ) );
+    hb_retl( obj->separatorsCollapsible () );
   }
 }
 
@@ -672,7 +672,7 @@ HB_FUNC_STATIC( QMENU_TITLE )
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->title (  );
+    QString str1 = obj->title ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -686,7 +686,7 @@ HB_FUNC_STATIC( QMENU_SIZEHINT )
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }

@@ -62,7 +62,7 @@ QStringList keys ()
 */
 HB_FUNC_STATIC( QGENERICPLUGINFACTORY_KEYS )
 {
-  QStringList strl = QGenericPluginFactory::keys (  );
+  QStringList strl = QGenericPluginFactory::keys ();
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;

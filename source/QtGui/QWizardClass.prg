@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QWIZARD_CURRENTID )
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->currentId (  ) );
+    hb_retni( obj->currentId () );
   }
 }
 
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QWIZARD_CURRENTPAGE )
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWizardPage * ptr = obj->currentPage (  );
+    QWizardPage * ptr = obj->currentPage ();
     _qt4xhb_createReturnClass ( ptr, "QWIZARDPAGE" );
   }
 }
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QWIZARD_NEXTID )
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->nextId (  ) );
+    hb_retni( obj->nextId () );
   }
 }
 
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QWIZARD_OPTIONS )
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->options (  ) );
+    hb_retni( (int) obj->options () );
   }
 }
 
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QWIZARD_PAGEIDS )
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QList<int> list = obj->pageIds (  );
+    QList<int> list = obj->pageIds ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -544,7 +544,7 @@ HB_FUNC_STATIC( QWIZARD_SIDEWIDGET )
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * ptr = obj->sideWidget (  );
+    QWidget * ptr = obj->sideWidget ();
     _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
@@ -558,7 +558,7 @@ HB_FUNC_STATIC( QWIZARD_STARTID )
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->startId (  ) );
+    hb_retni( obj->startId () );
   }
 }
 
@@ -571,7 +571,7 @@ HB_FUNC_STATIC( QWIZARD_SUBTITLEFORMAT )
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->subTitleFormat (  ) );
+    hb_retni( (int) obj->subTitleFormat () );
   }
 }
 
@@ -598,7 +598,7 @@ HB_FUNC_STATIC( QWIZARD_TITLEFORMAT )
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->titleFormat (  ) );
+    hb_retni( (int) obj->titleFormat () );
   }
 }
 
@@ -611,7 +611,7 @@ HB_FUNC_STATIC( QWIZARD_VALIDATECURRENTPAGE )
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->validateCurrentPage (  ) );
+    hb_retl( obj->validateCurrentPage () );
   }
 }
 
@@ -624,7 +624,7 @@ HB_FUNC_STATIC( QWIZARD_VISITEDPAGES )
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QList<int> list = obj->visitedPages (  );
+    QList<int> list = obj->visitedPages ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -647,7 +647,7 @@ HB_FUNC_STATIC( QWIZARD_WIZARDSTYLE )
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->wizardStyle (  ) );
+    hb_retni( (int) obj->wizardStyle () );
   }
 }
 
@@ -674,7 +674,7 @@ HB_FUNC_STATIC( QWIZARD_SIZEHINT )
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -688,7 +688,7 @@ HB_FUNC_STATIC( QWIZARD_BACK )
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->back (  );
+    obj->back ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -702,7 +702,7 @@ HB_FUNC_STATIC( QWIZARD_NEXT )
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->next (  );
+    obj->next ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -716,7 +716,7 @@ HB_FUNC_STATIC( QWIZARD_RESTART )
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->restart (  );
+    obj->restart ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

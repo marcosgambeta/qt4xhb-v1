@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QTEXTLIST_COUNT )
   QTextList * obj = (QTextList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->count (  ) );
+    hb_retni( obj->count () );
   }
 }
 
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QTEXTLIST_FORMAT )
   QTextList * obj = (QTextList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTextListFormat * ptr = new QTextListFormat( obj->format (  ) );
+    QTextListFormat * ptr = new QTextListFormat( obj->format () );
     _qt4xhb_createReturnClass ( ptr, "QTEXTLISTFORMAT" );
   }
 }

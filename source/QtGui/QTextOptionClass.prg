@@ -64,7 +64,7 @@ QTextOption ()
 HB_FUNC_STATIC( QTEXTOPTION_NEW1 )
 {
   QTextOption * o = NULL;
-  o = new QTextOption (  );
+  o = new QTextOption ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QTEXTOPTION_ALIGNMENT )
   QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->alignment (  ) );
+    hb_retni( (int) obj->alignment () );
   }
 }
 
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QTEXTOPTION_FLAGS )
   QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->flags (  ) );
+    hb_retni( (int) obj->flags () );
   }
 }
 
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QTEXTOPTION_TABARRAY )
   QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QList<qreal> list = obj->tabArray (  );
+    QList<qreal> list = obj->tabArray ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QTEXTOPTION_TABSTOP )
   QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->tabStop (  );
+    qreal r = obj->tabStop ();
     hb_retnd( r );
   }
 }
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QTEXTOPTION_TEXTDIRECTION )
   QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->textDirection (  ) );
+    hb_retni( (int) obj->textDirection () );
   }
 }
 
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QTEXTOPTION_USEDESIGNMETRICS )
   QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->useDesignMetrics (  ) );
+    hb_retl( obj->useDesignMetrics () );
   }
 }
 
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QTEXTOPTION_WRAPMODE )
   QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->wrapMode (  ) );
+    hb_retni( (int) obj->wrapMode () );
   }
 }
 

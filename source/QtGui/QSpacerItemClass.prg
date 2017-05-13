@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QSPACERITEM_EXPANDINGDIRECTIONS )
   QSpacerItem * obj = (QSpacerItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->expandingDirections (  ) );
+    hb_retni( (int) obj->expandingDirections () );
   }
 }
 
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QSPACERITEM_GEOMETRY )
   QSpacerItem * obj = (QSpacerItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRect * ptr = new QRect( obj->geometry (  ) );
+    QRect * ptr = new QRect( obj->geometry () );
     _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QSPACERITEM_ISEMPTY )
   QSpacerItem * obj = (QSpacerItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 }
 
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QSPACERITEM_MAXIMUMSIZE )
   QSpacerItem * obj = (QSpacerItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->maximumSize (  ) );
+    QSize * ptr = new QSize( obj->maximumSize () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QSPACERITEM_MINIMUMSIZE )
   QSpacerItem * obj = (QSpacerItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->minimumSize (  ) );
+    QSize * ptr = new QSize( obj->minimumSize () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QSPACERITEM_SIZEHINT )
   QSpacerItem * obj = (QSpacerItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QSPACERITEM_SPACERITEM )
   QSpacerItem * obj = (QSpacerItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSpacerItem * ptr = obj->spacerItem (  );
+    QSpacerItem * ptr = obj->spacerItem ();
     _qt4xhb_createReturnClass ( ptr, "QSPACERITEM" );
   }
 }

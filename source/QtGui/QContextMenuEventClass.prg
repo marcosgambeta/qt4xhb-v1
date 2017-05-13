@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALPOS )
   QContextMenuEvent * obj = (QContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QPoint * ptr = &obj->globalPos (  );
+    const QPoint * ptr = &obj->globalPos ();
     _qt4xhb_createReturnClass ( ptr, "QPOINT" );
   }
 }
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALX )
   QContextMenuEvent * obj = (QContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->globalX (  ) );
+    hb_retni( obj->globalX () );
   }
 }
 
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALY )
   QContextMenuEvent * obj = (QContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->globalY (  ) );
+    hb_retni( obj->globalY () );
   }
 }
 
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_POS )
   QContextMenuEvent * obj = (QContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QPoint * ptr = &obj->pos (  );
+    const QPoint * ptr = &obj->pos ();
     _qt4xhb_createReturnClass ( ptr, "QPOINT" );
   }
 }
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_REASON )
   QContextMenuEvent * obj = (QContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->reason (  ) );
+    hb_retni( (int) obj->reason () );
   }
 }
 
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_X )
   QContextMenuEvent * obj = (QContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->x (  ) );
+    hb_retni( obj->x () );
   }
 }
 
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_Y )
   QContextMenuEvent * obj = (QContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->y (  ) );
+    hb_retni( obj->y () );
   }
 }
 

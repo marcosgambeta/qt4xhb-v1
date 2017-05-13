@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_KEY )
   QKeyEventTransition * obj = (QKeyEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->key (  ) );
+    hb_retni( obj->key () );
   }
 }
 
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_MODIFIERMASK )
   QKeyEventTransition * obj = (QKeyEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->modifierMask (  ) );
+    hb_retni( (int) obj->modifierMask () );
   }
 }
 

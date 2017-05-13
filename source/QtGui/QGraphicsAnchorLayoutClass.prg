@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_HORIZONTALSPACING )
   QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->horizontalSpacing (  );
+    qreal r = obj->horizontalSpacing ();
     hb_retnd( r );
   }
 }
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_VERTICALSPACING )
   QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->verticalSpacing (  );
+    qreal r = obj->verticalSpacing ();
     hb_retnd( r );
   }
 }
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_COUNT )
   QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->count (  ) );
+    hb_retni( obj->count () );
   }
 }
 
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_INVALIDATE )
   QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->invalidate (  );
+    obj->invalidate ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

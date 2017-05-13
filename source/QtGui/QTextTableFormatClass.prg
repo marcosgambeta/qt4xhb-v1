@@ -57,7 +57,7 @@ QTextTableFormat ()
 HB_FUNC_STATIC( QTEXTTABLEFORMAT_NEW )
 {
   QTextTableFormat * o = NULL;
-  o = new QTextTableFormat (  );
+  o = new QTextTableFormat ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_ALIGNMENT )
   QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->alignment (  ) );
+    hb_retni( (int) obj->alignment () );
   }
 }
 
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_CELLPADDING )
   QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->cellPadding (  );
+    qreal r = obj->cellPadding ();
     hb_retnd( r );
   }
 }
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_CELLSPACING )
   QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->cellSpacing (  );
+    qreal r = obj->cellSpacing ();
     hb_retnd( r );
   }
 }
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_CLEARCOLUMNWIDTHCONSTRAINTS )
   QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clearColumnWidthConstraints (  );
+    obj->clearColumnWidthConstraints ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_COLUMNWIDTHCONSTRAINTS )
   QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVector<QTextLength> list = obj->columnWidthConstraints (  );
+    QVector<QTextLength> list = obj->columnWidthConstraints ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QTEXTLENGTH" );
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_COLUMNS )
   QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->columns (  ) );
+    hb_retni( obj->columns () );
   }
 }
 
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_HEADERROWCOUNT )
   QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->headerRowCount (  ) );
+    hb_retni( obj->headerRowCount () );
   }
 }
 
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_ISVALID )
   QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 

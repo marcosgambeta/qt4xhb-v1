@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_CLEANUPPAGE )
   QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->cleanupPage (  );
+    obj->cleanupPage ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_INITIALIZEPAGE )
   QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->initializePage (  );
+    obj->initializePage ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_ISCOMMITPAGE )
   QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isCommitPage (  ) );
+    hb_retl( obj->isCommitPage () );
   }
 }
 
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_ISCOMPLETE )
   QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isComplete (  ) );
+    hb_retl( obj->isComplete () );
   }
 }
 
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_ISFINALPAGE )
   QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isFinalPage (  ) );
+    hb_retl( obj->isFinalPage () );
   }
 }
 
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_NEXTID )
   QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->nextId (  ) );
+    hb_retni( obj->nextId () );
   }
 }
 
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_SUBTITLE )
   QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->subTitle (  );
+    QString str1 = obj->subTitle ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_TITLE )
   QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->title (  );
+    QString str1 = obj->title ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_VALIDATEPAGE )
   QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->validatePage (  ) );
+    hb_retl( obj->validatePage () );
   }
 }
 

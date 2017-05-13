@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QSWIPEGESTURE_HORIZONTALDIRECTION )
   QSwipeGesture * obj = (QSwipeGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->horizontalDirection (  ) );
+    hb_retni( (int) obj->horizontalDirection () );
   }
 }
 
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QSWIPEGESTURE_SWIPEANGLE )
   QSwipeGesture * obj = (QSwipeGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->swipeAngle (  );
+    qreal r = obj->swipeAngle ();
     hb_retnd( r );
   }
 }
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QSWIPEGESTURE_VERTICALDIRECTION )
   QSwipeGesture * obj = (QSwipeGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->verticalDirection (  ) );
+    hb_retni( (int) obj->verticalDirection () );
   }
 }
 

@@ -69,7 +69,7 @@ QCleanlooksStyle ()
 HB_FUNC_STATIC( QCLEANLOOKSSTYLE_NEW )
 {
   QCleanlooksStyle * o = NULL;
-  o = new QCleanlooksStyle (  );
+  o = new QCleanlooksStyle ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QCLEANLOOKSSTYLE_STANDARDPALETTE )
   QCleanlooksStyle * obj = (QCleanlooksStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPalette * ptr = new QPalette( obj->standardPalette (  ) );
+    QPalette * ptr = new QPalette( obj->standardPalette () );
     _qt4xhb_createReturnClass ( ptr, "QPALETTE", true );
   }
 }

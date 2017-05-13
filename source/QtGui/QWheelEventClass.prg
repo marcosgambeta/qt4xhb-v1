@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QWHEELEVENT_DELTA )
   QWheelEvent * obj = (QWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->delta (  ) );
+    hb_retni( obj->delta () );
   }
 }
 
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QWHEELEVENT_POS )
   QWheelEvent * obj = (QWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QPoint * ptr = &obj->pos (  );
+    const QPoint * ptr = &obj->pos ();
     _qt4xhb_createReturnClass ( ptr, "QPOINT" );
   }
 }
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QWHEELEVENT_GLOBALPOS )
   QWheelEvent * obj = (QWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QPoint * ptr = &obj->globalPos (  );
+    const QPoint * ptr = &obj->globalPos ();
     _qt4xhb_createReturnClass ( ptr, "QPOINT" );
   }
 }
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QWHEELEVENT_X )
   QWheelEvent * obj = (QWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->x (  ) );
+    hb_retni( obj->x () );
   }
 }
 
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QWHEELEVENT_Y )
   QWheelEvent * obj = (QWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->y (  ) );
+    hb_retni( obj->y () );
   }
 }
 
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QWHEELEVENT_GLOBALX )
   QWheelEvent * obj = (QWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->globalX (  ) );
+    hb_retni( obj->globalX () );
   }
 }
 
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QWHEELEVENT_GLOBALY )
   QWheelEvent * obj = (QWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->globalY (  ) );
+    hb_retni( obj->globalY () );
   }
 }
 
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QWHEELEVENT_BUTTONS )
   QWheelEvent * obj = (QWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->buttons (  ) );
+    hb_retni( (int) obj->buttons () );
   }
 }
 
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QWHEELEVENT_ORIENTATION )
   QWheelEvent * obj = (QWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->orientation (  ) );
+    hb_retni( (int) obj->orientation () );
   }
 }
 

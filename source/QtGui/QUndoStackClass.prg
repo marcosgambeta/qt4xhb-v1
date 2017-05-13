@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QUNDOSTACK_CANREDO )
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->canRedo (  ) );
+    hb_retl( obj->canRedo () );
   }
 }
 
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QUNDOSTACK_CANUNDO )
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->canUndo (  ) );
+    hb_retl( obj->canUndo () );
   }
 }
 
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QUNDOSTACK_CLEANINDEX )
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->cleanIndex (  ) );
+    hb_retni( obj->cleanIndex () );
   }
 }
 
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QUNDOSTACK_CLEAR )
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QUNDOSTACK_COUNT )
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->count (  ) );
+    hb_retni( obj->count () );
   }
 }
 
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QUNDOSTACK_ENDMACRO )
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->endMacro (  );
+    obj->endMacro ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QUNDOSTACK_INDEX )
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->index (  ) );
+    hb_retni( obj->index () );
   }
 }
 
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QUNDOSTACK_ISACTIVE )
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isActive (  ) );
+    hb_retl( obj->isActive () );
   }
 }
 
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QUNDOSTACK_ISCLEAN )
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isClean (  ) );
+    hb_retl( obj->isClean () );
   }
 }
 
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QUNDOSTACK_REDOTEXT )
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->redoText (  );
+    QString str1 = obj->redoText ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QUNDOSTACK_UNDOLIMIT )
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->undoLimit (  ) );
+    hb_retni( obj->undoLimit () );
   }
 }
 
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QUNDOSTACK_UNDOTEXT )
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->undoText (  );
+    QString str1 = obj->undoText ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QUNDOSTACK_REDO )
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->redo (  );
+    obj->redo ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QUNDOSTACK_SETCLEAN )
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setClean (  );
+    obj->setClean ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -426,7 +426,7 @@ HB_FUNC_STATIC( QUNDOSTACK_UNDO )
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->undo (  );
+    obj->undo ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

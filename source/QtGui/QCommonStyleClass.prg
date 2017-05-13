@@ -64,7 +64,7 @@ QCommonStyle ()
 HB_FUNC_STATIC( QCOMMONSTYLE_NEW )
 {
   QCommonStyle * o = NULL;
-  o = new QCommonStyle (  );
+  o = new QCommonStyle ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

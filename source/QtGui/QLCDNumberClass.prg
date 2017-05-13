@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QLCDNUMBER_DIGITCOUNT )
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->digitCount (  ) );
+    hb_retni( obj->digitCount () );
   }
 }
 
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QLCDNUMBER_INTVALUE )
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->intValue (  ) );
+    hb_retni( obj->intValue () );
   }
 }
 
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QLCDNUMBER_MODE )
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->mode (  ) );
+    hb_retni( (int) obj->mode () );
   }
 }
 
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SEGMENTSTYLE )
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->segmentStyle (  ) );
+    hb_retni( (int) obj->segmentStyle () );
   }
 }
 
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SMALLDECIMALPOINT )
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->smallDecimalPoint (  ) );
+    hb_retl( obj->smallDecimalPoint () );
   }
 }
 
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QLCDNUMBER_VALUE )
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    double r = obj->value (  );
+    double r = obj->value ();
     hb_retnd( r );
   }
 }
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SIZEHINT )
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETBINMODE )
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setBinMode (  );
+    obj->setBinMode ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -382,7 +382,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETDECMODE )
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setDecMode (  );
+    obj->setDecMode ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETHEXMODE )
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setHexMode (  );
+    obj->setHexMode ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETOCTMODE )
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setOctMode (  );
+    obj->setOctMode ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

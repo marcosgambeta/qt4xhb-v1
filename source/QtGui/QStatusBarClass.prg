@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QSTATUSBAR_CURRENTMESSAGE )
   QStatusBar * obj = (QStatusBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->currentMessage (  );
+    QString str1 = obj->currentMessage ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QSTATUSBAR_ISSIZEGRIPENABLED )
   QStatusBar * obj = (QStatusBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isSizeGripEnabled (  ) );
+    hb_retl( obj->isSizeGripEnabled () );
   }
 }
 
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QSTATUSBAR_CLEARMESSAGE )
   QStatusBar * obj = (QStatusBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clearMessage (  );
+    obj->clearMessage ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

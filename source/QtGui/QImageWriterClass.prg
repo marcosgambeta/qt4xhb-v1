@@ -74,7 +74,7 @@ QImageWriter ()
 HB_FUNC_STATIC( QIMAGEWRITER_NEW1 )
 {
   QImageWriter * o = NULL;
-  o = new QImageWriter (  );
+  o = new QImageWriter ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_CANWRITE )
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->canWrite (  ) );
+    hb_retl( obj->canWrite () );
   }
 }
 
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_COMPRESSION )
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->compression (  ) );
+    hb_retni( obj->compression () );
   }
 }
 
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_DEVICE )
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QIODevice * ptr = obj->device (  );
+    QIODevice * ptr = obj->device ();
     _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );
   }
 }
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_ERROR )
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->error (  ) );
+    hb_retni( (int) obj->error () );
   }
 }
 
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_ERRORSTRING )
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->errorString (  );
+    QString str1 = obj->errorString ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_FILENAME )
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->fileName (  );
+    QString str1 = obj->fileName ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_FORMAT )
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->format (  ) );
+    QByteArray * ptr = new QByteArray( obj->format () );
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_GAMMA )
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    float r = obj->gamma (  );
+    float r = obj->gamma ();
     hb_retnd( r );
   }
 }
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_QUALITY )
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->quality (  ) );
+    hb_retni( obj->quality () );
   }
 }
 
@@ -402,7 +402,7 @@ QList<QByteArray> supportedImageFormats ()
 */
 HB_FUNC_STATIC( QIMAGEWRITER_SUPPORTEDIMAGEFORMATS )
 {
-  QList<QByteArray> list = QImageWriter::supportedImageFormats (  );
+  QList<QByteArray> list = QImageWriter::supportedImageFormats ();
   PHB_DYNS pDynSym;
   #ifdef __XHARBOUR__
   pDynSym = hb_dynsymFind( "QBYTEARRAY" );

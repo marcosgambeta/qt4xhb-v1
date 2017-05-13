@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QABSTRACTFONTENGINE_CAPABILITIES )
   QAbstractFontEngine * obj = (QAbstractFontEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->capabilities (  ) );
+    hb_retni( (int) obj->capabilities () );
   }
 }
 

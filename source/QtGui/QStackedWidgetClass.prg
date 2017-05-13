@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_COUNT )
   QStackedWidget * obj = (QStackedWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->count (  ) );
+    hb_retni( obj->count () );
   }
 }
 
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_CURRENTINDEX )
   QStackedWidget * obj = (QStackedWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->currentIndex (  ) );
+    hb_retni( obj->currentIndex () );
   }
 }
 
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_CURRENTWIDGET )
   QStackedWidget * obj = (QStackedWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * ptr = obj->currentWidget (  );
+    QWidget * ptr = obj->currentWidget ();
     _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }

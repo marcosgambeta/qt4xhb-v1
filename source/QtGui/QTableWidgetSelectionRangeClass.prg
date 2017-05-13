@@ -56,7 +56,7 @@ QTableWidgetSelectionRange ()
 HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_NEW1 )
 {
   QTableWidgetSelectionRange * o = NULL;
-  o = new QTableWidgetSelectionRange (  );
+  o = new QTableWidgetSelectionRange ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_BOTTOMROW )
   QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->bottomRow (  ) );
+    hb_retni( obj->bottomRow () );
   }
 }
 
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_COLUMNCOUNT )
   QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->columnCount (  ) );
+    hb_retni( obj->columnCount () );
   }
 }
 
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_LEFTCOLUMN )
   QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->leftColumn (  ) );
+    hb_retni( obj->leftColumn () );
   }
 }
 
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_RIGHTCOLUMN )
   QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->rightColumn (  ) );
+    hb_retni( obj->rightColumn () );
   }
 }
 
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_ROWCOUNT )
   QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->rowCount (  ) );
+    hb_retni( obj->rowCount () );
   }
 }
 
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_TOPROW )
   QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->topRow (  ) );
+    hb_retni( obj->topRow () );
   }
 }
 

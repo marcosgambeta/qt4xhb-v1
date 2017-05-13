@@ -55,7 +55,7 @@ QLinearGradient()
 HB_FUNC_STATIC( QLINEARGRADIENT_NEW1 )
 {
   QLinearGradient * o = NULL;
-  o = new QLinearGradient (  );
+  o = new QLinearGradient ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QLINEARGRADIENT_FINALSTOP )
   QLinearGradient * obj = (QLinearGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->finalStop (  ) );
+    QPointF * ptr = new QPointF( obj->finalStop () );
     _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QLINEARGRADIENT_START )
   QLinearGradient * obj = (QLinearGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->start (  ) );
+    QPointF * ptr = new QPointF( obj->start () );
     _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }

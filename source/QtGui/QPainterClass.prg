@@ -266,7 +266,7 @@ QPainter ()
 HB_FUNC_STATIC( QPAINTER_NEW1 )
 {
   QPainter * o = NULL;
-  o = new QPainter (  );
+  o = new QPainter ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QPAINTER_BACKGROUND )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QBrush * ptr = &obj->background (  );
+    const QBrush * ptr = &obj->background ();
     _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
   }
 }
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QPAINTER_BACKGROUNDMODE )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->backgroundMode (  ) );
+    hb_retni( (int) obj->backgroundMode () );
   }
 }
 
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QPAINTER_BEGINNATIVEPAINTING )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->beginNativePainting (  );
+    obj->beginNativePainting ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QPAINTER_BRUSH )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QBrush * ptr = &obj->brush (  );
+    const QBrush * ptr = &obj->brush ();
     _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
   }
 }
@@ -487,7 +487,7 @@ HB_FUNC_STATIC( QPAINTER_BRUSHORIGIN )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPoint * ptr = new QPoint( obj->brushOrigin (  ) );
+    QPoint * ptr = new QPoint( obj->brushOrigin () );
     _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QPAINTER_CLIPPATH )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPainterPath * ptr = new QPainterPath( obj->clipPath (  ) );
+    QPainterPath * ptr = new QPainterPath( obj->clipPath () );
     _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QPAINTER_CLIPREGION )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRegion * ptr = new QRegion( obj->clipRegion (  ) );
+    QRegion * ptr = new QRegion( obj->clipRegion () );
     _qt4xhb_createReturnClass ( ptr, "QREGION", true );
   }
 }
@@ -529,7 +529,7 @@ HB_FUNC_STATIC( QPAINTER_COMBINEDTRANSFORM )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTransform * ptr = new QTransform( obj->combinedTransform (  ) );
+    QTransform * ptr = new QTransform( obj->combinedTransform () );
     _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );
   }
 }
@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QPAINTER_COMPOSITIONMODE )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->compositionMode (  ) );
+    hb_retni( (int) obj->compositionMode () );
   }
 }
 
@@ -556,7 +556,7 @@ HB_FUNC_STATIC( QPAINTER_DEVICE )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPaintDevice * ptr = obj->device (  );
+    QPaintDevice * ptr = obj->device ();
     _qt4xhb_createReturnClass ( ptr, "QPAINTDEVICE" );
   }
 }
@@ -570,7 +570,7 @@ HB_FUNC_STATIC( QPAINTER_DEVICETRANSFORM )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QTransform * ptr = &obj->deviceTransform (  );
+    const QTransform * ptr = &obj->deviceTransform ();
     _qt4xhb_createReturnClass ( ptr, "QTRANSFORM" );
   }
 }
@@ -2434,7 +2434,7 @@ HB_FUNC_STATIC( QPAINTER_END )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->end (  ) );
+    hb_retl( obj->end () );
   }
 }
 
@@ -2447,7 +2447,7 @@ HB_FUNC_STATIC( QPAINTER_ENDNATIVEPAINTING )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->endNativePainting (  );
+    obj->endNativePainting ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -2814,7 +2814,7 @@ HB_FUNC_STATIC( QPAINTER_FONT )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QFont * ptr = &obj->font (  );
+    const QFont * ptr = &obj->font ();
     _qt4xhb_createReturnClass ( ptr, "QFONT" );
   }
 }
@@ -2828,7 +2828,7 @@ HB_FUNC_STATIC( QPAINTER_FONTINFO )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QFontInfo * ptr = new QFontInfo( obj->fontInfo (  ) );
+    QFontInfo * ptr = new QFontInfo( obj->fontInfo () );
     _qt4xhb_createReturnClass ( ptr, "QFONTINFO", true );
   }
 }
@@ -2842,7 +2842,7 @@ HB_FUNC_STATIC( QPAINTER_FONTMETRICS )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QFontMetrics * ptr = new QFontMetrics( obj->fontMetrics (  ) );
+    QFontMetrics * ptr = new QFontMetrics( obj->fontMetrics () );
     _qt4xhb_createReturnClass ( ptr, "QFONTMETRICS", true );
   }
 }
@@ -2856,7 +2856,7 @@ HB_FUNC_STATIC( QPAINTER_HASCLIPPING )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasClipping (  ) );
+    hb_retl( obj->hasClipping () );
   }
 }
 
@@ -2884,7 +2884,7 @@ HB_FUNC_STATIC( QPAINTER_ISACTIVE )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isActive (  ) );
+    hb_retl( obj->isActive () );
   }
 }
 
@@ -2897,7 +2897,7 @@ HB_FUNC_STATIC( QPAINTER_LAYOUTDIRECTION )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->layoutDirection (  ) );
+    hb_retni( (int) obj->layoutDirection () );
   }
 }
 
@@ -2910,7 +2910,7 @@ HB_FUNC_STATIC( QPAINTER_OPACITY )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->opacity (  );
+    qreal r = obj->opacity ();
     hb_retnd( r );
   }
 }
@@ -2924,7 +2924,7 @@ HB_FUNC_STATIC( QPAINTER_PAINTENGINE )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPaintEngine * ptr = obj->paintEngine (  );
+    QPaintEngine * ptr = obj->paintEngine ();
     _qt4xhb_createReturnClass ( ptr, "QPAINTENGINE" );
   }
 }
@@ -2938,7 +2938,7 @@ HB_FUNC_STATIC( QPAINTER_PEN )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QPen * ptr = &obj->pen (  );
+    const QPen * ptr = &obj->pen ();
     _qt4xhb_createReturnClass ( ptr, "QPEN" );
   }
 }
@@ -2952,7 +2952,7 @@ HB_FUNC_STATIC( QPAINTER_RENDERHINTS )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->renderHints (  ) );
+    hb_retni( (int) obj->renderHints () );
   }
 }
 
@@ -2965,7 +2965,7 @@ HB_FUNC_STATIC( QPAINTER_RESETTRANSFORM )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->resetTransform (  );
+    obj->resetTransform ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -2979,7 +2979,7 @@ HB_FUNC_STATIC( QPAINTER_RESTORE )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->restore (  );
+    obj->restore ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -3007,7 +3007,7 @@ HB_FUNC_STATIC( QPAINTER_SAVE )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->save (  );
+    obj->save ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -3645,7 +3645,7 @@ HB_FUNC_STATIC( QPAINTER_TRANSFORM )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QTransform * ptr = &obj->transform (  );
+    const QTransform * ptr = &obj->transform ();
     _qt4xhb_createReturnClass ( ptr, "QTRANSFORM" );
   }
 }
@@ -3723,7 +3723,7 @@ HB_FUNC_STATIC( QPAINTER_VIEWTRANSFORMENABLED )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->viewTransformEnabled (  ) );
+    hb_retl( obj->viewTransformEnabled () );
   }
 }
 
@@ -3736,7 +3736,7 @@ HB_FUNC_STATIC( QPAINTER_VIEWPORT )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRect * ptr = new QRect( obj->viewport (  ) );
+    QRect * ptr = new QRect( obj->viewport () );
     _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -3750,7 +3750,7 @@ HB_FUNC_STATIC( QPAINTER_WINDOW )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRect * ptr = new QRect( obj->window (  ) );
+    QRect * ptr = new QRect( obj->window () );
     _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -3764,7 +3764,7 @@ HB_FUNC_STATIC( QPAINTER_WORLDMATRIXENABLED )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->worldMatrixEnabled (  ) );
+    hb_retl( obj->worldMatrixEnabled () );
   }
 }
 
@@ -3777,7 +3777,7 @@ HB_FUNC_STATIC( QPAINTER_WORLDTRANSFORM )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QTransform * ptr = &obj->worldTransform (  );
+    const QTransform * ptr = &obj->worldTransform ();
     _qt4xhb_createReturnClass ( ptr, "QTRANSFORM" );
   }
 }

@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_BUTTONS )
   QButtonGroup * obj = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QList<QAbstractButton *> list = obj->buttons (  );
+    QList<QAbstractButton *> list = obj->buttons ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QABSTRACTBUTTON" );
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_CHECKEDBUTTON )
   QButtonGroup * obj = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QAbstractButton * ptr = obj->checkedButton (  );
+    QAbstractButton * ptr = obj->checkedButton ();
     _qt4xhb_createReturnClass ( ptr, "QABSTRACTBUTTON" );
   }
 }
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_CHECKEDID )
   QButtonGroup * obj = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->checkedId (  ) );
+    hb_retni( obj->checkedId () );
   }
 }
 
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_EXCLUSIVE )
   QButtonGroup * obj = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->exclusive (  ) );
+    hb_retl( obj->exclusive () );
   }
 }
 

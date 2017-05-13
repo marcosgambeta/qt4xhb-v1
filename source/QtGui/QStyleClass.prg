@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QSTYLE_PROXY )
   QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QStyle * ptr = obj->proxy (  );
+    const QStyle * ptr = obj->proxy ();
     _qt4xhb_createReturnClass ( ptr, "QSTYLE" );
   }
 }
@@ -428,7 +428,7 @@ HB_FUNC_STATIC( QSTYLE_STANDARDPALETTE )
   QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPalette * ptr = new QPalette( obj->standardPalette (  ) );
+    QPalette * ptr = new QPalette( obj->standardPalette () );
     _qt4xhb_createReturnClass ( ptr, "QPALETTE", true );
   }
 }

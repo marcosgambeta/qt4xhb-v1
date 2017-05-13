@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_REGEXP )
   QRegExpValidator * obj = (QRegExpValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRegExp * ptr = new QRegExp( obj->regExp (  ) );
+    QRegExp * ptr = new QRegExp( obj->regExp () );
     _qt4xhb_createReturnClass ( ptr, "QREGEXP", true );
   }
 }

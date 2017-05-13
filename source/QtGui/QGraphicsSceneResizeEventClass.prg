@@ -46,7 +46,7 @@ QGraphicsSceneMoveEvent ()
 HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_NEW )
 {
   QGraphicsSceneResizeEvent * o = NULL;
-  o = new QGraphicsSceneResizeEvent (  );
+  o = new QGraphicsSceneResizeEvent ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_NEWSIZE )
   QGraphicsSceneResizeEvent * obj = (QGraphicsSceneResizeEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSizeF * ptr = new QSizeF( obj->newSize (  ) );
+    QSizeF * ptr = new QSizeF( obj->newSize () );
     _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_OLDSIZE )
   QGraphicsSceneResizeEvent * obj = (QGraphicsSceneResizeEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSizeF * ptr = new QSizeF( obj->oldSize (  ) );
+    QSizeF * ptr = new QSizeF( obj->oldSize () );
     _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }

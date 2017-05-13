@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_BOTTOM )
   QIntValidator * obj = (QIntValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->bottom (  ) );
+    hb_retni( obj->bottom () );
   }
 }
 
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_TOP )
   QIntValidator * obj = (QIntValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->top (  ) );
+    hb_retni( obj->top () );
   }
 }
 

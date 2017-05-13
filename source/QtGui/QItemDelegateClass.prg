@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QITEMDELEGATE_HASCLIPPING )
   QItemDelegate * obj = (QItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasClipping (  ) );
+    hb_retl( obj->hasClipping () );
   }
 }
 
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QITEMDELEGATE_ITEMEDITORFACTORY )
   QItemDelegate * obj = (QItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QItemEditorFactory * ptr = obj->itemEditorFactory (  );
+    QItemEditorFactory * ptr = obj->itemEditorFactory ();
     _qt4xhb_createReturnClass ( ptr, "QITEMEDITORFACTORY" );
   }
 }

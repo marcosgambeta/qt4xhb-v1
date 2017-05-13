@@ -54,7 +54,7 @@ QFileIconProvider()
 HB_FUNC_STATIC( QFILEICONPROVIDER_NEW )
 {
   QFileIconProvider * o = NULL;
-  o = new QFileIconProvider (  );
+  o = new QFileIconProvider ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

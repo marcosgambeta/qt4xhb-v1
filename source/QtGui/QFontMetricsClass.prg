@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QFONTMETRICS_ASCENT )
   QFontMetrics * obj = (QFontMetrics *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->ascent (  ) );
+    hb_retni( obj->ascent () );
   }
 }
 
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QFONTMETRICS_AVERAGECHARWIDTH )
   QFontMetrics * obj = (QFontMetrics *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->averageCharWidth (  ) );
+    hb_retni( obj->averageCharWidth () );
   }
 }
 
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QFONTMETRICS_DESCENT )
   QFontMetrics * obj = (QFontMetrics *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->descent (  ) );
+    hb_retni( obj->descent () );
   }
 }
 
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QFONTMETRICS_HEIGHT )
   QFontMetrics * obj = (QFontMetrics *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->height (  ) );
+    hb_retni( obj->height () );
   }
 }
 
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QFONTMETRICS_LEADING )
   QFontMetrics * obj = (QFontMetrics *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->leading (  ) );
+    hb_retni( obj->leading () );
   }
 }
 
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QFONTMETRICS_LINESPACING )
   QFontMetrics * obj = (QFontMetrics *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->lineSpacing (  ) );
+    hb_retni( obj->lineSpacing () );
   }
 }
 
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QFONTMETRICS_LINEWIDTH )
   QFontMetrics * obj = (QFontMetrics *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->lineWidth (  ) );
+    hb_retni( obj->lineWidth () );
   }
 }
 
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QFONTMETRICS_MAXWIDTH )
   QFontMetrics * obj = (QFontMetrics *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->maxWidth (  ) );
+    hb_retni( obj->maxWidth () );
   }
 }
 
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QFONTMETRICS_MINLEFTBEARING )
   QFontMetrics * obj = (QFontMetrics *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->minLeftBearing (  ) );
+    hb_retni( obj->minLeftBearing () );
   }
 }
 
@@ -430,7 +430,7 @@ HB_FUNC_STATIC( QFONTMETRICS_MINRIGHTBEARING )
   QFontMetrics * obj = (QFontMetrics *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->minRightBearing (  ) );
+    hb_retni( obj->minRightBearing () );
   }
 }
 
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QFONTMETRICS_OVERLINEPOS )
   QFontMetrics * obj = (QFontMetrics *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->overlinePos (  ) );
+    hb_retni( obj->overlinePos () );
   }
 }
 
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QFONTMETRICS_STRIKEOUTPOS )
   QFontMetrics * obj = (QFontMetrics *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->strikeOutPos (  ) );
+    hb_retni( obj->strikeOutPos () );
   }
 }
 
@@ -513,7 +513,7 @@ HB_FUNC_STATIC( QFONTMETRICS_UNDERLINEPOS )
   QFontMetrics * obj = (QFontMetrics *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->underlinePos (  ) );
+    hb_retni( obj->underlinePos () );
   }
 }
 
@@ -568,7 +568,7 @@ HB_FUNC_STATIC( QFONTMETRICS_XHEIGHT )
   QFontMetrics * obj = (QFontMetrics *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->xHeight (  ) );
+    hb_retni( obj->xHeight () );
   }
 }
 

@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QCOMBOBOX_COMPLETER )
   QComboBox * obj = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QCompleter * ptr = obj->completer (  );
+    QCompleter * ptr = obj->completer ();
     _qt4xhb_createReturnClass ( ptr, "QCOMPLETER" );
   }
 }
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QCOMBOBOX_COUNT )
   QComboBox * obj = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->count (  ) );
+    hb_retni( obj->count () );
   }
 }
 
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QCOMBOBOX_CURRENTINDEX )
   QComboBox * obj = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->currentIndex (  ) );
+    hb_retni( obj->currentIndex () );
   }
 }
 
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QCOMBOBOX_CURRENTTEXT )
   QComboBox * obj = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->currentText (  );
+    QString str1 = obj->currentText ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QCOMBOBOX_DUPLICATESENABLED )
   QComboBox * obj = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->duplicatesEnabled (  ) );
+    hb_retl( obj->duplicatesEnabled () );
   }
 }
 
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QCOMBOBOX_HASFRAME )
   QComboBox * obj = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasFrame (  ) );
+    hb_retl( obj->hasFrame () );
   }
 }
 
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QCOMBOBOX_HIDEPOPUP )
   QComboBox * obj = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->hidePopup (  );
+    obj->hidePopup ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ICONSIZE )
   QComboBox * obj = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->iconSize (  ) );
+    QSize * ptr = new QSize( obj->iconSize () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QCOMBOBOX_INSERTPOLICY )
   QComboBox * obj = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->insertPolicy (  ) );
+    hb_retni( (int) obj->insertPolicy () );
   }
 }
 
@@ -444,7 +444,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ISEDITABLE )
   QComboBox * obj = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isEditable (  ) );
+    hb_retl( obj->isEditable () );
   }
 }
 
@@ -472,7 +472,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ITEMDELEGATE )
   QComboBox * obj = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QAbstractItemDelegate * ptr = obj->itemDelegate (  );
+    QAbstractItemDelegate * ptr = obj->itemDelegate ();
     _qt4xhb_createReturnClass ( ptr, "QABSTRACTITEMDELEGATE" );
   }
 }
@@ -516,7 +516,7 @@ HB_FUNC_STATIC( QCOMBOBOX_LINEEDIT )
   QComboBox * obj = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QLineEdit * ptr = obj->lineEdit (  );
+    QLineEdit * ptr = obj->lineEdit ();
     _qt4xhb_createReturnClass ( ptr, "QLINEEDIT" );
   }
 }
@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QCOMBOBOX_MAXCOUNT )
   QComboBox * obj = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->maxCount (  ) );
+    hb_retni( obj->maxCount () );
   }
 }
 
@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QCOMBOBOX_MAXVISIBLEITEMS )
   QComboBox * obj = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->maxVisibleItems (  ) );
+    hb_retni( obj->maxVisibleItems () );
   }
 }
 
@@ -556,7 +556,7 @@ HB_FUNC_STATIC( QCOMBOBOX_MINIMUMCONTENTSLENGTH )
   QComboBox * obj = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->minimumContentsLength (  ) );
+    hb_retni( obj->minimumContentsLength () );
   }
 }
 
@@ -569,7 +569,7 @@ HB_FUNC_STATIC( QCOMBOBOX_MODEL )
   QComboBox * obj = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QAbstractItemModel * ptr = obj->model (  );
+    QAbstractItemModel * ptr = obj->model ();
     _qt4xhb_createReturnClass ( ptr, "QABSTRACTITEMMODEL" );
   }
 }
@@ -583,7 +583,7 @@ HB_FUNC_STATIC( QCOMBOBOX_MODELCOLUMN )
   QComboBox * obj = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->modelColumn (  ) );
+    hb_retni( obj->modelColumn () );
   }
 }
 
@@ -611,7 +611,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ROOTMODELINDEX )
   QComboBox * obj = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QModelIndex * ptr = new QModelIndex( obj->rootModelIndex (  ) );
+    QModelIndex * ptr = new QModelIndex( obj->rootModelIndex () );
     _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
@@ -924,7 +924,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SHOWPOPUP )
   QComboBox * obj = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->showPopup (  );
+    obj->showPopup ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -938,7 +938,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SIZEADJUSTPOLICY )
   QComboBox * obj = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->sizeAdjustPolicy (  ) );
+    hb_retni( (int) obj->sizeAdjustPolicy () );
   }
 }
 
@@ -951,7 +951,7 @@ HB_FUNC_STATIC( QCOMBOBOX_VALIDATOR )
   QComboBox * obj = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QValidator * ptr = obj->validator (  );
+    const QValidator * ptr = obj->validator ();
     _qt4xhb_createReturnClass ( ptr, "QVALIDATOR" );
   }
 }
@@ -965,7 +965,7 @@ HB_FUNC_STATIC( QCOMBOBOX_VIEW )
   QComboBox * obj = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QAbstractItemView * ptr = obj->view (  );
+    QAbstractItemView * ptr = obj->view ();
     _qt4xhb_createReturnClass ( ptr, "QABSTRACTITEMVIEW" );
   }
 }
@@ -993,7 +993,7 @@ HB_FUNC_STATIC( QCOMBOBOX_MINIMUMSIZEHINT )
   QComboBox * obj = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
+    QSize * ptr = new QSize( obj->minimumSizeHint () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -1007,7 +1007,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SIZEHINT )
   QComboBox * obj = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -1021,7 +1021,7 @@ HB_FUNC_STATIC( QCOMBOBOX_CLEAR )
   QComboBox * obj = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1035,7 +1035,7 @@ HB_FUNC_STATIC( QCOMBOBOX_CLEAREDITTEXT )
   QComboBox * obj = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clearEditText (  );
+    obj->clearEditText ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

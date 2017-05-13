@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_DYNAMICSORTFILTER )
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->dynamicSortFilter (  ) );
+    hb_retl( obj->dynamicSortFilter () );
   }
 }
 
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_FILTERCASESENSITIVITY )
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->filterCaseSensitivity (  ) );
+    hb_retni( (int) obj->filterCaseSensitivity () );
   }
 }
 
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_FILTERKEYCOLUMN )
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->filterKeyColumn (  ) );
+    hb_retni( obj->filterKeyColumn () );
   }
 }
 
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_FILTERREGEXP )
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRegExp * ptr = new QRegExp( obj->filterRegExp (  ) );
+    QRegExp * ptr = new QRegExp( obj->filterRegExp () );
     _qt4xhb_createReturnClass ( ptr, "QREGEXP", true );
   }
 }
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_FILTERROLE )
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->filterRole (  ) );
+    hb_retni( obj->filterRole () );
   }
 }
 
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_ISSORTLOCALEAWARE )
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isSortLocaleAware (  ) );
+    hb_retl( obj->isSortLocaleAware () );
   }
 }
 
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SORTCASESENSITIVITY )
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->sortCaseSensitivity (  ) );
+    hb_retni( (int) obj->sortCaseSensitivity () );
   }
 }
 
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SORTCOLUMN )
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->sortColumn (  ) );
+    hb_retni( obj->sortColumn () );
   }
 }
 
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SORTORDER )
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->sortOrder (  ) );
+    hb_retni( (int) obj->sortOrder () );
   }
 }
 
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SORTROLE )
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->sortRole (  ) );
+    hb_retni( obj->sortRole () );
   }
 }
 
@@ -691,7 +691,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MIMETYPES )
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList strl = obj->mimeTypes (  );
+    QStringList strl = obj->mimeTypes ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -852,7 +852,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SUPPORTEDDROPACTIONS )
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->supportedDropActions (  ) );
+    hb_retni( (int) obj->supportedDropActions () );
   }
 }
 
@@ -865,7 +865,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_INVALIDATE )
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->invalidate (  );
+    obj->invalidate ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

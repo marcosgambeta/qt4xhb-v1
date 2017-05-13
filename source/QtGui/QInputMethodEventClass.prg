@@ -48,7 +48,7 @@ QInputMethodEvent ()
 HB_FUNC_STATIC( QINPUTMETHODEVENT_NEW1 )
 {
   QInputMethodEvent * o = NULL;
-  o = new QInputMethodEvent (  );
+  o = new QInputMethodEvent ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_COMMITSTRING )
   QInputMethodEvent * obj = (QInputMethodEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->commitString (  );
+    QString str1 = obj->commitString ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_PREEDITSTRING )
   QInputMethodEvent * obj = (QInputMethodEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->preeditString (  );
+    QString str1 = obj->preeditString ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_REPLACEMENTLENGTH )
   QInputMethodEvent * obj = (QInputMethodEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->replacementLength (  ) );
+    hb_retni( obj->replacementLength () );
   }
 }
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_REPLACEMENTSTART )
   QInputMethodEvent * obj = (QInputMethodEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->replacementStart (  ) );
+    hb_retni( obj->replacementStart () );
   }
 }
 

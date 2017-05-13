@@ -100,7 +100,7 @@ QGridLayout ()
 HB_FUNC_STATIC( QGRIDLAYOUT_NEW2 )
 {
   QGridLayout * o = NULL;
-  o = new QGridLayout (  );
+  o = new QGridLayout ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_COLUMNCOUNT )
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->columnCount (  ) );
+    hb_retni( obj->columnCount () );
   }
 }
 
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_HORIZONTALSPACING )
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->horizontalSpacing (  ) );
+    hb_retni( obj->horizontalSpacing () );
   }
 }
 
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ORIGINCORNER )
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->originCorner (  ) );
+    hb_retni( (int) obj->originCorner () );
   }
 }
 
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ROWCOUNT )
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->rowCount (  ) );
+    hb_retni( obj->rowCount () );
   }
 }
 
@@ -559,7 +559,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SPACING )
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->spacing (  ) );
+    hb_retni( obj->spacing () );
   }
 }
 
@@ -572,7 +572,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_VERTICALSPACING )
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->verticalSpacing (  ) );
+    hb_retni( obj->verticalSpacing () );
   }
 }
 
@@ -585,7 +585,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_COUNT )
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->count (  ) );
+    hb_retni( obj->count () );
   }
 }
 
@@ -598,7 +598,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_EXPANDINGDIRECTIONS )
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->expandingDirections (  ) );
+    hb_retni( (int) obj->expandingDirections () );
   }
 }
 
@@ -611,7 +611,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_HASHEIGHTFORWIDTH )
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasHeightForWidth (  ) );
+    hb_retl( obj->hasHeightForWidth () );
   }
 }
 
@@ -638,7 +638,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_INVALIDATE )
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->invalidate (  );
+    obj->invalidate ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -667,7 +667,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_MAXIMUMSIZE )
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->maximumSize (  ) );
+    QSize * ptr = new QSize( obj->maximumSize () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -695,7 +695,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_MINIMUMSIZE )
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->minimumSize (  ) );
+    QSize * ptr = new QSize( obj->minimumSize () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -724,7 +724,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SIZEHINT )
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }

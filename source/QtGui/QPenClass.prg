@@ -80,7 +80,7 @@ QPen ()
 HB_FUNC_STATIC( QPEN_NEW1 )
 {
   QPen * o = NULL;
-  o = new QPen (  );
+  o = new QPen ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QPEN_BRUSH )
   QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QBrush * ptr = new QBrush( obj->brush (  ) );
+    QBrush * ptr = new QBrush( obj->brush () );
     _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
   }
 }
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QPEN_CAPSTYLE )
   QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->capStyle (  ) );
+    hb_retni( (int) obj->capStyle () );
   }
 }
 
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QPEN_COLOR )
   QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QColor * ptr = new QColor( obj->color (  ) );
+    QColor * ptr = new QColor( obj->color () );
     _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QPEN_DASHOFFSET )
   QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->dashOffset (  );
+    qreal r = obj->dashOffset ();
     hb_retnd( r );
   }
 }
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QPEN_DASHPATTERN )
   QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVector<qreal> list = obj->dashPattern (  );
+    QVector<qreal> list = obj->dashPattern ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QPEN_ISCOSMETIC )
   QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isCosmetic (  ) );
+    hb_retl( obj->isCosmetic () );
   }
 }
 
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QPEN_ISSOLID )
   QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isSolid (  ) );
+    hb_retl( obj->isSolid () );
   }
 }
 
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QPEN_JOINSTYLE )
   QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->joinStyle (  ) );
+    hb_retni( (int) obj->joinStyle () );
   }
 }
 
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QPEN_MITERLIMIT )
   QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->miterLimit (  );
+    qreal r = obj->miterLimit ();
     hb_retnd( r );
   }
 }
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QPEN_STYLE )
   QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->style (  ) );
+    hb_retni( (int) obj->style () );
   }
 }
 
@@ -508,7 +508,7 @@ HB_FUNC_STATIC( QPEN_WIDTH )
   QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->width (  ) );
+    hb_retni( obj->width () );
   }
 }
 
@@ -521,7 +521,7 @@ HB_FUNC_STATIC( QPEN_WIDTHF )
   QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->widthF (  );
+    qreal r = obj->widthF ();
     hb_retnd( r );
   }
 }

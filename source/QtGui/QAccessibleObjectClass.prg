@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_ISVALID )
   QAccessibleObject * obj = (QAccessibleObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_OBJECT )
   QAccessibleObject * obj = (QAccessibleObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * ptr = obj->object (  );
+    QObject * ptr = obj->object ();
     _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }

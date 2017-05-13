@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_CLEARMAPPING )
   QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clearMapping (  );
+    obj->clearMapping ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_CURRENTINDEX )
   QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->currentIndex (  ) );
+    hb_retni( obj->currentIndex () );
   }
 }
 
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ITEMDELEGATE )
   QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QAbstractItemDelegate * ptr = obj->itemDelegate (  );
+    QAbstractItemDelegate * ptr = obj->itemDelegate ();
     _qt4xhb_createReturnClass ( ptr, "QABSTRACTITEMDELEGATE" );
   }
 }
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_MODEL )
   QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QAbstractItemModel * ptr = obj->model (  );
+    QAbstractItemModel * ptr = obj->model ();
     _qt4xhb_createReturnClass ( ptr, "QABSTRACTITEMMODEL" );
   }
 }
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ORIENTATION )
   QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->orientation (  ) );
+    hb_retni( (int) obj->orientation () );
   }
 }
 
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ROOTINDEX )
   QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QModelIndex * ptr = new QModelIndex( obj->rootIndex (  ) );
+    QModelIndex * ptr = new QModelIndex( obj->rootIndex () );
     _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SUBMITPOLICY )
   QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->submitPolicy (  ) );
+    hb_retni( (int) obj->submitPolicy () );
   }
 }
 
@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_REVERT )
   QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->revert (  );
+    obj->revert ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SUBMIT )
   QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->submit (  ) );
+    hb_retl( obj->submit () );
   }
 }
 
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOFIRST )
   QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->toFirst (  );
+    obj->toFirst ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -456,7 +456,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOLAST )
   QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->toLast (  );
+    obj->toLast ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_TONEXT )
   QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->toNext (  );
+    obj->toNext ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -484,7 +484,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOPREVIOUS )
   QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->toPrevious (  );
+    obj->toPrevious ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

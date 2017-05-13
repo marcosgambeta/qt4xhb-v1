@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QTEXTFRAME_CHILDFRAMES )
   QTextFrame * obj = (QTextFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QList<QTextFrame *> list = obj->childFrames (  );
+    QList<QTextFrame *> list = obj->childFrames ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QTEXTFRAME" );
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QTEXTFRAME_FIRSTCURSORPOSITION )
   QTextFrame * obj = (QTextFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTextCursor * ptr = new QTextCursor( obj->firstCursorPosition (  ) );
+    QTextCursor * ptr = new QTextCursor( obj->firstCursorPosition () );
     _qt4xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
   }
 }
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QTEXTFRAME_FIRSTPOSITION )
   QTextFrame * obj = (QTextFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->firstPosition (  ) );
+    hb_retni( obj->firstPosition () );
   }
 }
 
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QTEXTFRAME_FRAMEFORMAT )
   QTextFrame * obj = (QTextFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTextFrameFormat * ptr = new QTextFrameFormat( obj->frameFormat (  ) );
+    QTextFrameFormat * ptr = new QTextFrameFormat( obj->frameFormat () );
     _qt4xhb_createReturnClass ( ptr, "QTEXTFRAMEFORMAT" );
   }
 }
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QTEXTFRAME_LASTCURSORPOSITION )
   QTextFrame * obj = (QTextFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTextCursor * ptr = new QTextCursor( obj->lastCursorPosition (  ) );
+    QTextCursor * ptr = new QTextCursor( obj->lastCursorPosition () );
     _qt4xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
   }
 }
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QTEXTFRAME_LASTPOSITION )
   QTextFrame * obj = (QTextFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->lastPosition (  ) );
+    hb_retni( obj->lastPosition () );
   }
 }
 
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QTEXTFRAME_PARENTFRAME )
   QTextFrame * obj = (QTextFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTextFrame * ptr = obj->parentFrame (  );
+    QTextFrame * ptr = obj->parentFrame ();
     _qt4xhb_createReturnClass ( ptr, "QTEXTFRAME" );
   }
 }

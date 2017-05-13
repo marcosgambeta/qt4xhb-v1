@@ -66,7 +66,7 @@ QGlyphRun ()
 HB_FUNC_STATIC( QGLYPHRUN_NEW1 )
 {
   QGlyphRun * o = NULL;
-  o = new QGlyphRun (  );
+  o = new QGlyphRun ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QGLYPHRUN_CLEAR )
   QGlyphRun * obj = (QGlyphRun *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QGLYPHRUN_GLYPHINDEXES )
   QGlyphRun * obj = (QGlyphRun *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVector<quint32> list = obj->glyphIndexes (  );
+    QVector<quint32> list = obj->glyphIndexes ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QGLYPHRUN_OVERLINE )
   QGlyphRun * obj = (QGlyphRun *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->overline (  ) );
+    hb_retl( obj->overline () );
   }
 }
 
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QGLYPHRUN_POSITIONS )
   QGlyphRun * obj = (QGlyphRun *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVector<QPointF> list = obj->positions (  );
+    QVector<QPointF> list = obj->positions ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QPOINTF" );
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QGLYPHRUN_RAWFONT )
   QGlyphRun * obj = (QGlyphRun *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRawFont * ptr = new QRawFont( obj->rawFont (  ) );
+    QRawFont * ptr = new QRawFont( obj->rawFont () );
     _qt4xhb_createReturnClass ( ptr, "QRAWFONT", true );
   }
 }
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QGLYPHRUN_STRIKEOUT )
   QGlyphRun * obj = (QGlyphRun *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->strikeOut (  ) );
+    hb_retl( obj->strikeOut () );
   }
 }
 
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QGLYPHRUN_UNDERLINE )
   QGlyphRun * obj = (QGlyphRun *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->underline (  ) );
+    hb_retl( obj->underline () );
   }
 }
 

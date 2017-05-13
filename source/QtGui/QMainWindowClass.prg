@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QMAINWINDOW_CENTRALWIDGET )
   QMainWindow * obj = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * ptr = obj->centralWidget (  );
+    QWidget * ptr = obj->centralWidget ();
     _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QMAINWINDOW_CREATEPOPUPMENU )
   QMainWindow * obj = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QMenu * ptr = obj->createPopupMenu (  );
+    QMenu * ptr = obj->createPopupMenu ();
     _qt4xhb_createReturnClass ( ptr, "QMENU" );
   }
 }
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QMAINWINDOW_DOCKOPTIONS )
   QMainWindow * obj = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->dockOptions (  ) );
+    hb_retni( (int) obj->dockOptions () );
   }
 }
 
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QMAINWINDOW_DOCUMENTMODE )
   QMainWindow * obj = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->documentMode (  ) );
+    hb_retl( obj->documentMode () );
   }
 }
 
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ICONSIZE )
   QMainWindow * obj = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->iconSize (  ) );
+    QSize * ptr = new QSize( obj->iconSize () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ISANIMATED )
   QMainWindow * obj = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isAnimated (  ) );
+    hb_retl( obj->isAnimated () );
   }
 }
 
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ISDOCKNESTINGENABLED )
   QMainWindow * obj = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isDockNestingEnabled (  ) );
+    hb_retl( obj->isDockNestingEnabled () );
   }
 }
 
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QMAINWINDOW_MENUBAR )
   QMainWindow * obj = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QMenuBar * ptr = obj->menuBar (  );
+    QMenuBar * ptr = obj->menuBar ();
     _qt4xhb_createReturnClass ( ptr, "QMENUBAR" );
   }
 }
@@ -428,7 +428,7 @@ HB_FUNC_STATIC( QMAINWINDOW_MENUWIDGET )
   QMainWindow * obj = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * ptr = obj->menuWidget (  );
+    QWidget * ptr = obj->menuWidget ();
     _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
@@ -713,7 +713,7 @@ HB_FUNC_STATIC( QMAINWINDOW_STATUSBAR )
   QMainWindow * obj = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStatusBar * ptr = obj->statusBar (  );
+    QStatusBar * ptr = obj->statusBar ();
     _qt4xhb_createReturnClass ( ptr, "QSTATUSBAR" );
   }
 }
@@ -741,7 +741,7 @@ HB_FUNC_STATIC( QMAINWINDOW_TABSHAPE )
   QMainWindow * obj = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->tabShape (  ) );
+    hb_retni( (int) obj->tabShape () );
   }
 }
 
@@ -843,7 +843,7 @@ HB_FUNC_STATIC( QMAINWINDOW_TOOLBUTTONSTYLE )
   QMainWindow * obj = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->toolButtonStyle (  ) );
+    hb_retni( (int) obj->toolButtonStyle () );
   }
 }
 

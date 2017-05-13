@@ -41,7 +41,7 @@ QStyleHintReturnVariant ()
 HB_FUNC_STATIC( QSTYLEHINTRETURNVARIANT_NEW )
 {
   QStyleHintReturnVariant * o = NULL;
-  o = new QStyleHintReturnVariant (  );
+  o = new QStyleHintReturnVariant ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

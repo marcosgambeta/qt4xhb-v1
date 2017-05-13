@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QTABLETEVENT_POS )
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QPoint * ptr = &obj->pos (  );
+    const QPoint * ptr = &obj->pos ();
     _qt4xhb_createReturnClass ( ptr, "QPOINT" );
   }
 }
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QTABLETEVENT_GLOBALPOS )
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QPoint * ptr = &obj->globalPos (  );
+    const QPoint * ptr = &obj->globalPos ();
     _qt4xhb_createReturnClass ( ptr, "QPOINT" );
   }
 }
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QTABLETEVENT_HIRESGLOBALPOS )
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QPointF * ptr = &obj->hiResGlobalPos (  );
+    const QPointF * ptr = &obj->hiResGlobalPos ();
     _qt4xhb_createReturnClass ( ptr, "QPOINTF" );
   }
 }
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QTABLETEVENT_X )
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->x (  ) );
+    hb_retni( obj->x () );
   }
 }
 
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QTABLETEVENT_Y )
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->y (  ) );
+    hb_retni( obj->y () );
   }
 }
 
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QTABLETEVENT_GLOBALX )
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->globalX (  ) );
+    hb_retni( obj->globalX () );
   }
 }
 
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QTABLETEVENT_GLOBALY )
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->globalY (  ) );
+    hb_retni( obj->globalY () );
   }
 }
 
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QTABLETEVENT_HIRESGLOBALX )
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->hiResGlobalX (  );
+    qreal r = obj->hiResGlobalX ();
     hb_retnd( r );
   }
 }
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QTABLETEVENT_HIRESGLOBALY )
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->hiResGlobalY (  );
+    qreal r = obj->hiResGlobalY ();
     hb_retnd( r );
   }
 }
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QTABLETEVENT_DEVICE )
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->device (  ) );
+    hb_retni( (int) obj->device () );
   }
 }
 
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QTABLETEVENT_POINTERTYPE )
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->pointerType (  ) );
+    hb_retni( (int) obj->pointerType () );
   }
 }
 
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QTABLETEVENT_UNIQUEID )
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->uniqueId (  );
+    qint64 i = obj->uniqueId ();
     hb_retni( i );
   }
 }
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QTABLETEVENT_PRESSURE )
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->pressure (  );
+    qreal r = obj->pressure ();
     hb_retnd( r );
   }
 }
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QTABLETEVENT_Z )
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->z (  ) );
+    hb_retni( obj->z () );
   }
 }
 
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QTABLETEVENT_TANGENTIALPRESSURE )
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->tangentialPressure (  );
+    qreal r = obj->tangentialPressure ();
     hb_retnd( r );
   }
 }
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QTABLETEVENT_ROTATION )
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->rotation (  );
+    qreal r = obj->rotation ();
     hb_retnd( r );
   }
 }
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QTABLETEVENT_XTILT )
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->xTilt (  ) );
+    hb_retni( obj->xTilt () );
   }
 }
 
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QTABLETEVENT_YTILT )
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->yTilt (  ) );
+    hb_retni( obj->yTilt () );
   }
 }
 

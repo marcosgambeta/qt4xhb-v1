@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_ACCEPT1 )
   QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->accept (  );
+    obj->accept ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_ACTIVEGESTURES )
   QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QList<QGesture *> list = obj->activeGestures (  );
+    QList<QGesture *> list = obj->activeGestures ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QGESTURE" );
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_CANCELEDGESTURES )
   QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QList<QGesture *> list = obj->canceledGestures (  );
+    QList<QGesture *> list = obj->canceledGestures ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QGESTURE" );
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_GESTURES )
   QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QList<QGesture *> list = obj->gestures (  );
+    QList<QGesture *> list = obj->gestures ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QGESTURE" );
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_IGNORE1 )
   QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->ignore (  );
+    obj->ignore ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_ISACCEPTED1 )
   QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isAccepted (  ) );
+    hb_retl( obj->isAccepted () );
   }
 }
 
@@ -535,7 +535,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_WIDGET )
   QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * ptr = obj->widget (  );
+    QWidget * ptr = obj->widget ();
     _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }

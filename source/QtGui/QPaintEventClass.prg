@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QPAINTEVENT_RECT )
   QPaintEvent * obj = (QPaintEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QRect * ptr = &obj->rect (  );
+    const QRect * ptr = &obj->rect ();
     _qt4xhb_createReturnClass ( ptr, "QRECT" );
   }
 }
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QPAINTEVENT_REGION )
   QPaintEvent * obj = (QPaintEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QRegion * ptr = &obj->region (  );
+    const QRegion * ptr = &obj->region ();
     _qt4xhb_createReturnClass ( ptr, "QREGION" );
   }
 }

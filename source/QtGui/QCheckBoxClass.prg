@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QCHECKBOX_CHECKSTATE )
 
   if( obj )
   {
-    hb_retni( (int) obj->checkState (  ) );
+    hb_retni( (int) obj->checkState () );
   }
 }
 
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QCHECKBOX_ISTRISTATE )
 
   if( obj )
   {
-    hb_retl( obj->isTristate (  ) );
+    hb_retl( obj->isTristate () );
   }
 }
 
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QCHECKBOX_MINIMUMSIZEHINT )
 
   if( obj )
   {
-    QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
+    QSize * ptr = new QSize( obj->minimumSizeHint () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QCHECKBOX_SIZEHINT )
 
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }

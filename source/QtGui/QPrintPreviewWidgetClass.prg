@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_CURRENTPAGE )
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->currentPage (  ) );
+    hb_retni( obj->currentPage () );
   }
 }
 
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ORIENTATION )
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->orientation (  ) );
+    hb_retni( (int) obj->orientation () );
   }
 }
 
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_PAGECOUNT )
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->pageCount (  ) );
+    hb_retni( (int) obj->pageCount () );
   }
 }
 
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_VIEWMODE )
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->viewMode (  ) );
+    hb_retni( (int) obj->viewMode () );
   }
 }
 
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMFACTOR )
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->zoomFactor (  );
+    qreal r = obj->zoomFactor ();
     hb_retnd( r );
   }
 }
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMMODE )
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->zoomMode (  ) );
+    hb_retni( (int) obj->zoomMode () );
   }
 }
 
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_FITINVIEW )
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->fitInView (  );
+    obj->fitInView ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_FITTOWIDTH )
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->fitToWidth (  );
+    obj->fitToWidth ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_PRINT )
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->print (  );
+    obj->print ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETALLPAGESVIEWMODE )
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setAllPagesViewMode (  );
+    obj->setAllPagesViewMode ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETFACINGPAGESVIEWMODE )
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setFacingPagesViewMode (  );
+    obj->setFacingPagesViewMode ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETLANDSCAPEORIENTATION )
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setLandscapeOrientation (  );
+    obj->setLandscapeOrientation ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETPORTRAITORIENTATION )
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setPortraitOrientation (  );
+    obj->setPortraitOrientation ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETSINGLEPAGEVIEWMODE )
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setSinglePageViewMode (  );
+    obj->setSinglePageViewMode ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_UPDATEPREVIEW )
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->updatePreview (  );
+    obj->updatePreview ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

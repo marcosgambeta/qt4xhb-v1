@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_CURRENTINDEX )
   QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QModelIndex * ptr = new QModelIndex( obj->currentIndex (  ) );
+    QModelIndex * ptr = new QModelIndex( obj->currentIndex () );
     _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_HASSELECTION )
   QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasSelection (  ) );
+    hb_retl( obj->hasSelection () );
   }
 }
 
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_MODEL )
   QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QAbstractItemModel * ptr = obj->model (  );
+    const QAbstractItemModel * ptr = obj->model ();
     _qt4xhb_createReturnClass ( ptr, "QABSTRACTITEMMODEL" );
   }
 }
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDINDEXES )
   QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QModelIndexList list = obj->selectedIndexes (  );
+    QModelIndexList list = obj->selectedIndexes ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QMODELINDEX" );
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_CLEAR )
   QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_CLEARSELECTION )
   QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clearSelection (  );
+    obj->clearSelection ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_RESET )
   QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->reset (  );
+    obj->reset ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

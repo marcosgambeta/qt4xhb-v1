@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QMENUBAR_ACTIVEACTION )
   QMenuBar * obj = (QMenuBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QAction * ptr = obj->activeAction (  );
+    QAction * ptr = obj->activeAction ();
     _qt4xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QMENUBAR_ADDSEPARATOR )
   QMenuBar * obj = (QMenuBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QAction * ptr = obj->addSeparator (  );
+    QAction * ptr = obj->addSeparator ();
     _qt4xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QMENUBAR_CLEAR )
   QMenuBar * obj = (QMenuBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QMENUBAR_ISDEFAULTUP )
   QMenuBar * obj = (QMenuBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isDefaultUp (  ) );
+    hb_retl( obj->isDefaultUp () );
   }
 }
 
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QMENUBAR_ISNATIVEMENUBAR )
   QMenuBar * obj = (QMenuBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNativeMenuBar (  ) );
+    hb_retl( obj->isNativeMenuBar () );
   }
 }
 
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QMENUBAR_MINIMUMSIZEHINT )
   QMenuBar * obj = (QMenuBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
+    QSize * ptr = new QSize( obj->minimumSizeHint () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QMENUBAR_SIZEHINT )
   QMenuBar * obj = (QMenuBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }

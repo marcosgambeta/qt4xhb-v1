@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_COLUMNCOUNT )
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->columnCount (  ) );
+    hb_retni( obj->columnCount () );
   }
 }
 
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_CURRENTCOLUMN )
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->currentColumn (  ) );
+    hb_retni( obj->currentColumn () );
   }
 }
 
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_CURRENTITEM )
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTableWidgetItem * ptr = obj->currentItem (  );
+    QTableWidgetItem * ptr = obj->currentItem ();
     _qt4xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM" );
   }
 }
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_CURRENTROW )
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->currentRow (  ) );
+    hb_retni( obj->currentRow () );
   }
 }
 
@@ -459,7 +459,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ROWCOUNT )
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->rowCount (  ) );
+    hb_retni( obj->rowCount () );
   }
 }
 
@@ -472,7 +472,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_SELECTEDITEMS )
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QList<QTableWidgetItem *> list = obj->selectedItems (  );
+    QList<QTableWidgetItem *> list = obj->selectedItems ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QTABLEWIDGETITEM" );
@@ -516,7 +516,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_SELECTEDRANGES )
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QList<QTableWidgetSelectionRange> list = obj->selectedRanges (  );
+    QList<QTableWidgetSelectionRange> list = obj->selectedRanges ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QTABLEWIDGETSELECTIONRANGE" );
@@ -928,7 +928,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_CLEAR )
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -942,7 +942,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_CLEARCONTENTS )
   QTableWidget * obj = (QTableWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clearContents (  );
+    obj->clearContents ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

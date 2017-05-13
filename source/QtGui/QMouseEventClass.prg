@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_POS )
   QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QPoint * ptr = &obj->pos (  );
+    const QPoint * ptr = &obj->pos ();
     _qt4xhb_createReturnClass ( ptr, "QPOINT" );
   }
 }
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_GLOBALPOS )
   QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QPoint * ptr = &obj->globalPos (  );
+    const QPoint * ptr = &obj->globalPos ();
     _qt4xhb_createReturnClass ( ptr, "QPOINT" );
   }
 }
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_X )
   QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->x (  ) );
+    hb_retni( obj->x () );
   }
 }
 
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_Y )
   QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->y (  ) );
+    hb_retni( obj->y () );
   }
 }
 
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_GLOBALX )
   QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->globalX (  ) );
+    hb_retni( obj->globalX () );
   }
 }
 
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_GLOBALY )
   QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->globalY (  ) );
+    hb_retni( obj->globalY () );
   }
 }
 
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_BUTTON )
   QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->button (  ) );
+    hb_retni( (int) obj->button () );
   }
 }
 
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_BUTTONS )
   QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->buttons (  ) );
+    hb_retni( (int) obj->buttons () );
   }
 }
 
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_HASEXTENDEDINFO )
   QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasExtendedInfo (  ) );
+    hb_retl( obj->hasExtendedInfo () );
   }
 }
 
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_POSF )
   QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->posF (  ) );
+    QPointF * ptr = new QPointF( obj->posF () );
     _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }

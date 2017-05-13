@@ -48,7 +48,7 @@ QTextImageFormat ()
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_NEW )
 {
   QTextImageFormat * o = NULL;
-  o = new QTextImageFormat (  );
+  o = new QTextImageFormat ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_HEIGHT )
   QTextImageFormat * obj = (QTextImageFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->height (  );
+    qreal r = obj->height ();
     hb_retnd( r );
   }
 }
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_ISVALID )
   QTextImageFormat * obj = (QTextImageFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_NAME )
   QTextImageFormat * obj = (QTextImageFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->name (  );
+    QString str1 = obj->name ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_WIDTH )
   QTextImageFormat * obj = (QTextImageFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->width (  );
+    qreal r = obj->width ();
     hb_retnd( r );
   }
 }

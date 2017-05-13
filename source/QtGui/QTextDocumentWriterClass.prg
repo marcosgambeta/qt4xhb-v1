@@ -69,7 +69,7 @@ QTextDocumentWriter ()
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_NEW1 )
 {
   QTextDocumentWriter * o = NULL;
-  o = new QTextDocumentWriter (  );
+  o = new QTextDocumentWriter ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_CODEC )
   QTextDocumentWriter * obj = (QTextDocumentWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTextCodec * ptr = obj->codec (  );
+    QTextCodec * ptr = obj->codec ();
     _qt4xhb_createReturnClass ( ptr, "QTEXTCODEC" );
   }
 }
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_DEVICE )
   QTextDocumentWriter * obj = (QTextDocumentWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QIODevice * ptr = obj->device (  );
+    QIODevice * ptr = obj->device ();
     _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );
   }
 }
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_FILENAME )
   QTextDocumentWriter * obj = (QTextDocumentWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->fileName (  );
+    QString str1 = obj->fileName ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_FORMAT )
   QTextDocumentWriter * obj = (QTextDocumentWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->format (  ) );
+    QByteArray * ptr = new QByteArray( obj->format () );
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -303,7 +303,7 @@ QList<QByteArray> supportedDocumentFormats ()
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SUPPORTEDDOCUMENTFORMATS )
 {
-  QList<QByteArray> list = QTextDocumentWriter::supportedDocumentFormats (  );
+  QList<QByteArray> list = QTextDocumentWriter::supportedDocumentFormats ();
   PHB_DYNS pDynSym;
   #ifdef __XHARBOUR__
   pDynSym = hb_dynsymFind( "QBYTEARRAY" );

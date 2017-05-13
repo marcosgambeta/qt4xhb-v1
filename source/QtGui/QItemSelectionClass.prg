@@ -57,7 +57,7 @@ QItemSelection ()
 HB_FUNC_STATIC( QITEMSELECTION_NEW1 )
 {
   QItemSelection * o = NULL;
-  o = new QItemSelection (  );
+  o = new QItemSelection ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QITEMSELECTION_INDEXES )
   QItemSelection * obj = (QItemSelection *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QModelIndexList list = obj->indexes (  );
+    QModelIndexList list = obj->indexes ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QMODELINDEX" );

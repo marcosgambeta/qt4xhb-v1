@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_OLDSTATE )
   QWindowStateChangeEvent * obj = (QWindowStateChangeEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->oldState (  ) );
+    hb_retni( (int) obj->oldState () );
   }
 }
 
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_ISOVERRIDE )
   QWindowStateChangeEvent * obj = (QWindowStateChangeEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isOverride (  ) );
+    hb_retl( obj->isOverride () );
   }
 }
 

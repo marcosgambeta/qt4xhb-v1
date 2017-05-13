@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QPLATFORMFONTDATABASE_FONTDIR )
   QPlatformFontDatabase * obj = (QPlatformFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->fontDir (  );
+    QString str1 = obj->fontDir ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QPLATFORMFONTDATABASE_POPULATEFONTDATABASE )
   QPlatformFontDatabase * obj = (QPlatformFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->populateFontDatabase (  );
+    obj->populateFontDatabase ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QICONENGINEV2_CLONE )
   QIconEngineV2 * obj = (QIconEngineV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QIconEngineV2 * ptr = obj->clone (  );
+    QIconEngineV2 * ptr = obj->clone ();
     _qt4xhb_createReturnClass ( ptr, "QICONENGINEV2" );
   }
 }
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QICONENGINEV2_ICONNAME )
   QIconEngineV2 * obj = (QIconEngineV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->iconName (  );
+    QString str1 = obj->iconName ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QICONENGINEV2_KEY )
   QIconEngineV2 * obj = (QIconEngineV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->key (  );
+    QString str1 = obj->key ();
     hb_retc( RQSTRING(str1) );
   }
 }

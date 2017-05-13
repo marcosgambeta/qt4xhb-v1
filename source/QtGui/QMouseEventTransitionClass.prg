@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_BUTTON )
   QMouseEventTransition * obj = (QMouseEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->button (  ) );
+    hb_retni( (int) obj->button () );
   }
 }
 
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_HITTESTPATH )
   QMouseEventTransition * obj = (QMouseEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPainterPath * ptr = new QPainterPath( obj->hitTestPath (  ) );
+    QPainterPath * ptr = new QPainterPath( obj->hitTestPath () );
     _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_MODIFIERMASK )
   QMouseEventTransition * obj = (QMouseEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->modifierMask (  ) );
+    hb_retni( (int) obj->modifierMask () );
   }
 }
 

@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ALLOWEDAREAS )
   QDockWidget * obj = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->allowedAreas (  ) );
+    hb_retni( (int) obj->allowedAreas () );
   }
 }
 
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_FEATURES )
   QDockWidget * obj = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->features (  ) );
+    hb_retni( (int) obj->features () );
   }
 }
 
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ISFLOATING )
   QDockWidget * obj = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isFloating (  ) );
+    hb_retl( obj->isFloating () );
   }
 }
 
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_TITLEBARWIDGET )
   QDockWidget * obj = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * ptr = obj->titleBarWidget (  );
+    QWidget * ptr = obj->titleBarWidget ();
     _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_TOGGLEVIEWACTION )
   QDockWidget * obj = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QAction * ptr = obj->toggleViewAction (  );
+    QAction * ptr = obj->toggleViewAction ();
     _qt4xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_WIDGET )
   QDockWidget * obj = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * ptr = obj->widget (  );
+    QWidget * ptr = obj->widget ();
     _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }

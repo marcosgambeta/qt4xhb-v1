@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QSCROLLAREA_ALIGNMENT )
   QScrollArea * obj = (QScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->alignment (  ) );
+    hb_retni( (int) obj->alignment () );
   }
 }
 
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QSCROLLAREA_TAKEWIDGET )
   QScrollArea * obj = (QScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * ptr = obj->takeWidget (  );
+    QWidget * ptr = obj->takeWidget ();
     _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QSCROLLAREA_WIDGET )
   QScrollArea * obj = (QScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * ptr = obj->widget (  );
+    QWidget * ptr = obj->widget ();
     _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QSCROLLAREA_WIDGETRESIZABLE )
   QScrollArea * obj = (QScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->widgetResizable (  ) );
+    hb_retl( obj->widgetResizable () );
   }
 }
 
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QSCROLLAREA_SIZEHINT )
   QScrollArea * obj = (QScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }

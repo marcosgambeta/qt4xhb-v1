@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_EXEC )
   QAbstractPrintDialog * obj = (QAbstractPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->exec (  ) );
+    hb_retni( obj->exec () );
   }
 }
 
@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_FROMPAGE )
   QAbstractPrintDialog * obj = (QAbstractPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->fromPage (  ) );
+    hb_retni( obj->fromPage () );
   }
 }
 
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_MAXPAGE )
   QAbstractPrintDialog * obj = (QAbstractPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->maxPage (  ) );
+    hb_retni( obj->maxPage () );
   }
 }
 
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_MINPAGE )
   QAbstractPrintDialog * obj = (QAbstractPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->minPage (  ) );
+    hb_retni( obj->minPage () );
   }
 }
 
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_PRINTRANGE )
   QAbstractPrintDialog * obj = (QAbstractPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->printRange (  ) );
+    hb_retni( (int) obj->printRange () );
   }
 }
 
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_PRINTER )
   QAbstractPrintDialog * obj = (QAbstractPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPrinter * ptr = obj->printer (  );
+    QPrinter * ptr = obj->printer ();
     _qt4xhb_createReturnClass ( ptr, "QPRINTER" );
   }
 }
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_TOPAGE )
   QAbstractPrintDialog * obj = (QAbstractPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->toPage (  ) );
+    hb_retni( obj->toPage () );
   }
 }
 

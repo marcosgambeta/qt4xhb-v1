@@ -109,7 +109,7 @@ QTransform ()
 HB_FUNC_STATIC( QTRANSFORM_NEW1 )
 {
   QTransform * o = NULL;
-  o = new QTransform (  );
+  o = new QTransform ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QTRANSFORM_M11 )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->m11 (  );
+    qreal r = obj->m11 ();
     hb_retnd( r );
   }
 }
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QTRANSFORM_M12 )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->m12 (  );
+    qreal r = obj->m12 ();
     hb_retnd( r );
   }
 }
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QTRANSFORM_M13 )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->m13 (  );
+    qreal r = obj->m13 ();
     hb_retnd( r );
   }
 }
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QTRANSFORM_M21 )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->m21 (  );
+    qreal r = obj->m21 ();
     hb_retnd( r );
   }
 }
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QTRANSFORM_M22 )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->m22 (  );
+    qreal r = obj->m22 ();
     hb_retnd( r );
   }
 }
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QTRANSFORM_M23 )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->m23 (  );
+    qreal r = obj->m23 ();
     hb_retnd( r );
   }
 }
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QTRANSFORM_M31 )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->m31 (  );
+    qreal r = obj->m31 ();
     hb_retnd( r );
   }
 }
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QTRANSFORM_M32 )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->m32 (  );
+    qreal r = obj->m32 ();
     hb_retnd( r );
   }
 }
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QTRANSFORM_M33 )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->m33 (  );
+    qreal r = obj->m33 ();
     hb_retnd( r );
   }
 }
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QTRANSFORM_ADJOINT )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTransform * ptr = new QTransform( obj->adjoint (  ) );
+    QTransform * ptr = new QTransform( obj->adjoint () );
     _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );
   }
 }
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QTRANSFORM_DETERMINANT )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->determinant (  );
+    qreal r = obj->determinant ();
     hb_retnd( r );
   }
 }
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QTRANSFORM_DX )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->dx (  );
+    qreal r = obj->dx ();
     hb_retnd( r );
   }
 }
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QTRANSFORM_DY )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->dy (  );
+    qreal r = obj->dy ();
     hb_retnd( r );
   }
 }
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QTRANSFORM_ISAFFINE )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isAffine (  ) );
+    hb_retl( obj->isAffine () );
   }
 }
 
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QTRANSFORM_ISIDENTITY )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isIdentity (  ) );
+    hb_retl( obj->isIdentity () );
   }
 }
 
@@ -425,7 +425,7 @@ HB_FUNC_STATIC( QTRANSFORM_ISINVERTIBLE )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isInvertible (  ) );
+    hb_retl( obj->isInvertible () );
   }
 }
 
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QTRANSFORM_ISROTATING )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isRotating (  ) );
+    hb_retl( obj->isRotating () );
   }
 }
 
@@ -451,7 +451,7 @@ HB_FUNC_STATIC( QTRANSFORM_ISSCALING )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isScaling (  ) );
+    hb_retl( obj->isScaling () );
   }
 }
 
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QTRANSFORM_ISTRANSLATING )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isTranslating (  ) );
+    hb_retl( obj->isTranslating () );
   }
 }
 
@@ -752,7 +752,7 @@ HB_FUNC_STATIC( QTRANSFORM_RESET )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->reset (  );
+    obj->reset ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -786,7 +786,7 @@ HB_FUNC_STATIC( QTRANSFORM_TRANSPOSED )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTransform * ptr = new QTransform( obj->transposed (  ) );
+    QTransform * ptr = new QTransform( obj->transposed () );
     _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );
   }
 }
@@ -800,7 +800,7 @@ HB_FUNC_STATIC( QTRANSFORM_TYPE )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->type (  ) );
+    hb_retni( (int) obj->type () );
   }
 }
 

@@ -61,7 +61,7 @@ QWindowsStyle ()
 HB_FUNC_STATIC( QWINDOWSSTYLE_NEW )
 {
   QWindowsStyle * o = NULL;
-  o = new QWindowsStyle (  );
+  o = new QWindowsStyle ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

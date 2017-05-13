@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_ACCEPTPROPOSEDACTION )
   QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->acceptProposedAction (  );
+    obj->acceptProposedAction ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_BUTTONS )
   QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->buttons (  ) );
+    hb_retni( (int) obj->buttons () );
   }
 }
 
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_DROPACTION )
   QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->dropAction (  ) );
+    hb_retni( (int) obj->dropAction () );
   }
 }
 
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_MIMEDATA )
   QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QMimeData * ptr = obj->mimeData (  );
+    const QMimeData * ptr = obj->mimeData ();
     _qt4xhb_createReturnClass ( ptr, "QMIMEDATA" );
   }
 }
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_MODIFIERS )
   QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->modifiers (  ) );
+    hb_retni( (int) obj->modifiers () );
   }
 }
 
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_POS )
   QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->pos (  ) );
+    QPointF * ptr = new QPointF( obj->pos () );
     _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_POSSIBLEACTIONS )
   QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->possibleActions (  ) );
+    hb_retni( (int) obj->possibleActions () );
   }
 }
 
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_PROPOSEDACTION )
   QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->proposedAction (  ) );
+    hb_retni( (int) obj->proposedAction () );
   }
 }
 
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_SCENEPOS )
   QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->scenePos (  ) );
+    QPointF * ptr = new QPointF( obj->scenePos () );
     _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_SCREENPOS )
   QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPoint * ptr = new QPoint( obj->screenPos (  ) );
+    QPoint * ptr = new QPoint( obj->screenPos () );
     _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_SOURCE )
   QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * ptr = obj->source (  );
+    QWidget * ptr = obj->source ();
     _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }

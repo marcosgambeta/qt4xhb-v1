@@ -85,7 +85,7 @@ QRegion ()
 HB_FUNC_STATIC( QREGION_NEW1 )
 {
   QRegion * o = NULL;
-  o = new QRegion (  );
+  o = new QRegion ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QREGION_BOUNDINGRECT )
   QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRect * ptr = new QRect( obj->boundingRect (  ) );
+    QRect * ptr = new QRect( obj->boundingRect () );
     _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QREGION_ISEMPTY )
   QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isEmpty (  ) );
+    hb_retl( obj->isEmpty () );
   }
 }
 
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QREGION_RECTCOUNT )
   QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->rectCount (  ) );
+    hb_retni( obj->rectCount () );
   }
 }
 
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QREGION_RECTS )
   QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVector<QRect> list = obj->rects (  );
+    QVector<QRect> list = obj->rects ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QRECT" );

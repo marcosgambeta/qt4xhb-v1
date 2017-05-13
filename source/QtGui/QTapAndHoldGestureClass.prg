@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QTAPANDHOLDGESTURE_POSITION )
   QTapAndHoldGesture * obj = (QTapAndHoldGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->position (  ) );
+    QPointF * ptr = new QPointF( obj->position () );
     _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -104,7 +104,7 @@ int timeout ()
 */
 HB_FUNC_STATIC( QTAPANDHOLDGESTURE_TIMEOUT )
 {
-  hb_retni( QTapAndHoldGesture::timeout (  ) );
+  hb_retni( QTapAndHoldGesture::timeout () );
 }
 
 

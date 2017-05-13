@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_HOTSPOT )
   QPlatformCursorImage * obj = (QPlatformCursorImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPoint * ptr = new QPoint( obj->hotspot (  ) );
+    QPoint * ptr = new QPoint( obj->hotspot () );
     _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_IMAGE )
   QPlatformCursorImage * obj = (QPlatformCursorImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QImage * ptr = obj->image (  );
+    QImage * ptr = obj->image ();
     _qt4xhb_createReturnClass ( ptr, "QIMAGE" );
   }
 }

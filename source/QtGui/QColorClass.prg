@@ -142,7 +142,7 @@ QColor ()
 HB_FUNC_STATIC( QCOLOR_NEW1 )
 {
   QColor * o = NULL;
-  o = new QColor (  );
+  o = new QColor ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QCOLOR_ALPHA )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->alpha (  ) );
+    hb_retni( obj->alpha () );
   }
 }
 
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QCOLOR_ALPHAF )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->alphaF (  );
+    qreal r = obj->alphaF ();
     hb_retnd( r );
   }
 }
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QCOLOR_BLACK )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->black (  ) );
+    hb_retni( obj->black () );
   }
 }
 
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QCOLOR_BLACKF )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->blackF (  );
+    qreal r = obj->blackF ();
     hb_retnd( r );
   }
 }
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QCOLOR_BLUE )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->blue (  ) );
+    hb_retni( obj->blue () );
   }
 }
 
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QCOLOR_BLUEF )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->blueF (  );
+    qreal r = obj->blueF ();
     hb_retnd( r );
   }
 }
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QCOLOR_CYAN )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->cyan (  ) );
+    hb_retni( obj->cyan () );
   }
 }
 
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QCOLOR_CYANF )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->cyanF (  );
+    qreal r = obj->cyanF ();
     hb_retnd( r );
   }
 }
@@ -607,7 +607,7 @@ HB_FUNC_STATIC( QCOLOR_GREEN )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->green (  ) );
+    hb_retni( obj->green () );
   }
 }
 
@@ -620,7 +620,7 @@ HB_FUNC_STATIC( QCOLOR_GREENF )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->greenF (  );
+    qreal r = obj->greenF ();
     hb_retnd( r );
   }
 }
@@ -634,7 +634,7 @@ HB_FUNC_STATIC( QCOLOR_HSLHUE )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->hslHue (  ) );
+    hb_retni( obj->hslHue () );
   }
 }
 
@@ -647,7 +647,7 @@ HB_FUNC_STATIC( QCOLOR_HSLHUEF )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->hslHueF (  );
+    qreal r = obj->hslHueF ();
     hb_retnd( r );
   }
 }
@@ -661,7 +661,7 @@ HB_FUNC_STATIC( QCOLOR_HSLSATURATION )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->hslSaturation (  ) );
+    hb_retni( obj->hslSaturation () );
   }
 }
 
@@ -674,7 +674,7 @@ HB_FUNC_STATIC( QCOLOR_HSLSATURATIONF )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->hslSaturationF (  );
+    qreal r = obj->hslSaturationF ();
     hb_retnd( r );
   }
 }
@@ -688,7 +688,7 @@ HB_FUNC_STATIC( QCOLOR_HSVHUE )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->hsvHue (  ) );
+    hb_retni( obj->hsvHue () );
   }
 }
 
@@ -701,7 +701,7 @@ HB_FUNC_STATIC( QCOLOR_HSVHUEF )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->hsvHueF (  );
+    qreal r = obj->hsvHueF ();
     hb_retnd( r );
   }
 }
@@ -715,7 +715,7 @@ HB_FUNC_STATIC( QCOLOR_HSVSATURATION )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->hsvSaturation (  ) );
+    hb_retni( obj->hsvSaturation () );
   }
 }
 
@@ -728,7 +728,7 @@ HB_FUNC_STATIC( QCOLOR_HSVSATURATIONF )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->hsvSaturationF (  );
+    qreal r = obj->hsvSaturationF ();
     hb_retnd( r );
   }
 }
@@ -742,7 +742,7 @@ HB_FUNC_STATIC( QCOLOR_HUE )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->hue (  ) );
+    hb_retni( obj->hue () );
   }
 }
 
@@ -755,7 +755,7 @@ HB_FUNC_STATIC( QCOLOR_HUEF )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->hueF (  );
+    qreal r = obj->hueF ();
     hb_retnd( r );
   }
 }
@@ -769,7 +769,7 @@ HB_FUNC_STATIC( QCOLOR_ISVALID )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid (  ) );
+    hb_retl( obj->isValid () );
   }
 }
 
@@ -796,7 +796,7 @@ HB_FUNC_STATIC( QCOLOR_LIGHTNESS )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->lightness (  ) );
+    hb_retni( obj->lightness () );
   }
 }
 
@@ -809,7 +809,7 @@ HB_FUNC_STATIC( QCOLOR_LIGHTNESSF )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->lightnessF (  );
+    qreal r = obj->lightnessF ();
     hb_retnd( r );
   }
 }
@@ -823,7 +823,7 @@ HB_FUNC_STATIC( QCOLOR_MAGENTA )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->magenta (  ) );
+    hb_retni( obj->magenta () );
   }
 }
 
@@ -836,7 +836,7 @@ HB_FUNC_STATIC( QCOLOR_MAGENTAF )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->magentaF (  );
+    qreal r = obj->magentaF ();
     hb_retnd( r );
   }
 }
@@ -850,7 +850,7 @@ HB_FUNC_STATIC( QCOLOR_NAME )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->name (  );
+    QString str1 = obj->name ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -864,7 +864,7 @@ HB_FUNC_STATIC( QCOLOR_RED )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->red (  ) );
+    hb_retni( obj->red () );
   }
 }
 
@@ -877,7 +877,7 @@ HB_FUNC_STATIC( QCOLOR_REDF )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->redF (  );
+    qreal r = obj->redF ();
     hb_retnd( r );
   }
 }
@@ -891,7 +891,7 @@ HB_FUNC_STATIC( QCOLOR_RGB )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRgb i = obj->rgb (  );
+    QRgb i = obj->rgb ();
     hb_retni( i );
   }
 }
@@ -905,7 +905,7 @@ HB_FUNC_STATIC( QCOLOR_RGBA )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRgb i = obj->rgba (  );
+    QRgb i = obj->rgba ();
     hb_retni( i );
   }
 }
@@ -919,7 +919,7 @@ HB_FUNC_STATIC( QCOLOR_SATURATION )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->saturation (  ) );
+    hb_retni( obj->saturation () );
   }
 }
 
@@ -932,7 +932,7 @@ HB_FUNC_STATIC( QCOLOR_SATURATIONF )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->saturationF (  );
+    qreal r = obj->saturationF ();
     hb_retnd( r );
   }
 }
@@ -1250,7 +1250,7 @@ HB_FUNC_STATIC( QCOLOR_SPEC )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->spec (  ) );
+    hb_retni( (int) obj->spec () );
   }
 }
 
@@ -1263,7 +1263,7 @@ HB_FUNC_STATIC( QCOLOR_TOCMYK )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QColor * ptr = new QColor( obj->toCmyk (  ) );
+    QColor * ptr = new QColor( obj->toCmyk () );
     _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }
@@ -1277,7 +1277,7 @@ HB_FUNC_STATIC( QCOLOR_TOHSL )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QColor * ptr = new QColor( obj->toHsl (  ) );
+    QColor * ptr = new QColor( obj->toHsl () );
     _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }
@@ -1291,7 +1291,7 @@ HB_FUNC_STATIC( QCOLOR_TOHSV )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QColor * ptr = new QColor( obj->toHsv (  ) );
+    QColor * ptr = new QColor( obj->toHsv () );
     _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }
@@ -1305,7 +1305,7 @@ HB_FUNC_STATIC( QCOLOR_TORGB )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QColor * ptr = new QColor( obj->toRgb (  ) );
+    QColor * ptr = new QColor( obj->toRgb () );
     _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }
@@ -1319,7 +1319,7 @@ HB_FUNC_STATIC( QCOLOR_VALUE )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->value (  ) );
+    hb_retni( obj->value () );
   }
 }
 
@@ -1332,7 +1332,7 @@ HB_FUNC_STATIC( QCOLOR_VALUEF )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->valueF (  );
+    qreal r = obj->valueF ();
     hb_retnd( r );
   }
 }
@@ -1346,7 +1346,7 @@ HB_FUNC_STATIC( QCOLOR_YELLOW )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->yellow (  ) );
+    hb_retni( obj->yellow () );
   }
 }
 
@@ -1359,7 +1359,7 @@ HB_FUNC_STATIC( QCOLOR_YELLOWF )
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->yellowF (  );
+    qreal r = obj->yellowF ();
     hb_retnd( r );
   }
 }
@@ -1372,7 +1372,7 @@ QStringList colorNames ()
 */
 HB_FUNC_STATIC( QCOLOR_COLORNAMES )
 {
-  QStringList strl = QColor::colorNames (  );
+  QStringList strl = QColor::colorNames ();
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;

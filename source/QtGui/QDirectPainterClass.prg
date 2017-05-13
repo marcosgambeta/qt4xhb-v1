@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_ALLOCATEDREGION )
   QDirectPainter * obj = (QDirectPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRegion * ptr = new QRegion( obj->allocatedRegion (  ) );
+    QRegion * ptr = new QRegion( obj->allocatedRegion () );
     _qt4xhb_createReturnClass ( ptr, "QREGION", true );
   }
 }
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_ENDPAINTING1 )
   QDirectPainter * obj = (QDirectPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->endPainting (  );
+    obj->endPainting ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_GEOMETRY )
   QDirectPainter * obj = (QDirectPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRect * ptr = new QRect( obj->geometry (  ) );
+    QRect * ptr = new QRect( obj->geometry () );
     _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_LOWER )
   QDirectPainter * obj = (QDirectPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->lower (  );
+    obj->lower ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_RAISE )
   QDirectPainter * obj = (QDirectPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->raise (  );
+    obj->raise ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_REQUESTEDREGION )
   QDirectPainter * obj = (QDirectPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRegion * ptr = new QRegion( obj->requestedRegion (  ) );
+    QRegion * ptr = new QRegion( obj->requestedRegion () );
     _qt4xhb_createReturnClass ( ptr, "QREGION", true );
   }
 }
@@ -284,7 +284,7 @@ uchar * frameBuffer ()
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_FRAMEBUFFER )
 {
-  uchar * ptr = QDirectPainter::frameBuffer (  );
+  uchar * ptr = QDirectPainter::frameBuffer ();
   _qt4xhb_createReturnClass ( ptr, "UCHAR" );
 }
 
@@ -294,7 +294,7 @@ int linestep ()
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_LINESTEP )
 {
-  hb_retni( QDirectPainter::linestep (  ) );
+  hb_retni( QDirectPainter::linestep () );
 }
 
 
@@ -303,7 +303,7 @@ void lock ()
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_LOCK )
 {
-  QDirectPainter::lock (  );
+  QDirectPainter::lock ();
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -313,7 +313,7 @@ int screenDepth ()
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_SCREENDEPTH )
 {
-  hb_retni( QDirectPainter::screenDepth (  ) );
+  hb_retni( QDirectPainter::screenDepth () );
 }
 
 
@@ -322,7 +322,7 @@ int screenHeight ()
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_SCREENHEIGHT )
 {
-  hb_retni( QDirectPainter::screenHeight (  ) );
+  hb_retni( QDirectPainter::screenHeight () );
 }
 
 
@@ -331,7 +331,7 @@ int screenWidth ()
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_SCREENWIDTH )
 {
-  hb_retni( QDirectPainter::screenWidth (  ) );
+  hb_retni( QDirectPainter::screenWidth () );
 }
 
 
@@ -340,7 +340,7 @@ void unlock ()
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_UNLOCK )
 {
-  QDirectPainter::unlock (  );
+  QDirectPainter::unlock ();
   hb_itemReturn( hb_stackSelfItem() );
 }
 

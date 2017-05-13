@@ -43,7 +43,7 @@ QVBoxLayout ()
 HB_FUNC_STATIC( QVBOXLAYOUT_NEW1 )
 {
   QVBoxLayout * o = NULL;
-  o = new QVBoxLayout (  );
+  o = new QVBoxLayout ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

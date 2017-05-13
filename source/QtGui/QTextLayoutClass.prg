@@ -93,7 +93,7 @@ QTextLayout ()
 HB_FUNC_STATIC( QTEXTLAYOUT_NEW1 )
 {
   QTextLayout * o = NULL;
-  o = new QTextLayout (  );
+  o = new QTextLayout ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_BEGINLAYOUT )
   QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->beginLayout (  );
+    obj->beginLayout ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_BOUNDINGRECT )
   QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRectF * ptr = new QRectF( obj->boundingRect (  ) );
+    QRectF * ptr = new QRectF( obj->boundingRect () );
     _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_CACHEENABLED )
   QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->cacheEnabled (  ) );
+    hb_retl( obj->cacheEnabled () );
   }
 }
 
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_CLEARADDITIONALFORMATS )
   QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clearAdditionalFormats (  );
+    obj->clearAdditionalFormats ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_CLEARLAYOUT )
   QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clearLayout (  );
+    obj->clearLayout ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_CREATELINE )
   QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTextLine * ptr = new QTextLine( obj->createLine (  ) );
+    QTextLine * ptr = new QTextLine( obj->createLine () );
     _qt4xhb_createReturnClass ( ptr, "QTEXTLINE" );
   }
 }
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_CURSORMOVESTYLE )
   QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->cursorMoveStyle (  ) );
+    hb_retni( (int) obj->cursorMoveStyle () );
   }
 }
 
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_ENDLAYOUT )
   QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->endLayout (  );
+    obj->endLayout ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_FONT )
   QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QFont * ptr = new QFont( obj->font (  ) );
+    QFont * ptr = new QFont( obj->font () );
     _qt4xhb_createReturnClass ( ptr, "QFONT", true );
   }
 }
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_GLYPHRUNS )
   QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QList<QGlyphRun> list = obj->glyphRuns (  );
+    QList<QGlyphRun> list = obj->glyphRuns ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QGLYPHRUN" );
@@ -433,7 +433,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_LINECOUNT )
   QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->lineCount (  ) );
+    hb_retni( obj->lineCount () );
   }
 }
 
@@ -461,7 +461,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_MAXIMUMWIDTH )
   QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->maximumWidth (  );
+    qreal r = obj->maximumWidth ();
     hb_retnd( r );
   }
 }
@@ -475,7 +475,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_MINIMUMWIDTH )
   QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->minimumWidth (  );
+    qreal r = obj->minimumWidth ();
     hb_retnd( r );
   }
 }
@@ -504,7 +504,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_POSITION )
   QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->position (  ) );
+    QPointF * ptr = new QPointF( obj->position () );
     _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -518,7 +518,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_PREEDITAREAPOSITION )
   QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->preeditAreaPosition (  ) );
+    hb_retni( obj->preeditAreaPosition () );
   }
 }
 
@@ -531,7 +531,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_PREEDITAREATEXT )
   QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->preeditAreaText (  );
+    QString str1 = obj->preeditAreaText ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -678,7 +678,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_TEXT )
   QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->text (  );
+    QString str1 = obj->text ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -692,7 +692,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_TEXTOPTION )
   QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTextOption * ptr = new QTextOption( obj->textOption (  ) );
+    QTextOption * ptr = new QTextOption( obj->textOption () );
     _qt4xhb_createReturnClass ( ptr, "QTEXTOPTION" );
   }
 }

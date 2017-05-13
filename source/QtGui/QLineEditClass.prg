@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QLINEEDIT_ALIGNMENT )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->alignment (  ) );
+    hb_retni( (int) obj->alignment () );
   }
 }
 
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QLINEEDIT_BACKSPACE )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->backspace (  );
+    obj->backspace ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QLINEEDIT_COMPLETER )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QCompleter * ptr = obj->completer (  );
+    QCompleter * ptr = obj->completer ();
     _qt4xhb_createReturnClass ( ptr, "QCOMPLETER" );
   }
 }
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QLINEEDIT_CREATESTANDARDCONTEXTMENU )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QMenu * ptr = obj->createStandardContextMenu (  );
+    QMenu * ptr = obj->createStandardContextMenu ();
     _qt4xhb_createReturnClass ( ptr, "QMENU" );
   }
 }
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QLINEEDIT_CURSORPOSITION )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->cursorPosition (  ) );
+    hb_retni( obj->cursorPosition () );
   }
 }
 
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QLINEEDIT_DEL )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->del (  );
+    obj->del ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QLINEEDIT_DESELECT )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->deselect (  );
+    obj->deselect ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QLINEEDIT_DISPLAYTEXT )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->displayText (  );
+    QString str1 = obj->displayText ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QLINEEDIT_DRAGENABLED )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->dragEnabled (  ) );
+    hb_retl( obj->dragEnabled () );
   }
 }
 
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QLINEEDIT_ECHOMODE )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->echoMode (  ) );
+    hb_retni( (int) obj->echoMode () );
   }
 }
 
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QLINEEDIT_HASACCEPTABLEINPUT )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasAcceptableInput (  ) );
+    hb_retl( obj->hasAcceptableInput () );
   }
 }
 
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QLINEEDIT_HASFRAME )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasFrame (  ) );
+    hb_retl( obj->hasFrame () );
   }
 }
 
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QLINEEDIT_HASSELECTEDTEXT )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasSelectedText (  ) );
+    hb_retl( obj->hasSelectedText () );
   }
 }
 
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QLINEEDIT_INPUTMASK )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->inputMask (  );
+    QString str1 = obj->inputMask ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -504,7 +504,7 @@ HB_FUNC_STATIC( QLINEEDIT_ISMODIFIED )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isModified (  ) );
+    hb_retl( obj->isModified () );
   }
 }
 
@@ -517,7 +517,7 @@ HB_FUNC_STATIC( QLINEEDIT_ISREADONLY )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isReadOnly (  ) );
+    hb_retl( obj->isReadOnly () );
   }
 }
 
@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QLINEEDIT_ISREDOAVAILABLE )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isRedoAvailable (  ) );
+    hb_retl( obj->isRedoAvailable () );
   }
 }
 
@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QLINEEDIT_ISUNDOAVAILABLE )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isUndoAvailable (  ) );
+    hb_retl( obj->isUndoAvailable () );
   }
 }
 
@@ -556,7 +556,7 @@ HB_FUNC_STATIC( QLINEEDIT_MAXLENGTH )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->maxLength (  ) );
+    hb_retni( obj->maxLength () );
   }
 }
 
@@ -569,7 +569,7 @@ HB_FUNC_STATIC( QLINEEDIT_PLACEHOLDERTEXT )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->placeholderText (  );
+    QString str1 = obj->placeholderText ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -583,7 +583,7 @@ HB_FUNC_STATIC( QLINEEDIT_MINIMUMSIZEHINT )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
+    QSize * ptr = new QSize( obj->minimumSizeHint () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -597,7 +597,7 @@ HB_FUNC_STATIC( QLINEEDIT_SELECTEDTEXT )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->selectedText (  );
+    QString str1 = obj->selectedText ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -611,7 +611,7 @@ HB_FUNC_STATIC( QLINEEDIT_SELECTIONSTART )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->selectionStart (  ) );
+    hb_retni( obj->selectionStart () );
   }
 }
 
@@ -862,7 +862,7 @@ HB_FUNC_STATIC( QLINEEDIT_SIZEHINT )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -876,7 +876,7 @@ HB_FUNC_STATIC( QLINEEDIT_TEXT )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->text (  );
+    QString str1 = obj->text ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -890,7 +890,7 @@ HB_FUNC_STATIC( QLINEEDIT_TEXTMARGINS )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QMargins * ptr = new QMargins( obj->textMargins (  ) );
+    QMargins * ptr = new QMargins( obj->textMargins () );
     _qt4xhb_createReturnClass ( ptr, "QMARGINS", true );
   }
 }
@@ -904,7 +904,7 @@ HB_FUNC_STATIC( QLINEEDIT_VALIDATOR )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QValidator * ptr = obj->validator (  );
+    const QValidator * ptr = obj->validator ();
     _qt4xhb_createReturnClass ( ptr, "QVALIDATOR" );
   }
 }
@@ -949,7 +949,7 @@ HB_FUNC_STATIC( QLINEEDIT_COPY )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->copy (  );
+    obj->copy ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -963,7 +963,7 @@ HB_FUNC_STATIC( QLINEEDIT_CUT )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->cut (  );
+    obj->cut ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -977,7 +977,7 @@ HB_FUNC_STATIC( QLINEEDIT_PASTE )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->paste (  );
+    obj->paste ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -991,7 +991,7 @@ HB_FUNC_STATIC( QLINEEDIT_REDO )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->redo (  );
+    obj->redo ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1005,7 +1005,7 @@ HB_FUNC_STATIC( QLINEEDIT_SELECTALL )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->selectAll (  );
+    obj->selectAll ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1033,7 +1033,7 @@ HB_FUNC_STATIC( QLINEEDIT_UNDO )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->undo (  );
+    obj->undo ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

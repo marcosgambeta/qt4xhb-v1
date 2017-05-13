@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ALTERNATINGROWCOLORS )
   QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->alternatingRowColors (  ) );
+    hb_retl( obj->alternatingRowColors () );
   }
 }
 
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_AUTOSCROLLMARGIN )
   QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->autoScrollMargin (  ) );
+    hb_retni( obj->autoScrollMargin () );
   }
 }
 
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_CURRENTINDEX )
   QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QModelIndex * ptr = new QModelIndex( obj->currentIndex (  ) );
+    QModelIndex * ptr = new QModelIndex( obj->currentIndex () );
     _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_DEFAULTDROPACTION )
   QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->defaultDropAction (  ) );
+    hb_retni( (int) obj->defaultDropAction () );
   }
 }
 
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_DRAGDROPMODE )
   QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->dragDropMode (  ) );
+    hb_retni( (int) obj->dragDropMode () );
   }
 }
 
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_DRAGDROPOVERWRITEMODE )
   QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->dragDropOverwriteMode (  ) );
+    hb_retl( obj->dragDropOverwriteMode () );
   }
 }
 
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_DRAGENABLED )
   QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->dragEnabled (  ) );
+    hb_retl( obj->dragEnabled () );
   }
 }
 
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_EDITTRIGGERS )
   QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->editTriggers (  ) );
+    hb_retni( (int) obj->editTriggers () );
   }
 }
 
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_HASAUTOSCROLL )
   QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasAutoScroll (  ) );
+    hb_retl( obj->hasAutoScroll () );
   }
 }
 
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_HORIZONTALSCROLLMODE )
   QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->horizontalScrollMode (  ) );
+    hb_retni( (int) obj->horizontalScrollMode () );
   }
 }
 
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ICONSIZE )
   QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->iconSize (  ) );
+    QSize * ptr = new QSize( obj->iconSize () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATE1 )
   QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QAbstractItemDelegate * ptr = obj->itemDelegate (  );
+    QAbstractItemDelegate * ptr = obj->itemDelegate ();
     _qt4xhb_createReturnClass ( ptr, "QABSTRACTITEMDELEGATE" );
   }
 }
@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_MODEL )
   QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QAbstractItemModel * ptr = obj->model (  );
+    QAbstractItemModel * ptr = obj->model ();
     _qt4xhb_createReturnClass ( ptr, "QABSTRACTITEMMODEL" );
   }
 }
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ROOTINDEX )
   QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QModelIndex * ptr = new QModelIndex( obj->rootIndex (  ) );
+    QModelIndex * ptr = new QModelIndex( obj->rootIndex () );
     _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SELECTIONBEHAVIOR )
   QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->selectionBehavior (  ) );
+    hb_retni( (int) obj->selectionBehavior () );
   }
 }
 
@@ -492,7 +492,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SELECTIONMODE )
   QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->selectionMode (  ) );
+    hb_retni( (int) obj->selectionMode () );
   }
 }
 
@@ -505,7 +505,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SELECTIONMODEL )
   QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QItemSelectionModel * ptr = obj->selectionModel (  );
+    QItemSelectionModel * ptr = obj->selectionModel ();
     _qt4xhb_createReturnClass ( ptr, "QITEMSELECTIONMODEL" );
   }
 }
@@ -846,7 +846,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SHOWDROPINDICATOR )
   QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->showDropIndicator (  ) );
+    hb_retl( obj->showDropIndicator () );
   }
 }
 
@@ -902,7 +902,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_TABKEYNAVIGATION )
   QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->tabKeyNavigation (  ) );
+    hb_retl( obj->tabKeyNavigation () );
   }
 }
 
@@ -915,7 +915,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_TEXTELIDEMODE )
   QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->textElideMode (  ) );
+    hb_retni( (int) obj->textElideMode () );
   }
 }
 
@@ -928,7 +928,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_VERTICALSCROLLMODE )
   QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->verticalScrollMode (  ) );
+    hb_retni( (int) obj->verticalScrollMode () );
   }
 }
 
@@ -971,7 +971,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_CLEARSELECTION )
   QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clearSelection (  );
+    obj->clearSelection ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1000,7 +1000,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_RESET )
   QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->reset (  );
+    obj->reset ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1014,7 +1014,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SCROLLTOBOTTOM )
   QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->scrollToBottom (  );
+    obj->scrollToBottom ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1028,7 +1028,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SCROLLTOTOP )
   QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->scrollToTop (  );
+    obj->scrollToTop ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1042,7 +1042,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SELECTALL )
   QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->selectAll (  );
+    obj->selectAll ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

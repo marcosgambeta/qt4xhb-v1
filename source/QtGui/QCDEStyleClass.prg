@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QCDESTYLE_STANDARDPALETTE )
   QCDEStyle * obj = (QCDEStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPalette * ptr = new QPalette( obj->standardPalette (  ) );
+    QPalette * ptr = new QPalette( obj->standardPalette () );
     _qt4xhb_createReturnClass ( ptr, "QPALETTE", true );
   }
 }

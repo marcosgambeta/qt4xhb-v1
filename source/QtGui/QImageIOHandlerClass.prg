@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_CANREAD )
   QImageIOHandler * obj = (QImageIOHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->canRead (  ) );
+    hb_retl( obj->canRead () );
   }
 }
 
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_CURRENTIMAGENUMBER )
   QImageIOHandler * obj = (QImageIOHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->currentImageNumber (  ) );
+    hb_retni( obj->currentImageNumber () );
   }
 }
 
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_CURRENTIMAGERECT )
   QImageIOHandler * obj = (QImageIOHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRect * ptr = new QRect( obj->currentImageRect (  ) );
+    QRect * ptr = new QRect( obj->currentImageRect () );
     _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_DEVICE )
   QImageIOHandler * obj = (QImageIOHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QIODevice * ptr = obj->device (  );
+    QIODevice * ptr = obj->device ();
     _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );
   }
 }
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_FORMAT )
   QImageIOHandler * obj = (QImageIOHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->format (  ) );
+    QByteArray * ptr = new QByteArray( obj->format () );
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_IMAGECOUNT )
   QImageIOHandler * obj = (QImageIOHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->imageCount (  ) );
+    hb_retni( obj->imageCount () );
   }
 }
 
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_JUMPTONEXTIMAGE )
   QImageIOHandler * obj = (QImageIOHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->jumpToNextImage (  ) );
+    hb_retl( obj->jumpToNextImage () );
   }
 }
 
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_LOOPCOUNT )
   QImageIOHandler * obj = (QImageIOHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->loopCount (  ) );
+    hb_retni( obj->loopCount () );
   }
 }
 
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_NEXTIMAGEDELAY )
   QImageIOHandler * obj = (QImageIOHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->nextImageDelay (  ) );
+    hb_retni( obj->nextImageDelay () );
   }
 }
 

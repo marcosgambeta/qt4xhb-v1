@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ACTIONS )
   QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QList<QAction *> list = obj->actions (  );
+    QList<QAction *> list = obj->actions ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QACTION" );
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QACTIONGROUP_CHECKEDACTION )
   QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QAction * ptr = obj->checkedAction (  );
+    QAction * ptr = obj->checkedAction ();
     _qt4xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ISENABLED )
   QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isEnabled (  ) );
+    hb_retl( obj->isEnabled () );
   }
 }
 
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ISEXCLUSIVE )
   QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isExclusive (  ) );
+    hb_retl( obj->isExclusive () );
   }
 }
 
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ISVISIBLE )
   QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isVisible (  ) );
+    hb_retl( obj->isVisible () );
   }
 }
 

@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QTREEWIDGET_COLUMNCOUNT )
   QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->columnCount (  ) );
+    hb_retni( obj->columnCount () );
   }
 }
 
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QTREEWIDGET_CURRENTCOLUMN )
   QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->currentColumn (  ) );
+    hb_retni( obj->currentColumn () );
   }
 }
 
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QTREEWIDGET_CURRENTITEM )
   QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTreeWidgetItem * ptr = obj->currentItem (  );
+    QTreeWidgetItem * ptr = obj->currentItem ();
     _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
   }
 }
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QTREEWIDGET_HEADERITEM )
   QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTreeWidgetItem * ptr = obj->headerItem (  );
+    QTreeWidgetItem * ptr = obj->headerItem ();
     _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
   }
 }
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QTREEWIDGET_INVISIBLEROOTITEM )
   QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTreeWidgetItem * ptr = obj->invisibleRootItem (  );
+    QTreeWidgetItem * ptr = obj->invisibleRootItem ();
     _qt4xhb_createReturnClass ( ptr, "QTREEWIDGETITEM" );
   }
 }
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SELECTEDITEMS )
   QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QList<QTreeWidgetItem *> list = obj->selectedItems (  );
+    QList<QTreeWidgetItem *> list = obj->selectedItems ();
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QTREEWIDGETITEM" );
@@ -700,7 +700,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SORTCOLUMN )
   QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->sortColumn (  ) );
+    hb_retni( obj->sortColumn () );
   }
 }
 
@@ -759,7 +759,7 @@ HB_FUNC_STATIC( QTREEWIDGET_TOPLEVELITEMCOUNT )
   QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->topLevelItemCount (  ) );
+    hb_retni( obj->topLevelItemCount () );
   }
 }
 
@@ -803,7 +803,7 @@ HB_FUNC_STATIC( QTREEWIDGET_CLEAR )
   QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->clear (  );
+    obj->clear ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

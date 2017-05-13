@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QITEMEDITORCREATORBASE_VALUEPROPERTYNAME )
   QItemEditorCreatorBase * obj = (QItemEditorCreatorBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->valuePropertyName (  ) );
+    QByteArray * ptr = new QByteArray( obj->valuePropertyName () );
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }

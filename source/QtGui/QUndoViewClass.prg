@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QUNDOVIEW_CLEANICON )
   QUndoView * obj = (QUndoView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QIcon * ptr = new QIcon( obj->cleanIcon (  ) );
+    QIcon * ptr = new QIcon( obj->cleanIcon () );
     _qt4xhb_createReturnClass ( ptr, "QICON", true );
   }
 }
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QUNDOVIEW_EMPTYLABEL )
   QUndoView * obj = (QUndoView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->emptyLabel (  );
+    QString str1 = obj->emptyLabel ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QUNDOVIEW_GROUP )
   QUndoView * obj = (QUndoView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QUndoGroup * ptr = obj->group (  );
+    QUndoGroup * ptr = obj->group ();
     _qt4xhb_createReturnClass ( ptr, "QUNDOGROUP" );
   }
 }
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QUNDOVIEW_STACK )
   QUndoView * obj = (QUndoView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QUndoStack * ptr = obj->stack (  );
+    QUndoStack * ptr = obj->stack ();
     _qt4xhb_createReturnClass ( ptr, "QUNDOSTACK" );
   }
 }

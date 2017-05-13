@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QMDIAREA_ACTIVATIONORDER )
   QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->activationOrder (  ) );
+    hb_retni( (int) obj->activationOrder () );
   }
 }
 
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QMDIAREA_ACTIVESUBWINDOW )
   QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QMdiSubWindow * ptr = obj->activeSubWindow (  );
+    QMdiSubWindow * ptr = obj->activeSubWindow ();
     _qt4xhb_createReturnClass ( ptr, "QMDISUBWINDOW" );
   }
 }
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QMDIAREA_BACKGROUND )
   QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QBrush * ptr = new QBrush( obj->background (  ) );
+    QBrush * ptr = new QBrush( obj->background () );
     _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
   }
 }
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QMDIAREA_CURRENTSUBWINDOW )
   QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QMdiSubWindow * ptr = obj->currentSubWindow (  );
+    QMdiSubWindow * ptr = obj->currentSubWindow ();
     _qt4xhb_createReturnClass ( ptr, "QMDISUBWINDOW" );
   }
 }
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QMDIAREA_DOCUMENTMODE )
   QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->documentMode (  ) );
+    hb_retl( obj->documentMode () );
   }
 }
 
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QMDIAREA_TABPOSITION )
   QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->tabPosition (  ) );
+    hb_retni( (int) obj->tabPosition () );
   }
 }
 
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QMDIAREA_TABSHAPE )
   QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->tabShape (  ) );
+    hb_retni( (int) obj->tabShape () );
   }
 }
 
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QMDIAREA_VIEWMODE )
   QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->viewMode (  ) );
+    hb_retni( (int) obj->viewMode () );
   }
 }
 
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QMDIAREA_MINIMUMSIZEHINT )
   QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->minimumSizeHint (  ) );
+    QSize * ptr = new QSize( obj->minimumSizeHint () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QMDIAREA_SIZEHINT )
   QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * ptr = new QSize( obj->sizeHint (  ) );
+    QSize * ptr = new QSize( obj->sizeHint () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QMDIAREA_ACTIVATENEXTSUBWINDOW )
   QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->activateNextSubWindow (  );
+    obj->activateNextSubWindow ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -448,7 +448,7 @@ HB_FUNC_STATIC( QMDIAREA_ACTIVATEPREVIOUSSUBWINDOW )
   QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->activatePreviousSubWindow (  );
+    obj->activatePreviousSubWindow ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -462,7 +462,7 @@ HB_FUNC_STATIC( QMDIAREA_CASCADESUBWINDOWS )
   QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->cascadeSubWindows (  );
+    obj->cascadeSubWindows ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QMDIAREA_CLOSEACTIVESUBWINDOW )
   QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->closeActiveSubWindow (  );
+    obj->closeActiveSubWindow ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -490,7 +490,7 @@ HB_FUNC_STATIC( QMDIAREA_CLOSEALLSUBWINDOWS )
   QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->closeAllSubWindows (  );
+    obj->closeAllSubWindows ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -519,7 +519,7 @@ HB_FUNC_STATIC( QMDIAREA_TILESUBWINDOWS )
   QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->tileSubWindows (  );
+    obj->tileSubWindows ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

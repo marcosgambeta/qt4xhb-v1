@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QFILEOPENEVENT_FILE )
   QFileOpenEvent * obj = (QFileOpenEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->file (  );
+    QString str1 = obj->file ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QFILEOPENEVENT_URL )
   QFileOpenEvent * obj = (QFileOpenEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->url (  ) );
+    QUrl * ptr = new QUrl( obj->url () );
     _qt4xhb_createReturnClass ( ptr, "QURL", true );
   }
 }

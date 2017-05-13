@@ -79,7 +79,7 @@ QIcon ()
 HB_FUNC_STATIC( QICON_NEW1 )
 {
   QIcon * o = NULL;
-  o = new QIcon (  );
+  o = new QIcon ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QICON_CACHEKEY )
   QIcon * obj = (QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->cacheKey (  );
+    qint64 i = obj->cacheKey ();
     hb_retni( i );
   }
 }
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QICON_ISNULL )
   QIcon * obj = (QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNull (  ) );
+    hb_retl( obj->isNull () );
   }
 }
 
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QICON_NAME )
   QIcon * obj = (QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->name (  );
+    QString str1 = obj->name ();
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -514,7 +514,7 @@ QString themeName ()
 */
 HB_FUNC_STATIC( QICON_THEMENAME )
 {
-  QString str1 = QIcon::themeName (  );
+  QString str1 = QIcon::themeName ();
   hb_retc( RQSTRING(str1) );
 }
 
@@ -524,7 +524,7 @@ QStringList themeSearchPaths ()
 */
 HB_FUNC_STATIC( QICON_THEMESEARCHPATHS )
 {
-  QStringList strl = QIcon::themeSearchPaths (  );
+  QStringList strl = QIcon::themeSearchPaths ();
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;

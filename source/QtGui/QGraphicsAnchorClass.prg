@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_SIZEPOLICY )
   QGraphicsAnchor * obj = (QGraphicsAnchor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->sizePolicy (  ) );
+    hb_retni( (int) obj->sizePolicy () );
   }
 }
 
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_SPACING )
   QGraphicsAnchor * obj = (QGraphicsAnchor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->spacing (  );
+    qreal r = obj->spacing ();
     hb_retnd( r );
   }
 }
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_UNSETSPACING )
   QGraphicsAnchor * obj = (QGraphicsAnchor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->unsetSpacing (  );
+    obj->unsetSpacing ();
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_BLURRADIUS )
   QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->blurRadius (  );
+    qreal r = obj->blurRadius ();
     hb_retnd( r );
   }
 }
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_COLOR )
   QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QColor * ptr = new QColor( obj->color (  ) );
+    QColor * ptr = new QColor( obj->color () );
     _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_OFFSET )
   QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPointF * ptr = new QPointF( obj->offset (  ) );
+    QPointF * ptr = new QPointF( obj->offset () );
     _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_XOFFSET )
   QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->xOffset (  );
+    qreal r = obj->xOffset ();
     hb_retnd( r );
   }
 }
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_YOFFSET )
   QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->yOffset (  );
+    qreal r = obj->yOffset ();
     hb_retnd( r );
   }
 }

@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_STRINGLIST )
   QStringListModel * obj = (QStringListModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList strl = obj->stringList (  );
+    QStringList strl = obj->stringList ();
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_SUPPORTEDDROPACTIONS )
   QStringListModel * obj = (QStringListModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->supportedDropActions (  ) );
+    hb_retni( (int) obj->supportedDropActions () );
   }
 }
 
