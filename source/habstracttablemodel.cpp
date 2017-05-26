@@ -568,12 +568,22 @@ QVariant HAbstractTableModel::data( const QModelIndex & index, int role ) const
 {
   QVariant data;
 
+  // TODO: confirmar se a verificação abaixo é realmente necessária
+  if( index.isValid() == false )
+  {
+    return data;
+  }
+
   if( role == Qt::DisplayRole && getFieldCB )
   {
     PHB_ITEM pRow = hb_itemPutNI( NULL, index.row() );
     PHB_ITEM pCol = hb_itemPutNI( NULL, index.column() );
     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( getFieldCB, 2, pRow, pCol ) );
     if( hb_itemType( pRet ) & HB_IT_STRING )
+    {
+      data = hb_itemGetCPtr( pRet );
+    }
+    else if( hb_itemType( pRet ) & HB_IT_MEMO )
     {
       data = hb_itemGetCPtr( pRet );
     }
@@ -589,6 +599,21 @@ QVariant HAbstractTableModel::data( const QModelIndex & index, int role ) const
     {
       data = hb_itemGetL( pRet );
     }
+    else if( hb_itemType( pRet ) & HB_IT_DATE )
+    {
+      int y,m,d;
+      hb_dateDecode( hb_itemGetDL( pRet ), &y, &m, &d );
+      QDate date(y,m,d);
+      data = date;
+    }
+    else if( hb_itemType( pRet ) & HB_IT_OBJECT )
+    {
+      void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
+      if( hb_clsIsParent( hb_objGetClass( pRet ), "QVARIANT" ) )
+      {
+        data = *( (QVariant *) ptr );
+      }
+    }
     hb_itemRelease( pRow );
     hb_itemRelease( pCol );
     hb_itemRelease( pRet );
@@ -601,12 +626,11 @@ QVariant HAbstractTableModel::data( const QModelIndex & index, int role ) const
      if( hb_itemType( pRet ) & HB_IT_OBJECT )
      {
        void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
-       int clsid = hb_itemGetNI( hb_objSendMsg( pRet, "CLASS_ID", 0 ) );
-       if( clsid == Class_Id_QIcon )
+       if( hb_clsIsParent( hb_objGetClass( pRet ), "QICON" ) )
        {
          data = *( (QIcon *) ptr );
        }
-       else if( clsid == Class_Id_QPixmap )
+       else if( hb_clsIsParent( hb_objGetClass( pRet ), "QPIXMAP" ) )
        {
          data = *( (QPixmap *) ptr );
        }
@@ -723,12 +747,11 @@ QVariant HAbstractTableModel::data( const QModelIndex & index, int role ) const
      if( hb_itemType( pRet ) & HB_IT_OBJECT )
      {
        void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
-       int clsid = hb_itemGetNI( hb_objSendMsg( pRet, "CLASS_ID", 0 ) );
-       if( clsid == Class_Id_QColor )
+       if( hb_clsIsParent( hb_objGetClass( pRet ), "QCOLOR" ) )
        {
          data = *( (QColor *) ptr );
        }
-       else if( clsid == Class_Id_QBrush )
+       else if( hb_clsIsParent( hb_objGetClass( pRet ), "QBRUSH" ) )
        {
          data = *( (QBrush *) ptr );
        }
@@ -804,12 +827,11 @@ QVariant HAbstractTableModel::headerData( int section, Qt::Orientation orientati
       if( hb_itemType( pRet ) & HB_IT_OBJECT )
       {
         void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
-        int clsid = hb_itemGetNI( hb_objSendMsg( pRet, "CLASS_ID", 0 ) );
-        if( clsid == Class_Id_QIcon )
+        if( hb_clsIsParent( hb_objGetClass( pRet ), "QICON" ) )
         {
           data = *( (QIcon *) ptr );
         }
-        else if( clsid == Class_Id_QPixmap )
+        else if( hb_clsIsParent( hb_objGetClass( pRet ), "QPIXMAP" ) )
         {
           data = *( (QPixmap *) ptr );
         }
@@ -853,12 +875,11 @@ QVariant HAbstractTableModel::headerData( int section, Qt::Orientation orientati
      if( hb_itemType( pRet ) & HB_IT_OBJECT )
      {
        void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
-       int clsid = hb_itemGetNI( hb_objSendMsg( pRet, "CLASS_ID", 0 ) );
-       if( clsid == Class_Id_QColor )
+       if( hb_clsIsParent( hb_objGetClass( pRet ), "QCOLOR" ) )
        {
          data = *( (QColor *) ptr );
        }
-       else if( clsid == Class_Id_QBrush )
+       else if( hb_clsIsParent( hb_objGetClass( pRet ), "QBRUSH" ) )
        {
          data = *( (QBrush *) ptr );
        }
@@ -921,12 +942,11 @@ QVariant HAbstractTableModel::headerData( int section, Qt::Orientation orientati
       if( hb_itemType( pRet ) & HB_IT_OBJECT )
       {
         void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
-        int clsid = hb_itemGetNI( hb_objSendMsg( pRet, "CLASS_ID", 0 ) );
-        if( clsid == Class_Id_QIcon )
+        if( hb_clsIsParent( hb_objGetClass( pRet ), "QICON" ) )
         {
           data = *( (QIcon *) ptr );
         }
-        else if( clsid == Class_Id_QPixmap )
+        else if( hb_clsIsParent( hb_objGetClass( pRet ), "QPIXMAP" ) )
         {
           data = *( (QPixmap *) ptr );
         }
@@ -970,12 +990,11 @@ QVariant HAbstractTableModel::headerData( int section, Qt::Orientation orientati
      if( hb_itemType( pRet ) & HB_IT_OBJECT )
      {
        void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
-       int clsid = hb_itemGetNI( hb_objSendMsg( pRet, "CLASS_ID", 0 ) );
-       if( clsid == Class_Id_QColor )
+       if( hb_clsIsParent( hb_objGetClass( pRet ), "QCOLOR" ) )
        {
          data = *( (QColor *) ptr );
        }
-       else if( clsid == Class_Id_QBrush )
+       else if( hb_clsIsParent( hb_objGetClass( pRet ), "QBRUSH" ) )
        {
          data = *( (QBrush *) ptr );
        }
@@ -1060,12 +1079,13 @@ int HAbstractTableModel::columnCount( const QModelIndex & parent ) const
 void HAbstractTableModel::reloadData()
 {
   // Notas da documentação do Qt:
-  // emit layoutAboutToBeChanged
+  emit QAbstractTableModel::layoutAboutToBeChanged();
   // Remember the QModelIndex that will change
   // Update your internal data
   // Call changePersistentIndex()
   // emit layoutChanged
-  emit QAbstractItemModel::layoutChanged();
+  //emit QAbstractItemModel::layoutChanged();
+  emit QAbstractTableModel::layoutChanged();
 }
 
 /*

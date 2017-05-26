@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QDIR
@@ -20,7 +19,6 @@ REQUEST QURL
 
 CLASS QFileDialog INHERIT QDialog
 
-   DATA class_id INIT Class_Id_QFileDialog
    DATA self_destruction INIT .F.
 
    METHOD new1

@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QPIXMAP
@@ -21,7 +20,6 @@ REQUEST QPOINT
 
 CLASS QStyle INHERIT QObject
 
-   DATA class_id INIT Class_Id_QStyle
    DATA self_destruction INIT .F.
 
    METHOD delete

@@ -7,13 +7,10 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 
 CLASS QDomProcessingInstruction INHERIT QDomNode
 
-   DATA class_id INIT Class_Id_QDomProcessingInstruction
-   DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
    METHOD new1

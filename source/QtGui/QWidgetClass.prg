@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QACTION
@@ -37,8 +36,6 @@ REQUEST QPAINTENGINE
 
 CLASS QWidget INHERIT QObject
 
-   DATA class_id INIT Class_Id_QWidget
-   DATA class_flags INIT 2
    DATA self_destruction INIT .F.
 
    METHOD new

@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QWIDGET
@@ -15,7 +14,6 @@ REQUEST QWIDGET
 
 CLASS QGraphicsSceneEvent INHERIT QEvent
 
-   DATA class_id INIT Class_Id_QGraphicsSceneEvent
    DATA self_destruction INIT .F.
 
    METHOD delete

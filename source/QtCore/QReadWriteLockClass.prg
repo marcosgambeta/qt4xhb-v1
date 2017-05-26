@@ -7,14 +7,11 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 
 CLASS QReadWriteLock
 
    DATA pointer
-   DATA class_id INIT Class_Id_QReadWriteLock
-   DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
    METHOD new1

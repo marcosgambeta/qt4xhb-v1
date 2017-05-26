@@ -7,12 +7,10 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 
 CLASS QTextTableCellFormat INHERIT QTextCharFormat
 
-   DATA class_id INIT Class_Id_QTextTableCellFormat
    DATA self_destruction INIT .F.
 
    METHOD new

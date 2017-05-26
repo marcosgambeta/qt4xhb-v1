@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QREGION
@@ -16,7 +15,6 @@ REQUEST QREGION
 CLASS QDecoration
 
    DATA pointer
-   DATA class_id INIT Class_Id_QDecoration
    DATA self_destruction INIT .F.
 
    METHOD delete

@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QTEXTTABLECELL
@@ -17,7 +16,6 @@ REQUEST QTEXTCURSOR
 
 CLASS QTextTable INHERIT QTextFrame
 
-   DATA class_id INIT Class_Id_QTextTable
    DATA self_destruction INIT .F.
 
    METHOD delete

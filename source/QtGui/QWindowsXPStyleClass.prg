@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QSIZE
@@ -18,7 +17,6 @@ REQUEST QRECT
 
 CLASS QWindowsXPStyle INHERIT QWindowsStyle
 
-   DATA class_id INIT Class_Id_QWindowsXPStyle
    DATA self_destruction INIT .F.
 
    METHOD new

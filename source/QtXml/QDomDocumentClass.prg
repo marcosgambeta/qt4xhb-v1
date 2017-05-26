@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QDOMATTR
@@ -27,8 +26,6 @@ REQUEST QBYTEARRAY
 
 CLASS QDomDocument INHERIT QDomNode
 
-   DATA class_id INIT Class_Id_QDomDocument
-   DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
    METHOD new1

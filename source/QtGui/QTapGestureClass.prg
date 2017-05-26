@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QPOINTF
@@ -15,7 +14,6 @@ REQUEST QPOINTF
 
 CLASS QTapGesture INHERIT QGesture
 
-   DATA class_id INIT Class_Id_QTapGesture
    DATA self_destruction INIT .F.
 
    METHOD delete

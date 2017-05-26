@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QWEBHISTORY
@@ -20,7 +19,6 @@ REQUEST QURL
 
 CLASS QGraphicsWebView INHERIT QGraphicsWidget
 
-   DATA class_id INIT Class_Id_QGraphicsWebView
    DATA self_destruction INIT .F.
 
    METHOD new

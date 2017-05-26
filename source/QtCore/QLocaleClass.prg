@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QCHAR
@@ -20,7 +19,6 @@ REQUEST QLOCALE
 CLASS QLocale
 
    DATA pointer
-   DATA class_id INIT Class_Id_QLocale
    DATA self_destruction INIT .F.
 
    METHOD new1

@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QSIZEF
@@ -15,7 +14,6 @@ REQUEST QSIZEF
 
 CLASS QGraphicsSceneResizeEvent INHERIT QGraphicsSceneEvent
 
-   DATA class_id INIT Class_Id_QGraphicsSceneResizeEvent
    DATA self_destruction INIT .F.
 
    METHOD new

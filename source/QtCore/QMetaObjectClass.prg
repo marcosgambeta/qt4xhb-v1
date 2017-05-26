@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QMETACLASSINFO
@@ -22,7 +21,6 @@ REQUEST QBYTEARRAY
 CLASS QMetaObject
 
    DATA pointer
-   DATA class_id INIT Class_Id_QMetaObject
    DATA self_destruction INIT .F.
 
    METHOD delete

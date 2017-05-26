@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QRECTF
@@ -16,7 +15,6 @@ REQUEST QPAINTERPATH
 
 CLASS QGraphicsItemGroup INHERIT QGraphicsItem
 
-   DATA class_id INIT Class_Id_QGraphicsItemGroup
    DATA self_destruction INIT .F.
 
    METHOD new

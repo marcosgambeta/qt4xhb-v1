@@ -7,12 +7,10 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 
 CLASS QAbstractMessageHandler INHERIT QObject
 
-   DATA class_id INIT Class_Id_QAbstractMessageHandler
    DATA self_destruction INIT .F.
 
    METHOD delete

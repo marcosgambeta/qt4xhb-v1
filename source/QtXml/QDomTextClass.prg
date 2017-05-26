@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QDOMTEXT
@@ -15,8 +14,6 @@ REQUEST QDOMTEXT
 
 CLASS QDomText INHERIT QDomCharacterData
 
-   DATA class_id INIT Class_Id_QDomText
-   DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
    METHOD new1

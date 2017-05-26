@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QFONT
@@ -17,7 +16,6 @@ REQUEST QCOLOR
 
 CLASS QTextCharFormat INHERIT QTextFormat
 
-   DATA class_id INIT Class_Id_QTextCharFormat
    DATA self_destruction INIT .F.
 
    METHOD new

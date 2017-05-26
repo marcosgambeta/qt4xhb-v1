@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QCOLOR
@@ -17,7 +16,6 @@ REQUEST QCOLORMAP
 CLASS QColormap
 
    DATA pointer
-   DATA class_id INIT Class_Id_QColormap
    DATA self_destruction INIT .F.
 
    METHOD new

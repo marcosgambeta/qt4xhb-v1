@@ -7,12 +7,10 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 
 CLASS QToolBarChangeEvent INHERIT QEvent
 
-   DATA class_id INIT Class_Id_QToolBarChangeEvent
    DATA self_destruction INIT .F.
 
    METHOD new

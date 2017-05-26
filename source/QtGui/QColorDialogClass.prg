@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QCOLOR
@@ -15,7 +14,6 @@ REQUEST QCOLOR
 
 CLASS QColorDialog INHERIT QDialog
 
-   DATA class_id INIT Class_Id_QColorDialog
    DATA self_destruction INIT .F.
 
    METHOD new1

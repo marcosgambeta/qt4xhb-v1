@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QNETWORKCONFIGURATION
@@ -15,7 +14,6 @@ REQUEST QNETWORKCONFIGURATION
 
 CLASS QNetworkConfigurationManager INHERIT QObject
 
-   DATA class_id INIT Class_Id_QNetworkConfigurationManager
    DATA self_destruction INIT .F.
 
    METHOD new

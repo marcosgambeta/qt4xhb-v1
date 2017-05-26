@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QBYTEARRAY
@@ -15,7 +14,6 @@ REQUEST QBYTEARRAY
 
 CLASS QDynamicPropertyChangeEvent INHERIT QEvent
 
-   DATA class_id INIT Class_Id_QDynamicPropertyChangeEvent
    DATA self_destruction INIT .F.
 
    METHOD new

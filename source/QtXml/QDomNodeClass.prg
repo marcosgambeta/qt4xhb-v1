@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QDOMNODE
@@ -31,8 +30,6 @@ REQUEST QDOMTEXT
 CLASS QDomNode
 
    DATA pointer
-   DATA class_id INIT Class_Id_QDomNode
-   DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
    METHOD new1

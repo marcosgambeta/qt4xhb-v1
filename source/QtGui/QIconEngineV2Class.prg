@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QSIZE
@@ -16,7 +15,6 @@ REQUEST QICONENGINEV2
 
 CLASS QIconEngineV2 INHERIT QIconEngine
 
-   DATA class_id INIT Class_Id_QIconEngineV2
    DATA self_destruction INIT .F.
 
    METHOD delete

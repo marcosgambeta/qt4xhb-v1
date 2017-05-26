@@ -7,11 +7,9 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 CLASS HAbstractListModel INHERIT QAbstractListModel
 
-   DATA class_id INIT Class_Id_QAbstractListModel
    DATA self_destruction INIT .F.
 
    METHOD new

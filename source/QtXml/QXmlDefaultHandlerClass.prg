@@ -7,13 +7,10 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 
 CLASS QXmlDefaultHandler INHERIT QXmlContentHandler,QXmlErrorHandler,QXmlDTDHandler,QXmlEntityResolver,QXmlLexicalHandler,QXmlDeclHandler
 
-   DATA class_id INIT Class_Id_QXmlDefaultHandler
-   DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
    METHOD new

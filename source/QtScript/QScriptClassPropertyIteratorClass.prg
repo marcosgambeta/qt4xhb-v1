@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QSCRIPTSTRING
@@ -17,7 +16,6 @@ REQUEST QSCRIPTVALUE
 CLASS QScriptClassPropertyIterator
 
    DATA pointer
-   DATA class_id INIT Class_Id_QScriptClassPropertyIterator
    DATA self_destruction INIT .F.
 
    METHOD delete

@@ -7,12 +7,10 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 
 CLASS QFinalState INHERIT QAbstractState
 
-   DATA class_id INIT Class_Id_QFinalState
    DATA self_destruction INIT .F.
 
    METHOD new

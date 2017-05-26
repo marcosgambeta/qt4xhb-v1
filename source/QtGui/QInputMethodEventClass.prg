@@ -7,12 +7,10 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 
 CLASS QInputMethodEvent INHERIT QEvent
 
-   DATA class_id INIT Class_Id_QInputMethodEvent
    DATA self_destruction INIT .F.
 
    METHOD new1

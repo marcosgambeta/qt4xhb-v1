@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QDECLARATIVECONTEXT
@@ -17,7 +16,6 @@ REQUEST QOBJECT
 CLASS QDeclarativeScriptString
 
    DATA pointer
-   DATA class_id INIT Class_Id_QDeclarativeScriptString
    DATA self_destruction INIT .F.
 
    METHOD new1

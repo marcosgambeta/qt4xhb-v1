@@ -7,12 +7,10 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 
 CLASS QSwipeGesture INHERIT QGesture
 
-   DATA class_id INIT Class_Id_QSwipeGesture
    DATA self_destruction INIT .F.
 
    METHOD delete

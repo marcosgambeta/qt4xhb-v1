@@ -7,12 +7,10 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 
 CLASS QUdpSocket INHERIT QAbstractSocket
 
-   DATA class_id INIT Class_Id_QUdpSocket
    DATA self_destruction INIT .F.
 
    METHOD new

@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QSCRIPTENGINE
@@ -19,7 +18,6 @@ REQUEST QSCRIPTVALUE
 CLASS QScriptClass
 
    DATA pointer
-   DATA class_id INIT Class_Id_QScriptClass
    DATA self_destruction INIT .F.
 
    METHOD new

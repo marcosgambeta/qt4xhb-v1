@@ -7,11 +7,9 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 CLASS QAxScriptEngine INHERIT QAxObject
 
-   DATA class_id INIT Class_Id_QAxScriptEngine
    DATA self_destruction INIT .F.
 
    METHOD new

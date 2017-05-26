@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QSPLITTERHANDLE
@@ -18,7 +17,6 @@ REQUEST QSIZE
 
 CLASS QSplitter INHERIT QFrame
 
-   DATA class_id INIT Class_Id_QSplitter
    DATA self_destruction INIT .F.
 
    METHOD new1

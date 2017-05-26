@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QBYTEARRAY
@@ -17,7 +16,6 @@ REQUEST QMETAOBJECT
 CLASS QMetaEnum
 
    DATA pointer
-   DATA class_id INIT Class_Id_QMetaEnum
    DATA self_destruction INIT .F.
 
    METHOD new

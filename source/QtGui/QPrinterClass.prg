@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QRECT
@@ -19,7 +18,6 @@ REQUEST QPAINTENGINE
 
 CLASS QPrinter INHERIT QPaintDevice
 
-   DATA class_id INIT Class_Id_QPrinter
    DATA self_destruction INIT .F.
 
    METHOD new1

@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QPROCESSENVIRONMENT
@@ -16,7 +15,6 @@ REQUEST QBYTEARRAY
 
 CLASS QProcess INHERIT QIODevice
 
-   DATA class_id INIT Class_Id_QProcess
    DATA self_destruction INIT .F.
 
    METHOD new

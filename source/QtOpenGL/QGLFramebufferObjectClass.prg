@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QGLFRAMEBUFFEROBJECTFORMAT
@@ -18,7 +17,6 @@ REQUEST QPAINTENGINE
 
 CLASS QGLFramebufferObject INHERIT QPaintDevice
 
-   DATA class_id INIT Class_Id_QGLFramebufferObject
    DATA self_destruction INIT .F.
 
    METHOD new1

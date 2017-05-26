@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QTEXTLISTFORMAT
@@ -16,7 +15,6 @@ REQUEST QTEXTBLOCK
 
 CLASS QTextList INHERIT QTextBlockGroup
 
-   DATA class_id INIT Class_Id_QTextList
    DATA self_destruction INIT .F.
 
    METHOD delete

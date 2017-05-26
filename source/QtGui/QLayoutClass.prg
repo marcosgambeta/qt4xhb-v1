@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QMARGINS
@@ -20,8 +19,6 @@ REQUEST QLAYOUT
 
 CLASS QLayout INHERIT QObject,QLayoutItem
 
-   DATA class_id INIT Class_Id_QLayout
-   DATA class_flags INIT 4
    DATA self_destruction INIT .F.
 
    METHOD activate

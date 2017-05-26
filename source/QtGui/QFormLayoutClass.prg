@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QLAYOUTITEM
@@ -17,7 +16,6 @@ REQUEST QSIZE
 
 CLASS QFormLayout INHERIT QLayout
 
-   DATA class_id INIT Class_Id_QFormLayout
    DATA self_destruction INIT .F.
 
    METHOD new

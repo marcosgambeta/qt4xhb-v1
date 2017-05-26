@@ -7,13 +7,11 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 REQUEST QMODELINDEX
 
 CLASS HAbstractTableModel INHERIT QAbstractTableModel
 
-   DATA class_id INIT Class_Id_QAbstractTableModel
    DATA self_destruction INIT .F.
 
    METHOD new

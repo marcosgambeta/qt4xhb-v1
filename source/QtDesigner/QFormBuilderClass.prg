@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QDESIGNERCUSTOMWIDGETINTERFACE
@@ -15,7 +14,6 @@ REQUEST QDESIGNERCUSTOMWIDGETINTERFACE
 
 CLASS QFormBuilder INHERIT QAbstractFormBuilder
 
-   DATA class_id INIT Class_Id_QFormBuilder
    DATA self_destruction INIT .F.
 
    METHOD new

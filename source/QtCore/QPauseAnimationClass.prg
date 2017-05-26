@@ -7,12 +7,10 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 
 CLASS QPauseAnimation INHERIT QAbstractAnimation
 
-   DATA class_id INIT Class_Id_QPauseAnimation
    DATA self_destruction INIT .F.
 
    METHOD new1

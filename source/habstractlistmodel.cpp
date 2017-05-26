@@ -481,12 +481,11 @@ QVariant HAbstractListModel::data( const QModelIndex & index, int role ) const
      if( hb_itemType( pRet ) & HB_IT_OBJECT )
      {
        void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
-       int clsid = hb_itemGetNI( hb_objSendMsg( pRet, "CLASS_ID", 0 ) );
-       if( clsid == Class_Id_QIcon )
+       if( hb_clsIsParent( hb_objGetClass( pRet ), "QICON" ) )
        {
          data = *( (QIcon *) ptr );
        }
-       else if( clsid == Class_Id_QPixmap )
+       else if( hb_clsIsParent( hb_objGetClass( pRet ), "QPIXMAP" ) )
        {
          data = *( (QPixmap *) ptr );
        }
@@ -584,12 +583,11 @@ QVariant HAbstractListModel::data( const QModelIndex & index, int role ) const
      if( hb_itemType( pRet ) & HB_IT_OBJECT )
      {
        void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
-       int clsid = hb_itemGetNI( hb_objSendMsg( pRet, "CLASS_ID", 0 ) );
-       if( clsid == Class_Id_QColor )
+       if( hb_clsIsParent( hb_objGetClass( pRet ), "QCOLOR" ) )
        {
          data = *( (QColor *) ptr );
        }
-       else if( clsid == Class_Id_QBrush )
+       else if( hb_clsIsParent( hb_objGetClass( pRet ), "QBRUSH" ) )
        {
          data = *( (QBrush *) ptr );
        }
@@ -657,12 +655,11 @@ QVariant HAbstractListModel::headerData( int section, Qt::Orientation orientatio
       if( hb_itemType( pRet ) & HB_IT_OBJECT )
       {
         void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
-        int clsid = hb_itemGetNI( hb_objSendMsg( pRet, "CLASS_ID", 0 ) );
-        if( clsid == Class_Id_QIcon )
+        if( hb_clsIsParent( hb_objGetClass( pRet ), "QICON" ) )
         {
           data = *( (QIcon *) ptr );
         }
-        else if( clsid == Class_Id_QPixmap )
+        else if( hb_clsIsParent( hb_objGetClass( pRet ), "QPIXMAP" ) )
         {
           data = *( (QPixmap *) ptr );
         }
@@ -704,12 +701,11 @@ QVariant HAbstractListModel::headerData( int section, Qt::Orientation orientatio
      if( hb_itemType( pRet ) & HB_IT_OBJECT )
      {
        void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
-       int clsid = hb_itemGetNI( hb_objSendMsg( pRet, "CLASS_ID", 0 ) );
-       if( clsid == Class_Id_QColor )
+       if( hb_clsIsParent( hb_objGetClass( pRet ), "QCOLOR" ) )
        {
          data = *( (QColor *) ptr );
        }
-       else if( clsid == Class_Id_QBrush )
+       else if( hb_clsIsParent( hb_objGetClass( pRet ), "QBRUSH" ) )
        {
          data = *( (QBrush *) ptr );
        }
@@ -770,12 +766,11 @@ QVariant HAbstractListModel::headerData( int section, Qt::Orientation orientatio
       if( hb_itemType( pRet ) & HB_IT_OBJECT )
       {
         void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
-        int clsid = hb_itemGetNI( hb_objSendMsg( pRet, "CLASS_ID", 0 ) );
-        if( clsid == Class_Id_QIcon )
+        if( hb_clsIsParent( hb_objGetClass( pRet ), "QICON" ) )
         {
           data = *( (QIcon *) ptr );
         }
-        else if( clsid == Class_Id_QPixmap )
+        else if( hb_clsIsParent( hb_objGetClass( pRet ), "QPIXMAP" ) )
         {
           data = *( (QPixmap *) ptr );
         }
@@ -817,12 +812,11 @@ QVariant HAbstractListModel::headerData( int section, Qt::Orientation orientatio
      if( hb_itemType( pRet ) & HB_IT_OBJECT )
      {
        void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
-       int clsid = hb_itemGetNI( hb_objSendMsg( pRet, "CLASS_ID", 0 ) );
-       if( clsid == Class_Id_QColor )
+       if( hb_clsIsParent( hb_objGetClass( pRet ), "QCOLOR" ) )
        {
          data = *( (QColor *) ptr );
        }
-       else if( clsid == Class_Id_QBrush )
+       else if( hb_clsIsParent( hb_objGetClass( pRet ), "QBRUSH" ) )
        {
          data = *( (QBrush *) ptr );
        }

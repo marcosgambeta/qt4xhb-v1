@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QRECT
@@ -16,7 +15,6 @@ REQUEST QREGION
 
 CLASS QPaintEvent INHERIT QEvent
 
-   DATA class_id INIT Class_Id_QPaintEvent
    DATA self_destruction INIT .F.
 
    METHOD new1

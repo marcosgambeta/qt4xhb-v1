@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QVECTOR2D
@@ -20,7 +19,6 @@ REQUEST QVECTOR4D
 CLASS QVector2D
 
    DATA pointer
-   DATA class_id INIT Class_Id_QVector2D
    DATA self_destruction INIT .F.
 
    METHOD new1

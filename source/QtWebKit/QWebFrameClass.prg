@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QURL
@@ -26,7 +25,6 @@ REQUEST QVARIANT
 
 CLASS QWebFrame INHERIT QObject
 
-   DATA class_id INIT Class_Id_QWebFrame
    DATA self_destruction INIT .F.
 
    METHOD addToJavaScriptWindowObject1

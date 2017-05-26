@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QCOMPLETER
@@ -24,7 +23,6 @@ REQUEST QABSTRACTITEMVIEW
 
 CLASS QComboBox INHERIT QWidget
 
-   DATA class_id INIT Class_Id_QComboBox
    DATA self_destruction INIT .F.
 
    METHOD new

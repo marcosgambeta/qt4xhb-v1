@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QDECLARATIVEENGINE
@@ -20,7 +19,6 @@ REQUEST QURL
 
 CLASS QDeclarativeView INHERIT QGraphicsView
 
-   DATA class_id INIT Class_Id_QDeclarativeView
    DATA self_destruction INIT .F.
 
    METHOD new1

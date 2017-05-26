@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QNETWORKCONFIGURATION
@@ -17,7 +16,6 @@ REQUEST QVARIANT
 
 CLASS QNetworkSession INHERIT QObject
 
-   DATA class_id INIT Class_Id_QNetworkSession
    DATA self_destruction INIT .F.
 
    METHOD new

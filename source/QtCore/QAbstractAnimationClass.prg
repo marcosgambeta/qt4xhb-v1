@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QANIMATIONGROUP
@@ -15,7 +14,6 @@ REQUEST QANIMATIONGROUP
 
 CLASS QAbstractAnimation INHERIT QObject
 
-   DATA class_id INIT Class_Id_QAbstractAnimation
    DATA self_destruction INIT .F.
 
    METHOD delete

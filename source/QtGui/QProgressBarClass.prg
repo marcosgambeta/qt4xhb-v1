@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QSIZE
@@ -15,7 +14,6 @@ REQUEST QSIZE
 
 CLASS QProgressBar INHERIT QWidget
 
-   DATA class_id INIT Class_Id_QProgressBar
    DATA self_destruction INIT .F.
 
    METHOD new

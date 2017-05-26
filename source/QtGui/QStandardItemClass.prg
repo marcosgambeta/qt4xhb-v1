@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QVARIANT
@@ -23,7 +22,6 @@ REQUEST QSTANDARDITEMMODEL
 CLASS QStandardItem
 
    DATA pointer
-   DATA class_id INIT Class_Id_QStandardItem
    DATA self_destruction INIT .F.
 
    METHOD new1

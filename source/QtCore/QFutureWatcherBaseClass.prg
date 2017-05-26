@@ -7,12 +7,10 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 
 CLASS QFutureWatcherBase INHERIT QObject
 
-   DATA class_id INIT Class_Id_QFutureWatcherBase
    DATA self_destruction INIT .F.
 
    METHOD delete

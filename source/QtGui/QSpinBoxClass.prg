@@ -7,12 +7,10 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 
 CLASS QSpinBox INHERIT QAbstractSpinBox
 
-   DATA class_id INIT Class_Id_QSpinBox
    DATA self_destruction INIT .F.
 
    METHOD new

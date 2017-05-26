@@ -7,14 +7,11 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 
 CLASS QXmlLexicalHandler
 
    DATA pointer
-   DATA class_id INIT Class_Id_QXmlLexicalHandler
-   DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
    METHOD delete

@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QFILEINFO
@@ -16,7 +15,6 @@ REQUEST QFILEINFO
 CLASS QAbstractFileEngineIterator
 
    DATA pointer
-   DATA class_id INIT Class_Id_QAbstractFileEngineIterator
    DATA self_destruction INIT .F.
 
    METHOD delete

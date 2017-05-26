@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QURL
@@ -19,7 +18,6 @@ REQUEST QDECLARATIVECONTEXT
 
 CLASS QDeclarativeContext INHERIT QObject
 
-   DATA class_id INIT Class_Id_QDeclarativeContext
    DATA self_destruction INIT .F.
 
    METHOD new1

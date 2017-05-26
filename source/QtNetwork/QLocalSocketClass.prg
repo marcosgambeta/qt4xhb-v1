@@ -7,12 +7,10 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 
 CLASS QLocalSocket INHERIT QIODevice
 
-   DATA class_id INIT Class_Id_QLocalSocket
    DATA self_destruction INIT .F.
 
    METHOD new

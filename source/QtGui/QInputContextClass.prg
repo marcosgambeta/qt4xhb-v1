@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QACTION
@@ -18,7 +17,6 @@ REQUEST QTEXTFORMAT
 
 CLASS QInputContext INHERIT QObject
 
-   DATA class_id INIT Class_Id_QInputContext
    DATA self_destruction INIT .F.
 
    METHOD delete

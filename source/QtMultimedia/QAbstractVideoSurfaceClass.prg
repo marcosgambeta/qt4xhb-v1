@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QVIDEOSURFACEFORMAT
@@ -15,7 +14,6 @@ REQUEST QVIDEOSURFACEFORMAT
 
 CLASS QAbstractVideoSurface INHERIT QObject
 
-   DATA class_id INIT Class_Id_QAbstractVideoSurface
    DATA self_destruction INIT .F.
 
    METHOD delete

@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QMODELINDEX
@@ -18,7 +17,6 @@ REQUEST QSIZE
 
 CLASS QAbstractItemModel INHERIT QObject
 
-   DATA class_id INIT Class_Id_QAbstractItemModel
    DATA self_destruction INIT .F.
 
    METHOD delete

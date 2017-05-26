@@ -7,12 +7,10 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 
 CLASS QDateEdit INHERIT QDateTimeEdit
 
-   DATA class_id INIT Class_Id_QDateEdit
    DATA self_destruction INIT .F.
 
    METHOD new1

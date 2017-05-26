@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QIMAGE
@@ -17,7 +16,6 @@ REQUEST QPIXMAP
 CLASS QDeclarativeImageProvider
 
    DATA pointer
-   DATA class_id INIT Class_Id_QDeclarativeImageProvider
    DATA self_destruction INIT .F.
 
    METHOD new

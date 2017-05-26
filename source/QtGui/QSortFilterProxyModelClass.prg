@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QREGEXP
@@ -20,7 +19,6 @@ REQUEST QSIZE
 
 CLASS QSortFilterProxyModel INHERIT QAbstractProxyModel
 
-   DATA class_id INIT Class_Id_QSortFilterProxyModel
    DATA self_destruction INIT .F.
 
    METHOD new

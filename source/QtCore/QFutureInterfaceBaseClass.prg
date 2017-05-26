@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QMUTEX
@@ -16,7 +15,6 @@ REQUEST QMUTEX
 CLASS QFutureInterfaceBase
 
    DATA pointer
-   DATA class_id INIT Class_Id_QFutureInterfaceBase
    DATA self_destruction INIT .F.
 
    METHOD new1

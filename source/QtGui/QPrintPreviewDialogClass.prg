@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QPRINTER
@@ -15,7 +14,6 @@ REQUEST QPRINTER
 
 CLASS QPrintPreviewDialog INHERIT QDialog
 
-   DATA class_id INIT Class_Id_QPrintPreviewDialog
    DATA self_destruction INIT .F.
 
    METHOD new1

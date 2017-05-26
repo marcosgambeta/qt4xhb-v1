@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QCOLOR
@@ -20,7 +19,6 @@ REQUEST QPAINTERPATH
 
 CLASS QGraphicsTextItem INHERIT QGraphicsObject
 
-   DATA class_id INIT Class_Id_QGraphicsTextItem
    DATA self_destruction INIT .F.
 
    METHOD new1

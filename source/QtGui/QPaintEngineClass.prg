@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QPAINTDEVICE
@@ -17,7 +16,6 @@ REQUEST QPAINTER
 CLASS QPaintEngine
 
    DATA pointer
-   DATA class_id INIT Class_Id_QPaintEngine
    DATA self_destruction INIT .F.
 
    METHOD delete

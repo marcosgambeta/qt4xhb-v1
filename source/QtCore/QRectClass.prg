@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QRECT
@@ -18,8 +17,6 @@ REQUEST QSIZE
 CLASS QRect
 
    DATA pointer
-   DATA class_id INIT Class_Id_QRect
-   DATA class_flags INIT 0
    DATA self_destruction INIT .F.
 
    METHOD new1

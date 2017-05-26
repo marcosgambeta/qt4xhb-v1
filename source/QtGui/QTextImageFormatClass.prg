@@ -7,12 +7,10 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 
 CLASS QTextImageFormat INHERIT QTextCharFormat
 
-   DATA class_id INIT Class_Id_QTextImageFormat
    DATA self_destruction INIT .F.
 
    METHOD new

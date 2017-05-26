@@ -152,55 +152,6 @@ void _qt4xhb_createReturnClass ( const void * ptr, const char * classname, bool 
 }
 
 /*
-  verifica se o parâmetro <iPar> é do tipo <iClsId>
-  retorno: true ou false
-*/
-
-bool _qt4xhb_checkclsid ( int iPar, int iClsId )
-{
-  if( ISOBJECT(iPar) )
-  {
-    return ( iClsId == hb_itemGetNI( hb_objSendMsg( hb_param(iPar, HB_IT_OBJECT ), "CLASS_ID", 0 ) ) );
-  }
-  else
-  {
-    return false;
-  }
-}
-
-/*
-  verifica se o parâmetro <iPar> herda da classe <classname>
-  retorno: true ou false
-*/
-
-bool _qt4xhb_inherits ( int iPar, const char * classname )
-{
-  if( ISOBJECT(iPar) )
-  {
-    if( hb_itemGetNI( hb_objSendMsg( hb_param(iPar, HB_IT_OBJECT ), "CLASS_FLAGS", 0 ) ) != 0 )
-    {
-      QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(iPar, HB_IT_OBJECT ), "POINTER", 0 ) );
-      if( obj )
-      {
-        return obj->inherits(classname);
-      }
-      else
-      {
-        return false;
-      }
-    }
-    else
-    {
-      return false;
-    }
-  }
-  else
-  {
-    return false;
-  }
-}
-
-/*
 */
 bool _qt4xhb_isClassDerivedFrom ( const char * className1, const char * className2 )
 {

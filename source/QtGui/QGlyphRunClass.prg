@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QPOINTF
@@ -17,7 +16,6 @@ REQUEST QRAWFONT
 CLASS QGlyphRun
 
    DATA pointer
-   DATA class_id INIT Class_Id_QGlyphRun
    DATA self_destruction INIT .F.
 
    METHOD new1

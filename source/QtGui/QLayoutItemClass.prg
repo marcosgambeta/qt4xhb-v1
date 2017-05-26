@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QRECT
@@ -20,7 +19,6 @@ REQUEST QWIDGET
 CLASS QLayoutItem
 
    DATA pointer
-   DATA class_id INIT Class_Id_QLayoutItem
    DATA self_destruction INIT .F.
 
    METHOD delete

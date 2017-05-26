@@ -7,12 +7,10 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 
 CLASS QShowEvent INHERIT QEvent
 
-   DATA class_id INIT Class_Id_QShowEvent
    DATA self_destruction INIT .F.
 
    METHOD new

@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QRECT
@@ -15,7 +14,6 @@ REQUEST QRECT
 
 CLASS QAccessibleWidget INHERIT QAccessibleObject
 
-   DATA class_id INIT Class_Id_QAccessibleWidget
    DATA self_destruction INIT .F.
 
    METHOD new

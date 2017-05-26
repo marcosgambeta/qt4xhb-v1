@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QITEMEDITORFACTORY
@@ -15,7 +14,6 @@ REQUEST QITEMEDITORFACTORY
 
 CLASS QItemDelegate INHERIT QAbstractItemDelegate
 
-   DATA class_id INIT Class_Id_QItemDelegate
    DATA self_destruction INIT .F.
 
    METHOD new

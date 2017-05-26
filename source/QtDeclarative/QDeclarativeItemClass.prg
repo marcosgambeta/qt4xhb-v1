@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QDECLARATIVEITEM
@@ -17,7 +16,6 @@ REQUEST QSCRIPTVALUE
 
 CLASS QDeclarativeItem INHERIT QGraphicsObject,QDeclarativeParserStatus
 
-   DATA class_id INIT Class_Id_QDeclarativeItem
    DATA self_destruction INIT .F.
 
    METHOD new

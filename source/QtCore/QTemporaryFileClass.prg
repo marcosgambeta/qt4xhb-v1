@@ -7,12 +7,10 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 
 CLASS QTemporaryFile INHERIT QFile
 
-   DATA class_id INIT Class_Id_QTemporaryFile
    DATA self_destruction INIT .F.
 
    METHOD new1

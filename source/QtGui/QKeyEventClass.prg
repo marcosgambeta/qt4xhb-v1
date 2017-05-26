@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QKEYEVENT
@@ -15,7 +14,6 @@ REQUEST QKEYEVENT
 
 CLASS QKeyEvent INHERIT QInputEvent
 
-   DATA class_id INIT Class_Id_QKeyEvent
    DATA self_destruction INIT .F.
 
    METHOD new

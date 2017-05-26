@@ -7,13 +7,11 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 
 CLASS QAccessibleBridge
 
    DATA pointer
-   DATA class_id INIT Class_Id_QAccessibleBridge
    DATA self_destruction INIT .F.
 
    METHOD delete

@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QBRUSH
@@ -15,7 +14,6 @@ REQUEST QBRUSH
 
 CLASS QGraphicsOpacityEffect INHERIT QGraphicsEffect
 
-   DATA class_id INIT Class_Id_QGraphicsOpacityEffect
    DATA self_destruction INIT .F.
 
    METHOD new

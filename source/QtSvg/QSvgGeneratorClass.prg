@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QIODEVICE
@@ -18,7 +17,6 @@ REQUEST QRECTF
 
 CLASS QSvgGenerator INHERIT QPaintDevice
 
-   DATA class_id INIT Class_Id_QSvgGenerator
    DATA self_destruction INIT .F.
 
    METHOD new

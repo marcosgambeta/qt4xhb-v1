@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QINPUTCONTEXT
@@ -16,7 +15,6 @@ REQUEST QINPUTCONTEXT
 CLASS QInputContextFactory
 
    DATA pointer
-   DATA class_id INIT Class_Id_QInputContextFactory
    DATA self_destruction INIT .F.
 
    METHOD delete

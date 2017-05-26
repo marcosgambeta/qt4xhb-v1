@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QVARIANT
@@ -15,7 +14,6 @@ REQUEST QVARIANT
 
 CLASS QStringListModel INHERIT QAbstractListModel
 
-   DATA class_id INIT Class_Id_QStringListModel
    DATA self_destruction INIT .F.
 
    METHOD new1

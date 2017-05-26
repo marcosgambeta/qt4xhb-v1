@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QGRAPHICSANCHOR
@@ -16,7 +15,6 @@ REQUEST QGRAPHICSLAYOUTITEM
 
 CLASS QGraphicsAnchorLayout INHERIT QGraphicsLayout
 
-   DATA class_id INIT Class_Id_QGraphicsAnchorLayout
    DATA self_destruction INIT .F.
 
    METHOD new

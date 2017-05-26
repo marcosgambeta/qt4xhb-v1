@@ -7,12 +7,10 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 
 CLASS QTranslator INHERIT QObject
 
-   DATA class_id INIT Class_Id_QTranslator
    DATA self_destruction INIT .F.
 
    METHOD new

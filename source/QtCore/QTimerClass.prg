@@ -7,12 +7,10 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 
 CLASS QTimer INHERIT QObject
 
-   DATA class_id INIT Class_Id_QTimer
    DATA self_destruction INIT .F.
 
    METHOD new

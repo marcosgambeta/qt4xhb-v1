@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QACCESSIBLEINTERFACE
@@ -15,7 +14,6 @@ REQUEST QACCESSIBLEINTERFACE
 
 CLASS QAccessiblePlugin INHERIT QObject,QAccessible
 
-   DATA class_id INIT Class_Id_QAccessiblePlugin
    DATA self_destruction INIT .F.
 
    METHOD delete

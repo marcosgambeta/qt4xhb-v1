@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QSSLCERTIFICATE
@@ -20,7 +19,6 @@ REQUEST QSSLERROR
 
 CLASS QSslSocket INHERIT QTcpSocket
 
-   DATA class_id INIT Class_Id_QSslSocket
    DATA self_destruction INIT .F.
 
    METHOD new

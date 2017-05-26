@@ -7,11 +7,9 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 CLASS QCommandLinkButton INHERIT QPushButton
 
-   DATA class_id INIT Class_Id_QCommandLinkButton
    DATA self_destruction INIT .F.
 
    METHOD new

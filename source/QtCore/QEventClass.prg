@@ -7,13 +7,11 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 
 CLASS QEvent
 
    DATA pointer
-   DATA class_id INIT Class_Id_QEvent
    DATA self_destruction INIT .F.
 
    METHOD new

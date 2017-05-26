@@ -7,7 +7,6 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
 REQUEST QICON
@@ -22,7 +21,6 @@ REQUEST QMIMEDATA
 
 CLASS QFileSystemModel INHERIT QAbstractItemModel
 
-   DATA class_id INIT Class_Id_QFileSystemModel
    DATA self_destruction INIT .F.
 
    METHOD new

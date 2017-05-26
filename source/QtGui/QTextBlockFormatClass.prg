@@ -7,12 +7,10 @@
 */
 
 #include "hbclass.ch"
-#include "qt4xhb_clsid.ch"
 
 
 CLASS QTextBlockFormat INHERIT QTextFormat
 
-   DATA class_id INIT Class_Id_QTextBlockFormat
    DATA self_destruction INIT .F.
 
    METHOD new
