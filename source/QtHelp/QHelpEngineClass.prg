@@ -50,9 +50,7 @@ QHelpEngine ( const QString & collectionFile, QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QHELPENGINE_NEW )
 {
-  QHelpEngine * o = NULL;
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QHelpEngine ( PQSTRING(1), par2 );
+  QHelpEngine * o = new QHelpEngine ( PQSTRING(1), OPQOBJECT(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

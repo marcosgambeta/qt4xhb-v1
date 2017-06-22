@@ -46,8 +46,7 @@ HB_FUNC_STATIC( QHELPCONTENTWIDGET_INDEXOF )
   QHelpContentWidget * obj = (QHelpContentWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QUrl * par1 = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QModelIndex * ptr = new QModelIndex( obj->indexOf ( *par1 ) );
+    QModelIndex * ptr = new QModelIndex( obj->indexOf ( *PQURL(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }

@@ -55,10 +55,7 @@ QHelpSearchEngine ( QHelpEngineCore * helpEngine, QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_NEW )
 {
-  QHelpSearchEngine * o = NULL;
-  QHelpEngineCore * par1 = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QHelpSearchEngine ( par1, par2 );
+  QHelpSearchEngine * o = new QHelpSearchEngine ( PQHELPENGINECORE(1), OPQOBJECT(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -87,7 +84,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_HITCOUNT )
   QHelpSearchEngine * obj = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->hitCount () );
+    RINT( obj->hitCount () );
   }
 }
 

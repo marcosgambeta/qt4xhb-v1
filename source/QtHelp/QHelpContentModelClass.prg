@@ -71,8 +71,7 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_CONTENTITEMAT )
   QHelpContentModel * obj = (QHelpContentModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QHelpContentItem * ptr = obj->contentItemAt ( *par1 );
+    QHelpContentItem * ptr = obj->contentItemAt ( *PQMODELINDEX(1) );
     _qt4xhb_createReturnClass ( ptr, "QHELPCONTENTITEM" );
   }
 }
@@ -100,7 +99,7 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_ISCREATINGCONTENTS )
   QHelpContentModel * obj = (QHelpContentModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isCreatingContents () );
+    RBOOL( obj->isCreatingContents () );
   }
 }
 
@@ -114,7 +113,7 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_COLUMNCOUNT )
   if( obj )
   {
     QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retni( obj->columnCount ( par1 ) );
+    RINT( obj->columnCount ( par1 ) );
   }
 }
 
@@ -127,8 +126,7 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_DATA )
   QHelpContentModel * obj = (QHelpContentModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QVariant * ptr = new QVariant( obj->data ( *par1, PINT(2) ) );
+    QVariant * ptr = new QVariant( obj->data ( *PQMODELINDEX(1), PINT(2) ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -157,8 +155,7 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_PARENT )
   QHelpContentModel * obj = (QHelpContentModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QModelIndex * ptr = new QModelIndex( obj->parent ( *par1 ) );
+    QModelIndex * ptr = new QModelIndex( obj->parent ( *PQMODELINDEX(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
@@ -173,7 +170,7 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_ROWCOUNT )
   if( obj )
   {
     QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retni( obj->rowCount ( par1 ) );
+    RINT( obj->rowCount ( par1 ) );
   }
 }
 
