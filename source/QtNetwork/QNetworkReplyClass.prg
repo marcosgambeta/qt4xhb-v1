@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ATTRIBUTE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QVariant * ptr = new QVariant( obj->attribute (  (QNetworkRequest::Attribute) par1 ) );
+    QVariant * ptr = new QVariant( obj->attribute ( (QNetworkRequest::Attribute) par1 ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_HEADER )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QVariant * ptr = new QVariant( obj->header (  (QNetworkRequest::KnownHeaders) par1 ) );
+    QVariant * ptr = new QVariant( obj->header ( (QNetworkRequest::KnownHeaders) par1 ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }

@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QSSLKEY_NEW2 )
   int par3 = ISNIL(3)? (int) QSsl::Pem : hb_parni(3);
   int par4 = ISNIL(4)? (int) QSsl::PrivateKey : hb_parni(4);
   QByteArray par5 = ISNIL(5)? QByteArray() : *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(5, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QSslKey * o = new QSslKey ( *PQBYTEARRAY(1),  (QSsl::KeyAlgorithm) hb_parni(2),  (QSsl::EncodingFormat) par3,  (QSsl::KeyType) par4, par5 );
+  QSslKey * o = new QSslKey ( *PQBYTEARRAY(1), (QSsl::KeyAlgorithm) hb_parni(2), (QSsl::EncodingFormat) par3, (QSsl::KeyType) par4, par5 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QSSLKEY_NEW3 )
   int par3 = ISNIL(3)? (int) QSsl::Pem : hb_parni(3);
   int par4 = ISNIL(4)? (int) QSsl::PrivateKey : hb_parni(4);
   QByteArray par5 = ISNIL(5)? QByteArray() : *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(5, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QSslKey * o = new QSslKey ( PQIODEVICE(1),  (QSsl::KeyAlgorithm) hb_parni(2),  (QSsl::EncodingFormat) par3,  (QSsl::KeyType) par4, par5 );
+  QSslKey * o = new QSslKey ( PQIODEVICE(1), (QSsl::KeyAlgorithm) hb_parni(2), (QSsl::EncodingFormat) par3, (QSsl::KeyType) par4, par5 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 

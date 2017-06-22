@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_ATTRIBUTE )
   {
     int par1 = hb_parni(1);
     QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QVariant * ptr = new QVariant( obj->attribute (  (QNetworkRequest::Attribute) par1, par2 ) );
+    QVariant * ptr = new QVariant( obj->attribute ( (QNetworkRequest::Attribute) par1, par2 ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_HEADER )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QVariant * ptr = new QVariant( obj->header (  (QNetworkRequest::KnownHeaders) par1 ) );
+    QVariant * ptr = new QVariant( obj->header ( (QNetworkRequest::KnownHeaders) par1 ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_SETATTRIBUTE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setAttribute (  (QNetworkRequest::Attribute) par1, *PQVARIANT(2) );
+    obj->setAttribute ( (QNetworkRequest::Attribute) par1, *PQVARIANT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_SETHEADER )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setHeader (  (QNetworkRequest::KnownHeaders) par1, *PQVARIANT(2) );
+    obj->setHeader ( (QNetworkRequest::KnownHeaders) par1, *PQVARIANT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_SETPRIORITY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setPriority (  (QNetworkRequest::Priority) par1 );
+    obj->setPriority ( (QNetworkRequest::Priority) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

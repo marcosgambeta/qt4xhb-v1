@@ -84,7 +84,7 @@ QAbstractSocket ( SocketType socketType, QObject * parent )
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_NEW )
 {
-  QAbstractSocket * o = new QAbstractSocket (  (QAbstractSocket::SocketType) hb_parni(1), PQOBJECT(2) );
+  QAbstractSocket * o = new QAbstractSocket ( (QAbstractSocket::SocketType) hb_parni(1), PQOBJECT(2) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_CONNECTTOHOST1 )
   if( obj )
   {
     int par3 = ISNIL(3)? (int) QAbstractSocket::ReadWrite : hb_parni(3);
-    obj->connectToHost ( PQSTRING(1), PQUINT16(2),  (QAbstractSocket::OpenMode) par3 );
+    obj->connectToHost ( PQSTRING(1), PQUINT16(2), (QAbstractSocket::OpenMode) par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_CONNECTTOHOST2 )
   {
     QHostAddress * par1 = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par3 = ISNIL(3)? (int) QAbstractSocket::ReadWrite : hb_parni(3);
-    obj->connectToHost ( *par1, PQUINT16(2),  (QAbstractSocket::OpenMode) par3 );
+    obj->connectToHost ( *par1, PQUINT16(2), (QAbstractSocket::OpenMode) par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SETSOCKETDESCRIPTOR )
   {
     int par2 = hb_parni(2);
     int par3 = ISNIL(3)? (int) QAbstractSocket::ReadWrite : hb_parni(3);
-    RBOOL( obj->setSocketDescriptor ( PINT(1),  (QAbstractSocket::SocketState) par2,  (QAbstractSocket::OpenMode) par3 ) );
+    RBOOL( obj->setSocketDescriptor ( PINT(1), (QAbstractSocket::SocketState) par2, (QAbstractSocket::OpenMode) par3 ) );
   }
 }
 
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SETSOCKETOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setSocketOption (  (QAbstractSocket::SocketOption) par1, *PQVARIANT(2) );
+    obj->setSocketOption ( (QAbstractSocket::SocketOption) par1, *PQVARIANT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SOCKETOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QVariant * ptr = new QVariant( obj->socketOption (  (QAbstractSocket::SocketOption) par1 ) );
+    QVariant * ptr = new QVariant( obj->socketOption ( (QAbstractSocket::SocketOption) par1 ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }

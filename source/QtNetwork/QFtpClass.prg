@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QFTP_GET )
   {
     QIODevice * par2 = ISNIL(2)? 0 : (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par3 = ISNIL(3)? (int) QFtp::Binary : hb_parni(3);
-    RINT( obj->get ( PQSTRING(1), par2,  (QFtp::TransferType) par3 ) );
+    RINT( obj->get ( PQSTRING(1), par2, (QFtp::TransferType) par3 ) );
   }
 }
 
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QFTP_PUT1 )
   if( obj )
   {
     int par3 = ISNIL(3)? (int) QFtp::Binary : hb_parni(3);
-    RINT( obj->put ( PQIODEVICE(1), PQSTRING(2),  (QFtp::TransferType) par3 ) );
+    RINT( obj->put ( PQIODEVICE(1), PQSTRING(2), (QFtp::TransferType) par3 ) );
   }
 }
 
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QFTP_PUT2 )
   if( obj )
   {
     int par3 = ISNIL(3)? (int) QFtp::Binary : hb_parni(3);
-    RINT( obj->put ( *PQBYTEARRAY(1), PQSTRING(2),  (QFtp::TransferType) par3 ) );
+    RINT( obj->put ( *PQBYTEARRAY(1), PQSTRING(2), (QFtp::TransferType) par3 ) );
   }
 }
 
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QFTP_SETTRANSFERMODE )
   QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RINT( obj->setTransferMode (  (QFtp::TransferMode) hb_parni(1) ) );
+    RINT( obj->setTransferMode ( (QFtp::TransferMode) hb_parni(1) ) );
   }
 }
 
