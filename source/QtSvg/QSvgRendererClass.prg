@@ -70,9 +70,7 @@ QSvgRenderer ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSVGRENDERER_NEW1 )
 {
-  QSvgRenderer * o = NULL;
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSvgRenderer ( par1 );
+  QSvgRenderer * o = new QSvgRenderer ( OPQOBJECT(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -82,9 +80,7 @@ QSvgRenderer ( const QString & filename, QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSVGRENDERER_NEW2 )
 {
-  QSvgRenderer * o = NULL;
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSvgRenderer ( PQSTRING(1), par2 );
+  QSvgRenderer * o = new QSvgRenderer ( PQSTRING(1), OPQOBJECT(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -94,10 +90,7 @@ QSvgRenderer ( const QByteArray & contents, QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSVGRENDERER_NEW3 )
 {
-  QSvgRenderer * o = NULL;
-  QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSvgRenderer ( *par1, par2 );
+  QSvgRenderer * o = new QSvgRenderer ( *PQBYTEARRAY(1), OPQOBJECT(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -107,10 +100,7 @@ QSvgRenderer ( QXmlStreamReader * contents, QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSVGRENDERER_NEW4 )
 {
-  QSvgRenderer * o = NULL;
-  QXmlStreamReader * par1 = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSvgRenderer ( par1, par2 );
+  QSvgRenderer * o = new QSvgRenderer ( PQXMLSTREAMREADER(1), OPQOBJECT(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -168,7 +158,7 @@ HB_FUNC_STATIC( QSVGRENDERER_ANIMATED )
   QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->animated () );
+    RBOOL( obj->animated () );
   }
 }
 
@@ -209,7 +199,7 @@ HB_FUNC_STATIC( QSVGRENDERER_ELEMENTEXISTS )
   QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->elementExists ( PQSTRING(1) ) );
+    RBOOL( obj->elementExists ( PQSTRING(1) ) );
   }
 }
 
@@ -222,7 +212,7 @@ HB_FUNC_STATIC( QSVGRENDERER_FRAMESPERSECOND )
   QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->framesPerSecond () );
+    RINT( obj->framesPerSecond () );
   }
 }
 
@@ -235,7 +225,7 @@ HB_FUNC_STATIC( QSVGRENDERER_ISVALID )
   QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -276,8 +266,7 @@ HB_FUNC_STATIC( QSVGRENDERER_SETVIEWBOX1 )
   QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRect * par1 = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setViewBox ( *par1 );
+    obj->setViewBox ( *PQRECT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -291,8 +280,7 @@ HB_FUNC_STATIC( QSVGRENDERER_SETVIEWBOX2 )
   QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRectF * par1 = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setViewBox ( *par1 );
+    obj->setViewBox ( *PQRECTF(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -349,7 +337,7 @@ HB_FUNC_STATIC( QSVGRENDERER_LOAD1 )
   QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->load ( PQSTRING(1) ) );
+    RBOOL( obj->load ( PQSTRING(1) ) );
   }
 }
 
@@ -362,8 +350,7 @@ HB_FUNC_STATIC( QSVGRENDERER_LOAD2 )
   QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->load ( *par1 ) );
+    RBOOL( obj->load ( *PQBYTEARRAY(1) ) );
   }
 }
 
@@ -377,7 +364,7 @@ HB_FUNC_STATIC( QSVGRENDERER_LOAD3 )
   if( obj )
   {
     QXmlStreamReader * par1 = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->load ( par1 ) );
+    RBOOL( obj->load ( par1 ) );
   }
 }
 
@@ -410,8 +397,7 @@ HB_FUNC_STATIC( QSVGRENDERER_RENDER1 )
   QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPainter * par1 = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->render ( par1 );
+    obj->render ( PQPAINTER(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -425,9 +411,7 @@ HB_FUNC_STATIC( QSVGRENDERER_RENDER2 )
   QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPainter * par1 = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QRectF * par2 = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->render ( par1, *par2 );
+    obj->render ( PQPAINTER(1), *PQRECTF(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -441,9 +425,8 @@ HB_FUNC_STATIC( QSVGRENDERER_RENDER3 )
   QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPainter * par1 = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QRectF par3 = ISNIL(3)? QRectF() : *(QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->render ( par1, PQSTRING(2), par3 );
+    obj->render ( PQPAINTER(1), PQSTRING(2), par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

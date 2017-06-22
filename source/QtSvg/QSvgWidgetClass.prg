@@ -49,9 +49,7 @@ QSvgWidget ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QSVGWIDGET_NEW1 )
 {
-  QSvgWidget * o = NULL;
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSvgWidget ( par1 );
+  QSvgWidget * o = new QSvgWidget ( OPQWIDGET(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -61,9 +59,7 @@ QSvgWidget ( const QString & file, QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QSVGWIDGET_NEW2 )
 {
-  QSvgWidget * o = NULL;
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSvgWidget ( PQSTRING(1), par2 );
+  QSvgWidget * o = new QSvgWidget ( PQSTRING(1), OPQWIDGET(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -153,8 +149,7 @@ HB_FUNC_STATIC( QSVGWIDGET_LOAD2 )
   QSvgWidget * obj = (QSvgWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->load ( *par1 );
+    obj->load ( *PQBYTEARRAY(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

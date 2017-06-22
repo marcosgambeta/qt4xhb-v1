@@ -61,8 +61,7 @@ QSvgGenerator ()
 */
 HB_FUNC_STATIC( QSVGGENERATOR_NEW )
 {
-  QSvgGenerator * o = NULL;
-  o = new QSvgGenerator ();
+  QSvgGenerator * o = new QSvgGenerator ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -133,7 +132,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_RESOLUTION )
   QSvgGenerator * obj = (QSvgGenerator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->resolution () );
+    RINT( obj->resolution () );
   }
 }
 
@@ -174,8 +173,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_SETOUTPUTDEVICE )
   QSvgGenerator * obj = (QSvgGenerator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setOutputDevice ( par1 );
+    obj->setOutputDevice ( PQIODEVICE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -203,8 +201,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_SETSIZE )
   QSvgGenerator * obj = (QSvgGenerator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * par1 = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setSize ( *par1 );
+    obj->setSize ( *PQSIZE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -232,8 +229,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_SETVIEWBOX1 )
   QSvgGenerator * obj = (QSvgGenerator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRect * par1 = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setViewBox ( *par1 );
+    obj->setViewBox ( *PQRECT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -247,8 +243,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_SETVIEWBOX2 )
   QSvgGenerator * obj = (QSvgGenerator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRectF * par1 = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setViewBox ( *par1 );
+    obj->setViewBox ( *PQRECTF(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
