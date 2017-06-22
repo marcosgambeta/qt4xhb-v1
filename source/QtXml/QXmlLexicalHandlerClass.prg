@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_COMMENT )
   QXmlLexicalHandler * obj = (QXmlLexicalHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->comment ( PQSTRING(1) ) );
+    RBOOL( obj->comment ( PQSTRING(1) ) );
   }
 }
 
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_ENDCDATA )
   QXmlLexicalHandler * obj = (QXmlLexicalHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->endCDATA () );
+    RBOOL( obj->endCDATA () );
   }
 }
 
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_ENDDTD )
   QXmlLexicalHandler * obj = (QXmlLexicalHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->endDTD () );
+    RBOOL( obj->endDTD () );
   }
 }
 
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_ENDENTITY )
   QXmlLexicalHandler * obj = (QXmlLexicalHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->endEntity ( PQSTRING(1) ) );
+    RBOOL( obj->endEntity ( PQSTRING(1) ) );
   }
 }
 
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_STARTCDATA )
   QXmlLexicalHandler * obj = (QXmlLexicalHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->startCDATA () );
+    RBOOL( obj->startCDATA () );
   }
 }
 
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_STARTDTD )
   QXmlLexicalHandler * obj = (QXmlLexicalHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->startDTD ( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
+    RBOOL( obj->startDTD ( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
   }
 }
 
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_STARTENTITY )
   QXmlLexicalHandler * obj = (QXmlLexicalHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->startEntity ( PQSTRING(1) ) );
+    RBOOL( obj->startEntity ( PQSTRING(1) ) );
   }
 }
 

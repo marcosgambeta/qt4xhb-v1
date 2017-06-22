@@ -43,8 +43,7 @@ QDomProcessingInstruction ()
 */
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW1 )
 {
-  QDomProcessingInstruction * o = NULL;
-  o = new QDomProcessingInstruction ();
+  QDomProcessingInstruction * o = new QDomProcessingInstruction ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -54,9 +53,7 @@ QDomProcessingInstruction ( const QDomProcessingInstruction & x )
 */
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW2 )
 {
-  QDomProcessingInstruction * o = NULL;
-  QDomProcessingInstruction * par1 = (QDomProcessingInstruction *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDomProcessingInstruction ( *par1 );
+  QDomProcessingInstruction * o = new QDomProcessingInstruction ( *PQDOMPROCESSINGINSTRUCTION(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 

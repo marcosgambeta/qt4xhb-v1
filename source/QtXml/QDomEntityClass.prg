@@ -43,8 +43,7 @@ QDomEntity ()
 */
 HB_FUNC_STATIC( QDOMENTITY_NEW1 )
 {
-  QDomEntity * o = NULL;
-  o = new QDomEntity ();
+  QDomEntity * o = new QDomEntity ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -54,9 +53,7 @@ QDomEntity ( const QDomEntity & x )
 */
 HB_FUNC_STATIC( QDOMENTITY_NEW2 )
 {
-  QDomEntity * o = NULL;
-  QDomEntity * par1 = (QDomEntity *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDomEntity ( *par1 );
+  QDomEntity * o = new QDomEntity ( *PQDOMENTITY(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 

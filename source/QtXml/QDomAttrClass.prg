@@ -48,8 +48,7 @@ QDomAttr ()
 */
 HB_FUNC_STATIC( QDOMATTR_NEW1 )
 {
-  QDomAttr * o = NULL;
-  o = new QDomAttr ();
+  QDomAttr * o = new QDomAttr ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -59,9 +58,7 @@ QDomAttr ( const QDomAttr & x )
 */
 HB_FUNC_STATIC( QDOMATTR_NEW2 )
 {
-  QDomAttr * o = NULL;
-  QDomAttr * par1 = (QDomAttr *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDomAttr ( *par1 );
+  QDomAttr * o = new QDomAttr ( *PQDOMATTR(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -150,7 +147,7 @@ HB_FUNC_STATIC( QDOMATTR_SPECIFIED )
   QDomAttr * obj = (QDomAttr *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->specified () );
+    RBOOL( obj->specified () );
   }
 }
 

@@ -55,8 +55,7 @@ QXmlNamespaceSupport ()
 */
 HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_NEW )
 {
-  QXmlNamespaceSupport * o = NULL;
-  o = new QXmlNamespaceSupport ();
+  QXmlNamespaceSupport * o = new QXmlNamespaceSupport ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 

@@ -40,8 +40,7 @@ QXmlSimpleReader ()
 */
 HB_FUNC_STATIC( QXMLSIMPLEREADER_NEW )
 {
-  QXmlSimpleReader * o = NULL;
-  o = new QXmlSimpleReader ();
+  QXmlSimpleReader * o = new QXmlSimpleReader ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -71,7 +70,7 @@ HB_FUNC_STATIC( QXMLSIMPLEREADER_PARSE )
   if( obj )
   {
     const QXmlInputSource * par1 = (const QXmlInputSource *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->parse ( par1, PBOOL(2) ) );
+    RBOOL( obj->parse ( par1, PBOOL(2) ) );
   }
 }
 
@@ -84,7 +83,7 @@ HB_FUNC_STATIC( QXMLSIMPLEREADER_PARSECONTINUE )
   QXmlSimpleReader * obj = (QXmlSimpleReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->parseContinue () );
+    RBOOL( obj->parseContinue () );
   }
 }
 

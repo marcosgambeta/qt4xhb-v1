@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QXMLCONTENTHANDLER_CHARACTERS )
   QXmlContentHandler * obj = (QXmlContentHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->characters ( PQSTRING(1) ) );
+    RBOOL( obj->characters ( PQSTRING(1) ) );
   }
 }
 
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QXMLCONTENTHANDLER_ENDDOCUMENT )
   QXmlContentHandler * obj = (QXmlContentHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->endDocument () );
+    RBOOL( obj->endDocument () );
   }
 }
 
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QXMLCONTENTHANDLER_ENDELEMENT )
   QXmlContentHandler * obj = (QXmlContentHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->endElement ( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
+    RBOOL( obj->endElement ( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
   }
 }
 
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QXMLCONTENTHANDLER_ENDPREFIXMAPPING )
   QXmlContentHandler * obj = (QXmlContentHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->endPrefixMapping ( PQSTRING(1) ) );
+    RBOOL( obj->endPrefixMapping ( PQSTRING(1) ) );
   }
 }
 
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QXMLCONTENTHANDLER_IGNORABLEWHITESPACE )
   QXmlContentHandler * obj = (QXmlContentHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->ignorableWhitespace ( PQSTRING(1) ) );
+    RBOOL( obj->ignorableWhitespace ( PQSTRING(1) ) );
   }
 }
 
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QXMLCONTENTHANDLER_PROCESSINGINSTRUCTION )
   QXmlContentHandler * obj = (QXmlContentHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->processingInstruction ( PQSTRING(1), PQSTRING(2) ) );
+    RBOOL( obj->processingInstruction ( PQSTRING(1), PQSTRING(2) ) );
   }
 }
 
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QXMLCONTENTHANDLER_SKIPPEDENTITY )
   QXmlContentHandler * obj = (QXmlContentHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->skippedEntity ( PQSTRING(1) ) );
+    RBOOL( obj->skippedEntity ( PQSTRING(1) ) );
   }
 }
 
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QXMLCONTENTHANDLER_STARTDOCUMENT )
   QXmlContentHandler * obj = (QXmlContentHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->startDocument () );
+    RBOOL( obj->startDocument () );
   }
 }
 
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QXMLCONTENTHANDLER_STARTELEMENT )
   if( obj )
   {
     QXmlAttributes * par4 = (QXmlAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->startElement ( PQSTRING(1), PQSTRING(2), PQSTRING(3), *par4 ) );
+    RBOOL( obj->startElement ( PQSTRING(1), PQSTRING(2), PQSTRING(3), *par4 ) );
   }
 }
 
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QXMLCONTENTHANDLER_STARTPREFIXMAPPING )
   QXmlContentHandler * obj = (QXmlContentHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->startPrefixMapping ( PQSTRING(1), PQSTRING(2) ) );
+    RBOOL( obj->startPrefixMapping ( PQSTRING(1), PQSTRING(2) ) );
   }
 }
 

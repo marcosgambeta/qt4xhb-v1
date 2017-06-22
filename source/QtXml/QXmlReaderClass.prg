@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QXMLREADER_FEATURE )
   if( obj )
   {
     bool par2;
-    hb_retl( obj->feature ( PQSTRING(1), &par2 ) );
+    RBOOL( obj->feature ( PQSTRING(1), &par2 ) );
     hb_storl( par2, 2 );
   }
 }
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QXMLREADER_HASFEATURE )
   QXmlReader * obj = (QXmlReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasFeature ( PQSTRING(1) ) );
+    RBOOL( obj->hasFeature ( PQSTRING(1) ) );
   }
 }
 
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QXMLREADER_HASPROPERTY )
   QXmlReader * obj = (QXmlReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasProperty ( PQSTRING(1) ) );
+    RBOOL( obj->hasProperty ( PQSTRING(1) ) );
   }
 }
 
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QXMLREADER_PARSE )
   if( obj )
   {
     const QXmlInputSource * par1 = (const QXmlInputSource *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->parse ( par1 ) );
+    RBOOL( obj->parse ( par1 ) );
   }
 }
 

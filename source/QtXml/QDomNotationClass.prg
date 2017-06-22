@@ -42,8 +42,7 @@ QDomNotation ()
 */
 HB_FUNC_STATIC( QDOMNOTATION_NEW1 )
 {
-  QDomNotation * o = NULL;
-  o = new QDomNotation ();
+  QDomNotation * o = new QDomNotation ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -53,9 +52,7 @@ QDomNotation ( const QDomNotation & x )
 */
 HB_FUNC_STATIC( QDOMNOTATION_NEW2 )
 {
-  QDomNotation * o = NULL;
-  QDomNotation * par1 = (QDomNotation *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDomNotation ( *par1 );
+  QDomNotation * o = new QDomNotation ( *PQDOMNOTATION(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 

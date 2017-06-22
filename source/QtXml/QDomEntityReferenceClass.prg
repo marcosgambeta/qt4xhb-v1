@@ -40,8 +40,7 @@ QDomEntityReference ()
 */
 HB_FUNC_STATIC( QDOMENTITYREFERENCE_NEW1 )
 {
-  QDomEntityReference * o = NULL;
-  o = new QDomEntityReference ();
+  QDomEntityReference * o = new QDomEntityReference ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -51,9 +50,7 @@ QDomEntityReference ( const QDomEntityReference & x )
 */
 HB_FUNC_STATIC( QDOMENTITYREFERENCE_NEW2 )
 {
-  QDomEntityReference * o = NULL;
-  QDomEntityReference * par1 = (QDomEntityReference *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDomEntityReference ( *par1 );
+  QDomEntityReference * o = new QDomEntityReference ( *PQDOMENTITYREFERENCE(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 

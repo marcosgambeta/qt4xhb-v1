@@ -40,8 +40,7 @@ QDomComment ()
 */
 HB_FUNC_STATIC( QDOMCOMMENT_NEW1 )
 {
-  QDomComment * o = NULL;
-  o = new QDomComment ();
+  QDomComment * o = new QDomComment ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -51,9 +50,7 @@ QDomComment ( const QDomComment & x )
 */
 HB_FUNC_STATIC( QDOMCOMMENT_NEW2 )
 {
-  QDomComment * o = NULL;
-  QDomComment * par1 = (QDomComment *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDomComment ( *par1 );
+  QDomComment * o = new QDomComment ( *PQDOMCOMMENT(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 

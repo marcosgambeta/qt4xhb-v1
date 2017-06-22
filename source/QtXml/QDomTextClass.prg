@@ -44,8 +44,7 @@ QDomText ()
 */
 HB_FUNC_STATIC( QDOMTEXT_NEW1 )
 {
-  QDomText * o = NULL;
-  o = new QDomText ();
+  QDomText * o = new QDomText ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -55,9 +54,7 @@ QDomText ( const QDomText & x )
 */
 HB_FUNC_STATIC( QDOMTEXT_NEW2 )
 {
-  QDomText * o = NULL;
-  QDomText * par1 = (QDomText *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDomText ( *par1 );
+  QDomText * o = new QDomText ( *PQDOMTEXT(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -104,8 +101,7 @@ HB_FUNC_STATIC( QDOMTEXT_SPLITTEXT )
   QDomText * obj = (QDomText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QDomText * ptr = new QDomText( obj->splitText ( par1 ) );
+    QDomText * ptr = new QDomText( obj->splitText ( PINT(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QDOMTEXT", true );
   }
 }

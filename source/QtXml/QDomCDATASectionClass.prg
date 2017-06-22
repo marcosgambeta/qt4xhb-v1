@@ -40,8 +40,7 @@ QDomCDATASection ()
 */
 HB_FUNC_STATIC( QDOMCDATASECTION_NEW1 )
 {
-  QDomCDATASection * o = NULL;
-  o = new QDomCDATASection ();
+  QDomCDATASection * o = new QDomCDATASection ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -51,9 +50,7 @@ QDomCDATASection ( const QDomCDATASection & x )
 */
 HB_FUNC_STATIC( QDOMCDATASECTION_NEW2 )
 {
-  QDomCDATASection * o = NULL;
-  QDomCDATASection * par1 = (QDomCDATASection *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDomCDATASection ( *par1 );
+  QDomCDATASection * o = new QDomCDATASection ( *PQDOMCDATASECTION(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 

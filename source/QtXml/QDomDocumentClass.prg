@@ -78,8 +78,7 @@ QDomDocument ()
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_NEW1 )
 {
-  QDomDocument * o = NULL;
-  o = new QDomDocument ();
+  QDomDocument * o = new QDomDocument ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -89,8 +88,7 @@ QDomDocument ( const QString & name )
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_NEW2 )
 {
-  QDomDocument * o = NULL;
-  o = new QDomDocument ( PQSTRING(1) );
+  QDomDocument * o = new QDomDocument ( PQSTRING(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -100,9 +98,7 @@ QDomDocument ( const QDomDocumentType & doctype )
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_NEW3 )
 {
-  QDomDocument * o = NULL;
-  QDomDocumentType * par1 = (QDomDocumentType *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDomDocument ( *par1 );
+  QDomDocument * o = new QDomDocument ( *PQDOMDOCUMENTTYPE(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -112,9 +108,7 @@ QDomDocument ( const QDomDocument & x )
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_NEW4 )
 {
-  QDomDocument * o = NULL;
-  QDomDocument * par1 = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDomDocument ( *par1 );
+  QDomDocument * o = new QDomDocument ( *PQDOMDOCUMENT(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 

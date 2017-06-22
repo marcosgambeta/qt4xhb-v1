@@ -49,8 +49,7 @@ QDomDocumentType ()
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW1 )
 {
-  QDomDocumentType * o = NULL;
-  o = new QDomDocumentType ();
+  QDomDocumentType * o = new QDomDocumentType ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -60,9 +59,7 @@ QDomDocumentType ( const QDomDocumentType & n )
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW2 )
 {
-  QDomDocumentType * o = NULL;
-  QDomDocumentType * par1 = (QDomDocumentType *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDomDocumentType ( *par1 );
+  QDomDocumentType * o = new QDomDocumentType ( *PQDOMDOCUMENTTYPE(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 

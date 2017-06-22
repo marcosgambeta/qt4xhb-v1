@@ -77,8 +77,7 @@ QDomElement ()
 */
 HB_FUNC_STATIC( QDOMELEMENT_NEW1 )
 {
-  QDomElement * o = NULL;
-  o = new QDomElement ();
+  QDomElement * o = new QDomElement ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -88,9 +87,7 @@ QDomElement ( const QDomElement & x )
 */
 HB_FUNC_STATIC( QDOMELEMENT_NEW2 )
 {
-  QDomElement * o = NULL;
-  QDomElement * par1 = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDomElement ( *par1 );
+  QDomElement * o = new QDomElement ( *PQDOMELEMENT(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -222,7 +219,7 @@ HB_FUNC_STATIC( QDOMELEMENT_HASATTRIBUTE )
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasAttribute ( PQSTRING(1) ) );
+    RBOOL( obj->hasAttribute ( PQSTRING(1) ) );
   }
 }
 
@@ -235,7 +232,7 @@ HB_FUNC_STATIC( QDOMELEMENT_HASATTRIBUTENS )
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasAttributeNS ( PQSTRING(1), PQSTRING(2) ) );
+    RBOOL( obj->hasAttributeNS ( PQSTRING(1), PQSTRING(2) ) );
   }
 }
 

@@ -51,8 +51,7 @@ QXmlParseException ( const QString & name = QString(), int c = -1, int l = -1, c
 */
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEW1 )
 {
-  QXmlParseException * o = NULL;
-  o = new QXmlParseException ( OPQSTRING(1,QString()), OPINT(2,-1), OPINT(3,-1), OPQSTRING(4,QString()), OPQSTRING(5,QString()) );
+  QXmlParseException * o = new QXmlParseException ( OPQSTRING(1,QString()), OPINT(2,-1), OPINT(3,-1), OPQSTRING(4,QString()), OPQSTRING(5,QString()) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -62,9 +61,7 @@ QXmlParseException ( const QXmlParseException & other )
 */
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEW2 )
 {
-  QXmlParseException * o = NULL;
-  QXmlParseException * par1 = (QXmlParseException *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QXmlParseException ( *par1 );
+  QXmlParseException * o = new QXmlParseException ( *PQXMLPARSEEXCEPTION(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -112,7 +109,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_COLUMNNUMBER )
   QXmlParseException * obj = (QXmlParseException *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->columnNumber () );
+    RINT( obj->columnNumber () );
   }
 }
 
@@ -125,7 +122,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_LINENUMBER )
   QXmlParseException * obj = (QXmlParseException *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->lineNumber () );
+    RINT( obj->lineNumber () );
   }
 }
 

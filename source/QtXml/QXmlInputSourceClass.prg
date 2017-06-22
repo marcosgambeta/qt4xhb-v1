@@ -56,8 +56,7 @@ QXmlInputSource ()
 */
 HB_FUNC_STATIC( QXMLINPUTSOURCE_NEW1 )
 {
-  QXmlInputSource * o = NULL;
-  o = new QXmlInputSource ();
+  QXmlInputSource * o = new QXmlInputSource ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -67,9 +66,7 @@ QXmlInputSource ( QIODevice * dev )
 */
 HB_FUNC_STATIC( QXMLINPUTSOURCE_NEW2 )
 {
-  QXmlInputSource * o = NULL;
-  QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QXmlInputSource ( par1 );
+  QXmlInputSource * o = new QXmlInputSource ( PQIODEVICE(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -187,8 +184,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_SETDATA2 )
   QXmlInputSource * obj = (QXmlInputSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setData ( *par1 );
+    obj->setData ( *PQBYTEARRAY(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

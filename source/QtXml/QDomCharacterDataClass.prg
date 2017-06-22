@@ -48,8 +48,7 @@ QDomCharacterData ()
 */
 HB_FUNC_STATIC( QDOMCHARACTERDATA_NEW1 )
 {
-  QDomCharacterData * o = NULL;
-  o = new QDomCharacterData ();
+  QDomCharacterData * o = new QDomCharacterData ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -59,9 +58,7 @@ QDomCharacterData ( const QDomCharacterData & x )
 */
 HB_FUNC_STATIC( QDOMCHARACTERDATA_NEW2 )
 {
-  QDomCharacterData * o = NULL;
-  QDomCharacterData * par1 = (QDomCharacterData *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDomCharacterData ( *par1 );
+  QDomCharacterData * o = new QDomCharacterData ( *PQDOMCHARACTERDATA(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 

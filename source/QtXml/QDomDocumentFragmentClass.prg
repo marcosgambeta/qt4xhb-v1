@@ -40,8 +40,7 @@ QDomDocumentFragment ()
 */
 HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NEW1 )
 {
-  QDomDocumentFragment * o = NULL;
-  o = new QDomDocumentFragment ();
+  QDomDocumentFragment * o = new QDomDocumentFragment ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -51,9 +50,7 @@ QDomDocumentFragment ( const QDomDocumentFragment & x )
 */
 HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NEW2 )
 {
-  QDomDocumentFragment * o = NULL;
-  QDomDocumentFragment * par1 = (QDomDocumentFragment *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDomDocumentFragment ( *par1 );
+  QDomDocumentFragment * o = new QDomDocumentFragment ( *PQDOMDOCUMENTFRAGMENT(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 

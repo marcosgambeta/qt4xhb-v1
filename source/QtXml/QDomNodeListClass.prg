@@ -55,8 +55,7 @@ QDomNodeList ()
 */
 HB_FUNC_STATIC( QDOMNODELIST_NEW1 )
 {
-  QDomNodeList * o = NULL;
-  o = new QDomNodeList ();
+  QDomNodeList * o = new QDomNodeList ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -66,9 +65,7 @@ QDomNodeList ( const QDomNodeList & n )
 */
 HB_FUNC_STATIC( QDOMNODELIST_NEW2 )
 {
-  QDomNodeList * o = NULL;
-  QDomNodeList * par1 = (QDomNodeList *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDomNodeList ( *par1 );
+  QDomNodeList * o = new QDomNodeList ( *PQDOMNODELIST(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -116,8 +113,7 @@ HB_FUNC_STATIC( QDOMNODELIST_AT )
   QDomNodeList * obj = (QDomNodeList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QDomNode * ptr = new QDomNode( obj->at ( par1 ) );
+    QDomNode * ptr = new QDomNode( obj->at ( PINT(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
   }
 }
@@ -131,7 +127,7 @@ HB_FUNC_STATIC( QDOMNODELIST_COUNT )
   QDomNodeList * obj = (QDomNodeList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 
@@ -144,7 +140,7 @@ HB_FUNC_STATIC( QDOMNODELIST_ISEMPTY )
   QDomNodeList * obj = (QDomNodeList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 }
 
@@ -157,8 +153,7 @@ HB_FUNC_STATIC( QDOMNODELIST_ITEM )
   QDomNodeList * obj = (QDomNodeList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QDomNode * ptr = new QDomNode( obj->item ( par1 ) );
+    QDomNode * ptr = new QDomNode( obj->item ( PINT(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
   }
 }
@@ -185,7 +180,7 @@ HB_FUNC_STATIC( QDOMNODELIST_SIZE )
   QDomNodeList * obj = (QDomNodeList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->size () );
+    RINT( obj->size () );
   }
 }
 
