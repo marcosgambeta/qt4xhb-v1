@@ -62,8 +62,7 @@ HB_FUNC_STATIC( QWEBPLUGINFACTORY_CREATE )
   QWebPluginFactory * obj = (QWebPluginFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QUrl * par2 = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QObject * ptr = obj->create ( PQSTRING(1), *par2, PQSTRINGLIST(3), PQSTRINGLIST(4) );
+    QObject * ptr = obj->create ( PQSTRING(1), *PQURL(2), PQSTRINGLIST(3), PQSTRINGLIST(4) );
     _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }

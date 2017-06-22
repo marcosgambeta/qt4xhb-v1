@@ -73,8 +73,7 @@ QWebHitTestResult ()
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_NEW1 )
 {
-  QWebHitTestResult * o = NULL;
-  o = new QWebHitTestResult ();
+  QWebHitTestResult * o = new QWebHitTestResult ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -84,9 +83,7 @@ QWebHitTestResult ( const QWebHitTestResult & other )
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_NEW2 )
 {
-  QWebHitTestResult * o = NULL;
-  QWebHitTestResult * par1 = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QWebHitTestResult ( *par1 );
+  QWebHitTestResult * o = new QWebHitTestResult ( *PQWEBHITTESTRESULT(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -218,7 +215,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_ISCONTENTEDITABLE )
   QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isContentEditable () );
+    RBOOL( obj->isContentEditable () );
   }
 }
 
@@ -231,7 +228,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_ISCONTENTSELECTED )
   QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isContentSelected () );
+    RBOOL( obj->isContentSelected () );
   }
 }
 
@@ -244,7 +241,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_ISNULL )
   QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 

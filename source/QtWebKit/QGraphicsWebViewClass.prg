@@ -81,9 +81,7 @@ QGraphicsWebView ( QGraphicsItem * parent = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_NEW )
 {
-  QGraphicsWebView * o = NULL;
-  QGraphicsItem * par1 = ISNIL(1)? 0 : (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QGraphicsWebView ( par1 );
+  QGraphicsWebView * o = new QGraphicsWebView ( OPQGRAPHICSITEM(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -113,7 +111,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_FINDTEXT )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-    hb_retl( obj->findText ( PQSTRING(1),  (QWebPage::FindFlags) par2 ) );
+    RBOOL( obj->findText ( PQSTRING(1),  (QWebPage::FindFlags) par2 ) );
   }
 }
 
@@ -154,7 +152,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ISMODIFIED )
   QGraphicsWebView * obj = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isModified () );
+    RBOOL( obj->isModified () );
   }
 }
 
@@ -167,7 +165,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ISTILEDBACKINGSTOREFROZEN )
   QGraphicsWebView * obj = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isTiledBackingStoreFrozen () );
+    RBOOL( obj->isTiledBackingStoreFrozen () );
   }
 }
 
@@ -180,8 +178,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_LOAD1 )
   QGraphicsWebView * obj = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QUrl * par1 = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->load ( *par1 );
+    obj->load ( *PQURL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -256,7 +253,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_RESIZESTOCONTENTS )
   QGraphicsWebView * obj = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->resizesToContents () );
+    RBOOL( obj->resizesToContents () );
   }
 }
 
@@ -269,9 +266,8 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETCONTENT )
   QGraphicsWebView * obj = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QUrl par3 = ISNIL(3)? QUrl() : *(QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setContent ( *par1, OPQSTRING(2,QString()), par3 );
+    obj->setContent ( *PQBYTEARRAY(1), OPQSTRING(2,QString()), par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -343,8 +339,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETURL )
   QGraphicsWebView * obj = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QUrl * par1 = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setUrl ( *par1 );
+    obj->setUrl ( *PQURL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -429,8 +424,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ZOOMFACTOR )
   QGraphicsWebView * obj = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->zoomFactor ();
-    hb_retnd( r );
+    RQREAL( obj->zoomFactor () );
   }
 }
 

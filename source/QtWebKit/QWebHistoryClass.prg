@@ -95,8 +95,7 @@ HB_FUNC_STATIC( QWEBHISTORY_BACKITEMS )
   QWebHistory * obj = (QWebHistory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QList<QWebHistoryItem> list = obj->backItems ( par1 );
+    QList<QWebHistoryItem> list = obj->backItems ( PINT(1) );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QWEBHISTORYITEM" );
@@ -144,7 +143,7 @@ HB_FUNC_STATIC( QWEBHISTORY_CANGOBACK )
   QWebHistory * obj = (QWebHistory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->canGoBack () );
+    RBOOL( obj->canGoBack () );
   }
 }
 
@@ -157,7 +156,7 @@ HB_FUNC_STATIC( QWEBHISTORY_CANGOFORWARD )
   QWebHistory * obj = (QWebHistory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->canGoForward () );
+    RBOOL( obj->canGoForward () );
   }
 }
 
@@ -184,7 +183,7 @@ HB_FUNC_STATIC( QWEBHISTORY_COUNT )
   QWebHistory * obj = (QWebHistory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 
@@ -211,7 +210,7 @@ HB_FUNC_STATIC( QWEBHISTORY_CURRENTITEMINDEX )
   QWebHistory * obj = (QWebHistory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->currentItemIndex () );
+    RINT( obj->currentItemIndex () );
   }
 }
 
@@ -252,8 +251,7 @@ HB_FUNC_STATIC( QWEBHISTORY_FORWARDITEMS )
   QWebHistory * obj = (QWebHistory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QList<QWebHistoryItem> list = obj->forwardItems ( par1 );
+    QList<QWebHistoryItem> list = obj->forwardItems ( PINT(1) );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QWEBHISTORYITEM" );
@@ -316,8 +314,7 @@ HB_FUNC_STATIC( QWEBHISTORY_ITEMAT )
   QWebHistory * obj = (QWebHistory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QWebHistoryItem * ptr = new QWebHistoryItem( obj->itemAt ( par1 ) );
+    QWebHistoryItem * ptr = new QWebHistoryItem( obj->itemAt ( PINT(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QWEBHISTORYITEM", true );
   }
 }
@@ -379,7 +376,7 @@ HB_FUNC_STATIC( QWEBHISTORY_MAXIMUMITEMCOUNT )
   QWebHistory * obj = (QWebHistory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->maximumItemCount () );
+    RINT( obj->maximumItemCount () );
   }
 }
 
@@ -392,8 +389,7 @@ HB_FUNC_STATIC( QWEBHISTORY_SETMAXIMUMITEMCOUNT )
   QWebHistory * obj = (QWebHistory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setMaximumItemCount ( par1 );
+    obj->setMaximumItemCount ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -60,9 +60,7 @@ QWebHistoryItem ( const QWebHistoryItem & other )
 */
 HB_FUNC_STATIC( QWEBHISTORYITEM_NEW )
 {
-  QWebHistoryItem * o = NULL;
-  QWebHistoryItem * par1 = (QWebHistoryItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QWebHistoryItem ( *par1 );
+  QWebHistoryItem * o = new QWebHistoryItem ( *PQWEBHISTORYITEM(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -105,7 +103,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_ISVALID )
   QWebHistoryItem * obj = (QWebHistoryItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -146,8 +144,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_SETUSERDATA )
   QWebHistoryItem * obj = (QWebHistoryItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVariant * par1 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setUserData ( *par1 );
+    obj->setUserData ( *PQVARIANT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

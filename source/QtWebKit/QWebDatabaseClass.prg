@@ -57,9 +57,7 @@ QWebDatabase ( const QWebDatabase & other )
 */
 HB_FUNC_STATIC( QWEBDATABASE_NEW )
 {
-  QWebDatabase * o = NULL;
-  QWebDatabase * par1 = (QWebDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QWebDatabase ( *par1 );
+  QWebDatabase * o = new QWebDatabase ( *PQWEBDATABASE(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -102,8 +100,7 @@ HB_FUNC_STATIC( QWEBDATABASE_EXPECTEDSIZE )
   QWebDatabase * obj = (QWebDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->expectedSize ();
-    hb_retni( i );
+    RQINT64( obj->expectedSize () );
   }
 }
 
@@ -158,8 +155,7 @@ HB_FUNC_STATIC( QWEBDATABASE_SIZE )
   QWebDatabase * obj = (QWebDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->size ();
-    hb_retni( i );
+    RQINT64( obj->size () );
   }
 }
 

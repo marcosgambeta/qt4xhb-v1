@@ -117,9 +117,7 @@ QWebPage ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QWEBPAGE_NEW )
 {
-  QWebPage * o = NULL;
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QWebPage ( par1 );
+  QWebPage * o = new QWebPage ( OPQOBJECT(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -163,8 +161,7 @@ HB_FUNC_STATIC( QWEBPAGE_BYTESRECEIVED )
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    quint64 i = obj->bytesReceived ();
-    hb_retni( i );
+    RQUINT64( obj->bytesReceived () );
   }
 }
 
@@ -208,7 +205,7 @@ HB_FUNC_STATIC( QWEBPAGE_EXTENSION )
     int par1 = hb_parni(1);
     const QWebPage::ExtensionOption * par2 = ISNIL(2)? 0 : (const QWebPage::ExtensionOption *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     QWebPage::ExtensionReturn * par3 = ISNIL(3)? 0 : (QWebPage::ExtensionReturn *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->extension (  (QWebPage::Extension) par1, par2, par3 ) );
+    RBOOL( obj->extension (  (QWebPage::Extension) par1, par2, par3 ) );
   }
 }
 
@@ -222,7 +219,7 @@ HB_FUNC_STATIC( QWEBPAGE_FINDTEXT )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-    hb_retl( obj->findText ( PQSTRING(1),  (QWebPage::FindFlags) par2 ) );
+    RBOOL( obj->findText ( PQSTRING(1),  (QWebPage::FindFlags) par2 ) );
   }
 }
 
@@ -235,7 +232,7 @@ HB_FUNC_STATIC( QWEBPAGE_FOCUSNEXTPREVCHILD )
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->focusNextPrevChild ( PBOOL(1) ) );
+    RBOOL( obj->focusNextPrevChild ( PBOOL(1) ) );
   }
 }
 
@@ -248,7 +245,7 @@ HB_FUNC_STATIC( QWEBPAGE_FORWARDUNSUPPORTEDCONTENT )
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->forwardUnsupportedContent () );
+    RBOOL( obj->forwardUnsupportedContent () );
   }
 }
 
@@ -261,8 +258,7 @@ HB_FUNC_STATIC( QWEBPAGE_FRAMEAT )
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QWebFrame * ptr = obj->frameAt ( *par1 );
+    QWebFrame * ptr = obj->frameAt ( *PQPOINT(1) );
     _qt4xhb_createReturnClass ( ptr, "QWEBFRAME" );
   }
 }
@@ -305,7 +301,7 @@ HB_FUNC_STATIC( QWEBPAGE_ISCONTENTEDITABLE )
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isContentEditable () );
+    RBOOL( obj->isContentEditable () );
   }
 }
 
@@ -318,7 +314,7 @@ HB_FUNC_STATIC( QWEBPAGE_ISMODIFIED )
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isModified () );
+    RBOOL( obj->isModified () );
   }
 }
 
@@ -516,8 +512,7 @@ HB_FUNC_STATIC( QWEBPAGE_SETPREFERREDCONTENTSSIZE )
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * par1 = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setPreferredContentsSize ( *par1 );
+    obj->setPreferredContentsSize ( *PQSIZE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -531,8 +526,7 @@ HB_FUNC_STATIC( QWEBPAGE_SETVIEW )
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setView ( par1 );
+    obj->setView ( PQWIDGET(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -546,8 +540,7 @@ HB_FUNC_STATIC( QWEBPAGE_SETVIEWPORTSIZE )
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * par1 = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setViewportSize ( *par1 );
+    obj->setViewportSize ( *PQSIZE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -576,7 +569,7 @@ HB_FUNC_STATIC( QWEBPAGE_SUPPORTSEXTENSION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->supportsExtension (  (QWebPage::Extension) par1 ) );
+    RBOOL( obj->supportsExtension (  (QWebPage::Extension) par1 ) );
   }
 }
 
@@ -590,7 +583,7 @@ HB_FUNC_STATIC( QWEBPAGE_SWALLOWCONTEXTMENUEVENT )
   if( obj )
   {
     QContextMenuEvent * par1 = (QContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->swallowContextMenuEvent ( par1 ) );
+    RBOOL( obj->swallowContextMenuEvent ( par1 ) );
   }
 }
 
@@ -603,8 +596,7 @@ HB_FUNC_STATIC( QWEBPAGE_TOTALBYTES )
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    quint64 i = obj->totalBytes ();
-    hb_retni( i );
+    RQUINT64( obj->totalBytes () );
   }
 }
 
@@ -646,8 +638,7 @@ HB_FUNC_STATIC( QWEBPAGE_UPDATEPOSITIONDEPENDENTACTIONS )
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->updatePositionDependentActions ( *par1 );
+    obj->updatePositionDependentActions ( *PQPOINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -689,8 +680,7 @@ HB_FUNC_STATIC( QWEBPAGE_EVENT )
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QEvent * par1 = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->event ( par1 ) );
+    RBOOL( obj->event ( PQEVENT(1) ) );
   }
 }
 
@@ -703,7 +693,7 @@ HB_FUNC_STATIC( QWEBPAGE_SHOULDINTERRUPTJAVASCRIPT )
   QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->shouldInterruptJavaScript () );
+    RBOOL( obj->shouldInterruptJavaScript () );
   }
 }
 

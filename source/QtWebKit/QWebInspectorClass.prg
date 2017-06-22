@@ -46,9 +46,7 @@ QWebInspector ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QWEBINSPECTOR_NEW )
 {
-  QWebInspector * o = NULL;
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QWebInspector ( par1 );
+  QWebInspector * o = new QWebInspector ( OPQWIDGET(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -106,8 +104,7 @@ HB_FUNC_STATIC( QWEBINSPECTOR_EVENT )
   QWebInspector * obj = (QWebInspector *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QEvent * par1 = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->event ( par1 ) );
+    RBOOL( obj->event ( PQEVENT(1) ) );
   }
 }
 

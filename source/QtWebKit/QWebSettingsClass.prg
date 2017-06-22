@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_FONTSIZE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retni( obj->fontSize (  (QWebSettings::FontSize) par1 ) );
+    RINT( obj->fontSize (  (QWebSettings::FontSize) par1 ) );
   }
 }
 
@@ -236,9 +236,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETFONTSIZE )
   QWebSettings * obj = (QWebSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    obj->setFontSize (  (QWebSettings::FontSize) par1, par2 );
+    obj->setFontSize (  (QWebSettings::FontSize) hb_parni(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -266,8 +264,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETUSERSTYLESHEETURL )
   QWebSettings * obj = (QWebSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QUrl * par1 = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setUserStyleSheetUrl ( *par1 );
+    obj->setUserStyleSheetUrl ( *PQURL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -282,7 +279,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_TESTATTRIBUTE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->testAttribute (  (QWebSettings::WebAttribute) par1 ) );
+    RBOOL( obj->testAttribute (  (QWebSettings::WebAttribute) par1 ) );
   }
 }
 
@@ -357,8 +354,7 @@ QIcon iconForUrl ( const QUrl & url )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_ICONFORURL )
 {
-  QUrl * par1 = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QIcon * ptr = new QIcon( QWebSettings::iconForUrl ( *par1 ) );
+  QIcon * ptr = new QIcon( QWebSettings::iconForUrl ( *PQURL(1) ) );
   _qt4xhb_createReturnClass ( ptr, "QICON", true );
 }
 
@@ -368,7 +364,7 @@ int maximumPagesInCache ()
 */
 HB_FUNC_STATIC( QWEBSETTINGS_MAXIMUMPAGESINCACHE )
 {
-  hb_retni( QWebSettings::maximumPagesInCache () );
+  RINT( QWebSettings::maximumPagesInCache () );
 }
 
 
@@ -377,8 +373,7 @@ qint64 offlineStorageDefaultQuota ()
 */
 HB_FUNC_STATIC( QWEBSETTINGS_OFFLINESTORAGEDEFAULTQUOTA )
 {
-  qint64 i = QWebSettings::offlineStorageDefaultQuota ();
-  hb_retni( i );
+  RQINT64( QWebSettings::offlineStorageDefaultQuota () );
 }
 
 
@@ -407,8 +402,7 @@ qint64 offlineWebApplicationCacheQuota ()
 */
 HB_FUNC_STATIC( QWEBSETTINGS_OFFLINEWEBAPPLICATIONCACHEQUOTA )
 {
-  qint64 i = QWebSettings::offlineWebApplicationCacheQuota ();
-  hb_retni( i );
+  RQINT64( QWebSettings::offlineWebApplicationCacheQuota () );
 }
 
 
@@ -427,8 +421,7 @@ void setMaximumPagesInCache ( int pages )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_SETMAXIMUMPAGESINCACHE )
 {
-  int par1 = hb_parni(1);
-  QWebSettings::setMaximumPagesInCache ( par1 );
+  QWebSettings::setMaximumPagesInCache ( PINT(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -438,10 +431,7 @@ void setObjectCacheCapacities ( int cacheMinDeadCapacity, int cacheMaxDead, int 
 */
 HB_FUNC_STATIC( QWEBSETTINGS_SETOBJECTCACHECAPACITIES )
 {
-  int par1 = hb_parni(1);
-  int par2 = hb_parni(2);
-  int par3 = hb_parni(3);
-  QWebSettings::setObjectCacheCapacities ( par1, par2, par3 );
+  QWebSettings::setObjectCacheCapacities ( PINT(1), PINT(2), PINT(3) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -451,8 +441,7 @@ void setOfflineStorageDefaultQuota ( qint64 maximumSize )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_SETOFFLINESTORAGEDEFAULTQUOTA )
 {
-  qint64 par1 = hb_parni(1);
-  QWebSettings::setOfflineStorageDefaultQuota ( par1 );
+  QWebSettings::setOfflineStorageDefaultQuota ( PQINT64(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -482,8 +471,7 @@ void setOfflineWebApplicationCacheQuota ( qint64 maximumSize )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_SETOFFLINEWEBAPPLICATIONCACHEQUOTA )
 {
-  qint64 par1 = hb_parni(1);
-  QWebSettings::setOfflineWebApplicationCacheQuota ( par1 );
+  QWebSettings::setOfflineWebApplicationCacheQuota ( PQINT64(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -494,8 +482,7 @@ void setWebGraphic ( WebGraphic type, const QPixmap & graphic )
 HB_FUNC_STATIC( QWEBSETTINGS_SETWEBGRAPHIC )
 {
   int par1 = hb_parni(1);
-  QPixmap * par2 = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QWebSettings::setWebGraphic (  (QWebSettings::WebGraphic) par1, *par2 );
+  QWebSettings::setWebGraphic (  (QWebSettings::WebGraphic) par1, *PQPIXMAP(2) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

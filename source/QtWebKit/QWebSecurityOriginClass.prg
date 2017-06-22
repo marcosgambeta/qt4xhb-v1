@@ -62,9 +62,7 @@ QWebSecurityOrigin ( const QWebSecurityOrigin & other )
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_NEW )
 {
-  QWebSecurityOrigin * o = NULL;
-  QWebSecurityOrigin * par1 = (QWebSecurityOrigin *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QWebSecurityOrigin ( *par1 );
+  QWebSecurityOrigin * o = new QWebSecurityOrigin ( *PQWEBSECURITYORIGIN(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -93,8 +91,7 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASEQUOTA )
   QWebSecurityOrigin * obj = (QWebSecurityOrigin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->databaseQuota ();
-    hb_retni( i );
+    RQINT64( obj->databaseQuota () );
   }
 }
 
@@ -107,8 +104,7 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASEUSAGE )
   QWebSecurityOrigin * obj = (QWebSecurityOrigin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->databaseUsage ();
-    hb_retni( i );
+    RQINT64( obj->databaseUsage () );
   }
 }
 
@@ -183,7 +179,7 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_PORT )
   QWebSecurityOrigin * obj = (QWebSecurityOrigin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->port () );
+    RINT( obj->port () );
   }
 }
 
@@ -210,8 +206,7 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_SETDATABASEQUOTA )
   QWebSecurityOrigin * obj = (QWebSecurityOrigin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 par1 = hb_parni(1);
-    obj->setDatabaseQuota ( par1 );
+    obj->setDatabaseQuota ( PQINT64(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

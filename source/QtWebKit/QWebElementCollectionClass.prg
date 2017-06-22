@@ -56,8 +56,7 @@ QWebElementCollection ()
 */
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW1 )
 {
-  QWebElementCollection * o = NULL;
-  o = new QWebElementCollection ();
+  QWebElementCollection * o = new QWebElementCollection ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -67,9 +66,7 @@ QWebElementCollection ( const QWebElement & contextElement, const QString & quer
 */
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW2 )
 {
-  QWebElementCollection * o = NULL;
-  QWebElement * par1 = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QWebElementCollection ( *par1, PQSTRING(2) );
+  QWebElementCollection * o = new QWebElementCollection ( *PQWEBELEMENT(1), PQSTRING(2) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -79,9 +76,7 @@ QWebElementCollection ( const QWebElementCollection & other )
 */
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW3 )
 {
-  QWebElementCollection * o = NULL;
-  QWebElementCollection * par1 = (QWebElementCollection *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QWebElementCollection ( *par1 );
+  QWebElementCollection * o = new QWebElementCollection ( *PQWEBELEMENTCOLLECTION(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -149,8 +144,7 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_AT )
   QWebElementCollection * obj = (QWebElementCollection *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QWebElement * ptr = new QWebElement( obj->at ( par1 ) );
+    QWebElement * ptr = new QWebElement( obj->at ( PINT(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
   }
 }
@@ -168,7 +162,7 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_COUNT )
   QWebElementCollection * obj = (QWebElementCollection *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 
