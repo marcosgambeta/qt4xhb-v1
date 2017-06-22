@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_SETSTATE )
   {
     if( ISNUM(1) )
     {
-      obj->setState (  (QAxScriptEngine::State) hb_parni(1) );
+      obj->setState ( (QAxScriptEngine::State) hb_parni(1) );
     }
     else
     {
