@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QSQLQUERY_EXECBATCH )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RBOOL( obj->execBatch (  (QSqlQuery::BatchExecutionMode) hb_parni(1) ) );
+    RBOOL( obj->execBatch ( (QSqlQuery::BatchExecutionMode) hb_parni(1) ) );
   }
 }
 
@@ -678,7 +678,7 @@ HB_FUNC_STATIC( QSQLQUERY_SETNUMERICALPRECISIONPOLICY )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setNumericalPrecisionPolicy (  (QSql::NumericalPrecisionPolicy) hb_parni(1) );
+    obj->setNumericalPrecisionPolicy ( (QSql::NumericalPrecisionPolicy) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

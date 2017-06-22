@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QSQLFIELD_SETREQUIREDSTATUS )
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setRequiredStatus (  (QSqlField::RequiredStatus) hb_parni(1) );
+    obj->setRequiredStatus ( (QSqlField::RequiredStatus) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QSQLFIELD_SETTYPE )
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setType (  (QVariant::Type) hb_parni(1) );
+    obj->setType ( (QVariant::Type) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

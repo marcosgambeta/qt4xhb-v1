@@ -503,7 +503,7 @@ HB_FUNC_STATIC( QSQLDATABASE_SETNUMERICALPRECISIONPOLICY )
   QSqlDatabase * obj = (QSqlDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setNumericalPrecisionPolicy (  (QSql::NumericalPrecisionPolicy) hb_parni(1) );
+    obj->setNumericalPrecisionPolicy ( (QSql::NumericalPrecisionPolicy) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

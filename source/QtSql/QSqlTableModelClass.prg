@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SETEDITSTRATEGY )
   QSqlTableModel * obj = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setEditStrategy (  (QSqlTableModel::EditStrategy) hb_parni(1) );
+    obj->setEditStrategy ( (QSqlTableModel::EditStrategy) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SETSORT )
   QSqlTableModel * obj = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setSort ( PINT(1),  (Qt::SortOrder) hb_parni(2) );
+    obj->setSort ( PINT(1), (Qt::SortOrder) hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_HEADERDATA )
   QSqlTableModel * obj = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->headerData ( PINT(1),  (Qt::Orientation) hb_parni(2), OPINT(3,Qt::DisplayRole) ) );
+    QVariant * ptr = new QVariant( obj->headerData ( PINT(1), (Qt::Orientation) hb_parni(2), OPINT(3,Qt::DisplayRole) ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SORT )
   QSqlTableModel * obj = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->sort ( PINT(1),  (Qt::SortOrder) hb_parni(2) );
+    obj->sort ( PINT(1), (Qt::SortOrder) hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
