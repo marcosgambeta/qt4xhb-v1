@@ -61,7 +61,7 @@ QMouseEventTransition ( QObject * object, QEvent::Type type, Qt::MouseButton but
 */
 HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_NEW2 )
 {
-  QMouseEventTransition * o = new QMouseEventTransition ( PQOBJECT(1),  (QEvent::Type) hb_parni(2),  (Qt::MouseButton) hb_parni(3), OPQSTATE(4,0) );
+  QMouseEventTransition * o = new QMouseEventTransition ( PQOBJECT(1), (QEvent::Type) hb_parni(2), (Qt::MouseButton) hb_parni(3), OPQSTATE(4,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_SETBUTTON )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setButton (  (Qt::MouseButton) par1 );
+    obj->setButton ( (Qt::MouseButton) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_SETMODIFIERMASK )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setModifierMask (  (Qt::KeyboardModifiers) par1 );
+    obj->setModifierMask ( (Qt::KeyboardModifiers) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

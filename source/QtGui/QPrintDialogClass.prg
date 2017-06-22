@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_OPEN )
   QPrintDialog * obj = (QPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->open ( PQOBJECT(1),  (const char *) hb_parc(2) );
+    obj->open ( PQOBJECT(1), (const char *) hb_parc(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_SETOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setOption (  (QPrintDialog::PrintDialogOption) par1, OPBOOL(2,true) );
+    obj->setOption ( (QPrintDialog::PrintDialogOption) par1, OPBOOL(2,true) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_SETOPTIONS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setOptions (  (QPrintDialog::PrintDialogOptions) par1 );
+    obj->setOptions ( (QPrintDialog::PrintDialogOptions) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_TESTOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    RBOOL( obj->testOption (  (QPrintDialog::PrintDialogOption) par1 ) );
+    RBOOL( obj->testOption ( (QPrintDialog::PrintDialogOption) par1 ) );
   }
 }
 

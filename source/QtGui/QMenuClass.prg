@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QMENU_ADDACTION3 )
   {
     const QObject * par2 = (const QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     QKeySequence * par4 = (QKeySequence *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QAction * ptr = obj->addAction ( PQSTRING(1), par2,  (const char *) hb_parc(3), *par4 );
+    QAction * ptr = obj->addAction ( PQSTRING(1), par2, (const char *) hb_parc(3), *par4 );
     _qt4xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QMENU_ADDACTION4 )
     QIcon par1 = ISOBJECT(1)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(1));
     const QObject * par3 = (const QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     QKeySequence * par5 = (QKeySequence *) hb_itemGetPtr( hb_objSendMsg( hb_param(5, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QAction * ptr = obj->addAction ( par1, PQSTRING(2), par3,  (const char *) hb_parc(4), *par5 );
+    QAction * ptr = obj->addAction ( par1, PQSTRING(2), par3, (const char *) hb_parc(4), *par5 );
     _qt4xhb_createReturnClass ( ptr, "QACTION" );
   }
 }

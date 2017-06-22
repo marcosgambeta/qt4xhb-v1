@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QMIMESOURCE_ENCODEDDATA )
   QMimeSource * obj = (QMimeSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->encodedData (  (const char *) hb_parc(1) ) );
+    QByteArray * ptr = new QByteArray( obj->encodedData ( (const char *) hb_parc(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QMIMESOURCE_PROVIDES )
   QMimeSource * obj = (QMimeSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RBOOL( obj->provides (  (const char *) hb_parc(1) ) );
+    RBOOL( obj->provides ( (const char *) hb_parc(1) ) );
   }
 }
 

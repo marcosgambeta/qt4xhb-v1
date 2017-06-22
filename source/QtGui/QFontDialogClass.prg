@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QFONTDIALOG_OPEN )
   QFontDialog * obj = (QFontDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->open ( PQOBJECT(1),  (const char *) hb_parc(2) );
+    obj->open ( PQOBJECT(1), (const char *) hb_parc(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QFONTDIALOG_SETOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setOption (  (QFontDialog::FontDialogOption) par1, OPBOOL(2,true) );
+    obj->setOption ( (QFontDialog::FontDialogOption) par1, OPBOOL(2,true) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QFONTDIALOG_SETOPTIONS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setOptions (  (QFontDialog::FontDialogOptions) par1 );
+    obj->setOptions ( (QFontDialog::FontDialogOptions) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QFONTDIALOG_TESTOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    RBOOL( obj->testOption (  (QFontDialog::FontDialogOption) par1 ) );
+    RBOOL( obj->testOption ( (QFontDialog::FontDialogOption) par1 ) );
   }
 }
 
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QFONTDIALOG_GETFONT1 )
 {
   bool par1;
   int par5 = hb_parni(5);
-  QFont * ptr = new QFont( QFontDialog::getFont ( &par1, *PQFONT(2), PQWIDGET(3), PQSTRING(4),  (QFontDialog::FontDialogOptions) par5 ) );
+  QFont * ptr = new QFont( QFontDialog::getFont ( &par1, *PQFONT(2), PQWIDGET(3), PQSTRING(4), (QFontDialog::FontDialogOptions) par5 ) );
   _qt4xhb_createReturnClass ( ptr, "QFONT", true );
   hb_storl( par1, 1 );
 }

@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_ELIDEDTEXT )
   if( obj )
   {
     int par2 = hb_parni(2);
-    QString str1 = obj->elidedText ( PQSTRING(1),  (Qt::TextElideMode) par2, PQREAL(3), OPINT(4,0) );
+    QString str1 = obj->elidedText ( PQSTRING(1), (Qt::TextElideMode) par2, PQREAL(3), OPINT(4,0) );
     hb_retc( RQSTRING(str1) );
   }
 }

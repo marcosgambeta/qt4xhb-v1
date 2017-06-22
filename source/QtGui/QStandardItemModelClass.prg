@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_HEADERDATA )
   QStandardItemModel * obj = (QStandardItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->headerData ( PINT(1),  (Qt::Orientation) hb_parni(2), OPINT(3,Qt::DisplayRole) ) );
+    QVariant * ptr = new QVariant( obj->headerData ( PINT(1), (Qt::Orientation) hb_parni(2), OPINT(3,Qt::DisplayRole) ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETHEADERDATA )
   QStandardItemModel * obj = (QStandardItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RBOOL( obj->setHeaderData ( PINT(1),  (Qt::Orientation) hb_parni(2), *PQVARIANT(3), OPINT(4,Qt::EditRole) ) );
+    RBOOL( obj->setHeaderData ( PINT(1), (Qt::Orientation) hb_parni(2), *PQVARIANT(3), OPINT(4,Qt::EditRole) ) );
   }
 }
 
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SORT )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) Qt::AscendingOrder : hb_parni(2);
-    obj->sort ( PINT(1),  (Qt::SortOrder) par2 );
+    obj->sort ( PINT(1), (Qt::SortOrder) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1000,7 +1000,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_FINDITEMS )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) Qt::MatchExactly : hb_parni(2);
-    QList<QStandardItem *> list = obj->findItems ( PQSTRING(1),  (Qt::MatchFlags) par2, OPINT(3,0) );
+    QList<QStandardItem *> list = obj->findItems ( PQSTRING(1), (Qt::MatchFlags) par2, OPINT(3,0) );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QSTANDARDITEM" );
@@ -1110,7 +1110,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_DROPMIMEDATA )
   if( obj )
   {
     const QMimeData * par1 = (const QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->dropMimeData ( par1,  (Qt::DropAction) hb_parni(2), PINT(3), PINT(4), *PQMODELINDEX(5) ) );
+    RBOOL( obj->dropMimeData ( par1, (Qt::DropAction) hb_parni(2), PINT(3), PINT(4), *PQMODELINDEX(5) ) );
   }
 }
 

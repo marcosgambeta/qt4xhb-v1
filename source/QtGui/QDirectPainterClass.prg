@@ -64,7 +64,7 @@ QDirectPainter ( QObject * parent = 0, SurfaceFlag flag = NonReserved )
 HB_FUNC_STATIC( QDIRECTPAINTER_NEW )
 {
   int par2 = ISNIL(2)? (int) QDirectPainter::NonReserved : hb_parni(2);
-  QDirectPainter * o = new QDirectPainter ( OPQOBJECT(1,0),  (QDirectPainter::SurfaceFlag) par2 );
+  QDirectPainter * o = new QDirectPainter ( OPQOBJECT(1,0), (QDirectPainter::SurfaceFlag) par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

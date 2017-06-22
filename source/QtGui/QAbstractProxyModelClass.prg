@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_HEADERDATA )
   QAbstractProxyModel * obj = (QAbstractProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->headerData ( PINT(1),  (Qt::Orientation) hb_parni(2), PINT(3) ) );
+    QVariant * ptr = new QVariant( obj->headerData ( PINT(1), (Qt::Orientation) hb_parni(2), PINT(3) ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SETHEADERDATA )
   QAbstractProxyModel * obj = (QAbstractProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RBOOL( obj->setHeaderData ( PINT(1),  (Qt::Orientation) hb_parni(2), *PQVARIANT(3), OPINT(4,Qt::EditRole) ) );
+    RBOOL( obj->setHeaderData ( PINT(1), (Qt::Orientation) hb_parni(2), *PQVARIANT(3), OPINT(4,Qt::EditRole) ) );
   }
 }
 
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SORT )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) Qt::AscendingOrder : hb_parni(2);
-    obj->sort ( PINT(1),  (Qt::SortOrder) par2 );
+    obj->sort ( PINT(1), (Qt::SortOrder) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

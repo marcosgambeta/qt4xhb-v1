@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_SETARROWTYPE )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setArrowType (  (Qt::ArrowType) par1 );
+      obj->setArrowType ( (Qt::ArrowType) par1 );
     }
     else
     {
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_SETPOPUPMODE )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setPopupMode (  (QToolButton::ToolButtonPopupMode) par1 );
+      obj->setPopupMode ( (QToolButton::ToolButtonPopupMode) par1 );
     }
     else
     {
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_SETTOOLBUTTONSTYLE )
     if( ISNUM(1) )
     {
       int par1 = hb_parni(1);
-      obj->setToolButtonStyle (  (Qt::ToolButtonStyle) par1 );
+      obj->setToolButtonStyle ( (Qt::ToolButtonStyle) par1 );
     }
     else
     {

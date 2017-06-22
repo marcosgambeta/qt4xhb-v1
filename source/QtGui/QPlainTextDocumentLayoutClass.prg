@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_HITTEST )
   if( obj )
   {
     int par2 = hb_parni(2);
-    RINT( obj->hitTest ( *PQPOINTF(1),  (Qt::HitTestAccuracy) par2 ) );
+    RINT( obj->hitTest ( *PQPOINTF(1), (Qt::HitTestAccuracy) par2 ) );
   }
 }
 

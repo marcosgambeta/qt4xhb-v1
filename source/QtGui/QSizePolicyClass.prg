@@ -73,7 +73,7 @@ QSizePolicy ( Policy horizontal, Policy vertical )
 */
 HB_FUNC_STATIC( QSIZEPOLICY_NEW2 )
 {
-  QSizePolicy * o = new QSizePolicy (  (QSizePolicy::Policy) hb_parni(1),  (QSizePolicy::Policy) hb_parni(2) );
+  QSizePolicy * o = new QSizePolicy ( (QSizePolicy::Policy) hb_parni(1), (QSizePolicy::Policy) hb_parni(2) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -83,7 +83,7 @@ QSizePolicy ( Policy horizontal, Policy vertical, ControlType type )
 */
 HB_FUNC_STATIC( QSIZEPOLICY_NEW3 )
 {
-  QSizePolicy * o = new QSizePolicy (  (QSizePolicy::Policy) hb_parni(1),  (QSizePolicy::Policy) hb_parni(2),  (QSizePolicy::ControlType) hb_parni(3) );
+  QSizePolicy * o = new QSizePolicy ( (QSizePolicy::Policy) hb_parni(1), (QSizePolicy::Policy) hb_parni(2), (QSizePolicy::ControlType) hb_parni(3) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_SETCONTROLTYPE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setControlType (  (QSizePolicy::ControlType) par1 );
+    obj->setControlType ( (QSizePolicy::ControlType) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_SETHORIZONTALPOLICY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setHorizontalPolicy (  (QSizePolicy::Policy) par1 );
+    obj->setHorizontalPolicy ( (QSizePolicy::Policy) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_SETVERTICALPOLICY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setVerticalPolicy (  (QSizePolicy::Policy) par1 );
+    obj->setVerticalPolicy ( (QSizePolicy::Policy) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -58,7 +58,7 @@ QDialog ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 HB_FUNC_STATIC( QDIALOG_NEW )
 {
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-  QDialog * o = new QDialog ( OPQWIDGET(1,0),  (Qt::WindowFlags) par2 );
+  QDialog * o = new QDialog ( OPQWIDGET(1,0), (Qt::WindowFlags) par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

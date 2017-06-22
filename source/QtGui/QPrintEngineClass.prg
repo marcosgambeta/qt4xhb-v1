@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QPRINTENGINE_METRIC )
   if( obj )
   {
     int par1 = hb_parni(1);
-    RINT( obj->metric (  (QPaintDevice::PaintDeviceMetric) par1 ) );
+    RINT( obj->metric ( (QPaintDevice::PaintDeviceMetric) par1 ) );
   }
 }
 
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QPRINTENGINE_PROPERTY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QVariant * ptr = new QVariant( obj->property (  (QPrintEngine::PrintEnginePropertyKey) par1 ) );
+    QVariant * ptr = new QVariant( obj->property ( (QPrintEngine::PrintEnginePropertyKey) par1 ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QPRINTENGINE_SETPROPERTY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setProperty (  (QPrintEngine::PrintEnginePropertyKey) par1, *PQVARIANT(2) );
+    obj->setProperty ( (QPrintEngine::PrintEnginePropertyKey) par1, *PQVARIANT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

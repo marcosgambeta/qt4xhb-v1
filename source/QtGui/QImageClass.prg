@@ -143,7 +143,7 @@ QImage ( const QSize & size, Format format )
 */
 HB_FUNC_STATIC( QIMAGE_NEW2 )
 {
-  QImage * o = new QImage ( *PQSIZE(1),  (QImage::Format) hb_parni(2) );
+  QImage * o = new QImage ( *PQSIZE(1), (QImage::Format) hb_parni(2) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -153,7 +153,7 @@ QImage ( int width, int height, Format format )
 */
 HB_FUNC_STATIC( QIMAGE_NEW3 )
 {
-  QImage * o = new QImage ( PINT(1), PINT(2),  (QImage::Format) hb_parni(3) );
+  QImage * o = new QImage ( PINT(1), PINT(2), (QImage::Format) hb_parni(3) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -168,7 +168,7 @@ QImage ( const QString & fileName, const char * format = 0 )
 */
 HB_FUNC_STATIC( QIMAGE_NEW9 )
 {
-  QImage * o = new QImage ( PQSTRING(1),  (const char *) ISNIL(2)? 0 : hb_parc(2) );
+  QImage * o = new QImage ( PQSTRING(1), (const char *) ISNIL(2)? 0 : hb_parc(2) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -178,7 +178,7 @@ QImage ( const char * fileName, const char * format = 0 )
 */
 HB_FUNC_STATIC( QIMAGE_NEW10 )
 {
-  QImage * o = new QImage (  (const char *) hb_parc(1),  (const char *) ISNIL(2)? 0 : hb_parc(2) );
+  QImage * o = new QImage ( (const char *) hb_parc(1), (const char *) ISNIL(2)? 0 : hb_parc(2) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QIMAGE_CONVERTTOFORMAT1 )
   {
     int par1 = hb_parni(1);
     int par2 = ISNIL(2)? (int) Qt::AutoColor : hb_parni(2);
-    QImage * ptr = new QImage( obj->convertToFormat (  (QImage::Format) par1,  (Qt::ImageConversionFlags) par2 ) );
+    QImage * ptr = new QImage( obj->convertToFormat ( (QImage::Format) par1, (Qt::ImageConversionFlags) par2 ) );
     _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );
   }
 }
@@ -412,7 +412,7 @@ temp2 = hb_arrayGetNI(aValues2, i2+1);
 par2 << temp2;
 }
     int par3 = ISNIL(3)? (int) Qt::AutoColor : hb_parni(3);
-    QImage * ptr = new QImage( obj->convertToFormat (  (QImage::Format) par1, par2,  (Qt::ImageConversionFlags) par3 ) );
+    QImage * ptr = new QImage( obj->convertToFormat ( (QImage::Format) par1, par2, (Qt::ImageConversionFlags) par3 ) );
     _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );
   }
 }
@@ -484,7 +484,7 @@ HB_FUNC_STATIC( QIMAGE_CREATEALPHAMASK )
   if( obj )
   {
     int par1 = ISNIL(1)? (int) Qt::AutoColor : hb_parni(1);
-    QImage * ptr = new QImage( obj->createAlphaMask (  (Qt::ImageConversionFlags) par1 ) );
+    QImage * ptr = new QImage( obj->createAlphaMask ( (Qt::ImageConversionFlags) par1 ) );
     _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
 }
 
@@ -512,7 +512,7 @@ HB_FUNC_STATIC( QIMAGE_CREATEMASKFROMCOLOR )
   {
     QRgb par1 = hb_parni(1);
     int par2 = ISNIL(2)? (int) Qt::MaskInColor : hb_parni(2);
-    QImage * ptr = new QImage( obj->createMaskFromColor ( par1,  (Qt::MaskMode) par2 ) );
+    QImage * ptr = new QImage( obj->createMaskFromColor ( par1, (Qt::MaskMode) par2 ) );
     _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
 }
 
@@ -579,7 +579,7 @@ HB_FUNC_STATIC( QIMAGE_FILL2 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->fill (  (Qt::GlobalColor) par1 );
+    obj->fill ( (Qt::GlobalColor) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -665,7 +665,7 @@ HB_FUNC_STATIC( QIMAGE_INVERTPIXELS )
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QImage::InvertRgb : hb_parni(1);
-    obj->invertPixels (  (QImage::InvertMode) par1 );
+    obj->invertPixels ( (QImage::InvertMode) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -705,7 +705,7 @@ HB_FUNC_STATIC( QIMAGE_LOAD1 )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RBOOL( obj->load ( PQSTRING(1),  (const char *) ISNIL(2)? 0 : hb_parc(2) ) );
+    RBOOL( obj->load ( PQSTRING(1), (const char *) ISNIL(2)? 0 : hb_parc(2) ) );
   }
 }
 
@@ -718,7 +718,7 @@ HB_FUNC_STATIC( QIMAGE_LOAD2 )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RBOOL( obj->load ( PQIODEVICE(1),  (const char *) hb_parc(2) ) );
+    RBOOL( obj->load ( PQIODEVICE(1), (const char *) hb_parc(2) ) );
   }
 }
 
@@ -748,7 +748,7 @@ HB_FUNC_STATIC( QIMAGE_LOADFROMDATA1 )
   {
     const uchar * par1 = (const uchar *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
-    RBOOL( obj->loadFromData ( par1, par2,  (const char *) ISNIL(3)? 0 : hb_parc(3) ) );
+    RBOOL( obj->loadFromData ( par1, par2, (const char *) ISNIL(3)? 0 : hb_parc(3) ) );
   }
 }
 
@@ -761,7 +761,7 @@ HB_FUNC_STATIC( QIMAGE_LOADFROMDATA2 )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RBOOL( obj->loadFromData ( *PQBYTEARRAY(1),  (const char *) ISNIL(2)? 0 : hb_parc(2) ) );
+    RBOOL( obj->loadFromData ( *PQBYTEARRAY(1), (const char *) ISNIL(2)? 0 : hb_parc(2) ) );
   }
 }
 
@@ -925,7 +925,7 @@ HB_FUNC_STATIC( QIMAGE_SAVE1 )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RBOOL( obj->save ( PQSTRING(1),  (const char *) ISNIL(2)? 0 : hb_parc(2), OPINT(3,-1) ) );
+    RBOOL( obj->save ( PQSTRING(1), (const char *) ISNIL(2)? 0 : hb_parc(2), OPINT(3,-1) ) );
   }
 }
 
@@ -938,7 +938,7 @@ HB_FUNC_STATIC( QIMAGE_SAVE2 )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RBOOL( obj->save ( PQIODEVICE(1),  (const char *) ISNIL(2)? 0 : hb_parc(2), OPINT(3,-1) ) );
+    RBOOL( obj->save ( PQIODEVICE(1), (const char *) ISNIL(2)? 0 : hb_parc(2), OPINT(3,-1) ) );
   }
 }
 
@@ -968,7 +968,7 @@ HB_FUNC_STATIC( QIMAGE_SCALED1 )
   {
     int par2 = ISNIL(2)? (int) Qt::IgnoreAspectRatio : hb_parni(2);
     int par3 = ISNIL(3)? (int) Qt::FastTransformation : hb_parni(3);
-    QImage * ptr = new QImage( obj->scaled ( *PQSIZE(1),  (Qt::AspectRatioMode) par2,  (Qt::TransformationMode) par3 ) );
+    QImage * ptr = new QImage( obj->scaled ( *PQSIZE(1), (Qt::AspectRatioMode) par2, (Qt::TransformationMode) par3 ) );
     _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
 }
 
@@ -983,7 +983,7 @@ HB_FUNC_STATIC( QIMAGE_SCALED2 )
   {
     int par3 = ISNIL(3)? (int) Qt::IgnoreAspectRatio : hb_parni(3);
     int par4 = ISNIL(4)? (int) Qt::FastTransformation : hb_parni(4);
-    QImage * ptr = new QImage( obj->scaled ( PINT(1), PINT(2),  (Qt::AspectRatioMode) par3,  (Qt::TransformationMode) par4 ) );
+    QImage * ptr = new QImage( obj->scaled ( PINT(1), PINT(2), (Qt::AspectRatioMode) par3, (Qt::TransformationMode) par4 ) );
     _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
 }
 
@@ -1012,7 +1012,7 @@ HB_FUNC_STATIC( QIMAGE_SCALEDTOHEIGHT )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) Qt::FastTransformation : hb_parni(2);
-    QImage * ptr = new QImage( obj->scaledToHeight ( PINT(1),  (Qt::TransformationMode) par2 ) );
+    QImage * ptr = new QImage( obj->scaledToHeight ( PINT(1), (Qt::TransformationMode) par2 ) );
     _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
 }
 
@@ -1026,7 +1026,7 @@ HB_FUNC_STATIC( QIMAGE_SCALEDTOWIDTH )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) Qt::FastTransformation : hb_parni(2);
-    QImage * ptr = new QImage( obj->scaledToWidth ( PINT(1),  (Qt::TransformationMode) par2 ) );
+    QImage * ptr = new QImage( obj->scaledToWidth ( PINT(1), (Qt::TransformationMode) par2 ) );
     _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
 }
 
@@ -1268,7 +1268,7 @@ HB_FUNC_STATIC( QIMAGE_TRANSFORMED2 )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) Qt::FastTransformation : hb_parni(2);
-    QImage * ptr = new QImage( obj->transformed ( *PQTRANSFORM(1),  (Qt::TransformationMode) par2 ) );
+    QImage * ptr = new QImage( obj->transformed ( *PQTRANSFORM(1), (Qt::TransformationMode) par2 ) );
     _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
 }
 
@@ -1348,7 +1348,7 @@ HB_FUNC_STATIC( QIMAGE_FROMDATA1 )
 {
   const uchar * par1 = (const uchar *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = hb_parni(2);
-  QImage * ptr = new QImage( QImage::fromData ( par1, par2,  (const char *) ISNIL(3)? 0 : hb_parc(3) ) );
+  QImage * ptr = new QImage( QImage::fromData ( par1, par2, (const char *) ISNIL(3)? 0 : hb_parc(3) ) );
   _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );}
 
 
@@ -1357,7 +1357,7 @@ QImage fromData ( const QByteArray & data, const char * format = 0 )
 */
 HB_FUNC_STATIC( QIMAGE_FROMDATA2 )
 {
-  QImage * ptr = new QImage( QImage::fromData ( *PQBYTEARRAY(1),  (const char *) ISNIL(2)? 0 : hb_parc(2) ) );
+  QImage * ptr = new QImage( QImage::fromData ( *PQBYTEARRAY(1), (const char *) ISNIL(2)? 0 : hb_parc(2) ) );
   _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );}
 
 

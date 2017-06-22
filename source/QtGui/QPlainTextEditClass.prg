@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_FIND )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-    RBOOL( obj->find ( PQSTRING(1),  (QTextDocument::FindFlags) par2 ) );
+    RBOOL( obj->find ( PQSTRING(1), (QTextDocument::FindFlags) par2 ) );
   }
 }
 
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_MOVECURSOR )
   {
     int par1 = hb_parni(1);
     int par2 = ISNIL(2)? (int) QTextCursor::MoveAnchor : hb_parni(2);
-    obj->moveCursor (  (QTextCursor::MoveOperation) par1,  (QTextCursor::MoveMode) par2 );
+    obj->moveCursor ( (QTextCursor::MoveOperation) par1, (QTextCursor::MoveMode) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -609,7 +609,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETLINEWRAPMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setLineWrapMode (  (QPlainTextEdit::LineWrapMode) par1 );
+    obj->setLineWrapMode ( (QPlainTextEdit::LineWrapMode) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -709,7 +709,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETTEXTINTERACTIONFLAGS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setTextInteractionFlags (  (Qt::TextInteractionFlags) par1 );
+    obj->setTextInteractionFlags ( (Qt::TextInteractionFlags) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -738,7 +738,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETWORDWRAPMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setWordWrapMode (  (QTextOption::WrapMode) par1 );
+    obj->setWordWrapMode ( (QTextOption::WrapMode) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

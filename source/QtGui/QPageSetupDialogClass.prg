@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_SETOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setOption (  (QPageSetupDialog::PageSetupDialogOption) par1, OPBOOL(2,true) );
+    obj->setOption ( (QPageSetupDialog::PageSetupDialogOption) par1, OPBOOL(2,true) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_SETOPTIONS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setOptions (  (QPageSetupDialog::PageSetupDialogOptions) par1 );
+    obj->setOptions ( (QPageSetupDialog::PageSetupDialogOptions) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_TESTOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    RBOOL( obj->testOption (  (QPageSetupDialog::PageSetupDialogOption) par1 ) );
+    RBOOL( obj->testOption ( (QPageSetupDialog::PageSetupDialogOption) par1 ) );
   }
 }
 

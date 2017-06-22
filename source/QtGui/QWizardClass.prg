@@ -94,7 +94,7 @@ QWizard ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 HB_FUNC_STATIC( QWIZARD_NEW )
 {
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-  QWizard * o = new QWizard ( OPQWIDGET(1,0),  (Qt::WindowFlags) par2 );
+  QWizard * o = new QWizard ( OPQWIDGET(1,0), (Qt::WindowFlags) par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QWIZARD_BUTTON )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QAbstractButton * ptr = obj->button (  (QWizard::WizardButton) par1 );
+    QAbstractButton * ptr = obj->button ( (QWizard::WizardButton) par1 );
     _qt4xhb_createReturnClass ( ptr, "QABSTRACTBUTTON" );
   }
 }
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QWIZARD_BUTTONTEXT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QString str1 = obj->buttonText (  (QWizard::WizardButton) par1 );
+    QString str1 = obj->buttonText ( (QWizard::WizardButton) par1 );
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QWIZARD_PIXMAP )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QPixmap * ptr = new QPixmap( obj->pixmap (  (QWizard::WizardPixmap) par1 ) );
+    QPixmap * ptr = new QPixmap( obj->pixmap ( (QWizard::WizardPixmap) par1 ) );
     _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QWIZARD_SETBUTTON )
   {
     int par1 = hb_parni(1);
     QAbstractButton * par2 = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setButton (  (QWizard::WizardButton) par1, par2 );
+    obj->setButton ( (QWizard::WizardButton) par1, par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QWIZARD_SETBUTTONTEXT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setButtonText (  (QWizard::WizardButton) par1, PQSTRING(2) );
+    obj->setButtonText ( (QWizard::WizardButton) par1, PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QWIZARD_SETDEFAULTPROPERTY )
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setDefaultProperty (  (const char *) hb_parc(1),  (const char *) hb_parc(2),  (const char *) hb_parc(3) );
+    obj->setDefaultProperty ( (const char *) hb_parc(1), (const char *) hb_parc(2), (const char *) hb_parc(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QWIZARD_SETOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setOption (  (QWizard::WizardOption) par1, OPBOOL(2,true) );
+    obj->setOption ( (QWizard::WizardOption) par1, OPBOOL(2,true) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QWIZARD_SETOPTIONS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setOptions (  (QWizard::WizardOptions) par1 );
+    obj->setOptions ( (QWizard::WizardOptions) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QWIZARD_SETPIXMAP )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setPixmap (  (QWizard::WizardPixmap) par1, *PQPIXMAP(2) );
+    obj->setPixmap ( (QWizard::WizardPixmap) par1, *PQPIXMAP(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QWIZARD_SETSUBTITLEFORMAT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setSubTitleFormat (  (Qt::TextFormat) par1 );
+    obj->setSubTitleFormat ( (Qt::TextFormat) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QWIZARD_SETTITLEFORMAT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setTitleFormat (  (Qt::TextFormat) par1 );
+    obj->setTitleFormat ( (Qt::TextFormat) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QWIZARD_SETWIZARDSTYLE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setWizardStyle (  (QWizard::WizardStyle) par1 );
+    obj->setWizardStyle ( (QWizard::WizardStyle) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -570,7 +570,7 @@ HB_FUNC_STATIC( QWIZARD_TESTOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    RBOOL( obj->testOption (  (QWizard::WizardOption) par1 ) );
+    RBOOL( obj->testOption ( (QWizard::WizardOption) par1 ) );
   }
 }
 

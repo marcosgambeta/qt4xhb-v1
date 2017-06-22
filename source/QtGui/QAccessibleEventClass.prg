@@ -40,7 +40,7 @@ QAccessibleEvent ( Type type, int child )
 */
 HB_FUNC_STATIC( QACCESSIBLEEVENT_NEW )
 {
-  QAccessibleEvent * o = new QAccessibleEvent (  (QAccessibleEvent::Type) hb_parni(1), PINT(2) );
+  QAccessibleEvent * o = new QAccessibleEvent ( (QAccessibleEvent::Type) hb_parni(1), PINT(2) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

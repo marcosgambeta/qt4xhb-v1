@@ -484,7 +484,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_COLLIDESWITHITEM )
   {
     const QGraphicsItem * par1 = (const QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = ISNIL(2)? (int) Qt::IntersectsItemShape : hb_parni(2);
-    RBOOL( obj->collidesWithItem ( par1,  (Qt::ItemSelectionMode) par2 ) );
+    RBOOL( obj->collidesWithItem ( par1, (Qt::ItemSelectionMode) par2 ) );
   }
 }
 
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_COLLIDESWITHPATH )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) Qt::IntersectsItemShape : hb_parni(2);
-    RBOOL( obj->collidesWithPath ( *PQPAINTERPATH(1),  (Qt::ItemSelectionMode) par2 ) );
+    RBOOL( obj->collidesWithPath ( *PQPAINTERPATH(1), (Qt::ItemSelectionMode) par2 ) );
   }
 }
 
@@ -512,7 +512,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_COLLIDINGITEMS )
   if( obj )
   {
     int par1 = ISNIL(1)? (int) Qt::IntersectsItemShape : hb_parni(1);
-    QList<QGraphicsItem *> list = obj->collidingItems (  (Qt::ItemSelectionMode) par1 );
+    QList<QGraphicsItem *> list = obj->collidingItems ( (Qt::ItemSelectionMode) par1 );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QGRAPHICSITEM" );
@@ -2392,7 +2392,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETACCEPTEDMOUSEBUTTONS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setAcceptedMouseButtons (  (Qt::MouseButtons) par1 );
+    obj->setAcceptedMouseButtons ( (Qt::MouseButtons) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -2436,7 +2436,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETCACHEMODE )
   {
     int par1 = hb_parni(1);
     QSize par2 = ISNIL(2)? QSize() : *(QSize *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setCacheMode (  (QGraphicsItem::CacheMode) par1, par2 );
+    obj->setCacheMode ( (QGraphicsItem::CacheMode) par1, par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -2508,7 +2508,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETFLAG )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setFlag (  (QGraphicsItem::GraphicsItemFlag) par1, OPBOOL(2,true) );
+    obj->setFlag ( (QGraphicsItem::GraphicsItemFlag) par1, OPBOOL(2,true) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -2523,7 +2523,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETFLAGS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setFlags (  (QGraphicsItem::GraphicsItemFlags) par1 );
+    obj->setFlags ( (QGraphicsItem::GraphicsItemFlags) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -2538,7 +2538,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETFOCUS )
   if( obj )
   {
     int par1 = ISNIL(1)? (int) Qt::OtherFocusReason : hb_parni(1);
-    obj->setFocus (  (Qt::FocusReason) par1 );
+    obj->setFocus ( (Qt::FocusReason) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -2598,7 +2598,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETINPUTMETHODHINTS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setInputMethodHints (  (Qt::InputMethodHints) par1 );
+    obj->setInputMethodHints ( (Qt::InputMethodHints) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -2627,7 +2627,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETPANELMODALITY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setPanelModality (  (QGraphicsItem::PanelModality) par1 );
+    obj->setPanelModality ( (QGraphicsItem::PanelModality) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

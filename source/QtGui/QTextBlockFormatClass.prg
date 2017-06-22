@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETALIGNMENT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setAlignment (  (Qt::Alignment) par1 );
+    obj->setAlignment ( (Qt::Alignment) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETPAGEBREAKPOLICY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setPageBreakPolicy (  (QTextFormat::PageBreakFlags) par1 );
+    obj->setPageBreakPolicy ( (QTextFormat::PageBreakFlags) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_SETSUPPORTED )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setSupported (  (QFontDatabase::WritingSystem) par1, OPBOOL(2,true) );
+    obj->setSupported ( (QFontDatabase::WritingSystem) par1, OPBOOL(2,true) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_SUPPORTED )
   if( obj )
   {
     int par1 = hb_parni(1);
-    RBOOL( obj->supported (  (QFontDatabase::WritingSystem) par1 ) );
+    RBOOL( obj->supported ( (QFontDatabase::WritingSystem) par1 ) );
   }
 }
 

@@ -52,7 +52,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_NEW1 )
 {
   QPixmap par1 = ISNIL(1)? QPixmap() : *(QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-  QSplashScreen * o = new QSplashScreen ( par1,  (Qt::WindowFlags) par2 );
+  QSplashScreen * o = new QSplashScreen ( par1, (Qt::WindowFlags) par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_NEW2 )
 {
   QPixmap par2 = ISNIL(2)? QPixmap() : *(QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-  QSplashScreen * o = new QSplashScreen ( PQWIDGET(1), par2,  (Qt::WindowFlags) par3 );
+  QSplashScreen * o = new QSplashScreen ( PQWIDGET(1), par2, (Qt::WindowFlags) par3 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

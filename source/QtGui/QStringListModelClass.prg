@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_SORT )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) Qt::AscendingOrder : hb_parni(2);
-    obj->sort ( PINT(1),  (Qt::SortOrder) par2 );
+    obj->sort ( PINT(1), (Qt::SortOrder) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

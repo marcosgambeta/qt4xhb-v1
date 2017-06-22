@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETCASESENSITIVITY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setCaseSensitivity (  (Qt::CaseSensitivity) par1 );
+    obj->setCaseSensitivity ( (Qt::CaseSensitivity) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETCOMPLETIONMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setCompletionMode (  (QCompleter::CompletionMode) par1 );
+    obj->setCompletionMode ( (QCompleter::CompletionMode) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETMODELSORTING )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setModelSorting (  (QCompleter::ModelSorting) par1 );
+    obj->setModelSorting ( (QCompleter::ModelSorting) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

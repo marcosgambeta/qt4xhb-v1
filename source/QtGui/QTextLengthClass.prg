@@ -59,7 +59,7 @@ QTextLength ( Type type, qreal value )
 */
 HB_FUNC_STATIC( QTEXTLENGTH_NEW2 )
 {
-  QTextLength * o = new QTextLength (  (QTextLength::Type) hb_parni(1), PQREAL(2) );
+  QTextLength * o = new QTextLength ( (QTextLength::Type) hb_parni(1), PQREAL(2) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

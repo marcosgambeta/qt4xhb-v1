@@ -86,7 +86,7 @@ QPen ( Qt::PenStyle style )
 */
 HB_FUNC_STATIC( QPEN_NEW2 )
 {
-  QPen * o = new QPen (  (Qt::PenStyle) hb_parni(1) );
+  QPen * o = new QPen ( (Qt::PenStyle) hb_parni(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QPEN_NEW4 )
   int par3 = ISNIL(3)? (int) Qt::SolidLine : hb_parni(3);
   int par4 = ISNIL(4)? (int) Qt::SquareCap : hb_parni(4);
   int par5 = ISNIL(5)? (int) Qt::BevelJoin : hb_parni(5);
-  QPen * o = new QPen ( *PQBRUSH(1), PQREAL(2),  (Qt::PenStyle) par3,  (Qt::PenCapStyle) par4,  (Qt::PenJoinStyle) par5 );
+  QPen * o = new QPen ( *PQBRUSH(1), PQREAL(2), (Qt::PenStyle) par3, (Qt::PenCapStyle) par4, (Qt::PenJoinStyle) par5 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QPEN_SETCAPSTYLE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setCapStyle (  (Qt::PenCapStyle) par1 );
+    obj->setCapStyle ( (Qt::PenCapStyle) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -409,7 +409,7 @@ HB_FUNC_STATIC( QPEN_SETJOINSTYLE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setJoinStyle (  (Qt::PenJoinStyle) par1 );
+    obj->setJoinStyle ( (Qt::PenJoinStyle) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QPEN_SETSTYLE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setStyle (  (Qt::PenStyle) par1 );
+    obj->setStyle ( (Qt::PenStyle) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

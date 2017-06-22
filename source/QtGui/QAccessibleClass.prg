@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QACCESSIBLE_UPDATEACCESSIBILITY )
 {
   int par2 = hb_parni(2);
   int par3 = hb_parni(3);
-  QAccessible::updateAccessibility ( PQOBJECT(1), par2,  (QAccessible::Event) par3 );
+  QAccessible::updateAccessibility ( PQOBJECT(1), par2, (QAccessible::Event) par3 );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

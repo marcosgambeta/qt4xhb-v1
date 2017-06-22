@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QABSTRACTFONTENGINE_CONVERTSTRINGTOGLYPHINDICES ) // TODO: revis
     uint * par3 = (uint *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par4;
     int par5 = hb_parni(5);
-    RBOOL( obj->convertStringToGlyphIndices ( par1, par2, par3, &par4,  (QAbstractFontEngine::TextShapingFlags) par5 ) );
+    RBOOL( obj->convertStringToGlyphIndices ( par1, par2, par3, &par4, (QAbstractFontEngine::TextShapingFlags) par5 ) );
     hb_storni( par4, 4 );
   }
 }
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QABSTRACTFONTENGINE_FONTPROPERTY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QVariant * ptr = new QVariant( obj->fontProperty (  (QAbstractFontEngine::FontProperty) par1 ) );
+    QVariant * ptr = new QVariant( obj->fontProperty ( (QAbstractFontEngine::FontProperty) par1 ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QABSTRACTFONTENGINE_GETGLYPHADVANCES ) // TODO: revisar e corrig
     int par2 = hb_parni(2);
     QAbstractFontEngine::Fixed * par3 = (QAbstractFontEngine::Fixed *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par4 = hb_parni(4);
-    obj->getGlyphAdvances ( par1, par2, par3,  (QAbstractFontEngine::TextShapingFlags) par4 );
+    obj->getGlyphAdvances ( par1, par2, par3, (QAbstractFontEngine::TextShapingFlags) par4 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

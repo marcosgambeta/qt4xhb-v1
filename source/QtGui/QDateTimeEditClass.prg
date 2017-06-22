@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SECTIONTEXT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QString str1 = obj->sectionText (  (QDateTimeEdit::Section) par1 );
+    QString str1 = obj->sectionText ( (QDateTimeEdit::Section) par1 );
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -535,7 +535,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETCURRENTSECTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setCurrentSection (  (QDateTimeEdit::Section) par1 );
+    obj->setCurrentSection ( (QDateTimeEdit::Section) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -690,7 +690,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETSELECTEDSECTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setSelectedSection (  (QDateTimeEdit::Section) par1 );
+    obj->setSelectedSection ( (QDateTimeEdit::Section) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -719,7 +719,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETTIMESPEC )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setTimeSpec (  (Qt::TimeSpec) par1 );
+    obj->setTimeSpec ( (Qt::TimeSpec) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

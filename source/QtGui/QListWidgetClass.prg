@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QLISTWIDGET_FINDITEMS )
   if( obj )
   {
     int par2 = hb_parni(2);
-    QList<QListWidgetItem *> list = obj->findItems ( PQSTRING(1),  (Qt::MatchFlags) par2 );
+    QList<QListWidgetItem *> list = obj->findItems ( PQSTRING(1), (Qt::MatchFlags) par2 );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QLISTWIDGETITEM" );
@@ -541,7 +541,7 @@ HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTITEM2 )
   {
     QListWidgetItem * par1 = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
-    obj->setCurrentItem ( par1,  (QItemSelectionModel::SelectionFlags) par2 );
+    obj->setCurrentItem ( par1, (QItemSelectionModel::SelectionFlags) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -585,7 +585,7 @@ HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTROW2 )
   if( obj )
   {
     int par2 = hb_parni(2);
-    obj->setCurrentRow ( PINT(1),  (QItemSelectionModel::SelectionFlags) par2 );
+    obj->setCurrentRow ( PINT(1), (QItemSelectionModel::SelectionFlags) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -644,7 +644,7 @@ HB_FUNC_STATIC( QLISTWIDGET_SORTITEMS )
   if( obj )
   {
     int par1 = ISNIL(1)? (int) Qt::AscendingOrder : hb_parni(1);
-    obj->sortItems (  (Qt::SortOrder) par1 );
+    obj->sortItems ( (Qt::SortOrder) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -718,7 +718,7 @@ HB_FUNC_STATIC( QLISTWIDGET_SCROLLTOITEM )
   {
     const QListWidgetItem * par1 = (const QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = ISNIL(2)? (int) QAbstractItemView::EnsureVisible : hb_parni(2);
-    obj->scrollToItem ( par1,  (QAbstractItemView::ScrollHint) par2 );
+    obj->scrollToItem ( par1, (QAbstractItemView::ScrollHint) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

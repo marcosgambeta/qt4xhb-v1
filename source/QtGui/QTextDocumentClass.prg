@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_CLEARUNDOREDOSTACKS )
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QTextDocument::UndoAndRedoStacks : hb_parni(1);
-    obj->clearUndoRedoStacks (  (QTextDocument::Stacks) par1 );
+    obj->clearUndoRedoStacks ( (QTextDocument::Stacks) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FIND1 )
   {
     QTextCursor * par2 = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-    QTextCursor * ptr = new QTextCursor( obj->find ( PQSTRING(1), *par2,  (QTextDocument::FindFlags) par3 ) );
+    QTextCursor * ptr = new QTextCursor( obj->find ( PQSTRING(1), *par2, (QTextDocument::FindFlags) par3 ) );
     _qt4xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
   }
 }
@@ -527,7 +527,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FIND2 )
     QRegExp * par1 = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QTextCursor * par2 = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-    QTextCursor * ptr = new QTextCursor( obj->find ( *par1, *par2,  (QTextDocument::FindFlags) par3 ) );
+    QTextCursor * ptr = new QTextCursor( obj->find ( *par1, *par2, (QTextDocument::FindFlags) par3 ) );
     _qt4xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
   }
 }
@@ -542,7 +542,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FIND3 )
   if( obj )
   {
     int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-    QTextCursor * ptr = new QTextCursor( obj->find ( PQSTRING(1), OPINT(2,0),  (QTextDocument::FindFlags) par3 ) );
+    QTextCursor * ptr = new QTextCursor( obj->find ( PQSTRING(1), OPINT(2,0), (QTextDocument::FindFlags) par3 ) );
     _qt4xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
   }
 }
@@ -558,7 +558,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FIND4 )
   {
     QRegExp * par1 = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-    QTextCursor * ptr = new QTextCursor( obj->find ( *par1, OPINT(2,0),  (QTextDocument::FindFlags) par3 ) );
+    QTextCursor * ptr = new QTextCursor( obj->find ( *par1, OPINT(2,0), (QTextDocument::FindFlags) par3 ) );
     _qt4xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
   }
 }
@@ -799,7 +799,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_METAINFORMATION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QString str1 = obj->metaInformation (  (QTextDocument::MetaInformation) par1 );
+    QString str1 = obj->metaInformation ( (QTextDocument::MetaInformation) par1 );
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -941,7 +941,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETDEFAULTCURSORMOVESTYLE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setDefaultCursorMoveStyle (  (Qt::CursorMoveStyle) par1 );
+    obj->setDefaultCursorMoveStyle ( (Qt::CursorMoveStyle) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1070,7 +1070,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETMETAINFORMATION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setMetaInformation (  (QTextDocument::MetaInformation) par1, PQSTRING(2) );
+    obj->setMetaInformation ( (QTextDocument::MetaInformation) par1, PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

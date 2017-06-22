@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDROUNDEDRECT1 )
   if( obj )
   {
     int par4 = ISNIL(4)? (int) Qt::AbsoluteSize : hb_parni(4);
-    obj->addRoundedRect ( *PQRECTF(1), PQREAL(2), PQREAL(3),  (Qt::SizeMode) par4 );
+    obj->addRoundedRect ( *PQRECTF(1), PQREAL(2), PQREAL(3), (Qt::SizeMode) par4 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDROUNDEDRECT2 )
   if( obj )
   {
     int par7 = ISNIL(7)? (int) Qt::AbsoluteSize : hb_parni(7);
-    obj->addRoundedRect ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6),  (Qt::SizeMode) par7 );
+    obj->addRoundedRect ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6), (Qt::SizeMode) par7 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -985,7 +985,7 @@ HB_FUNC_STATIC( QPAINTERPATH_SETFILLRULE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setFillRule (  (Qt::FillRule) par1 );
+    obj->setFillRule ( (Qt::FillRule) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

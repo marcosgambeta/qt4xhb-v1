@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QCLIPBOARD_CLEAR )
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QClipboard::Clipboard : hb_parni(1);
-    obj->clear (  (QClipboard::Mode) par1 );
+    obj->clear ( (QClipboard::Mode) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QCLIPBOARD_IMAGE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QImage * ptr = new QImage( obj->image (  (QClipboard::Mode) par1 ) );
+    QImage * ptr = new QImage( obj->image ( (QClipboard::Mode) par1 ) );
     _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );
   }
 }
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QCLIPBOARD_MIMEDATA )
   if( obj )
   {
     int par1 = hb_parni(1);
-    const QMimeData * ptr = obj->mimeData (  (QClipboard::Mode) par1 );
+    const QMimeData * ptr = obj->mimeData ( (QClipboard::Mode) par1 );
     _qt4xhb_createReturnClass ( ptr, "QMIMEDATA" );
   }
 }
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QCLIPBOARD_PIXMAP )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QPixmap * ptr = new QPixmap( obj->pixmap (  (QClipboard::Mode) par1 ) );
+    QPixmap * ptr = new QPixmap( obj->pixmap ( (QClipboard::Mode) par1 ) );
     _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QCLIPBOARD_SETIMAGE )
   {
     QImage * par1 = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
-    obj->setImage ( *par1,  (QClipboard::Mode) par2 );
+    obj->setImage ( *par1, (QClipboard::Mode) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QCLIPBOARD_SETMIMEDATA )
   {
     QMimeData * par1 = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
-    obj->setMimeData ( par1,  (QClipboard::Mode) par2 );
+    obj->setMimeData ( par1, (QClipboard::Mode) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QCLIPBOARD_SETPIXMAP )
   if( obj )
   {
     int par2 = hb_parni(2);
-    obj->setPixmap ( *PQPIXMAP(1),  (QClipboard::Mode) par2 );
+    obj->setPixmap ( *PQPIXMAP(1), (QClipboard::Mode) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QCLIPBOARD_SETTEXT )
   if( obj )
   {
     int par2 = hb_parni(2);
-    obj->setText ( PQSTRING(1),  (QClipboard::Mode) par2 );
+    obj->setText ( PQSTRING(1), (QClipboard::Mode) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QCLIPBOARD_TEXT1 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QString str1 = obj->text (  (QClipboard::Mode) par1 );
+    QString str1 = obj->text ( (QClipboard::Mode) par1 );
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QCLIPBOARD_TEXT2 )
   {
     QString par1 = hb_parc(1);
     int par2 = hb_parni(2);
-    QString str1 = obj->text ( par1,  (QClipboard::Mode) par2 );
+    QString str1 = obj->text ( par1, (QClipboard::Mode) par2 );
     hb_retc( RQSTRING(str1) );
   }
 }

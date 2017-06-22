@@ -571,7 +571,7 @@ QFont font ( const char * className )
 */
 HB_FUNC_STATIC( QAPPLICATION_FONT3 )
 {
-  QFont * ptr = new QFont( QApplication::font (  (const char *) hb_parc(1) ) );
+  QFont * ptr = new QFont( QApplication::font ( (const char *) hb_parc(1) ) );
   _qt4xhb_createReturnClass ( ptr, "QFONT", true );
 }
 
@@ -622,7 +622,7 @@ bool isEffectEnabled ( Qt::UIEffect effect )
 HB_FUNC_STATIC( QAPPLICATION_ISEFFECTENABLED )
 {
   int par1 = hb_parni(1);
-  RBOOL( QApplication::isEffectEnabled (  (Qt::UIEffect) par1 ) );
+  RBOOL( QApplication::isEffectEnabled ( (Qt::UIEffect) par1 ) );
 }
 
 
@@ -737,7 +737,7 @@ QPalette palette ( const char * className )
 */
 HB_FUNC_STATIC( QAPPLICATION_PALETTE3 )
 {
-  QPalette * ptr = new QPalette( QApplication::palette (  (const char *) hb_parc(1) ) );
+  QPalette * ptr = new QPalette( QApplication::palette ( (const char *) hb_parc(1) ) );
   _qt4xhb_createReturnClass ( ptr, "QPALETTE", true );
 }
 
@@ -849,7 +849,7 @@ void setEffectEnabled ( Qt::UIEffect effect, bool enable = true )
 HB_FUNC_STATIC( QAPPLICATION_SETEFFECTENABLED )
 {
   int par1 = hb_parni(1);
-  QApplication::setEffectEnabled (  (Qt::UIEffect) par1, OPBOOL(2,true) );
+  QApplication::setEffectEnabled ( (Qt::UIEffect) par1, OPBOOL(2,true) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -859,7 +859,7 @@ void setFont ( const QFont & font, const char * className = 0 )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETFONT )
 {
-  QApplication::setFont ( *PQFONT(1),  (const char *) ISNIL(2)? 0 : hb_parc(2) );
+  QApplication::setFont ( *PQFONT(1), (const char *) ISNIL(2)? 0 : hb_parc(2) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -900,7 +900,7 @@ void setLayoutDirection ( Qt::LayoutDirection direction )
 HB_FUNC_STATIC( QAPPLICATION_SETLAYOUTDIRECTION )
 {
   int par1 = hb_parni(1);
-  QApplication::setLayoutDirection (  (Qt::LayoutDirection) par1 );
+  QApplication::setLayoutDirection ( (Qt::LayoutDirection) par1 );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -923,7 +923,7 @@ void setPalette ( const QPalette & palette, const char * className = 0 )
 HB_FUNC_STATIC( QAPPLICATION_SETPALETTE )
 {
   QPalette * par1 = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QApplication::setPalette ( *par1,  (const char *) ISNIL(2)? 0 : hb_parc(2) );
+  QApplication::setPalette ( *par1, (const char *) ISNIL(2)? 0 : hb_parc(2) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

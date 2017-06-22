@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETBORDERSTYLE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setBorderStyle (  (QTextFrameFormat::BorderStyle) par1 );
+    obj->setBorderStyle ( (QTextFrameFormat::BorderStyle) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETPAGEBREAKPOLICY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setPageBreakPolicy (  (QTextFormat::PageBreakFlags) par1 );
+    obj->setPageBreakPolicy ( (QTextFormat::PageBreakFlags) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETPOSITION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setPosition (  (QTextFrameFormat::Position) par1 );
+    obj->setPosition ( (QTextFrameFormat::Position) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

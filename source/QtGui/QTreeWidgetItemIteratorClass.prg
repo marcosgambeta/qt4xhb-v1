@@ -58,7 +58,7 @@ QTreeWidgetItemIterator ( QTreeWidget * widget, IteratorFlags flags = All )
 HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_NEW2 )
 {
   int par2 = ISNIL(2)? (int) QTreeWidgetItemIterator::All : hb_parni(2);
-  QTreeWidgetItemIterator * o = new QTreeWidgetItemIterator ( PQTREEWIDGET(1),  (QTreeWidgetItemIterator::IteratorFlags) par2 );
+  QTreeWidgetItemIterator * o = new QTreeWidgetItemIterator ( PQTREEWIDGET(1), (QTreeWidgetItemIterator::IteratorFlags) par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -69,7 +69,7 @@ QTreeWidgetItemIterator ( QTreeWidgetItem * item, IteratorFlags flags = All )
 HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_NEW3 )
 {
   int par2 = ISNIL(2)? (int) QTreeWidgetItemIterator::All : hb_parni(2);
-  QTreeWidgetItemIterator * o = new QTreeWidgetItemIterator ( PQTREEWIDGETITEM(1),  (QTreeWidgetItemIterator::IteratorFlags) par2 );
+  QTreeWidgetItemIterator * o = new QTreeWidgetItemIterator ( PQTREEWIDGETITEM(1), (QTreeWidgetItemIterator::IteratorFlags) par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

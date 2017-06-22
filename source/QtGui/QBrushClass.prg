@@ -88,7 +88,7 @@ QBrush ( Qt::BrushStyle style )
 */
 HB_FUNC_STATIC( QBRUSH_NEW2 )
 {
-  QBrush * o = new QBrush (  (Qt::BrushStyle) hb_parni(1) );
+  QBrush * o = new QBrush ( (Qt::BrushStyle) hb_parni(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QBRUSH_NEW3 )
 {
   QColor par1 = ISOBJECT(1)? *(QColor *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QColor(hb_parc(1));
   int par2 = ISNIL(2)? (int) Qt::SolidPattern : hb_parni(2);
-  QBrush * o = new QBrush ( par1,  (Qt::BrushStyle) par2 );
+  QBrush * o = new QBrush ( par1, (Qt::BrushStyle) par2 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QBRUSH_NEW4 )
 {
   int par1 = hb_parni(1);
   int par2 = ISNIL(2)? (int) Qt::SolidPattern : hb_parni(2);
-  QBrush * o = new QBrush (  (Qt::GlobalColor) par1,  (Qt::BrushStyle) par2 );
+  QBrush * o = new QBrush ( (Qt::GlobalColor) par1, (Qt::BrushStyle) par2 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -133,7 +133,7 @@ QBrush ( Qt::GlobalColor color, const QPixmap & pixmap )
 */
 HB_FUNC_STATIC( QBRUSH_NEW6 )
 {
-  QBrush * o = new QBrush (  (Qt::GlobalColor) hb_parni(1), *PQPIXMAP(2) );
+  QBrush * o = new QBrush ( (Qt::GlobalColor) hb_parni(1), *PQPIXMAP(2) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QBRUSH_SETCOLOR2 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setColor (  (Qt::GlobalColor) par1 );
+    obj->setColor ( (Qt::GlobalColor) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QBRUSH_SETSTYLE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setStyle (  (Qt::BrushStyle) par1 );
+    obj->setStyle ( (Qt::BrushStyle) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

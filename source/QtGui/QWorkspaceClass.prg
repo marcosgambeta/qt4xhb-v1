@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QWORKSPACE_ADDWINDOW )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-    QWidget * ptr = obj->addWindow ( PQWIDGET(1),  (Qt::WindowFlags) par2 );
+    QWidget * ptr = obj->addWindow ( PQWIDGET(1), (Qt::WindowFlags) par2 );
     _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QWORKSPACE_WINDOWLIST )
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QWorkspace::CreationOrder : hb_parni(1);
-    QWidgetList list = obj->windowList (  (QWorkspace::WindowOrder) par1 );
+    QWidgetList list = obj->windowList ( (QWorkspace::WindowOrder) par1 );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QWIDGET" );

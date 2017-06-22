@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_SETPRINTRANGE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setPrintRange (  (QAbstractPrintDialog::PrintRange) par1 );
+    obj->setPrintRange ( (QAbstractPrintDialog::PrintRange) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

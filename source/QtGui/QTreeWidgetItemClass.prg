@@ -653,7 +653,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETCHECKSTATE )
   QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setCheckState ( PINT(1),  (Qt::CheckState) hb_parni(2) );
+    obj->setCheckState ( PINT(1), (Qt::CheckState) hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -668,7 +668,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETCHILDINDICATORPOLICY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setChildIndicatorPolicy (  (QTreeWidgetItem::ChildIndicatorPolicy) par1 );
+    obj->setChildIndicatorPolicy ( (QTreeWidgetItem::ChildIndicatorPolicy) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -739,7 +739,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETFLAGS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setFlags (  (Qt::ItemFlags) par1 );
+    obj->setFlags ( (Qt::ItemFlags) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -922,7 +922,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SORTCHILDREN )
   QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->sortChildren ( PINT(1),  (Qt::SortOrder) hb_parni(2) );
+    obj->sortChildren ( PINT(1), (Qt::SortOrder) hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

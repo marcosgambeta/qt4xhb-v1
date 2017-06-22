@@ -53,7 +53,7 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_NEW )
   int par4 = hb_parni(4);
   int par5 = hb_parni(5);
   int par6 = ISNIL(6)? (int) QDragMoveEvent::DragMove : hb_parni(6);
-  QDragMoveEvent * o = new QDragMoveEvent ( *PQPOINT(1),  (Qt::DropActions) par2, par3,  (Qt::MouseButtons) par4,  (Qt::KeyboardModifiers) par5,  (QDragMoveEvent::Type) par6 );
+  QDragMoveEvent * o = new QDragMoveEvent ( *PQPOINT(1), (Qt::DropActions) par2, par3, (Qt::MouseButtons) par4, (Qt::KeyboardModifiers) par5, (QDragMoveEvent::Type) par6 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

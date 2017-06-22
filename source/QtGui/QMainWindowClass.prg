@@ -100,7 +100,7 @@ QMainWindow ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 HB_FUNC_STATIC( QMAINWINDOW_NEW )
 {
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-  QMainWindow * o = new QMainWindow ( OPQWIDGET(1,0),  (Qt::WindowFlags) par2 );
+  QMainWindow * o = new QMainWindow ( OPQWIDGET(1,0), (Qt::WindowFlags) par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ADDDOCKWIDGET1 )
   {
     int par1 = hb_parni(1);
     QDockWidget * par2 = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->addDockWidget (  (Qt::DockWidgetArea) par1, par2 );
+    obj->addDockWidget ( (Qt::DockWidgetArea) par1, par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ADDDOCKWIDGET2 )
   {
     int par1 = hb_parni(1);
     QDockWidget * par2 = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->addDockWidget (  (Qt::DockWidgetArea) par1, par2,  (Qt::Orientation) hb_parni(3) );
+    obj->addDockWidget ( (Qt::DockWidgetArea) par1, par2, (Qt::Orientation) hb_parni(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ADDTOOLBAR1 )
   {
     int par1 = hb_parni(1);
     QToolBar * par2 = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->addToolBar (  (Qt::ToolBarArea) par1, par2 );
+    obj->addToolBar ( (Qt::ToolBarArea) par1, par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ADDTOOLBARBREAK )
   if( obj )
   {
     int par1 = ISNIL(1)? (int) Qt::TopToolBarArea : hb_parni(1);
-    obj->addToolBarBreak (  (Qt::ToolBarArea) par1 );
+    obj->addToolBarBreak ( (Qt::ToolBarArea) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QMAINWINDOW_CORNER )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retni( (int) obj->corner (  (Qt::Corner) par1 ) );
+    hb_retni( (int) obj->corner ( (Qt::Corner) par1 ) );
   }
 }
 
@@ -539,7 +539,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETCORNER )
   {
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
-    obj->setCorner (  (Qt::Corner) par1,  (Qt::DockWidgetArea) par2 );
+    obj->setCorner ( (Qt::Corner) par1, (Qt::DockWidgetArea) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -554,7 +554,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETDOCKOPTIONS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setDockOptions (  (QMainWindow::DockOptions) par1 );
+    obj->setDockOptions ( (QMainWindow::DockOptions) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -642,7 +642,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETTABPOSITION )
   {
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
-    obj->setTabPosition (  (Qt::DockWidgetAreas) par1,  (QTabWidget::TabPosition) par2 );
+    obj->setTabPosition ( (Qt::DockWidgetAreas) par1, (QTabWidget::TabPosition) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -657,7 +657,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETTABSHAPE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setTabShape (  (QTabWidget::TabShape) par1 );
+    obj->setTabShape ( (QTabWidget::TabShape) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -672,7 +672,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETTOOLBUTTONSTYLE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setToolButtonStyle (  (Qt::ToolButtonStyle) par1 );
+    obj->setToolButtonStyle ( (Qt::ToolButtonStyle) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -689,7 +689,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SPLITDOCKWIDGET )
   {
     QDockWidget * par1 = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QDockWidget * par2 = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->splitDockWidget ( par1, par2,  (Qt::Orientation) hb_parni(3) );
+    obj->splitDockWidget ( par1, par2, (Qt::Orientation) hb_parni(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -718,7 +718,7 @@ HB_FUNC_STATIC( QMAINWINDOW_TABPOSITION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retni( (int) obj->tabPosition (  (Qt::DockWidgetArea) par1 ) );
+    hb_retni( (int) obj->tabPosition ( (Qt::DockWidgetArea) par1 ) );
   }
 }
 

@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_SETCHECKSTATE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setCheckState (  (Qt::CheckState) par1 );
+    obj->setCheckState ( (Qt::CheckState) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_SETFLAGS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setFlags (  (Qt::ItemFlags) par1 );
+    obj->setFlags ( (Qt::ItemFlags) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

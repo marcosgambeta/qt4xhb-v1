@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_STANDARDFORMAT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QTextFormat * ptr = new QTextFormat( obj->standardFormat (  (QInputContext::StandardFormat) par1 ) );
+    QTextFormat * ptr = new QTextFormat( obj->standardFormat ( (QInputContext::StandardFormat) par1 ) );
     _qt4xhb_createReturnClass ( ptr, "QTEXTFORMAT" );
   }
 }

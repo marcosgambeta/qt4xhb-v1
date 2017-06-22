@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETALIGNMENT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setAlignment (  (Qt::Alignment) par1 );
+    obj->setAlignment ( (Qt::Alignment) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETBUTTONSYMBOLS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setButtonSymbols (  (QAbstractSpinBox::ButtonSymbols) par1 );
+    obj->setButtonSymbols ( (QAbstractSpinBox::ButtonSymbols) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETCORRECTIONMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setCorrectionMode (  (QAbstractSpinBox::CorrectionMode) par1 );
+    obj->setCorrectionMode ( (QAbstractSpinBox::CorrectionMode) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -450,7 +450,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_INPUTMETHODQUERY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QVariant * ptr = new QVariant( obj->inputMethodQuery (  (Qt::InputMethodQuery) par1 ) );
+    QVariant * ptr = new QVariant( obj->inputMethodQuery ( (Qt::InputMethodQuery) par1 ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }

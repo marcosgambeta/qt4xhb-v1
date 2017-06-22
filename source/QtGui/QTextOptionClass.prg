@@ -71,7 +71,7 @@ QTextOption ( Qt::Alignment alignment )
 */
 HB_FUNC_STATIC( QTEXTOPTION_NEW2 )
 {
-  QTextOption * o = new QTextOption (  (Qt::Alignment) hb_parni(1) );
+  QTextOption * o = new QTextOption ( (Qt::Alignment) hb_parni(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QTEXTOPTION_SETALIGNMENT )
   QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setAlignment (  (Qt::Alignment) hb_parni(1) );
+    obj->setAlignment ( (Qt::Alignment) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QTEXTOPTION_SETFLAGS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setFlags (  (QTextOption::Flags) par1 );
+    obj->setFlags ( (QTextOption::Flags) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QTEXTOPTION_SETTEXTDIRECTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setTextDirection (  (Qt::LayoutDirection) par1 );
+    obj->setTextDirection ( (Qt::LayoutDirection) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QTEXTOPTION_SETWRAPMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setWrapMode (  (QTextOption::WrapMode) par1 );
+    obj->setWrapMode ( (QTextOption::WrapMode) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

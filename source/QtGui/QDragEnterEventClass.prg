@@ -42,7 +42,7 @@ HB_FUNC_STATIC( QDRAGENTEREVENT_NEW )
   const QMimeData * par3 = (const QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par4 = hb_parni(4);
   int par5 = hb_parni(5);
-  QDragEnterEvent * o = new QDragEnterEvent ( *PQPOINT(1),  (Qt::DropActions) par2, par3,  (Qt::MouseButtons) par4,  (Qt::KeyboardModifiers) par5 );
+  QDragEnterEvent * o = new QDragEnterEvent ( *PQPOINT(1), (Qt::DropActions) par2, par3, (Qt::MouseButtons) par4, (Qt::KeyboardModifiers) par5 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

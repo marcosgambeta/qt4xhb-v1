@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QMENUBAR_ADDACTION2 )
   if( obj )
   {
     const QObject * par2 = (const QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QAction * ptr = obj->addAction ( PQSTRING(1), par2,  (const char *) hb_parc(3) );
+    QAction * ptr = obj->addAction ( PQSTRING(1), par2, (const char *) hb_parc(3) );
     _qt4xhb_createReturnClass ( ptr, "QACTION" );
   }
 }

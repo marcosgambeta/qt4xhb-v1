@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION4 )
   if( obj )
   {
     const QObject * par2 = (const QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QAction * ptr = obj->addAction ( PQSTRING(1), par2,  (const char *) hb_parc(3) );
+    QAction * ptr = obj->addAction ( PQSTRING(1), par2, (const char *) hb_parc(3) );
     _qt4xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION5 )
   {
     QIcon par1 = ISOBJECT(1)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(1));
     const QObject * par3 = (const QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QAction * ptr = obj->addAction ( par1, PQSTRING(2), par3,  (const char *) hb_parc(4) );
+    QAction * ptr = obj->addAction ( par1, PQSTRING(2), par3, (const char *) hb_parc(4) );
     _qt4xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QTOOLBAR_ISAREAALLOWED )
   if( obj )
   {
     int par1 = hb_parni(1);
-    RBOOL( obj->isAreaAllowed (  (Qt::ToolBarArea) par1 ) );
+    RBOOL( obj->isAreaAllowed ( (Qt::ToolBarArea) par1 ) );
   }
 }
 
@@ -454,7 +454,7 @@ HB_FUNC_STATIC( QTOOLBAR_SETALLOWEDAREAS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setAllowedAreas (  (Qt::ToolBarAreas) par1 );
+    obj->setAllowedAreas ( (Qt::ToolBarAreas) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -496,7 +496,7 @@ HB_FUNC_STATIC( QTOOLBAR_SETORIENTATION )
   QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setOrientation (  (Qt::Orientation) hb_parni(1) );
+    obj->setOrientation ( (Qt::Orientation) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -566,7 +566,7 @@ HB_FUNC_STATIC( QTOOLBAR_SETTOOLBUTTONSTYLE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setToolButtonStyle (  (Qt::ToolButtonStyle) par1 );
+    obj->setToolButtonStyle ( (Qt::ToolButtonStyle) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

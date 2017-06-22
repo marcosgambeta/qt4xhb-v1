@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setMode (  (QLCDNumber::Mode) par1 );
+    obj->setMode ( (QLCDNumber::Mode) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETSEGMENTSTYLE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setSegmentStyle (  (QLCDNumber::SegmentStyle) par1 );
+    obj->setSegmentStyle ( (QLCDNumber::SegmentStyle) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

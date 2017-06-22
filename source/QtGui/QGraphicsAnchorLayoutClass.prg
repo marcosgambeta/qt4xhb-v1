@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ADDANCHOR )
     int par2 = hb_parni(2);
     QGraphicsLayoutItem * par3 = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par4 = hb_parni(4);
-    QGraphicsAnchor * ptr = obj->addAnchor ( par1,  (Qt::AnchorPoint) par2, par3,  (Qt::AnchorPoint) par4 );
+    QGraphicsAnchor * ptr = obj->addAnchor ( par1, (Qt::AnchorPoint) par2, par3, (Qt::AnchorPoint) par4 );
     _qt4xhb_createReturnClass ( ptr, "QGRAPHICSANCHOR" );
   }
 }
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ADDANCHORS )
     QGraphicsLayoutItem * par1 = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QGraphicsLayoutItem * par2 = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par3 = ISNIL(3)? (int) Qt::Horizontal | Qt::Vertical : hb_parni(3);
-    obj->addAnchors ( par1, par2,  (Qt::Orientations) par3 );
+    obj->addAnchors ( par1, par2, (Qt::Orientations) par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ADDCORNERANCHORS )
     int par2 = hb_parni(2);
     QGraphicsLayoutItem * par3 = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par4 = hb_parni(4);
-    obj->addCornerAnchors ( par1,  (Qt::Corner) par2, par3,  (Qt::Corner) par4 );
+    obj->addCornerAnchors ( par1, (Qt::Corner) par2, par3, (Qt::Corner) par4 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ANCHOR )
     int par2 = hb_parni(2);
     QGraphicsLayoutItem * par3 = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par4 = hb_parni(4);
-    QGraphicsAnchor * ptr = obj->anchor ( par1,  (Qt::AnchorPoint) par2, par3,  (Qt::AnchorPoint) par4 );
+    QGraphicsAnchor * ptr = obj->anchor ( par1, (Qt::AnchorPoint) par2, par3, (Qt::AnchorPoint) par4 );
     _qt4xhb_createReturnClass ( ptr, "QGRAPHICSANCHOR" );
   }
 }

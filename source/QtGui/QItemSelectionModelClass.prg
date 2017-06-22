@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECT1 )
   if( obj )
   {
     int par2 = hb_parni(2);
-    obj->select ( *PQMODELINDEX(1),  (QItemSelectionModel::SelectionFlags) par2 );
+    obj->select ( *PQMODELINDEX(1), (QItemSelectionModel::SelectionFlags) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECT2 )
   {
     QItemSelection * par1 = (QItemSelection *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
-    obj->select ( *par1,  (QItemSelectionModel::SelectionFlags) par2 );
+    obj->select ( *par1, (QItemSelectionModel::SelectionFlags) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SETCURRENTINDEX )
   if( obj )
   {
     int par2 = hb_parni(2);
-    obj->setCurrentIndex ( *PQMODELINDEX(1),  (QItemSelectionModel::SelectionFlags) par2 );
+    obj->setCurrentIndex ( *PQMODELINDEX(1), (QItemSelectionModel::SelectionFlags) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

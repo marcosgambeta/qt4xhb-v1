@@ -108,7 +108,7 @@ QPlatformWindowFormat ( FormatOptions options )
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_NEW2 )
 {
   int par1 = hb_parni(1);
-  QPlatformWindowFormat * o = new QPlatformWindowFormat (  (QPlatformWindowFormat::FormatOptions) par1 );
+  QPlatformWindowFormat * o = new QPlatformWindowFormat ( (QPlatformWindowFormat::FormatOptions) par1 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -507,7 +507,7 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setOption (  (QPlatformWindowFormat::FormatOptions) par1 );
+    obj->setOption ( (QPlatformWindowFormat::FormatOptions) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -649,7 +649,7 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETWINDOWAPI )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setWindowApi (  (QPlatformWindowFormat::WindowApi) par1 );
+    obj->setWindowApi ( (QPlatformWindowFormat::WindowApi) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -744,7 +744,7 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_TESTOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    RBOOL( obj->testOption (  (QPlatformWindowFormat::FormatOptions) par1 ) );
+    RBOOL( obj->testOption ( (QPlatformWindowFormat::FormatOptions) par1 ) );
   }
 }
 

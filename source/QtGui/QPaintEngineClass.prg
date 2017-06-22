@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWIMAGE )
   {
     QImage * par2 = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par4 = ISNIL(4)? (int) Qt::AutoColor : hb_parni(4);
-    obj->drawImage ( *PQRECTF(1), *par2, *PQRECTF(3),  (Qt::ImageConversionFlags) par4 );
+    obj->drawImage ( *PQRECTF(1), *par2, *PQRECTF(3), (Qt::ImageConversionFlags) par4 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QPAINTENGINE_HASFEATURE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    RBOOL( obj->hasFeature (  (QPaintEngine::PaintEngineFeatures) par1 ) );
+    RBOOL( obj->hasFeature ( (QPaintEngine::PaintEngineFeatures) par1 ) );
   }
 }
 

@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QFONT_SETCAPITALIZATION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setCapitalization (  (QFont::Capitalization) par1 );
+    obj->setCapitalization ( (QFont::Capitalization) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -581,7 +581,7 @@ HB_FUNC_STATIC( QFONT_SETLETTERSPACING )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setLetterSpacing (  (QFont::SpacingType) par1, PQREAL(2) );
+    obj->setLetterSpacing ( (QFont::SpacingType) par1, PQREAL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -708,7 +708,7 @@ HB_FUNC_STATIC( QFONT_SETSTYLE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setStyle (  (QFont::Style) par1 );
+    obj->setStyle ( (QFont::Style) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -724,7 +724,7 @@ HB_FUNC_STATIC( QFONT_SETSTYLEHINT )
   {
     int par1 = hb_parni(1);
     int par2 = ISNIL(2)? (int) QFont::PreferDefault : hb_parni(2);
-    obj->setStyleHint (  (QFont::StyleHint) par1,  (QFont::StyleStrategy) par2 );
+    obj->setStyleHint ( (QFont::StyleHint) par1, (QFont::StyleStrategy) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -739,7 +739,7 @@ HB_FUNC_STATIC( QFONT_SETSTYLESTRATEGY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setStyleStrategy (  (QFont::StyleStrategy) par1 );
+    obj->setStyleStrategy ( (QFont::StyleStrategy) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_OPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QVariant * ptr = new QVariant( obj->option (  (QImageIOHandler::ImageOption) par1 ) );
+    QVariant * ptr = new QVariant( obj->option ( (QImageIOHandler::ImageOption) par1 ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_SETOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setOption (  (QImageIOHandler::ImageOption) par1, *PQVARIANT(2) );
+    obj->setOption ( (QImageIOHandler::ImageOption) par1, *PQVARIANT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_SUPPORTSOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    RBOOL( obj->supportsOption (  (QImageIOHandler::ImageOption) par1 ) );
+    RBOOL( obj->supportsOption ( (QImageIOHandler::ImageOption) par1 ) );
   }
 }
 

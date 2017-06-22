@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QLAYOUT_SETALIGNMENT1 )
   if( obj )
   {
     int par2 = hb_parni(2);
-    RBOOL( obj->setAlignment ( PQWIDGET(1),  (Qt::Alignment) par2 ) );
+    RBOOL( obj->setAlignment ( PQWIDGET(1), (Qt::Alignment) par2 ) );
   }
 }
 
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QLAYOUT_SETALIGNMENT2 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setAlignment (  (Qt::Alignment) par1 );
+    obj->setAlignment ( (Qt::Alignment) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QLAYOUT_SETALIGNMENT3 )
   if( obj )
   {
     int par2 = hb_parni(2);
-    RBOOL( obj->setAlignment ( PQLAYOUT(1),  (Qt::Alignment) par2 ) );
+    RBOOL( obj->setAlignment ( PQLAYOUT(1), (Qt::Alignment) par2 ) );
   }
 }
 
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QLAYOUT_SETSIZECONSTRAINT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setSizeConstraint (  (QLayout::SizeConstraint) par1 );
+    obj->setSizeConstraint ( (QLayout::SizeConstraint) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

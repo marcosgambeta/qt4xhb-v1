@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_OPEN2 )
   QColorDialog * obj = (QColorDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->open ( PQOBJECT(1),  (const char *) hb_parc(2) );
+    obj->open ( PQOBJECT(1), (const char *) hb_parc(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_SETOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setOption (  (QColorDialog::ColorDialogOption) par1, OPBOOL(2,true) );
+    obj->setOption ( (QColorDialog::ColorDialogOption) par1, OPBOOL(2,true) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_SETOPTIONS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setOptions (  (QColorDialog::ColorDialogOptions) par1 );
+    obj->setOptions ( (QColorDialog::ColorDialogOptions) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_TESTOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    RBOOL( obj->testOption (  (QColorDialog::ColorDialogOption) par1 ) );
+    RBOOL( obj->testOption ( (QColorDialog::ColorDialogOption) par1 ) );
   }
 }
 
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_GETCOLOR1 )
 {
   QColor par1 = ISOBJECT(1)? *(QColor *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QColor(hb_parc(1));
   int par4 = ISNIL(4)? (int) 0 : hb_parni(4);
-  QColor * ptr = new QColor( QColorDialog::getColor ( par1, PQWIDGET(2), PQSTRING(3),  (QColorDialog::ColorDialogOptions) par4 ) );
+  QColor * ptr = new QColor( QColorDialog::getColor ( par1, PQWIDGET(2), PQSTRING(3), (QColorDialog::ColorDialogOptions) par4 ) );
   _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
 }
 

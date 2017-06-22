@@ -69,7 +69,7 @@ QShortcut(const QKeySequence & key, QWidget * parent, const char * member = 0, c
 HB_FUNC_STATIC( QSHORTCUT_NEW2 )
 {
   int par5 = ISNIL(5)? (int) Qt::WindowShortcut : hb_parni(5);
-  QShortcut * o = new QShortcut ( *PQKEYSEQUENCE(1), PQWIDGET(2),  (const char *) ISNIL(3)? 0 : hb_parc(3),  (const char *) ISNIL(4)? 0 : hb_parc(4),  (Qt::ShortcutContext) par5 );
+  QShortcut * o = new QShortcut ( *PQKEYSEQUENCE(1), PQWIDGET(2), (const char *) ISNIL(3)? 0 : hb_parc(3), (const char *) ISNIL(4)? 0 : hb_parc(4), (Qt::ShortcutContext) par5 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QSHORTCUT_SETCONTEXT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setContext (  (Qt::ShortcutContext) par1 );
+    obj->setContext ( (Qt::ShortcutContext) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

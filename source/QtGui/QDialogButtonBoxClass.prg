@@ -75,7 +75,7 @@ QDialogButtonBox ( Qt::Orientation orientation, QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_NEW2 )
 {
-  QDialogButtonBox * o = new QDialogButtonBox (  (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
+  QDialogButtonBox * o = new QDialogButtonBox ( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_NEW3 )
 {
   int par1 = hb_parni(1);
   int par2 = ISNIL(2)? (int) Qt::Horizontal : hb_parni(2);
-  QDialogButtonBox * o = new QDialogButtonBox (  (QDialogButtonBox::StandardButtons) par1,  (Qt::Orientation) par2, OPQWIDGET(3,0) );
+  QDialogButtonBox * o = new QDialogButtonBox ( (QDialogButtonBox::StandardButtons) par1, (Qt::Orientation) par2, OPQWIDGET(3,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ADDBUTTON1 )
   {
     QAbstractButton * par1 = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
-    obj->addButton ( par1,  (QDialogButtonBox::ButtonRole) par2 );
+    obj->addButton ( par1, (QDialogButtonBox::ButtonRole) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ADDBUTTON2 )
   if( obj )
   {
     int par2 = hb_parni(2);
-    QPushButton * ptr = obj->addButton ( PQSTRING(1),  (QDialogButtonBox::ButtonRole) par2 );
+    QPushButton * ptr = obj->addButton ( PQSTRING(1), (QDialogButtonBox::ButtonRole) par2 );
     _qt4xhb_createReturnClass ( ptr, "QPUSHBUTTON" );
   }
 }
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ADDBUTTON3 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QPushButton * ptr = obj->addButton (  (QDialogButtonBox::StandardButton) par1 );
+    QPushButton * ptr = obj->addButton ( (QDialogButtonBox::StandardButton) par1 );
     _qt4xhb_createReturnClass ( ptr, "QPUSHBUTTON" );
   }
 }
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_BUTTON )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QPushButton * ptr = obj->button (  (QDialogButtonBox::StandardButton) par1 );
+    QPushButton * ptr = obj->button ( (QDialogButtonBox::StandardButton) par1 );
     _qt4xhb_createReturnClass ( ptr, "QPUSHBUTTON" );
   }
 }
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_SETORIENTATION )
   QDialogButtonBox * obj = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setOrientation (  (Qt::Orientation) hb_parni(1) );
+    obj->setOrientation ( (Qt::Orientation) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_SETSTANDARDBUTTONS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setStandardButtons (  (QDialogButtonBox::StandardButtons) par1 );
+    obj->setStandardButtons ( (QDialogButtonBox::StandardButtons) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

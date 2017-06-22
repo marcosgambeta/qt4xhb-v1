@@ -108,7 +108,7 @@ QGraphicsWidget ( QGraphicsItem * parent = 0, Qt::WindowFlags wFlags = 0 )
 HB_FUNC_STATIC( QGRAPHICSWIDGET_NEW )
 {
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-  QGraphicsWidget * o = new QGraphicsWidget ( OPQGRAPHICSITEM(1,0),  (Qt::WindowFlags) par2 );
+  QGraphicsWidget * o = new QGraphicsWidget ( OPQGRAPHICSITEM(1,0), (Qt::WindowFlags) par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_GRABSHORTCUT )
   {
     QKeySequence * par1 = (QKeySequence *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = ISNIL(2)? (int) Qt::WindowShortcut : hb_parni(2);
-    RINT( obj->grabShortcut ( *par1,  (Qt::ShortcutContext) par2 ) );
+    RINT( obj->grabShortcut ( *par1, (Qt::ShortcutContext) par2 ) );
   }
 }
 
@@ -511,7 +511,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETATTRIBUTE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setAttribute (  (Qt::WidgetAttribute) par1, OPBOOL(2,true) );
+    obj->setAttribute ( (Qt::WidgetAttribute) par1, OPBOOL(2,true) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -554,7 +554,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETFOCUSPOLICY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setFocusPolicy (  (Qt::FocusPolicy) par1 );
+    obj->setFocusPolicy ( (Qt::FocusPolicy) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -612,7 +612,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETLAYOUTDIRECTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setLayoutDirection (  (Qt::LayoutDirection) par1 );
+    obj->setLayoutDirection ( (Qt::LayoutDirection) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -685,7 +685,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETWINDOWFLAGS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setWindowFlags (  (Qt::WindowFlags) par1 );
+    obj->setWindowFlags ( (Qt::WindowFlags) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -756,7 +756,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_TESTATTRIBUTE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    RBOOL( obj->testAttribute (  (Qt::WidgetAttribute) par1 ) );
+    RBOOL( obj->testAttribute ( (Qt::WidgetAttribute) par1 ) );
   }
 }
 

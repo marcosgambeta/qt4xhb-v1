@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QTREEWIDGET_FINDITEMS )
   if( obj )
   {
     int par2 = hb_parni(2);
-    QList<QTreeWidgetItem *> list = obj->findItems ( PQSTRING(1),  (Qt::MatchFlags) par2, OPINT(3,0) );
+    QList<QTreeWidgetItem *> list = obj->findItems ( PQSTRING(1), (Qt::MatchFlags) par2, OPINT(3,0) );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QTREEWIDGETITEM" );
@@ -581,7 +581,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SETCURRENTITEM3 )
     QTreeWidgetItem * par1 = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
     int par3 = hb_parni(3);
-    obj->setCurrentItem ( par1, par2,  (QItemSelectionModel::SelectionFlags) par3 );
+    obj->setCurrentItem ( par1, par2, (QItemSelectionModel::SelectionFlags) par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -702,7 +702,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SORTITEMS )
   QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->sortItems ( PINT(1),  (Qt::SortOrder) hb_parni(2) );
+    obj->sortItems ( PINT(1), (Qt::SortOrder) hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -834,7 +834,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SCROLLTOITEM )
   {
     const QTreeWidgetItem * par1 = (const QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = ISNIL(2)? (int) QAbstractItemView::EnsureVisible : hb_parni(2);
-    obj->scrollToItem ( par1,  (QAbstractItemView::ScrollHint) par2 );
+    obj->scrollToItem ( par1, (QAbstractItemView::ScrollHint) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

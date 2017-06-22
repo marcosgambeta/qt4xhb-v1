@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QITEMSELECTION_MERGE )
   {
     QItemSelection * par1 = (QItemSelection *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
-    obj->merge ( *par1,  (QItemSelectionModel::SelectionFlags) par2 );
+    obj->merge ( *par1, (QItemSelectionModel::SelectionFlags) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

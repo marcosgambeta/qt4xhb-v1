@@ -50,7 +50,7 @@ QString displayName ( StandardLocation type )
 HB_FUNC_STATIC( QDESKTOPSERVICES_DISPLAYNAME )
 {
   int par1 = hb_parni(1);
-  QString str1 = QDesktopServices::displayName (  (QDesktopServices::StandardLocation) par1 );
+  QString str1 = QDesktopServices::displayName ( (QDesktopServices::StandardLocation) par1 );
   hb_retc( RQSTRING(str1) );
 }
 
@@ -69,7 +69,7 @@ void setUrlHandler ( const QString & scheme, QObject * receiver, const char * me
 */
 HB_FUNC_STATIC( QDESKTOPSERVICES_SETURLHANDLER )
 {
-  QDesktopServices::setUrlHandler ( PQSTRING(1), PQOBJECT(2),  (const char *) hb_parc(3) );
+  QDesktopServices::setUrlHandler ( PQSTRING(1), PQOBJECT(2), (const char *) hb_parc(3) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -80,7 +80,7 @@ QString storageLocation ( StandardLocation type )
 HB_FUNC_STATIC( QDESKTOPSERVICES_STORAGELOCATION )
 {
   int par1 = hb_parni(1);
-  QString str1 = QDesktopServices::storageLocation (  (QDesktopServices::StandardLocation) par1 );
+  QString str1 = QDesktopServices::storageLocation ( (QDesktopServices::StandardLocation) par1 );
   hb_retc( RQSTRING(str1) );
 }
 

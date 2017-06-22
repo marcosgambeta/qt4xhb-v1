@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_ACCEPT3 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->accept (  (Qt::GestureType) par1 );
+    obj->accept ( (Qt::GestureType) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_GESTURE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QGesture * ptr = obj->gesture (  (Qt::GestureType) par1 );
+    QGesture * ptr = obj->gesture ( (Qt::GestureType) par1 );
     _qt4xhb_createReturnClass ( ptr, "QGESTURE" );
   }
 }
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_IGNORE3 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->ignore (  (Qt::GestureType) par1 );
+    obj->ignore ( (Qt::GestureType) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_ISACCEPTED3 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    RBOOL( obj->isAccepted (  (Qt::GestureType) par1 ) );
+    RBOOL( obj->isAccepted ( (Qt::GestureType) par1 ) );
   }
 }
 
@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_SETACCEPTED3 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setAccepted (  (Qt::GestureType) par1, PBOOL(2) );
+    obj->setAccepted ( (Qt::GestureType) par1, PBOOL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

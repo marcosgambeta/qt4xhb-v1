@@ -62,7 +62,7 @@ QDockWidget ( const QString & title, QWidget * parent = 0, Qt::WindowFlags flags
 HB_FUNC_STATIC( QDOCKWIDGET_NEW1 )
 {
   int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-  QDockWidget * o = new QDockWidget ( PQSTRING(1), OPQWIDGET(2,0),  (Qt::WindowFlags) par3 );
+  QDockWidget * o = new QDockWidget ( PQSTRING(1), OPQWIDGET(2,0), (Qt::WindowFlags) par3 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -73,7 +73,7 @@ QDockWidget ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 HB_FUNC_STATIC( QDOCKWIDGET_NEW2 )
 {
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-  QDockWidget * o = new QDockWidget ( OPQWIDGET(1,0),  (Qt::WindowFlags) par2 );
+  QDockWidget * o = new QDockWidget ( OPQWIDGET(1,0), (Qt::WindowFlags) par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ISAREAALLOWED )
   if( obj )
   {
     int par1 = hb_parni(1);
-    RBOOL( obj->isAreaAllowed (  (Qt::DockWidgetArea) par1 ) );
+    RBOOL( obj->isAreaAllowed ( (Qt::DockWidgetArea) par1 ) );
   }
 }
 
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_SETALLOWEDAREAS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setAllowedAreas (  (Qt::DockWidgetAreas) par1 );
+    obj->setAllowedAreas ( (Qt::DockWidgetAreas) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_SETFEATURES )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setFeatures (  (QDockWidget::DockWidgetFeatures) par1 );
+    obj->setFeatures ( (QDockWidget::DockWidgetFeatures) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -66,7 +66,7 @@ QPrintPreviewWidget ( QPrinter * printer, QWidget * parent = 0, Qt::WindowFlags 
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_NEW1 )
 {
   int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-  QPrintPreviewWidget * o = new QPrintPreviewWidget ( PQPRINTER(1), OPQWIDGET(2,0),  (Qt::WindowFlags) par3 );
+  QPrintPreviewWidget * o = new QPrintPreviewWidget ( PQPRINTER(1), OPQWIDGET(2,0), (Qt::WindowFlags) par3 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -77,7 +77,7 @@ QPrintPreviewWidget ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_NEW2 )
 {
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-  QPrintPreviewWidget * o = new QPrintPreviewWidget ( OPQWIDGET(1,0),  (Qt::WindowFlags) par2 );
+  QPrintPreviewWidget * o = new QPrintPreviewWidget ( OPQWIDGET(1,0), (Qt::WindowFlags) par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETORIENTATION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setOrientation (  (QPrinter::Orientation) par1 );
+    obj->setOrientation ( (QPrinter::Orientation) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETVIEWMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setViewMode (  (QPrintPreviewWidget::ViewMode) par1 );
+    obj->setViewMode ( (QPrintPreviewWidget::ViewMode) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETZOOMMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setZoomMode (  (QPrintPreviewWidget::ZoomMode) par1 );
+    obj->setZoomMode ( (QPrintPreviewWidget::ZoomMode) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -618,7 +618,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETALIGNMENT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setAlignment (  (Qt::Alignment) par1 );
+    obj->setAlignment ( (Qt::Alignment) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -676,7 +676,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETECHOMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setEchoMode (  (QLineEdit::EchoMode) par1 );
+    obj->setEchoMode ( (QLineEdit::EchoMode) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -917,7 +917,7 @@ HB_FUNC_STATIC( QLINEEDIT_INPUTMETHODQUERY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QVariant * ptr = new QVariant( obj->inputMethodQuery (  (Qt::InputMethodQuery) par1 ) );
+    QVariant * ptr = new QVariant( obj->inputMethodQuery ( (Qt::InputMethodQuery) par1 ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }

@@ -54,7 +54,7 @@ QKeyEventTransition ( QObject * object, QEvent::Type type, int key, QState * sou
 */
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_NEW2 )
 {
-  QKeyEventTransition * o = new QKeyEventTransition ( PQOBJECT(1),  (QEvent::Type) hb_parni(2), PINT(3), OPQSTATE(4,0) );
+  QKeyEventTransition * o = new QKeyEventTransition ( PQOBJECT(1), (QEvent::Type) hb_parni(2), PINT(3), OPQSTATE(4,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_SETMODIFIERMASK )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setModifierMask (  (Qt::KeyboardModifiers) par1 );
+    obj->setModifierMask ( (Qt::KeyboardModifiers) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

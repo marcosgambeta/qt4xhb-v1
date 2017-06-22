@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QICON_ACTUALSIZE )
   {
     int par2 = ISNIL(2)? (int) QIcon::Normal : hb_parni(2);
     int par3 = ISNIL(3)? (int) QIcon::Off : hb_parni(3);
-    QSize * ptr = new QSize( obj->actualSize ( *PQSIZE(1),  (QIcon::Mode) par2,  (QIcon::State) par3 ) );
+    QSize * ptr = new QSize( obj->actualSize ( *PQSIZE(1), (QIcon::Mode) par2, (QIcon::State) par3 ) );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QICON_ADDFILE )
     QSize par2 = ISNIL(2)? QSize() : *(QSize *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par3 = ISNIL(3)? (int) QIcon::Normal : hb_parni(3);
     int par4 = ISNIL(4)? (int) QIcon::Off : hb_parni(4);
-    obj->addFile ( PQSTRING(1), par2,  (QIcon::Mode) par3,  (QIcon::State) par4 );
+    obj->addFile ( PQSTRING(1), par2, (QIcon::Mode) par3, (QIcon::State) par4 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QICON_ADDPIXMAP )
   {
     int par2 = ISNIL(2)? (int) QIcon::Normal : hb_parni(2);
     int par3 = ISNIL(3)? (int) QIcon::Off : hb_parni(3);
-    obj->addPixmap ( *PQPIXMAP(1),  (QIcon::Mode) par2,  (QIcon::State) par3 );
+    obj->addPixmap ( *PQPIXMAP(1), (QIcon::Mode) par2, (QIcon::State) par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QICON_AVAILABLESIZES )
   {
     int par1 = ISNIL(1)? (int) QIcon::Normal : hb_parni(1);
     int par2 = ISNIL(2)? (int) QIcon::Off : hb_parni(2);
-    QList<QSize> list = obj->availableSizes (  (QIcon::Mode) par1,  (QIcon::State) par2 );
+    QList<QSize> list = obj->availableSizes ( (QIcon::Mode) par1, (QIcon::State) par2 );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QSIZE" );
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QICON_PAINT1 )
     int par3 = ISNIL(3)? (int) Qt::AlignCenter : hb_parni(3);
     int par4 = ISNIL(4)? (int) QIcon::Normal : hb_parni(4);
     int par5 = ISNIL(5)? (int) QIcon::Off : hb_parni(5);
-    obj->paint ( PQPAINTER(1), *PQRECT(2),  (Qt::Alignment) par3,  (QIcon::Mode) par4,  (QIcon::State) par5 );
+    obj->paint ( PQPAINTER(1), *PQRECT(2), (Qt::Alignment) par3, (QIcon::Mode) par4, (QIcon::State) par5 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QICON_PAINT2 )
     int par6 = ISNIL(6)? (int) Qt::AlignCenter : hb_parni(6);
     int par7 = ISNIL(7)? (int) QIcon::Normal : hb_parni(7);
     int par8 = ISNIL(8)? (int) QIcon::Off : hb_parni(8);
-    obj->paint ( PQPAINTER(1), par2, par3, par4, par5,  (Qt::Alignment) par6,  (QIcon::Mode) par7,  (QIcon::State) par8 );
+    obj->paint ( PQPAINTER(1), par2, par3, par4, par5, (Qt::Alignment) par6, (QIcon::Mode) par7, (QIcon::State) par8 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QICON_PIXMAP1 )
   {
     int par2 = ISNIL(2)? (int) QIcon::Normal : hb_parni(2);
     int par3 = ISNIL(3)? (int) QIcon::Off : hb_parni(3);
-    QPixmap * ptr = new QPixmap( obj->pixmap ( *PQSIZE(1),  (QIcon::Mode) par2,  (QIcon::State) par3 ) );
+    QPixmap * ptr = new QPixmap( obj->pixmap ( *PQSIZE(1), (QIcon::Mode) par2, (QIcon::State) par3 ) );
     _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QICON_PIXMAP2 )
   {
     int par3 = ISNIL(3)? (int) QIcon::Normal : hb_parni(3);
     int par4 = ISNIL(4)? (int) QIcon::Off : hb_parni(4);
-    QPixmap * ptr = new QPixmap( obj->pixmap ( PINT(1), PINT(2),  (QIcon::Mode) par3,  (QIcon::State) par4 ) );
+    QPixmap * ptr = new QPixmap( obj->pixmap ( PINT(1), PINT(2), (QIcon::Mode) par3, (QIcon::State) par4 ) );
     _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QICON_PIXMAP3 )
   {
     int par2 = ISNIL(2)? (int) QIcon::Normal : hb_parni(2);
     int par3 = ISNIL(3)? (int) QIcon::Off : hb_parni(3);
-    QPixmap * ptr = new QPixmap( obj->pixmap ( PINT(1),  (QIcon::Mode) par2,  (QIcon::State) par3 ) );
+    QPixmap * ptr = new QPixmap( obj->pixmap ( PINT(1), (QIcon::Mode) par2, (QIcon::State) par3 ) );
     _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }

@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_SUPPORTSOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    RBOOL( obj->supportsOption (  (QImageIOHandler::ImageOption) par1 ) );
+    RBOOL( obj->supportsOption ( (QImageIOHandler::ImageOption) par1 ) );
   }
 }
 

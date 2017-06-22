@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QFILEOPENEVENT_OPENFILE )
   {
     QFile * par1 = (QFile *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
-    RBOOL( obj->openFile ( *par1,  (QIODevice::OpenMode) par2 ) );
+    RBOOL( obj->openFile ( *par1, (QIODevice::OpenMode) par2 ) );
   }
 }
 

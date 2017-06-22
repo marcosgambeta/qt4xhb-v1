@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QACTION_ACTIVATE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->activate (  (QAction::ActionEvent) par1 );
+    obj->activate ( (QAction::ActionEvent) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -633,7 +633,7 @@ HB_FUNC_STATIC( QACTION_SETMENUROLE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setMenuRole (  (QAction::MenuRole) par1 );
+    obj->setMenuRole ( (QAction::MenuRole) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -648,7 +648,7 @@ HB_FUNC_STATIC( QACTION_SETPRIORITY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setPriority (  (QAction::Priority) par1 );
+    obj->setPriority ( (QAction::Priority) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -692,7 +692,7 @@ HB_FUNC_STATIC( QACTION_SETSHORTCUTCONTEXT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setShortcutContext (  (Qt::ShortcutContext) par1 );
+    obj->setShortcutContext ( (Qt::ShortcutContext) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -729,7 +729,7 @@ HB_FUNC_STATIC( QACTION_SETSHORTCUTS2 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setShortcuts (  (QKeySequence::StandardKey) par1 );
+    obj->setShortcuts ( (QKeySequence::StandardKey) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -759,7 +759,7 @@ HB_FUNC_STATIC( QACTION_SETSOFTKEYROLE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setSoftKeyRole (  (QAction::SoftKeyRole) par1 );
+    obj->setSoftKeyRole ( (QAction::SoftKeyRole) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

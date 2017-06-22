@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_SET3 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->set (  (Qt::CursorShape) par1 );
+    obj->set ( (Qt::CursorShape) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

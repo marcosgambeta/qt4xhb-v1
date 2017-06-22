@@ -61,7 +61,7 @@ QTabletEvent(Type t, const QPoint &pos, const QPoint &globalPos, const QPointF &
 HB_FUNC_STATIC( QTABLETEVENT_NEW )
 {
   int par13 = hb_parni(13);
-  QTabletEvent * o = new QTabletEvent (  (QEvent::Type) hb_parni(1), *PQPOINT(2), *PQPOINT(3), *PQPOINTF(4), PINT(5), PINT(6), PQREAL(7), PINT(8), PINT(9), PQREAL(10), PQREAL(11), PINT(12),  (Qt::KeyboardModifiers) par13, PQINT64(14) );
+  QTabletEvent * o = new QTabletEvent ( (QEvent::Type) hb_parni(1), *PQPOINT(2), *PQPOINT(3), *PQPOINTF(4), PINT(5), PINT(6), PQREAL(7), PINT(8), PINT(9), PQREAL(10), PQREAL(11), PINT(12), (Qt::KeyboardModifiers) par13, PQINT64(14) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

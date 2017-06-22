@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ADDITEM1 )
     int par4 = hb_parni(4);
     int par5 = hb_parni(5);
     int par6 = ISNIL(6)? (int) 0 : hb_parni(6);
-    obj->addItem ( par1, par2, par3, par4, par5,  (Qt::Alignment) par6 );
+    obj->addItem ( par1, par2, par3, par4, par5, (Qt::Alignment) par6 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ADDITEM2 )
     int par2 = hb_parni(2);
     int par3 = hb_parni(3);
     int par4 = ISNIL(4)? (int) 0 : hb_parni(4);
-    obj->addItem ( par1, par2, par3,  (Qt::Alignment) par4 );
+    obj->addItem ( par1, par2, par3, (Qt::Alignment) par4 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -441,7 +441,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETALIGNMENT )
   {
     QGraphicsLayoutItem * par1 = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
-    obj->setAlignment ( par1,  (Qt::Alignment) par2 );
+    obj->setAlignment ( par1, (Qt::Alignment) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -456,7 +456,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETCOLUMNALIGNMENT )
   if( obj )
   {
     int par2 = hb_parni(2);
-    obj->setColumnAlignment ( PINT(1),  (Qt::Alignment) par2 );
+    obj->setColumnAlignment ( PINT(1), (Qt::Alignment) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -569,7 +569,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETROWALIGNMENT )
   if( obj )
   {
     int par2 = hb_parni(2);
-    obj->setRowAlignment ( PINT(1),  (Qt::Alignment) par2 );
+    obj->setRowAlignment ( PINT(1), (Qt::Alignment) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -765,7 +765,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SIZEHINT )
   {
     int par1 = hb_parni(1);
     QSizeF par2 = ISNIL(2)? QSizeF() : *(QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QSizeF * ptr = new QSizeF( obj->sizeHint (  (Qt::SizeHint) par1, par2 ) );
+    QSizeF * ptr = new QSizeF( obj->sizeHint ( (Qt::SizeHint) par1, par2 ) );
     _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }

@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_FITINVIEW1 )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) Qt::IgnoreAspectRatio : hb_parni(2);
-    obj->fitInView ( *PQRECTF(1),  (Qt::AspectRatioMode) par2 );
+    obj->fitInView ( *PQRECTF(1), (Qt::AspectRatioMode) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_FITINVIEW2 )
   if( obj )
   {
     int par5 = ISNIL(5)? (int) Qt::IgnoreAspectRatio : hb_parni(5);
-    obj->fitInView ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4),  (Qt::AspectRatioMode) par5 );
+    obj->fitInView ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), (Qt::AspectRatioMode) par5 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_FITINVIEW3 )
   {
     const QGraphicsItem * par1 = (const QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = ISNIL(2)? (int) Qt::IgnoreAspectRatio : hb_parni(2);
-    obj->fitInView ( par1,  (Qt::AspectRatioMode) par2 );
+    obj->fitInView ( par1, (Qt::AspectRatioMode) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -664,7 +664,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS4 )
   if( obj )
   {
     int par5 = ISNIL(5)? (int) Qt::IntersectsItemShape : hb_parni(5);
-    QList<QGraphicsItem *> list = obj->items ( PINT(1), PINT(2), PINT(3), PINT(4),  (Qt::ItemSelectionMode) par5 );
+    QList<QGraphicsItem *> list = obj->items ( PINT(1), PINT(2), PINT(3), PINT(4), (Qt::ItemSelectionMode) par5 );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QGRAPHICSITEM" );
@@ -709,7 +709,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS5 )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) Qt::IntersectsItemShape : hb_parni(2);
-    QList<QGraphicsItem *> list = obj->items ( *PQRECT(1),  (Qt::ItemSelectionMode) par2 );
+    QList<QGraphicsItem *> list = obj->items ( *PQRECT(1), (Qt::ItemSelectionMode) par2 );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QGRAPHICSITEM" );
@@ -754,7 +754,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS6 )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) Qt::IntersectsItemShape : hb_parni(2);
-    QList<QGraphicsItem *> list = obj->items ( *PQPOLYGON(1),  (Qt::ItemSelectionMode) par2 );
+    QList<QGraphicsItem *> list = obj->items ( *PQPOLYGON(1), (Qt::ItemSelectionMode) par2 );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QGRAPHICSITEM" );
@@ -799,7 +799,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS7 )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) Qt::IntersectsItemShape : hb_parni(2);
-    QList<QGraphicsItem *> list = obj->items ( *PQPAINTERPATH(1),  (Qt::ItemSelectionMode) par2 );
+    QList<QGraphicsItem *> list = obj->items ( *PQPAINTERPATH(1), (Qt::ItemSelectionMode) par2 );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QGRAPHICSITEM" );
@@ -1151,7 +1151,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_RENDER )
     QRectF par2 = ISNIL(2)? QRectF() : *(QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     QRect par3 = ISNIL(3)? QRect() : *(QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par4 = ISNIL(4)? (int) Qt::KeepAspectRatio : hb_parni(4);
-    obj->render ( PQPAINTER(1), par2, par3,  (Qt::AspectRatioMode) par4 );
+    obj->render ( PQPAINTER(1), par2, par3, (Qt::AspectRatioMode) par4 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1303,7 +1303,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETALIGNMENT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setAlignment (  (Qt::Alignment) par1 );
+    obj->setAlignment ( (Qt::Alignment) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1332,7 +1332,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETCACHEMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setCacheMode (  (QGraphicsView::CacheMode) par1 );
+    obj->setCacheMode ( (QGraphicsView::CacheMode) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1347,7 +1347,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETDRAGMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setDragMode (  (QGraphicsView::DragMode) par1 );
+    obj->setDragMode ( (QGraphicsView::DragMode) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1405,7 +1405,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETOPTIMIZATIONFLAG )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setOptimizationFlag (  (QGraphicsView::OptimizationFlag) par1, OPBOOL(2,true) );
+    obj->setOptimizationFlag ( (QGraphicsView::OptimizationFlag) par1, OPBOOL(2,true) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1420,7 +1420,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETOPTIMIZATIONFLAGS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setOptimizationFlags (  (QGraphicsView::OptimizationFlags) par1 );
+    obj->setOptimizationFlags ( (QGraphicsView::OptimizationFlags) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1435,7 +1435,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETRENDERHINT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setRenderHint (  (QPainter::RenderHint) par1, OPBOOL(2,true) );
+    obj->setRenderHint ( (QPainter::RenderHint) par1, OPBOOL(2,true) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1450,7 +1450,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETRENDERHINTS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setRenderHints (  (QPainter::RenderHints) par1 );
+    obj->setRenderHints ( (QPainter::RenderHints) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1465,7 +1465,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETRESIZEANCHOR )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setResizeAnchor (  (QGraphicsView::ViewportAnchor) par1 );
+    obj->setResizeAnchor ( (QGraphicsView::ViewportAnchor) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1480,7 +1480,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETRUBBERBANDSELECTIONMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setRubberBandSelectionMode (  (Qt::ItemSelectionMode) par1 );
+    obj->setRubberBandSelectionMode ( (Qt::ItemSelectionMode) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1567,7 +1567,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETTRANSFORMATIONANCHOR )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setTransformationAnchor (  (QGraphicsView::ViewportAnchor) par1 );
+    obj->setTransformationAnchor ( (QGraphicsView::ViewportAnchor) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1582,7 +1582,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETVIEWPORTUPDATEMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setViewportUpdateMode (  (QGraphicsView::ViewportUpdateMode) par1 );
+    obj->setViewportUpdateMode ( (QGraphicsView::ViewportUpdateMode) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1679,7 +1679,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_INPUTMETHODQUERY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QVariant * ptr = new QVariant( obj->inputMethodQuery (  (Qt::InputMethodQuery) par1 ) );
+    QVariant * ptr = new QVariant( obj->inputMethodQuery ( (Qt::InputMethodQuery) par1 ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -1709,7 +1709,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_INVALIDATESCENE )
   {
     QRectF par1 = ISNIL(1)? QRectF() : *(QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = ISNIL(2)? (int) QGraphicsScene::AllLayers : hb_parni(2);
-    obj->invalidateScene ( par1,  (QGraphicsScene::SceneLayers) par2 );
+    obj->invalidateScene ( par1, (QGraphicsScene::SceneLayers) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

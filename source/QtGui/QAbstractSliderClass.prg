@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_TRIGGERACTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->triggerAction (  (QAbstractSlider::SliderAction) par1 );
+    obj->triggerAction ( (QAbstractSlider::SliderAction) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETORIENTATION )
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setOrientation (  (Qt::Orientation) hb_parni(1) );
+    obj->setOrientation ( (Qt::Orientation) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

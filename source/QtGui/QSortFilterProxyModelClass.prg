@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERCASESENSITIVITY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setFilterCaseSensitivity (  (Qt::CaseSensitivity) par1 );
+    obj->setFilterCaseSensitivity ( (Qt::CaseSensitivity) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETSORTCASESENSITIVITY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setSortCaseSensitivity (  (Qt::CaseSensitivity) par1 );
+    obj->setSortCaseSensitivity ( (Qt::CaseSensitivity) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -433,7 +433,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_DROPMIMEDATA )
   if( obj )
   {
     const QMimeData * par1 = (const QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->dropMimeData ( par1,  (Qt::DropAction) hb_parni(2), PINT(3), PINT(4), *PQMODELINDEX(5) ) );
+    RBOOL( obj->dropMimeData ( par1, (Qt::DropAction) hb_parni(2), PINT(3), PINT(4), *PQMODELINDEX(5) ) );
   }
 }
 
@@ -487,7 +487,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_HEADERDATA )
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->headerData ( PINT(1),  (Qt::Orientation) hb_parni(2), OPINT(3,Qt::DisplayRole) ) );
+    QVariant * ptr = new QVariant( obj->headerData ( PINT(1), (Qt::Orientation) hb_parni(2), OPINT(3,Qt::DisplayRole) ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -603,7 +603,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MATCH )
   if( obj )
   {
     int par5 = ISNIL(5)? (int) Qt::MatchStartsWith | Qt::MatchWrap : hb_parni(5);
-    QModelIndexList list = obj->match ( *PQMODELINDEX(1), PINT(2), *PQVARIANT(3), OPINT(4,1),  (Qt::MatchFlags) par5 );
+    QModelIndexList list = obj->match ( *PQMODELINDEX(1), PINT(2), *PQVARIANT(3), OPINT(4,1), (Qt::MatchFlags) par5 );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QMODELINDEX" );
@@ -754,7 +754,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETHEADERDATA )
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RBOOL( obj->setHeaderData ( PINT(1),  (Qt::Orientation) hb_parni(2), *PQVARIANT(3), OPINT(4,Qt::EditRole) ) );
+    RBOOL( obj->setHeaderData ( PINT(1), (Qt::Orientation) hb_parni(2), *PQVARIANT(3), OPINT(4,Qt::EditRole) ) );
   }
 }
 
@@ -783,7 +783,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SORT )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) Qt::AscendingOrder : hb_parni(2);
-    obj->sort ( PINT(1),  (Qt::SortOrder) par2 );
+    obj->sort ( PINT(1), (Qt::SortOrder) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

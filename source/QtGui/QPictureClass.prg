@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QPICTURE_LOAD1 )
   QPicture * obj = (QPicture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RBOOL( obj->load ( PQSTRING(1),  (const char *) ISNIL(2)? 0 : hb_parc(2) ) );
+    RBOOL( obj->load ( PQSTRING(1), (const char *) ISNIL(2)? 0 : hb_parc(2) ) );
   }
 }
 
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QPICTURE_LOAD2 )
   QPicture * obj = (QPicture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RBOOL( obj->load ( PQIODEVICE(1),  (const char *) ISNIL(2)? 0 : hb_parc(2) ) );
+    RBOOL( obj->load ( PQIODEVICE(1), (const char *) ISNIL(2)? 0 : hb_parc(2) ) );
   }
 }
 
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QPICTURE_SAVE1 )
   QPicture * obj = (QPicture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RBOOL( obj->save ( PQSTRING(1),  (const char *) ISNIL(2)? 0 : hb_parc(2) ) );
+    RBOOL( obj->save ( PQSTRING(1), (const char *) ISNIL(2)? 0 : hb_parc(2) ) );
   }
 }
 
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QPICTURE_SAVE2 )
   QPicture * obj = (QPicture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RBOOL( obj->save ( PQIODEVICE(1),  (const char *) ISNIL(2)? 0 : hb_parc(2) ) );
+    RBOOL( obj->save ( PQIODEVICE(1), (const char *) ISNIL(2)? 0 : hb_parc(2) ) );
   }
 }
 
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QPICTURE_SETDATA )
   QPicture * obj = (QPicture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setData (  (const char *) hb_parc(1), PUINT(2) );
+    obj->setData ( (const char *) hb_parc(1), PUINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

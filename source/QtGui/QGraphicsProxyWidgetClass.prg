@@ -51,7 +51,7 @@ QGraphicsProxyWidget ( QGraphicsItem * parent = 0, Qt::WindowFlags wFlags = 0 )
 HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_NEW )
 {
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-  QGraphicsProxyWidget * o = new QGraphicsProxyWidget ( OPQGRAPHICSITEM(1,0),  (Qt::WindowFlags) par2 );
+  QGraphicsProxyWidget * o = new QGraphicsProxyWidget ( OPQGRAPHICSITEM(1,0), (Qt::WindowFlags) par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

@@ -43,7 +43,7 @@ QWindowStateChangeEvent(Qt::WindowStates aOldState)
 HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_NEW1 )
 {
   int par1 = hb_parni(1);
-  QWindowStateChangeEvent * o = new QWindowStateChangeEvent (  (Qt::WindowStates) par1 );
+  QWindowStateChangeEvent * o = new QWindowStateChangeEvent ( (Qt::WindowStates) par1 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -54,7 +54,7 @@ QWindowStateChangeEvent(Qt::WindowStates aOldState, bool isOverride)
 HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_NEW2 )
 {
   int par1 = hb_parni(1);
-  QWindowStateChangeEvent * o = new QWindowStateChangeEvent (  (Qt::WindowStates) par1, PBOOL(2) );
+  QWindowStateChangeEvent * o = new QWindowStateChangeEvent ( (Qt::WindowStates) par1, PBOOL(2) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

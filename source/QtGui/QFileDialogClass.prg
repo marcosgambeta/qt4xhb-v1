@@ -109,7 +109,7 @@ QFileDialog ( QWidget * parent, Qt::WindowFlags flags )
 HB_FUNC_STATIC( QFILEDIALOG_NEW1 )
 {
   int par2 = hb_parni(2);
-  QFileDialog * o = new QFileDialog ( PQWIDGET(1),  (Qt::WindowFlags) par2 );
+  QFileDialog * o = new QFileDialog ( PQWIDGET(1), (Qt::WindowFlags) par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QFILEDIALOG_LABELTEXT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QString str1 = obj->labelText (  (QFileDialog::DialogLabel) par1 );
+    QString str1 = obj->labelText ( (QFileDialog::DialogLabel) par1 );
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QFILEDIALOG_OPEN )
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->open ( PQOBJECT(1),  (const char *) hb_parc(2) );
+    obj->open ( PQOBJECT(1), (const char *) hb_parc(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -509,7 +509,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETACCEPTMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setAcceptMode (  (QFileDialog::AcceptMode) par1 );
+    obj->setAcceptMode ( (QFileDialog::AcceptMode) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -596,7 +596,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETFILEMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setFileMode (  (QFileDialog::FileMode) par1 );
+    obj->setFileMode ( (QFileDialog::FileMode) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -611,7 +611,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETFILTER )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setFilter (  (QDir::Filters) par1 );
+    obj->setFilter ( (QDir::Filters) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -670,7 +670,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETLABELTEXT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setLabelText (  (QFileDialog::DialogLabel) par1, PQSTRING(2) );
+    obj->setLabelText ( (QFileDialog::DialogLabel) par1, PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -742,7 +742,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETOPTIONS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setOptions (  (QFileDialog::Options) par1 );
+    obj->setOptions ( (QFileDialog::Options) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -822,7 +822,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETVIEWMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setViewMode (  (QFileDialog::ViewMode) par1 );
+    obj->setViewMode ( (QFileDialog::ViewMode) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -885,7 +885,7 @@ HB_FUNC_STATIC( QFILEDIALOG_TESTOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    RBOOL( obj->testOption (  (QFileDialog::Option) par1 ) );
+    RBOOL( obj->testOption ( (QFileDialog::Option) par1 ) );
   }
 }
 
@@ -924,7 +924,7 @@ QString getExistingDirectory ( QWidget * parent = 0, const QString & caption = Q
 HB_FUNC_STATIC( QFILEDIALOG_GETEXISTINGDIRECTORY )
 {
   int par4 = ISNIL(4)? (int) QFileDialog::ShowDirsOnly : hb_parni(4);
-  QString str1 = QFileDialog::getExistingDirectory ( OPQWIDGET(1,0), OPQSTRING(2,QString()), OPQSTRING(3,QString()),  (QFileDialog::Options) par4 );
+  QString str1 = QFileDialog::getExistingDirectory ( OPQWIDGET(1,0), OPQSTRING(2,QString()), OPQSTRING(3,QString()), (QFileDialog::Options) par4 );
   hb_retc( RQSTRING(str1) );
 }
 
@@ -936,7 +936,7 @@ HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILENAME )
 {
   QString * par5 = NULL;
   int par6 = ISNIL(6)? (int) 0 : hb_parni(6);
-  QString str1 = QFileDialog::getOpenFileName ( OPQWIDGET(1,0), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()), par5,  (QFileDialog::Options) par6 );
+  QString str1 = QFileDialog::getOpenFileName ( OPQWIDGET(1,0), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()), par5, (QFileDialog::Options) par6 );
   hb_retc( RQSTRING(str1) );
 }
 
@@ -948,7 +948,7 @@ HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILENAMES )
 {
   QString * par5 = NULL;
   int par6 = ISNIL(6)? (int) 0 : hb_parni(6);
-  QStringList strl = QFileDialog::getOpenFileNames ( OPQWIDGET(1,0), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()), par5,  (QFileDialog::Options) par6 );
+  QStringList strl = QFileDialog::getOpenFileNames ( OPQWIDGET(1,0), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()), par5, (QFileDialog::Options) par6 );
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;
@@ -969,7 +969,7 @@ HB_FUNC_STATIC( QFILEDIALOG_GETSAVEFILENAME )
 {
   QString * par5 = NULL;
   int par6 = ISNIL(6)? (int) 0 : hb_parni(6);
-  QString str1 = QFileDialog::getSaveFileName ( OPQWIDGET(1,0), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()), par5,  (QFileDialog::Options) par6 );
+  QString str1 = QFileDialog::getSaveFileName ( OPQWIDGET(1,0), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()), par5, (QFileDialog::Options) par6 );
   hb_retc( RQSTRING(str1) );
 }
 

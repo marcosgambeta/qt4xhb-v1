@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QFILEICONPROVIDER_ICON1 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QIcon * ptr = new QIcon( obj->icon (  (QFileIconProvider::IconType) par1 ) );
+    QIcon * ptr = new QIcon( obj->icon ( (QFileIconProvider::IconType) par1 ) );
     _qt4xhb_createReturnClass ( ptr, "QICON", true );
   }
 }

@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QPLATFORMFONTDATABASE_FONTENGINE )
   if( obj )
   {
     int par3 = hb_parni(3);
-    QFontEngine * ptr = obj->fontEngine ( *PQBYTEARRAY(1), PQREAL(2),  (QFont::HintingPreference) par3 );
+    QFontEngine * ptr = obj->fontEngine ( *PQBYTEARRAY(1), PQREAL(2), (QFont::HintingPreference) par3 );
     _qt4xhb_createReturnClass ( ptr, "QFONTENGINE" );
   }
 }
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QPLATFORMFONTDATABASE_REGISTERFONT )
   int par8 = hb_parni(8);
   QSupportedWritingSystems * par9 = (QSupportedWritingSystems *) hb_itemGetPtr( hb_objSendMsg( hb_param(9, HB_IT_OBJECT ), "POINTER", 0 ) );
   void * par10 = (void *) hb_parptr(10);
-  QPlatformFontDatabase::registerFont ( PQSTRING(1), PQSTRING(2),  (QFont::Weight) par3,  (QFont::Style) par4,  (QFont::Stretch) par5, PBOOL(6), PBOOL(7), par8, *par9, par10 );
+  QPlatformFontDatabase::registerFont ( PQSTRING(1), PQSTRING(2), (QFont::Weight) par3, (QFont::Style) par4, (QFont::Stretch) par5, PBOOL(6), PBOOL(7), par8, *par9, par10 );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

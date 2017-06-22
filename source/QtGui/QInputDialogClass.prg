@@ -95,7 +95,7 @@ QInputDialog ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 HB_FUNC_STATIC( QINPUTDIALOG_NEW )
 {
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-  QInputDialog * o = new QInputDialog ( OPQWIDGET(1,0),  (Qt::WindowFlags) par2 );
+  QInputDialog * o = new QInputDialog ( OPQWIDGET(1,0), (Qt::WindowFlags) par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_OPEN )
   QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->open ( PQOBJECT(1),  (const char *) hb_parc(2) );
+    obj->open ( PQOBJECT(1), (const char *) hb_parc(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -459,7 +459,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETINPUTMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setInputMode (  (QInputDialog::InputMode) par1 );
+    obj->setInputMode ( (QInputDialog::InputMode) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -572,7 +572,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setOption (  (QInputDialog::InputDialogOption) par1, OPBOOL(2,true) );
+    obj->setOption ( (QInputDialog::InputDialogOption) par1, OPBOOL(2,true) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -587,7 +587,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETOPTIONS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setOptions (  (QInputDialog::InputDialogOptions) par1 );
+    obj->setOptions ( (QInputDialog::InputDialogOptions) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -602,7 +602,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETTEXTECHOMODE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setTextEchoMode (  (QLineEdit::EchoMode) par1 );
+    obj->setTextEchoMode ( (QLineEdit::EchoMode) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -631,7 +631,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_TESTOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    RBOOL( obj->testOption (  (QInputDialog::InputDialogOption) par1 ) );
+    RBOOL( obj->testOption ( (QInputDialog::InputDialogOption) par1 ) );
   }
 }
 
@@ -730,7 +730,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_GETDOUBLE )
   double par6 = ISNIL(6)? 2147483647 : hb_parnd(6);
   bool par8;
   int par9 = ISNIL(9)? (int) 0 : hb_parni(9);
-  RDOUBLE( QInputDialog::getDouble ( PQWIDGET(1), PQSTRING(2), PQSTRING(3), par4, par5, par6, OPINT(7,1), &par8,  (Qt::WindowFlags) par9 ) );
+  RDOUBLE( QInputDialog::getDouble ( PQWIDGET(1), PQSTRING(2), PQSTRING(3), par4, par5, par6, OPINT(7,1), &par8, (Qt::WindowFlags) par9 ) );
   hb_storl( par8, 8 );
 }
 
@@ -742,7 +742,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_GETINT )
 {
   bool par8;
   int par9 = ISNIL(9)? (int) 0 : hb_parni(9);
-  RINT( QInputDialog::getInt ( PQWIDGET(1), PQSTRING(2), PQSTRING(3), OPINT(4,0), OPINT(5,-2147483647), OPINT(6,2147483647), OPINT(7,1), &par8,  (Qt::WindowFlags) par9 ) );
+  RINT( QInputDialog::getInt ( PQWIDGET(1), PQSTRING(2), PQSTRING(3), OPINT(4,0), OPINT(5,-2147483647), OPINT(6,2147483647), OPINT(7,1), &par8, (Qt::WindowFlags) par9 ) );
   hb_storl( par8, 8 );
 }
 
@@ -754,7 +754,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_GETITEM )
 {
   bool par7;
   int par8 = ISNIL(8)? (int) 0 : hb_parni(8);
-  QString str1 = QInputDialog::getItem ( PQWIDGET(1), PQSTRING(2), PQSTRING(3), PQSTRINGLIST(4), OPINT(5,0), OPBOOL(6,true), &par7,  (Qt::WindowFlags) par8 );
+  QString str1 = QInputDialog::getItem ( PQWIDGET(1), PQSTRING(2), PQSTRING(3), PQSTRINGLIST(4), OPINT(5,0), OPBOOL(6,true), &par7, (Qt::WindowFlags) par8 );
   hb_retc( RQSTRING(str1) );
   hb_storl( par7, 7 );
 }
@@ -768,7 +768,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_GETTEXT )
   int par4 = ISNIL(4)? (int) QLineEdit::Normal : hb_parni(4);
   bool par6;
   int par7 = ISNIL(7)? (int) 0 : hb_parni(7);
-  QString str1 = QInputDialog::getText ( PQWIDGET(1), PQSTRING(2), PQSTRING(3),  (QLineEdit::EchoMode) par4, OPQSTRING(5,QString()), &par6,  (Qt::WindowFlags) par7 );
+  QString str1 = QInputDialog::getText ( PQWIDGET(1), PQSTRING(2), PQSTRING(3), (QLineEdit::EchoMode) par4, OPQSTRING(5,QString()), &par6, (Qt::WindowFlags) par7 );
   hb_retc( RQSTRING(str1) );
   hb_storl( par6, 6 );
 }

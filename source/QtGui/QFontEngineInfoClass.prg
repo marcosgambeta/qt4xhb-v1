@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QFONTENGINEINFO_SETSTYLE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setStyle (  (QFont::Style) par1 );
+    obj->setStyle ( (QFont::Style) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

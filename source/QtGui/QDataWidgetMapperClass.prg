@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETORIENTATION )
   QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setOrientation (  (Qt::Orientation) hb_parni(1) );
+    obj->setOrientation ( (Qt::Orientation) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETSUBMITPOLICY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setSubmitPolicy (  (QDataWidgetMapper::SubmitPolicy) par1 );
+    obj->setSubmitPolicy ( (QDataWidgetMapper::SubmitPolicy) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

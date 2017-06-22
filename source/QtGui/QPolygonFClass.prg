@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QPOLYGONF_CONTAINSPOINT )
   if( obj )
   {
     int par2 = hb_parni(2);
-    RBOOL( obj->containsPoint ( *PQPOINTF(1),  (Qt::FillRule) par2 ) );
+    RBOOL( obj->containsPoint ( *PQPOINTF(1), (Qt::FillRule) par2 ) );
   }
 }
 

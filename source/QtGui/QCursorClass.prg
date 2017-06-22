@@ -76,7 +76,7 @@ QCursor ( Qt::CursorShape shape )
 */
 HB_FUNC_STATIC( QCURSOR_NEW2 )
 {
-  QCursor * o = new QCursor (  (Qt::CursorShape) hb_parni(1));
+  QCursor * o = new QCursor ( (Qt::CursorShape) hb_parni(1));
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QCURSOR_SETSHAPE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setShape (  (Qt::CursorShape) par1 );
+    obj->setShape ( (Qt::CursorShape) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_ACTIONTEXT )
   QAccessibleInterface * obj = (QAccessibleInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->actionText ( PINT(1),  (QAccessibleInterface::Text) hb_parni(2), PINT(3) );
+    QString str1 = obj->actionText ( PINT(1), (QAccessibleInterface::Text) hb_parni(2), PINT(3) );
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -160,7 +160,7 @@ for (i3=0;i3<nLen3;i3++)
 {
 par3 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList3, i3+1 ), "POINTER", 0 ) );
 }
-    QVariant * ptr = new QVariant( obj->invokeMethod (  (QAccessibleInterface::Method) par1, OPINT(2,0), par3 ) );
+    QVariant * ptr = new QVariant( obj->invokeMethod ( (QAccessibleInterface::Method) par1, OPINT(2,0), par3 ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_SETTEXT )
   QAccessibleInterface * obj = (QAccessibleInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setText (  (QAccessibleInterface::Text) hb_parni(1), PINT(2), PQSTRING(3) );
+    obj->setText ( (QAccessibleInterface::Text) hb_parni(1), PINT(2), PQSTRING(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_TEXT )
   QAccessibleInterface * obj = (QAccessibleInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->text (  (QAccessibleInterface::Text) hb_parni(1), PINT(2) );
+    QString str1 = obj->text ( (QAccessibleInterface::Text) hb_parni(1), PINT(2) );
     hb_retc( RQSTRING(str1) );
   }
 }

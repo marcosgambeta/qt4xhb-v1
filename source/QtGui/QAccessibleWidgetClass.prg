@@ -52,7 +52,7 @@ QAccessibleWidget ( QWidget * w, Role role = Client, const QString & name = QStr
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_NEW )
 {
   int par2 = ISNIL(2)? (int) QAccessible::Client : hb_parni(2);
-  QAccessibleWidget * o = new QAccessibleWidget ( PQWIDGET(1),  (QAccessible::Role) par2, OPQSTRING(3,QString()) );
+  QAccessibleWidget * o = new QAccessibleWidget ( PQWIDGET(1), (QAccessible::Role) par2, OPQSTRING(3,QString()) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_ACTIONTEXT )
   QAccessibleWidget * obj = (QAccessibleWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->actionText ( PINT(1),  (QAccessible::Text) hb_parni(2), PINT(3) );
+    QString str1 = obj->actionText ( PINT(1), (QAccessible::Text) hb_parni(2), PINT(3) );
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_TEXT )
   QAccessibleWidget * obj = (QAccessibleWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->text (  (QAccessible::Text) hb_parni(1), PINT(2) );
+    QString str1 = obj->text ( (QAccessible::Text) hb_parni(1), PINT(2) );
     hb_retc( RQSTRING(str1) );
   }
 }

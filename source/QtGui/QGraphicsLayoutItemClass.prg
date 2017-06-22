@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_EFFECTIVESIZEHINT )
   {
     int par1 = hb_parni(1);
     QSizeF par2 = ISNIL(2)? QSizeF() : *(QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QSizeF * ptr = new QSizeF( obj->effectiveSizeHint (  (Qt::SizeHint) par1, par2 ) );
+    QSizeF * ptr = new QSizeF( obj->effectiveSizeHint ( (Qt::SizeHint) par1, par2 ) );
     _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
@@ -597,7 +597,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETSIZEPOLICY2 )
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     int par3 = ISNIL(3)? (int) QSizePolicy::DefaultType : hb_parni(3);
-    obj->setSizePolicy (  (QSizePolicy::Policy) par1,  (QSizePolicy::Policy) par2,  (QSizePolicy::ControlType) par3 );
+    obj->setSizePolicy ( (QSizePolicy::Policy) par1, (QSizePolicy::Policy) par2, (QSizePolicy::ControlType) par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

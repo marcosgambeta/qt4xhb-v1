@@ -41,7 +41,7 @@ QInputEvent(Type type, Qt::KeyboardModifiers modifiers = Qt::NoModifier)
 HB_FUNC_STATIC( QINPUTEVENT_NEW )
 {
   int par2 = ISNIL(2)? (int) Qt::NoModifier : hb_parni(2);
-  QInputEvent * o = new QInputEvent (  (QEvent::Type) hb_parni(1),  (Qt::KeyboardModifiers) par2 );
+  QInputEvent * o = new QInputEvent ( (QEvent::Type) hb_parni(1), (Qt::KeyboardModifiers) par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QINPUTEVENT_SETMODIFIERS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setModifiers (  (Qt::KeyboardModifiers) par1 );
+    obj->setModifiers ( (Qt::KeyboardModifiers) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

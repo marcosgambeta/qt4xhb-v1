@@ -62,7 +62,7 @@ QMdiSubWindow ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 HB_FUNC_STATIC( QMDISUBWINDOW_NEW )
 {
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-  QMdiSubWindow * o = new QMdiSubWindow ( OPQWIDGET(1,0),  (Qt::WindowFlags) par2 );
+  QMdiSubWindow * o = new QMdiSubWindow ( OPQWIDGET(1,0), (Qt::WindowFlags) par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SETOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setOption (  (QMdiSubWindow::SubWindowOption) par1, OPBOOL(2,true) );
+    obj->setOption ( (QMdiSubWindow::SubWindowOption) par1, OPBOOL(2,true) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_TESTOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    RBOOL( obj->testOption (  (QMdiSubWindow::SubWindowOption) par1 ) );
+    RBOOL( obj->testOption ( (QMdiSubWindow::SubWindowOption) par1 ) );
   }
 }
 

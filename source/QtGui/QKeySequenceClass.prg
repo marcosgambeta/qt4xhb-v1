@@ -82,7 +82,7 @@ QKeySequence ( const QString & key, SequenceFormat format )
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_NEW3 )
 {
-  QKeySequence * o = new QKeySequence ( PQSTRING(1),  (QKeySequence::SequenceFormat) hb_parni(2) );
+  QKeySequence * o = new QKeySequence ( PQSTRING(1), (QKeySequence::SequenceFormat) hb_parni(2) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -112,7 +112,7 @@ QKeySequence ( StandardKey key )
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_NEW6 )
 {
-  QKeySequence * o = new QKeySequence (  (QKeySequence::StandardKey) hb_parni(1) );
+  QKeySequence * o = new QKeySequence ( (QKeySequence::StandardKey) hb_parni(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_TOSTRING )
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QKeySequence::PortableText : hb_parni(1);
-    QString str1 = obj->toString (  (QKeySequence::SequenceFormat) par1 );
+    QString str1 = obj->toString ( (QKeySequence::SequenceFormat) par1 );
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -241,7 +241,7 @@ QKeySequence fromString ( const QString & str, SequenceFormat format = PortableT
 HB_FUNC_STATIC( QKEYSEQUENCE_FROMSTRING )
 {
   int par2 = ISNIL(2)? (int) QKeySequence::PortableText : hb_parni(2);
-  QKeySequence * ptr = new QKeySequence( QKeySequence::fromString ( PQSTRING(1),  (QKeySequence::SequenceFormat) par2 ) );
+  QKeySequence * ptr = new QKeySequence( QKeySequence::fromString ( PQSTRING(1), (QKeySequence::SequenceFormat) par2 ) );
   _qt4xhb_createReturnClass ( ptr, "QKEYSEQUENCE", true );
 }
 
@@ -252,7 +252,7 @@ QList<QKeySequence> keyBindings ( StandardKey key )
 HB_FUNC_STATIC( QKEYSEQUENCE_KEYBINDINGS )
 {
   int par1 = hb_parni(1);
-  QList<QKeySequence> list = QKeySequence::keyBindings (  (QKeySequence::StandardKey) par1 );
+  QList<QKeySequence> list = QKeySequence::keyBindings ( (QKeySequence::StandardKey) par1 );
   PHB_DYNS pDynSym;
   #ifdef __XHARBOUR__
   pDynSym = hb_dynsymFind( "QKEYSEQUENCE" );

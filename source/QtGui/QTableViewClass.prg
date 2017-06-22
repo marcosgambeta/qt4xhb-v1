@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETGRIDSTYLE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setGridStyle (  (Qt::PenStyle) par1 );
+    obj->setGridStyle ( (Qt::PenStyle) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -484,7 +484,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SORTBYCOLUMN )
   if( obj )
   {
     int par2 = hb_parni(2);
-    obj->sortByColumn ( PINT(1),  (Qt::SortOrder) par2 );
+    obj->sortByColumn ( PINT(1), (Qt::SortOrder) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

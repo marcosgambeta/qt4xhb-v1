@@ -43,7 +43,7 @@ QHoverEvent ( Type type, const QPoint & pos, const QPoint & oldPos )
 */
 HB_FUNC_STATIC( QHOVEREVENT_NEW )
 {
-  QHoverEvent * o = new QHoverEvent (  (QEvent::Type) hb_parni(1), *PQPOINT(2), *PQPOINT(3) );
+  QHoverEvent * o = new QHoverEvent ( (QEvent::Type) hb_parni(1), *PQPOINT(2), *PQPOINT(3) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

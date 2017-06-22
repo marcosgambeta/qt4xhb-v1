@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_NEW2 )
 {
   int par4 = ISNIL(4)? (int) QMessageBox::NoButton : hb_parni(4);
   int par6 = ISNIL(6)? (int) Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint : hb_parni(6);
-  QMessageBox * o = new QMessageBox (  (QMessageBox::Icon) hb_parni(1), PQSTRING(2), PQSTRING(3),  (QMessageBox::StandardButtons) par4, OPQWIDGET(5,0),  (Qt::WindowFlags) par6 );
+  QMessageBox * o = new QMessageBox ( (QMessageBox::Icon) hb_parni(1), PQSTRING(2), PQSTRING(3), (QMessageBox::StandardButtons) par4, OPQWIDGET(5,0), (Qt::WindowFlags) par6 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_ADDBUTTON1 )
   {
     QAbstractButton * par1 = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
-    obj->addButton ( par1,  (QMessageBox::ButtonRole) par2 );
+    obj->addButton ( par1, (QMessageBox::ButtonRole) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_ADDBUTTON2 )
   if( obj )
   {
     int par2 = hb_parni(2);
-    QPushButton * ptr = obj->addButton ( PQSTRING(1),  (QMessageBox::ButtonRole) par2 );
+    QPushButton * ptr = obj->addButton ( PQSTRING(1), (QMessageBox::ButtonRole) par2 );
     _qt4xhb_createReturnClass ( ptr, "QPUSHBUTTON" );
   }
 }
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_ADDBUTTON3 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QPushButton * ptr = obj->addButton (  (QMessageBox::StandardButton) par1 );
+    QPushButton * ptr = obj->addButton ( (QMessageBox::StandardButton) par1 );
     _qt4xhb_createReturnClass ( ptr, "QPUSHBUTTON" );
   }
 }
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_BUTTON )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QAbstractButton * ptr = obj->button (  (QMessageBox::StandardButton) par1 );
+    QAbstractButton * ptr = obj->button ( (QMessageBox::StandardButton) par1 );
     _qt4xhb_createReturnClass ( ptr, "QABSTRACTBUTTON" );
   }
 }
@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_OPEN )
   QMessageBox * obj = (QMessageBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->open ( PQOBJECT(1),  (const char *) hb_parc(2) );
+    obj->open ( PQOBJECT(1), (const char *) hb_parc(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -430,7 +430,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETDEFAULTBUTTON2 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setDefaultButton (  (QMessageBox::StandardButton) par1 );
+    obj->setDefaultButton ( (QMessageBox::StandardButton) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETESCAPEBUTTON2 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setEscapeButton (  (QMessageBox::StandardButton) par1 );
+    obj->setEscapeButton ( (QMessageBox::StandardButton) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -519,7 +519,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETICON )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setIcon (  (QMessageBox::Icon) par1 );
+    obj->setIcon ( (QMessageBox::Icon) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -562,7 +562,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETSTANDARDBUTTONS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setStandardButtons (  (QMessageBox::StandardButtons) par1 );
+    obj->setStandardButtons ( (QMessageBox::StandardButtons) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -591,7 +591,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETTEXTFORMAT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setTextFormat (  (Qt::TextFormat) par1 );
+    obj->setTextFormat ( (Qt::TextFormat) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -606,7 +606,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETWINDOWMODALITY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setWindowModality (  (Qt::WindowModality) par1 );
+    obj->setWindowModality ( (Qt::WindowModality) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -735,7 +735,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_CRITICAL )
 {
   int par4 = ISNIL(4)? (int) QMessageBox::Ok : hb_parni(4);
   int par5 = ISNIL(5)? (int) QMessageBox::NoButton : hb_parni(5);
-  hb_retni( (int) QMessageBox::critical ( PQWIDGET(1), PQSTRING(2), PQSTRING(3),  (QMessageBox::StandardButtons) par4,  (QMessageBox::StandardButton) par5 ) );
+  hb_retni( (int) QMessageBox::critical ( PQWIDGET(1), PQSTRING(2), PQSTRING(3), (QMessageBox::StandardButtons) par4, (QMessageBox::StandardButton) par5 ) );
 }
 
 
@@ -746,7 +746,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_INFORMATION )
 {
   int par4 = ISNIL(4)? (int) QMessageBox::Ok : hb_parni(4);
   int par5 = ISNIL(5)? (int) QMessageBox::NoButton : hb_parni(5);
-  hb_retni( (int) QMessageBox::information ( PQWIDGET(1), PQSTRING(2), PQSTRING(3),  (QMessageBox::StandardButtons) par4,  (QMessageBox::StandardButton) par5 ) );
+  hb_retni( (int) QMessageBox::information ( PQWIDGET(1), PQSTRING(2), PQSTRING(3), (QMessageBox::StandardButtons) par4, (QMessageBox::StandardButton) par5 ) );
 }
 
 
@@ -757,7 +757,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_QUESTION )
 {
   int par4 = ISNIL(4)? (int) QMessageBox::Ok : hb_parni(4);
   int par5 = ISNIL(5)? (int) QMessageBox::NoButton : hb_parni(5);
-  hb_retni( (int) QMessageBox::question ( PQWIDGET(1), PQSTRING(2), PQSTRING(3),  (QMessageBox::StandardButtons) par4,  (QMessageBox::StandardButton) par5 ) );
+  hb_retni( (int) QMessageBox::question ( PQWIDGET(1), PQSTRING(2), PQSTRING(3), (QMessageBox::StandardButtons) par4, (QMessageBox::StandardButton) par5 ) );
 }
 
 
@@ -768,7 +768,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_WARNING )
 {
   int par4 = ISNIL(4)? (int) QMessageBox::Ok : hb_parni(4);
   int par5 = ISNIL(5)? (int) QMessageBox::NoButton : hb_parni(5);
-  hb_retni( (int) QMessageBox::warning ( PQWIDGET(1), PQSTRING(2), PQSTRING(3),  (QMessageBox::StandardButtons) par4,  (QMessageBox::StandardButton) par5 ) );
+  hb_retni( (int) QMessageBox::warning ( PQWIDGET(1), PQSTRING(2), PQSTRING(3), (QMessageBox::StandardButtons) par4, (QMessageBox::StandardButton) par5 ) );
 }
 
 

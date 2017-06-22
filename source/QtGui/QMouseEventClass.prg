@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_NEW1 )
   int par3 = hb_parni(3);
   int par4 = hb_parni(4);
   int par5 = hb_parni(5);
-  QMouseEvent * o = new QMouseEvent (  (QEvent::Type) hb_parni(1), *PQPOINT(2),  (Qt::MouseButton) par3,  (Qt::MouseButtons) par4,  (Qt::KeyboardModifiers) par5 );
+  QMouseEvent * o = new QMouseEvent ( (QEvent::Type) hb_parni(1), *PQPOINT(2), (Qt::MouseButton) par3, (Qt::MouseButtons) par4, (Qt::KeyboardModifiers) par5 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_NEW2 )
   int par4 = hb_parni(4);
   int par5 = hb_parni(5);
   int par6 = hb_parni(6);
-  QMouseEvent * o = new QMouseEvent (  (QEvent::Type) hb_parni(1), *PQPOINT(2), *PQPOINT(3),  (Qt::MouseButton) par4,  (Qt::MouseButtons) par5,  (Qt::KeyboardModifiers) par6 );
+  QMouseEvent * o = new QMouseEvent ( (QEvent::Type) hb_parni(1), *PQPOINT(2), *PQPOINT(3), (Qt::MouseButton) par4, (Qt::MouseButtons) par5, (Qt::KeyboardModifiers) par6 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_CREATEEXTENDEDMOUSEEVENT )
   int par4 = hb_parni(4);
   int par5 = hb_parni(5);
   int par6 = hb_parni(6);
-  QMouseEvent * ptr = QMouseEvent::createExtendedMouseEvent (  (QEvent::Type) hb_parni(1), *PQPOINTF(2), *PQPOINT(3),  (Qt::MouseButton) par4,  (Qt::MouseButtons) par5,  (Qt::KeyboardModifiers) par6 );
+  QMouseEvent * ptr = QMouseEvent::createExtendedMouseEvent ( (QEvent::Type) hb_parni(1), *PQPOINTF(2), *PQPOINT(3), (Qt::MouseButton) par4, (Qt::MouseButtons) par5, (Qt::KeyboardModifiers) par6 );
   _qt4xhb_createReturnClass ( ptr, "QMOUSEEVENT" );
 }
 

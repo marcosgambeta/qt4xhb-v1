@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QITEMEDITORFACTORY_CREATEEDITOR )
   QItemEditorFactory * obj = (QItemEditorFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * ptr = obj->createEditor (  (QVariant::Type) hb_parni(1), PQWIDGET(2) );
+    QWidget * ptr = obj->createEditor ( (QVariant::Type) hb_parni(1), PQWIDGET(2) );
     _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QITEMEDITORFACTORY_REGISTEREDITOR )
   {
     int par1 = hb_parni(1);
     QItemEditorCreatorBase * par2 = (QItemEditorCreatorBase *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->registerEditor (  (QVariant::Type) par1, par2 );
+    obj->registerEditor ( (QVariant::Type) par1, par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QITEMEDITORFACTORY_VALUEPROPERTYNAME )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QByteArray * ptr = new QByteArray( obj->valuePropertyName (  (QVariant::Type) par1 ) );
+    QByteArray * ptr = new QByteArray( obj->valuePropertyName ( (QVariant::Type) par1 ) );
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }

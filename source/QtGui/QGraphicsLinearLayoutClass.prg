@@ -77,7 +77,7 @@ QGraphicsLinearLayout ( Qt::Orientation orientation, QGraphicsLayoutItem * paren
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_NEW2 )
 {
   QGraphicsLayoutItem * par2 = ISNIL(2)? 0 : (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QGraphicsLinearLayout * o = new QGraphicsLinearLayout (  (Qt::Orientation) hb_parni(1), par2 );
+  QGraphicsLinearLayout * o = new QGraphicsLinearLayout ( (Qt::Orientation) hb_parni(1), par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SETALIGNMENT )
   {
     QGraphicsLayoutItem * par1 = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
-    obj->setAlignment ( par1,  (Qt::Alignment) par2 );
+    obj->setAlignment ( par1, (Qt::Alignment) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SETORIENTATION )
   QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setOrientation (  (Qt::Orientation) hb_parni(1) );
+    obj->setOrientation ( (Qt::Orientation) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SIZEHINT )
   {
     int par1 = hb_parni(1);
     QSizeF par2 = ISNIL(2)? QSizeF() : *(QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QSizeF * ptr = new QSizeF( obj->sizeHint (  (Qt::SizeHint) par1, par2 ) );
+    QSizeF * ptr = new QSizeF( obj->sizeHint ( (Qt::SizeHint) par1, par2 ) );
     _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }

@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_SETFILLRULE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setFillRule (  (Qt::FillRule) par1 );
+    obj->setFillRule ( (Qt::FillRule) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

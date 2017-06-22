@@ -114,7 +114,7 @@ QHeaderView ( Qt::Orientation orientation, QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QHEADERVIEW_NEW )
 {
-  QHeaderView * o = new QHeaderView (  (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
+  QHeaderView * o = new QHeaderView ( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QHEADERVIEW_RESIZESECTIONS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->resizeSections (  (QHeaderView::ResizeMode) par1 );
+    obj->resizeSections ( (QHeaderView::ResizeMode) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -601,7 +601,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETDEFAULTALIGNMENT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setDefaultAlignment (  (Qt::Alignment) par1 );
+    obj->setDefaultAlignment ( (Qt::Alignment) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -672,7 +672,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETRESIZEMODE1 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setResizeMode (  (QHeaderView::ResizeMode) par1 );
+    obj->setResizeMode ( (QHeaderView::ResizeMode) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -687,7 +687,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETRESIZEMODE2 )
   if( obj )
   {
     int par2 = hb_parni(2);
-    obj->setResizeMode ( PINT(1),  (QHeaderView::ResizeMode) par2 );
+    obj->setResizeMode ( PINT(1), (QHeaderView::ResizeMode) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -731,7 +731,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETSORTINDICATOR )
   if( obj )
   {
     int par2 = hb_parni(2);
-    obj->setSortIndicator ( PINT(1),  (Qt::SortOrder) par2 );
+    obj->setSortIndicator ( PINT(1), (Qt::SortOrder) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -922,7 +922,7 @@ HB_FUNC_STATIC( QHEADERVIEW_HEADERDATACHANGED )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->headerDataChanged (  (Qt::Orientation) hb_parni(1), PINT(2), PINT(3) );
+    obj->headerDataChanged ( (Qt::Orientation) hb_parni(1), PINT(2), PINT(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
