@@ -91,7 +91,7 @@ QSettings ( Scope scope, const QString & organization, const QString & applicati
 */
 HB_FUNC_STATIC( QSETTINGS_NEW2 )
 {
-  QSettings * o = new QSettings (  (QSettings::Scope) hb_parni(1), PQSTRING(2), OPQSTRING(3,QString()), OPQOBJECT(4,0) );
+  QSettings * o = new QSettings ( (QSettings::Scope) hb_parni(1), PQSTRING(2), OPQSTRING(3,QString()), OPQOBJECT(4,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -101,7 +101,7 @@ QSettings ( Format format, Scope scope, const QString & organization, const QStr
 */
 HB_FUNC_STATIC( QSETTINGS_NEW3 )
 {
-  QSettings * o = new QSettings (  (QSettings::Format) hb_parni(1),  (QSettings::Scope) hb_parni(2), PQSTRING(3), OPQSTRING(4,QString()), OPQOBJECT(5,0) );
+  QSettings * o = new QSettings ( (QSettings::Format) hb_parni(1), (QSettings::Scope) hb_parni(2), PQSTRING(3), OPQSTRING(4,QString()), OPQOBJECT(5,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -111,7 +111,7 @@ QSettings ( const QString & fileName, Format format, QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSETTINGS_NEW4 )
 {
-  QSettings * o = new QSettings ( PQSTRING(1),  (QSettings::Format) hb_parni(2), OPQOBJECT(3,0) );
+  QSettings * o = new QSettings ( PQSTRING(1), (QSettings::Format) hb_parni(2), OPQOBJECT(3,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QSETTINGS_SETINICODEC2 )
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setIniCodec (  (const char *) hb_parc(1) );
+    obj->setIniCodec ( (const char *) hb_parc(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -618,7 +618,7 @@ void setDefaultFormat ( Format format )
 */
 HB_FUNC_STATIC( QSETTINGS_SETDEFAULTFORMAT )
 {
-  QSettings::setDefaultFormat (  (QSettings::Format) hb_parni(1) );
+  QSettings::setDefaultFormat ( (QSettings::Format) hb_parni(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -628,7 +628,7 @@ void setPath ( Format format, Scope scope, const QString & path )
 */
 HB_FUNC_STATIC( QSETTINGS_SETPATH )
 {
-  QSettings::setPath (  (QSettings::Format) hb_parni(1),  (QSettings::Scope) hb_parni(2), PQSTRING(3) );
+  QSettings::setPath ( (QSettings::Format) hb_parni(1), (QSettings::Scope) hb_parni(2), PQSTRING(3) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

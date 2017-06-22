@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QPROCESS_CLOSEREADCHANNEL )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->closeReadChannel (  (QProcess::ProcessChannel) hb_parni(1) );
+    obj->closeReadChannel ( (QProcess::ProcessChannel) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QPROCESS_SETPROCESSCHANNELMODE )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setProcessChannelMode (  (QProcess::ProcessChannelMode) hb_parni(1) );
+    obj->setProcessChannelMode ( (QProcess::ProcessChannelMode) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QPROCESS_SETREADCHANNEL )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setReadChannel (  (QProcess::ProcessChannel) hb_parni(1) );
+    obj->setReadChannel ( (QProcess::ProcessChannel) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

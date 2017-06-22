@@ -219,7 +219,7 @@ void singleShot ( int msec, QObject * receiver, const char * member )
 */
 HB_FUNC_STATIC( QTIMER_SINGLESHOT )
 {
-  QTimer::singleShot ( PINT(1), PQOBJECT(2),  (const char *) hb_parc(3) );
+  QTimer::singleShot ( PINT(1), PQOBJECT(2), (const char *) hb_parc(3) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

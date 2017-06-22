@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QDATETIME_SETTIMESPEC )
   QDateTime * obj = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setTimeSpec (  (Qt::TimeSpec) hb_parni(1) );
+    obj->setTimeSpec ( (Qt::TimeSpec) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -492,7 +492,7 @@ HB_FUNC_STATIC( QDATETIME_TOTIMESPEC )
   QDateTime * obj = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDateTime * ptr = new QDateTime( obj->toTimeSpec (  (Qt::TimeSpec) hb_parni(1) ) );
+    QDateTime * ptr = new QDateTime( obj->toTimeSpec ( (Qt::TimeSpec) hb_parni(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }

@@ -58,7 +58,7 @@ static int registerTypedef(const char *typeName, int aliasId)
 */
 HB_FUNC_STATIC( QMETATYPE_REGISTERTYPEDEF )
 {
-  RINT( QMetaType::registerTypedef (  (const char *) hb_parc(1), PINT(2) ) );
+  RINT( QMetaType::registerTypedef ( (const char *) hb_parc(1), PINT(2) ) );
 }
 
 
@@ -67,7 +67,7 @@ static int type(const char *typeName)
 */
 HB_FUNC_STATIC( QMETATYPE_TYPE )
 {
-  RINT( QMetaType::type (  (const char *) hb_parc(1) ) );
+  RINT( QMetaType::type ( (const char *) hb_parc(1) ) );
 }
 
 
@@ -117,7 +117,7 @@ static void unregisterType(const char *typeName)
 */
 HB_FUNC_STATIC( QMETATYPE_UNREGISTERTYPE )
 {
-  QMetaType::unregisterType (  (const char *) hb_parc(1) );
+  QMetaType::unregisterType ( (const char *) hb_parc(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

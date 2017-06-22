@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QFILE_OPEN1 )
   if( obj )
   {
     FILE * par1 = (FILE *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->open ( par1,  (QFile::OpenMode) hb_parni(2) ) );
+    RBOOL( obj->open ( par1, (QFile::OpenMode) hb_parni(2) ) );
   }
 }
 
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QFILE_OPEN2 )
   if( obj )
   {
     FILE * par1 = (FILE *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->open ( par1,  (QFile::OpenMode) hb_parni(2),  (QFile::FileHandleFlags) hb_parni(3) ) );
+    RBOOL( obj->open ( par1, (QFile::OpenMode) hb_parni(2), (QFile::FileHandleFlags) hb_parni(3) ) );
   }
 }
 
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QFILE_OPEN3 )
   QFile * obj = (QFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RBOOL( obj->open ( PINT(1),  (QFile::OpenMode) hb_parni(2) ) );
+    RBOOL( obj->open ( PINT(1), (QFile::OpenMode) hb_parni(2) ) );
   }
 }
 
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QFILE_OPEN4 )
   QFile * obj = (QFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RBOOL( obj->open ( PINT(1),  (QFile::OpenMode) hb_parni(2),  (QFile::FileHandleFlags) hb_parni(3) ) );
+    RBOOL( obj->open ( PINT(1), (QFile::OpenMode) hb_parni(2), (QFile::FileHandleFlags) hb_parni(3) ) );
   }
 }
 
@@ -382,7 +382,7 @@ HB_FUNC_STATIC( QFILE_SETPERMISSIONS1 )
   QFile * obj = (QFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RBOOL( obj->setPermissions (  (QFile::Permissions) hb_parni(1) ) );
+    RBOOL( obj->setPermissions ( (QFile::Permissions) hb_parni(1) ) );
   }
 }
 
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QFILE_OPEN6 )
   QFile * obj = (QFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RBOOL( obj->open (  (QFile::OpenMode) hb_parni(1) ) );
+    RBOOL( obj->open ( (QFile::OpenMode) hb_parni(1) ) );
   }
 }
 
@@ -577,7 +577,7 @@ QString decodeName ( const char * localFileName )
 */
 HB_FUNC_STATIC( QFILE_DECODENAME2 )
 {
-  QString str1 = QFile::decodeName (  (const char *) hb_parc(1) );
+  QString str1 = QFile::decodeName ( (const char *) hb_parc(1) );
   hb_retc( RQSTRING(str1) );
 }
 
@@ -758,7 +758,7 @@ bool setPermissions ( const QString & fileName, Permissions permissions )
 */
 HB_FUNC_STATIC( QFILE_SETPERMISSIONS2 )
 {
-  RBOOL( QFile::setPermissions ( PQSTRING(1),  (QFile::Permissions) hb_parni(2) ) );
+  RBOOL( QFile::setPermissions ( PQSTRING(1), (QFile::Permissions) hb_parni(2) ) );
 }
 
 

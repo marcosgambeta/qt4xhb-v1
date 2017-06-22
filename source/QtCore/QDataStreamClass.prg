@@ -86,7 +86,7 @@ QDataStream ( QByteArray * a, QIODevice::OpenMode mode )
 */
 HB_FUNC_STATIC( QDATASTREAM_NEW3 )
 {
-  QDataStream * o = new QDataStream ( PQBYTEARRAY(1),  (QIODevice::OpenMode) hb_parni(2) );
+  QDataStream * o = new QDataStream ( PQBYTEARRAY(1), (QIODevice::OpenMode) hb_parni(2) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QDATASTREAM_SETBYTEORDER )
   QDataStream * obj = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setByteOrder (  (QDataStream::ByteOrder) hb_parni(1) );
+    obj->setByteOrder ( (QDataStream::ByteOrder) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QDATASTREAM_SETFLOATINGPOINTPRECISION )
   QDataStream * obj = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setFloatingPointPrecision (  (QDataStream::FloatingPointPrecision) hb_parni(1) );
+    obj->setFloatingPointPrecision ( (QDataStream::FloatingPointPrecision) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QDATASTREAM_SETSTATUS )
   QDataStream * obj = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setStatus (  (QDataStream::Status) hb_parni(1) );
+    obj->setStatus ( (QDataStream::Status) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QDATASTREAM_WRITERAWDATA )
   QDataStream * obj = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RINT( obj->writeRawData (  (const char *) hb_parc(1), PINT(2) ) );
+    RINT( obj->writeRawData ( (const char *) hb_parc(1), PINT(2) ) );
   }
 }
 

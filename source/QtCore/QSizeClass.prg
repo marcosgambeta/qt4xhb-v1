@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QSIZE_SCALE1 )
   QSize * obj = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->scale ( PINT(1), PINT(2),  (Qt::AspectRatioMode) hb_parni(3) );
+    obj->scale ( PINT(1), PINT(2), (Qt::AspectRatioMode) hb_parni(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QSIZE_SCALE2 )
   QSize * obj = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->scale ( *PQSIZE(1),  (Qt::AspectRatioMode) hb_parni(2) );
+    obj->scale ( *PQSIZE(1), (Qt::AspectRatioMode) hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

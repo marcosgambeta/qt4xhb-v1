@@ -665,7 +665,7 @@ HB_FUNC_STATIC( QFILEINFO_PERMISSION )
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RBOOL( obj->permission (  (QFile::Permissions) hb_parni(1) ) );
+    RBOOL( obj->permission ( (QFile::Permissions) hb_parni(1) ) );
   }
 }
 

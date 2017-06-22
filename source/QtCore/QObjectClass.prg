@@ -1773,7 +1773,7 @@ HB_FUNC_STATIC( QOBJECT_INHERITS )
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RBOOL( obj->inherits (  (const char *) hb_parc(1) ) );
+    RBOOL( obj->inherits ( (const char *) hb_parc(1) ) );
   }
 }
 
@@ -1884,7 +1884,7 @@ HB_FUNC_STATIC( QOBJECT_PROPERTY )
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->property (  (const char *) hb_parc(1) ) );
+    QVariant * ptr = new QVariant( obj->property ( (const char *) hb_parc(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -1940,7 +1940,7 @@ HB_FUNC_STATIC( QOBJECT_SETPROPERTY )
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RBOOL( obj->setProperty (  (const char *) hb_parc(1), *PQVARIANT(2) ) );
+    RBOOL( obj->setProperty ( (const char *) hb_parc(1), *PQVARIANT(2) ) );
   }
 }
 

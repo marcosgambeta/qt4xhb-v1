@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QEVENTLOOP_PROCESSEVENTS2 )
   QEventLoop * obj = (QEventLoop *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->processEvents (  (QEventLoop::ProcessEventsFlags) hb_parni(1), PINT(2) );
+    obj->processEvents ( (QEventLoop::ProcessEventsFlags) hb_parni(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

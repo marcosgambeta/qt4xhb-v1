@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QTRANSLATOR_TRANSLATE )
   QTranslator * obj = (QTranslator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->translate (  (const char *) hb_parc(1),  (const char *) hb_parc(2),  (const char *) hb_parc(3), OPINT(4,-1) );
+    QString str1 = obj->translate ( (const char *) hb_parc(1), (const char *) hb_parc(2), (const char *) hb_parc(3), OPINT(4,-1) );
     hb_retc( RQSTRING(str1) );
   }
 }

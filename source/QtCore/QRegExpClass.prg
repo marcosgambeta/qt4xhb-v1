@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QREGEXP_SETCASESENSITIVITY )
   QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setCaseSensitivity (  (Qt::CaseSensitivity) hb_parni(1) );
+    obj->setCaseSensitivity ( (Qt::CaseSensitivity) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QREGEXP_SETPATTERNSYNTAX )
   QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setPatternSyntax (  (QRegExp::PatternSyntax) hb_parni(1) );
+    obj->setPatternSyntax ( (QRegExp::PatternSyntax) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

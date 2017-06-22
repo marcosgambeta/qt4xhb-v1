@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QTEXTDECODER_NEW2 )
 {
   const QTextCodec * par1 = (const QTextCodec *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = hb_parni(2);
-  QTextDecoder * o = new QTextDecoder ( par1,  (QTextCodec::ConversionFlags) par2 );
+  QTextDecoder * o = new QTextDecoder ( par1, (QTextCodec::ConversionFlags) par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QTEXTDECODER_TOUNICODE1 )
   if( obj )
   {
     int par2 = hb_parni(2);
-    QString str1 = obj->toUnicode (  (const char *) hb_parc(1), par2 );
+    QString str1 = obj->toUnicode ( (const char *) hb_parc(1), par2 );
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QTEXTDECODER_TOUNICODE2 )
   {
     QString * par1 = NULL;
     int par3 = hb_parni(3);
-    obj->toUnicode ( par1,  (const char *) hb_parc(2), par3 );
+    obj->toUnicode ( par1, (const char *) hb_parc(2), par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

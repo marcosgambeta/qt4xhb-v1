@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QTHREAD_SETPRIORITY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setPriority (  (QThread::Priority) par1 );
+    obj->setPriority ( (QThread::Priority) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

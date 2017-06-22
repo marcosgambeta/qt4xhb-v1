@@ -65,7 +65,7 @@ QStringMatcher(const QString &pattern,Qt::CaseSensitivity cs = Qt::CaseSensitive
 HB_FUNC_STATIC( QSTRINGMATCHER_NEW2 )
 {
   int par2 = ISNIL(2)? (int) Qt::CaseSensitive : hb_parni(2);
-  QStringMatcher * o = new QStringMatcher ( PQSTRING(1),  (Qt::CaseSensitivity) par2 );
+  QStringMatcher * o = new QStringMatcher ( PQSTRING(1), (Qt::CaseSensitivity) par2 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QSTRINGMATCHER_NEW3 )
 {
   const QChar * par1 = (const QChar *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par3 = ISNIL(3)? (int) Qt::CaseSensitive : hb_parni(3);
-  QStringMatcher * o = new QStringMatcher ( par1, PINT(2),  (Qt::CaseSensitivity) par3 );
+  QStringMatcher * o = new QStringMatcher ( par1, PINT(2), (Qt::CaseSensitivity) par3 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QSTRINGMATCHER_SETCASESENSITIVITY )
   QStringMatcher * obj = (QStringMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setCaseSensitivity (  (Qt::CaseSensitivity) hb_parni(1) );
+    obj->setCaseSensitivity ( (Qt::CaseSensitivity) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

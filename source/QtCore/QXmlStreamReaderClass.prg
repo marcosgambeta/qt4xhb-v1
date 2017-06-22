@@ -153,7 +153,7 @@ QXmlStreamReader(const char * data)
 */
 HB_FUNC_STATIC( QXMLSTREAMREADER_NEW5 )
 {
-  QXmlStreamReader * o = new QXmlStreamReader (  (const char *) hb_parc(1) );
+  QXmlStreamReader * o = new QXmlStreamReader ( (const char *) hb_parc(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ADDDATA3 )
   QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->addData (  (const char *) hb_parc(1) );
+    obj->addData ( (const char *) hb_parc(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

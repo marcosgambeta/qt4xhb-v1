@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_OPEN1 )
   if( obj )
   {
     FILE * par2 = (FILE *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->open (  (QIODevice::OpenMode) hb_parni(1), par2 ) );
+    RBOOL( obj->open ( (QIODevice::OpenMode) hb_parni(1), par2 ) );
   }
 }
 
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_OPEN2 )
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RBOOL( obj->open (  (QIODevice::OpenMode) hb_parni(1), PINT(2) ) );
+    RBOOL( obj->open ( (QIODevice::OpenMode) hb_parni(1), PINT(2) ) );
   }
 }
 
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_OPEN3 )
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RBOOL( obj->open (  (QIODevice::OpenMode) hb_parni(1), PINT(2),  (QFile::FileHandleFlags) hb_parni(3) ) );
+    RBOOL( obj->open ( (QIODevice::OpenMode) hb_parni(1), PINT(2), (QFile::FileHandleFlags) hb_parni(3) ) );
   }
 }
 
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_OPEN4 )
   if( obj )
   {
     FILE * par2 = (FILE *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->open (  (QIODevice::OpenMode) hb_parni(1), par2,  (QFile::FileHandleFlags) hb_parni(3) ) );
+    RBOOL( obj->open ( (QIODevice::OpenMode) hb_parni(1), par2, (QFile::FileHandleFlags) hb_parni(3) ) );
   }
 }
 
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_FILEFLAGS )
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->fileFlags (  (QAbstractFileEngine::FileFlags) hb_parni(1) ) );
+    hb_retni( (int) obj->fileFlags ( (QAbstractFileEngine::FileFlags) hb_parni(1) ) );
   }
 }
 
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_FILENAME )
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->fileName (  (QAbstractFileEngine::FileName) hb_parni(1) );
+    QString str1 = obj->fileName ( (QAbstractFileEngine::FileName) hb_parni(1) );
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_FILETIME )
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDateTime * ptr = new QDateTime( obj->fileTime (  (QAbstractFileEngine::FileTime) hb_parni(1) ) );
+    QDateTime * ptr = new QDateTime( obj->fileTime ( (QAbstractFileEngine::FileTime) hb_parni(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_OWNER )
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->owner (  (QAbstractFileEngine::FileOwner) hb_parni(1) );
+    QString str1 = obj->owner ( (QAbstractFileEngine::FileOwner) hb_parni(1) );
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_OWNERID )
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (uint) obj->ownerId (  (QAbstractFileEngine::FileOwner) hb_parni(1) ) );
+    hb_retni( (uint) obj->ownerId ( (QAbstractFileEngine::FileOwner) hb_parni(1) ) );
   }
 }
 
@@ -556,7 +556,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_SUPPORTSEXTENSION )
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RBOOL( obj->supportsExtension (  (QAbstractFileEngine::Extension) hb_parni(1) ) );
+    RBOOL( obj->supportsExtension ( (QAbstractFileEngine::Extension) hb_parni(1) ) );
   }
 }
 
@@ -569,7 +569,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_WRITE )
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RQINT64( obj->write (  (const char *) hb_parc(1), PQINT64(2) ) );
+    RQINT64( obj->write ( (const char *) hb_parc(1), PQINT64(2) ) );
   }
 }
 

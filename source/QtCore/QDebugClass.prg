@@ -75,7 +75,7 @@ QDebug ( QtMsgType type )
 */
 HB_FUNC_STATIC( QDEBUG_NEW3 )
 {
-  QDebug * o = new QDebug (  (QtMsgType) hb_parni(1) );
+  QDebug * o = new QDebug ( (QtMsgType) hb_parni(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

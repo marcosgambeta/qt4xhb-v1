@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QMETAENUM_KEYTOVALUE )
   QMetaEnum * obj = (QMetaEnum *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RINT( obj->keyToValue (  (const char *) hb_parc(1) ) );
+    RINT( obj->keyToValue ( (const char *) hb_parc(1) ) );
   }
 }
 
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QMETAENUM_KEYSTOVALUE )
   QMetaEnum * obj = (QMetaEnum *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RINT( obj->keysToValue (  (const char *) hb_parc(1) ) );
+    RINT( obj->keysToValue ( (const char *) hb_parc(1) ) );
   }
 }
 

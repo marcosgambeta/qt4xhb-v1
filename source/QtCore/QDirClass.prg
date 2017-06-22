@@ -727,7 +727,7 @@ HB_FUNC_STATIC( QDIR_SETFILTER )
   QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setFilter (  (QDir::Filters) hb_parni(1) );
+    obj->setFilter ( (QDir::Filters) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -769,7 +769,7 @@ HB_FUNC_STATIC( QDIR_SETSORTING )
   QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setSorting (  (QDir::SortFlags) hb_parni(1) );
+    obj->setSorting ( (QDir::SortFlags) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -93,7 +93,7 @@ static QString location(LibraryLocation)
 */
 HB_FUNC_STATIC( QLIBRARYINFO_LOCATION )
 {
-  QString str1 = QLibraryInfo::location (  (QLibraryInfo::LibraryLocation) hb_parni(1) );
+  QString str1 = QLibraryInfo::location ( (QLibraryInfo::LibraryLocation) hb_parni(1) );
   hb_retc( RQSTRING(str1) );
 }
 

@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QIODEVICE_OPEN )
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RBOOL( obj->open (  (QIODevice::OpenMode) hb_parni(1) ) );
+    RBOOL( obj->open ( (QIODevice::OpenMode) hb_parni(1) ) );
   }
 }
 
@@ -571,7 +571,7 @@ HB_FUNC_STATIC( QIODEVICE_WRITE1 )
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RQINT64( obj->write (  (const char *) hb_parc(1), PQINT64(2) ) );
+    RQINT64( obj->write ( (const char *) hb_parc(1), PQINT64(2) ) );
   }
 }
 
@@ -584,7 +584,7 @@ HB_FUNC_STATIC( QIODEVICE_WRITE2 )
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RQINT64( obj->write (  (const char *) hb_parc(1) ) );
+    RQINT64( obj->write ( (const char *) hb_parc(1) ) );
   }
 }
 

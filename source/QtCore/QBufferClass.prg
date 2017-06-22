@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QBUFFER_SETDATA2 )
   QBuffer * obj = (QBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setData (  (const char *) hb_parc(1), PINT(2) );
+    obj->setData ( (const char *) hb_parc(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QBUFFER_OPEN )
   QBuffer * obj = (QBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RBOOL( obj->open (  (QBuffer::OpenMode) hb_parni(1) ) );
+    RBOOL( obj->open ( (QBuffer::OpenMode) hb_parni(1) ) );
   }
 }
 

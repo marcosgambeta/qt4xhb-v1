@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QTIMELINE_SETCURVESHAPE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setCurveShape (  (QTimeLine::CurveShape) par1 );
+    obj->setCurveShape ( (QTimeLine::CurveShape) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QTIMELINE_SETDIRECTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setDirection (  (QTimeLine::Direction) par1 );
+    obj->setDirection ( (QTimeLine::Direction) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

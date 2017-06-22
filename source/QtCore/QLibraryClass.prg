@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QLIBRARY_RESOLVE1 )
   QLibrary * obj = (QLibrary *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    void * retptr = obj->resolve (  (const char *) hb_parc(1) );
+    void * retptr = obj->resolve ( (const char *) hb_parc(1) );
     hb_retptr( (void *) retptr );
   }
 }
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QLIBRARY_SETLOADHINTS )
   QLibrary * obj = (QLibrary *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setLoadHints (  (QLibrary::LoadHints) hb_parni(1) );
+    obj->setLoadHints ( (QLibrary::LoadHints) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -310,7 +310,7 @@ static void *resolve(const QString &fileName, const char *symbol)
 */
 HB_FUNC_STATIC( QLIBRARY_RESOLVE2 )
 {
-  void * retptr = QLibrary::resolve ( PQSTRING(1),  (const char *) hb_parc(2) );
+  void * retptr = QLibrary::resolve ( PQSTRING(1), (const char *) hb_parc(2) );
   hb_retptr( (void *) retptr );
 }
 
@@ -320,7 +320,7 @@ static void *resolve(const QString &fileName, int verNum, const char *symbol)
 */
 HB_FUNC_STATIC( QLIBRARY_RESOLVE3 )
 {
-  void * retptr = QLibrary::resolve ( PQSTRING(1), PINT(2),  (const char *) hb_parc(3) );
+  void * retptr = QLibrary::resolve ( PQSTRING(1), PINT(2), (const char *) hb_parc(3) );
   hb_retptr( (void *) retptr );
 }
 
@@ -330,7 +330,7 @@ static void *resolve(const QString &fileName, const QString &version, const char
 */
 HB_FUNC_STATIC( QLIBRARY_RESOLVE4 )
 {
-  void * retptr = QLibrary::resolve ( PQSTRING(1), PQSTRING(2),  (const char *) hb_parc(3) );
+  void * retptr = QLibrary::resolve ( PQSTRING(1), PQSTRING(2), (const char *) hb_parc(3) );
   hb_retptr( (void *) retptr );
 }
 

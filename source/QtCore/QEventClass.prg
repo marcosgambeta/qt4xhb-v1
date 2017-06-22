@@ -51,7 +51,7 @@ QEvent ( Type type )
 */
 HB_FUNC_STATIC( QEVENT_NEW )
 {
-  QEvent * o = new QEvent (  (QEvent::Type) hb_parni(1) );
+  QEvent * o = new QEvent ( (QEvent::Type) hb_parni(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

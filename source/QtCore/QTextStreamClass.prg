@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_NEW3 )
 {
   FILE * par1 = (FILE *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = ISNIL(2)? (int) QIODevice::ReadWrite : hb_parni(2);
-  QTextStream * o = new QTextStream ( par1,  (QIODevice::OpenMode) par2 );
+  QTextStream * o = new QTextStream ( par1, (QIODevice::OpenMode) par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_NEW4 )
 {
   QString * par1 = NULL;
   int par2 = ISNIL(2)? (int) QIODevice::ReadWrite : hb_parni(2);
-  QTextStream * o = new QTextStream ( par1,  (QIODevice::OpenMode) par2 );
+  QTextStream * o = new QTextStream ( par1, (QIODevice::OpenMode) par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -142,7 +142,7 @@ QTextStream(const QByteArray &array, QIODevice::OpenMode openMode = QIODevice::R
 HB_FUNC_STATIC( QTEXTSTREAM_NEW6 )
 {
   int par2 = ISNIL(2)? (int) QIODevice::ReadOnly : hb_parni(2);
-  QTextStream * o = new QTextStream ( *PQBYTEARRAY(1),  (QIODevice::OpenMode) par2 );
+  QTextStream * o = new QTextStream ( *PQBYTEARRAY(1), (QIODevice::OpenMode) par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SETCODEC2 )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setCodec (  (const char *) hb_parc(1) );
+    obj->setCodec ( (const char *) hb_parc(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SETSTRING )
   {
     QString * par1 = NULL;
     int par2 = ISNIL(2)? (int) QIODevice::ReadWrite : hb_parni(2);
-    obj->setString ( par1,  (QIODevice::OpenMode) par2 );
+    obj->setString ( par1, (QIODevice::OpenMode) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SETSTATUS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setStatus (  (QTextStream::Status) par1 );
+    obj->setStatus ( (QTextStream::Status) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -570,7 +570,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SETFIELDALIGNMENT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setFieldAlignment (  (QTextStream::FieldAlignment) par1 );
+    obj->setFieldAlignment ( (QTextStream::FieldAlignment) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -654,7 +654,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SETNUMBERFLAGS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setNumberFlags (  (QTextStream::NumberFlags) par1 );
+    obj->setNumberFlags ( (QTextStream::NumberFlags) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -709,7 +709,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SETREALNUMBERNOTATION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setRealNumberNotation (  (QTextStream::RealNumberNotation) par1 );
+    obj->setRealNumberNotation ( (QTextStream::RealNumberNotation) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

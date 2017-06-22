@@ -45,7 +45,7 @@ QChildEvent(Type type, QObject * child)
 */
 HB_FUNC_STATIC( QCHILDEVENT_NEW )
 {
-  QChildEvent * o = new QChildEvent (  (QEvent::Type) hb_parni(1), PQOBJECT(2) );
+  QChildEvent * o = new QChildEvent ( (QEvent::Type) hb_parni(1), PQOBJECT(2) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_POSTEVENT )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) QStateMachine::NormalPriority : hb_parni(2);
-    obj->postEvent ( PQEVENT(1),  (QStateMachine::EventPriority) par2 );
+    obj->postEvent ( PQEVENT(1), (QStateMachine::EventPriority) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_SETGLOBALRESTOREPOLICY )
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setGlobalRestorePolicy (  (QStateMachine::RestorePolicy) hb_parni(1) );
+    obj->setGlobalRestorePolicy ( (QStateMachine::RestorePolicy) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

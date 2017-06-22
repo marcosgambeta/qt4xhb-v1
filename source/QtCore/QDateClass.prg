@@ -520,7 +520,7 @@ QString longDayName ( int weekday, MonthNameType type )
 */
 HB_FUNC_STATIC( QDATE_LONGDAYNAME2 )
 {
-  QString str1 = QDate::longDayName ( PINT(1),  (QDate::MonthNameType) hb_parni(2) );
+  QString str1 = QDate::longDayName ( PINT(1), (QDate::MonthNameType) hb_parni(2) );
   hb_retc( RQSTRING(str1) );
 }
 
@@ -555,7 +555,7 @@ QString longMonthName ( int month, MonthNameType type )
 */
 HB_FUNC_STATIC( QDATE_LONGMONTHNAME2 )
 {
-  QString str1 = QDate::longMonthName ( PINT(1),  (QDate::MonthNameType) hb_parni(2) );
+  QString str1 = QDate::longMonthName ( PINT(1), (QDate::MonthNameType) hb_parni(2) );
   hb_retc( RQSTRING(str1) );
 }
 
@@ -590,7 +590,7 @@ QString shortDayName ( int weekday, MonthNameType type )
 */
 HB_FUNC_STATIC( QDATE_SHORTDAYNAME2 )
 {
-  QString str1 = QDate::shortDayName ( PINT(1),  (QDate::MonthNameType) hb_parni(2) );
+  QString str1 = QDate::shortDayName ( PINT(1), (QDate::MonthNameType) hb_parni(2) );
   hb_retc( RQSTRING(str1) );
 }
 
@@ -625,7 +625,7 @@ QString shortMonthName ( int month, MonthNameType type )
 */
 HB_FUNC_STATIC( QDATE_SHORTMONTHNAME2 )
 {
-  QString str1 = QDate::shortMonthName ( PINT(1),  (QDate::MonthNameType) hb_parni(2) );
+  QString str1 = QDate::shortMonthName ( PINT(1), (QDate::MonthNameType) hb_parni(2) );
   hb_retc( RQSTRING(str1) );
 }
 

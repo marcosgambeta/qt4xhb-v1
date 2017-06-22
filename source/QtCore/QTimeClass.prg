@@ -379,7 +379,7 @@ QTime fromString(const QString & string, Qt::DateFormat format = Qt::TextDate)
 HB_FUNC_STATIC( QTIME_FROMSTRING1 )
 {
   int par2 = ISNIL(2)? (int) Qt::TextDate : hb_parni(2);
-  QTime * ptr = new QTime( QTime::fromString ( PQSTRING(1),  (Qt::DateFormat) par2 ) );
+  QTime * ptr = new QTime( QTime::fromString ( PQSTRING(1), (Qt::DateFormat) par2 ) );
   _qt4xhb_createReturnClass ( ptr, "QTIME", true );
 }
 

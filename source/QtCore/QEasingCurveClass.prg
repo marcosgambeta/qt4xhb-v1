@@ -54,7 +54,7 @@ QEasingCurve ( Type type = Linear )
 */
 HB_FUNC_STATIC( QEASINGCURVE_NEW1 )
 {
-  QEasingCurve * o = new QEasingCurve (  (QEasingCurve::Type) hb_parni(1) );
+  QEasingCurve * o = new QEasingCurve ( (QEasingCurve::Type) hb_parni(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QEASINGCURVE_SETTYPE )
   QEasingCurve * obj = (QEasingCurve *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setType (  (QEasingCurve::Type) hb_parni(1) );
+    obj->setType ( (QEasingCurve::Type) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -58,7 +58,7 @@ QSignalTransition(QObject *sender, const char *signal,QState *sourceState = 0)
 */
 HB_FUNC_STATIC( QSIGNALTRANSITION_NEW2 )
 {
-  QSignalTransition * o = new QSignalTransition ( PQOBJECT(1),  (const char *) hb_parc(2), OPQSTATE(3,0) );
+  QSignalTransition * o = new QSignalTransition ( PQOBJECT(1), (const char *) hb_parc(2), OPQSTATE(3,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

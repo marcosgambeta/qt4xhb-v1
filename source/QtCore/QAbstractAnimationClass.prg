@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_SETDIRECTION )
   QAbstractAnimation * obj = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setDirection (  (QAbstractAnimation::Direction) hb_parni(1) );
+    obj->setDirection ( (QAbstractAnimation::Direction) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

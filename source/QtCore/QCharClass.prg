@@ -181,7 +181,7 @@ QChar ( SpecialCharacter ch )
 */
 HB_FUNC_STATIC( QCHAR_NEW10 )
 {
-  QChar * o = new QChar (  (QChar::SpecialCharacter) hb_parni(1) );
+  QChar * o = new QChar ( (QChar::SpecialCharacter) hb_parni(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

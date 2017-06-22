@@ -79,7 +79,7 @@ QTextBoundaryFinder(BoundaryType type, const QString &string)
 */
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW3 )
 {
-  QTextBoundaryFinder * o = new QTextBoundaryFinder (  (QTextBoundaryFinder::BoundaryType) hb_parni(1), PQSTRING(2) );
+  QTextBoundaryFinder * o = new QTextBoundaryFinder ( (QTextBoundaryFinder::BoundaryType) hb_parni(1), PQSTRING(2) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW4 )
 {
   const QChar * par2 = (const QChar *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
   unsigned char * par4 = ISNIL(4)? 0 : (unsigned char *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QTextBoundaryFinder * o = new QTextBoundaryFinder (  (QTextBoundaryFinder::BoundaryType) hb_parni(1), par2, PINT(3), par4, OPINT(5,0) );
+  QTextBoundaryFinder * o = new QTextBoundaryFinder ( (QTextBoundaryFinder::BoundaryType) hb_parni(1), par2, PINT(3), par4, OPINT(5,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

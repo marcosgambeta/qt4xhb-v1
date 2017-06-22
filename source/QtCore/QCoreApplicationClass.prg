@@ -397,7 +397,7 @@ void processEvents ( QEventLoop::ProcessEventsFlags flags, int maxtime )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_PROCESSEVENTS2 )
 {
-  QCoreApplication::processEvents (  (QEventLoop::ProcessEventsFlags) hb_parni(1), PINT(2) );
+  QCoreApplication::processEvents ( (QEventLoop::ProcessEventsFlags) hb_parni(1), PINT(2) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -542,7 +542,7 @@ void setAttribute ( Qt::ApplicationAttribute attribute, bool on = true )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_SETATTRIBUTE )
 {
-  QCoreApplication::setAttribute (  (Qt::ApplicationAttribute) hb_parni(1), OPBOOL(2,true) );
+  QCoreApplication::setAttribute ( (Qt::ApplicationAttribute) hb_parni(1), OPBOOL(2,true) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -591,7 +591,7 @@ bool testAttribute ( Qt::ApplicationAttribute attribute )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_TESTATTRIBUTE )
 {
-  RBOOL( QCoreApplication::testAttribute (  (Qt::ApplicationAttribute) hb_parni(1) ) );
+  RBOOL( QCoreApplication::testAttribute ( (Qt::ApplicationAttribute) hb_parni(1) ) );
 }
 
 
@@ -600,7 +600,7 @@ QString translate ( const char * context, const char * sourceText, const char * 
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE1 )
 {
-  QString str1 = QCoreApplication::translate (  (const char *) hb_parc(1),  (const char *) hb_parc(2),  (const char *) hb_parc(3),  (QCoreApplication::Encoding) hb_parni(4), PINT(5) );
+  QString str1 = QCoreApplication::translate ( (const char *) hb_parc(1), (const char *) hb_parc(2), (const char *) hb_parc(3), (QCoreApplication::Encoding) hb_parni(4), PINT(5) );
   hb_retc( RQSTRING(str1) );
 }
 
@@ -610,7 +610,7 @@ QString translate ( const char * context, const char * sourceText, const char * 
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE2 )
 {
-  QString str1 = QCoreApplication::translate (  (const char *) hb_parc(1),  (const char *) hb_parc(2),  (const char *) hb_parc(3), ISNIL(4)? QCoreApplication::CodecForTr : (QCoreApplication::Encoding) hb_parni(4) );
+  QString str1 = QCoreApplication::translate ( (const char *) hb_parc(1), (const char *) hb_parc(2), (const char *) hb_parc(3), ISNIL(4)? QCoreApplication::CodecForTr : (QCoreApplication::Encoding) hb_parni(4) );
   hb_retc( RQSTRING(str1) );
 }
 

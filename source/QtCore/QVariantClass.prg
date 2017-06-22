@@ -195,7 +195,7 @@ QVariant ( Qt::GlobalColor color )
 */
 HB_FUNC_STATIC( QVARIANT_NEW5 )
 {
-  QVariant * o = new QVariant (  (Qt::GlobalColor) hb_parni(1) );
+  QVariant * o = new QVariant ( (Qt::GlobalColor) hb_parni(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -205,7 +205,7 @@ QVariant ( Type type )
 */
 HB_FUNC_STATIC( QVARIANT_NEW6 )
 {
-  QVariant * o = new QVariant (  (QVariant::Type) hb_parni(1) );
+  QVariant * o = new QVariant ( (QVariant::Type) hb_parni(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -319,7 +319,7 @@ QVariant ( const char * val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW17 )
 {
-  QVariant * o = new QVariant (  (const char *) hb_parc(1) );
+  QVariant * o = new QVariant ( (const char *) hb_parc(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -687,7 +687,7 @@ HB_FUNC_STATIC( QVARIANT_CANCONVERT )
   QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RBOOL( obj->canConvert (  (QVariant::Type) hb_parni(1) ) );
+    RBOOL( obj->canConvert ( (QVariant::Type) hb_parni(1) ) );
   }
 }
 
@@ -730,7 +730,7 @@ HB_FUNC_STATIC( QVARIANT_CONVERT )
   QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RBOOL( obj->convert (  (QVariant::Type) hb_parni(1) ) );
+    RBOOL( obj->convert ( (QVariant::Type) hb_parni(1) ) );
   }
 }
 
@@ -1169,7 +1169,7 @@ Type nameToType ( const char * name )
 */
 HB_FUNC_STATIC( QVARIANT_NAMETOTYPE )
 {
-  hb_retni( (int) QVariant::nameToType (  (const char *) hb_parc(1) ) );
+  hb_retni( (int) QVariant::nameToType ( (const char *) hb_parc(1) ) );
 }
 
 
@@ -1178,7 +1178,7 @@ const char * typeToName ( Type typ )
 */
 HB_FUNC_STATIC( QVARIANT_TYPETONAME )
 {
-  const char * str1 = QVariant::typeToName (  (QVariant::Type) hb_parni(1) );
+  const char * str1 = QVariant::typeToName ( (QVariant::Type) hb_parni(1) );
   hb_retc( str1 );
 }
 

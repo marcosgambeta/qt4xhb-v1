@@ -65,7 +65,7 @@ QReadWriteLock ( RecursionMode recursionMode )
 */
 HB_FUNC_STATIC( QREADWRITELOCK_NEW2 )
 {
-  QReadWriteLock * o = new QReadWriteLock (  (QReadWriteLock::RecursionMode) hb_parni(1) );
+  QReadWriteLock * o = new QReadWriteLock ( (QReadWriteLock::RecursionMode) hb_parni(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 

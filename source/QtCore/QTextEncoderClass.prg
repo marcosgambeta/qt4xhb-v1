@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QTEXTENCODER_NEW2 )
 {
   const QTextCodec * par1 = (const QTextCodec *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = hb_parni(2);
-  QTextEncoder * o = new QTextEncoder ( par1,  (QTextCodec::ConversionFlags) par2 );
+  QTextEncoder * o = new QTextEncoder ( par1, (QTextCodec::ConversionFlags) par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

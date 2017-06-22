@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_PROCESSEVENTS )
   QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RBOOL( obj->processEvents (  (QEventLoop::ProcessEventsFlags) hb_parni(1) ) );
+    RBOOL( obj->processEvents ( (QEventLoop::ProcessEventsFlags) hb_parni(1) ) );
   }
 }
 

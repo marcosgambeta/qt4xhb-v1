@@ -101,7 +101,7 @@ QUuid(const char *)
 */
 HB_FUNC_STATIC( QUUID_NEW4 )
 {
-  QUuid * o = new QUuid (  (const char *) hb_parc(1) );
+  QUuid * o = new QUuid ( (const char *) hb_parc(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 

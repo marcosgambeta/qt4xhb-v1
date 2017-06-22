@@ -76,7 +76,7 @@ QByteArrayMatcher ( const char * pattern, int length )
 */
 HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW3 )
 {
-  QByteArrayMatcher * o = new QByteArrayMatcher (  (const char *) hb_parc(1), PINT(2) );
+  QByteArrayMatcher * o = new QByteArrayMatcher ( (const char *) hb_parc(1), PINT(2) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_INDEXIN2 )
   QByteArrayMatcher * obj = (QByteArrayMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RINT( obj->indexIn (  (const char *) hb_parc(1), PINT(2), OPINT(3,0) ) );
+    RINT( obj->indexIn ( (const char *) hb_parc(1), PINT(2), OPINT(3,0) ) );
   }
 }
 

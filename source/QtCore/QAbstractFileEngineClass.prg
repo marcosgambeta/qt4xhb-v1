@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_ENTRYLIST )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList strl = obj->entryList (  (QDir::Filters) hb_parni(1), PQSTRINGLIST(2) );
+    QStringList strl = obj->entryList ( (QDir::Filters) hb_parni(1), PQSTRINGLIST(2) );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_FILETIME )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDateTime * ptr = new QDateTime( obj->fileTime (  (QAbstractFileEngine::FileTime) hb_parni(1) ) );
+    QDateTime * ptr = new QDateTime( obj->fileTime ( (QAbstractFileEngine::FileTime) hb_parni(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_OPEN )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RBOOL( obj->open (  (QIODevice::OpenMode) hb_parni(1) ) );
+    RBOOL( obj->open ( (QIODevice::OpenMode) hb_parni(1) ) );
   }
 }
 
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_OWNER )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->owner (  (QAbstractFileEngine::FileOwner) hb_parni(1) );
+    QString str1 = obj->owner ( (QAbstractFileEngine::FileOwner) hb_parni(1) );
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_OWNERID )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (uint) obj->ownerId (  (QAbstractFileEngine::FileOwner) hb_parni(1) ) );
+    hb_retni( (uint) obj->ownerId ( (QAbstractFileEngine::FileOwner) hb_parni(1) ) );
   }
 }
 
@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_SUPPORTSEXTENSION )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RBOOL( obj->supportsExtension (  (QAbstractFileEngine::Extension) hb_parni(1) ) );
+    RBOOL( obj->supportsExtension ( (QAbstractFileEngine::Extension) hb_parni(1) ) );
   }
 }
 
@@ -511,7 +511,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_WRITE )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RQINT64( obj->write (  (const char *) hb_parc(1), PQINT64(2) ) );
+    RQINT64( obj->write ( (const char *) hb_parc(1), PQINT64(2) ) );
   }
 }
 

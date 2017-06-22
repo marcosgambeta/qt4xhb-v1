@@ -602,7 +602,7 @@ HB_FUNC_STATIC( QLOCALE_SETNUMBEROPTIONS )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setNumberOptions (  (QLocale::NumberOptions) hb_parni(1) );
+    obj->setNumberOptions ( (QLocale::NumberOptions) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1369,7 +1369,7 @@ QString countryToString ( Country country )
 */
 HB_FUNC_STATIC( QLOCALE_COUNTRYTOSTRING )
 {
-  QString str1 = QLocale::countryToString (  (QLocale::Country) hb_parni(1) );
+  QString str1 = QLocale::countryToString ( (QLocale::Country) hb_parni(1) );
   hb_retc( RQSTRING(str1) );
 }
 
@@ -1379,7 +1379,7 @@ QString languageToString ( Language language )
 */
 HB_FUNC_STATIC( QLOCALE_LANGUAGETOSTRING )
 {
-  QString str1 = QLocale::languageToString (  (QLocale::Language) hb_parni(1) );
+  QString str1 = QLocale::languageToString ( (QLocale::Language) hb_parni(1) );
   hb_retc( RQSTRING(str1) );
 }
 
@@ -1389,7 +1389,7 @@ QList<QLocale> matchingLocales ( QLocale::Language language, QLocale::Script scr
 */
 HB_FUNC_STATIC( QLOCALE_MATCHINGLOCALES )
 {
-  QList<QLocale> list = QLocale::matchingLocales (  (QLocale::Language) hb_parni(1),  (QLocale::Script) hb_parni(2),  (QLocale::Country) hb_parni(3) );
+  QList<QLocale> list = QLocale::matchingLocales ( (QLocale::Language) hb_parni(1), (QLocale::Script) hb_parni(2), (QLocale::Country) hb_parni(3) );
   PHB_DYNS pDynSym;
   #ifdef __XHARBOUR__
   pDynSym = hb_dynsymFind( "QLOCALE" );
@@ -1429,7 +1429,7 @@ QString scriptToString ( Script script )
 */
 HB_FUNC_STATIC( QLOCALE_SCRIPTTOSTRING )
 {
-  QString str1 = QLocale::scriptToString (  (QLocale::Script) hb_parni(1) );
+  QString str1 = QLocale::scriptToString ( (QLocale::Script) hb_parni(1) );
   hb_retc( RQSTRING(str1) );
 }
 
