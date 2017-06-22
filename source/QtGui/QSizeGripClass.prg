@@ -43,9 +43,7 @@ QSizeGrip ( QWidget * parent )
 */
 HB_FUNC_STATIC( QSIZEGRIP_NEW )
 {
-  QSizeGrip * o = NULL;
-  QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSizeGrip ( par1 );
+  QSizeGrip * o = new QSizeGrip ( PQWIDGET(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

@@ -51,12 +51,9 @@ QSpacerItem ( int w, int h, QSizePolicy::Policy hPolicy = QSizePolicy::Minimum, 
 */
 HB_FUNC_STATIC( QSPACERITEM_NEW )
 {
-  QSpacerItem * o = NULL;
-  int par1 = hb_parni(1);
-  int par2 = hb_parni(2);
   int par3 = ISNIL(3)? (int) QSizePolicy::Minimum : hb_parni(3);
   int par4 = ISNIL(4)? (int) QSizePolicy::Minimum : hb_parni(4);
-  o = new QSpacerItem ( par1, par2,  (QSizePolicy::Policy) par3,  (QSizePolicy::Policy) par4 );
+  QSpacerItem * o = new QSpacerItem ( PINT(1), PINT(2),  (QSizePolicy::Policy) par3,  (QSizePolicy::Policy) par4 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -70,11 +67,9 @@ HB_FUNC_STATIC( QSPACERITEM_CHANGESIZE )
   QSpacerItem * obj = (QSpacerItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
     int par3 = ISNIL(3)? (int) QSizePolicy::Minimum : hb_parni(3);
     int par4 = ISNIL(4)? (int) QSizePolicy::Minimum : hb_parni(4);
-    obj->changeSize ( par1, par2,  (QSizePolicy::Policy) par3,  (QSizePolicy::Policy) par4 );
+    obj->changeSize ( PINT(1), PINT(2),  (QSizePolicy::Policy) par3,  (QSizePolicy::Policy) par4 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -115,7 +110,7 @@ HB_FUNC_STATIC( QSPACERITEM_ISEMPTY )
   QSpacerItem * obj = (QSpacerItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 }
 
@@ -156,8 +151,7 @@ HB_FUNC_STATIC( QSPACERITEM_SETGEOMETRY )
   QSpacerItem * obj = (QSpacerItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRect * par1 = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setGeometry ( *par1 );
+    obj->setGeometry ( *PQRECT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

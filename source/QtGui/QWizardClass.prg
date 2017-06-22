@@ -93,10 +93,8 @@ QWizard ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
 HB_FUNC_STATIC( QWIZARD_NEW )
 {
-  QWizard * o = NULL;
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-  o = new QWizard ( par1,  (Qt::WindowFlags) par2 );
+  QWizard * o = new QWizard ( OPQWIDGET(1,0),  (Qt::WindowFlags) par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -126,7 +124,7 @@ HB_FUNC_STATIC( QWIZARD_ADDPAGE )
   if( obj )
   {
     QWizardPage * par1 = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retni( obj->addPage ( par1 ) );
+    RINT( obj->addPage ( par1 ) );
   }
 }
 
@@ -169,7 +167,7 @@ HB_FUNC_STATIC( QWIZARD_CURRENTID )
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->currentId () );
+    RINT( obj->currentId () );
   }
 }
 
@@ -210,8 +208,7 @@ HB_FUNC_STATIC( QWIZARD_HASVISITEDPAGE )
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->hasVisitedPage ( par1 ) );
+    RBOOL( obj->hasVisitedPage ( PINT(1)) );
   }
 }
 
@@ -224,7 +221,7 @@ HB_FUNC_STATIC( QWIZARD_NEXTID )
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->nextId () );
+    RINT( obj->nextId () );
   }
 }
 
@@ -250,8 +247,7 @@ HB_FUNC_STATIC( QWIZARD_PAGE )
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QWizardPage * ptr = obj->page ( par1 );
+    QWizardPage * ptr = obj->page ( PINT(1) );
     _qt4xhb_createReturnClass ( ptr, "QWIZARDPAGE" );
   }
 }
@@ -303,8 +299,7 @@ HB_FUNC_STATIC( QWIZARD_REMOVEPAGE )
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->removePage ( par1 );
+    obj->removePage ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -373,10 +368,7 @@ HB_FUNC_STATIC( QWIZARD_SETDEFAULTPROPERTY )
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const char * par1 = hb_parc(1);
-    const char * par2 = hb_parc(2);
-    const char * par3 = hb_parc(3);
-    obj->setDefaultProperty (  (const char *) par1,  (const char *) par2,  (const char *) par3 );
+    obj->setDefaultProperty (  (const char *) hb_parc(1),  (const char *) hb_parc(2),  (const char *) hb_parc(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -390,8 +382,7 @@ HB_FUNC_STATIC( QWIZARD_SETFIELD )
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVariant * par2 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setField ( PQSTRING(1), *par2 );
+    obj->setField ( PQSTRING(1), *PQVARIANT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -435,9 +426,8 @@ HB_FUNC_STATIC( QWIZARD_SETPAGE )
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
     QWizardPage * par2 = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setPage ( par1, par2 );
+    obj->setPage ( PINT(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -452,8 +442,7 @@ HB_FUNC_STATIC( QWIZARD_SETPIXMAP )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QPixmap * par2 = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setPixmap (  (QWizard::WizardPixmap) par1, *par2 );
+    obj->setPixmap (  (QWizard::WizardPixmap) par1, *PQPIXMAP(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -467,8 +456,7 @@ HB_FUNC_STATIC( QWIZARD_SETSIDEWIDGET )
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setSideWidget ( par1 );
+    obj->setSideWidget ( PQWIDGET(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -482,8 +470,7 @@ HB_FUNC_STATIC( QWIZARD_SETSTARTID )
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setStartId ( par1 );
+    obj->setStartId ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -556,7 +543,7 @@ HB_FUNC_STATIC( QWIZARD_STARTID )
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->startId () );
+    RINT( obj->startId () );
   }
 }
 
@@ -583,7 +570,7 @@ HB_FUNC_STATIC( QWIZARD_TESTOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->testOption (  (QWizard::WizardOption) par1 ) );
+    RBOOL( obj->testOption (  (QWizard::WizardOption) par1 ) );
   }
 }
 
@@ -609,7 +596,7 @@ HB_FUNC_STATIC( QWIZARD_VALIDATECURRENTPAGE )
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->validateCurrentPage () );
+    RBOOL( obj->validateCurrentPage () );
   }
 }
 

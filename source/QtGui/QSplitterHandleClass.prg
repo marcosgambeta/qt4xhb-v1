@@ -46,10 +46,7 @@ QSplitterHandle ( Qt::Orientation orientation, QSplitter * parent )
 */
 HB_FUNC_STATIC( QSPLITTERHANDLE_NEW )
 {
-  QSplitterHandle * o = NULL;
-  int par1 = hb_parni(1);
-  QSplitter * par2 = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSplitterHandle (  (Qt::Orientation) par1, par2 );
+  QSplitterHandle * o = new QSplitterHandle (  (Qt::Orientation) hb_parni(1), PQSPLITTER(2) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -63,7 +60,7 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_OPAQUERESIZE )
   QSplitterHandle * obj = (QSplitterHandle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->opaqueResize () );
+    RBOOL( obj->opaqueResize () );
   }
 }
 
@@ -76,7 +73,7 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_ORIENTATION )
   QSplitterHandle * obj = (QSplitterHandle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->orientation () );
+    RENUM( obj->orientation () );
   }
 }
 
@@ -89,8 +86,7 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_SETORIENTATION )
   QSplitterHandle * obj = (QSplitterHandle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setOrientation (  (Qt::Orientation) par1 );
+    obj->setOrientation (  (Qt::Orientation) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -68,8 +68,7 @@ HB_FUNC_STATIC( QITEMEDITORCREATORBASE_CREATEWIDGET )
   QItemEditorCreatorBase * obj = (QItemEditorCreatorBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QWidget * ptr = obj->createWidget ( par1 );
+    QWidget * ptr = obj->createWidget ( PQWIDGET(1) );
     _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }

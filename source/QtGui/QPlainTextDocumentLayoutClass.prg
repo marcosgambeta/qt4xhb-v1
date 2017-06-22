@@ -51,9 +51,7 @@ QPlainTextDocumentLayout ( QTextDocument * document )
 */
 HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_NEW )
 {
-  QPlainTextDocumentLayout * o = NULL;
-  QTextDocument * par1 = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QPlainTextDocumentLayout ( par1 );
+  QPlainTextDocumentLayout * o = new QPlainTextDocumentLayout ( PQTEXTDOCUMENT(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -82,7 +80,7 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_CURSORWIDTH )
   QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->cursorWidth () );
+    RINT( obj->cursorWidth () );
   }
 }
 
@@ -124,8 +122,7 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_SETCURSORWIDTH )
   QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setCursorWidth ( par1 );
+    obj->setCursorWidth ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -184,9 +181,8 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_HITTEST )
   QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPointF * par1 = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
-    hb_retni( obj->hitTest ( *par1,  (Qt::HitTestAccuracy) par2 ) );
+    RINT( obj->hitTest ( *PQPOINTF(1),  (Qt::HitTestAccuracy) par2 ) );
   }
 }
 
@@ -199,7 +195,7 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_PAGECOUNT )
   QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->pageCount () );
+    RINT( obj->pageCount () );
   }
 }
 

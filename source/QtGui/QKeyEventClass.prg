@@ -51,12 +51,9 @@ QKeyEvent ( Type type, int key, Qt::KeyboardModifiers modifiers, const QString &
 */
 HB_FUNC_STATIC( QKEYEVENT_NEW )
 {
-  QKeyEvent * o = NULL;
-  int par1 = hb_parni(1);
-  int par2 = hb_parni(2);
   int par3 = hb_parni(3);
   ushort par6 = ISNIL(6)? 1 : hb_parni(6);
-  o = new QKeyEvent (  (QEvent::Type) par1, par2,  (Qt::KeyboardModifiers) par3, OPQSTRING(4,QString()), OPBOOL(5,false), par6 );
+  QKeyEvent * o = new QKeyEvent (  (QEvent::Type) hb_parni(1), PINT(2),  (Qt::KeyboardModifiers) par3, OPQSTRING(4,QString()), OPBOOL(5,false), par6 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -85,7 +82,7 @@ HB_FUNC_STATIC( QKEYEVENT_COUNT )
   QKeyEvent * obj = (QKeyEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 
@@ -98,7 +95,7 @@ HB_FUNC_STATIC( QKEYEVENT_ISAUTOREPEAT )
   QKeyEvent * obj = (QKeyEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isAutoRepeat () );
+    RBOOL( obj->isAutoRepeat () );
   }
 }
 
@@ -111,7 +108,7 @@ HB_FUNC_STATIC( QKEYEVENT_KEY )
   QKeyEvent * obj = (QKeyEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->key () );
+    RINT( obj->key () );
   }
 }
 
@@ -125,7 +122,7 @@ HB_FUNC_STATIC( QKEYEVENT_MATCHES )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->matches (  (QKeySequence::StandardKey) par1 ) );
+    RBOOL( obj->matches (  (QKeySequence::StandardKey) par1 ) );
   }
 }
 
@@ -151,8 +148,7 @@ HB_FUNC_STATIC( QKEYEVENT_NATIVEMODIFIERS )
   QKeyEvent * obj = (QKeyEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    quint32 i = obj->nativeModifiers ();
-    hb_retni( i );
+    RQUINT32( obj->nativeModifiers () );
   }
 }
 
@@ -165,8 +161,7 @@ HB_FUNC_STATIC( QKEYEVENT_NATIVESCANCODE )
   QKeyEvent * obj = (QKeyEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    quint32 i = obj->nativeScanCode ();
-    hb_retni( i );
+    RQUINT32( obj->nativeScanCode () );
   }
 }
 
@@ -179,8 +174,7 @@ HB_FUNC_STATIC( QKEYEVENT_NATIVEVIRTUALKEY )
   QKeyEvent * obj = (QKeyEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    quint32 i = obj->nativeVirtualKey ();
-    hb_retni( i );
+    RQUINT32( obj->nativeVirtualKey () );
   }
 }
 
@@ -205,11 +199,9 @@ static QKeyEvent *createExtendedKeyEvent(Type type, int key, Qt::KeyboardModifie
 */
 HB_FUNC_STATIC( QKEYEVENT_CREATEEXTENDEDKEYEVENT )
 {
-  int par1 = hb_parni(1);
-  int par2 = hb_parni(2);
   int par3 = hb_parni(3);
   ushort par9 = ISNIL(9)? 1 : hb_parni(9);
-  QKeyEvent * ptr = QKeyEvent::createExtendedKeyEvent (  (QEvent::Type) par1, par2,  (Qt::KeyboardModifiers) par3, PQUINT32(4), PQUINT32(5), PQUINT32(6), OPQSTRING(7,QString()), OPBOOL(8,false), par9 );
+  QKeyEvent * ptr = QKeyEvent::createExtendedKeyEvent (  (QEvent::Type) hb_parni(1), PINT(2),  (Qt::KeyboardModifiers) par3, PQUINT32(4), PQUINT32(5), PQUINT32(6), OPQSTRING(7,QString()), OPBOOL(8,false), par9 );
   _qt4xhb_createReturnClass ( ptr, "QKEYEVENT" );
 }
 

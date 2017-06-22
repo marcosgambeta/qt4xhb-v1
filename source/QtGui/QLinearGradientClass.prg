@@ -52,8 +52,7 @@ QLinearGradient()
 */
 HB_FUNC_STATIC( QLINEARGRADIENT_NEW1 )
 {
-  QLinearGradient * o = NULL;
-  o = new QLinearGradient ();
+  QLinearGradient * o = new QLinearGradient ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -63,10 +62,7 @@ QLinearGradient(const QPointF &start, const QPointF &finalStop)
 */
 HB_FUNC_STATIC( QLINEARGRADIENT_NEW2 )
 {
-  QLinearGradient * o = NULL;
-  QPointF * par1 = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QPointF * par2 = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QLinearGradient ( *par1, *par2 );
+  QLinearGradient * o = new QLinearGradient ( *PQPOINTF(1), *PQPOINTF(2) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -76,8 +72,7 @@ QLinearGradient(qreal xStart, qreal yStart, qreal xFinalStop, qreal yFinalStop)
 */
 HB_FUNC_STATIC( QLINEARGRADIENT_NEW3 )
 {
-  QLinearGradient * o = NULL;
-  o = new QLinearGradient ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
+  QLinearGradient * o = new QLinearGradient ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -144,8 +139,7 @@ HB_FUNC_STATIC( QLINEARGRADIENT_SETFINALSTOP1 )
   QLinearGradient * obj = (QLinearGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPointF * par1 = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setFinalStop ( *par1 );
+    obj->setFinalStop ( *PQPOINTF(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -188,8 +182,7 @@ HB_FUNC_STATIC( QLINEARGRADIENT_SETSTART1 )
   QLinearGradient * obj = (QLinearGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPointF * par1 = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setStart ( *par1 );
+    obj->setStart ( *PQPOINTF(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

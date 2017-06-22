@@ -94,8 +94,7 @@ QPalette ()
 */
 HB_FUNC_STATIC( QPALETTE_NEW1 )
 {
-  QPalette * o = NULL;
-  o = new QPalette ();
+  QPalette * o = new QPalette ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -105,9 +104,8 @@ QPalette ( const QColor & button )
 */
 HB_FUNC_STATIC( QPALETTE_NEW2 )
 {
-  QPalette * o = NULL;
   QColor par1 = ISOBJECT(1)? *(QColor *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QColor(hb_parc(1));
-  o = new QPalette ( par1 );
+  QPalette * o = new QPalette ( par1 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -117,9 +115,7 @@ QPalette ( Qt::GlobalColor button )
 */
 HB_FUNC_STATIC( QPALETTE_NEW3 )
 {
-  QPalette * o = NULL;
-  int par1 = hb_parni(1);
-  o = new QPalette (  (Qt::GlobalColor) par1 );
+  QPalette * o = new QPalette (  (Qt::GlobalColor) hb_parni(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -129,10 +125,9 @@ QPalette ( const QColor & button, const QColor & window )
 */
 HB_FUNC_STATIC( QPALETTE_NEW4 )
 {
-  QPalette * o = NULL;
   QColor par1 = ISOBJECT(1)? *(QColor *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QColor(hb_parc(1));
   QColor par2 = ISOBJECT(2)? *(QColor *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) ) : QColor(hb_parc(2));
-  o = new QPalette ( par1, par2 );
+  QPalette * o = new QPalette ( par1, par2 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -142,17 +137,7 @@ QPalette ( const QBrush & windowText, const QBrush & button, const QBrush & ligh
 */
 HB_FUNC_STATIC( QPALETTE_NEW5 )
 {
-  QPalette * o = NULL;
-  QBrush * par1 = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QBrush * par2 = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QBrush * par3 = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QBrush * par4 = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QBrush * par5 = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_param(5, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QBrush * par6 = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_param(6, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QBrush * par7 = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_param(7, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QBrush * par8 = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_param(8, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QBrush * par9 = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_param(9, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QPalette ( *par1, *par2, *par3, *par4, *par5, *par6, *par7, *par8, *par9 );
+  QPalette * o = new QPalette ( *PQBRUSH(1), *PQBRUSH(2), *PQBRUSH(3), *PQBRUSH(4), *PQBRUSH(5), *PQBRUSH(6), *PQBRUSH(7), *PQBRUSH(8), *PQBRUSH(9) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -162,9 +147,7 @@ QPalette ( const QPalette & p )
 */
 HB_FUNC_STATIC( QPALETTE_NEW6 )
 {
-  QPalette * o = NULL;
-  QPalette * par1 = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QPalette ( *par1 );
+  QPalette * o = new QPalette ( *PQPALETTE(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -344,8 +327,7 @@ HB_FUNC_STATIC( QPALETTE_CACHEKEY )
   QPalette * obj = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->cacheKey ();
-    hb_retni( i );
+    RQINT64( obj->cacheKey () );
   }
 }
 
@@ -461,7 +443,7 @@ HB_FUNC_STATIC( QPALETTE_ISBRUSHSET )
   {
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
-    hb_retl( obj->isBrushSet (  (QPalette::ColorGroup) par1,  (QPalette::ColorRole) par2 ) );
+    RBOOL( obj->isBrushSet (  (QPalette::ColorGroup) par1,  (QPalette::ColorRole) par2 ) );
   }
 }
 
@@ -475,7 +457,7 @@ HB_FUNC_STATIC( QPALETTE_ISCOPYOF )
   if( obj )
   {
     QPalette * par1 = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->isCopyOf ( *par1 ) );
+    RBOOL( obj->isCopyOf ( *par1 ) );
   }
 }
 
@@ -490,7 +472,7 @@ HB_FUNC_STATIC( QPALETTE_ISEQUAL )
   {
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
-    hb_retl( obj->isEqual (  (QPalette::ColorGroup) par1,  (QPalette::ColorGroup) par2 ) );
+    RBOOL( obj->isEqual (  (QPalette::ColorGroup) par1,  (QPalette::ColorGroup) par2 ) );
   }
 }
 
@@ -589,8 +571,7 @@ HB_FUNC_STATIC( QPALETTE_SETBRUSH1 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QBrush * par2 = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setBrush (  (QPalette::ColorRole) par1, *par2 );
+    obj->setBrush (  (QPalette::ColorRole) par1, *PQBRUSH(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -606,8 +587,7 @@ HB_FUNC_STATIC( QPALETTE_SETBRUSH2 )
   {
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
-    QBrush * par3 = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setBrush (  (QPalette::ColorGroup) par1,  (QPalette::ColorRole) par2, *par3 );
+    obj->setBrush (  (QPalette::ColorGroup) par1,  (QPalette::ColorRole) par2, *PQBRUSH(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -685,16 +665,7 @@ HB_FUNC_STATIC( QPALETTE_SETCOLORGROUP )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QBrush * par2 = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QBrush * par3 = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QBrush * par4 = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QBrush * par5 = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_param(5, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QBrush * par6 = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_param(6, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QBrush * par7 = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_param(7, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QBrush * par8 = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_param(8, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QBrush * par9 = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_param(9, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QBrush * par10 = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_param(10, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setColorGroup (  (QPalette::ColorGroup) par1, *par2, *par3, *par4, *par5, *par6, *par7, *par8, *par9, *par10 );
+    obj->setColorGroup (  (QPalette::ColorGroup) par1, *PQBRUSH(2), *PQBRUSH(3), *PQBRUSH(4), *PQBRUSH(5), *PQBRUSH(6), *PQBRUSH(7), *PQBRUSH(8), *PQBRUSH(9), *PQBRUSH(10) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

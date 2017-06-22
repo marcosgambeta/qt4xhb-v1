@@ -43,10 +43,7 @@ QResizeEvent(const QSize &size, const QSize &oldSize)
 */
 HB_FUNC_STATIC( QRESIZEEVENT_NEW )
 {
-  QResizeEvent * o = NULL;
-  QSize * par1 = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QSize * par2 = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QResizeEvent ( *par1, *par2 );
+  QResizeEvent * o = new QResizeEvent ( *PQSIZE(1), *PQSIZE(2) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

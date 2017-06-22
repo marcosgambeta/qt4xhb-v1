@@ -66,7 +66,6 @@ QGestureEvent ( const QList<QGesture *> & gestures )
 */
 HB_FUNC_STATIC( QGESTUREEVENT_NEW )
 {
-  QGestureEvent * o = NULL;
 QList<QGesture *> par1;
 PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
 int i1;
@@ -74,7 +73,7 @@ int nLen1 = hb_arrayLen(aList1);
 for (i1=0;i1<nLen1;i1++)
 {
 par1 << (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );}
-  o = new QGestureEvent ( par1 );
+  QGestureEvent * o = new QGestureEvent ( par1 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -378,7 +377,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_ISACCEPTED1 )
   QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isAccepted () );
+    RBOOL( obj->isAccepted () );
   }
 }
 
@@ -392,7 +391,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_ISACCEPTED2 )
   if( obj )
   {
     QGesture * par1 = (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->isAccepted ( par1 ) );
+    RBOOL( obj->isAccepted ( par1 ) );
   }
 }
 
@@ -406,7 +405,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_ISACCEPTED3 )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->isAccepted (  (Qt::GestureType) par1 ) );
+    RBOOL( obj->isAccepted (  (Qt::GestureType) par1 ) );
   }
 }
 
@@ -439,8 +438,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_MAPTOGRAPHICSSCENE )
   QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPointF * par1 = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QPointF * ptr = new QPointF( obj->mapToGraphicsScene ( *par1 ) );
+    QPointF * ptr = new QPointF( obj->mapToGraphicsScene ( *PQPOINTF(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -518,8 +516,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_SETWIDGET )
   QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setWidget ( par1 );
+    obj->setWidget ( PQWIDGET(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

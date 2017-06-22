@@ -46,9 +46,7 @@ QRegExpValidator ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW1 )
 {
-  QRegExpValidator * o = NULL;
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QRegExpValidator ( par1 );
+  QRegExpValidator * o = new QRegExpValidator ( OPQOBJECT(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -58,10 +56,7 @@ QRegExpValidator ( const QRegExp & rx, QObject * parent )
 */
 HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW2 )
 {
-  QRegExpValidator * o = NULL;
-  QRegExp * par1 = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QObject * par2 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QRegExpValidator ( *par1, par2 );
+  QRegExpValidator * o = new QRegExpValidator ( *PQREGEXP(1), PQOBJECT(2) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

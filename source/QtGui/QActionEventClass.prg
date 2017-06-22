@@ -43,11 +43,8 @@ QActionEvent ( int type, QAction * action, QAction * before = 0 )
 */
 HB_FUNC_STATIC( QACTIONEVENT_NEW )
 {
-  QActionEvent * o = NULL;
-  int par1 = hb_parni(1);
-  QAction * par2 = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
   QAction * par3 = ISNIL(3)? 0 : (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QActionEvent ( par1, par2, par3 );
+  QActionEvent * o = new QActionEvent ( PINT(1), PQACTION(2), par3 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

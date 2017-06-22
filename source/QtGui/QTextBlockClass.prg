@@ -81,9 +81,7 @@ QTextBlock ( const QTextBlock & other )
 */
 HB_FUNC_STATIC( QTEXTBLOCK_NEW )
 {
-  QTextBlock * o = NULL;
-  QTextBlock * par1 = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QTextBlock ( *par1 );
+  QTextBlock * o = new QTextBlock ( *PQTEXTBLOCK(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -127,7 +125,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_BLOCKFORMATINDEX )
   QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->blockFormatIndex () );
+    RINT( obj->blockFormatIndex () );
   }
 }
 
@@ -140,7 +138,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_BLOCKNUMBER )
   QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->blockNumber () );
+    RINT( obj->blockNumber () );
   }
 }
 
@@ -167,7 +165,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_CHARFORMATINDEX )
   QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->charFormatIndex () );
+    RINT( obj->charFormatIndex () );
   }
 }
 
@@ -194,8 +192,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_CONTAINS )
   QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->contains ( par1 ) );
+    RBOOL( obj->contains ( PINT(1) ) );
   }
 }
 
@@ -223,7 +220,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_FIRSTLINENUMBER )
   QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->firstLineNumber () );
+    RINT( obj->firstLineNumber () );
   }
 }
 
@@ -236,7 +233,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_ISVALID )
   QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -249,7 +246,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_ISVISIBLE )
   QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isVisible () );
+    RBOOL( obj->isVisible () );
   }
 }
 
@@ -276,7 +273,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_LENGTH )
   QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->length () );
+    RINT( obj->length () );
   }
 }
 
@@ -289,7 +286,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_LINECOUNT )
   QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->lineCount () );
+    RINT( obj->lineCount () );
   }
 }
 
@@ -316,7 +313,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_POSITION )
   QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->position () );
+    RINT( obj->position () );
   }
 }
 
@@ -343,7 +340,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_REVISION )
   QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->revision () );
+    RINT( obj->revision () );
   }
 }
 
@@ -356,8 +353,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_SETLINECOUNT )
   QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setLineCount ( par1 );
+    obj->setLineCount ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -371,8 +367,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_SETREVISION )
   QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setRevision ( par1 );
+    obj->setRevision ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -401,8 +396,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_SETUSERSTATE )
   QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setUserState ( par1 );
+    obj->setUserState ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -485,7 +479,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_USERSTATE )
   QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->userState () );
+    RINT( obj->userState () );
   }
 }
 

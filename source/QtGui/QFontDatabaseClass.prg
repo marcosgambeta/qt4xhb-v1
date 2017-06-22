@@ -75,8 +75,7 @@ QFontDatabase ()
 */
 HB_FUNC_STATIC( QFONTDATABASE_NEW )
 {
-  QFontDatabase * o = NULL;
-  o = new QFontDatabase ();
+  QFontDatabase * o = new QFontDatabase ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -90,7 +89,7 @@ HB_FUNC_STATIC( QFONTDATABASE_BOLD )
   QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->bold ( PQSTRING(1), PQSTRING(2) ) );
+    RBOOL( obj->bold ( PQSTRING(1), PQSTRING(2) ) );
   }
 }
 
@@ -142,7 +141,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ISBITMAPSCALABLE )
   QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isBitmapScalable ( PQSTRING(1), OPQSTRING(2,QString()) ) );
+    RBOOL( obj->isBitmapScalable ( PQSTRING(1), OPQSTRING(2,QString()) ) );
   }
 }
 
@@ -155,7 +154,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ISFIXEDPITCH )
   QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isFixedPitch ( PQSTRING(1), OPQSTRING(2,QString()) ) );
+    RBOOL( obj->isFixedPitch ( PQSTRING(1), OPQSTRING(2,QString()) ) );
   }
 }
 
@@ -168,7 +167,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ISSCALABLE )
   QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isScalable ( PQSTRING(1), OPQSTRING(2,QString()) ) );
+    RBOOL( obj->isScalable ( PQSTRING(1), OPQSTRING(2,QString()) ) );
   }
 }
 
@@ -181,7 +180,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ISSMOOTHLYSCALABLE )
   QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isSmoothlyScalable ( PQSTRING(1), OPQSTRING(2,QString()) ) );
+    RBOOL( obj->isSmoothlyScalable ( PQSTRING(1), OPQSTRING(2,QString()) ) );
   }
 }
 
@@ -194,7 +193,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ITALIC )
   QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->italic ( PQSTRING(1), PQSTRING(2) ) );
+    RBOOL( obj->italic ( PQSTRING(1), PQSTRING(2) ) );
   }
 }
 
@@ -253,8 +252,7 @@ HB_FUNC_STATIC( QFONTDATABASE_STYLESTRING1 )
   QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QFont * par1 = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString str1 = obj->styleString ( *par1 );
+    QString str1 = obj->styleString ( *PQFONT(1) );
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -321,7 +319,7 @@ HB_FUNC_STATIC( QFONTDATABASE_WEIGHT )
   QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->weight ( PQSTRING(1), PQSTRING(2) ) );
+    RINT( obj->weight ( PQSTRING(1), PQSTRING(2) ) );
   }
 }
 
@@ -393,7 +391,7 @@ int addApplicationFont ( const QString & fileName )
 */
 HB_FUNC_STATIC( QFONTDATABASE_ADDAPPLICATIONFONT )
 {
-  hb_retni( QFontDatabase::addApplicationFont ( PQSTRING(1) ) );
+  RINT( QFontDatabase::addApplicationFont ( PQSTRING(1) ) );
 }
 
 
@@ -402,8 +400,7 @@ int addApplicationFontFromData ( const QByteArray & fontData )
 */
 HB_FUNC_STATIC( QFONTDATABASE_ADDAPPLICATIONFONTFROMDATA )
 {
-  QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  hb_retni( QFontDatabase::addApplicationFontFromData ( *par1 ) );
+  RINT( QFontDatabase::addApplicationFontFromData ( *PQBYTEARRAY(1) ) );
 }
 
 
@@ -412,8 +409,7 @@ QStringList applicationFontFamilies ( int id )
 */
 HB_FUNC_STATIC( QFONTDATABASE_APPLICATIONFONTFAMILIES )
 {
-  int par1 = hb_parni(1);
-  QStringList strl = QFontDatabase::applicationFontFamilies ( par1 );
+  QStringList strl = QFontDatabase::applicationFontFamilies ( PINT(1) );
   PHB_ITEM pArray;
   pArray = hb_itemArrayNew(0);
   int i;
@@ -432,7 +428,7 @@ bool removeAllApplicationFonts ()
 */
 HB_FUNC_STATIC( QFONTDATABASE_REMOVEALLAPPLICATIONFONTS )
 {
-  hb_retl( QFontDatabase::removeAllApplicationFonts () );
+  RBOOL( QFontDatabase::removeAllApplicationFonts () );
 }
 
 
@@ -441,8 +437,7 @@ bool removeApplicationFont ( int id )
 */
 HB_FUNC_STATIC( QFONTDATABASE_REMOVEAPPLICATIONFONT )
 {
-  int par1 = hb_parni(1);
-  hb_retl( QFontDatabase::removeApplicationFont ( par1 ) );
+  RBOOL( QFontDatabase::removeApplicationFont ( PINT(1) ) );
 }
 
 
@@ -470,7 +465,7 @@ bool supportsThreadedFontRendering ()
 */
 HB_FUNC_STATIC( QFONTDATABASE_SUPPORTSTHREADEDFONTRENDERING )
 {
-  hb_retl( QFontDatabase::supportsThreadedFontRendering () );
+  RBOOL( QFontDatabase::supportsThreadedFontRendering () );
 }
 
 

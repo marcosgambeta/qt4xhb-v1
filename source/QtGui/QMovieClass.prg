@@ -89,9 +89,7 @@ QMovie ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QMOVIE_NEW1 )
 {
-  QMovie * o = NULL;
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QMovie ( par1 );
+  QMovie * o = new QMovie ( OPQOBJECT(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -101,11 +99,8 @@ QMovie ( QIODevice * device, const QByteArray & format = QByteArray(), QObject *
 */
 HB_FUNC_STATIC( QMOVIE_NEW2 )
 {
-  QMovie * o = NULL;
-  QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QObject * par3 = ISNIL(3)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QMovie ( par1, par2, par3 );
+  QMovie * o = new QMovie ( PQIODEVICE(1), par2, OPQOBJECT(3,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -115,10 +110,8 @@ QMovie ( const QString & fileName, const QByteArray & format = QByteArray(), QOb
 */
 HB_FUNC_STATIC( QMOVIE_NEW3 )
 {
-  QMovie * o = NULL;
   QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QObject * par3 = ISNIL(3)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QMovie ( PQSTRING(1), par2, par3 );
+  QMovie * o = new QMovie ( PQSTRING(1), par2, OPQOBJECT(3,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -200,7 +193,7 @@ HB_FUNC_STATIC( QMOVIE_CURRENTFRAMENUMBER )
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->currentFrameNumber () );
+    RINT( obj->currentFrameNumber () );
   }
 }
 
@@ -283,7 +276,7 @@ HB_FUNC_STATIC( QMOVIE_FRAMECOUNT )
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->frameCount () );
+    RINT( obj->frameCount () );
   }
 }
 
@@ -310,7 +303,7 @@ HB_FUNC_STATIC( QMOVIE_ISVALID )
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -323,8 +316,7 @@ HB_FUNC_STATIC( QMOVIE_JUMPTOFRAME )
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->jumpToFrame ( par1 ) );
+    RBOOL( obj->jumpToFrame ( PINT(1) ) );
   }
 }
 
@@ -337,7 +329,7 @@ HB_FUNC_STATIC( QMOVIE_LOOPCOUNT )
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->loopCount () );
+    RINT( obj->loopCount () );
   }
 }
 
@@ -350,7 +342,7 @@ HB_FUNC_STATIC( QMOVIE_NEXTFRAMEDELAY )
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->nextFrameDelay () );
+    RINT( obj->nextFrameDelay () );
   }
 }
 
@@ -407,8 +399,7 @@ HB_FUNC_STATIC( QMOVIE_SETDEVICE )
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setDevice ( par1 );
+    obj->setDevice ( PQIODEVICE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -436,8 +427,7 @@ HB_FUNC_STATIC( QMOVIE_SETFORMAT )
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setFormat ( *par1 );
+    obj->setFormat ( *PQBYTEARRAY(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -451,8 +441,7 @@ HB_FUNC_STATIC( QMOVIE_SETSCALEDSIZE )
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * par1 = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setScaledSize ( *par1 );
+    obj->setScaledSize ( *PQSIZE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -466,7 +455,7 @@ HB_FUNC_STATIC( QMOVIE_SPEED )
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->speed () );
+    RINT( obj->speed () );
   }
 }
 
@@ -494,7 +483,7 @@ HB_FUNC_STATIC( QMOVIE_JUMPTONEXTFRAME )
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->jumpToNextFrame () );
+    RBOOL( obj->jumpToNextFrame () );
   }
 }
 
@@ -521,8 +510,7 @@ HB_FUNC_STATIC( QMOVIE_SETSPEED )
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setSpeed ( par1 );
+    obj->setSpeed ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

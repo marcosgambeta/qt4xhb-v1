@@ -39,8 +39,7 @@ QToolBarChangeEvent(bool t)
 */
 HB_FUNC_STATIC( QTOOLBARCHANGEEVENT_NEW )
 {
-  QToolBarChangeEvent * o = NULL;
-  o = new QToolBarChangeEvent ( PBOOL(1) );
+  QToolBarChangeEvent * o = new QToolBarChangeEvent ( PBOOL(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -69,7 +68,7 @@ HB_FUNC_STATIC( QTOOLBARCHANGEEVENT_TOGGLE )
   QToolBarChangeEvent * obj = (QToolBarChangeEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->toggle () );
+    RBOOL( obj->toggle () );
   }
 }
 

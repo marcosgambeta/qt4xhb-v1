@@ -54,8 +54,7 @@ QItemSelection ()
 */
 HB_FUNC_STATIC( QITEMSELECTION_NEW1 )
 {
-  QItemSelection * o = NULL;
-  o = new QItemSelection ();
+  QItemSelection * o = new QItemSelection ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -65,10 +64,7 @@ QItemSelection ( const QModelIndex & topLeft, const QModelIndex & bottomRight )
 */
 HB_FUNC_STATIC( QITEMSELECTION_NEW2 )
 {
-  QItemSelection * o = NULL;
-  QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QModelIndex * par2 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QItemSelection ( *par1, *par2 );
+  QItemSelection * o = new QItemSelection ( *PQMODELINDEX(1), *PQMODELINDEX(2) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -116,8 +112,7 @@ HB_FUNC_STATIC( QITEMSELECTION_CONTAINS )
   QItemSelection * obj = (QItemSelection *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->contains ( *par1 ) );
+    RBOOL( obj->contains ( *PQMODELINDEX(1) ) );
   }
 }
 
@@ -190,9 +185,7 @@ HB_FUNC_STATIC( QITEMSELECTION_SELECT )
   QItemSelection * obj = (QItemSelection *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QModelIndex * par2 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->select ( *par1, *par2 );
+    obj->select ( *PQMODELINDEX(1), *PQMODELINDEX(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

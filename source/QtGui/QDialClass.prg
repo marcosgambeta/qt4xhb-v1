@@ -50,9 +50,7 @@ QDial ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QDIAL_NEW )
 {
-  QDial * o = NULL;
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDial ( par1 );
+  QDial * o = new QDial ( OPQWIDGET(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -81,7 +79,7 @@ HB_FUNC_STATIC( QDIAL_NOTCHSIZE )
   QDial * obj = (QDial *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->notchSize () );
+    RINT( obj->notchSize () );
   }
 }
 
@@ -94,8 +92,7 @@ HB_FUNC_STATIC( QDIAL_NOTCHTARGET )
   QDial * obj = (QDial *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->notchTarget ();
-    hb_retnd( r );
+    RQREAL( obj->notchTarget () );
   }
 }
 
@@ -108,7 +105,7 @@ HB_FUNC_STATIC( QDIAL_NOTCHESVISIBLE )
   QDial * obj = (QDial *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->notchesVisible () );
+    RBOOL( obj->notchesVisible () );
   }
 }
 
@@ -135,7 +132,7 @@ HB_FUNC_STATIC( QDIAL_WRAPPING )
   QDial * obj = (QDial *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->wrapping () );
+    RBOOL( obj->wrapping () );
   }
 }
 

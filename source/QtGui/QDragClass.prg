@@ -61,9 +61,7 @@ QDrag ( QWidget * dragSource )
 */
 HB_FUNC_STATIC( QDRAG_NEW )
 {
-  QDrag * o = NULL;
-  QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDrag ( par1 );
+  QDrag * o = new QDrag ( PQWIDGET(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -179,9 +177,8 @@ HB_FUNC_STATIC( QDRAG_SETDRAGCURSOR )
   QDrag * obj = (QDrag *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPixmap * par1 = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
-    obj->setDragCursor ( *par1,  (Qt::DropAction) par2 );
+    obj->setDragCursor ( *PQPIXMAP(1),  (Qt::DropAction) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -195,8 +192,7 @@ HB_FUNC_STATIC( QDRAG_SETHOTSPOT )
   QDrag * obj = (QDrag *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setHotSpot ( *par1 );
+    obj->setHotSpot ( *PQPOINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -225,8 +221,7 @@ HB_FUNC_STATIC( QDRAG_SETPIXMAP )
   QDrag * obj = (QDrag *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPixmap * par1 = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setPixmap ( *par1 );
+    obj->setPixmap ( *PQPIXMAP(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

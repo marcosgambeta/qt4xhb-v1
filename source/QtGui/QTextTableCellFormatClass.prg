@@ -48,8 +48,7 @@ QTextTableCellFormat ()
 */
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_NEW )
 {
-  QTextTableCellFormat * o = NULL;
-  o = new QTextTableCellFormat ();
+  QTextTableCellFormat * o = new QTextTableCellFormat ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -78,8 +77,7 @@ HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_BOTTOMPADDING )
   QTextTableCellFormat * obj = (QTextTableCellFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->bottomPadding ();
-    hb_retnd( r );
+    RQREAL( obj->bottomPadding () );
   }
 }
 
@@ -92,7 +90,7 @@ HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_ISVALID )
   QTextTableCellFormat * obj = (QTextTableCellFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -105,8 +103,7 @@ HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_LEFTPADDING )
   QTextTableCellFormat * obj = (QTextTableCellFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->leftPadding ();
-    hb_retnd( r );
+    RQREAL( obj->leftPadding () );
   }
 }
 
@@ -119,8 +116,7 @@ HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_RIGHTPADDING )
   QTextTableCellFormat * obj = (QTextTableCellFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->rightPadding ();
-    hb_retnd( r );
+    RQREAL( obj->rightPadding () );
   }
 }
 
@@ -203,8 +199,7 @@ HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_TOPPADDING )
   QTextTableCellFormat * obj = (QTextTableCellFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->topPadding ();
-    hb_retnd( r );
+    RQREAL( obj->topPadding () );
   }
 }
 

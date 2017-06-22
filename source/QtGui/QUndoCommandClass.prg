@@ -57,9 +57,8 @@ QUndoCommand ( QUndoCommand * parent = 0 )
 */
 HB_FUNC_STATIC( QUNDOCOMMAND_NEW1 )
 {
-  QUndoCommand * o = NULL;
   QUndoCommand * par1 = ISNIL(1)? 0 : (QUndoCommand *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QUndoCommand ( par1 );
+  QUndoCommand * o = new QUndoCommand ( par1 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -69,9 +68,8 @@ QUndoCommand ( const QString & text, QUndoCommand * parent = 0 )
 */
 HB_FUNC_STATIC( QUNDOCOMMAND_NEW2 )
 {
-  QUndoCommand * o = NULL;
   QUndoCommand * par2 = ISNIL(2)? 0 : (QUndoCommand *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QUndoCommand ( PQSTRING(1), par2 );
+  QUndoCommand * o = new QUndoCommand ( PQSTRING(1), par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -119,8 +117,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_CHILD )
   QUndoCommand * obj = (QUndoCommand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    const QUndoCommand * ptr = obj->child ( par1 );
+    const QUndoCommand * ptr = obj->child ( PINT(1) );
     _qt4xhb_createReturnClass ( ptr, "QUNDOCOMMAND" );
   }
 }
@@ -134,7 +131,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_CHILDCOUNT )
   QUndoCommand * obj = (QUndoCommand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->childCount () );
+    RINT( obj->childCount () );
   }
 }
 
@@ -147,7 +144,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_ID )
   QUndoCommand * obj = (QUndoCommand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->id () );
+    RINT( obj->id () );
   }
 }
 
@@ -161,7 +158,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_MERGEWITH )
   if( obj )
   {
     const QUndoCommand * par1 = (const QUndoCommand *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->mergeWith ( par1 ) );
+    RBOOL( obj->mergeWith ( par1 ) );
   }
 }
 

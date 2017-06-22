@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QCLIPBOARD_OWNSCLIPBOARD )
   QClipboard * obj = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->ownsClipboard () );
+    RBOOL( obj->ownsClipboard () );
   }
 }
 
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QCLIPBOARD_OWNSFINDBUFFER )
   QClipboard * obj = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->ownsFindBuffer () );
+    RBOOL( obj->ownsFindBuffer () );
   }
 }
 
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QCLIPBOARD_OWNSSELECTION )
   QClipboard * obj = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->ownsSelection () );
+    RBOOL( obj->ownsSelection () );
   }
 }
 
@@ -200,9 +200,8 @@ HB_FUNC_STATIC( QCLIPBOARD_SETPIXMAP )
   QClipboard * obj = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPixmap * par1 = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
-    obj->setPixmap ( *par1,  (QClipboard::Mode) par2 );
+    obj->setPixmap ( *PQPIXMAP(1),  (QClipboard::Mode) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -231,7 +230,7 @@ HB_FUNC_STATIC( QCLIPBOARD_SUPPORTSFINDBUFFER )
   QClipboard * obj = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->supportsFindBuffer () );
+    RBOOL( obj->supportsFindBuffer () );
   }
 }
 
@@ -244,7 +243,7 @@ HB_FUNC_STATIC( QCLIPBOARD_SUPPORTSSELECTION )
   QClipboard * obj = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->supportsSelection () );
+    RBOOL( obj->supportsSelection () );
   }
 }
 

@@ -67,8 +67,7 @@ QInputContext * create ( const QString & key, QObject * parent )
 */
 HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_CREATE )
 {
-  QObject * par2 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QInputContext * ptr = QInputContextFactory::create ( PQSTRING(1), par2 );
+  QInputContext * ptr = QInputContextFactory::create ( PQSTRING(1), PQOBJECT(2) );
   _qt4xhb_createReturnClass ( ptr, "QINPUTCONTEXT" );
 }
 

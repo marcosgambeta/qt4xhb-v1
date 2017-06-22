@@ -45,9 +45,7 @@ QErrorMessage ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QERRORMESSAGE_NEW )
 {
-  QErrorMessage * o = NULL;
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QErrorMessage ( par1 );
+  QErrorMessage * o = new QErrorMessage ( OPQWIDGET(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

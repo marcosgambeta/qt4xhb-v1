@@ -60,8 +60,7 @@ QTextDocumentFragment ()
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW1 )
 {
-  QTextDocumentFragment * o = NULL;
-  o = new QTextDocumentFragment ();
+  QTextDocumentFragment * o = new QTextDocumentFragment ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -71,9 +70,8 @@ QTextDocumentFragment ( const QTextDocument * document )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW2 )
 {
-  QTextDocumentFragment * o = NULL;
   const QTextDocument * par1 = (const QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QTextDocumentFragment ( par1 );
+  QTextDocumentFragment * o = new QTextDocumentFragment ( par1 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -83,9 +81,7 @@ QTextDocumentFragment ( const QTextCursor & cursor )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW3 )
 {
-  QTextDocumentFragment * o = NULL;
-  QTextCursor * par1 = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QTextDocumentFragment ( *par1 );
+  QTextDocumentFragment * o = new QTextDocumentFragment ( *PQTEXTCURSOR(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -95,9 +91,7 @@ QTextDocumentFragment ( const QTextDocumentFragment & other )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW4 )
 {
-  QTextDocumentFragment * o = NULL;
-  QTextDocumentFragment * par1 = (QTextDocumentFragment *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QTextDocumentFragment ( *par1 );
+  QTextDocumentFragment * o = new QTextDocumentFragment ( *PQTEXTDOCUMENTFRAGMENT(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -155,7 +149,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_ISEMPTY )
   QTextDocumentFragment * obj = (QTextDocumentFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 }
 
@@ -168,8 +162,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_TOHTML1 )
   QTextDocumentFragment * obj = (QTextDocumentFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString str1 = obj->toHtml ( *par1 );
+    QString str1 = obj->toHtml ( *PQBYTEARRAY(1) );
     hb_retc( RQSTRING(str1) );
   }
 }

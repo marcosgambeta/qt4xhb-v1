@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QTEXTLIST_COUNT )
   QTextList * obj = (QTextList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 
@@ -111,8 +111,7 @@ HB_FUNC_STATIC( QTEXTLIST_ITEM )
   QTextList * obj = (QTextList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QTextBlock * ptr = new QTextBlock( obj->item ( par1 ) );
+    QTextBlock * ptr = new QTextBlock( obj->item ( PINT(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QTEXTBLOCK" );
   }
 }
@@ -127,7 +126,7 @@ HB_FUNC_STATIC( QTEXTLIST_ITEMNUMBER )
   if( obj )
   {
     QTextBlock * par1 = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retni( obj->itemNumber ( *par1 ) );
+    RINT( obj->itemNumber ( *par1 ) );
   }
 }
 
@@ -170,8 +169,7 @@ HB_FUNC_STATIC( QTEXTLIST_REMOVEITEM )
   QTextList * obj = (QTextList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->removeItem ( par1 );
+    obj->removeItem ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

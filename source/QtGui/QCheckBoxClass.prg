@@ -23,7 +23,9 @@ CLASS QCheckBox INHERIT QAbstractButton
    METHOD setTristate
    METHOD minimumSizeHint
    METHOD sizeHint
+
    METHOD onStateChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -47,9 +49,7 @@ QCheckBox ( QWidget * parent = 0 )
 */
 void QCheckBox_new1 ()
 {
-  QCheckBox * o = NULL;
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QCheckBox ( par1 );
+  QCheckBox * o = new QCheckBox ( OPQWIDGET(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -58,9 +58,7 @@ QCheckBox ( const QString & text, QWidget * parent = 0 )
 */
 void QCheckBox_new2 ()
 {
-  QCheckBox * o = NULL;
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QCheckBox ( PQSTRING(1), par2 );
+  QCheckBox * o = new QCheckBox ( PQSTRING(1), OPQWIDGET(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -105,7 +103,7 @@ HB_FUNC_STATIC( QCHECKBOX_ISTRISTATE )
 
   if( obj )
   {
-    hb_retl( obj->isTristate () );
+    RBOOL( obj->isTristate () );
   }
 }
 
@@ -118,8 +116,15 @@ HB_FUNC_STATIC( QCHECKBOX_SETCHECKSTATE )
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setCheckState (  (Qt::CheckState) par1 );
+    if( ISNUM(1) )
+    {
+      int par1 = hb_parni(1);
+      obj->setCheckState (  (Qt::CheckState) par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -134,7 +139,14 @@ HB_FUNC_STATIC( QCHECKBOX_SETTRISTATE )
 
   if( obj )
   {
-    obj->setTristate ( OPBOOL(1,true) );
+    if( ISOPTLOG(1) )
+    {
+      obj->setTristate ( OPBOOL(1,true) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );

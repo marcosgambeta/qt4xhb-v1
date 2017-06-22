@@ -17,7 +17,9 @@ CLASS QRadioButton INHERIT QAbstractButton
    DATA self_destruction INIT .F.
 
    METHOD new
+   METHOD minimumSizeHint
    METHOD sizeHint
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -41,21 +43,16 @@ QRadioButton ( QWidget * parent = 0 )
 */
 void QRadioButton_new1 ()
 {
-  QRadioButton * o = NULL;
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QRadioButton ( par1 );
+  QRadioButton * o = new QRadioButton ( OPQWIDGET(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 /*
 QRadioButton ( const QString & text, QWidget * parent = 0 )
 */
 void QRadioButton_new2 ()
 {
-  QRadioButton * o = NULL;
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QRadioButton ( PQSTRING(1), par2 );
+  QRadioButton * o = new QRadioButton ( PQSTRING(1), OPQWIDGET(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -75,6 +72,20 @@ HB_FUNC_STATIC( QRADIOBUTTON_NEW )
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
+
+/*
+virtual QSize minimumSizeHint () const
+*/
+HB_FUNC_STATIC( QRADIOBUTTON_MINIMUMSIZEHINT )
+{
+  QRadioButton * obj = (QRadioButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+  if( obj )
+  {
+    QSize * ptr = new QSize( obj->minimumSizeHint () );
+    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
 

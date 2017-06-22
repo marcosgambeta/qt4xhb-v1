@@ -66,9 +66,7 @@ QLCDNumber ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QLCDNUMBER_NEW1 )
 {
-  QLCDNumber * o = NULL;
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QLCDNumber ( par1 );
+  QLCDNumber * o = new QLCDNumber ( OPQWIDGET(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -78,9 +76,7 @@ QLCDNumber ( uint numDigits, QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QLCDNUMBER_NEW2 )
 {
-  QLCDNumber * o = NULL;
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QLCDNumber ( PUINT(1), par2 );
+  QLCDNumber * o = new QLCDNumber ( PUINT(1), OPQWIDGET(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -128,7 +124,7 @@ HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW1 )
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->checkOverflow ( PDOUBLE(1) ) );
+    RBOOL( obj->checkOverflow ( PDOUBLE(1) ) );
   }
 }
 
@@ -141,8 +137,7 @@ HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW2 )
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->checkOverflow ( par1 ) );
+    RBOOL( obj->checkOverflow ( PINT(1) ) );
   }
 }
 
@@ -167,7 +162,7 @@ HB_FUNC_STATIC( QLCDNUMBER_DIGITCOUNT )
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->digitCount () );
+    RINT( obj->digitCount () );
   }
 }
 
@@ -180,7 +175,7 @@ HB_FUNC_STATIC( QLCDNUMBER_INTVALUE )
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->intValue () );
+    RINT( obj->intValue () );
   }
 }
 
@@ -219,8 +214,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETDIGITCOUNT )
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setDigitCount ( par1 );
+    obj->setDigitCount ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -264,7 +258,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SMALLDECIMALPOINT )
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->smallDecimalPoint () );
+    RBOOL( obj->smallDecimalPoint () );
   }
 }
 
@@ -277,8 +271,7 @@ HB_FUNC_STATIC( QLCDNUMBER_VALUE )
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    double r = obj->value ();
-    hb_retnd( r );
+    RDOUBLE( obj->value () );
   }
 }
 
@@ -333,8 +326,7 @@ HB_FUNC_STATIC( QLCDNUMBER_DISPLAY3 )
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->display ( par1 );
+    obj->display ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

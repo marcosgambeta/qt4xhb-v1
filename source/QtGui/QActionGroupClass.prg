@@ -57,9 +57,7 @@ QActionGroup ( QObject * parent )
 */
 HB_FUNC_STATIC( QACTIONGROUP_NEW )
 {
-  QActionGroup * o = NULL;
-  QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QActionGroup ( par1 );
+  QActionGroup * o = new QActionGroup ( PQOBJECT(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -132,8 +130,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ADDACTION1 )
   QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QAction * par1 = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QAction * ptr = obj->addAction ( par1 );
+    QAction * ptr = obj->addAction ( PQACTION(1) );
     _qt4xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -210,7 +207,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ISENABLED )
   QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isEnabled () );
+    RBOOL( obj->isEnabled () );
   }
 }
 
@@ -223,7 +220,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ISEXCLUSIVE )
   QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isExclusive () );
+    RBOOL( obj->isExclusive () );
   }
 }
 
@@ -236,7 +233,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ISVISIBLE )
   QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isVisible () );
+    RBOOL( obj->isVisible () );
   }
 }
 
@@ -249,8 +246,7 @@ HB_FUNC_STATIC( QACTIONGROUP_REMOVEACTION )
   QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QAction * par1 = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->removeAction ( par1 );
+    obj->removeAction ( PQACTION(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -13,10 +13,12 @@ static SlotsQCheckBox * s = NULL;
 SlotsQCheckBox::SlotsQCheckBox(QObject *parent) : QObject(parent)
 {
 }
+
 SlotsQCheckBox::~SlotsQCheckBox()
 {
   QCheckBox_release_codeblocks();
 }
+
 void SlotsQCheckBox::stateChanged ( int state )
 {
   QObject *object = qobject_cast<QObject *>(sender());
@@ -109,6 +111,7 @@ HB_FUNC( QCHECKBOX_ONSTATECHANGED )
   }
   hb_retl( ret );
 }
+
 void QCheckBox_release_codeblocks ()
 {
   if( s )
@@ -126,4 +129,3 @@ void QCheckBox_release_codeblocks ()
     }
   }
 }
-

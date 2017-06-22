@@ -69,8 +69,7 @@ QPolygonF ()
 */
 HB_FUNC_STATIC( QPOLYGONF_NEW1 )
 {
-  QPolygonF * o = NULL;
-  o = new QPolygonF ();
+  QPolygonF * o = new QPolygonF ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -80,9 +79,7 @@ QPolygonF ( int size )
 */
 HB_FUNC_STATIC( QPOLYGONF_NEW2 )
 {
-  QPolygonF * o = NULL;
-  int par1 = hb_parni(1);
-  o = new QPolygonF ( par1 );
+  QPolygonF * o = new QPolygonF ( PINT(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -92,9 +89,7 @@ QPolygonF ( const QPolygonF & polygon )
 */
 HB_FUNC_STATIC( QPOLYGONF_NEW3 )
 {
-  QPolygonF * o = NULL;
-  QPolygonF * par1 = (QPolygonF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QPolygonF ( *par1 );
+  QPolygonF * o = new QPolygonF ( *PQPOLYGONF(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -104,7 +99,6 @@ QPolygonF ( const QVector<QPointF> & points )
 */
 HB_FUNC_STATIC( QPOLYGONF_NEW4 )
 {
-  QPolygonF * o = NULL;
 QVector<QPointF> par1;
 PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
 int i1;
@@ -113,7 +107,7 @@ for (i1=0;i1<nLen1;i1++)
 {
 par1 << *(QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
 }
-  o = new QPolygonF ( par1 );
+  QPolygonF * o = new QPolygonF ( par1 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -123,9 +117,7 @@ QPolygonF ( const QRectF & rectangle )
 */
 HB_FUNC_STATIC( QPOLYGONF_NEW5 )
 {
-  QPolygonF * o = NULL;
-  QRectF * par1 = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QPolygonF ( *par1 );
+  QPolygonF * o = new QPolygonF ( *PQRECTF(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -135,9 +127,7 @@ QPolygonF ( const QPolygon & polygon )
 */
 HB_FUNC_STATIC( QPOLYGONF_NEW6 )
 {
-  QPolygonF * o = NULL;
-  QPolygon * par1 = (QPolygon *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QPolygonF ( *par1 );
+  QPolygonF * o = new QPolygonF ( *PQPOLYGON(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -219,9 +209,8 @@ HB_FUNC_STATIC( QPOLYGONF_CONTAINSPOINT )
   QPolygonF * obj = (QPolygonF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPointF * par1 = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
-    hb_retl( obj->containsPoint ( *par1,  (Qt::FillRule) par2 ) );
+    RBOOL( obj->containsPoint ( *PQPOINTF(1),  (Qt::FillRule) par2 ) );
   }
 }
 
@@ -234,8 +223,7 @@ HB_FUNC_STATIC( QPOLYGONF_INTERSECTED )
   QPolygonF * obj = (QPolygonF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPolygonF * par1 = (QPolygonF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QPolygonF * ptr = new QPolygonF( obj->intersected ( *par1 ) );
+    QPolygonF * ptr = new QPolygonF( obj->intersected ( *PQPOLYGONF(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
@@ -249,7 +237,7 @@ HB_FUNC_STATIC( QPOLYGONF_ISCLOSED )
   QPolygonF * obj = (QPolygonF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isClosed () );
+    RBOOL( obj->isClosed () );
   }
 }
 
@@ -262,8 +250,7 @@ HB_FUNC_STATIC( QPOLYGONF_SUBTRACTED )
   QPolygonF * obj = (QPolygonF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPolygonF * par1 = (QPolygonF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QPolygonF * ptr = new QPolygonF( obj->subtracted ( *par1 ) );
+    QPolygonF * ptr = new QPolygonF( obj->subtracted ( *PQPOLYGONF(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
@@ -306,8 +293,7 @@ HB_FUNC_STATIC( QPOLYGONF_TRANSLATE1 )
   QPolygonF * obj = (QPolygonF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPointF * par1 = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->translate ( *par1 );
+    obj->translate ( *PQPOINTF(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -350,8 +336,7 @@ HB_FUNC_STATIC( QPOLYGONF_TRANSLATED1 )
   QPolygonF * obj = (QPolygonF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPointF * par1 = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QPolygonF * ptr = new QPolygonF( obj->translated ( *par1 ) );
+    QPolygonF * ptr = new QPolygonF( obj->translated ( *PQPOINTF(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
@@ -394,8 +379,7 @@ HB_FUNC_STATIC( QPOLYGONF_UNITED )
   QPolygonF * obj = (QPolygonF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPolygonF * par1 = (QPolygonF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QPolygonF * ptr = new QPolygonF( obj->united ( *par1 ) );
+    QPolygonF * ptr = new QPolygonF( obj->united ( *PQPOLYGONF(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }

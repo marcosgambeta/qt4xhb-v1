@@ -50,9 +50,7 @@ QDoubleValidator ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_NEW1 )
 {
-  QDoubleValidator * o = NULL;
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDoubleValidator ( par1 );
+  QDoubleValidator * o = new QDoubleValidator ( OPQOBJECT(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -62,10 +60,7 @@ QDoubleValidator ( double bottom, double top, int decimals, QObject * parent )
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_NEW2 )
 {
-  QDoubleValidator * o = NULL;
-  int par3 = hb_parni(3);
-  QObject * par4 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDoubleValidator ( PDOUBLE(1), PDOUBLE(2), par3, par4 );
+  QDoubleValidator * o = new QDoubleValidator ( PDOUBLE(1), PDOUBLE(2), PINT(3), PQOBJECT(4) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -113,8 +108,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_BOTTOM )
   QDoubleValidator * obj = (QDoubleValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    double r = obj->bottom ();
-    hb_retnd( r );
+    RDOUBLE( obj->bottom () );
   }
 }
 
@@ -127,7 +121,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_DECIMALS )
   QDoubleValidator * obj = (QDoubleValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->decimals () );
+    RINT( obj->decimals () );
   }
 }
 
@@ -167,8 +161,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETDECIMALS )
   QDoubleValidator * obj = (QDoubleValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setDecimals ( par1 );
+    obj->setDecimals ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -225,8 +218,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_TOP )
   QDoubleValidator * obj = (QDoubleValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    double r = obj->top ();
-    hb_retnd( r );
+    RDOUBLE( obj->top () );
   }
 }
 

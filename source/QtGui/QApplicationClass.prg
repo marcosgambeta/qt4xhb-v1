@@ -162,8 +162,7 @@ HB_FUNC_STATIC( QAPPLICATION_NEW )
   char ** argv;
   argc = hb_cmdargARGC();
   argv = hb_cmdargARGV();
-  QApplication * o = NULL;
-  o = new QApplication( argc, argv );
+  QApplication * o = new QApplication( argc, argv );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -220,7 +219,7 @@ HB_FUNC_STATIC( QAPPLICATION_ISSESSIONRESTORED )
   QApplication * obj = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isSessionRestored () );
+    RBOOL( obj->isSessionRestored () );
   }
 }
 
@@ -314,9 +313,7 @@ HB_FUNC_STATIC( QAPPLICATION_NOTIFY )
   QApplication * obj = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QEvent * par2 = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->notify ( par1, par2 ) );
+    RBOOL( obj->notify ( PQOBJECT(1), PQEVENT(2) ) );
   }
 }
 
@@ -407,8 +404,7 @@ void alert ( QWidget * widget, int msec = 0 )
 */
 HB_FUNC_STATIC( QAPPLICATION_ALERT )
 {
-  QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QApplication::alert ( par1, OPINT(2,0) );
+  QApplication::alert ( PQWIDGET(1), OPINT(2,0) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -489,7 +485,7 @@ int colorSpec ()
 */
 HB_FUNC_STATIC( QAPPLICATION_COLORSPEC )
 {
-  hb_retni( QApplication::colorSpec () );
+  RINT( QApplication::colorSpec () );
 }
 
 
@@ -498,7 +494,7 @@ int cursorFlashTime ()
 */
 HB_FUNC_STATIC( QAPPLICATION_CURSORFLASHTIME )
 {
-  hb_retni( QApplication::cursorFlashTime () );
+  RINT( QApplication::cursorFlashTime () );
 }
 
 
@@ -517,7 +513,7 @@ bool desktopSettingsAware ()
 */
 HB_FUNC_STATIC( QAPPLICATION_DESKTOPSETTINGSAWARE )
 {
-  hb_retl( QApplication::desktopSettingsAware () );
+  RBOOL( QApplication::desktopSettingsAware () );
 }
 
 
@@ -526,7 +522,7 @@ int doubleClickInterval ()
 */
 HB_FUNC_STATIC( QAPPLICATION_DOUBLECLICKINTERVAL )
 {
-  hb_retni( QApplication::doubleClickInterval () );
+  RINT( QApplication::doubleClickInterval () );
 }
 
 
@@ -535,7 +531,7 @@ int exec ()
 */
 HB_FUNC_STATIC( QAPPLICATION_EXEC )
 {
-  hb_retni( QApplication::exec () );
+  RINT( QApplication::exec () );
 }
 
 
@@ -575,8 +571,7 @@ QFont font ( const char * className )
 */
 HB_FUNC_STATIC( QAPPLICATION_FONT3 )
 {
-  const char * par1 = hb_parc(1);
-  QFont * ptr = new QFont( QApplication::font (  (const char *) par1 ) );
+  QFont * ptr = new QFont( QApplication::font (  (const char *) hb_parc(1) ) );
   _qt4xhb_createReturnClass ( ptr, "QFONT", true );
 }
 
@@ -627,7 +622,7 @@ bool isEffectEnabled ( Qt::UIEffect effect )
 HB_FUNC_STATIC( QAPPLICATION_ISEFFECTENABLED )
 {
   int par1 = hb_parni(1);
-  hb_retl( QApplication::isEffectEnabled (  (Qt::UIEffect) par1 ) );
+  RBOOL( QApplication::isEffectEnabled (  (Qt::UIEffect) par1 ) );
 }
 
 
@@ -636,7 +631,7 @@ bool isLeftToRight ()
 */
 HB_FUNC_STATIC( QAPPLICATION_ISLEFTTORIGHT )
 {
-  hb_retl( QApplication::isLeftToRight () );
+  RBOOL( QApplication::isLeftToRight () );
 }
 
 
@@ -645,7 +640,7 @@ bool isRightToLeft ()
 */
 HB_FUNC_STATIC( QAPPLICATION_ISRIGHTTOLEFT )
 {
-  hb_retl( QApplication::isRightToLeft () );
+  RBOOL( QApplication::isRightToLeft () );
 }
 
 
@@ -663,7 +658,7 @@ int keyboardInputInterval ()
 */
 HB_FUNC_STATIC( QAPPLICATION_KEYBOARDINPUTINTERVAL )
 {
-  hb_retni( QApplication::keyboardInputInterval () );
+  RINT( QApplication::keyboardInputInterval () );
 }
 
 
@@ -742,8 +737,7 @@ QPalette palette ( const char * className )
 */
 HB_FUNC_STATIC( QAPPLICATION_PALETTE3 )
 {
-  const char * par1 = hb_parc(1);
-  QPalette * ptr = new QPalette( QApplication::palette (  (const char *) par1 ) );
+  QPalette * ptr = new QPalette( QApplication::palette (  (const char *) hb_parc(1) ) );
   _qt4xhb_createReturnClass ( ptr, "QPALETTE", true );
 }
 
@@ -782,7 +776,7 @@ bool quitOnLastWindowClosed ()
 */
 HB_FUNC_STATIC( QAPPLICATION_QUITONLASTWINDOWCLOSED )
 {
-  hb_retl( QApplication::quitOnLastWindowClosed () );
+  RBOOL( QApplication::quitOnLastWindowClosed () );
 }
 
 
@@ -804,8 +798,7 @@ void setActiveWindow ( QWidget * active )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETACTIVEWINDOW )
 {
-  QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QApplication::setActiveWindow ( par1 );
+  QApplication::setActiveWindow ( PQWIDGET(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -815,8 +808,7 @@ void setColorSpec ( int spec )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETCOLORSPEC )
 {
-  int par1 = hb_parni(1);
-  QApplication::setColorSpec ( par1 );
+  QApplication::setColorSpec ( PINT(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -826,8 +818,7 @@ void setCursorFlashTime ( int )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETCURSORFLASHTIME )
 {
-  int par1 = hb_parni(1);
-  QApplication::setCursorFlashTime ( par1 );
+  QApplication::setCursorFlashTime ( PINT(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -847,8 +838,7 @@ void setDoubleClickInterval ( int )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETDOUBLECLICKINTERVAL )
 {
-  int par1 = hb_parni(1);
-  QApplication::setDoubleClickInterval ( par1 );
+  QApplication::setDoubleClickInterval ( PINT(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -869,9 +859,7 @@ void setFont ( const QFont & font, const char * className = 0 )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETFONT )
 {
-  QFont * par1 = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-  QApplication::setFont ( *par1,  (const char *) par2 );
+  QApplication::setFont ( *PQFONT(1),  (const char *) ISNIL(2)? 0 : hb_parc(2) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -881,8 +869,7 @@ void setGlobalStrut ( const QSize & )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETGLOBALSTRUT )
 {
-  QSize * par1 = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QApplication::setGlobalStrut ( *par1 );
+  QApplication::setGlobalStrut ( *PQSIZE(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -902,8 +889,7 @@ void setKeyboardInputInterval ( int )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETKEYBOARDINPUTINTERVAL )
 {
-  int par1 = hb_parni(1);
-  QApplication::setKeyboardInputInterval ( par1 );
+  QApplication::setKeyboardInputInterval ( PINT(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -937,8 +923,7 @@ void setPalette ( const QPalette & palette, const char * className = 0 )
 HB_FUNC_STATIC( QAPPLICATION_SETPALETTE )
 {
   QPalette * par1 = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-  QApplication::setPalette ( *par1,  (const char *) par2 );
+  QApplication::setPalette ( *par1,  (const char *) ISNIL(2)? 0 : hb_parc(2) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -958,8 +943,7 @@ void setStartDragDistance ( int l )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETSTARTDRAGDISTANCE )
 {
-  int par1 = hb_parni(1);
-  QApplication::setStartDragDistance ( par1 );
+  QApplication::setStartDragDistance ( PINT(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -969,8 +953,7 @@ void setStartDragTime ( int ms )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETSTARTDRAGTIME )
 {
-  int par1 = hb_parni(1);
-  QApplication::setStartDragTime ( par1 );
+  QApplication::setStartDragTime ( PINT(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -1016,8 +999,7 @@ void setWheelScrollLines ( int )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETWHEELSCROLLLINES )
 {
-  int par1 = hb_parni(1);
-  QApplication::setWheelScrollLines ( par1 );
+  QApplication::setWheelScrollLines ( PINT(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -1038,7 +1020,7 @@ int startDragDistance ()
 */
 HB_FUNC_STATIC( QAPPLICATION_STARTDRAGDISTANCE )
 {
-  hb_retni( QApplication::startDragDistance () );
+  RINT( QApplication::startDragDistance () );
 }
 
 
@@ -1047,7 +1029,7 @@ int startDragTime ()
 */
 HB_FUNC_STATIC( QAPPLICATION_STARTDRAGTIME )
 {
-  hb_retni( QApplication::startDragTime () );
+  RINT( QApplication::startDragTime () );
 }
 
 
@@ -1076,8 +1058,7 @@ QWidget * topLevelAt ( const QPoint & point )
 */
 HB_FUNC_STATIC( QAPPLICATION_TOPLEVELAT1 )
 {
-  QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QWidget * ptr = QApplication::topLevelAt ( *par1 );
+  QWidget * ptr = QApplication::topLevelAt ( *PQPOINT(1) );
   _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
 }
 
@@ -1087,9 +1068,7 @@ QWidget * topLevelAt ( int x, int y )
 */
 HB_FUNC_STATIC( QAPPLICATION_TOPLEVELAT2 )
 {
-  int par1 = hb_parni(1);
-  int par2 = hb_parni(2);
-  QWidget * ptr = QApplication::topLevelAt ( par1, par2 );
+  QWidget * ptr = QApplication::topLevelAt ( PINT(1), PINT(2) );
   _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
 }
 
@@ -1163,7 +1142,7 @@ int wheelScrollLines ()
 */
 HB_FUNC_STATIC( QAPPLICATION_WHEELSCROLLLINES )
 {
-  hb_retni( QApplication::wheelScrollLines () );
+  RINT( QApplication::wheelScrollLines () );
 }
 
 
@@ -1172,8 +1151,7 @@ QWidget * widgetAt ( const QPoint & point )
 */
 HB_FUNC_STATIC( QAPPLICATION_WIDGETAT1 )
 {
-  QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QWidget * ptr = QApplication::widgetAt ( *par1 );
+  QWidget * ptr = QApplication::widgetAt ( *PQPOINT(1) );
   _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
 }
 
@@ -1183,9 +1161,7 @@ QWidget * widgetAt ( int x, int y )
 */
 HB_FUNC_STATIC( QAPPLICATION_WIDGETAT2 )
 {
-  int par1 = hb_parni(1);
-  int par2 = hb_parni(2);
-  QWidget * ptr = QApplication::widgetAt ( par1, par2 );
+  QWidget * ptr = QApplication::widgetAt ( PINT(1), PINT(2) );
   _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
 }
 

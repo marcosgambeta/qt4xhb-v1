@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_COUNT )
   QGraphicsLayout * obj = (QGraphicsLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_ISACTIVATED )
   QGraphicsLayout * obj = (QGraphicsLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isActivated () );
+    RBOOL( obj->isActivated () );
   }
 }
 
@@ -126,8 +126,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_ITEMAT )
   QGraphicsLayout * obj = (QGraphicsLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QGraphicsLayoutItem * ptr = obj->itemAt ( par1 );
+    QGraphicsLayoutItem * ptr = obj->itemAt ( PINT(1) );
     _qt4xhb_createReturnClass ( ptr, "QGRAPHICSLAYOUTITEM" );
   }
 }
@@ -141,8 +140,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_REMOVEAT )
   QGraphicsLayout * obj = (QGraphicsLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->removeAt ( par1 );
+    obj->removeAt ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -170,8 +168,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_WIDGETEVENT )
   QGraphicsLayout * obj = (QGraphicsLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QEvent * par1 = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->widgetEvent ( par1 );
+    obj->widgetEvent ( PQEVENT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -219,7 +216,7 @@ bool instantInvalidatePropagation ()
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUT_INSTANTINVALIDATEPROPAGATION )
 {
-  hb_retl( QGraphicsLayout::instantInvalidatePropagation () );
+  RBOOL( QGraphicsLayout::instantInvalidatePropagation () );
 }
 
 

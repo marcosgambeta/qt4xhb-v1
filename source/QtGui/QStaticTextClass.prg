@@ -63,8 +63,7 @@ QStaticText ()
 */
 HB_FUNC_STATIC( QSTATICTEXT_NEW1 )
 {
-  QStaticText * o = NULL;
-  o = new QStaticText ();
+  QStaticText * o = new QStaticText ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -74,8 +73,7 @@ QStaticText ( const QString & text )
 */
 HB_FUNC_STATIC( QSTATICTEXT_NEW2 )
 {
-  QStaticText * o = NULL;
-  o = new QStaticText ( PQSTRING(1) );
+  QStaticText * o = new QStaticText ( PQSTRING(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -85,9 +83,7 @@ QStaticText ( const QStaticText & other )
 */
 HB_FUNC_STATIC( QSTATICTEXT_NEW3 )
 {
-  QStaticText * o = NULL;
-  QStaticText * par1 = (QStaticText *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QStaticText ( *par1 );
+  QStaticText * o = new QStaticText ( *PQSTATICTEXT(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -297,8 +293,7 @@ HB_FUNC_STATIC( QSTATICTEXT_TEXTWIDTH )
   QStaticText * obj = (QStaticText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->textWidth ();
-    hb_retnd( r );
+    RQREAL( obj->textWidth () );
   }
 }
 

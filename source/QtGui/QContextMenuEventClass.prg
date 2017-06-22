@@ -51,12 +51,8 @@ QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos,
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_NEW1 )
 {
-  QContextMenuEvent * o = NULL;
-  int par1 = hb_parni(1);
-  QPoint * par2 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QPoint * par3 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par4 = hb_parni(4);
-  o = new QContextMenuEvent (  (QContextMenuEvent::Reason) par1, *par2, *par3,  (Qt::KeyboardModifiers) par4 );
+  QContextMenuEvent * o = new QContextMenuEvent (  (QContextMenuEvent::Reason) hb_parni(1), *PQPOINT(2), *PQPOINT(3),  (Qt::KeyboardModifiers) par4 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -66,11 +62,7 @@ QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos 
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_NEW2 )
 {
-  QContextMenuEvent * o = NULL;
-  int par1 = hb_parni(1);
-  QPoint * par2 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QPoint * par3 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QContextMenuEvent (  (QContextMenuEvent::Reason) par1, *par2, *par3 );
+  QContextMenuEvent * o = new QContextMenuEvent (  (QContextMenuEvent::Reason) hb_parni(1), *PQPOINT(2), *PQPOINT(3) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -80,10 +72,7 @@ QContextMenuEvent ( Reason reason, const QPoint & pos )
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_NEW3 )
 {
-  QContextMenuEvent * o = NULL;
-  int par1 = hb_parni(1);
-  QPoint * par2 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QContextMenuEvent (  (QContextMenuEvent::Reason) par1, *par2 );
+  QContextMenuEvent * o = new QContextMenuEvent (  (QContextMenuEvent::Reason) hb_parni(1), *PQPOINT(2) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -150,7 +139,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALX )
   QContextMenuEvent * obj = (QContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->globalX () );
+    RINT( obj->globalX () );
   }
 }
 
@@ -163,7 +152,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALY )
   QContextMenuEvent * obj = (QContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->globalY () );
+    RINT( obj->globalY () );
   }
 }
 
@@ -203,7 +192,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_X )
   QContextMenuEvent * obj = (QContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->x () );
+    RINT( obj->x () );
   }
 }
 
@@ -216,7 +205,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_Y )
   QContextMenuEvent * obj = (QContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->y () );
+    RINT( obj->y () );
   }
 }
 

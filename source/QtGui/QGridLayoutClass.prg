@@ -85,9 +85,7 @@ QGridLayout ( QWidget * parent )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_NEW1 )
 {
-  QGridLayout * o = NULL;
-  QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QGridLayout ( par1 );
+  QGridLayout * o = new QGridLayout ( PQWIDGET(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -97,8 +95,7 @@ QGridLayout ()
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_NEW2 )
 {
-  QGridLayout * o = NULL;
-  o = new QGridLayout ();
+  QGridLayout * o = new QGridLayout ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -164,11 +161,10 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ADDLAYOUT1 )
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QLayout * par1 = (QLayout *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
     int par3 = hb_parni(3);
     int par4 = ISNIL(4)? (int) 0 : hb_parni(4);
-    obj->addLayout ( par1, par2, par3,  (Qt::Alignment) par4 );
+    obj->addLayout ( PQLAYOUT(1), par2, par3,  (Qt::Alignment) par4 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -182,13 +178,12 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ADDLAYOUT2 )
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QLayout * par1 = (QLayout *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
     int par3 = hb_parni(3);
     int par4 = hb_parni(4);
     int par5 = hb_parni(5);
     int par6 = ISNIL(6)? (int) 0 : hb_parni(6);
-    obj->addLayout ( par1, par2, par3, par4, par5,  (Qt::Alignment) par6 );
+    obj->addLayout ( PQLAYOUT(1), par2, par3, par4, par5,  (Qt::Alignment) par6 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -217,11 +212,10 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ADDWIDGET1 )
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
     int par3 = hb_parni(3);
     int par4 = ISNIL(4)? (int) 0 : hb_parni(4);
-    obj->addWidget ( par1, par2, par3,  (Qt::Alignment) par4 );
+    obj->addWidget ( PQWIDGET(1), par2, par3,  (Qt::Alignment) par4 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -235,13 +229,12 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ADDWIDGET2 )
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
     int par3 = hb_parni(3);
     int par4 = hb_parni(4);
     int par5 = hb_parni(5);
     int par6 = ISNIL(6)? (int) 0 : hb_parni(6);
-    obj->addWidget ( par1, par2, par3, par4, par5,  (Qt::Alignment) par6 );
+    obj->addWidget ( PQWIDGET(1), par2, par3, par4, par5,  (Qt::Alignment) par6 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -270,9 +263,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_CELLRECT )
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    QRect * ptr = new QRect( obj->cellRect ( par1, par2 ) );
+    QRect * ptr = new QRect( obj->cellRect ( PINT(1), PINT(2) ) );
     _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -286,7 +277,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_COLUMNCOUNT )
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->columnCount () );
+    RINT( obj->columnCount () );
   }
 }
 
@@ -299,8 +290,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_COLUMNMINIMUMWIDTH )
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retni( obj->columnMinimumWidth ( par1 ) );
+    RINT( obj->columnMinimumWidth ( PINT(1) ) );
   }
 }
 
@@ -313,8 +303,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_COLUMNSTRETCH )
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retni( obj->columnStretch ( par1 ) );
+    RINT( obj->columnStretch ( PINT(1) ) );
   }
 }
 
@@ -327,12 +316,11 @@ HB_FUNC_STATIC( QGRIDLAYOUT_GETITEMPOSITION )
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
     int par2;
     int par3;
     int par4;
     int par5;
-    obj->getItemPosition ( par1, &par2, &par3, &par4, &par5 );
+    obj->getItemPosition ( PINT(1), &par2, &par3, &par4, &par5 );
     hb_storni( par2, 2 );
     hb_storni( par3, 3 );
     hb_storni( par4, 4 );
@@ -350,7 +338,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_HORIZONTALSPACING )
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->horizontalSpacing () );
+    RINT( obj->horizontalSpacing () );
   }
 }
 
@@ -363,9 +351,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ITEMATPOSITION )
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    QLayoutItem * ptr = obj->itemAtPosition ( par1, par2 );
+    QLayoutItem * ptr = obj->itemAtPosition ( PINT(1), PINT(2) );
     _qt4xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
   }
 }
@@ -392,7 +378,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ROWCOUNT )
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->rowCount () );
+    RINT( obj->rowCount () );
   }
 }
 
@@ -405,8 +391,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ROWMINIMUMHEIGHT )
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retni( obj->rowMinimumHeight ( par1 ) );
+    RINT( obj->rowMinimumHeight ( PINT(1) ) );
   }
 }
 
@@ -419,8 +404,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ROWSTRETCH )
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retni( obj->rowStretch ( par1 ) );
+    RINT( obj->rowStretch ( PINT(1) ) );
   }
 }
 
@@ -433,9 +417,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETCOLUMNMINIMUMWIDTH )
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    obj->setColumnMinimumWidth ( par1, par2 );
+    obj->setColumnMinimumWidth ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -449,9 +431,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETCOLUMNSTRETCH )
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    obj->setColumnStretch ( par1, par2 );
+    obj->setColumnStretch ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -465,8 +445,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETHORIZONTALSPACING )
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setHorizontalSpacing ( par1 );
+    obj->setHorizontalSpacing ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -495,9 +474,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETROWMINIMUMHEIGHT )
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    obj->setRowMinimumHeight ( par1, par2 );
+    obj->setRowMinimumHeight ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -511,9 +488,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETROWSTRETCH )
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    obj->setRowStretch ( par1, par2 );
+    obj->setRowStretch ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -527,8 +502,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETSPACING )
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setSpacing ( par1 );
+    obj->setSpacing ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -542,8 +516,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETVERTICALSPACING )
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setVerticalSpacing ( par1 );
+    obj->setVerticalSpacing ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -557,7 +530,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SPACING )
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->spacing () );
+    RINT( obj->spacing () );
   }
 }
 
@@ -570,7 +543,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_VERTICALSPACING )
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->verticalSpacing () );
+    RINT( obj->verticalSpacing () );
   }
 }
 
@@ -583,7 +556,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_COUNT )
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 
@@ -609,7 +582,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_HASHEIGHTFORWIDTH )
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasHeightForWidth () );
+    RBOOL( obj->hasHeightForWidth () );
   }
 }
 
@@ -622,8 +595,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_HEIGHTFORWIDTH )
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retni( obj->heightForWidth ( par1 ) );
+    RINT( obj->heightForWidth ( PINT(1) ) );
   }
 }
 
@@ -650,8 +622,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ITEMAT )
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QLayoutItem * ptr = obj->itemAt ( par1 );
+    QLayoutItem * ptr = obj->itemAt ( PINT(1) );
     _qt4xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
   }
 }
@@ -679,8 +650,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_MINIMUMHEIGHTFORWIDTH )
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retni( obj->minimumHeightForWidth ( par1 ) );
+    RINT( obj->minimumHeightForWidth ( PINT(1) ) );
   }
 }
 
@@ -707,8 +677,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETGEOMETRY )
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRect * par1 = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setGeometry ( *par1 );
+    obj->setGeometry ( *PQRECT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -736,8 +705,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_TAKEAT )
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QLayoutItem * ptr = obj->takeAt ( par1 );
+    QLayoutItem * ptr = obj->takeAt ( PINT(1) );
     _qt4xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
   }
 }

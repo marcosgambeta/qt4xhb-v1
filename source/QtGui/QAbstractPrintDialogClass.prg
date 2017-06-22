@@ -54,7 +54,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_EXEC )
   QAbstractPrintDialog * obj = (QAbstractPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->exec () );
+    RINT( obj->exec () );
   }
 }
 
@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_FROMPAGE )
   QAbstractPrintDialog * obj = (QAbstractPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->fromPage () );
+    RINT( obj->fromPage () );
   }
 }
 
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_MAXPAGE )
   QAbstractPrintDialog * obj = (QAbstractPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->maxPage () );
+    RINT( obj->maxPage () );
   }
 }
 
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_MINPAGE )
   QAbstractPrintDialog * obj = (QAbstractPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->minPage () );
+    RINT( obj->minPage () );
   }
 }
 
@@ -133,9 +133,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_SETFROMTO )
   QAbstractPrintDialog * obj = (QAbstractPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    obj->setFromTo ( par1, par2 );
+    obj->setFromTo ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -149,9 +147,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_SETMINMAX )
   QAbstractPrintDialog * obj = (QAbstractPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    obj->setMinMax ( par1, par2 );
+    obj->setMinMax ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -181,7 +177,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_TOPAGE )
   QAbstractPrintDialog * obj = (QAbstractPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->toPage () );
+    RINT( obj->toPage () );
   }
 }
 

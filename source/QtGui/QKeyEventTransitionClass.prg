@@ -44,9 +44,7 @@ QKeyEventTransition ( QState * sourceState = 0 )
 */
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_NEW1 )
 {
-  QKeyEventTransition * o = NULL;
-  QState * par1 = ISNIL(1)? 0 : (QState *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QKeyEventTransition ( par1 );
+  QKeyEventTransition * o = new QKeyEventTransition ( OPQSTATE(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -56,12 +54,7 @@ QKeyEventTransition ( QObject * object, QEvent::Type type, int key, QState * sou
 */
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_NEW2 )
 {
-  QKeyEventTransition * o = NULL;
-  QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  int par2 = hb_parni(2);
-  int par3 = hb_parni(3);
-  QState * par4 = ISNIL(4)? 0 : (QState *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QKeyEventTransition ( par1,  (QEvent::Type) par2, par3, par4 );
+  QKeyEventTransition * o = new QKeyEventTransition ( PQOBJECT(1),  (QEvent::Type) hb_parni(2), PINT(3), OPQSTATE(4,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -109,7 +102,7 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_KEY )
   QKeyEventTransition * obj = (QKeyEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->key () );
+    RINT( obj->key () );
   }
 }
 
@@ -135,8 +128,7 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_SETKEY )
   QKeyEventTransition * obj = (QKeyEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setKey ( par1 );
+    obj->setKey ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

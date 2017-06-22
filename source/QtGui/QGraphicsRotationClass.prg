@@ -53,9 +53,7 @@ QGraphicsRotation ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSROTATION_NEW )
 {
-  QGraphicsRotation * o = NULL;
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QGraphicsRotation ( par1 );
+  QGraphicsRotation * o = new QGraphicsRotation ( OPQOBJECT(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -84,8 +82,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ANGLE )
   QGraphicsRotation * obj = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->angle ();
-    hb_retnd( r );
+    RQREAL( obj->angle () );
   }
 }
 

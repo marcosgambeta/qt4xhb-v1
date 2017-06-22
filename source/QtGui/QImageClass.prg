@@ -133,8 +133,7 @@ QImage ()
 */
 HB_FUNC_STATIC( QIMAGE_NEW1 )
 {
-  QImage * o = NULL;
-  o = new QImage ();
+  QImage * o = new QImage ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -144,10 +143,7 @@ QImage ( const QSize & size, Format format )
 */
 HB_FUNC_STATIC( QIMAGE_NEW2 )
 {
-  QImage * o = NULL;
-  QSize * par1 = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  int par2 = hb_parni(2);
-  o = new QImage ( *par1,  (QImage::Format) par2 );
+  QImage * o = new QImage ( *PQSIZE(1),  (QImage::Format) hb_parni(2) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -157,11 +153,7 @@ QImage ( int width, int height, Format format )
 */
 HB_FUNC_STATIC( QIMAGE_NEW3 )
 {
-  QImage * o = NULL;
-  int par1 = hb_parni(1);
-  int par2 = hb_parni(2);
-  int par3 = hb_parni(3);
-  o = new QImage ( par1, par2,  (QImage::Format) par3 );
+  QImage * o = new QImage ( PINT(1), PINT(2),  (QImage::Format) hb_parni(3) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -176,9 +168,7 @@ QImage ( const QString & fileName, const char * format = 0 )
 */
 HB_FUNC_STATIC( QIMAGE_NEW9 )
 {
-  QImage * o = NULL;
-  const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-  o = new QImage ( PQSTRING(1),  (const char *) par2 );
+  QImage * o = new QImage ( PQSTRING(1),  (const char *) ISNIL(2)? 0 : hb_parc(2) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -188,10 +178,7 @@ QImage ( const char * fileName, const char * format = 0 )
 */
 HB_FUNC_STATIC( QIMAGE_NEW10 )
 {
-  QImage * o = NULL;
-  const char * par1 = hb_parc(1);
-  const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-  o = new QImage (  (const char *) par1,  (const char *) par2 );
+  QImage * o = new QImage (  (const char *) hb_parc(1),  (const char *) ISNIL(2)? 0 : hb_parc(2) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -201,9 +188,7 @@ QImage ( const QImage & image )
 */
 HB_FUNC_STATIC( QIMAGE_NEW11 )
 {
-  QImage * o = NULL;
-  QImage * par1 = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QImage ( *par1 );
+  QImage * o = new QImage ( *PQIMAGE(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -280,7 +265,7 @@ HB_FUNC_STATIC( QIMAGE_ALLGRAY )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->allGray () );
+    RBOOL( obj->allGray () );
   }
 }
 
@@ -293,7 +278,7 @@ HB_FUNC_STATIC( QIMAGE_BITPLANECOUNT )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->bitPlaneCount () );
+    RINT( obj->bitPlaneCount () );
   }
 }
 
@@ -308,7 +293,7 @@ HB_FUNC_STATIC( QIMAGE_BYTECOUNT )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->byteCount () );
+    RINT( obj->byteCount () );
   }
 }
 
@@ -321,7 +306,7 @@ HB_FUNC_STATIC( QIMAGE_BYTESPERLINE )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->bytesPerLine () );
+    RINT( obj->bytesPerLine () );
   }
 }
 
@@ -334,8 +319,7 @@ HB_FUNC_STATIC( QIMAGE_CACHEKEY )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->cacheKey ();
-    hb_retni( i );
+    RQINT64( obj->cacheKey () );
   }
 }
 
@@ -348,8 +332,7 @@ HB_FUNC_STATIC( QIMAGE_COLOR )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QRgb i = obj->color ( par1 );
+    QRgb i = obj->color ( PINT(1) );
     hb_retni( i );
   }
 }
@@ -363,7 +346,7 @@ HB_FUNC_STATIC( QIMAGE_COLORCOUNT )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->colorCount () );
+    RINT( obj->colorCount () );
   }
 }
 
@@ -472,11 +455,7 @@ HB_FUNC_STATIC( QIMAGE_COPY2 )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    int par3 = hb_parni(3);
-    int par4 = hb_parni(4);
-    QImage * ptr = new QImage( obj->copy ( par1, par2, par3, par4 ) );
+    QImage * ptr = new QImage( obj->copy ( PINT(1), PINT(2), PINT(3), PINT(4) ) );
     _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
 }
 
@@ -546,7 +525,7 @@ HB_FUNC_STATIC( QIMAGE_DEPTH )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->depth () );
+    RINT( obj->depth () );
   }
 }
 
@@ -559,7 +538,7 @@ HB_FUNC_STATIC( QIMAGE_DOTSPERMETERX )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->dotsPerMeterX () );
+    RINT( obj->dotsPerMeterX () );
   }
 }
 
@@ -572,7 +551,7 @@ HB_FUNC_STATIC( QIMAGE_DOTSPERMETERY )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->dotsPerMeterY () );
+    RINT( obj->dotsPerMeterY () );
   }
 }
 
@@ -659,7 +638,7 @@ HB_FUNC_STATIC( QIMAGE_HASALPHACHANNEL )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasAlphaChannel () );
+    RBOOL( obj->hasAlphaChannel () );
   }
 }
 
@@ -672,7 +651,7 @@ HB_FUNC_STATIC( QIMAGE_HEIGHT )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->height () );
+    RINT( obj->height () );
   }
 }
 
@@ -700,7 +679,7 @@ HB_FUNC_STATIC( QIMAGE_ISGRAYSCALE )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isGrayscale () );
+    RBOOL( obj->isGrayscale () );
   }
 }
 
@@ -713,7 +692,7 @@ HB_FUNC_STATIC( QIMAGE_ISNULL )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -726,8 +705,7 @@ HB_FUNC_STATIC( QIMAGE_LOAD1 )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    hb_retl( obj->load ( PQSTRING(1),  (const char *) par2 ) );
+    RBOOL( obj->load ( PQSTRING(1),  (const char *) ISNIL(2)? 0 : hb_parc(2) ) );
   }
 }
 
@@ -740,9 +718,7 @@ HB_FUNC_STATIC( QIMAGE_LOAD2 )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    const char * par2 = hb_parc(2);
-    hb_retl( obj->load ( par1,  (const char *) par2 ) );
+    RBOOL( obj->load ( PQIODEVICE(1),  (const char *) hb_parc(2) ) );
   }
 }
 
@@ -772,8 +748,7 @@ HB_FUNC_STATIC( QIMAGE_LOADFROMDATA1 )
   {
     const uchar * par1 = (const uchar *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
-    const char * par3 = ISNIL(3)? 0 : hb_parc(3);
-    hb_retl( obj->loadFromData ( par1, par2,  (const char *) par3 ) );
+    RBOOL( obj->loadFromData ( par1, par2,  (const char *) ISNIL(3)? 0 : hb_parc(3) ) );
   }
 }
 
@@ -786,9 +761,7 @@ HB_FUNC_STATIC( QIMAGE_LOADFROMDATA2 )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    hb_retl( obj->loadFromData ( *par1,  (const char *) par2 ) );
+    RBOOL( obj->loadFromData ( *PQBYTEARRAY(1),  (const char *) ISNIL(2)? 0 : hb_parc(2) ) );
   }
 }
 
@@ -842,8 +815,7 @@ HB_FUNC_STATIC( QIMAGE_PIXEL1 )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QRgb i = obj->pixel ( *par1 );
+    QRgb i = obj->pixel ( *PQPOINT(1) );
     hb_retni( i );
   }
 }
@@ -857,9 +829,7 @@ HB_FUNC_STATIC( QIMAGE_PIXEL2 )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    QRgb i = obj->pixel ( par1, par2 );
+    QRgb i = obj->pixel ( PINT(1), PINT(2) );
     hb_retni( i );
   }
 }
@@ -888,8 +858,7 @@ HB_FUNC_STATIC( QIMAGE_PIXELINDEX1 )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retni( obj->pixelIndex ( *par1 ) );
+    RINT( obj->pixelIndex ( *PQPOINT(1) ) );
   }
 }
 
@@ -902,9 +871,7 @@ HB_FUNC_STATIC( QIMAGE_PIXELINDEX2 )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    hb_retni( obj->pixelIndex ( par1, par2 ) );
+    RINT( obj->pixelIndex ( PINT(1), PINT(2) ) );
   }
 }
 
@@ -958,8 +925,7 @@ HB_FUNC_STATIC( QIMAGE_SAVE1 )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    hb_retl( obj->save ( PQSTRING(1),  (const char *) par2, OPINT(3,-1) ) );
+    RBOOL( obj->save ( PQSTRING(1),  (const char *) ISNIL(2)? 0 : hb_parc(2), OPINT(3,-1) ) );
   }
 }
 
@@ -972,9 +938,7 @@ HB_FUNC_STATIC( QIMAGE_SAVE2 )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    hb_retl( obj->save ( par1,  (const char *) par2, OPINT(3,-1) ) );
+    RBOOL( obj->save ( PQIODEVICE(1),  (const char *) ISNIL(2)? 0 : hb_parc(2), OPINT(3,-1) ) );
   }
 }
 
@@ -1002,10 +966,9 @@ HB_FUNC_STATIC( QIMAGE_SCALED1 )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * par1 = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = ISNIL(2)? (int) Qt::IgnoreAspectRatio : hb_parni(2);
     int par3 = ISNIL(3)? (int) Qt::FastTransformation : hb_parni(3);
-    QImage * ptr = new QImage( obj->scaled ( *par1,  (Qt::AspectRatioMode) par2,  (Qt::TransformationMode) par3 ) );
+    QImage * ptr = new QImage( obj->scaled ( *PQSIZE(1),  (Qt::AspectRatioMode) par2,  (Qt::TransformationMode) par3 ) );
     _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
 }
 
@@ -1018,11 +981,9 @@ HB_FUNC_STATIC( QIMAGE_SCALED2 )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
     int par3 = ISNIL(3)? (int) Qt::IgnoreAspectRatio : hb_parni(3);
     int par4 = ISNIL(4)? (int) Qt::FastTransformation : hb_parni(4);
-    QImage * ptr = new QImage( obj->scaled ( par1, par2,  (Qt::AspectRatioMode) par3,  (Qt::TransformationMode) par4 ) );
+    QImage * ptr = new QImage( obj->scaled ( PINT(1), PINT(2),  (Qt::AspectRatioMode) par3,  (Qt::TransformationMode) par4 ) );
     _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
 }
 
@@ -1050,9 +1011,8 @@ HB_FUNC_STATIC( QIMAGE_SCALEDTOHEIGHT )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
     int par2 = ISNIL(2)? (int) Qt::FastTransformation : hb_parni(2);
-    QImage * ptr = new QImage( obj->scaledToHeight ( par1,  (Qt::TransformationMode) par2 ) );
+    QImage * ptr = new QImage( obj->scaledToHeight ( PINT(1),  (Qt::TransformationMode) par2 ) );
     _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
 }
 
@@ -1065,9 +1025,8 @@ HB_FUNC_STATIC( QIMAGE_SCALEDTOWIDTH )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
     int par2 = ISNIL(2)? (int) Qt::FastTransformation : hb_parni(2);
-    QImage * ptr = new QImage( obj->scaledToWidth ( par1,  (Qt::TransformationMode) par2 ) );
+    QImage * ptr = new QImage( obj->scaledToWidth ( PINT(1),  (Qt::TransformationMode) par2 ) );
     _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
 }
 
@@ -1090,9 +1049,8 @@ HB_FUNC_STATIC( QIMAGE_SETCOLOR )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
     QRgb par2 = hb_parni(2);
-    obj->setColor ( par1, par2 );
+    obj->setColor ( PINT(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1106,8 +1064,7 @@ HB_FUNC_STATIC( QIMAGE_SETCOLORCOUNT )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setColorCount ( par1 );
+    obj->setColorCount ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1145,8 +1102,7 @@ HB_FUNC_STATIC( QIMAGE_SETDOTSPERMETERX )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setDotsPerMeterX ( par1 );
+    obj->setDotsPerMeterX ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1160,8 +1116,7 @@ HB_FUNC_STATIC( QIMAGE_SETDOTSPERMETERY )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setDotsPerMeterY ( par1 );
+    obj->setDotsPerMeterY ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1175,8 +1130,7 @@ HB_FUNC_STATIC( QIMAGE_SETOFFSET )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setOffset ( *par1 );
+    obj->setOffset ( *PQPOINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1190,8 +1144,7 @@ HB_FUNC_STATIC( QIMAGE_SETPIXEL1 )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setPixel ( *par1, PUINT(2) );
+    obj->setPixel ( *PQPOINT(1), PUINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1205,9 +1158,7 @@ HB_FUNC_STATIC( QIMAGE_SETPIXEL2 )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    obj->setPixel ( par1, par2, PUINT(3) );
+    obj->setPixel ( PINT(1), PINT(2), PUINT(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1316,9 +1267,8 @@ HB_FUNC_STATIC( QIMAGE_TRANSFORMED2 )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTransform * par1 = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = ISNIL(2)? (int) Qt::FastTransformation : hb_parni(2);
-    QImage * ptr = new QImage( obj->transformed ( *par1,  (Qt::TransformationMode) par2 ) );
+    QImage * ptr = new QImage( obj->transformed ( *PQTRANSFORM(1),  (Qt::TransformationMode) par2 ) );
     _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
 }
 
@@ -1342,8 +1292,7 @@ HB_FUNC_STATIC( QIMAGE_VALID1 )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->valid ( *par1 ) );
+    RBOOL( obj->valid ( *PQPOINT(1) ) );
   }
 }
 
@@ -1356,9 +1305,7 @@ HB_FUNC_STATIC( QIMAGE_VALID2 )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    hb_retl( obj->valid ( par1, par2 ) );
+    RBOOL( obj->valid ( PINT(1), PINT(2) ) );
   }
 }
 
@@ -1386,7 +1333,7 @@ HB_FUNC_STATIC( QIMAGE_WIDTH )
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->width () );
+    RINT( obj->width () );
   }
 }
 
@@ -1401,8 +1348,7 @@ HB_FUNC_STATIC( QIMAGE_FROMDATA1 )
 {
   const uchar * par1 = (const uchar *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = hb_parni(2);
-  const char * par3 = ISNIL(3)? 0 : hb_parc(3);
-  QImage * ptr = new QImage( QImage::fromData ( par1, par2,  (const char *) par3 ) );
+  QImage * ptr = new QImage( QImage::fromData ( par1, par2,  (const char *) ISNIL(3)? 0 : hb_parc(3) ) );
   _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );}
 
 
@@ -1411,9 +1357,7 @@ QImage fromData ( const QByteArray & data, const char * format = 0 )
 */
 HB_FUNC_STATIC( QIMAGE_FROMDATA2 )
 {
-  QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-  QImage * ptr = new QImage( QImage::fromData ( *par1,  (const char *) par2 ) );
+  QImage * ptr = new QImage( QImage::fromData ( *PQBYTEARRAY(1),  (const char *) ISNIL(2)? 0 : hb_parc(2) ) );
   _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );}
 
 
@@ -1438,10 +1382,9 @@ QTransform trueMatrix ( const QTransform & matrix, int width, int height )
 */
 HB_FUNC_STATIC( QIMAGE_TRUEMATRIX2 )
 {
-  QTransform * par1 = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = hb_parni(2);
   int par3 = hb_parni(3);
-  QTransform * ptr = new QTransform( QImage::trueMatrix ( *par1, par2, par3 ) );
+  QTransform * ptr = new QTransform( QImage::trueMatrix ( *PQTRANSFORM(1), par2, par3 ) );
   _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );}
 
 

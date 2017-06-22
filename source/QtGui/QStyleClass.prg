@@ -103,10 +103,8 @@ HB_FUNC_STATIC( QSTYLE_COMBINEDLAYOUTSPACING )
   {
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
-    int par3 = hb_parni(3);
     QStyleOption * par4 = ISNIL(4)? 0 : (QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QWidget * par5 = ISNIL(5)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(5, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retni( obj->combinedLayoutSpacing (  (QSizePolicy::ControlTypes) par1,  (QSizePolicy::ControlTypes) par2,  (Qt::Orientation) par3, par4, par5 ) );
+    RINT( obj->combinedLayoutSpacing (  (QSizePolicy::ControlTypes) par1,  (QSizePolicy::ControlTypes) par2,  (Qt::Orientation) hb_parni(3), par4, OPQWIDGET(5,0) ) );
   }
 }
 
@@ -121,9 +119,8 @@ HB_FUNC_STATIC( QSTYLE_DRAWCOMPLEXCONTROL )
   {
     int par1 = hb_parni(1);
     const QStyleOptionComplex * par2 = (const QStyleOptionComplex *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QPainter * par3 = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     const QWidget * par4 = ISNIL(4)? 0 : (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->drawComplexControl (  (QStyle::ComplexControl) par1, par2, par3, par4 );
+    obj->drawComplexControl (  (QStyle::ComplexControl) par1, par2, PQPAINTER(3), par4 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -139,9 +136,8 @@ HB_FUNC_STATIC( QSTYLE_DRAWCONTROL )
   {
     int par1 = hb_parni(1);
     const QStyleOption * par2 = (const QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QPainter * par3 = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     const QWidget * par4 = ISNIL(4)? 0 : (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->drawControl (  (QStyle::ControlElement) par1, par2, par3, par4 );
+    obj->drawControl (  (QStyle::ControlElement) par1, par2, PQPAINTER(3), par4 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -155,11 +151,7 @@ HB_FUNC_STATIC( QSTYLE_DRAWITEMPIXMAP )
   QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPainter * par1 = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QRect * par2 = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par3 = hb_parni(3);
-    QPixmap * par4 = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->drawItemPixmap ( par1, *par2, par3, *par4 );
+    obj->drawItemPixmap ( PQPAINTER(1), *PQRECT(2), PINT(3), *PQPIXMAP(4) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -173,12 +165,10 @@ HB_FUNC_STATIC( QSTYLE_DRAWITEMTEXT )
   QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPainter * par1 = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QRect * par2 = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par3 = hb_parni(3);
     QPalette * par4 = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par7 = ISNIL(7)? (int) QPalette::NoRole : hb_parni(7);
-    obj->drawItemText ( par1, *par2, par3, *par4, PBOOL(5), PQSTRING(6),  (QPalette::ColorRole) par7 );
+    obj->drawItemText ( PQPAINTER(1), *PQRECT(2), par3, *par4, PBOOL(5), PQSTRING(6),  (QPalette::ColorRole) par7 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -194,9 +184,8 @@ HB_FUNC_STATIC( QSTYLE_DRAWPRIMITIVE )
   {
     int par1 = hb_parni(1);
     const QStyleOption * par2 = (const QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QPainter * par3 = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     const QWidget * par4 = ISNIL(4)? 0 : (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->drawPrimitive (  (QStyle::PrimitiveElement) par1, par2, par3, par4 );
+    obj->drawPrimitive (  (QStyle::PrimitiveElement) par1, par2, PQPAINTER(3), par4 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -211,9 +200,8 @@ HB_FUNC_STATIC( QSTYLE_GENERATEDICONPIXMAP )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QPixmap * par2 = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     const QStyleOption * par3 = (const QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QPixmap * ptr = new QPixmap( obj->generatedIconPixmap (  (QIcon::Mode) par1, *par2, par3 ) );
+    QPixmap * ptr = new QPixmap( obj->generatedIconPixmap (  (QIcon::Mode) par1, *PQPIXMAP(2), par3 ) );
     _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
@@ -229,9 +217,8 @@ HB_FUNC_STATIC( QSTYLE_HITTESTCOMPLEXCONTROL )
   {
     int par1 = hb_parni(1);
     const QStyleOptionComplex * par2 = (const QStyleOptionComplex *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QPoint * par3 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     const QWidget * par4 = ISNIL(4)? 0 : (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retni( (int) obj->hitTestComplexControl (  (QStyle::ComplexControl) par1, par2, *par3, par4 ) );
+    hb_retni( (int) obj->hitTestComplexControl (  (QStyle::ComplexControl) par1, par2, *PQPOINT(3), par4 ) );
   }
 }
 
@@ -244,10 +231,7 @@ HB_FUNC_STATIC( QSTYLE_ITEMPIXMAPRECT )
   QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRect * par1 = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par2 = hb_parni(2);
-    QPixmap * par3 = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QRect * ptr = new QRect( obj->itemPixmapRect ( *par1, par2, *par3 ) );
+    QRect * ptr = new QRect( obj->itemPixmapRect ( *PQRECT(1), PINT(2), *PQPIXMAP(3) ) );
     _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -262,9 +246,8 @@ HB_FUNC_STATIC( QSTYLE_ITEMTEXTRECT )
   if( obj )
   {
     QFontMetrics * par1 = (QFontMetrics *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QRect * par2 = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par3 = hb_parni(3);
-    QRect * ptr = new QRect( obj->itemTextRect ( *par1, *par2, par3, PBOOL(4), PQSTRING(5) ) );
+    QRect * ptr = new QRect( obj->itemTextRect ( *par1, *PQRECT(2), par3, PBOOL(4), PQSTRING(5) ) );
     _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -280,10 +263,9 @@ HB_FUNC_STATIC( QSTYLE_LAYOUTSPACING )
   {
     int par1 = hb_parni(1);
     int par2 = hb_parni(2);
-    int par3 = hb_parni(3);
     const QStyleOption * par4 = ISNIL(4)? 0 : (const QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
     const QWidget * par5 = ISNIL(5)? 0 : (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(5, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retni( obj->layoutSpacing (  (QSizePolicy::ControlType) par1,  (QSizePolicy::ControlType) par2,  (Qt::Orientation) par3, par4, par5 ) );
+    RINT( obj->layoutSpacing (  (QSizePolicy::ControlType) par1,  (QSizePolicy::ControlType) par2,  (Qt::Orientation) hb_parni(3), par4, par5 ) );
   }
 }
 
@@ -299,7 +281,7 @@ HB_FUNC_STATIC( QSTYLE_PIXELMETRIC )
     int par1 = hb_parni(1);
     const QStyleOption * par2 = ISNIL(2)? 0 : (const QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     const QWidget * par3 = ISNIL(3)? 0 : (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retni( obj->pixelMetric (  (QStyle::PixelMetric) par1, par2, par3 ) );
+    RINT( obj->pixelMetric (  (QStyle::PixelMetric) par1, par2, par3 ) );
   }
 }
 
@@ -312,8 +294,7 @@ HB_FUNC_STATIC( QSTYLE_POLISH1 )
   QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->polish ( par1 );
+    obj->polish ( PQWIDGET(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -393,9 +374,8 @@ HB_FUNC_STATIC( QSTYLE_SIZEFROMCONTENTS )
   {
     int par1 = hb_parni(1);
     const QStyleOption * par2 = (const QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QSize * par3 = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     const QWidget * par4 = ISNIL(4)? 0 : (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QSize * ptr = new QSize( obj->sizeFromContents (  (QStyle::ContentsType) par1, par2, *par3, par4 ) );
+    QSize * ptr = new QSize( obj->sizeFromContents (  (QStyle::ContentsType) par1, par2, *PQSIZE(3), par4 ) );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
@@ -444,7 +424,7 @@ HB_FUNC_STATIC( QSTYLE_STYLEHINT )
     const QStyleOption * par2 = ISNIL(2)? 0 : (const QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     const QWidget * par3 = ISNIL(3)? 0 : (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     QStyleHintReturn * par4 = ISNIL(4)? 0 : (QStyleHintReturn *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retni( obj->styleHint (  (QStyle::StyleHint) par1, par2, par3, par4 ) );
+    RINT( obj->styleHint (  (QStyle::StyleHint) par1, par2, par3, par4 ) );
   }
 }
 
@@ -492,8 +472,7 @@ HB_FUNC_STATIC( QSTYLE_UNPOLISH1 )
   QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->unpolish ( par1 );
+    obj->unpolish ( PQWIDGET(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -539,9 +518,7 @@ HB_FUNC_STATIC( QSTYLE_ALIGNEDRECT )
 {
   int par1 = hb_parni(1);
   int par2 = hb_parni(2);
-  QSize * par3 = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QRect * par4 = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QRect * ptr = new QRect( QStyle::alignedRect (  (Qt::LayoutDirection) par1,  (Qt::Alignment) par2, *par3, *par4 ) );
+  QRect * ptr = new QRect( QStyle::alignedRect (  (Qt::LayoutDirection) par1,  (Qt::Alignment) par2, *PQSIZE(3), *PQRECT(4) ) );
   _qt4xhb_createReturnClass ( ptr, "QRECT", true );
 }
 
@@ -551,11 +528,7 @@ int sliderPositionFromValue ( int min, int max, int logicalValue, int span, bool
 */
 HB_FUNC_STATIC( QSTYLE_SLIDERPOSITIONFROMVALUE )
 {
-  int par1 = hb_parni(1);
-  int par2 = hb_parni(2);
-  int par3 = hb_parni(3);
-  int par4 = hb_parni(4);
-  hb_retni( QStyle::sliderPositionFromValue ( par1, par2, par3, par4, OPBOOL(5,false) ) );
+  RINT( QStyle::sliderPositionFromValue ( PINT(1), PINT(2), PINT(3), PINT(4), OPBOOL(5,false) ) );
 }
 
 
@@ -564,11 +537,7 @@ int sliderValueFromPosition ( int min, int max, int position, int span, bool ups
 */
 HB_FUNC_STATIC( QSTYLE_SLIDERVALUEFROMPOSITION )
 {
-  int par1 = hb_parni(1);
-  int par2 = hb_parni(2);
-  int par3 = hb_parni(3);
-  int par4 = hb_parni(4);
-  hb_retni( QStyle::sliderValueFromPosition ( par1, par2, par3, par4, OPBOOL(5,false) ) );
+  RINT( QStyle::sliderValueFromPosition ( PINT(1), PINT(2), PINT(3), PINT(4), OPBOOL(5,false) ) );
 }
 
 
@@ -589,9 +558,7 @@ QPoint visualPos ( Qt::LayoutDirection direction, const QRect & boundingRectangl
 HB_FUNC_STATIC( QSTYLE_VISUALPOS )
 {
   int par1 = hb_parni(1);
-  QRect * par2 = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QPoint * par3 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QPoint * ptr = new QPoint( QStyle::visualPos (  (Qt::LayoutDirection) par1, *par2, *par3 ) );
+  QPoint * ptr = new QPoint( QStyle::visualPos (  (Qt::LayoutDirection) par1, *PQRECT(2), *PQPOINT(3) ) );
   _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
 }
 
@@ -602,9 +569,7 @@ QRect visualRect ( Qt::LayoutDirection direction, const QRect & boundingRectangl
 HB_FUNC_STATIC( QSTYLE_VISUALRECT )
 {
   int par1 = hb_parni(1);
-  QRect * par2 = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QRect * par3 = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QRect * ptr = new QRect( QStyle::visualRect (  (Qt::LayoutDirection) par1, *par2, *par3 ) );
+  QRect * ptr = new QRect( QStyle::visualRect (  (Qt::LayoutDirection) par1, *PQRECT(2), *PQRECT(3) ) );
   _qt4xhb_createReturnClass ( ptr, "QRECT", true );
 }
 

@@ -99,10 +99,8 @@ QMainWindow ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
 HB_FUNC_STATIC( QMAINWINDOW_NEW )
 {
-  QMainWindow * o = NULL;
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-  o = new QMainWindow ( par1,  (Qt::WindowFlags) par2 );
+  QMainWindow * o = new QMainWindow ( OPQWIDGET(1,0),  (Qt::WindowFlags) par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -149,8 +147,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ADDDOCKWIDGET2 )
   {
     int par1 = hb_parni(1);
     QDockWidget * par2 = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par3 = hb_parni(3);
-    obj->addDockWidget (  (Qt::DockWidgetArea) par1, par2,  (Qt::Orientation) par3 );
+    obj->addDockWidget (  (Qt::DockWidgetArea) par1, par2,  (Qt::Orientation) hb_parni(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -328,7 +325,7 @@ HB_FUNC_STATIC( QMAINWINDOW_DOCUMENTMODE )
   QMainWindow * obj = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->documentMode () );
+    RBOOL( obj->documentMode () );
   }
 }
 
@@ -386,7 +383,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ISANIMATED )
   QMainWindow * obj = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isAnimated () );
+    RBOOL( obj->isAnimated () );
   }
 }
 
@@ -399,7 +396,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ISDOCKNESTINGENABLED )
   QMainWindow * obj = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isDockNestingEnabled () );
+    RBOOL( obj->isDockNestingEnabled () );
   }
 }
 
@@ -486,7 +483,7 @@ HB_FUNC_STATIC( QMAINWINDOW_RESTOREDOCKWIDGET )
   if( obj )
   {
     QDockWidget * par1 = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->restoreDockWidget ( par1 ) );
+    RBOOL( obj->restoreDockWidget ( par1 ) );
   }
 }
 
@@ -499,8 +496,7 @@ HB_FUNC_STATIC( QMAINWINDOW_RESTORESTATE )
   QMainWindow * obj = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->restoreState ( *par1, OPINT(2,0)) );
+    RBOOL( obj->restoreState ( *PQBYTEARRAY(1), OPINT(2,0)) );
   }
 }
 
@@ -527,8 +523,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETCENTRALWIDGET )
   QMainWindow * obj = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setCentralWidget ( par1 );
+    obj->setCentralWidget ( PQWIDGET(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -587,8 +582,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETICONSIZE )
   QMainWindow * obj = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * par1 = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setIconSize ( *par1 );
+    obj->setIconSize ( *PQSIZE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -617,8 +611,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETMENUWIDGET )
   QMainWindow * obj = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setMenuWidget ( par1 );
+    obj->setMenuWidget ( PQWIDGET(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -696,8 +689,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SPLITDOCKWIDGET )
   {
     QDockWidget * par1 = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QDockWidget * par2 = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par3 = hb_parni(3);
-    obj->splitDockWidget ( par1, par2,  (Qt::Orientation) par3 );
+    obj->splitDockWidget ( par1, par2,  (Qt::Orientation) hb_parni(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -828,7 +820,7 @@ HB_FUNC_STATIC( QMAINWINDOW_TOOLBARBREAK )
   if( obj )
   {
     QToolBar * par1 = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->toolBarBreak ( par1 ) );
+    RBOOL( obj->toolBarBreak ( par1 ) );
   }
 }
 

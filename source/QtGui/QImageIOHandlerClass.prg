@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_CANREAD )
   QImageIOHandler * obj = (QImageIOHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->canRead () );
+    RBOOL( obj->canRead () );
   }
 }
 
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_CURRENTIMAGENUMBER )
   QImageIOHandler * obj = (QImageIOHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->currentImageNumber () );
+    RINT( obj->currentImageNumber () );
   }
 }
 
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_IMAGECOUNT )
   QImageIOHandler * obj = (QImageIOHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->imageCount () );
+    RINT( obj->imageCount () );
   }
 }
 
@@ -170,8 +170,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_JUMPTOIMAGE )
   QImageIOHandler * obj = (QImageIOHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->jumpToImage ( par1 ) );
+    RBOOL( obj->jumpToImage ( PINT(1) ) );
   }
 }
 
@@ -184,7 +183,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_JUMPTONEXTIMAGE )
   QImageIOHandler * obj = (QImageIOHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->jumpToNextImage () );
+    RBOOL( obj->jumpToNextImage () );
   }
 }
 
@@ -197,7 +196,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_LOOPCOUNT )
   QImageIOHandler * obj = (QImageIOHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->loopCount () );
+    RINT( obj->loopCount () );
   }
 }
 
@@ -210,7 +209,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_NEXTIMAGEDELAY )
   QImageIOHandler * obj = (QImageIOHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->nextImageDelay () );
+    RINT( obj->nextImageDelay () );
   }
 }
 
@@ -239,7 +238,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_READ )
   if( obj )
   {
     QImage * par1 = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->read ( par1 ) );
+    RBOOL( obj->read ( par1 ) );
   }
 }
 
@@ -252,8 +251,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_SETDEVICE )
   QImageIOHandler * obj = (QImageIOHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setDevice ( par1 );
+    obj->setDevice ( PQIODEVICE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -267,8 +265,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_SETFORMAT )
   QImageIOHandler * obj = (QImageIOHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setFormat ( *par1 );
+    obj->setFormat ( *PQBYTEARRAY(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -284,8 +281,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_SETOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QVariant * par2 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setOption (  (QImageIOHandler::ImageOption) par1, *par2 );
+    obj->setOption (  (QImageIOHandler::ImageOption) par1, *PQVARIANT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -300,7 +296,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_SUPPORTSOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->supportsOption (  (QImageIOHandler::ImageOption) par1 ) );
+    RBOOL( obj->supportsOption (  (QImageIOHandler::ImageOption) par1 ) );
   }
 }
 
@@ -314,7 +310,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_WRITE )
   if( obj )
   {
     QImage * par1 = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->write ( *par1 ) );
+    RBOOL( obj->write ( *par1 ) );
   }
 }
 

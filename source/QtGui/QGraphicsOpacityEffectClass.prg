@@ -47,9 +47,7 @@ QGraphicsOpacityEffect ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_NEW )
 {
-  QGraphicsOpacityEffect * o = NULL;
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QGraphicsOpacityEffect ( par1 );
+  QGraphicsOpacityEffect * o = new QGraphicsOpacityEffect ( OPQOBJECT(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -78,8 +76,7 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_OPACITY )
   QGraphicsOpacityEffect * obj = (QGraphicsOpacityEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->opacity ();
-    hb_retnd( r );
+    RQREAL( obj->opacity () );
   }
 }
 
@@ -120,8 +117,7 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_SETOPACITYMASK )
   QGraphicsOpacityEffect * obj = (QGraphicsOpacityEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QBrush * par1 = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setOpacityMask ( *par1 );
+    obj->setOpacityMask ( *PQBRUSH(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -61,10 +61,7 @@ QTextInlineObject ( int i, QTextEngine * e )
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_NEW )
 {
-  QTextInlineObject * o = NULL;
-  int par1 = hb_parni(1);
-  QTextEngine * par2 = (QTextEngine *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QTextInlineObject ( par1, par2 );
+  QTextInlineObject * o = new QTextInlineObject ( PINT(1), PQTEXTENGINE(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -93,8 +90,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_ASCENT )
   QTextInlineObject * obj = (QTextInlineObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->ascent ();
-    hb_retnd( r );
+    RQREAL( obj->ascent () );
   }
 }
 
@@ -107,8 +103,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_DESCENT )
   QTextInlineObject * obj = (QTextInlineObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->descent ();
-    hb_retnd( r );
+    RQREAL( obj->descent () );
   }
 }
 
@@ -135,7 +130,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_FORMATINDEX )
   QTextInlineObject * obj = (QTextInlineObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->formatIndex () );
+    RINT( obj->formatIndex () );
   }
 }
 
@@ -148,8 +143,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_HEIGHT )
   QTextInlineObject * obj = (QTextInlineObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->height ();
-    hb_retnd( r );
+    RQREAL( obj->height () );
   }
 }
 
@@ -162,7 +156,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_ISVALID )
   QTextInlineObject * obj = (QTextInlineObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -244,7 +238,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_TEXTPOSITION )
   QTextInlineObject * obj = (QTextInlineObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->textPosition () );
+    RINT( obj->textPosition () );
   }
 }
 
@@ -257,8 +251,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_WIDTH )
   QTextInlineObject * obj = (QTextInlineObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->width ();
-    hb_retnd( r );
+    RQREAL( obj->width () );
   }
 }
 

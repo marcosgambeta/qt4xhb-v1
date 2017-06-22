@@ -54,8 +54,7 @@ QItemEditorFactory ()
 */
 HB_FUNC_STATIC( QITEMEDITORFACTORY_NEW )
 {
-  QItemEditorFactory * o = NULL;
-  o = new QItemEditorFactory ();
+  QItemEditorFactory * o = new QItemEditorFactory ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -84,9 +83,7 @@ HB_FUNC_STATIC( QITEMEDITORFACTORY_CREATEEDITOR )
   QItemEditorFactory * obj = (QItemEditorFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QWidget * par2 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QWidget * ptr = obj->createEditor (  (QVariant::Type) par1, par2 );
+    QWidget * ptr = obj->createEditor (  (QVariant::Type) hb_parni(1), PQWIDGET(2) );
     _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }

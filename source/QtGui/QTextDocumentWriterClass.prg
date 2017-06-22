@@ -66,8 +66,7 @@ QTextDocumentWriter ()
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_NEW1 )
 {
-  QTextDocumentWriter * o = NULL;
-  o = new QTextDocumentWriter ();
+  QTextDocumentWriter * o = new QTextDocumentWriter ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -77,10 +76,7 @@ QTextDocumentWriter ( QIODevice * device, const QByteArray & format )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_NEW2 )
 {
-  QTextDocumentWriter * o = NULL;
-  QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QByteArray * par2 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QTextDocumentWriter ( par1, *par2 );
+  QTextDocumentWriter * o = new QTextDocumentWriter ( PQIODEVICE(1), *PQBYTEARRAY(2) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -90,9 +86,8 @@ QTextDocumentWriter ( const QString & fileName, const QByteArray & format = QByt
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_NEW3 )
 {
-  QTextDocumentWriter * o = NULL;
   QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QTextDocumentWriter ( PQSTRING(1), par2 );
+  QTextDocumentWriter * o = new QTextDocumentWriter ( PQSTRING(1), par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -201,8 +196,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETCODEC )
   QTextDocumentWriter * obj = (QTextDocumentWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTextCodec * par1 = (QTextCodec *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setCodec ( par1 );
+    obj->setCodec ( PQTEXTCODEC(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -216,8 +210,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETDEVICE )
   QTextDocumentWriter * obj = (QTextDocumentWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setDevice ( par1 );
+    obj->setDevice ( PQIODEVICE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -245,8 +238,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETFORMAT )
   QTextDocumentWriter * obj = (QTextDocumentWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setFormat ( *par1 );
+    obj->setFormat ( *PQBYTEARRAY(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -261,7 +253,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_WRITE1 )
   if( obj )
   {
     const QTextDocument * par1 = (const QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->write ( par1 ) );
+    RBOOL( obj->write ( par1 ) );
   }
 }
 
@@ -275,7 +267,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_WRITE2 )
   if( obj )
   {
     QTextDocumentFragment * par1 = (QTextDocumentFragment *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->write ( *par1 ) );
+    RBOOL( obj->write ( *par1 ) );
   }
 }
 

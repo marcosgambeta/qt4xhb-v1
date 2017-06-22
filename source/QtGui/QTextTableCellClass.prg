@@ -62,8 +62,7 @@ QTextTableCell ()
 */
 HB_FUNC_STATIC( QTEXTTABLECELL_NEW1 )
 {
-  QTextTableCell * o = NULL;
-  o = new QTextTableCell ();
+  QTextTableCell * o = new QTextTableCell ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -73,9 +72,7 @@ QTextTableCell ( const QTextTableCell & other )
 */
 HB_FUNC_STATIC( QTEXTTABLECELL_NEW2 )
 {
-  QTextTableCell * o = NULL;
-  QTextTableCell * par1 = (QTextTableCell *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QTextTableCell ( *par1 );
+  QTextTableCell * o = new QTextTableCell ( *PQTEXTTABLECELL(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -124,7 +121,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_COLUMN )
   QTextTableCell * obj = (QTextTableCell *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->column () );
+    RINT( obj->column () );
   }
 }
 
@@ -137,7 +134,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_COLUMNSPAN )
   QTextTableCell * obj = (QTextTableCell *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->columnSpan () );
+    RINT( obj->columnSpan () );
   }
 }
 
@@ -179,7 +176,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_ISVALID )
   QTextTableCell * obj = (QTextTableCell *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -206,7 +203,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_ROW )
   QTextTableCell * obj = (QTextTableCell *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->row () );
+    RINT( obj->row () );
   }
 }
 
@@ -219,7 +216,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_ROWSPAN )
   QTextTableCell * obj = (QTextTableCell *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->rowSpan () );
+    RINT( obj->rowSpan () );
   }
 }
 
@@ -247,7 +244,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_TABLECELLFORMATINDEX )
   QTextTableCell * obj = (QTextTableCell *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->tableCellFormatIndex () );
+    RINT( obj->tableCellFormatIndex () );
   }
 }
 

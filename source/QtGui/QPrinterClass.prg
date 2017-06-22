@@ -112,9 +112,8 @@ QPrinter ( PrinterMode mode = ScreenResolution )
 */
 HB_FUNC_STATIC( QPRINTER_NEW1 )
 {
-  QPrinter * o = NULL;
   int par1 = ISNIL(1)? (int) QPrinter::ScreenResolution : hb_parni(1);
-  o = new QPrinter (  (QPrinter::PrinterMode) par1 );
+  QPrinter * o = new QPrinter (  (QPrinter::PrinterMode) par1 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -124,10 +123,8 @@ QPrinter ( const QPrinterInfo & printer, PrinterMode mode = ScreenResolution )
 */
 HB_FUNC_STATIC( QPRINTER_NEW2 )
 {
-  QPrinter * o = NULL;
-  QPrinterInfo * par1 = (QPrinterInfo *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = ISNIL(2)? (int) QPrinter::ScreenResolution : hb_parni(2);
-  o = new QPrinter ( *par1,  (QPrinter::PrinterMode) par2 );
+  QPrinter * o = new QPrinter ( *PQPRINTERINFO(1),  (QPrinter::PrinterMode) par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -175,7 +172,7 @@ HB_FUNC_STATIC( QPRINTER_ABORT )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->abort () );
+    RBOOL( obj->abort () );
   }
 }
 
@@ -188,7 +185,7 @@ HB_FUNC_STATIC( QPRINTER_COLLATECOPIES )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->collateCopies () );
+    RBOOL( obj->collateCopies () );
   }
 }
 
@@ -214,7 +211,7 @@ HB_FUNC_STATIC( QPRINTER_COPYCOUNT )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->copyCount () );
+    RINT( obj->copyCount () );
   }
 }
 
@@ -255,7 +252,7 @@ HB_FUNC_STATIC( QPRINTER_DOUBLESIDEDPRINTING )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->doubleSidedPrinting () );
+    RBOOL( obj->doubleSidedPrinting () );
   }
 }
 
@@ -281,7 +278,7 @@ HB_FUNC_STATIC( QPRINTER_FONTEMBEDDINGENABLED )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->fontEmbeddingEnabled () );
+    RBOOL( obj->fontEmbeddingEnabled () );
   }
 }
 
@@ -294,7 +291,7 @@ HB_FUNC_STATIC( QPRINTER_FROMPAGE )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->fromPage () );
+    RINT( obj->fromPage () );
   }
 }
 
@@ -307,7 +304,7 @@ HB_FUNC_STATIC( QPRINTER_FULLPAGE )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->fullPage () );
+    RBOOL( obj->fullPage () );
   }
 }
 
@@ -321,7 +318,7 @@ HB_FUNC_STATIC( QPRINTER_ISVALID )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -334,7 +331,7 @@ HB_FUNC_STATIC( QPRINTER_NEWPAGE )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->newPage () );
+    RBOOL( obj->newPage () );
   }
 }
 
@@ -613,7 +610,7 @@ HB_FUNC_STATIC( QPRINTER_RESOLUTION )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->resolution () );
+    RINT( obj->resolution () );
   }
 }
 
@@ -655,8 +652,7 @@ HB_FUNC_STATIC( QPRINTER_SETCOPYCOUNT )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setCopyCount ( par1 );
+    obj->setCopyCount ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -741,9 +737,7 @@ HB_FUNC_STATIC( QPRINTER_SETFROMTO )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    obj->setFromTo ( par1, par2 );
+    obj->setFromTo ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -860,9 +854,8 @@ HB_FUNC_STATIC( QPRINTER_SETPAPERSIZE2 )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSizeF * par1 = (QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
-    obj->setPaperSize ( *par1,  (QPrinter::Unit) par2 );
+    obj->setPaperSize ( *PQSIZEF(1),  (QPrinter::Unit) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -950,8 +943,7 @@ HB_FUNC_STATIC( QPRINTER_SETRESOLUTION )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setResolution ( par1 );
+    obj->setResolution ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -965,8 +957,7 @@ HB_FUNC_STATIC( QPRINTER_SETWINPAGESIZE )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setWinPageSize ( par1 );
+    obj->setWinPageSize ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1026,7 +1017,7 @@ HB_FUNC_STATIC( QPRINTER_SUPPORTSMULTIPLECOPIES )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->supportsMultipleCopies () );
+    RBOOL( obj->supportsMultipleCopies () );
   }
 }
 
@@ -1039,7 +1030,7 @@ HB_FUNC_STATIC( QPRINTER_TOPAGE )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->toPage () );
+    RINT( obj->toPage () );
   }
 }
 
@@ -1052,7 +1043,7 @@ HB_FUNC_STATIC( QPRINTER_WINPAGESIZE )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->winPageSize () );
+    RINT( obj->winPageSize () );
   }
 }
 

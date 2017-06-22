@@ -39,8 +39,7 @@ QStatusTipEvent(const QString &tip)
 */
 HB_FUNC_STATIC( QSTATUSTIPEVENT_NEW )
 {
-  QStatusTipEvent * o = NULL;
-  o = new QStatusTipEvent ( PQSTRING(1) );
+  QStatusTipEvent * o = new QStatusTipEvent ( PQSTRING(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

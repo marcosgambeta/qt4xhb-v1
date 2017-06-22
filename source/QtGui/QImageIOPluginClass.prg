@@ -63,9 +63,7 @@ HB_FUNC_STATIC( QIMAGEIOPLUGIN_CAPABILITIES )
   QImageIOPlugin * obj = (QImageIOPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QByteArray * par2 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retni( (int) obj->capabilities ( par1, *par2 ) );
+    hb_retni( (int) obj->capabilities ( PQIODEVICE(1), *PQBYTEARRAY(2) ) );
   }
 }
 
@@ -78,9 +76,8 @@ HB_FUNC_STATIC( QIMAGEIOPLUGIN_CREATE )
   QImageIOPlugin * obj = (QImageIOPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QImageIOHandler * ptr = obj->create ( par1, par2 );
+    QImageIOHandler * ptr = obj->create ( PQIODEVICE(1), par2 );
     _qt4xhb_createReturnClass ( ptr, "QIMAGEIOHANDLER" );
   }
 }

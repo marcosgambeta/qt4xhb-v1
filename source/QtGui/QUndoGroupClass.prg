@@ -63,9 +63,7 @@ QUndoGroup ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QUNDOGROUP_NEW )
 {
-  QUndoGroup * o = NULL;
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QUndoGroup ( par1 );
+  QUndoGroup * o = new QUndoGroup ( OPQOBJECT(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -123,7 +121,7 @@ HB_FUNC_STATIC( QUNDOGROUP_CANREDO )
   QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->canRedo () );
+    RBOOL( obj->canRedo () );
   }
 }
 
@@ -136,7 +134,7 @@ HB_FUNC_STATIC( QUNDOGROUP_CANUNDO )
   QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->canUndo () );
+    RBOOL( obj->canUndo () );
   }
 }
 
@@ -149,8 +147,7 @@ HB_FUNC_STATIC( QUNDOGROUP_CREATEREDOACTION )
   QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QAction * ptr = obj->createRedoAction ( par1, OPQSTRING(2,QString()) );
+    QAction * ptr = obj->createRedoAction ( PQOBJECT(1), OPQSTRING(2,QString()) );
     _qt4xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -164,8 +161,7 @@ HB_FUNC_STATIC( QUNDOGROUP_CREATEUNDOACTION )
   QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QAction * ptr = obj->createUndoAction ( par1, OPQSTRING(2,QString()) );
+    QAction * ptr = obj->createUndoAction ( PQOBJECT(1), OPQSTRING(2,QString()) );
     _qt4xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -179,7 +175,7 @@ HB_FUNC_STATIC( QUNDOGROUP_ISCLEAN )
   QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isClean () );
+    RBOOL( obj->isClean () );
   }
 }
 

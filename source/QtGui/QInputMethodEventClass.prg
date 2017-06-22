@@ -45,8 +45,7 @@ QInputMethodEvent ()
 */
 HB_FUNC_STATIC( QINPUTMETHODEVENT_NEW1 )
 {
-  QInputMethodEvent * o = NULL;
-  o = new QInputMethodEvent ();
+  QInputMethodEvent * o = new QInputMethodEvent ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -57,9 +56,7 @@ QInputMethodEvent ( const QInputMethodEvent & other )
 */
 HB_FUNC_STATIC( QINPUTMETHODEVENT_NEW3 )
 {
-  QInputMethodEvent * o = NULL;
-  QInputMethodEvent * par1 = (QInputMethodEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QInputMethodEvent ( *par1 );
+  QInputMethodEvent * o = new QInputMethodEvent ( *PQINPUTMETHODEVENT(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -137,7 +134,7 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_REPLACEMENTLENGTH )
   QInputMethodEvent * obj = (QInputMethodEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->replacementLength () );
+    RINT( obj->replacementLength () );
   }
 }
 
@@ -150,7 +147,7 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_REPLACEMENTSTART )
   QInputMethodEvent * obj = (QInputMethodEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->replacementStart () );
+    RINT( obj->replacementStart () );
   }
 }
 

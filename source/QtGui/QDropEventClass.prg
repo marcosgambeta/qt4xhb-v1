@@ -57,14 +57,12 @@ QDropEvent ( const QPoint & pos, Qt::DropActions actions, const QMimeData * data
 */
 HB_FUNC_STATIC( QDROPEVENT_NEW )
 {
-  QDropEvent * o = NULL;
-  QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = hb_parni(2);
   const QMimeData * par3 = (const QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par4 = hb_parni(4);
   int par5 = hb_parni(5);
   int par6 = ISNIL(6)? (int) QDropEvent::Drop : hb_parni(6);
-  o = new QDropEvent ( *par1,  (Qt::DropActions) par2, par3,  (Qt::MouseButtons) par4,  (Qt::KeyboardModifiers) par5,  (QDropEvent::Type) par6 );
+  QDropEvent * o = new QDropEvent ( *PQPOINT(1),  (Qt::DropActions) par2, par3,  (Qt::MouseButtons) par4,  (Qt::KeyboardModifiers) par5,  (QDropEvent::Type) par6 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -229,8 +227,7 @@ HB_FUNC_STATIC( QDROPEVENT_ENCODEDDATA )
   QDropEvent * obj = (QDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const char * par1 = hb_parc(1);
-    QByteArray * ptr = new QByteArray( obj->encodedData (  (const char *) par1 ) );
+    QByteArray * ptr = new QByteArray( obj->encodedData (  (const char *) hb_parc(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -258,8 +255,7 @@ HB_FUNC_STATIC( QDROPEVENT_PROVIDES )
   QDropEvent * obj = (QDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const char * par1 = hb_parc(1);
-    hb_retl( obj->provides (  (const char *) par1 ) );
+    RBOOL( obj->provides (  (const char *) hb_parc(1) ) );
   }
 }
 

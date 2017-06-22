@@ -43,10 +43,7 @@ QMoveEvent ( const QPoint & pos, const QPoint & oldPos )
 */
 HB_FUNC_STATIC( QMOVEEVENT_NEW )
 {
-  QMoveEvent * o = NULL;
-  QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QPoint * par2 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QMoveEvent ( *par1, *par2 );
+  QMoveEvent * o = new QMoveEvent ( *PQPOINT(1), *PQPOINT(2) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

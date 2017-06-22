@@ -65,9 +65,7 @@ QDialogButtonBox ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_NEW1 )
 {
-  QDialogButtonBox * o = NULL;
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDialogButtonBox ( par1 );
+  QDialogButtonBox * o = new QDialogButtonBox ( OPQWIDGET(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -77,10 +75,7 @@ QDialogButtonBox ( Qt::Orientation orientation, QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_NEW2 )
 {
-  QDialogButtonBox * o = NULL;
-  int par1 = hb_parni(1);
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDialogButtonBox (  (Qt::Orientation) par1, par2 );
+  QDialogButtonBox * o = new QDialogButtonBox (  (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -90,11 +85,9 @@ QDialogButtonBox ( StandardButtons buttons, Qt::Orientation orientation = Qt::Ho
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_NEW3 )
 {
-  QDialogButtonBox * o = NULL;
   int par1 = hb_parni(1);
   int par2 = ISNIL(2)? (int) Qt::Horizontal : hb_parni(2);
-  QWidget * par3 = ISNIL(3)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDialogButtonBox (  (QDialogButtonBox::StandardButtons) par1,  (Qt::Orientation) par2, par3 );
+  QDialogButtonBox * o = new QDialogButtonBox (  (QDialogButtonBox::StandardButtons) par1,  (Qt::Orientation) par2, OPQWIDGET(3,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -286,7 +279,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_CENTERBUTTONS )
   QDialogButtonBox * obj = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->centerButtons () );
+    RBOOL( obj->centerButtons () );
   }
 }
 
@@ -313,7 +306,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ORIENTATION )
   QDialogButtonBox * obj = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->orientation () );
+    RENUM( obj->orientation () );
   }
 }
 
@@ -355,8 +348,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_SETORIENTATION )
   QDialogButtonBox * obj = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setOrientation (  (Qt::Orientation) par1 );
+    obj->setOrientation (  (Qt::Orientation) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

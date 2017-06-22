@@ -54,14 +54,9 @@ QPlatformCursorImage ( const uchar * data, const uchar * mask, int width, int he
 */
 HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_NEW )
 {
-  QPlatformCursorImage * o = NULL;
   const uchar * par1 = (const uchar *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   const uchar * par2 = (const uchar *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  int par3 = hb_parni(3);
-  int par4 = hb_parni(4);
-  int par5 = hb_parni(5);
-  int par6 = hb_parni(6);
-  o = new QPlatformCursorImage ( par1, par2, par3, par4, par5, par6 );
+  QPlatformCursorImage * o = new QPlatformCursorImage ( par1, par2, PINT(3), PINT(4), PINT(5), PINT(6) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

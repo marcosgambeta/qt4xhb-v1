@@ -49,9 +49,7 @@ QGesture ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QGESTURE_NEW )
 {
-  QGesture * o = NULL;
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QGesture ( par1 );
+  QGesture * o = new QGesture ( OPQOBJECT(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -106,7 +104,7 @@ HB_FUNC_STATIC( QGESTURE_HASHOTSPOT )
   QGesture * obj = (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasHotSpot () );
+    RBOOL( obj->hasHotSpot () );
   }
 }
 
@@ -148,8 +146,7 @@ HB_FUNC_STATIC( QGESTURE_SETHOTSPOT )
   QGesture * obj = (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPointF * par1 = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setHotSpot ( *par1 );
+    obj->setHotSpot ( *PQPOINTF(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_FILTEREVENT )
   if( obj )
   {
     const QEvent * par1 = (const QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->filterEvent ( par1 ) );
+    RBOOL( obj->filterEvent ( par1 ) );
   }
 }
 
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_ISCOMPOSING )
   QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isComposing () );
+    RBOOL( obj->isComposing () );
   }
 }
 
@@ -206,9 +206,8 @@ HB_FUNC_STATIC( QINPUTCONTEXT_MOUSEHANDLER )
   QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
     QMouseEvent * par2 = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->mouseHandler ( par1, par2 );
+    obj->mouseHandler ( PINT(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -251,8 +250,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_SETFOCUSWIDGET )
   QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setFocusWidget ( par1 );
+    obj->setFocusWidget ( PQWIDGET(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -296,8 +294,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_WIDGETDESTROYED )
   QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->widgetDestroyed ( par1 );
+    obj->widgetDestroyed ( PQWIDGET(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

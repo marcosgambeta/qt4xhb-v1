@@ -50,10 +50,9 @@ QSplashScreen ( const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
 */
 HB_FUNC_STATIC( QSPLASHSCREEN_NEW1 )
 {
-  QSplashScreen * o = NULL;
   QPixmap par1 = ISNIL(1)? QPixmap() : *(QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-  o = new QSplashScreen ( par1,  (Qt::WindowFlags) par2 );
+  QSplashScreen * o = new QSplashScreen ( par1,  (Qt::WindowFlags) par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -63,11 +62,9 @@ QSplashScreen ( QWidget * parent, const QPixmap & pixmap = QPixmap(), Qt::Window
 */
 HB_FUNC_STATIC( QSPLASHSCREEN_NEW2 )
 {
-  QSplashScreen * o = NULL;
-  QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QPixmap par2 = ISNIL(2)? QPixmap() : *(QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-  o = new QSplashScreen ( par1, par2,  (Qt::WindowFlags) par3 );
+  QSplashScreen * o = new QSplashScreen ( PQWIDGET(1), par2,  (Qt::WindowFlags) par3 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -115,8 +112,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_FINISH )
   QSplashScreen * obj = (QSplashScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->finish ( par1 );
+    obj->finish ( PQWIDGET(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -158,8 +154,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_SETPIXMAP )
   QSplashScreen * obj = (QSplashScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPixmap * par1 = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setPixmap ( *par1 );
+    obj->setPixmap ( *PQPIXMAP(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

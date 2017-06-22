@@ -45,9 +45,7 @@ QScrollBar ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QSCROLLBAR_NEW1 )
 {
-  QScrollBar * o = NULL;
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QScrollBar ( par1 );
+  QScrollBar * o = new QScrollBar ( OPQWIDGET(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -57,10 +55,7 @@ QScrollBar ( Qt::Orientation orientation, QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QSCROLLBAR_NEW2 )
 {
-  QScrollBar * o = NULL;
-  int par1 = hb_parni(1);
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QScrollBar (  (Qt::Orientation) par1, par2 );
+  QScrollBar * o = new QScrollBar (  (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -108,8 +103,7 @@ HB_FUNC_STATIC( QSCROLLBAR_EVENT )
   QScrollBar * obj = (QScrollBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QEvent * par1 = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->event ( par1 ) );
+    RBOOL( obj->event ( PQEVENT(1) ) );
   }
 }
 

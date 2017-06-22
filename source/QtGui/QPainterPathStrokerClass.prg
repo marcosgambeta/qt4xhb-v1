@@ -64,8 +64,7 @@ QPainterPathStroker ()
 */
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_NEW )
 {
-  QPainterPathStroker * o = NULL;
-  o = new QPainterPathStroker ();
+  QPainterPathStroker * o = new QPainterPathStroker ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -107,8 +106,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_CREATESTROKE )
   QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPainterPath * par1 = (QPainterPath *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QPainterPath * ptr = new QPainterPath( obj->createStroke ( *par1 ) );
+    QPainterPath * ptr = new QPainterPath( obj->createStroke ( *PQPAINTERPATH(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
@@ -122,8 +120,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_CURVETHRESHOLD )
   QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->curveThreshold ();
-    hb_retnd( r );
+    RQREAL( obj->curveThreshold () );
   }
 }
 
@@ -136,8 +133,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_DASHOFFSET )
   QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->dashOffset ();
-    hb_retnd( r );
+    RQREAL( obj->dashOffset () );
   }
 }
 
@@ -186,8 +182,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_MITERLIMIT )
   QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->miterLimit ();
-    hb_retnd( r );
+    RQREAL( obj->miterLimit () );
   }
 }
 
@@ -340,8 +335,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_WIDTH )
   QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->width ();
-    hb_retnd( r );
+    RQREAL( obj->width () );
   }
 }
 

@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QPRINTENGINE_ABORT )
   QPrintEngine * obj = (QPrintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->abort () );
+    RBOOL( obj->abort () );
   }
 }
 
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QPRINTENGINE_METRIC )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retni( obj->metric (  (QPaintDevice::PaintDeviceMetric) par1 ) );
+    RINT( obj->metric (  (QPaintDevice::PaintDeviceMetric) par1 ) );
   }
 }
 
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QPRINTENGINE_NEWPAGE )
   QPrintEngine * obj = (QPrintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->newPage () );
+    RBOOL( obj->newPage () );
   }
 }
 
@@ -140,8 +140,7 @@ HB_FUNC_STATIC( QPRINTENGINE_SETPROPERTY )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QVariant * par2 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setProperty (  (QPrintEngine::PrintEnginePropertyKey) par1, *par2 );
+    obj->setProperty (  (QPrintEngine::PrintEnginePropertyKey) par1, *PQVARIANT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

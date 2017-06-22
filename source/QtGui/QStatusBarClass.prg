@@ -49,9 +49,7 @@ QStatusBar ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QSTATUSBAR_NEW )
 {
-  QStatusBar * o = NULL;
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QStatusBar ( par1 );
+  QStatusBar * o = new QStatusBar ( OPQWIDGET(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -80,8 +78,7 @@ HB_FUNC_STATIC( QSTATUSBAR_ADDPERMANENTWIDGET )
   QStatusBar * obj = (QStatusBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->addPermanentWidget ( par1, OPINT(2,0) );
+    obj->addPermanentWidget ( PQWIDGET(1), OPINT(2,0) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -95,8 +92,7 @@ HB_FUNC_STATIC( QSTATUSBAR_ADDWIDGET )
   QStatusBar * obj = (QStatusBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->addWidget ( par1, OPINT(2,0) );
+    obj->addWidget ( PQWIDGET(1), OPINT(2,0) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -124,9 +120,7 @@ HB_FUNC_STATIC( QSTATUSBAR_INSERTPERMANENTWIDGET )
   QStatusBar * obj = (QStatusBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QWidget * par2 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retni( obj->insertPermanentWidget ( par1, par2, OPINT(3,0) ) );
+    RINT( obj->insertPermanentWidget ( PINT(1), PQWIDGET(2), OPINT(3,0) ) );
   }
 }
 
@@ -139,9 +133,7 @@ HB_FUNC_STATIC( QSTATUSBAR_INSERTWIDGET )
   QStatusBar * obj = (QStatusBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QWidget * par2 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retni( obj->insertWidget ( par1, par2, OPINT(3,0) ) );
+    RINT( obj->insertWidget ( PINT(1), PQWIDGET(2), OPINT(3,0) ) );
   }
 }
 
@@ -154,7 +146,7 @@ HB_FUNC_STATIC( QSTATUSBAR_ISSIZEGRIPENABLED )
   QStatusBar * obj = (QStatusBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isSizeGripEnabled () );
+    RBOOL( obj->isSizeGripEnabled () );
   }
 }
 
@@ -167,8 +159,7 @@ HB_FUNC_STATIC( QSTATUSBAR_REMOVEWIDGET )
   QStatusBar * obj = (QStatusBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->removeWidget ( par1 );
+    obj->removeWidget ( PQWIDGET(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

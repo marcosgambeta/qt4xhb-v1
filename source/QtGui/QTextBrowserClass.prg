@@ -68,9 +68,7 @@ QTextBrowser ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_NEW )
 {
-  QTextBrowser * o = NULL;
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QTextBrowser ( par1 );
+  QTextBrowser * o = new QTextBrowser ( OPQWIDGET(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -84,7 +82,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_BACKWARDHISTORYCOUNT )
   QTextBrowser * obj = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->backwardHistoryCount () );
+    RINT( obj->backwardHistoryCount () );
   }
 }
 
@@ -111,7 +109,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_FORWARDHISTORYCOUNT )
   QTextBrowser * obj = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->forwardHistoryCount () );
+    RINT( obj->forwardHistoryCount () );
   }
 }
 
@@ -124,8 +122,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_HISTORYTITLE )
   QTextBrowser * obj = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QString str1 = obj->historyTitle ( par1 );
+    QString str1 = obj->historyTitle ( PINT(1) );
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -139,8 +136,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_HISTORYURL )
   QTextBrowser * obj = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QUrl * ptr = new QUrl( obj->historyUrl ( par1 ) );
+    QUrl * ptr = new QUrl( obj->historyUrl ( PINT(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
@@ -154,7 +150,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ISBACKWARDAVAILABLE )
   QTextBrowser * obj = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isBackwardAvailable () );
+    RBOOL( obj->isBackwardAvailable () );
   }
 }
 
@@ -167,7 +163,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ISFORWARDAVAILABLE )
   QTextBrowser * obj = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isForwardAvailable () );
+    RBOOL( obj->isForwardAvailable () );
   }
 }
 
@@ -180,7 +176,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_OPENEXTERNALLINKS )
   QTextBrowser * obj = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->openExternalLinks () );
+    RBOOL( obj->openExternalLinks () );
   }
 }
 
@@ -193,7 +189,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_OPENLINKS )
   QTextBrowser * obj = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->openLinks () );
+    RBOOL( obj->openLinks () );
   }
 }
 
@@ -285,9 +281,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_LOADRESOURCE )
   QTextBrowser * obj = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QUrl * par2 = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QVariant * ptr = new QVariant( obj->loadResource ( par1, *par2 ) );
+    QVariant * ptr = new QVariant( obj->loadResource ( PINT(1), *PQURL(2) ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -357,8 +351,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_SETSOURCE )
   QTextBrowser * obj = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QUrl * par1 = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setSource ( *par1 );
+    obj->setSource ( *PQURL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

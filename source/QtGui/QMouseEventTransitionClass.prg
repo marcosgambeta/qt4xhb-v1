@@ -51,9 +51,7 @@ QMouseEventTransition ( QState * sourceState = 0 )
 */
 HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_NEW1 )
 {
-  QMouseEventTransition * o = NULL;
-  QState * par1 = ISNIL(1)? 0 : (QState *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QMouseEventTransition ( par1 );
+  QMouseEventTransition * o = new QMouseEventTransition ( OPQSTATE(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -63,12 +61,7 @@ QMouseEventTransition ( QObject * object, QEvent::Type type, Qt::MouseButton but
 */
 HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_NEW2 )
 {
-  QMouseEventTransition * o = NULL;
-  QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  int par2 = hb_parni(2);
-  int par3 = hb_parni(3);
-  QState * par4 = ISNIL(4)? 0 : (QState *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QMouseEventTransition ( par1,  (QEvent::Type) par2,  (Qt::MouseButton) par3, par4 );
+  QMouseEventTransition * o = new QMouseEventTransition ( PQOBJECT(1),  (QEvent::Type) hb_parni(2),  (Qt::MouseButton) hb_parni(3), OPQSTATE(4,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -171,8 +164,7 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_SETHITTESTPATH )
   QMouseEventTransition * obj = (QMouseEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPainterPath * par1 = (QPainterPath *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setHitTestPath ( *par1 );
+    obj->setHitTestPath ( *PQPAINTERPATH(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

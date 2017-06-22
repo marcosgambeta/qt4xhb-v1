@@ -76,8 +76,7 @@ HB_FUNC_STATIC( QTAPGESTURE_SETPOSITION )
   QTapGesture * obj = (QTapGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPointF * par1 = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setPosition ( *par1 );
+    obj->setPosition ( *PQPOINTF(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -58,9 +58,7 @@ QShortcut(QWidget * parent)
 */
 HB_FUNC_STATIC( QSHORTCUT_NEW1 )
 {
-  QShortcut * o = NULL;
-  QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QShortcut ( par1 );
+  QShortcut * o = new QShortcut ( PQWIDGET(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -70,13 +68,8 @@ QShortcut(const QKeySequence & key, QWidget * parent, const char * member = 0, c
 */
 HB_FUNC_STATIC( QSHORTCUT_NEW2 )
 {
-  QShortcut * o = NULL;
-  QKeySequence * par1 = (QKeySequence *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QWidget * par2 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  const char * par3 = ISNIL(3)? 0 : hb_parc(3);
-  const char * par4 = ISNIL(4)? 0 : hb_parc(4);
   int par5 = ISNIL(5)? (int) Qt::WindowShortcut : hb_parni(5);
-  o = new QShortcut ( *par1, par2,  (const char *) par3,  (const char *) par4,  (Qt::ShortcutContext) par5 );
+  QShortcut * o = new QShortcut ( *PQKEYSEQUENCE(1), PQWIDGET(2),  (const char *) ISNIL(3)? 0 : hb_parc(3),  (const char *) ISNIL(4)? 0 : hb_parc(4),  (Qt::ShortcutContext) par5 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -124,7 +117,7 @@ HB_FUNC_STATIC( QSHORTCUT_AUTOREPEAT )
   QShortcut * obj = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->autoRepeat () );
+    RBOOL( obj->autoRepeat () );
   }
 }
 
@@ -150,7 +143,7 @@ HB_FUNC_STATIC( QSHORTCUT_ID )
   QShortcut * obj = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->id () );
+    RINT( obj->id () );
   }
 }
 
@@ -163,7 +156,7 @@ HB_FUNC_STATIC( QSHORTCUT_ISENABLED )
   QShortcut * obj = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isEnabled () );
+    RBOOL( obj->isEnabled () );
   }
 }
 

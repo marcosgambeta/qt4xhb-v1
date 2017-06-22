@@ -70,8 +70,7 @@ QAction * createAction ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QWHATSTHIS_CREATEACTION )
 {
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QAction * ptr = QWhatsThis::createAction ( par1 );
+  QAction * ptr = QWhatsThis::createAction ( OPQOBJECT(1,0) );
   _qt4xhb_createReturnClass ( ptr, "QACTION" );
 }
 
@@ -101,7 +100,7 @@ bool inWhatsThisMode ()
 */
 HB_FUNC_STATIC( QWHATSTHIS_INWHATSTHISMODE )
 {
-  hb_retl( QWhatsThis::inWhatsThisMode () );
+  RBOOL( QWhatsThis::inWhatsThisMode () );
 }
 
 
@@ -120,9 +119,7 @@ void showText ( const QPoint & pos, const QString & text, QWidget * w = 0 )
 */
 HB_FUNC_STATIC( QWHATSTHIS_SHOWTEXT )
 {
-  QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QWidget * par3 = ISNIL(3)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QWhatsThis::showText ( *par1, PQSTRING(2), par3 );
+  QWhatsThis::showText ( *PQPOINT(1), PQSTRING(2), OPQWIDGET(3,0) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

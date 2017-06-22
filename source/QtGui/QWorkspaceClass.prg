@@ -60,9 +60,7 @@ QWorkspace ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QWORKSPACE_NEW )
 {
-  QWorkspace * o = NULL;
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QWorkspace ( par1 );
+  QWorkspace * o = new QWorkspace ( OPQWIDGET(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -105,9 +103,8 @@ HB_FUNC_STATIC( QWORKSPACE_ADDWINDOW )
   QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-    QWidget * ptr = obj->addWindow ( par1,  (Qt::WindowFlags) par2 );
+    QWidget * ptr = obj->addWindow ( PQWIDGET(1),  (Qt::WindowFlags) par2 );
     _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
@@ -135,7 +132,7 @@ HB_FUNC_STATIC( QWORKSPACE_SCROLLBARSENABLED )
   QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->scrollBarsEnabled () );
+    RBOOL( obj->scrollBarsEnabled () );
   }
 }
 
@@ -148,8 +145,7 @@ HB_FUNC_STATIC( QWORKSPACE_SETBACKGROUND )
   QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QBrush * par1 = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setBackground ( *par1 );
+    obj->setBackground ( *PQBRUSH(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -324,8 +320,7 @@ HB_FUNC_STATIC( QWORKSPACE_SETACTIVEWINDOW )
   QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setActiveWindow ( par1 );
+    obj->setActiveWindow ( PQWIDGET(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

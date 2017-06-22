@@ -13,10 +13,12 @@ static SlotsQAbstractButton * s = NULL;
 SlotsQAbstractButton::SlotsQAbstractButton(QObject *parent) : QObject(parent)
 {
 }
+
 SlotsQAbstractButton::~SlotsQAbstractButton()
 {
   QAbstractButton_release_codeblocks();
 }
+
 void SlotsQAbstractButton::clicked(bool checked)
 {
   QObject *object = qobject_cast<QObject *>(sender());
@@ -35,6 +37,7 @@ void SlotsQAbstractButton::clicked(bool checked)
     }
   }
 }
+
 void SlotsQAbstractButton::pressed()
 {
   QObject *object = qobject_cast<QObject *>(sender());
@@ -51,6 +54,7 @@ void SlotsQAbstractButton::pressed()
     }
   }
 }
+
 void SlotsQAbstractButton::released()
 {
   QObject *object = qobject_cast<QObject *>(sender());
@@ -67,6 +71,7 @@ void SlotsQAbstractButton::released()
     }
   }
 }
+
 void SlotsQAbstractButton::toggled(bool checked)
 {
   QObject *object = qobject_cast<QObject *>(sender());
@@ -381,6 +386,7 @@ HB_FUNC( QABSTRACTBUTTON_ONTOGGLED )
   }
   hb_retl( ret );
 }
+
 void QAbstractButton_release_codeblocks ()
 {
   if( s )
@@ -398,4 +404,3 @@ void QAbstractButton_release_codeblocks ()
     }
   }
 }
-

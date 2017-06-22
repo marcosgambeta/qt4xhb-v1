@@ -78,8 +78,7 @@ HB_FUNC_STATIC( QTAPANDHOLDGESTURE_SETPOSITION )
   QTapAndHoldGesture * obj = (QTapAndHoldGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPointF * par1 = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setPosition ( *par1 );
+    obj->setPosition ( *PQPOINTF(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -91,8 +90,7 @@ void setTimeout ( int msecs )
 */
 HB_FUNC_STATIC( QTAPANDHOLDGESTURE_SETTIMEOUT )
 {
-  int par1 = hb_parni(1);
-  QTapAndHoldGesture::setTimeout ( par1 );
+  QTapAndHoldGesture::setTimeout ( PINT(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -102,7 +100,7 @@ int timeout ()
 */
 HB_FUNC_STATIC( QTAPANDHOLDGESTURE_TIMEOUT )
 {
-  hb_retni( QTapAndHoldGesture::timeout () );
+  RINT( QTapAndHoldGesture::timeout () );
 }
 
 

@@ -71,8 +71,7 @@ HB_FUNC_STATIC( QTEXTITEM_ASCENT )
   QTextItem * obj = (QTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->ascent ();
-    hb_retnd( r );
+    RQREAL( obj->ascent () );
   }
 }
 
@@ -85,8 +84,7 @@ HB_FUNC_STATIC( QTEXTITEM_DESCENT )
   QTextItem * obj = (QTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->descent ();
-    hb_retnd( r );
+    RQREAL( obj->descent () );
   }
 }
 
@@ -140,8 +138,7 @@ HB_FUNC_STATIC( QTEXTITEM_WIDTH )
   QTextItem * obj = (QTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->width ();
-    hb_retnd( r );
+    RQREAL( obj->width () );
   }
 }
 

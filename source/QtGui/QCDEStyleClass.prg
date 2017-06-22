@@ -45,8 +45,7 @@ QCDEStyle ( bool useHighlightCols = false )
 */
 HB_FUNC_STATIC( QCDESTYLE_NEW )
 {
-  QCDEStyle * o = NULL;
-  o = new QCDEStyle ( OPBOOL(1,false) );
+  QCDEStyle * o = new QCDEStyle ( OPBOOL(1,false) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -77,9 +76,8 @@ HB_FUNC_STATIC( QCDESTYLE_DRAWCONTROL )
   {
     int par1 = hb_parni(1);
     const QStyleOption * par2 = (const QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QPainter * par3 = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     const QWidget * par4 = ISNIL(4)? 0 : (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->drawControl (  (QStyle::ControlElement) par1, par2, par3, par4 );
+    obj->drawControl (  (QStyle::ControlElement) par1, par2, PQPAINTER(3), par4 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -95,9 +93,8 @@ HB_FUNC_STATIC( QCDESTYLE_DRAWPRIMITIVE )
   {
     int par1 = hb_parni(1);
     const QStyleOption * par2 = (const QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QPainter * par3 = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     const QWidget * par4 = ISNIL(4)? 0 : (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->drawPrimitive (  (QStyle::PrimitiveElement) par1, par2, par3, par4 );
+    obj->drawPrimitive (  (QStyle::PrimitiveElement) par1, par2, PQPAINTER(3), par4 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -114,7 +111,7 @@ HB_FUNC_STATIC( QCDESTYLE_PIXELMETRIC )
     int par1 = hb_parni(1);
     const QStyleOption * par2 = ISNIL(2)? 0 : (const QStyleOption *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     const QWidget * par3 = ISNIL(3)? 0 : (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retni( obj->pixelMetric (  (QStyle::PixelMetric) par1, par2, par3 ) );
+    RINT( obj->pixelMetric (  (QStyle::PixelMetric) par1, par2, par3 ) );
   }
 }
 

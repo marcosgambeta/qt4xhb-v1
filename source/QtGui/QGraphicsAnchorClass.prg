@@ -103,8 +103,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_SPACING )
   QGraphicsAnchor * obj = (QGraphicsAnchor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->spacing ();
-    hb_retnd( r );
+    RQREAL( obj->spacing () );
   }
 }
 

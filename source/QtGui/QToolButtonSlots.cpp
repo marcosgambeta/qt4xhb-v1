@@ -13,10 +13,12 @@ static SlotsQToolButton * s = NULL;
 SlotsQToolButton::SlotsQToolButton(QObject *parent) : QObject(parent)
 {
 }
+
 SlotsQToolButton::~SlotsQToolButton()
 {
   QToolButton_release_codeblocks();
 }
+
 void SlotsQToolButton::triggered ( QAction * action )
 {
   QObject *object = qobject_cast<QObject *>(sender());
@@ -109,6 +111,7 @@ HB_FUNC( QTOOLBUTTON_ONTRIGGERED )
   }
   hb_retl( ret );
 }
+
 void QToolButton_release_codeblocks ()
 {
   if( s )
@@ -126,4 +129,3 @@ void QToolButton_release_codeblocks ()
     }
   }
 }
-

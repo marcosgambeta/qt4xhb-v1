@@ -45,9 +45,7 @@ QItemDelegate ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QITEMDELEGATE_NEW )
 {
-  QItemDelegate * o = NULL;
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QItemDelegate ( par1 );
+  QItemDelegate * o = new QItemDelegate ( OPQOBJECT(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -76,7 +74,7 @@ HB_FUNC_STATIC( QITEMDELEGATE_HASCLIPPING )
   QItemDelegate * obj = (QItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasClipping () );
+    RBOOL( obj->hasClipping () );
   }
 }
 

@@ -59,9 +59,7 @@ QButtonGroup ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QBUTTONGROUP_NEW )
 {
-  QButtonGroup * o = NULL;
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QButtonGroup ( par1 );
+  QButtonGroup * o = new QButtonGroup ( OPQOBJECT(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -136,8 +134,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_BUTTON )
   QButtonGroup * obj = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QAbstractButton * ptr = obj->button ( par1 );
+    QAbstractButton * ptr = obj->button ( PINT(1) );
     _qt4xhb_createReturnClass ( ptr, "QABSTRACTBUTTON" );
   }
 }
@@ -209,7 +206,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_CHECKEDID )
   QButtonGroup * obj = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->checkedId () );
+    RINT( obj->checkedId () );
   }
 }
 
@@ -222,7 +219,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_EXCLUSIVE )
   QButtonGroup * obj = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->exclusive () );
+    RBOOL( obj->exclusive () );
   }
 }
 
@@ -236,7 +233,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ID )
   if( obj )
   {
     QAbstractButton * par1 = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retni( obj->id ( par1 ) );
+    RINT( obj->id ( par1 ) );
   }
 }
 

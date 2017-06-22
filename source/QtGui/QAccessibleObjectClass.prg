@@ -52,10 +52,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_ACTIONTEXT )
   QAccessibleObject * obj = (QAccessibleObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    int par3 = hb_parni(3);
-    QString str1 = obj->actionText ( par1,  (QAccessibleObject::Text) par2, par3 );
+    QString str1 = obj->actionText ( PINT(1),  (QAccessibleObject::Text) hb_parni(2), PINT(3) );
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -69,8 +66,6 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_DOACTION )
   QAccessibleObject * obj = (QAccessibleObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
 QVariantList par3;
 PHB_ITEM aList3 = hb_param(3, HB_IT_ARRAY);
 int i3;
@@ -79,7 +74,7 @@ for (i3=0;i3<nLen3;i3++)
 {
 par3 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList3, i3+1 ), "POINTER", 0 ) );
 }
-    hb_retl( obj->doAction ( par1, par2, par3 ) );
+    RBOOL( obj->doAction ( PINT(1), PINT(2), par3 ) );
   }
 }
 
@@ -92,7 +87,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_ISVALID )
   QAccessibleObject * obj = (QAccessibleObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -119,8 +114,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_RECT )
   QAccessibleObject * obj = (QAccessibleObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QRect * ptr = new QRect( obj->rect ( par1 ) );
+    QRect * ptr = new QRect( obj->rect ( PINT(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -134,9 +128,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_SETTEXT )
   QAccessibleObject * obj = (QAccessibleObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    obj->setText (  (QAccessibleObject::Text) par1, par2, PQSTRING(3) );
+    obj->setText (  (QAccessibleObject::Text) hb_parni(1), PINT(2), PQSTRING(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -150,8 +142,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_USERACTIONCOUNT )
   QAccessibleObject * obj = (QAccessibleObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retni( (int) obj->userActionCount ( par1 ) );
+    RINT( (int) obj->userActionCount ( PINT(1) ) );
   }
 }
 

@@ -53,9 +53,7 @@ QScrollArea ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QSCROLLAREA_NEW )
 {
-  QScrollArea * o = NULL;
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QScrollArea ( par1 );
+  QScrollArea * o = new QScrollArea ( OPQWIDGET(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -97,9 +95,7 @@ HB_FUNC_STATIC( QSCROLLAREA_ENSUREVISIBLE )
   QScrollArea * obj = (QScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    obj->ensureVisible ( par1, par2, OPINT(3,50), OPINT(4,50) );
+    obj->ensureVisible ( PINT(1), PINT(2), OPINT(3,50), OPINT(4,50) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -113,8 +109,7 @@ HB_FUNC_STATIC( QSCROLLAREA_ENSUREWIDGETVISIBLE )
   QScrollArea * obj = (QScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->ensureWidgetVisible ( par1, OPINT(2,50), OPINT(3,50) );
+    obj->ensureWidgetVisible ( PQWIDGET(1), OPINT(2,50), OPINT(3,50) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -143,8 +138,7 @@ HB_FUNC_STATIC( QSCROLLAREA_SETWIDGET )
   QScrollArea * obj = (QScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setWidget ( par1 );
+    obj->setWidget ( PQWIDGET(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -200,7 +194,7 @@ HB_FUNC_STATIC( QSCROLLAREA_WIDGETRESIZABLE )
   QScrollArea * obj = (QScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->widgetResizable () );
+    RBOOL( obj->widgetResizable () );
   }
 }
 
@@ -213,7 +207,7 @@ HB_FUNC_STATIC( QSCROLLAREA_FOCUSNEXTPREVCHILD )
   QScrollArea * obj = (QScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->focusNextPrevChild ( PBOOL(1) ) );
+    RBOOL( obj->focusNextPrevChild ( PBOOL(1) ) );
   }
 }
 

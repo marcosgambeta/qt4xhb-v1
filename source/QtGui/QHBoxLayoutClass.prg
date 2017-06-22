@@ -40,8 +40,7 @@ QHBoxLayout ()
 */
 HB_FUNC_STATIC( QHBOXLAYOUT_NEW1 )
 {
-  QHBoxLayout * o = NULL;
-  o = new QHBoxLayout ();
+  QHBoxLayout * o = new QHBoxLayout ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -51,9 +50,7 @@ QHBoxLayout ( QWidget * parent )
 */
 HB_FUNC_STATIC( QHBOXLAYOUT_NEW2 )
 {
-  QHBoxLayout * o = NULL;
-  QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QHBoxLayout ( par1 );
+  QHBoxLayout * o = new QHBoxLayout ( PQWIDGET(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

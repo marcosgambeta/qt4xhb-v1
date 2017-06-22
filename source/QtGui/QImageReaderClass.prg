@@ -100,8 +100,7 @@ QImageReader ()
 */
 HB_FUNC_STATIC( QIMAGEREADER_NEW1 )
 {
-  QImageReader * o = NULL;
-  o = new QImageReader ();
+  QImageReader * o = new QImageReader ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -111,10 +110,8 @@ QImageReader ( QIODevice * device, const QByteArray & format = QByteArray() )
 */
 HB_FUNC_STATIC( QIMAGEREADER_NEW2 )
 {
-  QImageReader * o = NULL;
-  QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QImageReader ( par1, par2 );
+  QImageReader * o = new QImageReader ( PQIODEVICE(1), par2 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -124,9 +121,8 @@ QImageReader ( const QString & fileName, const QByteArray & format = QByteArray(
 */
 HB_FUNC_STATIC( QIMAGEREADER_NEW3 )
 {
-  QImageReader * o = NULL;
   QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QImageReader ( PQSTRING(1), par2 );
+  QImageReader * o = new QImageReader ( PQSTRING(1), par2 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -179,7 +175,7 @@ HB_FUNC_STATIC( QIMAGEREADER_AUTODETECTIMAGEFORMAT )
   QImageReader * obj = (QImageReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->autoDetectImageFormat () );
+    RBOOL( obj->autoDetectImageFormat () );
   }
 }
 
@@ -206,7 +202,7 @@ HB_FUNC_STATIC( QIMAGEREADER_CANREAD )
   QImageReader * obj = (QImageReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->canRead () );
+    RBOOL( obj->canRead () );
   }
 }
 
@@ -233,7 +229,7 @@ HB_FUNC_STATIC( QIMAGEREADER_CURRENTIMAGENUMBER )
   QImageReader * obj = (QImageReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->currentImageNumber () );
+    RINT( obj->currentImageNumber () );
   }
 }
 
@@ -260,7 +256,7 @@ HB_FUNC_STATIC( QIMAGEREADER_DECIDEFORMATFROMCONTENT )
   QImageReader * obj = (QImageReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->decideFormatFromContent () );
+    RBOOL( obj->decideFormatFromContent () );
   }
 }
 
@@ -342,7 +338,7 @@ HB_FUNC_STATIC( QIMAGEREADER_IMAGECOUNT )
   QImageReader * obj = (QImageReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->imageCount () );
+    RINT( obj->imageCount () );
   }
 }
 
@@ -368,8 +364,7 @@ HB_FUNC_STATIC( QIMAGEREADER_JUMPTOIMAGE )
   QImageReader * obj = (QImageReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->jumpToImage ( par1 ) );
+    RBOOL( obj->jumpToImage ( PINT(1) ) );
   }
 }
 
@@ -382,7 +377,7 @@ HB_FUNC_STATIC( QIMAGEREADER_JUMPTONEXTIMAGE )
   QImageReader * obj = (QImageReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->jumpToNextImage () );
+    RBOOL( obj->jumpToNextImage () );
   }
 }
 
@@ -395,7 +390,7 @@ HB_FUNC_STATIC( QIMAGEREADER_LOOPCOUNT )
   QImageReader * obj = (QImageReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->loopCount () );
+    RINT( obj->loopCount () );
   }
 }
 
@@ -408,7 +403,7 @@ HB_FUNC_STATIC( QIMAGEREADER_NEXTIMAGEDELAY )
   QImageReader * obj = (QImageReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->nextImageDelay () );
+    RINT( obj->nextImageDelay () );
   }
 }
 
@@ -421,7 +416,7 @@ HB_FUNC_STATIC( QIMAGEREADER_QUALITY )
   QImageReader * obj = (QImageReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->quality () );
+    RINT( obj->quality () );
   }
 }
 
@@ -449,7 +444,7 @@ HB_FUNC_STATIC( QIMAGEREADER_READ2 )
   if( obj )
   {
     QImage * par1 = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->read ( par1 ) );
+    RBOOL( obj->read ( par1 ) );
   }
 }
 
@@ -534,8 +529,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SETCLIPRECT )
   QImageReader * obj = (QImageReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRect * par1 = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setClipRect ( *par1 );
+    obj->setClipRect ( *PQRECT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -563,8 +557,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SETDEVICE )
   QImageReader * obj = (QImageReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setDevice ( par1 );
+    obj->setDevice ( PQIODEVICE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -592,8 +585,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SETFORMAT )
   QImageReader * obj = (QImageReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setFormat ( *par1 );
+    obj->setFormat ( *PQBYTEARRAY(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -607,8 +599,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SETQUALITY )
   QImageReader * obj = (QImageReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setQuality ( par1 );
+    obj->setQuality ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -622,8 +613,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SETSCALEDCLIPRECT )
   QImageReader * obj = (QImageReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRect * par1 = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setScaledClipRect ( *par1 );
+    obj->setScaledClipRect ( *PQRECT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -637,8 +627,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SETSCALEDSIZE )
   QImageReader * obj = (QImageReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSize * par1 = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setScaledSize ( *par1 );
+    obj->setScaledSize ( *PQSIZE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -666,7 +655,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SUPPORTSANIMATION )
   QImageReader * obj = (QImageReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->supportsAnimation () );
+    RBOOL( obj->supportsAnimation () );
   }
 }
 
@@ -680,7 +669,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SUPPORTSOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->supportsOption (  (QImageIOHandler::ImageOption) par1 ) );
+    RBOOL( obj->supportsOption (  (QImageIOHandler::ImageOption) par1 ) );
   }
 }
 
@@ -738,8 +727,7 @@ QByteArray imageFormat ( QIODevice * device )
 */
 HB_FUNC_STATIC( QIMAGEREADER_IMAGEFORMAT3 )
 {
-  QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QByteArray * ptr = new QByteArray( QImageReader::imageFormat ( par1 ) );
+  QByteArray * ptr = new QByteArray( QImageReader::imageFormat ( PQIODEVICE(1) ) );
   _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
 }
 

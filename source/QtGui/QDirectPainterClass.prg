@@ -63,10 +63,8 @@ QDirectPainter ( QObject * parent = 0, SurfaceFlag flag = NonReserved )
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_NEW )
 {
-  QDirectPainter * o = NULL;
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = ISNIL(2)? (int) QDirectPainter::NonReserved : hb_parni(2);
-  o = new QDirectPainter ( par1,  (QDirectPainter::SurfaceFlag) par2 );
+  QDirectPainter * o = new QDirectPainter ( OPQOBJECT(1,0),  (QDirectPainter::SurfaceFlag) par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -123,8 +121,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_ENDPAINTING2 )
   QDirectPainter * obj = (QDirectPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRegion * par1 = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->endPainting ( *par1 );
+    obj->endPainting ( *PQREGION(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -153,8 +150,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_FLUSH )
   QDirectPainter * obj = (QDirectPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRegion * par1 = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->flush ( *par1 );
+    obj->flush ( *PQREGION(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -210,8 +206,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_REGIONCHANGED )
   QDirectPainter * obj = (QDirectPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRegion * par1 = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->regionChanged ( *par1 );
+    obj->regionChanged ( *PQREGION(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -239,8 +234,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_SETGEOMETRY )
   QDirectPainter * obj = (QDirectPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRect * par1 = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setGeometry ( *par1 );
+    obj->setGeometry ( *PQRECT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -254,8 +248,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_SETREGION )
   QDirectPainter * obj = (QDirectPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRegion * par1 = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setRegion ( *par1 );
+    obj->setRegion ( *PQREGION(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -292,7 +285,7 @@ int linestep ()
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_LINESTEP )
 {
-  hb_retni( QDirectPainter::linestep () );
+  RINT( QDirectPainter::linestep () );
 }
 
 
@@ -311,7 +304,7 @@ int screenDepth ()
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_SCREENDEPTH )
 {
-  hb_retni( QDirectPainter::screenDepth () );
+  RINT( QDirectPainter::screenDepth () );
 }
 
 
@@ -320,7 +313,7 @@ int screenHeight ()
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_SCREENHEIGHT )
 {
-  hb_retni( QDirectPainter::screenHeight () );
+  RINT( QDirectPainter::screenHeight () );
 }
 
 
@@ -329,7 +322,7 @@ int screenWidth ()
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_SCREENWIDTH )
 {
-  hb_retni( QDirectPainter::screenWidth () );
+  RINT( QDirectPainter::screenWidth () );
 }
 
 

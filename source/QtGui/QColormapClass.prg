@@ -57,9 +57,7 @@ QColormap ( const QColormap & colormap )
 */
 HB_FUNC_STATIC( QCOLORMAP_NEW )
 {
-  QColormap * o = NULL;
-  QColormap * par1 = (QColormap *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QColormap ( *par1 );
+  QColormap * o = new QColormap ( *PQCOLORMAP(1));
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -146,7 +144,7 @@ HB_FUNC_STATIC( QCOLORMAP_DEPTH )
   QColormap * obj = (QColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->depth () );
+    RINT( obj->depth () );
   }
 }
 
@@ -186,7 +184,7 @@ HB_FUNC_STATIC( QCOLORMAP_SIZE )
   QColormap * obj = (QColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->size () );
+    RINT( obj->size () );
   }
 }
 

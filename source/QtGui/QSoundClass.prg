@@ -48,9 +48,7 @@ QSound ( const QString & filename, QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSOUND_NEW )
 {
-  QSound * o = NULL;
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSound ( PQSTRING(1), par2 );
+  QSound * o = new QSound ( PQSTRING(1), OPQOBJECT(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -93,7 +91,7 @@ HB_FUNC_STATIC( QSOUND_ISFINISHED )
   QSound * obj = (QSound *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isFinished () );
+    RBOOL( obj->isFinished () );
   }
 }
 
@@ -106,7 +104,7 @@ HB_FUNC_STATIC( QSOUND_LOOPS )
   QSound * obj = (QSound *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->loops () );
+    RINT( obj->loops () );
   }
 }
 
@@ -119,7 +117,7 @@ HB_FUNC_STATIC( QSOUND_LOOPSREMAINING )
   QSound * obj = (QSound *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->loopsRemaining () );
+    RINT( obj->loopsRemaining () );
   }
 }
 
@@ -132,8 +130,7 @@ HB_FUNC_STATIC( QSOUND_SETLOOPS )
   QSound * obj = (QSound *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setLoops ( par1 );
+    obj->setLoops ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -173,7 +170,7 @@ bool isAvailable ()
 */
 HB_FUNC_STATIC( QSOUND_ISAVAILABLE )
 {
-  hb_retl( QSound::isAvailable () );
+  RBOOL( QSound::isAvailable () );
 }
 
 

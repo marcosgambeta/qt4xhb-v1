@@ -43,8 +43,7 @@ QGraphicsSceneMoveEvent ()
 */
 HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_NEW )
 {
-  QGraphicsSceneResizeEvent * o = NULL;
-  o = new QGraphicsSceneResizeEvent ();
+  QGraphicsSceneResizeEvent * o = new QGraphicsSceneResizeEvent ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

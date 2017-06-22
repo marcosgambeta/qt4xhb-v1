@@ -57,8 +57,7 @@ QPicture ( int formatVersion = -1 )
 */
 HB_FUNC_STATIC( QPICTURE_NEW1 )
 {
-  QPicture * o = NULL;
-  o = new QPicture ( OPINT(1,-1) );
+  QPicture * o = new QPicture ( OPINT(1,-1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -68,9 +67,7 @@ QPicture ( const QPicture & pic )
 */
 HB_FUNC_STATIC( QPICTURE_NEW2 )
 {
-  QPicture * o = NULL;
-  QPicture * par1 = (QPicture *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QPicture ( *par1 );
+  QPicture * o = new QPicture ( *PQPICTURE(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -146,7 +143,7 @@ HB_FUNC_STATIC( QPICTURE_ISNULL )
   QPicture * obj = (QPicture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -159,8 +156,7 @@ HB_FUNC_STATIC( QPICTURE_LOAD1 )
   QPicture * obj = (QPicture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    hb_retl( obj->load ( PQSTRING(1),  (const char *) par2 ) );
+    RBOOL( obj->load ( PQSTRING(1),  (const char *) ISNIL(2)? 0 : hb_parc(2) ) );
   }
 }
 
@@ -173,9 +169,7 @@ HB_FUNC_STATIC( QPICTURE_LOAD2 )
   QPicture * obj = (QPicture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    hb_retl( obj->load ( par1,  (const char *) par2 ) );
+    RBOOL( obj->load ( PQIODEVICE(1),  (const char *) ISNIL(2)? 0 : hb_parc(2) ) );
   }
 }
 
@@ -203,8 +197,7 @@ HB_FUNC_STATIC( QPICTURE_PLAY )
   QPicture * obj = (QPicture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPainter * par1 = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->play ( par1 ) );
+    RBOOL( obj->play ( PQPAINTER(1) ) );
   }
 }
 
@@ -217,8 +210,7 @@ HB_FUNC_STATIC( QPICTURE_SAVE1 )
   QPicture * obj = (QPicture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    hb_retl( obj->save ( PQSTRING(1),  (const char *) par2 ) );
+    RBOOL( obj->save ( PQSTRING(1),  (const char *) ISNIL(2)? 0 : hb_parc(2) ) );
   }
 }
 
@@ -231,9 +223,7 @@ HB_FUNC_STATIC( QPICTURE_SAVE2 )
   QPicture * obj = (QPicture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-    hb_retl( obj->save ( par1,  (const char *) par2 ) );
+    RBOOL( obj->save ( PQIODEVICE(1),  (const char *) ISNIL(2)? 0 : hb_parc(2) ) );
   }
 }
 
@@ -261,8 +251,7 @@ HB_FUNC_STATIC( QPICTURE_SETBOUNDINGRECT )
   QPicture * obj = (QPicture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRect * par1 = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setBoundingRect ( *par1 );
+    obj->setBoundingRect ( *PQRECT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -276,8 +265,7 @@ HB_FUNC_STATIC( QPICTURE_SETDATA )
   QPicture * obj = (QPicture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const char * par1 = hb_parc(1);
-    obj->setData (  (const char *) par1, PUINT(2) );
+    obj->setData (  (const char *) hb_parc(1), PUINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

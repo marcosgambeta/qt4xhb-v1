@@ -61,10 +61,8 @@ QMdiSubWindow ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_NEW )
 {
-  QMdiSubWindow * o = NULL;
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-  o = new QMdiSubWindow ( par1,  (Qt::WindowFlags) par2 );
+  QMdiSubWindow * o = new QMdiSubWindow ( OPQWIDGET(1,0),  (Qt::WindowFlags) par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -78,7 +76,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_ISSHADED )
   QMdiSubWindow * obj = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isShaded () );
+    RBOOL( obj->isShaded () );
   }
 }
 
@@ -91,7 +89,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_KEYBOARDPAGESTEP )
   QMdiSubWindow * obj = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->keyboardPageStep () );
+    RINT( obj->keyboardPageStep () );
   }
 }
 
@@ -104,7 +102,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_KEYBOARDSINGLESTEP )
   QMdiSubWindow * obj = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->keyboardSingleStep () );
+    RINT( obj->keyboardSingleStep () );
   }
 }
 
@@ -131,8 +129,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SETKEYBOARDPAGESTEP )
   QMdiSubWindow * obj = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setKeyboardPageStep ( par1 );
+    obj->setKeyboardPageStep ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -146,8 +143,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SETKEYBOARDSINGLESTEP )
   QMdiSubWindow * obj = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setKeyboardSingleStep ( par1 );
+    obj->setKeyboardSingleStep ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -176,8 +172,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SETSYSTEMMENU )
   QMdiSubWindow * obj = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QMenu * par1 = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setSystemMenu ( par1 );
+    obj->setSystemMenu ( PQMENU(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -191,8 +186,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SETWIDGET )
   QMdiSubWindow * obj = (QMdiSubWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setWidget ( par1 );
+    obj->setWidget ( PQWIDGET(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -221,7 +215,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_TESTOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->testOption (  (QMdiSubWindow::SubWindowOption) par1 ) );
+    RBOOL( obj->testOption (  (QMdiSubWindow::SubWindowOption) par1 ) );
   }
 }
 

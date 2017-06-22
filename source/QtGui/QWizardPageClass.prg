@@ -58,9 +58,7 @@ QWizardPage ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QWIZARDPAGE_NEW )
 {
-  QWizardPage * o = NULL;
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QWizardPage ( par1 );
+  QWizardPage * o = new QWizardPage ( OPQWIDGET(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -117,7 +115,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_ISCOMMITPAGE )
   QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isCommitPage () );
+    RBOOL( obj->isCommitPage () );
   }
 }
 
@@ -130,7 +128,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_ISCOMPLETE )
   QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isComplete () );
+    RBOOL( obj->isComplete () );
   }
 }
 
@@ -143,7 +141,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_ISFINALPAGE )
   QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isFinalPage () );
+    RBOOL( obj->isFinalPage () );
   }
 }
 
@@ -156,7 +154,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_NEXTID )
   QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->nextId () );
+    RINT( obj->nextId () );
   }
 }
 
@@ -228,8 +226,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_SETPIXMAP )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QPixmap * par2 = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setPixmap (  (QWizard::WizardPixmap) par1, *par2 );
+    obj->setPixmap (  (QWizard::WizardPixmap) par1, *PQPIXMAP(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -299,7 +296,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_VALIDATEPAGE )
   QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->validatePage () );
+    RBOOL( obj->validatePage () );
   }
 }
 

@@ -39,9 +39,7 @@ QDateEdit ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QDATEEDIT_NEW1 )
 {
-  QDateEdit * o = NULL;
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDateEdit ( par1 );
+  QDateEdit * o = new QDateEdit ( OPQWIDGET(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -51,10 +49,7 @@ QDateEdit ( const QDate & date, QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QDATEEDIT_NEW2 )
 {
-  QDateEdit * o = NULL;
-  QDate * par1 = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDateEdit ( *par1, par2 );
+  QDateEdit * o = new QDateEdit ( *PQDATE(1), OPQWIDGET(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

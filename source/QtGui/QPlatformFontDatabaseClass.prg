@@ -73,8 +73,7 @@ HB_FUNC_STATIC( QPLATFORMFONTDATABASE_ADDAPPLICATIONFONT )
   QPlatformFontDatabase * obj = (QPlatformFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QStringList strl = obj->addApplicationFont ( *par1, PQSTRING(2) );
+    QStringList strl = obj->addApplicationFont ( *PQBYTEARRAY(1), PQSTRING(2) );
     PHB_ITEM pArray;
     pArray = hb_itemArrayNew(0);
     int i;
@@ -113,9 +112,8 @@ HB_FUNC_STATIC( QPLATFORMFONTDATABASE_FONTENGINE )
   QPlatformFontDatabase * obj = (QPlatformFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par3 = hb_parni(3);
-    QFontEngine * ptr = obj->fontEngine ( *par1, PQREAL(2),  (QFont::HintingPreference) par3 );
+    QFontEngine * ptr = obj->fontEngine ( *PQBYTEARRAY(1), PQREAL(2),  (QFont::HintingPreference) par3 );
     _qt4xhb_createReturnClass ( ptr, "QFONTENGINE" );
   }
 }
@@ -172,9 +170,8 @@ void registerQPF2Font ( const QByteArray & dataArray, void * handle )
 */
 HB_FUNC_STATIC( QPLATFORMFONTDATABASE_REGISTERQPF2FONT )
 {
-  QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   void * par2 = (void *) hb_parptr(2);
-  QPlatformFontDatabase::registerQPF2Font ( *par1, par2 );
+  QPlatformFontDatabase::registerQPF2Font ( *PQBYTEARRAY(1), par2 );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

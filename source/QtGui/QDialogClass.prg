@@ -57,10 +57,8 @@ QDialog ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
 HB_FUNC_STATIC( QDIALOG_NEW )
 {
-  QDialog * o = NULL;
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-  o = new QDialog ( par1,  (Qt::WindowFlags) par2 );
+  QDialog * o = new QDialog ( OPQWIDGET(1,0),  (Qt::WindowFlags) par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -89,7 +87,7 @@ HB_FUNC_STATIC( QDIALOG_ISSIZEGRIPENABLED )
   QDialog * obj = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isSizeGripEnabled () );
+    RBOOL( obj->isSizeGripEnabled () );
   }
 }
 
@@ -102,7 +100,7 @@ HB_FUNC_STATIC( QDIALOG_RESULT )
   QDialog * obj = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->result () );
+    RINT( obj->result () );
   }
 }
 
@@ -129,8 +127,7 @@ HB_FUNC_STATIC( QDIALOG_SETRESULT )
   QDialog * obj = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setResult ( par1 );
+    obj->setResult ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -214,8 +211,7 @@ HB_FUNC_STATIC( QDIALOG_DONE )
   QDialog * obj = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->done ( par1 );
+    obj->done ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -229,7 +225,7 @@ HB_FUNC_STATIC( QDIALOG_EXEC )
   QDialog * obj = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->exec () );
+    RINT( obj->exec () );
   }
 }
 

@@ -89,9 +89,7 @@ QMessageBox ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_NEW1 )
 {
-  QMessageBox * o = NULL;
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QMessageBox ( par1 );
+  QMessageBox * o = new QMessageBox ( OPQWIDGET(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -101,12 +99,9 @@ QMessageBox ( Icon icon, const QString & title, const QString & text, StandardBu
 */
 HB_FUNC_STATIC( QMESSAGEBOX_NEW2 )
 {
-  QMessageBox * o = NULL;
-  int par1 = hb_parni(1);
   int par4 = ISNIL(4)? (int) QMessageBox::NoButton : hb_parni(4);
-  QWidget * par5 = ISNIL(5)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(5, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par6 = ISNIL(6)? (int) Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint : hb_parni(6);
-  o = new QMessageBox (  (QMessageBox::Icon) par1, PQSTRING(2), PQSTRING(3),  (QMessageBox::StandardButtons) par4, par5,  (Qt::WindowFlags) par6 );
+  QMessageBox * o = new QMessageBox (  (QMessageBox::Icon) hb_parni(1), PQSTRING(2), PQSTRING(3),  (QMessageBox::StandardButtons) par4, OPQWIDGET(5,0),  (Qt::WindowFlags) par6 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -390,9 +385,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_OPEN )
   QMessageBox * obj = (QMessageBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    const char * par2 = hb_parc(2);
-    obj->open ( par1,  (const char *) par2 );
+    obj->open ( PQOBJECT(1),  (const char *) hb_parc(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -540,8 +533,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETICONPIXMAP )
   QMessageBox * obj = (QMessageBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPixmap * par1 = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setIconPixmap ( *par1 );
+    obj->setIconPixmap ( *PQPIXMAP(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -710,7 +702,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_EXEC )
   QMessageBox * obj = (QMessageBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->exec () );
+    RINT( obj->exec () );
   }
 }
 
@@ -721,8 +713,7 @@ void about ( QWidget * parent, const QString & title, const QString & text )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_ABOUT )
 {
-  QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QMessageBox::about ( par1, PQSTRING(2), PQSTRING(3) );
+  QMessageBox::about ( PQWIDGET(1), PQSTRING(2), PQSTRING(3) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -732,8 +723,7 @@ void aboutQt ( QWidget * parent, const QString & title = QString() )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_ABOUTQT )
 {
-  QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QMessageBox::aboutQt ( par1, OPQSTRING(2,QString()) );
+  QMessageBox::aboutQt ( PQWIDGET(1), OPQSTRING(2,QString()) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -743,10 +733,9 @@ StandardButton critical ( QWidget * parent, const QString & title, const QString
 */
 HB_FUNC_STATIC( QMESSAGEBOX_CRITICAL )
 {
-  QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par4 = ISNIL(4)? (int) QMessageBox::Ok : hb_parni(4);
   int par5 = ISNIL(5)? (int) QMessageBox::NoButton : hb_parni(5);
-  hb_retni( (int) QMessageBox::critical ( par1, PQSTRING(2), PQSTRING(3),  (QMessageBox::StandardButtons) par4,  (QMessageBox::StandardButton) par5 ) );
+  hb_retni( (int) QMessageBox::critical ( PQWIDGET(1), PQSTRING(2), PQSTRING(3),  (QMessageBox::StandardButtons) par4,  (QMessageBox::StandardButton) par5 ) );
 }
 
 
@@ -755,10 +744,9 @@ StandardButton information ( QWidget * parent, const QString & title, const QStr
 */
 HB_FUNC_STATIC( QMESSAGEBOX_INFORMATION )
 {
-  QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par4 = ISNIL(4)? (int) QMessageBox::Ok : hb_parni(4);
   int par5 = ISNIL(5)? (int) QMessageBox::NoButton : hb_parni(5);
-  hb_retni( (int) QMessageBox::information ( par1, PQSTRING(2), PQSTRING(3),  (QMessageBox::StandardButtons) par4,  (QMessageBox::StandardButton) par5 ) );
+  hb_retni( (int) QMessageBox::information ( PQWIDGET(1), PQSTRING(2), PQSTRING(3),  (QMessageBox::StandardButtons) par4,  (QMessageBox::StandardButton) par5 ) );
 }
 
 
@@ -767,10 +755,9 @@ StandardButton question ( QWidget * parent, const QString & title, const QString
 */
 HB_FUNC_STATIC( QMESSAGEBOX_QUESTION )
 {
-  QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par4 = ISNIL(4)? (int) QMessageBox::Ok : hb_parni(4);
   int par5 = ISNIL(5)? (int) QMessageBox::NoButton : hb_parni(5);
-  hb_retni( (int) QMessageBox::question ( par1, PQSTRING(2), PQSTRING(3),  (QMessageBox::StandardButtons) par4,  (QMessageBox::StandardButton) par5 ) );
+  hb_retni( (int) QMessageBox::question ( PQWIDGET(1), PQSTRING(2), PQSTRING(3),  (QMessageBox::StandardButtons) par4,  (QMessageBox::StandardButton) par5 ) );
 }
 
 
@@ -779,10 +766,9 @@ StandardButton warning ( QWidget * parent, const QString & title, const QString 
 */
 HB_FUNC_STATIC( QMESSAGEBOX_WARNING )
 {
-  QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par4 = ISNIL(4)? (int) QMessageBox::Ok : hb_parni(4);
   int par5 = ISNIL(5)? (int) QMessageBox::NoButton : hb_parni(5);
-  hb_retni( (int) QMessageBox::warning ( par1, PQSTRING(2), PQSTRING(3),  (QMessageBox::StandardButtons) par4,  (QMessageBox::StandardButton) par5 ) );
+  hb_retni( (int) QMessageBox::warning ( PQWIDGET(1), PQSTRING(2), PQSTRING(3),  (QMessageBox::StandardButtons) par4,  (QMessageBox::StandardButton) par5 ) );
 }
 
 

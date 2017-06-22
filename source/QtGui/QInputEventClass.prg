@@ -40,10 +40,8 @@ QInputEvent(Type type, Qt::KeyboardModifiers modifiers = Qt::NoModifier)
 */
 HB_FUNC_STATIC( QINPUTEVENT_NEW )
 {
-  QInputEvent * o = NULL;
-  int par1 = hb_parni(1);
   int par2 = ISNIL(2)? (int) Qt::NoModifier : hb_parni(2);
-  o = new QInputEvent (  (QEvent::Type) par1,  (Qt::KeyboardModifiers) par2 );
+  QInputEvent * o = new QInputEvent (  (QEvent::Type) hb_parni(1),  (Qt::KeyboardModifiers) par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

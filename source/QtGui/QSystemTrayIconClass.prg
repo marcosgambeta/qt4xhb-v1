@@ -61,9 +61,7 @@ QSystemTrayIcon ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_NEW1 )
 {
-  QSystemTrayIcon * o = NULL;
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSystemTrayIcon ( par1 );
+  QSystemTrayIcon * o = new QSystemTrayIcon ( OPQOBJECT(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -73,10 +71,8 @@ QSystemTrayIcon ( const QIcon & icon, QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_NEW2 )
 {
-  QSystemTrayIcon * o = NULL;
   QIcon par1 = ISOBJECT(1)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(1));
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSystemTrayIcon ( par1, par2 );
+  QSystemTrayIcon * o = new QSystemTrayIcon ( par1, OPQOBJECT(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -165,7 +161,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_ISVISIBLE )
   QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isVisible () );
+    RBOOL( obj->isVisible () );
   }
 }
 
@@ -178,8 +174,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SETCONTEXTMENU )
   QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QMenu * par1 = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setContextMenu ( par1 );
+    obj->setContextMenu ( PQMENU(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -291,7 +286,7 @@ bool isSystemTrayAvailable ()
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_ISSYSTEMTRAYAVAILABLE )
 {
-  hb_retl( QSystemTrayIcon::isSystemTrayAvailable () );
+  RBOOL( QSystemTrayIcon::isSystemTrayAvailable () );
 }
 
 
@@ -300,7 +295,7 @@ bool supportsMessages ()
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SUPPORTSMESSAGES )
 {
-  hb_retl( QSystemTrayIcon::supportsMessages () );
+  RBOOL( QSystemTrayIcon::supportsMessages () );
 }
 
 

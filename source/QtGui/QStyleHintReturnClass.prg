@@ -44,8 +44,7 @@ QStyleHintReturn ( int version = QStyleOption::Version, int type = SH_Default )
 */
 HB_FUNC_STATIC( QSTYLEHINTRETURN_NEW )
 {
-  QStyleHintReturn * o = NULL;
-  o = new QStyleHintReturn ( OPINT(1,QStyleOption::Version), OPINT(2,QStyleHintReturn::SH_Default) );
+  QStyleHintReturn * o = new QStyleHintReturn ( OPINT(1,QStyleOption::Version), OPINT(2,QStyleHintReturn::SH_Default) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

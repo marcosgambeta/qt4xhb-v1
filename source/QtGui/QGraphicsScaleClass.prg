@@ -55,9 +55,7 @@ QGraphicsScale ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_NEW )
 {
-  QGraphicsScale * o = NULL;
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QGraphicsScale ( par1 );
+  QGraphicsScale * o = new QGraphicsScale ( OPQOBJECT(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -157,8 +155,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_XSCALE )
   QGraphicsScale * obj = (QGraphicsScale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->xScale ();
-    hb_retnd( r );
+    RQREAL( obj->xScale () );
   }
 }
 
@@ -171,8 +168,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_YSCALE )
   QGraphicsScale * obj = (QGraphicsScale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->yScale ();
-    hb_retnd( r );
+    RQREAL( obj->yScale () );
   }
 }
 
@@ -185,8 +181,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ZSCALE )
   QGraphicsScale * obj = (QGraphicsScale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->zScale ();
-    hb_retnd( r );
+    RQREAL( obj->zScale () );
   }
 }
 

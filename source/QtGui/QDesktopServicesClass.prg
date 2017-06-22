@@ -60,8 +60,7 @@ bool openUrl ( const QUrl & url )
 */
 HB_FUNC_STATIC( QDESKTOPSERVICES_OPENURL )
 {
-  QUrl * par1 = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  hb_retl( QDesktopServices::openUrl ( *par1 ) );
+  RBOOL( QDesktopServices::openUrl ( *PQURL(1) ) );
 }
 
 
@@ -70,9 +69,7 @@ void setUrlHandler ( const QString & scheme, QObject * receiver, const char * me
 */
 HB_FUNC_STATIC( QDESKTOPSERVICES_SETURLHANDLER )
 {
-  QObject * par2 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  const char * par3 = hb_parc(3);
-  QDesktopServices::setUrlHandler ( PQSTRING(1), par2,  (const char *) par3 );
+  QDesktopServices::setUrlHandler ( PQSTRING(1), PQOBJECT(2),  (const char *) hb_parc(3) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

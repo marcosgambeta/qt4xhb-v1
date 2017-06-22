@@ -48,8 +48,7 @@ QSupportedWritingSystems ()
 */
 HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_NEW1 )
 {
-  QSupportedWritingSystems * o = NULL;
-  o = new QSupportedWritingSystems ();
+  QSupportedWritingSystems * o = new QSupportedWritingSystems ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -59,9 +58,7 @@ QSupportedWritingSystems ( const QSupportedWritingSystems & other )
 */
 HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_NEW2 )
 {
-  QSupportedWritingSystems * o = NULL;
-  QSupportedWritingSystems * par1 = (QSupportedWritingSystems *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSupportedWritingSystems ( *par1 );
+  QSupportedWritingSystems * o = new QSupportedWritingSystems ( *PQSUPPORTEDWRITINGSYSTEMS(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -125,7 +122,7 @@ HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_SUPPORTED )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->supported (  (QFontDatabase::WritingSystem) par1 ) );
+    RBOOL( obj->supported (  (QFontDatabase::WritingSystem) par1 ) );
   }
 }
 

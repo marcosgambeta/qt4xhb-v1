@@ -40,10 +40,7 @@ QAccessibleEvent ( Type type, int child )
 */
 HB_FUNC_STATIC( QACCESSIBLEEVENT_NEW )
 {
-  QAccessibleEvent * o = NULL;
-  int par1 = hb_parni(1);
-  int par2 = hb_parni(2);
-  o = new QAccessibleEvent (  (QAccessibleEvent::Type) par1, par2 );
+  QAccessibleEvent * o = new QAccessibleEvent (  (QAccessibleEvent::Type) hb_parni(1), PINT(2) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -57,7 +54,7 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_CHILD )
   QAccessibleEvent * obj = (QAccessibleEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->child () );
+    RINT( obj->child () );
   }
 }
 

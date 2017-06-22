@@ -50,8 +50,7 @@ QBitmap ()
 */
 HB_FUNC_STATIC( QBITMAP_NEW1 )
 {
-  QBitmap * o = NULL;
-  o = new QBitmap ();
+  QBitmap * o = new QBitmap ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -61,9 +60,7 @@ QBitmap ( const QPixmap & pixmap )
 */
 HB_FUNC_STATIC( QBITMAP_NEW2 )
 {
-  QBitmap * o = NULL;
-  QPixmap * par1 = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QBitmap ( *par1 );
+  QBitmap * o = new QBitmap ( *PQPIXMAP(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -73,10 +70,7 @@ QBitmap ( int width, int height )
 */
 HB_FUNC_STATIC( QBITMAP_NEW3 )
 {
-  QBitmap * o = NULL;
-  int par1 = hb_parni(1);
-  int par2 = hb_parni(2);
-  o = new QBitmap ( par1, par2 );
+  QBitmap * o = new QBitmap ( PINT(1), PINT(2) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -86,9 +80,7 @@ QBitmap ( const QSize & size )
 */
 HB_FUNC_STATIC( QBITMAP_NEW4 )
 {
-  QBitmap * o = NULL;
-  QSize * par1 = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QBitmap ( *par1 );
+  QBitmap * o = new QBitmap ( *PQSIZE(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -98,9 +90,7 @@ QBitmap ( const QString & fileName, const char * format = 0 )
 */
 HB_FUNC_STATIC( QBITMAP_NEW5 )
 {
-  QBitmap * o = NULL;
-  const char * par2 = ISNIL(2)? 0 : hb_parc(2);
-  o = new QBitmap ( PQSTRING(1),  (const char *) par2 );
+  QBitmap * o = new QBitmap ( PQSTRING(1),  (const char *) ISNIL(2)? 0 : hb_parc(2) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -177,8 +167,7 @@ HB_FUNC_STATIC( QBITMAP_TRANSFORMED )
   QBitmap * obj = (QBitmap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTransform * par1 = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QBitmap * ptr = new QBitmap( obj->transformed ( *par1 ) );
+    QBitmap * ptr = new QBitmap( obj->transformed ( *PQTRANSFORM(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QBITMAP", true );
   }
 }
@@ -190,10 +179,9 @@ QBitmap fromData ( const QSize & size, const uchar * bits, QImage::Format monoFo
 */
 HB_FUNC_STATIC( QBITMAP_FROMDATA )
 {
-  QSize * par1 = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   const uchar * par2 = (const uchar *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par3 = ISNIL(3)? (int) QImage::Format_MonoLSB : hb_parni(3);
-  QBitmap * ptr = new QBitmap( QBitmap::fromData ( *par1, par2,  (QImage::Format) par3 ) );
+  QBitmap * ptr = new QBitmap( QBitmap::fromData ( *PQSIZE(1), par2,  (QImage::Format) par3 ) );
   _qt4xhb_createReturnClass ( ptr, "QBITMAP", true );
 }
 

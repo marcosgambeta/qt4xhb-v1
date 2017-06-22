@@ -46,11 +46,10 @@ RETURN
 /*
 QFileOpenEvent(const QString &file)
 */
-HB_FUNC_STATIC( QFILEOPENEVENT_NEW1 )
+HB_FUNC_STATIC( QFILEOPENEVENT_NEW1 ) // TODO: revisar e corrigir
 {
-  QFileOpenEvent * o = NULL;
   QFileOpenEvent * par1 = (QFileOpenEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QFileOpenEvent ( *par1 );
+  QFileOpenEvent * o = new QFileOpenEvent ( *par1 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -58,11 +57,10 @@ HB_FUNC_STATIC( QFILEOPENEVENT_NEW1 )
 /*
 QFileOpenEvent(const QUrl &url)
 */
-HB_FUNC_STATIC( QFILEOPENEVENT_NEW2 )
+HB_FUNC_STATIC( QFILEOPENEVENT_NEW2 ) // TODO: revisar e corrigir
 {
-  QFileOpenEvent * o = NULL;
   QFileOpenEvent * par1 = (QFileOpenEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QFileOpenEvent ( *par1 );
+  QFileOpenEvent * o = new QFileOpenEvent ( *par1 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -126,7 +124,7 @@ HB_FUNC_STATIC( QFILEOPENEVENT_OPENFILE )
   {
     QFile * par1 = (QFile *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
-    hb_retl( obj->openFile ( *par1,  (QIODevice::OpenMode) par2 ) );
+    RBOOL( obj->openFile ( *par1,  (QIODevice::OpenMode) par2 ) );
   }
 }
 

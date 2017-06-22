@@ -38,8 +38,7 @@ QDragLeaveEvent ()
 */
 HB_FUNC_STATIC( QDRAGLEAVEEVENT_NEW )
 {
-  QDragLeaveEvent * o = NULL;
-  o = new QDragLeaveEvent ();
+  QDragLeaveEvent * o = new QDragLeaveEvent ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

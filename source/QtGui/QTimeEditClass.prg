@@ -39,9 +39,7 @@ QTimeEdit ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QTIMEEDIT_NEW1 )
 {
-  QTimeEdit * o = NULL;
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QTimeEdit ( par1 );
+  QTimeEdit * o = new QTimeEdit ( OPQWIDGET(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -51,10 +49,7 @@ QTimeEdit ( const QTime & time, QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QTIMEEDIT_NEW2 )
 {
-  QTimeEdit * o = NULL;
-  QTime * par1 = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QTimeEdit ( *par1, par2 );
+  QTimeEdit * o = new QTimeEdit ( *PQTIME(1), OPQWIDGET(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

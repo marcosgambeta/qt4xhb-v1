@@ -40,8 +40,7 @@ QVBoxLayout ()
 */
 HB_FUNC_STATIC( QVBOXLAYOUT_NEW1 )
 {
-  QVBoxLayout * o = NULL;
-  o = new QVBoxLayout ();
+  QVBoxLayout * o = new QVBoxLayout ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -51,9 +50,7 @@ QVBoxLayout ( QWidget * parent )
 */
 HB_FUNC_STATIC( QVBOXLAYOUT_NEW2 )
 {
-  QVBoxLayout * o = NULL;
-  QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QVBoxLayout ( par1 );
+  QVBoxLayout * o = new QVBoxLayout ( PQWIDGET(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

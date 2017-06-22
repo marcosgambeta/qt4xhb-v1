@@ -77,9 +77,7 @@ HB_FUNC_STATIC( QDECORATION_BUILDSYSMENU )
   QDecoration * obj = (QDecoration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QMenu * par2 = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->buildSysMenu ( par1, par2 );
+    obj->buildSysMenu ( PQWIDGET(1), PQMENU(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -93,9 +91,7 @@ HB_FUNC_STATIC( QDECORATION_MENUTRIGGERED )
   QDecoration * obj = (QDecoration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QAction * par2 = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->menuTriggered ( par1, par2 );
+    obj->menuTriggered ( PQWIDGET(1), PQACTION(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -109,10 +105,9 @@ HB_FUNC_STATIC( QDECORATION_PAINT )
   QDecoration * obj = (QDecoration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPainter * par1 = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     const QWidget * par2 = (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par4 = ISNIL(4)? (int) QDecoration::Normal : hb_parni(4);
-    hb_retl( obj->paint ( par1, par2, OPINT(3,QDecoration::All),  (QDecoration::DecorationState) par4 ) );
+    RBOOL( obj->paint ( PQPAINTER(1), par2, OPINT(3,QDecoration::All),  (QDecoration::DecorationState) par4 ) );
   }
 }
 
@@ -126,8 +121,7 @@ HB_FUNC_STATIC( QDECORATION_REGION1 )
   if( obj )
   {
     const QWidget * par1 = (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QRect * par2 = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QRegion * ptr = new QRegion( obj->region ( par1, *par2, OPINT(3,QDecoration::All) ) );
+    QRegion * ptr = new QRegion( obj->region ( par1, *PQRECT(2), OPINT(3,QDecoration::All) ) );
     _qt4xhb_createReturnClass ( ptr, "QREGION", true );
   }
 }
@@ -172,8 +166,7 @@ HB_FUNC_STATIC( QDECORATION_REGIONAT )
   if( obj )
   {
     const QWidget * par1 = (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QPoint * par2 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retni( obj->regionAt ( par1, *par2 ) );
+    RINT( obj->regionAt ( par1, *PQPOINT(2) ) );
   }
 }
 
@@ -186,9 +179,8 @@ HB_FUNC_STATIC( QDECORATION_REGIONCLICKED )
   QDecoration * obj = (QDecoration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
-    obj->regionClicked ( par1, par2 );
+    obj->regionClicked ( PQWIDGET(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -202,9 +194,8 @@ HB_FUNC_STATIC( QDECORATION_REGIONDOUBLECLICKED )
   QDecoration * obj = (QDecoration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
-    obj->regionDoubleClicked ( par1, par2 );
+    obj->regionDoubleClicked ( PQWIDGET(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -216,8 +207,7 @@ void startMove ( QWidget * widget )
 */
 HB_FUNC_STATIC( QDECORATION_STARTMOVE )
 {
-  QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QDecoration::startMove ( par1 );
+  QDecoration::startMove ( PQWIDGET(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -227,8 +217,7 @@ void startResize ( QWidget * widget )
 */
 HB_FUNC_STATIC( QDECORATION_STARTRESIZE )
 {
-  QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QDecoration::startResize ( par1 );
+  QDecoration::startResize ( PQWIDGET(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

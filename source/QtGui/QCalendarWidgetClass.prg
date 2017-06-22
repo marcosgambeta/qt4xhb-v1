@@ -90,9 +90,7 @@ QCalendarWidget ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QCALENDARWIDGET_NEW )
 {
-  QCalendarWidget * o = NULL;
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QCalendarWidget ( par1 );
+  QCalendarWidget * o = new QCalendarWidget ( OPQWIDGET(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -121,7 +119,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_DATEEDITACCEPTDELAY )
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->dateEditAcceptDelay () );
+    RINT( obj->dateEditAcceptDelay () );
   }
 }
 
@@ -135,8 +133,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_DATETEXTFORMAT2 )
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDate * par1 = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QTextCharFormat * ptr = new QTextCharFormat( obj->dateTextFormat ( *par1 ) );
+    QTextCharFormat * ptr = new QTextCharFormat( obj->dateTextFormat ( *PQDATE(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT" );
   }
 }
@@ -205,7 +202,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ISDATEEDITENABLED )
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isDateEditEnabled () );
+    RBOOL( obj->isDateEditEnabled () );
   }
 }
 
@@ -218,7 +215,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ISGRIDVISIBLE )
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isGridVisible () );
+    RBOOL( obj->isGridVisible () );
   }
 }
 
@@ -231,7 +228,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ISNAVIGATIONBARVISIBLE )
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNavigationBarVisible () );
+    RBOOL( obj->isNavigationBarVisible () );
   }
 }
 
@@ -272,7 +269,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_MONTHSHOWN )
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->monthShown () );
+    RINT( obj->monthShown () );
   }
 }
 
@@ -312,8 +309,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETDATEEDITACCEPTDELAY )
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setDateEditAcceptDelay ( par1 );
+    obj->setDateEditAcceptDelay ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -341,9 +337,8 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETDATETEXTFORMAT )
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDate * par1 = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QTextCharFormat * par2 = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setDateTextFormat ( *par1, *par2 );
+    obj->setDateTextFormat ( *PQDATE(1), *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -402,8 +397,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETMAXIMUMDATE )
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDate * par1 = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setMaximumDate ( *par1 );
+    obj->setMaximumDate ( *PQDATE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -417,8 +411,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETMINIMUMDATE )
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDate * par1 = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setMinimumDate ( *par1 );
+    obj->setMinimumDate ( *PQDATE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -506,7 +499,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_YEARSHOWN )
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->yearShown () );
+    RINT( obj->yearShown () );
   }
 }
 
@@ -547,9 +540,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETCURRENTPAGE )
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    obj->setCurrentPage ( par1, par2 );
+    obj->setCurrentPage ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -563,9 +554,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETDATERANGE )
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDate * par1 = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QDate * par2 = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setDateRange ( *par1, *par2 );
+    obj->setDateRange ( *PQDATE(1), *PQDATE(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -607,8 +596,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETSELECTEDDATE )
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDate * par1 = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setSelectedDate ( *par1 );
+    obj->setSelectedDate ( *PQDATE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

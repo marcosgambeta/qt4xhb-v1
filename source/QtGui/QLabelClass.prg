@@ -85,10 +85,8 @@ QLabel ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
 HB_FUNC_STATIC( QLABEL_NEW1 )
 {
-  QLabel * o = NULL;
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-  o = new QLabel ( par1,  (Qt::WindowFlags) par2 );
+  QLabel * o = new QLabel ( OPQWIDGET(1,0),  (Qt::WindowFlags) par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -98,10 +96,8 @@ QLabel ( const QString & text, QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
 HB_FUNC_STATIC( QLABEL_NEW2 )
 {
-  QLabel * o = NULL;
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-  o = new QLabel ( PQSTRING(1), par2,  (Qt::WindowFlags) par3 );
+  QLabel * o = new QLabel ( PQSTRING(1), OPQWIDGET(2,0),  (Qt::WindowFlags) par3 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -176,7 +172,7 @@ HB_FUNC_STATIC( QLABEL_HASSCALEDCONTENTS )
   QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasScaledContents () );
+    RBOOL( obj->hasScaledContents () );
   }
 }
 
@@ -189,7 +185,7 @@ HB_FUNC_STATIC( QLABEL_HASSELECTEDTEXT )
   QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasSelectedText () );
+    RBOOL( obj->hasSelectedText () );
   }
 }
 
@@ -202,7 +198,7 @@ HB_FUNC_STATIC( QLABEL_INDENT )
   QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->indent () );
+    RINT( obj->indent () );
   }
 }
 
@@ -215,7 +211,7 @@ HB_FUNC_STATIC( QLABEL_MARGIN )
   QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->margin () );
+    RINT( obj->margin () );
   }
 }
 
@@ -242,7 +238,7 @@ HB_FUNC_STATIC( QLABEL_OPENEXTERNALLINKS )
   QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->openExternalLinks () );
+    RBOOL( obj->openExternalLinks () );
   }
 }
 
@@ -312,8 +308,7 @@ HB_FUNC_STATIC( QLABEL_SETBUDDY )
   QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setBuddy ( par1 );
+    obj->setBuddy ( PQWIDGET(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -327,8 +322,7 @@ HB_FUNC_STATIC( QLABEL_SETINDENT )
   QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setIndent ( par1 );
+    obj->setIndent ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -342,8 +336,7 @@ HB_FUNC_STATIC( QLABEL_SETMARGIN )
   QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setMargin ( par1 );
+    obj->setMargin ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -385,9 +378,7 @@ HB_FUNC_STATIC( QLABEL_SETSELECTION )
   QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    obj->setSelection ( par1, par2 );
+    obj->setSelection ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -485,7 +476,7 @@ HB_FUNC_STATIC( QLABEL_WORDWRAP )
   QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->wordWrap () );
+    RBOOL( obj->wordWrap () );
   }
 }
 
@@ -498,8 +489,7 @@ HB_FUNC_STATIC( QLABEL_HEIGHTFORWIDTH )
   QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retni( obj->heightForWidth ( par1 ) );
+    RINT( obj->heightForWidth ( PINT(1) ) );
   }
 }
 
@@ -569,8 +559,7 @@ HB_FUNC_STATIC( QLABEL_SETNUM1 )
   QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setNum ( par1 );
+    obj->setNum ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -610,8 +599,7 @@ HB_FUNC_STATIC( QLABEL_SETPICTURE )
   QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPicture * par1 = (QPicture *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setPicture ( *par1 );
+    obj->setPicture ( *PQPICTURE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -625,8 +613,7 @@ HB_FUNC_STATIC( QLABEL_SETPIXMAP )
   QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPixmap * par1 = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setPixmap ( *par1 );
+    obj->setPixmap ( *PQPIXMAP(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

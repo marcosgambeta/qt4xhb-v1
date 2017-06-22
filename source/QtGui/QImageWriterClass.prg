@@ -70,8 +70,7 @@ QImageWriter ()
 */
 HB_FUNC_STATIC( QIMAGEWRITER_NEW1 )
 {
-  QImageWriter * o = NULL;
-  o = new QImageWriter ();
+  QImageWriter * o = new QImageWriter ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -81,10 +80,7 @@ QImageWriter ( QIODevice * device, const QByteArray & format )
 */
 HB_FUNC_STATIC( QIMAGEWRITER_NEW2 )
 {
-  QImageWriter * o = NULL;
-  QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QByteArray * par2 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QImageWriter ( par1, *par2 );
+  QImageWriter * o = new QImageWriter ( PQIODEVICE(1), *PQBYTEARRAY(2) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -94,9 +90,8 @@ QImageWriter ( const QString & fileName, const QByteArray & format = QByteArray(
 */
 HB_FUNC_STATIC( QIMAGEWRITER_NEW3 )
 {
-  QImageWriter * o = NULL;
   QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QImageWriter ( PQSTRING(1), par2 );
+  QImageWriter * o = new QImageWriter ( PQSTRING(1), par2 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -149,7 +144,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_CANWRITE )
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->canWrite () );
+    RBOOL( obj->canWrite () );
   }
 }
 
@@ -162,7 +157,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_COMPRESSION )
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->compression () );
+    RINT( obj->compression () );
   }
 }
 
@@ -244,8 +239,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_GAMMA )
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    float r = obj->gamma ();
-    hb_retnd( r );
+    RFLOAT( obj->gamma () );
   }
 }
 
@@ -258,7 +252,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_QUALITY )
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->quality () );
+    RINT( obj->quality () );
   }
 }
 
@@ -271,8 +265,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_SETCOMPRESSION )
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setCompression ( par1 );
+    obj->setCompression ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -286,8 +279,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_SETDEVICE )
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setDevice ( par1 );
+    obj->setDevice ( PQIODEVICE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -315,8 +307,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_SETFORMAT )
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setFormat ( *par1 );
+    obj->setFormat ( *PQBYTEARRAY(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -344,8 +335,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_SETQUALITY )
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setQuality ( par1 );
+    obj->setQuality ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -374,7 +364,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_SUPPORTSOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->supportsOption (  (QImageIOHandler::ImageOption) par1 ) );
+    RBOOL( obj->supportsOption (  (QImageIOHandler::ImageOption) par1 ) );
   }
 }
 
@@ -388,7 +378,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_WRITE )
   if( obj )
   {
     QImage * par1 = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->write ( *par1 ) );
+    RBOOL( obj->write ( *par1 ) );
   }
 }
 

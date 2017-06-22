@@ -62,8 +62,7 @@ QKeySequence ()
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_NEW1 )
 {
-  QKeySequence * o = NULL;
-  o = new QKeySequence ();
+  QKeySequence * o = new QKeySequence ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -73,8 +72,7 @@ QKeySequence ( const QString & key )
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_NEW2 )
 {
-  QKeySequence * o = NULL;
-  o = new QKeySequence ( PQSTRING(1) );
+  QKeySequence * o = new QKeySequence ( PQSTRING(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -84,9 +82,7 @@ QKeySequence ( const QString & key, SequenceFormat format )
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_NEW3 )
 {
-  QKeySequence * o = NULL;
-  int par2 = hb_parni(2);
-  o = new QKeySequence ( PQSTRING(1),  (QKeySequence::SequenceFormat) par2 );
+  QKeySequence * o = new QKeySequence ( PQSTRING(1),  (QKeySequence::SequenceFormat) hb_parni(2) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -96,9 +92,7 @@ QKeySequence ( int k1, int k2 = 0, int k3 = 0, int k4 = 0 )
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_NEW4 )
 {
-  QKeySequence * o = NULL;
-  int par1 = hb_parni(1);
-  o = new QKeySequence ( par1, OPINT(2,0), OPINT(3,0), OPINT(4,0) );
+  QKeySequence * o = new QKeySequence ( PINT(1), OPINT(2,0), OPINT(3,0), OPINT(4,0) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -108,9 +102,7 @@ QKeySequence ( const QKeySequence & keysequence )
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_NEW5 )
 {
-  QKeySequence * o = NULL;
-  QKeySequence * par1 = (QKeySequence *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QKeySequence ( *par1 );
+  QKeySequence * o = new QKeySequence ( *PQKEYSEQUENCE(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -120,9 +112,7 @@ QKeySequence ( StandardKey key )
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_NEW6 )
 {
-  QKeySequence * o = NULL;
-  int par1 = hb_parni(1);
-  o = new QKeySequence (  (QKeySequence::StandardKey) par1 );
+  QKeySequence * o = new QKeySequence (  (QKeySequence::StandardKey) hb_parni(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -210,7 +200,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_ISEMPTY )
   QKeySequence * obj = (QKeySequence *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 }
 

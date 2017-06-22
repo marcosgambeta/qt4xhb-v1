@@ -56,13 +56,10 @@ QMouseEvent(Type type, const QPoint &pos, Qt::MouseButton button,Qt::MouseButton
 */
 HB_FUNC_STATIC( QMOUSEEVENT_NEW1 )
 {
-  QMouseEvent * o = NULL;
-  int par1 = hb_parni(1);
-  QPoint * par2 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par3 = hb_parni(3);
   int par4 = hb_parni(4);
   int par5 = hb_parni(5);
-  o = new QMouseEvent (  (QEvent::Type) par1, *par2,  (Qt::MouseButton) par3,  (Qt::MouseButtons) par4,  (Qt::KeyboardModifiers) par5 );
+  QMouseEvent * o = new QMouseEvent (  (QEvent::Type) hb_parni(1), *PQPOINT(2),  (Qt::MouseButton) par3,  (Qt::MouseButtons) par4,  (Qt::KeyboardModifiers) par5 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -72,14 +69,10 @@ QMouseEvent(Type type, const QPoint &pos, const QPoint &globalPos,Qt::MouseButto
 */
 HB_FUNC_STATIC( QMOUSEEVENT_NEW2 )
 {
-  QMouseEvent * o = NULL;
-  int par1 = hb_parni(1);
-  QPoint * par2 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QPoint * par3 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par4 = hb_parni(4);
   int par5 = hb_parni(5);
   int par6 = hb_parni(6);
-  o = new QMouseEvent (  (QEvent::Type) par1, *par2, *par3,  (Qt::MouseButton) par4,  (Qt::MouseButtons) par5,  (Qt::KeyboardModifiers) par6 );
+  QMouseEvent * o = new QMouseEvent (  (QEvent::Type) hb_parni(1), *PQPOINT(2), *PQPOINT(3),  (Qt::MouseButton) par4,  (Qt::MouseButtons) par5,  (Qt::KeyboardModifiers) par6 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -155,7 +148,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_X )
   QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->x () );
+    RINT( obj->x () );
   }
 }
 
@@ -168,7 +161,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_Y )
   QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->y () );
+    RINT( obj->y () );
   }
 }
 
@@ -181,7 +174,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_GLOBALX )
   QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->globalX () );
+    RINT( obj->globalX () );
   }
 }
 
@@ -194,7 +187,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_GLOBALY )
   QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->globalY () );
+    RINT( obj->globalY () );
   }
 }
 
@@ -233,7 +226,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_HASEXTENDEDINFO )
   QMouseEvent * obj = (QMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasExtendedInfo () );
+    RBOOL( obj->hasExtendedInfo () );
   }
 }
 
@@ -258,13 +251,10 @@ static QMouseEvent *createExtendedMouseEvent(Type type, const QPointF &pos,const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_CREATEEXTENDEDMOUSEEVENT )
 {
-  int par1 = hb_parni(1);
-  QPointF * par2 = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QPoint * par3 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par4 = hb_parni(4);
   int par5 = hb_parni(5);
   int par6 = hb_parni(6);
-  QMouseEvent * ptr = QMouseEvent::createExtendedMouseEvent (  (QEvent::Type) par1, *par2, *par3,  (Qt::MouseButton) par4,  (Qt::MouseButtons) par5,  (Qt::KeyboardModifiers) par6 );
+  QMouseEvent * ptr = QMouseEvent::createExtendedMouseEvent (  (QEvent::Type) hb_parni(1), *PQPOINTF(2), *PQPOINT(3),  (Qt::MouseButton) par4,  (Qt::MouseButtons) par5,  (Qt::KeyboardModifiers) par6 );
   _qt4xhb_createReturnClass ( ptr, "QMOUSEEVENT" );
 }
 

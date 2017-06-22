@@ -47,10 +47,7 @@ QPageSetupDialog ( QPrinter * printer, QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_NEW )
 {
-  QPageSetupDialog * o = NULL;
-  QPrinter * par1 = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QPageSetupDialog ( par1, par2 );
+  QPageSetupDialog * o = new QPageSetupDialog ( PQPRINTER(1), OPQWIDGET(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -64,9 +61,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_OPEN )
   QPageSetupDialog * obj = (QPageSetupDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-     const char * par2 = ( const char *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->open ( par1, par2 );
+    obj->open ( PQOBJECT(1), (const char *) hb_parc(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -138,7 +133,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_TESTOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->testOption (  (QPageSetupDialog::PageSetupDialogOption) par1 ) );
+    RBOOL( obj->testOption (  (QPageSetupDialog::PageSetupDialogOption) par1 ) );
   }
 }
 

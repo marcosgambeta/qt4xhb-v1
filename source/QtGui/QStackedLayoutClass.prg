@@ -55,8 +55,7 @@ QStackedLayout ()
 */
 HB_FUNC_STATIC( QSTACKEDLAYOUT_NEW1 )
 {
-  QStackedLayout * o = NULL;
-  o = new QStackedLayout ();
+  QStackedLayout * o = new QStackedLayout ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -66,9 +65,7 @@ QStackedLayout ( QWidget * parent )
 */
 HB_FUNC_STATIC( QSTACKEDLAYOUT_NEW2 )
 {
-  QStackedLayout * o = NULL;
-  QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QStackedLayout ( par1 );
+  QStackedLayout * o = new QStackedLayout ( PQWIDGET(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -78,9 +75,7 @@ QStackedLayout ( QLayout * parentLayout )
 */
 HB_FUNC_STATIC( QSTACKEDLAYOUT_NEW3 )
 {
-  QStackedLayout * o = NULL;
-  QLayout * par1 = (QLayout *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QStackedLayout ( par1 );
+  QStackedLayout * o = new QStackedLayout ( PQLAYOUT(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -133,8 +128,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_ADDWIDGET )
   QStackedLayout * obj = (QStackedLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retni( obj->addWidget ( par1 ) );
+    RINT( obj->addWidget ( PQWIDGET(1) ) );
   }
 }
 
@@ -147,7 +141,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_CURRENTINDEX )
   QStackedLayout * obj = (QStackedLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->currentIndex () );
+    RINT( obj->currentIndex () );
   }
 }
 
@@ -174,9 +168,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_INSERTWIDGET )
   QStackedLayout * obj = (QStackedLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QWidget * par2 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retni( obj->insertWidget ( par1, par2 ) );
+    RINT( obj->insertWidget ( PINT(1), PQWIDGET(2) ) );
   }
 }
 
@@ -217,8 +209,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_WIDGET )
   QStackedLayout * obj = (QStackedLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QWidget * ptr = obj->widget ( par1 );
+    QWidget * ptr = obj->widget ( PINT(1) );
     _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
@@ -232,8 +223,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_SETCURRENTINDEX )
   QStackedLayout * obj = (QStackedLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setCurrentIndex ( par1 );
+    obj->setCurrentIndex ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -247,8 +237,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_SETCURRENTWIDGET )
   QStackedLayout * obj = (QStackedLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setCurrentWidget ( par1 );
+    obj->setCurrentWidget ( PQWIDGET(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

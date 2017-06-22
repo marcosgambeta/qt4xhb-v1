@@ -114,10 +114,7 @@ QHeaderView ( Qt::Orientation orientation, QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QHEADERVIEW_NEW )
 {
-  QHeaderView * o = NULL;
-  int par1 = hb_parni(1);
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QHeaderView (  (Qt::Orientation) par1, par2 );
+  QHeaderView * o = new QHeaderView (  (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -146,7 +143,7 @@ HB_FUNC_STATIC( QHEADERVIEW_CASCADINGSECTIONRESIZES )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->cascadingSectionResizes () );
+    RBOOL( obj->cascadingSectionResizes () );
   }
 }
 
@@ -159,7 +156,7 @@ HB_FUNC_STATIC( QHEADERVIEW_COUNT )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 
@@ -185,7 +182,7 @@ HB_FUNC_STATIC( QHEADERVIEW_DEFAULTSECTIONSIZE )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->defaultSectionSize () );
+    RINT( obj->defaultSectionSize () );
   }
 }
 
@@ -198,7 +195,7 @@ HB_FUNC_STATIC( QHEADERVIEW_HIDDENSECTIONCOUNT )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->hiddenSectionCount () );
+    RINT( obj->hiddenSectionCount () );
   }
 }
 
@@ -211,8 +208,7 @@ HB_FUNC_STATIC( QHEADERVIEW_HIDESECTION )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->hideSection ( par1 );
+    obj->hideSection ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -226,7 +222,7 @@ HB_FUNC_STATIC( QHEADERVIEW_HIGHLIGHTSECTIONS )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->highlightSections () );
+    RBOOL( obj->highlightSections () );
   }
 }
 
@@ -239,7 +235,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ISCLICKABLE )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isClickable () );
+    RBOOL( obj->isClickable () );
   }
 }
 
@@ -252,7 +248,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ISMOVABLE )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isMovable () );
+    RBOOL( obj->isMovable () );
   }
 }
 
@@ -265,8 +261,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ISSECTIONHIDDEN )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->isSectionHidden ( par1 ) );
+    RBOOL( obj->isSectionHidden ( PINT(1) ) );
   }
 }
 
@@ -279,7 +274,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ISSORTINDICATORSHOWN )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isSortIndicatorShown () );
+    RBOOL( obj->isSortIndicatorShown () );
   }
 }
 
@@ -292,7 +287,7 @@ HB_FUNC_STATIC( QHEADERVIEW_LENGTH )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->length () );
+    RINT( obj->length () );
   }
 }
 
@@ -305,8 +300,7 @@ HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEX )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retni( obj->logicalIndex ( par1 ) );
+    RINT( obj->logicalIndex ( PINT(1) ) );
   }
 }
 
@@ -319,8 +313,7 @@ HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEXAT1 )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retni( obj->logicalIndexAt ( par1 ) );
+    RINT( obj->logicalIndexAt ( PINT(1) ) );
   }
 }
 
@@ -333,9 +326,7 @@ HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEXAT2 )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    hb_retni( obj->logicalIndexAt ( par1, par2 ) );
+    RINT( obj->logicalIndexAt ( PINT(1), PINT(2) ) );
   }
 }
 
@@ -348,8 +339,7 @@ HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEXAT3 )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retni( obj->logicalIndexAt ( *par1 ) );
+    RINT( obj->logicalIndexAt ( *PQPOINT(1) ) );
   }
 }
 
@@ -382,7 +372,7 @@ HB_FUNC_STATIC( QHEADERVIEW_MINIMUMSECTIONSIZE )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->minimumSectionSize () );
+    RINT( obj->minimumSectionSize () );
   }
 }
 
@@ -395,9 +385,7 @@ HB_FUNC_STATIC( QHEADERVIEW_MOVESECTION )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    obj->moveSection ( par1, par2 );
+    obj->moveSection ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -411,7 +399,7 @@ HB_FUNC_STATIC( QHEADERVIEW_OFFSET )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->offset () );
+    RINT( obj->offset () );
   }
 }
 
@@ -424,7 +412,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ORIENTATION )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->orientation () );
+    RENUM( obj->orientation () );
   }
 }
 
@@ -437,8 +425,7 @@ HB_FUNC_STATIC( QHEADERVIEW_RESIZEMODE )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retni( (int) obj->resizeMode ( par1 ) );
+    hb_retni( (int) obj->resizeMode ( PINT(1) ) );
   }
 }
 
@@ -451,9 +438,7 @@ HB_FUNC_STATIC( QHEADERVIEW_RESIZESECTION )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    obj->resizeSection ( par1, par2 );
+    obj->resizeSection ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -482,8 +467,7 @@ HB_FUNC_STATIC( QHEADERVIEW_RESTORESTATE )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->restoreState ( *par1 ) );
+    RBOOL( obj->restoreState ( *PQBYTEARRAY(1) ) );
   }
 }
 
@@ -510,8 +494,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONPOSITION )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retni( obj->sectionPosition ( par1 ) );
+    RINT( obj->sectionPosition ( PINT(1) ) );
   }
 }
 
@@ -524,8 +507,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONSIZE )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retni( obj->sectionSize ( par1 ) );
+    RINT( obj->sectionSize ( PINT(1) ) );
   }
 }
 
@@ -538,8 +520,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONSIZEHINT )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retni( obj->sectionSizeHint ( par1 ) );
+    RINT( obj->sectionSizeHint ( PINT(1) ) );
   }
 }
 
@@ -552,8 +533,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONVIEWPORTPOSITION )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retni( obj->sectionViewportPosition ( par1 ) );
+    RINT( obj->sectionViewportPosition ( PINT(1) ) );
   }
 }
 
@@ -566,7 +546,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONSHIDDEN )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->sectionsHidden () );
+    RBOOL( obj->sectionsHidden () );
   }
 }
 
@@ -579,7 +559,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONSMOVED )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->sectionsMoved () );
+    RBOOL( obj->sectionsMoved () );
   }
 }
 
@@ -635,8 +615,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETDEFAULTSECTIONSIZE )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setDefaultSectionSize ( par1 );
+    obj->setDefaultSectionSize ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -664,8 +643,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETMINIMUMSECTIONSIZE )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setMinimumSectionSize ( par1 );
+    obj->setMinimumSectionSize ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -708,9 +686,8 @@ HB_FUNC_STATIC( QHEADERVIEW_SETRESIZEMODE2 )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
     int par2 = hb_parni(2);
-    obj->setResizeMode ( par1,  (QHeaderView::ResizeMode) par2 );
+    obj->setResizeMode ( PINT(1),  (QHeaderView::ResizeMode) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -739,8 +716,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETSECTIONHIDDEN )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setSectionHidden ( par1, PBOOL(2) );
+    obj->setSectionHidden ( PINT(1), PBOOL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -754,9 +730,8 @@ HB_FUNC_STATIC( QHEADERVIEW_SETSORTINDICATOR )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
     int par2 = hb_parni(2);
-    obj->setSortIndicator ( par1,  (Qt::SortOrder) par2 );
+    obj->setSortIndicator ( PINT(1),  (Qt::SortOrder) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -798,8 +773,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SHOWSECTION )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->showSection ( par1 );
+    obj->showSection ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -826,7 +800,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SORTINDICATORSECTION )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->sortIndicatorSection () );
+    RINT( obj->sortIndicatorSection () );
   }
 }
 
@@ -839,7 +813,7 @@ HB_FUNC_STATIC( QHEADERVIEW_STRETCHLASTSECTION )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->stretchLastSection () );
+    RBOOL( obj->stretchLastSection () );
   }
 }
 
@@ -852,7 +826,7 @@ HB_FUNC_STATIC( QHEADERVIEW_STRETCHSECTIONCOUNT )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->stretchSectionCount () );
+    RINT( obj->stretchSectionCount () );
   }
 }
 
@@ -865,9 +839,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SWAPSECTIONS )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    obj->swapSections ( par1, par2 );
+    obj->swapSections ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -881,8 +853,7 @@ HB_FUNC_STATIC( QHEADERVIEW_VISUALINDEX )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retni( obj->visualIndex ( par1 ) );
+    RINT( obj->visualIndex ( PINT(1) ) );
   }
 }
 
@@ -895,8 +866,7 @@ HB_FUNC_STATIC( QHEADERVIEW_VISUALINDEXAT )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retni( obj->visualIndexAt ( par1 ) );
+    RINT( obj->visualIndexAt ( PINT(1) ) );
   }
 }
 
@@ -952,10 +922,7 @@ HB_FUNC_STATIC( QHEADERVIEW_HEADERDATACHANGED )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    int par3 = hb_parni(3);
-    obj->headerDataChanged (  (Qt::Orientation) par1, par2, par3 );
+    obj->headerDataChanged (  (Qt::Orientation) hb_parni(1), PINT(2), PINT(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -969,8 +936,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETOFFSET )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setOffset ( par1 );
+    obj->setOffset ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -998,8 +964,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETOFFSETTOSECTIONPOSITION )
   QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setOffsetToSectionPosition ( par1 );
+    obj->setOffsetToSectionPosition ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

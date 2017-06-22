@@ -41,10 +41,8 @@ QFocusEvent ( Type type, Qt::FocusReason reason = Qt::OtherFocusReason )
 */
 HB_FUNC_STATIC( QFOCUSEVENT_NEW )
 {
-  QFocusEvent * o = NULL;
-  int par1 = hb_parni(1);
   int par2 = ISNIL(2)? (int) Qt::OtherFocusReason : hb_parni(2);
-  o = new QFocusEvent (  (QEvent::Type) par1,  (Qt::FocusReason) par2 );
+  QFocusEvent * o = new QFocusEvent (  (QEvent::Type) hb_parni(1),  (Qt::FocusReason) par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -73,7 +71,7 @@ HB_FUNC_STATIC( QFOCUSEVENT_GOTFOCUS )
   QFocusEvent * obj = (QFocusEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->gotFocus () );
+    RBOOL( obj->gotFocus () );
   }
 }
 
@@ -86,7 +84,7 @@ HB_FUNC_STATIC( QFOCUSEVENT_LOSTFOCUS )
   QFocusEvent * obj = (QFocusEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->lostFocus () );
+    RBOOL( obj->lostFocus () );
   }
 }
 

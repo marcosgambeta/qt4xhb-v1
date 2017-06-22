@@ -100,9 +100,7 @@ QDateTimeEdit ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_NEW1 )
 {
-  QDateTimeEdit * o = NULL;
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDateTimeEdit ( par1 );
+  QDateTimeEdit * o = new QDateTimeEdit ( OPQWIDGET(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -112,10 +110,7 @@ QDateTimeEdit ( const QDateTime & datetime, QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_NEW2 )
 {
-  QDateTimeEdit * o = NULL;
-  QDateTime * par1 = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDateTimeEdit ( *par1, par2 );
+  QDateTimeEdit * o = new QDateTimeEdit ( *PQDATETIME(1), OPQWIDGET(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -125,10 +120,7 @@ QDateTimeEdit ( const QDate & date, QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_NEW3 )
 {
-  QDateTimeEdit * o = NULL;
-  QDate * par1 = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDateTimeEdit ( *par1, par2 );
+  QDateTimeEdit * o = new QDateTimeEdit ( *PQDATE(1), OPQWIDGET(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -138,10 +130,7 @@ QDateTimeEdit ( const QTime & time, QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_NEW4 )
 {
-  QDateTimeEdit * o = NULL;
-  QTime * par1 = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDateTimeEdit ( *par1, par2 );
+  QDateTimeEdit * o = new QDateTimeEdit ( *PQTIME(1), OPQWIDGET(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -199,7 +188,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CALENDARPOPUP )
   QDateTimeEdit * obj = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->calendarPopup () );
+    RBOOL( obj->calendarPopup () );
   }
 }
 
@@ -323,7 +312,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CURRENTSECTIONINDEX )
   QDateTimeEdit * obj = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->currentSectionIndex () );
+    RINT( obj->currentSectionIndex () );
   }
 }
 
@@ -475,8 +464,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SECTIONAT )
   QDateTimeEdit * obj = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retni( (int) obj->sectionAt ( par1 ) );
+    hb_retni( (int) obj->sectionAt ( PINT(1) ) );
   }
 }
 
@@ -489,7 +477,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SECTIONCOUNT )
   QDateTimeEdit * obj = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->sectionCount () );
+    RINT( obj->sectionCount () );
   }
 }
 
@@ -561,8 +549,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETCURRENTSECTIONINDEX )
   QDateTimeEdit * obj = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setCurrentSectionIndex ( par1 );
+    obj->setCurrentSectionIndex ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -576,9 +563,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETDATERANGE )
   QDateTimeEdit * obj = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDate * par1 = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QDate * par2 = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setDateRange ( *par1, *par2 );
+    obj->setDateRange ( *PQDATE(1), *PQDATE(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -592,9 +577,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETDATETIMERANGE )
   QDateTimeEdit * obj = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDateTime * par1 = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QDateTime * par2 = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setDateTimeRange ( *par1, *par2 );
+    obj->setDateTimeRange ( *PQDATETIME(1), *PQDATETIME(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -622,8 +605,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETMAXIMUMDATE )
   QDateTimeEdit * obj = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDate * par1 = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setMaximumDate ( *par1 );
+    obj->setMaximumDate ( *PQDATE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -637,8 +619,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETMAXIMUMDATETIME )
   QDateTimeEdit * obj = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDateTime * par1 = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setMaximumDateTime ( *par1 );
+    obj->setMaximumDateTime ( *PQDATETIME(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -652,8 +633,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETMAXIMUMTIME )
   QDateTimeEdit * obj = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTime * par1 = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setMaximumTime ( *par1 );
+    obj->setMaximumTime ( *PQTIME(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -667,8 +647,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETMINIMUMDATE )
   QDateTimeEdit * obj = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDate * par1 = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setMinimumDate ( *par1 );
+    obj->setMinimumDate ( *PQDATE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -682,8 +661,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETMINIMUMDATETIME )
   QDateTimeEdit * obj = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDateTime * par1 = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setMinimumDateTime ( *par1 );
+    obj->setMinimumDateTime ( *PQDATETIME(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -697,8 +675,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETMINIMUMTIME )
   QDateTimeEdit * obj = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTime * par1 = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setMinimumTime ( *par1 );
+    obj->setMinimumTime ( *PQTIME(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -727,9 +704,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETTIMERANGE )
   QDateTimeEdit * obj = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTime * par1 = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QTime * par2 = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setTimeRange ( *par1, *par2 );
+    obj->setTimeRange ( *PQTIME(1), *PQTIME(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -799,8 +774,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_EVENT )
   QDateTimeEdit * obj = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QEvent * par1 = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->event ( par1 ) );
+    RBOOL( obj->event ( PQEVENT(1) ) );
   }
 }
 
@@ -827,8 +801,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_STEPBY )
   QDateTimeEdit * obj = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->stepBy ( par1 );
+    obj->stepBy ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -842,8 +815,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETDATE )
   QDateTimeEdit * obj = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDate * par1 = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setDate ( *par1 );
+    obj->setDate ( *PQDATE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -857,8 +829,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETDATETIME )
   QDateTimeEdit * obj = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDateTime * par1 = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setDateTime ( *par1 );
+    obj->setDateTime ( *PQDATETIME(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -872,8 +843,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETTIME )
   QDateTimeEdit * obj = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTime * par1 = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setTime ( *par1 );
+    obj->setTime ( *PQTIME(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

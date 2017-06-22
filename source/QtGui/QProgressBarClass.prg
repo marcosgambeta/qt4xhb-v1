@@ -65,9 +65,7 @@ QProgressBar ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QPROGRESSBAR_NEW )
 {
-  QProgressBar * o = NULL;
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QProgressBar ( par1 );
+  QProgressBar * o = new QProgressBar ( OPQWIDGET(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -123,7 +121,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_INVERTEDAPPEARANCE )
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->invertedAppearance () );
+    RBOOL( obj->invertedAppearance () );
   }
 }
 
@@ -137,7 +135,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_ISTEXTVISIBLE )
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isTextVisible () );
+    RBOOL( obj->isTextVisible () );
   }
 }
 
@@ -150,7 +148,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_MAXIMUM )
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->maximum () );
+    RINT( obj->maximum () );
   }
 }
 
@@ -163,7 +161,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_MINIMUM )
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->minimum () );
+    RINT( obj->minimum () );
   }
 }
 
@@ -176,7 +174,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_ORIENTATION )
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->orientation () );
+    RENUM( obj->orientation () );
   }
 }
 
@@ -289,7 +287,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_VALUE )
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->value () );
+    RINT( obj->value () );
   }
 }
 
@@ -344,8 +342,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETMAXIMUM )
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setMaximum ( par1 );
+    obj->setMaximum ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -359,8 +356,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETMINIMUM )
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setMinimum ( par1 );
+    obj->setMinimum ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -374,8 +370,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETORIENTATION )
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setOrientation (  (Qt::Orientation) par1 );
+    obj->setOrientation (  (Qt::Orientation) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -389,9 +384,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETRANGE )
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    obj->setRange ( par1, par2 );
+    obj->setRange ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -405,8 +398,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETVALUE )
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setValue ( par1 );
+    obj->setValue ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

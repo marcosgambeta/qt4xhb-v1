@@ -102,9 +102,7 @@ QTreeView ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QTREEVIEW_NEW )
 {
-  QTreeView * o = NULL;
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QTreeView ( par1 );
+  QTreeView * o = new QTreeView ( OPQWIDGET(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -133,7 +131,7 @@ HB_FUNC_STATIC( QTREEVIEW_ALLCOLUMNSSHOWFOCUS )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->allColumnsShowFocus () );
+    RBOOL( obj->allColumnsShowFocus () );
   }
 }
 
@@ -146,7 +144,7 @@ HB_FUNC_STATIC( QTREEVIEW_AUTOEXPANDDELAY )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->autoExpandDelay () );
+    RINT( obj->autoExpandDelay () );
   }
 }
 
@@ -159,8 +157,7 @@ HB_FUNC_STATIC( QTREEVIEW_COLUMNAT )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retni( obj->columnAt ( par1 ) );
+    RINT( obj->columnAt ( PINT(1) ) );
   }
 }
 
@@ -173,8 +170,7 @@ HB_FUNC_STATIC( QTREEVIEW_COLUMNVIEWPORTPOSITION )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retni( obj->columnViewportPosition ( par1 ) );
+    RINT( obj->columnViewportPosition ( PINT(1) ) );
   }
 }
 
@@ -187,8 +183,7 @@ HB_FUNC_STATIC( QTREEVIEW_COLUMNWIDTH )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retni( obj->columnWidth ( par1 ) );
+    RINT( obj->columnWidth ( PINT(1) ) );
   }
 }
 
@@ -201,7 +196,7 @@ HB_FUNC_STATIC( QTREEVIEW_EXPANDSONDOUBLECLICK )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->expandsOnDoubleClick () );
+    RBOOL( obj->expandsOnDoubleClick () );
   }
 }
 
@@ -228,7 +223,7 @@ HB_FUNC_STATIC( QTREEVIEW_INDENTATION )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->indentation () );
+    RINT( obj->indentation () );
   }
 }
 
@@ -241,8 +236,7 @@ HB_FUNC_STATIC( QTREEVIEW_INDEXABOVE )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QModelIndex * ptr = new QModelIndex( obj->indexAbove ( *par1 ) );
+    QModelIndex * ptr = new QModelIndex( obj->indexAbove ( *PQMODELINDEX(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
@@ -256,8 +250,7 @@ HB_FUNC_STATIC( QTREEVIEW_INDEXBELOW )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QModelIndex * ptr = new QModelIndex( obj->indexBelow ( *par1 ) );
+    QModelIndex * ptr = new QModelIndex( obj->indexBelow ( *PQMODELINDEX(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
@@ -271,7 +264,7 @@ HB_FUNC_STATIC( QTREEVIEW_ISANIMATED )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isAnimated () );
+    RBOOL( obj->isAnimated () );
   }
 }
 
@@ -284,8 +277,7 @@ HB_FUNC_STATIC( QTREEVIEW_ISCOLUMNHIDDEN )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->isColumnHidden ( par1 ) );
+    RBOOL( obj->isColumnHidden ( PINT(1) ) );
   }
 }
 
@@ -298,8 +290,7 @@ HB_FUNC_STATIC( QTREEVIEW_ISEXPANDED )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->isExpanded ( *par1 ) );
+    RBOOL( obj->isExpanded ( *PQMODELINDEX(1) ) );
   }
 }
 
@@ -312,9 +303,7 @@ HB_FUNC_STATIC( QTREEVIEW_ISFIRSTCOLUMNSPANNED )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QModelIndex * par2 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->isFirstColumnSpanned ( par1, *par2 ) );
+    RBOOL( obj->isFirstColumnSpanned ( PINT(1), *PQMODELINDEX(2) ) );
   }
 }
 
@@ -327,7 +316,7 @@ HB_FUNC_STATIC( QTREEVIEW_ISHEADERHIDDEN )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isHeaderHidden () );
+    RBOOL( obj->isHeaderHidden () );
   }
 }
 
@@ -340,9 +329,7 @@ HB_FUNC_STATIC( QTREEVIEW_ISROWHIDDEN )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QModelIndex * par2 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->isRowHidden ( par1, *par2 ) );
+    RBOOL( obj->isRowHidden ( PINT(1), *PQMODELINDEX(2) ) );
   }
 }
 
@@ -355,7 +342,7 @@ HB_FUNC_STATIC( QTREEVIEW_ISSORTINGENABLED )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isSortingEnabled () );
+    RBOOL( obj->isSortingEnabled () );
   }
 }
 
@@ -368,7 +355,7 @@ HB_FUNC_STATIC( QTREEVIEW_ITEMSEXPANDABLE )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->itemsExpandable () );
+    RBOOL( obj->itemsExpandable () );
   }
 }
 
@@ -381,7 +368,7 @@ HB_FUNC_STATIC( QTREEVIEW_ROOTISDECORATED )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->rootIsDecorated () );
+    RBOOL( obj->rootIsDecorated () );
   }
 }
 
@@ -422,8 +409,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETAUTOEXPANDDELAY )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setAutoExpandDelay ( par1 );
+    obj->setAutoExpandDelay ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -437,8 +423,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETCOLUMNHIDDEN )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setColumnHidden ( par1, PBOOL(2) );
+    obj->setColumnHidden ( PINT(1), PBOOL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -452,9 +437,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETCOLUMNWIDTH )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    obj->setColumnWidth ( par1, par2 );
+    obj->setColumnWidth ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -468,8 +451,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETEXPANDED )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setExpanded ( *par1, PBOOL(2) );
+    obj->setExpanded ( *PQMODELINDEX(1), PBOOL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -497,9 +479,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETFIRSTCOLUMNSPANNED )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QModelIndex * par2 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setFirstColumnSpanned ( par1, *par2, PBOOL(3) );
+    obj->setFirstColumnSpanned ( PINT(1), *PQMODELINDEX(2), PBOOL(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -542,8 +522,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETINDENTATION )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setIndentation ( par1 );
+    obj->setIndentation ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -585,9 +564,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETROWHIDDEN )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QModelIndex * par2 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setRowHidden ( par1, *par2, PBOOL(3) );
+    obj->setRowHidden ( PINT(1), *PQMODELINDEX(2), PBOOL(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -643,9 +620,7 @@ HB_FUNC_STATIC( QTREEVIEW_SORTBYCOLUMN )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    obj->sortByColumn ( par1,  (Qt::SortOrder) par2 );
+    obj->sortByColumn ( PINT(1),  (Qt::SortOrder) hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -659,7 +634,7 @@ HB_FUNC_STATIC( QTREEVIEW_UNIFORMROWHEIGHTS )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->uniformRowHeights () );
+    RBOOL( obj->uniformRowHeights () );
   }
 }
 
@@ -672,7 +647,7 @@ HB_FUNC_STATIC( QTREEVIEW_WORDWRAP )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->wordWrap () );
+    RBOOL( obj->wordWrap () );
   }
 }
 
@@ -685,9 +660,7 @@ HB_FUNC_STATIC( QTREEVIEW_DATACHANGED )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QModelIndex * par2 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->dataChanged ( *par1, *par2 );
+    obj->dataChanged ( *PQMODELINDEX(1), *PQMODELINDEX(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -701,8 +674,7 @@ HB_FUNC_STATIC( QTREEVIEW_INDEXAT )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QModelIndex * ptr = new QModelIndex( obj->indexAt ( *par1 ) );
+    QModelIndex * ptr = new QModelIndex( obj->indexAt ( *PQPOINT(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
@@ -744,9 +716,8 @@ HB_FUNC_STATIC( QTREEVIEW_SCROLLTO )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = ISNIL(2)? (int) QTreeView::EnsureVisible : hb_parni(2);
-    obj->scrollTo ( *par1,  (QTreeView::ScrollHint) par2 );
+    obj->scrollTo ( *PQMODELINDEX(1),  (QTreeView::ScrollHint) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -789,8 +760,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETROOTINDEX )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setRootIndex ( *par1 );
+    obj->setRootIndex ( *PQMODELINDEX(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -819,8 +789,7 @@ HB_FUNC_STATIC( QTREEVIEW_VISUALRECT )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QRect * ptr = new QRect( obj->visualRect ( *par1 ) );
+    QRect * ptr = new QRect( obj->visualRect ( *PQMODELINDEX(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -834,8 +803,7 @@ HB_FUNC_STATIC( QTREEVIEW_COLLAPSE )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->collapse ( *par1 );
+    obj->collapse ( *PQMODELINDEX(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -863,8 +831,7 @@ HB_FUNC_STATIC( QTREEVIEW_EXPAND )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->expand ( *par1 );
+    obj->expand ( *PQMODELINDEX(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -892,8 +859,7 @@ HB_FUNC_STATIC( QTREEVIEW_EXPANDTODEPTH )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->expandToDepth ( par1 );
+    obj->expandToDepth ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -907,8 +873,7 @@ HB_FUNC_STATIC( QTREEVIEW_HIDECOLUMN )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->hideColumn ( par1 );
+    obj->hideColumn ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -922,8 +887,7 @@ HB_FUNC_STATIC( QTREEVIEW_RESIZECOLUMNTOCONTENTS )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->resizeColumnToContents ( par1 );
+    obj->resizeColumnToContents ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -937,8 +901,7 @@ HB_FUNC_STATIC( QTREEVIEW_SHOWCOLUMN )
   QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->showColumn ( par1 );
+    obj->showColumn ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

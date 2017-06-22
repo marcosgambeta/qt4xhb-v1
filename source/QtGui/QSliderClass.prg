@@ -50,9 +50,7 @@ QSlider ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QSLIDER_NEW1 )
 {
-  QSlider * o = NULL;
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSlider ( par1 );
+  QSlider * o = new QSlider ( OPQWIDGET(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -62,10 +60,7 @@ QSlider ( Qt::Orientation orientation, QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QSLIDER_NEW2 )
 {
-  QSlider * o = NULL;
-  int par1 = hb_parni(1);
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSlider (  (Qt::Orientation) par1, par2 );
+  QSlider * o = new QSlider (  (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -113,8 +108,7 @@ HB_FUNC_STATIC( QSLIDER_SETTICKINTERVAL )
   QSlider * obj = (QSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setTickInterval ( par1 );
+    obj->setTickInterval ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -143,7 +137,7 @@ HB_FUNC_STATIC( QSLIDER_TICKINTERVAL )
   QSlider * obj = (QSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->tickInterval () );
+    RINT( obj->tickInterval () );
   }
 }
 
@@ -169,8 +163,7 @@ HB_FUNC_STATIC( QSLIDER_EVENT )
   QSlider * obj = (QSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QEvent * par1 = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->event ( par1 ) );
+    RBOOL( obj->event ( PQEVENT(1) ) );
   }
 }
 

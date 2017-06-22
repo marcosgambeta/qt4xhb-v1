@@ -17,6 +17,7 @@ CLASS QCommandLinkButton INHERIT QPushButton
    METHOD setDescription
    METHOD isFlat
    METHOD setFlat
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -40,9 +41,7 @@ QCommandLinkButton ( QWidget * parent = 0 )
 */
 void QCommandLinkButton_new1 ()
 {
-  QCommandLinkButton * o = NULL;
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QCommandLinkButton ( par1 );
+  QCommandLinkButton * o = new QCommandLinkButton ( OPQWIDGET(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -51,9 +50,7 @@ QCommandLinkButton ( const QString & text, QWidget * parent = 0 )
 */
 void QCommandLinkButton_new2 ()
 {
-  QCommandLinkButton * o = NULL;
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QCommandLinkButton ( PQSTRING(1), par2 );
+  QCommandLinkButton * o = new QCommandLinkButton ( PQSTRING(1), OPQWIDGET(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -62,9 +59,7 @@ QCommandLinkButton ( const QString & text, const QString & description, QWidget 
 */
 void QCommandLinkButton_new3 ()
 {
-  QCommandLinkButton * o = NULL;
-  QWidget * par3 = ISNIL(3)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QCommandLinkButton ( PQSTRING(1), PQSTRING(2), par3 );
+  QCommandLinkButton * o = new QCommandLinkButton ( PQSTRING(1), PQSTRING(2), OPQWIDGET(3,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -115,7 +110,14 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_SETDESCRIPTION )
 
   if( obj )
   {
-    obj->setDescription ( PQSTRING(1) );
+    if( ISCHAR(1) )
+    {
+      obj->setDescription ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -129,7 +131,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_ISFLAT )
 
   if( obj )
   {
-    hb_retl( obj->isFlat () );
+    RBOOL( obj->isFlat () );
   }
 }
 
@@ -142,7 +144,14 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_SETFLAT )
 
   if( obj )
   {
-    obj->setFlat ( PBOOL(1) );
+    if( ISLOG(1) )
+    {
+      obj->setFlat ( PBOOL(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );

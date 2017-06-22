@@ -42,9 +42,8 @@ QWindowStateChangeEvent(Qt::WindowStates aOldState)
 */
 HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_NEW1 )
 {
-  QWindowStateChangeEvent * o = NULL;
   int par1 = hb_parni(1);
-  o = new QWindowStateChangeEvent (  (Qt::WindowStates) par1 );
+  QWindowStateChangeEvent * o = new QWindowStateChangeEvent (  (Qt::WindowStates) par1 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -54,9 +53,8 @@ QWindowStateChangeEvent(Qt::WindowStates aOldState, bool isOverride)
 */
 HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_NEW2 )
 {
-  QWindowStateChangeEvent * o = NULL;
   int par1 = hb_parni(1);
-  o = new QWindowStateChangeEvent (  (Qt::WindowStates) par1, PBOOL(2) );
+  QWindowStateChangeEvent * o = new QWindowStateChangeEvent (  (Qt::WindowStates) par1, PBOOL(2) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -117,7 +115,7 @@ HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_ISOVERRIDE )
   QWindowStateChangeEvent * obj = (QWindowStateChangeEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isOverride () );
+    RBOOL( obj->isOverride () );
   }
 }
 

@@ -56,8 +56,7 @@ QPrinterInfo ()
 */
 HB_FUNC_STATIC( QPRINTERINFO_NEW1 )
 {
-  QPrinterInfo * o = NULL;
-  o = new QPrinterInfo ();
+  QPrinterInfo * o = new QPrinterInfo ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -67,9 +66,7 @@ QPrinterInfo ( const QPrinterInfo & src )
 */
 HB_FUNC_STATIC( QPRINTERINFO_NEW2 )
 {
-  QPrinterInfo * o = NULL;
-  QPrinterInfo * par1 = (QPrinterInfo *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QPrinterInfo ( *par1 );
+  QPrinterInfo * o = new QPrinterInfo ( *PQPRINTERINFO(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -79,9 +76,7 @@ QPrinterInfo ( const QPrinter & printer )
 */
 HB_FUNC_STATIC( QPRINTERINFO_NEW3 )
 {
-  QPrinterInfo * o = NULL;
-  QPrinter * par1 = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QPrinterInfo ( *par1 );
+  QPrinterInfo * o = new QPrinterInfo ( *PQPRINTER(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -134,7 +129,7 @@ HB_FUNC_STATIC( QPRINTERINFO_ISDEFAULT )
   QPrinterInfo * obj = (QPrinterInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isDefault () );
+    RBOOL( obj->isDefault () );
   }
 }
 
@@ -147,7 +142,7 @@ HB_FUNC_STATIC( QPRINTERINFO_ISNULL )
   QPrinterInfo * obj = (QPrinterInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 

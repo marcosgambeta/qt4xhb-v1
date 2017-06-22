@@ -75,9 +75,7 @@ QAbstractSpinBox ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_NEW )
 {
-  QAbstractSpinBox * o = NULL;
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QAbstractSpinBox ( par1 );
+  QAbstractSpinBox * o = new QAbstractSpinBox ( OPQWIDGET(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -160,7 +158,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_HASACCEPTABLEINPUT )
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasAcceptableInput () );
+    RBOOL( obj->hasAcceptableInput () );
   }
 }
 
@@ -173,7 +171,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_HASFRAME )
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasFrame () );
+    RBOOL( obj->hasFrame () );
   }
 }
 
@@ -200,7 +198,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_ISACCELERATED )
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isAccelerated () );
+    RBOOL( obj->isAccelerated () );
   }
 }
 
@@ -213,7 +211,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_ISREADONLY )
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isReadOnly () );
+    RBOOL( obj->isReadOnly () );
   }
 }
 
@@ -226,7 +224,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_KEYBOARDTRACKING )
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->keyboardTracking () );
+    RBOOL( obj->keyboardTracking () );
   }
 }
 
@@ -382,8 +380,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_STEPBY )
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->stepBy ( par1 );
+    obj->stepBy ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -426,7 +423,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_WRAPPING )
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->wrapping () );
+    RBOOL( obj->wrapping () );
   }
 }
 
@@ -439,8 +436,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_EVENT )
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QEvent * par1 = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->event ( par1 ) );
+    RBOOL( obj->event ( PQEVENT(1) ) );
   }
 }
 

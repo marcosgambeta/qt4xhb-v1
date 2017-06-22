@@ -61,8 +61,7 @@ QTextOption ()
 */
 HB_FUNC_STATIC( QTEXTOPTION_NEW1 )
 {
-  QTextOption * o = NULL;
-  o = new QTextOption ();
+  QTextOption * o = new QTextOption ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -72,14 +71,8 @@ QTextOption ( Qt::Alignment alignment )
 */
 HB_FUNC_STATIC( QTEXTOPTION_NEW2 )
 {
-  QTextOption * o = NULL;
-  int par1 = hb_parni(1);
-  o = new QTextOption (  (Qt::Alignment) par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextOption *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  QTextOption * o = new QTextOption (  (Qt::Alignment) hb_parni(1) );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 
@@ -88,14 +81,8 @@ QTextOption ( const QTextOption & other )
 */
 HB_FUNC_STATIC( QTEXTOPTION_NEW3 )
 {
-  QTextOption * o = NULL;
-  QTextOption * par1 = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QTextOption ( *par1 );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(QTextOption *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  QTextOption * o = new QTextOption ( *PQTEXTOPTION(1) );
+  _qt4xhb_storePointerAndFlag ( o, false );
 }
 
 
@@ -173,8 +160,7 @@ HB_FUNC_STATIC( QTEXTOPTION_SETALIGNMENT )
   QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setAlignment (  (Qt::Alignment) par1 );
+    obj->setAlignment (  (Qt::Alignment) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -309,8 +295,7 @@ HB_FUNC_STATIC( QTEXTOPTION_TABSTOP )
   QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->tabStop ();
-    hb_retnd( r );
+    RQREAL( obj->tabStop () );
   }
 }
 
@@ -337,7 +322,7 @@ HB_FUNC_STATIC( QTEXTOPTION_USEDESIGNMETRICS )
   QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->useDesignMetrics () );
+    RBOOL( obj->useDesignMetrics () );
   }
 }
 

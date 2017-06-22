@@ -69,8 +69,7 @@ HB_FUNC_STATIC( QABSTRACTFONTENGINE_ADDGLYPHOUTLINESTOPATH ) // TODO: revisar e 
     uint * par1 = (uint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
     QAbstractFontEngine::FixedPoint * par3 = (QAbstractFontEngine::FixedPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QPainterPath * par4 = (QPainterPath *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->addGlyphOutlinesToPath ( par1, par2, par3, par4 );
+    obj->addGlyphOutlinesToPath ( par1, par2, par3, PQPAINTERPATH(4) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -102,7 +101,7 @@ HB_FUNC_STATIC( QABSTRACTFONTENGINE_CONVERTSTRINGTOGLYPHINDICES ) // TODO: revis
     uint * par3 = (uint *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par4;
     int par5 = hb_parni(5);
-    hb_retl( obj->convertStringToGlyphIndices ( par1, par2, par3, &par4,  (QAbstractFontEngine::TextShapingFlags) par5 ) );
+    RBOOL( obj->convertStringToGlyphIndices ( par1, par2, par3, &par4,  (QAbstractFontEngine::TextShapingFlags) par5 ) );
     hb_storni( par4, 4 );
   }
 }
@@ -154,7 +153,7 @@ HB_FUNC_STATIC( QABSTRACTFONTENGINE_RENDERGLYPH )
     int par3 = hb_parni(3);
     int par4 = hb_parni(4);
     uchar * par5 = (uchar *) hb_itemGetPtr( hb_objSendMsg( hb_param(5, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->renderGlyph ( PUINT(1), par2, par3, par4, par5 ) );
+    RBOOL( obj->renderGlyph ( PUINT(1), par2, par3, par4, par5 ) );
   }
 }
 

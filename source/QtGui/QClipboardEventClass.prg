@@ -42,9 +42,8 @@ QClipboardEvent(QEventPrivate *data)
 */
 HB_FUNC_STATIC( QCLIPBOARDEVENT_NEW )
 {
-  QClipboardEvent * o = NULL;
   QEventPrivate * par1 = (QEventPrivate *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QClipboardEvent ( par1 );
+  QClipboardEvent * o = new QClipboardEvent ( par1 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

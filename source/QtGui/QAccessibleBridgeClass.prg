@@ -64,10 +64,8 @@ HB_FUNC_STATIC( QACCESSIBLEBRIDGE_NOTIFYACCESSIBILITYUPDATE )
   QAccessibleBridge * obj = (QAccessibleBridge *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
     QAccessibleInterface * par2 = (QAccessibleInterface *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par3 = hb_parni(3);
-    obj->notifyAccessibilityUpdate ( par1, par2, par3 );
+    obj->notifyAccessibilityUpdate ( PINT(1), par2, PINT(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

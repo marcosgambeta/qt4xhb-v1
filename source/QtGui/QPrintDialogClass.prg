@@ -53,10 +53,7 @@ QPrintDialog ( QPrinter * printer, QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QPRINTDIALOG_NEW1 )
 {
-  QPrintDialog * o = NULL;
-  QPrinter * par1 = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QPrintDialog ( par1, par2 );
+  QPrintDialog * o = new QPrintDialog ( PQPRINTER(1), OPQWIDGET(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -66,9 +63,7 @@ QPrintDialog ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QPRINTDIALOG_NEW2 )
 {
-  QPrintDialog * o = NULL;
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QPrintDialog ( par1 );
+  QPrintDialog * o = new QPrintDialog ( OPQWIDGET(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -116,9 +111,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_OPEN )
   QPrintDialog * obj = (QPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    const char * par2 = hb_parc(2);
-    obj->open ( par1,  (const char *) par2 );
+    obj->open ( PQOBJECT(1),  (const char *) hb_parc(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -190,7 +183,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_TESTOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->testOption (  (QPrintDialog::PrintDialogOption) par1 ) );
+    RBOOL( obj->testOption (  (QPrintDialog::PrintDialogOption) par1 ) );
   }
 }
 
@@ -203,8 +196,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_DONE )
   QPrintDialog * obj = (QPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->done ( par1 );
+    obj->done ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -218,7 +210,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_EXEC )
   QPrintDialog * obj = (QPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->exec () );
+    RINT( obj->exec () );
   }
 }
 

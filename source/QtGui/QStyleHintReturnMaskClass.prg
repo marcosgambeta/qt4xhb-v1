@@ -38,8 +38,7 @@ QStyleHintReturnMask ()
 */
 HB_FUNC_STATIC( QSTYLEHINTRETURNMASK_NEW )
 {
-  QStyleHintReturnMask * o = NULL;
-  o = new QStyleHintReturnMask ();
+  QStyleHintReturnMask * o = new QStyleHintReturnMask ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

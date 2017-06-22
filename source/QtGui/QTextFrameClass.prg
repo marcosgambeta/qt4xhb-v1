@@ -53,9 +53,7 @@ QTextFrame ( QTextDocument * document )
 */
 HB_FUNC_STATIC( QTEXTFRAME_NEW )
 {
-  QTextFrame * o = NULL;
-  QTextDocument * par1 = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QTextFrame ( par1 );
+  QTextFrame * o = new QTextFrame ( PQTEXTDOCUMENT(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -144,7 +142,7 @@ HB_FUNC_STATIC( QTEXTFRAME_FIRSTPOSITION )
   QTextFrame * obj = (QTextFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->firstPosition () );
+    RINT( obj->firstPosition () );
   }
 }
 
@@ -185,7 +183,7 @@ HB_FUNC_STATIC( QTEXTFRAME_LASTPOSITION )
   QTextFrame * obj = (QTextFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->lastPosition () );
+    RINT( obj->lastPosition () );
   }
 }
 

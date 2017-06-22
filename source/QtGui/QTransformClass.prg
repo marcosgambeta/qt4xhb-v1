@@ -105,8 +105,7 @@ QTransform ()
 */
 HB_FUNC_STATIC( QTRANSFORM_NEW1 )
 {
-  QTransform * o = NULL;
-  o = new QTransform ();
+  QTransform * o = new QTransform ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -116,8 +115,7 @@ QTransform ( qreal m11, qreal m12, qreal m13, qreal m21, qreal m22, qreal m23, q
 */
 HB_FUNC_STATIC( QTRANSFORM_NEW2 )
 {
-  QTransform * o = NULL;
-  o = new QTransform ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6), PQREAL(7), PQREAL(8), (qreal) ISNIL(9)? 1.0 : hb_parnd(9) );
+  QTransform * o = new QTransform ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6), PQREAL(7), PQREAL(8), (qreal) ISNIL(9)? 1.0 : hb_parnd(9) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -127,8 +125,7 @@ QTransform ( qreal m11, qreal m12, qreal m21, qreal m22, qreal dx, qreal dy )
 */
 HB_FUNC_STATIC( QTRANSFORM_NEW3 )
 {
-  QTransform * o = NULL;
-  o = new QTransform ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6) );
+  QTransform * o = new QTransform ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -138,9 +135,7 @@ QTransform ( const QMatrix & matrix )
 */
 HB_FUNC_STATIC( QTRANSFORM_NEW4 )
 {
-  QTransform * o = NULL;
-  QMatrix * par1 = (QMatrix *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QTransform ( *par1 );
+  QTransform * o = new QTransform ( *PQMATRIX(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -198,8 +193,7 @@ HB_FUNC_STATIC( QTRANSFORM_M11 )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->m11 ();
-    hb_retnd( r );
+    RQREAL( obj->m11 () );
   }
 }
 
@@ -212,8 +206,7 @@ HB_FUNC_STATIC( QTRANSFORM_M12 )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->m12 ();
-    hb_retnd( r );
+    RQREAL( obj->m12 () );
   }
 }
 
@@ -226,8 +219,7 @@ HB_FUNC_STATIC( QTRANSFORM_M13 )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->m13 ();
-    hb_retnd( r );
+    RQREAL( obj->m13 () );
   }
 }
 
@@ -240,8 +232,7 @@ HB_FUNC_STATIC( QTRANSFORM_M21 )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->m21 ();
-    hb_retnd( r );
+    RQREAL( obj->m21 () );
   }
 }
 
@@ -254,8 +245,7 @@ HB_FUNC_STATIC( QTRANSFORM_M22 )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->m22 ();
-    hb_retnd( r );
+    RQREAL( obj->m22 () );
   }
 }
 
@@ -268,8 +258,7 @@ HB_FUNC_STATIC( QTRANSFORM_M23 )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->m23 ();
-    hb_retnd( r );
+    RQREAL( obj->m23 () );
   }
 }
 
@@ -282,8 +271,7 @@ HB_FUNC_STATIC( QTRANSFORM_M31 )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->m31 ();
-    hb_retnd( r );
+    RQREAL( obj->m31 () );
   }
 }
 
@@ -296,8 +284,7 @@ HB_FUNC_STATIC( QTRANSFORM_M32 )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->m32 ();
-    hb_retnd( r );
+    RQREAL( obj->m32 () );
   }
 }
 
@@ -310,8 +297,7 @@ HB_FUNC_STATIC( QTRANSFORM_M33 )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->m33 ();
-    hb_retnd( r );
+    RQREAL( obj->m33 () );
   }
 }
 
@@ -338,8 +324,7 @@ HB_FUNC_STATIC( QTRANSFORM_DETERMINANT )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->determinant ();
-    hb_retnd( r );
+    RQREAL( obj->determinant () );
   }
 }
 
@@ -352,8 +337,7 @@ HB_FUNC_STATIC( QTRANSFORM_DX )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->dx ();
-    hb_retnd( r );
+    RQREAL( obj->dx () );
   }
 }
 
@@ -366,8 +350,7 @@ HB_FUNC_STATIC( QTRANSFORM_DY )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->dy ();
-    hb_retnd( r );
+    RQREAL( obj->dy () );
   }
 }
 
@@ -396,7 +379,7 @@ HB_FUNC_STATIC( QTRANSFORM_ISAFFINE )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isAffine () );
+    RBOOL( obj->isAffine () );
   }
 }
 
@@ -409,7 +392,7 @@ HB_FUNC_STATIC( QTRANSFORM_ISIDENTITY )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isIdentity () );
+    RBOOL( obj->isIdentity () );
   }
 }
 
@@ -422,7 +405,7 @@ HB_FUNC_STATIC( QTRANSFORM_ISINVERTIBLE )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isInvertible () );
+    RBOOL( obj->isInvertible () );
   }
 }
 
@@ -435,7 +418,7 @@ HB_FUNC_STATIC( QTRANSFORM_ISROTATING )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isRotating () );
+    RBOOL( obj->isRotating () );
   }
 }
 
@@ -448,7 +431,7 @@ HB_FUNC_STATIC( QTRANSFORM_ISSCALING )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isScaling () );
+    RBOOL( obj->isScaling () );
   }
 }
 
@@ -461,7 +444,7 @@ HB_FUNC_STATIC( QTRANSFORM_ISTRANSLATING )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isTranslating () );
+    RBOOL( obj->isTranslating () );
   }
 }
 
@@ -492,8 +475,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAP2 )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPointF * par1 = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QPointF * ptr = new QPointF( obj->map ( *par1 ) );
+    QPointF * ptr = new QPointF( obj->map ( *PQPOINTF(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -507,8 +489,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAP3 )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QPoint * ptr = new QPoint( obj->map ( *par1 ) );
+    QPoint * ptr = new QPoint( obj->map ( *PQPOINT(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
@@ -552,8 +533,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAP6 )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPolygonF * par1 = (QPolygonF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QPolygonF * ptr = new QPolygonF( obj->map ( *par1 ) );
+    QPolygonF * ptr = new QPolygonF( obj->map ( *PQPOLYGONF(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
@@ -567,8 +547,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAP7 )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPolygon * par1 = (QPolygon *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QPolygon * ptr = new QPolygon( obj->map ( *par1 ) );
+    QPolygon * ptr = new QPolygon( obj->map ( *PQPOLYGON(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QPOLYGON", true );
   }
 }
@@ -582,8 +561,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAP8 )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRegion * par1 = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QRegion * ptr = new QRegion( obj->map ( *par1 ) );
+    QRegion * ptr = new QRegion( obj->map ( *PQREGION(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QREGION", true );
   }
 }
@@ -597,8 +575,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAP9 )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPainterPath * par1 = (QPainterPath *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QPainterPath * ptr = new QPainterPath( obj->map ( *par1 ) );
+    QPainterPath * ptr = new QPainterPath( obj->map ( *PQPAINTERPATH(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
@@ -612,11 +589,9 @@ HB_FUNC_STATIC( QTRANSFORM_MAP10 )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
     int par3;
     int par4;
-    obj->map ( par1, par2, &par3, &par4 );
+    obj->map ( PINT(1), PINT(2), &par3, &par4 );
     hb_storni( par3, 3 );
     hb_storni( par4, 4 );
   }
@@ -689,8 +664,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAPRECT1 )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRectF * par1 = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QRectF * ptr = new QRectF( obj->mapRect ( *par1 ) );
+    QRectF * ptr = new QRectF( obj->mapRect ( *PQRECTF(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -704,8 +678,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAPRECT2 )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRect * par1 = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QRect * ptr = new QRect( obj->mapRect ( *par1 ) );
+    QRect * ptr = new QRect( obj->mapRect ( *PQRECT(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -734,8 +707,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAPTOPOLYGON )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRect * par1 = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QPolygon * ptr = new QPolygon( obj->mapToPolygon ( *par1 ) );
+    QPolygon * ptr = new QPolygon( obj->mapToPolygon ( *PQRECT(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QPOLYGON", true );
   }
 }
@@ -828,10 +800,7 @@ bool quadToQuad ( const QPolygonF & one, const QPolygonF & two, QTransform & tra
 */
 HB_FUNC_STATIC( QTRANSFORM_QUADTOQUAD )
 {
-  QPolygonF * par1 = (QPolygonF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QPolygonF * par2 = (QPolygonF *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QTransform * par3 = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  hb_retl( QTransform::quadToQuad ( *par1, *par2, *par3 ) );
+  RBOOL( QTransform::quadToQuad ( *PQPOLYGONF(1), *PQPOLYGONF(2), *PQTRANSFORM(3) ) );
 }
 
 
@@ -840,9 +809,7 @@ bool quadToSquare ( const QPolygonF & quad, QTransform & trans )
 */
 HB_FUNC_STATIC( QTRANSFORM_QUADTOSQUARE )
 {
-  QPolygonF * par1 = (QPolygonF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QTransform * par2 = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  hb_retl( QTransform::quadToSquare ( *par1, *par2 ) );
+  RBOOL( QTransform::quadToSquare ( *PQPOLYGONF(1), *PQTRANSFORM(2) ) );
 }
 
 
@@ -851,9 +818,7 @@ bool squareToQuad ( const QPolygonF & quad, QTransform & trans )
 */
 HB_FUNC_STATIC( QTRANSFORM_SQUARETOQUAD )
 {
-  QPolygonF * par1 = (QPolygonF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QTransform * par2 = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  hb_retl( QTransform::squareToQuad ( *par1, *par2 ) );
+  RBOOL( QTransform::squareToQuad ( *PQPOLYGONF(1), *PQTRANSFORM(2) ) );
 }
 
 

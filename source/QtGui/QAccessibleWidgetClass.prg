@@ -51,10 +51,8 @@ QAccessibleWidget ( QWidget * w, Role role = Client, const QString & name = QStr
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_NEW )
 {
-  QAccessibleWidget * o = NULL;
-  QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = ISNIL(2)? (int) QAccessible::Client : hb_parni(2);
-  o = new QAccessibleWidget ( par1,  (QAccessible::Role) par2, OPQSTRING(3,QString()) );
+  QAccessibleWidget * o = new QAccessibleWidget ( PQWIDGET(1),  (QAccessible::Role) par2, OPQSTRING(3,QString()) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -68,10 +66,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_ACTIONTEXT )
   QAccessibleWidget * obj = (QAccessibleWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    int par3 = hb_parni(3);
-    QString str1 = obj->actionText ( par1,  (QAccessible::Text) par2, par3 );
+    QString str1 = obj->actionText ( PINT(1),  (QAccessible::Text) hb_parni(2), PINT(3) );
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -85,9 +80,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_CHILDAT )
   QAccessibleWidget * obj = (QAccessibleWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    hb_retni( obj->childAt ( par1, par2 ) );
+    RINT( obj->childAt ( PINT(1), PINT(2) ) );
   }
 }
 
@@ -100,7 +93,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_CHILDCOUNT )
   QAccessibleWidget * obj = (QAccessibleWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->childCount () );
+    RINT( obj->childCount () );
   }
 }
 
@@ -113,8 +106,6 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_DOACTION )
   QAccessibleWidget * obj = (QAccessibleWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
 QVariantList par3;
 PHB_ITEM aList3 = hb_param(3, HB_IT_ARRAY);
 int i3;
@@ -123,7 +114,7 @@ for (i3=0;i3<nLen3;i3++)
 {
 par3 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList3, i3+1 ), "POINTER", 0 ) );
 }
-    hb_retl( obj->doAction ( par1, par2, par3 ) );
+    RBOOL( obj->doAction ( PINT(1), PINT(2), par3 ) );
   }
 }
 
@@ -137,7 +128,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_INDEXOFCHILD )
   if( obj )
   {
     const QAccessibleInterface * par1 = (const QAccessibleInterface *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retni( obj->indexOfChild ( par1 ) );
+    RINT( obj->indexOfChild ( par1 ) );
   }
 }
 
@@ -151,8 +142,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_RECT )
   QAccessibleWidget * obj = (QAccessibleWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QRect * ptr = new QRect( obj->rect ( par1 ) );
+    QRect * ptr = new QRect( obj->rect ( PINT(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -166,10 +156,8 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_RELATIONTO )
   QAccessibleWidget * obj = (QAccessibleWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
     const QAccessibleInterface * par2 = (const QAccessibleInterface *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par3 = hb_parni(3);
-    hb_retni( (int) obj->relationTo ( par1, par2, par3 ) );
+    hb_retni( (int) obj->relationTo ( PINT(1), par2, PINT(3) ) );
   }
 }
 
@@ -182,8 +170,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_ROLE )
   QAccessibleWidget * obj = (QAccessibleWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retni( (int) obj->role ( par1 ) );
+    hb_retni( (int) obj->role ( PINT(1) ) );
   }
 }
 
@@ -196,8 +183,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_STATE )
   QAccessibleWidget * obj = (QAccessibleWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retni( (int) obj->state ( par1 ) );
+    hb_retni( (int) obj->state ( PINT(1) ) );
   }
 }
 
@@ -210,9 +196,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_TEXT )
   QAccessibleWidget * obj = (QAccessibleWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    QString str1 = obj->text (  (QAccessible::Text) par1, par2 );
+    QString str1 = obj->text (  (QAccessible::Text) hb_parni(1), PINT(2) );
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -226,8 +210,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_USERACTIONCOUNT )
   QAccessibleWidget * obj = (QAccessibleWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retni( obj->userActionCount ( par1 ) );
+    RINT( obj->userActionCount ( PINT(1) ) );
   }
 }
 

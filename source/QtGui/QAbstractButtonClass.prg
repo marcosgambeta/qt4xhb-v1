@@ -46,10 +46,12 @@ CLASS QAbstractButton INHERIT QWidget
    METHOD setChecked
    METHOD setIconSize
    METHOD toggle
+
    METHOD onClicked
    METHOD onPressed
    METHOD onReleased
    METHOD onToggled
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -94,7 +96,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOEXCLUSIVE )
 
   if( obj )
   {
-    hb_retl( obj->autoExclusive () );
+    RBOOL( obj->autoExclusive () );
   }
 }
 
@@ -107,7 +109,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEAT )
 
   if( obj )
   {
-    hb_retl( obj->autoRepeat () );
+    RBOOL( obj->autoRepeat () );
   }
 }
 
@@ -120,7 +122,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEATDELAY )
 
   if( obj )
   {
-    hb_retni( obj->autoRepeatDelay () );
+    RINT( obj->autoRepeatDelay () );
   }
 }
 
@@ -133,7 +135,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEATINTERVAL )
 
   if( obj )
   {
-    hb_retni( obj->autoRepeatInterval () );
+    RINT( obj->autoRepeatInterval () );
   }
 }
 
@@ -188,7 +190,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ISCHECKABLE )
 
   if( obj )
   {
-    hb_retl( obj->isCheckable () );
+    RBOOL( obj->isCheckable () );
   }
 }
 
@@ -201,7 +203,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ISCHECKED )
 
   if( obj )
   {
-    hb_retl( obj->isChecked () );
+    RBOOL( obj->isChecked () );
   }
 }
 
@@ -214,7 +216,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ISDOWN )
 
   if( obj )
   {
-    hb_retl( obj->isDown () );
+    RBOOL( obj->isDown () );
   }
 }
 
@@ -227,7 +229,14 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOEXCLUSIVE )
 
   if( obj )
   {
-    obj->setAutoExclusive ( PBOOL(1) );
+    if( ISLOG(1) )
+    {
+      obj->setAutoExclusive ( PBOOL(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -242,7 +251,14 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEAT )
 
   if( obj )
   {
-    obj->setAutoRepeat ( PBOOL(1) );
+    if( ISLOG(1) )
+    {
+      obj->setAutoRepeat ( PBOOL(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -257,8 +273,14 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEATDELAY )
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setAutoRepeatDelay ( par1 );
+    if( ISNUM(1) )
+    {
+      obj->setAutoRepeatDelay ( PINT(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -273,8 +295,14 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEATINTERVAL )
 
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setAutoRepeatInterval ( par1 );
+    if( ISNUM(1) )
+    {
+      obj->setAutoRepeatInterval ( PINT(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -289,7 +317,14 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETCHECKABLE )
 
   if( obj )
   {
-    obj->setCheckable ( PBOOL(1) );
+    if( ISLOG(1) )
+    {
+      obj->setCheckable ( PBOOL(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -304,7 +339,14 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETDOWN )
 
   if( obj )
   {
-    obj->setDown ( PBOOL(1) );
+    if( ISLOG(1) )
+    {
+      obj->setDown ( PBOOL(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -319,8 +361,15 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETICON )
 
   if( obj )
   {
-    QIcon par1 = ISOBJECT(1)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(1));
-    obj->setIcon ( par1 );
+    if( (ISQICON(1)||ISCHAR(1)) )
+    {
+      QIcon par1 = ISOBJECT(1)? *(QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) : QIcon(hb_parc(1));
+      obj->setIcon ( par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -335,8 +384,15 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETSHORTCUT )
 
   if( obj )
   {
-    QKeySequence * par1 = (QKeySequence *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setShortcut ( *par1 );
+    if( ISQKEYSEQUENCE(1) )
+    {
+      QKeySequence * par1 = (QKeySequence *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
+      obj->setShortcut ( *par1 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -351,7 +407,14 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETTEXT )
 
   if( obj )
   {
-    obj->setText ( PQSTRING(1) );
+    if( ISCHAR(1) )
+    {
+      obj->setText ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -380,8 +443,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_TEXT )
 
   if( obj )
   {
-    QString str1 = obj->text ();
-    hb_retc( RQSTRING(str1) );
+    hb_retc( RQSTRING( obj->text () ) );
   }
 }
 
@@ -394,7 +456,14 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ANIMATECLICK )
 
   if( obj )
   {
-    obj->animateClick ( OPINT(1,100) );
+    if( ISOPTNUM(1) )
+    {
+      obj->animateClick ( OPINT(1,100) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -424,7 +493,14 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETCHECKED )
 
   if( obj )
   {
-    obj->setChecked ( PBOOL(1) );
+    if( ISLOG(1) )
+    {
+      obj->setChecked ( PBOOL(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -439,8 +515,14 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETICONSIZE )
 
   if( obj )
   {
-    QSize * par1 = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setIconSize ( *par1 );
+    if( ISQSIZE(1) )
+    {
+      obj->setIconSize ( *PQSIZE(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );

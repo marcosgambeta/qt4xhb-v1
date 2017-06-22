@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QICONENGINEV2_READ )
   if( obj )
   {
     QDataStream * par1 = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->read ( *par1 ) );
+    RBOOL( obj->read ( *par1 ) );
   }
 }
 
@@ -173,9 +173,8 @@ HB_FUNC_STATIC( QICONENGINEV2_VIRTUAL_HOOK )
   QIconEngineV2 * obj = (QIconEngineV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
     void * par2 = (void *) hb_parptr(2);
-    obj->virtual_hook ( par1, par2 );
+    obj->virtual_hook ( PINT(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -190,7 +189,7 @@ HB_FUNC_STATIC( QICONENGINEV2_WRITE )
   if( obj )
   {
     QDataStream * par1 = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->write ( *par1 ) );
+    RBOOL( obj->write ( *par1 ) );
   }
 }
 

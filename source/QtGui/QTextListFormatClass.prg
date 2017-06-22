@@ -47,8 +47,7 @@ QTextListFormat ()
 */
 HB_FUNC_STATIC( QTEXTLISTFORMAT_NEW )
 {
-  QTextListFormat * o = NULL;
-  o = new QTextListFormat ();
+  QTextListFormat * o = new QTextListFormat ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -77,7 +76,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_INDENT )
   QTextListFormat * obj = (QTextListFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->indent () );
+    RINT( obj->indent () );
   }
 }
 
@@ -90,7 +89,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_ISVALID )
   QTextListFormat * obj = (QTextListFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -131,8 +130,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_SETINDENT )
   QTextListFormat * obj = (QTextListFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setIndent ( par1 );
+    obj->setIndent ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

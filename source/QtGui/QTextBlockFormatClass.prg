@@ -62,8 +62,7 @@ QTextBlockFormat ()
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_NEW )
 {
-  QTextBlockFormat * o = NULL;
-  o = new QTextBlockFormat ();
+  QTextBlockFormat * o = new QTextBlockFormat ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -105,8 +104,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_BOTTOMMARGIN )
   QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->bottomMargin ();
-    hb_retnd( r );
+    RQREAL( obj->bottomMargin () );
   }
 }
 
@@ -119,7 +117,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_INDENT )
   QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->indent () );
+    RINT( obj->indent () );
   }
 }
 
@@ -132,7 +130,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_ISVALID )
   QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -145,8 +143,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LEFTMARGIN )
   QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->leftMargin ();
-    hb_retnd( r );
+    RQREAL( obj->leftMargin () );
   }
 }
 
@@ -159,8 +156,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LINEHEIGHT1 )
   QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->lineHeight ( PQREAL(1), PQREAL(2) );
-    hb_retnd( r );
+    RQREAL( obj->lineHeight ( PQREAL(1), PQREAL(2) ) );
   }
 }
 
@@ -173,8 +169,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LINEHEIGHT2 )
   QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->lineHeight ();
-    hb_retnd( r );
+    RQREAL( obj->lineHeight () );
   }
 }
 
@@ -202,7 +197,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LINEHEIGHTTYPE )
   QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->lineHeightType () );
+    RINT( obj->lineHeightType () );
   }
 }
 
@@ -215,7 +210,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_NONBREAKABLELINES )
   QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->nonBreakableLines () );
+    RBOOL( obj->nonBreakableLines () );
   }
 }
 
@@ -241,8 +236,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_RIGHTMARGIN )
   QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->rightMargin ();
-    hb_retnd( r );
+    RQREAL( obj->rightMargin () );
   }
 }
 
@@ -284,8 +278,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETINDENT )
   QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setIndent ( par1 );
+    obj->setIndent ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -401,8 +394,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_TEXTINDENT )
   QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->textIndent ();
-    hb_retnd( r );
+    RQREAL( obj->textIndent () );
   }
 }
 
@@ -415,8 +407,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_TOPMARGIN )
   QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->topMargin ();
-    hb_retnd( r );
+    RQREAL( obj->topMargin () );
   }
 }
 

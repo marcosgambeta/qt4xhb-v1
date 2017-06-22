@@ -75,8 +75,7 @@ QTextLine ()
 */
 HB_FUNC_STATIC( QTEXTLINE_NEW )
 {
-  QTextLine * o = NULL;
-  o = new QTextLine ();
+  QTextLine * o = new QTextLine ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -105,8 +104,7 @@ HB_FUNC_STATIC( QTEXTLINE_ASCENT )
   QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->ascent ();
-    hb_retnd( r );
+    RQREAL( obj->ascent () );
   }
 }
 
@@ -121,8 +119,7 @@ HB_FUNC_STATIC( QTEXTLINE_CURSORTOX1 )
   {
     int par1;
     int par2 = ISNIL(2)? (int) QTextLine::Leading : hb_parni(2);
-    qreal r = obj->cursorToX ( &par1,  (QTextLine::Edge) par2 );
-    hb_retnd( r );
+    RQREAL( obj->cursorToX ( &par1,  (QTextLine::Edge) par2 ) );
     hb_storni( par1, 1 );
   }
 }
@@ -136,10 +133,8 @@ HB_FUNC_STATIC( QTEXTLINE_CURSORTOX2 )
   QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
     int par2 = ISNIL(2)? (int) QTextLine::Leading : hb_parni(2);
-    qreal r = obj->cursorToX ( par1,  (QTextLine::Edge) par2 );
-    hb_retnd( r );
+    RQREAL( obj->cursorToX ( PINT(1),  (QTextLine::Edge) par2 ) );
   }
 }
 
@@ -169,8 +164,7 @@ HB_FUNC_STATIC( QTEXTLINE_DESCENT )
   QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->descent ();
-    hb_retnd( r );
+    RQREAL( obj->descent () );
   }
 }
 
@@ -184,8 +178,7 @@ HB_FUNC_STATIC( QTEXTLINE_HEIGHT )
   QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->height ();
-    hb_retnd( r );
+    RQREAL( obj->height () );
   }
 }
 
@@ -198,8 +191,7 @@ HB_FUNC_STATIC( QTEXTLINE_HORIZONTALADVANCE )
   QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->horizontalAdvance ();
-    hb_retnd( r );
+    RQREAL( obj->horizontalAdvance () );
   }
 }
 
@@ -212,7 +204,7 @@ HB_FUNC_STATIC( QTEXTLINE_ISVALID )
   QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -225,8 +217,7 @@ HB_FUNC_STATIC( QTEXTLINE_LEADING )
   QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->leading ();
-    hb_retnd( r );
+    RQREAL( obj->leading () );
   }
 }
 
@@ -239,7 +230,7 @@ HB_FUNC_STATIC( QTEXTLINE_LEADINGINCLUDED )
   QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->leadingIncluded () );
+    RBOOL( obj->leadingIncluded () );
   }
 }
 
@@ -252,7 +243,7 @@ HB_FUNC_STATIC( QTEXTLINE_LINENUMBER )
   QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->lineNumber () );
+    RINT( obj->lineNumber () );
   }
 }
 
@@ -279,8 +270,7 @@ HB_FUNC_STATIC( QTEXTLINE_NATURALTEXTWIDTH )
   QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->naturalTextWidth ();
-    hb_retnd( r );
+    RQREAL( obj->naturalTextWidth () );
   }
 }
 
@@ -349,8 +339,7 @@ HB_FUNC_STATIC( QTEXTLINE_SETNUMCOLUMNS1 )
   QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setNumColumns ( par1 );
+    obj->setNumColumns ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -364,8 +353,7 @@ HB_FUNC_STATIC( QTEXTLINE_SETNUMCOLUMNS2 )
   QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setNumColumns ( par1, PQREAL(2) );
+    obj->setNumColumns ( PINT(1), PQREAL(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -394,8 +382,7 @@ HB_FUNC_STATIC( QTEXTLINE_SETPOSITION )
   QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPointF * par1 = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setPosition ( *par1 );
+    obj->setPosition ( *PQPOINTF(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -409,7 +396,7 @@ HB_FUNC_STATIC( QTEXTLINE_TEXTLENGTH )
   QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->textLength () );
+    RINT( obj->textLength () );
   }
 }
 
@@ -422,7 +409,7 @@ HB_FUNC_STATIC( QTEXTLINE_TEXTSTART )
   QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->textStart () );
+    RINT( obj->textStart () );
   }
 }
 
@@ -435,8 +422,7 @@ HB_FUNC_STATIC( QTEXTLINE_WIDTH )
   QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->width ();
-    hb_retnd( r );
+    RQREAL( obj->width () );
   }
 }
 
@@ -449,8 +435,7 @@ HB_FUNC_STATIC( QTEXTLINE_X )
   QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->x ();
-    hb_retnd( r );
+    RQREAL( obj->x () );
   }
 }
 
@@ -464,7 +449,7 @@ HB_FUNC_STATIC( QTEXTLINE_XTOCURSOR )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) QTextLine::CursorBetweenCharacters : hb_parni(2);
-    hb_retni( obj->xToCursor ( PQREAL(1),  (QTextLine::CursorPosition) par2 ) );
+    RINT( obj->xToCursor ( PQREAL(1),  (QTextLine::CursorPosition) par2 ) );
   }
 }
 
@@ -477,8 +462,7 @@ HB_FUNC_STATIC( QTEXTLINE_Y )
   QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->y ();
-    hb_retnd( r );
+    RQREAL( obj->y () );
   }
 }
 

@@ -57,8 +57,7 @@ QFontEngineInfo ()
 */
 HB_FUNC_STATIC( QFONTENGINEINFO_NEW1 )
 {
-  QFontEngineInfo * o = NULL;
-  o = new QFontEngineInfo ();
+  QFontEngineInfo * o = new QFontEngineInfo ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -68,8 +67,7 @@ QFontEngineInfo ( const QString & family )
 */
 HB_FUNC_STATIC( QFONTENGINEINFO_NEW2 )
 {
-  QFontEngineInfo * o = NULL;
-  o = new QFontEngineInfo ( PQSTRING(1) );
+  QFontEngineInfo * o = new QFontEngineInfo ( PQSTRING(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -79,9 +77,7 @@ QFontEngineInfo ( const QFontEngineInfo & other )
 */
 HB_FUNC_STATIC( QFONTENGINEINFO_NEW3 )
 {
-  QFontEngineInfo * o = NULL;
-  QFontEngineInfo * par1 = (QFontEngineInfo *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QFontEngineInfo ( *par1 );
+  QFontEngineInfo * o = new QFontEngineInfo ( *PQFONTENGINEINFO(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -148,8 +144,7 @@ HB_FUNC_STATIC( QFONTENGINEINFO_PIXELSIZE )
   QFontEngineInfo * obj = (QFontEngineInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->pixelSize ();
-    hb_retnd( r );
+    RQREAL( obj->pixelSize () );
   }
 }
 
@@ -205,8 +200,7 @@ HB_FUNC_STATIC( QFONTENGINEINFO_SETWEIGHT )
   QFontEngineInfo * obj = (QFontEngineInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setWeight ( par1 );
+    obj->setWeight ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -257,7 +251,7 @@ HB_FUNC_STATIC( QFONTENGINEINFO_WEIGHT )
   QFontEngineInfo * obj = (QFontEngineInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->weight () );
+    RINT( obj->weight () );
   }
 }
 

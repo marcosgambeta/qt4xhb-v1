@@ -63,8 +63,7 @@ QGlyphRun ()
 */
 HB_FUNC_STATIC( QGLYPHRUN_NEW1 )
 {
-  QGlyphRun * o = NULL;
-  o = new QGlyphRun ();
+  QGlyphRun * o = new QGlyphRun ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -74,9 +73,7 @@ QGlyphRun ( const QGlyphRun & other )
 */
 HB_FUNC_STATIC( QGLYPHRUN_NEW2 )
 {
-  QGlyphRun * o = NULL;
-  QGlyphRun * par1 = (QGlyphRun *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QGlyphRun ( *par1 );
+  QGlyphRun * o = new QGlyphRun ( *PQGLYPHRUN(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -161,7 +158,7 @@ HB_FUNC_STATIC( QGLYPHRUN_OVERLINE )
   QGlyphRun * obj = (QGlyphRun *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->overline () );
+    RBOOL( obj->overline () );
   }
 }
 
@@ -336,7 +333,7 @@ HB_FUNC_STATIC( QGLYPHRUN_STRIKEOUT )
   QGlyphRun * obj = (QGlyphRun *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->strikeOut () );
+    RBOOL( obj->strikeOut () );
   }
 }
 
@@ -349,7 +346,7 @@ HB_FUNC_STATIC( QGLYPHRUN_UNDERLINE )
   QGlyphRun * obj = (QGlyphRun *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->underline () );
+    RBOOL( obj->underline () );
   }
 }
 

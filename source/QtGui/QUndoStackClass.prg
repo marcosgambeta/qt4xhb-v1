@@ -72,9 +72,7 @@ QUndoStack ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QUNDOSTACK_NEW )
 {
-  QUndoStack * o = NULL;
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QUndoStack ( par1 );
+  QUndoStack * o = new QUndoStack ( OPQOBJECT(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -117,7 +115,7 @@ HB_FUNC_STATIC( QUNDOSTACK_CANREDO )
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->canRedo () );
+    RBOOL( obj->canRedo () );
   }
 }
 
@@ -130,7 +128,7 @@ HB_FUNC_STATIC( QUNDOSTACK_CANUNDO )
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->canUndo () );
+    RBOOL( obj->canUndo () );
   }
 }
 
@@ -143,7 +141,7 @@ HB_FUNC_STATIC( QUNDOSTACK_CLEANINDEX )
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->cleanIndex () );
+    RINT( obj->cleanIndex () );
   }
 }
 
@@ -170,8 +168,7 @@ HB_FUNC_STATIC( QUNDOSTACK_COMMAND )
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    const QUndoCommand * ptr = obj->command ( par1 );
+    const QUndoCommand * ptr = obj->command ( PINT(1) );
     _qt4xhb_createReturnClass ( ptr, "QUNDOCOMMAND" );
   }
 }
@@ -185,7 +182,7 @@ HB_FUNC_STATIC( QUNDOSTACK_COUNT )
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 
@@ -198,8 +195,7 @@ HB_FUNC_STATIC( QUNDOSTACK_CREATEREDOACTION )
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QAction * ptr = obj->createRedoAction ( par1, OPQSTRING(2,QString()) );
+    QAction * ptr = obj->createRedoAction ( PQOBJECT(1), OPQSTRING(2,QString()) );
     _qt4xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -213,8 +209,7 @@ HB_FUNC_STATIC( QUNDOSTACK_CREATEUNDOACTION )
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QAction * ptr = obj->createUndoAction ( par1, OPQSTRING(2,QString()) );
+    QAction * ptr = obj->createUndoAction ( PQOBJECT(1), OPQSTRING(2,QString()) );
     _qt4xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -242,7 +237,7 @@ HB_FUNC_STATIC( QUNDOSTACK_INDEX )
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->index () );
+    RINT( obj->index () );
   }
 }
 
@@ -255,7 +250,7 @@ HB_FUNC_STATIC( QUNDOSTACK_ISACTIVE )
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isActive () );
+    RBOOL( obj->isActive () );
   }
 }
 
@@ -268,7 +263,7 @@ HB_FUNC_STATIC( QUNDOSTACK_ISCLEAN )
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isClean () );
+    RBOOL( obj->isClean () );
   }
 }
 
@@ -310,8 +305,7 @@ HB_FUNC_STATIC( QUNDOSTACK_SETUNDOLIMIT )
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setUndoLimit ( par1 );
+    obj->setUndoLimit ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -325,8 +319,7 @@ HB_FUNC_STATIC( QUNDOSTACK_TEXT )
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QString str1 = obj->text ( par1 );
+    QString str1 = obj->text ( PINT(1) );
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -340,7 +333,7 @@ HB_FUNC_STATIC( QUNDOSTACK_UNDOLIMIT )
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->undoLimit () );
+    RINT( obj->undoLimit () );
   }
 }
 
@@ -409,8 +402,7 @@ HB_FUNC_STATIC( QUNDOSTACK_SETINDEX )
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setIndex ( par1 );
+    obj->setIndex ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

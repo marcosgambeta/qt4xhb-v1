@@ -72,9 +72,7 @@ QMdiArea ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QMDIAREA_NEW )
 {
-  QMdiArea * o = NULL;
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QMdiArea ( par1 );
+  QMdiArea * o = new QMdiArea ( OPQWIDGET(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -130,9 +128,8 @@ HB_FUNC_STATIC( QMDIAREA_ADDSUBWINDOW )
   QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-    QMdiSubWindow * ptr = obj->addSubWindow ( par1,  (Qt::WindowFlags) par2 );
+    QMdiSubWindow * ptr = obj->addSubWindow ( PQWIDGET(1),  (Qt::WindowFlags) par2 );
     _qt4xhb_createReturnClass ( ptr, "QMDISUBWINDOW" );
   }
 }
@@ -174,7 +171,7 @@ HB_FUNC_STATIC( QMDIAREA_DOCUMENTMODE )
   QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->documentMode () );
+    RBOOL( obj->documentMode () );
   }
 }
 
@@ -187,8 +184,7 @@ HB_FUNC_STATIC( QMDIAREA_REMOVESUBWINDOW )
   QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->removeSubWindow ( par1 );
+    obj->removeSubWindow ( PQWIDGET(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -217,8 +213,7 @@ HB_FUNC_STATIC( QMDIAREA_SETBACKGROUND )
   QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QBrush * par1 = (QBrush *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setBackground ( *par1 );
+    obj->setBackground ( *PQBRUSH(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -378,7 +373,7 @@ HB_FUNC_STATIC( QMDIAREA_TESTOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->testOption (  (QMdiArea::AreaOption) par1 ) );
+    RBOOL( obj->testOption (  (QMdiArea::AreaOption) par1 ) );
   }
 }
 

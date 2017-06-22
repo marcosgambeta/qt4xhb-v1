@@ -43,8 +43,7 @@ QDecorationDefault ()
 */
 HB_FUNC_STATIC( QDECORATIONDEFAULT_NEW )
 {
-  QDecorationDefault * o = NULL;
-  o = new QDecorationDefault ();
+  QDecorationDefault * o = new QDecorationDefault ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -73,10 +72,9 @@ HB_FUNC_STATIC( QDECORATIONDEFAULT_PAINT )
   QDecorationDefault * obj = (QDecorationDefault *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPainter * par1 = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     const QWidget * par2 = (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par4 = ISNIL(4)? (int) QDecoration::Normal : hb_parni(4);
-    hb_retl( obj->paint ( par1, par2, OPINT(3,QDecoration::All),  (QDecoration::DecorationState) par4 ) );
+    RBOOL( obj->paint ( PQPAINTER(1), par2, OPINT(3,QDecoration::All),  (QDecoration::DecorationState) par4 ) );
   }
 }
 
@@ -90,8 +88,7 @@ HB_FUNC_STATIC( QDECORATIONDEFAULT_REGION )
   if( obj )
   {
     const QWidget * par1 = (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QRect * par2 = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QRegion * ptr = new QRegion( obj->region ( par1, *par2, OPINT(3,QDecoration::All) ) );
+    QRegion * ptr = new QRegion( obj->region ( par1, *PQRECT(2), OPINT(3,QDecoration::All) ) );
     _qt4xhb_createReturnClass ( ptr, "QREGION", true );
   }
 }

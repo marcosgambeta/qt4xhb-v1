@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QLAYOUT_ACTIVATE )
   QLayout * obj = (QLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->activate () );
+    RBOOL( obj->activate () );
   }
 }
 
@@ -135,8 +135,7 @@ HB_FUNC_STATIC( QLAYOUT_ADDWIDGET )
   QLayout * obj = (QLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->addWidget ( par1 );
+    obj->addWidget ( PQWIDGET(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -178,7 +177,7 @@ HB_FUNC_STATIC( QLAYOUT_COUNT )
   QLayout * obj = (QLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 
@@ -226,8 +225,7 @@ HB_FUNC_STATIC( QLAYOUT_INDEXOF )
   QLayout * obj = (QLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retni( obj->indexOf ( par1 ) );
+    RINT( obj->indexOf ( PQWIDGET(1) ) );
   }
 }
 
@@ -240,7 +238,7 @@ HB_FUNC_STATIC( QLAYOUT_ISENABLED )
   QLayout * obj = (QLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isEnabled () );
+    RBOOL( obj->isEnabled () );
   }
 }
 
@@ -253,8 +251,7 @@ HB_FUNC_STATIC( QLAYOUT_ITEMAT )
   QLayout * obj = (QLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QLayoutItem * ptr = obj->itemAt ( par1 );
+    QLayoutItem * ptr = obj->itemAt ( PINT(1) );
     _qt4xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
   }
 }
@@ -339,8 +336,7 @@ HB_FUNC_STATIC( QLAYOUT_REMOVEWIDGET )
   QLayout * obj = (QLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->removeWidget ( par1 );
+    obj->removeWidget ( PQWIDGET(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -354,9 +350,8 @@ HB_FUNC_STATIC( QLAYOUT_SETALIGNMENT1 )
   QLayout * obj = (QLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
-    hb_retl( obj->setAlignment ( par1,  (Qt::Alignment) par2 ) );
+    RBOOL( obj->setAlignment ( PQWIDGET(1),  (Qt::Alignment) par2 ) );
   }
 }
 
@@ -384,9 +379,8 @@ HB_FUNC_STATIC( QLAYOUT_SETALIGNMENT3 )
   QLayout * obj = (QLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QLayout * par1 = (QLayout *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
-    hb_retl( obj->setAlignment ( par1,  (Qt::Alignment) par2 ) );
+    RBOOL( obj->setAlignment ( PQLAYOUT(1),  (Qt::Alignment) par2 ) );
   }
 }
 
@@ -419,11 +413,7 @@ HB_FUNC_STATIC( QLAYOUT_SETCONTENTSMARGINS1 )
   QLayout * obj = (QLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    int par3 = hb_parni(3);
-    int par4 = hb_parni(4);
-    obj->setContentsMargins ( par1, par2, par3, par4 );
+    obj->setContentsMargins ( PINT(1), PINT(2), PINT(3), PINT(4) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -481,8 +471,7 @@ HB_FUNC_STATIC( QLAYOUT_SETMENUBAR )
   QLayout * obj = (QLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setMenuBar ( par1 );
+    obj->setMenuBar ( PQWIDGET(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -511,8 +500,7 @@ HB_FUNC_STATIC( QLAYOUT_SETSPACING )
   QLayout * obj = (QLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setSpacing ( par1 );
+    obj->setSpacing ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -539,7 +527,7 @@ HB_FUNC_STATIC( QLAYOUT_SPACING )
   QLayout * obj = (QLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->spacing () );
+    RINT( obj->spacing () );
   }
 }
 
@@ -552,8 +540,7 @@ HB_FUNC_STATIC( QLAYOUT_TAKEAT )
   QLayout * obj = (QLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QLayoutItem * ptr = obj->takeAt ( par1 );
+    QLayoutItem * ptr = obj->takeAt ( PINT(1) );
     _qt4xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
   }
 }
@@ -610,7 +597,7 @@ HB_FUNC_STATIC( QLAYOUT_ISEMPTY )
   QLayout * obj = (QLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 }
 
@@ -639,8 +626,7 @@ HB_FUNC_STATIC( QLAYOUT_SETGEOMETRY )
   QLayout * obj = (QLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRect * par1 = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setGeometry ( *par1 );
+    obj->setGeometry ( *PQRECT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -653,8 +639,7 @@ QSize closestAcceptableSize ( const QWidget * widget, const QSize & size )
 HB_FUNC_STATIC( QLAYOUT_CLOSESTACCEPTABLESIZE )
 {
   const QWidget * par1 = (const QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QSize * par2 = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QSize * ptr = new QSize( QLayout::closestAcceptableSize ( par1, *par2 ) );
+  QSize * ptr = new QSize( QLayout::closestAcceptableSize ( par1, *PQSIZE(2) ) );
   _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
 }
 

@@ -54,8 +54,7 @@ QTextTableFormat ()
 */
 HB_FUNC_STATIC( QTEXTTABLEFORMAT_NEW )
 {
-  QTextTableFormat * o = NULL;
-  o = new QTextTableFormat ();
+  QTextTableFormat * o = new QTextTableFormat ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -97,8 +96,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_CELLPADDING )
   QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->cellPadding ();
-    hb_retnd( r );
+    RQREAL( obj->cellPadding () );
   }
 }
 
@@ -111,8 +109,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_CELLSPACING )
   QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->cellSpacing ();
-    hb_retnd( r );
+    RQREAL( obj->cellSpacing () );
   }
 }
 
@@ -183,7 +180,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_COLUMNS )
   QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->columns () );
+    RINT( obj->columns () );
   }
 }
 
@@ -196,7 +193,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_HEADERROWCOUNT )
   QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->headerRowCount () );
+    RINT( obj->headerRowCount () );
   }
 }
 
@@ -209,7 +206,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_ISVALID )
   QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -287,8 +284,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETHEADERROWCOUNT )
   QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setHeaderRowCount ( par1 );
+    obj->setHeaderRowCount ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
