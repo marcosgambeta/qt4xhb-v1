@@ -129,7 +129,7 @@ QScriptValue ( SpecialValue value )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW3 )
 {
-  QScriptValue * o = new QScriptValue (  (QScriptValue::SpecialValue) hb_parni(1) );
+  QScriptValue * o = new QScriptValue ( (QScriptValue::SpecialValue) hb_parni(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -191,7 +191,7 @@ QScriptValue ( const char * value )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW10 )
 {
-  QScriptValue * o = new QScriptValue (  (const char *) hb_parc(1) );
+  QScriptValue * o = new QScriptValue ( (const char *) hb_parc(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

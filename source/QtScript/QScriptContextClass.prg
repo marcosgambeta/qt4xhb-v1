@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_THROWERROR1 )
   QScriptContext * obj = (QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QScriptValue * ptr = new QScriptValue( obj->throwError (  (QScriptContext::Error) hb_parni(1), PQSTRING(2) ) );
+    QScriptValue * ptr = new QScriptValue( obj->throwError ( (QScriptContext::Error) hb_parni(1), PQSTRING(2) ) );
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
