@@ -58,8 +58,7 @@ QGLColormap ()
 */
 HB_FUNC_STATIC( QGLCOLORMAP_NEW1 )
 {
-  QGLColormap * o = NULL;
-  o = new QGLColormap ();
+  QGLColormap * o = new QGLColormap ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -69,9 +68,7 @@ QGLColormap ( const QGLColormap & map )
 */
 HB_FUNC_STATIC( QGLCOLORMAP_NEW2 )
 {
-  QGLColormap * o = NULL;
-  QGLColormap * par1 = (QGLColormap *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QGLColormap ( *par1 );
+  QGLColormap * o = new QGLColormap ( *PQGLCOLORMAP(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -119,8 +116,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_ENTRYCOLOR )
   QGLColormap * obj = (QGLColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QColor * ptr = new QColor( obj->entryColor ( par1 ) );
+    QColor * ptr = new QColor( obj->entryColor ( PINT(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }
@@ -134,8 +130,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_ENTRYRGB )
   QGLColormap * obj = (QGLColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QRgb i = obj->entryRgb ( par1 );
+    QRgb i = obj->entryRgb ( PINT(1) );
     hb_retni( i );
   }
 }
@@ -150,7 +145,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_FIND )
   if( obj )
   {
     QRgb par1 = hb_parni(1);
-    hb_retni( (int) obj->find ( par1 ) );
+    RINT( (int) obj->find ( par1 ) );
   }
 }
 
@@ -164,7 +159,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_FINDNEAREST )
   if( obj )
   {
     QRgb par1 = hb_parni(1);
-    hb_retni( (int) obj->findNearest ( par1 ) );
+    RINT( (int) obj->findNearest ( par1 ) );
   }
 }
 
@@ -177,7 +172,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_ISEMPTY )
   QGLColormap * obj = (QGLColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 }
 
@@ -191,9 +186,8 @@ HB_FUNC_STATIC( QGLCOLORMAP_SETENTRY1 )
   QGLColormap * obj = (QGLColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
     QRgb par2 = hb_parni(2);
-    obj->setEntry ( par1, par2 );
+    obj->setEntry ( PINT(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -207,9 +201,8 @@ HB_FUNC_STATIC( QGLCOLORMAP_SETENTRY2 )
   QGLColormap * obj = (QGLColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
     QColor par2 = ISOBJECT(2)? *(QColor *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) ) : QColor(hb_parc(2));
-    obj->setEntry ( par1, par2 );
+    obj->setEntry ( PINT(1), par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -238,7 +231,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_SIZE )
   QGLColormap * obj = (QGLColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->size () );
+    RINT( obj->size () );
   }
 }
 

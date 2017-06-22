@@ -104,8 +104,7 @@ QGLFunctions ()
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_NEW1 )
 {
-  QGLFunctions * o = NULL;
-  o = new QGLFunctions ();
+  QGLFunctions * o = new QGLFunctions ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -115,9 +114,8 @@ QGLFunctions ( const QGLContext * context )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_NEW2 )
 {
-  QGLFunctions * o = NULL;
   const QGLContext * par1 = (const QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QGLFunctions ( par1 );
+  QGLFunctions * o = new QGLFunctions ( par1 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -198,8 +196,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_GLBINDATTRIBLOCATION )
   {
     GLuint par1 = hb_parni(1);
     GLuint par2 = hb_parni(2);
-    const char * par3 = hb_parc(3);
-    obj->glBindAttribLocation ( par1, par2,  (const char *) par3 );
+    obj->glBindAttribLocation ( par1, par2,  (const char *) hb_parc(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -601,8 +598,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_GLGETATTRIBLOCATION )
   if( obj )
   {
     GLuint par1 = hb_parni(1);
-    const char * par2 = hb_parc(2);
-    hb_retni( obj->glGetAttribLocation ( par1,  (const char *) par2 ) );
+    RINT( obj->glGetAttribLocation ( par1,  (const char *) hb_parc(2) ) );
   }
 }
 
@@ -625,8 +621,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_GLGETUNIFORMLOCATION )
   if( obj )
   {
     GLuint par1 = hb_parni(1);
-    const char * par2 = hb_parc(2);
-    hb_retni( obj->glGetUniformLocation ( par1,  (const char *) par2 ) );
+    RINT( obj->glGetUniformLocation ( par1,  (const char *) hb_parc(2) ) );
   }
 }
 
@@ -1109,7 +1104,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_HASOPENGLFEATURE )
   if( obj )
   {
     int par1 = hb_parni(1);
-    hb_retl( obj->hasOpenGLFeature (  (QGLFunctions::OpenGLFeature) par1 ) );
+    RBOOL( obj->hasOpenGLFeature (  (QGLFunctions::OpenGLFeature) par1 ) );
   }
 }
 

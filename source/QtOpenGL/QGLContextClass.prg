@@ -77,9 +77,7 @@ QGLContext ( const QGLFormat & format )
 */
 HB_FUNC_STATIC( QGLCONTEXT_NEW )
 {
-  QGLContext * o = NULL;
-  QGLFormat * par1 = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QGLContext ( *par1 );
+  QGLContext * o = new QGLContext ( *PQGLFORMAT(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -153,10 +151,9 @@ HB_FUNC_STATIC( QGLCONTEXT_BINDTEXTURE4 )
   QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPixmap * par1 = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     GLenum par2 = ISNIL(2)? GL_TEXTURE_2D : hb_parni(2);
     GLint par3 = ISNIL(3)? GL_RGBA : hb_parni(3);
-    hb_retni( (GLuint) obj->bindTexture ( *par1, par2, par3 ) );
+    hb_retni( (GLuint) obj->bindTexture ( *PQPIXMAP(1), par2, par3 ) );
   }
 }
 
@@ -169,11 +166,10 @@ HB_FUNC_STATIC( QGLCONTEXT_BINDTEXTURE5 )
   QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPixmap * par1 = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     GLenum par2 = hb_parni(2);
     GLint par3 = hb_parni(3);
     int par4 = hb_parni(4);
-    hb_retni( (GLuint) obj->bindTexture ( *par1, par2, par3,  (QGLContext::BindOptions) par4 ) );
+    hb_retni( (GLuint) obj->bindTexture ( *PQPIXMAP(1), par2, par3,  (QGLContext::BindOptions) par4 ) );
   }
 }
 
@@ -217,7 +213,7 @@ HB_FUNC_STATIC( QGLCONTEXT_CREATE )
   if( obj )
   {
     QGLContext * par1 = ISNIL(1)? 0 : (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->create ( par1 ) );
+    RBOOL( obj->create ( par1 ) );
   }
 }
 
@@ -273,10 +269,9 @@ HB_FUNC_STATIC( QGLCONTEXT_DRAWTEXTURE1 )
   QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRectF * par1 = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     GLuint par2 = hb_parni(2);
     GLenum par3 = ISNIL(3)? GL_TEXTURE_2D : hb_parni(3);
-    obj->drawTexture ( *par1, par2, par3 );
+    obj->drawTexture ( *PQRECTF(1), par2, par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -290,10 +285,9 @@ HB_FUNC_STATIC( QGLCONTEXT_DRAWTEXTURE2 )
   QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPointF * par1 = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     GLuint par2 = hb_parni(2);
     GLenum par3 = ISNIL(3)? GL_TEXTURE_2D : hb_parni(3);
-    obj->drawTexture ( *par1, par2, par3 );
+    obj->drawTexture ( *PQPOINTF(1), par2, par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -350,7 +344,7 @@ HB_FUNC_STATIC( QGLCONTEXT_ISSHARING )
   QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isSharing () );
+    RBOOL( obj->isSharing () );
   }
 }
 
@@ -363,7 +357,7 @@ HB_FUNC_STATIC( QGLCONTEXT_ISVALID )
   QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -461,7 +455,7 @@ HB_FUNC_STATIC( QGLCONTEXT_ARESHARING )
 {
   QGLContext * par1 = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QGLContext * par2 = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  hb_retl( QGLContext::areSharing ( par1, par2 ) );
+  RBOOL( QGLContext::areSharing ( par1, par2 ) );
 }
 
 
@@ -480,8 +474,7 @@ void setTextureCacheLimit ( int size )
 */
 HB_FUNC_STATIC( QGLCONTEXT_SETTEXTURECACHELIMIT )
 {
-  int par1 = hb_parni(1);
-  QGLContext::setTextureCacheLimit ( par1 );
+  QGLContext::setTextureCacheLimit ( PINT(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -491,7 +484,7 @@ int textureCacheLimit ()
 */
 HB_FUNC_STATIC( QGLCONTEXT_TEXTURECACHELIMIT )
 {
-  hb_retni( QGLContext::textureCacheLimit () );
+  RINT( QGLContext::textureCacheLimit () );
 }
 
 

@@ -48,8 +48,7 @@ QGLFramebufferObjectFormat ()
 */
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_NEW1 )
 {
-  QGLFramebufferObjectFormat * o = NULL;
-  o = new QGLFramebufferObjectFormat ();
+  QGLFramebufferObjectFormat * o = new QGLFramebufferObjectFormat ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -59,9 +58,7 @@ QGLFramebufferObjectFormat ( const QGLFramebufferObjectFormat & other )
 */
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_NEW2 )
 {
-  QGLFramebufferObjectFormat * o = NULL;
-  QGLFramebufferObjectFormat * par1 = (QGLFramebufferObjectFormat *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QGLFramebufferObjectFormat ( *par1 );
+  QGLFramebufferObjectFormat * o = new QGLFramebufferObjectFormat ( *PQGLFRAMEBUFFEROBJECTFORMAT(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -136,7 +133,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_SAMPLES )
   QGLFramebufferObjectFormat * obj = (QGLFramebufferObjectFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->samples () );
+    RINT( obj->samples () );
   }
 }
 
@@ -179,8 +176,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_SETSAMPLES )
   QGLFramebufferObjectFormat * obj = (QGLFramebufferObjectFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setSamples ( par1 );
+    obj->setSamples ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

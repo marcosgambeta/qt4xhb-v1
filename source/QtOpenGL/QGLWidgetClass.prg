@@ -81,11 +81,9 @@ QGLWidget ( QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowF
 */
 HB_FUNC_STATIC( QGLWIDGET_NEW1 )
 {
-  QGLWidget * o = NULL;
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   const QGLWidget * par2 = ISNIL(2)? 0 : (const QGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par3 = ISNIL(3)? (int) 0 : hb_parni(3);
-  o = new QGLWidget ( par1, par2,  (Qt::WindowFlags) par3 );
+  QGLWidget * o = new QGLWidget ( OPQWIDGET(1,0), par2,  (Qt::WindowFlags) par3 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -95,12 +93,10 @@ QGLWidget ( QGLContext * context, QWidget * parent = 0, const QGLWidget * shareW
 */
 HB_FUNC_STATIC( QGLWIDGET_NEW2 )
 {
-  QGLWidget * o = NULL;
   QGLContext * par1 = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
   const QGLWidget * par3 = ISNIL(3)? 0 : (const QGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par4 = ISNIL(4)? (int) 0 : hb_parni(4);
-  o = new QGLWidget ( par1, par2, par3,  (Qt::WindowFlags) par4 );
+  QGLWidget * o = new QGLWidget ( par1, OPQWIDGET(2,0), par3,  (Qt::WindowFlags) par4 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -110,12 +106,10 @@ QGLWidget ( const QGLFormat & format, QWidget * parent = 0, const QGLWidget * sh
 */
 HB_FUNC_STATIC( QGLWIDGET_NEW3 )
 {
-  QGLWidget * o = NULL;
   QGLFormat * par1 = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
   const QGLWidget * par3 = ISNIL(3)? 0 : (const QGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par4 = ISNIL(4)? (int) 0 : hb_parni(4);
-  o = new QGLWidget ( *par1, par2, par3,  (Qt::WindowFlags) par4 );
+  QGLWidget * o = new QGLWidget ( *par1, OPQWIDGET(2,0), par3,  (Qt::WindowFlags) par4 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -185,10 +179,9 @@ HB_FUNC_STATIC( QGLWIDGET_BINDTEXTURE2 )
   QGLWidget * obj = (QGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPixmap * par1 = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     GLenum par2 = ISNIL(2)? GL_TEXTURE_2D : hb_parni(2);
     GLint par3 = ISNIL(3)? GL_RGBA : hb_parni(3);
-    hb_retni( (GLuint) obj->bindTexture ( *par1, par2, par3 ) );
+    hb_retni( (GLuint) obj->bindTexture ( *PQPIXMAP(1), par2, par3 ) );
   }
 }
 
@@ -218,11 +211,10 @@ HB_FUNC_STATIC( QGLWIDGET_BINDTEXTURE4 )
   QGLWidget * obj = (QGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPixmap * par1 = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     GLenum par2 = hb_parni(2);
     GLint par3 = hb_parni(3);
     int par4 = hb_parni(4);
-    hb_retni( (GLuint) obj->bindTexture ( *par1, par2, par3,  (QGLContext::BindOptions) par4 ) );
+    hb_retni( (GLuint) obj->bindTexture ( *PQPIXMAP(1), par2, par3,  (QGLContext::BindOptions) par4 ) );
   }
 }
 
@@ -335,7 +327,7 @@ HB_FUNC_STATIC( QGLWIDGET_DOUBLEBUFFER )
   QGLWidget * obj = (QGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->doubleBuffer () );
+    RBOOL( obj->doubleBuffer () );
   }
 }
 
@@ -348,10 +340,9 @@ HB_FUNC_STATIC( QGLWIDGET_DRAWTEXTURE1 )
   QGLWidget * obj = (QGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRectF * par1 = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     GLuint par2 = hb_parni(2);
     GLenum par3 = ISNIL(3)? GL_TEXTURE_2D : hb_parni(3);
-    obj->drawTexture ( *par1, par2, par3 );
+    obj->drawTexture ( *PQRECTF(1), par2, par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -365,10 +356,9 @@ HB_FUNC_STATIC( QGLWIDGET_DRAWTEXTURE2 )
   QGLWidget * obj = (QGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPointF * par1 = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     GLuint par2 = hb_parni(2);
     GLenum par3 = ISNIL(3)? GL_TEXTURE_2D : hb_parni(3);
-    obj->drawTexture ( *par1, par2, par3 );
+    obj->drawTexture ( *PQPOINTF(1), par2, par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -425,7 +415,7 @@ HB_FUNC_STATIC( QGLWIDGET_ISSHARING )
   QGLWidget * obj = (QGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isSharing () );
+    RBOOL( obj->isSharing () );
   }
 }
 
@@ -438,7 +428,7 @@ HB_FUNC_STATIC( QGLWIDGET_ISVALID )
   QGLWidget * obj = (QGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -537,10 +527,8 @@ HB_FUNC_STATIC( QGLWIDGET_RENDERTEXT1 )
   QGLWidget * obj = (QGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
     QFont par4 = ISNIL(4)? QFont() : *(QFont *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->renderText ( par1, par2, PQSTRING(3), par4, OPINT(5,2000) );
+    obj->renderText ( PINT(1), PINT(2), PQSTRING(3), par4, OPINT(5,2000) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

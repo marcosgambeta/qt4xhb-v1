@@ -66,11 +66,9 @@ QGLPixelBuffer ( const QSize & size, const QGLFormat & format = QGLFormat::defau
 */
 HB_FUNC_STATIC( QGLPIXELBUFFER_NEW1 )
 {
-  QGLPixelBuffer * o = NULL;
-  QSize * par1 = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QGLFormat par2 = ISNIL(2)? QGLFormat::defaultFormat() : *(QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
   QGLWidget * par3 = ISNIL(3)? 0 : (QGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QGLPixelBuffer ( *par1, par2, par3 );
+  QGLPixelBuffer * o = new QGLPixelBuffer ( *PQSIZE(1), par2, par3 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -80,12 +78,9 @@ QGLPixelBuffer ( int width, int height, const QGLFormat & format = QGLFormat::de
 */
 HB_FUNC_STATIC( QGLPIXELBUFFER_NEW2 )
 {
-  QGLPixelBuffer * o = NULL;
-  int par1 = hb_parni(1);
-  int par2 = hb_parni(2);
   QGLFormat par3 = ISNIL(3)? QGLFormat::defaultFormat() : *(QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
   QGLWidget * par4 = ISNIL(4)? 0 : (QGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QGLPixelBuffer ( par1, par2, par3, par4 );
+  QGLPixelBuffer * o = new QGLPixelBuffer ( PINT(1), PINT(2), par3, par4 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -148,9 +143,8 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_BINDTEXTURE2 )
   QGLPixelBuffer * obj = (QGLPixelBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPixmap * par1 = (QPixmap *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     GLenum par2 = ISNIL(2)? GL_TEXTURE_2D : hb_parni(2);
-    hb_retni( (GLint) obj->bindTexture ( *par1, par2 ) );
+    hb_retni( (GLint) obj->bindTexture ( *PQPIXMAP(1), par2 ) );
   }
 }
 
@@ -185,7 +179,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_BINDTODYNAMICTEXTURE )
   if( obj )
   {
     GLuint par1 = hb_parni(1);
-    hb_retl( obj->bindToDynamicTexture ( par1 ) );
+    RBOOL( obj->bindToDynamicTexture ( par1 ) );
   }
 }
 
@@ -213,7 +207,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_DONECURRENT )
   QGLPixelBuffer * obj = (QGLPixelBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->doneCurrent () );
+    RBOOL( obj->doneCurrent () );
   }
 }
 
@@ -226,10 +220,9 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_DRAWTEXTURE1 )
   QGLPixelBuffer * obj = (QGLPixelBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRectF * par1 = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     GLuint par2 = hb_parni(2);
     GLenum par3 = ISNIL(3)? GL_TEXTURE_2D : hb_parni(3);
-    obj->drawTexture ( *par1, par2, par3 );
+    obj->drawTexture ( *PQRECTF(1), par2, par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -243,10 +236,9 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_DRAWTEXTURE2 )
   QGLPixelBuffer * obj = (QGLPixelBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPointF * par1 = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     GLuint par2 = hb_parni(2);
     GLenum par3 = ISNIL(3)? GL_TEXTURE_2D : hb_parni(3);
-    obj->drawTexture ( *par1, par2, par3 );
+    obj->drawTexture ( *PQPOINTF(1), par2, par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -295,7 +287,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_ISVALID )
   QGLPixelBuffer * obj = (QGLPixelBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -308,7 +300,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_MAKECURRENT )
   QGLPixelBuffer * obj = (QGLPixelBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->makeCurrent () );
+    RBOOL( obj->makeCurrent () );
   }
 }
 
@@ -390,7 +382,7 @@ bool hasOpenGLPbuffers ()
 */
 HB_FUNC_STATIC( QGLPIXELBUFFER_HASOPENGLPBUFFERS )
 {
-  hb_retl( QGLPixelBuffer::hasOpenGLPbuffers () );
+  RBOOL( QGLPixelBuffer::hasOpenGLPbuffers () );
 }
 
 

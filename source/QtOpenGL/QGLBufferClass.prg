@@ -65,8 +65,7 @@ QGLBuffer ()
 */
 HB_FUNC_STATIC( QGLBUFFER_NEW1 )
 {
-  QGLBuffer * o = NULL;
-  o = new QGLBuffer ();
+  QGLBuffer * o = new QGLBuffer ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -76,9 +75,7 @@ QGLBuffer ( QGLBuffer::Type type )
 */
 HB_FUNC_STATIC( QGLBUFFER_NEW2 )
 {
-  QGLBuffer * o = NULL;
-  int par1 = hb_parni(1);
-  o = new QGLBuffer (  (QGLBuffer::Type) par1 );
+  QGLBuffer * o = new QGLBuffer (  (QGLBuffer::Type) hb_parni(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -88,9 +85,7 @@ QGLBuffer ( const QGLBuffer & other )
 */
 HB_FUNC_STATIC( QGLBUFFER_NEW3 )
 {
-  QGLBuffer * o = NULL;
-  QGLBuffer * par1 = (QGLBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QGLBuffer ( *par1 );
+  QGLBuffer * o = new QGLBuffer ( *PQGLBUFFER(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -159,8 +154,7 @@ HB_FUNC_STATIC( QGLBUFFER_ALLOCATE2 )
   QGLBuffer * obj = (QGLBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->allocate ( par1 );
+    obj->allocate ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -189,7 +183,7 @@ HB_FUNC_STATIC( QGLBUFFER_BIND )
   QGLBuffer * obj = (QGLBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->bind () );
+    RBOOL( obj->bind () );
   }
 }
 
@@ -215,7 +209,7 @@ HB_FUNC_STATIC( QGLBUFFER_CREATE )
   QGLBuffer * obj = (QGLBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->create () );
+    RBOOL( obj->create () );
   }
 }
 
@@ -242,7 +236,7 @@ HB_FUNC_STATIC( QGLBUFFER_ISCREATED )
   QGLBuffer * obj = (QGLBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isCreated () );
+    RBOOL( obj->isCreated () );
   }
 }
 
@@ -270,10 +264,8 @@ HB_FUNC_STATIC( QGLBUFFER_READ )
   QGLBuffer * obj = (QGLBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
     void * par2 = (void *) hb_parptr(2);
-    int par3 = hb_parni(3);
-    hb_retl( obj->read ( par1, par2, par3 ) );
+    RBOOL( obj->read ( PINT(1), par2, PINT(3) ) );
   }
 }
 
@@ -315,7 +307,7 @@ HB_FUNC_STATIC( QGLBUFFER_SIZE )
   QGLBuffer * obj = (QGLBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->size () );
+    RINT( obj->size () );
   }
 }
 
@@ -341,7 +333,7 @@ HB_FUNC_STATIC( QGLBUFFER_UNMAP )
   QGLBuffer * obj = (QGLBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->unmap () );
+    RBOOL( obj->unmap () );
   }
 }
 
