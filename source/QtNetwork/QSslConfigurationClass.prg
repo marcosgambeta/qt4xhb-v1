@@ -75,8 +75,7 @@ QSslConfiguration ()
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_NEW1 )
 {
-  QSslConfiguration * o = NULL;
-  o = new QSslConfiguration ();
+  QSslConfiguration * o = new QSslConfiguration ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -86,9 +85,7 @@ QSslConfiguration ( const QSslConfiguration & other )
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_NEW2 )
 {
-  QSslConfiguration * o = NULL;
-  QSslConfiguration * par1 = (QSslConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSslConfiguration ( *par1 );
+  QSslConfiguration * o = new QSslConfiguration ( *PQSSLCONFIGURATION(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -232,7 +229,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_ISNULL )
   QSslConfiguration * obj = (QSslConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -321,7 +318,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_PEERVERIFYDEPTH )
   QSslConfiguration * obj = (QSslConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->peerVerifyDepth () );
+    RINT( obj->peerVerifyDepth () );
   }
 }
 
@@ -447,8 +444,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SETPEERVERIFYDEPTH )
   QSslConfiguration * obj = (QSslConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setPeerVerifyDepth ( par1 );
+    obj->setPeerVerifyDepth ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

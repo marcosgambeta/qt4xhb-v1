@@ -57,8 +57,7 @@ QNetworkAddressEntry ()
 */
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NEW1 )
 {
-  QNetworkAddressEntry * o = NULL;
-  o = new QNetworkAddressEntry ();
+  QNetworkAddressEntry * o = new QNetworkAddressEntry ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -68,9 +67,7 @@ QNetworkAddressEntry ( const QNetworkAddressEntry & other )
 */
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NEW2 )
 {
-  QNetworkAddressEntry * o = NULL;
-  QNetworkAddressEntry * par1 = (QNetworkAddressEntry *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QNetworkAddressEntry ( *par1 );
+  QNetworkAddressEntry * o = new QNetworkAddressEntry ( *PQNETWORKADDRESSENTRY(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -160,7 +157,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_PREFIXLENGTH )
   QNetworkAddressEntry * obj = (QNetworkAddressEntry *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->prefixLength () );
+    RINT( (int) obj->prefixLength () );
   }
 }
 
@@ -218,8 +215,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETPREFIXLENGTH )
   QNetworkAddressEntry * obj = (QNetworkAddressEntry *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setPrefixLength ( par1 );
+    obj->setPrefixLength ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

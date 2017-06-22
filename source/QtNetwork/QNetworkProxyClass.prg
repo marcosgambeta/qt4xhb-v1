@@ -66,8 +66,7 @@ QNetworkProxy ()
 */
 HB_FUNC_STATIC( QNETWORKPROXY_NEW1 )
 {
-  QNetworkProxy * o = NULL;
-  o = new QNetworkProxy ();
+  QNetworkProxy * o = new QNetworkProxy ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -77,10 +76,7 @@ QNetworkProxy ( ProxyType type, const QString & hostName = QString(), quint16 po
 */
 HB_FUNC_STATIC( QNETWORKPROXY_NEW2 )
 {
-  QNetworkProxy * o = NULL;
-  int par1 = hb_parni(1);
-  quint16 par3 = ISNIL(3)? 0 : hb_parni(3);
-  o = new QNetworkProxy (  (QNetworkProxy::ProxyType) par1, OPQSTRING(2,QString()), par3, OPQSTRING(4,QString()), OPQSTRING(5,QString()) );
+  QNetworkProxy * o = new QNetworkProxy (  (QNetworkProxy::ProxyType) hb_parni(1), OPQSTRING(2,QString()), OPQUINT16(3,0), OPQSTRING(4,QString()), OPQSTRING(5,QString()) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -90,9 +86,7 @@ QNetworkProxy ( const QNetworkProxy & other )
 */
 HB_FUNC_STATIC( QNETWORKPROXY_NEW3 )
 {
-  QNetworkProxy * o = NULL;
-  QNetworkProxy * par1 = (QNetworkProxy *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QNetworkProxy ( *par1 );
+  QNetworkProxy * o = new QNetworkProxy ( *PQNETWORKPROXY(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -172,7 +166,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_ISCACHINGPROXY )
   QNetworkProxy * obj = (QNetworkProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isCachingProxy () );
+    RBOOL( obj->isCachingProxy () );
   }
 }
 
@@ -185,7 +179,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_ISTRANSPARENTPROXY )
   QNetworkProxy * obj = (QNetworkProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isTransparentProxy () );
+    RBOOL( obj->isTransparentProxy () );
   }
 }
 
@@ -212,8 +206,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_PORT )
   QNetworkProxy * obj = (QNetworkProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    quint16 i = obj->port ();
-    hb_retni( i );
+    RQUINT16( obj->port () );
   }
 }
 

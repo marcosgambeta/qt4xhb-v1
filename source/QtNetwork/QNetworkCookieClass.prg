@@ -70,10 +70,9 @@ QNetworkCookie ( const QByteArray & name = QByteArray(), const QByteArray & valu
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_NEW1 )
 {
-  QNetworkCookie * o = NULL;
   QByteArray par1 = ISNIL(1)? QByteArray() : *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QNetworkCookie ( par1, par2 );
+  QNetworkCookie * o = new QNetworkCookie ( par1, par2 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -83,9 +82,7 @@ QNetworkCookie ( const QNetworkCookie & other )
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_NEW2 )
 {
-  QNetworkCookie * o = NULL;
-  QNetworkCookie * par1 = (QNetworkCookie *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QNetworkCookie ( *par1 );
+  QNetworkCookie * o = new QNetworkCookie ( *PQNETWORKCOOKIE(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -161,7 +158,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_ISHTTPONLY )
   QNetworkCookie * obj = (QNetworkCookie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isHttpOnly () );
+    RBOOL( obj->isHttpOnly () );
   }
 }
 
@@ -174,7 +171,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_ISSECURE )
   QNetworkCookie * obj = (QNetworkCookie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isSecure () );
+    RBOOL( obj->isSecure () );
   }
 }
 
@@ -187,7 +184,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_ISSESSIONCOOKIE )
   QNetworkCookie * obj = (QNetworkCookie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isSessionCookie () );
+    RBOOL( obj->isSessionCookie () );
   }
 }
 
@@ -242,8 +239,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_SETEXPIRATIONDATE )
   QNetworkCookie * obj = (QNetworkCookie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDateTime * par1 = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setExpirationDate ( *par1 );
+    obj->setExpirationDate ( *PQDATETIME(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -271,8 +267,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_SETNAME )
   QNetworkCookie * obj = (QNetworkCookie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setName ( *par1 );
+    obj->setName ( *PQBYTEARRAY(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -314,8 +309,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_SETVALUE )
   QNetworkCookie * obj = (QNetworkCookie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setValue ( *par1 );
+    obj->setValue ( *PQBYTEARRAY(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -356,8 +350,7 @@ QList<QNetworkCookie> parseCookies ( const QByteArray & cookieString )
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_PARSECOOKIES )
 {
-  QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QList<QNetworkCookie> list = QNetworkCookie::parseCookies ( *par1 );
+  QList<QNetworkCookie> list = QNetworkCookie::parseCookies ( *PQBYTEARRAY(1) );
   PHB_DYNS pDynSym;
   #ifdef __XHARBOUR__
   pDynSym = hb_dynsymFind( "QNETWORKCOOKIE" );

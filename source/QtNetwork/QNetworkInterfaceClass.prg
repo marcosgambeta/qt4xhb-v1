@@ -62,8 +62,7 @@ QNetworkInterface ()
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_NEW1 )
 {
-  QNetworkInterface * o = NULL;
-  o = new QNetworkInterface ();
+  QNetworkInterface * o = new QNetworkInterface ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -73,9 +72,7 @@ QNetworkInterface ( const QNetworkInterface & other )
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_NEW2 )
 {
-  QNetworkInterface * o = NULL;
-  QNetworkInterface * par1 = (QNetworkInterface *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QNetworkInterface ( *par1 );
+  QNetworkInterface * o = new QNetworkInterface ( *PQNETWORKINTERFACE(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -212,7 +209,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_INDEX )
   QNetworkInterface * obj = (QNetworkInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->index () );
+    RINT( obj->index () );
   }
 }
 
@@ -225,7 +222,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ISVALID )
   QNetworkInterface * obj = (QNetworkInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -338,8 +335,7 @@ QNetworkInterface interfaceFromIndex ( int index )
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_INTERFACEFROMINDEX )
 {
-  int par1 = hb_parni(1);
-  QNetworkInterface * ptr = new QNetworkInterface( QNetworkInterface::interfaceFromIndex ( par1 ) );
+  QNetworkInterface * ptr = new QNetworkInterface( QNetworkInterface::interfaceFromIndex ( PINT(1) ) );
   _qt4xhb_createReturnClass ( ptr, "QNETWORKINTERFACE", true );
 }
 

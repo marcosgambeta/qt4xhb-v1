@@ -74,10 +74,8 @@ QSslCertificate ( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_NEW1 )
 {
-  QSslCertificate * o = NULL;
-  QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = ISNIL(2)? (int) QSsl::Pem : hb_parni(2);
-  o = new QSslCertificate ( par1,  (QSsl::EncodingFormat) par2 );
+  QSslCertificate * o = new QSslCertificate ( PQIODEVICE(1),  (QSsl::EncodingFormat) par2 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -87,10 +85,9 @@ QSslCertificate ( const QByteArray & data = QByteArray(), QSsl::EncodingFormat f
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_NEW2 )
 {
-  QSslCertificate * o = NULL;
   QByteArray par1 = ISNIL(1)? QByteArray() : *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = ISNIL(2)? (int) QSsl::Pem : hb_parni(2);
-  o = new QSslCertificate ( par1,  (QSsl::EncodingFormat) par2 );
+  QSslCertificate * o = new QSslCertificate ( par1,  (QSsl::EncodingFormat) par2 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -100,9 +97,7 @@ QSslCertificate ( const QSslCertificate & other )
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_NEW3 )
 {
-  QSslCertificate * o = NULL;
-  QSslCertificate * par1 = (QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSslCertificate ( *par1 );
+  QSslCertificate * o = new QSslCertificate ( *PQSSLCERTIFICATE(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -214,7 +209,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISNULL )
   QSslCertificate * obj = (QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -227,7 +222,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISVALID )
   QSslCertificate * obj = (QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -255,8 +250,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISSUERINFO2 )
   QSslCertificate * obj = (QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString str1 = obj->issuerInfo ( *par1 );
+    QString str1 = obj->issuerInfo ( *PQBYTEARRAY(1) );
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -313,8 +307,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_SUBJECTINFO2 )
   QSslCertificate * obj = (QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString str1 = obj->subjectInfo ( *par1 );
+    QString str1 = obj->subjectInfo ( *PQBYTEARRAY(1) );
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -368,9 +361,8 @@ QList<QSslCertificate> fromData ( const QByteArray & data, QSsl::EncodingFormat 
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_FROMDATA )
 {
-  QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = ISNIL(2)? (int) QSsl::Pem : hb_parni(2);
-  QList<QSslCertificate> list = QSslCertificate::fromData ( *par1,  (QSsl::EncodingFormat) par2 );
+  QList<QSslCertificate> list = QSslCertificate::fromData ( *PQBYTEARRAY(1),  (QSsl::EncodingFormat) par2 );
   PHB_DYNS pDynSym;
   #ifdef __XHARBOUR__
   pDynSym = hb_dynsymFind( "QSSLCERTIFICATE" );
@@ -414,9 +406,8 @@ QList<QSslCertificate> fromDevice ( QIODevice * device, QSsl::EncodingFormat for
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_FROMDEVICE )
 {
-  QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = ISNIL(2)? (int) QSsl::Pem : hb_parni(2);
-  QList<QSslCertificate> list = QSslCertificate::fromDevice ( par1,  (QSsl::EncodingFormat) par2 );
+  QList<QSslCertificate> list = QSslCertificate::fromDevice ( PQIODEVICE(1),  (QSsl::EncodingFormat) par2 );
   PHB_DYNS pDynSym;
   #ifdef __XHARBOUR__
   pDynSym = hb_dynsymFind( "QSSLCERTIFICATE" );

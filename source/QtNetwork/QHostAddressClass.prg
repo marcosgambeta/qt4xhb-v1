@@ -67,8 +67,7 @@ QHostAddress ()
 */
 HB_FUNC_STATIC( QHOSTADDRESS_NEW1 )
 {
-  QHostAddress * o = NULL;
-  o = new QHostAddress ();
+  QHostAddress * o = new QHostAddress ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -78,8 +77,7 @@ QHostAddress ( quint32 ip4Addr )
 */
 HB_FUNC_STATIC( QHOSTADDRESS_NEW2 )
 {
-  QHostAddress * o = NULL;
-  o = new QHostAddress ( PQUINT32(1) );
+  QHostAddress * o = new QHostAddress ( PQUINT32(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -92,8 +90,7 @@ QHostAddress ( const QString & address )
 */
 HB_FUNC_STATIC( QHOSTADDRESS_NEW6 )
 {
-  QHostAddress * o = NULL;
-  o = new QHostAddress ( PQSTRING(1) );
+  QHostAddress * o = new QHostAddress ( PQSTRING(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -103,9 +100,7 @@ QHostAddress ( const QHostAddress & address )
 */
 HB_FUNC_STATIC( QHOSTADDRESS_NEW7 )
 {
-  QHostAddress * o = NULL;
-  QHostAddress * par1 = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QHostAddress ( *par1 );
+  QHostAddress * o = new QHostAddress ( *PQHOSTADDRESS(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -115,9 +110,7 @@ QHostAddress ( SpecialAddress address )
 */
 HB_FUNC_STATIC( QHOSTADDRESS_NEW8 )
 {
-  QHostAddress * o = NULL;
-  int par1 = hb_parni(1);
-  o = new QHostAddress (  (QHostAddress::SpecialAddress) par1 );
+  QHostAddress * o = new QHostAddress (  (QHostAddress::SpecialAddress) hb_parni(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -199,7 +192,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_ISINSUBNET1 )
   {
     QHostAddress * par1 = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
-    hb_retl( obj->isInSubnet ( *par1, par2 ) );
+    RBOOL( obj->isInSubnet ( *par1, par2 ) );
   }
 }
 
@@ -229,7 +222,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_ISNULL )
   QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -284,7 +277,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_SETADDRESS2 )
   if( obj )
   {
     quint8 * par1 = (quint8 *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setAddress ( par1 );
+    obj->setAddress ( par1 ); // TODO: par1 deve ser uma array
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -299,7 +292,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_SETADDRESS4 )
   QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->setAddress ( PQSTRING(1) ) );
+    RBOOL( obj->setAddress ( PQSTRING(1) ) );
   }
 }
 
@@ -360,8 +353,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_TOIPV4ADDRESS )
   QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    quint32 i = obj->toIPv4Address ();
-    hb_retni( i );
+    RQUINT32( obj->toIPv4Address () );
   }
 }
 

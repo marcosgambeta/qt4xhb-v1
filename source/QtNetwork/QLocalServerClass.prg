@@ -55,9 +55,7 @@ QLocalServer ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QLOCALSERVER_NEW )
 {
-  QLocalServer * o = NULL;
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QLocalServer ( par1 );
+  QLocalServer * o = new QLocalServer ( OPQOBJECT(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -128,7 +126,7 @@ HB_FUNC_STATIC( QLOCALSERVER_HASPENDINGCONNECTIONS )
   QLocalServer * obj = (QLocalServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasPendingConnections () );
+    RBOOL( obj->hasPendingConnections () );
   }
 }
 
@@ -141,7 +139,7 @@ HB_FUNC_STATIC( QLOCALSERVER_ISLISTENING )
   QLocalServer * obj = (QLocalServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isListening () );
+    RBOOL( obj->isListening () );
   }
 }
 
@@ -154,7 +152,7 @@ HB_FUNC_STATIC( QLOCALSERVER_LISTEN )
   QLocalServer * obj = (QLocalServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->listen ( PQSTRING(1) ) );
+    RBOOL( obj->listen ( PQSTRING(1) ) );
   }
 }
 
@@ -167,7 +165,7 @@ HB_FUNC_STATIC( QLOCALSERVER_MAXPENDINGCONNECTIONS )
   QLocalServer * obj = (QLocalServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->maxPendingConnections () );
+    RINT( obj->maxPendingConnections () );
   }
 }
 
@@ -221,8 +219,7 @@ HB_FUNC_STATIC( QLOCALSERVER_SETMAXPENDINGCONNECTIONS )
   QLocalServer * obj = (QLocalServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setMaxPendingConnections ( par1 );
+    obj->setMaxPendingConnections ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -237,7 +234,7 @@ HB_FUNC_STATIC( QLOCALSERVER_WAITFORNEWCONNECTION )
   if( obj )
   {
     bool par2;
-    hb_retl( obj->waitForNewConnection ( OPINT(1,0), &par2 ) );
+    RBOOL( obj->waitForNewConnection ( OPINT(1,0), &par2 ) );
     hb_storl( par2, 2 );
   }
 }
@@ -249,7 +246,7 @@ bool removeServer ( const QString & name )
 */
 HB_FUNC_STATIC( QLOCALSERVER_REMOVESERVER )
 {
-  hb_retl( QLocalServer::removeServer ( PQSTRING(1) ) );
+  RBOOL( QLocalServer::removeServer ( PQSTRING(1) ) );
 }
 
 

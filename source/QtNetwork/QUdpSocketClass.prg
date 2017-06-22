@@ -49,9 +49,7 @@ QUdpSocket ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QUDPSOCKET_NEW )
 {
-  QUdpSocket * o = NULL;
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QUdpSocket ( par1 );
+  QUdpSocket * o = new QUdpSocket ( OPQOBJECT(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -81,7 +79,7 @@ HB_FUNC_STATIC( QUDPSOCKET_BIND1 )
   if( obj )
   {
     QHostAddress * par1 = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->bind ( *par1, PQUINT16(2) ) );
+    RBOOL( obj->bind ( *par1, PQUINT16(2) ) );
   }
 }
 
@@ -95,8 +93,7 @@ HB_FUNC_STATIC( QUDPSOCKET_BIND2 )
   if( obj )
   {
     QHostAddress * par1 = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par3 = hb_parni(3);
-    hb_retl( obj->bind ( *par1, PQUINT16(2),  (QUdpSocket::BindMode) par3 ) );
+    RBOOL( obj->bind ( *par1, PQUINT16(2),  (QUdpSocket::BindMode) hb_parni(3) ) );
   }
 }
 
@@ -109,8 +106,7 @@ HB_FUNC_STATIC( QUDPSOCKET_BIND3 )
   QUdpSocket * obj = (QUdpSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    quint16 par1 = ISNIL(1)? 0 : hb_parni(1);
-    hb_retl( obj->bind ( par1 ) );
+    RBOOL( obj->bind ( OPQUINT16(1,0) ) );
   }
 }
 
@@ -123,8 +119,7 @@ HB_FUNC_STATIC( QUDPSOCKET_BIND4 )
   QUdpSocket * obj = (QUdpSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par2 = hb_parni(2);
-    hb_retl( obj->bind ( PQUINT16(1),  (QUdpSocket::BindMode) par2 ) );
+    RBOOL( obj->bind ( PQUINT16(1),  (QUdpSocket::BindMode) hb_parni(2) ) );
   }
 }
 
@@ -162,7 +157,7 @@ HB_FUNC_STATIC( QUDPSOCKET_HASPENDINGDATAGRAMS )
   QUdpSocket * obj = (QUdpSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasPendingDatagrams () );
+    RBOOL( obj->hasPendingDatagrams () );
   }
 }
 
@@ -175,8 +170,7 @@ HB_FUNC_STATIC( QUDPSOCKET_PENDINGDATAGRAMSIZE )
   QUdpSocket * obj = (QUdpSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->pendingDatagramSize ();
-    hb_retni( i );
+    RQINT64( obj->pendingDatagramSize () );
   }
 }
 
@@ -184,17 +178,15 @@ HB_FUNC_STATIC( QUDPSOCKET_PENDINGDATAGRAMSIZE )
 /*
 qint64 readDatagram ( char * data, qint64 maxSize, QHostAddress * address = 0, quint16 * port = 0 )
 */
-HB_FUNC_STATIC( QUDPSOCKET_READDATAGRAM )
+HB_FUNC_STATIC( QUDPSOCKET_READDATAGRAM ) // TODO: corrigir implementacao
 {
   QUdpSocket * obj = (QUdpSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
     char * par1 = (char *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    qint64 par2 = hb_parni(2);
     QHostAddress * par3 = ISNIL(3)? 0 : (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     quint16 * par4 = ISNIL(4)? 0 : (quint16 *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    qint64 i = obj->readDatagram ( par1, par2, par3, par4 );
-    hb_retni( i );
+    RQINT64( obj->readDatagram ( par1, PQINT64(2), par3, par4 ) );
   }
 }
 
@@ -207,11 +199,8 @@ HB_FUNC_STATIC( QUDPSOCKET_WRITEDATAGRAM1 )
   QUdpSocket * obj = (QUdpSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const char * par1 = hb_parc(1);
-    qint64 par2 = hb_parni(2);
     QHostAddress * par3 = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    qint64 i = obj->writeDatagram (  (const char *) par1, par2, *par3, PQUINT16(4) );
-    hb_retni( i );
+    RQINT64( obj->writeDatagram (  (const char *) hb_parc(1), PQINT64(2), *par3, PQUINT16(4) ) );
   }
 }
 
@@ -224,10 +213,8 @@ HB_FUNC_STATIC( QUDPSOCKET_WRITEDATAGRAM2 )
   QUdpSocket * obj = (QUdpSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QHostAddress * par2 = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    qint64 i = obj->writeDatagram ( *par1, *par2, PQUINT16(3) );
-    hb_retni( i );
+    RQINT64( obj->writeDatagram ( *PQBYTEARRAY(1), *par2, PQUINT16(3) ) );
   }
 }
 

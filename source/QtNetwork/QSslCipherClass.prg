@@ -56,8 +56,7 @@ QSslCipher ()
 */
 HB_FUNC_STATIC( QSSLCIPHER_NEW1 )
 {
-  QSslCipher * o = NULL;
-  o = new QSslCipher ();
+  QSslCipher * o = new QSslCipher ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -67,9 +66,7 @@ QSslCipher ( const QString & name, QSsl::SslProtocol protocol )
 */
 HB_FUNC_STATIC( QSSLCIPHER_NEW2 )
 {
-  QSslCipher * o = NULL;
-  int par2 = hb_parni(2);
-  o = new QSslCipher ( PQSTRING(1),  (QSsl::SslProtocol) par2 );
+  QSslCipher * o = new QSslCipher ( PQSTRING(1),  (QSsl::SslProtocol) hb_parni(2) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -79,9 +76,7 @@ QSslCipher ( const QSslCipher & other )
 */
 HB_FUNC_STATIC( QSSLCIPHER_NEW3 )
 {
-  QSslCipher * o = NULL;
-  QSslCipher * par1 = (QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSslCipher ( *par1 );
+  QSslCipher * o = new QSslCipher ( *PQSSLCIPHER(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -162,7 +157,7 @@ HB_FUNC_STATIC( QSSLCIPHER_ISNULL )
   QSslCipher * obj = (QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -230,7 +225,7 @@ HB_FUNC_STATIC( QSSLCIPHER_SUPPORTEDBITS )
   QSslCipher * obj = (QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->supportedBits () );
+    RINT( obj->supportedBits () );
   }
 }
 
@@ -243,7 +238,7 @@ HB_FUNC_STATIC( QSSLCIPHER_USEDBITS )
   QSslCipher * obj = (QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->usedBits () );
+    RINT( obj->usedBits () );
   }
 }
 

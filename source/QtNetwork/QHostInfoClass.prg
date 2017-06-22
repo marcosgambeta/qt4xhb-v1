@@ -65,8 +65,7 @@ QHostInfo ( int id = -1 )
 */
 HB_FUNC_STATIC( QHOSTINFO_NEW1 )
 {
-  QHostInfo * o = NULL;
-  o = new QHostInfo ( OPINT(1,-1) );
+  QHostInfo * o = new QHostInfo ( OPINT(1,-1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -76,9 +75,7 @@ QHostInfo ( const QHostInfo & other )
 */
 HB_FUNC_STATIC( QHOSTINFO_NEW2 )
 {
-  QHostInfo * o = NULL;
-  QHostInfo * par1 = (QHostInfo *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QHostInfo ( *par1 );
+  QHostInfo * o = new QHostInfo ( *PQHOSTINFO(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -219,7 +216,7 @@ HB_FUNC_STATIC( QHOSTINFO_LOOKUPID )
   QHostInfo * obj = (QHostInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->lookupId () );
+    RINT( obj->lookupId () );
   }
 }
 
@@ -297,8 +294,7 @@ HB_FUNC_STATIC( QHOSTINFO_SETLOOKUPID )
   QHostInfo * obj = (QHostInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setLookupId ( par1 );
+    obj->setLookupId ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -310,8 +306,7 @@ void abortHostLookup ( int id )
 */
 HB_FUNC_STATIC( QHOSTINFO_ABORTHOSTLOOKUP )
 {
-  int par1 = hb_parni(1);
-  QHostInfo::abortHostLookup ( par1 );
+  QHostInfo::abortHostLookup ( PINT(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -351,9 +346,7 @@ int lookupHost ( const QString & name, QObject * receiver, const char * member )
 */
 HB_FUNC_STATIC( QHOSTINFO_LOOKUPHOST )
 {
-  QObject * par2 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  const char * par3 = hb_parc(3);
-  hb_retni( QHostInfo::lookupHost ( PQSTRING(1), par2,  (const char *) par3 ) );
+  RINT( QHostInfo::lookupHost ( PQSTRING(1), PQOBJECT(2),  (const char *) hb_parc(3) ) );
 }
 
 

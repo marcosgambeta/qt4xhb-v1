@@ -43,9 +43,7 @@ QNetworkCookieJar ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QNETWORKCOOKIEJAR_NEW )
 {
-  QNetworkCookieJar * o = NULL;
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QNetworkCookieJar ( par1 );
+  QNetworkCookieJar * o = new QNetworkCookieJar ( OPQOBJECT(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -74,8 +72,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIEJAR_COOKIESFORURL )
   QNetworkCookieJar * obj = (QNetworkCookieJar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QUrl * par1 = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QList<QNetworkCookie> list = obj->cookiesForUrl ( *par1 );
+    QList<QNetworkCookie> list = obj->cookiesForUrl ( *PQURL(1) );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QNETWORKCOOKIE" );
@@ -131,8 +128,7 @@ for (i1=0;i1<nLen1;i1++)
 {
 par1 << *(QNetworkCookie *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
 }
-    QUrl * par2 = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->setCookiesFromUrl ( par1, *par2 ) );
+    RBOOL( obj->setCookiesFromUrl ( par1, *PQURL(2) ) );
   }
 }
 

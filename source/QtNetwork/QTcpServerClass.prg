@@ -62,9 +62,7 @@ QTcpServer ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QTCPSERVER_NEW )
 {
-  QTcpServer * o = NULL;
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QTcpServer ( par1 );
+  QTcpServer * o = new QTcpServer ( OPQOBJECT(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -121,7 +119,7 @@ HB_FUNC_STATIC( QTCPSERVER_HASPENDINGCONNECTIONS )
   QTcpServer * obj = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasPendingConnections () );
+    RBOOL( obj->hasPendingConnections () );
   }
 }
 
@@ -134,7 +132,7 @@ HB_FUNC_STATIC( QTCPSERVER_ISLISTENING )
   QTcpServer * obj = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isListening () );
+    RBOOL( obj->isListening () );
   }
 }
 
@@ -148,8 +146,7 @@ HB_FUNC_STATIC( QTCPSERVER_LISTEN )
   if( obj )
   {
     QHostAddress par1 = ISNIL(1)? QHostAddress::Any : *(QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    quint16 par2 = ISNIL(2)? 0 : hb_parni(2);
-    hb_retl( obj->listen ( par1, par2 ) );
+    RBOOL( obj->listen ( par1, OPQUINT16(2,0) ) );
   }
 }
 
@@ -162,7 +159,7 @@ HB_FUNC_STATIC( QTCPSERVER_MAXPENDINGCONNECTIONS )
   QTcpServer * obj = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->maxPendingConnections () );
+    RINT( obj->maxPendingConnections () );
   }
 }
 
@@ -230,8 +227,7 @@ HB_FUNC_STATIC( QTCPSERVER_SERVERPORT )
   QTcpServer * obj = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    quint16 i = obj->serverPort ();
-    hb_retni( i );
+    RQUINT16( obj->serverPort () );
   }
 }
 
@@ -244,8 +240,7 @@ HB_FUNC_STATIC( QTCPSERVER_SETMAXPENDINGCONNECTIONS )
   QTcpServer * obj = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setMaxPendingConnections ( par1 );
+    obj->setMaxPendingConnections ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -274,8 +269,7 @@ HB_FUNC_STATIC( QTCPSERVER_SETSOCKETDESCRIPTOR )
   QTcpServer * obj = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->setSocketDescriptor ( par1 ) );
+    RBOOL( obj->setSocketDescriptor ( PINT(1) ) );
   }
 }
 
@@ -288,7 +282,7 @@ HB_FUNC_STATIC( QTCPSERVER_SOCKETDESCRIPTOR )
   QTcpServer * obj = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->socketDescriptor () );
+    RINT( obj->socketDescriptor () );
   }
 }
 
@@ -302,7 +296,7 @@ HB_FUNC_STATIC( QTCPSERVER_WAITFORNEWCONNECTION )
   if( obj )
   {
     bool par2;
-    hb_retl( obj->waitForNewConnection ( OPINT(1,0), &par2 ) );
+    RBOOL( obj->waitForNewConnection ( OPINT(1,0), &par2 ) );
     hb_storl( par2, 2 );
   }
 }

@@ -50,8 +50,7 @@ QHttpPart ()
 */
 HB_FUNC_STATIC( QHTTPPART_NEW1 )
 {
-  QHttpPart * o = NULL;
-  o = new QHttpPart ();
+  QHttpPart * o = new QHttpPart ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -61,9 +60,7 @@ QHttpPart ( const QHttpPart & other )
 */
 HB_FUNC_STATIC( QHTTPPART_NEW2 )
 {
-  QHttpPart * o = NULL;
-  QHttpPart * par1 = (QHttpPart *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QHttpPart ( *par1 );
+  QHttpPart * o = new QHttpPart ( *PQHTTPPART(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -111,8 +108,7 @@ HB_FUNC_STATIC( QHTTPPART_SETBODY )
   QHttpPart * obj = (QHttpPart *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setBody ( *par1 );
+    obj->setBody ( *PQBYTEARRAY(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -126,8 +122,7 @@ HB_FUNC_STATIC( QHTTPPART_SETBODYDEVICE )
   QHttpPart * obj = (QHttpPart *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setBodyDevice ( par1 );
+    obj->setBodyDevice ( PQIODEVICE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -142,8 +137,7 @@ HB_FUNC_STATIC( QHTTPPART_SETHEADER )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QVariant * par2 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setHeader (  (QNetworkRequest::KnownHeaders) par1, *par2 );
+    obj->setHeader (  (QNetworkRequest::KnownHeaders) par1, *PQVARIANT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -157,9 +151,7 @@ HB_FUNC_STATIC( QHTTPPART_SETRAWHEADER )
   QHttpPart * obj = (QHttpPart *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QByteArray * par2 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setRawHeader ( *par1, *par2 );
+    obj->setRawHeader ( *PQBYTEARRAY(1), *PQBYTEARRAY(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -59,8 +59,7 @@ QAuthenticator ()
 */
 HB_FUNC_STATIC( QAUTHENTICATOR_NEW1 )
 {
-  QAuthenticator * o = NULL;
-  o = new QAuthenticator ();
+  QAuthenticator * o = new QAuthenticator ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -70,9 +69,7 @@ QAuthenticator ( const QAuthenticator & other )
 */
 HB_FUNC_STATIC( QAUTHENTICATOR_NEW2 )
 {
-  QAuthenticator * o = NULL;
-  QAuthenticator * par1 = (QAuthenticator *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QAuthenticator ( *par1 );
+  QAuthenticator * o = new QAuthenticator ( *PQAUTHENTICATOR(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -120,7 +117,7 @@ HB_FUNC_STATIC( QAUTHENTICATOR_ISNULL )
   QAuthenticator * obj = (QAuthenticator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -189,8 +186,7 @@ HB_FUNC_STATIC( QAUTHENTICATOR_SETOPTION )
   QAuthenticator * obj = (QAuthenticator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVariant * par2 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setOption ( PQSTRING(1), *par2 );
+    obj->setOption ( PQSTRING(1), *PQVARIANT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

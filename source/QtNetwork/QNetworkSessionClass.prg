@@ -68,10 +68,7 @@ QNetworkSession ( const QNetworkConfiguration & connectionConfig, QObject * pare
 */
 HB_FUNC_STATIC( QNETWORKSESSION_NEW )
 {
-  QNetworkSession * o = NULL;
-  QNetworkConfiguration * par1 = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QNetworkSession ( *par1, par2 );
+  QNetworkSession * o = new QNetworkSession ( *PQNETWORKCONFIGURATION(1), OPQOBJECT(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -100,8 +97,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_ACTIVETIME )
   QNetworkSession * obj = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    quint64 i = obj->activeTime ();
-    hb_retni( i );
+    RQUINT64( obj->activeTime () );
   }
 }
 
@@ -114,8 +110,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_BYTESRECEIVED )
   QNetworkSession * obj = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    quint64 i = obj->bytesReceived ();
-    hb_retni( i );
+    RQUINT64( obj->bytesReceived () );
   }
 }
 
@@ -128,8 +123,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_BYTESWRITTEN )
   QNetworkSession * obj = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    quint64 i = obj->bytesWritten ();
-    hb_retni( i );
+    RQUINT64( obj->bytesWritten () );
   }
 }
 
@@ -197,7 +191,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_ISOPEN )
   QNetworkSession * obj = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isOpen () );
+    RBOOL( obj->isOpen () );
   }
 }
 
@@ -224,8 +218,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_SETSESSIONPROPERTY )
   QNetworkSession * obj = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVariant * par2 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setSessionProperty ( PQSTRING(1), *par2 );
+    obj->setSessionProperty ( PQSTRING(1), *PQVARIANT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -252,7 +245,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_WAITFOROPENED )
   QNetworkSession * obj = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->waitForOpened ( OPINT(1,30000) ) );
+    RBOOL( obj->waitForOpened ( OPINT(1,30000) ) );
   }
 }
 

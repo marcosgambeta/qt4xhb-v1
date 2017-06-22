@@ -58,8 +58,7 @@ QSslKey ()
 */
 HB_FUNC_STATIC( QSSLKEY_NEW1 )
 {
-  QSslKey * o = NULL;
-  o = new QSslKey ();
+  QSslKey * o = new QSslKey ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -69,13 +68,10 @@ QSslKey ( const QByteArray & encoded, QSsl::KeyAlgorithm algorithm, QSsl::Encodi
 */
 HB_FUNC_STATIC( QSSLKEY_NEW2 )
 {
-  QSslKey * o = NULL;
-  QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  int par2 = hb_parni(2);
   int par3 = ISNIL(3)? (int) QSsl::Pem : hb_parni(3);
   int par4 = ISNIL(4)? (int) QSsl::PrivateKey : hb_parni(4);
   QByteArray par5 = ISNIL(5)? QByteArray() : *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(5, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSslKey ( *par1,  (QSsl::KeyAlgorithm) par2,  (QSsl::EncodingFormat) par3,  (QSsl::KeyType) par4, par5 );
+  QSslKey * o = new QSslKey ( *PQBYTEARRAY(1),  (QSsl::KeyAlgorithm) hb_parni(2),  (QSsl::EncodingFormat) par3,  (QSsl::KeyType) par4, par5 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -85,13 +81,10 @@ QSslKey ( QIODevice * device, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat
 */
 HB_FUNC_STATIC( QSSLKEY_NEW3 )
 {
-  QSslKey * o = NULL;
-  QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  int par2 = hb_parni(2);
   int par3 = ISNIL(3)? (int) QSsl::Pem : hb_parni(3);
   int par4 = ISNIL(4)? (int) QSsl::PrivateKey : hb_parni(4);
   QByteArray par5 = ISNIL(5)? QByteArray() : *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(5, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSslKey ( par1,  (QSsl::KeyAlgorithm) par2,  (QSsl::EncodingFormat) par3,  (QSsl::KeyType) par4, par5 );
+  QSslKey * o = new QSslKey ( PQIODEVICE(1),  (QSsl::KeyAlgorithm) hb_parni(2),  (QSsl::EncodingFormat) par3,  (QSsl::KeyType) par4, par5 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -101,9 +94,7 @@ QSslKey ( const QSslKey & other )
 */
 HB_FUNC_STATIC( QSSLKEY_NEW4 )
 {
-  QSslKey * o = NULL;
-  QSslKey * par1 = (QSslKey *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSslKey ( *par1 );
+  QSslKey * o = new QSslKey ( *PQSSLKEY(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -189,7 +180,7 @@ HB_FUNC_STATIC( QSSLKEY_ISNULL )
   QSslKey * obj = (QSslKey *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -202,7 +193,7 @@ HB_FUNC_STATIC( QSSLKEY_LENGTH )
   QSslKey * obj = (QSslKey *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->length () );
+    RINT( obj->length () );
   }
 }
 

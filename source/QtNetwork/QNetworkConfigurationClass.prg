@@ -60,8 +60,7 @@ QNetworkConfiguration ()
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_NEW1 )
 {
-  QNetworkConfiguration * o = NULL;
-  o = new QNetworkConfiguration ();
+  QNetworkConfiguration * o = new QNetworkConfiguration ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -71,9 +70,7 @@ QNetworkConfiguration ( const QNetworkConfiguration & other )
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_NEW2 )
 {
-  QNetworkConfiguration * o = NULL;
-  QNetworkConfiguration * par1 = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QNetworkConfiguration ( *par1 );
+  QNetworkConfiguration * o = new QNetworkConfiguration ( *PQNETWORKCONFIGURATION(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -224,7 +221,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_ISROAMINGAVAILABLE )
   QNetworkConfiguration * obj = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isRoamingAvailable () );
+    RBOOL( obj->isRoamingAvailable () );
   }
 }
 
@@ -237,7 +234,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_ISVALID )
   QNetworkConfiguration * obj = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 

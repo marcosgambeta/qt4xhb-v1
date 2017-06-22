@@ -77,9 +77,7 @@ QNetworkAccessManager ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_NEW )
 {
-  QNetworkAccessManager * o = NULL;
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QNetworkAccessManager ( par1 );
+  QNetworkAccessManager * o = new QNetworkAccessManager ( OPQOBJECT(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -223,8 +221,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_POST1 )
   if( obj )
   {
     QNetworkRequest * par1 = (QNetworkRequest *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QIODevice * par2 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QNetworkReply * ptr = obj->post ( *par1, par2 );
+    QNetworkReply * ptr = obj->post ( *par1, PQIODEVICE(2) );
     _qt4xhb_createReturnClass ( ptr, "QNETWORKREPLY" );
   }
 }
@@ -239,8 +236,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_POST2 )
   if( obj )
   {
     QNetworkRequest * par1 = (QNetworkRequest *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QByteArray * par2 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QNetworkReply * ptr = obj->post ( *par1, *par2 );
+    QNetworkReply * ptr = obj->post ( *par1, *PQBYTEARRAY(2) );
     _qt4xhb_createReturnClass ( ptr, "QNETWORKREPLY" );
   }
 }
@@ -298,8 +294,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_PUT1 )
   if( obj )
   {
     QNetworkRequest * par1 = (QNetworkRequest *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QIODevice * par2 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QNetworkReply * ptr = obj->put ( *par1, par2 );
+    QNetworkReply * ptr = obj->put ( *par1, PQIODEVICE(2) );
     _qt4xhb_createReturnClass ( ptr, "QNETWORKREPLY" );
   }
 }
@@ -314,8 +309,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_PUT2 )
   if( obj )
   {
     QNetworkRequest * par1 = (QNetworkRequest *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QByteArray * par2 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QNetworkReply * ptr = obj->put ( *par1, *par2 );
+    QNetworkReply * ptr = obj->put ( *par1, *PQBYTEARRAY(2) );
     _qt4xhb_createReturnClass ( ptr, "QNETWORKREPLY" );
   }
 }
@@ -345,9 +339,8 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SENDCUSTOMREQUEST )
   if( obj )
   {
     QNetworkRequest * par1 = (QNetworkRequest *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QByteArray * par2 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     QIODevice * par3 = ISNIL(3)? 0 : (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QNetworkReply * ptr = obj->sendCustomRequest ( *par1, *par2, par3 );
+    QNetworkReply * ptr = obj->sendCustomRequest ( *par1, *PQBYTEARRAY(2), par3 );
     _qt4xhb_createReturnClass ( ptr, "QNETWORKREPLY" );
   }
 }

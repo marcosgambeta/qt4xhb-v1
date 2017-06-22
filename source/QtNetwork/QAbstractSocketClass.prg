@@ -84,10 +84,7 @@ QAbstractSocket ( SocketType socketType, QObject * parent )
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_NEW )
 {
-  QAbstractSocket * o = NULL;
-  int par1 = hb_parni(1);
-  QObject * par2 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QAbstractSocket (  (QAbstractSocket::SocketType) par1, par2 );
+  QAbstractSocket * o = new QAbstractSocket (  (QAbstractSocket::SocketType) hb_parni(1), PQOBJECT(2) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -188,7 +185,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_FLUSH )
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->flush () );
+    RBOOL( obj->flush () );
   }
 }
 
@@ -201,7 +198,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ISVALID )
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -228,8 +225,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_LOCALPORT )
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    quint16 i = obj->localPort ();
-    hb_retni( i );
+    RQUINT16( obj->localPort () );
   }
 }
 
@@ -270,8 +266,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_PEERPORT )
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    quint16 i = obj->peerPort ();
-    hb_retni( i );
+    RQUINT16( obj->peerPort () );
   }
 }
 
@@ -298,8 +293,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_READBUFFERSIZE )
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->readBufferSize ();
-    hb_retni( i );
+    RQINT64( obj->readBufferSize () );
   }
 }
 
@@ -327,8 +321,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SETREADBUFFERSIZE )
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 par1 = hb_parni(1);
-    obj->setReadBufferSize ( par1 );
+    obj->setReadBufferSize ( PQINT64(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -342,10 +335,9 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SETSOCKETDESCRIPTOR )
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
     int par2 = hb_parni(2);
     int par3 = ISNIL(3)? (int) QAbstractSocket::ReadWrite : hb_parni(3);
-    hb_retl( obj->setSocketDescriptor ( par1,  (QAbstractSocket::SocketState) par2,  (QAbstractSocket::OpenMode) par3 ) );
+    RBOOL( obj->setSocketDescriptor ( PINT(1),  (QAbstractSocket::SocketState) par2,  (QAbstractSocket::OpenMode) par3 ) );
   }
 }
 
@@ -359,8 +351,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SETSOCKETOPTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QVariant * par2 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setSocketOption (  (QAbstractSocket::SocketOption) par1, *par2 );
+    obj->setSocketOption (  (QAbstractSocket::SocketOption) par1, *PQVARIANT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -374,7 +365,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SOCKETDESCRIPTOR )
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->socketDescriptor () );
+    RINT( obj->socketDescriptor () );
   }
 }
 
@@ -428,7 +419,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORCONNECTED )
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->waitForConnected ( OPINT(1,30000) ) );
+    RBOOL( obj->waitForConnected ( OPINT(1,30000) ) );
   }
 }
 
@@ -441,7 +432,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORDISCONNECTED )
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->waitForDisconnected ( OPINT(1,30000) ) );
+    RBOOL( obj->waitForDisconnected ( OPINT(1,30000) ) );
   }
 }
 
@@ -454,7 +445,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ATEND )
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->atEnd () );
+    RBOOL( obj->atEnd () );
   }
 }
 
@@ -467,8 +458,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_BYTESAVAILABLE )
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->bytesAvailable ();
-    hb_retni( i );
+    RQINT64( obj->bytesAvailable () );
   }
 }
 
@@ -481,8 +471,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_BYTESTOWRITE )
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->bytesToWrite ();
-    hb_retni( i );
+    RQINT64( obj->bytesToWrite () );
   }
 }
 
@@ -495,7 +484,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_CANREADLINE )
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->canReadLine () );
+    RBOOL( obj->canReadLine () );
   }
 }
 
@@ -522,7 +511,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ISSEQUENTIAL )
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isSequential () );
+    RBOOL( obj->isSequential () );
   }
 }
 
@@ -535,7 +524,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORBYTESWRITTEN )
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->waitForBytesWritten ( OPINT(1,30000) ) );
+    RBOOL( obj->waitForBytesWritten ( OPINT(1,30000) ) );
   }
 }
 
@@ -548,7 +537,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORREADYREAD )
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->waitForReadyRead ( OPINT(1,30000) ) );
+    RBOOL( obj->waitForReadyRead ( OPINT(1,30000) ) );
   }
 }
 

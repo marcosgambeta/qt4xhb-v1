@@ -78,9 +78,7 @@ QFtp ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QFTP_NEW )
 {
-  QFtp * o = NULL;
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QFtp ( par1 );
+  QFtp * o = new QFtp ( OPQOBJECT(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -109,8 +107,7 @@ HB_FUNC_STATIC( QFTP_BYTESAVAILABLE )
   QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->bytesAvailable ();
-    hb_retni( i );
+    RQINT64( obj->bytesAvailable () );
   }
 }
 
@@ -123,7 +120,7 @@ HB_FUNC_STATIC( QFTP_CD )
   QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->cd ( PQSTRING(1) ) );
+    RINT( obj->cd ( PQSTRING(1) ) );
   }
 }
 
@@ -150,7 +147,7 @@ HB_FUNC_STATIC( QFTP_CLOSE )
   QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->close () );
+    RINT( obj->close () );
   }
 }
 
@@ -163,8 +160,7 @@ HB_FUNC_STATIC( QFTP_CONNECTTOHOST )
   QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    quint16 par2 = ISNIL(2)? 21 : hb_parni(2);
-    hb_retni( obj->connectToHost ( PQSTRING(1), par2 ) );
+    RINT( obj->connectToHost ( PQSTRING(1), OPQUINT16(2,21) ) );
   }
 }
 
@@ -204,7 +200,7 @@ HB_FUNC_STATIC( QFTP_CURRENTID )
   QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->currentId () );
+    RINT( obj->currentId () );
   }
 }
 
@@ -246,7 +242,7 @@ HB_FUNC_STATIC( QFTP_GET )
   {
     QIODevice * par2 = ISNIL(2)? 0 : (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par3 = ISNIL(3)? (int) QFtp::Binary : hb_parni(3);
-    hb_retni( obj->get ( PQSTRING(1), par2,  (QFtp::TransferType) par3 ) );
+    RINT( obj->get ( PQSTRING(1), par2,  (QFtp::TransferType) par3 ) );
   }
 }
 
@@ -259,7 +255,7 @@ HB_FUNC_STATIC( QFTP_HASPENDINGCOMMANDS )
   QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasPendingCommands () );
+    RBOOL( obj->hasPendingCommands () );
   }
 }
 
@@ -272,7 +268,7 @@ HB_FUNC_STATIC( QFTP_LIST )
   QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->list ( OPQSTRING(1,QString()) ) );
+    RINT( obj->list ( OPQSTRING(1,QString()) ) );
   }
 }
 
@@ -285,7 +281,7 @@ HB_FUNC_STATIC( QFTP_LOGIN )
   QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->login ( OPQSTRING(1,QString()), OPQSTRING(2,QString()) ) );
+    RINT( obj->login ( OPQSTRING(1,QString()), OPQSTRING(2,QString()) ) );
   }
 }
 
@@ -298,7 +294,7 @@ HB_FUNC_STATIC( QFTP_MKDIR )
   QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->mkdir ( PQSTRING(1) ) );
+    RINT( obj->mkdir ( PQSTRING(1) ) );
   }
 }
 
@@ -311,9 +307,8 @@ HB_FUNC_STATIC( QFTP_PUT1 )
   QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par3 = ISNIL(3)? (int) QFtp::Binary : hb_parni(3);
-    hb_retni( obj->put ( par1, PQSTRING(2),  (QFtp::TransferType) par3 ) );
+    RINT( obj->put ( PQIODEVICE(1), PQSTRING(2),  (QFtp::TransferType) par3 ) );
   }
 }
 
@@ -326,9 +321,8 @@ HB_FUNC_STATIC( QFTP_PUT2 )
   QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par3 = ISNIL(3)? (int) QFtp::Binary : hb_parni(3);
-    hb_retni( obj->put ( *par1, PQSTRING(2),  (QFtp::TransferType) par3 ) );
+    RINT( obj->put ( *PQBYTEARRAY(1), PQSTRING(2),  (QFtp::TransferType) par3 ) );
   }
 }
 
@@ -356,7 +350,7 @@ HB_FUNC_STATIC( QFTP_RAWCOMMAND )
   QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->rawCommand ( PQSTRING(1) ) );
+    RINT( obj->rawCommand ( PQSTRING(1) ) );
   }
 }
 
@@ -370,9 +364,7 @@ HB_FUNC_STATIC( QFTP_READ )
   if( obj )
   {
     char * par1 = (char *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    qint64 par2 = hb_parni(2);
-    qint64 i = obj->read ( par1, par2 );
-    hb_retni( i );
+    RQINT64( obj->read ( par1, PQINT64(2) ) );
   }
 }
 
@@ -399,7 +391,7 @@ HB_FUNC_STATIC( QFTP_REMOVE )
   QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->remove ( PQSTRING(1) ) );
+    RINT( obj->remove ( PQSTRING(1) ) );
   }
 }
 
@@ -412,7 +404,7 @@ HB_FUNC_STATIC( QFTP_RENAME )
   QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->rename ( PQSTRING(1), PQSTRING(2) ) );
+    RINT( obj->rename ( PQSTRING(1), PQSTRING(2) ) );
   }
 }
 
@@ -425,7 +417,7 @@ HB_FUNC_STATIC( QFTP_RMDIR )
   QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->rmdir ( PQSTRING(1) ) );
+    RINT( obj->rmdir ( PQSTRING(1) ) );
   }
 }
 
@@ -438,7 +430,7 @@ HB_FUNC_STATIC( QFTP_SETPROXY )
   QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->setProxy ( PQSTRING(1), PQUINT16(2) ) );
+    RINT( obj->setProxy ( PQSTRING(1), PQUINT16(2) ) );
   }
 }
 
@@ -451,8 +443,7 @@ HB_FUNC_STATIC( QFTP_SETTRANSFERMODE )
   QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retni( obj->setTransferMode (  (QFtp::TransferMode) par1 ) );
+    RINT( obj->setTransferMode (  (QFtp::TransferMode) hb_parni(1) ) );
   }
 }
 

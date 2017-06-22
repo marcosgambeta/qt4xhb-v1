@@ -68,8 +68,7 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_CACHESIZE )
   QAbstractNetworkCache * obj = (QAbstractNetworkCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->cacheSize ();
-    hb_retni( i );
+    RQINT64( obj->cacheSize () );
   }
 }
 
@@ -82,8 +81,7 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_DATA )
   QAbstractNetworkCache * obj = (QAbstractNetworkCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QUrl * par1 = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QIODevice * ptr = obj->data ( *par1 );
+    QIODevice * ptr = obj->data ( *PQURL(1) );
     _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );
   }
 }
@@ -97,8 +95,7 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_INSERT )
   QAbstractNetworkCache * obj = (QAbstractNetworkCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->insert ( par1 );
+    obj->insert ( PQIODEVICE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -112,8 +109,7 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_METADATA )
   QAbstractNetworkCache * obj = (QAbstractNetworkCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QUrl * par1 = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QNetworkCacheMetaData * ptr = new QNetworkCacheMetaData( obj->metaData ( *par1 ) );
+    QNetworkCacheMetaData * ptr = new QNetworkCacheMetaData( obj->metaData ( *PQURL(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QNETWORKCACHEMETADATA", true );
   }
 }
@@ -142,8 +138,7 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_REMOVE )
   QAbstractNetworkCache * obj = (QAbstractNetworkCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QUrl * par1 = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->remove ( *par1 ) );
+    RBOOL( obj->remove ( *PQURL(1) ) );
   }
 }
 
