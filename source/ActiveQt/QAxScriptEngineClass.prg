@@ -46,9 +46,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_NEW )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISQAXSCRIPT(2) )
   {
-    QAxScriptEngine * o = NULL;
-    QAxScript * par2 = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    o = new QAxScriptEngine ( PQSTRING(1), par2 );
+    QAxScriptEngine * o = new QAxScriptEngine ( PQSTRING(1), PQAXSCRIPT(2) );
     _qt4xhb_storePointerAndFlag ( o, false );
   }
   else
@@ -105,7 +103,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_HASINTROSPECTION )
 
   if( obj )
   {
-    hb_retl( obj->hasIntrospection () );
+    RBOOL( obj->hasIntrospection () );
   }
 }
 
@@ -118,7 +116,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_ISVALID )
 
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 

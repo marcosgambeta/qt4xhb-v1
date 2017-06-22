@@ -67,10 +67,8 @@ QAxWidget ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
 void QAxWidget_new1 ()
 {
-  QAxWidget * o = NULL;
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = ISNIL(2)? 0 : hb_parni(2);
-  o = new QAxWidget ( par1,  (Qt::WindowFlags) par2 );
+  QAxWidget * o = new QAxWidget ( OPQWIDGET(1,0),  (Qt::WindowFlags) par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -79,10 +77,8 @@ QAxWidget ( const QString & c, QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
 void QAxWidget_new2 ()
 {
-  QAxWidget * o = NULL;
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par3 = ISNIL(3)? 0 : hb_parni(3);
-  o = new QAxWidget ( PQSTRING(1), par2, (Qt::WindowFlags) par3 );
+  QAxWidget * o = new QAxWidget ( PQSTRING(1), OPQWIDGET(2,0), (Qt::WindowFlags) par3 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -91,11 +87,9 @@ QAxWidget ( IUnknown * iface, QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
 void QAxWidget_new3 ()
 {
-  QAxWidget * o = NULL;
   IUnknown * par1 = (IUnknown *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par3 = ISNIL(3)? 0 : hb_parni(3);
-  o = new QAxWidget ( par1, par2, (Qt::WindowFlags) par3 );
+  QAxWidget * o = new QAxWidget ( par1, OPQWIDGET(2,0), (Qt::WindowFlags) par3 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -167,7 +161,7 @@ HB_FUNC_STATIC( QAXWIDGET_DOVERB )
   {
     if( ISCHAR(1) )
     {
-      hb_retl( obj->doVerb ( PQSTRING(1) ) );
+      RBOOL( obj->doVerb ( PQSTRING(1) ) );
     }
     else
     {
@@ -303,7 +297,6 @@ void QAxWidget_dynamicCall1 ()
   QAxWidget * obj = (QAxWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const char * par1 = hb_parc(1);
     QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     QVariant par3 = ISNIL(3)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     QVariant par4 = ISNIL(4)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -312,7 +305,7 @@ void QAxWidget_dynamicCall1 ()
     QVariant par7 = ISNIL(7)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(7, HB_IT_OBJECT ), "POINTER", 0 ) );
     QVariant par8 = ISNIL(8)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(8, HB_IT_OBJECT ), "POINTER", 0 ) );
     QVariant par9 = ISNIL(9)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(9, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QVariant * ptr = new QVariant( obj->dynamicCall (  (const char *) par1, par2, par3, par4, par5, par6, par7, par8, par9 ) );
+    QVariant * ptr = new QVariant( obj->dynamicCall (  (const char *) hb_parc(1), par2, par3, par4, par5, par6, par7, par8, par9 ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -325,7 +318,6 @@ void QAxWidget_dynamicCall2 ()
   QAxWidget * obj = (QAxWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const char * par1 = hb_parc(1);
     QList<QVariant> par2;
     PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
     int i2;
@@ -334,7 +326,7 @@ void QAxWidget_dynamicCall2 ()
     {
       par2 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
     }
-    QVariant * ptr = new QVariant( obj->dynamicCall (  (const char *) par1, par2 ) );
+    QVariant * ptr = new QVariant( obj->dynamicCall (  (const char *) hb_parc(1), par2 ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -381,7 +373,7 @@ HB_FUNC_STATIC( QAXWIDGET_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -396,8 +388,7 @@ HB_FUNC_STATIC( QAXWIDGET_PROPERTYWRITABLE )
   {
     if( ISCHAR(1) )
     {
-      const char * par1 = hb_parc(1);
-      hb_retl( obj->propertyWritable (  (const char *) par1 ) );
+      RBOOL( obj->propertyWritable (  (const char *) hb_parc(1) ) );
     }
     else
     {
@@ -415,7 +406,6 @@ void QAxWidget_querySubObject1 ()
 
   if( obj )
   {
-    const char * par1 = hb_parc(1);
     QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     QVariant par3 = ISNIL(3)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     QVariant par4 = ISNIL(4)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -424,7 +414,7 @@ void QAxWidget_querySubObject1 ()
     QVariant par7 = ISNIL(7)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(7, HB_IT_OBJECT ), "POINTER", 0 ) );
     QVariant par8 = ISNIL(8)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(8, HB_IT_OBJECT ), "POINTER", 0 ) );
     QVariant par9 = ISNIL(9)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(9, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QAxObject * ptr = obj->querySubObject (  (const char *) par1, par2, par3, par4, par5, par6, par7, par8, par9 );
+    QAxObject * ptr = obj->querySubObject (  (const char *) hb_parc(1), par2, par3, par4, par5, par6, par7, par8, par9 );
     _qt4xhb_createReturnClass ( ptr, "QAXOBJECT" );
   }
 }
@@ -438,7 +428,6 @@ void QAxWidget_querySubObject2 ()
 
   if( obj )
   {
-    const char * par1 = hb_parc(1);
     QList<QVariant> par2;
     PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
     int i2;
@@ -447,7 +436,7 @@ void QAxWidget_querySubObject2 ()
     {
       par2 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
     }
-    QAxObject * ptr = obj->querySubObject (  (const char *) par1, par2 );
+    QAxObject * ptr = obj->querySubObject (  (const char *) hb_parc(1), par2 );
     _qt4xhb_createReturnClass ( ptr, "QAXOBJECT" );
   }
 }
@@ -482,7 +471,7 @@ HB_FUNC_STATIC( QAXWIDGET_SETCONTROL )
   {
     if( ISCHAR(1) )
     {
-      hb_retl( obj->setControl ( PQSTRING(1) ) );
+      RBOOL( obj->setControl ( PQSTRING(1) ) );
     }
     else
     {
@@ -502,8 +491,7 @@ HB_FUNC_STATIC( QAXWIDGET_SETPROPERTYWRITABLE )
   {
     if( ISCHAR(1) && ISLOG(2) )
     {
-      const char * par1 = hb_parc(1);
-      obj->setPropertyWritable (  (const char *) par1, PBOOL(2) );
+      obj->setPropertyWritable (  (const char *) hb_parc(1), PBOOL(2) );
     }
     else
     {

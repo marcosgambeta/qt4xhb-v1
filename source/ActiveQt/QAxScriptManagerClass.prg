@@ -57,9 +57,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QAxScriptManager * o = NULL;
-    QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    o = new QAxScriptManager ( par1 );
+    QAxScriptManager * o = new QAxScriptManager ( OPQOBJECT(1,0) );
     _qt4xhb_storePointerAndFlag ( o, false );
   }
   else
@@ -110,8 +108,7 @@ void QAxScriptManager_addObject2 ()
 
   if( obj )
   {
-    QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->addObject ( par1 );
+    obj->addObject ( PQOBJECT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -328,7 +325,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_REGISTERENGINE )
 {
   if( ISCHAR(1) && ISCHAR(2) && (ISCHAR(3)||ISNIL(3)) )
   {
-    hb_retl( QAxScriptManager::registerEngine ( PQSTRING(1), PQSTRING(2), OPQSTRING(3,QString()) ) );
+    RBOOL( QAxScriptManager::registerEngine ( PQSTRING(1), PQSTRING(2), OPQSTRING(3,QString()) ) );
   }
   else
   {

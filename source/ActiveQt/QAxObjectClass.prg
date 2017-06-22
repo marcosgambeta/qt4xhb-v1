@@ -64,9 +64,7 @@ QAxObject ( QObject * parent = 0 )
 */
 void QAxObject_new1 ()
 {
-  QAxObject * o = NULL;
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QAxObject ( par1 );
+  QAxObject * o = new QAxObject ( OPQOBJECT(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -75,9 +73,7 @@ QAxObject ( const QString & c, QObject * parent = 0 )
 */
 void QAxObject_new2 ()
 {
-  QAxObject * o = NULL;
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QAxObject ( PQSTRING(1), par2 );
+  QAxObject * o = new QAxObject ( PQSTRING(1), OPQOBJECT(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -86,10 +82,8 @@ QAxObject ( IUnknown * iface, QObject * parent = 0 )
 */
 void QAxObject_new3 ()
 {
-  QAxObject * o = NULL;
   IUnknown * par1 = (IUnknown *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QAxObject ( par1, par2 );
+  QAxObject * o = new QAxObject ( par1, OPQOBJECT(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -145,7 +139,7 @@ HB_FUNC_STATIC( QAXOBJECT_DOVERB )
   {
     if( ISCHAR(1) )
     {
-      hb_retl( obj->doVerb ( PQSTRING(1) ) );
+      RBOOL( obj->doVerb ( PQSTRING(1) ) );
     }
     else
     {
@@ -254,7 +248,6 @@ void QAxObject_dynamicCall1 ()
 
   if( obj )
   {
-    const char * par1 = hb_parc(1);
     QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     QVariant par3 = ISNIL(3)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     QVariant par4 = ISNIL(4)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -263,7 +256,7 @@ void QAxObject_dynamicCall1 ()
     QVariant par7 = ISNIL(7)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(7, HB_IT_OBJECT ), "POINTER", 0 ) );
     QVariant par8 = ISNIL(8)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(8, HB_IT_OBJECT ), "POINTER", 0 ) );
     QVariant par9 = ISNIL(9)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(9, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QVariant * ptr = new QVariant( obj->dynamicCall (  (const char *) par1, par2, par3, par4, par5, par6, par7, par8, par9 ) );
+    QVariant * ptr = new QVariant( obj->dynamicCall (  (const char *) hb_parc(1), par2, par3, par4, par5, par6, par7, par8, par9 ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -277,7 +270,6 @@ void QAxObject_dynamicCall2 ()
 
   if( obj )
   {
-    const char * par1 = hb_parc(1);
     QList<QVariant> par2;
     PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
     int i2;
@@ -286,7 +278,7 @@ void QAxObject_dynamicCall2 ()
     {
       par2 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
     }
-    QVariant * ptr = new QVariant( obj->dynamicCall (  (const char *) par1, par2 ) );
+    QVariant * ptr = new QVariant( obj->dynamicCall (  (const char *) hb_parc(1), par2 ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -333,7 +325,7 @@ HB_FUNC_STATIC( QAXOBJECT_ISNULL )
 
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -348,8 +340,7 @@ HB_FUNC_STATIC( QAXOBJECT_PROPERTYWRITABLE )
   {
     if( ISCHAR(1) )
     {
-      const char * par1 = hb_parc(1);
-      hb_retl( obj->propertyWritable (  (const char *) par1 ) );
+      RBOOL( obj->propertyWritable (  (const char *) hb_parc(1) ) );
     }
     else
     {
@@ -367,7 +358,6 @@ void QAxObject_querySubObject1 ()
 
   if( obj )
   {
-    const char * par1 = hb_parc(1);
     QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     QVariant par3 = ISNIL(3)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     QVariant par4 = ISNIL(4)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
@@ -376,7 +366,7 @@ void QAxObject_querySubObject1 ()
     QVariant par7 = ISNIL(7)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(7, HB_IT_OBJECT ), "POINTER", 0 ) );
     QVariant par8 = ISNIL(8)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(8, HB_IT_OBJECT ), "POINTER", 0 ) );
     QVariant par9 = ISNIL(9)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(9, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QAxObject * ptr = obj->querySubObject (  (const char *) par1, par2, par3, par4, par5, par6, par7, par8, par9 );
+    QAxObject * ptr = obj->querySubObject (  (const char *) hb_parc(1), par2, par3, par4, par5, par6, par7, par8, par9 );
     _qt4xhb_createReturnClass ( ptr, "QAXOBJECT" );
   }
 }
@@ -390,7 +380,6 @@ void QAxObject_querySubObject2 ()
 
   if( obj )
   {
-    const char * par1 = hb_parc(1);
     QList<QVariant> par2;
     PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
     int i2;
@@ -399,7 +388,7 @@ void QAxObject_querySubObject2 ()
     {
       par2 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
     }
-    QAxObject * ptr = obj->querySubObject (  (const char *) par1, par2 );
+    QAxObject * ptr = obj->querySubObject (  (const char *) hb_parc(1), par2 );
     _qt4xhb_createReturnClass ( ptr, "QAXOBJECT" );
   }
 }
@@ -434,7 +423,7 @@ HB_FUNC_STATIC( QAXOBJECT_SETCONTROL )
   {
     if( ISCHAR(1) )
     {
-      hb_retl( obj->setControl ( PQSTRING(1) ) );
+      RBOOL( obj->setControl ( PQSTRING(1) ) );
     }
     else
     {
@@ -454,8 +443,7 @@ HB_FUNC_STATIC( QAXOBJECT_SETPROPERTYWRITABLE )
   {
     if( ISCHAR(1) && ISLOG(2) )
     {
-      const char * par1 = hb_parc(1);
-      obj->setPropertyWritable (  (const char *) par1, PBOOL(2) );
+      obj->setPropertyWritable (  (const char *) hb_parc(1), PBOOL(2) );
     }
     else
     {

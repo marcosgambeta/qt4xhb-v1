@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QAXFACTORY_HASSTOCKEVENTS )
   {
     if( ISCHAR(1) )
     {
-      hb_retl( obj->hasStockEvents ( PQSTRING(1) ) );
+      RBOOL( obj->hasStockEvents ( PQSTRING(1) ) );
     }
     else
     {
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QAXFACTORY_ISSERVICE )
 
   if( obj )
   {
-    hb_retl( obj->isService () );
+    RBOOL( obj->isService () );
   }
 }
 
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QAXFACTORY_STAYTOPLEVEL )
   {
     if( ISCHAR(1) )
     {
-      hb_retl( obj->stayTopLevel ( PQSTRING(1) ) );
+      RBOOL( obj->stayTopLevel ( PQSTRING(1) ) );
     }
     else
     {
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QAXFACTORY_VALIDATELICENSEKEY )
   {
     if( ISCHAR(1) && ISCHAR(2) )
     {
-      hb_retl( obj->validateLicenseKey ( PQSTRING(1), PQSTRING(2) ) );
+      RBOOL( obj->validateLicenseKey ( PQSTRING(1), PQSTRING(2) ) );
     }
     else
     {
@@ -377,7 +377,7 @@ bool isServer ()
 */
 HB_FUNC_STATIC( QAXFACTORY_ISSERVER )
 {
-  hb_retl( QAxFactory::isServer () );
+  RBOOL( QAxFactory::isServer () );
 }
 
 /*
@@ -387,8 +387,7 @@ HB_FUNC_STATIC( QAXFACTORY_REGISTERACTIVEOBJECT )
 {
   if( ISQOBJECT(1) )
   {
-    QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( QAxFactory::registerActiveObject ( par1 ) );
+    RBOOL( QAxFactory::registerActiveObject ( PQOBJECT(1) ) );
   }
   else
   {
@@ -421,7 +420,7 @@ HB_FUNC_STATIC( QAXFACTORY_STARTSERVER )
 {
   if( ISNUM(1) )
   {
-    hb_retl( QAxFactory::startServer ( ISNIL(1)? QAxFactory::MultipleInstances : (QAxFactory::ServerType) hb_parni(1) ) );
+    RBOOL( QAxFactory::startServer ( ISNIL(1)? QAxFactory::MultipleInstances : (QAxFactory::ServerType) hb_parni(1) ) );
   }
   else
   {
@@ -434,7 +433,7 @@ bool stopServer ()
 */
 HB_FUNC_STATIC( QAXFACTORY_STOPSERVER )
 {
-  hb_retl( QAxFactory::stopServer () );
+  RBOOL( QAxFactory::stopServer () );
 }
 
 #pragma ENDDUMP

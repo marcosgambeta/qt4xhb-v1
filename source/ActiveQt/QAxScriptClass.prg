@@ -60,9 +60,7 @@ HB_FUNC_STATIC( QAXSCRIPT_NEW )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISQAXSCRIPTMANAGER(2) )
   {
-    QAxScript * o = NULL;
-    QAxScriptManager * par2 = (QAxScriptManager *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    o = new QAxScript ( PQSTRING(1), par2 );
+    QAxScript * o = new QAxScript ( PQSTRING(1), PQAXSCRIPTMANAGER(2) );
     _qt4xhb_storePointerAndFlag ( o, false );
   }
   else
@@ -192,7 +190,7 @@ HB_FUNC_STATIC( QAXSCRIPT_LOAD )
   {
     if( ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) )
     {
-      hb_retl( obj->load ( PQSTRING(1), OPQSTRING(2,QString()) ) );
+      RBOOL( obj->load ( PQSTRING(1), OPQSTRING(2,QString()) ) );
     }
     else
     {

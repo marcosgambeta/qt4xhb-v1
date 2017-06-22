@@ -53,8 +53,7 @@ QAxBindable ()
 */
 HB_FUNC_STATIC( QAXBINDABLE_NEW )
 {
-  QAxBindable * o = NULL;
-  o = new QAxBindable ();
+  QAxBindable * o = new QAxBindable ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -100,8 +99,7 @@ HB_FUNC_STATIC( QAXBINDABLE_READDATA )
   {
     if( ISQIODEVICE(1) && ISCHAR(2) )
     {
-      QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-      hb_retl( obj->readData ( par1, PQSTRING(2) ) );
+      RBOOL( obj->readData ( PQIODEVICE(1), PQSTRING(2) ) );
     }
     else
     {
@@ -143,8 +141,7 @@ HB_FUNC_STATIC( QAXBINDABLE_WRITEDATA )
   {
     if( ISQIODEVICE(1) )
     {
-      QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-      hb_retl( obj->writeData ( par1 ) );
+      RBOOL( obj->writeData ( PQIODEVICE(1) ) );
     }
     else
     {
