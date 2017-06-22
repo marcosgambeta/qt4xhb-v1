@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ISACTIVE )
   QAbstractVideoSurface * obj = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isActive () );
+    RBOOL( obj->isActive () );
   }
 }
 
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ISFORMATSUPPORTED )
   if( obj )
   {
     QVideoSurfaceFormat * par1 = (QVideoSurfaceFormat *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->isFormatSupported ( *par1 ) );
+    RBOOL( obj->isFormatSupported ( *par1 ) );
   }
 }
 
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_PRESENT )
   if( obj )
   {
     QVideoFrame * par1 = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->present ( *par1 ) );
+    RBOOL( obj->present ( *par1 ) );
   }
 }
 
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_START )
   if( obj )
   {
     QVideoSurfaceFormat * par1 = (QVideoSurfaceFormat *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->start ( *par1 ) );
+    RBOOL( obj->start ( *par1 ) );
   }
 }
 

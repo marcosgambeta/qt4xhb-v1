@@ -66,8 +66,7 @@ QAudioDeviceInfo ()
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_NEW1 )
 {
-  QAudioDeviceInfo * o = NULL;
-  o = new QAudioDeviceInfo ();
+  QAudioDeviceInfo * o = new QAudioDeviceInfo ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -77,9 +76,7 @@ QAudioDeviceInfo ( const QAudioDeviceInfo & other )
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_NEW2 )
 {
-  QAudioDeviceInfo * o = NULL;
-  QAudioDeviceInfo * par1 = (QAudioDeviceInfo *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QAudioDeviceInfo ( *par1 );
+  QAudioDeviceInfo * o = new QAudioDeviceInfo ( *PQAUDIODEVICEINFO(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -142,7 +139,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_ISFORMATSUPPORTED )
   if( obj )
   {
     QAudioFormat * par1 = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->isFormatSupported ( *par1 ) );
+    RBOOL( obj->isFormatSupported ( *par1 ) );
   }
 }
 
@@ -155,7 +152,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_ISNULL )
   QAudioDeviceInfo * obj = (QAudioDeviceInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 

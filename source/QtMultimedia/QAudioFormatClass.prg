@@ -63,8 +63,7 @@ QAudioFormat ()
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_NEW1 )
 {
-  QAudioFormat * o = NULL;
-  o = new QAudioFormat ();
+  QAudioFormat * o = new QAudioFormat ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -74,9 +73,7 @@ QAudioFormat ( const QAudioFormat & other )
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_NEW2 )
 {
-  QAudioFormat * o = NULL;
-  QAudioFormat * par1 = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QAudioFormat ( *par1 );
+  QAudioFormat * o = new QAudioFormat ( *PQAUDIOFORMAT(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -124,7 +121,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_ISVALID )
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -151,7 +148,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_FREQUENCY )
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->frequency () );
+    RINT( obj->frequency () );
   }
 }
 
@@ -178,7 +175,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SAMPLERATE )
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->sampleRate () );
+    RINT( obj->sampleRate () );
   }
 }
 
@@ -205,7 +202,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_CHANNELS )
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->channels () );
+    RINT( obj->channels () );
   }
 }
 
@@ -232,7 +229,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_CHANNELCOUNT )
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->channelCount () );
+    RINT( obj->channelCount () );
   }
 }
 
@@ -259,7 +256,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SAMPLESIZE )
   QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->sampleSize () );
+    RINT( obj->sampleSize () );
   }
 }
 
