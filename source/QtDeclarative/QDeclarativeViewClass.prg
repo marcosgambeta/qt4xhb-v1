@@ -62,9 +62,7 @@ QDeclarativeView ( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW1 )
 {
-  QDeclarativeView * o = NULL;
-  QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDeclarativeView ( par1 );
+  QDeclarativeView * o = new QDeclarativeView ( OPQWIDGET(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -74,10 +72,7 @@ QDeclarativeView ( const QUrl & source, QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW2 )
 {
-  QDeclarativeView * o = NULL;
-  QUrl * par1 = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QWidget * par2 = ISNIL(2)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDeclarativeView ( *par1, par2 );
+  QDeclarativeView * o = new QDeclarativeView ( *PQURL(1), OPQWIDGET(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -252,8 +247,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_SETSOURCE )
   QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QUrl * par1 = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setSource ( *par1 );
+    obj->setSource ( *PQURL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

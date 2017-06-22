@@ -74,9 +74,7 @@ QDeclarativeEngine ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_NEW )
 {
-  QDeclarativeEngine * o = NULL;
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDeclarativeEngine ( par1 );
+  QDeclarativeEngine * o = new QDeclarativeEngine ( OPQOBJECT(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -214,7 +212,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_IMPORTPLUGIN )
   if( obj )
   {
     QString * par3 = NULL;
-    hb_retl( obj->importPlugin ( PQSTRING(1), PQSTRING(2), par3 ) );
+    RBOOL( obj->importPlugin ( PQSTRING(1), PQSTRING(2), par3 ) );
   }
 }
 
@@ -269,7 +267,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_OUTPUTWARNINGSTOSTANDARDERROR )
   QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->outputWarningsToStandardError () );
+    RBOOL( obj->outputWarningsToStandardError () );
   }
 }
 
@@ -333,8 +331,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETBASEURL )
   QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QUrl * par1 = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setBaseUrl ( *par1 );
+    obj->setBaseUrl ( *PQURL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -428,8 +425,7 @@ ObjectOwnership objectOwnership ( QObject * object )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_OBJECTOWNERSHIP )
 {
-  QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  hb_retni( (int) QDeclarativeEngine::objectOwnership ( par1 ) );
+  hb_retni( (int) QDeclarativeEngine::objectOwnership ( PQOBJECT(1) ) );
 }
 
 
@@ -438,9 +434,8 @@ void setContextForObject ( QObject * object, QDeclarativeContext * context )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_SETCONTEXTFOROBJECT )
 {
-  QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QDeclarativeContext * par2 = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QDeclarativeEngine::setContextForObject ( par1, par2 );
+  QDeclarativeEngine::setContextForObject ( PQOBJECT(1), par2 );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -450,8 +445,7 @@ void setObjectOwnership ( QObject * object, ObjectOwnership ownership )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_SETOBJECTOWNERSHIP )
 {
-  QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QDeclarativeEngine::setObjectOwnership ( par1,  (QDeclarativeEngine::ObjectOwnership) hb_parni(2) );
+  QDeclarativeEngine::setObjectOwnership ( PQOBJECT(1),  (QDeclarativeEngine::ObjectOwnership) hb_parni(2) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

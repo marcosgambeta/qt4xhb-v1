@@ -50,9 +50,7 @@ QDeclarativePropertyMap ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_NEW )
 {
-  QDeclarativePropertyMap * o = NULL;
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDeclarativePropertyMap ( par1 );
+  QDeclarativePropertyMap * o = new QDeclarativePropertyMap ( OPQOBJECT(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -95,7 +93,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_CONTAINS )
   QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->contains ( PQSTRING(1) ) );
+    RBOOL( obj->contains ( PQSTRING(1) ) );
   }
 }
 
@@ -108,7 +106,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_COUNT )
   QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 
@@ -121,8 +119,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_INSERT )
   QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVariant * par2 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->insert ( PQSTRING(1), *par2 );
+    obj->insert ( PQSTRING(1), *PQVARIANT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -136,7 +133,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_ISEMPTY )
   QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 }
 
@@ -172,7 +169,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_SIZE )
   QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->size () );
+    RINT( obj->size () );
   }
 }
 

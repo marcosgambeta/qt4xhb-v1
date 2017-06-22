@@ -55,8 +55,7 @@ QDeclarativeScriptString ()
 */
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEW1 )
 {
-  QDeclarativeScriptString * o = NULL;
-  o = new QDeclarativeScriptString ();
+  QDeclarativeScriptString * o = new QDeclarativeScriptString ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -66,9 +65,7 @@ QDeclarativeScriptString ( const QDeclarativeScriptString & other )
 */
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEW2 )
 {
-  QDeclarativeScriptString * o = NULL;
-  QDeclarativeScriptString * par1 = (QDeclarativeScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDeclarativeScriptString ( *par1 );
+  QDeclarativeScriptString * o = new QDeclarativeScriptString ( *PQDECLARATIVESCRIPTSTRING(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -159,8 +156,7 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SETSCOPEOBJECT )
   QDeclarativeScriptString * obj = (QDeclarativeScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setScopeObject ( par1 );
+    obj->setScopeObject ( PQOBJECT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

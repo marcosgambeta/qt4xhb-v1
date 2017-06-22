@@ -62,9 +62,8 @@ QDeclarativeItem ( QDeclarativeItem * parent = 0 )
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_NEW )
 {
-  QDeclarativeItem * o = NULL;
   QDeclarativeItem * par1 = (QDeclarativeItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDeclarativeItem ( par1 );
+  QDeclarativeItem * o = new QDeclarativeItem ( par1 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -93,8 +92,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_BASELINEOFFSET )
   QDeclarativeItem * obj = (QDeclarativeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->baselineOffset ();
-    hb_retnd( r );
+    RQREAL( obj->baselineOffset () );
   }
 }
 
@@ -135,7 +133,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_CLIP )
   QDeclarativeItem * obj = (QDeclarativeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->clip () );
+    RBOOL( obj->clip () );
   }
 }
 
@@ -162,8 +160,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_IMPLICITHEIGHT )
   QDeclarativeItem * obj = (QDeclarativeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->implicitHeight ();
-    hb_retnd( r );
+    RQREAL( obj->implicitHeight () );
   }
 }
 
@@ -176,8 +173,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_IMPLICITWIDTH )
   QDeclarativeItem * obj = (QDeclarativeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->implicitWidth ();
-    hb_retnd( r );
+    RQREAL( obj->implicitWidth () );
   }
 }
 
@@ -190,7 +186,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_KEEPMOUSEGRAB )
   QDeclarativeItem * obj = (QDeclarativeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->keepMouseGrab () );
+    RBOOL( obj->keepMouseGrab () );
   }
 }
 
@@ -332,7 +328,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_SMOOTH )
   QDeclarativeItem * obj = (QDeclarativeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->smooth () );
+    RBOOL( obj->smooth () );
   }
 }
 

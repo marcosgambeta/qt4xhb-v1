@@ -66,8 +66,7 @@ HB_FUNC_STATIC( QDECLARATIVENETWORKACCESSMANAGERFACTORY_CREATE )
   QDeclarativeNetworkAccessManagerFactory * obj = (QDeclarativeNetworkAccessManagerFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QNetworkAccessManager * ptr = obj->create ( par1 );
+    QNetworkAccessManager * ptr = obj->create ( PQOBJECT(1) );
     _qt4xhb_createReturnClass ( ptr, "QNETWORKACCESSMANAGER" );
   }
 }

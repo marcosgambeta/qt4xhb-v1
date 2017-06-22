@@ -60,8 +60,7 @@ QDeclarativeListReference ()
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_NEW1 )
 {
-  QDeclarativeListReference * o = NULL;
-  o = new QDeclarativeListReference ();
+  QDeclarativeListReference * o = new QDeclarativeListReference ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -71,11 +70,8 @@ QDeclarativeListReference ( QObject * object, const char * property, QDeclarativ
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_NEW2 )
 {
-  QDeclarativeListReference * o = NULL;
-  QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  const char * par2 = hb_parc(2);
   QDeclarativeEngine * par3 = ISNIL(3)? 0 : (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDeclarativeListReference ( par1,  (const char *) par2, par3 );
+  QDeclarativeListReference * o = new QDeclarativeListReference ( PQOBJECT(1),  (const char *) hb_parc(2), par3 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -109,8 +105,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_APPEND )
   QDeclarativeListReference * obj = (QDeclarativeListReference *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->append ( par1 ) );
+    RBOOL( obj->append ( PQOBJECT(1) ) );
   }
 }
 
@@ -137,7 +132,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANAPPEND )
   QDeclarativeListReference * obj = (QDeclarativeListReference *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->canAppend () );
+    RBOOL( obj->canAppend () );
   }
 }
 
@@ -150,7 +145,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANAT )
   QDeclarativeListReference * obj = (QDeclarativeListReference *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->canAt () );
+    RBOOL( obj->canAt () );
   }
 }
 
@@ -163,7 +158,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANCLEAR )
   QDeclarativeListReference * obj = (QDeclarativeListReference *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->canClear () );
+    RBOOL( obj->canClear () );
   }
 }
 
@@ -176,7 +171,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANCOUNT )
   QDeclarativeListReference * obj = (QDeclarativeListReference *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->canCount () );
+    RBOOL( obj->canCount () );
   }
 }
 
@@ -189,7 +184,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CLEAR )
   QDeclarativeListReference * obj = (QDeclarativeListReference *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->clear () );
+    RBOOL( obj->clear () );
   }
 }
 
@@ -202,7 +197,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_COUNT )
   QDeclarativeListReference * obj = (QDeclarativeListReference *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 
@@ -215,7 +210,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_ISVALID )
   QDeclarativeListReference * obj = (QDeclarativeListReference *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 

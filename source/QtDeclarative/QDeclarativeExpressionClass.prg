@@ -62,8 +62,7 @@ QDeclarativeExpression ()
 */
 HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NEW1 )
 {
-  QDeclarativeExpression * o = NULL;
-  o = new QDeclarativeExpression ();
+  QDeclarativeExpression * o = new QDeclarativeExpression ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -73,11 +72,7 @@ QDeclarativeExpression ( QDeclarativeContext * ctxt, QObject * scope, const QStr
 */
 HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NEW2 )
 {
-  QDeclarativeExpression * o = NULL;
-  QDeclarativeContext * par1 = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QObject * par2 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QObject * par4 = ISNIL(4)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDeclarativeExpression ( par1, par2, PQSTRING(3), par4 );
+  QDeclarativeExpression * o = new QDeclarativeExpression ( PQDECLARATIVECONTEXT(1), PQOBJECT(2), PQSTRING(3), OPQOBJECT(4,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -211,7 +206,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_HASERROR )
   QDeclarativeExpression * obj = (QDeclarativeExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasError () );
+    RBOOL( obj->hasError () );
   }
 }
 
@@ -224,7 +219,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_LINENUMBER )
   QDeclarativeExpression * obj = (QDeclarativeExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->lineNumber () );
+    RINT( obj->lineNumber () );
   }
 }
 
@@ -237,7 +232,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NOTIFYONVALUECHANGED )
   QDeclarativeExpression * obj = (QDeclarativeExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->notifyOnValueChanged () );
+    RBOOL( obj->notifyOnValueChanged () );
   }
 }
 
