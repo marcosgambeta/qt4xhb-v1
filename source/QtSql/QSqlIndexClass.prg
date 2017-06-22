@@ -49,8 +49,7 @@ QSqlIndex ( const QString & cursorname = QString(), const QString & name = QStri
 */
 HB_FUNC_STATIC( QSQLINDEX_NEW1 )
 {
-  QSqlIndex * o = NULL;
-  o = new QSqlIndex ( OPQSTRING(1,QString()), OPQSTRING(2,QString()) );
+  QSqlIndex * o = new QSqlIndex ( OPQSTRING(1,QString()), OPQSTRING(2,QString()) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -60,9 +59,7 @@ QSqlIndex ( const QSqlIndex & other )
 */
 HB_FUNC_STATIC( QSQLINDEX_NEW2 )
 {
-  QSqlIndex * o = NULL;
-  QSqlIndex * par1 = (QSqlIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSqlIndex ( *par1 );
+  QSqlIndex * o = new QSqlIndex ( *PQSQLINDEX(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -169,7 +166,7 @@ HB_FUNC_STATIC( QSQLINDEX_ISDESCENDING )
   QSqlIndex * obj = (QSqlIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isDescending ( PINT(1) ) );
+    RBOOL( obj->isDescending ( PINT(1) ) );
   }
 }
 

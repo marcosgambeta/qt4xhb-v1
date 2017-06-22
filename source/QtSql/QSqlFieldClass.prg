@@ -73,8 +73,7 @@ QSqlField ( const QString & fieldName = QString(), QVariant::Type type = QVarian
 */
 HB_FUNC_STATIC( QSQLFIELD_NEW1 )
 {
-  QSqlField * o = NULL;
-  o = new QSqlField ( OPQSTRING(1,QString()), ISNIL(2)? QVariant::Invalid : (QVariant::Type) hb_parni(2) );
+  QSqlField * o = new QSqlField ( OPQSTRING(1,QString()), ISNIL(2)? QVariant::Invalid : (QVariant::Type) hb_parni(2) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -84,9 +83,7 @@ QSqlField ( const QSqlField & other )
 */
 HB_FUNC_STATIC( QSQLFIELD_NEW2 )
 {
-  QSqlField * o = NULL;
-  QSqlField * par1 = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSqlField ( *par1 );
+  QSqlField * o = new QSqlField ( *PQSQLFIELD(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -162,7 +159,7 @@ HB_FUNC_STATIC( QSQLFIELD_ISAUTOVALUE )
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isAutoValue () );
+    RBOOL( obj->isAutoValue () );
   }
 }
 
@@ -175,7 +172,7 @@ HB_FUNC_STATIC( QSQLFIELD_ISGENERATED )
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isGenerated () );
+    RBOOL( obj->isGenerated () );
   }
 }
 
@@ -188,7 +185,7 @@ HB_FUNC_STATIC( QSQLFIELD_ISNULL )
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -201,7 +198,7 @@ HB_FUNC_STATIC( QSQLFIELD_ISREADONLY )
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isReadOnly () );
+    RBOOL( obj->isReadOnly () );
   }
 }
 
@@ -214,7 +211,7 @@ HB_FUNC_STATIC( QSQLFIELD_ISVALID )
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -227,7 +224,7 @@ HB_FUNC_STATIC( QSQLFIELD_LENGTH )
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->length () );
+    RINT( obj->length () );
   }
 }
 
@@ -254,7 +251,7 @@ HB_FUNC_STATIC( QSQLFIELD_PRECISION )
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->precision () );
+    RINT( obj->precision () );
   }
 }
 
@@ -294,8 +291,7 @@ HB_FUNC_STATIC( QSQLFIELD_SETDEFAULTVALUE )
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVariant * par1 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setDefaultValue ( *par1 );
+    obj->setDefaultValue ( *PQVARIANT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -421,8 +417,7 @@ HB_FUNC_STATIC( QSQLFIELD_SETVALUE )
   QSqlField * obj = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVariant * par1 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setValue ( *par1 );
+    obj->setValue ( *PQVARIANT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

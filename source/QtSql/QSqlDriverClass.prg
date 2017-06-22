@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QSQLDRIVER_BEGINTRANSACTION )
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->beginTransaction () );
+    RBOOL( obj->beginTransaction () );
   }
 }
 
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QSQLDRIVER_COMMITTRANSACTION )
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->commitTransaction () );
+    RBOOL( obj->commitTransaction () );
   }
 }
 
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QSQLDRIVER_HASFEATURE )
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasFeature (  (QSqlDriver::DriverFeature) hb_parni(1) ) );
+    RBOOL( obj->hasFeature (  (QSqlDriver::DriverFeature) hb_parni(1) ) );
   }
 }
 
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QSQLDRIVER_ISIDENTIFIERESCAPED )
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isIdentifierEscaped ( PQSTRING(1),  (QSqlDriver::IdentifierType) hb_parni(2) ) );
+    RBOOL( obj->isIdentifierEscaped ( PQSTRING(1),  (QSqlDriver::IdentifierType) hb_parni(2) ) );
   }
 }
 
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QSQLDRIVER_ISOPEN )
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isOpen () );
+    RBOOL( obj->isOpen () );
   }
 }
 
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QSQLDRIVER_ISOPENERROR )
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isOpenError () );
+    RBOOL( obj->isOpenError () );
   }
 }
 
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QSQLDRIVER_OPEN )
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->open ( PQSTRING(1), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()), OPINT(5,-1), OPQSTRING(6,QString()) ) );
+    RBOOL( obj->open ( PQSTRING(1), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()), OPINT(5,-1), OPQSTRING(6,QString()) ) );
   }
 }
 
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QSQLDRIVER_ROLLBACKTRANSACTION )
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->rollbackTransaction () );
+    RBOOL( obj->rollbackTransaction () );
   }
 }
 
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QSQLDRIVER_SUBSCRIBETONOTIFICATION )
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->subscribeToNotification ( PQSTRING(1) ) );
+    RBOOL( obj->subscribeToNotification ( PQSTRING(1) ) );
   }
 }
 
@@ -426,7 +426,7 @@ HB_FUNC_STATIC( QSQLDRIVER_UNSUBSCRIBEFROMNOTIFICATION )
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->unsubscribeFromNotification ( PQSTRING(1) ) );
+    RBOOL( obj->unsubscribeFromNotification ( PQSTRING(1) ) );
   }
 }
 

@@ -49,8 +49,7 @@ QSqlRelation ()
 */
 HB_FUNC_STATIC( QSQLRELATION_NEW1 )
 {
-  QSqlRelation * o = NULL;
-  o = new QSqlRelation ();
+  QSqlRelation * o = new QSqlRelation ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -60,8 +59,7 @@ QSqlRelation ( const QString & tableName, const QString & indexColumn, const QSt
 */
 HB_FUNC_STATIC( QSQLRELATION_NEW2 )
 {
-  QSqlRelation * o = NULL;
-  o = new QSqlRelation ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
+  QSqlRelation * o = new QSqlRelation ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -122,7 +120,7 @@ HB_FUNC_STATIC( QSQLRELATION_ISVALID )
   QSqlRelation * obj = (QSqlRelation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
