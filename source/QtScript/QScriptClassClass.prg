@@ -60,9 +60,7 @@ QScriptClass ( QScriptEngine * engine )
 */
 HB_FUNC_STATIC( QSCRIPTCLASS_NEW )
 {
-  QScriptClass * o = NULL;
-  QScriptEngine * par1 = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QScriptClass ( par1 );
+  QScriptClass * o = new QScriptClass ( PQSCRIPTENGINE(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -227,7 +225,7 @@ HB_FUNC_STATIC( QSCRIPTCLASS_SUPPORTSEXTENSION )
   QScriptClass * obj = (QScriptClass *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->supportsExtension (  (QScriptClass::Extension) hb_parni(1) ) );
+    RBOOL( obj->supportsExtension (  (QScriptClass::Extension) hb_parni(1) ) );
   }
 }
 

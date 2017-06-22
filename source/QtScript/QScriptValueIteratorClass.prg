@@ -62,9 +62,7 @@ QScriptValueIterator ( const QScriptValue & object )
 */
 HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_NEW )
 {
-  QScriptValueIterator * o = NULL;
-  QScriptValue * par1 = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QScriptValueIterator ( *par1 );
+  QScriptValueIterator * o = new QScriptValueIterator ( *PQSCRIPTVALUE(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -106,7 +104,7 @@ HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_HASNEXT )
   QScriptValueIterator * obj = (QScriptValueIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasNext () );
+    RBOOL( obj->hasNext () );
   }
 }
 
@@ -119,7 +117,7 @@ HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_HASPREVIOUS )
   QScriptValueIterator * obj = (QScriptValueIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasPrevious () );
+    RBOOL( obj->hasPrevious () );
   }
 }
 

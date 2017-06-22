@@ -89,8 +89,7 @@ QScriptEngine ()
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_NEW1 )
 {
-  QScriptEngine * o = NULL;
-  o = new QScriptEngine ();
+  QScriptEngine * o = new QScriptEngine ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -100,9 +99,7 @@ QScriptEngine ( QObject * parent )
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_NEW2 )
 {
-  QScriptEngine * o = NULL;
-  QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QScriptEngine ( par1 );
+  QScriptEngine * o = new QScriptEngine ( PQOBJECT(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -317,7 +314,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_HASUNCAUGHTEXCEPTION )
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasUncaughtException () );
+    RBOOL( obj->hasUncaughtException () );
   }
 }
 
@@ -382,7 +379,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_ISEVALUATING )
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isEvaluating () );
+    RBOOL( obj->isEvaluating () );
   }
 }
 
@@ -462,8 +459,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWVARIANT1 )
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVariant * par1 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QScriptValue * ptr = new QScriptValue( obj->newVariant ( *par1 ) );
+    QScriptValue * ptr = new QScriptValue( obj->newVariant ( *PQVARIANT(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
@@ -478,8 +474,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWVARIANT2 )
   if( obj )
   {
     QScriptValue * par1 = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QVariant * par2 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QScriptValue * ptr = new QScriptValue( obj->newVariant ( *par1, *par2 ) );
+    QScriptValue * ptr = new QScriptValue( obj->newVariant ( *par1, *PQVARIANT(2) ) );
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
@@ -536,7 +531,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_PROCESSEVENTSINTERVAL )
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->processEventsInterval () );
+    RINT( obj->processEventsInterval () );
   }
 }
 
@@ -704,7 +699,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_UNCAUGHTEXCEPTIONLINENUMBER )
   QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->uncaughtExceptionLineNumber () );
+    RINT( obj->uncaughtExceptionLineNumber () );
   }
 }
 

@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QSCRIPTABLE_ARGUMENTCOUNT )
   QScriptable * obj = (QScriptable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->argumentCount () );
+    RINT( obj->argumentCount () );
   }
 }
 

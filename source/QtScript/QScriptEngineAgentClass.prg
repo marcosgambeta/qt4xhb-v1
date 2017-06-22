@@ -60,9 +60,7 @@ QScriptEngineAgent ( QScriptEngine * engine )
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_NEW )
 {
-  QScriptEngineAgent * o = NULL;
-  QScriptEngine * par1 = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QScriptEngineAgent ( par1 );
+  QScriptEngineAgent * o = new QScriptEngineAgent ( PQSCRIPTENGINE(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -133,9 +131,8 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_EXCEPTIONCATCH )
   QScriptEngineAgent * obj = (QScriptEngineAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 par1 = hb_parni(1);
     QScriptValue * par2 = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->exceptionCatch ( par1, *par2 );
+    obj->exceptionCatch ( PQINT64(1), *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -149,9 +146,8 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_EXCEPTIONTHROW )
   QScriptEngineAgent * obj = (QScriptEngineAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 par1 = hb_parni(1);
     QScriptValue * par2 = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->exceptionThrow ( par1, *par2, PBOOL(3) );
+    obj->exceptionThrow ( PQINT64(1), *par2, PBOOL(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -180,8 +176,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_FUNCTIONENTRY )
   QScriptEngineAgent * obj = (QScriptEngineAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 par1 = hb_parni(1);
-    obj->functionEntry ( par1 );
+    obj->functionEntry ( PQINT64(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -195,9 +190,8 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_FUNCTIONEXIT )
   QScriptEngineAgent * obj = (QScriptEngineAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 par1 = hb_parni(1);
     QScriptValue * par2 = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->functionExit ( par1, *par2 );
+    obj->functionExit ( PQINT64(1), *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -211,8 +205,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_POSITIONCHANGE )
   QScriptEngineAgent * obj = (QScriptEngineAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 par1 = hb_parni(1);
-    obj->positionChange ( par1, PINT(2), PINT(3) );
+    obj->positionChange ( PQINT64(1), PINT(2), PINT(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -226,8 +219,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_SCRIPTLOAD )
   QScriptEngineAgent * obj = (QScriptEngineAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 par1 = hb_parni(1);
-    obj->scriptLoad ( par1, PQSTRING(2), PQSTRING(3), PINT(4) );
+    obj->scriptLoad ( PQINT64(1), PQSTRING(2), PQSTRING(3), PINT(4) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -241,8 +233,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_SCRIPTUNLOAD )
   QScriptEngineAgent * obj = (QScriptEngineAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 par1 = hb_parni(1);
-    obj->scriptUnload ( par1 );
+    obj->scriptUnload ( PQINT64(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -256,7 +247,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_SUPPORTSEXTENSION )
   QScriptEngineAgent * obj = (QScriptEngineAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->supportsExtension (  (QScriptEngineAgent::Extension) hb_parni(1) ) );
+    RBOOL( obj->supportsExtension (  (QScriptEngineAgent::Extension) hb_parni(1) ) );
   }
 }
 

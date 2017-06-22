@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_HASNEXT )
   QScriptClassPropertyIterator * obj = (QScriptClassPropertyIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasNext () );
+    RBOOL( obj->hasNext () );
   }
 }
 
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_HASPREVIOUS )
   QScriptClassPropertyIterator * obj = (QScriptClassPropertyIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasPrevious () );
+    RBOOL( obj->hasPrevious () );
   }
 }
 

@@ -57,9 +57,8 @@ QScriptContextInfo ( const QScriptContext * context )
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEW1 )
 {
-  QScriptContextInfo * o = NULL;
   const QScriptContext * par1 = (const QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QScriptContextInfo ( par1 );
+  QScriptContextInfo * o = new QScriptContextInfo ( par1 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -69,9 +68,7 @@ QScriptContextInfo ( const QScriptContextInfo & other )
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEW2 )
 {
-  QScriptContextInfo * o = NULL;
-  QScriptContextInfo * par1 = (QScriptContextInfo *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QScriptContextInfo ( *par1 );
+  QScriptContextInfo * o = new QScriptContextInfo ( *PQSCRIPTCONTEXTINFO(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -81,8 +78,7 @@ QScriptContextInfo ()
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEW3 )
 {
-  QScriptContextInfo * o = NULL;
-  o = new QScriptContextInfo ();
+  QScriptContextInfo * o = new QScriptContextInfo ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -149,7 +145,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONENDLINENUMBER )
   QScriptContextInfo * obj = (QScriptContextInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->functionEndLineNumber () );
+    RINT( obj->functionEndLineNumber () );
   }
 }
 
@@ -162,7 +158,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONMETAINDEX )
   QScriptContextInfo * obj = (QScriptContextInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->functionMetaIndex () );
+    RINT( obj->functionMetaIndex () );
   }
 }
 
@@ -212,7 +208,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONSTARTLINENUMBER )
   QScriptContextInfo * obj = (QScriptContextInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->functionStartLineNumber () );
+    RINT( obj->functionStartLineNumber () );
   }
 }
 
@@ -238,7 +234,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_ISNULL )
   QScriptContextInfo * obj = (QScriptContextInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -251,7 +247,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_LINENUMBER )
   QScriptContextInfo * obj = (QScriptContextInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->lineNumber () );
+    RINT( obj->lineNumber () );
   }
 }
 
@@ -264,8 +260,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_SCRIPTID )
   QScriptContextInfo * obj = (QScriptContextInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->scriptId ();
-    hb_retni( i );
+    RQINT64( obj->scriptId () );
   }
 }
 
