@@ -92,7 +92,7 @@ QVideoFrame ( QAbstractVideoBuffer * buffer, const QSize & size, PixelFormat for
 */
 HB_FUNC_STATIC( QVIDEOFRAME_NEW2 )
 {
-  QVideoFrame * o = new QVideoFrame ( PQABSTRACTVIDEOBUFFER(1), *PQSIZE(2),  (QVideoFrame::PixelFormat) hb_parni(3) );
+  QVideoFrame * o = new QVideoFrame ( PQABSTRACTVIDEOBUFFER(1), *PQSIZE(2), (QVideoFrame::PixelFormat) hb_parni(3) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -102,7 +102,7 @@ QVideoFrame ( int bytes, const QSize & size, int bytesPerLine, PixelFormat forma
 */
 HB_FUNC_STATIC( QVIDEOFRAME_NEW3 )
 {
-  QVideoFrame * o = new QVideoFrame ( PINT(1), *PQSIZE(2), PINT(3),  (QVideoFrame::PixelFormat) hb_parni(4) );
+  QVideoFrame * o = new QVideoFrame ( PINT(1), *PQSIZE(2), PINT(3), (QVideoFrame::PixelFormat) hb_parni(4) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_MAP )
   QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RBOOL( obj->map (  (QAbstractVideoBuffer::MapMode) hb_parni(1) ) );
+    RBOOL( obj->map ( (QAbstractVideoBuffer::MapMode) hb_parni(1) ) );
   }
 }
 
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_SETFIELDTYPE )
   QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setFieldType (  (QVideoFrame::FieldType) hb_parni(1) );
+    obj->setFieldType ( (QVideoFrame::FieldType) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -498,7 +498,7 @@ QImage::Format imageFormatFromPixelFormat ( PixelFormat format )
 */
 HB_FUNC_STATIC( QVIDEOFRAME_IMAGEFORMATFROMPIXELFORMAT )
 {
-  hb_retni( (int) QVideoFrame::imageFormatFromPixelFormat (  (QVideoFrame::PixelFormat) hb_parni(1) ) );
+  hb_retni( (int) QVideoFrame::imageFormatFromPixelFormat ( (QVideoFrame::PixelFormat) hb_parni(1) ) );
 }
 
 
@@ -507,7 +507,7 @@ PixelFormat pixelFormatFromImageFormat ( QImage::Format format )
 */
 HB_FUNC_STATIC( QVIDEOFRAME_PIXELFORMATFROMIMAGEFORMAT )
 {
-  hb_retni( (int) QVideoFrame::pixelFormatFromImageFormat (  (QImage::Format) hb_parni(1) ) );
+  hb_retni( (int) QVideoFrame::pixelFormatFromImageFormat ( (QImage::Format) hb_parni(1) ) );
 }
 
 
