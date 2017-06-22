@@ -120,7 +120,7 @@ QXmlQuery ( QueryLanguage,QXmlNamePool & np = QXmlNamePool() )
 HB_FUNC_STATIC( QXMLQUERY_NEW4 )
 {
   QXmlNamePool par2 = ISNIL(2)? QXmlNamePool() : *(QXmlNamePool *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QXmlQuery * o = new QXmlQuery (  (QXmlQuery::QueryLanguage) hb_parni(1), par2 );
+  QXmlQuery * o = new QXmlQuery ( (QXmlQuery::QueryLanguage) hb_parni(1), par2 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
