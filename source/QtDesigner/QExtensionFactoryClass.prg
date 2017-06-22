@@ -44,9 +44,8 @@ QExtensionFactory ( QExtensionManager * parent = 0 )
 */
 HB_FUNC_STATIC( QEXTENSIONFACTORY_NEW )
 {
-  QExtensionFactory * o = NULL;
   QExtensionManager * par1 = ISNIL(1)? 0 : (QExtensionManager *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QExtensionFactory ( par1 );
+  QExtensionFactory * o = new QExtensionFactory ( par1 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -89,8 +88,7 @@ HB_FUNC_STATIC( QEXTENSIONFACTORY_EXTENSION )
   QExtensionFactory * obj = (QExtensionFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QObject * ptr = obj->extension ( par1, PQSTRING(2) );
+    QObject * ptr = obj->extension ( PQOBJECT(1), PQSTRING(2) );
     _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }

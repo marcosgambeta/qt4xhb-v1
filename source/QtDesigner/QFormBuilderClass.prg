@@ -46,8 +46,7 @@ QFormBuilder ()
 */
 HB_FUNC_STATIC( QFORMBUILDER_NEW )
 {
-  QFormBuilder * o = NULL;
-  o = new QFormBuilder ();
+  QFormBuilder * o = new QFormBuilder ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

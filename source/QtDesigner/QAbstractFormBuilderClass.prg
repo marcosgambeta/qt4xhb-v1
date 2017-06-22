@@ -52,8 +52,7 @@ QAbstractFormBuilder ()
 */
 HB_FUNC_STATIC( QABSTRACTFORMBUILDER_NEW )
 {
-  QAbstractFormBuilder * o = NULL;
-  o = new QAbstractFormBuilder ();
+  QAbstractFormBuilder * o = new QAbstractFormBuilder ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -82,9 +81,7 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_LOAD )
   QAbstractFormBuilder * obj = (QAbstractFormBuilder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QWidget * par2 = ISNIL(2)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QWidget * ptr = obj->load ( par1, par2 );
+    QWidget * ptr = obj->load ( PQIODEVICE(1), OPQWIDGET(2,0) );
     _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
   }
 }
@@ -98,9 +95,7 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_SAVE )
   QAbstractFormBuilder * obj = (QAbstractFormBuilder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QWidget * par2 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->save ( par1, par2 );
+    obj->save ( PQIODEVICE(1), PQWIDGET(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

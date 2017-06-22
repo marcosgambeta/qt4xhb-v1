@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_HASFEATURE )
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasFeature (  (QDesignerFormWindowInterface::Feature) hb_parni(1) ) );
+    RBOOL( obj->hasFeature (  (QDesignerFormWindowInterface::Feature) hb_parni(1) ) );
   }
 }
 
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_ISDIRTY )
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isDirty () );
+    RBOOL( obj->isDirty () );
   }
 }
 
@@ -337,8 +337,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_ISMANAGED )
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->isManaged ( par1 ) );
+    RBOOL( obj->isManaged ( PQWIDGET(1) ) );
   }
 }
 
@@ -463,8 +462,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETCONTENTS1 )
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setContents ( par1 );
+    obj->setContents ( PQIODEVICE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -534,8 +532,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETMAINCONTAINER )
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setMainContainer ( par1 );
+    obj->setMainContainer ( PQWIDGET(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -577,8 +574,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_MANAGEWIDGET )
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->manageWidget ( par1 );
+    obj->manageWidget ( PQWIDGET(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -592,8 +588,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SELECTWIDGET )
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->selectWidget ( par1, OPBOOL(2,true) );
+    obj->selectWidget ( PQWIDGET(1), OPBOOL(2,true) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -678,8 +673,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETGRID )
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setGrid ( *par1 );
+    obj->setGrid ( *PQPOINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -693,8 +687,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_UNMANAGEWIDGET )
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->unmanageWidget ( par1 );
+    obj->unmanageWidget ( PQWIDGET(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -706,8 +699,7 @@ QDesignerFormWindowInterface * findFormWindow ( QWidget * widget )
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_FINDFORMWINDOW1 )
 {
-  QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QDesignerFormWindowInterface * ptr = QDesignerFormWindowInterface::findFormWindow ( par1 );
+  QDesignerFormWindowInterface * ptr = QDesignerFormWindowInterface::findFormWindow ( PQWIDGET(1) );
   _qt4xhb_createReturnClass ( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
 }
 
@@ -717,8 +709,7 @@ QDesignerFormWindowInterface * findFormWindow ( QObject * object )
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_FINDFORMWINDOW2 )
 {
-  QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QDesignerFormWindowInterface * ptr = QDesignerFormWindowInterface::findFormWindow ( par1 );
+  QDesignerFormWindowInterface * ptr = QDesignerFormWindowInterface::findFormWindow ( PQOBJECT(1) );
   _qt4xhb_createReturnClass ( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
 }
 

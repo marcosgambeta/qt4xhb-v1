@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_COUNT )
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_INDEXOF )
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->indexOf ( PQSTRING(1) ) );
+    RINT( obj->indexOf ( PQSTRING(1) ) );
   }
 }
 
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_INHERITEDFROMWIDGET )
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->inheritedFromWidget ( PINT(1) ) );
+    RBOOL( obj->inheritedFromWidget ( PINT(1) ) );
   }
 }
 
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_ISSIGNAL )
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isSignal ( PINT(1) ) );
+    RBOOL( obj->isSignal ( PINT(1) ) );
   }
 }
 
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_ISSLOT )
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isSlot ( PINT(1) ) );
+    RBOOL( obj->isSlot ( PINT(1) ) );
   }
 }
 
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_ISVISIBLE )
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isVisible ( PINT(1) ) );
+    RBOOL( obj->isVisible ( PINT(1) ) );
   }
 }
 

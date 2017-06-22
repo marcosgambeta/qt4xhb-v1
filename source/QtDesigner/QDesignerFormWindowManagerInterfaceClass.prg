@@ -372,8 +372,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_CREATEFORMWINDOW )
   int par2 = ISNIL(2)? 0 : hb_parni(2);
   if( obj )
   {
-    QWidget * par1 = ISNIL(1)? 0 : (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QDesignerFormWindowInterface * ptr = obj->createFormWindow ( par1, (Qt::WindowFlags) par2 );
+    QDesignerFormWindowInterface * ptr = obj->createFormWindow ( OPQWIDGET(1,0), (Qt::WindowFlags) par2 );
     _qt4xhb_createReturnClass ( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
   }
 }
@@ -401,7 +400,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_FORMWINDOWCOUNT )
   QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->formWindowCount () );
+    RINT( obj->formWindowCount () );
   }
 }
 

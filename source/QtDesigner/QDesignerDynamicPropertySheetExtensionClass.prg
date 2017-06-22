@@ -67,8 +67,7 @@ HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_ADDDYNAMICPROPERTY )
   QDesignerDynamicPropertySheetExtension * obj = (QDesignerDynamicPropertySheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVariant * par2 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retni( obj->addDynamicProperty ( PQSTRING(1), *par2 ) );
+    RINT( obj->addDynamicProperty ( PQSTRING(1), *PQVARIANT(2) ) );
   }
 }
 
@@ -81,7 +80,7 @@ HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_CANADDDYNAMICPROPERTY )
   QDesignerDynamicPropertySheetExtension * obj = (QDesignerDynamicPropertySheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->canAddDynamicProperty ( PQSTRING(1) ) );
+    RBOOL( obj->canAddDynamicProperty ( PQSTRING(1) ) );
   }
 }
 
@@ -94,7 +93,7 @@ HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_DYNAMICPROPERTIESALLOWED 
   QDesignerDynamicPropertySheetExtension * obj = (QDesignerDynamicPropertySheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->dynamicPropertiesAllowed () );
+    RBOOL( obj->dynamicPropertiesAllowed () );
   }
 }
 
@@ -107,7 +106,7 @@ HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_ISDYNAMICPROPERTY )
   QDesignerDynamicPropertySheetExtension * obj = (QDesignerDynamicPropertySheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isDynamicProperty ( PINT(1) ) );
+    RBOOL( obj->isDynamicProperty ( PINT(1) ) );
   }
 }
 
@@ -120,7 +119,7 @@ HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_REMOVEDYNAMICPROPERTY )
   QDesignerDynamicPropertySheetExtension * obj = (QDesignerDynamicPropertySheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->removeDynamicProperty ( PINT(1) ) );
+    RBOOL( obj->removeDynamicProperty ( PINT(1) ) );
   }
 }
 

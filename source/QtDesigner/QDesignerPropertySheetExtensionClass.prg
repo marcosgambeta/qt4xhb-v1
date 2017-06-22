@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_COUNT )
   QDesignerPropertySheetExtension * obj = (QDesignerPropertySheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->count () );
+    RINT( obj->count () );
   }
 }
 
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_HASRESET )
   QDesignerPropertySheetExtension * obj = (QDesignerPropertySheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasReset ( PINT(1) ) );
+    RBOOL( obj->hasReset ( PINT(1) ) );
   }
 }
 
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_INDEXOF )
   QDesignerPropertySheetExtension * obj = (QDesignerPropertySheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->indexOf ( PQSTRING(1) ) );
+    RINT( obj->indexOf ( PQSTRING(1) ) );
   }
 }
 
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_ISATTRIBUTE )
   QDesignerPropertySheetExtension * obj = (QDesignerPropertySheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isAttribute ( PINT(1) ) );
+    RBOOL( obj->isAttribute ( PINT(1) ) );
   }
 }
 
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_ISCHANGED )
   QDesignerPropertySheetExtension * obj = (QDesignerPropertySheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isChanged ( PINT(1) ) );
+    RBOOL( obj->isChanged ( PINT(1) ) );
   }
 }
 
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_ISVISIBLE )
   QDesignerPropertySheetExtension * obj = (QDesignerPropertySheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isVisible ( PINT(1) ) );
+    RBOOL( obj->isVisible ( PINT(1) ) );
   }
 }
 
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_RESET )
   QDesignerPropertySheetExtension * obj = (QDesignerPropertySheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->reset ( PINT(1) ) );
+    RBOOL( obj->reset ( PINT(1) ) );
   }
 }
 
@@ -243,8 +243,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETPROPERTY )
   QDesignerPropertySheetExtension * obj = (QDesignerPropertySheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVariant * par2 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setProperty ( PINT(1), *par2 );
+    obj->setProperty ( PINT(1), *PQVARIANT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

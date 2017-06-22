@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_HASSELECTION )
   QDesignerFormWindowCursorInterface * obj = (QDesignerFormWindowCursorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasSelection () );
+    RBOOL( obj->hasSelection () );
   }
 }
 
@@ -118,8 +118,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_ISWIDGETSELECTED )
   QDesignerFormWindowCursorInterface * obj = (QDesignerFormWindowCursorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->isWidgetSelected ( par1 ) );
+    RBOOL( obj->isWidgetSelected ( PQWIDGET(1) ) );
   }
 }
 
@@ -132,7 +131,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_MOVEPOSITION )
   QDesignerFormWindowCursorInterface * obj = (QDesignerFormWindowCursorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->movePosition ( (QDesignerFormWindowCursorInterface::MoveOperation) hb_parni(1), ISNIL(2)? QDesignerFormWindowCursorInterface::MoveAnchor : (QDesignerFormWindowCursorInterface::MoveMode) hb_parni(2) ) );
+    RBOOL( obj->movePosition ( (QDesignerFormWindowCursorInterface::MoveOperation) hb_parni(1), ISNIL(2)? QDesignerFormWindowCursorInterface::MoveAnchor : (QDesignerFormWindowCursorInterface::MoveMode) hb_parni(2) ) );
   }
 }
 
@@ -145,7 +144,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_POSITION )
   QDesignerFormWindowCursorInterface * obj = (QDesignerFormWindowCursorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->position () );
+    RINT( obj->position () );
   }
 }
 
@@ -173,7 +172,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_SELECTEDWIDGETCOUNT )
   QDesignerFormWindowCursorInterface * obj = (QDesignerFormWindowCursorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->selectedWidgetCount () );
+    RINT( obj->selectedWidgetCount () );
   }
 }
 
@@ -216,7 +215,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_WIDGETCOUNT )
   QDesignerFormWindowCursorInterface * obj = (QDesignerFormWindowCursorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->widgetCount () );
+    RINT( obj->widgetCount () );
   }
 }
 

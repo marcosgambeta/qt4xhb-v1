@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_ISREADONLY )
   QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isReadOnly () );
+    RBOOL( obj->isReadOnly () );
   }
 }
 
@@ -124,8 +124,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETOBJECT )
   QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setObject ( par1 );
+    obj->setObject ( PQOBJECT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -139,8 +138,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETPROPERTYVALUE )
   QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVariant * par2 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setPropertyValue ( PQSTRING(1), *par2, OPBOOL(3,true) );
+    obj->setPropertyValue ( PQSTRING(1), *PQVARIANT(2), OPBOOL(3,true) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
