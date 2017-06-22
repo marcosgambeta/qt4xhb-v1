@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT2 )
   if( obj )
   {
     int par3 = hb_parni(3);
-    obj->addToJavaScriptWindowObject ( PQSTRING(1), PQOBJECT(2),  (QScriptEngine::ValueOwnership) par3 );
+    obj->addToJavaScriptWindowObject ( PQSTRING(1), PQOBJECT(2), (QScriptEngine::ValueOwnership) par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QWEBFRAME_LOAD2 )
     QNetworkRequest * par1 = (QNetworkRequest *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = ISNIL(2)? (int) QNetworkAccessManager::GetOperation : hb_parni(2);
     QByteArray par3 = ISNIL(3)? QByteArray() : *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->load ( *par1,  (QNetworkAccessManager::Operation) par2, par3 );
+    obj->load ( *par1, (QNetworkAccessManager::Operation) par2, par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QWEBFRAME_RENDER3 )
   {
     int par2 = hb_parni(2);
     QRegion par3 = ISNIL(3)? QRegion() : *(QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->render ( PQPAINTER(1),  (QWebFrame::RenderLayer) par2, par3 );
+    obj->render ( PQPAINTER(1), (QWebFrame::RenderLayer) par2, par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -541,7 +541,7 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARGEOMETRY )
   QWebFrame * obj = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRect * ptr = new QRect( obj->scrollBarGeometry (  (Qt::Orientation) hb_parni(1) ) );
+    QRect * ptr = new QRect( obj->scrollBarGeometry ( (Qt::Orientation) hb_parni(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -555,7 +555,7 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARMAXIMUM )
   QWebFrame * obj = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RINT( obj->scrollBarMaximum (  (Qt::Orientation) hb_parni(1) ) );
+    RINT( obj->scrollBarMaximum ( (Qt::Orientation) hb_parni(1) ) );
   }
 }
 
@@ -568,7 +568,7 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARMINIMUM )
   QWebFrame * obj = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RINT( obj->scrollBarMinimum (  (Qt::Orientation) hb_parni(1) ) );
+    RINT( obj->scrollBarMinimum ( (Qt::Orientation) hb_parni(1) ) );
   }
 }
 
@@ -581,7 +581,7 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARPOLICY )
   QWebFrame * obj = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (int) obj->scrollBarPolicy (  (Qt::Orientation) hb_parni(1) ) );
+    hb_retni( (int) obj->scrollBarPolicy ( (Qt::Orientation) hb_parni(1) ) );
   }
 }
 
@@ -594,7 +594,7 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARVALUE )
   QWebFrame * obj = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RINT( obj->scrollBarValue (  (Qt::Orientation) hb_parni(1) ) );
+    RINT( obj->scrollBarValue ( (Qt::Orientation) hb_parni(1) ) );
   }
 }
 
@@ -694,7 +694,7 @@ HB_FUNC_STATIC( QWEBFRAME_SETSCROLLBARPOLICY )
   if( obj )
   {
     int par2 = hb_parni(2);
-    obj->setScrollBarPolicy (  (Qt::Orientation) hb_parni(1),  (Qt::ScrollBarPolicy) par2 );
+    obj->setScrollBarPolicy ( (Qt::Orientation) hb_parni(1), (Qt::ScrollBarPolicy) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -708,7 +708,7 @@ HB_FUNC_STATIC( QWEBFRAME_SETSCROLLBARVALUE )
   QWebFrame * obj = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setScrollBarValue (  (Qt::Orientation) hb_parni(1), PINT(2) );
+    obj->setScrollBarValue ( (Qt::Orientation) hb_parni(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

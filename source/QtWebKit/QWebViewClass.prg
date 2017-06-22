@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QWEBVIEW_FINDTEXT )
   if( obj )
   {
     int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-    RBOOL( obj->findText ( PQSTRING(1),  (QWebPage::FindFlags) par2 ) );
+    RBOOL( obj->findText ( PQSTRING(1), (QWebPage::FindFlags) par2 ) );
   }
 }
 
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QWEBVIEW_LOAD2 )
     QNetworkRequest * par1 = (QNetworkRequest *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = ISNIL(2)? (int) QNetworkAccessManager::GetOperation : hb_parni(2);
     QByteArray par3 = ISNIL(3)? QByteArray() : *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->load ( *par1,  (QNetworkAccessManager::Operation) par2, par3 );
+    obj->load ( *par1, (QNetworkAccessManager::Operation) par2, par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QWEBVIEW_PAGEACTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    QAction * ptr = obj->pageAction (  (QWebPage::WebAction) par1 );
+    QAction * ptr = obj->pageAction ( (QWebPage::WebAction) par1 );
     _qt4xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETRENDERHINT )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setRenderHint (  (QPainter::RenderHint) par1, OPBOOL(2,true) );
+    obj->setRenderHint ( (QPainter::RenderHint) par1, OPBOOL(2,true) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETRENDERHINTS )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setRenderHints (  (QPainter::RenderHints) par1 );
+    obj->setRenderHints ( (QPainter::RenderHints) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QWEBVIEW_TRIGGERPAGEACTION )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->triggerPageAction (  (QWebPage::WebAction) par1, OPBOOL(2,false) );
+    obj->triggerPageAction ( (QWebPage::WebAction) par1, OPBOOL(2,false) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
