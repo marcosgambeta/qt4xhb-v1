@@ -75,7 +75,7 @@ QGLBuffer ( QGLBuffer::Type type )
 */
 HB_FUNC_STATIC( QGLBUFFER_NEW2 )
 {
-  QGLBuffer * o = new QGLBuffer (  (QGLBuffer::Type) hb_parni(1) );
+  QGLBuffer * o = new QGLBuffer ( (QGLBuffer::Type) hb_parni(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QGLBUFFER_MAP )
   if( obj )
   {
     int par1 = hb_parni(1);
-    void * retptr = obj->map (  (QGLBuffer::Access) par1 );
+    void * retptr = obj->map ( (QGLBuffer::Access) par1 );
   hb_retptr( (void *) retptr );
   }
 }
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QGLBUFFER_SETUSAGEPATTERN )
   if( obj )
   {
     int par1 = hb_parni(1);
-    obj->setUsagePattern (  (QGLBuffer::UsagePattern) par1 );
+    obj->setUsagePattern ( (QGLBuffer::UsagePattern) par1 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -359,7 +359,7 @@ void release ( QGLBuffer::Type type )
 HB_FUNC_STATIC( QGLBUFFER_RELEASE2 )
 {
   int par1 = hb_parni(1);
-  QGLBuffer::release (  (QGLBuffer::Type) par1 );
+  QGLBuffer::release ( (QGLBuffer::Type) par1 );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

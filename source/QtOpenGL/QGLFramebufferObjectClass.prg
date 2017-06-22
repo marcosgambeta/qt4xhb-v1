@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW5 )
 {
   GLenum par4 = ISNIL(4)? GL_TEXTURE_2D : hb_parni(4);
   GLenum par5 = ISNIL(5)? GL_RGBA8 : hb_parni(5);
-  QGLFramebufferObject * o = new QGLFramebufferObject ( PINT(1), PINT(2),  (QGLFramebufferObject::Attachment) hb_parni(3), par4, par5 );
+  QGLFramebufferObject * o = new QGLFramebufferObject ( PINT(1), PINT(2), (QGLFramebufferObject::Attachment) hb_parni(3), par4, par5 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW6 )
 {
   GLenum par3 = ISNIL(3)? GL_TEXTURE_2D : hb_parni(3);
   GLenum par4 = ISNIL(4)? GL_RGBA8 : hb_parni(4);
-  QGLFramebufferObject * o = new QGLFramebufferObject ( *PQSIZE(1),  (QGLFramebufferObject::Attachment) hb_parni(2), par3, par4 );
+  QGLFramebufferObject * o = new QGLFramebufferObject ( *PQSIZE(1), (QGLFramebufferObject::Attachment) hb_parni(2), par3, par4 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

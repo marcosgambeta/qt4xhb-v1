@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QGLCONTEXT_BINDTEXTURE1 )
     QImage * par1 = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     GLenum par2 = hb_parni(2);
     int par4 = hb_parni(4);
-    hb_retni( (GLuint) obj->bindTexture ( *par1, par2,  (QGLContext::BindOptions) par4 ) );
+    hb_retni( (GLuint) obj->bindTexture ( *par1, par2, (QGLContext::BindOptions) par4 ) );
   }
 }
 
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QGLCONTEXT_BINDTEXTURE5 )
     GLenum par2 = hb_parni(2);
     GLint par3 = hb_parni(3);
     int par4 = hb_parni(4);
-    hb_retni( (GLuint) obj->bindTexture ( *PQPIXMAP(1), par2, par3,  (QGLContext::BindOptions) par4 ) );
+    hb_retni( (GLuint) obj->bindTexture ( *PQPIXMAP(1), par2, par3, (QGLContext::BindOptions) par4 ) );
   }
 }
 
