@@ -64,8 +64,7 @@ QTestEventList ()
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_NEW1 )
 {
-  QTestEventList * o = NULL;
-  o = new QTestEventList ();
+  QTestEventList * o = new QTestEventList ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -75,9 +74,7 @@ QTestEventList ( const QTestEventList & other )
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_NEW2 )
 {
-  QTestEventList * o = NULL;
-  QTestEventList * par1 = (QTestEventList *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QTestEventList ( *par1 );
+  QTestEventList * o = new QTestEventList ( *PQTESTEVENTLIST(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -378,8 +375,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_SIMULATE )
   QTestEventList * obj = (QTestEventList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->simulate ( par1 );
+    obj->simulate ( PQWIDGET(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
