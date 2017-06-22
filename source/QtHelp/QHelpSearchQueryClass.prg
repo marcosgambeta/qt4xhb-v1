@@ -55,7 +55,7 @@ QHelpSearchQuery ( FieldName field, const QStringList & wordList )
 */
 HB_FUNC_STATIC( QHELPSEARCHQUERY_NEW2 )
 {
-  QHelpSearchQuery * o = new QHelpSearchQuery (  (QHelpSearchQuery::FieldName) hb_parni(1), PQSTRINGLIST(2) );
+  QHelpSearchQuery * o = new QHelpSearchQuery ( (QHelpSearchQuery::FieldName) hb_parni(1), PQSTRINGLIST(2) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
