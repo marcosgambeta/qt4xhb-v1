@@ -50,8 +50,7 @@ QMetaClassInfo()
 */
 HB_FUNC_STATIC( QMETACLASSINFO_NEW )
 {
-  QMetaClassInfo * o = NULL;
-  o = new QMetaClassInfo ();
+  QMetaClassInfo * o = new QMetaClassInfo ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

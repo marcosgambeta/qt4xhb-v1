@@ -54,9 +54,7 @@ QDebug ( QIODevice * device )
 */
 HB_FUNC_STATIC( QDEBUG_NEW1 )
 {
-  QDebug * o = NULL;
-  QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDebug ( par1 );
+  QDebug * o = new QDebug ( PQIODEVICE(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -66,9 +64,8 @@ QDebug ( QString * string )
 */
 HB_FUNC_STATIC( QDEBUG_NEW2 )
 {
-  QDebug * o = NULL;
   QString * par1 = NULL;
-  o = new QDebug ( par1 );
+  QDebug * o = new QDebug ( par1 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -78,8 +75,7 @@ QDebug ( QtMsgType type )
 */
 HB_FUNC_STATIC( QDEBUG_NEW3 )
 {
-  QDebug * o = NULL;
-  o = new QDebug (  (QtMsgType) hb_parni(1) );
+  QDebug * o = new QDebug (  (QtMsgType) hb_parni(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -89,9 +85,7 @@ QDebug ( const QDebug & other )
 */
 HB_FUNC_STATIC( QDEBUG_NEW4 )
 {
-  QDebug * o = NULL;
-  QDebug * par1 = (QDebug *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDebug ( *par1 );
+  QDebug * o = new QDebug ( *PQDEBUG(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

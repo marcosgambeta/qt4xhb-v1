@@ -131,8 +131,7 @@ QUrl ()
 */
 HB_FUNC_STATIC( QURL_NEW1 )
 {
-  QUrl * o = NULL;
-  o = new QUrl ();
+  QUrl * o = new QUrl ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -142,8 +141,7 @@ QUrl ( const QString & url )
 */
 HB_FUNC_STATIC( QURL_NEW2 )
 {
-  QUrl * o = NULL;
-  o = new QUrl ( PQSTRING(1) );
+  QUrl * o = new QUrl ( PQSTRING(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -153,9 +151,7 @@ QUrl ( const QUrl & other )
 */
 HB_FUNC_STATIC( QURL_NEW3 )
 {
-  QUrl * o = NULL;
-  QUrl * par1 = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QUrl ( *par1 );
+  QUrl * o = new QUrl ( *PQURL(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -165,9 +161,7 @@ QUrl ( const QString & url, ParsingMode parsingMode )
 */
 HB_FUNC_STATIC( QURL_NEW4 )
 {
-  QUrl * o = NULL;
-  int par2 = hb_parni(2);
-  o = new QUrl ( PQSTRING(1),  (QUrl::ParsingMode) par2 );
+  QUrl * o = new QUrl ( PQSTRING(1),  (QUrl::ParsingMode) hb_parni(2) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -226,9 +220,7 @@ HB_FUNC_STATIC( QURL_ADDENCODEDQUERYITEM )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QByteArray * par2 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->addEncodedQueryItem ( *par1, *par2 );
+    obj->addEncodedQueryItem ( *PQBYTEARRAY(1), *PQBYTEARRAY(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -256,8 +248,7 @@ HB_FUNC_STATIC( QURL_ALLENCODEDQUERYITEMVALUES )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QList<QByteArray> list = obj->allEncodedQueryItemValues ( *par1 );
+    QList<QByteArray> list = obj->allEncodedQueryItemValues ( *PQBYTEARRAY(1) );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QBYTEARRAY" );
@@ -422,8 +413,7 @@ HB_FUNC_STATIC( QURL_ENCODEDQUERYITEMVALUE )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QByteArray * ptr = new QByteArray( obj->encodedQueryItemValue ( *par1 ) );
+    QByteArray * ptr = new QByteArray( obj->encodedQueryItemValue ( *PQBYTEARRAY(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -480,8 +470,7 @@ HB_FUNC_STATIC( QURL_HASENCODEDQUERYITEM )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->hasEncodedQueryItem ( *par1 ) );
+    RBOOL( obj->hasEncodedQueryItem ( *PQBYTEARRAY(1) ) );
   }
 }
 
@@ -494,7 +483,7 @@ HB_FUNC_STATIC( QURL_HASFRAGMENT )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasFragment () );
+    RBOOL( obj->hasFragment () );
   }
 }
 
@@ -507,7 +496,7 @@ HB_FUNC_STATIC( QURL_HASQUERY )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasQuery () );
+    RBOOL( obj->hasQuery () );
   }
 }
 
@@ -520,7 +509,7 @@ HB_FUNC_STATIC( QURL_HASQUERYITEM )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasQueryItem ( PQSTRING(1) ) );
+    RBOOL( obj->hasQueryItem ( PQSTRING(1) ) );
   }
 }
 
@@ -547,7 +536,7 @@ HB_FUNC_STATIC( QURL_ISEMPTY )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 }
 
@@ -560,7 +549,7 @@ HB_FUNC_STATIC( QURL_ISLOCALFILE )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isLocalFile () );
+    RBOOL( obj->isLocalFile () );
   }
 }
 
@@ -573,8 +562,7 @@ HB_FUNC_STATIC( QURL_ISPARENTOF )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QUrl * par1 = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->isParentOf ( *par1 ) );
+    RBOOL( obj->isParentOf ( *PQURL(1) ) );
   }
 }
 
@@ -587,7 +575,7 @@ HB_FUNC_STATIC( QURL_ISRELATIVE )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isRelative () );
+    RBOOL( obj->isRelative () );
   }
 }
 
@@ -600,7 +588,7 @@ HB_FUNC_STATIC( QURL_ISVALID )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -641,7 +629,7 @@ HB_FUNC_STATIC( QURL_PORT1 )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->port () );
+    RINT( obj->port () );
   }
 }
 
@@ -654,8 +642,7 @@ HB_FUNC_STATIC( QURL_PORT2 )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retni( obj->port ( par1 ) );
+    RINT( obj->port ( PINT(1) ) );
   }
 }
 
@@ -700,8 +687,7 @@ HB_FUNC_STATIC( QURL_REMOVEALLENCODEDQUERYITEMS )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->removeAllEncodedQueryItems ( *par1 );
+    obj->removeAllEncodedQueryItems ( *PQBYTEARRAY(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -729,8 +715,7 @@ HB_FUNC_STATIC( QURL_REMOVEENCODEDQUERYITEM )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->removeEncodedQueryItem ( *par1 );
+    obj->removeEncodedQueryItem ( *PQBYTEARRAY(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -758,8 +743,7 @@ HB_FUNC_STATIC( QURL_RESOLVED )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QUrl * par1 = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QUrl * ptr = new QUrl( obj->resolved ( *par1 ) );
+    QUrl * ptr = new QUrl( obj->resolved ( *PQURL(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
@@ -801,8 +785,7 @@ HB_FUNC_STATIC( QURL_SETENCODEDFRAGMENT )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setEncodedFragment ( *par1 );
+    obj->setEncodedFragment ( *PQBYTEARRAY(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -816,8 +799,7 @@ HB_FUNC_STATIC( QURL_SETENCODEDHOST )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setEncodedHost ( *par1 );
+    obj->setEncodedHost ( *PQBYTEARRAY(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -831,8 +813,7 @@ HB_FUNC_STATIC( QURL_SETENCODEDPASSWORD )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setEncodedPassword ( *par1 );
+    obj->setEncodedPassword ( *PQBYTEARRAY(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -846,8 +827,7 @@ HB_FUNC_STATIC( QURL_SETENCODEDPATH )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setEncodedPath ( *par1 );
+    obj->setEncodedPath ( *PQBYTEARRAY(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -861,8 +841,7 @@ HB_FUNC_STATIC( QURL_SETENCODEDQUERY )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setEncodedQuery ( *par1 );
+    obj->setEncodedQuery ( *PQBYTEARRAY(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -877,8 +856,7 @@ HB_FUNC_STATIC( QURL_SETENCODEDURL1 )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setEncodedUrl ( *par1 );
+    obj->setEncodedUrl ( *PQBYTEARRAY(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -892,9 +870,8 @@ HB_FUNC_STATIC( QURL_SETENCODEDURL2 )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
-    obj->setEncodedUrl ( *par1,  (QUrl::ParsingMode) par2 );
+    obj->setEncodedUrl ( *PQBYTEARRAY(1),  (QUrl::ParsingMode) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -923,8 +900,7 @@ HB_FUNC_STATIC( QURL_SETENCODEDUSERNAME )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setEncodedUserName ( *par1 );
+    obj->setEncodedUserName ( *PQBYTEARRAY(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -994,8 +970,7 @@ HB_FUNC_STATIC( QURL_SETPORT )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setPort ( par1 );
+    obj->setPort ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1209,8 +1184,7 @@ QString fromAce ( const QByteArray & domain )
 */
 HB_FUNC_STATIC( QURL_FROMACE )
 {
-  QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QString str1 = QUrl::fromAce ( *par1 );
+  QString str1 = QUrl::fromAce ( *PQBYTEARRAY(1) );
   hb_retc( RQSTRING(str1) );
 }
 
@@ -1220,8 +1194,7 @@ QUrl fromEncoded ( const QByteArray & input )
 */
 HB_FUNC_STATIC( QURL_FROMENCODED1 )
 {
-  QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QUrl * ptr = new QUrl( QUrl::fromEncoded ( *par1 ) );
+  QUrl * ptr = new QUrl( QUrl::fromEncoded ( *PQBYTEARRAY(1) ) );
   _qt4xhb_createReturnClass ( ptr, "QURL", true );
 }
 
@@ -1231,9 +1204,8 @@ QUrl fromEncoded ( const QByteArray & input, ParsingMode parsingMode )
 */
 HB_FUNC_STATIC( QURL_FROMENCODED2 )
 {
-  QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = hb_parni(2);
-  QUrl * ptr = new QUrl( QUrl::fromEncoded ( *par1,  (QUrl::ParsingMode) par2 ) );
+  QUrl * ptr = new QUrl( QUrl::fromEncoded ( *PQBYTEARRAY(1),  (QUrl::ParsingMode) par2 ) );
   _qt4xhb_createReturnClass ( ptr, "QURL", true );
 }
 
@@ -1268,8 +1240,7 @@ QString fromPercentEncoding ( const QByteArray & input )
 */
 HB_FUNC_STATIC( QURL_FROMPERCENTENCODING )
 {
-  QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QString str1 = QUrl::fromPercentEncoding ( *par1 );
+  QString str1 = QUrl::fromPercentEncoding ( *PQBYTEARRAY(1) );
   hb_retc( RQSTRING(str1) );
 }
 

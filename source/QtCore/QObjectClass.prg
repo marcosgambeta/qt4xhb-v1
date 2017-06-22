@@ -1466,9 +1466,7 @@ QObject ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QOBJECT_NEW )
 {
-  QObject * o = NULL;
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QObject ( par1 );
+  QObject * o = new QObject ( OPQOBJECT(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -1498,7 +1496,7 @@ HB_FUNC_STATIC( QOBJECT_BLOCKSIGNALS )
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->blockSignals ( PBOOL(1) ) );
+    RBOOL( obj->blockSignals ( PBOOL(1) ) );
   }
 }
 
@@ -1630,8 +1628,7 @@ HB_FUNC_STATIC( QOBJECT_EVENT )
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QEvent * par1 = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->event ( par1 ) );
+    RBOOL( obj->event ( PQEVENT(1) ) );
   }
 }
 
@@ -1644,9 +1641,7 @@ HB_FUNC_STATIC( QOBJECT_EVENTFILTER )
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QEvent * par2 = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->eventFilter ( par1, par2 ) );
+    RBOOL( obj->eventFilter ( PQOBJECT(1), PQEVENT(2) ) );
   }
 }
 
@@ -1778,8 +1773,7 @@ HB_FUNC_STATIC( QOBJECT_INHERITS )
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const char * par1 = hb_parc(1);
-    hb_retl( obj->inherits (  (const char *) par1 ) );
+    RBOOL( obj->inherits (  (const char *) hb_parc(1) ) );
   }
 }
 
@@ -1792,8 +1786,7 @@ HB_FUNC_STATIC( QOBJECT_INSTALLEVENTFILTER )
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->installEventFilter ( par1 );
+    obj->installEventFilter ( PQOBJECT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1807,7 +1800,7 @@ HB_FUNC_STATIC( QOBJECT_ISWIDGETTYPE )
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isWidgetType () );
+    RBOOL( obj->isWidgetType () );
   }
 }
 
@@ -1891,8 +1884,7 @@ HB_FUNC_STATIC( QOBJECT_PROPERTY )
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const char * par1 = hb_parc(1);
-    QVariant * ptr = new QVariant( obj->property (  (const char *) par1 ) );
+    QVariant * ptr = new QVariant( obj->property (  (const char *) hb_parc(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -1906,8 +1898,7 @@ HB_FUNC_STATIC( QOBJECT_REMOVEEVENTFILTER )
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->removeEventFilter ( par1 );
+    obj->removeEventFilter ( PQOBJECT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1935,8 +1926,7 @@ HB_FUNC_STATIC( QOBJECT_SETPARENT )
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setParent ( par1 );
+    obj->setParent ( PQOBJECT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1950,9 +1940,7 @@ HB_FUNC_STATIC( QOBJECT_SETPROPERTY )
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const char * par1 = hb_parc(1);
-    QVariant * par2 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->setProperty (  (const char *) par1, *par2 ) );
+    RBOOL( obj->setProperty (  (const char *) hb_parc(1), *PQVARIANT(2) ) );
   }
 }
 
@@ -1965,7 +1953,7 @@ HB_FUNC_STATIC( QOBJECT_SIGNALSBLOCKED )
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->signalsBlocked () );
+    RBOOL( obj->signalsBlocked () );
   }
 }
 
@@ -1978,7 +1966,7 @@ HB_FUNC_STATIC( QOBJECT_STARTTIMER )
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->startTimer ( PINT(1) ) );
+    RINT( obj->startTimer ( PINT(1) ) );
   }
 }
 

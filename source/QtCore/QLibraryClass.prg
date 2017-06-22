@@ -59,9 +59,7 @@ QLibrary(QObject *parent = 0)
 */
 HB_FUNC_STATIC( QLIBRARY_NEW1 )
 {
-  QLibrary * o = NULL;
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QLibrary ( par1 );
+  QLibrary * o = new QLibrary ( OPQOBJECT(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -71,9 +69,7 @@ QLibrary(const QString& fileName, QObject *parent = 0)
 */
 HB_FUNC_STATIC( QLIBRARY_NEW2 )
 {
-  QLibrary * o = NULL;
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QLibrary ( PQSTRING(1), par2 );
+  QLibrary * o = new QLibrary ( PQSTRING(1), OPQOBJECT(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -83,9 +79,7 @@ QLibrary(const QString& fileName, int verNum, QObject *parent = 0)
 */
 HB_FUNC_STATIC( QLIBRARY_NEW3 )
 {
-  QLibrary * o = NULL;
-  QObject * par3 = ISNIL(3)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QLibrary ( PQSTRING(1), PINT(2), par3 );
+  QLibrary * o = new QLibrary ( PQSTRING(1), PINT(2), OPQOBJECT(3,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -95,9 +89,7 @@ QLibrary(const QString& fileName, const QString &version, QObject *parent = 0)
 */
 HB_FUNC_STATIC( QLIBRARY_NEW4 )
 {
-  QLibrary * o = NULL;
-  QObject * par3 = ISNIL(3)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QLibrary ( PQSTRING(1), PQSTRING(2), par3 );
+  QLibrary * o = new QLibrary ( PQSTRING(1), PQSTRING(2), OPQOBJECT(3,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -155,9 +147,8 @@ HB_FUNC_STATIC( QLIBRARY_RESOLVE1 )
   QLibrary * obj = (QLibrary *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const char * par1 = hb_parc(1);
-    void * retptr = obj->resolve (  (const char *) par1 );
-  hb_retptr( (void *) retptr );
+    void * retptr = obj->resolve (  (const char *) hb_parc(1) );
+    hb_retptr( (void *) retptr );
   }
 }
 
@@ -170,7 +161,7 @@ HB_FUNC_STATIC( QLIBRARY_LOAD )
   QLibrary * obj = (QLibrary *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->load () );
+    RBOOL( obj->load () );
   }
 }
 
@@ -183,7 +174,7 @@ HB_FUNC_STATIC( QLIBRARY_UNLOAD )
   QLibrary * obj = (QLibrary *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->unload () );
+    RBOOL( obj->unload () );
   }
 }
 
@@ -196,7 +187,7 @@ HB_FUNC_STATIC( QLIBRARY_ISLOADED )
   QLibrary * obj = (QLibrary *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isLoaded () );
+    RBOOL( obj->isLoaded () );
   }
 }
 
@@ -319,8 +310,7 @@ static void *resolve(const QString &fileName, const char *symbol)
 */
 HB_FUNC_STATIC( QLIBRARY_RESOLVE2 )
 {
-  const char * par2 = hb_parc(2);
-  void * retptr = QLibrary::resolve ( PQSTRING(1),  (const char *) par2 );
+  void * retptr = QLibrary::resolve ( PQSTRING(1),  (const char *) hb_parc(2) );
   hb_retptr( (void *) retptr );
 }
 
@@ -330,8 +320,7 @@ static void *resolve(const QString &fileName, int verNum, const char *symbol)
 */
 HB_FUNC_STATIC( QLIBRARY_RESOLVE3 )
 {
-  const char * par3 = hb_parc(3);
-  void * retptr = QLibrary::resolve ( PQSTRING(1), PINT(2),  (const char *) par3 );
+  void * retptr = QLibrary::resolve ( PQSTRING(1), PINT(2),  (const char *) hb_parc(3) );
   hb_retptr( (void *) retptr );
 }
 
@@ -341,8 +330,7 @@ static void *resolve(const QString &fileName, const QString &version, const char
 */
 HB_FUNC_STATIC( QLIBRARY_RESOLVE4 )
 {
-  const char * par3 = hb_parc(3);
-  void * retptr = QLibrary::resolve ( PQSTRING(1), PQSTRING(2),  (const char *) par3 );
+  void * retptr = QLibrary::resolve ( PQSTRING(1), PQSTRING(2),  (const char *) hb_parc(3) );
   hb_retptr( (void *) retptr );
 }
 
@@ -377,7 +365,7 @@ static bool isLibrary(const QString &fileName)
 */
 HB_FUNC_STATIC( QLIBRARY_ISLIBRARY )
 {
-  hb_retl( QLibrary::isLibrary ( PQSTRING(1) ) );
+  RBOOL( QLibrary::isLibrary ( PQSTRING(1) ) );
 }
 
 

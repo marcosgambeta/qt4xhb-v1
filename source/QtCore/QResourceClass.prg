@@ -59,9 +59,8 @@ QResource ( const QString & file = QString(), const QLocale & locale = QLocale()
 */
 HB_FUNC_STATIC( QRESOURCE_NEW )
 {
-  QResource * o = NULL;
   QLocale par2 = ISNIL(2)? QLocale() : *(QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QResource ( OPQSTRING(1,QString()), par2 );
+  QResource * o = new QResource ( OPQSTRING(1,QString()), par2 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -132,7 +131,7 @@ HB_FUNC_STATIC( QRESOURCE_ISCOMPRESSED )
   QResource * obj = (QResource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isCompressed () );
+    RBOOL( obj->isCompressed () );
   }
 }
 
@@ -145,7 +144,7 @@ HB_FUNC_STATIC( QRESOURCE_ISVALID )
   QResource * obj = (QResource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -201,8 +200,7 @@ HB_FUNC_STATIC( QRESOURCE_SIZE )
   QResource * obj = (QResource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->size ();
-    hb_retni( i );
+    RQINT64( obj->size () );
   }
 }
 
@@ -213,7 +211,7 @@ bool registerResource ( const QString & rccFileName, const QString & mapRoot = Q
 */
 HB_FUNC_STATIC( QRESOURCE_REGISTERRESOURCE )
 {
-  hb_retl( QResource::registerResource ( PQSTRING(1), OPQSTRING(2,QString()) ) );
+  RBOOL( QResource::registerResource ( PQSTRING(1), OPQSTRING(2,QString()) ) );
 }
 
 
@@ -223,7 +221,7 @@ bool unregisterResource ( const QString & rccFileName, const QString & mapRoot =
 */
 HB_FUNC_STATIC( QRESOURCE_UNREGISTERRESOURCE )
 {
-  hb_retl( QResource::unregisterResource ( PQSTRING(1), OPQSTRING(2,QString()) ) );
+  RBOOL( QResource::unregisterResource ( PQSTRING(1), OPQSTRING(2,QString()) ) );
 }
 
 

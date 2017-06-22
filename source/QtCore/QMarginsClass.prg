@@ -55,8 +55,7 @@ QMargins ()
 */
 HB_FUNC_STATIC( QMARGINS_NEW1 )
 {
-  QMargins * o = NULL;
-  o = new QMargins ();
+  QMargins * o = new QMargins ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -66,8 +65,7 @@ QMargins ( int left, int top, int right, int bottom )
 */
 HB_FUNC_STATIC( QMARGINS_NEW2 )
 {
-  QMargins * o = NULL;
-  o = new QMargins ( PINT(1), PINT(2), PINT(3), PINT(4) );
+  QMargins * o = new QMargins ( PINT(1), PINT(2), PINT(3), PINT(4) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -115,7 +113,7 @@ HB_FUNC_STATIC( QMARGINS_BOTTOM )
   QMargins * obj = (QMargins *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->bottom () );
+    RINT( obj->bottom () );
   }
 }
 
@@ -128,7 +126,7 @@ HB_FUNC_STATIC( QMARGINS_ISNULL )
   QMargins * obj = (QMargins *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -141,7 +139,7 @@ HB_FUNC_STATIC( QMARGINS_LEFT )
   QMargins * obj = (QMargins *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->left () );
+    RINT( obj->left () );
   }
 }
 
@@ -154,7 +152,7 @@ HB_FUNC_STATIC( QMARGINS_RIGHT )
   QMargins * obj = (QMargins *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->right () );
+    RINT( obj->right () );
   }
 }
 
@@ -223,7 +221,7 @@ HB_FUNC_STATIC( QMARGINS_TOP )
   QMargins * obj = (QMargins *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->top () );
+    RINT( obj->top () );
   }
 }
 

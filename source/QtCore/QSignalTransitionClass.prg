@@ -48,9 +48,7 @@ QSignalTransition(QState *sourceState = 0)
 */
 HB_FUNC_STATIC( QSIGNALTRANSITION_NEW1 )
 {
-  QSignalTransition * o = NULL;
-  QState * par1 = ISNIL(1)? 0 : (QState *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSignalTransition ( par1 );
+  QSignalTransition * o = new QSignalTransition ( OPQSTATE(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -60,11 +58,7 @@ QSignalTransition(QObject *sender, const char *signal,QState *sourceState = 0)
 */
 HB_FUNC_STATIC( QSIGNALTRANSITION_NEW2 )
 {
-  QSignalTransition * o = NULL;
-  QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  const char * par2 = hb_parc(2);
-  QState * par3 = ISNIL(3)? 0 : (QState *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSignalTransition ( par1,  (const char *) par2, par3 );
+  QSignalTransition * o = new QSignalTransition ( PQOBJECT(1),  (const char *) hb_parc(2), OPQSTATE(3,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -126,8 +120,7 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_SETSENDEROBJECT )
   QSignalTransition * obj = (QSignalTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setSenderObject ( par1 );
+    obj->setSenderObject ( PQOBJECT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -155,8 +148,7 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_SETSIGNAL )
   QSignalTransition * obj = (QSignalTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setSignal ( *par1 );
+    obj->setSignal ( *PQBYTEARRAY(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

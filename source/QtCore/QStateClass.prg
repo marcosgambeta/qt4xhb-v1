@@ -62,9 +62,7 @@ QState ( QState * parent = 0 )
 */
 HB_FUNC_STATIC( QSTATE_NEW1 )
 {
-  QState * o = NULL;
-  QState * par1 = ISNIL(1)? 0 : (QState *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QState ( par1 );
+  QState * o = new QState ( OPQSTATE(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -74,9 +72,7 @@ QState ( ChildMode childMode, QState * parent = 0 )
 */
 HB_FUNC_STATIC( QSTATE_NEW2 )
 {
-  QState * o = NULL;
-  QState * par2 = ISNIL(2)? 0 : (QState *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QState (  (QState::ChildMode) hb_parni(1), par2 );
+  QState * o = new QState (  (QState::ChildMode) hb_parni(1), OPQSTATE(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -139,10 +135,8 @@ HB_FUNC_STATIC( QSTATE_ADDTRANSITION2 )
   QState * obj = (QState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    const char * par2 = hb_parc(2);
     QAbstractState * par3 = (QAbstractState *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QSignalTransition * ptr = obj->addTransition ( par1,  (const char *) par2, par3 );
+    QSignalTransition * ptr = obj->addTransition ( PQOBJECT(1),  (const char *) hb_parc(2), par3 );
     _qt4xhb_createReturnClass ( ptr, "QSIGNALTRANSITION" );
   }
 }
@@ -191,10 +185,7 @@ HB_FUNC_STATIC( QSTATE_ASSIGNPROPERTY )
   QState * obj = (QState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    const char * par2 = hb_parc(2);
-    QVariant * par3 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->assignProperty ( par1,  (const char *) par2, *par3 );
+    obj->assignProperty ( PQOBJECT(1),  (const char *) hb_parc(2), *PQVARIANT(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

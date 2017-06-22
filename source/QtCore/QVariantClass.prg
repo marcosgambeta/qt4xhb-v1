@@ -155,8 +155,7 @@ QVariant ()
 */
 HB_FUNC_STATIC( QVARIANT_NEW1 )
 {
-  QVariant * o = NULL;
-  o = new QVariant ();
+  QVariant * o = new QVariant ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -166,9 +165,7 @@ QVariant ( const QLocale & l )
 */
 HB_FUNC_STATIC( QVARIANT_NEW2 )
 {
-  QVariant * o = NULL;
-  QLocale * par1 = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QVariant ( *par1 );
+  QVariant * o = new QVariant ( *PQLOCALE(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -178,9 +175,7 @@ QVariant ( const QRegExp & regExp )
 */
 HB_FUNC_STATIC( QVARIANT_NEW3 )
 {
-  QVariant * o = NULL;
-  QRegExp * par1 = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QVariant ( *par1 );
+  QVariant * o = new QVariant ( *PQREGEXP(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -190,9 +185,7 @@ QVariant ( const QEasingCurve & val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW4 )
 {
-  QVariant * o = NULL;
-  QEasingCurve * par1 = (QEasingCurve *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QVariant ( *par1 );
+  QVariant * o = new QVariant ( *PQEASINGCURVE(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -202,9 +195,7 @@ QVariant ( Qt::GlobalColor color )
 */
 HB_FUNC_STATIC( QVARIANT_NEW5 )
 {
-  QVariant * o = NULL;
-  int par1 = hb_parni(1);
-  o = new QVariant (  (Qt::GlobalColor) par1 );
+  QVariant * o = new QVariant (  (Qt::GlobalColor) hb_parni(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -214,9 +205,7 @@ QVariant ( Type type )
 */
 HB_FUNC_STATIC( QVARIANT_NEW6 )
 {
-  QVariant * o = NULL;
-  int par1 = hb_parni(1);
-  o = new QVariant (  (QVariant::Type) par1 );
+  QVariant * o = new QVariant (  (QVariant::Type) hb_parni(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -226,10 +215,8 @@ QVariant ( int typeOrUserType, const void * copy )
 */
 HB_FUNC_STATIC( QVARIANT_NEW7 )
 {
-  QVariant * o = NULL;
-  int par1 = hb_parni(1);
   const void * par2 = (const void *) hb_parptr(2);
-  o = new QVariant ( par1, par2 );
+  QVariant * o = new QVariant ( PINT(1), par2 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -239,9 +226,7 @@ QVariant ( const QVariant & p )
 */
 HB_FUNC_STATIC( QVARIANT_NEW8 )
 {
-  QVariant * o = NULL;
-  QVariant * par1 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QVariant ( *par1 );
+  QVariant * o = new QVariant ( *PQVARIANT(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -251,9 +236,8 @@ QVariant ( QDataStream & s )
 */
 HB_FUNC_STATIC( QVARIANT_NEW9 )
 {
-  QVariant * o = NULL;
   QDataStream * par1 = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QVariant ( *par1 );
+  QVariant * o = new QVariant ( *par1 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -263,9 +247,7 @@ QVariant ( int val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW10 )
 {
-  QVariant * o = NULL;
-  int par1 = hb_parni(1);
-  o = new QVariant ( par1 );
+  QVariant * o = new QVariant ( PINT(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -275,8 +257,7 @@ QVariant ( uint val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW11 )
 {
-  QVariant * o = NULL;
-  o = new QVariant ( PUINT(1) );
+  QVariant * o = new QVariant ( PUINT(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -286,9 +267,8 @@ QVariant ( qlonglong val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW12 )
 {
-  QVariant * o = NULL;
   qlonglong par1 = hb_parnl(1);
-  o = new QVariant ( par1 );
+  QVariant * o = new QVariant ( par1 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -298,9 +278,8 @@ QVariant ( qulonglong val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW13 )
 {
-  QVariant * o = NULL;
   qulonglong par1 = hb_parnl(1);
-  o = new QVariant ( par1 );
+  QVariant * o = new QVariant ( par1 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -310,8 +289,7 @@ QVariant ( bool val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW14 )
 {
-  QVariant * o = NULL;
-  o = new QVariant ( PBOOL(1) );
+  QVariant * o = new QVariant ( PBOOL(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -321,8 +299,7 @@ QVariant ( double val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW15 )
 {
-  QVariant * o = NULL;
-  o = new QVariant ( PDOUBLE(1) );
+  QVariant * o = new QVariant ( PDOUBLE(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -332,8 +309,7 @@ QVariant ( float val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW16 )
 {
-  QVariant * o = NULL;
-  o = new QVariant ( PFLOAT(1) );
+  QVariant * o = new QVariant ( PFLOAT(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -343,9 +319,7 @@ QVariant ( const char * val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW17 )
 {
-  QVariant * o = NULL;
-  const char * par1 = hb_parc(1);
-  o = new QVariant (  (const char *) par1 );
+  QVariant * o = new QVariant (  (const char *) hb_parc(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -355,9 +329,7 @@ QVariant ( const QByteArray & val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW18 )
 {
-  QVariant * o = NULL;
-  QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QVariant ( *par1 );
+  QVariant * o = new QVariant ( *PQBYTEARRAY(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -367,9 +339,7 @@ QVariant ( const QBitArray & val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW19 )
 {
-  QVariant * o = NULL;
-  QBitArray * par1 = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QVariant ( *par1 );
+  QVariant * o = new QVariant ( *PQBITARRAY(1));
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -379,8 +349,7 @@ QVariant ( const QString & val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW20 )
 {
-  QVariant * o = NULL;
-  o = new QVariant ( PQSTRING(1) );
+  QVariant * o = new QVariant ( PQSTRING(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -391,8 +360,7 @@ QVariant ( const QStringList & val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW22 )
 {
-  QVariant * o = NULL;
-  o = new QVariant ( PQSTRINGLIST(1) );
+  QVariant * o = new QVariant ( PQSTRINGLIST(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -402,9 +370,7 @@ QVariant ( const QChar & c )
 */
 HB_FUNC_STATIC( QVARIANT_NEW23 )
 {
-  QVariant * o = NULL;
-  QChar * par1 = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QVariant ( *par1 );
+  QVariant * o = new QVariant ( *PQCHAR(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -414,9 +380,7 @@ QVariant ( const QDate & val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW24 )
 {
-  QVariant * o = NULL;
-  QDate * par1 = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QVariant ( *par1 );
+  QVariant * o = new QVariant ( *PQDATE(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -426,9 +390,7 @@ QVariant ( const QTime & val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW25 )
 {
-  QVariant * o = NULL;
-  QTime * par1 = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QVariant ( *par1 );
+  QVariant * o = new QVariant ( *PQTIME(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -438,9 +400,7 @@ QVariant ( const QDateTime & val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW26 )
 {
-  QVariant * o = NULL;
-  QDateTime * par1 = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QVariant ( *par1 );
+  QVariant * o = new QVariant ( *PQDATETIME(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -450,7 +410,6 @@ QVariant ( const QList<QVariant> & val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW27 )
 {
-  QVariant * o = NULL;
 QList<QVariant> par1;
 PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
 int i1;
@@ -459,7 +418,7 @@ for (i1=0;i1<nLen1;i1++)
 {
 par1 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
 }
-  o = new QVariant ( par1 );
+  QVariant * o = new QVariant ( par1 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -471,9 +430,7 @@ QVariant ( const QSize & val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW30 )
 {
-  QVariant * o = NULL;
-  QSize * par1 = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QVariant ( *par1 );
+  QVariant * o = new QVariant ( *PQSIZE(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -483,9 +440,7 @@ QVariant ( const QSizeF & val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW31 )
 {
-  QVariant * o = NULL;
-  QSizeF * par1 = (QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QVariant ( *par1 );
+  QVariant * o = new QVariant ( *PQSIZEF(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -495,9 +450,7 @@ QVariant ( const QPoint & val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW32 )
 {
-  QVariant * o = NULL;
-  QPoint * par1 = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QVariant ( *par1 );
+  QVariant * o = new QVariant ( *PQPOINT(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -507,9 +460,7 @@ QVariant ( const QPointF & val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW33 )
 {
-  QVariant * o = NULL;
-  QPointF * par1 = (QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QVariant ( *par1 );
+  QVariant * o = new QVariant ( *PQPOINTF(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -519,9 +470,7 @@ QVariant ( const QLine & val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW34 )
 {
-  QVariant * o = NULL;
-  QLine * par1 = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QVariant ( *par1 );
+  QVariant * o = new QVariant ( *PQLINE(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -531,9 +480,7 @@ QVariant ( const QLineF & val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW35 )
 {
-  QVariant * o = NULL;
-  QLineF * par1 = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QVariant ( *par1 );
+  QVariant * o = new QVariant ( *PQLINEF(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -543,9 +490,7 @@ QVariant ( const QRect & val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW36 )
 {
-  QVariant * o = NULL;
-  QRect * par1 = (QRect *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QVariant ( *par1 );
+  QVariant * o = new QVariant ( *PQRECT(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -555,9 +500,7 @@ QVariant ( const QRectF & val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW37 )
 {
-  QVariant * o = NULL;
-  QRectF * par1 = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QVariant ( *par1 );
+  QVariant * o = new QVariant ( *PQRECTF(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -567,9 +510,7 @@ QVariant ( const QUrl & val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW38 )
 {
-  QVariant * o = NULL;
-  QUrl * par1 = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QVariant ( *par1 );
+  QVariant * o = new QVariant ( *PQURL(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -746,8 +687,7 @@ HB_FUNC_STATIC( QVARIANT_CANCONVERT )
   QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->canConvert (  (QVariant::Type) par1 ) );
+    RBOOL( obj->canConvert (  (QVariant::Type) hb_parni(1) ) );
   }
 }
 
@@ -790,8 +730,7 @@ HB_FUNC_STATIC( QVARIANT_CONVERT )
   QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->convert (  (QVariant::Type) par1 ) );
+    RBOOL( obj->convert (  (QVariant::Type) hb_parni(1) ) );
   }
 }
 
@@ -804,7 +743,7 @@ HB_FUNC_STATIC( QVARIANT_ISNULL )
   QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -817,7 +756,7 @@ HB_FUNC_STATIC( QVARIANT_ISVALID )
   QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -845,7 +784,7 @@ HB_FUNC_STATIC( QVARIANT_TOBOOL )
   QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->toBool () );
+    RBOOL( obj->toBool () );
   }
 }
 
@@ -1217,7 +1156,7 @@ HB_FUNC_STATIC( QVARIANT_USERTYPE )
   QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->userType () );
+    RINT( obj->userType () );
   }
 }
 
@@ -1230,8 +1169,7 @@ Type nameToType ( const char * name )
 */
 HB_FUNC_STATIC( QVARIANT_NAMETOTYPE )
 {
-  const char * par1 = hb_parc(1);
-  hb_retni( (int) QVariant::nameToType (  (const char *) par1 ) );
+  hb_retni( (int) QVariant::nameToType (  (const char *) hb_parc(1) ) );
 }
 
 
@@ -1240,8 +1178,7 @@ const char * typeToName ( Type typ )
 */
 HB_FUNC_STATIC( QVARIANT_TYPETONAME )
 {
-  int par1 = hb_parni(1);
-  const char * str1 = QVariant::typeToName (  (QVariant::Type) par1 );
+  const char * str1 = QVariant::typeToName (  (QVariant::Type) hb_parni(1) );
   hb_retc( str1 );
 }
 

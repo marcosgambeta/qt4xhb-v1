@@ -69,8 +69,7 @@ QRegExp ()
 */
 HB_FUNC_STATIC( QREGEXP_NEW1 )
 {
-  QRegExp * o = NULL;
-  o = new QRegExp ();
+  QRegExp * o = new QRegExp ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -80,8 +79,7 @@ QRegExp ( const QString & pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive, P
 */
 HB_FUNC_STATIC( QREGEXP_NEW2 )
 {
-  QRegExp * o = NULL;
-  o = new QRegExp ( PQSTRING(1), ISNIL(2)? Qt::CaseSensitive : (Qt::CaseSensitivity) hb_parni(2), ISNIL(3)? QRegExp::RegExp : (QRegExp::PatternSyntax) hb_parni(3) );
+  QRegExp * o = new QRegExp ( PQSTRING(1), ISNIL(2)? Qt::CaseSensitive : (Qt::CaseSensitivity) hb_parni(2), ISNIL(3)? QRegExp::RegExp : (QRegExp::PatternSyntax) hb_parni(3) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -91,9 +89,7 @@ QRegExp ( const QRegExp & rx )
 */
 HB_FUNC_STATIC( QREGEXP_NEW3 )
 {
-  QRegExp * o = NULL;
-  QRegExp * par1 = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QRegExp ( *par1 );
+  QRegExp * o = new QRegExp ( *PQREGEXP(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -160,7 +156,7 @@ HB_FUNC_STATIC( QREGEXP_CAPTURECOUNT )
   QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->captureCount () );
+    RINT( obj->captureCount () );
   }
 }
 
@@ -223,7 +219,7 @@ HB_FUNC_STATIC( QREGEXP_EXACTMATCH )
   QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->exactMatch ( PQSTRING(1) ) );
+    RBOOL( obj->exactMatch ( PQSTRING(1) ) );
   }
 }
 
@@ -236,7 +232,7 @@ HB_FUNC_STATIC( QREGEXP_INDEXIN )
   QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->indexIn ( PQSTRING(1), OPINT(2,0), ISNIL(3)? QRegExp::CaretAtZero : (QRegExp::CaretMode) hb_parni(3) ) );
+    RINT( obj->indexIn ( PQSTRING(1), OPINT(2,0), ISNIL(3)? QRegExp::CaretAtZero : (QRegExp::CaretMode) hb_parni(3) ) );
   }
 }
 
@@ -249,7 +245,7 @@ HB_FUNC_STATIC( QREGEXP_ISEMPTY )
   QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 }
 
@@ -262,7 +258,7 @@ HB_FUNC_STATIC( QREGEXP_ISMINIMAL )
   QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isMinimal () );
+    RBOOL( obj->isMinimal () );
   }
 }
 
@@ -275,7 +271,7 @@ HB_FUNC_STATIC( QREGEXP_ISVALID )
   QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -288,7 +284,7 @@ HB_FUNC_STATIC( QREGEXP_LASTINDEXIN )
   QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->lastIndexIn ( PQSTRING(1), OPINT(2,-1), ISNIL(3)? QRegExp::CaretAtZero : (QRegExp::CaretMode) hb_parni(3) ) );
+    RINT( obj->lastIndexIn ( PQSTRING(1), OPINT(2,-1), ISNIL(3)? QRegExp::CaretAtZero : (QRegExp::CaretMode) hb_parni(3) ) );
   }
 }
 
@@ -301,7 +297,7 @@ HB_FUNC_STATIC( QREGEXP_MATCHEDLENGTH )
   QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->matchedLength () );
+    RINT( obj->matchedLength () );
   }
 }
 
@@ -341,7 +337,7 @@ HB_FUNC_STATIC( QREGEXP_POS )
   QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->pos ( OPINT(1,0) ) );
+    RINT( obj->pos ( OPINT(1,0) ) );
   }
 }
 

@@ -52,9 +52,7 @@ QPluginLoader ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QPLUGINLOADER_NEW1 )
 {
-  QPluginLoader * o = NULL;
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QPluginLoader ( par1 );
+  QPluginLoader * o = new QPluginLoader ( OPQOBJECT(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -64,9 +62,7 @@ QPluginLoader ( const QString & fileName, QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QPLUGINLOADER_NEW2 )
 {
-  QPluginLoader * o = NULL;
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QPluginLoader ( PQSTRING(1), par2 );
+  QPluginLoader * o = new QPluginLoader ( PQSTRING(1), OPQOBJECT(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -157,7 +153,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_ISLOADED )
   QPluginLoader * obj = (QPluginLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isLoaded () );
+    RBOOL( obj->isLoaded () );
   }
 }
 
@@ -170,7 +166,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_LOAD )
   QPluginLoader * obj = (QPluginLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->load () );
+    RBOOL( obj->load () );
   }
 }
 
@@ -224,7 +220,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_UNLOAD )
   QPluginLoader * obj = (QPluginLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->unload () );
+    RBOOL( obj->unload () );
   }
 }
 

@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_ATEND )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->atEnd () );
+    RBOOL( obj->atEnd () );
   }
 }
 
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_CASESENSITIVE )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->caseSensitive () );
+    RBOOL( obj->caseSensitive () );
   }
 }
 
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_CLOSE )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->close () );
+    RBOOL( obj->close () );
   }
 }
 
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_COPY )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->copy ( PQSTRING(1) ) );
+    RBOOL( obj->copy ( PQSTRING(1) ) );
   }
 }
 
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_FLUSH )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->flush () );
+    RBOOL( obj->flush () );
   }
 }
 
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_HANDLE )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->handle () );
+    RINT( obj->handle () );
   }
 }
 
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_ISRELATIVEPATH )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isRelativePath () );
+    RBOOL( obj->isRelativePath () );
   }
 }
 
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_ISSEQUENTIAL )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isSequential () );
+    RBOOL( obj->isSequential () );
   }
 }
 
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_LINK )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->link ( PQSTRING(1) ) );
+    RBOOL( obj->link ( PQSTRING(1) ) );
   }
 }
 
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_MKDIR )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->mkdir ( PQSTRING(1), PBOOL(2) ) );
+    RBOOL( obj->mkdir ( PQSTRING(1), PBOOL(2) ) );
   }
 }
 
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_OPEN )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->open (  (QIODevice::OpenMode) hb_parni(1) ) );
+    RBOOL( obj->open (  (QIODevice::OpenMode) hb_parni(1) ) );
   }
 }
 
@@ -364,8 +364,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_POS )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->pos ();
-    hb_retni( i );
+    RQINT64( obj->pos () );
   }
 }
 
@@ -380,9 +379,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_READLINE )
   if( obj )
   {
     char * par1 = (char *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    qint64 par2 = hb_parni(2);
-    qint64 i = obj->readLine ( par1, par2 );
-    hb_retni( i );
+    RQINT64( obj->readLine ( par1, PQINT64(2) ) );
   }
 }
 
@@ -395,7 +392,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_REMOVE )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->remove () );
+    RBOOL( obj->remove () );
   }
 }
 
@@ -408,7 +405,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_RENAME )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->rename ( PQSTRING(1) ) );
+    RBOOL( obj->rename ( PQSTRING(1) ) );
   }
 }
 
@@ -421,7 +418,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_RMDIR )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->rmdir ( PQSTRING(1), PBOOL(2) ) );
+    RBOOL( obj->rmdir ( PQSTRING(1), PBOOL(2) ) );
   }
 }
 
@@ -434,8 +431,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_SEEK )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 par1 = hb_parni(1);
-    hb_retl( obj->seek ( par1 ) );
+    RBOOL( obj->seek ( PQINT64(1) ) );
   }
 }
 
@@ -462,7 +458,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_SETPERMISSIONS )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->setPermissions ( PUINT(1) ) );
+    RBOOL( obj->setPermissions ( PUINT(1) ) );
   }
 }
 
@@ -475,8 +471,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_SETSIZE )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 par1 = hb_parni(1);
-    hb_retl( obj->setSize ( par1 ) );
+    RBOOL( obj->setSize ( PQINT64(1) ) );
   }
 }
 
@@ -489,8 +484,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_SIZE )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->size ();
-    hb_retni( i );
+    RQINT64( obj->size () );
   }
 }
 
@@ -503,7 +497,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_SUPPORTSEXTENSION )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->supportsExtension (  (QAbstractFileEngine::Extension) hb_parni(1) ) );
+    RBOOL( obj->supportsExtension (  (QAbstractFileEngine::Extension) hb_parni(1) ) );
   }
 }
 
@@ -517,10 +511,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_WRITE )
   QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const char * par1 = hb_parc(1);
-    qint64 par2 = hb_parni(2);
-    qint64 i = obj->write (  (const char *) par1, par2 );
-    hb_retni( i );
+    RQINT64( obj->write (  (const char *) hb_parc(1), PQINT64(2) ) );
   }
 }
 

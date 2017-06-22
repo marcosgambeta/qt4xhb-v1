@@ -58,8 +58,7 @@ static int registerTypedef(const char *typeName, int aliasId)
 */
 HB_FUNC_STATIC( QMETATYPE_REGISTERTYPEDEF )
 {
-  const char * par1 = hb_parc(1);
-  hb_retni( QMetaType::registerTypedef (  (const char *) par1, PINT(2) ) );
+  RINT( QMetaType::registerTypedef (  (const char *) hb_parc(1), PINT(2) ) );
 }
 
 
@@ -68,8 +67,7 @@ static int type(const char *typeName)
 */
 HB_FUNC_STATIC( QMETATYPE_TYPE )
 {
-  const char * par1 = hb_parc(1);
-  hb_retni( QMetaType::type (  (const char *) par1 ) );
+  RINT( QMetaType::type (  (const char *) hb_parc(1) ) );
 }
 
 
@@ -88,7 +86,7 @@ static bool isRegistered(int type)
 */
 HB_FUNC_STATIC( QMETATYPE_ISREGISTERED )
 {
-  hb_retl( QMetaType::isRegistered ( PINT(1) ) );
+  RBOOL( QMetaType::isRegistered ( PINT(1) ) );
 }
 
 
@@ -119,8 +117,7 @@ static void unregisterType(const char *typeName)
 */
 HB_FUNC_STATIC( QMETATYPE_UNREGISTERTYPE )
 {
-  const char * par1 = hb_parc(1);
-  QMetaType::unregisterType (  (const char *) par1 );
+  QMetaType::unregisterType (  (const char *) hb_parc(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -132,7 +129,7 @@ HB_FUNC_STATIC( QMETATYPE_SAVE )
 {
   QDataStream * par1 = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   const void * par3 = (const void *) hb_parptr(3);
-  hb_retl( QMetaType::save ( *par1, PINT(2), par3 ) );
+  RBOOL( QMetaType::save ( *par1, PINT(2), par3 ) );
 }
 
 
@@ -143,7 +140,7 @@ HB_FUNC_STATIC( QMETATYPE_LOAD )
 {
   QDataStream * par1 = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   void * par3 = (void *) hb_parptr(3);
-  hb_retl( QMetaType::load ( *par1, PINT(2), par3 ) );
+  RBOOL( QMetaType::load ( *par1, PINT(2), par3 ) );
 }
 
 

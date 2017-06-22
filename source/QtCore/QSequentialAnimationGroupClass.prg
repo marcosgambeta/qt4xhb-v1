@@ -47,9 +47,7 @@ QSequentialAnimationGroup ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_NEW )
 {
-  QSequentialAnimationGroup * o = NULL;
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSequentialAnimationGroup ( par1 );
+  QSequentialAnimationGroup * o = new QSequentialAnimationGroup ( OPQOBJECT(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -121,7 +119,7 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_DURATION )
   QSequentialAnimationGroup * obj = (QSequentialAnimationGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->duration () );
+    RINT( obj->duration () );
   }
 }
 

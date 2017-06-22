@@ -46,8 +46,7 @@ QWaitCondition ()
 */
 HB_FUNC_STATIC( QWAITCONDITION_NEW )
 {
-  QWaitCondition * o = NULL;
-  o = new QWaitCondition ();
+  QWaitCondition * o = new QWaitCondition ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 

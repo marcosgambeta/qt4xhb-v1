@@ -45,9 +45,7 @@ QTranslator(QObject * parent = 0)
 */
 HB_FUNC_STATIC( QTRANSLATOR_NEW )
 {
-  QTranslator * o = NULL;
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QTranslator ( par1 );
+  QTranslator * o = new QTranslator ( OPQOBJECT(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -76,7 +74,7 @@ HB_FUNC_STATIC( QTRANSLATOR_ISEMPTY )
   QTranslator * obj = (QTranslator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 }
 
@@ -89,7 +87,7 @@ HB_FUNC_STATIC( QTRANSLATOR_LOAD1 )
   QTranslator * obj = (QTranslator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->load ( PQSTRING(1), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()) ) );
+    RBOOL( obj->load ( PQSTRING(1), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()) ) );
   }
 }
 
@@ -103,7 +101,7 @@ HB_FUNC_STATIC( QTRANSLATOR_LOAD2 )
   if( obj )
   {
     QLocale * par1 = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->load ( *par1, PQSTRING(2), OPQSTRING(3,QString()), OPQSTRING(4,QString()), OPQSTRING(5,QString()) ) );
+    RBOOL( obj->load ( *par1, PQSTRING(2), OPQSTRING(3,QString()), OPQSTRING(4,QString()), OPQSTRING(5,QString()) ) );
   }
 }
 
@@ -141,10 +139,7 @@ HB_FUNC_STATIC( QTRANSLATOR_TRANSLATE )
   QTranslator * obj = (QTranslator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const char * par1 = hb_parc(1);
-    const char * par2 = hb_parc(2);
-    const char * par3 = hb_parc(3);
-    QString str1 = obj->translate (  (const char *) par1,  (const char *) par2,  (const char *) par3, OPINT(4,-1) );
+    QString str1 = obj->translate (  (const char *) hb_parc(1),  (const char *) hb_parc(2),  (const char *) hb_parc(3), OPINT(4,-1) );
     hb_retc( RQSTRING(str1) );
   }
 }

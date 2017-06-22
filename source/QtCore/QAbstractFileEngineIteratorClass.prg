@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_HASNEXT )
   QAbstractFileEngineIterator * obj = (QAbstractFileEngineIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasNext () );
+    RBOOL( obj->hasNext () );
   }
 }
 

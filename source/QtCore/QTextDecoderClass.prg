@@ -50,9 +50,8 @@ QTextDecoder(const QTextCodec * codec)
 */
 HB_FUNC_STATIC( QTEXTDECODER_NEW1 )
 {
-  QTextDecoder * o = NULL;
   const QTextCodec * par1 = (const QTextCodec *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QTextDecoder ( par1 );
+  QTextDecoder * o = new QTextDecoder ( par1 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -62,10 +61,9 @@ QTextDecoder(const QTextCodec * codec, QTextCodec::ConversionFlags flags)
 */
 HB_FUNC_STATIC( QTEXTDECODER_NEW2 )
 {
-  QTextDecoder * o = NULL;
   const QTextCodec * par1 = (const QTextCodec *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = hb_parni(2);
-  o = new QTextDecoder ( par1,  (QTextCodec::ConversionFlags) par2 );
+  QTextDecoder * o = new QTextDecoder ( par1,  (QTextCodec::ConversionFlags) par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -113,9 +111,8 @@ HB_FUNC_STATIC( QTEXTDECODER_TOUNICODE1 )
   QTextDecoder * obj = (QTextDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const char * par1 = hb_parc(1);
     int par2 = hb_parni(2);
-    QString str1 = obj->toUnicode (  (const char *) par1, par2 );
+    QString str1 = obj->toUnicode (  (const char *) hb_parc(1), par2 );
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -130,9 +127,8 @@ HB_FUNC_STATIC( QTEXTDECODER_TOUNICODE2 )
   if( obj )
   {
     QString * par1 = NULL;
-    const char * par2 = hb_parc(2);
     int par3 = hb_parni(3);
-    obj->toUnicode ( par1,  (const char *) par2, par3 );
+    obj->toUnicode ( par1,  (const char *) hb_parc(2), par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -146,8 +142,7 @@ HB_FUNC_STATIC( QTEXTDECODER_TOUNICODE3 )
   QTextDecoder * obj = (QTextDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString str1 = obj->toUnicode ( *par1 );
+    QString str1 = obj->toUnicode ( *PQBYTEARRAY(1) );
     hb_retc( RQSTRING(str1) );
   }
 }

@@ -52,8 +52,7 @@ QXmlStreamNamespaceDeclaration()
 */
 HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NEW1 )
 {
-  QXmlStreamNamespaceDeclaration * o = NULL;
-  o = new QXmlStreamNamespaceDeclaration ();
+  QXmlStreamNamespaceDeclaration * o = new QXmlStreamNamespaceDeclaration ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -63,9 +62,7 @@ QXmlStreamNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & other)
 */
 HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NEW2 )
 {
-  QXmlStreamNamespaceDeclaration * o = NULL;
-  QXmlStreamNamespaceDeclaration * par1 = (QXmlStreamNamespaceDeclaration *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QXmlStreamNamespaceDeclaration ( *par1 );
+  QXmlStreamNamespaceDeclaration * o = new QXmlStreamNamespaceDeclaration ( *PQXMLSTREAMNAMESPACEDECLARATION(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -75,8 +72,7 @@ QXmlStreamNamespaceDeclaration(const QString & prefix, const QString & namespace
 */
 HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NEW3 )
 {
-  QXmlStreamNamespaceDeclaration * o = NULL;
-  o = new QXmlStreamNamespaceDeclaration ( PQSTRING(1), PQSTRING(2) );
+  QXmlStreamNamespaceDeclaration * o = new QXmlStreamNamespaceDeclaration ( PQSTRING(1), PQSTRING(2) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 

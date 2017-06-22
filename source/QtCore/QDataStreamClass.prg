@@ -66,8 +66,7 @@ QDataStream ()
 */
 HB_FUNC_STATIC( QDATASTREAM_NEW1 )
 {
-  QDataStream * o = NULL;
-  o = new QDataStream ();
+  QDataStream * o = new QDataStream ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -77,9 +76,7 @@ QDataStream ( QIODevice * d )
 */
 HB_FUNC_STATIC( QDATASTREAM_NEW2 )
 {
-  QDataStream * o = NULL;
-  QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDataStream ( par1 );
+  QDataStream * o = new QDataStream ( PQIODEVICE(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -89,9 +86,7 @@ QDataStream ( QByteArray * a, QIODevice::OpenMode mode )
 */
 HB_FUNC_STATIC( QDATASTREAM_NEW3 )
 {
-  QDataStream * o = NULL;
-  QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDataStream ( par1,  (QIODevice::OpenMode) hb_parni(2) );
+  QDataStream * o = new QDataStream ( PQBYTEARRAY(1),  (QIODevice::OpenMode) hb_parni(2) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -101,9 +96,7 @@ QDataStream ( const QByteArray & a )
 */
 HB_FUNC_STATIC( QDATASTREAM_NEW4 )
 {
-  QDataStream * o = NULL;
-  QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDataStream ( *par1 );
+  QDataStream * o = new QDataStream ( *PQBYTEARRAY(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -161,7 +154,7 @@ HB_FUNC_STATIC( QDATASTREAM_ATEND )
   QDataStream * obj = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->atEnd () );
+    RBOOL( obj->atEnd () );
   }
 }
 
@@ -216,7 +209,7 @@ HB_FUNC_STATIC( QDATASTREAM_READRAWDATA )
   if( obj )
   {
     char * par1 = (char *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retni( obj->readRawData ( par1, PINT(2) ) );
+    RINT( obj->readRawData ( par1, PINT(2) ) );
   }
 }
 
@@ -257,8 +250,7 @@ HB_FUNC_STATIC( QDATASTREAM_SETDEVICE )
   QDataStream * obj = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setDevice ( par1 );
+    obj->setDevice ( PQIODEVICE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -314,7 +306,7 @@ HB_FUNC_STATIC( QDATASTREAM_SKIPRAWDATA )
   QDataStream * obj = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->skipRawData ( PINT(1) ) );
+    RINT( obj->skipRawData ( PINT(1) ) );
   }
 }
 
@@ -340,7 +332,7 @@ HB_FUNC_STATIC( QDATASTREAM_VERSION )
   QDataStream * obj = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->version () );
+    RINT( obj->version () );
   }
 }
 
@@ -354,8 +346,7 @@ HB_FUNC_STATIC( QDATASTREAM_WRITERAWDATA )
   QDataStream * obj = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const char * par1 = hb_parc(1);
-    hb_retni( obj->writeRawData (  (const char *) par1, PINT(2) ) );
+    RINT( obj->writeRawData (  (const char *) hb_parc(1), PINT(2) ) );
   }
 }
 

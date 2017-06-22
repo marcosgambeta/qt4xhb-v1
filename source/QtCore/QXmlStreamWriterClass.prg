@@ -92,8 +92,7 @@ QXmlStreamWriter()
 */
 HB_FUNC_STATIC( QXMLSTREAMWRITER_NEW1 )
 {
-  QXmlStreamWriter * o = NULL;
-  o = new QXmlStreamWriter ();
+  QXmlStreamWriter * o = new QXmlStreamWriter ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -103,9 +102,7 @@ QXmlStreamWriter(QIODevice * device)
 */
 HB_FUNC_STATIC( QXMLSTREAMWRITER_NEW2 )
 {
-  QXmlStreamWriter * o = NULL;
-  QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QXmlStreamWriter ( par1 );
+  QXmlStreamWriter * o = new QXmlStreamWriter ( PQIODEVICE(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -115,9 +112,7 @@ QXmlStreamWriter(QByteArray * array)
 */
 HB_FUNC_STATIC( QXMLSTREAMWRITER_NEW3 )
 {
-  QXmlStreamWriter * o = NULL;
-  QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QXmlStreamWriter ( par1 );
+  QXmlStreamWriter * o = new QXmlStreamWriter ( PQBYTEARRAY(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -127,9 +122,8 @@ QXmlStreamWriter(QString * string)
 */
 HB_FUNC_STATIC( QXMLSTREAMWRITER_NEW4 )
 {
-  QXmlStreamWriter * o = NULL;
   QString * par1 = NULL;
-  o = new QXmlStreamWriter ( par1 );
+  QXmlStreamWriter * o = new QXmlStreamWriter ( par1 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -187,7 +181,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_AUTOFORMATTING )
   QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->autoFormatting () );
+    RBOOL( obj->autoFormatting () );
   }
 }
 
@@ -200,7 +194,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_AUTOFORMATTINGINDENT )
   QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->autoFormattingIndent () );
+    RINT( obj->autoFormattingIndent () );
   }
 }
 
@@ -241,7 +235,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_HASERROR )
   QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasError () );
+    RBOOL( obj->hasError () );
   }
 }
 
@@ -268,8 +262,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_SETAUTOFORMATTINGINDENT )
   QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setAutoFormattingIndent ( par1 );
+    obj->setAutoFormattingIndent ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -283,8 +276,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_SETCODEC1 )
   QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTextCodec * par1 = (QTextCodec *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setCodec ( par1 );
+    obj->setCodec ( PQTEXTCODEC(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -298,8 +290,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_SETCODEC2 )
   QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const char * par1 = hb_parc(1);
-    obj->setCodec (  (const char *) par1 );
+    obj->setCodec (  (const char *) hb_parc(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -328,8 +319,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_SETDEVICE )
   QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setDevice ( par1 );
+    obj->setDevice ( PQIODEVICE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -42,9 +42,7 @@ QPauseAnimation ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QPAUSEANIMATION_NEW1 )
 {
-  QPauseAnimation * o = NULL;
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QPauseAnimation ( par1 );
+  QPauseAnimation * o = new QPauseAnimation ( OPQOBJECT(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -54,9 +52,7 @@ QPauseAnimation ( int msecs, QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QPAUSEANIMATION_NEW2 )
 {
-  QPauseAnimation * o = NULL;
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QPauseAnimation ( PINT(1), par2 );
+  QPauseAnimation * o = new QPauseAnimation ( PINT(1), OPQOBJECT(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -119,7 +115,7 @@ HB_FUNC_STATIC( QPAUSEANIMATION_DURATION )
   QPauseAnimation * obj = (QPauseAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->duration () );
+    RINT( obj->duration () );
   }
 }
 

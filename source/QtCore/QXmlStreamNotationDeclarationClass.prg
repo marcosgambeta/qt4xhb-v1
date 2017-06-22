@@ -52,8 +52,7 @@ QXmlStreamNotationDeclaration()
 */
 HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_NEW1 )
 {
-  QXmlStreamNotationDeclaration * o = NULL;
-  o = new QXmlStreamNotationDeclaration ();
+  QXmlStreamNotationDeclaration * o = new QXmlStreamNotationDeclaration ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -63,9 +62,7 @@ QXmlStreamNotationDeclaration(const QXmlStreamNotationDeclaration & other)
 */
 HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_NEW2 )
 {
-  QXmlStreamNotationDeclaration * o = NULL;
-  QXmlStreamNotationDeclaration * par1 = (QXmlStreamNotationDeclaration *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QXmlStreamNotationDeclaration ( *par1 );
+  QXmlStreamNotationDeclaration * o = new QXmlStreamNotationDeclaration ( *PQXMLSTREAMNOTATIONDECLARATION(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 

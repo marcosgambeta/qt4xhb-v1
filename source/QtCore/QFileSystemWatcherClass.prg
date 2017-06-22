@@ -50,9 +50,7 @@ QFileSystemWatcher(QObject * parent = 0)
 */
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_NEW1 )
 {
-  QFileSystemWatcher * o = NULL;
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QFileSystemWatcher ( par1 );
+  QFileSystemWatcher * o = new QFileSystemWatcher ( OPQOBJECT(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -62,9 +60,7 @@ QFileSystemWatcher(const QStringList & paths, QObject * parent = 0)
 */
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_NEW2 )
 {
-  QFileSystemWatcher * o = NULL;
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QFileSystemWatcher ( PQSTRINGLIST(1), par2 );
+  QFileSystemWatcher * o = new QFileSystemWatcher ( PQSTRINGLIST(1), OPQOBJECT(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

@@ -50,8 +50,7 @@ QSemaphore ( int n = 0 )
 */
 HB_FUNC_STATIC( QSEMAPHORE_NEW )
 {
-  QSemaphore * o = NULL;
-  o = new QSemaphore ( OPINT(1,0) );
+  QSemaphore * o = new QSemaphore ( OPINT(1,0) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -94,7 +93,7 @@ HB_FUNC_STATIC( QSEMAPHORE_AVAILABLE )
   QSemaphore * obj = (QSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->available () );
+    RINT( obj->available () );
   }
 }
 
@@ -121,7 +120,7 @@ HB_FUNC_STATIC( QSEMAPHORE_TRYACQUIRE1 )
   QSemaphore * obj = (QSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->tryAcquire ( OPINT(1,1) ) );
+    RBOOL( obj->tryAcquire ( OPINT(1,1) ) );
   }
 }
 
@@ -134,7 +133,7 @@ HB_FUNC_STATIC( QSEMAPHORE_TRYACQUIRE2 )
   QSemaphore * obj = (QSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->tryAcquire ( PINT(1), PINT(2) ) );
+    RBOOL( obj->tryAcquire ( PINT(1), PINT(2) ) );
   }
 }
 

@@ -61,8 +61,7 @@ QUuid()
 */
 HB_FUNC_STATIC( QUUID_NEW1 )
 {
-  QUuid * o = NULL;
-  o = new QUuid ();
+  QUuid * o = new QUuid ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -72,7 +71,6 @@ QUuid(uint l, ushort w1, ushort w2, uchar b1, uchar b2, uchar b3, uchar b4, ucha
 */
 HB_FUNC_STATIC( QUUID_NEW2 )
 {
-  QUuid * o = NULL;
   ushort par2 = hb_parni(2);
   ushort par3 = hb_parni(3);
   uchar par4 = ISCHAR(4)? (uchar) hb_parc(4)[0] : (ISNUM(4)? hb_parni(4) : 0);
@@ -83,7 +81,7 @@ HB_FUNC_STATIC( QUUID_NEW2 )
   uchar par9 = ISCHAR(9)? (uchar) hb_parc(9)[0] : (ISNUM(9)? hb_parni(9) : 0);
   uchar par10 = ISCHAR(10)? (uchar) hb_parc(10)[0] : (ISNUM(10)? hb_parni(10) : 0);
   uchar par11 = ISCHAR(11)? (uchar) hb_parc(11)[0] : (ISNUM(11)? hb_parni(11) : 0);
-  o = new QUuid ( PUINT(1), par2, par3, par4, par5, par6, par7, par8, par9, par10, par11 );
+  QUuid * o = new QUuid ( PUINT(1), par2, par3, par4, par5, par6, par7, par8, par9, par10, par11 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -93,8 +91,7 @@ QUuid(const QString &)
 */
 HB_FUNC_STATIC( QUUID_NEW3 )
 {
-  QUuid * o = NULL;
-  o = new QUuid ( PQSTRING(1) );
+  QUuid * o = new QUuid ( PQSTRING(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -104,9 +101,7 @@ QUuid(const char *)
 */
 HB_FUNC_STATIC( QUUID_NEW4 )
 {
-  QUuid * o = NULL;
-  const char * par1 = hb_parc(1);
-  o = new QUuid (  (const char *) par1 );
+  QUuid * o = new QUuid (  (const char *) hb_parc(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -116,9 +111,7 @@ QUuid(const QByteArray &)
 */
 HB_FUNC_STATIC( QUUID_NEW5 )
 {
-  QUuid * o = NULL;
-  QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QUuid ( *par1 );
+  QUuid * o = new QUuid ( *PQBYTEARRAY(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -222,7 +215,7 @@ HB_FUNC_STATIC( QUUID_ISNULL )
   QUuid * obj = (QUuid *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -259,8 +252,7 @@ static QUuid fromRfc4122(const QByteArray &)
 */
 HB_FUNC_STATIC( QUUID_FROMRFC4122 )
 {
-  QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QUuid * ptr = new QUuid( QUuid::fromRfc4122 ( *par1 ) );
+  QUuid * ptr = new QUuid( QUuid::fromRfc4122 ( *PQBYTEARRAY(1) ) );
   _qt4xhb_createReturnClass ( ptr, "QUUID", true );
 }
 

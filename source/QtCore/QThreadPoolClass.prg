@@ -54,9 +54,7 @@ QThreadPool ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QTHREADPOOL_NEW )
 {
-  QThreadPool * o = NULL;
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QThreadPool ( par1 );
+  QThreadPool * o = new QThreadPool ( OPQOBJECT(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -85,7 +83,7 @@ HB_FUNC_STATIC( QTHREADPOOL_ACTIVETHREADCOUNT )
   QThreadPool * obj = (QThreadPool *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->activeThreadCount () );
+    RINT( obj->activeThreadCount () );
   }
 }
 
@@ -98,7 +96,7 @@ HB_FUNC_STATIC( QTHREADPOOL_EXPIRYTIMEOUT )
   QThreadPool * obj = (QThreadPool *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->expiryTimeout () );
+    RINT( obj->expiryTimeout () );
   }
 }
 
@@ -111,7 +109,7 @@ HB_FUNC_STATIC( QTHREADPOOL_MAXTHREADCOUNT )
   QThreadPool * obj = (QThreadPool *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->maxThreadCount () );
+    RINT( obj->maxThreadCount () );
   }
 }
 
@@ -152,8 +150,7 @@ HB_FUNC_STATIC( QTHREADPOOL_SETEXPIRYTIMEOUT )
   QThreadPool * obj = (QThreadPool *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setExpiryTimeout ( par1 );
+    obj->setExpiryTimeout ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -167,8 +164,7 @@ HB_FUNC_STATIC( QTHREADPOOL_SETMAXTHREADCOUNT )
   QThreadPool * obj = (QThreadPool *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setMaxThreadCount ( par1 );
+    obj->setMaxThreadCount ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -198,7 +194,7 @@ HB_FUNC_STATIC( QTHREADPOOL_TRYSTART )
   if( obj )
   {
     QRunnable * par1 = (QRunnable *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->tryStart ( par1 ) );
+    RBOOL( obj->tryStart ( par1 ) );
   }
 }
 
@@ -225,8 +221,7 @@ HB_FUNC_STATIC( QTHREADPOOL_WAITFORDONE2 )
   QThreadPool * obj = (QThreadPool *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retl( obj->waitForDone ( par1 ) );
+    RBOOL( obj->waitForDone ( PINT(1) ) );
   }
 }
 

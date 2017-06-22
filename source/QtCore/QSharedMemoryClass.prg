@@ -54,9 +54,7 @@ QSharedMemory(QObject *parent = 0)
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_NEW1 )
 {
-  QSharedMemory * o = NULL;
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSharedMemory ( par1 );
+  QSharedMemory * o = new QSharedMemory ( OPQOBJECT(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -66,9 +64,7 @@ QSharedMemory(const QString &key, QObject *parent = 0)
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_NEW2 )
 {
-  QSharedMemory * o = NULL;
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSharedMemory ( PQSTRING(1), par2 );
+  QSharedMemory * o = new QSharedMemory ( PQSTRING(1), OPQOBJECT(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -172,7 +168,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_CREATE )
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->create ( PINT(1), ISNIL(2)? QSharedMemory::ReadWrite : (QSharedMemory::AccessMode) hb_parni(2) ) );
+    RBOOL( obj->create ( PINT(1), ISNIL(2)? QSharedMemory::ReadWrite : (QSharedMemory::AccessMode) hb_parni(2) ) );
   }
 }
 
@@ -185,7 +181,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_SIZE )
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->size () );
+    RINT( obj->size () );
   }
 }
 
@@ -198,7 +194,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_ATTACH )
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->attach ( ISNIL(1)? QSharedMemory::ReadWrite : (QSharedMemory::AccessMode) hb_parni(1) ) );
+    RBOOL( obj->attach ( ISNIL(1)? QSharedMemory::ReadWrite : (QSharedMemory::AccessMode) hb_parni(1) ) );
   }
 }
 
@@ -211,7 +207,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_ISATTACHED )
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isAttached () );
+    RBOOL( obj->isAttached () );
   }
 }
 
@@ -224,7 +220,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_DETACH )
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->detach () );
+    RBOOL( obj->detach () );
   }
 }
 
@@ -253,7 +249,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_LOCK )
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->lock () );
+    RBOOL( obj->lock () );
   }
 }
 
@@ -266,7 +262,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_UNLOCK )
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->unlock () );
+    RBOOL( obj->unlock () );
   }
 }
 

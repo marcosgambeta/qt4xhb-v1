@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QIODEVICE_ATEND )
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->atEnd () );
+    RBOOL( obj->atEnd () );
   }
 }
 
@@ -135,8 +135,7 @@ HB_FUNC_STATIC( QIODEVICE_BYTESAVAILABLE )
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->bytesAvailable ();
-    hb_retni( i );
+    RQINT64( obj->bytesAvailable () );
   }
 }
 
@@ -149,8 +148,7 @@ HB_FUNC_STATIC( QIODEVICE_BYTESTOWRITE )
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->bytesToWrite ();
-    hb_retni( i );
+    RQINT64( obj->bytesToWrite () );
   }
 }
 
@@ -163,7 +161,7 @@ HB_FUNC_STATIC( QIODEVICE_CANREADLINE )
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->canReadLine () );
+    RBOOL( obj->canReadLine () );
   }
 }
 
@@ -205,7 +203,7 @@ HB_FUNC_STATIC( QIODEVICE_GETCHAR )
   if( obj )
   {
     char * par1 = (char *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->getChar ( par1 ) );
+    RBOOL( obj->getChar ( par1 ) );
   }
 }
 
@@ -218,7 +216,7 @@ HB_FUNC_STATIC( QIODEVICE_ISOPEN )
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isOpen () );
+    RBOOL( obj->isOpen () );
   }
 }
 
@@ -231,7 +229,7 @@ HB_FUNC_STATIC( QIODEVICE_ISREADABLE )
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isReadable () );
+    RBOOL( obj->isReadable () );
   }
 }
 
@@ -244,7 +242,7 @@ HB_FUNC_STATIC( QIODEVICE_ISSEQUENTIAL )
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isSequential () );
+    RBOOL( obj->isSequential () );
   }
 }
 
@@ -257,7 +255,7 @@ HB_FUNC_STATIC( QIODEVICE_ISTEXTMODEENABLED )
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isTextModeEnabled () );
+    RBOOL( obj->isTextModeEnabled () );
   }
 }
 
@@ -270,7 +268,7 @@ HB_FUNC_STATIC( QIODEVICE_ISWRITABLE )
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isWritable () );
+    RBOOL( obj->isWritable () );
   }
 }
 
@@ -283,7 +281,7 @@ HB_FUNC_STATIC( QIODEVICE_OPEN )
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->open (  (QIODevice::OpenMode) hb_parni(1) ) );
+    RBOOL( obj->open (  (QIODevice::OpenMode) hb_parni(1) ) );
   }
 }
 
@@ -310,9 +308,7 @@ HB_FUNC_STATIC( QIODEVICE_PEEK1 )
   if( obj )
   {
     char * par1 = (char *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    qint64 par2 = hb_parni(2);
-    qint64 i = obj->peek ( par1, par2 );
-    hb_retni( i );
+    RQINT64( obj->peek ( par1, PQINT64(2) ) );
   }
 }
 
@@ -325,8 +321,7 @@ HB_FUNC_STATIC( QIODEVICE_PEEK2 )
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 par1 = hb_parni(1);
-    QByteArray * ptr = new QByteArray( obj->peek ( par1 ) );
+    QByteArray * ptr = new QByteArray( obj->peek ( PQINT64(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -355,8 +350,7 @@ HB_FUNC_STATIC( QIODEVICE_POS )
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->pos ();
-    hb_retni( i );
+    RQINT64( obj->pos () );
   }
 }
 
@@ -370,7 +364,7 @@ HB_FUNC_STATIC( QIODEVICE_PUTCHAR )
   if( obj )
   {
     char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
-    hb_retl( obj->putChar ( par1 ) );
+    RBOOL( obj->putChar ( par1 ) );
   }
 }
 
@@ -384,9 +378,7 @@ HB_FUNC_STATIC( QIODEVICE_READ1 )
   if( obj )
   {
     char * par1 = (char *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    qint64 par2 = hb_parni(2);
-    qint64 i = obj->read ( par1, par2 );
-    hb_retni( i );
+    RQINT64( obj->read ( par1, PQINT64(2) ) );
   }
 }
 
@@ -399,8 +391,7 @@ HB_FUNC_STATIC( QIODEVICE_READ2 )
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 par1 = hb_parni(1);
-    QByteArray * ptr = new QByteArray( obj->read ( par1 ) );
+    QByteArray * ptr = new QByteArray( obj->read ( PQINT64(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -444,9 +435,7 @@ HB_FUNC_STATIC( QIODEVICE_READLINE1 )
   if( obj )
   {
     char * par1 = (char *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    qint64 par2 = hb_parni(2);
-    qint64 i = obj->readLine ( par1, par2 );
-    hb_retni( i );
+    RQINT64( obj->readLine ( par1, PQINT64(2) ) );
   }
 }
 
@@ -459,8 +448,7 @@ HB_FUNC_STATIC( QIODEVICE_READLINE2 )
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 par1 = hb_parni(1);
-    QByteArray * ptr = new QByteArray( obj->readLine ( par1 ) );
+    QByteArray * ptr = new QByteArray( obj->readLine ( OPQINT64(1,0) ) );
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -489,7 +477,7 @@ HB_FUNC_STATIC( QIODEVICE_RESET )
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->reset () );
+    RBOOL( obj->reset () );
   }
 }
 
@@ -502,8 +490,7 @@ HB_FUNC_STATIC( QIODEVICE_SEEK )
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 par1 = hb_parni(1);
-    hb_retl( obj->seek ( par1 ) );
+    RBOOL( obj->seek ( PQINT64(1) ) );
   }
 }
 
@@ -530,8 +517,7 @@ HB_FUNC_STATIC( QIODEVICE_SIZE )
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->size ();
-    hb_retni( i );
+    RQINT64( obj->size () );
   }
 }
 
@@ -559,7 +545,7 @@ HB_FUNC_STATIC( QIODEVICE_WAITFORBYTESWRITTEN )
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->waitForBytesWritten ( PINT(1) ) );
+    RBOOL( obj->waitForBytesWritten ( PINT(1) ) );
   }
 }
 
@@ -572,7 +558,7 @@ HB_FUNC_STATIC( QIODEVICE_WAITFORREADYREAD )
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->waitForReadyRead ( PINT(1) ) );
+    RBOOL( obj->waitForReadyRead ( PINT(1) ) );
   }
 }
 
@@ -585,10 +571,7 @@ HB_FUNC_STATIC( QIODEVICE_WRITE1 )
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const char * par1 = hb_parc(1);
-    qint64 par2 = hb_parni(2);
-    qint64 i = obj->write (  (const char *) par1, par2 );
-    hb_retni( i );
+    RQINT64( obj->write (  (const char *) hb_parc(1), PQINT64(2) ) );
   }
 }
 
@@ -601,9 +584,7 @@ HB_FUNC_STATIC( QIODEVICE_WRITE2 )
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const char * par1 = hb_parc(1);
-    qint64 i = obj->write (  (const char *) par1 );
-    hb_retni( i );
+    RQINT64( obj->write (  (const char *) hb_parc(1) ) );
   }
 }
 
@@ -616,9 +597,7 @@ HB_FUNC_STATIC( QIODEVICE_WRITE3 )
   QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    qint64 i = obj->write ( *par1 );
-    hb_retni( i );
+    RQINT64( obj->write ( *PQBYTEARRAY(1) ) );
   }
 }
 

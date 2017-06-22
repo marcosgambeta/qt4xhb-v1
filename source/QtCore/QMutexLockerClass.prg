@@ -50,9 +50,7 @@ QMutexLocker ( QMutex * mutex )
 */
 HB_FUNC_STATIC( QMUTEXLOCKER_NEW )
 {
-  QMutexLocker * o = NULL;
-  QMutex * par1 = (QMutex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QMutexLocker ( par1 );
+  QMutexLocker * o = new QMutexLocker ( PQMUTEX(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 

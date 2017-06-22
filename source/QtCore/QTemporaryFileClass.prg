@@ -48,8 +48,7 @@ QTemporaryFile()
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_NEW1 )
 {
-  QTemporaryFile * o = NULL;
-  o = new QTemporaryFile ();
+  QTemporaryFile * o = new QTemporaryFile ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -59,8 +58,7 @@ QTemporaryFile(const QString & templateName)
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_NEW2 )
 {
-  QTemporaryFile * o = NULL;
-  o = new QTemporaryFile ( PQSTRING(1) );
+  QTemporaryFile * o = new QTemporaryFile ( PQSTRING(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -70,9 +68,7 @@ QTemporaryFile(QObject * parent)
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_NEW3 )
 {
-  QTemporaryFile * o = NULL;
-  QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QTemporaryFile ( par1 );
+  QTemporaryFile * o = new QTemporaryFile ( PQOBJECT(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -82,9 +78,7 @@ QTemporaryFile(const QString & templateName, QObject * parent)
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_NEW4 )
 {
-  QTemporaryFile * o = NULL;
-  QObject * par2 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QTemporaryFile ( PQSTRING(1), par2 );
+  QTemporaryFile * o = new QTemporaryFile ( PQSTRING(1), PQOBJECT(2) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -142,7 +136,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_AUTOREMOVE )
   QTemporaryFile * obj = (QTemporaryFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->autoRemove () );
+    RBOOL( obj->autoRemove () );
   }
 }
 
@@ -169,7 +163,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_OPEN )
   QTemporaryFile * obj = (QTemporaryFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->open () );
+    RBOOL( obj->open () );
   }
 }
 

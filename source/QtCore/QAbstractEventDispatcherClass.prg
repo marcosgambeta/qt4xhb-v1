@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_FILTEREVENT )
   if( obj )
   {
     void * par1 = (void *) hb_parptr(1);
-    hb_retl( obj->filterEvent ( par1 ) );
+    RBOOL( obj->filterEvent ( par1 ) );
   }
 }
 
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_HASPENDINGEVENTS )
   QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasPendingEvents () );
+    RBOOL( obj->hasPendingEvents () );
   }
 }
 
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_PROCESSEVENTS )
   QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->processEvents (  (QEventLoop::ProcessEventsFlags) hb_parni(1) ) );
+    RBOOL( obj->processEvents (  (QEventLoop::ProcessEventsFlags) hb_parni(1) ) );
   }
 }
 
@@ -159,8 +159,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERTIMER1 )
   QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * par2 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retni( obj->registerTimer ( PINT(1), par2 ) );
+    RINT( obj->registerTimer ( PINT(1), PQOBJECT(2) ) );
   }
 }
 
@@ -173,8 +172,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERTIMER2 )
   QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * par3 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->registerTimer ( PINT(1), PINT(2), par3 );
+    obj->registerTimer ( PINT(1), PINT(2), PQOBJECT(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -220,7 +218,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERTIMER )
   QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->unregisterTimer ( PINT(1) ) );
+    RBOOL( obj->unregisterTimer ( PINT(1) ) );
   }
 }
 
@@ -233,8 +231,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERTIMERS )
   QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->unregisterTimers ( par1 ) );
+    RBOOL( obj->unregisterTimers ( PQOBJECT(1) ) );
   }
 }
 

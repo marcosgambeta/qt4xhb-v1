@@ -54,8 +54,7 @@ QStringMatcher()
 */
 HB_FUNC_STATIC( QSTRINGMATCHER_NEW1 )
 {
-  QStringMatcher * o = NULL;
-  o = new QStringMatcher ();
+  QStringMatcher * o = new QStringMatcher ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -65,9 +64,8 @@ QStringMatcher(const QString &pattern,Qt::CaseSensitivity cs = Qt::CaseSensitive
 */
 HB_FUNC_STATIC( QSTRINGMATCHER_NEW2 )
 {
-  QStringMatcher * o = NULL;
   int par2 = ISNIL(2)? (int) Qt::CaseSensitive : hb_parni(2);
-  o = new QStringMatcher ( PQSTRING(1),  (Qt::CaseSensitivity) par2 );
+  QStringMatcher * o = new QStringMatcher ( PQSTRING(1),  (Qt::CaseSensitivity) par2 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -77,10 +75,9 @@ QStringMatcher(const QChar *uc, int len,Qt::CaseSensitivity cs = Qt::CaseSensiti
 */
 HB_FUNC_STATIC( QSTRINGMATCHER_NEW3 )
 {
-  QStringMatcher * o = NULL;
   const QChar * par1 = (const QChar *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par3 = ISNIL(3)? (int) Qt::CaseSensitive : hb_parni(3);
-  o = new QStringMatcher ( par1, PINT(2),  (Qt::CaseSensitivity) par3 );
+  QStringMatcher * o = new QStringMatcher ( par1, PINT(2),  (Qt::CaseSensitivity) par3 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -90,9 +87,7 @@ QStringMatcher(const QStringMatcher &other)
 */
 HB_FUNC_STATIC( QSTRINGMATCHER_NEW4 )
 {
-  QStringMatcher * o = NULL;
-  QStringMatcher * par1 = (QStringMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QStringMatcher ( *par1 );
+  QStringMatcher * o = new QStringMatcher ( *PQSTRINGMATCHER(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -178,7 +173,7 @@ HB_FUNC_STATIC( QSTRINGMATCHER_INDEXIN1 )
   QStringMatcher * obj = (QStringMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->indexIn ( PQSTRING(1), OPINT(2,0) ) );
+    RINT( obj->indexIn ( PQSTRING(1), OPINT(2,0) ) );
   }
 }
 
@@ -192,7 +187,7 @@ HB_FUNC_STATIC( QSTRINGMATCHER_INDEXIN2 )
   if( obj )
   {
     const QChar * par1 = (const QChar *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retni( obj->indexIn ( par1, PINT(2), OPINT(3,0) ) );
+    RINT( obj->indexIn ( par1, PINT(2), OPINT(3,0) ) );
   }
 }
 

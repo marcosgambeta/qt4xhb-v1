@@ -50,9 +50,7 @@ QTimer ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QTIMER_NEW )
 {
-  QTimer * o = NULL;
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QTimer ( par1 );
+  QTimer * o = new QTimer ( OPQOBJECT(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -82,7 +80,7 @@ HB_FUNC_STATIC( QTIMER_INTERVAL )
   QTimer * obj = (QTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->interval () );
+    RINT( obj->interval () );
   }
 }
 
@@ -95,7 +93,7 @@ HB_FUNC_STATIC( QTIMER_ISACTIVE )
   QTimer * obj = (QTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isActive () );
+    RBOOL( obj->isActive () );
   }
 }
 
@@ -108,7 +106,7 @@ HB_FUNC_STATIC( QTIMER_ISSINGLESHOT )
   QTimer * obj = (QTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isSingleShot () );
+    RBOOL( obj->isSingleShot () );
   }
 }
 
@@ -121,8 +119,7 @@ HB_FUNC_STATIC( QTIMER_SETINTERVAL )
   QTimer * obj = (QTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setInterval ( par1 );
+    obj->setInterval ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -150,7 +147,7 @@ HB_FUNC_STATIC( QTIMER_TIMERID )
   QTimer * obj = (QTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->timerId () );
+    RINT( obj->timerId () );
   }
 }
 
@@ -165,8 +162,7 @@ HB_FUNC_STATIC( QTIMER_START1 )
   QTimer * obj = (QTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->start ( par1 );
+    obj->start ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -223,10 +219,7 @@ void singleShot ( int msec, QObject * receiver, const char * member )
 */
 HB_FUNC_STATIC( QTIMER_SINGLESHOT )
 {
-  int par1 = hb_parni(1);
-  QObject * par2 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  const char * par3 = hb_parc(3);
-  QTimer::singleShot ( par1, par2,  (const char *) par3 );
+  QTimer::singleShot ( PINT(1), PQOBJECT(2),  (const char *) hb_parc(3) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

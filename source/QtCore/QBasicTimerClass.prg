@@ -48,8 +48,7 @@ QBasicTimer ()
 */
 HB_FUNC_STATIC( QBASICTIMER_NEW )
 {
-  QBasicTimer * o = NULL;
-  o = new QBasicTimer ();
+  QBasicTimer * o = new QBasicTimer ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -79,7 +78,7 @@ HB_FUNC_STATIC( QBASICTIMER_ISACTIVE )
   QBasicTimer * obj = (QBasicTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isActive () );
+    RBOOL( obj->isActive () );
   }
 }
 
@@ -92,8 +91,7 @@ HB_FUNC_STATIC( QBASICTIMER_START )
   QBasicTimer * obj = (QBasicTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * par2 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->start ( PINT(1), par2 );
+    obj->start ( PINT(1), PQOBJECT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -121,7 +119,7 @@ HB_FUNC_STATIC( QBASICTIMER_TIMERID )
   QBasicTimer * obj = (QBasicTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->timerId () );
+    RINT( obj->timerId () );
   }
 }
 

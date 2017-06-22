@@ -130,8 +130,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_SETDURATION )
   QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setDuration ( par1 );
+    obj->setDuration ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -160,8 +159,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_SETENDVALUE )
   QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVariant * par1 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setEndValue ( *par1 );
+    obj->setEndValue ( *PQVARIANT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -175,8 +173,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_SETKEYVALUEAT )
   QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVariant * par2 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setKeyValueAt ( PQREAL(1), *par2 );
+    obj->setKeyValueAt ( PQREAL(1), *PQVARIANT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -191,8 +188,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_SETSTARTVALUE )
   QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVariant * par1 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setStartValue ( *par1 );
+    obj->setStartValue ( *PQVARIANT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

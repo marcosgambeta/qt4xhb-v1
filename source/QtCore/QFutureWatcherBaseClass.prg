@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_PROGRESSVALUE )
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->progressValue () );
+    RINT( obj->progressValue () );
   }
 }
 
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_PROGRESSMINIMUM )
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->progressMinimum () );
+    RINT( obj->progressMinimum () );
   }
 }
 
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_PROGRESSMAXIMUM )
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->progressMaximum () );
+    RINT( obj->progressMaximum () );
   }
 }
 
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISSTARTED )
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isStarted () );
+    RBOOL( obj->isStarted () );
   }
 }
 
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISFINISHED )
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isFinished () );
+    RBOOL( obj->isFinished () );
   }
 }
 
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISRUNNING )
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isRunning () );
+    RBOOL( obj->isRunning () );
   }
 }
 
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISCANCELED )
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isCanceled () );
+    RBOOL( obj->isCanceled () );
   }
 }
 
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISPAUSED )
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isPaused () );
+    RBOOL( obj->isPaused () );
   }
 }
 
@@ -230,8 +230,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_EVENT )
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QEvent * par1 = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->event ( par1 ) );
+    RBOOL( obj->event ( PQEVENT(1) ) );
   }
 }
 

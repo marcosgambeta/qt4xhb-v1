@@ -57,8 +57,7 @@ QXmlStreamAttribute()
 */
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NEW1 )
 {
-  QXmlStreamAttribute * o = NULL;
-  o = new QXmlStreamAttribute ();
+  QXmlStreamAttribute * o = new QXmlStreamAttribute ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -68,8 +67,7 @@ QXmlStreamAttribute(const QString & qualifiedName, const QString & value)
 */
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NEW2 )
 {
-  QXmlStreamAttribute * o = NULL;
-  o = new QXmlStreamAttribute ( PQSTRING(1), PQSTRING(2) );
+  QXmlStreamAttribute * o = new QXmlStreamAttribute ( PQSTRING(1), PQSTRING(2) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -79,8 +77,7 @@ QXmlStreamAttribute(const QString & namespaceUri, const QString & name, const QS
 */
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NEW3 )
 {
-  QXmlStreamAttribute * o = NULL;
-  o = new QXmlStreamAttribute ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
+  QXmlStreamAttribute * o = new QXmlStreamAttribute ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -90,9 +87,7 @@ QXmlStreamAttribute(const QXmlStreamAttribute & other)
 */
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NEW4 )
 {
-  QXmlStreamAttribute * o = NULL;
-  QXmlStreamAttribute * par1 = (QXmlStreamAttribute *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QXmlStreamAttribute ( *par1 );
+  QXmlStreamAttribute * o = new QXmlStreamAttribute ( *PQXMLSTREAMATTRIBUTE(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -150,7 +145,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_ISDEFAULT )
   QXmlStreamAttribute * obj = (QXmlStreamAttribute *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isDefault () );
+    RBOOL( obj->isDefault () );
   }
 }
 

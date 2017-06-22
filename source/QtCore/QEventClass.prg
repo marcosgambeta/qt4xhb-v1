@@ -51,8 +51,7 @@ QEvent ( Type type )
 */
 HB_FUNC_STATIC( QEVENT_NEW )
 {
-  QEvent * o = NULL;
-  o = new QEvent (  (QEvent::Type) hb_parni(1) );
+  QEvent * o = new QEvent (  (QEvent::Type) hb_parni(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -110,7 +109,7 @@ HB_FUNC_STATIC( QEVENT_ISACCEPTED )
   QEvent * obj = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isAccepted () );
+    RBOOL( obj->isAccepted () );
   }
 }
 
@@ -137,7 +136,7 @@ HB_FUNC_STATIC( QEVENT_SPONTANEOUS )
   QEvent * obj = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->spontaneous () );
+    RBOOL( obj->spontaneous () );
   }
 }
 
@@ -161,7 +160,7 @@ int registerEventType ( int hint = -1 )
 */
 HB_FUNC_STATIC( QEVENT_REGISTEREVENTTYPE )
 {
-  hb_retni( QEvent::registerEventType ( OPINT(1,-1) ) );
+  RINT( QEvent::registerEventType ( OPINT(1,-1) ) );
 }
 
 

@@ -59,8 +59,7 @@ QTextBoundaryFinder()
 */
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW1 )
 {
-  QTextBoundaryFinder * o = NULL;
-  o = new QTextBoundaryFinder ();
+  QTextBoundaryFinder * o = new QTextBoundaryFinder ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -70,9 +69,7 @@ QTextBoundaryFinder(const QTextBoundaryFinder &other)
 */
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW2 )
 {
-  QTextBoundaryFinder * o = NULL;
-  QTextBoundaryFinder * par1 = (QTextBoundaryFinder *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QTextBoundaryFinder ( *par1 );
+  QTextBoundaryFinder * o = new QTextBoundaryFinder ( *PQTEXTBOUNDARYFINDER(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -82,9 +79,7 @@ QTextBoundaryFinder(BoundaryType type, const QString &string)
 */
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW3 )
 {
-  QTextBoundaryFinder * o = NULL;
-  int par1 = hb_parni(1);
-  o = new QTextBoundaryFinder (  (QTextBoundaryFinder::BoundaryType) par1, PQSTRING(2) );
+  QTextBoundaryFinder * o = new QTextBoundaryFinder (  (QTextBoundaryFinder::BoundaryType) hb_parni(1), PQSTRING(2) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -94,12 +89,9 @@ QTextBoundaryFinder(BoundaryType type, const QChar *chars, int length, unsigned 
 */
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW4 )
 {
-  QTextBoundaryFinder * o = NULL;
-  int par1 = hb_parni(1);
   const QChar * par2 = (const QChar *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  int par3 = hb_parni(3);
   unsigned char * par4 = ISNIL(4)? 0 : (unsigned char *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QTextBoundaryFinder (  (QTextBoundaryFinder::BoundaryType) par1, par2, par3, par4, OPINT(5,0) );
+  QTextBoundaryFinder * o = new QTextBoundaryFinder (  (QTextBoundaryFinder::BoundaryType) hb_parni(1), par2, PINT(3), par4, OPINT(5,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -157,7 +149,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_ISVALID )
   QTextBoundaryFinder * obj = (QTextBoundaryFinder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -225,7 +217,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_POSITION )
   QTextBoundaryFinder * obj = (QTextBoundaryFinder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->position () );
+    RINT( obj->position () );
   }
 }
 
@@ -238,8 +230,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_SETPOSITION )
   QTextBoundaryFinder * obj = (QTextBoundaryFinder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setPosition ( par1 );
+    obj->setPosition ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -253,7 +244,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TONEXTBOUNDARY )
   QTextBoundaryFinder * obj = (QTextBoundaryFinder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->toNextBoundary () );
+    RINT( obj->toNextBoundary () );
   }
 }
 
@@ -266,7 +257,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TOPREVIOUSBOUNDARY )
   QTextBoundaryFinder * obj = (QTextBoundaryFinder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->toPreviousBoundary () );
+    RINT( obj->toPreviousBoundary () );
   }
 }
 
@@ -279,7 +270,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_ISATBOUNDARY )
   QTextBoundaryFinder * obj = (QTextBoundaryFinder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isAtBoundary () );
+    RBOOL( obj->isAtBoundary () );
   }
 }
 

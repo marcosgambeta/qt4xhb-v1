@@ -49,8 +49,7 @@ QMutex ( RecursionMode mode = NonRecursive )
 */
 HB_FUNC_STATIC( QMUTEX_NEW )
 {
-  QMutex * o = NULL;
-  o = new QMutex ( ISNIL(1)? QMutex::NonRecursive : (QMutex::RecursionMode) hb_parni(1) );
+  QMutex * o = new QMutex ( ISNIL(1)? QMutex::NonRecursive : (QMutex::RecursionMode) hb_parni(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -93,7 +92,7 @@ HB_FUNC_STATIC( QMUTEX_TRYLOCK1 )
   QMutex * obj = (QMutex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->tryLock () );
+    RBOOL( obj->tryLock () );
   }
 }
 
@@ -106,7 +105,7 @@ HB_FUNC_STATIC( QMUTEX_TRYLOCK2 )
   QMutex * obj = (QMutex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->tryLock ( PINT(1) ) );
+    RBOOL( obj->tryLock ( PINT(1) ) );
   }
 }
 

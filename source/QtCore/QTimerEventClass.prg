@@ -39,9 +39,7 @@ QTimerEvent(int timerId)
 */
 HB_FUNC_STATIC( QTIMEREVENT_NEW )
 {
-  QTimerEvent * o = NULL;
-  int par1 = hb_parni(1);
-  o = new QTimerEvent ( par1 );
+  QTimerEvent * o = new QTimerEvent ( PINT(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -70,7 +68,7 @@ HB_FUNC_STATIC( QTIMEREVENT_TIMERID )
   QTimerEvent * obj = (QTimerEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->timerId () );
+    RINT( obj->timerId () );
   }
 }
 

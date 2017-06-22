@@ -61,8 +61,7 @@ QXmlStreamAttributes()
 */
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_NEW )
 {
-  QXmlStreamAttributes * o = NULL;
-  o = new QXmlStreamAttributes ();
+  QXmlStreamAttributes * o = new QXmlStreamAttributes ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -154,7 +153,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE1 )
   QXmlStreamAttributes * obj = (QXmlStreamAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasAttribute ( PQSTRING(1) ) );
+    RBOOL( obj->hasAttribute ( PQSTRING(1) ) );
   }
 }
 
@@ -168,7 +167,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE2 )
   if( obj )
   {
     QLatin1String * par1 = (QLatin1String *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->hasAttribute ( *par1 ) );
+    RBOOL( obj->hasAttribute ( *par1 ) );
   }
 }
 
@@ -181,7 +180,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE3 )
   QXmlStreamAttributes * obj = (QXmlStreamAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasAttribute ( PQSTRING(1), PQSTRING(2) ) );
+    RBOOL( obj->hasAttribute ( PQSTRING(1), PQSTRING(2) ) );
   }
 }
 

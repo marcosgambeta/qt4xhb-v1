@@ -87,8 +87,7 @@ QDateTime ()
 */
 HB_FUNC_STATIC( QDATETIME_NEW1 )
 {
-  QDateTime * o = NULL;
-  o = new QDateTime ();
+  QDateTime * o = new QDateTime ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -98,9 +97,7 @@ QDateTime ( const QDate & date )
 */
 HB_FUNC_STATIC( QDATETIME_NEW2 )
 {
-  QDateTime * o = NULL;
-  QDate * par1 = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDateTime ( *par1 );
+  QDateTime * o = new QDateTime ( *PQDATE(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -110,10 +107,7 @@ QDateTime ( const QDate & date, const QTime & time, Qt::TimeSpec spec = Qt::Loca
 */
 HB_FUNC_STATIC( QDATETIME_NEW3 )
 {
-  QDateTime * o = NULL;
-  QDate * par1 = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QTime * par2 = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDateTime ( *par1, *par2, ISNIL(3)? Qt::LocalTime : (Qt::TimeSpec) hb_parni(3) );
+  QDateTime * o = new QDateTime ( *PQDATE(1), *PQTIME(2), ISNIL(3)? Qt::LocalTime : (Qt::TimeSpec) hb_parni(3) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -123,9 +117,7 @@ QDateTime ( const QDateTime & other )
 */
 HB_FUNC_STATIC( QDATETIME_NEW4 )
 {
-  QDateTime * o = NULL;
-  QDateTime * par1 = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDateTime ( *par1 );
+  QDateTime * o = new QDateTime ( *PQDATETIME(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -198,8 +190,7 @@ HB_FUNC_STATIC( QDATETIME_ADDMSECS )
   QDateTime * obj = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 par1 = hb_parni(1);
-    QDateTime * ptr = new QDateTime( obj->addMSecs ( par1 ) );
+    QDateTime * ptr = new QDateTime( obj->addMSecs ( PQINT64(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
@@ -269,8 +260,7 @@ HB_FUNC_STATIC( QDATETIME_DAYSTO )
   QDateTime * obj = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDateTime * par1 = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retni( obj->daysTo ( *par1 ) );
+    RINT( obj->daysTo ( *PQDATETIME(1) ) );
   }
 }
 
@@ -283,7 +273,7 @@ HB_FUNC_STATIC( QDATETIME_ISNULL )
   QDateTime * obj = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -296,7 +286,7 @@ HB_FUNC_STATIC( QDATETIME_ISVALID )
   QDateTime * obj = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -309,9 +299,7 @@ HB_FUNC_STATIC( QDATETIME_MSECSTO )
   QDateTime * obj = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDateTime * par1 = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    qint64 i = obj->msecsTo ( *par1 );
-    hb_retni( i );
+    RQINT64( obj->msecsTo ( *PQDATETIME(1) ) );
   }
 }
 
@@ -324,8 +312,7 @@ HB_FUNC_STATIC( QDATETIME_SECSTO )
   QDateTime * obj = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDateTime * par1 = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retni( obj->secsTo ( *par1 ) );
+    RINT( obj->secsTo ( *PQDATETIME(1) ) );
   }
 }
 
@@ -338,8 +325,7 @@ HB_FUNC_STATIC( QDATETIME_SETDATE )
   QDateTime * obj = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDate * par1 = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setDate ( *par1 );
+    obj->setDate ( *PQDATE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -353,8 +339,7 @@ HB_FUNC_STATIC( QDATETIME_SETMSECSSINCEEPOCH )
   QDateTime * obj = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 par1 = hb_parni(1);
-    obj->setMSecsSinceEpoch ( par1 );
+    obj->setMSecsSinceEpoch ( PQINT64(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -368,8 +353,7 @@ HB_FUNC_STATIC( QDATETIME_SETTIME )
   QDateTime * obj = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTime * par1 = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setTime ( *par1 );
+    obj->setTime ( *PQTIME(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -452,8 +436,7 @@ HB_FUNC_STATIC( QDATETIME_TOMSECSSINCEEPOCH )
   QDateTime * obj = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->toMSecsSinceEpoch ();
-    hb_retni( i );
+    RQINT64( obj->toMSecsSinceEpoch () );
   }
 }
 
@@ -568,8 +551,7 @@ qint64 currentMSecsSinceEpoch ()
 */
 HB_FUNC_STATIC( QDATETIME_CURRENTMSECSSINCEEPOCH )
 {
-  qint64 i = QDateTime::currentMSecsSinceEpoch ();
-  hb_retni( i );
+  RQINT64( QDateTime::currentMSecsSinceEpoch () );
 }
 
 
@@ -578,8 +560,7 @@ QDateTime fromMSecsSinceEpoch ( qint64 msecs )
 */
 HB_FUNC_STATIC( QDATETIME_FROMMSECSSINCEEPOCH )
 {
-  qint64 par1 = hb_parni(1);
-  QDateTime * ptr = new QDateTime( QDateTime::fromMSecsSinceEpoch ( par1 ) );
+  QDateTime * ptr = new QDateTime( QDateTime::fromMSecsSinceEpoch ( PQINT64(1) ) );
   _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
 }
 

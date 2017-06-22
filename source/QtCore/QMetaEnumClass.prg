@@ -60,8 +60,7 @@ QMetaEnum()
 */
 HB_FUNC_STATIC( QMETAENUM_NEW )
 {
-  QMetaEnum * o = NULL;
-  o = new QMetaEnum ();
+  QMetaEnum * o = new QMetaEnum ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -104,7 +103,7 @@ HB_FUNC_STATIC( QMETAENUM_ISFLAG )
   QMetaEnum * obj = (QMetaEnum *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isFlag () );
+    RBOOL( obj->isFlag () );
   }
 }
 
@@ -117,7 +116,7 @@ HB_FUNC_STATIC( QMETAENUM_KEYCOUNT )
   QMetaEnum * obj = (QMetaEnum *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->keyCount () );
+    RINT( obj->keyCount () );
   }
 }
 
@@ -144,7 +143,7 @@ HB_FUNC_STATIC( QMETAENUM_VALUE )
   QMetaEnum * obj = (QMetaEnum *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->value ( PINT(1) ) );
+    RINT( obj->value ( PINT(1) ) );
   }
 }
 
@@ -171,8 +170,7 @@ HB_FUNC_STATIC( QMETAENUM_KEYTOVALUE )
   QMetaEnum * obj = (QMetaEnum *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const char * par1 = hb_parc(1);
-    hb_retni( obj->keyToValue (  (const char *) par1 ) );
+    RINT( obj->keyToValue (  (const char *) hb_parc(1) ) );
   }
 }
 
@@ -199,8 +197,7 @@ HB_FUNC_STATIC( QMETAENUM_KEYSTOVALUE )
   QMetaEnum * obj = (QMetaEnum *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const char * par1 = hb_parc(1);
-    hb_retni( obj->keysToValue (  (const char *) par1 ) );
+    RINT( obj->keysToValue (  (const char *) hb_parc(1) ) );
   }
 }
 
@@ -241,7 +238,7 @@ HB_FUNC_STATIC( QMETAENUM_ISVALID )
   QMetaEnum * obj = (QMetaEnum *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 

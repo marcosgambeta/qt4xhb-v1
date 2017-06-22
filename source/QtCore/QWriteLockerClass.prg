@@ -50,9 +50,7 @@ QWriteLocker ( QReadWriteLock * lock )
 */
 HB_FUNC_STATIC( QWRITELOCKER_NEW )
 {
-  QWriteLocker * o = NULL;
-  QReadWriteLock * par1 = (QReadWriteLock *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QWriteLocker ( par1 );
+  QWriteLocker * o = new QWriteLocker ( PQREADWRITELOCK(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

@@ -56,8 +56,7 @@ QElapsedTimer()
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_NEW )
 {
-  QElapsedTimer * o = NULL;
-  o = new QElapsedTimer ();
+  QElapsedTimer * o = new QElapsedTimer ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -86,8 +85,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_ELAPSED )
   QElapsedTimer * obj = (QElapsedTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->elapsed ();
-    hb_retni( i );
+    RQINT64( obj->elapsed () );
   }
 }
 
@@ -100,8 +98,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_HASEXPIRED )
   QElapsedTimer * obj = (QElapsedTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 par1 = hb_parni(1);
-    hb_retl( obj->hasExpired ( par1 ) );
+    RBOOL( obj->hasExpired ( PQINT64(1) ) );
   }
 }
 
@@ -128,7 +125,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_ISVALID )
   QElapsedTimer * obj = (QElapsedTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -141,8 +138,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_MSECSSINCEREFERENCE )
   QElapsedTimer * obj = (QElapsedTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->msecsSinceReference ();
-    hb_retni( i );
+    RQINT64( obj->msecsSinceReference () );
   }
 }
 
@@ -156,8 +152,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_MSECSTO )
   if( obj )
   {
     QElapsedTimer * par1 = (QElapsedTimer *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    qint64 i = obj->msecsTo ( *par1 );
-    hb_retni( i );
+    RQINT64( obj->msecsTo ( *par1 ) );
   }
 }
 
@@ -170,8 +165,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_NSECSELAPSED )
   QElapsedTimer * obj = (QElapsedTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->nsecsElapsed ();
-    hb_retni( i );
+    RQINT64( obj->nsecsElapsed () );
   }
 }
 
@@ -184,8 +178,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_RESTART )
   QElapsedTimer * obj = (QElapsedTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->restart ();
-    hb_retni( i );
+    RQINT64( obj->restart () );
   }
 }
 
@@ -199,8 +192,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_SECSTO )
   if( obj )
   {
     QElapsedTimer * par1 = (QElapsedTimer *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    qint64 i = obj->secsTo ( *par1 );
-    hb_retni( i );
+    RQINT64( obj->secsTo ( *par1 ) );
   }
 }
 
@@ -234,7 +226,7 @@ bool isMonotonic()
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_ISMONOTONIC )
 {
-  hb_retl( QElapsedTimer::isMonotonic () );
+  RBOOL( QElapsedTimer::isMonotonic () );
 }
 
 

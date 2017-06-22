@@ -48,9 +48,7 @@ QPropertyAnimation ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QPROPERTYANIMATION_NEW1 )
 {
-  QPropertyAnimation * o = NULL;
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QPropertyAnimation ( par1 );
+  QPropertyAnimation * o = new QPropertyAnimation ( OPQOBJECT(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -60,11 +58,7 @@ QPropertyAnimation ( QObject * target, const QByteArray & propertyName, QObject 
 */
 HB_FUNC_STATIC( QPROPERTYANIMATION_NEW2 )
 {
-  QPropertyAnimation * o = NULL;
-  QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QByteArray * par2 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QObject * par3 = ISNIL(3)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QPropertyAnimation ( par1, *par2, par3 );
+  QPropertyAnimation * o = new QPropertyAnimation ( PQOBJECT(1), *PQBYTEARRAY(2), OPQOBJECT(3,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -127,8 +121,7 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_SETPROPERTYNAME )
   QPropertyAnimation * obj = (QPropertyAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setPropertyName ( *par1 );
+    obj->setPropertyName ( *PQBYTEARRAY(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -142,8 +135,7 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_SETTARGETOBJECT )
   QPropertyAnimation * obj = (QPropertyAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setTargetObject ( par1 );
+    obj->setTargetObject ( PQOBJECT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

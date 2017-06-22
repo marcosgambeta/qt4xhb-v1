@@ -62,8 +62,7 @@ QModelIndex ()
 */
 HB_FUNC_STATIC( QMODELINDEX_NEW1 )
 {
-  QModelIndex * o = NULL;
-  o = new QModelIndex ();
+  QModelIndex * o = new QModelIndex ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -73,9 +72,7 @@ QModelIndex ( const QModelIndex & other )
 */
 HB_FUNC_STATIC( QMODELINDEX_NEW2 )
 {
-  QModelIndex * o = NULL;
-  QModelIndex * par1 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QModelIndex ( *par1 );
+  QModelIndex * o = new QModelIndex ( *PQMODELINDEX(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -137,7 +134,7 @@ HB_FUNC_STATIC( QMODELINDEX_COLUMN )
   QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->column () );
+    RINT( obj->column () );
   }
 }
 
@@ -177,8 +174,7 @@ HB_FUNC_STATIC( QMODELINDEX_INTERNALID )
   QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->internalId ();
-    hb_retni( i );
+    RQINT64( obj->internalId () );
   }
 }
 
@@ -205,7 +201,7 @@ HB_FUNC_STATIC( QMODELINDEX_ISVALID )
   QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -246,7 +242,7 @@ HB_FUNC_STATIC( QMODELINDEX_ROW )
   QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->row () );
+    RINT( obj->row () );
   }
 }
 

@@ -95,9 +95,7 @@ QProcess ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QPROCESS_NEW )
 {
-  QProcess * o = NULL;
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QProcess ( par1 );
+  QProcess * o = new QProcess ( OPQOBJECT(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -191,7 +189,7 @@ HB_FUNC_STATIC( QPROCESS_EXITCODE )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->exitCode () );
+    RINT( obj->exitCode () );
   }
 }
 
@@ -499,7 +497,7 @@ HB_FUNC_STATIC( QPROCESS_WAITFORFINISHED )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->waitForFinished ( OPINT(1,30000) ) );
+    RBOOL( obj->waitForFinished ( OPINT(1,30000) ) );
   }
 }
 
@@ -512,7 +510,7 @@ HB_FUNC_STATIC( QPROCESS_WAITFORSTARTED )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->waitForStarted ( OPINT(1,30000) ) );
+    RBOOL( obj->waitForStarted ( OPINT(1,30000) ) );
   }
 }
 
@@ -539,7 +537,7 @@ HB_FUNC_STATIC( QPROCESS_ATEND )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->atEnd () );
+    RBOOL( obj->atEnd () );
   }
 }
 
@@ -552,8 +550,7 @@ HB_FUNC_STATIC( QPROCESS_BYTESAVAILABLE )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->bytesAvailable ();
-    hb_retni( i );
+    RQINT64( obj->bytesAvailable () );
   }
 }
 
@@ -566,8 +563,7 @@ HB_FUNC_STATIC( QPROCESS_BYTESTOWRITE )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->bytesToWrite ();
-    hb_retni( i );
+    RQINT64( obj->bytesToWrite () );
   }
 }
 
@@ -580,7 +576,7 @@ HB_FUNC_STATIC( QPROCESS_CANREADLINE )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->canReadLine () );
+    RBOOL( obj->canReadLine () );
   }
 }
 
@@ -607,7 +603,7 @@ HB_FUNC_STATIC( QPROCESS_ISSEQUENTIAL )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isSequential () );
+    RBOOL( obj->isSequential () );
   }
 }
 
@@ -620,7 +616,7 @@ HB_FUNC_STATIC( QPROCESS_WAITFORBYTESWRITTEN )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->waitForBytesWritten ( OPINT(1,30000) ) );
+    RBOOL( obj->waitForBytesWritten ( OPINT(1,30000) ) );
   }
 }
 
@@ -633,7 +629,7 @@ HB_FUNC_STATIC( QPROCESS_WAITFORREADYREAD )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->waitForReadyRead ( OPINT(1,30000) ) );
+    RBOOL( obj->waitForReadyRead ( OPINT(1,30000) ) );
   }
 }
 
@@ -672,7 +668,7 @@ int execute ( const QString & program, const QStringList & arguments )
 */
 HB_FUNC_STATIC( QPROCESS_EXECUTE1 )
 {
-  hb_retni( QProcess::execute ( PQSTRING(1), PQSTRINGLIST(2) ) );
+  RINT( QProcess::execute ( PQSTRING(1), PQSTRINGLIST(2) ) );
 }
 
 
@@ -681,7 +677,7 @@ int execute ( const QString & program )
 */
 HB_FUNC_STATIC( QPROCESS_EXECUTE2 )
 {
-  hb_retni( QProcess::execute ( PQSTRING(1) ) );
+  RINT( QProcess::execute ( PQSTRING(1) ) );
 }
 
 
@@ -705,8 +701,9 @@ bool startDetached ( const QString & program, const QStringList & arguments, con
 */
 HB_FUNC_STATIC( QPROCESS_STARTDETACHED1 )
 {
-  qint64 * par4 = (qint64 *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-  hb_retl( QProcess::startDetached ( PQSTRING(1), PQSTRINGLIST(2), PQSTRING(3), par4 ) );
+  qint64 par4 = 0;
+  RBOOL( QProcess::startDetached ( PQSTRING(1), PQSTRINGLIST(2), PQSTRING(3), &par4 ) );
+  hb_stornll( par4, 4 );
 }
 
 
@@ -715,7 +712,7 @@ bool startDetached ( const QString & program, const QStringList & arguments )
 */
 HB_FUNC_STATIC( QPROCESS_STARTDETACHED2 )
 {
-  hb_retl( QProcess::startDetached ( PQSTRING(1), PQSTRINGLIST(2) ) );
+  RBOOL( QProcess::startDetached ( PQSTRING(1), PQSTRINGLIST(2) ) );
 }
 
 
@@ -724,7 +721,7 @@ bool startDetached ( const QString & program )
 */
 HB_FUNC_STATIC( QPROCESS_STARTDETACHED3 )
 {
-  hb_retl( QProcess::startDetached ( PQSTRING(1) ) );
+  RBOOL( QProcess::startDetached ( PQSTRING(1) ) );
 }
 
 

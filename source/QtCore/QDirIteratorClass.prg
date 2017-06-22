@@ -57,10 +57,8 @@ QDirIterator ( const QDir & dir, IteratorFlags flags = NoIteratorFlags )
 */
 HB_FUNC_STATIC( QDIRITERATOR_NEW1 )
 {
-  QDirIterator * o = NULL;
-  QDir * par1 = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = ISNIL(2)? (int) QDirIterator::NoIteratorFlags : hb_parni(2);
-  o = new QDirIterator ( *par1, (QDirIterator::IteratorFlags) par2 );
+  QDirIterator * o = new QDirIterator ( *PQDIR(1), (QDirIterator::IteratorFlags) par2 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -70,9 +68,8 @@ QDirIterator ( const QString & path, IteratorFlags flags = NoIteratorFlags )
 */
 HB_FUNC_STATIC( QDIRITERATOR_NEW2 )
 {
-  QDirIterator * o = NULL;
   int par2 = ISNIL(2)? (int) QDirIterator::NoIteratorFlags : hb_parni(2);
-  o = new QDirIterator ( PQSTRING(1),  (QDirIterator::IteratorFlags) par2 );
+  QDirIterator * o = new QDirIterator ( PQSTRING(1),  (QDirIterator::IteratorFlags) par2 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -82,9 +79,8 @@ QDirIterator ( const QString & path, QDir::Filters filters, IteratorFlags flags 
 */
 HB_FUNC_STATIC( QDIRITERATOR_NEW3 )
 {
-  QDirIterator * o = NULL;
   int par3 = ISNIL(3)? (int) QDirIterator::NoIteratorFlags : hb_parni(3);
-  o = new QDirIterator ( PQSTRING(1),  (QDir::Filters) hb_parni(2), (QDirIterator::IteratorFlags) par3 );
+  QDirIterator * o = new QDirIterator ( PQSTRING(1),  (QDir::Filters) hb_parni(2), (QDirIterator::IteratorFlags) par3 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -94,9 +90,8 @@ QDirIterator ( const QString & path, const QStringList & nameFilters, QDir::Filt
 */
 HB_FUNC_STATIC( QDIRITERATOR_NEW4 )
 {
-  QDirIterator * o = NULL;
   int par4 = ISNIL(4)? (int) QDirIterator::NoIteratorFlags : hb_parni(4);
-  o = new QDirIterator ( PQSTRING(1), PQSTRINGLIST(2), ISNIL(3)? QDir::NoFilter : (QDir::Filters) hb_parni(3), (QDirIterator::IteratorFlags) par4 );
+  QDirIterator * o = new QDirIterator ( PQSTRING(1), PQSTRINGLIST(2), ISNIL(3)? QDir::NoFilter : (QDir::Filters) hb_parni(3), (QDirIterator::IteratorFlags) par4 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -198,7 +193,7 @@ HB_FUNC_STATIC( QDIRITERATOR_HASNEXT )
   QDirIterator * obj = (QDirIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasNext () );
+    RBOOL( obj->hasNext () );
   }
 }
 

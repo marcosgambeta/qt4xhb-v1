@@ -54,8 +54,7 @@ QEasingCurve ( Type type = Linear )
 */
 HB_FUNC_STATIC( QEASINGCURVE_NEW1 )
 {
-  QEasingCurve * o = NULL;
-  o = new QEasingCurve (  (QEasingCurve::Type) hb_parni(1) );
+  QEasingCurve * o = new QEasingCurve (  (QEasingCurve::Type) hb_parni(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -65,9 +64,7 @@ QEasingCurve ( const QEasingCurve & other )
 */
 HB_FUNC_STATIC( QEASINGCURVE_NEW2 )
 {
-  QEasingCurve * o = NULL;
-  QEasingCurve * par1 = (QEasingCurve *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QEasingCurve ( *par1 );
+  QEasingCurve * o = new QEasingCurve ( *PQEASINGCURVE(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -119,8 +116,7 @@ HB_FUNC_STATIC( QEASINGCURVE_AMPLITUDE )
   QEasingCurve * obj = (QEasingCurve *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->amplitude ();
-    hb_retnd( r );
+    RQREAL( obj->amplitude () );
   }
 }
 
@@ -134,8 +130,7 @@ HB_FUNC_STATIC( QEASINGCURVE_OVERSHOOT )
   QEasingCurve * obj = (QEasingCurve *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->overshoot ();
-    hb_retnd( r );
+    RQREAL( obj->overshoot () );
   }
 }
 
@@ -148,8 +143,7 @@ HB_FUNC_STATIC( QEASINGCURVE_PERIOD )
   QEasingCurve * obj = (QEasingCurve *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->period ();
-    hb_retnd( r );
+    RQREAL( obj->period () );
   }
 }
 

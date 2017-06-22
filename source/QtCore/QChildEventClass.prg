@@ -45,9 +45,7 @@ QChildEvent(Type type, QObject * child)
 */
 HB_FUNC_STATIC( QCHILDEVENT_NEW )
 {
-  QChildEvent * o = NULL;
-  QObject * par2 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QChildEvent (  (QEvent::Type) hb_parni(1), par2 );
+  QChildEvent * o = new QChildEvent (  (QEvent::Type) hb_parni(1), PQOBJECT(2) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -76,7 +74,7 @@ HB_FUNC_STATIC( QCHILDEVENT_ADDED )
   QChildEvent * obj = (QChildEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->added () );
+    RBOOL( obj->added () );
   }
 }
 
@@ -103,7 +101,7 @@ HB_FUNC_STATIC( QCHILDEVENT_POLISHED )
   QChildEvent * obj = (QChildEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->polished () );
+    RBOOL( obj->polished () );
   }
 }
 
@@ -116,7 +114,7 @@ HB_FUNC_STATIC( QCHILDEVENT_REMOVED )
   QChildEvent * obj = (QChildEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->removed () );
+    RBOOL( obj->removed () );
   }
 }
 

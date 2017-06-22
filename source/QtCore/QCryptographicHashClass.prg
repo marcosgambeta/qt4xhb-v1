@@ -53,8 +53,7 @@ QCryptographicHash ( Algorithm method )
 */
 HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_NEW )
 {
-  QCryptographicHash * o = NULL;
-  o = new QCryptographicHash (  (QCryptographicHash::Algorithm) hb_parni(1) );
+  QCryptographicHash * o = new QCryptographicHash (  (QCryptographicHash::Algorithm) hb_parni(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -83,8 +82,7 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_ADDDATA1 )
   QCryptographicHash * obj = (QCryptographicHash *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const char * par1 = hb_parc(1);
-    obj->addData (  (const char *) par1, PINT(2) );
+    obj->addData (  (const char *) hb_parc(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -98,8 +96,7 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_ADDDATA2 )
   QCryptographicHash * obj = (QCryptographicHash *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->addData ( *par1 );
+    obj->addData ( *PQBYTEARRAY(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -154,8 +151,7 @@ QByteArray hash ( const QByteArray & data, Algorithm method )
 */
 HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_HASH )
 {
-  QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QByteArray * ptr = new QByteArray( QCryptographicHash::hash ( *par1,  (QCryptographicHash::Algorithm) hb_parni(2) ) );
+  QByteArray * ptr = new QByteArray( QCryptographicHash::hash ( *PQBYTEARRAY(1),  (QCryptographicHash::Algorithm) hb_parni(2) ) );
   _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
 }
 

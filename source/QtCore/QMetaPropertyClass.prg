@@ -78,8 +78,7 @@ QMetaProperty()
 */
 HB_FUNC_STATIC( QMETAPROPERTY_NEW )
 {
-  QMetaProperty * o = NULL;
-  o = new QMetaProperty ();
+  QMetaProperty * o = new QMetaProperty ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -149,7 +148,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_USERTYPE )
   QMetaProperty * obj = (QMetaProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->userType () );
+    RINT( obj->userType () );
   }
 }
 
@@ -162,7 +161,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_PROPERTYINDEX )
   QMetaProperty * obj = (QMetaProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->propertyIndex () );
+    RINT( obj->propertyIndex () );
   }
 }
 
@@ -175,7 +174,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISREADABLE )
   QMetaProperty * obj = (QMetaProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isReadable () );
+    RBOOL( obj->isReadable () );
   }
 }
 
@@ -188,7 +187,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISWRITABLE )
   QMetaProperty * obj = (QMetaProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isWritable () );
+    RBOOL( obj->isWritable () );
   }
 }
 
@@ -201,7 +200,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISRESETTABLE )
   QMetaProperty * obj = (QMetaProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isResettable () );
+    RBOOL( obj->isResettable () );
   }
 }
 
@@ -215,7 +214,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISDESIGNABLE )
   if( obj )
   {
     const QObject * par1 = ISNIL(1)? 0 : (const QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->isDesignable ( par1 ) );
+    RBOOL( obj->isDesignable ( par1 ) );
   }
 }
 
@@ -229,7 +228,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISSCRIPTABLE )
   if( obj )
   {
     const QObject * par1 = ISNIL(1)? 0 : (const QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->isScriptable ( par1 ) );
+    RBOOL( obj->isScriptable ( par1 ) );
   }
 }
 
@@ -243,7 +242,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISSTORED )
   if( obj )
   {
     const QObject * par1 = ISNIL(1)? 0 : (const QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->isStored ( par1 ) );
+    RBOOL( obj->isStored ( par1 ) );
   }
 }
 
@@ -257,7 +256,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISEDITABLE )
   if( obj )
   {
     const QObject * par1 = ISNIL(1)? 0 : (const QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->isEditable ( par1 ) );
+    RBOOL( obj->isEditable ( par1 ) );
   }
 }
 
@@ -271,7 +270,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISUSER )
   if( obj )
   {
     const QObject * par1 = ISNIL(1)? 0 : (const QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->isUser ( par1 ) );
+    RBOOL( obj->isUser ( par1 ) );
   }
 }
 
@@ -284,7 +283,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISCONSTANT )
   QMetaProperty * obj = (QMetaProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isConstant () );
+    RBOOL( obj->isConstant () );
   }
 }
 
@@ -297,7 +296,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISFINAL )
   QMetaProperty * obj = (QMetaProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isFinal () );
+    RBOOL( obj->isFinal () );
   }
 }
 
@@ -310,7 +309,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISFLAGTYPE )
   QMetaProperty * obj = (QMetaProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isFlagType () );
+    RBOOL( obj->isFlagType () );
   }
 }
 
@@ -323,7 +322,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISENUMTYPE )
   QMetaProperty * obj = (QMetaProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isEnumType () );
+    RBOOL( obj->isEnumType () );
   }
 }
 
@@ -350,7 +349,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_HASNOTIFYSIGNAL )
   QMetaProperty * obj = (QMetaProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasNotifySignal () );
+    RBOOL( obj->hasNotifySignal () );
   }
 }
 
@@ -377,7 +376,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_NOTIFYSIGNALINDEX )
   QMetaProperty * obj = (QMetaProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->notifySignalIndex () );
+    RINT( obj->notifySignalIndex () );
   }
 }
 
@@ -390,7 +389,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_REVISION )
   QMetaProperty * obj = (QMetaProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->revision () );
+    RINT( obj->revision () );
   }
 }
 
@@ -418,9 +417,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_WRITE )
   QMetaProperty * obj = (QMetaProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QVariant * par2 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->write ( par1, *par2 ) );
+    RBOOL( obj->write ( PQOBJECT(1), *PQVARIANT(2) ) );
   }
 }
 
@@ -433,8 +430,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_RESET )
   QMetaProperty * obj = (QMetaProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->reset ( par1 ) );
+    RBOOL( obj->reset ( PQOBJECT(1) ) );
   }
 }
 
@@ -447,7 +443,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_HASSTDCPPSET )
   QMetaProperty * obj = (QMetaProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasStdCppSet () );
+    RBOOL( obj->hasStdCppSet () );
   }
 }
 
@@ -460,7 +456,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISVALID )
   QMetaProperty * obj = (QMetaProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 

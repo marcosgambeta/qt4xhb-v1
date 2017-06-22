@@ -96,8 +96,7 @@ QTextStream()
 */
 HB_FUNC_STATIC( QTEXTSTREAM_NEW1 )
 {
-  QTextStream * o = NULL;
-  o = new QTextStream ();
+  QTextStream * o = new QTextStream ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -107,9 +106,7 @@ QTextStream(QIODevice *device)
 */
 HB_FUNC_STATIC( QTEXTSTREAM_NEW2 )
 {
-  QTextStream * o = NULL;
-  QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QTextStream ( par1 );
+  QTextStream * o = new QTextStream ( PQIODEVICE(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -119,10 +116,9 @@ QTextStream(FILE *fileHandle, QIODevice::OpenMode openMode = QIODevice::ReadWrit
 */
 HB_FUNC_STATIC( QTEXTSTREAM_NEW3 )
 {
-  QTextStream * o = NULL;
   FILE * par1 = (FILE *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = ISNIL(2)? (int) QIODevice::ReadWrite : hb_parni(2);
-  o = new QTextStream ( par1,  (QIODevice::OpenMode) par2 );
+  QTextStream * o = new QTextStream ( par1,  (QIODevice::OpenMode) par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -132,10 +128,9 @@ QTextStream(QString *string, QIODevice::OpenMode openMode = QIODevice::ReadWrite
 */
 HB_FUNC_STATIC( QTEXTSTREAM_NEW4 )
 {
-  QTextStream * o = NULL;
   QString * par1 = NULL;
   int par2 = ISNIL(2)? (int) QIODevice::ReadWrite : hb_parni(2);
-  o = new QTextStream ( par1,  (QIODevice::OpenMode) par2 );
+  QTextStream * o = new QTextStream ( par1,  (QIODevice::OpenMode) par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -146,10 +141,8 @@ QTextStream(const QByteArray &array, QIODevice::OpenMode openMode = QIODevice::R
 */
 HB_FUNC_STATIC( QTEXTSTREAM_NEW6 )
 {
-  QTextStream * o = NULL;
-  QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = ISNIL(2)? (int) QIODevice::ReadOnly : hb_parni(2);
-  o = new QTextStream ( *par1,  (QIODevice::OpenMode) par2 );
+  QTextStream * o = new QTextStream ( *PQBYTEARRAY(1),  (QIODevice::OpenMode) par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -213,8 +206,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SETCODEC1 )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTextCodec * par1 = (QTextCodec *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setCodec ( par1 );
+    obj->setCodec ( PQTEXTCODEC(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -228,8 +220,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SETCODEC2 )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const char * par1 = hb_parc(1);
-    obj->setCodec (  (const char *) par1 );
+    obj->setCodec (  (const char *) hb_parc(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -286,7 +277,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_AUTODETECTUNICODE )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->autoDetectUnicode () );
+    RBOOL( obj->autoDetectUnicode () );
   }
 }
 
@@ -313,7 +304,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_GENERATEBYTEORDERMARK )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->generateByteOrderMark () );
+    RBOOL( obj->generateByteOrderMark () );
   }
 }
 
@@ -355,8 +346,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SETDEVICE )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setDevice ( par1 );
+    obj->setDevice ( PQIODEVICE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -456,7 +446,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_ATEND )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->atEnd () );
+    RBOOL( obj->atEnd () );
   }
 }
 
@@ -497,8 +487,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SEEK )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 par1 = hb_parni(1);
-    hb_retl( obj->seek ( par1 ) );
+    RBOOL( obj->seek ( PQINT64(1) ) );
   }
 }
 
@@ -511,8 +500,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_POS )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->pos ();
-    hb_retni( i );
+    RQINT64( obj->pos () );
   }
 }
 
@@ -539,8 +527,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_READLINE )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 par1 = ISNIL(1)? 0 : hb_parni(1);
-    QString str1 = obj->readLine ( par1 );
+    QString str1 = obj->readLine ( OPQINT64(1,0) );
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -568,8 +555,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_READ )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 par1 = hb_parni(1);
-    QString str1 = obj->read ( par1 );
+    QString str1 = obj->read ( PQINT64(1) );
     hb_retc( RQSTRING(str1) );
   }
 }
@@ -640,8 +626,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SETFIELDWIDTH )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setFieldWidth ( par1 );
+    obj->setFieldWidth ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -655,7 +640,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_FIELDWIDTH )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->fieldWidth () );
+    RINT( obj->fieldWidth () );
   }
 }
 
@@ -696,8 +681,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SETINTEGERBASE )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setIntegerBase ( par1 );
+    obj->setIntegerBase ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -711,7 +695,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_INTEGERBASE )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->integerBase () );
+    RINT( obj->integerBase () );
   }
 }
 
@@ -752,8 +736,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SETREALNUMBERPRECISION )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setRealNumberPrecision ( par1 );
+    obj->setRealNumberPrecision ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -767,7 +750,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_REALNUMBERPRECISION )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->realNumberPrecision () );
+    RINT( obj->realNumberPrecision () );
   }
 }
 

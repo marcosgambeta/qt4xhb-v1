@@ -70,9 +70,7 @@ QTimeLine ( int duration = 1000, QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QTIMELINE_NEW )
 {
-  QTimeLine * o = NULL;
-  QObject * par2 = ISNIL(2)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QTimeLine ( OPINT(1,1000), par2 );
+  QTimeLine * o = new QTimeLine ( OPINT(1,1000), OPQOBJECT(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -101,7 +99,7 @@ HB_FUNC_STATIC( QTIMELINE_CURRENTFRAME )
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->currentFrame () );
+    RINT( obj->currentFrame () );
   }
 }
 
@@ -114,7 +112,7 @@ HB_FUNC_STATIC( QTIMELINE_CURRENTTIME )
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->currentTime () );
+    RINT( obj->currentTime () );
   }
 }
 
@@ -127,8 +125,7 @@ HB_FUNC_STATIC( QTIMELINE_CURRENTVALUE )
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->currentValue ();
-    hb_retnd( r );
+    RQREAL( obj->currentValue () );
   }
 }
 
@@ -167,7 +164,7 @@ HB_FUNC_STATIC( QTIMELINE_DURATION )
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->duration () );
+    RINT( obj->duration () );
   }
 }
 
@@ -181,7 +178,7 @@ HB_FUNC_STATIC( QTIMELINE_ENDFRAME )
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->endFrame () );
+    RINT( obj->endFrame () );
   }
 }
 
@@ -194,8 +191,7 @@ HB_FUNC_STATIC( QTIMELINE_FRAMEFORTIME )
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    hb_retni( obj->frameForTime ( par1 ) );
+    RINT( obj->frameForTime ( PINT(1) ) );
   }
 }
 
@@ -208,7 +204,7 @@ HB_FUNC_STATIC( QTIMELINE_LOOPCOUNT )
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->loopCount () );
+    RINT( obj->loopCount () );
   }
 }
 
@@ -251,8 +247,7 @@ HB_FUNC_STATIC( QTIMELINE_SETDURATION )
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setDuration ( par1 );
+    obj->setDuration ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -281,8 +276,7 @@ HB_FUNC_STATIC( QTIMELINE_SETENDFRAME )
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setEndFrame ( par1 );
+    obj->setEndFrame ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -296,9 +290,7 @@ HB_FUNC_STATIC( QTIMELINE_SETFRAMERANGE )
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    obj->setFrameRange ( par1, par2 );
+    obj->setFrameRange ( PINT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -312,8 +304,7 @@ HB_FUNC_STATIC( QTIMELINE_SETLOOPCOUNT )
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setLoopCount ( par1 );
+    obj->setLoopCount ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -327,8 +318,7 @@ HB_FUNC_STATIC( QTIMELINE_SETSTARTFRAME )
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setStartFrame ( par1 );
+    obj->setStartFrame ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -342,8 +332,7 @@ HB_FUNC_STATIC( QTIMELINE_SETUPDATEINTERVAL )
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setUpdateInterval ( par1 );
+    obj->setUpdateInterval ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -357,7 +346,7 @@ HB_FUNC_STATIC( QTIMELINE_STARTFRAME )
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->startFrame () );
+    RINT( obj->startFrame () );
   }
 }
 
@@ -383,7 +372,7 @@ HB_FUNC_STATIC( QTIMELINE_UPDATEINTERVAL )
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->updateInterval () );
+    RINT( obj->updateInterval () );
   }
 }
 
@@ -396,9 +385,7 @@ HB_FUNC_STATIC( QTIMELINE_VALUEFORTIME )
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    qreal r = obj->valueForTime ( par1 );
-    hb_retnd( r );
+    RQREAL( obj->valueForTime ( PINT(1) ) );
   }
 }
 
@@ -425,8 +412,7 @@ HB_FUNC_STATIC( QTIMELINE_SETCURRENTTIME )
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setCurrentTime ( par1 );
+    obj->setCurrentTime ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -46,9 +46,7 @@ QEventLoop ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QEVENTLOOP_NEW )
 {
-  QEventLoop * o = NULL;
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QEventLoop ( par1 );
+  QEventLoop * o = new QEventLoop ( OPQOBJECT(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -78,7 +76,7 @@ HB_FUNC_STATIC( QEVENTLOOP_EXEC )
   QEventLoop * obj = (QEventLoop *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->exec ( ISNIL(1)? QEventLoop::AllEvents : (QEventLoop::ProcessEventsFlags) hb_parni(1) ) );
+    RINT( obj->exec ( ISNIL(1)? QEventLoop::AllEvents : (QEventLoop::ProcessEventsFlags) hb_parni(1) ) );
   }
 }
 
@@ -105,7 +103,7 @@ HB_FUNC_STATIC( QEVENTLOOP_ISRUNNING )
   QEventLoop * obj = (QEventLoop *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isRunning () );
+    RBOOL( obj->isRunning () );
   }
 }
 
@@ -118,7 +116,7 @@ HB_FUNC_STATIC( QEVENTLOOP_PROCESSEVENTS1 )
   QEventLoop * obj = (QEventLoop *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->processEvents ( ISNIL(1)? QEventLoop::AllEvents : (QEventLoop::ProcessEventsFlags) hb_parni(1) ) );
+    RBOOL( obj->processEvents ( ISNIL(1)? QEventLoop::AllEvents : (QEventLoop::ProcessEventsFlags) hb_parni(1) ) );
   }
 }
 

@@ -42,9 +42,7 @@ QDynamicPropertyChangeEvent ( const QByteArray & name )
 */
 HB_FUNC_STATIC( QDYNAMICPROPERTYCHANGEEVENT_NEW )
 {
-  QDynamicPropertyChangeEvent * o = NULL;
-  QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QDynamicPropertyChangeEvent ( *par1 );
+  QDynamicPropertyChangeEvent * o = new QDynamicPropertyChangeEvent ( *PQBYTEARRAY(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

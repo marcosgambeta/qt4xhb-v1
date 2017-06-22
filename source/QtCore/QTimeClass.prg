@@ -72,8 +72,7 @@ QTime()
 */
 HB_FUNC_STATIC( QTIME_NEW1 )
 {
-  QTime * o = NULL;
-  o = new QTime ();
+  QTime * o = new QTime ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -83,10 +82,7 @@ QTime(int h, int m, int s = 0, int ms = 0)
 */
 HB_FUNC_STATIC( QTIME_NEW2 )
 {
-  QTime * o = NULL;
-  int par1 = hb_parni(1);
-  int par2 = hb_parni(2);
-  o = new QTime ( par1, par2, OPINT(3,0), OPINT(4,0) );
+  QTime * o = new QTime ( PINT(1), PINT(2), OPINT(3,0), OPINT(4,0) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -146,8 +142,7 @@ HB_FUNC_STATIC( QTIME_ADDMSECS )
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QTime * ptr = new QTime( obj->addMSecs ( par1 ) );
+    QTime * ptr = new QTime( obj->addMSecs ( PINT(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QTIME", true );
   }
 }
@@ -161,8 +156,7 @@ HB_FUNC_STATIC( QTIME_ADDSECS )
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QTime * ptr = new QTime( obj->addSecs ( par1 ) );
+    QTime * ptr = new QTime( obj->addSecs ( PINT(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QTIME", true );
   }
 }
@@ -176,7 +170,7 @@ HB_FUNC_STATIC( QTIME_ELAPSED )
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->elapsed () );
+    RINT( obj->elapsed () );
   }
 }
 
@@ -189,7 +183,7 @@ HB_FUNC_STATIC( QTIME_HOUR )
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->hour () );
+    RINT( obj->hour () );
   }
 }
 
@@ -202,7 +196,7 @@ HB_FUNC_STATIC( QTIME_ISNULL )
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -215,7 +209,7 @@ HB_FUNC_STATIC( QTIME_ISVALID1 )
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -228,7 +222,7 @@ HB_FUNC_STATIC( QTIME_MINUTE )
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->minute () );
+    RINT( obj->minute () );
   }
 }
 
@@ -241,7 +235,7 @@ HB_FUNC_STATIC( QTIME_MSEC )
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->msec () );
+    RINT( obj->msec () );
   }
 }
 
@@ -254,8 +248,7 @@ HB_FUNC_STATIC( QTIME_MSECSTO )
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTime * par1 = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retni( obj->msecsTo ( *par1 ) );
+    RINT( obj->msecsTo ( *PQTIME(1) ) );
   }
 }
 
@@ -268,7 +261,7 @@ HB_FUNC_STATIC( QTIME_RESTART )
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->restart () );
+    RINT( obj->restart () );
   }
 }
 
@@ -281,7 +274,7 @@ HB_FUNC_STATIC( QTIME_SECOND )
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->second () );
+    RINT( obj->second () );
   }
 }
 
@@ -294,8 +287,7 @@ HB_FUNC_STATIC( QTIME_SECSTO )
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTime * par1 = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retni( obj->secsTo ( *par1 ) );
+    RINT( obj->secsTo ( *PQTIME(1) ) );
   }
 }
 
@@ -308,10 +300,7 @@ HB_FUNC_STATIC( QTIME_SETHMS )
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
-    int par3 = hb_parni(3);
-    hb_retl( obj->setHMS ( par1, par2, par3, OPINT(4,0) ) );
+    RBOOL( obj->setHMS ( PINT(1), PINT(2), PINT(3), OPINT(4,0) ) );
   }
 }
 
@@ -425,10 +414,7 @@ bool isValid(int h, int m, int s, int ms = 0)
 */
 HB_FUNC_STATIC( QTIME_ISVALID2 )
 {
-  int par1 = hb_parni(1);
-  int par2 = hb_parni(2);
-  int par3 = hb_parni(3);
-  hb_retl( QTime::isValid ( par1, par2, par3, OPINT(4,0) ) );
+  RBOOL( QTime::isValid ( PINT(1), PINT(2), PINT(3), OPINT(4,0) ) );
 }
 
 

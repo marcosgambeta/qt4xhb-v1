@@ -54,8 +54,7 @@ QXmlStreamEntityDeclaration()
 */
 HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NEW1 )
 {
-  QXmlStreamEntityDeclaration * o = NULL;
-  o = new QXmlStreamEntityDeclaration ();
+  QXmlStreamEntityDeclaration * o = new QXmlStreamEntityDeclaration ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -65,9 +64,7 @@ QXmlStreamEntityDeclaration(const QXmlStreamEntityDeclaration & other)
 */
 HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NEW2 )
 {
-  QXmlStreamEntityDeclaration * o = NULL;
-  QXmlStreamEntityDeclaration * par1 = (QXmlStreamEntityDeclaration *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QXmlStreamEntityDeclaration ( *par1 );
+  QXmlStreamEntityDeclaration * o = new QXmlStreamEntityDeclaration ( *PQXMLSTREAMENTITYDECLARATION(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 

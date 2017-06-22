@@ -81,9 +81,7 @@ QSettings ( const QString & organization, const QString & application = QString(
 */
 HB_FUNC_STATIC( QSETTINGS_NEW1 )
 {
-  QSettings * o = NULL;
-  QObject * par3 = ISNIL(3)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSettings ( PQSTRING(1), OPQSTRING(2,QString()), par3 );
+  QSettings * o = new QSettings ( PQSTRING(1), OPQSTRING(2,QString()), OPQOBJECT(3,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -93,9 +91,7 @@ QSettings ( Scope scope, const QString & organization, const QString & applicati
 */
 HB_FUNC_STATIC( QSETTINGS_NEW2 )
 {
-  QSettings * o = NULL;
-  QObject * par4 = ISNIL(4)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSettings (  (QSettings::Scope) hb_parni(1), PQSTRING(2), OPQSTRING(3,QString()), par4 );
+  QSettings * o = new QSettings (  (QSettings::Scope) hb_parni(1), PQSTRING(2), OPQSTRING(3,QString()), OPQOBJECT(4,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -105,9 +101,7 @@ QSettings ( Format format, Scope scope, const QString & organization, const QStr
 */
 HB_FUNC_STATIC( QSETTINGS_NEW3 )
 {
-  QSettings * o = NULL;
-  QObject * par5 = ISNIL(5)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(5, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSettings (  (QSettings::Format) hb_parni(1),  (QSettings::Scope) hb_parni(2), PQSTRING(3), OPQSTRING(4,QString()), par5 );
+  QSettings * o = new QSettings (  (QSettings::Format) hb_parni(1),  (QSettings::Scope) hb_parni(2), PQSTRING(3), OPQSTRING(4,QString()), OPQOBJECT(5,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -117,9 +111,7 @@ QSettings ( const QString & fileName, Format format, QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSETTINGS_NEW4 )
 {
-  QSettings * o = NULL;
-  QObject * par3 = ISNIL(3)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSettings ( PQSTRING(1),  (QSettings::Format) hb_parni(2), par3 );
+  QSettings * o = new QSettings ( PQSTRING(1),  (QSettings::Format) hb_parni(2), OPQOBJECT(3,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -129,9 +121,7 @@ QSettings ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSETTINGS_NEW5 )
 {
-  QSettings * o = NULL;
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSettings ( par1 );
+  QSettings * o = new QSettings ( OPQOBJECT(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -246,7 +236,7 @@ HB_FUNC_STATIC( QSETTINGS_BEGINREADARRAY )
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->beginReadArray ( PQSTRING(1) ) );
+    RINT( obj->beginReadArray ( PQSTRING(1) ) );
   }
 }
 
@@ -333,7 +323,7 @@ HB_FUNC_STATIC( QSETTINGS_CONTAINS )
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->contains ( PQSTRING(1) ) );
+    RBOOL( obj->contains ( PQSTRING(1) ) );
   }
 }
 
@@ -374,7 +364,7 @@ HB_FUNC_STATIC( QSETTINGS_FALLBACKSENABLED )
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->fallbacksEnabled () );
+    RBOOL( obj->fallbacksEnabled () );
   }
 }
 
@@ -442,7 +432,7 @@ HB_FUNC_STATIC( QSETTINGS_ISWRITABLE )
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isWritable () );
+    RBOOL( obj->isWritable () );
   }
 }
 
@@ -524,8 +514,7 @@ HB_FUNC_STATIC( QSETTINGS_SETINICODEC1 )
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTextCodec * par1 = (QTextCodec *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setIniCodec ( par1 );
+    obj->setIniCodec ( PQTEXTCODEC(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -539,8 +528,7 @@ HB_FUNC_STATIC( QSETTINGS_SETINICODEC2 )
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const char * par1 = hb_parc(1);
-    obj->setIniCodec (  (const char *) par1 );
+    obj->setIniCodec (  (const char *) hb_parc(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -566,8 +554,7 @@ HB_FUNC_STATIC( QSETTINGS_SETVALUE )
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVariant * par2 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setValue ( PQSTRING(1), *par2 );
+    obj->setValue ( PQSTRING(1), *PQVARIANT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

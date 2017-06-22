@@ -63,8 +63,7 @@ HB_FUNC_STATIC( QABSTRACTLISTMODEL_DROPMIMEDATA )
   if( obj )
   {
     const QMimeData * par1 = (const QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QModelIndex * par5 = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(5, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->dropMimeData ( par1,  (Qt::DropAction) hb_parni(2), PINT(3), PINT(4), *par5 ) );
+    RBOOL( obj->dropMimeData ( par1,  (Qt::DropAction) hb_parni(2), PINT(3), PINT(4), *PQMODELINDEX(5) ) );
   }
 }
 

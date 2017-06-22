@@ -59,9 +59,7 @@ QSignalMapper(QObject *parent = 0)
 */
 HB_FUNC_STATIC( QSIGNALMAPPER_NEW )
 {
-  QSignalMapper * o = NULL;
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSignalMapper ( par1 );
+  QSignalMapper * o = new QSignalMapper ( OPQOBJECT(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -90,8 +88,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_SETMAPPING1 )
   QSignalMapper * obj = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setMapping ( par1, PINT(2) );
+    obj->setMapping ( PQOBJECT(1), PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -105,8 +102,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_SETMAPPING2 )
   QSignalMapper * obj = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setMapping ( par1, PQSTRING(2) );
+    obj->setMapping ( PQOBJECT(1), PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -120,9 +116,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_SETMAPPING3 )
   QSignalMapper * obj = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QWidget * par2 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setMapping ( par1, par2 );
+    obj->setMapping ( PQOBJECT(1), PQWIDGET(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -136,9 +130,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_SETMAPPING4 )
   QSignalMapper * obj = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QObject * par2 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setMapping ( par1, par2 );
+    obj->setMapping ( PQOBJECT(1), PQOBJECT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -177,8 +169,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_REMOVEMAPPINGS )
   QSignalMapper * obj = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->removeMappings ( par1 );
+    obj->removeMappings ( PQOBJECT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -220,8 +211,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING3 )
   QSignalMapper * obj = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWidget * par1 = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QObject * ptr = obj->mapping ( par1 );
+    QObject * ptr = obj->mapping ( PQWIDGET(1) );
     _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }
@@ -235,8 +225,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING4 )
   QSignalMapper * obj = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QObject * ptr = obj->mapping ( par1 );
+    QObject * ptr = obj->mapping ( PQOBJECT(1) );
     _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
   }
 }
@@ -289,8 +278,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAP2 )
   QSignalMapper * obj = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->map ( par1 );
+    obj->map ( PQOBJECT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -46,8 +46,7 @@ QSharedData ()
 */
 HB_FUNC_STATIC( QSHAREDDATA_NEW1 )
 {
-  QSharedData * o = NULL;
-  o = new QSharedData ();
+  QSharedData * o = new QSharedData ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -57,9 +56,7 @@ QSharedData ( const QSharedData & other )
 */
 HB_FUNC_STATIC( QSHAREDDATA_NEW2 )
 {
-  QSharedData * o = NULL;
-  QSharedData * par1 = (QSharedData *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSharedData ( *par1 );
+  QSharedData * o = new QSharedData ( *PQSHAREDDATA(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 

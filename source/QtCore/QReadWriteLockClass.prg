@@ -55,8 +55,7 @@ QReadWriteLock ()
 */
 HB_FUNC_STATIC( QREADWRITELOCK_NEW1 )
 {
-  QReadWriteLock * o = NULL;
-  o = new QReadWriteLock ();
+  QReadWriteLock * o = new QReadWriteLock ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -66,8 +65,7 @@ QReadWriteLock ( RecursionMode recursionMode )
 */
 HB_FUNC_STATIC( QREADWRITELOCK_NEW2 )
 {
-  QReadWriteLock * o = NULL;
-  o = new QReadWriteLock (  (QReadWriteLock::RecursionMode) hb_parni(1) );
+  QReadWriteLock * o = new QReadWriteLock (  (QReadWriteLock::RecursionMode) hb_parni(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -143,7 +141,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORREAD1 )
   QReadWriteLock * obj = (QReadWriteLock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->tryLockForRead () );
+    RBOOL( obj->tryLockForRead () );
   }
 }
 
@@ -156,7 +154,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORREAD2 )
   QReadWriteLock * obj = (QReadWriteLock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->tryLockForRead ( PINT(1) ) );
+    RBOOL( obj->tryLockForRead ( PINT(1) ) );
   }
 }
 
@@ -184,7 +182,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORWRITE1 )
   QReadWriteLock * obj = (QReadWriteLock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->tryLockForWrite () );
+    RBOOL( obj->tryLockForWrite () );
   }
 }
 
@@ -197,7 +195,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORWRITE2 )
   QReadWriteLock * obj = (QReadWriteLock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->tryLockForWrite ( PINT(1) ) );
+    RBOOL( obj->tryLockForWrite ( PINT(1) ) );
   }
 }
 

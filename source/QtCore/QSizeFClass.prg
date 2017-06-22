@@ -65,8 +65,7 @@ QSizeF ()
 */
 HB_FUNC_STATIC( QSIZEF_NEW1 )
 {
-  QSizeF * o = NULL;
-  o = new QSizeF ();
+  QSizeF * o = new QSizeF ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -76,9 +75,7 @@ QSizeF ( const QSize & size )
 */
 HB_FUNC_STATIC( QSIZEF_NEW2 )
 {
-  QSizeF * o = NULL;
-  QSize * par1 = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSizeF ( *par1 );
+  QSizeF * o = new QSizeF ( *PQSIZE(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -88,8 +85,7 @@ QSizeF ( qreal width, qreal height )
 */
 HB_FUNC_STATIC( QSIZEF_NEW3 )
 {
-  QSizeF * o = NULL;
-  o = new QSizeF ( PQREAL(1), PQREAL(2) );
+  QSizeF * o = new QSizeF ( PQREAL(1), PQREAL(2) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -142,8 +138,7 @@ HB_FUNC_STATIC( QSIZEF_BOUNDEDTO )
   QSizeF * obj = (QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSizeF * par1 = (QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QSizeF * ptr = new QSizeF( obj->boundedTo ( *par1 ) );
+    QSizeF * ptr = new QSizeF( obj->boundedTo ( *PQSIZEF(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
@@ -157,8 +152,7 @@ HB_FUNC_STATIC( QSIZEF_EXPANDEDTO )
   QSizeF * obj = (QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSizeF * par1 = (QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QSizeF * ptr = new QSizeF( obj->expandedTo ( *par1 ) );
+    QSizeF * ptr = new QSizeF( obj->expandedTo ( *PQSIZEF(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
@@ -172,8 +166,7 @@ HB_FUNC_STATIC( QSIZEF_HEIGHT )
   QSizeF * obj = (QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->height ();
-    hb_retnd( r );
+    RQREAL( obj->height () );
   }
 }
 
@@ -186,7 +179,7 @@ HB_FUNC_STATIC( QSIZEF_ISEMPTY )
   QSizeF * obj = (QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isEmpty () );
+    RBOOL( obj->isEmpty () );
   }
 }
 
@@ -199,7 +192,7 @@ HB_FUNC_STATIC( QSIZEF_ISNULL )
   QSizeF * obj = (QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -212,7 +205,7 @@ HB_FUNC_STATIC( QSIZEF_ISVALID )
   QSizeF * obj = (QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -241,8 +234,7 @@ HB_FUNC_STATIC( QSIZEF_SCALE2 )
   QSizeF * obj = (QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSizeF * par1 = (QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->scale ( *par1,  (Qt::AspectRatioMode) hb_parni(2) );
+    obj->scale ( *PQSIZEF(1),  (Qt::AspectRatioMode) hb_parni(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -327,8 +319,7 @@ HB_FUNC_STATIC( QSIZEF_WIDTH )
   QSizeF * obj = (QSizeF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qreal r = obj->width ();
-    hb_retnd( r );
+    RQREAL( obj->width () );
   }
 }
 

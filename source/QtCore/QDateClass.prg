@@ -89,8 +89,7 @@ QDate ()
 */
 HB_FUNC_STATIC( QDATE_NEW1 )
 {
-  QDate * o = NULL;
-  o = new QDate ();
+  QDate * o = new QDate ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -100,8 +99,7 @@ QDate ( int y, int m, int d )
 */
 HB_FUNC_STATIC( QDATE_NEW2 )
 {
-  QDate * o = NULL;
-  o = new QDate ( PINT(1), PINT(2), PINT(3) );
+  QDate * o = new QDate ( PINT(1), PINT(2), PINT(3) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -192,7 +190,7 @@ HB_FUNC_STATIC( QDATE_DAY )
   QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->day () );
+    RINT( obj->day () );
   }
 }
 
@@ -205,7 +203,7 @@ HB_FUNC_STATIC( QDATE_DAYOFWEEK )
   QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->dayOfWeek () );
+    RINT( obj->dayOfWeek () );
   }
 }
 
@@ -218,7 +216,7 @@ HB_FUNC_STATIC( QDATE_DAYOFYEAR )
   QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->dayOfYear () );
+    RINT( obj->dayOfYear () );
   }
 }
 
@@ -231,7 +229,7 @@ HB_FUNC_STATIC( QDATE_DAYSINMONTH )
   QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->daysInMonth () );
+    RINT( obj->daysInMonth () );
   }
 }
 
@@ -244,7 +242,7 @@ HB_FUNC_STATIC( QDATE_DAYSINYEAR )
   QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->daysInYear () );
+    RINT( obj->daysInYear () );
   }
 }
 
@@ -257,8 +255,7 @@ HB_FUNC_STATIC( QDATE_DAYSTO )
   QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDate * par1 = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retni( obj->daysTo ( *par1 ) );
+    RINT( obj->daysTo ( *PQDATE(1) ) );
   }
 }
 
@@ -291,7 +288,7 @@ HB_FUNC_STATIC( QDATE_ISNULL )
   QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -304,7 +301,7 @@ HB_FUNC_STATIC( QDATE_ISVALID1 )
   QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -317,7 +314,7 @@ HB_FUNC_STATIC( QDATE_MONTH )
   QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->month () );
+    RINT( obj->month () );
   }
 }
 
@@ -330,7 +327,7 @@ HB_FUNC_STATIC( QDATE_SETDATE )
   QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->setDate ( PINT(1), PINT(2), PINT(3) ) );
+    RBOOL( obj->setDate ( PINT(1), PINT(2), PINT(3) ) );
   }
 }
 
@@ -343,7 +340,7 @@ HB_FUNC_STATIC( QDATE_TOJULIANDAY )
   QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->toJulianDay () );
+    RINT( obj->toJulianDay () );
   }
 }
 
@@ -400,7 +397,7 @@ HB_FUNC_STATIC( QDATE_WEEKNUMBER )
   if( obj )
   {
     int par1;
-    hb_retni( obj->weekNumber ( &par1 ) );
+    RINT( obj->weekNumber ( &par1 ) );
     hb_storni( par1, 1 );
   }
 }
@@ -414,7 +411,7 @@ HB_FUNC_STATIC( QDATE_YEAR )
   QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->year () );
+    RINT( obj->year () );
   }
 }
 
@@ -480,7 +477,7 @@ bool isLeapYear ( int year )
 */
 HB_FUNC_STATIC( QDATE_ISLEAPYEAR )
 {
-  hb_retl( QDate::isLeapYear ( PINT(1) ) );
+  RBOOL( QDate::isLeapYear ( PINT(1) ) );
 }
 
 
@@ -489,7 +486,7 @@ bool isValid ( int year, int month, int day )
 */
 HB_FUNC_STATIC( QDATE_ISVALID2 )
 {
-  hb_retl( QDate::isValid ( PINT(1), PINT(2), PINT(3) ) );
+  RBOOL( QDate::isValid ( PINT(1), PINT(2), PINT(3) ) );
 }
 
 

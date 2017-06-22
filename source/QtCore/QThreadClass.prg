@@ -57,9 +57,7 @@ QThread(QObject * parent = 0)
 */
 HB_FUNC_STATIC( QTHREAD_NEW )
 {
-  QThread * o = NULL;
-  QObject * par1 = ISNIL(1)? 0 : (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QThread ( par1 );
+  QThread * o = new QThread ( OPQOBJECT(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -103,7 +101,7 @@ HB_FUNC_STATIC( QTHREAD_ISFINISHED )
   QThread * obj = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isFinished () );
+    RBOOL( obj->isFinished () );
   }
 }
 
@@ -116,7 +114,7 @@ HB_FUNC_STATIC( QTHREAD_ISRUNNING )
   QThread * obj = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isRunning () );
+    RBOOL( obj->isRunning () );
   }
 }
 
@@ -186,8 +184,7 @@ HB_FUNC_STATIC( QTHREAD_EVENT )
   QThread * obj = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QEvent * par1 = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->event ( par1 ) );
+    RBOOL( obj->event ( PQEVENT(1) ) );
   }
 }
 
@@ -251,7 +248,7 @@ int idealThreadCount()
 */
 HB_FUNC_STATIC( QTHREAD_IDEALTHREADCOUNT )
 {
-  hb_retni( QThread::idealThreadCount () );
+  RINT( QThread::idealThreadCount () );
 }
 
 

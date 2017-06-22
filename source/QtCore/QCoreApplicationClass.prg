@@ -95,8 +95,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_NEW )
   char ** argv;
   argc = hb_cmdargARGC();
   argv = hb_cmdargARGV();
-  QCoreApplication * o = NULL;
-  o = new QCoreApplication( argc, argv );
+  QCoreApplication * o = new QCoreApplication( argc, argv );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -127,7 +126,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_FILTEREVENT )
   {
     void * par1 = (void *) hb_parptr(1);
     long par2;
-    hb_retl( obj->filterEvent ( par1, &par2 ) );
+    RBOOL( obj->filterEvent ( par1, &par2 ) );
     hb_stornl( par2, 2 );
   }
 }
@@ -141,9 +140,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_NOTIFY )
   QCoreApplication * obj = (QCoreApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QEvent * par2 = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->notify ( par1, par2 ) );
+    RBOOL( obj->notify ( PQOBJECT(1), PQEVENT(2) ) );
   }
 }
 
@@ -210,8 +207,7 @@ qint64 applicationPid ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONPID )
 {
-  qint64 i = QCoreApplication::applicationPid ();
-  hb_retni( i );
+  RQINT64( QCoreApplication::applicationPid () );
 }
 
 
@@ -249,7 +245,7 @@ bool closingDown ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_CLOSINGDOWN )
 {
-  hb_retl( QCoreApplication::closingDown () );
+  RBOOL( QCoreApplication::closingDown () );
 }
 
 
@@ -258,7 +254,7 @@ int exec ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_EXEC )
 {
-  hb_retni( QCoreApplication::exec () );
+  RINT( QCoreApplication::exec () );
 }
 
 
@@ -287,7 +283,7 @@ bool hasPendingEvents ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_HASPENDINGEVENTS )
 {
-  hb_retl( QCoreApplication::hasPendingEvents () );
+  RBOOL( QCoreApplication::hasPendingEvents () );
 }
 
 
@@ -356,9 +352,7 @@ void postEvent ( QObject * receiver, QEvent * event )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_POSTEVENT1 )
 {
-  QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QEvent * par2 = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QCoreApplication::postEvent ( par1, par2 );
+  QCoreApplication::postEvent ( PQOBJECT(1), PQEVENT(2) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -368,9 +362,7 @@ void postEvent ( QObject * receiver, QEvent * event, int priority )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_POSTEVENT2 )
 {
-  QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QEvent * par2 = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QCoreApplication::postEvent ( par1, par2, PINT(3) );
+  QCoreApplication::postEvent ( PQOBJECT(1), PQEVENT(2), PINT(3) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -440,8 +432,7 @@ void removePostedEvents ( QObject * receiver )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_REMOVEPOSTEDEVENTS1 )
 {
-  QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QCoreApplication::removePostedEvents ( par1 );
+  QCoreApplication::removePostedEvents ( PQOBJECT(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -451,8 +442,7 @@ void removePostedEvents ( QObject * receiver, int eventType )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_REMOVEPOSTEDEVENTS2 )
 {
-  QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QCoreApplication::removePostedEvents ( par1, PINT(2) );
+  QCoreApplication::removePostedEvents ( PQOBJECT(1), PINT(2) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -488,9 +478,7 @@ bool sendEvent ( QObject * receiver, QEvent * event )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_SENDEVENT )
 {
-  QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QEvent * par2 = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  hb_retl( QCoreApplication::sendEvent ( par1, par2 ) );
+  RBOOL( QCoreApplication::sendEvent ( PQOBJECT(1), PQEVENT(2) ) );
 }
 
 
@@ -499,8 +487,7 @@ void sendPostedEvents ( QObject * receiver, int event_type )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_SENDPOSTEDEVENTS1 )
 {
-  QObject * par1 = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QCoreApplication::sendPostedEvents ( par1, PINT(2) );
+  QCoreApplication::sendPostedEvents ( PQOBJECT(1), PINT(2) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -595,7 +582,7 @@ bool startingUp ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_STARTINGUP )
 {
-  hb_retl( QCoreApplication::startingUp () );
+  RBOOL( QCoreApplication::startingUp () );
 }
 
 
@@ -604,7 +591,7 @@ bool testAttribute ( Qt::ApplicationAttribute attribute )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_TESTATTRIBUTE )
 {
-  hb_retl( QCoreApplication::testAttribute (  (Qt::ApplicationAttribute) hb_parni(1) ) );
+  RBOOL( QCoreApplication::testAttribute (  (Qt::ApplicationAttribute) hb_parni(1) ) );
 }
 
 
@@ -613,10 +600,7 @@ QString translate ( const char * context, const char * sourceText, const char * 
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE1 )
 {
-  const char * par1 = hb_parc(1);
-  const char * par2 = hb_parc(2);
-  const char * par3 = hb_parc(3);
-  QString str1 = QCoreApplication::translate (  (const char *) par1,  (const char *) par2,  (const char *) par3,  (QCoreApplication::Encoding) hb_parni(4), PINT(5) );
+  QString str1 = QCoreApplication::translate (  (const char *) hb_parc(1),  (const char *) hb_parc(2),  (const char *) hb_parc(3),  (QCoreApplication::Encoding) hb_parni(4), PINT(5) );
   hb_retc( RQSTRING(str1) );
 }
 
@@ -626,10 +610,7 @@ QString translate ( const char * context, const char * sourceText, const char * 
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE2 )
 {
-  const char * par1 = hb_parc(1);
-  const char * par2 = hb_parc(2);
-  const char * par3 = hb_parc(3);
-  QString str1 = QCoreApplication::translate (  (const char *) par1,  (const char *) par2,  (const char *) par3, ISNIL(4)? QCoreApplication::CodecForTr : (QCoreApplication::Encoding) hb_parni(4) );
+  QString str1 = QCoreApplication::translate (  (const char *) hb_parc(1),  (const char *) hb_parc(2),  (const char *) hb_parc(3), ISNIL(4)? QCoreApplication::CodecForTr : (QCoreApplication::Encoding) hb_parni(4) );
   hb_retc( RQSTRING(str1) );
 }
 
