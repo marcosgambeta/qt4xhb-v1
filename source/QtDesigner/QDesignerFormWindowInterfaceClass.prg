@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_HASFEATURE )
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RBOOL( obj->hasFeature (  (QDesignerFormWindowInterface::Feature) hb_parni(1) ) );
+    RBOOL( obj->hasFeature ( (QDesignerFormWindowInterface::Feature) hb_parni(1) ) );
   }
 }
 
@@ -645,7 +645,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETFEATURES )
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setFeatures (  (QDesignerFormWindowInterface::Feature) hb_parni(1) );
+    obj->setFeatures ( (QDesignerFormWindowInterface::Feature) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
