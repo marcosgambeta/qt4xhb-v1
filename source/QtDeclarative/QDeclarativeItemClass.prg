@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_SETTRANSFORMORIGIN )
   QDeclarativeItem * obj = (QDeclarativeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setTransformOrigin (  (QDeclarativeItem::TransformOrigin) hb_parni(1) );
+    obj->setTransformOrigin ( (QDeclarativeItem::TransformOrigin) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -71,7 +71,7 @@ QDeclarativeListReference ( QObject * object, const char * property, QDeclarativ
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_NEW2 )
 {
   QDeclarativeEngine * par3 = ISNIL(3)? 0 : (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QDeclarativeListReference * o = new QDeclarativeListReference ( PQOBJECT(1),  (const char *) hb_parc(2), par3 );
+  QDeclarativeListReference * o = new QDeclarativeListReference ( PQOBJECT(1), (const char *) hb_parc(2), par3 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

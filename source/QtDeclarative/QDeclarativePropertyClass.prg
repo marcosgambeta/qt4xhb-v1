@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_CONNECTNOTIFYSIGNAL1 )
   QDeclarativeProperty * obj = (QDeclarativeProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    RBOOL( obj->connectNotifySignal ( PQOBJECT(1),  (const char *) hb_parc(2) ) );
+    RBOOL( obj->connectNotifySignal ( PQOBJECT(1), (const char *) hb_parc(2) ) );
   }
 }
 

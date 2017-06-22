@@ -45,7 +45,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXTENSIONPLUGIN_INITIALIZEENGINE )
   if( obj )
   {
     QDeclarativeEngine * par1 = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->initializeEngine ( par1,  (const char *) hb_parc(2) );
+    obj->initializeEngine ( par1, (const char *) hb_parc(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXTENSIONPLUGIN_REGISTERTYPES )
   QDeclarativeExtensionPlugin * obj = (QDeclarativeExtensionPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->registerTypes (  (const char *) hb_parc(1) );
+    obj->registerTypes ( (const char *) hb_parc(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

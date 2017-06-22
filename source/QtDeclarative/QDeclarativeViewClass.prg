@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_SETRESIZEMODE )
   QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setResizeMode (  (QDeclarativeView::ResizeMode) hb_parni(1) );
+    obj->setResizeMode ( (QDeclarativeView::ResizeMode) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

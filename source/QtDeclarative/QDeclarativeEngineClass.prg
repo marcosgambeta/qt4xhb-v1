@@ -445,7 +445,7 @@ void setObjectOwnership ( QObject * object, ObjectOwnership ownership )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_SETOBJECTOWNERSHIP )
 {
-  QDeclarativeEngine::setObjectOwnership ( PQOBJECT(1),  (QDeclarativeEngine::ObjectOwnership) hb_parni(2) );
+  QDeclarativeEngine::setObjectOwnership ( PQOBJECT(1), (QDeclarativeEngine::ObjectOwnership) hb_parni(2) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

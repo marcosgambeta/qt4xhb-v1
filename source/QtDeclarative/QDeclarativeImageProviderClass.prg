@@ -51,7 +51,7 @@ QDeclarativeImageProvider ( ImageType type )
 */
 HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_NEW )
 {
-  QDeclarativeImageProvider * o = new QDeclarativeImageProvider (  (QDeclarativeImageProvider::ImageType) hb_parni(1) );
+  QDeclarativeImageProvider * o = new QDeclarativeImageProvider ( (QDeclarativeImageProvider::ImageType) hb_parni(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
