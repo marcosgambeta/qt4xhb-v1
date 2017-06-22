@@ -68,8 +68,7 @@ QXmlSchemaValidator ()
 */
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NEW1 )
 {
-  QXmlSchemaValidator * o = NULL;
-  o = new QXmlSchemaValidator ();
+  QXmlSchemaValidator * o = new QXmlSchemaValidator ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -79,9 +78,7 @@ QXmlSchemaValidator ( const QXmlSchema & schema )
 */
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NEW2 )
 {
-  QXmlSchemaValidator * o = NULL;
-  QXmlSchema * par1 = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QXmlSchemaValidator ( *par1 );
+  QXmlSchemaValidator * o = new QXmlSchemaValidator ( *PQXMLSCHEMA(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -259,8 +256,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_VALIDATE1 )
   QXmlSchemaValidator * obj = (QXmlSchemaValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QUrl * par1 = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->validate ( *par1 ) );
+    RBOOL( obj->validate ( *PQURL(1) ) );
   }
 }
 
@@ -273,9 +269,8 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_VALIDATE2 )
   QXmlSchemaValidator * obj = (QXmlSchemaValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QUrl par2 = ISNIL(2)? QUrl() : *(QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->validate ( par1, par2 ) );
+    RBOOL( obj->validate ( PQIODEVICE(1), par2 ) );
   }
 }
 
@@ -290,7 +285,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_VALIDATE3 )
   {
     QByteArray  * par1 = (QByteArray  *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QUrl par2 = ISNIL(2)? QUrl() : *(QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->validate ( *par1, par2 ) );
+    RBOOL( obj->validate ( *par1, par2 ) );
   }
 }
 

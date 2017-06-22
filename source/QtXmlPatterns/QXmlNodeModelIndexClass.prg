@@ -53,8 +53,7 @@ QXmlNodeModelIndex ()
 */
 HB_FUNC_STATIC( QXMLNODEMODELINDEX_NEW1 )
 {
-  QXmlNodeModelIndex * o = NULL;
-  o = new QXmlNodeModelIndex ();
+  QXmlNodeModelIndex * o = new QXmlNodeModelIndex ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -64,9 +63,7 @@ QXmlNodeModelIndex ( const QXmlNodeModelIndex & other )
 */
 HB_FUNC_STATIC( QXMLNODEMODELINDEX_NEW2 )
 {
-  QXmlNodeModelIndex * o = NULL;
-  QXmlNodeModelIndex * par1 = (QXmlNodeModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QXmlNodeModelIndex ( *par1 );
+  QXmlNodeModelIndex * o = new QXmlNodeModelIndex ( *PQXMLNODEMODELINDEX(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -100,8 +97,7 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_ADDITIONALDATA )
   QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->additionalData ();
-    hb_retni( i );
+    RQINT64( obj->additionalData () );
   }
 }
 
@@ -114,8 +110,7 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_DATA )
   QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->data ();
-    hb_retni( i );
+    RQINT64( obj->data () );
   }
 }
 
@@ -142,7 +137,7 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_ISNULL )
   QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 

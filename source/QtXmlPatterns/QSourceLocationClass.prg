@@ -57,8 +57,7 @@ QSourceLocation ()
 */
 HB_FUNC_STATIC( QSOURCELOCATION_NEW1 )
 {
-  QSourceLocation * o = NULL;
-  o = new QSourceLocation ();
+  QSourceLocation * o = new QSourceLocation ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -68,9 +67,7 @@ QSourceLocation ( const QSourceLocation & other )
 */
 HB_FUNC_STATIC( QSOURCELOCATION_NEW2 )
 {
-  QSourceLocation * o = NULL;
-  QSourceLocation * par1 = (QSourceLocation *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSourceLocation ( *par1 );
+  QSourceLocation * o = new QSourceLocation ( *PQSOURCELOCATION(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -80,9 +77,7 @@ QSourceLocation ( const QUrl & u, int l = -1, int c = -1 )
 */
 HB_FUNC_STATIC( QSOURCELOCATION_NEW3 )
 {
-  QSourceLocation * o = NULL;
-  QUrl * par1 = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QSourceLocation ( *par1, OPINT(2,-1), OPINT(3,-1) );
+  QSourceLocation * o = new QSourceLocation ( *PQURL(1), OPINT(2,-1), OPINT(3,-1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -135,8 +130,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_COLUMN )
   QSourceLocation * obj = (QSourceLocation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->column ();
-    hb_retni( i );
+    RQINT64( obj->column () );
   }
 }
 
@@ -149,7 +143,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_ISNULL )
   QSourceLocation * obj = (QSourceLocation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -162,8 +156,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_LINE )
   QSourceLocation * obj = (QSourceLocation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 i = obj->line ();
-    hb_retni( i );
+    RQINT64( obj->line () );
   }
 }
 
@@ -176,8 +169,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_SETCOLUMN )
   QSourceLocation * obj = (QSourceLocation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 par1 = hb_parni(1);
-    obj->setColumn ( par1 );
+    obj->setColumn ( PQINT64(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -191,8 +183,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_SETLINE )
   QSourceLocation * obj = (QSourceLocation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qint64 par1 = hb_parni(1);
-    obj->setLine ( par1 );
+    obj->setLine ( PQINT64(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -206,8 +197,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_SETURI )
   QSourceLocation * obj = (QSourceLocation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QUrl * par1 = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setUri ( *par1 );
+    obj->setUri ( *PQURL(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

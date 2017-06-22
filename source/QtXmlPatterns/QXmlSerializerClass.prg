@@ -56,10 +56,7 @@ QXmlSerializer ( const QXmlQuery & query, QIODevice * outputDevice )
 */
 HB_FUNC_STATIC( QXMLSERIALIZER_NEW )
 {
-  QXmlSerializer * o = NULL;
-  QXmlQuery * par1 = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QIODevice * par2 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QXmlSerializer ( *par1, par2 );
+  QXmlSerializer * o = new QXmlSerializer ( *PQXMLQUERY(1), PQIODEVICE(2) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -102,8 +99,7 @@ HB_FUNC_STATIC( QXMLSERIALIZER_SETCODEC )
   QXmlSerializer * obj = (QXmlSerializer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTextCodec * par1 = (QTextCodec *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setCodec ( par1 );
+    obj->setCodec ( PQTEXTCODEC(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -117,8 +113,7 @@ HB_FUNC_STATIC( QXMLSERIALIZER_ATOMICVALUE )
   QXmlSerializer * obj = (QXmlSerializer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVariant * par1 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->atomicValue ( *par1 );
+    obj->atomicValue ( *PQVARIANT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

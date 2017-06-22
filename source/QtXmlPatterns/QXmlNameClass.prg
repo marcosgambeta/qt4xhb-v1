@@ -57,8 +57,7 @@ QXmlName ()
 */
 HB_FUNC_STATIC( QXMLNAME_NEW1 )
 {
-  QXmlName * o = NULL;
-  o = new QXmlName ();
+  QXmlName * o = new QXmlName ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -68,9 +67,7 @@ QXmlName ( QXmlNamePool & namePool, const QString & localName, const QString & n
 */
 HB_FUNC_STATIC( QXMLNAME_NEW2 )
 {
-  QXmlName * o = NULL;
-  QXmlNamePool * par1 = (QXmlNamePool *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QXmlName ( *par1, PQSTRING(2), OPQSTRING(3,QString()), OPQSTRING(4,QString()) );
+  QXmlName * o = new QXmlName ( *PQXMLNAMEPOOL(1), PQSTRING(2), OPQSTRING(3,QString()), OPQSTRING(4,QString()) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -104,7 +101,7 @@ HB_FUNC_STATIC( QXMLNAME_ISNULL )
   QXmlName * obj = (QXmlName *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 
@@ -186,7 +183,7 @@ bool isNCName ( const QString & candidate )
 */
 HB_FUNC_STATIC( QXMLNAME_ISNCNAME )
 {
-  hb_retl( QXmlName::isNCName ( PQSTRING(1) ) );
+  RBOOL( QXmlName::isNCName ( PQSTRING(1) ) );
 }
 
 

@@ -63,9 +63,7 @@ HB_FUNC_STATIC( QABSTRACTURIRESOLVER_RESOLVE )
   QAbstractUriResolver * obj = (QAbstractUriResolver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QUrl * par1 = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QUrl * par2 = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QUrl * ptr = new QUrl( obj->resolve ( *par1, *par2 ) );
+    QUrl * ptr = new QUrl( obj->resolve ( *PQURL(1), *PQURL(2) ) );
     _qt4xhb_createReturnClass ( ptr, "QURL", true );
   }
 }

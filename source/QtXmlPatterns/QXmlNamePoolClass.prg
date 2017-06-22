@@ -46,8 +46,7 @@ QXmlNamePool ()
 */
 HB_FUNC_STATIC( QXMLNAMEPOOL_NEW1 )
 {
-  QXmlNamePool * o = NULL;
-  o = new QXmlNamePool ();
+  QXmlNamePool * o = new QXmlNamePool ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -57,9 +56,7 @@ QXmlNamePool ( const QXmlNamePool & other )
 */
 HB_FUNC_STATIC( QXMLNAMEPOOL_NEW2 )
 {
-  QXmlNamePool * o = NULL;
-  QXmlNamePool * par1 = (QXmlNamePool *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QXmlNamePool ( *par1 );
+  QXmlNamePool * o = new QXmlNamePool ( *PQXMLNAMEPOOL(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 

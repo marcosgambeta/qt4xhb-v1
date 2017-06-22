@@ -52,8 +52,7 @@ QXmlResultItems ()
 */
 HB_FUNC_STATIC( QXMLRESULTITEMS_NEW )
 {
-  QXmlResultItems * o = NULL;
-  o = new QXmlResultItems ();
+  QXmlResultItems * o = new QXmlResultItems ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -96,7 +95,7 @@ HB_FUNC_STATIC( QXMLRESULTITEMS_HASERROR )
   QXmlResultItems * obj = (QXmlResultItems *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->hasError () );
+    RBOOL( obj->hasError () );
   }
 }
 

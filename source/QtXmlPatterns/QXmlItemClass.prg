@@ -59,8 +59,7 @@ QXmlItem ()
 */
 HB_FUNC_STATIC( QXMLITEM_NEW1 )
 {
-  QXmlItem * o = NULL;
-  o = new QXmlItem ();
+  QXmlItem * o = new QXmlItem ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -70,9 +69,7 @@ QXmlItem ( const QXmlItem & other )
 */
 HB_FUNC_STATIC( QXMLITEM_NEW2 )
 {
-  QXmlItem * o = NULL;
-  QXmlItem * par1 = (QXmlItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QXmlItem ( *par1 );
+  QXmlItem * o = new QXmlItem ( *PQXMLITEM(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -82,9 +79,7 @@ QXmlItem ( const QXmlNodeModelIndex & node )
 */
 HB_FUNC_STATIC( QXMLITEM_NEW3 )
 {
-  QXmlItem * o = NULL;
-  QXmlNodeModelIndex * par1 = (QXmlNodeModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QXmlItem ( *par1 );
+  QXmlItem * o = new QXmlItem ( *PQXMLNODEMODELINDEX(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -94,9 +89,7 @@ QXmlItem ( const QVariant & atomicValue )
 */
 HB_FUNC_STATIC( QXMLITEM_NEW4 )
 {
-  QXmlItem * o = NULL;
-  QVariant * par1 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QXmlItem ( *par1 );
+  QXmlItem * o = new QXmlItem ( *PQVARIANT(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -154,7 +147,7 @@ HB_FUNC_STATIC( QXMLITEM_ISATOMICVALUE )
   QXmlItem * obj = (QXmlItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isAtomicValue () );
+    RBOOL( obj->isAtomicValue () );
   }
 }
 
@@ -167,7 +160,7 @@ HB_FUNC_STATIC( QXMLITEM_ISNODE )
   QXmlItem * obj = (QXmlItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNode () );
+    RBOOL( obj->isNode () );
   }
 }
 
@@ -180,7 +173,7 @@ HB_FUNC_STATIC( QXMLITEM_ISNULL )
   QXmlItem * obj = (QXmlItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isNull () );
+    RBOOL( obj->isNull () );
   }
 }
 

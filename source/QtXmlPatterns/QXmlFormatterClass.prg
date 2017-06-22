@@ -46,14 +46,11 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QXmlFormatter ( const QXmlQuery & query, QIODevice * outputDevice
+QXmlFormatter ( const QXmlQuery & query, QIODevice * outputDevice )
 */
 HB_FUNC_STATIC( QXMLFORMATTER_NEW )
 {
-  QXmlFormatter * o = NULL;
-  QXmlQuery * par1 = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QIODevice * par2 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QXmlFormatter ( *par1, par2 );
+  QXmlFormatter * o = new QXmlFormatter ( *PQXMLQUERY(1), PQIODEVICE(2) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -68,7 +65,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_INDENTATIONDEPTH )
   QXmlFormatter * obj = (QXmlFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( obj->indentationDepth () );
+    RINT( obj->indentationDepth () );
   }
 }
 
@@ -81,8 +78,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_SETINDENTATIONDEPTH )
   QXmlFormatter * obj = (QXmlFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setIndentationDepth ( par1 );
+    obj->setIndentationDepth ( PINT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -96,8 +92,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_ATOMICVALUE )
   QXmlFormatter * obj = (QXmlFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVariant * par1 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->atomicValue ( *par1 );
+    obj->atomicValue ( *PQVARIANT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

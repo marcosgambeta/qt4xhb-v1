@@ -66,8 +66,7 @@ QXmlSchema ()
 */
 HB_FUNC_STATIC( QXMLSCHEMA_NEW1 )
 {
-  QXmlSchema * o = NULL;
-  o = new QXmlSchema ();
+  QXmlSchema * o = new QXmlSchema ();
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -77,9 +76,7 @@ QXmlSchema ( const QXmlSchema & other )
 */
 HB_FUNC_STATIC( QXMLSCHEMA_NEW2 )
 {
-  QXmlSchema * o = NULL;
-  QXmlSchema * par1 = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  o = new QXmlSchema ( *par1 );
+  QXmlSchema * o = new QXmlSchema ( *PQXMLSCHEMA(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -141,7 +138,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_ISVALID )
   QXmlSchema * obj = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retl( obj->isValid () );
+    RBOOL( obj->isValid () );
   }
 }
 
@@ -154,8 +151,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_LOAD1 )
   QXmlSchema * obj = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QUrl * par1 = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->load ( *par1 ) );
+    RBOOL( obj->load ( *PQURL(1) ) );
   }
 }
 
@@ -168,9 +164,8 @@ HB_FUNC_STATIC( QXMLSCHEMA_LOAD2 )
   QXmlSchema * obj = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QIODevice * par1 = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QUrl par2 = ISNIL(2)? QUrl() : *(QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->load ( par1, par2 ) );
+    RBOOL( obj->load ( PQIODEVICE(1), par2 ) );
   }
 }
 
@@ -183,9 +178,8 @@ HB_FUNC_STATIC( QXMLSCHEMA_LOAD3 )
   QXmlSchema * obj = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QByteArray * par1 = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QUrl par2 = ISNIL(2)? QUrl() : *(QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retl( obj->load ( *par1, par2 ) );
+    RBOOL( obj->load ( *PQBYTEARRAY(1), par2 ) );
   }
 }
 
