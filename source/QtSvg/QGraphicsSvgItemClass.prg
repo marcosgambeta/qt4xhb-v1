@@ -96,8 +96,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_ELEMENTID )
   QGraphicsSvgItem * obj = (QGraphicsSvgItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->elementId ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->elementId () );
   }
 }
 
