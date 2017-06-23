@@ -148,8 +148,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_FILTER )
   QSqlTableModel * obj = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->filter ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->filter () );
   }
 }
 
@@ -300,8 +299,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_TABLENAME )
   QSqlTableModel * obj = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->tableName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->tableName () );
   }
 }
 

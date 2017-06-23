@@ -148,8 +148,7 @@ HB_FUNC_STATIC( QSQLDRIVER_ESCAPEIDENTIFIER )
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->escapeIdentifier ( PQSTRING(1), (QSqlDriver::IdentifierType) hb_parni(2) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->escapeIdentifier ( PQSTRING(1), (QSqlDriver::IdentifierType) hb_parni(2) ) );
   }
 }
 
@@ -163,8 +162,7 @@ HB_FUNC_STATIC( QSQLDRIVER_FORMATVALUE )
   if( obj )
   {
     QSqlField * par1 = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString str1 = obj->formatValue ( *par1, OPBOOL(2,false) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->formatValue ( *par1, OPBOOL(2,false) ) );
   }
 }
 
@@ -339,8 +337,7 @@ HB_FUNC_STATIC( QSQLDRIVER_SQLSTATEMENT )
   if( obj )
   {
     QSqlRecord * par3 = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString str1 = obj->sqlStatement ( (QSqlDriver::StatementType) hb_parni(1), PQSTRING(2), *par3, PBOOL(4) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->sqlStatement ( (QSqlDriver::StatementType) hb_parni(1), PQSTRING(2), *par3, PBOOL(4) ) );
   }
 }
 
@@ -353,8 +350,7 @@ HB_FUNC_STATIC( QSQLDRIVER_STRIPDELIMITERS )
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->stripDelimiters ( PQSTRING(1), (QSqlDriver::IdentifierType) hb_parni(2) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->stripDelimiters ( PQSTRING(1), (QSqlDriver::IdentifierType) hb_parni(2) ) );
   }
 }
 
@@ -386,7 +382,7 @@ HB_FUNC_STATIC( QSQLDRIVER_SUBSCRIBEDTONOTIFICATIONS )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
+      PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }
@@ -409,7 +405,7 @@ HB_FUNC_STATIC( QSQLDRIVER_TABLES )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
+      PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }

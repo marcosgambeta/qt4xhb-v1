@@ -152,8 +152,7 @@ HB_FUNC_STATIC( QSQLINDEX_CURSORNAME )
   QSqlIndex * obj = (QSqlIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->cursorName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->cursorName () );
   }
 }
 
@@ -179,8 +178,7 @@ HB_FUNC_STATIC( QSQLINDEX_NAME )
   QSqlIndex * obj = (QSqlIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->name ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->name () );
   }
 }
 

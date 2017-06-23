@@ -255,8 +255,7 @@ HB_FUNC_STATIC( QSQLRECORD_FIELDNAME )
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->fieldName ( PINT(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->fieldName ( PINT(1) ) );
   }
 }
 

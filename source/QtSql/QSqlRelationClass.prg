@@ -92,8 +92,7 @@ HB_FUNC_STATIC( QSQLRELATION_DISPLAYCOLUMN )
   QSqlRelation * obj = (QSqlRelation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->displayColumn ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->displayColumn () );
   }
 }
 
@@ -106,8 +105,7 @@ HB_FUNC_STATIC( QSQLRELATION_INDEXCOLUMN )
   QSqlRelation * obj = (QSqlRelation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->indexColumn ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->indexColumn () );
   }
 }
 
@@ -133,8 +131,7 @@ HB_FUNC_STATIC( QSQLRELATION_TABLENAME )
   QSqlRelation * obj = (QSqlRelation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->tableName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->tableName () );
   }
 }
 

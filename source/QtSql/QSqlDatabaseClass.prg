@@ -188,8 +188,7 @@ HB_FUNC_STATIC( QSQLDATABASE_CONNECTOPTIONS )
   QSqlDatabase * obj = (QSqlDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->connectOptions ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->connectOptions () );
   }
 }
 
@@ -202,8 +201,7 @@ HB_FUNC_STATIC( QSQLDATABASE_CONNECTIONNAME )
   QSqlDatabase * obj = (QSqlDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->connectionName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->connectionName () );
   }
 }
 
@@ -216,8 +214,7 @@ HB_FUNC_STATIC( QSQLDATABASE_DATABASENAME )
   QSqlDatabase * obj = (QSqlDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->databaseName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->databaseName () );
   }
 }
 
@@ -244,8 +241,7 @@ HB_FUNC_STATIC( QSQLDATABASE_DRIVERNAME )
   QSqlDatabase * obj = (QSqlDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->driverName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->driverName () );
   }
 }
 
@@ -272,8 +268,7 @@ HB_FUNC_STATIC( QSQLDATABASE_HOSTNAME )
   QSqlDatabase * obj = (QSqlDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->hostName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->hostName () );
   }
 }
 
@@ -393,8 +388,7 @@ HB_FUNC_STATIC( QSQLDATABASE_PASSWORD )
   QSqlDatabase * obj = (QSqlDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->password ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->password () );
   }
 }
 
@@ -565,7 +559,7 @@ HB_FUNC_STATIC( QSQLDATABASE_TABLES )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
+      PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }
@@ -595,8 +589,7 @@ HB_FUNC_STATIC( QSQLDATABASE_USERNAME )
   QSqlDatabase * obj = (QSqlDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->userName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->userName () );
   }
 }
 
@@ -728,7 +721,7 @@ HB_FUNC_STATIC( QSQLDATABASE_CONNECTIONNAMES )
   int i;
   for(i=0;i<strl.count();i++)
   {
-    PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
+    PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
     hb_arrayAddForward( pArray, pItem );
     hb_itemRelease(pItem);
   }
@@ -807,7 +800,7 @@ HB_FUNC_STATIC( QSQLDATABASE_DRIVERS )
   int i;
   for(i=0;i<strl.count();i++)
   {
-    PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
+    PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
     hb_arrayAddForward( pArray, pItem );
     hb_itemRelease(pItem);
   }

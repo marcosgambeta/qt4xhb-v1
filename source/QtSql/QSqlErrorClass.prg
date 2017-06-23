@@ -114,8 +114,7 @@ HB_FUNC_STATIC( QSQLERROR_DATABASETEXT )
   QSqlError * obj = (QSqlError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->databaseText ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->databaseText () );
   }
 }
 
@@ -128,8 +127,7 @@ HB_FUNC_STATIC( QSQLERROR_DRIVERTEXT )
   QSqlError * obj = (QSqlError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->driverText ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->driverText () );
   }
 }
 
@@ -224,8 +222,7 @@ HB_FUNC_STATIC( QSQLERROR_TEXT )
   QSqlError * obj = (QSqlError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->text ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->text () );
   }
 }
 

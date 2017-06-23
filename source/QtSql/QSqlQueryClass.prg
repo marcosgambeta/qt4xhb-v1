@@ -384,8 +384,7 @@ HB_FUNC_STATIC( QSQLQUERY_EXECUTEDQUERY )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->executedQuery ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->executedQuery () );
   }
 }
 
@@ -531,8 +530,7 @@ HB_FUNC_STATIC( QSQLQUERY_LASTQUERY )
   QSqlQuery * obj = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->lastQuery ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->lastQuery () );
   }
 }
 
