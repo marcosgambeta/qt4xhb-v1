@@ -368,8 +368,7 @@ HB_FUNC_STATIC( QWIDGET_ACCESSIBLEDESCRIPTION )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->accessibleDescription ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->accessibleDescription () );
   }
 }
 
@@ -382,8 +381,7 @@ HB_FUNC_STATIC( QWIDGET_ACCESSIBLENAME )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->accessibleName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->accessibleName () );
   }
 }
 
@@ -3133,8 +3131,7 @@ HB_FUNC_STATIC( QWIDGET_STATUSTIP )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->statusTip ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->statusTip () );
   }
 }
 
@@ -3161,8 +3158,7 @@ HB_FUNC_STATIC( QWIDGET_STYLESHEET )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->styleSheet ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->styleSheet () );
   }
 }
 
@@ -3189,8 +3185,7 @@ HB_FUNC_STATIC( QWIDGET_TOOLTIP )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toolTip ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toolTip () );
   }
 }
 
@@ -3395,8 +3390,7 @@ HB_FUNC_STATIC( QWIDGET_WHATSTHIS )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->whatsThis ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->whatsThis () );
   }
 }
 
@@ -3450,8 +3444,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOWFILEPATH )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->windowFilePath ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->windowFilePath () );
   }
 }
 
@@ -3491,8 +3484,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOWICONTEXT )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->windowIconText ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->windowIconText () );
   }
 }
 
@@ -3531,8 +3523,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOWROLE )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->windowRole ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->windowRole () );
   }
 }
 
@@ -3559,8 +3550,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOWTITLE )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->windowTitle ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->windowTitle () );
   }
 }
 

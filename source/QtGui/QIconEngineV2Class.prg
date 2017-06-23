@@ -131,8 +131,7 @@ HB_FUNC_STATIC( QICONENGINEV2_ICONNAME )
   QIconEngineV2 * obj = (QIconEngineV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->iconName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->iconName () );
   }
 }
 
@@ -145,8 +144,7 @@ HB_FUNC_STATIC( QICONENGINEV2_KEY )
   QIconEngineV2 * obj = (QIconEngineV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->key ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->key () );
   }
 }
 

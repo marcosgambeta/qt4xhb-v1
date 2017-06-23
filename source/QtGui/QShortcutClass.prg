@@ -269,8 +269,7 @@ HB_FUNC_STATIC( QSHORTCUT_WHATSTHIS )
   QShortcut * obj = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->whatsThis ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->whatsThis () );
   }
 }
 

@@ -197,8 +197,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_ERRORSTRING )
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->errorString ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->errorString () );
   }
 }
 
@@ -211,8 +210,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_FILENAME )
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->fileName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->fileName () );
   }
 }
 

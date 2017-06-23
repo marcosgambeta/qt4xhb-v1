@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QFONTDATABASE_FAMILIES )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
+      PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }
@@ -252,8 +252,7 @@ HB_FUNC_STATIC( QFONTDATABASE_STYLESTRING1 )
   QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->styleString ( *PQFONT(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->styleString ( *PQFONT(1) ) );
   }
 }
 
@@ -266,9 +265,7 @@ HB_FUNC_STATIC( QFONTDATABASE_STYLESTRING2 )
   QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QFontInfo * par1 = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString str1 = obj->styleString ( *par1 );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->styleString ( *PQFONTINFO(1) ) );
   }
 }
 
@@ -302,7 +299,7 @@ HB_FUNC_STATIC( QFONTDATABASE_STYLES )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
+      PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }
@@ -415,7 +412,7 @@ HB_FUNC_STATIC( QFONTDATABASE_APPLICATIONFONTFAMILIES )
   int i;
   for(i=0;i<strl.count();i++)
   {
-    PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
+    PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
     hb_arrayAddForward( pArray, pItem );
     hb_itemRelease(pItem);
   }
@@ -474,9 +471,7 @@ QString writingSystemName ( WritingSystem writingSystem )
 */
 HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMNAME )
 {
-  int par1 = hb_parni(1);
-  QString str1 = QFontDatabase::writingSystemName ( (QFontDatabase::WritingSystem) par1 );
-  hb_retc( RQSTRING(str1) );
+  RQSTRING( QFontDatabase::writingSystemName ( (QFontDatabase::WritingSystem) hb_parni(1) ) );
 }
 
 
@@ -485,9 +480,7 @@ QString writingSystemSample ( WritingSystem writingSystem )
 */
 HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMSAMPLE )
 {
-  int par1 = hb_parni(1);
-  QString str1 = QFontDatabase::writingSystemSample ( (QFontDatabase::WritingSystem) par1 );
-  hb_retc( RQSTRING(str1) );
+  RQSTRING( QFontDatabase::writingSystemSample ( (QFontDatabase::WritingSystem) hb_parni(1) ) );
 }
 
 

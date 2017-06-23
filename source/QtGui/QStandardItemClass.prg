@@ -258,8 +258,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_TEXT )
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->text ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->text () );
   }
 }
 
@@ -315,8 +314,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_TOOLTIP )
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toolTip ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toolTip () );
   }
 }
 
@@ -343,8 +341,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_STATUSTIP )
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->statusTip ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->statusTip () );
   }
 }
 
@@ -371,8 +368,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_WHATSTHIS )
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->whatsThis ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->whatsThis () );
   }
 }
 
@@ -567,8 +563,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ACCESSIBLETEXT )
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->accessibleText ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->accessibleText () );
   }
 }
 
@@ -595,8 +590,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ACCESSIBLEDESCRIPTION )
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->accessibleDescription ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->accessibleDescription () );
   }
 }
 

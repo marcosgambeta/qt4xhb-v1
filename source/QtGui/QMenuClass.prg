@@ -653,8 +653,7 @@ HB_FUNC_STATIC( QMENU_TITLE )
   QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->title ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->title () );
   }
 }
 

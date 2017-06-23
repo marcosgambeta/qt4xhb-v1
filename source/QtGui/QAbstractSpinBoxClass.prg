@@ -366,8 +366,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SPECIALVALUETEXT )
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->specialValueText ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->specialValueText () );
   }
 }
 
@@ -394,8 +393,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_TEXT )
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->text ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->text () );
   }
 }
 

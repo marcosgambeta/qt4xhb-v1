@@ -256,9 +256,7 @@ HB_FUNC_STATIC( QCLIPBOARD_TEXT1 )
   QClipboard * obj = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QString str1 = obj->text ( (QClipboard::Mode) par1 );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->text ( (QClipboard::Mode) hb_parni(1) ) );
   }
 }
 
@@ -272,9 +270,7 @@ HB_FUNC_STATIC( QCLIPBOARD_TEXT2 )
   if( obj )
   {
     QString par1 = hb_parc(1);
-    int par2 = hb_parni(2);
-    QString str1 = obj->text ( par1, (QClipboard::Mode) par2 );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->text ( par1, (QClipboard::Mode) hb_parni(2) ) );
   }
 }
 

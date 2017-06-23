@@ -358,8 +358,7 @@ HB_FUNC_STATIC( QACTION_ICONTEXT )
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->iconText ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->iconText () );
   }
 }
 
@@ -930,8 +929,7 @@ HB_FUNC_STATIC( QACTION_STATUSTIP )
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->statusTip ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->statusTip () );
   }
 }
 
@@ -944,8 +942,7 @@ HB_FUNC_STATIC( QACTION_TEXT )
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->text ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->text () );
   }
 }
 
@@ -958,8 +955,7 @@ HB_FUNC_STATIC( QACTION_TOOLTIP )
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toolTip ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toolTip () );
   }
 }
 
@@ -972,8 +968,7 @@ HB_FUNC_STATIC( QACTION_WHATSTHIS )
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->whatsThis ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->whatsThis () );
   }
 }
 

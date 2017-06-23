@@ -293,8 +293,7 @@ HB_FUNC_STATIC( QRAWFONT_FAMILYNAME )
   QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->familyName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->familyName () );
   }
 }
 
@@ -481,8 +480,7 @@ HB_FUNC_STATIC( QRAWFONT_STYLENAME )
   QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->styleName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->styleName () );
   }
 }
 

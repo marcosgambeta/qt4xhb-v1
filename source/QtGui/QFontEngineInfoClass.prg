@@ -130,8 +130,7 @@ HB_FUNC_STATIC( QFONTENGINEINFO_FAMILY )
   QFontEngineInfo * obj = (QFontEngineInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->family ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->family () );
   }
 }
 

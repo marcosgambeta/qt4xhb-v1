@@ -165,8 +165,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_IDENTIFIERNAME )
   QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->identifierName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->identifierName () );
   }
 }
 
@@ -192,8 +191,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_LANGUAGE )
   QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->language ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->language () );
   }
 }
 

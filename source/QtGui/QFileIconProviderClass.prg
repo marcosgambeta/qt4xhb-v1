@@ -125,9 +125,7 @@ HB_FUNC_STATIC( QFILEICONPROVIDER_TYPE )
   QFileIconProvider * obj = (QFileIconProvider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QFileInfo * par1 = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString str1 = obj->type ( *par1 );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->type ( *PQFILEINFO(1) ) );
   }
 }
 

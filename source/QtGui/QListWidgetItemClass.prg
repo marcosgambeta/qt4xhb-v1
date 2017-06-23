@@ -576,8 +576,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_STATUSTIP )
   QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->statusTip ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->statusTip () );
   }
 }
 
@@ -590,8 +589,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_TEXT )
   QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->text ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->text () );
   }
 }
 
@@ -617,8 +615,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_TOOLTIP )
   QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toolTip ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toolTip () );
   }
 }
 
@@ -644,8 +641,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_WHATSTHIS )
   QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->whatsThis ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->whatsThis () );
   }
 }
 

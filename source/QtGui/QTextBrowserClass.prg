@@ -122,8 +122,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_HISTORYTITLE )
   QTextBrowser * obj = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->historyTitle ( PINT(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->historyTitle ( PINT(1) ) );
   }
 }
 
@@ -208,7 +207,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_SEARCHPATHS )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
+      PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }

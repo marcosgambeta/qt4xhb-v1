@@ -936,8 +936,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_STATUSTIP )
   QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->statusTip ( PINT(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->statusTip ( PINT(1) ) );
   }
 }
 
@@ -1008,8 +1007,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_TEXT )
   QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->text ( PINT(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->text ( PINT(1) ) );
   }
 }
 
@@ -1035,8 +1033,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_TOOLTIP )
   QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toolTip ( PINT(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toolTip ( PINT(1) ) );
   }
 }
 
@@ -1076,8 +1073,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_WHATSTHIS )
   QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->whatsThis ( PINT(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->whatsThis ( PINT(1) ) );
   }
 }
 

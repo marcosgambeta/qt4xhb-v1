@@ -96,8 +96,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_DESCRIPTION )
 
   if( obj )
   {
-    QString str1 = obj->description ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->description () );
   }
 }
 

@@ -606,8 +606,7 @@ HB_FUNC_STATIC( QTABWIDGET_TABTEXT )
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->tabText ( PINT(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->tabText ( PINT(1) ) );
   }
 }
 
@@ -620,8 +619,7 @@ HB_FUNC_STATIC( QTABWIDGET_TABTOOLTIP )
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->tabToolTip ( PINT(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->tabToolTip ( PINT(1) ) );
   }
 }
 
@@ -634,8 +632,7 @@ HB_FUNC_STATIC( QTABWIDGET_TABWHATSTHIS )
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->tabWhatsThis ( PINT(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->tabWhatsThis ( PINT(1) ) );
   }
 }
 

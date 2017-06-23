@@ -223,8 +223,7 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONPREFIX )
   QCompleter * obj = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->completionPrefix ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->completionPrefix () );
   }
 }
 
@@ -250,8 +249,7 @@ HB_FUNC_STATIC( QCOMPLETER_CURRENTCOMPLETION )
   QCompleter * obj = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->currentCompletion ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->currentCompletion () );
   }
 }
 
@@ -331,8 +329,7 @@ HB_FUNC_STATIC( QCOMPLETER_PATHFROMINDEX )
   QCompleter * obj = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->pathFromIndex ( *PQMODELINDEX(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->pathFromIndex ( *PQMODELINDEX(1) ) );
   }
 }
 
@@ -509,7 +506,7 @@ HB_FUNC_STATIC( QCOMPLETER_SPLITPATH )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
+      PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }

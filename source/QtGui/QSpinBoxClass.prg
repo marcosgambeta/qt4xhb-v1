@@ -83,8 +83,7 @@ HB_FUNC_STATIC( QSPINBOX_CLEANTEXT )
   QSpinBox * obj = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->cleanText ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->cleanText () );
   }
 }
 
@@ -123,8 +122,7 @@ HB_FUNC_STATIC( QSPINBOX_PREFIX )
   QSpinBox * obj = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->prefix ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->prefix () );
   }
 }
 
@@ -234,8 +232,7 @@ HB_FUNC_STATIC( QSPINBOX_SUFFIX )
   QSpinBox * obj = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->suffix ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->suffix () );
   }
 }
 

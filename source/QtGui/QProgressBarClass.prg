@@ -107,8 +107,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_FORMAT )
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->format ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->format () );
   }
 }
 
@@ -259,8 +258,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_TEXT )
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->text ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->text () );
   }
 }
 

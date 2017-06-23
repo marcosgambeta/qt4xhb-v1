@@ -106,8 +106,7 @@ HB_FUNC_STATIC( QSTATUSBAR_CURRENTMESSAGE )
   QStatusBar * obj = (QStatusBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->currentMessage ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->currentMessage () );
   }
 }
 

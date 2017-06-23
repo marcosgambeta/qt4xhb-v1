@@ -224,8 +224,7 @@ HB_FUNC_STATIC( QPRINTER_CREATOR )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->creator ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->creator () );
   }
 }
 
@@ -238,8 +237,7 @@ HB_FUNC_STATIC( QPRINTER_DOCNAME )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->docName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->docName () );
   }
 }
 
@@ -357,8 +355,7 @@ HB_FUNC_STATIC( QPRINTER_OUTPUTFILENAME )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->outputFileName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->outputFileName () );
   }
 }
 
@@ -555,8 +552,7 @@ HB_FUNC_STATIC( QPRINTER_PRINTPROGRAM )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->printProgram ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->printProgram () );
   }
 }
 
@@ -582,8 +578,7 @@ HB_FUNC_STATIC( QPRINTER_PRINTERNAME )
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->printerName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->printerName () );
   }
 }
 

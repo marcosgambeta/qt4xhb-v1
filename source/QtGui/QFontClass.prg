@@ -225,8 +225,7 @@ HB_FUNC_STATIC( QFONT_DEFAULTFAMILY )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->defaultFamily ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->defaultFamily () );
   }
 }
 
@@ -252,8 +251,7 @@ HB_FUNC_STATIC( QFONT_FAMILY )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->family ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->family () );
   }
 }
 
@@ -333,8 +331,7 @@ HB_FUNC_STATIC( QFONT_KEY )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->key ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->key () );
   }
 }
 
@@ -347,8 +344,7 @@ HB_FUNC_STATIC( QFONT_LASTRESORTFAMILY )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->lastResortFamily ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->lastResortFamily () );
   }
 }
 
@@ -361,8 +357,7 @@ HB_FUNC_STATIC( QFONT_LASTRESORTFONT )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->lastResortFont ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->lastResortFont () );
   }
 }
 
@@ -467,8 +462,7 @@ HB_FUNC_STATIC( QFONT_RAWNAME )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->rawName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->rawName () );
   }
 }
 
@@ -860,8 +854,7 @@ HB_FUNC_STATIC( QFONT_TOSTRING )
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toString ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toString () );
   }
 }
 
@@ -941,8 +934,7 @@ QString substitute ( const QString & familyName )
 */
 HB_FUNC_STATIC( QFONT_SUBSTITUTE )
 {
-  QString str1 = QFont::substitute ( PQSTRING(1) );
-  hb_retc( RQSTRING(str1) );
+  RQSTRING( QFont::substitute ( PQSTRING(1) ) );
 }
 
 
@@ -957,7 +949,7 @@ HB_FUNC_STATIC( QFONT_SUBSTITUTES )
   int i;
   for(i=0;i<strl.count();i++)
   {
-    PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
+    PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
     hb_arrayAddForward( pArray, pItem );
     hb_itemRelease(pItem);
   }
@@ -976,7 +968,7 @@ HB_FUNC_STATIC( QFONT_SUBSTITUTIONS )
   int i;
   for(i=0;i<strl.count();i++)
   {
-    PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
+    PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
     hb_arrayAddForward( pArray, pItem );
     hb_itemRelease(pItem);
   }

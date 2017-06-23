@@ -424,8 +424,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DEFAULTSTYLESHEET )
   QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->defaultStyleSheet ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->defaultStyleSheet () );
   }
 }
 
@@ -798,9 +797,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_METAINFORMATION )
   QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QString str1 = obj->metaInformation ( (QTextDocument::MetaInformation) par1 );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->metaInformation ( (QTextDocument::MetaInformation) hb_parni(1) ) );
   }
 }
 
@@ -1182,8 +1179,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_TOHTML )
   if( obj )
   {
     QByteArray par1 = ISNIL(1)? QByteArray() : *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString str1 = obj->toHtml ( par1 );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toHtml ( par1 ) );
   }
 }
 
@@ -1196,8 +1192,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_TOPLAINTEXT )
   QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toPlainText ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toPlainText () );
   }
 }
 
@@ -1210,8 +1205,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_UNDO1 )
   QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTextCursor * par1 = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->undo ( par1 );
+    obj->undo ( PQTEXTCURSOR(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

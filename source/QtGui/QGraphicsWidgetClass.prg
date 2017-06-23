@@ -838,8 +838,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_WINDOWTITLE )
   QGraphicsWidget * obj = (QGraphicsWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->windowTitle ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->windowTitle () );
   }
 }
 

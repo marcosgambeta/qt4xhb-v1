@@ -162,8 +162,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_TOHTML1 )
   QTextDocumentFragment * obj = (QTextDocumentFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toHtml ( *PQBYTEARRAY(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toHtml ( *PQBYTEARRAY(1) ) );
   }
 }
 
@@ -176,8 +175,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_TOHTML2 )
   QTextDocumentFragment * obj = (QTextDocumentFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toHtml ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toHtml () );
   }
 }
 
@@ -205,8 +203,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_TOPLAINTEXT )
   QTextDocumentFragment * obj = (QTextDocumentFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toPlainText ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toPlainText () );
   }
 }
 

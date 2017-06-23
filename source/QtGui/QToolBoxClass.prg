@@ -259,8 +259,7 @@ HB_FUNC_STATIC( QTOOLBOX_ITEMTEXT )
   QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->itemText ( PINT(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->itemText ( PINT(1) ) );
   }
 }
 
@@ -273,8 +272,7 @@ HB_FUNC_STATIC( QTOOLBOX_ITEMTOOLTIP )
   QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->itemToolTip ( PINT(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->itemToolTip ( PINT(1) ) );
   }
 }
 

@@ -73,8 +73,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_CLEANTEXT )
   QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->cleanText ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->cleanText () );
   }
 }
 
@@ -126,8 +125,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_PREFIX )
   QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->prefix ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->prefix () );
   }
 }
 
@@ -251,8 +249,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SUFFIX )
   QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->suffix ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->suffix () );
   }
 }
 
@@ -265,8 +262,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_TEXTFROMVALUE )
   QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->textFromValue ( PDOUBLE(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->textFromValue ( PDOUBLE(1) ) );
   }
 }
 

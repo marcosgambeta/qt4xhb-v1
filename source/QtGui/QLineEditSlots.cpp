@@ -95,7 +95,7 @@ void SlotsQLineEdit::textChanged ( const QString & text )
       if( ( (QString) list2.at(i) == (QString) "textChanged(QString)" ) && ( (bool) list4.at(i) == true ) )
       {
         PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-        PHB_ITEM ptext = hb_itemPutC( NULL, RQSTRING(text) );
+        PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
         hb_vmEvalBlockV( (PHB_ITEM) list3.at(i), 2, psender, ptext );
         hb_itemRelease( psender );
         hb_itemRelease( ptext );
@@ -113,7 +113,7 @@ void SlotsQLineEdit::textEdited ( const QString & text )
       if( ( (QString) list2.at(i) == (QString) "textEdited(QString)" ) && ( (bool) list4.at(i) == true ) )
       {
         PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-        PHB_ITEM ptext = hb_itemPutC( NULL, RQSTRING(text) );
+        PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
         hb_vmEvalBlockV( (PHB_ITEM) list3.at(i), 2, psender, ptext );
         hb_itemRelease( psender );
         hb_itemRelease( ptext );

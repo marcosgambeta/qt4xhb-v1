@@ -291,8 +291,7 @@ HB_FUNC_STATIC( QUNDOSTACK_REDOTEXT )
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->redoText ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->redoText () );
   }
 }
 
@@ -319,8 +318,7 @@ HB_FUNC_STATIC( QUNDOSTACK_TEXT )
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->text ( PINT(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->text ( PINT(1) ) );
   }
 }
 
@@ -346,8 +344,7 @@ HB_FUNC_STATIC( QUNDOSTACK_UNDOTEXT )
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->undoText ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->undoText () );
   }
 }
 

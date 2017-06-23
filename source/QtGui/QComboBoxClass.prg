@@ -250,8 +250,7 @@ HB_FUNC_STATIC( QCOMBOBOX_CURRENTTEXT )
   QComboBox * obj = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->currentText ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->currentText () );
   }
 }
 
@@ -490,8 +489,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ITEMTEXT )
   QComboBox * obj = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->itemText ( PINT(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->itemText ( PINT(1) ) );
   }
 }
 

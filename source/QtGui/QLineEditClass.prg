@@ -340,8 +340,7 @@ HB_FUNC_STATIC( QLINEEDIT_DISPLAYTEXT )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->displayText ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->displayText () );
   }
 }
 
@@ -469,8 +468,7 @@ HB_FUNC_STATIC( QLINEEDIT_INPUTMASK )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->inputMask ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->inputMask () );
   }
 }
 
@@ -562,8 +560,7 @@ HB_FUNC_STATIC( QLINEEDIT_PLACEHOLDERTEXT )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->placeholderText ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->placeholderText () );
   }
 }
 
@@ -590,8 +587,7 @@ HB_FUNC_STATIC( QLINEEDIT_SELECTEDTEXT )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->selectedText ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->selectedText () );
   }
 }
 
@@ -861,8 +857,7 @@ HB_FUNC_STATIC( QLINEEDIT_TEXT )
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->text ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->text () );
   }
 }
 

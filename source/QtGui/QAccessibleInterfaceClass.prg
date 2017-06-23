@@ -76,8 +76,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_ACTIONTEXT )
   QAccessibleInterface * obj = (QAccessibleInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->actionText ( PINT(1), (QAccessibleInterface::Text) hb_parni(2), PINT(3) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->actionText ( PINT(1), (QAccessibleInterface::Text) hb_parni(2), PINT(3) ) );
   }
 }
 
@@ -271,8 +270,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_TEXT )
   QAccessibleInterface * obj = (QAccessibleInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->text ( (QAccessibleInterface::Text) hb_parni(1), PINT(2) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->text ( (QAccessibleInterface::Text) hb_parni(1), PINT(2) ) );
   }
 }
 

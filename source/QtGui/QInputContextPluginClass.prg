@@ -79,8 +79,7 @@ HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_DESCRIPTION )
   QInputContextPlugin * obj = (QInputContextPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->description ( PQSTRING(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->description ( PQSTRING(1) ) );
   }
 }
 
@@ -93,8 +92,7 @@ HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_DISPLAYNAME )
   QInputContextPlugin * obj = (QInputContextPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->displayName ( PQSTRING(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->displayName ( PQSTRING(1) ) );
   }
 }
 
@@ -113,7 +111,7 @@ HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_KEYS )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
+      PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }
@@ -136,7 +134,7 @@ HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_LANGUAGES )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
+      PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }

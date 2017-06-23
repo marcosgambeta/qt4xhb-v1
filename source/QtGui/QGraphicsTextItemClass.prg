@@ -405,8 +405,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TOHTML )
   QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toHtml ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toHtml () );
   }
 }
 
@@ -419,8 +418,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TOPLAINTEXT )
   QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toPlainText ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toPlainText () );
   }
 }
 

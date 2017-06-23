@@ -49,9 +49,7 @@ QString displayName ( StandardLocation type )
 */
 HB_FUNC_STATIC( QDESKTOPSERVICES_DISPLAYNAME )
 {
-  int par1 = hb_parni(1);
-  QString str1 = QDesktopServices::displayName ( (QDesktopServices::StandardLocation) par1 );
-  hb_retc( RQSTRING(str1) );
+  RQSTRING( QDesktopServices::displayName ( (QDesktopServices::StandardLocation) hb_parni(1) ) );
 }
 
 
@@ -79,9 +77,7 @@ QString storageLocation ( StandardLocation type )
 */
 HB_FUNC_STATIC( QDESKTOPSERVICES_STORAGELOCATION )
 {
-  int par1 = hb_parni(1);
-  QString str1 = QDesktopServices::storageLocation ( (QDesktopServices::StandardLocation) par1 );
-  hb_retc( RQSTRING(str1) );
+  RQSTRING( QDesktopServices::storageLocation ( (QDesktopServices::StandardLocation) hb_parni(1) ) );
 }
 
 

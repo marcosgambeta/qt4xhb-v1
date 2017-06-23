@@ -1098,8 +1098,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_SELECTEDTEXT )
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->selectedText ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->selectedText () );
   }
 }
 

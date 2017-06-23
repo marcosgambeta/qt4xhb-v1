@@ -27,7 +27,7 @@ void SlotsQGraphicsTextItem::linkActivated ( const QString & link )
       if( ( (QString) list2.at(i) == (QString) "linkActivated(QString)" ) && ( (bool) list4.at(i) == true ) )
       {
         PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-        PHB_ITEM plink = hb_itemPutC( NULL, RQSTRING(link) );
+        PHB_ITEM plink = hb_itemPutC( NULL, QSTRINGTOSTRING(link) );
         hb_vmEvalBlockV( (PHB_ITEM) list3.at(i), 2, psender, plink );
         hb_itemRelease( psender );
         hb_itemRelease( plink );
@@ -45,7 +45,7 @@ void SlotsQGraphicsTextItem::linkHovered ( const QString & link )
       if( ( (QString) list2.at(i) == (QString) "linkHovered(QString)" ) && ( (bool) list4.at(i) == true ) )
       {
         PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-        PHB_ITEM plink = hb_itemPutC( NULL, RQSTRING(link) );
+        PHB_ITEM plink = hb_itemPutC( NULL, QSTRINGTOSTRING(link) );
         hb_vmEvalBlockV( (PHB_ITEM) list3.at(i), 2, psender, plink );
         hb_itemRelease( psender );
         hb_itemRelease( plink );

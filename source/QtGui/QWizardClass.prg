@@ -152,9 +152,7 @@ HB_FUNC_STATIC( QWIZARD_BUTTONTEXT )
   QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QString str1 = obj->buttonText ( (QWizard::WizardButton) par1 );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->buttonText ( (QWizard::WizardButton) hb_parni(1) ) );
   }
 }
 

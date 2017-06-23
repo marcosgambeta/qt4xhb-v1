@@ -65,7 +65,7 @@ void SlotsQListWidget::currentTextChanged ( const QString & currentText )
       if( ( (QString) list2.at(i) == (QString) "currentTextChanged(QString)" ) && ( (bool) list4.at(i) == true ) )
       {
         PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-        PHB_ITEM pcurrentText = hb_itemPutC( NULL, RQSTRING(currentText) );
+        PHB_ITEM pcurrentText = hb_itemPutC( NULL, QSTRINGTOSTRING(currentText) );
         hb_vmEvalBlockV( (PHB_ITEM) list3.at(i), 2, psender, pcurrentText );
         hb_itemRelease( psender );
         hb_itemRelease( pcurrentText );

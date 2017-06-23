@@ -353,8 +353,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_DISPLAYFORMAT )
   QDateTimeEdit * obj = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->displayFormat ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->displayFormat () );
   }
 }
 
@@ -490,9 +489,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SECTIONTEXT )
   QDateTimeEdit * obj = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QString str1 = obj->sectionText ( (QDateTimeEdit::Section) par1 );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->sectionText ( (QDateTimeEdit::Section) hb_parni(1) ) );
   }
 }
 

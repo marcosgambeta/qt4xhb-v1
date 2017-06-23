@@ -82,8 +82,7 @@ HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_DISPLAYTEXT )
   if( obj )
   {
     QLocale * par2 = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString str1 = obj->displayText ( *PQVARIANT(1), *par2 );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->displayText ( *PQVARIANT(1), *par2 ) );
   }
 }
 

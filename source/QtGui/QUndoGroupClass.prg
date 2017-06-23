@@ -188,8 +188,7 @@ HB_FUNC_STATIC( QUNDOGROUP_REDOTEXT )
   QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->redoText ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->redoText () );
   }
 }
 
@@ -261,8 +260,7 @@ HB_FUNC_STATIC( QUNDOGROUP_UNDOTEXT )
   QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->undoText ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->undoText () );
   }
 }
 

@@ -125,8 +125,7 @@ HB_FUNC_STATIC( QTEXTLIST_ITEMNUMBER )
   QTextList * obj = (QTextList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTextBlock * par1 = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RINT( obj->itemNumber ( *par1 ) );
+    RINT( obj->itemNumber ( *PQTEXTBLOCK(1) ) );
   }
 }
 
@@ -139,9 +138,7 @@ HB_FUNC_STATIC( QTEXTLIST_ITEMTEXT )
   QTextList * obj = (QTextList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTextBlock * par1 = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString str1 = obj->itemText ( *par1 );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->itemText ( *PQTEXTBLOCK(1) ) );
   }
 }
 
@@ -154,8 +151,7 @@ HB_FUNC_STATIC( QTEXTLIST_REMOVE )
   QTextList * obj = (QTextList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTextBlock * par1 = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->remove ( *par1 );
+    obj->remove ( *PQTEXTBLOCK(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -183,8 +179,7 @@ HB_FUNC_STATIC( QTEXTLIST_SETFORMAT )
   QTextList * obj = (QTextList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTextListFormat * par1 = (QTextListFormat *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setFormat ( *par1 );
+    obj->setFormat ( *PQTEXTLISTFORMAT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

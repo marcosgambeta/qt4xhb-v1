@@ -143,8 +143,7 @@ HB_FUNC_STATIC( QFONTINFO_FAMILY )
   QFontInfo * obj = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->family ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->family () );
   }
 }
 
@@ -261,8 +260,7 @@ HB_FUNC_STATIC( QFONTINFO_STYLENAME )
   QFontInfo * obj = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->styleName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->styleName () );
   }
 }
 

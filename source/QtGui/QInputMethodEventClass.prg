@@ -106,8 +106,7 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_COMMITSTRING )
   QInputMethodEvent * obj = (QInputMethodEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->commitString ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->commitString () );
   }
 }
 
@@ -120,8 +119,7 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_PREEDITSTRING )
   QInputMethodEvent * obj = (QInputMethodEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->preeditString ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->preeditString () );
   }
 }
 

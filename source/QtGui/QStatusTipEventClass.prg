@@ -68,8 +68,7 @@ HB_FUNC_STATIC( QSTATUSTIPEVENT_TIP )
   QStatusTipEvent * obj = (QStatusTipEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->tip ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->tip () );
   }
 }
 

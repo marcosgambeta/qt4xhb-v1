@@ -155,8 +155,7 @@ HB_FUNC_STATIC( QPRINTERINFO_PRINTERNAME )
   QPrinterInfo * obj = (QPrinterInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->printerName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->printerName () );
   }
 }
 

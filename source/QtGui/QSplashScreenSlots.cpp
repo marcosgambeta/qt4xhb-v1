@@ -27,7 +27,7 @@ void SlotsQSplashScreen::messageChanged ( const QString & message )
       if( ( (QString) list2.at(i) == (QString) "messageChanged(QString)" ) && ( (bool) list4.at(i) == true ) )
       {
         PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-        PHB_ITEM pmessage = hb_itemPutC( NULL, RQSTRING(message) );
+        PHB_ITEM pmessage = hb_itemPutC( NULL, QSTRINGTOSTRING(message) );
         hb_vmEvalBlockV( (PHB_ITEM) list3.at(i), 2, psender, pmessage );
         hb_itemRelease( psender );
         hb_itemRelease( pmessage );

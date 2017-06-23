@@ -279,10 +279,7 @@ HB_FUNC_STATIC( QFONTMETRICS_ELIDEDTEXT )
   QFontMetrics * obj = (QFontMetrics *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par2 = hb_parni(2);
-    int par3 = hb_parni(3);
-    QString str1 = obj->elidedText ( PQSTRING(1), (Qt::TextElideMode) par2, par3, OPINT(4,0) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->elidedText ( PQSTRING(1), (Qt::TextElideMode) hb_parni(2), PINT(3), OPINT(4,0) ) );
   }
 }
 

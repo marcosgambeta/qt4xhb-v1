@@ -228,8 +228,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_TOSTRING )
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QKeySequence::PortableText : hb_parni(1);
-    QString str1 = obj->toString ( (QKeySequence::SequenceFormat) par1 );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toString ( (QKeySequence::SequenceFormat) par1 ) );
   }
 }
 

@@ -316,8 +316,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_DETAILEDTEXT )
   QMessageBox * obj = (QMessageBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->detailedText ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->detailedText () );
   }
 }
 
@@ -371,8 +370,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_INFORMATIVETEXT )
   QMessageBox * obj = (QMessageBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->informativeText ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->informativeText () );
   }
 }
 
@@ -661,8 +659,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_TEXT )
   QMessageBox * obj = (QMessageBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->text ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->text () );
   }
 }
 

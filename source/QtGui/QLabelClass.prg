@@ -279,8 +279,7 @@ HB_FUNC_STATIC( QLABEL_SELECTEDTEXT )
   QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->selectedText ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->selectedText () );
   }
 }
 
@@ -293,8 +292,7 @@ HB_FUNC_STATIC( QLABEL_SETALIGNMENT )
   QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setAlignment ( (Qt::Alignment) par1 );
+    obj->setAlignment ( (Qt::Alignment) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -436,8 +434,7 @@ HB_FUNC_STATIC( QLABEL_TEXT )
   QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->text ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->text () );
   }
 }
 
