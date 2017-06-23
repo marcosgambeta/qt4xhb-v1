@@ -119,8 +119,7 @@ HB_FUNC_STATIC( QAXBASE_CONTROL )
 
   if( obj )
   {
-    QString str1 = obj->control ();
-    hb_retc( RQSTRING(str1) );
+     RQSTRING( obj->control () );
   }
 }
 
@@ -241,8 +240,7 @@ HB_FUNC_STATIC( QAXBASE_GENERATEDOCUMENTATION )
 
   if( obj )
   {
-    QString str1 = obj->generateDocumentation ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->generateDocumentation () );
   }
 }
 
@@ -400,7 +398,7 @@ HB_FUNC_STATIC( QAXBASE_VERBS )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
+      PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }

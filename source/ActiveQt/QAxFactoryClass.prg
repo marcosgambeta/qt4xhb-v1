@@ -164,8 +164,7 @@ HB_FUNC_STATIC( QAXFACTORY_EXPOSETOSUPERCLASS )
   {
     if( ISCHAR(1) )
     {
-      QString str1 = obj->exposeToSuperClass ( PQSTRING(1) );
-      hb_retc( RQSTRING(str1) );
+      RQSTRING( obj->exposeToSuperClass ( PQSTRING(1) ) );
     }
     else
     {
@@ -189,7 +188,7 @@ HB_FUNC_STATIC( QAXFACTORY_FEATURELIST )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
+      PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }
@@ -400,8 +399,7 @@ QString serverDirPath ()
 */
 HB_FUNC_STATIC( QAXFACTORY_SERVERDIRPATH )
 {
-  QString str1 = QAxFactory::serverDirPath ();
-  hb_retc( RQSTRING(str1) );
+  RQSTRING( QAxFactory::serverDirPath () );
 }
 
 /*
@@ -409,8 +407,7 @@ QString serverFilePath ()
 */
 HB_FUNC_STATIC( QAXFACTORY_SERVERFILEPATH )
 {
-  QString str1 = QAxFactory::serverFilePath ();
-  hb_retc( RQSTRING(str1) );
+  RQSTRING( QAxFactory::serverFilePath () );
 }
 
 /*

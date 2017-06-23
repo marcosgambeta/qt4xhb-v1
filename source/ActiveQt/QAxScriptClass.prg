@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QAXSCRIPT_FUNCTIONS )
       int i;
       for(i=0;i<strl.count();i++)
       {
-        PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
+        PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
         hb_arrayAddForward( pArray, pItem );
         hb_itemRelease(pItem);
       }
@@ -208,8 +208,7 @@ HB_FUNC_STATIC( QAXSCRIPT_SCRIPTCODE )
 
   if( obj )
   {
-    QString str1 = obj->scriptCode ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->scriptCode () );
   }
 }
 
@@ -236,8 +235,7 @@ HB_FUNC_STATIC( QAXSCRIPT_SCRIPTNAME )
 
   if( obj )
   {
-    QString str1 = obj->scriptName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->scriptName () );
   }
 }
 

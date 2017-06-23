@@ -129,8 +129,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_SCRIPTLANGUAGE )
 
   if( obj )
   {
-    QString str1 = obj->scriptLanguage ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->scriptLanguage () );
   }
 }
 
