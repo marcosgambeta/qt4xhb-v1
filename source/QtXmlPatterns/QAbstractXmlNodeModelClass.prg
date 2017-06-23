@@ -291,8 +291,7 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_STRINGVALUE )
   if( obj )
   {
     QXmlNodeModelIndex * par1 = (QXmlNodeModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString str1 = obj->stringValue ( *par1 );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->stringValue ( *par1 ) );
   }
 }
 

@@ -115,8 +115,7 @@ HB_FUNC_STATIC( QXMLNAME_LOCALNAME )
   if( obj )
   {
     QXmlNamePool * par1 = (QXmlNamePool *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString str1 = obj->localName ( *par1 );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->localName ( *par1 ) );
   }
 }
 
@@ -130,8 +129,7 @@ HB_FUNC_STATIC( QXMLNAME_NAMESPACEURI )
   if( obj )
   {
     QXmlNamePool * par1 = (QXmlNamePool *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString str1 = obj->namespaceUri ( *par1 );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->namespaceUri ( *par1 ) );
   }
 }
 
@@ -145,8 +143,7 @@ HB_FUNC_STATIC( QXMLNAME_PREFIX )
   if( obj )
   {
     QXmlNamePool * par1 = (QXmlNamePool *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString str1 = obj->prefix ( *par1 );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->prefix ( *par1 ) );
   }
 }
 
@@ -160,8 +157,7 @@ HB_FUNC_STATIC( QXMLNAME_TOCLARKNAME )
   if( obj )
   {
     QXmlNamePool * par1 = (QXmlNamePool *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString str1 = obj->toClarkName ( *par1 );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toClarkName ( *par1 ) );
   }
 }
 
