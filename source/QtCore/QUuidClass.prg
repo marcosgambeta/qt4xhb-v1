@@ -71,8 +71,6 @@ QUuid(uint l, ushort w1, ushort w2, uchar b1, uchar b2, uchar b3, uchar b4, ucha
 */
 HB_FUNC_STATIC( QUUID_NEW2 )
 {
-  ushort par2 = hb_parni(2);
-  ushort par3 = hb_parni(3);
   uchar par4 = ISCHAR(4)? (uchar) hb_parc(4)[0] : (ISNUM(4)? hb_parni(4) : 0);
   uchar par5 = ISCHAR(5)? (uchar) hb_parc(5)[0] : (ISNUM(5)? hb_parni(5) : 0);
   uchar par6 = ISCHAR(6)? (uchar) hb_parc(6)[0] : (ISNUM(6)? hb_parni(6) : 0);
@@ -81,7 +79,7 @@ HB_FUNC_STATIC( QUUID_NEW2 )
   uchar par9 = ISCHAR(9)? (uchar) hb_parc(9)[0] : (ISNUM(9)? hb_parni(9) : 0);
   uchar par10 = ISCHAR(10)? (uchar) hb_parc(10)[0] : (ISNUM(10)? hb_parni(10) : 0);
   uchar par11 = ISCHAR(11)? (uchar) hb_parc(11)[0] : (ISNUM(11)? hb_parni(11) : 0);
-  QUuid * o = new QUuid ( PUINT(1), par2, par3, par4, par5, par6, par7, par8, par9, par10, par11 );
+  QUuid * o = new QUuid ( PUINT(1), PUSHORT(2), PUSHORT(3), par4, par5, par6, par7, par8, par9, par10, par11 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 

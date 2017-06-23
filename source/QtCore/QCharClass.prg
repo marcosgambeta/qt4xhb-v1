@@ -139,8 +139,7 @@ QChar ( ushort code )
 */
 HB_FUNC_STATIC( QCHAR_NEW6 )
 {
-  ushort par1 = hb_parni(1);
-  QChar * o = new QChar ( par1 );
+  QChar * o = new QChar ( PUSHORT(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -150,8 +149,7 @@ QChar ( short code )
 */
 HB_FUNC_STATIC( QCHAR_NEW7 )
 {
-  short par1 = hb_parni(1);
-  QChar * o = new QChar ( par1 );
+  QChar * o = new QChar ( PSHORT(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 

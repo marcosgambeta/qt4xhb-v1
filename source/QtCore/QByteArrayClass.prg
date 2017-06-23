@@ -1606,8 +1606,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM3 )
   QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    short par1 = hb_parni(1);
-    QByteArray * ptr = new QByteArray( obj->setNum ( par1, OPINT(2,10) ) );
+    QByteArray * ptr = new QByteArray( obj->setNum ( PSHORT(1), OPINT(2,10) ) );
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -1621,8 +1620,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM4 )
   QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    ushort par1 = hb_parni(1);
-    QByteArray * ptr = new QByteArray( obj->setNum ( par1, OPINT(2,10) ) );
+    QByteArray * ptr = new QByteArray( obj->setNum ( PUSHORT(1), OPINT(2,10) ) );
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -2040,8 +2038,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOSHORT )
   if( obj )
   {
     bool par1;
-    short i = obj->toShort ( &par1, OPINT(2,10) );
-    hb_retni( i );
+    RSHORT( obj->toShort ( &par1, OPINT(2,10) ) );
     hb_storl( par1, 1 );
   }
 }
@@ -2103,8 +2100,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOUSHORT )
   if( obj )
   {
     bool par1;
-    ushort i = obj->toUShort ( &par1, OPINT(2,10) );
-    hb_retni( i );
+    RUSHORT( obj->toUShort ( &par1, OPINT(2,10) ) );
     hb_storl( par1, 1 );
   }
 }
