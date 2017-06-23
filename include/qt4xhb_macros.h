@@ -1395,7 +1395,7 @@
 //#define OPQSTRING(n,v)                                      ISNIL(n)? v : QString::fromUtf8( hb_parc(n) )
 
 // macros for return's
-#define RQSTRING(x)                                         (const char *) x.toAscii().data()
+#define RQSTRING(x)                                         hb_retc( (const char *) x.toAscii().data() )
 //#define RQSTRING(x)                                         (const char *) x.toLatin1().data()
 //#define RQSTRING(x)                                         (const char *) x.toUtf8().data()
 #define RBOOL(x)                                            hb_retl( x )
@@ -1412,3 +1412,6 @@
 #define RQUINT32(x)                                         hb_retni( x )
 #define RQUINT64(x)                                         hb_retnll( x )
 #define RENUM(x)                                            hb_retni( x )
+
+// conversion from QString to string
+#define QSTRINGTOSTRING(x)                                  (const char *) x.toAscii().data()
