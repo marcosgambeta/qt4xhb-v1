@@ -124,8 +124,7 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_FILENAME )
   QScriptProgram * obj = (QScriptProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->fileName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->fileName () );
   }
 }
 
@@ -164,8 +163,7 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_SOURCECODE )
   QScriptProgram * obj = (QScriptProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->sourceCode ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->sourceCode () );
   }
 }
 
