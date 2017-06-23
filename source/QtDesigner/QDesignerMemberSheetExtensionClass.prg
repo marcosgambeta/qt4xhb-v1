@@ -92,8 +92,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_DECLAREDINCLASS )
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->declaredInClass ( PINT(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->declaredInClass ( PINT(1) ) );
   }
 }
 
@@ -171,8 +170,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_MEMBERGROUP )
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->memberGroup ( PINT(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->memberGroup ( PINT(1) ) );
   }
 }
 
@@ -185,8 +183,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_MEMBERNAME )
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->memberName ( PINT(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->memberName ( PINT(1) ) );
   }
 }
 
@@ -315,8 +312,7 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_SIGNATURE )
   QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->signature ( PINT(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->signature ( PINT(1) ) );
   }
 }
 

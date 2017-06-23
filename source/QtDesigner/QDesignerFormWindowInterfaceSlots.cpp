@@ -97,7 +97,7 @@ void SlotsQDesignerFormWindowInterface::fileNameChanged ( const QString & fileNa
       if( ( (QString) list2.at(i) == (QString) "fileNameChanged(QString)" ) && ( (bool) list4.at(i) == true ) )
       {
         PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-        PHB_ITEM pfileName = hb_itemPutC( NULL, RQSTRING(fileName) );
+        PHB_ITEM pfileName = hb_itemPutC( NULL, QSTRINGTOSTRING(fileName) );
         hb_vmEvalBlockV( (PHB_ITEM) list3.at(i), 2, psender, pfileName );
         hb_itemRelease( psender );
         hb_itemRelease( pfileName );

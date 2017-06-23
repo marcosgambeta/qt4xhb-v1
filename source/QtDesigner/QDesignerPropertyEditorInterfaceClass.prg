@@ -83,8 +83,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_CURRENTPROPERTYNAME )
   QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->currentPropertyName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->currentPropertyName () );
   }
 }
 

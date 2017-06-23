@@ -78,8 +78,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_CODETEMPLATE )
   QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->codeTemplate ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->codeTemplate () );
   }
 }
 
@@ -106,8 +105,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_DOMXML )
   QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->domXml ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->domXml () );
   }
 }
 
@@ -120,8 +118,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_GROUP )
   QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->group ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->group () );
   }
 }
 
@@ -148,8 +145,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_INCLUDEFILE )
   QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->includeFile ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->includeFile () );
   }
 }
 
@@ -203,8 +199,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_NAME )
   QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->name ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->name () );
   }
 }
 
@@ -217,8 +212,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_TOOLTIP )
   QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toolTip ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toolTip () );
   }
 }
 
@@ -231,8 +225,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_WHATSTHIS )
   QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->whatsThis ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->whatsThis () );
   }
 }
 

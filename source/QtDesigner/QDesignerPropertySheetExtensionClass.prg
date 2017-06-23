@@ -174,8 +174,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_PROPERTYGROUP )
   QDesignerPropertySheetExtension * obj = (QDesignerPropertySheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->propertyGroup ( PINT(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->propertyGroup ( PINT(1) ) );
   }
 }
 
@@ -188,8 +187,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_PROPERTYNAME )
   QDesignerPropertySheetExtension * obj = (QDesignerPropertySheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->propertyName ( PINT(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->propertyName ( PINT(1) ) );
   }
 }
 

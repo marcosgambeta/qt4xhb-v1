@@ -149,8 +149,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_AUTHOR )
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->author ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->author () );
   }
 }
 
@@ -163,8 +162,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_COMMENT )
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->comment ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->comment () );
   }
 }
 
@@ -177,8 +175,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_CONTENTS )
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->contents ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->contents () );
   }
 }
 
@@ -233,8 +230,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_EXPORTMACRO )
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->exportMacro ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->exportMacro () );
   }
 }
 
@@ -260,8 +256,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_FILENAME )
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->fileName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->fileName () );
   }
 }
 
@@ -307,7 +302,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_INCLUDEHINTS )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
+      PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }
@@ -383,8 +378,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_PIXMAPFUNCTION )
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->pixmapFunction ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->pixmapFunction () );
   }
 }
 
@@ -417,7 +411,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_RESOURCEFILES )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
+      PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }
