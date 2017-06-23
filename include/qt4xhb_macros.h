@@ -1355,6 +1355,8 @@
 
 // macros for parameters
 #define PBOOL(n)                                            (bool) hb_parl(n)
+#define PSHORT(n)                                           (short) hb_parni(n)
+#define PUSHORT(n)                                          (ushort) hb_parni(n)
 #define PINT(n)                                             (int) hb_parni(n)
 #define PUINT(n)                                            (uint) hb_parni(n)
 #define PFLOAT(n)                                           (float) hb_parnd(n)
@@ -1377,6 +1379,8 @@
 
 // macros for optional parameters
 #define OPBOOL(n,v)                                         (bool) ISNIL(n)? v : hb_parl(n)
+#define OPSHORT(n,v)                                        (short) ISNIL(n)? v : hb_parni(n)
+#define OPUSHORT(n,v)                                       (ushort) ISNIL(n)? v : hb_parni(n)
 #define OPINT(n,v)                                          (int) ISNIL(n)? v : hb_parni(n)
 #define OPUINT(n,v)                                         (uint) ISNIL(n)? v : hb_parni(n)
 #define OPFLOAT(n,v)                                        (float) ISNIL(n)? v : hb_parnd(n)
@@ -1399,6 +1403,8 @@
 //#define RQSTRING(x)                                         (const char *) x.toLatin1().data()
 //#define RQSTRING(x)                                         (const char *) x.toUtf8().data()
 #define RBOOL(x)                                            hb_retl( x )
+#define RSHORT(x)                                           hb_retni( x )
+#define RUSHORT(x)                                          hb_retni( x )
 #define RINT(x)                                             hb_retni( x )
 #define RFLOAT(x)                                           hb_retnd( x )
 #define RDOUBLE(x)                                          hb_retnd( x )
