@@ -496,8 +496,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ERRORSTRING )
   QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->errorString ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->errorString () );
   }
 }
 
@@ -831,8 +830,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_READELEMENTTEXT )
   QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->readElementText ( ISNIL(1)? QXmlStreamReader::ErrorOnUnexpectedElement : (QXmlStreamReader::ReadElementTextBehaviour) hb_parni(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->readElementText ( ISNIL(1)? QXmlStreamReader::ErrorOnUnexpectedElement : (QXmlStreamReader::ReadElementTextBehaviour) hb_parni(1) ) );
   }
 }
 
@@ -942,8 +940,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_TOKENSTRING )
   QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->tokenString ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->tokenString () );
   }
 }
 

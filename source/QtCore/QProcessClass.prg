@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QPROCESS_ENVIRONMENT )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
+      PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }
@@ -215,8 +215,7 @@ HB_FUNC_STATIC( QPROCESS_NATIVEARGUMENTS )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->nativeArguments ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->nativeArguments () );
   }
 }
 
@@ -523,8 +522,7 @@ HB_FUNC_STATIC( QPROCESS_WORKINGDIRECTORY )
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->workingDirectory ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->workingDirectory () );
   }
 }
 
@@ -756,7 +754,7 @@ HB_FUNC_STATIC( QPROCESS_SYSTEMENVIRONMENT )
   int i;
   for(i=0;i<strl.count();i++)
   {
-    PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
+    PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
     hb_arrayAddForward( pArray, pItem );
     hb_itemRelease(pItem);
   }

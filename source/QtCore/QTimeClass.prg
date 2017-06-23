@@ -327,8 +327,7 @@ HB_FUNC_STATIC( QTIME_TOSTRING1 )
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toString ( PQSTRING(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toString ( PQSTRING(1) ) );
   }
 }
 
@@ -341,8 +340,7 @@ HB_FUNC_STATIC( QTIME_TOSTRING2 )
   QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toString ( ISNIL(1)? Qt::TextDate : (Qt::DateFormat) hb_parni(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toString ( ISNIL(1)? Qt::TextDate : (Qt::DateFormat) hb_parni(1) ) );
   }
 }
 

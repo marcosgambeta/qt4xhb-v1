@@ -214,8 +214,7 @@ HB_FUNC_STATIC( QLIBRARY_FILENAME )
   QLibrary * obj = (QLibrary *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->fileName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->fileName () );
   }
 }
 
@@ -271,8 +270,7 @@ HB_FUNC_STATIC( QLIBRARY_ERRORSTRING )
   QLibrary * obj = (QLibrary *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->errorString ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->errorString () );
   }
 }
 

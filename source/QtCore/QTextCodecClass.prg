@@ -131,8 +131,7 @@ HB_FUNC_STATIC( QTEXTCODEC_TOUNICODE1 )
   QTextCodec * obj = (QTextCodec *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toUnicode ( *PQBYTEARRAY(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toUnicode ( *PQBYTEARRAY(1) ) );
   }
 }
 
@@ -145,8 +144,7 @@ HB_FUNC_STATIC( QTEXTCODEC_TOUNICODE2 )
   QTextCodec * obj = (QTextCodec *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toUnicode ( (const char *) hb_parc(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toUnicode ( (const char *) hb_parc(1) ) );
   }
 }
 

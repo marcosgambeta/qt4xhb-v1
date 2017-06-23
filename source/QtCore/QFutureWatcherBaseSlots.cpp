@@ -183,7 +183,7 @@ void SlotsQFutureWatcherBase::progressTextChanged(const QString &progressText)
       if( ( (QString) list2.at(i) == (QString) "progressTextChanged(QString)" ) && ( (bool) list4.at(i) == true ) )
       {
         PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-        PHB_ITEM pprogressText = hb_itemPutC( NULL, RQSTRING(progressText) );
+        PHB_ITEM pprogressText = hb_itemPutC( NULL, QSTRINGTOSTRING(progressText) );
         hb_vmEvalBlockV( (PHB_ITEM) list3.at(i), 2, psender, pprogressText );
         hb_itemRelease( psender );
         hb_itemRelease( pprogressText );

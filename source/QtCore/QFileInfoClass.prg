@@ -218,8 +218,7 @@ HB_FUNC_STATIC( QFILEINFO_ABSOLUTEFILEPATH )
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->absoluteFilePath ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->absoluteFilePath () );
   }
 }
 
@@ -232,8 +231,7 @@ HB_FUNC_STATIC( QFILEINFO_ABSOLUTEPATH )
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->absolutePath ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->absolutePath () );
   }
 }
 
@@ -246,8 +244,7 @@ HB_FUNC_STATIC( QFILEINFO_BASENAME )
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->baseName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->baseName () );
   }
 }
 
@@ -260,8 +257,7 @@ HB_FUNC_STATIC( QFILEINFO_BUNDLENAME )
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->bundleName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->bundleName () );
   }
 }
 
@@ -287,8 +283,7 @@ HB_FUNC_STATIC( QFILEINFO_CANONICALFILEPATH )
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->canonicalFilePath ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->canonicalFilePath () );
   }
 }
 
@@ -301,8 +296,7 @@ HB_FUNC_STATIC( QFILEINFO_CANONICALPATH )
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->canonicalPath ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->canonicalPath () );
   }
 }
 
@@ -315,8 +309,7 @@ HB_FUNC_STATIC( QFILEINFO_COMPLETEBASENAME )
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->completeBaseName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->completeBaseName () );
   }
 }
 
@@ -329,8 +322,7 @@ HB_FUNC_STATIC( QFILEINFO_COMPLETESUFFIX )
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->completeSuffix ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->completeSuffix () );
   }
 }
 
@@ -384,8 +376,7 @@ HB_FUNC_STATIC( QFILEINFO_FILENAME )
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->fileName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->fileName () );
   }
 }
 
@@ -398,8 +389,7 @@ HB_FUNC_STATIC( QFILEINFO_FILEPATH )
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->filePath ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->filePath () );
   }
 }
 
@@ -412,8 +402,7 @@ HB_FUNC_STATIC( QFILEINFO_GROUP )
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->group ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->group () );
   }
 }
 
@@ -624,8 +613,7 @@ HB_FUNC_STATIC( QFILEINFO_OWNER )
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->owner ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->owner () );
   }
 }
 
@@ -651,8 +639,7 @@ HB_FUNC_STATIC( QFILEINFO_PATH )
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->path ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->path () );
   }
 }
 
@@ -796,8 +783,7 @@ HB_FUNC_STATIC( QFILEINFO_SUFFIX )
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->suffix ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->suffix () );
   }
 }
 
@@ -811,8 +797,7 @@ HB_FUNC_STATIC( QFILEINFO_SYMLINKTARGET )
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->symLinkTarget ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->symLinkTarget () );
   }
 }
 

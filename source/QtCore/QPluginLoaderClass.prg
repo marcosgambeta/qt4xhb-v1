@@ -111,8 +111,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_ERRORSTRING )
   QPluginLoader * obj = (QPluginLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->errorString ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->errorString () );
   }
 }
 
@@ -125,8 +124,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_FILENAME )
   QPluginLoader * obj = (QPluginLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->fileName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->fileName () );
   }
 }
 

@@ -276,8 +276,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_FILENAME )
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->fileName ( (QAbstractFileEngine::FileName) hb_parni(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->fileName ( (QAbstractFileEngine::FileName) hb_parni(1) ) );
   }
 }
 
@@ -383,8 +382,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_OWNER )
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->owner ( (QAbstractFileEngine::FileOwner) hb_parni(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->owner ( (QAbstractFileEngine::FileOwner) hb_parni(1) ) );
   }
 }
 
@@ -580,8 +578,7 @@ QString currentPath ( const QString & fileName = QString() )
 */
 HB_FUNC_STATIC( QFSFILEENGINE_CURRENTPATH )
 {
-  QString str1 = QFSFileEngine::currentPath ( OPQSTRING(1,QString()) );
-  hb_retc( RQSTRING(str1) );
+  RQSTRING( QFSFileEngine::currentPath ( OPQSTRING(1,QString()) ) );
 }
 
 
@@ -630,8 +627,7 @@ QString homePath ()
 */
 HB_FUNC_STATIC( QFSFILEENGINE_HOMEPATH )
 {
-  QString str1 = QFSFileEngine::homePath ();
-  hb_retc( RQSTRING(str1) );
+  RQSTRING( QFSFileEngine::homePath () );
 }
 
 
@@ -640,8 +636,7 @@ QString rootPath ()
 */
 HB_FUNC_STATIC( QFSFILEENGINE_ROOTPATH )
 {
-  QString str1 = QFSFileEngine::rootPath ();
-  hb_retc( RQSTRING(str1) );
+  RQSTRING( QFSFileEngine::rootPath () );
 }
 
 
@@ -659,8 +654,7 @@ QString tempPath ()
 */
 HB_FUNC_STATIC( QFSFILEENGINE_TEMPPATH )
 {
-  QString str1 = QFSFileEngine::tempPath ();
-  hb_retc( RQSTRING(str1) );
+  RQSTRING( QFSFileEngine::tempPath () );
 }
 
 

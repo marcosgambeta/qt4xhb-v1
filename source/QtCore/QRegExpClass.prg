@@ -142,8 +142,7 @@ HB_FUNC_STATIC( QREGEXP_CAP )
   QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->cap ( OPINT(1,0) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->cap ( OPINT(1,0) ) );
   }
 }
 
@@ -175,7 +174,7 @@ HB_FUNC_STATIC( QREGEXP_CAPTUREDTEXTS )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
+      PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }
@@ -205,8 +204,7 @@ HB_FUNC_STATIC( QREGEXP_ERRORSTRING )
   QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->errorString ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->errorString () );
   }
 }
 
@@ -310,8 +308,7 @@ HB_FUNC_STATIC( QREGEXP_PATTERN )
   QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->pattern ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->pattern () );
   }
 }
 
@@ -404,8 +401,7 @@ QString escape ( const QString & str )
 */
 HB_FUNC_STATIC( QREGEXP_ESCAPE )
 {
-  QString str1 = QRegExp::escape ( PQSTRING(1) );
-  hb_retc( RQSTRING(str1) );
+  RQSTRING( QRegExp::escape ( PQSTRING(1) ) );
 }
 
 

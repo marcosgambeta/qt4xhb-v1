@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QURL_ALLQUERYITEMVALUES )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
+      PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }
@@ -315,8 +315,7 @@ HB_FUNC_STATIC( QURL_AUTHORITY )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->authority ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->authority () );
   }
 }
 
@@ -442,8 +441,7 @@ HB_FUNC_STATIC( QURL_ERRORSTRING )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->errorString ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->errorString () );
   }
 }
 
@@ -456,8 +454,7 @@ HB_FUNC_STATIC( QURL_FRAGMENT )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->fragment ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->fragment () );
   }
 }
 
@@ -522,8 +519,7 @@ HB_FUNC_STATIC( QURL_HOST )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->host ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->host () );
   }
 }
 
@@ -601,8 +597,7 @@ HB_FUNC_STATIC( QURL_PASSWORD )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->password ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->password () );
   }
 }
 
@@ -615,8 +610,7 @@ HB_FUNC_STATIC( QURL_PATH )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->path ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->path () );
   }
 }
 
@@ -670,8 +664,7 @@ HB_FUNC_STATIC( QURL_QUERYITEMVALUE )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->queryItemValue ( PQSTRING(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->queryItemValue ( PQSTRING(1) ) );
   }
 }
 
@@ -757,8 +750,7 @@ HB_FUNC_STATIC( QURL_SCHEME )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->scheme ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->scheme () );
   }
 }
 
@@ -1116,8 +1108,7 @@ HB_FUNC_STATIC( QURL_TOLOCALFILE )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toLocalFile ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toLocalFile () );
   }
 }
 
@@ -1130,8 +1121,7 @@ HB_FUNC_STATIC( QURL_TOSTRING )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toString ( ISNIL(1)? QUrl::None : (QUrl::FormattingOptions) hb_parni(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toString ( ISNIL(1)? QUrl::None : (QUrl::FormattingOptions) hb_parni(1) ) );
   }
 }
 
@@ -1144,8 +1134,7 @@ HB_FUNC_STATIC( QURL_TOPLEVELDOMAIN )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->topLevelDomain ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->topLevelDomain () );
   }
 }
 
@@ -1158,8 +1147,7 @@ HB_FUNC_STATIC( QURL_USERINFO )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->userInfo ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->userInfo () );
   }
 }
 
@@ -1172,8 +1160,7 @@ HB_FUNC_STATIC( QURL_USERNAME )
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->userName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->userName () );
   }
 }
 
@@ -1184,8 +1171,7 @@ QString fromAce ( const QByteArray & domain )
 */
 HB_FUNC_STATIC( QURL_FROMACE )
 {
-  QString str1 = QUrl::fromAce ( *PQBYTEARRAY(1) );
-  hb_retc( RQSTRING(str1) );
+  RQSTRING( QUrl::fromAce ( *PQBYTEARRAY(1) ) );
 }
 
 
@@ -1240,8 +1226,7 @@ QString fromPercentEncoding ( const QByteArray & input )
 */
 HB_FUNC_STATIC( QURL_FROMPERCENTENCODING )
 {
-  QString str1 = QUrl::fromPercentEncoding ( *PQBYTEARRAY(1) );
-  hb_retc( RQSTRING(str1) );
+  RQSTRING( QUrl::fromPercentEncoding ( *PQBYTEARRAY(1) ) );
 }
 
 
@@ -1266,7 +1251,7 @@ HB_FUNC_STATIC( QURL_IDNWHITELIST )
   int i;
   for(i=0;i<strl.count();i++)
   {
-    PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
+    PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
     hb_arrayAddForward( pArray, pItem );
     hb_itemRelease(pItem);
   }

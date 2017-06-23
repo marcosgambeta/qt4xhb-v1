@@ -53,8 +53,7 @@ static QString licensee()
 */
 HB_FUNC_STATIC( QLIBRARYINFO_LICENSEE )
 {
-  QString str1 = QLibraryInfo::licensee ();
-  hb_retc( RQSTRING(str1) );
+  RQSTRING( QLibraryInfo::licensee () );
 }
 
 
@@ -63,8 +62,7 @@ static QString licensedProducts()
 */
 HB_FUNC_STATIC( QLIBRARYINFO_LICENSEDPRODUCTS )
 {
-  QString str1 = QLibraryInfo::licensedProducts ();
-  hb_retc( RQSTRING(str1) );
+  RQSTRING( QLibraryInfo::licensedProducts () );
 }
 
 
@@ -73,8 +71,7 @@ static QString buildKey()
 */
 HB_FUNC_STATIC( QLIBRARYINFO_BUILDKEY )
 {
-  QString str1 = QLibraryInfo::buildKey ();
-  hb_retc( RQSTRING(str1) );
+  RQSTRING( QLibraryInfo::buildKey () );
 }
 
 
@@ -93,8 +90,7 @@ static QString location(LibraryLocation)
 */
 HB_FUNC_STATIC( QLIBRARYINFO_LOCATION )
 {
-  QString str1 = QLibraryInfo::location ( (QLibraryInfo::LibraryLocation) hb_parni(1) );
-  hb_retc( RQSTRING(str1) );
+  RQSTRING( QLibraryInfo::location ( (QLibraryInfo::LibraryLocation) hb_parni(1) ) );
 }
 
 

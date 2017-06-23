@@ -89,8 +89,7 @@ HB_FUNC_STATIC( QRESOURCE_ABSOLUTEFILEPATH )
   QResource * obj = (QResource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->absoluteFilePath ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->absoluteFilePath () );
   }
 }
 
@@ -117,8 +116,7 @@ HB_FUNC_STATIC( QRESOURCE_FILENAME )
   QResource * obj = (QResource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->fileName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->fileName () );
   }
 }
 

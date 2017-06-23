@@ -165,8 +165,7 @@ HB_FUNC_STATIC( QDIRITERATOR_FILENAME )
   QDirIterator * obj = (QDirIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->fileName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->fileName () );
   }
 }
 
@@ -179,8 +178,7 @@ HB_FUNC_STATIC( QDIRITERATOR_FILEPATH )
   QDirIterator * obj = (QDirIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->filePath ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->filePath () );
   }
 }
 
@@ -206,8 +204,7 @@ HB_FUNC_STATIC( QDIRITERATOR_NEXT )
   QDirIterator * obj = (QDirIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->next ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->next () );
   }
 }
 
@@ -220,8 +217,7 @@ HB_FUNC_STATIC( QDIRITERATOR_PATH )
   QDirIterator * obj = (QDirIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->path ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->path () );
   }
 }
 

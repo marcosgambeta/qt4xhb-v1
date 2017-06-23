@@ -177,8 +177,7 @@ QString applicationDirPath ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONDIRPATH )
 {
-  QString str1 = QCoreApplication::applicationDirPath ();
-  hb_retc( RQSTRING(str1) );
+  RQSTRING( QCoreApplication::applicationDirPath () );
 }
 
 
@@ -187,8 +186,7 @@ QString applicationFilePath ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONFILEPATH )
 {
-  QString str1 = QCoreApplication::applicationFilePath ();
-  hb_retc( RQSTRING(str1) );
+  RQSTRING( QCoreApplication::applicationFilePath () );
 }
 
 
@@ -197,8 +195,7 @@ QString applicationName ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONNAME )
 {
-  QString str1 = QCoreApplication::applicationName ();
-  hb_retc( RQSTRING(str1) );
+  RQSTRING( QCoreApplication::applicationName () );
 }
 
 
@@ -216,8 +213,7 @@ QString applicationVersion ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONVERSION )
 {
-  QString str1 = QCoreApplication::applicationVersion ();
-  hb_retc( RQSTRING(str1) );
+  RQSTRING( QCoreApplication::applicationVersion () );
 }
 
 
@@ -232,7 +228,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_ARGUMENTS )
   int i;
   for(i=0;i<strl.count();i++)
   {
-    PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
+    PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
     hb_arrayAddForward( pArray, pItem );
     hb_itemRelease(pItem);
   }
@@ -319,7 +315,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_LIBRARYPATHS )
   int i;
   for(i=0;i<strl.count();i++)
   {
-    PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
+    PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
     hb_arrayAddForward( pArray, pItem );
     hb_itemRelease(pItem);
   }
@@ -332,8 +328,7 @@ QString organizationDomain ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_ORGANIZATIONDOMAIN )
 {
-  QString str1 = QCoreApplication::organizationDomain ();
-  hb_retc( RQSTRING(str1) );
+  RQSTRING( QCoreApplication::organizationDomain () );
 }
 
 
@@ -342,8 +337,7 @@ QString organizationName ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_ORGANIZATIONNAME )
 {
-  QString str1 = QCoreApplication::organizationName ();
-  hb_retc( RQSTRING(str1) );
+  RQSTRING( QCoreApplication::organizationName () );
 }
 
 
@@ -600,8 +594,7 @@ QString translate ( const char * context, const char * sourceText, const char * 
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE1 )
 {
-  QString str1 = QCoreApplication::translate ( (const char *) hb_parc(1), (const char *) hb_parc(2), (const char *) hb_parc(3), (QCoreApplication::Encoding) hb_parni(4), PINT(5) );
-  hb_retc( RQSTRING(str1) );
+  RQSTRING( QCoreApplication::translate ( (const char *) hb_parc(1), (const char *) hb_parc(2), (const char *) hb_parc(3), (QCoreApplication::Encoding) hb_parni(4), PINT(5) ) );
 }
 
 
@@ -610,8 +603,7 @@ QString translate ( const char * context, const char * sourceText, const char * 
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE2 )
 {
-  QString str1 = QCoreApplication::translate ( (const char *) hb_parc(1), (const char *) hb_parc(2), (const char *) hb_parc(3), ISNIL(4)? QCoreApplication::CodecForTr : (QCoreApplication::Encoding) hb_parni(4) );
-  hb_retc( RQSTRING(str1) );
+  RQSTRING( QCoreApplication::translate ( (const char *) hb_parc(1), (const char *) hb_parc(2), (const char *) hb_parc(3), ISNIL(4)? QCoreApplication::CodecForTr : (QCoreApplication::Encoding) hb_parni(4) ) );
 }
 
 

@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QMIMEDATA_FORMATS )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
+      PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }
@@ -239,8 +239,7 @@ HB_FUNC_STATIC( QMIMEDATA_HTML )
   QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->html ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->html () );
   }
 }
 
@@ -373,8 +372,7 @@ HB_FUNC_STATIC( QMIMEDATA_TEXT )
   QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->text ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->text () );
   }
 }
 

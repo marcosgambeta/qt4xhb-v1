@@ -235,8 +235,7 @@ HB_FUNC_STATIC( QLOCALE_AMTEXT )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->amText ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->amText () );
   }
 }
 
@@ -249,8 +248,7 @@ HB_FUNC_STATIC( QLOCALE_BCP47NAME )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->bcp47Name ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->bcp47Name () );
   }
 }
 
@@ -276,8 +274,7 @@ HB_FUNC_STATIC( QLOCALE_CREATESEPARATEDLIST )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->createSeparatedList ( PQSTRINGLIST(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->createSeparatedList ( PQSTRINGLIST(1) ) );
   }
 }
 
@@ -290,8 +287,7 @@ HB_FUNC_STATIC( QLOCALE_CURRENCYSYMBOL )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->currencySymbol ( ISNIL(1)? QLocale::CurrencySymbol : (QLocale::CurrencySymbolFormat) hb_parni(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->currencySymbol ( ISNIL(1)? QLocale::CurrencySymbol : (QLocale::CurrencySymbolFormat) hb_parni(1) ) );
   }
 }
 
@@ -304,8 +300,7 @@ HB_FUNC_STATIC( QLOCALE_DATEFORMAT )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->dateFormat ( ISNIL(1)? QLocale::LongFormat : (QLocale::FormatType) hb_parni(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->dateFormat ( ISNIL(1)? QLocale::LongFormat : (QLocale::FormatType) hb_parni(1) ) );
   }
 }
 
@@ -318,8 +313,7 @@ HB_FUNC_STATIC( QLOCALE_DATETIMEFORMAT )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->dateTimeFormat ( ISNIL(1)? QLocale::LongFormat : (QLocale::FormatType) hb_parni(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->dateTimeFormat ( ISNIL(1)? QLocale::LongFormat : (QLocale::FormatType) hb_parni(1) ) );
   }
 }
 
@@ -332,8 +326,7 @@ HB_FUNC_STATIC( QLOCALE_DAYNAME )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->dayName ( PINT(1), ISNIL(2)? QLocale::LongFormat : (QLocale::FormatType) hb_parni(2) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->dayName ( PINT(1), ISNIL(2)? QLocale::LongFormat : (QLocale::FormatType) hb_parni(2) ) );
   }
 }
 
@@ -427,8 +420,7 @@ HB_FUNC_STATIC( QLOCALE_MONTHNAME )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->monthName ( PINT(1), ISNIL(2)? QLocale::LongFormat : (QLocale::FormatType) hb_parni(2) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->monthName ( PINT(1), ISNIL(2)? QLocale::LongFormat : (QLocale::FormatType) hb_parni(2) ) );
   }
 }
 
@@ -441,8 +433,7 @@ HB_FUNC_STATIC( QLOCALE_NAME )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->name ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->name () );
   }
 }
 
@@ -455,8 +446,7 @@ HB_FUNC_STATIC( QLOCALE_NATIVECOUNTRYNAME )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->nativeCountryName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->nativeCountryName () );
   }
 }
 
@@ -469,8 +459,7 @@ HB_FUNC_STATIC( QLOCALE_NATIVELANGUAGENAME )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->nativeLanguageName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->nativeLanguageName () );
   }
 }
 
@@ -524,8 +513,7 @@ HB_FUNC_STATIC( QLOCALE_PMTEXT )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->pmText ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->pmText () );
   }
 }
 
@@ -552,8 +540,7 @@ HB_FUNC_STATIC( QLOCALE_QUOTESTRING1 )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->quoteString ( PQSTRING(1), ISNIL(2)? QLocale::StandardQuotation : (QLocale::QuotationStyle) hb_parni(2) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->quoteString ( PQSTRING(1), ISNIL(2)? QLocale::StandardQuotation : (QLocale::QuotationStyle) hb_parni(2) ) );
   }
 }
 
@@ -567,8 +554,7 @@ HB_FUNC_STATIC( QLOCALE_QUOTESTRING2 )
   if( obj )
   {
     QStringRef * par1 = (QStringRef *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QString str1 = obj->quoteString ( *par1, ISNIL(2)? QLocale::StandardQuotation : (QLocale::QuotationStyle) hb_parni(2) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->quoteString ( *par1, ISNIL(2)? QLocale::StandardQuotation : (QLocale::QuotationStyle) hb_parni(2) ) );
   }
 }
 
@@ -616,8 +602,7 @@ HB_FUNC_STATIC( QLOCALE_STANDALONEDAYNAME )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->standaloneDayName ( PINT(1), ISNIL(2)? QLocale::LongFormat : (QLocale::FormatType) hb_parni(2) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->standaloneDayName ( PINT(1), ISNIL(2)? QLocale::LongFormat : (QLocale::FormatType) hb_parni(2) ) );
   }
 }
 
@@ -630,8 +615,7 @@ HB_FUNC_STATIC( QLOCALE_STANDALONEMONTHNAME )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->standaloneMonthName ( PINT(1), ISNIL(2)? QLocale::LongFormat : (QLocale::FormatType) hb_parni(2) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->standaloneMonthName ( PINT(1), ISNIL(2)? QLocale::LongFormat : (QLocale::FormatType) hb_parni(2) ) );
   }
 }
 
@@ -657,8 +641,7 @@ HB_FUNC_STATIC( QLOCALE_TIMEFORMAT )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->timeFormat ( ISNIL(1)? QLocale::LongFormat : (QLocale::FormatType) hb_parni(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->timeFormat ( ISNIL(1)? QLocale::LongFormat : (QLocale::FormatType) hb_parni(1) ) );
   }
 }
 
@@ -672,8 +655,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING1 )
   if( obj )
   {
     qlonglong par1 = hb_parnl(1);
-    QString str1 = obj->toCurrencyString ( par1, OPQSTRING(2,QString()) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toCurrencyString ( par1, OPQSTRING(2,QString()) ) );
   }
 }
 
@@ -687,8 +669,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING2 )
   if( obj )
   {
     short par1 = hb_parni(1);
-    QString str1 = obj->toCurrencyString ( par1, OPQSTRING(2,QString()) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toCurrencyString ( par1, OPQSTRING(2,QString()) ) );
   }
 }
 
@@ -702,8 +683,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING3 )
   if( obj )
   {
     ushort par1 = hb_parni(1);
-    QString str1 = obj->toCurrencyString ( par1, OPQSTRING(2,QString()) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toCurrencyString ( par1, OPQSTRING(2,QString()) ) );
   }
 }
 
@@ -716,8 +696,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING4 )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toCurrencyString ( PINT(1), OPQSTRING(2,QString()) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toCurrencyString ( PINT(1), OPQSTRING(2,QString()) ) );
   }
 }
 
@@ -730,8 +709,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING5 )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toCurrencyString ( PUINT(1), OPQSTRING(2,QString()) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toCurrencyString ( PUINT(1), OPQSTRING(2,QString()) ) );
   }
 }
 
@@ -744,8 +722,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING6 )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toCurrencyString ( PFLOAT(1), OPQSTRING(2,QString()) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toCurrencyString ( PFLOAT(1), OPQSTRING(2,QString()) ) );
   }
 }
 
@@ -759,8 +736,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING7 )
   if( obj )
   {
     qulonglong par1 = hb_parnl(1);
-    QString str1 = obj->toCurrencyString ( par1, OPQSTRING(2,QString()) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toCurrencyString ( par1, OPQSTRING(2,QString()) ) );
   }
 }
 
@@ -773,8 +749,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING8 )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toCurrencyString ( PDOUBLE(1), OPQSTRING(2,QString()) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toCurrencyString ( PDOUBLE(1), OPQSTRING(2,QString()) ) );
   }
 }
 
@@ -953,8 +928,7 @@ HB_FUNC_STATIC( QLOCALE_TOLOWER )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toLower ( PQSTRING(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toLower ( PQSTRING(1) ) );
   }
 }
 
@@ -984,8 +958,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING1 )
   if( obj )
   {
     qlonglong par1 = hb_parnl(1);
-    QString str1 = obj->toString ( par1 );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toString ( par1 ) );
   }
 }
 
@@ -998,8 +971,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING2 )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toString ( *PQDATE(1), PQSTRING(2) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toString ( *PQDATE(1), PQSTRING(2) ) );
   }
 }
 
@@ -1012,8 +984,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING3 )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toString ( *PQDATE(1), ISNIL(2)? QLocale::LongFormat : (QLocale::FormatType) hb_parni(2) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toString ( *PQDATE(1), ISNIL(2)? QLocale::LongFormat : (QLocale::FormatType) hb_parni(2) ) );
   }
 }
 
@@ -1026,8 +997,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING4 )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toString ( *PQTIME(1), PQSTRING(2) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toString ( *PQTIME(1), PQSTRING(2) ) );
   }
 }
 
@@ -1040,8 +1010,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING5 )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toString ( *PQTIME(1), ISNIL(2)? QLocale::LongFormat : (QLocale::FormatType) hb_parni(2) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toString ( *PQTIME(1), ISNIL(2)? QLocale::LongFormat : (QLocale::FormatType) hb_parni(2) ) );
   }
 }
 
@@ -1054,8 +1023,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING6 )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toString ( *PQDATETIME(1), ISNIL(2)? QLocale::LongFormat : (QLocale::FormatType) hb_parni(2) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toString ( *PQDATETIME(1), ISNIL(2)? QLocale::LongFormat : (QLocale::FormatType) hb_parni(2) ) );
   }
 }
 
@@ -1068,8 +1036,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING7 )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toString ( *PQDATETIME(1), PQSTRING(2) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toString ( *PQDATETIME(1), PQSTRING(2) ) );
   }
 }
 
@@ -1083,8 +1050,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING8 )
   if( obj )
   {
     short par1 = hb_parni(1);
-    QString str1 = obj->toString ( par1 );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toString ( par1 ) );
   }
 }
 
@@ -1098,8 +1064,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING9 )
   if( obj )
   {
     ushort par1 = hb_parni(1);
-    QString str1 = obj->toString ( par1 );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toString ( par1 ) );
   }
 }
 
@@ -1112,8 +1077,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING10 )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toString ( PINT(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toString ( PINT(1) ) );
   }
 }
 
@@ -1126,8 +1090,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING11 )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toString ( PUINT(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toString ( PUINT(1) ) );
   }
 }
 
@@ -1141,8 +1104,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING12 )
   if( obj )
   {
     char par2 = ISNIL(2)? 103 : (ISCHAR(2)? (char) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0));
-    QString str1 = obj->toString ( PFLOAT(1), par2, OPINT(3,6) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toString ( PFLOAT(1), par2, OPINT(3,6) ) );
   }
 }
 
@@ -1156,8 +1118,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING13 )
   if( obj )
   {
     qulonglong par1 = hb_parnl(1);
-    QString str1 = obj->toString ( par1 );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toString ( par1 ) );
   }
 }
 
@@ -1171,8 +1132,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING14 )
   if( obj )
   {
     char par2 = ISNIL(2)? 103 : (ISCHAR(2)? (char) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0));
-    QString str1 = obj->toString ( PDOUBLE(1), par2, OPINT(3,6) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toString ( PDOUBLE(1), par2, OPINT(3,6) ) );
   }
 }
 
@@ -1300,8 +1260,7 @@ HB_FUNC_STATIC( QLOCALE_TOUPPER )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toUpper ( PQSTRING(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toUpper ( PQSTRING(1) ) );
   }
 }
 
@@ -1320,7 +1279,7 @@ HB_FUNC_STATIC( QLOCALE_UILANGUAGES )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
+      PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }
@@ -1369,8 +1328,7 @@ QString countryToString ( Country country )
 */
 HB_FUNC_STATIC( QLOCALE_COUNTRYTOSTRING )
 {
-  QString str1 = QLocale::countryToString ( (QLocale::Country) hb_parni(1) );
-  hb_retc( RQSTRING(str1) );
+  RQSTRING( QLocale::countryToString ( (QLocale::Country) hb_parni(1) ) );
 }
 
 
@@ -1379,8 +1337,7 @@ QString languageToString ( Language language )
 */
 HB_FUNC_STATIC( QLOCALE_LANGUAGETOSTRING )
 {
-  QString str1 = QLocale::languageToString ( (QLocale::Language) hb_parni(1) );
-  hb_retc( RQSTRING(str1) );
+  RQSTRING( QLocale::languageToString ( (QLocale::Language) hb_parni(1) ) );
 }
 
 
@@ -1429,8 +1386,7 @@ QString scriptToString ( Script script )
 */
 HB_FUNC_STATIC( QLOCALE_SCRIPTTOSTRING )
 {
-  QString str1 = QLocale::scriptToString ( (QLocale::Script) hb_parni(1) );
-  hb_retc( RQSTRING(str1) );
+  RQSTRING( QLocale::scriptToString ( (QLocale::Script) hb_parni(1) ) );
 }
 
 

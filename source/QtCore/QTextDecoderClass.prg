@@ -111,9 +111,7 @@ HB_FUNC_STATIC( QTEXTDECODER_TOUNICODE1 )
   QTextDecoder * obj = (QTextDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par2 = hb_parni(2);
-    QString str1 = obj->toUnicode ( (const char *) hb_parc(1), par2 );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toUnicode ( (const char *) hb_parc(1), PINT(2) ) );
   }
 }
 
@@ -142,8 +140,7 @@ HB_FUNC_STATIC( QTEXTDECODER_TOUNICODE3 )
   QTextDecoder * obj = (QTextDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toUnicode ( *PQBYTEARRAY(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toUnicode ( *PQBYTEARRAY(1) ) );
   }
 }
 

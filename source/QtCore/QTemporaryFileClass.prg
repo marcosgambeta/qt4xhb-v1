@@ -149,8 +149,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_FILETEMPLATE )
   QTemporaryFile * obj = (QTemporaryFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->fileTemplate ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->fileTemplate () );
   }
 }
 
@@ -204,8 +203,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_FILENAME )
   QTemporaryFile * obj = (QTemporaryFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->fileName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->fileName () );
   }
 }
 

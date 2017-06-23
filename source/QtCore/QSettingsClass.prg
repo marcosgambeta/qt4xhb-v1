@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QSETTINGS_ALLKEYS )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
+      PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }
@@ -208,8 +208,7 @@ HB_FUNC_STATIC( QSETTINGS_APPLICATIONNAME )
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->applicationName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->applicationName () );
   }
 }
 
@@ -269,7 +268,7 @@ HB_FUNC_STATIC( QSETTINGS_CHILDGROUPS )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
+      PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }
@@ -292,7 +291,7 @@ HB_FUNC_STATIC( QSETTINGS_CHILDKEYS )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
+      PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }
@@ -377,8 +376,7 @@ HB_FUNC_STATIC( QSETTINGS_FILENAME )
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->fileName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->fileName () );
   }
 }
 
@@ -404,8 +402,7 @@ HB_FUNC_STATIC( QSETTINGS_GROUP )
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->group ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->group () );
   }
 }
 
@@ -445,8 +442,7 @@ HB_FUNC_STATIC( QSETTINGS_ORGANIZATIONNAME )
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->organizationName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->organizationName () );
   }
 }
 

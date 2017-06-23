@@ -126,8 +126,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_KEY )
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->key ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->key () );
   }
 }
 
@@ -154,8 +153,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_NATIVEKEY )
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->nativeKey ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->nativeKey () );
   }
 }
 
@@ -288,8 +286,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_ERRORSTRING )
   QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->errorString ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->errorString () );
   }
 }
 

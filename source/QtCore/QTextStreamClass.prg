@@ -527,8 +527,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_READLINE )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->readLine ( OPQINT64(1,0) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->readLine ( OPQINT64(1,0) ) );
   }
 }
 
@@ -541,8 +540,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_READALL )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->readAll ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->readAll () );
   }
 }
 
@@ -555,8 +553,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_READ )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->read ( PQINT64(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->read ( PQINT64(1) ) );
   }
 }
 
@@ -569,8 +566,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SETFIELDALIGNMENT )
   QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setFieldAlignment ( (QTextStream::FieldAlignment) par1 );
+    obj->setFieldAlignment ( (QTextStream::FieldAlignment) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
