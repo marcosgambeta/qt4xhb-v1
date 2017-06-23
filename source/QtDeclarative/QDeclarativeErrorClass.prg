@@ -130,8 +130,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_DESCRIPTION )
   QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->description ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->description () );
   }
 }
 
@@ -226,8 +225,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_TOSTRING )
   QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toString ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toString () );
   }
 }
 

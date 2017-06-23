@@ -192,8 +192,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_EXPRESSION )
   QDeclarativeExpression * obj = (QDeclarativeExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->expression ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->expression () );
   }
 }
 
@@ -301,8 +300,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SOURCEFILE )
   QDeclarativeExpression * obj = (QDeclarativeExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->sourceFile ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->sourceFile () );
   }
 }
 

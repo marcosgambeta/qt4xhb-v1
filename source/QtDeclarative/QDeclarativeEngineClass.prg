@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_IMPORTPATHLIST )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
+      PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }
@@ -253,8 +253,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_OFFLINESTORAGEPATH )
   QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->offlineStoragePath ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->offlineStoragePath () );
   }
 }
 
@@ -286,7 +285,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_PLUGINPATHLIST )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
+      PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }

@@ -27,7 +27,7 @@ void SlotsQDeclarativePropertyMap::valueChanged ( const QString & key, const QVa
       if( ( (QString) list2.at(i) == (QString) "valueChanged(QString,QVariant)" ) && ( (bool) list4.at(i) == true ) )
       {
         PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-        PHB_ITEM pkey = hb_itemPutC( NULL, RQSTRING(key) );
+        PHB_ITEM pkey = hb_itemPutC( NULL, QSTRINGTOSTRING(key) );
         PHB_ITEM pvalue = hb_itemPutPtr( NULL, (QVariant *) &value );
         hb_vmEvalBlockV( (PHB_ITEM) list3.at(i), 3, psender, pkey, pvalue );
         hb_itemRelease( psender );
