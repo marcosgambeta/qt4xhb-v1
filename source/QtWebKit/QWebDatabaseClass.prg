@@ -86,8 +86,7 @@ HB_FUNC_STATIC( QWEBDATABASE_DISPLAYNAME )
   QWebDatabase * obj = (QWebDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->displayName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->displayName () );
   }
 }
 
@@ -113,8 +112,7 @@ HB_FUNC_STATIC( QWEBDATABASE_FILENAME )
   QWebDatabase * obj = (QWebDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->fileName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->fileName () );
   }
 }
 
@@ -127,8 +125,7 @@ HB_FUNC_STATIC( QWEBDATABASE_NAME )
   QWebDatabase * obj = (QWebDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->name ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->name () );
   }
 }
 

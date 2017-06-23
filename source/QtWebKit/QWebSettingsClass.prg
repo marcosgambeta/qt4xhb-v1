@@ -90,8 +90,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_DEFAULTTEXTENCODING )
   QWebSettings * obj = (QWebSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->defaultTextEncoding ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->defaultTextEncoding () );
   }
 }
 
@@ -104,9 +103,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_FONTFAMILY )
   QWebSettings * obj = (QWebSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QString str1 = obj->fontFamily ( (QWebSettings::FontFamily) par1 );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->fontFamily ( (QWebSettings::FontFamily) hb_parni(1) ) );
   }
 }
 
@@ -133,8 +130,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_LOCALSTORAGEPATH )
   QWebSettings * obj = (QWebSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->localStoragePath ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->localStoragePath () );
   }
 }
 
@@ -344,8 +340,7 @@ QString iconDatabasePath ()
 */
 HB_FUNC_STATIC( QWEBSETTINGS_ICONDATABASEPATH )
 {
-  QString str1 = QWebSettings::iconDatabasePath ();
-  hb_retc( RQSTRING(str1) );
+  RQSTRING( QWebSettings::iconDatabasePath () );
 }
 
 
@@ -382,8 +377,7 @@ QString offlineStoragePath ()
 */
 HB_FUNC_STATIC( QWEBSETTINGS_OFFLINESTORAGEPATH )
 {
-  QString str1 = QWebSettings::offlineStoragePath ();
-  hb_retc( RQSTRING(str1) );
+  RQSTRING( QWebSettings::offlineStoragePath () );
 }
 
 
@@ -392,8 +386,7 @@ QString offlineWebApplicationCachePath ()
 */
 HB_FUNC_STATIC( QWEBSETTINGS_OFFLINEWEBAPPLICATIONCACHEPATH )
 {
-  QString str1 = QWebSettings::offlineWebApplicationCachePath ();
-  hb_retc( RQSTRING(str1) );
+  RQSTRING( QWebSettings::offlineWebApplicationCachePath () );
 }
 
 

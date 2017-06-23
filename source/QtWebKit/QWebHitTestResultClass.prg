@@ -131,8 +131,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_ALTERNATETEXT )
   QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->alternateText ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->alternateText () );
   }
 }
 
@@ -282,8 +281,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKTEXT )
   QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->linkText ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->linkText () );
   }
 }
 
@@ -352,8 +350,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_TITLE )
   QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->title ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->title () );
   }
 }
 

@@ -261,8 +261,7 @@ HB_FUNC_STATIC( QWEBVIEW_SELECTEDTEXT )
   QWebView * obj = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->selectedText ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->selectedText () );
   }
 }
 
@@ -419,8 +418,7 @@ HB_FUNC_STATIC( QWEBVIEW_TITLE )
   QWebView * obj = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->title ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->title () );
   }
 }
 
@@ -433,8 +431,7 @@ HB_FUNC_STATIC( QWEBVIEW_TRIGGERPAGEACTION )
   QWebView * obj = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->triggerPageAction ( (QWebPage::WebAction) par1, OPBOOL(2,false) );
+    obj->triggerPageAction ( (QWebPage::WebAction) hb_parni(1), OPBOOL(2,false) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

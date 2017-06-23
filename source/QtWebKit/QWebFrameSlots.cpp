@@ -143,7 +143,7 @@ void SlotsQWebFrame::titleChanged ( const QString & title )
       if( ( (QString) list2.at(i) == (QString) "titleChanged(QString)" ) && ( (bool) list4.at(i) == true ) )
       {
         PHB_ITEM psender = hb_itemPutPtr( NULL, (QObject *) object );
-        PHB_ITEM ptitle = hb_itemPutC( NULL, RQSTRING(title) );
+        PHB_ITEM ptitle = hb_itemPutC( NULL, QSTRINGTOSTRING(title) );
         hb_vmEvalBlockV( (PHB_ITEM) list3.at(i), 2, psender, ptitle );
         hb_itemRelease( psender );
         hb_itemRelease( ptitle );

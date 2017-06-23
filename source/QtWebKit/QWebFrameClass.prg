@@ -277,8 +277,7 @@ HB_FUNC_STATIC( QWEBFRAME_FRAMENAME )
   QWebFrame * obj = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->frameName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->frameName () );
   }
 }
 
@@ -499,8 +498,7 @@ HB_FUNC_STATIC( QWEBFRAME_RENDERTREEDUMP )
   QWebFrame * obj = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->renderTreeDump ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->renderTreeDump () );
   }
 }
 
@@ -791,8 +789,7 @@ HB_FUNC_STATIC( QWEBFRAME_TITLE )
   QWebFrame * obj = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->title ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->title () );
   }
 }
 
@@ -805,8 +802,7 @@ HB_FUNC_STATIC( QWEBFRAME_TOHTML )
   QWebFrame * obj = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toHtml ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toHtml () );
   }
 }
 
@@ -819,8 +815,7 @@ HB_FUNC_STATIC( QWEBFRAME_TOPLAINTEXT )
   QWebFrame * obj = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toPlainText ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toPlainText () );
   }
 }
 
