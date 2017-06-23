@@ -87,8 +87,7 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_DATA )
   QDomProcessingInstruction * obj = (QDomProcessingInstruction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->data ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->data () );
   }
 }
 
@@ -128,8 +127,7 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_TARGET )
   QDomProcessingInstruction * obj = (QDomProcessingInstruction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->target ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->target () );
   }
 }
 

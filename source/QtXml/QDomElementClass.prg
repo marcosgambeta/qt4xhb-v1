@@ -121,8 +121,7 @@ HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTE )
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->attribute ( PQSTRING(1), OPQSTRING(2,QString()) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->attribute ( PQSTRING(1), OPQSTRING(2,QString()) ) );
   }
 }
 
@@ -135,8 +134,7 @@ HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTENS )
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->attributeNS ( PQSTRING(1), PQSTRING(2), OPQSTRING(3,QString()) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->attributeNS ( PQSTRING(1), PQSTRING(2), OPQSTRING(3,QString()) ) );
   }
 }
 
@@ -573,8 +571,7 @@ HB_FUNC_STATIC( QDOMELEMENT_TAGNAME )
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->tagName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->tagName () );
   }
 }
 
@@ -587,8 +584,7 @@ HB_FUNC_STATIC( QDOMELEMENT_TEXT )
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->text ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->text () );
   }
 }
 

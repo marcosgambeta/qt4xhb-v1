@@ -100,8 +100,7 @@ HB_FUNC_STATIC( QDOMENTITY_NOTATIONNAME )
   QDomEntity * obj = (QDomEntity *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->notationName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->notationName () );
   }
 }
 
@@ -114,8 +113,7 @@ HB_FUNC_STATIC( QDOMENTITY_PUBLICID )
   QDomEntity * obj = (QDomEntity *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->publicId ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->publicId () );
   }
 }
 
@@ -128,8 +126,7 @@ HB_FUNC_STATIC( QDOMENTITY_SYSTEMID )
   QDomEntity * obj = (QDomEntity *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->systemId ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->systemId () );
   }
 }
 
