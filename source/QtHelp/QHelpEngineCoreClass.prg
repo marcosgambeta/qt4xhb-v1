@@ -131,8 +131,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_COLLECTIONFILE )
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->collectionFile ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->collectionFile () );
   }
 }
 
@@ -158,8 +157,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_CURRENTFILTER )
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->currentFilter ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->currentFilter () );
   }
 }
 
@@ -178,7 +176,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_CUSTOMFILTERS )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
+      PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }
@@ -210,8 +208,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_DOCUMENTATIONFILENAME )
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->documentationFileName ( PQSTRING(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->documentationFileName ( PQSTRING(1) ) );
   }
 }
 
@@ -224,8 +221,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_ERROR )
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->error ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->error () );
   }
 }
 
@@ -307,7 +303,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_FILTERATTRIBUTES1 )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
+      PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }
@@ -330,7 +326,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_FILTERATTRIBUTES2 )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
+      PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }
@@ -396,7 +392,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_REGISTEREDDOCUMENTATIONS )
     int i;
     for(i=0;i<strl.count();i++)
     {
-      PHB_ITEM pItem = hb_itemPutC( NULL, RQSTRING(strl[i]) );
+      PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
       hb_arrayAddForward( pArray, pItem );
       hb_itemRelease(pItem);
     }
@@ -528,8 +524,7 @@ QString namespaceName ( const QString & documentationFileName )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_NAMESPACENAME )
 {
-  QString str1 = QHelpEngineCore::namespaceName ( PQSTRING(1) );
-  hb_retc( RQSTRING(str1) );
+  RQSTRING( QHelpEngineCore::namespaceName ( PQSTRING(1) ) );
 }
 
 
