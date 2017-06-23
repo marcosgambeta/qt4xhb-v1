@@ -198,8 +198,7 @@ HB_FUNC_STATIC( QGLSHADER_LOG )
   QGLShader * obj = (QGLShader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->log ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->log () );
   }
 }
 
