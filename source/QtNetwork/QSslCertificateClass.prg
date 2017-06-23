@@ -235,9 +235,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISSUERINFO1 )
   QSslCertificate * obj = (QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QString str1 = obj->issuerInfo ( (QSslCertificate::SubjectInfo) par1 );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->issuerInfo ( (QSslCertificate::SubjectInfo) hb_parni(1) ) );
   }
 }
 
@@ -250,8 +248,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISSUERINFO2 )
   QSslCertificate * obj = (QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->issuerInfo ( *PQBYTEARRAY(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->issuerInfo ( *PQBYTEARRAY(1) ) );
   }
 }
 
@@ -292,9 +289,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_SUBJECTINFO1 )
   QSslCertificate * obj = (QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    QString str1 = obj->subjectInfo ( (QSslCertificate::SubjectInfo) par1 );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->subjectInfo ( (QSslCertificate::SubjectInfo) hb_parni(1) ) );
   }
 }
 
@@ -307,8 +302,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_SUBJECTINFO2 )
   QSslCertificate * obj = (QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->subjectInfo ( *PQBYTEARRAY(1) );
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->subjectInfo ( *PQBYTEARRAY(1) ) );
   }
 }
 

@@ -98,8 +98,7 @@ HB_FUNC_STATIC( QLOCALSERVER_ERRORSTRING )
   QLocalServer * obj = (QLocalServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->errorString ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->errorString () );
   }
 }
 
@@ -112,8 +111,7 @@ HB_FUNC_STATIC( QLOCALSERVER_FULLSERVERNAME )
   QLocalServer * obj = (QLocalServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->fullServerName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->fullServerName () );
   }
 }
 
@@ -205,8 +203,7 @@ HB_FUNC_STATIC( QLOCALSERVER_SERVERNAME )
   QLocalServer * obj = (QLocalServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->serverName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->serverName () );
   }
 }
 

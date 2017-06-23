@@ -118,8 +118,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERNAME )
   QNetworkConfiguration * obj = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->bearerName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->bearerName () );
   }
 }
 
@@ -145,8 +144,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERTYPENAME )
   QNetworkConfiguration * obj = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->bearerTypeName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->bearerTypeName () );
   }
 }
 
@@ -207,8 +205,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_IDENTIFIER )
   QNetworkConfiguration * obj = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->identifier ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->identifier () );
   }
 }
 
@@ -247,8 +244,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_NAME )
   QNetworkConfiguration * obj = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->name ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->name () );
   }
 }
 

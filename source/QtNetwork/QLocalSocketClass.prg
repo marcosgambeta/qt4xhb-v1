@@ -160,8 +160,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_FULLSERVERNAME )
   QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->fullServerName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->fullServerName () );
   }
 }
 
@@ -200,8 +199,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_SERVERNAME )
   QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->serverName ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->serverName () );
   }
 }
 

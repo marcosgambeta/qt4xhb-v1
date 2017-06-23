@@ -158,8 +158,7 @@ HB_FUNC_STATIC( QAUTHENTICATOR_PASSWORD )
   QAuthenticator * obj = (QAuthenticator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->password ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->password () );
   }
 }
 
@@ -172,8 +171,7 @@ HB_FUNC_STATIC( QAUTHENTICATOR_REALM )
   QAuthenticator * obj = (QAuthenticator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->realm ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->realm () );
   }
 }
 
@@ -228,8 +226,7 @@ HB_FUNC_STATIC( QAUTHENTICATOR_USER )
   QAuthenticator * obj = (QAuthenticator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->user ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->user () );
   }
 }
 

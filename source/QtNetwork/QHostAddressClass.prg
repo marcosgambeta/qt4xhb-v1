@@ -248,8 +248,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_SCOPEID )
   QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->scopeId ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->scopeId () );
   }
 }
 
@@ -380,8 +379,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_TOSTRING )
   QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->toString ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->toString () );
   }
 }
 

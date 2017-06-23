@@ -168,8 +168,7 @@ HB_FUNC_STATIC( QURLINFO_GROUP )
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->group ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->group () );
   }
 }
 
@@ -301,8 +300,7 @@ HB_FUNC_STATIC( QURLINFO_NAME )
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->name ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->name () );
   }
 }
 
@@ -315,8 +313,7 @@ HB_FUNC_STATIC( QURLINFO_OWNER )
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->owner ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->owner () );
   }
 }
 

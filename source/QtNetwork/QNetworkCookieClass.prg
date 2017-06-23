@@ -130,8 +130,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_DOMAIN )
   QNetworkCookie * obj = (QNetworkCookie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->domain ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->domain () );
   }
 }
 
@@ -211,8 +210,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_PATH )
   QNetworkCookie * obj = (QNetworkCookie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->path ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->path () );
   }
 }
 

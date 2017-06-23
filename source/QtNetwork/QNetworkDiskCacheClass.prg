@@ -84,8 +84,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_CACHEDIRECTORY )
   QNetworkDiskCache * obj = (QNetworkDiskCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->cacheDirectory ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->cacheDirectory () );
   }
 }
 

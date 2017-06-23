@@ -129,8 +129,7 @@ HB_FUNC_STATIC( QSSLCIPHER_AUTHENTICATIONMETHOD )
   QSslCipher * obj = (QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->authenticationMethod ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->authenticationMethod () );
   }
 }
 
@@ -143,8 +142,7 @@ HB_FUNC_STATIC( QSSLCIPHER_ENCRYPTIONMETHOD )
   QSslCipher * obj = (QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->encryptionMethod ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->encryptionMethod () );
   }
 }
 
@@ -170,8 +168,7 @@ HB_FUNC_STATIC( QSSLCIPHER_KEYEXCHANGEMETHOD )
   QSslCipher * obj = (QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->keyExchangeMethod ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->keyExchangeMethod () );
   }
 }
 
@@ -184,8 +181,7 @@ HB_FUNC_STATIC( QSSLCIPHER_NAME )
   QSslCipher * obj = (QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->name ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->name () );
   }
 }
 
@@ -211,8 +207,7 @@ HB_FUNC_STATIC( QSSLCIPHER_PROTOCOLSTRING )
   QSslCipher * obj = (QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QString str1 = obj->protocolString ();
-    hb_retc( RQSTRING(str1) );
+    RQSTRING( obj->protocolString () );
   }
 }
 
