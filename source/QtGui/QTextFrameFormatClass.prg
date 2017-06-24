@@ -317,8 +317,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETHEIGHT1 )
   QTextFrameFormat * obj = (QTextFrameFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTextLength * par1 = (QTextLength *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setHeight ( *par1 );
+    obj->setHeight ( *PQTEXTLENGTH(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -461,8 +460,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETWIDTH1 )
   QTextFrameFormat * obj = (QTextFrameFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTextLength * par1 = (QTextLength *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setWidth ( *par1 );
+    obj->setWidth ( *PQTEXTLENGTH(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

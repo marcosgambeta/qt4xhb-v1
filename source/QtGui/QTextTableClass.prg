@@ -140,8 +140,7 @@ HB_FUNC_STATIC( QTEXTTABLE_CELLAT3 )
   QTextTable * obj = (QTextTable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTextCursor * par1 = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QTextTableCell * ptr = new QTextTableCell( obj->cellAt ( *par1 ) );
+    QTextTableCell * ptr = new QTextTableCell( obj->cellAt ( *PQTEXTCURSOR(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QTEXTTABLECELL" );
   }
 }
@@ -244,8 +243,7 @@ HB_FUNC_STATIC( QTEXTTABLE_MERGECELLS2 )
   QTextTable * obj = (QTextTable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTextCursor * par1 = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->mergeCells ( *par1 );
+    obj->mergeCells ( *PQTEXTCURSOR(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -316,8 +314,7 @@ HB_FUNC_STATIC( QTEXTTABLE_ROWEND )
   QTextTable * obj = (QTextTable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTextCursor * par1 = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QTextCursor * ptr = new QTextCursor( obj->rowEnd ( *par1 ) );
+    QTextCursor * ptr = new QTextCursor( obj->rowEnd ( *PQTEXTCURSOR(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
   }
 }
@@ -331,8 +328,7 @@ HB_FUNC_STATIC( QTEXTTABLE_ROWSTART )
   QTextTable * obj = (QTextTable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTextCursor * par1 = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QTextCursor * ptr = new QTextCursor( obj->rowStart ( *par1 ) );
+    QTextCursor * ptr = new QTextCursor( obj->rowStart ( *PQTEXTCURSOR(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
   }
 }
@@ -359,8 +355,7 @@ HB_FUNC_STATIC( QTEXTTABLE_SETFORMAT )
   QTextTable * obj = (QTextTable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTextTableFormat * par1 = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setFormat ( *par1 );
+    obj->setFormat ( *PQTEXTTABLEFORMAT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

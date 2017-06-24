@@ -579,8 +579,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETSIZEPOLICY1 )
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSizePolicy * par1 = (QSizePolicy *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setSizePolicy ( *par1 );
+    obj->setSizePolicy ( *PQSIZEPOLICY(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -594,10 +593,8 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETSIZEPOLICY2 )
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    int par2 = hb_parni(2);
     int par3 = ISNIL(3)? (int) QSizePolicy::DefaultType : hb_parni(3);
-    obj->setSizePolicy ( (QSizePolicy::Policy) par1, (QSizePolicy::Policy) par2, (QSizePolicy::ControlType) par3 );
+    obj->setSizePolicy ( (QSizePolicy::Policy) hb_parni(1), (QSizePolicy::Policy) hb_parni(2), (QSizePolicy::ControlType) par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -211,8 +211,7 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ERROR )
   QXmlDefaultHandler * obj = (QXmlDefaultHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QXmlParseException * par1 = (QXmlParseException *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->error ( *par1 ) );
+    RBOOL( obj->error ( *PQXMLPARSEEXCEPTION(1) ) );
   }
 }
 
@@ -251,8 +250,7 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_FATALERROR )
   QXmlDefaultHandler * obj = (QXmlDefaultHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QXmlParseException * par1 = (QXmlParseException *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->fatalError ( *par1 ) );
+    RBOOL( obj->fatalError ( *PQXMLPARSEEXCEPTION(1) ) );
   }
 }
 
@@ -385,8 +383,7 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_STARTELEMENT )
   QXmlDefaultHandler * obj = (QXmlDefaultHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QXmlAttributes * par4 = (QXmlAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->startElement ( PQSTRING(1), PQSTRING(2), PQSTRING(3), *par4 ) );
+    RBOOL( obj->startElement ( PQSTRING(1), PQSTRING(2), PQSTRING(3), *PQXMLATTRIBUTES(4) ) );
   }
 }
 
@@ -438,8 +435,7 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_WARNING )
   QXmlDefaultHandler * obj = (QXmlDefaultHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QXmlParseException * par1 = (QXmlParseException *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->warning ( *par1 ) );
+    RBOOL( obj->warning ( *PQXMLPARSEEXCEPTION(1) ) );
   }
 }
 

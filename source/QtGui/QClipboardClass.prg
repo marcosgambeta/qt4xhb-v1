@@ -168,9 +168,8 @@ HB_FUNC_STATIC( QCLIPBOARD_SETIMAGE )
   QClipboard * obj = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QImage * par1 = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
-    obj->setImage ( *par1, (QClipboard::Mode) par2 );
+    obj->setImage ( *PQIMAGE(1), (QClipboard::Mode) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

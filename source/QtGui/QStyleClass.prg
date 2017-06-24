@@ -165,10 +165,8 @@ HB_FUNC_STATIC( QSTYLE_DRAWITEMTEXT )
   QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par3 = hb_parni(3);
-    QPalette * par4 = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par7 = ISNIL(7)? (int) QPalette::NoRole : hb_parni(7);
-    obj->drawItemText ( PQPAINTER(1), *PQRECT(2), par3, *par4, PBOOL(5), PQSTRING(6), (QPalette::ColorRole) par7 );
+    obj->drawItemText ( PQPAINTER(1), *PQRECT(2), PINT(3), *PQPALETTE(4), PBOOL(5), PQSTRING(6), (QPalette::ColorRole) par7 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -245,9 +243,7 @@ HB_FUNC_STATIC( QSTYLE_ITEMTEXTRECT )
   QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QFontMetrics * par1 = (QFontMetrics *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par3 = hb_parni(3);
-    QRect * ptr = new QRect( obj->itemTextRect ( *par1, *PQRECT(2), par3, PBOOL(4), PQSTRING(5) ) );
+    QRect * ptr = new QRect( obj->itemTextRect ( *PQFONTMETRICS(1), *PQRECT(2), PINT(3), PBOOL(4), PQSTRING(5) ) );
     _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }

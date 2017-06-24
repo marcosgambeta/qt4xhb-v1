@@ -361,8 +361,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEATTRIBUTE3 )
   QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QXmlStreamAttribute * par1 = (QXmlStreamAttribute *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->writeAttribute ( *par1 );
+    obj->writeAttribute ( *PQXMLSTREAMATTRIBUTE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -396,8 +395,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEATTRIBUTES )
   QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QXmlStreamAttributes * par1 = (QXmlStreamAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->writeAttributes ( *par1 );
+    obj->writeAttributes ( *PQXMLSTREAMATTRIBUTES(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -453,8 +451,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITECURRENTTOKEN )
   QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QXmlStreamReader * par1 = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->writeCurrentToken ( *par1 );
+    obj->writeCurrentToken ( *PQXMLSTREAMREADER(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

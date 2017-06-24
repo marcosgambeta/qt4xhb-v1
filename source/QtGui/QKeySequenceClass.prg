@@ -213,8 +213,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_MATCHES )
   QKeySequence * obj = (QKeySequence *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QKeySequence * par1 = (QKeySequence *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    hb_retni( (int) obj->matches ( *par1 ) );
+    hb_retni( (int) obj->matches ( *PQKEYSEQUENCE(1) ) );
   }
 }
 

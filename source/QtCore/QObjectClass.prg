@@ -1713,8 +1713,7 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILDREN2 )
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRegExp * par1 = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QList<QObject *> list = obj->findChildren<QObject *> ( *par1 );
+    QList<QObject *> list = obj->findChildren<QObject *> ( *PQREGEXP(1) );
     PHB_DYNS pDynSym;
     #ifdef __XHARBOUR__
     pDynSym = hb_dynsymFind( "QOBJECT" );

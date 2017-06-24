@@ -106,10 +106,9 @@ QGLWidget ( const QGLFormat & format, QWidget * parent = 0, const QGLWidget * sh
 */
 HB_FUNC_STATIC( QGLWIDGET_NEW3 )
 {
-  QGLFormat * par1 = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   const QGLWidget * par3 = ISNIL(3)? 0 : (const QGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par4 = ISNIL(4)? (int) 0 : hb_parni(4);
-  QGLWidget * o = new QGLWidget ( *par1, OPQWIDGET(2,0), par3, (Qt::WindowFlags) par4 );
+  QGLWidget * o = new QGLWidget ( *PQGLFORMAT(1), OPQWIDGET(2,0), par3, (Qt::WindowFlags) par4 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
@@ -163,10 +162,9 @@ HB_FUNC_STATIC( QGLWIDGET_BINDTEXTURE1 )
   QGLWidget * obj = (QGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QImage * par1 = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     GLenum par2 = ISNIL(2)? GL_TEXTURE_2D : hb_parni(2);
     GLint par3 = ISNIL(3)? GL_RGBA : hb_parni(3);
-    hb_retni( (GLuint) obj->bindTexture ( *par1, par2, par3 ) );
+    hb_retni( (GLuint) obj->bindTexture ( *PQIMAGE(1), par2, par3 ) );
   }
 }
 
@@ -194,11 +192,10 @@ HB_FUNC_STATIC( QGLWIDGET_BINDTEXTURE3 )
   QGLWidget * obj = (QGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QImage * par1 = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     GLenum par2 = hb_parni(2);
     GLint par3 = hb_parni(3);
     int par4 = hb_parni(4);
-    hb_retni( (GLuint) obj->bindTexture ( *par1, par2, par3, (QGLContext::BindOptions) par4 ) );
+    hb_retni( (GLuint) obj->bindTexture ( *PQIMAGE(1), par2, par3, (QGLContext::BindOptions) par4 ) );
   }
 }
 
@@ -572,8 +569,7 @@ HB_FUNC_STATIC( QGLWIDGET_SETCOLORMAP )
   QGLWidget * obj = (QGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QGLColormap * par1 = (QGLColormap *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setColormap ( *par1 );
+    obj->setColormap ( *PQGLCOLORMAP(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -641,8 +637,7 @@ QImage convertToGLFormat ( const QImage & img )
 */
 HB_FUNC_STATIC( QGLWIDGET_CONVERTTOGLFORMAT )
 {
-  QImage * par1 = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QImage * ptr = new QImage( QGLWidget::convertToGLFormat ( *par1 ) );
+  QImage * ptr = new QImage( QGLWidget::convertToGLFormat ( *PQIMAGE(1) ) );
   _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );
 }
 

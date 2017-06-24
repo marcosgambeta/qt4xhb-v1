@@ -274,8 +274,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ADDEXTRANAMESPACEDECLARATION )
   QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QXmlStreamNamespaceDeclaration  * par1 = (const QXmlStreamNamespaceDeclaration  *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->addExtraNamespaceDeclaration ( *par1 );
+    obj->addExtraNamespaceDeclaration ( *PQXMLSTREAMNAMESPACEDECLARATION(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -289,8 +288,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ADDEXTRANAMESPACEDECLARATIONS )
   QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    const QXmlStreamNamespaceDeclarations  * par1 = (const QXmlStreamNamespaceDeclarations  *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->addExtraNamespaceDeclarations ( *par1 );
+    obj->addExtraNamespaceDeclarations ( *PQXMLSTREAMNAMESPACEDECLARATIONS(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

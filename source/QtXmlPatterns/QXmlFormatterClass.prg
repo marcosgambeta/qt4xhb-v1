@@ -106,9 +106,8 @@ HB_FUNC_STATIC( QXMLFORMATTER_ATTRIBUTE )
   QXmlFormatter * obj = (QXmlFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QXmlName * par1 = (QXmlName *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QStringRef * par2 = (QStringRef *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->attribute ( *par1, *par2 );
+    obj->attribute ( *PQXMLNAME(1), *par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -193,8 +192,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_PROCESSINGINSTRUCTION )
   QXmlFormatter * obj = (QXmlFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QXmlName * par1 = (QXmlName *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->processingInstruction ( *par1, PQSTRING(2) );
+    obj->processingInstruction ( *PQXMLNAME(1), PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -222,8 +220,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_STARTELEMENT )
   QXmlFormatter * obj = (QXmlFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QXmlName * par1 = (QXmlName *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->startElement ( *par1 );
+    obj->startElement ( *PQXMLNAME(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -170,8 +170,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETBROADCAST )
   QNetworkAddressEntry * obj = (QNetworkAddressEntry *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QHostAddress * par1 = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setBroadcast ( *par1 );
+    obj->setBroadcast ( *PQHOSTADDRESS(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -185,8 +184,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETIP )
   QNetworkAddressEntry * obj = (QNetworkAddressEntry *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QHostAddress * par1 = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setIp ( *par1 );
+    obj->setIp ( *PQHOSTADDRESS(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -200,8 +198,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETNETMASK )
   QNetworkAddressEntry * obj = (QNetworkAddressEntry *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QHostAddress * par1 = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setNetmask ( *par1 );
+    obj->setNetmask ( *PQHOSTADDRESS(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

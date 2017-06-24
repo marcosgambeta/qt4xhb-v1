@@ -265,8 +265,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_WRITE2 )
   QTextDocumentWriter * obj = (QTextDocumentWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTextDocumentFragment * par1 = (QTextDocumentFragment *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->write ( *par1 ) );
+    RBOOL( obj->write ( *PQTEXTDOCUMENTFRAGMENT(1) ) );
   }
 }
 

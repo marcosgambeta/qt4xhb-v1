@@ -161,8 +161,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_INSERTRECORD )
   QSqlTableModel * obj = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSqlRecord * par2 = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->insertRecord ( PINT(1), *par2 ) );
+    RBOOL( obj->insertRecord ( PINT(1), *PQSQLRECORD(2) ) );
   }
 }
 
@@ -257,8 +256,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SETRECORD )
   QSqlTableModel * obj = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSqlRecord * par2 = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->setRecord ( PINT(1), *par2 ) );
+    RBOOL( obj->setRecord ( PINT(1), *PQSQLRECORD(2) ) );
   }
 }
 

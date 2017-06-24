@@ -191,9 +191,8 @@ QBitmap fromImage ( const QImage & image, Qt::ImageConversionFlags flags = Qt::A
 */
 HB_FUNC_STATIC( QBITMAP_FROMIMAGE )
 {
-  QImage * par1 = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   int par2 = ISNIL(2)? (int) Qt::AutoColor : hb_parni(2);
-  QBitmap * ptr = new QBitmap( QBitmap::fromImage ( *par1, (Qt::ImageConversionFlags) par2 ) );
+  QBitmap * ptr = new QBitmap( QBitmap::fromImage ( *PQIMAGE(1), (Qt::ImageConversionFlags) par2 ) );
   _qt4xhb_createReturnClass ( ptr, "QBITMAP", true );
 }
 

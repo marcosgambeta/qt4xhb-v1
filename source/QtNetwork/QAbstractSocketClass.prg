@@ -142,9 +142,8 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_CONNECTTOHOST2 )
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QHostAddress * par1 = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par3 = ISNIL(3)? (int) QAbstractSocket::ReadWrite : hb_parni(3);
-    obj->connectToHost ( *par1, PQUINT16(2), (QAbstractSocket::OpenMode) par3 );
+    obj->connectToHost ( *PQHOSTADDRESS(1), PQUINT16(2), (QAbstractSocket::OpenMode) par3 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -305,8 +304,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SETPROXY )
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QNetworkProxy * par1 = (QNetworkProxy *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setProxy ( *par1 );
+    obj->setProxy ( *PQNETWORKPROXY(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

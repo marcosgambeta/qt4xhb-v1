@@ -456,8 +456,7 @@ HB_FUNC_STATIC( QPALETTE_ISCOPYOF )
   QPalette * obj = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPalette * par1 = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->isCopyOf ( *par1 ) );
+    RBOOL( obj->isCopyOf ( *PQPALETTE(1) ) );
   }
 }
 
@@ -555,8 +554,7 @@ HB_FUNC_STATIC( QPALETTE_RESOLVE )
   QPalette * obj = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPalette * par1 = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QPalette * ptr = new QPalette( obj->resolve ( *par1 ) );
+    QPalette * ptr = new QPalette( obj->resolve ( *PQPALETTE(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QPALETTE", true );
   }
 }

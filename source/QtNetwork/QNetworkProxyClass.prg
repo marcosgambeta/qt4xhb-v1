@@ -337,8 +337,7 @@ void setApplicationProxy ( const QNetworkProxy & networkProxy )
 */
 HB_FUNC_STATIC( QNETWORKPROXY_SETAPPLICATIONPROXY )
 {
-  QNetworkProxy * par1 = (QNetworkProxy *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QNetworkProxy::setApplicationProxy ( *par1 );
+  QNetworkProxy::setApplicationProxy ( *PQNETWORKPROXY(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

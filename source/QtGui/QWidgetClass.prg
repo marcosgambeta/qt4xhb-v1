@@ -927,8 +927,7 @@ HB_FUNC_STATIC( QWIDGET_GRABMOUSE2 )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QCursor * par1 = (QCursor *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->grabMouse ( *par1 );
+    obj->grabMouse ( *PQCURSOR(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -957,9 +956,8 @@ HB_FUNC_STATIC( QWIDGET_GRABSHORTCUT )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QKeySequence * par1 = (QKeySequence *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = ISNIL(2)? (int) Qt::WindowShortcut : hb_parni(2);
-    RINT( obj->grabShortcut ( *par1, (Qt::ShortcutContext) par2 ) );
+    RINT( obj->grabShortcut ( *PQKEYSEQUENCE(1), (Qt::ShortcutContext) par2 ) );
   }
 }
 
@@ -2131,8 +2129,7 @@ HB_FUNC_STATIC( QWIDGET_SETCONTENTSMARGINS2 )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QMargins * par1 = (QMargins *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setContentsMargins ( *par1 );
+    obj->setContentsMargins ( *PQMARGINS(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -2176,8 +2173,7 @@ HB_FUNC_STATIC( QWIDGET_SETCURSOR )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QCursor * par1 = (QCursor *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setCursor ( *par1 );
+    obj->setCursor ( *PQCURSOR(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -2482,8 +2478,7 @@ HB_FUNC_STATIC( QWIDGET_SETLOCALE )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QLocale * par1 = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setLocale ( *par1 );
+    obj->setLocale ( *PQLOCALE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -2696,8 +2691,7 @@ HB_FUNC_STATIC( QWIDGET_SETPALETTE )
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPalette * par1 = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setPalette ( *par1 );
+    obj->setPalette ( *PQPALETTE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

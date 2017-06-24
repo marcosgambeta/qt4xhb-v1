@@ -143,8 +143,7 @@ HB_FUNC_STATIC( QSQLRECORD_APPEND )
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSqlField * par1 = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->append ( *par1 );
+    obj->append ( *PQSQLFIELD(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -281,8 +280,7 @@ HB_FUNC_STATIC( QSQLRECORD_INSERT )
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSqlField * par2 = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->insert ( PINT(1), *par2 );
+    obj->insert ( PINT(1), *PQSQLFIELD(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -405,8 +403,7 @@ HB_FUNC_STATIC( QSQLRECORD_REPLACE )
   QSqlRecord * obj = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSqlField * par2 = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->replace ( PINT(1), *par2 );
+    obj->replace ( PINT(1), *PQSQLFIELD(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

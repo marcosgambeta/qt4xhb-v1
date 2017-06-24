@@ -161,8 +161,7 @@ HB_FUNC_STATIC( QSQLDRIVER_FORMATVALUE )
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSqlField * par1 = (QSqlField *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RQSTRING( obj->formatValue ( *par1, OPBOOL(2,false) ) );
+    RQSTRING( obj->formatValue ( *PQSQLFIELD(1), OPBOOL(2,false) ) );
   }
 }
 
@@ -336,8 +335,7 @@ HB_FUNC_STATIC( QSQLDRIVER_SQLSTATEMENT )
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSqlRecord * par3 = (QSqlRecord *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RQSTRING( obj->sqlStatement ( (QSqlDriver::StatementType) hb_parni(1), PQSTRING(2), *par3, PBOOL(4) ) );
+    RQSTRING( obj->sqlStatement ( (QSqlDriver::StatementType) hb_parni(1), PQSTRING(2), *PQSQLRECORD(3), PBOOL(4) ) );
   }
 }
 

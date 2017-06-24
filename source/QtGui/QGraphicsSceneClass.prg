@@ -316,9 +316,8 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDLINE1 )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QLineF * par1 = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QPen par2 = ISNIL(2)? QPen() : *(QPen *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QGraphicsLineItem * ptr = obj->addLine ( *par1, par2 );
+    QGraphicsLineItem * ptr = obj->addLine ( *PQLINEF(1), par2 );
     _qt4xhb_createReturnClass ( ptr, "QGRAPHICSLINEITEM" );
   }
 }
@@ -1485,8 +1484,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETPALETTE )
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPalette * par1 = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setPalette ( *par1 );
+    obj->setPalette ( *PQPALETTE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

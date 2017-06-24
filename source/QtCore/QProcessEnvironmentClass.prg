@@ -245,8 +245,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_INSERT2 )
   QProcessEnvironment * obj = (QProcessEnvironment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QProcessEnvironment * par1 = (QProcessEnvironment *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->insert ( *par1 );
+    obj->insert ( *PQPROCESSENVIRONMENT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

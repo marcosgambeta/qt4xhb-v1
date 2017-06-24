@@ -128,9 +128,8 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_BINDTEXTURE1 )
   QGLPixelBuffer * obj = (QGLPixelBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QImage * par1 = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     GLenum par2 = ISNIL(2)? GL_TEXTURE_2D : hb_parni(2);
-    hb_retni( (GLuint) obj->bindTexture ( *par1, par2 ) );
+    hb_retni( (GLuint) obj->bindTexture ( *PQIMAGE(1), par2 ) );
   }
 }
 

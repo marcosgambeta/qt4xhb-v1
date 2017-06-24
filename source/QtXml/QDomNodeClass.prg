@@ -186,8 +186,7 @@ HB_FUNC_STATIC( QDOMNODE_APPENDCHILD )
   QDomNode * obj = (QDomNode *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDomNode * par1 = (QDomNode *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QDomNode * ptr = new QDomNode( obj->appendChild ( *par1 ) );
+    QDomNode * ptr = new QDomNode( obj->appendChild ( *PQDOMNODE(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
   }
 }
@@ -324,9 +323,7 @@ HB_FUNC_STATIC( QDOMNODE_INSERTAFTER )
   QDomNode * obj = (QDomNode *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDomNode * par1 = (QDomNode *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QDomNode * par2 = (QDomNode *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QDomNode * ptr = new QDomNode( obj->insertAfter ( *par1, *par2 ) );
+    QDomNode * ptr = new QDomNode( obj->insertAfter ( *PQDOMNODE(1), *PQDOMNODE(2) ) );
     _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
   }
 }
@@ -340,9 +337,7 @@ HB_FUNC_STATIC( QDOMNODE_INSERTBEFORE )
   QDomNode * obj = (QDomNode *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDomNode * par1 = (QDomNode *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QDomNode * par2 = (QDomNode *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QDomNode * ptr = new QDomNode( obj->insertBefore ( *par1, *par2 ) );
+    QDomNode * ptr = new QDomNode( obj->insertBefore ( *PQDOMNODE(1), *PQDOMNODE(2) ) );
     _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
   }
 }
@@ -782,8 +777,7 @@ HB_FUNC_STATIC( QDOMNODE_REMOVECHILD )
   QDomNode * obj = (QDomNode *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDomNode * par1 = (QDomNode *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QDomNode * ptr = new QDomNode( obj->removeChild ( *par1 ) );
+    QDomNode * ptr = new QDomNode( obj->removeChild ( *PQDOMNODE(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
   }
 }
@@ -797,9 +791,7 @@ HB_FUNC_STATIC( QDOMNODE_REPLACECHILD )
   QDomNode * obj = (QDomNode *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDomNode * par1 = (QDomNode *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QDomNode * par2 = (QDomNode *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QDomNode * ptr = new QDomNode( obj->replaceChild ( *par1, *par2 ) );
+    QDomNode * ptr = new QDomNode( obj->replaceChild ( *PQDOMNODE(1), *PQDOMNODE(2) ) );
     _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
   }
 }
@@ -814,8 +806,7 @@ HB_FUNC_STATIC( QDOMNODE_SAVE1 )
   if( obj )
   {
     QTextStream * par1 = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par2 = hb_parni(2);
-    obj->save ( *par1, par2 );
+    obj->save ( *par1, PINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -830,9 +821,7 @@ HB_FUNC_STATIC( QDOMNODE_SAVE2 )
   if( obj )
   {
     QTextStream * par1 = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par2 = hb_parni(2);
-    int par3 = hb_parni(3);
-    obj->save ( *par1, par2, (QDomNode::EncodingPolicy) par3 );
+    obj->save ( *par1, PINT(2), (QDomNode::EncodingPolicy) hb_parni(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

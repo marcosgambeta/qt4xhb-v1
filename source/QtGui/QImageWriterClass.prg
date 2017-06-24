@@ -375,8 +375,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_WRITE )
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QImage * par1 = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->write ( *par1 ) );
+    RBOOL( obj->write ( *PQIMAGE(1) ) );
   }
 }
 

@@ -518,10 +518,7 @@ bool equal ( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
 */
 HB_FUNC_STATIC( QURLINFO_EQUAL )
 {
-  QUrlInfo * par1 = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QUrlInfo * par2 = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  int par3 = hb_parni(3);
-  RBOOL( QUrlInfo::equal ( *par1, *par2, par3 ) );
+  RBOOL( QUrlInfo::equal ( *PQURLINFO(1), *PQURLINFO(2), PINT(3) ) );
 }
 
 
@@ -530,10 +527,7 @@ bool greaterThan ( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
 */
 HB_FUNC_STATIC( QURLINFO_GREATERTHAN )
 {
-  QUrlInfo * par1 = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QUrlInfo * par2 = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  int par3 = hb_parni(3);
-  RBOOL( QUrlInfo::greaterThan ( *par1, *par2, par3 ) );
+  RBOOL( QUrlInfo::greaterThan ( *PQURLINFO(1), *PQURLINFO(2), PINT(3) ) );
 }
 
 
@@ -542,10 +536,7 @@ bool lessThan ( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
 */
 HB_FUNC_STATIC( QURLINFO_LESSTHAN )
 {
-  QUrlInfo * par1 = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QUrlInfo * par2 = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  int par3 = hb_parni(3);
-  RBOOL( QUrlInfo::lessThan ( *par1, *par2, par3 ) );
+  RBOOL( QUrlInfo::lessThan ( *PQURLINFO(1), *PQURLINFO(2), PINT(3) ) );
 }
 
 

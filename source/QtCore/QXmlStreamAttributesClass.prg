@@ -104,8 +104,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_APPEND2 )
   QXmlStreamAttributes * obj = (QXmlStreamAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QXmlStreamAttribute * par1 = (QXmlStreamAttribute *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->append ( *par1 );
+    obj->append ( *PQXMLSTREAMATTRIBUTE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

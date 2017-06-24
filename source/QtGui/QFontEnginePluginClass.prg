@@ -108,8 +108,7 @@ HB_FUNC_STATIC( QFONTENGINEPLUGIN_CREATE )
   QFontEnginePlugin * obj = (QFontEnginePlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QFontEngineInfo * par1 = (QFontEngineInfo *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QAbstractFontEngine * ptr = obj->create ( *par1 );
+    QAbstractFontEngine * ptr = obj->create ( *PQFONTENGINEINFO(1) );
     _qt4xhb_createReturnClass ( ptr, "QABSTRACTFONTENGINE" );
   }
 }

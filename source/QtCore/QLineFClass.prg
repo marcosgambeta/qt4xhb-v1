@@ -263,8 +263,7 @@ HB_FUNC_STATIC( QLINEF_ANGLETO )
   QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QLineF * par1 = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RQREAL( obj->angleTo ( *par1 ) );
+    RQREAL( obj->angleTo ( *PQLINEF(1) ) );
   }
 }
 

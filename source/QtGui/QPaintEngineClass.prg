@@ -145,9 +145,8 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWIMAGE )
   QPaintEngine * obj = (QPaintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QImage * par2 = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par4 = ISNIL(4)? (int) Qt::AutoColor : hb_parni(4);
-    obj->drawImage ( *PQRECTF(1), *par2, *PQRECTF(3), (Qt::ImageConversionFlags) par4 );
+    obj->drawImage ( *PQRECTF(1), *PQIMAGE(2), *PQRECTF(3), (Qt::ImageConversionFlags) par4 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -225,8 +224,7 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWTEXTITEM )
   QPaintEngine * obj = (QPaintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTextItem * par2 = (QTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->drawTextItem ( *PQPOINTF(1), *par2 );
+    obj->drawTextItem ( *PQPOINTF(1), *PQTEXTITEM(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -349,8 +347,7 @@ HB_FUNC_STATIC( QPAINTENGINE_UPDATESTATE )
   QPaintEngine * obj = (QPaintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPaintEngineState * par1 = (QPaintEngineState *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->updateState ( *par1 );
+    obj->updateState ( *PQPAINTENGINESTATE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -778,8 +778,7 @@ void setDefaultFormat ( const QPlatformWindowFormat & f )
 */
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETDEFAULTFORMAT )
 {
-  QPlatformWindowFormat * par1 = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QPlatformWindowFormat::setDefaultFormat ( *par1 );
+  QPlatformWindowFormat::setDefaultFormat ( *PQPLATFORMWINDOWFORMAT(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

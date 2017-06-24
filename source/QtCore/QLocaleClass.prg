@@ -1389,8 +1389,7 @@ void setDefault ( const QLocale & locale )
 */
 HB_FUNC_STATIC( QLOCALE_SETDEFAULT )
 {
-  QLocale * par1 = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QLocale::setDefault ( *par1 );
+  QLocale::setDefault ( *PQLOCALE(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

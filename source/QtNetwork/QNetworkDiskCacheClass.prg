@@ -207,8 +207,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_PREPARE )
   QNetworkDiskCache * obj = (QNetworkDiskCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QNetworkCacheMetaData * par1 = (QNetworkCacheMetaData *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QIODevice * ptr = obj->prepare ( *par1 );
+    QIODevice * ptr = obj->prepare ( *PQNETWORKCACHEMETADATA(1) );
     _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );
   }
 }
@@ -235,8 +234,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_UPDATEMETADATA )
   QNetworkDiskCache * obj = (QNetworkDiskCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QNetworkCacheMetaData * par1 = (QNetworkCacheMetaData *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->updateMetaData ( *par1 );
+    obj->updateMetaData ( *PQNETWORKCACHEMETADATA(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

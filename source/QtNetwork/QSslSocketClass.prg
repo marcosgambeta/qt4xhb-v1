@@ -167,8 +167,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ADDCACERTIFICATE )
   QSslSocket * obj = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSslCertificate * par1 = (QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->addCaCertificate ( *par1 );
+    obj->addCaCertificate ( *PQSSLCERTIFICATE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -707,8 +706,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETLOCALCERTIFICATE1 )
   QSslSocket * obj = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSslCertificate * par1 = (QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setLocalCertificate ( *par1 );
+    obj->setLocalCertificate ( *PQSSLCERTIFICATE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -781,8 +779,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETPRIVATEKEY1 )
   QSslSocket * obj = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSslKey * par1 = (QSslKey *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setPrivateKey ( *par1 );
+    obj->setPrivateKey ( *PQSSLKEY(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -887,8 +884,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETSSLCONFIGURATION )
   QSslSocket * obj = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSslConfiguration * par1 = (QSslConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setSslConfiguration ( *par1 );
+    obj->setSslConfiguration ( *PQSSLCONFIGURATION(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1137,8 +1133,7 @@ void addDefaultCaCertificate ( const QSslCertificate & certificate )
 */
 HB_FUNC_STATIC( QSSLSOCKET_ADDDEFAULTCACERTIFICATE )
 {
-  QSslCertificate * par1 = (QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QSslSocket::addDefaultCaCertificate ( *par1 );
+  QSslSocket::addDefaultCaCertificate ( *PQSSLCERTIFICATE(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

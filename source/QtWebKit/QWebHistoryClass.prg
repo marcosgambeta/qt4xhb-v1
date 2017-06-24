@@ -299,8 +299,7 @@ HB_FUNC_STATIC( QWEBHISTORY_GOTOITEM )
   QWebHistory * obj = (QWebHistory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWebHistoryItem * par1 = (QWebHistoryItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->goToItem ( *par1 );
+    obj->goToItem ( *PQWEBHISTORYITEM(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

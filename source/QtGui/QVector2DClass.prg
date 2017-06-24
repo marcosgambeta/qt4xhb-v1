@@ -367,9 +367,7 @@ qreal dotProduct ( const QVector2D & v1, const QVector2D & v2 )
 */
 HB_FUNC_STATIC( QVECTOR2D_DOTPRODUCT )
 {
-  QVector2D * par1 = (QVector2D *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QVector2D * par2 = (QVector2D *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  RQREAL( QVector2D::dotProduct ( *par1, *par2 ) );
+  RQREAL( QVector2D::dotProduct ( *PQVECTOR2D(1), *PQVECTOR2D(2) ) );
 }
 
 

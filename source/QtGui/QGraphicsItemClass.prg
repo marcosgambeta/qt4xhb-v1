@@ -2450,8 +2450,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETCURSOR )
   QGraphicsItem * obj = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QCursor * par1 = (QCursor *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setCursor ( *par1 );
+    obj->setCursor ( *PQCURSOR(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

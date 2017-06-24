@@ -704,8 +704,7 @@ QSqlDatabase cloneDatabase ( const QSqlDatabase & other, const QString & connect
 */
 HB_FUNC_STATIC( QSQLDATABASE_CLONEDATABASE )
 {
-  QSqlDatabase * par1 = (QSqlDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::cloneDatabase ( *par1, PQSTRING(2) ) );
+  QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::cloneDatabase ( *PQSQLDATABASE(1), PQSTRING(2) ) );
   _qt4xhb_createReturnClass ( ptr, "QSQLDATABASE" );
 }
 

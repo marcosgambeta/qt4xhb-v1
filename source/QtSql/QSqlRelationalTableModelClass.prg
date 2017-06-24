@@ -111,8 +111,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SETRELATION )
   QSqlRelationalTableModel * obj = (QSqlRelationalTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSqlRelation * par2 = (QSqlRelation *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setRelation ( PINT(1), *par2 );
+    obj->setRelation ( PINT(1), *PQSQLRELATION(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

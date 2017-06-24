@@ -860,8 +860,7 @@ void setDefaultFormat ( const QGLFormat & f )
 */
 HB_FUNC_STATIC( QGLFORMAT_SETDEFAULTFORMAT )
 {
-  QGLFormat * par1 = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QGLFormat::setDefaultFormat ( *par1 );
+  QGLFormat::setDefaultFormat ( *PQGLFORMAT(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -871,8 +870,7 @@ void setDefaultOverlayFormat ( const QGLFormat & f )
 */
 HB_FUNC_STATIC( QGLFORMAT_SETDEFAULTOVERLAYFORMAT )
 {
-  QGLFormat * par1 = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QGLFormat::setDefaultOverlayFormat ( *par1 );
+  QGLFormat::setDefaultOverlayFormat ( *PQGLFORMAT(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

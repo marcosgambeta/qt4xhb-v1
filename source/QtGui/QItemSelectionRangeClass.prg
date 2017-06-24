@@ -284,8 +284,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_INTERSECTED )
   QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QItemSelectionRange * par1 = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QItemSelectionRange * ptr = new QItemSelectionRange( obj->intersected ( *par1 ) );
+    QItemSelectionRange * ptr = new QItemSelectionRange( obj->intersected ( *PQITEMSELECTIONRANGE(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QITEMSELECTIONRANGE" );
   }
 }
@@ -299,8 +298,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_INTERSECTS )
   QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QItemSelectionRange * par1 = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->intersects ( *par1 ) );
+    RBOOL( obj->intersects ( *PQITEMSELECTIONRANGE(1) ) );
   }
 }
 

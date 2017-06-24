@@ -151,8 +151,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_MSECSTO )
   QElapsedTimer * obj = (QElapsedTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QElapsedTimer * par1 = (QElapsedTimer *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RQINT64( obj->msecsTo ( *par1 ) );
+    RQINT64( obj->msecsTo ( *PQELAPSEDTIMER(1) ) );
   }
 }
 
@@ -191,8 +190,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_SECSTO )
   QElapsedTimer * obj = (QElapsedTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QElapsedTimer * par1 = (QElapsedTimer *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RQINT64( obj->secsTo ( *par1 ) );
+    RQINT64( obj->secsTo ( *PQELAPSEDTIMER(1) ) );
   }
 }
 

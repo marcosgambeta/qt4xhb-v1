@@ -144,8 +144,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_SETEASINGCURVE )
   QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QEasingCurve * par1 = (QEasingCurve *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setEasingCurve ( *par1 );
+    obj->setEasingCurve ( *PQEASINGCURVE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -69,8 +69,7 @@ HB_FUNC_STATIC( QTEXTLIST_ADD )
   QTextList * obj = (QTextList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTextBlock * par1 = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->add ( *par1 );
+    obj->add ( *PQTEXTBLOCK(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

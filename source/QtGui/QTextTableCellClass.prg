@@ -229,8 +229,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_SETFORMAT )
   QTextTableCell * obj = (QTextTableCell *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTextCharFormat * par1 = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setFormat ( *par1 );
+    obj->setFormat ( *PQTEXTCHARFORMAT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

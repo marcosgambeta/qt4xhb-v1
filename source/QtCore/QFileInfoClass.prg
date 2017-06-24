@@ -720,8 +720,7 @@ HB_FUNC_STATIC( QFILEINFO_SETFILE2 )
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QFile * par1 = (QFile *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setFile ( *par1 );
+    obj->setFile ( *PQFILE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -735,8 +734,7 @@ HB_FUNC_STATIC( QFILEINFO_SETFILE3 )
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDir * par1 = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setFile ( *par1, PQSTRING(2) );
+    obj->setFile ( *PQDIR(1), PQSTRING(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

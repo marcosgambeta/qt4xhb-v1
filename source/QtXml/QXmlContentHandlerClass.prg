@@ -206,8 +206,7 @@ HB_FUNC_STATIC( QXMLCONTENTHANDLER_STARTELEMENT )
   QXmlContentHandler * obj = (QXmlContentHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QXmlAttributes * par4 = (QXmlAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->startElement ( PQSTRING(1), PQSTRING(2), PQSTRING(3), *par4 ) );
+    RBOOL( obj->startElement ( PQSTRING(1), PQSTRING(2), PQSTRING(3), *PQXMLATTRIBUTES(4) ) );
   }
 }
 

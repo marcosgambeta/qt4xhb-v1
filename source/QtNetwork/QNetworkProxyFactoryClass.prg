@@ -118,8 +118,7 @@ QList<QNetworkProxy> proxyForQuery ( const QNetworkProxyQuery & query )
 */
 HB_FUNC_STATIC( QNETWORKPROXYFACTORY_PROXYFORQUERY )
 {
-  QNetworkProxyQuery * par1 = (QNetworkProxyQuery *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QList<QNetworkProxy> list = QNetworkProxyFactory::proxyForQuery ( *par1 );
+  QList<QNetworkProxy> list = QNetworkProxyFactory::proxyForQuery ( *PQNETWORKPROXYQUERY(1) );
   PHB_DYNS pDynSym;
   #ifdef __XHARBOUR__
   pDynSym = hb_dynsymFind( "QNETWORKPROXY" );
@@ -163,8 +162,7 @@ void setApplicationProxyFactory ( QNetworkProxyFactory * factory )
 */
 HB_FUNC_STATIC( QNETWORKPROXYFACTORY_SETAPPLICATIONPROXYFACTORY )
 {
-  QNetworkProxyFactory * par1 = (QNetworkProxyFactory *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QNetworkProxyFactory::setApplicationProxyFactory ( par1 );
+  QNetworkProxyFactory::setApplicationProxyFactory ( PQNETWORKPROXYFACTORY(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

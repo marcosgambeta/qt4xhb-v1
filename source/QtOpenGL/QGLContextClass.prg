@@ -106,10 +106,9 @@ HB_FUNC_STATIC( QGLCONTEXT_BINDTEXTURE1 )
   QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QImage * par1 = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     GLenum par2 = hb_parni(2);
     int par4 = hb_parni(4);
-    hb_retni( (GLuint) obj->bindTexture ( *par1, par2, (QGLContext::BindOptions) par4 ) );
+    hb_retni( (GLuint) obj->bindTexture ( *PQIMAGE(1), par2, (QGLContext::BindOptions) par4 ) );
   }
 }
 
@@ -135,10 +134,9 @@ HB_FUNC_STATIC( QGLCONTEXT_BINDTEXTURE3 )
   QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QImage * par1 = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     GLenum par2 = ISNIL(2)? GL_TEXTURE_2D : hb_parni(2);
     GLint par3 = ISNIL(3)? GL_RGBA : hb_parni(3);
-    hb_retni( (GLuint) obj->bindTexture ( *par1, par2, par3 ) );
+    hb_retni( (GLuint) obj->bindTexture ( *PQIMAGE(1), par2, par3 ) );
   }
 }
 
@@ -426,8 +424,7 @@ HB_FUNC_STATIC( QGLCONTEXT_SETFORMAT )
   QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QGLFormat * par1 = (QGLFormat *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setFormat ( *par1 );
+    obj->setFormat ( *PQGLFORMAT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

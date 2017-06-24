@@ -178,8 +178,7 @@ HB_FUNC_STATIC( QXMLQUERY_BINDVARIABLE1 )
   QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QXmlName * par1 = (QXmlName *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->bindVariable ( *par1, *PQXMLITEM(2) );
+    obj->bindVariable ( *PQXMLNAME(1), *PQXMLITEM(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -193,8 +192,7 @@ HB_FUNC_STATIC( QXMLQUERY_BINDVARIABLE2 )
   QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QXmlName * par1 = (QXmlName *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->bindVariable ( *par1, PQIODEVICE(2) );
+    obj->bindVariable ( *PQXMLNAME(1), PQIODEVICE(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -208,9 +206,7 @@ HB_FUNC_STATIC( QXMLQUERY_BINDVARIABLE3 )
   QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QXmlName * par1 = (QXmlName *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QXmlQuery * par2 = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->bindVariable ( *par1, *par2 );
+    obj->bindVariable ( *PQXMLNAME(1), *PQXMLQUERY(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -252,8 +248,7 @@ HB_FUNC_STATIC( QXMLQUERY_BINDVARIABLE6 )
   QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QXmlQuery * par2 = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->bindVariable ( PQSTRING(1), *par2 );
+    obj->bindVariable ( PQSTRING(1), *PQXMLQUERY(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -549,8 +544,7 @@ HB_FUNC_STATIC( QXMLQUERY_SETINITIALTEMPLATENAME1 )
   QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QXmlName * par1 = (QXmlName *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setInitialTemplateName ( *par1 );
+    obj->setInitialTemplateName ( *PQXMLNAME(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

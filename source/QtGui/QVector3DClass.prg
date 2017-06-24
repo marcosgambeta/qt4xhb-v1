@@ -218,9 +218,7 @@ HB_FUNC_STATIC( QVECTOR3D_DISTANCETOLINE )
   QVector3D * obj = (QVector3D *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVector3D * par1 = (QVector3D *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QVector3D * par2 = (QVector3D *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RQREAL( obj->distanceToLine ( *par1, *par2 ) );
+    RQREAL( obj->distanceToLine ( *PQVECTOR3D(1), *PQVECTOR3D(2) ) );
   }
 }
 
@@ -233,9 +231,7 @@ HB_FUNC_STATIC( QVECTOR3D_DISTANCETOPLANE1 )
   QVector3D * obj = (QVector3D *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVector3D * par1 = (QVector3D *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QVector3D * par2 = (QVector3D *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RQREAL( obj->distanceToPlane ( *par1, *par2 ) );
+    RQREAL( obj->distanceToPlane ( *PQVECTOR3D(1), *PQVECTOR3D(2) ) );
   }
 }
 
@@ -248,10 +244,7 @@ HB_FUNC_STATIC( QVECTOR3D_DISTANCETOPLANE2 )
   QVector3D * obj = (QVector3D *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVector3D * par1 = (QVector3D *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QVector3D * par2 = (QVector3D *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QVector3D * par3 = (QVector3D *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RQREAL( obj->distanceToPlane ( *par1, *par2, *par3 ) );
+    RQREAL( obj->distanceToPlane ( *PQVECTOR3D(1), *PQVECTOR3D(2), *PQVECTOR3D(3) ) );
   }
 }
 
@@ -481,9 +474,7 @@ QVector3D crossProduct ( const QVector3D & v1, const QVector3D & v2 )
 */
 HB_FUNC_STATIC( QVECTOR3D_CROSSPRODUCT )
 {
-  QVector3D * par1 = (QVector3D *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QVector3D * par2 = (QVector3D *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QVector3D * ptr = new QVector3D( QVector3D::crossProduct ( *par1, *par2 ) );
+  QVector3D * ptr = new QVector3D( QVector3D::crossProduct ( *PQVECTOR3D(1), *PQVECTOR3D(2) ) );
   _qt4xhb_createReturnClass ( ptr, "QVECTOR3D" );
 }
 
@@ -493,9 +484,7 @@ qreal dotProduct ( const QVector3D & v1, const QVector3D & v2 )
 */
 HB_FUNC_STATIC( QVECTOR3D_DOTPRODUCT )
 {
-  QVector3D * par1 = (QVector3D *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QVector3D * par2 = (QVector3D *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  RQREAL( QVector3D::dotProduct ( *par1, *par2 ) );
+  RQREAL( QVector3D::dotProduct ( *PQVECTOR3D(1), *PQVECTOR3D(2) ) );
 }
 
 
@@ -504,9 +493,7 @@ QVector3D normal ( const QVector3D & v1, const QVector3D & v2 )
 */
 HB_FUNC_STATIC( QVECTOR3D_NORMAL1 )
 {
-  QVector3D * par1 = (QVector3D *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QVector3D * par2 = (QVector3D *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QVector3D * ptr = new QVector3D( QVector3D::normal ( *par1, *par2 ) );
+  QVector3D * ptr = new QVector3D( QVector3D::normal ( *PQVECTOR3D(1), *PQVECTOR3D(2) ) );
   _qt4xhb_createReturnClass ( ptr, "QVECTOR3D" );
 }
 
@@ -516,10 +503,7 @@ QVector3D normal ( const QVector3D & v1, const QVector3D & v2, const QVector3D &
 */
 HB_FUNC_STATIC( QVECTOR3D_NORMAL2 )
 {
-  QVector3D * par1 = (QVector3D *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QVector3D * par2 = (QVector3D *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QVector3D * par3 = (QVector3D *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QVector3D * ptr = new QVector3D( QVector3D::normal ( *par1, *par2, *par3 ) );
+  QVector3D * ptr = new QVector3D( QVector3D::normal ( *PQVECTOR3D(1), *PQVECTOR3D(2), *PQVECTOR3D(3) ) );
   _qt4xhb_createReturnClass ( ptr, "QVECTOR3D" );
 }
 

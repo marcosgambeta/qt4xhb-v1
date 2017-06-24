@@ -95,8 +95,7 @@ HB_FUNC_STATIC( QFILEICONPROVIDER_ICON2 )
   QFileIconProvider * obj = (QFileIconProvider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QFileInfo * par1 = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QIcon * ptr = new QIcon( obj->icon ( *par1 ) );
+    QIcon * ptr = new QIcon( obj->icon ( *PQFILEINFO(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QICON", true );
   }
 }

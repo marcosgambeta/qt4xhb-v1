@@ -306,9 +306,8 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_GRABSHORTCUT )
   QGraphicsWidget * obj = (QGraphicsWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QKeySequence * par1 = (QKeySequence *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = ISNIL(2)? (int) Qt::WindowShortcut : hb_parni(2);
-    RINT( obj->grabShortcut ( *par1, (Qt::ShortcutContext) par2 ) );
+    RINT( obj->grabShortcut ( *PQKEYSEQUENCE(1), (Qt::ShortcutContext) par2 ) );
   }
 }
 
@@ -626,8 +625,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETPALETTE )
   QGraphicsWidget * obj = (QGraphicsWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QPalette * par1 = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setPalette ( *par1 );
+    obj->setPalette ( *PQPALETTE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

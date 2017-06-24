@@ -1389,8 +1389,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETMATRIX )
   QGraphicsView * obj = (QGraphicsView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QMatrix * par1 = (QMatrix *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setMatrix ( *par1, OPBOOL(2,false) );
+    obj->setMatrix ( *PQMATRIX(1), OPBOOL(2,false) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

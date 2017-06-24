@@ -233,8 +233,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_SENDEVENT )
   QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QInputMethodEvent * par1 = (QInputMethodEvent *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->sendEvent ( *par1 );
+    obj->sendEvent ( *PQINPUTMETHODEVENT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

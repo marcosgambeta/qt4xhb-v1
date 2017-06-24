@@ -190,9 +190,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_ISINSUBNET1 )
   QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QHostAddress * par1 = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par2 = hb_parni(2);
-    RBOOL( obj->isInSubnet ( *par1, par2 ) );
+    RBOOL( obj->isInSubnet ( *PQHOSTADDRESS(1), PINT(2) ) );
   }
 }
 

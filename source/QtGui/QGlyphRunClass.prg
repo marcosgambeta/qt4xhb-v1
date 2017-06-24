@@ -290,8 +290,7 @@ HB_FUNC_STATIC( QGLYPHRUN_SETRAWFONT )
   QGlyphRun * obj = (QGlyphRun *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRawFont * par1 = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setRawFont ( *par1 );
+    obj->setRawFont ( *PQRAWFONT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

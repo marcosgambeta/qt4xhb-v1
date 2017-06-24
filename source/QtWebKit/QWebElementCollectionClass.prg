@@ -129,8 +129,7 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_APPEND )
   QWebElementCollection * obj = (QWebElementCollection *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QWebElementCollection * par1 = (QWebElementCollection *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->append ( *par1 );
+    obj->append ( *PQWEBELEMENTCOLLECTION(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

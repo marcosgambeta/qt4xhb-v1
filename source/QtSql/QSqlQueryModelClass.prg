@@ -180,8 +180,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_SETQUERY1 )
   QSqlQueryModel * obj = (QSqlQueryModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSqlQuery * par1 = (QSqlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setQuery ( *par1 );
+    obj->setQuery ( *PQSQLQUERY(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

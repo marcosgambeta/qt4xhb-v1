@@ -851,9 +851,8 @@ HB_FUNC_STATIC( QPAINTER_DRAWIMAGE1 )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QImage * par2 = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par4 = ISNIL(4)? (int) Qt::AutoColor : hb_parni(4);
-    obj->drawImage ( *PQRECTF(1), *par2, *PQRECTF(3), (Qt::ImageConversionFlags) par4 );
+    obj->drawImage ( *PQRECTF(1), *PQIMAGE(2), *PQRECTF(3), (Qt::ImageConversionFlags) par4 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -867,9 +866,8 @@ HB_FUNC_STATIC( QPAINTER_DRAWIMAGE2 )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QImage * par2 = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par4 = ISNIL(4)? (int) Qt::AutoColor : hb_parni(4);
-    obj->drawImage ( *PQRECT(1), *par2, *PQRECT(3), (Qt::ImageConversionFlags) par4 );
+    obj->drawImage ( *PQRECT(1), *PQIMAGE(2), *PQRECT(3), (Qt::ImageConversionFlags) par4 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -883,8 +881,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWIMAGE3 )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QImage * par2 = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->drawImage ( *PQPOINTF(1), *par2 );
+    obj->drawImage ( *PQPOINTF(1), *PQIMAGE(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -898,8 +895,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWIMAGE4 )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QImage * par2 = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->drawImage ( *PQPOINT(1), *par2 );
+    obj->drawImage ( *PQPOINT(1), *PQIMAGE(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -913,9 +909,8 @@ HB_FUNC_STATIC( QPAINTER_DRAWIMAGE5 )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QImage * par2 = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par4 = ISNIL(4)? (int) Qt::AutoColor : hb_parni(4);
-    obj->drawImage ( *PQPOINTF(1), *par2, *PQRECTF(3), (Qt::ImageConversionFlags) par4 );
+    obj->drawImage ( *PQPOINTF(1), *PQIMAGE(2), *PQRECTF(3), (Qt::ImageConversionFlags) par4 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -929,9 +924,8 @@ HB_FUNC_STATIC( QPAINTER_DRAWIMAGE6 )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QImage * par2 = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par4 = ISNIL(4)? (int) Qt::AutoColor : hb_parni(4);
-    obj->drawImage ( *PQPOINT(1), *par2, *PQRECT(3), (Qt::ImageConversionFlags) par4 );
+    obj->drawImage ( *PQPOINT(1), *PQIMAGE(2), *PQRECT(3), (Qt::ImageConversionFlags) par4 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -945,8 +939,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWIMAGE7 )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QImage * par2 = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->drawImage ( *PQRECTF(1), *par2 );
+    obj->drawImage ( *PQRECTF(1), *PQIMAGE(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -960,8 +953,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWIMAGE8 )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QImage * par2 = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->drawImage ( *PQRECT(1), *par2 );
+    obj->drawImage ( *PQRECT(1), *PQIMAGE(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -975,9 +967,8 @@ HB_FUNC_STATIC( QPAINTER_DRAWIMAGE9 )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QImage * par3 = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par8 = ISNIL(8)? (int) Qt::AutoColor : hb_parni(8);
-    obj->drawImage ( PINT(1), PINT(2), *par3, OPINT(4,0), OPINT(5,0), OPINT(6,-1), OPINT(7,-1), (Qt::ImageConversionFlags) par8 );
+    obj->drawImage ( PINT(1), PINT(2), *PQIMAGE(3), OPINT(4,0), OPINT(5,0), OPINT(6,-1), OPINT(7,-1), (Qt::ImageConversionFlags) par8 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1041,8 +1032,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWLINE1 )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QLineF * par1 = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->drawLine ( *par1 );
+    obj->drawLine ( *PQLINEF(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1056,8 +1046,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWLINE2 )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QLine * par1 = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->drawLine ( *par1 );
+    obj->drawLine ( *PQLINE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1994,8 +1983,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWSTATICTEXT1 )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStaticText * par2 = (QStaticText *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->drawStaticText ( *PQPOINTF(1), *par2 );
+    obj->drawStaticText ( *PQPOINTF(1), *PQSTATICTEXT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -2009,8 +1997,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWSTATICTEXT2 )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStaticText * par2 = (QStaticText *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->drawStaticText ( *PQPOINT(1), *par2 );
+    obj->drawStaticText ( *PQPOINT(1), *PQSTATICTEXT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -2024,8 +2011,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWSTATICTEXT3 )
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStaticText * par3 = (QStaticText *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->drawStaticText ( PINT(1), PINT(2), *par3 );
+    obj->drawStaticText ( PINT(1), PINT(2), *PQSTATICTEXT(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

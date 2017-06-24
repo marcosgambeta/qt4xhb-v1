@@ -114,8 +114,7 @@ HB_FUNC_STATIC( QXMLNAME_LOCALNAME )
   QXmlName * obj = (QXmlName *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QXmlNamePool * par1 = (QXmlNamePool *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RQSTRING( obj->localName ( *par1 ) );
+    RQSTRING( obj->localName ( *PQXMLNAMEPOOL(1) ) );
   }
 }
 
@@ -128,8 +127,7 @@ HB_FUNC_STATIC( QXMLNAME_NAMESPACEURI )
   QXmlName * obj = (QXmlName *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QXmlNamePool * par1 = (QXmlNamePool *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RQSTRING( obj->namespaceUri ( *par1 ) );
+    RQSTRING( obj->namespaceUri ( *PQXMLNAMEPOOL(1) ) );
   }
 }
 
@@ -142,8 +140,7 @@ HB_FUNC_STATIC( QXMLNAME_PREFIX )
   QXmlName * obj = (QXmlName *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QXmlNamePool * par1 = (QXmlNamePool *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RQSTRING( obj->prefix ( *par1 ) );
+    RQSTRING( obj->prefix ( *PQXMLNAMEPOOL(1) ) );
   }
 }
 
@@ -156,8 +153,7 @@ HB_FUNC_STATIC( QXMLNAME_TOCLARKNAME )
   QXmlName * obj = (QXmlName *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QXmlNamePool * par1 = (QXmlNamePool *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RQSTRING( obj->toClarkName ( *par1 ) );
+    RQSTRING( obj->toClarkName ( *PQXMLNAMEPOOL(1) ) );
   }
 }
 
@@ -168,8 +164,7 @@ QXmlName fromClarkName ( const QString & clarkName, const QXmlNamePool & namePoo
 */
 HB_FUNC_STATIC( QXMLNAME_FROMCLARKNAME )
 {
-  QXmlNamePool * par2 = (QXmlNamePool *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QXmlName * ptr = new QXmlName( QXmlName::fromClarkName ( PQSTRING(1), *par2 ) );
+  QXmlName * ptr = new QXmlName( QXmlName::fromClarkName ( PQSTRING(1), *PQXMLNAMEPOOL(2) ) );
   _qt4xhb_createReturnClass ( ptr, "QXMLNAME", true );
 }
 

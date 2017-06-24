@@ -173,8 +173,7 @@ void removeDatabase ( const QWebDatabase & db )
 */
 HB_FUNC_STATIC( QWEBDATABASE_REMOVEDATABASE )
 {
-  QWebDatabase * par1 = (QWebDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QWebDatabase::removeDatabase ( *par1 );
+  QWebDatabase::removeDatabase ( *PQWEBDATABASE(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

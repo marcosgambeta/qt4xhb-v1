@@ -427,8 +427,7 @@ HB_FUNC_STATIC( QLAYOUT_SETCONTENTSMARGINS2 )
   QLayout * obj = (QLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QMargins * par1 = (QMargins *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setContentsMargins ( *par1 );
+    obj->setContentsMargins ( *PQMARGINS(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

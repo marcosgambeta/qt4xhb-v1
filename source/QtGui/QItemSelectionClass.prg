@@ -169,9 +169,8 @@ HB_FUNC_STATIC( QITEMSELECTION_MERGE )
   QItemSelection * obj = (QItemSelection *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QItemSelection * par1 = (QItemSelection *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     int par2 = hb_parni(2);
-    obj->merge ( *par1, (QItemSelectionModel::SelectionFlags) par2 );
+    obj->merge ( *PQITEMSELECTION(1), (QItemSelectionModel::SelectionFlags) par2 );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -197,10 +196,8 @@ void split ( const QItemSelectionRange & range, const QItemSelectionRange & othe
 */
 HB_FUNC_STATIC( QITEMSELECTION_SPLIT )
 {
-  QItemSelectionRange * par1 = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QItemSelectionRange * par2 = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
   QItemSelection * par3 = (QItemSelection *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QItemSelection::split ( *par1, *par2, par3 );
+  QItemSelection::split ( *PQITEMSELECTIONRANGE(1), *PQITEMSELECTIONRANGE(2), par3 );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

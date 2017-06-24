@@ -240,8 +240,7 @@ HB_FUNC_STATIC( QSHORTCUT_SETKEY )
   QShortcut * obj = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QKeySequence * par1 = (QKeySequence *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setKey ( *par1 );
+    obj->setKey ( *PQKEYSEQUENCE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

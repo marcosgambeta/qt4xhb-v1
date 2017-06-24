@@ -209,8 +209,7 @@ HB_FUNC_STATIC( QSTATICTEXT_SETTEXTOPTION )
   QStaticText * obj = (QStaticText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTextOption * par1 = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setTextOption ( *par1 );
+    obj->setTextOption ( *PQTEXTOPTION(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

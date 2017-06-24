@@ -487,9 +487,7 @@ qreal dotProduct ( const QVector4D & v1, const QVector4D & v2 )
 */
 HB_FUNC_STATIC( QVECTOR4D_DOTPRODUCT )
 {
-  QVector4D * par1 = (QVector4D *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QVector4D * par2 = (QVector4D *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  RQREAL( QVector4D::dotProduct ( *par1, *par2 ) );
+  RQREAL( QVector4D::dotProduct ( *PQVECTOR4D(1), *PQVECTOR4D(2) ) );
 }
 
 

@@ -210,8 +210,7 @@ HB_FUNC_STATIC( QTEXTFRAME_SETFRAMEFORMAT )
   QTextFrame * obj = (QTextFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QTextFrameFormat * par1 = (QTextFrameFormat *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setFrameFormat ( *par1 );
+    obj->setFrameFormat ( *PQTEXTFRAMEFORMAT(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

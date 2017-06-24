@@ -98,8 +98,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_SETORIGIN )
   QGraphicsScale * obj = (QGraphicsScale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QVector3D * par1 = (QVector3D *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setOrigin ( *par1 );
+    obj->setOrigin ( *PQVECTOR3D(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

@@ -386,8 +386,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETSHORTCUT )
   {
     if( ISQKEYSEQUENCE(1) )
     {
-      QKeySequence * par1 = (QKeySequence *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-      obj->setShortcut ( *par1 );
+      obj->setShortcut ( *PQKEYSEQUENCE(1) );
     }
     else
     {

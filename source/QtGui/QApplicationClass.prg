@@ -461,8 +461,7 @@ void changeOverrideCursor ( const QCursor & cursor )
 */
 HB_FUNC_STATIC( QAPPLICATION_CHANGEOVERRIDECURSOR )
 {
-  QCursor * par1 = (QCursor *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QApplication::changeOverrideCursor ( *par1 );
+  QApplication::changeOverrideCursor ( *PQCURSOR(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -908,8 +907,7 @@ void setOverrideCursor ( const QCursor & cursor )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETOVERRIDECURSOR )
 {
-  QCursor * par1 = (QCursor *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QApplication::setOverrideCursor ( *par1 );
+  QApplication::setOverrideCursor ( *PQCURSOR(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -919,8 +917,7 @@ void setPalette ( const QPalette & palette, const char * className = 0 )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETPALETTE )
 {
-  QPalette * par1 = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QApplication::setPalette ( *par1, (const char *) ISNIL(2)? 0 : hb_parc(2) );
+  QApplication::setPalette ( *PQPALETTE(1), (const char *) ISNIL(2)? 0 : hb_parc(2) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

@@ -223,11 +223,8 @@ HB_FUNC_STATIC( QFONTMETRICS_BOUNDINGRECT4 )
   QFontMetrics * obj = (QFontMetrics *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QRect  * par1 = (QRect  *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par2 = hb_parni(2);
-    int par4 = hb_parni(4);
     int* par5 = (int*) hb_itemGetPtr( hb_objSendMsg( hb_param(5, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QRect * ptr = new QRect( obj->boundingRect ( *par1, par2, PQSTRING(3), par4, par5 ) );
+    QRect * ptr = new QRect( obj->boundingRect ( *PQRECT(1), PINT(2), PQSTRING(3), OPINT(4,0), par5 ) );
     _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }

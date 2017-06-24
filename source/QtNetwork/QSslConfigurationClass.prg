@@ -429,8 +429,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SETLOCALCERTIFICATE )
   QSslConfiguration * obj = (QSslConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSslCertificate * par1 = (QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setLocalCertificate ( *par1 );
+    obj->setLocalCertificate ( *PQSSLCERTIFICATE(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -473,8 +472,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SETPRIVATEKEY )
   QSslConfiguration * obj = (QSslConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QSslKey * par1 = (QSslKey *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setPrivateKey ( *par1 );
+    obj->setPrivateKey ( *PQSSLKEY(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -511,8 +509,7 @@ void setDefaultConfiguration ( const QSslConfiguration & configuration )
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SETDEFAULTCONFIGURATION )
 {
-  QSslConfiguration * par1 = (QSslConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QSslConfiguration::setDefaultConfiguration ( *par1 );
+  QSslConfiguration::setDefaultConfiguration ( *PQSSLCONFIGURATION(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
 

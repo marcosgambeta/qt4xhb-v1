@@ -503,8 +503,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAP4 )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QLine * par1 = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QLine * ptr = new QLine( obj->map ( *par1 ) );
+    QLine * ptr = new QLine( obj->map ( *PQLINE(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QLINE", true );
   }
 }
@@ -518,8 +517,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAP5 )
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QLineF * par1 = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QLineF * ptr = new QLineF( obj->map ( *par1 ) );
+    QLineF * ptr = new QLineF( obj->map ( *PQLINEF(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QLINEF", true );
   }
 }

@@ -284,8 +284,7 @@ HB_FUNC_STATIC( QDOMELEMENT_REMOVEATTRIBUTENODE )
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDomAttr * par1 = (QDomAttr *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QDomAttr * ptr = new QDomAttr( obj->removeAttributeNode ( *par1 ) );
+    QDomAttr * ptr = new QDomAttr( obj->removeAttributeNode ( *PQDOMATTR(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QDOMATTR", true );
   }
 }
@@ -527,8 +526,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENODE )
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDomAttr * par1 = (QDomAttr *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QDomAttr * ptr = new QDomAttr( obj->setAttributeNode ( *par1 ) );
+    QDomAttr * ptr = new QDomAttr( obj->setAttributeNode ( *PQDOMATTR(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QDOMATTR", true );
   }
 }
@@ -542,8 +540,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENODENS )
   QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QDomAttr * par1 = (QDomAttr *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QDomAttr * ptr = new QDomAttr( obj->setAttributeNodeNS ( *par1 ) );
+    QDomAttr * ptr = new QDomAttr( obj->setAttributeNodeNS ( *PQDOMATTR(1) ) );
     _qt4xhb_createReturnClass ( ptr, "QDOMATTR", true );
   }
 }
