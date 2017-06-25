@@ -654,8 +654,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING1 )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qlonglong par1 = hb_parnl(1);
-    RQSTRING( obj->toCurrencyString ( par1, OPQSTRING(2,QString()) ) );
+    RQSTRING( obj->toCurrencyString ( PQLONGLONG(1), OPQSTRING(2,QString()) ) );
   }
 }
 
@@ -733,8 +732,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING7 )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qulonglong par1 = hb_parnl(1);
-    RQSTRING( obj->toCurrencyString ( par1, OPQSTRING(2,QString()) ) );
+    RQSTRING( obj->toCurrencyString ( PQULONGLONG(1), OPQSTRING(2,QString()) ) );
   }
 }
 
@@ -911,8 +909,7 @@ HB_FUNC_STATIC( QLOCALE_TOLONGLONG )
   if( obj )
   {
     bool par2;
-    qlonglong l = obj->toLongLong ( PQSTRING(1), &par2, OPINT(3,0) );
-    hb_retnl( l );
+    RQLONGLONG( obj->toLongLong ( PQSTRING(1), &par2, OPINT(3,0) ) );
     hb_storl( par2, 2 );
   }
 }
@@ -954,8 +951,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING1 )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qlonglong par1 = hb_parnl(1);
-    RQSTRING( obj->toString ( par1 ) );
+    RQSTRING( obj->toString ( PQLONGLONG(1) ) );
   }
 }
 
@@ -1112,8 +1108,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING13 )
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qulonglong par1 = hb_parnl(1);
-    RQSTRING( obj->toString ( par1 ) );
+    RQSTRING( obj->toString ( PQULONGLONG(1) ) );
   }
 }
 
@@ -1224,8 +1219,7 @@ HB_FUNC_STATIC( QLOCALE_TOULONGLONG )
   if( obj )
   {
     bool par2;
-    qlonglong l = obj->toULongLong ( PQSTRING(1), &par2, OPINT(3,0) );
-    hb_retnl( l );
+    RQLONGLONG( obj->toULongLong ( PQSTRING(1), &par2, OPINT(3,0) ) );
     hb_storl( par2, 2 );
   }
 }

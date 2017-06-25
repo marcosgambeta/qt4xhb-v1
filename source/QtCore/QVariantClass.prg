@@ -267,8 +267,7 @@ QVariant ( qlonglong val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW12 )
 {
-  qlonglong par1 = hb_parnl(1);
-  QVariant * o = new QVariant ( par1 );
+  QVariant * o = new QVariant ( PQLONGLONG(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
@@ -278,8 +277,7 @@ QVariant ( qulonglong val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW13 )
 {
-  qulonglong par1 = hb_parnl(1);
-  QVariant * o = new QVariant ( par1 );
+  QVariant * o = new QVariant ( PQULONGLONG(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 

@@ -1634,8 +1634,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM5 )
   QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qlonglong par1 = hb_parnl(1);
-    QByteArray * ptr = new QByteArray( obj->setNum ( par1, OPINT(2,10) ) );
+    QByteArray * ptr = new QByteArray( obj->setNum ( PQLONGLONG(1), OPINT(2,10) ) );
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -1649,8 +1648,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM6 )
   QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    qulonglong par1 = hb_parnl(1);
-    QByteArray * ptr = new QByteArray( obj->setNum ( par1, OPINT(2,10) ) );
+    QByteArray * ptr = new QByteArray( obj->setNum ( PQULONGLONG(1), OPINT(2,10) ) );
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
@@ -1991,8 +1989,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOLONGLONG )
   if( obj )
   {
     bool par1;
-    qlonglong l = obj->toLongLong ( &par1, OPINT(2,10) );
-    hb_retnl( l );
+    RQLONGLONG( obj->toLongLong ( &par1, OPINT(2,10) ) );
     hb_storl( par1, 1 );
   }
 }
@@ -2084,8 +2081,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOULONGLONG )
   if( obj )
   {
     bool par1;
-    qulonglong l = obj->toULongLong ( &par1, OPINT(2,10) );
-    hb_retnl( l );
+    RQULONGLONG( obj->toULongLong ( &par1, OPINT(2,10) ) );
     hb_storl( par1, 1 );
   }
 }
@@ -2215,8 +2211,7 @@ QByteArray number ( qlonglong n, int base = 10 )
 */
 HB_FUNC_STATIC( QBYTEARRAY_NUMBER3 )
 {
-  qlonglong par1 = hb_parnl(1);
-  QByteArray * ptr = new QByteArray( QByteArray::number ( par1, OPINT(2,10) ) );
+  QByteArray * ptr = new QByteArray( QByteArray::number ( PQLONGLONG(1), OPINT(2,10) ) );
   _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
 }
 
@@ -2226,8 +2221,7 @@ QByteArray number ( qulonglong n, int base = 10 )
 */
 HB_FUNC_STATIC( QBYTEARRAY_NUMBER4 )
 {
-  qulonglong par1 = hb_parnl(1);
-  QByteArray * ptr = new QByteArray( QByteArray::number ( par1, OPINT(2,10) ) );
+  QByteArray * ptr = new QByteArray( QByteArray::number ( PQULONGLONG(1), OPINT(2,10) ) );
   _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
 }
 
