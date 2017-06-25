@@ -103,17 +103,7 @@ HB_FUNC_STATIC( QFONTDATABASE_FAMILIES )
   if( obj )
   {
     int par1 = ISNIL(1)? (int) QFontDatabase::Any : hb_parni(1);
-    QStringList strl = obj->families ( (QFontDatabase::WritingSystem) par1 );
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<strl.count();i++)
-    {
-      PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
-      hb_arrayAddForward( pArray, pItem );
-      hb_itemRelease(pItem);
-    }
-    hb_itemReturnRelease(pArray);
+    RQSTRINGLIST( obj->families ( (QFontDatabase::WritingSystem) par1 ) );
   }
 }
 
@@ -293,17 +283,7 @@ HB_FUNC_STATIC( QFONTDATABASE_STYLES )
   QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList strl = obj->styles ( PQSTRING(1) );
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<strl.count();i++)
-    {
-      PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
-      hb_arrayAddForward( pArray, pItem );
-      hb_itemRelease(pItem);
-    }
-    hb_itemReturnRelease(pArray);
+    RQSTRINGLIST( obj->styles ( PQSTRING(1) ) );
   }
 }
 
@@ -406,17 +386,7 @@ QStringList applicationFontFamilies ( int id )
 */
 HB_FUNC_STATIC( QFONTDATABASE_APPLICATIONFONTFAMILIES )
 {
-  QStringList strl = QFontDatabase::applicationFontFamilies ( PINT(1) );
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
-  int i;
-  for(i=0;i<strl.count();i++)
-  {
-    PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
-    hb_arrayAddForward( pArray, pItem );
-    hb_itemRelease(pItem);
-  }
-  hb_itemReturnRelease(pArray);
+  RQSTRINGLIST( QFontDatabase::applicationFontFamilies ( PINT(1) ) );
 }
 
 

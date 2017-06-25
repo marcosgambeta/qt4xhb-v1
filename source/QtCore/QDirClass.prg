@@ -384,17 +384,7 @@ HB_FUNC_STATIC( QDIR_ENTRYLIST1 )
   int par3 = ISNIL(3)? (int) QDir::NoSort : hb_parni(3);
   if( obj )
   {
-    QStringList strl = obj->entryList ( PQSTRINGLIST(1), ISNIL(2)? QDir::NoFilter : (QDir::Filters) hb_parni(2), (QDir::SortFlags) par3 );
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<strl.count();i++)
-    {
-      PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
-      hb_arrayAddForward( pArray, pItem );
-      hb_itemRelease(pItem);
-    }
-    hb_itemReturnRelease(pArray);
+    RQSTRINGLIST( obj->entryList ( PQSTRINGLIST(1), ISNIL(2)? QDir::NoFilter : (QDir::Filters) hb_parni(2), (QDir::SortFlags) par3 ) );
   }
 }
 
@@ -408,17 +398,7 @@ HB_FUNC_STATIC( QDIR_ENTRYLIST2 )
   int par2 = ISNIL(2)? (int) QDir::NoSort : hb_parni(2);
   if( obj )
   {
-    QStringList strl = obj->entryList ( ISNIL(1)? QDir::NoFilter : (QDir::Filters) hb_parni(1), (QDir::SortFlags) par2 );
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<strl.count();i++)
-    {
-      PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
-      hb_arrayAddForward( pArray, pItem );
-      hb_itemRelease(pItem);
-    }
-    hb_itemReturnRelease(pArray);
+    RQSTRINGLIST( obj->entryList ( ISNIL(1)? QDir::NoFilter : (QDir::Filters) hb_parni(1), (QDir::SortFlags) par2 ) );
   }
 }
 
@@ -604,17 +584,7 @@ HB_FUNC_STATIC( QDIR_NAMEFILTERS )
   QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList strl = obj->nameFilters ();
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<strl.count();i++)
-    {
-      PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
-      hb_arrayAddForward( pArray, pItem );
-      hb_itemRelease(pItem);
-    }
-    hb_itemReturnRelease(pArray);
+    RQSTRINGLIST( obj->nameFilters () );
   }
 }
 
@@ -964,17 +934,7 @@ QStringList searchPaths(const QString & prefix)
 */
 HB_FUNC_STATIC( QDIR_SEARCHPATHS )
 {
-  QStringList strl = QDir::searchPaths ( PQSTRING(1) );
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
-  int i;
-  for(i=0;i<strl.count();i++)
-  {
-    PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
-    hb_arrayAddForward( pArray, pItem );
-    hb_itemRelease(pItem);
-  }
-  hb_itemReturnRelease(pArray);
+  RQSTRINGLIST( QDir::searchPaths ( PQSTRING(1) ) );
 }
 
 

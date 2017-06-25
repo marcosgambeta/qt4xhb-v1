@@ -553,17 +553,7 @@ HB_FUNC_STATIC( QSQLDATABASE_TABLES )
   QSqlDatabase * obj = (QSqlDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList strl = obj->tables ( ISNIL(1)? QSql::Tables : (QSql::TableType) hb_parni(1) );
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<strl.count();i++)
-    {
-      PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
-      hb_arrayAddForward( pArray, pItem );
-      hb_itemRelease(pItem);
-    }
-    hb_itemReturnRelease(pArray);
+    RQSTRINGLIST( obj->tables ( ISNIL(1)? QSql::Tables : (QSql::TableType) hb_parni(1) ) );
   }
 }
 
@@ -714,17 +704,7 @@ QStringList connectionNames ()
 */
 HB_FUNC_STATIC( QSQLDATABASE_CONNECTIONNAMES )
 {
-  QStringList strl = QSqlDatabase::connectionNames ();
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
-  int i;
-  for(i=0;i<strl.count();i++)
-  {
-    PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
-    hb_arrayAddForward( pArray, pItem );
-    hb_itemRelease(pItem);
-  }
-  hb_itemReturnRelease(pArray);
+  RQSTRINGLIST( QSqlDatabase::connectionNames () );
 }
 
 
@@ -793,17 +773,7 @@ QStringList drivers ()
 */
 HB_FUNC_STATIC( QSQLDATABASE_DRIVERS )
 {
-  QStringList strl = QSqlDatabase::drivers ();
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
-  int i;
-  for(i=0;i<strl.count();i++)
-  {
-    PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
-    hb_arrayAddForward( pArray, pItem );
-    hb_itemRelease(pItem);
-  }
-  hb_itemReturnRelease(pArray);
+  RQSTRINGLIST( QSqlDatabase::drivers () );
 }
 
 

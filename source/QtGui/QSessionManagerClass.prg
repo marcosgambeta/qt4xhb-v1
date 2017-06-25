@@ -98,17 +98,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_DISCARDCOMMAND )
   QSessionManager * obj = (QSessionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList strl = obj->discardCommand ();
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<strl.count();i++)
-    {
-      PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
-      hb_arrayAddForward( pArray, pItem );
-      hb_itemRelease(pItem);
-    }
-    hb_itemReturnRelease(pArray);
+    RQSTRINGLIST( obj->discardCommand () );
   }
 }
 
@@ -162,17 +152,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_RESTARTCOMMAND )
   QSessionManager * obj = (QSessionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    QStringList strl = obj->restartCommand ();
-    PHB_ITEM pArray;
-    pArray = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<strl.count();i++)
-    {
-      PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
-      hb_arrayAddForward( pArray, pItem );
-      hb_itemRelease(pItem);
-    }
-    hb_itemReturnRelease(pArray);
+    RQSTRINGLIST( obj->restartCommand () );
   }
 }
 
@@ -295,8 +275,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SETRESTARTHINT )
   QSessionManager * obj = (QSessionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    int par1 = hb_parni(1);
-    obj->setRestartHint ( (QSessionManager::RestartHint) par1 );
+    obj->setRestartHint ( (QSessionManager::RestartHint) hb_parni(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

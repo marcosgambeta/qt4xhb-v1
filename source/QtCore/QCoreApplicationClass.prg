@@ -222,17 +222,7 @@ QStringList arguments ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_ARGUMENTS )
 {
-  QStringList strl = QCoreApplication::arguments ();
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
-  int i;
-  for(i=0;i<strl.count();i++)
-  {
-    PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
-    hb_arrayAddForward( pArray, pItem );
-    hb_itemRelease(pItem);
-  }
-  hb_itemReturnRelease(pArray);
+  RQSTRINGLIST( QCoreApplication::arguments () );
 }
 
 
@@ -309,17 +299,7 @@ QStringList libraryPaths ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_LIBRARYPATHS )
 {
-  QStringList strl = QCoreApplication::libraryPaths ();
-  PHB_ITEM pArray;
-  pArray = hb_itemArrayNew(0);
-  int i;
-  for(i=0;i<strl.count();i++)
-  {
-    PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
-    hb_arrayAddForward( pArray, pItem );
-    hb_itemRelease(pItem);
-  }
-  hb_itemReturnRelease(pArray);
+  RQSTRINGLIST( QCoreApplication::libraryPaths () );
 }
 
 

@@ -495,8 +495,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_GEOMETRYINPUTTYPE )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    GLenum i = obj->geometryInputType ();
-    hb_retni( i );
+    RGLENUM( obj->geometryInputType () );
   }
 }
 
@@ -509,8 +508,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_GEOMETRYOUTPUTTYPE )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    GLenum i = obj->geometryOutputType ();
-    hb_retni( i );
+    RGLENUM( obj->geometryOutputType () );
   }
 }
 
@@ -588,7 +586,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_PROGRAMID )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    hb_retni( (GLuint) obj->programId () );
+    RGLUINT( obj->programId () );
   }
 }
 
@@ -670,8 +668,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEBUFFER1 )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    GLenum par2 = hb_parni(2);
-    obj->setAttributeBuffer ( PINT(1), par2, PINT(3), PINT(4), OPINT(5,0) );
+    obj->setAttributeBuffer ( PINT(1), PGLENUM(2), PINT(3), PINT(4), OPINT(5,0) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -685,10 +682,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEBUFFER2 )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    GLenum par2 = hb_parni(2);
-    int par3 = hb_parni(3);
-    int par4 = hb_parni(4);
-    obj->setAttributeBuffer ( (const char *) hb_parc(1), par2, par3, par4, OPINT(5,0) );
+    obj->setAttributeBuffer ( (const char *) hb_parc(1), PGLENUM(2), PINT(3), PINT(4), OPINT(5,0) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -717,8 +711,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE1 )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    GLfloat par2 = hb_parnd(2);
-    obj->setAttributeValue ( PINT(1), par2 );
+    obj->setAttributeValue ( PINT(1), PGLFLOAT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -732,9 +725,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE2 )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    GLfloat par2 = hb_parnd(2);
-    GLfloat par3 = hb_parnd(3);
-    obj->setAttributeValue ( PINT(1), par2, par3 );
+    obj->setAttributeValue ( PINT(1), PGLFLOAT(2), PGLFLOAT(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -748,10 +739,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE3 )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    GLfloat par2 = hb_parnd(2);
-    GLfloat par3 = hb_parnd(3);
-    GLfloat par4 = hb_parnd(4);
-    obj->setAttributeValue ( PINT(1), par2, par3, par4 );
+    obj->setAttributeValue ( PINT(1), PGLFLOAT(2), PGLFLOAT(3), PGLFLOAT(4) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -765,11 +753,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE4 )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    GLfloat par2 = hb_parnd(2);
-    GLfloat par3 = hb_parnd(3);
-    GLfloat par4 = hb_parnd(4);
-    GLfloat par5 = hb_parnd(5);
-    obj->setAttributeValue ( PINT(1), par2, par3, par4, par5 );
+    obj->setAttributeValue ( PINT(1), PGLFLOAT(2), PGLFLOAT(3), PGLFLOAT(4), PGLFLOAT(5) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -802,8 +786,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE10 )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    GLfloat par2 = hb_parnd(2);
-    obj->setAttributeValue ( (const char *) hb_parc(1), par2 );
+    obj->setAttributeValue ( (const char *) hb_parc(1), PGLFLOAT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -817,9 +800,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE11 )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    GLfloat par2 = hb_parnd(2);
-    GLfloat par3 = hb_parnd(3);
-    obj->setAttributeValue ( (const char *) hb_parc(1), par2, par3 );
+    obj->setAttributeValue ( (const char *) hb_parc(1), PGLFLOAT(2), PGLFLOAT(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -833,10 +814,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE12 )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    GLfloat par2 = hb_parnd(2);
-    GLfloat par3 = hb_parnd(3);
-    GLfloat par4 = hb_parnd(4);
-    obj->setAttributeValue ( (const char *) hb_parc(1), par2, par3, par4 );
+    obj->setAttributeValue ( (const char *) hb_parc(1), PGLFLOAT(2), PGLFLOAT(3), PGLFLOAT(4) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -850,11 +828,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE13 )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    GLfloat par2 = hb_parnd(2);
-    GLfloat par3 = hb_parnd(3);
-    GLfloat par4 = hb_parnd(4);
-    GLfloat par5 = hb_parnd(5);
-    obj->setAttributeValue ( (const char *) hb_parc(1), par2, par3, par4, par5 );
+    obj->setAttributeValue ( (const char *) hb_parc(1), PGLFLOAT(2), PGLFLOAT(3), PGLFLOAT(4), PGLFLOAT(5) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -952,8 +926,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETGEOMETRYINPUTTYPE )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    GLenum par1 = hb_parni(1);
-    obj->setGeometryInputType ( par1 );
+    obj->setGeometryInputType ( PGLENUM(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -967,8 +940,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETGEOMETRYOUTPUTTYPE )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    GLenum par1 = hb_parni(1);
-    obj->setGeometryOutputType ( par1 );
+    obj->setGeometryOutputType ( PGLENUM(1) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -996,8 +968,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE1 )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    GLfloat par2 = hb_parnd(2);
-    obj->setUniformValue ( PINT(1), par2 );
+    obj->setUniformValue ( PINT(1), PGLFLOAT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1082,8 +1053,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE21 )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    GLint par2 = hb_parni(2);
-    obj->setUniformValue ( PINT(1), par2 );
+    obj->setUniformValue ( PINT(1), PGLINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1097,8 +1067,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE22 )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    GLuint par2 = hb_parni(2);
-    obj->setUniformValue ( PINT(1), par2 );
+    obj->setUniformValue ( PINT(1), PGLUINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1112,9 +1081,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE23 )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    GLfloat par2 = hb_parnd(2);
-    GLfloat par3 = hb_parnd(3);
-    obj->setUniformValue ( PINT(1), par2, par3 );
+    obj->setUniformValue ( PINT(1), PGLFLOAT(2), PGLFLOAT(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1128,10 +1095,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE24 )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    GLfloat par2 = hb_parnd(2);
-    GLfloat par3 = hb_parnd(3);
-    GLfloat par4 = hb_parnd(4);
-    obj->setUniformValue ( PINT(1), par2, par3, par4 );
+    obj->setUniformValue ( PINT(1), PGLFLOAT(2), PGLFLOAT(3), PGLFLOAT(4) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1145,11 +1109,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE25 )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    GLfloat par2 = hb_parnd(2);
-    GLfloat par3 = hb_parnd(3);
-    GLfloat par4 = hb_parnd(4);
-    GLfloat par5 = hb_parnd(5);
-    obj->setUniformValue ( PINT(1), par2, par3, par4, par5 );
+    obj->setUniformValue ( PINT(1), PGLFLOAT(2), PGLFLOAT(3), PGLFLOAT(4), PGLFLOAT(5) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1260,8 +1220,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE44 )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    GLfloat par2 = hb_parnd(2);
-    obj->setUniformValue ( (const char *) hb_parc(1), par2 );
+    obj->setUniformValue ( (const char *) hb_parc(1), PGLFLOAT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1275,8 +1234,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE45 )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    GLint par2 = hb_parni(2);
-    obj->setUniformValue ( (const char *) hb_parc(1), par2 );
+    obj->setUniformValue ( (const char *) hb_parc(1), PGLINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1290,8 +1248,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE46 )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    GLuint par2 = hb_parni(2);
-    obj->setUniformValue ( (const char *) hb_parc(1), par2 );
+    obj->setUniformValue ( (const char *) hb_parc(1), PGLUINT(2) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1305,9 +1262,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE47 )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    GLfloat par2 = hb_parnd(2);
-    GLfloat par3 = hb_parnd(3);
-    obj->setUniformValue ( (const char *) hb_parc(1), par2, par3 );
+    obj->setUniformValue ( (const char *) hb_parc(1), PGLFLOAT(2), PGLFLOAT(3) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1321,10 +1276,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE48 )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    GLfloat par2 = hb_parnd(2);
-    GLfloat par3 = hb_parnd(3);
-    GLfloat par4 = hb_parnd(4);
-    obj->setUniformValue ( (const char *) hb_parc(1), par2, par3, par4 );
+    obj->setUniformValue ( (const char *) hb_parc(1), PGLFLOAT(2), PGLFLOAT(3), PGLFLOAT(4) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1338,11 +1290,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE49 )
   QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    GLfloat par2 = hb_parnd(2);
-    GLfloat par3 = hb_parnd(3);
-    GLfloat par4 = hb_parnd(4);
-    GLfloat par5 = hb_parnd(5);
-    obj->setUniformValue ( (const char *) hb_parc(1), par2, par3, par4, par5 );
+    obj->setUniformValue ( (const char *) hb_parc(1), PGLFLOAT(2), PGLFLOAT(3), PGLFLOAT(4), PGLFLOAT(5) );
   }
   hb_itemReturn( hb_stackSelfItem() );
 }

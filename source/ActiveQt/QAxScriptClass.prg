@@ -160,17 +160,7 @@ HB_FUNC_STATIC( QAXSCRIPT_FUNCTIONS )
   {
     if( (ISNUM(1)||ISNIL(1)) )
     {
-      QStringList strl = obj->functions ( ISNIL(1)? QAxScript::FunctionNames : (QAxScript::FunctionFlags) hb_parni(1) );
-      PHB_ITEM pArray;
-      pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<strl.count();i++)
-      {
-        PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING(strl[i]) );
-        hb_arrayAddForward( pArray, pItem );
-        hb_itemRelease(pItem);
-      }
-      hb_itemReturnRelease(pArray);
+      RQSTRINGLIST( obj->functions ( ISNIL(1)? QAxScript::FunctionNames : (QAxScript::FunctionFlags) hb_parni(1) ) );
     }
     else
     {

@@ -1378,6 +1378,13 @@
 //#define PQSTRING(n)                                         QString::fromLatin1( hb_parc(n) )
 //#define PQSTRING(n)                                         QString::fromUtf8( hb_parc(n) )
 #define PQSTRINGLIST(n)                                     _qt4xhb_convert_array_parameter_to_qstringlist(n)
+#define PGLBOOLEAN(n)                                       (GLboolean) hb_parl(n)
+#define PGLINT(n)                                           (GLint) hb_parni(n)
+#define PGLUINT(n)                                          (GLuint) hb_parni(n)
+#define PGLFLOAT(n)                                         (GLfloat) hb_parnd(n)
+#define PGLENUM(n)                                          (GLenum) hb_parni(n)
+#define PGLBITFIELD(n)                                      (GLbitfield) hb_parni(n)
+#define PGLSIZEI(n)                                         (GLsizei) hb_parni(n)
 
 // macros for optional parameters
 #define OPBOOL(n,v)                                         (bool) ISNIL(n)? v : hb_parl(n)
@@ -1399,6 +1406,13 @@
 #define OPQSTRING(n,v)                                      ISNIL(n)? v : QString::fromAscii( hb_parc(n) )
 //#define OPQSTRING(n,v)                                      ISNIL(n)? v : QString::fromLatin1( hb_parc(n) )
 //#define OPQSTRING(n,v)                                      ISNIL(n)? v : QString::fromUtf8( hb_parc(n) )
+#define OPGLBOOLEAN(n,v)                                    (GLboolean) ISNIL(n)? v : hb_parl(n)
+#define OPGLINT(n,v)                                        (GLint) ISNIL(n)? v : hb_parni(n)
+#define OPGLUINT(n,v)                                       (GLuint) ISNIL(n)? v : hb_parni(n)
+#define OPGLFLOAT(n,v)                                      (GLfloat) ISNIL(n)? v : hb_parnd(n)
+#define OPGLENUM(n,v)                                       (GLenum) ISNIL(n)? v : hb_parni(n)
+#define OPGLBITFIELD(n,v)                                   (GLbitfield) ISNIL(n)? v : hb_parni(n)
+#define OPGLSIZEI(n,v)                                      (GLsizei) ISNIL(n)? v : hb_parni(n)
 
 // macros for return's
 #define RQSTRING(x)                                         hb_retc( (const char *) x.toAscii().data() )
@@ -1420,6 +1434,14 @@
 #define RQUINT32(x)                                         hb_retni( x )
 #define RQUINT64(x)                                         hb_retnll( x )
 #define RENUM(x)                                            hb_retni( x )
+#define RGLBOOLEAN(x)                                       hb_parl( (GLboolean) x )
+#define RGLINT(x)                                           hb_parni( (GLint) x )
+#define RGLUINT(x)                                          hb_parni( (GLuint) x )
+#define RGLFLOAT(x)                                         hb_parnd( (GLfloat) x )
+#define RGLENUM(x)                                          hb_parni( (GLenum) x )
+#define RGLBITFIELD(x)                                      hb_parni( (GLbitfield) x )
+#define RGLSIZEI(x)                                         hb_parni( (GLsizei) x )
+#define RQSTRINGLIST(x)                                     _qt4xhb_convert_qstringlist_to_array( x )
 
 // conversion from QString to string
 #define QSTRINGTOSTRING(x)                                  (const char *) x.toAscii().data()

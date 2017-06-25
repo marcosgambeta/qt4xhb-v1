@@ -213,3 +213,20 @@ void _qt4xhb_storePointerAndFlag (void * pointer, bool flag)
   hb_itemRelease( des );
   hb_itemReturn( self );
 }
+
+/*
+  converte um objeto QStringList (QList<QString>) em uma array do [x]Harbour
+*/
+void _qt4xhb_convert_qstringlist_to_array ( const QStringList list )
+{
+  PHB_ITEM pArray;
+  pArray = hb_itemArrayNew(0);
+  int i;
+  for(i=0;i<list.count();i++)
+  {
+    PHB_ITEM pItem = hb_itemPutC( NULL, QSTRINGTOSTRING( list[i] ) );
+    hb_arrayAddForward( pArray, pItem );
+    hb_itemRelease(pItem);
+  }
+  hb_itemReturnRelease(pArray);
+}
