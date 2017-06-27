@@ -23,6 +23,7 @@
 #include "qt4xhb_macros.h"
 
 #include <QObject>
+#include <QWidget>
 #include <QStringList>
 
 void _qt4xhb_createReturnClass ( void * ptr, const char * classname )
@@ -148,6 +149,186 @@ void _qt4xhb_createReturnClass ( const void * ptr, const char * classname, bool 
 
     hb_itemReturn( pObject );
     hb_itemRelease( pObject );
+  }
+}
+
+/*
+  cria um objeto (QObject) da classe correspondente ou 'classname' para objetos nulos, com o ponteiro 'ptr'
+*/
+void _qt4xhb_createReturnQObjectClass ( QObject * ptr, const char * classname )
+{
+  PHB_DYNS pDynSym;
+  #ifdef __XHARBOUR__
+  if( ptr )
+  {
+    pDynSym = hb_dynsymFind( (const char *) ptr->metaObject()->className() );
+  }
+  else
+  {
+    pDynSym = hb_dynsymFind( classname );
+  }
+  #else
+  if( ptr )
+  {
+    pDynSym = hb_dynsymFindName( (const char *) ptr->metaObject()->className() );
+  }
+  else
+  {
+    pDynSym = hb_dynsymFindName( classname );
+  }
+  #endif
+  if( pDynSym )
+  {
+    #ifdef __XHARBOUR__
+    hb_vmPushSymbol( pDynSym->pSymbol );
+    #else
+    hb_vmPushDynSym( pDynSym );
+    #endif
+    hb_vmPushNil();
+    hb_vmDo( 0 );
+    PHB_ITEM pObject = hb_itemNew( NULL );
+    hb_itemCopy( pObject, hb_stackReturnItem() );
+    PHB_ITEM pItem = hb_itemNew( NULL );
+    hb_itemPutPtr( pItem, (QObject *) ptr );
+    hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+    hb_itemReturn( pObject );
+    hb_itemRelease( pObject );
+    hb_itemRelease( pItem );
+  }
+}
+
+/*
+  cria um objeto (QObject) da classe correspondente ou 'classname' para objetos nulos, com o ponteiro 'ptr'
+*/
+void _qt4xhb_createReturnQObjectClass ( const QObject * ptr, const char * classname )
+{
+  PHB_DYNS pDynSym;
+  #ifdef __XHARBOUR__
+  if( ptr )
+  {
+    pDynSym = hb_dynsymFind( (const char *) ptr->metaObject()->className() );
+  }
+  else
+  {
+    pDynSym = hb_dynsymFind( classname );
+  }
+  #else
+  if( ptr )
+  {
+    pDynSym = hb_dynsymFindName( (const char *) ptr->metaObject()->className() );
+  }
+  else
+  {
+    pDynSym = hb_dynsymFindName( classname );
+  }
+  #endif
+  if( pDynSym )
+  {
+    #ifdef __XHARBOUR__
+    hb_vmPushSymbol( pDynSym->pSymbol );
+    #else
+    hb_vmPushDynSym( pDynSym );
+    #endif
+    hb_vmPushNil();
+    hb_vmDo( 0 );
+    PHB_ITEM pObject = hb_itemNew( NULL );
+    hb_itemCopy( pObject, hb_stackReturnItem() );
+    PHB_ITEM pItem = hb_itemNew( NULL );
+    hb_itemPutPtr( pItem, (QObject *) ptr );
+    hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+    hb_itemReturn( pObject );
+    hb_itemRelease( pObject );
+    hb_itemRelease( pItem );
+  }
+}
+
+/*
+  cria um objeto (QWidget) da classe correspondente ou 'classname' para objetos nulos, com o ponteiro 'ptr'
+*/
+void _qt4xhb_createReturnQWidgetClass ( QWidget * ptr, const char * classname )
+{
+  PHB_DYNS pDynSym;
+  #ifdef __XHARBOUR__
+  if( ptr )
+  {
+    pDynSym = hb_dynsymFind( (const char *) ptr->metaObject()->className() );
+  }
+  else
+  {
+    pDynSym = hb_dynsymFind( classname );
+  }
+  #else
+  if( ptr )
+  {
+    pDynSym = hb_dynsymFindName( (const char *) ptr->metaObject()->className() );
+  }
+  else
+  {
+    pDynSym = hb_dynsymFindName( classname );
+  }
+  #endif
+  if( pDynSym )
+  {
+    #ifdef __XHARBOUR__
+    hb_vmPushSymbol( pDynSym->pSymbol );
+    #else
+    hb_vmPushDynSym( pDynSym );
+    #endif
+    hb_vmPushNil();
+    hb_vmDo( 0 );
+    PHB_ITEM pObject = hb_itemNew( NULL );
+    hb_itemCopy( pObject, hb_stackReturnItem() );
+    PHB_ITEM pItem = hb_itemNew( NULL );
+    hb_itemPutPtr( pItem, (QWidget *) ptr );
+    hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+    hb_itemReturn( pObject );
+    hb_itemRelease( pObject );
+    hb_itemRelease( pItem );
+  }
+}
+
+/*
+  cria um objeto (QWidget) da classe correspondente ou 'classname' para objetos nulos, com o ponteiro 'ptr'
+*/
+void _qt4xhb_createReturnQWidgetClass ( const QWidget * ptr, const char * classname )
+{
+  PHB_DYNS pDynSym;
+  #ifdef __XHARBOUR__
+  if( ptr )
+  {
+    pDynSym = hb_dynsymFind( (const char *) ptr->metaObject()->className() );
+  }
+  else
+  {
+    pDynSym = hb_dynsymFind( classname );
+  }
+  #else
+  if( ptr )
+  {
+    pDynSym = hb_dynsymFindName( (const char *) ptr->metaObject()->className() );
+  }
+  else
+  {
+    pDynSym = hb_dynsymFindName( classname );
+  }
+  #endif
+  if( pDynSym )
+  {
+    #ifdef __XHARBOUR__
+    hb_vmPushSymbol( pDynSym->pSymbol );
+    #else
+    hb_vmPushDynSym( pDynSym );
+    #endif
+    hb_vmPushNil();
+    hb_vmDo( 0 );
+    PHB_ITEM pObject = hb_itemNew( NULL );
+    hb_itemCopy( pObject, hb_stackReturnItem() );
+    PHB_ITEM pItem = hb_itemNew( NULL );
+    hb_itemPutPtr( pItem, (QWidget *) ptr );
+    hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+    hb_itemReturn( pObject );
+    hb_itemRelease( pObject );
+    hb_itemRelease( pItem );
   }
 }
 
