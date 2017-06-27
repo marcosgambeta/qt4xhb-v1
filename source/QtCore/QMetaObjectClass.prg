@@ -375,7 +375,7 @@ HB_FUNC_STATIC( QMETAOBJECT_NEWINSTANCE )
     QGenericArgument par9 = ISNIL(9)? QGenericArgument() : *(QGenericArgument *) hb_itemGetPtr( hb_objSendMsg( hb_param(9, HB_IT_OBJECT ), "POINTER", 0 ) );
     QGenericArgument par10 = ISNIL(10)? QGenericArgument() : *(QGenericArgument *) hb_itemGetPtr( hb_objSendMsg( hb_param(10, HB_IT_OBJECT ), "POINTER", 0 ) );
     QObject * ptr = obj->newInstance ( par1, par2, par3, par4, par5, par6, par7, par8, par9, par10 );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
 

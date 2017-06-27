@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_CREATEEDITOR )
   if( obj )
   {
     QWidget * ptr = obj->createEditor ( PQWIDGET(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 

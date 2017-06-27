@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_PARENT2 )
   if( obj )
   {
     QObject * ptr = obj->parent ();
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
 

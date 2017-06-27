@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_TOPLEVEL )
   if( obj )
   {
     QWidget * ptr = obj->topLevel ();
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 

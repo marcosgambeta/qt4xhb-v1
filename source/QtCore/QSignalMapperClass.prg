@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING1 )
   if( obj )
   {
     QObject * ptr = obj->mapping ( PINT(1) );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
 
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING2 )
   if( obj )
   {
     QObject * ptr = obj->mapping ( PQSTRING(1) );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
 
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING3 )
   if( obj )
   {
     QObject * ptr = obj->mapping ( PQWIDGET(1) );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
 
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING4 )
   if( obj )
   {
     QObject * ptr = obj->mapping ( PQOBJECT(1) );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
 

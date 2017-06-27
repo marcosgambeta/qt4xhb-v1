@@ -1655,7 +1655,7 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILD )
   if( obj )
   {
     QObject * ptr = obj->findChild<QObject *> ( OPQSTRING(1,QString()) );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
 
@@ -1869,7 +1869,7 @@ HB_FUNC_STATIC( QOBJECT_PARENT )
   if( obj )
   {
     QObject * ptr = obj->parent ();
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
 

@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_LABELFORFIELD1 )
   if( obj )
   {
     QWidget * ptr = obj->labelForField ( PQWIDGET(1) );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_LABELFORFIELD2 )
   if( obj )
   {
     QWidget * ptr = obj->labelForField ( PQLAYOUT(1) );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 

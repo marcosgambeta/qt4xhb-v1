@@ -531,7 +531,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_WIDGET )
   if( obj )
   {
     QWidget * ptr = obj->widget ();
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 

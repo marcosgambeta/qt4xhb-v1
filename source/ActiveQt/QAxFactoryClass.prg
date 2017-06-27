@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QAXFACTORY_CREATEOBJECT )
     if( ISCHAR(1) )
     {
       QObject * ptr = obj->createObject ( PQSTRING(1) );
-      _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+      _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
     }
     else
     {

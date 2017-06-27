@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_FOCUSWIDGET )
   if( obj )
   {
     QWidget * ptr = obj->focusWidget ();
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 

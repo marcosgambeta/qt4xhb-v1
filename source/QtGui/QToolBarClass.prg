@@ -538,7 +538,7 @@ HB_FUNC_STATIC( QTOOLBAR_WIDGETFORACTION )
   if( obj )
   {
     QWidget * ptr = obj->widgetForAction ( PQACTION(1) );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 

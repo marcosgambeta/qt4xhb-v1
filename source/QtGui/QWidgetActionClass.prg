@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QWIDGETACTION_DEFAULTWIDGET )
   if( obj )
   {
     QWidget * ptr = obj->defaultWidget ();
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QWIDGETACTION_REQUESTWIDGET )
   if( obj )
   {
     QWidget * ptr = obj->requestWidget ( PQWIDGET(1) );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 

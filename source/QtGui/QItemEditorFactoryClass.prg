@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QITEMEDITORFACTORY_CREATEEDITOR )
   if( obj )
   {
     QWidget * ptr = obj->createEditor ( (QVariant::Type) hb_parni(1), PQWIDGET(2) );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 

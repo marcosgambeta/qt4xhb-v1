@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_INSTANCE )
   if( obj )
   {
     QObject * ptr = obj->instance ();
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
 

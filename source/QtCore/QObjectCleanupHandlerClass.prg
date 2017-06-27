@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_ADD )
   if( obj )
   {
     QObject * ptr = obj->add ( PQOBJECT(1) );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
 

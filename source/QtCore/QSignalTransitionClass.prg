@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_SENDEROBJECT )
   if( obj )
   {
     QObject * ptr = obj->senderObject ();
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
 

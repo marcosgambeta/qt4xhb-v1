@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QDRAG_SOURCE )
   if( obj )
   {
     QWidget * ptr = obj->source ();
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QDRAG_TARGET )
   if( obj )
   {
     QWidget * ptr = obj->target ();
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 

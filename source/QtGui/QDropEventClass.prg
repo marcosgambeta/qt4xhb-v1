@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QDROPEVENT_SOURCE )
   if( obj )
   {
     QWidget * ptr = obj->source ();
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 

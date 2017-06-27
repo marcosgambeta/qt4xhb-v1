@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_EXTENSION )
   if( obj )
   {
     QObject * ptr = obj->extension ( PQOBJECT(1), PQSTRING(2) );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
 

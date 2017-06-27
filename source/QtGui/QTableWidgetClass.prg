@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_CELLWIDGET )
   if( obj )
   {
     QWidget * ptr = obj->cellWidget ( PINT(1), PINT(2) );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 

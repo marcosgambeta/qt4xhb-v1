@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QSHORTCUT_PARENTWIDGET )
   if( obj )
   {
     QWidget * ptr = obj->parentWidget ();
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 

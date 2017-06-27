@@ -372,7 +372,7 @@ QWidget * activeModalWidget ()
 HB_FUNC_STATIC( QAPPLICATION_ACTIVEMODALWIDGET )
 {
   QWidget * ptr = QApplication::activeModalWidget ();
-  _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
 }
 
 
@@ -382,7 +382,7 @@ QWidget * activePopupWidget ()
 HB_FUNC_STATIC( QAPPLICATION_ACTIVEPOPUPWIDGET )
 {
   QWidget * ptr = QApplication::activePopupWidget ();
-  _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
 }
 
 
@@ -392,7 +392,7 @@ QWidget * activeWindow ()
 HB_FUNC_STATIC( QAPPLICATION_ACTIVEWINDOW )
 {
   QWidget * ptr = QApplication::activeWindow ();
-  _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
 }
 
 
@@ -537,7 +537,7 @@ QWidget * focusWidget ()
 HB_FUNC_STATIC( QAPPLICATION_FOCUSWIDGET )
 {
   QWidget * ptr = QApplication::focusWidget ();
-  _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
 }
 
 
@@ -1053,7 +1053,7 @@ QWidget * topLevelAt ( const QPoint & point )
 HB_FUNC_STATIC( QAPPLICATION_TOPLEVELAT1 )
 {
   QWidget * ptr = QApplication::topLevelAt ( *PQPOINT(1) );
-  _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
 }
 
 
@@ -1063,7 +1063,7 @@ QWidget * topLevelAt ( int x, int y )
 HB_FUNC_STATIC( QAPPLICATION_TOPLEVELAT2 )
 {
   QWidget * ptr = QApplication::topLevelAt ( PINT(1), PINT(2) );
-  _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
 }
 
 
@@ -1146,7 +1146,7 @@ QWidget * widgetAt ( const QPoint & point )
 HB_FUNC_STATIC( QAPPLICATION_WIDGETAT1 )
 {
   QWidget * ptr = QApplication::widgetAt ( *PQPOINT(1) );
-  _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
 }
 
 
@@ -1156,7 +1156,7 @@ QWidget * widgetAt ( int x, int y )
 HB_FUNC_STATIC( QAPPLICATION_WIDGETAT2 )
 {
   QWidget * ptr = QApplication::widgetAt ( PINT(1), PINT(2) );
-  _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+  _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
 }
 
 

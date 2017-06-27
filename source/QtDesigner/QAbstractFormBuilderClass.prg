@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_LOAD )
   if( obj )
   {
     QWidget * ptr = obj->load ( PQIODEVICE(1), OPQWIDGET(2,0) );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 

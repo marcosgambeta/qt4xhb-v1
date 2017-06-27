@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QUILOADER_CREATEWIDGET )
   if( obj )
   {
     QWidget * ptr = obj->createWidget ( PQSTRING(1), OPQWIDGET(2,0), OPQSTRING(3,QString()) );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QUILOADER_LOAD )
   if( obj )
   {
     QWidget * ptr = obj->load ( PQIODEVICE(1), OPQWIDGET(2,0) );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 

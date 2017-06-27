@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QWIZARD_SIDEWIDGET )
   if( obj )
   {
     QWidget * ptr = obj->sideWidget ();
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 

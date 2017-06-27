@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QWORKSPACE_ACTIVEWINDOW )
   if( obj )
   {
     QWidget * ptr = obj->activeWindow ();
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QWORKSPACE_ADDWINDOW )
   {
     int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
     QWidget * ptr = obj->addWindow ( PQWIDGET(1), (Qt::WindowFlags) par2 );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 

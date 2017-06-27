@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QTABWIDGET_CORNERWIDGET )
   {
     int par1 = ISNIL(1)? (int) Qt::TopRightCorner : hb_parni(1);
     QWidget * ptr = obj->cornerWidget ( (Qt::Corner) par1 );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QTABWIDGET_CURRENTWIDGET )
   if( obj )
   {
     QWidget * ptr = obj->currentWidget ();
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -672,7 +672,7 @@ HB_FUNC_STATIC( QTABWIDGET_WIDGET )
   if( obj )
   {
     QWidget * ptr = obj->widget ( PINT(1) );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 

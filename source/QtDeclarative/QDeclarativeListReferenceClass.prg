@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_AT )
   if( obj )
   {
     QObject * ptr = obj->at ( PINT(1) );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
 
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_OBJECT )
   if( obj )
   {
     QObject * ptr = obj->object ();
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
 

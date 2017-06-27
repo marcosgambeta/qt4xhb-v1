@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEMWIDGET )
   {
     QListWidgetItem * par1 = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QWidget * ptr = obj->itemWidget ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 

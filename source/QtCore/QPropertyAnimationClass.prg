@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_TARGETOBJECT )
   if( obj )
   {
     QObject * ptr = obj->targetObject ();
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
 

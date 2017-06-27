@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QGENERICPLUGIN_CREATE )
   if( obj )
   {
     QObject * ptr = obj->create ( PQSTRING(1), PQSTRING(2) );
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
 

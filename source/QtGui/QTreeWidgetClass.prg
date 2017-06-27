@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ITEMWIDGET )
   if( obj )
   {
     QWidget * ptr = obj->itemWidget ( PQTREEWIDGETITEM(1), PINT(2) );
-    _qt4xhb_createReturnClass ( ptr, "QWIDGET" );
+    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 

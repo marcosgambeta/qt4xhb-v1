@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_OBJECT )
   if( obj )
   {
     QObject * ptr = obj->object ();
-    _qt4xhb_createReturnClass ( ptr, "QOBJECT" );
+    _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
 
