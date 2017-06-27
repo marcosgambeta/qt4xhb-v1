@@ -1,18 +1,27 @@
 /*
 
-  Exemplo de criação de arquivos PDF com Qt4xHb
+  Qt4xHb Project - Test Program
 
-  Data: 01/02/2017 20:29:30
+  Copyright (C) 2012-2017 Marcos Antonio Gambeta
 
-  (C) 2012-2017 Marcos Antonio Gambeta
+  E-mail:
+  marcosgambeta AT outlook DOT com
+  marcosgambeta AT gmail DOT com
 
-  E-mail: marcosgambeta@uol.com.br
+  Website:
+  https://github.com/marcosgambeta/Qt4xHb
 
-  Website: https://github.com/marcosgambeta
+  Users Groups:
+  https://groups.google.com/forum/?hl=pt-BR#!forum/qtxhb    [ENGLISH]
+  https://groups.google.com/forum/?hl=pt-BR#!forum/qtxhb-br [PORTUGUESE]
 
 */
 
-#include "QtGui.ch"
+/*
+  Exemplo de criação de arquivos PDF com Qt4xHb
+*/
+
+#include "qt4xhb.ch"
 
 PROCEDURE Main ()
 

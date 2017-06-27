@@ -1,19 +1,27 @@
 /*
 
-  Qt4xHb: Exemplo de uso do módulo QtSql
-
-  Data: 01/02/2017 20:28:29
+  Qt4xHb Project - Test Program
 
   Copyright (C) 2012-2017 Marcos Antonio Gambeta
 
-  E-mail: marcosgambeta@uol.com.br
+  E-mail:
+  marcosgambeta AT outlook DOT com
+  marcosgambeta AT gmail DOT com
 
-  Website: https://github.com/marcosgambeta
+  Website:
+  https://github.com/marcosgambeta/Qt4xHb
+
+  Users Groups:
+  https://groups.google.com/forum/?hl=pt-BR#!forum/qtxhb    [ENGLISH]
+  https://groups.google.com/forum/?hl=pt-BR#!forum/qtxhb-br [PORTUGUESE]
 
 */
 
-#include "Qt.ch"
-#include "QSqlTableModel.ch"
+/*
+  Qt4xHb: Exemplo de uso do módulo QtSql
+*/
+
+#include "qt4xhb.ch"
 
 PROCEDURE Main ()
 

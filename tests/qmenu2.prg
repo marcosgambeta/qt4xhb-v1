@@ -1,16 +1,23 @@
 /*
 
-  Exemplo do projeto Qt4xHb
+  Qt4xHb Project - Test Program
 
-  (C) 2012-2017 Marcos Antonio Gambeta
+  Copyright (C) 2012-2017 Marcos Antonio Gambeta
 
-  E-mail: marcosgambeta@uol.com.br
+  E-mail:
+  marcosgambeta AT outlook DOT com
+  marcosgambeta AT gmail DOT com
 
-  Website: https://github.com/marcosgambeta
+  Website:
+  https://github.com/marcosgambeta/Qt4xHb
+
+  Users Groups:
+  https://groups.google.com/forum/?hl=pt-BR#!forum/qtxhb    [ENGLISH]
+  https://groups.google.com/forum/?hl=pt-BR#!forum/qtxhb-br [PORTUGUESE]
 
 */
 
-#include "QMessageBox.ch"
+#include "qt4xhb.ch"
 
 PROCEDURE Main ()
 
