@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -32,11 +32,13 @@ CLASS QTextDocumentFragment
    METHOD fromHtml2
    METHOD fromHtml
    METHOD fromPlainText
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -64,7 +66,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QTextDocumentFragment ( const QTextDocument * document )
 */
@@ -75,7 +76,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW2 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QTextDocumentFragment ( const QTextCursor & cursor )
 */
@@ -85,7 +85,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QTextDocumentFragment ( const QTextDocumentFragment & other )
 */
@@ -94,7 +93,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW4 )
   QTextDocumentFragment * o = new QTextDocumentFragment ( *PQTEXTDOCUMENTFRAGMENT(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QTextDocumentFragment ()
 //[2]QTextDocumentFragment ( const QTextDocument * document )
@@ -128,6 +126,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW )
 HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_DELETE )
 {
   QTextDocumentFragment * obj = (QTextDocumentFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -137,9 +136,9 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 bool isEmpty () const
@@ -153,7 +152,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_ISEMPTY )
   }
 }
 
-
 /*
 QString toHtml ( const QByteArray & encoding ) const
 */
@@ -166,7 +164,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_TOHTML1 )
   }
 }
 
-
 /*
 QString toHtml () const
 */
@@ -178,7 +175,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_TOHTML2 )
     RQSTRING( obj->toHtml () );
   }
 }
-
 
 //[1]QString toHtml ( const QByteArray & encoding ) const
 //[2]QString toHtml () const
@@ -207,8 +203,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_TOPLAINTEXT )
   }
 }
 
-
-
 /*
 QTextDocumentFragment fromHtml ( const QString & text )
 */
@@ -217,7 +211,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_FROMHTML1 )
   QTextDocumentFragment * ptr = new QTextDocumentFragment( QTextDocumentFragment::fromHtml ( PQSTRING(1) ) );
   _qt4xhb_createReturnClass ( ptr, "QTEXTDOCUMENTFRAGMENT", true );
 }
-
 
 /*
 QTextDocumentFragment fromHtml ( const QString & text, const QTextDocument * resourceProvider )
@@ -228,7 +221,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_FROMHTML2 )
   QTextDocumentFragment * ptr = new QTextDocumentFragment( QTextDocumentFragment::fromHtml ( PQSTRING(1), par2 ) );
   _qt4xhb_createReturnClass ( ptr, "QTEXTDOCUMENTFRAGMENT", true );
 }
-
 
 //[1]QTextDocumentFragment fromHtml ( const QString & text )
 //[2]QTextDocumentFragment fromHtml ( const QString & text, const QTextDocument * resourceProvider )
@@ -253,7 +245,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_FROMPLAINTEXT )
   QTextDocumentFragment * ptr = new QTextDocumentFragment( QTextDocumentFragment::fromPlainText ( PQSTRING(1) ) );
   _qt4xhb_createReturnClass ( ptr, "QTEXTDOCUMENTFRAGMENT", true );
 }
-
 
 HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEWFROM )
 {
@@ -309,6 +300,5 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

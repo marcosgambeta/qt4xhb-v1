@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -42,6 +42,7 @@ CLASS QGraphicsLinearLayout INHERIT QGraphicsLayout
    METHOD removeAt
    METHOD setGeometry
    METHOD sizeHint
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -70,7 +71,6 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QGraphicsLinearLayout ( Qt::Orientation orientation, QGraphicsLayoutItem * parent = 0 )
 */
@@ -80,7 +80,6 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_NEW2 )
   QGraphicsLinearLayout * o = new QGraphicsLinearLayout ( (Qt::Orientation) hb_parni(1), par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QGraphicsLinearLayout ( QGraphicsLayoutItem * parent = 0 )
 //[2]QGraphicsLinearLayout ( Qt::Orientation orientation, QGraphicsLayoutItem * parent = 0 )
@@ -104,6 +103,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_NEW )
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_DELETE )
 {
   QGraphicsLinearLayout * obj = (QGraphicsLinearLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -113,9 +113,9 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void addItem ( QGraphicsLayoutItem * item )
@@ -131,7 +131,6 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ADDITEM )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void addStretch ( int stretch = 1 )
 */
@@ -145,7 +144,6 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ADDSTRETCH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 Qt::Alignment alignment ( QGraphicsLayoutItem * item ) const
 */
@@ -158,7 +156,6 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ALIGNMENT )
     hb_retni( (int) obj->alignment ( par1 ) );
   }
 }
-
 
 /*
 void insertItem ( int index, QGraphicsLayoutItem * item )
@@ -174,7 +171,6 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_INSERTITEM )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void insertStretch ( int index, int stretch = 1 )
 */
@@ -188,7 +184,6 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_INSERTSTRETCH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 qreal itemSpacing ( int index ) const
 */
@@ -201,7 +196,6 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ITEMSPACING )
   }
 }
 
-
 /*
 Qt::Orientation orientation () const
 */
@@ -213,7 +207,6 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ORIENTATION )
     RENUM( obj->orientation () );
   }
 }
-
 
 /*
 void removeItem ( QGraphicsLayoutItem * item )
@@ -228,7 +221,6 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_REMOVEITEM )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setAlignment ( QGraphicsLayoutItem * item, Qt::Alignment alignment )
@@ -245,7 +237,6 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SETALIGNMENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setItemSpacing ( int index, qreal spacing )
 */
@@ -258,7 +249,6 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SETITEMSPACING )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setOrientation ( Qt::Orientation orientation )
@@ -273,7 +263,6 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SETORIENTATION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setSpacing ( qreal spacing )
 */
@@ -286,7 +275,6 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SETSPACING )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setStretchFactor ( QGraphicsLayoutItem * item, int stretch )
@@ -303,7 +291,6 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SETSTRETCHFACTOR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 qreal spacing () const
 */
@@ -315,7 +302,6 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SPACING )
     RQREAL( obj->spacing () );
   }
 }
-
 
 /*
 int stretchFactor ( QGraphicsLayoutItem * item ) const
@@ -330,7 +316,6 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_STRETCHFACTOR )
   }
 }
 
-
 /*
 virtual int count () const
 */
@@ -342,7 +327,6 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_COUNT )
     RINT( obj->count () );
   }
 }
-
 
 /*
 virtual void invalidate ()
@@ -357,7 +341,6 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_INVALIDATE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QGraphicsLayoutItem * itemAt ( int index ) const
 */
@@ -370,7 +353,6 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ITEMAT )
     _qt4xhb_createReturnClass ( ptr, "QGRAPHICSLAYOUTITEM" );
   }
 }
-
 
 /*
 virtual void removeAt ( int index )
@@ -385,7 +367,6 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_REMOVEAT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void setGeometry ( const QRectF & rect )
 */
@@ -398,7 +379,6 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SETGEOMETRY )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual QSizeF sizeHint ( Qt::SizeHint which, const QSizeF & constraint = QSizeF() ) const
@@ -414,9 +394,5 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SIZEHINT )
     _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
-
-
-
-
 
 #pragma ENDDUMP

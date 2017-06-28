@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QAbstractSlider INHERIT QWidget
 
@@ -38,12 +37,14 @@ CLASS QAbstractSlider INHERIT QWidget
    METHOD value
    METHOD setOrientation
    METHOD setValue
+
    METHOD onActionTriggered
    METHOD onRangeChanged
    METHOD onSliderMoved
    METHOD onSliderPressed
    METHOD onSliderReleased
    METHOD onValueChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -62,10 +63,10 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
 HB_FUNC_STATIC( QABSTRACTSLIDER_DELETE )
 {
   QAbstractSlider * obj = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -75,9 +76,9 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 bool hasTracking () const
@@ -91,7 +92,6 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_HASTRACKING )
   }
 }
 
-
 /*
 bool invertedAppearance () const
 */
@@ -103,7 +103,6 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_INVERTEDAPPEARANCE )
     RBOOL( obj->invertedAppearance () );
   }
 }
-
 
 /*
 bool invertedControls () const
@@ -117,7 +116,6 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_INVERTEDCONTROLS )
   }
 }
 
-
 /*
 bool isSliderDown () const
 */
@@ -129,7 +127,6 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ISSLIDERDOWN )
     RBOOL( obj->isSliderDown () );
   }
 }
-
 
 /*
 int maximum () const
@@ -143,7 +140,6 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_MAXIMUM )
   }
 }
 
-
 /*
 int minimum () const
 */
@@ -155,7 +151,6 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_MINIMUM )
     RINT( obj->minimum () );
   }
 }
-
 
 /*
 Qt::Orientation orientation () const
@@ -169,7 +164,6 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ORIENTATION )
   }
 }
 
-
 /*
 int pageStep () const
 */
@@ -181,7 +175,6 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_PAGESTEP )
     RINT( (int) obj->pageStep () );
   }
 }
-
 
 /*
 void setInvertedAppearance ( bool )
@@ -196,7 +189,6 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETINVERTEDAPPEARANCE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setInvertedControls ( bool )
 */
@@ -209,7 +201,6 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETINVERTEDCONTROLS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setMaximum ( int )
@@ -224,7 +215,6 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETMAXIMUM )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setMinimum ( int )
 */
@@ -237,7 +227,6 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETMINIMUM )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setPageStep ( int )
@@ -252,7 +241,6 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETPAGESTEP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setRange ( int min, int max )
 */
@@ -265,7 +253,6 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETRANGE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setSingleStep ( int )
@@ -280,7 +267,6 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETSINGLESTEP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setSliderDown ( bool )
 */
@@ -293,7 +279,6 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETSLIDERDOWN )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setSliderPosition ( int )
@@ -308,7 +293,6 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETSLIDERPOSITION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setTracking ( bool enable )
 */
@@ -322,7 +306,6 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETTRACKING )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int singleStep () const
 */
@@ -335,7 +318,6 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SINGLESTEP )
   }
 }
 
-
 /*
 int sliderPosition () const
 */
@@ -347,7 +329,6 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SLIDERPOSITION )
     RINT( obj->sliderPosition () );
   }
 }
-
 
 /*
 void triggerAction ( SliderAction action )
@@ -363,7 +344,6 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_TRIGGERACTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int value () const
 */
@@ -375,7 +355,6 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_VALUE )
     RINT( obj->value () );
   }
 }
-
 
 /*
 void setOrientation ( Qt::Orientation )
@@ -390,7 +369,6 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETORIENTATION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setValue ( int )
 */
@@ -403,10 +381,5 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETVALUE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
-
 
 #pragma ENDDUMP

@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -18,6 +18,7 @@ CLASS QGraphicsSceneEvent INHERIT QEvent
 
    METHOD delete
    METHOD widget
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -39,6 +40,7 @@ RETURN
 HB_FUNC_STATIC( QGRAPHICSSCENEEVENT_DELETE )
 {
   QGraphicsSceneEvent * obj = (QGraphicsSceneEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -48,9 +50,9 @@ HB_FUNC_STATIC( QGRAPHICSSCENEEVENT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QWidget * widget () const
@@ -64,8 +66,5 @@ HB_FUNC_STATIC( QGRAPHICSSCENEEVENT_WIDGET )
     _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
-
-
-
 
 #pragma ENDDUMP

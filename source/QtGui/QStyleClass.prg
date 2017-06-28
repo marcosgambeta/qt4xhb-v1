@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -55,9 +55,11 @@ CLASS QStyle INHERIT QObject
    METHOD visualAlignment
    METHOD visualPos
    METHOD visualRect
+
    METHOD onCurrentChanged
    METHOD onTabCloseRequested
    METHOD onTabMoved
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -76,10 +78,10 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
 HB_FUNC_STATIC( QSTYLE_DELETE )
 {
   QStyle * obj = (QStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -89,9 +91,9 @@ HB_FUNC_STATIC( QSTYLE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 int combinedLayoutSpacing ( QSizePolicy::ControlTypes controls1, QSizePolicy::ControlTypes controls2, Qt::Orientation orientation, QStyleOption * option = 0, QWidget * widget = 0 ) const
@@ -107,7 +109,6 @@ HB_FUNC_STATIC( QSTYLE_COMBINEDLAYOUTSPACING )
     RINT( obj->combinedLayoutSpacing ( (QSizePolicy::ControlTypes) par1, (QSizePolicy::ControlTypes) par2, (Qt::Orientation) hb_parni(3), par4, OPQWIDGET(5,0) ) );
   }
 }
-
 
 /*
 virtual void drawComplexControl ( ComplexControl control, const QStyleOptionComplex * option, QPainter * painter, const QWidget * widget = 0 ) const = 0
@@ -125,7 +126,6 @@ HB_FUNC_STATIC( QSTYLE_DRAWCOMPLEXCONTROL )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void drawControl ( ControlElement element, const QStyleOption * option, QPainter * painter, const QWidget * widget = 0 ) const = 0
 */
@@ -142,7 +142,6 @@ HB_FUNC_STATIC( QSTYLE_DRAWCONTROL )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void drawItemPixmap ( QPainter * painter, const QRect & rectangle, int alignment, const QPixmap & pixmap ) const
 */
@@ -155,7 +154,6 @@ HB_FUNC_STATIC( QSTYLE_DRAWITEMPIXMAP )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void drawItemText ( QPainter * painter, const QRect & rectangle, int alignment, const QPalette & palette, bool enabled, const QString & text, QPalette::ColorRole textRole = QPalette::NoRole ) const
@@ -170,7 +168,6 @@ HB_FUNC_STATIC( QSTYLE_DRAWITEMTEXT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void drawPrimitive ( PrimitiveElement element, const QStyleOption * option, QPainter * painter, const QWidget * widget = 0 ) const = 0
@@ -188,7 +185,6 @@ HB_FUNC_STATIC( QSTYLE_DRAWPRIMITIVE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QPixmap generatedIconPixmap ( QIcon::Mode iconMode, const QPixmap & pixmap, const QStyleOption * option ) const = 0
 */
@@ -203,7 +199,6 @@ HB_FUNC_STATIC( QSTYLE_GENERATEDICONPIXMAP )
     _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
-
 
 /*
 virtual SubControl hitTestComplexControl ( ComplexControl control, const QStyleOptionComplex * option, const QPoint & position, const QWidget * widget = 0 ) const = 0
@@ -220,7 +215,6 @@ HB_FUNC_STATIC( QSTYLE_HITTESTCOMPLEXCONTROL )
   }
 }
 
-
 /*
 virtual QRect itemPixmapRect ( const QRect & rectangle, int alignment, const QPixmap & pixmap ) const
 */
@@ -234,7 +228,6 @@ HB_FUNC_STATIC( QSTYLE_ITEMPIXMAPRECT )
   }
 }
 
-
 /*
 virtual QRect itemTextRect ( const QFontMetrics & metrics, const QRect & rectangle, int alignment, bool enabled, const QString & text ) const
 */
@@ -247,7 +240,6 @@ HB_FUNC_STATIC( QSTYLE_ITEMTEXTRECT )
     _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
-
 
 /*
 int layoutSpacing ( QSizePolicy::ControlType control1, QSizePolicy::ControlType control2, Qt::Orientation orientation, const QStyleOption * option = 0, const QWidget * widget = 0 ) const
@@ -265,7 +257,6 @@ HB_FUNC_STATIC( QSTYLE_LAYOUTSPACING )
   }
 }
 
-
 /*
 virtual int pixelMetric ( PixelMetric metric, const QStyleOption * option = 0, const QWidget * widget = 0 ) const = 0
 */
@@ -281,7 +272,6 @@ HB_FUNC_STATIC( QSTYLE_PIXELMETRIC )
   }
 }
 
-
 /*
 virtual void polish ( QWidget * widget )
 */
@@ -294,7 +284,6 @@ HB_FUNC_STATIC( QSTYLE_POLISH1 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void polish ( QApplication * application )
@@ -310,7 +299,6 @@ HB_FUNC_STATIC( QSTYLE_POLISH2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void polish ( QPalette & palette )
 */
@@ -324,7 +312,6 @@ HB_FUNC_STATIC( QSTYLE_POLISH3 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]virtual void polish ( QWidget * widget )
 //[2]virtual void polish ( QApplication * application )
@@ -359,7 +346,6 @@ HB_FUNC_STATIC( QSTYLE_PROXY )
   }
 }
 
-
 /*
 virtual QSize sizeFromContents ( ContentsType type, const QStyleOption * option, const QSize & contentsSize, const QWidget * widget = 0 ) const = 0
 */
@@ -375,7 +361,6 @@ HB_FUNC_STATIC( QSTYLE_SIZEFROMCONTENTS )
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
-
 
 /*
 QIcon standardIcon ( StandardPixmap standardIcon, const QStyleOption * option = 0, const QWidget * widget = 0 ) const
@@ -393,7 +378,6 @@ HB_FUNC_STATIC( QSTYLE_STANDARDICON )
   }
 }
 
-
 /*
 virtual QPalette standardPalette () const
 */
@@ -406,7 +390,6 @@ HB_FUNC_STATIC( QSTYLE_STANDARDPALETTE )
     _qt4xhb_createReturnClass ( ptr, "QPALETTE", true );
   }
 }
-
 
 /*
 virtual int styleHint ( StyleHint hint, const QStyleOption * option = 0, const QWidget * widget = 0, QStyleHintReturn * returnData = 0 ) const = 0
@@ -423,7 +406,6 @@ HB_FUNC_STATIC( QSTYLE_STYLEHINT )
     RINT( obj->styleHint ( (QStyle::StyleHint) par1, par2, par3, par4 ) );
   }
 }
-
 
 /*
 virtual QRect subControlRect ( ComplexControl control, const QStyleOptionComplex * option, SubControl subControl, const QWidget * widget = 0 ) const = 0
@@ -442,7 +424,6 @@ HB_FUNC_STATIC( QSTYLE_SUBCONTROLRECT )
   }
 }
 
-
 /*
 virtual QRect subElementRect ( SubElement element, const QStyleOption * option, const QWidget * widget = 0 ) const = 0
 */
@@ -459,7 +440,6 @@ HB_FUNC_STATIC( QSTYLE_SUBELEMENTRECT )
   }
 }
 
-
 /*
 virtual void unpolish ( QWidget * widget )
 */
@@ -472,7 +452,6 @@ HB_FUNC_STATIC( QSTYLE_UNPOLISH1 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void unpolish ( QApplication * application )
@@ -487,7 +466,6 @@ HB_FUNC_STATIC( QSTYLE_UNPOLISH2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]virtual void unpolish ( QWidget * widget )
 //[2]virtual void unpolish ( QApplication * application )
@@ -504,7 +482,6 @@ HB_FUNC_STATIC( QSTYLE_UNPOLISH )
   }
 }
 
-
 // Static Public Members
 
 /*
@@ -518,7 +495,6 @@ HB_FUNC_STATIC( QSTYLE_ALIGNEDRECT )
   _qt4xhb_createReturnClass ( ptr, "QRECT", true );
 }
 
-
 /*
 int sliderPositionFromValue ( int min, int max, int logicalValue, int span, bool upsideDown = false )
 */
@@ -527,7 +503,6 @@ HB_FUNC_STATIC( QSTYLE_SLIDERPOSITIONFROMVALUE )
   RINT( QStyle::sliderPositionFromValue ( PINT(1), PINT(2), PINT(3), PINT(4), OPBOOL(5,false) ) );
 }
 
-
 /*
 int sliderValueFromPosition ( int min, int max, int position, int span, bool upsideDown = false )
 */
@@ -535,7 +510,6 @@ HB_FUNC_STATIC( QSTYLE_SLIDERVALUEFROMPOSITION )
 {
   RINT( QStyle::sliderValueFromPosition ( PINT(1), PINT(2), PINT(3), PINT(4), OPBOOL(5,false) ) );
 }
-
 
 /*
 Qt::Alignment visualAlignment ( Qt::LayoutDirection direction, Qt::Alignment alignment )
@@ -547,7 +521,6 @@ HB_FUNC_STATIC( QSTYLE_VISUALALIGNMENT )
   hb_retni( (int) QStyle::visualAlignment ( (Qt::LayoutDirection) par1, (Qt::Alignment) par2 ) );
 }
 
-
 /*
 QPoint visualPos ( Qt::LayoutDirection direction, const QRect & boundingRectangle, const QPoint & logicalPosition )
 */
@@ -558,7 +531,6 @@ HB_FUNC_STATIC( QSTYLE_VISUALPOS )
   _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
 }
 
-
 /*
 QRect visualRect ( Qt::LayoutDirection direction, const QRect & boundingRectangle, const QRect & logicalRectangle )
 */
@@ -568,9 +540,5 @@ HB_FUNC_STATIC( QSTYLE_VISUALRECT )
   QRect * ptr = new QRect( QStyle::visualRect ( (Qt::LayoutDirection) par1, *PQRECT(2), *PQRECT(3) ) );
   _qt4xhb_createReturnClass ( ptr, "QRECT", true );
 }
-
-
-
-
 
 #pragma ENDDUMP

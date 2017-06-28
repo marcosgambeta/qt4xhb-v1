@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -99,11 +99,13 @@ CLASS QPainterPath
    METHOD translated2
    METHOD translated
    METHOD united
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -131,7 +133,6 @@ HB_FUNC_STATIC( QPAINTERPATH_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QPainterPath ( const QPointF & startPoint )
 */
@@ -141,7 +142,6 @@ HB_FUNC_STATIC( QPAINTERPATH_NEW2 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QPainterPath ( const QPainterPath & path )
 */
@@ -150,7 +150,6 @@ HB_FUNC_STATIC( QPAINTERPATH_NEW3 )
   QPainterPath * o = new QPainterPath ( *PQPAINTERPATH(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QPainterPath ()
 //[2]QPainterPath ( const QPointF & startPoint )
@@ -179,6 +178,7 @@ HB_FUNC_STATIC( QPAINTERPATH_NEW )
 HB_FUNC_STATIC( QPAINTERPATH_DELETE )
 {
   QPainterPath * obj = (QPainterPath *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -188,9 +188,9 @@ HB_FUNC_STATIC( QPAINTERPATH_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void addEllipse ( const QRectF & boundingRectangle )
@@ -205,7 +205,6 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDELLIPSE1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void addEllipse ( qreal x, qreal y, qreal width, qreal height )
 */
@@ -219,7 +218,6 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDELLIPSE2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void addEllipse ( const QPointF & center, qreal rx, qreal ry )
 */
@@ -232,7 +230,6 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDELLIPSE3 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void addEllipse ( const QRectF & boundingRectangle )
 //[2]void addEllipse ( qreal x, qreal y, qreal width, qreal height )
@@ -267,7 +264,6 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDPATH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void addPolygon ( const QPolygonF & polygon )
 */
@@ -280,7 +276,6 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDPOLYGON )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void addRect ( const QRectF & rectangle )
@@ -295,7 +290,6 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDRECT1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void addRect ( qreal x, qreal y, qreal width, qreal height )
 */
@@ -308,7 +302,6 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDRECT2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void addRect ( const QRectF & rectangle )
 //[2]void addRect ( qreal x, qreal y, qreal width, qreal height )
@@ -338,7 +331,6 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDREGION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void addRoundedRect ( const QRectF & rect, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
 */
@@ -353,7 +345,6 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDROUNDEDRECT1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void addRoundedRect ( qreal x, qreal y, qreal w, qreal h, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
 */
@@ -367,7 +358,6 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDROUNDEDRECT2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void addRoundedRect ( const QRectF & rect, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
 //[2]void addRoundedRect ( qreal x, qreal y, qreal w, qreal h, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
@@ -397,7 +387,6 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDTEXT1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void addText ( qreal x, qreal y, const QFont & font, const QString & text )
 */
@@ -410,7 +399,6 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDTEXT2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void addText ( const QPointF & point, const QFont & font, const QString & text )
 //[2]void addText ( qreal x, qreal y, const QFont & font, const QString & text )
@@ -439,7 +427,6 @@ HB_FUNC_STATIC( QPAINTERPATH_ANGLEATPERCENT )
   }
 }
 
-
 /*
 void arcMoveTo ( const QRectF & rectangle, qreal angle )
 */
@@ -453,7 +440,6 @@ HB_FUNC_STATIC( QPAINTERPATH_ARCMOVETO1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void arcMoveTo ( qreal x, qreal y, qreal width, qreal height, qreal angle )
 */
@@ -466,7 +452,6 @@ HB_FUNC_STATIC( QPAINTERPATH_ARCMOVETO2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void arcMoveTo ( const QRectF & rectangle, qreal angle )
 //[2]void arcMoveTo ( qreal x, qreal y, qreal width, qreal height, qreal angle )
@@ -496,7 +481,6 @@ HB_FUNC_STATIC( QPAINTERPATH_ARCTO1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void arcTo ( qreal x, qreal y, qreal width, qreal height, qreal startAngle, qreal sweepLength )
 */
@@ -509,7 +493,6 @@ HB_FUNC_STATIC( QPAINTERPATH_ARCTO2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void arcTo ( const QRectF & rectangle, qreal startAngle, qreal sweepLength )
 //[2]void arcTo ( qreal x, qreal y, qreal width, qreal height, qreal startAngle, qreal sweepLength )
@@ -539,7 +522,6 @@ HB_FUNC_STATIC( QPAINTERPATH_BOUNDINGRECT )
   }
 }
 
-
 /*
 void closeSubpath ()
 */
@@ -552,7 +534,6 @@ HB_FUNC_STATIC( QPAINTERPATH_CLOSESUBPATH )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void connectPath ( const QPainterPath & path )
@@ -567,7 +548,6 @@ HB_FUNC_STATIC( QPAINTERPATH_CONNECTPATH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool contains ( const QPointF & point ) const
 */
@@ -579,7 +559,6 @@ HB_FUNC_STATIC( QPAINTERPATH_CONTAINS1 )
     RBOOL( obj->contains ( *PQPOINTF(1) ) );
   }
 }
-
 
 /*
 bool contains ( const QRectF & rectangle ) const
@@ -593,7 +572,6 @@ HB_FUNC_STATIC( QPAINTERPATH_CONTAINS2 )
   }
 }
 
-
 /*
 bool contains ( const QPainterPath & p ) const
 */
@@ -605,7 +583,6 @@ HB_FUNC_STATIC( QPAINTERPATH_CONTAINS3 )
     RBOOL( obj->contains ( *PQPAINTERPATH(1) ) );
   }
 }
-
 
 //[1]bool contains ( const QPointF & point ) const
 //[2]bool contains ( const QRectF & rectangle ) const
@@ -640,7 +617,6 @@ HB_FUNC_STATIC( QPAINTERPATH_CONTROLPOINTRECT )
   }
 }
 
-
 /*
 void cubicTo ( const QPointF & c1, const QPointF & c2, const QPointF & endPoint )
 */
@@ -654,7 +630,6 @@ HB_FUNC_STATIC( QPAINTERPATH_CUBICTO1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void cubicTo ( qreal c1X, qreal c1Y, qreal c2X, qreal c2Y, qreal endPointX, qreal endPointY )
 */
@@ -667,7 +642,6 @@ HB_FUNC_STATIC( QPAINTERPATH_CUBICTO2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void cubicTo ( const QPointF & c1, const QPointF & c2, const QPointF & endPoint )
 //[2]void cubicTo ( qreal c1X, qreal c1Y, qreal c2X, qreal c2Y, qreal endPointX, qreal endPointY )
@@ -697,8 +671,6 @@ HB_FUNC_STATIC( QPAINTERPATH_CURRENTPOSITION )
   }
 }
 
-
-
 /*
 int elementCount () const
 */
@@ -711,7 +683,6 @@ HB_FUNC_STATIC( QPAINTERPATH_ELEMENTCOUNT )
   }
 }
 
-
 /*
 Qt::FillRule fillRule () const
 */
@@ -723,7 +694,6 @@ HB_FUNC_STATIC( QPAINTERPATH_FILLRULE )
     hb_retni( (int) obj->fillRule () );
   }
 }
-
 
 /*
 QPainterPath intersected ( const QPainterPath & p ) const
@@ -738,7 +708,6 @@ HB_FUNC_STATIC( QPAINTERPATH_INTERSECTED )
   }
 }
 
-
 /*
 bool intersects ( const QRectF & rectangle ) const
 */
@@ -751,7 +720,6 @@ HB_FUNC_STATIC( QPAINTERPATH_INTERSECTS1 )
   }
 }
 
-
 /*
 bool intersects ( const QPainterPath & p ) const
 */
@@ -763,7 +731,6 @@ HB_FUNC_STATIC( QPAINTERPATH_INTERSECTS2 )
     RBOOL( obj->intersects ( *PQPAINTERPATH(1) ) );
   }
 }
-
 
 //[1]bool intersects ( const QRectF & rectangle ) const
 //[2]bool intersects ( const QPainterPath & p ) const
@@ -792,7 +759,6 @@ HB_FUNC_STATIC( QPAINTERPATH_ISEMPTY )
   }
 }
 
-
 /*
 qreal length () const
 */
@@ -804,7 +770,6 @@ HB_FUNC_STATIC( QPAINTERPATH_LENGTH )
     RQREAL( obj->length () );
   }
 }
-
 
 /*
 void lineTo ( const QPointF & endPoint )
@@ -819,7 +784,6 @@ HB_FUNC_STATIC( QPAINTERPATH_LINETO1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void lineTo ( qreal x, qreal y )
 */
@@ -832,7 +796,6 @@ HB_FUNC_STATIC( QPAINTERPATH_LINETO2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void lineTo ( const QPointF & endPoint )
 //[2]void lineTo ( qreal x, qreal y )
@@ -862,7 +825,6 @@ HB_FUNC_STATIC( QPAINTERPATH_MOVETO1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void moveTo ( qreal x, qreal y )
 */
@@ -875,7 +837,6 @@ HB_FUNC_STATIC( QPAINTERPATH_MOVETO2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void moveTo ( const QPointF & point )
 //[2]void moveTo ( qreal x, qreal y )
@@ -904,7 +865,6 @@ HB_FUNC_STATIC( QPAINTERPATH_PERCENTATLENGTH )
   }
 }
 
-
 /*
 QPointF pointAtPercent ( qreal t ) const
 */
@@ -917,7 +877,6 @@ HB_FUNC_STATIC( QPAINTERPATH_POINTATPERCENT )
     _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
-
 
 /*
 void quadTo ( const QPointF & c, const QPointF & endPoint )
@@ -932,7 +891,6 @@ HB_FUNC_STATIC( QPAINTERPATH_QUADTO1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void quadTo ( qreal cx, qreal cy, qreal endPointX, qreal endPointY )
 */
@@ -945,7 +903,6 @@ HB_FUNC_STATIC( QPAINTERPATH_QUADTO2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void quadTo ( const QPointF & c, const QPointF & endPoint )
 //[2]void quadTo ( qreal cx, qreal cy, qreal endPointX, qreal endPointY )
@@ -975,7 +932,6 @@ HB_FUNC_STATIC( QPAINTERPATH_SETELEMENTPOSITIONAT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setFillRule ( Qt::FillRule fillRule )
 */
@@ -990,7 +946,6 @@ HB_FUNC_STATIC( QPAINTERPATH_SETFILLRULE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QPainterPath simplified () const
 */
@@ -1004,7 +959,6 @@ HB_FUNC_STATIC( QPAINTERPATH_SIMPLIFIED )
   }
 }
 
-
 /*
 qreal slopeAtPercent ( qreal t ) const
 */
@@ -1016,7 +970,6 @@ HB_FUNC_STATIC( QPAINTERPATH_SLOPEATPERCENT )
     RQREAL( obj->slopeAtPercent ( PQREAL(1) ) );
   }
 }
-
 
 /*
 QPainterPath subtracted ( const QPainterPath & p ) const
@@ -1030,7 +983,6 @@ HB_FUNC_STATIC( QPAINTERPATH_SUBTRACTED )
     _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
-
 
 /*
 void swap ( QPainterPath & other )
@@ -1046,7 +998,6 @@ HB_FUNC_STATIC( QPAINTERPATH_SWAP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QPolygonF toFillPolygon ( const QTransform & matrix ) const
 */
@@ -1059,8 +1010,6 @@ HB_FUNC_STATIC( QPAINTERPATH_TOFILLPOLYGON1 )
     _qt4xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
-
-
 
 //[1]QPolygonF toFillPolygon ( const QTransform & matrix ) const
 //[2]QPolygonF toFillPolygon ( const QMatrix & matrix = QMatrix() ) const
@@ -1120,8 +1069,6 @@ HB_FUNC_STATIC( QPAINTERPATH_TOFILLPOLYGONS1 )
   }
 }
 
-
-
 //[1]QList<QPolygonF> toFillPolygons ( const QTransform & matrix ) const
 //[2]QList<QPolygonF> toFillPolygons ( const QMatrix & matrix = QMatrix() ) const
 
@@ -1145,7 +1092,6 @@ HB_FUNC_STATIC( QPAINTERPATH_TOREVERSED )
     _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
-
 
 /*
 QList<QPolygonF> toSubpathPolygons ( const QTransform & matrix ) const
@@ -1194,8 +1140,6 @@ HB_FUNC_STATIC( QPAINTERPATH_TOSUBPATHPOLYGONS1 )
   }
 }
 
-
-
 //[1]QList<QPolygonF> toSubpathPolygons ( const QTransform & matrix ) const
 //[2]QList<QPolygonF> toSubpathPolygons ( const QMatrix & matrix = QMatrix() ) const
 
@@ -1220,7 +1164,6 @@ HB_FUNC_STATIC( QPAINTERPATH_TRANSLATE1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void translate ( const QPointF & offset )
 */
@@ -1233,7 +1176,6 @@ HB_FUNC_STATIC( QPAINTERPATH_TRANSLATE2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void translate ( qreal dx, qreal dy )
 //[2]void translate ( const QPointF & offset )
@@ -1263,7 +1205,6 @@ HB_FUNC_STATIC( QPAINTERPATH_TRANSLATED1 )
   }
 }
 
-
 /*
 QPainterPath translated ( const QPointF & offset ) const
 */
@@ -1276,7 +1217,6 @@ HB_FUNC_STATIC( QPAINTERPATH_TRANSLATED2 )
     _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
-
 
 //[1]QPainterPath translated ( qreal dx, qreal dy ) const
 //[2]QPainterPath translated ( const QPointF & offset ) const
@@ -1305,7 +1245,6 @@ HB_FUNC_STATIC( QPAINTERPATH_UNITED )
     _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
-
 
 HB_FUNC_STATIC( QPAINTERPATH_NEWFROM )
 {
@@ -1361,6 +1300,5 @@ HB_FUNC_STATIC( QPAINTERPATH_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

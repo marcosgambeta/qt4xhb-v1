@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -43,11 +43,13 @@ CLASS QVector2D
    METHOD x
    METHOD y
    METHOD dotProduct
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -78,7 +80,6 @@ HB_FUNC_STATIC( QVECTOR2D_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QVector2D ( qreal xpos, qreal ypos )
 */
@@ -87,7 +88,6 @@ HB_FUNC_STATIC( QVECTOR2D_NEW2 )
   QVector2D * o = new QVector2D ( PQREAL(1), PQREAL(2) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 /*
 QVector2D ( const QPoint & point )
@@ -98,7 +98,6 @@ HB_FUNC_STATIC( QVECTOR2D_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QVector2D ( const QPointF & point )
 */
@@ -107,7 +106,6 @@ HB_FUNC_STATIC( QVECTOR2D_NEW4 )
   QVector2D * o = new QVector2D ( *PQPOINTF(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 /*
 QVector2D ( const QVector3D & vector )
@@ -118,7 +116,6 @@ HB_FUNC_STATIC( QVECTOR2D_NEW5 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QVector2D ( const QVector4D & vector )
 */
@@ -127,7 +124,6 @@ HB_FUNC_STATIC( QVECTOR2D_NEW6 )
   QVector2D * o = new QVector2D ( *PQVECTOR4D(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QVector2D ()
 //[2]QVector2D ( qreal xpos, qreal ypos )
@@ -171,6 +167,7 @@ HB_FUNC_STATIC( QVECTOR2D_NEW )
 HB_FUNC_STATIC( QVECTOR2D_DELETE )
 {
   QVector2D * obj = (QVector2D *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -180,9 +177,9 @@ HB_FUNC_STATIC( QVECTOR2D_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 bool isNull () const
@@ -196,7 +193,6 @@ HB_FUNC_STATIC( QVECTOR2D_ISNULL )
   }
 }
 
-
 /*
 qreal length () const
 */
@@ -209,7 +205,6 @@ HB_FUNC_STATIC( QVECTOR2D_LENGTH )
   }
 }
 
-
 /*
 qreal lengthSquared () const
 */
@@ -221,7 +216,6 @@ HB_FUNC_STATIC( QVECTOR2D_LENGTHSQUARED )
     RQREAL( obj->lengthSquared () );
   }
 }
-
 
 /*
 void normalize ()
@@ -236,7 +230,6 @@ HB_FUNC_STATIC( QVECTOR2D_NORMALIZE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QVector2D normalized () const
 */
@@ -249,7 +242,6 @@ HB_FUNC_STATIC( QVECTOR2D_NORMALIZED )
     _qt4xhb_createReturnClass ( ptr, "QVECTOR2D" );
   }
 }
-
 
 /*
 void setX ( qreal x )
@@ -264,7 +256,6 @@ HB_FUNC_STATIC( QVECTOR2D_SETX )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setY ( qreal y )
 */
@@ -277,7 +268,6 @@ HB_FUNC_STATIC( QVECTOR2D_SETY )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QPoint toPoint () const
@@ -292,7 +282,6 @@ HB_FUNC_STATIC( QVECTOR2D_TOPOINT )
   }
 }
 
-
 /*
 QPointF toPointF () const
 */
@@ -305,7 +294,6 @@ HB_FUNC_STATIC( QVECTOR2D_TOPOINTF )
     _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
-
 
 /*
 QVector3D toVector3D () const
@@ -320,7 +308,6 @@ HB_FUNC_STATIC( QVECTOR2D_TOVECTOR3D )
   }
 }
 
-
 /*
 QVector4D toVector4D () const
 */
@@ -334,7 +321,6 @@ HB_FUNC_STATIC( QVECTOR2D_TOVECTOR4D )
   }
 }
 
-
 /*
 qreal x () const
 */
@@ -346,7 +332,6 @@ HB_FUNC_STATIC( QVECTOR2D_X )
     RQREAL( obj->x () );
   }
 }
-
 
 /*
 qreal y () const
@@ -360,8 +345,6 @@ HB_FUNC_STATIC( QVECTOR2D_Y )
   }
 }
 
-
-
 /*
 qreal dotProduct ( const QVector2D & v1, const QVector2D & v2 )
 */
@@ -370,12 +353,8 @@ HB_FUNC_STATIC( QVECTOR2D_DOTPRODUCT )
   RQREAL( QVector2D::dotProduct ( *PQVECTOR2D(1), *PQVECTOR2D(2) ) );
 }
 
-
-
-
 // TODO: implementar função
 // bool qFuzzyCompare ( const QVector2D & v1, const QVector2D & v2 )
-
 
 HB_FUNC_STATIC( QVECTOR2D_NEWFROM )
 {

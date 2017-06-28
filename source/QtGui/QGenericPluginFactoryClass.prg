@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -19,11 +19,13 @@ CLASS QGenericPluginFactory
 
    METHOD create
    METHOD keys
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -42,7 +44,6 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
 /*
 QObject * create ( const QString & key, const QString & specification )
 */
@@ -52,7 +53,6 @@ HB_FUNC_STATIC( QGENERICPLUGINFACTORY_CREATE )
   _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
 }
 
-
 /*
 QStringList keys ()
 */
@@ -60,7 +60,6 @@ HB_FUNC_STATIC( QGENERICPLUGINFACTORY_KEYS )
 {
   RQSTRINGLIST( QGenericPluginFactory::keys () );
 }
-
 
 HB_FUNC_STATIC( QGENERICPLUGINFACTORY_NEWFROM )
 {
@@ -116,6 +115,5 @@ HB_FUNC_STATIC( QGENERICPLUGINFACTORY_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

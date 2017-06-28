@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -47,11 +47,13 @@ CLASS QIcon
    METHOD setThemeSearchPaths
    METHOD themeName
    METHOD themeSearchPaths
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -79,7 +81,6 @@ HB_FUNC_STATIC( QICON_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QIcon ( const QPixmap & pixmap )
 */
@@ -88,7 +89,6 @@ HB_FUNC_STATIC( QICON_NEW2 )
   QIcon * o = new QIcon ( *PQPIXMAP(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QIcon ( const QIcon & other )
@@ -100,7 +100,6 @@ HB_FUNC_STATIC( QICON_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QIcon ( const QString & fileName )
 */
@@ -109,7 +108,6 @@ HB_FUNC_STATIC( QICON_NEW4 )
   QIcon * o = new QIcon ( PQSTRING(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QIcon ( QIconEngine * engine )
@@ -120,7 +118,6 @@ HB_FUNC_STATIC( QICON_NEW5 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QIcon ( QIconEngineV2 * engine )
 */
@@ -129,7 +126,6 @@ HB_FUNC_STATIC( QICON_NEW6 )
   QIcon * o = new QIcon ( PQICONENGINEV2(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QIcon ()
 //[2]QIcon ( const QPixmap & pixmap )
@@ -173,6 +169,7 @@ HB_FUNC_STATIC( QICON_NEW )
 HB_FUNC_STATIC( QICON_DELETE )
 {
   QIcon * obj = (QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -182,9 +179,9 @@ HB_FUNC_STATIC( QICON_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QSize actualSize ( const QSize & size, Mode mode = Normal, State state = Off ) const
@@ -200,7 +197,6 @@ HB_FUNC_STATIC( QICON_ACTUALSIZE )
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
-
 
 /*
 void addFile ( const QString & fileName, const QSize & size = QSize(), Mode mode = Normal, State state = Off )
@@ -218,7 +214,6 @@ HB_FUNC_STATIC( QICON_ADDFILE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void addPixmap ( const QPixmap & pixmap, Mode mode = Normal, State state = Off )
 */
@@ -233,7 +228,6 @@ HB_FUNC_STATIC( QICON_ADDPIXMAP )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QList<QSize> availableSizes ( Mode mode = Normal, State state = Off ) const
@@ -284,7 +278,6 @@ HB_FUNC_STATIC( QICON_AVAILABLESIZES )
   }
 }
 
-
 /*
 qint64 cacheKey () const
 */
@@ -296,7 +289,6 @@ HB_FUNC_STATIC( QICON_CACHEKEY )
     RQINT64( obj->cacheKey () );
   }
 }
-
 
 /*
 bool isNull () const
@@ -310,7 +302,6 @@ HB_FUNC_STATIC( QICON_ISNULL )
   }
 }
 
-
 /*
 QString name () const
 */
@@ -322,7 +313,6 @@ HB_FUNC_STATIC( QICON_NAME )
     RQSTRING( obj->name () );
   }
 }
-
 
 /*
 void paint ( QPainter * painter, const QRect & rect, Qt::Alignment alignment = Qt::AlignCenter, Mode mode = Normal, State state = Off ) const
@@ -339,7 +329,6 @@ HB_FUNC_STATIC( QICON_PAINT1 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void paint ( QPainter * painter, int x, int y, int w, int h, Qt::Alignment alignment = Qt::AlignCenter, Mode mode = Normal, State state = Off ) const
@@ -360,7 +349,6 @@ HB_FUNC_STATIC( QICON_PAINT2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void paint ( QPainter * painter, const QRect & rect, Qt::Alignment alignment = Qt::AlignCenter, Mode mode = Normal, State state = Off ) const
 //[2]void paint ( QPainter * painter, int x, int y, int w, int h, Qt::Alignment alignment = Qt::AlignCenter, Mode mode = Normal, State state = Off ) const
@@ -392,7 +380,6 @@ HB_FUNC_STATIC( QICON_PIXMAP1 )
   }
 }
 
-
 /*
 QPixmap pixmap ( int w, int h, Mode mode = Normal, State state = Off ) const
 */
@@ -408,7 +395,6 @@ HB_FUNC_STATIC( QICON_PIXMAP2 )
   }
 }
 
-
 /*
 QPixmap pixmap ( int extent, Mode mode = Normal, State state = Off ) const
 */
@@ -423,7 +409,6 @@ HB_FUNC_STATIC( QICON_PIXMAP3 )
     _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
-
 
 //[1]QPixmap pixmap ( const QSize & size, Mode mode = Normal, State state = Off ) const
 //[2]QPixmap pixmap ( int w, int h, Mode mode = Normal, State state = Off ) const
@@ -445,7 +430,6 @@ HB_FUNC_STATIC( QICON_PIXMAP )
   }
 }
 
-
 /*
 QIcon fromTheme ( const QString & name, const QIcon & fallback = QIcon() )
 */
@@ -456,7 +440,6 @@ HB_FUNC_STATIC( QICON_FROMTHEME )
   _qt4xhb_createReturnClass ( ptr, "QICON", true );
 }
 
-
 /*
 bool hasThemeIcon ( const QString & name )
 */
@@ -464,7 +447,6 @@ HB_FUNC_STATIC( QICON_HASTHEMEICON )
 {
   RBOOL( QIcon::hasThemeIcon ( PQSTRING(1) ) );
 }
-
 
 /*
 void setThemeName ( const QString & name )
@@ -475,7 +457,6 @@ HB_FUNC_STATIC( QICON_SETTHEMENAME )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setThemeSearchPaths ( const QStringList & paths )
 */
@@ -485,7 +466,6 @@ HB_FUNC_STATIC( QICON_SETTHEMESEARCHPATHS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString themeName ()
 */
@@ -494,7 +474,6 @@ HB_FUNC_STATIC( QICON_THEMENAME )
   RQSTRING( QIcon::themeName () );
 }
 
-
 /*
 QStringList themeSearchPaths ()
 */
@@ -502,7 +481,6 @@ HB_FUNC_STATIC( QICON_THEMESEARCHPATHS )
 {
   RQSTRINGLIST( QIcon::themeSearchPaths () );
 }
-
 
 HB_FUNC_STATIC( QICON_NEWFROM )
 {
@@ -558,6 +536,5 @@ HB_FUNC_STATIC( QICON_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

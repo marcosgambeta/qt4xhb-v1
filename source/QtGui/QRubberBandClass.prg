@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QRubberBand INHERIT QWidget
 
@@ -25,6 +24,7 @@ CLASS QRubberBand INHERIT QWidget
    METHOD setGeometry2
    METHOD setGeometry
    METHOD shape
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -52,10 +52,10 @@ HB_FUNC_STATIC( QRUBBERBAND_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QRUBBERBAND_DELETE )
 {
   QRubberBand * obj = (QRubberBand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -65,9 +65,9 @@ HB_FUNC_STATIC( QRUBBERBAND_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void move ( int x, int y )
@@ -82,7 +82,6 @@ HB_FUNC_STATIC( QRUBBERBAND_MOVE1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void move ( const QPoint & p )
 */
@@ -95,7 +94,6 @@ HB_FUNC_STATIC( QRUBBERBAND_MOVE2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void move ( int x, int y )
 //[2]void move ( const QPoint & p )
@@ -125,7 +123,6 @@ HB_FUNC_STATIC( QRUBBERBAND_RESIZE1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void resize ( const QSize & size )
 */
@@ -138,7 +135,6 @@ HB_FUNC_STATIC( QRUBBERBAND_RESIZE2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void resize ( int width, int height )
 //[2]void resize ( const QSize & size )
@@ -168,7 +164,6 @@ HB_FUNC_STATIC( QRUBBERBAND_SETGEOMETRY1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setGeometry ( int x, int y, int width, int height )
 */
@@ -181,7 +176,6 @@ HB_FUNC_STATIC( QRUBBERBAND_SETGEOMETRY2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setGeometry ( const QRect & rect )
 //[2]void setGeometry ( int x, int y, int width, int height )
@@ -209,9 +203,5 @@ HB_FUNC_STATIC( QRUBBERBAND_SHAPE )
     hb_retni( (int) obj->shape () );
   }
 }
-
-
-
-
 
 #pragma ENDDUMP

@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -23,6 +23,7 @@ CLASS QGraphicsSceneContextMenuEvent INHERIT QGraphicsSceneEvent
    METHOD reason
    METHOD scenePos
    METHOD screenPos
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -44,6 +45,7 @@ RETURN
 HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_DELETE )
 {
   QGraphicsSceneContextMenuEvent * obj = (QGraphicsSceneContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -53,9 +55,9 @@ HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 Qt::KeyboardModifiers modifiers () const
@@ -68,7 +70,6 @@ HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_MODIFIERS )
     hb_retni( (int) obj->modifiers () );
   }
 }
-
 
 /*
 QPointF pos () const
@@ -83,7 +84,6 @@ HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_POS )
   }
 }
 
-
 /*
 Reason reason () const
 */
@@ -95,7 +95,6 @@ HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_REASON )
     hb_retni( (int) obj->reason () );
   }
 }
-
 
 /*
 QPointF scenePos () const
@@ -110,7 +109,6 @@ HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_SCENEPOS )
   }
 }
 
-
 /*
 QPoint screenPos () const
 */
@@ -123,8 +121,5 @@ HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_SCREENPOS )
     _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
-
-
-
 
 #pragma ENDDUMP

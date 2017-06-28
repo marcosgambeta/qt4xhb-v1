@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -234,11 +234,13 @@ CLASS QPainter
    METHOD window
    METHOD worldMatrixEnabled
    METHOD worldTransform
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -266,7 +268,6 @@ HB_FUNC_STATIC( QPAINTER_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QPainter ( QPaintDevice * device )
 */
@@ -275,7 +276,6 @@ HB_FUNC_STATIC( QPAINTER_NEW2 )
   QPainter * o = new QPainter ( PQPAINTDEVICE(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QPainter ()
 //[2]QPainter ( QPaintDevice * device )
@@ -299,6 +299,7 @@ HB_FUNC_STATIC( QPAINTER_NEW )
 HB_FUNC_STATIC( QPAINTER_DELETE )
 {
   QPainter * obj = (QPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -308,9 +309,9 @@ HB_FUNC_STATIC( QPAINTER_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 const QBrush & background () const
@@ -325,7 +326,6 @@ HB_FUNC_STATIC( QPAINTER_BACKGROUND )
   }
 }
 
-
 /*
 Qt::BGMode backgroundMode () const
 */
@@ -337,7 +337,6 @@ HB_FUNC_STATIC( QPAINTER_BACKGROUNDMODE )
     hb_retni( (int) obj->backgroundMode () );
   }
 }
-
 
 /*
 bool begin ( QPaintDevice * device )
@@ -352,7 +351,6 @@ HB_FUNC_STATIC( QPAINTER_BEGIN )
   }
 }
 
-
 /*
 void beginNativePainting ()
 */
@@ -365,7 +363,6 @@ HB_FUNC_STATIC( QPAINTER_BEGINNATIVEPAINTING )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QRectF boundingRect ( const QRectF & rectangle, int flags, const QString & text )
@@ -381,7 +378,6 @@ HB_FUNC_STATIC( QPAINTER_BOUNDINGRECT1 )
   }
 }
 
-
 /*
 QRect boundingRect ( const QRect & rectangle, int flags, const QString & text )
 */
@@ -396,7 +392,6 @@ HB_FUNC_STATIC( QPAINTER_BOUNDINGRECT2 )
   }
 }
 
-
 /*
 QRect boundingRect ( int x, int y, int w, int h, int flags, const QString & text )
 */
@@ -409,7 +404,6 @@ HB_FUNC_STATIC( QPAINTER_BOUNDINGRECT3 )
     _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
-
 
 /*
 QRectF boundingRect ( const QRectF & rectangle, const QString & text, const QTextOption & option = QTextOption() )
@@ -424,7 +418,6 @@ HB_FUNC_STATIC( QPAINTER_BOUNDINGRECT4 )
     _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
-
 
 //[1]QRectF boundingRect ( const QRectF & rectangle, int flags, const QString & text )
 //[2]QRect boundingRect ( const QRect & rectangle, int flags, const QString & text )
@@ -464,7 +457,6 @@ HB_FUNC_STATIC( QPAINTER_BRUSH )
   }
 }
 
-
 /*
 QPoint brushOrigin () const
 */
@@ -477,7 +469,6 @@ HB_FUNC_STATIC( QPAINTER_BRUSHORIGIN )
     _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
-
 
 /*
 QPainterPath clipPath () const
@@ -492,7 +483,6 @@ HB_FUNC_STATIC( QPAINTER_CLIPPATH )
   }
 }
 
-
 /*
 QRegion clipRegion () const
 */
@@ -505,7 +495,6 @@ HB_FUNC_STATIC( QPAINTER_CLIPREGION )
     _qt4xhb_createReturnClass ( ptr, "QREGION", true );
   }
 }
-
 
 /*
 QTransform combinedTransform () const
@@ -520,7 +509,6 @@ HB_FUNC_STATIC( QPAINTER_COMBINEDTRANSFORM )
   }
 }
 
-
 /*
 CompositionMode compositionMode () const
 */
@@ -532,7 +520,6 @@ HB_FUNC_STATIC( QPAINTER_COMPOSITIONMODE )
     hb_retni( (int) obj->compositionMode () );
   }
 }
-
 
 /*
 QPaintDevice * device () const
@@ -547,7 +534,6 @@ HB_FUNC_STATIC( QPAINTER_DEVICE )
   }
 }
 
-
 /*
 const QTransform & deviceTransform () const
 */
@@ -560,7 +546,6 @@ HB_FUNC_STATIC( QPAINTER_DEVICETRANSFORM )
     _qt4xhb_createReturnClass ( ptr, "QTRANSFORM" );
   }
 }
-
 
 /*
 void drawArc ( const QRectF & rectangle, int startAngle, int spanAngle )
@@ -577,7 +562,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWARC1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawArc ( const QRect & rectangle, int startAngle, int spanAngle )
 */
@@ -593,7 +577,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWARC2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawArc ( int x, int y, int width, int height, int startAngle, int spanAngle )
 */
@@ -606,7 +589,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWARC3 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void drawArc ( const QRectF & rectangle, int startAngle, int spanAngle )
 //[2]void drawArc ( const QRect & rectangle, int startAngle, int spanAngle )
@@ -643,7 +625,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWCHORD1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawChord ( const QRect & rectangle, int startAngle, int spanAngle )
 */
@@ -659,7 +640,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWCHORD2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawChord ( int x, int y, int width, int height, int startAngle, int spanAngle )
 */
@@ -672,7 +652,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWCHORD3 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void drawChord ( const QRectF & rectangle, int startAngle, int spanAngle )
 //[2]void drawChord ( const QRect & rectangle, int startAngle, int spanAngle )
@@ -694,8 +673,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWCHORD )
   }
 }
 
-
-
 /*
 void drawConvexPolygon ( const QPolygonF & polygon )
 */
@@ -709,7 +686,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWCONVEXPOLYGON3 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawConvexPolygon ( const QPolygon & polygon )
 */
@@ -722,7 +698,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWCONVEXPOLYGON4 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void drawConvexPolygon ( const QPointF * points, int pointCount )
 //[2]void drawConvexPolygon ( const QPoint * points, int pointCount )
@@ -754,7 +729,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWELLIPSE1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawEllipse ( const QRect & rectangle )
 */
@@ -767,7 +741,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWELLIPSE2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void drawEllipse ( int x, int y, int width, int height )
@@ -782,7 +755,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWELLIPSE3 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawEllipse ( const QPointF & center, qreal rx, qreal ry )
 */
@@ -795,7 +767,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWELLIPSE4 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void drawEllipse ( const QPoint & center, int rx, int ry )
@@ -811,7 +782,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWELLIPSE5 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void drawEllipse ( const QRectF & rectangle )
 //[2]void drawEllipse ( const QRect & rectangle )
@@ -857,7 +827,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWIMAGE1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawImage ( const QRect & target, const QImage & image, const QRect & source, Qt::ImageConversionFlags flags = Qt::AutoColor )
 */
@@ -872,7 +841,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWIMAGE2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawImage ( const QPointF & point, const QImage & image )
 */
@@ -886,7 +854,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWIMAGE3 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawImage ( const QPoint & point, const QImage & image )
 */
@@ -899,7 +866,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWIMAGE4 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void drawImage ( const QPointF & point, const QImage & image, const QRectF & source, Qt::ImageConversionFlags flags = Qt::AutoColor )
@@ -915,7 +881,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWIMAGE5 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawImage ( const QPoint & point, const QImage & image, const QRect & source, Qt::ImageConversionFlags flags = Qt::AutoColor )
 */
@@ -930,7 +895,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWIMAGE6 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawImage ( const QRectF & rectangle, const QImage & image )
 */
@@ -943,7 +907,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWIMAGE7 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void drawImage ( const QRect & rectangle, const QImage & image )
@@ -958,7 +921,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWIMAGE8 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawImage ( int x, int y, const QImage & image, int sx = 0, int sy = 0, int sw = -1, int sh = -1, Qt::ImageConversionFlags flags = Qt::AutoColor )
 */
@@ -972,7 +934,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWIMAGE9 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void drawImage ( const QRectF & target, const QImage & image, const QRectF & source, Qt::ImageConversionFlags flags = Qt::AutoColor )
 //[2]void drawImage ( const QRect & target, const QImage & image, const QRect & source, Qt::ImageConversionFlags flags = Qt::AutoColor )
@@ -1037,7 +998,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWLINE1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawLine ( const QLine & line )
 */
@@ -1050,7 +1010,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWLINE2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void drawLine ( const QPoint & p1, const QPoint & p2 )
@@ -1065,7 +1024,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWLINE3 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawLine ( const QPointF & p1, const QPointF & p2 )
 */
@@ -1079,7 +1037,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWLINE4 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawLine ( int x1, int y1, int x2, int y2 )
 */
@@ -1092,7 +1049,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWLINE5 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void drawLine ( const QLineF & line )
 //[2]void drawLine ( const QLine & line )
@@ -1124,10 +1080,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWLINE )
   }
 }
 
-
-
-
-
 /*
 void drawLines ( const QVector<QPointF> & pointPairs )
 */
@@ -1148,7 +1100,6 @@ par1 << *(QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void drawLines ( const QVector<QPoint> & pointPairs )
@@ -1171,7 +1122,6 @@ par1 << *(QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawLines ( const QVector<QLineF> & lines )
 */
@@ -1193,7 +1143,6 @@ par1 << *(QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawLines ( const QVector<QLine> & lines )
 */
@@ -1214,7 +1163,6 @@ par1 << *(QLine *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void drawLines ( const QLineF * lines, int lineCount )
 //[2]void drawLines ( const QLine * lines, int lineCount )
@@ -1244,7 +1192,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWPATH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawPicture ( const QPointF & point, const QPicture & picture )
 */
@@ -1257,7 +1204,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWPICTURE1 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void drawPicture ( const QPoint & point, const QPicture & picture )
@@ -1272,7 +1218,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWPICTURE2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawPicture ( int x, int y, const QPicture & picture )
 */
@@ -1285,7 +1230,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWPICTURE3 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void drawPicture ( const QPointF & point, const QPicture & picture )
 //[2]void drawPicture ( const QPoint & point, const QPicture & picture )
@@ -1322,7 +1266,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWPIE1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawPie ( const QRect & rectangle, int startAngle, int spanAngle )
 */
@@ -1338,7 +1281,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWPIE2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawPie ( int x, int y, int width, int height, int startAngle, int spanAngle )
 */
@@ -1351,7 +1293,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWPIE3 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void drawPie ( const QRectF & rectangle, int startAngle, int spanAngle )
 //[2]void drawPie ( const QRect & rectangle, int startAngle, int spanAngle )
@@ -1386,7 +1327,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWPIXMAP1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawPixmap ( const QRect & target, const QPixmap & pixmap, const QRect & source )
 */
@@ -1399,7 +1339,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWPIXMAP2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void drawPixmap ( const QPointF & point, const QPixmap & pixmap, const QRectF & source )
@@ -1414,7 +1353,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWPIXMAP3 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawPixmap ( const QPoint & point, const QPixmap & pixmap, const QRect & source )
 */
@@ -1427,7 +1365,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWPIXMAP4 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void drawPixmap ( const QPointF & point, const QPixmap & pixmap )
@@ -1442,7 +1379,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWPIXMAP5 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawPixmap ( const QPoint & point, const QPixmap & pixmap )
 */
@@ -1455,7 +1391,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWPIXMAP6 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void drawPixmap ( int x, int y, const QPixmap & pixmap )
@@ -1470,7 +1405,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWPIXMAP7 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawPixmap ( const QRect & rectangle, const QPixmap & pixmap )
 */
@@ -1483,7 +1417,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWPIXMAP8 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void drawPixmap ( int x, int y, int width, int height, const QPixmap & pixmap )
@@ -1498,7 +1431,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWPIXMAP9 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawPixmap ( int x, int y, int w, int h, const QPixmap & pixmap, int sx, int sy, int sw, int sh )
 */
@@ -1512,7 +1444,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWPIXMAP10 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawPixmap ( int x, int y, const QPixmap & pixmap, int sx, int sy, int sw, int sh )
 */
@@ -1525,7 +1456,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWPIXMAP11 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[01]void drawPixmap ( const QRectF & target, const QPixmap & pixmap, const QRectF & source )
 //[02]void drawPixmap ( const QRect & target, const QPixmap & pixmap, const QRect & source )
@@ -1587,7 +1517,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWPIXMAP )
   }
 }
 
-
 /*
 void drawPoint ( const QPointF & position )
 */
@@ -1600,7 +1529,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOINT1 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void drawPoint ( const QPoint & position )
@@ -1615,7 +1543,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOINT2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawPoint ( int x, int y )
 */
@@ -1628,7 +1555,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOINT3 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void drawPoint ( const QPointF & position )
 //[2]void drawPoint ( const QPoint & position )
@@ -1650,8 +1576,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOINT )
   }
 }
 
-
-
 /*
 void drawPoints ( const QPolygonF & points )
 */
@@ -1665,7 +1589,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOINTS3 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawPoints ( const QPolygon & points )
 */
@@ -1678,7 +1601,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOINTS4 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void drawPoints ( const QPointF * points, int pointCount )
 //[2]void drawPoints ( const QPoint * points, int pointCount )
@@ -1697,8 +1619,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOINTS )
   }
 }
 
-
-
 /*
 void drawPolygon ( const QPolygonF & points, Qt::FillRule fillRule = Qt::OddEvenFill )
 */
@@ -1713,7 +1633,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOLYGON3 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawPolygon ( const QPolygon & points, Qt::FillRule fillRule = Qt::OddEvenFill )
 */
@@ -1727,7 +1646,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOLYGON4 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void drawPolygon ( const QPointF * points, int pointCount, Qt::FillRule fillRule = Qt::OddEvenFill )
 //[2]void drawPolygon ( const QPoint * points, int pointCount, Qt::FillRule fillRule = Qt::OddEvenFill )
@@ -1746,8 +1664,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOLYGON )
   }
 }
 
-
-
 /*
 void drawPolyline ( const QPolygonF & points )
 */
@@ -1761,7 +1677,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOLYLINE3 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawPolyline ( const QPolygon & points )
 */
@@ -1774,7 +1689,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOLYLINE4 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void drawPolyline ( const QPointF * points, int pointCount )
 //[2]void drawPolyline ( const QPoint * points, int pointCount )
@@ -1806,7 +1720,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWRECT1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawRect ( const QRect & rectangle )
 */
@@ -1820,7 +1733,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWRECT2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawRect ( int x, int y, int width, int height )
 */
@@ -1833,7 +1745,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWRECT3 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void drawRect ( const QRectF & rectangle )
 //[2]void drawRect ( const QRect & rectangle )
@@ -1854,8 +1765,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWRECT )
     HB_FUNC_EXEC( QPAINTER_DRAWRECT3 );
   }
 }
-
-
 
 /*
 void drawRects ( const QVector<QRectF> & rectangles )
@@ -1878,7 +1787,6 @@ par1 << *(QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawRects ( const QVector<QRect> & rectangles )
 */
@@ -1899,7 +1807,6 @@ par1 << *(QRect *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void drawRects ( const QRectF * rectangles, int rectCount )
 //[2]void drawRects ( const QRect * rectangles, int rectCount )
@@ -1924,7 +1831,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWROUNDEDRECT1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawRoundedRect ( const QRect & rect, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
 */
@@ -1939,7 +1845,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWROUNDEDRECT2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawRoundedRect ( int x, int y, int w, int h, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
 */
@@ -1953,7 +1858,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWROUNDEDRECT3 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void drawRoundedRect ( const QRectF & rect, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
 //[2]void drawRoundedRect ( const QRect & rect, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
@@ -1988,7 +1892,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWSTATICTEXT1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawStaticText ( const QPoint & topLeftPosition, const QStaticText & staticText )
 */
@@ -2002,7 +1905,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWSTATICTEXT2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawStaticText ( int left, int top, const QStaticText & staticText )
 */
@@ -2015,7 +1917,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWSTATICTEXT3 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void drawStaticText ( const QPointF & topLeftPosition, const QStaticText & staticText )
 //[2]void drawStaticText ( const QPoint & topLeftPosition, const QStaticText & staticText )
@@ -2050,7 +1951,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWTEXT1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawText ( const QPoint & position, const QString & text )
 */
@@ -2063,7 +1963,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWTEXT2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void drawText ( const QRectF & rectangle, int flags, const QString & text, QRectF * boundingRect = 0 )
@@ -2080,7 +1979,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWTEXT3 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawText ( const QRect & rectangle, int flags, const QString & text, QRect * boundingRect = 0 )
 */
@@ -2096,7 +1994,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWTEXT4 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawText ( int x, int y, const QString & text )
 */
@@ -2109,7 +2006,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWTEXT5 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void drawText ( int x, int y, int width, int height, int flags, const QString & text, QRect * boundingRect = 0 )
@@ -2125,7 +2021,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWTEXT6 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawText ( const QRectF & rectangle, const QString & text, const QTextOption & option = QTextOption() )
 */
@@ -2139,7 +2034,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWTEXT7 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void drawText ( const QPointF & position, const QString & text )
 //[2]void drawText ( const QPoint & position, const QString & text )
@@ -2195,7 +2089,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWTILEDPIXMAP1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawTiledPixmap ( const QRect & rectangle, const QPixmap & pixmap, const QPoint & position = QPoint() )
 */
@@ -2210,7 +2103,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWTILEDPIXMAP2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawTiledPixmap ( int x, int y, int width, int height, const QPixmap & pixmap, int sx = 0, int sy = 0 )
 */
@@ -2223,7 +2115,6 @@ HB_FUNC_STATIC( QPAINTER_DRAWTILEDPIXMAP3 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void drawTiledPixmap ( const QRectF & rectangle, const QPixmap & pixmap, const QPointF & position = QPointF() )
 //[2]void drawTiledPixmap ( const QRect & rectangle, const QPixmap & pixmap, const QPoint & position = QPoint() )
@@ -2257,7 +2148,6 @@ HB_FUNC_STATIC( QPAINTER_END )
   }
 }
 
-
 /*
 void endNativePainting ()
 */
@@ -2270,7 +2160,6 @@ HB_FUNC_STATIC( QPAINTER_ENDNATIVEPAINTING )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void eraseRect ( const QRectF & rectangle )
@@ -2285,7 +2174,6 @@ HB_FUNC_STATIC( QPAINTER_ERASERECT1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void eraseRect ( const QRect & rectangle )
 */
@@ -2299,7 +2187,6 @@ HB_FUNC_STATIC( QPAINTER_ERASERECT2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void eraseRect ( int x, int y, int width, int height )
 */
@@ -2312,7 +2199,6 @@ HB_FUNC_STATIC( QPAINTER_ERASERECT3 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void eraseRect ( const QRectF & rectangle )
 //[2]void eraseRect ( const QRect & rectangle )
@@ -2347,7 +2233,6 @@ HB_FUNC_STATIC( QPAINTER_FILLPATH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void fillRect ( const QRectF & rectangle, const QBrush & brush )
 */
@@ -2360,7 +2245,6 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT1 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void fillRect ( int x, int y, int width, int height, Qt::BrushStyle style )
@@ -2376,7 +2260,6 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void fillRect ( const QRect & rectangle, Qt::BrushStyle style )
 */
@@ -2390,7 +2273,6 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT3 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void fillRect ( const QRectF & rectangle, Qt::BrushStyle style )
@@ -2406,7 +2288,6 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT4 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void fillRect ( const QRect & rectangle, const QBrush & brush )
 */
@@ -2419,7 +2300,6 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT5 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void fillRect ( const QRect & rectangle, const QColor & color )
@@ -2435,7 +2315,6 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT6 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void fillRect ( const QRectF & rectangle, const QColor & color )
 */
@@ -2450,7 +2329,6 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT7 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void fillRect ( int x, int y, int width, int height, const QBrush & brush )
 */
@@ -2463,7 +2341,6 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT8 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void fillRect ( int x, int y, int width, int height, const QColor & color )
@@ -2479,7 +2356,6 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT9 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void fillRect ( int x, int y, int width, int height, Qt::GlobalColor color )
 */
@@ -2493,7 +2369,6 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT10 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void fillRect ( const QRect & rectangle, Qt::GlobalColor color )
@@ -2509,7 +2384,6 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT11 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void fillRect ( const QRectF & rectangle, Qt::GlobalColor color )
 */
@@ -2523,7 +2397,6 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT12 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[01]void fillPath ( const QPainterPath & path, const QBrush & brush )
 //[02]void fillRect ( int x, int y, int width, int height, Qt::BrushStyle style )
@@ -2603,7 +2476,6 @@ HB_FUNC_STATIC( QPAINTER_FONT )
   }
 }
 
-
 /*
 QFontInfo fontInfo () const
 */
@@ -2616,7 +2488,6 @@ HB_FUNC_STATIC( QPAINTER_FONTINFO )
     _qt4xhb_createReturnClass ( ptr, "QFONTINFO", true );
   }
 }
-
 
 /*
 QFontMetrics fontMetrics () const
@@ -2631,7 +2502,6 @@ HB_FUNC_STATIC( QPAINTER_FONTMETRICS )
   }
 }
 
-
 /*
 bool hasClipping () const
 */
@@ -2643,7 +2513,6 @@ HB_FUNC_STATIC( QPAINTER_HASCLIPPING )
     RBOOL( obj->hasClipping () );
   }
 }
-
 
 /*
 void initFrom ( const QWidget * widget )
@@ -2659,7 +2528,6 @@ HB_FUNC_STATIC( QPAINTER_INITFROM )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool isActive () const
 */
@@ -2671,7 +2539,6 @@ HB_FUNC_STATIC( QPAINTER_ISACTIVE )
     RBOOL( obj->isActive () );
   }
 }
-
 
 /*
 Qt::LayoutDirection layoutDirection () const
@@ -2685,7 +2552,6 @@ HB_FUNC_STATIC( QPAINTER_LAYOUTDIRECTION )
   }
 }
 
-
 /*
 qreal opacity () const
 */
@@ -2697,7 +2563,6 @@ HB_FUNC_STATIC( QPAINTER_OPACITY )
     RQREAL( obj->opacity () );
   }
 }
-
 
 /*
 QPaintEngine * paintEngine () const
@@ -2712,7 +2577,6 @@ HB_FUNC_STATIC( QPAINTER_PAINTENGINE )
   }
 }
 
-
 /*
 const QPen & pen () const
 */
@@ -2726,7 +2590,6 @@ HB_FUNC_STATIC( QPAINTER_PEN )
   }
 }
 
-
 /*
 RenderHints renderHints () const
 */
@@ -2738,7 +2601,6 @@ HB_FUNC_STATIC( QPAINTER_RENDERHINTS )
     hb_retni( (int) obj->renderHints () );
   }
 }
-
 
 /*
 void resetTransform ()
@@ -2753,7 +2615,6 @@ HB_FUNC_STATIC( QPAINTER_RESETTRANSFORM )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void restore ()
 */
@@ -2766,7 +2627,6 @@ HB_FUNC_STATIC( QPAINTER_RESTORE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void rotate ( qreal angle )
@@ -2781,7 +2641,6 @@ HB_FUNC_STATIC( QPAINTER_ROTATE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void save ()
 */
@@ -2794,7 +2653,6 @@ HB_FUNC_STATIC( QPAINTER_SAVE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void scale ( qreal sx, qreal sy )
@@ -2809,7 +2667,6 @@ HB_FUNC_STATIC( QPAINTER_SCALE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setBackground ( const QBrush & brush )
 */
@@ -2822,7 +2679,6 @@ HB_FUNC_STATIC( QPAINTER_SETBACKGROUND )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setBackgroundMode ( Qt::BGMode mode )
@@ -2838,7 +2694,6 @@ HB_FUNC_STATIC( QPAINTER_SETBACKGROUNDMODE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setBrush ( const QBrush & brush )
 */
@@ -2851,7 +2706,6 @@ HB_FUNC_STATIC( QPAINTER_SETBRUSH1 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setBrush ( Qt::BrushStyle style )
@@ -2866,7 +2720,6 @@ HB_FUNC_STATIC( QPAINTER_SETBRUSH2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setBrush ( const QBrush & brush )
 //[2]void setBrush ( Qt::BrushStyle style )
@@ -2896,7 +2749,6 @@ HB_FUNC_STATIC( QPAINTER_SETBRUSHORIGIN1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setBrushOrigin ( const QPoint & position )
 */
@@ -2910,7 +2762,6 @@ HB_FUNC_STATIC( QPAINTER_SETBRUSHORIGIN2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setBrushOrigin ( int x, int y )
 */
@@ -2923,7 +2774,6 @@ HB_FUNC_STATIC( QPAINTER_SETBRUSHORIGIN3 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setBrushOrigin ( const QPointF & position )
 //[2]void setBrushOrigin ( const QPoint & position )
@@ -2959,7 +2809,6 @@ HB_FUNC_STATIC( QPAINTER_SETCLIPPATH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setClipRect ( const QRectF & rectangle, Qt::ClipOperation operation = Qt::ReplaceClip )
 */
@@ -2973,7 +2822,6 @@ HB_FUNC_STATIC( QPAINTER_SETCLIPRECT1 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setClipRect ( int x, int y, int width, int height, Qt::ClipOperation operation = Qt::ReplaceClip )
@@ -2989,7 +2837,6 @@ HB_FUNC_STATIC( QPAINTER_SETCLIPRECT2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setClipRect ( const QRect & rectangle, Qt::ClipOperation operation = Qt::ReplaceClip )
 */
@@ -3003,7 +2850,6 @@ HB_FUNC_STATIC( QPAINTER_SETCLIPRECT3 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setClipRect ( const QRectF & rectangle, Qt::ClipOperation operation = Qt::ReplaceClip )
 //[2]void setClipRect ( int x, int y, int width, int height, Qt::ClipOperation operation = Qt::ReplaceClip )
@@ -3039,7 +2885,6 @@ HB_FUNC_STATIC( QPAINTER_SETCLIPREGION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setClipping ( bool enable )
 */
@@ -3052,7 +2897,6 @@ HB_FUNC_STATIC( QPAINTER_SETCLIPPING )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setCompositionMode ( CompositionMode mode )
@@ -3068,7 +2912,6 @@ HB_FUNC_STATIC( QPAINTER_SETCOMPOSITIONMODE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setFont ( const QFont & font )
 */
@@ -3081,7 +2924,6 @@ HB_FUNC_STATIC( QPAINTER_SETFONT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setLayoutDirection ( Qt::LayoutDirection direction )
@@ -3097,7 +2939,6 @@ HB_FUNC_STATIC( QPAINTER_SETLAYOUTDIRECTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setOpacity ( qreal opacity )
 */
@@ -3111,7 +2952,6 @@ HB_FUNC_STATIC( QPAINTER_SETOPACITY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPen ( const QPen & pen )
 */
@@ -3124,7 +2964,6 @@ HB_FUNC_STATIC( QPAINTER_SETPEN1 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setPen ( const QColor & color )
@@ -3140,7 +2979,6 @@ HB_FUNC_STATIC( QPAINTER_SETPEN2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPen ( Qt::PenStyle style )
 */
@@ -3154,7 +2992,6 @@ HB_FUNC_STATIC( QPAINTER_SETPEN3 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setPen ( const QPen & pen )
 //[2]void setPen ( const QColor & color )
@@ -3190,7 +3027,6 @@ HB_FUNC_STATIC( QPAINTER_SETRENDERHINT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setRenderHints ( RenderHints hints, bool on = true )
 */
@@ -3205,7 +3041,6 @@ HB_FUNC_STATIC( QPAINTER_SETRENDERHINTS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setTransform ( const QTransform & transform, bool combine = false )
 */
@@ -3218,7 +3053,6 @@ HB_FUNC_STATIC( QPAINTER_SETTRANSFORM )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setViewTransformEnabled ( bool enable )
@@ -3233,7 +3067,6 @@ HB_FUNC_STATIC( QPAINTER_SETVIEWTRANSFORMENABLED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setViewport ( const QRect & rectangle )
 */
@@ -3247,7 +3080,6 @@ HB_FUNC_STATIC( QPAINTER_SETVIEWPORT1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setViewport ( int x, int y, int width, int height )
 */
@@ -3260,7 +3092,6 @@ HB_FUNC_STATIC( QPAINTER_SETVIEWPORT2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setViewport ( const QRect & rectangle )
 //[2]void setViewport ( int x, int y, int width, int height )
@@ -3290,7 +3121,6 @@ HB_FUNC_STATIC( QPAINTER_SETWINDOW1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setWindow ( int x, int y, int width, int height )
 */
@@ -3303,7 +3133,6 @@ HB_FUNC_STATIC( QPAINTER_SETWINDOW2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setWindow ( const QRect & rectangle )
 //[2]void setWindow ( int x, int y, int width, int height )
@@ -3333,7 +3162,6 @@ HB_FUNC_STATIC( QPAINTER_SETWORLDMATRIXENABLED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setWorldTransform ( const QTransform & matrix, bool combine = false )
 */
@@ -3346,7 +3174,6 @@ HB_FUNC_STATIC( QPAINTER_SETWORLDTRANSFORM )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void shear ( qreal sh, qreal sv )
@@ -3361,7 +3188,6 @@ HB_FUNC_STATIC( QPAINTER_SHEAR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void strokePath ( const QPainterPath & path, const QPen & pen )
 */
@@ -3374,7 +3200,6 @@ HB_FUNC_STATIC( QPAINTER_STROKEPATH )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 bool testRenderHint ( RenderHint hint ) const
@@ -3389,7 +3214,6 @@ HB_FUNC_STATIC( QPAINTER_TESTRENDERHINT )
   }
 }
 
-
 /*
 const QTransform & transform () const
 */
@@ -3402,7 +3226,6 @@ HB_FUNC_STATIC( QPAINTER_TRANSFORM )
     _qt4xhb_createReturnClass ( ptr, "QTRANSFORM" );
   }
 }
-
 
 /*
 void translate ( const QPointF & offset )
@@ -3417,7 +3240,6 @@ HB_FUNC_STATIC( QPAINTER_TRANSLATE1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void translate ( const QPoint & offset )
 */
@@ -3431,7 +3253,6 @@ HB_FUNC_STATIC( QPAINTER_TRANSLATE2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void translate ( qreal dx, qreal dy )
 */
@@ -3444,7 +3265,6 @@ HB_FUNC_STATIC( QPAINTER_TRANSLATE3 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void translate ( const QPointF & offset )
 //[2]void translate ( const QPoint & offset )
@@ -3478,7 +3298,6 @@ HB_FUNC_STATIC( QPAINTER_VIEWTRANSFORMENABLED )
   }
 }
 
-
 /*
 QRect viewport () const
 */
@@ -3491,7 +3310,6 @@ HB_FUNC_STATIC( QPAINTER_VIEWPORT )
     _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
-
 
 /*
 QRect window () const
@@ -3506,7 +3324,6 @@ HB_FUNC_STATIC( QPAINTER_WINDOW )
   }
 }
 
-
 /*
 bool worldMatrixEnabled () const
 */
@@ -3518,7 +3335,6 @@ HB_FUNC_STATIC( QPAINTER_WORLDMATRIXENABLED )
     RBOOL( obj->worldMatrixEnabled () );
   }
 }
-
 
 /*
 const QTransform & worldTransform () const
@@ -3532,7 +3348,6 @@ HB_FUNC_STATIC( QPAINTER_WORLDTRANSFORM )
     _qt4xhb_createReturnClass ( ptr, "QTRANSFORM" );
   }
 }
-
 
 HB_FUNC_STATIC( QPAINTER_NEWFROM )
 {
@@ -3588,6 +3403,5 @@ HB_FUNC_STATIC( QPAINTER_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

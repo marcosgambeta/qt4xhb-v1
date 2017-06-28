@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -27,11 +27,13 @@ CLASS QGraphicsScale INHERIT QGraphicsTransform
    METHOD yScale
    METHOD zScale
    METHOD applyTo
+
    METHOD onOriginChanged
    METHOD onScaleChanged
    METHOD onXScaleChanged
    METHOD onYScaleChanged
    METHOD onZScaleChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -59,10 +61,10 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QGRAPHICSSCALE_DELETE )
 {
   QGraphicsScale * obj = (QGraphicsScale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -72,9 +74,9 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QVector3D origin () const
@@ -89,7 +91,6 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ORIGIN )
   }
 }
 
-
 /*
 void setOrigin ( const QVector3D & point )
 */
@@ -102,7 +103,6 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_SETORIGIN )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setXScale ( qreal )
@@ -117,7 +117,6 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_SETXSCALE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setYScale ( qreal )
 */
@@ -130,7 +129,6 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_SETYSCALE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setZScale ( qreal )
@@ -145,7 +143,6 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_SETZSCALE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 qreal xScale () const
 */
@@ -157,7 +154,6 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_XSCALE )
     RQREAL( obj->xScale () );
   }
 }
-
 
 /*
 qreal yScale () const
@@ -171,7 +167,6 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_YSCALE )
   }
 }
 
-
 /*
 qreal zScale () const
 */
@@ -183,7 +178,6 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ZSCALE )
     RQREAL( obj->zScale () );
   }
 }
-
 
 /*
 virtual void applyTo ( QMatrix4x4 * matrix ) const
@@ -198,10 +192,5 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_APPLYTO )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
-
 
 #pragma ENDDUMP

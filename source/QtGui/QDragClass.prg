@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -33,8 +33,10 @@ CLASS QDrag INHERIT QObject
    METHOD setPixmap
    METHOD source
    METHOD target
+
    METHOD onActionChanged
    METHOD onTargetChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -65,10 +67,10 @@ HB_FUNC_STATIC( QDRAG_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QDRAG_DELETE )
 {
   QDrag * obj = (QDrag *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -78,9 +80,9 @@ HB_FUNC_STATIC( QDRAG_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 Qt::DropAction exec ( Qt::DropActions supportedActions = Qt::MoveAction )
@@ -95,7 +97,6 @@ HB_FUNC_STATIC( QDRAG_EXEC1 )
   }
 }
 
-
 /*
 Qt::DropAction exec ( Qt::DropActions supportedActions, Qt::DropAction defaultDropAction )
 */
@@ -109,7 +110,6 @@ HB_FUNC_STATIC( QDRAG_EXEC2 )
     hb_retni( (int) obj->exec ( (Qt::DropActions) par1, (Qt::DropAction) par2 ) );
   }
 }
-
 
 //[1]Qt::DropAction exec ( Qt::DropActions supportedActions = Qt::MoveAction )
 //[2]Qt::DropAction exec ( Qt::DropActions supportedActions, Qt::DropAction defaultDropAction )
@@ -126,7 +126,6 @@ HB_FUNC_STATIC( QDRAG_EXEC )
   }
 }
 
-
 /*
 QPoint hotSpot () const
 */
@@ -139,7 +138,6 @@ HB_FUNC_STATIC( QDRAG_HOTSPOT )
     _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
-
 
 /*
 QMimeData * mimeData () const
@@ -154,7 +152,6 @@ HB_FUNC_STATIC( QDRAG_MIMEDATA )
   }
 }
 
-
 /*
 QPixmap pixmap () const
 */
@@ -167,7 +164,6 @@ HB_FUNC_STATIC( QDRAG_PIXMAP )
     _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
-
 
 /*
 void setDragCursor ( const QPixmap & cursor, Qt::DropAction action )
@@ -183,7 +179,6 @@ HB_FUNC_STATIC( QDRAG_SETDRAGCURSOR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setHotSpot ( const QPoint & hotspot )
 */
@@ -196,7 +191,6 @@ HB_FUNC_STATIC( QDRAG_SETHOTSPOT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setMimeData ( QMimeData * data )
@@ -212,7 +206,6 @@ HB_FUNC_STATIC( QDRAG_SETMIMEDATA )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPixmap ( const QPixmap & pixmap )
 */
@@ -225,7 +218,6 @@ HB_FUNC_STATIC( QDRAG_SETPIXMAP )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QWidget * source () const
@@ -240,7 +232,6 @@ HB_FUNC_STATIC( QDRAG_SOURCE )
   }
 }
 
-
 /*
 QWidget * target () const
 */
@@ -253,9 +244,5 @@ HB_FUNC_STATIC( QDRAG_TARGET )
     _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
-
-
-
-
 
 #pragma ENDDUMP

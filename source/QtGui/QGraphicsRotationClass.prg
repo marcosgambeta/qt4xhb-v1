@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -27,9 +27,11 @@ CLASS QGraphicsRotation INHERIT QGraphicsTransform
    METHOD setAxis
    METHOD setOrigin
    METHOD applyTo
+
    METHOD onAngleChanged
    METHOD onAxisChanged
    METHOD onOriginChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -57,10 +59,10 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QGRAPHICSROTATION_DELETE )
 {
   QGraphicsRotation * obj = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -70,9 +72,9 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 qreal angle () const
@@ -85,7 +87,6 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ANGLE )
     RQREAL( obj->angle () );
   }
 }
-
 
 /*
 QVector3D axis () const
@@ -100,7 +101,6 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_AXIS )
   }
 }
 
-
 /*
 QVector3D origin () const
 */
@@ -113,7 +113,6 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ORIGIN )
     _qt4xhb_createReturnClass ( ptr, "QVECTOR3D" );
   }
 }
-
 
 /*
 void setAngle ( qreal )
@@ -128,7 +127,6 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_SETANGLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setAxis ( const QVector3D & axis )
 */
@@ -141,7 +139,6 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_SETAXIS1 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setAxis ( Qt::Axis axis )
@@ -156,7 +153,6 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_SETAXIS2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setAxis ( const QVector3D & axis )
 //[2]void setAxis ( Qt::Axis axis )
@@ -186,7 +182,6 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_SETORIGIN )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void applyTo ( QMatrix4x4 * matrix ) const
 */
@@ -200,10 +195,5 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_APPLYTO )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
-
 
 #pragma ENDDUMP

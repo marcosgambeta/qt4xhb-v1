@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QTextImageFormat INHERIT QTextCharFormat
 
@@ -22,6 +21,7 @@ CLASS QTextImageFormat INHERIT QTextCharFormat
    METHOD setName
    METHOD setWidth
    METHOD width
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -49,10 +49,10 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_DELETE )
 {
   QTextImageFormat * obj = (QTextImageFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -62,9 +62,9 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 qreal height () const
@@ -78,7 +78,6 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_HEIGHT )
   }
 }
 
-
 /*
 bool isValid () const
 */
@@ -91,7 +90,6 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_ISVALID )
   }
 }
 
-
 /*
 QString name () const
 */
@@ -103,7 +101,6 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_NAME )
     RQSTRING( obj->name () );
   }
 }
-
 
 /*
 void setHeight ( qreal height )
@@ -118,7 +115,6 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETHEIGHT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setName ( const QString & name )
 */
@@ -131,7 +127,6 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETNAME )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setWidth ( qreal width )
@@ -146,7 +141,6 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETWIDTH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 qreal width () const
 */
@@ -158,8 +152,5 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_WIDTH )
     RQREAL( obj->width () );
   }
 }
-
-
-
 
 #pragma ENDDUMP

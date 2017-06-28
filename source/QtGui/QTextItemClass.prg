@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -24,11 +24,13 @@ CLASS QTextItem
    METHOD renderFlags
    METHOD text
    METHOD width
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -50,6 +52,7 @@ RETURN
 HB_FUNC_STATIC( QTEXTITEM_DELETE )
 {
   QTextItem * obj = (QTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -59,9 +62,9 @@ HB_FUNC_STATIC( QTEXTITEM_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 qreal ascent () const
@@ -75,7 +78,6 @@ HB_FUNC_STATIC( QTEXTITEM_ASCENT )
   }
 }
 
-
 /*
 qreal descent () const
 */
@@ -87,7 +89,6 @@ HB_FUNC_STATIC( QTEXTITEM_DESCENT )
     RQREAL( obj->descent () );
   }
 }
-
 
 /*
 QFont font () const
@@ -102,7 +103,6 @@ HB_FUNC_STATIC( QTEXTITEM_FONT )
   }
 }
 
-
 /*
 RenderFlags renderFlags () const
 */
@@ -114,7 +114,6 @@ HB_FUNC_STATIC( QTEXTITEM_RENDERFLAGS )
     hb_retni( (int) obj->renderFlags () );
   }
 }
-
 
 /*
 QString text () const
@@ -128,7 +127,6 @@ HB_FUNC_STATIC( QTEXTITEM_TEXT )
   }
 }
 
-
 /*
 qreal width () const
 */
@@ -140,7 +138,6 @@ HB_FUNC_STATIC( QTEXTITEM_WIDTH )
     RQREAL( obj->width () );
   }
 }
-
 
 HB_FUNC_STATIC( QTEXTITEM_NEWFROM )
 {
@@ -196,6 +193,5 @@ HB_FUNC_STATIC( QTEXTITEM_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

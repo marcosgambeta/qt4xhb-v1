@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -96,7 +96,14 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOEXCLUSIVE )
 
   if( obj )
   {
-    RBOOL( obj->autoExclusive () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->autoExclusive () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -109,7 +116,14 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEAT )
 
   if( obj )
   {
-    RBOOL( obj->autoRepeat () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->autoRepeat () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -122,7 +136,14 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEATDELAY )
 
   if( obj )
   {
-    RINT( obj->autoRepeatDelay () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->autoRepeatDelay () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -135,7 +156,14 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEATINTERVAL )
 
   if( obj )
   {
-    RINT( obj->autoRepeatInterval () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->autoRepeatInterval () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -190,7 +218,14 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ISCHECKABLE )
 
   if( obj )
   {
-    RBOOL( obj->isCheckable () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isCheckable () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -203,7 +238,14 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ISCHECKED )
 
   if( obj )
   {
-    RBOOL( obj->isChecked () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isChecked () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -216,7 +258,14 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ISDOWN )
 
   if( obj )
   {
-    RBOOL( obj->isDown () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isDown () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -229,7 +278,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOEXCLUSIVE )
 
   if( obj )
   {
-    if( ISLOG(1) )
+    if( ISNUMPAR(1) && ISLOG(1) )
     {
       obj->setAutoExclusive ( PBOOL(1) );
     }
@@ -251,7 +300,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEAT )
 
   if( obj )
   {
-    if( ISLOG(1) )
+    if( ISNUMPAR(1) && ISLOG(1) )
     {
       obj->setAutoRepeat ( PBOOL(1) );
     }
@@ -273,7 +322,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEATDELAY )
 
   if( obj )
   {
-    if( ISNUM(1) )
+    if( ISNUMPAR(1) && ISNUM(1) )
     {
       obj->setAutoRepeatDelay ( PINT(1) );
     }
@@ -295,7 +344,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEATINTERVAL )
 
   if( obj )
   {
-    if( ISNUM(1) )
+    if( ISNUMPAR(1) && ISNUM(1) )
     {
       obj->setAutoRepeatInterval ( PINT(1) );
     }
@@ -317,7 +366,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETCHECKABLE )
 
   if( obj )
   {
-    if( ISLOG(1) )
+    if( ISNUMPAR(1) && ISLOG(1) )
     {
       obj->setCheckable ( PBOOL(1) );
     }
@@ -339,7 +388,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETDOWN )
 
   if( obj )
   {
-    if( ISLOG(1) )
+    if( ISNUMPAR(1) && ISLOG(1) )
     {
       obj->setDown ( PBOOL(1) );
     }
@@ -406,7 +455,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETTEXT )
 
   if( obj )
   {
-    if( ISCHAR(1) )
+    if( ISNUMPAR(1) && ISCHAR(1) )
     {
       obj->setText ( PQSTRING(1) );
     }
@@ -442,7 +491,14 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_TEXT )
 
   if( obj )
   {
-    RQSTRING( obj->text () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->text () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -477,7 +533,14 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_CLICK )
 
   if( obj )
   {
-    obj->click ();
+    if( ISNUMPAR(0) )
+    {
+      obj->click ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -492,7 +555,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETCHECKED )
 
   if( obj )
   {
-    if( ISLOG(1) )
+    if( ISNUMPAR(1) && ISLOG(1) )
     {
       obj->setChecked ( PBOOL(1) );
     }
@@ -536,7 +599,14 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_TOGGLE )
 
   if( obj )
   {
-    obj->toggle ();
+    if( ISNUMPAR(0) )
+    {
+      obj->toggle ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );

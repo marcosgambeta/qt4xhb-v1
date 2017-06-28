@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -32,11 +32,13 @@ CLASS QTextTableCell
    METHOD rowSpan
    METHOD setFormat
    METHOD tableCellFormatIndex
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -66,7 +68,6 @@ HB_FUNC_STATIC( QTEXTTABLECELL_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QTextTableCell ( const QTextTableCell & other )
 */
@@ -75,7 +76,6 @@ HB_FUNC_STATIC( QTEXTTABLECELL_NEW2 )
   QTextTableCell * o = new QTextTableCell ( *PQTEXTTABLECELL(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QTextTableCell ()
 //[2]QTextTableCell ( const QTextTableCell & other )
@@ -99,6 +99,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_NEW )
 HB_FUNC_STATIC( QTEXTTABLECELL_DELETE )
 {
   QTextTableCell * obj = (QTextTableCell *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -108,10 +109,9 @@ HB_FUNC_STATIC( QTEXTTABLECELL_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
 
 /*
 int column () const
@@ -125,7 +125,6 @@ HB_FUNC_STATIC( QTEXTTABLECELL_COLUMN )
   }
 }
 
-
 /*
 int columnSpan () const
 */
@@ -137,8 +136,6 @@ HB_FUNC_STATIC( QTEXTTABLECELL_COLUMNSPAN )
     RINT( obj->columnSpan () );
   }
 }
-
-
 
 /*
 QTextCursor firstCursorPosition () const
@@ -153,7 +150,6 @@ HB_FUNC_STATIC( QTEXTTABLECELL_FIRSTCURSORPOSITION )
   }
 }
 
-
 /*
 QTextCharFormat format () const
 */
@@ -167,7 +163,6 @@ HB_FUNC_STATIC( QTEXTTABLECELL_FORMAT )
   }
 }
 
-
 /*
 bool isValid () const
 */
@@ -179,7 +174,6 @@ HB_FUNC_STATIC( QTEXTTABLECELL_ISVALID )
     RBOOL( obj->isValid () );
   }
 }
-
 
 /*
 QTextCursor lastCursorPosition () const
@@ -194,7 +188,6 @@ HB_FUNC_STATIC( QTEXTTABLECELL_LASTCURSORPOSITION )
   }
 }
 
-
 /*
 int row () const
 */
@@ -207,7 +200,6 @@ HB_FUNC_STATIC( QTEXTTABLECELL_ROW )
   }
 }
 
-
 /*
 int rowSpan () const
 */
@@ -219,7 +211,6 @@ HB_FUNC_STATIC( QTEXTTABLECELL_ROWSPAN )
     RINT( obj->rowSpan () );
   }
 }
-
 
 /*
 void setFormat ( const QTextCharFormat & format )
@@ -234,7 +225,6 @@ HB_FUNC_STATIC( QTEXTTABLECELL_SETFORMAT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int tableCellFormatIndex () const
 */
@@ -246,7 +236,6 @@ HB_FUNC_STATIC( QTEXTTABLECELL_TABLECELLFORMATINDEX )
     RINT( obj->tableCellFormatIndex () );
   }
 }
-
 
 HB_FUNC_STATIC( QTEXTTABLECELL_NEWFROM )
 {
@@ -302,6 +291,5 @@ HB_FUNC_STATIC( QTEXTTABLECELL_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

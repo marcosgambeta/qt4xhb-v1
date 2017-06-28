@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QSound INHERIT QObject
 
@@ -25,6 +24,7 @@ CLASS QSound INHERIT QObject
    METHOD isAvailable
    METHOD play2
    METHOD play
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -52,10 +52,10 @@ HB_FUNC_STATIC( QSOUND_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QSOUND_DELETE )
 {
   QSound * obj = (QSound *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -65,9 +65,9 @@ HB_FUNC_STATIC( QSOUND_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QString fileName () const
@@ -81,7 +81,6 @@ HB_FUNC_STATIC( QSOUND_FILENAME )
   }
 }
 
-
 /*
 bool isFinished () const
 */
@@ -93,7 +92,6 @@ HB_FUNC_STATIC( QSOUND_ISFINISHED )
     RBOOL( obj->isFinished () );
   }
 }
-
 
 /*
 int loops () const
@@ -107,7 +105,6 @@ HB_FUNC_STATIC( QSOUND_LOOPS )
   }
 }
 
-
 /*
 int loopsRemaining () const
 */
@@ -119,7 +116,6 @@ HB_FUNC_STATIC( QSOUND_LOOPSREMAINING )
     RINT( obj->loopsRemaining () );
   }
 }
-
 
 /*
 void setLoops ( int number )
@@ -134,7 +130,6 @@ HB_FUNC_STATIC( QSOUND_SETLOOPS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void play ()
 */
@@ -147,7 +142,6 @@ HB_FUNC_STATIC( QSOUND_PLAY1 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void stop ()
@@ -162,8 +156,6 @@ HB_FUNC_STATIC( QSOUND_STOP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 bool isAvailable ()
 */
@@ -171,7 +163,6 @@ HB_FUNC_STATIC( QSOUND_ISAVAILABLE )
 {
   RBOOL( QSound::isAvailable () );
 }
-
 
 /*
 void play ( const QString & filename )
@@ -181,7 +172,6 @@ HB_FUNC_STATIC( QSOUND_PLAY2 )
   QSound::play ( PQSTRING(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void play ()
 //[2]void play ( const QString & filename )
@@ -197,7 +187,5 @@ HB_FUNC_STATIC( QSOUND_PLAY )
     HB_FUNC_EXEC( QSOUND_PLAY2 );
   }
 }
-
-
 
 #pragma ENDDUMP

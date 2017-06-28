@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QTextBlockFormat INHERIT QTextFormat
 
@@ -39,6 +38,7 @@ CLASS QTextBlockFormat INHERIT QTextFormat
    METHOD setTopMargin
    METHOD textIndent
    METHOD topMargin
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -66,10 +66,10 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_DELETE )
 {
   QTextBlockFormat * obj = (QTextBlockFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -79,9 +79,9 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 Qt::Alignment alignment () const
@@ -95,7 +95,6 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_ALIGNMENT )
   }
 }
 
-
 /*
 qreal bottomMargin () const
 */
@@ -107,7 +106,6 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_BOTTOMMARGIN )
     RQREAL( obj->bottomMargin () );
   }
 }
-
 
 /*
 int indent () const
@@ -121,7 +119,6 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_INDENT )
   }
 }
 
-
 /*
 bool isValid () const
 */
@@ -133,7 +130,6 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_ISVALID )
     RBOOL( obj->isValid () );
   }
 }
-
 
 /*
 qreal leftMargin () const
@@ -147,7 +143,6 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LEFTMARGIN )
   }
 }
 
-
 /*
 qreal lineHeight ( qreal scriptLineHeight, qreal scaling ) const
 */
@@ -160,7 +155,6 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LINEHEIGHT1 )
   }
 }
 
-
 /*
 qreal lineHeight () const
 */
@@ -172,7 +166,6 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LINEHEIGHT2 )
     RQREAL( obj->lineHeight () );
   }
 }
-
 
 //[1]qreal lineHeight ( qreal scriptLineHeight, qreal scaling ) const
 //[2]qreal lineHeight () const
@@ -201,7 +194,6 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LINEHEIGHTTYPE )
   }
 }
 
-
 /*
 bool nonBreakableLines () const
 */
@@ -213,7 +205,6 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_NONBREAKABLELINES )
     RBOOL( obj->nonBreakableLines () );
   }
 }
-
 
 /*
 PageBreakFlags pageBreakPolicy () const
@@ -227,7 +218,6 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_PAGEBREAKPOLICY )
   }
 }
 
-
 /*
 qreal rightMargin () const
 */
@@ -239,7 +229,6 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_RIGHTMARGIN )
     RQREAL( obj->rightMargin () );
   }
 }
-
 
 /*
 void setAlignment ( Qt::Alignment alignment )
@@ -255,7 +244,6 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETALIGNMENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setBottomMargin ( qreal margin )
 */
@@ -268,7 +256,6 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETBOTTOMMARGIN )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setIndent ( int indentation )
@@ -283,7 +270,6 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETINDENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setLeftMargin ( qreal margin )
 */
@@ -296,7 +282,6 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETLEFTMARGIN )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setLineHeight ( qreal height, int heightType )
@@ -312,7 +297,6 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETLINEHEIGHT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setNonBreakableLines ( bool b )
 */
@@ -325,7 +309,6 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETNONBREAKABLELINES )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setPageBreakPolicy ( PageBreakFlags policy )
@@ -341,7 +324,6 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETPAGEBREAKPOLICY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setRightMargin ( qreal margin )
 */
@@ -354,8 +336,6 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETRIGHTMARGIN )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
 
 /*
 void setTextIndent ( qreal indent )
@@ -370,7 +350,6 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETTEXTINDENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setTopMargin ( qreal margin )
 */
@@ -384,8 +363,6 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETTOPMARGIN )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 qreal textIndent () const
 */
@@ -398,7 +375,6 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_TEXTINDENT )
   }
 }
 
-
 /*
 qreal topMargin () const
 */
@@ -410,8 +386,5 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_TOPMARGIN )
     RQREAL( obj->topMargin () );
   }
 }
-
-
-
 
 #pragma ENDDUMP

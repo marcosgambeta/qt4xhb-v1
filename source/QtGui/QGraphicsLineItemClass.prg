@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -37,6 +37,7 @@ CLASS QGraphicsLineItem INHERIT QGraphicsItem
    METHOD paint
    METHOD shape
    METHOD type
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -66,7 +67,6 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QGraphicsLineItem ( const QLineF & line, QGraphicsItem * parent = 0 )
 */
@@ -76,7 +76,6 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_NEW2 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QGraphicsLineItem ( qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsItem * parent = 0 )
 */
@@ -85,7 +84,6 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_NEW3 )
   QGraphicsLineItem * o = new QGraphicsLineItem ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPQGRAPHICSITEM(5,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QGraphicsLineItem ( QGraphicsItem * parent = 0 )
 //[2]QGraphicsLineItem ( const QLineF & line, QGraphicsItem * parent = 0 )
@@ -114,6 +112,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_NEW )
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_DELETE )
 {
   QGraphicsLineItem * obj = (QGraphicsLineItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -123,9 +122,9 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QLineF line () const
@@ -140,7 +139,6 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_LINE )
   }
 }
 
-
 /*
 QPen pen () const
 */
@@ -153,7 +151,6 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_PEN )
     _qt4xhb_createReturnClass ( ptr, "QPEN", true );
   }
 }
-
 
 /*
 void setLine ( const QLineF & line )
@@ -168,7 +165,6 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_SETLINE1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setLine ( qreal x1, qreal y1, qreal x2, qreal y2 )
 */
@@ -181,7 +177,6 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_SETLINE2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setLine ( const QLineF & line )
 //[2]void setLine ( qreal x1, qreal y1, qreal x2, qreal y2 )
@@ -211,7 +206,6 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_SETPEN )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QRectF boundingRect () const
 */
@@ -225,7 +219,6 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_BOUNDINGRECT )
   }
 }
 
-
 /*
 virtual bool contains ( const QPointF & point ) const
 */
@@ -237,7 +230,6 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_CONTAINS )
     RBOOL( obj->contains ( *PQPOINTF(1) ) );
   }
 }
-
 
 /*
 virtual bool isObscuredBy ( const QGraphicsItem * item ) const
@@ -252,7 +244,6 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_ISOBSCUREDBY )
   }
 }
 
-
 /*
 virtual QPainterPath opaqueArea () const
 */
@@ -265,7 +256,6 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_OPAQUEAREA )
     _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
-
 
 /*
 virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
@@ -281,7 +271,6 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_PAINT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QPainterPath shape () const
 */
@@ -295,7 +284,6 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_SHAPE )
   }
 }
 
-
 /*
 virtual int type () const
 */
@@ -307,8 +295,5 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_TYPE )
     RINT( obj->type () );
   }
 }
-
-
-
 
 #pragma ENDDUMP

@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -29,6 +29,7 @@ CLASS QStyledItemDelegate INHERIT QAbstractItemDelegate
    METHOD setModelData
    METHOD sizeHint
    METHOD updateEditorGeometry
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -56,10 +57,10 @@ HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_DELETE )
 {
   QStyledItemDelegate * obj = (QStyledItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -69,9 +70,9 @@ HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual QString displayText ( const QVariant & value, const QLocale & locale ) const
@@ -85,7 +86,6 @@ HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_DISPLAYTEXT )
   }
 }
 
-
 /*
 QItemEditorFactory * itemEditorFactory () const
 */
@@ -98,7 +98,6 @@ HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_ITEMEDITORFACTORY )
     _qt4xhb_createReturnClass ( ptr, "QITEMEDITORFACTORY" );
   }
 }
-
 
 /*
 void setItemEditorFactory ( QItemEditorFactory * factory )
@@ -114,7 +113,6 @@ HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_SETITEMEDITORFACTORY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QWidget * createEditor ( QWidget * parent, const QStyleOptionViewItem & option, const QModelIndex & index ) const
 */
@@ -127,7 +125,6 @@ HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_CREATEEDITOR )
     _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
-
 
 /*
 virtual void paint ( QPainter * painter, const QStyleOptionViewItem & option, const QModelIndex & index ) const
@@ -142,7 +139,6 @@ HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_PAINT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void setEditorData ( QWidget * editor, const QModelIndex & index ) const
 */
@@ -155,7 +151,6 @@ HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_SETEDITORDATA )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void setModelData ( QWidget * editor, QAbstractItemModel * model, const QModelIndex & index ) const
@@ -171,7 +166,6 @@ HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_SETMODELDATA )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QSize sizeHint ( const QStyleOptionViewItem & option, const QModelIndex & index ) const
 */
@@ -185,7 +179,6 @@ HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_SIZEHINT )
   }
 }
 
-
 /*
 virtual void updateEditorGeometry ( QWidget * editor, const QStyleOptionViewItem & option, const QModelIndex & index ) const
 */
@@ -198,9 +191,5 @@ HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_UPDATEEDITORGEOMETRY )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -25,6 +25,7 @@ CLASS QGraphicsSceneWheelEvent INHERIT QGraphicsSceneEvent
    METHOD pos
    METHOD scenePos
    METHOD screenPos
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -46,6 +47,7 @@ RETURN
 HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_DELETE )
 {
   QGraphicsSceneWheelEvent * obj = (QGraphicsSceneWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -55,9 +57,9 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 Qt::MouseButtons buttons () const
@@ -71,7 +73,6 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_BUTTONS )
   }
 }
 
-
 /*
 int delta () const
 */
@@ -83,7 +84,6 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_DELTA )
     RINT( obj->delta () );
   }
 }
-
 
 /*
 Qt::KeyboardModifiers modifiers () const
@@ -97,7 +97,6 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_MODIFIERS )
   }
 }
 
-
 /*
 Qt::Orientation orientation () const
 */
@@ -109,7 +108,6 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_ORIENTATION )
     RENUM( obj->orientation () );
   }
 }
-
 
 /*
 QPointF pos () const
@@ -124,7 +122,6 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_POS )
   }
 }
 
-
 /*
 QPointF scenePos () const
 */
@@ -138,7 +135,6 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_SCENEPOS )
   }
 }
 
-
 /*
 QPoint screenPos () const
 */
@@ -151,8 +147,5 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_SCREENPOS )
     _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
-
-
-
 
 #pragma ENDDUMP

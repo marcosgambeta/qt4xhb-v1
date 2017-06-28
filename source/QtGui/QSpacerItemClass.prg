@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -28,6 +28,7 @@ CLASS QSpacerItem INHERIT QLayoutItem
    METHOD setGeometry
    METHOD sizeHint
    METHOD spacerItem
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -57,8 +58,6 @@ HB_FUNC_STATIC( QSPACERITEM_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
-
 /*
 void changeSize ( int w, int h, QSizePolicy::Policy hPolicy = QSizePolicy::Minimum, QSizePolicy::Policy vPolicy = QSizePolicy::Minimum )
 */
@@ -74,7 +73,6 @@ HB_FUNC_STATIC( QSPACERITEM_CHANGESIZE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual Qt::Orientations expandingDirections () const
 */
@@ -86,7 +84,6 @@ HB_FUNC_STATIC( QSPACERITEM_EXPANDINGDIRECTIONS )
     hb_retni( (int) obj->expandingDirections () );
   }
 }
-
 
 /*
 virtual QRect geometry () const
@@ -101,7 +98,6 @@ HB_FUNC_STATIC( QSPACERITEM_GEOMETRY )
   }
 }
 
-
 /*
 virtual bool isEmpty () const
 */
@@ -113,7 +109,6 @@ HB_FUNC_STATIC( QSPACERITEM_ISEMPTY )
     RBOOL( obj->isEmpty () );
   }
 }
-
 
 /*
 virtual QSize maximumSize () const
@@ -128,7 +123,6 @@ HB_FUNC_STATIC( QSPACERITEM_MAXIMUMSIZE )
   }
 }
 
-
 /*
 virtual QSize minimumSize () const
 */
@@ -141,7 +135,6 @@ HB_FUNC_STATIC( QSPACERITEM_MINIMUMSIZE )
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
-
 
 /*
 virtual void setGeometry ( const QRect & r )
@@ -156,7 +149,6 @@ HB_FUNC_STATIC( QSPACERITEM_SETGEOMETRY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QSize sizeHint () const
 */
@@ -170,7 +162,6 @@ HB_FUNC_STATIC( QSPACERITEM_SIZEHINT )
   }
 }
 
-
 /*
 virtual QSpacerItem * spacerItem ()
 */
@@ -183,8 +174,5 @@ HB_FUNC_STATIC( QSPACERITEM_SPACERITEM )
     _qt4xhb_createReturnClass ( ptr, "QSPACERITEM" );
   }
 }
-
-
-
 
 #pragma ENDDUMP

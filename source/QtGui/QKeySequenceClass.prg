@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -32,11 +32,13 @@ CLASS QKeySequence
    METHOD fromString
    METHOD keyBindings
    METHOD mnemonic
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -66,7 +68,6 @@ HB_FUNC_STATIC( QKEYSEQUENCE_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QKeySequence ( const QString & key )
 */
@@ -75,7 +76,6 @@ HB_FUNC_STATIC( QKEYSEQUENCE_NEW2 )
   QKeySequence * o = new QKeySequence ( PQSTRING(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QKeySequence ( const QString & key, SequenceFormat format )
@@ -86,7 +86,6 @@ HB_FUNC_STATIC( QKEYSEQUENCE_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QKeySequence ( int k1, int k2 = 0, int k3 = 0, int k4 = 0 )
 */
@@ -95,7 +94,6 @@ HB_FUNC_STATIC( QKEYSEQUENCE_NEW4 )
   QKeySequence * o = new QKeySequence ( PINT(1), OPINT(2,0), OPINT(3,0), OPINT(4,0) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QKeySequence ( const QKeySequence & keysequence )
@@ -106,7 +104,6 @@ HB_FUNC_STATIC( QKEYSEQUENCE_NEW5 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QKeySequence ( StandardKey key )
 */
@@ -115,7 +112,6 @@ HB_FUNC_STATIC( QKEYSEQUENCE_NEW6 )
   QKeySequence * o = new QKeySequence ( (QKeySequence::StandardKey) hb_parni(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QKeySequence ()
 //[2]QKeySequence ( const QString & key )
@@ -166,6 +162,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_NEW )
 HB_FUNC_STATIC( QKEYSEQUENCE_DELETE )
 {
   QKeySequence * obj = (QKeySequence *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -175,9 +172,9 @@ HB_FUNC_STATIC( QKEYSEQUENCE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 uint count () const
@@ -191,7 +188,6 @@ HB_FUNC_STATIC( QKEYSEQUENCE_COUNT )
   }
 }
 
-
 /*
 bool isEmpty () const
 */
@@ -204,7 +200,6 @@ HB_FUNC_STATIC( QKEYSEQUENCE_ISEMPTY )
   }
 }
 
-
 /*
 SequenceMatch matches ( const QKeySequence & seq ) const
 */
@@ -216,7 +211,6 @@ HB_FUNC_STATIC( QKEYSEQUENCE_MATCHES )
     hb_retni( (int) obj->matches ( *PQKEYSEQUENCE(1) ) );
   }
 }
-
 
 /*
 QString toString ( SequenceFormat format = PortableText ) const
@@ -231,8 +225,6 @@ HB_FUNC_STATIC( QKEYSEQUENCE_TOSTRING )
   }
 }
 
-
-
 /*
 QKeySequence fromString ( const QString & str, SequenceFormat format = PortableText )
 */
@@ -242,7 +234,6 @@ HB_FUNC_STATIC( QKEYSEQUENCE_FROMSTRING )
   QKeySequence * ptr = new QKeySequence( QKeySequence::fromString ( PQSTRING(1), (QKeySequence::SequenceFormat) par2 ) );
   _qt4xhb_createReturnClass ( ptr, "QKEYSEQUENCE", true );
 }
-
 
 /*
 QList<QKeySequence> keyBindings ( StandardKey key )
@@ -288,7 +279,6 @@ HB_FUNC_STATIC( QKEYSEQUENCE_KEYBINDINGS )
   hb_itemReturnRelease(pArray);
 }
 
-
 /*
 QKeySequence mnemonic ( const QString & text )
 */
@@ -297,7 +287,6 @@ HB_FUNC_STATIC( QKEYSEQUENCE_MNEMONIC )
   QKeySequence * ptr = new QKeySequence( QKeySequence::mnemonic ( PQSTRING(1) ) );
   _qt4xhb_createReturnClass ( ptr, "QKEYSEQUENCE", true );
 }
-
 
 HB_FUNC_STATIC( QKEYSEQUENCE_NEWFROM )
 {
@@ -353,6 +342,5 @@ HB_FUNC_STATIC( QKEYSEQUENCE_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

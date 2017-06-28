@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -113,11 +113,13 @@ CLASS QStandardItem
    METHOD type
    METHOD read
    METHOD write
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -145,7 +147,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QStandardItem(const QString &text)
 */
@@ -154,7 +155,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_NEW2 )
   QStandardItem * o = new QStandardItem ( PQSTRING(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 /*
 QStandardItem(const QIcon &icon, const QString &text)
@@ -166,7 +166,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QStandardItem(int rows, int columns = 1)
 */
@@ -175,7 +174,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_NEW4 )
   QStandardItem * o = new QStandardItem ( PINT(1), OPINT(2,1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QStandardItem()
 //[2]QStandardItem(const QString &text)
@@ -209,6 +207,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_NEW )
 HB_FUNC_STATIC( QSTANDARDITEM_DELETE )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -218,9 +217,9 @@ HB_FUNC_STATIC( QSTANDARDITEM_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual QVariant data(int role = Qt::UserRole + 1) const
@@ -235,7 +234,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_DATA )
   }
 }
 
-
 /*
 virtual void setData(const QVariant &value, int role = Qt::UserRole + 1)
 */
@@ -249,7 +247,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETDATA )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString text() const
 */
@@ -261,7 +258,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_TEXT )
     RQSTRING( obj->text () );
   }
 }
-
 
 /*
 void setText(const QString &text)
@@ -276,7 +272,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETTEXT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QIcon icon() const
 */
@@ -289,7 +284,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_ICON )
     _qt4xhb_createReturnClass ( ptr, "QICON", true );
   }
 }
-
 
 /*
 void setIcon(const QIcon &icon)
@@ -305,7 +299,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETICON )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString toolTip() const
 */
@@ -317,7 +310,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_TOOLTIP )
     RQSTRING( obj->toolTip () );
   }
 }
-
 
 /*
 void setToolTip(const QString &toolTip)
@@ -332,7 +324,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETTOOLTIP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString statusTip() const
 */
@@ -344,7 +335,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_STATUSTIP )
     RQSTRING( obj->statusTip () );
   }
 }
-
 
 /*
 void setStatusTip(const QString &statusTip)
@@ -359,7 +349,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETSTATUSTIP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString whatsThis() const
 */
@@ -371,7 +360,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_WHATSTHIS )
     RQSTRING( obj->whatsThis () );
   }
 }
-
 
 /*
 void setWhatsThis(const QString &whatsThis)
@@ -386,7 +374,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETWHATSTHIS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QSize sizeHint() const
 */
@@ -399,7 +386,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_SIZEHINT )
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
-
 
 /*
 void setSizeHint(const QSize &sizeHint)
@@ -414,7 +400,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETSIZEHINT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QFont font() const
 */
@@ -427,7 +412,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_FONT )
     _qt4xhb_createReturnClass ( ptr, "QFONT", true );
   }
 }
-
 
 /*
 void setFont(const QFont &font)
@@ -442,7 +426,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETFONT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 Qt::Alignment textAlignment() const
 */
@@ -454,7 +437,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_TEXTALIGNMENT )
     hb_retni( (int) obj->textAlignment () );
   }
 }
-
 
 /*
 void setTextAlignment(Qt::Alignment textAlignment)
@@ -470,7 +452,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETTEXTALIGNMENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QBrush background() const
 */
@@ -483,7 +464,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_BACKGROUND )
     _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
   }
 }
-
 
 /*
 void setBackground(const QBrush &brush)
@@ -498,7 +478,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETBACKGROUND )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QBrush foreground() const
 */
@@ -511,7 +490,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_FOREGROUND )
     _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
   }
 }
-
 
 /*
 void setForeground(const QBrush &brush)
@@ -526,7 +504,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETFOREGROUND )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 Qt::CheckState checkState() const
 */
@@ -538,7 +515,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_CHECKSTATE )
     hb_retni( (int) obj->checkState () );
   }
 }
-
 
 /*
 void setCheckState(Qt::CheckState checkState)
@@ -554,7 +530,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETCHECKSTATE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString accessibleText() const
 */
@@ -566,7 +541,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_ACCESSIBLETEXT )
     RQSTRING( obj->accessibleText () );
   }
 }
-
 
 /*
 void setAccessibleText(const QString &accessibleText)
@@ -581,7 +555,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETACCESSIBLETEXT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString accessibleDescription() const
 */
@@ -593,7 +566,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_ACCESSIBLEDESCRIPTION )
     RQSTRING( obj->accessibleDescription () );
   }
 }
-
 
 /*
 void setAccessibleDescription(const QString &accessibleDescription)
@@ -608,7 +580,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETACCESSIBLEDESCRIPTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 Qt::ItemFlags flags() const
 */
@@ -620,7 +591,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_FLAGS )
     hb_retni( (int) obj->flags () );
   }
 }
-
 
 /*
 void setFlags(Qt::ItemFlags flags)
@@ -636,7 +606,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETFLAGS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool isEnabled() const
 */
@@ -648,7 +617,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_ISENABLED )
     RBOOL( obj->isEnabled () );
   }
 }
-
 
 /*
 void setEnabled(bool enabled)
@@ -663,7 +631,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETENABLED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool isEditable() const
 */
@@ -675,7 +642,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_ISEDITABLE )
     RBOOL( obj->isEditable () );
   }
 }
-
 
 /*
 void setEditable(bool editable)
@@ -690,7 +656,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETEDITABLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool isSelectable() const
 */
@@ -702,7 +667,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_ISSELECTABLE )
     RBOOL( obj->isSelectable () );
   }
 }
-
 
 /*
 void setSelectable(bool selectable)
@@ -717,7 +681,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETSELECTABLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool isCheckable() const
 */
@@ -729,7 +692,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_ISCHECKABLE )
     RBOOL( obj->isCheckable () );
   }
 }
-
 
 /*
 void setCheckable(bool checkable)
@@ -744,7 +706,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETCHECKABLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool isTristate() const
 */
@@ -756,7 +717,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_ISTRISTATE )
     RBOOL( obj->isTristate () );
   }
 }
-
 
 /*
 void setTristate(bool tristate)
@@ -771,7 +731,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETTRISTATE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool isDragEnabled() const
 */
@@ -783,7 +742,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_ISDRAGENABLED )
     RBOOL( obj->isDragEnabled () );
   }
 }
-
 
 /*
 void setDragEnabled(bool dragEnabled)
@@ -798,7 +756,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETDRAGENABLED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool isDropEnabled() const
 */
@@ -810,7 +767,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_ISDROPENABLED )
     RBOOL( obj->isDropEnabled () );
   }
 }
-
 
 /*
 void setDropEnabled(bool dropEnabled)
@@ -825,7 +781,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETDROPENABLED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QStandardItem *parent() const
 */
@@ -839,7 +794,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_PARENT )
   }
 }
 
-
 /*
 int row() const
 */
@@ -852,7 +806,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_ROW )
   }
 }
 
-
 /*
 int column() const
 */
@@ -864,7 +817,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_COLUMN )
     RINT( obj->column () );
   }
 }
-
 
 /*
 QModelIndex index() const
@@ -879,7 +831,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_INDEX )
   }
 }
 
-
 /*
 QStandardItemModel *model() const
 */
@@ -893,7 +844,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_MODEL )
   }
 }
 
-
 /*
 int rowCount() const
 */
@@ -905,7 +855,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_ROWCOUNT )
     RINT( obj->rowCount () );
   }
 }
-
 
 /*
 void setRowCount(int rows)
@@ -920,7 +869,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETROWCOUNT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int columnCount() const
 */
@@ -932,7 +880,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_COLUMNCOUNT )
     RINT( obj->columnCount () );
   }
 }
-
 
 /*
 void setColumnCount(int columns)
@@ -947,7 +894,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETCOLUMNCOUNT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool hasChildren() const
 */
@@ -959,7 +905,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_HASCHILDREN )
     RBOOL( obj->hasChildren () );
   }
 }
-
 
 /*
 QStandardItem *child(int row, int column = 0) const
@@ -973,7 +918,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_CHILD )
     _qt4xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
   }
 }
-
 
 /*
 void setChild(int row, int column, QStandardItem *item)
@@ -989,7 +933,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETCHILD1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setChild(int row, QStandardItem *item)
 */
@@ -1003,7 +946,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETCHILD2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setChild(int row, int column, QStandardItem *item)
 //[2]void setChild(int row, QStandardItem *item)
@@ -1040,7 +982,6 @@ par2 << (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aLis
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void insertRow(int row, QStandardItem *item)
 */
@@ -1054,7 +995,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_INSERTROW2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void insertRow(int row, const QList<QStandardItem*> &items)
 //[2]void insertRow(int row, QStandardItem *item)
@@ -1091,7 +1031,6 @@ par2 << (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aLis
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void insertRows(int row, const QList<QStandardItem*> &items)
 */
@@ -1112,7 +1051,6 @@ par2 << (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aLis
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void insertRows(int row, int count)
 */
@@ -1125,7 +1063,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_INSERTROWS2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void insertRows(int row, const QList<QStandardItem*> &items)
 //[2]void insertRows(int row, int count)
@@ -1155,7 +1092,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_INSERTCOLUMNS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void removeRow(int row)
 */
@@ -1168,7 +1104,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_REMOVEROW )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void removeColumn(int column)
@@ -1183,7 +1118,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_REMOVECOLUMN )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void removeRows(int row, int count)
 */
@@ -1197,7 +1131,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_REMOVEROWS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void removeColumns(int column, int count)
 */
@@ -1210,7 +1143,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_REMOVECOLUMNS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void appendRow(const QList<QStandardItem*> &items)
@@ -1232,7 +1164,6 @@ par1 << (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aLis
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void appendRow(QStandardItem *item)
 */
@@ -1246,7 +1177,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_APPENDROW2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void appendRow(const QList<QStandardItem*> &items)
 //[2]void appendRow(QStandardItem *item)
@@ -1283,7 +1213,6 @@ par1 << (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aLis
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void appendColumn(const QList<QStandardItem*> &items)
 */
@@ -1304,7 +1233,6 @@ par1 << (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aLis
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QStandardItem *takeChild(int row, int column = 0)
 */
@@ -1317,7 +1245,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_TAKECHILD )
     _qt4xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
   }
 }
-
 
 /*
 QList<QStandardItem*> takeRow(int row)
@@ -1362,7 +1289,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_TAKEROW )
   }
 }
 
-
 /*
 QList<QStandardItem*> takeColumn(int column)
 */
@@ -1406,7 +1332,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_TAKECOLUMN )
   }
 }
 
-
 /*
 void sortChildren(int column, Qt::SortOrder order = Qt::AscendingOrder)
 */
@@ -1421,7 +1346,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_SORTCHILDREN )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QStandardItem *clone() const
 */
@@ -1435,7 +1359,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_CLONE )
   }
 }
 
-
 /*
 virtual int type() const
 */
@@ -1447,7 +1370,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_TYPE )
     RINT( obj->type () );
   }
 }
-
 
 /*
 virtual void read(QDataStream &in)
@@ -1463,7 +1385,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_READ )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void write(QDataStream &out) const
 */
@@ -1477,7 +1398,6 @@ HB_FUNC_STATIC( QSTANDARDITEM_WRITE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QSTANDARDITEM_NEWFROM )
 {
@@ -1533,7 +1453,5 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

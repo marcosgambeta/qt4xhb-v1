@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -26,9 +26,11 @@ CLASS QAbstractItemDelegate INHERIT QObject
    METHOD sizeHint
    METHOD updateEditorGeometry
    METHOD helpEvent
+
    METHOD onCloseEditor
    METHOD onCommitData
    METHOD onSizeHintChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -47,10 +49,10 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_DELETE )
 {
   QAbstractItemDelegate * obj = (QAbstractItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -60,9 +62,9 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual QWidget * createEditor ( QWidget * parent, const QStyleOptionViewItem & option, const QModelIndex & index ) const
@@ -77,7 +79,6 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_CREATEEDITOR )
   }
 }
 
-
 /*
 virtual bool editorEvent ( QEvent * event, QAbstractItemModel * model, const QStyleOptionViewItem & option, const QModelIndex & index )
 */
@@ -90,7 +91,6 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_EDITOREVENT )
     RBOOL( obj->editorEvent ( PQEVENT(1), par2, *PQSTYLEOPTIONVIEWITEM(3), *PQMODELINDEX(4) ) );
   }
 }
-
 
 /*
 virtual void paint ( QPainter * painter, const QStyleOptionViewItem & option, const QModelIndex & index ) const = 0
@@ -105,7 +105,6 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_PAINT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void setEditorData ( QWidget * editor, const QModelIndex & index ) const
 */
@@ -118,7 +117,6 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SETEDITORDATA )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void setModelData ( QWidget * editor, QAbstractItemModel * model, const QModelIndex & index ) const
@@ -134,7 +132,6 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SETMODELDATA )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QSize sizeHint ( const QStyleOptionViewItem & option, const QModelIndex & index ) const = 0
 */
@@ -147,7 +144,6 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SIZEHINT )
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
-
 
 /*
 virtual void updateEditorGeometry ( QWidget * editor, const QStyleOptionViewItem & option, const QModelIndex & index ) const
@@ -162,7 +158,6 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_UPDATEEDITORGEOMETRY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool helpEvent ( QHelpEvent * event, QAbstractItemView * view, const QStyleOptionViewItem & option, const QModelIndex & index )
 */
@@ -176,9 +171,5 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_HELPEVENT )
     RBOOL( obj->helpEvent ( par1, par2, *PQSTYLEOPTIONVIEWITEM(3), *PQMODELINDEX(4) ) );
   }
 }
-
-
-
-
 
 #pragma ENDDUMP

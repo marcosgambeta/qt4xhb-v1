@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -69,6 +69,7 @@ CLASS QTextCharFormat INHERIT QTextFormat
    METHOD underlineColor
    METHOD underlineStyle
    METHOD verticalAlignment
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -96,10 +97,10 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QTEXTCHARFORMAT_DELETE )
 {
   QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -109,9 +110,9 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QString anchorHref () const
@@ -125,7 +126,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_ANCHORHREF )
   }
 }
 
-
 /*
 QStringList anchorNames () const
 */
@@ -137,7 +137,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_ANCHORNAMES )
     RQSTRINGLIST( obj->anchorNames () );
   }
 }
-
 
 /*
 QFont font () const
@@ -152,7 +151,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONT )
   }
 }
 
-
 /*
 QFont::Capitalization fontCapitalization () const
 */
@@ -164,7 +162,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTCAPITALIZATION )
     hb_retni( (int) obj->fontCapitalization () );
   }
 }
-
 
 /*
 QString fontFamily () const
@@ -178,7 +175,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTFAMILY )
   }
 }
 
-
 /*
 bool fontFixedPitch () const
 */
@@ -190,7 +186,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTFIXEDPITCH )
     RBOOL( obj->fontFixedPitch () );
   }
 }
-
 
 /*
 QFont::HintingPreference fontHintingPreference () const
@@ -204,7 +199,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTHINTINGPREFERENCE )
   }
 }
 
-
 /*
 bool fontItalic () const
 */
@@ -216,7 +210,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTITALIC )
     RBOOL( obj->fontItalic () );
   }
 }
-
 
 /*
 bool fontKerning () const
@@ -230,7 +223,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTKERNING )
   }
 }
 
-
 /*
 qreal fontLetterSpacing () const
 */
@@ -242,7 +234,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTLETTERSPACING )
     RQREAL( obj->fontLetterSpacing () );
   }
 }
-
 
 /*
 bool fontOverline () const
@@ -256,7 +247,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTOVERLINE )
   }
 }
 
-
 /*
 qreal fontPointSize () const
 */
@@ -268,7 +258,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTPOINTSIZE )
     RQREAL( obj->fontPointSize () );
   }
 }
-
 
 /*
 bool fontStrikeOut () const
@@ -282,7 +271,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTSTRIKEOUT )
   }
 }
 
-
 /*
 QFont::StyleHint fontStyleHint () const
 */
@@ -294,7 +282,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTSTYLEHINT )
     hb_retni( (int) obj->fontStyleHint () );
   }
 }
-
 
 /*
 QFont::StyleStrategy fontStyleStrategy () const
@@ -308,7 +295,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTSTYLESTRATEGY )
   }
 }
 
-
 /*
 bool fontUnderline () const
 */
@@ -320,7 +306,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTUNDERLINE )
     RBOOL( obj->fontUnderline () );
   }
 }
-
 
 /*
 int fontWeight () const
@@ -334,7 +319,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTWEIGHT )
   }
 }
 
-
 /*
 qreal fontWordSpacing () const
 */
@@ -346,7 +330,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTWORDSPACING )
     RQREAL( obj->fontWordSpacing () );
   }
 }
-
 
 /*
 bool isAnchor () const
@@ -360,7 +343,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_ISANCHOR )
   }
 }
 
-
 /*
 bool isValid () const
 */
@@ -372,7 +354,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_ISVALID )
     RBOOL( obj->isValid () );
   }
 }
-
 
 /*
 void setAnchor ( bool anchor )
@@ -387,7 +368,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETANCHOR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setAnchorHref ( const QString & value )
 */
@@ -400,7 +380,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETANCHORHREF )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setAnchorNames ( const QStringList & names )
@@ -415,7 +394,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETANCHORNAMES )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setFont ( const QFont & font )
 */
@@ -428,7 +406,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setFontCapitalization ( QFont::Capitalization capitalization )
@@ -444,7 +421,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTCAPITALIZATION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setFontFamily ( const QString & family )
 */
@@ -458,7 +434,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTFAMILY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setFontFixedPitch ( bool fixedPitch )
 */
@@ -471,7 +446,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTFIXEDPITCH )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setFontHintingPreference ( QFont::HintingPreference hintingPreference )
@@ -487,7 +461,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTHINTINGPREFERENCE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setFontItalic ( bool italic )
 */
@@ -500,7 +473,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTITALIC )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setFontKerning ( bool enable )
@@ -515,7 +487,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTKERNING )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setFontLetterSpacing ( qreal spacing )
 */
@@ -528,7 +499,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTLETTERSPACING )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setFontOverline ( bool overline )
@@ -543,7 +513,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTOVERLINE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setFontPointSize ( qreal size )
 */
@@ -557,7 +526,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTPOINTSIZE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setFontStrikeOut ( bool strikeOut )
 */
@@ -570,7 +538,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTSTRIKEOUT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setFontStyleHint ( QFont::StyleHint hint, QFont::StyleStrategy strategy = QFont::PreferDefault )
@@ -587,7 +554,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTSTYLEHINT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setFontStyleStrategy ( QFont::StyleStrategy strategy )
 */
@@ -602,7 +568,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTSTYLESTRATEGY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setFontUnderline ( bool underline )
 */
@@ -615,7 +580,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTUNDERLINE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setFontWeight ( int weight )
@@ -630,7 +594,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTWEIGHT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setFontWordSpacing ( qreal spacing )
 */
@@ -643,7 +606,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTWORDSPACING )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setTextOutline ( const QPen & pen )
@@ -658,7 +620,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETTEXTOUTLINE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setToolTip ( const QString & text )
 */
@@ -671,7 +632,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETTOOLTIP )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setUnderlineColor ( const QColor & color )
@@ -687,7 +647,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETUNDERLINECOLOR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setUnderlineStyle ( UnderlineStyle style )
 */
@@ -701,7 +660,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETUNDERLINESTYLE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setVerticalAlignment ( VerticalAlignment alignment )
@@ -717,7 +675,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETVERTICALALIGNMENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QPen textOutline () const
 */
@@ -731,7 +688,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_TEXTOUTLINE )
   }
 }
 
-
 /*
 QString toolTip () const
 */
@@ -743,7 +699,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_TOOLTIP )
     RQSTRING( obj->toolTip () );
   }
 }
-
 
 /*
 QColor underlineColor () const
@@ -758,7 +713,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_UNDERLINECOLOR )
   }
 }
 
-
 /*
 UnderlineStyle underlineStyle () const
 */
@@ -771,7 +725,6 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_UNDERLINESTYLE )
   }
 }
 
-
 /*
 VerticalAlignment verticalAlignment () const
 */
@@ -783,8 +736,5 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_VERTICALALIGNMENT )
     hb_retni( (int) obj->verticalAlignment () );
   }
 }
-
-
-
 
 #pragma ENDDUMP

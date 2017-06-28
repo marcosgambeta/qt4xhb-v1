@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -28,11 +28,13 @@ CLASS QPrinterInfo
    METHOD supportedPaperSizes
    METHOD availablePrinters
    METHOD defaultPrinter
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -60,7 +62,6 @@ HB_FUNC_STATIC( QPRINTERINFO_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QPrinterInfo ( const QPrinterInfo & src )
 */
@@ -70,7 +71,6 @@ HB_FUNC_STATIC( QPRINTERINFO_NEW2 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QPrinterInfo ( const QPrinter & printer )
 */
@@ -79,7 +79,6 @@ HB_FUNC_STATIC( QPRINTERINFO_NEW3 )
   QPrinterInfo * o = new QPrinterInfo ( *PQPRINTER(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QPrinterInfo ()
 //[2]QPrinterInfo ( const QPrinterInfo & src )
@@ -108,6 +107,7 @@ HB_FUNC_STATIC( QPRINTERINFO_NEW )
 HB_FUNC_STATIC( QPRINTERINFO_DELETE )
 {
   QPrinterInfo * obj = (QPrinterInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -117,9 +117,9 @@ HB_FUNC_STATIC( QPRINTERINFO_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 bool isDefault () const
@@ -133,7 +133,6 @@ HB_FUNC_STATIC( QPRINTERINFO_ISDEFAULT )
   }
 }
 
-
 /*
 bool isNull () const
 */
@@ -146,7 +145,6 @@ HB_FUNC_STATIC( QPRINTERINFO_ISNULL )
   }
 }
 
-
 /*
 QString printerName () const
 */
@@ -158,7 +156,6 @@ HB_FUNC_STATIC( QPRINTERINFO_PRINTERNAME )
     RQSTRING( obj->printerName () );
   }
 }
-
 
 /*
 QList<QPrinter::PaperSize> supportedPaperSizes () const
@@ -181,8 +178,6 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDPAPERSIZES )
     hb_itemReturnRelease(pArray);
   }
 }
-
-
 
 /*
 QList<QPrinterInfo> availablePrinters ()
@@ -227,7 +222,6 @@ HB_FUNC_STATIC( QPRINTERINFO_AVAILABLEPRINTERS )
   hb_itemReturnRelease(pArray);
 }
 
-
 /*
 QPrinterInfo defaultPrinter ()
 */
@@ -236,7 +230,6 @@ HB_FUNC_STATIC( QPRINTERINFO_DEFAULTPRINTER )
   QPrinterInfo * ptr = new QPrinterInfo( QPrinterInfo::defaultPrinter () );
   _qt4xhb_createReturnClass ( ptr, "QPRINTERINFO", true );
 }
-
 
 HB_FUNC_STATIC( QPRINTERINFO_NEWFROM )
 {
@@ -292,6 +285,5 @@ HB_FUNC_STATIC( QPRINTERINFO_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

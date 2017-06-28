@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -36,6 +36,7 @@ CLASS QAbstractScrollArea INHERIT QFrame
    METHOD viewport
    METHOD minimumSizeHint
    METHOD sizeHint
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -54,10 +55,10 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_DELETE )
 {
   QAbstractScrollArea * obj = (QAbstractScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -67,9 +68,9 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void addScrollBarWidget ( QWidget * widget, Qt::Alignment alignment )
@@ -85,7 +86,6 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_ADDSCROLLBARWIDGET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QWidget * cornerWidget () const
 */
@@ -98,7 +98,6 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_CORNERWIDGET )
     _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
-
 
 /*
 QScrollBar * horizontalScrollBar () const
@@ -113,7 +112,6 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_HORIZONTALSCROLLBAR )
   }
 }
 
-
 /*
 Qt::ScrollBarPolicy horizontalScrollBarPolicy () const
 */
@@ -125,7 +123,6 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_HORIZONTALSCROLLBARPOLICY )
     hb_retni( (int) obj->horizontalScrollBarPolicy () );
   }
 }
-
 
 /*
 QSize maximumViewportSize () const
@@ -139,7 +136,6 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_MAXIMUMVIEWPORTSIZE )
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
-
 
 /*
 QWidgetList scrollBarWidgets ( Qt::Alignment alignment )
@@ -185,7 +181,6 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SCROLLBARWIDGETS )
   }
 }
 
-
 /*
 void setCornerWidget ( QWidget * widget )
 */
@@ -198,7 +193,6 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETCORNERWIDGET )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setHorizontalScrollBar ( QScrollBar * scrollBar )
@@ -214,7 +208,6 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETHORIZONTALSCROLLBAR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setHorizontalScrollBarPolicy ( Qt::ScrollBarPolicy )
 */
@@ -228,7 +221,6 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETHORIZONTALSCROLLBARPOLICY )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setVerticalScrollBar ( QScrollBar * scrollBar )
@@ -244,7 +236,6 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETVERTICALSCROLLBAR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setVerticalScrollBarPolicy ( Qt::ScrollBarPolicy )
 */
@@ -259,7 +250,6 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETVERTICALSCROLLBARPOLICY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setViewport ( QWidget * widget )
 */
@@ -272,7 +262,6 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETVIEWPORT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QScrollBar * verticalScrollBar () const
@@ -287,7 +276,6 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VERTICALSCROLLBAR )
   }
 }
 
-
 /*
 Qt::ScrollBarPolicy verticalScrollBarPolicy () const
 */
@@ -299,7 +287,6 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VERTICALSCROLLBARPOLICY )
     hb_retni( (int) obj->verticalScrollBarPolicy () );
   }
 }
-
 
 /*
 QWidget * viewport () const
@@ -314,7 +301,6 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VIEWPORT )
   }
 }
 
-
 /*
 virtual QSize minimumSizeHint () const
 */
@@ -328,7 +314,6 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_MINIMUMSIZEHINT )
   }
 }
 
-
 /*
 virtual QSize sizeHint () const
 */
@@ -341,8 +326,5 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SIZEHINT )
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
-
-
-
 
 #pragma ENDDUMP

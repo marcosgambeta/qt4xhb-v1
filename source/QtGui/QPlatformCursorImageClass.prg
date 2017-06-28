@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -26,11 +26,13 @@ CLASS QPlatformCursorImage
    METHOD set2
    METHOD set3
    METHOD set
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -60,10 +62,10 @@ HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_DELETE )
 {
   QPlatformCursorImage * obj = (QPlatformCursorImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -73,9 +75,9 @@ HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QPoint hotspot ()
@@ -90,7 +92,6 @@ HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_HOTSPOT )
   }
 }
 
-
 /*
 QImage * image ()
 */
@@ -103,7 +104,6 @@ HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_IMAGE )
     _qt4xhb_createReturnClass ( ptr, "QIMAGE" );
   }
 }
-
 
 /*
 void set ( const uchar * data, const uchar * mask, int width, int height, int hx, int hy )
@@ -120,7 +120,6 @@ HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_SET1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void set ( const QImage & image, int hx, int hy )
 */
@@ -133,7 +132,6 @@ HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_SET2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void set ( Qt::CursorShape id )
@@ -148,7 +146,6 @@ HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_SET3 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void set ( const uchar * data, const uchar * mask, int width, int height, int hx, int hy )
 //[2]void set ( const QImage & image, int hx, int hy )
@@ -169,7 +166,6 @@ HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_SET )
     HB_FUNC_EXEC( QPLATFORMCURSORIMAGE_SET3 );
   }
 }
-
 
 HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_NEWFROM )
 {
@@ -225,6 +221,5 @@ HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

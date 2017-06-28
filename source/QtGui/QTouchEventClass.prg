@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -20,6 +20,7 @@ CLASS QTouchEvent INHERIT QInputEvent
    METHOD widget
    METHOD deviceType
    METHOD touchPointStates
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -38,10 +39,10 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
 HB_FUNC_STATIC( QTOUCHEVENT_DELETE )
 {
   QTouchEvent * obj = (QTouchEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -51,9 +52,9 @@ HB_FUNC_STATIC( QTOUCHEVENT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QWidget *widget() const
@@ -68,7 +69,6 @@ HB_FUNC_STATIC( QTOUCHEVENT_WIDGET )
   }
 }
 
-
 /*
 QTouchEvent::DeviceType deviceType() const
 */
@@ -81,7 +81,6 @@ HB_FUNC_STATIC( QTOUCHEVENT_DEVICETYPE )
   }
 }
 
-
 /*
 Qt::TouchPointStates touchPointStates() const
 */
@@ -93,10 +92,5 @@ HB_FUNC_STATIC( QTOUCHEVENT_TOUCHPOINTSTATES )
     hb_retni( (int) obj->touchPointStates () );
   }
 }
-
-
-
-
-
 
 #pragma ENDDUMP

@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -28,6 +28,7 @@ CLASS QPlainTextDocumentLayout INHERIT QAbstractTextDocumentLayout
    METHOD frameBoundingRect
    METHOD hitTest
    METHOD pageCount
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -55,10 +56,10 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_DELETE )
 {
   QPlainTextDocumentLayout * obj = (QPlainTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -68,9 +69,9 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 int cursorWidth () const
@@ -83,7 +84,6 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_CURSORWIDTH )
     RINT( obj->cursorWidth () );
   }
 }
-
 
 /*
 void ensureBlockLayout ( const QTextBlock & block ) const
@@ -98,7 +98,6 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_ENSUREBLOCKLAYOUT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void requestUpdate ()
 */
@@ -111,7 +110,6 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_REQUESTUPDATE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setCursorWidth ( int width )
@@ -126,7 +124,6 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_SETCURSORWIDTH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QRectF blockBoundingRect ( const QTextBlock & block ) const
 */
@@ -140,7 +137,6 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT )
   }
 }
 
-
 /*
 virtual QSizeF documentSize () const
 */
@@ -153,8 +149,6 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_DOCUMENTSIZE )
     _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
-
-
 
 /*
 virtual QRectF frameBoundingRect ( QTextFrame * ) const
@@ -170,7 +164,6 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT )
   }
 }
 
-
 /*
 virtual int hitTest ( const QPointF &, Qt::HitTestAccuracy ) const
 */
@@ -184,7 +177,6 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_HITTEST )
   }
 }
 
-
 /*
 virtual int pageCount () const
 */
@@ -196,9 +188,5 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_PAGECOUNT )
     RINT( obj->pageCount () );
   }
 }
-
-
-
-
 
 #pragma ENDDUMP

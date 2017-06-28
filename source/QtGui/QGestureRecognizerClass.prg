@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -23,11 +23,13 @@ CLASS QGestureRecognizer
    METHOD reset
    METHOD registerRecognizer
    METHOD unregisterRecognizer
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -46,10 +48,10 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
 HB_FUNC_STATIC( QGESTURERECOGNIZER_DELETE )
 {
   QGestureRecognizer * obj = (QGestureRecognizer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -59,9 +61,9 @@ HB_FUNC_STATIC( QGESTURERECOGNIZER_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual QGesture * create ( QObject * target )
@@ -76,7 +78,6 @@ HB_FUNC_STATIC( QGESTURERECOGNIZER_CREATE )
   }
 }
 
-
 /*
 virtual Result recognize ( QGesture * gesture, QObject * watched, QEvent * event ) = 0
 */
@@ -89,7 +90,6 @@ HB_FUNC_STATIC( QGESTURERECOGNIZER_RECOGNIZE )
     hb_retni( (int) obj->recognize ( par1, PQOBJECT(2), PQEVENT(3) ) );
   }
 }
-
 
 /*
 virtual void reset ( QGesture * gesture )
@@ -105,8 +105,6 @@ HB_FUNC_STATIC( QGESTURERECOGNIZER_RESET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 Qt::GestureType registerRecognizer ( QGestureRecognizer * recognizer )
 */
@@ -115,7 +113,6 @@ HB_FUNC_STATIC( QGESTURERECOGNIZER_REGISTERRECOGNIZER )
   QGestureRecognizer * par1 = (QGestureRecognizer *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
   hb_retni( (int) QGestureRecognizer::registerRecognizer ( par1 ) );
 }
-
 
 /*
 void unregisterRecognizer ( Qt::GestureType type )
@@ -126,7 +123,6 @@ HB_FUNC_STATIC( QGESTURERECOGNIZER_UNREGISTERRECOGNIZER )
   QGestureRecognizer::unregisterRecognizer ( (Qt::GestureType) par1 );
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QGESTURERECOGNIZER_NEWFROM )
 {
@@ -182,6 +178,5 @@ HB_FUNC_STATIC( QGESTURERECOGNIZER_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

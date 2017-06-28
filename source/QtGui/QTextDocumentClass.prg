@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -107,6 +107,7 @@ CLASS QTextDocument INHERIT QObject
    METHOD setModified
    METHOD undo2
    METHOD undo
+
    METHOD onBlockCountChanged
    METHOD onContentsChange
    METHOD onContentsChanged
@@ -116,6 +117,7 @@ CLASS QTextDocument INHERIT QObject
    METHOD onRedoAvailable
    METHOD onUndoAvailable
    METHOD onUndoCommandAdded
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -148,7 +150,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QTextDocument ( const QString & text, QObject * parent = 0 )
 */
@@ -157,7 +158,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_NEW2 )
   QTextDocument * o = new QTextDocument ( PQSTRING(1), OPQOBJECT(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QTextDocument ( QObject * parent = 0 )
 //[2]QTextDocument ( const QString & text, QObject * parent = 0 )
@@ -181,6 +181,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_NEW )
 HB_FUNC_STATIC( QTEXTDOCUMENT_DELETE )
 {
   QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -190,9 +191,9 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void addResource ( int type, const QUrl & name, const QVariant & resource )
@@ -207,7 +208,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ADDRESOURCE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void adjustSize ()
 */
@@ -220,7 +220,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ADJUSTSIZE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QVector<QTextFormat> allFormats () const
@@ -265,7 +264,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ALLFORMATS )
   }
 }
 
-
 /*
 int availableRedoSteps () const
 */
@@ -278,7 +276,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_AVAILABLEREDOSTEPS )
   }
 }
 
-
 /*
 int availableUndoSteps () const
 */
@@ -290,7 +287,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_AVAILABLEUNDOSTEPS )
     RINT( obj->availableUndoSteps () );
   }
 }
-
 
 /*
 QTextBlock begin () const
@@ -305,7 +301,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_BEGIN )
   }
 }
 
-
 /*
 int blockCount () const
 */
@@ -317,7 +312,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_BLOCKCOUNT )
     RINT( obj->blockCount () );
   }
 }
-
 
 /*
 QChar characterAt ( int pos ) const
@@ -332,7 +326,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_CHARACTERAT )
   }
 }
 
-
 /*
 int characterCount () const
 */
@@ -344,7 +337,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_CHARACTERCOUNT )
     RINT( obj->characterCount () );
   }
 }
-
 
 /*
 virtual void clear ()
@@ -358,7 +350,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_CLEAR )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void clearUndoRedoStacks ( Stacks stacksToClear = UndoAndRedoStacks )
@@ -374,7 +365,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_CLEARUNDOREDOSTACKS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QTextDocument * clone ( QObject * parent = 0 ) const
 */
@@ -388,7 +378,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_CLONE )
   }
 }
 
-
 /*
 Qt::CursorMoveStyle defaultCursorMoveStyle () const
 */
@@ -400,7 +389,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DEFAULTCURSORMOVESTYLE )
     hb_retni( (int) obj->defaultCursorMoveStyle () );
   }
 }
-
 
 /*
 QFont defaultFont () const
@@ -415,7 +403,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DEFAULTFONT )
   }
 }
 
-
 /*
 QString defaultStyleSheet () const
 */
@@ -427,7 +414,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DEFAULTSTYLESHEET )
     RQSTRING( obj->defaultStyleSheet () );
   }
 }
-
 
 /*
 QTextOption defaultTextOption () const
@@ -442,7 +428,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DEFAULTTEXTOPTION )
   }
 }
 
-
 /*
 QAbstractTextDocumentLayout * documentLayout () const
 */
@@ -456,7 +441,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DOCUMENTLAYOUT )
   }
 }
 
-
 /*
 qreal documentMargin () const
 */
@@ -468,7 +452,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DOCUMENTMARGIN )
     RQREAL( obj->documentMargin () );
   }
 }
-
 
 /*
 void drawContents ( QPainter * p, const QRectF & rect = QRectF() )
@@ -484,7 +467,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DRAWCONTENTS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QTextBlock end () const
 */
@@ -497,7 +479,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_END )
     _qt4xhb_createReturnClass ( ptr, "QTEXTBLOCK" );
   }
 }
-
 
 /*
 QTextCursor find ( const QString & subString, const QTextCursor & cursor, FindFlags options = 0 ) const
@@ -513,7 +494,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FIND1 )
   }
 }
 
-
 /*
 QTextCursor find ( const QRegExp & expr, const QTextCursor & cursor, FindFlags options = 0 ) const
 */
@@ -527,7 +507,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FIND2 )
     _qt4xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
   }
 }
-
 
 /*
 QTextCursor find ( const QString & subString, int position = 0, FindFlags options = 0 ) const
@@ -543,7 +522,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FIND3 )
   }
 }
 
-
 /*
 QTextCursor find ( const QRegExp & expr, int position = 0, FindFlags options = 0 ) const
 */
@@ -557,7 +535,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FIND4 )
     _qt4xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
   }
 }
-
 
 //[1]QTextCursor find ( const QString & subString, const QTextCursor & cursor, FindFlags options = 0 ) const
 //[2]QTextCursor find ( const QRegExp & expr, const QTextCursor & cursor, FindFlags options = 0 ) const
@@ -597,7 +574,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FINDBLOCK )
   }
 }
 
-
 /*
 QTextBlock findBlockByLineNumber ( int lineNumber ) const
 */
@@ -610,7 +586,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FINDBLOCKBYLINENUMBER )
     _qt4xhb_createReturnClass ( ptr, "QTEXTBLOCK" );
   }
 }
-
 
 /*
 QTextBlock findBlockByNumber ( int blockNumber ) const
@@ -625,7 +600,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FINDBLOCKBYNUMBER )
   }
 }
 
-
 /*
 QTextBlock firstBlock () const
 */
@@ -639,7 +613,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FIRSTBLOCK )
   }
 }
 
-
 /*
 qreal idealWidth () const
 */
@@ -651,7 +624,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_IDEALWIDTH )
     RQREAL( obj->idealWidth () );
   }
 }
-
 
 /*
 qreal indentWidth () const
@@ -665,7 +637,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_INDENTWIDTH )
   }
 }
 
-
 /*
 bool isEmpty () const
 */
@@ -677,7 +648,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ISEMPTY )
     RBOOL( obj->isEmpty () );
   }
 }
-
 
 /*
 bool isModified () const
@@ -691,7 +661,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ISMODIFIED )
   }
 }
 
-
 /*
 bool isRedoAvailable () const
 */
@@ -703,7 +672,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ISREDOAVAILABLE )
     RBOOL( obj->isRedoAvailable () );
   }
 }
-
 
 /*
 bool isUndoAvailable () const
@@ -717,7 +685,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ISUNDOAVAILABLE )
   }
 }
 
-
 /*
 bool isUndoRedoEnabled () const
 */
@@ -729,7 +696,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ISUNDOREDOENABLED )
     RBOOL( obj->isUndoRedoEnabled () );
   }
 }
-
 
 /*
 QTextBlock lastBlock () const
@@ -744,7 +710,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_LASTBLOCK )
   }
 }
 
-
 /*
 int lineCount () const
 */
@@ -756,7 +721,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_LINECOUNT )
     RINT( obj->lineCount () );
   }
 }
-
 
 /*
 void markContentsDirty ( int position, int length )
@@ -771,7 +735,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_MARKCONTENTSDIRTY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int maximumBlockCount () const
 */
@@ -784,7 +747,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_MAXIMUMBLOCKCOUNT )
   }
 }
 
-
 /*
 QString metaInformation ( MetaInformation info ) const
 */
@@ -796,7 +758,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_METAINFORMATION )
     RQSTRING( obj->metaInformation ( (QTextDocument::MetaInformation) hb_parni(1) ) );
   }
 }
-
 
 /*
 QTextObject * object ( int objectIndex ) const
@@ -811,7 +772,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_OBJECT )
   }
 }
 
-
 /*
 QTextObject * objectForFormat ( const QTextFormat & f ) const
 */
@@ -825,7 +785,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_OBJECTFORFORMAT )
   }
 }
 
-
 /*
 int pageCount () const
 */
@@ -837,7 +796,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_PAGECOUNT )
     RINT( obj->pageCount () );
   }
 }
-
 
 /*
 QSizeF pageSize () const
@@ -851,7 +809,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_PAGESIZE )
     _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
-
 
 /*
 void print ( QPrinter * printer ) const
@@ -867,7 +824,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_PRINT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void redo ( QTextCursor * cursor )
 */
@@ -882,7 +838,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_REDO1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QVariant resource ( int type, const QUrl & name ) const
 */
@@ -896,7 +851,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_RESOURCE )
   }
 }
 
-
 /*
 int revision () const
 */
@@ -908,7 +862,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_REVISION )
     RINT( obj->revision () );
   }
 }
-
 
 /*
 QTextFrame * rootFrame () const
@@ -922,7 +875,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ROOTFRAME )
     _qt4xhb_createReturnClass ( ptr, "QTEXTFRAME" );
   }
 }
-
 
 /*
 void setDefaultCursorMoveStyle ( Qt::CursorMoveStyle style )
@@ -938,7 +890,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETDEFAULTCURSORMOVESTYLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setDefaultFont ( const QFont & font )
 */
@@ -951,7 +902,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETDEFAULTFONT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setDefaultStyleSheet ( const QString & sheet )
@@ -966,7 +916,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETDEFAULTSTYLESHEET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setDefaultTextOption ( const QTextOption & option )
 */
@@ -979,7 +928,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETDEFAULTTEXTOPTION )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setDocumentLayout ( QAbstractTextDocumentLayout * layout )
@@ -994,7 +942,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETDOCUMENTLAYOUT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setDocumentMargin ( qreal margin )
 */
@@ -1007,7 +954,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETDOCUMENTMARGIN )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setHtml ( const QString & html )
@@ -1022,7 +968,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETHTML )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setIndentWidth ( qreal width )
 */
@@ -1035,7 +980,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETINDENTWIDTH )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setMaximumBlockCount ( int maximum )
@@ -1050,7 +994,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETMAXIMUMBLOCKCOUNT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setMetaInformation ( MetaInformation info, const QString & string )
 */
@@ -1063,7 +1006,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETMETAINFORMATION )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setPageSize ( const QSizeF & size )
@@ -1078,7 +1020,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETPAGESIZE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPlainText ( const QString & text )
 */
@@ -1091,7 +1032,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETPLAINTEXT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setTextWidth ( qreal width )
@@ -1106,7 +1046,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETTEXTWIDTH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setUndoRedoEnabled ( bool enable )
 */
@@ -1119,7 +1058,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETUNDOREDOENABLED )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setUseDesignMetrics ( bool b )
@@ -1134,7 +1072,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETUSEDESIGNMETRICS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QSizeF size () const
 */
@@ -1148,7 +1085,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SIZE )
   }
 }
 
-
 /*
 qreal textWidth () const
 */
@@ -1160,7 +1096,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_TEXTWIDTH )
     RQREAL( obj->textWidth () );
   }
 }
-
 
 /*
 QString toHtml ( const QByteArray & encoding = QByteArray() ) const
@@ -1175,7 +1110,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_TOHTML )
   }
 }
 
-
 /*
 QString toPlainText () const
 */
@@ -1187,7 +1121,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_TOPLAINTEXT )
     RQSTRING( obj->toPlainText () );
   }
 }
-
 
 /*
 void undo ( QTextCursor * cursor )
@@ -1202,7 +1135,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_UNDO1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool useDesignMetrics () const
 */
@@ -1214,7 +1146,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_USEDESIGNMETRICS )
     RBOOL( obj->useDesignMetrics () );
   }
 }
-
 
 /*
 void redo ()
@@ -1228,7 +1159,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_REDO2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void redo ( QTextCursor * cursor )
 //[2]void redo ()
@@ -1258,7 +1188,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETMODIFIED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void undo ()
 */
@@ -1271,7 +1200,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_UNDO2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void undo ( QTextCursor * cursor )
 //[2]void undo ()
@@ -1287,8 +1215,5 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_UNDO )
     HB_FUNC_EXEC( QTEXTDOCUMENT_UNDO2 );
   }
 }
-
-
-
 
 #pragma ENDDUMP

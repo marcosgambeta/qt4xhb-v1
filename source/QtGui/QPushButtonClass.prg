@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -118,7 +118,14 @@ HB_FUNC_STATIC( QPUSHBUTTON_AUTODEFAULT )
 
   if( obj )
   {
-    RBOOL( obj->autoDefault () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->autoDefault () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -131,7 +138,14 @@ HB_FUNC_STATIC( QPUSHBUTTON_ISDEFAULT )
 
   if( obj )
   {
-    RBOOL( obj->isDefault () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isDefault () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -144,7 +158,14 @@ HB_FUNC_STATIC( QPUSHBUTTON_ISFLAT )
 
   if( obj )
   {
-    RBOOL( obj->isFlat () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isFlat () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -157,7 +178,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_SETAUTODEFAULT )
 
   if( obj )
   {
-    if( ISLOG(1) )
+    if( ISNUMPAR(1) && ISLOG(1) )
     {
       obj->setAutoDefault ( PBOOL(1) );
     }
@@ -179,7 +200,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_SETDEFAULT )
 
   if( obj )
   {
-    if( ISLOG(1) )
+    if( ISNUMPAR(1) && ISLOG(1) )
     {
       obj->setDefault ( PBOOL(1) );
     }
@@ -201,7 +222,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_SETFLAT )
 
   if( obj )
   {
-    if( ISLOG(1) )
+    if( ISNUMPAR(1) && ISLOG(1) )
     {
       obj->setFlat ( PBOOL(1) );
     }
@@ -223,7 +244,14 @@ HB_FUNC_STATIC( QPUSHBUTTON_SHOWMENU )
 
   if( obj )
   {
-    obj->showMenu ();
+    if( ISNUMPAR(0) )
+    {
+      obj->showMenu ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );

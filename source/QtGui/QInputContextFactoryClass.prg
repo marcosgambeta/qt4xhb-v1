@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -23,11 +23,13 @@ CLASS QInputContextFactory
    METHOD displayName
    METHOD keys
    METHOD languages
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -49,6 +51,7 @@ RETURN
 HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_DELETE )
 {
   QInputContextFactory * obj = (QInputContextFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -58,9 +61,9 @@ HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QInputContext * create ( const QString & key, QObject * parent )
@@ -71,7 +74,6 @@ HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_CREATE )
   _qt4xhb_createReturnClass ( ptr, "QINPUTCONTEXT" );
 }
 
-
 /*
 QString description ( const QString & key )
 */
@@ -79,7 +81,6 @@ HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_DESCRIPTION )
 {
   RQSTRING( QInputContextFactory::description ( PQSTRING(1) ) );
 }
-
 
 /*
 QString displayName ( const QString & key )
@@ -89,7 +90,6 @@ HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_DISPLAYNAME )
   RQSTRING( QInputContextFactory::displayName ( PQSTRING(1) ) );
 }
 
-
 /*
 QStringList keys ()
 */
@@ -98,7 +98,6 @@ HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_KEYS )
   RQSTRINGLIST( QInputContextFactory::keys () );
 }
 
-
 /*
 QStringList languages ( const QString & key )
 */
@@ -106,7 +105,6 @@ HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_LANGUAGES )
 {
   RQSTRINGLIST( QInputContextFactory::languages ( PQSTRING(1) ) );
 }
-
 
 HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_NEWFROM )
 {
@@ -162,6 +160,5 @@ HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

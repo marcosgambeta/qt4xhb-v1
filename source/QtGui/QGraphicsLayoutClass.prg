@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -29,6 +29,7 @@ CLASS QGraphicsLayout INHERIT QGraphicsLayoutItem
    METHOD updateGeometry
    METHOD instantInvalidatePropagation
    METHOD setInstantInvalidatePropagation
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -47,10 +48,10 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
 HB_FUNC_STATIC( QGRAPHICSLAYOUT_DELETE )
 {
   QGraphicsLayout * obj = (QGraphicsLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -60,9 +61,9 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void activate ()
@@ -77,7 +78,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_ACTIVATE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual int count () const = 0
 */
@@ -89,7 +89,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_COUNT )
     RINT( obj->count () );
   }
 }
-
 
 /*
 virtual void invalidate ()
@@ -104,7 +103,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_INVALIDATE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool isActivated () const
 */
@@ -116,7 +114,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_ISACTIVATED )
     RBOOL( obj->isActivated () );
   }
 }
-
 
 /*
 virtual QGraphicsLayoutItem * itemAt ( int i ) const = 0
@@ -131,7 +128,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_ITEMAT )
   }
 }
 
-
 /*
 virtual void removeAt ( int index ) = 0
 */
@@ -144,7 +140,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_REMOVEAT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setContentsMargins ( qreal left, qreal top, qreal right, qreal bottom )
@@ -159,7 +154,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_SETCONTENTSMARGINS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void widgetEvent ( QEvent * e )
 */
@@ -172,7 +166,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_WIDGETEVENT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void getContentsMargins ( qreal * left, qreal * top, qreal * right, qreal * bottom ) const
@@ -195,7 +188,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_GETCONTENTSMARGINS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void updateGeometry ()
 */
@@ -209,8 +201,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_UPDATEGEOMETRY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 bool instantInvalidatePropagation ()
 */
@@ -218,7 +208,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_INSTANTINVALIDATEPROPAGATION )
 {
   RBOOL( QGraphicsLayout::instantInvalidatePropagation () );
 }
-
 
 /*
 void setInstantInvalidatePropagation ( bool enable )
@@ -228,8 +217,5 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_SETINSTANTINVALIDATEPROPAGATION )
   QGraphicsLayout::setInstantInvalidatePropagation ( PBOOL(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
 
 #pragma ENDDUMP

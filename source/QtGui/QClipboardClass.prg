@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -34,10 +34,12 @@ CLASS QClipboard INHERIT QObject
    METHOD text1
    METHOD text2
    METHOD text
+
    METHOD onChanged
    METHOD onDataChanged
    METHOD onFindBufferChanged
    METHOD onSelectionChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -60,7 +62,6 @@ RETURN
 #include <QMimeData>
 #include <QPixmap>
 
-
 /*
 void clear ( Mode mode = Clipboard )
 */
@@ -74,7 +75,6 @@ HB_FUNC_STATIC( QCLIPBOARD_CLEAR )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QImage image ( Mode mode = Clipboard ) const
@@ -90,7 +90,6 @@ HB_FUNC_STATIC( QCLIPBOARD_IMAGE )
   }
 }
 
-
 /*
 const QMimeData * mimeData ( Mode mode = Clipboard ) const
 */
@@ -105,7 +104,6 @@ HB_FUNC_STATIC( QCLIPBOARD_MIMEDATA )
   }
 }
 
-
 /*
 bool ownsClipboard () const
 */
@@ -117,7 +115,6 @@ HB_FUNC_STATIC( QCLIPBOARD_OWNSCLIPBOARD )
     RBOOL( obj->ownsClipboard () );
   }
 }
-
 
 /*
 bool ownsFindBuffer () const
@@ -131,7 +128,6 @@ HB_FUNC_STATIC( QCLIPBOARD_OWNSFINDBUFFER )
   }
 }
 
-
 /*
 bool ownsSelection () const
 */
@@ -143,7 +139,6 @@ HB_FUNC_STATIC( QCLIPBOARD_OWNSSELECTION )
     RBOOL( obj->ownsSelection () );
   }
 }
-
 
 /*
 QPixmap pixmap ( Mode mode = Clipboard ) const
@@ -159,7 +154,6 @@ HB_FUNC_STATIC( QCLIPBOARD_PIXMAP )
   }
 }
 
-
 /*
 void setImage ( const QImage & image, Mode mode = Clipboard )
 */
@@ -173,7 +167,6 @@ HB_FUNC_STATIC( QCLIPBOARD_SETIMAGE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setMimeData ( QMimeData * src, Mode mode = Clipboard )
@@ -190,7 +183,6 @@ HB_FUNC_STATIC( QCLIPBOARD_SETMIMEDATA )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPixmap ( const QPixmap & pixmap, Mode mode = Clipboard )
 */
@@ -204,7 +196,6 @@ HB_FUNC_STATIC( QCLIPBOARD_SETPIXMAP )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setText ( const QString & text, Mode mode = Clipboard )
@@ -220,7 +211,6 @@ HB_FUNC_STATIC( QCLIPBOARD_SETTEXT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool supportsFindBuffer () const
 */
@@ -232,7 +222,6 @@ HB_FUNC_STATIC( QCLIPBOARD_SUPPORTSFINDBUFFER )
     RBOOL( obj->supportsFindBuffer () );
   }
 }
-
 
 /*
 bool supportsSelection () const
@@ -246,7 +235,6 @@ HB_FUNC_STATIC( QCLIPBOARD_SUPPORTSSELECTION )
   }
 }
 
-
 /*
 QString text ( Mode mode = Clipboard ) const
 */
@@ -258,7 +246,6 @@ HB_FUNC_STATIC( QCLIPBOARD_TEXT1 )
     RQSTRING( obj->text ( (QClipboard::Mode) hb_parni(1) ) );
   }
 }
-
 
 /*
 QString text ( QString & subtype, Mode mode = Clipboard ) const
@@ -272,7 +259,6 @@ HB_FUNC_STATIC( QCLIPBOARD_TEXT2 )
     RQSTRING( obj->text ( par1, (QClipboard::Mode) hb_parni(2) ) );
   }
 }
-
 
 //[1]QString text ( Mode mode = Clipboard ) const
 //[2]QString text ( QString & subtype, Mode mode = Clipboard ) const
@@ -296,8 +282,5 @@ HB_FUNC_STATIC( QCLIPBOARD_TEXT )
     HB_FUNC_EXEC( QCLIPBOARD_TEXT2 );
   }
 }
-
-
-
 
 #pragma ENDDUMP

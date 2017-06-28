@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -21,11 +21,13 @@ CLASS QMimeSource
    METHOD encodedData
    METHOD format
    METHOD provides
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -44,10 +46,10 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
 HB_FUNC_STATIC( QMIMESOURCE_DELETE )
 {
   QMimeSource * obj = (QMimeSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -57,9 +59,9 @@ HB_FUNC_STATIC( QMIMESOURCE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual QByteArray encodedData ( const char * format ) const = 0
@@ -74,7 +76,6 @@ HB_FUNC_STATIC( QMIMESOURCE_ENCODEDDATA )
   }
 }
 
-
 /*
 virtual const char * format ( int i = 0 ) const = 0
 */
@@ -88,7 +89,6 @@ HB_FUNC_STATIC( QMIMESOURCE_FORMAT )
   }
 }
 
-
 /*
 virtual bool provides ( const char * mimeType ) const
 */
@@ -100,7 +100,6 @@ HB_FUNC_STATIC( QMIMESOURCE_PROVIDES )
     RBOOL( obj->provides ( (const char *) hb_parc(1) ) );
   }
 }
-
 
 HB_FUNC_STATIC( QMIMESOURCE_NEWFROM )
 {
@@ -156,7 +155,5 @@ HB_FUNC_STATIC( QMIMESOURCE_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

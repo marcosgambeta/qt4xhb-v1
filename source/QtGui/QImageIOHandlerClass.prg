@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -38,11 +38,13 @@ CLASS QImageIOHandler
    METHOD setOption
    METHOD supportsOption
    METHOD write
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -64,10 +66,10 @@ RETURN
 #include <QRect>
 #include <QVariant>
 
-
 HB_FUNC_STATIC( QIMAGEIOHANDLER_DELETE )
 {
   QImageIOHandler * obj = (QImageIOHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -77,9 +79,9 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual bool canRead () const = 0
@@ -93,7 +95,6 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_CANREAD )
   }
 }
 
-
 /*
 virtual int currentImageNumber () const
 */
@@ -105,7 +106,6 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_CURRENTIMAGENUMBER )
     RINT( obj->currentImageNumber () );
   }
 }
-
 
 /*
 virtual QRect currentImageRect () const
@@ -120,7 +120,6 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_CURRENTIMAGERECT )
   }
 }
 
-
 /*
 QIODevice * device () const
 */
@@ -133,7 +132,6 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_DEVICE )
     _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );
   }
 }
-
 
 /*
 QByteArray format () const
@@ -148,7 +146,6 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_FORMAT )
   }
 }
 
-
 /*
 virtual int imageCount () const
 */
@@ -160,7 +157,6 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_IMAGECOUNT )
     RINT( obj->imageCount () );
   }
 }
-
 
 /*
 virtual bool jumpToImage ( int imageNumber )
@@ -174,7 +170,6 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_JUMPTOIMAGE )
   }
 }
 
-
 /*
 virtual bool jumpToNextImage ()
 */
@@ -186,7 +181,6 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_JUMPTONEXTIMAGE )
     RBOOL( obj->jumpToNextImage () );
   }
 }
-
 
 /*
 virtual int loopCount () const
@@ -200,7 +194,6 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_LOOPCOUNT )
   }
 }
 
-
 /*
 virtual int nextImageDelay () const
 */
@@ -212,7 +205,6 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_NEXTIMAGEDELAY )
     RINT( obj->nextImageDelay () );
   }
 }
-
 
 /*
 virtual QVariant option ( ImageOption option ) const
@@ -228,7 +220,6 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_OPTION )
   }
 }
 
-
 /*
 virtual bool read ( QImage * image ) = 0
 */
@@ -241,7 +232,6 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_READ )
     RBOOL( obj->read ( par1 ) );
   }
 }
-
 
 /*
 void setDevice ( QIODevice * device )
@@ -256,7 +246,6 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_SETDEVICE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setFormat ( const QByteArray & format )
 */
@@ -269,8 +258,6 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_SETFORMAT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
 
 /*
 virtual void setOption ( ImageOption option, const QVariant & value )
@@ -286,7 +273,6 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_SETOPTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual bool supportsOption ( ImageOption option ) const
 */
@@ -300,7 +286,6 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_SUPPORTSOPTION )
   }
 }
 
-
 /*
 virtual bool write ( const QImage & image )
 */
@@ -312,7 +297,6 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_WRITE )
     RBOOL( obj->write ( *PQIMAGE(1) ) );
   }
 }
-
 
 HB_FUNC_STATIC( QIMAGEIOHANDLER_NEWFROM )
 {
@@ -368,6 +352,5 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

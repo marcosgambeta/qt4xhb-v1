@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -43,6 +43,7 @@ CLASS QGestureEvent INHERIT QEvent
    METHOD setAccepted
    METHOD setWidget
    METHOD widget
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -77,10 +78,10 @@ par1 << (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QGESTUREEVENT_DELETE )
 {
   QGestureEvent * obj = (QGestureEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -90,9 +91,9 @@ HB_FUNC_STATIC( QGESTUREEVENT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void accept ()
@@ -106,7 +107,6 @@ HB_FUNC_STATIC( QGESTUREEVENT_ACCEPT1 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void accept ( QGesture * gesture )
@@ -122,7 +122,6 @@ HB_FUNC_STATIC( QGESTUREEVENT_ACCEPT2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void accept ( Qt::GestureType gestureType )
 */
@@ -136,7 +135,6 @@ HB_FUNC_STATIC( QGESTUREEVENT_ACCEPT3 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void accept ()
 //[2]void accept ( QGesture * gesture )
@@ -201,7 +199,6 @@ HB_FUNC_STATIC( QGESTUREEVENT_ACTIVEGESTURES )
   }
 }
 
-
 /*
 QList<QGesture *> canceledGestures () const
 */
@@ -245,7 +242,6 @@ HB_FUNC_STATIC( QGESTUREEVENT_CANCELEDGESTURES )
   }
 }
 
-
 /*
 QGesture * gesture ( Qt::GestureType type ) const
 */
@@ -259,7 +255,6 @@ HB_FUNC_STATIC( QGESTUREEVENT_GESTURE )
     _qt4xhb_createReturnClass ( ptr, "QGESTURE" );
   }
 }
-
 
 /*
 QList<QGesture *> gestures () const
@@ -304,7 +299,6 @@ HB_FUNC_STATIC( QGESTUREEVENT_GESTURES )
   }
 }
 
-
 /*
 void ignore ()
 */
@@ -317,7 +311,6 @@ HB_FUNC_STATIC( QGESTUREEVENT_IGNORE1 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void ignore ( QGesture * gesture )
@@ -333,7 +326,6 @@ HB_FUNC_STATIC( QGESTUREEVENT_IGNORE2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void ignore ( Qt::GestureType gestureType )
 */
@@ -347,7 +339,6 @@ HB_FUNC_STATIC( QGESTUREEVENT_IGNORE3 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void ignore ()
 //[2]void ignore ( QGesture * gesture )
@@ -381,7 +372,6 @@ HB_FUNC_STATIC( QGESTUREEVENT_ISACCEPTED1 )
   }
 }
 
-
 /*
 bool isAccepted ( QGesture * gesture ) const
 */
@@ -395,7 +385,6 @@ HB_FUNC_STATIC( QGESTUREEVENT_ISACCEPTED2 )
   }
 }
 
-
 /*
 bool isAccepted ( Qt::GestureType gestureType ) const
 */
@@ -408,7 +397,6 @@ HB_FUNC_STATIC( QGESTUREEVENT_ISACCEPTED3 )
     RBOOL( obj->isAccepted ( (Qt::GestureType) par1 ) );
   }
 }
-
 
 //[1]bool isAccepted () const
 //[2]bool isAccepted ( QGesture * gesture ) const
@@ -443,7 +431,6 @@ HB_FUNC_STATIC( QGESTUREEVENT_MAPTOGRAPHICSSCENE )
   }
 }
 
-
 /*
 void setAccepted ( bool accepted )
 */
@@ -456,7 +443,6 @@ HB_FUNC_STATIC( QGESTUREEVENT_SETACCEPTED1 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setAccepted ( QGesture * gesture, bool value )
@@ -472,7 +458,6 @@ HB_FUNC_STATIC( QGESTUREEVENT_SETACCEPTED2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setAccepted ( Qt::GestureType gestureType, bool value )
 */
@@ -486,7 +471,6 @@ HB_FUNC_STATIC( QGESTUREEVENT_SETACCEPTED3 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setAccepted ( bool accepted )
 //[2]void setAccepted ( QGesture * gesture, bool value )
@@ -521,7 +505,6 @@ HB_FUNC_STATIC( QGESTUREEVENT_SETWIDGET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QWidget * widget () const
 */
@@ -534,9 +517,5 @@ HB_FUNC_STATIC( QGESTUREEVENT_WIDGET )
     _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
-
-
-
-
 
 #pragma ENDDUMP

@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -31,10 +31,12 @@ CLASS QAbstractTextDocumentLayout INHERIT QObject
    METHOD paintDevice
    METHOD registerHandler
    METHOD setPaintDevice
+
    METHOD onDocumentSizeChanged
    METHOD onPageCountChanged
    METHOD onUpdate
    METHOD onUpdateBlock
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -53,8 +55,6 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
-
 /*
 QString anchorAt ( const QPointF & position ) const
 */
@@ -66,7 +66,6 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ANCHORAT )
     RQSTRING( obj->anchorAt ( *PQPOINTF(1) ) );
   }
 }
-
 
 /*
 virtual QRectF blockBoundingRect ( const QTextBlock & block ) const = 0
@@ -81,7 +80,6 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT )
   }
 }
 
-
 /*
 QTextDocument * document () const
 */
@@ -95,7 +93,6 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENT )
   }
 }
 
-
 /*
 virtual QSizeF documentSize () const = 0
 */
@@ -108,8 +105,6 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENTSIZE )
     _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
-
-
 
 /*
 virtual QRectF frameBoundingRect ( QTextFrame * frame ) const = 0
@@ -125,7 +120,6 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT )
   }
 }
 
-
 /*
 QTextObjectInterface * handlerForObject ( int objectType ) const
 */
@@ -138,7 +132,6 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_HANDLERFOROBJECT )
     _qt4xhb_createReturnClass ( ptr, "QTEXTOBJECTINTERFACE" );
   }
 }
-
 
 /*
 virtual int hitTest ( const QPointF & point, Qt::HitTestAccuracy accuracy ) const = 0
@@ -153,7 +146,6 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_HITTEST )
   }
 }
 
-
 /*
 virtual int pageCount () const = 0
 */
@@ -165,7 +157,6 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_PAGECOUNT )
     RINT( obj->pageCount () );
   }
 }
-
 
 /*
 QPaintDevice * paintDevice () const
@@ -180,7 +171,6 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_PAINTDEVICE )
   }
 }
 
-
 /*
 void registerHandler ( int objectType, QObject * component )
 */
@@ -193,7 +183,6 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_REGISTERHANDLER )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setPaintDevice ( QPaintDevice * device )
@@ -208,9 +197,5 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_SETPAINTDEVICE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

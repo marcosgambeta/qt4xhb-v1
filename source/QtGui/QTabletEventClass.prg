@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -37,6 +37,7 @@ CLASS QTabletEvent INHERIT QInputEvent
    METHOD rotation
    METHOD xTilt
    METHOD yTilt
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -65,10 +66,10 @@ HB_FUNC_STATIC( QTABLETEVENT_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QTABLETEVENT_DELETE )
 {
   QTabletEvent * obj = (QTabletEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -78,9 +79,9 @@ HB_FUNC_STATIC( QTABLETEVENT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 const QPoint &pos() const
@@ -95,7 +96,6 @@ HB_FUNC_STATIC( QTABLETEVENT_POS )
   }
 }
 
-
 /*
 const QPoint &globalPos() const
 */
@@ -108,7 +108,6 @@ HB_FUNC_STATIC( QTABLETEVENT_GLOBALPOS )
     _qt4xhb_createReturnClass ( ptr, "QPOINT" );
   }
 }
-
 
 /*
 const QPointF &hiResGlobalPos() const
@@ -123,7 +122,6 @@ HB_FUNC_STATIC( QTABLETEVENT_HIRESGLOBALPOS )
   }
 }
 
-
 /*
 int x() const
 */
@@ -135,7 +133,6 @@ HB_FUNC_STATIC( QTABLETEVENT_X )
     RINT( obj->x () );
   }
 }
-
 
 /*
 int y() const
@@ -149,7 +146,6 @@ HB_FUNC_STATIC( QTABLETEVENT_Y )
   }
 }
 
-
 /*
 int globalX() const
 */
@@ -161,7 +157,6 @@ HB_FUNC_STATIC( QTABLETEVENT_GLOBALX )
     RINT( obj->globalX () );
   }
 }
-
 
 /*
 int globalY() const
@@ -175,7 +170,6 @@ HB_FUNC_STATIC( QTABLETEVENT_GLOBALY )
   }
 }
 
-
 /*
 qreal hiResGlobalX() const
 */
@@ -187,7 +181,6 @@ HB_FUNC_STATIC( QTABLETEVENT_HIRESGLOBALX )
     RQREAL( obj->hiResGlobalX () );
   }
 }
-
 
 /*
 qreal hiResGlobalY() const
@@ -201,7 +194,6 @@ HB_FUNC_STATIC( QTABLETEVENT_HIRESGLOBALY )
   }
 }
 
-
 /*
 TabletDevice device() const
 */
@@ -213,7 +205,6 @@ HB_FUNC_STATIC( QTABLETEVENT_DEVICE )
     hb_retni( (int) obj->device () );
   }
 }
-
 
 /*
 PointerType pointerType() const
@@ -227,7 +218,6 @@ HB_FUNC_STATIC( QTABLETEVENT_POINTERTYPE )
   }
 }
 
-
 /*
 qint64 uniqueId() const
 */
@@ -239,7 +229,6 @@ HB_FUNC_STATIC( QTABLETEVENT_UNIQUEID )
     RQINT64( obj->uniqueId () );
   }
 }
-
 
 /*
 qreal pressure() const
@@ -253,7 +242,6 @@ HB_FUNC_STATIC( QTABLETEVENT_PRESSURE )
   }
 }
 
-
 /*
 int z() const
 */
@@ -265,7 +253,6 @@ HB_FUNC_STATIC( QTABLETEVENT_Z )
     RINT( obj->z () );
   }
 }
-
 
 /*
 qreal tangentialPressure() const
@@ -279,7 +266,6 @@ HB_FUNC_STATIC( QTABLETEVENT_TANGENTIALPRESSURE )
   }
 }
 
-
 /*
 qreal rotation() const
 */
@@ -291,7 +277,6 @@ HB_FUNC_STATIC( QTABLETEVENT_ROTATION )
     RQREAL( obj->rotation () );
   }
 }
-
 
 /*
 int xTilt() const
@@ -305,7 +290,6 @@ HB_FUNC_STATIC( QTABLETEVENT_XTILT )
   }
 }
 
-
 /*
 int yTilt() const
 */
@@ -317,9 +301,5 @@ HB_FUNC_STATIC( QTABLETEVENT_YTILT )
     RINT( obj->yTilt () );
   }
 }
-
-
-
-
 
 #pragma ENDDUMP

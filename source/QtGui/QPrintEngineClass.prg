@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -24,11 +24,13 @@ CLASS QPrintEngine
    METHOD printerState
    METHOD property
    METHOD setProperty
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -50,6 +52,7 @@ RETURN
 HB_FUNC_STATIC( QPRINTENGINE_DELETE )
 {
   QPrintEngine * obj = (QPrintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -59,9 +62,9 @@ HB_FUNC_STATIC( QPRINTENGINE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual bool abort () = 0
@@ -74,7 +77,6 @@ HB_FUNC_STATIC( QPRINTENGINE_ABORT )
     RBOOL( obj->abort () );
   }
 }
-
 
 /*
 virtual int metric ( QPaintDevice::PaintDeviceMetric id ) const = 0
@@ -89,7 +91,6 @@ HB_FUNC_STATIC( QPRINTENGINE_METRIC )
   }
 }
 
-
 /*
 virtual bool newPage () = 0
 */
@@ -102,7 +103,6 @@ HB_FUNC_STATIC( QPRINTENGINE_NEWPAGE )
   }
 }
 
-
 /*
 virtual QPrinter::PrinterState printerState () const = 0
 */
@@ -114,7 +114,6 @@ HB_FUNC_STATIC( QPRINTENGINE_PRINTERSTATE )
     hb_retni( (int) obj->printerState () );
   }
 }
-
 
 /*
 virtual QVariant property ( PrintEnginePropertyKey key ) const = 0
@@ -130,7 +129,6 @@ HB_FUNC_STATIC( QPRINTENGINE_PROPERTY )
   }
 }
 
-
 /*
 virtual void setProperty ( PrintEnginePropertyKey key, const QVariant & value ) = 0
 */
@@ -144,7 +142,6 @@ HB_FUNC_STATIC( QPRINTENGINE_SETPROPERTY )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QPRINTENGINE_NEWFROM )
 {
@@ -200,6 +197,5 @@ HB_FUNC_STATIC( QPRINTENGINE_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

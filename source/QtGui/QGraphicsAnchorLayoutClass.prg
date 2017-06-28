@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -33,6 +33,7 @@ CLASS QGraphicsAnchorLayout INHERIT QGraphicsLayout
    METHOD itemAt
    METHOD removeAt
    METHOD setGeometry
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -60,10 +61,10 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_DELETE )
 {
   QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -73,9 +74,9 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QGraphicsAnchor * addAnchor ( QGraphicsLayoutItem * firstItem, Qt::AnchorPoint firstEdge, QGraphicsLayoutItem * secondItem, Qt::AnchorPoint secondEdge )
@@ -94,7 +95,6 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ADDANCHOR )
   }
 }
 
-
 /*
 void addAnchors ( QGraphicsLayoutItem * firstItem, QGraphicsLayoutItem * secondItem, Qt::Orientations orientations = Qt::Horizontal | Qt::Vertical )
 */
@@ -110,7 +110,6 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ADDANCHORS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void addCornerAnchors ( QGraphicsLayoutItem * firstItem, Qt::Corner firstCorner, QGraphicsLayoutItem * secondItem, Qt::Corner secondCorner )
@@ -129,7 +128,6 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ADDCORNERANCHORS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QGraphicsAnchor * anchor ( QGraphicsLayoutItem * firstItem, Qt::AnchorPoint firstEdge, QGraphicsLayoutItem * secondItem, Qt::AnchorPoint secondEdge )
 */
@@ -147,7 +145,6 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ANCHOR )
   }
 }
 
-
 /*
 qreal horizontalSpacing () const
 */
@@ -159,7 +156,6 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_HORIZONTALSPACING )
     RQREAL( obj->horizontalSpacing () );
   }
 }
-
 
 /*
 void setHorizontalSpacing ( qreal spacing )
@@ -174,7 +170,6 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_SETHORIZONTALSPACING )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setSpacing ( qreal spacing )
 */
@@ -187,7 +182,6 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_SETSPACING )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setVerticalSpacing ( qreal spacing )
@@ -202,7 +196,6 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_SETVERTICALSPACING )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 qreal verticalSpacing () const
 */
@@ -215,7 +208,6 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_VERTICALSPACING )
   }
 }
 
-
 /*
 virtual int count () const
 */
@@ -227,7 +219,6 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_COUNT )
     RINT( obj->count () );
   }
 }
-
 
 /*
 virtual void invalidate ()
@@ -242,7 +233,6 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_INVALIDATE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QGraphicsLayoutItem * itemAt ( int index ) const
 */
@@ -255,7 +245,6 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ITEMAT )
     _qt4xhb_createReturnClass ( ptr, "QGRAPHICSLAYOUTITEM" );
   }
 }
-
 
 /*
 virtual void removeAt ( int index )
@@ -270,7 +259,6 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_REMOVEAT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void setGeometry ( const QRectF & geom )
 */
@@ -283,9 +271,5 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_SETGEOMETRY )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -52,6 +52,7 @@ CLASS QToolBar INHERIT QWidget
    METHOD widgetForAction
    METHOD setIconSize
    METHOD setToolButtonStyle
+
    METHOD onActionTriggered
    METHOD onAllowedAreasChanged
    METHOD onIconSizeChanged
@@ -60,6 +61,7 @@ CLASS QToolBar INHERIT QWidget
    METHOD onToolButtonStyleChanged
    METHOD onTopLevelChanged
    METHOD onVisibilityChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -89,7 +91,6 @@ HB_FUNC_STATIC( QTOOLBAR_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QToolBar ( QWidget * parent = 0 )
 */
@@ -98,7 +99,6 @@ HB_FUNC_STATIC( QTOOLBAR_NEW2 )
   QToolBar * o = new QToolBar ( OPQWIDGET(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QToolBar ( const QString & title, QWidget * parent = 0 )
 //[2]QToolBar ( QWidget * parent = 0 )
@@ -122,6 +122,7 @@ HB_FUNC_STATIC( QTOOLBAR_NEW )
 HB_FUNC_STATIC( QTOOLBAR_DELETE )
 {
   QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -131,9 +132,9 @@ HB_FUNC_STATIC( QTOOLBAR_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QAction * actionAt ( int x, int y ) const
@@ -148,7 +149,6 @@ HB_FUNC_STATIC( QTOOLBAR_ACTIONAT1 )
   }
 }
 
-
 /*
 QAction * actionAt ( const QPoint & p ) const
 */
@@ -161,7 +161,6 @@ HB_FUNC_STATIC( QTOOLBAR_ACTIONAT2 )
     _qt4xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
-
 
 //[1]QAction * actionAt ( int x, int y ) const
 //[2]QAction * actionAt ( const QPoint & p ) const
@@ -191,7 +190,6 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QAction * addAction ( const QString & text )
 */
@@ -204,7 +202,6 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION2 )
     _qt4xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
-
 
 /*
 QAction * addAction ( const QIcon & icon, const QString & text )
@@ -220,7 +217,6 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION3 )
   }
 }
 
-
 /*
 QAction * addAction ( const QString & text, const QObject * receiver, const char * member )
 */
@@ -234,7 +230,6 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION4 )
     _qt4xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
-
 
 /*
 QAction * addAction ( const QIcon & icon, const QString & text, const QObject * receiver, const char * member )
@@ -250,7 +245,6 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION5 )
     _qt4xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
-
 
 //[1]void addAction ( QAction * action )
 //[2]QAction * addAction ( const QString & text )
@@ -295,7 +289,6 @@ HB_FUNC_STATIC( QTOOLBAR_ADDSEPARATOR )
   }
 }
 
-
 /*
 QAction * addWidget ( QWidget * widget )
 */
@@ -309,7 +302,6 @@ HB_FUNC_STATIC( QTOOLBAR_ADDWIDGET )
   }
 }
 
-
 /*
 Qt::ToolBarAreas allowedAreas () const
 */
@@ -321,7 +313,6 @@ HB_FUNC_STATIC( QTOOLBAR_ALLOWEDAREAS )
     hb_retni( (int) obj->allowedAreas () );
   }
 }
-
 
 /*
 void clear ()
@@ -336,7 +327,6 @@ HB_FUNC_STATIC( QTOOLBAR_CLEAR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QSize iconSize () const
 */
@@ -349,7 +339,6 @@ HB_FUNC_STATIC( QTOOLBAR_ICONSIZE )
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
-
 
 /*
 QAction * insertSeparator ( QAction * before )
@@ -364,7 +353,6 @@ HB_FUNC_STATIC( QTOOLBAR_INSERTSEPARATOR )
   }
 }
 
-
 /*
 QAction * insertWidget ( QAction * before, QWidget * widget )
 */
@@ -377,7 +365,6 @@ HB_FUNC_STATIC( QTOOLBAR_INSERTWIDGET )
     _qt4xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
-
 
 /*
 bool isAreaAllowed ( Qt::ToolBarArea area ) const
@@ -392,7 +379,6 @@ HB_FUNC_STATIC( QTOOLBAR_ISAREAALLOWED )
   }
 }
 
-
 /*
 bool isFloatable () const
 */
@@ -404,7 +390,6 @@ HB_FUNC_STATIC( QTOOLBAR_ISFLOATABLE )
     RBOOL( obj->isFloatable () );
   }
 }
-
 
 /*
 bool isFloating () const
@@ -418,7 +403,6 @@ HB_FUNC_STATIC( QTOOLBAR_ISFLOATING )
   }
 }
 
-
 /*
 bool isMovable () const
 */
@@ -431,7 +415,6 @@ HB_FUNC_STATIC( QTOOLBAR_ISMOVABLE )
   }
 }
 
-
 /*
 Qt::Orientation orientation () const
 */
@@ -443,7 +426,6 @@ HB_FUNC_STATIC( QTOOLBAR_ORIENTATION )
     RENUM( obj->orientation () );
   }
 }
-
 
 /*
 void setAllowedAreas ( Qt::ToolBarAreas areas )
@@ -459,7 +441,6 @@ HB_FUNC_STATIC( QTOOLBAR_SETALLOWEDAREAS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setFloatable ( bool floatable )
 */
@@ -472,7 +453,6 @@ HB_FUNC_STATIC( QTOOLBAR_SETFLOATABLE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setMovable ( bool movable )
@@ -487,7 +467,6 @@ HB_FUNC_STATIC( QTOOLBAR_SETMOVABLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setOrientation ( Qt::Orientation orientation )
 */
@@ -500,7 +479,6 @@ HB_FUNC_STATIC( QTOOLBAR_SETORIENTATION )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QAction * toggleViewAction () const
@@ -515,7 +493,6 @@ HB_FUNC_STATIC( QTOOLBAR_TOGGLEVIEWACTION )
   }
 }
 
-
 /*
 Qt::ToolButtonStyle toolButtonStyle () const
 */
@@ -527,7 +504,6 @@ HB_FUNC_STATIC( QTOOLBAR_TOOLBUTTONSTYLE )
     hb_retni( (int) obj->toolButtonStyle () );
   }
 }
-
 
 /*
 QWidget * widgetForAction ( QAction * action ) const
@@ -542,7 +518,6 @@ HB_FUNC_STATIC( QTOOLBAR_WIDGETFORACTION )
   }
 }
 
-
 /*
 void setIconSize ( const QSize & iconSize )
 */
@@ -555,7 +530,6 @@ HB_FUNC_STATIC( QTOOLBAR_SETICONSIZE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setToolButtonStyle ( Qt::ToolButtonStyle toolButtonStyle )
@@ -570,9 +544,5 @@ HB_FUNC_STATIC( QTOOLBAR_SETTOOLBUTTONSTYLE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

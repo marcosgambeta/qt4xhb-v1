@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -33,6 +33,7 @@ CLASS QGraphicsSimpleTextItem INHERIT QAbstractGraphicsShapeItem
    METHOD paint
    METHOD shape
    METHOD type
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -62,7 +63,6 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QGraphicsSimpleTextItem ( const QString & text, QGraphicsItem * parent = 0 )
 */
@@ -71,7 +71,6 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_NEW2 )
   QGraphicsSimpleTextItem * o = new QGraphicsSimpleTextItem ( PQSTRING(1), OPQGRAPHICSITEM(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QGraphicsSimpleTextItem ( QGraphicsItem * parent = 0 )
 //[2]QGraphicsSimpleTextItem ( const QString & text, QGraphicsItem * parent = 0 )
@@ -95,6 +94,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_NEW )
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_DELETE )
 {
   QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -104,9 +104,9 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QFont font () const
@@ -121,7 +121,6 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_FONT )
   }
 }
 
-
 /*
 void setFont ( const QFont & font )
 */
@@ -134,7 +133,6 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_SETFONT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setText ( const QString & text )
@@ -149,7 +147,6 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_SETTEXT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString text () const
 */
@@ -161,7 +158,6 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_TEXT )
     RQSTRING( obj->text () );
   }
 }
-
 
 /*
 virtual QRectF boundingRect () const
@@ -176,7 +172,6 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_BOUNDINGRECT )
   }
 }
 
-
 /*
 virtual bool contains ( const QPointF & point ) const
 */
@@ -188,7 +183,6 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_CONTAINS )
     RBOOL( obj->contains ( *PQPOINTF(1) ) );
   }
 }
-
 
 /*
 virtual bool isObscuredBy ( const QGraphicsItem * item ) const
@@ -203,7 +197,6 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_ISOBSCUREDBY )
   }
 }
 
-
 /*
 virtual QPainterPath opaqueArea () const
 */
@@ -216,7 +209,6 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_OPAQUEAREA )
     _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
-
 
 /*
 virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget )
@@ -232,7 +224,6 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_PAINT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QPainterPath shape () const
 */
@@ -246,7 +237,6 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_SHAPE )
   }
 }
 
-
 /*
 virtual int type () const
 */
@@ -258,8 +248,5 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_TYPE )
     RINT( obj->type () );
   }
 }
-
-
-
 
 #pragma ENDDUMP

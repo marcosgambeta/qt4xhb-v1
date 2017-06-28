@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -78,11 +78,13 @@ CLASS QTextFormat
    METHOD toTableCellFormat
    METHOD toTableFormat
    METHOD type
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -110,7 +112,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QTextFormat ( int type )
 */
@@ -120,7 +121,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_NEW2 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QTextFormat ( const QTextFormat & other )
 */
@@ -129,7 +129,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_NEW3 )
   QTextFormat * o = new QTextFormat ( *PQTEXTFORMAT(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QTextFormat ()
 //[2]QTextFormat ( int type )
@@ -158,6 +157,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_NEW )
 HB_FUNC_STATIC( QTEXTFORMAT_DELETE )
 {
   QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -167,9 +167,9 @@ HB_FUNC_STATIC( QTEXTFORMAT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QBrush background () const
@@ -184,7 +184,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_BACKGROUND )
   }
 }
 
-
 /*
 bool boolProperty ( int propertyId ) const
 */
@@ -196,7 +195,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_BOOLPROPERTY )
     RBOOL( obj->boolProperty ( PINT(1) ) );
   }
 }
-
 
 /*
 QBrush brushProperty ( int propertyId ) const
@@ -211,7 +209,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_BRUSHPROPERTY )
   }
 }
 
-
 /*
 void clearBackground ()
 */
@@ -224,7 +221,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_CLEARBACKGROUND )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void clearForeground ()
@@ -239,7 +235,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_CLEARFOREGROUND )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void clearProperty ( int propertyId )
 */
@@ -252,7 +247,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_CLEARPROPERTY )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QColor colorProperty ( int propertyId ) const
@@ -267,7 +261,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_COLORPROPERTY )
   }
 }
 
-
 /*
 qreal doubleProperty ( int propertyId ) const
 */
@@ -279,7 +272,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_DOUBLEPROPERTY )
     RQREAL( obj->doubleProperty ( PINT(1) ) );
   }
 }
-
 
 /*
 QBrush foreground () const
@@ -294,7 +286,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_FOREGROUND )
   }
 }
 
-
 /*
 bool hasProperty ( int propertyId ) const
 */
@@ -306,7 +297,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_HASPROPERTY )
     RBOOL( obj->hasProperty ( PINT(1) ) );
   }
 }
-
 
 /*
 int intProperty ( int propertyId ) const
@@ -320,7 +310,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_INTPROPERTY )
   }
 }
 
-
 /*
 bool isBlockFormat () const
 */
@@ -332,7 +321,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_ISBLOCKFORMAT )
     RBOOL( obj->isBlockFormat () );
   }
 }
-
 
 /*
 bool isCharFormat () const
@@ -346,7 +334,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_ISCHARFORMAT )
   }
 }
 
-
 /*
 bool isFrameFormat () const
 */
@@ -358,7 +345,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_ISFRAMEFORMAT )
     RBOOL( obj->isFrameFormat () );
   }
 }
-
 
 /*
 bool isImageFormat () const
@@ -372,7 +358,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_ISIMAGEFORMAT )
   }
 }
 
-
 /*
 bool isListFormat () const
 */
@@ -384,7 +369,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_ISLISTFORMAT )
     RBOOL( obj->isListFormat () );
   }
 }
-
 
 /*
 bool isTableCellFormat () const
@@ -398,7 +382,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_ISTABLECELLFORMAT )
   }
 }
 
-
 /*
 bool isTableFormat () const
 */
@@ -410,7 +393,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_ISTABLEFORMAT )
     RBOOL( obj->isTableFormat () );
   }
 }
-
 
 /*
 bool isValid () const
@@ -424,7 +406,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_ISVALID )
   }
 }
 
-
 /*
 Qt::LayoutDirection layoutDirection () const
 */
@@ -436,7 +417,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_LAYOUTDIRECTION )
     hb_retni( (int) obj->layoutDirection () );
   }
 }
-
 
 /*
 QTextLength lengthProperty ( int propertyId ) const
@@ -450,7 +430,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_LENGTHPROPERTY )
     _qt4xhb_createReturnClass ( ptr, "QTEXTLENGTH" );
   }
 }
-
 
 /*
 QVector<QTextLength> lengthVectorProperty ( int propertyId ) const
@@ -495,7 +474,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_LENGTHVECTORPROPERTY )
   }
 }
 
-
 /*
 void merge ( const QTextFormat & other )
 */
@@ -509,7 +487,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_MERGE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int objectIndex () const
 */
@@ -522,7 +499,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_OBJECTINDEX )
   }
 }
 
-
 /*
 int objectType () const
 */
@@ -534,7 +510,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_OBJECTTYPE )
     RINT( obj->objectType () );
   }
 }
-
 
 /*
 QPen penProperty ( int propertyId ) const
@@ -549,8 +524,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_PENPROPERTY )
   }
 }
 
-
-
 /*
 QVariant property ( int propertyId ) const
 */
@@ -564,7 +537,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_PROPERTY )
   }
 }
 
-
 /*
 int propertyCount () const
 */
@@ -576,7 +548,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_PROPERTYCOUNT )
     RINT( obj->propertyCount () );
   }
 }
-
 
 /*
 void setBackground ( const QBrush & brush )
@@ -591,7 +562,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_SETBACKGROUND )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setForeground ( const QBrush & brush )
 */
@@ -604,7 +574,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_SETFOREGROUND )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setLayoutDirection ( Qt::LayoutDirection direction )
@@ -620,7 +589,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_SETLAYOUTDIRECTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setObjectIndex ( int index )
 */
@@ -633,7 +601,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_SETOBJECTINDEX )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setObjectType ( int type )
@@ -648,7 +615,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_SETOBJECTTYPE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setProperty ( int propertyId, const QVariant & value )
 */
@@ -661,7 +627,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_SETPROPERTY1 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setProperty ( int propertyId, const QVector<QTextLength> & value )
@@ -683,7 +648,6 @@ par2 << *(QTextLength *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setProperty ( int propertyId, const QVariant & value )
 //[2]void setProperty ( int propertyId, const QVector<QTextLength> & value )
@@ -712,7 +676,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_STRINGPROPERTY )
   }
 }
 
-
 /*
 QTextBlockFormat toBlockFormat () const
 */
@@ -725,7 +688,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_TOBLOCKFORMAT )
     _qt4xhb_createReturnClass ( ptr, "QTEXTBLOCKFORMAT" );
   }
 }
-
 
 /*
 QTextCharFormat toCharFormat () const
@@ -740,7 +702,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_TOCHARFORMAT )
   }
 }
 
-
 /*
 QTextFrameFormat toFrameFormat () const
 */
@@ -753,7 +714,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_TOFRAMEFORMAT )
     _qt4xhb_createReturnClass ( ptr, "QTEXTFRAMEFORMAT" );
   }
 }
-
 
 /*
 QTextImageFormat toImageFormat () const
@@ -768,7 +728,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_TOIMAGEFORMAT )
   }
 }
 
-
 /*
 QTextListFormat toListFormat () const
 */
@@ -781,7 +740,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_TOLISTFORMAT )
     _qt4xhb_createReturnClass ( ptr, "QTEXTLISTFORMAT" );
   }
 }
-
 
 /*
 QTextTableCellFormat toTableCellFormat () const
@@ -796,7 +754,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_TOTABLECELLFORMAT )
   }
 }
 
-
 /*
 QTextTableFormat toTableFormat () const
 */
@@ -810,7 +767,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_TOTABLEFORMAT )
   }
 }
 
-
 /*
 int type () const
 */
@@ -822,7 +778,6 @@ HB_FUNC_STATIC( QTEXTFORMAT_TYPE )
     RINT( obj->type () );
   }
 }
-
 
 HB_FUNC_STATIC( QTEXTFORMAT_NEWFROM )
 {
@@ -878,6 +833,5 @@ HB_FUNC_STATIC( QTEXTFORMAT_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -45,11 +45,13 @@ CLASS QFontDatabase
    METHOD supportsThreadedFontRendering
    METHOD writingSystemName
    METHOD writingSystemSample
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -79,8 +81,6 @@ HB_FUNC_STATIC( QFONTDATABASE_NEW )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
-
 /*
 bool bold ( const QString & family, const QString & style ) const
 */
@@ -92,7 +92,6 @@ HB_FUNC_STATIC( QFONTDATABASE_BOLD )
     RBOOL( obj->bold ( PQSTRING(1), PQSTRING(2) ) );
   }
 }
-
 
 /*
 QStringList families ( WritingSystem writingSystem = Any ) const
@@ -106,7 +105,6 @@ HB_FUNC_STATIC( QFONTDATABASE_FAMILIES )
     RQSTRINGLIST( obj->families ( (QFontDatabase::WritingSystem) par1 ) );
   }
 }
-
 
 /*
 QFont font ( const QString & family, const QString & style, int pointSize ) const
@@ -122,7 +120,6 @@ HB_FUNC_STATIC( QFONTDATABASE_FONT )
   }
 }
 
-
 /*
 bool isBitmapScalable ( const QString & family, const QString & style = QString() ) const
 */
@@ -134,7 +131,6 @@ HB_FUNC_STATIC( QFONTDATABASE_ISBITMAPSCALABLE )
     RBOOL( obj->isBitmapScalable ( PQSTRING(1), OPQSTRING(2,QString()) ) );
   }
 }
-
 
 /*
 bool isFixedPitch ( const QString & family, const QString & style = QString() ) const
@@ -148,7 +144,6 @@ HB_FUNC_STATIC( QFONTDATABASE_ISFIXEDPITCH )
   }
 }
 
-
 /*
 bool isScalable ( const QString & family, const QString & style = QString() ) const
 */
@@ -160,7 +155,6 @@ HB_FUNC_STATIC( QFONTDATABASE_ISSCALABLE )
     RBOOL( obj->isScalable ( PQSTRING(1), OPQSTRING(2,QString()) ) );
   }
 }
-
 
 /*
 bool isSmoothlyScalable ( const QString & family, const QString & style = QString() ) const
@@ -174,7 +168,6 @@ HB_FUNC_STATIC( QFONTDATABASE_ISSMOOTHLYSCALABLE )
   }
 }
 
-
 /*
 bool italic ( const QString & family, const QString & style ) const
 */
@@ -186,7 +179,6 @@ HB_FUNC_STATIC( QFONTDATABASE_ITALIC )
     RBOOL( obj->italic ( PQSTRING(1), PQSTRING(2) ) );
   }
 }
-
 
 /*
 QList<int> pointSizes ( const QString & family, const QString & style = QString() )
@@ -210,7 +202,6 @@ HB_FUNC_STATIC( QFONTDATABASE_POINTSIZES )
   }
 }
 
-
 /*
 QList<int> smoothSizes ( const QString & family, const QString & style )
 */
@@ -233,7 +224,6 @@ HB_FUNC_STATIC( QFONTDATABASE_SMOOTHSIZES )
   }
 }
 
-
 /*
 QString styleString ( const QFont & font )
 */
@@ -246,7 +236,6 @@ HB_FUNC_STATIC( QFONTDATABASE_STYLESTRING1 )
   }
 }
 
-
 /*
 QString styleString ( const QFontInfo & fontInfo )
 */
@@ -258,7 +247,6 @@ HB_FUNC_STATIC( QFONTDATABASE_STYLESTRING2 )
     RQSTRING( obj->styleString ( *PQFONTINFO(1) ) );
   }
 }
-
 
 //[1]QString styleString ( const QFont & font )
 //[2]QString styleString ( const QFontInfo & fontInfo )
@@ -287,7 +275,6 @@ HB_FUNC_STATIC( QFONTDATABASE_STYLES )
   }
 }
 
-
 /*
 int weight ( const QString & family, const QString & style ) const
 */
@@ -299,7 +286,6 @@ HB_FUNC_STATIC( QFONTDATABASE_WEIGHT )
     RINT( obj->weight ( PQSTRING(1), PQSTRING(2) ) );
   }
 }
-
 
 /*
 QList<WritingSystem> writingSystems () const
@@ -323,7 +309,6 @@ HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMS1 )
   }
 }
 
-
 /*
 QList<WritingSystem> writingSystems ( const QString & family ) const
 */
@@ -346,7 +331,6 @@ HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMS2 )
   }
 }
 
-
 //[1]QList<WritingSystem> writingSystems () const
 //[2]QList<WritingSystem> writingSystems ( const QString & family ) const
 
@@ -362,7 +346,6 @@ HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMS )
   }
 }
 
-
 /*
 int addApplicationFont ( const QString & fileName )
 */
@@ -370,7 +353,6 @@ HB_FUNC_STATIC( QFONTDATABASE_ADDAPPLICATIONFONT )
 {
   RINT( QFontDatabase::addApplicationFont ( PQSTRING(1) ) );
 }
-
 
 /*
 int addApplicationFontFromData ( const QByteArray & fontData )
@@ -380,7 +362,6 @@ HB_FUNC_STATIC( QFONTDATABASE_ADDAPPLICATIONFONTFROMDATA )
   RINT( QFontDatabase::addApplicationFontFromData ( *PQBYTEARRAY(1) ) );
 }
 
-
 /*
 QStringList applicationFontFamilies ( int id )
 */
@@ -388,7 +369,6 @@ HB_FUNC_STATIC( QFONTDATABASE_APPLICATIONFONTFAMILIES )
 {
   RQSTRINGLIST( QFontDatabase::applicationFontFamilies ( PINT(1) ) );
 }
-
 
 /*
 bool removeAllApplicationFonts ()
@@ -398,7 +378,6 @@ HB_FUNC_STATIC( QFONTDATABASE_REMOVEALLAPPLICATIONFONTS )
   RBOOL( QFontDatabase::removeAllApplicationFonts () );
 }
 
-
 /*
 bool removeApplicationFont ( int id )
 */
@@ -406,7 +385,6 @@ HB_FUNC_STATIC( QFONTDATABASE_REMOVEAPPLICATIONFONT )
 {
   RBOOL( QFontDatabase::removeApplicationFont ( PINT(1) ) );
 }
-
 
 /*
 QList<int> standardSizes ()
@@ -426,7 +404,6 @@ HB_FUNC_STATIC( QFONTDATABASE_STANDARDSIZES )
   hb_itemReturnRelease(pArray);
 }
 
-
 /*
 bool supportsThreadedFontRendering ()
 */
@@ -434,7 +411,6 @@ HB_FUNC_STATIC( QFONTDATABASE_SUPPORTSTHREADEDFONTRENDERING )
 {
   RBOOL( QFontDatabase::supportsThreadedFontRendering () );
 }
-
 
 /*
 QString writingSystemName ( WritingSystem writingSystem )
@@ -444,7 +420,6 @@ HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMNAME )
   RQSTRING( QFontDatabase::writingSystemName ( (QFontDatabase::WritingSystem) hb_parni(1) ) );
 }
 
-
 /*
 QString writingSystemSample ( WritingSystem writingSystem )
 */
@@ -452,7 +427,6 @@ HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMSAMPLE )
 {
   RQSTRING( QFontDatabase::writingSystemSample ( (QFontDatabase::WritingSystem) hb_parni(1) ) );
 }
-
 
 HB_FUNC_STATIC( QFONTDATABASE_NEWFROM )
 {
@@ -508,6 +482,5 @@ HB_FUNC_STATIC( QFONTDATABASE_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

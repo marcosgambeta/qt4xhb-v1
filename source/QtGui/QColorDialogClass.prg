@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -38,8 +38,10 @@ CLASS QColorDialog INHERIT QDialog
    METHOD getColor
    METHOD setCustomColor
    METHOD setStandardColor
+
    METHOD onColorSelected
    METHOD onCurrentColorChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -67,7 +69,6 @@ HB_FUNC_STATIC( QCOLORDIALOG_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QColorDialog ( const QColor & initial, QWidget * parent = 0 )
 */
@@ -77,7 +78,6 @@ HB_FUNC_STATIC( QCOLORDIALOG_NEW2 )
   QColorDialog * o = new QColorDialog ( par1, OPQWIDGET(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QColorDialog ( QWidget * parent = 0 )
 //[2]QColorDialog ( const QColor & initial, QWidget * parent = 0 )
@@ -101,6 +101,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_NEW )
 HB_FUNC_STATIC( QCOLORDIALOG_DELETE )
 {
   QColorDialog * obj = (QColorDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -110,9 +111,9 @@ HB_FUNC_STATIC( QCOLORDIALOG_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QColor currentColor () const
@@ -127,7 +128,6 @@ HB_FUNC_STATIC( QCOLORDIALOG_CURRENTCOLOR )
   }
 }
 
-
 /*
 void open ()
 */
@@ -141,7 +141,6 @@ HB_FUNC_STATIC( QCOLORDIALOG_OPEN1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void open ( QObject * receiver, const char * member )
 */
@@ -154,7 +153,6 @@ HB_FUNC_STATIC( QCOLORDIALOG_OPEN2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void open ()
 //[2]void open ( QObject * receiver, const char * member )
@@ -183,7 +181,6 @@ HB_FUNC_STATIC( QCOLORDIALOG_OPTIONS )
   }
 }
 
-
 /*
 QColor selectedColor () const
 */
@@ -196,7 +193,6 @@ HB_FUNC_STATIC( QCOLORDIALOG_SELECTEDCOLOR )
     _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }
-
 
 /*
 void setCurrentColor ( const QColor & color )
@@ -212,7 +208,6 @@ HB_FUNC_STATIC( QCOLORDIALOG_SETCURRENTCOLOR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setOption ( ColorDialogOption option, bool on = true )
 */
@@ -226,7 +221,6 @@ HB_FUNC_STATIC( QCOLORDIALOG_SETOPTION )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setOptions ( ColorDialogOptions options )
@@ -242,7 +236,6 @@ HB_FUNC_STATIC( QCOLORDIALOG_SETOPTIONS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool testOption ( ColorDialogOption option ) const
 */
@@ -255,7 +248,6 @@ HB_FUNC_STATIC( QCOLORDIALOG_TESTOPTION )
     RBOOL( obj->testOption ( (QColorDialog::ColorDialogOption) par1 ) );
   }
 }
-
 
 /*
 virtual void setVisible ( bool visible )
@@ -270,8 +262,6 @@ HB_FUNC_STATIC( QCOLORDIALOG_SETVISIBLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 QRgb customColor ( int index )
 */
@@ -281,7 +271,6 @@ HB_FUNC_STATIC( QCOLORDIALOG_CUSTOMCOLOR )
   hb_retni( i );
 }
 
-
 /*
 int customCount ()
 */
@@ -289,7 +278,6 @@ HB_FUNC_STATIC( QCOLORDIALOG_CUSTOMCOUNT )
 {
   RINT( QColorDialog::customCount () );
 }
-
 
 /*
 QColor getColor ( const QColor & initial, QWidget * parent, const QString & title, ColorDialogOptions options = 0 )
@@ -302,7 +290,6 @@ HB_FUNC_STATIC( QCOLORDIALOG_GETCOLOR1 )
   _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
 }
 
-
 /*
 QColor getColor ( const QColor & initial = Qt::white, QWidget * parent = 0 )
 */
@@ -312,7 +299,6 @@ HB_FUNC_STATIC( QCOLORDIALOG_GETCOLOR2 )
   QColor * ptr = new QColor( QColorDialog::getColor ( par1, OPQWIDGET(2,0) ) );
   _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
 }
-
 
 //[1]QColor getColor ( const QColor & initial, QWidget * parent, const QString & title, ColorDialogOptions options = 0 )
 //[2]QColor getColor ( const QColor & initial = Qt::white, QWidget * parent = 0 )
@@ -339,7 +325,6 @@ HB_FUNC_STATIC( QCOLORDIALOG_SETCUSTOMCOLOR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setStandardColor ( int index, QRgb color
 */
@@ -349,9 +334,5 @@ HB_FUNC_STATIC( QCOLORDIALOG_SETSTANDARDCOLOR )
   QColorDialog::setStandardColor ( PINT(1), par2 );
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

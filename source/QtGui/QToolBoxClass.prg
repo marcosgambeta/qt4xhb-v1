@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -41,7 +41,9 @@ CLASS QToolBox INHERIT QFrame
    METHOD widget
    METHOD setCurrentIndex
    METHOD setCurrentWidget
+
    METHOD onCurrentChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -70,10 +72,10 @@ HB_FUNC_STATIC( QTOOLBOX_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QTOOLBOX_DELETE )
 {
   QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -83,9 +85,9 @@ HB_FUNC_STATIC( QTOOLBOX_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 int addItem ( QWidget * widget, const QIcon & iconSet, const QString & text )
@@ -100,7 +102,6 @@ HB_FUNC_STATIC( QTOOLBOX_ADDITEM1 )
   }
 }
 
-
 /*
 int addItem ( QWidget * w, const QString & text )
 */
@@ -112,7 +113,6 @@ HB_FUNC_STATIC( QTOOLBOX_ADDITEM2 )
     RINT( obj->addItem ( PQWIDGET(1), PQSTRING(2) ) );
   }
 }
-
 
 //[1]int addItem ( QWidget * widget, const QIcon & iconSet, const QString & text )
 //[2]int addItem ( QWidget * w, const QString & text )
@@ -141,7 +141,6 @@ HB_FUNC_STATIC( QTOOLBOX_COUNT )
   }
 }
 
-
 /*
 int currentIndex () const
 */
@@ -153,7 +152,6 @@ HB_FUNC_STATIC( QTOOLBOX_CURRENTINDEX )
     RINT( obj->currentIndex () );
   }
 }
-
 
 /*
 QWidget * currentWidget () const
@@ -168,7 +166,6 @@ HB_FUNC_STATIC( QTOOLBOX_CURRENTWIDGET )
   }
 }
 
-
 /*
 int indexOf ( QWidget * widget ) const
 */
@@ -180,7 +177,6 @@ HB_FUNC_STATIC( QTOOLBOX_INDEXOF )
     RINT( obj->indexOf ( PQWIDGET(1) ) );
   }
 }
-
 
 /*
 int insertItem ( int index, QWidget * widget, const QIcon & icon, const QString & text )
@@ -195,7 +191,6 @@ HB_FUNC_STATIC( QTOOLBOX_INSERTITEM1 )
   }
 }
 
-
 /*
 int insertItem ( int index, QWidget * widget, const QString & text )
 */
@@ -207,7 +202,6 @@ HB_FUNC_STATIC( QTOOLBOX_INSERTITEM2 )
     RINT( obj->insertItem ( PINT(1), PQWIDGET(2), PQSTRING(3) ) );
   }
 }
-
 
 //[1]int insertItem ( int index, QWidget * widget, const QIcon & icon, const QString & text )
 //[2]int insertItem ( int index, QWidget * widget, const QString & text )
@@ -236,7 +230,6 @@ HB_FUNC_STATIC( QTOOLBOX_ISITEMENABLED )
   }
 }
 
-
 /*
 QIcon itemIcon ( int index ) const
 */
@@ -250,7 +243,6 @@ HB_FUNC_STATIC( QTOOLBOX_ITEMICON )
   }
 }
 
-
 /*
 QString itemText ( int index ) const
 */
@@ -263,7 +255,6 @@ HB_FUNC_STATIC( QTOOLBOX_ITEMTEXT )
   }
 }
 
-
 /*
 QString itemToolTip ( int index ) const
 */
@@ -275,7 +266,6 @@ HB_FUNC_STATIC( QTOOLBOX_ITEMTOOLTIP )
     RQSTRING( obj->itemToolTip ( PINT(1) ) );
   }
 }
-
 
 /*
 void removeItem ( int index )
@@ -290,7 +280,6 @@ HB_FUNC_STATIC( QTOOLBOX_REMOVEITEM )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setItemEnabled ( int index, bool enabled )
 */
@@ -303,7 +292,6 @@ HB_FUNC_STATIC( QTOOLBOX_SETITEMENABLED )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setItemIcon ( int index, const QIcon & icon )
@@ -319,7 +307,6 @@ HB_FUNC_STATIC( QTOOLBOX_SETITEMICON )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setItemText ( int index, const QString & text )
 */
@@ -332,7 +319,6 @@ HB_FUNC_STATIC( QTOOLBOX_SETITEMTEXT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setItemToolTip ( int index, const QString & toolTip )
@@ -347,7 +333,6 @@ HB_FUNC_STATIC( QTOOLBOX_SETITEMTOOLTIP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QWidget * widget ( int index ) const
 */
@@ -360,7 +345,6 @@ HB_FUNC_STATIC( QTOOLBOX_WIDGET )
     _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
-
 
 /*
 void setCurrentIndex ( int index )
@@ -375,7 +359,6 @@ HB_FUNC_STATIC( QTOOLBOX_SETCURRENTINDEX )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setCurrentWidget ( QWidget * widget )
 */
@@ -388,9 +371,5 @@ HB_FUNC_STATIC( QTOOLBOX_SETCURRENTWIDGET )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

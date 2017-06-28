@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -25,6 +25,7 @@ CLASS QDragMoveEvent INHERIT QDropEvent
    METHOD ignore1
    METHOD ignore2
    METHOD ignore
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -57,10 +58,10 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QDRAGMOVEEVENT_DELETE )
 {
   QDragMoveEvent * obj = (QDragMoveEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -70,9 +71,9 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void accept ( const QRect & rectangle )
@@ -87,7 +88,6 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_ACCEPT1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void accept ()
 */
@@ -100,7 +100,6 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_ACCEPT2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void accept ( const QRect & rectangle )
 //[2]void accept ()
@@ -130,7 +129,6 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_ANSWERRECT )
   }
 }
 
-
 /*
 void ignore ( const QRect & rectangle )
 */
@@ -144,7 +142,6 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_IGNORE1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void ignore ()
 */
@@ -157,7 +154,6 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_IGNORE2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void ignore ( const QRect & rectangle )
 //[2]void ignore ()
@@ -173,7 +169,5 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_IGNORE )
     HB_FUNC_EXEC( QDRAGMOVEEVENT_IGNORE2 );
   }
 }
-
-
 
 #pragma ENDDUMP

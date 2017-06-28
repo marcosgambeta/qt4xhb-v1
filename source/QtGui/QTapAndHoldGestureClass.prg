@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -21,6 +21,7 @@ CLASS QTapAndHoldGesture INHERIT QGesture
    METHOD setPosition
    METHOD setTimeout
    METHOD timeout
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -39,10 +40,10 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
 HB_FUNC_STATIC( QTAPANDHOLDGESTURE_DELETE )
 {
   QTapAndHoldGesture * obj = (QTapAndHoldGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -52,9 +53,9 @@ HB_FUNC_STATIC( QTAPANDHOLDGESTURE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QPointF position () const
@@ -69,7 +70,6 @@ HB_FUNC_STATIC( QTAPANDHOLDGESTURE_POSITION )
   }
 }
 
-
 /*
 void setPosition ( const QPointF & pos )
 */
@@ -83,8 +83,6 @@ HB_FUNC_STATIC( QTAPANDHOLDGESTURE_SETPOSITION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 void setTimeout ( int msecs )
 */
@@ -94,7 +92,6 @@ HB_FUNC_STATIC( QTAPANDHOLDGESTURE_SETTIMEOUT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int timeout ()
 */
@@ -102,8 +99,5 @@ HB_FUNC_STATIC( QTAPANDHOLDGESTURE_TIMEOUT )
 {
   RINT( QTapAndHoldGesture::timeout () );
 }
-
-
-
 
 #pragma ENDDUMP

@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -51,11 +51,13 @@ CLASS QRegion
    METHOD united2
    METHOD united
    METHOD xored
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -85,7 +87,6 @@ HB_FUNC_STATIC( QREGION_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QRegion ( int x, int y, int w, int h, RegionType t = Rectangle )
 */
@@ -95,7 +96,6 @@ HB_FUNC_STATIC( QREGION_NEW2 )
   QRegion * o = new QRegion ( PINT(1), PINT(2), PINT(3), PINT(4), (QRegion::RegionType) par5 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QRegion ( const QPolygon & a, Qt::FillRule fillRule = Qt::OddEvenFill )
@@ -107,7 +107,6 @@ HB_FUNC_STATIC( QREGION_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QRegion ( const QRegion & r )
 */
@@ -116,7 +115,6 @@ HB_FUNC_STATIC( QREGION_NEW4 )
   QRegion * o = new QRegion ( *PQREGION(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QRegion ( const QBitmap & bm )
@@ -127,7 +125,6 @@ HB_FUNC_STATIC( QREGION_NEW5 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QRegion ( const QRect & r, RegionType t = Rectangle )
 */
@@ -137,7 +134,6 @@ HB_FUNC_STATIC( QREGION_NEW6 )
   QRegion * o = new QRegion ( *PQRECT(1), (QRegion::RegionType) par2 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QRegion ()
 //[2]QRegion ( int x, int y, int w, int h, RegionType t = Rectangle )
@@ -181,6 +177,7 @@ HB_FUNC_STATIC( QREGION_NEW )
 HB_FUNC_STATIC( QREGION_DELETE )
 {
   QRegion * obj = (QRegion *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -190,9 +187,9 @@ HB_FUNC_STATIC( QREGION_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QRect boundingRect () const
@@ -207,7 +204,6 @@ HB_FUNC_STATIC( QREGION_BOUNDINGRECT )
   }
 }
 
-
 /*
 bool contains ( const QPoint & p ) const
 */
@@ -220,7 +216,6 @@ HB_FUNC_STATIC( QREGION_CONTAINS1 )
   }
 }
 
-
 /*
 bool contains ( const QRect & r ) const
 */
@@ -232,7 +227,6 @@ HB_FUNC_STATIC( QREGION_CONTAINS2 )
     RBOOL( obj->contains ( *PQRECT(1) ) );
   }
 }
-
 
 //[1]bool contains ( const QPoint & p ) const
 //[2]bool contains ( const QRect & r ) const
@@ -249,7 +243,6 @@ HB_FUNC_STATIC( QREGION_CONTAINS )
   }
 }
 
-
 /*
 QRegion intersected ( const QRegion & r ) const
 */
@@ -263,7 +256,6 @@ HB_FUNC_STATIC( QREGION_INTERSECTED1 )
   }
 }
 
-
 /*
 QRegion intersected ( const QRect & rect ) const
 */
@@ -276,7 +268,6 @@ HB_FUNC_STATIC( QREGION_INTERSECTED2 )
     _qt4xhb_createReturnClass ( ptr, "QREGION", true );
   }
 }
-
 
 //[1]QRegion intersected ( const QRegion & r ) const
 //[2]QRegion intersected ( const QRect & rect ) const
@@ -305,7 +296,6 @@ HB_FUNC_STATIC( QREGION_INTERSECTS1 )
   }
 }
 
-
 /*
 bool intersects ( const QRect & rect ) const
 */
@@ -317,7 +307,6 @@ HB_FUNC_STATIC( QREGION_INTERSECTS2 )
     RBOOL( obj->intersects ( *PQRECT(1) ) );
   }
 }
-
 
 //[1]bool intersects ( const QRegion & region ) const
 //[2]bool intersects ( const QRect & rect ) const
@@ -346,7 +335,6 @@ HB_FUNC_STATIC( QREGION_ISEMPTY )
   }
 }
 
-
 /*
 int rectCount () const
 */
@@ -358,7 +346,6 @@ HB_FUNC_STATIC( QREGION_RECTCOUNT )
     RINT( obj->rectCount () );
   }
 }
-
 
 /*
 QVector<QRect> rects () const
@@ -403,8 +390,6 @@ HB_FUNC_STATIC( QREGION_RECTS )
   }
 }
 
-
-
 /*
 QRegion subtracted ( const QRegion & r ) const
 */
@@ -417,7 +402,6 @@ HB_FUNC_STATIC( QREGION_SUBTRACTED )
     _qt4xhb_createReturnClass ( ptr, "QREGION", true );
   }
 }
-
 
 /*
 void swap ( QRegion & other )
@@ -433,7 +417,6 @@ HB_FUNC_STATIC( QREGION_SWAP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void translate ( int dx, int dy )
 */
@@ -447,7 +430,6 @@ HB_FUNC_STATIC( QREGION_TRANSLATE1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void translate ( const QPoint & point )
 */
@@ -460,7 +442,6 @@ HB_FUNC_STATIC( QREGION_TRANSLATE2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void translate ( int dx, int dy )
 //[2]void translate ( const QPoint & point )
@@ -490,7 +471,6 @@ HB_FUNC_STATIC( QREGION_TRANSLATED1 )
   }
 }
 
-
 /*
 QRegion translated ( const QPoint & p ) const
 */
@@ -503,7 +483,6 @@ HB_FUNC_STATIC( QREGION_TRANSLATED2 )
     _qt4xhb_createReturnClass ( ptr, "QREGION", true );
   }
 }
-
 
 //[1]QRegion translated ( int dx, int dy ) const
 //[2]QRegion translated ( const QPoint & p ) const
@@ -533,7 +512,6 @@ HB_FUNC_STATIC( QREGION_UNITED1 )
   }
 }
 
-
 /*
 QRegion united ( const QRect & rect ) const
 */
@@ -546,7 +524,6 @@ HB_FUNC_STATIC( QREGION_UNITED2 )
     _qt4xhb_createReturnClass ( ptr, "QREGION", true );
   }
 }
-
 
 //[1]QRegion united ( const QRegion & r ) const
 //[2]QRegion united ( const QRect & rect ) const
@@ -575,7 +552,6 @@ HB_FUNC_STATIC( QREGION_XORED )
     _qt4xhb_createReturnClass ( ptr, "QREGION", true );
   }
 }
-
 
 HB_FUNC_STATIC( QREGION_NEWFROM )
 {
@@ -631,6 +607,5 @@ HB_FUNC_STATIC( QREGION_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

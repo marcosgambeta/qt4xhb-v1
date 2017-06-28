@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QTimeEdit INHERIT QDateTimeEdit
 
@@ -16,6 +15,7 @@ CLASS QTimeEdit INHERIT QDateTimeEdit
    METHOD new1
    METHOD new2
    METHOD new
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -43,7 +43,6 @@ HB_FUNC_STATIC( QTIMEEDIT_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QTimeEdit ( const QTime & time, QWidget * parent = 0 )
 */
@@ -52,7 +51,6 @@ HB_FUNC_STATIC( QTIMEEDIT_NEW2 )
   QTimeEdit * o = new QTimeEdit ( *PQTIME(1), OPQWIDGET(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QTimeEdit ( QWidget * parent = 0 )
 //[2]QTimeEdit ( const QTime & time, QWidget * parent = 0 )
@@ -72,8 +70,5 @@ HB_FUNC_STATIC( QTIMEEDIT_NEW )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
-
-
-
 
 #pragma ENDDUMP

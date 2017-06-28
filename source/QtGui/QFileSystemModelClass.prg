@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -71,9 +71,11 @@ CLASS QFileSystemModel INHERIT QAbstractItemModel
    METHOD setData
    METHOD sort
    METHOD supportedDropActions
+
    METHOD onDirectoryLoaded
    METHOD onFileRenamed
    METHOD onRootPathChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -103,10 +105,10 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QFILESYSTEMMODEL_DELETE )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -116,9 +118,9 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QIcon fileIcon ( const QModelIndex & index ) const
@@ -133,7 +135,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEICON )
   }
 }
 
-
 /*
 QFileInfo fileInfo ( const QModelIndex & index ) const
 */
@@ -147,7 +148,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEINFO )
   }
 }
 
-
 /*
 QString fileName ( const QModelIndex & index ) const
 */
@@ -159,7 +159,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FILENAME )
     RQSTRING( obj->fileName ( *PQMODELINDEX(1) ) );
   }
 }
-
 
 /*
 QString filePath ( const QModelIndex & index ) const
@@ -173,7 +172,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEPATH )
   }
 }
 
-
 /*
 QDir::Filters filter () const
 */
@@ -185,7 +183,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FILTER )
     hb_retni( (int) obj->filter () );
   }
 }
-
 
 /*
 QFileIconProvider * iconProvider () const
@@ -200,7 +197,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ICONPROVIDER )
   }
 }
 
-
 /*
 QModelIndex index ( const QString & path, int column = 0 ) const
 */
@@ -214,7 +210,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_INDEX1 )
   }
 }
 
-
 /*
 bool isDir ( const QModelIndex & index ) const
 */
@@ -227,7 +222,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ISDIR )
   }
 }
 
-
 /*
 bool isReadOnly () const
 */
@@ -239,7 +233,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ISREADONLY )
     RBOOL( obj->isReadOnly () );
   }
 }
-
 
 /*
 QDateTime lastModified ( const QModelIndex & index ) const
@@ -254,7 +247,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_LASTMODIFIED )
   }
 }
 
-
 /*
 QModelIndex mkdir ( const QModelIndex & parent, const QString & name )
 */
@@ -267,7 +259,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_MKDIR )
     _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
-
 
 /*
 QVariant myComputer ( int role = Qt::DisplayRole ) const
@@ -282,7 +273,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_MYCOMPUTER )
   }
 }
 
-
 /*
 bool nameFilterDisables () const
 */
@@ -294,7 +284,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_NAMEFILTERDISABLES )
     RBOOL( obj->nameFilterDisables () );
   }
 }
-
 
 /*
 QStringList nameFilters () const
@@ -308,7 +297,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_NAMEFILTERS )
   }
 }
 
-
 /*
 QFile::Permissions permissions ( const QModelIndex & index ) const
 */
@@ -320,7 +308,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_PERMISSIONS )
     hb_retni( (int) obj->permissions ( *PQMODELINDEX(1) ) );
   }
 }
-
 
 /*
 bool remove ( const QModelIndex & index ) const
@@ -334,7 +321,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_REMOVE )
   }
 }
 
-
 /*
 bool resolveSymlinks () const
 */
@@ -347,7 +333,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_RESOLVESYMLINKS )
   }
 }
 
-
 /*
 bool rmdir ( const QModelIndex & index ) const
 */
@@ -359,7 +344,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_RMDIR )
     RBOOL( obj->rmdir ( *PQMODELINDEX(1) ) );
   }
 }
-
 
 /*
 QDir rootDirectory () const
@@ -374,7 +358,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ROOTDIRECTORY )
   }
 }
 
-
 /*
 QString rootPath () const
 */
@@ -386,7 +369,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ROOTPATH )
     RQSTRING( obj->rootPath () );
   }
 }
-
 
 /*
 void setFilter ( QDir::Filters filters )
@@ -402,7 +384,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETFILTER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setIconProvider ( QFileIconProvider * provider )
 */
@@ -417,7 +398,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETICONPROVIDER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setNameFilterDisables ( bool enable )
 */
@@ -430,7 +410,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETNAMEFILTERDISABLES )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setNameFilters ( const QStringList & filters )
@@ -445,7 +424,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETNAMEFILTERS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setReadOnly ( bool enable )
 */
@@ -458,7 +436,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETREADONLY )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setResolveSymlinks ( bool enable )
@@ -473,7 +450,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETRESOLVESYMLINKS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QModelIndex setRootPath ( const QString & newPath )
 */
@@ -487,7 +463,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETROOTPATH )
   }
 }
 
-
 /*
 qint64 size ( const QModelIndex & index ) const
 */
@@ -499,7 +474,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SIZE )
     RQINT64( obj->size ( *PQMODELINDEX(1) ) );
   }
 }
-
 
 /*
 QString type ( const QModelIndex & index ) const
@@ -513,7 +487,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_TYPE )
   }
 }
 
-
 /*
 virtual bool canFetchMore ( const QModelIndex & parent ) const
 */
@@ -525,7 +498,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_CANFETCHMORE )
     RBOOL( obj->canFetchMore ( *PQMODELINDEX(1) ) );
   }
 }
-
 
 /*
 virtual int columnCount ( const QModelIndex & parent = QModelIndex() ) const
@@ -540,7 +512,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_COLUMNCOUNT )
   }
 }
 
-
 /*
 virtual QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const
 */
@@ -553,7 +524,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_DATA )
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
-
 
 /*
 virtual bool dropMimeData ( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
@@ -568,7 +538,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_DROPMIMEDATA )
   }
 }
 
-
 /*
 virtual void fetchMore ( const QModelIndex & parent )
 */
@@ -582,7 +551,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FETCHMORE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual Qt::ItemFlags flags ( const QModelIndex & index ) const
 */
@@ -594,7 +562,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FLAGS )
     hb_retni( (int) obj->flags ( *PQMODELINDEX(1) ) );
   }
 }
-
 
 /*
 virtual bool hasChildren ( const QModelIndex & parent = QModelIndex() ) const
@@ -609,7 +576,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_HASCHILDREN )
   }
 }
 
-
 /*
 virtual QVariant headerData ( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
 */
@@ -622,7 +588,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_HEADERDATA )
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
-
 
 /*
 virtual QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
@@ -637,7 +602,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_INDEX2 )
     _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
-
 
 //[1]QModelIndex index ( const QString & path, int column = 0 ) const
 //[2]virtual QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
@@ -668,7 +632,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_MIMEDATA )
   }
 }
 
-
 /*
 virtual QStringList mimeTypes () const
 */
@@ -680,7 +643,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_MIMETYPES )
     RQSTRINGLIST( obj->mimeTypes () );
   }
 }
-
 
 /*
 virtual QModelIndex parent ( const QModelIndex & index ) const
@@ -695,7 +657,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_PARENT )
   }
 }
 
-
 /*
 virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const
 */
@@ -709,7 +670,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ROWCOUNT )
   }
 }
 
-
 /*
 virtual bool setData ( const QModelIndex & idx, const QVariant & value, int role = Qt::EditRole )
 */
@@ -721,7 +681,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETDATA )
     RBOOL( obj->setData ( *PQMODELINDEX(1), *PQVARIANT(2), OPINT(3,Qt::EditRole) ) );
   }
 }
-
 
 /*
 virtual void sort ( int column, Qt::SortOrder order = Qt::AscendingOrder )
@@ -737,7 +696,6 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SORT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual Qt::DropActions supportedDropActions () const
 */
@@ -749,10 +707,5 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SUPPORTEDDROPACTIONS )
     hb_retni( (int) obj->supportedDropActions () );
   }
 }
-
-
-
-
-
 
 #pragma ENDDUMP

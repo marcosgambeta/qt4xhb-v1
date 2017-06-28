@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -29,6 +29,7 @@ CLASS QLinearGradient INHERIT QGradient
    METHOD setStart2
    METHOD setStart
    METHOD start
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -56,7 +57,6 @@ HB_FUNC_STATIC( QLINEARGRADIENT_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QLinearGradient(const QPointF &start, const QPointF &finalStop)
 */
@@ -66,7 +66,6 @@ HB_FUNC_STATIC( QLINEARGRADIENT_NEW2 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QLinearGradient(qreal xStart, qreal yStart, qreal xFinalStop, qreal yFinalStop)
 */
@@ -75,7 +74,6 @@ HB_FUNC_STATIC( QLINEARGRADIENT_NEW3 )
   QLinearGradient * o = new QLinearGradient ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QLinearGradient()
 //[2]QLinearGradient(const QPointF &start, const QPointF &finalStop)
@@ -104,6 +102,7 @@ HB_FUNC_STATIC( QLINEARGRADIENT_NEW )
 HB_FUNC_STATIC( QLINEARGRADIENT_DELETE )
 {
   QLinearGradient * obj = (QLinearGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -113,9 +112,9 @@ HB_FUNC_STATIC( QLINEARGRADIENT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QPointF finalStop () const
@@ -130,7 +129,6 @@ HB_FUNC_STATIC( QLINEARGRADIENT_FINALSTOP )
   }
 }
 
-
 /*
 void setFinalStop ( const QPointF & stop )
 */
@@ -144,7 +142,6 @@ HB_FUNC_STATIC( QLINEARGRADIENT_SETFINALSTOP1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setFinalStop ( qreal x, qreal y )
 */
@@ -157,7 +154,6 @@ HB_FUNC_STATIC( QLINEARGRADIENT_SETFINALSTOP2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setFinalStop ( const QPointF & stop )
 //[2]void setFinalStop ( qreal x, qreal y )
@@ -187,7 +183,6 @@ HB_FUNC_STATIC( QLINEARGRADIENT_SETSTART1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setStart ( qreal x, qreal y )
 */
@@ -200,7 +195,6 @@ HB_FUNC_STATIC( QLINEARGRADIENT_SETSTART2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setStart ( const QPointF & start )
 //[2]void setStart ( qreal x, qreal y )
@@ -229,9 +223,5 @@ HB_FUNC_STATIC( QLINEARGRADIENT_START )
     _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
-
-
-
-
 
 #pragma ENDDUMP

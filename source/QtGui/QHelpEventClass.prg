@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -24,6 +24,7 @@ CLASS QHelpEvent INHERIT QEvent
    METHOD pos
    METHOD x
    METHOD y
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -51,10 +52,10 @@ HB_FUNC_STATIC( QHELPEVENT_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QHELPEVENT_DELETE )
 {
   QHelpEvent * obj = (QHelpEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -64,9 +65,9 @@ HB_FUNC_STATIC( QHELPEVENT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 const QPoint & globalPos () const
@@ -81,7 +82,6 @@ HB_FUNC_STATIC( QHELPEVENT_GLOBALPOS )
   }
 }
 
-
 /*
 int globalX () const
 */
@@ -94,7 +94,6 @@ HB_FUNC_STATIC( QHELPEVENT_GLOBALX )
   }
 }
 
-
 /*
 int globalY () const
 */
@@ -106,7 +105,6 @@ HB_FUNC_STATIC( QHELPEVENT_GLOBALY )
     RINT( obj->globalY () );
   }
 }
-
 
 /*
 const QPoint & pos () const
@@ -121,7 +119,6 @@ HB_FUNC_STATIC( QHELPEVENT_POS )
   }
 }
 
-
 /*
 int x () const
 */
@@ -134,7 +131,6 @@ HB_FUNC_STATIC( QHELPEVENT_X )
   }
 }
 
-
 /*
 int y () const
 */
@@ -146,8 +142,5 @@ HB_FUNC_STATIC( QHELPEVENT_Y )
     RINT( obj->y () );
   }
 }
-
-
-
 
 #pragma ENDDUMP

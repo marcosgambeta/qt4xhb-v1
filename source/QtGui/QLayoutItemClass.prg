@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -39,11 +39,13 @@ CLASS QLayoutItem
    METHOD sizeHint
    METHOD spacerItem
    METHOD widget
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -62,10 +64,10 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
 HB_FUNC_STATIC( QLAYOUTITEM_DELETE )
 {
   QLayoutItem * obj = (QLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -75,9 +77,9 @@ HB_FUNC_STATIC( QLAYOUTITEM_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 Qt::Alignment alignment () const
@@ -91,7 +93,6 @@ HB_FUNC_STATIC( QLAYOUTITEM_ALIGNMENT )
   }
 }
 
-
 /*
 QSizePolicy::ControlTypes controlTypes () const
 */
@@ -104,7 +105,6 @@ HB_FUNC_STATIC( QLAYOUTITEM_CONTROLTYPES )
   }
 }
 
-
 /*
 virtual Qt::Orientations expandingDirections () const = 0
 */
@@ -116,7 +116,6 @@ HB_FUNC_STATIC( QLAYOUTITEM_EXPANDINGDIRECTIONS )
     hb_retni( (int) obj->expandingDirections () );
   }
 }
-
 
 /*
 virtual QRect geometry () const = 0
@@ -131,7 +130,6 @@ HB_FUNC_STATIC( QLAYOUTITEM_GEOMETRY )
   }
 }
 
-
 /*
 virtual bool hasHeightForWidth () const
 */
@@ -144,7 +142,6 @@ HB_FUNC_STATIC( QLAYOUTITEM_HASHEIGHTFORWIDTH )
   }
 }
 
-
 /*
 virtual int heightForWidth ( int w ) const
 */
@@ -156,7 +153,6 @@ HB_FUNC_STATIC( QLAYOUTITEM_HEIGHTFORWIDTH )
     RINT( obj->heightForWidth ( PINT(1) ) );
   }
 }
-
 
 /*
 virtual void invalidate ()
@@ -171,7 +167,6 @@ HB_FUNC_STATIC( QLAYOUTITEM_INVALIDATE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual bool isEmpty () const = 0
 */
@@ -183,7 +178,6 @@ HB_FUNC_STATIC( QLAYOUTITEM_ISEMPTY )
     RBOOL( obj->isEmpty () );
   }
 }
-
 
 /*
 virtual QLayout * layout ()
@@ -198,7 +192,6 @@ HB_FUNC_STATIC( QLAYOUTITEM_LAYOUT )
   }
 }
 
-
 /*
 virtual QSize maximumSize () const = 0
 */
@@ -212,7 +205,6 @@ HB_FUNC_STATIC( QLAYOUTITEM_MAXIMUMSIZE )
   }
 }
 
-
 /*
 virtual int minimumHeightForWidth ( int w ) const
 */
@@ -224,7 +216,6 @@ HB_FUNC_STATIC( QLAYOUTITEM_MINIMUMHEIGHTFORWIDTH )
     RINT( obj->minimumHeightForWidth ( PINT(1) ) );
   }
 }
-
 
 /*
 virtual QSize minimumSize () const = 0
@@ -238,7 +229,6 @@ HB_FUNC_STATIC( QLAYOUTITEM_MINIMUMSIZE )
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
-
 
 /*
 void setAlignment ( Qt::Alignment alignment )
@@ -254,7 +244,6 @@ HB_FUNC_STATIC( QLAYOUTITEM_SETALIGNMENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void setGeometry ( const QRect & r ) = 0
 */
@@ -267,7 +256,6 @@ HB_FUNC_STATIC( QLAYOUTITEM_SETGEOMETRY )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual QSize sizeHint () const = 0
@@ -282,7 +270,6 @@ HB_FUNC_STATIC( QLAYOUTITEM_SIZEHINT )
   }
 }
 
-
 /*
 virtual QSpacerItem * spacerItem ()
 */
@@ -296,7 +283,6 @@ HB_FUNC_STATIC( QLAYOUTITEM_SPACERITEM )
   }
 }
 
-
 /*
 virtual QWidget * widget ()
 */
@@ -309,7 +295,6 @@ HB_FUNC_STATIC( QLAYOUTITEM_WIDGET )
     _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
-
 
 HB_FUNC_STATIC( QLAYOUTITEM_NEWFROM )
 {
@@ -365,8 +350,5 @@ HB_FUNC_STATIC( QLAYOUTITEM_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
-
 
 #pragma ENDDUMP

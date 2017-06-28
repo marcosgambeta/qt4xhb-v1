@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -27,6 +27,7 @@ CLASS QDial INHERIT QAbstractSlider
    METHOD sizeHint
    METHOD setNotchesVisible
    METHOD setWrapping
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -54,10 +55,10 @@ HB_FUNC_STATIC( QDIAL_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QDIAL_DELETE )
 {
   QDial * obj = (QDial *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -67,9 +68,9 @@ HB_FUNC_STATIC( QDIAL_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 int notchSize () const
@@ -83,7 +84,6 @@ HB_FUNC_STATIC( QDIAL_NOTCHSIZE )
   }
 }
 
-
 /*
 qreal notchTarget () const
 */
@@ -96,7 +96,6 @@ HB_FUNC_STATIC( QDIAL_NOTCHTARGET )
   }
 }
 
-
 /*
 bool notchesVisible () const
 */
@@ -108,7 +107,6 @@ HB_FUNC_STATIC( QDIAL_NOTCHESVISIBLE )
     RBOOL( obj->notchesVisible () );
   }
 }
-
 
 /*
 void setNotchTarget ( double target )
@@ -123,7 +121,6 @@ HB_FUNC_STATIC( QDIAL_SETNOTCHTARGET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool wrapping () const
 */
@@ -135,7 +132,6 @@ HB_FUNC_STATIC( QDIAL_WRAPPING )
     RBOOL( obj->wrapping () );
   }
 }
-
 
 /*
 virtual QSize minimumSizeHint () const
@@ -150,7 +146,6 @@ HB_FUNC_STATIC( QDIAL_MINIMUMSIZEHINT )
   }
 }
 
-
 /*
 virtual QSize sizeHint () const
 */
@@ -163,7 +158,6 @@ HB_FUNC_STATIC( QDIAL_SIZEHINT )
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
-
 
 /*
 void setNotchesVisible ( bool visible )
@@ -178,7 +172,6 @@ HB_FUNC_STATIC( QDIAL_SETNOTCHESVISIBLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setWrapping ( bool on )
 */
@@ -191,8 +184,5 @@ HB_FUNC_STATIC( QDIAL_SETWRAPPING )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
 
 #pragma ENDDUMP

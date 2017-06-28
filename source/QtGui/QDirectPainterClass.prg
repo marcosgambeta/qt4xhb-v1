@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -40,6 +40,7 @@ CLASS QDirectPainter INHERIT QObject
    METHOD screenHeight
    METHOD screenWidth
    METHOD unlock
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -68,10 +69,10 @@ HB_FUNC_STATIC( QDIRECTPAINTER_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QDIRECTPAINTER_DELETE )
 {
   QDirectPainter * obj = (QDirectPainter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -81,9 +82,9 @@ HB_FUNC_STATIC( QDIRECTPAINTER_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QRegion allocatedRegion () const
@@ -98,7 +99,6 @@ HB_FUNC_STATIC( QDIRECTPAINTER_ALLOCATEDREGION )
   }
 }
 
-
 /*
 void endPainting ()
 */
@@ -112,7 +112,6 @@ HB_FUNC_STATIC( QDIRECTPAINTER_ENDPAINTING1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void endPainting ( const QRegion & region )
 */
@@ -125,7 +124,6 @@ HB_FUNC_STATIC( QDIRECTPAINTER_ENDPAINTING2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void endPainting ()
 //[2]void endPainting ( const QRegion & region )
@@ -155,7 +153,6 @@ HB_FUNC_STATIC( QDIRECTPAINTER_FLUSH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QRect geometry () const
 */
@@ -168,7 +165,6 @@ HB_FUNC_STATIC( QDIRECTPAINTER_GEOMETRY )
     _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
-
 
 /*
 void lower ()
@@ -183,7 +179,6 @@ HB_FUNC_STATIC( QDIRECTPAINTER_LOWER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void raise ()
 */
@@ -196,7 +191,6 @@ HB_FUNC_STATIC( QDIRECTPAINTER_RAISE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void regionChanged ( const QRegion & newRegion )
@@ -211,7 +205,6 @@ HB_FUNC_STATIC( QDIRECTPAINTER_REGIONCHANGED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QRegion requestedRegion () const
 */
@@ -224,7 +217,6 @@ HB_FUNC_STATIC( QDIRECTPAINTER_REQUESTEDREGION )
     _qt4xhb_createReturnClass ( ptr, "QREGION", true );
   }
 }
-
 
 /*
 void setGeometry ( const QRect & rectangle )
@@ -239,7 +231,6 @@ HB_FUNC_STATIC( QDIRECTPAINTER_SETGEOMETRY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setRegion ( const QRegion & region )
 */
@@ -252,7 +243,6 @@ HB_FUNC_STATIC( QDIRECTPAINTER_SETREGION )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void startPainting ( bool lockDisplay = true )
@@ -267,9 +257,6 @@ HB_FUNC_STATIC( QDIRECTPAINTER_STARTPAINTING )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
-
 /*
 uchar * frameBuffer ()
 */
@@ -279,7 +266,6 @@ HB_FUNC_STATIC( QDIRECTPAINTER_FRAMEBUFFER )
   _qt4xhb_createReturnClass ( ptr, "UCHAR" );
 }
 
-
 /*
 int linestep ()
 */
@@ -287,7 +273,6 @@ HB_FUNC_STATIC( QDIRECTPAINTER_LINESTEP )
 {
   RINT( QDirectPainter::linestep () );
 }
-
 
 /*
 void lock ()
@@ -298,7 +283,6 @@ HB_FUNC_STATIC( QDIRECTPAINTER_LOCK )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int screenDepth ()
 */
@@ -306,7 +290,6 @@ HB_FUNC_STATIC( QDIRECTPAINTER_SCREENDEPTH )
 {
   RINT( QDirectPainter::screenDepth () );
 }
-
 
 /*
 int screenHeight ()
@@ -316,7 +299,6 @@ HB_FUNC_STATIC( QDIRECTPAINTER_SCREENHEIGHT )
   RINT( QDirectPainter::screenHeight () );
 }
 
-
 /*
 int screenWidth ()
 */
@@ -324,7 +306,6 @@ HB_FUNC_STATIC( QDIRECTPAINTER_SCREENWIDTH )
 {
   RINT( QDirectPainter::screenWidth () );
 }
-
 
 /*
 void unlock ()
@@ -334,8 +315,5 @@ HB_FUNC_STATIC( QDIRECTPAINTER_UNLOCK )
   QDirectPainter::unlock ();
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
 
 #pragma ENDDUMP

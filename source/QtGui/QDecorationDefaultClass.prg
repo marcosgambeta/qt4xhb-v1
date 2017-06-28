@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -20,6 +20,7 @@ CLASS QDecorationDefault INHERIT QDecoration
    METHOD delete
    METHOD paint
    METHOD region
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -47,10 +48,10 @@ HB_FUNC_STATIC( QDECORATIONDEFAULT_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QDECORATIONDEFAULT_DELETE )
 {
   QDecorationDefault * obj = (QDecorationDefault *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -60,9 +61,9 @@ HB_FUNC_STATIC( QDECORATIONDEFAULT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual bool paint ( QPainter * painter, const QWidget * widget, int decorationRegion = All, DecorationState state = Normal )
@@ -78,7 +79,6 @@ HB_FUNC_STATIC( QDECORATIONDEFAULT_PAINT )
   }
 }
 
-
 /*
 virtual QRegion region ( const QWidget * widget, const QRect & rect, int decorationRegion = All )
 */
@@ -92,8 +92,5 @@ HB_FUNC_STATIC( QDECORATIONDEFAULT_REGION )
     _qt4xhb_createReturnClass ( ptr, "QREGION", true );
   }
 }
-
-
-
 
 #pragma ENDDUMP

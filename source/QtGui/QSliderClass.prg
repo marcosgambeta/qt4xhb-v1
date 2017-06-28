@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -27,6 +27,7 @@ CLASS QSlider INHERIT QAbstractSlider
    METHOD event
    METHOD minimumSizeHint
    METHOD sizeHint
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -54,7 +55,6 @@ HB_FUNC_STATIC( QSLIDER_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QSlider ( Qt::Orientation orientation, QWidget * parent = 0 )
 */
@@ -63,7 +63,6 @@ HB_FUNC_STATIC( QSLIDER_NEW2 )
   QSlider * o = new QSlider ( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QSlider ( QWidget * parent = 0 )
 //[2]QSlider ( Qt::Orientation orientation, QWidget * parent = 0 )
@@ -87,6 +86,7 @@ HB_FUNC_STATIC( QSLIDER_NEW )
 HB_FUNC_STATIC( QSLIDER_DELETE )
 {
   QSlider * obj = (QSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -96,9 +96,9 @@ HB_FUNC_STATIC( QSLIDER_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setTickInterval ( int ti )
@@ -112,7 +112,6 @@ HB_FUNC_STATIC( QSLIDER_SETTICKINTERVAL )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setTickPosition ( TickPosition position )
@@ -128,7 +127,6 @@ HB_FUNC_STATIC( QSLIDER_SETTICKPOSITION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int tickInterval () const
 */
@@ -140,7 +138,6 @@ HB_FUNC_STATIC( QSLIDER_TICKINTERVAL )
     RINT( obj->tickInterval () );
   }
 }
-
 
 /*
 TickPosition tickPosition () const
@@ -154,7 +151,6 @@ HB_FUNC_STATIC( QSLIDER_TICKPOSITION )
   }
 }
 
-
 /*
 virtual bool event ( QEvent * event )
 */
@@ -166,7 +162,6 @@ HB_FUNC_STATIC( QSLIDER_EVENT )
     RBOOL( obj->event ( PQEVENT(1) ) );
   }
 }
-
 
 /*
 virtual QSize minimumSizeHint () const
@@ -181,7 +176,6 @@ HB_FUNC_STATIC( QSLIDER_MINIMUMSIZEHINT )
   }
 }
 
-
 /*
 virtual QSize sizeHint () const
 */
@@ -194,9 +188,5 @@ HB_FUNC_STATIC( QSLIDER_SIZEHINT )
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
-
-
-
-
 
 #pragma ENDDUMP

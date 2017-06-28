@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -58,6 +58,7 @@ CLASS QListWidget INHERIT QListView
    METHOD dropEvent
    METHOD clear
    METHOD scrollToItem
+
    METHOD onCurrentItemChanged
    METHOD onCurrentRowChanged
    METHOD onCurrentTextChanged
@@ -68,6 +69,7 @@ CLASS QListWidget INHERIT QListView
    METHOD onItemEntered
    METHOD onItemPressed
    METHOD onItemSelectionChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -95,10 +97,10 @@ HB_FUNC_STATIC( QLISTWIDGET_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QLISTWIDGET_DELETE )
 {
   QListWidget * obj = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -108,9 +110,9 @@ HB_FUNC_STATIC( QLISTWIDGET_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void addItem ( const QString & label )
@@ -125,7 +127,6 @@ HB_FUNC_STATIC( QLISTWIDGET_ADDITEM1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void addItem ( QListWidgetItem * item )
 */
@@ -139,7 +140,6 @@ HB_FUNC_STATIC( QLISTWIDGET_ADDITEM2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void addItem ( const QString & label )
 //[2]void addItem ( QListWidgetItem * item )
@@ -169,7 +169,6 @@ HB_FUNC_STATIC( QLISTWIDGET_ADDITEMS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void closePersistentEditor ( QListWidgetItem * item )
 */
@@ -184,7 +183,6 @@ HB_FUNC_STATIC( QLISTWIDGET_CLOSEPERSISTENTEDITOR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int count () const
 */
@@ -196,7 +194,6 @@ HB_FUNC_STATIC( QLISTWIDGET_COUNT )
     RINT( obj->count () );
   }
 }
-
 
 /*
 QListWidgetItem * currentItem () const
@@ -211,7 +208,6 @@ HB_FUNC_STATIC( QLISTWIDGET_CURRENTITEM )
   }
 }
 
-
 /*
 int currentRow () const
 */
@@ -223,7 +219,6 @@ HB_FUNC_STATIC( QLISTWIDGET_CURRENTROW )
     RINT( obj->currentRow () );
   }
 }
-
 
 /*
 void editItem ( QListWidgetItem * item )
@@ -238,7 +233,6 @@ HB_FUNC_STATIC( QLISTWIDGET_EDITITEM )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QList<QListWidgetItem *> findItems ( const QString & text, Qt::MatchFlags flags ) const
@@ -284,7 +278,6 @@ HB_FUNC_STATIC( QLISTWIDGET_FINDITEMS )
   }
 }
 
-
 /*
 void insertItem ( int row, QListWidgetItem * item )
 */
@@ -299,7 +292,6 @@ HB_FUNC_STATIC( QLISTWIDGET_INSERTITEM1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void insertItem ( int row, const QString & label )
 */
@@ -312,7 +304,6 @@ HB_FUNC_STATIC( QLISTWIDGET_INSERTITEM2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void insertItem ( int row, QListWidgetItem * item )
 //[2]void insertItem ( int row, const QString & label )
@@ -342,7 +333,6 @@ HB_FUNC_STATIC( QLISTWIDGET_INSERTITEMS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool isSortingEnabled () const
 */
@@ -354,7 +344,6 @@ HB_FUNC_STATIC( QLISTWIDGET_ISSORTINGENABLED )
     RBOOL( obj->isSortingEnabled () );
   }
 }
-
 
 /*
 QListWidgetItem * item ( int row ) const
@@ -369,7 +358,6 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEM )
   }
 }
 
-
 /*
 QListWidgetItem * itemAt ( const QPoint & p ) const
 */
@@ -383,7 +371,6 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEMAT1 )
   }
 }
 
-
 /*
 QListWidgetItem * itemAt ( int x, int y ) const
 */
@@ -396,7 +383,6 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEMAT2 )
     _qt4xhb_createReturnClass ( ptr, "QLISTWIDGETITEM" );
   }
 }
-
 
 //[1]QListWidgetItem * itemAt ( const QPoint & p ) const
 //[2]QListWidgetItem * itemAt ( int x, int y ) const
@@ -427,7 +413,6 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEMWIDGET )
   }
 }
 
-
 /*
 void openPersistentEditor ( QListWidgetItem * item )
 */
@@ -441,7 +426,6 @@ HB_FUNC_STATIC( QLISTWIDGET_OPENPERSISTENTEDITOR )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void removeItemWidget ( QListWidgetItem * item )
@@ -457,7 +441,6 @@ HB_FUNC_STATIC( QLISTWIDGET_REMOVEITEMWIDGET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int row ( const QListWidgetItem * item ) const
 */
@@ -470,7 +453,6 @@ HB_FUNC_STATIC( QLISTWIDGET_ROW )
     RINT( obj->row ( par1 ) );
   }
 }
-
 
 /*
 QList<QListWidgetItem *> selectedItems () const
@@ -515,7 +497,6 @@ HB_FUNC_STATIC( QLISTWIDGET_SELECTEDITEMS )
   }
 }
 
-
 /*
 void setCurrentItem ( QListWidgetItem * item )
 */
@@ -529,7 +510,6 @@ HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTITEM1 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setCurrentItem ( QListWidgetItem * item, QItemSelectionModel::SelectionFlags command )
@@ -545,7 +525,6 @@ HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTITEM2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setCurrentItem ( QListWidgetItem * item )
 //[2]void setCurrentItem ( QListWidgetItem * item, QItemSelectionModel::SelectionFlags command )
@@ -575,7 +554,6 @@ HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTROW1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setCurrentRow ( int row, QItemSelectionModel::SelectionFlags command )
 */
@@ -589,7 +567,6 @@ HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTROW2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setCurrentRow ( int row )
 //[2]void setCurrentRow ( int row, QItemSelectionModel::SelectionFlags command )
@@ -620,7 +597,6 @@ HB_FUNC_STATIC( QLISTWIDGET_SETITEMWIDGET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setSortingEnabled ( bool enable )
 */
@@ -633,7 +609,6 @@ HB_FUNC_STATIC( QLISTWIDGET_SETSORTINGENABLED )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void sortItems ( Qt::SortOrder order = Qt::AscendingOrder )
@@ -649,7 +624,6 @@ HB_FUNC_STATIC( QLISTWIDGET_SORTITEMS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QListWidgetItem * takeItem ( int row )
 */
@@ -662,7 +636,6 @@ HB_FUNC_STATIC( QLISTWIDGET_TAKEITEM )
     _qt4xhb_createReturnClass ( ptr, "QLISTWIDGETITEM" );
   }
 }
-
 
 /*
 QRect visualItemRect ( const QListWidgetItem * item ) const
@@ -678,7 +651,6 @@ HB_FUNC_STATIC( QLISTWIDGET_VISUALITEMRECT )
   }
 }
 
-
 /*
 virtual void dropEvent ( QDropEvent * event )
 */
@@ -693,7 +665,6 @@ HB_FUNC_STATIC( QLISTWIDGET_DROPEVENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void clear ()
 */
@@ -706,7 +677,6 @@ HB_FUNC_STATIC( QLISTWIDGET_CLEAR )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void scrollToItem ( const QListWidgetItem * item, QAbstractItemView::ScrollHint hint = EnsureVisible )
@@ -722,9 +692,5 @@ HB_FUNC_STATIC( QLISTWIDGET_SCROLLTOITEM )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -35,6 +35,7 @@ CLASS QWindowsStyle INHERIT QCommonStyle
    METHOD unpolish1
    METHOD unpolish2
    METHOD unpolish
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -62,10 +63,10 @@ HB_FUNC_STATIC( QWINDOWSSTYLE_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QWINDOWSSTYLE_DELETE )
 {
   QWindowsStyle * obj = (QWindowsStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -75,9 +76,9 @@ HB_FUNC_STATIC( QWINDOWSSTYLE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void drawComplexControl ( ComplexControl cc, const QStyleOptionComplex * opt, QPainter * p, const QWidget * widget = 0 ) const
@@ -95,7 +96,6 @@ HB_FUNC_STATIC( QWINDOWSSTYLE_DRAWCOMPLEXCONTROL )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void drawControl ( ControlElement ce, const QStyleOption * opt, QPainter * p, const QWidget * widget = 0 ) const
 */
@@ -111,7 +111,6 @@ HB_FUNC_STATIC( QWINDOWSSTYLE_DRAWCONTROL )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void drawPrimitive ( PrimitiveElement pe, const QStyleOption * opt, QPainter * p, const QWidget * w = 0 ) const
@@ -129,7 +128,6 @@ HB_FUNC_STATIC( QWINDOWSSTYLE_DRAWPRIMITIVE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual int pixelMetric ( PixelMetric pm, const QStyleOption * opt = 0, const QWidget * widget = 0 ) const
 */
@@ -145,7 +143,6 @@ HB_FUNC_STATIC( QWINDOWSSTYLE_PIXELMETRIC )
   }
 }
 
-
 /*
 virtual void polish ( QApplication * app )
 */
@@ -160,7 +157,6 @@ HB_FUNC_STATIC( QWINDOWSSTYLE_POLISH1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void polish ( QWidget * widget )
 */
@@ -173,7 +169,6 @@ HB_FUNC_STATIC( QWINDOWSSTYLE_POLISH2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void polish ( QPalette & pal )
@@ -188,7 +183,6 @@ HB_FUNC_STATIC( QWINDOWSSTYLE_POLISH3 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]virtual void polish ( QApplication * app )
 //[2]virtual void polish ( QWidget * widget )
@@ -226,7 +220,6 @@ HB_FUNC_STATIC( QWINDOWSSTYLE_SIZEFROMCONTENTS )
   }
 }
 
-
 /*
 virtual QPixmap standardPixmap ( StandardPixmap standardPixmap, const QStyleOption * opt, const QWidget * widget = 0 ) const
 */
@@ -242,7 +235,6 @@ HB_FUNC_STATIC( QWINDOWSSTYLE_STANDARDPIXMAP )
     _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
-
 
 /*
 virtual int styleHint ( StyleHint hint, const QStyleOption * opt = 0, const QWidget * widget = 0, QStyleHintReturn * returnData = 0 ) const
@@ -260,7 +252,6 @@ HB_FUNC_STATIC( QWINDOWSSTYLE_STYLEHINT )
   }
 }
 
-
 /*
 virtual QRect subElementRect ( SubElement sr, const QStyleOption * opt, const QWidget * w = 0 ) const
 */
@@ -277,7 +268,6 @@ HB_FUNC_STATIC( QWINDOWSSTYLE_SUBELEMENTRECT )
   }
 }
 
-
 /*
 virtual void unpolish ( QApplication * app )
 */
@@ -292,7 +282,6 @@ HB_FUNC_STATIC( QWINDOWSSTYLE_UNPOLISH1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void unpolish ( QWidget * widget )
 */
@@ -305,7 +294,6 @@ HB_FUNC_STATIC( QWINDOWSSTYLE_UNPOLISH2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]virtual void unpolish ( QApplication * app )
 //[2]virtual void unpolish ( QWidget * widget )
@@ -321,8 +309,5 @@ HB_FUNC_STATIC( QWINDOWSSTYLE_UNPOLISH )
     HB_FUNC_EXEC( QWINDOWSSTYLE_UNPOLISH2 );
   }
 }
-
-
-
 
 #pragma ENDDUMP

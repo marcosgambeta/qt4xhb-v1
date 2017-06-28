@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -65,7 +65,9 @@ CLASS QMessageBox INHERIT QDialog
    METHOD information
    METHOD question
    METHOD warning
+
    METHOD onButtonClicked
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -93,7 +95,6 @@ HB_FUNC_STATIC( QMESSAGEBOX_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QMessageBox ( Icon icon, const QString & title, const QString & text, StandardButtons buttons = NoButton, QWidget * parent = 0, Qt::WindowFlags f = Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint )
 */
@@ -104,7 +105,6 @@ HB_FUNC_STATIC( QMESSAGEBOX_NEW2 )
   QMessageBox * o = new QMessageBox ( (QMessageBox::Icon) hb_parni(1), PQSTRING(2), PQSTRING(3), (QMessageBox::StandardButtons) par4, OPQWIDGET(5,0), (Qt::WindowFlags) par6 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QMessageBox ( QWidget * parent = 0 )
 //[2]QMessageBox ( Icon icon, const QString & title, const QString & text, StandardButtons buttons = NoButton, QWidget * parent = 0, Qt::WindowFlags f = Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint )
@@ -128,6 +128,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_NEW )
 HB_FUNC_STATIC( QMESSAGEBOX_DELETE )
 {
   QMessageBox * obj = (QMessageBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -137,9 +138,9 @@ HB_FUNC_STATIC( QMESSAGEBOX_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void addButton ( QAbstractButton * button, ButtonRole role )
@@ -156,7 +157,6 @@ HB_FUNC_STATIC( QMESSAGEBOX_ADDBUTTON1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QPushButton * addButton ( const QString & text, ButtonRole role )
 */
@@ -171,7 +171,6 @@ HB_FUNC_STATIC( QMESSAGEBOX_ADDBUTTON2 )
   }
 }
 
-
 /*
 QPushButton * addButton ( StandardButton button )
 */
@@ -185,7 +184,6 @@ HB_FUNC_STATIC( QMESSAGEBOX_ADDBUTTON3 )
     _qt4xhb_createReturnClass ( ptr, "QPUSHBUTTON" );
   }
 }
-
 
 //[1]void addButton ( QAbstractButton * button, ButtonRole role )
 //[2]QPushButton * addButton ( const QString & text, ButtonRole role )
@@ -221,7 +219,6 @@ HB_FUNC_STATIC( QMESSAGEBOX_BUTTON )
   }
 }
 
-
 /*
 ButtonRole buttonRole ( QAbstractButton * button ) const
 */
@@ -234,7 +231,6 @@ HB_FUNC_STATIC( QMESSAGEBOX_BUTTONROLE )
     hb_retni( (int) obj->buttonRole ( par1 ) );
   }
 }
-
 
 /*
 QList<QAbstractButton *> buttons () const
@@ -279,7 +275,6 @@ HB_FUNC_STATIC( QMESSAGEBOX_BUTTONS )
   }
 }
 
-
 /*
 QAbstractButton * clickedButton () const
 */
@@ -292,7 +287,6 @@ HB_FUNC_STATIC( QMESSAGEBOX_CLICKEDBUTTON )
     _qt4xhb_createReturnClass ( ptr, "QABSTRACTBUTTON" );
   }
 }
-
 
 /*
 QPushButton * defaultButton () const
@@ -307,7 +301,6 @@ HB_FUNC_STATIC( QMESSAGEBOX_DEFAULTBUTTON )
   }
 }
 
-
 /*
 QString detailedText () const
 */
@@ -319,7 +312,6 @@ HB_FUNC_STATIC( QMESSAGEBOX_DETAILEDTEXT )
     RQSTRING( obj->detailedText () );
   }
 }
-
 
 /*
 QAbstractButton * escapeButton () const
@@ -334,7 +326,6 @@ HB_FUNC_STATIC( QMESSAGEBOX_ESCAPEBUTTON )
   }
 }
 
-
 /*
 Icon icon () const
 */
@@ -346,7 +337,6 @@ HB_FUNC_STATIC( QMESSAGEBOX_ICON )
     hb_retni( (int) obj->icon () );
   }
 }
-
 
 /*
 QPixmap iconPixmap () const
@@ -361,7 +351,6 @@ HB_FUNC_STATIC( QMESSAGEBOX_ICONPIXMAP )
   }
 }
 
-
 /*
 QString informativeText () const
 */
@@ -373,7 +362,6 @@ HB_FUNC_STATIC( QMESSAGEBOX_INFORMATIVETEXT )
     RQSTRING( obj->informativeText () );
   }
 }
-
 
 /*
 void open ( QObject * receiver, const char * member )
@@ -387,7 +375,6 @@ HB_FUNC_STATIC( QMESSAGEBOX_OPEN )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void removeButton ( QAbstractButton * button )
@@ -403,7 +390,6 @@ HB_FUNC_STATIC( QMESSAGEBOX_REMOVEBUTTON )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setDefaultButton ( QPushButton * button )
 */
@@ -418,7 +404,6 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETDEFAULTBUTTON1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setDefaultButton ( StandardButton button )
 */
@@ -432,7 +417,6 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETDEFAULTBUTTON2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setDefaultButton ( QPushButton * button )
 //[2]void setDefaultButton ( StandardButton button )
@@ -462,7 +446,6 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETDETAILEDTEXT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setEscapeButton ( QAbstractButton * button )
 */
@@ -477,7 +460,6 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETESCAPEBUTTON1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setEscapeButton ( StandardButton button )
 */
@@ -491,7 +473,6 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETESCAPEBUTTON2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setEscapeButton ( QAbstractButton * button )
 //[2]void setEscapeButton ( StandardButton button )
@@ -522,7 +503,6 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETICON )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setIconPixmap ( const QPixmap & pixmap )
 */
@@ -536,7 +516,6 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETICONPIXMAP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setInformativeText ( const QString & text )
 */
@@ -549,7 +528,6 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETINFORMATIVETEXT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setStandardButtons ( StandardButtons buttons )
@@ -565,7 +543,6 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETSTANDARDBUTTONS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setText ( const QString & text )
 */
@@ -578,7 +555,6 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETTEXT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setTextFormat ( Qt::TextFormat format )
@@ -594,7 +570,6 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETTEXTFORMAT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setWindowModality ( Qt::WindowModality windowModality )
 */
@@ -609,7 +584,6 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETWINDOWMODALITY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setWindowTitle ( const QString & title )
 */
@@ -622,7 +596,6 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETWINDOWTITLE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 StandardButton standardButton ( QAbstractButton * button ) const
@@ -637,7 +610,6 @@ HB_FUNC_STATIC( QMESSAGEBOX_STANDARDBUTTON )
   }
 }
 
-
 /*
 StandardButtons standardButtons () const
 */
@@ -649,7 +621,6 @@ HB_FUNC_STATIC( QMESSAGEBOX_STANDARDBUTTONS )
     hb_retni( (int) obj->standardButtons () );
   }
 }
-
 
 /*
 QString text () const
@@ -663,7 +634,6 @@ HB_FUNC_STATIC( QMESSAGEBOX_TEXT )
   }
 }
 
-
 /*
 Qt::TextFormat textFormat () const
 */
@@ -675,7 +645,6 @@ HB_FUNC_STATIC( QMESSAGEBOX_TEXTFORMAT )
     hb_retni( (int) obj->textFormat () );
   }
 }
-
 
 /*
 virtual void setVisible ( bool visible )
@@ -690,7 +659,6 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETVISIBLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int exec ()
 */
@@ -703,8 +671,6 @@ HB_FUNC_STATIC( QMESSAGEBOX_EXEC )
   }
 }
 
-
-
 /*
 void about ( QWidget * parent, const QString & title, const QString & text )
 */
@@ -714,7 +680,6 @@ HB_FUNC_STATIC( QMESSAGEBOX_ABOUT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void aboutQt ( QWidget * parent, const QString & title = QString() )
 */
@@ -723,7 +688,6 @@ HB_FUNC_STATIC( QMESSAGEBOX_ABOUTQT )
   QMessageBox::aboutQt ( PQWIDGET(1), OPQSTRING(2,QString()) );
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 StandardButton critical ( QWidget * parent, const QString & title, const QString & text, StandardButtons buttons = Ok, StandardButton defaultButton = NoButton )
@@ -735,7 +699,6 @@ HB_FUNC_STATIC( QMESSAGEBOX_CRITICAL )
   hb_retni( (int) QMessageBox::critical ( PQWIDGET(1), PQSTRING(2), PQSTRING(3), (QMessageBox::StandardButtons) par4, (QMessageBox::StandardButton) par5 ) );
 }
 
-
 /*
 StandardButton information ( QWidget * parent, const QString & title, const QString & text, StandardButtons buttons = Ok, StandardButton defaultButton = NoButton )
 */
@@ -745,7 +708,6 @@ HB_FUNC_STATIC( QMESSAGEBOX_INFORMATION )
   int par5 = ISNIL(5)? (int) QMessageBox::NoButton : hb_parni(5);
   hb_retni( (int) QMessageBox::information ( PQWIDGET(1), PQSTRING(2), PQSTRING(3), (QMessageBox::StandardButtons) par4, (QMessageBox::StandardButton) par5 ) );
 }
-
 
 /*
 StandardButton question ( QWidget * parent, const QString & title, const QString & text, StandardButtons buttons = Ok, StandardButton defaultButton = NoButton )
@@ -757,7 +719,6 @@ HB_FUNC_STATIC( QMESSAGEBOX_QUESTION )
   hb_retni( (int) QMessageBox::question ( PQWIDGET(1), PQSTRING(2), PQSTRING(3), (QMessageBox::StandardButtons) par4, (QMessageBox::StandardButton) par5 ) );
 }
 
-
 /*
 StandardButton warning ( QWidget * parent, const QString & title, const QString & text, StandardButtons buttons = Ok, StandardButton defaultButton = NoButton )
 */
@@ -767,9 +728,5 @@ HB_FUNC_STATIC( QMESSAGEBOX_WARNING )
   int par5 = ISNIL(5)? (int) QMessageBox::NoButton : hb_parni(5);
   hb_retni( (int) QMessageBox::warning ( PQWIDGET(1), PQSTRING(2), PQSTRING(3), (QMessageBox::StandardButtons) par4, (QMessageBox::StandardButton) par5 ) );
 }
-
-
-
-
 
 #pragma ENDDUMP

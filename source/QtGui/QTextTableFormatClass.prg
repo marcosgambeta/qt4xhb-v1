@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -31,6 +31,7 @@ CLASS QTextTableFormat INHERIT QTextFrameFormat
    METHOD setCellSpacing
    METHOD setColumnWidthConstraints
    METHOD setHeaderRowCount
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -58,10 +59,10 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QTEXTTABLEFORMAT_DELETE )
 {
   QTextTableFormat * obj = (QTextTableFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -71,9 +72,9 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 Qt::Alignment alignment () const
@@ -87,7 +88,6 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_ALIGNMENT )
   }
 }
 
-
 /*
 qreal cellPadding () const
 */
@@ -99,7 +99,6 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_CELLPADDING )
     RQREAL( obj->cellPadding () );
   }
 }
-
 
 /*
 qreal cellSpacing () const
@@ -113,7 +112,6 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_CELLSPACING )
   }
 }
 
-
 /*
 void clearColumnWidthConstraints ()
 */
@@ -126,7 +124,6 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_CLEARCOLUMNWIDTHCONSTRAINTS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QVector<QTextLength> columnWidthConstraints () const
@@ -171,7 +168,6 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_COLUMNWIDTHCONSTRAINTS )
   }
 }
 
-
 /*
 int columns () const
 */
@@ -183,7 +179,6 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_COLUMNS )
     RINT( obj->columns () );
   }
 }
-
 
 /*
 int headerRowCount () const
@@ -197,7 +192,6 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_HEADERROWCOUNT )
   }
 }
 
-
 /*
 bool isValid () const
 */
@@ -209,7 +203,6 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_ISVALID )
     RBOOL( obj->isValid () );
   }
 }
-
 
 /*
 void setAlignment ( Qt::Alignment alignment )
@@ -225,7 +218,6 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETALIGNMENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setCellPadding ( qreal padding )
 */
@@ -239,7 +231,6 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETCELLPADDING )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setCellSpacing ( qreal spacing )
 */
@@ -252,7 +243,6 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETCELLSPACING )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setColumnWidthConstraints ( const QVector<QTextLength> & constraints )
@@ -275,7 +265,6 @@ par1 << *(QTextLength *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setHeaderRowCount ( int count )
 */
@@ -288,8 +277,5 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETHEADERROWCOUNT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
 
 #pragma ENDDUMP

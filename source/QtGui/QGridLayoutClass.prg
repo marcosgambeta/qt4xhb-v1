@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -62,6 +62,7 @@ CLASS QGridLayout INHERIT QLayout
    METHOD setGeometry
    METHOD sizeHint
    METHOD takeAt
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -89,7 +90,6 @@ HB_FUNC_STATIC( QGRIDLAYOUT_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QGridLayout ()
 */
@@ -98,7 +98,6 @@ HB_FUNC_STATIC( QGRIDLAYOUT_NEW2 )
   QGridLayout * o = new QGridLayout ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QGridLayout ( QWidget * parent )
 //[2]QGridLayout ()
@@ -122,6 +121,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_NEW )
 HB_FUNC_STATIC( QGRIDLAYOUT_DELETE )
 {
   QGridLayout * obj = (QGridLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -131,9 +131,9 @@ HB_FUNC_STATIC( QGRIDLAYOUT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void addItem ( QLayoutItem * item, int row, int column, int rowSpan = 1, int columnSpan = 1, Qt::Alignment alignment = 0 )
@@ -152,7 +152,6 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ADDITEM )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void addLayout ( QLayout * layout, int row, int column, Qt::Alignment alignment = 0 )
 */
@@ -168,7 +167,6 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ADDLAYOUT1 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void addLayout ( QLayout * layout, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
@@ -187,7 +185,6 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ADDLAYOUT2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void addLayout ( QLayout * layout, int row, int column, Qt::Alignment alignment = 0 )
 //[2]void addLayout ( QLayout * layout, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
@@ -220,7 +217,6 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ADDWIDGET1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void addWidget ( QWidget * widget, int fromRow, int fromColumn, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
 */
@@ -238,7 +234,6 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ADDWIDGET2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void addWidget ( QWidget * widget, int row, int column, Qt::Alignment alignment = 0 )
 //[2]void addWidget ( QWidget * widget, int fromRow, int fromColumn, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
@@ -268,7 +263,6 @@ HB_FUNC_STATIC( QGRIDLAYOUT_CELLRECT )
   }
 }
 
-
 /*
 int columnCount () const
 */
@@ -280,7 +274,6 @@ HB_FUNC_STATIC( QGRIDLAYOUT_COLUMNCOUNT )
     RINT( obj->columnCount () );
   }
 }
-
 
 /*
 int columnMinimumWidth ( int column ) const
@@ -294,7 +287,6 @@ HB_FUNC_STATIC( QGRIDLAYOUT_COLUMNMINIMUMWIDTH )
   }
 }
 
-
 /*
 int columnStretch ( int column ) const
 */
@@ -306,7 +298,6 @@ HB_FUNC_STATIC( QGRIDLAYOUT_COLUMNSTRETCH )
     RINT( obj->columnStretch ( PINT(1) ) );
   }
 }
-
 
 /*
 void getItemPosition ( int index, int * row, int * column, int * rowSpan, int * columnSpan )
@@ -329,7 +320,6 @@ HB_FUNC_STATIC( QGRIDLAYOUT_GETITEMPOSITION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int horizontalSpacing () const
 */
@@ -341,7 +331,6 @@ HB_FUNC_STATIC( QGRIDLAYOUT_HORIZONTALSPACING )
     RINT( obj->horizontalSpacing () );
   }
 }
-
 
 /*
 QLayoutItem * itemAtPosition ( int row, int column ) const
@@ -356,7 +345,6 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ITEMATPOSITION )
   }
 }
 
-
 /*
 Qt::Corner originCorner () const
 */
@@ -368,7 +356,6 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ORIGINCORNER )
     hb_retni( (int) obj->originCorner () );
   }
 }
-
 
 /*
 int rowCount () const
@@ -382,7 +369,6 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ROWCOUNT )
   }
 }
 
-
 /*
 int rowMinimumHeight ( int row ) const
 */
@@ -395,7 +381,6 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ROWMINIMUMHEIGHT )
   }
 }
 
-
 /*
 int rowStretch ( int row ) const
 */
@@ -407,7 +392,6 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ROWSTRETCH )
     RINT( obj->rowStretch ( PINT(1) ) );
   }
 }
-
 
 /*
 void setColumnMinimumWidth ( int column, int minSize )
@@ -422,7 +406,6 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETCOLUMNMINIMUMWIDTH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setColumnStretch ( int column, int stretch )
 */
@@ -436,7 +419,6 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETCOLUMNSTRETCH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setHorizontalSpacing ( int spacing )
 */
@@ -449,7 +431,6 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETHORIZONTALSPACING )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setOriginCorner ( Qt::Corner corner )
@@ -465,7 +446,6 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETORIGINCORNER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setRowMinimumHeight ( int row, int minSize )
 */
@@ -478,7 +458,6 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETROWMINIMUMHEIGHT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setRowStretch ( int row, int stretch )
@@ -493,7 +472,6 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETROWSTRETCH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setSpacing ( int spacing )
 */
@@ -506,7 +484,6 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETSPACING )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setVerticalSpacing ( int spacing )
@@ -521,7 +498,6 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETVERTICALSPACING )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int spacing () const
 */
@@ -533,7 +509,6 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SPACING )
     RINT( obj->spacing () );
   }
 }
-
 
 /*
 int verticalSpacing () const
@@ -547,7 +522,6 @@ HB_FUNC_STATIC( QGRIDLAYOUT_VERTICALSPACING )
   }
 }
 
-
 /*
 virtual int count () const
 */
@@ -559,7 +533,6 @@ HB_FUNC_STATIC( QGRIDLAYOUT_COUNT )
     RINT( obj->count () );
   }
 }
-
 
 /*
 virtual Qt::Orientations expandingDirections () const
@@ -573,7 +546,6 @@ HB_FUNC_STATIC( QGRIDLAYOUT_EXPANDINGDIRECTIONS )
   }
 }
 
-
 /*
 virtual bool hasHeightForWidth () const
 */
@@ -586,7 +558,6 @@ HB_FUNC_STATIC( QGRIDLAYOUT_HASHEIGHTFORWIDTH )
   }
 }
 
-
 /*
 virtual int heightForWidth ( int w ) const
 */
@@ -598,7 +569,6 @@ HB_FUNC_STATIC( QGRIDLAYOUT_HEIGHTFORWIDTH )
     RINT( obj->heightForWidth ( PINT(1) ) );
   }
 }
-
 
 /*
 virtual void invalidate ()
@@ -613,7 +583,6 @@ HB_FUNC_STATIC( QGRIDLAYOUT_INVALIDATE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QLayoutItem * itemAt ( int index ) const
 */
@@ -626,7 +595,6 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ITEMAT )
     _qt4xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
   }
 }
-
 
 /*
 virtual QSize maximumSize () const
@@ -641,7 +609,6 @@ HB_FUNC_STATIC( QGRIDLAYOUT_MAXIMUMSIZE )
   }
 }
 
-
 /*
 virtual int minimumHeightForWidth ( int w ) const
 */
@@ -653,7 +620,6 @@ HB_FUNC_STATIC( QGRIDLAYOUT_MINIMUMHEIGHTFORWIDTH )
     RINT( obj->minimumHeightForWidth ( PINT(1) ) );
   }
 }
-
 
 /*
 virtual QSize minimumSize () const
@@ -668,7 +634,6 @@ HB_FUNC_STATIC( QGRIDLAYOUT_MINIMUMSIZE )
   }
 }
 
-
 /*
 virtual void setGeometry ( const QRect & rect )
 */
@@ -681,7 +646,6 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETGEOMETRY )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual QSize sizeHint () const
@@ -696,7 +660,6 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SIZEHINT )
   }
 }
 
-
 /*
 virtual QLayoutItem * takeAt ( int index )
 */
@@ -709,9 +672,5 @@ HB_FUNC_STATIC( QGRIDLAYOUT_TAKEAT )
     _qt4xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
   }
 }
-
-
-
-
 
 #pragma ENDDUMP

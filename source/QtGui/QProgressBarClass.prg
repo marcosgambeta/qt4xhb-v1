@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -41,7 +41,9 @@ CLASS QProgressBar INHERIT QWidget
    METHOD setOrientation
    METHOD setRange
    METHOD setValue
+
    METHOD onValueChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -69,10 +71,10 @@ HB_FUNC_STATIC( QPROGRESSBAR_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QPROGRESSBAR_DELETE )
 {
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -82,9 +84,9 @@ HB_FUNC_STATIC( QPROGRESSBAR_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 Qt::Alignment alignment () const
@@ -98,7 +100,6 @@ HB_FUNC_STATIC( QPROGRESSBAR_ALIGNMENT )
   }
 }
 
-
 /*
 QString format () const
 */
@@ -110,7 +111,6 @@ HB_FUNC_STATIC( QPROGRESSBAR_FORMAT )
     RQSTRING( obj->format () );
   }
 }
-
 
 /*
 bool invertedAppearance ()
@@ -124,8 +124,6 @@ HB_FUNC_STATIC( QPROGRESSBAR_INVERTEDAPPEARANCE )
   }
 }
 
-
-
 /*
 bool isTextVisible () const
 */
@@ -137,7 +135,6 @@ HB_FUNC_STATIC( QPROGRESSBAR_ISTEXTVISIBLE )
     RBOOL( obj->isTextVisible () );
   }
 }
-
 
 /*
 int maximum () const
@@ -151,7 +148,6 @@ HB_FUNC_STATIC( QPROGRESSBAR_MAXIMUM )
   }
 }
 
-
 /*
 int minimum () const
 */
@@ -164,7 +160,6 @@ HB_FUNC_STATIC( QPROGRESSBAR_MINIMUM )
   }
 }
 
-
 /*
 Qt::Orientation orientation () const
 */
@@ -176,7 +171,6 @@ HB_FUNC_STATIC( QPROGRESSBAR_ORIENTATION )
     RENUM( obj->orientation () );
   }
 }
-
 
 /*
 void setAlignment ( Qt::Alignment alignment )
@@ -192,7 +186,6 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETALIGNMENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setFormat ( const QString & format )
 */
@@ -206,7 +199,6 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETFORMAT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setInvertedAppearance ( bool invert )
 */
@@ -219,7 +211,6 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETINVERTEDAPPEARANCE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setTextDirection ( QProgressBar::Direction textDirection )
@@ -235,7 +226,6 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETTEXTDIRECTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setTextVisible ( bool visible )
 */
@@ -249,7 +239,6 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETTEXTVISIBLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QString text () const
 */
@@ -261,7 +250,6 @@ HB_FUNC_STATIC( QPROGRESSBAR_TEXT )
     RQSTRING( obj->text () );
   }
 }
-
 
 /*
 QProgressBar::Direction textDirection ()
@@ -275,8 +263,6 @@ HB_FUNC_STATIC( QPROGRESSBAR_TEXTDIRECTION )
   }
 }
 
-
-
 /*
 int value () const
 */
@@ -288,7 +274,6 @@ HB_FUNC_STATIC( QPROGRESSBAR_VALUE )
     RINT( obj->value () );
   }
 }
-
 
 /*
 virtual QSize minimumSizeHint () const
@@ -303,7 +288,6 @@ HB_FUNC_STATIC( QPROGRESSBAR_MINIMUMSIZEHINT )
   }
 }
 
-
 /*
 virtual QSize sizeHint () const
 */
@@ -316,7 +300,6 @@ HB_FUNC_STATIC( QPROGRESSBAR_SIZEHINT )
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
-
 
 /*
 void reset ()
@@ -331,7 +314,6 @@ HB_FUNC_STATIC( QPROGRESSBAR_RESET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setMaximum ( int maximum )
 */
@@ -344,7 +326,6 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETMAXIMUM )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setMinimum ( int minimum )
@@ -359,7 +340,6 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETMINIMUM )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setOrientation ( Qt::Orientation )
 */
@@ -372,7 +352,6 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETORIENTATION )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setRange ( int minimum, int maximum )
@@ -387,7 +366,6 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETRANGE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setValue ( int value )
 */
@@ -400,9 +378,5 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETVALUE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

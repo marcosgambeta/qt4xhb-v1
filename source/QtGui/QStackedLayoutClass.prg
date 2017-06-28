@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -30,8 +30,10 @@ CLASS QStackedLayout INHERIT QLayout
    METHOD widget
    METHOD setCurrentIndex
    METHOD setCurrentWidget
+
    METHOD onSetCurrentIndex
    METHOD onSetCurrentWidget
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -59,7 +61,6 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QStackedLayout ( QWidget * parent )
 */
@@ -69,7 +70,6 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_NEW2 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QStackedLayout ( QLayout * parentLayout )
 */
@@ -78,7 +78,6 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_NEW3 )
   QStackedLayout * o = new QStackedLayout ( PQLAYOUT(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QStackedLayout ()
 //[2]QStackedLayout ( QWidget * parent )
@@ -107,6 +106,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_NEW )
 HB_FUNC_STATIC( QSTACKEDLAYOUT_DELETE )
 {
   QStackedLayout * obj = (QStackedLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -116,9 +116,9 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 int addWidget ( QWidget * widget )
@@ -132,7 +132,6 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_ADDWIDGET )
   }
 }
 
-
 /*
 int currentIndex () const
 */
@@ -144,7 +143,6 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_CURRENTINDEX )
     RINT( obj->currentIndex () );
   }
 }
-
 
 /*
 QWidget * currentWidget () const
@@ -159,7 +157,6 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_CURRENTWIDGET )
   }
 }
 
-
 /*
 int insertWidget ( int index, QWidget * widget )
 */
@@ -171,7 +168,6 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_INSERTWIDGET )
     RINT( obj->insertWidget ( PINT(1), PQWIDGET(2) ) );
   }
 }
-
 
 /*
 void setStackingMode ( StackingMode stackingMode )
@@ -187,7 +183,6 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_SETSTACKINGMODE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 StackingMode stackingMode () const
 */
@@ -199,7 +194,6 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_STACKINGMODE )
     hb_retni( (int) obj->stackingMode () );
   }
 }
-
 
 /*
 QWidget * widget ( int index ) const
@@ -214,7 +208,6 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_WIDGET )
   }
 }
 
-
 /*
 void setCurrentIndex ( int index )
 */
@@ -228,7 +221,6 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_SETCURRENTINDEX )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setCurrentWidget ( QWidget * widget )
 */
@@ -241,10 +233,5 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_SETCURRENTWIDGET )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
-
 
 #pragma ENDDUMP

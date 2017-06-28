@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -47,11 +47,13 @@ CLASS QTextLine
    METHOD x
    METHOD xToCursor
    METHOD y
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -79,10 +81,10 @@ HB_FUNC_STATIC( QTEXTLINE_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QTEXTLINE_DELETE )
 {
   QTextLine * obj = (QTextLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -92,9 +94,9 @@ HB_FUNC_STATIC( QTEXTLINE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 qreal ascent () const
@@ -107,7 +109,6 @@ HB_FUNC_STATIC( QTEXTLINE_ASCENT )
     RQREAL( obj->ascent () );
   }
 }
-
 
 /*
 qreal cursorToX ( int * cursorPos, Edge edge = Leading ) const
@@ -124,7 +125,6 @@ HB_FUNC_STATIC( QTEXTLINE_CURSORTOX1 )
   }
 }
 
-
 /*
 qreal cursorToX ( int cursorPos, Edge edge = Leading ) const
 */
@@ -137,7 +137,6 @@ HB_FUNC_STATIC( QTEXTLINE_CURSORTOX2 )
     RQREAL( obj->cursorToX ( PINT(1), (QTextLine::Edge) par2 ) );
   }
 }
-
 
 //[1]qreal cursorToX ( int * cursorPos, Edge edge = Leading ) const
 //[2]qreal cursorToX ( int cursorPos, Edge edge = Leading ) const
@@ -168,8 +167,6 @@ HB_FUNC_STATIC( QTEXTLINE_DESCENT )
   }
 }
 
-
-
 /*
 qreal height () const
 */
@@ -181,7 +178,6 @@ HB_FUNC_STATIC( QTEXTLINE_HEIGHT )
     RQREAL( obj->height () );
   }
 }
-
 
 /*
 qreal horizontalAdvance () const
@@ -195,7 +191,6 @@ HB_FUNC_STATIC( QTEXTLINE_HORIZONTALADVANCE )
   }
 }
 
-
 /*
 bool isValid () const
 */
@@ -207,7 +202,6 @@ HB_FUNC_STATIC( QTEXTLINE_ISVALID )
     RBOOL( obj->isValid () );
   }
 }
-
 
 /*
 qreal leading () const
@@ -221,7 +215,6 @@ HB_FUNC_STATIC( QTEXTLINE_LEADING )
   }
 }
 
-
 /*
 bool leadingIncluded () const
 */
@@ -234,7 +227,6 @@ HB_FUNC_STATIC( QTEXTLINE_LEADINGINCLUDED )
   }
 }
 
-
 /*
 int lineNumber () const
 */
@@ -246,7 +238,6 @@ HB_FUNC_STATIC( QTEXTLINE_LINENUMBER )
     RINT( obj->lineNumber () );
   }
 }
-
 
 /*
 QRectF naturalTextRect () const
@@ -261,7 +252,6 @@ HB_FUNC_STATIC( QTEXTLINE_NATURALTEXTRECT )
   }
 }
 
-
 /*
 qreal naturalTextWidth () const
 */
@@ -273,7 +263,6 @@ HB_FUNC_STATIC( QTEXTLINE_NATURALTEXTWIDTH )
     RQREAL( obj->naturalTextWidth () );
   }
 }
-
 
 /*
 QPointF position () const
@@ -288,7 +277,6 @@ HB_FUNC_STATIC( QTEXTLINE_POSITION )
   }
 }
 
-
 /*
 QRectF rect () const
 */
@@ -301,7 +289,6 @@ HB_FUNC_STATIC( QTEXTLINE_RECT )
     _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
-
 
 /*
 void setLeadingIncluded ( bool included )
@@ -316,7 +303,6 @@ HB_FUNC_STATIC( QTEXTLINE_SETLEADINGINCLUDED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setLineWidth ( qreal width )
 */
@@ -329,7 +315,6 @@ HB_FUNC_STATIC( QTEXTLINE_SETLINEWIDTH )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setNumColumns ( int numColumns )
@@ -344,7 +329,6 @@ HB_FUNC_STATIC( QTEXTLINE_SETNUMCOLUMNS1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setNumColumns ( int numColumns, qreal alignmentWidth )
 */
@@ -357,7 +341,6 @@ HB_FUNC_STATIC( QTEXTLINE_SETNUMCOLUMNS2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setNumColumns ( int numColumns )
 //[2]void setNumColumns ( int numColumns, qreal alignmentWidth )
@@ -387,7 +370,6 @@ HB_FUNC_STATIC( QTEXTLINE_SETPOSITION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int textLength () const
 */
@@ -399,7 +381,6 @@ HB_FUNC_STATIC( QTEXTLINE_TEXTLENGTH )
     RINT( obj->textLength () );
   }
 }
-
 
 /*
 int textStart () const
@@ -413,7 +394,6 @@ HB_FUNC_STATIC( QTEXTLINE_TEXTSTART )
   }
 }
 
-
 /*
 qreal width () const
 */
@@ -426,7 +406,6 @@ HB_FUNC_STATIC( QTEXTLINE_WIDTH )
   }
 }
 
-
 /*
 qreal x () const
 */
@@ -438,7 +417,6 @@ HB_FUNC_STATIC( QTEXTLINE_X )
     RQREAL( obj->x () );
   }
 }
-
 
 /*
 int xToCursor ( qreal x, CursorPosition cpos = CursorBetweenCharacters ) const
@@ -453,7 +431,6 @@ HB_FUNC_STATIC( QTEXTLINE_XTOCURSOR )
   }
 }
 
-
 /*
 qreal y () const
 */
@@ -465,7 +442,6 @@ HB_FUNC_STATIC( QTEXTLINE_Y )
     RQREAL( obj->y () );
   }
 }
-
 
 HB_FUNC_STATIC( QTEXTLINE_NEWFROM )
 {
@@ -521,6 +497,5 @@ HB_FUNC_STATIC( QTEXTLINE_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

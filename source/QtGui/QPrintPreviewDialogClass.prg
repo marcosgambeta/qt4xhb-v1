@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -24,7 +24,9 @@ CLASS QPrintPreviewDialog INHERIT QDialog
    METHOD printer
    METHOD done
    METHOD setVisible
+
    METHOD onPaintRequested
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -53,7 +55,6 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QPrintPreviewDialog ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
@@ -63,7 +64,6 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_NEW2 )
   QPrintPreviewDialog * o = new QPrintPreviewDialog ( OPQWIDGET(1,0), (Qt::WindowFlags) par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QPrintPreviewDialog ( QPrinter * printer, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 //[2]QPrintPreviewDialog ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
@@ -87,6 +87,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_NEW )
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_DELETE )
 {
   QPrintPreviewDialog * obj = (QPrintPreviewDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -96,9 +97,9 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void open ( QObject * receiver, const char * member )
@@ -113,7 +114,6 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_OPEN )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QPrinter * printer ()
 */
@@ -126,7 +126,6 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_PRINTER )
     _qt4xhb_createReturnClass ( ptr, "QPRINTER" );
   }
 }
-
 
 /*
 virtual void done ( int result )
@@ -141,7 +140,6 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_DONE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void setVisible ( bool visible )
 */
@@ -154,9 +152,5 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_SETVISIBLE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

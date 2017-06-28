@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -110,11 +110,13 @@ CLASS QColor
    METHOD fromRgbF
    METHOD fromRgba
    METHOD isValidColor
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -142,7 +144,6 @@ HB_FUNC_STATIC( QCOLOR_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QColor ( int r, int g, int b, int a = 255 )
 */
@@ -151,7 +152,6 @@ HB_FUNC_STATIC( QCOLOR_NEW2 )
   QColor * o = new QColor ( PINT(1), PINT(2), PINT(3), OPINT(4,255) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QColor ( QRgb color )
@@ -163,7 +163,6 @@ HB_FUNC_STATIC( QCOLOR_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QColor ( const QString & name )
 */
@@ -173,7 +172,6 @@ HB_FUNC_STATIC( QCOLOR_NEW4 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QColor ( const char * name )
 */
@@ -182,7 +180,6 @@ HB_FUNC_STATIC( QCOLOR_NEW5 )
   QColor * o = new QColor ( (const char *) hb_parc(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QColor ( const QColor & color )
@@ -194,7 +191,6 @@ HB_FUNC_STATIC( QCOLOR_NEW6 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QColor ( Qt::GlobalColor color )
 */
@@ -203,7 +199,6 @@ HB_FUNC_STATIC( QCOLOR_NEW7 )
   QColor * o = new QColor ( (Qt::GlobalColor) hb_parni(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QColor ()
 //[2]QColor ( int r, int g, int b, int a = 255 )
@@ -254,6 +249,7 @@ HB_FUNC_STATIC( QCOLOR_NEW )
 HB_FUNC_STATIC( QCOLOR_DELETE )
 {
   QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -263,9 +259,9 @@ HB_FUNC_STATIC( QCOLOR_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 int alpha () const
@@ -279,7 +275,6 @@ HB_FUNC_STATIC( QCOLOR_ALPHA )
   }
 }
 
-
 /*
 qreal alphaF () const
 */
@@ -291,7 +286,6 @@ HB_FUNC_STATIC( QCOLOR_ALPHAF )
     RQREAL( obj->alphaF () );
   }
 }
-
 
 /*
 int black () const
@@ -305,7 +299,6 @@ HB_FUNC_STATIC( QCOLOR_BLACK )
   }
 }
 
-
 /*
 qreal blackF () const
 */
@@ -317,7 +310,6 @@ HB_FUNC_STATIC( QCOLOR_BLACKF )
     RQREAL( obj->blackF () );
   }
 }
-
 
 /*
 int blue () const
@@ -331,7 +323,6 @@ HB_FUNC_STATIC( QCOLOR_BLUE )
   }
 }
 
-
 /*
 qreal blueF () const
 */
@@ -343,7 +334,6 @@ HB_FUNC_STATIC( QCOLOR_BLUEF )
     RQREAL( obj->blueF () );
   }
 }
-
 
 /*
 QColor convertTo ( Spec colorSpec ) const
@@ -359,7 +349,6 @@ HB_FUNC_STATIC( QCOLOR_CONVERTTO )
   }
 }
 
-
 /*
 int cyan () const
 */
@@ -371,7 +360,6 @@ HB_FUNC_STATIC( QCOLOR_CYAN )
     RINT( obj->cyan () );
   }
 }
-
 
 /*
 qreal cyanF () const
@@ -385,7 +373,6 @@ HB_FUNC_STATIC( QCOLOR_CYANF )
   }
 }
 
-
 /*
 QColor darker ( int factor = 200 ) const
 */
@@ -398,7 +385,6 @@ HB_FUNC_STATIC( QCOLOR_DARKER )
     _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }
-
 
 /*
 void getCmyk ( int * c, int * m, int * y, int * k, int * a = 0 )
@@ -423,7 +409,6 @@ HB_FUNC_STATIC( QCOLOR_GETCMYK )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void getCmykF ( qreal * c, qreal * m, qreal * y, qreal * k, qreal * a = 0 )
 */
@@ -447,7 +432,6 @@ HB_FUNC_STATIC( QCOLOR_GETCMYKF )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void getHsl ( int * h, int * s, int * l, int * a = 0 ) const
 */
@@ -468,7 +452,6 @@ HB_FUNC_STATIC( QCOLOR_GETHSL )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void getHslF ( qreal * h, qreal * s, qreal * l, qreal * a = 0 ) const
@@ -491,7 +474,6 @@ HB_FUNC_STATIC( QCOLOR_GETHSLF )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void getHsv ( int * h, int * s, int * v, int * a = 0 ) const
 */
@@ -512,7 +494,6 @@ HB_FUNC_STATIC( QCOLOR_GETHSV )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void getHsvF ( qreal * h, qreal * s, qreal * v, qreal * a = 0 ) const
@@ -535,7 +516,6 @@ HB_FUNC_STATIC( QCOLOR_GETHSVF )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void getRgb ( int * r, int * g, int * b, int * a = 0 ) const
 */
@@ -556,7 +536,6 @@ HB_FUNC_STATIC( QCOLOR_GETRGB )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void getRgbF ( qreal * r, qreal * g, qreal * b, qreal * a = 0 ) const
@@ -579,7 +558,6 @@ HB_FUNC_STATIC( QCOLOR_GETRGBF )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int green () const
 */
@@ -591,7 +569,6 @@ HB_FUNC_STATIC( QCOLOR_GREEN )
     RINT( obj->green () );
   }
 }
-
 
 /*
 qreal greenF () const
@@ -605,7 +582,6 @@ HB_FUNC_STATIC( QCOLOR_GREENF )
   }
 }
 
-
 /*
 int hslHue () const
 */
@@ -617,7 +593,6 @@ HB_FUNC_STATIC( QCOLOR_HSLHUE )
     RINT( obj->hslHue () );
   }
 }
-
 
 /*
 qreal hslHueF () const
@@ -631,7 +606,6 @@ HB_FUNC_STATIC( QCOLOR_HSLHUEF )
   }
 }
 
-
 /*
 int hslSaturation () const
 */
@@ -643,7 +617,6 @@ HB_FUNC_STATIC( QCOLOR_HSLSATURATION )
     RINT( obj->hslSaturation () );
   }
 }
-
 
 /*
 qreal hslSaturationF () const
@@ -657,7 +630,6 @@ HB_FUNC_STATIC( QCOLOR_HSLSATURATIONF )
   }
 }
 
-
 /*
 int hsvHue () const
 */
@@ -669,7 +641,6 @@ HB_FUNC_STATIC( QCOLOR_HSVHUE )
     RINT( obj->hsvHue () );
   }
 }
-
 
 /*
 qreal hsvHueF () const
@@ -683,7 +654,6 @@ HB_FUNC_STATIC( QCOLOR_HSVHUEF )
   }
 }
 
-
 /*
 int hsvSaturation () const
 */
@@ -695,7 +665,6 @@ HB_FUNC_STATIC( QCOLOR_HSVSATURATION )
     RINT( obj->hsvSaturation () );
   }
 }
-
 
 /*
 qreal hsvSaturationF () const
@@ -709,7 +678,6 @@ HB_FUNC_STATIC( QCOLOR_HSVSATURATIONF )
   }
 }
 
-
 /*
 int hue () const
 */
@@ -721,7 +689,6 @@ HB_FUNC_STATIC( QCOLOR_HUE )
     RINT( obj->hue () );
   }
 }
-
 
 /*
 qreal hueF () const
@@ -735,7 +702,6 @@ HB_FUNC_STATIC( QCOLOR_HUEF )
   }
 }
 
-
 /*
 bool isValid () const
 */
@@ -747,7 +713,6 @@ HB_FUNC_STATIC( QCOLOR_ISVALID )
     RBOOL( obj->isValid () );
   }
 }
-
 
 /*
 QColor lighter ( int factor = 150 ) const
@@ -762,7 +727,6 @@ HB_FUNC_STATIC( QCOLOR_LIGHTER )
   }
 }
 
-
 /*
 int lightness () const
 */
@@ -774,7 +738,6 @@ HB_FUNC_STATIC( QCOLOR_LIGHTNESS )
     RINT( obj->lightness () );
   }
 }
-
 
 /*
 qreal lightnessF () const
@@ -788,7 +751,6 @@ HB_FUNC_STATIC( QCOLOR_LIGHTNESSF )
   }
 }
 
-
 /*
 int magenta () const
 */
@@ -800,7 +762,6 @@ HB_FUNC_STATIC( QCOLOR_MAGENTA )
     RINT( obj->magenta () );
   }
 }
-
 
 /*
 qreal magentaF () const
@@ -814,7 +775,6 @@ HB_FUNC_STATIC( QCOLOR_MAGENTAF )
   }
 }
 
-
 /*
 QString name () const
 */
@@ -826,7 +786,6 @@ HB_FUNC_STATIC( QCOLOR_NAME )
     RQSTRING( obj->name () );
   }
 }
-
 
 /*
 int red () const
@@ -840,7 +799,6 @@ HB_FUNC_STATIC( QCOLOR_RED )
   }
 }
 
-
 /*
 qreal redF () const
 */
@@ -852,7 +810,6 @@ HB_FUNC_STATIC( QCOLOR_REDF )
     RQREAL( obj->redF () );
   }
 }
-
 
 /*
 QRgb rgb () const
@@ -867,7 +824,6 @@ HB_FUNC_STATIC( QCOLOR_RGB )
   }
 }
 
-
 /*
 QRgb rgba () const
 */
@@ -881,7 +837,6 @@ HB_FUNC_STATIC( QCOLOR_RGBA )
   }
 }
 
-
 /*
 int saturation () const
 */
@@ -894,7 +849,6 @@ HB_FUNC_STATIC( QCOLOR_SATURATION )
   }
 }
 
-
 /*
 qreal saturationF () const
 */
@@ -906,7 +860,6 @@ HB_FUNC_STATIC( QCOLOR_SATURATIONF )
     RQREAL( obj->saturationF () );
   }
 }
-
 
 /*
 void setAlpha ( int alpha )
@@ -921,7 +874,6 @@ HB_FUNC_STATIC( QCOLOR_SETALPHA )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setAlphaF ( qreal alpha )
 */
@@ -934,7 +886,6 @@ HB_FUNC_STATIC( QCOLOR_SETALPHAF )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setBlue ( int blue )
@@ -949,7 +900,6 @@ HB_FUNC_STATIC( QCOLOR_SETBLUE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setBlueF ( qreal blue )
 */
@@ -962,7 +912,6 @@ HB_FUNC_STATIC( QCOLOR_SETBLUEF )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setCmyk ( int c, int m, int y, int k, int a = 255 )
@@ -977,7 +926,6 @@ HB_FUNC_STATIC( QCOLOR_SETCMYK )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setCmykF ( qreal c, qreal m, qreal y, qreal k, qreal a = 1.0 )
 */
@@ -990,7 +938,6 @@ HB_FUNC_STATIC( QCOLOR_SETCMYKF )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setGreen ( int green )
@@ -1005,7 +952,6 @@ HB_FUNC_STATIC( QCOLOR_SETGREEN )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setGreenF ( qreal green )
 */
@@ -1018,7 +964,6 @@ HB_FUNC_STATIC( QCOLOR_SETGREENF )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setHsl ( int h, int s, int l, int a = 255 )
@@ -1033,7 +978,6 @@ HB_FUNC_STATIC( QCOLOR_SETHSL )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setHslF ( qreal h, qreal s, qreal l, qreal a = 1.0 )
 */
@@ -1046,7 +990,6 @@ HB_FUNC_STATIC( QCOLOR_SETHSLF )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setHsv ( int h, int s, int v, int a = 255 )
@@ -1061,7 +1004,6 @@ HB_FUNC_STATIC( QCOLOR_SETHSV )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setHsvF ( qreal h, qreal s, qreal v, qreal a = 1.0 )
 */
@@ -1074,7 +1016,6 @@ HB_FUNC_STATIC( QCOLOR_SETHSVF )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setNamedColor ( const QString & name )
@@ -1089,7 +1030,6 @@ HB_FUNC_STATIC( QCOLOR_SETNAMEDCOLOR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setRed ( int red )
 */
@@ -1102,7 +1042,6 @@ HB_FUNC_STATIC( QCOLOR_SETRED )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setRedF ( qreal red )
@@ -1117,7 +1056,6 @@ HB_FUNC_STATIC( QCOLOR_SETREDF )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setRgb ( int r, int g, int b, int a = 255 )
 */
@@ -1130,7 +1068,6 @@ HB_FUNC_STATIC( QCOLOR_SETRGB1 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setRgb ( QRgb rgb )
@@ -1145,7 +1082,6 @@ HB_FUNC_STATIC( QCOLOR_SETRGB2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setRgb ( int r, int g, int b, int a = 255 )
 //[2]void setRgb ( QRgb rgb )
@@ -1179,7 +1115,6 @@ HB_FUNC_STATIC( QCOLOR_SETRGBF )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setRgba ( QRgb rgba )
 */
@@ -1194,7 +1129,6 @@ HB_FUNC_STATIC( QCOLOR_SETRGBA )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 Spec spec () const
 */
@@ -1206,7 +1140,6 @@ HB_FUNC_STATIC( QCOLOR_SPEC )
     hb_retni( (int) obj->spec () );
   }
 }
-
 
 /*
 QColor toCmyk () const
@@ -1221,7 +1154,6 @@ HB_FUNC_STATIC( QCOLOR_TOCMYK )
   }
 }
 
-
 /*
 QColor toHsl () const
 */
@@ -1234,7 +1166,6 @@ HB_FUNC_STATIC( QCOLOR_TOHSL )
     _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }
-
 
 /*
 QColor toHsv () const
@@ -1249,7 +1180,6 @@ HB_FUNC_STATIC( QCOLOR_TOHSV )
   }
 }
 
-
 /*
 QColor toRgb () const
 */
@@ -1263,7 +1193,6 @@ HB_FUNC_STATIC( QCOLOR_TORGB )
   }
 }
 
-
 /*
 int value () const
 */
@@ -1275,7 +1204,6 @@ HB_FUNC_STATIC( QCOLOR_VALUE )
     RINT( obj->value () );
   }
 }
-
 
 /*
 qreal valueF () const
@@ -1289,7 +1217,6 @@ HB_FUNC_STATIC( QCOLOR_VALUEF )
   }
 }
 
-
 /*
 int yellow () const
 */
@@ -1301,7 +1228,6 @@ HB_FUNC_STATIC( QCOLOR_YELLOW )
     RINT( obj->yellow () );
   }
 }
-
 
 /*
 qreal yellowF () const
@@ -1315,9 +1241,6 @@ HB_FUNC_STATIC( QCOLOR_YELLOWF )
   }
 }
 
-
-
-
 /*
 QStringList colorNames ()
 */
@@ -1325,7 +1248,6 @@ HB_FUNC_STATIC( QCOLOR_COLORNAMES )
 {
   RQSTRINGLIST( QColor::colorNames () );
 }
-
 
 /*
 QColor fromCmyk ( int c, int m, int y, int k, int a = 255 )
@@ -1336,7 +1258,6 @@ HB_FUNC_STATIC( QCOLOR_FROMCMYK )
   _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
 }
 
-
 /*
 QColor fromCmykF ( qreal c, qreal m, qreal y, qreal k, qreal a = 1.0 )
 */
@@ -1345,7 +1266,6 @@ HB_FUNC_STATIC( QCOLOR_FROMCMYKF )
   QColor * ptr = new QColor( QColor::fromCmykF ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), (qreal) ISNIL(5)? 1.0 : hb_parnd(5) ) );
   _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
 }
-
 
 /*
 QColor fromHsl ( int h, int s, int l, int a = 255 )
@@ -1356,7 +1276,6 @@ HB_FUNC_STATIC( QCOLOR_FROMHSL )
   _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
 }
 
-
 /*
 QColor fromHslF ( qreal h, qreal s, qreal l, qreal a = 1.0 )
 */
@@ -1365,7 +1284,6 @@ HB_FUNC_STATIC( QCOLOR_FROMHSLF )
   QColor * ptr = new QColor( QColor::fromHslF ( PQREAL(1), PQREAL(2), PQREAL(3), (qreal) ISNIL(4)? 1.0 : hb_parnd(4) ) );
   _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
 }
-
 
 /*
 QColor fromHsv ( int h, int s, int v, int a = 255 )
@@ -1376,7 +1294,6 @@ HB_FUNC_STATIC( QCOLOR_FROMHSV )
   _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
 }
 
-
 /*
 QColor fromHsvF ( qreal h, qreal s, qreal v, qreal a = 1.0 )
 */
@@ -1385,7 +1302,6 @@ HB_FUNC_STATIC( QCOLOR_FROMHSVF )
   QColor * ptr = new QColor( QColor::fromHsvF ( PQREAL(1), PQREAL(2), PQREAL(3), (qreal) ISNIL(4)? 1.0 : hb_parnd(4) ) );
   _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
 }
-
 
 /*
 QColor fromRgb ( QRgb rgb )
@@ -1397,7 +1313,6 @@ HB_FUNC_STATIC( QCOLOR_FROMRGB1 )
   _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
 }
 
-
 /*
 QColor fromRgb ( int r, int g, int b, int a = 255 )
 */
@@ -1407,7 +1322,6 @@ HB_FUNC_STATIC( QCOLOR_FROMRGB2 )
   _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
 }
 
-
 /*
 QColor fromRgbF ( qreal r, qreal g, qreal b, qreal a = 1.0 )
 */
@@ -1416,7 +1330,6 @@ HB_FUNC_STATIC( QCOLOR_FROMRGBF )
   QColor * ptr = new QColor( QColor::fromRgbF ( PQREAL(1), PQREAL(2), PQREAL(3), (qreal) ISNIL(4)? 1.0 : hb_parnd(4) ) );
   _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
 }
-
 
 /*
 QColor fromRgba ( QRgb rgba )
@@ -1428,7 +1341,6 @@ HB_FUNC_STATIC( QCOLOR_FROMRGBA )
   _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
 }
 
-
 /*
 bool isValidColor ( const QString & name )
 */
@@ -1436,8 +1348,6 @@ HB_FUNC_STATIC( QCOLOR_ISVALIDCOLOR )
 {
   RBOOL( QColor::isValidColor ( PQSTRING(1) ) );
 }
-
-
 
 /*
 int qAlpha ( QRgb rgba )
@@ -1517,7 +1427,6 @@ HB_FUNC( QRGBA )
 {
   hb_retni( qRgba ( PINT(1), PINT(2), PINT(3), PINT(4) ) );
 }
-
 
 HB_FUNC_STATIC( QCOLOR_NEWFROM )
 {

@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -22,6 +22,7 @@ CLASS QScrollBar INHERIT QAbstractSlider
    METHOD delete
    METHOD event
    METHOD sizeHint
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -49,7 +50,6 @@ HB_FUNC_STATIC( QSCROLLBAR_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QScrollBar ( Qt::Orientation orientation, QWidget * parent = 0 )
 */
@@ -58,7 +58,6 @@ HB_FUNC_STATIC( QSCROLLBAR_NEW2 )
   QScrollBar * o = new QScrollBar ( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QScrollBar ( QWidget * parent = 0 )
 //[2]QScrollBar ( Qt::Orientation orientation, QWidget * parent = 0 )
@@ -82,6 +81,7 @@ HB_FUNC_STATIC( QSCROLLBAR_NEW )
 HB_FUNC_STATIC( QSCROLLBAR_DELETE )
 {
   QScrollBar * obj = (QScrollBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -91,9 +91,9 @@ HB_FUNC_STATIC( QSCROLLBAR_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual bool event ( QEvent * event )
@@ -107,7 +107,6 @@ HB_FUNC_STATIC( QSCROLLBAR_EVENT )
   }
 }
 
-
 /*
 virtual QSize sizeHint () const
 */
@@ -120,9 +119,5 @@ HB_FUNC_STATIC( QSCROLLBAR_SIZEHINT )
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
-
-
-
-
 
 #pragma ENDDUMP

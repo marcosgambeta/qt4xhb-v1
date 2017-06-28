@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -70,6 +70,7 @@ CLASS QFormLayout INHERIT QLayout
    METHOD setGeometry
    METHOD sizeHint
    METHOD takeAt
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -97,10 +98,10 @@ HB_FUNC_STATIC( QFORMLAYOUT_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QFORMLAYOUT_DELETE )
 {
   QFormLayout * obj = (QFormLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -110,9 +111,9 @@ HB_FUNC_STATIC( QFORMLAYOUT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void addRow ( QWidget * label, QWidget * field )
@@ -127,7 +128,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_ADDROW1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void addRow ( QWidget * label, QLayout * field )
 */
@@ -140,7 +140,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_ADDROW2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void addRow ( const QString & labelText, QWidget * field )
@@ -155,7 +154,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_ADDROW3 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void addRow ( const QString & labelText, QLayout * field )
 */
@@ -168,7 +166,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_ADDROW4 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void addRow ( QWidget * widget )
@@ -183,7 +180,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_ADDROW5 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void addRow ( QLayout * layout )
 */
@@ -196,7 +192,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_ADDROW6 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void addRow ( QWidget * label, QWidget * field )
 //[2]void addRow ( QWidget * label, QLayout * field )
@@ -245,7 +240,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_FIELDGROWTHPOLICY )
   }
 }
 
-
 /*
 Qt::Alignment formAlignment () const
 */
@@ -257,7 +251,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_FORMALIGNMENT )
     hb_retni( (int) obj->formAlignment () );
   }
 }
-
 
 /*
 void getItemPosition ( int index, int * rowPtr, ItemRole * rolePtr ) const
@@ -275,7 +268,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_GETITEMPOSITION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void getLayoutPosition ( QLayout * layout, int * rowPtr, ItemRole * rolePtr ) const
 */
@@ -291,7 +283,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_GETLAYOUTPOSITION )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void getWidgetPosition ( QWidget * widget, int * rowPtr, ItemRole * rolePtr ) const
@@ -309,7 +300,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_GETWIDGETPOSITION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int horizontalSpacing () const
 */
@@ -321,7 +311,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_HORIZONTALSPACING )
     RINT( obj->horizontalSpacing () );
   }
 }
-
 
 /*
 void insertRow ( int row, QWidget * label, QWidget * field )
@@ -336,7 +325,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_INSERTROW1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void insertRow ( int row, QWidget * label, QLayout * field )
 */
@@ -349,7 +337,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_INSERTROW2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void insertRow ( int row, const QString & labelText, QWidget * field )
@@ -364,7 +351,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_INSERTROW3 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void insertRow ( int row, const QString & labelText, QLayout * field )
 */
@@ -377,7 +363,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_INSERTROW4 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void insertRow ( int row, QWidget * widget )
@@ -392,7 +377,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_INSERTROW5 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void insertRow ( int row, QLayout * layout )
 */
@@ -405,7 +389,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_INSERTROW6 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void insertRow ( int row, QWidget * label, QWidget * field )
 //[2]void insertRow ( int row, QWidget * label, QLayout * field )
@@ -456,7 +439,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_ITEMAT1 )
   }
 }
 
-
 /*
 Qt::Alignment labelAlignment () const
 */
@@ -468,7 +450,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_LABELALIGNMENT )
     hb_retni( (int) obj->labelAlignment () );
   }
 }
-
 
 /*
 QWidget * labelForField ( QWidget * field ) const
@@ -483,7 +464,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_LABELFORFIELD1 )
   }
 }
 
-
 /*
 QWidget * labelForField ( QLayout * field ) const
 */
@@ -496,7 +476,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_LABELFORFIELD2 )
     _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
-
 
 //[1]QWidget * labelForField ( QWidget * field ) const
 //[2]QWidget * labelForField ( QLayout * field ) const
@@ -525,7 +504,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_ROWCOUNT )
   }
 }
 
-
 /*
 RowWrapPolicy rowWrapPolicy () const
 */
@@ -537,7 +515,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_ROWWRAPPOLICY )
     hb_retni( (int) obj->rowWrapPolicy () );
   }
 }
-
 
 /*
 void setFieldGrowthPolicy ( FieldGrowthPolicy policy )
@@ -553,7 +530,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETFIELDGROWTHPOLICY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setFormAlignment ( Qt::Alignment alignment )
 */
@@ -568,7 +544,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETFORMALIGNMENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setHorizontalSpacing ( int spacing )
 */
@@ -581,7 +556,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETHORIZONTALSPACING )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setItem ( int row, ItemRole role, QLayoutItem * item )
@@ -597,7 +571,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETITEM )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setLabelAlignment ( Qt::Alignment alignment )
 */
@@ -611,7 +584,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETLABELALIGNMENT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setLayout ( int row, ItemRole role, QLayout * layout )
@@ -627,7 +599,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETLAYOUT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setRowWrapPolicy ( RowWrapPolicy policy )
 */
@@ -642,7 +613,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETROWWRAPPOLICY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setSpacing ( int spacing )
 */
@@ -656,7 +626,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETSPACING )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setVerticalSpacing ( int spacing )
 */
@@ -669,7 +638,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETVERTICALSPACING )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setWidget ( int row, ItemRole role, QWidget * widget )
@@ -685,7 +653,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETWIDGET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int spacing () const
 */
@@ -698,7 +665,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_SPACING )
   }
 }
 
-
 /*
 int verticalSpacing () const
 */
@@ -710,7 +676,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_VERTICALSPACING )
     RINT( obj->verticalSpacing () );
   }
 }
-
 
 /*
 virtual void addItem ( QLayoutItem * item )
@@ -726,7 +691,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_ADDITEM )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual int count () const
 */
@@ -738,7 +702,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_COUNT )
     RINT( obj->count () );
   }
 }
-
 
 /*
 virtual Qt::Orientations expandingDirections () const
@@ -752,7 +715,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_EXPANDINGDIRECTIONS )
   }
 }
 
-
 /*
 virtual bool hasHeightForWidth () const
 */
@@ -765,7 +727,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_HASHEIGHTFORWIDTH )
   }
 }
 
-
 /*
 virtual int heightForWidth ( int width ) const
 */
@@ -777,7 +738,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_HEIGHTFORWIDTH )
     RINT( obj->heightForWidth ( PINT(1) ) );
   }
 }
-
 
 /*
 virtual void invalidate ()
@@ -792,7 +752,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_INVALIDATE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QLayoutItem * itemAt ( int index ) const
 */
@@ -805,7 +764,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_ITEMAT2 )
     _qt4xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
   }
 }
-
 
 /*
 virtual QSize minimumSize () const
@@ -820,7 +778,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_MINIMUMSIZE )
   }
 }
 
-
 /*
 virtual void setGeometry ( const QRect & rect )
 */
@@ -833,7 +790,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETGEOMETRY )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual QSize sizeHint () const
@@ -848,7 +804,6 @@ HB_FUNC_STATIC( QFORMLAYOUT_SIZEHINT )
   }
 }
 
-
 /*
 virtual QLayoutItem * takeAt ( int index )
 */
@@ -861,8 +816,5 @@ HB_FUNC_STATIC( QFORMLAYOUT_TAKEAT )
     _qt4xhb_createReturnClass ( ptr, "QLAYOUTITEM" );
   }
 }
-
-
-
 
 #pragma ENDDUMP

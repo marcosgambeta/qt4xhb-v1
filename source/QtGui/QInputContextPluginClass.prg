@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -22,6 +22,7 @@ CLASS QInputContextPlugin INHERIT QObject
    METHOD displayName
    METHOD keys
    METHOD languages
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -40,10 +41,10 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
 HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_DELETE )
 {
   QInputContextPlugin * obj = (QInputContextPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -53,9 +54,9 @@ HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual QInputContext * create ( const QString & key ) = 0
@@ -70,7 +71,6 @@ HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_CREATE )
   }
 }
 
-
 /*
 virtual QString description ( const QString & key ) = 0
 */
@@ -82,7 +82,6 @@ HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_DESCRIPTION )
     RQSTRING( obj->description ( PQSTRING(1) ) );
   }
 }
-
 
 /*
 virtual QString displayName ( const QString & key ) = 0
@@ -96,7 +95,6 @@ HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_DISPLAYNAME )
   }
 }
 
-
 /*
 virtual QStringList keys () const = 0
 */
@@ -109,7 +107,6 @@ HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_KEYS )
   }
 }
 
-
 /*
 virtual QStringList languages ( const QString & key ) = 0
 */
@@ -121,8 +118,5 @@ HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_LANGUAGES )
     RQSTRINGLIST( obj->languages ( PQSTRING(1) ) );
   }
 }
-
-
-
 
 #pragma ENDDUMP

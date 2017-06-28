@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -33,11 +33,13 @@ CLASS QTextInlineObject
    METHOD textDirection
    METHOD textPosition
    METHOD width
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -65,10 +67,10 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_DELETE )
 {
   QTextInlineObject * obj = (QTextInlineObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -78,9 +80,9 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 qreal ascent () const
@@ -94,7 +96,6 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_ASCENT )
   }
 }
 
-
 /*
 qreal descent () const
 */
@@ -106,7 +107,6 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_DESCENT )
     RQREAL( obj->descent () );
   }
 }
-
 
 /*
 QTextFormat format () const
@@ -121,7 +121,6 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_FORMAT )
   }
 }
 
-
 /*
 int formatIndex () const
 */
@@ -133,7 +132,6 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_FORMATINDEX )
     RINT( obj->formatIndex () );
   }
 }
-
 
 /*
 qreal height () const
@@ -147,7 +145,6 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_HEIGHT )
   }
 }
 
-
 /*
 bool isValid () const
 */
@@ -159,7 +156,6 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_ISVALID )
     RBOOL( obj->isValid () );
   }
 }
-
 
 /*
 QRectF rect () const
@@ -174,7 +170,6 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_RECT )
   }
 }
 
-
 /*
 void setAscent ( qreal a )
 */
@@ -187,7 +182,6 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_SETASCENT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setDescent ( qreal d )
@@ -202,7 +196,6 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_SETDESCENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setWidth ( qreal w )
 */
@@ -216,7 +209,6 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_SETWIDTH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 Qt::LayoutDirection textDirection () const
 */
@@ -228,7 +220,6 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_TEXTDIRECTION )
     hb_retni( (int) obj->textDirection () );
   }
 }
-
 
 /*
 int textPosition () const
@@ -242,7 +233,6 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_TEXTPOSITION )
   }
 }
 
-
 /*
 qreal width () const
 */
@@ -254,7 +244,6 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_WIDTH )
     RQREAL( obj->width () );
   }
 }
-
 
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_NEWFROM )
 {
@@ -310,6 +299,5 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

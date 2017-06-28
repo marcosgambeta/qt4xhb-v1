@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -28,6 +28,7 @@ CLASS QContextMenuEvent INHERIT QInputEvent
    METHOD reason
    METHOD x
    METHOD y
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -56,7 +57,6 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos )
 */
@@ -66,7 +66,6 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_NEW2 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QContextMenuEvent ( Reason reason, const QPoint & pos )
 */
@@ -75,7 +74,6 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_NEW3 )
   QContextMenuEvent * o = new QContextMenuEvent ( (QContextMenuEvent::Reason) hb_parni(1), *PQPOINT(2) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos, Qt::KeyboardModifiers modifiers )
 //[2]QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos )
@@ -104,6 +102,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_NEW )
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_DELETE )
 {
   QContextMenuEvent * obj = (QContextMenuEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -113,9 +112,9 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 const QPoint & globalPos () const
@@ -130,7 +129,6 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALPOS )
   }
 }
 
-
 /*
 int globalX () const
 */
@@ -143,7 +141,6 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALX )
   }
 }
 
-
 /*
 int globalY () const
 */
@@ -155,7 +152,6 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALY )
     RINT( obj->globalY () );
   }
 }
-
 
 /*
 const QPoint & pos () const
@@ -170,7 +166,6 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_POS )
   }
 }
 
-
 /*
 Reason reason () const
 */
@@ -182,7 +177,6 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_REASON )
     hb_retni( (int) obj->reason () );
   }
 }
-
 
 /*
 int x () const
@@ -196,7 +190,6 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_X )
   }
 }
 
-
 /*
 int y () const
 */
@@ -208,8 +201,5 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_Y )
     RINT( obj->y () );
   }
 }
-
-
-
 
 #pragma ENDDUMP

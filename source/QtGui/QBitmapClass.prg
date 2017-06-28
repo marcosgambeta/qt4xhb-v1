@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -27,6 +27,7 @@ CLASS QBitmap INHERIT QPixmap
    METHOD transformed
    METHOD fromData
    METHOD fromImage
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -54,7 +55,6 @@ HB_FUNC_STATIC( QBITMAP_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QBitmap ( const QPixmap & pixmap )
 */
@@ -63,7 +63,6 @@ HB_FUNC_STATIC( QBITMAP_NEW2 )
   QBitmap * o = new QBitmap ( *PQPIXMAP(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QBitmap ( int width, int height )
@@ -74,7 +73,6 @@ HB_FUNC_STATIC( QBITMAP_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QBitmap ( const QSize & size )
 */
@@ -84,7 +82,6 @@ HB_FUNC_STATIC( QBITMAP_NEW4 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QBitmap ( const QString & fileName, const char * format = 0 )
 */
@@ -93,7 +90,6 @@ HB_FUNC_STATIC( QBITMAP_NEW5 )
   QBitmap * o = new QBitmap ( PQSTRING(1), (const char *) ISNIL(2)? 0 : hb_parc(2) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QBitmap ()
 //[2]QBitmap ( const QPixmap & pixmap )
@@ -132,6 +128,7 @@ HB_FUNC_STATIC( QBITMAP_NEW )
 HB_FUNC_STATIC( QBITMAP_DELETE )
 {
   QBitmap * obj = (QBitmap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -141,9 +138,9 @@ HB_FUNC_STATIC( QBITMAP_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void clear ()
@@ -158,7 +155,6 @@ HB_FUNC_STATIC( QBITMAP_CLEAR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QBitmap transformed ( const QTransform & matrix ) const
 */
@@ -172,8 +168,6 @@ HB_FUNC_STATIC( QBITMAP_TRANSFORMED )
   }
 }
 
-
-
 /*
 QBitmap fromData ( const QSize & size, const uchar * bits, QImage::Format monoFormat = QImage::Format_MonoLSB )
 */
@@ -185,7 +179,6 @@ HB_FUNC_STATIC( QBITMAP_FROMDATA )
   _qt4xhb_createReturnClass ( ptr, "QBITMAP", true );
 }
 
-
 /*
 QBitmap fromImage ( const QImage & image, Qt::ImageConversionFlags flags = Qt::AutoColor )
 */
@@ -195,8 +188,5 @@ HB_FUNC_STATIC( QBITMAP_FROMIMAGE )
   QBitmap * ptr = new QBitmap( QBitmap::fromImage ( *PQIMAGE(1), (Qt::ImageConversionFlags) par2 ) );
   _qt4xhb_createReturnClass ( ptr, "QBITMAP", true );
 }
-
-
-
 
 #pragma ENDDUMP

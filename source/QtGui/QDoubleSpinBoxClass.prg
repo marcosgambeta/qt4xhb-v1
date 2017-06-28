@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QDoubleSpinBox INHERIT QAbstractSpinBox
 
@@ -34,8 +33,10 @@ CLASS QDoubleSpinBox INHERIT QAbstractSpinBox
    METHOD fixup
    METHOD validate
    METHOD setValue
+
    METHOD onValueChanged1
    METHOD onValueChanged2
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -63,8 +64,6 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
-
 /*
 QString cleanText () const
 */
@@ -76,7 +75,6 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_CLEANTEXT )
     RQSTRING( obj->cleanText () );
   }
 }
-
 
 /*
 int decimals () const
@@ -90,7 +88,6 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_DECIMALS )
   }
 }
 
-
 /*
 double maximum () const
 */
@@ -102,7 +99,6 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_MAXIMUM )
     RDOUBLE( obj->maximum () );
   }
 }
-
 
 /*
 double minimum () const
@@ -116,7 +112,6 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_MINIMUM )
   }
 }
 
-
 /*
 QString prefix () const
 */
@@ -128,7 +123,6 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_PREFIX )
     RQSTRING( obj->prefix () );
   }
 }
-
 
 /*
 void setDecimals ( int prec )
@@ -143,7 +137,6 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETDECIMALS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setMaximum ( double max )
 */
@@ -156,7 +149,6 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETMAXIMUM )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setMinimum ( double min )
@@ -171,7 +163,6 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETMINIMUM )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPrefix ( const QString & prefix )
 */
@@ -184,7 +175,6 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETPREFIX )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setRange ( double minimum, double maximum )
@@ -199,7 +189,6 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETRANGE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setSingleStep ( double val )
 */
@@ -212,7 +201,6 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETSINGLESTEP )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setSuffix ( const QString & suffix )
@@ -227,7 +215,6 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETSUFFIX )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 double singleStep () const
 */
@@ -239,7 +226,6 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SINGLESTEP )
     RDOUBLE( obj->singleStep () );
   }
 }
-
 
 /*
 QString suffix () const
@@ -253,7 +239,6 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SUFFIX )
   }
 }
 
-
 /*
 virtual QString textFromValue ( double value ) const
 */
@@ -265,7 +250,6 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_TEXTFROMVALUE )
     RQSTRING( obj->textFromValue ( PDOUBLE(1) ) );
   }
 }
-
 
 /*
 double value () const
@@ -279,7 +263,6 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_VALUE )
   }
 }
 
-
 /*
 virtual double valueFromText ( const QString & text ) const
 */
@@ -291,7 +274,6 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_VALUEFROMTEXT )
     RDOUBLE( obj->valueFromText ( PQSTRING(1) ) );
   }
 }
-
 
 /*
 virtual void fixup ( QString & input ) const
@@ -307,7 +289,6 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_FIXUP ) // TODO: revisar implementacao e corrigir
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QValidator::State validate ( QString & text, int & pos ) const
 */
@@ -322,7 +303,6 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_VALIDATE ) // TODO: revisar implementacao e corri
   }
 }
 
-
 /*
 void setValue ( double val )
 */
@@ -335,9 +315,5 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETVALUE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

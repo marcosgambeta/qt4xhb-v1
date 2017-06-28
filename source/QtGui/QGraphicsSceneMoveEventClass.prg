@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -20,6 +20,7 @@ CLASS QGraphicsSceneMoveEvent INHERIT QGraphicsSceneEvent
    METHOD delete
    METHOD newPos
    METHOD oldPos
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -47,10 +48,10 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_DELETE )
 {
   QGraphicsSceneMoveEvent * obj = (QGraphicsSceneMoveEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -60,9 +61,9 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QPointF newPos () const
@@ -77,7 +78,6 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_NEWPOS )
   }
 }
 
-
 /*
 QPointF oldPos () const
 */
@@ -90,8 +90,5 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_OLDPOS )
     _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
-
-
-
 
 #pragma ENDDUMP

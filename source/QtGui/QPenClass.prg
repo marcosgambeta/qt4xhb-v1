@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -48,11 +48,13 @@ CLASS QPen
    METHOD style
    METHOD width
    METHOD widthF
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -80,7 +82,6 @@ HB_FUNC_STATIC( QPEN_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QPen ( Qt::PenStyle style )
 */
@@ -89,7 +90,6 @@ HB_FUNC_STATIC( QPEN_NEW2 )
   QPen * o = new QPen ( (Qt::PenStyle) hb_parni(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QPen ( const QColor & color )
@@ -100,7 +100,6 @@ HB_FUNC_STATIC( QPEN_NEW3 )
   QPen * o = new QPen ( par1 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QPen ( const QBrush & brush, qreal width, Qt::PenStyle style = Qt::SolidLine, Qt::PenCapStyle cap = Qt::SquareCap, Qt::PenJoinStyle join = Qt::BevelJoin )
@@ -114,7 +113,6 @@ HB_FUNC_STATIC( QPEN_NEW4 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QPen ( const QPen & pen )
 */
@@ -123,7 +121,6 @@ HB_FUNC_STATIC( QPEN_NEW5 )
   QPen * o = new QPen ( *PQPEN(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QPen ()
 //[2]QPen ( Qt::PenStyle style )
@@ -162,6 +159,7 @@ HB_FUNC_STATIC( QPEN_NEW )
 HB_FUNC_STATIC( QPEN_DELETE )
 {
   QPen * obj = (QPen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -171,9 +169,9 @@ HB_FUNC_STATIC( QPEN_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QBrush brush () const
@@ -188,7 +186,6 @@ HB_FUNC_STATIC( QPEN_BRUSH )
   }
 }
 
-
 /*
 Qt::PenCapStyle capStyle () const
 */
@@ -200,7 +197,6 @@ HB_FUNC_STATIC( QPEN_CAPSTYLE )
     hb_retni( (int) obj->capStyle () );
   }
 }
-
 
 /*
 QColor color () const
@@ -215,7 +211,6 @@ HB_FUNC_STATIC( QPEN_COLOR )
   }
 }
 
-
 /*
 qreal dashOffset () const
 */
@@ -227,7 +222,6 @@ HB_FUNC_STATIC( QPEN_DASHOFFSET )
     RQREAL( obj->dashOffset () );
   }
 }
-
 
 /*
 QVector<qreal> dashPattern () const
@@ -251,7 +245,6 @@ HB_FUNC_STATIC( QPEN_DASHPATTERN )
   }
 }
 
-
 /*
 bool isCosmetic () const
 */
@@ -263,7 +256,6 @@ HB_FUNC_STATIC( QPEN_ISCOSMETIC )
     RBOOL( obj->isCosmetic () );
   }
 }
-
 
 /*
 bool isSolid () const
@@ -277,7 +269,6 @@ HB_FUNC_STATIC( QPEN_ISSOLID )
   }
 }
 
-
 /*
 Qt::PenJoinStyle joinStyle () const
 */
@@ -289,7 +280,6 @@ HB_FUNC_STATIC( QPEN_JOINSTYLE )
     hb_retni( (int) obj->joinStyle () );
   }
 }
-
 
 /*
 qreal miterLimit () const
@@ -303,7 +293,6 @@ HB_FUNC_STATIC( QPEN_MITERLIMIT )
   }
 }
 
-
 /*
 void setBrush ( const QBrush & brush )
 */
@@ -316,7 +305,6 @@ HB_FUNC_STATIC( QPEN_SETBRUSH )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setCapStyle ( Qt::PenCapStyle style )
@@ -332,7 +320,6 @@ HB_FUNC_STATIC( QPEN_SETCAPSTYLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setColor ( const QColor & color )
 */
@@ -347,7 +334,6 @@ HB_FUNC_STATIC( QPEN_SETCOLOR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setCosmetic ( bool cosmetic )
 */
@@ -361,7 +347,6 @@ HB_FUNC_STATIC( QPEN_SETCOSMETIC )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setDashOffset ( qreal offset )
 */
@@ -374,7 +359,6 @@ HB_FUNC_STATIC( QPEN_SETDASHOFFSET )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setDashPattern ( const QVector<qreal> & pattern )
@@ -399,7 +383,6 @@ par1 << temp1;
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setJoinStyle ( Qt::PenJoinStyle style )
 */
@@ -414,7 +397,6 @@ HB_FUNC_STATIC( QPEN_SETJOINSTYLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setMiterLimit ( qreal limit )
 */
@@ -427,7 +409,6 @@ HB_FUNC_STATIC( QPEN_SETMITERLIMIT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setStyle ( Qt::PenStyle style )
@@ -443,7 +424,6 @@ HB_FUNC_STATIC( QPEN_SETSTYLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setWidth ( int width )
 */
@@ -456,7 +436,6 @@ HB_FUNC_STATIC( QPEN_SETWIDTH )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setWidthF ( qreal width )
@@ -471,7 +450,6 @@ HB_FUNC_STATIC( QPEN_SETWIDTHF )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 Qt::PenStyle style () const
 */
@@ -483,7 +461,6 @@ HB_FUNC_STATIC( QPEN_STYLE )
     hb_retni( (int) obj->style () );
   }
 }
-
 
 /*
 int width () const
@@ -497,7 +474,6 @@ HB_FUNC_STATIC( QPEN_WIDTH )
   }
 }
 
-
 /*
 qreal widthF () const
 */
@@ -509,7 +485,6 @@ HB_FUNC_STATIC( QPEN_WIDTHF )
     RQREAL( obj->widthF () );
   }
 }
-
 
 HB_FUNC_STATIC( QPEN_NEWFROM )
 {
@@ -565,6 +540,5 @@ HB_FUNC_STATIC( QPEN_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

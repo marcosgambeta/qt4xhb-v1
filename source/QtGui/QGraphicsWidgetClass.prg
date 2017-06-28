@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -83,7 +83,9 @@ CLASS QGraphicsWidget INHERIT QGraphicsObject,QGraphicsLayoutItem
    METHOD type
    METHOD close
    METHOD setTabOrder
+
    METHOD onGeometryChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -112,10 +114,10 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QGRAPHICSWIDGET_DELETE )
 {
   QGraphicsWidget * obj = (QGraphicsWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -125,9 +127,9 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QList<QAction *> actions () const
@@ -172,7 +174,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_ACTIONS )
   }
 }
 
-
 /*
 void addAction ( QAction * action )
 */
@@ -185,7 +186,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_ADDACTION )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void addActions ( QList<QAction *> actions )
@@ -207,7 +207,6 @@ par1 << (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void adjustSize ()
 */
@@ -221,7 +220,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_ADJUSTSIZE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool autoFillBackground () const
 */
@@ -234,7 +232,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_AUTOFILLBACKGROUND )
   }
 }
 
-
 /*
 Qt::FocusPolicy focusPolicy () const
 */
@@ -246,7 +243,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_FOCUSPOLICY )
     hb_retni( (int) obj->focusPolicy () );
   }
 }
-
 
 /*
 QGraphicsWidget * focusWidget () const
@@ -261,7 +257,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_FOCUSWIDGET )
   }
 }
 
-
 /*
 QFont font () const
 */
@@ -274,7 +269,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_FONT )
     _qt4xhb_createReturnClass ( ptr, "QFONT", true );
   }
 }
-
 
 /*
 void getWindowFrameMargins ( qreal * left, qreal * top, qreal * right, qreal * bottom ) const
@@ -297,7 +291,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_GETWINDOWFRAMEMARGINS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int grabShortcut ( const QKeySequence & sequence, Qt::ShortcutContext context = Qt::WindowShortcut )
 */
@@ -311,7 +304,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_GRABSHORTCUT )
   }
 }
 
-
 /*
 void insertAction ( QAction * before, QAction * action )
 */
@@ -324,7 +316,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_INSERTACTION )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void insertActions ( QAction * before, QList<QAction *> actions )
@@ -346,7 +337,6 @@ par2 << (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool isActiveWindow () const
 */
@@ -358,7 +348,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_ISACTIVEWINDOW )
     RBOOL( obj->isActiveWindow () );
   }
 }
-
 
 /*
 QGraphicsLayout * layout () const
@@ -373,7 +362,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_LAYOUT )
   }
 }
 
-
 /*
 Qt::LayoutDirection layoutDirection () const
 */
@@ -385,7 +373,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_LAYOUTDIRECTION )
     hb_retni( (int) obj->layoutDirection () );
   }
 }
-
 
 /*
 virtual void paintWindowFrame ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
@@ -401,7 +388,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_PAINTWINDOWFRAME )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QPalette palette () const
 */
@@ -414,7 +400,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_PALETTE )
     _qt4xhb_createReturnClass ( ptr, "QPALETTE", true );
   }
 }
-
 
 /*
 QRectF rect () const
@@ -429,7 +414,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_RECT )
   }
 }
 
-
 /*
 void releaseShortcut ( int id )
 */
@@ -442,7 +426,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_RELEASESHORTCUT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void removeAction ( QAction * action )
@@ -457,7 +440,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_REMOVEACTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void resize ( const QSizeF & size )
 */
@@ -471,7 +453,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_RESIZE1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void resize ( qreal w, qreal h )
 */
@@ -484,7 +465,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_RESIZE2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void resize ( const QSizeF & size )
 //[2]void resize ( qreal w, qreal h )
@@ -515,7 +495,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETATTRIBUTE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setAutoFillBackground ( bool enabled )
 */
@@ -529,7 +508,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETAUTOFILLBACKGROUND )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setContentsMargins ( qreal left, qreal top, qreal right, qreal bottom )
 */
@@ -542,7 +520,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETCONTENTSMARGINS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setFocusPolicy ( Qt::FocusPolicy policy )
@@ -558,7 +535,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETFOCUSPOLICY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setFont ( const QFont & font )
 */
@@ -572,7 +548,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETFONT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setGeometry ( qreal x, qreal y, qreal w, qreal h )
 */
@@ -585,7 +560,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETGEOMETRY1 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setLayout ( QGraphicsLayout * layout )
@@ -601,7 +575,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETLAYOUT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setLayoutDirection ( Qt::LayoutDirection direction )
 */
@@ -616,7 +589,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETLAYOUTDIRECTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPalette ( const QPalette & palette )
 */
@@ -629,7 +601,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETPALETTE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setShortcutAutoRepeat ( int id, bool enabled = true )
@@ -644,7 +615,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETSHORTCUTAUTOREPEAT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setShortcutEnabled ( int id, bool enabled = true )
 */
@@ -657,7 +627,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETSHORTCUTENABLED )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setStyle ( QStyle * style )
@@ -673,7 +642,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETSTYLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setWindowFlags ( Qt::WindowFlags wFlags )
 */
@@ -688,7 +656,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETWINDOWFLAGS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setWindowFrameMargins ( qreal left, qreal top, qreal right, qreal bottom )
 */
@@ -701,7 +668,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETWINDOWFRAMEMARGINS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setWindowTitle ( const QString & title )
@@ -716,7 +682,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETWINDOWTITLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QSizeF size () const
 */
@@ -729,7 +694,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SIZE )
     _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
-
 
 /*
 QStyle * style () const
@@ -744,7 +708,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_STYLE )
   }
 }
 
-
 /*
 bool testAttribute ( Qt::WidgetAttribute attribute ) const
 */
@@ -757,7 +720,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_TESTATTRIBUTE )
     RBOOL( obj->testAttribute ( (Qt::WidgetAttribute) par1 ) );
   }
 }
-
 
 /*
 void unsetLayoutDirection ()
@@ -772,7 +734,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_UNSETLAYOUTDIRECTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void unsetWindowFrameMargins ()
 */
@@ -786,7 +747,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_UNSETWINDOWFRAMEMARGINS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 Qt::WindowFlags windowFlags () const
 */
@@ -798,7 +758,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_WINDOWFLAGS )
     hb_retni( (int) obj->windowFlags () );
   }
 }
-
 
 /*
 QRectF windowFrameGeometry () const
@@ -813,7 +772,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_WINDOWFRAMEGEOMETRY )
   }
 }
 
-
 /*
 QRectF windowFrameRect () const
 */
@@ -827,7 +785,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_WINDOWFRAMERECT )
   }
 }
 
-
 /*
 QString windowTitle () const
 */
@@ -839,7 +796,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_WINDOWTITLE )
     RQSTRING( obj->windowTitle () );
   }
 }
-
 
 /*
 Qt::WindowType windowType () const
@@ -853,7 +809,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_WINDOWTYPE )
   }
 }
 
-
 /*
 virtual QRectF boundingRect () const
 */
@@ -866,7 +821,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_BOUNDINGRECT )
     _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
-
 
 /*
 virtual void getContentsMargins ( qreal * left, qreal * top, qreal * right, qreal * bottom ) const
@@ -889,7 +843,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_GETCONTENTSMARGINS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
 */
@@ -904,7 +857,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_PAINT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void setGeometry ( const QRectF & rect )
 */
@@ -917,7 +869,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETGEOMETRY2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setGeometry ( qreal x, qreal y, qreal w, qreal h )
 //[2]virtual void setGeometry ( const QRectF & rect )
@@ -947,7 +898,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SHAPE )
   }
 }
 
-
 /*
 virtual int type () const
 */
@@ -959,7 +909,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_TYPE )
     RINT( obj->type () );
   }
 }
-
 
 /*
 bool close ()
@@ -973,8 +922,6 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_CLOSE )
   }
 }
 
-
-
 /*
 void setTabOrder ( QGraphicsWidget * first, QGraphicsWidget * second )
 */
@@ -985,9 +932,5 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETTABORDER )
   QGraphicsWidget::setTabOrder ( par1, par2 );
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

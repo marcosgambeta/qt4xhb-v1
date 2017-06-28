@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -69,11 +69,13 @@ CLASS QPlatformWindowFormat
    METHOD windowApi
    METHOD defaultFormat
    METHOD setDefaultFormat
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -101,7 +103,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QPlatformWindowFormat ( FormatOptions options )
 */
@@ -112,7 +113,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_NEW2 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QPlatformWindowFormat ( const QPlatformWindowFormat & other )
 */
@@ -121,7 +121,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_NEW3 )
   QPlatformWindowFormat * o = new QPlatformWindowFormat ( *PQPLATFORMWINDOWFORMAT(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QPlatformWindowFormat ()
 //[2]QPlatformWindowFormat ( FormatOptions options )
@@ -150,6 +149,7 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_NEW )
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_DELETE )
 {
   QPlatformWindowFormat * obj = (QPlatformWindowFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -159,9 +159,9 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 bool accum () const
@@ -175,7 +175,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_ACCUM )
   }
 }
 
-
 /*
 int accumBufferSize () const
 */
@@ -187,7 +186,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_ACCUMBUFFERSIZE )
     RINT( obj->accumBufferSize () );
   }
 }
-
 
 /*
 bool alpha () const
@@ -201,7 +199,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_ALPHA )
   }
 }
 
-
 /*
 int alphaBufferSize () const
 */
@@ -213,7 +210,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_ALPHABUFFERSIZE )
     RINT( obj->alphaBufferSize () );
   }
 }
-
 
 /*
 int blueBufferSize () const
@@ -227,7 +223,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_BLUEBUFFERSIZE )
   }
 }
 
-
 /*
 bool depth () const
 */
@@ -239,7 +234,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_DEPTH )
     RBOOL( obj->depth () );
   }
 }
-
 
 /*
 int depthBufferSize () const
@@ -253,7 +247,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_DEPTHBUFFERSIZE )
   }
 }
 
-
 /*
 bool directRendering () const
 */
@@ -265,7 +258,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_DIRECTRENDERING )
     RBOOL( obj->directRendering () );
   }
 }
-
 
 /*
 bool doubleBuffer () const
@@ -279,7 +271,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_DOUBLEBUFFER )
   }
 }
 
-
 /*
 int greenBufferSize () const
 */
@@ -291,7 +282,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_GREENBUFFERSIZE )
     RINT( obj->greenBufferSize () );
   }
 }
-
 
 /*
 bool hasWindowSurface () const
@@ -305,7 +295,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_HASWINDOWSURFACE )
   }
 }
 
-
 /*
 int redBufferSize () const
 */
@@ -317,7 +306,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_REDBUFFERSIZE )
     RINT( obj->redBufferSize () );
   }
 }
-
 
 /*
 bool rgba () const
@@ -331,7 +319,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_RGBA )
   }
 }
 
-
 /*
 bool sampleBuffers () const
 */
@@ -344,7 +331,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SAMPLEBUFFERS )
   }
 }
 
-
 /*
 int samples () const
 */
@@ -356,7 +342,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SAMPLES )
     RINT( obj->samples () );
   }
 }
-
 
 /*
 void setAccum ( bool enable )
@@ -371,7 +356,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETACCUM )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setAccumBufferSize ( int size )
 */
@@ -384,7 +368,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETACCUMBUFFERSIZE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setAlpha ( bool enable )
@@ -399,7 +382,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETALPHA )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setAlphaBufferSize ( int size )
 */
@@ -412,7 +394,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETALPHABUFFERSIZE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setBlueBufferSize ( int size )
@@ -427,7 +408,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETBLUEBUFFERSIZE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setDepth ( bool enable )
 */
@@ -440,7 +420,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETDEPTH )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setDepthBufferSize ( int size )
@@ -455,7 +434,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETDEPTHBUFFERSIZE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setDirectRendering ( bool enable )
 */
@@ -468,7 +446,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETDIRECTRENDERING )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setDoubleBuffer ( bool enable )
@@ -483,7 +460,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETDOUBLEBUFFER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setGreenBufferSize ( int size )
 */
@@ -496,7 +472,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETGREENBUFFERSIZE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setOption ( QPlatformWindowFormat::FormatOptions opt )
@@ -512,7 +487,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETOPTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setRedBufferSize ( int size )
 */
@@ -525,7 +499,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETREDBUFFERSIZE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setRgba ( bool enable )
@@ -540,7 +513,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETRGBA )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setSampleBuffers ( bool enable )
 */
@@ -554,7 +526,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETSAMPLEBUFFERS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setSamples ( int numSamples )
 */
@@ -567,7 +538,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETSAMPLES )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setSharedContext ( QPlatformGLContext * context )
@@ -583,7 +553,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETSHAREDCONTEXT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setStencil ( bool enable )
 */
@@ -596,7 +565,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETSTENCIL )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setStencilBufferSize ( int size )
@@ -611,7 +579,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETSTENCILBUFFERSIZE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setStereo ( bool enable )
 */
@@ -625,7 +592,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETSTEREO )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setSwapInterval ( int interval )
 */
@@ -638,7 +604,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETSWAPINTERVAL )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setWindowApi ( QPlatformWindowFormat::WindowApi api )
@@ -654,7 +619,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETWINDOWAPI )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setWindowSurface ( bool enable )
 */
@@ -667,7 +631,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETWINDOWSURFACE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QPlatformGLContext * sharedGLContext () const
@@ -682,7 +645,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SHAREDGLCONTEXT )
   }
 }
 
-
 /*
 bool stencil () const
 */
@@ -694,7 +656,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_STENCIL )
     RBOOL( obj->stencil () );
   }
 }
-
 
 /*
 int stencilBufferSize () const
@@ -708,7 +669,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_STENCILBUFFERSIZE )
   }
 }
 
-
 /*
 bool stereo () const
 */
@@ -721,7 +681,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_STEREO )
   }
 }
 
-
 /*
 int swapInterval () const
 */
@@ -733,7 +692,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SWAPINTERVAL )
     RINT( obj->swapInterval () );
   }
 }
-
 
 /*
 bool testOption ( QPlatformWindowFormat::FormatOptions opt ) const
@@ -748,7 +706,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_TESTOPTION )
   }
 }
 
-
 /*
 WindowApi windowApi () const
 */
@@ -761,8 +718,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_WINDOWAPI )
   }
 }
 
-
-
 /*
 QPlatformWindowFormat defaultFormat ()
 */
@@ -772,7 +727,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_DEFAULTFORMAT )
   _qt4xhb_createReturnClass ( ptr, "QPLATFORMWINDOWFORMAT" );
 }
 
-
 /*
 void setDefaultFormat ( const QPlatformWindowFormat & f )
 */
@@ -781,7 +735,6 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETDEFAULTFORMAT )
   QPlatformWindowFormat::setDefaultFormat ( *PQPLATFORMWINDOWFORMAT(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_NEWFROM )
 {
@@ -837,6 +790,5 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

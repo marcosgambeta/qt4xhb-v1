@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -42,11 +42,13 @@ CLASS QImageWriter
    METHOD supportsOption
    METHOD write
    METHOD supportedImageFormats
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -74,7 +76,6 @@ HB_FUNC_STATIC( QIMAGEWRITER_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QImageWriter ( QIODevice * device, const QByteArray & format )
 */
@@ -83,7 +84,6 @@ HB_FUNC_STATIC( QIMAGEWRITER_NEW2 )
   QImageWriter * o = new QImageWriter ( PQIODEVICE(1), *PQBYTEARRAY(2) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QImageWriter ( const QString & fileName, const QByteArray & format = QByteArray() )
@@ -94,7 +94,6 @@ HB_FUNC_STATIC( QIMAGEWRITER_NEW3 )
   QImageWriter * o = new QImageWriter ( PQSTRING(1), par2 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QImageWriter ()
 //[2]QImageWriter ( QIODevice * device, const QByteArray & format )
@@ -123,6 +122,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_NEW )
 HB_FUNC_STATIC( QIMAGEWRITER_DELETE )
 {
   QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -132,9 +132,9 @@ HB_FUNC_STATIC( QIMAGEWRITER_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 bool canWrite () const
@@ -148,7 +148,6 @@ HB_FUNC_STATIC( QIMAGEWRITER_CANWRITE )
   }
 }
 
-
 /*
 int compression () const
 */
@@ -160,7 +159,6 @@ HB_FUNC_STATIC( QIMAGEWRITER_COMPRESSION )
     RINT( obj->compression () );
   }
 }
-
 
 /*
 QIODevice * device () const
@@ -175,7 +173,6 @@ HB_FUNC_STATIC( QIMAGEWRITER_DEVICE )
   }
 }
 
-
 /*
 ImageWriterError error () const
 */
@@ -187,7 +184,6 @@ HB_FUNC_STATIC( QIMAGEWRITER_ERROR )
     hb_retni( (int) obj->error () );
   }
 }
-
 
 /*
 QString errorString () const
@@ -201,7 +197,6 @@ HB_FUNC_STATIC( QIMAGEWRITER_ERRORSTRING )
   }
 }
 
-
 /*
 QString fileName () const
 */
@@ -213,7 +208,6 @@ HB_FUNC_STATIC( QIMAGEWRITER_FILENAME )
     RQSTRING( obj->fileName () );
   }
 }
-
 
 /*
 QByteArray format () const
@@ -228,7 +222,6 @@ HB_FUNC_STATIC( QIMAGEWRITER_FORMAT )
   }
 }
 
-
 /*
 float gamma () const
 */
@@ -241,7 +234,6 @@ HB_FUNC_STATIC( QIMAGEWRITER_GAMMA )
   }
 }
 
-
 /*
 int quality () const
 */
@@ -253,7 +245,6 @@ HB_FUNC_STATIC( QIMAGEWRITER_QUALITY )
     RINT( obj->quality () );
   }
 }
-
 
 /*
 void setCompression ( int compression )
@@ -268,7 +259,6 @@ HB_FUNC_STATIC( QIMAGEWRITER_SETCOMPRESSION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setDevice ( QIODevice * device )
 */
@@ -281,7 +271,6 @@ HB_FUNC_STATIC( QIMAGEWRITER_SETDEVICE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setFileName ( const QString & fileName )
@@ -296,7 +285,6 @@ HB_FUNC_STATIC( QIMAGEWRITER_SETFILENAME )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setFormat ( const QByteArray & format )
 */
@@ -309,7 +297,6 @@ HB_FUNC_STATIC( QIMAGEWRITER_SETFORMAT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setGamma ( float gamma )
@@ -324,7 +311,6 @@ HB_FUNC_STATIC( QIMAGEWRITER_SETGAMMA )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setQuality ( int quality )
 */
@@ -337,7 +323,6 @@ HB_FUNC_STATIC( QIMAGEWRITER_SETQUALITY )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setText ( const QString & key, const QString & text )
@@ -352,7 +337,6 @@ HB_FUNC_STATIC( QIMAGEWRITER_SETTEXT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool supportsOption ( QImageIOHandler::ImageOption option ) const
 */
@@ -366,7 +350,6 @@ HB_FUNC_STATIC( QIMAGEWRITER_SUPPORTSOPTION )
   }
 }
 
-
 /*
 bool write ( const QImage & image )
 */
@@ -378,8 +361,6 @@ HB_FUNC_STATIC( QIMAGEWRITER_WRITE )
     RBOOL( obj->write ( *PQIMAGE(1) ) );
   }
 }
-
-
 
 /*
 QList<QByteArray> supportedImageFormats ()
@@ -419,7 +400,6 @@ HB_FUNC_STATIC( QIMAGEWRITER_SUPPORTEDIMAGEFORMATS )
   }
   hb_itemReturnRelease(pArray);
 }
-
 
 HB_FUNC_STATIC( QIMAGEWRITER_NEWFROM )
 {
@@ -475,6 +455,5 @@ HB_FUNC_STATIC( QIMAGEWRITER_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

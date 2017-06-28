@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -28,8 +28,10 @@ CLASS QStackedWidget INHERIT QFrame
    METHOD widget
    METHOD setCurrentIndex
    METHOD setCurrentWidget
+
    METHOD onCurrentChanged
    METHOD onWidgetRemoved
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -57,10 +59,10 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QSTACKEDWIDGET_DELETE )
 {
   QStackedWidget * obj = (QStackedWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -70,9 +72,9 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 int addWidget ( QWidget * widget )
@@ -86,7 +88,6 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_ADDWIDGET )
   }
 }
 
-
 /*
 int count () const
 */
@@ -99,7 +100,6 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_COUNT )
   }
 }
 
-
 /*
 int currentIndex () const
 */
@@ -111,7 +111,6 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_CURRENTINDEX )
     RINT( obj->currentIndex () );
   }
 }
-
 
 /*
 QWidget * currentWidget () const
@@ -126,7 +125,6 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_CURRENTWIDGET )
   }
 }
 
-
 /*
 int indexOf ( QWidget * widget ) const
 */
@@ -139,7 +137,6 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_INDEXOF )
   }
 }
 
-
 /*
 int insertWidget ( int index, QWidget * widget )
 */
@@ -151,7 +148,6 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_INSERTWIDGET )
     RINT( obj->insertWidget ( PINT(1), PQWIDGET(2) ) );
   }
 }
-
 
 /*
 void removeWidget ( QWidget * widget )
@@ -166,7 +162,6 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_REMOVEWIDGET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QWidget * widget ( int index ) const
 */
@@ -179,7 +174,6 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_WIDGET )
     _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
-
 
 /*
 void setCurrentIndex ( int index )
@@ -194,7 +188,6 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_SETCURRENTINDEX )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setCurrentWidget ( QWidget * widget )
 */
@@ -207,10 +200,5 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_SETCURRENTWIDGET )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
-
 
 #pragma ENDDUMP

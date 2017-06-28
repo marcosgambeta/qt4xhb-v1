@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QWindowsMime
 
@@ -16,11 +15,13 @@ CLASS QWindowsMime
 
    METHOD delete
    METHOD registerMimeType
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -39,10 +40,10 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
 HB_FUNC_STATIC( QWINDOWSMIME_DELETE )
 {
   QWindowsMime * obj = (QWindowsMime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -52,16 +53,9 @@ HB_FUNC_STATIC( QWINDOWSMIME_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
-
-
-
-
 
 /*
 int registerMimeType ( const QString & mime )
@@ -70,7 +64,6 @@ HB_FUNC_STATIC( QWINDOWSMIME_REGISTERMIMETYPE )
 {
   RINT( QWindowsMime::registerMimeType ( PQSTRING(1) ) );
 }
-
 
 HB_FUNC_STATIC( QWINDOWSMIME_NEWFROM )
 {
@@ -126,8 +119,5 @@ HB_FUNC_STATIC( QWINDOWSMIME_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
-
 
 #pragma ENDDUMP

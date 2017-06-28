@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -23,6 +23,7 @@ CLASS QRegExpValidator INHERIT QValidator
    METHOD regExp
    METHOD setRegExp
    METHOD validate
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -50,7 +51,6 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QRegExpValidator ( const QRegExp & rx, QObject * parent )
 */
@@ -59,7 +59,6 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW2 )
   QRegExpValidator * o = new QRegExpValidator ( *PQREGEXP(1), PQOBJECT(2) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QRegExpValidator ( QObject * parent = 0 )
 //[2]QRegExpValidator ( const QRegExp & rx, QObject * parent )
@@ -83,6 +82,7 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW )
 HB_FUNC_STATIC( QREGEXPVALIDATOR_DELETE )
 {
   QRegExpValidator * obj = (QRegExpValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -92,9 +92,9 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 const QRegExp & regExp () const
@@ -109,7 +109,6 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_REGEXP )
   }
 }
 
-
 /*
 void setRegExp ( const QRegExp & rx )
 */
@@ -122,7 +121,6 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_SETREGEXP )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual QValidator::State validate ( QString & input, int & pos ) const
@@ -137,9 +135,5 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_VALIDATE ) // TODO: revisar implementacao e cor
     hb_retni( (int) obj->validate ( par1, par2 ) );
   }
 }
-
-
-
-
 
 #pragma ENDDUMP

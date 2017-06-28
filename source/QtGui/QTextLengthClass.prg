@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QTextLength
 
@@ -21,11 +20,13 @@ CLASS QTextLength
    METHOD rawValue
    METHOD type
    METHOD value
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -53,7 +54,6 @@ HB_FUNC_STATIC( QTEXTLENGTH_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QTextLength ( Type type, qreal value )
 */
@@ -62,7 +62,6 @@ HB_FUNC_STATIC( QTEXTLENGTH_NEW2 )
   QTextLength * o = new QTextLength ( (QTextLength::Type) hb_parni(1), PQREAL(2) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QTextLength ()
 //[2]QTextLength ( Type type, qreal value )
@@ -86,6 +85,7 @@ HB_FUNC_STATIC( QTEXTLENGTH_NEW )
 HB_FUNC_STATIC( QTEXTLENGTH_DELETE )
 {
   QTextLength * obj = (QTextLength *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -95,9 +95,9 @@ HB_FUNC_STATIC( QTEXTLENGTH_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 qreal rawValue () const
@@ -111,7 +111,6 @@ HB_FUNC_STATIC( QTEXTLENGTH_RAWVALUE )
   }
 }
 
-
 /*
 Type type () const
 */
@@ -124,7 +123,6 @@ HB_FUNC_STATIC( QTEXTLENGTH_TYPE )
   }
 }
 
-
 /*
 qreal value ( qreal maximumLength ) const
 */
@@ -136,7 +134,6 @@ HB_FUNC_STATIC( QTEXTLENGTH_VALUE )
     RQREAL( obj->value ( PQREAL(1) ) );
   }
 }
-
 
 HB_FUNC_STATIC( QTEXTLENGTH_NEWFROM )
 {
@@ -192,6 +189,5 @@ HB_FUNC_STATIC( QTEXTLENGTH_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

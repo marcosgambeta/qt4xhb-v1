@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -77,11 +77,13 @@ CLASS QTransform
    METHOD quadToQuad
    METHOD quadToSquare
    METHOD squareToQuad
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -109,7 +111,6 @@ HB_FUNC_STATIC( QTRANSFORM_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QTransform ( qreal m11, qreal m12, qreal m13, qreal m21, qreal m22, qreal m23, qreal m31, qreal m32, qreal m33 = 1.0 )
 */
@@ -118,7 +119,6 @@ HB_FUNC_STATIC( QTRANSFORM_NEW2 )
   QTransform * o = new QTransform ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6), PQREAL(7), PQREAL(8), (qreal) ISNIL(9)? 1.0 : hb_parnd(9) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QTransform ( qreal m11, qreal m12, qreal m21, qreal m22, qreal dx, qreal dy )
@@ -129,7 +129,6 @@ HB_FUNC_STATIC( QTRANSFORM_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QTransform ( const QMatrix & matrix )
 */
@@ -138,7 +137,6 @@ HB_FUNC_STATIC( QTRANSFORM_NEW4 )
   QTransform * o = new QTransform ( *PQMATRIX(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QTransform ()
 //[2]QTransform ( qreal m11, qreal m12, qreal m13, qreal m21, qreal m22, qreal m23, qreal m31, qreal m32, qreal m33 = 1.0 )
@@ -172,6 +170,7 @@ HB_FUNC_STATIC( QTRANSFORM_NEW )
 HB_FUNC_STATIC( QTRANSFORM_DELETE )
 {
   QTransform * obj = (QTransform *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -181,9 +180,9 @@ HB_FUNC_STATIC( QTRANSFORM_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 qreal m11 () const
@@ -197,7 +196,6 @@ HB_FUNC_STATIC( QTRANSFORM_M11 )
   }
 }
 
-
 /*
 qreal m12 () const
 */
@@ -209,7 +207,6 @@ HB_FUNC_STATIC( QTRANSFORM_M12 )
     RQREAL( obj->m12 () );
   }
 }
-
 
 /*
 qreal m13 () const
@@ -223,7 +220,6 @@ HB_FUNC_STATIC( QTRANSFORM_M13 )
   }
 }
 
-
 /*
 qreal m21 () const
 */
@@ -235,7 +231,6 @@ HB_FUNC_STATIC( QTRANSFORM_M21 )
     RQREAL( obj->m21 () );
   }
 }
-
 
 /*
 qreal m22 () const
@@ -249,7 +244,6 @@ HB_FUNC_STATIC( QTRANSFORM_M22 )
   }
 }
 
-
 /*
 qreal m23 () const
 */
@@ -261,7 +255,6 @@ HB_FUNC_STATIC( QTRANSFORM_M23 )
     RQREAL( obj->m23 () );
   }
 }
-
 
 /*
 qreal m31 () const
@@ -275,7 +268,6 @@ HB_FUNC_STATIC( QTRANSFORM_M31 )
   }
 }
 
-
 /*
 qreal m32 () const
 */
@@ -288,7 +280,6 @@ HB_FUNC_STATIC( QTRANSFORM_M32 )
   }
 }
 
-
 /*
 qreal m33 () const
 */
@@ -300,7 +291,6 @@ HB_FUNC_STATIC( QTRANSFORM_M33 )
     RQREAL( obj->m33 () );
   }
 }
-
 
 /*
 QTransform adjoint () const
@@ -315,7 +305,6 @@ HB_FUNC_STATIC( QTRANSFORM_ADJOINT )
   }
 }
 
-
 /*
 qreal determinant () const
 */
@@ -327,7 +316,6 @@ HB_FUNC_STATIC( QTRANSFORM_DETERMINANT )
     RQREAL( obj->determinant () );
   }
 }
-
 
 /*
 qreal dx () const
@@ -341,7 +329,6 @@ HB_FUNC_STATIC( QTRANSFORM_DX )
   }
 }
 
-
 /*
 qreal dy () const
 */
@@ -353,7 +340,6 @@ HB_FUNC_STATIC( QTRANSFORM_DY )
     RQREAL( obj->dy () );
   }
 }
-
 
 /*
 QTransform inverted ( bool * invertible = 0 ) const
@@ -370,7 +356,6 @@ HB_FUNC_STATIC( QTRANSFORM_INVERTED )
   }
 }
 
-
 /*
 bool isAffine () const
 */
@@ -382,7 +367,6 @@ HB_FUNC_STATIC( QTRANSFORM_ISAFFINE )
     RBOOL( obj->isAffine () );
   }
 }
-
 
 /*
 bool isIdentity () const
@@ -396,7 +380,6 @@ HB_FUNC_STATIC( QTRANSFORM_ISIDENTITY )
   }
 }
 
-
 /*
 bool isInvertible () const
 */
@@ -408,7 +391,6 @@ HB_FUNC_STATIC( QTRANSFORM_ISINVERTIBLE )
     RBOOL( obj->isInvertible () );
   }
 }
-
 
 /*
 bool isRotating () const
@@ -422,7 +404,6 @@ HB_FUNC_STATIC( QTRANSFORM_ISROTATING )
   }
 }
 
-
 /*
 bool isScaling () const
 */
@@ -435,7 +416,6 @@ HB_FUNC_STATIC( QTRANSFORM_ISSCALING )
   }
 }
 
-
 /*
 bool isTranslating () const
 */
@@ -447,7 +427,6 @@ HB_FUNC_STATIC( QTRANSFORM_ISTRANSLATING )
     RBOOL( obj->isTranslating () );
   }
 }
-
 
 /*
 void map ( qreal x, qreal y, qreal * tx, qreal * ty ) const
@@ -466,7 +445,6 @@ HB_FUNC_STATIC( QTRANSFORM_MAP1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QPointF map ( const QPointF & p ) const
 */
@@ -479,7 +457,6 @@ HB_FUNC_STATIC( QTRANSFORM_MAP2 )
     _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
-
 
 /*
 QPoint map ( const QPoint & point ) const
@@ -494,7 +471,6 @@ HB_FUNC_STATIC( QTRANSFORM_MAP3 )
   }
 }
 
-
 /*
 QLine map ( const QLine & l ) const
 */
@@ -507,7 +483,6 @@ HB_FUNC_STATIC( QTRANSFORM_MAP4 )
     _qt4xhb_createReturnClass ( ptr, "QLINE", true );
   }
 }
-
 
 /*
 QLineF map ( const QLineF & line ) const
@@ -522,7 +497,6 @@ HB_FUNC_STATIC( QTRANSFORM_MAP5 )
   }
 }
 
-
 /*
 QPolygonF map ( const QPolygonF & polygon ) const
 */
@@ -535,7 +509,6 @@ HB_FUNC_STATIC( QTRANSFORM_MAP6 )
     _qt4xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
-
 
 /*
 QPolygon map ( const QPolygon & polygon ) const
@@ -550,7 +523,6 @@ HB_FUNC_STATIC( QTRANSFORM_MAP7 )
   }
 }
 
-
 /*
 QRegion map ( const QRegion & region ) const
 */
@@ -564,7 +536,6 @@ HB_FUNC_STATIC( QTRANSFORM_MAP8 )
   }
 }
 
-
 /*
 QPainterPath map ( const QPainterPath & path ) const
 */
@@ -577,7 +548,6 @@ HB_FUNC_STATIC( QTRANSFORM_MAP9 )
     _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
-
 
 /*
 void map ( int x, int y, int * tx, int * ty ) const
@@ -595,7 +565,6 @@ HB_FUNC_STATIC( QTRANSFORM_MAP10 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[01]void map ( qreal x, qreal y, qreal * tx, qreal * ty ) const
 //[02]QPointF map ( const QPointF & p ) const
@@ -667,7 +636,6 @@ HB_FUNC_STATIC( QTRANSFORM_MAPRECT1 )
   }
 }
 
-
 /*
 QRect mapRect ( const QRect & rectangle ) const
 */
@@ -680,7 +648,6 @@ HB_FUNC_STATIC( QTRANSFORM_MAPRECT2 )
     _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
-
 
 //[1]QRectF mapRect ( const QRectF & rectangle ) const
 //[2]QRect mapRect ( const QRect & rectangle ) const
@@ -710,7 +677,6 @@ HB_FUNC_STATIC( QTRANSFORM_MAPTOPOLYGON )
   }
 }
 
-
 /*
 void reset ()
 */
@@ -723,10 +689,6 @@ HB_FUNC_STATIC( QTRANSFORM_RESET )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 /*
 void setMatrix ( qreal m11, qreal m12, qreal m13, qreal m21, qreal m22, qreal m23, qreal m31, qreal m32, qreal m33 )
@@ -741,10 +703,6 @@ HB_FUNC_STATIC( QTRANSFORM_SETMATRIX )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
-
-
 /*
 QTransform transposed () const
 */
@@ -758,7 +716,6 @@ HB_FUNC_STATIC( QTRANSFORM_TRANSPOSED )
   }
 }
 
-
 /*
 TransformationType type () const
 */
@@ -771,8 +728,6 @@ HB_FUNC_STATIC( QTRANSFORM_TYPE )
   }
 }
 
-
-
 /*
 QTransform fromScale ( qreal sx, qreal sy )
 */
@@ -781,7 +736,6 @@ HB_FUNC_STATIC( QTRANSFORM_FROMSCALE )
   QTransform * ptr = new QTransform( QTransform::fromScale ( PQREAL(1), PQREAL(2) ) );
   _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );
 }
-
 
 /*
 QTransform fromTranslate ( qreal dx, qreal dy )
@@ -792,7 +746,6 @@ HB_FUNC_STATIC( QTRANSFORM_FROMTRANSLATE )
   _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );
 }
 
-
 /*
 bool quadToQuad ( const QPolygonF & one, const QPolygonF & two, QTransform & trans )
 */
@@ -800,7 +753,6 @@ HB_FUNC_STATIC( QTRANSFORM_QUADTOQUAD )
 {
   RBOOL( QTransform::quadToQuad ( *PQPOLYGONF(1), *PQPOLYGONF(2), *PQTRANSFORM(3) ) );
 }
-
 
 /*
 bool quadToSquare ( const QPolygonF & quad, QTransform & trans )
@@ -810,7 +762,6 @@ HB_FUNC_STATIC( QTRANSFORM_QUADTOSQUARE )
   RBOOL( QTransform::quadToSquare ( *PQPOLYGONF(1), *PQTRANSFORM(2) ) );
 }
 
-
 /*
 bool squareToQuad ( const QPolygonF & quad, QTransform & trans )
 */
@@ -818,7 +769,6 @@ HB_FUNC_STATIC( QTRANSFORM_SQUARETOQUAD )
 {
   RBOOL( QTransform::squareToQuad ( *PQPOLYGONF(1), *PQTRANSFORM(2) ) );
 }
-
 
 HB_FUNC_STATIC( QTRANSFORM_NEWFROM )
 {
@@ -874,6 +824,5 @@ HB_FUNC_STATIC( QTRANSFORM_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

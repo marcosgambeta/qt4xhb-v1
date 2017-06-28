@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -43,12 +43,14 @@ CLASS QUndoStack INHERIT QObject
    METHOD setClean
    METHOD setIndex
    METHOD undo
+
    METHOD onCanRedoChanged
    METHOD onCanUndoChanged
    METHOD onCleanChanged
    METHOD onIndexChanged
    METHOD onRedoTextChanged
    METHOD onUndoTextChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -76,10 +78,10 @@ HB_FUNC_STATIC( QUNDOSTACK_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QUNDOSTACK_DELETE )
 {
   QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -89,9 +91,9 @@ HB_FUNC_STATIC( QUNDOSTACK_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void beginMacro ( const QString & text )
@@ -106,7 +108,6 @@ HB_FUNC_STATIC( QUNDOSTACK_BEGINMACRO )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool canRedo () const
 */
@@ -118,7 +119,6 @@ HB_FUNC_STATIC( QUNDOSTACK_CANREDO )
     RBOOL( obj->canRedo () );
   }
 }
-
 
 /*
 bool canUndo () const
@@ -132,7 +132,6 @@ HB_FUNC_STATIC( QUNDOSTACK_CANUNDO )
   }
 }
 
-
 /*
 int cleanIndex () const
 */
@@ -144,7 +143,6 @@ HB_FUNC_STATIC( QUNDOSTACK_CLEANINDEX )
     RINT( obj->cleanIndex () );
   }
 }
-
 
 /*
 void clear ()
@@ -159,7 +157,6 @@ HB_FUNC_STATIC( QUNDOSTACK_CLEAR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 const QUndoCommand * command ( int index ) const
 */
@@ -173,7 +170,6 @@ HB_FUNC_STATIC( QUNDOSTACK_COMMAND )
   }
 }
 
-
 /*
 int count () const
 */
@@ -185,7 +181,6 @@ HB_FUNC_STATIC( QUNDOSTACK_COUNT )
     RINT( obj->count () );
   }
 }
-
 
 /*
 QAction * createRedoAction ( QObject * parent, const QString & prefix = QString() ) const
@@ -200,7 +195,6 @@ HB_FUNC_STATIC( QUNDOSTACK_CREATEREDOACTION )
   }
 }
 
-
 /*
 QAction * createUndoAction ( QObject * parent, const QString & prefix = QString() ) const
 */
@@ -213,7 +207,6 @@ HB_FUNC_STATIC( QUNDOSTACK_CREATEUNDOACTION )
     _qt4xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
-
 
 /*
 void endMacro ()
@@ -228,7 +221,6 @@ HB_FUNC_STATIC( QUNDOSTACK_ENDMACRO )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int index () const
 */
@@ -240,7 +232,6 @@ HB_FUNC_STATIC( QUNDOSTACK_INDEX )
     RINT( obj->index () );
   }
 }
-
 
 /*
 bool isActive () const
@@ -254,7 +245,6 @@ HB_FUNC_STATIC( QUNDOSTACK_ISACTIVE )
   }
 }
 
-
 /*
 bool isClean () const
 */
@@ -266,7 +256,6 @@ HB_FUNC_STATIC( QUNDOSTACK_ISCLEAN )
     RBOOL( obj->isClean () );
   }
 }
-
 
 /*
 void push ( QUndoCommand * cmd )
@@ -282,7 +271,6 @@ HB_FUNC_STATIC( QUNDOSTACK_PUSH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString redoText () const
 */
@@ -294,7 +282,6 @@ HB_FUNC_STATIC( QUNDOSTACK_REDOTEXT )
     RQSTRING( obj->redoText () );
   }
 }
-
 
 /*
 void setUndoLimit ( int limit )
@@ -309,7 +296,6 @@ HB_FUNC_STATIC( QUNDOSTACK_SETUNDOLIMIT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString text ( int idx ) const
 */
@@ -321,7 +307,6 @@ HB_FUNC_STATIC( QUNDOSTACK_TEXT )
     RQSTRING( obj->text ( PINT(1) ) );
   }
 }
-
 
 /*
 int undoLimit () const
@@ -335,7 +320,6 @@ HB_FUNC_STATIC( QUNDOSTACK_UNDOLIMIT )
   }
 }
 
-
 /*
 QString undoText () const
 */
@@ -347,7 +331,6 @@ HB_FUNC_STATIC( QUNDOSTACK_UNDOTEXT )
     RQSTRING( obj->undoText () );
   }
 }
-
 
 /*
 void redo ()
@@ -362,7 +345,6 @@ HB_FUNC_STATIC( QUNDOSTACK_REDO )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setActive ( bool active = true )
 */
@@ -375,7 +357,6 @@ HB_FUNC_STATIC( QUNDOSTACK_SETACTIVE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setClean ()
@@ -390,7 +371,6 @@ HB_FUNC_STATIC( QUNDOSTACK_SETCLEAN )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setIndex ( int idx )
 */
@@ -404,7 +384,6 @@ HB_FUNC_STATIC( QUNDOSTACK_SETINDEX )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void undo ()
 */
@@ -417,9 +396,5 @@ HB_FUNC_STATIC( QUNDOSTACK_UNDO )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

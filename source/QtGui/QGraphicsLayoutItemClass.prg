@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -60,6 +60,7 @@ CLASS QGraphicsLayoutItem INHERIT QObject
    METHOD setSizePolicy
    METHOD sizePolicy
    METHOD updateGeometry
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -78,10 +79,10 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_DELETE )
 {
   QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -91,9 +92,9 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QRectF contentsRect () const
@@ -107,7 +108,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_CONTENTSRECT )
     _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
-
 
 /*
 QSizeF effectiveSizeHint ( Qt::SizeHint which, const QSizeF & constraint = QSizeF() ) const
@@ -124,7 +124,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_EFFECTIVESIZEHINT )
   }
 }
 
-
 /*
 QRectF geometry () const
 */
@@ -137,7 +136,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_GEOMETRY )
     _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
-
 
 /*
 virtual void getContentsMargins ( qreal * left, qreal * top, qreal * right, qreal * bottom ) const
@@ -160,7 +158,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_GETCONTENTSMARGINS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QGraphicsItem * graphicsItem () const
 */
@@ -174,7 +171,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_GRAPHICSITEM )
   }
 }
 
-
 /*
 bool isLayout () const
 */
@@ -187,7 +183,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_ISLAYOUT )
   }
 }
 
-
 /*
 qreal maximumHeight () const
 */
@@ -199,7 +194,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MAXIMUMHEIGHT )
     RQREAL( obj->maximumHeight () );
   }
 }
-
 
 /*
 QSizeF maximumSize () const
@@ -214,7 +208,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MAXIMUMSIZE )
   }
 }
 
-
 /*
 qreal maximumWidth () const
 */
@@ -227,7 +220,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MAXIMUMWIDTH )
   }
 }
 
-
 /*
 qreal minimumHeight () const
 */
@@ -239,7 +231,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MINIMUMHEIGHT )
     RQREAL( obj->minimumHeight () );
   }
 }
-
 
 /*
 QSizeF minimumSize () const
@@ -254,7 +245,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MINIMUMSIZE )
   }
 }
 
-
 /*
 qreal minimumWidth () const
 */
@@ -267,7 +257,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MINIMUMWIDTH )
   }
 }
 
-
 /*
 bool ownedByLayout () const
 */
@@ -279,7 +268,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_OWNEDBYLAYOUT )
     RBOOL( obj->ownedByLayout () );
   }
 }
-
 
 /*
 QGraphicsLayoutItem * parentLayoutItem () const
@@ -294,7 +282,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_PARENTLAYOUTITEM )
   }
 }
 
-
 /*
 qreal preferredHeight () const
 */
@@ -306,7 +293,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_PREFERREDHEIGHT )
     RQREAL( obj->preferredHeight () );
   }
 }
-
 
 /*
 QSizeF preferredSize () const
@@ -321,7 +307,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_PREFERREDSIZE )
   }
 }
 
-
 /*
 qreal preferredWidth () const
 */
@@ -333,7 +318,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_PREFERREDWIDTH )
     RQREAL( obj->preferredWidth () );
   }
 }
-
 
 /*
 virtual void setGeometry ( const QRectF & rect )
@@ -348,7 +332,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETGEOMETRY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setMaximumHeight ( qreal height )
 */
@@ -361,7 +344,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMAXIMUMHEIGHT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setMaximumSize ( const QSizeF & size )
@@ -376,7 +358,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMAXIMUMSIZE1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setMaximumSize ( qreal w, qreal h )
 */
@@ -389,7 +370,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMAXIMUMSIZE2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setMaximumSize ( const QSizeF & size )
 //[2]void setMaximumSize ( qreal w, qreal h )
@@ -419,7 +399,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMAXIMUMWIDTH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setMinimumHeight ( qreal height )
 */
@@ -432,7 +411,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMINIMUMHEIGHT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setMinimumSize ( const QSizeF & size )
@@ -447,7 +425,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMINIMUMSIZE1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setMinimumSize ( qreal w, qreal h )
 */
@@ -460,7 +437,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMINIMUMSIZE2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMINIMUMSIZE )
 {
@@ -487,7 +463,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMINIMUMWIDTH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setParentLayoutItem ( QGraphicsLayoutItem * parent )
 */
@@ -502,7 +477,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPARENTLAYOUTITEM )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPreferredHeight ( qreal height )
 */
@@ -515,7 +489,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPREFERREDHEIGHT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setPreferredSize ( const QSizeF & size )
@@ -530,7 +503,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPREFERREDSIZE1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPreferredSize ( qreal w, qreal h )
 */
@@ -543,7 +515,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPREFERREDSIZE2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPREFERREDSIZE )
 {
@@ -570,7 +541,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPREFERREDWIDTH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setSizePolicy ( const QSizePolicy & policy )
 */
@@ -583,7 +553,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETSIZEPOLICY1 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setSizePolicy ( QSizePolicy::Policy hPolicy, QSizePolicy::Policy vPolicy, QSizePolicy::ControlType controlType = QSizePolicy::DefaultType )
@@ -598,7 +567,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETSIZEPOLICY2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setSizePolicy ( const QSizePolicy & policy )
 //[2]void setSizePolicy ( QSizePolicy::Policy hPolicy, QSizePolicy::Policy vPolicy, QSizePolicy::ControlType controlType = QSizePolicy::DefaultType )
@@ -628,7 +596,6 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SIZEPOLICY )
   }
 }
 
-
 /*
 virtual void updateGeometry ()
 */
@@ -641,9 +608,5 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_UPDATEGEOMETRY )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

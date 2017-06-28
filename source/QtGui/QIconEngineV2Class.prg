@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -25,6 +25,7 @@ CLASS QIconEngineV2 INHERIT QIconEngine
    METHOD read
    METHOD virtual_hook
    METHOD write
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -46,6 +47,7 @@ RETURN
 HB_FUNC_STATIC( QICONENGINEV2_DELETE )
 {
   QIconEngineV2 * obj = (QIconEngineV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -55,9 +57,9 @@ HB_FUNC_STATIC( QICONENGINEV2_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QList<QSize> availableSizes ( QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off )
@@ -108,7 +110,6 @@ HB_FUNC_STATIC( QICONENGINEV2_AVAILABLESIZES )
   }
 }
 
-
 /*
 virtual QIconEngineV2 * clone () const
 */
@@ -122,7 +123,6 @@ HB_FUNC_STATIC( QICONENGINEV2_CLONE )
   }
 }
 
-
 /*
 QString iconName ()
 */
@@ -134,7 +134,6 @@ HB_FUNC_STATIC( QICONENGINEV2_ICONNAME )
     RQSTRING( obj->iconName () );
   }
 }
-
 
 /*
 virtual QString key () const
@@ -148,7 +147,6 @@ HB_FUNC_STATIC( QICONENGINEV2_KEY )
   }
 }
 
-
 /*
 virtual bool read ( QDataStream & in )
 */
@@ -161,7 +159,6 @@ HB_FUNC_STATIC( QICONENGINEV2_READ )
     RBOOL( obj->read ( *par1 ) );
   }
 }
-
 
 /*
 virtual void virtual_hook ( int id, void * data )
@@ -177,7 +174,6 @@ HB_FUNC_STATIC( QICONENGINEV2_VIRTUAL_HOOK )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual bool write ( QDataStream & out ) const
 */
@@ -190,8 +186,5 @@ HB_FUNC_STATIC( QICONENGINEV2_WRITE )
     RBOOL( obj->write ( *par1 ) );
   }
 }
-
-
-
 
 #pragma ENDDUMP

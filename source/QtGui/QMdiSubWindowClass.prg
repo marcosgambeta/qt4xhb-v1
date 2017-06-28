@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -36,8 +36,10 @@ CLASS QMdiSubWindow INHERIT QWidget
    METHOD sizeHint
    METHOD showShaded
    METHOD showSystemMenu
+
    METHOD onAboutToActivate
    METHOD onWindowStateChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -66,8 +68,6 @@ HB_FUNC_STATIC( QMDISUBWINDOW_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
-
 /*
 bool isShaded () const
 */
@@ -79,7 +79,6 @@ HB_FUNC_STATIC( QMDISUBWINDOW_ISSHADED )
     RBOOL( obj->isShaded () );
   }
 }
-
 
 /*
 int keyboardPageStep () const
@@ -93,7 +92,6 @@ HB_FUNC_STATIC( QMDISUBWINDOW_KEYBOARDPAGESTEP )
   }
 }
 
-
 /*
 int keyboardSingleStep () const
 */
@@ -105,7 +103,6 @@ HB_FUNC_STATIC( QMDISUBWINDOW_KEYBOARDSINGLESTEP )
     RINT( obj->keyboardSingleStep () );
   }
 }
-
 
 /*
 QMdiArea * mdiArea () const
@@ -120,7 +117,6 @@ HB_FUNC_STATIC( QMDISUBWINDOW_MDIAREA )
   }
 }
 
-
 /*
 void setKeyboardPageStep ( int step )
 */
@@ -134,7 +130,6 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SETKEYBOARDPAGESTEP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setKeyboardSingleStep ( int step )
 */
@@ -147,7 +142,6 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SETKEYBOARDSINGLESTEP )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setOption ( SubWindowOption option, bool on = true )
@@ -163,7 +157,6 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SETOPTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setSystemMenu ( QMenu * systemMenu )
 */
@@ -176,7 +169,6 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SETSYSTEMMENU )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setWidget ( QWidget * widget )
@@ -191,7 +183,6 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SETWIDGET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QMenu * systemMenu () const
 */
@@ -204,7 +195,6 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SYSTEMMENU )
     _qt4xhb_createReturnClass ( ptr, "QMENU" );
   }
 }
-
 
 /*
 bool testOption ( SubWindowOption option ) const
@@ -219,7 +209,6 @@ HB_FUNC_STATIC( QMDISUBWINDOW_TESTOPTION )
   }
 }
 
-
 /*
 QWidget * widget () const
 */
@@ -232,7 +221,6 @@ HB_FUNC_STATIC( QMDISUBWINDOW_WIDGET )
     _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
-
 
 /*
 virtual QSize minimumSizeHint () const
@@ -247,7 +235,6 @@ HB_FUNC_STATIC( QMDISUBWINDOW_MINIMUMSIZEHINT )
   }
 }
 
-
 /*
 virtual QSize sizeHint () const
 */
@@ -260,7 +247,6 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SIZEHINT )
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
-
 
 /*
 void showShaded ()
@@ -275,7 +261,6 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SHOWSHADED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void showSystemMenu ()
 */
@@ -288,9 +273,5 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SHOWSYSTEMMENU )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

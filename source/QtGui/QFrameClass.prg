@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -33,6 +33,7 @@ CLASS QFrame INHERIT QWidget
    METHOD setLineWidth
    METHOD setMidLineWidth
    METHOD sizeHint
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -61,10 +62,10 @@ HB_FUNC_STATIC( QFRAME_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QFRAME_DELETE )
 {
   QFrame * obj = (QFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -74,9 +75,9 @@ HB_FUNC_STATIC( QFRAME_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QRect frameRect () const
@@ -91,7 +92,6 @@ HB_FUNC_STATIC( QFRAME_FRAMERECT )
   }
 }
 
-
 /*
 Shadow frameShadow () const
 */
@@ -103,7 +103,6 @@ HB_FUNC_STATIC( QFRAME_FRAMESHADOW )
     hb_retni( (int) obj->frameShadow () );
   }
 }
-
 
 /*
 Shape frameShape () const
@@ -117,7 +116,6 @@ HB_FUNC_STATIC( QFRAME_FRAMESHAPE )
   }
 }
 
-
 /*
 int frameStyle () const
 */
@@ -129,7 +127,6 @@ HB_FUNC_STATIC( QFRAME_FRAMESTYLE )
     RINT( obj->frameStyle () );
   }
 }
-
 
 /*
 int frameWidth () const
@@ -143,7 +140,6 @@ HB_FUNC_STATIC( QFRAME_FRAMEWIDTH )
   }
 }
 
-
 /*
 int lineWidth () const
 */
@@ -155,7 +151,6 @@ HB_FUNC_STATIC( QFRAME_LINEWIDTH )
     RINT( obj->lineWidth () );
   }
 }
-
 
 /*
 int midLineWidth () const
@@ -169,7 +164,6 @@ HB_FUNC_STATIC( QFRAME_MIDLINEWIDTH )
   }
 }
 
-
 /*
 void setFrameRect ( const QRect & )
 */
@@ -182,7 +176,6 @@ HB_FUNC_STATIC( QFRAME_SETFRAMERECT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setFrameShadow ( Shadow )
@@ -198,7 +191,6 @@ HB_FUNC_STATIC( QFRAME_SETFRAMESHADOW )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setFrameShape ( Shape )
 */
@@ -213,7 +205,6 @@ HB_FUNC_STATIC( QFRAME_SETFRAMESHAPE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setFrameStyle ( int style )
 */
@@ -226,7 +217,6 @@ HB_FUNC_STATIC( QFRAME_SETFRAMESTYLE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setLineWidth ( int )
@@ -241,7 +231,6 @@ HB_FUNC_STATIC( QFRAME_SETLINEWIDTH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setMidLineWidth ( int )
 */
@@ -255,7 +244,6 @@ HB_FUNC_STATIC( QFRAME_SETMIDLINEWIDTH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QSize sizeHint () const
 */
@@ -268,8 +256,5 @@ HB_FUNC_STATIC( QFRAME_SIZEHINT )
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
-
-
-
 
 #pragma ENDDUMP

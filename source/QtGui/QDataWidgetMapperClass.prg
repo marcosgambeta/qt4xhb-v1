@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -49,7 +49,9 @@ CLASS QDataWidgetMapper INHERIT QObject
    METHOD toLast
    METHOD toNext
    METHOD toPrevious
+
    METHOD onCurrentIndexChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -79,10 +81,10 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_DELETE )
 {
   QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -92,9 +94,9 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void addMapping ( QWidget * widget, int section )
@@ -110,7 +112,6 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ADDMAPPING1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void addMapping ( QWidget * widget, int section, const QByteArray & propertyName )
 */
@@ -123,7 +124,6 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ADDMAPPING2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void addMapping ( QWidget * widget, int section )
 //[2]void addMapping ( QWidget * widget, int section, const QByteArray & propertyName )
@@ -153,7 +153,6 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_CLEARMAPPING )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int currentIndex () const
 */
@@ -165,7 +164,6 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_CURRENTINDEX )
     RINT( obj->currentIndex () );
   }
 }
-
 
 /*
 QAbstractItemDelegate * itemDelegate () const
@@ -180,7 +178,6 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ITEMDELEGATE )
   }
 }
 
-
 /*
 QByteArray mappedPropertyName ( QWidget * widget ) const
 */
@@ -194,7 +191,6 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDPROPERTYNAME )
   }
 }
 
-
 /*
 int mappedSection ( QWidget * widget ) const
 */
@@ -206,7 +202,6 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDSECTION )
     RINT( obj->mappedSection ( PQWIDGET(1) ) );
   }
 }
-
 
 /*
 QWidget * mappedWidgetAt ( int section ) const
@@ -221,7 +216,6 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDWIDGETAT )
   }
 }
 
-
 /*
 QAbstractItemModel * model () const
 */
@@ -235,7 +229,6 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_MODEL )
   }
 }
 
-
 /*
 Qt::Orientation orientation () const
 */
@@ -247,7 +240,6 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ORIENTATION )
     RENUM( obj->orientation () );
   }
 }
-
 
 /*
 void removeMapping ( QWidget * widget )
@@ -262,7 +254,6 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_REMOVEMAPPING )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QModelIndex rootIndex () const
 */
@@ -275,7 +266,6 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ROOTINDEX )
     _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
-
 
 /*
 void setItemDelegate ( QAbstractItemDelegate * delegate )
@@ -291,7 +281,6 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETITEMDELEGATE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setModel ( QAbstractItemModel * model )
 */
@@ -306,7 +295,6 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETMODEL )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setOrientation ( Qt::Orientation aOrientation )
 */
@@ -320,7 +308,6 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETORIENTATION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setRootIndex ( const QModelIndex & index )
 */
@@ -333,7 +320,6 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETROOTINDEX )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setSubmitPolicy ( SubmitPolicy policy )
@@ -349,7 +335,6 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETSUBMITPOLICY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 SubmitPolicy submitPolicy () const
 */
@@ -361,7 +346,6 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SUBMITPOLICY )
     hb_retni( (int) obj->submitPolicy () );
   }
 }
-
 
 /*
 void revert ()
@@ -376,7 +360,6 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_REVERT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void setCurrentIndex ( int index )
 */
@@ -389,7 +372,6 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETCURRENTINDEX )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setCurrentModelIndex ( const QModelIndex & index )
@@ -404,7 +386,6 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETCURRENTMODELINDEX )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool submit ()
 */
@@ -416,7 +397,6 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SUBMIT )
     RBOOL( obj->submit () );
   }
 }
-
 
 /*
 void toFirst ()
@@ -431,7 +411,6 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOFIRST )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void toLast ()
 */
@@ -444,7 +423,6 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOLAST )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void toNext ()
@@ -459,7 +437,6 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_TONEXT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void toPrevious ()
 */
@@ -472,9 +449,5 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOPREVIOUS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

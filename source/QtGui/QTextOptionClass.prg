@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QTextOption
 
@@ -33,11 +32,13 @@ CLASS QTextOption
    METHOD textDirection
    METHOD useDesignMetrics
    METHOD wrapMode
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -65,7 +66,6 @@ HB_FUNC_STATIC( QTEXTOPTION_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QTextOption ( Qt::Alignment alignment )
 */
@@ -75,7 +75,6 @@ HB_FUNC_STATIC( QTEXTOPTION_NEW2 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QTextOption ( const QTextOption & other )
 */
@@ -84,7 +83,6 @@ HB_FUNC_STATIC( QTEXTOPTION_NEW3 )
   QTextOption * o = new QTextOption ( *PQTEXTOPTION(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QTextOption ()
 //[2]QTextOption ( Qt::Alignment alignment )
@@ -113,6 +111,7 @@ HB_FUNC_STATIC( QTEXTOPTION_NEW )
 HB_FUNC_STATIC( QTEXTOPTION_DELETE )
 {
   QTextOption * obj = (QTextOption *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -122,9 +121,9 @@ HB_FUNC_STATIC( QTEXTOPTION_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 Qt::Alignment alignment () const
@@ -138,7 +137,6 @@ HB_FUNC_STATIC( QTEXTOPTION_ALIGNMENT )
   }
 }
 
-
 /*
 Flags flags () const
 */
@@ -150,7 +148,6 @@ HB_FUNC_STATIC( QTEXTOPTION_FLAGS )
     hb_retni( (int) obj->flags () );
   }
 }
-
 
 /*
 void setAlignment ( Qt::Alignment alignment )
@@ -165,7 +162,6 @@ HB_FUNC_STATIC( QTEXTOPTION_SETALIGNMENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setFlags ( Flags flags )
 */
@@ -179,7 +175,6 @@ HB_FUNC_STATIC( QTEXTOPTION_SETFLAGS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setTabArray ( QList<qreal> tabStops )
@@ -204,7 +199,6 @@ par1 << temp1;
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setTabStop ( qreal tabStop )
 */
@@ -217,8 +211,6 @@ HB_FUNC_STATIC( QTEXTOPTION_SETTABSTOP )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
 
 /*
 void setTextDirection ( Qt::LayoutDirection direction )
@@ -234,7 +226,6 @@ HB_FUNC_STATIC( QTEXTOPTION_SETTEXTDIRECTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setUseDesignMetrics ( bool enable )
 */
@@ -247,7 +238,6 @@ HB_FUNC_STATIC( QTEXTOPTION_SETUSEDESIGNMETRICS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setWrapMode ( WrapMode mode )
@@ -262,7 +252,6 @@ HB_FUNC_STATIC( QTEXTOPTION_SETWRAPMODE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QList<qreal> tabArray () const
@@ -286,7 +275,6 @@ HB_FUNC_STATIC( QTEXTOPTION_TABARRAY )
   }
 }
 
-
 /*
 qreal tabStop () const
 */
@@ -298,8 +286,6 @@ HB_FUNC_STATIC( QTEXTOPTION_TABSTOP )
     RQREAL( obj->tabStop () );
   }
 }
-
-
 
 /*
 Qt::LayoutDirection textDirection () const
@@ -313,7 +299,6 @@ HB_FUNC_STATIC( QTEXTOPTION_TEXTDIRECTION )
   }
 }
 
-
 /*
 bool useDesignMetrics () const
 */
@@ -326,7 +311,6 @@ HB_FUNC_STATIC( QTEXTOPTION_USEDESIGNMETRICS )
   }
 }
 
-
 /*
 WrapMode wrapMode () const
 */
@@ -338,7 +322,6 @@ HB_FUNC_STATIC( QTEXTOPTION_WRAPMODE )
     hb_retni( (int) obj->wrapMode () );
   }
 }
-
 
 HB_FUNC_STATIC( QTEXTOPTION_NEWFROM )
 {
@@ -394,6 +377,5 @@ HB_FUNC_STATIC( QTEXTOPTION_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

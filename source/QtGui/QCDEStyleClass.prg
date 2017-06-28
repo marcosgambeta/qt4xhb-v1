@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -22,6 +22,7 @@ CLASS QCDEStyle INHERIT QMotifStyle
    METHOD drawPrimitive
    METHOD pixelMetric
    METHOD standardPalette
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -49,10 +50,10 @@ HB_FUNC_STATIC( QCDESTYLE_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QCDESTYLE_DELETE )
 {
   QCDEStyle * obj = (QCDEStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -62,9 +63,9 @@ HB_FUNC_STATIC( QCDESTYLE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void drawControl ( ControlElement element, const QStyleOption * opt, QPainter * p, const QWidget * widget = 0 ) const
@@ -82,7 +83,6 @@ HB_FUNC_STATIC( QCDESTYLE_DRAWCONTROL )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void drawPrimitive ( PrimitiveElement pe, const QStyleOption * opt, QPainter * p, const QWidget * widget = 0 ) const
 */
@@ -99,7 +99,6 @@ HB_FUNC_STATIC( QCDESTYLE_DRAWPRIMITIVE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual int pixelMetric ( PixelMetric metric, const QStyleOption * option = 0, const QWidget * widget = 0 ) const
 */
@@ -115,7 +114,6 @@ HB_FUNC_STATIC( QCDESTYLE_PIXELMETRIC )
   }
 }
 
-
 /*
 virtual QPalette standardPalette () const
 */
@@ -128,8 +126,5 @@ HB_FUNC_STATIC( QCDESTYLE_STANDARDPALETTE )
     _qt4xhb_createReturnClass ( ptr, "QPALETTE", true );
   }
 }
-
-
-
 
 #pragma ENDDUMP

@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -55,10 +55,12 @@ CLASS QCompleter INHERIT QObject
    METHOD complete
    METHOD setCompletionPrefix
    METHOD setWrapAround
+
    METHOD onActivated1
    METHOD onActivated2
    METHOD onHighlighted1
    METHOD onHighlighted2
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -88,7 +90,6 @@ HB_FUNC_STATIC( QCOMPLETER_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QCompleter ( QAbstractItemModel * model, QObject * parent = 0 )
 */
@@ -98,7 +99,6 @@ HB_FUNC_STATIC( QCOMPLETER_NEW2 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QCompleter ( const QStringList & list, QObject * parent = 0 )
 */
@@ -107,7 +107,6 @@ HB_FUNC_STATIC( QCOMPLETER_NEW3 )
   QCompleter * o = new QCompleter ( PQSTRINGLIST(1), OPQOBJECT(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QCompleter ( QObject * parent = 0 )
 //[2]QCompleter ( QAbstractItemModel * model, QObject * parent = 0 )
@@ -136,6 +135,7 @@ HB_FUNC_STATIC( QCOMPLETER_NEW )
 HB_FUNC_STATIC( QCOMPLETER_DELETE )
 {
   QCompleter * obj = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -145,9 +145,9 @@ HB_FUNC_STATIC( QCOMPLETER_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 Qt::CaseSensitivity caseSensitivity () const
@@ -161,7 +161,6 @@ HB_FUNC_STATIC( QCOMPLETER_CASESENSITIVITY )
   }
 }
 
-
 /*
 int completionColumn () const
 */
@@ -173,7 +172,6 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONCOLUMN )
     RINT( obj->completionColumn () );
   }
 }
-
 
 /*
 int completionCount () const
@@ -187,7 +185,6 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONCOUNT )
   }
 }
 
-
 /*
 CompletionMode completionMode () const
 */
@@ -199,7 +196,6 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONMODE )
     hb_retni( (int) obj->completionMode () );
   }
 }
-
 
 /*
 QAbstractItemModel * completionModel () const
@@ -214,7 +210,6 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONMODEL )
   }
 }
 
-
 /*
 QString completionPrefix () const
 */
@@ -226,7 +221,6 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONPREFIX )
     RQSTRING( obj->completionPrefix () );
   }
 }
-
 
 /*
 int completionRole () const
@@ -240,7 +234,6 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONROLE )
   }
 }
 
-
 /*
 QString currentCompletion () const
 */
@@ -252,7 +245,6 @@ HB_FUNC_STATIC( QCOMPLETER_CURRENTCOMPLETION )
     RQSTRING( obj->currentCompletion () );
   }
 }
-
 
 /*
 QModelIndex currentIndex () const
@@ -267,7 +259,6 @@ HB_FUNC_STATIC( QCOMPLETER_CURRENTINDEX )
   }
 }
 
-
 /*
 int currentRow () const
 */
@@ -280,7 +271,6 @@ HB_FUNC_STATIC( QCOMPLETER_CURRENTROW )
   }
 }
 
-
 /*
 int maxVisibleItems () const
 */
@@ -292,7 +282,6 @@ HB_FUNC_STATIC( QCOMPLETER_MAXVISIBLEITEMS )
     RINT( obj->maxVisibleItems () );
   }
 }
-
 
 /*
 QAbstractItemModel * model () const
@@ -307,7 +296,6 @@ HB_FUNC_STATIC( QCOMPLETER_MODEL )
   }
 }
 
-
 /*
 ModelSorting modelSorting () const
 */
@@ -319,7 +307,6 @@ HB_FUNC_STATIC( QCOMPLETER_MODELSORTING )
     hb_retni( (int) obj->modelSorting () );
   }
 }
-
 
 /*
 virtual QString pathFromIndex ( const QModelIndex & index ) const
@@ -333,7 +320,6 @@ HB_FUNC_STATIC( QCOMPLETER_PATHFROMINDEX )
   }
 }
 
-
 /*
 QAbstractItemView * popup () const
 */
@@ -346,7 +332,6 @@ HB_FUNC_STATIC( QCOMPLETER_POPUP )
     _qt4xhb_createReturnClass ( ptr, "QABSTRACTITEMVIEW" );
   }
 }
-
 
 /*
 void setCaseSensitivity ( Qt::CaseSensitivity caseSensitivity )
@@ -362,7 +347,6 @@ HB_FUNC_STATIC( QCOMPLETER_SETCASESENSITIVITY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setCompletionColumn ( int column )
 */
@@ -375,7 +359,6 @@ HB_FUNC_STATIC( QCOMPLETER_SETCOMPLETIONCOLUMN )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setCompletionMode ( CompletionMode mode )
@@ -391,7 +374,6 @@ HB_FUNC_STATIC( QCOMPLETER_SETCOMPLETIONMODE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setCompletionRole ( int role )
 */
@@ -405,7 +387,6 @@ HB_FUNC_STATIC( QCOMPLETER_SETCOMPLETIONROLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool setCurrentRow ( int row )
 */
@@ -417,7 +398,6 @@ HB_FUNC_STATIC( QCOMPLETER_SETCURRENTROW )
     RBOOL( obj->setCurrentRow ( PINT(1) ) );
   }
 }
-
 
 /*
 void setMaxVisibleItems ( int maxItems )
@@ -431,7 +411,6 @@ HB_FUNC_STATIC( QCOMPLETER_SETMAXVISIBLEITEMS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setModel ( QAbstractItemModel * model )
@@ -447,7 +426,6 @@ HB_FUNC_STATIC( QCOMPLETER_SETMODEL )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setModelSorting ( ModelSorting sorting )
 */
@@ -461,7 +439,6 @@ HB_FUNC_STATIC( QCOMPLETER_SETMODELSORTING )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setPopup ( QAbstractItemView * popup )
@@ -477,7 +454,6 @@ HB_FUNC_STATIC( QCOMPLETER_SETPOPUP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setWidget ( QWidget * widget )
 */
@@ -491,7 +467,6 @@ HB_FUNC_STATIC( QCOMPLETER_SETWIDGET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QStringList splitPath ( const QString & path ) const
 */
@@ -503,7 +478,6 @@ HB_FUNC_STATIC( QCOMPLETER_SPLITPATH )
     RQSTRINGLIST( obj->splitPath ( PQSTRING(1) ) );
   }
 }
-
 
 /*
 QWidget * widget () const
@@ -518,7 +492,6 @@ HB_FUNC_STATIC( QCOMPLETER_WIDGET )
   }
 }
 
-
 /*
 bool wrapAround () const
 */
@@ -530,7 +503,6 @@ HB_FUNC_STATIC( QCOMPLETER_WRAPAROUND )
     RBOOL( obj->wrapAround () );
   }
 }
-
 
 /*
 void complete ( const QRect & rect = QRect() )
@@ -546,7 +518,6 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setCompletionPrefix ( const QString & prefix )
 */
@@ -560,7 +531,6 @@ HB_FUNC_STATIC( QCOMPLETER_SETCOMPLETIONPREFIX )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setWrapAround ( bool wrap )
 */
@@ -573,9 +543,5 @@ HB_FUNC_STATIC( QCOMPLETER_SETWRAPAROUND )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -42,8 +42,10 @@ CLASS QMenuBar INHERIT QWidget
    METHOD minimumSizeHint
    METHOD sizeHint
    METHOD setVisible
+
    METHOD onHovered
    METHOD onTriggered
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -71,10 +73,10 @@ HB_FUNC_STATIC( QMENUBAR_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QMENUBAR_DELETE )
 {
   QMenuBar * obj = (QMenuBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -84,9 +86,9 @@ HB_FUNC_STATIC( QMENUBAR_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QAction * activeAction () const
@@ -101,7 +103,6 @@ HB_FUNC_STATIC( QMENUBAR_ACTIVEACTION )
   }
 }
 
-
 /*
 QAction * addAction ( const QString & text )
 */
@@ -114,7 +115,6 @@ HB_FUNC_STATIC( QMENUBAR_ADDACTION1 )
     _qt4xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
-
 
 /*
 QAction * addAction ( const QString & text, const QObject * receiver, const char * member )
@@ -130,7 +130,6 @@ HB_FUNC_STATIC( QMENUBAR_ADDACTION2 )
   }
 }
 
-
 /*
 void addAction ( QAction * action )
 */
@@ -143,7 +142,6 @@ HB_FUNC_STATIC( QMENUBAR_ADDACTION3 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]QAction * addAction ( const QString & text )
 //[2]QAction * addAction ( const QString & text, const QObject * receiver, const char * member )
@@ -178,7 +176,6 @@ HB_FUNC_STATIC( QMENUBAR_ADDMENU1 )
   }
 }
 
-
 /*
 QMenu * addMenu ( const QString & title )
 */
@@ -191,7 +188,6 @@ HB_FUNC_STATIC( QMENUBAR_ADDMENU2 )
     _qt4xhb_createReturnClass ( ptr, "QMENU" );
   }
 }
-
 
 /*
 QMenu * addMenu ( const QIcon & icon, const QString & title )
@@ -206,7 +202,6 @@ HB_FUNC_STATIC( QMENUBAR_ADDMENU3 )
     _qt4xhb_createReturnClass ( ptr, "QMENU" );
   }
 }
-
 
 //[1]QAction * addMenu ( QMenu * menu )
 //[2]QMenu * addMenu ( const QString & title )
@@ -241,7 +236,6 @@ HB_FUNC_STATIC( QMENUBAR_ADDSEPARATOR )
   }
 }
 
-
 /*
 void clear ()
 */
@@ -254,8 +248,6 @@ HB_FUNC_STATIC( QMENUBAR_CLEAR )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
 
 /*
 QAction * insertMenu ( QAction * before, QMenu * menu )
@@ -270,7 +262,6 @@ HB_FUNC_STATIC( QMENUBAR_INSERTMENU )
   }
 }
 
-
 /*
 QAction * insertSeparator ( QAction * before )
 */
@@ -284,7 +275,6 @@ HB_FUNC_STATIC( QMENUBAR_INSERTSEPARATOR )
   }
 }
 
-
 /*
 bool isDefaultUp () const
 */
@@ -297,7 +287,6 @@ HB_FUNC_STATIC( QMENUBAR_ISDEFAULTUP )
   }
 }
 
-
 /*
 bool isNativeMenuBar () const
 */
@@ -309,8 +298,6 @@ HB_FUNC_STATIC( QMENUBAR_ISNATIVEMENUBAR )
     RBOOL( obj->isNativeMenuBar () );
   }
 }
-
-
 
 /*
 void setActiveAction ( QAction * act )
@@ -325,8 +312,6 @@ HB_FUNC_STATIC( QMENUBAR_SETACTIVEACTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 void setDefaultUp ( bool )
 */
@@ -339,7 +324,6 @@ HB_FUNC_STATIC( QMENUBAR_SETDEFAULTUP )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setNativeMenuBar ( bool nativeMenuBar )
@@ -354,7 +338,6 @@ HB_FUNC_STATIC( QMENUBAR_SETNATIVEMENUBAR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual int heightForWidth ( int ) const
 */
@@ -366,7 +349,6 @@ HB_FUNC_STATIC( QMENUBAR_HEIGHTFORWIDTH )
     RINT( obj->heightForWidth ( PINT(1) ) );
   }
 }
-
 
 /*
 virtual QSize minimumSizeHint () const
@@ -381,7 +363,6 @@ HB_FUNC_STATIC( QMENUBAR_MINIMUMSIZEHINT )
   }
 }
 
-
 /*
 virtual QSize sizeHint () const
 */
@@ -395,7 +376,6 @@ HB_FUNC_STATIC( QMENUBAR_SIZEHINT )
   }
 }
 
-
 /*
 virtual void setVisible ( bool visible )
 */
@@ -408,9 +388,5 @@ HB_FUNC_STATIC( QMENUBAR_SETVISIBLE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

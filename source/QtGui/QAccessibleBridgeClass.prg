@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QAccessibleBridge
 
@@ -17,11 +16,13 @@ CLASS QAccessibleBridge
    METHOD delete
    METHOD notifyAccessibilityUpdate
    METHOD setRootObject
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -43,6 +44,7 @@ RETURN
 HB_FUNC_STATIC( QACCESSIBLEBRIDGE_DELETE )
 {
   QAccessibleBridge * obj = (QAccessibleBridge *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -52,9 +54,9 @@ HB_FUNC_STATIC( QACCESSIBLEBRIDGE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void notifyAccessibilityUpdate ( int reason, QAccessibleInterface * interface, int child ) = 0
@@ -70,7 +72,6 @@ HB_FUNC_STATIC( QACCESSIBLEBRIDGE_NOTIFYACCESSIBILITYUPDATE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void setRootObject ( QAccessibleInterface * object ) = 0
 */
@@ -84,7 +85,6 @@ HB_FUNC_STATIC( QACCESSIBLEBRIDGE_SETROOTOBJECT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QACCESSIBLEBRIDGE_NEWFROM )
 {
@@ -140,6 +140,5 @@ HB_FUNC_STATIC( QACCESSIBLEBRIDGE_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -40,10 +40,12 @@ CLASS QItemSelectionModel INHERIT QObject
    METHOD select2
    METHOD select
    METHOD setCurrentIndex
+
    METHOD onCurrentChanged
    METHOD onCurrentColumnChanged
    METHOD onCurrentRowChanged
    METHOD onSelectionChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -71,7 +73,6 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QItemSelectionModel ( QAbstractItemModel * model, QObject * parent )
 */
@@ -80,7 +81,6 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_NEW2 )
   QItemSelectionModel * o = new QItemSelectionModel ( PQABSTRACTITEMMODEL(1), PQOBJECT(2) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QItemSelectionModel ( QAbstractItemModel * model )
 //[2]QItemSelectionModel ( QAbstractItemModel * model, QObject * parent )
@@ -104,6 +104,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_NEW )
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_DELETE )
 {
   QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -113,9 +114,9 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 bool columnIntersectsSelection ( int column, const QModelIndex & parent ) const
@@ -128,7 +129,6 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_COLUMNINTERSECTSSELECTION )
     RBOOL( obj->columnIntersectsSelection ( PINT(1), *PQMODELINDEX(2) ) );
   }
 }
-
 
 /*
 QModelIndex currentIndex () const
@@ -143,7 +143,6 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_CURRENTINDEX )
   }
 }
 
-
 /*
 bool hasSelection () const
 */
@@ -155,7 +154,6 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_HASSELECTION )
     RBOOL( obj->hasSelection () );
   }
 }
-
 
 /*
 bool isColumnSelected ( int column, const QModelIndex & parent ) const
@@ -169,7 +167,6 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ISCOLUMNSELECTED )
   }
 }
 
-
 /*
 bool isRowSelected ( int row, const QModelIndex & parent ) const
 */
@@ -182,7 +179,6 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ISROWSELECTED )
   }
 }
 
-
 /*
 bool isSelected ( const QModelIndex & index ) const
 */
@@ -194,7 +190,6 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ISSELECTED )
     RBOOL( obj->isSelected ( *PQMODELINDEX(1) ) );
   }
 }
-
 
 /*
 const QAbstractItemModel * model () const
@@ -209,7 +204,6 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_MODEL )
   }
 }
 
-
 /*
 bool rowIntersectsSelection ( int row, const QModelIndex & parent ) const
 */
@@ -221,7 +215,6 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ROWINTERSECTSSELECTION )
     RBOOL( obj->rowIntersectsSelection ( PINT(1), *PQMODELINDEX(2) ) );
   }
 }
-
 
 /*
 QModelIndexList selectedColumns ( int row = 0 ) const
@@ -266,7 +259,6 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDCOLUMNS )
   }
 }
 
-
 /*
 QModelIndexList selectedIndexes () const
 */
@@ -309,7 +301,6 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDINDEXES )
     hb_itemReturnRelease(pArray);
   }
 }
-
 
 /*
 QModelIndexList selectedRows ( int column = 0 ) const
@@ -354,7 +345,6 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDROWS )
   }
 }
 
-
 /*
 const QItemSelection selection () const
 */
@@ -365,7 +355,6 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTION )
   {
   }
 }
-
 
 /*
 virtual void clear ()
@@ -380,7 +369,6 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_CLEAR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void clearSelection ()
 */
@@ -394,7 +382,6 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_CLEARSELECTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void reset ()
 */
@@ -407,7 +394,6 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_RESET )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void select ( const QModelIndex & index, QItemSelectionModel::SelectionFlags command )
@@ -423,7 +409,6 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECT1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void select ( const QItemSelection & selection, QItemSelectionModel::SelectionFlags command )
 */
@@ -437,7 +422,6 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECT2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]virtual void select ( const QModelIndex & index, QItemSelectionModel::SelectionFlags command )
 //[2]virtual void select ( const QItemSelection & selection, QItemSelectionModel::SelectionFlags command )
@@ -467,10 +451,5 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SETCURRENTINDEX )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
-
 
 #pragma ENDDUMP

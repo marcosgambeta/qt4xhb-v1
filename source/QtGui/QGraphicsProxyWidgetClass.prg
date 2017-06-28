@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -27,6 +27,7 @@ CLASS QGraphicsProxyWidget INHERIT QGraphicsWidget
    METHOD paint
    METHOD setGeometry
    METHOD type
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -55,10 +56,10 @@ HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_DELETE )
 {
   QGraphicsProxyWidget * obj = (QGraphicsProxyWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -68,9 +69,9 @@ HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QGraphicsProxyWidget * createProxyForChildWidget ( QWidget * child )
@@ -85,7 +86,6 @@ HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_CREATEPROXYFORCHILDWIDGET )
   }
 }
 
-
 /*
 void setWidget ( QWidget * widget )
 */
@@ -98,7 +98,6 @@ HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_SETWIDGET )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QRectF subWidgetRect ( const QWidget * widget ) const
@@ -114,7 +113,6 @@ HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_SUBWIDGETRECT )
   }
 }
 
-
 /*
 QWidget * widget () const
 */
@@ -127,7 +125,6 @@ HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_WIDGET )
     _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
-
 
 /*
 virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget )
@@ -143,7 +140,6 @@ HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_PAINT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void setGeometry ( const QRectF & rect )
 */
@@ -157,7 +153,6 @@ HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_SETGEOMETRY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual int type () const
 */
@@ -169,9 +164,5 @@ HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_TYPE )
     RINT( obj->type () );
   }
 }
-
-
-
-
 
 #pragma ENDDUMP

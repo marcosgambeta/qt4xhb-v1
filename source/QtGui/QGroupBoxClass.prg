@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -30,8 +30,10 @@ CLASS QGroupBox INHERIT QWidget
    METHOD title
    METHOD minimumSizeHint
    METHOD setChecked
+
    METHOD onClicked
    METHOD onToggled
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -59,7 +61,6 @@ HB_FUNC_STATIC( QGROUPBOX_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QGroupBox ( const QString & title, QWidget * parent = 0 )
 */
@@ -68,7 +69,6 @@ HB_FUNC_STATIC( QGROUPBOX_NEW2 )
   QGroupBox * o = new QGroupBox ( PQSTRING(1), OPQWIDGET(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QGroupBox ( QWidget * parent = 0 )
 //[2]QGroupBox ( const QString & title, QWidget * parent = 0 )
@@ -89,7 +89,6 @@ HB_FUNC_STATIC( QGROUPBOX_NEW )
   }
 }
 
-
 /*
 Qt::Alignment alignment () const
 */
@@ -101,7 +100,6 @@ HB_FUNC_STATIC( QGROUPBOX_ALIGNMENT )
     hb_retni( (int) obj->alignment () );
   }
 }
-
 
 /*
 bool isCheckable () const
@@ -115,7 +113,6 @@ HB_FUNC_STATIC( QGROUPBOX_ISCHECKABLE )
   }
 }
 
-
 /*
 bool isChecked () const
 */
@@ -128,7 +125,6 @@ HB_FUNC_STATIC( QGROUPBOX_ISCHECKED )
   }
 }
 
-
 /*
 bool isFlat () const
 */
@@ -140,7 +136,6 @@ HB_FUNC_STATIC( QGROUPBOX_ISFLAT )
     RBOOL( obj->isFlat () );
   }
 }
-
 
 /*
 void setAlignment ( int alignment )
@@ -155,7 +150,6 @@ HB_FUNC_STATIC( QGROUPBOX_SETALIGNMENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setCheckable ( bool checkable )
 */
@@ -168,7 +162,6 @@ HB_FUNC_STATIC( QGROUPBOX_SETCHECKABLE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setFlat ( bool flat )
@@ -183,7 +176,6 @@ HB_FUNC_STATIC( QGROUPBOX_SETFLAT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setTitle ( const QString & title )
 */
@@ -197,7 +189,6 @@ HB_FUNC_STATIC( QGROUPBOX_SETTITLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString title () const
 */
@@ -209,7 +200,6 @@ HB_FUNC_STATIC( QGROUPBOX_TITLE )
     RQSTRING( obj->title () );
   }
 }
-
 
 /*
 virtual QSize minimumSizeHint () const
@@ -224,7 +214,6 @@ HB_FUNC_STATIC( QGROUPBOX_MINIMUMSIZEHINT )
   }
 }
 
-
 /*
 void setChecked ( bool checked )
 */
@@ -237,9 +226,5 @@ HB_FUNC_STATIC( QGROUPBOX_SETCHECKED )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

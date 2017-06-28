@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -35,11 +35,13 @@ CLASS QGlyphRun
    METHOD setUnderline
    METHOD strikeOut
    METHOD underline
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -67,7 +69,6 @@ HB_FUNC_STATIC( QGLYPHRUN_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QGlyphRun ( const QGlyphRun & other )
 */
@@ -76,7 +77,6 @@ HB_FUNC_STATIC( QGLYPHRUN_NEW2 )
   QGlyphRun * o = new QGlyphRun ( *PQGLYPHRUN(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QGlyphRun ()
 //[2]QGlyphRun ( const QGlyphRun & other )
@@ -100,6 +100,7 @@ HB_FUNC_STATIC( QGLYPHRUN_NEW )
 HB_FUNC_STATIC( QGLYPHRUN_DELETE )
 {
   QGlyphRun * obj = (QGlyphRun *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -109,9 +110,9 @@ HB_FUNC_STATIC( QGLYPHRUN_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void clear ()
@@ -125,7 +126,6 @@ HB_FUNC_STATIC( QGLYPHRUN_CLEAR )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QVector<quint32> glyphIndexes () const
@@ -149,7 +149,6 @@ HB_FUNC_STATIC( QGLYPHRUN_GLYPHINDEXES )
   }
 }
 
-
 /*
 bool overline () const
 */
@@ -161,7 +160,6 @@ HB_FUNC_STATIC( QGLYPHRUN_OVERLINE )
     RBOOL( obj->overline () );
   }
 }
-
 
 /*
 QVector<QPointF> positions () const
@@ -206,7 +204,6 @@ HB_FUNC_STATIC( QGLYPHRUN_POSITIONS )
   }
 }
 
-
 /*
 QRawFont rawFont () const
 */
@@ -219,7 +216,6 @@ HB_FUNC_STATIC( QGLYPHRUN_RAWFONT )
     _qt4xhb_createReturnClass ( ptr, "QRAWFONT", true );
   }
 }
-
 
 /*
 void setGlyphIndexes ( const QVector<quint32> & glyphIndexes )
@@ -244,7 +240,6 @@ par1 << temp1;
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setOverline ( bool overline )
 */
@@ -257,7 +252,6 @@ HB_FUNC_STATIC( QGLYPHRUN_SETOVERLINE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setPositions ( const QVector<QPointF> & positions )
@@ -280,8 +274,6 @@ par1 << *(QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 void setRawFont ( const QRawFont & rawFont )
 */
@@ -294,7 +286,6 @@ HB_FUNC_STATIC( QGLYPHRUN_SETRAWFONT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setStrikeOut ( bool strikeOut )
@@ -309,7 +300,6 @@ HB_FUNC_STATIC( QGLYPHRUN_SETSTRIKEOUT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setUnderline ( bool underline )
 */
@@ -323,7 +313,6 @@ HB_FUNC_STATIC( QGLYPHRUN_SETUNDERLINE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool strikeOut () const
 */
@@ -336,7 +325,6 @@ HB_FUNC_STATIC( QGLYPHRUN_STRIKEOUT )
   }
 }
 
-
 /*
 bool underline () const
 */
@@ -348,7 +336,6 @@ HB_FUNC_STATIC( QGLYPHRUN_UNDERLINE )
     RBOOL( obj->underline () );
   }
 }
-
 
 HB_FUNC_STATIC( QGLYPHRUN_NEWFROM )
 {
@@ -404,7 +391,5 @@ HB_FUNC_STATIC( QGLYPHRUN_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

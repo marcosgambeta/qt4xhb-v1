@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QPrintPreviewWidget INHERIT QWidget
 
@@ -40,8 +39,10 @@ CLASS QPrintPreviewWidget INHERIT QWidget
    METHOD updatePreview
    METHOD zoomIn
    METHOD zoomOut
+
    METHOD onPaintRequested
    METHOD onPreviewChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -70,7 +71,6 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QPrintPreviewWidget ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
@@ -80,7 +80,6 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_NEW2 )
   QPrintPreviewWidget * o = new QPrintPreviewWidget ( OPQWIDGET(1,0), (Qt::WindowFlags) par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QPrintPreviewWidget ( QPrinter * printer, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 //[2]QPrintPreviewWidget ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
@@ -104,6 +103,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_NEW )
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_DELETE )
 {
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -113,9 +113,9 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 int currentPage () const
@@ -129,7 +129,6 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_CURRENTPAGE )
   }
 }
 
-
 /*
 QPrinter::Orientation orientation () const
 */
@@ -141,7 +140,6 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ORIENTATION )
     hb_retni( (int) obj->orientation () );
   }
 }
-
 
 /*
 int pageCount () const
@@ -155,7 +153,6 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_PAGECOUNT )
   }
 }
 
-
 /*
 ViewMode viewMode () const
 */
@@ -167,7 +164,6 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_VIEWMODE )
     hb_retni( (int) obj->viewMode () );
   }
 }
-
 
 /*
 qreal zoomFactor () const
@@ -181,7 +177,6 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMFACTOR )
   }
 }
 
-
 /*
 ZoomMode zoomMode () const
 */
@@ -193,7 +188,6 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMMODE )
     hb_retni( (int) obj->zoomMode () );
   }
 }
-
 
 /*
 virtual void setVisible ( bool visible )
@@ -208,7 +202,6 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETVISIBLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void fitInView ()
 */
@@ -221,7 +214,6 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_FITINVIEW )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void fitToWidth ()
@@ -236,7 +228,6 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_FITTOWIDTH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void print ()
 */
@@ -249,7 +240,6 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_PRINT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setAllPagesViewMode ()
@@ -264,7 +254,6 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETALLPAGESVIEWMODE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setCurrentPage ( int page )
 */
@@ -277,7 +266,6 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETCURRENTPAGE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setFacingPagesViewMode ()
@@ -292,7 +280,6 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETFACINGPAGESVIEWMODE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setLandscapeOrientation ()
 */
@@ -305,7 +292,6 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETLANDSCAPEORIENTATION )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setOrientation ( QPrinter::Orientation orientation )
@@ -321,7 +307,6 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETORIENTATION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPortraitOrientation ()
 */
@@ -335,7 +320,6 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETPORTRAITORIENTATION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setSinglePageViewMode ()
 */
@@ -348,7 +332,6 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETSINGLEPAGEVIEWMODE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setViewMode ( ViewMode mode )
@@ -364,7 +347,6 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETVIEWMODE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setZoomFactor ( qreal factor )
 */
@@ -377,7 +359,6 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETZOOMFACTOR )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setZoomMode ( ZoomMode zoomMode )
@@ -393,7 +374,6 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETZOOMMODE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void updatePreview ()
 */
@@ -406,7 +386,6 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_UPDATEPREVIEW )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void zoomIn ( qreal factor = 1.1 )
@@ -421,7 +400,6 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMIN )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void zoomOut ( qreal factor = 1.1 )
 */
@@ -434,9 +412,5 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMOUT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

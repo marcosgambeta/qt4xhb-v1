@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -56,6 +56,7 @@ CLASS QMovie INHERIT QObject
    METHOD start
    METHOD stop
    METHOD supportedFormats
+
    METHOD onError
    METHOD onFinished
    METHOD onFrameChanged
@@ -63,6 +64,7 @@ CLASS QMovie INHERIT QObject
    METHOD onStarted
    METHOD onStateChanged
    METHOD onUpdated
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -93,7 +95,6 @@ HB_FUNC_STATIC( QMOVIE_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QMovie ( QIODevice * device, const QByteArray & format = QByteArray(), QObject * parent = 0 )
 */
@@ -104,7 +105,6 @@ HB_FUNC_STATIC( QMOVIE_NEW2 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QMovie ( const QString & fileName, const QByteArray & format = QByteArray(), QObject * parent = 0 )
 */
@@ -114,7 +114,6 @@ HB_FUNC_STATIC( QMOVIE_NEW3 )
   QMovie * o = new QMovie ( PQSTRING(1), par2, OPQOBJECT(3,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QMovie ( QObject * parent = 0 )
 //[2]QMovie ( QIODevice * device, const QByteArray & format = QByteArray(), QObject * parent = 0 )
@@ -143,6 +142,7 @@ HB_FUNC_STATIC( QMOVIE_NEW )
 HB_FUNC_STATIC( QMOVIE_DELETE )
 {
   QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -152,9 +152,9 @@ HB_FUNC_STATIC( QMOVIE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 // Public Functions
 
@@ -171,7 +171,6 @@ HB_FUNC_STATIC( QMOVIE_BACKGROUNDCOLOR )
   }
 }
 
-
 /*
 CacheMode  cacheMode () const
 */
@@ -184,7 +183,6 @@ HB_FUNC_STATIC( QMOVIE_CACHEMODE )
   }
 }
 
-
 /*
 int  currentFrameNumber () const
 */
@@ -196,7 +194,6 @@ HB_FUNC_STATIC( QMOVIE_CURRENTFRAMENUMBER )
     RINT( obj->currentFrameNumber () );
   }
 }
-
 
 /*
 QImage  currentImage () const
@@ -211,7 +208,6 @@ HB_FUNC_STATIC( QMOVIE_CURRENTIMAGE )
   }
 }
 
-
 /*
 QPixmap  currentPixmap () const
 */
@@ -224,7 +220,6 @@ HB_FUNC_STATIC( QMOVIE_CURRENTPIXMAP )
     _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
-
 
 /*
 QIODevice *  device () const
@@ -239,7 +234,6 @@ HB_FUNC_STATIC( QMOVIE_DEVICE )
   }
 }
 
-
 /*
 QString  fileName () const
 */
@@ -251,7 +245,6 @@ HB_FUNC_STATIC( QMOVIE_FILENAME )
     RQSTRING( obj->fileName () );
   }
 }
-
 
 /*
 QByteArray  format () const
@@ -266,7 +259,6 @@ HB_FUNC_STATIC( QMOVIE_FORMAT )
   }
 }
 
-
 /*
 int  frameCount () const
 */
@@ -278,7 +270,6 @@ HB_FUNC_STATIC( QMOVIE_FRAMECOUNT )
     RINT( obj->frameCount () );
   }
 }
-
 
 /*
 QRect  frameRect () const
@@ -293,7 +284,6 @@ HB_FUNC_STATIC( QMOVIE_FRAMERECT )
   }
 }
 
-
 /*
 bool  isValid () const
 */
@@ -305,7 +295,6 @@ HB_FUNC_STATIC( QMOVIE_ISVALID )
     RBOOL( obj->isValid () );
   }
 }
-
 
 /*
 bool  jumpToFrame ( int frameNumber )
@@ -319,7 +308,6 @@ HB_FUNC_STATIC( QMOVIE_JUMPTOFRAME )
   }
 }
 
-
 /*
 int  loopCount () const
 */
@@ -331,7 +319,6 @@ HB_FUNC_STATIC( QMOVIE_LOOPCOUNT )
     RINT( obj->loopCount () );
   }
 }
-
 
 /*
 int  nextFrameDelay () const
@@ -345,7 +332,6 @@ HB_FUNC_STATIC( QMOVIE_NEXTFRAMEDELAY )
   }
 }
 
-
 /*
 QSize  scaledSize ()
 */
@@ -358,7 +344,6 @@ HB_FUNC_STATIC( QMOVIE_SCALEDSIZE )
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
-
 
 /*
 void  setBackgroundColor ( const QColor & color )
@@ -374,7 +359,6 @@ HB_FUNC_STATIC( QMOVIE_SETBACKGROUNDCOLOR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void  setCacheMode ( CacheMode mode )
 */
@@ -389,7 +373,6 @@ HB_FUNC_STATIC( QMOVIE_SETCACHEMODE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void  setDevice ( QIODevice * device )
 */
@@ -402,7 +385,6 @@ HB_FUNC_STATIC( QMOVIE_SETDEVICE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void  setFileName ( const QString & fileName )
@@ -417,7 +399,6 @@ HB_FUNC_STATIC( QMOVIE_SETFILENAME )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void  setFormat ( const QByteArray & format )
 */
@@ -430,7 +411,6 @@ HB_FUNC_STATIC( QMOVIE_SETFORMAT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void  setScaledSize ( const QSize & size )
@@ -445,7 +425,6 @@ HB_FUNC_STATIC( QMOVIE_SETSCALEDSIZE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int  speed () const
 */
@@ -458,7 +437,6 @@ HB_FUNC_STATIC( QMOVIE_SPEED )
   }
 }
 
-
 /*
 MovieState  state () const
 */
@@ -470,7 +448,6 @@ HB_FUNC_STATIC( QMOVIE_STATE )
     hb_retni( (int) obj->state () );
   }
 }
-
 
 // Public Slots
 
@@ -486,7 +463,6 @@ HB_FUNC_STATIC( QMOVIE_JUMPTONEXTFRAME )
   }
 }
 
-
 /*
 void setPaused ( bool paused )
 */
@@ -499,7 +475,6 @@ HB_FUNC_STATIC( QMOVIE_SETPAUSED )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setSpeed ( int percentSpeed )
@@ -514,7 +489,6 @@ HB_FUNC_STATIC( QMOVIE_SETSPEED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void start ()
 */
@@ -528,7 +502,6 @@ HB_FUNC_STATIC( QMOVIE_START )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void stop ()
 */
@@ -541,8 +514,6 @@ HB_FUNC_STATIC( QMOVIE_STOP )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
 
 // Static Public Members
 
@@ -585,10 +556,6 @@ HB_FUNC_STATIC( QMOVIE_SUPPORTEDFORMATS )
   hb_itemReturnRelease(pArray);
 }
 
-
 // Signals
-
-
-
 
 #pragma ENDDUMP

@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -35,11 +35,13 @@ CLASS QStaticText
    METHOD textFormat
    METHOD textOption
    METHOD textWidth
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -67,7 +69,6 @@ HB_FUNC_STATIC( QSTATICTEXT_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QStaticText ( const QString & text )
 */
@@ -77,7 +78,6 @@ HB_FUNC_STATIC( QSTATICTEXT_NEW2 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QStaticText ( const QStaticText & other )
 */
@@ -86,7 +86,6 @@ HB_FUNC_STATIC( QSTATICTEXT_NEW3 )
   QStaticText * o = new QStaticText ( *PQSTATICTEXT(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QStaticText ()
 //[2]QStaticText ( const QString & text )
@@ -115,6 +114,7 @@ HB_FUNC_STATIC( QSTATICTEXT_NEW )
 HB_FUNC_STATIC( QSTATICTEXT_DELETE )
 {
   QStaticText * obj = (QStaticText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -124,9 +124,9 @@ HB_FUNC_STATIC( QSTATICTEXT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 PerformanceHint performanceHint () const
@@ -139,7 +139,6 @@ HB_FUNC_STATIC( QSTATICTEXT_PERFORMANCEHINT )
     hb_retni( (int) obj->performanceHint () );
   }
 }
-
 
 /*
 void prepare ( const QTransform & matrix = QTransform(), const QFont & font = QFont() )
@@ -156,7 +155,6 @@ HB_FUNC_STATIC( QSTATICTEXT_PREPARE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPerformanceHint ( PerformanceHint performanceHint )
 */
@@ -171,7 +169,6 @@ HB_FUNC_STATIC( QSTATICTEXT_SETPERFORMANCEHINT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setText ( const QString & text )
 */
@@ -184,7 +181,6 @@ HB_FUNC_STATIC( QSTATICTEXT_SETTEXT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setTextFormat ( Qt::TextFormat textFormat )
@@ -200,7 +196,6 @@ HB_FUNC_STATIC( QSTATICTEXT_SETTEXTFORMAT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setTextOption ( const QTextOption & textOption )
 */
@@ -213,7 +208,6 @@ HB_FUNC_STATIC( QSTATICTEXT_SETTEXTOPTION )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setTextWidth ( qreal textWidth )
@@ -228,7 +222,6 @@ HB_FUNC_STATIC( QSTATICTEXT_SETTEXTWIDTH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QSizeF size () const
 */
@@ -242,7 +235,6 @@ HB_FUNC_STATIC( QSTATICTEXT_SIZE )
   }
 }
 
-
 /*
 QString text () const
 */
@@ -255,7 +247,6 @@ HB_FUNC_STATIC( QSTATICTEXT_TEXT )
   }
 }
 
-
 /*
 Qt::TextFormat textFormat () const
 */
@@ -267,7 +258,6 @@ HB_FUNC_STATIC( QSTATICTEXT_TEXTFORMAT )
     hb_retni( (int) obj->textFormat () );
   }
 }
-
 
 /*
 QTextOption textOption () const
@@ -282,7 +272,6 @@ HB_FUNC_STATIC( QSTATICTEXT_TEXTOPTION )
   }
 }
 
-
 /*
 qreal textWidth () const
 */
@@ -294,7 +283,6 @@ HB_FUNC_STATIC( QSTATICTEXT_TEXTWIDTH )
     RQREAL( obj->textWidth () );
   }
 }
-
 
 HB_FUNC_STATIC( QSTATICTEXT_NEWFROM )
 {
@@ -350,6 +338,5 @@ HB_FUNC_STATIC( QSTATICTEXT_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

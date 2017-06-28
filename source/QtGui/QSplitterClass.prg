@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -48,7 +48,9 @@ CLASS QSplitter INHERIT QFrame
    METHOD widget
    METHOD minimumSizeHint
    METHOD sizeHint
+
    METHOD onSplitterMoved
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -76,7 +78,6 @@ HB_FUNC_STATIC( QSPLITTER_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QSplitter ( Qt::Orientation orientation, QWidget * parent = 0 )
 */
@@ -85,7 +86,6 @@ HB_FUNC_STATIC( QSPLITTER_NEW2 )
   QSplitter * o = new QSplitter ( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QSplitter ( QWidget * parent = 0 )
 //[2]QSplitter ( Qt::Orientation orientation, QWidget * parent = 0 )
@@ -109,6 +109,7 @@ HB_FUNC_STATIC( QSPLITTER_NEW )
 HB_FUNC_STATIC( QSPLITTER_DELETE )
 {
   QSplitter * obj = (QSplitter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -118,9 +119,9 @@ HB_FUNC_STATIC( QSPLITTER_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void addWidget ( QWidget * widget )
@@ -135,7 +136,6 @@ HB_FUNC_STATIC( QSPLITTER_ADDWIDGET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool childrenCollapsible () const
 */
@@ -148,7 +148,6 @@ HB_FUNC_STATIC( QSPLITTER_CHILDRENCOLLAPSIBLE )
   }
 }
 
-
 /*
 int count () const
 */
@@ -160,7 +159,6 @@ HB_FUNC_STATIC( QSPLITTER_COUNT )
     RINT( obj->count () );
   }
 }
-
 
 /*
 void getRange ( int index, int * min, int * max ) const
@@ -179,7 +177,6 @@ HB_FUNC_STATIC( QSPLITTER_GETRANGE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QSplitterHandle * handle ( int index ) const
 */
@@ -193,7 +190,6 @@ HB_FUNC_STATIC( QSPLITTER_HANDLE )
   }
 }
 
-
 /*
 int handleWidth () const
 */
@@ -206,7 +202,6 @@ HB_FUNC_STATIC( QSPLITTER_HANDLEWIDTH )
   }
 }
 
-
 /*
 int indexOf ( QWidget * widget ) const
 */
@@ -218,7 +213,6 @@ HB_FUNC_STATIC( QSPLITTER_INDEXOF )
     RINT( obj->indexOf ( PQWIDGET(1) ) );
   }
 }
-
 
 /*
 void insertWidget ( int index, QWidget * widget )
@@ -233,7 +227,6 @@ HB_FUNC_STATIC( QSPLITTER_INSERTWIDGET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool isCollapsible ( int index ) const
 */
@@ -245,7 +238,6 @@ HB_FUNC_STATIC( QSPLITTER_ISCOLLAPSIBLE )
     RBOOL( obj->isCollapsible ( PINT(1) ) );
   }
 }
-
 
 /*
 bool opaqueResize () const
@@ -259,7 +251,6 @@ HB_FUNC_STATIC( QSPLITTER_OPAQUERESIZE )
   }
 }
 
-
 /*
 Qt::Orientation orientation () const
 */
@@ -271,7 +262,6 @@ HB_FUNC_STATIC( QSPLITTER_ORIENTATION )
     RENUM( obj->orientation () );
   }
 }
-
 
 /*
 void refresh ()
@@ -286,7 +276,6 @@ HB_FUNC_STATIC( QSPLITTER_REFRESH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool restoreState ( const QByteArray & state )
 */
@@ -298,7 +287,6 @@ HB_FUNC_STATIC( QSPLITTER_RESTORESTATE )
     RBOOL( obj->restoreState ( *PQBYTEARRAY(1) ) );
   }
 }
-
 
 /*
 QByteArray saveState () const
@@ -313,7 +301,6 @@ HB_FUNC_STATIC( QSPLITTER_SAVESTATE )
   }
 }
 
-
 /*
 void setChildrenCollapsible ( bool )
 */
@@ -326,7 +313,6 @@ HB_FUNC_STATIC( QSPLITTER_SETCHILDRENCOLLAPSIBLE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setCollapsible ( int index, bool collapse )
@@ -341,7 +327,6 @@ HB_FUNC_STATIC( QSPLITTER_SETCOLLAPSIBLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setHandleWidth ( int )
 */
@@ -354,7 +339,6 @@ HB_FUNC_STATIC( QSPLITTER_SETHANDLEWIDTH )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setOpaqueResize ( bool opaque = true )
@@ -369,7 +353,6 @@ HB_FUNC_STATIC( QSPLITTER_SETOPAQUERESIZE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setOrientation ( Qt::Orientation )
 */
@@ -382,7 +365,6 @@ HB_FUNC_STATIC( QSPLITTER_SETORIENTATION )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setSizes ( const QList<int> & list )
@@ -407,7 +389,6 @@ par1 << temp1;
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setStretchFactor ( int index, int stretch )
 */
@@ -420,7 +401,6 @@ HB_FUNC_STATIC( QSPLITTER_SETSTRETCHFACTOR )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QList<int> sizes () const
@@ -444,7 +424,6 @@ HB_FUNC_STATIC( QSPLITTER_SIZES )
   }
 }
 
-
 /*
 QWidget * widget ( int index ) const
 */
@@ -457,7 +436,6 @@ HB_FUNC_STATIC( QSPLITTER_WIDGET )
     _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
-
 
 /*
 virtual QSize minimumSizeHint () const
@@ -472,7 +450,6 @@ HB_FUNC_STATIC( QSPLITTER_MINIMUMSIZEHINT )
   }
 }
 
-
 /*
 virtual QSize sizeHint () const
 */
@@ -485,9 +462,5 @@ HB_FUNC_STATIC( QSPLITTER_SIZEHINT )
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
-
-
-
-
 
 #pragma ENDDUMP

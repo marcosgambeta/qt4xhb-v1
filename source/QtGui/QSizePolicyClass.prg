@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QSizePolicy
 
@@ -35,11 +34,13 @@ CLASS QSizePolicy
    METHOD transpose
    METHOD verticalPolicy
    METHOD verticalStretch
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -67,7 +68,6 @@ HB_FUNC_STATIC( QSIZEPOLICY_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QSizePolicy ( Policy horizontal, Policy vertical )
 */
@@ -77,7 +77,6 @@ HB_FUNC_STATIC( QSIZEPOLICY_NEW2 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QSizePolicy ( Policy horizontal, Policy vertical, ControlType type )
 */
@@ -86,7 +85,6 @@ HB_FUNC_STATIC( QSIZEPOLICY_NEW3 )
   QSizePolicy * o = new QSizePolicy ( (QSizePolicy::Policy) hb_parni(1), (QSizePolicy::Policy) hb_parni(2), (QSizePolicy::ControlType) hb_parni(3) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QSizePolicy ()
 //[2]QSizePolicy ( Policy horizontal, Policy vertical )
@@ -115,6 +113,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_NEW )
 HB_FUNC_STATIC( QSIZEPOLICY_DELETE )
 {
   QSizePolicy * obj = (QSizePolicy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -124,9 +123,9 @@ HB_FUNC_STATIC( QSIZEPOLICY_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 ControlType controlType () const
@@ -140,7 +139,6 @@ HB_FUNC_STATIC( QSIZEPOLICY_CONTROLTYPE )
   }
 }
 
-
 /*
 Qt::Orientations expandingDirections () const
 */
@@ -152,7 +150,6 @@ HB_FUNC_STATIC( QSIZEPOLICY_EXPANDINGDIRECTIONS )
     hb_retni( (int) obj->expandingDirections () );
   }
 }
-
 
 /*
 bool hasHeightForWidth () const
@@ -166,7 +163,6 @@ HB_FUNC_STATIC( QSIZEPOLICY_HASHEIGHTFORWIDTH )
   }
 }
 
-
 /*
 bool hasWidthForHeight () const
 */
@@ -178,7 +174,6 @@ HB_FUNC_STATIC( QSIZEPOLICY_HASWIDTHFORHEIGHT )
     RBOOL( obj->hasWidthForHeight () );
   }
 }
-
 
 /*
 Policy horizontalPolicy () const
@@ -192,7 +187,6 @@ HB_FUNC_STATIC( QSIZEPOLICY_HORIZONTALPOLICY )
   }
 }
 
-
 /*
 int horizontalStretch () const
 */
@@ -204,7 +198,6 @@ HB_FUNC_STATIC( QSIZEPOLICY_HORIZONTALSTRETCH )
     RINT( obj->horizontalStretch () );
   }
 }
-
 
 /*
 void setControlType ( ControlType type )
@@ -220,7 +213,6 @@ HB_FUNC_STATIC( QSIZEPOLICY_SETCONTROLTYPE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setHeightForWidth ( bool dependent )
 */
@@ -233,7 +225,6 @@ HB_FUNC_STATIC( QSIZEPOLICY_SETHEIGHTFORWIDTH )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setHorizontalPolicy ( Policy policy )
@@ -249,7 +240,6 @@ HB_FUNC_STATIC( QSIZEPOLICY_SETHORIZONTALPOLICY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setHorizontalStretch ( uchar stretchFactor )
 */
@@ -263,7 +253,6 @@ HB_FUNC_STATIC( QSIZEPOLICY_SETHORIZONTALSTRETCH )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setVerticalPolicy ( Policy policy )
@@ -279,7 +268,6 @@ HB_FUNC_STATIC( QSIZEPOLICY_SETVERTICALPOLICY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setVerticalStretch ( uchar stretchFactor )
 */
@@ -294,7 +282,6 @@ HB_FUNC_STATIC( QSIZEPOLICY_SETVERTICALSTRETCH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setWidthForHeight ( bool dependent )
 */
@@ -307,7 +294,6 @@ HB_FUNC_STATIC( QSIZEPOLICY_SETWIDTHFORHEIGHT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void transpose ()
@@ -322,7 +308,6 @@ HB_FUNC_STATIC( QSIZEPOLICY_TRANSPOSE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 Policy verticalPolicy () const
 */
@@ -335,7 +320,6 @@ HB_FUNC_STATIC( QSIZEPOLICY_VERTICALPOLICY )
   }
 }
 
-
 /*
 int verticalStretch () const
 */
@@ -347,7 +331,6 @@ HB_FUNC_STATIC( QSIZEPOLICY_VERTICALSTRETCH )
     RINT( obj->verticalStretch () );
   }
 }
-
 
 HB_FUNC_STATIC( QSIZEPOLICY_NEWFROM )
 {
@@ -403,6 +386,5 @@ HB_FUNC_STATIC( QSIZEPOLICY_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

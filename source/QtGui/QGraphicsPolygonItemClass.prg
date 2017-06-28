@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -33,6 +33,7 @@ CLASS QGraphicsPolygonItem INHERIT QAbstractGraphicsShapeItem
    METHOD paint
    METHOD shape
    METHOD type
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -60,7 +61,6 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QGraphicsPolygonItem ( const QPolygonF & polygon, QGraphicsItem * parent = 0 )
 */
@@ -69,7 +69,6 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_NEW2 )
   QGraphicsPolygonItem * o = new QGraphicsPolygonItem ( *PQPOLYGONF(1), OPQGRAPHICSITEM(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QGraphicsPolygonItem ( QGraphicsItem * parent = 0 )
 //[2]QGraphicsPolygonItem ( const QPolygonF & polygon, QGraphicsItem * parent = 0 )
@@ -93,6 +92,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_NEW )
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_DELETE )
 {
   QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -102,9 +102,9 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 Qt::FillRule fillRule () const
@@ -118,7 +118,6 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_FILLRULE )
   }
 }
 
-
 /*
 QPolygonF polygon () const
 */
@@ -131,7 +130,6 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_POLYGON )
     _qt4xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
-
 
 /*
 void setFillRule ( Qt::FillRule rule )
@@ -147,7 +145,6 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_SETFILLRULE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPolygon ( const QPolygonF & polygon )
 */
@@ -160,7 +157,6 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_SETPOLYGON )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual QRectF boundingRect () const
@@ -175,7 +171,6 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_BOUNDINGRECT )
   }
 }
 
-
 /*
 virtual bool contains ( const QPointF & point ) const
 */
@@ -187,7 +182,6 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_CONTAINS )
     RBOOL( obj->contains ( *PQPOINTF(1) ) );
   }
 }
-
 
 /*
 virtual bool isObscuredBy ( const QGraphicsItem * item ) const
@@ -202,7 +196,6 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_ISOBSCUREDBY )
   }
 }
 
-
 /*
 virtual QPainterPath opaqueArea () const
 */
@@ -215,7 +208,6 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_OPAQUEAREA )
     _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
-
 
 /*
 virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
@@ -231,7 +223,6 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_PAINT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QPainterPath shape () const
 */
@@ -245,7 +236,6 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_SHAPE )
   }
 }
 
-
 /*
 virtual int type () const
 */
@@ -257,8 +247,5 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_TYPE )
     RINT( obj->type () );
   }
 }
-
-
-
 
 #pragma ENDDUMP

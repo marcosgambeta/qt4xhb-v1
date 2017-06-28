@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -24,6 +24,7 @@ CLASS QAccessibleObject INHERIT QAccessibleInterface
    METHOD rect
    METHOD setText
    METHOD userActionCount
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -42,8 +43,6 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
-
 /*
 virtual QString actionText ( int action, Text t, int child ) const
 */
@@ -55,7 +54,6 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_ACTIONTEXT )
     RQSTRING( obj->actionText ( PINT(1), (QAccessibleObject::Text) hb_parni(2), PINT(3) ) );
   }
 }
-
 
 /*
 virtual bool doAction ( int action, int child, const QVariantList & params )
@@ -77,7 +75,6 @@ par3 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList3, 
   }
 }
 
-
 /*
 virtual bool isValid () const
 */
@@ -89,7 +86,6 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_ISVALID )
     RBOOL( obj->isValid () );
   }
 }
-
 
 /*
 virtual QObject * object () const
@@ -104,7 +100,6 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_OBJECT )
   }
 }
 
-
 /*
 virtual QRect rect ( int child ) const
 */
@@ -117,7 +112,6 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_RECT )
     _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
-
 
 /*
 virtual void setText ( Text t, int child, const QString & text )
@@ -132,7 +126,6 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_SETTEXT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual int userActionCount ( int child ) const
 */
@@ -144,8 +137,5 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_USERACTIONCOUNT )
     RINT( (int) obj->userActionCount ( PINT(1) ) );
   }
 }
-
-
-
 
 #pragma ENDDUMP

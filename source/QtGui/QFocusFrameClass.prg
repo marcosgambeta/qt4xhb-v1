@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -19,6 +19,7 @@ CLASS QFocusFrame INHERIT QWidget
    METHOD new
    METHOD setWidget
    METHOD widget
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -46,8 +47,6 @@ HB_FUNC_STATIC( QFOCUSFRAME_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
-
 /*
 void setWidget ( QWidget * widget )
 */
@@ -61,7 +60,6 @@ HB_FUNC_STATIC( QFOCUSFRAME_SETWIDGET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QWidget * widget () const
 */
@@ -74,8 +72,5 @@ HB_FUNC_STATIC( QFOCUSFRAME_WIDGET )
     _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
-
-
-
 
 #pragma ENDDUMP

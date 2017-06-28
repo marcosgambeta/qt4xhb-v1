@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -87,6 +87,7 @@ CLASS QPrinter INHERIT QPaintDevice
    METHOD toPage
    METHOD winPageSize
    METHOD paintEngine
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -117,7 +118,6 @@ HB_FUNC_STATIC( QPRINTER_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QPrinter ( const QPrinterInfo & printer, PrinterMode mode = ScreenResolution )
 */
@@ -127,7 +127,6 @@ HB_FUNC_STATIC( QPRINTER_NEW2 )
   QPrinter * o = new QPrinter ( *PQPRINTERINFO(1), (QPrinter::PrinterMode) par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QPrinter ( PrinterMode mode = ScreenResolution )
 //[2]QPrinter ( const QPrinterInfo & printer, PrinterMode mode = ScreenResolution )
@@ -151,6 +150,7 @@ HB_FUNC_STATIC( QPRINTER_NEW )
 HB_FUNC_STATIC( QPRINTER_DELETE )
 {
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -160,9 +160,9 @@ HB_FUNC_STATIC( QPRINTER_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 bool abort ()
@@ -176,7 +176,6 @@ HB_FUNC_STATIC( QPRINTER_ABORT )
   }
 }
 
-
 /*
 bool collateCopies () const
 */
@@ -188,7 +187,6 @@ HB_FUNC_STATIC( QPRINTER_COLLATECOPIES )
     RBOOL( obj->collateCopies () );
   }
 }
-
 
 /*
 ColorMode colorMode () const
@@ -202,7 +200,6 @@ HB_FUNC_STATIC( QPRINTER_COLORMODE )
   }
 }
 
-
 /*
 int copyCount () const
 */
@@ -214,7 +211,6 @@ HB_FUNC_STATIC( QPRINTER_COPYCOUNT )
     RINT( obj->copyCount () );
   }
 }
-
 
 /*
 QString creator () const
@@ -228,7 +224,6 @@ HB_FUNC_STATIC( QPRINTER_CREATOR )
   }
 }
 
-
 /*
 QString docName () const
 */
@@ -240,7 +235,6 @@ HB_FUNC_STATIC( QPRINTER_DOCNAME )
     RQSTRING( obj->docName () );
   }
 }
-
 
 /*
 bool doubleSidedPrinting () const
@@ -254,7 +248,6 @@ HB_FUNC_STATIC( QPRINTER_DOUBLESIDEDPRINTING )
   }
 }
 
-
 /*
 DuplexMode duplex () const
 */
@@ -266,7 +259,6 @@ HB_FUNC_STATIC( QPRINTER_DUPLEX )
     hb_retni( (int) obj->duplex () );
   }
 }
-
 
 /*
 bool fontEmbeddingEnabled () const
@@ -280,7 +272,6 @@ HB_FUNC_STATIC( QPRINTER_FONTEMBEDDINGENABLED )
   }
 }
 
-
 /*
 int fromPage () const
 */
@@ -292,7 +283,6 @@ HB_FUNC_STATIC( QPRINTER_FROMPAGE )
     RINT( obj->fromPage () );
   }
 }
-
 
 /*
 bool fullPage () const
@@ -306,8 +296,6 @@ HB_FUNC_STATIC( QPRINTER_FULLPAGE )
   }
 }
 
-
-
 /*
 bool isValid () const
 */
@@ -319,7 +307,6 @@ HB_FUNC_STATIC( QPRINTER_ISVALID )
     RBOOL( obj->isValid () );
   }
 }
-
 
 /*
 bool newPage ()
@@ -333,7 +320,6 @@ HB_FUNC_STATIC( QPRINTER_NEWPAGE )
   }
 }
 
-
 /*
 Orientation orientation () const
 */
@@ -345,7 +331,6 @@ HB_FUNC_STATIC( QPRINTER_ORIENTATION )
     hb_retni( (int) obj->orientation () );
   }
 }
-
 
 /*
 QString outputFileName () const
@@ -359,7 +344,6 @@ HB_FUNC_STATIC( QPRINTER_OUTPUTFILENAME )
   }
 }
 
-
 /*
 OutputFormat outputFormat () const
 */
@@ -372,7 +356,6 @@ HB_FUNC_STATIC( QPRINTER_OUTPUTFORMAT )
   }
 }
 
-
 /*
 PageOrder pageOrder () const
 */
@@ -384,7 +367,6 @@ HB_FUNC_STATIC( QPRINTER_PAGEORDER )
     hb_retni( (int) obj->pageOrder () );
   }
 }
-
 
 /*
 QRect pageRect () const
@@ -399,7 +381,6 @@ HB_FUNC_STATIC( QPRINTER_PAGERECT1 )
   }
 }
 
-
 /*
 QRectF pageRect ( Unit unit ) const
 */
@@ -413,7 +394,6 @@ HB_FUNC_STATIC( QPRINTER_PAGERECT2 )
     _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
-
 
 //[1]QRect pageRect () const
 //[2]QRectF pageRect ( Unit unit ) const
@@ -443,7 +423,6 @@ HB_FUNC_STATIC( QPRINTER_PAPERRECT1 )
   }
 }
 
-
 /*
 QRectF paperRect ( Unit unit ) const
 */
@@ -457,7 +436,6 @@ HB_FUNC_STATIC( QPRINTER_PAPERRECT2 )
     _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
-
 
 //[1]QRect paperRect () const
 //[2]QRectF paperRect ( Unit unit ) const
@@ -486,7 +464,6 @@ HB_FUNC_STATIC( QPRINTER_PAPERSIZE1 )
   }
 }
 
-
 /*
 QSizeF paperSize ( Unit unit ) const
 */
@@ -500,7 +477,6 @@ HB_FUNC_STATIC( QPRINTER_PAPERSIZE2 )
     _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
-
 
 //[1]PaperSize paperSize () const
 //[2]QSizeF paperSize ( Unit unit ) const
@@ -529,7 +505,6 @@ HB_FUNC_STATIC( QPRINTER_PAPERSOURCE )
   }
 }
 
-
 /*
 QPrintEngine * printEngine () const
 */
@@ -543,7 +518,6 @@ HB_FUNC_STATIC( QPRINTER_PRINTENGINE )
   }
 }
 
-
 /*
 QString printProgram () const
 */
@@ -555,7 +529,6 @@ HB_FUNC_STATIC( QPRINTER_PRINTPROGRAM )
     RQSTRING( obj->printProgram () );
   }
 }
-
 
 /*
 PrintRange printRange () const
@@ -569,7 +542,6 @@ HB_FUNC_STATIC( QPRINTER_PRINTRANGE )
   }
 }
 
-
 /*
 QString printerName () const
 */
@@ -581,8 +553,6 @@ HB_FUNC_STATIC( QPRINTER_PRINTERNAME )
     RQSTRING( obj->printerName () );
   }
 }
-
-
 
 /*
 PrinterState printerState () const
@@ -596,7 +566,6 @@ HB_FUNC_STATIC( QPRINTER_PRINTERSTATE )
   }
 }
 
-
 /*
 int resolution () const
 */
@@ -608,7 +577,6 @@ HB_FUNC_STATIC( QPRINTER_RESOLUTION )
     RINT( obj->resolution () );
   }
 }
-
 
 /*
 void setCollateCopies ( bool collate )
@@ -622,7 +590,6 @@ HB_FUNC_STATIC( QPRINTER_SETCOLLATECOPIES )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setColorMode ( ColorMode newColorMode )
@@ -638,7 +605,6 @@ HB_FUNC_STATIC( QPRINTER_SETCOLORMODE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setCopyCount ( int count )
 */
@@ -651,7 +617,6 @@ HB_FUNC_STATIC( QPRINTER_SETCOPYCOUNT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setCreator ( const QString & creator )
@@ -666,7 +631,6 @@ HB_FUNC_STATIC( QPRINTER_SETCREATOR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setDocName ( const QString & name )
 */
@@ -680,7 +644,6 @@ HB_FUNC_STATIC( QPRINTER_SETDOCNAME )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setDoubleSidedPrinting ( bool doubleSided )
 */
@@ -693,7 +656,6 @@ HB_FUNC_STATIC( QPRINTER_SETDOUBLESIDEDPRINTING )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setDuplex ( DuplexMode duplex )
@@ -709,7 +671,6 @@ HB_FUNC_STATIC( QPRINTER_SETDUPLEX )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setFontEmbeddingEnabled ( bool enable )
 */
@@ -722,7 +683,6 @@ HB_FUNC_STATIC( QPRINTER_SETFONTEMBEDDINGENABLED )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setFromTo ( int from, int to )
@@ -737,7 +697,6 @@ HB_FUNC_STATIC( QPRINTER_SETFROMTO )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setFullPage ( bool fp )
 */
@@ -750,7 +709,6 @@ HB_FUNC_STATIC( QPRINTER_SETFULLPAGE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setOrientation ( Orientation orientation )
@@ -766,7 +724,6 @@ HB_FUNC_STATIC( QPRINTER_SETORIENTATION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setOutputFileName ( const QString & fileName )
 */
@@ -779,7 +736,6 @@ HB_FUNC_STATIC( QPRINTER_SETOUTPUTFILENAME )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setOutputFormat ( OutputFormat format )
@@ -795,7 +751,6 @@ HB_FUNC_STATIC( QPRINTER_SETOUTPUTFORMAT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPageMargins ( qreal left, qreal top, qreal right, qreal bottom, Unit unit )
 */
@@ -809,7 +764,6 @@ HB_FUNC_STATIC( QPRINTER_SETPAGEMARGINS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setPageOrder ( PageOrder pageOrder )
@@ -825,7 +779,6 @@ HB_FUNC_STATIC( QPRINTER_SETPAGEORDER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPaperSize ( PaperSize newPaperSize )
 */
@@ -840,7 +793,6 @@ HB_FUNC_STATIC( QPRINTER_SETPAPERSIZE1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPaperSize ( const QSizeF & paperSize, Unit unit )
 */
@@ -854,7 +806,6 @@ HB_FUNC_STATIC( QPRINTER_SETPAPERSIZE2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setPaperSize ( PaperSize newPaperSize )
 //[2]void setPaperSize ( const QSizeF & paperSize, Unit unit )
@@ -885,7 +836,6 @@ HB_FUNC_STATIC( QPRINTER_SETPAPERSOURCE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPrintProgram ( const QString & printProg )
 */
@@ -898,7 +848,6 @@ HB_FUNC_STATIC( QPRINTER_SETPRINTPROGRAM )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setPrintRange ( PrintRange range )
@@ -914,7 +863,6 @@ HB_FUNC_STATIC( QPRINTER_SETPRINTRANGE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPrinterName ( const QString & name )
 */
@@ -927,8 +875,6 @@ HB_FUNC_STATIC( QPRINTER_SETPRINTERNAME )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
 
 /*
 void setResolution ( int dpi )
@@ -943,7 +889,6 @@ HB_FUNC_STATIC( QPRINTER_SETRESOLUTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setWinPageSize ( int pageSize )
 */
@@ -956,7 +901,6 @@ HB_FUNC_STATIC( QPRINTER_SETWINPAGESIZE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QList<PaperSource> supportedPaperSources () const
@@ -980,7 +924,6 @@ HB_FUNC_STATIC( QPRINTER_SUPPORTEDPAPERSOURCES )
   }
 }
 
-
 /*
 QList<int> supportedResolutions () const
 */
@@ -1003,7 +946,6 @@ HB_FUNC_STATIC( QPRINTER_SUPPORTEDRESOLUTIONS )
   }
 }
 
-
 /*
 bool supportsMultipleCopies () const
 */
@@ -1015,7 +957,6 @@ HB_FUNC_STATIC( QPRINTER_SUPPORTSMULTIPLECOPIES )
     RBOOL( obj->supportsMultipleCopies () );
   }
 }
-
 
 /*
 int toPage () const
@@ -1029,7 +970,6 @@ HB_FUNC_STATIC( QPRINTER_TOPAGE )
   }
 }
 
-
 /*
 int winPageSize () const
 */
@@ -1041,7 +981,6 @@ HB_FUNC_STATIC( QPRINTER_WINPAGESIZE )
     RINT( obj->winPageSize () );
   }
 }
-
 
 /*
 virtual QPaintEngine * paintEngine () const
@@ -1055,9 +994,5 @@ HB_FUNC_STATIC( QPRINTER_PAINTENGINE )
     _qt4xhb_createReturnClass ( ptr, "QPAINTENGINE" );
   }
 }
-
-
-
-
 
 #pragma ENDDUMP

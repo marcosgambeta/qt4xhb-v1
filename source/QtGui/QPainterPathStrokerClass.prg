@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -36,11 +36,13 @@ CLASS QPainterPathStroker
    METHOD setMiterLimit
    METHOD setWidth
    METHOD width
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -68,10 +70,10 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_NEW )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_DELETE )
 {
   QPainterPathStroker * obj = (QPainterPathStroker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -81,9 +83,9 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 Qt::PenCapStyle capStyle () const
@@ -96,7 +98,6 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_CAPSTYLE )
     hb_retni( (int) obj->capStyle () );
   }
 }
-
 
 /*
 QPainterPath createStroke ( const QPainterPath & path ) const
@@ -111,7 +112,6 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_CREATESTROKE )
   }
 }
 
-
 /*
 qreal curveThreshold () const
 */
@@ -124,7 +124,6 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_CURVETHRESHOLD )
   }
 }
 
-
 /*
 qreal dashOffset () const
 */
@@ -136,7 +135,6 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_DASHOFFSET )
     RQREAL( obj->dashOffset () );
   }
 }
-
 
 /*
 QVector<qreal> dashPattern () const
@@ -160,7 +158,6 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_DASHPATTERN )
   }
 }
 
-
 /*
 Qt::PenJoinStyle joinStyle () const
 */
@@ -173,7 +170,6 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_JOINSTYLE )
   }
 }
 
-
 /*
 qreal miterLimit () const
 */
@@ -185,7 +181,6 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_MITERLIMIT )
     RQREAL( obj->miterLimit () );
   }
 }
-
 
 /*
 void setCapStyle ( Qt::PenCapStyle style )
@@ -201,7 +196,6 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETCAPSTYLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setCurveThreshold ( qreal threshold )
 */
@@ -214,7 +208,6 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETCURVETHRESHOLD )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setDashOffset ( qreal offset )
@@ -229,7 +222,6 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETDASHOFFSET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setDashPattern ( Qt::PenStyle style )
 */
@@ -243,7 +235,6 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETDASHPATTERN1 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setDashPattern ( const QVector<qreal> & dashPattern )
@@ -267,7 +258,6 @@ par1 << temp1;
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setDashPattern ( Qt::PenStyle style )
 //[2]void setDashPattern ( const QVector<qreal> & dashPattern )
@@ -298,7 +288,6 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETJOINSTYLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setMiterLimit ( qreal limit )
 */
@@ -311,7 +300,6 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETMITERLIMIT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setWidth ( qreal width )
@@ -326,7 +314,6 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETWIDTH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 qreal width () const
 */
@@ -338,7 +325,6 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_WIDTH )
     RQREAL( obj->width () );
   }
 }
-
 
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_NEWFROM )
 {
@@ -394,6 +380,5 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

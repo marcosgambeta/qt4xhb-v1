@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -44,7 +44,9 @@ CLASS QProgressDialog INHERIT QDialog
    METHOD setMinimumDuration
    METHOD setRange
    METHOD setValue
+
    METHOD onCanceled
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -73,7 +75,6 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QProgressDialog ( const QString & labelText, const QString & cancelButtonText, int minimum, int maximum, QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
@@ -83,7 +84,6 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_NEW2 )
   QProgressDialog * o = new QProgressDialog ( PQSTRING(1), PQSTRING(2), PINT(3), PINT(4), OPQWIDGET(5,0), (Qt::WindowFlags) par6 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QProgressDialog ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 //[2]QProgressDialog ( const QString & labelText, const QString & cancelButtonText, int minimum, int maximum, QWidget * parent = 0, Qt::WindowFlags f = 0 )
@@ -107,6 +107,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_NEW )
 HB_FUNC_STATIC( QPROGRESSDIALOG_DELETE )
 {
   QProgressDialog * obj = (QProgressDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -116,9 +117,9 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 bool autoClose () const
@@ -132,7 +133,6 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_AUTOCLOSE )
   }
 }
 
-
 /*
 bool autoReset () const
 */
@@ -144,7 +144,6 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_AUTORESET )
     RBOOL( obj->autoReset () );
   }
 }
-
 
 /*
 QString labelText () const
@@ -158,7 +157,6 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_LABELTEXT )
   }
 }
 
-
 /*
 int maximum () const
 */
@@ -170,7 +168,6 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_MAXIMUM )
     RINT( obj->maximum () );
   }
 }
-
 
 /*
 int minimum () const
@@ -184,7 +181,6 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_MINIMUM )
   }
 }
 
-
 /*
 int minimumDuration () const
 */
@@ -196,7 +192,6 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_MINIMUMDURATION )
     RINT( obj->minimumDuration () );
   }
 }
-
 
 /*
 void open ( QObject * receiver, const char * member )
@@ -211,7 +206,6 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_OPEN )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setAutoClose ( bool close )
 */
@@ -225,7 +219,6 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETAUTOCLOSE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setAutoReset ( bool reset )
 */
@@ -238,7 +231,6 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETAUTORESET )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setBar ( QProgressBar * bar )
@@ -254,7 +246,6 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETBAR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setCancelButton ( QPushButton * cancelButton )
 */
@@ -268,7 +259,6 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETCANCELBUTTON )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setLabel ( QLabel * label )
@@ -284,7 +274,6 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETLABEL )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int value () const
 */
@@ -297,7 +286,6 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_VALUE )
   }
 }
 
-
 /*
 bool wasCanceled () const
 */
@@ -309,7 +297,6 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_WASCANCELED )
     RBOOL( obj->wasCanceled () );
   }
 }
-
 
 /*
 virtual QSize sizeHint () const
@@ -324,7 +311,6 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SIZEHINT )
   }
 }
 
-
 /*
 void cancel ()
 */
@@ -337,7 +323,6 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_CANCEL )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void reset ()
@@ -352,7 +337,6 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_RESET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setCancelButtonText ( const QString & cancelButtonText )
 */
@@ -365,7 +349,6 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETCANCELBUTTONTEXT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setLabelText ( const QString & text )
@@ -380,7 +363,6 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETLABELTEXT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setMaximum ( int maximum )
 */
@@ -393,7 +375,6 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETMAXIMUM )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setMinimum ( int minimum )
@@ -408,7 +389,6 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETMINIMUM )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setMinimumDuration ( int ms )
 */
@@ -421,7 +401,6 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETMINIMUMDURATION )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setRange ( int minimum, int maximum )
@@ -436,7 +415,6 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETRANGE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setValue ( int progress )
 */
@@ -449,9 +427,5 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETVALUE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

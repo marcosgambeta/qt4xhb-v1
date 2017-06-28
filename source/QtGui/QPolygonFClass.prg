@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -41,11 +41,13 @@ CLASS QPolygonF
    METHOD translated2
    METHOD translated
    METHOD united
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -73,7 +75,6 @@ HB_FUNC_STATIC( QPOLYGONF_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QPolygonF ( int size )
 */
@@ -83,7 +84,6 @@ HB_FUNC_STATIC( QPOLYGONF_NEW2 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QPolygonF ( const QPolygonF & polygon )
 */
@@ -92,7 +92,6 @@ HB_FUNC_STATIC( QPOLYGONF_NEW3 )
   QPolygonF * o = new QPolygonF ( *PQPOLYGONF(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QPolygonF ( const QVector<QPointF> & points )
@@ -111,7 +110,6 @@ par1 << *(QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QPolygonF ( const QRectF & rectangle )
 */
@@ -121,7 +119,6 @@ HB_FUNC_STATIC( QPOLYGONF_NEW5 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QPolygonF ( const QPolygon & polygon )
 */
@@ -130,7 +127,6 @@ HB_FUNC_STATIC( QPOLYGONF_NEW6 )
   QPolygonF * o = new QPolygonF ( *PQPOLYGON(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QPolygonF ()
 //[2]QPolygonF ( int size )
@@ -174,6 +170,7 @@ HB_FUNC_STATIC( QPOLYGONF_NEW )
 HB_FUNC_STATIC( QPOLYGONF_DELETE )
 {
   QPolygonF * obj = (QPolygonF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -183,9 +180,9 @@ HB_FUNC_STATIC( QPOLYGONF_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QRectF boundingRect () const
@@ -200,7 +197,6 @@ HB_FUNC_STATIC( QPOLYGONF_BOUNDINGRECT )
   }
 }
 
-
 /*
 bool containsPoint ( const QPointF & point, Qt::FillRule fillRule ) const
 */
@@ -213,7 +209,6 @@ HB_FUNC_STATIC( QPOLYGONF_CONTAINSPOINT )
     RBOOL( obj->containsPoint ( *PQPOINTF(1), (Qt::FillRule) par2 ) );
   }
 }
-
 
 /*
 QPolygonF intersected ( const QPolygonF & r ) const
@@ -228,7 +223,6 @@ HB_FUNC_STATIC( QPOLYGONF_INTERSECTED )
   }
 }
 
-
 /*
 bool isClosed () const
 */
@@ -240,7 +234,6 @@ HB_FUNC_STATIC( QPOLYGONF_ISCLOSED )
     RBOOL( obj->isClosed () );
   }
 }
-
 
 /*
 QPolygonF subtracted ( const QPolygonF & r ) const
@@ -254,7 +247,6 @@ HB_FUNC_STATIC( QPOLYGONF_SUBTRACTED )
     _qt4xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
-
 
 /*
 void swap ( QPolygonF & other )
@@ -270,7 +262,6 @@ HB_FUNC_STATIC( QPOLYGONF_SWAP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QPolygon toPolygon () const
 */
@@ -283,7 +274,6 @@ HB_FUNC_STATIC( QPOLYGONF_TOPOLYGON )
     _qt4xhb_createReturnClass ( ptr, "QPOLYGON", true );
   }
 }
-
 
 /*
 void translate ( const QPointF & offset )
@@ -298,7 +288,6 @@ HB_FUNC_STATIC( QPOLYGONF_TRANSLATE1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void translate ( qreal dx, qreal dy )
 */
@@ -311,7 +300,6 @@ HB_FUNC_STATIC( QPOLYGONF_TRANSLATE2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void translate ( const QPointF & offset )
 //[2]void translate ( qreal dx, qreal dy )
@@ -341,7 +329,6 @@ HB_FUNC_STATIC( QPOLYGONF_TRANSLATED1 )
   }
 }
 
-
 /*
 QPolygonF translated ( qreal dx, qreal dy ) const
 */
@@ -354,7 +341,6 @@ HB_FUNC_STATIC( QPOLYGONF_TRANSLATED2 )
     _qt4xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
-
 
 //[1]QPolygonF translated ( const QPointF & offset ) const
 //[2]QPolygonF translated ( qreal dx, qreal dy ) const
@@ -383,7 +369,6 @@ HB_FUNC_STATIC( QPOLYGONF_UNITED )
     _qt4xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
-
 
 HB_FUNC_STATIC( QPOLYGONF_NEWFROM )
 {
@@ -439,6 +424,5 @@ HB_FUNC_STATIC( QPOLYGONF_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

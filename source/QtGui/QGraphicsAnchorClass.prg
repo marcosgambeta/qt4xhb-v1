@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QGraphicsAnchor INHERIT QObject
 
@@ -19,6 +18,7 @@ CLASS QGraphicsAnchor INHERIT QObject
    METHOD sizePolicy
    METHOD spacing
    METHOD unsetSpacing
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -40,6 +40,7 @@ RETURN
 HB_FUNC_STATIC( QGRAPHICSANCHOR_DELETE )
 {
   QGraphicsAnchor * obj = (QGraphicsAnchor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -49,9 +50,9 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setSizePolicy ( QSizePolicy::Policy policy )
@@ -67,7 +68,6 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_SETSIZEPOLICY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setSpacing ( qreal spacing )
 */
@@ -81,7 +81,6 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_SETSPACING )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QSizePolicy::Policy sizePolicy () const
 */
@@ -93,7 +92,6 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_SIZEPOLICY )
     hb_retni( (int) obj->sizePolicy () );
   }
 }
-
 
 /*
 qreal spacing () const
@@ -107,7 +105,6 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_SPACING )
   }
 }
 
-
 /*
 void unsetSpacing ()
 */
@@ -120,9 +117,5 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_UNSETSPACING )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

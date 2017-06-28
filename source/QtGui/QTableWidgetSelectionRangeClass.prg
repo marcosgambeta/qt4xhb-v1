@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QTableWidgetSelectionRange
 
@@ -25,11 +24,13 @@ CLASS QTableWidgetSelectionRange
    METHOD rightColumn
    METHOD rowCount
    METHOD topRow
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -57,7 +58,6 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QTableWidgetSelectionRange ( int top, int left, int bottom, int right )
 */
@@ -67,7 +67,6 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_NEW2 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QTableWidgetSelectionRange ( const QTableWidgetSelectionRange & other )
 */
@@ -76,7 +75,6 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_NEW3 )
   QTableWidgetSelectionRange * o = new QTableWidgetSelectionRange ( *PQTABLEWIDGETSELECTIONRANGE(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QTableWidgetSelectionRange ()
 //[2]QTableWidgetSelectionRange ( int top, int left, int bottom, int right )
@@ -105,6 +103,7 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_NEW )
 HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_DELETE )
 {
   QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -114,9 +113,9 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 int bottomRow () const
@@ -130,7 +129,6 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_BOTTOMROW )
   }
 }
 
-
 /*
 int columnCount () const
 */
@@ -142,7 +140,6 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_COLUMNCOUNT )
     RINT( obj->columnCount () );
   }
 }
-
 
 /*
 int leftColumn () const
@@ -156,7 +153,6 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_LEFTCOLUMN )
   }
 }
 
-
 /*
 int rightColumn () const
 */
@@ -168,7 +164,6 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_RIGHTCOLUMN )
     RINT( obj->rightColumn () );
   }
 }
-
 
 /*
 int rowCount () const
@@ -182,7 +177,6 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_ROWCOUNT )
   }
 }
 
-
 /*
 int topRow () const
 */
@@ -194,7 +188,6 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_TOPROW )
     RINT( obj->topRow () );
   }
 }
-
 
 HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_NEWFROM )
 {
@@ -250,7 +243,5 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

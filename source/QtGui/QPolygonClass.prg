@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -46,11 +46,13 @@ CLASS QPolygon
    METHOD translated2
    METHOD translated
    METHOD united
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -78,7 +80,6 @@ HB_FUNC_STATIC( QPOLYGON_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QPolygon ( int size )
 */
@@ -88,7 +89,6 @@ HB_FUNC_STATIC( QPOLYGON_NEW2 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QPolygon ( const QPolygon & polygon )
 */
@@ -97,7 +97,6 @@ HB_FUNC_STATIC( QPOLYGON_NEW3 )
   QPolygon * o = new QPolygon ( *PQPOLYGON(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QPolygon ( const QVector<QPoint> & points )
@@ -116,7 +115,6 @@ par1 << *(QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QPolygon ( const QRect & rectangle, bool closed = false )
 */
@@ -125,7 +123,6 @@ HB_FUNC_STATIC( QPOLYGON_NEW5 )
   QPolygon * o = new QPolygon ( *PQRECT(1), OPBOOL(2,false) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QPolygon ()
 //[2]QPolygon ( int size )
@@ -164,6 +161,7 @@ HB_FUNC_STATIC( QPOLYGON_NEW )
 HB_FUNC_STATIC( QPOLYGON_DELETE )
 {
   QPolygon * obj = (QPolygon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -173,9 +171,9 @@ HB_FUNC_STATIC( QPOLYGON_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QRect boundingRect () const
@@ -190,7 +188,6 @@ HB_FUNC_STATIC( QPOLYGON_BOUNDINGRECT )
   }
 }
 
-
 /*
 bool containsPoint ( const QPoint & point, Qt::FillRule fillRule ) const
 */
@@ -204,7 +201,6 @@ HB_FUNC_STATIC( QPOLYGON_CONTAINSPOINT )
   }
 }
 
-
 /*
 QPolygon intersected ( const QPolygon & r ) const
 */
@@ -217,7 +213,6 @@ HB_FUNC_STATIC( QPOLYGON_INTERSECTED )
     _qt4xhb_createReturnClass ( ptr, "QPOLYGON", true );
   }
 }
-
 
 /*
 void point ( int index, int * x, int * y ) const
@@ -236,7 +231,6 @@ HB_FUNC_STATIC( QPOLYGON_POINT1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QPoint point ( int index ) const
 */
@@ -249,7 +243,6 @@ HB_FUNC_STATIC( QPOLYGON_POINT2 )
     _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
-
 
 //[1]void point ( int index, int * x, int * y ) const
 //[2]QPoint point ( int index ) const
@@ -266,7 +259,6 @@ HB_FUNC_STATIC( QPOLYGON_POINT )
   }
 }
 
-
 /*
 void putPoints ( int index, int nPoints, const QPolygon & fromPolygon, int fromIndex = 0 )
 */
@@ -279,7 +271,6 @@ HB_FUNC_STATIC( QPOLYGON_PUTPOINTS2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void putPoints ( int index, int nPoints, int firstx, int firsty, ... )
 //[2]void putPoints ( int index, int nPoints, const QPolygon & fromPolygon, int fromIndex = 0 )
@@ -302,7 +293,6 @@ HB_FUNC_STATIC( QPOLYGON_SETPOINT1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPoint ( int index, const QPoint & point )
 */
@@ -315,7 +305,6 @@ HB_FUNC_STATIC( QPOLYGON_SETPOINT2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setPoint ( int index, int x, int y )
 //[2]void setPoint ( int index, const QPoint & point )
@@ -332,8 +321,6 @@ HB_FUNC_STATIC( QPOLYGON_SETPOINT )
   }
 }
 
-
-
 /*
 QPolygon subtracted ( const QPolygon & r ) const
 */
@@ -346,7 +333,6 @@ HB_FUNC_STATIC( QPOLYGON_SUBTRACTED )
     _qt4xhb_createReturnClass ( ptr, "QPOLYGON", true );
   }
 }
-
 
 /*
 void swap ( QPolygon & other )
@@ -362,7 +348,6 @@ HB_FUNC_STATIC( QPOLYGON_SWAP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void translate ( int dx, int dy )
 */
@@ -376,7 +361,6 @@ HB_FUNC_STATIC( QPOLYGON_TRANSLATE1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void translate ( const QPoint & offset )
 */
@@ -389,7 +373,6 @@ HB_FUNC_STATIC( QPOLYGON_TRANSLATE2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void translate ( int dx, int dy )
 //[2]void translate ( const QPoint & offset )
@@ -419,7 +402,6 @@ HB_FUNC_STATIC( QPOLYGON_TRANSLATED1 )
   }
 }
 
-
 /*
 QPolygon translated ( const QPoint & offset ) const
 */
@@ -432,7 +414,6 @@ HB_FUNC_STATIC( QPOLYGON_TRANSLATED2 )
     _qt4xhb_createReturnClass ( ptr, "QPOLYGON", true );
   }
 }
-
 
 //[1]QPolygon translated ( int dx, int dy ) const
 //[2]QPolygon translated ( const QPoint & offset ) const
@@ -461,7 +442,6 @@ HB_FUNC_STATIC( QPOLYGON_UNITED )
     _qt4xhb_createReturnClass ( ptr, "QPOLYGON", true );
   }
 }
-
 
 HB_FUNC_STATIC( QPOLYGON_NEWFROM )
 {
@@ -517,6 +497,5 @@ HB_FUNC_STATIC( QPOLYGON_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

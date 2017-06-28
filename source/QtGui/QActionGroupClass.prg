@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -32,8 +32,10 @@ CLASS QActionGroup INHERIT QObject
    METHOD setEnabled
    METHOD setExclusive
    METHOD setVisible
+
    METHOD onHovered
    METHOD onTriggered
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -61,10 +63,10 @@ HB_FUNC_STATIC( QACTIONGROUP_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QACTIONGROUP_DELETE )
 {
   QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -74,9 +76,9 @@ HB_FUNC_STATIC( QACTIONGROUP_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QList<QAction *> actions () const
@@ -121,7 +123,6 @@ HB_FUNC_STATIC( QACTIONGROUP_ACTIONS )
   }
 }
 
-
 /*
 QAction * addAction ( QAction * action )
 */
@@ -134,7 +135,6 @@ HB_FUNC_STATIC( QACTIONGROUP_ADDACTION1 )
     _qt4xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
-
 
 /*
 QAction * addAction ( const QString & text )
@@ -149,7 +149,6 @@ HB_FUNC_STATIC( QACTIONGROUP_ADDACTION2 )
   }
 }
 
-
 /*
 QAction * addAction ( const QIcon & icon, const QString & text )
 */
@@ -163,7 +162,6 @@ HB_FUNC_STATIC( QACTIONGROUP_ADDACTION3 )
     _qt4xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
-
 
 //[1]QAction * addAction ( QAction * action )
 //[2]QAction * addAction ( const QString & text )
@@ -198,7 +196,6 @@ HB_FUNC_STATIC( QACTIONGROUP_CHECKEDACTION )
   }
 }
 
-
 /*
 bool isEnabled () const
 */
@@ -210,7 +207,6 @@ HB_FUNC_STATIC( QACTIONGROUP_ISENABLED )
     RBOOL( obj->isEnabled () );
   }
 }
-
 
 /*
 bool isExclusive () const
@@ -224,7 +220,6 @@ HB_FUNC_STATIC( QACTIONGROUP_ISEXCLUSIVE )
   }
 }
 
-
 /*
 bool isVisible () const
 */
@@ -236,7 +231,6 @@ HB_FUNC_STATIC( QACTIONGROUP_ISVISIBLE )
     RBOOL( obj->isVisible () );
   }
 }
-
 
 /*
 void removeAction ( QAction * action )
@@ -251,7 +245,6 @@ HB_FUNC_STATIC( QACTIONGROUP_REMOVEACTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setDisabled ( bool b )
 */
@@ -264,7 +257,6 @@ HB_FUNC_STATIC( QACTIONGROUP_SETDISABLED )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setEnabled ( bool )
@@ -279,7 +271,6 @@ HB_FUNC_STATIC( QACTIONGROUP_SETENABLED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setExclusive ( bool )
 */
@@ -293,7 +284,6 @@ HB_FUNC_STATIC( QACTIONGROUP_SETEXCLUSIVE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setVisible ( bool )
 */
@@ -306,9 +296,5 @@ HB_FUNC_STATIC( QACTIONGROUP_SETVISIBLE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

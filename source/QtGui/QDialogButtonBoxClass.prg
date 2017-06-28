@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -38,10 +38,12 @@ CLASS QDialogButtonBox INHERIT QWidget
    METHOD setStandardButtons
    METHOD standardButton
    METHOD standardButtons
+
    METHOD onAccepted
    METHOD onClicked
    METHOD onHelpRequested
    METHOD onRejected
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -69,7 +71,6 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QDialogButtonBox ( Qt::Orientation orientation, QWidget * parent = 0 )
 */
@@ -78,7 +79,6 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_NEW2 )
   QDialogButtonBox * o = new QDialogButtonBox ( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 /*
 QDialogButtonBox ( StandardButtons buttons, Qt::Orientation orientation = Qt::Horizontal, QWidget * parent = 0 )
@@ -90,7 +90,6 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_NEW3 )
   QDialogButtonBox * o = new QDialogButtonBox ( (QDialogButtonBox::StandardButtons) par1, (Qt::Orientation) par2, OPQWIDGET(3,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QDialogButtonBox ( QWidget * parent = 0 )
 //[2]QDialogButtonBox ( Qt::Orientation orientation, QWidget * parent = 0 )
@@ -119,6 +118,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_NEW )
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_DELETE )
 {
   QDialogButtonBox * obj = (QDialogButtonBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -128,9 +128,9 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void addButton ( QAbstractButton * button, ButtonRole role )
@@ -147,7 +147,6 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ADDBUTTON1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QPushButton * addButton ( const QString & text, ButtonRole role )
 */
@@ -162,7 +161,6 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ADDBUTTON2 )
   }
 }
 
-
 /*
 QPushButton * addButton ( StandardButton button )
 */
@@ -176,7 +174,6 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ADDBUTTON3 )
     _qt4xhb_createReturnClass ( ptr, "QPUSHBUTTON" );
   }
 }
-
 
 //[1]void addButton ( QAbstractButton * button, ButtonRole role )
 //[2]QPushButton * addButton ( const QString & text, ButtonRole role )
@@ -212,7 +209,6 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_BUTTON )
   }
 }
 
-
 /*
 ButtonRole buttonRole ( QAbstractButton * button ) const
 */
@@ -225,7 +221,6 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_BUTTONROLE )
     hb_retni( (int) obj->buttonRole ( par1 ) );
   }
 }
-
 
 /*
 QList<QAbstractButton *> buttons () const
@@ -270,7 +265,6 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_BUTTONS )
   }
 }
 
-
 /*
 bool centerButtons () const
 */
@@ -282,7 +276,6 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_CENTERBUTTONS )
     RBOOL( obj->centerButtons () );
   }
 }
-
 
 /*
 void clear ()
@@ -297,7 +290,6 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_CLEAR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 Qt::Orientation orientation () const
 */
@@ -309,7 +301,6 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ORIENTATION )
     RENUM( obj->orientation () );
   }
 }
-
 
 /*
 void removeButton ( QAbstractButton * button )
@@ -325,7 +316,6 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_REMOVEBUTTON )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setCenterButtons ( bool center )
 */
@@ -339,7 +329,6 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_SETCENTERBUTTONS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setOrientation ( Qt::Orientation orientation )
 */
@@ -352,7 +341,6 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_SETORIENTATION )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setStandardButtons ( StandardButtons buttons )
@@ -368,7 +356,6 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_SETSTANDARDBUTTONS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 StandardButton standardButton ( QAbstractButton * button ) const
 */
@@ -382,7 +369,6 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_STANDARDBUTTON )
   }
 }
 
-
 /*
 StandardButtons standardButtons () const
 */
@@ -394,9 +380,5 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_STANDARDBUTTONS )
     hb_retni( (int) obj->standardButtons () );
   }
 }
-
-
-
-
 
 #pragma ENDDUMP

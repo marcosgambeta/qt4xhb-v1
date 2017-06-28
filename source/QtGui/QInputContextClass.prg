@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -34,6 +34,7 @@ CLASS QInputContext INHERIT QObject
    METHOD standardFormat
    METHOD update
    METHOD widgetDestroyed
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -54,10 +55,10 @@ RETURN
 
 #include <QTextFormat>
 
-
 HB_FUNC_STATIC( QINPUTCONTEXT_DELETE )
 {
   QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -67,9 +68,9 @@ HB_FUNC_STATIC( QINPUTCONTEXT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual QList<QAction *> actions ()
@@ -114,7 +115,6 @@ HB_FUNC_STATIC( QINPUTCONTEXT_ACTIONS )
   }
 }
 
-
 /*
 virtual bool filterEvent ( const QEvent * event )
 */
@@ -127,7 +127,6 @@ HB_FUNC_STATIC( QINPUTCONTEXT_FILTEREVENT )
     RBOOL( obj->filterEvent ( par1 ) );
   }
 }
-
 
 /*
 QWidget * focusWidget () const
@@ -142,7 +141,6 @@ HB_FUNC_STATIC( QINPUTCONTEXT_FOCUSWIDGET )
   }
 }
 
-
 /*
 virtual QFont font () const
 */
@@ -156,7 +154,6 @@ HB_FUNC_STATIC( QINPUTCONTEXT_FONT )
   }
 }
 
-
 /*
 virtual QString identifierName () = 0
 */
@@ -168,7 +165,6 @@ HB_FUNC_STATIC( QINPUTCONTEXT_IDENTIFIERNAME )
     RQSTRING( obj->identifierName () );
   }
 }
-
 
 /*
 virtual bool isComposing () const = 0
@@ -182,7 +178,6 @@ HB_FUNC_STATIC( QINPUTCONTEXT_ISCOMPOSING )
   }
 }
 
-
 /*
 virtual QString language () = 0
 */
@@ -194,7 +189,6 @@ HB_FUNC_STATIC( QINPUTCONTEXT_LANGUAGE )
     RQSTRING( obj->language () );
   }
 }
-
 
 /*
 virtual void mouseHandler ( int x, QMouseEvent * event )
@@ -210,7 +204,6 @@ HB_FUNC_STATIC( QINPUTCONTEXT_MOUSEHANDLER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void reset () = 0
 */
@@ -223,7 +216,6 @@ HB_FUNC_STATIC( QINPUTCONTEXT_RESET )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void sendEvent ( const QInputMethodEvent & event )
@@ -238,7 +230,6 @@ HB_FUNC_STATIC( QINPUTCONTEXT_SENDEVENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void setFocusWidget ( QWidget * widget )
 */
@@ -251,7 +242,6 @@ HB_FUNC_STATIC( QINPUTCONTEXT_SETFOCUSWIDGET )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QTextFormat standardFormat ( StandardFormat s ) const
@@ -267,8 +257,6 @@ HB_FUNC_STATIC( QINPUTCONTEXT_STANDARDFORMAT )
   }
 }
 
-
-
 /*
 virtual void update ()
 */
@@ -282,7 +270,6 @@ HB_FUNC_STATIC( QINPUTCONTEXT_UPDATE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void widgetDestroyed ( QWidget * widget )
 */
@@ -295,9 +282,5 @@ HB_FUNC_STATIC( QINPUTCONTEXT_WIDGETDESTROYED )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

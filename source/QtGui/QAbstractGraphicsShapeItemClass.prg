@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -25,6 +25,7 @@ CLASS QAbstractGraphicsShapeItem INHERIT QGraphicsItem
    METHOD setPen
    METHOD isObscuredBy
    METHOD opaqueArea
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -46,10 +47,10 @@ RETURN
 #include <QBrush>
 #include <QPen>
 
-
 HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_DELETE )
 {
   QAbstractGraphicsShapeItem * obj = (QAbstractGraphicsShapeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -59,9 +60,9 @@ HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QBrush brush () const
@@ -76,7 +77,6 @@ HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_BRUSH )
   }
 }
 
-
 /*
 QPen pen () const
 */
@@ -89,7 +89,6 @@ HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_PEN )
     _qt4xhb_createReturnClass ( ptr, "QPEN", true );
   }
 }
-
 
 /*
 void setBrush ( const QBrush & brush )
@@ -104,7 +103,6 @@ HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_SETBRUSH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPen ( const QPen & pen )
 */
@@ -117,7 +115,6 @@ HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_SETPEN )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual bool isObscuredBy ( const QGraphicsItem * item ) const
@@ -132,7 +129,6 @@ HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_ISOBSCUREDBY )
   }
 }
 
-
 /*
 virtual QPainterPath opaqueArea () const
 */
@@ -145,8 +141,5 @@ HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_OPAQUEAREA )
     _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
-
-
-
 
 #pragma ENDDUMP

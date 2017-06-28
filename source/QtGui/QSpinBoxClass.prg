@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QSpinBox INHERIT QAbstractSpinBox
 
@@ -29,8 +28,10 @@ CLASS QSpinBox INHERIT QAbstractSpinBox
    METHOD suffix
    METHOD value
    METHOD setValue
+
    METHOD onValueChanged1
    METHOD onValueChanged2
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -58,10 +59,10 @@ HB_FUNC_STATIC( QSPINBOX_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QSPINBOX_DELETE )
 {
   QSpinBox * obj = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -71,9 +72,9 @@ HB_FUNC_STATIC( QSPINBOX_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QString cleanText () const
@@ -87,7 +88,6 @@ HB_FUNC_STATIC( QSPINBOX_CLEANTEXT )
   }
 }
 
-
 /*
 int maximum () const
 */
@@ -99,7 +99,6 @@ HB_FUNC_STATIC( QSPINBOX_MAXIMUM )
     RINT( obj->maximum () );
   }
 }
-
 
 /*
 int minimum () const
@@ -113,7 +112,6 @@ HB_FUNC_STATIC( QSPINBOX_MINIMUM )
   }
 }
 
-
 /*
 QString prefix () const
 */
@@ -125,7 +123,6 @@ HB_FUNC_STATIC( QSPINBOX_PREFIX )
     RQSTRING( obj->prefix () );
   }
 }
-
 
 /*
 void setMaximum ( int max )
@@ -140,7 +137,6 @@ HB_FUNC_STATIC( QSPINBOX_SETMAXIMUM )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setMinimum ( int min )
 */
@@ -153,7 +149,6 @@ HB_FUNC_STATIC( QSPINBOX_SETMINIMUM )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setPrefix ( const QString & prefix )
@@ -168,7 +163,6 @@ HB_FUNC_STATIC( QSPINBOX_SETPREFIX )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setRange ( int minimum, int maximum )
 */
@@ -181,7 +175,6 @@ HB_FUNC_STATIC( QSPINBOX_SETRANGE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setSingleStep ( int val )
@@ -196,7 +189,6 @@ HB_FUNC_STATIC( QSPINBOX_SETSINGLESTEP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setSuffix ( const QString & suffix )
 */
@@ -210,7 +202,6 @@ HB_FUNC_STATIC( QSPINBOX_SETSUFFIX )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int singleStep () const
 */
@@ -222,7 +213,6 @@ HB_FUNC_STATIC( QSPINBOX_SINGLESTEP )
     RINT( obj->singleStep () );
   }
 }
-
 
 /*
 QString suffix () const
@@ -236,7 +226,6 @@ HB_FUNC_STATIC( QSPINBOX_SUFFIX )
   }
 }
 
-
 /*
 int value () const
 */
@@ -248,7 +237,6 @@ HB_FUNC_STATIC( QSPINBOX_VALUE )
     RINT( obj->value () );
   }
 }
-
 
 /*
 void setValue ( int val )
@@ -262,9 +250,5 @@ HB_FUNC_STATIC( QSPINBOX_SETVALUE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

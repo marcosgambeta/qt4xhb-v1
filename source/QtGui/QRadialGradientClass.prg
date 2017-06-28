@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -39,6 +39,7 @@ CLASS QRadialGradient INHERIT QGradient
    METHOD setCenterRadius
    METHOD focalRadius
    METHOD setFocalRadius
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -66,7 +67,6 @@ HB_FUNC_STATIC( QRADIALGRADIENT_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QRadialGradient(const QPointF &center, qreal radius, const QPointF &focalPoint)
 */
@@ -75,7 +75,6 @@ HB_FUNC_STATIC( QRADIALGRADIENT_NEW2 )
   QRadialGradient * o = new QRadialGradient ( *PQPOINTF(1), PQREAL(2), *PQPOINTF(3) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 /*
 QRadialGradient(qreal cx, qreal cy, qreal radius, qreal fx, qreal fy)
@@ -86,7 +85,6 @@ HB_FUNC_STATIC( QRADIALGRADIENT_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QRadialGradient(const QPointF &center, qreal radius)
 */
@@ -95,7 +93,6 @@ HB_FUNC_STATIC( QRADIALGRADIENT_NEW4 )
   QRadialGradient * o = new QRadialGradient ( *PQPOINTF(1), PQREAL(2) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 /*
 QRadialGradient(qreal cx, qreal cy, qreal radius)
@@ -106,7 +103,6 @@ HB_FUNC_STATIC( QRADIALGRADIENT_NEW5 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QRadialGradient(const QPointF &center, qreal centerRadius, const QPointF &focalPoint, qreal focalRadius)
 */
@@ -116,7 +112,6 @@ HB_FUNC_STATIC( QRADIALGRADIENT_NEW6 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QRadialGradient(qreal cx, qreal cy, qreal centerRadius, qreal fx, qreal fy, qreal focalRadius)
 */
@@ -125,7 +120,6 @@ HB_FUNC_STATIC( QRADIALGRADIENT_NEW7 )
   QRadialGradient * o = new QRadialGradient ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QRadialGradient()
 //[2]QRadialGradient(const QPointF &center, qreal radius, const QPointF &focalPoint)
@@ -174,6 +168,7 @@ HB_FUNC_STATIC( QRADIALGRADIENT_NEW )
 HB_FUNC_STATIC( QRADIALGRADIENT_DELETE )
 {
   QRadialGradient * obj = (QRadialGradient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -183,9 +178,9 @@ HB_FUNC_STATIC( QRADIALGRADIENT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QPointF center() const
@@ -200,7 +195,6 @@ HB_FUNC_STATIC( QRADIALGRADIENT_CENTER )
   }
 }
 
-
 /*
 void setCenter(const QPointF &center)
 */
@@ -214,7 +208,6 @@ HB_FUNC_STATIC( QRADIALGRADIENT_SETCENTER1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setCenter(qreal x, qreal y)
 */
@@ -227,7 +220,6 @@ HB_FUNC_STATIC( QRADIALGRADIENT_SETCENTER2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setCenter(const QPointF &center)
 //[2]void setCenter(qreal x, qreal y)
@@ -257,7 +249,6 @@ HB_FUNC_STATIC( QRADIALGRADIENT_FOCALPOINT )
   }
 }
 
-
 /*
 void setFocalPoint(const QPointF &focalPoint)
 */
@@ -271,7 +262,6 @@ HB_FUNC_STATIC( QRADIALGRADIENT_SETFOCALPOINT1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setFocalPoint(qreal x, qreal y)
 */
@@ -284,7 +274,6 @@ HB_FUNC_STATIC( QRADIALGRADIENT_SETFOCALPOINT2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setFocalPoint(const QPointF &focalPoint)
 //[2]void setFocalPoint(qreal x, qreal y)
@@ -313,7 +302,6 @@ HB_FUNC_STATIC( QRADIALGRADIENT_RADIUS )
   }
 }
 
-
 /*
 void setRadius(qreal radius)
 */
@@ -327,7 +315,6 @@ HB_FUNC_STATIC( QRADIALGRADIENT_SETRADIUS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 qreal centerRadius() const
 */
@@ -339,7 +326,6 @@ HB_FUNC_STATIC( QRADIALGRADIENT_CENTERRADIUS )
     RQREAL( obj->centerRadius () );
   }
 }
-
 
 /*
 void setCenterRadius(qreal radius)
@@ -354,7 +340,6 @@ HB_FUNC_STATIC( QRADIALGRADIENT_SETCENTERRADIUS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 qreal focalRadius() const
 */
@@ -366,7 +351,6 @@ HB_FUNC_STATIC( QRADIALGRADIENT_FOCALRADIUS )
     RQREAL( obj->focalRadius () );
   }
 }
-
 
 /*
 void setFocalRadius(qreal radius)
@@ -380,9 +364,5 @@ HB_FUNC_STATIC( QRADIALGRADIENT_SETFOCALRADIUS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

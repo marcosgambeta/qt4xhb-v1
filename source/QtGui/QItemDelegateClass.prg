@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -22,6 +22,7 @@ CLASS QItemDelegate INHERIT QAbstractItemDelegate
    METHOD itemEditorFactory
    METHOD setClipping
    METHOD setItemEditorFactory
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -49,10 +50,10 @@ HB_FUNC_STATIC( QITEMDELEGATE_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QITEMDELEGATE_DELETE )
 {
   QItemDelegate * obj = (QItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -62,9 +63,9 @@ HB_FUNC_STATIC( QITEMDELEGATE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 bool hasClipping () const
@@ -77,7 +78,6 @@ HB_FUNC_STATIC( QITEMDELEGATE_HASCLIPPING )
     RBOOL( obj->hasClipping () );
   }
 }
-
 
 /*
 QItemEditorFactory * itemEditorFactory () const
@@ -92,7 +92,6 @@ HB_FUNC_STATIC( QITEMDELEGATE_ITEMEDITORFACTORY )
   }
 }
 
-
 /*
 void setClipping ( bool clip )
 */
@@ -105,7 +104,6 @@ HB_FUNC_STATIC( QITEMDELEGATE_SETCLIPPING )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setItemEditorFactory ( QItemEditorFactory * factory )
@@ -120,8 +118,5 @@ HB_FUNC_STATIC( QITEMDELEGATE_SETITEMEDITORFACTORY )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
 
 #pragma ENDDUMP

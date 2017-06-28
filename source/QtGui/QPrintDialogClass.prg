@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -29,7 +29,9 @@ CLASS QPrintDialog INHERIT QAbstractPrintDialog
    METHOD done
    METHOD exec
    METHOD setVisible
+
    METHOD onAccepted
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -57,7 +59,6 @@ HB_FUNC_STATIC( QPRINTDIALOG_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QPrintDialog ( QWidget * parent = 0 )
 */
@@ -66,7 +67,6 @@ HB_FUNC_STATIC( QPRINTDIALOG_NEW2 )
   QPrintDialog * o = new QPrintDialog ( OPQWIDGET(1,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QPrintDialog ( QPrinter * printer, QWidget * parent = 0 )
 //[2]QPrintDialog ( QWidget * parent = 0 )
@@ -90,6 +90,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_NEW )
 HB_FUNC_STATIC( QPRINTDIALOG_DELETE )
 {
   QPrintDialog * obj = (QPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -99,9 +100,9 @@ HB_FUNC_STATIC( QPRINTDIALOG_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void open ( QObject * receiver, const char * member )
@@ -116,7 +117,6 @@ HB_FUNC_STATIC( QPRINTDIALOG_OPEN )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 PrintDialogOptions options () const
 */
@@ -128,7 +128,6 @@ HB_FUNC_STATIC( QPRINTDIALOG_OPTIONS )
     hb_retni( (int) obj->options () );
   }
 }
-
 
 /*
 QPrinter * printer ()
@@ -142,7 +141,6 @@ HB_FUNC_STATIC( QPRINTDIALOG_PRINTER )
     _qt4xhb_createReturnClass ( ptr, "QPRINTER" );
   }
 }
-
 
 /*
 void setOption ( PrintDialogOption option, bool on = true )
@@ -158,7 +156,6 @@ HB_FUNC_STATIC( QPRINTDIALOG_SETOPTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setOptions ( PrintDialogOptions options )
 */
@@ -173,7 +170,6 @@ HB_FUNC_STATIC( QPRINTDIALOG_SETOPTIONS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool testOption ( PrintDialogOption option ) const
 */
@@ -186,7 +182,6 @@ HB_FUNC_STATIC( QPRINTDIALOG_TESTOPTION )
     RBOOL( obj->testOption ( (QPrintDialog::PrintDialogOption) par1 ) );
   }
 }
-
 
 /*
 virtual void done ( int result )
@@ -201,7 +196,6 @@ HB_FUNC_STATIC( QPRINTDIALOG_DONE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual int exec ()
 */
@@ -213,7 +207,6 @@ HB_FUNC_STATIC( QPRINTDIALOG_EXEC )
     RINT( obj->exec () );
   }
 }
-
 
 /*
 virtual void setVisible ( bool visible )
@@ -227,9 +220,5 @@ HB_FUNC_STATIC( QPRINTDIALOG_SETVISIBLE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -34,6 +34,7 @@ CLASS QAccessibleInterface INHERIT QAccessible
    METHOD state
    METHOD text
    METHOD userActionCount
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -55,6 +56,7 @@ RETURN
 HB_FUNC_STATIC( QACCESSIBLEINTERFACE_DELETE )
 {
   QAccessibleInterface * obj = (QAccessibleInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -64,9 +66,9 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual QString actionText ( int action, Text t, int child ) const = 0
@@ -80,7 +82,6 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_ACTIONTEXT )
   }
 }
 
-
 /*
 virtual int childAt ( int x, int y ) const = 0
 */
@@ -93,7 +94,6 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_CHILDAT )
   }
 }
 
-
 /*
 virtual int childCount () const = 0
 */
@@ -105,7 +105,6 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_CHILDCOUNT )
     RINT( obj->childCount () );
   }
 }
-
 
 /*
 virtual bool doAction ( int action, int child, const QVariantList & params = QVariantList() ) = 0
@@ -127,7 +126,6 @@ par3 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList3, 
   }
 }
 
-
 /*
 virtual int indexOfChild ( const QAccessibleInterface * child ) const = 0
 */
@@ -140,7 +138,6 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_INDEXOFCHILD )
     RINT( obj->indexOfChild ( par1 ) );
   }
 }
-
 
 /*
 QVariant invokeMethod ( Method method, int child = 0, const QVariantList & params = QVariantList() )
@@ -164,7 +161,6 @@ par3 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList3, 
   }
 }
 
-
 /*
 virtual bool isValid () const = 0
 */
@@ -176,8 +172,6 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_ISVALID )
     RBOOL( obj->isValid () );
   }
 }
-
-
 
 /*
 virtual QObject * object () const = 0
@@ -192,7 +186,6 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_OBJECT )
   }
 }
 
-
 /*
 virtual QRect rect ( int child ) const = 0
 */
@@ -205,7 +198,6 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_RECT )
     _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
-
 
 /*
 virtual Relation relationTo ( int child, const QAccessibleInterface * other, int otherChild ) const = 0
@@ -220,7 +212,6 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_RELATIONTO )
   }
 }
 
-
 /*
 virtual Role role ( int child ) const = 0
 */
@@ -232,7 +223,6 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_ROLE )
     hb_retni( (int) obj->role ( PINT(1) ) );
   }
 }
-
 
 /*
 virtual void setText ( Text t, int child, const QString & text ) = 0
@@ -247,7 +237,6 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_SETTEXT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual State state ( int child ) const = 0
 */
@@ -259,8 +248,6 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_STATE )
     hb_retni( (int) obj->state ( PINT(1) ) );
   }
 }
-
-
 
 /*
 virtual QString text ( Text t, int child ) const = 0
@@ -274,7 +261,6 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_TEXT )
   }
 }
 
-
 /*
 virtual int userActionCount ( int child ) const = 0
 */
@@ -286,8 +272,5 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_USERACTIONCOUNT )
     RINT( (int) obj->userActionCount ( PINT(1) ) );
   }
 }
-
-
-
 
 #pragma ENDDUMP

@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -21,11 +21,13 @@ CLASS QAccessible
    METHOD queryAccessibleInterface
    METHOD setRootObject
    METHOD updateAccessibility
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -44,10 +46,6 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
-
-
-
 /*
 bool isActive ()
 */
@@ -55,7 +53,6 @@ HB_FUNC_STATIC( QACCESSIBLE_ISACTIVE )
 {
   RBOOL( QAccessible::isActive () );
 }
-
 
 /*
 QAccessibleInterface * queryAccessibleInterface ( QObject * object )
@@ -66,8 +63,6 @@ HB_FUNC_STATIC( QACCESSIBLE_QUERYACCESSIBLEINTERFACE )
   _qt4xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE" );
 }
 
-
-
 /*
 void setRootObject ( QObject * object )
 */
@@ -77,18 +72,14 @@ HB_FUNC_STATIC( QACCESSIBLE_SETROOTOBJECT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void updateAccessibility ( QObject * object, int child, Event reason )
 */
 HB_FUNC_STATIC( QACCESSIBLE_UPDATEACCESSIBILITY )
 {
-  int par2 = hb_parni(2);
-  int par3 = hb_parni(3);
-  QAccessible::updateAccessibility ( PQOBJECT(1), par2, (QAccessible::Event) par3 );
+  QAccessible::updateAccessibility ( PQOBJECT(1), PINT(2), (QAccessible::Event) hb_parni(3) );
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QACCESSIBLE_NEWFROM )
 {
@@ -144,6 +135,5 @@ HB_FUNC_STATIC( QACCESSIBLE_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

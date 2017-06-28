@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -23,6 +23,7 @@ CLASS QPaintEvent INHERIT QEvent
    METHOD delete
    METHOD rect
    METHOD region
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -50,7 +51,6 @@ HB_FUNC_STATIC( QPAINTEVENT_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QPaintEvent ( const QRect & paintRect )
 */
@@ -59,7 +59,6 @@ HB_FUNC_STATIC( QPAINTEVENT_NEW2 )
   QPaintEvent * o = new QPaintEvent ( *PQRECT(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QPaintEvent ( const QRegion & paintRegion )
 //[2]QPaintEvent ( const QRect & paintRect )
@@ -83,6 +82,7 @@ HB_FUNC_STATIC( QPAINTEVENT_NEW )
 HB_FUNC_STATIC( QPAINTEVENT_DELETE )
 {
   QPaintEvent * obj = (QPaintEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -92,9 +92,9 @@ HB_FUNC_STATIC( QPAINTEVENT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 const QRect & rect () const
@@ -109,7 +109,6 @@ HB_FUNC_STATIC( QPAINTEVENT_RECT )
   }
 }
 
-
 /*
 const QRegion & region () const
 */
@@ -122,8 +121,5 @@ HB_FUNC_STATIC( QPAINTEVENT_REGION )
     _qt4xhb_createReturnClass ( ptr, "QREGION" );
   }
 }
-
-
-
 
 #pragma ENDDUMP

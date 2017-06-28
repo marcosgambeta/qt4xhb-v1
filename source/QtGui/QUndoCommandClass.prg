@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -29,11 +29,13 @@ CLASS QUndoCommand
    METHOD setText
    METHOD text
    METHOD undo
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -62,7 +64,6 @@ HB_FUNC_STATIC( QUNDOCOMMAND_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QUndoCommand ( const QString & text, QUndoCommand * parent = 0 )
 */
@@ -72,7 +73,6 @@ HB_FUNC_STATIC( QUNDOCOMMAND_NEW2 )
   QUndoCommand * o = new QUndoCommand ( PQSTRING(1), par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QUndoCommand ( QUndoCommand * parent = 0 )
 //[2]QUndoCommand ( const QString & text, QUndoCommand * parent = 0 )
@@ -96,6 +96,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_NEW )
 HB_FUNC_STATIC( QUNDOCOMMAND_DELETE )
 {
   QUndoCommand * obj = (QUndoCommand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -105,9 +106,9 @@ HB_FUNC_STATIC( QUNDOCOMMAND_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 const QUndoCommand * child ( int index ) const
@@ -122,7 +123,6 @@ HB_FUNC_STATIC( QUNDOCOMMAND_CHILD )
   }
 }
 
-
 /*
 int childCount () const
 */
@@ -135,7 +135,6 @@ HB_FUNC_STATIC( QUNDOCOMMAND_CHILDCOUNT )
   }
 }
 
-
 /*
 virtual int id () const
 */
@@ -147,7 +146,6 @@ HB_FUNC_STATIC( QUNDOCOMMAND_ID )
     RINT( obj->id () );
   }
 }
-
 
 /*
 virtual bool mergeWith ( const QUndoCommand * command )
@@ -162,7 +160,6 @@ HB_FUNC_STATIC( QUNDOCOMMAND_MERGEWITH )
   }
 }
 
-
 /*
 virtual void redo ()
 */
@@ -175,7 +172,6 @@ HB_FUNC_STATIC( QUNDOCOMMAND_REDO )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setText ( const QString & text )
@@ -190,7 +186,6 @@ HB_FUNC_STATIC( QUNDOCOMMAND_SETTEXT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString text () const
 */
@@ -202,7 +197,6 @@ HB_FUNC_STATIC( QUNDOCOMMAND_TEXT )
     RQSTRING( obj->text () );
   }
 }
-
 
 /*
 virtual void undo ()
@@ -216,7 +210,6 @@ HB_FUNC_STATIC( QUNDOCOMMAND_UNDO )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QUNDOCOMMAND_NEWFROM )
 {
@@ -272,6 +265,5 @@ HB_FUNC_STATIC( QUNDOCOMMAND_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

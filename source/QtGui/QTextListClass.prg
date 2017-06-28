@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -27,6 +27,7 @@ CLASS QTextList INHERIT QTextBlockGroup
    METHOD remove
    METHOD removeItem
    METHOD setFormat
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -48,6 +49,7 @@ RETURN
 HB_FUNC_STATIC( QTEXTLIST_DELETE )
 {
   QTextList * obj = (QTextList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -57,9 +59,9 @@ HB_FUNC_STATIC( QTEXTLIST_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void add ( const QTextBlock & block )
@@ -74,7 +76,6 @@ HB_FUNC_STATIC( QTEXTLIST_ADD )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int count () const
 */
@@ -86,7 +87,6 @@ HB_FUNC_STATIC( QTEXTLIST_COUNT )
     RINT( obj->count () );
   }
 }
-
 
 /*
 QTextListFormat format () const
@@ -101,7 +101,6 @@ HB_FUNC_STATIC( QTEXTLIST_FORMAT )
   }
 }
 
-
 /*
 QTextBlock item ( int i ) const
 */
@@ -115,7 +114,6 @@ HB_FUNC_STATIC( QTEXTLIST_ITEM )
   }
 }
 
-
 /*
 int itemNumber ( const QTextBlock & block ) const
 */
@@ -128,7 +126,6 @@ HB_FUNC_STATIC( QTEXTLIST_ITEMNUMBER )
   }
 }
 
-
 /*
 QString itemText ( const QTextBlock & block ) const
 */
@@ -140,7 +137,6 @@ HB_FUNC_STATIC( QTEXTLIST_ITEMTEXT )
     RQSTRING( obj->itemText ( *PQTEXTBLOCK(1) ) );
   }
 }
-
 
 /*
 void remove ( const QTextBlock & block )
@@ -155,7 +151,6 @@ HB_FUNC_STATIC( QTEXTLIST_REMOVE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void removeItem ( int i )
 */
@@ -169,7 +164,6 @@ HB_FUNC_STATIC( QTEXTLIST_REMOVEITEM )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setFormat ( const QTextListFormat & format )
 */
@@ -182,8 +176,5 @@ HB_FUNC_STATIC( QTEXTLIST_SETFORMAT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
 
 #pragma ENDDUMP

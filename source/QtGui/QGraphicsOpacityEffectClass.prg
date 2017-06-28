@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -22,8 +22,10 @@ CLASS QGraphicsOpacityEffect INHERIT QGraphicsEffect
    METHOD opacityMask
    METHOD setOpacity
    METHOD setOpacityMask
+
    METHOD onOpacityChanged
    METHOD onOpacityMaskChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -51,10 +53,10 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_DELETE )
 {
   QGraphicsOpacityEffect * obj = (QGraphicsOpacityEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -64,9 +66,9 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 qreal opacity () const
@@ -79,7 +81,6 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_OPACITY )
     RQREAL( obj->opacity () );
   }
 }
-
 
 /*
 QBrush opacityMask () const
@@ -94,7 +95,6 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_OPACITYMASK )
   }
 }
 
-
 /*
 void setOpacity ( qreal opacity )
 */
@@ -108,7 +108,6 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_SETOPACITY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setOpacityMask ( const QBrush & mask )
 */
@@ -121,10 +120,5 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_SETOPACITYMASK )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
-
 
 #pragma ENDDUMP

@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -21,6 +21,7 @@ CLASS QShortcutEvent INHERIT QEvent
    METHOD key
    METHOD shortcutId
    METHOD isAmbiguous
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -48,10 +49,10 @@ HB_FUNC_STATIC( QSHORTCUTEVENT_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QSHORTCUTEVENT_DELETE )
 {
   QShortcutEvent * obj = (QShortcutEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -61,9 +62,9 @@ HB_FUNC_STATIC( QSHORTCUTEVENT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 const QKeySequence &key()
@@ -78,8 +79,6 @@ HB_FUNC_STATIC( QSHORTCUTEVENT_KEY )
   }
 }
 
-
-
 /*
 int shortcutId()
 */
@@ -92,8 +91,6 @@ HB_FUNC_STATIC( QSHORTCUTEVENT_SHORTCUTID )
   }
 }
 
-
-
 /*
 bool isAmbiguous()
 */
@@ -105,10 +102,5 @@ HB_FUNC_STATIC( QSHORTCUTEVENT_ISAMBIGUOUS )
     RBOOL( obj->isAmbiguous () );
   }
 }
-
-
-
-
-
 
 #pragma ENDDUMP

@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QWindowStateChangeEvent INHERIT QEvent
 
@@ -19,6 +18,7 @@ CLASS QWindowStateChangeEvent INHERIT QEvent
    METHOD delete
    METHOD oldState
    METHOD isOverride
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -47,7 +47,6 @@ HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QWindowStateChangeEvent(Qt::WindowStates aOldState, bool isOverride)
 */
@@ -57,7 +56,6 @@ HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_NEW2 )
   QWindowStateChangeEvent * o = new QWindowStateChangeEvent ( (Qt::WindowStates) par1, PBOOL(2) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QWindowStateChangeEvent(Qt::WindowStates aOldState)
 //[2]QWindowStateChangeEvent(Qt::WindowStates aOldState, bool isOverride)
@@ -81,6 +79,7 @@ HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_NEW )
 HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_DELETE )
 {
   QWindowStateChangeEvent * obj = (QWindowStateChangeEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -90,9 +89,9 @@ HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 Qt::WindowStates oldState() const
@@ -106,7 +105,6 @@ HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_OLDSTATE )
   }
 }
 
-
 /*
 bool isOverride() const
 */
@@ -118,8 +116,5 @@ HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_ISOVERRIDE )
     RBOOL( obj->isOverride () );
   }
 }
-
-
-
 
 #pragma ENDDUMP

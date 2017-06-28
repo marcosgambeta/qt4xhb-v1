@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -25,11 +25,13 @@ CLASS QPlatformFontDatabase
    METHOD releaseHandle
    METHOD registerFont
    METHOD registerQPF2Font
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -48,10 +50,10 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
 HB_FUNC_STATIC( QPLATFORMFONTDATABASE_DELETE )
 {
   QPlatformFontDatabase * obj = (QPlatformFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -61,9 +63,9 @@ HB_FUNC_STATIC( QPLATFORMFONTDATABASE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual QStringList addApplicationFont ( const QByteArray & fontData, const QString & fileName )
@@ -77,8 +79,6 @@ HB_FUNC_STATIC( QPLATFORMFONTDATABASE_ADDAPPLICATIONFONT )
   }
 }
 
-
-
 /*
 virtual QString fontDir () const
 */
@@ -90,8 +90,6 @@ HB_FUNC_STATIC( QPLATFORMFONTDATABASE_FONTDIR )
     RQSTRING( obj->fontDir () );
   }
 }
-
-
 
 /*
 virtual QFontEngine * fontEngine ( const QByteArray & fontData, qreal pixelSize, QFont::HintingPreference hintingPreference )
@@ -107,7 +105,6 @@ HB_FUNC_STATIC( QPLATFORMFONTDATABASE_FONTENGINE )
   }
 }
 
-
 /*
 virtual void populateFontDatabase ()
 */
@@ -120,7 +117,6 @@ HB_FUNC_STATIC( QPLATFORMFONTDATABASE_POPULATEFONTDATABASE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void releaseHandle ( void * handle )
@@ -135,8 +131,6 @@ HB_FUNC_STATIC( QPLATFORMFONTDATABASE_RELEASEHANDLE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
 
 /*
 void registerFont ( const QString & familyName, const QString & foundryName, QFont::Weight weight, QFont::Style style, QFont::Stretch stretch, bool antialiased, bool scalable, int pixelSize, const QSupportedWritingSystems & writingSystems, void * usrPtr )
@@ -153,7 +147,6 @@ HB_FUNC_STATIC( QPLATFORMFONTDATABASE_REGISTERFONT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void registerQPF2Font ( const QByteArray & dataArray, void * handle )
 */
@@ -163,7 +156,6 @@ HB_FUNC_STATIC( QPLATFORMFONTDATABASE_REGISTERQPF2FONT )
   QPlatformFontDatabase::registerQPF2Font ( *PQBYTEARRAY(1), par2 );
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QPLATFORMFONTDATABASE_NEWFROM )
 {
@@ -219,6 +211,5 @@ HB_FUNC_STATIC( QPLATFORMFONTDATABASE_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

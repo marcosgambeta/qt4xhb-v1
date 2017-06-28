@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -21,6 +21,7 @@ CLASS QSyntaxHighlighter INHERIT QObject
    METHOD setDocument
    METHOD rehighlight
    METHOD rehighlightBlock
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -39,9 +40,6 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
-
-
 //[1]QSyntaxHighlighter ( QObject * parent )
 //[2]QSyntaxHighlighter ( QTextDocument * parent )
 //[3]QSyntaxHighlighter ( QTextEdit * parent )
@@ -59,6 +57,7 @@ RETURN
 HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_DELETE )
 {
   QSyntaxHighlighter * obj = (QSyntaxHighlighter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -68,9 +67,9 @@ HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QTextDocument * document () const
@@ -84,7 +83,6 @@ HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_DOCUMENT )
     _qt4xhb_createReturnClass ( ptr, "QTEXTDOCUMENT" );
   }
 }
-
 
 /*
 void setDocument ( QTextDocument * doc )
@@ -100,7 +98,6 @@ HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_SETDOCUMENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void rehighlight ()
 */
@@ -114,7 +111,6 @@ HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_REHIGHLIGHT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void rehighlightBlock ( const QTextBlock & block )
 */
@@ -127,9 +123,5 @@ HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_REHIGHLIGHTBLOCK )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

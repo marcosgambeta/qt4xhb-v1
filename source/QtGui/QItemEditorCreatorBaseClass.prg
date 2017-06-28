@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -26,6 +26,7 @@ CLASS QItemEditorCreatorBase
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -47,6 +48,7 @@ RETURN
 HB_FUNC_STATIC( QITEMEDITORCREATORBASE_DELETE )
 {
   QItemEditorCreatorBase * obj = (QItemEditorCreatorBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -56,9 +58,9 @@ HB_FUNC_STATIC( QITEMEDITORCREATORBASE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual QWidget * createWidget ( QWidget * parent ) const = 0
@@ -73,7 +75,6 @@ HB_FUNC_STATIC( QITEMEDITORCREATORBASE_CREATEWIDGET )
   }
 }
 
-
 /*
 virtual QByteArray valuePropertyName () const = 0
 */
@@ -86,7 +87,6 @@ HB_FUNC_STATIC( QITEMEDITORCREATORBASE_VALUEPROPERTYNAME )
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
 
 HB_FUNC_STATIC( QITEMEDITORCREATORBASE_NEWFROM )
 {
@@ -142,6 +142,5 @@ HB_FUNC_STATIC( QITEMEDITORCREATORBASE_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

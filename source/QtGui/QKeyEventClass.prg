@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -28,6 +28,7 @@ CLASS QKeyEvent INHERIT QInputEvent
    METHOD nativeVirtualKey
    METHOD text
    METHOD createExtendedKeyEvent
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -56,10 +57,10 @@ HB_FUNC_STATIC( QKEYEVENT_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QKEYEVENT_DELETE )
 {
   QKeyEvent * obj = (QKeyEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -69,9 +70,9 @@ HB_FUNC_STATIC( QKEYEVENT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 int count () const
@@ -85,7 +86,6 @@ HB_FUNC_STATIC( QKEYEVENT_COUNT )
   }
 }
 
-
 /*
 bool isAutoRepeat () const
 */
@@ -98,7 +98,6 @@ HB_FUNC_STATIC( QKEYEVENT_ISAUTOREPEAT )
   }
 }
 
-
 /*
 int key () const
 */
@@ -110,7 +109,6 @@ HB_FUNC_STATIC( QKEYEVENT_KEY )
     RINT( obj->key () );
   }
 }
-
 
 /*
 bool matches ( QKeySequence::StandardKey key ) const
@@ -125,7 +123,6 @@ HB_FUNC_STATIC( QKEYEVENT_MATCHES )
   }
 }
 
-
 /*
 Qt::KeyboardModifiers modifiers () const
 */
@@ -137,7 +134,6 @@ HB_FUNC_STATIC( QKEYEVENT_MODIFIERS )
     hb_retni( (int) obj->modifiers () );
   }
 }
-
 
 /*
 quint32 nativeModifiers () const
@@ -151,7 +147,6 @@ HB_FUNC_STATIC( QKEYEVENT_NATIVEMODIFIERS )
   }
 }
 
-
 /*
 quint32 nativeScanCode () const
 */
@@ -163,7 +158,6 @@ HB_FUNC_STATIC( QKEYEVENT_NATIVESCANCODE )
     RQUINT32( obj->nativeScanCode () );
   }
 }
-
 
 /*
 quint32 nativeVirtualKey () const
@@ -177,7 +171,6 @@ HB_FUNC_STATIC( QKEYEVENT_NATIVEVIRTUALKEY )
   }
 }
 
-
 /*
 QString text () const
 */
@@ -190,8 +183,6 @@ HB_FUNC_STATIC( QKEYEVENT_TEXT )
   }
 }
 
-
-
 /*
 static QKeyEvent *createExtendedKeyEvent(Type type, int key, Qt::KeyboardModifiers modifiers, quint32 nativeScanCode, quint32 nativeVirtualKey,quint32 nativeModifiers,const QString& text = QString(), bool autorep = false,ushort count = 1)
 */
@@ -201,8 +192,5 @@ HB_FUNC_STATIC( QKEYEVENT_CREATEEXTENDEDKEYEVENT )
   QKeyEvent * ptr = QKeyEvent::createExtendedKeyEvent ( (QEvent::Type) hb_parni(1), PINT(2), (Qt::KeyboardModifiers) par3, PQUINT32(4), PQUINT32(5), PQUINT32(6), OPQSTRING(7,QString()), OPBOOL(8,false), OPUSHORT(9,1) );
   _qt4xhb_createReturnClass ( ptr, "QKEYEVENT" );
 }
-
-
-
 
 #pragma ENDDUMP

@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -22,7 +22,9 @@ CLASS QGraphicsEffect INHERIT QObject
    METHOD isEnabled
    METHOD setEnabled
    METHOD update
+
    METHOD onEnabledChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -41,10 +43,10 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
 HB_FUNC_STATIC( QGRAPHICSEFFECT_DELETE )
 {
   QGraphicsEffect * obj = (QGraphicsEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -54,9 +56,9 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QRectF boundingRect () const
@@ -71,7 +73,6 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECT )
   }
 }
 
-
 /*
 virtual QRectF boundingRectFor ( const QRectF & rect ) const
 */
@@ -85,7 +86,6 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECTFOR )
   }
 }
 
-
 /*
 bool isEnabled () const
 */
@@ -97,7 +97,6 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_ISENABLED )
     RBOOL( obj->isEnabled () );
   }
 }
-
 
 /*
 void setEnabled ( bool enable )
@@ -112,7 +111,6 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_SETENABLED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void update ()
 */
@@ -125,10 +123,5 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_UPDATE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
-
 
 #pragma ENDDUMP

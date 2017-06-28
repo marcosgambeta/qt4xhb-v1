@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -33,11 +33,13 @@ CLASS QDockWidget INHERIT QWidget
    METHOD titleBarWidget
    METHOD toggleViewAction
    METHOD widget
+
    METHOD onAllowedAreasChanged
    METHOD onDockLocationChanged
    METHOD onFeaturesChanged
    METHOD onTopLevelChanged
    METHOD onVisibilityChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -66,7 +68,6 @@ HB_FUNC_STATIC( QDOCKWIDGET_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QDockWidget ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
@@ -76,7 +77,6 @@ HB_FUNC_STATIC( QDOCKWIDGET_NEW2 )
   QDockWidget * o = new QDockWidget ( OPQWIDGET(1,0), (Qt::WindowFlags) par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QDockWidget ( const QString & title, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 //[2]QDockWidget ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
@@ -100,6 +100,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_NEW )
 HB_FUNC_STATIC( QDOCKWIDGET_DELETE )
 {
   QDockWidget * obj = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -109,9 +110,9 @@ HB_FUNC_STATIC( QDOCKWIDGET_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 Qt::DockWidgetAreas allowedAreas () const
@@ -125,7 +126,6 @@ HB_FUNC_STATIC( QDOCKWIDGET_ALLOWEDAREAS )
   }
 }
 
-
 /*
 DockWidgetFeatures features () const
 */
@@ -137,7 +137,6 @@ HB_FUNC_STATIC( QDOCKWIDGET_FEATURES )
     hb_retni( (int) obj->features () );
   }
 }
-
 
 /*
 bool	isAreaAllowed ( Qt::DockWidgetArea area ) const
@@ -152,7 +151,6 @@ HB_FUNC_STATIC( QDOCKWIDGET_ISAREAALLOWED )
   }
 }
 
-
 /*
 bool	isFloating () const
 */
@@ -164,7 +162,6 @@ HB_FUNC_STATIC( QDOCKWIDGET_ISFLOATING )
     RBOOL( obj->isFloating () );
   }
 }
-
 
 /*
 void setAllowedAreas ( Qt::DockWidgetAreas areas )
@@ -180,7 +177,6 @@ HB_FUNC_STATIC( QDOCKWIDGET_SETALLOWEDAREAS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setFeatures ( DockWidgetFeatures features )
 */
@@ -195,7 +191,6 @@ HB_FUNC_STATIC( QDOCKWIDGET_SETFEATURES )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setFloating ( bool floating )
 */
@@ -208,7 +203,6 @@ HB_FUNC_STATIC( QDOCKWIDGET_SETFLOATING )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setTitleBarWidget ( QWidget * widget )
@@ -223,7 +217,6 @@ HB_FUNC_STATIC( QDOCKWIDGET_SETTITLEBARWIDGET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setWidget ( QWidget * widget )
 */
@@ -236,7 +229,6 @@ HB_FUNC_STATIC( QDOCKWIDGET_SETWIDGET )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QWidget * titleBarWidget () const
@@ -251,7 +243,6 @@ HB_FUNC_STATIC( QDOCKWIDGET_TITLEBARWIDGET )
   }
 }
 
-
 /*
 QAction * toggleViewAction () const
 */
@@ -265,7 +256,6 @@ HB_FUNC_STATIC( QDOCKWIDGET_TOGGLEVIEWACTION )
   }
 }
 
-
 /*
 QWidget * widget () const
 */
@@ -278,9 +268,5 @@ HB_FUNC_STATIC( QDOCKWIDGET_WIDGET )
     _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
-
-
-
-
 
 #pragma ENDDUMP

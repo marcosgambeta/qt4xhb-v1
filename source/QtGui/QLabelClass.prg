@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -60,8 +60,10 @@ CLASS QLabel INHERIT QFrame
    METHOD setPicture
    METHOD setPixmap
    METHOD setText
+
    METHOD onLinkActivated
    METHOD onLinkHovered
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -90,7 +92,6 @@ HB_FUNC_STATIC( QLABEL_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QLabel ( const QString & text, QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
@@ -100,7 +101,6 @@ HB_FUNC_STATIC( QLABEL_NEW2 )
   QLabel * o = new QLabel ( PQSTRING(1), OPQWIDGET(2,0), (Qt::WindowFlags) par3 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QLabel ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 //[2]QLabel ( const QString & text, QWidget * parent = 0, Qt::WindowFlags f = 0 )
@@ -124,6 +124,7 @@ HB_FUNC_STATIC( QLABEL_NEW )
 HB_FUNC_STATIC( QLABEL_DELETE )
 {
   QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -133,9 +134,9 @@ HB_FUNC_STATIC( QLABEL_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 Qt::Alignment alignment () const
@@ -148,7 +149,6 @@ HB_FUNC_STATIC( QLABEL_ALIGNMENT )
     hb_retni( (int) obj->alignment () );
   }
 }
-
 
 /*
 QWidget * buddy () const
@@ -163,7 +163,6 @@ HB_FUNC_STATIC( QLABEL_BUDDY )
   }
 }
 
-
 /*
 bool hasScaledContents () const
 */
@@ -175,7 +174,6 @@ HB_FUNC_STATIC( QLABEL_HASSCALEDCONTENTS )
     RBOOL( obj->hasScaledContents () );
   }
 }
-
 
 /*
 bool hasSelectedText () const
@@ -189,7 +187,6 @@ HB_FUNC_STATIC( QLABEL_HASSELECTEDTEXT )
   }
 }
 
-
 /*
 int indent () const
 */
@@ -202,7 +199,6 @@ HB_FUNC_STATIC( QLABEL_INDENT )
   }
 }
 
-
 /*
 int margin () const
 */
@@ -214,7 +210,6 @@ HB_FUNC_STATIC( QLABEL_MARGIN )
     RINT( obj->margin () );
   }
 }
-
 
 /*
 QMovie * movie () const
@@ -229,7 +224,6 @@ HB_FUNC_STATIC( QLABEL_MOVIE )
   }
 }
 
-
 /*
 bool openExternalLinks () const
 */
@@ -241,7 +235,6 @@ HB_FUNC_STATIC( QLABEL_OPENEXTERNALLINKS )
     RBOOL( obj->openExternalLinks () );
   }
 }
-
 
 /*
 const QPicture * picture () const
@@ -256,7 +249,6 @@ HB_FUNC_STATIC( QLABEL_PICTURE )
   }
 }
 
-
 /*
 const QPixmap * pixmap () const
 */
@@ -270,7 +262,6 @@ HB_FUNC_STATIC( QLABEL_PIXMAP )
   }
 }
 
-
 /*
 QString selectedText () const
 */
@@ -282,7 +273,6 @@ HB_FUNC_STATIC( QLABEL_SELECTEDTEXT )
     RQSTRING( obj->selectedText () );
   }
 }
-
 
 /*
 void setAlignment ( Qt::Alignment )
@@ -297,7 +287,6 @@ HB_FUNC_STATIC( QLABEL_SETALIGNMENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setBuddy ( QWidget * buddy )
 */
@@ -310,7 +299,6 @@ HB_FUNC_STATIC( QLABEL_SETBUDDY )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setIndent ( int )
@@ -325,7 +313,6 @@ HB_FUNC_STATIC( QLABEL_SETINDENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setMargin ( int )
 */
@@ -338,7 +325,6 @@ HB_FUNC_STATIC( QLABEL_SETMARGIN )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setOpenExternalLinks ( bool open )
@@ -353,7 +339,6 @@ HB_FUNC_STATIC( QLABEL_SETOPENEXTERNALLINKS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setScaledContents ( bool )
 */
@@ -367,7 +352,6 @@ HB_FUNC_STATIC( QLABEL_SETSCALEDCONTENTS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setSelection ( int start, int length )
 */
@@ -380,7 +364,6 @@ HB_FUNC_STATIC( QLABEL_SETSELECTION )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setTextFormat ( Qt::TextFormat )
@@ -396,7 +379,6 @@ HB_FUNC_STATIC( QLABEL_SETTEXTFORMAT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setTextInteractionFlags ( Qt::TextInteractionFlags flags )
 */
@@ -411,7 +393,6 @@ HB_FUNC_STATIC( QLABEL_SETTEXTINTERACTIONFLAGS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setWordWrap ( bool on )
 */
@@ -425,7 +406,6 @@ HB_FUNC_STATIC( QLABEL_SETWORDWRAP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString text () const
 */
@@ -437,7 +417,6 @@ HB_FUNC_STATIC( QLABEL_TEXT )
     RQSTRING( obj->text () );
   }
 }
-
 
 /*
 Qt::TextFormat textFormat () const
@@ -451,7 +430,6 @@ HB_FUNC_STATIC( QLABEL_TEXTFORMAT )
   }
 }
 
-
 /*
 Qt::TextInteractionFlags textInteractionFlags () const
 */
@@ -463,7 +441,6 @@ HB_FUNC_STATIC( QLABEL_TEXTINTERACTIONFLAGS )
     hb_retni( (int) obj->textInteractionFlags () );
   }
 }
-
 
 /*
 bool wordWrap () const
@@ -477,7 +454,6 @@ HB_FUNC_STATIC( QLABEL_WORDWRAP )
   }
 }
 
-
 /*
 virtual int heightForWidth ( int w ) const
 */
@@ -489,7 +465,6 @@ HB_FUNC_STATIC( QLABEL_HEIGHTFORWIDTH )
     RINT( obj->heightForWidth ( PINT(1) ) );
   }
 }
-
 
 /*
 virtual QSize minimumSizeHint () const
@@ -504,7 +479,6 @@ HB_FUNC_STATIC( QLABEL_MINIMUMSIZEHINT )
   }
 }
 
-
 /*
 virtual QSize sizeHint () const
 */
@@ -518,7 +492,6 @@ HB_FUNC_STATIC( QLABEL_SIZEHINT )
   }
 }
 
-
 /*
 void clear ()
 */
@@ -531,7 +504,6 @@ HB_FUNC_STATIC( QLABEL_CLEAR )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setMovie ( QMovie * movie )
@@ -547,7 +519,6 @@ HB_FUNC_STATIC( QLABEL_SETMOVIE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setNum ( int num )
 */
@@ -561,7 +532,6 @@ HB_FUNC_STATIC( QLABEL_SETNUM1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setNum ( double num )
 */
@@ -574,7 +544,6 @@ HB_FUNC_STATIC( QLABEL_SETNUM2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setNum ( int num )
 //[2]void setNum ( double num )
@@ -601,7 +570,6 @@ HB_FUNC_STATIC( QLABEL_SETPICTURE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPixmap ( const QPixmap & )
 */
@@ -615,7 +583,6 @@ HB_FUNC_STATIC( QLABEL_SETPIXMAP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setText ( const QString & )
 */
@@ -628,9 +595,5 @@ HB_FUNC_STATIC( QLABEL_SETTEXT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

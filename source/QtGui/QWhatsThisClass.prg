@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -24,11 +24,13 @@ CLASS QWhatsThis
    METHOD inWhatsThisMode
    METHOD leaveWhatsThisMode
    METHOD showText
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -47,10 +49,10 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
 HB_FUNC_STATIC( QWHATSTHIS_DELETE )
 {
   QWhatsThis * obj = (QWhatsThis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -60,10 +62,9 @@ HB_FUNC_STATIC( QWHATSTHIS_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
 
 /*
 QAction * createAction ( QObject * parent = 0 )
@@ -74,7 +75,6 @@ HB_FUNC_STATIC( QWHATSTHIS_CREATEACTION )
   _qt4xhb_createReturnClass ( ptr, "QACTION" );
 }
 
-
 /*
 void enterWhatsThisMode ()
 */
@@ -83,7 +83,6 @@ HB_FUNC_STATIC( QWHATSTHIS_ENTERWHATSTHISMODE )
   QWhatsThis::enterWhatsThisMode ();
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void hideText ()
@@ -94,7 +93,6 @@ HB_FUNC_STATIC( QWHATSTHIS_HIDETEXT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool inWhatsThisMode ()
 */
@@ -102,7 +100,6 @@ HB_FUNC_STATIC( QWHATSTHIS_INWHATSTHISMODE )
 {
   RBOOL( QWhatsThis::inWhatsThisMode () );
 }
-
 
 /*
 void leaveWhatsThisMode ()
@@ -113,7 +110,6 @@ HB_FUNC_STATIC( QWHATSTHIS_LEAVEWHATSTHISMODE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void showText ( const QPoint & pos, const QString & text, QWidget * w = 0 )
 */
@@ -122,7 +118,6 @@ HB_FUNC_STATIC( QWHATSTHIS_SHOWTEXT )
   QWhatsThis::showText ( *PQPOINT(1), PQSTRING(2), OPQWIDGET(3,0) );
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QWHATSTHIS_NEWFROM )
 {
@@ -178,8 +173,5 @@ HB_FUNC_STATIC( QWHATSTHIS_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
-
 
 #pragma ENDDUMP

@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -29,6 +29,7 @@ CLASS QStringListModel INHERIT QAbstractListModel
    METHOD setData
    METHOD sort
    METHOD supportedDropActions
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -56,7 +57,6 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QStringListModel(const QStringList & strings, QObject * parent = 0)
 */
@@ -65,7 +65,6 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_NEW2 )
   QStringListModel * o = new QStringListModel ( PQSTRINGLIST(1), OPQOBJECT(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QStringListModel(QObject * parent = 0)
 //[2]QStringListModel(const QStringList & strings, QObject * parent = 0)
@@ -86,8 +85,6 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_NEW )
   }
 }
 
-
-
 /*
 void setStringList(const QStringList & strings)
 */
@@ -101,7 +98,6 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_SETSTRINGLIST )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QStringList stringList() const
 */
@@ -113,7 +109,6 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_STRINGLIST )
     RQSTRINGLIST( obj->stringList () );
   }
 }
-
 
 /*
 virtual QVariant data(const QModelIndex & index, int role) const
@@ -128,7 +123,6 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_DATA )
   }
 }
 
-
 /*
 virtual Qt::ItemFlags flags(const QModelIndex & index) const
 */
@@ -140,7 +134,6 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_FLAGS )
     hb_retni( (int) obj->flags ( *PQMODELINDEX(1) ) );
   }
 }
-
 
 /*
 virtual bool insertRows(int row, int count, const QModelIndex & parent = QModelIndex())
@@ -155,7 +148,6 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_INSERTROWS )
   }
 }
 
-
 /*
 virtual bool removeRows(int row, int count, const QModelIndex & parent = QModelIndex())
 */
@@ -168,7 +160,6 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_REMOVEROWS )
     RBOOL( obj->removeRows ( PINT(1), PINT(2), par3 ) );
   }
 }
-
 
 /*
 virtual int rowCount(const QModelIndex & parent = QModelIndex()) const
@@ -183,7 +174,6 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_ROWCOUNT )
   }
 }
 
-
 /*
 virtual bool setData(const QModelIndex & index, const QVariant & value, int role = Qt::EditRole)
 */
@@ -195,7 +185,6 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_SETDATA )
     RBOOL( obj->setData ( *PQMODELINDEX(1), *PQVARIANT(2), OPINT(3,Qt::EditRole) ) );
   }
 }
-
 
 /*
 virtual void sort(int column, Qt::SortOrder order = Qt::AscendingOrder)
@@ -211,7 +200,6 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_SORT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual Qt::DropActions supportedDropActions() const
 */
@@ -223,8 +211,5 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_SUPPORTEDDROPACTIONS )
     hb_retni( (int) obj->supportedDropActions () );
   }
 }
-
-
-
 
 #pragma ENDDUMP

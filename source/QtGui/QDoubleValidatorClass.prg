@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QDoubleValidator INHERIT QValidator
 
@@ -27,6 +26,7 @@ CLASS QDoubleValidator INHERIT QValidator
    METHOD setTop
    METHOD top
    METHOD validate
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -54,7 +54,6 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QDoubleValidator ( double bottom, double top, int decimals, QObject * parent )
 */
@@ -63,7 +62,6 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_NEW2 )
   QDoubleValidator * o = new QDoubleValidator ( PDOUBLE(1), PDOUBLE(2), PINT(3), PQOBJECT(4) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QDoubleValidator ( QObject * parent = 0 )
 //[2]QDoubleValidator ( double bottom, double top, int decimals, QObject * parent = 0 )
@@ -87,6 +85,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_NEW )
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_DELETE )
 {
   QDoubleValidator * obj = (QDoubleValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -96,9 +95,9 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 double bottom () const
@@ -112,7 +111,6 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_BOTTOM )
   }
 }
 
-
 /*
 int decimals () const
 */
@@ -125,7 +123,6 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_DECIMALS )
   }
 }
 
-
 /*
 Notation notation () const
 */
@@ -137,7 +134,6 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_NOTATION )
     hb_retni( (int) obj->notation () );
   }
 }
-
 
 /*
 void setBottom ( double )
@@ -152,7 +148,6 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETBOTTOM )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setDecimals ( int )
 */
@@ -165,7 +160,6 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETDECIMALS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setNotation ( Notation )
@@ -181,7 +175,6 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETNOTATION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void setRange ( double minimum, double maximum, int decimals = 0 )
 */
@@ -194,7 +187,6 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETRANGE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setTop ( double )
@@ -209,7 +201,6 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETTOP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 double top () const
 */
@@ -221,7 +212,6 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_TOP )
     RDOUBLE( obj->top () );
   }
 }
-
 
 /*
 virtual QValidator::State validate ( QString & input, int & pos ) const
@@ -236,8 +226,5 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_VALIDATE ) // TODO: revisar implementacao e cor
     hb_retni( (int) obj->validate ( par1, par2 ) );
   }
 }
-
-
-
 
 #pragma ENDDUMP

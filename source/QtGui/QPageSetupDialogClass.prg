@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -24,6 +24,7 @@ CLASS QPageSetupDialog INHERIT QDialog
    METHOD setOptions
    METHOD testOption
    METHOD setVisible
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -51,8 +52,6 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
-
 /*
 void open ( QObject * receiver, const char * member )
 */
@@ -66,7 +65,6 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_OPEN )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 PageSetupDialogOptions options () const
 */
@@ -78,7 +76,6 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_OPTIONS )
     hb_retni( (int) obj->options () );
   }
 }
-
 
 /*
 QPrinter * printer ()
@@ -92,7 +89,6 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_PRINTER )
     _qt4xhb_createReturnClass ( ptr, "QPRINTER" );
   }
 }
-
 
 /*
 void setOption ( PageSetupDialogOption option, bool on = true )
@@ -108,7 +104,6 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_SETOPTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setOptions ( PageSetupDialogOptions options )
 */
@@ -123,7 +118,6 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_SETOPTIONS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool testOption ( PageSetupDialogOption option ) const
 */
@@ -137,7 +131,6 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_TESTOPTION )
   }
 }
 
-
 /*
 virtual void setVisible ( bool visible )
 */
@@ -150,8 +143,5 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_SETVISIBLE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
 
 #pragma ENDDUMP

@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QFontEngineInfo
 
@@ -29,11 +28,13 @@ CLASS QFontEngineInfo
    METHOD style
    METHOD weight
    METHOD writingSystems
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -61,7 +62,6 @@ HB_FUNC_STATIC( QFONTENGINEINFO_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QFontEngineInfo ( const QString & family )
 */
@@ -71,7 +71,6 @@ HB_FUNC_STATIC( QFONTENGINEINFO_NEW2 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QFontEngineInfo ( const QFontEngineInfo & other )
 */
@@ -80,7 +79,6 @@ HB_FUNC_STATIC( QFONTENGINEINFO_NEW3 )
   QFontEngineInfo * o = new QFontEngineInfo ( *PQFONTENGINEINFO(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QFontEngineInfo ()
 //[2]QFontEngineInfo ( const QString & family )
@@ -109,6 +107,7 @@ HB_FUNC_STATIC( QFONTENGINEINFO_NEW )
 HB_FUNC_STATIC( QFONTENGINEINFO_DELETE )
 {
   QFontEngineInfo * obj = (QFontEngineInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -118,9 +117,9 @@ HB_FUNC_STATIC( QFONTENGINEINFO_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QString family () const
@@ -134,7 +133,6 @@ HB_FUNC_STATIC( QFONTENGINEINFO_FAMILY )
   }
 }
 
-
 /*
 qreal pixelSize () const
 */
@@ -146,7 +144,6 @@ HB_FUNC_STATIC( QFONTENGINEINFO_PIXELSIZE )
     RQREAL( obj->pixelSize () );
   }
 }
-
 
 /*
 void setFamily ( const QString & name )
@@ -161,7 +158,6 @@ HB_FUNC_STATIC( QFONTENGINEINFO_SETFAMILY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPixelSize ( qreal size )
 */
@@ -174,7 +170,6 @@ HB_FUNC_STATIC( QFONTENGINEINFO_SETPIXELSIZE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setStyle ( QFont::Style style )
@@ -190,7 +185,6 @@ HB_FUNC_STATIC( QFONTENGINEINFO_SETSTYLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setWeight ( int weight )
 */
@@ -203,7 +197,6 @@ HB_FUNC_STATIC( QFONTENGINEINFO_SETWEIGHT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setWritingSystems ( const QList<QFontDatabase::WritingSystem> & writingSystems )
@@ -228,7 +221,6 @@ par1 << (QFontDatabase::WritingSystem) temp1;
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QFont::Style style () const
 */
@@ -241,7 +233,6 @@ HB_FUNC_STATIC( QFONTENGINEINFO_STYLE )
   }
 }
 
-
 /*
 int weight () const
 */
@@ -253,7 +244,6 @@ HB_FUNC_STATIC( QFONTENGINEINFO_WEIGHT )
     RINT( obj->weight () );
   }
 }
-
 
 /*
 QList<QFontDatabase::WritingSystem> writingSystems () const
@@ -276,7 +266,6 @@ HB_FUNC_STATIC( QFONTENGINEINFO_WRITINGSYSTEMS )
     hb_itemReturnRelease(pArray);
   }
 }
-
 
 HB_FUNC_STATIC( QFONTENGINEINFO_NEWFROM )
 {
@@ -332,6 +321,5 @@ HB_FUNC_STATIC( QFONTENGINEINFO_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

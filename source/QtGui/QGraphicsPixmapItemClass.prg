@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -40,6 +40,7 @@ CLASS QGraphicsPixmapItem INHERIT QGraphicsItem
    METHOD paint
    METHOD shape
    METHOD type
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -67,7 +68,6 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QGraphicsPixmapItem ( const QPixmap & pixmap, QGraphicsItem * parent = 0 )
 */
@@ -76,7 +76,6 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_NEW2 )
   QGraphicsPixmapItem * o = new QGraphicsPixmapItem ( *PQPIXMAP(1), OPQGRAPHICSITEM(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QGraphicsPixmapItem ( QGraphicsItem * parent = 0 )
 //[2]QGraphicsPixmapItem ( const QPixmap & pixmap, QGraphicsItem * parent = 0 )
@@ -100,6 +99,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_NEW )
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_DELETE )
 {
   QGraphicsPixmapItem * obj = (QGraphicsPixmapItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -109,9 +109,9 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QPointF offset () const
@@ -126,7 +126,6 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_OFFSET )
   }
 }
 
-
 /*
 QPixmap pixmap () const
 */
@@ -139,7 +138,6 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_PIXMAP )
     _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
-
 
 /*
 void setOffset ( const QPointF & offset )
@@ -154,7 +152,6 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETOFFSET1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setOffset ( qreal x, qreal y )
 */
@@ -167,7 +164,6 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETOFFSET2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setOffset ( const QPointF & offset )
 //[2]void setOffset ( qreal x, qreal y )
@@ -197,7 +193,6 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETPIXMAP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setShapeMode ( ShapeMode mode )
 */
@@ -211,7 +206,6 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETSHAPEMODE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setTransformationMode ( Qt::TransformationMode mode )
@@ -227,7 +221,6 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETTRANSFORMATIONMODE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 ShapeMode shapeMode () const
 */
@@ -240,7 +233,6 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SHAPEMODE )
   }
 }
 
-
 /*
 Qt::TransformationMode transformationMode () const
 */
@@ -252,7 +244,6 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_TRANSFORMATIONMODE )
     hb_retni( (int) obj->transformationMode () );
   }
 }
-
 
 /*
 virtual QRectF boundingRect () const
@@ -267,7 +258,6 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_BOUNDINGRECT )
   }
 }
 
-
 /*
 virtual bool contains ( const QPointF & point ) const
 */
@@ -279,7 +269,6 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_CONTAINS )
     RBOOL( obj->contains ( *PQPOINTF(1) ) );
   }
 }
-
 
 /*
 virtual bool isObscuredBy ( const QGraphicsItem * item ) const
@@ -294,7 +283,6 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_ISOBSCUREDBY )
   }
 }
 
-
 /*
 virtual QPainterPath opaqueArea () const
 */
@@ -307,7 +295,6 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_OPAQUEAREA )
     _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
-
 
 /*
 virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget )
@@ -323,7 +310,6 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_PAINT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QPainterPath shape () const
 */
@@ -337,7 +323,6 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SHAPE )
   }
 }
 
-
 /*
 virtual int type () const
 */
@@ -349,8 +334,5 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_TYPE )
     RINT( obj->type () );
   }
 }
-
-
-
 
 #pragma ENDDUMP

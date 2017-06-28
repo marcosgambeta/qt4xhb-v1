@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -32,6 +32,7 @@ CLASS QGraphicsSceneDragDropEvent INHERIT QGraphicsSceneEvent
    METHOD screenPos
    METHOD setDropAction
    METHOD source
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -53,6 +54,7 @@ RETURN
 HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_DELETE )
 {
   QGraphicsSceneDragDropEvent * obj = (QGraphicsSceneDragDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -62,9 +64,9 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void acceptProposedAction ()
@@ -79,7 +81,6 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_ACCEPTPROPOSEDACTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 Qt::MouseButtons buttons () const
 */
@@ -92,7 +93,6 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_BUTTONS )
   }
 }
 
-
 /*
 Qt::DropAction dropAction () const
 */
@@ -104,7 +104,6 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_DROPACTION )
     hb_retni( (int) obj->dropAction () );
   }
 }
-
 
 /*
 const QMimeData * mimeData () const
@@ -119,7 +118,6 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_MIMEDATA )
   }
 }
 
-
 /*
 Qt::KeyboardModifiers modifiers () const
 */
@@ -131,7 +129,6 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_MODIFIERS )
     hb_retni( (int) obj->modifiers () );
   }
 }
-
 
 /*
 QPointF pos () const
@@ -146,7 +143,6 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_POS )
   }
 }
 
-
 /*
 Qt::DropActions possibleActions () const
 */
@@ -159,7 +155,6 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_POSSIBLEACTIONS )
   }
 }
 
-
 /*
 Qt::DropAction proposedAction () const
 */
@@ -171,7 +166,6 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_PROPOSEDACTION )
     hb_retni( (int) obj->proposedAction () );
   }
 }
-
 
 /*
 QPointF scenePos () const
@@ -186,7 +180,6 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_SCENEPOS )
   }
 }
 
-
 /*
 QPoint screenPos () const
 */
@@ -199,7 +192,6 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_SCREENPOS )
     _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
-
 
 /*
 void setDropAction ( Qt::DropAction action )
@@ -215,7 +207,6 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_SETDROPACTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QWidget * source () const
 */
@@ -228,8 +219,5 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_SOURCE )
     _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
-
-
-
 
 #pragma ENDDUMP

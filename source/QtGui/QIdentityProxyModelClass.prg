@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -34,6 +34,7 @@ CLASS QIdentityProxyModel INHERIT QAbstractProxyModel
    METHOD removeRows
    METHOD rowCount
    METHOD setSourceModel
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -63,10 +64,10 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_DELETE )
 {
   QIdentityProxyModel * obj = (QIdentityProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -76,9 +77,9 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual int columnCount ( const QModelIndex & parent = QModelIndex() ) const
@@ -93,7 +94,6 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_COLUMNCOUNT )
   }
 }
 
-
 /*
 virtual bool dropMimeData ( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
 */
@@ -106,7 +106,6 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_DROPMIMEDATA )
     RBOOL( obj->dropMimeData ( par1, (Qt::DropAction) hb_parni(2), PINT(3), PINT(4), *PQMODELINDEX(5) ) );
   }
 }
-
 
 /*
 virtual QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
@@ -122,7 +121,6 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_INDEX )
   }
 }
 
-
 /*
 virtual bool insertColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
 */
@@ -135,7 +133,6 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_INSERTCOLUMNS )
     RBOOL( obj->insertColumns ( PINT(1), PINT(2), par3 ) );
   }
 }
-
 
 /*
 virtual bool insertRows ( int row, int count, const QModelIndex & parent = QModelIndex() )
@@ -150,7 +147,6 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_INSERTROWS )
   }
 }
 
-
 /*
 virtual QModelIndex mapFromSource ( const QModelIndex & sourceIndex ) const
 */
@@ -163,7 +159,6 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MAPFROMSOURCE )
     _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
-
 
 /*
 virtual QItemSelection mapSelectionFromSource ( const QItemSelection & selection ) const
@@ -178,7 +173,6 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MAPSELECTIONFROMSOURCE )
   }
 }
 
-
 /*
 virtual QItemSelection mapSelectionToSource ( const QItemSelection & selection ) const
 */
@@ -192,7 +186,6 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MAPSELECTIONTOSOURCE )
   }
 }
 
-
 /*
 virtual QModelIndex mapToSource ( const QModelIndex & proxyIndex ) const
 */
@@ -205,7 +198,6 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MAPTOSOURCE )
     _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
-
 
 /*
 virtual QModelIndexList match ( const QModelIndex & start, int role, const QVariant & value, int hits = 1, Qt::MatchFlags flags = Qt::MatchFlags( Qt::MatchStartsWith | Qt::MatchWrap ) ) const
@@ -251,7 +243,6 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MATCH )
   }
 }
 
-
 /*
 virtual QModelIndex parent ( const QModelIndex & child ) const
 */
@@ -264,7 +255,6 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_PARENT )
     _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
-
 
 /*
 virtual bool removeColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
@@ -279,7 +269,6 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_REMOVECOLUMNS )
   }
 }
 
-
 /*
 virtual bool removeRows ( int row, int count, const QModelIndex & parent = QModelIndex() )
 */
@@ -292,7 +281,6 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_REMOVEROWS )
     RBOOL( obj->removeRows ( PINT(1), PINT(2), par3 ) );
   }
 }
-
 
 /*
 virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const
@@ -307,7 +295,6 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_ROWCOUNT )
   }
 }
 
-
 /*
 virtual void setSourceModel ( QAbstractItemModel * newSourceModel )
 */
@@ -321,8 +308,5 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_SETSOURCEMODEL )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
 
 #pragma ENDDUMP

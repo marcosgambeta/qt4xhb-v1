@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -36,7 +36,9 @@ CLASS QWorkspace INHERIT QWidget
    METHOD closeAllWindows
    METHOD setActiveWindow
    METHOD tile
+
    METHOD onWindowActivated
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -64,10 +66,10 @@ HB_FUNC_STATIC( QWORKSPACE_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QWORKSPACE_DELETE )
 {
   QWorkspace * obj = (QWorkspace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -77,9 +79,9 @@ HB_FUNC_STATIC( QWORKSPACE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QWidget * activeWindow () const
@@ -93,7 +95,6 @@ HB_FUNC_STATIC( QWORKSPACE_ACTIVEWINDOW )
     _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
-
 
 /*
 QWidget * addWindow ( QWidget * w, Qt::WindowFlags flags = 0 )
@@ -109,7 +110,6 @@ HB_FUNC_STATIC( QWORKSPACE_ADDWINDOW )
   }
 }
 
-
 /*
 QBrush background () const
 */
@@ -123,7 +123,6 @@ HB_FUNC_STATIC( QWORKSPACE_BACKGROUND )
   }
 }
 
-
 /*
 bool scrollBarsEnabled () const
 */
@@ -135,7 +134,6 @@ HB_FUNC_STATIC( QWORKSPACE_SCROLLBARSENABLED )
     RBOOL( obj->scrollBarsEnabled () );
   }
 }
-
 
 /*
 void setBackground ( const QBrush & background )
@@ -150,7 +148,6 @@ HB_FUNC_STATIC( QWORKSPACE_SETBACKGROUND )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setScrollBarsEnabled ( bool enable )
 */
@@ -163,7 +160,6 @@ HB_FUNC_STATIC( QWORKSPACE_SETSCROLLBARSENABLED )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QWidgetList windowList ( WindowOrder order = CreationOrder ) const
@@ -209,7 +205,6 @@ HB_FUNC_STATIC( QWORKSPACE_WINDOWLIST )
   }
 }
 
-
 // Reimplemented Public Functions
 
 /*
@@ -224,7 +219,6 @@ HB_FUNC_STATIC( QWORKSPACE_SIZEHINT )
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
-
 
 // Public Slots
 
@@ -241,7 +235,6 @@ HB_FUNC_STATIC( QWORKSPACE_ACTIVATENEXTWINDOW )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void activatePreviousWindow ()
 */
@@ -254,7 +247,6 @@ HB_FUNC_STATIC( QWORKSPACE_ACTIVATEPREVIOUSWINDOW )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void arrangeIcons ()
@@ -269,7 +261,6 @@ HB_FUNC_STATIC( QWORKSPACE_ARRANGEICONS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void cascade ()
 */
@@ -282,7 +273,6 @@ HB_FUNC_STATIC( QWORKSPACE_CASCADE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void closeActiveWindow ()
@@ -297,7 +287,6 @@ HB_FUNC_STATIC( QWORKSPACE_CLOSEACTIVEWINDOW )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void closeAllWindows ()
 */
@@ -310,7 +299,6 @@ HB_FUNC_STATIC( QWORKSPACE_CLOSEALLWINDOWS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setActiveWindow ( QWidget * w )
@@ -325,7 +313,6 @@ HB_FUNC_STATIC( QWORKSPACE_SETACTIVEWINDOW )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void tile ()
 */
@@ -338,10 +325,5 @@ HB_FUNC_STATIC( QWORKSPACE_TILE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
-
 
 #pragma ENDDUMP

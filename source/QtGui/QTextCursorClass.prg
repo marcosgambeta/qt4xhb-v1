@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -103,11 +103,13 @@ CLASS QTextCursor
    METHOD setVisualNavigation
    METHOD verticalMovementX
    METHOD visualNavigation
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -138,7 +140,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QTextCursor ( QTextDocument * document )
 */
@@ -147,7 +148,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_NEW2 )
   QTextCursor * o = new QTextCursor ( PQTEXTDOCUMENT(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QTextCursor ( QTextFrame * frame )
@@ -158,7 +158,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QTextCursor ( const QTextBlock & block )
 */
@@ -168,7 +167,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_NEW4 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QTextCursor ( const QTextCursor & cursor )
 */
@@ -177,7 +175,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_NEW5 )
   QTextCursor * o = new QTextCursor ( *PQTEXTCURSOR(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QTextCursor ()
 //[2]QTextCursor ( QTextDocument * document )
@@ -216,6 +213,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_NEW )
 HB_FUNC_STATIC( QTEXTCURSOR_DELETE )
 {
   QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -225,9 +223,9 @@ HB_FUNC_STATIC( QTEXTCURSOR_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 int anchor () const
@@ -241,7 +239,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_ANCHOR )
   }
 }
 
-
 /*
 bool atBlockEnd () const
 */
@@ -253,7 +250,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_ATBLOCKEND )
     RBOOL( obj->atBlockEnd () );
   }
 }
-
 
 /*
 bool atBlockStart () const
@@ -267,7 +263,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_ATBLOCKSTART )
   }
 }
 
-
 /*
 bool atEnd () const
 */
@@ -280,7 +275,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_ATEND )
   }
 }
 
-
 /*
 bool atStart () const
 */
@@ -292,7 +286,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_ATSTART )
     RBOOL( obj->atStart () );
   }
 }
-
 
 /*
 void beginEditBlock ()
@@ -307,7 +300,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_BEGINEDITBLOCK )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QTextBlock block () const
 */
@@ -320,7 +312,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_BLOCK )
     _qt4xhb_createReturnClass ( ptr, "QTEXTBLOCK" );
   }
 }
-
 
 /*
 QTextCharFormat blockCharFormat () const
@@ -335,7 +326,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_BLOCKCHARFORMAT )
   }
 }
 
-
 /*
 QTextBlockFormat blockFormat () const
 */
@@ -349,7 +339,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_BLOCKFORMAT )
   }
 }
 
-
 /*
 int blockNumber () const
 */
@@ -361,7 +350,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_BLOCKNUMBER )
     RINT( obj->blockNumber () );
   }
 }
-
 
 /*
 QTextCharFormat charFormat () const
@@ -376,7 +364,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_CHARFORMAT )
   }
 }
 
-
 /*
 void clearSelection ()
 */
@@ -390,7 +377,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_CLEARSELECTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int columnNumber () const
 */
@@ -402,7 +388,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_COLUMNNUMBER )
     RINT( obj->columnNumber () );
   }
 }
-
 
 /*
 QTextList * createList ( const QTextListFormat & format )
@@ -417,7 +402,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_CREATELIST1 )
   }
 }
 
-
 /*
 QTextList * createList ( QTextListFormat::Style style )
 */
@@ -430,7 +414,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_CREATELIST2 )
     _qt4xhb_createReturnClass ( ptr, "QTEXTLIST" );
   }
 }
-
 
 //[1]QTextList * createList ( const QTextListFormat & format )
 //[2]QTextList * createList ( QTextListFormat::Style style )
@@ -460,7 +443,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_CURRENTFRAME )
   }
 }
 
-
 /*
 QTextList * currentList () const
 */
@@ -473,7 +455,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_CURRENTLIST )
     _qt4xhb_createReturnClass ( ptr, "QTEXTLIST" );
   }
 }
-
 
 /*
 QTextTable * currentTable () const
@@ -488,7 +469,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_CURRENTTABLE )
   }
 }
 
-
 /*
 void deleteChar ()
 */
@@ -501,7 +481,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_DELETECHAR )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void deletePreviousChar ()
@@ -516,7 +495,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_DELETEPREVIOUSCHAR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QTextDocument * document () const
 */
@@ -529,7 +507,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_DOCUMENT )
     _qt4xhb_createReturnClass ( ptr, "QTEXTDOCUMENT" );
   }
 }
-
 
 /*
 void endEditBlock ()
@@ -544,7 +521,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_ENDEDITBLOCK )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool hasComplexSelection () const
 */
@@ -557,7 +533,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_HASCOMPLEXSELECTION )
   }
 }
 
-
 /*
 bool hasSelection () const
 */
@@ -569,7 +544,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_HASSELECTION )
     RBOOL( obj->hasSelection () );
   }
 }
-
 
 /*
 void insertBlock ()
@@ -584,7 +558,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTBLOCK1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void insertBlock ( const QTextBlockFormat & format )
 */
@@ -598,7 +571,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTBLOCK2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void insertBlock ( const QTextBlockFormat & format, const QTextCharFormat & charFormat )
 */
@@ -611,7 +583,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTBLOCK3 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void insertBlock ()
 //[2]void insertBlock ( const QTextBlockFormat & format )
@@ -646,7 +617,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTFRAGMENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QTextFrame * insertFrame ( const QTextFrameFormat & format )
 */
@@ -659,7 +629,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTFRAME )
     _qt4xhb_createReturnClass ( ptr, "QTEXTFRAME" );
   }
 }
-
 
 /*
 void insertHtml ( const QString & html )
@@ -674,7 +643,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTHTML )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void insertImage ( const QTextImageFormat & format )
 */
@@ -687,7 +655,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTIMAGE1 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void insertImage ( const QTextImageFormat & format, QTextFrameFormat::Position alignment )
@@ -702,7 +669,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTIMAGE2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void insertImage ( const QString & name )
 */
@@ -716,7 +682,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTIMAGE3 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void insertImage ( const QImage & image, const QString & name = QString() )
 */
@@ -729,7 +694,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTIMAGE4 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void insertImage ( const QTextImageFormat & format )
 //[2]void insertImage ( const QTextImageFormat & format, QTextFrameFormat::Position alignment )
@@ -769,7 +733,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTLIST1 )
   }
 }
 
-
 /*
 QTextList * insertList ( QTextListFormat::Style style )
 */
@@ -783,7 +746,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTLIST2 )
     _qt4xhb_createReturnClass ( ptr, "QTEXTLIST" );
   }
 }
-
 
 //[1]QTextList * insertList ( const QTextListFormat & format )
 //[2]QTextList * insertList ( QTextListFormat::Style style )
@@ -813,7 +775,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTTABLE1 )
   }
 }
 
-
 /*
 QTextTable * insertTable ( int rows, int columns )
 */
@@ -826,7 +787,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTTABLE2 )
     _qt4xhb_createReturnClass ( ptr, "QTEXTTABLE" );
   }
 }
-
 
 //[1]QTextTable * insertTable ( int rows, int columns, const QTextTableFormat & format )
 //[2]QTextTable * insertTable ( int rows, int columns )
@@ -856,7 +816,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTTEXT1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void insertText ( const QString & text, const QTextCharFormat & format )
 */
@@ -869,7 +828,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTTEXT2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void insertText ( const QString & text )
 //[2]void insertText ( const QString & text, const QTextCharFormat & format )
@@ -898,7 +856,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_ISCOPYOF )
   }
 }
 
-
 /*
 bool isNull () const
 */
@@ -910,7 +867,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_ISNULL )
     RBOOL( obj->isNull () );
   }
 }
-
 
 /*
 void joinPreviousEditBlock ()
@@ -925,7 +881,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_JOINPREVIOUSEDITBLOCK )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool keepPositionOnInsert () const
 */
@@ -937,7 +892,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_KEEPPOSITIONONINSERT )
     RBOOL( obj->keepPositionOnInsert () );
   }
 }
-
 
 /*
 void mergeBlockCharFormat ( const QTextCharFormat & modifier )
@@ -952,7 +906,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_MERGEBLOCKCHARFORMAT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void mergeBlockFormat ( const QTextBlockFormat & modifier )
 */
@@ -966,7 +919,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_MERGEBLOCKFORMAT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void mergeCharFormat ( const QTextCharFormat & modifier )
 */
@@ -979,7 +931,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_MERGECHARFORMAT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 bool movePosition ( MoveOperation operation, MoveMode mode = MoveAnchor, int n = 1 )
@@ -995,7 +946,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_MOVEPOSITION )
   }
 }
 
-
 /*
 int position () const
 */
@@ -1008,7 +958,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_POSITION )
   }
 }
 
-
 /*
 int positionInBlock () const
 */
@@ -1020,7 +969,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_POSITIONINBLOCK )
     RINT( obj->positionInBlock () );
   }
 }
-
 
 /*
 void removeSelectedText ()
@@ -1035,7 +983,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_REMOVESELECTEDTEXT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void select ( SelectionType selection )
 */
@@ -1049,7 +996,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_SELECT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void selectedTableCells ( int * firstRow, int * numRows, int * firstColumn, int * numColumns ) const
@@ -1072,7 +1018,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_SELECTEDTABLECELLS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString selectedText () const
 */
@@ -1084,7 +1029,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_SELECTEDTEXT )
     RQSTRING( obj->selectedText () );
   }
 }
-
 
 /*
 QTextDocumentFragment selection () const
@@ -1099,7 +1043,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_SELECTION )
   }
 }
 
-
 /*
 int selectionEnd () const
 */
@@ -1112,7 +1055,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_SELECTIONEND )
   }
 }
 
-
 /*
 int selectionStart () const
 */
@@ -1124,7 +1066,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_SELECTIONSTART )
     RINT( obj->selectionStart () );
   }
 }
-
 
 /*
 void setBlockCharFormat ( const QTextCharFormat & format )
@@ -1139,7 +1080,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_SETBLOCKCHARFORMAT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setBlockFormat ( const QTextBlockFormat & format )
 */
@@ -1152,7 +1092,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_SETBLOCKFORMAT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setCharFormat ( const QTextCharFormat & format )
@@ -1167,7 +1106,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_SETCHARFORMAT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setKeepPositionOnInsert ( bool b )
 */
@@ -1180,7 +1118,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_SETKEEPPOSITIONONINSERT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setPosition ( int pos, MoveMode m = MoveAnchor )
@@ -1196,7 +1133,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_SETPOSITION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setVerticalMovementX ( int x )
 */
@@ -1209,7 +1145,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_SETVERTICALMOVEMENTX )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setVisualNavigation ( bool b )
@@ -1224,7 +1159,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_SETVISUALNAVIGATION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int verticalMovementX () const
 */
@@ -1237,7 +1171,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_VERTICALMOVEMENTX )
   }
 }
 
-
 /*
 bool visualNavigation () const
 */
@@ -1249,7 +1182,6 @@ HB_FUNC_STATIC( QTEXTCURSOR_VISUALNAVIGATION )
     RBOOL( obj->visualNavigation () );
   }
 }
-
 
 HB_FUNC_STATIC( QTEXTCURSOR_NEWFROM )
 {
@@ -1305,6 +1237,5 @@ HB_FUNC_STATIC( QTEXTCURSOR_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

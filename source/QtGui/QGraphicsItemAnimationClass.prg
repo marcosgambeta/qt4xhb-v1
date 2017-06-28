@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -41,6 +41,7 @@ CLASS QGraphicsItemAnimation INHERIT QObject
    METHOD xTranslationAt
    METHOD yTranslationAt
    METHOD setStep
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -71,10 +72,10 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_DELETE )
 {
   QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -84,9 +85,9 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void clear ()
@@ -101,7 +102,6 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_CLEAR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 qreal horizontalScaleAt ( qreal step ) const
 */
@@ -114,7 +114,6 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_HORIZONTALSCALEAT )
   }
 }
 
-
 /*
 qreal horizontalShearAt ( qreal step ) const
 */
@@ -126,7 +125,6 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_HORIZONTALSHEARAT )
     RQREAL( obj->horizontalShearAt ( PQREAL(1) ) );
   }
 }
-
 
 /*
 QGraphicsItem * item () const
@@ -141,7 +139,6 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_ITEM )
   }
 }
 
-
 /*
 QMatrix matrixAt ( qreal step ) const
 */
@@ -154,7 +151,6 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_MATRIXAT )
     _qt4xhb_createReturnClass ( ptr, "QMATRIX" );
   }
 }
-
 
 /*
 QPointF posAt ( qreal step ) const
@@ -169,8 +165,6 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_POSAT )
   }
 }
 
-
-
 /*
 qreal rotationAt ( qreal step ) const
 */
@@ -182,9 +176,6 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_ROTATIONAT )
     RQREAL( obj->rotationAt ( PQREAL(1) ) );
   }
 }
-
-
-
 
 /*
 void setItem ( QGraphicsItem * item )
@@ -199,7 +190,6 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_SETITEM )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPosAt ( qreal step, const QPointF & point )
 */
@@ -212,7 +202,6 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_SETPOSAT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setRotationAt ( qreal step, qreal angle )
@@ -227,7 +216,6 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_SETROTATIONAT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setScaleAt ( qreal step, qreal sx, qreal sy )
 */
@@ -240,7 +228,6 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_SETSCALEAT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setShearAt ( qreal step, qreal sh, qreal sv )
@@ -255,7 +242,6 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_SETSHEARAT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setTimeLine ( QTimeLine * timeLine )
 */
@@ -268,7 +254,6 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_SETTIMELINE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setTranslationAt ( qreal step, qreal dx, qreal dy )
@@ -283,8 +268,6 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_SETTRANSLATIONAT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 QTimeLine * timeLine () const
 */
@@ -298,8 +281,6 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_TIMELINE )
   }
 }
 
-
-
 /*
 qreal verticalScaleAt ( qreal step ) const
 */
@@ -311,7 +292,6 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_VERTICALSCALEAT )
     RQREAL( obj->verticalScaleAt ( PQREAL(1) ) );
   }
 }
-
 
 /*
 qreal verticalShearAt ( qreal step ) const
@@ -325,7 +305,6 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_VERTICALSHEARAT )
   }
 }
 
-
 /*
 qreal xTranslationAt ( qreal step ) const
 */
@@ -337,7 +316,6 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_XTRANSLATIONAT )
     RQREAL( obj->xTranslationAt ( PQREAL(1) ) );
   }
 }
-
 
 /*
 qreal yTranslationAt ( qreal step ) const
@@ -351,7 +329,6 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_YTRANSLATIONAT )
   }
 }
 
-
 /*
 void setStep ( qreal step )
 */
@@ -364,9 +341,5 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_SETSTEP )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

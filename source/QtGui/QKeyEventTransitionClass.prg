@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QKeyEventTransition INHERIT QEventTransition
 
@@ -21,6 +20,7 @@ CLASS QKeyEventTransition INHERIT QEventTransition
    METHOD modifierMask
    METHOD setKey
    METHOD setModifierMask
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -48,7 +48,6 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QKeyEventTransition ( QObject * object, QEvent::Type type, int key, QState * sourceState = 0 )
 */
@@ -57,7 +56,6 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_NEW2 )
   QKeyEventTransition * o = new QKeyEventTransition ( PQOBJECT(1), (QEvent::Type) hb_parni(2), PINT(3), OPQSTATE(4,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QKeyEventTransition ( QState * sourceState = 0 )
 //[2]QKeyEventTransition ( QObject * object, QEvent::Type type, int key, QState * sourceState = 0 )
@@ -81,6 +79,7 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_NEW )
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_DELETE )
 {
   QKeyEventTransition * obj = (QKeyEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -90,9 +89,9 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 int key () const
@@ -106,7 +105,6 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_KEY )
   }
 }
 
-
 /*
 Qt::KeyboardModifiers modifierMask () const
 */
@@ -118,7 +116,6 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_MODIFIERMASK )
     hb_retni( (int) obj->modifierMask () );
   }
 }
-
 
 /*
 void setKey ( int key )
@@ -133,7 +130,6 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_SETKEY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setModifierMask ( Qt::KeyboardModifiers modifierMask )
 */
@@ -147,9 +143,5 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_SETMODIFIERMASK )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

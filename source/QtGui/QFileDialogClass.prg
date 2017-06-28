@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -78,11 +78,13 @@ CLASS QFileDialog INHERIT QDialog
    METHOD getOpenFileName
    METHOD getOpenFileNames
    METHOD getSaveFileName
+
    METHOD onCurrentChanged
    METHOD onDirectoryEntered
    METHOD onFileSelected
    METHOD onFilesSelected
    METHOD onFilterSelected
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -113,7 +115,6 @@ HB_FUNC_STATIC( QFILEDIALOG_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QFileDialog ( QWidget * parent = 0, const QString & caption = QString(), const QString & directory = QString(), const QString & filter = QString() )
 */
@@ -122,7 +123,6 @@ HB_FUNC_STATIC( QFILEDIALOG_NEW2 )
   QFileDialog * o = new QFileDialog ( OPQWIDGET(1,0), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QFileDialog ( QWidget * parent, Qt::WindowFlags flags )
 //[2]QFileDialog ( QWidget * parent = 0, const QString & caption = QString(), const QString & directory = QString(), const QString & filter = QString() )
@@ -146,6 +146,7 @@ HB_FUNC_STATIC( QFILEDIALOG_NEW )
 HB_FUNC_STATIC( QFILEDIALOG_DELETE )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -155,9 +156,9 @@ HB_FUNC_STATIC( QFILEDIALOG_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 AcceptMode acceptMode () const
@@ -171,7 +172,6 @@ HB_FUNC_STATIC( QFILEDIALOG_ACCEPTMODE )
   }
 }
 
-
 /*
 bool confirmOverwrite () const
 */
@@ -184,7 +184,6 @@ HB_FUNC_STATIC( QFILEDIALOG_CONFIRMOVERWRITE )
   }
 }
 
-
 /*
 QString defaultSuffix () const
 */
@@ -196,7 +195,6 @@ HB_FUNC_STATIC( QFILEDIALOG_DEFAULTSUFFIX )
     RQSTRING( obj->defaultSuffix () );
   }
 }
-
 
 /*
 QDir directory () const
@@ -211,7 +209,6 @@ HB_FUNC_STATIC( QFILEDIALOG_DIRECTORY )
   }
 }
 
-
 /*
 FileMode fileMode () const
 */
@@ -223,7 +220,6 @@ HB_FUNC_STATIC( QFILEDIALOG_FILEMODE )
     hb_retni( (int) obj->fileMode () );
   }
 }
-
 
 /*
 QDir::Filters filter () const
@@ -237,7 +233,6 @@ HB_FUNC_STATIC( QFILEDIALOG_FILTER )
   }
 }
 
-
 /*
 QStringList history () const
 */
@@ -249,7 +244,6 @@ HB_FUNC_STATIC( QFILEDIALOG_HISTORY )
     RQSTRINGLIST( obj->history () );
   }
 }
-
 
 /*
 QFileIconProvider * iconProvider () const
@@ -264,7 +258,6 @@ HB_FUNC_STATIC( QFILEDIALOG_ICONPROVIDER )
   }
 }
 
-
 /*
 bool isNameFilterDetailsVisible () const
 */
@@ -277,7 +270,6 @@ HB_FUNC_STATIC( QFILEDIALOG_ISNAMEFILTERDETAILSVISIBLE )
   }
 }
 
-
 /*
 bool isReadOnly () const
 */
@@ -289,7 +281,6 @@ HB_FUNC_STATIC( QFILEDIALOG_ISREADONLY )
     RBOOL( obj->isReadOnly () );
   }
 }
-
 
 /*
 QAbstractItemDelegate * itemDelegate () const
@@ -304,7 +295,6 @@ HB_FUNC_STATIC( QFILEDIALOG_ITEMDELEGATE )
   }
 }
 
-
 /*
 QString labelText ( DialogLabel label ) const
 */
@@ -317,7 +307,6 @@ HB_FUNC_STATIC( QFILEDIALOG_LABELTEXT )
   }
 }
 
-
 /*
 QStringList nameFilters () const
 */
@@ -329,7 +318,6 @@ HB_FUNC_STATIC( QFILEDIALOG_NAMEFILTERS )
     RQSTRINGLIST( obj->nameFilters () );
   }
 }
-
 
 /*
 void open ( QObject * receiver, const char * member )
@@ -344,7 +332,6 @@ HB_FUNC_STATIC( QFILEDIALOG_OPEN )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 Options options () const
 */
@@ -356,7 +343,6 @@ HB_FUNC_STATIC( QFILEDIALOG_OPTIONS )
     hb_retni( (int) obj->options () );
   }
 }
-
 
 /*
 QAbstractProxyModel * proxyModel () const
@@ -371,7 +357,6 @@ HB_FUNC_STATIC( QFILEDIALOG_PROXYMODEL )
   }
 }
 
-
 /*
 bool resolveSymlinks () const
 */
@@ -384,7 +369,6 @@ HB_FUNC_STATIC( QFILEDIALOG_RESOLVESYMLINKS )
   }
 }
 
-
 /*
 bool restoreState ( const QByteArray & state )
 */
@@ -396,7 +380,6 @@ HB_FUNC_STATIC( QFILEDIALOG_RESTORESTATE )
     RBOOL( obj->restoreState ( *PQBYTEARRAY(1) ) );
   }
 }
-
 
 /*
 QByteArray saveState () const
@@ -411,7 +394,6 @@ HB_FUNC_STATIC( QFILEDIALOG_SAVESTATE )
   }
 }
 
-
 /*
 void selectFile ( const QString & filename )
 */
@@ -424,7 +406,6 @@ HB_FUNC_STATIC( QFILEDIALOG_SELECTFILE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void selectNameFilter ( const QString & filter )
@@ -439,7 +420,6 @@ HB_FUNC_STATIC( QFILEDIALOG_SELECTNAMEFILTER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QStringList selectedFiles () const
 */
@@ -452,7 +432,6 @@ HB_FUNC_STATIC( QFILEDIALOG_SELECTEDFILES )
   }
 }
 
-
 /*
 QString selectedNameFilter () const
 */
@@ -464,7 +443,6 @@ HB_FUNC_STATIC( QFILEDIALOG_SELECTEDNAMEFILTER )
     RQSTRING( obj->selectedNameFilter () );
   }
 }
-
 
 /*
 void setAcceptMode ( AcceptMode mode )
@@ -480,7 +458,6 @@ HB_FUNC_STATIC( QFILEDIALOG_SETACCEPTMODE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setConfirmOverwrite ( bool enabled )
 */
@@ -493,7 +470,6 @@ HB_FUNC_STATIC( QFILEDIALOG_SETCONFIRMOVERWRITE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setDefaultSuffix ( const QString & suffix )
@@ -508,7 +484,6 @@ HB_FUNC_STATIC( QFILEDIALOG_SETDEFAULTSUFFIX )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setDirectory ( const QString & directory )
 */
@@ -522,7 +497,6 @@ HB_FUNC_STATIC( QFILEDIALOG_SETDIRECTORY1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setDirectory ( const QDir & directory )
 */
@@ -535,7 +509,6 @@ HB_FUNC_STATIC( QFILEDIALOG_SETDIRECTORY2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setDirectory ( const QString & directory )
 //[2]void setDirectory ( const QDir & directory )
@@ -566,7 +539,6 @@ HB_FUNC_STATIC( QFILEDIALOG_SETFILEMODE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setFilter ( QDir::Filters filters )
 */
@@ -581,7 +553,6 @@ HB_FUNC_STATIC( QFILEDIALOG_SETFILTER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setHistory ( const QStringList & paths )
 */
@@ -594,7 +565,6 @@ HB_FUNC_STATIC( QFILEDIALOG_SETHISTORY )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setIconProvider ( QFileIconProvider * provider )
@@ -610,7 +580,6 @@ HB_FUNC_STATIC( QFILEDIALOG_SETICONPROVIDER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setItemDelegate ( QAbstractItemDelegate * delegate )
 */
@@ -624,7 +593,6 @@ HB_FUNC_STATIC( QFILEDIALOG_SETITEMDELEGATE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setLabelText ( DialogLabel label, const QString & text )
@@ -640,7 +608,6 @@ HB_FUNC_STATIC( QFILEDIALOG_SETLABELTEXT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setNameFilter ( const QString & filter )
 */
@@ -653,7 +620,6 @@ HB_FUNC_STATIC( QFILEDIALOG_SETNAMEFILTER )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setNameFilterDetailsVisible ( bool enabled )
@@ -668,7 +634,6 @@ HB_FUNC_STATIC( QFILEDIALOG_SETNAMEFILTERDETAILSVISIBLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setNameFilters ( const QStringList & filters )
 */
@@ -681,7 +646,6 @@ HB_FUNC_STATIC( QFILEDIALOG_SETNAMEFILTERS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setOption ( Option option, bool on = true )
@@ -697,7 +661,6 @@ HB_FUNC_STATIC( QFILEDIALOG_SETOPTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setOptions ( Options options )
 */
@@ -711,7 +674,6 @@ HB_FUNC_STATIC( QFILEDIALOG_SETOPTIONS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setProxyModel ( QAbstractProxyModel * proxyModel )
@@ -727,7 +689,6 @@ HB_FUNC_STATIC( QFILEDIALOG_SETPROXYMODEL )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setReadOnly ( bool enabled )
 */
@@ -741,7 +702,6 @@ HB_FUNC_STATIC( QFILEDIALOG_SETREADONLY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setResolveSymlinks ( bool enabled )
 */
@@ -754,7 +714,6 @@ HB_FUNC_STATIC( QFILEDIALOG_SETRESOLVESYMLINKS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setSidebarUrls ( const QList<QUrl> & urls )
@@ -777,7 +736,6 @@ par1 << *(QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setViewMode ( ViewMode mode )
 */
@@ -791,7 +749,6 @@ HB_FUNC_STATIC( QFILEDIALOG_SETVIEWMODE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QList<QUrl> sidebarUrls () const
@@ -840,7 +797,6 @@ HB_FUNC_STATIC( QFILEDIALOG_SIDEBARURLS )
   }
 }
 
-
 /*
 bool testOption ( Option option ) const
 */
@@ -854,7 +810,6 @@ HB_FUNC_STATIC( QFILEDIALOG_TESTOPTION )
   }
 }
 
-
 /*
 ViewMode viewMode () const
 */
@@ -866,7 +821,6 @@ HB_FUNC_STATIC( QFILEDIALOG_VIEWMODE )
     hb_retni( (int) obj->viewMode () );
   }
 }
-
 
 /*
 virtual void setVisible ( bool visible )
@@ -881,8 +835,6 @@ HB_FUNC_STATIC( QFILEDIALOG_SETVISIBLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 QString getExistingDirectory ( QWidget * parent = 0, const QString & caption = QString(), const QString & dir = QString(), Options options = ShowDirsOnly )
 */
@@ -891,7 +843,6 @@ HB_FUNC_STATIC( QFILEDIALOG_GETEXISTINGDIRECTORY )
   int par4 = ISNIL(4)? (int) QFileDialog::ShowDirsOnly : hb_parni(4);
   RQSTRING( QFileDialog::getExistingDirectory ( OPQWIDGET(1,0), OPQSTRING(2,QString()), OPQSTRING(3,QString()), (QFileDialog::Options) par4 ) );
 }
-
 
 /*
 QString getOpenFileName ( QWidget * parent = 0, const QString & caption = QString(), const QString & dir = QString(), const QString & filter = QString(), QString * selectedFilter = 0, Options options = 0 )
@@ -903,7 +854,6 @@ HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILENAME )
   RQSTRING( QFileDialog::getOpenFileName ( OPQWIDGET(1,0), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()), par5, (QFileDialog::Options) par6 ) );
 }
 
-
 /*
 QStringList getOpenFileNames ( QWidget * parent = 0, const QString & caption = QString(), const QString & dir = QString(), const QString & filter = QString(), QString * selectedFilter = 0, Options options = 0 )
 */
@@ -914,7 +864,6 @@ HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILENAMES )
   RQSTRINGLIST( QFileDialog::getOpenFileNames ( OPQWIDGET(1,0), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()), par5, (QFileDialog::Options) par6 ) );
 }
 
-
 /*
 QString getSaveFileName ( QWidget * parent = 0, const QString & caption = QString(), const QString & dir = QString(), const QString & filter = QString(), QString * selectedFilter = 0, Options options = 0 )
 */
@@ -924,9 +873,5 @@ HB_FUNC_STATIC( QFILEDIALOG_GETSAVEFILENAME )
   int par6 = ISNIL(6)? (int) 0 : hb_parni(6);
   RQSTRING( QFileDialog::getSaveFileName ( OPQWIDGET(1,0), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()), par5, (QFileDialog::Options) par6 ) );
 }
-
-
-
-
 
 #pragma ENDDUMP

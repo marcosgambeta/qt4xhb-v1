@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QSupportedWritingSystems
 
@@ -20,11 +19,13 @@ CLASS QSupportedWritingSystems
    METHOD delete
    METHOD setSupported
    METHOD supported
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -52,7 +53,6 @@ HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QSupportedWritingSystems ( const QSupportedWritingSystems & other )
 */
@@ -61,7 +61,6 @@ HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_NEW2 )
   QSupportedWritingSystems * o = new QSupportedWritingSystems ( *PQSUPPORTEDWRITINGSYSTEMS(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QSupportedWritingSystems ()
 //[2]QSupportedWritingSystems ( const QSupportedWritingSystems & other )
@@ -85,6 +84,7 @@ HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_NEW )
 HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_DELETE )
 {
   QSupportedWritingSystems * obj = (QSupportedWritingSystems *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -94,9 +94,9 @@ HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setSupported ( QFontDatabase::WritingSystem writingSystem, bool support = true )
@@ -112,7 +112,6 @@ HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_SETSUPPORTED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool supported ( QFontDatabase::WritingSystem writingSystem ) const
 */
@@ -125,7 +124,6 @@ HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_SUPPORTED )
     RBOOL( obj->supported ( (QFontDatabase::WritingSystem) par1 ) );
   }
 }
-
 
 HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_NEWFROM )
 {
@@ -181,7 +179,5 @@ HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

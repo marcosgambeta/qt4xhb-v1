@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -26,6 +26,7 @@ CLASS QConicalGradient INHERIT QGradient
    METHOD setCenter1
    METHOD setCenter2
    METHOD setCenter
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -53,7 +54,6 @@ HB_FUNC_STATIC( QCONICALGRADIENT_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QConicalGradient(const QPointF &center, qreal startAngle)
 */
@@ -63,7 +63,6 @@ HB_FUNC_STATIC( QCONICALGRADIENT_NEW2 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QConicalGradient(qreal cx, qreal cy, qreal startAngle)
 */
@@ -72,7 +71,6 @@ HB_FUNC_STATIC( QCONICALGRADIENT_NEW3 )
   QConicalGradient * o = new QConicalGradient ( PQREAL(1), PQREAL(2), PQREAL(3) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QConicalGradient()
 //[2]QConicalGradient(const QPointF &center, qreal startAngle)
@@ -98,7 +96,6 @@ HB_FUNC_STATIC( QCONICALGRADIENT_NEW )
   }
 }
 
-
 /*
 qreal angle () const
 */
@@ -110,7 +107,6 @@ HB_FUNC_STATIC( QCONICALGRADIENT_ANGLE )
     RQREAL( obj->angle () );
   }
 }
-
 
 /*
 QPointF center () const
@@ -125,7 +121,6 @@ HB_FUNC_STATIC( QCONICALGRADIENT_CENTER )
   }
 }
 
-
 /*
 void setAngle ( qreal angle )
 */
@@ -138,7 +133,6 @@ HB_FUNC_STATIC( QCONICALGRADIENT_SETANGLE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setCenter ( const QPointF & center )
@@ -153,7 +147,6 @@ HB_FUNC_STATIC( QCONICALGRADIENT_SETCENTER1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setCenter ( qreal x, qreal y )
 */
@@ -166,7 +159,6 @@ HB_FUNC_STATIC( QCONICALGRADIENT_SETCENTER2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setCenter ( const QPointF & center )
 //[2]void setCenter ( qreal x, qreal y )
@@ -182,7 +174,5 @@ HB_FUNC_STATIC( QCONICALGRADIENT_SETCENTER )
     HB_FUNC_EXEC( QCONICALGRADIENT_SETCENTER2 );
   }
 }
-
-
 
 #pragma ENDDUMP

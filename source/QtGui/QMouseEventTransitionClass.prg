@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -26,6 +26,7 @@ CLASS QMouseEventTransition INHERIT QEventTransition
    METHOD setButton
    METHOD setHitTestPath
    METHOD setModifierMask
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -55,7 +56,6 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QMouseEventTransition ( QObject * object, QEvent::Type type, Qt::MouseButton button, QState * sourceState = 0 )
 */
@@ -64,7 +64,6 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_NEW2 )
   QMouseEventTransition * o = new QMouseEventTransition ( PQOBJECT(1), (QEvent::Type) hb_parni(2), (Qt::MouseButton) hb_parni(3), OPQSTATE(4,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QMouseEventTransition ( QState * sourceState = 0 )
 //[2]QMouseEventTransition ( QObject * object, QEvent::Type type, Qt::MouseButton button, QState * sourceState = 0 )
@@ -88,6 +87,7 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_NEW )
 HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_DELETE )
 {
   QMouseEventTransition * obj = (QMouseEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -97,9 +97,9 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 Qt::MouseButton button () const
@@ -112,7 +112,6 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_BUTTON )
     hb_retni( (int) obj->button () );
   }
 }
-
 
 /*
 QPainterPath hitTestPath () const
@@ -127,7 +126,6 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_HITTESTPATH )
   }
 }
 
-
 /*
 Qt::KeyboardModifiers modifierMask () const
 */
@@ -139,7 +137,6 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_MODIFIERMASK )
     hb_retni( (int) obj->modifierMask () );
   }
 }
-
 
 /*
 void setButton ( Qt::MouseButton button )
@@ -155,7 +152,6 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_SETBUTTON )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setHitTestPath ( const QPainterPath & path )
 */
@@ -168,7 +164,6 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_SETHITTESTPATH )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setModifierMask ( Qt::KeyboardModifiers modifierMask )
@@ -183,8 +178,5 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_SETMODIFIERMASK )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
 
 #pragma ENDDUMP

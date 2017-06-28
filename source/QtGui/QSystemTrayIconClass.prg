@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -36,8 +36,10 @@ CLASS QSystemTrayIcon INHERIT QObject
    METHOD show
    METHOD isSystemTrayAvailable
    METHOD supportsMessages
+
    METHOD onActivated
    METHOD onMessageClicked
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -65,7 +67,6 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QSystemTrayIcon ( const QIcon & icon, QObject * parent = 0 )
 */
@@ -75,7 +76,6 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_NEW2 )
   QSystemTrayIcon * o = new QSystemTrayIcon ( par1, OPQOBJECT(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QSystemTrayIcon ( QObject * parent = 0 )
 //[2]QSystemTrayIcon ( const QIcon & icon, QObject * parent = 0 )
@@ -99,6 +99,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_NEW )
 HB_FUNC_STATIC( QSYSTEMTRAYICON_DELETE )
 {
   QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -108,9 +109,9 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QMenu * contextMenu () const
@@ -125,7 +126,6 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_CONTEXTMENU )
   }
 }
 
-
 /*
 QRect geometry () const
 */
@@ -139,7 +139,6 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_GEOMETRY )
   }
 }
 
-
 /*
 QIcon icon () const
 */
@@ -151,7 +150,6 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_ICON )
     QIcon * ptr = new QIcon( obj->icon () );
     _qt4xhb_createReturnClass ( ptr, "QICON", true );  }
 }
-
 
 /*
 bool isVisible () const
@@ -165,7 +163,6 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_ISVISIBLE )
   }
 }
 
-
 /*
 void setContextMenu ( QMenu * menu )
 */
@@ -178,7 +175,6 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SETCONTEXTMENU )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setIcon ( const QIcon & icon )
@@ -194,7 +190,6 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SETICON )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setToolTip ( const QString & tip )
 */
@@ -207,7 +202,6 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SETTOOLTIP )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void showMessage ( const QString & title, const QString & message, MessageIcon icon = Information, int millisecondsTimeoutHint = 10000 )
@@ -223,7 +217,6 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SHOWMESSAGE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString toolTip () const
 */
@@ -235,7 +228,6 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_TOOLTIP )
     RQSTRING( obj->toolTip () );
   }
 }
-
 
 /*
 void hide ()
@@ -250,7 +242,6 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_HIDE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setVisible ( bool visible )
 */
@@ -263,7 +254,6 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SETVISIBLE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void show ()
@@ -278,8 +268,6 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SHOW )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 bool isSystemTrayAvailable ()
 */
@@ -288,7 +276,6 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_ISSYSTEMTRAYAVAILABLE )
   RBOOL( QSystemTrayIcon::isSystemTrayAvailable () );
 }
 
-
 /*
 bool supportsMessages ()
 */
@@ -296,9 +283,5 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SUPPORTSMESSAGES )
 {
   RBOOL( QSystemTrayIcon::supportsMessages () );
 }
-
-
-
-
 
 #pragma ENDDUMP

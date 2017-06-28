@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QGraphicsObject INHERIT QObject,QGraphicsItem
 
@@ -15,6 +14,7 @@ CLASS QGraphicsObject INHERIT QObject,QGraphicsItem
 
    METHOD grabGesture
    METHOD ungrabGesture
+
    METHOD onEnabledChanged
    METHOD onOpacityChanged
    METHOD onParentChanged
@@ -24,6 +24,7 @@ CLASS QGraphicsObject INHERIT QObject,QGraphicsItem
    METHOD onXChanged
    METHOD onYChanged
    METHOD onZChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -42,8 +43,6 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
-
 /*
 void grabGesture ( Qt::GestureType gesture, Qt::GestureFlags flags = Qt::GestureFlags() )
 */
@@ -59,7 +58,6 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_GRABGESTURE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void ungrabGesture ( Qt::GestureType gesture )
 */
@@ -73,9 +71,5 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_UNGRABGESTURE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

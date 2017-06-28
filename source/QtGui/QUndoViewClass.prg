@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -31,6 +31,7 @@ CLASS QUndoView INHERIT QWidget
    METHOD stack
    METHOD setGroup
    METHOD setStack
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -58,7 +59,6 @@ HB_FUNC_STATIC( QUNDOVIEW_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QUndoView ( QUndoStack * stack, QWidget * parent = 0 )
 */
@@ -68,7 +68,6 @@ HB_FUNC_STATIC( QUNDOVIEW_NEW2 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QUndoView ( QUndoGroup * group, QWidget * parent = 0 )
 */
@@ -77,7 +76,6 @@ HB_FUNC_STATIC( QUNDOVIEW_NEW3 )
   QUndoView * o = new QUndoView ( PQUNDOGROUP(1), OPQWIDGET(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QUndoView ( QWidget * parent = 0 )
 //[2]QUndoView ( QUndoStack * stack, QWidget * parent = 0 )
@@ -106,6 +104,7 @@ HB_FUNC_STATIC( QUNDOVIEW_NEW )
 HB_FUNC_STATIC( QUNDOVIEW_DELETE )
 {
   QUndoView * obj = (QUndoView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -115,9 +114,9 @@ HB_FUNC_STATIC( QUNDOVIEW_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QIcon cleanIcon () const
@@ -132,7 +131,6 @@ HB_FUNC_STATIC( QUNDOVIEW_CLEANICON )
   }
 }
 
-
 /*
 QString emptyLabel () const
 */
@@ -144,7 +142,6 @@ HB_FUNC_STATIC( QUNDOVIEW_EMPTYLABEL )
     RQSTRING( obj->emptyLabel () );
   }
 }
-
 
 /*
 QUndoGroup * group () const
@@ -158,7 +155,6 @@ HB_FUNC_STATIC( QUNDOVIEW_GROUP )
     _qt4xhb_createReturnClass ( ptr, "QUNDOGROUP" );
   }
 }
-
 
 /*
 void setCleanIcon ( const QIcon & icon )
@@ -174,7 +170,6 @@ HB_FUNC_STATIC( QUNDOVIEW_SETCLEANICON )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setEmptyLabel ( const QString & label )
 */
@@ -188,7 +183,6 @@ HB_FUNC_STATIC( QUNDOVIEW_SETEMPTYLABEL )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QUndoStack * stack () const
 */
@@ -201,7 +195,6 @@ HB_FUNC_STATIC( QUNDOVIEW_STACK )
     _qt4xhb_createReturnClass ( ptr, "QUNDOSTACK" );
   }
 }
-
 
 /*
 void setGroup ( QUndoGroup * group )
@@ -217,7 +210,6 @@ HB_FUNC_STATIC( QUNDOVIEW_SETGROUP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setStack ( QUndoStack * stack )
 */
@@ -231,8 +223,5 @@ HB_FUNC_STATIC( QUNDOVIEW_SETSTACK )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
 
 #pragma ENDDUMP

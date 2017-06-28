@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -30,6 +30,7 @@ CLASS QWidgetItem INHERIT QLayoutItem
    METHOD setGeometry
    METHOD sizeHint
    METHOD widget
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -57,10 +58,10 @@ HB_FUNC_STATIC( QWIDGETITEM_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QWIDGETITEM_DELETE )
 {
   QWidgetItem * obj = (QWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -70,9 +71,9 @@ HB_FUNC_STATIC( QWIDGETITEM_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual Qt::Orientations expandingDirections () const
@@ -85,7 +86,6 @@ HB_FUNC_STATIC( QWIDGETITEM_EXPANDINGDIRECTIONS )
     hb_retni( (int) obj->expandingDirections () );
   }
 }
-
 
 /*
 virtual QRect geometry () const
@@ -100,7 +100,6 @@ HB_FUNC_STATIC( QWIDGETITEM_GEOMETRY )
   }
 }
 
-
 /*
 virtual bool hasHeightForWidth () const
 */
@@ -112,7 +111,6 @@ HB_FUNC_STATIC( QWIDGETITEM_HASHEIGHTFORWIDTH )
     RBOOL( obj->hasHeightForWidth () );
   }
 }
-
 
 /*
 virtual int heightForWidth ( int w ) const
@@ -126,7 +124,6 @@ HB_FUNC_STATIC( QWIDGETITEM_HEIGHTFORWIDTH )
   }
 }
 
-
 /*
 virtual bool isEmpty () const
 */
@@ -138,7 +135,6 @@ HB_FUNC_STATIC( QWIDGETITEM_ISEMPTY )
     RBOOL( obj->isEmpty () );
   }
 }
-
 
 /*
 virtual QSize maximumSize () const
@@ -153,7 +149,6 @@ HB_FUNC_STATIC( QWIDGETITEM_MAXIMUMSIZE )
   }
 }
 
-
 /*
 virtual QSize minimumSize () const
 */
@@ -166,7 +161,6 @@ HB_FUNC_STATIC( QWIDGETITEM_MINIMUMSIZE )
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
-
 
 /*
 virtual void setGeometry ( const QRect & rect )
@@ -181,7 +175,6 @@ HB_FUNC_STATIC( QWIDGETITEM_SETGEOMETRY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QSize sizeHint () const
 */
@@ -195,7 +188,6 @@ HB_FUNC_STATIC( QWIDGETITEM_SIZEHINT )
   }
 }
 
-
 /*
 virtual QWidget * widget ()
 */
@@ -208,9 +200,5 @@ HB_FUNC_STATIC( QWIDGETITEM_WIDGET )
     _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
-
-
-
-
 
 #pragma ENDDUMP

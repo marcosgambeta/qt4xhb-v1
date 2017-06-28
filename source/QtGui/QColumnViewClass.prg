@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -35,7 +35,9 @@ CLASS QColumnView INHERIT QAbstractItemView
    METHOD setSelectionModel
    METHOD sizeHint
    METHOD visualRect
+
    METHOD onUpdatePreviewWidget
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -63,10 +65,10 @@ HB_FUNC_STATIC( QCOLUMNVIEW_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QCOLUMNVIEW_DELETE )
 {
   QColumnView * obj = (QColumnView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -76,9 +78,9 @@ HB_FUNC_STATIC( QCOLUMNVIEW_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QList<int> columnWidths () const
@@ -102,7 +104,6 @@ HB_FUNC_STATIC( QCOLUMNVIEW_COLUMNWIDTHS )
   }
 }
 
-
 /*
 QWidget * previewWidget () const
 */
@@ -116,7 +117,6 @@ HB_FUNC_STATIC( QCOLUMNVIEW_PREVIEWWIDGET )
   }
 }
 
-
 /*
 bool resizeGripsVisible () const
 */
@@ -128,7 +128,6 @@ HB_FUNC_STATIC( QCOLUMNVIEW_RESIZEGRIPSVISIBLE )
     RBOOL( obj->resizeGripsVisible () );
   }
 }
-
 
 /*
 void setColumnWidths ( const QList<int> & list )
@@ -153,7 +152,6 @@ par1 << temp1;
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPreviewWidget ( QWidget * widget )
 */
@@ -166,7 +164,6 @@ HB_FUNC_STATIC( QCOLUMNVIEW_SETPREVIEWWIDGET )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setResizeGripsVisible ( bool visible )
@@ -181,7 +178,6 @@ HB_FUNC_STATIC( QCOLUMNVIEW_SETRESIZEGRIPSVISIBLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QModelIndex indexAt ( const QPoint & point ) const
 */
@@ -194,7 +190,6 @@ HB_FUNC_STATIC( QCOLUMNVIEW_INDEXAT )
     _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
-
 
 /*
 virtual void scrollTo ( const QModelIndex & index, ScrollHint hint = EnsureVisible )
@@ -210,7 +205,6 @@ HB_FUNC_STATIC( QCOLUMNVIEW_SCROLLTO )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void selectAll ()
 */
@@ -223,7 +217,6 @@ HB_FUNC_STATIC( QCOLUMNVIEW_SELECTALL )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void setModel ( QAbstractItemModel * model )
@@ -239,7 +232,6 @@ HB_FUNC_STATIC( QCOLUMNVIEW_SETMODEL )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void setRootIndex ( const QModelIndex & index )
 */
@@ -252,7 +244,6 @@ HB_FUNC_STATIC( QCOLUMNVIEW_SETROOTINDEX )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void setSelectionModel ( QItemSelectionModel * newSelectionModel )
@@ -268,7 +259,6 @@ HB_FUNC_STATIC( QCOLUMNVIEW_SETSELECTIONMODEL )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QSize sizeHint () const
 */
@@ -282,7 +272,6 @@ HB_FUNC_STATIC( QCOLUMNVIEW_SIZEHINT )
   }
 }
 
-
 /*
 virtual QRect visualRect ( const QModelIndex & index ) const
 */
@@ -295,9 +284,5 @@ HB_FUNC_STATIC( QCOLUMNVIEW_VISUALRECT )
     _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
-
-
-
-
 
 #pragma ENDDUMP

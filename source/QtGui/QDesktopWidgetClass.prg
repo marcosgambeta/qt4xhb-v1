@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -32,9 +32,11 @@ CLASS QDesktopWidget INHERIT QWidget
    METHOD screenNumber1
    METHOD screenNumber2
    METHOD screenNumber
+
    METHOD onResized
    METHOD onScreenCountChanged
    METHOD onWorkAreaResized
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -53,7 +55,6 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
 /*
 const QRect availableGeometry ( int screen = -1 ) const
 */
@@ -66,7 +67,6 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY1 )
     _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
-
 
 /*
 const QRect availableGeometry ( const QWidget * widget ) const
@@ -82,7 +82,6 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY2 )
   }
 }
 
-
 /*
 const QRect availableGeometry ( const QPoint & p ) const
 */
@@ -95,7 +94,6 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY3 )
     _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
-
 
 //[1]const QRect availableGeometry ( int screen = -1 ) const
 //[2]const QRect availableGeometry ( const QWidget * widget ) const
@@ -129,7 +127,6 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_ISVIRTUALDESKTOP )
   }
 }
 
-
 /*
 int primaryScreen () const
 */
@@ -141,7 +138,6 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_PRIMARYSCREEN )
     RINT( obj->primaryScreen () );
   }
 }
-
 
 /*
 QWidget * screen ( int screen = -1 )
@@ -156,7 +152,6 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREEN )
   }
 }
 
-
 /*
 int screenCount () const
 */
@@ -168,7 +163,6 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENCOUNT )
     RINT( obj->screenCount () );
   }
 }
-
 
 /*
 const QRect screenGeometry ( int screen = -1 ) const
@@ -182,7 +176,6 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY1 )
     _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
-
 
 /*
 const QRect screenGeometry ( const QWidget * widget ) const
@@ -198,7 +191,6 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY2 )
   }
 }
 
-
 /*
 const QRect screenGeometry ( const QPoint & p ) const
 */
@@ -211,7 +203,6 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY3 )
     _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
-
 
 //[1]const QRect screenGeometry ( int screen = -1 ) const
 //[2]const QRect screenGeometry ( const QWidget * widget ) const
@@ -246,7 +237,6 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENNUMBER1 )
   }
 }
 
-
 /*
 int screenNumber ( const QPoint & point ) const
 */
@@ -258,7 +248,6 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENNUMBER2 )
     RINT( obj->screenNumber ( *PQPOINT(1) ) );
   }
 }
-
 
 //[1]int screenNumber ( const QWidget * widget = 0 ) const
 //[2]int screenNumber ( const QPoint & point ) const
@@ -274,8 +263,5 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENNUMBER )
     HB_FUNC_EXEC( QDESKTOPWIDGET_SCREENNUMBER2 );
   }
 }
-
-
-
 
 #pragma ENDDUMP

@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QSessionManager INHERIT QObject
 
@@ -30,6 +29,7 @@ CLASS QSessionManager INHERIT QObject
    METHOD setManagerProperty
    METHOD setRestartCommand
    METHOD setRestartHint
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -48,8 +48,6 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
-
 /*
 bool allowsErrorInteraction ()
 */
@@ -62,7 +60,6 @@ HB_FUNC_STATIC( QSESSIONMANAGER_ALLOWSERRORINTERACTION )
   }
 }
 
-
 /*
 bool allowsInteraction ()
 */
@@ -74,7 +71,6 @@ HB_FUNC_STATIC( QSESSIONMANAGER_ALLOWSINTERACTION )
     RBOOL( obj->allowsInteraction () );
   }
 }
-
 
 /*
 void cancel ()
@@ -89,7 +85,6 @@ HB_FUNC_STATIC( QSESSIONMANAGER_CANCEL )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QStringList discardCommand () const
 */
@@ -102,7 +97,6 @@ HB_FUNC_STATIC( QSESSIONMANAGER_DISCARDCOMMAND )
   }
 }
 
-
 /*
 bool isPhase2 () const
 */
@@ -114,7 +108,6 @@ HB_FUNC_STATIC( QSESSIONMANAGER_ISPHASE2 )
     RBOOL( obj->isPhase2 () );
   }
 }
-
 
 /*
 void release ()
@@ -129,7 +122,6 @@ HB_FUNC_STATIC( QSESSIONMANAGER_RELEASE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void requestPhase2 ()
 */
@@ -143,7 +135,6 @@ HB_FUNC_STATIC( QSESSIONMANAGER_REQUESTPHASE2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QStringList restartCommand () const
 */
@@ -155,7 +146,6 @@ HB_FUNC_STATIC( QSESSIONMANAGER_RESTARTCOMMAND )
     RQSTRINGLIST( obj->restartCommand () );
   }
 }
-
 
 /*
 RestartHint restartHint () const
@@ -169,7 +159,6 @@ HB_FUNC_STATIC( QSESSIONMANAGER_RESTARTHINT )
   }
 }
 
-
 /*
 QString sessionId () const
 */
@@ -182,7 +171,6 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SESSIONID )
   }
 }
 
-
 /*
 QString sessionKey () const
 */
@@ -194,7 +182,6 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SESSIONKEY )
     RQSTRING( obj->sessionKey () );
   }
 }
-
 
 /*
 void setDiscardCommand ( const QStringList & list )
@@ -209,7 +196,6 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SETDISCARDCOMMAND )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setManagerProperty ( const QString & name, const QStringList & value )
 */
@@ -223,7 +209,6 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SETMANAGERPROPERTY1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setManagerProperty ( const QString & name, const QString & value )
 */
@@ -236,7 +221,6 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SETMANAGERPROPERTY2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setManagerProperty ( const QString & name, const QStringList & value )
 //[2]void setManagerProperty ( const QString & name, const QString & value )
@@ -266,7 +250,6 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SETRESTARTCOMMAND )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setRestartHint ( RestartHint hint )
 */
@@ -279,9 +262,5 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SETRESTARTHINT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

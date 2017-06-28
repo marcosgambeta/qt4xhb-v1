@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -40,11 +40,13 @@ CLASS QPaintEngine
    METHOD setActive
    METHOD type
    METHOD updateState
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -63,10 +65,10 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
 HB_FUNC_STATIC( QPAINTENGINE_DELETE )
 {
   QPaintEngine * obj = (QPaintEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -76,9 +78,9 @@ HB_FUNC_STATIC( QPAINTENGINE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual bool begin ( QPaintDevice * pdev ) = 0
@@ -93,7 +95,6 @@ HB_FUNC_STATIC( QPAINTENGINE_BEGIN )
   }
 }
 
-
 /*
 virtual void drawEllipse ( const QRectF & rect )
 */
@@ -107,7 +108,6 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWELLIPSE1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void drawEllipse ( const QRect & rect )
 */
@@ -120,7 +120,6 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWELLIPSE2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]virtual void drawEllipse ( const QRectF & rect )
 //[2]virtual void drawEllipse ( const QRect & rect )
@@ -151,9 +150,6 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWIMAGE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
-
 //[1]virtual void drawLines ( const QLineF * lines, int lineCount )
 //[2]virtual void drawLines ( const QLine * lines, int lineCount )
 
@@ -174,7 +170,6 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWPATH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void drawPixmap ( const QRectF & r, const QPixmap & pm, const QRectF & sr ) = 0
 */
@@ -188,9 +183,6 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWPIXMAP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
-
 //[1]virtual void drawPoints ( const QPointF * points, int pointCount )
 //[2]virtual void drawPoints ( const QPoint * points, int pointCount )
 
@@ -198,16 +190,12 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWPOINTS )
 {
 }
 
-
-
 //[1]virtual void drawPolygon ( const QPointF * points, int pointCount, PolygonDrawMode mode )
 //[2]virtual void drawPolygon ( const QPoint * points, int pointCount, PolygonDrawMode mode )
 
 HB_FUNC_STATIC( QPAINTENGINE_DRAWPOLYGON )
 {
 }
-
-
 
 //[1]virtual void drawRects ( const QRectF * rects, int rectCount )
 //[2]virtual void drawRects ( const QRect * rects, int rectCount )
@@ -229,7 +217,6 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWTEXTITEM )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void drawTiledPixmap ( const QRectF & rect, const QPixmap & pixmap, const QPointF & p )
 */
@@ -243,7 +230,6 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWTILEDPIXMAP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual bool end () = 0
 */
@@ -255,7 +241,6 @@ HB_FUNC_STATIC( QPAINTENGINE_END )
     RBOOL( obj->end () );
   }
 }
-
 
 /*
 bool hasFeature ( PaintEngineFeatures feature ) const
@@ -270,7 +255,6 @@ HB_FUNC_STATIC( QPAINTENGINE_HASFEATURE )
   }
 }
 
-
 /*
 bool isActive () const
 */
@@ -282,7 +266,6 @@ HB_FUNC_STATIC( QPAINTENGINE_ISACTIVE )
     RBOOL( obj->isActive () );
   }
 }
-
 
 /*
 QPaintDevice * paintDevice () const
@@ -297,7 +280,6 @@ HB_FUNC_STATIC( QPAINTENGINE_PAINTDEVICE )
   }
 }
 
-
 /*
 QPainter * painter () const
 */
@@ -310,7 +292,6 @@ HB_FUNC_STATIC( QPAINTENGINE_PAINTER )
     _qt4xhb_createReturnClass ( ptr, "QPAINTER" );
   }
 }
-
 
 /*
 void setActive ( bool state )
@@ -325,7 +306,6 @@ HB_FUNC_STATIC( QPAINTENGINE_SETACTIVE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual Type type () const = 0
 */
@@ -337,7 +317,6 @@ HB_FUNC_STATIC( QPAINTENGINE_TYPE )
     hb_retni( (int) obj->type () );
   }
 }
-
 
 /*
 virtual void updateState ( const QPaintEngineState & state ) = 0
@@ -351,7 +330,6 @@ HB_FUNC_STATIC( QPAINTENGINE_UPDATESTATE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QPAINTENGINE_NEWFROM )
 {
@@ -407,7 +385,5 @@ HB_FUNC_STATIC( QPAINTENGINE_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QTreeWidgetItemIterator
 
@@ -19,11 +18,13 @@ CLASS QTreeWidgetItemIterator
    METHOD new3
    METHOD new
    METHOD delete
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -51,7 +52,6 @@ HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QTreeWidgetItemIterator ( QTreeWidget * widget, IteratorFlags flags = All )
 */
@@ -62,7 +62,6 @@ HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_NEW2 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QTreeWidgetItemIterator ( QTreeWidgetItem * item, IteratorFlags flags = All )
 */
@@ -72,7 +71,6 @@ HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_NEW3 )
   QTreeWidgetItemIterator * o = new QTreeWidgetItemIterator ( PQTREEWIDGETITEM(1), (QTreeWidgetItemIterator::IteratorFlags) par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QTreeWidgetItemIterator ( const QTreeWidgetItemIterator & it )
 //[2]QTreeWidgetItemIterator ( QTreeWidget * widget, IteratorFlags flags = All )
@@ -101,6 +99,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_NEW )
 HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_DELETE )
 {
   QTreeWidgetItemIterator * obj = (QTreeWidgetItemIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -110,9 +109,9 @@ HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_NEWFROM )
 {
@@ -168,8 +167,5 @@ HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
-
 
 #pragma ENDDUMP

@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -26,11 +26,13 @@ CLASS QItemSelection
    METHOD merge
    METHOD select
    METHOD split
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -58,7 +60,6 @@ HB_FUNC_STATIC( QITEMSELECTION_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QItemSelection ( const QModelIndex & topLeft, const QModelIndex & bottomRight )
 */
@@ -67,7 +68,6 @@ HB_FUNC_STATIC( QITEMSELECTION_NEW2 )
   QItemSelection * o = new QItemSelection ( *PQMODELINDEX(1), *PQMODELINDEX(2) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QItemSelection ()
 //[2]QItemSelection ( const QModelIndex & topLeft, const QModelIndex & bottomRight )
@@ -91,6 +91,7 @@ HB_FUNC_STATIC( QITEMSELECTION_NEW )
 HB_FUNC_STATIC( QITEMSELECTION_DELETE )
 {
   QItemSelection * obj = (QItemSelection *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -100,9 +101,9 @@ HB_FUNC_STATIC( QITEMSELECTION_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 bool contains ( const QModelIndex & index ) const
@@ -115,7 +116,6 @@ HB_FUNC_STATIC( QITEMSELECTION_CONTAINS )
     RBOOL( obj->contains ( *PQMODELINDEX(1) ) );
   }
 }
-
 
 /*
 QModelIndexList indexes () const
@@ -160,7 +160,6 @@ HB_FUNC_STATIC( QITEMSELECTION_INDEXES )
   }
 }
 
-
 /*
 void merge ( const QItemSelection & other, QItemSelectionModel::SelectionFlags command )
 */
@@ -175,7 +174,6 @@ HB_FUNC_STATIC( QITEMSELECTION_MERGE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void select ( const QModelIndex & topLeft, const QModelIndex & bottomRight )
 */
@@ -189,8 +187,6 @@ HB_FUNC_STATIC( QITEMSELECTION_SELECT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 void split ( const QItemSelectionRange & range, const QItemSelectionRange & other, QItemSelection * result )
 */
@@ -200,7 +196,6 @@ HB_FUNC_STATIC( QITEMSELECTION_SPLIT )
   QItemSelection::split ( *PQITEMSELECTIONRANGE(1), *PQITEMSELECTIONRANGE(2), par3 );
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QITEMSELECTION_NEWFROM )
 {
@@ -256,6 +251,5 @@ HB_FUNC_STATIC( QITEMSELECTION_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

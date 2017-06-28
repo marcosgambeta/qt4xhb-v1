@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -30,11 +30,13 @@ CLASS QTextFragment
    METHOD length
    METHOD position
    METHOD text
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -62,7 +64,6 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QTextFragment ( const QTextFragment & other )
 */
@@ -71,7 +72,6 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_NEW2 )
   QTextFragment * o = new QTextFragment ( *PQTEXTFRAGMENT(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QTextFragment ()
 //[2]QTextFragment ( const QTextFragment & other )
@@ -95,6 +95,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_NEW )
 HB_FUNC_STATIC( QTEXTFRAGMENT_DELETE )
 {
   QTextFragment * obj = (QTextFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -104,9 +105,9 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QTextCharFormat charFormat () const
@@ -121,7 +122,6 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_CHARFORMAT )
   }
 }
 
-
 /*
 int charFormatIndex () const
 */
@@ -134,7 +134,6 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_CHARFORMATINDEX )
   }
 }
 
-
 /*
 bool contains ( int position ) const
 */
@@ -146,7 +145,6 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_CONTAINS )
     RBOOL( obj->contains ( PINT(1) ) );
   }
 }
-
 
 /*
 QList<QGlyphRun> glyphRuns () const
@@ -191,7 +189,6 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_GLYPHRUNS )
   }
 }
 
-
 /*
 bool isValid () const
 */
@@ -203,7 +200,6 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_ISVALID )
     RBOOL( obj->isValid () );
   }
 }
-
 
 /*
 int length () const
@@ -217,7 +213,6 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_LENGTH )
   }
 }
 
-
 /*
 int position () const
 */
@@ -230,7 +225,6 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_POSITION )
   }
 }
 
-
 /*
 QString text () const
 */
@@ -242,7 +236,6 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_TEXT )
     RQSTRING( obj->text () );
   }
 }
-
 
 HB_FUNC_STATIC( QTEXTFRAGMENT_NEWFROM )
 {
@@ -298,6 +291,5 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

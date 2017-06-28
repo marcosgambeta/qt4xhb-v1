@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QTextListFormat INHERIT QTextFormat
 
@@ -24,6 +23,7 @@ CLASS QTextListFormat INHERIT QTextFormat
    METHOD setNumberSuffix
    METHOD setStyle
    METHOD style
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -51,10 +51,10 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QTEXTLISTFORMAT_DELETE )
 {
   QTextListFormat * obj = (QTextListFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -64,9 +64,9 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 int indent () const
@@ -80,7 +80,6 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_INDENT )
   }
 }
 
-
 /*
 bool isValid () const
 */
@@ -92,7 +91,6 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_ISVALID )
     RBOOL( obj->isValid () );
   }
 }
-
 
 /*
 QString numberPrefix () const
@@ -106,7 +104,6 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_NUMBERPREFIX )
   }
 }
 
-
 /*
 QString numberSuffix () const
 */
@@ -118,7 +115,6 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_NUMBERSUFFIX )
     RQSTRING( obj->numberSuffix () );
   }
 }
-
 
 /*
 void setIndent ( int indentation )
@@ -133,7 +129,6 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_SETINDENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setNumberPrefix ( const QString & numberPrefix )
 */
@@ -147,7 +142,6 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_SETNUMBERPREFIX )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setNumberSuffix ( const QString & numberSuffix )
 */
@@ -160,7 +154,6 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_SETNUMBERSUFFIX )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setStyle ( Style style )
@@ -176,7 +169,6 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_SETSTYLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 Style style () const
 */
@@ -188,8 +180,5 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_STYLE )
     hb_retni( (int) obj->style () );
   }
 }
-
-
-
 
 #pragma ENDDUMP

@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -61,10 +61,12 @@ CLASS QCalendarWidget INHERIT QWidget
    METHOD showPreviousYear
    METHOD showSelectedDate
    METHOD showToday
+
    METHOD onActivated
    METHOD onClicked
    METHOD onCurrentPageChanged
    METHOD onSelectionChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -94,10 +96,10 @@ HB_FUNC_STATIC( QCALENDARWIDGET_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QCALENDARWIDGET_DELETE )
 {
   QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -107,9 +109,9 @@ HB_FUNC_STATIC( QCALENDARWIDGET_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 int dateEditAcceptDelay () const
@@ -123,8 +125,6 @@ HB_FUNC_STATIC( QCALENDARWIDGET_DATEEDITACCEPTDELAY )
   }
 }
 
-
-
 /*
 QTextCharFormat dateTextFormat ( const QDate & date ) const
 */
@@ -137,7 +137,6 @@ HB_FUNC_STATIC( QCALENDARWIDGET_DATETEXTFORMAT2 )
     _qt4xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT" );
   }
 }
-
 
 //[1]QMap<QDate, QTextCharFormat> dateTextFormat () const
 //[2]QTextCharFormat dateTextFormat ( const QDate & date ) const
@@ -166,7 +165,6 @@ HB_FUNC_STATIC( QCALENDARWIDGET_FIRSTDAYOFWEEK )
   }
 }
 
-
 /*
 QTextCharFormat headerTextFormat () const
 */
@@ -180,7 +178,6 @@ HB_FUNC_STATIC( QCALENDARWIDGET_HEADERTEXTFORMAT )
   }
 }
 
-
 /*
 HorizontalHeaderFormat horizontalHeaderFormat () const
 */
@@ -192,7 +189,6 @@ HB_FUNC_STATIC( QCALENDARWIDGET_HORIZONTALHEADERFORMAT )
     hb_retni( (int) obj->horizontalHeaderFormat () );
   }
 }
-
 
 /*
 bool isDateEditEnabled () const
@@ -206,7 +202,6 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ISDATEEDITENABLED )
   }
 }
 
-
 /*
 bool isGridVisible () const
 */
@@ -219,7 +214,6 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ISGRIDVISIBLE )
   }
 }
 
-
 /*
 bool isNavigationBarVisible () const
 */
@@ -231,7 +225,6 @@ HB_FUNC_STATIC( QCALENDARWIDGET_ISNAVIGATIONBARVISIBLE )
     RBOOL( obj->isNavigationBarVisible () );
   }
 }
-
 
 /*
 QDate maximumDate () const
@@ -246,7 +239,6 @@ HB_FUNC_STATIC( QCALENDARWIDGET_MAXIMUMDATE )
   }
 }
 
-
 /*
 QDate minimumDate () const
 */
@@ -260,7 +252,6 @@ HB_FUNC_STATIC( QCALENDARWIDGET_MINIMUMDATE )
   }
 }
 
-
 /*
 int monthShown () const
 */
@@ -272,7 +263,6 @@ HB_FUNC_STATIC( QCALENDARWIDGET_MONTHSHOWN )
     RINT( obj->monthShown () );
   }
 }
-
 
 /*
 QDate selectedDate () const
@@ -287,7 +277,6 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SELECTEDDATE )
   }
 }
 
-
 /*
 SelectionMode selectionMode () const
 */
@@ -299,7 +288,6 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SELECTIONMODE )
     hb_retni( (int) obj->selectionMode () );
   }
 }
-
 
 /*
 void setDateEditAcceptDelay ( int delay )
@@ -314,7 +302,6 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETDATEEDITACCEPTDELAY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setDateEditEnabled ( bool enable )
 */
@@ -328,7 +315,6 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETDATEEDITENABLED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setDateTextFormat ( const QDate & date, const QTextCharFormat & format )
 */
@@ -341,7 +327,6 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETDATETEXTFORMAT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setFirstDayOfWeek ( Qt::DayOfWeek dayOfWeek )
@@ -357,7 +342,6 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETFIRSTDAYOFWEEK )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setHeaderTextFormat ( const QTextCharFormat & format )
 */
@@ -370,7 +354,6 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETHEADERTEXTFORMAT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setHorizontalHeaderFormat ( HorizontalHeaderFormat format )
@@ -386,7 +369,6 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETHORIZONTALHEADERFORMAT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setMaximumDate ( const QDate & date )
 */
@@ -400,7 +382,6 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETMAXIMUMDATE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setMinimumDate ( const QDate & date )
 */
@@ -413,7 +394,6 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETMINIMUMDATE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setSelectionMode ( SelectionMode mode )
@@ -429,7 +409,6 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETSELECTIONMODE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setVerticalHeaderFormat ( VerticalHeaderFormat format )
 */
@@ -444,7 +423,6 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETVERTICALHEADERFORMAT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setWeekdayTextFormat ( Qt::DayOfWeek dayOfWeek, const QTextCharFormat & format )
 */
@@ -458,7 +436,6 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETWEEKDAYTEXTFORMAT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 VerticalHeaderFormat verticalHeaderFormat () const
 */
@@ -470,7 +447,6 @@ HB_FUNC_STATIC( QCALENDARWIDGET_VERTICALHEADERFORMAT )
     hb_retni( (int) obj->verticalHeaderFormat () );
   }
 }
-
 
 /*
 QTextCharFormat weekdayTextFormat ( Qt::DayOfWeek dayOfWeek ) const
@@ -486,7 +462,6 @@ HB_FUNC_STATIC( QCALENDARWIDGET_WEEKDAYTEXTFORMAT )
   }
 }
 
-
 /*
 int yearShown () const
 */
@@ -498,7 +473,6 @@ HB_FUNC_STATIC( QCALENDARWIDGET_YEARSHOWN )
     RINT( obj->yearShown () );
   }
 }
-
 
 /*
 virtual QSize minimumSizeHint () const
@@ -513,7 +487,6 @@ HB_FUNC_STATIC( QCALENDARWIDGET_MINIMUMSIZEHINT )
   }
 }
 
-
 /*
 virtual QSize sizeHint () const
 */
@@ -526,7 +499,6 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SIZEHINT )
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
-
 
 /*
 void setCurrentPage ( int year, int month )
@@ -541,7 +513,6 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETCURRENTPAGE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setDateRange ( const QDate & min, const QDate & max )
 */
@@ -554,7 +525,6 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETDATERANGE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setGridVisible ( bool show )
@@ -569,7 +539,6 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETGRIDVISIBLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setNavigationBarVisible ( bool visible )
 */
@@ -582,7 +551,6 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETNAVIGATIONBARVISIBLE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setSelectedDate ( const QDate & date )
@@ -597,7 +565,6 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SETSELECTEDDATE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void showNextMonth ()
 */
@@ -610,7 +577,6 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SHOWNEXTMONTH )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void showNextYear ()
@@ -625,7 +591,6 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SHOWNEXTYEAR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void showPreviousMonth ()
 */
@@ -638,7 +603,6 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SHOWPREVIOUSMONTH )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void showPreviousYear ()
@@ -653,7 +617,6 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SHOWPREVIOUSYEAR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void showSelectedDate ()
 */
@@ -667,7 +630,6 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SHOWSELECTEDDATE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void showToday ()
 */
@@ -680,10 +642,5 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SHOWTODAY )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
-
 
 #pragma ENDDUMP

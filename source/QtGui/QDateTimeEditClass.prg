@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -74,9 +74,11 @@ CLASS QDateTimeEdit INHERIT QAbstractSpinBox
    METHOD setDate
    METHOD setDateTime
    METHOD setTime
+
    METHOD onDateChanged
    METHOD onDateTimeChanged
    METHOD onTimeChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -104,7 +106,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QDateTimeEdit ( const QDateTime & datetime, QWidget * parent = 0 )
 */
@@ -113,7 +114,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_NEW2 )
   QDateTimeEdit * o = new QDateTimeEdit ( *PQDATETIME(1), OPQWIDGET(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 /*
 QDateTimeEdit ( const QDate & date, QWidget * parent = 0 )
@@ -124,7 +124,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QDateTimeEdit ( const QTime & time, QWidget * parent = 0 )
 */
@@ -133,7 +132,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_NEW4 )
   QDateTimeEdit * o = new QDateTimeEdit ( *PQTIME(1), OPQWIDGET(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QDateTimeEdit ( QWidget * parent = 0 )
 //[2]QDateTimeEdit ( const QDateTime & datetime, QWidget * parent = 0 )
@@ -167,6 +165,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_NEW )
 HB_FUNC_STATIC( QDATETIMEEDIT_DELETE )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -176,9 +175,9 @@ HB_FUNC_STATIC( QDATETIMEEDIT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 bool calendarPopup () const
@@ -191,7 +190,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CALENDARPOPUP )
     RBOOL( obj->calendarPopup () );
   }
 }
-
 
 /*
 QCalendarWidget * calendarWidget () const
@@ -206,7 +204,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CALENDARWIDGET )
   }
 }
 
-
 /*
 void clearMaximumDate ()
 */
@@ -219,7 +216,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CLEARMAXIMUMDATE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void clearMaximumDateTime ()
@@ -234,7 +230,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CLEARMAXIMUMDATETIME )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void clearMaximumTime ()
 */
@@ -247,7 +242,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CLEARMAXIMUMTIME )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void clearMinimumDate ()
@@ -262,7 +256,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CLEARMINIMUMDATE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void clearMinimumDateTime ()
 */
@@ -275,7 +268,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CLEARMINIMUMDATETIME )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void clearMinimumTime ()
@@ -290,7 +282,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CLEARMINIMUMTIME )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 Section currentSection () const
 */
@@ -303,7 +294,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CURRENTSECTION )
   }
 }
 
-
 /*
 int currentSectionIndex () const
 */
@@ -315,7 +305,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CURRENTSECTIONINDEX )
     RINT( obj->currentSectionIndex () );
   }
 }
-
 
 /*
 QDate date () const
@@ -330,7 +319,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_DATE )
   }
 }
 
-
 /*
 QDateTime dateTime () const
 */
@@ -344,7 +332,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_DATETIME )
   }
 }
 
-
 /*
 QString displayFormat () const
 */
@@ -357,7 +344,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_DISPLAYFORMAT )
   }
 }
 
-
 /*
 Sections displayedSections () const
 */
@@ -369,7 +355,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_DISPLAYEDSECTIONS )
     hb_retni( (int) obj->displayedSections () );
   }
 }
-
 
 /*
 QDate maximumDate () const
@@ -384,7 +369,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_MAXIMUMDATE )
   }
 }
 
-
 /*
 QDateTime maximumDateTime () const
 */
@@ -397,7 +381,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_MAXIMUMDATETIME )
     _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
-
 
 /*
 QTime maximumTime () const
@@ -412,7 +395,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_MAXIMUMTIME )
   }
 }
 
-
 /*
 QDate minimumDate () const
 */
@@ -425,7 +407,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_MINIMUMDATE )
     _qt4xhb_createReturnClass ( ptr, "QDATE", true );
   }
 }
-
 
 /*
 QDateTime minimumDateTime () const
@@ -440,7 +421,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_MINIMUMDATETIME )
   }
 }
 
-
 /*
 QTime minimumTime () const
 */
@@ -454,7 +434,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_MINIMUMTIME )
   }
 }
 
-
 /*
 Section sectionAt ( int index ) const
 */
@@ -466,7 +445,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SECTIONAT )
     hb_retni( (int) obj->sectionAt ( PINT(1) ) );
   }
 }
-
 
 /*
 int sectionCount () const
@@ -480,7 +458,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SECTIONCOUNT )
   }
 }
 
-
 /*
 QString sectionText ( Section section ) const
 */
@@ -492,7 +469,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SECTIONTEXT )
     RQSTRING( obj->sectionText ( (QDateTimeEdit::Section) hb_parni(1) ) );
   }
 }
-
 
 /*
 void setCalendarPopup ( bool enable )
@@ -506,7 +482,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETCALENDARPOPUP )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setCalendarWidget ( QCalendarWidget * calendarWidget )
@@ -522,7 +497,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETCALENDARWIDGET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setCurrentSection ( Section section )
 */
@@ -537,7 +511,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETCURRENTSECTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setCurrentSectionIndex ( int index )
 */
@@ -550,7 +523,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETCURRENTSECTIONINDEX )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setDateRange ( const QDate & min, const QDate & max )
@@ -565,7 +537,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETDATERANGE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setDateTimeRange ( const QDateTime & min, const QDateTime & max )
 */
@@ -578,7 +549,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETDATETIMERANGE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setDisplayFormat ( const QString & format )
@@ -593,7 +563,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETDISPLAYFORMAT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setMaximumDate ( const QDate & max )
 */
@@ -606,7 +575,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETMAXIMUMDATE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setMaximumDateTime ( const QDateTime & dt )
@@ -621,7 +589,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETMAXIMUMDATETIME )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setMaximumTime ( const QTime & max )
 */
@@ -634,7 +601,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETMAXIMUMTIME )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setMinimumDate ( const QDate & min )
@@ -649,7 +615,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETMINIMUMDATE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setMinimumDateTime ( const QDateTime & dt )
 */
@@ -663,7 +628,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETMINIMUMDATETIME )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setMinimumTime ( const QTime & min )
 */
@@ -676,7 +640,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETMINIMUMTIME )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setSelectedSection ( Section section )
@@ -692,7 +655,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETSELECTEDSECTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setTimeRange ( const QTime & min, const QTime & max )
 */
@@ -705,7 +667,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETTIMERANGE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setTimeSpec ( Qt::TimeSpec spec )
@@ -721,7 +682,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETTIMESPEC )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QTime time () const
 */
@@ -735,7 +695,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_TIME )
   }
 }
 
-
 /*
 Qt::TimeSpec timeSpec () const
 */
@@ -747,7 +706,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_TIMESPEC )
     hb_retni( (int) obj->timeSpec () );
   }
 }
-
 
 /*
 virtual void clear ()
@@ -762,7 +720,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CLEAR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual bool event ( QEvent * event )
 */
@@ -774,7 +731,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_EVENT )
     RBOOL( obj->event ( PQEVENT(1) ) );
   }
 }
-
 
 /*
 virtual QSize sizeHint () const
@@ -789,7 +745,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SIZEHINT )
   }
 }
 
-
 /*
 virtual void stepBy ( int steps )
 */
@@ -802,7 +757,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_STEPBY )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setDate ( const QDate & date )
@@ -817,7 +771,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETDATE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setDateTime ( const QDateTime & dateTime )
 */
@@ -831,7 +784,6 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETDATETIME )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setTime ( const QTime & time )
 */
@@ -844,9 +796,5 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETTIME )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

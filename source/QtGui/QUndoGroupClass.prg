@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -33,6 +33,7 @@ CLASS QUndoGroup INHERIT QObject
    METHOD redo
    METHOD setActiveStack
    METHOD undo
+
    METHOD onActiveStackChanged
    METHOD onCanRedoChanged
    METHOD onCanUndoChanged
@@ -40,6 +41,7 @@ CLASS QUndoGroup INHERIT QObject
    METHOD onIndexChanged
    METHOD onRedoTextChanged
    METHOD onUndoTextChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -67,10 +69,10 @@ HB_FUNC_STATIC( QUNDOGROUP_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QUNDOGROUP_DELETE )
 {
   QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -80,9 +82,9 @@ HB_FUNC_STATIC( QUNDOGROUP_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QUndoStack * activeStack () const
@@ -96,7 +98,6 @@ HB_FUNC_STATIC( QUNDOGROUP_ACTIVESTACK )
     _qt4xhb_createReturnClass ( ptr, "QUNDOSTACK" );
   }
 }
-
 
 /*
 void addStack ( QUndoStack * stack )
@@ -112,7 +113,6 @@ HB_FUNC_STATIC( QUNDOGROUP_ADDSTACK )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool canRedo () const
 */
@@ -125,7 +125,6 @@ HB_FUNC_STATIC( QUNDOGROUP_CANREDO )
   }
 }
 
-
 /*
 bool canUndo () const
 */
@@ -137,7 +136,6 @@ HB_FUNC_STATIC( QUNDOGROUP_CANUNDO )
     RBOOL( obj->canUndo () );
   }
 }
-
 
 /*
 QAction * createRedoAction ( QObject * parent, const QString & prefix = QString() ) const
@@ -152,7 +150,6 @@ HB_FUNC_STATIC( QUNDOGROUP_CREATEREDOACTION )
   }
 }
 
-
 /*
 QAction * createUndoAction ( QObject * parent, const QString & prefix = QString() ) const
 */
@@ -166,7 +163,6 @@ HB_FUNC_STATIC( QUNDOGROUP_CREATEUNDOACTION )
   }
 }
 
-
 /*
 bool isClean () const
 */
@@ -179,7 +175,6 @@ HB_FUNC_STATIC( QUNDOGROUP_ISCLEAN )
   }
 }
 
-
 /*
 QString redoText () const
 */
@@ -191,7 +186,6 @@ HB_FUNC_STATIC( QUNDOGROUP_REDOTEXT )
     RQSTRING( obj->redoText () );
   }
 }
-
 
 /*
 void removeStack ( QUndoStack * stack )
@@ -206,7 +200,6 @@ HB_FUNC_STATIC( QUNDOGROUP_REMOVESTACK )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QList<QUndoStack *> stacks () const
@@ -251,7 +244,6 @@ HB_FUNC_STATIC( QUNDOGROUP_STACKS )
   }
 }
 
-
 /*
 QString undoText () const
 */
@@ -263,7 +255,6 @@ HB_FUNC_STATIC( QUNDOGROUP_UNDOTEXT )
     RQSTRING( obj->undoText () );
   }
 }
-
 
 /*
 void redo ()
@@ -277,7 +268,6 @@ HB_FUNC_STATIC( QUNDOGROUP_REDO )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setActiveStack ( QUndoStack * stack )
@@ -293,7 +283,6 @@ HB_FUNC_STATIC( QUNDOGROUP_SETACTIVESTACK )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void undo ()
 */
@@ -306,9 +295,5 @@ HB_FUNC_STATIC( QUNDOGROUP_UNDO )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

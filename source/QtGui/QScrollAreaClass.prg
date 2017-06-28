@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -30,6 +30,7 @@ CLASS QScrollArea INHERIT QAbstractScrollArea
    METHOD widgetResizable
    METHOD focusNextPrevChild
    METHOD sizeHint
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -57,10 +58,10 @@ HB_FUNC_STATIC( QSCROLLAREA_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QSCROLLAREA_DELETE )
 {
   QScrollArea * obj = (QScrollArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -70,9 +71,9 @@ HB_FUNC_STATIC( QSCROLLAREA_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 Qt::Alignment alignment () const
@@ -85,7 +86,6 @@ HB_FUNC_STATIC( QSCROLLAREA_ALIGNMENT )
     hb_retni( (int) obj->alignment () );
   }
 }
-
 
 /*
 void ensureVisible ( int x, int y, int xmargin = 50, int ymargin = 50 )
@@ -100,7 +100,6 @@ HB_FUNC_STATIC( QSCROLLAREA_ENSUREVISIBLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void ensureWidgetVisible ( QWidget * childWidget, int xmargin = 50, int ymargin = 50 )
 */
@@ -113,7 +112,6 @@ HB_FUNC_STATIC( QSCROLLAREA_ENSUREWIDGETVISIBLE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setAlignment ( Qt::Alignment )
@@ -129,7 +127,6 @@ HB_FUNC_STATIC( QSCROLLAREA_SETALIGNMENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setWidget ( QWidget * widget )
 */
@@ -142,7 +139,6 @@ HB_FUNC_STATIC( QSCROLLAREA_SETWIDGET )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setWidgetResizable ( bool resizable )
@@ -157,7 +153,6 @@ HB_FUNC_STATIC( QSCROLLAREA_SETWIDGETRESIZABLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QWidget * takeWidget ()
 */
@@ -170,7 +165,6 @@ HB_FUNC_STATIC( QSCROLLAREA_TAKEWIDGET )
     _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
-
 
 /*
 QWidget * widget () const
@@ -185,7 +179,6 @@ HB_FUNC_STATIC( QSCROLLAREA_WIDGET )
   }
 }
 
-
 /*
 bool widgetResizable () const
 */
@@ -197,7 +190,6 @@ HB_FUNC_STATIC( QSCROLLAREA_WIDGETRESIZABLE )
     RBOOL( obj->widgetResizable () );
   }
 }
-
 
 /*
 virtual bool focusNextPrevChild ( bool next )
@@ -211,7 +203,6 @@ HB_FUNC_STATIC( QSCROLLAREA_FOCUSNEXTPREVCHILD )
   }
 }
 
-
 /*
 virtual QSize sizeHint () const
 */
@@ -224,8 +215,5 @@ HB_FUNC_STATIC( QSCROLLAREA_SIZEHINT )
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
-
-
-
 
 #pragma ENDDUMP

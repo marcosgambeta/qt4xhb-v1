@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -27,11 +27,13 @@ CLASS QColormap
    METHOD pixel
    METHOD size
    METHOD instance
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -61,10 +63,10 @@ HB_FUNC_STATIC( QCOLORMAP_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QCOLORMAP_DELETE )
 {
   QColormap * obj = (QColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -74,9 +76,9 @@ HB_FUNC_STATIC( QCOLORMAP_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 const QColor colorAt ( uint pixel ) const
@@ -90,7 +92,6 @@ HB_FUNC_STATIC( QCOLORMAP_COLORAT )
     _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }
-
 
 /*
 const QVector<QColor> colormap () const
@@ -135,7 +136,6 @@ HB_FUNC_STATIC( QCOLORMAP_COLORMAP )
   }
 }
 
-
 /*
 int depth () const
 */
@@ -148,7 +148,6 @@ HB_FUNC_STATIC( QCOLORMAP_DEPTH )
   }
 }
 
-
 /*
 Mode mode () const
 */
@@ -160,7 +159,6 @@ HB_FUNC_STATIC( QCOLORMAP_MODE )
     hb_retni( (int) obj->mode () );
   }
 }
-
 
 /*
 uint pixel ( const QColor & color ) const
@@ -175,7 +173,6 @@ HB_FUNC_STATIC( QCOLORMAP_PIXEL )
   }
 }
 
-
 /*
 int size () const
 */
@@ -188,9 +185,6 @@ HB_FUNC_STATIC( QCOLORMAP_SIZE )
   }
 }
 
-
-
-
 /*
 QColormap instance ( int screen = -1 )
 */
@@ -199,7 +193,6 @@ HB_FUNC_STATIC( QCOLORMAP_INSTANCE )
   QColormap * ptr = new QColormap( QColormap::instance ( OPINT(1,-1) ) );
   _qt4xhb_createReturnClass ( ptr, "QCOLORMAP" );
 }
-
 
 HB_FUNC_STATIC( QCOLORMAP_NEWFROM )
 {
@@ -255,6 +248,5 @@ HB_FUNC_STATIC( QCOLORMAP_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

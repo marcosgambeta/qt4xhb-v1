@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -29,11 +29,13 @@ CLASS QDecoration
    METHOD regionDoubleClicked
    METHOD startMove
    METHOD startResize
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -52,10 +54,10 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
 HB_FUNC_STATIC( QDECORATION_DELETE )
 {
   QDecoration * obj = (QDecoration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -65,9 +67,9 @@ HB_FUNC_STATIC( QDECORATION_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void buildSysMenu ( QWidget * widget, QMenu * menu )
@@ -82,7 +84,6 @@ HB_FUNC_STATIC( QDECORATION_BUILDSYSMENU )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void menuTriggered ( QWidget * widget, QAction * action )
 */
@@ -95,7 +96,6 @@ HB_FUNC_STATIC( QDECORATION_MENUTRIGGERED )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual bool paint ( QPainter * painter, const QWidget * widget, int decorationRegion = All, DecorationState state = Normal ) = 0
@@ -111,7 +111,6 @@ HB_FUNC_STATIC( QDECORATION_PAINT )
   }
 }
 
-
 /*
 virtual QRegion region ( const QWidget * widget, const QRect & rectangle, int decorationRegion = All ) = 0
 */
@@ -126,7 +125,6 @@ HB_FUNC_STATIC( QDECORATION_REGION1 )
   }
 }
 
-
 /*
 QRegion region ( const QWidget * widget, int decorationRegion = All )
 */
@@ -140,7 +138,6 @@ HB_FUNC_STATIC( QDECORATION_REGION2 )
     _qt4xhb_createReturnClass ( ptr, "QREGION", true );
   }
 }
-
 
 //[1]virtual QRegion region ( const QWidget * widget, const QRect & rectangle, int decorationRegion = All ) = 0
 //[2]QRegion region ( const QWidget * widget, int decorationRegion = All )
@@ -170,7 +167,6 @@ HB_FUNC_STATIC( QDECORATION_REGIONAT )
   }
 }
 
-
 /*
 virtual void regionClicked ( QWidget * widget, int region )
 */
@@ -184,7 +180,6 @@ HB_FUNC_STATIC( QDECORATION_REGIONCLICKED )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void regionDoubleClicked ( QWidget * widget, int region )
@@ -200,8 +195,6 @@ HB_FUNC_STATIC( QDECORATION_REGIONDOUBLECLICKED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 void startMove ( QWidget * widget )
 */
@@ -211,7 +204,6 @@ HB_FUNC_STATIC( QDECORATION_STARTMOVE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void startResize ( QWidget * widget )
 */
@@ -220,7 +212,6 @@ HB_FUNC_STATIC( QDECORATION_STARTRESIZE )
   QDecoration::startResize ( PQWIDGET(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QDECORATION_NEWFROM )
 {
@@ -276,6 +267,5 @@ HB_FUNC_STATIC( QDECORATION_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

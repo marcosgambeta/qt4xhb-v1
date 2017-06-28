@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -34,9 +34,11 @@ CLASS QGraphicsDropShadowEffect INHERIT QGraphicsEffect
    METHOD setOffset
    METHOD setXOffset
    METHOD setYOffset
+
    METHOD onBlurRadiusChanged
    METHOD onColorChanged
    METHOD onOffsetChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -64,10 +66,10 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_DELETE )
 {
   QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -77,9 +79,9 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 qreal blurRadius () const
@@ -92,7 +94,6 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_BLURRADIUS )
     RQREAL( obj->blurRadius () );
   }
 }
-
 
 /*
 QColor color () const
@@ -107,7 +108,6 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_COLOR )
   }
 }
 
-
 /*
 QPointF offset () const
 */
@@ -121,7 +121,6 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_OFFSET )
   }
 }
 
-
 /*
 qreal xOffset () const
 */
@@ -134,7 +133,6 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_XOFFSET )
   }
 }
 
-
 /*
 qreal yOffset () const
 */
@@ -146,7 +144,6 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_YOFFSET )
     RQREAL( obj->yOffset () );
   }
 }
-
 
 /*
 virtual QRectF boundingRectFor ( const QRectF & rect ) const
@@ -161,7 +158,6 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_BOUNDINGRECTFOR )
   }
 }
 
-
 /*
 void setBlurRadius ( qreal blurRadius )
 */
@@ -174,7 +170,6 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETBLURRADIUS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setColor ( const QColor & color )
@@ -190,7 +185,6 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETCOLOR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setOffset ( const QPointF & ofs )
 */
@@ -203,7 +197,6 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET1 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setOffset ( qreal dx, qreal dy )
@@ -218,7 +211,6 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setOffset ( qreal d )
 */
@@ -231,7 +223,6 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET3 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setOffset ( const QPointF & ofs )
 //[2]void setOffset ( qreal dx, qreal dy )
@@ -266,7 +257,6 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETXOFFSET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setYOffset ( qreal dy )
 */
@@ -279,10 +269,5 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETYOFFSET )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
-
 
 #pragma ENDDUMP

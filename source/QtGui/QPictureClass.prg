@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -34,6 +34,7 @@ CLASS QPicture INHERIT QPaintDevice
    METHOD setData
    METHOD size
    METHOD swap
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -61,7 +62,6 @@ HB_FUNC_STATIC( QPICTURE_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QPicture ( const QPicture & pic )
 */
@@ -70,7 +70,6 @@ HB_FUNC_STATIC( QPICTURE_NEW2 )
   QPicture * o = new QPicture ( *PQPICTURE(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QPicture ( int formatVersion = -1 )
 //[2]QPicture ( const QPicture & pic )
@@ -94,6 +93,7 @@ HB_FUNC_STATIC( QPICTURE_NEW )
 HB_FUNC_STATIC( QPICTURE_DELETE )
 {
   QPicture * obj = (QPicture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -103,9 +103,9 @@ HB_FUNC_STATIC( QPICTURE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QRect boundingRect () const
@@ -120,7 +120,6 @@ HB_FUNC_STATIC( QPICTURE_BOUNDINGRECT )
   }
 }
 
-
 /*
 const char * data () const
 */
@@ -134,7 +133,6 @@ HB_FUNC_STATIC( QPICTURE_DATA )
   }
 }
 
-
 /*
 bool isNull () const
 */
@@ -146,7 +144,6 @@ HB_FUNC_STATIC( QPICTURE_ISNULL )
     RBOOL( obj->isNull () );
   }
 }
-
 
 /*
 bool load ( const QString & fileName, const char * format = 0 )
@@ -160,7 +157,6 @@ HB_FUNC_STATIC( QPICTURE_LOAD1 )
   }
 }
 
-
 /*
 bool load ( QIODevice * dev, const char * format = 0 )
 */
@@ -172,7 +168,6 @@ HB_FUNC_STATIC( QPICTURE_LOAD2 )
     RBOOL( obj->load ( PQIODEVICE(1), (const char *) ISNIL(2)? 0 : hb_parc(2) ) );
   }
 }
-
 
 //[1]bool load ( const QString & fileName, const char * format = 0 )
 //[2]bool load ( QIODevice * dev, const char * format = 0 )
@@ -201,7 +196,6 @@ HB_FUNC_STATIC( QPICTURE_PLAY )
   }
 }
 
-
 /*
 bool save ( const QString & fileName, const char * format = 0 )
 */
@@ -214,7 +208,6 @@ HB_FUNC_STATIC( QPICTURE_SAVE1 )
   }
 }
 
-
 /*
 bool save ( QIODevice * dev, const char * format = 0 )
 */
@@ -226,7 +219,6 @@ HB_FUNC_STATIC( QPICTURE_SAVE2 )
     RBOOL( obj->save ( PQIODEVICE(1), (const char *) ISNIL(2)? 0 : hb_parc(2) ) );
   }
 }
-
 
 //[1]bool save ( const QString & fileName, const char * format = 0 )
 //[2]bool save ( QIODevice * dev, const char * format = 0 )
@@ -256,7 +248,6 @@ HB_FUNC_STATIC( QPICTURE_SETBOUNDINGRECT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void setData ( const char * data, uint size )
 */
@@ -270,7 +261,6 @@ HB_FUNC_STATIC( QPICTURE_SETDATA )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 uint size () const
 */
@@ -282,7 +272,6 @@ HB_FUNC_STATIC( QPICTURE_SIZE )
     hb_retni( (uint) obj->size () );
   }
 }
-
 
 /*
 void swap ( QPicture & other )
@@ -298,10 +287,6 @@ HB_FUNC_STATIC( QPICTURE_SWAP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 // QPicture & operator= ( const QPicture & p )
-
-
-
 
 #pragma ENDDUMP

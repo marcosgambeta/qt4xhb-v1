@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QWindowsVistaStyle INHERIT QWindowsXPStyle
 
@@ -15,6 +14,7 @@ CLASS QWindowsVistaStyle INHERIT QWindowsXPStyle
 
    METHOD new
    METHOD delete
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -42,10 +42,10 @@ HB_FUNC_STATIC( QWINDOWSVISTASTYLE_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QWINDOWSVISTASTYLE_DELETE )
 {
   QWindowsVistaStyle * obj = (QWindowsVistaStyle *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -55,12 +55,8 @@ HB_FUNC_STATIC( QWINDOWSVISTASTYLE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
-
 
 #pragma ENDDUMP

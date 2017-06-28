@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -52,7 +52,9 @@ CLASS QListView INHERIT QAbstractItemView
    METHOD indexAt
    METHOD scrollTo
    METHOD visualRect
+
    METHOD onIndexesMoved
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -80,10 +82,10 @@ HB_FUNC_STATIC( QLISTVIEW_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QLISTVIEW_DELETE )
 {
   QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -93,9 +95,9 @@ HB_FUNC_STATIC( QLISTVIEW_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 int batchSize () const
@@ -108,7 +110,6 @@ HB_FUNC_STATIC( QLISTVIEW_BATCHSIZE )
     RINT( obj->batchSize () );
   }
 }
-
 
 /*
 void clearPropertyFlags ()
@@ -123,7 +124,6 @@ HB_FUNC_STATIC( QLISTVIEW_CLEARPROPERTYFLAGS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 Flow flow () const
 */
@@ -135,7 +135,6 @@ HB_FUNC_STATIC( QLISTVIEW_FLOW )
     hb_retni( (int) obj->flow () );
   }
 }
-
 
 /*
 QSize gridSize () const
@@ -150,7 +149,6 @@ HB_FUNC_STATIC( QLISTVIEW_GRIDSIZE )
   }
 }
 
-
 /*
 bool isRowHidden ( int row ) const
 */
@@ -162,7 +160,6 @@ HB_FUNC_STATIC( QLISTVIEW_ISROWHIDDEN )
     RBOOL( obj->isRowHidden ( PINT(1) ) );
   }
 }
-
 
 /*
 bool isSelectionRectVisible () const
@@ -176,7 +173,6 @@ HB_FUNC_STATIC( QLISTVIEW_ISSELECTIONRECTVISIBLE )
   }
 }
 
-
 /*
 bool isWrapping () const
 */
@@ -188,7 +184,6 @@ HB_FUNC_STATIC( QLISTVIEW_ISWRAPPING )
     RBOOL( obj->isWrapping () );
   }
 }
-
 
 /*
 LayoutMode layoutMode () const
@@ -202,7 +197,6 @@ HB_FUNC_STATIC( QLISTVIEW_LAYOUTMODE )
   }
 }
 
-
 /*
 int modelColumn () const
 */
@@ -214,7 +208,6 @@ HB_FUNC_STATIC( QLISTVIEW_MODELCOLUMN )
     RINT( obj->modelColumn () );
   }
 }
-
 
 /*
 Movement movement () const
@@ -228,7 +221,6 @@ HB_FUNC_STATIC( QLISTVIEW_MOVEMENT )
   }
 }
 
-
 /*
 ResizeMode resizeMode () const
 */
@@ -240,7 +232,6 @@ HB_FUNC_STATIC( QLISTVIEW_RESIZEMODE )
     hb_retni( (int) obj->resizeMode () );
   }
 }
-
 
 /*
 void setBatchSize ( int batchSize )
@@ -254,7 +245,6 @@ HB_FUNC_STATIC( QLISTVIEW_SETBATCHSIZE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setFlow ( Flow flow )
@@ -270,7 +260,6 @@ HB_FUNC_STATIC( QLISTVIEW_SETFLOW )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setGridSize ( const QSize & size )
 */
@@ -283,7 +272,6 @@ HB_FUNC_STATIC( QLISTVIEW_SETGRIDSIZE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setLayoutMode ( LayoutMode mode )
@@ -299,7 +287,6 @@ HB_FUNC_STATIC( QLISTVIEW_SETLAYOUTMODE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setModelColumn ( int column )
 */
@@ -312,7 +299,6 @@ HB_FUNC_STATIC( QLISTVIEW_SETMODELCOLUMN )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setMovement ( Movement movement )
@@ -328,7 +314,6 @@ HB_FUNC_STATIC( QLISTVIEW_SETMOVEMENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setResizeMode ( ResizeMode mode )
 */
@@ -343,7 +328,6 @@ HB_FUNC_STATIC( QLISTVIEW_SETRESIZEMODE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setRowHidden ( int row, bool hide )
 */
@@ -356,7 +340,6 @@ HB_FUNC_STATIC( QLISTVIEW_SETROWHIDDEN )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setSelectionRectVisible ( bool show )
@@ -371,7 +354,6 @@ HB_FUNC_STATIC( QLISTVIEW_SETSELECTIONRECTVISIBLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setSpacing ( int space )
 */
@@ -385,7 +367,6 @@ HB_FUNC_STATIC( QLISTVIEW_SETSPACING )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setUniformItemSizes ( bool enable )
 */
@@ -398,7 +379,6 @@ HB_FUNC_STATIC( QLISTVIEW_SETUNIFORMITEMSIZES )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setViewMode ( ViewMode mode )
@@ -414,7 +394,6 @@ HB_FUNC_STATIC( QLISTVIEW_SETVIEWMODE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setWordWrap ( bool on )
 */
@@ -427,7 +406,6 @@ HB_FUNC_STATIC( QLISTVIEW_SETWORDWRAP )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setWrapping ( bool enable )
@@ -442,7 +420,6 @@ HB_FUNC_STATIC( QLISTVIEW_SETWRAPPING )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int spacing () const
 */
@@ -454,7 +431,6 @@ HB_FUNC_STATIC( QLISTVIEW_SPACING )
     RINT( obj->spacing () );
   }
 }
-
 
 /*
 bool uniformItemSizes () const
@@ -468,7 +444,6 @@ HB_FUNC_STATIC( QLISTVIEW_UNIFORMITEMSIZES )
   }
 }
 
-
 /*
 ViewMode viewMode () const
 */
@@ -480,7 +455,6 @@ HB_FUNC_STATIC( QLISTVIEW_VIEWMODE )
     hb_retni( (int) obj->viewMode () );
   }
 }
-
 
 /*
 bool wordWrap () const
@@ -494,7 +468,6 @@ HB_FUNC_STATIC( QLISTVIEW_WORDWRAP )
   }
 }
 
-
 /*
 virtual QModelIndex indexAt ( const QPoint & p ) const
 */
@@ -507,7 +480,6 @@ HB_FUNC_STATIC( QLISTVIEW_INDEXAT )
     _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
-
 
 /*
 virtual void scrollTo ( const QModelIndex & index, ScrollHint hint = EnsureVisible )
@@ -523,7 +495,6 @@ HB_FUNC_STATIC( QLISTVIEW_SCROLLTO )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QRect visualRect ( const QModelIndex & index ) const
 */
@@ -536,9 +507,5 @@ HB_FUNC_STATIC( QLISTVIEW_VISUALRECT )
     _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
-
-
-
-
 
 #pragma ENDDUMP

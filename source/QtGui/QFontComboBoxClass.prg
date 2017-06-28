@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -26,7 +26,9 @@ CLASS QFontComboBox INHERIT QComboBox
    METHOD writingSystem
    METHOD sizeHint
    METHOD setCurrentFont
+
    METHOD onCurrentFontChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -54,10 +56,10 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QFONTCOMBOBOX_DELETE )
 {
   QFontComboBox * obj = (QFontComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -67,9 +69,9 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QFont currentFont () const
@@ -84,7 +86,6 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_CURRENTFONT )
   }
 }
 
-
 /*
 FontFilters fontFilters () const
 */
@@ -96,7 +97,6 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_FONTFILTERS )
     hb_retni( (int) obj->fontFilters () );
   }
 }
-
 
 /*
 void setFontFilters ( FontFilters filters )
@@ -112,7 +112,6 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_SETFONTFILTERS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setWritingSystem ( QFontDatabase::WritingSystem script )
 */
@@ -127,7 +126,6 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_SETWRITINGSYSTEM )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QFontDatabase::WritingSystem writingSystem () const
 */
@@ -139,7 +137,6 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_WRITINGSYSTEM )
     hb_retni( (int) obj->writingSystem () );
   }
 }
-
 
 /*
 virtual QSize sizeHint () const
@@ -154,7 +151,6 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_SIZEHINT )
   }
 }
 
-
 /*
 void setCurrentFont ( const QFont & font )
 */
@@ -167,9 +163,5 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_SETCURRENTFONT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -53,11 +53,13 @@ CLASS QTextBlock
    METHOD textList
    METHOD userData
    METHOD userState
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -85,10 +87,10 @@ HB_FUNC_STATIC( QTEXTBLOCK_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QTEXTBLOCK_DELETE )
 {
   QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -98,10 +100,9 @@ HB_FUNC_STATIC( QTEXTBLOCK_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
 
 /*
 QTextBlockFormat blockFormat () const
@@ -116,7 +117,6 @@ HB_FUNC_STATIC( QTEXTBLOCK_BLOCKFORMAT )
   }
 }
 
-
 /*
 int blockFormatIndex () const
 */
@@ -129,7 +129,6 @@ HB_FUNC_STATIC( QTEXTBLOCK_BLOCKFORMATINDEX )
   }
 }
 
-
 /*
 int blockNumber () const
 */
@@ -141,7 +140,6 @@ HB_FUNC_STATIC( QTEXTBLOCK_BLOCKNUMBER )
     RINT( obj->blockNumber () );
   }
 }
-
 
 /*
 QTextCharFormat charFormat () const
@@ -156,7 +154,6 @@ HB_FUNC_STATIC( QTEXTBLOCK_CHARFORMAT )
   }
 }
 
-
 /*
 int charFormatIndex () const
 */
@@ -168,7 +165,6 @@ HB_FUNC_STATIC( QTEXTBLOCK_CHARFORMATINDEX )
     RINT( obj->charFormatIndex () );
   }
 }
-
 
 /*
 void clearLayout ()
@@ -183,7 +179,6 @@ HB_FUNC_STATIC( QTEXTBLOCK_CLEARLAYOUT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool contains ( int position ) const
 */
@@ -195,7 +190,6 @@ HB_FUNC_STATIC( QTEXTBLOCK_CONTAINS )
     RBOOL( obj->contains ( PINT(1) ) );
   }
 }
-
 
 /*
 const QTextDocument * document () const
@@ -210,8 +204,6 @@ HB_FUNC_STATIC( QTEXTBLOCK_DOCUMENT )
   }
 }
 
-
-
 /*
 int firstLineNumber () const
 */
@@ -223,7 +215,6 @@ HB_FUNC_STATIC( QTEXTBLOCK_FIRSTLINENUMBER )
     RINT( obj->firstLineNumber () );
   }
 }
-
 
 /*
 bool isValid () const
@@ -237,7 +228,6 @@ HB_FUNC_STATIC( QTEXTBLOCK_ISVALID )
   }
 }
 
-
 /*
 bool isVisible () const
 */
@@ -249,7 +239,6 @@ HB_FUNC_STATIC( QTEXTBLOCK_ISVISIBLE )
     RBOOL( obj->isVisible () );
   }
 }
-
 
 /*
 QTextLayout * layout () const
@@ -264,7 +253,6 @@ HB_FUNC_STATIC( QTEXTBLOCK_LAYOUT )
   }
 }
 
-
 /*
 int length () const
 */
@@ -277,7 +265,6 @@ HB_FUNC_STATIC( QTEXTBLOCK_LENGTH )
   }
 }
 
-
 /*
 int lineCount () const
 */
@@ -289,7 +276,6 @@ HB_FUNC_STATIC( QTEXTBLOCK_LINECOUNT )
     RINT( obj->lineCount () );
   }
 }
-
 
 /*
 QTextBlock next () const
@@ -304,7 +290,6 @@ HB_FUNC_STATIC( QTEXTBLOCK_NEXT )
   }
 }
 
-
 /*
 int position () const
 */
@@ -316,7 +301,6 @@ HB_FUNC_STATIC( QTEXTBLOCK_POSITION )
     RINT( obj->position () );
   }
 }
-
 
 /*
 QTextBlock previous () const
@@ -331,7 +315,6 @@ HB_FUNC_STATIC( QTEXTBLOCK_PREVIOUS )
   }
 }
 
-
 /*
 int revision () const
 */
@@ -343,7 +326,6 @@ HB_FUNC_STATIC( QTEXTBLOCK_REVISION )
     RINT( obj->revision () );
   }
 }
-
 
 /*
 void setLineCount ( int count )
@@ -358,7 +340,6 @@ HB_FUNC_STATIC( QTEXTBLOCK_SETLINECOUNT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setRevision ( int rev )
 */
@@ -371,7 +352,6 @@ HB_FUNC_STATIC( QTEXTBLOCK_SETREVISION )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setUserData ( QTextBlockUserData * data )
@@ -387,7 +367,6 @@ HB_FUNC_STATIC( QTEXTBLOCK_SETUSERDATA )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setUserState ( int state )
 */
@@ -400,7 +379,6 @@ HB_FUNC_STATIC( QTEXTBLOCK_SETUSERSTATE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setVisible ( bool visible )
@@ -415,7 +393,6 @@ HB_FUNC_STATIC( QTEXTBLOCK_SETVISIBLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString text () const
 */
@@ -428,7 +405,6 @@ HB_FUNC_STATIC( QTEXTBLOCK_TEXT )
   }
 }
 
-
 /*
 Qt::LayoutDirection textDirection () const
 */
@@ -440,7 +416,6 @@ HB_FUNC_STATIC( QTEXTBLOCK_TEXTDIRECTION )
     hb_retni( (int) obj->textDirection () );
   }
 }
-
 
 /*
 QTextList * textList () const
@@ -455,7 +430,6 @@ HB_FUNC_STATIC( QTEXTBLOCK_TEXTLIST )
   }
 }
 
-
 /*
 QTextBlockUserData * userData () const
 */
@@ -469,7 +443,6 @@ HB_FUNC_STATIC( QTEXTBLOCK_USERDATA )
   }
 }
 
-
 /*
 int userState () const
 */
@@ -481,7 +454,6 @@ HB_FUNC_STATIC( QTEXTBLOCK_USERSTATE )
     RINT( obj->userState () );
   }
 }
-
 
 HB_FUNC_STATIC( QTEXTBLOCK_NEWFROM )
 {
@@ -537,6 +509,5 @@ HB_FUNC_STATIC( QTEXTBLOCK_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

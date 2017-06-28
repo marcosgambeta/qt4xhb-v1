@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -64,6 +64,7 @@ CLASS QTableView INHERIT QAbstractItemView
    METHOD setShowGrid
    METHOD showColumn
    METHOD showRow
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -91,10 +92,10 @@ HB_FUNC_STATIC( QTABLEVIEW_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QTABLEVIEW_DELETE )
 {
   QTableView * obj = (QTableView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -104,9 +105,9 @@ HB_FUNC_STATIC( QTABLEVIEW_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void clearSpans ()
@@ -121,7 +122,6 @@ HB_FUNC_STATIC( QTABLEVIEW_CLEARSPANS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int columnAt ( int x ) const
 */
@@ -133,7 +133,6 @@ HB_FUNC_STATIC( QTABLEVIEW_COLUMNAT )
     RINT( obj->columnAt ( PINT(1) ) );
   }
 }
-
 
 /*
 int columnSpan ( int row, int column ) const
@@ -147,7 +146,6 @@ HB_FUNC_STATIC( QTABLEVIEW_COLUMNSPAN )
   }
 }
 
-
 /*
 int columnViewportPosition ( int column ) const
 */
@@ -159,7 +157,6 @@ HB_FUNC_STATIC( QTABLEVIEW_COLUMNVIEWPORTPOSITION )
     RINT( obj->columnViewportPosition ( PINT(1) ) );
   }
 }
-
 
 /*
 int columnWidth ( int column ) const
@@ -173,7 +170,6 @@ HB_FUNC_STATIC( QTABLEVIEW_COLUMNWIDTH )
   }
 }
 
-
 /*
 Qt::PenStyle gridStyle () const
 */
@@ -185,7 +181,6 @@ HB_FUNC_STATIC( QTABLEVIEW_GRIDSTYLE )
     hb_retni( (int) obj->gridStyle () );
   }
 }
-
 
 /*
 QHeaderView * horizontalHeader () const
@@ -200,7 +195,6 @@ HB_FUNC_STATIC( QTABLEVIEW_HORIZONTALHEADER )
   }
 }
 
-
 /*
 bool isColumnHidden ( int column ) const
 */
@@ -212,7 +206,6 @@ HB_FUNC_STATIC( QTABLEVIEW_ISCOLUMNHIDDEN )
     RBOOL( obj->isColumnHidden ( PINT(1) ) );
   }
 }
-
 
 /*
 bool isCornerButtonEnabled () const
@@ -226,7 +219,6 @@ HB_FUNC_STATIC( QTABLEVIEW_ISCORNERBUTTONENABLED )
   }
 }
 
-
 /*
 bool isRowHidden ( int row ) const
 */
@@ -238,7 +230,6 @@ HB_FUNC_STATIC( QTABLEVIEW_ISROWHIDDEN )
     RBOOL( obj->isRowHidden ( PINT(1) ) );
   }
 }
-
 
 /*
 bool isSortingEnabled () const
@@ -252,7 +243,6 @@ HB_FUNC_STATIC( QTABLEVIEW_ISSORTINGENABLED )
   }
 }
 
-
 /*
 int rowAt ( int y ) const
 */
@@ -264,7 +254,6 @@ HB_FUNC_STATIC( QTABLEVIEW_ROWAT )
     RINT( obj->rowAt ( PINT(1) ) );
   }
 }
-
 
 /*
 int rowHeight ( int row ) const
@@ -278,7 +267,6 @@ HB_FUNC_STATIC( QTABLEVIEW_ROWHEIGHT )
   }
 }
 
-
 /*
 int rowSpan ( int row, int column ) const
 */
@@ -291,7 +279,6 @@ HB_FUNC_STATIC( QTABLEVIEW_ROWSPAN )
   }
 }
 
-
 /*
 int rowViewportPosition ( int row ) const
 */
@@ -303,7 +290,6 @@ HB_FUNC_STATIC( QTABLEVIEW_ROWVIEWPORTPOSITION )
     RINT( obj->rowViewportPosition ( PINT(1) ) );
   }
 }
-
 
 /*
 void setColumnHidden ( int column, bool hide )
@@ -318,7 +304,6 @@ HB_FUNC_STATIC( QTABLEVIEW_SETCOLUMNHIDDEN )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setColumnWidth ( int column, int width )
 */
@@ -332,7 +317,6 @@ HB_FUNC_STATIC( QTABLEVIEW_SETCOLUMNWIDTH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setCornerButtonEnabled ( bool enable )
 */
@@ -345,7 +329,6 @@ HB_FUNC_STATIC( QTABLEVIEW_SETCORNERBUTTONENABLED )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setGridStyle ( Qt::PenStyle style )
@@ -361,7 +344,6 @@ HB_FUNC_STATIC( QTABLEVIEW_SETGRIDSTYLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setHorizontalHeader ( QHeaderView * header )
 */
@@ -376,7 +358,6 @@ HB_FUNC_STATIC( QTABLEVIEW_SETHORIZONTALHEADER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setRowHeight ( int row, int height )
 */
@@ -389,7 +370,6 @@ HB_FUNC_STATIC( QTABLEVIEW_SETROWHEIGHT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setRowHidden ( int row, bool hide )
@@ -404,7 +384,6 @@ HB_FUNC_STATIC( QTABLEVIEW_SETROWHIDDEN )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setSortingEnabled ( bool enable )
 */
@@ -418,7 +397,6 @@ HB_FUNC_STATIC( QTABLEVIEW_SETSORTINGENABLED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setSpan ( int row, int column, int rowSpanCount, int columnSpanCount )
 */
@@ -431,7 +409,6 @@ HB_FUNC_STATIC( QTABLEVIEW_SETSPAN )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setVerticalHeader ( QHeaderView * header )
@@ -447,7 +424,6 @@ HB_FUNC_STATIC( QTABLEVIEW_SETVERTICALHEADER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setWordWrap ( bool on )
 */
@@ -461,7 +437,6 @@ HB_FUNC_STATIC( QTABLEVIEW_SETWORDWRAP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool showGrid () const
 */
@@ -473,7 +448,6 @@ HB_FUNC_STATIC( QTABLEVIEW_SHOWGRID )
     RBOOL( obj->showGrid () );
   }
 }
-
 
 /*
 void sortByColumn ( int column, Qt::SortOrder order )
@@ -489,7 +463,6 @@ HB_FUNC_STATIC( QTABLEVIEW_SORTBYCOLUMN )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QHeaderView * verticalHeader () const
 */
@@ -503,7 +476,6 @@ HB_FUNC_STATIC( QTABLEVIEW_VERTICALHEADER )
   }
 }
 
-
 /*
 bool wordWrap () const
 */
@@ -515,7 +487,6 @@ HB_FUNC_STATIC( QTABLEVIEW_WORDWRAP )
     RBOOL( obj->wordWrap () );
   }
 }
-
 
 /*
 virtual QModelIndex indexAt ( const QPoint & pos ) const
@@ -529,7 +500,6 @@ HB_FUNC_STATIC( QTABLEVIEW_INDEXAT )
     _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
-
 
 /*
 virtual void setModel ( QAbstractItemModel * model )
@@ -545,7 +515,6 @@ HB_FUNC_STATIC( QTABLEVIEW_SETMODEL )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void setRootIndex ( const QModelIndex & index )
 */
@@ -558,7 +527,6 @@ HB_FUNC_STATIC( QTABLEVIEW_SETROOTINDEX )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void setSelectionModel ( QItemSelectionModel * selectionModel )
@@ -574,7 +542,6 @@ HB_FUNC_STATIC( QTABLEVIEW_SETSELECTIONMODEL )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void hideColumn ( int column )
 */
@@ -587,7 +554,6 @@ HB_FUNC_STATIC( QTABLEVIEW_HIDECOLUMN )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void hideRow ( int row )
@@ -602,7 +568,6 @@ HB_FUNC_STATIC( QTABLEVIEW_HIDEROW )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void resizeColumnToContents ( int column )
 */
@@ -615,7 +580,6 @@ HB_FUNC_STATIC( QTABLEVIEW_RESIZECOLUMNTOCONTENTS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void resizeColumnsToContents ()
@@ -630,7 +594,6 @@ HB_FUNC_STATIC( QTABLEVIEW_RESIZECOLUMNSTOCONTENTS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void resizeRowToContents ( int row )
 */
@@ -643,7 +606,6 @@ HB_FUNC_STATIC( QTABLEVIEW_RESIZEROWTOCONTENTS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void resizeRowsToContents ()
@@ -658,7 +620,6 @@ HB_FUNC_STATIC( QTABLEVIEW_RESIZEROWSTOCONTENTS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void selectColumn ( int column )
 */
@@ -671,7 +632,6 @@ HB_FUNC_STATIC( QTABLEVIEW_SELECTCOLUMN )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void selectRow ( int row )
@@ -686,7 +646,6 @@ HB_FUNC_STATIC( QTABLEVIEW_SELECTROW )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setShowGrid ( bool show )
 */
@@ -699,7 +658,6 @@ HB_FUNC_STATIC( QTABLEVIEW_SETSHOWGRID )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void showColumn ( int column )
@@ -714,7 +672,6 @@ HB_FUNC_STATIC( QTABLEVIEW_SHOWCOLUMN )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void showRow ( int row )
 */
@@ -727,8 +684,5 @@ HB_FUNC_STATIC( QTABLEVIEW_SHOWROW )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
 
 #pragma ENDDUMP

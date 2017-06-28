@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -52,11 +52,13 @@ CLASS QFontMetricsF
    METHOD width2
    METHOD width
    METHOD xHeight
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -84,7 +86,6 @@ HB_FUNC_STATIC( QFONTMETRICSF_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QFontMetricsF ( const QFont & font, QPaintDevice * paintdevice )
 */
@@ -93,7 +94,6 @@ HB_FUNC_STATIC( QFONTMETRICSF_NEW2 )
   QFontMetricsF * o = new QFontMetricsF ( *PQFONT(1), PQPAINTDEVICE(2) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QFontMetricsF ( const QFontMetrics & fontMetrics )
@@ -104,7 +104,6 @@ HB_FUNC_STATIC( QFONTMETRICSF_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QFontMetricsF ( const QFontMetricsF & fm )
 */
@@ -113,7 +112,6 @@ HB_FUNC_STATIC( QFONTMETRICSF_NEW4 )
   QFontMetricsF * o = new QFontMetricsF ( *PQFONTMETRICSF(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QFontMetricsF ( const QFont & font )
 //[2]QFontMetricsF ( const QFont & font, QPaintDevice * paintdevice )
@@ -147,6 +145,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_NEW )
 HB_FUNC_STATIC( QFONTMETRICSF_DELETE )
 {
   QFontMetricsF * obj = (QFontMetricsF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -156,9 +155,9 @@ HB_FUNC_STATIC( QFONTMETRICSF_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 qreal ascent () const
@@ -172,7 +171,6 @@ HB_FUNC_STATIC( QFONTMETRICSF_ASCENT )
   }
 }
 
-
 /*
 qreal averageCharWidth () const
 */
@@ -184,7 +182,6 @@ HB_FUNC_STATIC( QFONTMETRICSF_AVERAGECHARWIDTH )
     RQREAL( obj->averageCharWidth () );
   }
 }
-
 
 /*
 QRectF boundingRect ( const QString & text ) const
@@ -199,7 +196,6 @@ HB_FUNC_STATIC( QFONTMETRICSF_BOUNDINGRECT1 )
   }
 }
 
-
 /*
 QRectF boundingRect ( QChar ch ) const
 */
@@ -213,7 +209,6 @@ HB_FUNC_STATIC( QFONTMETRICSF_BOUNDINGRECT2 )
     _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
-
 
 /*
 QRectF boundingRect ( const QRectF & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
@@ -230,7 +225,6 @@ HB_FUNC_STATIC( QFONTMETRICSF_BOUNDINGRECT3 )
     hb_storni( par5, 5 );
   }
 }
-
 
 //[1]QRectF boundingRect ( const QString & text ) const
 //[2]QRectF boundingRect ( QChar ch ) const
@@ -264,7 +258,6 @@ HB_FUNC_STATIC( QFONTMETRICSF_DESCENT )
   }
 }
 
-
 /*
 QString elidedText ( const QString & text, Qt::TextElideMode mode, qreal width, int flags = 0 ) const
 */
@@ -277,7 +270,6 @@ HB_FUNC_STATIC( QFONTMETRICSF_ELIDEDTEXT )
   }
 }
 
-
 /*
 qreal height () const
 */
@@ -289,7 +281,6 @@ HB_FUNC_STATIC( QFONTMETRICSF_HEIGHT )
     RQREAL( obj->height () );
   }
 }
-
 
 /*
 bool inFont ( QChar ch ) const
@@ -304,7 +295,6 @@ HB_FUNC_STATIC( QFONTMETRICSF_INFONT )
   }
 }
 
-
 /*
 bool inFontUcs4 ( uint ch ) const
 */
@@ -317,7 +307,6 @@ HB_FUNC_STATIC( QFONTMETRICSF_INFONTUCS4 )
   }
 }
 
-
 /*
 qreal leading () const
 */
@@ -329,7 +318,6 @@ HB_FUNC_STATIC( QFONTMETRICSF_LEADING )
     RQREAL( obj->leading () );
   }
 }
-
 
 /*
 qreal leftBearing ( QChar ch ) const
@@ -344,7 +332,6 @@ HB_FUNC_STATIC( QFONTMETRICSF_LEFTBEARING )
   }
 }
 
-
 /*
 qreal lineSpacing () const
 */
@@ -356,7 +343,6 @@ HB_FUNC_STATIC( QFONTMETRICSF_LINESPACING )
     RQREAL( obj->lineSpacing () );
   }
 }
-
 
 /*
 qreal lineWidth () const
@@ -370,7 +356,6 @@ HB_FUNC_STATIC( QFONTMETRICSF_LINEWIDTH )
   }
 }
 
-
 /*
 qreal maxWidth () const
 */
@@ -382,7 +367,6 @@ HB_FUNC_STATIC( QFONTMETRICSF_MAXWIDTH )
     RQREAL( obj->maxWidth () );
   }
 }
-
 
 /*
 qreal minLeftBearing () const
@@ -396,7 +380,6 @@ HB_FUNC_STATIC( QFONTMETRICSF_MINLEFTBEARING )
   }
 }
 
-
 /*
 qreal minRightBearing () const
 */
@@ -408,7 +391,6 @@ HB_FUNC_STATIC( QFONTMETRICSF_MINRIGHTBEARING )
     RQREAL( obj->minRightBearing () );
   }
 }
-
 
 /*
 qreal overlinePos () const
@@ -422,7 +404,6 @@ HB_FUNC_STATIC( QFONTMETRICSF_OVERLINEPOS )
   }
 }
 
-
 /*
 qreal rightBearing ( QChar ch ) const
 */
@@ -435,7 +416,6 @@ HB_FUNC_STATIC( QFONTMETRICSF_RIGHTBEARING )
     RQREAL( obj->rightBearing ( *par1 ) );
   }
 }
-
 
 /*
 QSizeF size ( int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
@@ -452,7 +432,6 @@ HB_FUNC_STATIC( QFONTMETRICSF_SIZE )
   }
 }
 
-
 /*
 qreal strikeOutPos () const
 */
@@ -464,7 +443,6 @@ HB_FUNC_STATIC( QFONTMETRICSF_STRIKEOUTPOS )
     RQREAL( obj->strikeOutPos () );
   }
 }
-
 
 /*
 QRectF tightBoundingRect ( const QString & text ) const
@@ -479,7 +457,6 @@ HB_FUNC_STATIC( QFONTMETRICSF_TIGHTBOUNDINGRECT )
   }
 }
 
-
 /*
 qreal underlinePos () const
 */
@@ -491,7 +468,6 @@ HB_FUNC_STATIC( QFONTMETRICSF_UNDERLINEPOS )
     RQREAL( obj->underlinePos () );
   }
 }
-
 
 /*
 qreal width ( const QString & text ) const
@@ -505,7 +481,6 @@ HB_FUNC_STATIC( QFONTMETRICSF_WIDTH1 )
   }
 }
 
-
 /*
 qreal width ( QChar ch ) const
 */
@@ -518,7 +493,6 @@ HB_FUNC_STATIC( QFONTMETRICSF_WIDTH2 )
     RQREAL( obj->width ( *par1 ) );
   }
 }
-
 
 //[1]qreal width ( const QString & text ) const
 //[2]qreal width ( QChar ch ) const
@@ -546,7 +520,6 @@ HB_FUNC_STATIC( QFONTMETRICSF_XHEIGHT )
     RQREAL( obj->xHeight () );
   }
 }
-
 
 HB_FUNC_STATIC( QFONTMETRICSF_NEWFROM )
 {
@@ -602,7 +575,5 @@ HB_FUNC_STATIC( QFONTMETRICSF_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

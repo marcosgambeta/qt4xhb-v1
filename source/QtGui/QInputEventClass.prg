@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QInputEvent INHERIT QEvent
 
@@ -17,6 +16,7 @@ CLASS QInputEvent INHERIT QEvent
    METHOD delete
    METHOD modifiers
    METHOD setModifiers
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -45,10 +45,10 @@ HB_FUNC_STATIC( QINPUTEVENT_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QINPUTEVENT_DELETE )
 {
   QInputEvent * obj = (QInputEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -58,9 +58,9 @@ HB_FUNC_STATIC( QINPUTEVENT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 Qt::KeyboardModifiers modifiers() const
@@ -73,7 +73,6 @@ HB_FUNC_STATIC( QINPUTEVENT_MODIFIERS )
     hb_retni( (int) obj->modifiers () );
   }
 }
-
 
 /*
 void setModifiers(Qt::KeyboardModifiers amodifiers)
@@ -88,9 +87,5 @@ HB_FUNC_STATIC( QINPUTEVENT_SETMODIFIERS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

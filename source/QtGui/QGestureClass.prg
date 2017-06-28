@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -26,6 +26,7 @@ CLASS QGesture INHERIT QObject
    METHOD setHotSpot
    METHOD state
    METHOD unsetHotSpot
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -53,10 +54,10 @@ HB_FUNC_STATIC( QGESTURE_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QGESTURE_DELETE )
 {
   QGesture * obj = (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -66,9 +67,9 @@ HB_FUNC_STATIC( QGESTURE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 GestureCancelPolicy gestureCancelPolicy () const
@@ -82,7 +83,6 @@ HB_FUNC_STATIC( QGESTURE_GESTURECANCELPOLICY )
   }
 }
 
-
 /*
 Qt::GestureType gestureType () const
 */
@@ -94,7 +94,6 @@ HB_FUNC_STATIC( QGESTURE_GESTURETYPE )
     hb_retni( (int) obj->gestureType () );
   }
 }
-
 
 /*
 bool hasHotSpot () const
@@ -108,7 +107,6 @@ HB_FUNC_STATIC( QGESTURE_HASHOTSPOT )
   }
 }
 
-
 /*
 QPointF hotSpot () const
 */
@@ -121,7 +119,6 @@ HB_FUNC_STATIC( QGESTURE_HOTSPOT )
     _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
-
 
 /*
 void setGestureCancelPolicy ( GestureCancelPolicy policy )
@@ -137,7 +134,6 @@ HB_FUNC_STATIC( QGESTURE_SETGESTURECANCELPOLICY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setHotSpot ( const QPointF & value )
 */
@@ -151,7 +147,6 @@ HB_FUNC_STATIC( QGESTURE_SETHOTSPOT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 Qt::GestureState state () const
 */
@@ -163,7 +158,6 @@ HB_FUNC_STATIC( QGESTURE_STATE )
     hb_retni( (int) obj->state () );
   }
 }
-
 
 /*
 void unsetHotSpot ()
@@ -177,9 +171,5 @@ HB_FUNC_STATIC( QGESTURE_UNSETHOTSPOT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

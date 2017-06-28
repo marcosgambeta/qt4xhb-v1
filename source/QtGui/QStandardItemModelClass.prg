@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -82,7 +82,9 @@ CLASS QStandardItemModel INHERIT QAbstractItemModel
    METHOD mimeTypes
    METHOD mimeData
    METHOD dropMimeData
+
    METHOD onItemChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -110,7 +112,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QStandardItemModel(int rows, int columns, QObject *parent = 0)
 */
@@ -119,7 +120,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_NEW2 )
   QStandardItemModel * o = new QStandardItemModel ( PINT(1), PINT(2), OPQOBJECT(3,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QStandardItemModel(QObject *parent = 0)
 //[2]QStandardItemModel(int rows, int columns, QObject *parent = 0)
@@ -143,6 +143,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_NEW )
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_DELETE )
 {
   QStandardItemModel * obj = (QStandardItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -152,9 +153,9 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const
@@ -170,7 +171,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_INDEX )
   }
 }
 
-
 /*
 QModelIndex parent(const QModelIndex &child) const
 */
@@ -184,7 +184,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_PARENT1 )
   }
 }
 
-
 /*
 QObject *parent() const
 */
@@ -197,7 +196,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_PARENT2 )
     _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
-
 
 //[1]QModelIndex parent(const QModelIndex &child) const
 //[2]QObject *parent() const
@@ -227,7 +225,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_ROWCOUNT )
   }
 }
 
-
 /*
 int columnCount(const QModelIndex &parent = QModelIndex()) const
 */
@@ -240,7 +237,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_COLUMNCOUNT )
     RINT( obj->columnCount ( par1 ) );
   }
 }
-
 
 /*
 bool hasChildren(const QModelIndex &parent = QModelIndex()) const
@@ -255,7 +251,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_HASCHILDREN )
   }
 }
 
-
 /*
 QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const
 */
@@ -269,7 +264,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_DATA )
   }
 }
 
-
 /*
 bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole)
 */
@@ -281,7 +275,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETDATA )
     RBOOL( obj->setData ( *PQMODELINDEX(1), *PQVARIANT(2), OPINT(3,Qt::EditRole) ) );
   }
 }
-
 
 /*
 QVariant headerData(int section, Qt::Orientation orientation,int role = Qt::DisplayRole) const
@@ -296,7 +289,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_HEADERDATA )
   }
 }
 
-
 /*
 bool setHeaderData(int section, Qt::Orientation orientation, const QVariant &value,int role = Qt::EditRole)
 */
@@ -308,7 +300,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETHEADERDATA )
     RBOOL( obj->setHeaderData ( PINT(1), (Qt::Orientation) hb_parni(2), *PQVARIANT(3), OPINT(4,Qt::EditRole) ) );
   }
 }
-
 
 /*
 bool insertRows(int row, int count, const QModelIndex &parent = QModelIndex())
@@ -323,7 +314,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_INSERTROWS )
   }
 }
 
-
 /*
 bool insertColumns(int column, int count, const QModelIndex &parent = QModelIndex())
 */
@@ -336,7 +326,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_INSERTCOLUMNS )
     RBOOL( obj->insertColumns ( PINT(1), PINT(2), par3 ) );
   }
 }
-
 
 /*
 bool removeRows(int row, int count, const QModelIndex &parent = QModelIndex())
@@ -351,7 +340,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_REMOVEROWS )
   }
 }
 
-
 /*
 bool removeColumns(int column, int count, const QModelIndex &parent = QModelIndex())
 */
@@ -365,7 +353,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_REMOVECOLUMNS )
   }
 }
 
-
 /*
 Qt::ItemFlags flags(const QModelIndex &index) const
 */
@@ -377,7 +364,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_FLAGS )
     hb_retni( (int) obj->flags ( *PQMODELINDEX(1) ) );
   }
 }
-
 
 /*
 Qt::DropActions supportedDropActions() const
@@ -391,9 +377,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SUPPORTEDDROPACTIONS )
   }
 }
 
-
-
-
 /*
 void clear()
 */
@@ -406,7 +389,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_CLEAR )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void sort(int column, Qt::SortOrder order = Qt::AscendingOrder)
@@ -422,7 +404,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SORT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QStandardItem *itemFromIndex(const QModelIndex &index) const
 */
@@ -435,7 +416,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_ITEMFROMINDEX )
     _qt4xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
   }
 }
-
 
 /*
 QModelIndex indexFromItem(const QStandardItem *item) const
@@ -451,7 +431,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_INDEXFROMITEM )
   }
 }
 
-
 /*
 QStandardItem *item(int row, int column = 0) const
 */
@@ -464,7 +443,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_ITEM )
     _qt4xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
   }
 }
-
 
 /*
 void setItem(int row, int column, QStandardItem *item)
@@ -480,7 +458,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETITEM1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setItem(int row, QStandardItem *item)
 */
@@ -494,7 +471,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETITEM2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setItem(int row, int column, QStandardItem *item)
 //[2]void setItem(int row, QStandardItem *item)
@@ -524,7 +500,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_INVISIBLEROOTITEM )
   }
 }
 
-
 /*
 QStandardItem *horizontalHeaderItem(int column) const
 */
@@ -537,7 +512,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_HORIZONTALHEADERITEM )
     _qt4xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
   }
 }
-
 
 /*
 void setHorizontalHeaderItem(int column, QStandardItem *item)
@@ -553,7 +527,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETHORIZONTALHEADERITEM )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QStandardItem *verticalHeaderItem(int row) const
 */
@@ -566,7 +539,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_VERTICALHEADERITEM )
     _qt4xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
   }
 }
-
 
 /*
 void setVerticalHeaderItem(int row, QStandardItem *item)
@@ -582,7 +554,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETVERTICALHEADERITEM )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setHorizontalHeaderLabels(const QStringList &labels)
 */
@@ -595,7 +566,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETHORIZONTALHEADERLABELS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setVerticalHeaderLabels(const QStringList &labels)
@@ -610,7 +580,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETVERTICALHEADERLABELS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setRowCount(int rows)
 */
@@ -624,7 +593,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETROWCOUNT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setColumnCount(int columns)
 */
@@ -637,7 +605,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETCOLUMNCOUNT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void appendRow(const QList<QStandardItem*> &items)
@@ -659,7 +626,6 @@ par1 << (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aLis
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void appendRow(QStandardItem *item)
 */
@@ -673,7 +639,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_APPENDROW2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void appendRow(const QList<QStandardItem*> &items)
 //[2]void appendRow(QStandardItem *item)
@@ -710,8 +675,6 @@ par1 << (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aLis
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 void insertRow(int row, const QList<QStandardItem*> &items)
 */
@@ -732,7 +695,6 @@ par2 << (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aLis
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void insertRow(int row, QStandardItem *item)
 */
@@ -747,7 +709,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_INSERTROW2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool insertRow(int row, const QModelIndex &parent = QModelIndex())
 */
@@ -760,7 +721,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_INSERTROW3 )
     RBOOL( obj->insertRow ( PINT(1), par2 ) );
   }
 }
-
 
 //[1]void insertRow(int row, const QList<QStandardItem*> &items)
 //[2]void insertRow(int row, QStandardItem *item)
@@ -802,7 +762,6 @@ par2 << (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aLis
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool insertColumn(int column, const QModelIndex &parent = QModelIndex())
 */
@@ -815,7 +774,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_INSERTCOLUMN2 )
     RBOOL( obj->insertColumn ( PINT(1), par2 ) );
   }
 }
-
 
 //[1]void insertColumn(int column, const QList<QStandardItem*> &items)
 //[2]bool insertColumn(int column, const QModelIndex &parent = QModelIndex())
@@ -844,7 +802,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_TAKEITEM )
     _qt4xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
   }
 }
-
 
 /*
 QList<QStandardItem*> takeRow(int row)
@@ -889,7 +846,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_TAKEROW )
   }
 }
 
-
 /*
 QList<QStandardItem*> takeColumn(int column)
 */
@@ -933,7 +889,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_TAKECOLUMN )
   }
 }
 
-
 /*
 QStandardItem *takeHorizontalHeaderItem(int column)
 */
@@ -946,7 +901,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_TAKEHORIZONTALHEADERITEM )
     _qt4xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
   }
 }
-
 
 /*
 QStandardItem *takeVerticalHeaderItem(int row)
@@ -961,7 +915,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_TAKEVERTICALHEADERITEM )
   }
 }
 
-
 /*
 const QStandardItem *itemPrototype() const
 */
@@ -974,7 +927,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_ITEMPROTOTYPE )
     _qt4xhb_createReturnClass ( ptr, "QSTANDARDITEM" );
   }
 }
-
 
 /*
 void setItemPrototype(const QStandardItem *item)
@@ -989,7 +941,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETITEMPROTOTYPE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QList<QStandardItem*> findItems(const QString &text,Qt::MatchFlags flags = Qt::MatchExactly,int column = 0) const
@@ -1035,7 +986,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_FINDITEMS )
   }
 }
 
-
 /*
 int sortRole() const
 */
@@ -1047,7 +997,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SORTROLE )
     RINT( obj->sortRole () );
   }
 }
-
 
 /*
 void setSortRole(int role)
@@ -1062,7 +1011,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETSORTROLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QStringList mimeTypes() const
 */
@@ -1074,7 +1022,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_MIMETYPES )
     RQSTRINGLIST( obj->mimeTypes () );
   }
 }
-
 
 /*
 QMimeData *mimeData(const QModelIndexList &indexes) const
@@ -1090,7 +1037,6 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_MIMEDATA )
   }
 }
 
-
 /*
 bool dropMimeData (const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &parent)
 */
@@ -1103,10 +1049,5 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_DROPMIMEDATA )
     RBOOL( obj->dropMimeData ( par1, (Qt::DropAction) hb_parni(2), PINT(3), PINT(4), *PQMODELINDEX(5) ) );
   }
 }
-
-
-
-
-
 
 #pragma ENDDUMP

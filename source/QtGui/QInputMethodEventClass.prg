@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QInputMethodEvent INHERIT QEvent
 
@@ -22,6 +21,7 @@ CLASS QInputMethodEvent INHERIT QEvent
    METHOD replacementLength
    METHOD replacementStart
    METHOD setCommitString
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -49,8 +49,6 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
-
 /*
 QInputMethodEvent ( const QInputMethodEvent & other )
 */
@@ -59,7 +57,6 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_NEW3 )
   QInputMethodEvent * o = new QInputMethodEvent ( *PQINPUTMETHODEVENT(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QInputMethodEvent ()
 //[2]QInputMethodEvent ( const QString & preeditText, const QList<Attribute> & attributes )
@@ -84,6 +81,7 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_NEW )
 HB_FUNC_STATIC( QINPUTMETHODEVENT_DELETE )
 {
   QInputMethodEvent * obj = (QInputMethodEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -93,10 +91,9 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
 
 /*
 const QString & commitString () const
@@ -110,7 +107,6 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_COMMITSTRING )
   }
 }
 
-
 /*
 const QString & preeditString () const
 */
@@ -122,7 +118,6 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_PREEDITSTRING )
     RQSTRING( obj->preeditString () );
   }
 }
-
 
 /*
 int replacementLength () const
@@ -136,7 +131,6 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_REPLACEMENTLENGTH )
   }
 }
 
-
 /*
 int replacementStart () const
 */
@@ -148,7 +142,6 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_REPLACEMENTSTART )
     RINT( obj->replacementStart () );
   }
 }
-
 
 /*
 void setCommitString ( const QString & commitString, int replaceFrom = 0, int replaceLength = 0 )
@@ -162,8 +155,5 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_SETCOMMITSTRING )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
 
 #pragma ENDDUMP

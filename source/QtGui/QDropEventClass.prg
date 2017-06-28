@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -34,6 +34,7 @@ CLASS QDropEvent INHERIT QEvent,QMimeSource
    METHOD encodedData
    METHOD format
    METHOD provides
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -66,10 +67,10 @@ HB_FUNC_STATIC( QDROPEVENT_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QDROPEVENT_DELETE )
 {
   QDropEvent * obj = (QDropEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -79,9 +80,9 @@ HB_FUNC_STATIC( QDROPEVENT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void acceptProposedAction ()
@@ -96,7 +97,6 @@ HB_FUNC_STATIC( QDROPEVENT_ACCEPTPROPOSEDACTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 Qt::DropAction dropAction () const
 */
@@ -109,7 +109,6 @@ HB_FUNC_STATIC( QDROPEVENT_DROPACTION )
   }
 }
 
-
 /*
 Qt::KeyboardModifiers keyboardModifiers () const
 */
@@ -121,7 +120,6 @@ HB_FUNC_STATIC( QDROPEVENT_KEYBOARDMODIFIERS )
     hb_retni( (int) obj->keyboardModifiers () );
   }
 }
-
 
 /*
 const QMimeData * mimeData () const
@@ -136,7 +134,6 @@ HB_FUNC_STATIC( QDROPEVENT_MIMEDATA )
   }
 }
 
-
 /*
 Qt::MouseButtons mouseButtons () const
 */
@@ -148,7 +145,6 @@ HB_FUNC_STATIC( QDROPEVENT_MOUSEBUTTONS )
     hb_retni( (int) obj->mouseButtons () );
   }
 }
-
 
 /*
 const QPoint &  pos () const
@@ -163,7 +159,6 @@ HB_FUNC_STATIC( QDROPEVENT_POS )
   }
 }
 
-
 /*
 Qt::DropActions possibleActions () const
 */
@@ -176,7 +171,6 @@ HB_FUNC_STATIC( QDROPEVENT_POSSIBLEACTIONS )
   }
 }
 
-
 /*
 Qt::DropAction proposedAction () const
 */
@@ -188,7 +182,6 @@ HB_FUNC_STATIC( QDROPEVENT_PROPOSEDACTION )
     hb_retni( (int) obj->proposedAction () );
   }
 }
-
 
 /*
 void setDropAction ( Qt::DropAction action )
@@ -204,7 +197,6 @@ HB_FUNC_STATIC( QDROPEVENT_SETDROPACTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QWidget * source () const
 */
@@ -217,7 +209,6 @@ HB_FUNC_STATIC( QDROPEVENT_SOURCE )
     _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
-
 
 /*
 virtual QByteArray encodedData ( const char * format ) const
@@ -232,7 +223,6 @@ HB_FUNC_STATIC( QDROPEVENT_ENCODEDDATA )
   }
 }
 
-
 /*
 virtual const char * format ( int n = 0 ) const
 */
@@ -246,7 +236,6 @@ HB_FUNC_STATIC( QDROPEVENT_FORMAT )
   }
 }
 
-
 /*
 virtual bool provides ( const char * mimeType ) const
 */
@@ -258,8 +247,5 @@ HB_FUNC_STATIC( QDROPEVENT_PROVIDES )
     RBOOL( obj->provides ( (const char *) hb_parc(1) ) );
   }
 }
-
-
-
 
 #pragma ENDDUMP

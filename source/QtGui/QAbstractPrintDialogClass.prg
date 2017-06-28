@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -26,6 +26,7 @@ CLASS QAbstractPrintDialog INHERIT QDialog
    METHOD setMinMax
    METHOD setPrintRange
    METHOD toPage
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -44,8 +45,6 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
-
 /*
 virtual int exec () = 0
 */
@@ -57,7 +56,6 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_EXEC )
     RINT( obj->exec () );
   }
 }
-
 
 /*
 int fromPage () const
@@ -71,7 +69,6 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_FROMPAGE )
   }
 }
 
-
 /*
 int maxPage () const
 */
@@ -83,7 +80,6 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_MAXPAGE )
     RINT( obj->maxPage () );
   }
 }
-
 
 /*
 int minPage () const
@@ -97,7 +93,6 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_MINPAGE )
   }
 }
 
-
 /*
 PrintRange printRange () const
 */
@@ -109,7 +104,6 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_PRINTRANGE )
     hb_retni( (int) obj->printRange () );
   }
 }
-
 
 /*
 QPrinter * printer () const
@@ -124,7 +118,6 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_PRINTER )
   }
 }
 
-
 /*
 void setFromTo ( int from, int to )
 */
@@ -138,7 +131,6 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_SETFROMTO )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setMinMax ( int min, int max )
 */
@@ -151,8 +143,6 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_SETMINMAX )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
 
 /*
 void setPrintRange ( PrintRange range )
@@ -168,7 +158,6 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_SETPRINTRANGE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int toPage () const
 */
@@ -180,8 +169,5 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_TOPAGE )
     RINT( obj->toPage () );
   }
 }
-
-
-
 
 #pragma ENDDUMP

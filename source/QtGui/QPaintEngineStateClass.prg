@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -43,11 +43,13 @@ CLASS QPaintEngineState
    METHOD renderHints
    METHOD state
    METHOD transform
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -69,6 +71,7 @@ RETURN
 HB_FUNC_STATIC( QPAINTENGINESTATE_DELETE )
 {
   QPaintEngineState * obj = (QPaintEngineState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -78,9 +81,9 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QBrush backgroundBrush () const
@@ -95,7 +98,6 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_BACKGROUNDBRUSH )
   }
 }
 
-
 /*
 Qt::BGMode backgroundMode () const
 */
@@ -107,7 +109,6 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_BACKGROUNDMODE )
     hb_retni( (int) obj->backgroundMode () );
   }
 }
-
 
 /*
 QBrush brush () const
@@ -122,7 +123,6 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_BRUSH )
   }
 }
 
-
 /*
 bool brushNeedsResolving () const
 */
@@ -134,7 +134,6 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_BRUSHNEEDSRESOLVING )
     RBOOL( obj->brushNeedsResolving () );
   }
 }
-
 
 /*
 QPointF brushOrigin () const
@@ -149,7 +148,6 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_BRUSHORIGIN )
   }
 }
 
-
 /*
 Qt::ClipOperation clipOperation () const
 */
@@ -161,7 +159,6 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_CLIPOPERATION )
     hb_retni( (int) obj->clipOperation () );
   }
 }
-
 
 /*
 QPainterPath clipPath () const
@@ -176,7 +173,6 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_CLIPPATH )
   }
 }
 
-
 /*
 QRegion clipRegion () const
 */
@@ -190,7 +186,6 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_CLIPREGION )
   }
 }
 
-
 /*
 QPainter::CompositionMode compositionMode () const
 */
@@ -202,7 +197,6 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_COMPOSITIONMODE )
     hb_retni( (int) obj->compositionMode () );
   }
 }
-
 
 /*
 QFont font () const
@@ -217,7 +211,6 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_FONT )
   }
 }
 
-
 /*
 bool isClipEnabled () const
 */
@@ -230,7 +223,6 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_ISCLIPENABLED )
   }
 }
 
-
 /*
 qreal opacity () const
 */
@@ -242,7 +234,6 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_OPACITY )
     RQREAL( obj->opacity () );
   }
 }
-
 
 /*
 QPainter * painter () const
@@ -257,7 +248,6 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_PAINTER )
   }
 }
 
-
 /*
 QPen pen () const
 */
@@ -271,7 +261,6 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_PEN )
   }
 }
 
-
 /*
 bool penNeedsResolving () const
 */
@@ -283,7 +272,6 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_PENNEEDSRESOLVING )
     RBOOL( obj->penNeedsResolving () );
   }
 }
-
 
 /*
 QPainter::RenderHints renderHints () const
@@ -297,7 +285,6 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_RENDERHINTS )
   }
 }
 
-
 /*
 QPaintEngine::DirtyFlags state () const
 */
@@ -309,7 +296,6 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_STATE )
     hb_retni( (int) obj->state () );
   }
 }
-
 
 /*
 QTransform transform () const
@@ -323,7 +309,6 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_TRANSFORM )
     _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );
   }
 }
-
 
 HB_FUNC_STATIC( QPAINTENGINESTATE_NEWFROM )
 {
@@ -379,7 +364,5 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

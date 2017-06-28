@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -107,6 +107,7 @@ CLASS QImage INHERIT QPaintDevice
    METHOD fromData
    METHOD trueMatrix2
    METHOD trueMatrix
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -137,7 +138,6 @@ HB_FUNC_STATIC( QIMAGE_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QImage ( const QSize & size, Format format )
 */
@@ -146,7 +146,6 @@ HB_FUNC_STATIC( QIMAGE_NEW2 )
   QImage * o = new QImage ( *PQSIZE(1), (QImage::Format) hb_parni(2) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QImage ( int width, int height, Format format )
@@ -157,12 +156,6 @@ HB_FUNC_STATIC( QIMAGE_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
-
-
-
-
-
 /*
 QImage ( const QString & fileName, const char * format = 0 )
 */
@@ -171,7 +164,6 @@ HB_FUNC_STATIC( QIMAGE_NEW9 )
   QImage * o = new QImage ( PQSTRING(1), (const char *) ISNIL(2)? 0 : hb_parc(2) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QImage ( const char * fileName, const char * format = 0 )
@@ -182,7 +174,6 @@ HB_FUNC_STATIC( QIMAGE_NEW10 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QImage ( const QImage & image )
 */
@@ -191,7 +182,6 @@ HB_FUNC_STATIC( QIMAGE_NEW11 )
   QImage * o = new QImage ( *PQIMAGE(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[01]QImage ()
 //[02]QImage ( const QSize & size, Format format )
@@ -244,6 +234,7 @@ HB_FUNC_STATIC( QIMAGE_NEW )
 HB_FUNC_STATIC( QIMAGE_DELETE )
 {
   QImage * obj = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -253,9 +244,9 @@ HB_FUNC_STATIC( QIMAGE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 bool allGray () const
@@ -269,7 +260,6 @@ HB_FUNC_STATIC( QIMAGE_ALLGRAY )
   }
 }
 
-
 /*
 int bitPlaneCount () const
 */
@@ -281,9 +271,6 @@ HB_FUNC_STATIC( QIMAGE_BITPLANECOUNT )
     RINT( obj->bitPlaneCount () );
   }
 }
-
-
-
 
 /*
 int byteCount () const
@@ -297,7 +284,6 @@ HB_FUNC_STATIC( QIMAGE_BYTECOUNT )
   }
 }
 
-
 /*
 int bytesPerLine () const
 */
@@ -310,7 +296,6 @@ HB_FUNC_STATIC( QIMAGE_BYTESPERLINE )
   }
 }
 
-
 /*
 qint64 cacheKey () const
 */
@@ -322,7 +307,6 @@ HB_FUNC_STATIC( QIMAGE_CACHEKEY )
     RQINT64( obj->cacheKey () );
   }
 }
-
 
 /*
 QRgb color ( int i ) const
@@ -337,7 +321,6 @@ HB_FUNC_STATIC( QIMAGE_COLOR )
   }
 }
 
-
 /*
 int colorCount () const
 */
@@ -349,7 +332,6 @@ HB_FUNC_STATIC( QIMAGE_COLORCOUNT )
     RINT( obj->colorCount () );
   }
 }
-
 
 /*
 QVector<QRgb> colorTable () const
@@ -373,9 +355,6 @@ HB_FUNC_STATIC( QIMAGE_COLORTABLE )
   }
 }
 
-
-
-
 /*
 QImage convertToFormat ( Format format, Qt::ImageConversionFlags flags = Qt::AutoColor ) const
 */
@@ -390,7 +369,6 @@ HB_FUNC_STATIC( QIMAGE_CONVERTTOFORMAT1 )
     _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );
   }
 }
-
 
 /*
 QImage convertToFormat ( Format format, const QVector<QRgb> & colorTable, Qt::ImageConversionFlags flags = Qt::AutoColor ) const
@@ -416,7 +394,6 @@ par2 << temp2;
     _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );
   }
 }
-
 
 //[1]QImage convertToFormat ( Format format, Qt::ImageConversionFlags flags = Qt::AutoColor ) const
 //[2]QImage convertToFormat ( Format format, const QVector<QRgb> & colorTable, Qt::ImageConversionFlags flags = Qt::AutoColor ) const
@@ -446,7 +423,6 @@ HB_FUNC_STATIC( QIMAGE_COPY1 )
     _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
 }
 
-
 /*
 QImage copy ( int x, int y, int width, int height ) const
 */
@@ -458,7 +434,6 @@ HB_FUNC_STATIC( QIMAGE_COPY2 )
     QImage * ptr = new QImage( obj->copy ( PINT(1), PINT(2), PINT(3), PINT(4) ) );
     _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
 }
-
 
 //[1]QImage copy ( const QRect & rectangle = QRect() ) const
 //[2]QImage copy ( int x, int y, int width, int height ) const
@@ -488,7 +463,6 @@ HB_FUNC_STATIC( QIMAGE_CREATEALPHAMASK )
     _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
 }
 
-
 /*
 QImage createHeuristicMask ( bool clipTight = true ) const
 */
@@ -500,7 +474,6 @@ HB_FUNC_STATIC( QIMAGE_CREATEHEURISTICMASK )
     QImage * ptr = new QImage( obj->createHeuristicMask ( OPBOOL(1,true) ) );
     _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
 }
-
 
 /*
 QImage createMaskFromColor ( QRgb color, Qt::MaskMode mode = Qt::MaskInColor ) const
@@ -516,7 +489,6 @@ HB_FUNC_STATIC( QIMAGE_CREATEMASKFROMCOLOR )
     _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
 }
 
-
 /*
 int depth () const
 */
@@ -528,7 +500,6 @@ HB_FUNC_STATIC( QIMAGE_DEPTH )
     RINT( obj->depth () );
   }
 }
-
 
 /*
 int dotsPerMeterX () const
@@ -542,7 +513,6 @@ HB_FUNC_STATIC( QIMAGE_DOTSPERMETERX )
   }
 }
 
-
 /*
 int dotsPerMeterY () const
 */
@@ -554,7 +524,6 @@ HB_FUNC_STATIC( QIMAGE_DOTSPERMETERY )
     RINT( obj->dotsPerMeterY () );
   }
 }
-
 
 /*
 void fill ( uint pixelValue )
@@ -568,7 +537,6 @@ HB_FUNC_STATIC( QIMAGE_FILL1 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void fill ( Qt::GlobalColor color )
@@ -584,7 +552,6 @@ HB_FUNC_STATIC( QIMAGE_FILL2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void fill ( const QColor & color )
 */
@@ -598,7 +565,6 @@ HB_FUNC_STATIC( QIMAGE_FILL3 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void fill ( uint pixelValue )
 //[2]void fill ( Qt::GlobalColor color )
@@ -629,7 +595,6 @@ HB_FUNC_STATIC( QIMAGE_FORMAT )
   }
 }
 
-
 /*
 bool hasAlphaChannel () const
 */
@@ -642,7 +607,6 @@ HB_FUNC_STATIC( QIMAGE_HASALPHACHANNEL )
   }
 }
 
-
 /*
 int height () const
 */
@@ -654,7 +618,6 @@ HB_FUNC_STATIC( QIMAGE_HEIGHT )
     RINT( obj->height () );
   }
 }
-
 
 /*
 void invertPixels ( InvertMode mode = InvertRgb )
@@ -670,7 +633,6 @@ HB_FUNC_STATIC( QIMAGE_INVERTPIXELS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool isGrayscale () const
 */
@@ -682,7 +644,6 @@ HB_FUNC_STATIC( QIMAGE_ISGRAYSCALE )
     RBOOL( obj->isGrayscale () );
   }
 }
-
 
 /*
 bool isNull () const
@@ -696,7 +657,6 @@ HB_FUNC_STATIC( QIMAGE_ISNULL )
   }
 }
 
-
 /*
 bool load ( const QString & fileName, const char * format = 0 )
 */
@@ -709,7 +669,6 @@ HB_FUNC_STATIC( QIMAGE_LOAD1 )
   }
 }
 
-
 /*
 bool load ( QIODevice * device, const char * format )
 */
@@ -721,7 +680,6 @@ HB_FUNC_STATIC( QIMAGE_LOAD2 )
     RBOOL( obj->load ( PQIODEVICE(1), (const char *) hb_parc(2) ) );
   }
 }
-
 
 //[1]bool load ( const QString & fileName, const char * format = 0 )
 //[2]bool load ( QIODevice * device, const char * format )
@@ -752,7 +710,6 @@ HB_FUNC_STATIC( QIMAGE_LOADFROMDATA1 )
   }
 }
 
-
 /*
 bool loadFromData ( const QByteArray & data, const char * format = 0 )
 */
@@ -764,7 +721,6 @@ HB_FUNC_STATIC( QIMAGE_LOADFROMDATA2 )
     RBOOL( obj->loadFromData ( *PQBYTEARRAY(1), (const char *) ISNIL(2)? 0 : hb_parc(2) ) );
   }
 }
-
 
 //[1]bool loadFromData ( const uchar * data, int len, const char * format = 0 )
 //[2]bool loadFromData ( const QByteArray & data, const char * format = 0 )
@@ -793,7 +749,6 @@ HB_FUNC_STATIC( QIMAGE_MIRRORED )
     _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
 }
 
-
 /*
 QPoint offset () const
 */
@@ -805,7 +760,6 @@ HB_FUNC_STATIC( QIMAGE_OFFSET )
     QPoint * ptr = new QPoint( obj->offset () );
     _qt4xhb_createReturnClass ( ptr, "QPOINT", true );  }
 }
-
 
 /*
 QRgb pixel ( const QPoint & position ) const
@@ -820,7 +774,6 @@ HB_FUNC_STATIC( QIMAGE_PIXEL1 )
   }
 }
 
-
 /*
 QRgb pixel ( int x, int y ) const
 */
@@ -833,7 +786,6 @@ HB_FUNC_STATIC( QIMAGE_PIXEL2 )
     hb_retni( i );
   }
 }
-
 
 //[1]QRgb pixel ( const QPoint & position ) const
 //[2]QRgb pixel ( int x, int y ) const
@@ -862,7 +814,6 @@ HB_FUNC_STATIC( QIMAGE_PIXELINDEX1 )
   }
 }
 
-
 /*
 int pixelIndex ( int x, int y ) const
 */
@@ -874,7 +825,6 @@ HB_FUNC_STATIC( QIMAGE_PIXELINDEX2 )
     RINT( obj->pixelIndex ( PINT(1), PINT(2) ) );
   }
 }
-
 
 //[1]int pixelIndex ( const QPoint & position ) const
 //[2]int pixelIndex ( int x, int y ) const
@@ -903,7 +853,6 @@ HB_FUNC_STATIC( QIMAGE_RECT )
     _qt4xhb_createReturnClass ( ptr, "QRECT", true );  }
 }
 
-
 /*
 QImage rgbSwapped () const
 */
@@ -915,7 +864,6 @@ HB_FUNC_STATIC( QIMAGE_RGBSWAPPED )
     QImage * ptr = new QImage( obj->rgbSwapped () );
     _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
 }
-
 
 /*
 bool save ( const QString & fileName, const char * format = 0, int quality = -1 ) const
@@ -929,7 +877,6 @@ HB_FUNC_STATIC( QIMAGE_SAVE1 )
   }
 }
 
-
 /*
 bool save ( QIODevice * device, const char * format = 0, int quality = -1 ) const
 */
@@ -941,7 +888,6 @@ HB_FUNC_STATIC( QIMAGE_SAVE2 )
     RBOOL( obj->save ( PQIODEVICE(1), (const char *) ISNIL(2)? 0 : hb_parc(2), OPINT(3,-1) ) );
   }
 }
-
 
 //[1]bool save ( const QString & fileName, const char * format = 0, int quality = -1 ) const
 //[2]bool save ( QIODevice * device, const char * format = 0, int quality = -1 ) const
@@ -972,7 +918,6 @@ HB_FUNC_STATIC( QIMAGE_SCALED1 )
     _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
 }
 
-
 /*
 QImage scaled ( int width, int height, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio, Qt::TransformationMode transformMode = Qt::FastTransformation ) const
 */
@@ -986,7 +931,6 @@ HB_FUNC_STATIC( QIMAGE_SCALED2 )
     QImage * ptr = new QImage( obj->scaled ( PINT(1), PINT(2), (Qt::AspectRatioMode) par3, (Qt::TransformationMode) par4 ) );
     _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
 }
-
 
 //[1]QImage scaled ( const QSize & size, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio, Qt::TransformationMode transformMode = Qt::FastTransformation ) const
 //[2]QImage scaled ( int width, int height, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio, Qt::TransformationMode transformMode = Qt::FastTransformation ) const
@@ -1016,7 +960,6 @@ HB_FUNC_STATIC( QIMAGE_SCALEDTOHEIGHT )
     _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
 }
 
-
 /*
 QImage scaledToWidth ( int width, Qt::TransformationMode mode = Qt::FastTransformation ) const
 */
@@ -1029,9 +972,6 @@ HB_FUNC_STATIC( QIMAGE_SCALEDTOWIDTH )
     QImage * ptr = new QImage( obj->scaledToWidth ( PINT(1), (Qt::TransformationMode) par2 ) );
     _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
 }
-
-
-
 
 //[1]uchar * scanLine ( int i )
 //[2]const uchar * scanLine ( int i ) const
@@ -1055,7 +995,6 @@ HB_FUNC_STATIC( QIMAGE_SETCOLOR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setColorCount ( int colorCount )
 */
@@ -1068,7 +1007,6 @@ HB_FUNC_STATIC( QIMAGE_SETCOLORCOUNT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setColorTable ( const QVector<QRgb> colors )
@@ -1093,7 +1031,6 @@ par1 << temp1;
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setDotsPerMeterX ( int x )
 */
@@ -1106,7 +1043,6 @@ HB_FUNC_STATIC( QIMAGE_SETDOTSPERMETERX )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setDotsPerMeterY ( int y )
@@ -1121,7 +1057,6 @@ HB_FUNC_STATIC( QIMAGE_SETDOTSPERMETERY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setOffset ( const QPoint & offset )
 */
@@ -1134,7 +1069,6 @@ HB_FUNC_STATIC( QIMAGE_SETOFFSET )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setPixel ( const QPoint & position, uint index_or_rgb )
@@ -1149,7 +1083,6 @@ HB_FUNC_STATIC( QIMAGE_SETPIXEL1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPixel ( int x, int y, uint index_or_rgb )
 */
@@ -1162,7 +1095,6 @@ HB_FUNC_STATIC( QIMAGE_SETPIXEL2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setPixel ( const QPoint & position, uint index_or_rgb )
 //[2]void setPixel ( int x, int y, uint index_or_rgb )
@@ -1192,7 +1124,6 @@ HB_FUNC_STATIC( QIMAGE_SETTEXT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QSize size () const
 */
@@ -1204,7 +1135,6 @@ HB_FUNC_STATIC( QIMAGE_SIZE )
     QSize * ptr = new QSize( obj->size () );
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );  }
 }
-
 
 /*
 void swap ( QImage & other )
@@ -1220,7 +1150,6 @@ HB_FUNC_STATIC( QIMAGE_SWAP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString text ( const QString & key = QString() ) const
 */
@@ -1232,7 +1161,6 @@ HB_FUNC_STATIC( QIMAGE_TEXT )
     RQSTRING( obj->text ( OPQSTRING(1,QString()) ) );
   }
 }
-
 
 /*
 QStringList textKeys () const
@@ -1246,8 +1174,6 @@ HB_FUNC_STATIC( QIMAGE_TEXTKEYS )
   }
 }
 
-
-
 /*
 QImage transformed ( const QTransform & matrix, Qt::TransformationMode mode = Qt::FastTransformation ) const
 */
@@ -1260,7 +1186,6 @@ HB_FUNC_STATIC( QIMAGE_TRANSFORMED2 )
     QImage * ptr = new QImage( obj->transformed ( *PQTRANSFORM(1), (Qt::TransformationMode) par2 ) );
     _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );  }
 }
-
 
 //[1]QImage transformed ( const QMatrix & matrix, Qt::TransformationMode mode = Qt::FastTransformation ) const
 //[2]QImage transformed ( const QTransform & matrix, Qt::TransformationMode mode = Qt::FastTransformation ) const
@@ -1285,7 +1210,6 @@ HB_FUNC_STATIC( QIMAGE_VALID1 )
   }
 }
 
-
 /*
 bool valid ( int x, int y ) const
 */
@@ -1297,7 +1221,6 @@ HB_FUNC_STATIC( QIMAGE_VALID2 )
     RBOOL( obj->valid ( PINT(1), PINT(2) ) );
   }
 }
-
 
 //[1]bool valid ( const QPoint & pos ) const
 //[2]bool valid ( int x, int y ) const
@@ -1326,8 +1249,6 @@ HB_FUNC_STATIC( QIMAGE_WIDTH )
   }
 }
 
-
-
 // Static Public Members
 
 /*
@@ -1340,7 +1261,6 @@ HB_FUNC_STATIC( QIMAGE_FROMDATA1 )
   QImage * ptr = new QImage( QImage::fromData ( par1, par2, (const char *) ISNIL(3)? 0 : hb_parc(3) ) );
   _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );}
 
-
 /*
 QImage fromData ( const QByteArray & data, const char * format = 0 )
 */
@@ -1348,7 +1268,6 @@ HB_FUNC_STATIC( QIMAGE_FROMDATA2 )
 {
   QImage * ptr = new QImage( QImage::fromData ( *PQBYTEARRAY(1), (const char *) ISNIL(2)? 0 : hb_parc(2) ) );
   _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );}
-
 
 //[1]QImage fromData ( const uchar * data, int size, const char * format = 0 )
 //[2]QImage fromData ( const QByteArray & data, const char * format = 0 )
@@ -1365,7 +1284,6 @@ HB_FUNC_STATIC( QIMAGE_FROMDATA )
   }
 }
 
-
 /*
 QTransform trueMatrix ( const QTransform & matrix, int width, int height )
 */
@@ -1375,7 +1293,6 @@ HB_FUNC_STATIC( QIMAGE_TRUEMATRIX2 )
   int par3 = hb_parni(3);
   QTransform * ptr = new QTransform( QImage::trueMatrix ( *PQTRANSFORM(1), par2, par3 ) );
   _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );}
-
 
 //[1]QMatrix trueMatrix ( const QMatrix & matrix, int width, int height )
 //[2]QTransform trueMatrix ( const QTransform & matrix, int width, int height )
@@ -1387,7 +1304,5 @@ HB_FUNC_STATIC( QIMAGE_TRUEMATRIX )
     HB_FUNC_EXEC( QIMAGE_TRUEMATRIX2 );
   }
 }
-
-
 
 #pragma ENDDUMP

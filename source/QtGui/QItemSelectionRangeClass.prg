@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -43,11 +43,13 @@ CLASS QItemSelectionRange
    METHOD top
    METHOD topLeft
    METHOD width
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -75,7 +77,6 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QItemSelectionRange ( const QItemSelectionRange & other )
 */
@@ -84,7 +85,6 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW2 )
   QItemSelectionRange * o = new QItemSelectionRange ( *PQITEMSELECTIONRANGE(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 /*
 QItemSelectionRange ( const QModelIndex & topLeft, const QModelIndex & bottomRight )
@@ -95,7 +95,6 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QItemSelectionRange ( const QModelIndex & index )
 */
@@ -104,7 +103,6 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW4 )
   QItemSelectionRange * o = new QItemSelectionRange ( *PQMODELINDEX(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QItemSelectionRange ()
 //[2]QItemSelectionRange ( const QItemSelectionRange & other )
@@ -138,6 +136,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW )
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_DELETE )
 {
   QItemSelectionRange * obj = (QItemSelectionRange *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -147,9 +146,9 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 int bottom () const
@@ -162,7 +161,6 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_BOTTOM )
     RINT( obj->bottom () );
   }
 }
-
 
 /*
 QModelIndex bottomRight () const
@@ -177,7 +175,6 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_BOTTOMRIGHT )
   }
 }
 
-
 /*
 bool contains ( const QModelIndex & index ) const
 */
@@ -190,7 +187,6 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_CONTAINS1 )
   }
 }
 
-
 /*
 bool contains ( int row, int column, const QModelIndex & parentIndex ) const
 */
@@ -202,7 +198,6 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_CONTAINS2 )
     RBOOL( obj->contains ( PINT(1), PINT(2), *PQMODELINDEX(3) ) );
   }
 }
-
 
 //[1]bool contains ( const QModelIndex & index ) const
 //[2]bool contains ( int row, int column, const QModelIndex & parentIndex ) const
@@ -230,7 +225,6 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_HEIGHT )
     RINT( obj->height () );
   }
 }
-
 
 /*
 QModelIndexList indexes () const
@@ -275,7 +269,6 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_INDEXES )
   }
 }
 
-
 /*
 QItemSelectionRange intersected ( const QItemSelectionRange & other ) const
 */
@@ -289,7 +282,6 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_INTERSECTED )
   }
 }
 
-
 /*
 bool intersects ( const QItemSelectionRange & other ) const
 */
@@ -301,7 +293,6 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_INTERSECTS )
     RBOOL( obj->intersects ( *PQITEMSELECTIONRANGE(1) ) );
   }
 }
-
 
 /*
 bool isEmpty () const
@@ -315,7 +306,6 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_ISEMPTY )
   }
 }
 
-
 /*
 bool isValid () const
 */
@@ -328,7 +318,6 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_ISVALID )
   }
 }
 
-
 /*
 int left () const
 */
@@ -340,7 +329,6 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_LEFT )
     RINT( obj->left () );
   }
 }
-
 
 /*
 const QAbstractItemModel * model () const
@@ -355,7 +343,6 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_MODEL )
   }
 }
 
-
 /*
 QModelIndex parent () const
 */
@@ -369,7 +356,6 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_PARENT )
   }
 }
 
-
 /*
 int right () const
 */
@@ -382,7 +368,6 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_RIGHT )
   }
 }
 
-
 /*
 int top () const
 */
@@ -394,7 +379,6 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_TOP )
     RINT( obj->top () );
   }
 }
-
 
 /*
 QModelIndex topLeft () const
@@ -409,7 +393,6 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_TOPLEFT )
   }
 }
 
-
 /*
 int width () const
 */
@@ -421,7 +404,6 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_WIDTH )
     RINT( obj->width () );
   }
 }
-
 
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEWFROM )
 {
@@ -477,7 +459,5 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

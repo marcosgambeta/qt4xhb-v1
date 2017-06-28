@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -28,6 +28,7 @@ CLASS QAccessibleWidget INHERIT QAccessibleObject
    METHOD state
    METHOD text
    METHOD userActionCount
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -56,8 +57,6 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
-
 /*
 virtual QString actionText ( int action, Text t, int child ) const
 */
@@ -69,7 +68,6 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_ACTIONTEXT )
     RQSTRING( obj->actionText ( PINT(1), (QAccessible::Text) hb_parni(2), PINT(3) ) );
   }
 }
-
 
 /*
 virtual int childAt ( int x, int y ) const
@@ -83,7 +81,6 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_CHILDAT )
   }
 }
 
-
 /*
 virtual int childCount () const
 */
@@ -95,7 +92,6 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_CHILDCOUNT )
     RINT( obj->childCount () );
   }
 }
-
 
 /*
 virtual bool doAction ( int action, int child, const QVariantList & params )
@@ -117,7 +113,6 @@ par3 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList3, 
   }
 }
 
-
 /*
 virtual int indexOfChild ( const QAccessibleInterface * child ) const
 */
@@ -130,8 +125,6 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_INDEXOFCHILD )
     RINT( obj->indexOfChild ( par1 ) );
   }
 }
-
-
 
 /*
 virtual QRect rect ( int child ) const
@@ -146,7 +139,6 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_RECT )
   }
 }
 
-
 /*
 virtual Relation relationTo ( int child, const QAccessibleInterface * other, int otherChild ) const
 */
@@ -160,7 +152,6 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_RELATIONTO )
   }
 }
 
-
 /*
 virtual Role role ( int child ) const
 */
@@ -172,7 +163,6 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_ROLE )
     hb_retni( (int) obj->role ( PINT(1) ) );
   }
 }
-
 
 /*
 virtual State state ( int child ) const
@@ -186,7 +176,6 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_STATE )
   }
 }
 
-
 /*
 virtual QString text ( Text t, int child ) const
 */
@@ -199,7 +188,6 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_TEXT )
   }
 }
 
-
 /*
 virtual int userActionCount ( int child ) const
 */
@@ -211,8 +199,5 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_USERACTIONCOUNT )
     RINT( obj->userActionCount ( PINT(1) ) );
   }
 }
-
-
-
 
 #pragma ENDDUMP

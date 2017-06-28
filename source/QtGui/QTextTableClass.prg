@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -40,6 +40,7 @@ CLASS QTextTable INHERIT QTextFrame
    METHOD rows
    METHOD setFormat
    METHOD splitCell
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -63,6 +64,7 @@ RETURN
 HB_FUNC_STATIC( QTEXTTABLE_DELETE )
 {
   QTextTable * obj = (QTextTable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -72,9 +74,9 @@ HB_FUNC_STATIC( QTEXTTABLE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void appendColumns ( int count )
@@ -89,7 +91,6 @@ HB_FUNC_STATIC( QTEXTTABLE_APPENDCOLUMNS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void appendRows ( int count )
 */
@@ -102,7 +103,6 @@ HB_FUNC_STATIC( QTEXTTABLE_APPENDROWS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QTextTableCell cellAt ( int row, int column ) const
@@ -117,7 +117,6 @@ HB_FUNC_STATIC( QTEXTTABLE_CELLAT1 )
   }
 }
 
-
 /*
 QTextTableCell cellAt ( int position ) const
 */
@@ -131,7 +130,6 @@ HB_FUNC_STATIC( QTEXTTABLE_CELLAT2 )
   }
 }
 
-
 /*
 QTextTableCell cellAt ( const QTextCursor & cursor ) const
 */
@@ -144,7 +142,6 @@ HB_FUNC_STATIC( QTEXTTABLE_CELLAT3 )
     _qt4xhb_createReturnClass ( ptr, "QTEXTTABLECELL" );
   }
 }
-
 
 //[1]QTextTableCell cellAt ( int row, int column ) const
 //[2]QTextTableCell cellAt ( int position ) const
@@ -178,7 +175,6 @@ HB_FUNC_STATIC( QTEXTTABLE_COLUMNS )
   }
 }
 
-
 /*
 QTextTableFormat format () const
 */
@@ -191,7 +187,6 @@ HB_FUNC_STATIC( QTEXTTABLE_FORMAT )
     _qt4xhb_createReturnClass ( ptr, "QTEXTTABLEFORMAT" );
   }
 }
-
 
 /*
 void insertColumns ( int index, int columns )
@@ -206,7 +201,6 @@ HB_FUNC_STATIC( QTEXTTABLE_INSERTCOLUMNS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void insertRows ( int index, int rows )
 */
@@ -219,7 +213,6 @@ HB_FUNC_STATIC( QTEXTTABLE_INSERTROWS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void mergeCells ( int row, int column, int numRows, int numCols )
@@ -234,7 +227,6 @@ HB_FUNC_STATIC( QTEXTTABLE_MERGECELLS1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void mergeCells ( const QTextCursor & cursor )
 */
@@ -247,7 +239,6 @@ HB_FUNC_STATIC( QTEXTTABLE_MERGECELLS2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void mergeCells ( int row, int column, int numRows, int numCols )
 //[2]void mergeCells ( const QTextCursor & cursor )
@@ -277,7 +268,6 @@ HB_FUNC_STATIC( QTEXTTABLE_REMOVECOLUMNS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void removeRows ( int index, int rows )
 */
@@ -290,7 +280,6 @@ HB_FUNC_STATIC( QTEXTTABLE_REMOVEROWS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void resize ( int rows, int columns )
@@ -305,7 +294,6 @@ HB_FUNC_STATIC( QTEXTTABLE_RESIZE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QTextCursor rowEnd ( const QTextCursor & cursor ) const
 */
@@ -318,7 +306,6 @@ HB_FUNC_STATIC( QTEXTTABLE_ROWEND )
     _qt4xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
   }
 }
-
 
 /*
 QTextCursor rowStart ( const QTextCursor & cursor ) const
@@ -333,7 +320,6 @@ HB_FUNC_STATIC( QTEXTTABLE_ROWSTART )
   }
 }
 
-
 /*
 int rows () const
 */
@@ -345,7 +331,6 @@ HB_FUNC_STATIC( QTEXTTABLE_ROWS )
     RINT( obj->rows () );
   }
 }
-
 
 /*
 void setFormat ( const QTextTableFormat & format )
@@ -360,7 +345,6 @@ HB_FUNC_STATIC( QTEXTTABLE_SETFORMAT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void splitCell ( int row, int column, int numRows, int numCols )
 */
@@ -373,8 +357,5 @@ HB_FUNC_STATIC( QTEXTTABLE_SPLITCELL )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
 
 #pragma ENDDUMP

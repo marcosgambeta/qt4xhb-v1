@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -23,6 +23,7 @@ CLASS QSplitterHandle INHERIT QWidget
    METHOD setOrientation
    METHOD splitter
    METHOD sizeHint
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -50,8 +51,6 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
-
 /*
 bool opaqueResize () const
 */
@@ -64,7 +63,6 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_OPAQUERESIZE )
   }
 }
 
-
 /*
 Qt::Orientation orientation () const
 */
@@ -76,7 +74,6 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_ORIENTATION )
     RENUM( obj->orientation () );
   }
 }
-
 
 /*
 void setOrientation ( Qt::Orientation orientation )
@@ -91,7 +88,6 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_SETORIENTATION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QSplitter * splitter () const
 */
@@ -105,7 +101,6 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_SPLITTER )
   }
 }
 
-
 /*
 virtual QSize sizeHint () const
 */
@@ -118,9 +113,5 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_SIZEHINT )
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
-
-
-
-
 
 #pragma ENDDUMP

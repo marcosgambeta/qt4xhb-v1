@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -55,11 +55,13 @@ CLASS QRawFont
    METHOD weight
    METHOD xHeight
    METHOD fromFont
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -89,7 +91,6 @@ HB_FUNC_STATIC( QRAWFONT_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QRawFont ( const QString & fileName, qreal pixelSize, QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting )
 */
@@ -99,7 +100,6 @@ HB_FUNC_STATIC( QRAWFONT_NEW2 )
   QRawFont * o = new QRawFont ( PQSTRING(1), PQREAL(2), (QFont::HintingPreference) par3 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QRawFont ( const QByteArray & fontData, qreal pixelSize, QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting )
@@ -111,7 +111,6 @@ HB_FUNC_STATIC( QRAWFONT_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QRawFont ( const QRawFont & other )
 */
@@ -120,7 +119,6 @@ HB_FUNC_STATIC( QRAWFONT_NEW4 )
   QRawFont * o = new QRawFont ( *PQRAWFONT(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QRawFont ()
 //[2]QRawFont ( const QString & fileName, qreal pixelSize, QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting )
@@ -154,6 +152,7 @@ HB_FUNC_STATIC( QRAWFONT_NEW )
 HB_FUNC_STATIC( QRAWFONT_DELETE )
 {
   QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -163,9 +162,9 @@ HB_FUNC_STATIC( QRAWFONT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QVector<QPointF> advancesForGlyphIndexes ( const QVector<quint32> & glyphIndexes ) const
@@ -220,8 +219,6 @@ par1 << temp1;
   }
 }
 
-
-
 //[1]QVector<QPointF> advancesForGlyphIndexes ( const QVector<quint32> & glyphIndexes ) const
 //[2]bool advancesForGlyphIndexes ( const quint32 * glyphIndexes, QPointF * advances, int numGlyphs ) const
 
@@ -245,7 +242,6 @@ HB_FUNC_STATIC( QRAWFONT_ALPHAMAPFORGLYPH )
   }
 }
 
-
 /*
 qreal ascent () const
 */
@@ -257,7 +253,6 @@ HB_FUNC_STATIC( QRAWFONT_ASCENT )
     RQREAL( obj->ascent () );
   }
 }
-
 
 /*
 qreal averageCharWidth () const
@@ -271,7 +266,6 @@ HB_FUNC_STATIC( QRAWFONT_AVERAGECHARWIDTH )
   }
 }
 
-
 /*
 qreal descent () const
 */
@@ -283,7 +277,6 @@ HB_FUNC_STATIC( QRAWFONT_DESCENT )
     RQREAL( obj->descent () );
   }
 }
-
 
 /*
 QString familyName () const
@@ -297,7 +290,6 @@ HB_FUNC_STATIC( QRAWFONT_FAMILYNAME )
   }
 }
 
-
 /*
 QByteArray fontTable ( const char * tagName ) const
 */
@@ -310,8 +302,6 @@ HB_FUNC_STATIC( QRAWFONT_FONTTABLE )
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
-
 
 /*
 QVector<quint32> glyphIndexesForString ( const QString & text ) const
@@ -335,7 +325,6 @@ HB_FUNC_STATIC( QRAWFONT_GLYPHINDEXESFORSTRING )
   }
 }
 
-
 /*
 QFont::HintingPreference hintingPreference () const
 */
@@ -347,7 +336,6 @@ HB_FUNC_STATIC( QRAWFONT_HINTINGPREFERENCE )
     hb_retni( (int) obj->hintingPreference () );
   }
 }
-
 
 /*
 bool isValid () const
@@ -361,7 +349,6 @@ HB_FUNC_STATIC( QRAWFONT_ISVALID )
   }
 }
 
-
 /*
 qreal leading () const
 */
@@ -373,7 +360,6 @@ HB_FUNC_STATIC( QRAWFONT_LEADING )
     RQREAL( obj->leading () );
   }
 }
-
 
 /*
 void loadFromData ( const QByteArray & fontData, qreal pixelSize, QFont::HintingPreference hintingPreference )
@@ -389,7 +375,6 @@ HB_FUNC_STATIC( QRAWFONT_LOADFROMDATA )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void loadFromFile ( const QString & fileName, qreal pixelSize, QFont::HintingPreference hintingPreference )
 */
@@ -404,7 +389,6 @@ HB_FUNC_STATIC( QRAWFONT_LOADFROMFILE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 qreal maxCharWidth () const
 */
@@ -416,7 +400,6 @@ HB_FUNC_STATIC( QRAWFONT_MAXCHARWIDTH )
     RQREAL( obj->maxCharWidth () );
   }
 }
-
 
 /*
 QPainterPath pathForGlyph ( quint32 glyphIndex ) const
@@ -431,7 +414,6 @@ HB_FUNC_STATIC( QRAWFONT_PATHFORGLYPH )
   }
 }
 
-
 /*
 qreal pixelSize () const
 */
@@ -443,7 +425,6 @@ HB_FUNC_STATIC( QRAWFONT_PIXELSIZE )
     RQREAL( obj->pixelSize () );
   }
 }
-
 
 /*
 void setPixelSize ( qreal pixelSize )
@@ -458,7 +439,6 @@ HB_FUNC_STATIC( QRAWFONT_SETPIXELSIZE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QFont::Style style () const
 */
@@ -471,7 +451,6 @@ HB_FUNC_STATIC( QRAWFONT_STYLE )
   }
 }
 
-
 /*
 QString styleName () const
 */
@@ -483,7 +462,6 @@ HB_FUNC_STATIC( QRAWFONT_STYLENAME )
     RQSTRING( obj->styleName () );
   }
 }
-
 
 /*
 QList<QFontDatabase::WritingSystem> supportedWritingSystems () const
@@ -507,7 +485,6 @@ HB_FUNC_STATIC( QRAWFONT_SUPPORTEDWRITINGSYSTEMS )
   }
 }
 
-
 /*
 bool supportsCharacter ( QChar character ) const
 */
@@ -521,7 +498,6 @@ HB_FUNC_STATIC( QRAWFONT_SUPPORTSCHARACTER1 )
   }
 }
 
-
 /*
 bool supportsCharacter ( quint32 ucs4 ) const
 */
@@ -533,7 +509,6 @@ HB_FUNC_STATIC( QRAWFONT_SUPPORTSCHARACTER2 )
     RBOOL( obj->supportsCharacter ( PQUINT32(1) ) );
   }
 }
-
 
 //[1]bool supportsCharacter ( QChar character ) const
 //[2]bool supportsCharacter ( quint32 ucs4 ) const
@@ -562,7 +537,6 @@ HB_FUNC_STATIC( QRAWFONT_UNITSPEREM )
   }
 }
 
-
 /*
 int weight () const
 */
@@ -574,7 +548,6 @@ HB_FUNC_STATIC( QRAWFONT_WEIGHT )
     RINT( obj->weight () );
   }
 }
-
 
 /*
 qreal xHeight () const
@@ -588,8 +561,6 @@ HB_FUNC_STATIC( QRAWFONT_XHEIGHT )
   }
 }
 
-
-
 /*
 QRawFont fromFont ( const QFont & font, QFontDatabase::WritingSystem writingSystem = QFontDatabase::Any )
 */
@@ -599,7 +570,6 @@ HB_FUNC_STATIC( QRAWFONT_FROMFONT )
   QRawFont * ptr = new QRawFont( QRawFont::fromFont ( *PQFONT(1), (QFontDatabase::WritingSystem) par2 ) );
   _qt4xhb_createReturnClass ( ptr, "QRAWFONT", true );
 }
-
 
 HB_FUNC_STATIC( QRAWFONT_NEWFROM )
 {
@@ -655,6 +625,5 @@ HB_FUNC_STATIC( QRAWFONT_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

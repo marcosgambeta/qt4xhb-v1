@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -30,12 +30,14 @@ CLASS QButtonGroup INHERIT QObject
    METHOD removeButton
    METHOD setExclusive
    METHOD setId
+
    METHOD onButtonClicked1
    METHOD onButtonClicked2
    METHOD onButtonPressed1
    METHOD onButtonPressed2
    METHOD onButtonReleased1
    METHOD onButtonReleased2
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -63,10 +65,10 @@ HB_FUNC_STATIC( QBUTTONGROUP_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QBUTTONGROUP_DELETE )
 {
   QButtonGroup * obj = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -76,9 +78,9 @@ HB_FUNC_STATIC( QBUTTONGROUP_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void addButton ( QAbstractButton * button )
@@ -94,7 +96,6 @@ HB_FUNC_STATIC( QBUTTONGROUP_ADDBUTTON1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void addButton ( QAbstractButton * button, int id )
 */
@@ -109,7 +110,6 @@ HB_FUNC_STATIC( QBUTTONGROUP_ADDBUTTON2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void addButton ( QAbstractButton * button )
 //[2]void addButton ( QAbstractButton * button, int id )
@@ -138,7 +138,6 @@ HB_FUNC_STATIC( QBUTTONGROUP_BUTTON )
     _qt4xhb_createReturnClass ( ptr, "QABSTRACTBUTTON" );
   }
 }
-
 
 /*
 QList<QAbstractButton *> buttons () const
@@ -183,7 +182,6 @@ HB_FUNC_STATIC( QBUTTONGROUP_BUTTONS )
   }
 }
 
-
 /*
 QAbstractButton * checkedButton () const
 */
@@ -197,7 +195,6 @@ HB_FUNC_STATIC( QBUTTONGROUP_CHECKEDBUTTON )
   }
 }
 
-
 /*
 int checkedId () const
 */
@@ -209,7 +206,6 @@ HB_FUNC_STATIC( QBUTTONGROUP_CHECKEDID )
     RINT( obj->checkedId () );
   }
 }
-
 
 /*
 bool exclusive () const
@@ -223,7 +219,6 @@ HB_FUNC_STATIC( QBUTTONGROUP_EXCLUSIVE )
   }
 }
 
-
 /*
 int id ( QAbstractButton * button ) const
 */
@@ -236,7 +231,6 @@ HB_FUNC_STATIC( QBUTTONGROUP_ID )
     RINT( obj->id ( par1 ) );
   }
 }
-
 
 /*
 void removeButton ( QAbstractButton * button )
@@ -252,7 +246,6 @@ HB_FUNC_STATIC( QBUTTONGROUP_REMOVEBUTTON )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setExclusive ( bool )
 */
@@ -265,7 +258,6 @@ HB_FUNC_STATIC( QBUTTONGROUP_SETEXCLUSIVE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setId ( QAbstractButton * button, int id )
@@ -281,9 +273,5 @@ HB_FUNC_STATIC( QBUTTONGROUP_SETID )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -31,11 +31,13 @@ CLASS QPaintDevice
    METHOD physicalDpiY
    METHOD width
    METHOD widthMM
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -57,6 +59,7 @@ RETURN
 HB_FUNC_STATIC( QPAINTDEVICE_DELETE )
 {
   QPaintDevice * obj = (QPaintDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -66,9 +69,9 @@ HB_FUNC_STATIC( QPAINTDEVICE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 int colorCount () const
@@ -82,7 +85,6 @@ HB_FUNC_STATIC( QPAINTDEVICE_COLORCOUNT )
   }
 }
 
-
 /*
 int depth () const
 */
@@ -94,7 +96,6 @@ HB_FUNC_STATIC( QPAINTDEVICE_DEPTH )
     RINT( obj->depth () );
   }
 }
-
 
 /*
 int height () const
@@ -108,7 +109,6 @@ HB_FUNC_STATIC( QPAINTDEVICE_HEIGHT )
   }
 }
 
-
 /*
 int heightMM () const
 */
@@ -120,7 +120,6 @@ HB_FUNC_STATIC( QPAINTDEVICE_HEIGHTMM )
     RINT( obj->heightMM () );
   }
 }
-
 
 /*
 int logicalDpiX () const
@@ -134,7 +133,6 @@ HB_FUNC_STATIC( QPAINTDEVICE_LOGICALDPIX )
   }
 }
 
-
 /*
 int logicalDpiY () const
 */
@@ -147,7 +145,6 @@ HB_FUNC_STATIC( QPAINTDEVICE_LOGICALDPIY )
   }
 }
 
-
 /*
 int numColors () const (deprecated)
 */
@@ -159,7 +156,6 @@ HB_FUNC_STATIC( QPAINTDEVICE_NUMCOLORS )
     RINT( obj->numColors () );
   }
 }
-
 
 /*
 virtual QPaintEngine * paintEngine () const = 0
@@ -174,7 +170,6 @@ HB_FUNC_STATIC( QPAINTDEVICE_PAINTENGINE )
   }
 }
 
-
 /*
 bool paintingActive () const
 */
@@ -186,7 +181,6 @@ HB_FUNC_STATIC( QPAINTDEVICE_PAINTINGACTIVE )
     RBOOL( obj->paintingActive () );
   }
 }
-
 
 /*
 int physicalDpiX () const
@@ -200,7 +194,6 @@ HB_FUNC_STATIC( QPAINTDEVICE_PHYSICALDPIX )
   }
 }
 
-
 /*
 int physicalDpiY () const
 */
@@ -212,7 +205,6 @@ HB_FUNC_STATIC( QPAINTDEVICE_PHYSICALDPIY )
     RINT( obj->physicalDpiY () );
   }
 }
-
 
 /*
 int width () const
@@ -226,7 +218,6 @@ HB_FUNC_STATIC( QPAINTDEVICE_WIDTH )
   }
 }
 
-
 /*
 int widthMM () const
 */
@@ -238,7 +229,6 @@ HB_FUNC_STATIC( QPAINTDEVICE_WIDTHMM )
     RINT( obj->widthMM () );
   }
 }
-
 
 HB_FUNC_STATIC( QPAINTDEVICE_NEWFROM )
 {
@@ -294,7 +284,5 @@ HB_FUNC_STATIC( QPAINTDEVICE_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

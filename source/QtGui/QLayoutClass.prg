@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -59,6 +59,7 @@ CLASS QLayout INHERIT QObject,QLayoutItem
    METHOD layout
    METHOD setGeometry
    METHOD closestAcceptableSize
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -76,8 +77,6 @@ RETURN
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
-
-
 
 //[1]QLayout ( QWidget * parent )
 //[2]QLayout ()
@@ -98,7 +97,6 @@ RETURN
 //  }
 // }
 
-
 /*
 bool activate ()
 */
@@ -110,7 +108,6 @@ HB_FUNC_STATIC( QLAYOUT_ACTIVATE )
     RBOOL( obj->activate () );
   }
 }
-
 
 /*
 virtual void addItem ( QLayoutItem * item ) = 0
@@ -126,7 +123,6 @@ HB_FUNC_STATIC( QLAYOUT_ADDITEM )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void addWidget ( QWidget * w )
 */
@@ -139,7 +135,6 @@ HB_FUNC_STATIC( QLAYOUT_ADDWIDGET )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QMargins contentsMargins () const
@@ -154,7 +149,6 @@ HB_FUNC_STATIC( QLAYOUT_CONTENTSMARGINS )
   }
 }
 
-
 /*
 QRect contentsRect () const
 */
@@ -168,7 +162,6 @@ HB_FUNC_STATIC( QLAYOUT_CONTENTSRECT )
   }
 }
 
-
 /*
 virtual int count () const = 0
 */
@@ -181,7 +174,6 @@ HB_FUNC_STATIC( QLAYOUT_COUNT )
   }
 }
 
-
 /*
 virtual Qt::Orientations expandingDirections () const
 */
@@ -193,7 +185,6 @@ HB_FUNC_STATIC( QLAYOUT_EXPANDINGDIRECTIONS )
     hb_retni( (int) obj->expandingDirections () );
   }
 }
-
 
 /*
 void getContentsMargins ( int * left, int * top, int * right, int * bottom ) const
@@ -216,7 +207,6 @@ HB_FUNC_STATIC( QLAYOUT_GETCONTENTSMARGINS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual int indexOf ( QWidget * widget ) const
 */
@@ -229,7 +219,6 @@ HB_FUNC_STATIC( QLAYOUT_INDEXOF )
   }
 }
 
-
 /*
 bool isEnabled () const
 */
@@ -241,7 +230,6 @@ HB_FUNC_STATIC( QLAYOUT_ISENABLED )
     RBOOL( obj->isEnabled () );
   }
 }
-
 
 /*
 virtual QLayoutItem * itemAt ( int index ) const = 0
@@ -256,7 +244,6 @@ HB_FUNC_STATIC( QLAYOUT_ITEMAT )
   }
 }
 
-
 /*
 virtual QSize maximumSize () const
 */
@@ -269,7 +256,6 @@ HB_FUNC_STATIC( QLAYOUT_MAXIMUMSIZE )
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
-
 
 /*
 QWidget * menuBar () const
@@ -284,7 +270,6 @@ HB_FUNC_STATIC( QLAYOUT_MENUBAR )
   }
 }
 
-
 /*
 virtual QSize minimumSize () const
 */
@@ -298,7 +283,6 @@ HB_FUNC_STATIC( QLAYOUT_MINIMUMSIZE )
   }
 }
 
-
 /*
 QWidget * parentWidget () const
 */
@@ -311,7 +295,6 @@ HB_FUNC_STATIC( QLAYOUT_PARENTWIDGET )
     _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
-
 
 /*
 void removeItem ( QLayoutItem * item )
@@ -327,7 +310,6 @@ HB_FUNC_STATIC( QLAYOUT_REMOVEITEM )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void removeWidget ( QWidget * widget )
 */
@@ -341,7 +323,6 @@ HB_FUNC_STATIC( QLAYOUT_REMOVEWIDGET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool setAlignment ( QWidget * w, Qt::Alignment alignment )
 */
@@ -354,7 +335,6 @@ HB_FUNC_STATIC( QLAYOUT_SETALIGNMENT1 )
     RBOOL( obj->setAlignment ( PQWIDGET(1), (Qt::Alignment) par2 ) );
   }
 }
-
 
 /*
 void setAlignment ( Qt::Alignment alignment )
@@ -370,7 +350,6 @@ HB_FUNC_STATIC( QLAYOUT_SETALIGNMENT2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool setAlignment ( QLayout * l, Qt::Alignment alignment )
 */
@@ -383,7 +362,6 @@ HB_FUNC_STATIC( QLAYOUT_SETALIGNMENT3 )
     RBOOL( obj->setAlignment ( PQLAYOUT(1), (Qt::Alignment) par2 ) );
   }
 }
-
 
 //[1]bool setAlignment ( QWidget * w, Qt::Alignment alignment )
 //[2]void setAlignment ( Qt::Alignment alignment )
@@ -418,7 +396,6 @@ HB_FUNC_STATIC( QLAYOUT_SETCONTENTSMARGINS1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setContentsMargins ( const QMargins & margins )
 */
@@ -431,7 +408,6 @@ HB_FUNC_STATIC( QLAYOUT_SETCONTENTSMARGINS2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setContentsMargins ( int left, int top, int right, int bottom )
 //[2]void setContentsMargins ( const QMargins & margins )
@@ -461,7 +437,6 @@ HB_FUNC_STATIC( QLAYOUT_SETENABLED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setMenuBar ( QWidget * widget )
 */
@@ -474,7 +449,6 @@ HB_FUNC_STATIC( QLAYOUT_SETMENUBAR )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setSizeConstraint ( SizeConstraint )
@@ -490,7 +464,6 @@ HB_FUNC_STATIC( QLAYOUT_SETSIZECONSTRAINT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setSpacing ( int )
 */
@@ -504,7 +477,6 @@ HB_FUNC_STATIC( QLAYOUT_SETSPACING )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 SizeConstraint sizeConstraint () const
 */
@@ -517,7 +489,6 @@ HB_FUNC_STATIC( QLAYOUT_SIZECONSTRAINT )
   }
 }
 
-
 /*
 int spacing () const
 */
@@ -529,7 +500,6 @@ HB_FUNC_STATIC( QLAYOUT_SPACING )
     RINT( obj->spacing () );
   }
 }
-
 
 /*
 virtual QLayoutItem * takeAt ( int index ) = 0
@@ -544,7 +514,6 @@ HB_FUNC_STATIC( QLAYOUT_TAKEAT )
   }
 }
 
-
 /*
 void update ()
 */
@@ -557,8 +526,6 @@ HB_FUNC_STATIC( QLAYOUT_UPDATE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
 
 /*
 virtual QRect geometry () const
@@ -573,7 +540,6 @@ HB_FUNC_STATIC( QLAYOUT_GEOMETRY )
   }
 }
 
-
 /*
 virtual void invalidate ()
 */
@@ -587,7 +553,6 @@ HB_FUNC_STATIC( QLAYOUT_INVALIDATE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual bool isEmpty () const
 */
@@ -599,7 +564,6 @@ HB_FUNC_STATIC( QLAYOUT_ISEMPTY )
     RBOOL( obj->isEmpty () );
   }
 }
-
 
 /*
 virtual QLayout * layout ()
@@ -614,9 +578,6 @@ HB_FUNC_STATIC( QLAYOUT_LAYOUT )
   }
 }
 
-
-
-
 /*
 virtual void setGeometry ( const QRect & r )
 */
@@ -630,8 +591,6 @@ HB_FUNC_STATIC( QLAYOUT_SETGEOMETRY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 QSize closestAcceptableSize ( const QWidget * widget, const QSize & size )
 */
@@ -641,8 +600,5 @@ HB_FUNC_STATIC( QLAYOUT_CLOSESTACCEPTABLESIZE )
   QSize * ptr = new QSize( QLayout::closestAcceptableSize ( par1, *PQSIZE(2) ) );
   _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
 }
-
-
-
 
 #pragma ENDDUMP

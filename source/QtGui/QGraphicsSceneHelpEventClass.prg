@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -20,6 +20,7 @@ CLASS QGraphicsSceneHelpEvent INHERIT QGraphicsSceneEvent
    METHOD delete
    METHOD scenePos
    METHOD screenPos
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -41,6 +42,7 @@ RETURN
 HB_FUNC_STATIC( QGRAPHICSSCENEHELPEVENT_DELETE )
 {
   QGraphicsSceneHelpEvent * obj = (QGraphicsSceneHelpEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -50,9 +52,9 @@ HB_FUNC_STATIC( QGRAPHICSSCENEHELPEVENT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QPointF scenePos () const
@@ -67,7 +69,6 @@ HB_FUNC_STATIC( QGRAPHICSSCENEHELPEVENT_SCENEPOS )
   }
 }
 
-
 /*
 QPoint screenPos () const
 */
@@ -80,8 +81,5 @@ HB_FUNC_STATIC( QGRAPHICSSCENEHELPEVENT_SCREENPOS )
     _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
-
-
-
 
 #pragma ENDDUMP

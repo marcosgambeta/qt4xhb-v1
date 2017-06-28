@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -26,6 +26,7 @@ CLASS QGraphicsItemGroup INHERIT QGraphicsItem
    METHOD opaqueArea
    METHOD paint
    METHOD type
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -53,10 +54,10 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_DELETE )
 {
   QGraphicsItemGroup * obj = (QGraphicsItemGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -66,9 +67,9 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void addToGroup ( QGraphicsItem * item )
@@ -83,7 +84,6 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_ADDTOGROUP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void removeFromGroup ( QGraphicsItem * item )
 */
@@ -96,7 +96,6 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_REMOVEFROMGROUP )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual QRectF boundingRect () const
@@ -111,7 +110,6 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_BOUNDINGRECT )
   }
 }
 
-
 /*
 virtual bool isObscuredBy ( const QGraphicsItem * item ) const
 */
@@ -125,7 +123,6 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_ISOBSCUREDBY )
   }
 }
 
-
 /*
 virtual QPainterPath opaqueArea () const
 */
@@ -138,7 +135,6 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_OPAQUEAREA )
     _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
-
 
 /*
 virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
@@ -154,7 +150,6 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_PAINT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual int type () const
 */
@@ -166,8 +161,5 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_TYPE )
     RINT( obj->type () );
   }
 }
-
-
-
 
 #pragma ENDDUMP

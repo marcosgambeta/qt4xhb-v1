@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -33,8 +33,10 @@ CLASS QShortcut INHERIT QObject
    METHOD setKey
    METHOD setWhatsThis
    METHOD whatsThis
+
    METHOD onActivated
    METHOD onActivatedAmbiguously
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -62,7 +64,6 @@ HB_FUNC_STATIC( QSHORTCUT_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QShortcut(const QKeySequence & key, QWidget * parent, const char * member = 0, const char * ambiguousMember = 0, Qt::ShortcutContext context = Qt::WindowShortcut)
 */
@@ -72,7 +73,6 @@ HB_FUNC_STATIC( QSHORTCUT_NEW2 )
   QShortcut * o = new QShortcut ( *PQKEYSEQUENCE(1), PQWIDGET(2), (const char *) ISNIL(3)? 0 : hb_parc(3), (const char *) ISNIL(4)? 0 : hb_parc(4), (Qt::ShortcutContext) par5 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QShortcut(QWidget * parent)
 //[2]QShortcut(const QKeySequence & key, QWidget * parent, const char * member = 0, const char * ambiguousMember = 0, Qt::ShortcutContext context = Qt::WindowShortcut)
@@ -96,6 +96,7 @@ HB_FUNC_STATIC( QSHORTCUT_NEW )
 HB_FUNC_STATIC( QSHORTCUT_DELETE )
 {
   QShortcut * obj = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -105,9 +106,9 @@ HB_FUNC_STATIC( QSHORTCUT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 bool autoRepeat() const
@@ -121,7 +122,6 @@ HB_FUNC_STATIC( QSHORTCUT_AUTOREPEAT )
   }
 }
 
-
 /*
 Qt::ShortcutContext context() const
 */
@@ -133,7 +133,6 @@ HB_FUNC_STATIC( QSHORTCUT_CONTEXT )
     hb_retni( (int) obj->context () );
   }
 }
-
 
 /*
 int id() const
@@ -147,7 +146,6 @@ HB_FUNC_STATIC( QSHORTCUT_ID )
   }
 }
 
-
 /*
 bool isEnabled() const
 */
@@ -159,7 +157,6 @@ HB_FUNC_STATIC( QSHORTCUT_ISENABLED )
     RBOOL( obj->isEnabled () );
   }
 }
-
 
 /*
 QKeySequence key() const
@@ -174,7 +171,6 @@ HB_FUNC_STATIC( QSHORTCUT_KEY )
   }
 }
 
-
 /*
 QWidget * parentWidget() const
 */
@@ -188,7 +184,6 @@ HB_FUNC_STATIC( QSHORTCUT_PARENTWIDGET )
   }
 }
 
-
 /*
 void setAutoRepeat(bool on)
 */
@@ -201,7 +196,6 @@ HB_FUNC_STATIC( QSHORTCUT_SETAUTOREPEAT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setContext(Qt::ShortcutContext context)
@@ -217,7 +211,6 @@ HB_FUNC_STATIC( QSHORTCUT_SETCONTEXT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setEnabled(bool enable)
 */
@@ -230,7 +223,6 @@ HB_FUNC_STATIC( QSHORTCUT_SETENABLED )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setKey(const QKeySequence & key)
@@ -245,7 +237,6 @@ HB_FUNC_STATIC( QSHORTCUT_SETKEY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setWhatsThis(const QString & text)
 */
@@ -259,7 +250,6 @@ HB_FUNC_STATIC( QSHORTCUT_SETWHATSTHIS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString whatsThis() const
 */
@@ -271,10 +261,5 @@ HB_FUNC_STATIC( QSHORTCUT_WHATSTHIS )
     RQSTRING( obj->whatsThis () );
   }
 }
-
-
-
-
-
 
 #pragma ENDDUMP

@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -44,6 +44,7 @@ CLASS QAbstractProxyModel INHERIT QAbstractItemModel
    METHOD span
    METHOD submit
    METHOD supportedDropActions
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -66,10 +67,10 @@ RETURN
 #include <QStringList>
 #include <QSize>
 
-
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_DELETE )
 {
   QAbstractProxyModel * obj = (QAbstractProxyModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -79,9 +80,9 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual QModelIndex mapFromSource ( const QModelIndex & sourceIndex ) const = 0
@@ -96,7 +97,6 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MAPFROMSOURCE )
   }
 }
 
-
 /*
 virtual QItemSelection mapSelectionFromSource ( const QItemSelection & sourceSelection ) const
 */
@@ -109,7 +109,6 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MAPSELECTIONFROMSOURCE )
     _qt4xhb_createReturnClass ( ptr, "QITEMSELECTION" );
   }
 }
-
 
 /*
 virtual QItemSelection mapSelectionToSource ( const QItemSelection & proxySelection ) const
@@ -124,7 +123,6 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MAPSELECTIONTOSOURCE )
   }
 }
 
-
 /*
 virtual QModelIndex mapToSource ( const QModelIndex & proxyIndex ) const = 0
 */
@@ -137,7 +135,6 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MAPTOSOURCE )
     _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
-
 
 /*
 virtual void setSourceModel ( QAbstractItemModel * sourceModel )
@@ -153,7 +150,6 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SETSOURCEMODEL )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QAbstractItemModel * sourceModel () const
 */
@@ -166,7 +162,6 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SOURCEMODEL )
     _qt4xhb_createReturnClass ( ptr, "QABSTRACTITEMMODEL" );
   }
 }
-
 
 /*
 virtual QModelIndex buddy ( const QModelIndex & index ) const
@@ -181,7 +176,6 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_BUDDY )
   }
 }
 
-
 /*
 virtual bool canFetchMore ( const QModelIndex & parent ) const
 */
@@ -193,7 +187,6 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_CANFETCHMORE )
     RBOOL( obj->canFetchMore ( *PQMODELINDEX(1) ) );
   }
 }
-
 
 /*
 virtual QVariant data ( const QModelIndex & proxyIndex, int role = Qt::DisplayRole ) const
@@ -208,7 +201,6 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_DATA )
   }
 }
 
-
 /*
 virtual void fetchMore ( const QModelIndex & parent )
 */
@@ -222,7 +214,6 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_FETCHMORE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual Qt::ItemFlags flags ( const QModelIndex & index ) const
 */
@@ -234,7 +225,6 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_FLAGS )
     hb_retni( (int) obj->flags ( *PQMODELINDEX(1) ) );
   }
 }
-
 
 /*
 virtual bool hasChildren ( const QModelIndex & parent = QModelIndex() ) const
@@ -249,7 +239,6 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_HASCHILDREN )
   }
 }
 
-
 /*
 virtual QVariant headerData ( int section, Qt::Orientation orientation, int role ) const
 */
@@ -262,8 +251,6 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_HEADERDATA )
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
-
-
 
 /*
 virtual QMimeData * mimeData ( const QModelIndexList & indexes ) const
@@ -279,7 +266,6 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MIMEDATA )
   }
 }
 
-
 /*
 virtual QStringList mimeTypes () const
 */
@@ -291,7 +277,6 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MIMETYPES )
     RQSTRINGLIST( obj->mimeTypes () );
   }
 }
-
 
 /*
 virtual void revert ()
@@ -306,7 +291,6 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_REVERT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual bool setData ( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
 */
@@ -319,7 +303,6 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SETDATA )
   }
 }
 
-
 /*
 virtual bool setHeaderData ( int section, Qt::Orientation orientation, const QVariant & value, int role = Qt::EditRole )
 */
@@ -331,8 +314,6 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SETHEADERDATA )
     RBOOL( obj->setHeaderData ( PINT(1), (Qt::Orientation) hb_parni(2), *PQVARIANT(3), OPINT(4,Qt::EditRole) ) );
   }
 }
-
-
 
 /*
 virtual void sort ( int column, Qt::SortOrder order = Qt::AscendingOrder )
@@ -348,7 +329,6 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SORT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QSize span ( const QModelIndex & index ) const
 */
@@ -362,7 +342,6 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SPAN )
   }
 }
 
-
 /*
 virtual bool submit ()
 */
@@ -375,7 +354,6 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SUBMIT )
   }
 }
 
-
 /*
 virtual Qt::DropActions supportedDropActions () const
 */
@@ -387,8 +365,5 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SUPPORTEDDROPACTIONS )
     hb_retni( (int) obj->supportedDropActions () );
   }
 }
-
-
-
 
 #pragma ENDDUMP

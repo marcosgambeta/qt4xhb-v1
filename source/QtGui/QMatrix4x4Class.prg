@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -75,11 +75,13 @@ CLASS QMatrix4x4
    METHOD translate3
    METHOD translate
    METHOD transposed
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -110,8 +112,6 @@ HB_FUNC_STATIC( QMATRIX4X4_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
-
 /*
 QMatrix4x4 ( qreal m11, qreal m12, qreal m13, qreal m14, qreal m21, qreal m22, qreal m23, qreal m24, qreal m31, qreal m32, qreal m33, qreal m34, qreal m41, qreal m42, qreal m43, qreal m44 )
 */
@@ -121,8 +121,6 @@ HB_FUNC_STATIC( QMATRIX4X4_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
-
 /*
 QMatrix4x4 ( const QTransform & transform )
 */
@@ -131,8 +129,6 @@ HB_FUNC_STATIC( QMATRIX4X4_NEW5 )
   QMatrix4x4 * o = new QMatrix4x4 ( *PQTRANSFORM(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
-
 
 //[1]QMatrix4x4 ()
 //[2]QMatrix4x4 ( const qreal * values )
@@ -170,6 +166,7 @@ HB_FUNC_STATIC( QMATRIX4X4_NEW )
 HB_FUNC_STATIC( QMATRIX4X4_DELETE )
 {
   QMatrix4x4 * obj = (QMatrix4x4 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -179,9 +176,9 @@ HB_FUNC_STATIC( QMATRIX4X4_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QVector4D column ( int index ) const
@@ -196,11 +193,6 @@ HB_FUNC_STATIC( QMATRIX4X4_COLUMN )
   }
 }
 
-
-
-
-
-
 /*
 qreal determinant () const
 */
@@ -212,7 +204,6 @@ HB_FUNC_STATIC( QMATRIX4X4_DETERMINANT )
     RQREAL( obj->determinant () );
   }
 }
-
 
 /*
 void fill ( qreal value )
@@ -227,7 +218,6 @@ HB_FUNC_STATIC( QMATRIX4X4_FILL )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void flipCoordinates ()
 */
@@ -241,7 +231,6 @@ HB_FUNC_STATIC( QMATRIX4X4_FLIPCOORDINATES )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void frustum ( qreal left, qreal right, qreal bottom, qreal top, qreal nearPlane, qreal farPlane )
 */
@@ -254,7 +243,6 @@ HB_FUNC_STATIC( QMATRIX4X4_FRUSTUM )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QMatrix4x4 inverted ( bool * invertible = 0 ) const
@@ -271,7 +259,6 @@ HB_FUNC_STATIC( QMATRIX4X4_INVERTED )
   }
 }
 
-
 /*
 bool isIdentity () const
 */
@@ -283,7 +270,6 @@ HB_FUNC_STATIC( QMATRIX4X4_ISIDENTITY )
     RBOOL( obj->isIdentity () );
   }
 }
-
 
 /*
 void lookAt ( const QVector3D & eye, const QVector3D & center, const QVector3D & up )
@@ -298,7 +284,6 @@ HB_FUNC_STATIC( QMATRIX4X4_LOOKAT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QPoint map ( const QPoint & point ) const
 */
@@ -311,7 +296,6 @@ HB_FUNC_STATIC( QMATRIX4X4_MAP1 )
     _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
-
 
 /*
 QPointF map ( const QPointF & point ) const
@@ -326,7 +310,6 @@ HB_FUNC_STATIC( QMATRIX4X4_MAP2 )
   }
 }
 
-
 /*
 QVector3D map ( const QVector3D & point ) const
 */
@@ -340,7 +323,6 @@ HB_FUNC_STATIC( QMATRIX4X4_MAP3 )
   }
 }
 
-
 /*
 QVector4D map ( const QVector4D & point ) const
 */
@@ -353,7 +335,6 @@ HB_FUNC_STATIC( QMATRIX4X4_MAP4 )
     _qt4xhb_createReturnClass ( ptr, "QVECTOR4D" );
   }
 }
-
 
 //[1]QPoint map ( const QPoint & point ) const
 //[2]QPointF map ( const QPointF & point ) const
@@ -393,7 +374,6 @@ HB_FUNC_STATIC( QMATRIX4X4_MAPRECT1 )
   }
 }
 
-
 /*
 QRectF mapRect ( const QRectF & rect ) const
 */
@@ -406,7 +386,6 @@ HB_FUNC_STATIC( QMATRIX4X4_MAPRECT2 )
     _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
-
 
 //[1]QRect mapRect ( const QRect & rect ) const
 //[2]QRectF mapRect ( const QRectF & rect ) const
@@ -436,7 +415,6 @@ HB_FUNC_STATIC( QMATRIX4X4_MAPVECTOR )
   }
 }
 
-
 /*
 QMatrix3x3 normalMatrix () const
 */
@@ -449,7 +427,6 @@ HB_FUNC_STATIC( QMATRIX4X4_NORMALMATRIX )
     _qt4xhb_createReturnClass ( ptr, "QMATRIX3X3" );
   }
 }
-
 
 /*
 void optimize ()
@@ -464,7 +441,6 @@ HB_FUNC_STATIC( QMATRIX4X4_OPTIMIZE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void ortho ( qreal left, qreal right, qreal bottom, qreal top, qreal nearPlane, qreal farPlane )
 */
@@ -477,7 +453,6 @@ HB_FUNC_STATIC( QMATRIX4X4_ORTHO1 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void ortho ( const QRect & rect )
@@ -492,7 +467,6 @@ HB_FUNC_STATIC( QMATRIX4X4_ORTHO2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void ortho ( const QRectF & rect )
 */
@@ -505,7 +479,6 @@ HB_FUNC_STATIC( QMATRIX4X4_ORTHO3 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void ortho ( qreal left, qreal right, qreal bottom, qreal top, qreal nearPlane, qreal farPlane )
 //[2]void ortho ( const QRect & rect )
@@ -540,7 +513,6 @@ HB_FUNC_STATIC( QMATRIX4X4_PERSPECTIVE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void rotate ( qreal angle, const QVector3D & vector )
 */
@@ -553,7 +525,6 @@ HB_FUNC_STATIC( QMATRIX4X4_ROTATE1 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void rotate ( const QQuaternion & quaternion )
@@ -568,7 +539,6 @@ HB_FUNC_STATIC( QMATRIX4X4_ROTATE2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void rotate ( qreal angle, qreal x, qreal y, qreal z = 0.0f )
 */
@@ -581,7 +551,6 @@ HB_FUNC_STATIC( QMATRIX4X4_ROTATE3 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void rotate ( qreal angle, const QVector3D & vector )
 //[2]void rotate ( const QQuaternion & quaternion )
@@ -616,7 +585,6 @@ HB_FUNC_STATIC( QMATRIX4X4_ROW )
   }
 }
 
-
 /*
 void scale ( const QVector3D & vector )
 */
@@ -629,7 +597,6 @@ HB_FUNC_STATIC( QMATRIX4X4_SCALE1 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void scale ( qreal x, qreal y )
@@ -644,7 +611,6 @@ HB_FUNC_STATIC( QMATRIX4X4_SCALE2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void scale ( qreal x, qreal y, qreal z )
 */
@@ -658,7 +624,6 @@ HB_FUNC_STATIC( QMATRIX4X4_SCALE3 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void scale ( qreal factor )
 */
@@ -671,7 +636,6 @@ HB_FUNC_STATIC( QMATRIX4X4_SCALE4 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void scale ( const QVector3D & vector )
 //[2]void scale ( qreal x, qreal y )
@@ -711,7 +675,6 @@ HB_FUNC_STATIC( QMATRIX4X4_SETCOLUMN )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setRow ( int index, const QVector4D & value )
 */
@@ -724,7 +687,6 @@ HB_FUNC_STATIC( QMATRIX4X4_SETROW )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setToIdentity ()
@@ -739,9 +701,6 @@ HB_FUNC_STATIC( QMATRIX4X4_SETTOIDENTITY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
-
 /*
 QTransform toTransform () const
 */
@@ -755,7 +714,6 @@ HB_FUNC_STATIC( QMATRIX4X4_TOTRANSFORM1 )
   }
 }
 
-
 /*
 QTransform toTransform ( qreal distanceToPlane ) const
 */
@@ -768,7 +726,6 @@ HB_FUNC_STATIC( QMATRIX4X4_TOTRANSFORM2 )
     _qt4xhb_createReturnClass ( ptr, "QTRANSFORM", true );
   }
 }
-
 
 //[1]QTransform toTransform () const
 //[2]QTransform toTransform ( qreal distanceToPlane ) const
@@ -798,7 +755,6 @@ HB_FUNC_STATIC( QMATRIX4X4_TRANSLATE1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void translate ( qreal x, qreal y )
 */
@@ -812,7 +768,6 @@ HB_FUNC_STATIC( QMATRIX4X4_TRANSLATE2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void translate ( qreal x, qreal y, qreal z )
 */
@@ -825,7 +780,6 @@ HB_FUNC_STATIC( QMATRIX4X4_TRANSLATE3 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void translate ( const QVector3D & vector )
 //[2]void translate ( qreal x, qreal y )
@@ -859,7 +813,6 @@ HB_FUNC_STATIC( QMATRIX4X4_TRANSPOSED )
     _qt4xhb_createReturnClass ( ptr, "QMATRIX4X4", true );
   }
 }
-
 
 HB_FUNC_STATIC( QMATRIX4X4_NEWFROM )
 {
@@ -915,6 +868,5 @@ HB_FUNC_STATIC( QMATRIX4X4_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

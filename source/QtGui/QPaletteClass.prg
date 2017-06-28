@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -66,11 +66,13 @@ CLASS QPalette
    METHOD toolTipText
    METHOD window
    METHOD windowText
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -98,7 +100,6 @@ HB_FUNC_STATIC( QPALETTE_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QPalette ( const QColor & button )
 */
@@ -109,7 +110,6 @@ HB_FUNC_STATIC( QPALETTE_NEW2 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QPalette ( Qt::GlobalColor button )
 */
@@ -118,7 +118,6 @@ HB_FUNC_STATIC( QPALETTE_NEW3 )
   QPalette * o = new QPalette ( (Qt::GlobalColor) hb_parni(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QPalette ( const QColor & button, const QColor & window )
@@ -131,7 +130,6 @@ HB_FUNC_STATIC( QPALETTE_NEW4 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QPalette ( const QBrush & windowText, const QBrush & button, const QBrush & light, const QBrush & dark, const QBrush & mid, const QBrush & text, const QBrush & bright_text, const QBrush & base, const QBrush & window )
 */
@@ -141,7 +139,6 @@ HB_FUNC_STATIC( QPALETTE_NEW5 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QPalette ( const QPalette & p )
 */
@@ -150,7 +147,6 @@ HB_FUNC_STATIC( QPALETTE_NEW6 )
   QPalette * o = new QPalette ( *PQPALETTE(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QPalette ()
 //[2]QPalette ( const QColor & button )
@@ -190,6 +186,7 @@ HB_FUNC_STATIC( QPALETTE_NEW )
 HB_FUNC_STATIC( QPALETTE_DELETE )
 {
   QPalette * obj = (QPalette *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -199,9 +196,9 @@ HB_FUNC_STATIC( QPALETTE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 const QBrush & alternateBase () const
@@ -216,7 +213,6 @@ HB_FUNC_STATIC( QPALETTE_ALTERNATEBASE )
   }
 }
 
-
 /*
 const QBrush & base () const
 */
@@ -230,7 +226,6 @@ HB_FUNC_STATIC( QPALETTE_BASE )
   }
 }
 
-
 /*
 const QBrush & brightText () const
 */
@@ -243,7 +238,6 @@ HB_FUNC_STATIC( QPALETTE_BRIGHTTEXT )
     _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
   }
 }
-
 
 /*
 const QBrush & brush ( ColorGroup group, ColorRole role ) const
@@ -260,7 +254,6 @@ HB_FUNC_STATIC( QPALETTE_BRUSH1 )
   }
 }
 
-
 /*
 const QBrush & brush ( ColorRole role ) const
 */
@@ -274,7 +267,6 @@ HB_FUNC_STATIC( QPALETTE_BRUSH2 )
     _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
   }
 }
-
 
 //[1]const QBrush & brush ( ColorGroup group, ColorRole role ) const
 //[2]const QBrush & brush ( ColorRole role ) const
@@ -304,7 +296,6 @@ HB_FUNC_STATIC( QPALETTE_BUTTON )
   }
 }
 
-
 /*
 const QBrush & buttonText () const
 */
@@ -318,7 +309,6 @@ HB_FUNC_STATIC( QPALETTE_BUTTONTEXT )
   }
 }
 
-
 /*
 qint64 cacheKey () const
 */
@@ -330,7 +320,6 @@ HB_FUNC_STATIC( QPALETTE_CACHEKEY )
     RQINT64( obj->cacheKey () );
   }
 }
-
 
 /*
 const QColor & color ( ColorGroup group, ColorRole role ) const
@@ -347,7 +336,6 @@ HB_FUNC_STATIC( QPALETTE_COLOR1 )
   }
 }
 
-
 /*
 const QColor & color ( ColorRole role ) const
 */
@@ -361,7 +349,6 @@ HB_FUNC_STATIC( QPALETTE_COLOR2 )
     _qt4xhb_createReturnClass ( ptr, "QCOLOR" );
   }
 }
-
 
 //[1]const QColor & color ( ColorGroup group, ColorRole role ) const
 //[2]const QColor & color ( ColorRole role ) const
@@ -390,7 +377,6 @@ HB_FUNC_STATIC( QPALETTE_CURRENTCOLORGROUP )
   }
 }
 
-
 /*
 const QBrush & dark () const
 */
@@ -403,7 +389,6 @@ HB_FUNC_STATIC( QPALETTE_DARK )
     _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
   }
 }
-
 
 /*
 const QBrush & highlight () const
@@ -418,7 +403,6 @@ HB_FUNC_STATIC( QPALETTE_HIGHLIGHT )
   }
 }
 
-
 /*
 const QBrush & highlightedText () const
 */
@@ -431,7 +415,6 @@ HB_FUNC_STATIC( QPALETTE_HIGHLIGHTEDTEXT )
     _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
   }
 }
-
 
 /*
 bool isBrushSet ( ColorGroup cg, ColorRole cr ) const
@@ -447,7 +430,6 @@ HB_FUNC_STATIC( QPALETTE_ISBRUSHSET )
   }
 }
 
-
 /*
 bool isCopyOf ( const QPalette & p ) const
 */
@@ -459,7 +441,6 @@ HB_FUNC_STATIC( QPALETTE_ISCOPYOF )
     RBOOL( obj->isCopyOf ( *PQPALETTE(1) ) );
   }
 }
-
 
 /*
 bool isEqual ( ColorGroup cg1, ColorGroup cg2 ) const
@@ -475,7 +456,6 @@ HB_FUNC_STATIC( QPALETTE_ISEQUAL )
   }
 }
 
-
 /*
 const QBrush & light () const
 */
@@ -488,7 +468,6 @@ HB_FUNC_STATIC( QPALETTE_LIGHT )
     _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
   }
 }
-
 
 /*
 const QBrush & link () const
@@ -503,7 +482,6 @@ HB_FUNC_STATIC( QPALETTE_LINK )
   }
 }
 
-
 /*
 const QBrush & linkVisited () const
 */
@@ -516,7 +494,6 @@ HB_FUNC_STATIC( QPALETTE_LINKVISITED )
     _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
   }
 }
-
 
 /*
 const QBrush & mid () const
@@ -531,7 +508,6 @@ HB_FUNC_STATIC( QPALETTE_MID )
   }
 }
 
-
 /*
 const QBrush & midlight () const
 */
@@ -545,7 +521,6 @@ HB_FUNC_STATIC( QPALETTE_MIDLIGHT )
   }
 }
 
-
 /*
 QPalette resolve ( const QPalette & other ) const
 */
@@ -558,7 +533,6 @@ HB_FUNC_STATIC( QPALETTE_RESOLVE )
     _qt4xhb_createReturnClass ( ptr, "QPALETTE", true );
   }
 }
-
 
 /*
 void setBrush ( ColorRole role, const QBrush & brush )
@@ -574,7 +548,6 @@ HB_FUNC_STATIC( QPALETTE_SETBRUSH1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setBrush ( ColorGroup group, ColorRole role, const QBrush & brush )
 */
@@ -589,7 +562,6 @@ HB_FUNC_STATIC( QPALETTE_SETBRUSH2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setBrush ( ColorRole role, const QBrush & brush )
 //[2]void setBrush ( ColorGroup group, ColorRole role, const QBrush & brush )
@@ -622,7 +594,6 @@ HB_FUNC_STATIC( QPALETTE_SETCOLOR1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setColor ( ColorRole role, const QColor & color )
 */
@@ -637,7 +608,6 @@ HB_FUNC_STATIC( QPALETTE_SETCOLOR2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setColor ( ColorGroup group, ColorRole role, const QColor & color )
 //[2]void setColor ( ColorRole role, const QColor & color )
@@ -668,7 +638,6 @@ HB_FUNC_STATIC( QPALETTE_SETCOLORGROUP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setCurrentColorGroup ( ColorGroup cg )
 */
@@ -683,7 +652,6 @@ HB_FUNC_STATIC( QPALETTE_SETCURRENTCOLORGROUP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 const QBrush & shadow () const
 */
@@ -696,7 +664,6 @@ HB_FUNC_STATIC( QPALETTE_SHADOW )
     _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
   }
 }
-
 
 /*
 const QBrush & text () const
@@ -711,7 +678,6 @@ HB_FUNC_STATIC( QPALETTE_TEXT )
   }
 }
 
-
 /*
 const QBrush & toolTipBase () const
 */
@@ -724,7 +690,6 @@ HB_FUNC_STATIC( QPALETTE_TOOLTIPBASE )
     _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
   }
 }
-
 
 /*
 const QBrush & toolTipText () const
@@ -739,7 +704,6 @@ HB_FUNC_STATIC( QPALETTE_TOOLTIPTEXT )
   }
 }
 
-
 /*
 const QBrush & window () const
 */
@@ -753,7 +717,6 @@ HB_FUNC_STATIC( QPALETTE_WINDOW )
   }
 }
 
-
 /*
 const QBrush & windowText () const
 */
@@ -766,7 +729,6 @@ HB_FUNC_STATIC( QPALETTE_WINDOWTEXT )
     _qt4xhb_createReturnClass ( ptr, "QBRUSH" );
   }
 }
-
 
 HB_FUNC_STATIC( QPALETTE_NEWFROM )
 {
@@ -822,6 +784,5 @@ HB_FUNC_STATIC( QPALETTE_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

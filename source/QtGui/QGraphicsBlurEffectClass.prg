@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -23,8 +23,10 @@ CLASS QGraphicsBlurEffect INHERIT QGraphicsWidget
    METHOD boundingRectFor
    METHOD setBlurHints
    METHOD setBlurRadius
+
    METHOD onBlurHintsChanged
    METHOD onBlurRadiusChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -52,10 +54,10 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_DELETE )
 {
   QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -65,9 +67,9 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 BlurHints blurHints () const
@@ -81,7 +83,6 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BLURHINTS )
   }
 }
 
-
 /*
 qreal blurRadius () const
 */
@@ -93,7 +94,6 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BLURRADIUS )
     RQREAL( obj->blurRadius () );
   }
 }
-
 
 /*
 virtual QRectF boundingRectFor ( const QRectF & rect ) const
@@ -107,7 +107,6 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BOUNDINGRECTFOR )
     _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
-
 
 /*
 void setBlurHints ( BlurHints hints )
@@ -123,7 +122,6 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_SETBLURHINTS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setBlurRadius ( qreal blurRadius )
 */
@@ -136,10 +134,5 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_SETBLURRADIUS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
-
 
 #pragma ENDDUMP

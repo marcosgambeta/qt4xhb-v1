@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -36,11 +36,13 @@ CLASS QCursor
    METHOD setPos1
    METHOD setPos2
    METHOD setPos
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -70,7 +72,6 @@ HB_FUNC_STATIC( QCURSOR_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QCursor ( Qt::CursorShape shape )
 */
@@ -79,7 +80,6 @@ HB_FUNC_STATIC( QCURSOR_NEW2 )
   QCursor * o = new QCursor ( (Qt::CursorShape) hb_parni(1));
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QCursor ( const QBitmap & bitmap, const QBitmap & mask, int hotX = -1, int hotY = -1 )
@@ -90,7 +90,6 @@ HB_FUNC_STATIC( QCURSOR_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QCursor ( const QPixmap & pixmap, int hotX = -1, int hotY = -1 )
 */
@@ -100,7 +99,6 @@ HB_FUNC_STATIC( QCURSOR_NEW4 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QCursor ( const QCursor & c )
 */
@@ -109,9 +107,6 @@ HB_FUNC_STATIC( QCURSOR_NEW5 )
   QCursor * o = new QCursor ( *PQCURSOR(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
-
-
 
 //[1]QCursor ()
 //[2]QCursor ( Qt::CursorShape shape )
@@ -152,6 +147,7 @@ HB_FUNC_STATIC( QCURSOR_NEW )
 HB_FUNC_STATIC( QCURSOR_DELETE )
 {
   QCursor * obj = (QCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -161,9 +157,9 @@ HB_FUNC_STATIC( QCURSOR_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 const QBitmap * bitmap () const
@@ -178,8 +174,6 @@ HB_FUNC_STATIC( QCURSOR_BITMAP )
   }
 }
 
-
-
 /*
 QPoint hotSpot () const
 */
@@ -192,7 +186,6 @@ HB_FUNC_STATIC( QCURSOR_HOTSPOT )
     _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
-
 
 /*
 const QBitmap * mask () const
@@ -207,7 +200,6 @@ HB_FUNC_STATIC( QCURSOR_MASK )
   }
 }
 
-
 /*
 QPixmap pixmap () const
 */
@@ -220,7 +212,6 @@ HB_FUNC_STATIC( QCURSOR_PIXMAP )
     _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
-
 
 /*
 void setShape ( Qt::CursorShape shape )
@@ -236,7 +227,6 @@ HB_FUNC_STATIC( QCURSOR_SETSHAPE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 Qt::CursorShape shape () const
 */
@@ -249,8 +239,6 @@ HB_FUNC_STATIC( QCURSOR_SHAPE )
   }
 }
 
-
-
 /*
 QPoint pos ()
 */
@@ -259,7 +247,6 @@ HB_FUNC_STATIC( QCURSOR_POS )
   QPoint * ptr = new QPoint( QCursor::pos () );
   _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
 }
-
 
 /*
 void setPos ( int x, int y )
@@ -270,7 +257,6 @@ HB_FUNC_STATIC( QCURSOR_SETPOS1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPos ( const QPoint & p )
 */
@@ -279,7 +265,6 @@ HB_FUNC_STATIC( QCURSOR_SETPOS2 )
   QCursor::setPos ( *PQPOINT(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setPos ( int x, int y )
 //[2]void setPos ( const QPoint & p )
@@ -295,7 +280,6 @@ HB_FUNC_STATIC( QCURSOR_SETPOS )
     HB_FUNC_EXEC( QCURSOR_SETPOS2 );
   }
 }
-
 
 HB_FUNC_STATIC( QCURSOR_NEWFROM )
 {

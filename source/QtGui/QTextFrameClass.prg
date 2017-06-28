@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -28,6 +28,7 @@ CLASS QTextFrame INHERIT QTextObject
    METHOD lastPosition
    METHOD parentFrame
    METHOD setFrameFormat
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -57,10 +58,10 @@ HB_FUNC_STATIC( QTEXTFRAME_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QTEXTFRAME_DELETE )
 {
   QTextFrame * obj = (QTextFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -70,10 +71,9 @@ HB_FUNC_STATIC( QTEXTFRAME_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
 
 /*
 QList<QTextFrame *> childFrames () const
@@ -118,8 +118,6 @@ HB_FUNC_STATIC( QTEXTFRAME_CHILDFRAMES )
   }
 }
 
-
-
 /*
 QTextCursor firstCursorPosition () const
 */
@@ -133,7 +131,6 @@ HB_FUNC_STATIC( QTEXTFRAME_FIRSTCURSORPOSITION )
   }
 }
 
-
 /*
 int firstPosition () const
 */
@@ -145,7 +142,6 @@ HB_FUNC_STATIC( QTEXTFRAME_FIRSTPOSITION )
     RINT( obj->firstPosition () );
   }
 }
-
 
 /*
 QTextFrameFormat frameFormat () const
@@ -160,7 +156,6 @@ HB_FUNC_STATIC( QTEXTFRAME_FRAMEFORMAT )
   }
 }
 
-
 /*
 QTextCursor lastCursorPosition () const
 */
@@ -174,7 +169,6 @@ HB_FUNC_STATIC( QTEXTFRAME_LASTCURSORPOSITION )
   }
 }
 
-
 /*
 int lastPosition () const
 */
@@ -186,7 +180,6 @@ HB_FUNC_STATIC( QTEXTFRAME_LASTPOSITION )
     RINT( obj->lastPosition () );
   }
 }
-
 
 /*
 QTextFrame * parentFrame () const
@@ -201,7 +194,6 @@ HB_FUNC_STATIC( QTEXTFRAME_PARENTFRAME )
   }
 }
 
-
 /*
 void setFrameFormat ( const QTextFrameFormat & format )
 */
@@ -214,8 +206,5 @@ HB_FUNC_STATIC( QTEXTFRAME_SETFRAMEFORMAT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
 
 #pragma ENDDUMP

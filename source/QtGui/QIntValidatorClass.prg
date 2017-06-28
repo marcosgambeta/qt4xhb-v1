@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QIntValidator INHERIT QValidator
 
@@ -24,6 +23,7 @@ CLASS QIntValidator INHERIT QValidator
    METHOD top
    METHOD fixup
    METHOD validate
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -51,7 +51,6 @@ HB_FUNC_STATIC( QINTVALIDATOR_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QIntValidator ( int minimum, int maximum, QObject * parent )
 */
@@ -60,7 +59,6 @@ HB_FUNC_STATIC( QINTVALIDATOR_NEW2 )
   QIntValidator * o = new QIntValidator ( PINT(1), PINT(2), PQOBJECT(3) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QIntValidator ( QObject * parent = 0 )
 //[2]QIntValidator ( int minimum, int maximum, QObject * parent )
@@ -84,6 +82,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_NEW )
 HB_FUNC_STATIC( QINTVALIDATOR_DELETE )
 {
   QIntValidator * obj = (QIntValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -93,9 +92,9 @@ HB_FUNC_STATIC( QINTVALIDATOR_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 int bottom () const
@@ -108,7 +107,6 @@ HB_FUNC_STATIC( QINTVALIDATOR_BOTTOM )
     RINT( obj->bottom () );
   }
 }
-
 
 /*
 void setBottom ( int )
@@ -123,7 +121,6 @@ HB_FUNC_STATIC( QINTVALIDATOR_SETBOTTOM )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void setRange ( int bottom, int top )
 */
@@ -136,7 +133,6 @@ HB_FUNC_STATIC( QINTVALIDATOR_SETRANGE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setTop ( int )
@@ -151,7 +147,6 @@ HB_FUNC_STATIC( QINTVALIDATOR_SETTOP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int top () const
 */
@@ -163,7 +158,6 @@ HB_FUNC_STATIC( QINTVALIDATOR_TOP )
     RINT( obj->top () );
   }
 }
-
 
 /*
 virtual void fixup ( QString & input ) const
@@ -179,7 +173,6 @@ HB_FUNC_STATIC( QINTVALIDATOR_FIXUP ) // TODO: revisar a implementacao e corrigi
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QValidator::State validate ( QString & input, int & pos ) const
 */
@@ -193,8 +186,5 @@ HB_FUNC_STATIC( QINTVALIDATOR_VALIDATE ) // TODO: revisar a implementacao e corr
     hb_retni( (int) obj->validate ( par1, par2 ) );
   }
 }
-
-
-
 
 #pragma ENDDUMP

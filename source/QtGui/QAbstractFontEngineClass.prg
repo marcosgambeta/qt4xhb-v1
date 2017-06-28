@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -23,6 +23,7 @@ CLASS QAbstractFontEngine INHERIT QObject
    METHOD fontProperty
    METHOD getGlyphAdvances
    METHOD renderGlyph
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -41,10 +42,10 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
 HB_FUNC_STATIC( QABSTRACTFONTENGINE_DELETE )
 {
   QAbstractFontEngine * obj = (QAbstractFontEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -54,9 +55,9 @@ HB_FUNC_STATIC( QABSTRACTFONTENGINE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void addGlyphOutlinesToPath ( uint * glyphs, int numGlyphs, FixedPoint * positions, QPainterPath * path )
@@ -74,7 +75,6 @@ HB_FUNC_STATIC( QABSTRACTFONTENGINE_ADDGLYPHOUTLINESTOPATH ) // TODO: revisar e 
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual Capabilities capabilities () const = 0
 */
@@ -86,7 +86,6 @@ HB_FUNC_STATIC( QABSTRACTFONTENGINE_CAPABILITIES )
     hb_retni( (int) obj->capabilities () );
   }
 }
-
 
 /*
 virtual bool convertStringToGlyphIndices ( const QChar * string, int length, uint * glyphs, int * numGlyphs, TextShapingFlags flags ) const = 0
@@ -106,7 +105,6 @@ HB_FUNC_STATIC( QABSTRACTFONTENGINE_CONVERTSTRINGTOGLYPHINDICES ) // TODO: revis
   }
 }
 
-
 /*
 virtual QVariant fontProperty ( FontProperty property ) const = 0
 */
@@ -120,7 +118,6 @@ HB_FUNC_STATIC( QABSTRACTFONTENGINE_FONTPROPERTY )
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
-
 
 /*
 virtual void getGlyphAdvances ( const uint * glyphs, int numGlyphs, Fixed * advances, TextShapingFlags flags ) const = 0
@@ -139,8 +136,6 @@ HB_FUNC_STATIC( QABSTRACTFONTENGINE_GETGLYPHADVANCES ) // TODO: revisar e corrig
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 virtual bool renderGlyph ( uint glyph, int depth, int bytesPerLine, int height, uchar * buffer )
 */
@@ -156,8 +151,5 @@ HB_FUNC_STATIC( QABSTRACTFONTENGINE_RENDERGLYPH )
     RBOOL( obj->renderGlyph ( PUINT(1), par2, par3, par4, par5 ) );
   }
 }
-
-
-
 
 #pragma ENDDUMP

@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -29,6 +29,7 @@ CLASS QWheelEvent INHERIT QInputEvent
    METHOD globalY
    METHOD buttons
    METHOD orientation
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -59,7 +60,6 @@ HB_FUNC_STATIC( QWHEELEVENT_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QWheelEvent(const QPoint &pos, const QPoint& globalPos, int delta,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,Qt::Orientation orient = Qt::Vertical)
 */
@@ -71,7 +71,6 @@ HB_FUNC_STATIC( QWHEELEVENT_NEW2 )
   QWheelEvent * o = new QWheelEvent ( *PQPOINT(1), *PQPOINT(2), PINT(3), (Qt::MouseButtons) par4, (Qt::KeyboardModifiers) par5, (Qt::Orientation) par6 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QWheelEvent(const QPoint &pos, int delta,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,Qt::Orientation orient = Qt::Vertical)
 //[2]QWheelEvent(const QPoint &pos, const QPoint& globalPos, int delta,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,Qt::Orientation orient = Qt::Vertical)
@@ -95,6 +94,7 @@ HB_FUNC_STATIC( QWHEELEVENT_NEW )
 HB_FUNC_STATIC( QWHEELEVENT_DELETE )
 {
   QWheelEvent * obj = (QWheelEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -104,9 +104,9 @@ HB_FUNC_STATIC( QWHEELEVENT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 int delta() const
@@ -119,7 +119,6 @@ HB_FUNC_STATIC( QWHEELEVENT_DELTA )
     RINT( obj->delta () );
   }
 }
-
 
 /*
 const QPoint &pos() const
@@ -134,7 +133,6 @@ HB_FUNC_STATIC( QWHEELEVENT_POS )
   }
 }
 
-
 /*
 const QPoint &globalPos() const
 */
@@ -148,7 +146,6 @@ HB_FUNC_STATIC( QWHEELEVENT_GLOBALPOS )
   }
 }
 
-
 /*
 int x() const
 */
@@ -160,7 +157,6 @@ HB_FUNC_STATIC( QWHEELEVENT_X )
     RINT( obj->x () );
   }
 }
-
 
 /*
 int y() const
@@ -174,7 +170,6 @@ HB_FUNC_STATIC( QWHEELEVENT_Y )
   }
 }
 
-
 /*
 int globalX() const
 */
@@ -186,7 +181,6 @@ HB_FUNC_STATIC( QWHEELEVENT_GLOBALX )
     RINT( obj->globalX () );
   }
 }
-
 
 /*
 int globalY() const
@@ -200,7 +194,6 @@ HB_FUNC_STATIC( QWHEELEVENT_GLOBALY )
   }
 }
 
-
 /*
 Qt::MouseButtons buttons() const
 */
@@ -213,7 +206,6 @@ HB_FUNC_STATIC( QWHEELEVENT_BUTTONS )
   }
 }
 
-
 /*
 Qt::Orientation orientation() const
 */
@@ -225,9 +217,5 @@ HB_FUNC_STATIC( QWHEELEVENT_ORIENTATION )
     RENUM( obj->orientation () );
   }
 }
-
-
-
-
 
 #pragma ENDDUMP

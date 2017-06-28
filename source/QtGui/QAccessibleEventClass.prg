@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QAccessibleEvent INHERIT QEvent
 
@@ -17,6 +16,7 @@ CLASS QAccessibleEvent INHERIT QEvent
    METHOD child
    METHOD setValue
    METHOD value
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -44,8 +44,6 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
-
 /*
 int child () const
 */
@@ -57,7 +55,6 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_CHILD )
     RINT( obj->child () );
   }
 }
-
 
 /*
 void setValue ( const QString & text )
@@ -72,7 +69,6 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_SETVALUE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString value () const
 */
@@ -84,8 +80,5 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_VALUE )
     RQSTRING( obj->value () );
   }
 }
-
-
-
 
 #pragma ENDDUMP

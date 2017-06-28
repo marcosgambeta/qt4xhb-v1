@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -34,7 +34,9 @@ CLASS QWizardPage INHERIT QWidget
    METHOD subTitle
    METHOD title
    METHOD validatePage
+
    METHOD onCompleteChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -62,8 +64,6 @@ HB_FUNC_STATIC( QWIZARDPAGE_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
-
 /*
 QString buttonText ( QWizard::WizardButton which ) const
 */
@@ -75,7 +75,6 @@ HB_FUNC_STATIC( QWIZARDPAGE_BUTTONTEXT )
     RQSTRING( obj->buttonText ( (QWizard::WizardButton) hb_parni(1) ) );
   }
 }
-
 
 /*
 virtual void cleanupPage ()
@@ -90,7 +89,6 @@ HB_FUNC_STATIC( QWIZARDPAGE_CLEANUPPAGE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void initializePage ()
 */
@@ -104,7 +102,6 @@ HB_FUNC_STATIC( QWIZARDPAGE_INITIALIZEPAGE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool isCommitPage () const
 */
@@ -116,7 +113,6 @@ HB_FUNC_STATIC( QWIZARDPAGE_ISCOMMITPAGE )
     RBOOL( obj->isCommitPage () );
   }
 }
-
 
 /*
 virtual bool isComplete () const
@@ -130,7 +126,6 @@ HB_FUNC_STATIC( QWIZARDPAGE_ISCOMPLETE )
   }
 }
 
-
 /*
 bool isFinalPage () const
 */
@@ -143,7 +138,6 @@ HB_FUNC_STATIC( QWIZARDPAGE_ISFINALPAGE )
   }
 }
 
-
 /*
 virtual int nextId () const
 */
@@ -155,7 +149,6 @@ HB_FUNC_STATIC( QWIZARDPAGE_NEXTID )
     RINT( obj->nextId () );
   }
 }
-
 
 /*
 QPixmap pixmap ( QWizard::WizardPixmap which ) const
@@ -171,7 +164,6 @@ HB_FUNC_STATIC( QWIZARDPAGE_PIXMAP )
   }
 }
 
-
 /*
 void setButtonText ( QWizard::WizardButton which, const QString & text )
 */
@@ -186,7 +178,6 @@ HB_FUNC_STATIC( QWIZARDPAGE_SETBUTTONTEXT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setCommitPage ( bool commitPage )
 */
@@ -200,7 +191,6 @@ HB_FUNC_STATIC( QWIZARDPAGE_SETCOMMITPAGE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setFinalPage ( bool finalPage )
 */
@@ -213,7 +203,6 @@ HB_FUNC_STATIC( QWIZARDPAGE_SETFINALPAGE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setPixmap ( QWizard::WizardPixmap which, const QPixmap & pixmap )
@@ -229,7 +218,6 @@ HB_FUNC_STATIC( QWIZARDPAGE_SETPIXMAP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setSubTitle ( const QString & subTitle )
 */
@@ -242,7 +230,6 @@ HB_FUNC_STATIC( QWIZARDPAGE_SETSUBTITLE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setTitle ( const QString & title )
@@ -257,7 +244,6 @@ HB_FUNC_STATIC( QWIZARDPAGE_SETTITLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString subTitle () const
 */
@@ -269,7 +255,6 @@ HB_FUNC_STATIC( QWIZARDPAGE_SUBTITLE )
     RQSTRING( obj->subTitle () );
   }
 }
-
 
 /*
 QString title () const
@@ -283,7 +268,6 @@ HB_FUNC_STATIC( QWIZARDPAGE_TITLE )
   }
 }
 
-
 /*
 virtual bool validatePage ()
 */
@@ -295,9 +279,5 @@ HB_FUNC_STATIC( QWIZARDPAGE_VALIDATEPAGE )
     RBOOL( obj->validatePage () );
   }
 }
-
-
-
-
 
 #pragma ENDDUMP

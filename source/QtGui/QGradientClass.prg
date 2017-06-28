@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QGradient
 
@@ -20,11 +19,13 @@ CLASS QGradient
    METHOD setSpread
    METHOD spread
    METHOD type
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -43,7 +44,6 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
 /*
 CoordinateMode coordinateMode () const
 */
@@ -55,7 +55,6 @@ HB_FUNC_STATIC( QGRADIENT_COORDINATEMODE )
     hb_retni( (int) obj->coordinateMode () );
   }
 }
-
 
 /*
 void setColorAt ( qreal position, const QColor & color )
@@ -71,7 +70,6 @@ HB_FUNC_STATIC( QGRADIENT_SETCOLORAT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setCoordinateMode ( CoordinateMode mode )
 */
@@ -85,7 +83,6 @@ HB_FUNC_STATIC( QGRADIENT_SETCOORDINATEMODE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setSpread ( Spread method )
@@ -101,8 +98,6 @@ HB_FUNC_STATIC( QGRADIENT_SETSPREAD )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 Spread spread () const
 */
@@ -115,8 +110,6 @@ HB_FUNC_STATIC( QGRADIENT_SPREAD )
   }
 }
 
-
-
 /*
 Type type () const
 */
@@ -128,7 +121,6 @@ HB_FUNC_STATIC( QGRADIENT_TYPE )
     hb_retni( (int) obj->type () );
   }
 }
-
 
 HB_FUNC_STATIC( QGRADIENT_NEWFROM )
 {
@@ -184,7 +176,5 @@ HB_FUNC_STATIC( QGRADIENT_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

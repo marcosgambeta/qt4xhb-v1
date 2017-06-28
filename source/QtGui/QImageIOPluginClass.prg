@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -20,6 +20,7 @@ CLASS QImageIOPlugin INHERIT QObject
    METHOD capabilities
    METHOD create
    METHOD keys
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -38,10 +39,10 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
 HB_FUNC_STATIC( QIMAGEIOPLUGIN_DELETE )
 {
   QImageIOPlugin * obj = (QImageIOPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -51,9 +52,9 @@ HB_FUNC_STATIC( QIMAGEIOPLUGIN_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual Capabilities capabilities ( QIODevice * device, const QByteArray & format ) const = 0
@@ -66,7 +67,6 @@ HB_FUNC_STATIC( QIMAGEIOPLUGIN_CAPABILITIES )
     hb_retni( (int) obj->capabilities ( PQIODEVICE(1), *PQBYTEARRAY(2) ) );
   }
 }
-
 
 /*
 virtual QImageIOHandler * create ( QIODevice * device, const QByteArray & format = QByteArray() ) const = 0
@@ -82,7 +82,6 @@ HB_FUNC_STATIC( QIMAGEIOPLUGIN_CREATE )
   }
 }
 
-
 /*
 virtual QStringList keys () const = 0
 */
@@ -94,8 +93,5 @@ HB_FUNC_STATIC( QIMAGEIOPLUGIN_KEYS )
     RQSTRINGLIST( obj->keys () );
   }
 }
-
-
-
 
 #pragma ENDDUMP

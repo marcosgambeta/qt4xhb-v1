@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -50,6 +50,7 @@ CLASS QTextFrameFormat INHERIT QTextFormat
    METHOD setWidth
    METHOD topMargin
    METHOD width
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -77,10 +78,10 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_DELETE )
 {
   QTextFrameFormat * obj = (QTextFrameFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -90,9 +91,9 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 qreal border () const
@@ -105,7 +106,6 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_BORDER )
     RQREAL( obj->border () );
   }
 }
-
 
 /*
 QBrush borderBrush () const
@@ -120,7 +120,6 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_BORDERBRUSH )
   }
 }
 
-
 /*
 BorderStyle borderStyle () const
 */
@@ -133,7 +132,6 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_BORDERSTYLE )
   }
 }
 
-
 /*
 qreal bottomMargin () const
 */
@@ -145,7 +143,6 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_BOTTOMMARGIN )
     RQREAL( obj->bottomMargin () );
   }
 }
-
 
 /*
 QTextLength height () const
@@ -160,7 +157,6 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_HEIGHT )
   }
 }
 
-
 /*
 bool isValid () const
 */
@@ -172,7 +168,6 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_ISVALID )
     RBOOL( obj->isValid () );
   }
 }
-
 
 /*
 qreal leftMargin () const
@@ -186,7 +181,6 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_LEFTMARGIN )
   }
 }
 
-
 /*
 qreal margin () const
 */
@@ -198,7 +192,6 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_MARGIN )
     RQREAL( obj->margin () );
   }
 }
-
 
 /*
 qreal padding () const
@@ -212,7 +205,6 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_PADDING )
   }
 }
 
-
 /*
 PageBreakFlags pageBreakPolicy () const
 */
@@ -224,7 +216,6 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_PAGEBREAKPOLICY )
     hb_retni( (int) obj->pageBreakPolicy () );
   }
 }
-
 
 /*
 Position position () const
@@ -238,7 +229,6 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_POSITION )
   }
 }
 
-
 /*
 qreal rightMargin () const
 */
@@ -250,7 +240,6 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_RIGHTMARGIN )
     RQREAL( obj->rightMargin () );
   }
 }
-
 
 /*
 void setBorder ( qreal width )
@@ -265,7 +254,6 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETBORDER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setBorderBrush ( const QBrush & brush )
 */
@@ -278,7 +266,6 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETBORDERBRUSH )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setBorderStyle ( BorderStyle style )
@@ -294,7 +281,6 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETBORDERSTYLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setBottomMargin ( qreal margin )
 */
@@ -307,7 +293,6 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETBOTTOMMARGIN )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setHeight ( const QTextLength & height )
@@ -322,7 +307,6 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETHEIGHT1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setHeight ( qreal height )
 */
@@ -335,7 +319,6 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETHEIGHT2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setHeight ( const QTextLength & height )
 //[2]void setHeight ( qreal height )
@@ -365,7 +348,6 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETLEFTMARGIN )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setMargin ( qreal margin )
 */
@@ -379,7 +361,6 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETMARGIN )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPadding ( qreal width )
 */
@@ -392,7 +373,6 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETPADDING )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setPageBreakPolicy ( PageBreakFlags policy )
@@ -408,7 +388,6 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETPAGEBREAKPOLICY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPosition ( Position policy )
 */
@@ -423,7 +402,6 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETPOSITION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setRightMargin ( qreal margin )
 */
@@ -436,7 +414,6 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETRIGHTMARGIN )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setTopMargin ( qreal margin )
@@ -451,7 +428,6 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETTOPMARGIN )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setWidth ( const QTextLength & width )
 */
@@ -465,7 +441,6 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETWIDTH1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setWidth ( qreal width )
 */
@@ -478,7 +453,6 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETWIDTH2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setWidth ( const QTextLength & width )
 //[2]void setWidth ( qreal width )
@@ -507,7 +481,6 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_TOPMARGIN )
   }
 }
 
-
 /*
 QTextLength width () const
 */
@@ -520,8 +493,5 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_WIDTH )
     _qt4xhb_createReturnClass ( ptr, "QTEXTLENGTH" );
   }
 }
-
-
-
 
 #pragma ENDDUMP

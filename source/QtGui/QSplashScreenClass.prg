@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -26,7 +26,9 @@ CLASS QSplashScreen INHERIT QWidget
    METHOD setPixmap
    METHOD clearMessage
    METHOD showMessage
+
    METHOD onMessageChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -56,7 +58,6 @@ HB_FUNC_STATIC( QSPLASHSCREEN_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QSplashScreen ( QWidget * parent, const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
 */
@@ -67,7 +68,6 @@ HB_FUNC_STATIC( QSPLASHSCREEN_NEW2 )
   QSplashScreen * o = new QSplashScreen ( PQWIDGET(1), par2, (Qt::WindowFlags) par3 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QSplashScreen ( const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
 //[2]QSplashScreen ( QWidget * parent, const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
@@ -91,6 +91,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_NEW )
 HB_FUNC_STATIC( QSPLASHSCREEN_DELETE )
 {
   QSplashScreen * obj = (QSplashScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -100,9 +101,9 @@ HB_FUNC_STATIC( QSPLASHSCREEN_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void finish ( QWidget * mainWin )
@@ -117,7 +118,6 @@ HB_FUNC_STATIC( QSPLASHSCREEN_FINISH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 const QPixmap pixmap () const
 */
@@ -130,7 +130,6 @@ HB_FUNC_STATIC( QSPLASHSCREEN_PIXMAP )
     _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
-
 
 /*
 void repaint ()
@@ -145,7 +144,6 @@ HB_FUNC_STATIC( QSPLASHSCREEN_REPAINT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPixmap ( const QPixmap & pixmap )
 */
@@ -158,7 +156,6 @@ HB_FUNC_STATIC( QSPLASHSCREEN_SETPIXMAP )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void clearMessage ()
@@ -173,7 +170,6 @@ HB_FUNC_STATIC( QSPLASHSCREEN_CLEARMESSAGE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void showMessage ( const QString & message, int alignment = Qt::AlignLeft, const QColor & color = Qt::black )
 */
@@ -187,10 +183,5 @@ HB_FUNC_STATIC( QSPLASHSCREEN_SHOWMESSAGE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
-
 
 #pragma ENDDUMP

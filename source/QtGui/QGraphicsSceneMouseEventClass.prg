@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -30,6 +30,7 @@ CLASS QGraphicsSceneMouseEvent INHERIT QGraphicsSceneEvent
    METHOD pos
    METHOD scenePos
    METHOD screenPos
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -51,6 +52,7 @@ RETURN
 HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_DELETE )
 {
   QGraphicsSceneMouseEvent * obj = (QGraphicsSceneMouseEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -60,9 +62,9 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 Qt::MouseButton button () const
@@ -75,7 +77,6 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTON )
     hb_retni( (int) obj->button () );
   }
 }
-
 
 /*
 QPointF buttonDownPos ( Qt::MouseButton button ) const
@@ -91,7 +92,6 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNPOS )
   }
 }
 
-
 /*
 QPointF buttonDownScenePos ( Qt::MouseButton button ) const
 */
@@ -105,7 +105,6 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNSCENEPOS )
     _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
-
 
 /*
 QPoint buttonDownScreenPos ( Qt::MouseButton button ) const
@@ -121,7 +120,6 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNSCREENPOS )
   }
 }
 
-
 /*
 Qt::MouseButtons buttons () const
 */
@@ -133,7 +131,6 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTONS )
     hb_retni( (int) obj->buttons () );
   }
 }
-
 
 /*
 QPointF lastPos () const
@@ -148,7 +145,6 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_LASTPOS )
   }
 }
 
-
 /*
 QPointF lastScenePos () const
 */
@@ -161,7 +157,6 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_LASTSCENEPOS )
     _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
-
 
 /*
 QPoint lastScreenPos () const
@@ -176,7 +171,6 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_LASTSCREENPOS )
   }
 }
 
-
 /*
 Qt::KeyboardModifiers modifiers () const
 */
@@ -188,7 +182,6 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_MODIFIERS )
     hb_retni( (int) obj->modifiers () );
   }
 }
-
 
 /*
 QPointF pos () const
@@ -203,7 +196,6 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_POS )
   }
 }
 
-
 /*
 QPointF scenePos () const
 */
@@ -217,7 +209,6 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_SCENEPOS )
   }
 }
 
-
 /*
 QPoint screenPos () const
 */
@@ -230,8 +221,5 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_SCREENPOS )
     _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
-
-
-
 
 #pragma ENDDUMP

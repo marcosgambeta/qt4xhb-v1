@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -42,7 +42,9 @@ CLASS QLCDNumber INHERIT QFrame
    METHOD setHexMode
    METHOD setOctMode
    METHOD setSmallDecimalPoint
+
    METHOD onOverflow
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -70,7 +72,6 @@ HB_FUNC_STATIC( QLCDNUMBER_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QLCDNumber ( uint numDigits, QWidget * parent = 0 )
 */
@@ -79,7 +80,6 @@ HB_FUNC_STATIC( QLCDNUMBER_NEW2 )
   QLCDNumber * o = new QLCDNumber ( PUINT(1), OPQWIDGET(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QLCDNumber ( QWidget * parent = 0 )
 //[2]QLCDNumber ( uint numDigits, QWidget * parent = 0 )
@@ -103,6 +103,7 @@ HB_FUNC_STATIC( QLCDNUMBER_NEW )
 HB_FUNC_STATIC( QLCDNUMBER_DELETE )
 {
   QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -112,9 +113,9 @@ HB_FUNC_STATIC( QLCDNUMBER_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 bool checkOverflow ( double num ) const
@@ -128,7 +129,6 @@ HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW1 )
   }
 }
 
-
 /*
 bool checkOverflow ( int num ) const
 */
@@ -140,7 +140,6 @@ HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW2 )
     RBOOL( obj->checkOverflow ( PINT(1) ) );
   }
 }
-
 
 //[1]bool checkOverflow ( double num ) const
 //[2]bool checkOverflow ( int num ) const
@@ -166,7 +165,6 @@ HB_FUNC_STATIC( QLCDNUMBER_DIGITCOUNT )
   }
 }
 
-
 /*
 int intValue () const
 */
@@ -178,7 +176,6 @@ HB_FUNC_STATIC( QLCDNUMBER_INTVALUE )
     RINT( obj->intValue () );
   }
 }
-
 
 /*
 Mode mode () const
@@ -192,7 +189,6 @@ HB_FUNC_STATIC( QLCDNUMBER_MODE )
   }
 }
 
-
 /*
 SegmentStyle segmentStyle () const
 */
@@ -204,7 +200,6 @@ HB_FUNC_STATIC( QLCDNUMBER_SEGMENTSTYLE )
     hb_retni( (int) obj->segmentStyle () );
   }
 }
-
 
 /*
 void setDigitCount ( int numDigits )
@@ -218,7 +213,6 @@ HB_FUNC_STATIC( QLCDNUMBER_SETDIGITCOUNT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setMode ( Mode )
@@ -234,7 +228,6 @@ HB_FUNC_STATIC( QLCDNUMBER_SETMODE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setSegmentStyle ( SegmentStyle )
 */
@@ -249,7 +242,6 @@ HB_FUNC_STATIC( QLCDNUMBER_SETSEGMENTSTYLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool smallDecimalPoint () const
 */
@@ -262,7 +254,6 @@ HB_FUNC_STATIC( QLCDNUMBER_SMALLDECIMALPOINT )
   }
 }
 
-
 /*
 double value () const
 */
@@ -274,7 +265,6 @@ HB_FUNC_STATIC( QLCDNUMBER_VALUE )
     RDOUBLE( obj->value () );
   }
 }
-
 
 /*
 virtual QSize sizeHint () const
@@ -289,7 +279,6 @@ HB_FUNC_STATIC( QLCDNUMBER_SIZEHINT )
   }
 }
 
-
 /*
 void display ( const QString & s )
 */
@@ -302,7 +291,6 @@ HB_FUNC_STATIC( QLCDNUMBER_DISPLAY1 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void display ( double num )
@@ -317,7 +305,6 @@ HB_FUNC_STATIC( QLCDNUMBER_DISPLAY2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void display ( int num )
 */
@@ -330,7 +317,6 @@ HB_FUNC_STATIC( QLCDNUMBER_DISPLAY3 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void display ( const QString & s )
 //[2]void display ( double num )
@@ -363,7 +349,6 @@ HB_FUNC_STATIC( QLCDNUMBER_SETBINMODE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setDecMode ()
 */
@@ -376,7 +361,6 @@ HB_FUNC_STATIC( QLCDNUMBER_SETDECMODE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setHexMode ()
@@ -391,7 +375,6 @@ HB_FUNC_STATIC( QLCDNUMBER_SETHEXMODE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setOctMode ()
 */
@@ -405,7 +388,6 @@ HB_FUNC_STATIC( QLCDNUMBER_SETOCTMODE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setSmallDecimalPoint ( bool )
 */
@@ -418,9 +400,5 @@ HB_FUNC_STATIC( QLCDNUMBER_SETSMALLDECIMALPOINT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

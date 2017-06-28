@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -36,11 +36,13 @@ CLASS QTextDocumentWriter
    METHOD write2
    METHOD write
    METHOD supportedDocumentFormats
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -70,7 +72,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QTextDocumentWriter ( QIODevice * device, const QByteArray & format )
 */
@@ -79,7 +80,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_NEW2 )
   QTextDocumentWriter * o = new QTextDocumentWriter ( PQIODEVICE(1), *PQBYTEARRAY(2) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 /*
 QTextDocumentWriter ( const QString & fileName, const QByteArray & format = QByteArray() )
@@ -90,7 +90,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_NEW3 )
   QTextDocumentWriter * o = new QTextDocumentWriter ( PQSTRING(1), par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QTextDocumentWriter ()
 //[2]QTextDocumentWriter ( QIODevice * device, const QByteArray & format )
@@ -119,6 +118,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_NEW )
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_DELETE )
 {
   QTextDocumentWriter * obj = (QTextDocumentWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -128,9 +128,9 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QTextCodec * codec () const
@@ -145,7 +145,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_CODEC )
   }
 }
 
-
 /*
 QIODevice * device () const
 */
@@ -159,7 +158,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_DEVICE )
   }
 }
 
-
 /*
 QString fileName () const
 */
@@ -171,7 +169,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_FILENAME )
     RQSTRING( obj->fileName () );
   }
 }
-
 
 /*
 QByteArray format () const
@@ -186,7 +183,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_FORMAT )
   }
 }
 
-
 /*
 void setCodec ( QTextCodec * codec )
 */
@@ -199,7 +195,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETCODEC )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setDevice ( QIODevice * device )
@@ -214,7 +209,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETDEVICE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setFileName ( const QString & fileName )
 */
@@ -227,7 +221,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETFILENAME )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setFormat ( const QByteArray & format )
@@ -242,7 +235,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETFORMAT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool write ( const QTextDocument * document )
 */
@@ -256,7 +248,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_WRITE1 )
   }
 }
 
-
 /*
 bool write ( const QTextDocumentFragment & fragment )
 */
@@ -268,7 +259,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_WRITE2 )
     RBOOL( obj->write ( *PQTEXTDOCUMENTFRAGMENT(1) ) );
   }
 }
-
 
 //[1]bool write ( const QTextDocument * document )
 //[2]bool write ( const QTextDocumentFragment & fragment )
@@ -284,7 +274,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_WRITE )
     HB_FUNC_EXEC( QTEXTDOCUMENTWRITER_WRITE2 );
   }
 }
-
 
 /*
 QList<QByteArray> supportedDocumentFormats ()
@@ -324,7 +313,6 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SUPPORTEDDOCUMENTFORMATS )
   }
   hb_itemReturnRelease(pArray);
 }
-
 
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_NEWFROM )
 {
@@ -380,6 +368,5 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

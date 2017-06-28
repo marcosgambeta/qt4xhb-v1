@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -48,7 +48,9 @@ CLASS QMdiArea INHERIT QAbstractScrollArea
    METHOD closeAllSubWindows
    METHOD setActiveSubWindow
    METHOD tileSubWindows
+
    METHOD onSubWindowActivated
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -76,10 +78,10 @@ HB_FUNC_STATIC( QMDIAREA_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QMDIAREA_DELETE )
 {
   QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -89,9 +91,9 @@ HB_FUNC_STATIC( QMDIAREA_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 WindowOrder activationOrder () const
@@ -105,7 +107,6 @@ HB_FUNC_STATIC( QMDIAREA_ACTIVATIONORDER )
   }
 }
 
-
 /*
 QMdiSubWindow * activeSubWindow () const
 */
@@ -118,7 +119,6 @@ HB_FUNC_STATIC( QMDIAREA_ACTIVESUBWINDOW )
     _qt4xhb_createReturnClass ( ptr, "QMDISUBWINDOW" );
   }
 }
-
 
 /*
 QMdiSubWindow * addSubWindow ( QWidget * widget, Qt::WindowFlags windowFlags = 0 )
@@ -134,7 +134,6 @@ HB_FUNC_STATIC( QMDIAREA_ADDSUBWINDOW )
   }
 }
 
-
 /*
 QBrush background () const
 */
@@ -147,7 +146,6 @@ HB_FUNC_STATIC( QMDIAREA_BACKGROUND )
     _qt4xhb_createReturnClass ( ptr, "QBRUSH", true );
   }
 }
-
 
 /*
 QMdiSubWindow * currentSubWindow () const
@@ -162,7 +160,6 @@ HB_FUNC_STATIC( QMDIAREA_CURRENTSUBWINDOW )
   }
 }
 
-
 /*
 bool documentMode () const
 */
@@ -174,7 +171,6 @@ HB_FUNC_STATIC( QMDIAREA_DOCUMENTMODE )
     RBOOL( obj->documentMode () );
   }
 }
-
 
 /*
 void removeSubWindow ( QWidget * widget )
@@ -188,7 +184,6 @@ HB_FUNC_STATIC( QMDIAREA_REMOVESUBWINDOW )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setActivationOrder ( WindowOrder order )
@@ -204,7 +199,6 @@ HB_FUNC_STATIC( QMDIAREA_SETACTIVATIONORDER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setBackground ( const QBrush & background )
 */
@@ -218,7 +212,6 @@ HB_FUNC_STATIC( QMDIAREA_SETBACKGROUND )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setDocumentMode ( bool enabled )
 */
@@ -231,7 +224,6 @@ HB_FUNC_STATIC( QMDIAREA_SETDOCUMENTMODE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setOption ( AreaOption option, bool on = true )
@@ -247,7 +239,6 @@ HB_FUNC_STATIC( QMDIAREA_SETOPTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setTabPosition ( QTabWidget::TabPosition position )
 */
@@ -261,7 +252,6 @@ HB_FUNC_STATIC( QMDIAREA_SETTABPOSITION )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setTabShape ( QTabWidget::TabShape shape )
@@ -277,7 +267,6 @@ HB_FUNC_STATIC( QMDIAREA_SETTABSHAPE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setViewMode ( ViewMode mode )
 */
@@ -291,7 +280,6 @@ HB_FUNC_STATIC( QMDIAREA_SETVIEWMODE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QList<QMdiSubWindow *> subWindowList ( WindowOrder order = CreationOrder ) const
@@ -337,7 +325,6 @@ HB_FUNC_STATIC( QMDIAREA_SUBWINDOWLIST )
   }
 }
 
-
 /*
 QTabWidget::TabPosition tabPosition () const
 */
@@ -350,7 +337,6 @@ HB_FUNC_STATIC( QMDIAREA_TABPOSITION )
   }
 }
 
-
 /*
 QTabWidget::TabShape tabShape () const
 */
@@ -362,7 +348,6 @@ HB_FUNC_STATIC( QMDIAREA_TABSHAPE )
     hb_retni( (int) obj->tabShape () );
   }
 }
-
 
 /*
 bool testOption ( AreaOption option ) const
@@ -377,7 +362,6 @@ HB_FUNC_STATIC( QMDIAREA_TESTOPTION )
   }
 }
 
-
 /*
 ViewMode viewMode () const
 */
@@ -389,7 +373,6 @@ HB_FUNC_STATIC( QMDIAREA_VIEWMODE )
     hb_retni( (int) obj->viewMode () );
   }
 }
-
 
 /*
 virtual QSize minimumSizeHint () const
@@ -404,7 +387,6 @@ HB_FUNC_STATIC( QMDIAREA_MINIMUMSIZEHINT )
   }
 }
 
-
 /*
 virtual QSize sizeHint () const
 */
@@ -417,7 +399,6 @@ HB_FUNC_STATIC( QMDIAREA_SIZEHINT )
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
-
 
 /*
 void activateNextSubWindow ()
@@ -432,7 +413,6 @@ HB_FUNC_STATIC( QMDIAREA_ACTIVATENEXTSUBWINDOW )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void activatePreviousSubWindow ()
 */
@@ -445,7 +425,6 @@ HB_FUNC_STATIC( QMDIAREA_ACTIVATEPREVIOUSSUBWINDOW )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void cascadeSubWindows ()
@@ -460,7 +439,6 @@ HB_FUNC_STATIC( QMDIAREA_CASCADESUBWINDOWS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void closeActiveSubWindow ()
 */
@@ -474,7 +452,6 @@ HB_FUNC_STATIC( QMDIAREA_CLOSEACTIVESUBWINDOW )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void closeAllSubWindows ()
 */
@@ -487,7 +464,6 @@ HB_FUNC_STATIC( QMDIAREA_CLOSEALLSUBWINDOWS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setActiveSubWindow ( QMdiSubWindow * window )
@@ -503,7 +479,6 @@ HB_FUNC_STATIC( QMDIAREA_SETACTIVESUBWINDOW )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void tileSubWindows ()
 */
@@ -516,9 +491,5 @@ HB_FUNC_STATIC( QMDIAREA_TILESUBWINDOWS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -33,8 +33,10 @@ CLASS QFontDialog INHERIT QDialog
    METHOD getFont3
    METHOD getFont4
    METHOD getFont
+
    METHOD onCurrentFontChanged
    METHOD onFontSelected
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -62,7 +64,6 @@ HB_FUNC_STATIC( QFONTDIALOG_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QFontDialog(const QFont &initial, QWidget *parent = 0)
 */
@@ -71,7 +72,6 @@ HB_FUNC_STATIC( QFONTDIALOG_NEW2 )
   QFontDialog * o = new QFontDialog ( *PQFONT(1), OPQWIDGET(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QFontDialog(QWidget *parent = 0)
 //[2]QFontDialog(const QFont &initial, QWidget *parent = 0)
@@ -92,7 +92,6 @@ HB_FUNC_STATIC( QFONTDIALOG_NEW )
   }
 }
 
-
 /*
 QFont currentFont () const
 */
@@ -105,7 +104,6 @@ HB_FUNC_STATIC( QFONTDIALOG_CURRENTFONT )
     _qt4xhb_createReturnClass ( ptr, "QFONT", true );
   }
 }
-
 
 /*
 void open ( QObject * receiver, const char * member )
@@ -120,7 +118,6 @@ HB_FUNC_STATIC( QFONTDIALOG_OPEN )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 FontDialogOptions options () const
 */
@@ -132,7 +129,6 @@ HB_FUNC_STATIC( QFONTDIALOG_OPTIONS )
     hb_retni( (int) obj->options () );
   }
 }
-
 
 /*
 QFont selectedFont () const
@@ -147,7 +143,6 @@ HB_FUNC_STATIC( QFONTDIALOG_SELECTEDFONT )
   }
 }
 
-
 /*
 void setCurrentFont ( const QFont & font )
 */
@@ -160,7 +155,6 @@ HB_FUNC_STATIC( QFONTDIALOG_SETCURRENTFONT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setOption ( FontDialogOption option, bool on = true )
@@ -176,7 +170,6 @@ HB_FUNC_STATIC( QFONTDIALOG_SETOPTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setOptions ( FontDialogOptions options )
 */
@@ -191,7 +184,6 @@ HB_FUNC_STATIC( QFONTDIALOG_SETOPTIONS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool testOption ( FontDialogOption option ) const
 */
@@ -204,7 +196,6 @@ HB_FUNC_STATIC( QFONTDIALOG_TESTOPTION )
     RBOOL( obj->testOption ( (QFontDialog::FontDialogOption) par1 ) );
   }
 }
-
 
 /*
 virtual void setVisible ( bool visible )
@@ -219,8 +210,6 @@ HB_FUNC_STATIC( QFONTDIALOG_SETVISIBLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 static QFont getFont(bool *ok, const QFont &initial, QWidget *parent, const QString &title,FontDialogOptions options)
 */
@@ -233,7 +222,6 @@ HB_FUNC_STATIC( QFONTDIALOG_GETFONT1 )
   hb_storl( par1, 1 );
 }
 
-
 /*
 static QFont getFont(bool *ok, const QFont &initial, QWidget *parent, const QString &title)
 */
@@ -244,7 +232,6 @@ HB_FUNC_STATIC( QFONTDIALOG_GETFONT2 )
   _qt4xhb_createReturnClass ( ptr, "QFONT", true );
   hb_storl( par1, 1 );
 }
-
 
 /*
 static QFont getFont(bool *ok, const QFont &initial, QWidget *parent = 0)
@@ -257,7 +244,6 @@ HB_FUNC_STATIC( QFONTDIALOG_GETFONT3 )
   hb_storl( par1, 1 );
 }
 
-
 /*
 static QFont getFont(bool *ok, QWidget *parent = 0)
 */
@@ -268,7 +254,6 @@ HB_FUNC_STATIC( QFONTDIALOG_GETFONT4 )
   _qt4xhb_createReturnClass ( ptr, "QFONT", true );
   hb_storl( par1, 1 );
 }
-
 
 //[1]static QFont getFont(bool *ok, const QFont &initial, QWidget *parent, const QString &title,FontDialogOptions options)
 //[2]static QFont getFont(bool *ok, const QFont &initial, QWidget *parent, const QString &title)
@@ -294,8 +279,5 @@ HB_FUNC_STATIC( QFONTDIALOG_GETFONT )
     HB_FUNC_EXEC( QFONTDIALOG_GETFONT4 );
   }
 }
-
-
-
 
 #pragma ENDDUMP

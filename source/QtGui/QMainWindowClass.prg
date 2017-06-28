@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -74,8 +74,10 @@ CLASS QMainWindow INHERIT QWidget
    METHOD toolButtonStyle
    METHOD setAnimated
    METHOD setDockNestingEnabled
+
    METHOD onIconSizeChanged
    METHOD onToolButtonStyleChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -104,10 +106,10 @@ HB_FUNC_STATIC( QMAINWINDOW_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QMAINWINDOW_DELETE )
 {
   QMainWindow * obj = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -117,9 +119,9 @@ HB_FUNC_STATIC( QMAINWINDOW_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void addDockWidget ( Qt::DockWidgetArea area, QDockWidget * dockwidget )
@@ -136,7 +138,6 @@ HB_FUNC_STATIC( QMAINWINDOW_ADDDOCKWIDGET1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void addDockWidget ( Qt::DockWidgetArea area, QDockWidget * dockwidget, Qt::Orientation orientation )
 */
@@ -151,7 +152,6 @@ HB_FUNC_STATIC( QMAINWINDOW_ADDDOCKWIDGET2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void addDockWidget ( Qt::DockWidgetArea area, QDockWidget * dockwidget )
 //[2]void addDockWidget ( Qt::DockWidgetArea area, QDockWidget * dockwidget, Qt::Orientation orientation )
@@ -183,7 +183,6 @@ HB_FUNC_STATIC( QMAINWINDOW_ADDTOOLBAR1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void addToolBar ( QToolBar * toolbar )
 */
@@ -198,7 +197,6 @@ HB_FUNC_STATIC( QMAINWINDOW_ADDTOOLBAR2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QToolBar * addToolBar ( const QString & title )
 */
@@ -211,7 +209,6 @@ HB_FUNC_STATIC( QMAINWINDOW_ADDTOOLBAR3 )
     _qt4xhb_createReturnClass ( ptr, "QTOOLBAR" );
   }
 }
-
 
 //[1]void addToolBar ( Qt::ToolBarArea area, QToolBar * toolbar )
 //[2]void addToolBar ( QToolBar * toolbar )
@@ -247,7 +244,6 @@ HB_FUNC_STATIC( QMAINWINDOW_ADDTOOLBARBREAK )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QWidget * centralWidget () const
 */
@@ -260,7 +256,6 @@ HB_FUNC_STATIC( QMAINWINDOW_CENTRALWIDGET )
     _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
-
 
 /*
 Qt::DockWidgetArea corner ( Qt::Corner corner ) const
@@ -275,7 +270,6 @@ HB_FUNC_STATIC( QMAINWINDOW_CORNER )
   }
 }
 
-
 /*
 virtual QMenu * createPopupMenu ()
 */
@@ -289,7 +283,6 @@ HB_FUNC_STATIC( QMAINWINDOW_CREATEPOPUPMENU )
   }
 }
 
-
 /*
 DockOptions dockOptions () const
 */
@@ -301,7 +294,6 @@ HB_FUNC_STATIC( QMAINWINDOW_DOCKOPTIONS )
     hb_retni( (int) obj->dockOptions () );
   }
 }
-
 
 /*
 Qt::DockWidgetArea dockWidgetArea ( QDockWidget * dockwidget ) const
@@ -316,7 +308,6 @@ HB_FUNC_STATIC( QMAINWINDOW_DOCKWIDGETAREA )
   }
 }
 
-
 /*
 bool documentMode () const
 */
@@ -328,7 +319,6 @@ HB_FUNC_STATIC( QMAINWINDOW_DOCUMENTMODE )
     RBOOL( obj->documentMode () );
   }
 }
-
 
 /*
 QSize iconSize () const
@@ -342,7 +332,6 @@ HB_FUNC_STATIC( QMAINWINDOW_ICONSIZE )
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
-
 
 /*
 void insertToolBar ( QToolBar * before, QToolBar * toolbar )
@@ -359,7 +348,6 @@ HB_FUNC_STATIC( QMAINWINDOW_INSERTTOOLBAR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void insertToolBarBreak ( QToolBar * before )
 */
@@ -374,7 +362,6 @@ HB_FUNC_STATIC( QMAINWINDOW_INSERTTOOLBARBREAK )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool isAnimated () const
 */
@@ -387,7 +374,6 @@ HB_FUNC_STATIC( QMAINWINDOW_ISANIMATED )
   }
 }
 
-
 /*
 bool isDockNestingEnabled () const
 */
@@ -399,7 +385,6 @@ HB_FUNC_STATIC( QMAINWINDOW_ISDOCKNESTINGENABLED )
     RBOOL( obj->isDockNestingEnabled () );
   }
 }
-
 
 /*
 QMenuBar * menuBar () const
@@ -414,7 +399,6 @@ HB_FUNC_STATIC( QMAINWINDOW_MENUBAR )
   }
 }
 
-
 /*
 QWidget * menuWidget () const
 */
@@ -427,7 +411,6 @@ HB_FUNC_STATIC( QMAINWINDOW_MENUWIDGET )
     _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
-
 
 /*
 void removeDockWidget ( QDockWidget * dockwidget )
@@ -443,7 +426,6 @@ HB_FUNC_STATIC( QMAINWINDOW_REMOVEDOCKWIDGET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void removeToolBar ( QToolBar * toolbar )
 */
@@ -457,7 +439,6 @@ HB_FUNC_STATIC( QMAINWINDOW_REMOVETOOLBAR )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void removeToolBarBreak ( QToolBar * before )
@@ -473,7 +454,6 @@ HB_FUNC_STATIC( QMAINWINDOW_REMOVETOOLBARBREAK )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool restoreDockWidget ( QDockWidget * dockwidget )
 */
@@ -487,7 +467,6 @@ HB_FUNC_STATIC( QMAINWINDOW_RESTOREDOCKWIDGET )
   }
 }
 
-
 /*
 bool restoreState ( const QByteArray & state, int version = 0 )
 */
@@ -499,7 +478,6 @@ HB_FUNC_STATIC( QMAINWINDOW_RESTORESTATE )
     RBOOL( obj->restoreState ( *PQBYTEARRAY(1), OPINT(2,0)) );
   }
 }
-
 
 /*
 QByteArray saveState ( int version = 0 ) const
@@ -514,7 +492,6 @@ HB_FUNC_STATIC( QMAINWINDOW_SAVESTATE )
   }
 }
 
-
 /*
 void setCentralWidget ( QWidget * widget )
 */
@@ -527,7 +504,6 @@ HB_FUNC_STATIC( QMAINWINDOW_SETCENTRALWIDGET )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setCorner ( Qt::Corner corner, Qt::DockWidgetArea area )
@@ -544,7 +520,6 @@ HB_FUNC_STATIC( QMAINWINDOW_SETCORNER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setDockOptions ( DockOptions options )
 */
@@ -559,7 +534,6 @@ HB_FUNC_STATIC( QMAINWINDOW_SETDOCKOPTIONS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setDocumentMode ( bool enabled )
 */
@@ -573,7 +547,6 @@ HB_FUNC_STATIC( QMAINWINDOW_SETDOCUMENTMODE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setIconSize ( const QSize & iconSize )
 */
@@ -586,7 +559,6 @@ HB_FUNC_STATIC( QMAINWINDOW_SETICONSIZE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setMenuBar ( QMenuBar * menuBar )
@@ -602,7 +574,6 @@ HB_FUNC_STATIC( QMAINWINDOW_SETMENUBAR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setMenuWidget ( QWidget * menuBar )
 */
@@ -615,7 +586,6 @@ HB_FUNC_STATIC( QMAINWINDOW_SETMENUWIDGET )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setStatusBar ( QStatusBar * statusbar )
@@ -630,7 +600,6 @@ HB_FUNC_STATIC( QMAINWINDOW_SETSTATUSBAR )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setTabPosition ( Qt::DockWidgetAreas areas, QTabWidget::TabPosition tabPosition )
@@ -647,7 +616,6 @@ HB_FUNC_STATIC( QMAINWINDOW_SETTABPOSITION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setTabShape ( QTabWidget::TabShape tabShape )
 */
@@ -662,7 +630,6 @@ HB_FUNC_STATIC( QMAINWINDOW_SETTABSHAPE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setToolButtonStyle ( Qt::ToolButtonStyle toolButtonStyle )
 */
@@ -676,8 +643,6 @@ HB_FUNC_STATIC( QMAINWINDOW_SETTOOLBUTTONSTYLE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
 
 /*
 void splitDockWidget ( QDockWidget * first, QDockWidget * second, Qt::Orientation orientation )
@@ -694,7 +659,6 @@ HB_FUNC_STATIC( QMAINWINDOW_SPLITDOCKWIDGET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QStatusBar * statusBar () const
 */
@@ -707,7 +671,6 @@ HB_FUNC_STATIC( QMAINWINDOW_STATUSBAR )
     _qt4xhb_createReturnClass ( ptr, "QSTATUSBAR" );
   }
 }
-
 
 /*
 QTabWidget::TabPosition tabPosition ( Qt::DockWidgetArea area ) const
@@ -722,7 +685,6 @@ HB_FUNC_STATIC( QMAINWINDOW_TABPOSITION )
   }
 }
 
-
 /*
 QTabWidget::TabShape tabShape () const
 */
@@ -734,7 +696,6 @@ HB_FUNC_STATIC( QMAINWINDOW_TABSHAPE )
     hb_retni( (int) obj->tabShape () );
   }
 }
-
 
 /*
 QList<QDockWidget *> tabifiedDockWidgets ( QDockWidget * dockwidget ) const
@@ -780,7 +741,6 @@ HB_FUNC_STATIC( QMAINWINDOW_TABIFIEDDOCKWIDGETS )
   }
 }
 
-
 /*
 void tabifyDockWidget ( QDockWidget * first, QDockWidget * second )
 */
@@ -796,7 +756,6 @@ HB_FUNC_STATIC( QMAINWINDOW_TABIFYDOCKWIDGET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 Qt::ToolBarArea toolBarArea ( QToolBar * toolbar ) const
 */
@@ -809,7 +768,6 @@ HB_FUNC_STATIC( QMAINWINDOW_TOOLBARAREA )
     hb_retni( (int) obj->toolBarArea ( par1 ) );
   }
 }
-
 
 /*
 bool toolBarBreak ( QToolBar * toolbar ) const
@@ -824,7 +782,6 @@ HB_FUNC_STATIC( QMAINWINDOW_TOOLBARBREAK )
   }
 }
 
-
 /*
 Qt::ToolButtonStyle toolButtonStyle () const
 */
@@ -836,8 +793,6 @@ HB_FUNC_STATIC( QMAINWINDOW_TOOLBUTTONSTYLE )
     hb_retni( (int) obj->toolButtonStyle () );
   }
 }
-
-
 
 /*
 void setAnimated ( bool enabled )
@@ -852,7 +807,6 @@ HB_FUNC_STATIC( QMAINWINDOW_SETANIMATED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setDockNestingEnabled ( bool enabled ) const
 */
@@ -865,9 +819,5 @@ HB_FUNC_STATIC( QMAINWINDOW_SETDOCKNESTINGENABLED )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

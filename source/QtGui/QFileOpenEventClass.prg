@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -23,6 +23,7 @@ CLASS QFileOpenEvent INHERIT QEvent
    METHOD file
    METHOD openFile
    METHOD url
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -53,7 +54,6 @@ HB_FUNC_STATIC( QFILEOPENEVENT_NEW1 ) // TODO: revisar e corrigir
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QFileOpenEvent(const QUrl &url)
 */
@@ -63,7 +63,6 @@ HB_FUNC_STATIC( QFILEOPENEVENT_NEW2 ) // TODO: revisar e corrigir
   QFileOpenEvent * o = new QFileOpenEvent ( *par1 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QFileOpenEvent(const QString &file)
 //[2]QFileOpenEvent(const QUrl &url)
@@ -87,6 +86,7 @@ HB_FUNC_STATIC( QFILEOPENEVENT_NEW )
 HB_FUNC_STATIC( QFILEOPENEVENT_DELETE )
 {
   QFileOpenEvent * obj = (QFileOpenEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -96,9 +96,9 @@ HB_FUNC_STATIC( QFILEOPENEVENT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QString file () const
@@ -111,7 +111,6 @@ HB_FUNC_STATIC( QFILEOPENEVENT_FILE )
     RQSTRING( obj->file () );
   }
 }
-
 
 /*
 bool openFile ( QFile & file, QIODevice::OpenMode flags ) const
@@ -127,7 +126,6 @@ HB_FUNC_STATIC( QFILEOPENEVENT_OPENFILE )
   }
 }
 
-
 /*
 QUrl url () const
 */
@@ -140,8 +138,5 @@ HB_FUNC_STATIC( QFILEOPENEVENT_URL )
     _qt4xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
-
-
-
 
 #pragma ENDDUMP

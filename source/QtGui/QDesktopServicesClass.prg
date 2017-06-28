@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QDesktopServices
 
@@ -19,11 +18,13 @@ CLASS QDesktopServices
    METHOD setUrlHandler
    METHOD storageLocation
    METHOD unsetUrlHandler
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -42,8 +43,6 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
-
 /*
 QString displayName ( StandardLocation type )
 */
@@ -52,7 +51,6 @@ HB_FUNC_STATIC( QDESKTOPSERVICES_DISPLAYNAME )
   RQSTRING( QDesktopServices::displayName ( (QDesktopServices::StandardLocation) hb_parni(1) ) );
 }
 
-
 /*
 bool openUrl ( const QUrl & url )
 */
@@ -60,7 +58,6 @@ HB_FUNC_STATIC( QDESKTOPSERVICES_OPENURL )
 {
   RBOOL( QDesktopServices::openUrl ( *PQURL(1) ) );
 }
-
 
 /*
 void setUrlHandler ( const QString & scheme, QObject * receiver, const char * method )
@@ -71,7 +68,6 @@ HB_FUNC_STATIC( QDESKTOPSERVICES_SETURLHANDLER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString storageLocation ( StandardLocation type )
 */
@@ -79,7 +75,6 @@ HB_FUNC_STATIC( QDESKTOPSERVICES_STORAGELOCATION )
 {
   RQSTRING( QDesktopServices::storageLocation ( (QDesktopServices::StandardLocation) hb_parni(1) ) );
 }
-
 
 /*
 void unsetUrlHandler ( const QString & scheme )
@@ -89,7 +84,6 @@ HB_FUNC_STATIC( QDESKTOPSERVICES_UNSETURLHANDLER )
   QDesktopServices::unsetUrlHandler ( PQSTRING(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QDESKTOPSERVICES_NEWFROM )
 {
@@ -145,6 +139,5 @@ HB_FUNC_STATIC( QDESKTOPSERVICES_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

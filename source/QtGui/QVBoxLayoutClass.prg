@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QVBoxLayout INHERIT QBoxLayout
 
@@ -17,6 +16,7 @@ CLASS QVBoxLayout INHERIT QBoxLayout
    METHOD new2
    METHOD new
    METHOD delete
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -44,7 +44,6 @@ HB_FUNC_STATIC( QVBOXLAYOUT_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QVBoxLayout ( QWidget * parent )
 */
@@ -53,7 +52,6 @@ HB_FUNC_STATIC( QVBOXLAYOUT_NEW2 )
   QVBoxLayout * o = new QVBoxLayout ( PQWIDGET(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QVBoxLayout ()
 //[2]QVBoxLayout ( QWidget * parent )
@@ -77,6 +75,7 @@ HB_FUNC_STATIC( QVBOXLAYOUT_NEW )
 HB_FUNC_STATIC( QVBOXLAYOUT_DELETE )
 {
   QVBoxLayout * obj = (QVBoxLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -86,10 +85,8 @@ HB_FUNC_STATIC( QVBOXLAYOUT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
 
 #pragma ENDDUMP

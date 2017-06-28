@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -53,8 +53,10 @@ CLASS QGraphicsTextItem INHERIT QGraphicsObject
    METHOD paint
    METHOD shape
    METHOD type
+
    METHOD onLinkActivated
    METHOD onLinkHovered
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -85,7 +87,6 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QGraphicsTextItem ( const QString & text, QGraphicsItem * parent = 0 )
 */
@@ -94,7 +95,6 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_NEW2 )
   QGraphicsTextItem * o = new QGraphicsTextItem ( PQSTRING(1), OPQGRAPHICSITEM(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QGraphicsTextItem ( QGraphicsItem * parent = 0 )
 //[2]QGraphicsTextItem ( const QString & text, QGraphicsItem * parent = 0 )
@@ -118,6 +118,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_NEW )
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DELETE )
 {
   QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -127,9 +128,9 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void adjustSize ()
@@ -144,7 +145,6 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ADJUSTSIZE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QColor defaultTextColor () const
 */
@@ -157,7 +157,6 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DEFAULTTEXTCOLOR )
     _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }
-
 
 /*
 QTextDocument * document () const
@@ -172,7 +171,6 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DOCUMENT )
   }
 }
 
-
 /*
 QFont font () const
 */
@@ -186,7 +184,6 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_FONT )
   }
 }
 
-
 /*
 bool openExternalLinks () const
 */
@@ -198,7 +195,6 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_OPENEXTERNALLINKS )
     RBOOL( obj->openExternalLinks () );
   }
 }
-
 
 /*
 void setDefaultTextColor ( const QColor & col )
@@ -214,7 +210,6 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETDEFAULTTEXTCOLOR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setDocument ( QTextDocument * document )
 */
@@ -229,7 +224,6 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETDOCUMENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setFont ( const QFont & font )
 */
@@ -242,7 +236,6 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETFONT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setHtml ( const QString & text )
@@ -257,7 +250,6 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETHTML )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setOpenExternalLinks ( bool open )
 */
@@ -270,7 +262,6 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETOPENEXTERNALLINKS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setPlainText ( const QString & text )
@@ -285,7 +276,6 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETPLAINTEXT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setTabChangesFocus ( bool b )
 */
@@ -299,7 +289,6 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTABCHANGESFOCUS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setTextCursor ( const QTextCursor & cursor )
 */
@@ -312,7 +301,6 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTEXTCURSOR )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setTextInteractionFlags ( Qt::TextInteractionFlags flags )
@@ -328,7 +316,6 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTEXTINTERACTIONFLAGS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setTextWidth ( qreal width )
 */
@@ -342,7 +329,6 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTEXTWIDTH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool tabChangesFocus () const
 */
@@ -354,7 +340,6 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TABCHANGESFOCUS )
     RBOOL( obj->tabChangesFocus () );
   }
 }
-
 
 /*
 QTextCursor textCursor () const
@@ -369,7 +354,6 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTCURSOR )
   }
 }
 
-
 /*
 Qt::TextInteractionFlags textInteractionFlags () const
 */
@@ -381,7 +365,6 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTINTERACTIONFLAGS )
     hb_retni( (int) obj->textInteractionFlags () );
   }
 }
-
 
 /*
 qreal textWidth () const
@@ -395,7 +378,6 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTWIDTH )
   }
 }
 
-
 /*
 QString toHtml () const
 */
@@ -408,7 +390,6 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TOHTML )
   }
 }
 
-
 /*
 QString toPlainText () const
 */
@@ -420,7 +401,6 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TOPLAINTEXT )
     RQSTRING( obj->toPlainText () );
   }
 }
-
 
 /*
 virtual QRectF boundingRect () const
@@ -435,7 +415,6 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_BOUNDINGRECT )
   }
 }
 
-
 /*
 virtual bool contains ( const QPointF & point ) const
 */
@@ -447,7 +426,6 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_CONTAINS )
     RBOOL( obj->contains ( *PQPOINTF(1) ) );
   }
 }
-
 
 /*
 virtual bool isObscuredBy ( const QGraphicsItem * item ) const
@@ -462,7 +440,6 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ISOBSCUREDBY )
   }
 }
 
-
 /*
 virtual QPainterPath opaqueArea () const
 */
@@ -475,7 +452,6 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_OPAQUEAREA )
     _qt4xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
-
 
 /*
 virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget )
@@ -491,7 +467,6 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_PAINT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QPainterPath shape () const
 */
@@ -505,7 +480,6 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SHAPE )
   }
 }
 
-
 /*
 virtual int type () const
 */
@@ -517,10 +491,5 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TYPE )
     RINT( obj->type () );
   }
 }
-
-
-
-
-
 
 #pragma ENDDUMP

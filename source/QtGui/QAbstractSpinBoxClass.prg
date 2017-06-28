@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -51,7 +51,9 @@ CLASS QAbstractSpinBox INHERIT QWidget
    METHOD selectAll
    METHOD stepDown
    METHOD stepUp
+
    METHOD onEditingFinished
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -79,10 +81,10 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QABSTRACTSPINBOX_DELETE )
 {
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -92,9 +94,9 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 Qt::Alignment alignment () const
@@ -108,7 +110,6 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_ALIGNMENT )
   }
 }
 
-
 /*
 ButtonSymbols buttonSymbols () const
 */
@@ -121,7 +122,6 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_BUTTONSYMBOLS )
   }
 }
 
-
 /*
 CorrectionMode correctionMode () const
 */
@@ -133,7 +133,6 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_CORRECTIONMODE )
     hb_retni( (int) obj->correctionMode () );
   }
 }
-
 
 /*
 virtual void fixup ( QString & input ) const
@@ -149,7 +148,6 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_FIXUP ) // TODO: revisar implementacao e corrig
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool hasAcceptableInput () const
 */
@@ -162,7 +160,6 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_HASACCEPTABLEINPUT )
   }
 }
 
-
 /*
 bool hasFrame () const
 */
@@ -174,7 +171,6 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_HASFRAME )
     RBOOL( obj->hasFrame () );
   }
 }
-
 
 /*
 void interpretText ()
@@ -189,7 +185,6 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_INTERPRETTEXT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool isAccelerated () const
 */
@@ -201,7 +196,6 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_ISACCELERATED )
     RBOOL( obj->isAccelerated () );
   }
 }
-
 
 /*
 bool isReadOnly () const
@@ -215,7 +209,6 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_ISREADONLY )
   }
 }
 
-
 /*
 bool keyboardTracking () const
 */
@@ -227,7 +220,6 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_KEYBOARDTRACKING )
     RBOOL( obj->keyboardTracking () );
   }
 }
-
 
 /*
 void setAccelerated ( bool on )
@@ -241,7 +233,6 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETACCELERATED )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setAlignment ( Qt::Alignment flag )
@@ -257,7 +248,6 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETALIGNMENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setButtonSymbols ( ButtonSymbols bs )
 */
@@ -271,7 +261,6 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETBUTTONSYMBOLS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setCorrectionMode ( CorrectionMode cm )
@@ -287,7 +276,6 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETCORRECTIONMODE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setFrame ( bool )
 */
@@ -300,7 +288,6 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETFRAME )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setKeyboardTracking ( bool kt )
@@ -315,7 +302,6 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETKEYBOARDTRACKING )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setReadOnly ( bool r )
 */
@@ -328,7 +314,6 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETREADONLY )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setSpecialValueText ( const QString & txt )
@@ -343,7 +328,6 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETSPECIALVALUETEXT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setWrapping ( bool w )
 */
@@ -357,7 +341,6 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETWRAPPING )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString specialValueText () const
 */
@@ -369,7 +352,6 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SPECIALVALUETEXT )
     RQSTRING( obj->specialValueText () );
   }
 }
-
 
 /*
 virtual void stepBy ( int steps )
@@ -384,7 +366,6 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_STEPBY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString text () const
 */
@@ -396,7 +377,6 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_TEXT )
     RQSTRING( obj->text () );
   }
 }
-
 
 /*
 virtual QValidator::State validate ( QString & input, int & pos ) const
@@ -412,7 +392,6 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_VALIDATE ) // TODO: revisar implementacao e cor
   }
 }
 
-
 /*
 bool wrapping () const
 */
@@ -425,7 +404,6 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_WRAPPING )
   }
 }
 
-
 /*
 virtual bool event ( QEvent * event )
 */
@@ -437,7 +415,6 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_EVENT )
     RBOOL( obj->event ( PQEVENT(1) ) );
   }
 }
-
 
 /*
 virtual QVariant inputMethodQuery ( Qt::InputMethodQuery query ) const
@@ -453,7 +430,6 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_INPUTMETHODQUERY )
   }
 }
 
-
 /*
 virtual QSize minimumSizeHint () const
 */
@@ -466,7 +442,6 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_MINIMUMSIZEHINT )
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
-
 
 /*
 virtual QSize sizeHint () const
@@ -481,7 +456,6 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SIZEHINT )
   }
 }
 
-
 /*
 virtual void clear ()
 */
@@ -494,7 +468,6 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_CLEAR )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void selectAll ()
@@ -509,7 +482,6 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SELECTALL )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void stepDown ()
 */
@@ -523,7 +495,6 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_STEPDOWN )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void stepUp ()
 */
@@ -536,10 +507,5 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_STEPUP )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
-
 
 #pragma ENDDUMP
