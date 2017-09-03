@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QAbstractXmlReceiver
 
@@ -50,7 +49,6 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
 HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_DELETE )
 {
   QAbstractXmlReceiver * obj = (QAbstractXmlReceiver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -66,7 +64,6 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void atomicValue ( const QVariant & value ) = 0
 */
@@ -79,7 +76,6 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_ATOMICVALUE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void attribute ( const QXmlName & name, const QStringRef & value ) = 0
@@ -95,7 +91,6 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_ATTRIBUTE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void characters ( const QStringRef & value ) = 0
 */
@@ -110,7 +105,6 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_CHARACTERS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void comment ( const QString & value ) = 0
 */
@@ -123,7 +117,6 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_COMMENT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void endDocument () = 0
@@ -138,7 +131,6 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_ENDDOCUMENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void endElement () = 0
 */
@@ -151,7 +143,6 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_ENDELEMENT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void endOfSequence () = 0
@@ -166,7 +157,6 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_ENDOFSEQUENCE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void namespaceBinding ( const QXmlName & name ) = 0
 */
@@ -179,7 +169,6 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_NAMESPACEBINDING )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void processingInstruction ( const QXmlName & target, const QString & value ) = 0
@@ -194,7 +183,6 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_PROCESSINGINSTRUCTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void startDocument () = 0
 */
@@ -207,7 +195,6 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_STARTDOCUMENT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void startElement ( const QXmlName & name ) = 0
@@ -222,7 +209,6 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_STARTELEMENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void startOfSequence () = 0
 */
@@ -235,7 +221,6 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_STARTOFSEQUENCE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_NEWFROM )
 {
@@ -291,7 +276,5 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

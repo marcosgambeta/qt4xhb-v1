@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -63,7 +63,6 @@ HB_FUNC_STATIC( QXMLITEM_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QXmlItem ( const QXmlItem & other )
 */
@@ -72,7 +71,6 @@ HB_FUNC_STATIC( QXMLITEM_NEW2 )
   QXmlItem * o = new QXmlItem ( *PQXMLITEM(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QXmlItem ( const QXmlNodeModelIndex & node )
@@ -83,7 +81,6 @@ HB_FUNC_STATIC( QXMLITEM_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QXmlItem ( const QVariant & atomicValue )
 */
@@ -92,7 +89,6 @@ HB_FUNC_STATIC( QXMLITEM_NEW4 )
   QXmlItem * o = new QXmlItem ( *PQVARIANT(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QXmlItem ()
 //[2]QXmlItem ( const QXmlItem & other )
@@ -138,7 +134,6 @@ HB_FUNC_STATIC( QXMLITEM_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool isAtomicValue () const
 */
@@ -150,7 +145,6 @@ HB_FUNC_STATIC( QXMLITEM_ISATOMICVALUE )
     RBOOL( obj->isAtomicValue () );
   }
 }
-
 
 /*
 bool isNode () const
@@ -164,7 +158,6 @@ HB_FUNC_STATIC( QXMLITEM_ISNODE )
   }
 }
 
-
 /*
 bool isNull () const
 */
@@ -176,7 +169,6 @@ HB_FUNC_STATIC( QXMLITEM_ISNULL )
     RBOOL( obj->isNull () );
   }
 }
-
 
 /*
 QVariant toAtomicValue () const
@@ -191,7 +183,6 @@ HB_FUNC_STATIC( QXMLITEM_TOATOMICVALUE )
   }
 }
 
-
 /*
 QXmlNodeModelIndex toNodeModelIndex () const
 */
@@ -204,7 +195,6 @@ HB_FUNC_STATIC( QXMLITEM_TONODEMODELINDEX )
     _qt4xhb_createReturnClass ( ptr, "QXMLNODEMODELINDEX", true );
   }
 }
-
 
 HB_FUNC_STATIC( QXMLITEM_NEWFROM )
 {
@@ -260,7 +250,5 @@ HB_FUNC_STATIC( QXMLITEM_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

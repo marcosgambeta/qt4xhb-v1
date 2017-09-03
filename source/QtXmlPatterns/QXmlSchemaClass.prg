@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -70,7 +70,6 @@ HB_FUNC_STATIC( QXMLSCHEMA_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QXmlSchema ( const QXmlSchema & other )
 */
@@ -79,7 +78,6 @@ HB_FUNC_STATIC( QXMLSCHEMA_NEW2 )
   QXmlSchema * o = new QXmlSchema ( *PQXMLSCHEMA(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QXmlSchema ()
 //[2]QXmlSchema ( const QXmlSchema & other )
@@ -115,7 +113,6 @@ HB_FUNC_STATIC( QXMLSCHEMA_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QUrl documentUri () const
 */
@@ -129,7 +126,6 @@ HB_FUNC_STATIC( QXMLSCHEMA_DOCUMENTURI )
   }
 }
 
-
 /*
 bool isValid () const
 */
@@ -142,7 +138,6 @@ HB_FUNC_STATIC( QXMLSCHEMA_ISVALID )
   }
 }
 
-
 /*
 bool load ( const QUrl & source )
 */
@@ -154,7 +149,6 @@ HB_FUNC_STATIC( QXMLSCHEMA_LOAD1 )
     RBOOL( obj->load ( *PQURL(1) ) );
   }
 }
-
 
 /*
 bool load ( QIODevice * source, const QUrl & documentUri = QUrl() )
@@ -169,7 +163,6 @@ HB_FUNC_STATIC( QXMLSCHEMA_LOAD2 )
   }
 }
 
-
 /*
 bool load ( const QByteArray & data, const QUrl & documentUri = QUrl() )
 */
@@ -182,7 +175,6 @@ HB_FUNC_STATIC( QXMLSCHEMA_LOAD3 )
     RBOOL( obj->load ( *PQBYTEARRAY(1), par2 ) );
   }
 }
-
 
 //[1]bool load ( const QUrl & source )
 //[2]bool load ( QIODevice * source, const QUrl & documentUri = QUrl() )
@@ -217,7 +209,6 @@ HB_FUNC_STATIC( QXMLSCHEMA_MESSAGEHANDLER )
   }
 }
 
-
 /*
 QXmlNamePool namePool () const
 */
@@ -231,7 +222,6 @@ HB_FUNC_STATIC( QXMLSCHEMA_NAMEPOOL )
   }
 }
 
-
 /*
 QNetworkAccessManager * networkAccessManager () const
 */
@@ -244,7 +234,6 @@ HB_FUNC_STATIC( QXMLSCHEMA_NETWORKACCESSMANAGER )
     _qt4xhb_createReturnClass ( ptr, "QNETWORKACCESSMANAGER" );
   }
 }
-
 
 /*
 void setMessageHandler ( QAbstractMessageHandler * handler )
@@ -260,7 +249,6 @@ HB_FUNC_STATIC( QXMLSCHEMA_SETMESSAGEHANDLER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setNetworkAccessManager ( QNetworkAccessManager * manager )
 */
@@ -274,7 +262,6 @@ HB_FUNC_STATIC( QXMLSCHEMA_SETNETWORKACCESSMANAGER )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setUriResolver ( const QAbstractUriResolver * resolver )
@@ -290,7 +277,6 @@ HB_FUNC_STATIC( QXMLSCHEMA_SETURIRESOLVER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 const QAbstractUriResolver * uriResolver () const
 */
@@ -303,7 +289,6 @@ HB_FUNC_STATIC( QXMLSCHEMA_URIRESOLVER )
     _qt4xhb_createReturnClass ( ptr, "QABSTRACTURIRESOLVER" );
   }
 }
-
 
 HB_FUNC_STATIC( QXMLSCHEMA_NEWFROM )
 {
@@ -359,7 +344,5 @@ HB_FUNC_STATIC( QXMLSCHEMA_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QXmlNamePool
 
@@ -50,7 +49,6 @@ HB_FUNC_STATIC( QXMLNAMEPOOL_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QXmlNamePool ( const QXmlNamePool & other )
 */
@@ -59,7 +57,6 @@ HB_FUNC_STATIC( QXMLNAMEPOOL_NEW2 )
   QXmlNamePool * o = new QXmlNamePool ( *PQXMLNAMEPOOL(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QXmlNamePool ()
 //[2]QXmlNamePool ( const QXmlNamePool & other )
@@ -94,7 +91,6 @@ HB_FUNC_STATIC( QXMLNAMEPOOL_DELETE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QXMLNAMEPOOL_NEWFROM )
 {
@@ -150,8 +146,5 @@ HB_FUNC_STATIC( QXMLNAMEPOOL_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
-
 
 #pragma ENDDUMP

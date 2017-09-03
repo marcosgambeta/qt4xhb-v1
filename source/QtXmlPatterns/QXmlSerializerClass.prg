@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -60,9 +60,6 @@ HB_FUNC_STATIC( QXMLSERIALIZER_NEW )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
-
-
 /*
 const QTextCodec * codec () const
 */
@@ -75,7 +72,6 @@ HB_FUNC_STATIC( QXMLSERIALIZER_CODEC )
     _qt4xhb_createReturnClass ( ptr, "QTEXTCODEC" );
   }
 }
-
 
 /*
 QIODevice * outputDevice () const
@@ -90,7 +86,6 @@ HB_FUNC_STATIC( QXMLSERIALIZER_OUTPUTDEVICE )
   }
 }
 
-
 /*
 void setCodec ( const QTextCodec * outputCodec )
 */
@@ -104,7 +99,6 @@ HB_FUNC_STATIC( QXMLSERIALIZER_SETCODEC )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void atomicValue ( const QVariant & value )
 */
@@ -117,7 +111,6 @@ HB_FUNC_STATIC( QXMLSERIALIZER_ATOMICVALUE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void attribute ( const QXmlName & name, const QStringRef & value )
@@ -133,7 +126,6 @@ HB_FUNC_STATIC( QXMLSERIALIZER_ATTRIBUTE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void characters ( const QStringRef & value )
 */
@@ -148,7 +140,6 @@ HB_FUNC_STATIC( QXMLSERIALIZER_CHARACTERS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void comment ( const QString & value )
 */
@@ -161,7 +152,6 @@ HB_FUNC_STATIC( QXMLSERIALIZER_COMMENT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void endDocument ()
@@ -176,7 +166,6 @@ HB_FUNC_STATIC( QXMLSERIALIZER_ENDDOCUMENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void endElement ()
 */
@@ -189,7 +178,6 @@ HB_FUNC_STATIC( QXMLSERIALIZER_ENDELEMENT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void endOfSequence ()
@@ -204,7 +192,6 @@ HB_FUNC_STATIC( QXMLSERIALIZER_ENDOFSEQUENCE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void namespaceBinding ( const QXmlName & nb )
 */
@@ -217,7 +204,6 @@ HB_FUNC_STATIC( QXMLSERIALIZER_NAMESPACEBINDING )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void processingInstruction ( const QXmlName & name, const QString & value )
@@ -232,7 +218,6 @@ HB_FUNC_STATIC( QXMLSERIALIZER_PROCESSINGINSTRUCTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void startDocument ()
 */
@@ -245,7 +230,6 @@ HB_FUNC_STATIC( QXMLSERIALIZER_STARTDOCUMENT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void startElement ( const QXmlName & name )
@@ -260,7 +244,6 @@ HB_FUNC_STATIC( QXMLSERIALIZER_STARTELEMENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void startOfSequence ()
 */
@@ -273,9 +256,5 @@ HB_FUNC_STATIC( QXMLSERIALIZER_STARTOFSEQUENCE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

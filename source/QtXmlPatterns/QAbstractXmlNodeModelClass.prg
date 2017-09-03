@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -56,7 +56,6 @@ RETURN
 #include <QVector>
 #include <QSourceLocation>
 
-
 HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_DELETE )
 {
   QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -72,7 +71,6 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QUrl baseUri ( const QXmlNodeModelIndex & n ) const = 0
 */
@@ -86,7 +84,6 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_BASEURI )
   }
 }
 
-
 /*
 virtual QXmlNodeModelIndex::DocumentOrder compareOrder ( const QXmlNodeModelIndex & ni1, const QXmlNodeModelIndex & ni2 ) const = 0
 */
@@ -98,7 +95,6 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_COMPAREORDER )
     hb_retni( (int) obj->compareOrder ( *PQXMLNODEMODELINDEX(1), *PQXMLNODEMODELINDEX(2) ) );
   }
 }
-
 
 /*
 virtual QUrl documentUri ( const QXmlNodeModelIndex & n ) const = 0
@@ -113,7 +109,6 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_DOCUMENTURI )
   }
 }
 
-
 /*
 virtual QXmlNodeModelIndex elementById ( const QXmlName & id ) const = 0
 */
@@ -127,7 +122,6 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_ELEMENTBYID )
   }
 }
 
-
 /*
 virtual QXmlNodeModelIndex::NodeKind kind ( const QXmlNodeModelIndex & ni ) const = 0
 */
@@ -139,7 +133,6 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_KIND )
     hb_retni( (int) obj->kind ( *PQXMLNODEMODELINDEX(1) ) );
   }
 }
-
 
 /*
 virtual QXmlName name ( const QXmlNodeModelIndex & ni ) const = 0
@@ -153,7 +146,6 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_NAME )
     _qt4xhb_createReturnClass ( ptr, "QXMLNAME", true );
   }
 }
-
 
 /*
 virtual QVector<QXmlName> namespaceBindings ( const QXmlNodeModelIndex & n ) const = 0
@@ -198,7 +190,6 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_NAMESPACEBINDINGS )
   }
 }
 
-
 /*
 virtual QVector<QXmlNodeModelIndex> nodesByIdref ( const QXmlName & idref ) const = 0
 */
@@ -242,7 +233,6 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_NODESBYIDREF )
   }
 }
 
-
 /*
 virtual QXmlNodeModelIndex root ( const QXmlNodeModelIndex & n ) const = 0
 */
@@ -255,7 +245,6 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_ROOT )
     _qt4xhb_createReturnClass ( ptr, "QXMLNODEMODELINDEX", true );
   }
 }
-
 
 /*
 QSourceLocation sourceLocation ( const QXmlNodeModelIndex & index ) const
@@ -270,7 +259,6 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_SOURCELOCATION )
   }
 }
 
-
 /*
 virtual QString stringValue ( const QXmlNodeModelIndex & n ) const = 0
 */
@@ -282,7 +270,6 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_STRINGVALUE )
     RQSTRING( obj->stringValue ( *PQXMLNODEMODELINDEX(1) ) );
   }
 }
-
 
 /*
 virtual QVariant typedValue ( const QXmlNodeModelIndex & node ) const = 0
@@ -296,9 +283,5 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_TYPEDVALUE )
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
-
-
-
-
 
 #pragma ENDDUMP

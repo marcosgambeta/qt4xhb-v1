@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -61,7 +61,6 @@ HB_FUNC_STATIC( QXMLNAME_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QXmlName ( QXmlNamePool & namePool, const QString & localName, const QString & namespaceURI = QString(), const QString & prefix = QString() )
 */
@@ -70,7 +69,6 @@ HB_FUNC_STATIC( QXMLNAME_NEW2 )
   QXmlName * o = new QXmlName ( *PQXMLNAMEPOOL(1), PQSTRING(2), OPQSTRING(3,QString()), OPQSTRING(4,QString()) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QXmlName ()
 //[2]QXmlName ( QXmlNamePool & namePool, const QString & localName, const QString & namespaceURI = QString(), const QString & prefix = QString() )
@@ -91,8 +89,6 @@ HB_FUNC_STATIC( QXMLNAME_NEW )
   }
 }
 
-
-
 /*
 bool isNull () const
 */
@@ -104,7 +100,6 @@ HB_FUNC_STATIC( QXMLNAME_ISNULL )
     RBOOL( obj->isNull () );
   }
 }
-
 
 /*
 QString localName ( const QXmlNamePool & namePool ) const
@@ -118,7 +113,6 @@ HB_FUNC_STATIC( QXMLNAME_LOCALNAME )
   }
 }
 
-
 /*
 QString namespaceUri ( const QXmlNamePool & namePool ) const
 */
@@ -130,7 +124,6 @@ HB_FUNC_STATIC( QXMLNAME_NAMESPACEURI )
     RQSTRING( obj->namespaceUri ( *PQXMLNAMEPOOL(1) ) );
   }
 }
-
 
 /*
 QString prefix ( const QXmlNamePool & namePool ) const
@@ -144,7 +137,6 @@ HB_FUNC_STATIC( QXMLNAME_PREFIX )
   }
 }
 
-
 /*
 QString toClarkName ( const QXmlNamePool & namePool ) const
 */
@@ -157,8 +149,6 @@ HB_FUNC_STATIC( QXMLNAME_TOCLARKNAME )
   }
 }
 
-
-
 /*
 QXmlName fromClarkName ( const QString & clarkName, const QXmlNamePool & namePool )
 */
@@ -168,7 +158,6 @@ HB_FUNC_STATIC( QXMLNAME_FROMCLARKNAME )
   _qt4xhb_createReturnClass ( ptr, "QXMLNAME", true );
 }
 
-
 /*
 bool isNCName ( const QString & candidate )
 */
@@ -176,7 +165,6 @@ HB_FUNC_STATIC( QXMLNAME_ISNCNAME )
 {
   RBOOL( QXmlName::isNCName ( PQSTRING(1) ) );
 }
-
 
 HB_FUNC_STATIC( QXMLNAME_NEWFROM )
 {
@@ -232,6 +220,5 @@ HB_FUNC_STATIC( QXMLNAME_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

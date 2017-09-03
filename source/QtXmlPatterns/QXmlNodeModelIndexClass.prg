@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -57,7 +57,6 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QXmlNodeModelIndex ( const QXmlNodeModelIndex & other )
 */
@@ -66,7 +65,6 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_NEW2 )
   QXmlNodeModelIndex * o = new QXmlNodeModelIndex ( *PQXMLNODEMODELINDEX(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QXmlNodeModelIndex ()
 //[2]QXmlNodeModelIndex ( const QXmlNodeModelIndex & other )
@@ -87,8 +85,6 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_NEW )
   }
 }
 
-
-
 /*
 qint64 additionalData () const
 */
@@ -101,7 +97,6 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_ADDITIONALDATA )
   }
 }
 
-
 /*
 qint64 data () const
 */
@@ -113,7 +108,6 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_DATA )
     RQINT64( obj->data () );
   }
 }
-
 
 /*
 void * internalPointer () const
@@ -128,7 +122,6 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_INTERNALPOINTER )
   }
 }
 
-
 /*
 bool isNull () const
 */
@@ -140,7 +133,6 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_ISNULL )
     RBOOL( obj->isNull () );
   }
 }
-
 
 /*
 const QAbstractXmlNodeModel * model () const
@@ -154,7 +146,6 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_MODEL )
     _qt4xhb_createReturnClass ( ptr, "QABSTRACTXMLNODEMODEL" );
   }
 }
-
 
 HB_FUNC_STATIC( QXMLNODEMODELINDEX_NEWFROM )
 {
@@ -210,7 +201,5 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

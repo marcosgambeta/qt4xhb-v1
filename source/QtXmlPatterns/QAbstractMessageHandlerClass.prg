@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QAbstractMessageHandler INHERIT QObject
 
@@ -33,7 +32,6 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
 HB_FUNC_STATIC( QABSTRACTMESSAGEHANDLER_DELETE )
 {
   QAbstractMessageHandler * obj = (QAbstractMessageHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -48,7 +46,6 @@ HB_FUNC_STATIC( QABSTRACTMESSAGEHANDLER_DELETE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void message ( QtMsgType type, const QString & description, const QUrl & identifier = QUrl(), const QSourceLocation & sourceLocation = QSourceLocation() )
@@ -65,9 +62,5 @@ HB_FUNC_STATIC( QABSTRACTMESSAGEHANDLER_MESSAGE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

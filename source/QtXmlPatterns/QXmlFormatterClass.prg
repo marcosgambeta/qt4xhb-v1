@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QXmlFormatter INHERIT QXmlSerializer
 
@@ -54,9 +53,6 @@ HB_FUNC_STATIC( QXMLFORMATTER_NEW )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
-
-
 /*
 int indentationDepth () const
 */
@@ -68,7 +64,6 @@ HB_FUNC_STATIC( QXMLFORMATTER_INDENTATIONDEPTH )
     RINT( obj->indentationDepth () );
   }
 }
-
 
 /*
 void setIndentationDepth ( int depth )
@@ -83,7 +78,6 @@ HB_FUNC_STATIC( QXMLFORMATTER_SETINDENTATIONDEPTH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void atomicValue ( const QVariant & value )
 */
@@ -96,7 +90,6 @@ HB_FUNC_STATIC( QXMLFORMATTER_ATOMICVALUE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void attribute ( const QXmlName & name, const QStringRef & value )
@@ -112,7 +105,6 @@ HB_FUNC_STATIC( QXMLFORMATTER_ATTRIBUTE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void characters ( const QStringRef & value )
 */
@@ -127,7 +119,6 @@ HB_FUNC_STATIC( QXMLFORMATTER_CHARACTERS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void comment ( const QString & value )
 */
@@ -140,7 +131,6 @@ HB_FUNC_STATIC( QXMLFORMATTER_COMMENT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void endDocument ()
@@ -155,7 +145,6 @@ HB_FUNC_STATIC( QXMLFORMATTER_ENDDOCUMENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void endElement ()
 */
@@ -168,7 +157,6 @@ HB_FUNC_STATIC( QXMLFORMATTER_ENDELEMENT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void endOfSequence ()
@@ -183,7 +171,6 @@ HB_FUNC_STATIC( QXMLFORMATTER_ENDOFSEQUENCE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void processingInstruction ( const QXmlName & name, const QString & value )
 */
@@ -196,7 +183,6 @@ HB_FUNC_STATIC( QXMLFORMATTER_PROCESSINGINSTRUCTION )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void startDocument ()
@@ -211,7 +197,6 @@ HB_FUNC_STATIC( QXMLFORMATTER_STARTDOCUMENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void startElement ( const QXmlName & name )
 */
@@ -225,7 +210,6 @@ HB_FUNC_STATIC( QXMLFORMATTER_STARTELEMENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void startOfSequence ()
 */
@@ -238,9 +222,5 @@ HB_FUNC_STATIC( QXMLFORMATTER_STARTOFSEQUENCE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

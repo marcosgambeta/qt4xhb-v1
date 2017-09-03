@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -56,7 +56,6 @@ HB_FUNC_STATIC( QXMLRESULTITEMS_NEW )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 HB_FUNC_STATIC( QXMLRESULTITEMS_DELETE )
 {
   QXmlResultItems * obj = (QXmlResultItems *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -72,7 +71,6 @@ HB_FUNC_STATIC( QXMLRESULTITEMS_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QXmlItem current () const
 */
@@ -86,7 +84,6 @@ HB_FUNC_STATIC( QXMLRESULTITEMS_CURRENT )
   }
 }
 
-
 /*
 bool hasError () const
 */
@@ -98,7 +95,6 @@ HB_FUNC_STATIC( QXMLRESULTITEMS_HASERROR )
     RBOOL( obj->hasError () );
   }
 }
-
 
 /*
 QXmlItem next ()
@@ -112,7 +108,6 @@ HB_FUNC_STATIC( QXMLRESULTITEMS_NEXT )
     _qt4xhb_createReturnClass ( ptr, "QXMLITEM", true );
   }
 }
-
 
 HB_FUNC_STATIC( QXMLRESULTITEMS_NEWFROM )
 {
@@ -168,7 +163,5 @@ HB_FUNC_STATIC( QXMLRESULTITEMS_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

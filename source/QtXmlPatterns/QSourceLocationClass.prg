@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -61,7 +61,6 @@ HB_FUNC_STATIC( QSOURCELOCATION_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QSourceLocation ( const QSourceLocation & other )
 */
@@ -71,7 +70,6 @@ HB_FUNC_STATIC( QSOURCELOCATION_NEW2 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QSourceLocation ( const QUrl & u, int l = -1, int c = -1 )
 */
@@ -80,7 +78,6 @@ HB_FUNC_STATIC( QSOURCELOCATION_NEW3 )
   QSourceLocation * o = new QSourceLocation ( *PQURL(1), OPINT(2,-1), OPINT(3,-1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QSourceLocation ()
 //[2]QSourceLocation ( const QSourceLocation & other )
@@ -121,7 +118,6 @@ HB_FUNC_STATIC( QSOURCELOCATION_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 qint64 column () const
 */
@@ -133,7 +129,6 @@ HB_FUNC_STATIC( QSOURCELOCATION_COLUMN )
     RQINT64( obj->column () );
   }
 }
-
 
 /*
 bool isNull () const
@@ -147,7 +142,6 @@ HB_FUNC_STATIC( QSOURCELOCATION_ISNULL )
   }
 }
 
-
 /*
 qint64 line () const
 */
@@ -159,7 +153,6 @@ HB_FUNC_STATIC( QSOURCELOCATION_LINE )
     RQINT64( obj->line () );
   }
 }
-
 
 /*
 void setColumn ( qint64 newColumn )
@@ -174,7 +167,6 @@ HB_FUNC_STATIC( QSOURCELOCATION_SETCOLUMN )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setLine ( qint64 newLine )
 */
@@ -187,7 +179,6 @@ HB_FUNC_STATIC( QSOURCELOCATION_SETLINE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setUri ( const QUrl & newUri )
@@ -202,7 +193,6 @@ HB_FUNC_STATIC( QSOURCELOCATION_SETURI )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QUrl uri () const
 */
@@ -215,7 +205,6 @@ HB_FUNC_STATIC( QSOURCELOCATION_URI )
     _qt4xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
-
 
 HB_FUNC_STATIC( QSOURCELOCATION_NEWFROM )
 {
@@ -271,7 +260,5 @@ HB_FUNC_STATIC( QSOURCELOCATION_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP
