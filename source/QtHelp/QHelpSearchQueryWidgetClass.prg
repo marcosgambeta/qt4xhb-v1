@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -47,7 +47,6 @@ HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_DELETE )
 {
   QHelpSearchQueryWidget * obj = (QHelpSearchQueryWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -62,7 +61,6 @@ HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_DELETE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QList<QHelpSearchQuery> query () const
@@ -106,9 +104,5 @@ HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_QUERY )
     hb_itemReturnRelease(pArray);
   }
 }
-
-
-
-
 
 #pragma ENDDUMP

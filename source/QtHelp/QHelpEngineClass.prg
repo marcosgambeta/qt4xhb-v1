@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -54,7 +54,6 @@ HB_FUNC_STATIC( QHELPENGINE_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QHELPENGINE_DELETE )
 {
   QHelpEngine * obj = (QHelpEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -70,7 +69,6 @@ HB_FUNC_STATIC( QHELPENGINE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QHelpContentModel * contentModel () const
 */
@@ -83,7 +81,6 @@ HB_FUNC_STATIC( QHELPENGINE_CONTENTMODEL )
     _qt4xhb_createReturnClass ( ptr, "QHELPCONTENTMODEL" );
   }
 }
-
 
 /*
 QHelpContentWidget * contentWidget ()
@@ -98,7 +95,6 @@ HB_FUNC_STATIC( QHELPENGINE_CONTENTWIDGET )
   }
 }
 
-
 /*
 QHelpIndexModel * indexModel () const
 */
@@ -111,7 +107,6 @@ HB_FUNC_STATIC( QHELPENGINE_INDEXMODEL )
     _qt4xhb_createReturnClass ( ptr, "QHELPINDEXMODEL" );
   }
 }
-
 
 /*
 QHelpIndexWidget * indexWidget ()
@@ -126,7 +121,6 @@ HB_FUNC_STATIC( QHELPENGINE_INDEXWIDGET )
   }
 }
 
-
 /*
 QHelpSearchEngine * searchEngine ()
 */
@@ -139,8 +133,5 @@ HB_FUNC_STATIC( QHELPENGINE_SEARCHENGINE )
     _qt4xhb_createReturnClass ( ptr, "QHELPSEARCHENGINE" );
   }
 }
-
-
-
 
 #pragma ENDDUMP

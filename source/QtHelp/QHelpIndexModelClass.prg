@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -39,8 +39,6 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
-
 /*
 void createIndex ( const QString & customFilterName )
 */
@@ -53,7 +51,6 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_CREATEINDEX )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QModelIndex filter ( const QString & filter, const QString & wildcard = QString() )
@@ -68,7 +65,6 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_FILTER )
   }
 }
 
-
 /*
 bool isCreatingIndex () const
 */
@@ -80,10 +76,5 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_ISCREATINGINDEX )
     RBOOL( obj->isCreatingIndex () );
   }
 }
-
-
-
-
-
 
 #pragma ENDDUMP

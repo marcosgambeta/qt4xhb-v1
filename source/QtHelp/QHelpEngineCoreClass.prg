@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -80,7 +80,6 @@ HB_FUNC_STATIC( QHELPENGINECORE_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QHELPENGINECORE_DELETE )
 {
   QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -96,7 +95,6 @@ HB_FUNC_STATIC( QHELPENGINECORE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool addCustomFilter ( const QString & filterName, const QStringList & attributes )
 */
@@ -108,7 +106,6 @@ HB_FUNC_STATIC( QHELPENGINECORE_ADDCUSTOMFILTER )
     RBOOL( obj->addCustomFilter ( PQSTRING(1), PQSTRINGLIST(2) ) );
   }
 }
-
 
 /*
 bool autoSaveFilter () const
@@ -122,7 +119,6 @@ HB_FUNC_STATIC( QHELPENGINECORE_AUTOSAVEFILTER )
   }
 }
 
-
 /*
 QString collectionFile () const
 */
@@ -134,7 +130,6 @@ HB_FUNC_STATIC( QHELPENGINECORE_COLLECTIONFILE )
     RQSTRING( obj->collectionFile () );
   }
 }
-
 
 /*
 bool copyCollectionFile ( const QString & fileName )
@@ -148,7 +143,6 @@ HB_FUNC_STATIC( QHELPENGINECORE_COPYCOLLECTIONFILE )
   }
 }
 
-
 /*
 QString currentFilter () const
 */
@@ -161,7 +155,6 @@ HB_FUNC_STATIC( QHELPENGINECORE_CURRENTFILTER )
   }
 }
 
-
 /*
 QStringList customFilters () const
 */
@@ -173,7 +166,6 @@ HB_FUNC_STATIC( QHELPENGINECORE_CUSTOMFILTERS )
     RQSTRINGLIST( obj->customFilters () );
   }
 }
-
 
 /*
 QVariant customValue ( const QString & key, const QVariant & defaultValue = QVariant() ) const
@@ -189,7 +181,6 @@ HB_FUNC_STATIC( QHELPENGINECORE_CUSTOMVALUE )
   }
 }
 
-
 /*
 QString documentationFileName ( const QString & namespaceName )
 */
@@ -201,7 +192,6 @@ HB_FUNC_STATIC( QHELPENGINECORE_DOCUMENTATIONFILENAME )
     RQSTRING( obj->documentationFileName ( PQSTRING(1) ) );
   }
 }
-
 
 /*
 QString error () const
@@ -215,7 +205,6 @@ HB_FUNC_STATIC( QHELPENGINECORE_ERROR )
   }
 }
 
-
 /*
 QByteArray fileData ( const QUrl & url ) const
 */
@@ -228,7 +217,6 @@ HB_FUNC_STATIC( QHELPENGINECORE_FILEDATA )
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
 
 /*
 QList<QUrl> files ( const QString namespaceName, const QStringList & filterAttributes, const QString & extensionFilter = QString() )
@@ -277,8 +265,6 @@ HB_FUNC_STATIC( QHELPENGINECORE_FILES )
   }
 }
 
-
-
 /*
 QStringList filterAttributes () const
 */
@@ -291,7 +277,6 @@ HB_FUNC_STATIC( QHELPENGINECORE_FILTERATTRIBUTES1 )
   }
 }
 
-
 /*
 QStringList filterAttributes ( const QString & filterName ) const
 */
@@ -303,7 +288,6 @@ HB_FUNC_STATIC( QHELPENGINECORE_FILTERATTRIBUTES2 )
     RQSTRINGLIST( obj->filterAttributes ( PQSTRING(1) ) );
   }
 }
-
 
 //[1]QStringList filterAttributes () const
 //[2]QStringList filterAttributes ( const QString & filterName ) const
@@ -333,8 +317,6 @@ HB_FUNC_STATIC( QHELPENGINECORE_FINDFILE )
   }
 }
 
-
-
 /*
 bool registerDocumentation ( const QString & documentationFileName )
 */
@@ -346,7 +328,6 @@ HB_FUNC_STATIC( QHELPENGINECORE_REGISTERDOCUMENTATION )
     RBOOL( obj->registerDocumentation ( PQSTRING(1) ) );
   }
 }
-
 
 /*
 QStringList registeredDocumentations () const
@@ -360,7 +341,6 @@ HB_FUNC_STATIC( QHELPENGINECORE_REGISTEREDDOCUMENTATIONS )
   }
 }
 
-
 /*
 bool removeCustomFilter ( const QString & filterName )
 */
@@ -373,7 +353,6 @@ HB_FUNC_STATIC( QHELPENGINECORE_REMOVECUSTOMFILTER )
   }
 }
 
-
 /*
 bool removeCustomValue ( const QString & key )
 */
@@ -385,7 +364,6 @@ HB_FUNC_STATIC( QHELPENGINECORE_REMOVECUSTOMVALUE )
     RBOOL( obj->removeCustomValue ( PQSTRING(1) ) );
   }
 }
-
 
 /*
 void setAutoSaveFilter ( bool save )
@@ -400,7 +378,6 @@ HB_FUNC_STATIC( QHELPENGINECORE_SETAUTOSAVEFILTER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setCollectionFile ( const QString & fileName )
 */
@@ -413,7 +390,6 @@ HB_FUNC_STATIC( QHELPENGINECORE_SETCOLLECTIONFILE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setCurrentFilter ( const QString & filterName )
@@ -428,7 +404,6 @@ HB_FUNC_STATIC( QHELPENGINECORE_SETCURRENTFILTER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool setCustomValue ( const QString & key, const QVariant & value )
 */
@@ -440,7 +415,6 @@ HB_FUNC_STATIC( QHELPENGINECORE_SETCUSTOMVALUE )
     RBOOL( obj->setCustomValue ( PQSTRING(1), *PQVARIANT(2) ) );
   }
 }
-
 
 /*
 bool setupData ()
@@ -454,7 +428,6 @@ HB_FUNC_STATIC( QHELPENGINECORE_SETUPDATA )
   }
 }
 
-
 /*
 bool unregisterDocumentation ( const QString & namespaceName )
 */
@@ -467,8 +440,6 @@ HB_FUNC_STATIC( QHELPENGINECORE_UNREGISTERDOCUMENTATION )
   }
 }
 
-
-
 /*
 QVariant metaData ( const QString & documentationFileName, const QString & name )
 */
@@ -478,7 +449,6 @@ HB_FUNC_STATIC( QHELPENGINECORE_METADATA )
   _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
 }
 
-
 /*
 QString namespaceName ( const QString & documentationFileName )
 */
@@ -486,9 +456,5 @@ HB_FUNC_STATIC( QHELPENGINECORE_NAMESPACENAME )
 {
   RQSTRING( QHelpEngineCore::namespaceName ( PQSTRING(1) ) );
 }
-
-
-
-
 
 #pragma ENDDUMP

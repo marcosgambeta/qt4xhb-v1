@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -66,7 +66,6 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QHelpContentItem * child ( int row ) const
 */
@@ -80,7 +79,6 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_CHILD )
   }
 }
 
-
 /*
 int childCount () const
 */
@@ -92,7 +90,6 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_CHILDCOUNT )
     RINT( obj->childCount () );
   }
 }
-
 
 /*
 int childPosition ( QHelpContentItem * child ) const
@@ -107,7 +104,6 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_CHILDPOSITION )
   }
 }
 
-
 /*
 QHelpContentItem * parent () const
 */
@@ -121,7 +117,6 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_PARENT )
   }
 }
 
-
 /*
 int row () const
 */
@@ -133,7 +128,6 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_ROW )
     RINT( obj->row () );
   }
 }
-
 
 /*
 QString title () const
@@ -147,7 +141,6 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_TITLE )
   }
 }
 
-
 /*
 QUrl url () const
 */
@@ -160,7 +153,6 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_URL )
     _qt4xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
-
 
 HB_FUNC_STATIC( QHELPCONTENTITEM_NEWFROM )
 {
@@ -216,6 +208,5 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

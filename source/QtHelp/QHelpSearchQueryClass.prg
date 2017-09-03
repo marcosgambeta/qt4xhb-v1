@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QHelpSearchQuery
 
@@ -49,7 +48,6 @@ HB_FUNC_STATIC( QHELPSEARCHQUERY_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QHelpSearchQuery ( FieldName field, const QStringList & wordList )
 */
@@ -58,7 +56,6 @@ HB_FUNC_STATIC( QHELPSEARCHQUERY_NEW2 )
   QHelpSearchQuery * o = new QHelpSearchQuery ( (QHelpSearchQuery::FieldName) hb_parni(1), PQSTRINGLIST(2) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QHelpSearchQuery ()
 //[2]QHelpSearchQuery ( FieldName field, const QStringList & wordList )
@@ -78,7 +75,6 @@ HB_FUNC_STATIC( QHELPSEARCHQUERY_NEW )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
-
 
 HB_FUNC_STATIC( QHELPSEARCHQUERY_NEWFROM )
 {
@@ -134,6 +130,5 @@ HB_FUNC_STATIC( QHELPSEARCHQUERY_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

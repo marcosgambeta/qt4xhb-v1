@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -62,7 +62,6 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QHelpContentItem * contentItemAt ( const QModelIndex & index ) const
 */
@@ -75,7 +74,6 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_CONTENTITEMAT )
     _qt4xhb_createReturnClass ( ptr, "QHELPCONTENTITEM" );
   }
 }
-
 
 /*
 void createContents ( const QString & customFilterName )
@@ -90,7 +88,6 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_CREATECONTENTS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool isCreatingContents () const
 */
@@ -102,7 +99,6 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_ISCREATINGCONTENTS )
     RBOOL( obj->isCreatingContents () );
   }
 }
-
 
 /*
 virtual int columnCount ( const QModelIndex & parent = QModelIndex() ) const
@@ -117,7 +113,6 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_COLUMNCOUNT )
   }
 }
 
-
 /*
 virtual QVariant data ( const QModelIndex & index, int role ) const
 */
@@ -130,7 +125,6 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_DATA )
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
-
 
 /*
 virtual QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
@@ -146,7 +140,6 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_INDEX )
   }
 }
 
-
 /*
 virtual QModelIndex parent ( const QModelIndex & index ) const
 */
@@ -160,7 +153,6 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_PARENT )
   }
 }
 
-
 /*
 virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const
 */
@@ -173,9 +165,5 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_ROWCOUNT )
     RINT( obj->rowCount ( par1 ) );
   }
 }
-
-
-
-
 
 #pragma ENDDUMP
