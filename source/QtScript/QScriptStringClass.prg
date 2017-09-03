@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QScriptString
 
@@ -52,7 +51,6 @@ HB_FUNC_STATIC( QSCRIPTSTRING_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QScriptString ( const QScriptString & other )
 */
@@ -61,7 +59,6 @@ HB_FUNC_STATIC( QSCRIPTSTRING_NEW2 )
   QScriptString * o = new QScriptString ( *PQSCRIPTSTRING(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QScriptString ()
 //[2]QScriptString ( const QScriptString & other )
@@ -97,7 +94,6 @@ HB_FUNC_STATIC( QSCRIPTSTRING_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool isValid () const
 */
@@ -110,8 +106,6 @@ HB_FUNC_STATIC( QSCRIPTSTRING_ISVALID )
   }
 }
 
-
-
 /*
 QString toString () const
 */
@@ -123,7 +117,6 @@ HB_FUNC_STATIC( QSCRIPTSTRING_TOSTRING )
     RQSTRING( obj->toString () );
   }
 }
-
 
 HB_FUNC_STATIC( QSCRIPTSTRING_NEWFROM )
 {
@@ -179,7 +172,5 @@ HB_FUNC_STATIC( QSCRIPTSTRING_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

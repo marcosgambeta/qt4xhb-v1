@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -113,7 +113,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QScriptValue ( const QScriptValue & other )
 */
@@ -122,7 +121,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW2 )
   QScriptValue * o = new QScriptValue ( *PQSCRIPTVALUE(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 /*
 QScriptValue ( SpecialValue value )
@@ -133,7 +131,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QScriptValue ( bool value )
 */
@@ -142,7 +139,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW4 )
   QScriptValue * o = new QScriptValue ( PBOOL(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 /*
 QScriptValue ( int value )
@@ -153,7 +149,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW5 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QScriptValue ( uint value )
 */
@@ -162,7 +157,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW6 )
   QScriptValue * o = new QScriptValue ( PUINT(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 /*
 QScriptValue ( qsreal value )
@@ -174,7 +168,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW7 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QScriptValue ( const QString & value )
 */
@@ -184,8 +177,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW8 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
-
 /*
 QScriptValue ( const char * value )
 */
@@ -194,7 +185,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW10 )
   QScriptValue * o = new QScriptValue ( (const char *) hb_parc(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[01]QScriptValue ()
 //[02]QScriptValue ( const QScriptValue & other )
@@ -254,7 +244,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QScriptValue call ( const QScriptValue & thisObject = QScriptValue(), const QScriptValueList & args = QScriptValueList() )
 */
@@ -277,7 +266,6 @@ par2 << *(QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aLis
   }
 }
 
-
 /*
 QScriptValue call ( const QScriptValue & thisObject, const QScriptValue & arguments )
 */
@@ -290,7 +278,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CALL2 )
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
-
 
 //[1]QScriptValue call ( const QScriptValue & thisObject = QScriptValue(), const QScriptValueList & args = QScriptValueList() )
 //[2]QScriptValue call ( const QScriptValue & thisObject, const QScriptValue & arguments )
@@ -330,7 +317,6 @@ par1 << *(QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aLis
   }
 }
 
-
 /*
 QScriptValue construct ( const QScriptValue & arguments )
 */
@@ -343,7 +329,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CONSTRUCT2 )
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
-
 
 //[1]QScriptValue construct ( const QScriptValueList & args = QScriptValueList() )
 //[2]QScriptValue construct ( const QScriptValue & arguments )
@@ -373,7 +358,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_DATA )
   }
 }
 
-
 /*
 QScriptEngine * engine () const
 */
@@ -387,7 +371,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ENGINE )
   }
 }
 
-
 /*
 bool equals ( const QScriptValue & other ) const
 */
@@ -399,7 +382,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_EQUALS )
     RBOOL( obj->equals ( *PQSCRIPTVALUE(1) ) );
   }
 }
-
 
 /*
 bool instanceOf ( const QScriptValue & other ) const
@@ -413,7 +395,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_INSTANCEOF )
   }
 }
 
-
 /*
 bool isArray () const
 */
@@ -425,7 +406,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISARRAY )
     RBOOL( obj->isArray () );
   }
 }
-
 
 /*
 bool isBool () const
@@ -439,7 +419,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISBOOL )
   }
 }
 
-
 /*
 bool isDate () const
 */
@@ -451,7 +430,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISDATE )
     RBOOL( obj->isDate () );
   }
 }
-
 
 /*
 bool isError () const
@@ -465,7 +443,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISERROR )
   }
 }
 
-
 /*
 bool isFunction () const
 */
@@ -477,7 +454,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISFUNCTION )
     RBOOL( obj->isFunction () );
   }
 }
-
 
 /*
 bool isNull () const
@@ -491,7 +467,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISNULL )
   }
 }
 
-
 /*
 bool isNumber () const
 */
@@ -503,7 +478,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISNUMBER )
     RBOOL( obj->isNumber () );
   }
 }
-
 
 /*
 bool isObject () const
@@ -517,7 +491,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISOBJECT )
   }
 }
 
-
 /*
 bool isQMetaObject () const
 */
@@ -529,7 +502,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISQMETAOBJECT )
     RBOOL( obj->isQMetaObject () );
   }
 }
-
 
 /*
 bool isQObject () const
@@ -543,7 +515,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISQOBJECT )
   }
 }
 
-
 /*
 bool isRegExp () const
 */
@@ -555,7 +526,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISREGEXP )
     RBOOL( obj->isRegExp () );
   }
 }
-
 
 /*
 bool isString () const
@@ -569,7 +539,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISSTRING )
   }
 }
 
-
 /*
 bool isUndefined () const
 */
@@ -581,7 +550,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISUNDEFINED )
     RBOOL( obj->isUndefined () );
   }
 }
-
 
 /*
 bool isValid () const
@@ -595,7 +563,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISVALID )
   }
 }
 
-
 /*
 bool isVariant () const
 */
@@ -608,7 +575,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISVARIANT )
   }
 }
 
-
 /*
 bool lessThan ( const QScriptValue & other ) const
 */
@@ -620,12 +586,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_LESSTHAN )
     RBOOL( obj->lessThan ( *PQSCRIPTVALUE(1) ) );
   }
 }
-
-
-
-
-
-
 
 /*
 QScriptValue prototype () const
@@ -640,7 +600,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_PROTOTYPE )
   }
 }
 
-
 /*
 QScriptClass * scriptClass () const
 */
@@ -653,7 +612,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_SCRIPTCLASS )
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTCLASS" );
   }
 }
-
 
 /*
 void setData ( const QScriptValue & data )
@@ -668,10 +626,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_SETDATA )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
-
-
 /*
 void setPrototype ( const QScriptValue & prototype )
 */
@@ -684,7 +638,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_SETPROTOTYPE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setScriptClass ( QScriptClass * scriptClass )
@@ -700,7 +653,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_SETSCRIPTCLASS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool strictlyEquals ( const QScriptValue & other ) const
 */
@@ -713,7 +665,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_STRICTLYEQUALS )
   }
 }
 
-
 /*
 bool toBool () const
 */
@@ -725,7 +676,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOBOOL )
     RBOOL( obj->toBool () );
   }
 }
-
 
 /*
 QDateTime toDateTime () const
@@ -740,7 +690,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TODATETIME )
   }
 }
 
-
 /*
 qint32 toInt32 () const
 */
@@ -752,7 +701,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOINT32 )
     RQINT32( obj->toInt32 () );
   }
 }
-
 
 /*
 qsreal toInteger () const
@@ -767,7 +715,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOINTEGER )
   }
 }
 
-
 /*
 qsreal toNumber () const
 */
@@ -780,8 +727,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TONUMBER )
     hb_retnd( r );
   }
 }
-
-
 
 /*
 QObject * toQObject () const
@@ -796,7 +741,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOQOBJECT )
   }
 }
 
-
 /*
 QRegExp toRegExp () const
 */
@@ -810,7 +754,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOREGEXP )
   }
 }
 
-
 /*
 QString toString () const
 */
@@ -822,7 +765,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOSTRING )
     RQSTRING( obj->toString () );
   }
 }
-
 
 /*
 quint16 toUInt16 () const
@@ -836,7 +778,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOUINT16 )
   }
 }
 
-
 /*
 quint32 toUInt32 () const
 */
@@ -848,7 +789,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOUINT32 )
     RQUINT32( obj->toUInt32 () );
   }
 }
-
 
 /*
 QVariant toVariant () const
@@ -862,7 +802,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOVARIANT )
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
-
 
 HB_FUNC_STATIC( QSCRIPTVALUE_NEWFROM )
 {
@@ -918,7 +857,5 @@ HB_FUNC_STATIC( QSCRIPTVALUE_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

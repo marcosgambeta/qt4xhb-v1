@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QScriptProgram
 
@@ -55,7 +54,6 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QScriptProgram ( const QString & sourceCode, const QString fileName = QString(), int firstLineNumber = 1 )
 */
@@ -65,7 +63,6 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW2 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QScriptProgram ( const QScriptProgram & other )
 */
@@ -74,7 +71,6 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW3 )
   QScriptProgram * o = new QScriptProgram ( *PQSCRIPTPROGRAM(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QScriptProgram ()
 //[2]QScriptProgram ( const QString & sourceCode, const QString fileName = QString(), int firstLineNumber = 1 )
@@ -115,7 +111,6 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString fileName () const
 */
@@ -127,7 +122,6 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_FILENAME )
     RQSTRING( obj->fileName () );
   }
 }
-
 
 /*
 int firstLineNumber () const
@@ -141,7 +135,6 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_FIRSTLINENUMBER )
   }
 }
 
-
 /*
 bool isNull () const
 */
@@ -154,7 +147,6 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_ISNULL )
   }
 }
 
-
 /*
 QString sourceCode () const
 */
@@ -166,7 +158,6 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_SOURCECODE )
     RQSTRING( obj->sourceCode () );
   }
 }
-
 
 HB_FUNC_STATIC( QSCRIPTPROGRAM_NEWFROM )
 {
@@ -222,7 +213,5 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

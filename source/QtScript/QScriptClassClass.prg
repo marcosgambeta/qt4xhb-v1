@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -64,7 +64,6 @@ HB_FUNC_STATIC( QSCRIPTCLASS_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QSCRIPTCLASS_DELETE )
 {
   QScriptClass * obj = (QScriptClass *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -80,7 +79,6 @@ HB_FUNC_STATIC( QSCRIPTCLASS_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QScriptEngine * engine () const
 */
@@ -93,7 +91,6 @@ HB_FUNC_STATIC( QSCRIPTCLASS_ENGINE )
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTENGINE" );
   }
 }
-
 
 /*
 virtual QVariant extension ( Extension extension, const QVariant & argument = QVariant() )
@@ -109,7 +106,6 @@ HB_FUNC_STATIC( QSCRIPTCLASS_EXTENSION )
   }
 }
 
-
 /*
 virtual QString name () const
 */
@@ -121,7 +117,6 @@ HB_FUNC_STATIC( QSCRIPTCLASS_NAME )
     RQSTRING( obj->name () );
   }
 }
-
 
 /*
 virtual QScriptClassPropertyIterator * newIterator ( const QScriptValue & object )
@@ -136,7 +131,6 @@ HB_FUNC_STATIC( QSCRIPTCLASS_NEWITERATOR )
   }
 }
 
-
 /*
 virtual QScriptValue property ( const QScriptValue & object, const QScriptString & name, uint id )
 */
@@ -150,7 +144,6 @@ HB_FUNC_STATIC( QSCRIPTCLASS_PROPERTY )
   }
 }
 
-
 /*
 virtual QScriptValue::PropertyFlags propertyFlags ( const QScriptValue & object, const QScriptString & name, uint id )
 */
@@ -162,7 +155,6 @@ HB_FUNC_STATIC( QSCRIPTCLASS_PROPERTYFLAGS )
     hb_retni( (int) obj->propertyFlags ( *PQSCRIPTVALUE(1), *PQSCRIPTSTRING(2), PUINT(3) ) );
   }
 }
-
 
 /*
 virtual QScriptValue prototype () const
@@ -177,7 +169,6 @@ HB_FUNC_STATIC( QSCRIPTCLASS_PROTOTYPE )
   }
 }
 
-
 /*
 virtual QueryFlags queryProperty ( const QScriptValue & object, const QScriptString & name, QueryFlags flags, uint * id )
 */
@@ -190,7 +181,6 @@ HB_FUNC_STATIC( QSCRIPTCLASS_QUERYPROPERTY ) // TODO: revisar e corrigir impleme
     hb_retni( (int) obj->queryProperty ( *PQSCRIPTVALUE(1), *PQSCRIPTSTRING(2), (QScriptClass::QueryFlags) hb_parni(3), par4 ) );
   }
 }
-
 
 /*
 virtual void setProperty ( QScriptValue & object, const QScriptString & name, uint id, const QScriptValue & value )
@@ -206,7 +196,6 @@ HB_FUNC_STATIC( QSCRIPTCLASS_SETPROPERTY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual bool supportsExtension ( Extension extension ) const
 */
@@ -218,7 +207,6 @@ HB_FUNC_STATIC( QSCRIPTCLASS_SUPPORTSEXTENSION )
     RBOOL( obj->supportsExtension ( (QScriptClass::Extension) hb_parni(1) ) );
   }
 }
-
 
 HB_FUNC_STATIC( QSCRIPTCLASS_NEWFROM )
 {
@@ -274,7 +262,5 @@ HB_FUNC_STATIC( QSCRIPTCLASS_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

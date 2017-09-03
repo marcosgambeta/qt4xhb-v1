@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -78,7 +78,6 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QScriptValue activationObject () const
 */
@@ -91,7 +90,6 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_ACTIVATIONOBJECT )
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
-
 
 /*
 QScriptValue argument ( int index ) const
@@ -106,7 +104,6 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_ARGUMENT )
   }
 }
 
-
 /*
 int argumentCount () const
 */
@@ -118,7 +115,6 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_ARGUMENTCOUNT )
     RINT( (int) obj->argumentCount () );
   }
 }
-
 
 /*
 QScriptValue argumentsObject () const
@@ -133,7 +129,6 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_ARGUMENTSOBJECT )
   }
 }
 
-
 /*
 QStringList backtrace () const
 */
@@ -145,7 +140,6 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_BACKTRACE )
     RQSTRINGLIST( obj->backtrace () );
   }
 }
-
 
 /*
 QScriptValue callee () const
@@ -160,7 +154,6 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_CALLEE )
   }
 }
 
-
 /*
 QScriptEngine * engine () const
 */
@@ -174,7 +167,6 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_ENGINE )
   }
 }
 
-
 /*
 bool isCalledAsConstructor () const
 */
@@ -186,7 +178,6 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_ISCALLEDASCONSTRUCTOR )
     RBOOL( obj->isCalledAsConstructor () );
   }
 }
-
 
 /*
 QScriptContext * parentContext () const
@@ -201,7 +192,6 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_PARENTCONTEXT )
   }
 }
 
-
 /*
 void setActivationObject ( const QScriptValue & activation )
 */
@@ -214,7 +204,6 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_SETACTIVATIONOBJECT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setThisObject ( const QScriptValue & thisObject )
@@ -229,7 +218,6 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_SETTHISOBJECT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 ExecutionState state () const
 */
@@ -241,7 +229,6 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_STATE )
     hb_retni( (int) obj->state () );
   }
 }
-
 
 /*
 QScriptValue thisObject () const
@@ -256,7 +243,6 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_THISOBJECT )
   }
 }
 
-
 /*
 QScriptValue throwError ( Error error, const QString & text )
 */
@@ -270,7 +256,6 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_THROWERROR1 )
   }
 }
 
-
 /*
 QScriptValue throwError ( const QString & text )
 */
@@ -283,7 +268,6 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_THROWERROR2 )
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
-
 
 //[1]QScriptValue throwError ( Error error, const QString & text )
 //[2]QScriptValue throwError ( const QString & text )
@@ -313,7 +297,6 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_THROWVALUE )
   }
 }
 
-
 /*
 QString toString () const
 */
@@ -325,7 +308,6 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_TOSTRING )
     RQSTRING( obj->toString () );
   }
 }
-
 
 HB_FUNC_STATIC( QSCRIPTCONTEXT_NEWFROM )
 {
@@ -381,7 +363,5 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

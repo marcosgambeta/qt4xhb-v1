@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -66,7 +66,6 @@ HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_DELETE )
 {
   QScriptValueIterator * obj = (QScriptValueIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -82,7 +81,6 @@ HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QScriptValue::PropertyFlags flags () const
 */
@@ -94,7 +92,6 @@ HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_FLAGS )
     hb_retni( (int) obj->flags () );
   }
 }
-
 
 /*
 bool hasNext () const
@@ -108,7 +105,6 @@ HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_HASNEXT )
   }
 }
 
-
 /*
 bool hasPrevious () const
 */
@@ -121,7 +117,6 @@ HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_HASPREVIOUS )
   }
 }
 
-
 /*
 QString name () const
 */
@@ -133,7 +128,6 @@ HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_NAME )
     RQSTRING( obj->name () );
   }
 }
-
 
 /*
 void next ()
@@ -148,7 +142,6 @@ HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_NEXT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void previous ()
 */
@@ -161,7 +154,6 @@ HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_PREVIOUS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void remove ()
@@ -176,7 +168,6 @@ HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_REMOVE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QScriptString scriptName () const
 */
@@ -189,7 +180,6 @@ HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_SCRIPTNAME )
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTSTRING" );
   }
 }
-
 
 /*
 void setValue ( const QScriptValue & value )
@@ -204,7 +194,6 @@ HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_SETVALUE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void toBack ()
 */
@@ -217,7 +206,6 @@ HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_TOBACK )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void toFront ()
@@ -232,7 +220,6 @@ HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_TOFRONT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QScriptValue value () const
 */
@@ -245,7 +232,6 @@ HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_VALUE )
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
-
 
 HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_NEWFROM )
 {
@@ -301,7 +287,5 @@ HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

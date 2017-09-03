@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -69,7 +69,6 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QScriptValue::PropertyFlags flags () const
 */
@@ -81,7 +80,6 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_FLAGS )
     hb_retni( (int) obj->flags () );
   }
 }
-
 
 /*
 virtual bool hasNext () const = 0
@@ -95,7 +93,6 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_HASNEXT )
   }
 }
 
-
 /*
 virtual bool hasPrevious () const = 0
 */
@@ -108,7 +105,6 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_HASPREVIOUS )
   }
 }
 
-
 /*
 virtual uint id () const
 */
@@ -120,7 +116,6 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_ID )
     hb_retni( (uint) obj->id () );
   }
 }
-
 
 /*
 virtual QScriptString name () const = 0
@@ -135,7 +130,6 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_NAME )
   }
 }
 
-
 /*
 virtual void next () = 0
 */
@@ -148,7 +142,6 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_NEXT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QScriptValue object () const
@@ -163,7 +156,6 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_OBJECT )
   }
 }
 
-
 /*
 virtual void previous () = 0
 */
@@ -176,7 +168,6 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_PREVIOUS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void toBack () = 0
@@ -191,7 +182,6 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_TOBACK )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void toFront () = 0
 */
@@ -204,7 +194,6 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_TOFRONT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_NEWFROM )
 {
@@ -260,7 +249,5 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

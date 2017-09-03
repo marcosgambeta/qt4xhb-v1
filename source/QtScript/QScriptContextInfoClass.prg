@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QScriptContextInfo
 
@@ -62,7 +61,6 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QScriptContextInfo ( const QScriptContextInfo & other )
 */
@@ -72,7 +70,6 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEW2 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QScriptContextInfo ()
 */
@@ -81,7 +78,6 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEW3 )
   QScriptContextInfo * o = new QScriptContextInfo ();
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QScriptContextInfo ( const QScriptContext * context )
 //[2]QScriptContextInfo ( const QScriptContextInfo & other )
@@ -122,7 +118,6 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString fileName () const
 */
@@ -134,7 +129,6 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FILENAME )
     RQSTRING( obj->fileName () );
   }
 }
-
 
 /*
 int functionEndLineNumber () const
@@ -148,7 +142,6 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONENDLINENUMBER )
   }
 }
 
-
 /*
 int functionMetaIndex () const
 */
@@ -160,7 +153,6 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONMETAINDEX )
     RINT( obj->functionMetaIndex () );
   }
 }
-
 
 /*
 QString functionName () const
@@ -174,7 +166,6 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONNAME )
   }
 }
 
-
 /*
 QStringList functionParameterNames () const
 */
@@ -186,7 +177,6 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONPARAMETERNAMES )
     RQSTRINGLIST( obj->functionParameterNames () );
   }
 }
-
 
 /*
 int functionStartLineNumber () const
@@ -200,7 +190,6 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONSTARTLINENUMBER )
   }
 }
 
-
 /*
 FunctionType functionType () const
 */
@@ -212,7 +201,6 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONTYPE )
     hb_retni( (int) obj->functionType () );
   }
 }
-
 
 /*
 bool isNull () const
@@ -226,7 +214,6 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_ISNULL )
   }
 }
 
-
 /*
 int lineNumber () const
 */
@@ -239,7 +226,6 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_LINENUMBER )
   }
 }
 
-
 /*
 qint64 scriptId () const
 */
@@ -251,7 +237,6 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_SCRIPTID )
     RQINT64( obj->scriptId () );
   }
 }
-
 
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEWFROM )
 {
@@ -307,7 +292,5 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QScriptSyntaxCheckResult
 
@@ -52,7 +51,6 @@ HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_DELETE )
 {
   QScriptSyntaxCheckResult * obj = (QScriptSyntaxCheckResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -68,7 +66,6 @@ HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int errorColumnNumber () const
 */
@@ -80,7 +77,6 @@ HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_ERRORCOLUMNNUMBER )
     RINT( obj->errorColumnNumber () );
   }
 }
-
 
 /*
 int errorLineNumber () const
@@ -94,7 +90,6 @@ HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_ERRORLINENUMBER )
   }
 }
 
-
 /*
 QString errorMessage () const
 */
@@ -107,7 +102,6 @@ HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_ERRORMESSAGE )
   }
 }
 
-
 /*
 State state () const
 */
@@ -119,7 +113,6 @@ HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_STATE )
     hb_retni( (int) obj->state () );
   }
 }
-
 
 HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_NEWFROM )
 {
@@ -175,7 +168,5 @@ HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

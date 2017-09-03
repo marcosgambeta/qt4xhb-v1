@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -93,7 +93,6 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QScriptEngine ( QObject * parent )
 */
@@ -102,7 +101,6 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEW2 )
   QScriptEngine * o = new QScriptEngine ( PQOBJECT(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QScriptEngine ()
 //[2]QScriptEngine ( QObject * parent )
@@ -138,7 +136,6 @@ HB_FUNC_STATIC( QSCRIPTENGINE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void abortEvaluation ( const QScriptValue & result = QScriptValue() )
 */
@@ -153,7 +150,6 @@ HB_FUNC_STATIC( QSCRIPTENGINE_ABORTEVALUATION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QScriptEngineAgent * agent () const
 */
@@ -167,7 +163,6 @@ HB_FUNC_STATIC( QSCRIPTENGINE_AGENT )
   }
 }
 
-
 /*
 QStringList availableExtensions () const
 */
@@ -179,7 +174,6 @@ HB_FUNC_STATIC( QSCRIPTENGINE_AVAILABLEEXTENSIONS )
     RQSTRINGLIST( obj->availableExtensions () );
   }
 }
-
 
 /*
 void clearExceptions ()
@@ -194,7 +188,6 @@ HB_FUNC_STATIC( QSCRIPTENGINE_CLEAREXCEPTIONS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void collectGarbage ()
 */
@@ -207,7 +200,6 @@ HB_FUNC_STATIC( QSCRIPTENGINE_COLLECTGARBAGE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QScriptContext * currentContext () const
@@ -222,7 +214,6 @@ HB_FUNC_STATIC( QSCRIPTENGINE_CURRENTCONTEXT )
   }
 }
 
-
 /*
 QScriptValue defaultPrototype ( int metaTypeId ) const
 */
@@ -235,7 +226,6 @@ HB_FUNC_STATIC( QSCRIPTENGINE_DEFAULTPROTOTYPE )
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
-
 
 /*
 QScriptValue evaluate ( const QString & program, const QString & fileName = QString(), int lineNumber = 1 )
@@ -250,7 +240,6 @@ HB_FUNC_STATIC( QSCRIPTENGINE_EVALUATE1 )
   }
 }
 
-
 /*
 QScriptValue evaluate ( const QScriptProgram & program )
 */
@@ -263,7 +252,6 @@ HB_FUNC_STATIC( QSCRIPTENGINE_EVALUATE2 )
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
-
 
 //[1]QScriptValue evaluate ( const QString & program, const QString & fileName = QString(), int lineNumber = 1 )
 //[2]QScriptValue evaluate ( const QScriptProgram & program )
@@ -280,7 +268,6 @@ HB_FUNC_STATIC( QSCRIPTENGINE_EVALUATE )
   }
 }
 
-
 /*
 QScriptValue globalObject () const
 */
@@ -294,7 +281,6 @@ HB_FUNC_STATIC( QSCRIPTENGINE_GLOBALOBJECT )
   }
 }
 
-
 /*
 bool hasUncaughtException () const
 */
@@ -306,7 +292,6 @@ HB_FUNC_STATIC( QSCRIPTENGINE_HASUNCAUGHTEXCEPTION )
     RBOOL( obj->hasUncaughtException () );
   }
 }
-
 
 /*
 QScriptValue importExtension ( const QString & extension )
@@ -321,7 +306,6 @@ HB_FUNC_STATIC( QSCRIPTENGINE_IMPORTEXTENSION )
   }
 }
 
-
 /*
 QStringList importedExtensions () const
 */
@@ -333,7 +317,6 @@ HB_FUNC_STATIC( QSCRIPTENGINE_IMPORTEDEXTENSIONS )
     RQSTRINGLIST( obj->importedExtensions () );
   }
 }
-
 
 /*
 void installTranslatorFunctions ( const QScriptValue & object = QScriptValue() )
@@ -349,7 +332,6 @@ HB_FUNC_STATIC( QSCRIPTENGINE_INSTALLTRANSLATORFUNCTIONS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool isEvaluating () const
 */
@@ -361,7 +343,6 @@ HB_FUNC_STATIC( QSCRIPTENGINE_ISEVALUATING )
     RBOOL( obj->isEvaluating () );
   }
 }
-
 
 /*
 QScriptValue newArray ( uint length = 0 )
@@ -376,16 +357,6 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWARRAY )
   }
 }
 
-
-
-
-
-
-
-
-
-
-
 /*
 QScriptValue newRegExp ( const QRegExp & regexp )
 */
@@ -399,7 +370,6 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWREGEXP1 )
   }
 }
 
-
 /*
 QScriptValue newRegExp ( const QString & pattern, const QString & flags )
 */
@@ -412,7 +382,6 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWREGEXP2 )
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
-
 
 //[1]QScriptValue newRegExp ( const QRegExp & regexp )
 //[2]QScriptValue newRegExp ( const QString & pattern, const QString & flags )
@@ -442,7 +411,6 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWVARIANT1 )
   }
 }
 
-
 /*
 QScriptValue newVariant ( const QScriptValue & object, const QVariant & value )
 */
@@ -455,7 +423,6 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWVARIANT2 )
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
-
 
 //[1]QScriptValue newVariant ( const QVariant & value )
 //[2]QScriptValue newVariant ( const QScriptValue & object, const QVariant & value )
@@ -485,7 +452,6 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NULLVALUE )
   }
 }
 
-
 /*
 void popContext ()
 */
@@ -499,7 +465,6 @@ HB_FUNC_STATIC( QSCRIPTENGINE_POPCONTEXT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int processEventsInterval () const
 */
@@ -511,7 +476,6 @@ HB_FUNC_STATIC( QSCRIPTENGINE_PROCESSEVENTSINTERVAL )
     RINT( obj->processEventsInterval () );
   }
 }
-
 
 /*
 QScriptContext * pushContext ()
@@ -526,7 +490,6 @@ HB_FUNC_STATIC( QSCRIPTENGINE_PUSHCONTEXT )
   }
 }
 
-
 /*
 void reportAdditionalMemoryCost ( int size )
 */
@@ -539,8 +502,6 @@ HB_FUNC_STATIC( QSCRIPTENGINE_REPORTADDITIONALMEMORYCOST )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
 
 /*
 void setAgent ( QScriptEngineAgent * agent )
@@ -556,7 +517,6 @@ HB_FUNC_STATIC( QSCRIPTENGINE_SETAGENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setDefaultPrototype ( int metaTypeId, const QScriptValue & prototype )
 */
@@ -569,7 +529,6 @@ HB_FUNC_STATIC( QSCRIPTENGINE_SETDEFAULTPROTOTYPE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setGlobalObject ( const QScriptValue & object )
@@ -584,7 +543,6 @@ HB_FUNC_STATIC( QSCRIPTENGINE_SETGLOBALOBJECT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setProcessEventsInterval ( int interval )
 */
@@ -597,7 +555,6 @@ HB_FUNC_STATIC( QSCRIPTENGINE_SETPROCESSEVENTSINTERVAL )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QScriptValue toObject ( const QScriptValue & value )
@@ -612,8 +569,6 @@ HB_FUNC_STATIC( QSCRIPTENGINE_TOOBJECT )
   }
 }
 
-
-
 /*
 QScriptString toStringHandle ( const QString & str )
 */
@@ -626,7 +581,6 @@ HB_FUNC_STATIC( QSCRIPTENGINE_TOSTRINGHANDLE )
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTSTRING" );
   }
 }
-
 
 /*
 QScriptValue uncaughtException () const
@@ -641,7 +595,6 @@ HB_FUNC_STATIC( QSCRIPTENGINE_UNCAUGHTEXCEPTION )
   }
 }
 
-
 /*
 QStringList uncaughtExceptionBacktrace () const
 */
@@ -654,7 +607,6 @@ HB_FUNC_STATIC( QSCRIPTENGINE_UNCAUGHTEXCEPTIONBACKTRACE )
   }
 }
 
-
 /*
 int uncaughtExceptionLineNumber () const
 */
@@ -666,7 +618,6 @@ HB_FUNC_STATIC( QSCRIPTENGINE_UNCAUGHTEXCEPTIONLINENUMBER )
     RINT( obj->uncaughtExceptionLineNumber () );
   }
 }
-
 
 /*
 QScriptValue undefinedValue ()
@@ -681,8 +632,6 @@ HB_FUNC_STATIC( QSCRIPTENGINE_UNDEFINEDVALUE )
   }
 }
 
-
-
 /*
 QScriptSyntaxCheckResult checkSyntax ( const QString & program )
 */
@@ -691,9 +640,5 @@ HB_FUNC_STATIC( QSCRIPTENGINE_CHECKSYNTAX )
   QScriptSyntaxCheckResult * ptr = new QScriptSyntaxCheckResult( QScriptEngine::checkSyntax ( PQSTRING(1) ) );
   _qt4xhb_createReturnClass ( ptr, "QSCRIPTSYNTAXCHECKRESULT" );
 }
-
-
-
-
 
 #pragma ENDDUMP

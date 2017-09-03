@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -64,7 +64,6 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_DELETE )
 {
   QScriptEngineAgent * obj = (QScriptEngineAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -80,7 +79,6 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void contextPop ()
 */
@@ -93,7 +91,6 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_CONTEXTPOP )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void contextPush ()
@@ -108,7 +105,6 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_CONTEXTPUSH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QScriptEngine * engine () const
 */
@@ -121,7 +117,6 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_ENGINE )
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTENGINE" );
   }
 }
-
 
 /*
 virtual void exceptionCatch ( qint64 scriptId, const QScriptValue & exception )
@@ -136,7 +131,6 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_EXCEPTIONCATCH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void exceptionThrow ( qint64 scriptId, const QScriptValue & exception, bool hasHandler )
 */
@@ -149,7 +143,6 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_EXCEPTIONTHROW )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual QVariant extension ( Extension extension, const QVariant & argument = QVariant() )
@@ -165,7 +158,6 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_EXTENSION )
   }
 }
 
-
 /*
 virtual void functionEntry ( qint64 scriptId )
 */
@@ -178,7 +170,6 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_FUNCTIONENTRY )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void functionExit ( qint64 scriptId, const QScriptValue & returnValue )
@@ -193,7 +184,6 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_FUNCTIONEXIT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void positionChange ( qint64 scriptId, int lineNumber, int columnNumber )
 */
@@ -206,7 +196,6 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_POSITIONCHANGE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void scriptLoad ( qint64 id, const QString & program, const QString & fileName, int baseLineNumber )
@@ -221,7 +210,6 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_SCRIPTLOAD )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void scriptUnload ( qint64 id )
 */
@@ -235,7 +223,6 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_SCRIPTUNLOAD )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual bool supportsExtension ( Extension extension ) const
 */
@@ -247,7 +234,6 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_SUPPORTSEXTENSION )
     RBOOL( obj->supportsExtension ( (QScriptEngineAgent::Extension) hb_parni(1) ) );
   }
 }
-
 
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_NEWFROM )
 {
@@ -303,7 +289,5 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -40,7 +40,6 @@ RETURN
 
 #include <QScriptValue>
 
-
 HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_DELETE )
 {
   QScriptExtensionPlugin * obj = (QScriptExtensionPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -56,7 +55,6 @@ HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QScriptValue setupPackage ( const QString & key, QScriptEngine * engine ) const
 */
@@ -70,7 +68,6 @@ HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_SETUPPACKAGE )
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
-
 
 /*
 virtual void initialize ( const QString & key, QScriptEngine * engine ) = 0
@@ -86,7 +83,6 @@ HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_INITIALIZE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QStringList keys () const = 0
 */
@@ -98,9 +94,5 @@ HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_KEYS )
     RQSTRINGLIST( obj->keys () );
   }
 }
-
-
-
-
 
 #pragma ENDDUMP

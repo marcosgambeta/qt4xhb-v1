@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -65,7 +65,6 @@ HB_FUNC_STATIC( QSCRIPTABLE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QScriptValue argument ( int index ) const
 */
@@ -79,7 +78,6 @@ HB_FUNC_STATIC( QSCRIPTABLE_ARGUMENT )
   }
 }
 
-
 /*
 int argumentCount () const
 */
@@ -91,7 +89,6 @@ HB_FUNC_STATIC( QSCRIPTABLE_ARGUMENTCOUNT )
     RINT( obj->argumentCount () );
   }
 }
-
 
 /*
 QScriptContext * context () const
@@ -106,7 +103,6 @@ HB_FUNC_STATIC( QSCRIPTABLE_CONTEXT )
   }
 }
 
-
 /*
 QScriptEngine * engine () const
 */
@@ -120,7 +116,6 @@ HB_FUNC_STATIC( QSCRIPTABLE_ENGINE )
   }
 }
 
-
 /*
 QScriptValue thisObject () const
 */
@@ -133,7 +128,6 @@ HB_FUNC_STATIC( QSCRIPTABLE_THISOBJECT )
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
-
 
 HB_FUNC_STATIC( QSCRIPTABLE_NEWFROM )
 {
@@ -189,7 +183,5 @@ HB_FUNC_STATIC( QSCRIPTABLE_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP
