@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -62,7 +62,6 @@ HB_FUNC_STATIC( QSSLKEY_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QSslKey ( const QByteArray & encoded, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem, QSsl::KeyType type = QSsl::PrivateKey, const QByteArray & passPhrase = QByteArray() )
 */
@@ -74,7 +73,6 @@ HB_FUNC_STATIC( QSSLKEY_NEW2 )
   QSslKey * o = new QSslKey ( *PQBYTEARRAY(1), (QSsl::KeyAlgorithm) hb_parni(2), (QSsl::EncodingFormat) par3, (QSsl::KeyType) par4, par5 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QSslKey ( QIODevice * device, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem, QSsl::KeyType type = QSsl::PrivateKey, const QByteArray & passPhrase = QByteArray() )
@@ -88,7 +86,6 @@ HB_FUNC_STATIC( QSSLKEY_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QSslKey ( const QSslKey & other )
 */
@@ -97,7 +94,6 @@ HB_FUNC_STATIC( QSSLKEY_NEW4 )
   QSslKey * o = new QSslKey ( *PQSSLKEY(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QSslKey ()
 //[2]QSslKey ( const QByteArray & encoded, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem, QSsl::KeyType type = QSsl::PrivateKey, const QByteArray & passPhrase = QByteArray() )
@@ -143,7 +139,6 @@ HB_FUNC_STATIC( QSSLKEY_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QSsl::KeyAlgorithm algorithm () const
 */
@@ -155,7 +150,6 @@ HB_FUNC_STATIC( QSSLKEY_ALGORITHM )
     hb_retni( (int) obj->algorithm () );
   }
 }
-
 
 /*
 void clear ()
@@ -170,8 +164,6 @@ HB_FUNC_STATIC( QSSLKEY_CLEAR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 bool isNull () const
 */
@@ -184,7 +176,6 @@ HB_FUNC_STATIC( QSSLKEY_ISNULL )
   }
 }
 
-
 /*
 int length () const
 */
@@ -196,7 +187,6 @@ HB_FUNC_STATIC( QSSLKEY_LENGTH )
     RINT( obj->length () );
   }
 }
-
 
 /*
 QByteArray toDer ( const QByteArray & passPhrase = QByteArray() ) const
@@ -212,7 +202,6 @@ HB_FUNC_STATIC( QSSLKEY_TODER )
   }
 }
 
-
 /*
 QByteArray toPem ( const QByteArray & passPhrase = QByteArray() ) const
 */
@@ -227,7 +216,6 @@ HB_FUNC_STATIC( QSSLKEY_TOPEM )
   }
 }
 
-
 /*
 QSsl::KeyType type () const
 */
@@ -239,7 +227,6 @@ HB_FUNC_STATIC( QSSLKEY_TYPE )
     hb_retni( (int) obj->type () );
   }
 }
-
 
 HB_FUNC_STATIC( QSSLKEY_NEWFROM )
 {
@@ -295,7 +282,5 @@ HB_FUNC_STATIC( QSSLKEY_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

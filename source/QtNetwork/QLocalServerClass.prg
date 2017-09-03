@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -59,7 +59,6 @@ HB_FUNC_STATIC( QLOCALSERVER_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QLOCALSERVER_DELETE )
 {
   QLocalServer * obj = (QLocalServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -75,7 +74,6 @@ HB_FUNC_STATIC( QLOCALSERVER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void close ()
 */
@@ -89,7 +87,6 @@ HB_FUNC_STATIC( QLOCALSERVER_CLOSE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString errorString () const
 */
@@ -101,7 +98,6 @@ HB_FUNC_STATIC( QLOCALSERVER_ERRORSTRING )
     RQSTRING( obj->errorString () );
   }
 }
-
 
 /*
 QString fullServerName () const
@@ -115,7 +111,6 @@ HB_FUNC_STATIC( QLOCALSERVER_FULLSERVERNAME )
   }
 }
 
-
 /*
 virtual bool hasPendingConnections () const
 */
@@ -127,7 +122,6 @@ HB_FUNC_STATIC( QLOCALSERVER_HASPENDINGCONNECTIONS )
     RBOOL( obj->hasPendingConnections () );
   }
 }
-
 
 /*
 bool isListening () const
@@ -141,7 +135,6 @@ HB_FUNC_STATIC( QLOCALSERVER_ISLISTENING )
   }
 }
 
-
 /*
 bool listen ( const QString & name )
 */
@@ -154,7 +147,6 @@ HB_FUNC_STATIC( QLOCALSERVER_LISTEN )
   }
 }
 
-
 /*
 int maxPendingConnections () const
 */
@@ -166,7 +158,6 @@ HB_FUNC_STATIC( QLOCALSERVER_MAXPENDINGCONNECTIONS )
     RINT( obj->maxPendingConnections () );
   }
 }
-
 
 /*
 virtual QLocalSocket * nextPendingConnection ()
@@ -181,7 +172,6 @@ HB_FUNC_STATIC( QLOCALSERVER_NEXTPENDINGCONNECTION )
   }
 }
 
-
 /*
 QAbstractSocket::SocketError serverError () const
 */
@@ -193,7 +183,6 @@ HB_FUNC_STATIC( QLOCALSERVER_SERVERERROR )
     hb_retni( (int) obj->serverError () );
   }
 }
-
 
 /*
 QString serverName () const
@@ -207,7 +196,6 @@ HB_FUNC_STATIC( QLOCALSERVER_SERVERNAME )
   }
 }
 
-
 /*
 void setMaxPendingConnections ( int numConnections )
 */
@@ -220,7 +208,6 @@ HB_FUNC_STATIC( QLOCALSERVER_SETMAXPENDINGCONNECTIONS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 bool waitForNewConnection ( int msec = 0, bool * timedOut = 0 )
@@ -236,8 +223,6 @@ HB_FUNC_STATIC( QLOCALSERVER_WAITFORNEWCONNECTION )
   }
 }
 
-
-
 /*
 bool removeServer ( const QString & name )
 */
@@ -245,9 +230,5 @@ HB_FUNC_STATIC( QLOCALSERVER_REMOVESERVER )
 {
   RBOOL( QLocalServer::removeServer ( PQSTRING(1) ) );
 }
-
-
-
-
 
 #pragma ENDDUMP

@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -64,7 +64,6 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QNetworkConfiguration ( const QNetworkConfiguration & other )
 */
@@ -73,7 +72,6 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_NEW2 )
   QNetworkConfiguration * o = new QNetworkConfiguration ( *PQNETWORKCONFIGURATION(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QNetworkConfiguration ()
 //[2]QNetworkConfiguration ( const QNetworkConfiguration & other )
@@ -109,7 +107,6 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString bearerName () const (deprecated)
 */
@@ -121,7 +118,6 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERNAME )
     RQSTRING( obj->bearerName () );
   }
 }
-
 
 /*
 BearerType bearerType () const
@@ -135,7 +131,6 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERTYPE )
   }
 }
 
-
 /*
 QString bearerTypeName () const
 */
@@ -147,7 +142,6 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERTYPENAME )
     RQSTRING( obj->bearerTypeName () );
   }
 }
-
 
 /*
 QList<QNetworkConfiguration> children () const
@@ -196,7 +190,6 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_CHILDREN )
   }
 }
 
-
 /*
 QString identifier () const
 */
@@ -208,7 +201,6 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_IDENTIFIER )
     RQSTRING( obj->identifier () );
   }
 }
-
 
 /*
 bool isRoamingAvailable () const
@@ -222,7 +214,6 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_ISROAMINGAVAILABLE )
   }
 }
 
-
 /*
 bool isValid () const
 */
@@ -234,7 +225,6 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_ISVALID )
     RBOOL( obj->isValid () );
   }
 }
-
 
 /*
 QString name () const
@@ -248,7 +238,6 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_NAME )
   }
 }
 
-
 /*
 Purpose purpose () const
 */
@@ -260,7 +249,6 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_PURPOSE )
     hb_retni( (int) obj->purpose () );
   }
 }
-
 
 /*
 StateFlags state () const
@@ -274,7 +262,6 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_STATE )
   }
 }
 
-
 /*
 Type type () const
 */
@@ -286,7 +273,6 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_TYPE )
     hb_retni( (int) obj->type () );
   }
 }
-
 
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_NEWFROM )
 {
@@ -342,7 +328,5 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

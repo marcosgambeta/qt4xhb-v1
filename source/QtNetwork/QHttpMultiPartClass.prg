@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -51,7 +51,6 @@ HB_FUNC_STATIC( QHTTPMULTIPART_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QHttpMultiPart ( ContentType contentType, QObject * parent = 0 )
 */
@@ -60,7 +59,6 @@ HB_FUNC_STATIC( QHTTPMULTIPART_NEW2 )
   QHttpMultiPart * o = new QHttpMultiPart ( (QHttpMultiPart::ContentType) hb_parni(1), OPQOBJECT(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QHttpMultiPart ( QObject * parent = 0 )
 //[2]QHttpMultiPart ( ContentType contentType, QObject * parent = 0 )
@@ -96,7 +94,6 @@ HB_FUNC_STATIC( QHTTPMULTIPART_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void append ( const QHttpPart & httpPart )
 */
@@ -109,7 +106,6 @@ HB_FUNC_STATIC( QHTTPMULTIPART_APPEND )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QByteArray boundary () const
@@ -124,7 +120,6 @@ HB_FUNC_STATIC( QHTTPMULTIPART_BOUNDARY )
   }
 }
 
-
 /*
 void setBoundary ( const QByteArray & boundary )
 */
@@ -137,7 +132,6 @@ HB_FUNC_STATIC( QHTTPMULTIPART_SETBOUNDARY )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setContentType ( ContentType contentType )
@@ -152,9 +146,5 @@ HB_FUNC_STATIC( QHTTPMULTIPART_SETCONTENTTYPE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -59,7 +59,6 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual qint64 cacheSize () const = 0
 */
@@ -71,7 +70,6 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_CACHESIZE )
     RQINT64( obj->cacheSize () );
   }
 }
-
 
 /*
 virtual QIODevice * data ( const QUrl & url ) = 0
@@ -86,7 +84,6 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_DATA )
   }
 }
 
-
 /*
 virtual void insert ( QIODevice * device ) = 0
 */
@@ -99,7 +96,6 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_INSERT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual QNetworkCacheMetaData metaData ( const QUrl & url ) = 0
@@ -114,7 +110,6 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_METADATA )
   }
 }
 
-
 /*
 virtual QIODevice * prepare ( const QNetworkCacheMetaData & metaData ) = 0
 */
@@ -128,7 +123,6 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_PREPARE )
   }
 }
 
-
 /*
 virtual bool remove ( const QUrl & url ) = 0
 */
@@ -140,7 +134,6 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_REMOVE )
     RBOOL( obj->remove ( *PQURL(1) ) );
   }
 }
-
 
 /*
 virtual void updateMetaData ( const QNetworkCacheMetaData & metaData ) = 0
@@ -155,7 +148,6 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_UPDATEMETADATA )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void clear () = 0
 */
@@ -168,9 +160,5 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_CLEAR )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

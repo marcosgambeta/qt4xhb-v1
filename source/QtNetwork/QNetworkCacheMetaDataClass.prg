@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -65,7 +65,6 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QNetworkCacheMetaData ( const QNetworkCacheMetaData & other )
 */
@@ -74,7 +73,6 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_NEW2 )
   QNetworkCacheMetaData * o = new QNetworkCacheMetaData ( *PQNETWORKCACHEMETADATA(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QNetworkCacheMetaData ()
 //[2]QNetworkCacheMetaData ( const QNetworkCacheMetaData & other )
@@ -110,8 +108,6 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 QDateTime expirationDate () const
 */
@@ -125,7 +121,6 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_EXPIRATIONDATE )
   }
 }
 
-
 /*
 bool isValid () const
 */
@@ -137,7 +132,6 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_ISVALID )
     RBOOL( obj->isValid () );
   }
 }
-
 
 /*
 QDateTime lastModified () const
@@ -152,8 +146,6 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_LASTMODIFIED )
   }
 }
 
-
-
 /*
 bool saveToDisk () const
 */
@@ -165,8 +157,6 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SAVETODISK )
     RBOOL( obj->saveToDisk () );
   }
 }
-
-
 
 /*
 void setExpirationDate ( const QDateTime & dateTime )
@@ -181,7 +171,6 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SETEXPIRATIONDATE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setLastModified ( const QDateTime & dateTime )
 */
@@ -194,8 +183,6 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SETLASTMODIFIED )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
 
 /*
 void setSaveToDisk ( bool allow )
@@ -210,7 +197,6 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SETSAVETODISK )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setUrl ( const QUrl & url )
 */
@@ -224,7 +210,6 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SETURL )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QUrl url () const
 */
@@ -237,7 +222,6 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_URL )
     _qt4xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
-
 
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_NEWFROM )
 {
@@ -293,7 +277,5 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

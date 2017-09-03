@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -66,7 +66,6 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QNetworkInterface ( const QNetworkInterface & other )
 */
@@ -75,7 +74,6 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_NEW2 )
   QNetworkInterface * o = new QNetworkInterface ( *PQNETWORKINTERFACE(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QNetworkInterface ()
 //[2]QNetworkInterface ( const QNetworkInterface & other )
@@ -110,7 +108,6 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_DELETE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QList<QNetworkAddressEntry> addressEntries () const
@@ -159,7 +156,6 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ADDRESSENTRIES )
   }
 }
 
-
 /*
 InterfaceFlags flags () const
 */
@@ -171,7 +167,6 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_FLAGS )
     hb_retni( (int) obj->flags () );
   }
 }
-
 
 /*
 QString hardwareAddress () const
@@ -185,7 +180,6 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_HARDWAREADDRESS )
   }
 }
 
-
 /*
 QString humanReadableName () const
 */
@@ -197,7 +191,6 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_HUMANREADABLENAME )
     RQSTRING( obj->humanReadableName () );
   }
 }
-
 
 /*
 int index () const
@@ -211,7 +204,6 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_INDEX )
   }
 }
 
-
 /*
 bool isValid () const
 */
@@ -224,7 +216,6 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ISVALID )
   }
 }
 
-
 /*
 QString name () const
 */
@@ -236,8 +227,6 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_NAME )
     RQSTRING( obj->name () );
   }
 }
-
-
 
 /*
 QList<QHostAddress> allAddresses ()
@@ -282,7 +271,6 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ALLADDRESSES )
   hb_itemReturnRelease(pArray);
 }
 
-
 /*
 QList<QNetworkInterface> allInterfaces ()
 */
@@ -326,7 +314,6 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ALLINTERFACES )
   hb_itemReturnRelease(pArray);
 }
 
-
 /*
 QNetworkInterface interfaceFromIndex ( int index )
 */
@@ -336,7 +323,6 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_INTERFACEFROMINDEX )
   _qt4xhb_createReturnClass ( ptr, "QNETWORKINTERFACE", true );
 }
 
-
 /*
 QNetworkInterface interfaceFromName ( const QString & name )
 */
@@ -345,7 +331,6 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_INTERFACEFROMNAME )
   QNetworkInterface * ptr = new QNetworkInterface( QNetworkInterface::interfaceFromName ( PQSTRING(1) ) );
   _qt4xhb_createReturnClass ( ptr, "QNETWORKINTERFACE", true );
 }
-
 
 HB_FUNC_STATIC( QNETWORKINTERFACE_NEWFROM )
 {
@@ -401,6 +386,5 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

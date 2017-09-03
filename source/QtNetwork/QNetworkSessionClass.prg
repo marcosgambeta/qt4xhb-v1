@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -72,7 +72,6 @@ HB_FUNC_STATIC( QNETWORKSESSION_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QNETWORKSESSION_DELETE )
 {
   QNetworkSession * obj = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -88,7 +87,6 @@ HB_FUNC_STATIC( QNETWORKSESSION_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 quint64 activeTime () const
 */
@@ -100,7 +98,6 @@ HB_FUNC_STATIC( QNETWORKSESSION_ACTIVETIME )
     RQUINT64( obj->activeTime () );
   }
 }
-
 
 /*
 quint64 bytesReceived () const
@@ -114,7 +111,6 @@ HB_FUNC_STATIC( QNETWORKSESSION_BYTESRECEIVED )
   }
 }
 
-
 /*
 quint64 bytesWritten () const
 */
@@ -126,7 +122,6 @@ HB_FUNC_STATIC( QNETWORKSESSION_BYTESWRITTEN )
     RQUINT64( obj->bytesWritten () );
   }
 }
-
 
 /*
 QNetworkConfiguration configuration () const
@@ -141,7 +136,6 @@ HB_FUNC_STATIC( QNETWORKSESSION_CONFIGURATION )
   }
 }
 
-
 /*
 SessionError error () const
 */
@@ -154,7 +148,6 @@ HB_FUNC_STATIC( QNETWORKSESSION_ERROR )
   }
 }
 
-
 /*
 QString errorString () const
 */
@@ -166,7 +159,6 @@ HB_FUNC_STATIC( QNETWORKSESSION_ERRORSTRING )
     RQSTRING( obj->errorString () );
   }
 }
-
 
 /*
 QNetworkInterface interface () const
@@ -181,7 +173,6 @@ HB_FUNC_STATIC( QNETWORKSESSION_INTERFACE )
   }
 }
 
-
 /*
 bool isOpen () const
 */
@@ -193,7 +184,6 @@ HB_FUNC_STATIC( QNETWORKSESSION_ISOPEN )
     RBOOL( obj->isOpen () );
   }
 }
-
 
 /*
 QVariant sessionProperty ( const QString & key ) const
@@ -208,7 +198,6 @@ HB_FUNC_STATIC( QNETWORKSESSION_SESSIONPROPERTY )
   }
 }
 
-
 /*
 void setSessionProperty ( const QString & key, const QVariant & value )
 */
@@ -222,7 +211,6 @@ HB_FUNC_STATIC( QNETWORKSESSION_SETSESSIONPROPERTY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 State state () const
 */
@@ -235,7 +223,6 @@ HB_FUNC_STATIC( QNETWORKSESSION_STATE )
   }
 }
 
-
 /*
 bool waitForOpened ( int msecs = 30000 )
 */
@@ -247,7 +234,6 @@ HB_FUNC_STATIC( QNETWORKSESSION_WAITFOROPENED )
     RBOOL( obj->waitForOpened ( OPINT(1,30000) ) );
   }
 }
-
 
 /*
 void accept ()
@@ -262,7 +248,6 @@ HB_FUNC_STATIC( QNETWORKSESSION_ACCEPT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void close ()
 */
@@ -275,7 +260,6 @@ HB_FUNC_STATIC( QNETWORKSESSION_CLOSE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void ignore ()
@@ -290,7 +274,6 @@ HB_FUNC_STATIC( QNETWORKSESSION_IGNORE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void migrate ()
 */
@@ -303,7 +286,6 @@ HB_FUNC_STATIC( QNETWORKSESSION_MIGRATE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void open ()
@@ -318,7 +300,6 @@ HB_FUNC_STATIC( QNETWORKSESSION_OPEN )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void reject ()
 */
@@ -332,7 +313,6 @@ HB_FUNC_STATIC( QNETWORKSESSION_REJECT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void stop ()
 */
@@ -345,10 +325,5 @@ HB_FUNC_STATIC( QNETWORKSESSION_STOP )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
-
 
 #pragma ENDDUMP

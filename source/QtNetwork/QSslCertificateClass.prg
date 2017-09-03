@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -79,7 +79,6 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QSslCertificate ( const QByteArray & data = QByteArray(), QSsl::EncodingFormat format = QSsl::Pem )
 */
@@ -91,7 +90,6 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_NEW2 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QSslCertificate ( const QSslCertificate & other )
 */
@@ -100,7 +98,6 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_NEW3 )
   QSslCertificate * o = new QSslCertificate ( *PQSSLCERTIFICATE(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QSslCertificate ( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
 //[2]QSslCertificate ( const QByteArray & data = QByteArray(), QSsl::EncodingFormat format = QSsl::Pem )
@@ -141,8 +138,6 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 void clear ()
 */
@@ -155,7 +150,6 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_CLEAR )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QByteArray digest ( QCryptographicHash::Algorithm algorithm = QCryptographicHash::Md5 ) const
@@ -171,7 +165,6 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_DIGEST )
   }
 }
 
-
 /*
 QDateTime effectiveDate () const
 */
@@ -184,7 +177,6 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_EFFECTIVEDATE )
     _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
-
 
 /*
 QDateTime expiryDate () const
@@ -199,8 +191,6 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_EXPIRYDATE )
   }
 }
 
-
-
 /*
 bool isNull () const
 */
@@ -212,7 +202,6 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISNULL )
     RBOOL( obj->isNull () );
   }
 }
-
 
 /*
 bool isValid () const
@@ -226,7 +215,6 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISVALID )
   }
 }
 
-
 /*
 QString issuerInfo ( SubjectInfo subject ) const
 */
@@ -239,7 +227,6 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISSUERINFO1 )
   }
 }
 
-
 /*
 QString issuerInfo ( const QByteArray & tag ) const
 */
@@ -251,7 +238,6 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISSUERINFO2 )
     RQSTRING( obj->issuerInfo ( *PQBYTEARRAY(1) ) );
   }
 }
-
 
 /*
 QSslKey publicKey () const
@@ -266,7 +252,6 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_PUBLICKEY )
   }
 }
 
-
 /*
 QByteArray serialNumber () const
 */
@@ -280,7 +265,6 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_SERIALNUMBER )
   }
 }
 
-
 /*
 QString subjectInfo ( SubjectInfo subject ) const
 */
@@ -293,7 +277,6 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_SUBJECTINFO1 )
   }
 }
 
-
 /*
 QString subjectInfo ( const QByteArray & tag ) const
 */
@@ -305,7 +288,6 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_SUBJECTINFO2 )
     RQSTRING( obj->subjectInfo ( *PQBYTEARRAY(1) ) );
   }
 }
-
 
 /*
 QByteArray toDer () const
@@ -320,7 +302,6 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_TODER )
   }
 }
 
-
 /*
 QByteArray toPem () const
 */
@@ -334,7 +315,6 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_TOPEM )
   }
 }
 
-
 /*
 QByteArray version () const
 */
@@ -347,8 +327,6 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_VERSION )
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
-
 
 /*
 QList<QSslCertificate> fromData ( const QByteArray & data, QSsl::EncodingFormat format = QSsl::Pem )
@@ -394,7 +372,6 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_FROMDATA )
   hb_itemReturnRelease(pArray);
 }
 
-
 /*
 QList<QSslCertificate> fromDevice ( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
 */
@@ -438,7 +415,6 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_FROMDEVICE )
   }
   hb_itemReturnRelease(pArray);
 }
-
 
 /*
 QList<QSslCertificate> fromPath ( const QString & path, QSsl::EncodingFormat format = QSsl::Pem, QRegExp::PatternSyntax syntax = QRegExp::FixedString )
@@ -484,7 +460,6 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_FROMPATH )
   }
   hb_itemReturnRelease(pArray);
 }
-
 
 HB_FUNC_STATIC( QSSLCERTIFICATE_NEWFROM )
 {
@@ -540,6 +515,5 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

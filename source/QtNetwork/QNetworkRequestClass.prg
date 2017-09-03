@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -76,7 +76,6 @@ HB_FUNC_STATIC( QNETWORKREQUEST_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QNetworkRequest ( const QNetworkRequest & other )
 */
@@ -85,7 +84,6 @@ HB_FUNC_STATIC( QNETWORKREQUEST_NEW2 )
   QNetworkRequest * o = new QNetworkRequest ( *PQNETWORKREQUEST(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QNetworkRequest ( const QUrl & url = QUrl() )
 //[2]QNetworkRequest ( const QNetworkRequest & other )
@@ -121,7 +119,6 @@ HB_FUNC_STATIC( QNETWORKREQUEST_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QVariant attribute ( Attribute code, const QVariant & defaultValue = QVariant() ) const
 */
@@ -137,7 +134,6 @@ HB_FUNC_STATIC( QNETWORKREQUEST_ATTRIBUTE )
   }
 }
 
-
 /*
 bool hasRawHeader ( const QByteArray & headerName ) const
 */
@@ -149,7 +145,6 @@ HB_FUNC_STATIC( QNETWORKREQUEST_HASRAWHEADER )
     RBOOL( obj->hasRawHeader ( *PQBYTEARRAY(1) ) );
   }
 }
-
 
 /*
 QVariant header ( KnownHeaders header ) const
@@ -165,7 +160,6 @@ HB_FUNC_STATIC( QNETWORKREQUEST_HEADER )
   }
 }
 
-
 /*
 QObject * originatingObject () const
 */
@@ -179,7 +173,6 @@ HB_FUNC_STATIC( QNETWORKREQUEST_ORIGINATINGOBJECT )
   }
 }
 
-
 /*
 Priority priority () const
 */
@@ -191,7 +184,6 @@ HB_FUNC_STATIC( QNETWORKREQUEST_PRIORITY )
     hb_retni( (int) obj->priority () );
   }
 }
-
 
 /*
 QByteArray rawHeader ( const QByteArray & headerName ) const
@@ -205,7 +197,6 @@ HB_FUNC_STATIC( QNETWORKREQUEST_RAWHEADER )
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
 
 /*
 QList<QByteArray> rawHeaderList () const
@@ -250,7 +241,6 @@ HB_FUNC_STATIC( QNETWORKREQUEST_RAWHEADERLIST )
   }
 }
 
-
 /*
 void setAttribute ( Attribute code, const QVariant & value )
 */
@@ -264,7 +254,6 @@ HB_FUNC_STATIC( QNETWORKREQUEST_SETATTRIBUTE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setHeader ( KnownHeaders header, const QVariant & value )
@@ -280,7 +269,6 @@ HB_FUNC_STATIC( QNETWORKREQUEST_SETHEADER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setOriginatingObject ( QObject * object )
 */
@@ -293,7 +281,6 @@ HB_FUNC_STATIC( QNETWORKREQUEST_SETORIGINATINGOBJECT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setPriority ( Priority priority )
@@ -309,7 +296,6 @@ HB_FUNC_STATIC( QNETWORKREQUEST_SETPRIORITY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setRawHeader ( const QByteArray & headerName, const QByteArray & headerValue )
 */
@@ -322,7 +308,6 @@ HB_FUNC_STATIC( QNETWORKREQUEST_SETRAWHEADER )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setSslConfiguration ( const QSslConfiguration & config )
@@ -337,7 +322,6 @@ HB_FUNC_STATIC( QNETWORKREQUEST_SETSSLCONFIGURATION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setUrl ( const QUrl & url )
 */
@@ -350,7 +334,6 @@ HB_FUNC_STATIC( QNETWORKREQUEST_SETURL )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QSslConfiguration sslConfiguration () const
@@ -365,7 +348,6 @@ HB_FUNC_STATIC( QNETWORKREQUEST_SSLCONFIGURATION )
   }
 }
 
-
 /*
 QUrl url () const
 */
@@ -378,7 +360,6 @@ HB_FUNC_STATIC( QNETWORKREQUEST_URL )
     _qt4xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
-
 
 HB_FUNC_STATIC( QNETWORKREQUEST_NEWFROM )
 {
@@ -434,7 +415,5 @@ HB_FUNC_STATIC( QNETWORKREQUEST_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

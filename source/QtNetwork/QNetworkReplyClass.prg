@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -84,7 +84,6 @@ HB_FUNC_STATIC( QNETWORKREPLY_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void abort () = 0
 */
@@ -97,7 +96,6 @@ HB_FUNC_STATIC( QNETWORKREPLY_ABORT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QVariant attribute ( QNetworkRequest::Attribute code ) const
@@ -113,7 +111,6 @@ HB_FUNC_STATIC( QNETWORKREPLY_ATTRIBUTE )
   }
 }
 
-
 /*
 NetworkError error () const
 */
@@ -126,7 +123,6 @@ HB_FUNC_STATIC( QNETWORKREPLY_ERROR )
   }
 }
 
-
 /*
 bool hasRawHeader ( const QByteArray & headerName ) const
 */
@@ -138,7 +134,6 @@ HB_FUNC_STATIC( QNETWORKREPLY_HASRAWHEADER )
     RBOOL( obj->hasRawHeader ( *PQBYTEARRAY(1) ) );
   }
 }
-
 
 /*
 QVariant header ( QNetworkRequest::KnownHeaders header ) const
@@ -153,7 +148,6 @@ HB_FUNC_STATIC( QNETWORKREPLY_HEADER )
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
-
 
 /*
 void ignoreSslErrors ( const QList<QSslError> & errors )
@@ -176,7 +170,6 @@ par1 << *(QSslError *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1,
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void ignoreSslErrors ()
 */
@@ -189,7 +182,6 @@ HB_FUNC_STATIC( QNETWORKREPLY_IGNORESSLERRORS2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void ignoreSslErrors ( const QList<QSslError> & errors )
 //[2]virtual void ignoreSslErrors ()
@@ -218,7 +210,6 @@ HB_FUNC_STATIC( QNETWORKREPLY_ISFINISHED )
   }
 }
 
-
 /*
 bool isRunning () const
 */
@@ -230,7 +221,6 @@ HB_FUNC_STATIC( QNETWORKREPLY_ISRUNNING )
     RBOOL( obj->isRunning () );
   }
 }
-
 
 /*
 QNetworkAccessManager * manager () const
@@ -245,7 +235,6 @@ HB_FUNC_STATIC( QNETWORKREPLY_MANAGER )
   }
 }
 
-
 /*
 QNetworkAccessManager::Operation operation () const
 */
@@ -257,7 +246,6 @@ HB_FUNC_STATIC( QNETWORKREPLY_OPERATION )
     hb_retni( (int) obj->operation () );
   }
 }
-
 
 /*
 QByteArray rawHeader ( const QByteArray & headerName ) const
@@ -271,7 +259,6 @@ HB_FUNC_STATIC( QNETWORKREPLY_RAWHEADER )
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
 
 /*
 QList<QByteArray> rawHeaderList () const
@@ -316,8 +303,6 @@ HB_FUNC_STATIC( QNETWORKREPLY_RAWHEADERLIST )
   }
 }
 
-
-
 /*
 qint64 readBufferSize () const
 */
@@ -329,7 +314,6 @@ HB_FUNC_STATIC( QNETWORKREPLY_READBUFFERSIZE )
     RQINT64( obj->readBufferSize () );
   }
 }
-
 
 /*
 QNetworkRequest request () const
@@ -344,7 +328,6 @@ HB_FUNC_STATIC( QNETWORKREPLY_REQUEST )
   }
 }
 
-
 /*
 virtual void setReadBufferSize ( qint64 size )
 */
@@ -357,7 +340,6 @@ HB_FUNC_STATIC( QNETWORKREPLY_SETREADBUFFERSIZE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setSslConfiguration ( const QSslConfiguration & config )
@@ -372,7 +354,6 @@ HB_FUNC_STATIC( QNETWORKREPLY_SETSSLCONFIGURATION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QSslConfiguration sslConfiguration () const
 */
@@ -385,7 +366,6 @@ HB_FUNC_STATIC( QNETWORKREPLY_SSLCONFIGURATION )
     _qt4xhb_createReturnClass ( ptr, "QSSLCONFIGURATION", true );
   }
 }
-
 
 /*
 QUrl url () const
@@ -400,7 +380,6 @@ HB_FUNC_STATIC( QNETWORKREPLY_URL )
   }
 }
 
-
 /*
 virtual void close ()
 */
@@ -413,10 +392,5 @@ HB_FUNC_STATIC( QNETWORKREPLY_CLOSE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
-
 
 #pragma ENDDUMP

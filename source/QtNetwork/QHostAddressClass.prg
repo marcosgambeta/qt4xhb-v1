@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -71,7 +71,6 @@ HB_FUNC_STATIC( QHOSTADDRESS_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QHostAddress ( quint32 ip4Addr )
 */
@@ -80,10 +79,6 @@ HB_FUNC_STATIC( QHOSTADDRESS_NEW2 )
   QHostAddress * o = new QHostAddress ( PQUINT32(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
-
-
-
 
 /*
 QHostAddress ( const QString & address )
@@ -94,7 +89,6 @@ HB_FUNC_STATIC( QHOSTADDRESS_NEW6 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QHostAddress ( const QHostAddress & address )
 */
@@ -104,7 +98,6 @@ HB_FUNC_STATIC( QHOSTADDRESS_NEW7 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QHostAddress ( SpecialAddress address )
 */
@@ -113,7 +106,6 @@ HB_FUNC_STATIC( QHOSTADDRESS_NEW8 )
   QHostAddress * o = new QHostAddress ( (QHostAddress::SpecialAddress) hb_parni(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QHostAddress ()
 //[2]QHostAddress ( quint32 ip4Addr )
@@ -167,7 +159,6 @@ HB_FUNC_STATIC( QHOSTADDRESS_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void clear ()
 */
@@ -181,7 +172,6 @@ HB_FUNC_STATIC( QHOSTADDRESS_CLEAR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool isInSubnet ( const QHostAddress & subnet, int netmask ) const
 */
@@ -193,9 +183,6 @@ HB_FUNC_STATIC( QHOSTADDRESS_ISINSUBNET1 )
     RBOOL( obj->isInSubnet ( *PQHOSTADDRESS(1), PINT(2) ) );
   }
 }
-
-
-
 
 //[1]bool isInSubnet ( const QHostAddress & subnet, int netmask ) const
 //[2]bool isInSubnet ( const QPair<QHostAddress, int> & subnet ) const
@@ -224,7 +211,6 @@ HB_FUNC_STATIC( QHOSTADDRESS_ISNULL )
   }
 }
 
-
 /*
 QAbstractSocket::NetworkLayerProtocol protocol () const
 */
@@ -236,7 +222,6 @@ HB_FUNC_STATIC( QHOSTADDRESS_PROTOCOL )
     hb_retni( (int) obj->protocol () );
   }
 }
-
 
 /*
 QString scopeId () const
@@ -250,7 +235,6 @@ HB_FUNC_STATIC( QHOSTADDRESS_SCOPEID )
   }
 }
 
-
 /*
 void setAddress ( quint32 ip4Addr )
 */
@@ -263,7 +247,6 @@ HB_FUNC_STATIC( QHOSTADDRESS_SETADDRESS1 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setAddress ( quint8 * ip6Addr )
@@ -279,8 +262,6 @@ HB_FUNC_STATIC( QHOSTADDRESS_SETADDRESS2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 bool setAddress ( const QString & address )
 */
@@ -292,7 +273,6 @@ HB_FUNC_STATIC( QHOSTADDRESS_SETADDRESS4 )
     RBOOL( obj->setAddress ( PQSTRING(1) ) );
   }
 }
-
 
 /*
 void setAddress ( const sockaddr * sockaddr )
@@ -307,7 +287,6 @@ HB_FUNC_STATIC( QHOSTADDRESS_SETADDRESS5 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setAddress ( quint32 ip4Addr )
 //[2]void setAddress ( quint8 * ip6Addr )
@@ -341,7 +320,6 @@ HB_FUNC_STATIC( QHOSTADDRESS_SETSCOPEID )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 quint32 toIPv4Address () const
 */
@@ -353,7 +331,6 @@ HB_FUNC_STATIC( QHOSTADDRESS_TOIPV4ADDRESS )
     RQUINT32( obj->toIPv4Address () );
   }
 }
-
 
 /*
 Q_IPV6ADDR toIPv6Address () const
@@ -368,7 +345,6 @@ HB_FUNC_STATIC( QHOSTADDRESS_TOIPV6ADDRESS )
   }
 }
 
-
 /*
 QString toString () const
 */
@@ -380,7 +356,6 @@ HB_FUNC_STATIC( QHOSTADDRESS_TOSTRING )
     RQSTRING( obj->toString () );
   }
 }
-
 
 HB_FUNC_STATIC( QHOSTADDRESS_NEWFROM )
 {
@@ -436,8 +411,5 @@ HB_FUNC_STATIC( QHOSTADDRESS_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
-
 
 #pragma ENDDUMP

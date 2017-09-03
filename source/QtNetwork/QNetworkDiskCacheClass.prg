@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -59,7 +59,6 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QNETWORKDISKCACHE_DELETE )
 {
   QNetworkDiskCache * obj = (QNetworkDiskCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -75,7 +74,6 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString cacheDirectory () const
 */
@@ -87,7 +85,6 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_CACHEDIRECTORY )
     RQSTRING( obj->cacheDirectory () );
   }
 }
-
 
 /*
 QNetworkCacheMetaData fileMetaData ( const QString & fileName ) const
@@ -102,7 +99,6 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_FILEMETADATA )
   }
 }
 
-
 /*
 qint64 maximumCacheSize () const
 */
@@ -114,7 +110,6 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_MAXIMUMCACHESIZE )
     RQINT64( obj->maximumCacheSize () );
   }
 }
-
 
 /*
 void setCacheDirectory ( const QString & cacheDir )
@@ -129,7 +124,6 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_SETCACHEDIRECTORY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setMaximumCacheSize ( qint64 size )
 */
@@ -143,7 +137,6 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_SETMAXIMUMCACHESIZE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual qint64 cacheSize () const
 */
@@ -155,7 +148,6 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_CACHESIZE )
     RQINT64( obj->cacheSize () );
   }
 }
-
 
 /*
 virtual QIODevice * data ( const QUrl & url )
@@ -170,7 +162,6 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_DATA )
   }
 }
 
-
 /*
 virtual void insert ( QIODevice * device )
 */
@@ -183,7 +174,6 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_INSERT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual QNetworkCacheMetaData metaData ( const QUrl & url )
@@ -198,7 +188,6 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_METADATA )
   }
 }
 
-
 /*
 virtual QIODevice * prepare ( const QNetworkCacheMetaData & metaData )
 */
@@ -212,7 +201,6 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_PREPARE )
   }
 }
 
-
 /*
 virtual bool remove ( const QUrl & url )
 */
@@ -224,7 +212,6 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_REMOVE )
     RBOOL( obj->remove ( *PQURL(1) ) );
   }
 }
-
 
 /*
 virtual void updateMetaData ( const QNetworkCacheMetaData & metaData )
@@ -239,7 +226,6 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_UPDATEMETADATA )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void clear ()
 */
@@ -252,9 +238,5 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_CLEAR )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

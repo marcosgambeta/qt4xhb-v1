@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QHttpPart
 
@@ -54,7 +53,6 @@ HB_FUNC_STATIC( QHTTPPART_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QHttpPart ( const QHttpPart & other )
 */
@@ -63,7 +61,6 @@ HB_FUNC_STATIC( QHTTPPART_NEW2 )
   QHttpPart * o = new QHttpPart ( *PQHTTPPART(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QHttpPart ()
 //[2]QHttpPart ( const QHttpPart & other )
@@ -99,7 +96,6 @@ HB_FUNC_STATIC( QHTTPPART_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setBody ( const QByteArray & body )
 */
@@ -113,7 +109,6 @@ HB_FUNC_STATIC( QHTTPPART_SETBODY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setBodyDevice ( QIODevice * device )
 */
@@ -126,7 +121,6 @@ HB_FUNC_STATIC( QHTTPPART_SETBODYDEVICE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setHeader ( QNetworkRequest::KnownHeaders header, const QVariant & value )
@@ -142,7 +136,6 @@ HB_FUNC_STATIC( QHTTPPART_SETHEADER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setRawHeader ( const QByteArray & headerName, const QByteArray & headerValue )
 */
@@ -155,7 +148,6 @@ HB_FUNC_STATIC( QHTTPPART_SETRAWHEADER )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QHTTPPART_NEWFROM )
 {
@@ -211,7 +203,5 @@ HB_FUNC_STATIC( QHTTPPART_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

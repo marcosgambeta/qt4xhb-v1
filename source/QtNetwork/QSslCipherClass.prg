@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QSslCipher
 
@@ -60,7 +59,6 @@ HB_FUNC_STATIC( QSSLCIPHER_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QSslCipher ( const QString & name, QSsl::SslProtocol protocol )
 */
@@ -70,7 +68,6 @@ HB_FUNC_STATIC( QSSLCIPHER_NEW2 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QSslCipher ( const QSslCipher & other )
 */
@@ -79,7 +76,6 @@ HB_FUNC_STATIC( QSSLCIPHER_NEW3 )
   QSslCipher * o = new QSslCipher ( *PQSSLCIPHER(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QSslCipher ()
 //[2]QSslCipher ( const QString & name, QSsl::SslProtocol protocol )
@@ -120,7 +116,6 @@ HB_FUNC_STATIC( QSSLCIPHER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString authenticationMethod () const
 */
@@ -132,7 +127,6 @@ HB_FUNC_STATIC( QSSLCIPHER_AUTHENTICATIONMETHOD )
     RQSTRING( obj->authenticationMethod () );
   }
 }
-
 
 /*
 QString encryptionMethod () const
@@ -146,7 +140,6 @@ HB_FUNC_STATIC( QSSLCIPHER_ENCRYPTIONMETHOD )
   }
 }
 
-
 /*
 bool isNull () const
 */
@@ -158,7 +151,6 @@ HB_FUNC_STATIC( QSSLCIPHER_ISNULL )
     RBOOL( obj->isNull () );
   }
 }
-
 
 /*
 QString keyExchangeMethod () const
@@ -172,7 +164,6 @@ HB_FUNC_STATIC( QSSLCIPHER_KEYEXCHANGEMETHOD )
   }
 }
 
-
 /*
 QString name () const
 */
@@ -184,7 +175,6 @@ HB_FUNC_STATIC( QSSLCIPHER_NAME )
     RQSTRING( obj->name () );
   }
 }
-
 
 /*
 QSsl::SslProtocol protocol () const
@@ -198,7 +188,6 @@ HB_FUNC_STATIC( QSSLCIPHER_PROTOCOL )
   }
 }
 
-
 /*
 QString protocolString () const
 */
@@ -210,7 +199,6 @@ HB_FUNC_STATIC( QSSLCIPHER_PROTOCOLSTRING )
     RQSTRING( obj->protocolString () );
   }
 }
-
 
 /*
 int supportedBits () const
@@ -224,7 +212,6 @@ HB_FUNC_STATIC( QSSLCIPHER_SUPPORTEDBITS )
   }
 }
 
-
 /*
 int usedBits () const
 */
@@ -236,7 +223,6 @@ HB_FUNC_STATIC( QSSLCIPHER_USEDBITS )
     RINT( obj->usedBits () );
   }
 }
-
 
 HB_FUNC_STATIC( QSSLCIPHER_NEWFROM )
 {
@@ -292,7 +278,5 @@ HB_FUNC_STATIC( QSSLCIPHER_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

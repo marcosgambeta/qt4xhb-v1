@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -66,7 +66,6 @@ HB_FUNC_STATIC( QTCPSERVER_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QTCPSERVER_DELETE )
 {
   QTcpServer * obj = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -82,7 +81,6 @@ HB_FUNC_STATIC( QTCPSERVER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void close ()
 */
@@ -96,7 +94,6 @@ HB_FUNC_STATIC( QTCPSERVER_CLOSE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString errorString () const
 */
@@ -108,7 +105,6 @@ HB_FUNC_STATIC( QTCPSERVER_ERRORSTRING )
     RQSTRING( obj->errorString () );
   }
 }
-
 
 /*
 virtual bool hasPendingConnections () const
@@ -122,7 +118,6 @@ HB_FUNC_STATIC( QTCPSERVER_HASPENDINGCONNECTIONS )
   }
 }
 
-
 /*
 bool isListening () const
 */
@@ -134,7 +129,6 @@ HB_FUNC_STATIC( QTCPSERVER_ISLISTENING )
     RBOOL( obj->isListening () );
   }
 }
-
 
 /*
 bool listen ( const QHostAddress & address = QHostAddress::Any, quint16 port = 0 )
@@ -149,7 +143,6 @@ HB_FUNC_STATIC( QTCPSERVER_LISTEN )
   }
 }
 
-
 /*
 int maxPendingConnections () const
 */
@@ -161,7 +154,6 @@ HB_FUNC_STATIC( QTCPSERVER_MAXPENDINGCONNECTIONS )
     RINT( obj->maxPendingConnections () );
   }
 }
-
 
 /*
 virtual QTcpSocket * nextPendingConnection ()
@@ -176,7 +168,6 @@ HB_FUNC_STATIC( QTCPSERVER_NEXTPENDINGCONNECTION )
   }
 }
 
-
 /*
 QNetworkProxy proxy () const
 */
@@ -189,7 +180,6 @@ HB_FUNC_STATIC( QTCPSERVER_PROXY )
     _qt4xhb_createReturnClass ( ptr, "QNETWORKPROXY", true );
   }
 }
-
 
 /*
 QHostAddress serverAddress () const
@@ -204,7 +194,6 @@ HB_FUNC_STATIC( QTCPSERVER_SERVERADDRESS )
   }
 }
 
-
 /*
 QAbstractSocket::SocketError serverError () const
 */
@@ -217,7 +206,6 @@ HB_FUNC_STATIC( QTCPSERVER_SERVERERROR )
   }
 }
 
-
 /*
 quint16 serverPort () const
 */
@@ -229,7 +217,6 @@ HB_FUNC_STATIC( QTCPSERVER_SERVERPORT )
     RQUINT16( obj->serverPort () );
   }
 }
-
 
 /*
 void setMaxPendingConnections ( int numConnections )
@@ -244,7 +231,6 @@ HB_FUNC_STATIC( QTCPSERVER_SETMAXPENDINGCONNECTIONS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setProxy ( const QNetworkProxy & networkProxy )
 */
@@ -258,7 +244,6 @@ HB_FUNC_STATIC( QTCPSERVER_SETPROXY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool setSocketDescriptor ( int socketDescriptor )
 */
@@ -271,7 +256,6 @@ HB_FUNC_STATIC( QTCPSERVER_SETSOCKETDESCRIPTOR )
   }
 }
 
-
 /*
 int socketDescriptor () const
 */
@@ -283,7 +267,6 @@ HB_FUNC_STATIC( QTCPSERVER_SOCKETDESCRIPTOR )
     RINT( obj->socketDescriptor () );
   }
 }
-
 
 /*
 bool waitForNewConnection ( int msec = 0, bool * timedOut = 0 )
@@ -298,10 +281,5 @@ HB_FUNC_STATIC( QTCPSERVER_WAITFORNEWCONNECTION )
     hb_storl( par2, 2 );
   }
 }
-
-
-
-
-
 
 #pragma ENDDUMP

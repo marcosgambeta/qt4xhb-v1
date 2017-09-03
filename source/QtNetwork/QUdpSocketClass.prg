@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QUdpSocket INHERIT QAbstractSocket
 
@@ -53,7 +52,6 @@ HB_FUNC_STATIC( QUDPSOCKET_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QUDPSOCKET_DELETE )
 {
   QUdpSocket * obj = (QUdpSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -69,7 +67,6 @@ HB_FUNC_STATIC( QUDPSOCKET_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool bind ( const QHostAddress & address, quint16 port )
 */
@@ -81,7 +78,6 @@ HB_FUNC_STATIC( QUDPSOCKET_BIND1 )
     RBOOL( obj->bind ( *PQHOSTADDRESS(1), PQUINT16(2) ) );
   }
 }
-
 
 /*
 bool bind ( const QHostAddress & address, quint16 port, BindMode mode )
@@ -95,7 +91,6 @@ HB_FUNC_STATIC( QUDPSOCKET_BIND2 )
   }
 }
 
-
 /*
 bool bind ( quint16 port = 0 )
 */
@@ -108,7 +103,6 @@ HB_FUNC_STATIC( QUDPSOCKET_BIND3 )
   }
 }
 
-
 /*
 bool bind ( quint16 port, BindMode mode )
 */
@@ -120,7 +114,6 @@ HB_FUNC_STATIC( QUDPSOCKET_BIND4 )
     RBOOL( obj->bind ( PQUINT16(1), (QUdpSocket::BindMode) hb_parni(2) ) );
   }
 }
-
 
 //[1]bool bind ( const QHostAddress & address, quint16 port )
 //[2]bool bind ( const QHostAddress & address, quint16 port, BindMode mode )
@@ -159,7 +152,6 @@ HB_FUNC_STATIC( QUDPSOCKET_HASPENDINGDATAGRAMS )
   }
 }
 
-
 /*
 qint64 pendingDatagramSize () const
 */
@@ -171,7 +163,6 @@ HB_FUNC_STATIC( QUDPSOCKET_PENDINGDATAGRAMSIZE )
     RQINT64( obj->pendingDatagramSize () );
   }
 }
-
 
 /*
 qint64 readDatagram ( char * data, qint64 maxSize, QHostAddress * address = 0, quint16 * port = 0 )
@@ -188,7 +179,6 @@ HB_FUNC_STATIC( QUDPSOCKET_READDATAGRAM ) // TODO: corrigir implementacao
   }
 }
 
-
 /*
 qint64 writeDatagram ( const char * data, qint64 size, const QHostAddress & address, quint16 port )
 */
@@ -201,7 +191,6 @@ HB_FUNC_STATIC( QUDPSOCKET_WRITEDATAGRAM1 )
   }
 }
 
-
 /*
 qint64 writeDatagram ( const QByteArray & datagram, const QHostAddress & host, quint16 port )
 */
@@ -213,7 +202,6 @@ HB_FUNC_STATIC( QUDPSOCKET_WRITEDATAGRAM2 )
     RQINT64( obj->writeDatagram ( *PQBYTEARRAY(1), *PQHOSTADDRESS(2), PQUINT16(3) ) );
   }
 }
-
 
 //[1]qint64 writeDatagram ( const char * data, qint64 size, const QHostAddress & address, quint16 port )
 //[2]qint64 writeDatagram ( const QByteArray & datagram, const QHostAddress & host, quint16 port )
@@ -229,8 +217,5 @@ HB_FUNC_STATIC( QUDPSOCKET_WRITEDATAGRAM )
     HB_FUNC_EXEC( QUDPSOCKET_WRITEDATAGRAM2 );
   }
 }
-
-
-
 
 #pragma ENDDUMP

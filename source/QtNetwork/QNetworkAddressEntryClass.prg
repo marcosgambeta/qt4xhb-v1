@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -61,7 +61,6 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QNetworkAddressEntry ( const QNetworkAddressEntry & other )
 */
@@ -70,7 +69,6 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NEW2 )
   QNetworkAddressEntry * o = new QNetworkAddressEntry ( *PQNETWORKADDRESSENTRY(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QNetworkAddressEntry ()
 //[2]QNetworkAddressEntry ( const QNetworkAddressEntry & other )
@@ -106,7 +104,6 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QHostAddress broadcast () const
 */
@@ -119,7 +116,6 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_BROADCAST )
     _qt4xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
   }
 }
-
 
 /*
 QHostAddress ip () const
@@ -134,7 +130,6 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_IP )
   }
 }
 
-
 /*
 QHostAddress netmask () const
 */
@@ -148,7 +143,6 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NETMASK )
   }
 }
 
-
 /*
 int prefixLength () const
 */
@@ -160,7 +154,6 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_PREFIXLENGTH )
     RINT( (int) obj->prefixLength () );
   }
 }
-
 
 /*
 void setBroadcast ( const QHostAddress & newBroadcast )
@@ -175,7 +168,6 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETBROADCAST )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setIp ( const QHostAddress & newIp )
 */
@@ -188,7 +180,6 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETIP )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setNetmask ( const QHostAddress & newNetmask )
@@ -203,7 +194,6 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETNETMASK )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPrefixLength ( int length )
 */
@@ -216,7 +206,6 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETPREFIXLENGTH )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NEWFROM )
 {
@@ -272,6 +261,5 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

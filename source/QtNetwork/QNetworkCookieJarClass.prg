@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -47,7 +47,6 @@ HB_FUNC_STATIC( QNETWORKCOOKIEJAR_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QNETWORKCOOKIEJAR_DELETE )
 {
   QNetworkCookieJar * obj = (QNetworkCookieJar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -62,7 +61,6 @@ HB_FUNC_STATIC( QNETWORKCOOKIEJAR_DELETE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual QList<QNetworkCookie> cookiesForUrl ( const QUrl & url ) const
@@ -111,7 +109,6 @@ HB_FUNC_STATIC( QNETWORKCOOKIEJAR_COOKIESFORURL )
   }
 }
 
-
 /*
 virtual bool setCookiesFromUrl ( const QList<QNetworkCookie> & cookieList, const QUrl & url )
 */
@@ -131,9 +128,5 @@ par1 << *(QNetworkCookie *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aL
     RBOOL( obj->setCookiesFromUrl ( par1, *PQURL(2) ) );
   }
 }
-
-
-
-
 
 #pragma ENDDUMP

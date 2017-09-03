@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -69,7 +69,6 @@ HB_FUNC_STATIC( QHOSTINFO_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QHostInfo ( const QHostInfo & other )
 */
@@ -78,7 +77,6 @@ HB_FUNC_STATIC( QHOSTINFO_NEW2 )
   QHostInfo * o = new QHostInfo ( *PQHOSTINFO(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QHostInfo ( int id = -1 )
 //[2]QHostInfo ( const QHostInfo & other )
@@ -117,7 +115,6 @@ HB_FUNC_STATIC( QHOSTINFO_DELETE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QList<QHostAddress> addresses () const
@@ -166,7 +163,6 @@ HB_FUNC_STATIC( QHOSTINFO_ADDRESSES )
   }
 }
 
-
 /*
 HostInfoError error () const
 */
@@ -178,7 +174,6 @@ HB_FUNC_STATIC( QHOSTINFO_ERROR )
     hb_retni( (int) obj->error () );
   }
 }
-
 
 /*
 QString errorString () const
@@ -192,7 +187,6 @@ HB_FUNC_STATIC( QHOSTINFO_ERRORSTRING )
   }
 }
 
-
 /*
 QString hostName () const
 */
@@ -205,7 +199,6 @@ HB_FUNC_STATIC( QHOSTINFO_HOSTNAME )
   }
 }
 
-
 /*
 int lookupId () const
 */
@@ -217,7 +210,6 @@ HB_FUNC_STATIC( QHOSTINFO_LOOKUPID )
     RINT( obj->lookupId () );
   }
 }
-
 
 /*
 void setAddresses ( const QList<QHostAddress> & addresses )
@@ -240,7 +232,6 @@ par1 << *(QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aLis
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setError ( HostInfoError error )
 */
@@ -255,7 +246,6 @@ HB_FUNC_STATIC( QHOSTINFO_SETERROR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setErrorString ( const QString & str )
 */
@@ -268,7 +258,6 @@ HB_FUNC_STATIC( QHOSTINFO_SETERRORSTRING )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setHostName ( const QString & hostName )
@@ -283,7 +272,6 @@ HB_FUNC_STATIC( QHOSTINFO_SETHOSTNAME )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setLookupId ( int id )
 */
@@ -297,8 +285,6 @@ HB_FUNC_STATIC( QHOSTINFO_SETLOOKUPID )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 void abortHostLookup ( int id )
 */
@@ -307,7 +293,6 @@ HB_FUNC_STATIC( QHOSTINFO_ABORTHOSTLOOKUP )
   QHostInfo::abortHostLookup ( PINT(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QHostInfo fromName ( const QString & name )
@@ -318,7 +303,6 @@ HB_FUNC_STATIC( QHOSTINFO_FROMNAME )
   _qt4xhb_createReturnClass ( ptr, "QHOSTINFO", true );
 }
 
-
 /*
 QString localDomainName ()
 */
@@ -326,7 +310,6 @@ HB_FUNC_STATIC( QHOSTINFO_LOCALDOMAINNAME )
 {
   RQSTRING( QHostInfo::localDomainName () );
 }
-
 
 /*
 QString localHostName ()
@@ -336,7 +319,6 @@ HB_FUNC_STATIC( QHOSTINFO_LOCALHOSTNAME )
   RQSTRING( QHostInfo::localHostName () );
 }
 
-
 /*
 int lookupHost ( const QString & name, QObject * receiver, const char * member )
 */
@@ -344,7 +326,6 @@ HB_FUNC_STATIC( QHOSTINFO_LOOKUPHOST )
 {
   RINT( QHostInfo::lookupHost ( PQSTRING(1), PQOBJECT(2), (const char *) hb_parc(3) ) );
 }
-
 
 HB_FUNC_STATIC( QHOSTINFO_NEWFROM )
 {
@@ -400,6 +381,5 @@ HB_FUNC_STATIC( QHOSTINFO_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

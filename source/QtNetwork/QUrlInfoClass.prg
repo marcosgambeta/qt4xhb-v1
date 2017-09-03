@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -84,7 +84,6 @@ HB_FUNC_STATIC( QURLINFO_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QUrlInfo ( const QUrlInfo & ui )
 */
@@ -93,7 +92,6 @@ HB_FUNC_STATIC( QURLINFO_NEW2 )
   QUrlInfo * o = new QUrlInfo ( *PQURLINFO(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QUrlInfo ( const QString & name, int permissions, const QString & owner, const QString & group, qint64 size, const QDateTime & lastModified, const QDateTime & lastRead, bool isDir, bool isFile, bool isSymLink, bool isWritable, bool isReadable, bool isExecutable )
@@ -104,7 +102,6 @@ HB_FUNC_STATIC( QURLINFO_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QUrlInfo ( const QUrl & url, int permissions, const QString & owner, const QString & group, qint64 size, const QDateTime & lastModified, const QDateTime & lastRead, bool isDir, bool isFile, bool isSymLink, bool isWritable, bool isReadable, bool isExecutable )
 */
@@ -113,7 +110,6 @@ HB_FUNC_STATIC( QURLINFO_NEW4 )
   QUrlInfo * o = new QUrlInfo ( *PQURL(1), PINT(2), PQSTRING(3), PQSTRING(4), PQINT64(5), *PQDATETIME(6), *PQDATETIME(7), PBOOL(8), PBOOL(9), PBOOL(10), PBOOL(11), PBOOL(12), PBOOL(13) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QUrlInfo ()
 //[2]QUrlInfo ( const QUrlInfo & ui )
@@ -159,7 +155,6 @@ HB_FUNC_STATIC( QURLINFO_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString group () const
 */
@@ -171,7 +166,6 @@ HB_FUNC_STATIC( QURLINFO_GROUP )
     RQSTRING( obj->group () );
   }
 }
-
 
 /*
 bool isDir () const
@@ -185,7 +179,6 @@ HB_FUNC_STATIC( QURLINFO_ISDIR )
   }
 }
 
-
 /*
 bool isExecutable () const
 */
@@ -197,7 +190,6 @@ HB_FUNC_STATIC( QURLINFO_ISEXECUTABLE )
     RBOOL( obj->isExecutable () );
   }
 }
-
 
 /*
 bool isFile () const
@@ -211,7 +203,6 @@ HB_FUNC_STATIC( QURLINFO_ISFILE )
   }
 }
 
-
 /*
 bool isReadable () const
 */
@@ -223,7 +214,6 @@ HB_FUNC_STATIC( QURLINFO_ISREADABLE )
     RBOOL( obj->isReadable () );
   }
 }
-
 
 /*
 bool isSymLink () const
@@ -237,7 +227,6 @@ HB_FUNC_STATIC( QURLINFO_ISSYMLINK )
   }
 }
 
-
 /*
 bool isValid () const
 */
@@ -250,7 +239,6 @@ HB_FUNC_STATIC( QURLINFO_ISVALID )
   }
 }
 
-
 /*
 bool isWritable () const
 */
@@ -262,7 +250,6 @@ HB_FUNC_STATIC( QURLINFO_ISWRITABLE )
     RBOOL( obj->isWritable () );
   }
 }
-
 
 /*
 QDateTime lastModified () const
@@ -277,7 +264,6 @@ HB_FUNC_STATIC( QURLINFO_LASTMODIFIED )
   }
 }
 
-
 /*
 QDateTime lastRead () const
 */
@@ -291,7 +277,6 @@ HB_FUNC_STATIC( QURLINFO_LASTREAD )
   }
 }
 
-
 /*
 QString name () const
 */
@@ -303,7 +288,6 @@ HB_FUNC_STATIC( QURLINFO_NAME )
     RQSTRING( obj->name () );
   }
 }
-
 
 /*
 QString owner () const
@@ -317,7 +301,6 @@ HB_FUNC_STATIC( QURLINFO_OWNER )
   }
 }
 
-
 /*
 int permissions () const
 */
@@ -329,7 +312,6 @@ HB_FUNC_STATIC( QURLINFO_PERMISSIONS )
     RINT( obj->permissions () );
   }
 }
-
 
 /*
 virtual void setDir ( bool b )
@@ -344,7 +326,6 @@ HB_FUNC_STATIC( QURLINFO_SETDIR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void setFile ( bool b )
 */
@@ -357,7 +338,6 @@ HB_FUNC_STATIC( QURLINFO_SETFILE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void setGroup ( const QString & s )
@@ -372,7 +352,6 @@ HB_FUNC_STATIC( QURLINFO_SETGROUP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void setLastModified ( const QDateTime & dt )
 */
@@ -385,7 +364,6 @@ HB_FUNC_STATIC( QURLINFO_SETLASTMODIFIED )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setLastRead ( const QDateTime & dt )
@@ -400,7 +378,6 @@ HB_FUNC_STATIC( QURLINFO_SETLASTREAD )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void setName ( const QString & name )
 */
@@ -413,7 +390,6 @@ HB_FUNC_STATIC( QURLINFO_SETNAME )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void setOwner ( const QString & s )
@@ -428,7 +404,6 @@ HB_FUNC_STATIC( QURLINFO_SETOWNER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void setPermissions ( int p )
 */
@@ -441,7 +416,6 @@ HB_FUNC_STATIC( QURLINFO_SETPERMISSIONS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void setReadable ( bool b )
@@ -456,7 +430,6 @@ HB_FUNC_STATIC( QURLINFO_SETREADABLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void setSize ( qint64 size )
 */
@@ -469,7 +442,6 @@ HB_FUNC_STATIC( QURLINFO_SETSIZE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void setSymLink ( bool b )
@@ -484,7 +456,6 @@ HB_FUNC_STATIC( QURLINFO_SETSYMLINK )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void setWritable ( bool b )
 */
@@ -498,7 +469,6 @@ HB_FUNC_STATIC( QURLINFO_SETWRITABLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 qint64 size () const
 */
@@ -511,8 +481,6 @@ HB_FUNC_STATIC( QURLINFO_SIZE )
   }
 }
 
-
-
 /*
 bool equal ( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
 */
@@ -520,7 +488,6 @@ HB_FUNC_STATIC( QURLINFO_EQUAL )
 {
   RBOOL( QUrlInfo::equal ( *PQURLINFO(1), *PQURLINFO(2), PINT(3) ) );
 }
-
 
 /*
 bool greaterThan ( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
@@ -530,7 +497,6 @@ HB_FUNC_STATIC( QURLINFO_GREATERTHAN )
   RBOOL( QUrlInfo::greaterThan ( *PQURLINFO(1), *PQURLINFO(2), PINT(3) ) );
 }
 
-
 /*
 bool lessThan ( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
 */
@@ -538,7 +504,6 @@ HB_FUNC_STATIC( QURLINFO_LESSTHAN )
 {
   RBOOL( QUrlInfo::lessThan ( *PQURLINFO(1), *PQURLINFO(2), PINT(3) ) );
 }
-
 
 HB_FUNC_STATIC( QURLINFO_NEWFROM )
 {
@@ -594,6 +559,5 @@ HB_FUNC_STATIC( QURLINFO_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

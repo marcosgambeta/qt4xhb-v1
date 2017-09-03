@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -73,7 +73,6 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QNetworkProxyQuery ( const QUrl & requestUrl, QueryType queryType = UrlRequest )
 */
@@ -83,7 +82,6 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW2 )
   QNetworkProxyQuery * o = new QNetworkProxyQuery ( *PQURL(1), (QNetworkProxyQuery::QueryType) par2 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QNetworkProxyQuery ( const QString & hostname, int port, const QString & protocolTag = QString(), QueryType queryType = TcpSocket )
@@ -95,7 +93,6 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QNetworkProxyQuery ( quint16 bindPort, const QString & protocolTag = QString(), QueryType queryType = TcpServer )
 */
@@ -106,7 +103,6 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW4 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QNetworkProxyQuery ( const QNetworkProxyQuery & other )
 */
@@ -115,7 +111,6 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW5 )
   QNetworkProxyQuery * o = new QNetworkProxyQuery ( *PQNETWORKPROXYQUERY(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QNetworkProxyQuery ( const QNetworkConfiguration & networkConfiguration, const QUrl & requestUrl, QueryType queryType = UrlRequest )
@@ -127,7 +122,6 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW6 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QNetworkProxyQuery ( const QNetworkConfiguration & networkConfiguration, const QString & hostname, int port, const QString & protocolTag = QString(), QueryType queryType = TcpSocket )
 */
@@ -138,7 +132,6 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW7 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QNetworkProxyQuery ( const QNetworkConfiguration & networkConfiguration, quint16 bindPort, const QString & protocolTag = QString(), QueryType queryType = TcpServer )
 */
@@ -148,7 +141,6 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW8 )
   QNetworkProxyQuery * o = new QNetworkProxyQuery ( *PQNETWORKCONFIGURATION(1), PQUINT16(2), OPQSTRING(3,QString()), (QNetworkProxyQuery::QueryType) par4 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QNetworkProxyQuery ()
 //[2]QNetworkProxyQuery ( const QUrl & requestUrl, QueryType queryType = UrlRequest )
@@ -214,7 +206,6 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int localPort () const
 */
@@ -226,7 +217,6 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_LOCALPORT )
     RINT( obj->localPort () );
   }
 }
-
 
 /*
 QString peerHostName () const
@@ -240,7 +230,6 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_PEERHOSTNAME )
   }
 }
 
-
 /*
 int peerPort () const
 */
@@ -252,7 +241,6 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_PEERPORT )
     RINT( obj->peerPort () );
   }
 }
-
 
 /*
 QString protocolTag () const
@@ -266,7 +254,6 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_PROTOCOLTAG )
   }
 }
 
-
 /*
 QueryType queryType () const
 */
@@ -278,7 +265,6 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_QUERYTYPE )
     hb_retni( (int) obj->queryType () );
   }
 }
-
 
 /*
 void setLocalPort ( int port )
@@ -293,7 +279,6 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETLOCALPORT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPeerHostName ( const QString & hostname )
 */
@@ -306,7 +291,6 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETPEERHOSTNAME )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setPeerPort ( int port )
@@ -321,7 +305,6 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETPEERPORT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setProtocolTag ( const QString & protocolTag )
 */
@@ -334,7 +317,6 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETPROTOCOLTAG )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setQueryType ( QueryType type )
@@ -350,7 +332,6 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETQUERYTYPE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setUrl ( const QUrl & url )
 */
@@ -364,7 +345,6 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETURL )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QUrl url () const
 */
@@ -377,7 +357,6 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_URL )
     _qt4xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
-
 
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEWFROM )
 {
@@ -433,7 +412,5 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

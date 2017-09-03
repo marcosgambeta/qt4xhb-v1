@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -63,7 +63,6 @@ HB_FUNC_STATIC( QAUTHENTICATOR_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QAuthenticator ( const QAuthenticator & other )
 */
@@ -72,7 +71,6 @@ HB_FUNC_STATIC( QAUTHENTICATOR_NEW2 )
   QAuthenticator * o = new QAuthenticator ( *PQAUTHENTICATOR(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QAuthenticator ()
 //[2]QAuthenticator ( const QAuthenticator & other )
@@ -108,7 +106,6 @@ HB_FUNC_STATIC( QAUTHENTICATOR_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool isNull () const
 */
@@ -120,7 +117,6 @@ HB_FUNC_STATIC( QAUTHENTICATOR_ISNULL )
     RBOOL( obj->isNull () );
   }
 }
-
 
 /*
 QVariant option ( const QString & opt ) const
@@ -135,7 +131,6 @@ HB_FUNC_STATIC( QAUTHENTICATOR_OPTION )
   }
 }
 
-
 /*
 QVariantHash options () const
 */
@@ -149,7 +144,6 @@ HB_FUNC_STATIC( QAUTHENTICATOR_OPTIONS )
   }
 }
 
-
 /*
 QString password () const
 */
@@ -162,7 +156,6 @@ HB_FUNC_STATIC( QAUTHENTICATOR_PASSWORD )
   }
 }
 
-
 /*
 QString realm () const
 */
@@ -174,7 +167,6 @@ HB_FUNC_STATIC( QAUTHENTICATOR_REALM )
     RQSTRING( obj->realm () );
   }
 }
-
 
 /*
 void setOption ( const QString & opt, const QVariant & value )
@@ -189,7 +181,6 @@ HB_FUNC_STATIC( QAUTHENTICATOR_SETOPTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPassword ( const QString & password )
 */
@@ -202,7 +193,6 @@ HB_FUNC_STATIC( QAUTHENTICATOR_SETPASSWORD )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setUser ( const QString & user )
@@ -217,7 +207,6 @@ HB_FUNC_STATIC( QAUTHENTICATOR_SETUSER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString user () const
 */
@@ -229,7 +218,6 @@ HB_FUNC_STATIC( QAUTHENTICATOR_USER )
     RQSTRING( obj->user () );
   }
 }
-
 
 HB_FUNC_STATIC( QAUTHENTICATOR_NEWFROM )
 {
@@ -285,7 +273,5 @@ HB_FUNC_STATIC( QAUTHENTICATOR_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

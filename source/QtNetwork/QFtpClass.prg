@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -82,7 +82,6 @@ HB_FUNC_STATIC( QFTP_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QFTP_DELETE )
 {
   QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -98,7 +97,6 @@ HB_FUNC_STATIC( QFTP_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 qint64 bytesAvailable () const
 */
@@ -111,7 +109,6 @@ HB_FUNC_STATIC( QFTP_BYTESAVAILABLE )
   }
 }
 
-
 /*
 int cd ( const QString & dir )
 */
@@ -123,7 +120,6 @@ HB_FUNC_STATIC( QFTP_CD )
     RINT( obj->cd ( PQSTRING(1) ) );
   }
 }
-
 
 /*
 void clearPendingCommands ()
@@ -138,7 +134,6 @@ HB_FUNC_STATIC( QFTP_CLEARPENDINGCOMMANDS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int close ()
 */
@@ -150,7 +145,6 @@ HB_FUNC_STATIC( QFTP_CLOSE )
     RINT( obj->close () );
   }
 }
-
 
 /*
 int connectToHost ( const QString & host, quint16 port = 21 )
@@ -164,7 +158,6 @@ HB_FUNC_STATIC( QFTP_CONNECTTOHOST )
   }
 }
 
-
 /*
 Command currentCommand () const
 */
@@ -176,7 +169,6 @@ HB_FUNC_STATIC( QFTP_CURRENTCOMMAND )
     hb_retni( (int) obj->currentCommand () );
   }
 }
-
 
 /*
 QIODevice * currentDevice () const
@@ -191,7 +183,6 @@ HB_FUNC_STATIC( QFTP_CURRENTDEVICE )
   }
 }
 
-
 /*
 int currentId () const
 */
@@ -203,7 +194,6 @@ HB_FUNC_STATIC( QFTP_CURRENTID )
     RINT( obj->currentId () );
   }
 }
-
 
 /*
 Error error () const
@@ -217,7 +207,6 @@ HB_FUNC_STATIC( QFTP_ERROR )
   }
 }
 
-
 /*
 QString errorString () const
 */
@@ -229,7 +218,6 @@ HB_FUNC_STATIC( QFTP_ERRORSTRING )
     RQSTRING( obj->errorString () );
   }
 }
-
 
 /*
 int get ( const QString & file, QIODevice * dev = 0, TransferType type = Binary )
@@ -245,7 +233,6 @@ HB_FUNC_STATIC( QFTP_GET )
   }
 }
 
-
 /*
 bool hasPendingCommands () const
 */
@@ -257,7 +244,6 @@ HB_FUNC_STATIC( QFTP_HASPENDINGCOMMANDS )
     RBOOL( obj->hasPendingCommands () );
   }
 }
-
 
 /*
 int list ( const QString & dir = QString() )
@@ -271,7 +257,6 @@ HB_FUNC_STATIC( QFTP_LIST )
   }
 }
 
-
 /*
 int login ( const QString & user = QString(), const QString & password = QString() )
 */
@@ -284,7 +269,6 @@ HB_FUNC_STATIC( QFTP_LOGIN )
   }
 }
 
-
 /*
 int mkdir ( const QString & dir )
 */
@@ -296,7 +280,6 @@ HB_FUNC_STATIC( QFTP_MKDIR )
     RINT( obj->mkdir ( PQSTRING(1) ) );
   }
 }
-
 
 /*
 int put ( QIODevice * dev, const QString & file, TransferType type = Binary )
@@ -311,7 +294,6 @@ HB_FUNC_STATIC( QFTP_PUT1 )
   }
 }
 
-
 /*
 int put ( const QByteArray & data, const QString & file, TransferType type = Binary )
 */
@@ -324,7 +306,6 @@ HB_FUNC_STATIC( QFTP_PUT2 )
     RINT( obj->put ( *PQBYTEARRAY(1), PQSTRING(2), (QFtp::TransferType) par3 ) );
   }
 }
-
 
 //[1]int put ( QIODevice * dev, const QString & file, TransferType type = Binary )
 //[2]int put ( const QByteArray & data, const QString & file, TransferType type = Binary )
@@ -353,7 +334,6 @@ HB_FUNC_STATIC( QFTP_RAWCOMMAND )
   }
 }
 
-
 /*
 qint64 read ( char * data, qint64 maxlen )
 */
@@ -366,7 +346,6 @@ HB_FUNC_STATIC( QFTP_READ )
     RQINT64( obj->read ( par1, PQINT64(2) ) );
   }
 }
-
 
 /*
 QByteArray readAll ()
@@ -381,7 +360,6 @@ HB_FUNC_STATIC( QFTP_READALL )
   }
 }
 
-
 /*
 int remove ( const QString & file )
 */
@@ -393,7 +371,6 @@ HB_FUNC_STATIC( QFTP_REMOVE )
     RINT( obj->remove ( PQSTRING(1) ) );
   }
 }
-
 
 /*
 int rename ( const QString & oldname, const QString & newname )
@@ -407,7 +384,6 @@ HB_FUNC_STATIC( QFTP_RENAME )
   }
 }
 
-
 /*
 int rmdir ( const QString & dir )
 */
@@ -419,7 +395,6 @@ HB_FUNC_STATIC( QFTP_RMDIR )
     RINT( obj->rmdir ( PQSTRING(1) ) );
   }
 }
-
 
 /*
 int setProxy ( const QString & host, quint16 port )
@@ -433,7 +408,6 @@ HB_FUNC_STATIC( QFTP_SETPROXY )
   }
 }
 
-
 /*
 int setTransferMode ( TransferMode mode )
 */
@@ -445,7 +419,6 @@ HB_FUNC_STATIC( QFTP_SETTRANSFERMODE )
     RINT( obj->setTransferMode ( (QFtp::TransferMode) hb_parni(1) ) );
   }
 }
-
 
 /*
 State state () const
@@ -459,7 +432,6 @@ HB_FUNC_STATIC( QFTP_STATE )
   }
 }
 
-
 /*
 void abort ()
 */
@@ -472,10 +444,5 @@ HB_FUNC_STATIC( QFTP_ABORT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
-
 
 #pragma ENDDUMP

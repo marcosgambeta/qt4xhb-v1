@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -76,7 +76,6 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QNetworkCookie ( const QNetworkCookie & other )
 */
@@ -85,7 +84,6 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_NEW2 )
   QNetworkCookie * o = new QNetworkCookie ( *PQNETWORKCOOKIE(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QNetworkCookie ( const QByteArray & name = QByteArray(), const QByteArray & value = QByteArray() )
 //[2]QNetworkCookie ( const QNetworkCookie & other )
@@ -121,7 +119,6 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString domain () const
 */
@@ -133,7 +130,6 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_DOMAIN )
     RQSTRING( obj->domain () );
   }
 }
-
 
 /*
 QDateTime expirationDate () const
@@ -148,7 +144,6 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_EXPIRATIONDATE )
   }
 }
 
-
 /*
 bool isHttpOnly () const
 */
@@ -160,7 +155,6 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_ISHTTPONLY )
     RBOOL( obj->isHttpOnly () );
   }
 }
-
 
 /*
 bool isSecure () const
@@ -174,7 +168,6 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_ISSECURE )
   }
 }
 
-
 /*
 bool isSessionCookie () const
 */
@@ -186,7 +179,6 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_ISSESSIONCOOKIE )
     RBOOL( obj->isSessionCookie () );
   }
 }
-
 
 /*
 QByteArray name () const
@@ -201,7 +193,6 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_NAME )
   }
 }
 
-
 /*
 QString path () const
 */
@@ -213,7 +204,6 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_PATH )
     RQSTRING( obj->path () );
   }
 }
-
 
 /*
 void setDomain ( const QString & domain )
@@ -228,7 +218,6 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_SETDOMAIN )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setExpirationDate ( const QDateTime & date )
 */
@@ -241,7 +230,6 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_SETEXPIRATIONDATE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setHttpOnly ( bool enable )
@@ -256,7 +244,6 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_SETHTTPONLY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setName ( const QByteArray & cookieName )
 */
@@ -269,7 +256,6 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_SETNAME )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setPath ( const QString & path )
@@ -284,7 +270,6 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_SETPATH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setSecure ( bool enable )
 */
@@ -298,7 +283,6 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_SETSECURE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setValue ( const QByteArray & value )
 */
@@ -311,7 +295,6 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_SETVALUE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QByteArray toRawForm ( RawForm form = Full ) const
@@ -327,7 +310,6 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_TORAWFORM )
   }
 }
 
-
 /*
 QByteArray value () const
 */
@@ -340,8 +322,6 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_VALUE )
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
-
 
 /*
 QList<QNetworkCookie> parseCookies ( const QByteArray & cookieString )
@@ -385,7 +365,6 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_PARSECOOKIES )
   }
   hb_itemReturnRelease(pArray);
 }
-
 
 HB_FUNC_STATIC( QNETWORKCOOKIE_NEWFROM )
 {
@@ -441,6 +420,5 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -88,7 +88,6 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QABSTRACTSOCKET_DELETE )
 {
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -104,7 +103,6 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void abort ()
 */
@@ -117,7 +115,6 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ABORT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void connectToHost ( const QString & hostName, quint16 port, OpenMode openMode = ReadWrite )
@@ -133,7 +130,6 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_CONNECTTOHOST1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void connectToHost ( const QHostAddress & address, quint16 port, OpenMode openMode = ReadWrite )
 */
@@ -148,7 +144,6 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_CONNECTTOHOST2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void disconnectFromHost ()
 */
@@ -162,7 +157,6 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_DISCONNECTFROMHOST )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 SocketError error () const
 */
@@ -174,7 +168,6 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ERROR )
     hb_retni( (int) obj->error () );
   }
 }
-
 
 /*
 bool flush ()
@@ -188,7 +181,6 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_FLUSH )
   }
 }
 
-
 /*
 bool isValid () const
 */
@@ -200,7 +192,6 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ISVALID )
     RBOOL( obj->isValid () );
   }
 }
-
 
 /*
 QHostAddress localAddress () const
@@ -215,7 +206,6 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_LOCALADDRESS )
   }
 }
 
-
 /*
 quint16 localPort () const
 */
@@ -227,7 +217,6 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_LOCALPORT )
     RQUINT16( obj->localPort () );
   }
 }
-
 
 /*
 QHostAddress peerAddress () const
@@ -242,7 +231,6 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_PEERADDRESS )
   }
 }
 
-
 /*
 QString peerName () const
 */
@@ -255,7 +243,6 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_PEERNAME )
   }
 }
 
-
 /*
 quint16 peerPort () const
 */
@@ -267,7 +254,6 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_PEERPORT )
     RQUINT16( obj->peerPort () );
   }
 }
-
 
 /*
 QNetworkProxy proxy () const
@@ -282,7 +268,6 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_PROXY )
   }
 }
 
-
 /*
 qint64 readBufferSize () const
 */
@@ -294,7 +279,6 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_READBUFFERSIZE )
     RQINT64( obj->readBufferSize () );
   }
 }
-
 
 /*
 void setProxy ( const QNetworkProxy & networkProxy )
@@ -309,7 +293,6 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SETPROXY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setReadBufferSize ( qint64 size )
 */
@@ -322,7 +305,6 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SETREADBUFFERSIZE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 bool setSocketDescriptor ( int socketDescriptor, SocketState socketState = ConnectedState, OpenMode openMode = ReadWrite )
@@ -338,7 +320,6 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SETSOCKETDESCRIPTOR )
   }
 }
 
-
 /*
 void setSocketOption ( QAbstractSocket::SocketOption option, const QVariant & value )
 */
@@ -353,7 +334,6 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SETSOCKETOPTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int socketDescriptor () const
 */
@@ -365,7 +345,6 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SOCKETDESCRIPTOR )
     RINT( obj->socketDescriptor () );
   }
 }
-
 
 /*
 QVariant socketOption ( QAbstractSocket::SocketOption option )
@@ -381,7 +360,6 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SOCKETOPTION )
   }
 }
 
-
 /*
 SocketType socketType () const
 */
@@ -393,7 +371,6 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SOCKETTYPE )
     hb_retni( (int) obj->socketType () );
   }
 }
-
 
 /*
 SocketState state () const
@@ -407,7 +384,6 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_STATE )
   }
 }
 
-
 /*
 bool waitForConnected ( int msecs = 30000 )
 */
@@ -419,7 +395,6 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORCONNECTED )
     RBOOL( obj->waitForConnected ( OPINT(1,30000) ) );
   }
 }
-
 
 /*
 bool waitForDisconnected ( int msecs = 30000 )
@@ -433,7 +408,6 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORDISCONNECTED )
   }
 }
 
-
 /*
 virtual bool atEnd () const
 */
@@ -445,7 +419,6 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ATEND )
     RBOOL( obj->atEnd () );
   }
 }
-
 
 /*
 virtual qint64 bytesAvailable () const
@@ -459,7 +432,6 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_BYTESAVAILABLE )
   }
 }
 
-
 /*
 virtual qint64 bytesToWrite () const
 */
@@ -472,7 +444,6 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_BYTESTOWRITE )
   }
 }
 
-
 /*
 virtual bool canReadLine () const
 */
@@ -484,7 +455,6 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_CANREADLINE )
     RBOOL( obj->canReadLine () );
   }
 }
-
 
 /*
 virtual void close ()
@@ -499,7 +469,6 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_CLOSE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual bool isSequential () const
 */
@@ -511,7 +480,6 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ISSEQUENTIAL )
     RBOOL( obj->isSequential () );
   }
 }
-
 
 /*
 virtual bool waitForBytesWritten ( int msecs = 30000 )
@@ -525,7 +493,6 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORBYTESWRITTEN )
   }
 }
 
-
 /*
 virtual bool waitForReadyRead ( int msecs = 30000 )
 */
@@ -537,10 +504,5 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORREADYREAD )
     RBOOL( obj->waitForReadyRead ( OPINT(1,30000) ) );
   }
 }
-
-
-
-
-
 
 #pragma ENDDUMP

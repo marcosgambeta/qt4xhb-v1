@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -79,7 +79,6 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QSslConfiguration ( const QSslConfiguration & other )
 */
@@ -88,7 +87,6 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_NEW2 )
   QSslConfiguration * o = new QSslConfiguration ( *PQSSLCONFIGURATION(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QSslConfiguration ()
 //[2]QSslConfiguration ( const QSslConfiguration & other )
@@ -123,7 +121,6 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_DELETE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QList<QSslCertificate> caCertificates () const
@@ -172,7 +169,6 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_CACERTIFICATES )
   }
 }
 
-
 /*
 QList<QSslCipher> ciphers () const
 */
@@ -220,7 +216,6 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_CIPHERS )
   }
 }
 
-
 /*
 bool isNull () const
 */
@@ -232,7 +227,6 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_ISNULL )
     RBOOL( obj->isNull () );
   }
 }
-
 
 /*
 QSslCertificate localCertificate () const
@@ -247,7 +241,6 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_LOCALCERTIFICATE )
   }
 }
 
-
 /*
 QSslCertificate peerCertificate () const
 */
@@ -260,7 +253,6 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_PEERCERTIFICATE )
     _qt4xhb_createReturnClass ( ptr, "QSSLCERTIFICATE", true );
   }
 }
-
 
 /*
 QList<QSslCertificate> peerCertificateChain () const
@@ -309,7 +301,6 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_PEERCERTIFICATECHAIN )
   }
 }
 
-
 /*
 int peerVerifyDepth () const
 */
@@ -322,7 +313,6 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_PEERVERIFYDEPTH )
   }
 }
 
-
 /*
 QSslSocket::PeerVerifyMode peerVerifyMode () const
 */
@@ -334,7 +324,6 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_PEERVERIFYMODE )
     hb_retni( (int) obj->peerVerifyMode () );
   }
 }
-
 
 /*
 QSslKey privateKey () const
@@ -349,7 +338,6 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_PRIVATEKEY )
   }
 }
 
-
 /*
 QSsl::SslProtocol protocol () const
 */
@@ -361,7 +349,6 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_PROTOCOL )
     hb_retni( (int) obj->protocol () );
   }
 }
-
 
 /*
 QSslCipher sessionCipher () const
@@ -375,7 +362,6 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SESSIONCIPHER )
     _qt4xhb_createReturnClass ( ptr, "QSSLCIPHER", true );
   }
 }
-
 
 /*
 void setCaCertificates ( const QList<QSslCertificate> & certificates )
@@ -398,7 +384,6 @@ par1 << *(QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( a
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setCiphers ( const QList<QSslCipher> & ciphers )
 */
@@ -420,7 +405,6 @@ par1 << *(QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setLocalCertificate ( const QSslCertificate & certificate )
 */
@@ -434,7 +418,6 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SETLOCALCERTIFICATE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPeerVerifyDepth ( int depth )
 */
@@ -447,7 +430,6 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SETPEERVERIFYDEPTH )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setPeerVerifyMode ( QSslSocket::PeerVerifyMode mode )
@@ -463,7 +445,6 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SETPEERVERIFYMODE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPrivateKey ( const QSslKey & key )
 */
@@ -476,7 +457,6 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SETPRIVATEKEY )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setProtocol ( QSsl::SslProtocol protocol )
@@ -492,8 +472,6 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SETPROTOCOL )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 QSslConfiguration defaultConfiguration ()
 */
@@ -503,7 +481,6 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_DEFAULTCONFIGURATION )
   _qt4xhb_createReturnClass ( ptr, "QSSLCONFIGURATION", true );
 }
 
-
 /*
 void setDefaultConfiguration ( const QSslConfiguration & configuration )
 */
@@ -512,7 +489,6 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SETDEFAULTCONFIGURATION )
   QSslConfiguration::setDefaultConfiguration ( *PQSSLCONFIGURATION(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QSSLCONFIGURATION_NEWFROM )
 {
@@ -568,6 +544,5 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

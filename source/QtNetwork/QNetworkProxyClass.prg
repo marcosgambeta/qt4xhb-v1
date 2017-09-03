@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -70,7 +70,6 @@ HB_FUNC_STATIC( QNETWORKPROXY_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QNetworkProxy ( ProxyType type, const QString & hostName = QString(), quint16 port = 0, const QString & user = QString(), const QString & password = QString() )
 */
@@ -80,7 +79,6 @@ HB_FUNC_STATIC( QNETWORKPROXY_NEW2 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QNetworkProxy ( const QNetworkProxy & other )
 */
@@ -89,7 +87,6 @@ HB_FUNC_STATIC( QNETWORKPROXY_NEW3 )
   QNetworkProxy * o = new QNetworkProxy ( *PQNETWORKPROXY(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QNetworkProxy ()
 //[2]QNetworkProxy ( ProxyType type, const QString & hostName = QString(), quint16 port = 0, const QString & user = QString(), const QString & password = QString() )
@@ -130,7 +127,6 @@ HB_FUNC_STATIC( QNETWORKPROXY_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 Capabilities capabilities () const
 */
@@ -142,7 +138,6 @@ HB_FUNC_STATIC( QNETWORKPROXY_CAPABILITIES )
     hb_retni( (int) obj->capabilities () );
   }
 }
-
 
 /*
 QString hostName () const
@@ -156,7 +151,6 @@ HB_FUNC_STATIC( QNETWORKPROXY_HOSTNAME )
   }
 }
 
-
 /*
 bool isCachingProxy () const
 */
@@ -168,7 +162,6 @@ HB_FUNC_STATIC( QNETWORKPROXY_ISCACHINGPROXY )
     RBOOL( obj->isCachingProxy () );
   }
 }
-
 
 /*
 bool isTransparentProxy () const
@@ -182,7 +175,6 @@ HB_FUNC_STATIC( QNETWORKPROXY_ISTRANSPARENTPROXY )
   }
 }
 
-
 /*
 QString password () const
 */
@@ -195,7 +187,6 @@ HB_FUNC_STATIC( QNETWORKPROXY_PASSWORD )
   }
 }
 
-
 /*
 quint16 port () const
 */
@@ -207,7 +198,6 @@ HB_FUNC_STATIC( QNETWORKPROXY_PORT )
     RQUINT16( obj->port () );
   }
 }
-
 
 /*
 void setCapabilities ( Capabilities capabilities )
@@ -223,7 +213,6 @@ HB_FUNC_STATIC( QNETWORKPROXY_SETCAPABILITIES )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setHostName ( const QString & hostName )
 */
@@ -236,7 +225,6 @@ HB_FUNC_STATIC( QNETWORKPROXY_SETHOSTNAME )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setPassword ( const QString & password )
@@ -251,7 +239,6 @@ HB_FUNC_STATIC( QNETWORKPROXY_SETPASSWORD )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPort ( quint16 port )
 */
@@ -264,7 +251,6 @@ HB_FUNC_STATIC( QNETWORKPROXY_SETPORT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setType ( QNetworkProxy::ProxyType type )
@@ -280,7 +266,6 @@ HB_FUNC_STATIC( QNETWORKPROXY_SETTYPE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setUser ( const QString & user )
 */
@@ -294,7 +279,6 @@ HB_FUNC_STATIC( QNETWORKPROXY_SETUSER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QNetworkProxy::ProxyType type () const
 */
@@ -306,7 +290,6 @@ HB_FUNC_STATIC( QNETWORKPROXY_TYPE )
     hb_retni( (int) obj->type () );
   }
 }
-
 
 /*
 QString user () const
@@ -320,8 +303,6 @@ HB_FUNC_STATIC( QNETWORKPROXY_USER )
   }
 }
 
-
-
 /*
 QNetworkProxy applicationProxy ()
 */
@@ -331,7 +312,6 @@ HB_FUNC_STATIC( QNETWORKPROXY_APPLICATIONPROXY )
   _qt4xhb_createReturnClass ( ptr, "QNETWORKPROXY", true );
 }
 
-
 /*
 void setApplicationProxy ( const QNetworkProxy & networkProxy )
 */
@@ -340,7 +320,6 @@ HB_FUNC_STATIC( QNETWORKPROXY_SETAPPLICATIONPROXY )
   QNetworkProxy::setApplicationProxy ( *PQNETWORKPROXY(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QNETWORKPROXY_NEWFROM )
 {
@@ -396,6 +375,5 @@ HB_FUNC_STATIC( QNETWORKPROXY_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QLocalSocket INHERIT QIODevice
 
@@ -66,7 +65,6 @@ HB_FUNC_STATIC( QLOCALSOCKET_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QLOCALSOCKET_DELETE )
 {
   QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -82,7 +80,6 @@ HB_FUNC_STATIC( QLOCALSOCKET_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void abort ()
 */
@@ -95,7 +92,6 @@ HB_FUNC_STATIC( QLOCALSOCKET_ABORT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void connectToServer ( const QString & name, OpenMode openMode = ReadWrite )
@@ -111,7 +107,6 @@ HB_FUNC_STATIC( QLOCALSOCKET_CONNECTTOSERVER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void disconnectFromServer ()
 */
@@ -125,7 +120,6 @@ HB_FUNC_STATIC( QLOCALSOCKET_DISCONNECTFROMSERVER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 LocalSocketError error () const
 */
@@ -137,7 +131,6 @@ HB_FUNC_STATIC( QLOCALSOCKET_ERROR )
     hb_retni( (int) obj->error () );
   }
 }
-
 
 /*
 bool flush ()
@@ -151,7 +144,6 @@ HB_FUNC_STATIC( QLOCALSOCKET_FLUSH )
   }
 }
 
-
 /*
 QString fullServerName () const
 */
@@ -163,7 +155,6 @@ HB_FUNC_STATIC( QLOCALSOCKET_FULLSERVERNAME )
     RQSTRING( obj->fullServerName () );
   }
 }
-
 
 /*
 bool isValid () const
@@ -177,7 +168,6 @@ HB_FUNC_STATIC( QLOCALSOCKET_ISVALID )
   }
 }
 
-
 /*
 qint64 readBufferSize () const
 */
@@ -190,7 +180,6 @@ HB_FUNC_STATIC( QLOCALSOCKET_READBUFFERSIZE )
   }
 }
 
-
 /*
 QString serverName () const
 */
@@ -202,7 +191,6 @@ HB_FUNC_STATIC( QLOCALSOCKET_SERVERNAME )
     RQSTRING( obj->serverName () );
   }
 }
-
 
 /*
 void setReadBufferSize ( qint64 size )
@@ -217,9 +205,6 @@ HB_FUNC_STATIC( QLOCALSOCKET_SETREADBUFFERSIZE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
-
 /*
 LocalSocketState state () const
 */
@@ -231,7 +216,6 @@ HB_FUNC_STATIC( QLOCALSOCKET_STATE )
     hb_retni( (int) obj->state () );
   }
 }
-
 
 /*
 bool waitForConnected ( int msecs = 30000 )
@@ -245,7 +229,6 @@ HB_FUNC_STATIC( QLOCALSOCKET_WAITFORCONNECTED )
   }
 }
 
-
 /*
 bool waitForDisconnected ( int msecs = 30000 )
 */
@@ -257,7 +240,6 @@ HB_FUNC_STATIC( QLOCALSOCKET_WAITFORDISCONNECTED )
     RBOOL( obj->waitForDisconnected ( OPINT(1,30000) ) );
   }
 }
-
 
 /*
 virtual qint64 bytesAvailable () const
@@ -271,7 +253,6 @@ HB_FUNC_STATIC( QLOCALSOCKET_BYTESAVAILABLE )
   }
 }
 
-
 /*
 virtual qint64 bytesToWrite () const
 */
@@ -284,7 +265,6 @@ HB_FUNC_STATIC( QLOCALSOCKET_BYTESTOWRITE )
   }
 }
 
-
 /*
 virtual bool canReadLine () const
 */
@@ -296,7 +276,6 @@ HB_FUNC_STATIC( QLOCALSOCKET_CANREADLINE )
     RBOOL( obj->canReadLine () );
   }
 }
-
 
 /*
 virtual void close ()
@@ -311,7 +290,6 @@ HB_FUNC_STATIC( QLOCALSOCKET_CLOSE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual bool isSequential () const
 */
@@ -323,7 +301,6 @@ HB_FUNC_STATIC( QLOCALSOCKET_ISSEQUENTIAL )
     RBOOL( obj->isSequential () );
   }
 }
-
 
 /*
 virtual bool waitForBytesWritten ( int msecs = 30000 )
@@ -337,7 +314,6 @@ HB_FUNC_STATIC( QLOCALSOCKET_WAITFORBYTESWRITTEN )
   }
 }
 
-
 /*
 virtual bool waitForReadyRead ( int msecs = 30000 )
 */
@@ -349,10 +325,5 @@ HB_FUNC_STATIC( QLOCALSOCKET_WAITFORREADYREAD )
     RBOOL( obj->waitForReadyRead ( OPINT(1,30000) ) );
   }
 }
-
-
-
-
-
 
 #pragma ENDDUMP

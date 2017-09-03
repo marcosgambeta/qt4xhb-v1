@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -81,7 +81,6 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_DELETE )
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -97,7 +96,6 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QNetworkConfiguration activeConfiguration () const
 */
@@ -110,7 +108,6 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ACTIVECONFIGURATION )
     _qt4xhb_createReturnClass ( ptr, "QNETWORKCONFIGURATION", true );
   }
 }
-
 
 /*
 QAbstractNetworkCache * cache () const
@@ -125,7 +122,6 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_CACHE )
   }
 }
 
-
 /*
 QNetworkConfiguration configuration () const
 */
@@ -138,7 +134,6 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_CONFIGURATION )
     _qt4xhb_createReturnClass ( ptr, "QNETWORKCONFIGURATION", true );
   }
 }
-
 
 /*
 QNetworkCookieJar * cookieJar () const
@@ -153,7 +148,6 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_COOKIEJAR )
   }
 }
 
-
 /*
 QNetworkReply * deleteResource ( const QNetworkRequest & request )
 */
@@ -166,7 +160,6 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_DELETERESOURCE )
     _qt4xhb_createReturnClass ( ptr, "QNETWORKREPLY" );
   }
 }
-
 
 /*
 QNetworkReply * get ( const QNetworkRequest & request )
@@ -181,7 +174,6 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_GET )
   }
 }
 
-
 /*
 QNetworkReply * head ( const QNetworkRequest & request )
 */
@@ -195,7 +187,6 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_HEAD )
   }
 }
 
-
 /*
 NetworkAccessibility networkAccessible () const
 */
@@ -207,7 +198,6 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_NETWORKACCESSIBLE )
     hb_retni( (int) obj->networkAccessible () );
   }
 }
-
 
 /*
 QNetworkReply * post ( const QNetworkRequest & request, QIODevice * data )
@@ -222,7 +212,6 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_POST1 )
   }
 }
 
-
 /*
 QNetworkReply * post ( const QNetworkRequest & request, const QByteArray & data )
 */
@@ -235,7 +224,6 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_POST2 )
     _qt4xhb_createReturnClass ( ptr, "QNETWORKREPLY" );
   }
 }
-
 
 //[1]QNetworkReply * post ( const QNetworkRequest & request, QIODevice * data )
 //[2]QNetworkReply * post ( const QNetworkRequest & request, const QByteArray & data )
@@ -265,7 +253,6 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_PROXY )
   }
 }
 
-
 /*
 QNetworkProxyFactory * proxyFactory () const
 */
@@ -278,7 +265,6 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_PROXYFACTORY )
     _qt4xhb_createReturnClass ( ptr, "QNETWORKPROXYFACTORY" );
   }
 }
-
 
 /*
 QNetworkReply * put ( const QNetworkRequest & request, QIODevice * data )
@@ -293,7 +279,6 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_PUT1 )
   }
 }
 
-
 /*
 QNetworkReply * put ( const QNetworkRequest & request, const QByteArray & data )
 */
@@ -306,7 +291,6 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_PUT2 )
     _qt4xhb_createReturnClass ( ptr, "QNETWORKREPLY" );
   }
 }
-
 
 //[1]QNetworkReply * put ( const QNetworkRequest & request, QIODevice * data )
 //[2]QNetworkReply * put ( const QNetworkRequest & request, const QByteArray & data )
@@ -337,7 +321,6 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SENDCUSTOMREQUEST )
   }
 }
 
-
 /*
 void setCache ( QAbstractNetworkCache * cache )
 */
@@ -352,7 +335,6 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETCACHE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setConfiguration ( const QNetworkConfiguration & config )
 */
@@ -365,7 +347,6 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETCONFIGURATION )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setCookieJar ( QNetworkCookieJar * cookieJar )
@@ -381,7 +362,6 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETCOOKIEJAR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setNetworkAccessible ( NetworkAccessibility accessible )
 */
@@ -396,7 +376,6 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETNETWORKACCESSIBLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setProxy ( const QNetworkProxy & proxy )
 */
@@ -409,7 +388,6 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETPROXY )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setProxyFactory ( QNetworkProxyFactory * factory )
@@ -424,10 +402,5 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETPROXYFACTORY )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
-
 
 #pragma ENDDUMP

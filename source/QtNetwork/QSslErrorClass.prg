@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -58,7 +58,6 @@ HB_FUNC_STATIC( QSSLERROR_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QSslError ( SslError error )
 */
@@ -67,7 +66,6 @@ HB_FUNC_STATIC( QSSLERROR_NEW2 )
   QSslError * o = new QSslError ( (QSslError::SslError) hb_parni(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QSslError ( SslError error, const QSslCertificate & certificate )
@@ -78,7 +76,6 @@ HB_FUNC_STATIC( QSSLERROR_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QSslError ( const QSslError & other )
 */
@@ -87,7 +84,6 @@ HB_FUNC_STATIC( QSSLERROR_NEW4 )
   QSslError * o = new QSslError ( *PQSSLERROR(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QSslError ()
 //[2]QSslError ( SslError error )
@@ -133,7 +129,6 @@ HB_FUNC_STATIC( QSSLERROR_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QSslCertificate certificate () const
 */
@@ -147,7 +142,6 @@ HB_FUNC_STATIC( QSSLERROR_CERTIFICATE )
   }
 }
 
-
 /*
 SslError error () const
 */
@@ -160,7 +154,6 @@ HB_FUNC_STATIC( QSSLERROR_ERROR )
   }
 }
 
-
 /*
 QString errorString () const
 */
@@ -172,7 +165,6 @@ HB_FUNC_STATIC( QSSLERROR_ERRORSTRING )
     RQSTRING( obj->errorString () );
   }
 }
-
 
 HB_FUNC_STATIC( QSSLERROR_NEWFROM )
 {
@@ -228,7 +220,5 @@ HB_FUNC_STATIC( QSSLERROR_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP
