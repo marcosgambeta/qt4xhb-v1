@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -62,7 +62,6 @@ HB_FUNC_STATIC( QGLCOLORMAP_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QGLColormap ( const QGLColormap & map )
 */
@@ -71,7 +70,6 @@ HB_FUNC_STATIC( QGLCOLORMAP_NEW2 )
   QGLColormap * o = new QGLColormap ( *PQGLCOLORMAP(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QGLColormap ()
 //[2]QGLColormap ( const QGLColormap & map )
@@ -107,7 +105,6 @@ HB_FUNC_STATIC( QGLCOLORMAP_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QColor entryColor ( int idx ) const
 */
@@ -120,7 +117,6 @@ HB_FUNC_STATIC( QGLCOLORMAP_ENTRYCOLOR )
     _qt4xhb_createReturnClass ( ptr, "QCOLOR", true );
   }
 }
-
 
 /*
 QRgb entryRgb ( int idx ) const
@@ -135,7 +131,6 @@ HB_FUNC_STATIC( QGLCOLORMAP_ENTRYRGB )
   }
 }
 
-
 /*
 int find ( QRgb color ) const
 */
@@ -148,7 +143,6 @@ HB_FUNC_STATIC( QGLCOLORMAP_FIND )
     RINT( (int) obj->find ( par1 ) );
   }
 }
-
 
 /*
 int findNearest ( QRgb color ) const
@@ -163,7 +157,6 @@ HB_FUNC_STATIC( QGLCOLORMAP_FINDNEAREST )
   }
 }
 
-
 /*
 bool isEmpty () const
 */
@@ -175,8 +168,6 @@ HB_FUNC_STATIC( QGLCOLORMAP_ISEMPTY )
     RBOOL( obj->isEmpty () );
   }
 }
-
-
 
 /*
 void setEntry ( int idx, QRgb color )
@@ -192,7 +183,6 @@ HB_FUNC_STATIC( QGLCOLORMAP_SETENTRY1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setEntry ( int idx, const QColor & color )
 */
@@ -206,7 +196,6 @@ HB_FUNC_STATIC( QGLCOLORMAP_SETENTRY2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setEntry ( int idx, QRgb color )
 //[2]void setEntry ( int idx, const QColor & color )
@@ -234,7 +223,6 @@ HB_FUNC_STATIC( QGLCOLORMAP_SIZE )
     RINT( obj->size () );
   }
 }
-
 
 HB_FUNC_STATIC( QGLCOLORMAP_NEWFROM )
 {
@@ -290,7 +278,5 @@ HB_FUNC_STATIC( QGLCOLORMAP_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

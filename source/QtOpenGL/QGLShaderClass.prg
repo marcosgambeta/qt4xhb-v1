@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -58,7 +58,6 @@ HB_FUNC_STATIC( QGLSHADER_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QGLShader ( QGLShader::ShaderType type, const QGLContext * context, QObject * parent = 0 )
 */
@@ -68,7 +67,6 @@ HB_FUNC_STATIC( QGLSHADER_NEW2 )
   QGLShader * o = new QGLShader ( (QGLShader::ShaderType) hb_parni(1), par2, OPQOBJECT(3,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QGLShader ( QGLShader::ShaderType type, QObject * parent = 0 )
 //[2]QGLShader ( QGLShader::ShaderType type, const QGLContext * context, QObject * parent = 0 )
@@ -104,7 +102,6 @@ HB_FUNC_STATIC( QGLSHADER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool compileSourceCode ( const char * source )
 */
@@ -116,7 +113,6 @@ HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE1 )
     RBOOL( obj->compileSourceCode ( (const char *) hb_parc(1) ) );
   }
 }
-
 
 /*
 bool compileSourceCode ( const QByteArray & source )
@@ -130,7 +126,6 @@ HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE2 )
   }
 }
 
-
 /*
 bool compileSourceCode ( const QString & source )
 */
@@ -142,7 +137,6 @@ HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE3 )
     RBOOL( obj->compileSourceCode ( PQSTRING(1) ) );
   }
 }
-
 
 //[1]bool compileSourceCode ( const char * source )
 //[2]bool compileSourceCode ( const QByteArray & source )
@@ -176,7 +170,6 @@ HB_FUNC_STATIC( QGLSHADER_COMPILESOURCEFILE )
   }
 }
 
-
 /*
 bool isCompiled () const
 */
@@ -188,7 +181,6 @@ HB_FUNC_STATIC( QGLSHADER_ISCOMPILED )
     RBOOL( obj->isCompiled () );
   }
 }
-
 
 /*
 QString log () const
@@ -202,7 +194,6 @@ HB_FUNC_STATIC( QGLSHADER_LOG )
   }
 }
 
-
 /*
 GLuint shaderId () const
 */
@@ -215,7 +206,6 @@ HB_FUNC_STATIC( QGLSHADER_SHADERID )
   }
 }
 
-
 /*
 QGLShader::ShaderType shaderType () const
 */
@@ -227,7 +217,6 @@ HB_FUNC_STATIC( QGLSHADER_SHADERTYPE )
     hb_retni( (int) obj->shaderType () );
   }
 }
-
 
 /*
 QByteArray sourceCode () const
@@ -242,8 +231,6 @@ HB_FUNC_STATIC( QGLSHADER_SOURCECODE )
   }
 }
 
-
-
 /*
 bool hasOpenGLShaders ( ShaderType type, const QGLContext * context = 0 )
 */
@@ -253,8 +240,5 @@ HB_FUNC_STATIC( QGLSHADER_HASOPENGLSHADERS )
   const QGLContext * par2 = ISNIL(2)? 0 : (const QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
   RBOOL( QGLShader::hasOpenGLShaders ( (QGLShader::ShaderType) par1, par2 ) );
 }
-
-
-
 
 #pragma ENDDUMP

@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QGLFramebufferObjectFormat INHERIT QWidget
 
@@ -52,7 +51,6 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QGLFramebufferObjectFormat ( const QGLFramebufferObjectFormat & other )
 */
@@ -61,7 +59,6 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_NEW2 )
   QGLFramebufferObjectFormat * o = new QGLFramebufferObjectFormat ( *PQGLFRAMEBUFFEROBJECTFORMAT(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QGLFramebufferObjectFormat ()
 //[2]QGLFramebufferObjectFormat ( const QGLFramebufferObjectFormat & other )
@@ -97,7 +94,6 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QGLFramebufferObject::Attachment attachment () const
 */
@@ -109,7 +105,6 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_ATTACHMENT )
     hb_retni( (int) obj->attachment () );
   }
 }
-
 
 /*
 GLenum internalTextureFormat () const
@@ -123,7 +118,6 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_INTERNALTEXTUREFORMAT )
   }
 }
 
-
 /*
 int samples () const
 */
@@ -135,7 +129,6 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_SAMPLES )
     RINT( obj->samples () );
   }
 }
-
 
 /*
 void setAttachment ( QGLFramebufferObject::Attachment attachment )
@@ -151,7 +144,6 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_SETATTACHMENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setInternalTextureFormat ( GLenum internalTextureFormat )
 */
@@ -164,7 +156,6 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_SETINTERNALTEXTUREFORMAT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setSamples ( int samples )
@@ -179,7 +170,6 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_SETSAMPLES )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setTextureTarget ( GLenum target )
 */
@@ -193,7 +183,6 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_SETTEXTURETARGET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 GLenum textureTarget () const
 */
@@ -205,9 +194,5 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_TEXTURETARGET )
     RGLENUM( obj->textureTarget () );
   }
 }
-
-
-
-
 
 #pragma ENDDUMP

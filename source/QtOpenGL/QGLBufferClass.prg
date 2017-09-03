@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QGLBuffer
 
@@ -69,7 +68,6 @@ HB_FUNC_STATIC( QGLBUFFER_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QGLBuffer ( QGLBuffer::Type type )
 */
@@ -79,7 +77,6 @@ HB_FUNC_STATIC( QGLBUFFER_NEW2 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QGLBuffer ( const QGLBuffer & other )
 */
@@ -88,7 +85,6 @@ HB_FUNC_STATIC( QGLBUFFER_NEW3 )
   QGLBuffer * o = new QGLBuffer ( *PQGLBUFFER(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QGLBuffer ()
 //[2]QGLBuffer ( QGLBuffer::Type type )
@@ -129,7 +125,6 @@ HB_FUNC_STATIC( QGLBUFFER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void allocate ( const void * data, int count )
 */
@@ -145,7 +140,6 @@ HB_FUNC_STATIC( QGLBUFFER_ALLOCATE1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void allocate ( int count )
 */
@@ -158,7 +152,6 @@ HB_FUNC_STATIC( QGLBUFFER_ALLOCATE2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void allocate ( const void * data, int count )
 //[2]void allocate ( int count )
@@ -187,7 +180,6 @@ HB_FUNC_STATIC( QGLBUFFER_BIND )
   }
 }
 
-
 /*
 GLuint bufferId () const
 */
@@ -200,7 +192,6 @@ HB_FUNC_STATIC( QGLBUFFER_BUFFERID )
   }
 }
 
-
 /*
 bool create ()
 */
@@ -212,7 +203,6 @@ HB_FUNC_STATIC( QGLBUFFER_CREATE )
     RBOOL( obj->create () );
   }
 }
-
 
 /*
 void destroy ()
@@ -227,7 +217,6 @@ HB_FUNC_STATIC( QGLBUFFER_DESTROY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool isCreated () const
 */
@@ -239,7 +228,6 @@ HB_FUNC_STATIC( QGLBUFFER_ISCREATED )
     RBOOL( obj->isCreated () );
   }
 }
-
 
 /*
 void * map ( QGLBuffer::Access access )
@@ -255,7 +243,6 @@ HB_FUNC_STATIC( QGLBUFFER_MAP )
   }
 }
 
-
 /*
 bool read ( int offset, void * data, int count )
 */
@@ -269,7 +256,6 @@ HB_FUNC_STATIC( QGLBUFFER_READ )
   }
 }
 
-
 /*
 void release ()
 */
@@ -282,7 +268,6 @@ HB_FUNC_STATIC( QGLBUFFER_RELEASE1 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setUsagePattern ( QGLBuffer::UsagePattern value )
@@ -298,7 +283,6 @@ HB_FUNC_STATIC( QGLBUFFER_SETUSAGEPATTERN )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int size () const
 */
@@ -310,7 +294,6 @@ HB_FUNC_STATIC( QGLBUFFER_SIZE )
     RINT( obj->size () );
   }
 }
-
 
 /*
 QGLBuffer::Type type () const
@@ -324,7 +307,6 @@ HB_FUNC_STATIC( QGLBUFFER_TYPE )
   }
 }
 
-
 /*
 bool unmap ()
 */
@@ -336,7 +318,6 @@ HB_FUNC_STATIC( QGLBUFFER_UNMAP )
     RBOOL( obj->unmap () );
   }
 }
-
 
 /*
 QGLBuffer::UsagePattern usagePattern () const
@@ -350,9 +331,6 @@ HB_FUNC_STATIC( QGLBUFFER_USAGEPATTERN )
   }
 }
 
-
-
-
 /*
 void release ( QGLBuffer::Type type )
 */
@@ -362,7 +340,6 @@ HB_FUNC_STATIC( QGLBUFFER_RELEASE2 )
   QGLBuffer::release ( (QGLBuffer::Type) par1 );
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void release ()
 //[2]void release ( QGLBuffer::Type type )
@@ -378,7 +355,6 @@ HB_FUNC_STATIC( QGLBUFFER_RELEASE )
     HB_FUNC_EXEC( QGLBUFFER_RELEASE2 );
   }
 }
-
 
 HB_FUNC_STATIC( QGLBUFFER_NEWFROM )
 {
@@ -434,7 +410,5 @@ HB_FUNC_STATIC( QGLBUFFER_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

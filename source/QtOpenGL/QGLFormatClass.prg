@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -108,7 +108,6 @@ HB_FUNC_STATIC( QGLFORMAT_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QGLFormat ( QGL::FormatOptions options, int plane = 0 )
 */
@@ -119,7 +118,6 @@ HB_FUNC_STATIC( QGLFORMAT_NEW2 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QGLFormat ( const QGLFormat & other )
 */
@@ -128,7 +126,6 @@ HB_FUNC_STATIC( QGLFORMAT_NEW3 )
   QGLFormat * o = new QGLFormat ( *PQGLFORMAT(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QGLFormat ()
 //[2]QGLFormat ( QGL::FormatOptions options, int plane = 0 )
@@ -169,7 +166,6 @@ HB_FUNC_STATIC( QGLFORMAT_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool accum () const
 */
@@ -181,7 +177,6 @@ HB_FUNC_STATIC( QGLFORMAT_ACCUM )
     RBOOL( obj->accum () );
   }
 }
-
 
 /*
 int accumBufferSize () const
@@ -195,7 +190,6 @@ HB_FUNC_STATIC( QGLFORMAT_ACCUMBUFFERSIZE )
   }
 }
 
-
 /*
 bool alpha () const
 */
@@ -207,7 +201,6 @@ HB_FUNC_STATIC( QGLFORMAT_ALPHA )
     RBOOL( obj->alpha () );
   }
 }
-
 
 /*
 int alphaBufferSize () const
@@ -221,7 +214,6 @@ HB_FUNC_STATIC( QGLFORMAT_ALPHABUFFERSIZE )
   }
 }
 
-
 /*
 int blueBufferSize () const
 */
@@ -233,7 +225,6 @@ HB_FUNC_STATIC( QGLFORMAT_BLUEBUFFERSIZE )
     RINT( obj->blueBufferSize () );
   }
 }
-
 
 /*
 bool depth () const
@@ -247,7 +238,6 @@ HB_FUNC_STATIC( QGLFORMAT_DEPTH )
   }
 }
 
-
 /*
 int depthBufferSize () const
 */
@@ -259,7 +249,6 @@ HB_FUNC_STATIC( QGLFORMAT_DEPTHBUFFERSIZE )
     RINT( obj->depthBufferSize () );
   }
 }
-
 
 /*
 bool directRendering () const
@@ -273,7 +262,6 @@ HB_FUNC_STATIC( QGLFORMAT_DIRECTRENDERING )
   }
 }
 
-
 /*
 bool doubleBuffer () const
 */
@@ -285,7 +273,6 @@ HB_FUNC_STATIC( QGLFORMAT_DOUBLEBUFFER )
     RBOOL( obj->doubleBuffer () );
   }
 }
-
 
 /*
 int greenBufferSize () const
@@ -299,7 +286,6 @@ HB_FUNC_STATIC( QGLFORMAT_GREENBUFFERSIZE )
   }
 }
 
-
 /*
 bool hasOverlay () const
 */
@@ -311,7 +297,6 @@ HB_FUNC_STATIC( QGLFORMAT_HASOVERLAY )
     RBOOL( obj->hasOverlay () );
   }
 }
-
 
 /*
 int majorVersion () const
@@ -325,7 +310,6 @@ HB_FUNC_STATIC( QGLFORMAT_MAJORVERSION )
   }
 }
 
-
 /*
 int minorVersion () const
 */
@@ -337,7 +321,6 @@ HB_FUNC_STATIC( QGLFORMAT_MINORVERSION )
     RINT( obj->minorVersion () );
   }
 }
-
 
 /*
 int plane () const
@@ -351,7 +334,6 @@ HB_FUNC_STATIC( QGLFORMAT_PLANE )
   }
 }
 
-
 /*
 OpenGLContextProfile profile () const
 */
@@ -363,7 +345,6 @@ HB_FUNC_STATIC( QGLFORMAT_PROFILE )
     hb_retni( (int) obj->profile () );
   }
 }
-
 
 /*
 int redBufferSize () const
@@ -377,7 +358,6 @@ HB_FUNC_STATIC( QGLFORMAT_REDBUFFERSIZE )
   }
 }
 
-
 /*
 bool rgba () const
 */
@@ -389,7 +369,6 @@ HB_FUNC_STATIC( QGLFORMAT_RGBA )
     RBOOL( obj->rgba () );
   }
 }
-
 
 /*
 bool sampleBuffers () const
@@ -403,7 +382,6 @@ HB_FUNC_STATIC( QGLFORMAT_SAMPLEBUFFERS )
   }
 }
 
-
 /*
 int samples () const
 */
@@ -415,7 +393,6 @@ HB_FUNC_STATIC( QGLFORMAT_SAMPLES )
     RINT( obj->samples () );
   }
 }
-
 
 /*
 void setAccum ( bool enable )
@@ -430,7 +407,6 @@ HB_FUNC_STATIC( QGLFORMAT_SETACCUM )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setAccumBufferSize ( int size )
 */
@@ -443,7 +419,6 @@ HB_FUNC_STATIC( QGLFORMAT_SETACCUMBUFFERSIZE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setAlpha ( bool enable )
@@ -458,7 +433,6 @@ HB_FUNC_STATIC( QGLFORMAT_SETALPHA )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setAlphaBufferSize ( int size )
 */
@@ -471,7 +445,6 @@ HB_FUNC_STATIC( QGLFORMAT_SETALPHABUFFERSIZE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setBlueBufferSize ( int size )
@@ -486,7 +459,6 @@ HB_FUNC_STATIC( QGLFORMAT_SETBLUEBUFFERSIZE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setDepth ( bool enable )
 */
@@ -499,7 +471,6 @@ HB_FUNC_STATIC( QGLFORMAT_SETDEPTH )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setDepthBufferSize ( int size )
@@ -514,7 +485,6 @@ HB_FUNC_STATIC( QGLFORMAT_SETDEPTHBUFFERSIZE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setDirectRendering ( bool enable )
 */
@@ -527,7 +497,6 @@ HB_FUNC_STATIC( QGLFORMAT_SETDIRECTRENDERING )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setDoubleBuffer ( bool enable )
@@ -542,7 +511,6 @@ HB_FUNC_STATIC( QGLFORMAT_SETDOUBLEBUFFER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setGreenBufferSize ( int size )
 */
@@ -555,7 +523,6 @@ HB_FUNC_STATIC( QGLFORMAT_SETGREENBUFFERSIZE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setOption ( QGL::FormatOptions opt )
@@ -571,7 +538,6 @@ HB_FUNC_STATIC( QGLFORMAT_SETOPTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setOverlay ( bool enable )
 */
@@ -585,7 +551,6 @@ HB_FUNC_STATIC( QGLFORMAT_SETOVERLAY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPlane ( int plane )
 */
@@ -598,7 +563,6 @@ HB_FUNC_STATIC( QGLFORMAT_SETPLANE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setProfile ( OpenGLContextProfile profile )
@@ -614,7 +578,6 @@ HB_FUNC_STATIC( QGLFORMAT_SETPROFILE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setRedBufferSize ( int size )
 */
@@ -627,7 +590,6 @@ HB_FUNC_STATIC( QGLFORMAT_SETREDBUFFERSIZE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setRgba ( bool enable )
@@ -642,7 +604,6 @@ HB_FUNC_STATIC( QGLFORMAT_SETRGBA )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setSampleBuffers ( bool enable )
 */
@@ -655,7 +616,6 @@ HB_FUNC_STATIC( QGLFORMAT_SETSAMPLEBUFFERS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setSamples ( int numSamples )
@@ -670,7 +630,6 @@ HB_FUNC_STATIC( QGLFORMAT_SETSAMPLES )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setStencil ( bool enable )
 */
@@ -683,7 +642,6 @@ HB_FUNC_STATIC( QGLFORMAT_SETSTENCIL )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setStencilBufferSize ( int size )
@@ -698,7 +656,6 @@ HB_FUNC_STATIC( QGLFORMAT_SETSTENCILBUFFERSIZE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setStereo ( bool enable )
 */
@@ -711,7 +668,6 @@ HB_FUNC_STATIC( QGLFORMAT_SETSTEREO )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setSwapInterval ( int interval )
@@ -726,7 +682,6 @@ HB_FUNC_STATIC( QGLFORMAT_SETSWAPINTERVAL )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setVersion ( int major, int minor )
 */
@@ -740,7 +695,6 @@ HB_FUNC_STATIC( QGLFORMAT_SETVERSION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool stencil () const
 */
@@ -752,7 +706,6 @@ HB_FUNC_STATIC( QGLFORMAT_STENCIL )
     RBOOL( obj->stencil () );
   }
 }
-
 
 /*
 int stencilBufferSize () const
@@ -766,7 +719,6 @@ HB_FUNC_STATIC( QGLFORMAT_STENCILBUFFERSIZE )
   }
 }
 
-
 /*
 bool stereo () const
 */
@@ -779,7 +731,6 @@ HB_FUNC_STATIC( QGLFORMAT_STEREO )
   }
 }
 
-
 /*
 int swapInterval () const
 */
@@ -791,7 +742,6 @@ HB_FUNC_STATIC( QGLFORMAT_SWAPINTERVAL )
     RINT( obj->swapInterval () );
   }
 }
-
 
 /*
 bool testOption ( QGL::FormatOptions opt ) const
@@ -806,8 +756,6 @@ HB_FUNC_STATIC( QGLFORMAT_TESTOPTION )
   }
 }
 
-
-
 /*
 QGLFormat defaultFormat ()
 */
@@ -816,7 +764,6 @@ HB_FUNC_STATIC( QGLFORMAT_DEFAULTFORMAT )
   QGLFormat * ptr = new QGLFormat( QGLFormat::defaultFormat () );
   _qt4xhb_createReturnClass ( ptr, "QGLFORMAT" );
 }
-
 
 /*
 QGLFormat defaultOverlayFormat ()
@@ -827,7 +774,6 @@ HB_FUNC_STATIC( QGLFORMAT_DEFAULTOVERLAYFORMAT )
   _qt4xhb_createReturnClass ( ptr, "QGLFORMAT" );
 }
 
-
 /*
 bool hasOpenGL ()
 */
@@ -835,7 +781,6 @@ HB_FUNC_STATIC( QGLFORMAT_HASOPENGL )
 {
   RBOOL( QGLFormat::hasOpenGL () );
 }
-
 
 /*
 bool hasOpenGLOverlays ()
@@ -845,7 +790,6 @@ HB_FUNC_STATIC( QGLFORMAT_HASOPENGLOVERLAYS )
   RBOOL( QGLFormat::hasOpenGLOverlays () );
 }
 
-
 /*
 OpenGLVersionFlags openGLVersionFlags ()
 */
@@ -853,7 +797,6 @@ HB_FUNC_STATIC( QGLFORMAT_OPENGLVERSIONFLAGS )
 {
   hb_retni( (int) QGLFormat::openGLVersionFlags () );
 }
-
 
 /*
 void setDefaultFormat ( const QGLFormat & f )
@@ -864,7 +807,6 @@ HB_FUNC_STATIC( QGLFORMAT_SETDEFAULTFORMAT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setDefaultOverlayFormat ( const QGLFormat & f )
 */
@@ -873,7 +815,6 @@ HB_FUNC_STATIC( QGLFORMAT_SETDEFAULTOVERLAYFORMAT )
   QGLFormat::setDefaultOverlayFormat ( *PQGLFORMAT(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QGLFORMAT_NEWFROM )
 {
@@ -929,6 +870,5 @@ HB_FUNC_STATIC( QGLFORMAT_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

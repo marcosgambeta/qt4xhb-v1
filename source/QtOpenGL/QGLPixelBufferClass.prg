@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -72,7 +72,6 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QGLPixelBuffer ( int width, int height, const QGLFormat & format = QGLFormat::defaultFormat(), QGLWidget * shareWidget = 0 )
 */
@@ -83,7 +82,6 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_NEW2 )
   QGLPixelBuffer * o = new QGLPixelBuffer ( PINT(1), PINT(2), par3, par4 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QGLPixelBuffer ( const QSize & size, const QGLFormat & format = QGLFormat::defaultFormat(), QGLWidget * shareWidget = 0 )
 //[2]QGLPixelBuffer ( int width, int height, const QGLFormat & format = QGLFormat::defaultFormat(), QGLWidget * shareWidget = 0 )
@@ -119,7 +117,6 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 GLuint bindTexture ( const QImage & image, GLenum target = GL_TEXTURE_2D )
 */
@@ -131,7 +128,6 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_BINDTEXTURE1 )
     RGLUINT( obj->bindTexture ( *PQIMAGE(1), OPGLENUM(2,GL_TEXTURE_2D) ) );
   }
 }
-
 
 /*
 GLuint bindTexture ( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D )
@@ -145,7 +141,6 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_BINDTEXTURE2 )
   }
 }
 
-
 /*
 GLuint bindTexture ( const QString & fileName )
 */
@@ -157,7 +152,6 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_BINDTEXTURE3 )
     RGLUINT( obj->bindTexture ( PQSTRING(1) ) );
   }
 }
-
 
 //[1]GLuint bindTexture ( const QImage & image, GLenum target = GL_TEXTURE_2D )
 //[2]GLuint bindTexture ( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D )
@@ -179,7 +173,6 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_BINDTODYNAMICTEXTURE )
   }
 }
 
-
 /*
 void deleteTexture ( GLuint texture_id )
 */
@@ -193,7 +186,6 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_DELETETEXTURE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool doneCurrent ()
 */
@@ -205,7 +197,6 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_DONECURRENT )
     RBOOL( obj->doneCurrent () );
   }
 }
-
 
 /*
 void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
@@ -220,7 +211,6 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_DRAWTEXTURE1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 */
@@ -233,7 +223,6 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_DRAWTEXTURE2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 //[2]void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
@@ -255,7 +244,6 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_FORMAT )
   }
 }
 
-
 /*
 GLuint generateDynamicTexture () const
 */
@@ -267,8 +255,6 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_GENERATEDYNAMICTEXTURE )
     RGLUINT( obj->generateDynamicTexture () );
   }
 }
-
-
 
 /*
 bool isValid () const
@@ -282,7 +268,6 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_ISVALID )
   }
 }
 
-
 /*
 bool makeCurrent ()
 */
@@ -294,7 +279,6 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_MAKECURRENT )
     RBOOL( obj->makeCurrent () );
   }
 }
-
 
 /*
 void releaseFromDynamicTexture ()
@@ -309,7 +293,6 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_RELEASEFROMDYNAMICTEXTURE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QSize size () const
 */
@@ -322,7 +305,6 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_SIZE )
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
-
 
 /*
 QImage toImage () const
@@ -337,7 +319,6 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_TOIMAGE )
   }
 }
 
-
 /*
 void updateDynamicTexture ( GLuint texture_id ) const
 */
@@ -350,7 +331,6 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_UPDATEDYNAMICTEXTURE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual QPaintEngine * paintEngine () const
@@ -365,8 +345,6 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_PAINTENGINE )
   }
 }
 
-
-
 /*
 bool hasOpenGLPbuffers ()
 */
@@ -374,8 +352,5 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_HASOPENGLPBUFFERS )
 {
   RBOOL( QGLPixelBuffer::hasOpenGLPbuffers () );
 }
-
-
-
 
 #pragma ENDDUMP

@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -71,7 +71,6 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QGLFramebufferObject ( int width, int height, GLenum target = GL_TEXTURE_2D )
 */
@@ -80,7 +79,6 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW2 )
   QGLFramebufferObject * o = new QGLFramebufferObject ( PINT(1), PINT(2), OPGLENUM(3,GL_TEXTURE_2D) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 /*
 QGLFramebufferObject ( const QSize & size, const QGLFramebufferObjectFormat & format )
@@ -91,7 +89,6 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QGLFramebufferObject ( int width, int height, const QGLFramebufferObjectFormat & format )
 */
@@ -100,7 +97,6 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW4 )
   QGLFramebufferObject * o = new QGLFramebufferObject ( PINT(1), PINT(2), *PQGLFRAMEBUFFEROBJECTFORMAT(2) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 /*
 QGLFramebufferObject ( int width, int height, Attachment attachment, GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8 )
@@ -111,7 +107,6 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW5 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QGLFramebufferObject ( const QSize & size, Attachment attachment, GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8 )
 */
@@ -120,7 +115,6 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW6 )
   QGLFramebufferObject * o = new QGLFramebufferObject ( *PQSIZE(1), (QGLFramebufferObject::Attachment) hb_parni(2), OPGLENUM(3,GL_TEXTURE_2D), OPGLENUM(4,GL_RGBA8) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QGLFramebufferObject ( const QSize & size, GLenum target = GL_TEXTURE_2D )
 //[2]QGLFramebufferObject ( int width, int height, GLenum target = GL_TEXTURE_2D )
@@ -148,7 +142,6 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 Attachment attachment () const
 */
@@ -161,7 +154,6 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_ATTACHMENT )
   }
 }
 
-
 /*
 bool bind ()
 */
@@ -173,7 +165,6 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_BIND )
     RBOOL( obj->bind () );
   }
 }
-
 
 /*
 void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
@@ -188,7 +179,6 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_DRAWTEXTURE1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 */
@@ -201,7 +191,6 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_DRAWTEXTURE2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 //[2]void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
@@ -231,7 +220,6 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_FORMAT )
   }
 }
 
-
 /*
 GLuint handle () const
 */
@@ -243,7 +231,6 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_HANDLE )
     RGLUINT( obj->handle () );
   }
 }
-
 
 /*
 bool isBound () const
@@ -257,7 +244,6 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_ISBOUND )
   }
 }
 
-
 /*
 bool isValid () const
 */
@@ -270,7 +256,6 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_ISVALID )
   }
 }
 
-
 /*
 bool release ()
 */
@@ -282,7 +267,6 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_RELEASE )
     RBOOL( obj->release () );
   }
 }
-
 
 /*
 QSize size () const
@@ -297,7 +281,6 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_SIZE )
   }
 }
 
-
 /*
 GLuint texture () const
 */
@@ -309,7 +292,6 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_TEXTURE )
     RGLUINT( obj->texture () );
   }
 }
-
 
 /*
 QImage toImage () const
@@ -324,7 +306,6 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_TOIMAGE )
   }
 }
 
-
 /*
 virtual QPaintEngine * paintEngine () const
 */
@@ -338,8 +319,6 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_PAINTENGINE )
   }
 }
 
-
-
 /*
 void blitFramebuffer ( QGLFramebufferObject * target, const QRect & targetRect, QGLFramebufferObject * source, const QRect & sourceRect, GLbitfield buffers = GL_COLOR_BUFFER_BIT, GLenum filter = GL_NEAREST )
 */
@@ -349,7 +328,6 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_BLITFRAMEBUFFER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool hasOpenGLFramebufferBlit ()
 */
@@ -358,7 +336,6 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_HASOPENGLFRAMEBUFFERBLIT )
   RBOOL( QGLFramebufferObject::hasOpenGLFramebufferBlit () );
 }
 
-
 /*
 bool hasOpenGLFramebufferObjects ()
 */
@@ -366,8 +343,5 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_HASOPENGLFRAMEBUFFEROBJECTS )
 {
   RBOOL( QGLFramebufferObject::hasOpenGLFramebufferObjects () );
 }
-
-
-
 
 #pragma ENDDUMP

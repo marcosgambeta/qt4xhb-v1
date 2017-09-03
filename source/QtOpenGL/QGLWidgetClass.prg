@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -87,7 +87,6 @@ HB_FUNC_STATIC( QGLWIDGET_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QGLWidget ( QGLContext * context, QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
 */
@@ -100,7 +99,6 @@ HB_FUNC_STATIC( QGLWIDGET_NEW2 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QGLWidget ( const QGLFormat & format, QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
 */
@@ -111,7 +109,6 @@ HB_FUNC_STATIC( QGLWIDGET_NEW3 )
   QGLWidget * o = new QGLWidget ( *PQGLFORMAT(1), OPQWIDGET(2,0), par3, (Qt::WindowFlags) par4 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QGLWidget ( QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
 //[2]QGLWidget ( QGLContext * context, QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
@@ -137,7 +134,6 @@ HB_FUNC_STATIC( QGLWIDGET_NEW )
   }
 }
 
-
 HB_FUNC_STATIC( QGLWIDGET_DELETE )
 {
   QGLWidget * obj = (QGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -153,7 +149,6 @@ HB_FUNC_STATIC( QGLWIDGET_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 GLuint bindTexture ( const QImage & image, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
 */
@@ -166,7 +161,6 @@ HB_FUNC_STATIC( QGLWIDGET_BINDTEXTURE1 )
   }
 }
 
-
 /*
 GLuint bindTexture ( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
 */
@@ -178,7 +172,6 @@ HB_FUNC_STATIC( QGLWIDGET_BINDTEXTURE2 )
     RGLUINT( obj->bindTexture ( *PQPIXMAP(1), OPGLENUM(2,GL_TEXTURE_2D), OPGLINT(3,GL_RGBA) ) );
   }
 }
-
 
 /*
 GLuint bindTexture ( const QImage & image, GLenum target, GLint format, QGLContext::BindOptions options )
@@ -193,7 +186,6 @@ HB_FUNC_STATIC( QGLWIDGET_BINDTEXTURE3 )
   }
 }
 
-
 /*
 GLuint bindTexture ( const QPixmap & pixmap, GLenum target, GLint format, QGLContext::BindOptions options )
 */
@@ -207,7 +199,6 @@ HB_FUNC_STATIC( QGLWIDGET_BINDTEXTURE4 )
   }
 }
 
-
 /*
 GLuint bindTexture ( const QString & fileName )
 */
@@ -219,7 +210,6 @@ HB_FUNC_STATIC( QGLWIDGET_BINDTEXTURE5 )
     RGLUINT( obj->bindTexture ( PQSTRING(1) ) );
   }
 }
-
 
 //[1]GLuint bindTexture ( const QImage & image, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
 //[2]GLuint bindTexture ( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
@@ -264,7 +254,6 @@ HB_FUNC_STATIC( QGLWIDGET_COLORMAP )
   }
 }
 
-
 /*
 const QGLContext * context () const
 */
@@ -277,7 +266,6 @@ HB_FUNC_STATIC( QGLWIDGET_CONTEXT )
     _qt4xhb_createReturnClass ( ptr, "QGLCONTEXT" );
   }
 }
-
 
 /*
 void deleteTexture ( GLuint id )
@@ -292,7 +280,6 @@ HB_FUNC_STATIC( QGLWIDGET_DELETETEXTURE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void doneCurrent ()
 */
@@ -306,7 +293,6 @@ HB_FUNC_STATIC( QGLWIDGET_DONECURRENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool doubleBuffer () const
 */
@@ -318,7 +304,6 @@ HB_FUNC_STATIC( QGLWIDGET_DOUBLEBUFFER )
     RBOOL( obj->doubleBuffer () );
   }
 }
-
 
 /*
 void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
@@ -333,7 +318,6 @@ HB_FUNC_STATIC( QGLWIDGET_DRAWTEXTURE1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 */
@@ -346,7 +330,6 @@ HB_FUNC_STATIC( QGLWIDGET_DRAWTEXTURE2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 //[2]void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
@@ -376,7 +359,6 @@ HB_FUNC_STATIC( QGLWIDGET_FORMAT )
   }
 }
 
-
 /*
 QImage grabFrameBuffer ( bool withAlpha = false )
 */
@@ -390,7 +372,6 @@ HB_FUNC_STATIC( QGLWIDGET_GRABFRAMEBUFFER )
   }
 }
 
-
 /*
 bool isSharing () const
 */
@@ -403,7 +384,6 @@ HB_FUNC_STATIC( QGLWIDGET_ISSHARING )
   }
 }
 
-
 /*
 bool isValid () const
 */
@@ -415,7 +395,6 @@ HB_FUNC_STATIC( QGLWIDGET_ISVALID )
     RBOOL( obj->isValid () );
   }
 }
-
 
 /*
 void makeCurrent ()
@@ -430,7 +409,6 @@ HB_FUNC_STATIC( QGLWIDGET_MAKECURRENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void makeOverlayCurrent ()
 */
@@ -444,7 +422,6 @@ HB_FUNC_STATIC( QGLWIDGET_MAKEOVERLAYCURRENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 const QGLContext * overlayContext () const
 */
@@ -457,7 +434,6 @@ HB_FUNC_STATIC( QGLWIDGET_OVERLAYCONTEXT )
     _qt4xhb_createReturnClass ( ptr, "QGLCONTEXT" );
   }
 }
-
 
 /*
 void qglClearColor ( const QColor & c ) const
@@ -473,7 +449,6 @@ HB_FUNC_STATIC( QGLWIDGET_QGLCLEARCOLOR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void qglColor ( const QColor & c ) const
 */
@@ -488,7 +463,6 @@ HB_FUNC_STATIC( QGLWIDGET_QGLCOLOR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QPixmap renderPixmap ( int w = 0, int h = 0, bool useContext = false )
 */
@@ -501,7 +475,6 @@ HB_FUNC_STATIC( QGLWIDGET_RENDERPIXMAP )
     _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
-
 
 /*
 void renderText ( int x, int y, const QString & str, const QFont & font = QFont(), int listBase = 2000 )
@@ -517,7 +490,6 @@ HB_FUNC_STATIC( QGLWIDGET_RENDERTEXT1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void renderText ( double x, double y, double z, const QString & str, const QFont & font = QFont(), int listBase = 2000 )
 */
@@ -531,7 +503,6 @@ HB_FUNC_STATIC( QGLWIDGET_RENDERTEXT2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void renderText ( int x, int y, const QString & str, const QFont & font = QFont(), int listBase = 2000 )
 //[2]void renderText ( double x, double y, double z, const QString & str, const QFont & font = QFont(), int listBase = 2000 )
@@ -561,7 +532,6 @@ HB_FUNC_STATIC( QGLWIDGET_SETCOLORMAP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setMouseTracking ( bool enable )
 */
@@ -574,7 +544,6 @@ HB_FUNC_STATIC( QGLWIDGET_SETMOUSETRACKING )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void swapBuffers ()
@@ -589,7 +558,6 @@ HB_FUNC_STATIC( QGLWIDGET_SWAPBUFFERS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void updateGL ()
 */
@@ -602,7 +570,6 @@ HB_FUNC_STATIC( QGLWIDGET_UPDATEGL )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void updateOverlayGL ()
@@ -617,8 +584,6 @@ HB_FUNC_STATIC( QGLWIDGET_UPDATEOVERLAYGL )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 QImage convertToGLFormat ( const QImage & img )
 */
@@ -627,8 +592,5 @@ HB_FUNC_STATIC( QGLWIDGET_CONVERTTOGLFORMAT )
   QImage * ptr = new QImage( QGLWidget::convertToGLFormat ( *PQIMAGE(1) ) );
   _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );
 }
-
-
-
 
 #pragma ENDDUMP
