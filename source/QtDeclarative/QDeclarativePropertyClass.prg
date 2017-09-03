@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -92,7 +92,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QDeclarativeProperty ( QObject * obj )
 */
@@ -101,7 +100,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW2 )
   QDeclarativeProperty * o = new QDeclarativeProperty ( PQOBJECT(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 /*
 QDeclarativeProperty ( QObject * obj, QDeclarativeContext * ctxt )
@@ -112,7 +110,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QDeclarativeProperty ( QObject * obj, QDeclarativeEngine * engine )
 */
@@ -121,7 +118,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW4 )
   QDeclarativeProperty * o = new QDeclarativeProperty ( PQOBJECT(1), PQDECLARATIVEENGINE(2) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 /*
 QDeclarativeProperty ( QObject * obj, const QString & name )
@@ -132,7 +128,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW5 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QDeclarativeProperty ( QObject * obj, const QString & name, QDeclarativeContext * ctxt )
 */
@@ -141,7 +136,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW6 )
   QDeclarativeProperty * o = new QDeclarativeProperty ( PQOBJECT(1), PQSTRING(2), PQDECLARATIVECONTEXT(3) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 /*
 QDeclarativeProperty ( QObject * obj, const QString & name, QDeclarativeEngine * engine )
@@ -152,7 +146,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW7 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QDeclarativeProperty ( const QDeclarativeProperty & other )
 */
@@ -161,7 +154,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW8 )
   QDeclarativeProperty * o = new QDeclarativeProperty ( *PQDECLARATIVEPROPERTY(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QDeclarativeProperty ()
 //[2]QDeclarativeProperty ( QObject * obj )
@@ -212,8 +204,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW )
   }
 }
 
-
-
 /*
 bool connectNotifySignal ( QObject * dest, const char * slot ) const
 */
@@ -226,7 +216,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_CONNECTNOTIFYSIGNAL1 )
   }
 }
 
-
 /*
 bool connectNotifySignal ( QObject * dest, int method ) const
 */
@@ -238,7 +227,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_CONNECTNOTIFYSIGNAL2 )
     RBOOL( obj->connectNotifySignal ( PQOBJECT(1), PINT(2) ) );
   }
 }
-
 
 //[1]bool connectNotifySignal ( QObject * dest, const char * slot ) const
 //[2]bool connectNotifySignal ( QObject * dest, int method ) const
@@ -267,7 +255,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_HASNOTIFYSIGNAL )
   }
 }
 
-
 /*
 int index () const
 */
@@ -279,7 +266,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_INDEX )
     RINT( obj->index () );
   }
 }
-
 
 /*
 bool isDesignable () const
@@ -293,7 +279,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_ISDESIGNABLE )
   }
 }
 
-
 /*
 bool isProperty () const
 */
@@ -305,7 +290,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_ISPROPERTY )
     RBOOL( obj->isProperty () );
   }
 }
-
 
 /*
 bool isResettable () const
@@ -319,7 +303,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_ISRESETTABLE )
   }
 }
 
-
 /*
 bool isSignalProperty () const
 */
@@ -331,7 +314,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_ISSIGNALPROPERTY )
     RBOOL( obj->isSignalProperty () );
   }
 }
-
 
 /*
 bool isValid () const
@@ -345,7 +327,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_ISVALID )
   }
 }
 
-
 /*
 bool isWritable () const
 */
@@ -357,7 +338,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_ISWRITABLE )
     RBOOL( obj->isWritable () );
   }
 }
-
 
 /*
 QMetaMethod method () const
@@ -372,7 +352,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_METHOD )
   }
 }
 
-
 /*
 QString name () const
 */
@@ -385,7 +364,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NAME )
   }
 }
 
-
 /*
 bool needsNotifySignal () const
 */
@@ -397,7 +375,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEEDSNOTIFYSIGNAL )
     RBOOL( obj->needsNotifySignal () );
   }
 }
-
 
 /*
 QObject * object () const
@@ -412,7 +389,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_OBJECT )
   }
 }
 
-
 /*
 QMetaProperty property () const
 */
@@ -426,7 +402,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_PROPERTY )
   }
 }
 
-
 /*
 int propertyType () const
 */
@@ -439,7 +414,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_PROPERTYTYPE )
   }
 }
 
-
 /*
 PropertyTypeCategory propertyTypeCategory () const
 */
@@ -451,7 +425,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_PROPERTYTYPECATEGORY )
     hb_retni( (int) obj->propertyTypeCategory () );
   }
 }
-
 
 /*
 const char * propertyTypeName () const
@@ -466,7 +439,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_PROPERTYTYPENAME )
   }
 }
 
-
 /*
 QVariant read () const
 */
@@ -480,7 +452,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_READ1 )
   }
 }
 
-
 /*
 bool reset () const
 */
@@ -492,7 +463,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_RESET )
     RBOOL( obj->reset () );
   }
 }
-
 
 /*
 Type type () const
@@ -506,7 +476,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_TYPE )
   }
 }
 
-
 /*
 bool write ( const QVariant & value ) const
 */
@@ -519,8 +488,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_WRITE1 )
   }
 }
 
-
-
 /*
 QVariant read ( QObject * object, const QString & name )
 */
@@ -529,7 +496,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_READ2 )
   QVariant * ptr = new QVariant( QDeclarativeProperty::read ( PQOBJECT(1), PQSTRING(2) ) );
   _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
 }
-
 
 /*
 QVariant read ( QObject * object, const QString & name, QDeclarativeContext * ctxt )
@@ -541,7 +507,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_READ3 )
   _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
 }
 
-
 /*
 QVariant read ( QObject * object, const QString & name, QDeclarativeEngine * engine )
 */
@@ -551,7 +516,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_READ4 )
   QVariant * ptr = new QVariant( QDeclarativeProperty::read ( PQOBJECT(1), PQSTRING(2), par3 ) );
   _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
 }
-
 
 //[1]QVariant read () const
 //[2]QVariant read ( QObject * object, const QString & name )
@@ -586,7 +550,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_WRITE2 )
   RBOOL( QDeclarativeProperty::write ( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3) ) );
 }
 
-
 /*
 bool write ( QObject * object, const QString & name, const QVariant & value, QDeclarativeContext * ctxt )
 */
@@ -596,7 +559,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_WRITE3 )
   RBOOL( QDeclarativeProperty::write ( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3), par4 ) );
 }
 
-
 /*
 bool write ( QObject * object, const QString & name, const QVariant & value, QDeclarativeEngine * engine )
 */
@@ -605,7 +567,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_WRITE4 )
   QDeclarativeEngine * par4 = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
   RBOOL( QDeclarativeProperty::write ( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3), par4 ) );
 }
-
 
 //[1]bool write ( const QVariant & value ) const
 //[2]bool write ( QObject * object, const QString & name, const QVariant & value )
@@ -631,7 +592,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_WRITE )
     HB_FUNC_EXEC( QDECLARATIVEPROPERTY_WRITE4 );
   }
 }
-
 
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEWFROM )
 {

@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -71,7 +71,6 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QDeclarativeComponent(QDeclarativeEngine *, QObject *parent=0)
 */
@@ -80,7 +79,6 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW2 )
   QDeclarativeComponent * o = new QDeclarativeComponent ( PQDECLARATIVEENGINE(1), OPQOBJECT(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 /*
 QDeclarativeComponent(QDeclarativeEngine *, const QString &fileName, QObject *parent = 0)
@@ -91,7 +89,6 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QDeclarativeComponent(QDeclarativeEngine *, const QUrl &url, QObject *parent = 0)
 */
@@ -100,7 +97,6 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW4 )
   QDeclarativeComponent * o = new QDeclarativeComponent ( PQDECLARATIVEENGINE(1), *PQURL(2), OPQOBJECT(3,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QDeclarativeComponent(QObject *parent = 0);
 //[2]QDeclarativeComponent(QDeclarativeEngine *, QObject *parent=0);
@@ -146,7 +142,6 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QObject * beginCreate ( QDeclarativeContext * context )
 */
@@ -161,7 +156,6 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_BEGINCREATE )
   }
 }
 
-
 /*
 virtual void completeCreate ()
 */
@@ -174,7 +168,6 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_COMPLETECREATE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual QObject * create ( QDeclarativeContext * context = 0 )
@@ -190,7 +183,6 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATE )
   }
 }
 
-
 /*
 QDeclarativeContext * creationContext () const
 */
@@ -203,7 +195,6 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATIONCONTEXT )
     _qt4xhb_createReturnClass ( ptr, "QDECLARATIVECONTEXT" );
   }
 }
-
 
 /*
 QList<QDeclarativeError> errors () const
@@ -248,7 +239,6 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ERRORS )
   }
 }
 
-
 /*
 bool isError () const
 */
@@ -260,7 +250,6 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISERROR )
     RBOOL( obj->isError () );
   }
 }
-
 
 /*
 bool isLoading () const
@@ -274,7 +263,6 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISLOADING )
   }
 }
 
-
 /*
 bool isNull () const
 */
@@ -287,7 +275,6 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISNULL )
   }
 }
 
-
 /*
 bool isReady () const
 */
@@ -299,7 +286,6 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISREADY )
     RBOOL( obj->isReady () );
   }
 }
-
 
 /*
 void loadUrl ( const QUrl & url )
@@ -314,7 +300,6 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_LOADURL )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 qreal progress () const
 */
@@ -326,7 +311,6 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_PROGRESS )
     RQREAL( obj->progress () );
   }
 }
-
 
 /*
 void setData ( const QByteArray & data, const QUrl & url )
@@ -341,7 +325,6 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_SETDATA )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 Status status () const
 */
@@ -353,7 +336,6 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_STATUS )
     hb_retni( (int) obj->status () );
   }
 }
-
 
 /*
 QUrl url () const
@@ -368,7 +350,6 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_URL )
   }
 }
 
-
 /*
 Q_INVOKABLE QString errorString() const
 */
@@ -381,8 +362,6 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ERRORSTRING )
   }
 }
 
-
-
 /*
 static QDeclarativeComponentAttached *qmlAttachedProperties(QObject *)
 */
@@ -391,9 +370,5 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_QMLATTACHEDPROPERTIES )
   QDeclarativeComponentAttached * ptr = QDeclarativeComponent::qmlAttachedProperties ( PQOBJECT(1) );
   _qt4xhb_createReturnClass ( ptr, "QDECLARATIVECOMPONENTATTACHED" );
 }
-
-
-
-
 
 #pragma ENDDUMP

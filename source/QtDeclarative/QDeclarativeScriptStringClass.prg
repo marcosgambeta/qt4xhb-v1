@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -59,7 +59,6 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QDeclarativeScriptString ( const QDeclarativeScriptString & other )
 */
@@ -68,7 +67,6 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEW2 )
   QDeclarativeScriptString * o = new QDeclarativeScriptString ( *PQDECLARATIVESCRIPTSTRING(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QDeclarativeScriptString ()
 //[2]QDeclarativeScriptString ( const QDeclarativeScriptString & other )
@@ -89,8 +87,6 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEW )
   }
 }
 
-
-
 /*
 QDeclarativeContext * context () const
 */
@@ -103,7 +99,6 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_CONTEXT )
     _qt4xhb_createReturnClass ( ptr, "QDECLARATIVECONTEXT" );
   }
 }
-
 
 /*
 QObject * scopeObject () const
@@ -118,7 +113,6 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SCOPEOBJECT )
   }
 }
 
-
 /*
 QString script () const
 */
@@ -130,7 +124,6 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SCRIPT )
     RQSTRING( obj->script () );
   }
 }
-
 
 /*
 void setContext ( QDeclarativeContext * context )
@@ -146,7 +139,6 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SETCONTEXT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setScopeObject ( QObject * object )
 */
@@ -160,7 +152,6 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SETSCOPEOBJECT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setScript ( const QString & script )
 */
@@ -173,7 +164,6 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SETSCRIPT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEWFROM )
 {
@@ -229,7 +219,5 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

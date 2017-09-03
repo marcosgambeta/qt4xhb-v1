@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -78,7 +78,6 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QDECLARATIVEENGINE_DELETE )
 {
   QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -94,7 +93,6 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void addImageProvider ( const QString & providerId, QDeclarativeImageProvider * provider )
 */
@@ -109,7 +107,6 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_ADDIMAGEPROVIDER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void addImportPath ( const QString & path )
 */
@@ -122,7 +119,6 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_ADDIMPORTPATH )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void addPluginPath ( const QString & path )
@@ -137,7 +133,6 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_ADDPLUGINPATH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QUrl baseUrl () const
 */
@@ -150,7 +145,6 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_BASEURL )
     _qt4xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
-
 
 /*
 void clearComponentCache ()
@@ -165,7 +159,6 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_CLEARCOMPONENTCACHE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QDeclarativeImageProvider * imageProvider ( const QString & providerId ) const
 */
@@ -179,7 +172,6 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_IMAGEPROVIDER )
   }
 }
 
-
 /*
 QStringList importPathList () const
 */
@@ -191,7 +183,6 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_IMPORTPATHLIST )
     RQSTRINGLIST( obj->importPathList () );
   }
 }
-
 
 /*
 bool importPlugin ( const QString & filePath, const QString & uri, QString * errorString )
@@ -206,7 +197,6 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_IMPORTPLUGIN )
   }
 }
 
-
 /*
 QNetworkAccessManager * networkAccessManager () const
 */
@@ -219,7 +209,6 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_NETWORKACCESSMANAGER )
     _qt4xhb_createReturnClass ( ptr, "QNETWORKACCESSMANAGER" );
   }
 }
-
 
 /*
 QDeclarativeNetworkAccessManagerFactory * networkAccessManagerFactory () const
@@ -234,7 +223,6 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_NETWORKACCESSMANAGERFACTORY )
   }
 }
 
-
 /*
 QString offlineStoragePath () const
 */
@@ -246,7 +234,6 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_OFFLINESTORAGEPATH )
     RQSTRING( obj->offlineStoragePath () );
   }
 }
-
 
 /*
 bool outputWarningsToStandardError () const
@@ -260,7 +247,6 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_OUTPUTWARNINGSTOSTANDARDERROR )
   }
 }
 
-
 /*
 QStringList pluginPathList () const
 */
@@ -272,7 +258,6 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_PLUGINPATHLIST )
     RQSTRINGLIST( obj->pluginPathList () );
   }
 }
-
 
 /*
 void removeImageProvider ( const QString & providerId )
@@ -287,7 +272,6 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_REMOVEIMAGEPROVIDER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QDeclarativeContext * rootContext () const
 */
@@ -300,7 +284,6 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_ROOTCONTEXT )
     _qt4xhb_createReturnClass ( ptr, "QDECLARATIVECONTEXT" );
   }
 }
-
 
 /*
 void setBaseUrl ( const QUrl & url )
@@ -315,7 +298,6 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETBASEURL )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setImportPathList ( const QStringList & paths )
 */
@@ -328,7 +310,6 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETIMPORTPATHLIST )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setNetworkAccessManagerFactory ( QDeclarativeNetworkAccessManagerFactory * factory )
@@ -344,7 +325,6 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETNETWORKACCESSMANAGERFACTORY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setOfflineStoragePath ( const QString & dir )
 */
@@ -357,7 +337,6 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETOFFLINESTORAGEPATH )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setOutputWarningsToStandardError ( bool enabled )
@@ -372,7 +351,6 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETOUTPUTWARNINGSTOSTANDARDERROR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPluginPathList ( const QStringList & paths )
 */
@@ -386,8 +364,6 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETPLUGINPATHLIST )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 QDeclarativeContext * contextForObject ( const QObject * object )
 */
@@ -398,7 +374,6 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_CONTEXTFOROBJECT )
   _qt4xhb_createReturnClass ( ptr, "QDECLARATIVECONTEXT" );
 }
 
-
 /*
 ObjectOwnership objectOwnership ( QObject * object )
 */
@@ -406,7 +381,6 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_OBJECTOWNERSHIP )
 {
   hb_retni( (int) QDeclarativeEngine::objectOwnership ( PQOBJECT(1) ) );
 }
-
 
 /*
 void setContextForObject ( QObject * object, QDeclarativeContext * context )
@@ -418,7 +392,6 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETCONTEXTFOROBJECT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setObjectOwnership ( QObject * object, ObjectOwnership ownership )
 */
@@ -427,9 +400,5 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETOBJECTOWNERSHIP )
   QDeclarativeEngine::setObjectOwnership ( PQOBJECT(1), (QDeclarativeEngine::ObjectOwnership) hb_parni(2) );
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

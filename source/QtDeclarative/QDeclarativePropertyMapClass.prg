@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -54,7 +54,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_DELETE )
 {
   QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -70,7 +69,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void clear ( const QString & key )
 */
@@ -84,7 +82,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_CLEAR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool contains ( const QString & key ) const
 */
@@ -97,7 +94,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_CONTAINS )
   }
 }
 
-
 /*
 int count () const
 */
@@ -109,7 +105,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_COUNT )
     RINT( obj->count () );
   }
 }
-
 
 /*
 void insert ( const QString & key, const QVariant & value )
@@ -124,7 +119,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_INSERT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool isEmpty () const
 */
@@ -136,7 +130,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_ISEMPTY )
     RBOOL( obj->isEmpty () );
   }
 }
-
 
 /*
 QStringList keys () const
@@ -150,7 +143,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_KEYS )
   }
 }
 
-
 /*
 int size () const
 */
@@ -162,7 +154,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_SIZE )
     RINT( obj->size () );
   }
 }
-
 
 /*
 QVariant value ( const QString & key ) const
@@ -176,10 +167,5 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_VALUE )
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
-
-
-
-
-
 
 #pragma ENDDUMP

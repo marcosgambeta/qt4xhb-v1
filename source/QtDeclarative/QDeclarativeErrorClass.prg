@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -63,7 +63,6 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QDeclarativeError ( const QDeclarativeError & other )
 */
@@ -72,7 +71,6 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_NEW2 )
   QDeclarativeError * o = new QDeclarativeError ( *PQDECLARATIVEERROR(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QDeclarativeError ()
 //[2]QDeclarativeError ( const QDeclarativeError & other )
@@ -108,7 +106,6 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int column () const
 */
@@ -120,7 +117,6 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_COLUMN )
     RINT( obj->column () );
   }
 }
-
 
 /*
 QString description () const
@@ -134,7 +130,6 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_DESCRIPTION )
   }
 }
 
-
 /*
 bool isValid () const
 */
@@ -147,7 +142,6 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_ISVALID )
   }
 }
 
-
 /*
 int line () const
 */
@@ -159,7 +153,6 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_LINE )
     RINT( obj->line () );
   }
 }
-
 
 /*
 void setColumn ( int column )
@@ -174,7 +167,6 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_SETCOLUMN )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setDescription ( const QString & description )
 */
@@ -187,7 +179,6 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_SETDESCRIPTION )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setLine ( int line )
@@ -202,7 +193,6 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_SETLINE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setUrl ( const QUrl & url )
 */
@@ -216,7 +206,6 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_SETURL )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString toString () const
 */
@@ -228,7 +217,6 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_TOSTRING )
     RQSTRING( obj->toString () );
   }
 }
-
 
 /*
 QUrl url () const
@@ -242,7 +230,6 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_URL )
     _qt4xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
-
 
 HB_FUNC_STATIC( QDECLARATIVEERROR_NEWFROM )
 {
@@ -298,7 +285,5 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

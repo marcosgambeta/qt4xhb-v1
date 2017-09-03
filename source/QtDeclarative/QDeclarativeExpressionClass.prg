@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -66,7 +66,6 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QDeclarativeExpression ( QDeclarativeContext * ctxt, QObject * scope, const QString & expression, QObject * parent = 0 )
 */
@@ -75,7 +74,6 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NEW2 )
   QDeclarativeExpression * o = new QDeclarativeExpression ( PQDECLARATIVECONTEXT(1), PQOBJECT(2), PQSTRING(3), OPQOBJECT(4,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QDeclarativeExpression ()
 //[2]QDeclarativeExpression ( QDeclarativeContext * ctxt, QObject * scope, const QString & expression, QObject * parent = 0 )
@@ -111,7 +109,6 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void clearError ()
 */
@@ -124,7 +121,6 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_CLEARERROR )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QDeclarativeContext * context () const
@@ -139,7 +135,6 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_CONTEXT )
   }
 }
 
-
 /*
 QDeclarativeEngine * engine () const
 */
@@ -153,7 +148,6 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_ENGINE )
   }
 }
 
-
 /*
 QDeclarativeError error () const
 */
@@ -166,7 +160,6 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_ERROR )
     _qt4xhb_createReturnClass ( ptr, "QDECLARATIVEERROR" );
   }
 }
-
 
 /*
 QVariant evaluate ( bool * valueIsUndefined = 0 )
@@ -183,7 +176,6 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_EVALUATE )
   }
 }
 
-
 /*
 QString expression () const
 */
@@ -195,7 +187,6 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_EXPRESSION )
     RQSTRING( obj->expression () );
   }
 }
-
 
 /*
 bool hasError () const
@@ -209,7 +200,6 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_HASERROR )
   }
 }
 
-
 /*
 int lineNumber () const
 */
@@ -222,7 +212,6 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_LINENUMBER )
   }
 }
 
-
 /*
 bool notifyOnValueChanged () const
 */
@@ -234,7 +223,6 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NOTIFYONVALUECHANGED )
     RBOOL( obj->notifyOnValueChanged () );
   }
 }
-
 
 /*
 QObject * scopeObject () const
@@ -249,7 +237,6 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SCOPEOBJECT )
   }
 }
 
-
 /*
 void setExpression ( const QString & expression )
 */
@@ -262,7 +249,6 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SETEXPRESSION )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setNotifyOnValueChanged ( bool notifyOnChange )
@@ -277,7 +263,6 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SETNOTIFYONVALUECHANGED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setSourceLocation ( const QString & url, int line )
 */
@@ -291,7 +276,6 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SETSOURCELOCATION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString sourceFile () const
 */
@@ -303,10 +287,5 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SOURCEFILE )
     RQSTRING( obj->sourceFile () );
   }
 }
-
-
-
-
-
 
 #pragma ENDDUMP

@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QDeclarativePropertyValueSource
 
@@ -39,7 +38,6 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYVALUESOURCE_DELETE )
 {
   QDeclarativePropertyValueSource * obj = (QDeclarativePropertyValueSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -55,7 +53,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYVALUESOURCE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void setTarget ( const QDeclarativeProperty & property ) = 0
 */
@@ -68,7 +65,6 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYVALUESOURCE_SETTARGET )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYVALUESOURCE_NEWFROM )
 {
@@ -124,7 +120,5 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYVALUESOURCE_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -63,7 +63,6 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QDeclarativeContext ( QDeclarativeContext * parentContext, QObject * parent = 0 )
 */
@@ -72,7 +71,6 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_NEW2 )
   QDeclarativeContext * o = new QDeclarativeContext ( PQDECLARATIVECONTEXT(1), OPQOBJECT(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QDeclarativeContext ( QDeclarativeEngine * engine, QObject * parent = 0 )
 //[2]QDeclarativeContext ( QDeclarativeContext * parentContext, QObject * parent = 0 )
@@ -108,7 +106,6 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QUrl baseUrl () const
 */
@@ -121,7 +118,6 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_BASEURL )
     _qt4xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
-
 
 /*
 QObject * contextObject () const
@@ -136,7 +132,6 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_CONTEXTOBJECT )
   }
 }
 
-
 /*
 QVariant contextProperty ( const QString & name ) const
 */
@@ -149,7 +144,6 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_CONTEXTPROPERTY )
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
-
 
 /*
 QDeclarativeEngine * engine () const
@@ -164,7 +158,6 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_ENGINE )
   }
 }
 
-
 /*
 bool isValid () const
 */
@@ -176,7 +169,6 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_ISVALID )
     RBOOL( obj->isValid () );
   }
 }
-
 
 /*
 QDeclarativeContext * parentContext () const
@@ -191,7 +183,6 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_PARENTCONTEXT )
   }
 }
 
-
 /*
 QUrl resolvedUrl ( const QUrl & src )
 */
@@ -204,7 +195,6 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_RESOLVEDURL )
     _qt4xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
-
 
 /*
 void setBaseUrl ( const QUrl & baseUrl )
@@ -219,7 +209,6 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_SETBASEURL )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setContextObject ( QObject * object )
 */
@@ -232,7 +221,6 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_SETCONTEXTOBJECT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setContextProperty ( const QString & name, QObject * value )
@@ -247,7 +235,6 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_SETCONTEXTPROPERTY1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setContextProperty ( const QString & name, const QVariant & value )
 */
@@ -260,7 +247,6 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_SETCONTEXTPROPERTY2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setContextProperty ( const QString & name, QObject * value )
 //[2]void setContextProperty ( const QString & name, const QVariant & value )
@@ -276,8 +262,5 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_SETCONTEXTPROPERTY )
     HB_FUNC_EXEC( QDECLARATIVECONTEXT_SETCONTEXTPROPERTY2 );
   }
 }
-
-
-
 
 #pragma ENDDUMP

@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -67,7 +67,6 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QDECLARATIVEITEM_DELETE )
 {
   QDeclarativeItem * obj = (QDeclarativeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -83,7 +82,6 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 qreal baselineOffset () const
 */
@@ -95,7 +93,6 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_BASELINEOFFSET )
     RQREAL( obj->baselineOffset () );
   }
 }
-
 
 /*
 QDeclarativeItem * childAt ( qreal x, qreal y ) const
@@ -110,7 +107,6 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_CHILDAT )
   }
 }
 
-
 /*
 QRectF childrenRect ()
 */
@@ -124,7 +120,6 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_CHILDRENRECT )
   }
 }
 
-
 /*
 bool clip () const
 */
@@ -136,7 +131,6 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_CLIP )
     RBOOL( obj->clip () );
   }
 }
-
 
 /*
 void forceActiveFocus ()
@@ -151,7 +145,6 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_FORCEACTIVEFOCUS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 qreal implicitHeight () const
 */
@@ -163,7 +156,6 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_IMPLICITHEIGHT )
     RQREAL( obj->implicitHeight () );
   }
 }
-
 
 /*
 qreal implicitWidth () const
@@ -177,7 +169,6 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_IMPLICITWIDTH )
   }
 }
 
-
 /*
 bool keepMouseGrab () const
 */
@@ -189,7 +180,6 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_KEEPMOUSEGRAB )
     RBOOL( obj->keepMouseGrab () );
   }
 }
-
 
 /*
 QScriptValue mapFromItem ( const QScriptValue & item, qreal x, qreal y ) const
@@ -204,7 +194,6 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_MAPFROMITEM )
   }
 }
 
-
 /*
 QScriptValue mapToItem ( const QScriptValue & item, qreal x, qreal y ) const
 */
@@ -217,7 +206,6 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_MAPTOITEM )
     _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
   }
 }
-
 
 /*
 QDeclarativeItem * parentItem () const
@@ -232,7 +220,6 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_PARENTITEM )
   }
 }
 
-
 /*
 void setBaselineOffset ( qreal )
 */
@@ -245,7 +232,6 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_SETBASELINEOFFSET )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setClip ( bool )
@@ -260,7 +246,6 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_SETCLIP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setKeepMouseGrab ( bool keep )
 */
@@ -273,7 +258,6 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_SETKEEPMOUSEGRAB )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setParentItem ( QDeclarativeItem * parent )
@@ -289,7 +273,6 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_SETPARENTITEM )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setSmooth ( bool smooth )
 */
@@ -302,7 +285,6 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_SETSMOOTH )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setTransformOrigin ( TransformOrigin origin )
@@ -317,7 +299,6 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_SETTRANSFORMORIGIN )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool smooth () const
 */
@@ -330,7 +311,6 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_SMOOTH )
   }
 }
 
-
 /*
 TransformOrigin transformOrigin () const
 */
@@ -342,9 +322,5 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_TRANSFORMORIGIN )
     hb_retni( (int) obj->transformOrigin () );
   }
 }
-
-
-
-
 
 #pragma ENDDUMP

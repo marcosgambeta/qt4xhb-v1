@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -64,7 +64,6 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QDeclarativeListReference ( QObject * object, const char * property, QDeclarativeEngine * engine = 0 )
 */
@@ -74,7 +73,6 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_NEW2 )
   QDeclarativeListReference * o = new QDeclarativeListReference ( PQOBJECT(1), (const char *) hb_parc(2), par3 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QDeclarativeListReference ()
 //[2]QDeclarativeListReference ( QObject * object, const char * property, QDeclarativeEngine * engine = 0 )
@@ -95,8 +93,6 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_NEW )
   }
 }
 
-
-
 /*
 bool append ( QObject * object ) const
 */
@@ -108,7 +104,6 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_APPEND )
     RBOOL( obj->append ( PQOBJECT(1) ) );
   }
 }
-
 
 /*
 QObject * at ( int index ) const
@@ -123,7 +118,6 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_AT )
   }
 }
 
-
 /*
 bool canAppend () const
 */
@@ -135,7 +129,6 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANAPPEND )
     RBOOL( obj->canAppend () );
   }
 }
-
 
 /*
 bool canAt () const
@@ -149,7 +142,6 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANAT )
   }
 }
 
-
 /*
 bool canClear () const
 */
@@ -161,7 +153,6 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANCLEAR )
     RBOOL( obj->canClear () );
   }
 }
-
 
 /*
 bool canCount () const
@@ -175,7 +166,6 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANCOUNT )
   }
 }
 
-
 /*
 bool clear () const
 */
@@ -187,7 +177,6 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CLEAR )
     RBOOL( obj->clear () );
   }
 }
-
 
 /*
 int count () const
@@ -201,7 +190,6 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_COUNT )
   }
 }
 
-
 /*
 bool isValid () const
 */
@@ -213,7 +201,6 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_ISVALID )
     RBOOL( obj->isValid () );
   }
 }
-
 
 /*
 const QMetaObject * listElementType () const
@@ -228,7 +215,6 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_LISTELEMENTTYPE )
   }
 }
 
-
 /*
 QObject * object () const
 */
@@ -241,7 +227,6 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_OBJECT )
     _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
-
 
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_NEWFROM )
 {
@@ -297,7 +282,5 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

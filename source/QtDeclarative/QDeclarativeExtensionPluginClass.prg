@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QDeclarativeExtensionPlugin INHERIT QObject
 
@@ -33,9 +32,6 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
-
-
 /*
 virtual void initializeEngine ( QDeclarativeEngine * engine, const char * uri )
 */
@@ -50,7 +46,6 @@ HB_FUNC_STATIC( QDECLARATIVEEXTENSIONPLUGIN_INITIALIZEENGINE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void registerTypes ( const char * uri ) = 0
 */
@@ -63,9 +58,5 @@ HB_FUNC_STATIC( QDECLARATIVEEXTENSIONPLUGIN_REGISTERTYPES )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP
