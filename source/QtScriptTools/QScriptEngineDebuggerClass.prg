@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -61,7 +61,6 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_DELETE )
 {
   QScriptEngineDebugger * obj = (QScriptEngineDebugger *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -77,7 +76,6 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QAction * action ( DebuggerAction action ) const
 */
@@ -90,7 +88,6 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ACTION )
     _qt4xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
-
 
 /*
 void attachTo ( QScriptEngine * engine )
@@ -106,7 +103,6 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ATTACHTO )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool autoShowStandardWindow () const
 */
@@ -118,7 +114,6 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_AUTOSHOWSTANDARDWINDOW )
     RBOOL( obj->autoShowStandardWindow () );
   }
 }
-
 
 /*
 QMenu * createStandardMenu ( QWidget * parent = 0 )
@@ -133,7 +128,6 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_CREATESTANDARDMENU )
   }
 }
 
-
 /*
 QToolBar * createStandardToolBar ( QWidget * parent = 0 )
 */
@@ -146,7 +140,6 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_CREATESTANDARDTOOLBAR )
     _qt4xhb_createReturnClass ( ptr, "QTOOLBAR" );
   }
 }
-
 
 /*
 void detach ()
@@ -161,7 +154,6 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_DETACH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setAutoShowStandardWindow ( bool autoShow )
 */
@@ -174,7 +166,6 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_SETAUTOSHOWSTANDARDWINDOW )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QMainWindow * standardWindow () const
@@ -189,7 +180,6 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_STANDARDWINDOW )
   }
 }
 
-
 /*
 DebuggerState state () const
 */
@@ -201,7 +191,6 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_STATE )
     hb_retni( (int) obj->state () );
   }
 }
-
 
 /*
 QWidget * widget ( DebuggerWidget widget ) const
@@ -215,10 +204,5 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_WIDGET )
     _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
-
-
-
-
-
 
 #pragma ENDDUMP
