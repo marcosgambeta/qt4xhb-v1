@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -66,7 +66,6 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_NEW )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_DELETE )
 {
   QWebSecurityOrigin * obj = (QWebSecurityOrigin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -82,7 +81,6 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 qint64 databaseQuota () const
 */
@@ -95,7 +93,6 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASEQUOTA )
   }
 }
 
-
 /*
 qint64 databaseUsage () const
 */
@@ -107,7 +104,6 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASEUSAGE )
     RQINT64( obj->databaseUsage () );
   }
 }
-
 
 /*
 QList<QWebDatabase> databases () const
@@ -156,7 +152,6 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASES )
   }
 }
 
-
 /*
 QString host () const
 */
@@ -168,7 +163,6 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_HOST )
     RQSTRING( obj->host () );
   }
 }
-
 
 /*
 int port () const
@@ -182,7 +176,6 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_PORT )
   }
 }
 
-
 /*
 QString scheme () const
 */
@@ -194,7 +187,6 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_SCHEME )
     RQSTRING( obj->scheme () );
   }
 }
-
 
 /*
 void setDatabaseQuota ( qint64 quota )
@@ -209,8 +201,6 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_SETDATABASEQUOTA )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 void addLocalScheme ( const QString & scheme )
 */
@@ -219,7 +209,6 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_ADDLOCALSCHEME )
   QWebSecurityOrigin::addLocalScheme ( PQSTRING(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QList<QWebSecurityOrigin> allOrigins ()
@@ -264,7 +253,6 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_ALLORIGINS )
   hb_itemReturnRelease(pArray);
 }
 
-
 /*
 QStringList localSchemes ()
 */
@@ -272,7 +260,6 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_LOCALSCHEMES )
 {
   RQSTRINGLIST( QWebSecurityOrigin::localSchemes () );
 }
-
 
 /*
 void removeLocalScheme ( const QString & scheme )
@@ -282,7 +269,6 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_REMOVELOCALSCHEME )
   QWebSecurityOrigin::removeLocalScheme ( PQSTRING(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_NEWFROM )
 {
@@ -338,6 +324,5 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

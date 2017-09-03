@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -57,8 +57,6 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
-
 /*
 void back ()
 */
@@ -72,7 +70,6 @@ HB_FUNC_STATIC( QWEBHISTORY_BACK )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QWebHistoryItem backItem () const
 */
@@ -85,7 +82,6 @@ HB_FUNC_STATIC( QWEBHISTORY_BACKITEM )
     _qt4xhb_createReturnClass ( ptr, "QWEBHISTORYITEM", true );
   }
 }
-
 
 /*
 QList<QWebHistoryItem> backItems ( int maxItems ) const
@@ -134,7 +130,6 @@ HB_FUNC_STATIC( QWEBHISTORY_BACKITEMS )
   }
 }
 
-
 /*
 bool canGoBack () const
 */
@@ -147,7 +142,6 @@ HB_FUNC_STATIC( QWEBHISTORY_CANGOBACK )
   }
 }
 
-
 /*
 bool canGoForward () const
 */
@@ -159,7 +153,6 @@ HB_FUNC_STATIC( QWEBHISTORY_CANGOFORWARD )
     RBOOL( obj->canGoForward () );
   }
 }
-
 
 /*
 void clear ()
@@ -174,7 +167,6 @@ HB_FUNC_STATIC( QWEBHISTORY_CLEAR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int count () const
 */
@@ -186,7 +178,6 @@ HB_FUNC_STATIC( QWEBHISTORY_COUNT )
     RINT( obj->count () );
   }
 }
-
 
 /*
 QWebHistoryItem currentItem () const
@@ -201,7 +192,6 @@ HB_FUNC_STATIC( QWEBHISTORY_CURRENTITEM )
   }
 }
 
-
 /*
 int currentItemIndex () const
 */
@@ -213,7 +203,6 @@ HB_FUNC_STATIC( QWEBHISTORY_CURRENTITEMINDEX )
     RINT( obj->currentItemIndex () );
   }
 }
-
 
 /*
 void forward ()
@@ -228,7 +217,6 @@ HB_FUNC_STATIC( QWEBHISTORY_FORWARD )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QWebHistoryItem forwardItem () const
 */
@@ -241,7 +229,6 @@ HB_FUNC_STATIC( QWEBHISTORY_FORWARDITEM )
     _qt4xhb_createReturnClass ( ptr, "QWEBHISTORYITEM", true );
   }
 }
-
 
 /*
 QList<QWebHistoryItem> forwardItems ( int maxItems ) const
@@ -290,7 +277,6 @@ HB_FUNC_STATIC( QWEBHISTORY_FORWARDITEMS )
   }
 }
 
-
 /*
 void goToItem ( const QWebHistoryItem & item )
 */
@@ -304,7 +290,6 @@ HB_FUNC_STATIC( QWEBHISTORY_GOTOITEM )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QWebHistoryItem itemAt ( int i ) const
 */
@@ -317,7 +302,6 @@ HB_FUNC_STATIC( QWEBHISTORY_ITEMAT )
     _qt4xhb_createReturnClass ( ptr, "QWEBHISTORYITEM", true );
   }
 }
-
 
 /*
 QList<QWebHistoryItem> items () const
@@ -366,7 +350,6 @@ HB_FUNC_STATIC( QWEBHISTORY_ITEMS )
   }
 }
 
-
 /*
 int maximumItemCount () const
 */
@@ -378,7 +361,6 @@ HB_FUNC_STATIC( QWEBHISTORY_MAXIMUMITEMCOUNT )
     RINT( obj->maximumItemCount () );
   }
 }
-
 
 /*
 void setMaximumItemCount ( int count )
@@ -392,7 +374,6 @@ HB_FUNC_STATIC( QWEBHISTORY_SETMAXIMUMITEMCOUNT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QWEBHISTORY_NEWFROM )
 {
@@ -448,6 +429,5 @@ HB_FUNC_STATIC( QWEBHISTORY_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

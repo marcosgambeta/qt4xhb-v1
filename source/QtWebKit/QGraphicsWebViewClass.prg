@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -85,7 +85,6 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_DELETE )
 {
   QGraphicsWebView * obj = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -101,7 +100,6 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool findText ( const QString & subString, QWebPage::FindFlags options = 0 )
 */
@@ -114,7 +112,6 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_FINDTEXT )
     RBOOL( obj->findText ( PQSTRING(1), (QWebPage::FindFlags) par2 ) );
   }
 }
-
 
 /*
 QWebHistory * history () const
@@ -129,7 +126,6 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_HISTORY )
   }
 }
 
-
 /*
 QIcon icon () const
 */
@@ -143,7 +139,6 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ICON )
   }
 }
 
-
 /*
 bool isModified () const
 */
@@ -155,7 +150,6 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ISMODIFIED )
     RBOOL( obj->isModified () );
   }
 }
-
 
 /*
 bool isTiledBackingStoreFrozen () const
@@ -169,7 +163,6 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ISTILEDBACKINGSTOREFROZEN )
   }
 }
 
-
 /*
 void load ( const QUrl & url )
 */
@@ -182,7 +175,6 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_LOAD1 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void load ( const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
@@ -198,7 +190,6 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_LOAD2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void load ( const QUrl & url )
 //[2]void load ( const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
@@ -228,7 +219,6 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_PAGE )
   }
 }
 
-
 /*
 QAction * pageAction ( QWebPage::WebAction action ) const
 */
@@ -243,7 +233,6 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_PAGEACTION )
   }
 }
 
-
 /*
 bool resizesToContents () const
 */
@@ -255,7 +244,6 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_RESIZESTOCONTENTS )
     RBOOL( obj->resizesToContents () );
   }
 }
-
 
 /*
 void setContent ( const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl() )
@@ -271,7 +259,6 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETCONTENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setHtml ( const QString & html, const QUrl & baseUrl = QUrl() )
 */
@@ -285,7 +272,6 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETHTML )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setPage ( QWebPage * page )
@@ -301,7 +287,6 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETPAGE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setResizesToContents ( bool enabled )
 */
@@ -314,7 +299,6 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETRESIZESTOCONTENTS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setTiledBackingStoreFrozen ( bool frozen )
@@ -329,7 +313,6 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETTILEDBACKINGSTOREFROZEN )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setUrl ( const QUrl & )
 */
@@ -342,7 +325,6 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETURL )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setZoomFactor ( qreal )
@@ -357,7 +339,6 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETZOOMFACTOR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QWebSettings * settings () const
 */
@@ -371,7 +352,6 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETTINGS )
   }
 }
 
-
 /*
 QString title () const
 */
@@ -383,7 +363,6 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_TITLE )
     RQSTRING( obj->title () );
   }
 }
-
 
 /*
 void triggerPageAction ( QWebPage::WebAction action, bool checked = false )
@@ -398,7 +377,6 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_TRIGGERPAGEACTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QUrl url () const
 */
@@ -412,7 +390,6 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_URL )
   }
 }
 
-
 /*
 qreal zoomFactor () const
 */
@@ -424,7 +401,6 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ZOOMFACTOR )
     RQREAL( obj->zoomFactor () );
   }
 }
-
 
 /*
 void back ()
@@ -439,7 +415,6 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_BACK )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void forward ()
 */
@@ -452,7 +427,6 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_FORWARD )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void reload ()
@@ -467,7 +441,6 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_RELOAD )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void stop ()
 */
@@ -481,10 +454,6 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_STOP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 //Signals
-
-
-
 
 #pragma ENDDUMP

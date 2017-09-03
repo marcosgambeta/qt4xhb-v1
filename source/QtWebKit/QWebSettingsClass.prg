@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -80,8 +80,6 @@ RETURN
 
 #include <QUrl>
 
-
-
 /*
 QString defaultTextEncoding () const
 */
@@ -94,7 +92,6 @@ HB_FUNC_STATIC( QWEBSETTINGS_DEFAULTTEXTENCODING )
   }
 }
 
-
 /*
 QString fontFamily ( FontFamily which ) const
 */
@@ -106,7 +103,6 @@ HB_FUNC_STATIC( QWEBSETTINGS_FONTFAMILY )
     RQSTRING( obj->fontFamily ( (QWebSettings::FontFamily) hb_parni(1) ) );
   }
 }
-
 
 /*
 int fontSize ( FontSize type ) const
@@ -121,7 +117,6 @@ HB_FUNC_STATIC( QWEBSETTINGS_FONTSIZE )
   }
 }
 
-
 /*
 QString localStoragePath () const
 */
@@ -133,7 +128,6 @@ HB_FUNC_STATIC( QWEBSETTINGS_LOCALSTORAGEPATH )
     RQSTRING( obj->localStoragePath () );
   }
 }
-
 
 /*
 void resetAttribute ( WebAttribute attribute )
@@ -149,7 +143,6 @@ HB_FUNC_STATIC( QWEBSETTINGS_RESETATTRIBUTE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void resetFontFamily ( FontFamily which )
 */
@@ -163,7 +156,6 @@ HB_FUNC_STATIC( QWEBSETTINGS_RESETFONTFAMILY )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void resetFontSize ( FontSize type )
@@ -179,7 +171,6 @@ HB_FUNC_STATIC( QWEBSETTINGS_RESETFONTSIZE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setAttribute ( WebAttribute attribute, bool on )
 */
@@ -194,7 +185,6 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETATTRIBUTE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setDefaultTextEncoding ( const QString & encoding )
 */
@@ -207,7 +197,6 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETDEFAULTTEXTENCODING )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setFontFamily ( FontFamily which, const QString & family )
@@ -223,7 +212,6 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETFONTFAMILY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setFontSize ( FontSize type, int size )
 */
@@ -236,7 +224,6 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETFONTSIZE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setLocalStoragePath ( const QString & path )
@@ -251,7 +238,6 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETLOCALSTORAGEPATH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setUserStyleSheetUrl ( const QUrl & location )
 */
@@ -264,7 +250,6 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETUSERSTYLESHEETURL )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 bool testAttribute ( WebAttribute attribute ) const
@@ -279,7 +264,6 @@ HB_FUNC_STATIC( QWEBSETTINGS_TESTATTRIBUTE )
   }
 }
 
-
 /*
 QUrl userStyleSheetUrl () const
 */
@@ -293,8 +277,6 @@ HB_FUNC_STATIC( QWEBSETTINGS_USERSTYLESHEETURL )
   }
 }
 
-
-
 /*
 void clearIconDatabase ()
 */
@@ -303,7 +285,6 @@ HB_FUNC_STATIC( QWEBSETTINGS_CLEARICONDATABASE )
   QWebSettings::clearIconDatabase ();
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void clearMemoryCaches ()
@@ -314,7 +295,6 @@ HB_FUNC_STATIC( QWEBSETTINGS_CLEARMEMORYCACHES )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void enablePersistentStorage ( const QString & path = QString() )
 */
@@ -323,7 +303,6 @@ HB_FUNC_STATIC( QWEBSETTINGS_ENABLEPERSISTENTSTORAGE )
   QWebSettings::enablePersistentStorage ( OPQSTRING(1,QString()) );
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QWebSettings * globalSettings ()
@@ -334,7 +313,6 @@ HB_FUNC_STATIC( QWEBSETTINGS_GLOBALSETTINGS )
   _qt4xhb_createReturnClass ( ptr, "QWEBSETTINGS" );
 }
 
-
 /*
 QString iconDatabasePath ()
 */
@@ -342,7 +320,6 @@ HB_FUNC_STATIC( QWEBSETTINGS_ICONDATABASEPATH )
 {
   RQSTRING( QWebSettings::iconDatabasePath () );
 }
-
 
 /*
 QIcon iconForUrl ( const QUrl & url )
@@ -353,7 +330,6 @@ HB_FUNC_STATIC( QWEBSETTINGS_ICONFORURL )
   _qt4xhb_createReturnClass ( ptr, "QICON", true );
 }
 
-
 /*
 int maximumPagesInCache ()
 */
@@ -361,7 +337,6 @@ HB_FUNC_STATIC( QWEBSETTINGS_MAXIMUMPAGESINCACHE )
 {
   RINT( QWebSettings::maximumPagesInCache () );
 }
-
 
 /*
 qint64 offlineStorageDefaultQuota ()
@@ -371,7 +346,6 @@ HB_FUNC_STATIC( QWEBSETTINGS_OFFLINESTORAGEDEFAULTQUOTA )
   RQINT64( QWebSettings::offlineStorageDefaultQuota () );
 }
 
-
 /*
 QString offlineStoragePath ()
 */
@@ -379,7 +353,6 @@ HB_FUNC_STATIC( QWEBSETTINGS_OFFLINESTORAGEPATH )
 {
   RQSTRING( QWebSettings::offlineStoragePath () );
 }
-
 
 /*
 QString offlineWebApplicationCachePath ()
@@ -389,7 +362,6 @@ HB_FUNC_STATIC( QWEBSETTINGS_OFFLINEWEBAPPLICATIONCACHEPATH )
   RQSTRING( QWebSettings::offlineWebApplicationCachePath () );
 }
 
-
 /*
 qint64 offlineWebApplicationCacheQuota ()
 */
@@ -397,7 +369,6 @@ HB_FUNC_STATIC( QWEBSETTINGS_OFFLINEWEBAPPLICATIONCACHEQUOTA )
 {
   RQINT64( QWebSettings::offlineWebApplicationCacheQuota () );
 }
-
 
 /*
 void setIconDatabasePath ( const QString & path )
@@ -408,7 +379,6 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETICONDATABASEPATH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setMaximumPagesInCache ( int pages )
 */
@@ -417,7 +387,6 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETMAXIMUMPAGESINCACHE )
   QWebSettings::setMaximumPagesInCache ( PINT(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setObjectCacheCapacities ( int cacheMinDeadCapacity, int cacheMaxDead, int totalCapacity )
@@ -428,7 +397,6 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETOBJECTCACHECAPACITIES )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setOfflineStorageDefaultQuota ( qint64 maximumSize )
 */
@@ -437,7 +405,6 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETOFFLINESTORAGEDEFAULTQUOTA )
   QWebSettings::setOfflineStorageDefaultQuota ( PQINT64(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setOfflineStoragePath ( const QString & path )
@@ -448,7 +415,6 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETOFFLINESTORAGEPATH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setOfflineWebApplicationCachePath ( const QString & path )
 */
@@ -458,7 +424,6 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETOFFLINEWEBAPPLICATIONCACHEPATH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setOfflineWebApplicationCacheQuota ( qint64 maximumSize )
 */
@@ -467,7 +432,6 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETOFFLINEWEBAPPLICATIONCACHEQUOTA )
   QWebSettings::setOfflineWebApplicationCacheQuota ( PQINT64(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setWebGraphic ( WebGraphic type, const QPixmap & graphic )
@@ -479,7 +443,6 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETWEBGRAPHIC )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QPixmap webGraphic ( WebGraphic type )
 */
@@ -489,7 +452,6 @@ HB_FUNC_STATIC( QWEBSETTINGS_WEBGRAPHIC )
   QPixmap * ptr = new QPixmap( QWebSettings::webGraphic ( (QWebSettings::WebGraphic) par1 ) );
   _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
 }
-
 
 HB_FUNC_STATIC( QWEBSETTINGS_NEWFROM )
 {
@@ -545,6 +507,5 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

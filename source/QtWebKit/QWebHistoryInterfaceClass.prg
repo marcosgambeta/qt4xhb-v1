@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -39,7 +39,6 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
 HB_FUNC_STATIC( QWEBHISTORYINTERFACE_DELETE )
 {
   QWebHistoryInterface * obj = (QWebHistoryInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -55,7 +54,6 @@ HB_FUNC_STATIC( QWEBHISTORYINTERFACE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void addHistoryEntry ( const QString & url ) = 0
 */
@@ -69,7 +67,6 @@ HB_FUNC_STATIC( QWEBHISTORYINTERFACE_ADDHISTORYENTRY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual bool historyContains ( const QString & url ) const = 0
 */
@@ -82,8 +79,6 @@ HB_FUNC_STATIC( QWEBHISTORYINTERFACE_HISTORYCONTAINS )
   }
 }
 
-
-
 /*
 QWebHistoryInterface * defaultInterface ()
 */
@@ -92,7 +87,6 @@ HB_FUNC_STATIC( QWEBHISTORYINTERFACE_DEFAULTINTERFACE )
   QWebHistoryInterface * ptr = QWebHistoryInterface::defaultInterface ();
   _qt4xhb_createReturnClass ( ptr, "QWEBHISTORYINTERFACE" );
 }
-
 
 /*
 void setDefaultInterface ( QWebHistoryInterface * defaultInterface )
@@ -103,8 +97,5 @@ HB_FUNC_STATIC( QWEBHISTORYINTERFACE_SETDEFAULTINTERFACE )
   QWebHistoryInterface::setDefaultInterface ( par1 );
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
 
 #pragma ENDDUMP

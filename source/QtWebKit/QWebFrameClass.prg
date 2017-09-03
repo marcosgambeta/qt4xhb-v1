@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -109,8 +109,6 @@ RETURN
 #include <QWebElement>
 #include <QWebSecurityOrigin>
 
-
-
 /*
 void addToJavaScriptWindowObject ( const QString & name, QObject * object )
 */
@@ -123,7 +121,6 @@ HB_FUNC_STATIC( QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT1 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void addToJavaScriptWindowObject ( const QString & name, QObject * object, QScriptEngine::ValueOwnership own )
@@ -138,7 +135,6 @@ HB_FUNC_STATIC( QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void addToJavaScriptWindowObject ( const QString & name, QObject * object )
 //[2]void addToJavaScriptWindowObject ( const QString & name, QObject * object, QScriptEngine::ValueOwnership own )
@@ -167,7 +163,6 @@ HB_FUNC_STATIC( QWEBFRAME_BASEURL )
     _qt4xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
-
 
 /*
 QList<QWebFrame *> childFrames () const
@@ -212,7 +207,6 @@ HB_FUNC_STATIC( QWEBFRAME_CHILDFRAMES )
   }
 }
 
-
 /*
 QSize contentsSize () const
 */
@@ -225,7 +219,6 @@ HB_FUNC_STATIC( QWEBFRAME_CONTENTSSIZE )
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
-
 
 /*
 QWebElement documentElement () const
@@ -240,7 +233,6 @@ HB_FUNC_STATIC( QWEBFRAME_DOCUMENTELEMENT )
   }
 }
 
-
 /*
 QWebElementCollection findAllElements ( const QString & selectorQuery ) const
 */
@@ -253,7 +245,6 @@ HB_FUNC_STATIC( QWEBFRAME_FINDALLELEMENTS )
     _qt4xhb_createReturnClass ( ptr, "QWEBELEMENTCOLLECTION", true );
   }
 }
-
 
 /*
 QWebElement findFirstElement ( const QString & selectorQuery ) const
@@ -268,7 +259,6 @@ HB_FUNC_STATIC( QWEBFRAME_FINDFIRSTELEMENT )
   }
 }
 
-
 /*
 QString frameName () const
 */
@@ -280,7 +270,6 @@ HB_FUNC_STATIC( QWEBFRAME_FRAMENAME )
     RQSTRING( obj->frameName () );
   }
 }
-
 
 /*
 QRect geometry () const
@@ -295,7 +284,6 @@ HB_FUNC_STATIC( QWEBFRAME_GEOMETRY )
   }
 }
 
-
 /*
 bool hasFocus () const
 */
@@ -307,7 +295,6 @@ HB_FUNC_STATIC( QWEBFRAME_HASFOCUS )
     RBOOL( obj->hasFocus () );
   }
 }
-
 
 /*
 QWebHitTestResult hitTestContent ( const QPoint & pos ) const
@@ -322,7 +309,6 @@ HB_FUNC_STATIC( QWEBFRAME_HITTESTCONTENT )
   }
 }
 
-
 /*
 QIcon icon () const
 */
@@ -336,7 +322,6 @@ HB_FUNC_STATIC( QWEBFRAME_ICON )
   }
 }
 
-
 /*
 void load ( const QUrl & url )
 */
@@ -349,7 +334,6 @@ HB_FUNC_STATIC( QWEBFRAME_LOAD1 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void load ( const QNetworkRequest & req, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
@@ -366,7 +350,6 @@ HB_FUNC_STATIC( QWEBFRAME_LOAD2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 //[1]void load ( const QUrl & url )
 //[2]void load ( const QNetworkRequest & req, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
 
@@ -382,7 +365,6 @@ HB_FUNC_STATIC( QWEBFRAME_LOAD )
   }
 }
 
-
 /*
 QWebPage * page () const
 */
@@ -395,7 +377,6 @@ HB_FUNC_STATIC( QWEBFRAME_PAGE )
     _qt4xhb_createReturnClass ( ptr, "QWEBPAGE" );
   }
 }
-
 
 /*
 QWebFrame * parentFrame () const
@@ -410,7 +391,6 @@ HB_FUNC_STATIC( QWEBFRAME_PARENTFRAME )
   }
 }
 
-
 /*
 QPoint pos () const
 */
@@ -423,7 +403,6 @@ HB_FUNC_STATIC( QWEBFRAME_POS )
     _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
-
 
 /*
 void render ( QPainter * painter )
@@ -438,7 +417,6 @@ HB_FUNC_STATIC( QWEBFRAME_RENDER1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void render ( QPainter * painter, const QRegion & clip )
 */
@@ -451,7 +429,6 @@ HB_FUNC_STATIC( QWEBFRAME_RENDER2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void render ( QPainter * painter, RenderLayer layer, const QRegion & clip = QRegion() )
@@ -467,7 +444,6 @@ HB_FUNC_STATIC( QWEBFRAME_RENDER3 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void render ( QPainter * painter )
 //[2]void render ( QPainter * painter, const QRegion & clip )
@@ -501,7 +477,6 @@ HB_FUNC_STATIC( QWEBFRAME_RENDERTREEDUMP )
   }
 }
 
-
 /*
 QUrl requestedUrl () const
 */
@@ -514,7 +489,6 @@ HB_FUNC_STATIC( QWEBFRAME_REQUESTEDURL )
     _qt4xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
-
 
 /*
 void scroll ( int dx, int dy )
@@ -529,7 +503,6 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLL )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QRect scrollBarGeometry ( Qt::Orientation orientation ) const
 */
@@ -543,7 +516,6 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARGEOMETRY )
   }
 }
 
-
 /*
 int scrollBarMaximum ( Qt::Orientation orientation ) const
 */
@@ -555,7 +527,6 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARMAXIMUM )
     RINT( obj->scrollBarMaximum ( (Qt::Orientation) hb_parni(1) ) );
   }
 }
-
 
 /*
 int scrollBarMinimum ( Qt::Orientation orientation ) const
@@ -569,7 +540,6 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARMINIMUM )
   }
 }
 
-
 /*
 Qt::ScrollBarPolicy scrollBarPolicy ( Qt::Orientation orientation ) const
 */
@@ -582,7 +552,6 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARPOLICY )
   }
 }
 
-
 /*
 int scrollBarValue ( Qt::Orientation orientation ) const
 */
@@ -594,7 +563,6 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARVALUE )
     RINT( obj->scrollBarValue ( (Qt::Orientation) hb_parni(1) ) );
   }
 }
-
 
 /*
 QPoint scrollPosition () const
@@ -609,7 +577,6 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLPOSITION )
   }
 }
 
-
 /*
 void scrollToAnchor ( const QString & anchor )
 */
@@ -623,7 +590,6 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLTOANCHOR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QWebSecurityOrigin securityOrigin () const
 */
@@ -636,7 +602,6 @@ HB_FUNC_STATIC( QWEBFRAME_SECURITYORIGIN )
     _qt4xhb_createReturnClass ( ptr, "QWEBSECURITYORIGIN", true );
   }
 }
-
 
 /*
 void setContent ( const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl() )
@@ -652,7 +617,6 @@ HB_FUNC_STATIC( QWEBFRAME_SETCONTENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setFocus ()
 */
@@ -665,7 +629,6 @@ HB_FUNC_STATIC( QWEBFRAME_SETFOCUS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setHtml ( const QString & html, const QUrl & baseUrl = QUrl() )
@@ -681,7 +644,6 @@ HB_FUNC_STATIC( QWEBFRAME_SETHTML )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setScrollBarPolicy ( Qt::Orientation orientation, Qt::ScrollBarPolicy policy )
 */
@@ -696,7 +658,6 @@ HB_FUNC_STATIC( QWEBFRAME_SETSCROLLBARPOLICY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setScrollBarValue ( Qt::Orientation orientation, int value )
 */
@@ -709,7 +670,6 @@ HB_FUNC_STATIC( QWEBFRAME_SETSCROLLBARVALUE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setScrollPosition ( const QPoint & pos )
@@ -724,7 +684,6 @@ HB_FUNC_STATIC( QWEBFRAME_SETSCROLLPOSITION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setTextSizeMultiplier ( qreal factor )
 */
@@ -737,7 +696,6 @@ HB_FUNC_STATIC( QWEBFRAME_SETTEXTSIZEMULTIPLIER )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setUrl ( const QUrl & url )
@@ -752,7 +710,6 @@ HB_FUNC_STATIC( QWEBFRAME_SETURL )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setZoomFactor ( qreal factor )
 */
@@ -766,7 +723,6 @@ HB_FUNC_STATIC( QWEBFRAME_SETZOOMFACTOR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 qreal textSizeMultiplier () const
 */
@@ -778,7 +734,6 @@ HB_FUNC_STATIC( QWEBFRAME_TEXTSIZEMULTIPLIER )
     RQREAL( obj->textSizeMultiplier () );
   }
 }
-
 
 /*
 QString title () const
@@ -792,7 +747,6 @@ HB_FUNC_STATIC( QWEBFRAME_TITLE )
   }
 }
 
-
 /*
 QString toHtml () const
 */
@@ -805,7 +759,6 @@ HB_FUNC_STATIC( QWEBFRAME_TOHTML )
   }
 }
 
-
 /*
 QString toPlainText () const
 */
@@ -817,7 +770,6 @@ HB_FUNC_STATIC( QWEBFRAME_TOPLAINTEXT )
     RQSTRING( obj->toPlainText () );
   }
 }
-
 
 /*
 QUrl url () const
@@ -832,7 +784,6 @@ HB_FUNC_STATIC( QWEBFRAME_URL )
   }
 }
 
-
 /*
 qreal zoomFactor () const
 */
@@ -844,7 +795,6 @@ HB_FUNC_STATIC( QWEBFRAME_ZOOMFACTOR )
     RQREAL( obj->zoomFactor () );
   }
 }
-
 
 /*
 QVariant evaluateJavaScript ( const QString & scriptSource )
@@ -859,7 +809,6 @@ HB_FUNC_STATIC( QWEBFRAME_EVALUATEJAVASCRIPT )
   }
 }
 
-
 /*
 void print ( QPrinter * printer ) const
 */
@@ -873,9 +822,5 @@ HB_FUNC_STATIC( QWEBFRAME_PRINT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -60,7 +60,6 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QWebElementCollection ( const QWebElement & contextElement, const QString & query )
 */
@@ -70,7 +69,6 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW2 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QWebElementCollection ( const QWebElementCollection & other )
 */
@@ -79,7 +77,6 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW3 )
   QWebElementCollection * o = new QWebElementCollection ( *PQWEBELEMENTCOLLECTION(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QWebElementCollection ()
 //[2]QWebElementCollection ( const QWebElement & contextElement, const QString & query )
@@ -120,7 +117,6 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void append ( const QWebElementCollection & other )
 */
@@ -133,7 +129,6 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_APPEND )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QWebElement at ( int i ) const
@@ -148,11 +143,6 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_AT )
   }
 }
 
-
-
-
-
-
 /*
 int count () const
 */
@@ -164,9 +154,6 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_COUNT )
     RINT( obj->count () );
   }
 }
-
-
-
 
 /*
 QWebElement first () const
@@ -181,7 +168,6 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_FIRST )
   }
 }
 
-
 /*
 QWebElement last () const
 */
@@ -194,7 +180,6 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_LAST )
     _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
   }
 }
-
 
 /*
 QList<QWebElement> toList () const
@@ -242,7 +227,6 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_TOLIST )
     hb_itemReturnRelease(pArray);
   }
 }
-
 
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEWFROM )
 {
@@ -298,6 +282,5 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

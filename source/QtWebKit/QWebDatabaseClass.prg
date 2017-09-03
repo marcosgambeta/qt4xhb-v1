@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -61,7 +61,6 @@ HB_FUNC_STATIC( QWEBDATABASE_NEW )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 HB_FUNC_STATIC( QWEBDATABASE_DELETE )
 {
   QWebDatabase * obj = (QWebDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -77,7 +76,6 @@ HB_FUNC_STATIC( QWEBDATABASE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString displayName () const
 */
@@ -89,7 +87,6 @@ HB_FUNC_STATIC( QWEBDATABASE_DISPLAYNAME )
     RQSTRING( obj->displayName () );
   }
 }
-
 
 /*
 qint64 expectedSize () const
@@ -103,7 +100,6 @@ HB_FUNC_STATIC( QWEBDATABASE_EXPECTEDSIZE )
   }
 }
 
-
 /*
 QString fileName () const
 */
@@ -116,7 +112,6 @@ HB_FUNC_STATIC( QWEBDATABASE_FILENAME )
   }
 }
 
-
 /*
 QString name () const
 */
@@ -128,7 +123,6 @@ HB_FUNC_STATIC( QWEBDATABASE_NAME )
     RQSTRING( obj->name () );
   }
 }
-
 
 /*
 QWebSecurityOrigin origin () const
@@ -143,7 +137,6 @@ HB_FUNC_STATIC( QWEBDATABASE_ORIGIN )
   }
 }
 
-
 /*
 qint64 size () const
 */
@@ -156,8 +149,6 @@ HB_FUNC_STATIC( QWEBDATABASE_SIZE )
   }
 }
 
-
-
 /*
 void removeAllDatabases ()
 */
@@ -167,7 +158,6 @@ HB_FUNC_STATIC( QWEBDATABASE_REMOVEALLDATABASES )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void removeDatabase ( const QWebDatabase & db )
 */
@@ -176,7 +166,6 @@ HB_FUNC_STATIC( QWEBDATABASE_REMOVEDATABASE )
   QWebDatabase::removeDatabase ( *PQWEBDATABASE(1) );
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QWEBDATABASE_NEWFROM )
 {
@@ -232,6 +221,5 @@ HB_FUNC_STATIC( QWEBDATABASE_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -50,7 +50,6 @@ HB_FUNC_STATIC( QWEBINSPECTOR_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QWEBINSPECTOR_DELETE )
 {
   QWebInspector * obj = (QWebInspector *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -66,7 +65,6 @@ HB_FUNC_STATIC( QWEBINSPECTOR_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QWebPage * page () const
 */
@@ -79,7 +77,6 @@ HB_FUNC_STATIC( QWEBINSPECTOR_PAGE )
     _qt4xhb_createReturnClass ( ptr, "QWEBPAGE" );
   }
 }
-
 
 /*
 void setPage ( QWebPage * page )
@@ -95,7 +92,6 @@ HB_FUNC_STATIC( QWEBINSPECTOR_SETPAGE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual bool event ( QEvent * ev )
 */
@@ -107,7 +103,6 @@ HB_FUNC_STATIC( QWEBINSPECTOR_EVENT )
     RBOOL( obj->event ( PQEVENT(1) ) );
   }
 }
-
 
 /*
 virtual QSize sizeHint () const
@@ -121,8 +116,5 @@ HB_FUNC_STATIC( QWEBINSPECTOR_SIZEHINT )
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
-
-
-
 
 #pragma ENDDUMP
