@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -66,7 +66,6 @@ HB_FUNC_STATIC( QUILOADER_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QUILOADER_DELETE )
 {
   QUiLoader * obj = (QUiLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -82,7 +81,6 @@ HB_FUNC_STATIC( QUILOADER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void addPluginPath ( const QString & path )
 */
@@ -96,7 +94,6 @@ HB_FUNC_STATIC( QUILOADER_ADDPLUGINPATH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QStringList availableLayouts () const
 */
@@ -109,7 +106,6 @@ HB_FUNC_STATIC( QUILOADER_AVAILABLELAYOUTS )
   }
 }
 
-
 /*
 QStringList availableWidgets () const
 */
@@ -121,7 +117,6 @@ HB_FUNC_STATIC( QUILOADER_AVAILABLEWIDGETS )
     RQSTRINGLIST( obj->availableWidgets () );
   }
 }
-
 
 /*
 void clearPluginPaths ()
@@ -136,7 +131,6 @@ HB_FUNC_STATIC( QUILOADER_CLEARPLUGINPATHS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QAction * createAction ( QObject * parent = 0, const QString & name = QString() )
 */
@@ -149,7 +143,6 @@ HB_FUNC_STATIC( QUILOADER_CREATEACTION )
     _qt4xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
-
 
 /*
 virtual QActionGroup * createActionGroup ( QObject * parent = 0, const QString & name = QString() )
@@ -164,7 +157,6 @@ HB_FUNC_STATIC( QUILOADER_CREATEACTIONGROUP )
   }
 }
 
-
 /*
 virtual QLayout * createLayout ( const QString & className, QObject * parent = 0, const QString & name = QString() )
 */
@@ -177,7 +169,6 @@ HB_FUNC_STATIC( QUILOADER_CREATELAYOUT )
     _qt4xhb_createReturnClass ( ptr, "QLAYOUT" );
   }
 }
-
 
 /*
 virtual QWidget * createWidget ( const QString & className, QWidget * parent = 0, const QString & name = QString() )
@@ -192,7 +183,6 @@ HB_FUNC_STATIC( QUILOADER_CREATEWIDGET )
   }
 }
 
-
 /*
 bool isLanguageChangeEnabled () const
 */
@@ -204,7 +194,6 @@ HB_FUNC_STATIC( QUILOADER_ISLANGUAGECHANGEENABLED )
     RBOOL( obj->isLanguageChangeEnabled () );
   }
 }
-
 
 /*
 QWidget * load ( QIODevice * device, QWidget * parentWidget = 0 )
@@ -219,7 +208,6 @@ HB_FUNC_STATIC( QUILOADER_LOAD )
   }
 }
 
-
 /*
 QStringList pluginPaths () const
 */
@@ -231,7 +219,6 @@ HB_FUNC_STATIC( QUILOADER_PLUGINPATHS )
     RQSTRINGLIST( obj->pluginPaths () );
   }
 }
-
 
 /*
 void setLanguageChangeEnabled ( bool enabled )
@@ -246,7 +233,6 @@ HB_FUNC_STATIC( QUILOADER_SETLANGUAGECHANGEENABLED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setWorkingDirectory ( const QDir & dir )
 */
@@ -260,7 +246,6 @@ HB_FUNC_STATIC( QUILOADER_SETWORKINGDIRECTORY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QDir workingDirectory () const
 */
@@ -273,8 +258,5 @@ HB_FUNC_STATIC( QUILOADER_WORKINGDIRECTORY )
     _qt4xhb_createReturnClass ( ptr, "QDIR", true );
   }
 }
-
-
-
 
 #pragma ENDDUMP
