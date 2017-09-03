@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -70,7 +70,6 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QAudioDeviceInfo ( const QAudioDeviceInfo & other )
 */
@@ -79,7 +78,6 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_NEW2 )
   QAudioDeviceInfo * o = new QAudioDeviceInfo ( *PQAUDIODEVICEINFO(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QAudioDeviceInfo ()
 //[2]QAudioDeviceInfo ( const QAudioDeviceInfo & other )
@@ -115,7 +113,6 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString deviceName () const
 */
@@ -127,7 +124,6 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_DEVICENAME )
     RQSTRING( obj->deviceName () );
   }
 }
-
 
 /*
 bool isFormatSupported ( const QAudioFormat & settings ) const
@@ -141,7 +137,6 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_ISFORMATSUPPORTED )
   }
 }
 
-
 /*
 bool isNull () const
 */
@@ -153,7 +148,6 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_ISNULL )
     RBOOL( obj->isNull () );
   }
 }
-
 
 /*
 QAudioFormat nearestFormat ( const QAudioFormat & settings ) const
@@ -168,7 +162,6 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_NEARESTFORMAT )
   }
 }
 
-
 /*
 QAudioFormat preferredFormat () const
 */
@@ -181,7 +174,6 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_PREFERREDFORMAT )
     _qt4xhb_createReturnClass ( ptr, "QAUDIOFORMAT" );
   }
 }
-
 
 /*
 QList<int> supportedFrequencies() const
@@ -205,7 +197,6 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDFREQUENCIES )
   }
 }
 
-
 /*
 QList<int> supportedSampleRates () const
 */
@@ -227,7 +218,6 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDSAMPLERATES )
     hb_itemReturnRelease(pArray);
   }
 }
-
 
 /*
 QList<int> supportedChannels() const
@@ -251,7 +241,6 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDCHANNELS )
   }
 }
 
-
 /*
 QList<int> supportedChannelCounts () const
 */
@@ -273,7 +262,6 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDCHANNELCOUNTS )
     hb_itemReturnRelease(pArray);
   }
 }
-
 
 /*
 QList<int> supportedSampleSizes () const
@@ -297,7 +285,6 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDSAMPLESIZES )
   }
 }
 
-
 /*
 QList<QAudioFormat::Endian> supportedByteOrders () const
 */
@@ -319,7 +306,6 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDBYTEORDERS )
     hb_itemReturnRelease(pArray);
   }
 }
-
 
 /*
 QList<QAudioFormat::SampleType> supportedSampleTypes () const
@@ -343,7 +329,6 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDSAMPLETYPES )
   }
 }
 
-
 /*
 QStringList supportedCodecs () const
 */
@@ -355,8 +340,6 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDCODECS )
     RQSTRINGLIST( obj->supportedCodecs () );
   }
 }
-
-
 
 /*
 QList<QAudioDeviceInfo> availableDevices ( QAudio::Mode mode )
@@ -397,7 +380,6 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_AVAILABLEDEVICES )
   hb_itemReturnRelease(pArray);
 }
 
-
 /*
 QAudioDeviceInfo defaultInputDevice ()
 */
@@ -407,7 +389,6 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_DEFAULTINPUTDEVICE )
   _qt4xhb_createReturnClass ( ptr, "QAUDIODEVICEINFO" );
 }
 
-
 /*
 QAudioDeviceInfo defaultOutputDevice ()
 */
@@ -416,7 +397,6 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_DEFAULTOUTPUTDEVICE )
   QAudioDeviceInfo * ptr = new QAudioDeviceInfo( QAudioDeviceInfo::defaultOutputDevice () );
   _qt4xhb_createReturnClass ( ptr, "QAUDIODEVICEINFO" );
 }
-
 
 HB_FUNC_STATIC( QAUDIODEVICEINFO_NEWFROM )
 {
@@ -472,6 +452,5 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

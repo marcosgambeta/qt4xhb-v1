@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -49,7 +49,6 @@ RETURN
 
 #include <QVideoSurfaceFormat>
 
-
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_DELETE )
 {
   QAbstractVideoSurface * obj = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -65,7 +64,6 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 Error error () const
 */
@@ -77,7 +75,6 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ERROR )
     hb_retni( (int) obj->error () );
   }
 }
-
 
 /*
 bool isActive () const
@@ -91,7 +88,6 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ISACTIVE )
   }
 }
 
-
 /*
 virtual bool isFormatSupported ( const QVideoSurfaceFormat & format ) const
 */
@@ -103,7 +99,6 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ISFORMATSUPPORTED )
     RBOOL( obj->isFormatSupported ( *PQVIDEOSURFACEFORMAT(1) ) );
   }
 }
-
 
 /*
 virtual QVideoSurfaceFormat nearestFormat ( const QVideoSurfaceFormat & format ) const
@@ -118,7 +113,6 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_NEARESTFORMAT )
   }
 }
 
-
 /*
 virtual bool present ( const QVideoFrame & frame ) = 0
 */
@@ -130,7 +124,6 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_PRESENT )
     RBOOL( obj->present ( *PQVIDEOFRAME(1) ) );
   }
 }
-
 
 /*
 virtual bool start ( const QVideoSurfaceFormat & format )
@@ -144,7 +137,6 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_START )
   }
 }
 
-
 /*
 virtual void stop ()
 */
@@ -157,7 +149,6 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_STOP )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual QList<QVideoFrame::PixelFormat> supportedPixelFormats ( QAbstractVideoBuffer::HandleType type = QAbstractVideoBuffer::NoHandle ) const = 0
@@ -181,7 +172,6 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_SUPPORTEDPIXELFORMATS )
   }
 }
 
-
 /*
 QVideoSurfaceFormat surfaceFormat () const
 */
@@ -194,10 +184,5 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_SURFACEFORMAT )
     _qt4xhb_createReturnClass ( ptr, "QVIDEOSURFACEFORMAT", true );
   }
 }
-
-
-
-
-
 
 #pragma ENDDUMP

@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -84,7 +84,6 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QVideoSurfaceFormat ( const QSize & size, QVideoFrame::PixelFormat format, QAbstractVideoBuffer::HandleType type = QAbstractVideoBuffer::NoHandle )
 */
@@ -94,7 +93,6 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_NEW2 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QVideoSurfaceFormat ( const QVideoSurfaceFormat & other )
 */
@@ -103,7 +101,6 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_NEW3 )
   QVideoSurfaceFormat * o = new QVideoSurfaceFormat ( *PQVIDEOSURFACEFORMAT(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QVideoSurfaceFormat ()
 //[2]QVideoSurfaceFormat ( const QSize & size, QVideoFrame::PixelFormat format, QAbstractVideoBuffer::HandleType type = QAbstractVideoBuffer::NoHandle )
@@ -144,7 +141,6 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int frameHeight () const
 */
@@ -157,7 +153,6 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_FRAMEHEIGHT )
   }
 }
 
-
 /*
 qreal frameRate () const
 */
@@ -169,7 +164,6 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_FRAMERATE )
     RQREAL( obj->frameRate () );
   }
 }
-
 
 /*
 QSize frameSize () const
@@ -184,7 +178,6 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_FRAMESIZE )
   }
 }
 
-
 /*
 int frameWidth () const
 */
@@ -196,7 +189,6 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_FRAMEWIDTH )
     RINT( obj->frameWidth () );
   }
 }
-
 
 /*
 QAbstractVideoBuffer::HandleType handleType () const
@@ -210,7 +202,6 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_HANDLETYPE )
   }
 }
 
-
 /*
 bool isValid () const
 */
@@ -222,7 +213,6 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_ISVALID )
     RBOOL( obj->isValid () );
   }
 }
-
 
 /*
 QSize pixelAspectRatio () const
@@ -237,7 +227,6 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_PIXELASPECTRATIO )
   }
 }
 
-
 /*
 QVideoFrame::PixelFormat pixelFormat () const
 */
@@ -249,7 +238,6 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_PIXELFORMAT )
     hb_retni( (int) obj->pixelFormat () );
   }
 }
-
 
 /*
 QVariant property ( const char * name ) const
@@ -263,7 +251,6 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_PROPERTY )
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
-
 
 /*
 QList<QByteArray> propertyNames () const
@@ -308,7 +295,6 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_PROPERTYNAMES )
   }
 }
 
-
 /*
 Direction scanLineDirection () const
 */
@@ -320,7 +306,6 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SCANLINEDIRECTION )
     hb_retni( (int) obj->scanLineDirection () );
   }
 }
-
 
 /*
 void setFrameRate ( qreal rate )
@@ -335,7 +320,6 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETFRAMERATE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setFrameSize ( const QSize & size )
 */
@@ -349,7 +333,6 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETFRAMESIZE1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setFrameSize ( int width, int height )
 */
@@ -362,7 +345,6 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETFRAMESIZE2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setFrameSize ( const QSize & size )
 //[2]void setFrameSize ( int width, int height )
@@ -392,7 +374,6 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETPIXELASPECTRATIO1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPixelAspectRatio ( int horizontal, int vertical )
 */
@@ -405,7 +386,6 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETPIXELASPECTRATIO2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setPixelAspectRatio ( const QSize & ratio )
 //[2]void setPixelAspectRatio ( int horizontal, int vertical )
@@ -435,7 +415,6 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETPROPERTY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setScanLineDirection ( Direction direction )
 */
@@ -448,7 +427,6 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETSCANLINEDIRECTION )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setViewport ( const QRect & viewport )
@@ -463,7 +441,6 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETVIEWPORT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setYCbCrColorSpace ( YCbCrColorSpace space )
 */
@@ -476,7 +453,6 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETYCBCRCOLORSPACE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QSize sizeHint () const
@@ -491,7 +467,6 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SIZEHINT )
   }
 }
 
-
 /*
 QRect viewport () const
 */
@@ -505,7 +480,6 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_VIEWPORT )
   }
 }
 
-
 /*
 YCbCrColorSpace yCbCrColorSpace () const
 */
@@ -517,7 +491,6 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_YCBCRCOLORSPACE )
     hb_retni( (int) obj->yCbCrColorSpace () );
   }
 }
-
 
 HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_NEWFROM )
 {
@@ -573,7 +546,5 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

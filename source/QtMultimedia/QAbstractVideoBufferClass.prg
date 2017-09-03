@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -49,7 +49,6 @@ RETURN
 
 #include <QVariant>
 
-
 HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_DELETE )
 {
   QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -65,7 +64,6 @@ HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QVariant handle () const
 */
@@ -79,7 +77,6 @@ HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_HANDLE )
   }
 }
 
-
 /*
 HandleType handleType () const
 */
@@ -91,7 +88,6 @@ HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_HANDLETYPE )
     hb_retni( (int) obj->handleType () );
   }
 }
-
 
 /*
 virtual uchar * map ( MapMode mode, int * numBytes, int * bytesPerLine ) = 0
@@ -110,7 +106,6 @@ HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_MAP )
   }
 }
 
-
 /*
 virtual MapMode mapMode () const = 0
 */
@@ -122,7 +117,6 @@ HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_MAPMODE )
     hb_retni( (int) obj->mapMode () );
   }
 }
-
 
 /*
 virtual void unmap () = 0
@@ -136,7 +130,6 @@ HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_UNMAP )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_NEWFROM )
 {
@@ -192,7 +185,5 @@ HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

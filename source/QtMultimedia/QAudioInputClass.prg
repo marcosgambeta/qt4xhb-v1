@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -69,7 +69,6 @@ HB_FUNC_STATIC( QAUDIOINPUT_NEW1 ) // TODO: revisar parametro 1 e corrigir(?)
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QAudioInput ( const QAudioDeviceInfo & audioDevice, const QAudioFormat & format = QAudioFormat(), QObject * parent = 0 )
 */
@@ -79,7 +78,6 @@ HB_FUNC_STATIC( QAUDIOINPUT_NEW2 )
   QAudioInput * o = new QAudioInput ( *PQAUDIODEVICEINFO(1), par2, OPQOBJECT(3,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QAudioInput ( const QAudioFormat & format = QAudioFormat(), QObject * parent = 0 )
 //[2]QAudioInput ( const QAudioDeviceInfo & audioDevice, const QAudioFormat & format = QAudioFormat(), QObject * parent = 0 )
@@ -115,7 +113,6 @@ HB_FUNC_STATIC( QAUDIOINPUT_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int bufferSize () const
 */
@@ -127,7 +124,6 @@ HB_FUNC_STATIC( QAUDIOINPUT_BUFFERSIZE )
     RINT( obj->bufferSize () );
   }
 }
-
 
 /*
 int bytesReady () const
@@ -141,7 +137,6 @@ HB_FUNC_STATIC( QAUDIOINPUT_BYTESREADY )
   }
 }
 
-
 /*
 qint64 elapsedUSecs () const
 */
@@ -154,7 +149,6 @@ HB_FUNC_STATIC( QAUDIOINPUT_ELAPSEDUSECS )
   }
 }
 
-
 /*
 QAudio::Error error () const
 */
@@ -166,7 +160,6 @@ HB_FUNC_STATIC( QAUDIOINPUT_ERROR )
     hb_retni( (int) obj->error () );
   }
 }
-
 
 /*
 QAudioFormat format () const
@@ -181,7 +174,6 @@ HB_FUNC_STATIC( QAUDIOINPUT_FORMAT )
   }
 }
 
-
 /*
 int notifyInterval () const
 */
@@ -193,7 +185,6 @@ HB_FUNC_STATIC( QAUDIOINPUT_NOTIFYINTERVAL )
     RINT( obj->notifyInterval () );
   }
 }
-
 
 /*
 int periodSize () const
@@ -207,7 +198,6 @@ HB_FUNC_STATIC( QAUDIOINPUT_PERIODSIZE )
   }
 }
 
-
 /*
 qint64 processedUSecs () const
 */
@@ -219,7 +209,6 @@ HB_FUNC_STATIC( QAUDIOINPUT_PROCESSEDUSECS )
     RQINT64( obj->processedUSecs () );
   }
 }
-
 
 /*
 void reset ()
@@ -234,7 +223,6 @@ HB_FUNC_STATIC( QAUDIOINPUT_RESET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void resume ()
 */
@@ -247,7 +235,6 @@ HB_FUNC_STATIC( QAUDIOINPUT_RESUME )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setBufferSize ( int value )
@@ -262,7 +249,6 @@ HB_FUNC_STATIC( QAUDIOINPUT_SETBUFFERSIZE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setNotifyInterval ( int ms )
 */
@@ -275,7 +261,6 @@ HB_FUNC_STATIC( QAUDIOINPUT_SETNOTIFYINTERVAL )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void start ( QIODevice * device )
@@ -290,7 +275,6 @@ HB_FUNC_STATIC( QAUDIOINPUT_START1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QIODevice * start ()
 */
@@ -303,7 +287,6 @@ HB_FUNC_STATIC( QAUDIOINPUT_START2 )
     _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );
   }
 }
-
 
 //[1]void start ( QIODevice * device )
 //[2]QIODevice * start ()
@@ -332,7 +315,6 @@ HB_FUNC_STATIC( QAUDIOINPUT_STATE )
   }
 }
 
-
 /*
 void stop ()
 */
@@ -346,7 +328,6 @@ HB_FUNC_STATIC( QAUDIOINPUT_STOP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void suspend ()
 */
@@ -359,10 +340,5 @@ HB_FUNC_STATIC( QAUDIOINPUT_SUSPEND )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
-
 
 #pragma ENDDUMP

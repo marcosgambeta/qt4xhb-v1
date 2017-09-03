@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QAudioFormat
 
@@ -67,7 +66,6 @@ HB_FUNC_STATIC( QAUDIOFORMAT_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QAudioFormat ( const QAudioFormat & other )
 */
@@ -76,7 +74,6 @@ HB_FUNC_STATIC( QAUDIOFORMAT_NEW2 )
   QAudioFormat * o = new QAudioFormat ( *PQAUDIOFORMAT(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QAudioFormat ()
 //[2]QAudioFormat ( const QAudioFormat & other )
@@ -112,7 +109,6 @@ HB_FUNC_STATIC( QAUDIOFORMAT_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool isValid () const
 */
@@ -124,7 +120,6 @@ HB_FUNC_STATIC( QAUDIOFORMAT_ISVALID )
     RBOOL( obj->isValid () );
   }
 }
-
 
 /*
 void setFrequency(int frequency)
@@ -139,7 +134,6 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SETFREQUENCY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int frequency() const
 */
@@ -151,7 +145,6 @@ HB_FUNC_STATIC( QAUDIOFORMAT_FREQUENCY )
     RINT( obj->frequency () );
   }
 }
-
 
 /*
 void setSampleRate ( int samplerate )
@@ -166,7 +159,6 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SETSAMPLERATE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int sampleRate () const
 */
@@ -178,7 +170,6 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SAMPLERATE )
     RINT( obj->sampleRate () );
   }
 }
-
 
 /*
 void setChannels(int channels)
@@ -193,7 +184,6 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SETCHANNELS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int channels() const
 */
@@ -205,7 +195,6 @@ HB_FUNC_STATIC( QAUDIOFORMAT_CHANNELS )
     RINT( obj->channels () );
   }
 }
-
 
 /*
 void setChannelCount(int channelCount)
@@ -220,7 +209,6 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SETCHANNELCOUNT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int channelCount() const
 */
@@ -232,7 +220,6 @@ HB_FUNC_STATIC( QAUDIOFORMAT_CHANNELCOUNT )
     RINT( obj->channelCount () );
   }
 }
-
 
 /*
 void setSampleSize ( int sampleSize )
@@ -247,7 +234,6 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SETSAMPLESIZE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int sampleSize () const
 */
@@ -259,7 +245,6 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SAMPLESIZE )
     RINT( obj->sampleSize () );
   }
 }
-
 
 /*
 void setCodec ( const QString & codec )
@@ -274,7 +259,6 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SETCODEC )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString codec () const
 */
@@ -286,7 +270,6 @@ HB_FUNC_STATIC( QAUDIOFORMAT_CODEC )
     RQSTRING( obj->codec () );
   }
 }
-
 
 /*
 void setByteOrder ( QAudioFormat::Endian byteOrder )
@@ -301,7 +284,6 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SETBYTEORDER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QAudioFormat::Endian byteOrder () const
 */
@@ -313,7 +295,6 @@ HB_FUNC_STATIC( QAUDIOFORMAT_BYTEORDER )
     hb_retni( (int) obj->byteOrder () );
   }
 }
-
 
 /*
 QAudioFormat::SampleType sampleType () const
@@ -327,7 +308,6 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SAMPLETYPE )
   }
 }
 
-
 /*
 void setSampleType ( QAudioFormat::SampleType sampleType )
 */
@@ -340,7 +320,6 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SETSAMPLETYPE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QAUDIOFORMAT_NEWFROM )
 {
@@ -396,7 +375,5 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

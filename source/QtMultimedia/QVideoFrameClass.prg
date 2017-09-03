@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -86,7 +86,6 @@ HB_FUNC_STATIC( QVIDEOFRAME_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QVideoFrame ( QAbstractVideoBuffer * buffer, const QSize & size, PixelFormat format )
 */
@@ -95,7 +94,6 @@ HB_FUNC_STATIC( QVIDEOFRAME_NEW2 )
   QVideoFrame * o = new QVideoFrame ( PQABSTRACTVIDEOBUFFER(1), *PQSIZE(2), (QVideoFrame::PixelFormat) hb_parni(3) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QVideoFrame ( int bytes, const QSize & size, int bytesPerLine, PixelFormat format )
@@ -106,7 +104,6 @@ HB_FUNC_STATIC( QVIDEOFRAME_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QVideoFrame ( const QImage & image )
 */
@@ -116,7 +113,6 @@ HB_FUNC_STATIC( QVIDEOFRAME_NEW4 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QVideoFrame ( const QVideoFrame & other )
 */
@@ -125,7 +121,6 @@ HB_FUNC_STATIC( QVIDEOFRAME_NEW5 )
   QVideoFrame * o = new QVideoFrame ( *PQVIDEOFRAME(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QVideoFrame ()
 //[2]QVideoFrame ( QAbstractVideoBuffer * buffer, const QSize & size, PixelFormat format )
@@ -176,7 +171,6 @@ HB_FUNC_STATIC( QVIDEOFRAME_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 uchar * bits ()
 */
@@ -190,7 +184,6 @@ HB_FUNC_STATIC( QVIDEOFRAME_BITS1 )
   }
 }
 
-
 /*
 const uchar * bits () const
 */
@@ -203,7 +196,6 @@ HB_FUNC_STATIC( QVIDEOFRAME_BITS2 )
     _qt4xhb_createReturnClass ( ptr, "UCHAR" );
   }
 }
-
 
 //[1]uchar * bits ()
 //[2]const uchar * bits () const
@@ -225,7 +217,6 @@ HB_FUNC_STATIC( QVIDEOFRAME_BYTESPERLINE )
   }
 }
 
-
 /*
 qint64 endTime () const
 */
@@ -238,7 +229,6 @@ HB_FUNC_STATIC( QVIDEOFRAME_ENDTIME )
   }
 }
 
-
 /*
 FieldType fieldType () const
 */
@@ -250,7 +240,6 @@ HB_FUNC_STATIC( QVIDEOFRAME_FIELDTYPE )
     hb_retni( (int) obj->fieldType () );
   }
 }
-
 
 /*
 QVariant handle () const
@@ -265,7 +254,6 @@ HB_FUNC_STATIC( QVIDEOFRAME_HANDLE )
   }
 }
 
-
 /*
 QAbstractVideoBuffer::HandleType handleType () const
 */
@@ -277,7 +265,6 @@ HB_FUNC_STATIC( QVIDEOFRAME_HANDLETYPE )
     hb_retni( (int) obj->handleType () );
   }
 }
-
 
 /*
 int height () const
@@ -291,7 +278,6 @@ HB_FUNC_STATIC( QVIDEOFRAME_HEIGHT )
   }
 }
 
-
 /*
 bool isMapped () const
 */
@@ -303,7 +289,6 @@ HB_FUNC_STATIC( QVIDEOFRAME_ISMAPPED )
     RBOOL( obj->isMapped () );
   }
 }
-
 
 /*
 bool isReadable () const
@@ -317,7 +302,6 @@ HB_FUNC_STATIC( QVIDEOFRAME_ISREADABLE )
   }
 }
 
-
 /*
 bool isValid () const
 */
@@ -329,7 +313,6 @@ HB_FUNC_STATIC( QVIDEOFRAME_ISVALID )
     RBOOL( obj->isValid () );
   }
 }
-
 
 /*
 bool isWritable () const
@@ -343,7 +326,6 @@ HB_FUNC_STATIC( QVIDEOFRAME_ISWRITABLE )
   }
 }
 
-
 /*
 bool map ( QAbstractVideoBuffer::MapMode mode )
 */
@@ -355,7 +337,6 @@ HB_FUNC_STATIC( QVIDEOFRAME_MAP )
     RBOOL( obj->map ( (QAbstractVideoBuffer::MapMode) hb_parni(1) ) );
   }
 }
-
 
 /*
 QAbstractVideoBuffer::MapMode mapMode () const
@@ -369,7 +350,6 @@ HB_FUNC_STATIC( QVIDEOFRAME_MAPMODE )
   }
 }
 
-
 /*
 int mappedBytes () const
 */
@@ -382,7 +362,6 @@ HB_FUNC_STATIC( QVIDEOFRAME_MAPPEDBYTES )
   }
 }
 
-
 /*
 PixelFormat pixelFormat () const
 */
@@ -394,7 +373,6 @@ HB_FUNC_STATIC( QVIDEOFRAME_PIXELFORMAT )
     hb_retni( (int) obj->pixelFormat () );
   }
 }
-
 
 /*
 void setEndTime ( qint64 time )
@@ -409,7 +387,6 @@ HB_FUNC_STATIC( QVIDEOFRAME_SETENDTIME )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setFieldType ( FieldType field )
 */
@@ -422,7 +399,6 @@ HB_FUNC_STATIC( QVIDEOFRAME_SETFIELDTYPE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setStartTime ( qint64 time )
@@ -437,7 +413,6 @@ HB_FUNC_STATIC( QVIDEOFRAME_SETSTARTTIME )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QSize size () const
 */
@@ -451,7 +426,6 @@ HB_FUNC_STATIC( QVIDEOFRAME_SIZE )
   }
 }
 
-
 /*
 qint64 startTime () const
 */
@@ -463,7 +437,6 @@ HB_FUNC_STATIC( QVIDEOFRAME_STARTTIME )
     RQINT64( obj->startTime () );
   }
 }
-
 
 /*
 void unmap ()
@@ -478,7 +451,6 @@ HB_FUNC_STATIC( QVIDEOFRAME_UNMAP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int width () const
 */
@@ -491,8 +463,6 @@ HB_FUNC_STATIC( QVIDEOFRAME_WIDTH )
   }
 }
 
-
-
 /*
 QImage::Format imageFormatFromPixelFormat ( PixelFormat format )
 */
@@ -501,7 +471,6 @@ HB_FUNC_STATIC( QVIDEOFRAME_IMAGEFORMATFROMPIXELFORMAT )
   hb_retni( (int) QVideoFrame::imageFormatFromPixelFormat ( (QVideoFrame::PixelFormat) hb_parni(1) ) );
 }
 
-
 /*
 PixelFormat pixelFormatFromImageFormat ( QImage::Format format )
 */
@@ -509,7 +478,6 @@ HB_FUNC_STATIC( QVIDEOFRAME_PIXELFORMATFROMIMAGEFORMAT )
 {
   hb_retni( (int) QVideoFrame::pixelFormatFromImageFormat ( (QImage::Format) hb_parni(1) ) );
 }
-
 
 HB_FUNC_STATIC( QVIDEOFRAME_NEWFROM )
 {
@@ -565,6 +533,5 @@ HB_FUNC_STATIC( QVIDEOFRAME_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP
