@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QTestEventList
 
@@ -68,7 +67,6 @@ HB_FUNC_STATIC( QTESTEVENTLIST_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QTestEventList ( const QTestEventList & other )
 */
@@ -77,7 +75,6 @@ HB_FUNC_STATIC( QTESTEVENTLIST_NEW2 )
   QTestEventList * o = new QTestEventList ( *PQTESTEVENTLIST(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QTestEventList ()
 //[2]QTestEventList ( const QTestEventList & other )
@@ -113,7 +110,6 @@ HB_FUNC_STATIC( QTESTEVENTLIST_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void addDelay ( int msecs )
 */
@@ -126,7 +122,6 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDDELAY )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void addKeyClick ( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
@@ -141,7 +136,6 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYCLICK1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void addKeyClick ( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
 */
@@ -155,7 +149,6 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYCLICK2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void addKeyClick ( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
 //[2]void addKeyClick ( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
@@ -185,7 +178,6 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYCLICKS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void addKeyPress ( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
 */
@@ -198,7 +190,6 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYPRESS1 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void addKeyPress ( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
@@ -213,7 +204,6 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYPRESS2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void addKeyPress ( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
 //[2]void addKeyPress ( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
@@ -243,7 +233,6 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYRELEASE1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void addKeyRelease ( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
 */
@@ -257,7 +246,6 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYRELEASE2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void addKeyRelease ( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
 //[2]void addKeyRelease ( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
@@ -289,7 +277,6 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDMOUSECLICK )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void addMouseDClick ( Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1 )
 */
@@ -305,7 +292,6 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDMOUSEDCLICK )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void addMouseMove ( QPoint pos = QPoint(), int delay = -1 )
 */
@@ -319,7 +305,6 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDMOUSEMOVE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void addMousePress ( Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1 )
@@ -336,7 +321,6 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDMOUSEPRESS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void addMouseRelease ( Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1 )
 */
@@ -352,7 +336,6 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDMOUSERELEASE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void clear ()
 */
@@ -366,7 +349,6 @@ HB_FUNC_STATIC( QTESTEVENTLIST_CLEAR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void simulate ( QWidget * w )
 */
@@ -379,7 +361,6 @@ HB_FUNC_STATIC( QTESTEVENTLIST_SIMULATE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QTESTEVENTLIST_NEWFROM )
 {
@@ -435,7 +416,5 @@ HB_FUNC_STATIC( QTESTEVENTLIST_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP
