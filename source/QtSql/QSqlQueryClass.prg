@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -102,7 +102,6 @@ HB_FUNC_STATIC( QSQLQUERY_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QSqlQuery ( const QString & query = QString(), QSqlDatabase db = QSqlDatabase() )
 */
@@ -112,7 +111,6 @@ HB_FUNC_STATIC( QSQLQUERY_NEW2 )
   QSqlQuery * o = new QSqlQuery ( OPQSTRING(1,QString()), par2 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QSqlQuery ( QSqlDatabase db )
@@ -124,7 +122,6 @@ HB_FUNC_STATIC( QSQLQUERY_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QSqlQuery ( const QSqlQuery & other )
 */
@@ -133,7 +130,6 @@ HB_FUNC_STATIC( QSQLQUERY_NEW4 )
   QSqlQuery * o = new QSqlQuery ( *PQSQLQUERY(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QSqlQuery ( QSqlResult * result )
 //[2]QSqlQuery ( const QString & query = QString(), QSqlDatabase db = QSqlDatabase() )
@@ -179,7 +175,6 @@ HB_FUNC_STATIC( QSQLQUERY_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void addBindValue ( const QVariant & val, QSql::ParamType paramType = QSql::In )
 */
@@ -193,7 +188,6 @@ HB_FUNC_STATIC( QSQLQUERY_ADDBINDVALUE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int at () const
 */
@@ -205,7 +199,6 @@ HB_FUNC_STATIC( QSQLQUERY_AT )
     RINT( obj->at () );
   }
 }
-
 
 /*
 void bindValue ( const QString & placeholder, const QVariant & val, QSql::ParamType paramType = QSql::In )
@@ -220,7 +213,6 @@ HB_FUNC_STATIC( QSQLQUERY_BINDVALUE1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void bindValue ( int pos, const QVariant & val, QSql::ParamType paramType = QSql::In )
 */
@@ -233,7 +225,6 @@ HB_FUNC_STATIC( QSQLQUERY_BINDVALUE2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void bindValue ( const QString & placeholder, const QVariant & val, QSql::ParamType paramType = QSql::In )
 //[2]void bindValue ( int pos, const QVariant & val, QSql::ParamType paramType = QSql::In )
@@ -263,7 +254,6 @@ HB_FUNC_STATIC( QSQLQUERY_BOUNDVALUE1 )
   }
 }
 
-
 /*
 QVariant boundValue ( int pos ) const
 */
@@ -276,7 +266,6 @@ HB_FUNC_STATIC( QSQLQUERY_BOUNDVALUE2 )
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
-
 
 //[1]QVariant boundValue ( const QString & placeholder ) const
 //[2]QVariant boundValue ( int pos ) const
@@ -293,7 +282,6 @@ HB_FUNC_STATIC( QSQLQUERY_BOUNDVALUE )
   }
 }
 
-
 /*
 void clear ()
 */
@@ -306,7 +294,6 @@ HB_FUNC_STATIC( QSQLQUERY_CLEAR )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 const QSqlDriver * driver () const
@@ -321,7 +308,6 @@ HB_FUNC_STATIC( QSQLQUERY_DRIVER )
   }
 }
 
-
 /*
 bool exec ( const QString & query )
 */
@@ -334,7 +320,6 @@ HB_FUNC_STATIC( QSQLQUERY_EXEC1 )
   }
 }
 
-
 /*
 bool exec ()
 */
@@ -346,7 +331,6 @@ HB_FUNC_STATIC( QSQLQUERY_EXEC2 )
     RBOOL( obj->exec () );
   }
 }
-
 
 //[1]bool exec ( const QString & query )
 //[2]bool exec ()
@@ -375,7 +359,6 @@ HB_FUNC_STATIC( QSQLQUERY_EXECBATCH )
   }
 }
 
-
 /*
 QString executedQuery () const
 */
@@ -387,7 +370,6 @@ HB_FUNC_STATIC( QSQLQUERY_EXECUTEDQUERY )
     RQSTRING( obj->executedQuery () );
   }
 }
-
 
 /*
 void finish ()
@@ -402,7 +384,6 @@ HB_FUNC_STATIC( QSQLQUERY_FINISH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool first ()
 */
@@ -414,7 +395,6 @@ HB_FUNC_STATIC( QSQLQUERY_FIRST )
     RBOOL( obj->first () );
   }
 }
-
 
 /*
 bool isActive () const
@@ -428,7 +408,6 @@ HB_FUNC_STATIC( QSQLQUERY_ISACTIVE )
   }
 }
 
-
 /*
 bool isForwardOnly () const
 */
@@ -440,7 +419,6 @@ HB_FUNC_STATIC( QSQLQUERY_ISFORWARDONLY )
     RBOOL( obj->isForwardOnly () );
   }
 }
-
 
 /*
 bool isNull ( int field ) const
@@ -454,7 +432,6 @@ HB_FUNC_STATIC( QSQLQUERY_ISNULL )
   }
 }
 
-
 /*
 bool isSelect () const
 */
@@ -466,7 +443,6 @@ HB_FUNC_STATIC( QSQLQUERY_ISSELECT )
     RBOOL( obj->isSelect () );
   }
 }
-
 
 /*
 bool isValid () const
@@ -480,7 +456,6 @@ HB_FUNC_STATIC( QSQLQUERY_ISVALID )
   }
 }
 
-
 /*
 bool last ()
 */
@@ -492,7 +467,6 @@ HB_FUNC_STATIC( QSQLQUERY_LAST )
     RBOOL( obj->last () );
   }
 }
-
 
 /*
 QSqlError lastError () const
@@ -507,7 +481,6 @@ HB_FUNC_STATIC( QSQLQUERY_LASTERROR )
   }
 }
 
-
 /*
 QVariant lastInsertId () const
 */
@@ -521,7 +494,6 @@ HB_FUNC_STATIC( QSQLQUERY_LASTINSERTID )
   }
 }
 
-
 /*
 QString lastQuery () const
 */
@@ -533,7 +505,6 @@ HB_FUNC_STATIC( QSQLQUERY_LASTQUERY )
     RQSTRING( obj->lastQuery () );
   }
 }
-
 
 /*
 bool next ()
@@ -547,7 +518,6 @@ HB_FUNC_STATIC( QSQLQUERY_NEXT )
   }
 }
 
-
 /*
 bool nextResult ()
 */
@@ -559,7 +529,6 @@ HB_FUNC_STATIC( QSQLQUERY_NEXTRESULT )
     RBOOL( obj->nextResult () );
   }
 }
-
 
 /*
 int numRowsAffected () const
@@ -573,7 +542,6 @@ HB_FUNC_STATIC( QSQLQUERY_NUMROWSAFFECTED )
   }
 }
 
-
 /*
 QSql::NumericalPrecisionPolicy numericalPrecisionPolicy () const
 */
@@ -585,7 +553,6 @@ HB_FUNC_STATIC( QSQLQUERY_NUMERICALPRECISIONPOLICY )
     hb_retni( (int) obj->numericalPrecisionPolicy () );
   }
 }
-
 
 /*
 bool prepare ( const QString & query )
@@ -599,7 +566,6 @@ HB_FUNC_STATIC( QSQLQUERY_PREPARE )
   }
 }
 
-
 /*
 bool previous ()
 */
@@ -611,7 +577,6 @@ HB_FUNC_STATIC( QSQLQUERY_PREVIOUS )
     RBOOL( obj->previous () );
   }
 }
-
 
 /*
 QSqlRecord record () const
@@ -626,7 +591,6 @@ HB_FUNC_STATIC( QSQLQUERY_RECORD )
   }
 }
 
-
 /*
 const QSqlResult * result () const
 */
@@ -640,7 +604,6 @@ HB_FUNC_STATIC( QSQLQUERY_RESULT )
   }
 }
 
-
 /*
 bool seek ( int index, bool relative = false )
 */
@@ -652,7 +615,6 @@ HB_FUNC_STATIC( QSQLQUERY_SEEK )
     RBOOL( obj->seek ( PINT(1), OPBOOL(2,false) ) );
   }
 }
-
 
 /*
 void setForwardOnly ( bool forward )
@@ -667,7 +629,6 @@ HB_FUNC_STATIC( QSQLQUERY_SETFORWARDONLY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setNumericalPrecisionPolicy ( QSql::NumericalPrecisionPolicy precisionPolicy )
 */
@@ -681,7 +642,6 @@ HB_FUNC_STATIC( QSQLQUERY_SETNUMERICALPRECISIONPOLICY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int size () const
 */
@@ -693,7 +653,6 @@ HB_FUNC_STATIC( QSQLQUERY_SIZE )
     RINT( obj->size () );
   }
 }
-
 
 /*
 QVariant value ( int index ) const
@@ -707,7 +666,6 @@ HB_FUNC_STATIC( QSQLQUERY_VALUE )
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
-
 
 HB_FUNC_STATIC( QSQLQUERY_NEWFROM )
 {
@@ -763,6 +721,5 @@ HB_FUNC_STATIC( QSQLQUERY_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

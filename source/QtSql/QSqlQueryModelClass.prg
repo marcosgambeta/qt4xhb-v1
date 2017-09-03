@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -70,7 +70,6 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QSQLQUERYMODEL_DELETE )
 {
   QSqlQueryModel * obj = (QSqlQueryModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -86,7 +85,6 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void clear ()
 */
@@ -99,7 +97,6 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_CLEAR )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QSqlError lastError () const
@@ -114,7 +111,6 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_LASTERROR )
   }
 }
 
-
 /*
 QSqlQuery query () const
 */
@@ -127,7 +123,6 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_QUERY )
     _qt4xhb_createReturnClass ( ptr, "QSQLQUERY", true );
   }
 }
-
 
 /*
 QSqlRecord record ( int row ) const
@@ -142,7 +137,6 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_RECORD1 )
   }
 }
 
-
 /*
 QSqlRecord record () const
 */
@@ -155,7 +149,6 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_RECORD2 )
     _qt4xhb_createReturnClass ( ptr, "QSQLRECORD", true );
   }
 }
-
 
 //[1]QSqlRecord record ( int row ) const
 //[2]QSqlRecord record () const
@@ -185,7 +178,6 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_SETQUERY1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setQuery ( const QString & query, const QSqlDatabase & db = QSqlDatabase() )
 */
@@ -199,7 +191,6 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_SETQUERY2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setQuery ( const QSqlQuery & query )
 //[2]void setQuery ( const QString & query, const QSqlDatabase & db = QSqlDatabase() )
@@ -229,7 +220,6 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_CANFETCHMORE )
   }
 }
 
-
 /*
 virtual int columnCount ( const QModelIndex & index = QModelIndex() ) const
 */
@@ -243,7 +233,6 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_COLUMNCOUNT )
   }
 }
 
-
 /*
 virtual QVariant data ( const QModelIndex & item, int role = Qt::DisplayRole ) const
 */
@@ -256,7 +245,6 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_DATA )
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
-
 
 /*
 virtual void fetchMore ( const QModelIndex & parent = QModelIndex() )
@@ -272,7 +260,6 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_FETCHMORE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QVariant headerData ( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
 */
@@ -285,7 +272,6 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_HEADERDATA )
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
-
 
 /*
 virtual bool insertColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
@@ -300,7 +286,6 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_INSERTCOLUMNS )
   }
 }
 
-
 /*
 virtual bool removeColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
 */
@@ -313,7 +298,6 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_REMOVECOLUMNS )
     RBOOL( obj->removeColumns ( PINT(1), PINT(2), par3 ) );
   }
 }
-
 
 /*
 virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const
@@ -328,7 +312,6 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_ROWCOUNT )
   }
 }
 
-
 /*
 virtual bool setHeaderData ( int section, Qt::Orientation orientation, const QVariant & value, int role = Qt::EditRole )
 */
@@ -340,8 +323,5 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_SETHEADERDATA )
     RBOOL( obj->setHeaderData ( PINT(1), (Qt::Orientation) hb_parni(2), *PQVARIANT(3), OPINT(4,Qt::EditRole) ) );
   }
 }
-
-
-
 
 #pragma ENDDUMP

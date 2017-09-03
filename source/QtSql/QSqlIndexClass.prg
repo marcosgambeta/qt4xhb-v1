@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QSqlIndex INHERIT QSqlRecord
 
@@ -53,7 +52,6 @@ HB_FUNC_STATIC( QSQLINDEX_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QSqlIndex ( const QSqlIndex & other )
 */
@@ -62,7 +60,6 @@ HB_FUNC_STATIC( QSQLINDEX_NEW2 )
   QSqlIndex * o = new QSqlIndex ( *PQSQLINDEX(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QSqlIndex ( const QString & cursorname = QString(), const QString & name = QString() )
 //[2]QSqlIndex ( const QSqlIndex & other )
@@ -98,7 +95,6 @@ HB_FUNC_STATIC( QSQLINDEX_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void append ( const QSqlField & field )
 */
@@ -112,7 +108,6 @@ HB_FUNC_STATIC( QSQLINDEX_APPEND1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void append ( const QSqlField & field, bool desc )
 */
@@ -125,7 +120,6 @@ HB_FUNC_STATIC( QSQLINDEX_APPEND2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void append ( const QSqlField & field )
 //[2]void append ( const QSqlField & field, bool desc )
@@ -154,7 +148,6 @@ HB_FUNC_STATIC( QSQLINDEX_CURSORNAME )
   }
 }
 
-
 /*
 bool isDescending ( int i ) const
 */
@@ -167,7 +160,6 @@ HB_FUNC_STATIC( QSQLINDEX_ISDESCENDING )
   }
 }
 
-
 /*
 QString name () const
 */
@@ -179,7 +171,6 @@ HB_FUNC_STATIC( QSQLINDEX_NAME )
     RQSTRING( obj->name () );
   }
 }
-
 
 /*
 void setCursorName ( const QString & cursorName )
@@ -194,7 +185,6 @@ HB_FUNC_STATIC( QSQLINDEX_SETCURSORNAME )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setDescending ( int i, bool desc )
 */
@@ -208,7 +198,6 @@ HB_FUNC_STATIC( QSQLINDEX_SETDESCENDING )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setName ( const QString & name )
 */
@@ -221,8 +210,5 @@ HB_FUNC_STATIC( QSQLINDEX_SETNAME )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
 
 #pragma ENDDUMP

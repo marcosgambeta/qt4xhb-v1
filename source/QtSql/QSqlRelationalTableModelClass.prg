@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -58,7 +58,6 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_DELETE )
 {
   QSqlRelationalTableModel * obj = (QSqlRelationalTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -74,7 +73,6 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QSqlRelation relation ( int column ) const
 */
@@ -87,7 +85,6 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_RELATION )
     _qt4xhb_createReturnClass ( ptr, "QSQLRELATION", true );
   }
 }
-
 
 /*
 virtual QSqlTableModel * relationModel ( int column ) const
@@ -102,7 +99,6 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_RELATIONMODEL )
   }
 }
 
-
 /*
 virtual void setRelation ( int column, const QSqlRelation & relation )
 */
@@ -115,7 +111,6 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SETRELATION )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void clear ()
@@ -130,7 +125,6 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_CLEAR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const
 */
@@ -143,7 +137,6 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_DATA )
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
-
 
 /*
 virtual bool removeColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
@@ -158,7 +151,6 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_REMOVECOLUMNS )
   }
 }
 
-
 /*
 virtual bool select ()
 */
@@ -171,7 +163,6 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SELECT )
   }
 }
 
-
 /*
 virtual bool setData ( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
 */
@@ -183,7 +174,6 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SETDATA )
     RBOOL( obj->setData ( *PQMODELINDEX(1), *PQVARIANT(2), OPINT(3,Qt::EditRole) ) );
   }
 }
-
 
 /*
 virtual void setTable ( const QString & table )
@@ -198,7 +188,6 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SETTABLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void revertRow ( int row )
 */
@@ -211,8 +200,5 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_REVERTROW )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
 
 #pragma ENDDUMP

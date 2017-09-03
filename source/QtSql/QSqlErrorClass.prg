@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QSqlError
 
@@ -60,7 +59,6 @@ HB_FUNC_STATIC( QSQLERROR_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QSqlError ( const QSqlError & other )
 */
@@ -69,7 +67,6 @@ HB_FUNC_STATIC( QSQLERROR_NEW2 )
   QSqlError * o = new QSqlError ( *PQSQLERROR(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QSqlError ( const QString & driverText = QString(), const QString & databaseText = QString(), ErrorType type = NoError, int number = -1 )
 //[2]QSqlError ( const QSqlError & other )
@@ -105,7 +102,6 @@ HB_FUNC_STATIC( QSQLERROR_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString databaseText () const
 */
@@ -117,7 +113,6 @@ HB_FUNC_STATIC( QSQLERROR_DATABASETEXT )
     RQSTRING( obj->databaseText () );
   }
 }
-
 
 /*
 QString driverText () const
@@ -131,7 +126,6 @@ HB_FUNC_STATIC( QSQLERROR_DRIVERTEXT )
   }
 }
 
-
 /*
 bool isValid () const
 */
@@ -144,7 +138,6 @@ HB_FUNC_STATIC( QSQLERROR_ISVALID )
   }
 }
 
-
 /*
 int number () const
 */
@@ -156,7 +149,6 @@ HB_FUNC_STATIC( QSQLERROR_NUMBER )
     RINT( obj->number () );
   }
 }
-
 
 /*
 void setDatabaseText ( const QString & databaseText )
@@ -171,7 +163,6 @@ HB_FUNC_STATIC( QSQLERROR_SETDATABASETEXT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setDriverText ( const QString & driverText )
 */
@@ -184,7 +175,6 @@ HB_FUNC_STATIC( QSQLERROR_SETDRIVERTEXT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setNumber ( int number )
@@ -199,7 +189,6 @@ HB_FUNC_STATIC( QSQLERROR_SETNUMBER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setType ( ErrorType type )
 */
@@ -213,7 +202,6 @@ HB_FUNC_STATIC( QSQLERROR_SETTYPE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString text () const
 */
@@ -226,7 +214,6 @@ HB_FUNC_STATIC( QSQLERROR_TEXT )
   }
 }
 
-
 /*
 ErrorType type () const
 */
@@ -238,7 +225,6 @@ HB_FUNC_STATIC( QSQLERROR_TYPE )
     hb_retni( (int) obj->type () );
   }
 }
-
 
 HB_FUNC_STATIC( QSQLERROR_NEWFROM )
 {
@@ -294,6 +280,5 @@ HB_FUNC_STATIC( QSQLERROR_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

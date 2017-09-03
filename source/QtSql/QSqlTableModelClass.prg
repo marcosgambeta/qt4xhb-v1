@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -83,7 +83,6 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QSQLTABLEMODEL_DELETE )
 {
   QSqlTableModel * obj = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -99,7 +98,6 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QSqlDatabase database () const
 */
@@ -113,7 +111,6 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_DATABASE )
   }
 }
 
-
 /*
 EditStrategy editStrategy () const
 */
@@ -125,7 +122,6 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_EDITSTRATEGY )
     hb_retni( (int) obj->editStrategy () );
   }
 }
-
 
 /*
 int fieldIndex ( const QString & fieldName ) const
@@ -139,7 +135,6 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_FIELDINDEX )
   }
 }
 
-
 /*
 QString filter () const
 */
@@ -151,7 +146,6 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_FILTER )
     RQSTRING( obj->filter () );
   }
 }
-
 
 /*
 bool insertRecord ( int row, const QSqlRecord & record )
@@ -165,7 +159,6 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_INSERTRECORD )
   }
 }
 
-
 /*
 bool isDirty ( const QModelIndex & index ) const
 */
@@ -177,7 +170,6 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ISDIRTY )
     RBOOL( obj->isDirty ( *PQMODELINDEX(1) ) );
   }
 }
-
 
 /*
 QSqlIndex primaryKey () const
@@ -192,7 +184,6 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_PRIMARYKEY )
   }
 }
 
-
 /*
 virtual void revertRow ( int row )
 */
@@ -206,7 +197,6 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_REVERTROW )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual bool select ()
 */
@@ -218,7 +208,6 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SELECT )
     RBOOL( obj->select () );
   }
 }
-
 
 /*
 virtual void setEditStrategy ( EditStrategy strategy )
@@ -233,7 +222,6 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SETEDITSTRATEGY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void setFilter ( const QString & filter )
 */
@@ -247,7 +235,6 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SETFILTER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool setRecord ( int row, const QSqlRecord & record )
 */
@@ -259,7 +246,6 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SETRECORD )
     RBOOL( obj->setRecord ( PINT(1), *PQSQLRECORD(2) ) );
   }
 }
-
 
 /*
 virtual void setSort ( int column, Qt::SortOrder order )
@@ -274,7 +260,6 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SETSORT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void setTable ( const QString & tableName )
 */
@@ -288,7 +273,6 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SETTABLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString tableName () const
 */
@@ -300,7 +284,6 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_TABLENAME )
     RQSTRING( obj->tableName () );
   }
 }
-
 
 /*
 virtual void clear ()
@@ -315,7 +298,6 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_CLEAR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const
 */
@@ -329,7 +311,6 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_DATA )
   }
 }
 
-
 /*
 virtual Qt::ItemFlags flags ( const QModelIndex & index ) const
 */
@@ -341,7 +322,6 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_FLAGS )
     hb_retni( (int) obj->flags ( *PQMODELINDEX(1) ) );
   }
 }
-
 
 /*
 virtual QVariant headerData ( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
@@ -356,7 +336,6 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_HEADERDATA )
   }
 }
 
-
 /*
 virtual bool insertRows ( int row, int count, const QModelIndex & parent = QModelIndex() )
 */
@@ -369,7 +348,6 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_INSERTROWS )
     RBOOL( obj->insertRows ( PINT(1), PINT(2), par3 ) );
   }
 }
-
 
 /*
 virtual bool removeColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
@@ -384,7 +362,6 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_REMOVECOLUMNS )
   }
 }
 
-
 /*
 virtual bool removeRows ( int row, int count, const QModelIndex & parent = QModelIndex() )
 */
@@ -397,7 +374,6 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_REMOVEROWS )
     RBOOL( obj->removeRows ( PINT(1), PINT(2), par3 ) );
   }
 }
-
 
 /*
 virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const
@@ -412,7 +388,6 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ROWCOUNT )
   }
 }
 
-
 /*
 virtual bool setData ( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
 */
@@ -424,7 +399,6 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SETDATA )
     RBOOL( obj->setData ( *PQMODELINDEX(1), *PQVARIANT(2), OPINT(3,Qt::EditRole) ) );
   }
 }
-
 
 /*
 virtual void sort ( int column, Qt::SortOrder order )
@@ -439,7 +413,6 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SORT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void revert ()
 */
@@ -452,7 +425,6 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_REVERT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void revertAll ()
@@ -467,7 +439,6 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_REVERTALL )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual bool submit ()
 */
@@ -480,7 +451,6 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SUBMIT )
   }
 }
 
-
 /*
 bool submitAll ()
 */
@@ -492,9 +462,5 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SUBMITALL )
     RBOOL( obj->submitAll () );
   }
 }
-
-
-
-
 
 #pragma ENDDUMP

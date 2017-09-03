@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -77,7 +77,6 @@ HB_FUNC_STATIC( QSQLFIELD_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QSqlField ( const QSqlField & other )
 */
@@ -86,7 +85,6 @@ HB_FUNC_STATIC( QSQLFIELD_NEW2 )
   QSqlField * o = new QSqlField ( *PQSQLFIELD(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QSqlField ( const QString & fieldName = QString(), QVariant::Type type = QVariant::Invalid )
 //[2]QSqlField ( const QSqlField & other )
@@ -122,7 +120,6 @@ HB_FUNC_STATIC( QSQLFIELD_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void clear ()
 */
@@ -135,7 +132,6 @@ HB_FUNC_STATIC( QSQLFIELD_CLEAR )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QVariant defaultValue () const
@@ -150,7 +146,6 @@ HB_FUNC_STATIC( QSQLFIELD_DEFAULTVALUE )
   }
 }
 
-
 /*
 bool isAutoValue () const
 */
@@ -162,7 +157,6 @@ HB_FUNC_STATIC( QSQLFIELD_ISAUTOVALUE )
     RBOOL( obj->isAutoValue () );
   }
 }
-
 
 /*
 bool isGenerated () const
@@ -176,7 +170,6 @@ HB_FUNC_STATIC( QSQLFIELD_ISGENERATED )
   }
 }
 
-
 /*
 bool isNull () const
 */
@@ -188,7 +181,6 @@ HB_FUNC_STATIC( QSQLFIELD_ISNULL )
     RBOOL( obj->isNull () );
   }
 }
-
 
 /*
 bool isReadOnly () const
@@ -202,7 +194,6 @@ HB_FUNC_STATIC( QSQLFIELD_ISREADONLY )
   }
 }
 
-
 /*
 bool isValid () const
 */
@@ -214,7 +205,6 @@ HB_FUNC_STATIC( QSQLFIELD_ISVALID )
     RBOOL( obj->isValid () );
   }
 }
-
 
 /*
 int length () const
@@ -228,7 +218,6 @@ HB_FUNC_STATIC( QSQLFIELD_LENGTH )
   }
 }
 
-
 /*
 QString name () const
 */
@@ -240,7 +229,6 @@ HB_FUNC_STATIC( QSQLFIELD_NAME )
     RQSTRING( obj->name () );
   }
 }
-
 
 /*
 int precision () const
@@ -254,7 +242,6 @@ HB_FUNC_STATIC( QSQLFIELD_PRECISION )
   }
 }
 
-
 /*
 RequiredStatus requiredStatus () const
 */
@@ -266,7 +253,6 @@ HB_FUNC_STATIC( QSQLFIELD_REQUIREDSTATUS )
     hb_retni( (int) obj->requiredStatus () );
   }
 }
-
 
 /*
 void setAutoValue ( bool autoVal )
@@ -281,7 +267,6 @@ HB_FUNC_STATIC( QSQLFIELD_SETAUTOVALUE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setDefaultValue ( const QVariant & value )
 */
@@ -294,7 +279,6 @@ HB_FUNC_STATIC( QSQLFIELD_SETDEFAULTVALUE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setGenerated ( bool gen )
@@ -309,7 +293,6 @@ HB_FUNC_STATIC( QSQLFIELD_SETGENERATED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setLength ( int fieldLength )
 */
@@ -322,7 +305,6 @@ HB_FUNC_STATIC( QSQLFIELD_SETLENGTH )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setName ( const QString & name )
@@ -337,7 +319,6 @@ HB_FUNC_STATIC( QSQLFIELD_SETNAME )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPrecision ( int precision )
 */
@@ -350,7 +331,6 @@ HB_FUNC_STATIC( QSQLFIELD_SETPRECISION )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setReadOnly ( bool readOnly )
@@ -365,7 +345,6 @@ HB_FUNC_STATIC( QSQLFIELD_SETREADONLY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setRequired ( bool required )
 */
@@ -378,7 +357,6 @@ HB_FUNC_STATIC( QSQLFIELD_SETREQUIRED )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setRequiredStatus ( RequiredStatus required )
@@ -393,7 +371,6 @@ HB_FUNC_STATIC( QSQLFIELD_SETREQUIREDSTATUS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setType ( QVariant::Type type )
 */
@@ -406,7 +383,6 @@ HB_FUNC_STATIC( QSQLFIELD_SETTYPE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setValue ( const QVariant & value )
@@ -421,7 +397,6 @@ HB_FUNC_STATIC( QSQLFIELD_SETVALUE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QVariant::Type type () const
 */
@@ -433,7 +408,6 @@ HB_FUNC_STATIC( QSQLFIELD_TYPE )
     hb_retni( (int) obj->type () );
   }
 }
-
 
 /*
 QVariant value () const
@@ -447,7 +421,6 @@ HB_FUNC_STATIC( QSQLFIELD_VALUE )
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
-
 
 HB_FUNC_STATIC( QSQLFIELD_NEWFROM )
 {
@@ -503,6 +476,5 @@ HB_FUNC_STATIC( QSQLFIELD_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

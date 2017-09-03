@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -69,7 +69,6 @@ RETURN
 #include <QSqlRecord>
 #include <QVariant>
 
-
 HB_FUNC_STATIC( QSQLDRIVER_DELETE )
 {
   QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -85,7 +84,6 @@ HB_FUNC_STATIC( QSQLDRIVER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual bool beginTransaction ()
 */
@@ -97,7 +95,6 @@ HB_FUNC_STATIC( QSQLDRIVER_BEGINTRANSACTION )
     RBOOL( obj->beginTransaction () );
   }
 }
-
 
 /*
 virtual void close () = 0
@@ -112,7 +109,6 @@ HB_FUNC_STATIC( QSQLDRIVER_CLOSE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual bool commitTransaction ()
 */
@@ -124,7 +120,6 @@ HB_FUNC_STATIC( QSQLDRIVER_COMMITTRANSACTION )
     RBOOL( obj->commitTransaction () );
   }
 }
-
 
 /*
 virtual QSqlResult * createResult () const = 0
@@ -139,7 +134,6 @@ HB_FUNC_STATIC( QSQLDRIVER_CREATERESULT )
   }
 }
 
-
 /*
 virtual QString escapeIdentifier ( const QString & identifier, IdentifierType type ) const
 */
@@ -152,7 +146,6 @@ HB_FUNC_STATIC( QSQLDRIVER_ESCAPEIDENTIFIER )
   }
 }
 
-
 /*
 virtual QString formatValue ( const QSqlField & field, bool trimStrings = false ) const
 */
@@ -164,7 +157,6 @@ HB_FUNC_STATIC( QSQLDRIVER_FORMATVALUE )
     RQSTRING( obj->formatValue ( *PQSQLFIELD(1), OPBOOL(2,false) ) );
   }
 }
-
 
 /*
 virtual QVariant handle () const
@@ -179,7 +171,6 @@ HB_FUNC_STATIC( QSQLDRIVER_HANDLE )
   }
 }
 
-
 /*
 virtual bool hasFeature ( DriverFeature feature ) const = 0
 */
@@ -191,7 +182,6 @@ HB_FUNC_STATIC( QSQLDRIVER_HASFEATURE )
     RBOOL( obj->hasFeature ( (QSqlDriver::DriverFeature) hb_parni(1) ) );
   }
 }
-
 
 /*
 bool isIdentifierEscaped ( const QString & identifier, IdentifierType type ) const
@@ -205,7 +195,6 @@ HB_FUNC_STATIC( QSQLDRIVER_ISIDENTIFIERESCAPED )
   }
 }
 
-
 /*
 virtual bool isOpen () const
 */
@@ -218,7 +207,6 @@ HB_FUNC_STATIC( QSQLDRIVER_ISOPEN )
   }
 }
 
-
 /*
 bool isOpenError () const
 */
@@ -230,7 +218,6 @@ HB_FUNC_STATIC( QSQLDRIVER_ISOPENERROR )
     RBOOL( obj->isOpenError () );
   }
 }
-
 
 /*
 QSqlError lastError () const
@@ -245,7 +232,6 @@ HB_FUNC_STATIC( QSQLDRIVER_LASTERROR )
   }
 }
 
-
 /*
 QSql::NumericalPrecisionPolicy numericalPrecisionPolicy () const
 */
@@ -258,7 +244,6 @@ HB_FUNC_STATIC( QSQLDRIVER_NUMERICALPRECISIONPOLICY )
   }
 }
 
-
 /*
 virtual bool open ( const QString & db, const QString & user = QString(), const QString & password = QString(), const QString & host = QString(), int port = -1, const QString & options = QString() ) = 0
 */
@@ -270,7 +255,6 @@ HB_FUNC_STATIC( QSQLDRIVER_OPEN )
     RBOOL( obj->open ( PQSTRING(1), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()), OPINT(5,-1), OPQSTRING(6,QString()) ) );
   }
 }
-
 
 /*
 virtual QSqlIndex primaryIndex ( const QString & tableName ) const
@@ -285,7 +269,6 @@ HB_FUNC_STATIC( QSQLDRIVER_PRIMARYINDEX )
   }
 }
 
-
 /*
 virtual QSqlRecord record ( const QString & tableName ) const
 */
@@ -299,7 +282,6 @@ HB_FUNC_STATIC( QSQLDRIVER_RECORD )
   }
 }
 
-
 /*
 virtual bool rollbackTransaction ()
 */
@@ -311,7 +293,6 @@ HB_FUNC_STATIC( QSQLDRIVER_ROLLBACKTRANSACTION )
     RBOOL( obj->rollbackTransaction () );
   }
 }
-
 
 /*
 void setNumericalPrecisionPolicy ( QSql::NumericalPrecisionPolicy precisionPolicy )
@@ -326,7 +307,6 @@ HB_FUNC_STATIC( QSQLDRIVER_SETNUMERICALPRECISIONPOLICY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QString sqlStatement ( StatementType type, const QString & tableName, const QSqlRecord & rec, bool preparedStatement ) const
 */
@@ -338,7 +318,6 @@ HB_FUNC_STATIC( QSQLDRIVER_SQLSTATEMENT )
     RQSTRING( obj->sqlStatement ( (QSqlDriver::StatementType) hb_parni(1), PQSTRING(2), *PQSQLRECORD(3), PBOOL(4) ) );
   }
 }
-
 
 /*
 QString stripDelimiters ( const QString & identifier, IdentifierType type ) const
@@ -352,7 +331,6 @@ HB_FUNC_STATIC( QSQLDRIVER_STRIPDELIMITERS )
   }
 }
 
-
 /*
 bool subscribeToNotification ( const QString & name )
 */
@@ -364,7 +342,6 @@ HB_FUNC_STATIC( QSQLDRIVER_SUBSCRIBETONOTIFICATION )
     RBOOL( obj->subscribeToNotification ( PQSTRING(1) ) );
   }
 }
-
 
 /*
 QStringList subscribedToNotifications () const
@@ -378,7 +355,6 @@ HB_FUNC_STATIC( QSQLDRIVER_SUBSCRIBEDTONOTIFICATIONS )
   }
 }
 
-
 /*
 virtual QStringList tables ( QSql::TableType tableType ) const
 */
@@ -391,7 +367,6 @@ HB_FUNC_STATIC( QSQLDRIVER_TABLES )
   }
 }
 
-
 /*
 bool unsubscribeFromNotification ( const QString & name )
 */
@@ -403,9 +378,5 @@ HB_FUNC_STATIC( QSQLDRIVER_UNSUBSCRIBEFROMNOTIFICATION )
     RBOOL( obj->unsubscribeFromNotification ( PQSTRING(1) ) );
   }
 }
-
-
-
-
 
 #pragma ENDDUMP

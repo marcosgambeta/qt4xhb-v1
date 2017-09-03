@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -89,7 +89,6 @@ HB_FUNC_STATIC( QSQLRECORD_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QSqlRecord ( const QSqlRecord & other )
 */
@@ -98,7 +97,6 @@ HB_FUNC_STATIC( QSQLRECORD_NEW2 )
   QSqlRecord * o = new QSqlRecord ( *PQSQLRECORD(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QSqlRecord ()
 //[2]QSqlRecord ( const QSqlRecord & other )
@@ -134,7 +132,6 @@ HB_FUNC_STATIC( QSQLRECORD_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void append ( const QSqlField & field )
 */
@@ -147,7 +144,6 @@ HB_FUNC_STATIC( QSQLRECORD_APPEND )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void clear ()
@@ -162,7 +158,6 @@ HB_FUNC_STATIC( QSQLRECORD_CLEAR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void clearValues ()
 */
@@ -176,7 +171,6 @@ HB_FUNC_STATIC( QSQLRECORD_CLEARVALUES )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool contains ( const QString & name ) const
 */
@@ -189,7 +183,6 @@ HB_FUNC_STATIC( QSQLRECORD_CONTAINS )
   }
 }
 
-
 /*
 int count () const
 */
@@ -201,7 +194,6 @@ HB_FUNC_STATIC( QSQLRECORD_COUNT )
     RINT( obj->count () );
   }
 }
-
 
 /*
 QSqlField field ( int index ) const
@@ -216,7 +208,6 @@ HB_FUNC_STATIC( QSQLRECORD_FIELD1 )
   }
 }
 
-
 /*
 QSqlField field ( const QString & name ) const
 */
@@ -229,7 +220,6 @@ HB_FUNC_STATIC( QSQLRECORD_FIELD2 )
     _qt4xhb_createReturnClass ( ptr, "QSQLFIELD", true );
   }
 }
-
 
 //[1]QSqlField field ( int index ) const
 //[2]QSqlField field ( const QString & name ) const
@@ -258,7 +248,6 @@ HB_FUNC_STATIC( QSQLRECORD_FIELDNAME )
   }
 }
 
-
 /*
 int indexOf ( const QString & name ) const
 */
@@ -270,7 +259,6 @@ HB_FUNC_STATIC( QSQLRECORD_INDEXOF )
     RINT( obj->indexOf ( PQSTRING(1) ) );
   }
 }
-
 
 /*
 void insert ( int pos, const QSqlField & field )
@@ -285,7 +273,6 @@ HB_FUNC_STATIC( QSQLRECORD_INSERT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool isEmpty () const
 */
@@ -297,7 +284,6 @@ HB_FUNC_STATIC( QSQLRECORD_ISEMPTY )
     RBOOL( obj->isEmpty () );
   }
 }
-
 
 /*
 bool isGenerated ( const QString & name ) const
@@ -311,7 +297,6 @@ HB_FUNC_STATIC( QSQLRECORD_ISGENERATED1 )
   }
 }
 
-
 /*
 bool isGenerated ( int index ) const
 */
@@ -323,7 +308,6 @@ HB_FUNC_STATIC( QSQLRECORD_ISGENERATED2 )
     RBOOL( obj->isGenerated ( PINT(1) ) );
   }
 }
-
 
 //[1]bool isGenerated ( const QString & name ) const
 //[2]bool isGenerated ( int index ) const
@@ -352,7 +336,6 @@ HB_FUNC_STATIC( QSQLRECORD_ISNULL1 )
   }
 }
 
-
 /*
 bool isNull ( int index ) const
 */
@@ -364,7 +347,6 @@ HB_FUNC_STATIC( QSQLRECORD_ISNULL2 )
     RBOOL( obj->isNull ( PINT(1) ) );
   }
 }
-
 
 //[1]bool isNull ( const QString & name ) const
 //[2]bool isNull ( int index ) const
@@ -394,7 +376,6 @@ HB_FUNC_STATIC( QSQLRECORD_REMOVE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void replace ( int pos, const QSqlField & field )
 */
@@ -407,7 +388,6 @@ HB_FUNC_STATIC( QSQLRECORD_REPLACE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setGenerated ( const QString & name, bool generated )
@@ -422,7 +402,6 @@ HB_FUNC_STATIC( QSQLRECORD_SETGENERATED1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setGenerated ( int index, bool generated )
 */
@@ -435,7 +414,6 @@ HB_FUNC_STATIC( QSQLRECORD_SETGENERATED2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setGenerated ( const QString & name, bool generated )
 //[2]void setGenerated ( int index, bool generated )
@@ -465,7 +443,6 @@ HB_FUNC_STATIC( QSQLRECORD_SETNULL1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setNull ( const QString & name )
 */
@@ -478,7 +455,6 @@ HB_FUNC_STATIC( QSQLRECORD_SETNULL2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setNull ( int index )
 //[2]void setNull ( const QString & name )
@@ -508,7 +484,6 @@ HB_FUNC_STATIC( QSQLRECORD_SETVALUE1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setValue ( const QString & name, const QVariant & val )
 */
@@ -521,7 +496,6 @@ HB_FUNC_STATIC( QSQLRECORD_SETVALUE2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setValue ( int index, const QVariant & val )
 //[2]void setValue ( const QString & name, const QVariant & val )
@@ -551,7 +525,6 @@ HB_FUNC_STATIC( QSQLRECORD_VALUE1 )
   }
 }
 
-
 /*
 QVariant value ( const QString & name ) const
 */
@@ -564,7 +537,6 @@ HB_FUNC_STATIC( QSQLRECORD_VALUE2 )
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
-
 
 //[1]QVariant value ( int index ) const
 //[2]QVariant value ( const QString & name ) const
@@ -580,7 +552,6 @@ HB_FUNC_STATIC( QSQLRECORD_VALUE )
     HB_FUNC_EXEC( QSQLRECORD_VALUE2 );
   }
 }
-
 
 HB_FUNC_STATIC( QSQLRECORD_NEWFROM )
 {

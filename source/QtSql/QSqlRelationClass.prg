@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QSqlRelation
 
@@ -53,7 +52,6 @@ HB_FUNC_STATIC( QSQLRELATION_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QSqlRelation ( const QString & tableName, const QString & indexColumn, const QString & displayColumn )
 */
@@ -62,7 +60,6 @@ HB_FUNC_STATIC( QSQLRELATION_NEW2 )
   QSqlRelation * o = new QSqlRelation ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QSqlRelation ()
 //[2]QSqlRelation ( const QString & tableName, const QString & indexColumn, const QString & displayColumn )
@@ -83,7 +80,6 @@ HB_FUNC_STATIC( QSQLRELATION_NEW )
   }
 }
 
-
 /*
 QString displayColumn () const
 */
@@ -95,7 +91,6 @@ HB_FUNC_STATIC( QSQLRELATION_DISPLAYCOLUMN )
     RQSTRING( obj->displayColumn () );
   }
 }
-
 
 /*
 QString indexColumn () const
@@ -109,7 +104,6 @@ HB_FUNC_STATIC( QSQLRELATION_INDEXCOLUMN )
   }
 }
 
-
 /*
 bool isValid () const
 */
@@ -122,7 +116,6 @@ HB_FUNC_STATIC( QSQLRELATION_ISVALID )
   }
 }
 
-
 /*
 QString tableName () const
 */
@@ -134,7 +127,6 @@ HB_FUNC_STATIC( QSQLRELATION_TABLENAME )
     RQSTRING( obj->tableName () );
   }
 }
-
 
 HB_FUNC_STATIC( QSQLRELATION_NEWFROM )
 {
@@ -190,6 +182,5 @@ HB_FUNC_STATIC( QSQLRELATION_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP
