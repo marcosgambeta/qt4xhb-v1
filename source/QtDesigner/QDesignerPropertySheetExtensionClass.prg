@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -73,7 +73,6 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual int count () const = 0
 */
@@ -85,7 +84,6 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_COUNT )
     RINT( obj->count () );
   }
 }
-
 
 /*
 virtual bool hasReset ( int index ) const = 0
@@ -99,7 +97,6 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_HASRESET )
   }
 }
 
-
 /*
 virtual int indexOf ( const QString & name ) const = 0
 */
@@ -111,7 +108,6 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_INDEXOF )
     RINT( obj->indexOf ( PQSTRING(1) ) );
   }
 }
-
 
 /*
 virtual bool isAttribute ( int index ) const = 0
@@ -125,7 +121,6 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_ISATTRIBUTE )
   }
 }
 
-
 /*
 virtual bool isChanged ( int index ) const = 0
 */
@@ -138,7 +133,6 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_ISCHANGED )
   }
 }
 
-
 /*
 virtual bool isVisible ( int index ) const = 0
 */
@@ -150,7 +144,6 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_ISVISIBLE )
     RBOOL( obj->isVisible ( PINT(1) ) );
   }
 }
-
 
 /*
 virtual QVariant property ( int index ) const = 0
@@ -165,7 +158,6 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_PROPERTY )
   }
 }
 
-
 /*
 virtual QString propertyGroup ( int index ) const = 0
 */
@@ -177,7 +169,6 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_PROPERTYGROUP )
     RQSTRING( obj->propertyGroup ( PINT(1) ) );
   }
 }
-
 
 /*
 virtual QString propertyName ( int index ) const = 0
@@ -191,7 +182,6 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_PROPERTYNAME )
   }
 }
 
-
 /*
 virtual bool reset ( int index ) = 0
 */
@@ -203,7 +193,6 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_RESET )
     RBOOL( obj->reset ( PINT(1) ) );
   }
 }
-
 
 /*
 virtual void setAttribute ( int index, bool attribute ) = 0
@@ -218,7 +207,6 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETATTRIBUTE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void setChanged ( int index, bool changed ) = 0
 */
@@ -231,7 +219,6 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETCHANGED )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void setProperty ( int index, const QVariant & value ) = 0
@@ -246,7 +233,6 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETPROPERTY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void setPropertyGroup ( int index, const QString & group ) = 0
 */
@@ -260,7 +246,6 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETPROPERTYGROUP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void setVisible ( int index, bool visible ) = 0
 */
@@ -273,7 +258,6 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETVISIBLE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_NEWFROM )
 {
@@ -329,7 +313,5 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

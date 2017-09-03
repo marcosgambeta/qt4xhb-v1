@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -68,7 +68,6 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QWidget * current () const = 0
 */
@@ -81,7 +80,6 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_CURRENT )
     _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
-
 
 /*
 virtual QDesignerFormWindowInterface * formWindow () const = 0
@@ -96,7 +94,6 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_FORMWINDOW )
   }
 }
 
-
 /*
 virtual bool hasSelection () const = 0
 */
@@ -108,7 +105,6 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_HASSELECTION )
     RBOOL( obj->hasSelection () );
   }
 }
-
 
 /*
 bool isWidgetSelected ( QWidget * widget ) const
@@ -122,7 +118,6 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_ISWIDGETSELECTED )
   }
 }
 
-
 /*
 virtual bool movePosition ( MoveOperation operation, MoveMode mode = MoveAnchor ) = 0
 */
@@ -135,7 +130,6 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_MOVEPOSITION )
   }
 }
 
-
 /*
 virtual int position () const = 0
 */
@@ -147,8 +141,6 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_POSITION )
     RINT( obj->position () );
   }
 }
-
-
 
 /*
 virtual QWidget * selectedWidget ( int index ) const = 0
@@ -163,7 +155,6 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_SELECTEDWIDGET )
   }
 }
 
-
 /*
 virtual int selectedWidgetCount () const = 0
 */
@@ -175,7 +166,6 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_SELECTEDWIDGETCOUNT )
     RINT( obj->selectedWidgetCount () );
   }
 }
-
 
 /*
 virtual void setPosition ( int position, MoveMode mode = MoveAnchor ) = 0
@@ -190,9 +180,6 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_SETPOSITION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
-
 /*
 virtual QWidget * widget ( int index ) const = 0
 */
@@ -206,7 +193,6 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_WIDGET )
   }
 }
 
-
 /*
 virtual int widgetCount () const = 0
 */
@@ -218,7 +204,6 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_WIDGETCOUNT )
     RINT( obj->widgetCount () );
   }
 }
-
 
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_NEWFROM )
 {
@@ -274,6 +259,5 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

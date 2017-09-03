@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -63,7 +63,6 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void addWidget ( QWidget * page ) = 0
 */
@@ -77,7 +76,6 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_ADDWIDGET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual int count () const = 0
 */
@@ -90,7 +88,6 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_COUNT )
   }
 }
 
-
 /*
 virtual int currentIndex () const = 0
 */
@@ -102,7 +99,6 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_CURRENTINDEX )
     RINT( (int) obj->currentIndex () );
   }
 }
-
 
 /*
 virtual void insertWidget ( int index, QWidget * page ) = 0
@@ -117,7 +113,6 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_INSERTWIDGET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void remove ( int index ) = 0
 */
@@ -130,7 +125,6 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_REMOVE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void setCurrentIndex ( int index ) = 0
@@ -145,7 +139,6 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_SETCURRENTINDEX )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QWidget * widget ( int index ) const = 0
 */
@@ -158,7 +151,6 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_WIDGET )
     _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
-
 
 HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_NEWFROM )
 {
@@ -214,6 +206,5 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

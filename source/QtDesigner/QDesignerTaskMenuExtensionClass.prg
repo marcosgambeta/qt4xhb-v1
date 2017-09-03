@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -58,7 +58,6 @@ HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QAction * preferredEditAction () const
 */
@@ -71,7 +70,6 @@ HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_PREFERREDEDITACTION )
     _qt4xhb_createReturnClass ( ptr, "QACTION" );
   }
 }
-
 
 /*
 virtual QList<QAction *> taskActions () const = 0
@@ -115,7 +113,6 @@ HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_TASKACTIONS )
     hb_itemReturnRelease(pArray);
   }
 }
-
 
 HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_NEWFROM )
 {
@@ -171,7 +168,5 @@ HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

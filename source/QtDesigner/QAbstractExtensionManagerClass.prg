@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -59,7 +59,6 @@ HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QObject * extension ( QObject * object, const QString & iid ) const = 0
 */
@@ -72,7 +71,6 @@ HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_EXTENSION )
     _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
-
 
 /*
 virtual void registerExtensions ( QAbstractExtensionFactory * factory, const QString & iid ) = 0
@@ -88,7 +86,6 @@ HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_REGISTEREXTENSIONS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void unregisterExtensions ( QAbstractExtensionFactory * factory, const QString & iid ) = 0
 */
@@ -102,7 +99,6 @@ HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_UNREGISTEREXTENSIONS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_NEWFROM )
 {
@@ -158,6 +154,5 @@ HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

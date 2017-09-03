@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -44,7 +44,6 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_DELETE )
 {
   QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -60,7 +59,6 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QDesignerFormEditorInterface * core () const
 */
@@ -74,7 +72,6 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_CORE )
   }
 }
 
-
 /*
 virtual QString currentPropertyName () const = 0
 */
@@ -87,7 +84,6 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_CURRENTPROPERTYNAME )
   }
 }
 
-
 /*
 virtual bool isReadOnly () const = 0
 */
@@ -99,7 +95,6 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_ISREADONLY )
     RBOOL( obj->isReadOnly () );
   }
 }
-
 
 /*
 virtual QObject * object () const = 0
@@ -114,7 +109,6 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_OBJECT )
   }
 }
 
-
 /*
 virtual void setObject ( QObject * object ) = 0
 */
@@ -127,7 +121,6 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETOBJECT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void setPropertyValue ( const QString & name, const QVariant & value, bool changed = true ) = 0
@@ -142,7 +135,6 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETPROPERTYVALUE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void setReadOnly ( bool readOnly ) = 0
 */
@@ -155,10 +147,5 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETREADONLY )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
-
 
 #pragma ENDDUMP

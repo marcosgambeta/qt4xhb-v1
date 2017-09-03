@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -62,7 +62,6 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_DELETE )
 {
   QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -78,7 +77,6 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QDesignerActionEditorInterface * actionEditor () const
 */
@@ -91,7 +89,6 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_ACTIONEDITOR )
     _qt4xhb_createReturnClass ( ptr, "QDESIGNERACTIONEDITORINTERFACE" );
   }
 }
-
 
 /*
 QExtensionManager * extensionManager () const
@@ -106,7 +103,6 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_EXTENSIONMANAGER )
   }
 }
 
-
 /*
 QDesignerFormWindowManagerInterface * formWindowManager () const
 */
@@ -119,7 +115,6 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_FORMWINDOWMANAGER )
     _qt4xhb_createReturnClass ( ptr, "QDESIGNERFORMWINDOWMANAGERINTERFACE" );
   }
 }
-
 
 /*
 QDesignerObjectInspectorInterface * objectInspector () const
@@ -134,7 +129,6 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_OBJECTINSPECTOR )
   }
 }
 
-
 /*
 QDesignerPropertyEditorInterface * propertyEditor () const
 */
@@ -147,7 +141,6 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_PROPERTYEDITOR )
     _qt4xhb_createReturnClass ( ptr, "QDESIGNERPROPERTYEDITORINTERFACE" );
   }
 }
-
 
 /*
 void setActionEditor ( QDesignerActionEditorInterface * actionEditor )
@@ -163,7 +156,6 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_SETACTIONEDITOR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setObjectInspector ( QDesignerObjectInspectorInterface * objectInspector )
 */
@@ -177,7 +169,6 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_SETOBJECTINSPECTOR )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setPropertyEditor ( QDesignerPropertyEditorInterface * propertyEditor )
@@ -193,7 +184,6 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_SETPROPERTYEDITOR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setWidgetBox ( QDesignerWidgetBoxInterface * widgetBox )
 */
@@ -208,7 +198,6 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_SETWIDGETBOX )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QWidget * topLevel () const
 */
@@ -222,7 +211,6 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_TOPLEVEL )
   }
 }
 
-
 /*
 QDesignerWidgetBoxInterface * widgetBox () const
 */
@@ -235,8 +223,5 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_WIDGETBOX )
     _qt4xhb_createReturnClass ( ptr, "QDESIGNERWIDGETBOXINTERFACE" );
   }
 }
-
-
-
 
 #pragma ENDDUMP

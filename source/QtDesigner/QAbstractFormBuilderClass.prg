@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -56,7 +56,6 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QABSTRACTFORMBUILDER_DELETE )
 {
   QAbstractFormBuilder * obj = (QAbstractFormBuilder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -72,7 +71,6 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QWidget * load ( QIODevice * device, QWidget * parent = 0 )
 */
@@ -85,7 +83,6 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_LOAD )
     _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
-
 
 /*
 virtual void save ( QIODevice * device, QWidget * widget )
@@ -100,7 +97,6 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_SAVE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setWorkingDirectory ( const QDir & directory )
 */
@@ -114,7 +110,6 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_SETWORKINGDIRECTORY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QDir workingDirectory () const
 */
@@ -127,7 +122,6 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_WORKINGDIRECTORY )
     _qt4xhb_createReturnClass ( ptr, "QDIR", true );
   }
 }
-
 
 HB_FUNC_STATIC( QABSTRACTFORMBUILDER_NEWFROM )
 {
@@ -183,6 +177,5 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

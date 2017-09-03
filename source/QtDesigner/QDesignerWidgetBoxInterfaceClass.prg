@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QDesignerWidgetBoxInterface INHERIT QWidget
 
@@ -36,7 +35,6 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
 HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_DELETE )
 {
   QDesignerWidgetBoxInterface * obj = (QDesignerWidgetBoxInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -52,7 +50,6 @@ HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QString fileName () const = 0
 */
@@ -64,7 +61,6 @@ HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_FILENAME )
     RQSTRING( obj->fileName () );
   }
 }
-
 
 /*
 virtual bool load () = 0
@@ -78,7 +74,6 @@ HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_LOAD )
   }
 }
 
-
 /*
 virtual bool save () = 0
 */
@@ -90,7 +85,6 @@ HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_SAVE )
     RBOOL( obj->save () );
   }
 }
-
 
 /*
 virtual void setFileName ( const QString & fileName ) = 0
@@ -104,9 +98,5 @@ HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_SETFILENAME )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

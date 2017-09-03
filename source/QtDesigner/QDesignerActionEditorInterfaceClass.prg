@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -38,7 +38,6 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
 HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_DELETE )
 {
   QDesignerActionEditorInterface * obj = (QDesignerActionEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -54,7 +53,6 @@ HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QDesignerFormEditorInterface * core () const
 */
@@ -67,7 +65,6 @@ HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_CORE )
     _qt4xhb_createReturnClass ( ptr, "QDESIGNERFORMEDITORINTERFACE" );
   }
 }
-
 
 /*
 virtual void manageAction ( QAction * action ) = 0
@@ -82,7 +79,6 @@ HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_MANAGEACTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void setFormWindow ( QDesignerFormWindowInterface * formWindow ) = 0
 */
@@ -96,8 +92,5 @@ HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_SETFORMWINDOW )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
 
 #pragma ENDDUMP

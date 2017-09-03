@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -69,7 +69,6 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QString codeTemplate () const
 */
@@ -81,7 +80,6 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_CODETEMPLATE )
     RQSTRING( obj->codeTemplate () );
   }
 }
-
 
 /*
 virtual QWidget * createWidget ( QWidget * parent ) = 0
@@ -96,7 +94,6 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_CREATEWIDGET )
   }
 }
 
-
 /*
 virtual QString domXml () const
 */
@@ -109,7 +106,6 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_DOMXML )
   }
 }
 
-
 /*
 virtual QString group () const = 0
 */
@@ -121,7 +117,6 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_GROUP )
     RQSTRING( obj->group () );
   }
 }
-
 
 /*
 virtual QIcon icon () const = 0
@@ -136,7 +131,6 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_ICON )
   }
 }
 
-
 /*
 virtual QString includeFile () const = 0
 */
@@ -148,7 +142,6 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_INCLUDEFILE )
     RQSTRING( obj->includeFile () );
   }
 }
-
 
 /*
 virtual void initialize ( QDesignerFormEditorInterface * formEditor )
@@ -164,7 +157,6 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_INITIALIZE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual bool isContainer () const = 0
 */
@@ -176,7 +168,6 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_ISCONTAINER )
     RBOOL( obj->isContainer () );
   }
 }
-
 
 /*
 virtual bool isInitialized () const
@@ -190,7 +181,6 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_ISINITIALIZED )
   }
 }
 
-
 /*
 virtual QString name () const = 0
 */
@@ -202,7 +192,6 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_NAME )
     RQSTRING( obj->name () );
   }
 }
-
 
 /*
 virtual QString toolTip () const = 0
@@ -216,7 +205,6 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_TOOLTIP )
   }
 }
 
-
 /*
 virtual QString whatsThis () const = 0
 */
@@ -228,7 +216,6 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_WHATSTHIS )
     RQSTRING( obj->whatsThis () );
   }
 }
-
 
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_NEWFROM )
 {
@@ -284,6 +271,5 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

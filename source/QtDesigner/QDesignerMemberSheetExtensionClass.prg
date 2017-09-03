@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -70,7 +70,6 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual int count () const = 0
 */
@@ -82,7 +81,6 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_COUNT )
     RINT( obj->count () );
   }
 }
-
 
 /*
 virtual QString declaredInClass ( int index ) const = 0
@@ -96,7 +94,6 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_DECLAREDINCLASS )
   }
 }
 
-
 /*
 virtual int indexOf ( const QString & name ) const = 0
 */
@@ -108,7 +105,6 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_INDEXOF )
     RINT( obj->indexOf ( PQSTRING(1) ) );
   }
 }
-
 
 /*
 virtual bool inheritedFromWidget ( int index ) const = 0
@@ -122,7 +118,6 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_INHERITEDFROMWIDGET )
   }
 }
 
-
 /*
 virtual bool isSignal ( int index ) const = 0
 */
@@ -134,7 +129,6 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_ISSIGNAL )
     RBOOL( obj->isSignal ( PINT(1) ) );
   }
 }
-
 
 /*
 virtual bool isSlot ( int index ) const = 0
@@ -148,7 +142,6 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_ISSLOT )
   }
 }
 
-
 /*
 virtual bool isVisible ( int index ) const = 0
 */
@@ -160,7 +153,6 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_ISVISIBLE )
     RBOOL( obj->isVisible ( PINT(1) ) );
   }
 }
-
 
 /*
 virtual QString memberGroup ( int index ) const = 0
@@ -174,7 +166,6 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_MEMBERGROUP )
   }
 }
 
-
 /*
 virtual QString memberName ( int index ) const = 0
 */
@@ -186,7 +177,6 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_MEMBERNAME )
     RQSTRING( obj->memberName ( PINT(1) ) );
   }
 }
-
 
 /*
 virtual QList<QByteArray> parameterNames ( int index ) const = 0
@@ -231,7 +221,6 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_PARAMETERNAMES )
   }
 }
 
-
 /*
 virtual QList<QByteArray> parameterTypes ( int index ) const = 0
 */
@@ -275,7 +264,6 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_PARAMETERTYPES )
   }
 }
 
-
 /*
 virtual void setMemberGroup ( int index, const QString & group ) = 0
 */
@@ -288,7 +276,6 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_SETMEMBERGROUP )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 virtual void setVisible ( int index, bool visible ) = 0
@@ -303,7 +290,6 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_SETVISIBLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QString signature ( int index ) const = 0
 */
@@ -315,7 +301,6 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_SIGNATURE )
     RQSTRING( obj->signature ( PINT(1) ) );
   }
 }
-
 
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_NEWFROM )
 {
@@ -371,7 +356,5 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QDesignerDynamicPropertySheetExtension
 
@@ -58,7 +57,6 @@ HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual int addDynamicProperty ( const QString & propertyName, const QVariant & value ) = 0
 */
@@ -70,7 +68,6 @@ HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_ADDDYNAMICPROPERTY )
     RINT( obj->addDynamicProperty ( PQSTRING(1), *PQVARIANT(2) ) );
   }
 }
-
 
 /*
 virtual bool canAddDynamicProperty ( const QString & propertyName ) const = 0
@@ -84,7 +81,6 @@ HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_CANADDDYNAMICPROPERTY )
   }
 }
 
-
 /*
 virtual bool dynamicPropertiesAllowed () const = 0
 */
@@ -96,7 +92,6 @@ HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_DYNAMICPROPERTIESALLOWED 
     RBOOL( obj->dynamicPropertiesAllowed () );
   }
 }
-
 
 /*
 virtual bool isDynamicProperty ( int index ) const = 0
@@ -110,7 +105,6 @@ HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_ISDYNAMICPROPERTY )
   }
 }
 
-
 /*
 virtual bool removeDynamicProperty ( int index ) = 0
 */
@@ -122,7 +116,6 @@ HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_REMOVEDYNAMICPROPERTY )
     RBOOL( obj->removeDynamicProperty ( PINT(1) ) );
   }
 }
-
 
 HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_NEWFROM )
 {
@@ -178,6 +171,5 @@ HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP
