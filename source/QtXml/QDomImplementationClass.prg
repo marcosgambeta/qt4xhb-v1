@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -60,7 +60,6 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QDomImplementation ( const QDomImplementation & x )
 */
@@ -69,7 +68,6 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_NEW2 )
   QDomImplementation * o = new QDomImplementation ( *PQDOMIMPLEMENTATION(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QDomImplementation ()
 //[2]QDomImplementation ( const QDomImplementation & x )
@@ -105,7 +103,6 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QDomDocument createDocument ( const QString & nsURI, const QString & qName, const QDomDocumentType & doctype )
 */
@@ -118,7 +115,6 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_CREATEDOCUMENT )
     _qt4xhb_createReturnClass ( ptr, "QDOMDOCUMENT", true );
   }
 }
-
 
 /*
 QDomDocumentType createDocumentType ( const QString & qName, const QString & publicId, const QString & systemId )
@@ -133,7 +129,6 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_CREATEDOCUMENTTYPE )
   }
 }
 
-
 /*
 bool hasFeature ( const QString & feature, const QString & version ) const
 */
@@ -145,7 +140,6 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_HASFEATURE )
     RBOOL( obj->hasFeature ( PQSTRING(1), PQSTRING(2) ) );
   }
 }
-
 
 /*
 bool isNull ()
@@ -159,8 +153,6 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_ISNULL )
   }
 }
 
-
-
 /*
 InvalidDataPolicy invalidDataPolicy ()
 */
@@ -168,7 +160,6 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_INVALIDDATAPOLICY )
 {
   hb_retni( (int) QDomImplementation::invalidDataPolicy () );
 }
-
 
 /*
 void setInvalidDataPolicy ( InvalidDataPolicy policy )
@@ -179,7 +170,6 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_SETINVALIDDATAPOLICY )
   QDomImplementation::setInvalidDataPolicy ( (QDomImplementation::InvalidDataPolicy) par1 );
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_NEWFROM )
 {
@@ -235,6 +225,5 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

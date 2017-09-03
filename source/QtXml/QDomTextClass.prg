@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -48,7 +48,6 @@ HB_FUNC_STATIC( QDOMTEXT_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QDomText ( const QDomText & x )
 */
@@ -57,7 +56,6 @@ HB_FUNC_STATIC( QDOMTEXT_NEW2 )
   QDomText * o = new QDomText ( *PQDOMTEXT(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QDomText ()
 //[2]QDomText ( const QDomText & x )
@@ -78,8 +76,6 @@ HB_FUNC_STATIC( QDOMTEXT_NEW )
   }
 }
 
-
-
 /*
 QDomNode::NodeType nodeType () const
 */
@@ -91,7 +87,6 @@ HB_FUNC_STATIC( QDOMTEXT_NODETYPE )
     hb_retni( (int) obj->nodeType () );
   }
 }
-
 
 /*
 QDomText splitText ( int offset )
@@ -105,8 +100,5 @@ HB_FUNC_STATIC( QDOMTEXT_SPLITTEXT )
     _qt4xhb_createReturnClass ( ptr, "QDOMTEXT", true );
   }
 }
-
-
-
 
 #pragma ENDDUMP

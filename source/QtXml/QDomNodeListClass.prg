@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -59,7 +59,6 @@ HB_FUNC_STATIC( QDOMNODELIST_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QDomNodeList ( const QDomNodeList & n )
 */
@@ -68,7 +67,6 @@ HB_FUNC_STATIC( QDOMNODELIST_NEW2 )
   QDomNodeList * o = new QDomNodeList ( *PQDOMNODELIST(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QDomNodeList ()
 //[2]QDomNodeList ( const QDomNodeList & n )
@@ -104,7 +102,6 @@ HB_FUNC_STATIC( QDOMNODELIST_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QDomNode at ( int index ) const
 */
@@ -118,7 +115,6 @@ HB_FUNC_STATIC( QDOMNODELIST_AT )
   }
 }
 
-
 /*
 int count () const
 */
@@ -131,7 +127,6 @@ HB_FUNC_STATIC( QDOMNODELIST_COUNT )
   }
 }
 
-
 /*
 bool isEmpty () const
 */
@@ -143,7 +138,6 @@ HB_FUNC_STATIC( QDOMNODELIST_ISEMPTY )
     RBOOL( obj->isEmpty () );
   }
 }
-
 
 /*
 QDomNode item ( int index ) const
@@ -158,7 +152,6 @@ HB_FUNC_STATIC( QDOMNODELIST_ITEM )
   }
 }
 
-
 /*
 uint length () const
 */
@@ -171,7 +164,6 @@ HB_FUNC_STATIC( QDOMNODELIST_LENGTH )
   }
 }
 
-
 /*
 int size () const
 */
@@ -183,7 +175,6 @@ HB_FUNC_STATIC( QDOMNODELIST_SIZE )
     RINT( obj->size () );
   }
 }
-
 
 HB_FUNC_STATIC( QDOMNODELIST_NEWFROM )
 {
@@ -239,6 +230,5 @@ HB_FUNC_STATIC( QDOMNODELIST_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

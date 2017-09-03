@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QDomComment INHERIT QDomCharacterData
 
@@ -44,7 +43,6 @@ HB_FUNC_STATIC( QDOMCOMMENT_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QDomComment ( const QDomComment & x )
 */
@@ -53,7 +51,6 @@ HB_FUNC_STATIC( QDOMCOMMENT_NEW2 )
   QDomComment * o = new QDomComment ( *PQDOMCOMMENT(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QDomComment ()
 //[2]QDomComment ( const QDomComment & x )
@@ -74,8 +71,6 @@ HB_FUNC_STATIC( QDOMCOMMENT_NEW )
   }
 }
 
-
-
 /*
 QDomNode::NodeType nodeType () cons
 */
@@ -87,8 +82,5 @@ HB_FUNC_STATIC( QDOMCOMMENT_NODETYPE )
     hb_retni( (int) obj->nodeType () );
   }
 }
-
-
-
 
 #pragma ENDDUMP

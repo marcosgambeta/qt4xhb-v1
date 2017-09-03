@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -81,7 +81,6 @@ HB_FUNC_STATIC( QDOMELEMENT_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QDomElement ( const QDomElement & x )
 */
@@ -90,7 +89,6 @@ HB_FUNC_STATIC( QDOMELEMENT_NEW2 )
   QDomElement * o = new QDomElement ( *PQDOMELEMENT(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QDomElement ()
 //[2]QDomElement ( const QDomElement & x )
@@ -111,8 +109,6 @@ HB_FUNC_STATIC( QDOMELEMENT_NEW )
   }
 }
 
-
-
 /*
 QString attribute ( const QString & name, const QString & defValue = QString() ) const
 */
@@ -125,7 +121,6 @@ HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTE )
   }
 }
 
-
 /*
 QString attributeNS ( const QString nsURI, const QString & localName, const QString & defValue = QString() ) const
 */
@@ -137,7 +132,6 @@ HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTENS )
     RQSTRING( obj->attributeNS ( PQSTRING(1), PQSTRING(2), OPQSTRING(3,QString()) ) );
   }
 }
-
 
 /*
 QDomAttr attributeNode ( const QString & name )
@@ -152,7 +146,6 @@ HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTENODE )
   }
 }
 
-
 /*
 QDomAttr attributeNodeNS ( const QString & nsURI, const QString & localName )
 */
@@ -165,7 +158,6 @@ HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTENODENS )
     _qt4xhb_createReturnClass ( ptr, "QDOMATTR", true );
   }
 }
-
 
 /*
 QDomNamedNodeMap attributes () const
@@ -180,7 +172,6 @@ HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTES )
   }
 }
 
-
 /*
 QDomNodeList elementsByTagName ( const QString & tagname ) const
 */
@@ -193,7 +184,6 @@ HB_FUNC_STATIC( QDOMELEMENT_ELEMENTSBYTAGNAME )
     _qt4xhb_createReturnClass ( ptr, "QDOMNODELIST", true );
   }
 }
-
 
 /*
 QDomNodeList elementsByTagNameNS ( const QString & nsURI, const QString & localName ) const
@@ -208,7 +198,6 @@ HB_FUNC_STATIC( QDOMELEMENT_ELEMENTSBYTAGNAMENS )
   }
 }
 
-
 /*
 bool hasAttribute ( const QString & name ) const
 */
@@ -220,7 +209,6 @@ HB_FUNC_STATIC( QDOMELEMENT_HASATTRIBUTE )
     RBOOL( obj->hasAttribute ( PQSTRING(1) ) );
   }
 }
-
 
 /*
 bool hasAttributeNS ( const QString & nsURI, const QString & localName ) const
@@ -234,7 +222,6 @@ HB_FUNC_STATIC( QDOMELEMENT_HASATTRIBUTENS )
   }
 }
 
-
 /*
 QDomNode::NodeType nodeType () const
 */
@@ -246,7 +233,6 @@ HB_FUNC_STATIC( QDOMELEMENT_NODETYPE )
     hb_retni( (int) obj->nodeType () );
   }
 }
-
 
 /*
 void removeAttribute ( const QString & name )
@@ -261,7 +247,6 @@ HB_FUNC_STATIC( QDOMELEMENT_REMOVEATTRIBUTE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void removeAttributeNS ( const QString & nsURI, const QString & localName )
 */
@@ -274,7 +259,6 @@ HB_FUNC_STATIC( QDOMELEMENT_REMOVEATTRIBUTENS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QDomAttr removeAttributeNode ( const QDomAttr & oldAttr )
@@ -289,7 +273,6 @@ HB_FUNC_STATIC( QDOMELEMENT_REMOVEATTRIBUTENODE )
   }
 }
 
-
 /*
 void setAttribute ( const QString & name, const QString & value )
 */
@@ -302,7 +285,6 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE1 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setAttribute ( const QString & name, int value )
@@ -318,7 +300,6 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setAttribute ( const QString & name, uint value )
 */
@@ -331,7 +312,6 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE3 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setAttribute ( const QString & name, qlonglong value )
@@ -346,7 +326,6 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE4 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setAttribute ( const QString & name, qulonglong value )
 */
@@ -359,7 +338,6 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE5 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setAttribute ( const QString & name, float value )
@@ -374,7 +352,6 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE6 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setAttribute ( const QString & name, double value )
 */
@@ -387,7 +364,6 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE7 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setAttribute ( const QString & name, const QString & value )
 //[2]void setAttribute ( const QString & name, int value )
@@ -423,7 +399,6 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setAttributeNS ( const QString nsURI, const QString & qName, int value )
 */
@@ -438,7 +413,6 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setAttributeNS ( const QString nsURI, const QString & qName, uint value )
 */
@@ -451,7 +425,6 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS3 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setAttributeNS ( const QString nsURI, const QString & qName, qlonglong value )
@@ -466,7 +439,6 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS4 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setAttributeNS ( const QString nsURI, const QString & qName, qulonglong value )
 */
@@ -480,7 +452,6 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS5 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setAttributeNS ( const QString nsURI, const QString & qName, double value )
 */
@@ -493,7 +464,6 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS6 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setAttributeNS ( const QString nsURI, const QString & qName, const QString & value )
 //[2]void setAttributeNS ( const QString nsURI, const QString & qName, int value )
@@ -527,7 +497,6 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENODE )
   }
 }
 
-
 /*
 QDomAttr setAttributeNodeNS ( const QDomAttr & newAttr )
 */
@@ -540,7 +509,6 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENODENS )
     _qt4xhb_createReturnClass ( ptr, "QDOMATTR", true );
   }
 }
-
 
 /*
 void setTagName ( const QString & name )
@@ -555,7 +523,6 @@ HB_FUNC_STATIC( QDOMELEMENT_SETTAGNAME )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString tagName () const
 */
@@ -568,7 +535,6 @@ HB_FUNC_STATIC( QDOMELEMENT_TAGNAME )
   }
 }
 
-
 /*
 QString text () const
 */
@@ -580,8 +546,5 @@ HB_FUNC_STATIC( QDOMELEMENT_TEXT )
     RQSTRING( obj->text () );
   }
 }
-
-
-
 
 #pragma ENDDUMP

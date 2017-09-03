@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -52,7 +52,6 @@ HB_FUNC_STATIC( QDOMATTR_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QDomAttr ( const QDomAttr & x )
 */
@@ -61,7 +60,6 @@ HB_FUNC_STATIC( QDOMATTR_NEW2 )
   QDomAttr * o = new QDomAttr ( *PQDOMATTR(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QDomAttr ()
 //[2]QDomAttr ( const QDomAttr & x )
@@ -82,8 +80,6 @@ HB_FUNC_STATIC( QDOMATTR_NEW )
   }
 }
 
-
-
 /*
 QString name () const
 */
@@ -96,7 +92,6 @@ HB_FUNC_STATIC( QDOMATTR_NAME )
   }
 }
 
-
 /*
 QDomNode::NodeType nodeType () const
 */
@@ -108,7 +103,6 @@ HB_FUNC_STATIC( QDOMATTR_NODETYPE )
     hb_retni( (int) obj->nodeType () );
   }
 }
-
 
 /*
 QDomElement ownerElement () const
@@ -123,7 +117,6 @@ HB_FUNC_STATIC( QDOMATTR_OWNERELEMENT )
   }
 }
 
-
 /*
 void setValue ( const QString & v )
 */
@@ -137,7 +130,6 @@ HB_FUNC_STATIC( QDOMATTR_SETVALUE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool specified () const
 */
@@ -150,7 +142,6 @@ HB_FUNC_STATIC( QDOMATTR_SPECIFIED )
   }
 }
 
-
 /*
 QString value () const
 */
@@ -162,8 +153,5 @@ HB_FUNC_STATIC( QDOMATTR_VALUE )
     RQSTRING( obj->value () );
   }
 }
-
-
-
 
 #pragma ENDDUMP

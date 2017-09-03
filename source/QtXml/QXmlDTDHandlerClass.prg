@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QXmlDTDHandler
 
@@ -56,7 +55,6 @@ HB_FUNC_STATIC( QXMLDTDHANDLER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QString errorString () const = 0
 */
@@ -68,7 +66,6 @@ HB_FUNC_STATIC( QXMLDTDHANDLER_ERRORSTRING )
     RQSTRING( obj->errorString () );
   }
 }
-
 
 /*
 virtual bool notationDecl ( const QString & name, const QString & publicId, const QString & systemId ) = 0
@@ -82,7 +79,6 @@ HB_FUNC_STATIC( QXMLDTDHANDLER_NOTATIONDECL )
   }
 }
 
-
 /*
 virtual bool unparsedEntityDecl ( const QString & name, const QString & publicId, const QString & systemId, const QString & notationName ) = 0
 */
@@ -94,7 +90,6 @@ HB_FUNC_STATIC( QXMLDTDHANDLER_UNPARSEDENTITYDECL )
     RBOOL( obj->unparsedEntityDecl ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4) ) );
   }
 }
-
 
 HB_FUNC_STATIC( QXMLDTDHANDLER_NEWFROM )
 {
@@ -150,6 +145,5 @@ HB_FUNC_STATIC( QXMLDTDHANDLER_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

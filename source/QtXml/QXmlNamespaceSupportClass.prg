@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QXmlNamespaceSupport
 
@@ -59,7 +58,6 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_NEW )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_DELETE )
 {
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -75,7 +73,6 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void popContext ()
 */
@@ -89,7 +86,6 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_POPCONTEXT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString prefix ( const QString & uri ) const
 */
@@ -101,7 +97,6 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIX )
     RQSTRING( obj->prefix ( PQSTRING(1) ) );
   }
 }
-
 
 /*
 QStringList prefixes () const
@@ -115,7 +110,6 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIXES1 )
   }
 }
 
-
 /*
 QStringList prefixes ( const QString & uri ) const
 */
@@ -127,7 +121,6 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIXES2 )
     RQSTRINGLIST( obj->prefixes ( PQSTRING(1) ) );
   }
 }
-
 
 //[1]QStringList prefixes () const
 //[2]QStringList prefixes ( const QString & uri ) const
@@ -159,7 +152,6 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PROCESSNAME )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void pushContext ()
 */
@@ -172,7 +164,6 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PUSHCONTEXT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void reset ()
@@ -187,7 +178,6 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_RESET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPrefix ( const QString & pre, const QString & uri )
 */
@@ -200,7 +190,6 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_SETPREFIX )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void splitName ( const QString & qname, QString & prefix, QString & localname ) const
@@ -217,7 +206,6 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_SPLITNAME )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString uri ( const QString & prefix ) const
 */
@@ -229,7 +217,6 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_URI )
     RQSTRING( obj->uri ( PQSTRING(1) ) );
   }
 }
-
 
 HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_NEWFROM )
 {
@@ -285,6 +272,5 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

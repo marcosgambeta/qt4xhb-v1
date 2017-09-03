@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QXmlAttributes
 
@@ -68,7 +67,6 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_NEW )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 HB_FUNC_STATIC( QXMLATTRIBUTES_DELETE )
 {
   QXmlAttributes * obj = (QXmlAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -84,7 +82,6 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void append ( const QString & qName, const QString & uri, const QString & localPart, const QString & value )
 */
@@ -97,7 +94,6 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_APPEND )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void clear ()
@@ -112,7 +108,6 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_CLEAR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int count () const
 */
@@ -125,7 +120,6 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_COUNT )
   }
 }
 
-
 /*
 int index ( const QString & qName ) const
 */
@@ -137,7 +131,6 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_INDEX1 )
     RINT( obj->index ( PQSTRING(1) ) );
   }
 }
-
 
 /*
 int index ( const QLatin1String & qName ) const
@@ -152,7 +145,6 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_INDEX2 )
   }
 }
 
-
 /*
 int index ( const QString & uri, const QString & localPart ) const
 */
@@ -164,7 +156,6 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_INDEX3 )
     RINT( obj->index ( PQSTRING(1), PQSTRING(2) ) );
   }
 }
-
 
 //[1]int index ( const QString & qName ) const
 //[2]int index ( const QLatin1String & qName ) const
@@ -198,7 +189,6 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_LENGTH )
   }
 }
 
-
 /*
 QString localName ( int index ) const
 */
@@ -210,7 +200,6 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_LOCALNAME )
     RQSTRING( obj->localName ( PINT(1) ) );
   }
 }
-
 
 /*
 QString qName ( int index ) const
@@ -224,7 +213,6 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_QNAME )
   }
 }
 
-
 /*
 QString type ( int index ) const
 */
@@ -236,7 +224,6 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_TYPE1 )
     RQSTRING( obj->type ( PINT(1) ) );
   }
 }
-
 
 /*
 QString type ( const QString & qName ) const
@@ -250,7 +237,6 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_TYPE2 )
   }
 }
 
-
 /*
 QString type ( const QString & uri, const QString & localName ) const
 */
@@ -262,7 +248,6 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_TYPE3 )
     RQSTRING( obj->type ( PQSTRING(1), PQSTRING(2) ) );
   }
 }
-
 
 //[1]QString type ( int index ) const
 //[2]QString type ( const QString & qName ) const
@@ -296,7 +281,6 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_URI )
   }
 }
 
-
 /*
 QString value ( int index ) const
 */
@@ -309,7 +293,6 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_VALUE1 )
   }
 }
 
-
 /*
 QString value ( const QString & qName ) const
 */
@@ -321,7 +304,6 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_VALUE2 )
     RQSTRING( obj->value ( PQSTRING(1) ) );
   }
 }
-
 
 /*
 QString value ( const QLatin1String & qName ) const
@@ -336,7 +318,6 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_VALUE3 )
   }
 }
 
-
 /*
 QString value ( const QString & uri, const QString & localName ) const
 */
@@ -348,7 +329,6 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_VALUE4 )
     RQSTRING( obj->value ( PQSTRING(1), PQSTRING(2) ) );
   }
 }
-
 
 //[1]QString value ( int index ) const
 //[2]QString value ( const QString & qName ) const
@@ -374,7 +354,6 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_VALUE )
     HB_FUNC_EXEC( QXMLATTRIBUTES_VALUE4 );
   }
 }
-
 
 HB_FUNC_STATIC( QXMLATTRIBUTES_NEWFROM )
 {

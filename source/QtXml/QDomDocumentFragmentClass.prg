@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QDomDocumentFragment INHERIT QDomNode
 
@@ -44,7 +43,6 @@ HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QDomDocumentFragment ( const QDomDocumentFragment & x )
 */
@@ -53,7 +51,6 @@ HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NEW2 )
   QDomDocumentFragment * o = new QDomDocumentFragment ( *PQDOMDOCUMENTFRAGMENT(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QDomDocumentFragment ()
 //[2]QDomDocumentFragment ( const QDomDocumentFragment & x )
@@ -74,8 +71,6 @@ HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NEW )
   }
 }
 
-
-
 /*
 QDomNode::NodeType nodeType () const
 */
@@ -87,8 +82,5 @@ HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NODETYPE )
     hb_retni( (int) obj->nodeType () );
   }
 }
-
-
-
 
 #pragma ENDDUMP

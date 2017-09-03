@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QXmlDeclHandler
 
@@ -57,7 +56,6 @@ HB_FUNC_STATIC( QXMLDECLHANDLER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual bool attributeDecl ( const QString & eName, const QString & aName, const QString & type, const QString & valueDefault, const QString & value ) = 0
 */
@@ -69,7 +67,6 @@ HB_FUNC_STATIC( QXMLDECLHANDLER_ATTRIBUTEDECL )
     RBOOL( obj->attributeDecl ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5) ) );
   }
 }
-
 
 /*
 virtual QString errorString () const = 0
@@ -83,7 +80,6 @@ HB_FUNC_STATIC( QXMLDECLHANDLER_ERRORSTRING )
   }
 }
 
-
 /*
 virtual bool externalEntityDecl ( const QString & name, const QString & publicId, const QString & systemId ) = 0
 */
@@ -96,7 +92,6 @@ HB_FUNC_STATIC( QXMLDECLHANDLER_EXTERNALENTITYDECL )
   }
 }
 
-
 /*
 virtual bool internalEntityDecl ( const QString & name, const QString & value ) = 0
 */
@@ -108,7 +103,6 @@ HB_FUNC_STATIC( QXMLDECLHANDLER_INTERNALENTITYDECL )
     RBOOL( obj->internalEntityDecl ( PQSTRING(1), PQSTRING(2) ) );
   }
 }
-
 
 HB_FUNC_STATIC( QXMLDECLHANDLER_NEWFROM )
 {
@@ -164,6 +158,5 @@ HB_FUNC_STATIC( QXMLDECLHANDLER_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

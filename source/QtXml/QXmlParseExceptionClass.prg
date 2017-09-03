@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QXmlParseException
 
@@ -55,7 +54,6 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QXmlParseException ( const QXmlParseException & other )
 */
@@ -64,7 +62,6 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEW2 )
   QXmlParseException * o = new QXmlParseException ( *PQXMLPARSEEXCEPTION(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QXmlParseException ( const QString & name = QString(), int c = -1, int l = -1, const QString & p = QString(), const QString & s = QString() )
 //[2]QXmlParseException ( const QXmlParseException & other )
@@ -100,7 +97,6 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int columnNumber () const
 */
@@ -112,7 +108,6 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_COLUMNNUMBER )
     RINT( obj->columnNumber () );
   }
 }
-
 
 /*
 int lineNumber () const
@@ -126,7 +121,6 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_LINENUMBER )
   }
 }
 
-
 /*
 QString message () const
 */
@@ -138,7 +132,6 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_MESSAGE )
     RQSTRING( obj->message () );
   }
 }
-
 
 /*
 QString publicId () const
@@ -152,7 +145,6 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_PUBLICID )
   }
 }
 
-
 /*
 QString systemId () const
 */
@@ -164,7 +156,6 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_SYSTEMID )
     RQSTRING( obj->systemId () );
   }
 }
-
 
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEWFROM )
 {
@@ -220,6 +211,5 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

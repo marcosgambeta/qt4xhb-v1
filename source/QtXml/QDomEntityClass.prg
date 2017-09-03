@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QDomEntity INHERIT QDomNode
 
@@ -47,7 +46,6 @@ HB_FUNC_STATIC( QDOMENTITY_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QDomEntity ( const QDomEntity & x )
 */
@@ -56,7 +54,6 @@ HB_FUNC_STATIC( QDOMENTITY_NEW2 )
   QDomEntity * o = new QDomEntity ( *PQDOMENTITY(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QDomEntity ()
 //[2]QDomEntity ( const QDomEntity & x )
@@ -77,8 +74,6 @@ HB_FUNC_STATIC( QDOMENTITY_NEW )
   }
 }
 
-
-
 /*
 QDomNode::NodeType nodeType () const
 */
@@ -90,7 +85,6 @@ HB_FUNC_STATIC( QDOMENTITY_NODETYPE )
     hb_retni( (int) obj->nodeType () );
   }
 }
-
 
 /*
 QString notationName () const
@@ -104,7 +98,6 @@ HB_FUNC_STATIC( QDOMENTITY_NOTATIONNAME )
   }
 }
 
-
 /*
 QString publicId () const
 */
@@ -117,7 +110,6 @@ HB_FUNC_STATIC( QDOMENTITY_PUBLICID )
   }
 }
 
-
 /*
 QString systemId () const
 */
@@ -129,8 +121,5 @@ HB_FUNC_STATIC( QDOMENTITY_SYSTEMID )
     RQSTRING( obj->systemId () );
   }
 }
-
-
-
 
 #pragma ENDDUMP

@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QXmlEntityResolver
 
@@ -54,7 +53,6 @@ HB_FUNC_STATIC( QXMLENTITYRESOLVER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QString errorString () const = 0
 */
@@ -66,7 +64,6 @@ HB_FUNC_STATIC( QXMLENTITYRESOLVER_ERRORSTRING )
     RQSTRING( obj->errorString () );
   }
 }
-
 
 HB_FUNC_STATIC( QXMLENTITYRESOLVER_NEWFROM )
 {
@@ -122,7 +119,5 @@ HB_FUNC_STATIC( QXMLENTITYRESOLVER_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

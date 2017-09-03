@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QXmlLexicalHandler
 
@@ -61,7 +60,6 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual bool comment ( const QString & ch ) = 0
 */
@@ -73,7 +71,6 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_COMMENT )
     RBOOL( obj->comment ( PQSTRING(1) ) );
   }
 }
-
 
 /*
 virtual bool endCDATA () = 0
@@ -87,7 +84,6 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_ENDCDATA )
   }
 }
 
-
 /*
 virtual bool endDTD () = 0
 */
@@ -99,7 +95,6 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_ENDDTD )
     RBOOL( obj->endDTD () );
   }
 }
-
 
 /*
 virtual bool endEntity ( const QString & name ) = 0
@@ -113,7 +108,6 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_ENDENTITY )
   }
 }
 
-
 /*
 virtual QString errorString () const = 0
 */
@@ -125,7 +119,6 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_ERRORSTRING )
     RQSTRING( obj->errorString () );
   }
 }
-
 
 /*
 virtual bool startCDATA () = 0
@@ -139,7 +132,6 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_STARTCDATA )
   }
 }
 
-
 /*
 virtual bool startDTD ( const QString & name, const QString & publicId, const QString & systemId ) = 0
 */
@@ -152,7 +144,6 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_STARTDTD )
   }
 }
 
-
 /*
 virtual bool startEntity ( const QString & name ) = 0
 */
@@ -164,7 +155,6 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_STARTENTITY )
     RBOOL( obj->startEntity ( PQSTRING(1) ) );
   }
 }
-
 
 HB_FUNC_STATIC( QXMLLEXICALHANDLER_NEWFROM )
 {
@@ -220,6 +210,5 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

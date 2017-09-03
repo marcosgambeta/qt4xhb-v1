@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QDomProcessingInstruction INHERIT QDomNode
 
@@ -47,7 +46,6 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QDomProcessingInstruction ( const QDomProcessingInstruction & x )
 */
@@ -56,7 +54,6 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW2 )
   QDomProcessingInstruction * o = new QDomProcessingInstruction ( *PQDOMPROCESSINGINSTRUCTION(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QDomProcessingInstruction ()
 //[2]QDomProcessingInstruction ( const QDomProcessingInstruction & x )
@@ -77,8 +74,6 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW )
   }
 }
 
-
-
 /*
 QString data () const
 */
@@ -91,7 +86,6 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_DATA )
   }
 }
 
-
 /*
 QDomNode::NodeType nodeType () const
 */
@@ -103,7 +97,6 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NODETYPE )
     hb_retni( (int) obj->nodeType () );
   }
 }
-
 
 /*
 void setData ( const QString & d )
@@ -118,7 +111,6 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_SETDATA )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString target () const
 */
@@ -130,8 +122,5 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_TARGET )
     RQSTRING( obj->target () );
   }
 }
-
-
-
 
 #pragma ENDDUMP

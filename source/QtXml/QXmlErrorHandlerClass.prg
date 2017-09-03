@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QXmlErrorHandler
 
@@ -57,7 +56,6 @@ HB_FUNC_STATIC( QXMLERRORHANDLER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual bool error ( const QXmlParseException & exception ) = 0
 */
@@ -69,7 +67,6 @@ HB_FUNC_STATIC( QXMLERRORHANDLER_ERROR )
     RBOOL( obj->error ( *PQXMLPARSEEXCEPTION(1) ) );
   }
 }
-
 
 /*
 virtual QString errorString () const = 0
@@ -83,7 +80,6 @@ HB_FUNC_STATIC( QXMLERRORHANDLER_ERRORSTRING )
   }
 }
 
-
 /*
 virtual bool fatalError ( const QXmlParseException & exception ) = 0
 */
@@ -96,7 +92,6 @@ HB_FUNC_STATIC( QXMLERRORHANDLER_FATALERROR )
   }
 }
 
-
 /*
 virtual bool warning ( const QXmlParseException & exception ) = 0
 */
@@ -108,7 +103,6 @@ HB_FUNC_STATIC( QXMLERRORHANDLER_WARNING )
     RBOOL( obj->warning ( *PQXMLPARSEEXCEPTION(1) ) );
   }
 }
-
 
 HB_FUNC_STATIC( QXMLERRORHANDLER_NEWFROM )
 {
@@ -164,6 +158,5 @@ HB_FUNC_STATIC( QXMLERRORHANDLER_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

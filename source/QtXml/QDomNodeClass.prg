@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -132,7 +132,6 @@ HB_FUNC_STATIC( QDOMNODE_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QDomNode ( const QDomNode & n )
 */
@@ -141,7 +140,6 @@ HB_FUNC_STATIC( QDOMNODE_NEW2 )
   QDomNode * o = new QDomNode ( *PQDOMNODE(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QDomNode ()
 //[2]QDomNode ( const QDomNode & n )
@@ -177,7 +175,6 @@ HB_FUNC_STATIC( QDOMNODE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QDomNode appendChild ( const QDomNode & newChild )
 */
@@ -190,7 +187,6 @@ HB_FUNC_STATIC( QDOMNODE_APPENDCHILD )
     _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
   }
 }
-
 
 /*
 QDomNamedNodeMap attributes () const
@@ -205,7 +201,6 @@ HB_FUNC_STATIC( QDOMNODE_ATTRIBUTES )
   }
 }
 
-
 /*
 QDomNodeList childNodes () const
 */
@@ -218,7 +213,6 @@ HB_FUNC_STATIC( QDOMNODE_CHILDNODES )
     _qt4xhb_createReturnClass ( ptr, "QDOMNODELIST", true );
   }
 }
-
 
 /*
 void clear ()
@@ -233,7 +227,6 @@ HB_FUNC_STATIC( QDOMNODE_CLEAR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QDomNode cloneNode ( bool deep = true ) const
 */
@@ -247,7 +240,6 @@ HB_FUNC_STATIC( QDOMNODE_CLONENODE )
   }
 }
 
-
 /*
 int columnNumber () const
 */
@@ -259,7 +251,6 @@ HB_FUNC_STATIC( QDOMNODE_COLUMNNUMBER )
     RINT( obj->columnNumber () );
   }
 }
-
 
 /*
 QDomNode firstChild () const
@@ -274,7 +265,6 @@ HB_FUNC_STATIC( QDOMNODE_FIRSTCHILD )
   }
 }
 
-
 /*
 QDomElement firstChildElement ( const QString & tagName = QString() ) const
 */
@@ -288,7 +278,6 @@ HB_FUNC_STATIC( QDOMNODE_FIRSTCHILDELEMENT )
   }
 }
 
-
 /*
 bool hasAttributes () const
 */
@@ -301,7 +290,6 @@ HB_FUNC_STATIC( QDOMNODE_HASATTRIBUTES )
   }
 }
 
-
 /*
 bool hasChildNodes () const
 */
@@ -313,7 +301,6 @@ HB_FUNC_STATIC( QDOMNODE_HASCHILDNODES )
     RBOOL( obj->hasChildNodes () );
   }
 }
-
 
 /*
 QDomNode insertAfter ( const QDomNode & newChild, const QDomNode & refChild )
@@ -328,7 +315,6 @@ HB_FUNC_STATIC( QDOMNODE_INSERTAFTER )
   }
 }
 
-
 /*
 QDomNode insertBefore ( const QDomNode & newChild, const QDomNode & refChild )
 */
@@ -342,7 +328,6 @@ HB_FUNC_STATIC( QDOMNODE_INSERTBEFORE )
   }
 }
 
-
 /*
 bool isAttr () const
 */
@@ -354,7 +339,6 @@ HB_FUNC_STATIC( QDOMNODE_ISATTR )
     RBOOL( obj->isAttr () );
   }
 }
-
 
 /*
 bool isCDATASection () const
@@ -368,7 +352,6 @@ HB_FUNC_STATIC( QDOMNODE_ISCDATASECTION )
   }
 }
 
-
 /*
 bool isCharacterData () const
 */
@@ -380,7 +363,6 @@ HB_FUNC_STATIC( QDOMNODE_ISCHARACTERDATA )
     RBOOL( obj->isCharacterData () );
   }
 }
-
 
 /*
 bool isComment () const
@@ -394,7 +376,6 @@ HB_FUNC_STATIC( QDOMNODE_ISCOMMENT )
   }
 }
 
-
 /*
 bool isDocument () const
 */
@@ -406,7 +387,6 @@ HB_FUNC_STATIC( QDOMNODE_ISDOCUMENT )
     RBOOL( obj->isDocument () );
   }
 }
-
 
 /*
 bool isDocumentFragment () const
@@ -420,7 +400,6 @@ HB_FUNC_STATIC( QDOMNODE_ISDOCUMENTFRAGMENT )
   }
 }
 
-
 /*
 bool isDocumentType () const
 */
@@ -432,7 +411,6 @@ HB_FUNC_STATIC( QDOMNODE_ISDOCUMENTTYPE )
     RBOOL( obj->isDocumentType () );
   }
 }
-
 
 /*
 bool isElement () const
@@ -446,7 +424,6 @@ HB_FUNC_STATIC( QDOMNODE_ISELEMENT )
   }
 }
 
-
 /*
 bool isEntity () const
 */
@@ -458,7 +435,6 @@ HB_FUNC_STATIC( QDOMNODE_ISENTITY )
     RBOOL( obj->isEntity () );
   }
 }
-
 
 /*
 bool isEntityReference () const
@@ -472,7 +448,6 @@ HB_FUNC_STATIC( QDOMNODE_ISENTITYREFERENCE )
   }
 }
 
-
 /*
 bool isNotation () const
 */
@@ -484,7 +459,6 @@ HB_FUNC_STATIC( QDOMNODE_ISNOTATION )
     RBOOL( obj->isNotation () );
   }
 }
-
 
 /*
 bool isNull () const
@@ -498,7 +472,6 @@ HB_FUNC_STATIC( QDOMNODE_ISNULL )
   }
 }
 
-
 /*
 bool isProcessingInstruction () const
 */
@@ -510,7 +483,6 @@ HB_FUNC_STATIC( QDOMNODE_ISPROCESSINGINSTRUCTION )
     RBOOL( obj->isProcessingInstruction () );
   }
 }
-
 
 /*
 bool isSupported ( const QString & feature, const QString & version ) const
@@ -524,7 +496,6 @@ HB_FUNC_STATIC( QDOMNODE_ISSUPPORTED )
   }
 }
 
-
 /*
 bool isText () const
 */
@@ -536,7 +507,6 @@ HB_FUNC_STATIC( QDOMNODE_ISTEXT )
     RBOOL( obj->isText () );
   }
 }
-
 
 /*
 QDomNode lastChild () const
@@ -551,7 +521,6 @@ HB_FUNC_STATIC( QDOMNODE_LASTCHILD )
   }
 }
 
-
 /*
 QDomElement lastChildElement ( const QString & tagName = QString() ) const
 */
@@ -565,7 +534,6 @@ HB_FUNC_STATIC( QDOMNODE_LASTCHILDELEMENT )
   }
 }
 
-
 /*
 int lineNumber () const
 */
@@ -578,7 +546,6 @@ HB_FUNC_STATIC( QDOMNODE_LINENUMBER )
   }
 }
 
-
 /*
 QString localName () const
 */
@@ -590,7 +557,6 @@ HB_FUNC_STATIC( QDOMNODE_LOCALNAME )
     RQSTRING( obj->localName () );
   }
 }
-
 
 /*
 QDomNode namedItem ( const QString & name ) const
@@ -605,7 +571,6 @@ HB_FUNC_STATIC( QDOMNODE_NAMEDITEM )
   }
 }
 
-
 /*
 QString namespaceURI () const
 */
@@ -617,7 +582,6 @@ HB_FUNC_STATIC( QDOMNODE_NAMESPACEURI )
     RQSTRING( obj->namespaceURI () );
   }
 }
-
 
 /*
 QDomNode nextSibling () const
@@ -632,7 +596,6 @@ HB_FUNC_STATIC( QDOMNODE_NEXTSIBLING )
   }
 }
 
-
 /*
 QDomElement nextSiblingElement ( const QString & tagName = QString() ) const
 */
@@ -646,7 +609,6 @@ HB_FUNC_STATIC( QDOMNODE_NEXTSIBLINGELEMENT )
   }
 }
 
-
 /*
 QString nodeName () const
 */
@@ -658,7 +620,6 @@ HB_FUNC_STATIC( QDOMNODE_NODENAME )
     RQSTRING( obj->nodeName () );
   }
 }
-
 
 /*
 NodeType nodeType () const
@@ -672,7 +633,6 @@ HB_FUNC_STATIC( QDOMNODE_NODETYPE )
   }
 }
 
-
 /*
 QString nodeValue () const
 */
@@ -684,7 +644,6 @@ HB_FUNC_STATIC( QDOMNODE_NODEVALUE )
     RQSTRING( obj->nodeValue () );
   }
 }
-
 
 /*
 void normalize ()
@@ -699,7 +658,6 @@ HB_FUNC_STATIC( QDOMNODE_NORMALIZE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QDomDocument ownerDocument () const
 */
@@ -712,7 +670,6 @@ HB_FUNC_STATIC( QDOMNODE_OWNERDOCUMENT )
     _qt4xhb_createReturnClass ( ptr, "QDOMDOCUMENT", true );
   }
 }
-
 
 /*
 QDomNode parentNode () const
@@ -727,7 +684,6 @@ HB_FUNC_STATIC( QDOMNODE_PARENTNODE )
   }
 }
 
-
 /*
 QString prefix () const
 */
@@ -739,7 +695,6 @@ HB_FUNC_STATIC( QDOMNODE_PREFIX )
     RQSTRING( obj->prefix () );
   }
 }
-
 
 /*
 QDomNode previousSibling () const
@@ -754,7 +709,6 @@ HB_FUNC_STATIC( QDOMNODE_PREVIOUSSIBLING )
   }
 }
 
-
 /*
 QDomElement previousSiblingElement ( const QString & tagName = QString() ) const
 */
@@ -767,7 +721,6 @@ HB_FUNC_STATIC( QDOMNODE_PREVIOUSSIBLINGELEMENT )
     _qt4xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
   }
 }
-
 
 /*
 QDomNode removeChild ( const QDomNode & oldChild )
@@ -782,7 +735,6 @@ HB_FUNC_STATIC( QDOMNODE_REMOVECHILD )
   }
 }
 
-
 /*
 QDomNode replaceChild ( const QDomNode & newChild, const QDomNode & oldChild )
 */
@@ -795,7 +747,6 @@ HB_FUNC_STATIC( QDOMNODE_REPLACECHILD )
     _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
   }
 }
-
 
 /*
 void save ( QTextStream & str, int indent ) const
@@ -811,7 +762,6 @@ HB_FUNC_STATIC( QDOMNODE_SAVE1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void save ( QTextStream & str, int indent, EncodingPolicy encodingPolicy ) const
 */
@@ -825,7 +775,6 @@ HB_FUNC_STATIC( QDOMNODE_SAVE2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void save ( QTextStream & str, int indent ) const
 //[2]void save ( QTextStream & str, int indent, EncodingPolicy encodingPolicy ) const
@@ -855,7 +804,6 @@ HB_FUNC_STATIC( QDOMNODE_SETNODEVALUE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPrefix ( const QString & pre )
 */
@@ -868,7 +816,6 @@ HB_FUNC_STATIC( QDOMNODE_SETPREFIX )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QDomAttr toAttr () const
@@ -883,7 +830,6 @@ HB_FUNC_STATIC( QDOMNODE_TOATTR )
   }
 }
 
-
 /*
 QDomCDATASection toCDATASection () const
 */
@@ -896,7 +842,6 @@ HB_FUNC_STATIC( QDOMNODE_TOCDATASECTION )
     _qt4xhb_createReturnClass ( ptr, "QDOMCDATASECTION", true );
   }
 }
-
 
 /*
 QDomCharacterData toCharacterData () const
@@ -911,7 +856,6 @@ HB_FUNC_STATIC( QDOMNODE_TOCHARACTERDATA )
   }
 }
 
-
 /*
 QDomComment toComment () const
 */
@@ -924,7 +868,6 @@ HB_FUNC_STATIC( QDOMNODE_TOCOMMENT )
     _qt4xhb_createReturnClass ( ptr, "QDOMCOMMENT", true );
   }
 }
-
 
 /*
 QDomDocument toDocument () const
@@ -939,7 +882,6 @@ HB_FUNC_STATIC( QDOMNODE_TODOCUMENT )
   }
 }
 
-
 /*
 QDomDocumentFragment toDocumentFragment () const
 */
@@ -952,7 +894,6 @@ HB_FUNC_STATIC( QDOMNODE_TODOCUMENTFRAGMENT )
     _qt4xhb_createReturnClass ( ptr, "QDOMDOCUMENTFRAGMENT", true );
   }
 }
-
 
 /*
 QDomDocumentType toDocumentType () const
@@ -967,7 +908,6 @@ HB_FUNC_STATIC( QDOMNODE_TODOCUMENTTYPE )
   }
 }
 
-
 /*
 QDomElement toElement () const
 */
@@ -980,7 +920,6 @@ HB_FUNC_STATIC( QDOMNODE_TOELEMENT )
     _qt4xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
   }
 }
-
 
 /*
 QDomEntity toEntity () const
@@ -995,7 +934,6 @@ HB_FUNC_STATIC( QDOMNODE_TOENTITY )
   }
 }
 
-
 /*
 QDomEntityReference toEntityReference () const
 */
@@ -1008,7 +946,6 @@ HB_FUNC_STATIC( QDOMNODE_TOENTITYREFERENCE )
     _qt4xhb_createReturnClass ( ptr, "QDOMENTITYREFERENCE", true );
   }
 }
-
 
 /*
 QDomNotation toNotation () const
@@ -1023,7 +960,6 @@ HB_FUNC_STATIC( QDOMNODE_TONOTATION )
   }
 }
 
-
 /*
 QDomProcessingInstruction toProcessingInstruction () const
 */
@@ -1037,7 +973,6 @@ HB_FUNC_STATIC( QDOMNODE_TOPROCESSINGINSTRUCTION )
   }
 }
 
-
 /*
 QDomText toText () const
 */
@@ -1050,7 +985,6 @@ HB_FUNC_STATIC( QDOMNODE_TOTEXT )
     _qt4xhb_createReturnClass ( ptr, "QDOMTEXT", true );
   }
 }
-
 
 HB_FUNC_STATIC( QDOMNODE_NEWFROM )
 {
@@ -1106,6 +1040,5 @@ HB_FUNC_STATIC( QDOMNODE_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

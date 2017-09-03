@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QXmlSimpleReader INHERIT QXmlReader
 
@@ -44,7 +43,6 @@ HB_FUNC_STATIC( QXMLSIMPLEREADER_NEW )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 HB_FUNC_STATIC( QXMLSIMPLEREADER_DELETE )
 {
   QXmlSimpleReader * obj = (QXmlSimpleReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -60,7 +58,6 @@ HB_FUNC_STATIC( QXMLSIMPLEREADER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual bool parse ( const QXmlInputSource * input, bool incremental )
 */
@@ -74,7 +71,6 @@ HB_FUNC_STATIC( QXMLSIMPLEREADER_PARSE )
   }
 }
 
-
 /*
 virtual bool parseContinue ()
 */
@@ -86,8 +82,5 @@ HB_FUNC_STATIC( QXMLSIMPLEREADER_PARSECONTINUE )
     RBOOL( obj->parseContinue () );
   }
 }
-
-
-
 
 #pragma ENDDUMP

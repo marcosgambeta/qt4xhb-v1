@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QXmlDefaultHandler INHERIT QXmlContentHandler,QXmlErrorHandler,QXmlDTDHandler,QXmlEntityResolver,QXmlLexicalHandler,QXmlDeclHandler
 
@@ -69,7 +68,6 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_NEW )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_DELETE )
 {
   QXmlDefaultHandler * obj = (QXmlDefaultHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -85,7 +83,6 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual bool attributeDecl ( const QString & eName, const QString & aName, const QString & type, const QString & valueDefault, const QString & value )
 */
@@ -97,7 +94,6 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ATTRIBUTEDECL )
     RBOOL( obj->attributeDecl ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5) ) );
   }
 }
-
 
 /*
 virtual bool characters ( const QString & ch )
@@ -111,7 +107,6 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_CHARACTERS )
   }
 }
 
-
 /*
 virtual bool comment ( const QString & ch )
 */
@@ -123,7 +118,6 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_COMMENT )
     RBOOL( obj->comment ( PQSTRING(1) ) );
   }
 }
-
 
 /*
 virtual bool endCDATA ()
@@ -137,7 +131,6 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ENDCDATA )
   }
 }
 
-
 /*
 virtual bool endDTD ()
 */
@@ -149,7 +142,6 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ENDDTD )
     RBOOL( obj->endDTD () );
   }
 }
-
 
 /*
 virtual bool endDocument ()
@@ -163,7 +155,6 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ENDDOCUMENT )
   }
 }
 
-
 /*
 virtual bool endElement ( const QString & namespaceURI, const QString & localName, const QString & qName )
 */
@@ -175,7 +166,6 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ENDELEMENT )
     RBOOL( obj->endElement ( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
   }
 }
-
 
 /*
 virtual bool endEntity ( const QString & name )
@@ -189,7 +179,6 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ENDENTITY )
   }
 }
 
-
 /*
 virtual bool endPrefixMapping ( const QString & prefix )
 */
@@ -201,7 +190,6 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ENDPREFIXMAPPING )
     RBOOL( obj->endPrefixMapping ( PQSTRING(1) ) );
   }
 }
-
 
 /*
 virtual bool error ( const QXmlParseException & exception )
@@ -215,7 +203,6 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ERROR )
   }
 }
 
-
 /*
 virtual QString errorString () const
 */
@@ -227,7 +214,6 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ERRORSTRING )
     RQSTRING( obj->errorString () );
   }
 }
-
 
 /*
 virtual bool externalEntityDecl ( const QString & name, const QString & publicId, const QString & systemId )
@@ -241,7 +227,6 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_EXTERNALENTITYDECL )
   }
 }
 
-
 /*
 virtual bool fatalError ( const QXmlParseException & exception )
 */
@@ -253,7 +238,6 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_FATALERROR )
     RBOOL( obj->fatalError ( *PQXMLPARSEEXCEPTION(1) ) );
   }
 }
-
 
 /*
 virtual bool ignorableWhitespace ( const QString & ch )
@@ -267,7 +251,6 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_IGNORABLEWHITESPACE )
   }
 }
 
-
 /*
 virtual bool internalEntityDecl ( const QString & name, const QString & value )
 */
@@ -279,7 +262,6 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_INTERNALENTITYDECL )
     RBOOL( obj->internalEntityDecl ( PQSTRING(1), PQSTRING(2) ) );
   }
 }
-
 
 /*
 virtual bool notationDecl ( const QString & name, const QString & publicId, const QString & systemId )
@@ -293,7 +275,6 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_NOTATIONDECL )
   }
 }
 
-
 /*
 virtual bool processingInstruction ( const QString & target, const QString & data )
 */
@@ -305,8 +286,6 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_PROCESSINGINSTRUCTION )
     RBOOL( obj->processingInstruction ( PQSTRING(1), PQSTRING(2) ) );
   }
 }
-
-
 
 /*
 virtual void setDocumentLocator ( QXmlLocator * locator )
@@ -322,7 +301,6 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_SETDOCUMENTLOCATOR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual bool skippedEntity ( const QString & name )
 */
@@ -334,7 +312,6 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_SKIPPEDENTITY )
     RBOOL( obj->skippedEntity ( PQSTRING(1) ) );
   }
 }
-
 
 /*
 virtual bool startCDATA ()
@@ -348,7 +325,6 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_STARTCDATA )
   }
 }
 
-
 /*
 virtual bool startDTD ( const QString & name, const QString & publicId, const QString & systemId )
 */
@@ -360,7 +336,6 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_STARTDTD )
     RBOOL( obj->startDTD ( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
   }
 }
-
 
 /*
 virtual bool startDocument ()
@@ -374,7 +349,6 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_STARTDOCUMENT )
   }
 }
 
-
 /*
 virtual bool startElement ( const QString & namespaceURI, const QString & localName, const QString & qName, const QXmlAttributes & atts )
 */
@@ -386,7 +360,6 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_STARTELEMENT )
     RBOOL( obj->startElement ( PQSTRING(1), PQSTRING(2), PQSTRING(3), *PQXMLATTRIBUTES(4) ) );
   }
 }
-
 
 /*
 virtual bool startEntity ( const QString & name )
@@ -400,7 +373,6 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_STARTENTITY )
   }
 }
 
-
 /*
 virtual bool startPrefixMapping ( const QString & prefix, const QString & uri )
 */
@@ -412,7 +384,6 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_STARTPREFIXMAPPING )
     RBOOL( obj->startPrefixMapping ( PQSTRING(1), PQSTRING(2) ) );
   }
 }
-
 
 /*
 virtual bool unparsedEntityDecl ( const QString & name, const QString & publicId, const QString & systemId, const QString & notationName )
@@ -426,7 +397,6 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_UNPARSEDENTITYDECL )
   }
 }
 
-
 /*
 virtual bool warning ( const QXmlParseException & exception )
 */
@@ -438,8 +408,5 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_WARNING )
     RBOOL( obj->warning ( *PQXMLPARSEEXCEPTION(1) ) );
   }
 }
-
-
-
 
 #pragma ENDDUMP

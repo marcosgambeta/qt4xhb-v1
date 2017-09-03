@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -53,7 +53,6 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QDomDocumentType ( const QDomDocumentType & n )
 */
@@ -62,7 +61,6 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW2 )
   QDomDocumentType * o = new QDomDocumentType ( *PQDOMDOCUMENTTYPE(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QDomDocumentType ()
 //[2]QDomDocumentType ( const QDomDocumentType & n )
@@ -83,8 +81,6 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW )
   }
 }
 
-
-
 /*
 QDomNamedNodeMap entities () const
 */
@@ -98,7 +94,6 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_ENTITIES )
   }
 }
 
-
 /*
 QString internalSubset () const
 */
@@ -110,7 +105,6 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_INTERNALSUBSET )
     RQSTRING( obj->internalSubset () );
   }
 }
-
 
 /*
 QString name () const
@@ -124,7 +118,6 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NAME )
   }
 }
 
-
 /*
 QDomNode::NodeType nodeType () const
 */
@@ -136,7 +129,6 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NODETYPE )
     hb_retni( (int) obj->nodeType () );
   }
 }
-
 
 /*
 QDomNamedNodeMap notations () const
@@ -151,7 +143,6 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NOTATIONS )
   }
 }
 
-
 /*
 QString publicId () const
 */
@@ -164,7 +155,6 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_PUBLICID )
   }
 }
 
-
 /*
 QString systemId () const
 */
@@ -176,8 +166,5 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_SYSTEMID )
     RQSTRING( obj->systemId () );
   }
 }
-
-
-
 
 #pragma ENDDUMP

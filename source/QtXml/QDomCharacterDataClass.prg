@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QDomCharacterData INHERIT QDomNode
 
@@ -52,7 +51,6 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QDomCharacterData ( const QDomCharacterData & x )
 */
@@ -61,7 +59,6 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_NEW2 )
   QDomCharacterData * o = new QDomCharacterData ( *PQDOMCHARACTERDATA(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QDomCharacterData ()
 //[2]QDomCharacterData ( const QDomCharacterData & x )
@@ -82,8 +79,6 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_NEW )
   }
 }
 
-
-
 /*
 void appendData ( const QString & arg )
 */
@@ -97,7 +92,6 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_APPENDDATA )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString data () const
 */
@@ -109,7 +103,6 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_DATA )
     RQSTRING( obj->data () );
   }
 }
-
 
 /*
 void deleteData ( unsigned long offset, unsigned long count )
@@ -126,7 +119,6 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_DELETEDATA )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void insertData ( unsigned long offset, const QString & arg )
 */
@@ -141,7 +133,6 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_INSERTDATA )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 uint length () const
 */
@@ -154,7 +145,6 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_LENGTH )
   }
 }
 
-
 /*
 QDomNode::NodeType nodeType () const
 */
@@ -166,7 +156,6 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_NODETYPE )
     hb_retni( (int) obj->nodeType () );
   }
 }
-
 
 /*
 void replaceData ( unsigned long offset, unsigned long count, const QString & arg )
@@ -183,7 +172,6 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_REPLACEDATA )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setData ( const QString & v )
 */
@@ -196,7 +184,6 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_SETDATA )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QString substringData ( unsigned long offset, unsigned long count )
@@ -211,8 +198,5 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_SUBSTRINGDATA )
     RQSTRING( obj->substringData ( par1, par2 ) );
   }
 }
-
-
-
 
 #pragma ENDDUMP

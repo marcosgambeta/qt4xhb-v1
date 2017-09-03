@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -60,7 +60,6 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QXmlInputSource ( QIODevice * dev )
 */
@@ -69,7 +68,6 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_NEW2 )
   QXmlInputSource * o = new QXmlInputSource ( PQIODEVICE(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QXmlInputSource ()
 //[2]QXmlInputSource ( QIODevice * dev )
@@ -105,7 +103,6 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QString data () const
 */
@@ -117,7 +114,6 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_DATA )
     RQSTRING( obj->data () );
   }
 }
-
 
 /*
 virtual void fetchData ()
@@ -132,7 +128,6 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_FETCHDATA )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QChar next ()
 */
@@ -145,7 +140,6 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_NEXT )
     _qt4xhb_createReturnClass ( ptr, "QCHAR" );
   }
 }
-
 
 /*
 virtual void reset ()
@@ -160,7 +154,6 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_RESET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void setData ( const QString & dat )
 */
@@ -174,7 +167,6 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_SETDATA1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void setData ( const QByteArray & dat )
 */
@@ -187,7 +179,6 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_SETDATA2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]virtual void setData ( const QString & dat )
 //[2]virtual void setData ( const QByteArray & dat )
@@ -203,7 +194,6 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_SETDATA )
     HB_FUNC_EXEC( QXMLINPUTSOURCE_SETDATA2 );
   }
 }
-
 
 HB_FUNC_STATIC( QXMLINPUTSOURCE_NEWFROM )
 {

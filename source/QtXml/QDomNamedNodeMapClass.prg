@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -65,7 +65,6 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QDomNamedNodeMap ( const QDomNamedNodeMap & n )
 */
@@ -74,7 +73,6 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NEW2 )
   QDomNamedNodeMap * o = new QDomNamedNodeMap ( *PQDOMNAMEDNODEMAP(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QDomNamedNodeMap ()
 //[2]QDomNamedNodeMap ( const QDomNamedNodeMap & n )
@@ -110,7 +108,6 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool contains ( const QString & name ) const
 */
@@ -122,7 +119,6 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_CONTAINS )
     RBOOL( obj->contains ( PQSTRING(1) ) );
   }
 }
-
 
 /*
 int count () const
@@ -136,7 +132,6 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_COUNT )
   }
 }
 
-
 /*
 bool isEmpty () const
 */
@@ -148,7 +143,6 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_ISEMPTY )
     RBOOL( obj->isEmpty () );
   }
 }
-
 
 /*
 QDomNode item ( int index ) const
@@ -163,7 +157,6 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_ITEM )
   }
 }
 
-
 /*
 uint length () const
 */
@@ -175,7 +168,6 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_LENGTH )
     hb_retni( (uint) obj->length () );
   }
 }
-
 
 /*
 QDomNode namedItem ( const QString & name ) const
@@ -190,7 +182,6 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NAMEDITEM )
   }
 }
 
-
 /*
 QDomNode namedItemNS ( const QString & nsURI, const QString & localName ) const
 */
@@ -203,7 +194,6 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NAMEDITEMNS )
     _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
   }
 }
-
 
 /*
 QDomNode removeNamedItem ( const QString & name )
@@ -218,7 +208,6 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_REMOVENAMEDITEM )
   }
 }
 
-
 /*
 QDomNode removeNamedItemNS ( const QString & nsURI, const QString & localName )
 */
@@ -231,7 +220,6 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_REMOVENAMEDITEMNS )
     _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
   }
 }
-
 
 /*
 QDomNode setNamedItem ( const QDomNode & newNode )
@@ -246,7 +234,6 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_SETNAMEDITEM )
   }
 }
 
-
 /*
 QDomNode setNamedItemNS ( const QDomNode & newNode )
 */
@@ -260,7 +247,6 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_SETNAMEDITEMNS )
   }
 }
 
-
 /*
 int size () const
 */
@@ -272,7 +258,6 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_SIZE )
     RINT( obj->size () );
   }
 }
-
 
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NEWFROM )
 {
@@ -328,6 +313,5 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP
