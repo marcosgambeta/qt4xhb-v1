@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -57,7 +57,6 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QGraphicsSvgItem ( const QString & fileName, QGraphicsItem * parent = 0 )
 */
@@ -66,7 +65,6 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_NEW2 )
   QGraphicsSvgItem * o = new QGraphicsSvgItem ( PQSTRING(1), OPQGRAPHICSITEM(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QGraphicsSvgItem ( QGraphicsItem * parent = 0 )
 //[2]QGraphicsSvgItem ( const QString & fileName, QGraphicsItem * parent = 0 )
@@ -87,7 +85,6 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_NEW )
   }
 }
 
-
 /*
 QString elementId () const
 */
@@ -99,7 +96,6 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_ELEMENTID )
     RQSTRING( obj->elementId () );
   }
 }
-
 
 /*
 QSize maximumCacheSize () const
@@ -114,7 +110,6 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_MAXIMUMCACHESIZE )
   }
 }
 
-
 /*
 QSvgRenderer * renderer () const
 */
@@ -127,7 +122,6 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_RENDERER )
     _qt4xhb_createReturnClass ( ptr, "QSVGRENDERER" );
   }
 }
-
 
 /*
 void setElementId ( const QString & id )
@@ -142,7 +136,6 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_SETELEMENTID )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setMaximumCacheSize ( const QSize & size )
 */
@@ -155,7 +148,6 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_SETMAXIMUMCACHESIZE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setSharedRenderer ( QSvgRenderer * renderer )
@@ -171,7 +163,6 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_SETSHAREDRENDERER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QRectF boundingRect () const
 */
@@ -184,7 +175,6 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_BOUNDINGRECT )
     _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
-
 
 /*
 virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
@@ -200,7 +190,6 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_PAINT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual int type () const
 */
@@ -212,8 +201,5 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_TYPE )
     RINT( obj->type () );
   }
 }
-
-
-
 
 #pragma ENDDUMP

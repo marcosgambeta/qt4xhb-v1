@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -74,7 +74,6 @@ HB_FUNC_STATIC( QSVGRENDERER_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QSvgRenderer ( const QString & filename, QObject * parent = 0 )
 */
@@ -83,7 +82,6 @@ HB_FUNC_STATIC( QSVGRENDERER_NEW2 )
   QSvgRenderer * o = new QSvgRenderer ( PQSTRING(1), OPQOBJECT(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 /*
 QSvgRenderer ( const QByteArray & contents, QObject * parent = 0 )
@@ -94,7 +92,6 @@ HB_FUNC_STATIC( QSVGRENDERER_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QSvgRenderer ( QXmlStreamReader * contents, QObject * parent = 0 )
 */
@@ -103,7 +100,6 @@ HB_FUNC_STATIC( QSVGRENDERER_NEW4 )
   QSvgRenderer * o = new QSvgRenderer ( PQXMLSTREAMREADER(1), OPQOBJECT(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QSvgRenderer ( QObject * parent = 0 )
 //[2]QSvgRenderer ( const QString & filename, QObject * parent = 0 )
@@ -149,7 +145,6 @@ HB_FUNC_STATIC( QSVGRENDERER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool animated () const
 */
@@ -161,7 +156,6 @@ HB_FUNC_STATIC( QSVGRENDERER_ANIMATED )
     RBOOL( obj->animated () );
   }
 }
-
 
 /*
 QRectF boundsOnElement ( const QString & id ) const
@@ -176,7 +170,6 @@ HB_FUNC_STATIC( QSVGRENDERER_BOUNDSONELEMENT )
   }
 }
 
-
 /*
 QSize defaultSize () const
 */
@@ -190,7 +183,6 @@ HB_FUNC_STATIC( QSVGRENDERER_DEFAULTSIZE )
   }
 }
 
-
 /*
 bool elementExists ( const QString & id ) const
 */
@@ -202,7 +194,6 @@ HB_FUNC_STATIC( QSVGRENDERER_ELEMENTEXISTS )
     RBOOL( obj->elementExists ( PQSTRING(1) ) );
   }
 }
-
 
 /*
 int framesPerSecond () const
@@ -216,7 +207,6 @@ HB_FUNC_STATIC( QSVGRENDERER_FRAMESPERSECOND )
   }
 }
 
-
 /*
 bool isValid () const
 */
@@ -228,7 +218,6 @@ HB_FUNC_STATIC( QSVGRENDERER_ISVALID )
     RBOOL( obj->isValid () );
   }
 }
-
 
 /*
 QMatrix matrixForElement ( const QString & id ) const
@@ -243,7 +232,6 @@ HB_FUNC_STATIC( QSVGRENDERER_MATRIXFORELEMENT )
   }
 }
 
-
 /*
 void setFramesPerSecond ( int num )
 */
@@ -256,7 +244,6 @@ HB_FUNC_STATIC( QSVGRENDERER_SETFRAMESPERSECOND )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setViewBox ( const QRect & viewbox )
@@ -271,7 +258,6 @@ HB_FUNC_STATIC( QSVGRENDERER_SETVIEWBOX1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setViewBox ( const QRectF & viewbox )
 */
@@ -284,7 +270,6 @@ HB_FUNC_STATIC( QSVGRENDERER_SETVIEWBOX2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setViewBox ( const QRect & viewbox )
 //[2]void setViewBox ( const QRectF & viewbox )
@@ -314,7 +299,6 @@ HB_FUNC_STATIC( QSVGRENDERER_VIEWBOX )
   }
 }
 
-
 /*
 QRectF viewBoxF () const
 */
@@ -328,7 +312,6 @@ HB_FUNC_STATIC( QSVGRENDERER_VIEWBOXF )
   }
 }
 
-
 /*
 bool load ( const QString & filename )
 */
@@ -340,7 +323,6 @@ HB_FUNC_STATIC( QSVGRENDERER_LOAD1 )
     RBOOL( obj->load ( PQSTRING(1) ) );
   }
 }
-
 
 /*
 bool load ( const QByteArray & contents )
@@ -354,7 +336,6 @@ HB_FUNC_STATIC( QSVGRENDERER_LOAD2 )
   }
 }
 
-
 /*
 bool load ( QXmlStreamReader * contents )
 */
@@ -367,7 +348,6 @@ HB_FUNC_STATIC( QSVGRENDERER_LOAD3 )
     RBOOL( obj->load ( par1 ) );
   }
 }
-
 
 //[1]bool load ( const QString & filename )
 //[2]bool load ( const QByteArray & contents )
@@ -402,7 +382,6 @@ HB_FUNC_STATIC( QSVGRENDERER_RENDER1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void render ( QPainter * painter, const QRectF & bounds )
 */
@@ -415,7 +394,6 @@ HB_FUNC_STATIC( QSVGRENDERER_RENDER2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void render ( QPainter * painter, const QString & elementId, const QRectF & bounds = QRectF() )
@@ -430,7 +408,6 @@ HB_FUNC_STATIC( QSVGRENDERER_RENDER3 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void render ( QPainter * painter )
 //[2]void render ( QPainter * painter, const QRectF & bounds )
@@ -451,8 +428,5 @@ HB_FUNC_STATIC( QSVGRENDERER_RENDER )
     HB_FUNC_EXEC( QSVGRENDERER_RENDER3 );
   }
 }
-
-
-
 
 #pragma ENDDUMP
