@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -98,7 +98,6 @@ HB_FUNC_STATIC( QFILE_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QFile ( QObject * parent )
 */
@@ -108,7 +107,6 @@ HB_FUNC_STATIC( QFILE_NEW2 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QFile ( const QString & name, QObject * parent )
 */
@@ -117,7 +115,6 @@ HB_FUNC_STATIC( QFILE_NEW3 )
   QFile * o = new QFile ( PQSTRING(1), PQOBJECT(2) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QFile ( const QString & name )
 //[2]QFile ( QObject * parent )
@@ -158,8 +155,6 @@ HB_FUNC_STATIC( QFILE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 bool copy ( const QString & newName )
 */
@@ -171,7 +166,6 @@ HB_FUNC_STATIC( QFILE_COPY1 )
     RBOOL( obj->copy ( PQSTRING(1) ) );
   }
 }
-
 
 /*
 FileError error () const
@@ -185,7 +179,6 @@ HB_FUNC_STATIC( QFILE_ERROR )
   }
 }
 
-
 /*
 bool exists () const
 */
@@ -197,7 +190,6 @@ HB_FUNC_STATIC( QFILE_EXISTS1 )
     RBOOL( obj->exists () );
   }
 }
-
 
 /*
 QString fileName () const
@@ -211,7 +203,6 @@ HB_FUNC_STATIC( QFILE_FILENAME )
   }
 }
 
-
 /*
 bool flush ()
 */
@@ -223,7 +214,6 @@ HB_FUNC_STATIC( QFILE_FLUSH )
     RBOOL( obj->flush () );
   }
 }
-
 
 /*
 int handle () const
@@ -237,7 +227,6 @@ HB_FUNC_STATIC( QFILE_HANDLE )
   }
 }
 
-
 /*
 bool link ( const QString & linkName )
 */
@@ -249,8 +238,6 @@ HB_FUNC_STATIC( QFILE_LINK1 )
     RBOOL( obj->link ( PQSTRING(1) ) );
   }
 }
-
-
 
 /*
 bool open ( FILE * fh, OpenMode mode )
@@ -265,7 +252,6 @@ HB_FUNC_STATIC( QFILE_OPEN1 )
   }
 }
 
-
 /*
 bool open ( FILE * fh, OpenMode mode, FileHandleFlags handleFlags )
 */
@@ -279,7 +265,6 @@ HB_FUNC_STATIC( QFILE_OPEN2 )
   }
 }
 
-
 /*
 bool open ( int fd, OpenMode mode )
 */
@@ -291,7 +276,6 @@ HB_FUNC_STATIC( QFILE_OPEN3 )
     RBOOL( obj->open ( PINT(1), (QFile::OpenMode) hb_parni(2) ) );
   }
 }
-
 
 /*
 bool open ( int fd, OpenMode mode, FileHandleFlags handleFlags )
@@ -305,8 +289,6 @@ HB_FUNC_STATIC( QFILE_OPEN4 )
   }
 }
 
-
-
 /*
 Permissions permissions () const
 */
@@ -318,7 +300,6 @@ HB_FUNC_STATIC( QFILE_PERMISSIONS1 )
     hb_retni( (int) obj->permissions () );
   }
 }
-
 
 /*
 bool remove ()
@@ -332,7 +313,6 @@ HB_FUNC_STATIC( QFILE_REMOVE1 )
   }
 }
 
-
 /*
 bool rename ( const QString & newName )
 */
@@ -345,7 +325,6 @@ HB_FUNC_STATIC( QFILE_RENAME1 )
   }
 }
 
-
 /*
 bool resize ( qint64 sz )
 */
@@ -357,7 +336,6 @@ HB_FUNC_STATIC( QFILE_RESIZE1 )
     RBOOL( obj->resize ( PQINT64(1) ) );
   }
 }
-
 
 /*
 void setFileName ( const QString & name )
@@ -372,7 +350,6 @@ HB_FUNC_STATIC( QFILE_SETFILENAME )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool setPermissions ( Permissions permissions )
 */
@@ -385,7 +362,6 @@ HB_FUNC_STATIC( QFILE_SETPERMISSIONS1 )
   }
 }
 
-
 /*
 QString symLinkTarget () const
 */
@@ -397,7 +373,6 @@ HB_FUNC_STATIC( QFILE_SYMLINKTARGET1 )
     RQSTRING( obj->symLinkTarget () );
   }
 }
-
 
 /*
 bool unmap ( uchar * address )
@@ -412,7 +387,6 @@ HB_FUNC_STATIC( QFILE_UNMAP )
   }
 }
 
-
 /*
 void unsetError ()
 */
@@ -425,7 +399,6 @@ HB_FUNC_STATIC( QFILE_UNSETERROR )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 // Reimplemented Public Functions
 
@@ -441,7 +414,6 @@ HB_FUNC_STATIC( QFILE_ATEND )
   }
 }
 
-
 /*
 virtual void close ()
 */
@@ -455,7 +427,6 @@ HB_FUNC_STATIC( QFILE_CLOSE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual bool isSequential () const
 */
@@ -468,7 +439,6 @@ HB_FUNC_STATIC( QFILE_ISSEQUENTIAL )
   }
 }
 
-
 /*
 virtual bool open ( OpenMode mode )
 */
@@ -480,7 +450,6 @@ HB_FUNC_STATIC( QFILE_OPEN6 )
     RBOOL( obj->open ( (QFile::OpenMode) hb_parni(1) ) );
   }
 }
-
 
 //[1]bool open ( FILE * fh, OpenMode mode )
 //[2]bool open ( FILE * fh, OpenMode mode, FileHandleFlags handleFlags )
@@ -506,7 +475,6 @@ HB_FUNC_STATIC( QFILE_POS )
   }
 }
 
-
 /*
 virtual bool seek ( qint64 pos )
 */
@@ -518,7 +486,6 @@ HB_FUNC_STATIC( QFILE_SEEK )
     RBOOL( obj->seek ( PQINT64(1) ) );
   }
 }
-
 
 /*
 virtual qint64 size () const
@@ -532,8 +499,6 @@ HB_FUNC_STATIC( QFILE_SIZE )
   }
 }
 
-
-
 // Static Public Members
 
 /*
@@ -543,7 +508,6 @@ HB_FUNC_STATIC( QFILE_COPY2 )
 {
   RBOOL( QFile::copy ( PQSTRING(1), PQSTRING(2) ) );
 }
-
 
 //[1]bool copy ( const QString & newName )
 //[2]bool copy ( const QString & fileName, const QString & newName )
@@ -568,7 +532,6 @@ HB_FUNC_STATIC( QFILE_DECODENAME1 )
   RQSTRING( QFile::decodeName ( *PQBYTEARRAY(1) ) );
 }
 
-
 /*
 QString decodeName ( const char * localFileName )
 */
@@ -576,7 +539,6 @@ HB_FUNC_STATIC( QFILE_DECODENAME2 )
 {
   RQSTRING( QFile::decodeName ( (const char *) hb_parc(1) ) );
 }
-
 
 //[1]QString decodeName ( const QByteArray & localFileName )
 //[2]QString decodeName ( const char * localFileName )
@@ -602,7 +564,6 @@ HB_FUNC_STATIC( QFILE_ENCODENAME )
   _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
 }
 
-
 /*
 bool exists ( const QString & fileName )
 */
@@ -610,7 +571,6 @@ HB_FUNC_STATIC( QFILE_EXISTS2 )
 {
   RBOOL( QFile::exists ( PQSTRING(1) ) );
 }
-
 
 //[1]bool exists () const
 //[2]bool exists ( const QString & fileName )
@@ -635,7 +595,6 @@ HB_FUNC_STATIC( QFILE_LINK2 )
   RBOOL( QFile::link ( PQSTRING(1), PQSTRING(2) ) );
 }
 
-
 //[1]bool link ( const QString & linkName )
 //[2]bool link ( const QString & fileName, const QString & linkName )
 
@@ -658,7 +617,6 @@ HB_FUNC_STATIC( QFILE_PERMISSIONS2 )
 {
   hb_retni( (int) QFile::permissions ( PQSTRING(1) ) );
 }
-
 
 //[1]Permissions permissions () const
 //[2]Permissions permissions ( const QString & fileName )
@@ -683,7 +641,6 @@ HB_FUNC_STATIC( QFILE_REMOVE2 )
   RBOOL( QFile::remove ( PQSTRING(1) ) );
 }
 
-
 //[1]bool remove ()
 //[2]bool remove ( const QString & fileName )
 
@@ -706,7 +663,6 @@ HB_FUNC_STATIC( QFILE_RENAME2 )
 {
   RBOOL( QFile::rename ( PQSTRING(1), PQSTRING(2) ) );
 }
-
 
 //[1]bool rename ( const QString & newName )
 //[2]bool rename ( const QString & oldName, const QString & newName )
@@ -731,7 +687,6 @@ HB_FUNC_STATIC( QFILE_RESIZE2 )
   RBOOL( QFile::resize ( PQSTRING(1), PQINT64(2) ) );
 }
 
-
 //[1]bool resize ( qint64 sz )
 //[2]bool resize ( const QString & fileName, qint64 sz )
 
@@ -747,8 +702,6 @@ HB_FUNC_STATIC( QFILE_RESIZE )
   }
 }
 
-
-
 /*
 bool setPermissions ( const QString & fileName, Permissions permissions )
 */
@@ -756,7 +709,6 @@ HB_FUNC_STATIC( QFILE_SETPERMISSIONS2 )
 {
   RBOOL( QFile::setPermissions ( PQSTRING(1), (QFile::Permissions) hb_parni(2) ) );
 }
-
 
 //[1]bool setPermissions ( Permissions permissions )
 //[2]bool setPermissions ( const QString & fileName, Permissions permissions )
@@ -781,7 +733,6 @@ HB_FUNC_STATIC( QFILE_SYMLINKTARGET2 )
   RQSTRING( QFile::symLinkTarget ( PQSTRING(1) ) );
 }
 
-
 //[1]QString symLinkTarget () const
 //[2]QString symLinkTarget ( const QString & fileName )
 
@@ -798,7 +749,5 @@ HB_FUNC_STATIC( QFILE_SYMLINKTARGET )
 }
 
 //Signals
-
-
 
 #pragma ENDDUMP

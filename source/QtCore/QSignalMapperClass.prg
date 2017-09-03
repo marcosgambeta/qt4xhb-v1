@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -63,7 +63,6 @@ HB_FUNC_STATIC( QSIGNALMAPPER_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QSIGNALMAPPER_DELETE )
 {
   QSignalMapper * obj = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -79,7 +78,6 @@ HB_FUNC_STATIC( QSIGNALMAPPER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setMapping(QObject *sender, int id)
 */
@@ -92,7 +90,6 @@ HB_FUNC_STATIC( QSIGNALMAPPER_SETMAPPING1 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setMapping(QObject *sender, const QString &text)
@@ -107,7 +104,6 @@ HB_FUNC_STATIC( QSIGNALMAPPER_SETMAPPING2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setMapping(QObject *sender, QWidget *widget)
 */
@@ -121,7 +117,6 @@ HB_FUNC_STATIC( QSIGNALMAPPER_SETMAPPING3 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setMapping(QObject *sender, QObject *object)
 */
@@ -134,7 +129,6 @@ HB_FUNC_STATIC( QSIGNALMAPPER_SETMAPPING4 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setMapping(QObject *sender, int id)
 //[2]void setMapping(QObject *sender, const QString &text)
@@ -174,7 +168,6 @@ HB_FUNC_STATIC( QSIGNALMAPPER_REMOVEMAPPINGS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QObject *mapping(int id) const
 */
@@ -187,7 +180,6 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING1 )
     _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
-
 
 /*
 QObject *mapping(const QString &text) const
@@ -202,7 +194,6 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING2 )
   }
 }
 
-
 /*
 QObject *mapping(QWidget *widget) const
 */
@@ -216,7 +207,6 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING3 )
   }
 }
 
-
 /*
 QObject *mapping(QObject *object) const
 */
@@ -229,7 +219,6 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING4 )
     _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
-
 
 //[1]QObject *mapping(int id) const
 //[2]QObject *mapping(const QString &text) const
@@ -269,7 +258,6 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAP1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void map(QObject *sender)
 */
@@ -282,7 +270,6 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAP2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void map()
 //[2]void map(QObject *sender)
@@ -298,10 +285,5 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAP )
     HB_FUNC_EXEC( QSIGNALMAPPER_MAP2 );
   }
 }
-
-
-
-
-
 
 #pragma ENDDUMP

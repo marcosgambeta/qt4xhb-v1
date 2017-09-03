@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QEasingCurve
 
@@ -58,7 +57,6 @@ HB_FUNC_STATIC( QEASINGCURVE_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QEasingCurve ( const QEasingCurve & other )
 */
@@ -67,7 +65,6 @@ HB_FUNC_STATIC( QEASINGCURVE_NEW2 )
   QEasingCurve * o = new QEasingCurve ( *PQEASINGCURVE(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QEasingCurve(Type type = Linear)
 //[2]QEasingCurve(const QEasingCurve & other)
@@ -107,7 +104,6 @@ HB_FUNC_STATIC( QEASINGCURVE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 qreal amplitude () const
 */
@@ -119,8 +115,6 @@ HB_FUNC_STATIC( QEASINGCURVE_AMPLITUDE )
     RQREAL( obj->amplitude () );
   }
 }
-
-
 
 /*
 qreal overshoot () const
@@ -134,7 +128,6 @@ HB_FUNC_STATIC( QEASINGCURVE_OVERSHOOT )
   }
 }
 
-
 /*
 qreal period () const
 */
@@ -146,7 +139,6 @@ HB_FUNC_STATIC( QEASINGCURVE_PERIOD )
     RQREAL( obj->period () );
   }
 }
-
 
 /*
 void setAmplitude ( qreal amplitude )
@@ -161,8 +153,6 @@ HB_FUNC_STATIC( QEASINGCURVE_SETAMPLITUDE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 void setOvershoot ( qreal overshoot )
 */
@@ -175,7 +165,6 @@ HB_FUNC_STATIC( QEASINGCURVE_SETOVERSHOOT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setPeriod ( qreal period )
@@ -190,7 +179,6 @@ HB_FUNC_STATIC( QEASINGCURVE_SETPERIOD )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setType ( Type type )
 */
@@ -204,7 +192,6 @@ HB_FUNC_STATIC( QEASINGCURVE_SETTYPE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 Type type () const
 */
@@ -216,7 +203,6 @@ HB_FUNC_STATIC( QEASINGCURVE_TYPE )
     hb_retni( (int) obj->type () );
   }
 }
-
 
 HB_FUNC_STATIC( QEASINGCURVE_NEWFROM )
 {
@@ -272,6 +258,5 @@ HB_FUNC_STATIC( QEASINGCURVE_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

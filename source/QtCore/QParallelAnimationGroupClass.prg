@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QParallelAnimationGroup INHERIT QAnimationGroup
 
@@ -43,7 +42,6 @@ HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_DELETE )
 {
   QParallelAnimationGroup * obj = (QParallelAnimationGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -59,8 +57,6 @@ HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 virtual int duration () const
 */
@@ -72,8 +68,5 @@ HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_DURATION )
     RINT( obj->duration () );
   }
 }
-
-
-
 
 #pragma ENDDUMP

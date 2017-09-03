@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -42,7 +42,6 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
 HB_FUNC_STATIC( QABSTRACTFILEENGINEHANDLER_DELETE )
 {
   QAbstractFileEngineHandler * obj = (QAbstractFileEngineHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -58,7 +57,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEHANDLER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QAbstractFileEngine * create ( const QString & fileName ) const = 0
 */
@@ -71,7 +69,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEHANDLER_CREATE )
     _qt4xhb_createReturnClass ( ptr, "QABSTRACTFILEENGINE" );
   }
 }
-
 
 HB_FUNC_STATIC( QABSTRACTFILEENGINEHANDLER_NEWFROM )
 {
@@ -127,6 +124,5 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEHANDLER_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

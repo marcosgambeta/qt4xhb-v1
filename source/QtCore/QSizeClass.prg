@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -66,7 +66,6 @@ HB_FUNC_STATIC( QSIZE_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QSize ( int width, int height )
 */
@@ -75,7 +74,6 @@ HB_FUNC_STATIC( QSIZE_NEW2 )
   QSize * o = new QSize ( PINT(1), PINT(2) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QSize ()
 //[2]QSize ( int width, int height )
@@ -111,8 +109,6 @@ HB_FUNC_STATIC( QSIZE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 QSize boundedTo ( const QSize & otherSize ) const
 */
@@ -125,7 +121,6 @@ HB_FUNC_STATIC( QSIZE_BOUNDEDTO )
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
-
 
 /*
 QSize expandedTo ( const QSize & otherSize ) const
@@ -140,7 +135,6 @@ HB_FUNC_STATIC( QSIZE_EXPANDEDTO )
   }
 }
 
-
 /*
 int height () const
 */
@@ -152,7 +146,6 @@ HB_FUNC_STATIC( QSIZE_HEIGHT )
     RINT( obj->height () );
   }
 }
-
 
 /*
 bool isEmpty () const
@@ -166,7 +159,6 @@ HB_FUNC_STATIC( QSIZE_ISEMPTY )
   }
 }
 
-
 /*
 bool isNull () const
 */
@@ -179,7 +171,6 @@ HB_FUNC_STATIC( QSIZE_ISNULL )
   }
 }
 
-
 /*
 bool isValid () const
 */
@@ -191,9 +182,6 @@ HB_FUNC_STATIC( QSIZE_ISVALID )
     RBOOL( obj->isValid () );
   }
 }
-
-
-
 
 /*
 void scale ( int width, int height, Qt::AspectRatioMode mode )
@@ -208,7 +196,6 @@ HB_FUNC_STATIC( QSIZE_SCALE1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void scale ( const QSize & size, Qt::AspectRatioMode mode )
 */
@@ -221,7 +208,6 @@ HB_FUNC_STATIC( QSIZE_SCALE2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void scale ( int width, int height, Qt::AspectRatioMode mode )
 //[2]void scale ( const QSize & size, Qt::AspectRatioMode mode )
@@ -251,7 +237,6 @@ HB_FUNC_STATIC( QSIZE_SETHEIGHT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setWidth ( int width )
 */
@@ -264,7 +249,6 @@ HB_FUNC_STATIC( QSIZE_SETWIDTH )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void transpose ()
@@ -279,7 +263,6 @@ HB_FUNC_STATIC( QSIZE_TRANSPOSE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int width () const
 */
@@ -291,7 +274,6 @@ HB_FUNC_STATIC( QSIZE_WIDTH )
     RINT( obj->width () );
   }
 }
-
 
 HB_FUNC_STATIC( QSIZE_NEWFROM )
 {
@@ -347,7 +329,5 @@ HB_FUNC_STATIC( QSIZE_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

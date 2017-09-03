@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -76,8 +76,6 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
-
 //[1]QIODevice ()
 //[2]QIODevice ( QObject * parent )
 
@@ -112,8 +110,6 @@ HB_FUNC_STATIC( QIODEVICE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 virtual bool atEnd () const
 */
@@ -125,7 +121,6 @@ HB_FUNC_STATIC( QIODEVICE_ATEND )
     RBOOL( obj->atEnd () );
   }
 }
-
 
 /*
 virtual qint64 bytesAvailable () const
@@ -139,7 +134,6 @@ HB_FUNC_STATIC( QIODEVICE_BYTESAVAILABLE )
   }
 }
 
-
 /*
 virtual qint64 bytesToWrite () const
 */
@@ -152,7 +146,6 @@ HB_FUNC_STATIC( QIODEVICE_BYTESTOWRITE )
   }
 }
 
-
 /*
 virtual bool canReadLine () const
 */
@@ -164,7 +157,6 @@ HB_FUNC_STATIC( QIODEVICE_CANREADLINE )
     RBOOL( obj->canReadLine () );
   }
 }
-
 
 /*
 virtual void close ()
@@ -179,7 +171,6 @@ HB_FUNC_STATIC( QIODEVICE_CLOSE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString errorString () const
 */
@@ -191,7 +182,6 @@ HB_FUNC_STATIC( QIODEVICE_ERRORSTRING )
     RQSTRING( obj->errorString () );
   }
 }
-
 
 /*
 bool getChar ( char * c )
@@ -206,7 +196,6 @@ HB_FUNC_STATIC( QIODEVICE_GETCHAR )
   }
 }
 
-
 /*
 bool isOpen () const
 */
@@ -218,7 +207,6 @@ HB_FUNC_STATIC( QIODEVICE_ISOPEN )
     RBOOL( obj->isOpen () );
   }
 }
-
 
 /*
 bool isReadable () const
@@ -232,7 +220,6 @@ HB_FUNC_STATIC( QIODEVICE_ISREADABLE )
   }
 }
 
-
 /*
 virtual bool isSequential () const
 */
@@ -244,7 +231,6 @@ HB_FUNC_STATIC( QIODEVICE_ISSEQUENTIAL )
     RBOOL( obj->isSequential () );
   }
 }
-
 
 /*
 bool isTextModeEnabled () const
@@ -258,7 +244,6 @@ HB_FUNC_STATIC( QIODEVICE_ISTEXTMODEENABLED )
   }
 }
 
-
 /*
 bool isWritable () const
 */
@@ -270,7 +255,6 @@ HB_FUNC_STATIC( QIODEVICE_ISWRITABLE )
     RBOOL( obj->isWritable () );
   }
 }
-
 
 /*
 virtual bool open ( OpenMode mode )
@@ -284,7 +268,6 @@ HB_FUNC_STATIC( QIODEVICE_OPEN )
   }
 }
 
-
 /*
 OpenMode openMode () const
 */
@@ -296,7 +279,6 @@ HB_FUNC_STATIC( QIODEVICE_OPENMODE )
     hb_retni( (int) obj->openMode () );
   }
 }
-
 
 /*
 qint64 peek ( char * data, qint64 maxSize )
@@ -311,7 +293,6 @@ HB_FUNC_STATIC( QIODEVICE_PEEK1 )
   }
 }
 
-
 /*
 QByteArray peek ( qint64 maxSize )
 */
@@ -324,7 +305,6 @@ HB_FUNC_STATIC( QIODEVICE_PEEK2 )
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
 
 //[1]qint64 peek ( char * data, qint64 maxSize )
 //[2]QByteArray peek ( qint64 maxSize )
@@ -353,7 +333,6 @@ HB_FUNC_STATIC( QIODEVICE_POS )
   }
 }
 
-
 /*
 bool putChar ( char c )
 */
@@ -366,7 +345,6 @@ HB_FUNC_STATIC( QIODEVICE_PUTCHAR )
     RBOOL( obj->putChar ( par1 ) );
   }
 }
-
 
 /*
 qint64 read ( char * data, qint64 maxSize )
@@ -381,7 +359,6 @@ HB_FUNC_STATIC( QIODEVICE_READ1 )
   }
 }
 
-
 /*
 QByteArray read ( qint64 maxSize )
 */
@@ -394,7 +371,6 @@ HB_FUNC_STATIC( QIODEVICE_READ2 )
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
 
 //[1]qint64 read ( char * data, qint64 maxSize )
 //[2]QByteArray read ( qint64 maxSize )
@@ -424,7 +400,6 @@ HB_FUNC_STATIC( QIODEVICE_READALL )
   }
 }
 
-
 /*
 qint64 readLine ( char * data, qint64 maxSize )
 */
@@ -438,7 +413,6 @@ HB_FUNC_STATIC( QIODEVICE_READLINE1 )
   }
 }
 
-
 /*
 QByteArray readLine ( qint64 maxSize = 0 )
 */
@@ -451,7 +425,6 @@ HB_FUNC_STATIC( QIODEVICE_READLINE2 )
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
 
 //[1]qint64 readLine ( char * data, qint64 maxSize )
 //[2]QByteArray readLine ( qint64 maxSize = 0 )
@@ -480,7 +453,6 @@ HB_FUNC_STATIC( QIODEVICE_RESET )
   }
 }
 
-
 /*
 virtual bool seek ( qint64 pos )
 */
@@ -492,7 +464,6 @@ HB_FUNC_STATIC( QIODEVICE_SEEK )
     RBOOL( obj->seek ( PQINT64(1) ) );
   }
 }
-
 
 /*
 void setTextModeEnabled ( bool enabled )
@@ -507,7 +478,6 @@ HB_FUNC_STATIC( QIODEVICE_SETTEXTMODEENABLED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual qint64 size () const
 */
@@ -519,7 +489,6 @@ HB_FUNC_STATIC( QIODEVICE_SIZE )
     RQINT64( obj->size () );
   }
 }
-
 
 /*
 void ungetChar ( char c )
@@ -535,7 +504,6 @@ HB_FUNC_STATIC( QIODEVICE_UNGETCHAR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual bool waitForBytesWritten ( int msecs )
 */
@@ -547,7 +515,6 @@ HB_FUNC_STATIC( QIODEVICE_WAITFORBYTESWRITTEN )
     RBOOL( obj->waitForBytesWritten ( PINT(1) ) );
   }
 }
-
 
 /*
 virtual bool waitForReadyRead ( int msecs )
@@ -561,7 +528,6 @@ HB_FUNC_STATIC( QIODEVICE_WAITFORREADYREAD )
   }
 }
 
-
 /*
 qint64 write ( const char * data, qint64 maxSize )
 */
@@ -573,7 +539,6 @@ HB_FUNC_STATIC( QIODEVICE_WRITE1 )
     RQINT64( obj->write ( (const char *) hb_parc(1), PQINT64(2) ) );
   }
 }
-
 
 /*
 qint64 write ( const char * data )
@@ -587,7 +552,6 @@ HB_FUNC_STATIC( QIODEVICE_WRITE2 )
   }
 }
 
-
 /*
 qint64 write ( const QByteArray & byteArray )
 */
@@ -599,7 +563,6 @@ HB_FUNC_STATIC( QIODEVICE_WRITE3 )
     RQINT64( obj->write ( *PQBYTEARRAY(1) ) );
   }
 }
-
 
 //[1]qint64 write ( const char * data, qint64 maxSize )
 //[2]qint64 write ( const char * data )
@@ -622,8 +585,5 @@ HB_FUNC_STATIC( QIODEVICE_WRITE )
 }
 
 //Signals
-
-
-
 
 #pragma ENDDUMP

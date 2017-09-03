@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -66,7 +66,6 @@ HB_FUNC_STATIC( QMODELINDEX_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QModelIndex ( const QModelIndex & other )
 */
@@ -75,7 +74,6 @@ HB_FUNC_STATIC( QMODELINDEX_NEW2 )
   QModelIndex * o = new QModelIndex ( *PQMODELINDEX(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QModelIndex ()
 //[2]QModelIndex ( const QModelIndex & other )
@@ -111,7 +109,6 @@ HB_FUNC_STATIC( QMODELINDEX_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QModelIndex child ( int row, int column ) const
 */
@@ -125,7 +122,6 @@ HB_FUNC_STATIC( QMODELINDEX_CHILD )
   }
 }
 
-
 /*
 int column () const
 */
@@ -137,7 +133,6 @@ HB_FUNC_STATIC( QMODELINDEX_COLUMN )
     RINT( obj->column () );
   }
 }
-
 
 /*
 QVariant data ( int role = Qt::DisplayRole ) const
@@ -152,7 +147,6 @@ HB_FUNC_STATIC( QMODELINDEX_DATA )
   }
 }
 
-
 /*
 Qt::ItemFlags flags () const
 */
@@ -165,7 +159,6 @@ HB_FUNC_STATIC( QMODELINDEX_FLAGS )
   }
 }
 
-
 /*
 qint64 internalId () const
 */
@@ -177,7 +170,6 @@ HB_FUNC_STATIC( QMODELINDEX_INTERNALID )
     RQINT64( obj->internalId () );
   }
 }
-
 
 /*
 void * internalPointer () const
@@ -192,7 +184,6 @@ HB_FUNC_STATIC( QMODELINDEX_INTERNALPOINTER )
   }
 }
 
-
 /*
 bool isValid () const
 */
@@ -204,7 +195,6 @@ HB_FUNC_STATIC( QMODELINDEX_ISVALID )
     RBOOL( obj->isValid () );
   }
 }
-
 
 /*
 const QAbstractItemModel * model () const
@@ -219,7 +209,6 @@ HB_FUNC_STATIC( QMODELINDEX_MODEL )
   }
 }
 
-
 /*
 QModelIndex parent () const
 */
@@ -233,7 +222,6 @@ HB_FUNC_STATIC( QMODELINDEX_PARENT )
   }
 }
 
-
 /*
 int row () const
 */
@@ -245,7 +233,6 @@ HB_FUNC_STATIC( QMODELINDEX_ROW )
     RINT( obj->row () );
   }
 }
-
 
 /*
 QModelIndex sibling ( int row, int column ) const
@@ -259,7 +246,6 @@ HB_FUNC_STATIC( QMODELINDEX_SIBLING )
     _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
-
 
 HB_FUNC_STATIC( QMODELINDEX_NEWFROM )
 {
@@ -315,6 +301,5 @@ HB_FUNC_STATIC( QMODELINDEX_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

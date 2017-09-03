@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -54,7 +54,6 @@ HB_FUNC_STATIC( QMUTEXLOCKER_NEW )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 HB_FUNC_STATIC( QMUTEXLOCKER_DELETE )
 {
   QMutexLocker * obj = (QMutexLocker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -70,7 +69,6 @@ HB_FUNC_STATIC( QMUTEXLOCKER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QMutex * mutex () const
 */
@@ -83,7 +81,6 @@ HB_FUNC_STATIC( QMUTEXLOCKER_MUTEX )
     _qt4xhb_createReturnClass ( ptr, "QMUTEX" );
   }
 }
-
 
 /*
 void relock ()
@@ -98,7 +95,6 @@ HB_FUNC_STATIC( QMUTEXLOCKER_RELOCK )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void unlock ()
 */
@@ -111,7 +107,6 @@ HB_FUNC_STATIC( QMUTEXLOCKER_UNLOCK )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QMUTEXLOCKER_NEWFROM )
 {
@@ -167,6 +162,5 @@ HB_FUNC_STATIC( QMUTEXLOCKER_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

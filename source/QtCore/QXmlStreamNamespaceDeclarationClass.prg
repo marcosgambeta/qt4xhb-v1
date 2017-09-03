@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -56,7 +56,6 @@ HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QXmlStreamNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & other)
 */
@@ -66,7 +65,6 @@ HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NEW2 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QXmlStreamNamespaceDeclaration(const QString & prefix, const QString & namespaceUri)
 */
@@ -75,7 +73,6 @@ HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NEW3 )
   QXmlStreamNamespaceDeclaration * o = new QXmlStreamNamespaceDeclaration ( PQSTRING(1), PQSTRING(2) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QXmlStreamNamespaceDeclaration()
 //[2]QXmlStreamNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & other)
@@ -116,7 +113,6 @@ HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QStringRef namespaceUri() const
 */
@@ -130,7 +126,6 @@ HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NAMESPACEURI )
   }
 }
 
-
 /*
 QStringRef prefix() const
 */
@@ -143,7 +138,6 @@ HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_PREFIX )
     _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
-
 
 HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NEWFROM )
 {
@@ -199,6 +193,5 @@ HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

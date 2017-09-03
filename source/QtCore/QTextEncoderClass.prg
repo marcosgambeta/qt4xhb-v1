@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -57,7 +57,6 @@ HB_FUNC_STATIC( QTEXTENCODER_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QTextEncoder(const QTextCodec * codec, QTextCodec::ConversionFlags flags)
 */
@@ -68,7 +67,6 @@ HB_FUNC_STATIC( QTEXTENCODER_NEW2 )
   QTextEncoder * o = new QTextEncoder ( par1, (QTextCodec::ConversionFlags) par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QTextEncoder(const QTextCodec * codec)
 //[2]QTextEncoder(const QTextCodec * codec, QTextCodec::ConversionFlags flags)
@@ -104,7 +102,6 @@ HB_FUNC_STATIC( QTEXTENCODER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QByteArray fromUnicode(const QString & str)
 */
@@ -117,7 +114,6 @@ HB_FUNC_STATIC( QTEXTENCODER_FROMUNICODE1 )
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
 
 /*
 QByteArray fromUnicode(const QChar * uc, int len)
@@ -134,7 +130,6 @@ HB_FUNC_STATIC( QTEXTENCODER_FROMUNICODE2 )
   }
 }
 
-
 //[1]QByteArray fromUnicode(const QString & str)
 //[2]QByteArray fromUnicode(const QChar * uc, int len)
 
@@ -149,7 +144,6 @@ HB_FUNC_STATIC( QTEXTENCODER_FROMUNICODE )
     HB_FUNC_EXEC( QTEXTENCODER_FROMUNICODE2 );
   }
 }
-
 
 HB_FUNC_STATIC( QTEXTENCODER_NEWFROM )
 {
@@ -205,7 +199,5 @@ HB_FUNC_STATIC( QTEXTENCODER_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -64,7 +64,6 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QProcessEnvironment(const QProcessEnvironment &other)
 */
@@ -73,7 +72,6 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEW2 )
   QProcessEnvironment * o = new QProcessEnvironment ( *PQPROCESSENVIRONMENT(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QProcessEnvironment()
 //[2]QProcessEnvironment(const QProcessEnvironment &other)
@@ -109,7 +107,6 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool isEmpty() const
 */
@@ -121,7 +118,6 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_ISEMPTY )
     RBOOL( obj->isEmpty () );
   }
 }
-
 
 /*
 void clear()
@@ -136,7 +132,6 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_CLEAR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool contains(const QString &name) const
 */
@@ -148,7 +143,6 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_CONTAINS )
     RBOOL( obj->contains ( PQSTRING(1) ) );
   }
 }
-
 
 /*
 void insert(const QString &name, const QString &value)
@@ -163,7 +157,6 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_INSERT1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void remove(const QString &name)
 */
@@ -177,7 +170,6 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_REMOVE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString value(const QString &name, const QString &defaultValue = QString()) const
 */
@@ -189,7 +181,6 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_VALUE )
     RQSTRING( obj->value ( PQSTRING(1), OPQSTRING(2,QString()) ) );
   }
 }
-
 
 /*
 QStringList toStringList() const
@@ -203,7 +194,6 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_TOSTRINGLIST )
   }
 }
 
-
 /*
 QStringList keys() const
 */
@@ -215,7 +205,6 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_KEYS )
     RQSTRINGLIST( obj->keys () );
   }
 }
-
 
 /*
 void insert(const QProcessEnvironment &e)
@@ -229,7 +218,6 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_INSERT2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void insert(const QString &name, const QString &value)
 //[2]void insert(const QProcessEnvironment &e)
@@ -246,7 +234,6 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_INSERT )
   }
 }
 
-
 /*
 static QProcessEnvironment systemEnvironment()
 */
@@ -255,7 +242,6 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_SYSTEMENVIRONMENT )
   QProcessEnvironment * ptr = new QProcessEnvironment( QProcessEnvironment::systemEnvironment () );
   _qt4xhb_createReturnClass ( ptr, "QPROCESSENVIRONMENT", true );
 }
-
 
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEWFROM )
 {
@@ -311,6 +297,5 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

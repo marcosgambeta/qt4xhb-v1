@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QFileSystemWatcher INHERIT QObject
 
@@ -54,7 +53,6 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QFileSystemWatcher(const QStringList & paths, QObject * parent = 0)
 */
@@ -63,7 +61,6 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_NEW2 )
   QFileSystemWatcher * o = new QFileSystemWatcher ( PQSTRINGLIST(1), OPQOBJECT(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QFileSystemWatcher(QObject * parent = 0)
 //[2]QFileSystemWatcher(const QStringList & paths, QObject * parent = 0)
@@ -99,7 +96,6 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void addPath ( const QString & path )
 */
@@ -112,7 +108,6 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_ADDPATH )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void addPaths ( const QStringList & paths )
@@ -127,7 +122,6 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_ADDPATHS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QStringList directories () const
 */
@@ -140,7 +134,6 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_DIRECTORIES )
   }
 }
 
-
 /*
 QStringList files () const
 */
@@ -152,7 +145,6 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_FILES )
     RQSTRINGLIST( obj->files () );
   }
 }
-
 
 /*
 void removePath ( const QString & path )
@@ -167,7 +159,6 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_REMOVEPATH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void removePaths ( const QStringList & paths )
 */
@@ -180,9 +171,5 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_REMOVEPATHS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

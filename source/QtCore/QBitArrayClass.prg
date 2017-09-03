@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QBitArray
 
@@ -69,7 +68,6 @@ HB_FUNC_STATIC( QBITARRAY_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QBitArray ( int size, bool value = false )
 */
@@ -79,7 +77,6 @@ HB_FUNC_STATIC( QBITARRAY_NEW2 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QBitArray ( const QBitArray & other )
 */
@@ -88,7 +85,6 @@ HB_FUNC_STATIC( QBITARRAY_NEW3 )
   QBitArray * o = new QBitArray ( *PQBITARRAY(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QBitArray ()
 //[2]QBitArray ( int size, bool value = false )
@@ -114,8 +110,6 @@ HB_FUNC_STATIC( QBITARRAY_NEW )
   }
 }
 
-
-
 /*
 bool at ( int i ) const
 */
@@ -127,7 +121,6 @@ HB_FUNC_STATIC( QBITARRAY_AT )
     RBOOL( obj->at ( PINT(1) ) );
   }
 }
-
 
 /*
 void clear ()
@@ -142,7 +135,6 @@ HB_FUNC_STATIC( QBITARRAY_CLEAR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void clearBit ( int i )
 */
@@ -156,7 +148,6 @@ HB_FUNC_STATIC( QBITARRAY_CLEARBIT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int count () const
 */
@@ -169,7 +160,6 @@ HB_FUNC_STATIC( QBITARRAY_COUNT1 )
   }
 }
 
-
 /*
 int count ( bool on ) const
 */
@@ -181,7 +171,6 @@ HB_FUNC_STATIC( QBITARRAY_COUNT2 )
     RINT( obj->count ( PBOOL(1) ) );
   }
 }
-
 
 //[1]int count () const
 //[2]int count ( bool on ) const
@@ -210,7 +199,6 @@ HB_FUNC_STATIC( QBITARRAY_FILL1 )
   }
 }
 
-
 /*
 void fill ( bool value, int begin, int end )
 */
@@ -223,7 +211,6 @@ HB_FUNC_STATIC( QBITARRAY_FILL2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]bool fill ( bool value, int size = -1 )
 //[2]void fill ( bool value, int begin, int end )
@@ -252,7 +239,6 @@ HB_FUNC_STATIC( QBITARRAY_ISEMPTY )
   }
 }
 
-
 /*
 bool isNull () const
 */
@@ -264,7 +250,6 @@ HB_FUNC_STATIC( QBITARRAY_ISNULL )
     RBOOL( obj->isNull () );
   }
 }
-
 
 /*
 void resize ( int size )
@@ -279,7 +264,6 @@ HB_FUNC_STATIC( QBITARRAY_RESIZE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setBit ( int i )
 */
@@ -293,7 +277,6 @@ HB_FUNC_STATIC( QBITARRAY_SETBIT1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setBit ( int i, bool value )
 */
@@ -306,7 +289,6 @@ HB_FUNC_STATIC( QBITARRAY_SETBIT2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setBit ( int i )
 //[2]void setBit ( int i, bool value )
@@ -335,7 +317,6 @@ HB_FUNC_STATIC( QBITARRAY_SIZE )
   }
 }
 
-
 /*
 bool testBit ( int i ) const
 */
@@ -347,7 +328,6 @@ HB_FUNC_STATIC( QBITARRAY_TESTBIT )
     RBOOL( obj->testBit ( PINT(1) ) );
   }
 }
-
 
 /*
 bool toggleBit ( int i )
@@ -361,7 +341,6 @@ HB_FUNC_STATIC( QBITARRAY_TOGGLEBIT )
   }
 }
 
-
 /*
 void truncate ( int pos )
 */
@@ -374,7 +353,6 @@ HB_FUNC_STATIC( QBITARRAY_TRUNCATE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QBITARRAY_NEWFROM )
 {
@@ -430,7 +408,5 @@ HB_FUNC_STATIC( QBITARRAY_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

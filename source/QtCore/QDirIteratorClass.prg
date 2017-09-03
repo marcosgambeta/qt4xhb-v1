@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -62,7 +62,6 @@ HB_FUNC_STATIC( QDIRITERATOR_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QDirIterator ( const QString & path, IteratorFlags flags = NoIteratorFlags )
 */
@@ -72,7 +71,6 @@ HB_FUNC_STATIC( QDIRITERATOR_NEW2 )
   QDirIterator * o = new QDirIterator ( PQSTRING(1), (QDirIterator::IteratorFlags) par2 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QDirIterator ( const QString & path, QDir::Filters filters, IteratorFlags flags = NoIteratorFlags )
@@ -84,7 +82,6 @@ HB_FUNC_STATIC( QDIRITERATOR_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QDirIterator ( const QString & path, const QStringList & nameFilters, QDir::Filters filters = QDir::NoFilter, IteratorFlags flags = NoIteratorFlags )
 */
@@ -94,7 +91,6 @@ HB_FUNC_STATIC( QDIRITERATOR_NEW4 )
   QDirIterator * o = new QDirIterator ( PQSTRING(1), PQSTRINGLIST(2), ISNIL(3)? QDir::NoFilter : (QDir::Filters) hb_parni(3), (QDirIterator::IteratorFlags) par4 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QDirIterator ( const QDir & dir, IteratorFlags flags = NoIteratorFlags )
 //[2]QDirIterator ( const QString & path, IteratorFlags flags = NoIteratorFlags )
@@ -142,7 +138,6 @@ HB_FUNC_STATIC( QDIRITERATOR_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QFileInfo fileInfo () const
 */
@@ -156,7 +151,6 @@ HB_FUNC_STATIC( QDIRITERATOR_FILEINFO )
   }
 }
 
-
 /*
 QString fileName () const
 */
@@ -168,7 +162,6 @@ HB_FUNC_STATIC( QDIRITERATOR_FILENAME )
     RQSTRING( obj->fileName () );
   }
 }
-
 
 /*
 QString filePath () const
@@ -182,7 +175,6 @@ HB_FUNC_STATIC( QDIRITERATOR_FILEPATH )
   }
 }
 
-
 /*
 bool hasNext () const
 */
@@ -194,7 +186,6 @@ HB_FUNC_STATIC( QDIRITERATOR_HASNEXT )
     RBOOL( obj->hasNext () );
   }
 }
-
 
 /*
 QString next ()
@@ -208,7 +199,6 @@ HB_FUNC_STATIC( QDIRITERATOR_NEXT )
   }
 }
 
-
 /*
 QString path () const
 */
@@ -220,7 +210,6 @@ HB_FUNC_STATIC( QDIRITERATOR_PATH )
     RQSTRING( obj->path () );
   }
 }
-
 
 HB_FUNC_STATIC( QDIRITERATOR_NEWFROM )
 {
@@ -276,7 +265,5 @@ HB_FUNC_STATIC( QDIRITERATOR_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

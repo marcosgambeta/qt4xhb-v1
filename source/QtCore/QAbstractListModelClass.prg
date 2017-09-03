@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -37,7 +37,6 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
 HB_FUNC_STATIC( QABSTRACTLISTMODEL_DELETE )
 {
   QAbstractListModel * obj = (QAbstractListModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -53,7 +52,6 @@ HB_FUNC_STATIC( QABSTRACTLISTMODEL_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual bool dropMimeData ( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
 */
@@ -66,7 +64,6 @@ HB_FUNC_STATIC( QABSTRACTLISTMODEL_DROPMIMEDATA )
     RBOOL( obj->dropMimeData ( par1, (Qt::DropAction) hb_parni(2), PINT(3), PINT(4), *PQMODELINDEX(5) ) );
   }
 }
-
 
 /*
 virtual QModelIndex index ( int row, int column = 0, const QModelIndex & parent = QModelIndex() ) const
@@ -81,8 +78,5 @@ HB_FUNC_STATIC( QABSTRACTLISTMODEL_INDEX )
     _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
-
-
-
 
 #pragma ENDDUMP

@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QSemaphore
 
@@ -54,7 +53,6 @@ HB_FUNC_STATIC( QSEMAPHORE_NEW )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 HB_FUNC_STATIC( QSEMAPHORE_DELETE )
 {
   QSemaphore * obj = (QSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -70,7 +68,6 @@ HB_FUNC_STATIC( QSEMAPHORE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void acquire ( int n = 1 )
 */
@@ -84,7 +81,6 @@ HB_FUNC_STATIC( QSEMAPHORE_ACQUIRE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int available () const
 */
@@ -96,7 +92,6 @@ HB_FUNC_STATIC( QSEMAPHORE_AVAILABLE )
     RINT( obj->available () );
   }
 }
-
 
 /*
 void release ( int n = 1 )
@@ -111,7 +106,6 @@ HB_FUNC_STATIC( QSEMAPHORE_RELEASE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool tryAcquire ( int n = 1 )
 */
@@ -124,7 +118,6 @@ HB_FUNC_STATIC( QSEMAPHORE_TRYACQUIRE1 )
   }
 }
 
-
 /*
 bool tryAcquire ( int n, int timeout )
 */
@@ -136,7 +129,6 @@ HB_FUNC_STATIC( QSEMAPHORE_TRYACQUIRE2 )
     RBOOL( obj->tryAcquire ( PINT(1), PINT(2) ) );
   }
 }
-
 
 //[1]bool tryAcquire ( int n = 1 )
 //[2]bool tryAcquire ( int n, int timeout )
@@ -156,7 +148,6 @@ HB_FUNC_STATIC( QSEMAPHORE_TRYACQUIRE )
     HB_FUNC_EXEC( QSEMAPHORE_TRYACQUIRE2 );
   }
 }
-
 
 HB_FUNC_STATIC( QSEMAPHORE_NEWFROM )
 {
@@ -212,7 +203,5 @@ HB_FUNC_STATIC( QSEMAPHORE_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

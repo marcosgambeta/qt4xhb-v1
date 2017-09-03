@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QReadWriteLock
 
@@ -59,7 +58,6 @@ HB_FUNC_STATIC( QREADWRITELOCK_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QReadWriteLock ( RecursionMode recursionMode )
 */
@@ -68,7 +66,6 @@ HB_FUNC_STATIC( QREADWRITELOCK_NEW2 )
   QReadWriteLock * o = new QReadWriteLock ( (QReadWriteLock::RecursionMode) hb_parni(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QReadWriteLock ()
 //[2]QReadWriteLock ( RecursionMode recursionMode )
@@ -104,7 +101,6 @@ HB_FUNC_STATIC( QREADWRITELOCK_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void lockForRead ()
 */
@@ -117,7 +113,6 @@ HB_FUNC_STATIC( QREADWRITELOCK_LOCKFORREAD )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void lockForWrite ()
@@ -132,7 +127,6 @@ HB_FUNC_STATIC( QREADWRITELOCK_LOCKFORWRITE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool tryLockForRead ()
 */
@@ -145,7 +139,6 @@ HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORREAD1 )
   }
 }
 
-
 /*
 bool tryLockForRead ( int timeout )
 */
@@ -157,7 +150,6 @@ HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORREAD2 )
     RBOOL( obj->tryLockForRead ( PINT(1) ) );
   }
 }
-
 
 //[1]bool tryLockForRead ()
 //[2]bool tryLockForRead ( int timeout )
@@ -186,7 +178,6 @@ HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORWRITE1 )
   }
 }
 
-
 /*
 bool tryLockForWrite ( int timeout )
 */
@@ -198,7 +189,6 @@ HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORWRITE2 )
     RBOOL( obj->tryLockForWrite ( PINT(1) ) );
   }
 }
-
 
 //[1]bool tryLockForWrite ()
 //[2]bool tryLockForWrite ( int timeout )
@@ -227,7 +217,6 @@ HB_FUNC_STATIC( QREADWRITELOCK_UNLOCK )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QREADWRITELOCK_NEWFROM )
 {
@@ -283,6 +272,5 @@ HB_FUNC_STATIC( QREADWRITELOCK_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

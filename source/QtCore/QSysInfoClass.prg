@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QSysInfo
 
@@ -52,7 +51,6 @@ HB_FUNC_STATIC( QSYSINFO_DELETE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QSYSINFO_NEWFROM )
 {
@@ -108,11 +106,5 @@ HB_FUNC_STATIC( QSYSINFO_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
-
-
-
-
 
 #pragma ENDDUMP

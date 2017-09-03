@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -82,7 +82,6 @@ HB_FUNC_STATIC( QMETAPROPERTY_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QMETAPROPERTY_DELETE )
 {
   QMetaProperty * obj = (QMetaProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -98,7 +97,6 @@ HB_FUNC_STATIC( QMETAPROPERTY_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 const char *name() const
 */
@@ -111,7 +109,6 @@ HB_FUNC_STATIC( QMETAPROPERTY_NAME )
     hb_retc( str1 );
   }
 }
-
 
 /*
 const char *typeName() const
@@ -126,7 +123,6 @@ HB_FUNC_STATIC( QMETAPROPERTY_TYPENAME )
   }
 }
 
-
 /*
 QVariant::Type type() const
 */
@@ -138,7 +134,6 @@ HB_FUNC_STATIC( QMETAPROPERTY_TYPE )
     hb_retni( (int) obj->type () );
   }
 }
-
 
 /*
 int userType() const
@@ -152,7 +147,6 @@ HB_FUNC_STATIC( QMETAPROPERTY_USERTYPE )
   }
 }
 
-
 /*
 int propertyIndex() const
 */
@@ -164,7 +158,6 @@ HB_FUNC_STATIC( QMETAPROPERTY_PROPERTYINDEX )
     RINT( obj->propertyIndex () );
   }
 }
-
 
 /*
 bool isReadable() const
@@ -178,7 +171,6 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISREADABLE )
   }
 }
 
-
 /*
 bool isWritable() const
 */
@@ -191,7 +183,6 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISWRITABLE )
   }
 }
 
-
 /*
 bool isResettable() const
 */
@@ -203,7 +194,6 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISRESETTABLE )
     RBOOL( obj->isResettable () );
   }
 }
-
 
 /*
 bool isDesignable(const QObject *obj = 0) const
@@ -218,7 +208,6 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISDESIGNABLE )
   }
 }
 
-
 /*
 bool isScriptable(const QObject *obj = 0) const
 */
@@ -231,7 +220,6 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISSCRIPTABLE )
     RBOOL( obj->isScriptable ( par1 ) );
   }
 }
-
 
 /*
 bool isStored(const QObject *obj = 0) const
@@ -246,7 +234,6 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISSTORED )
   }
 }
 
-
 /*
 bool isEditable(const QObject *obj = 0) const
 */
@@ -259,7 +246,6 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISEDITABLE )
     RBOOL( obj->isEditable ( par1 ) );
   }
 }
-
 
 /*
 bool isUser(const QObject *obj = 0) const
@@ -274,7 +260,6 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISUSER )
   }
 }
 
-
 /*
 bool isConstant() const
 */
@@ -286,7 +271,6 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISCONSTANT )
     RBOOL( obj->isConstant () );
   }
 }
-
 
 /*
 bool isFinal() const
@@ -300,7 +284,6 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISFINAL )
   }
 }
 
-
 /*
 bool isFlagType() const
 */
@@ -313,7 +296,6 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISFLAGTYPE )
   }
 }
 
-
 /*
 bool isEnumType() const
 */
@@ -325,7 +307,6 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISENUMTYPE )
     RBOOL( obj->isEnumType () );
   }
 }
-
 
 /*
 QMetaEnum enumerator() const
@@ -340,7 +321,6 @@ HB_FUNC_STATIC( QMETAPROPERTY_ENUMERATOR )
   }
 }
 
-
 /*
 bool hasNotifySignal() const
 */
@@ -352,7 +332,6 @@ HB_FUNC_STATIC( QMETAPROPERTY_HASNOTIFYSIGNAL )
     RBOOL( obj->hasNotifySignal () );
   }
 }
-
 
 /*
 QMetaMethod notifySignal() const
@@ -367,7 +346,6 @@ HB_FUNC_STATIC( QMETAPROPERTY_NOTIFYSIGNAL )
   }
 }
 
-
 /*
 int notifySignalIndex() const
 */
@@ -380,7 +358,6 @@ HB_FUNC_STATIC( QMETAPROPERTY_NOTIFYSIGNALINDEX )
   }
 }
 
-
 /*
 int revision() const
 */
@@ -392,7 +369,6 @@ HB_FUNC_STATIC( QMETAPROPERTY_REVISION )
     RINT( obj->revision () );
   }
 }
-
 
 /*
 QVariant read(const QObject *obj) const
@@ -408,7 +384,6 @@ HB_FUNC_STATIC( QMETAPROPERTY_READ )
   }
 }
 
-
 /*
 bool write(QObject *obj, const QVariant &value) const
 */
@@ -420,7 +395,6 @@ HB_FUNC_STATIC( QMETAPROPERTY_WRITE )
     RBOOL( obj->write ( PQOBJECT(1), *PQVARIANT(2) ) );
   }
 }
-
 
 /*
 bool reset(QObject *obj) const
@@ -434,7 +408,6 @@ HB_FUNC_STATIC( QMETAPROPERTY_RESET )
   }
 }
 
-
 /*
 bool hasStdCppSet() const
 */
@@ -446,7 +419,6 @@ HB_FUNC_STATIC( QMETAPROPERTY_HASSTDCPPSET )
     RBOOL( obj->hasStdCppSet () );
   }
 }
-
 
 /*
 bool isValid() const
@@ -460,7 +432,6 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISVALID )
   }
 }
 
-
 /*
 const QMetaObject *enclosingMetaObject() const
 */
@@ -473,7 +444,6 @@ HB_FUNC_STATIC( QMETAPROPERTY_ENCLOSINGMETAOBJECT )
     _qt4xhb_createReturnClass ( ptr, "QMETAOBJECT" );
   }
 }
-
 
 HB_FUNC_STATIC( QMETAPROPERTY_NEWFROM )
 {
@@ -529,7 +499,5 @@ HB_FUNC_STATIC( QMETAPROPERTY_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

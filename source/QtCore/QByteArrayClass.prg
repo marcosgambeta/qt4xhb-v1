@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -184,7 +184,6 @@ HB_FUNC_STATIC( QBYTEARRAY_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QByteArray ( const char * str )
 */
@@ -194,7 +193,6 @@ HB_FUNC_STATIC( QBYTEARRAY_NEW2 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QByteArray ( const char * data, int size )
 */
@@ -203,7 +201,6 @@ HB_FUNC_STATIC( QBYTEARRAY_NEW3 )
   QByteArray * o = new QByteArray ( (const char *) hb_parc(1), PINT(2) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 /*
 QByteArray ( int size, char ch )
@@ -215,7 +212,6 @@ HB_FUNC_STATIC( QBYTEARRAY_NEW4 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QByteArray ( const QByteArray & other )
 */
@@ -224,7 +220,6 @@ HB_FUNC_STATIC( QBYTEARRAY_NEW5 )
   QByteArray * o = new QByteArray ( *PQBYTEARRAY(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QByteArray ()
 //[2]QByteArray ( const char * str )
@@ -275,8 +270,6 @@ HB_FUNC_STATIC( QBYTEARRAY_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 QByteArray & append ( const QByteArray & ba )
 */
@@ -289,7 +282,6 @@ HB_FUNC_STATIC( QBYTEARRAY_APPEND1 )
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
 
 /*
 QByteArray & append ( const QString & str )
@@ -304,7 +296,6 @@ HB_FUNC_STATIC( QBYTEARRAY_APPEND2 )
   }
 }
 
-
 /*
 QByteArray & append ( const char * str )
 */
@@ -317,7 +308,6 @@ HB_FUNC_STATIC( QBYTEARRAY_APPEND3 )
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
 
 /*
 QByteArray & append ( const char * str, int len )
@@ -332,7 +322,6 @@ HB_FUNC_STATIC( QBYTEARRAY_APPEND4 )
   }
 }
 
-
 /*
 QByteArray & append ( char ch )
 */
@@ -346,7 +335,6 @@ HB_FUNC_STATIC( QBYTEARRAY_APPEND5 )
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
 
 //[1]QByteArray & append ( const QByteArray & ba )
 //[2]QByteArray & append ( const QString & str )
@@ -387,7 +375,6 @@ HB_FUNC_STATIC( QBYTEARRAY_AT )
   }
 }
 
-
 /*
 int capacity () const
 */
@@ -399,7 +386,6 @@ HB_FUNC_STATIC( QBYTEARRAY_CAPACITY )
     RINT( obj->capacity () );
   }
 }
-
 
 /*
 void chop ( int n )
@@ -414,7 +400,6 @@ HB_FUNC_STATIC( QBYTEARRAY_CHOP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void clear ()
 */
@@ -427,7 +412,6 @@ HB_FUNC_STATIC( QBYTEARRAY_CLEAR )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 const char * constData () const
@@ -442,7 +426,6 @@ HB_FUNC_STATIC( QBYTEARRAY_CONSTDATA )
   }
 }
 
-
 /*
 bool contains ( const QByteArray & ba ) const
 */
@@ -454,7 +437,6 @@ HB_FUNC_STATIC( QBYTEARRAY_CONTAINS1 )
     RBOOL( (bool) obj->contains ( *PQBYTEARRAY(1) ) );
   }
 }
-
 
 /*
 bool contains ( const char * str ) const
@@ -468,7 +450,6 @@ HB_FUNC_STATIC( QBYTEARRAY_CONTAINS2 )
   }
 }
 
-
 /*
 bool contains ( char ch ) const
 */
@@ -481,7 +462,6 @@ HB_FUNC_STATIC( QBYTEARRAY_CONTAINS3 )
     RBOOL( (bool) obj->contains ( par1 ) );
   }
 }
-
 
 //[1]bool contains ( const QByteArray & ba ) const
 //[2]bool contains ( const char * str ) const
@@ -515,7 +495,6 @@ HB_FUNC_STATIC( QBYTEARRAY_COUNT1 )
   }
 }
 
-
 /*
 int count ( const char * str ) const
 */
@@ -527,7 +506,6 @@ HB_FUNC_STATIC( QBYTEARRAY_COUNT2 )
     RINT( obj->count ( (const char *) hb_parc(1) ) );
   }
 }
-
 
 /*
 int count ( char ch ) const
@@ -542,7 +520,6 @@ HB_FUNC_STATIC( QBYTEARRAY_COUNT3 )
   }
 }
 
-
 /*
 int count () const
 */
@@ -554,7 +531,6 @@ HB_FUNC_STATIC( QBYTEARRAY_COUNT4 )
     RINT( obj->count () );
   }
 }
-
 
 //[1]int count ( const QByteArray & ba ) const
 //[2]int count ( const char * str ) const
@@ -581,8 +557,6 @@ HB_FUNC_STATIC( QBYTEARRAY_COUNT )
   }
 }
 
-
-
 //[1]char * data ()
 //[2]const char * data () const
 
@@ -603,7 +577,6 @@ HB_FUNC_STATIC( QBYTEARRAY_ENDSWITH1 )
   }
 }
 
-
 /*
 bool endsWith ( const char * str ) const
 */
@@ -615,7 +588,6 @@ HB_FUNC_STATIC( QBYTEARRAY_ENDSWITH2 )
     RBOOL( obj->endsWith ( (const char *) hb_parc(1) ) );
   }
 }
-
 
 /*
 bool endsWith ( char ch ) const
@@ -629,7 +601,6 @@ HB_FUNC_STATIC( QBYTEARRAY_ENDSWITH3 )
     RBOOL( obj->endsWith ( par1 ) );
   }
 }
-
 
 //[1]bool endsWith ( const QByteArray & ba ) const
 //[2]bool endsWith ( const char * str ) const
@@ -665,7 +636,6 @@ HB_FUNC_STATIC( QBYTEARRAY_FILL )
   }
 }
 
-
 /*
 int indexOf ( const QByteArray & ba, int from = 0 ) const
 */
@@ -677,7 +647,6 @@ HB_FUNC_STATIC( QBYTEARRAY_INDEXOF1 )
     RINT( obj->indexOf ( *PQBYTEARRAY(1), OPINT(2,0) ) );
   }
 }
-
 
 /*
 int indexOf ( const QString & str, int from = 0 ) const
@@ -691,7 +660,6 @@ HB_FUNC_STATIC( QBYTEARRAY_INDEXOF2 )
   }
 }
 
-
 /*
 int indexOf ( const char * str, int from = 0 ) const
 */
@@ -703,7 +671,6 @@ HB_FUNC_STATIC( QBYTEARRAY_INDEXOF3 )
     RINT( obj->indexOf ( (const char *) hb_parc(1), OPINT(2,0) ) );
   }
 }
-
 
 /*
 int indexOf ( char ch, int from = 0 ) const
@@ -717,7 +684,6 @@ HB_FUNC_STATIC( QBYTEARRAY_INDEXOF4 )
     RINT( obj->indexOf ( par1, OPINT(2,0) ) );
   }
 }
-
 
 //[1]int indexOf ( const QByteArray & ba, int from = 0 ) const
 //[2]int indexOf ( const QString & str, int from = 0 ) const
@@ -757,7 +723,6 @@ HB_FUNC_STATIC( QBYTEARRAY_INSERT1 )
   }
 }
 
-
 /*
 QByteArray & insert ( int i, const QString & str )
 */
@@ -770,7 +735,6 @@ HB_FUNC_STATIC( QBYTEARRAY_INSERT2 )
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
 
 /*
 QByteArray & insert ( int i, const char * str )
@@ -785,7 +749,6 @@ HB_FUNC_STATIC( QBYTEARRAY_INSERT3 )
   }
 }
 
-
 /*
 QByteArray & insert ( int i, const char * str, int len )
 */
@@ -798,7 +761,6 @@ HB_FUNC_STATIC( QBYTEARRAY_INSERT4 )
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
 
 /*
 QByteArray & insert ( int i, char ch )
@@ -813,7 +775,6 @@ HB_FUNC_STATIC( QBYTEARRAY_INSERT5 )
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
 
 //[1]QByteArray & insert ( int i, const QByteArray & ba )
 //[2]QByteArray & insert ( int i, const QString & str )
@@ -853,7 +814,6 @@ HB_FUNC_STATIC( QBYTEARRAY_ISEMPTY )
   }
 }
 
-
 /*
 bool isNull () const
 */
@@ -865,7 +825,6 @@ HB_FUNC_STATIC( QBYTEARRAY_ISNULL )
     RBOOL( obj->isNull () );
   }
 }
-
 
 /*
 int lastIndexOf ( const QByteArray & ba, int from = -1 ) const
@@ -879,7 +838,6 @@ HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF1 )
   }
 }
 
-
 /*
 int lastIndexOf ( const QString & str, int from = -1 ) const
 */
@@ -891,7 +849,6 @@ HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF2 )
     RINT( obj->lastIndexOf ( PQSTRING(1), OPINT(2,-1) ) );
   }
 }
-
 
 /*
 int lastIndexOf ( const char * str, int from = -1 ) const
@@ -905,7 +862,6 @@ HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF3 )
   }
 }
 
-
 /*
 int lastIndexOf ( char ch, int from = -1 ) const
 */
@@ -918,7 +874,6 @@ HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF4 )
     RINT( obj->lastIndexOf ( par1, OPINT(2,-1) ) );
   }
 }
-
 
 //[1]int lastIndexOf ( const QByteArray & ba, int from = -1 ) const
 //[2]int lastIndexOf ( const QString & str, int from = -1 ) const
@@ -958,7 +913,6 @@ HB_FUNC_STATIC( QBYTEARRAY_LEFT )
   }
 }
 
-
 /*
 QByteArray leftJustified ( int width, char fill = ' ', bool truncate = false ) const
 */
@@ -973,7 +927,6 @@ HB_FUNC_STATIC( QBYTEARRAY_LEFTJUSTIFIED )
   }
 }
 
-
 /*
 int length () const
 */
@@ -985,7 +938,6 @@ HB_FUNC_STATIC( QBYTEARRAY_LENGTH )
     RINT( obj->length () );
   }
 }
-
 
 /*
 QByteArray mid ( int pos, int len = -1 ) const
@@ -1000,7 +952,6 @@ HB_FUNC_STATIC( QBYTEARRAY_MID )
   }
 }
 
-
 /*
 QByteArray & prepend ( const QByteArray & ba )
 */
@@ -1013,7 +964,6 @@ HB_FUNC_STATIC( QBYTEARRAY_PREPEND1 )
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
 
 /*
 QByteArray & prepend ( const char * str )
@@ -1028,7 +978,6 @@ HB_FUNC_STATIC( QBYTEARRAY_PREPEND2 )
   }
 }
 
-
 /*
 QByteArray & prepend ( const char * str, int len )
 */
@@ -1041,7 +990,6 @@ HB_FUNC_STATIC( QBYTEARRAY_PREPEND3 )
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
 
 /*
 QByteArray & prepend ( char ch )
@@ -1056,7 +1004,6 @@ HB_FUNC_STATIC( QBYTEARRAY_PREPEND4 )
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
 
 //[1]QByteArray & prepend ( const QByteArray & ba )
 //[2]QByteArray & prepend ( const char * str )
@@ -1096,7 +1043,6 @@ HB_FUNC_STATIC( QBYTEARRAY_PUSH_BACK1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void push_back ( const char * str )
 */
@@ -1109,7 +1055,6 @@ HB_FUNC_STATIC( QBYTEARRAY_PUSH_BACK2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void push_back ( char ch )
@@ -1124,7 +1069,6 @@ HB_FUNC_STATIC( QBYTEARRAY_PUSH_BACK3 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void push_back ( const QByteArray & other )
 //[2]void push_back ( const char * str )
@@ -1159,7 +1103,6 @@ HB_FUNC_STATIC( QBYTEARRAY_PUSH_FRONT1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void push_front ( const char * str )
 */
@@ -1172,7 +1115,6 @@ HB_FUNC_STATIC( QBYTEARRAY_PUSH_FRONT2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void push_front ( char ch )
@@ -1187,7 +1129,6 @@ HB_FUNC_STATIC( QBYTEARRAY_PUSH_FRONT3 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void push_front ( const QByteArray & other )
 //[2]void push_front ( const char * str )
@@ -1222,7 +1163,6 @@ HB_FUNC_STATIC( QBYTEARRAY_REMOVE )
   }
 }
 
-
 /*
 QByteArray repeated ( int times ) const
 */
@@ -1235,7 +1175,6 @@ HB_FUNC_STATIC( QBYTEARRAY_REPEATED )
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
 
 /*
 QByteArray & replace ( int pos, int len, const QByteArray & after )
@@ -1250,7 +1189,6 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE1 )
   }
 }
 
-
 /*
 QByteArray & replace ( int pos, int len, const char * after )
 */
@@ -1263,7 +1201,6 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE2 )
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
 
 /*
 QByteArray & replace ( int pos, int len, const char * after, int alen )
@@ -1278,7 +1215,6 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE3 )
   }
 }
 
-
 /*
 QByteArray & replace ( const QByteArray & before, const QByteArray & after )
 */
@@ -1291,7 +1227,6 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE4 )
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
 
 /*
 QByteArray & replace ( const char * before, const QByteArray & after )
@@ -1306,7 +1241,6 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE5 )
   }
 }
 
-
 /*
 QByteArray & replace ( const char * before, int bsize, const char * after, int asize )
 */
@@ -1319,7 +1253,6 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE6 )
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
 
 /*
 QByteArray & replace ( const QByteArray & before, const char * after )
@@ -1334,7 +1267,6 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE7 )
   }
 }
 
-
 /*
 QByteArray & replace ( const QString & before, const QByteArray & after )
 */
@@ -1347,7 +1279,6 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE8 )
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
 
 /*
 QByteArray & replace ( const QString & before, const char * after )
@@ -1362,7 +1293,6 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE9 )
   }
 }
 
-
 /*
 QByteArray & replace ( const char * before, const char * after )
 */
@@ -1375,7 +1305,6 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE10 )
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
 
 /*
 QByteArray & replace ( char before, const QByteArray & after )
@@ -1391,7 +1320,6 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE11 )
   }
 }
 
-
 /*
 QByteArray & replace ( char before, const QString & after )
 */
@@ -1405,7 +1333,6 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE12 )
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
 
 /*
 QByteArray & replace ( char before, const char * after )
@@ -1421,7 +1348,6 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE13 )
   }
 }
 
-
 /*
 QByteArray & replace ( char before, char after )
 */
@@ -1436,7 +1362,6 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE14 )
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
 
 //[01]QByteArray & replace ( int pos, int len, const QByteArray & after )
 //[02]QByteArray & replace ( int pos, int len, const char * after )
@@ -1526,7 +1451,6 @@ HB_FUNC_STATIC( QBYTEARRAY_RESERVE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void resize ( int size )
 */
@@ -1540,7 +1464,6 @@ HB_FUNC_STATIC( QBYTEARRAY_RESIZE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QByteArray right ( int len ) const
 */
@@ -1553,7 +1476,6 @@ HB_FUNC_STATIC( QBYTEARRAY_RIGHT )
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
 
 /*
 QByteArray rightJustified ( int width, char fill = ' ', bool truncate = false ) const
@@ -1569,7 +1491,6 @@ HB_FUNC_STATIC( QBYTEARRAY_RIGHTJUSTIFIED )
   }
 }
 
-
 /*
 QByteArray & setNum ( int n, int base = 10 )
 */
@@ -1582,7 +1503,6 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM1 )
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
 
 /*
 QByteArray & setNum ( uint n, int base = 10 )
@@ -1597,7 +1517,6 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM2 )
   }
 }
 
-
 /*
 QByteArray & setNum ( short n, int base = 10 )
 */
@@ -1610,7 +1529,6 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM3 )
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
 
 /*
 QByteArray & setNum ( ushort n, int base = 10 )
@@ -1625,7 +1543,6 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM4 )
   }
 }
 
-
 /*
 QByteArray & setNum ( qlonglong n, int base = 10 )
 */
@@ -1639,7 +1556,6 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM5 )
   }
 }
 
-
 /*
 QByteArray & setNum ( qulonglong n, int base = 10 )
 */
@@ -1652,7 +1568,6 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM6 )
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
 
 /*
 QByteArray & setNum ( double n, char f = 'g', int prec = 6 )
@@ -1668,7 +1583,6 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM7 )
   }
 }
 
-
 /*
 QByteArray & setNum ( float n, char f = 'g', int prec = 6 )
 */
@@ -1682,7 +1596,6 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM8 )
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
 
 //[1]QByteArray & setNum ( int n, int base = 10 )
 //[2]QByteArray & setNum ( uint n, int base = 10 )
@@ -1744,7 +1657,6 @@ HB_FUNC_STATIC( QBYTEARRAY_SETRAWDATA )
   }
 }
 
-
 /*
 QByteArray simplified () const
 */
@@ -1758,7 +1670,6 @@ HB_FUNC_STATIC( QBYTEARRAY_SIMPLIFIED )
   }
 }
 
-
 /*
 int size () const
 */
@@ -1770,7 +1681,6 @@ HB_FUNC_STATIC( QBYTEARRAY_SIZE )
     RINT( obj->size () );
   }
 }
-
 
 /*
 QList<QByteArray> split ( char sep ) const
@@ -1816,7 +1726,6 @@ HB_FUNC_STATIC( QBYTEARRAY_SPLIT )
   }
 }
 
-
 /*
 void squeeze ()
 */
@@ -1830,7 +1739,6 @@ HB_FUNC_STATIC( QBYTEARRAY_SQUEEZE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool startsWith ( const QByteArray & ba ) const
 */
@@ -1842,7 +1750,6 @@ HB_FUNC_STATIC( QBYTEARRAY_STARTSWITH1 )
     RBOOL( obj->startsWith ( *PQBYTEARRAY(1) ) );
   }
 }
-
 
 /*
 bool startsWith ( const char * str ) const
@@ -1856,7 +1763,6 @@ HB_FUNC_STATIC( QBYTEARRAY_STARTSWITH2 )
   }
 }
 
-
 /*
 bool startsWith ( char ch ) const
 */
@@ -1869,7 +1775,6 @@ HB_FUNC_STATIC( QBYTEARRAY_STARTSWITH3 )
     RBOOL( obj->startsWith ( par1 ) );
   }
 }
-
 
 //[1]bool startsWith ( const QByteArray & ba ) const
 //[2]bool startsWith ( const char * str ) const
@@ -1904,7 +1809,6 @@ HB_FUNC_STATIC( QBYTEARRAY_TOBASE64 )
   }
 }
 
-
 /*
 double toDouble ( bool * ok = 0 ) const
 */
@@ -1918,7 +1822,6 @@ HB_FUNC_STATIC( QBYTEARRAY_TODOUBLE )
     hb_storl( par1, 1 );
   }
 }
-
 
 /*
 float toFloat ( bool * ok = 0 ) const
@@ -1934,7 +1837,6 @@ HB_FUNC_STATIC( QBYTEARRAY_TOFLOAT )
   }
 }
 
-
 /*
 QByteArray toHex () const
 */
@@ -1947,7 +1849,6 @@ HB_FUNC_STATIC( QBYTEARRAY_TOHEX )
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
 
 /*
 int toInt ( bool * ok = 0, int base = 10 ) const
@@ -1962,7 +1863,6 @@ HB_FUNC_STATIC( QBYTEARRAY_TOINT )
     hb_storl( par1, 1 );
   }
 }
-
 
 /*
 long toLong ( bool * ok = 0, int base = 10 ) const
@@ -1979,7 +1879,6 @@ HB_FUNC_STATIC( QBYTEARRAY_TOLONG )
   }
 }
 
-
 /*
 qlonglong toLongLong ( bool * ok = 0, int base = 10 ) const
 */
@@ -1994,7 +1893,6 @@ HB_FUNC_STATIC( QBYTEARRAY_TOLONGLONG )
   }
 }
 
-
 /*
 QByteArray toLower () const
 */
@@ -2007,7 +1905,6 @@ HB_FUNC_STATIC( QBYTEARRAY_TOLOWER )
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
 
 /*
 QByteArray toPercentEncoding ( const QByteArray & exclude = QByteArray(), const QByteArray & include = QByteArray(), char percent = '%' ) const
@@ -2025,7 +1922,6 @@ HB_FUNC_STATIC( QBYTEARRAY_TOPERCENTENCODING )
   }
 }
 
-
 /*
 short toShort ( bool * ok = 0, int base = 10 ) const
 */
@@ -2040,7 +1936,6 @@ HB_FUNC_STATIC( QBYTEARRAY_TOSHORT )
   }
 }
 
-
 /*
 uint toUInt ( bool * ok = 0, int base = 10 ) const
 */
@@ -2054,7 +1949,6 @@ HB_FUNC_STATIC( QBYTEARRAY_TOUINT )
     hb_storl( par1, 1 );
   }
 }
-
 
 /*
 ulong toULong ( bool * ok = 0, int base = 10 ) const
@@ -2071,7 +1965,6 @@ HB_FUNC_STATIC( QBYTEARRAY_TOULONG )
   }
 }
 
-
 /*
 qulonglong toULongLong ( bool * ok = 0, int base = 10 ) const
 */
@@ -2085,7 +1978,6 @@ HB_FUNC_STATIC( QBYTEARRAY_TOULONGLONG )
     hb_storl( par1, 1 );
   }
 }
-
 
 /*
 ushort toUShort ( bool * ok = 0, int base = 10 ) const
@@ -2101,7 +1993,6 @@ HB_FUNC_STATIC( QBYTEARRAY_TOUSHORT )
   }
 }
 
-
 /*
 QByteArray toUpper () const
 */
@@ -2114,7 +2005,6 @@ HB_FUNC_STATIC( QBYTEARRAY_TOUPPER )
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
 
 /*
 QByteArray trimmed () const
@@ -2129,7 +2019,6 @@ HB_FUNC_STATIC( QBYTEARRAY_TRIMMED )
   }
 }
 
-
 /*
 void truncate ( int pos )
 */
@@ -2143,8 +2032,6 @@ HB_FUNC_STATIC( QBYTEARRAY_TRUNCATE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 QByteArray fromBase64 ( const QByteArray & base64 )
 */
@@ -2154,7 +2041,6 @@ HB_FUNC_STATIC( QBYTEARRAY_FROMBASE64 )
   _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
 }
 
-
 /*
 QByteArray fromHex ( const QByteArray & hexEncoded )
 */
@@ -2163,7 +2049,6 @@ HB_FUNC_STATIC( QBYTEARRAY_FROMHEX )
   QByteArray * ptr = new QByteArray( QByteArray::fromHex ( *PQBYTEARRAY(1) ) );
   _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
 }
-
 
 /*
 QByteArray fromPercentEncoding ( const QByteArray & input, char percent = '%' )
@@ -2175,7 +2060,6 @@ HB_FUNC_STATIC( QBYTEARRAY_FROMPERCENTENCODING )
   _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
 }
 
-
 /*
 QByteArray fromRawData ( const char * data, int size )
 */
@@ -2184,7 +2068,6 @@ HB_FUNC_STATIC( QBYTEARRAY_FROMRAWDATA )
   QByteArray * ptr = new QByteArray( QByteArray::fromRawData ( (const char *) hb_parc(1), PINT(2) ) );
   _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
 }
-
 
 /*
 QByteArray number ( int n, int base = 10 )
@@ -2195,7 +2078,6 @@ HB_FUNC_STATIC( QBYTEARRAY_NUMBER1 )
   _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
 }
 
-
 /*
 QByteArray number ( uint n, int base = 10 )
 */
@@ -2204,7 +2086,6 @@ HB_FUNC_STATIC( QBYTEARRAY_NUMBER2 )
   QByteArray * ptr = new QByteArray( QByteArray::number ( PUINT(1), OPINT(2,10) ) );
   _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
 }
-
 
 /*
 QByteArray number ( qlonglong n, int base = 10 )
@@ -2215,7 +2096,6 @@ HB_FUNC_STATIC( QBYTEARRAY_NUMBER3 )
   _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
 }
 
-
 /*
 QByteArray number ( qulonglong n, int base = 10 )
 */
@@ -2224,7 +2104,6 @@ HB_FUNC_STATIC( QBYTEARRAY_NUMBER4 )
   QByteArray * ptr = new QByteArray( QByteArray::number ( PQULONGLONG(1), OPINT(2,10) ) );
   _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
 }
-
 
 /*
 QByteArray number ( double n, char f = 'g', int prec = 6 )
@@ -2235,7 +2114,6 @@ HB_FUNC_STATIC( QBYTEARRAY_NUMBER5 )
   QByteArray * ptr = new QByteArray( QByteArray::number ( PDOUBLE(1), par2, OPINT(3,6) ) );
   _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
 }
-
 
 HB_FUNC_STATIC( QBYTEARRAY_NEWFROM )
 {
@@ -2291,6 +2169,5 @@ HB_FUNC_STATIC( QBYTEARRAY_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

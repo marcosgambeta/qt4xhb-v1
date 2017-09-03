@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QPauseAnimation INHERIT QAbstractAnimation
 
@@ -46,7 +45,6 @@ HB_FUNC_STATIC( QPAUSEANIMATION_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QPauseAnimation ( int msecs, QObject * parent = 0 )
 */
@@ -55,7 +53,6 @@ HB_FUNC_STATIC( QPAUSEANIMATION_NEW2 )
   QPauseAnimation * o = new QPauseAnimation ( PINT(1), OPQOBJECT(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QPauseAnimation ( QObject * parent = 0 )
 //[2]QPauseAnimation ( int msecs, QObject * parent = 0 )
@@ -91,8 +88,6 @@ HB_FUNC_STATIC( QPAUSEANIMATION_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 void setDuration ( int msecs )
 */
@@ -106,7 +101,6 @@ HB_FUNC_STATIC( QPAUSEANIMATION_SETDURATION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual int duration () const
 */
@@ -118,8 +112,5 @@ HB_FUNC_STATIC( QPAUSEANIMATION_DURATION )
     RINT( obj->duration () );
   }
 }
-
-
-
 
 #pragma ENDDUMP

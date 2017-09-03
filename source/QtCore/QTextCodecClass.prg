@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -78,9 +78,6 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
-
-
 /*
 bool canEncode(QChar) const
 */
@@ -94,7 +91,6 @@ HB_FUNC_STATIC( QTEXTCODEC_CANENCODE1 )
   }
 }
 
-
 /*
 bool canEncode(const QString&) const
 */
@@ -106,7 +102,6 @@ HB_FUNC_STATIC( QTEXTCODEC_CANENCODE2 )
     RBOOL( obj->canEncode ( PQSTRING(1) ) );
   }
 }
-
 
 //[1]bool canEncode(QChar) const
 //[2]bool canEncode(const QString&) const
@@ -135,7 +130,6 @@ HB_FUNC_STATIC( QTEXTCODEC_TOUNICODE1 )
   }
 }
 
-
 /*
 QString toUnicode(const char* chars) const
 */
@@ -147,8 +141,6 @@ HB_FUNC_STATIC( QTEXTCODEC_TOUNICODE2 )
     RQSTRING( obj->toUnicode ( (const char *) hb_parc(1) ) );
   }
 }
-
-
 
 //[1]QString toUnicode(const QByteArray&) const
 //[2]QString toUnicode(const char* chars) const
@@ -179,8 +171,6 @@ HB_FUNC_STATIC( QTEXTCODEC_FROMUNICODE1 )
   }
 }
 
-
-
 //[1]QByteArray fromUnicode(const QString& uc) const
 //[2]QByteArray fromUnicode(const QChar *in, int length, ConverterState *state = 0) const
 
@@ -209,7 +199,6 @@ HB_FUNC_STATIC( QTEXTCODEC_MAKEDECODER1 )
   }
 }
 
-
 /*
 QTextDecoder* makeDecoder(ConversionFlags flags) const
 */
@@ -223,7 +212,6 @@ HB_FUNC_STATIC( QTEXTCODEC_MAKEDECODER2 )
     _qt4xhb_createReturnClass ( ptr, "QTEXTDECODER" );
   }
 }
-
 
 //[1]QTextDecoder* makeDecoder() const
 //[2]QTextDecoder* makeDecoder(ConversionFlags flags) const
@@ -253,7 +241,6 @@ HB_FUNC_STATIC( QTEXTCODEC_MAKEENCODER1 )
   }
 }
 
-
 /*
 QTextEncoder* makeEncoder(ConversionFlags flags) const
 */
@@ -267,7 +254,6 @@ HB_FUNC_STATIC( QTEXTCODEC_MAKEENCODER2 )
     _qt4xhb_createReturnClass ( ptr, "QTEXTENCODER" );
   }
 }
-
 
 //[1]QTextEncoder* makeEncoder() const
 //[2]QTextEncoder* makeEncoder(ConversionFlags flags) const
@@ -296,7 +282,6 @@ HB_FUNC_STATIC( QTEXTCODEC_NAME )
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
 
 /*
 virtual QList<QByteArray> aliases() const
@@ -341,7 +326,6 @@ HB_FUNC_STATIC( QTEXTCODEC_ALIASES )
   }
 }
 
-
 /*
 virtual int mibEnum() const = 0
 */
@@ -354,8 +338,6 @@ HB_FUNC_STATIC( QTEXTCODEC_MIBENUM )
   }
 }
 
-
-
 /*
 static QTextCodec* codecForName(const QByteArray &name)
 */
@@ -365,7 +347,6 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORNAME1 )
   _qt4xhb_createReturnClass ( ptr, "QTEXTCODEC" );
 }
 
-
 /*
 static QTextCodec* codecForName(const char *name)
 */
@@ -374,7 +355,6 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORNAME2 )
   QTextCodec * ptr = QTextCodec::codecForName ( (const char *) hb_parc(1) );
   _qt4xhb_createReturnClass ( ptr, "QTEXTCODEC" );
 }
-
 
 //[1]static QTextCodec* codecForName(const QByteArray &name)
 //[2]static QTextCodec* codecForName(const char *name)
@@ -399,7 +379,6 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORMIB )
   QTextCodec * ptr = QTextCodec::codecForMib ( PINT(1) );
   _qt4xhb_createReturnClass ( ptr, "QTEXTCODEC" );
 }
-
 
 /*
 static QList<QByteArray> availableCodecs()
@@ -440,7 +419,6 @@ HB_FUNC_STATIC( QTEXTCODEC_AVAILABLECODECS )
   hb_itemReturnRelease(pArray);
 }
 
-
 /*
 static QList<int> availableMibs()
 */
@@ -459,7 +437,6 @@ HB_FUNC_STATIC( QTEXTCODEC_AVAILABLEMIBS )
   hb_itemReturnRelease(pArray);
 }
 
-
 /*
 static QTextCodec* codecForLocale()
 */
@@ -468,7 +445,6 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORLOCALE )
   QTextCodec * ptr = QTextCodec::codecForLocale ();
   _qt4xhb_createReturnClass ( ptr, "QTEXTCODEC" );
 }
-
 
 /*
 static void setCodecForLocale(QTextCodec *c)
@@ -479,7 +455,6 @@ HB_FUNC_STATIC( QTEXTCODEC_SETCODECFORLOCALE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 static QTextCodec* codecForTr()
 */
@@ -488,7 +463,6 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORTR )
   QTextCodec * ptr = QTextCodec::codecForTr ();
   _qt4xhb_createReturnClass ( ptr, "QTEXTCODEC" );
 }
-
 
 /*
 static void setCodecForTr(QTextCodec *c)
@@ -499,7 +473,6 @@ HB_FUNC_STATIC( QTEXTCODEC_SETCODECFORTR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 static QTextCodec* codecForCStrings()
 */
@@ -508,7 +481,6 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORCSTRINGS )
   QTextCodec * ptr = QTextCodec::codecForCStrings ();
   _qt4xhb_createReturnClass ( ptr, "QTEXTCODEC" );
 }
-
 
 /*
 static void setCodecForCStrings(QTextCodec *c)
@@ -519,7 +491,6 @@ HB_FUNC_STATIC( QTEXTCODEC_SETCODECFORCSTRINGS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 static QTextCodec *codecForHtml(const QByteArray &ba)
 */
@@ -529,7 +500,6 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORHTML1 )
   _qt4xhb_createReturnClass ( ptr, "QTEXTCODEC" );
 }
 
-
 /*
 static QTextCodec *codecForHtml(const QByteArray &ba, QTextCodec *defaultCodec)
 */
@@ -538,7 +508,6 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORHTML2 )
   QTextCodec * ptr = QTextCodec::codecForHtml ( *PQBYTEARRAY(1), PQTEXTCODEC(2) );
   _qt4xhb_createReturnClass ( ptr, "QTEXTCODEC" );
 }
-
 
 //[1]static QTextCodec *codecForHtml(const QByteArray &ba)
 //[2]static QTextCodec *codecForHtml(const QByteArray &ba, QTextCodec *defaultCodec)
@@ -564,7 +533,6 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORUTFTEXT1 )
   _qt4xhb_createReturnClass ( ptr, "QTEXTCODEC" );
 }
 
-
 /*
 static QTextCodec *codecForUtfText(const QByteArray &ba, QTextCodec *defaultCodec)
 */
@@ -573,7 +541,6 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORUTFTEXT2 )
   QTextCodec * ptr = QTextCodec::codecForUtfText ( *PQBYTEARRAY(1), PQTEXTCODEC(2) );
   _qt4xhb_createReturnClass ( ptr, "QTEXTCODEC" );
 }
-
 
 //[1]static QTextCodec *codecForUtfText(const QByteArray &ba)
 //[2]static QTextCodec *codecForUtfText(const QByteArray &ba, QTextCodec *defaultCodec)
@@ -589,7 +556,6 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORUTFTEXT )
     HB_FUNC_EXEC( QTEXTCODEC_CODECFORUTFTEXT2 );
   }
 }
-
 
 HB_FUNC_STATIC( QTEXTCODEC_NEWFROM )
 {
@@ -645,7 +611,5 @@ HB_FUNC_STATIC( QTEXTCODEC_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

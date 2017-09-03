@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -86,7 +86,6 @@ HB_FUNC_STATIC( QLINEF_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QLineF(const QPointF & p1, const QPointF & p2)
 */
@@ -95,7 +94,6 @@ HB_FUNC_STATIC( QLINEF_NEW2 )
   QLineF * o = new QLineF ( *PQPOINTF(1), *PQPOINTF(2) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QLineF(qreal x1, qreal y1, qreal x2, qreal y2)
@@ -106,7 +104,6 @@ HB_FUNC_STATIC( QLINEF_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QLineF(const QLine & line)
 */
@@ -115,7 +112,6 @@ HB_FUNC_STATIC( QLINEF_NEW4 )
   QLineF * o = new QLineF ( *PQLINE(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QLineF()
 //[2]QLineF(const QPointF & p1, const QPointF & p2)
@@ -161,7 +157,6 @@ HB_FUNC_STATIC( QLINEF_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QPointF p1() const
 */
@@ -174,7 +169,6 @@ HB_FUNC_STATIC( QLINEF_P1 )
     _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
-
 
 /*
 QPointF p2() const
@@ -189,7 +183,6 @@ HB_FUNC_STATIC( QLINEF_P2 )
   }
 }
 
-
 /*
 qreal x1() const
 */
@@ -201,7 +194,6 @@ HB_FUNC_STATIC( QLINEF_X1 )
     RQREAL( obj->x1 () );
   }
 }
-
 
 /*
 qreal x2() const
@@ -215,7 +207,6 @@ HB_FUNC_STATIC( QLINEF_X2 )
   }
 }
 
-
 /*
 qreal y1() const
 */
@@ -227,7 +218,6 @@ HB_FUNC_STATIC( QLINEF_Y1 )
     RQREAL( obj->y1 () );
   }
 }
-
 
 /*
 qreal y2() const
@@ -241,7 +231,6 @@ HB_FUNC_STATIC( QLINEF_Y2 )
   }
 }
 
-
 /*
 qreal angle() const
 */
@@ -253,7 +242,6 @@ HB_FUNC_STATIC( QLINEF_ANGLE )
     RQREAL( obj->angle () );
   }
 }
-
 
 /*
 qreal angleTo(const QLineF & line) const
@@ -267,7 +255,6 @@ HB_FUNC_STATIC( QLINEF_ANGLETO )
   }
 }
 
-
 /*
 qreal dx() const
 */
@@ -279,7 +266,6 @@ HB_FUNC_STATIC( QLINEF_DX )
     RQREAL( obj->dx () );
   }
 }
-
 
 /*
 qreal dy() const
@@ -293,8 +279,6 @@ HB_FUNC_STATIC( QLINEF_DY )
   }
 }
 
-
-
 /*
 bool isNull() const
 */
@@ -307,7 +291,6 @@ HB_FUNC_STATIC( QLINEF_ISNULL )
   }
 }
 
-
 /*
 qreal length() const
 */
@@ -319,7 +302,6 @@ HB_FUNC_STATIC( QLINEF_LENGTH )
     RQREAL( obj->length () );
   }
 }
-
 
 /*
 QLineF normalVector() const
@@ -334,7 +316,6 @@ HB_FUNC_STATIC( QLINEF_NORMALVECTOR )
   }
 }
 
-
 /*
 QPointF pointAt(qreal t) const
 */
@@ -347,7 +328,6 @@ HB_FUNC_STATIC( QLINEF_POINTAT )
     _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
-
 
 /*
 void setP1(const QPointF & p1)
@@ -362,7 +342,6 @@ HB_FUNC_STATIC( QLINEF_SETP1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setP2(const QPointF & p2)
 */
@@ -375,7 +354,6 @@ HB_FUNC_STATIC( QLINEF_SETP2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setAngle(qreal angle)
@@ -390,7 +368,6 @@ HB_FUNC_STATIC( QLINEF_SETANGLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setLength(qreal length)
 */
@@ -403,7 +380,6 @@ HB_FUNC_STATIC( QLINEF_SETLENGTH )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setLine(qreal x1, qreal y1, qreal x2, qreal y2)
@@ -418,7 +394,6 @@ HB_FUNC_STATIC( QLINEF_SETLINE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPoints(const QPointF & p1, const QPointF & p2)
 */
@@ -431,7 +406,6 @@ HB_FUNC_STATIC( QLINEF_SETPOINTS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QLine toLine() const
@@ -446,7 +420,6 @@ HB_FUNC_STATIC( QLINEF_TOLINE )
   }
 }
 
-
 /*
 void translate(const QPointF & offset)
 */
@@ -460,7 +433,6 @@ HB_FUNC_STATIC( QLINEF_TRANSLATE1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void translate(qreal dx, qreal dy)
 */
@@ -473,7 +445,6 @@ HB_FUNC_STATIC( QLINEF_TRANSLATE2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void translate(const QPointF & offset)
 //[2]void translate(qreal dx, qreal dy)
@@ -503,7 +474,6 @@ HB_FUNC_STATIC( QLINEF_TRANSLATED1 )
   }
 }
 
-
 /*
 QLineF translated(qreal dx, qreal dy) const
 */
@@ -516,7 +486,6 @@ HB_FUNC_STATIC( QLINEF_TRANSLATED2 )
     _qt4xhb_createReturnClass ( ptr, "QLINEF", true );
   }
 }
-
 
 //[1]QLineF translated(const QPointF & offset) const
 //[2]QLineF translated(qreal dx, qreal dy) const
@@ -546,8 +515,6 @@ HB_FUNC_STATIC( QLINEF_UNITVECTOR )
   }
 }
 
-
-
 /*
 QLineF fromPolar(qreal length, qreal angle)
 */
@@ -556,7 +523,6 @@ HB_FUNC_STATIC( QLINEF_FROMPOLAR )
   QLineF * ptr = new QLineF( QLineF::fromPolar ( PQREAL(1), PQREAL(2) ) );
   _qt4xhb_createReturnClass ( ptr, "QLINEF", true );
 }
-
 
 HB_FUNC_STATIC( QLINEF_NEWFROM )
 {
@@ -612,6 +578,5 @@ HB_FUNC_STATIC( QLINEF_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -52,7 +52,6 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QSignalTransition(QObject *sender, const char *signal,QState *sourceState = 0)
 */
@@ -61,7 +60,6 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_NEW2 )
   QSignalTransition * o = new QSignalTransition ( PQOBJECT(1), (const char *) hb_parc(2), OPQSTATE(3,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QSignalTransition(QState *sourceState = 0)
 //[2]QSignalTransition(QObject *sender, const char *signal,QState *sourceState = 0)
@@ -97,7 +95,6 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QObject *senderObject() const
 */
@@ -110,7 +107,6 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_SENDEROBJECT )
     _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
-
 
 /*
 void setSenderObject(QObject *sender)
@@ -125,7 +121,6 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_SETSENDEROBJECT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QByteArray signal() const
 */
@@ -139,7 +134,6 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_SIGNAL )
   }
 }
 
-
 /*
 void setSignal(const QByteArray &signal)
 */
@@ -152,9 +146,5 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_SETSIGNAL )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

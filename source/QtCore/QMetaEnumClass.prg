@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -64,7 +64,6 @@ HB_FUNC_STATIC( QMETAENUM_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QMETAENUM_DELETE )
 {
   QMetaEnum * obj = (QMetaEnum *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -80,7 +79,6 @@ HB_FUNC_STATIC( QMETAENUM_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 const char *name() const
 */
@@ -94,7 +92,6 @@ HB_FUNC_STATIC( QMETAENUM_NAME )
   }
 }
 
-
 /*
 bool isFlag() const
 */
@@ -107,7 +104,6 @@ HB_FUNC_STATIC( QMETAENUM_ISFLAG )
   }
 }
 
-
 /*
 int keyCount() const
 */
@@ -119,7 +115,6 @@ HB_FUNC_STATIC( QMETAENUM_KEYCOUNT )
     RINT( obj->keyCount () );
   }
 }
-
 
 /*
 const char *key(int index) const
@@ -134,7 +129,6 @@ HB_FUNC_STATIC( QMETAENUM_KEY )
   }
 }
 
-
 /*
 int value(int index) const
 */
@@ -146,7 +140,6 @@ HB_FUNC_STATIC( QMETAENUM_VALUE )
     RINT( obj->value ( PINT(1) ) );
   }
 }
-
 
 /*
 const char *scope() const
@@ -161,7 +154,6 @@ HB_FUNC_STATIC( QMETAENUM_SCOPE )
   }
 }
 
-
 /*
 int keyToValue(const char *key) const
 */
@@ -173,7 +165,6 @@ HB_FUNC_STATIC( QMETAENUM_KEYTOVALUE )
     RINT( obj->keyToValue ( (const char *) hb_parc(1) ) );
   }
 }
-
 
 /*
 const char* valueToKey(int value) const
@@ -188,7 +179,6 @@ HB_FUNC_STATIC( QMETAENUM_VALUETOKEY )
   }
 }
 
-
 /*
 int keysToValue(const char * keys) const
 */
@@ -200,7 +190,6 @@ HB_FUNC_STATIC( QMETAENUM_KEYSTOVALUE )
     RINT( obj->keysToValue ( (const char *) hb_parc(1) ) );
   }
 }
-
 
 /*
 QByteArray valueToKeys(int value) const
@@ -215,7 +204,6 @@ HB_FUNC_STATIC( QMETAENUM_VALUETOKEYS )
   }
 }
 
-
 /*
 const QMetaObject *enclosingMetaObject() const
 */
@@ -229,7 +217,6 @@ HB_FUNC_STATIC( QMETAENUM_ENCLOSINGMETAOBJECT )
   }
 }
 
-
 /*
 bool isValid() const
 */
@@ -241,7 +228,6 @@ HB_FUNC_STATIC( QMETAENUM_ISVALID )
     RBOOL( obj->isValid () );
   }
 }
-
 
 HB_FUNC_STATIC( QMETAENUM_NEWFROM )
 {
@@ -297,7 +283,5 @@ HB_FUNC_STATIC( QMETAENUM_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

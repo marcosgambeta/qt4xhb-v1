@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QRegExp
 
@@ -73,7 +72,6 @@ HB_FUNC_STATIC( QREGEXP_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QRegExp ( const QString & pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive, PatternSyntax syntax = RegExp )
 */
@@ -83,7 +81,6 @@ HB_FUNC_STATIC( QREGEXP_NEW2 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QRegExp ( const QRegExp & rx )
 */
@@ -92,7 +89,6 @@ HB_FUNC_STATIC( QREGEXP_NEW3 )
   QRegExp * o = new QRegExp ( *PQREGEXP(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QRegExp ()
 //[2]QRegExp ( const QString & pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive, PatternSyntax syntax = RegExp )
@@ -133,7 +129,6 @@ HB_FUNC_STATIC( QREGEXP_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString cap ( int nth = 0 ) const
 */
@@ -145,7 +140,6 @@ HB_FUNC_STATIC( QREGEXP_CAP )
     RQSTRING( obj->cap ( OPINT(1,0) ) );
   }
 }
-
 
 /*
 int captureCount () const
@@ -159,7 +153,6 @@ HB_FUNC_STATIC( QREGEXP_CAPTURECOUNT )
   }
 }
 
-
 /*
 QStringList capturedTexts () const
 */
@@ -171,7 +164,6 @@ HB_FUNC_STATIC( QREGEXP_CAPTUREDTEXTS )
     RQSTRINGLIST( obj->capturedTexts () );
   }
 }
-
 
 /*
 Qt::CaseSensitivity caseSensitivity () const
@@ -185,7 +177,6 @@ HB_FUNC_STATIC( QREGEXP_CASESENSITIVITY )
   }
 }
 
-
 /*
 QString errorString () const
 */
@@ -197,7 +188,6 @@ HB_FUNC_STATIC( QREGEXP_ERRORSTRING )
     RQSTRING( obj->errorString () );
   }
 }
-
 
 /*
 bool exactMatch ( const QString & str ) const
@@ -211,7 +201,6 @@ HB_FUNC_STATIC( QREGEXP_EXACTMATCH )
   }
 }
 
-
 /*
 int indexIn ( const QString & str, int offset = 0, CaretMode caretMode = CaretAtZero ) const
 */
@@ -223,7 +212,6 @@ HB_FUNC_STATIC( QREGEXP_INDEXIN )
     RINT( obj->indexIn ( PQSTRING(1), OPINT(2,0), ISNIL(3)? QRegExp::CaretAtZero : (QRegExp::CaretMode) hb_parni(3) ) );
   }
 }
-
 
 /*
 bool isEmpty () const
@@ -237,7 +225,6 @@ HB_FUNC_STATIC( QREGEXP_ISEMPTY )
   }
 }
 
-
 /*
 bool isMinimal () const
 */
@@ -249,7 +236,6 @@ HB_FUNC_STATIC( QREGEXP_ISMINIMAL )
     RBOOL( obj->isMinimal () );
   }
 }
-
 
 /*
 bool isValid () const
@@ -263,7 +249,6 @@ HB_FUNC_STATIC( QREGEXP_ISVALID )
   }
 }
 
-
 /*
 int lastIndexIn ( const QString & str, int offset = -1, CaretMode caretMode = CaretAtZero ) const
 */
@@ -275,7 +260,6 @@ HB_FUNC_STATIC( QREGEXP_LASTINDEXIN )
     RINT( obj->lastIndexIn ( PQSTRING(1), OPINT(2,-1), ISNIL(3)? QRegExp::CaretAtZero : (QRegExp::CaretMode) hb_parni(3) ) );
   }
 }
-
 
 /*
 int matchedLength () const
@@ -289,7 +273,6 @@ HB_FUNC_STATIC( QREGEXP_MATCHEDLENGTH )
   }
 }
 
-
 /*
 QString pattern () const
 */
@@ -301,7 +284,6 @@ HB_FUNC_STATIC( QREGEXP_PATTERN )
     RQSTRING( obj->pattern () );
   }
 }
-
 
 /*
 PatternSyntax patternSyntax () const
@@ -315,7 +297,6 @@ HB_FUNC_STATIC( QREGEXP_PATTERNSYNTAX )
   }
 }
 
-
 /*
 int pos ( int nth = 0 ) const
 */
@@ -327,7 +308,6 @@ HB_FUNC_STATIC( QREGEXP_POS )
     RINT( obj->pos ( OPINT(1,0) ) );
   }
 }
-
 
 /*
 void setCaseSensitivity ( Qt::CaseSensitivity cs )
@@ -342,7 +322,6 @@ HB_FUNC_STATIC( QREGEXP_SETCASESENSITIVITY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setMinimal ( bool minimal )
 */
@@ -355,7 +334,6 @@ HB_FUNC_STATIC( QREGEXP_SETMINIMAL )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setPattern ( const QString & pattern )
@@ -370,7 +348,6 @@ HB_FUNC_STATIC( QREGEXP_SETPATTERN )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPatternSyntax ( PatternSyntax syntax )
 */
@@ -384,8 +361,6 @@ HB_FUNC_STATIC( QREGEXP_SETPATTERNSYNTAX )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 QString escape ( const QString & str )
 */
@@ -393,7 +368,6 @@ HB_FUNC_STATIC( QREGEXP_ESCAPE )
 {
   RQSTRING( QRegExp::escape ( PQSTRING(1) ) );
 }
-
 
 HB_FUNC_STATIC( QREGEXP_NEWFROM )
 {
@@ -449,6 +423,5 @@ HB_FUNC_STATIC( QREGEXP_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -87,7 +87,6 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QFutureInterfaceBase(const QFutureInterfaceBase &other)
 */
@@ -96,7 +95,6 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_NEW2 )
   QFutureInterfaceBase * o = new QFutureInterfaceBase ( *PQFUTUREINTERFACEBASE(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QFutureInterfaceBase(State initialState = NoState)
 //[2]QFutureInterfaceBase(const QFutureInterfaceBase &other)
@@ -132,7 +130,6 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void reportStarted()
 */
@@ -145,7 +142,6 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_REPORTSTARTED )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void reportFinished()
@@ -160,7 +156,6 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_REPORTFINISHED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void reportCanceled()
 */
@@ -174,8 +169,6 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_REPORTCANCELED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 void reportResultsReady(int beginIndex, int endIndex)
 */
@@ -188,7 +181,6 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_REPORTRESULTSREADY )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setRunnable(QRunnable *runnable)
@@ -204,7 +196,6 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETRUNNABLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setFilterMode(bool enable)
 */
@@ -217,7 +208,6 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETFILTERMODE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setProgressRange(int minimum, int maximum)
@@ -232,7 +222,6 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETPROGRESSRANGE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int progressMinimum() const
 */
@@ -244,7 +233,6 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_PROGRESSMINIMUM )
     RINT( obj->progressMinimum () );
   }
 }
-
 
 /*
 int progressMaximum() const
@@ -258,7 +246,6 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_PROGRESSMAXIMUM )
   }
 }
 
-
 /*
 bool isProgressUpdateNeeded() const
 */
@@ -270,7 +257,6 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISPROGRESSUPDATENEEDED )
     RBOOL( obj->isProgressUpdateNeeded () );
   }
 }
-
 
 /*
 void setProgressValue(int progressValue)
@@ -285,7 +271,6 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETPROGRESSVALUE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int progressValue() const
 */
@@ -297,7 +282,6 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_PROGRESSVALUE )
     RINT( obj->progressValue () );
   }
 }
-
 
 /*
 void setProgressValueAndText(int progressValue, const QString &progressText)
@@ -312,7 +296,6 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETPROGRESSVALUEANDTEXT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString progressText() const
 */
@@ -324,7 +307,6 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_PROGRESSTEXT )
     RQSTRING( obj->progressText () );
   }
 }
-
 
 /*
 void setExpectedResultCount(int resultCount)
@@ -339,7 +321,6 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETEXPECTEDRESULTCOUNT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int expectedResultCount()
 */
@@ -351,7 +332,6 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_EXPECTEDRESULTCOUNT )
     RINT( obj->expectedResultCount () );
   }
 }
-
 
 /*
 int resultCount() const
@@ -365,7 +345,6 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_RESULTCOUNT )
   }
 }
 
-
 /*
 bool queryState(State state) const
 */
@@ -377,7 +356,6 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_QUERYSTATE )
     RBOOL( obj->queryState ( (QFutureInterfaceBase::State) hb_parni(1) ) );
   }
 }
-
 
 /*
 bool isRunning() const
@@ -391,7 +369,6 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISRUNNING )
   }
 }
 
-
 /*
 bool isStarted() const
 */
@@ -403,7 +380,6 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISSTARTED )
     RBOOL( obj->isStarted () );
   }
 }
-
 
 /*
 bool isCanceled() const
@@ -417,7 +393,6 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISCANCELED )
   }
 }
 
-
 /*
 bool isFinished() const
 */
@@ -429,7 +404,6 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISFINISHED )
     RBOOL( obj->isFinished () );
   }
 }
-
 
 /*
 bool isPaused() const
@@ -443,7 +417,6 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISPAUSED )
   }
 }
 
-
 /*
 bool isThrottled() const
 */
@@ -456,7 +429,6 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISTHROTTLED )
   }
 }
 
-
 /*
 bool isResultReadyAt(int index) const
 */
@@ -468,7 +440,6 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISRESULTREADYAT )
     RBOOL( obj->isResultReadyAt ( PINT(1) ) );
   }
 }
-
 
 /*
 void cancel()
@@ -483,7 +454,6 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_CANCEL )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPaused(bool paused)
 */
@@ -496,7 +466,6 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETPAUSED )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void togglePaused()
@@ -511,7 +480,6 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_TOGGLEPAUSED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setThrottled(bool enable)
 */
@@ -524,7 +492,6 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETTHROTTLED )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void waitForFinished()
@@ -539,7 +506,6 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_WAITFORFINISHED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool waitForNextResult()
 */
@@ -551,7 +517,6 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_WAITFORNEXTRESULT )
     RBOOL( obj->waitForNextResult () );
   }
 }
-
 
 /*
 void waitForResult(int resultIndex)
@@ -566,7 +531,6 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_WAITFORRESULT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void waitForResume()
 */
@@ -580,7 +544,6 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_WAITFORRESUME )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QMutex *mutex() const
 */
@@ -593,7 +556,6 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_MUTEX )
     _qt4xhb_createReturnClass ( ptr, "QMUTEX" );
   }
 }
-
 
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_NEWFROM )
 {
@@ -649,10 +611,5 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
-
-
-
 
 #pragma ENDDUMP

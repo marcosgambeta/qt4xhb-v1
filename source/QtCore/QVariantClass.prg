@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -159,7 +159,6 @@ HB_FUNC_STATIC( QVARIANT_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QVariant ( const QLocale & l )
 */
@@ -168,7 +167,6 @@ HB_FUNC_STATIC( QVARIANT_NEW2 )
   QVariant * o = new QVariant ( *PQLOCALE(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QVariant ( const QRegExp & regExp )
@@ -179,7 +177,6 @@ HB_FUNC_STATIC( QVARIANT_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QVariant ( const QEasingCurve & val )
 */
@@ -188,7 +185,6 @@ HB_FUNC_STATIC( QVARIANT_NEW4 )
   QVariant * o = new QVariant ( *PQEASINGCURVE(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QVariant ( Qt::GlobalColor color )
@@ -199,7 +195,6 @@ HB_FUNC_STATIC( QVARIANT_NEW5 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QVariant ( Type type )
 */
@@ -208,7 +203,6 @@ HB_FUNC_STATIC( QVARIANT_NEW6 )
   QVariant * o = new QVariant ( (QVariant::Type) hb_parni(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QVariant ( int typeOrUserType, const void * copy )
@@ -220,7 +214,6 @@ HB_FUNC_STATIC( QVARIANT_NEW7 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QVariant ( const QVariant & p )
 */
@@ -229,7 +222,6 @@ HB_FUNC_STATIC( QVARIANT_NEW8 )
   QVariant * o = new QVariant ( *PQVARIANT(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QVariant ( QDataStream & s )
@@ -241,7 +233,6 @@ HB_FUNC_STATIC( QVARIANT_NEW9 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QVariant ( int val )
 */
@@ -250,7 +241,6 @@ HB_FUNC_STATIC( QVARIANT_NEW10 )
   QVariant * o = new QVariant ( PINT(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QVariant ( uint val )
@@ -261,7 +251,6 @@ HB_FUNC_STATIC( QVARIANT_NEW11 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QVariant ( qlonglong val )
 */
@@ -270,7 +259,6 @@ HB_FUNC_STATIC( QVARIANT_NEW12 )
   QVariant * o = new QVariant ( PQLONGLONG(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QVariant ( qulonglong val )
@@ -281,7 +269,6 @@ HB_FUNC_STATIC( QVARIANT_NEW13 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QVariant ( bool val )
 */
@@ -290,7 +277,6 @@ HB_FUNC_STATIC( QVARIANT_NEW14 )
   QVariant * o = new QVariant ( PBOOL(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QVariant ( double val )
@@ -301,7 +287,6 @@ HB_FUNC_STATIC( QVARIANT_NEW15 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QVariant ( float val )
 */
@@ -310,7 +295,6 @@ HB_FUNC_STATIC( QVARIANT_NEW16 )
   QVariant * o = new QVariant ( PFLOAT(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QVariant ( const char * val )
@@ -321,7 +305,6 @@ HB_FUNC_STATIC( QVARIANT_NEW17 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QVariant ( const QByteArray & val )
 */
@@ -330,7 +313,6 @@ HB_FUNC_STATIC( QVARIANT_NEW18 )
   QVariant * o = new QVariant ( *PQBYTEARRAY(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QVariant ( const QBitArray & val )
@@ -341,7 +323,6 @@ HB_FUNC_STATIC( QVARIANT_NEW19 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QVariant ( const QString & val )
 */
@@ -350,8 +331,6 @@ HB_FUNC_STATIC( QVARIANT_NEW20 )
   QVariant * o = new QVariant ( PQSTRING(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
-
 
 /*
 QVariant ( const QStringList & val )
@@ -362,7 +341,6 @@ HB_FUNC_STATIC( QVARIANT_NEW22 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QVariant ( const QChar & c )
 */
@@ -371,7 +349,6 @@ HB_FUNC_STATIC( QVARIANT_NEW23 )
   QVariant * o = new QVariant ( *PQCHAR(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QVariant ( const QDate & val )
@@ -382,7 +359,6 @@ HB_FUNC_STATIC( QVARIANT_NEW24 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QVariant ( const QTime & val )
 */
@@ -392,7 +368,6 @@ HB_FUNC_STATIC( QVARIANT_NEW25 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QVariant ( const QDateTime & val )
 */
@@ -401,7 +376,6 @@ HB_FUNC_STATIC( QVARIANT_NEW26 )
   QVariant * o = new QVariant ( *PQDATETIME(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QVariant ( const QList<QVariant> & val )
@@ -420,9 +394,6 @@ par1 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, 
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
-
-
 /*
 QVariant ( const QSize & val )
 */
@@ -431,7 +402,6 @@ HB_FUNC_STATIC( QVARIANT_NEW30 )
   QVariant * o = new QVariant ( *PQSIZE(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QVariant ( const QSizeF & val )
@@ -442,7 +412,6 @@ HB_FUNC_STATIC( QVARIANT_NEW31 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QVariant ( const QPoint & val )
 */
@@ -451,7 +420,6 @@ HB_FUNC_STATIC( QVARIANT_NEW32 )
   QVariant * o = new QVariant ( *PQPOINT(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QVariant ( const QPointF & val )
@@ -462,7 +430,6 @@ HB_FUNC_STATIC( QVARIANT_NEW33 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QVariant ( const QLine & val )
 */
@@ -471,7 +438,6 @@ HB_FUNC_STATIC( QVARIANT_NEW34 )
   QVariant * o = new QVariant ( *PQLINE(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QVariant ( const QLineF & val )
@@ -482,7 +448,6 @@ HB_FUNC_STATIC( QVARIANT_NEW35 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QVariant ( const QRect & val )
 */
@@ -491,7 +456,6 @@ HB_FUNC_STATIC( QVARIANT_NEW36 )
   QVariant * o = new QVariant ( *PQRECT(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QVariant ( const QRectF & val )
@@ -502,7 +466,6 @@ HB_FUNC_STATIC( QVARIANT_NEW37 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QVariant ( const QUrl & val )
 */
@@ -511,7 +474,6 @@ HB_FUNC_STATIC( QVARIANT_NEW38 )
   QVariant * o = new QVariant ( *PQURL(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QVariant ()
 //[2]QVariant ( const QLocale & l )
@@ -675,8 +637,6 @@ HB_FUNC_STATIC( QVARIANT_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 bool canConvert ( Type t ) const
 */
@@ -688,8 +648,6 @@ HB_FUNC_STATIC( QVARIANT_CANCONVERT )
     RBOOL( obj->canConvert ( (QVariant::Type) hb_parni(1) ) );
   }
 }
-
-
 
 //[1]bool canConvert ( Type t ) const
 //[2]bool canConvert () const
@@ -719,7 +677,6 @@ HB_FUNC_STATIC( QVARIANT_CLEAR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool convert ( Type t )
 */
@@ -731,7 +688,6 @@ HB_FUNC_STATIC( QVARIANT_CONVERT )
     RBOOL( obj->convert ( (QVariant::Type) hb_parni(1) ) );
   }
 }
-
 
 /*
 bool isNull () const
@@ -745,7 +701,6 @@ HB_FUNC_STATIC( QVARIANT_ISNULL )
   }
 }
 
-
 /*
 bool isValid () const
 */
@@ -757,8 +712,6 @@ HB_FUNC_STATIC( QVARIANT_ISVALID )
     RBOOL( obj->isValid () );
   }
 }
-
-
 
 /*
 QBitArray toBitArray () const
@@ -773,7 +726,6 @@ HB_FUNC_STATIC( QVARIANT_TOBITARRAY )
   }
 }
 
-
 /*
 bool toBool () const
 */
@@ -785,7 +737,6 @@ HB_FUNC_STATIC( QVARIANT_TOBOOL )
     RBOOL( obj->toBool () );
   }
 }
-
 
 /*
 QByteArray toByteArray () const
@@ -800,7 +751,6 @@ HB_FUNC_STATIC( QVARIANT_TOBYTEARRAY )
   }
 }
 
-
 /*
 QChar toChar () const
 */
@@ -813,7 +763,6 @@ HB_FUNC_STATIC( QVARIANT_TOCHAR )
     _qt4xhb_createReturnClass ( ptr, "QCHAR" );
   }
 }
-
 
 /*
 QDate toDate () const
@@ -828,7 +777,6 @@ HB_FUNC_STATIC( QVARIANT_TODATE )
   }
 }
 
-
 /*
 QDateTime toDateTime () const
 */
@@ -841,8 +789,6 @@ HB_FUNC_STATIC( QVARIANT_TODATETIME )
     _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
-
-
 
 /*
 QEasingCurve toEasingCurve () const
@@ -857,10 +803,6 @@ HB_FUNC_STATIC( QVARIANT_TOEASINGCURVE )
   }
 }
 
-
-
-
-
 /*
 QLine toLine () const
 */
@@ -874,7 +816,6 @@ HB_FUNC_STATIC( QVARIANT_TOLINE )
   }
 }
 
-
 /*
 QLineF toLineF () const
 */
@@ -887,7 +828,6 @@ HB_FUNC_STATIC( QVARIANT_TOLINEF )
     _qt4xhb_createReturnClass ( ptr, "QLINEF", true );
   }
 }
-
 
 /*
 QList<QVariant> toList () const
@@ -936,7 +876,6 @@ HB_FUNC_STATIC( QVARIANT_TOLIST )
   }
 }
 
-
 /*
 QLocale toLocale () const
 */
@@ -949,9 +888,6 @@ HB_FUNC_STATIC( QVARIANT_TOLOCALE )
     _qt4xhb_createReturnClass ( ptr, "QLOCALE" );
   }
 }
-
-
-
 
 /*
 QPoint toPoint () const
@@ -966,7 +902,6 @@ HB_FUNC_STATIC( QVARIANT_TOPOINT )
   }
 }
 
-
 /*
 QPointF toPointF () const
 */
@@ -979,8 +914,6 @@ HB_FUNC_STATIC( QVARIANT_TOPOINTF )
     _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
-
-
 
 /*
 QRect toRect () const
@@ -995,7 +928,6 @@ HB_FUNC_STATIC( QVARIANT_TORECT )
   }
 }
 
-
 /*
 QRectF toRectF () const
 */
@@ -1008,7 +940,6 @@ HB_FUNC_STATIC( QVARIANT_TORECTF )
     _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
-
 
 /*
 QRegExp toRegExp () const
@@ -1023,7 +954,6 @@ HB_FUNC_STATIC( QVARIANT_TOREGEXP )
   }
 }
 
-
 /*
 QSize toSize () const
 */
@@ -1036,7 +966,6 @@ HB_FUNC_STATIC( QVARIANT_TOSIZE )
     _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 }
-
 
 /*
 QSizeF toSizeF () const
@@ -1051,7 +980,6 @@ HB_FUNC_STATIC( QVARIANT_TOSIZEF )
   }
 }
 
-
 /*
 QString toString () const
 */
@@ -1064,7 +992,6 @@ HB_FUNC_STATIC( QVARIANT_TOSTRING )
   }
 }
 
-
 /*
 QStringList toStringList () const
 */
@@ -1076,7 +1003,6 @@ HB_FUNC_STATIC( QVARIANT_TOSTRINGLIST )
     RQSTRINGLIST( obj->toStringList () );
   }
 }
-
 
 /*
 QTime toTime () const
@@ -1091,9 +1017,6 @@ HB_FUNC_STATIC( QVARIANT_TOTIME )
   }
 }
 
-
-
-
 /*
 QUrl toUrl () const
 */
@@ -1107,7 +1030,6 @@ HB_FUNC_STATIC( QVARIANT_TOURL )
   }
 }
 
-
 /*
 Type type () const
 */
@@ -1119,7 +1041,6 @@ HB_FUNC_STATIC( QVARIANT_TYPE )
     hb_retni( (int) obj->type () );
   }
 }
-
 
 /*
 const char * typeName () const
@@ -1134,7 +1055,6 @@ HB_FUNC_STATIC( QVARIANT_TYPENAME )
   }
 }
 
-
 /*
 int userType () const
 */
@@ -1147,10 +1067,6 @@ HB_FUNC_STATIC( QVARIANT_USERTYPE )
   }
 }
 
-
-
-
-
 /*
 Type nameToType ( const char * name )
 */
@@ -1158,7 +1074,6 @@ HB_FUNC_STATIC( QVARIANT_NAMETOTYPE )
 {
   hb_retni( (int) QVariant::nameToType ( (const char *) hb_parc(1) ) );
 }
-
 
 /*
 const char * typeToName ( Type typ )
@@ -1168,7 +1083,6 @@ HB_FUNC_STATIC( QVARIANT_TYPETONAME )
   const char * str1 = QVariant::typeToName ( (QVariant::Type) hb_parni(1) );
   hb_retc( str1 );
 }
-
 
 HB_FUNC_STATIC( QVARIANT_NEWFROM )
 {
@@ -1224,6 +1138,5 @@ HB_FUNC_STATIC( QVARIANT_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

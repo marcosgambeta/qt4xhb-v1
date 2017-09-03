@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -88,7 +88,6 @@ HB_FUNC_STATIC( QCHAR_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QChar ( char ch )
 */
@@ -98,7 +97,6 @@ HB_FUNC_STATIC( QCHAR_NEW2 )
   QChar * o = new QChar ( par1 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 /*
 QChar ( uchar ch )
@@ -110,7 +108,6 @@ HB_FUNC_STATIC( QCHAR_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QChar ( QLatin1Char ch )
 */
@@ -120,7 +117,6 @@ HB_FUNC_STATIC( QCHAR_NEW4 )
   QChar * o = new QChar ( *par1 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 /*
 QChar ( uchar cell, uchar row )
@@ -133,7 +129,6 @@ HB_FUNC_STATIC( QCHAR_NEW5 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QChar ( ushort code )
 */
@@ -142,7 +137,6 @@ HB_FUNC_STATIC( QCHAR_NEW6 )
   QChar * o = new QChar ( PUSHORT(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 /*
 QChar ( short code )
@@ -153,7 +147,6 @@ HB_FUNC_STATIC( QCHAR_NEW7 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QChar ( uint code )
 */
@@ -162,7 +155,6 @@ HB_FUNC_STATIC( QCHAR_NEW8 )
   QChar * o = new QChar ( PUINT(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 /*
 QChar ( int code )
@@ -173,7 +165,6 @@ HB_FUNC_STATIC( QCHAR_NEW9 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QChar ( SpecialCharacter ch )
 */
@@ -182,7 +173,6 @@ HB_FUNC_STATIC( QCHAR_NEW10 )
   QChar * o = new QChar ( (QChar::SpecialCharacter) hb_parni(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[01]QChar ()
 //[02]QChar ( char ch )
@@ -215,7 +205,6 @@ HB_FUNC_STATIC( QCHAR_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 Category category () const
 */
@@ -227,10 +216,6 @@ HB_FUNC_STATIC( QCHAR_CATEGORY )
     hb_retni( (int) obj->category () );
   }
 }
-
-
-
-
 
 /*
 Decomposition decompositionTag () const
@@ -244,7 +229,6 @@ HB_FUNC_STATIC( QCHAR_DECOMPOSITIONTAG )
   }
 }
 
-
 /*
 int digitValue () const
 */
@@ -256,7 +240,6 @@ HB_FUNC_STATIC( QCHAR_DIGITVALUE )
     RINT( obj->digitValue () );
   }
 }
-
 
 /*
 Direction direction () const
@@ -270,7 +253,6 @@ HB_FUNC_STATIC( QCHAR_DIRECTION )
   }
 }
 
-
 /*
 bool hasMirrored () const
 */
@@ -282,7 +264,6 @@ HB_FUNC_STATIC( QCHAR_HASMIRRORED )
     RBOOL( obj->hasMirrored () );
   }
 }
-
 
 /*
 bool isDigit () const
@@ -296,7 +277,6 @@ HB_FUNC_STATIC( QCHAR_ISDIGIT )
   }
 }
 
-
 /*
 bool isHighSurrogate () const
 */
@@ -308,7 +288,6 @@ HB_FUNC_STATIC( QCHAR_ISHIGHSURROGATE )
     RBOOL( obj->isHighSurrogate () );
   }
 }
-
 
 /*
 bool isLetter () const
@@ -322,7 +301,6 @@ HB_FUNC_STATIC( QCHAR_ISLETTER )
   }
 }
 
-
 /*
 bool isLetterOrNumber () const
 */
@@ -334,7 +312,6 @@ HB_FUNC_STATIC( QCHAR_ISLETTERORNUMBER )
     RBOOL( obj->isLetterOrNumber () );
   }
 }
-
 
 /*
 bool isLowSurrogate () const
@@ -348,7 +325,6 @@ HB_FUNC_STATIC( QCHAR_ISLOWSURROGATE )
   }
 }
 
-
 /*
 bool isLower () const
 */
@@ -360,7 +336,6 @@ HB_FUNC_STATIC( QCHAR_ISLOWER )
     RBOOL( obj->isLower () );
   }
 }
-
 
 /*
 bool isMark () const
@@ -374,7 +349,6 @@ HB_FUNC_STATIC( QCHAR_ISMARK )
   }
 }
 
-
 /*
 bool isNull () const
 */
@@ -386,7 +360,6 @@ HB_FUNC_STATIC( QCHAR_ISNULL )
     RBOOL( obj->isNull () );
   }
 }
-
 
 /*
 bool isNumber () const
@@ -400,7 +373,6 @@ HB_FUNC_STATIC( QCHAR_ISNUMBER )
   }
 }
 
-
 /*
 bool isPrint () const
 */
@@ -412,7 +384,6 @@ HB_FUNC_STATIC( QCHAR_ISPRINT )
     RBOOL( obj->isPrint () );
   }
 }
-
 
 /*
 bool isPunct () const
@@ -426,7 +397,6 @@ HB_FUNC_STATIC( QCHAR_ISPUNCT )
   }
 }
 
-
 /*
 bool isSpace () const
 */
@@ -438,7 +408,6 @@ HB_FUNC_STATIC( QCHAR_ISSPACE )
     RBOOL( obj->isSpace () );
   }
 }
-
 
 /*
 bool isSymbol () const
@@ -452,7 +421,6 @@ HB_FUNC_STATIC( QCHAR_ISSYMBOL )
   }
 }
 
-
 /*
 bool isTitleCase () const
 */
@@ -464,7 +432,6 @@ HB_FUNC_STATIC( QCHAR_ISTITLECASE )
     RBOOL( obj->isTitleCase () );
   }
 }
-
 
 /*
 bool isUpper () const
@@ -478,7 +445,6 @@ HB_FUNC_STATIC( QCHAR_ISUPPER )
   }
 }
 
-
 /*
 Joining joining () const
 */
@@ -490,7 +456,6 @@ HB_FUNC_STATIC( QCHAR_JOINING )
     hb_retni( (int) obj->joining () );
   }
 }
-
 
 /*
 QChar mirroredChar () const
@@ -505,9 +470,6 @@ HB_FUNC_STATIC( QCHAR_MIRROREDCHAR )
   }
 }
 
-
-
-
 /*
 QChar toCaseFolded () const
 */
@@ -520,8 +482,6 @@ HB_FUNC_STATIC( QCHAR_TOCASEFOLDED )
     _qt4xhb_createReturnClass ( ptr, "QCHAR" );
   }
 }
-
-
 
 /*
 QChar toLower () const
@@ -536,7 +496,6 @@ HB_FUNC_STATIC( QCHAR_TOLOWER )
   }
 }
 
-
 /*
 QChar toTitleCase () const
 */
@@ -549,7 +508,6 @@ HB_FUNC_STATIC( QCHAR_TOTITLECASE )
     _qt4xhb_createReturnClass ( ptr, "QCHAR" );
   }
 }
-
 
 /*
 QChar toUpper () const
@@ -564,9 +522,6 @@ HB_FUNC_STATIC( QCHAR_TOUPPER )
   }
 }
 
-
-
-
 /*
 UnicodeVersion unicodeVersion () const
 */
@@ -579,10 +534,7 @@ HB_FUNC_STATIC( QCHAR_UNICODEVERSION )
   }
 }
 
-
-
 // TODO: implementar metódos estáticos
-
 
 HB_FUNC_STATIC( QCHAR_NEWFROM )
 {
@@ -638,38 +590,5 @@ HB_FUNC_STATIC( QCHAR_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #pragma ENDDUMP

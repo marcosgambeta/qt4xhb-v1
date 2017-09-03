@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -51,7 +51,6 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_DELETE )
 {
   QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -67,7 +66,6 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool filterEvent ( void * message )
 */
@@ -80,7 +78,6 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_FILTEREVENT )
     RBOOL( obj->filterEvent ( par1 ) );
   }
 }
-
 
 /*
 virtual void flush () = 0
@@ -95,7 +92,6 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_FLUSH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual bool hasPendingEvents () = 0
 */
@@ -107,7 +103,6 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_HASPENDINGEVENTS )
     RBOOL( obj->hasPendingEvents () );
   }
 }
-
 
 /*
 virtual void interrupt () = 0
@@ -122,7 +117,6 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_INTERRUPT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual bool processEvents ( QEventLoop::ProcessEventsFlags flags ) = 0
 */
@@ -134,7 +128,6 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_PROCESSEVENTS )
     RBOOL( obj->processEvents ( (QEventLoop::ProcessEventsFlags) hb_parni(1) ) );
   }
 }
-
 
 /*
 virtual void registerSocketNotifier ( QSocketNotifier * notifier ) = 0
@@ -150,7 +143,6 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERSOCKETNOTIFIER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int registerTimer ( int interval, QObject * object )
 */
@@ -162,7 +154,6 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERTIMER1 )
     RINT( obj->registerTimer ( PINT(1), PQOBJECT(2) ) );
   }
 }
-
 
 /*
 virtual void registerTimer ( int timerId, int interval, QObject * object ) = 0
@@ -176,7 +167,6 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERTIMER2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]int registerTimer ( int interval, QObject * object )
 //[2]virtual void registerTimer ( int timerId, int interval, QObject * object ) = 0
@@ -193,8 +183,6 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERTIMER )
   }
 }
 
-
-
 /*
 virtual void unregisterSocketNotifier ( QSocketNotifier * notifier ) = 0
 */
@@ -209,7 +197,6 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERSOCKETNOTIFIER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual bool unregisterTimer ( int timerId ) = 0
 */
@@ -222,7 +209,6 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERTIMER )
   }
 }
 
-
 /*
 virtual bool unregisterTimers ( QObject * object ) = 0
 */
@@ -234,7 +220,6 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERTIMERS )
     RBOOL( obj->unregisterTimers ( PQOBJECT(1) ) );
   }
 }
-
 
 /*
 virtual void wakeUp () = 0
@@ -249,8 +234,6 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_WAKEUP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 QAbstractEventDispatcher * instance ( QThread * thread = 0 )
 */
@@ -260,9 +243,5 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_INSTANCE )
   QAbstractEventDispatcher * ptr = QAbstractEventDispatcher::instance ( par1 );
   _qt4xhb_createReturnClass ( ptr, "QABSTRACTEVENTDISPATCHER" );
 }
-
-
-
-
 
 #pragma ENDDUMP

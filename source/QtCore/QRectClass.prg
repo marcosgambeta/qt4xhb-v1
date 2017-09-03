@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -120,7 +120,6 @@ HB_FUNC_STATIC( QRECT_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QRect ( const QPoint & topLeft, const QPoint & bottomRight )
 */
@@ -129,7 +128,6 @@ HB_FUNC_STATIC( QRECT_NEW2 )
   QRect * o = new QRect ( *PQPOINT(1), *PQPOINT(2) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QRect ( const QPoint & topLeft, const QSize & size )
@@ -140,7 +138,6 @@ HB_FUNC_STATIC( QRECT_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QRect ( int x, int y, int width, int height )
 */
@@ -149,7 +146,6 @@ HB_FUNC_STATIC( QRECT_NEW4 )
   QRect * o = new QRect ( PINT(1), PINT(2), PINT(3), PINT(4) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QRect ()
 //[2]QRect ( const QPoint & topLeft, const QPoint & bottomRight )
@@ -195,7 +191,6 @@ HB_FUNC_STATIC( QRECT_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void adjust ( int dx1, int dy1, int dx2, int dy2 )
 */
@@ -208,7 +203,6 @@ HB_FUNC_STATIC( QRECT_ADJUST )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QRect adjusted ( int dx1, int dy1, int dx2, int dy2 ) const
@@ -223,7 +217,6 @@ HB_FUNC_STATIC( QRECT_ADJUSTED )
   }
 }
 
-
 /*
 int bottom () const
 */
@@ -235,7 +228,6 @@ HB_FUNC_STATIC( QRECT_BOTTOM )
     RINT( obj->bottom () );
   }
 }
-
 
 /*
 QPoint bottomLeft () const
@@ -250,7 +242,6 @@ HB_FUNC_STATIC( QRECT_BOTTOMLEFT )
   }
 }
 
-
 /*
 QPoint bottomRight () const
 */
@@ -263,7 +254,6 @@ HB_FUNC_STATIC( QRECT_BOTTOMRIGHT )
     _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
-
 
 /*
 QPoint center () const
@@ -278,7 +268,6 @@ HB_FUNC_STATIC( QRECT_CENTER )
   }
 }
 
-
 /*
 bool contains ( const QPoint & point, bool proper = false ) const
 */
@@ -290,7 +279,6 @@ HB_FUNC_STATIC( QRECT_CONTAINS1 )
     RBOOL( obj->contains ( *PQPOINT(1), OPBOOL(2,false) ) );
   }
 }
-
 
 /*
 bool contains ( int x, int y, bool proper ) const
@@ -304,7 +292,6 @@ HB_FUNC_STATIC( QRECT_CONTAINS2 )
   }
 }
 
-
 /*
 bool contains ( int x, int y ) const
 */
@@ -317,7 +304,6 @@ HB_FUNC_STATIC( QRECT_CONTAINS3 )
   }
 }
 
-
 /*
 bool contains ( const QRect & rectangle, bool proper = false ) const
 */
@@ -329,7 +315,6 @@ HB_FUNC_STATIC( QRECT_CONTAINS4 )
     RBOOL( obj->contains ( *PQRECT(1), OPBOOL(2,false) ) );
   }
 }
-
 
 //[1]bool contains ( const QPoint & point, bool proper = false ) const
 //[2]bool contains ( int x, int y, bool proper ) const
@@ -377,7 +362,6 @@ HB_FUNC_STATIC( QRECT_GETCOORDS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void getRect ( int * x, int * y, int * width, int * height ) const
 */
@@ -399,7 +383,6 @@ HB_FUNC_STATIC( QRECT_GETRECT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int height () const
 */
@@ -411,7 +394,6 @@ HB_FUNC_STATIC( QRECT_HEIGHT )
     RINT( obj->height () );
   }
 }
-
 
 /*
 QRect intersected ( const QRect & rectangle ) const
@@ -426,7 +408,6 @@ HB_FUNC_STATIC( QRECT_INTERSECTED )
   }
 }
 
-
 /*
 bool intersects ( const QRect & rectangle ) const
 */
@@ -438,7 +419,6 @@ HB_FUNC_STATIC( QRECT_INTERSECTS )
     RBOOL( obj->intersects ( *PQRECT(1) ) );
   }
 }
-
 
 /*
 bool isEmpty () const
@@ -452,7 +432,6 @@ HB_FUNC_STATIC( QRECT_ISEMPTY )
   }
 }
 
-
 /*
 bool isNull () const
 */
@@ -464,7 +443,6 @@ HB_FUNC_STATIC( QRECT_ISNULL )
     RBOOL( obj->isNull () );
   }
 }
-
 
 /*
 bool isValid () const
@@ -478,7 +456,6 @@ HB_FUNC_STATIC( QRECT_ISVALID )
   }
 }
 
-
 /*
 int left () const
 */
@@ -490,7 +467,6 @@ HB_FUNC_STATIC( QRECT_LEFT )
     RINT( obj->left () );
   }
 }
-
 
 /*
 void moveBottom ( int y )
@@ -505,7 +481,6 @@ HB_FUNC_STATIC( QRECT_MOVEBOTTOM )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void moveBottomLeft ( const QPoint & position )
 */
@@ -518,7 +493,6 @@ HB_FUNC_STATIC( QRECT_MOVEBOTTOMLEFT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void moveBottomRight ( const QPoint & position )
@@ -533,7 +507,6 @@ HB_FUNC_STATIC( QRECT_MOVEBOTTOMRIGHT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void moveCenter ( const QPoint & position )
 */
@@ -546,7 +519,6 @@ HB_FUNC_STATIC( QRECT_MOVECENTER )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void moveLeft ( int x )
@@ -561,7 +533,6 @@ HB_FUNC_STATIC( QRECT_MOVELEFT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void moveRight ( int x )
 */
@@ -574,7 +545,6 @@ HB_FUNC_STATIC( QRECT_MOVERIGHT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void moveTo ( int x, int y )
@@ -589,7 +559,6 @@ HB_FUNC_STATIC( QRECT_MOVETO1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void moveTo ( const QPoint & position )
 */
@@ -602,7 +571,6 @@ HB_FUNC_STATIC( QRECT_MOVETO2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void moveTo ( int x, int y )
 //[2]void moveTo ( const QPoint & position )
@@ -632,7 +600,6 @@ HB_FUNC_STATIC( QRECT_MOVETOP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void moveTopLeft ( const QPoint & position )
 */
@@ -645,7 +612,6 @@ HB_FUNC_STATIC( QRECT_MOVETOPLEFT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void moveTopRight ( const QPoint & position )
@@ -660,7 +626,6 @@ HB_FUNC_STATIC( QRECT_MOVETOPRIGHT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QRect normalized () const
 */
@@ -674,7 +639,6 @@ HB_FUNC_STATIC( QRECT_NORMALIZED )
   }
 }
 
-
 /*
 int right () const
 */
@@ -686,7 +650,6 @@ HB_FUNC_STATIC( QRECT_RIGHT )
     RINT( obj->right () );
   }
 }
-
 
 /*
 void setBottom ( int y )
@@ -701,7 +664,6 @@ HB_FUNC_STATIC( QRECT_SETBOTTOM )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setBottomLeft ( const QPoint & position )
 */
@@ -714,7 +676,6 @@ HB_FUNC_STATIC( QRECT_SETBOTTOMLEFT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setBottomRight ( const QPoint & position )
@@ -729,7 +690,6 @@ HB_FUNC_STATIC( QRECT_SETBOTTOMRIGHT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setCoords ( int x1, int y1, int x2, int y2 )
 */
@@ -742,7 +702,6 @@ HB_FUNC_STATIC( QRECT_SETCOORDS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setHeight ( int height )
@@ -757,7 +716,6 @@ HB_FUNC_STATIC( QRECT_SETHEIGHT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setLeft ( int x )
 */
@@ -770,7 +728,6 @@ HB_FUNC_STATIC( QRECT_SETLEFT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setRect ( int x, int y, int width, int height )
@@ -785,7 +742,6 @@ HB_FUNC_STATIC( QRECT_SETRECT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setRight ( int x )
 */
@@ -798,7 +754,6 @@ HB_FUNC_STATIC( QRECT_SETRIGHT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setSize ( const QSize & size )
@@ -813,7 +768,6 @@ HB_FUNC_STATIC( QRECT_SETSIZE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setTop ( int y )
 */
@@ -826,7 +780,6 @@ HB_FUNC_STATIC( QRECT_SETTOP )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setTopLeft ( const QPoint & position )
@@ -841,7 +794,6 @@ HB_FUNC_STATIC( QRECT_SETTOPLEFT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setTopRight ( const QPoint & position )
 */
@@ -854,7 +806,6 @@ HB_FUNC_STATIC( QRECT_SETTOPRIGHT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setWidth ( int width )
@@ -869,7 +820,6 @@ HB_FUNC_STATIC( QRECT_SETWIDTH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setX ( int x )
 */
@@ -882,7 +832,6 @@ HB_FUNC_STATIC( QRECT_SETX )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setY ( int y )
@@ -897,7 +846,6 @@ HB_FUNC_STATIC( QRECT_SETY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QSize size () const
 */
@@ -911,7 +859,6 @@ HB_FUNC_STATIC( QRECT_SIZE )
   }
 }
 
-
 /*
 int top () const
 */
@@ -923,7 +870,6 @@ HB_FUNC_STATIC( QRECT_TOP )
     RINT( obj->top () );
   }
 }
-
 
 /*
 QPoint topLeft () const
@@ -938,7 +884,6 @@ HB_FUNC_STATIC( QRECT_TOPLEFT )
   }
 }
 
-
 /*
 QPoint topRight () const
 */
@@ -951,7 +896,6 @@ HB_FUNC_STATIC( QRECT_TOPRIGHT )
     _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
-
 
 /*
 void translate ( int dx, int dy )
@@ -966,7 +910,6 @@ HB_FUNC_STATIC( QRECT_TRANSLATE1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void translate ( const QPoint & offset )
 */
@@ -979,7 +922,6 @@ HB_FUNC_STATIC( QRECT_TRANSLATE2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void translate ( int dx, int dy )
 //[2]void translate ( const QPoint & offset )
@@ -1009,7 +951,6 @@ HB_FUNC_STATIC( QRECT_TRANSLATED1 )
   }
 }
 
-
 /*
 QRect translated ( const QPoint & offset ) const
 */
@@ -1022,7 +963,6 @@ HB_FUNC_STATIC( QRECT_TRANSLATED2 )
     _qt4xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
-
 
 //[1]QRect translated ( int dx, int dy ) const
 //[2]QRect translated ( const QPoint & offset ) const
@@ -1052,7 +992,6 @@ HB_FUNC_STATIC( QRECT_UNITED )
   }
 }
 
-
 /*
 int width () const
 */
@@ -1064,7 +1003,6 @@ HB_FUNC_STATIC( QRECT_WIDTH )
     RINT( obj->width () );
   }
 }
-
 
 /*
 int x () const
@@ -1078,7 +1016,6 @@ HB_FUNC_STATIC( QRECT_X )
   }
 }
 
-
 /*
 int y () const
 */
@@ -1090,7 +1027,6 @@ HB_FUNC_STATIC( QRECT_Y )
     RINT( obj->y () );
   }
 }
-
 
 HB_FUNC_STATIC( QRECT_NEWFROM )
 {
@@ -1146,6 +1082,5 @@ HB_FUNC_STATIC( QRECT_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

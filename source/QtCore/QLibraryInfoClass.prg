@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -45,9 +45,6 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
-
-
 /*
 static QString licensee()
 */
@@ -55,7 +52,6 @@ HB_FUNC_STATIC( QLIBRARYINFO_LICENSEE )
 {
   RQSTRING( QLibraryInfo::licensee () );
 }
-
 
 /*
 static QString licensedProducts()
@@ -65,7 +61,6 @@ HB_FUNC_STATIC( QLIBRARYINFO_LICENSEDPRODUCTS )
   RQSTRING( QLibraryInfo::licensedProducts () );
 }
 
-
 /*
 static QString buildKey()
 */
@@ -73,7 +68,6 @@ HB_FUNC_STATIC( QLIBRARYINFO_BUILDKEY )
 {
   RQSTRING( QLibraryInfo::buildKey () );
 }
-
 
 /*
 static QDate buildDate()
@@ -84,7 +78,6 @@ HB_FUNC_STATIC( QLIBRARYINFO_BUILDDATE )
   _qt4xhb_createReturnClass ( ptr, "QDATE", true );
 }
 
-
 /*
 static QString location(LibraryLocation)
 */
@@ -92,7 +85,6 @@ HB_FUNC_STATIC( QLIBRARYINFO_LOCATION )
 {
   RQSTRING( QLibraryInfo::location ( (QLibraryInfo::LibraryLocation) hb_parni(1) ) );
 }
-
 
 HB_FUNC_STATIC( QLIBRARYINFO_NEWFROM )
 {
@@ -148,6 +140,5 @@ HB_FUNC_STATIC( QLIBRARYINFO_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

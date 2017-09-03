@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QSharedMemory INHERIT QObject
 
@@ -58,7 +57,6 @@ HB_FUNC_STATIC( QSHAREDMEMORY_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QSharedMemory(const QString &key, QObject *parent = 0)
 */
@@ -67,7 +65,6 @@ HB_FUNC_STATIC( QSHAREDMEMORY_NEW2 )
   QSharedMemory * o = new QSharedMemory ( PQSTRING(1), OPQOBJECT(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QSharedMemory(QObject *parent = 0)
 //[2]QSharedMemory(const QString &key, QObject *parent = 0)
@@ -103,7 +100,6 @@ HB_FUNC_STATIC( QSHAREDMEMORY_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setKey(const QString &key)
 */
@@ -117,7 +113,6 @@ HB_FUNC_STATIC( QSHAREDMEMORY_SETKEY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString key() const
 */
@@ -129,7 +124,6 @@ HB_FUNC_STATIC( QSHAREDMEMORY_KEY )
     RQSTRING( obj->key () );
   }
 }
-
 
 /*
 void setNativeKey(const QString &key)
@@ -144,7 +138,6 @@ HB_FUNC_STATIC( QSHAREDMEMORY_SETNATIVEKEY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString nativeKey() const
 */
@@ -156,7 +149,6 @@ HB_FUNC_STATIC( QSHAREDMEMORY_NATIVEKEY )
     RQSTRING( obj->nativeKey () );
   }
 }
-
 
 /*
 bool create(int size, AccessMode mode = ReadWrite)
@@ -170,7 +162,6 @@ HB_FUNC_STATIC( QSHAREDMEMORY_CREATE )
   }
 }
 
-
 /*
 int size() const
 */
@@ -182,7 +173,6 @@ HB_FUNC_STATIC( QSHAREDMEMORY_SIZE )
     RINT( obj->size () );
   }
 }
-
 
 /*
 bool attach(AccessMode mode = ReadWrite)
@@ -196,7 +186,6 @@ HB_FUNC_STATIC( QSHAREDMEMORY_ATTACH )
   }
 }
 
-
 /*
 bool isAttached() const
 */
@@ -209,7 +198,6 @@ HB_FUNC_STATIC( QSHAREDMEMORY_ISATTACHED )
   }
 }
 
-
 /*
 bool detach()
 */
@@ -221,7 +209,6 @@ HB_FUNC_STATIC( QSHAREDMEMORY_DETACH )
     RBOOL( obj->detach () );
   }
 }
-
 
 /*
 void *data()
@@ -236,9 +223,6 @@ HB_FUNC_STATIC( QSHAREDMEMORY_DATA )
   }
 }
 
-
-
-
 /*
 bool lock()
 */
@@ -250,7 +234,6 @@ HB_FUNC_STATIC( QSHAREDMEMORY_LOCK )
     RBOOL( obj->lock () );
   }
 }
-
 
 /*
 bool unlock()
@@ -264,7 +247,6 @@ HB_FUNC_STATIC( QSHAREDMEMORY_UNLOCK )
   }
 }
 
-
 /*
 SharedMemoryError error() const
 */
@@ -277,7 +259,6 @@ HB_FUNC_STATIC( QSHAREDMEMORY_ERROR )
   }
 }
 
-
 /*
 QString errorString() const
 */
@@ -289,9 +270,5 @@ HB_FUNC_STATIC( QSHAREDMEMORY_ERRORSTRING )
     RQSTRING( obj->errorString () );
   }
 }
-
-
-
-
 
 #pragma ENDDUMP

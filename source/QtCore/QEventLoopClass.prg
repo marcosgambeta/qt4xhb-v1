@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QEventLoop INHERIT QObject
 
@@ -50,7 +49,6 @@ HB_FUNC_STATIC( QEVENTLOOP_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QEVENTLOOP_DELETE )
 {
   QEventLoop * obj = (QEventLoop *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -66,8 +64,6 @@ HB_FUNC_STATIC( QEVENTLOOP_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 int exec ( ProcessEventsFlags flags = AllEvents )
 */
@@ -79,7 +75,6 @@ HB_FUNC_STATIC( QEVENTLOOP_EXEC )
     RINT( obj->exec ( ISNIL(1)? QEventLoop::AllEvents : (QEventLoop::ProcessEventsFlags) hb_parni(1) ) );
   }
 }
-
 
 /*
 void exit ( int returnCode = 0 )
@@ -94,7 +89,6 @@ HB_FUNC_STATIC( QEVENTLOOP_EXIT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool isRunning () const
 */
@@ -106,7 +100,6 @@ HB_FUNC_STATIC( QEVENTLOOP_ISRUNNING )
     RBOOL( obj->isRunning () );
   }
 }
-
 
 /*
 bool processEvents ( ProcessEventsFlags flags = AllEvents )
@@ -120,7 +113,6 @@ HB_FUNC_STATIC( QEVENTLOOP_PROCESSEVENTS1 )
   }
 }
 
-
 /*
 void processEvents ( ProcessEventsFlags flags, int maxTime )
 */
@@ -133,7 +125,6 @@ HB_FUNC_STATIC( QEVENTLOOP_PROCESSEVENTS2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]bool processEvents ( ProcessEventsFlags flags = AllEvents )
 //[2]void processEvents ( ProcessEventsFlags flags, int maxTime )
@@ -163,7 +154,6 @@ HB_FUNC_STATIC( QEVENTLOOP_WAKEUP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void quit ()
 */
@@ -176,8 +166,5 @@ HB_FUNC_STATIC( QEVENTLOOP_QUIT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
 
 #pragma ENDDUMP

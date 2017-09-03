@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -70,7 +70,6 @@ HB_FUNC_STATIC( QDATASTREAM_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QDataStream ( QIODevice * d )
 */
@@ -79,7 +78,6 @@ HB_FUNC_STATIC( QDATASTREAM_NEW2 )
   QDataStream * o = new QDataStream ( PQIODEVICE(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 /*
 QDataStream ( QByteArray * a, QIODevice::OpenMode mode )
@@ -90,7 +88,6 @@ HB_FUNC_STATIC( QDATASTREAM_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QDataStream ( const QByteArray & a )
 */
@@ -99,7 +96,6 @@ HB_FUNC_STATIC( QDATASTREAM_NEW4 )
   QDataStream * o = new QDataStream ( *PQBYTEARRAY(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QDataStream ()
 //[2]QDataStream ( QIODevice * d )
@@ -145,7 +141,6 @@ HB_FUNC_STATIC( QDATASTREAM_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool atEnd () const
 */
@@ -158,7 +153,6 @@ HB_FUNC_STATIC( QDATASTREAM_ATEND )
   }
 }
 
-
 /*
 ByteOrder byteOrder () const
 */
@@ -170,7 +164,6 @@ HB_FUNC_STATIC( QDATASTREAM_BYTEORDER )
     hb_retni( (int) obj->byteOrder () );
   }
 }
-
 
 /*
 QIODevice * device () const
@@ -185,7 +178,6 @@ HB_FUNC_STATIC( QDATASTREAM_DEVICE )
   }
 }
 
-
 /*
 FloatingPointPrecision floatingPointPrecision () const
 */
@@ -197,8 +189,6 @@ HB_FUNC_STATIC( QDATASTREAM_FLOATINGPOINTPRECISION )
     hb_retni( (int) obj->floatingPointPrecision () );
   }
 }
-
-
 
 /*
 int readRawData ( char * s, int len )
@@ -213,7 +203,6 @@ HB_FUNC_STATIC( QDATASTREAM_READRAWDATA )
   }
 }
 
-
 /*
 void resetStatus ()
 */
@@ -226,7 +215,6 @@ HB_FUNC_STATIC( QDATASTREAM_RESETSTATUS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setByteOrder ( ByteOrder bo )
@@ -241,7 +229,6 @@ HB_FUNC_STATIC( QDATASTREAM_SETBYTEORDER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setDevice ( QIODevice * d )
 */
@@ -254,7 +241,6 @@ HB_FUNC_STATIC( QDATASTREAM_SETDEVICE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setFloatingPointPrecision ( FloatingPointPrecision precision )
@@ -269,7 +255,6 @@ HB_FUNC_STATIC( QDATASTREAM_SETFLOATINGPOINTPRECISION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setStatus ( Status status )
 */
@@ -282,7 +267,6 @@ HB_FUNC_STATIC( QDATASTREAM_SETSTATUS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setVersion ( int v )
@@ -297,7 +281,6 @@ HB_FUNC_STATIC( QDATASTREAM_SETVERSION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int skipRawData ( int len )
 */
@@ -309,7 +292,6 @@ HB_FUNC_STATIC( QDATASTREAM_SKIPRAWDATA )
     RINT( obj->skipRawData ( PINT(1) ) );
   }
 }
-
 
 /*
 Status status () const
@@ -323,7 +305,6 @@ HB_FUNC_STATIC( QDATASTREAM_STATUS )
   }
 }
 
-
 /*
 int version () const
 */
@@ -336,8 +317,6 @@ HB_FUNC_STATIC( QDATASTREAM_VERSION )
   }
 }
 
-
-
 /*
 int writeRawData ( const char * s, int len )
 */
@@ -349,7 +328,6 @@ HB_FUNC_STATIC( QDATASTREAM_WRITERAWDATA )
     RINT( obj->writeRawData ( (const char *) hb_parc(1), PINT(2) ) );
   }
 }
-
 
 HB_FUNC_STATIC( QDATASTREAM_NEWFROM )
 {
@@ -405,7 +383,5 @@ HB_FUNC_STATIC( QDATASTREAM_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

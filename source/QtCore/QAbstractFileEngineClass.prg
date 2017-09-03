@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -91,7 +91,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool atEnd () const
 */
@@ -103,8 +102,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_ATEND )
     RBOOL( obj->atEnd () );
   }
 }
-
-
 
 /*
 virtual bool caseSensitive () const
@@ -118,7 +115,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_CASESENSITIVE )
   }
 }
 
-
 /*
 virtual bool close ()
 */
@@ -130,7 +126,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_CLOSE )
     RBOOL( obj->close () );
   }
 }
-
 
 /*
 virtual bool copy ( const QString & newName )
@@ -144,7 +139,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_COPY )
   }
 }
 
-
 /*
 virtual QStringList entryList ( QDir::Filters filters, const QStringList & filterNames ) const
 */
@@ -156,7 +150,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_ENTRYLIST )
     RQSTRINGLIST( obj->entryList ( (QDir::Filters) hb_parni(1), PQSTRINGLIST(2) ) );
   }
 }
-
 
 /*
 QFile::FileError error () const
@@ -170,7 +163,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_ERROR )
   }
 }
 
-
 /*
 QString errorString () const
 */
@@ -182,8 +174,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_ERRORSTRING )
     RQSTRING( obj->errorString () );
   }
 }
-
-
 
 /*
 virtual FileFlags fileFlags ( FileFlags type = FileInfoAll ) const
@@ -197,7 +187,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_FILEFLAGS )
   }
 }
 
-
 /*
 virtual QString fileName ( FileName file = DefaultName ) const
 */
@@ -209,7 +198,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_FILENAME )
     RQSTRING( obj->fileName ( ISNIL(1)? QAbstractFileEngine::DefaultName : (QAbstractFileEngine::FileName) hb_parni(1) ) );
   }
 }
-
 
 /*
 virtual QDateTime fileTime ( FileTime time ) const
@@ -224,7 +212,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_FILETIME )
   }
 }
 
-
 /*
 virtual bool flush ()
 */
@@ -236,7 +223,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_FLUSH )
     RBOOL( obj->flush () );
   }
 }
-
 
 /*
 virtual int handle () const
@@ -250,7 +236,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_HANDLE )
   }
 }
 
-
 /*
 virtual bool isRelativePath () const
 */
@@ -262,7 +247,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_ISRELATIVEPATH )
     RBOOL( obj->isRelativePath () );
   }
 }
-
 
 /*
 virtual bool isSequential () const
@@ -276,7 +260,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_ISSEQUENTIAL )
   }
 }
 
-
 /*
 virtual bool link ( const QString & newName )
 */
@@ -288,8 +271,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_LINK )
     RBOOL( obj->link ( PQSTRING(1) ) );
   }
 }
-
-
 
 /*
 virtual bool mkdir ( const QString & dirName, bool createParentDirectories ) const
@@ -303,7 +284,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_MKDIR )
   }
 }
 
-
 /*
 virtual bool open ( QIODevice::OpenMode mode )
 */
@@ -315,7 +295,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_OPEN )
     RBOOL( obj->open ( (QIODevice::OpenMode) hb_parni(1) ) );
   }
 }
-
 
 /*
 virtual QString owner ( FileOwner owner ) const
@@ -329,7 +308,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_OWNER )
   }
 }
 
-
 /*
 virtual uint ownerId ( FileOwner owner ) const
 */
@@ -342,7 +320,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_OWNERID )
   }
 }
 
-
 /*
 virtual qint64 pos () const
 */
@@ -354,8 +331,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_POS )
     RQINT64( obj->pos () );
   }
 }
-
-
 
 /*
 virtual qint64 readLine ( char * data, qint64 maxlen )
@@ -370,7 +345,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_READLINE )
   }
 }
 
-
 /*
 virtual bool remove ()
 */
@@ -382,7 +356,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_REMOVE )
     RBOOL( obj->remove () );
   }
 }
-
 
 /*
 virtual bool rename ( const QString & newName )
@@ -396,7 +369,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_RENAME )
   }
 }
 
-
 /*
 virtual bool rmdir ( const QString & dirName, bool recurseParentDirectories ) const
 */
@@ -409,7 +381,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_RMDIR )
   }
 }
 
-
 /*
 virtual bool seek ( qint64 offset )
 */
@@ -421,7 +392,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_SEEK )
     RBOOL( obj->seek ( PQINT64(1) ) );
   }
 }
-
 
 /*
 virtual void setFileName ( const QString & file )
@@ -436,7 +406,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_SETFILENAME )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual bool setPermissions ( uint perms )
 */
@@ -448,7 +417,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_SETPERMISSIONS )
     RBOOL( obj->setPermissions ( PUINT(1) ) );
   }
 }
-
 
 /*
 virtual bool setSize ( qint64 size )
@@ -462,7 +430,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_SETSIZE )
   }
 }
 
-
 /*
 virtual qint64 size () const
 */
@@ -474,7 +441,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_SIZE )
     RQINT64( obj->size () );
   }
 }
-
 
 /*
 virtual bool supportsExtension ( Extension extension ) const
@@ -488,8 +454,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_SUPPORTSEXTENSION )
   }
 }
 
-
-
 /*
 virtual qint64 write ( const char * data, qint64 len )
 */
@@ -502,8 +466,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_WRITE )
   }
 }
 
-
-
 /*
 QAbstractFileEngine * create ( const QString & fileName )
 */
@@ -512,7 +474,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_CREATE )
   QAbstractFileEngine * ptr = QAbstractFileEngine::create ( PQSTRING(1) );
   _qt4xhb_createReturnClass ( ptr, "QABSTRACTFILEENGINE" );
 }
-
 
 HB_FUNC_STATIC( QABSTRACTFILEENGINE_NEWFROM )
 {
@@ -568,6 +529,5 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

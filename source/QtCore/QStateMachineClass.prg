@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -66,7 +66,6 @@ HB_FUNC_STATIC( QSTATEMACHINE_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QSTATEMACHINE_DELETE )
 {
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -82,7 +81,6 @@ HB_FUNC_STATIC( QSTATEMACHINE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void addDefaultAnimation ( QAbstractAnimation * animation )
 */
@@ -96,7 +94,6 @@ HB_FUNC_STATIC( QSTATEMACHINE_ADDDEFAULTANIMATION )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void addState ( QAbstractState * state )
@@ -112,7 +109,6 @@ HB_FUNC_STATIC( QSTATEMACHINE_ADDSTATE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool cancelDelayedEvent ( int id )
 */
@@ -124,7 +120,6 @@ HB_FUNC_STATIC( QSTATEMACHINE_CANCELDELAYEDEVENT )
     RBOOL( obj->cancelDelayedEvent ( PINT(1) ) );
   }
 }
-
 
 /*
 void clearError ()
@@ -138,8 +133,6 @@ HB_FUNC_STATIC( QSTATEMACHINE_CLEARERROR )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
 
 /*
 QList<QAbstractAnimation *> defaultAnimations () const
@@ -184,7 +177,6 @@ HB_FUNC_STATIC( QSTATEMACHINE_DEFAULTANIMATIONS )
   }
 }
 
-
 /*
 Error error () const
 */
@@ -196,7 +188,6 @@ HB_FUNC_STATIC( QSTATEMACHINE_ERROR )
     hb_retni( (int) obj->error () );
   }
 }
-
 
 /*
 QString errorString () const
@@ -210,7 +201,6 @@ HB_FUNC_STATIC( QSTATEMACHINE_ERRORSTRING )
   }
 }
 
-
 /*
 QStateMachine::RestorePolicy globalRestorePolicy () const
 */
@@ -222,7 +212,6 @@ HB_FUNC_STATIC( QSTATEMACHINE_GLOBALRESTOREPOLICY )
     hb_retni( (int) obj->globalRestorePolicy () );
   }
 }
-
 
 /*
 bool isAnimated () const
@@ -236,7 +225,6 @@ HB_FUNC_STATIC( QSTATEMACHINE_ISANIMATED )
   }
 }
 
-
 /*
 bool isRunning () const
 */
@@ -249,7 +237,6 @@ HB_FUNC_STATIC( QSTATEMACHINE_ISRUNNING )
   }
 }
 
-
 /*
 int postDelayedEvent ( QEvent * event, int delay )
 */
@@ -261,7 +248,6 @@ HB_FUNC_STATIC( QSTATEMACHINE_POSTDELAYEDEVENT )
     RINT( obj->postDelayedEvent ( PQEVENT(1), PINT(2) ) );
   }
 }
-
 
 /*
 void postEvent ( QEvent * event, EventPriority priority = NormalPriority )
@@ -277,7 +263,6 @@ HB_FUNC_STATIC( QSTATEMACHINE_POSTEVENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void removeDefaultAnimation ( QAbstractAnimation * animation )
 */
@@ -291,7 +276,6 @@ HB_FUNC_STATIC( QSTATEMACHINE_REMOVEDEFAULTANIMATION )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void removeState ( QAbstractState * state )
@@ -307,7 +291,6 @@ HB_FUNC_STATIC( QSTATEMACHINE_REMOVESTATE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setAnimated ( bool enabled )
 */
@@ -320,7 +303,6 @@ HB_FUNC_STATIC( QSTATEMACHINE_SETANIMATED )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setGlobalRestorePolicy ( QStateMachine::RestorePolicy restorePolicy )
@@ -335,7 +317,6 @@ HB_FUNC_STATIC( QSTATEMACHINE_SETGLOBALRESTOREPOLICY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual bool eventFilter ( QObject * watched, QEvent * event )
 */
@@ -347,7 +328,6 @@ HB_FUNC_STATIC( QSTATEMACHINE_EVENTFILTER )
     RBOOL( obj->eventFilter ( PQOBJECT(1), PQEVENT(2) ) );
   }
 }
-
 
 /*
 void start ()
@@ -362,7 +342,6 @@ HB_FUNC_STATIC( QSTATEMACHINE_START )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void stop ()
 */
@@ -375,9 +354,5 @@ HB_FUNC_STATIC( QSTATEMACHINE_STOP )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QFutureWatcherBase INHERIT QObject
 
@@ -59,7 +58,6 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_DELETE )
 {
   QFutureWatcherBase * obj = (QFutureWatcherBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -75,7 +73,6 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int progressValue() const
 */
@@ -87,7 +84,6 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_PROGRESSVALUE )
     RINT( obj->progressValue () );
   }
 }
-
 
 /*
 int progressMinimum() const
@@ -101,7 +97,6 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_PROGRESSMINIMUM )
   }
 }
 
-
 /*
 int progressMaximum() const
 */
@@ -113,7 +108,6 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_PROGRESSMAXIMUM )
     RINT( obj->progressMaximum () );
   }
 }
-
 
 /*
 QString progressText() const
@@ -127,7 +121,6 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_PROGRESSTEXT )
   }
 }
 
-
 /*
 bool isStarted() const
 */
@@ -139,7 +132,6 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISSTARTED )
     RBOOL( obj->isStarted () );
   }
 }
-
 
 /*
 bool isFinished() const
@@ -153,7 +145,6 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISFINISHED )
   }
 }
 
-
 /*
 bool isRunning() const
 */
@@ -165,7 +156,6 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISRUNNING )
     RBOOL( obj->isRunning () );
   }
 }
-
 
 /*
 bool isCanceled() const
@@ -179,7 +169,6 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISCANCELED )
   }
 }
 
-
 /*
 bool isPaused() const
 */
@@ -191,7 +180,6 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISPAUSED )
     RBOOL( obj->isPaused () );
   }
 }
-
 
 /*
 void waitForFinished()
@@ -206,7 +194,6 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_WAITFORFINISHED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPendingResultsLimit(int limit)
 */
@@ -220,7 +207,6 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_SETPENDINGRESULTSLIMIT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool event(QEvent *event)
 */
@@ -232,7 +218,6 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_EVENT )
     RBOOL( obj->event ( PQEVENT(1) ) );
   }
 }
-
 
 /*
 void cancel()
@@ -247,7 +232,6 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_CANCEL )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPaused(bool paused)
 */
@@ -260,7 +244,6 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_SETPAUSED )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void pause()
@@ -275,7 +258,6 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_PAUSE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void resume()
 */
@@ -289,7 +271,6 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_RESUME )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void togglePaused()
 */
@@ -302,10 +283,5 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_TOGGLEPAUSED )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
-
 
 #pragma ENDDUMP

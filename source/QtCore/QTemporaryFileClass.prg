@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QTemporaryFile INHERIT QFile
 
@@ -52,7 +51,6 @@ HB_FUNC_STATIC( QTEMPORARYFILE_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QTemporaryFile(const QString & templateName)
 */
@@ -61,7 +59,6 @@ HB_FUNC_STATIC( QTEMPORARYFILE_NEW2 )
   QTemporaryFile * o = new QTemporaryFile ( PQSTRING(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 /*
 QTemporaryFile(QObject * parent)
@@ -72,7 +69,6 @@ HB_FUNC_STATIC( QTEMPORARYFILE_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QTemporaryFile(const QString & templateName, QObject * parent)
 */
@@ -81,7 +77,6 @@ HB_FUNC_STATIC( QTEMPORARYFILE_NEW4 )
   QTemporaryFile * o = new QTemporaryFile ( PQSTRING(1), PQOBJECT(2) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QTemporaryFile()
 //[2]QTemporaryFile(const QString & templateName)
@@ -127,7 +122,6 @@ HB_FUNC_STATIC( QTEMPORARYFILE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool autoRemove() const
 */
@@ -139,7 +133,6 @@ HB_FUNC_STATIC( QTEMPORARYFILE_AUTOREMOVE )
     RBOOL( obj->autoRemove () );
   }
 }
-
 
 /*
 QString fileTemplate() const
@@ -153,7 +146,6 @@ HB_FUNC_STATIC( QTEMPORARYFILE_FILETEMPLATE )
   }
 }
 
-
 /*
 bool open()
 */
@@ -165,7 +157,6 @@ HB_FUNC_STATIC( QTEMPORARYFILE_OPEN )
     RBOOL( obj->open () );
   }
 }
-
 
 /*
 void setAutoRemove(bool b)
@@ -180,7 +171,6 @@ HB_FUNC_STATIC( QTEMPORARYFILE_SETAUTOREMOVE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setFileTemplate(const QString & name)
 */
@@ -194,7 +184,6 @@ HB_FUNC_STATIC( QTEMPORARYFILE_SETFILETEMPLATE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QString fileName() const
 */
@@ -206,10 +195,6 @@ HB_FUNC_STATIC( QTEMPORARYFILE_FILENAME )
     RQSTRING( obj->fileName () );
   }
 }
-
-
-
-
 
 //[1]QTemporaryFile * createNativeFile(QFile & file)
 //[2]QTemporaryFile * createNativeFile(const QString & fileName)
@@ -225,7 +210,5 @@ HB_FUNC_STATIC( QTEMPORARYFILE_FILENAME )
 //    HB_FUNC_EXEC( QTEMPORARYFILE_CREATENATIVEFILE2 );
 //  }
 //}
-
-
 
 #pragma ENDDUMP

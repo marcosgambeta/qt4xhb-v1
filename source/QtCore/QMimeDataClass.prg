@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -71,7 +71,6 @@ HB_FUNC_STATIC( QMIMEDATA_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QMIMEDATA_DELETE )
 {
   QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -87,7 +86,6 @@ HB_FUNC_STATIC( QMIMEDATA_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void clear ()
 */
@@ -100,7 +98,6 @@ HB_FUNC_STATIC( QMIMEDATA_CLEAR )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QVariant colorData () const
@@ -115,7 +112,6 @@ HB_FUNC_STATIC( QMIMEDATA_COLORDATA )
   }
 }
 
-
 /*
 QByteArray data ( const QString & mimeType ) const
 */
@@ -129,7 +125,6 @@ HB_FUNC_STATIC( QMIMEDATA_DATA )
   }
 }
 
-
 /*
 virtual QStringList formats () const
 */
@@ -141,7 +136,6 @@ HB_FUNC_STATIC( QMIMEDATA_FORMATS )
     RQSTRINGLIST( obj->formats () );
   }
 }
-
 
 /*
 bool hasColor () const
@@ -155,7 +149,6 @@ HB_FUNC_STATIC( QMIMEDATA_HASCOLOR )
   }
 }
 
-
 /*
 virtual bool hasFormat ( const QString & mimeType ) const
 */
@@ -167,7 +160,6 @@ HB_FUNC_STATIC( QMIMEDATA_HASFORMAT )
     RBOOL( obj->hasFormat ( PQSTRING(1) ) );
   }
 }
-
 
 /*
 bool hasHtml () const
@@ -181,7 +173,6 @@ HB_FUNC_STATIC( QMIMEDATA_HASHTML )
   }
 }
 
-
 /*
 bool hasImage () const
 */
@@ -193,7 +184,6 @@ HB_FUNC_STATIC( QMIMEDATA_HASIMAGE )
     RBOOL( obj->hasImage () );
   }
 }
-
 
 /*
 bool hasText () const
@@ -207,7 +197,6 @@ HB_FUNC_STATIC( QMIMEDATA_HASTEXT )
   }
 }
 
-
 /*
 bool hasUrls () const
 */
@@ -220,7 +209,6 @@ HB_FUNC_STATIC( QMIMEDATA_HASURLS )
   }
 }
 
-
 /*
 QString html () const
 */
@@ -232,7 +220,6 @@ HB_FUNC_STATIC( QMIMEDATA_HTML )
     RQSTRING( obj->html () );
   }
 }
-
 
 /*
 QVariant imageData () const
@@ -247,7 +234,6 @@ HB_FUNC_STATIC( QMIMEDATA_IMAGEDATA )
   }
 }
 
-
 /*
 void removeFormat ( const QString & mimeType )
 */
@@ -260,7 +246,6 @@ HB_FUNC_STATIC( QMIMEDATA_REMOVEFORMAT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setColorData ( const QVariant & color )
@@ -275,7 +260,6 @@ HB_FUNC_STATIC( QMIMEDATA_SETCOLORDATA )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setData ( const QString & mimeType, const QByteArray & data )
 */
@@ -288,7 +272,6 @@ HB_FUNC_STATIC( QMIMEDATA_SETDATA )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setHtml ( const QString & html )
@@ -303,7 +286,6 @@ HB_FUNC_STATIC( QMIMEDATA_SETHTML )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setImageData ( const QVariant & image )
 */
@@ -317,7 +299,6 @@ HB_FUNC_STATIC( QMIMEDATA_SETIMAGEDATA )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setText ( const QString & text )
 */
@@ -330,7 +311,6 @@ HB_FUNC_STATIC( QMIMEDATA_SETTEXT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setUrls ( const QList<QUrl> & urls )
@@ -353,7 +333,6 @@ par1 << *(QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString text () const
 */
@@ -365,7 +344,6 @@ HB_FUNC_STATIC( QMIMEDATA_TEXT )
     RQSTRING( obj->text () );
   }
 }
-
 
 /*
 QList<QUrl> urls () const
@@ -413,9 +391,5 @@ HB_FUNC_STATIC( QMIMEDATA_URLS )
     hb_itemReturnRelease(pArray);
   }
 }
-
-
-
-
 
 #pragma ENDDUMP

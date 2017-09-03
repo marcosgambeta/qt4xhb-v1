@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -51,7 +51,6 @@ HB_FUNC_STATIC( QHISTORYSTATE_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QHistoryState(HistoryType type, QState *parent = 0)
 */
@@ -60,7 +59,6 @@ HB_FUNC_STATIC( QHISTORYSTATE_NEW2 )
   QHistoryState * o = new QHistoryState ( (QHistoryState::HistoryType) hb_parni(1), OPQSTATE(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QHistoryState(QState *parent = 0)
 //[2]QHistoryState(HistoryType type, QState *parent = 0)
@@ -96,7 +94,6 @@ HB_FUNC_STATIC( QHISTORYSTATE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QAbstractState *defaultState() const
 */
@@ -109,7 +106,6 @@ HB_FUNC_STATIC( QHISTORYSTATE_DEFAULTSTATE )
     _qt4xhb_createReturnClass ( ptr, "QABSTRACTSTATE" );
   }
 }
-
 
 /*
 void setDefaultState(QAbstractState *state)
@@ -125,7 +121,6 @@ HB_FUNC_STATIC( QHISTORYSTATE_SETDEFAULTSTATE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 HistoryType historyType() const
 */
@@ -137,7 +132,6 @@ HB_FUNC_STATIC( QHISTORYSTATE_HISTORYTYPE )
     hb_retni( (int) obj->historyType () );
   }
 }
-
 
 /*
 void setHistoryType(HistoryType type)
@@ -151,9 +145,5 @@ HB_FUNC_STATIC( QHISTORYSTATE_SETHISTORYTYPE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

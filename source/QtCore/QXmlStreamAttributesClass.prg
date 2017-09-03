@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -65,7 +65,6 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_NEW )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_DELETE )
 {
   QXmlStreamAttributes * obj = (QXmlStreamAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -81,7 +80,6 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void append(const QString & namespaceUri, const QString & name, const QString & value)
 */
@@ -94,7 +92,6 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_APPEND1 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void append(const QXmlStreamAttribute & attribute)
@@ -109,7 +106,6 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_APPEND2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void append(const QString & qualifiedName, const QString & value)
 */
@@ -122,7 +118,6 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_APPEND3 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void append(const QString & namespaceUri, const QString & name, const QString & value)
 //[2]void append(const QXmlStreamAttribute & attribute)
@@ -156,7 +151,6 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE1 )
   }
 }
 
-
 /*
 bool hasAttribute(QLatin1String qualifiedName) const
 */
@@ -170,7 +164,6 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE2 )
   }
 }
 
-
 /*
 bool hasAttribute(const QString & namespaceUri, const QString & name) const
 */
@@ -182,7 +175,6 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE3 )
     RBOOL( obj->hasAttribute ( PQSTRING(1), PQSTRING(2) ) );
   }
 }
-
 
 //[1]bool hasAttribute(const QString & qualifiedName) const
 //[2]bool hasAttribute(QLatin1String qualifiedName) const
@@ -217,7 +209,6 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE1 )
   }
 }
 
-
 /*
 QStringRef value(const QString & namespaceUri, QLatin1String name) const
 */
@@ -231,7 +222,6 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE2 )
     _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
-
 
 /*
 QStringRef value(QLatin1String namespaceUri, QLatin1String name) const
@@ -248,7 +238,6 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE3 )
   }
 }
 
-
 /*
 QStringRef value(const QString & qualifiedName) const
 */
@@ -261,7 +250,6 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE4 )
     _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
-
 
 /*
 QStringRef value(QLatin1String qualifiedName) const
@@ -276,7 +264,6 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE5 )
     _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
-
 
 //[1]QStringRef value(const QString & namespaceUri, const QString & name) const
 //[2]QStringRef value(const QString & namespaceUri, QLatin1String name) const
@@ -307,7 +294,6 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE )
     HB_FUNC_EXEC( QXMLSTREAMATTRIBUTES_VALUE5 );
   }
 }
-
 
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_NEWFROM )
 {

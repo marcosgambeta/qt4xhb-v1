@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -62,7 +62,6 @@ HB_FUNC_STATIC( QBUFFER_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QBuffer ( QByteArray * byteArray, QObject * parent = 0 )
 */
@@ -71,7 +70,6 @@ HB_FUNC_STATIC( QBUFFER_NEW2 )
   QBuffer * o = new QBuffer ( PQBYTEARRAY(1), OPQOBJECT(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QBuffer ( QObject * parent = 0 )
 //[2]QBuffer ( QByteArray * byteArray, QObject * parent = 0 )
@@ -107,8 +105,6 @@ HB_FUNC_STATIC( QBUFFER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 QByteArray & buffer ()
 */
@@ -122,7 +118,6 @@ HB_FUNC_STATIC( QBUFFER_BUFFER1 )
   }
 }
 
-
 /*
 const QByteArray & buffer () const
 */
@@ -135,7 +130,6 @@ HB_FUNC_STATIC( QBUFFER_BUFFER2 )
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
 
 //[1]QByteArray & buffer ()
 //[2]const QByteArray & buffer () const
@@ -158,7 +152,6 @@ HB_FUNC_STATIC( QBUFFER_DATA )
   }
 }
 
-
 /*
 void setBuffer ( QByteArray * byteArray )
 */
@@ -171,7 +164,6 @@ HB_FUNC_STATIC( QBUFFER_SETBUFFER )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setData ( const QByteArray & data )
@@ -186,7 +178,6 @@ HB_FUNC_STATIC( QBUFFER_SETDATA1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setData ( const char * data, int size )
 */
@@ -199,7 +190,6 @@ HB_FUNC_STATIC( QBUFFER_SETDATA2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setData ( const QByteArray & data )
 //[2]void setData ( const char * data, int size )
@@ -228,7 +218,6 @@ HB_FUNC_STATIC( QBUFFER_ATEND )
   }
 }
 
-
 /*
 virtual bool canReadLine () const
 */
@@ -240,7 +229,6 @@ HB_FUNC_STATIC( QBUFFER_CANREADLINE )
     RBOOL( obj->canReadLine () );
   }
 }
-
 
 /*
 virtual void close ()
@@ -255,7 +243,6 @@ HB_FUNC_STATIC( QBUFFER_CLOSE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual bool open ( OpenMode flags )
 */
@@ -267,7 +254,6 @@ HB_FUNC_STATIC( QBUFFER_OPEN )
     RBOOL( obj->open ( (QBuffer::OpenMode) hb_parni(1) ) );
   }
 }
-
 
 /*
 virtual qint64 pos () const
@@ -281,7 +267,6 @@ HB_FUNC_STATIC( QBUFFER_POS )
   }
 }
 
-
 /*
 virtual bool seek ( qint64 pos )
 */
@@ -294,7 +279,6 @@ HB_FUNC_STATIC( QBUFFER_SEEK )
   }
 }
 
-
 /*
 virtual qint64 size () const
 */
@@ -306,9 +290,5 @@ HB_FUNC_STATIC( QBUFFER_SIZE )
     RQINT64( obj->size () );
   }
 }
-
-
-
-
 
 #pragma ENDDUMP

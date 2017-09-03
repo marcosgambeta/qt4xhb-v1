@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -57,7 +57,6 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_DELETE )
 {
   QCryptographicHash * obj = (QCryptographicHash *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -73,7 +72,6 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void addData ( const char * data, int length )
 */
@@ -87,7 +85,6 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_ADDDATA1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void addData ( const QByteArray & data )
 */
@@ -100,7 +97,6 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_ADDDATA2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void addData ( const char * data, int length )
 //[2]void addData ( const QByteArray & data )
@@ -130,7 +126,6 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_RESET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QByteArray result () const
 */
@@ -144,8 +139,6 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_RESULT )
   }
 }
 
-
-
 /*
 QByteArray hash ( const QByteArray & data, Algorithm method )
 */
@@ -154,7 +147,6 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_HASH )
   QByteArray * ptr = new QByteArray( QCryptographicHash::hash ( *PQBYTEARRAY(1), (QCryptographicHash::Algorithm) hb_parni(2) ) );
   _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
 }
-
 
 HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_NEWFROM )
 {
@@ -210,6 +202,5 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

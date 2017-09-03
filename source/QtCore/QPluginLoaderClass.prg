@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -56,7 +56,6 @@ HB_FUNC_STATIC( QPLUGINLOADER_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QPluginLoader ( const QString & fileName, QObject * parent = 0 )
 */
@@ -65,7 +64,6 @@ HB_FUNC_STATIC( QPLUGINLOADER_NEW2 )
   QPluginLoader * o = new QPluginLoader ( PQSTRING(1), OPQOBJECT(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QPluginLoader ( QObject * parent = 0 )
 //[2]QPluginLoader ( const QString & fileName, QObject * parent = 0 )
@@ -101,8 +99,6 @@ HB_FUNC_STATIC( QPLUGINLOADER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 QString errorString () const
 */
@@ -115,7 +111,6 @@ HB_FUNC_STATIC( QPLUGINLOADER_ERRORSTRING )
   }
 }
 
-
 /*
 QString fileName () const
 */
@@ -127,7 +122,6 @@ HB_FUNC_STATIC( QPLUGINLOADER_FILENAME )
     RQSTRING( obj->fileName () );
   }
 }
-
 
 /*
 QObject * instance ()
@@ -142,7 +136,6 @@ HB_FUNC_STATIC( QPLUGINLOADER_INSTANCE )
   }
 }
 
-
 /*
 bool isLoaded () const
 */
@@ -154,7 +147,6 @@ HB_FUNC_STATIC( QPLUGINLOADER_ISLOADED )
     RBOOL( obj->isLoaded () );
   }
 }
-
 
 /*
 bool load ()
@@ -168,7 +160,6 @@ HB_FUNC_STATIC( QPLUGINLOADER_LOAD )
   }
 }
 
-
 /*
 QLibrary::LoadHints loadHints () const
 */
@@ -180,7 +171,6 @@ HB_FUNC_STATIC( QPLUGINLOADER_LOADHINTS )
     hb_retni( (int) obj->loadHints () );
   }
 }
-
 
 /*
 void setFileName ( const QString & fileName )
@@ -195,7 +185,6 @@ HB_FUNC_STATIC( QPLUGINLOADER_SETFILENAME )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setLoadHints ( QLibrary::LoadHints loadHints )
 */
@@ -209,7 +198,6 @@ HB_FUNC_STATIC( QPLUGINLOADER_SETLOADHINTS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool unload ()
 */
@@ -221,10 +209,5 @@ HB_FUNC_STATIC( QPLUGINLOADER_UNLOAD )
     RBOOL( obj->unload () );
   }
 }
-
-
-
-
-
 
 #pragma ENDDUMP

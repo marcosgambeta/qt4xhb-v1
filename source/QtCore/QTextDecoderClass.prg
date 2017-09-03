@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QTextDecoder
 
@@ -55,7 +54,6 @@ HB_FUNC_STATIC( QTEXTDECODER_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QTextDecoder(const QTextCodec * codec, QTextCodec::ConversionFlags flags)
 */
@@ -66,7 +64,6 @@ HB_FUNC_STATIC( QTEXTDECODER_NEW2 )
   QTextDecoder * o = new QTextDecoder ( par1, (QTextCodec::ConversionFlags) par2 );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QTextDecoder(const QTextCodec * codec)
 //[2]QTextDecoder(const QTextCodec * codec, QTextCodec::ConversionFlags flags)
@@ -102,7 +99,6 @@ HB_FUNC_STATIC( QTEXTDECODER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString toUnicode(const char * chars, int len)
 */
@@ -114,7 +110,6 @@ HB_FUNC_STATIC( QTEXTDECODER_TOUNICODE1 )
     RQSTRING( obj->toUnicode ( (const char *) hb_parc(1), PINT(2) ) );
   }
 }
-
 
 /*
 void toUnicode(QString * target, const char * chars, int len)
@@ -131,7 +126,6 @@ HB_FUNC_STATIC( QTEXTDECODER_TOUNICODE2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString toUnicode(const QByteArray & ba)
 */
@@ -143,7 +137,6 @@ HB_FUNC_STATIC( QTEXTDECODER_TOUNICODE3 )
     RQSTRING( obj->toUnicode ( *PQBYTEARRAY(1) ) );
   }
 }
-
 
 //[1]QString toUnicode(const char * chars, int len)
 //[2]void toUnicode(QString * target, const char * chars, int len)
@@ -164,7 +157,6 @@ HB_FUNC_STATIC( QTEXTDECODER_TOUNICODE )
     HB_FUNC_EXEC( QTEXTDECODER_TOUNICODE3 );
   }
 }
-
 
 HB_FUNC_STATIC( QTEXTDECODER_NEWFROM )
 {
@@ -220,7 +212,5 @@ HB_FUNC_STATIC( QTEXTDECODER_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

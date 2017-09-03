@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -61,7 +61,6 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QXmlStreamAttribute(const QString & qualifiedName, const QString & value)
 */
@@ -70,7 +69,6 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NEW2 )
   QXmlStreamAttribute * o = new QXmlStreamAttribute ( PQSTRING(1), PQSTRING(2) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QXmlStreamAttribute(const QString & namespaceUri, const QString & name, const QString & value)
@@ -81,7 +79,6 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QXmlStreamAttribute(const QXmlStreamAttribute & other)
 */
@@ -90,7 +87,6 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NEW4 )
   QXmlStreamAttribute * o = new QXmlStreamAttribute ( *PQXMLSTREAMATTRIBUTE(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QXmlStreamAttribute()
 //[2]QXmlStreamAttribute(const QString & qualifiedName, const QString & value)
@@ -136,7 +132,6 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool isDefault() const
 */
@@ -148,7 +143,6 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_ISDEFAULT )
     RBOOL( obj->isDefault () );
   }
 }
-
 
 /*
 QStringRef name() const
@@ -163,7 +157,6 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NAME )
   }
 }
 
-
 /*
 QStringRef namespaceUri() const
 */
@@ -176,7 +169,6 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NAMESPACEURI )
     _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
-
 
 /*
 QStringRef prefix() const
@@ -191,7 +183,6 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_PREFIX )
   }
 }
 
-
 /*
 QStringRef qualifiedName() const
 */
@@ -205,7 +196,6 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_QUALIFIEDNAME )
   }
 }
 
-
 /*
 QStringRef value() const
 */
@@ -218,7 +208,6 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_VALUE )
     _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
-
 
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NEWFROM )
 {
@@ -274,6 +263,5 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

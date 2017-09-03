@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -55,7 +55,6 @@ HB_FUNC_STATIC( QABSTRACTSTATE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QStateMachine * machine () const
 */
@@ -69,7 +68,6 @@ HB_FUNC_STATIC( QABSTRACTSTATE_MACHINE )
   }
 }
 
-
 /*
 QState * parentState () const
 */
@@ -82,10 +80,5 @@ HB_FUNC_STATIC( QABSTRACTSTATE_PARENTSTATE )
     _qt4xhb_createReturnClass ( ptr, "QSTATE" );
   }
 }
-
-
-
-
-
 
 #pragma ENDDUMP

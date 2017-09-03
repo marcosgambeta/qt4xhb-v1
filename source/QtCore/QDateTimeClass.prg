@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -91,7 +91,6 @@ HB_FUNC_STATIC( QDATETIME_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QDateTime ( const QDate & date )
 */
@@ -100,7 +99,6 @@ HB_FUNC_STATIC( QDATETIME_NEW2 )
   QDateTime * o = new QDateTime ( *PQDATE(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QDateTime ( const QDate & date, const QTime & time, Qt::TimeSpec spec = Qt::LocalTime )
@@ -111,7 +109,6 @@ HB_FUNC_STATIC( QDATETIME_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QDateTime ( const QDateTime & other )
 */
@@ -120,7 +117,6 @@ HB_FUNC_STATIC( QDATETIME_NEW4 )
   QDateTime * o = new QDateTime ( *PQDATETIME(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QDateTime ()
 //[2]QDateTime ( const QDate & date )
@@ -166,8 +162,6 @@ HB_FUNC_STATIC( QDATETIME_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 QDateTime addDays ( int ndays ) const
 */
@@ -180,7 +174,6 @@ HB_FUNC_STATIC( QDATETIME_ADDDAYS )
     _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
-
 
 /*
 QDateTime addMSecs ( qint64 msecs ) const
@@ -195,7 +188,6 @@ HB_FUNC_STATIC( QDATETIME_ADDMSECS )
   }
 }
 
-
 /*
 QDateTime addMonths ( int nmonths ) const
 */
@@ -208,7 +200,6 @@ HB_FUNC_STATIC( QDATETIME_ADDMONTHS )
     _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
-
 
 /*
 QDateTime addSecs ( int s ) const
@@ -223,7 +214,6 @@ HB_FUNC_STATIC( QDATETIME_ADDSECS )
   }
 }
 
-
 /*
 QDateTime addYears ( int nyears ) const
 */
@@ -236,7 +226,6 @@ HB_FUNC_STATIC( QDATETIME_ADDYEARS )
     _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
-
 
 /*
 QDate date () const
@@ -251,7 +240,6 @@ HB_FUNC_STATIC( QDATETIME_DATE )
   }
 }
 
-
 /*
 int daysTo ( const QDateTime & other ) const
 */
@@ -263,7 +251,6 @@ HB_FUNC_STATIC( QDATETIME_DAYSTO )
     RINT( obj->daysTo ( *PQDATETIME(1) ) );
   }
 }
-
 
 /*
 bool isNull () const
@@ -277,7 +264,6 @@ HB_FUNC_STATIC( QDATETIME_ISNULL )
   }
 }
 
-
 /*
 bool isValid () const
 */
@@ -289,7 +275,6 @@ HB_FUNC_STATIC( QDATETIME_ISVALID )
     RBOOL( obj->isValid () );
   }
 }
-
 
 /*
 qint64 msecsTo ( const QDateTime & other ) const
@@ -303,7 +288,6 @@ HB_FUNC_STATIC( QDATETIME_MSECSTO )
   }
 }
 
-
 /*
 int secsTo ( const QDateTime & other ) const
 */
@@ -315,7 +299,6 @@ HB_FUNC_STATIC( QDATETIME_SECSTO )
     RINT( obj->secsTo ( *PQDATETIME(1) ) );
   }
 }
-
 
 /*
 void setDate ( const QDate & date )
@@ -330,7 +313,6 @@ HB_FUNC_STATIC( QDATETIME_SETDATE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setMSecsSinceEpoch ( qint64 msecs )
 */
@@ -343,7 +325,6 @@ HB_FUNC_STATIC( QDATETIME_SETMSECSSINCEEPOCH )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setTime ( const QTime & time )
@@ -358,7 +339,6 @@ HB_FUNC_STATIC( QDATETIME_SETTIME )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setTimeSpec ( Qt::TimeSpec spec )
 */
@@ -371,7 +351,6 @@ HB_FUNC_STATIC( QDATETIME_SETTIMESPEC )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setTime_t ( uint seconds )
@@ -386,7 +365,6 @@ HB_FUNC_STATIC( QDATETIME_SETTIME_T )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QTime time () const
 */
@@ -400,7 +378,6 @@ HB_FUNC_STATIC( QDATETIME_TIME )
   }
 }
 
-
 /*
 Qt::TimeSpec timeSpec () const
 */
@@ -412,7 +389,6 @@ HB_FUNC_STATIC( QDATETIME_TIMESPEC )
     hb_retni( (int) obj->timeSpec () );
   }
 }
-
 
 /*
 QDateTime toLocalTime () const
@@ -427,7 +403,6 @@ HB_FUNC_STATIC( QDATETIME_TOLOCALTIME )
   }
 }
 
-
 /*
 qint64 toMSecsSinceEpoch () const
 */
@@ -439,7 +414,6 @@ HB_FUNC_STATIC( QDATETIME_TOMSECSSINCEEPOCH )
     RQINT64( obj->toMSecsSinceEpoch () );
   }
 }
-
 
 /*
 QString toString ( const QString & format ) const
@@ -453,7 +427,6 @@ HB_FUNC_STATIC( QDATETIME_TOSTRING1 )
   }
 }
 
-
 /*
 QString toString ( Qt::DateFormat format = Qt::TextDate ) const
 */
@@ -465,7 +438,6 @@ HB_FUNC_STATIC( QDATETIME_TOSTRING2 )
     RQSTRING( obj->toString ( ISNIL(1)? Qt::TextDate : (Qt::DateFormat) hb_parni(1) ) );
   }
 }
-
 
 //[1]QString toString ( const QString & format ) const
 //[2]QString toString ( Qt::DateFormat format = Qt::TextDate ) const
@@ -495,7 +467,6 @@ HB_FUNC_STATIC( QDATETIME_TOTIMESPEC )
   }
 }
 
-
 /*
 uint toTime_t () const
 */
@@ -507,7 +478,6 @@ HB_FUNC_STATIC( QDATETIME_TOTIME_T )
     hb_retni( (uint) obj->toTime_t () );
   }
 }
-
 
 /*
 QDateTime toUTC () const
@@ -522,8 +492,6 @@ HB_FUNC_STATIC( QDATETIME_TOUTC )
   }
 }
 
-
-
 /*
 QDateTime currentDateTime ()
 */
@@ -532,7 +500,6 @@ HB_FUNC_STATIC( QDATETIME_CURRENTDATETIME )
   QDateTime * ptr = new QDateTime( QDateTime::currentDateTime () );
   _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
 }
-
 
 /*
 QDateTime currentDateTimeUtc ()
@@ -543,7 +510,6 @@ HB_FUNC_STATIC( QDATETIME_CURRENTDATETIMEUTC )
   _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
 }
 
-
 /*
 qint64 currentMSecsSinceEpoch ()
 */
@@ -551,7 +517,6 @@ HB_FUNC_STATIC( QDATETIME_CURRENTMSECSSINCEEPOCH )
 {
   RQINT64( QDateTime::currentMSecsSinceEpoch () );
 }
-
 
 /*
 QDateTime fromMSecsSinceEpoch ( qint64 msecs )
@@ -562,7 +527,6 @@ HB_FUNC_STATIC( QDATETIME_FROMMSECSSINCEEPOCH )
   _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
 }
 
-
 /*
 QDateTime fromString ( const QString & string, Qt::DateFormat format = Qt::TextDate )
 */
@@ -572,7 +536,6 @@ HB_FUNC_STATIC( QDATETIME_FROMSTRING1 )
   _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
 }
 
-
 /*
 QDateTime fromString ( const QString & string, const QString & format )
 */
@@ -581,7 +544,6 @@ HB_FUNC_STATIC( QDATETIME_FROMSTRING2 )
   QDateTime * ptr = new QDateTime( QDateTime::fromString ( PQSTRING(1), PQSTRING(2) ) );
   _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
 }
-
 
 //[1]QDateTime fromString ( const QString & string, Qt::DateFormat format = Qt::TextDate )
 //[2]QDateTime fromString ( const QString & string, const QString & format )
@@ -606,7 +568,6 @@ HB_FUNC_STATIC( QDATETIME_FROMTIME_T )
   QDateTime * ptr = new QDateTime( QDateTime::fromTime_t ( PUINT(1) ) );
   _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
 }
-
 
 HB_FUNC_STATIC( QDATETIME_NEWFROM )
 {
@@ -662,6 +623,5 @@ HB_FUNC_STATIC( QDATETIME_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

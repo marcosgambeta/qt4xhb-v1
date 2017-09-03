@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QElapsedTimer
 
@@ -60,7 +59,6 @@ HB_FUNC_STATIC( QELAPSEDTIMER_NEW )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 HB_FUNC_STATIC( QELAPSEDTIMER_DELETE )
 {
   QElapsedTimer * obj = (QElapsedTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -76,7 +74,6 @@ HB_FUNC_STATIC( QELAPSEDTIMER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 qint64 elapsed() const
 */
@@ -89,7 +86,6 @@ HB_FUNC_STATIC( QELAPSEDTIMER_ELAPSED )
   }
 }
 
-
 /*
 bool hasExpired(qint64 timeout) const
 */
@@ -101,7 +97,6 @@ HB_FUNC_STATIC( QELAPSEDTIMER_HASEXPIRED )
     RBOOL( obj->hasExpired ( PQINT64(1) ) );
   }
 }
-
 
 /*
 void invalidate()
@@ -116,7 +111,6 @@ HB_FUNC_STATIC( QELAPSEDTIMER_INVALIDATE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool isValid() const
 */
@@ -128,7 +122,6 @@ HB_FUNC_STATIC( QELAPSEDTIMER_ISVALID )
     RBOOL( obj->isValid () );
   }
 }
-
 
 /*
 qint64 msecsSinceReference() const
@@ -142,7 +135,6 @@ HB_FUNC_STATIC( QELAPSEDTIMER_MSECSSINCEREFERENCE )
   }
 }
 
-
 /*
 qint64 msecsTo(const QElapsedTimer & other) const
 */
@@ -154,7 +146,6 @@ HB_FUNC_STATIC( QELAPSEDTIMER_MSECSTO )
     RQINT64( obj->msecsTo ( *PQELAPSEDTIMER(1) ) );
   }
 }
-
 
 /*
 qint64 nsecsElapsed() const
@@ -168,7 +159,6 @@ HB_FUNC_STATIC( QELAPSEDTIMER_NSECSELAPSED )
   }
 }
 
-
 /*
 qint64 restart()
 */
@@ -181,7 +171,6 @@ HB_FUNC_STATIC( QELAPSEDTIMER_RESTART )
   }
 }
 
-
 /*
 qint64 secsTo(const QElapsedTimer & other) const
 */
@@ -193,7 +182,6 @@ HB_FUNC_STATIC( QELAPSEDTIMER_SECSTO )
     RQINT64( obj->secsTo ( *PQELAPSEDTIMER(1) ) );
   }
 }
-
 
 /*
 void start()
@@ -208,8 +196,6 @@ HB_FUNC_STATIC( QELAPSEDTIMER_START )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 ClockType clockType()
 */
@@ -218,7 +204,6 @@ HB_FUNC_STATIC( QELAPSEDTIMER_CLOCKTYPE )
   hb_retni( (int) QElapsedTimer::clockType () );
 }
 
-
 /*
 bool isMonotonic()
 */
@@ -226,7 +211,6 @@ HB_FUNC_STATIC( QELAPSEDTIMER_ISMONOTONIC )
 {
   RBOOL( QElapsedTimer::isMonotonic () );
 }
-
 
 HB_FUNC_STATIC( QELAPSEDTIMER_NEWFROM )
 {
@@ -282,6 +266,5 @@ HB_FUNC_STATIC( QELAPSEDTIMER_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

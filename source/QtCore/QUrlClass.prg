@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -135,7 +135,6 @@ HB_FUNC_STATIC( QURL_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QUrl ( const QString & url )
 */
@@ -144,7 +143,6 @@ HB_FUNC_STATIC( QURL_NEW2 )
   QUrl * o = new QUrl ( PQSTRING(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QUrl ( const QUrl & other )
@@ -155,7 +153,6 @@ HB_FUNC_STATIC( QURL_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QUrl ( const QString & url, ParsingMode parsingMode )
 */
@@ -164,7 +161,6 @@ HB_FUNC_STATIC( QURL_NEW4 )
   QUrl * o = new QUrl ( PQSTRING(1), (QUrl::ParsingMode) hb_parni(2) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QUrl ()
 //[2]QUrl ( const QString & url )
@@ -210,8 +206,6 @@ HB_FUNC_STATIC( QURL_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 void addEncodedQueryItem ( const QByteArray & key, const QByteArray & value )
 */
@@ -225,7 +219,6 @@ HB_FUNC_STATIC( QURL_ADDENCODEDQUERYITEM )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void addQueryItem ( const QString & key, const QString & value )
 */
@@ -238,7 +231,6 @@ HB_FUNC_STATIC( QURL_ADDQUERYITEM )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QList<QByteArray> allEncodedQueryItemValues ( const QByteArray & key ) const
@@ -283,7 +275,6 @@ HB_FUNC_STATIC( QURL_ALLENCODEDQUERYITEMVALUES )
   }
 }
 
-
 /*
 QStringList allQueryItemValues ( const QString & key ) const
 */
@@ -296,7 +287,6 @@ HB_FUNC_STATIC( QURL_ALLQUERYITEMVALUES )
   }
 }
 
-
 /*
 QString authority () const
 */
@@ -308,7 +298,6 @@ HB_FUNC_STATIC( QURL_AUTHORITY )
     RQSTRING( obj->authority () );
   }
 }
-
 
 /*
 void clear ()
@@ -323,7 +312,6 @@ HB_FUNC_STATIC( QURL_CLEAR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QByteArray encodedFragment () const
 */
@@ -336,7 +324,6 @@ HB_FUNC_STATIC( QURL_ENCODEDFRAGMENT )
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
 
 /*
 QByteArray encodedHost () const
@@ -351,7 +338,6 @@ HB_FUNC_STATIC( QURL_ENCODEDHOST )
   }
 }
 
-
 /*
 QByteArray encodedPassword () const
 */
@@ -364,7 +350,6 @@ HB_FUNC_STATIC( QURL_ENCODEDPASSWORD )
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
 
 /*
 QByteArray encodedPath () const
@@ -379,7 +364,6 @@ HB_FUNC_STATIC( QURL_ENCODEDPATH )
   }
 }
 
-
 /*
 QByteArray encodedQuery () const
 */
@@ -392,7 +376,6 @@ HB_FUNC_STATIC( QURL_ENCODEDQUERY )
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
 
 /*
 QByteArray encodedQueryItemValue ( const QByteArray & key ) const
@@ -407,8 +390,6 @@ HB_FUNC_STATIC( QURL_ENCODEDQUERYITEMVALUE )
   }
 }
 
-
-
 /*
 QByteArray encodedUserName () const
 */
@@ -422,7 +403,6 @@ HB_FUNC_STATIC( QURL_ENCODEDUSERNAME )
   }
 }
 
-
 /*
 QString errorString () const
 */
@@ -434,7 +414,6 @@ HB_FUNC_STATIC( QURL_ERRORSTRING )
     RQSTRING( obj->errorString () );
   }
 }
-
 
 /*
 QString fragment () const
@@ -448,7 +427,6 @@ HB_FUNC_STATIC( QURL_FRAGMENT )
   }
 }
 
-
 /*
 bool hasEncodedQueryItem ( const QByteArray & key ) const
 */
@@ -460,7 +438,6 @@ HB_FUNC_STATIC( QURL_HASENCODEDQUERYITEM )
     RBOOL( obj->hasEncodedQueryItem ( *PQBYTEARRAY(1) ) );
   }
 }
-
 
 /*
 bool hasFragment () const
@@ -474,7 +451,6 @@ HB_FUNC_STATIC( QURL_HASFRAGMENT )
   }
 }
 
-
 /*
 bool hasQuery () const
 */
@@ -486,7 +462,6 @@ HB_FUNC_STATIC( QURL_HASQUERY )
     RBOOL( obj->hasQuery () );
   }
 }
-
 
 /*
 bool hasQueryItem ( const QString & key ) const
@@ -500,7 +475,6 @@ HB_FUNC_STATIC( QURL_HASQUERYITEM )
   }
 }
 
-
 /*
 QString host () const
 */
@@ -512,7 +486,6 @@ HB_FUNC_STATIC( QURL_HOST )
     RQSTRING( obj->host () );
   }
 }
-
 
 /*
 bool isEmpty () const
@@ -526,7 +499,6 @@ HB_FUNC_STATIC( QURL_ISEMPTY )
   }
 }
 
-
 /*
 bool isLocalFile () const
 */
@@ -538,7 +510,6 @@ HB_FUNC_STATIC( QURL_ISLOCALFILE )
     RBOOL( obj->isLocalFile () );
   }
 }
-
 
 /*
 bool isParentOf ( const QUrl & childUrl ) const
@@ -552,7 +523,6 @@ HB_FUNC_STATIC( QURL_ISPARENTOF )
   }
 }
 
-
 /*
 bool isRelative () const
 */
@@ -564,7 +534,6 @@ HB_FUNC_STATIC( QURL_ISRELATIVE )
     RBOOL( obj->isRelative () );
   }
 }
-
 
 /*
 bool isValid () const
@@ -578,7 +547,6 @@ HB_FUNC_STATIC( QURL_ISVALID )
   }
 }
 
-
 /*
 QString password () const
 */
@@ -590,7 +558,6 @@ HB_FUNC_STATIC( QURL_PASSWORD )
     RQSTRING( obj->password () );
   }
 }
-
 
 /*
 QString path () const
@@ -604,7 +571,6 @@ HB_FUNC_STATIC( QURL_PATH )
   }
 }
 
-
 /*
 int port () const
 */
@@ -617,7 +583,6 @@ HB_FUNC_STATIC( QURL_PORT1 )
   }
 }
 
-
 /*
 int port ( int defaultPort ) const
 */
@@ -629,7 +594,6 @@ HB_FUNC_STATIC( QURL_PORT2 )
     RINT( obj->port ( PINT(1) ) );
   }
 }
-
 
 //[1]int port () const
 //[2]int port ( int defaultPort ) const
@@ -658,10 +622,6 @@ HB_FUNC_STATIC( QURL_QUERYITEMVALUE )
   }
 }
 
-
-
-
-
 /*
 void removeAllEncodedQueryItems ( const QByteArray & key )
 */
@@ -674,7 +634,6 @@ HB_FUNC_STATIC( QURL_REMOVEALLENCODEDQUERYITEMS )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void removeAllQueryItems ( const QString & key )
@@ -689,7 +648,6 @@ HB_FUNC_STATIC( QURL_REMOVEALLQUERYITEMS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void removeEncodedQueryItem ( const QByteArray & key )
 */
@@ -702,7 +660,6 @@ HB_FUNC_STATIC( QURL_REMOVEENCODEDQUERYITEM )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void removeQueryItem ( const QString & key )
@@ -717,7 +674,6 @@ HB_FUNC_STATIC( QURL_REMOVEQUERYITEM )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QUrl resolved ( const QUrl & relative ) const
 */
@@ -731,7 +687,6 @@ HB_FUNC_STATIC( QURL_RESOLVED )
   }
 }
 
-
 /*
 QString scheme () const
 */
@@ -743,7 +698,6 @@ HB_FUNC_STATIC( QURL_SCHEME )
     RQSTRING( obj->scheme () );
   }
 }
-
 
 /*
 void setAuthority ( const QString & authority )
@@ -758,7 +712,6 @@ HB_FUNC_STATIC( QURL_SETAUTHORITY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setEncodedFragment ( const QByteArray & fragment )
 */
@@ -771,7 +724,6 @@ HB_FUNC_STATIC( QURL_SETENCODEDFRAGMENT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setEncodedHost ( const QByteArray & host )
@@ -786,7 +738,6 @@ HB_FUNC_STATIC( QURL_SETENCODEDHOST )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setEncodedPassword ( const QByteArray & password )
 */
@@ -799,7 +750,6 @@ HB_FUNC_STATIC( QURL_SETENCODEDPASSWORD )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setEncodedPath ( const QByteArray & path )
@@ -814,7 +764,6 @@ HB_FUNC_STATIC( QURL_SETENCODEDPATH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setEncodedQuery ( const QByteArray & query )
 */
@@ -827,8 +776,6 @@ HB_FUNC_STATIC( QURL_SETENCODEDQUERY )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
 
 /*
 void setEncodedUrl ( const QByteArray & encodedUrl )
@@ -843,7 +790,6 @@ HB_FUNC_STATIC( QURL_SETENCODEDURL1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setEncodedUrl ( const QByteArray & encodedUrl, ParsingMode parsingMode )
 */
@@ -857,7 +803,6 @@ HB_FUNC_STATIC( QURL_SETENCODEDURL2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setEncodedUrl ( const QByteArray & encodedUrl )
 //[2]void setEncodedUrl ( const QByteArray & encodedUrl, ParsingMode parsingMode )
@@ -887,7 +832,6 @@ HB_FUNC_STATIC( QURL_SETENCODEDUSERNAME )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setFragment ( const QString & fragment )
 */
@@ -900,7 +844,6 @@ HB_FUNC_STATIC( QURL_SETFRAGMENT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setHost ( const QString & host )
@@ -915,7 +858,6 @@ HB_FUNC_STATIC( QURL_SETHOST )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPassword ( const QString & password )
 */
@@ -928,7 +870,6 @@ HB_FUNC_STATIC( QURL_SETPASSWORD )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setPath ( const QString & path )
@@ -943,7 +884,6 @@ HB_FUNC_STATIC( QURL_SETPATH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPort ( int port )
 */
@@ -956,7 +896,6 @@ HB_FUNC_STATIC( QURL_SETPORT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setQueryDelimiters ( char valueDelimiter, char pairDelimiter )
@@ -973,8 +912,6 @@ HB_FUNC_STATIC( QURL_SETQUERYDELIMITERS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 void setScheme ( const QString & scheme )
 */
@@ -987,7 +924,6 @@ HB_FUNC_STATIC( QURL_SETSCHEME )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setUrl ( const QString & url )
@@ -1002,7 +938,6 @@ HB_FUNC_STATIC( QURL_SETURL1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setUrl ( const QString & url, ParsingMode parsingMode )
 */
@@ -1016,7 +951,6 @@ HB_FUNC_STATIC( QURL_SETURL2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setUrl ( const QString & url )
 //[2]void setUrl ( const QString & url, ParsingMode parsingMode )
@@ -1046,7 +980,6 @@ HB_FUNC_STATIC( QURL_SETUSERINFO )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setUserName ( const QString & userName )
 */
@@ -1059,7 +992,6 @@ HB_FUNC_STATIC( QURL_SETUSERNAME )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void swap ( QUrl & other )
@@ -1075,7 +1007,6 @@ HB_FUNC_STATIC( QURL_SWAP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QByteArray toEncoded ( FormattingOptions options = None ) const
 */
@@ -1089,7 +1020,6 @@ HB_FUNC_STATIC( QURL_TOENCODED )
   }
 }
 
-
 /*
 QString toLocalFile () const
 */
@@ -1101,7 +1031,6 @@ HB_FUNC_STATIC( QURL_TOLOCALFILE )
     RQSTRING( obj->toLocalFile () );
   }
 }
-
 
 /*
 QString toString ( FormattingOptions options = None ) const
@@ -1115,7 +1044,6 @@ HB_FUNC_STATIC( QURL_TOSTRING )
   }
 }
 
-
 /*
 QString topLevelDomain () const
 */
@@ -1127,7 +1055,6 @@ HB_FUNC_STATIC( QURL_TOPLEVELDOMAIN )
     RQSTRING( obj->topLevelDomain () );
   }
 }
-
 
 /*
 QString userInfo () const
@@ -1141,7 +1068,6 @@ HB_FUNC_STATIC( QURL_USERINFO )
   }
 }
 
-
 /*
 QString userName () const
 */
@@ -1154,8 +1080,6 @@ HB_FUNC_STATIC( QURL_USERNAME )
   }
 }
 
-
-
 /*
 QString fromAce ( const QByteArray & domain )
 */
@@ -1163,7 +1087,6 @@ HB_FUNC_STATIC( QURL_FROMACE )
 {
   RQSTRING( QUrl::fromAce ( *PQBYTEARRAY(1) ) );
 }
-
 
 /*
 QUrl fromEncoded ( const QByteArray & input )
@@ -1174,7 +1097,6 @@ HB_FUNC_STATIC( QURL_FROMENCODED1 )
   _qt4xhb_createReturnClass ( ptr, "QURL", true );
 }
 
-
 /*
 QUrl fromEncoded ( const QByteArray & input, ParsingMode parsingMode )
 */
@@ -1184,7 +1106,6 @@ HB_FUNC_STATIC( QURL_FROMENCODED2 )
   QUrl * ptr = new QUrl( QUrl::fromEncoded ( *PQBYTEARRAY(1), (QUrl::ParsingMode) par2 ) );
   _qt4xhb_createReturnClass ( ptr, "QURL", true );
 }
-
 
 //[1]QUrl fromEncoded ( const QByteArray & input )
 //[2]QUrl fromEncoded ( const QByteArray & input, ParsingMode parsingMode )
@@ -1210,7 +1131,6 @@ HB_FUNC_STATIC( QURL_FROMLOCALFILE )
   _qt4xhb_createReturnClass ( ptr, "QURL", true );
 }
 
-
 /*
 QString fromPercentEncoding ( const QByteArray & input )
 */
@@ -1218,7 +1138,6 @@ HB_FUNC_STATIC( QURL_FROMPERCENTENCODING )
 {
   RQSTRING( QUrl::fromPercentEncoding ( *PQBYTEARRAY(1) ) );
 }
-
 
 /*
 QUrl fromUserInput ( const QString & userInput )
@@ -1229,7 +1148,6 @@ HB_FUNC_STATIC( QURL_FROMUSERINPUT )
   _qt4xhb_createReturnClass ( ptr, "QURL", true );
 }
 
-
 /*
 QStringList idnWhitelist ()
 */
@@ -1237,7 +1155,6 @@ HB_FUNC_STATIC( QURL_IDNWHITELIST )
 {
   RQSTRINGLIST( QUrl::idnWhitelist () );
 }
-
 
 /*
 void setIdnWhitelist ( const QStringList & list )
@@ -1248,7 +1165,6 @@ HB_FUNC_STATIC( QURL_SETIDNWHITELIST )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QByteArray toAce ( const QString & domain )
 */
@@ -1257,7 +1173,6 @@ HB_FUNC_STATIC( QURL_TOACE )
   QByteArray * ptr = new QByteArray( QUrl::toAce ( PQSTRING(1) ) );
   _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
 }
-
 
 /*
 QByteArray toPercentEncoding ( const QString & input, const QByteArray & exclude = QByteArray(), const QByteArray & include = QByteArray() )
@@ -1269,7 +1184,6 @@ HB_FUNC_STATIC( QURL_TOPERCENTENCODING )
   QByteArray * ptr = new QByteArray( QUrl::toPercentEncoding ( PQSTRING(1), par2, par3 ) );
   _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
 }
-
 
 HB_FUNC_STATIC( QURL_NEWFROM )
 {
@@ -1325,6 +1239,5 @@ HB_FUNC_STATIC( QURL_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

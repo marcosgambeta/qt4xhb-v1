@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -47,7 +47,6 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
 HB_FUNC_STATIC( QVARIANTANIMATION_DELETE )
 {
   QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -63,8 +62,6 @@ HB_FUNC_STATIC( QVARIANTANIMATION_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 QVariant currentValue () const
 */
@@ -77,7 +74,6 @@ HB_FUNC_STATIC( QVARIANTANIMATION_CURRENTVALUE )
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
-
 
 /*
 QEasingCurve easingCurve () const
@@ -92,7 +88,6 @@ HB_FUNC_STATIC( QVARIANTANIMATION_EASINGCURVE )
   }
 }
 
-
 /*
 QVariant endValue () const
 */
@@ -105,7 +100,6 @@ HB_FUNC_STATIC( QVARIANTANIMATION_ENDVALUE )
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
-
 
 /*
 QVariant keyValueAt ( qreal step ) const
@@ -120,8 +114,6 @@ HB_FUNC_STATIC( QVARIANTANIMATION_KEYVALUEAT )
   }
 }
 
-
-
 /*
 void setDuration ( int msecs )
 */
@@ -134,7 +126,6 @@ HB_FUNC_STATIC( QVARIANTANIMATION_SETDURATION )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setEasingCurve ( const QEasingCurve & easing )
@@ -149,7 +140,6 @@ HB_FUNC_STATIC( QVARIANTANIMATION_SETEASINGCURVE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setEndValue ( const QVariant & value )
 */
@@ -162,7 +152,6 @@ HB_FUNC_STATIC( QVARIANTANIMATION_SETENDVALUE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setKeyValueAt ( qreal step, const QVariant & value )
@@ -177,8 +166,6 @@ HB_FUNC_STATIC( QVARIANTANIMATION_SETKEYVALUEAT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 void setStartValue ( const QVariant & value )
 */
@@ -192,7 +179,6 @@ HB_FUNC_STATIC( QVARIANTANIMATION_SETSTARTVALUE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QVariant startValue () const
 */
@@ -205,9 +191,5 @@ HB_FUNC_STATIC( QVARIANTANIMATION_STARTVALUE )
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
-
-
-
-
 
 #pragma ENDDUMP

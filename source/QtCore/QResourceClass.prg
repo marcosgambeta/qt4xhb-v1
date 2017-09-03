@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -64,7 +64,6 @@ HB_FUNC_STATIC( QRESOURCE_NEW )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 HB_FUNC_STATIC( QRESOURCE_DELETE )
 {
   QResource * obj = (QResource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -80,7 +79,6 @@ HB_FUNC_STATIC( QRESOURCE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString absoluteFilePath () const
 */
@@ -92,7 +90,6 @@ HB_FUNC_STATIC( QRESOURCE_ABSOLUTEFILEPATH )
     RQSTRING( obj->absoluteFilePath () );
   }
 }
-
 
 /*
 const uchar * data () const
@@ -107,7 +104,6 @@ HB_FUNC_STATIC( QRESOURCE_DATA )
   }
 }
 
-
 /*
 QString fileName () const
 */
@@ -119,7 +115,6 @@ HB_FUNC_STATIC( QRESOURCE_FILENAME )
     RQSTRING( obj->fileName () );
   }
 }
-
 
 /*
 bool isCompressed () const
@@ -133,7 +128,6 @@ HB_FUNC_STATIC( QRESOURCE_ISCOMPRESSED )
   }
 }
 
-
 /*
 bool isValid () const
 */
@@ -145,7 +139,6 @@ HB_FUNC_STATIC( QRESOURCE_ISVALID )
     RBOOL( obj->isValid () );
   }
 }
-
 
 /*
 QLocale locale () const
@@ -160,7 +153,6 @@ HB_FUNC_STATIC( QRESOURCE_LOCALE )
   }
 }
 
-
 /*
 void setFileName ( const QString & file )
 */
@@ -173,7 +165,6 @@ HB_FUNC_STATIC( QRESOURCE_SETFILENAME )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setLocale ( const QLocale & locale )
@@ -188,7 +179,6 @@ HB_FUNC_STATIC( QRESOURCE_SETLOCALE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 qint64 size () const
 */
@@ -201,8 +191,6 @@ HB_FUNC_STATIC( QRESOURCE_SIZE )
   }
 }
 
-
-
 /*
 bool registerResource ( const QString & rccFileName, const QString & mapRoot = QString() )
 */
@@ -211,8 +199,6 @@ HB_FUNC_STATIC( QRESOURCE_REGISTERRESOURCE )
   RBOOL( QResource::registerResource ( PQSTRING(1), OPQSTRING(2,QString()) ) );
 }
 
-
-
 /*
 bool unregisterResource ( const QString & rccFileName, const QString & mapRoot = QString() )
 */
@@ -220,7 +206,6 @@ HB_FUNC_STATIC( QRESOURCE_UNREGISTERRESOURCE )
 {
   RBOOL( QResource::unregisterResource ( PQSTRING(1), OPQSTRING(2,QString()) ) );
 }
-
 
 HB_FUNC_STATIC( QRESOURCE_NEWFROM )
 {
@@ -276,7 +261,5 @@ HB_FUNC_STATIC( QRESOURCE_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

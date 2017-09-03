@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QTextBoundaryFinder
 
@@ -63,7 +62,6 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QTextBoundaryFinder(const QTextBoundaryFinder &other)
 */
@@ -73,7 +71,6 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW2 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QTextBoundaryFinder(BoundaryType type, const QString &string)
 */
@@ -82,7 +79,6 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW3 )
   QTextBoundaryFinder * o = new QTextBoundaryFinder ( (QTextBoundaryFinder::BoundaryType) hb_parni(1), PQSTRING(2) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 /*
 QTextBoundaryFinder(BoundaryType type, const QChar *chars, int length, unsigned char *buffer = 0, int bufferSize = 0)
@@ -94,7 +90,6 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW4 )
   QTextBoundaryFinder * o = new QTextBoundaryFinder ( (QTextBoundaryFinder::BoundaryType) hb_parni(1), par2, PINT(3), par4, OPINT(5,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QTextBoundaryFinder()
 //[2]QTextBoundaryFinder(const QTextBoundaryFinder &other)
@@ -140,7 +135,6 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool isValid() const
 */
@@ -152,7 +146,6 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_ISVALID )
     RBOOL( obj->isValid () );
   }
 }
-
 
 /*
 BoundaryType type() const
@@ -166,7 +159,6 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TYPE )
   }
 }
 
-
 /*
 QString string() const
 */
@@ -178,7 +170,6 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_STRING )
     RQSTRING( obj->string () );
   }
 }
-
 
 /*
 void toStart()
@@ -193,7 +184,6 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TOSTART )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void toEnd()
 */
@@ -207,7 +197,6 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TOEND )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int position() const
 */
@@ -219,7 +208,6 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_POSITION )
     RINT( obj->position () );
   }
 }
-
 
 /*
 void setPosition(int position)
@@ -234,7 +222,6 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_SETPOSITION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int toNextBoundary()
 */
@@ -246,7 +233,6 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TONEXTBOUNDARY )
     RINT( obj->toNextBoundary () );
   }
 }
-
 
 /*
 int toPreviousBoundary()
@@ -260,7 +246,6 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TOPREVIOUSBOUNDARY )
   }
 }
 
-
 /*
 bool isAtBoundary() const
 */
@@ -273,7 +258,6 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_ISATBOUNDARY )
   }
 }
 
-
 /*
 BoundaryReasons boundaryReasons() const
 */
@@ -285,7 +269,6 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_BOUNDARYREASONS )
     hb_retni( (int) obj->boundaryReasons () );
   }
 }
-
 
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEWFROM )
 {
@@ -341,7 +324,5 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

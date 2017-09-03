@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QStringMatcher
 
@@ -58,7 +57,6 @@ HB_FUNC_STATIC( QSTRINGMATCHER_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QStringMatcher(const QString &pattern,Qt::CaseSensitivity cs = Qt::CaseSensitive)
 */
@@ -68,7 +66,6 @@ HB_FUNC_STATIC( QSTRINGMATCHER_NEW2 )
   QStringMatcher * o = new QStringMatcher ( PQSTRING(1), (Qt::CaseSensitivity) par2 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QStringMatcher(const QChar *uc, int len,Qt::CaseSensitivity cs = Qt::CaseSensitive)
@@ -81,7 +78,6 @@ HB_FUNC_STATIC( QSTRINGMATCHER_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QStringMatcher(const QStringMatcher &other)
 */
@@ -90,7 +86,6 @@ HB_FUNC_STATIC( QSTRINGMATCHER_NEW4 )
   QStringMatcher * o = new QStringMatcher ( *PQSTRINGMATCHER(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QStringMatcher()
 //[2]QStringMatcher(const QString &pattern,Qt::CaseSensitivity cs = Qt::CaseSensitive)
@@ -136,7 +131,6 @@ HB_FUNC_STATIC( QSTRINGMATCHER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPattern(const QString &pattern)
 */
@@ -149,7 +143,6 @@ HB_FUNC_STATIC( QSTRINGMATCHER_SETPATTERN )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setCaseSensitivity(Qt::CaseSensitivity cs)
@@ -164,7 +157,6 @@ HB_FUNC_STATIC( QSTRINGMATCHER_SETCASESENSITIVITY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int indexIn(const QString &str, int from = 0) const
 */
@@ -176,7 +168,6 @@ HB_FUNC_STATIC( QSTRINGMATCHER_INDEXIN1 )
     RINT( obj->indexIn ( PQSTRING(1), OPINT(2,0) ) );
   }
 }
-
 
 /*
 int indexIn(const QChar *str, int length, int from = 0) const
@@ -191,7 +182,6 @@ HB_FUNC_STATIC( QSTRINGMATCHER_INDEXIN2 )
   }
 }
 
-
 /*
 QString pattern() const
 */
@@ -204,7 +194,6 @@ HB_FUNC_STATIC( QSTRINGMATCHER_PATTERN )
   }
 }
 
-
 /*
 Qt::CaseSensitivity caseSensitivity() const
 */
@@ -216,7 +205,6 @@ HB_FUNC_STATIC( QSTRINGMATCHER_CASESENSITIVITY )
     hb_retni( (int) obj->caseSensitivity () );
   }
 }
-
 
 HB_FUNC_STATIC( QSTRINGMATCHER_NEWFROM )
 {
@@ -272,7 +260,5 @@ HB_FUNC_STATIC( QSTRINGMATCHER_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

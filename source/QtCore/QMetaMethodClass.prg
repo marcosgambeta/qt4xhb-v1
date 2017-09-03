@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -68,7 +68,6 @@ HB_FUNC_STATIC( QMETAMETHOD_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QMETAMETHOD_DELETE )
 {
   QMetaMethod * obj = (QMetaMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -84,7 +83,6 @@ HB_FUNC_STATIC( QMETAMETHOD_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 const char *signature() const
 */
@@ -98,7 +96,6 @@ HB_FUNC_STATIC( QMETAMETHOD_SIGNATURE )
   }
 }
 
-
 /*
 const char *typeName() const
 */
@@ -111,7 +108,6 @@ HB_FUNC_STATIC( QMETAMETHOD_TYPENAME )
     hb_retc( str1 );
   }
 }
-
 
 /*
 QList<QByteArray> parameterTypes() const
@@ -156,7 +152,6 @@ HB_FUNC_STATIC( QMETAMETHOD_PARAMETERTYPES )
   }
 }
 
-
 /*
 QList<QByteArray> parameterNames() const
 */
@@ -200,7 +195,6 @@ HB_FUNC_STATIC( QMETAMETHOD_PARAMETERNAMES )
   }
 }
 
-
 /*
 const char *tag() const
 */
@@ -214,7 +208,6 @@ HB_FUNC_STATIC( QMETAMETHOD_TAG )
   }
 }
 
-
 /*
 Access access() const
 */
@@ -226,7 +219,6 @@ HB_FUNC_STATIC( QMETAMETHOD_ACCESS )
     hb_retni( (int) obj->access () );
   }
 }
-
 
 /*
 MethodType methodType() const
@@ -240,7 +232,6 @@ HB_FUNC_STATIC( QMETAMETHOD_METHODTYPE )
   }
 }
 
-
 /*
 int attributes() const
 */
@@ -252,7 +243,6 @@ HB_FUNC_STATIC( QMETAMETHOD_ATTRIBUTES )
     RINT( obj->attributes () );
   }
 }
-
 
 /*
 int methodIndex() const
@@ -266,7 +256,6 @@ HB_FUNC_STATIC( QMETAMETHOD_METHODINDEX )
   }
 }
 
-
 /*
 int revision() const
 */
@@ -278,7 +267,6 @@ HB_FUNC_STATIC( QMETAMETHOD_REVISION )
     RINT( obj->revision () );
   }
 }
-
 
 /*
 const QMetaObject *enclosingMetaObject() const
@@ -292,7 +280,6 @@ HB_FUNC_STATIC( QMETAMETHOD_ENCLOSINGMETAOBJECT )
     _qt4xhb_createReturnClass ( ptr, "QMETAOBJECT" );
   }
 }
-
 
 /*
 bool invoke(QObject *object,Qt::ConnectionType connectionType,QGenericReturnArgument returnValue,QGenericArgument val0 = QGenericArgument(0),QGenericArgument val1 = QGenericArgument(),QGenericArgument val2 = QGenericArgument(),QGenericArgument val3 = QGenericArgument(),QGenericArgument val4 = QGenericArgument(),QGenericArgument val5 = QGenericArgument(),QGenericArgument val6 = QGenericArgument(),QGenericArgument val7 = QGenericArgument(),QGenericArgument val8 = QGenericArgument(),QGenericArgument val9 = QGenericArgument()) const
@@ -317,7 +304,6 @@ HB_FUNC_STATIC( QMETAMETHOD_INVOKE1 )
   }
 }
 
-
 /*
 bool invoke(QObject *object,QGenericReturnArgument returnValue,QGenericArgument val0 = QGenericArgument(0),QGenericArgument val1 = QGenericArgument(),QGenericArgument val2 = QGenericArgument(),QGenericArgument val3 = QGenericArgument(),QGenericArgument val4 = QGenericArgument(),QGenericArgument val5 = QGenericArgument(),QGenericArgument val6 = QGenericArgument(),QGenericArgument val7 = QGenericArgument(),QGenericArgument val8 = QGenericArgument(),QGenericArgument val9 = QGenericArgument()) const
 */
@@ -341,7 +327,6 @@ HB_FUNC_STATIC( QMETAMETHOD_INVOKE2 )
   }
 }
 
-
 /*
 bool invoke(QObject *object,Qt::ConnectionType connectionType,QGenericArgument val0 = QGenericArgument(0),QGenericArgument val1 = QGenericArgument(),QGenericArgument val2 = QGenericArgument(),QGenericArgument val3 = QGenericArgument(),QGenericArgument val4 = QGenericArgument(),QGenericArgument val5 = QGenericArgument(),QGenericArgument val6 = QGenericArgument(),QGenericArgument val7 = QGenericArgument(),QGenericArgument val8 = QGenericArgument(),QGenericArgument val9 = QGenericArgument()) const
 */
@@ -364,7 +349,6 @@ HB_FUNC_STATIC( QMETAMETHOD_INVOKE3 )
   }
 }
 
-
 /*
 bool invoke(QObject *object,QGenericArgument val0 = QGenericArgument(0),QGenericArgument val1 = QGenericArgument(),QGenericArgument val2 = QGenericArgument(),QGenericArgument val3 = QGenericArgument(),QGenericArgument val4 = QGenericArgument(),QGenericArgument val5 = QGenericArgument(),QGenericArgument val6 = QGenericArgument(),QGenericArgument val7 = QGenericArgument(),QGenericArgument val8 = QGenericArgument(),QGenericArgument val9 = QGenericArgument()) const
 */
@@ -386,7 +370,6 @@ HB_FUNC_STATIC( QMETAMETHOD_INVOKE4 )
     RBOOL( obj->invoke ( PQOBJECT(1), par2, par3, par4, par5, par6, par7, par8, par9, par10, par11 ) );
   }
 }
-
 
 //[1]bool invoke(QObject *object,Qt::ConnectionType connectionType,QGenericReturnArgument returnValue,QGenericArgument val0 = QGenericArgument(0),QGenericArgument val1 = QGenericArgument(),QGenericArgument val2 = QGenericArgument(),QGenericArgument val3 = QGenericArgument(),QGenericArgument val4 = QGenericArgument(),QGenericArgument val5 = QGenericArgument(),QGenericArgument val6 = QGenericArgument(),QGenericArgument val7 = QGenericArgument(),QGenericArgument val8 = QGenericArgument(),QGenericArgument val9 = QGenericArgument()) const
 //[2]bool invoke(QObject *object,QGenericReturnArgument returnValue,QGenericArgument val0 = QGenericArgument(0),QGenericArgument val1 = QGenericArgument(),QGenericArgument val2 = QGenericArgument(),QGenericArgument val3 = QGenericArgument(),QGenericArgument val4 = QGenericArgument(),QGenericArgument val5 = QGenericArgument(),QGenericArgument val6 = QGenericArgument(),QGenericArgument val7 = QGenericArgument(),QGenericArgument val8 = QGenericArgument(),QGenericArgument val9 = QGenericArgument()) const
@@ -412,7 +395,6 @@ HB_FUNC_STATIC( QMETAMETHOD_INVOKE )
     HB_FUNC_EXEC( QMETAMETHOD_INVOKE4 );
   }
 }
-
 
 HB_FUNC_STATIC( QMETAMETHOD_NEWFROM )
 {
@@ -468,6 +450,5 @@ HB_FUNC_STATIC( QMETAMETHOD_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

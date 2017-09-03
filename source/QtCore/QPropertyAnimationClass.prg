@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -52,7 +52,6 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QPropertyAnimation ( QObject * target, const QByteArray & propertyName, QObject * parent = 0 )
 */
@@ -61,7 +60,6 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_NEW2 )
   QPropertyAnimation * o = new QPropertyAnimation ( PQOBJECT(1), *PQBYTEARRAY(2), OPQOBJECT(3,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QPropertyAnimation ( QObject * parent = 0 )
 //[2]QPropertyAnimation ( QObject * target, const QByteArray & propertyName, QObject * parent = 0 )
@@ -97,8 +95,6 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 QByteArray propertyName () const
 */
@@ -111,7 +107,6 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_PROPERTYNAME )
     _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
   }
 }
-
 
 /*
 void setPropertyName ( const QByteArray & propertyName )
@@ -126,7 +121,6 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_SETPROPERTYNAME )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setTargetObject ( QObject * target )
 */
@@ -140,7 +134,6 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_SETTARGETOBJECT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QObject * targetObject () const
 */
@@ -153,8 +146,5 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_TARGETOBJECT )
     _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
-
-
-
 
 #pragma ENDDUMP

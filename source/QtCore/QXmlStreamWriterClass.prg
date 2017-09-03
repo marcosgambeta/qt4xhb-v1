@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -96,7 +96,6 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QXmlStreamWriter(QIODevice * device)
 */
@@ -105,7 +104,6 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_NEW2 )
   QXmlStreamWriter * o = new QXmlStreamWriter ( PQIODEVICE(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QXmlStreamWriter(QByteArray * array)
@@ -116,7 +114,6 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QXmlStreamWriter(QString * string)
 */
@@ -126,7 +123,6 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_NEW4 )
   QXmlStreamWriter * o = new QXmlStreamWriter ( par1 );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QXmlStreamWriter()
 //[2]QXmlStreamWriter(QIODevice * device)
@@ -172,7 +168,6 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool autoFormatting() const
 */
@@ -185,7 +180,6 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_AUTOFORMATTING )
   }
 }
 
-
 /*
 int autoFormattingIndent() const
 */
@@ -197,7 +191,6 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_AUTOFORMATTINGINDENT )
     RINT( obj->autoFormattingIndent () );
   }
 }
-
 
 /*
 QTextCodec * codec() const
@@ -212,7 +205,6 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_CODEC )
   }
 }
 
-
 /*
 QIODevice * device() const
 */
@@ -226,7 +218,6 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_DEVICE )
   }
 }
 
-
 /*
 bool hasError() const
 */
@@ -238,7 +229,6 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_HASERROR )
     RBOOL( obj->hasError () );
   }
 }
-
 
 /*
 void setAutoFormatting(bool enable)
@@ -253,7 +243,6 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_SETAUTOFORMATTING )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setAutoFormattingIndent(int spacesOrTabs)
 */
@@ -266,7 +255,6 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_SETAUTOFORMATTINGINDENT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setCodec(QTextCodec * codec)
@@ -281,7 +269,6 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_SETCODEC1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setCodec(const char * codecName)
 */
@@ -294,7 +281,6 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_SETCODEC2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setCodec(QTextCodec * codec)
 //[2]void setCodec(const char * codecName)
@@ -324,7 +310,6 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_SETDEVICE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void writeAttribute(const QString & namespaceUri, const QString & name, const QString & value)
 */
@@ -337,7 +322,6 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEATTRIBUTE1 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void writeAttribute(const QString & qualifiedName, const QString & value)
@@ -352,7 +336,6 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEATTRIBUTE2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void writeAttribute(const QXmlStreamAttribute & attribute)
 */
@@ -365,7 +348,6 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEATTRIBUTE3 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void writeAttribute(const QString & namespaceUri, const QString & name, const QString & value)
 //[2]void writeAttribute(const QString & qualifiedName, const QString & value)
@@ -400,7 +382,6 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEATTRIBUTES )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void writeCDATA(const QString & text)
 */
@@ -413,7 +394,6 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITECDATA )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void writeCharacters(const QString & text)
@@ -428,7 +408,6 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITECHARACTERS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void writeComment(const QString & text)
 */
@@ -441,7 +420,6 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITECOMMENT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void writeCurrentToken(const QXmlStreamReader & reader)
@@ -456,7 +434,6 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITECURRENTTOKEN )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void writeDTD(const QString & dtd)
 */
@@ -469,7 +446,6 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEDTD )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void writeDefaultNamespace(const QString & namespaceUri)
@@ -484,7 +460,6 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEDEFAULTNAMESPACE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void writeEmptyElement(const QString & namespaceUri, const QString & name)
 */
@@ -498,7 +473,6 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEEMPTYELEMENT1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void writeEmptyElement(const QString & qualifiedName)
 */
@@ -511,7 +485,6 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEEMPTYELEMENT2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void writeEmptyElement(const QString & namespaceUri, const QString & name)
 //[2]void writeEmptyElement(const QString & qualifiedName)
@@ -541,7 +514,6 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEENDDOCUMENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void writeEndElement()
 */
@@ -554,7 +526,6 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEENDELEMENT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void writeEntityReference(const QString & name)
@@ -569,7 +540,6 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEENTITYREFERENCE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void writeNamespace(const QString & namespaceUri, const QString & prefix = QString())
 */
@@ -582,7 +552,6 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITENAMESPACE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void writeProcessingInstruction(const QString & target, const QString & data = QString())
@@ -597,7 +566,6 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEPROCESSINGINSTRUCTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void writeStartDocument(const QString & version)
 */
@@ -610,7 +578,6 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITESTARTDOCUMENT1 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void writeStartDocument(const QString & version, bool standalone)
@@ -625,7 +592,6 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITESTARTDOCUMENT2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void writeStartDocument()
 */
@@ -638,7 +604,6 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITESTARTDOCUMENT3 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void writeStartDocument(const QString & version)
 //[2]void writeStartDocument(const QString & version, bool standalone)
@@ -673,7 +638,6 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITESTARTELEMENT1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void writeStartElement(const QString & qualifiedName)
 */
@@ -686,7 +650,6 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITESTARTELEMENT2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void writeStartElement(const QString & namespaceUri, const QString & name)
 //[2]void writeStartElement(const QString & qualifiedName)
@@ -716,7 +679,6 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITETEXTELEMENT1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void writeTextElement(const QString & qualifiedName, const QString & text)
 */
@@ -729,7 +691,6 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITETEXTELEMENT2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void writeTextElement(const QString & namespaceUri, const QString & name, const QString & text)
 //[2]void writeTextElement(const QString & qualifiedName, const QString & text)
@@ -745,7 +706,6 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITETEXTELEMENT )
     HB_FUNC_EXEC( QXMLSTREAMWRITER_WRITETEXTELEMENT2 );
   }
 }
-
 
 HB_FUNC_STATIC( QXMLSTREAMWRITER_NEWFROM )
 {

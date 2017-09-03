@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QLibrary INHERIT QObject
 
@@ -63,7 +62,6 @@ HB_FUNC_STATIC( QLIBRARY_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QLibrary(const QString& fileName, QObject *parent = 0)
 */
@@ -72,7 +70,6 @@ HB_FUNC_STATIC( QLIBRARY_NEW2 )
   QLibrary * o = new QLibrary ( PQSTRING(1), OPQOBJECT(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 /*
 QLibrary(const QString& fileName, int verNum, QObject *parent = 0)
@@ -83,7 +80,6 @@ HB_FUNC_STATIC( QLIBRARY_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QLibrary(const QString& fileName, const QString &version, QObject *parent = 0)
 */
@@ -92,7 +88,6 @@ HB_FUNC_STATIC( QLIBRARY_NEW4 )
   QLibrary * o = new QLibrary ( PQSTRING(1), PQSTRING(2), OPQOBJECT(3,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QLibrary(QObject *parent = 0)
 //[2]QLibrary(const QString& fileName, QObject *parent = 0)
@@ -138,7 +133,6 @@ HB_FUNC_STATIC( QLIBRARY_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void *resolve(const char *symbol)
 */
@@ -152,7 +146,6 @@ HB_FUNC_STATIC( QLIBRARY_RESOLVE1 )
   }
 }
 
-
 /*
 bool load()
 */
@@ -164,7 +157,6 @@ HB_FUNC_STATIC( QLIBRARY_LOAD )
     RBOOL( obj->load () );
   }
 }
-
 
 /*
 bool unload()
@@ -178,7 +170,6 @@ HB_FUNC_STATIC( QLIBRARY_UNLOAD )
   }
 }
 
-
 /*
 bool isLoaded() const
 */
@@ -190,7 +181,6 @@ HB_FUNC_STATIC( QLIBRARY_ISLOADED )
     RBOOL( obj->isLoaded () );
   }
 }
-
 
 /*
 void setFileName(const QString &fileName)
@@ -205,7 +195,6 @@ HB_FUNC_STATIC( QLIBRARY_SETFILENAME )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString fileName() const
 */
@@ -217,7 +206,6 @@ HB_FUNC_STATIC( QLIBRARY_FILENAME )
     RQSTRING( obj->fileName () );
   }
 }
-
 
 /*
 void setFileNameAndVersion(const QString &fileName, int verNum)
@@ -232,7 +220,6 @@ HB_FUNC_STATIC( QLIBRARY_SETFILENAMEANDVERSION1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setFileNameAndVersion(const QString &fileName, const QString &version)
 */
@@ -245,7 +232,6 @@ HB_FUNC_STATIC( QLIBRARY_SETFILENAMEANDVERSION2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void setFileNameAndVersion(const QString &fileName, int verNum)
 //[2]void setFileNameAndVersion(const QString &fileName, const QString &version)
@@ -274,7 +260,6 @@ HB_FUNC_STATIC( QLIBRARY_ERRORSTRING )
   }
 }
 
-
 /*
 void setLoadHints(LoadHints hints)
 */
@@ -288,7 +273,6 @@ HB_FUNC_STATIC( QLIBRARY_SETLOADHINTS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 LoadHints loadHints() const
 */
@@ -301,8 +285,6 @@ HB_FUNC_STATIC( QLIBRARY_LOADHINTS )
   }
 }
 
-
-
 /*
 static void *resolve(const QString &fileName, const char *symbol)
 */
@@ -311,7 +293,6 @@ HB_FUNC_STATIC( QLIBRARY_RESOLVE2 )
   void * retptr = QLibrary::resolve ( PQSTRING(1), (const char *) hb_parc(2) );
   hb_retptr( (void *) retptr );
 }
-
 
 /*
 static void *resolve(const QString &fileName, int verNum, const char *symbol)
@@ -322,7 +303,6 @@ HB_FUNC_STATIC( QLIBRARY_RESOLVE3 )
   hb_retptr( (void *) retptr );
 }
 
-
 /*
 static void *resolve(const QString &fileName, const QString &version, const char *symbol)
 */
@@ -331,7 +311,6 @@ HB_FUNC_STATIC( QLIBRARY_RESOLVE4 )
   void * retptr = QLibrary::resolve ( PQSTRING(1), PQSTRING(2), (const char *) hb_parc(3) );
   hb_retptr( (void *) retptr );
 }
-
 
 //[1]void *resolve(const char *symbol)
 //[2]static void *resolve(const QString &fileName, const char *symbol)
@@ -365,8 +344,5 @@ HB_FUNC_STATIC( QLIBRARY_ISLIBRARY )
 {
   RBOOL( QLibrary::isLibrary ( PQSTRING(1) ) );
 }
-
-
-
 
 #pragma ENDDUMP

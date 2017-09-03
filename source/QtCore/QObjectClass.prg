@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -1443,7 +1443,6 @@ METHOD onGestureOverrideEvent (cb) CLASS QObject
    ENDIF
 RETURN r
 
-
 PROCEDURE destroyObject () CLASS QObject
    IF ::self_destruction
       ::delete()
@@ -1470,7 +1469,6 @@ HB_FUNC_STATIC( QOBJECT_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QOBJECT_DELETE )
 {
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -1486,8 +1484,6 @@ HB_FUNC_STATIC( QOBJECT_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 bool blockSignals ( bool block )
 */
@@ -1499,7 +1495,6 @@ HB_FUNC_STATIC( QOBJECT_BLOCKSIGNALS )
     RBOOL( obj->blockSignals ( PBOOL(1) ) );
   }
 }
-
 
 /*
 const QObjectList & children () const
@@ -1544,10 +1539,6 @@ HB_FUNC_STATIC( QOBJECT_CHILDREN )
   }
 }
 
-
-
-
-
 /*
 void dumpObjectInfo ()
 */
@@ -1561,7 +1552,6 @@ HB_FUNC_STATIC( QOBJECT_DUMPOBJECTINFO )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void dumpObjectTree ()
 */
@@ -1574,7 +1564,6 @@ HB_FUNC_STATIC( QOBJECT_DUMPOBJECTTREE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QList<QByteArray> dynamicPropertyNames () const
@@ -1619,7 +1608,6 @@ HB_FUNC_STATIC( QOBJECT_DYNAMICPROPERTYNAMES )
   }
 }
 
-
 /*
 virtual bool event ( QEvent * e )
 */
@@ -1631,7 +1619,6 @@ HB_FUNC_STATIC( QOBJECT_EVENT )
     RBOOL( obj->event ( PQEVENT(1) ) );
   }
 }
-
 
 /*
 virtual bool eventFilter ( QObject * watched, QEvent * event )
@@ -1645,7 +1632,6 @@ HB_FUNC_STATIC( QOBJECT_EVENTFILTER )
   }
 }
 
-
 /*
 T findChild ( const QString & name = QString() ) const
 */
@@ -1658,8 +1644,6 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILD )
     _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
-
-
 
 /*
 QList<T> findChildren ( const QString & name = QString() ) const
@@ -1704,7 +1688,6 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILDREN1 )
   }
 }
 
-
 /*
 QList<T> findChildren ( const QRegExp & regExp ) const
 */
@@ -1748,7 +1731,6 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILDREN2 )
   }
 }
 
-
 //[1]QList<T> findChildren ( const QString & name = QString() ) const
 //[2]QList<T> findChildren ( const QRegExp & regExp ) const
 
@@ -1776,7 +1758,6 @@ HB_FUNC_STATIC( QOBJECT_INHERITS )
   }
 }
 
-
 /*
 void installEventFilter ( QObject * filterObj )
 */
@@ -1790,7 +1771,6 @@ HB_FUNC_STATIC( QOBJECT_INSTALLEVENTFILTER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool isWidgetType () const
 */
@@ -1802,7 +1782,6 @@ HB_FUNC_STATIC( QOBJECT_ISWIDGETTYPE )
     RBOOL( obj->isWidgetType () );
   }
 }
-
 
 /*
 void killTimer ( int id )
@@ -1817,7 +1796,6 @@ HB_FUNC_STATIC( QOBJECT_KILLTIMER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual const QMetaObject * metaObject () const
 */
@@ -1830,7 +1808,6 @@ HB_FUNC_STATIC( QOBJECT_METAOBJECT )
     _qt4xhb_createReturnClass ( ptr, "QMETAOBJECT" );
   }
 }
-
 
 /*
 void moveToThread ( QThread * targetThread )
@@ -1846,7 +1823,6 @@ HB_FUNC_STATIC( QOBJECT_MOVETOTHREAD )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString objectName () const
 */
@@ -1858,7 +1834,6 @@ HB_FUNC_STATIC( QOBJECT_OBJECTNAME )
     RQSTRING( obj->objectName () );
   }
 }
-
 
 /*
 QObject * parent () const
@@ -1873,7 +1848,6 @@ HB_FUNC_STATIC( QOBJECT_PARENT )
   }
 }
 
-
 /*
 QVariant property ( const char * name ) const
 */
@@ -1886,7 +1860,6 @@ HB_FUNC_STATIC( QOBJECT_PROPERTY )
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
-
 
 /*
 void removeEventFilter ( QObject * obj )
@@ -1901,7 +1874,6 @@ HB_FUNC_STATIC( QOBJECT_REMOVEEVENTFILTER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setObjectName ( const QString & name )
 */
@@ -1914,7 +1886,6 @@ HB_FUNC_STATIC( QOBJECT_SETOBJECTNAME )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setParent ( QObject * parent )
@@ -1929,7 +1900,6 @@ HB_FUNC_STATIC( QOBJECT_SETPARENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool setProperty ( const char * name, const QVariant & value )
 */
@@ -1941,7 +1911,6 @@ HB_FUNC_STATIC( QOBJECT_SETPROPERTY )
     RBOOL( obj->setProperty ( (const char *) hb_parc(1), *PQVARIANT(2) ) );
   }
 }
-
 
 /*
 bool signalsBlocked () const
@@ -1955,7 +1924,6 @@ HB_FUNC_STATIC( QOBJECT_SIGNALSBLOCKED )
   }
 }
 
-
 /*
 int startTimer ( int interval )
 */
@@ -1967,7 +1935,6 @@ HB_FUNC_STATIC( QOBJECT_STARTTIMER )
     RINT( obj->startTimer ( PINT(1) ) );
   }
 }
-
 
 /*
 QThread * thread () const
@@ -1982,7 +1949,6 @@ HB_FUNC_STATIC( QOBJECT_THREAD )
   }
 }
 
-
 /*
 void deleteLater ()
 */
@@ -1995,7 +1961,6 @@ HB_FUNC_STATIC( QOBJECT_DELETELATER )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QOBJECT_NEWFROM )
 {
@@ -2051,7 +2016,5 @@ HB_FUNC_STATIC( QOBJECT_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

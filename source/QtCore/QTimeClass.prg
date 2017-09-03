@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -76,7 +76,6 @@ HB_FUNC_STATIC( QTIME_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QTime(int h, int m, int s = 0, int ms = 0)
 */
@@ -85,7 +84,6 @@ HB_FUNC_STATIC( QTIME_NEW2 )
   QTime * o = new QTime ( PINT(1), PINT(2), OPINT(3,0), OPINT(4,0) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QTime()
 //[2]QTime(int h, int m, int s = 0, int ms = 0)
@@ -133,7 +131,6 @@ HB_FUNC_STATIC( QTIME_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QTime addMSecs(int ms) const
 */
@@ -146,7 +143,6 @@ HB_FUNC_STATIC( QTIME_ADDMSECS )
     _qt4xhb_createReturnClass ( ptr, "QTIME", true );
   }
 }
-
 
 /*
 QTime addSecs(int s) const
@@ -161,7 +157,6 @@ HB_FUNC_STATIC( QTIME_ADDSECS )
   }
 }
 
-
 /*
 int elapsed() const
 */
@@ -173,7 +168,6 @@ HB_FUNC_STATIC( QTIME_ELAPSED )
     RINT( obj->elapsed () );
   }
 }
-
 
 /*
 int hour() const
@@ -187,7 +181,6 @@ HB_FUNC_STATIC( QTIME_HOUR )
   }
 }
 
-
 /*
 bool isNull() const
 */
@@ -199,7 +192,6 @@ HB_FUNC_STATIC( QTIME_ISNULL )
     RBOOL( obj->isNull () );
   }
 }
-
 
 /*
 bool isValid() const
@@ -213,7 +205,6 @@ HB_FUNC_STATIC( QTIME_ISVALID1 )
   }
 }
 
-
 /*
 int minute() const
 */
@@ -225,7 +216,6 @@ HB_FUNC_STATIC( QTIME_MINUTE )
     RINT( obj->minute () );
   }
 }
-
 
 /*
 int msec() const
@@ -239,7 +229,6 @@ HB_FUNC_STATIC( QTIME_MSEC )
   }
 }
 
-
 /*
 int msecsTo(const QTime & t) const
 */
@@ -251,7 +240,6 @@ HB_FUNC_STATIC( QTIME_MSECSTO )
     RINT( obj->msecsTo ( *PQTIME(1) ) );
   }
 }
-
 
 /*
 int restart()
@@ -265,7 +253,6 @@ HB_FUNC_STATIC( QTIME_RESTART )
   }
 }
 
-
 /*
 int second() const
 */
@@ -277,7 +264,6 @@ HB_FUNC_STATIC( QTIME_SECOND )
     RINT( obj->second () );
   }
 }
-
 
 /*
 int secsTo(const QTime & t) const
@@ -291,7 +277,6 @@ HB_FUNC_STATIC( QTIME_SECSTO )
   }
 }
 
-
 /*
 bool setHMS(int h, int m, int s, int ms = 0)
 */
@@ -303,7 +288,6 @@ HB_FUNC_STATIC( QTIME_SETHMS )
     RBOOL( obj->setHMS ( PINT(1), PINT(2), PINT(3), OPINT(4,0) ) );
   }
 }
-
 
 /*
 void start()
@@ -318,7 +302,6 @@ HB_FUNC_STATIC( QTIME_START )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString toString(const QString & format) const
 */
@@ -331,7 +314,6 @@ HB_FUNC_STATIC( QTIME_TOSTRING1 )
   }
 }
 
-
 /*
 QString toString(Qt::DateFormat format = Qt::TextDate) const
 */
@@ -343,7 +325,6 @@ HB_FUNC_STATIC( QTIME_TOSTRING2 )
     RQSTRING( obj->toString ( ISNIL(1)? Qt::TextDate : (Qt::DateFormat) hb_parni(1) ) );
   }
 }
-
 
 //[1]QString toString(const QString & format) const
 //[2]QString toString(Qt::DateFormat format = Qt::TextDate) const
@@ -360,7 +341,6 @@ HB_FUNC_STATIC( QTIME_TOSTRING )
   }
 }
 
-
 /*
 QTime currentTime()
 */
@@ -369,7 +349,6 @@ HB_FUNC_STATIC( QTIME_CURRENTTIME )
   QTime * ptr = new QTime( QTime::currentTime () );
   _qt4xhb_createReturnClass ( ptr, "QTIME", true );
 }
-
 
 /*
 QTime fromString(const QString & string, Qt::DateFormat format = Qt::TextDate)
@@ -381,7 +360,6 @@ HB_FUNC_STATIC( QTIME_FROMSTRING1 )
   _qt4xhb_createReturnClass ( ptr, "QTIME", true );
 }
 
-
 /*
 QTime fromString(const QString & string, const QString & format)
 */
@@ -390,7 +368,6 @@ HB_FUNC_STATIC( QTIME_FROMSTRING2 )
   QTime * ptr = new QTime( QTime::fromString ( PQSTRING(1), PQSTRING(2) ) );
   _qt4xhb_createReturnClass ( ptr, "QTIME", true );
 }
-
 
 //[1]QTime fromString(const QString & string, Qt::DateFormat format = Qt::TextDate)
 //[2]QTime fromString(const QString & string, const QString & format)
@@ -414,7 +391,6 @@ HB_FUNC_STATIC( QTIME_ISVALID2 )
 {
   RBOOL( QTime::isValid ( PINT(1), PINT(2), PINT(3), OPINT(4,0) ) );
 }
-
 
 //[1]bool isValid() const
 //[2]bool isValid(int h, int m, int s, int ms = 0)
@@ -442,7 +418,6 @@ HB_FUNC_STATIC( QTIME_ISVALID )
     HB_FUNC_EXEC( QTIME_ISVALID2 );
   }
 }
-
 
 HB_FUNC_STATIC( QTIME_NEWFROM )
 {

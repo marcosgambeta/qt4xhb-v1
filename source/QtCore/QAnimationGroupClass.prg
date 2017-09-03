@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -43,7 +43,6 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
 HB_FUNC_STATIC( QANIMATIONGROUP_DELETE )
 {
   QAnimationGroup * obj = (QAnimationGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -59,8 +58,6 @@ HB_FUNC_STATIC( QANIMATIONGROUP_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 void addAnimation ( QAbstractAnimation * animation )
 */
@@ -75,7 +72,6 @@ HB_FUNC_STATIC( QANIMATIONGROUP_ADDANIMATION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QAbstractAnimation * animationAt ( int index ) const
 */
@@ -89,7 +85,6 @@ HB_FUNC_STATIC( QANIMATIONGROUP_ANIMATIONAT )
   }
 }
 
-
 /*
 int animationCount () const
 */
@@ -101,7 +96,6 @@ HB_FUNC_STATIC( QANIMATIONGROUP_ANIMATIONCOUNT )
     RINT( obj->animationCount () );
   }
 }
-
 
 /*
 void clear ()
@@ -116,7 +110,6 @@ HB_FUNC_STATIC( QANIMATIONGROUP_CLEAR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int indexOfAnimation ( QAbstractAnimation * animation ) const
 */
@@ -129,7 +122,6 @@ HB_FUNC_STATIC( QANIMATIONGROUP_INDEXOFANIMATION )
     RINT( obj->indexOfAnimation ( par1 ) );
   }
 }
-
 
 /*
 void insertAnimation ( int index, QAbstractAnimation * animation )
@@ -145,7 +137,6 @@ HB_FUNC_STATIC( QANIMATIONGROUP_INSERTANIMATION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void removeAnimation ( QAbstractAnimation * animation )
 */
@@ -160,7 +151,6 @@ HB_FUNC_STATIC( QANIMATIONGROUP_REMOVEANIMATION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QAbstractAnimation *	takeAnimation ( int index )
 */
@@ -173,8 +163,5 @@ HB_FUNC_STATIC( QANIMATIONGROUP_TAKEANIMATION )
     _qt4xhb_createReturnClass ( ptr, "QABSTRACTANIMATION" );
   }
 }
-
-
-
 
 #pragma ENDDUMP

@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QSocketNotifier INHERIT QObject
 
@@ -47,7 +46,6 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QSOCKETNOTIFIER_DELETE )
 {
   QSocketNotifier * obj = (QSocketNotifier *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -63,7 +61,6 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int socket() const
 */
@@ -75,7 +72,6 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_SOCKET )
     RINT( obj->socket () );
   }
 }
-
 
 /*
 Type type() const
@@ -89,7 +85,6 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_TYPE )
   }
 }
 
-
 /*
 bool isEnabled() const
 */
@@ -101,7 +96,6 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_ISENABLED )
     RBOOL( obj->isEnabled () );
   }
 }
-
 
 /*
 void setEnabled(bool)
@@ -115,10 +109,5 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_SETENABLED )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
-
 
 #pragma ENDDUMP

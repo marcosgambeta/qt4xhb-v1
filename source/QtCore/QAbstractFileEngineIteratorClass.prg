@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -49,7 +49,6 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
 HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_DELETE )
 {
   QAbstractFileEngineIterator * obj = (QAbstractFileEngineIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -65,7 +64,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QFileInfo currentFileInfo () const
 */
@@ -79,7 +77,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_CURRENTFILEINFO )
   }
 }
 
-
 /*
 virtual QString currentFileName () const = 0
 */
@@ -91,7 +88,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_CURRENTFILENAME )
     RQSTRING( obj->currentFileName () );
   }
 }
-
 
 /*
 QString currentFilePath () const
@@ -105,7 +101,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_CURRENTFILEPATH )
   }
 }
 
-
 /*
 QDir::Filters filters () const
 */
@@ -117,7 +112,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_FILTERS )
     hb_retni( (int) obj->filters () );
   }
 }
-
 
 /*
 virtual bool hasNext () const = 0
@@ -131,7 +125,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_HASNEXT )
   }
 }
 
-
 /*
 QStringList nameFilters () const
 */
@@ -143,7 +136,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_NAMEFILTERS )
     RQSTRINGLIST( obj->nameFilters () );
   }
 }
-
 
 /*
 virtual QString next () = 0
@@ -157,7 +149,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_NEXT )
   }
 }
 
-
 /*
 QString path () const
 */
@@ -169,7 +160,6 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_PATH )
     RQSTRING( obj->path () );
   }
 }
-
 
 HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_NEWFROM )
 {
@@ -225,7 +215,5 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

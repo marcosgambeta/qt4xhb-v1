@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QTranslator INHERIT QObject
 
@@ -49,7 +48,6 @@ HB_FUNC_STATIC( QTRANSLATOR_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QTRANSLATOR_DELETE )
 {
   QTranslator * obj = (QTranslator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -65,7 +63,6 @@ HB_FUNC_STATIC( QTRANSLATOR_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual bool isEmpty() const
 */
@@ -77,7 +74,6 @@ HB_FUNC_STATIC( QTRANSLATOR_ISEMPTY )
     RBOOL( obj->isEmpty () );
   }
 }
-
 
 /*
 bool load(const QString & filename, const QString & directory = QString(), const QString & search_delimiters = QString(), const QString & suffix = QString())
@@ -91,7 +87,6 @@ HB_FUNC_STATIC( QTRANSLATOR_LOAD1 )
   }
 }
 
-
 /*
 bool load(const QLocale & locale, const QString & filename, const QString & prefix = QString(), const QString & directory = QString(), const QString & suffix = QString())
 */
@@ -103,8 +98,6 @@ HB_FUNC_STATIC( QTRANSLATOR_LOAD2 )
     RBOOL( obj->load ( *PQLOCALE(1), PQSTRING(2), OPQSTRING(3,QString()), OPQSTRING(4,QString()), OPQSTRING(5,QString()) ) );
   }
 }
-
-
 
 //[1]bool load(const QString & filename, const QString & directory = QString(), const QString & search_delimiters = QString(), const QString & suffix = QString())
 //[2]bool load(const QLocale & locale, const QString & filename, const QString & prefix = QString(), const QString & directory = QString(), const QString & suffix = QString())
@@ -141,8 +134,5 @@ HB_FUNC_STATIC( QTRANSLATOR_TRANSLATE )
     RQSTRING( obj->translate ( (const char *) hb_parc(1), (const char *) hb_parc(2), (const char *) hb_parc(3), OPINT(4,-1) ) );
   }
 }
-
-
-
 
 #pragma ENDDUMP

@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QEvent
 
@@ -55,7 +54,6 @@ HB_FUNC_STATIC( QEVENT_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QEVENT_DELETE )
 {
   QEvent * obj = (QEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -71,8 +69,6 @@ HB_FUNC_STATIC( QEVENT_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 void accept ()
 */
@@ -85,7 +81,6 @@ HB_FUNC_STATIC( QEVENT_ACCEPT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void ignore ()
@@ -100,7 +95,6 @@ HB_FUNC_STATIC( QEVENT_IGNORE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool isAccepted () const
 */
@@ -112,7 +106,6 @@ HB_FUNC_STATIC( QEVENT_ISACCEPTED )
     RBOOL( obj->isAccepted () );
   }
 }
-
 
 /*
 void setAccepted ( bool accepted )
@@ -127,7 +120,6 @@ HB_FUNC_STATIC( QEVENT_SETACCEPTED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool spontaneous () const
 */
@@ -139,7 +131,6 @@ HB_FUNC_STATIC( QEVENT_SPONTANEOUS )
     RBOOL( obj->spontaneous () );
   }
 }
-
 
 /*
 Type type () const
@@ -153,8 +144,6 @@ HB_FUNC_STATIC( QEVENT_TYPE )
   }
 }
 
-
-
 /*
 int registerEventType ( int hint = -1 )
 */
@@ -162,7 +151,6 @@ HB_FUNC_STATIC( QEVENT_REGISTEREVENTTYPE )
 {
   RINT( QEvent::registerEventType ( OPINT(1,-1) ) );
 }
-
 
 HB_FUNC_STATIC( QEVENT_NEWFROM )
 {
@@ -218,6 +206,5 @@ HB_FUNC_STATIC( QEVENT_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

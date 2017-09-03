@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -54,7 +54,6 @@ HB_FUNC_STATIC( QMETACLASSINFO_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QMETACLASSINFO_DELETE )
 {
   QMetaClassInfo * obj = (QMetaClassInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -70,7 +69,6 @@ HB_FUNC_STATIC( QMETACLASSINFO_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 const char *name() const
 */
@@ -83,7 +81,6 @@ HB_FUNC_STATIC( QMETACLASSINFO_NAME )
     hb_retc( str1 );
   }
 }
-
 
 /*
 const char *value() const
@@ -98,7 +95,6 @@ HB_FUNC_STATIC( QMETACLASSINFO_VALUE )
   }
 }
 
-
 /*
 const QMetaObject *enclosingMetaObject() const
 */
@@ -111,7 +107,6 @@ HB_FUNC_STATIC( QMETACLASSINFO_ENCLOSINGMETAOBJECT )
     _qt4xhb_createReturnClass ( ptr, "QMETAOBJECT" );
   }
 }
-
 
 HB_FUNC_STATIC( QMETACLASSINFO_NEWFROM )
 {
@@ -167,7 +162,5 @@ HB_FUNC_STATIC( QMETACLASSINFO_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

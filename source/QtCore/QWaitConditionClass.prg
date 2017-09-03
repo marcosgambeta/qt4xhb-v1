@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QWaitCondition
 
@@ -50,7 +49,6 @@ HB_FUNC_STATIC( QWAITCONDITION_NEW )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 HB_FUNC_STATIC( QWAITCONDITION_DELETE )
 {
   QWaitCondition * obj = (QWaitCondition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -66,9 +64,6 @@ HB_FUNC_STATIC( QWAITCONDITION_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
-
 /*
 void wakeAll ()
 */
@@ -82,7 +77,6 @@ HB_FUNC_STATIC( QWAITCONDITION_WAKEALL )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void wakeOne ()
 */
@@ -95,7 +89,6 @@ HB_FUNC_STATIC( QWAITCONDITION_WAKEONE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QWAITCONDITION_NEWFROM )
 {
@@ -151,6 +144,5 @@ HB_FUNC_STATIC( QWAITCONDITION_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -66,7 +66,6 @@ HB_FUNC_STATIC( QSTATE_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QState ( ChildMode childMode, QState * parent = 0 )
 */
@@ -75,7 +74,6 @@ HB_FUNC_STATIC( QSTATE_NEW2 )
   QState * o = new QState ( (QState::ChildMode) hb_parni(1), OPQSTATE(2,0) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QState ( QState * parent = 0 )
 //[2]QState ( ChildMode childMode, QState * parent = 0 )
@@ -111,7 +109,6 @@ HB_FUNC_STATIC( QSTATE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void addTransition ( QAbstractTransition * transition )
 */
@@ -125,7 +122,6 @@ HB_FUNC_STATIC( QSTATE_ADDTRANSITION1 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QSignalTransition * addTransition ( QObject * sender, const char * signal, QAbstractState * target )
@@ -141,7 +137,6 @@ HB_FUNC_STATIC( QSTATE_ADDTRANSITION2 )
   }
 }
 
-
 /*
 QAbstractTransition * addTransition ( QAbstractState * target )
 */
@@ -155,7 +150,6 @@ HB_FUNC_STATIC( QSTATE_ADDTRANSITION3 )
     _qt4xhb_createReturnClass ( ptr, "QABSTRACTTRANSITION" );
   }
 }
-
 
 //[1]void addTransition ( QAbstractTransition * transition )
 //[2]QSignalTransition * addTransition ( QObject * sender, const char * signal, QAbstractState * target )
@@ -190,7 +184,6 @@ HB_FUNC_STATIC( QSTATE_ASSIGNPROPERTY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 ChildMode childMode () const
 */
@@ -202,7 +195,6 @@ HB_FUNC_STATIC( QSTATE_CHILDMODE )
     hb_retni( (int) obj->childMode () );
   }
 }
-
 
 /*
 QAbstractState * errorState () const
@@ -217,7 +209,6 @@ HB_FUNC_STATIC( QSTATE_ERRORSTATE )
   }
 }
 
-
 /*
 QAbstractState * initialState () const
 */
@@ -230,7 +221,6 @@ HB_FUNC_STATIC( QSTATE_INITIALSTATE )
     _qt4xhb_createReturnClass ( ptr, "QABSTRACTSTATE" );
   }
 }
-
 
 /*
 void removeTransition ( QAbstractTransition * transition )
@@ -246,7 +236,6 @@ HB_FUNC_STATIC( QSTATE_REMOVETRANSITION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setChildMode ( ChildMode mode )
 */
@@ -259,7 +248,6 @@ HB_FUNC_STATIC( QSTATE_SETCHILDMODE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setErrorState ( QAbstractState * state )
@@ -275,7 +263,6 @@ HB_FUNC_STATIC( QSTATE_SETERRORSTATE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setInitialState ( QAbstractState * state )
 */
@@ -289,7 +276,6 @@ HB_FUNC_STATIC( QSTATE_SETINITIALSTATE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QList<QAbstractTransition *> transitions () const
@@ -333,10 +319,5 @@ HB_FUNC_STATIC( QSTATE_TRANSITIONS )
     hb_itemReturnRelease(pArray);
   }
 }
-
-
-
-
-
 
 #pragma ENDDUMP

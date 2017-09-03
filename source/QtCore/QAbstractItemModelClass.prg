@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -93,7 +93,6 @@ RETURN
 #include <QStringList>
 #include <QSize>
 
-
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_DELETE )
 {
   QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -109,7 +108,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QModelIndex buddy ( const QModelIndex & index ) const
 */
@@ -123,7 +121,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_BUDDY )
   }
 }
 
-
 /*
 virtual bool canFetchMore ( const QModelIndex & parent ) const
 */
@@ -135,7 +132,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_CANFETCHMORE )
     RBOOL( obj->canFetchMore ( *PQMODELINDEX(1) ) );
   }
 }
-
 
 /*
 virtual int columnCount ( const QModelIndex & parent = QModelIndex() ) const = 0
@@ -150,7 +146,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_COLUMNCOUNT )
   }
 }
 
-
 /*
 virtual QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const = 0
 */
@@ -163,7 +158,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_DATA )
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
-
 
 /*
 virtual bool dropMimeData ( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
@@ -178,7 +172,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_DROPMIMEDATA )
   }
 }
 
-
 /*
 virtual void fetchMore ( const QModelIndex & parent )
 */
@@ -192,7 +185,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_FETCHMORE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual Qt::ItemFlags flags ( const QModelIndex & index ) const
 */
@@ -204,7 +196,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_FLAGS )
     hb_retni( (int) obj->flags ( *PQMODELINDEX(1) ) );
   }
 }
-
 
 /*
 virtual bool hasChildren ( const QModelIndex & parent = QModelIndex() ) const
@@ -219,7 +210,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_HASCHILDREN )
   }
 }
 
-
 /*
 bool hasIndex ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
 */
@@ -233,7 +223,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_HASINDEX )
   }
 }
 
-
 /*
 virtual QVariant headerData ( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
 */
@@ -246,7 +235,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_HEADERDATA )
     _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
-
 
 /*
 virtual QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const = 0
@@ -262,7 +250,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_INDEX )
   }
 }
 
-
 /*
 bool insertColumn ( int column, const QModelIndex & parent = QModelIndex() )
 */
@@ -275,7 +262,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTCOLUMN )
     RBOOL( obj->insertColumn ( PINT(1), par2 ) );
   }
 }
-
 
 /*
 virtual bool insertColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
@@ -290,7 +276,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTCOLUMNS )
   }
 }
 
-
 /*
 bool insertRow ( int row, const QModelIndex & parent = QModelIndex() )
 */
@@ -304,7 +289,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTROW )
   }
 }
 
-
 /*
 virtual bool insertRows ( int row, int count, const QModelIndex & parent = QModelIndex() )
 */
@@ -317,8 +301,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTROWS )
     RBOOL( obj->insertRows ( PINT(1), PINT(2), par3 ) );
   }
 }
-
-
 
 /*
 virtual QModelIndexList match ( const QModelIndex & start, int role, const QVariant & value, int hits = 1, Qt::MatchFlags flags = Qt::MatchFlags( Qt::MatchStartsWith | Qt::MatchWrap ) ) const
@@ -363,7 +345,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_MATCH )
   }
 }
 
-
 /*
 virtual QMimeData * mimeData ( const QModelIndexList & indexes ) const
 */
@@ -378,7 +359,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_MIMEDATA )
   }
 }
 
-
 /*
 virtual QStringList mimeTypes () const
 */
@@ -390,7 +370,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_MIMETYPES )
     RQSTRINGLIST( obj->mimeTypes () );
   }
 }
-
 
 /*
 virtual QModelIndex parent ( const QModelIndex & index ) const = 0
@@ -405,7 +384,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_PARENT )
   }
 }
 
-
 /*
 bool removeColumn ( int column, const QModelIndex & parent = QModelIndex() )
 */
@@ -418,7 +396,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVECOLUMN )
     RBOOL( obj->removeColumn ( PINT(1), par2 ) );
   }
 }
-
 
 /*
 virtual bool removeColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
@@ -433,7 +410,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVECOLUMNS )
   }
 }
 
-
 /*
 bool removeRow ( int row, const QModelIndex & parent = QModelIndex() )
 */
@@ -446,7 +422,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVEROW )
     RBOOL( obj->removeRow ( PINT(1), par2 ) );
   }
 }
-
 
 /*
 virtual bool removeRows ( int row, int count, const QModelIndex & parent = QModelIndex() )
@@ -461,8 +436,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVEROWS )
   }
 }
 
-
-
 /*
 virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const = 0
 */
@@ -476,7 +449,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ROWCOUNT )
   }
 }
 
-
 /*
 virtual bool setData ( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
 */
@@ -489,7 +461,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SETDATA )
   }
 }
 
-
 /*
 virtual bool setHeaderData ( int section, Qt::Orientation orientation, const QVariant & value, int role = Qt::EditRole )
 */
@@ -501,8 +472,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SETHEADERDATA )
     RBOOL( obj->setHeaderData ( PINT(1), (Qt::Orientation) hb_parni(2), *PQVARIANT(3), OPINT(4,Qt::EditRole) ) );
   }
 }
-
-
 
 /*
 void setSupportedDragActions ( Qt::DropActions actions )
@@ -517,7 +486,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SETSUPPORTEDDRAGACTIONS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QModelIndex sibling ( int row, int column, const QModelIndex & index ) const
 */
@@ -530,7 +498,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SIBLING )
     _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
-
 
 /*
 virtual void sort ( int column, Qt::SortOrder order = Qt::AscendingOrder )
@@ -545,7 +512,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SORT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QSize span ( const QModelIndex & index ) const
 */
@@ -559,7 +525,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SPAN )
   }
 }
 
-
 /*
 Qt::DropActions supportedDragActions () const
 */
@@ -572,7 +537,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SUPPORTEDDRAGACTIONS )
   }
 }
 
-
 /*
 virtual Qt::DropActions supportedDropActions () const
 */
@@ -584,7 +548,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SUPPORTEDDROPACTIONS )
     hb_retni( (int) obj->supportedDropActions () );
   }
 }
-
 
 /*
 virtual void revert ()
@@ -599,7 +562,6 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_REVERT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual bool submit ()
 */
@@ -611,9 +573,5 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SUBMIT )
     RBOOL( obj->submit () );
   }
 }
-
-
-
-
 
 #pragma ENDDUMP

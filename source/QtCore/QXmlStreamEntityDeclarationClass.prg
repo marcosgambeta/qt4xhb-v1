@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -58,7 +58,6 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QXmlStreamEntityDeclaration(const QXmlStreamEntityDeclaration & other)
 */
@@ -67,7 +66,6 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NEW2 )
   QXmlStreamEntityDeclaration * o = new QXmlStreamEntityDeclaration ( *PQXMLSTREAMENTITYDECLARATION(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QXmlStreamEntityDeclaration()
 //[2]QXmlStreamEntityDeclaration(const QXmlStreamEntityDeclaration & other)
@@ -103,7 +101,6 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QStringRef name() const
 */
@@ -116,7 +113,6 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NAME )
     _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
-
 
 /*
 QStringRef notationName() const
@@ -131,7 +127,6 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NOTATIONNAME )
   }
 }
 
-
 /*
 QStringRef publicId() const
 */
@@ -144,7 +139,6 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_PUBLICID )
     _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
-
 
 /*
 QStringRef systemId() const
@@ -159,7 +153,6 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_SYSTEMID )
   }
 }
 
-
 /*
 QStringRef value() const
 */
@@ -172,7 +165,6 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_VALUE )
     _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
-
 
 HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NEWFROM )
 {
@@ -228,6 +220,5 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

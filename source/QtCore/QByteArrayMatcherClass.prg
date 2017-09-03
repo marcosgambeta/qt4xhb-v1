@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -60,7 +60,6 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QByteArrayMatcher ( const QByteArray & pattern )
 */
@@ -69,7 +68,6 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW2 )
   QByteArrayMatcher * o = new QByteArrayMatcher ( *PQBYTEARRAY(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 /*
 QByteArrayMatcher ( const char * pattern, int length )
@@ -80,7 +78,6 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QByteArrayMatcher ( const QByteArrayMatcher & other )
 */
@@ -89,7 +86,6 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW4 )
   QByteArrayMatcher * o = new QByteArrayMatcher ( *PQBYTEARRAYMATCHER(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QByteArrayMatcher ()
 //[2]QByteArrayMatcher ( const QByteArray & pattern )
@@ -135,7 +131,6 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int indexIn ( const QByteArray & ba, int from = 0 ) const
 */
@@ -148,7 +143,6 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_INDEXIN1 )
   }
 }
 
-
 /*
 int indexIn ( const char * str, int len, int from = 0 ) const
 */
@@ -160,7 +154,6 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_INDEXIN2 )
     RINT( obj->indexIn ( (const char *) hb_parc(1), PINT(2), OPINT(3,0) ) );
   }
 }
-
 
 //[1]int indexIn ( const QByteArray & ba, int from = 0 ) const
 //[2]int indexIn ( const char * str, int len, int from = 0 ) const
@@ -190,7 +183,6 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_PATTERN )
   }
 }
 
-
 /*
 void setPattern ( const QByteArray & pattern )
 */
@@ -203,7 +195,6 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_SETPATTERN )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEWFROM )
 {
@@ -259,7 +250,5 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

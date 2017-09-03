@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QMargins
 
@@ -59,7 +58,6 @@ HB_FUNC_STATIC( QMARGINS_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QMargins ( int left, int top, int right, int bottom )
 */
@@ -68,7 +66,6 @@ HB_FUNC_STATIC( QMARGINS_NEW2 )
   QMargins * o = new QMargins ( PINT(1), PINT(2), PINT(3), PINT(4) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QMargins ()
 //[2]QMargins ( int left, int top, int right, int bottom )
@@ -104,7 +101,6 @@ HB_FUNC_STATIC( QMARGINS_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int bottom () const
 */
@@ -116,7 +112,6 @@ HB_FUNC_STATIC( QMARGINS_BOTTOM )
     RINT( obj->bottom () );
   }
 }
-
 
 /*
 bool isNull () const
@@ -130,7 +125,6 @@ HB_FUNC_STATIC( QMARGINS_ISNULL )
   }
 }
 
-
 /*
 int left () const
 */
@@ -143,7 +137,6 @@ HB_FUNC_STATIC( QMARGINS_LEFT )
   }
 }
 
-
 /*
 int right () const
 */
@@ -155,7 +148,6 @@ HB_FUNC_STATIC( QMARGINS_RIGHT )
     RINT( obj->right () );
   }
 }
-
 
 /*
 void setBottom ( int bottom )
@@ -170,7 +162,6 @@ HB_FUNC_STATIC( QMARGINS_SETBOTTOM )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setLeft ( int left )
 */
@@ -183,7 +174,6 @@ HB_FUNC_STATIC( QMARGINS_SETLEFT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setRight ( int right )
@@ -198,7 +188,6 @@ HB_FUNC_STATIC( QMARGINS_SETRIGHT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setTop ( int Top )
 */
@@ -212,7 +201,6 @@ HB_FUNC_STATIC( QMARGINS_SETTOP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int top () const
 */
@@ -224,7 +212,6 @@ HB_FUNC_STATIC( QMARGINS_TOP )
     RINT( obj->top () );
   }
 }
-
 
 HB_FUNC_STATIC( QMARGINS_NEWFROM )
 {
@@ -280,6 +267,5 @@ HB_FUNC_STATIC( QMARGINS_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

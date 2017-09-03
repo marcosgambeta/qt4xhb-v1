@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QTimer INHERIT QObject
 
@@ -54,7 +53,6 @@ HB_FUNC_STATIC( QTIMER_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QTIMER_DELETE )
 {
   QTimer * obj = (QTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -70,8 +68,6 @@ HB_FUNC_STATIC( QTIMER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 int interval () const
 */
@@ -83,7 +79,6 @@ HB_FUNC_STATIC( QTIMER_INTERVAL )
     RINT( obj->interval () );
   }
 }
-
 
 /*
 bool isActive () const
@@ -97,7 +92,6 @@ HB_FUNC_STATIC( QTIMER_ISACTIVE )
   }
 }
 
-
 /*
 bool isSingleShot () const
 */
@@ -109,7 +103,6 @@ HB_FUNC_STATIC( QTIMER_ISSINGLESHOT )
     RBOOL( obj->isSingleShot () );
   }
 }
-
 
 /*
 void setInterval ( int msec )
@@ -124,7 +117,6 @@ HB_FUNC_STATIC( QTIMER_SETINTERVAL )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setSingleShot ( bool singleShot )
 */
@@ -138,7 +130,6 @@ HB_FUNC_STATIC( QTIMER_SETSINGLESHOT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int timerId () const
 */
@@ -150,7 +141,6 @@ HB_FUNC_STATIC( QTIMER_TIMERID )
     RINT( obj->timerId () );
   }
 }
-
 
 // Public Slots
 
@@ -167,7 +157,6 @@ HB_FUNC_STATIC( QTIMER_START1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void start ()
 */
@@ -180,7 +169,6 @@ HB_FUNC_STATIC( QTIMER_START2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void start ( int msec )
 //[2]void start ()
@@ -210,8 +198,6 @@ HB_FUNC_STATIC( QTIMER_STOP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 // Static Public Members
 
 /*
@@ -222,9 +208,5 @@ HB_FUNC_STATIC( QTIMER_SINGLESHOT )
   QTimer::singleShot ( PINT(1), PQOBJECT(2), (const char *) hb_parc(3) );
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

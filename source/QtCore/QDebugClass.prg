@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -58,7 +58,6 @@ HB_FUNC_STATIC( QDEBUG_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QDebug ( QString * string )
 */
@@ -69,7 +68,6 @@ HB_FUNC_STATIC( QDEBUG_NEW2 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QDebug ( QtMsgType type )
 */
@@ -79,7 +77,6 @@ HB_FUNC_STATIC( QDEBUG_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QDebug ( const QDebug & other )
 */
@@ -88,7 +85,6 @@ HB_FUNC_STATIC( QDEBUG_NEW4 )
   QDebug * o = new QDebug ( *PQDEBUG(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QDebug ( QIODevice * device )
 //[2]QDebug ( QString * string )
@@ -134,7 +130,6 @@ HB_FUNC_STATIC( QDEBUG_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QDebug & maybeSpace ()
 */
@@ -147,7 +142,6 @@ HB_FUNC_STATIC( QDEBUG_MAYBESPACE )
     _qt4xhb_createReturnClass ( ptr, "QDEBUG" );
   }
 }
-
 
 /*
 QDebug & nospace ()
@@ -162,7 +156,6 @@ HB_FUNC_STATIC( QDEBUG_NOSPACE )
   }
 }
 
-
 /*
 QDebug & space ()
 */
@@ -175,7 +168,6 @@ HB_FUNC_STATIC( QDEBUG_SPACE )
     _qt4xhb_createReturnClass ( ptr, "QDEBUG" );
   }
 }
-
 
 HB_FUNC_STATIC( QDEBUG_NEWFROM )
 {
@@ -231,7 +223,5 @@ HB_FUNC_STATIC( QDEBUG_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

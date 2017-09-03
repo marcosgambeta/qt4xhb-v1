@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -117,7 +117,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QXmlStreamReader(QIODevice * device)
 */
@@ -126,7 +125,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NEW2 )
   QXmlStreamReader * o = new QXmlStreamReader ( PQIODEVICE(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QXmlStreamReader(const QByteArray & data)
@@ -137,7 +135,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QXmlStreamReader(const QString & data)
 */
@@ -147,7 +144,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NEW4 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QXmlStreamReader(const char * data)
 */
@@ -156,7 +152,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NEW5 )
   QXmlStreamReader * o = new QXmlStreamReader ( (const char *) hb_parc(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QXmlStreamReader()
 //[2]QXmlStreamReader(QIODevice * device)
@@ -207,7 +202,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void addData(const QByteArray & data)
 */
@@ -220,7 +214,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ADDDATA1 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void addData(const QString & data)
@@ -235,7 +228,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ADDDATA2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void addData(const char * data)
 */
@@ -248,7 +240,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ADDDATA3 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void addData(const QByteArray & data)
 //[2]void addData(const QString & data)
@@ -279,7 +270,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ADDEXTRANAMESPACEDECLARATION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void addExtraNamespaceDeclarations(const QXmlStreamNamespaceDeclarations & extraNamespaceDeclarations)
 */
@@ -293,7 +283,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ADDEXTRANAMESPACEDECLARATIONS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool atEnd() const
 */
@@ -305,7 +294,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ATEND )
     RBOOL( obj->atEnd () );
   }
 }
-
 
 /*
 QXmlStreamAttributes attributes() const
@@ -320,7 +308,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ATTRIBUTES )
   }
 }
 
-
 /*
 qint64 characterOffset() const
 */
@@ -332,7 +319,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_CHARACTEROFFSET )
     RQINT64( obj->characterOffset () );
   }
 }
-
 
 /*
 void clear()
@@ -347,7 +333,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_CLEAR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 qint64 columnNumber() const
 */
@@ -359,7 +344,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_COLUMNNUMBER )
     RQINT64( obj->columnNumber () );
   }
 }
-
 
 /*
 QIODevice * device() const
@@ -374,7 +358,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_DEVICE )
   }
 }
 
-
 /*
 QStringRef documentEncoding() const
 */
@@ -387,7 +370,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_DOCUMENTENCODING )
     _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
-
 
 /*
 QStringRef documentVersion() const
@@ -402,7 +384,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_DOCUMENTVERSION )
   }
 }
 
-
 /*
 QStringRef dtdName() const
 */
@@ -415,7 +396,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_DTDNAME )
     _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
-
 
 /*
 QStringRef dtdPublicId() const
@@ -430,7 +410,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_DTDPUBLICID )
   }
 }
 
-
 /*
 QStringRef dtdSystemId() const
 */
@@ -443,7 +422,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_DTDSYSTEMID )
     _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
-
 
 /*
 QXmlStreamEntityDeclarations entityDeclarations() const
@@ -458,7 +436,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ENTITYDECLARATIONS )
   }
 }
 
-
 /*
 QXmlStreamEntityResolver * entityResolver() const
 */
@@ -472,7 +449,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ENTITYRESOLVER )
   }
 }
 
-
 /*
 Error error() const
 */
@@ -484,7 +460,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ERROR )
     hb_retni( (int) obj->error () );
   }
 }
-
 
 /*
 QString errorString() const
@@ -498,7 +473,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ERRORSTRING )
   }
 }
 
-
 /*
 bool hasError() const
 */
@@ -510,7 +484,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_HASERROR )
     RBOOL( obj->hasError () );
   }
 }
-
 
 /*
 bool isCDATA() const
@@ -524,7 +497,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISCDATA )
   }
 }
 
-
 /*
 bool isCharacters() const
 */
@@ -536,7 +508,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISCHARACTERS )
     RBOOL( obj->isCharacters () );
   }
 }
-
 
 /*
 bool isComment() const
@@ -550,7 +521,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISCOMMENT )
   }
 }
 
-
 /*
 bool isDTD() const
 */
@@ -562,7 +532,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISDTD )
     RBOOL( obj->isDTD () );
   }
 }
-
 
 /*
 bool isEndDocument() const
@@ -576,7 +545,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISENDDOCUMENT )
   }
 }
 
-
 /*
 bool isEndElement() const
 */
@@ -588,7 +556,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISENDELEMENT )
     RBOOL( obj->isEndElement () );
   }
 }
-
 
 /*
 bool isEntityReference() const
@@ -602,7 +569,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISENTITYREFERENCE )
   }
 }
 
-
 /*
 bool isProcessingInstruction() const
 */
@@ -614,7 +580,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISPROCESSINGINSTRUCTION )
     RBOOL( obj->isProcessingInstruction () );
   }
 }
-
 
 /*
 bool isStandaloneDocument() const
@@ -628,7 +593,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISSTANDALONEDOCUMENT )
   }
 }
 
-
 /*
 bool isStartDocument() const
 */
@@ -640,7 +604,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISSTARTDOCUMENT )
     RBOOL( obj->isStartDocument () );
   }
 }
-
 
 /*
 bool isStartElement() const
@@ -654,7 +617,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISSTARTELEMENT )
   }
 }
 
-
 /*
 bool isWhitespace() const
 */
@@ -667,7 +629,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ISWHITESPACE )
   }
 }
 
-
 /*
 qint64 lineNumber() const
 */
@@ -679,7 +640,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_LINENUMBER )
     RQINT64( obj->lineNumber () );
   }
 }
-
 
 /*
 QStringRef name() const
@@ -694,7 +654,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NAME )
   }
 }
 
-
 /*
 QXmlStreamNamespaceDeclarations namespaceDeclarations() const
 */
@@ -708,7 +667,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NAMESPACEDECLARATIONS )
   }
 }
 
-
 /*
 bool namespaceProcessing() const
 */
@@ -720,7 +678,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NAMESPACEPROCESSING )
     RBOOL( obj->namespaceProcessing () );
   }
 }
-
 
 /*
 QStringRef namespaceUri() const
@@ -735,7 +692,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NAMESPACEURI )
   }
 }
 
-
 /*
 QXmlStreamNotationDeclarations notationDeclarations() const
 */
@@ -748,7 +704,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NOTATIONDECLARATIONS )
     _qt4xhb_createReturnClass ( ptr, "QXMLSTREAMNOTATIONDECLARATIONS" );
   }
 }
-
 
 /*
 QStringRef prefix() const
@@ -763,7 +718,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_PREFIX )
   }
 }
 
-
 /*
 QStringRef processingInstructionData() const
 */
@@ -776,7 +730,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_PROCESSINGINSTRUCTIONDATA )
     _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
-
 
 /*
 QStringRef processingInstructionTarget() const
@@ -791,7 +744,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_PROCESSINGINSTRUCTIONTARGET )
   }
 }
 
-
 /*
 QStringRef qualifiedName() const
 */
@@ -804,7 +756,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_QUALIFIEDNAME )
     _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
   }
 }
-
 
 /*
 void raiseError(const QString & message = QString())
@@ -819,7 +770,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_RAISEERROR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString readElementText(ReadElementTextBehaviour behaviour = ErrorOnUnexpectedElement)
 */
@@ -831,7 +781,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_READELEMENTTEXT )
     RQSTRING( obj->readElementText ( ISNIL(1)? QXmlStreamReader::ErrorOnUnexpectedElement : (QXmlStreamReader::ReadElementTextBehaviour) hb_parni(1) ) );
   }
 }
-
 
 /*
 TokenType readNext()
@@ -845,7 +794,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_READNEXT )
   }
 }
 
-
 /*
 bool readNextStartElement()
 */
@@ -857,7 +805,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_READNEXTSTARTELEMENT )
     RBOOL( obj->readNextStartElement () );
   }
 }
-
 
 /*
 void setDevice(QIODevice * device)
@@ -871,7 +818,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_SETDEVICE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setEntityResolver(QXmlStreamEntityResolver * resolver)
@@ -887,7 +833,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_SETENTITYRESOLVER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setNamespaceProcessing(bool)
 */
@@ -900,7 +845,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_SETNAMESPACEPROCESSING )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void skipCurrentElement()
@@ -915,7 +859,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_SKIPCURRENTELEMENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QStringRef text() const
 */
@@ -929,7 +872,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_TEXT )
   }
 }
 
-
 /*
 QString tokenString() const
 */
@@ -942,7 +884,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_TOKENSTRING )
   }
 }
 
-
 /*
 TokenType tokenType() const
 */
@@ -954,7 +895,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_TOKENTYPE )
     hb_retni( (int) obj->tokenType () );
   }
 }
-
 
 HB_FUNC_STATIC( QXMLSTREAMREADER_NEWFROM )
 {
@@ -1010,6 +950,5 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

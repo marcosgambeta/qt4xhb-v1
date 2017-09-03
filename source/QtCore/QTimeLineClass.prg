@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QTimeLine INHERIT QObject
 
@@ -74,7 +73,6 @@ HB_FUNC_STATIC( QTIMELINE_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QTIMELINE_DELETE )
 {
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -90,7 +88,6 @@ HB_FUNC_STATIC( QTIMELINE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int currentFrame () const
 */
@@ -102,7 +99,6 @@ HB_FUNC_STATIC( QTIMELINE_CURRENTFRAME )
     RINT( obj->currentFrame () );
   }
 }
-
 
 /*
 int currentTime () const
@@ -116,7 +112,6 @@ HB_FUNC_STATIC( QTIMELINE_CURRENTTIME )
   }
 }
 
-
 /*
 qreal currentValue () const
 */
@@ -128,7 +123,6 @@ HB_FUNC_STATIC( QTIMELINE_CURRENTVALUE )
     RQREAL( obj->currentValue () );
   }
 }
-
 
 /*
 CurveShape curveShape () const
@@ -142,7 +136,6 @@ HB_FUNC_STATIC( QTIMELINE_CURVESHAPE )
   }
 }
 
-
 /*
 Direction direction () const
 */
@@ -154,7 +147,6 @@ HB_FUNC_STATIC( QTIMELINE_DIRECTION )
     hb_retni( (int) obj->direction () );
   }
 }
-
 
 /*
 int duration () const
@@ -168,8 +160,6 @@ HB_FUNC_STATIC( QTIMELINE_DURATION )
   }
 }
 
-
-
 /*
 int endFrame () const
 */
@@ -181,7 +171,6 @@ HB_FUNC_STATIC( QTIMELINE_ENDFRAME )
     RINT( obj->endFrame () );
   }
 }
-
 
 /*
 int frameForTime ( int msec ) const
@@ -195,7 +184,6 @@ HB_FUNC_STATIC( QTIMELINE_FRAMEFORTIME )
   }
 }
 
-
 /*
 int loopCount () const
 */
@@ -207,7 +195,6 @@ HB_FUNC_STATIC( QTIMELINE_LOOPCOUNT )
     RINT( obj->loopCount () );
   }
 }
-
 
 /*
 void setCurveShape ( CurveShape shape )
@@ -223,7 +210,6 @@ HB_FUNC_STATIC( QTIMELINE_SETCURVESHAPE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setDirection ( Direction direction )
 */
@@ -238,7 +224,6 @@ HB_FUNC_STATIC( QTIMELINE_SETDIRECTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setDuration ( int duration )
 */
@@ -251,7 +236,6 @@ HB_FUNC_STATIC( QTIMELINE_SETDURATION )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setEasingCurve ( const QEasingCurve & curve )
@@ -266,7 +250,6 @@ HB_FUNC_STATIC( QTIMELINE_SETEASINGCURVE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setEndFrame ( int frame )
 */
@@ -279,7 +262,6 @@ HB_FUNC_STATIC( QTIMELINE_SETENDFRAME )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setFrameRange ( int startFrame, int endFrame )
@@ -294,7 +276,6 @@ HB_FUNC_STATIC( QTIMELINE_SETFRAMERANGE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setLoopCount ( int count )
 */
@@ -307,7 +288,6 @@ HB_FUNC_STATIC( QTIMELINE_SETLOOPCOUNT )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setStartFrame ( int frame )
@@ -322,7 +302,6 @@ HB_FUNC_STATIC( QTIMELINE_SETSTARTFRAME )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setUpdateInterval ( int interval )
 */
@@ -336,7 +315,6 @@ HB_FUNC_STATIC( QTIMELINE_SETUPDATEINTERVAL )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int startFrame () const
 */
@@ -348,7 +326,6 @@ HB_FUNC_STATIC( QTIMELINE_STARTFRAME )
     RINT( obj->startFrame () );
   }
 }
-
 
 /*
 State state () const
@@ -362,7 +339,6 @@ HB_FUNC_STATIC( QTIMELINE_STATE )
   }
 }
 
-
 /*
 int updateInterval () const
 */
@@ -375,7 +351,6 @@ HB_FUNC_STATIC( QTIMELINE_UPDATEINTERVAL )
   }
 }
 
-
 /*
 virtual qreal valueForTime ( int msec ) const
 */
@@ -387,7 +362,6 @@ HB_FUNC_STATIC( QTIMELINE_VALUEFORTIME )
     RQREAL( obj->valueForTime ( PINT(1) ) );
   }
 }
-
 
 /*
 void resume ()
@@ -402,7 +376,6 @@ HB_FUNC_STATIC( QTIMELINE_RESUME )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setCurrentTime ( int msec )
 */
@@ -415,7 +388,6 @@ HB_FUNC_STATIC( QTIMELINE_SETCURRENTTIME )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void setPaused ( bool paused )
@@ -430,7 +402,6 @@ HB_FUNC_STATIC( QTIMELINE_SETPAUSED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void start ()
 */
@@ -443,7 +414,6 @@ HB_FUNC_STATIC( QTIMELINE_START )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void stop ()
@@ -458,7 +428,6 @@ HB_FUNC_STATIC( QTIMELINE_STOP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void toggleDirection ()
 */
@@ -471,9 +440,5 @@ HB_FUNC_STATIC( QTIMELINE_TOGGLEDIRECTION )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP

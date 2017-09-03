@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -61,7 +61,6 @@ HB_FUNC_STATIC( QPOINTF_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QPointF(const QPoint & point)
 */
@@ -71,7 +70,6 @@ HB_FUNC_STATIC( QPOINTF_NEW2 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QPointF(qreal xpos, qreal ypos)
 */
@@ -80,7 +78,6 @@ HB_FUNC_STATIC( QPOINTF_NEW3 )
   QPointF * o = new QPointF ( PQREAL(1), PQREAL(2) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QPointF()
 //[2]QPointF(const QPoint & point)
@@ -121,7 +118,6 @@ HB_FUNC_STATIC( QPOINTF_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool isNull() const
 */
@@ -134,7 +130,6 @@ HB_FUNC_STATIC( QPOINTF_ISNULL )
   }
 }
 
-
 /*
 qreal manhattanLength() const
 */
@@ -146,9 +141,6 @@ HB_FUNC_STATIC( QPOINTF_MANHATTANLENGTH )
     RQREAL( obj->manhattanLength () );
   }
 }
-
-
-
 
 /*
 void setX(qreal x)
@@ -163,7 +155,6 @@ HB_FUNC_STATIC( QPOINTF_SETX )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setY(qreal y)
 */
@@ -176,7 +167,6 @@ HB_FUNC_STATIC( QPOINTF_SETY )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QPoint toPoint() const
@@ -191,7 +181,6 @@ HB_FUNC_STATIC( QPOINTF_TOPOINT )
   }
 }
 
-
 /*
 qreal x() const
 */
@@ -204,7 +193,6 @@ HB_FUNC_STATIC( QPOINTF_X )
   }
 }
 
-
 /*
 qreal y() const
 */
@@ -216,7 +204,6 @@ HB_FUNC_STATIC( QPOINTF_Y )
     RQREAL( obj->y () );
   }
 }
-
 
 HB_FUNC_STATIC( QPOINTF_NEWFROM )
 {
@@ -272,6 +259,5 @@ HB_FUNC_STATIC( QPOINTF_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -69,7 +69,6 @@ HB_FUNC_STATIC( QSIZEF_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QSizeF ( const QSize & size )
 */
@@ -79,7 +78,6 @@ HB_FUNC_STATIC( QSIZEF_NEW2 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QSizeF ( qreal width, qreal height )
 */
@@ -88,7 +86,6 @@ HB_FUNC_STATIC( QSIZEF_NEW3 )
   QSizeF * o = new QSizeF ( PQREAL(1), PQREAL(2) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QSizeF ()
 //[2]QSizeF ( const QSize & size )
@@ -129,7 +126,6 @@ HB_FUNC_STATIC( QSIZEF_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QSizeF boundedTo ( const QSizeF & otherSize ) const
 */
@@ -142,7 +138,6 @@ HB_FUNC_STATIC( QSIZEF_BOUNDEDTO )
     _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
-
 
 /*
 QSizeF expandedTo ( const QSizeF & otherSize ) const
@@ -157,7 +152,6 @@ HB_FUNC_STATIC( QSIZEF_EXPANDEDTO )
   }
 }
 
-
 /*
 qreal height () const
 */
@@ -169,7 +163,6 @@ HB_FUNC_STATIC( QSIZEF_HEIGHT )
     RQREAL( obj->height () );
   }
 }
-
 
 /*
 bool isEmpty () const
@@ -183,7 +176,6 @@ HB_FUNC_STATIC( QSIZEF_ISEMPTY )
   }
 }
 
-
 /*
 bool isNull () const
 */
@@ -196,7 +188,6 @@ HB_FUNC_STATIC( QSIZEF_ISNULL )
   }
 }
 
-
 /*
 bool isValid () const
 */
@@ -208,9 +199,6 @@ HB_FUNC_STATIC( QSIZEF_ISVALID )
     RBOOL( obj->isValid () );
   }
 }
-
-
-
 
 /*
 void scale ( qreal width, qreal height, Qt::AspectRatioMode mode )
@@ -225,7 +213,6 @@ HB_FUNC_STATIC( QSIZEF_SCALE1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void scale ( const QSizeF & size, Qt::AspectRatioMode mode )
 */
@@ -238,7 +225,6 @@ HB_FUNC_STATIC( QSIZEF_SCALE2 )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 //[1]void scale ( qreal width, qreal height, Qt::AspectRatioMode mode )
 //[2]void scale ( const QSizeF & size, Qt::AspectRatioMode mode )
@@ -268,7 +254,6 @@ HB_FUNC_STATIC( QSIZEF_SETHEIGHT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setWidth ( qreal width )
 */
@@ -281,7 +266,6 @@ HB_FUNC_STATIC( QSIZEF_SETWIDTH )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 QSize toSize () const
@@ -296,7 +280,6 @@ HB_FUNC_STATIC( QSIZEF_TOSIZE )
   }
 }
 
-
 /*
 void transpose ()
 */
@@ -310,7 +293,6 @@ HB_FUNC_STATIC( QSIZEF_TRANSPOSE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 qreal width () const
 */
@@ -322,7 +304,6 @@ HB_FUNC_STATIC( QSIZEF_WIDTH )
     RQREAL( obj->width () );
   }
 }
-
 
 HB_FUNC_STATIC( QSIZEF_NEWFROM )
 {
@@ -378,9 +359,5 @@ HB_FUNC_STATIC( QSIZEF_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
-
-
 
 #pragma ENDDUMP

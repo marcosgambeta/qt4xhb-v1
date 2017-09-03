@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -65,7 +65,6 @@ HB_FUNC_STATIC( QUUID_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QUuid(uint l, ushort w1, ushort w2, uchar b1, uchar b2, uchar b3, uchar b4, uchar b5, uchar b6, uchar b7, uchar b8)
 */
@@ -83,7 +82,6 @@ HB_FUNC_STATIC( QUUID_NEW2 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QUuid(const QString &)
 */
@@ -92,7 +90,6 @@ HB_FUNC_STATIC( QUUID_NEW3 )
   QUuid * o = new QUuid ( PQSTRING(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QUuid(const char *)
@@ -103,7 +100,6 @@ HB_FUNC_STATIC( QUUID_NEW4 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QUuid(const QByteArray &)
 */
@@ -112,8 +108,6 @@ HB_FUNC_STATIC( QUUID_NEW5 )
   QUuid * o = new QUuid ( *PQBYTEARRAY(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
-
 
 //[1]QUuid()
 //[2]QUuid(uint l, ushort w1, ushort w2, uchar b1, uchar b2, uchar b3, uchar b4, uchar b5, uchar b6, uchar b7, uchar b8)
@@ -162,7 +156,6 @@ HB_FUNC_STATIC( QUUID_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString toString() const;
 */
@@ -174,7 +167,6 @@ HB_FUNC_STATIC( QUUID_TOSTRING )
     RQSTRING( obj->toString () );
   }
 }
-
 
 /*
 QByteArray toByteArray() const
@@ -189,7 +181,6 @@ HB_FUNC_STATIC( QUUID_TOBYTEARRAY )
   }
 }
 
-
 /*
 QByteArray toRfc4122() const
 */
@@ -203,7 +194,6 @@ HB_FUNC_STATIC( QUUID_TORFC4122 )
   }
 }
 
-
 /*
 bool isNull() const
 */
@@ -215,7 +205,6 @@ HB_FUNC_STATIC( QUUID_ISNULL )
     RBOOL( obj->isNull () );
   }
 }
-
 
 /*
 QUuid::Variant variant() const
@@ -229,7 +218,6 @@ HB_FUNC_STATIC( QUUID_VARIANT )
   }
 }
 
-
 /*
 QUuid::Version version() const
 */
@@ -242,8 +230,6 @@ HB_FUNC_STATIC( QUUID_VERSION )
   }
 }
 
-
-
 /*
 static QUuid fromRfc4122(const QByteArray &)
 */
@@ -253,7 +239,6 @@ HB_FUNC_STATIC( QUUID_FROMRFC4122 )
   _qt4xhb_createReturnClass ( ptr, "QUUID", true );
 }
 
-
 /*
 static QUuid createUuid()
 */
@@ -262,7 +247,6 @@ HB_FUNC_STATIC( QUUID_CREATEUUID )
   QUuid * ptr = new QUuid( QUuid::createUuid () );
   _qt4xhb_createReturnClass ( ptr, "QUUID", true );
 }
-
 
 HB_FUNC_STATIC( QUUID_NEWFROM )
 {
@@ -318,6 +302,5 @@ HB_FUNC_STATIC( QUUID_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

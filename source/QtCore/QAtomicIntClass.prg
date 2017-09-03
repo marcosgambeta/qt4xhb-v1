@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QAtomicInt
 
@@ -72,7 +71,6 @@ HB_FUNC_STATIC( QATOMICINT_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 /*
 QAtomicInt ( const QAtomicInt & other )
 */
@@ -81,7 +79,6 @@ HB_FUNC_STATIC( QATOMICINT_NEW2 )
   QAtomicInt * o = new QAtomicInt ( *PQATOMICINT(1) );
   _qt4xhb_storePointerAndFlag ( o, false );
 }
-
 
 //[1]QAtomicInt ( int value = 0 )
 //[2]QAtomicInt ( const QAtomicInt & other )
@@ -117,7 +114,6 @@ HB_FUNC_STATIC( QATOMICINT_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool deref ()
 */
@@ -129,7 +125,6 @@ HB_FUNC_STATIC( QATOMICINT_DEREF )
     RBOOL( obj->deref () );
   }
 }
-
 
 /*
 int fetchAndAddAcquire ( int valueToAdd )
@@ -143,7 +138,6 @@ HB_FUNC_STATIC( QATOMICINT_FETCHANDADDACQUIRE )
   }
 }
 
-
 /*
 int fetchAndAddOrdered ( int valueToAdd )
 */
@@ -155,7 +149,6 @@ HB_FUNC_STATIC( QATOMICINT_FETCHANDADDORDERED )
     RINT( obj->fetchAndAddOrdered ( PINT(1) ) );
   }
 }
-
 
 /*
 int fetchAndAddRelaxed ( int valueToAdd )
@@ -169,7 +162,6 @@ HB_FUNC_STATIC( QATOMICINT_FETCHANDADDRELAXED )
   }
 }
 
-
 /*
 int fetchAndAddRelease ( int valueToAdd )
 */
@@ -181,7 +173,6 @@ HB_FUNC_STATIC( QATOMICINT_FETCHANDADDRELEASE )
     RINT( obj->fetchAndAddRelease ( PINT(1) ) );
   }
 }
-
 
 /*
 int fetchAndStoreAcquire ( int newValue )
@@ -195,7 +186,6 @@ HB_FUNC_STATIC( QATOMICINT_FETCHANDSTOREACQUIRE )
   }
 }
 
-
 /*
 int fetchAndStoreOrdered ( int newValue )
 */
@@ -207,7 +197,6 @@ HB_FUNC_STATIC( QATOMICINT_FETCHANDSTOREORDERED )
     RINT( obj->fetchAndStoreOrdered ( PINT(1) ) );
   }
 }
-
 
 /*
 int fetchAndStoreRelaxed ( int newValue )
@@ -221,7 +210,6 @@ HB_FUNC_STATIC( QATOMICINT_FETCHANDSTORERELAXED )
   }
 }
 
-
 /*
 int fetchAndStoreRelease ( int newValue )
 */
@@ -233,7 +221,6 @@ HB_FUNC_STATIC( QATOMICINT_FETCHANDSTORERELEASE )
     RINT( obj->fetchAndStoreRelease ( PINT(1) ) );
   }
 }
-
 
 /*
 bool ref ()
@@ -247,7 +234,6 @@ HB_FUNC_STATIC( QATOMICINT_REF )
   }
 }
 
-
 /*
 bool testAndSetAcquire ( int expectedValue, int newValue )
 */
@@ -259,7 +245,6 @@ HB_FUNC_STATIC( QATOMICINT_TESTANDSETACQUIRE )
     RBOOL( obj->testAndSetAcquire ( PINT(1), PINT(2) ) );
   }
 }
-
 
 /*
 bool testAndSetOrdered ( int expectedValue, int newValue )
@@ -273,7 +258,6 @@ HB_FUNC_STATIC( QATOMICINT_TESTANDSETORDERED )
   }
 }
 
-
 /*
 bool testAndSetRelaxed ( int expectedValue, int newValue )
 */
@@ -285,7 +269,6 @@ HB_FUNC_STATIC( QATOMICINT_TESTANDSETRELAXED )
     RBOOL( obj->testAndSetRelaxed ( PINT(1), PINT(2) ) );
   }
 }
-
 
 /*
 bool testAndSetRelease ( int expectedValue, int newValue )
@@ -299,8 +282,6 @@ HB_FUNC_STATIC( QATOMICINT_TESTANDSETRELEASE )
   }
 }
 
-
-
 /*
 bool isFetchAndAddNative ()
 */
@@ -308,7 +289,6 @@ HB_FUNC_STATIC( QATOMICINT_ISFETCHANDADDNATIVE )
 {
   RBOOL( QAtomicInt::isFetchAndAddNative () );
 }
-
 
 /*
 bool isFetchAndAddWaitFree ()
@@ -318,7 +298,6 @@ HB_FUNC_STATIC( QATOMICINT_ISFETCHANDADDWAITFREE )
   RBOOL( QAtomicInt::isFetchAndAddWaitFree () );
 }
 
-
 /*
 bool isFetchAndStoreNative ()
 */
@@ -326,7 +305,6 @@ HB_FUNC_STATIC( QATOMICINT_ISFETCHANDSTORENATIVE )
 {
   RBOOL( QAtomicInt::isFetchAndStoreNative () );
 }
-
 
 /*
 bool isFetchAndStoreWaitFree ()
@@ -336,7 +314,6 @@ HB_FUNC_STATIC( QATOMICINT_ISFETCHANDSTOREWAITFREE )
   RBOOL( QAtomicInt::isFetchAndStoreWaitFree () );
 }
 
-
 /*
 bool isReferenceCountingNative ()
 */
@@ -344,7 +321,6 @@ HB_FUNC_STATIC( QATOMICINT_ISREFERENCECOUNTINGNATIVE )
 {
   RBOOL( QAtomicInt::isReferenceCountingNative () );
 }
-
 
 /*
 bool isReferenceCountingWaitFree ()
@@ -354,7 +330,6 @@ HB_FUNC_STATIC( QATOMICINT_ISREFERENCECOUNTINGWAITFREE )
   RBOOL( QAtomicInt::isReferenceCountingWaitFree () );
 }
 
-
 /*
 bool isTestAndSetNative ()
 */
@@ -363,7 +338,6 @@ HB_FUNC_STATIC( QATOMICINT_ISTESTANDSETNATIVE )
   RBOOL( QAtomicInt::isTestAndSetNative () );
 }
 
-
 /*
 bool isTestAndSetWaitFree ()
 */
@@ -371,7 +345,6 @@ HB_FUNC_STATIC( QATOMICINT_ISTESTANDSETWAITFREE )
 {
   RBOOL( QAtomicInt::isTestAndSetWaitFree () );
 }
-
 
 HB_FUNC_STATIC( QATOMICINT_NEWFROM )
 {
@@ -427,6 +400,5 @@ HB_FUNC_STATIC( QATOMICINT_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

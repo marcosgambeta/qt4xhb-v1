@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QRunnable
 
@@ -41,7 +40,6 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
 HB_FUNC_STATIC( QRUNNABLE_DELETE )
 {
   QRunnable * obj = (QRunnable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -57,7 +55,6 @@ HB_FUNC_STATIC( QRUNNABLE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool autoDelete () const
 */
@@ -69,7 +66,6 @@ HB_FUNC_STATIC( QRUNNABLE_AUTODELETE )
     RBOOL( obj->autoDelete () );
   }
 }
-
 
 /*
 virtual void run () = 0
@@ -84,7 +80,6 @@ HB_FUNC_STATIC( QRUNNABLE_RUN )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setAutoDelete ( bool autoDelete )
 */
@@ -97,7 +92,6 @@ HB_FUNC_STATIC( QRUNNABLE_SETAUTODELETE )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 HB_FUNC_STATIC( QRUNNABLE_NEWFROM )
 {
@@ -153,6 +147,5 @@ HB_FUNC_STATIC( QRUNNABLE_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
 
 #pragma ENDDUMP

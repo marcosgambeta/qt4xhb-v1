@@ -2,12 +2,11 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
 #include "hbclass.ch"
-
 
 CLASS QBasicTimer
 
@@ -52,7 +51,6 @@ HB_FUNC_STATIC( QBASICTIMER_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QBASICTIMER_DELETE )
 {
   QBasicTimer * obj = (QBasicTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -68,8 +66,6 @@ HB_FUNC_STATIC( QBASICTIMER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 bool isActive () const
 */
@@ -81,7 +77,6 @@ HB_FUNC_STATIC( QBASICTIMER_ISACTIVE )
     RBOOL( obj->isActive () );
   }
 }
-
 
 /*
 void start ( int msec, QObject * object )
@@ -96,7 +91,6 @@ HB_FUNC_STATIC( QBASICTIMER_START )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void stop ()
 */
@@ -110,7 +104,6 @@ HB_FUNC_STATIC( QBASICTIMER_STOP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int timerId () const
 */
@@ -122,7 +115,6 @@ HB_FUNC_STATIC( QBASICTIMER_TIMERID )
     RINT( obj->timerId () );
   }
 }
-
 
 HB_FUNC_STATIC( QBASICTIMER_NEWFROM )
 {
@@ -178,7 +170,5 @@ HB_FUNC_STATIC( QBASICTIMER_SETSELFDESTRUCTION )
 
   hb_itemReturn( self );
 }
-
-
 
 #pragma ENDDUMP

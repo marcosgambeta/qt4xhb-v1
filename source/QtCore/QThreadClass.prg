@@ -2,7 +2,7 @@
 
   Qt4xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 4
 
-  Copyright (C) 2012-2017 Marcos Antonio Gambeta <marcosgambeta@uol.com.br>
+  Copyright (C) 2017 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -61,7 +61,6 @@ HB_FUNC_STATIC( QTHREAD_NEW )
   _qt4xhb_storePointerAndFlag ( o, false );
 }
 
-
 HB_FUNC_STATIC( QTHREAD_DELETE )
 {
   QThread * obj = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -77,8 +76,6 @@ HB_FUNC_STATIC( QTHREAD_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 void exit(int returnCode = 0)
 */
@@ -92,7 +89,6 @@ HB_FUNC_STATIC( QTHREAD_EXIT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool isFinished() const
 */
@@ -104,7 +100,6 @@ HB_FUNC_STATIC( QTHREAD_ISFINISHED )
     RBOOL( obj->isFinished () );
   }
 }
-
 
 /*
 bool isRunning() const
@@ -118,7 +113,6 @@ HB_FUNC_STATIC( QTHREAD_ISRUNNING )
   }
 }
 
-
 /*
 Priority priority() const
 */
@@ -130,8 +124,6 @@ HB_FUNC_STATIC( QTHREAD_PRIORITY )
     hb_retni( (int) obj->priority () );
   }
 }
-
-
 
 /*
 void setPriority(Priority priority)
@@ -147,7 +139,6 @@ HB_FUNC_STATIC( QTHREAD_SETPRIORITY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setStackSize(uint stackSize)
 */
@@ -161,7 +152,6 @@ HB_FUNC_STATIC( QTHREAD_SETSTACKSIZE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 uint stackSize() const
 */
@@ -174,8 +164,6 @@ HB_FUNC_STATIC( QTHREAD_STACKSIZE )
   }
 }
 
-
-
 /*
 virtual bool event(QEvent * event)
 */
@@ -187,7 +175,6 @@ HB_FUNC_STATIC( QTHREAD_EVENT )
     RBOOL( obj->event ( PQEVENT(1) ) );
   }
 }
-
 
 /*
 void quit()
@@ -202,7 +189,6 @@ HB_FUNC_STATIC( QTHREAD_QUIT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void start(Priority priority = InheritPriority)
 */
@@ -215,7 +201,6 @@ HB_FUNC_STATIC( QTHREAD_START )
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
 
 /*
 void terminate()
@@ -230,8 +215,6 @@ HB_FUNC_STATIC( QTHREAD_TERMINATE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 QThread * currentThread()
 */
@@ -241,8 +224,6 @@ HB_FUNC_STATIC( QTHREAD_CURRENTTHREAD )
   _qt4xhb_createReturnClass ( ptr, "QTHREAD" );
 }
 
-
-
 /*
 int idealThreadCount()
 */
@@ -250,10 +231,6 @@ HB_FUNC_STATIC( QTHREAD_IDEALTHREADCOUNT )
 {
   RINT( QThread::idealThreadCount () );
 }
-
-
-
-
 
 /*
 void yieldCurrentThread()
@@ -263,9 +240,5 @@ HB_FUNC_STATIC( QTHREAD_YIELDCURRENTTHREAD )
   QThread::yieldCurrentThread ();
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP
