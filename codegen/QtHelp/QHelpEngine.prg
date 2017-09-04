@@ -25,11 +25,7 @@ CLASS QHelpEngine INHERIT QHelpEngineCore
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QHelpEngine
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

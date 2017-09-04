@@ -20,11 +20,7 @@ CLASS QHelpSearchQuery
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QHelpSearchQuery
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

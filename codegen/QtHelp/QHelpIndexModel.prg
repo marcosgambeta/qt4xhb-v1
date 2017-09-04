@@ -19,11 +19,7 @@ CLASS QHelpIndexModel INHERIT QStringListModel
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QHelpIndexModel
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

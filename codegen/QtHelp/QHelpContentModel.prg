@@ -27,11 +27,7 @@ CLASS QHelpContentModel INHERIT QAbstractItemModel
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QHelpContentModel
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

@@ -30,11 +30,7 @@ CLASS QHelpSearchEngine INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QHelpSearchEngine
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
