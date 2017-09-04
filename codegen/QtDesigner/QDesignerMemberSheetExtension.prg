@@ -35,11 +35,7 @@ CLASS QDesignerMemberSheetExtension
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDesignerMemberSheetExtension
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

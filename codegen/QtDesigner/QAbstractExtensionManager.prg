@@ -24,11 +24,7 @@ CLASS QAbstractExtensionManager
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractExtensionManager
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

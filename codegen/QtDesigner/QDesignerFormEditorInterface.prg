@@ -33,11 +33,7 @@ CLASS QDesignerFormEditorInterface INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDesignerFormEditorInterface
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

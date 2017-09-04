@@ -27,11 +27,7 @@ CLASS QAbstractFormBuilder
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractFormBuilder
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

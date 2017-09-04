@@ -19,11 +19,7 @@ CLASS QExtensionFactory INHERIT QObject,QAbstractExtensionFactory
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QExtensionFactory
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

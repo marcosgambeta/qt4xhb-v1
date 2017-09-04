@@ -23,11 +23,7 @@ CLASS QDesignerTaskMenuExtension
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDesignerTaskMenuExtension
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

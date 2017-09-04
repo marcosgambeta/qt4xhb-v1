@@ -33,11 +33,7 @@ CLASS QDesignerFormWindowCursorInterface
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDesignerFormWindowCursorInterface
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
