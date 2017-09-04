@@ -19,11 +19,7 @@ CLASS QDomText INHERIT QDomCharacterData
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDomText
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

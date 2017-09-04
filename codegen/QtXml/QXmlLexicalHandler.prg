@@ -26,11 +26,7 @@ CLASS QXmlLexicalHandler
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlLexicalHandler
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

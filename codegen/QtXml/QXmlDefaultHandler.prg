@@ -40,11 +40,7 @@ CLASS QXmlDefaultHandler INHERIT QXmlContentHandler,QXmlErrorHandler,QXmlDTDHand
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlDefaultHandler
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

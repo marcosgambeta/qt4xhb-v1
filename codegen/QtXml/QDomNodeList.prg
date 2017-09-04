@@ -30,11 +30,7 @@ CLASS QDomNodeList
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDomNodeList
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

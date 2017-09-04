@@ -24,11 +24,7 @@ CLASS QDomDocumentType INHERIT QDomNode
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDomDocumentType
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

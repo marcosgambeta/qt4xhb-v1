@@ -31,11 +31,7 @@ CLASS QDomImplementation
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDomImplementation
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

@@ -15,11 +15,7 @@ CLASS QDomComment INHERIT QDomCharacterData
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDomComment
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

@@ -36,11 +36,7 @@ CLASS QDomNamedNodeMap
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDomNamedNodeMap
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

@@ -20,11 +20,7 @@ CLASS QXmlLocator
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlLocator
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

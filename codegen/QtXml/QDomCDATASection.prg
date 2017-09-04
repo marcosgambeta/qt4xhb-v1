@@ -15,11 +15,7 @@ CLASS QDomCDATASection INHERIT QDomText
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDomCDATASection
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

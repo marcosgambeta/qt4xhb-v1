@@ -30,11 +30,7 @@ CLASS QXmlContentHandler
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlContentHandler
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

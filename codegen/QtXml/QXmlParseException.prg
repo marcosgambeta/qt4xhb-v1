@@ -26,11 +26,7 @@ CLASS QXmlParseException
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlParseException
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

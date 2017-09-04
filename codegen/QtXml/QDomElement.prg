@@ -52,11 +52,7 @@ CLASS QDomElement INHERIT QDomNode
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDomElement
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

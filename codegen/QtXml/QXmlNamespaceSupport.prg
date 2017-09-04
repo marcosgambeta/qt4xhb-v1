@@ -30,11 +30,7 @@ CLASS QXmlNamespaceSupport
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlNamespaceSupport
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

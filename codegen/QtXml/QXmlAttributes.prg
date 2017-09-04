@@ -39,11 +39,7 @@ CLASS QXmlAttributes
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlAttributes
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

@@ -45,11 +45,7 @@ CLASS QXmlReader
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlReader
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

@@ -15,11 +15,7 @@ CLASS QXmlSimpleReader INHERIT QXmlReader
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlSimpleReader
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

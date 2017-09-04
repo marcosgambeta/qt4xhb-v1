@@ -31,11 +31,7 @@ CLASS QXmlInputSource
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlInputSource
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
