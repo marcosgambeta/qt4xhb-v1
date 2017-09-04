@@ -58,11 +58,7 @@ CLASS QWebSettings
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWebSettings
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

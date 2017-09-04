@@ -31,11 +31,7 @@ CLASS QWebElementCollection
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWebElementCollection
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

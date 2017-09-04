@@ -17,11 +17,7 @@ CLASS QWebPluginFactory INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWebPluginFactory
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

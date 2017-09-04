@@ -34,11 +34,7 @@ CLASS QWebSecurityOrigin
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWebSecurityOrigin
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

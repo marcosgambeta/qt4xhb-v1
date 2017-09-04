@@ -86,11 +86,7 @@ CLASS QWebFrame INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWebFrame
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

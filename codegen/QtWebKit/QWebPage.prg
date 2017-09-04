@@ -90,11 +90,7 @@ CLASS QWebPage INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWebPage
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

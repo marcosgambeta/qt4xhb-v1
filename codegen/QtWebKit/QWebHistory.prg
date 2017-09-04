@@ -37,11 +37,7 @@ CLASS QWebHistory
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWebHistory
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

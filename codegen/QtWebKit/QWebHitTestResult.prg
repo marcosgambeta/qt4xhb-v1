@@ -46,11 +46,7 @@ CLASS QWebHitTestResult
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWebHitTestResult
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
