@@ -23,11 +23,7 @@ CLASS QScriptSyntaxCheckResult
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QScriptSyntaxCheckResult
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

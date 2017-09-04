@@ -32,11 +32,7 @@ CLASS QScriptClassPropertyIterator
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QScriptClassPropertyIterator
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

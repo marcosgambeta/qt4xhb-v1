@@ -23,11 +23,7 @@ CLASS QScriptString
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QScriptString
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

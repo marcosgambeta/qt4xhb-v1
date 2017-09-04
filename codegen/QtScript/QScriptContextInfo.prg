@@ -32,11 +32,7 @@ CLASS QScriptContextInfo
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QScriptContextInfo
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

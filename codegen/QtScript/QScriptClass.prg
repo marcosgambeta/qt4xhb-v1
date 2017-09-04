@@ -35,11 +35,7 @@ CLASS QScriptClass
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QScriptClass
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

@@ -80,11 +80,7 @@ CLASS QScriptValue
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QScriptValue
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
