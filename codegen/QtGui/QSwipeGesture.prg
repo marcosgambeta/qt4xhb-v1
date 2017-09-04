@@ -16,11 +16,7 @@ CLASS QSwipeGesture INHERIT QGesture
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSwipeGesture
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

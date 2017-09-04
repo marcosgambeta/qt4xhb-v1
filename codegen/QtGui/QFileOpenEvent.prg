@@ -22,11 +22,7 @@ CLASS QFileOpenEvent INHERIT QEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QFileOpenEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

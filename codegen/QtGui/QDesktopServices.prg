@@ -23,11 +23,7 @@ CLASS QDesktopServices
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDesktopServices
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

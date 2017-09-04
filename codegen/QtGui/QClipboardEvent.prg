@@ -18,11 +18,7 @@ CLASS QClipboardEvent INHERIT QEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QClipboardEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

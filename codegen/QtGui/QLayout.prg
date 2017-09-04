@@ -58,11 +58,7 @@ CLASS QLayout INHERIT QObject,QLayoutItem
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QLayout
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

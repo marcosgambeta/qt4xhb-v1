@@ -27,11 +27,7 @@ CLASS QTextFrame INHERIT QTextObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTextFrame
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

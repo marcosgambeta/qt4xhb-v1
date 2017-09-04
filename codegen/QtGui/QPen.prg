@@ -53,11 +53,7 @@ CLASS QPen
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPen
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

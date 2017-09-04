@@ -37,11 +37,7 @@ CLASS QTextOption
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTextOption
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

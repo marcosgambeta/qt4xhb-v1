@@ -42,11 +42,7 @@ CLASS QProgressBar INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QProgressBar
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

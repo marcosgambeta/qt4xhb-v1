@@ -49,11 +49,7 @@ CLASS QSplitter INHERIT QFrame
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSplitter
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

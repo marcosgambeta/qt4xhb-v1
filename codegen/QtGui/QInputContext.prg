@@ -33,11 +33,7 @@ CLASS QInputContext INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QInputContext
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

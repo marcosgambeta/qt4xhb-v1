@@ -20,11 +20,7 @@ CLASS QFontEnginePlugin INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QFontEnginePlugin
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

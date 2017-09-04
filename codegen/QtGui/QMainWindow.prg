@@ -76,11 +76,7 @@ CLASS QMainWindow INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMainWindow
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

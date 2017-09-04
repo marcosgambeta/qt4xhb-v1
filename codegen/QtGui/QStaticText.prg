@@ -40,11 +40,7 @@ CLASS QStaticText
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStaticText
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

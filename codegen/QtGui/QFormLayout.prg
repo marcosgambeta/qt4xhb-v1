@@ -69,11 +69,7 @@ CLASS QFormLayout INHERIT QLayout
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QFormLayout
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

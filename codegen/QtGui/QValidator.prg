@@ -20,11 +20,7 @@ CLASS QValidator INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QValidator
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

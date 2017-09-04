@@ -80,11 +80,7 @@ CLASS QMatrix4x4
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMatrix4x4
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

@@ -23,11 +23,7 @@ CLASS QSound INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSound
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

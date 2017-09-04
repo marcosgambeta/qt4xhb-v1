@@ -21,11 +21,7 @@ CLASS QInputContextPlugin INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QInputContextPlugin
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

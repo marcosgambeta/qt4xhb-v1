@@ -33,11 +33,7 @@ CLASS QPicture INHERIT QPaintDevice
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPicture
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

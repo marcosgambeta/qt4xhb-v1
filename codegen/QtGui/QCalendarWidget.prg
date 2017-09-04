@@ -65,11 +65,7 @@ CLASS QCalendarWidget INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCalendarWidget
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

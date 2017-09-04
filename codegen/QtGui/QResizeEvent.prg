@@ -19,11 +19,7 @@ CLASS QResizeEvent INHERIT QEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QResizeEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

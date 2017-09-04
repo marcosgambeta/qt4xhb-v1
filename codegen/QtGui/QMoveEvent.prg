@@ -19,11 +19,7 @@ CLASS QMoveEvent INHERIT QEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMoveEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

@@ -69,11 +69,7 @@ CLASS QTableWidgetItem
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTableWidgetItem
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

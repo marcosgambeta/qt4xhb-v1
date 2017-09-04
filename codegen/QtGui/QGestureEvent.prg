@@ -42,11 +42,7 @@ CLASS QGestureEvent INHERIT QEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGestureEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

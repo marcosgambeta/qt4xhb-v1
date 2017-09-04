@@ -37,11 +37,7 @@ CLASS QTextTableCell
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTextTableCell
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

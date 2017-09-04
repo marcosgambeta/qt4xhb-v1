@@ -28,11 +28,7 @@ CLASS QFileIconProvider
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QFileIconProvider
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

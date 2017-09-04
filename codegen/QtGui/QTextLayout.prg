@@ -67,11 +67,7 @@ CLASS QTextLayout
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTextLayout
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

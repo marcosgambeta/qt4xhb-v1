@@ -19,11 +19,7 @@ CLASS QDecorationDefault INHERIT QDecoration
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDecorationDefault
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

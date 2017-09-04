@@ -75,11 +75,7 @@ CLASS QImageReader
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QImageReader
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

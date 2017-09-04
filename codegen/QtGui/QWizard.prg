@@ -68,11 +68,7 @@ CLASS QWizard INHERIT QDialog
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWizard
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

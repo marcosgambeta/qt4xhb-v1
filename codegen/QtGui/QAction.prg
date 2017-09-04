@@ -89,11 +89,7 @@ CLASS QAction INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAction
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

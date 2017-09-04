@@ -28,11 +28,7 @@ CLASS QInputContextFactory
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QInputContextFactory
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

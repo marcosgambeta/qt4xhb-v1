@@ -22,11 +22,7 @@ CLASS QPaintEvent INHERIT QEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPaintEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

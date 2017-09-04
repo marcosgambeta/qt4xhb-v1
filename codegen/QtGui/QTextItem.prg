@@ -29,11 +29,7 @@ CLASS QTextItem
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTextItem
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

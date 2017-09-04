@@ -18,11 +18,7 @@ CLASS QTapGesture INHERIT QGesture
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTapGesture
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

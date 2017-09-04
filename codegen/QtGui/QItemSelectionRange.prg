@@ -48,11 +48,7 @@ CLASS QItemSelectionRange
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QItemSelectionRange
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

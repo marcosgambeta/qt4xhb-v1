@@ -38,11 +38,7 @@ CLASS QSystemTrayIcon INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSystemTrayIcon
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

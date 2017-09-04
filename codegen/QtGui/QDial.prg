@@ -26,11 +26,7 @@ CLASS QDial INHERIT QAbstractSlider
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDial
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

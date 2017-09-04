@@ -40,11 +40,7 @@ CLASS QGraphicsItemAnimation INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGraphicsItemAnimation
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

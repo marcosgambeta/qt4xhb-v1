@@ -52,11 +52,7 @@ CLASS QTextLine
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTextLine
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

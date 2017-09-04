@@ -41,11 +41,7 @@ CLASS QCursor
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCursor
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

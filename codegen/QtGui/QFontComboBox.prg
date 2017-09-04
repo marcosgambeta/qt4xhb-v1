@@ -27,11 +27,7 @@ CLASS QFontComboBox INHERIT QComboBox
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QFontComboBox
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

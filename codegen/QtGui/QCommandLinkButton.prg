@@ -16,11 +16,7 @@ CLASS QCommandLinkButton INHERIT QPushButton
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCommandLinkButton
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

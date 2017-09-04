@@ -28,11 +28,7 @@ CLASS QSessionManager INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSessionManager
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

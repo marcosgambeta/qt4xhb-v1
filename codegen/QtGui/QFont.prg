@@ -86,11 +86,7 @@ CLASS QFont
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QFont
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

@@ -35,11 +35,7 @@ CLASS QDrag INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDrag
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

@@ -82,11 +82,7 @@ CLASS QTransform
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTransform
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

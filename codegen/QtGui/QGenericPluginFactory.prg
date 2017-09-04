@@ -24,11 +24,7 @@ CLASS QGenericPluginFactory
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGenericPluginFactory
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

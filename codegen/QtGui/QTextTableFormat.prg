@@ -30,11 +30,7 @@ CLASS QTextTableFormat INHERIT QTextFrameFormat
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTextTableFormat
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

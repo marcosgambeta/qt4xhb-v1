@@ -27,11 +27,7 @@ CLASS QPlainTextDocumentLayout INHERIT QAbstractTextDocumentLayout
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPlainTextDocumentLayout
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

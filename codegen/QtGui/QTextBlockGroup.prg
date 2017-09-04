@@ -10,11 +10,7 @@ CLASS QTextBlockGroup INHERIT QTextObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTextBlockGroup
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

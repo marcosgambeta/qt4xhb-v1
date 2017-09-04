@@ -34,11 +34,7 @@ CLASS QMotifStyle INHERIT QCommonStyle
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMotifStyle
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

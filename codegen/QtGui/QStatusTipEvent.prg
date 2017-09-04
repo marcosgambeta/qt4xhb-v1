@@ -14,11 +14,7 @@ CLASS QStatusTipEvent INHERIT QEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStatusTipEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

@@ -25,11 +25,7 @@ CLASS QStatusBar INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStatusBar
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

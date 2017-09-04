@@ -42,11 +42,7 @@ CLASS QDialogButtonBox INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDialogButtonBox
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

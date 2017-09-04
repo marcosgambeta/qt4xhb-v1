@@ -67,11 +67,7 @@ CLASS QMenu INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMenu
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

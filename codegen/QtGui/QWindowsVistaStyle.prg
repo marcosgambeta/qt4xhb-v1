@@ -13,11 +13,7 @@ CLASS QWindowsVistaStyle INHERIT QWindowsXPStyle
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWindowsVistaStyle
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

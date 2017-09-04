@@ -25,11 +25,7 @@ CLASS QItemEditorCreatorBase
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QItemEditorCreatorBase
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

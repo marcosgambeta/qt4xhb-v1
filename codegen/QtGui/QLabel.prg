@@ -62,11 +62,7 @@ CLASS QLabel INHERIT QFrame
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QLabel
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

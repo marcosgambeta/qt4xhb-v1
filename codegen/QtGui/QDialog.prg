@@ -34,11 +34,7 @@ CLASS QDialog INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDialog
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

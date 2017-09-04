@@ -15,11 +15,7 @@ CLASS QAccessibleEvent INHERIT QEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAccessibleEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

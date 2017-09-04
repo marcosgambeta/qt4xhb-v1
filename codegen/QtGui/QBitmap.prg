@@ -26,11 +26,7 @@ CLASS QBitmap INHERIT QPixmap
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QBitmap
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

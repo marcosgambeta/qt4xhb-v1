@@ -14,11 +14,7 @@ CLASS QTimeEdit INHERIT QDateTimeEdit
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTimeEdit
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

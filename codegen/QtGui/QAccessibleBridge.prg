@@ -21,11 +21,7 @@ CLASS QAccessibleBridge
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAccessibleBridge
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

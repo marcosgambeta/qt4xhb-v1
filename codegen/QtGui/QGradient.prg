@@ -24,11 +24,7 @@ CLASS QGradient
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGradient
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

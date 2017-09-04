@@ -104,11 +104,7 @@ CLASS QPainterPath
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPainterPath
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

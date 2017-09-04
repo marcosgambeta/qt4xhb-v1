@@ -25,11 +25,7 @@ CLASS QTextLength
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTextLength
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

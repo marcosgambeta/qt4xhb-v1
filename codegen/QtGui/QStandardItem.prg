@@ -118,11 +118,7 @@ CLASS QStandardItem
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStandardItem
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

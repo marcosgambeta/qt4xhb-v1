@@ -37,11 +37,7 @@ CLASS QTextDocumentFragment
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTextDocumentFragment
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

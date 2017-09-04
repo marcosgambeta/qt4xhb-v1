@@ -25,11 +25,7 @@ CLASS QTextObjectInterface
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTextObjectInterface
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

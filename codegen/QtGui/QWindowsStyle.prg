@@ -34,11 +34,7 @@ CLASS QWindowsStyle INHERIT QCommonStyle
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWindowsStyle
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

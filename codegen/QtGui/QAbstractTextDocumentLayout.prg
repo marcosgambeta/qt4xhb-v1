@@ -35,11 +35,7 @@ CLASS QAbstractTextDocumentLayout INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractTextDocumentLayout
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

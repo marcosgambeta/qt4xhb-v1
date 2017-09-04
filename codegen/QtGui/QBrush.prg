@@ -55,11 +55,7 @@ CLASS QBrush
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QBrush
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

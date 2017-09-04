@@ -23,11 +23,7 @@ CLASS QGraphicsEffect INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGraphicsEffect
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

@@ -61,11 +61,7 @@ CLASS QGridLayout INHERIT QLayout
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGridLayout
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

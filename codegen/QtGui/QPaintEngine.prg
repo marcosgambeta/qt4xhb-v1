@@ -45,11 +45,7 @@ CLASS QPaintEngine
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPaintEngine
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

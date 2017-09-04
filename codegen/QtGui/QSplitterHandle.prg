@@ -22,11 +22,7 @@ CLASS QSplitterHandle INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSplitterHandle
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

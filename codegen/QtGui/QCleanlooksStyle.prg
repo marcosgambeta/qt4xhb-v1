@@ -42,11 +42,7 @@ CLASS QCleanlooksStyle INHERIT QWindowsStyle
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCleanlooksStyle
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

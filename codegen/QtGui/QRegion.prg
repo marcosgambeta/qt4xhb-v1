@@ -56,11 +56,7 @@ CLASS QRegion
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QRegion
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

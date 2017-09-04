@@ -40,11 +40,7 @@ CLASS QGlyphRun
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGlyphRun
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

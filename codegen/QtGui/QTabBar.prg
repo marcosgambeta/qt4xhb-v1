@@ -77,11 +77,7 @@ CLASS QTabBar INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTabBar
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

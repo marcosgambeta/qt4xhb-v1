@@ -23,11 +23,7 @@ CLASS QPageSetupDialog INHERIT QDialog
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPageSetupDialog
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

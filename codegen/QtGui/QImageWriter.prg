@@ -47,11 +47,7 @@ CLASS QImageWriter
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QImageWriter
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

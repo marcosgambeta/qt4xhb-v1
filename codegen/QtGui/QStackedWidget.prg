@@ -30,11 +30,7 @@ CLASS QStackedWidget INHERIT QFrame
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStackedWidget
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

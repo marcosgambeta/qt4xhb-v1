@@ -34,11 +34,7 @@ CLASS QDecoration
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDecoration
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

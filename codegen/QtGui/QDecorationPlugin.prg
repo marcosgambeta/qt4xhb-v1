@@ -18,11 +18,7 @@ CLASS QDecorationPlugin INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDecorationPlugin
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

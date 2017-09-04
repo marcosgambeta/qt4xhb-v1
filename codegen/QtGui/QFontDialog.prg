@@ -35,11 +35,7 @@ CLASS QFontDialog INHERIT QDialog
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QFontDialog
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

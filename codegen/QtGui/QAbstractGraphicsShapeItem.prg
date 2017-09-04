@@ -24,11 +24,7 @@ CLASS QAbstractGraphicsShapeItem INHERIT QGraphicsItem
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractGraphicsShapeItem
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

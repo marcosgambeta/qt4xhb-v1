@@ -27,11 +27,7 @@ CLASS QAccessibleWidget INHERIT QAccessibleObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAccessibleWidget
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

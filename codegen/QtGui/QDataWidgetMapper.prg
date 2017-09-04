@@ -50,11 +50,7 @@ CLASS QDataWidgetMapper INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDataWidgetMapper
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

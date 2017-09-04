@@ -52,11 +52,7 @@ CLASS QIcon
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QIcon
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

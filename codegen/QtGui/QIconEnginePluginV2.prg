@@ -18,11 +18,7 @@ CLASS QIconEnginePluginV2 INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QIconEnginePluginV2
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

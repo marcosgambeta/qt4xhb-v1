@@ -80,11 +80,7 @@ CLASS QPixmap INHERIT QPaintDevice
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPixmap
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

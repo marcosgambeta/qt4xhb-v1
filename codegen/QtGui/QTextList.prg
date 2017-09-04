@@ -26,11 +26,7 @@ CLASS QTextList INHERIT QTextBlockGroup
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTextList
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

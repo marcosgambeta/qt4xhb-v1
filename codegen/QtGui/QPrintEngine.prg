@@ -29,11 +29,7 @@ CLASS QPrintEngine
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPrintEngine
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

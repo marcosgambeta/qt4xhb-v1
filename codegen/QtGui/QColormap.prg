@@ -32,11 +32,7 @@ CLASS QColormap
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QColormap
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

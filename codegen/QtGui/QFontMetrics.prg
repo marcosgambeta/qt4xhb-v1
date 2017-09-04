@@ -57,11 +57,7 @@ CLASS QFontMetrics
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QFontMetrics
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

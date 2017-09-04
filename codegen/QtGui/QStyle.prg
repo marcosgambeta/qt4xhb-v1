@@ -58,11 +58,7 @@ CLASS QStyle INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStyle
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

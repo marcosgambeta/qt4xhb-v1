@@ -31,11 +31,7 @@ CLASS QItemEditorFactory
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QItemEditorFactory
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

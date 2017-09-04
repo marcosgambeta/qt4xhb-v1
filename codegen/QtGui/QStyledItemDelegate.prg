@@ -28,11 +28,7 @@ CLASS QStyledItemDelegate INHERIT QAbstractItemDelegate
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStyledItemDelegate
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

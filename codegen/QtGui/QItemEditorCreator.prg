@@ -10,11 +10,7 @@ CLASS QItemEditorCreator INHERIT QItemEditorCreatorBase
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QItemEditorCreator
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

@@ -32,11 +32,7 @@ CLASS QGroupBox INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGroupBox
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

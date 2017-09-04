@@ -48,11 +48,7 @@ CLASS QVector2D
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QVector2D
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

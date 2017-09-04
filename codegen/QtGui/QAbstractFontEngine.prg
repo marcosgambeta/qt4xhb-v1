@@ -22,11 +22,7 @@ CLASS QAbstractFontEngine INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractFontEngine
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

@@ -31,11 +31,7 @@ CLASS QPlatformCursorImage
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPlatformCursorImage
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

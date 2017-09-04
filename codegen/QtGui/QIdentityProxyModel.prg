@@ -33,11 +33,7 @@ CLASS QIdentityProxyModel INHERIT QAbstractProxyModel
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QIdentityProxyModel
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

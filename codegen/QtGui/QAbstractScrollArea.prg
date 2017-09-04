@@ -35,11 +35,7 @@ CLASS QAbstractScrollArea INHERIT QFrame
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractScrollArea
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

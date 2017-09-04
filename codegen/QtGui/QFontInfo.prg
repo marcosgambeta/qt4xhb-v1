@@ -35,11 +35,7 @@ CLASS QFontInfo
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QFontInfo
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

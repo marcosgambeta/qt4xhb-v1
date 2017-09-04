@@ -120,11 +120,7 @@ CLASS QApplication INHERIT QCoreApplication
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QApplication
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

@@ -74,11 +74,7 @@ CLASS QSortFilterProxyModel INHERIT QAbstractProxyModel
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSortFilterProxyModel
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

@@ -116,11 +116,7 @@ CLASS QTextDocument INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTextDocument
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

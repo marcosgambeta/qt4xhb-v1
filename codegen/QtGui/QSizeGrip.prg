@@ -19,11 +19,7 @@ CLASS QSizeGrip INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSizeGrip
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

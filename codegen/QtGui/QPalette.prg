@@ -71,11 +71,7 @@ CLASS QPalette
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPalette
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

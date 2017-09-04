@@ -298,11 +298,7 @@ CLASS QWidget INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWidget
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

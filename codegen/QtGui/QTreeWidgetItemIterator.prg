@@ -23,11 +23,7 @@ CLASS QTreeWidgetItemIterator
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTreeWidgetItemIterator
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

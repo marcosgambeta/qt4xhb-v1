@@ -60,11 +60,7 @@ CLASS QRawFont
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QRawFont
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

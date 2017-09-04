@@ -83,11 +83,7 @@ CLASS QTextFormat
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTextFormat
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

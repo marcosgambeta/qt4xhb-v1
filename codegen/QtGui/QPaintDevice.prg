@@ -36,11 +36,7 @@ CLASS QPaintDevice
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPaintDevice
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

@@ -51,11 +51,7 @@ CLASS QPolygon
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPolygon
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

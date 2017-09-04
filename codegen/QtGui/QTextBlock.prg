@@ -58,11 +58,7 @@ CLASS QTextBlock
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTextBlock
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

@@ -86,11 +86,7 @@ CLASS QPrinter INHERIT QPaintDevice
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPrinter
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

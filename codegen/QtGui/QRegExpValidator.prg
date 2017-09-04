@@ -22,11 +22,7 @@ CLASS QRegExpValidator INHERIT QValidator
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QRegExpValidator
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

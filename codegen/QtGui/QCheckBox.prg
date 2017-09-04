@@ -24,11 +24,7 @@ CLASS QCheckBox INHERIT QAbstractButton
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCheckBox
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

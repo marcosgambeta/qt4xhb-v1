@@ -32,11 +32,7 @@ CLASS QFrame INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QFrame
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

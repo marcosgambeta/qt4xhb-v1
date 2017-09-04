@@ -35,11 +35,7 @@ CLASS QDesktopWidget INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDesktopWidget
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

@@ -41,11 +41,7 @@ CLASS QPrintPreviewWidget INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPrintPreviewWidget
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

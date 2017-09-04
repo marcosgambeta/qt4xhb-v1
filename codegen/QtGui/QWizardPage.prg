@@ -35,11 +35,7 @@ CLASS QWizardPage INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWizardPage
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

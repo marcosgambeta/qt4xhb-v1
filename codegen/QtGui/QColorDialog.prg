@@ -40,11 +40,7 @@ CLASS QColorDialog INHERIT QDialog
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QColorDialog
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

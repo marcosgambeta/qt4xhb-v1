@@ -26,11 +26,7 @@ CLASS QAccessible
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAccessible
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

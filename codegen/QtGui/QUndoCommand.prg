@@ -34,11 +34,7 @@ CLASS QUndoCommand
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QUndoCommand
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

@@ -37,11 +37,7 @@ CLASS QWorkspace INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWorkspace
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

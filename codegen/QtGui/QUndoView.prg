@@ -30,11 +30,7 @@ CLASS QUndoView INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QUndoView
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

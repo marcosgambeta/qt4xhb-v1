@@ -45,11 +45,7 @@ CLASS QTextBrowser INHERIT QTextEdit
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTextBrowser
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

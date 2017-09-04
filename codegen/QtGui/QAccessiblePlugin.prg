@@ -18,11 +18,7 @@ CLASS QAccessiblePlugin INHERIT QObject,QAccessible
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAccessiblePlugin
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

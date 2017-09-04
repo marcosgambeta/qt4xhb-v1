@@ -115,11 +115,7 @@ CLASS QColor
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QColor
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

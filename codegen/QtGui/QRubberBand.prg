@@ -23,11 +23,7 @@ CLASS QRubberBand INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QRubberBand
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

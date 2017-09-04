@@ -20,11 +20,7 @@ CLASS QWindowsMime
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWindowsMime
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

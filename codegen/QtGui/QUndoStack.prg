@@ -49,11 +49,7 @@ CLASS QUndoStack INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QUndoStack
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

@@ -50,11 +50,7 @@ CLASS QAbstractButton INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractButton
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
