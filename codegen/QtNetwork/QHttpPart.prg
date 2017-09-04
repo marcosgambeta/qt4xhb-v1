@@ -25,11 +25,7 @@ CLASS QHttpPart
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QHttpPart
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

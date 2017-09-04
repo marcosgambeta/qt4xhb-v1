@@ -29,11 +29,7 @@ CLASS QSslError
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSslError
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

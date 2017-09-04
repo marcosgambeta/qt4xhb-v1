@@ -42,11 +42,7 @@ CLASS QHostAddress
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QHostAddress
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

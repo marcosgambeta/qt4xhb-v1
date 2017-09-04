@@ -30,11 +30,7 @@ CLASS QLocalServer INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QLocalServer
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

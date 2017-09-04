@@ -24,11 +24,7 @@ CLASS QUdpSocket INHERIT QAbstractSocket
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QUdpSocket
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

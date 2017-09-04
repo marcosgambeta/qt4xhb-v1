@@ -40,11 +40,7 @@ CLASS QHostInfo
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QHostInfo
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

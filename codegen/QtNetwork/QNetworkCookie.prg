@@ -43,11 +43,7 @@ CLASS QNetworkCookie
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QNetworkCookie
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

@@ -26,11 +26,7 @@ CLASS QNetworkProxyFactory
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QNetworkProxyFactory
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

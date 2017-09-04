@@ -47,11 +47,7 @@ CLASS QNetworkReply INHERIT QIODevice
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QNetworkReply
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

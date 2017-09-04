@@ -22,11 +22,7 @@ CLASS QHttpMultiPart INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QHttpMultiPart
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

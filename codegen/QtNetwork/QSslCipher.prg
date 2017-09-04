@@ -31,11 +31,7 @@ CLASS QSslCipher
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSslCipher
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

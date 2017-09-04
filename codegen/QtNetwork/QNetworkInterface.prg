@@ -37,11 +37,7 @@ CLASS QNetworkInterface
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QNetworkInterface
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

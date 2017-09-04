@@ -34,11 +34,7 @@ CLASS QAuthenticator
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAuthenticator
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

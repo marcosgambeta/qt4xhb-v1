@@ -44,11 +44,7 @@ CLASS QNetworkRequest
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QNetworkRequest
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

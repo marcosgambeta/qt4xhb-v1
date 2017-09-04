@@ -46,11 +46,7 @@ CLASS QSslCertificate
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSslCertificate
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

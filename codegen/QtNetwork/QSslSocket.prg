@@ -95,11 +95,7 @@ CLASS QSslSocket INHERIT QTcpSocket
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSslSocket
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

@@ -27,11 +27,7 @@ CLASS QNetworkConfigurationManager INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QNetworkConfigurationManager
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

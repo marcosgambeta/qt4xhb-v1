@@ -56,11 +56,7 @@ CLASS QAbstractSocket INHERIT QIODevice
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractSocket
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

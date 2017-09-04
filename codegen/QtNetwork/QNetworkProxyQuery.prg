@@ -42,11 +42,7 @@ CLASS QNetworkProxyQuery
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QNetworkProxyQuery
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

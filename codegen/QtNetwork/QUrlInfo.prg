@@ -55,11 +55,7 @@ CLASS QUrlInfo
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QUrlInfo
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

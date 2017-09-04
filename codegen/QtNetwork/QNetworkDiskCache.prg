@@ -30,11 +30,7 @@ CLASS QNetworkDiskCache INHERIT QAbstractNetworkCache
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QNetworkDiskCache
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

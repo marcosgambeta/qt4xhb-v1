@@ -24,11 +24,7 @@ CLASS QAbstractNetworkCache INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractNetworkCache
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
