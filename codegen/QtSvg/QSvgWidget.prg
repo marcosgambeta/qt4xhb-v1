@@ -24,11 +24,7 @@ CLASS QSvgWidget INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSvgWidget
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

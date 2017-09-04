@@ -36,11 +36,7 @@ CLASS QSvgGenerator INHERIT QPaintDevice
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSvgGenerator
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

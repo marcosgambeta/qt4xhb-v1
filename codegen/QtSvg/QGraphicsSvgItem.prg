@@ -28,11 +28,7 @@ CLASS QGraphicsSvgItem INHERIT QGraphicsObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGraphicsSvgItem
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

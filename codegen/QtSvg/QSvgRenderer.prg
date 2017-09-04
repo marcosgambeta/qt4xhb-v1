@@ -45,11 +45,7 @@ CLASS QSvgRenderer INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSvgRenderer
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
