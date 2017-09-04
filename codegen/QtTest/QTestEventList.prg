@@ -39,11 +39,7 @@ CLASS QTestEventList
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTestEventList
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
