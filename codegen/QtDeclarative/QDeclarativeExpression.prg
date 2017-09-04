@@ -37,11 +37,7 @@ CLASS QDeclarativeExpression INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDeclarativeExpression
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

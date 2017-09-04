@@ -22,11 +22,7 @@ CLASS QDeclarativeNetworkAccessManagerFactory
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDeclarativeNetworkAccessManagerFactory
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

@@ -30,11 +30,7 @@ CLASS QDeclarativeScriptString
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDeclarativeScriptString
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

@@ -63,11 +63,7 @@ CLASS QDeclarativeProperty
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDeclarativeProperty
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

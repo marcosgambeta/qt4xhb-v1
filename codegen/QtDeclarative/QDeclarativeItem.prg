@@ -37,11 +37,7 @@ CLASS QDeclarativeItem INHERIT QGraphicsObject,QDeclarativeParserStatus
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDeclarativeItem
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

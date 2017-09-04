@@ -25,11 +25,7 @@ CLASS QDeclarativePropertyMap INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDeclarativePropertyMap
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

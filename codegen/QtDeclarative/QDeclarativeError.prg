@@ -34,11 +34,7 @@ CLASS QDeclarativeError
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDeclarativeError
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

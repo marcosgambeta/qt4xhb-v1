@@ -35,11 +35,7 @@ CLASS QDeclarativeListReference
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDeclarativeListReference
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

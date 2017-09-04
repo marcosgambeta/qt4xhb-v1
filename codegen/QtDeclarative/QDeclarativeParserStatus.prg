@@ -19,11 +19,7 @@ CLASS QDeclarativeParserStatus
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDeclarativeParserStatus
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
