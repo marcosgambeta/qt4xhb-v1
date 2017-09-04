@@ -24,11 +24,7 @@ CLASS QSqlRelation
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSqlRelation
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

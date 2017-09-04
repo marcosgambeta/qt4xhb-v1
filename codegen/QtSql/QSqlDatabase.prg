@@ -72,11 +72,7 @@ CLASS QSqlDatabase
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSqlDatabase
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

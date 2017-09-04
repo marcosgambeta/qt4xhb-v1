@@ -22,11 +22,7 @@ CLASS QSqlResult
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSqlResult
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

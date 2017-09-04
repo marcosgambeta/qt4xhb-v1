@@ -48,11 +48,7 @@ CLASS QSqlField
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSqlField
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

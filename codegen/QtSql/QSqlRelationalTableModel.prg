@@ -28,11 +28,7 @@ CLASS QSqlRelationalTableModel INHERIT QSqlTableModel
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSqlRelationalTableModel
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

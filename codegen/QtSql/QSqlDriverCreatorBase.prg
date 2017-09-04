@@ -22,11 +22,7 @@ CLASS QSqlDriverCreatorBase
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSqlDriverCreatorBase
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

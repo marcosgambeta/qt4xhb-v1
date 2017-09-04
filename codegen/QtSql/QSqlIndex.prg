@@ -24,11 +24,7 @@ CLASS QSqlIndex INHERIT QSqlRecord
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSqlIndex
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

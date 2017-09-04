@@ -57,11 +57,7 @@ CLASS QSqlRecord
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSqlRecord
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

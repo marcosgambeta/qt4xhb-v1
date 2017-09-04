@@ -19,11 +19,7 @@ CLASS QSqlRelationalDelegate INHERIT QItemDelegate
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSqlRelationalDelegate
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
