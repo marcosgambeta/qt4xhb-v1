@@ -23,11 +23,7 @@ CLASS QGLFramebufferObjectFormat INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGLFramebufferObjectFormat
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

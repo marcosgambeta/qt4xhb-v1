@@ -42,11 +42,7 @@ CLASS QGLFramebufferObject INHERIT QPaintDevice
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGLFramebufferObject
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

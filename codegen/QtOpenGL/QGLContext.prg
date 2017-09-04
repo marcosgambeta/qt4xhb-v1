@@ -52,11 +52,7 @@ CLASS QGLContext
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGLContext
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

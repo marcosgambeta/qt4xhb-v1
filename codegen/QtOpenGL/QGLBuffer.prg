@@ -40,11 +40,7 @@ CLASS QGLBuffer
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGLBuffer
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

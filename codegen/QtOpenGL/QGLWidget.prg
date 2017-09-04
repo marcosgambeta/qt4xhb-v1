@@ -56,11 +56,7 @@ CLASS QGLWidget INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGLWidget
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

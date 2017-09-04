@@ -29,11 +29,7 @@ CLASS QGLShader INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGLShader
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
