@@ -27,11 +27,7 @@ CLASS QAbstractVideoBuffer
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractVideoBuffer
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

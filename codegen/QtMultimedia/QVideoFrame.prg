@@ -55,11 +55,7 @@ CLASS QVideoFrame
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QVideoFrame
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

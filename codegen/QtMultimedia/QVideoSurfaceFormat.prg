@@ -53,11 +53,7 @@ CLASS QVideoSurfaceFormat
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QVideoSurfaceFormat
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
