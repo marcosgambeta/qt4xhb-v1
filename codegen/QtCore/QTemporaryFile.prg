@@ -23,11 +23,7 @@ CLASS QTemporaryFile INHERIT QFile
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTemporaryFile
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

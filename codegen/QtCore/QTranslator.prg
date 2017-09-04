@@ -18,11 +18,7 @@ CLASS QTranslator INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTranslator
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

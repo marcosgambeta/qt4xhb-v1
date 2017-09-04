@@ -23,11 +23,7 @@ CLASS QSignalTransition INHERIT QAbstractTransition
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSignalTransition
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

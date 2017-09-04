@@ -27,11 +27,7 @@ CLASS QPoint
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPoint
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

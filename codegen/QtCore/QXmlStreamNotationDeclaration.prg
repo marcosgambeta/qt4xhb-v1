@@ -27,11 +27,7 @@ CLASS QXmlStreamNotationDeclaration
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlStreamNotationDeclaration
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

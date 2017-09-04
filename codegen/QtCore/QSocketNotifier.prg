@@ -18,11 +18,7 @@ CLASS QSocketNotifier INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSocketNotifier
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

@@ -37,11 +37,7 @@ CLASS QModelIndex
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QModelIndex
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

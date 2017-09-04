@@ -24,11 +24,7 @@ CLASS QMutex
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMutex
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

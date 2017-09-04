@@ -31,11 +31,7 @@ CLASS QByteArrayMatcher
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QByteArrayMatcher
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

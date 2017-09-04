@@ -41,11 +41,7 @@ CLASS QDataStream
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDataStream
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

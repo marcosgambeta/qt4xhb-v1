@@ -14,11 +14,7 @@ CLASS QParallelAnimationGroup INHERIT QAnimationGroup
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QParallelAnimationGroup
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

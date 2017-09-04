@@ -31,11 +31,7 @@ CLASS QElapsedTimer
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QElapsedTimer
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

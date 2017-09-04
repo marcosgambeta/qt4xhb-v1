@@ -29,11 +29,7 @@ CLASS QXmlStreamEntityDeclaration
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlStreamEntityDeclaration
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

@@ -22,11 +22,7 @@ CLASS QSequentialAnimationGroup INHERIT QAnimationGroup
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSequentialAnimationGroup
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

@@ -42,11 +42,7 @@ CLASS QRegExp
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QRegExp
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

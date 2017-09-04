@@ -34,11 +34,7 @@ CLASS QLibrary INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QLibrary
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

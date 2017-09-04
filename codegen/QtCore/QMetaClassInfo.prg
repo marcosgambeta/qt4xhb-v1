@@ -25,11 +25,7 @@ CLASS QMetaClassInfo
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMetaClassInfo
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

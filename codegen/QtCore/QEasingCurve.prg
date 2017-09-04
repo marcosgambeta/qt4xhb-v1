@@ -29,11 +29,7 @@ CLASS QEasingCurve
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QEasingCurve
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

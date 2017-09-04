@@ -21,11 +21,7 @@ CLASS QRunnable
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QRunnable
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

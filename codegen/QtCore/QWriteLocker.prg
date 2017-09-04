@@ -25,11 +25,7 @@ CLASS QWriteLocker
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWriteLocker
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

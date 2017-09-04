@@ -73,11 +73,7 @@ CLASS QFileInfo
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QFileInfo
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

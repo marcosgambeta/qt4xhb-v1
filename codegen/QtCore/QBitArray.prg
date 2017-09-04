@@ -40,11 +40,7 @@ CLASS QBitArray
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QBitArray
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

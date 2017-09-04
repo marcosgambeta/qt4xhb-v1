@@ -21,11 +21,7 @@ CLASS QWaitCondition
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWaitCondition
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

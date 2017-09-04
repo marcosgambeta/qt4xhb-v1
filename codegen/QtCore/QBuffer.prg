@@ -33,11 +33,7 @@ CLASS QBuffer INHERIT QIODevice
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QBuffer
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

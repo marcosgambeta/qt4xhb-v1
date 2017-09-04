@@ -87,11 +87,7 @@ CLASS QDir
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDir
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

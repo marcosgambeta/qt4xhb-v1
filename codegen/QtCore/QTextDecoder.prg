@@ -25,11 +25,7 @@ CLASS QTextDecoder
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTextDecoder
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

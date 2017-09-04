@@ -30,11 +30,7 @@ CLASS QMargins
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMargins
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

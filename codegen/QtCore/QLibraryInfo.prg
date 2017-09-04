@@ -25,11 +25,7 @@ CLASS QLibraryInfo
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QLibraryInfo
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

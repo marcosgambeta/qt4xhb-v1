@@ -23,11 +23,7 @@ CLASS QBasicTimer
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QBasicTimer
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

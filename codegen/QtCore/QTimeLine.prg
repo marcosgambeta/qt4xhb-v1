@@ -45,11 +45,7 @@ CLASS QTimeLine INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTimeLine
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

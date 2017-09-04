@@ -25,11 +25,7 @@ CLASS QReadLocker
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QReadLocker
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

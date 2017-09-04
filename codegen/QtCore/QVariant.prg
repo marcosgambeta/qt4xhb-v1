@@ -107,11 +107,7 @@ CLASS QVariant
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QVariant
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

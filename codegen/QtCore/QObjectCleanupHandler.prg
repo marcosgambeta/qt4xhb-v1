@@ -20,11 +20,7 @@ CLASS QObjectCleanupHandler INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QObjectCleanupHandler
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

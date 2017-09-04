@@ -35,11 +35,7 @@ CLASS QState INHERIT QAbstractState
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QState
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

@@ -21,11 +21,7 @@ CLASS QSharedData
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSharedData
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

@@ -114,11 +114,7 @@ CLASS QLocale
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QLocale
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

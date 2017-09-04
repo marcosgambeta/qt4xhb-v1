@@ -64,11 +64,7 @@ CLASS QDate
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDate
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

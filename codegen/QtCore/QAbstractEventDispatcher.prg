@@ -31,11 +31,7 @@ CLASS QAbstractEventDispatcher INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractEventDispatcher
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

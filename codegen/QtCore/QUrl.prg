@@ -104,11 +104,7 @@ CLASS QUrl
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QUrl
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

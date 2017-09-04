@@ -56,11 +56,7 @@ CLASS QIODevice INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QIODevice
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

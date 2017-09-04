@@ -34,11 +34,7 @@ CLASS QSignalMapper INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSignalMapper
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

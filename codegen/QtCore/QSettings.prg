@@ -54,11 +54,7 @@ CLASS QSettings INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSettings
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

@@ -17,11 +17,7 @@ CLASS QPauseAnimation INHERIT QAbstractAnimation
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPauseAnimation
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

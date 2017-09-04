@@ -37,11 +37,7 @@ CLASS QSize
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSize
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

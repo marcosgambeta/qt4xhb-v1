@@ -17,11 +17,7 @@ CLASS QAbstractTableModel INHERIT QAbstractItemModel
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractTableModel
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

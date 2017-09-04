@@ -47,11 +47,7 @@ CLASS QTime
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTime
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

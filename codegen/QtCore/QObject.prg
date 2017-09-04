@@ -1437,12 +1437,7 @@ METHOD onGestureOverrideEvent (cb) CLASS QObject
    ENDIF
 RETURN r
 
-
-PROCEDURE destroyObject () CLASS QObject
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

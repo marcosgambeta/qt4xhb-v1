@@ -36,11 +36,7 @@ CLASS QAbstractAnimation INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractAnimation
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

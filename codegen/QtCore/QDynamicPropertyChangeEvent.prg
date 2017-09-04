@@ -17,11 +17,7 @@ CLASS QDynamicPropertyChangeEvent INHERIT QEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDynamicPropertyChangeEvent
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

@@ -71,11 +71,7 @@ CLASS QTextStream
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTextStream
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

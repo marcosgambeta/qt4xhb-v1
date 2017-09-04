@@ -59,11 +59,7 @@ CLASS QChar
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QChar
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

@@ -28,11 +28,7 @@ CLASS QAbstractTransition INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractTransition
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

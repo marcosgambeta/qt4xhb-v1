@@ -57,11 +57,7 @@ CLASS QLineF
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QLineF
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

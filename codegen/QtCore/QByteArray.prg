@@ -152,11 +152,7 @@ CLASS QByteArray
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QByteArray
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

@@ -39,11 +39,7 @@ CLASS QMetaMethod
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMetaMethod
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

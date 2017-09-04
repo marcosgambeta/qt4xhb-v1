@@ -36,11 +36,7 @@ CLASS QXmlStreamAttributes
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlStreamAttributes
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

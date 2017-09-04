@@ -23,11 +23,7 @@ CLASS QPropertyAnimation INHERIT QVariantAnimation
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPropertyAnimation
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

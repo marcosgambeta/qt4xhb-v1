@@ -29,11 +29,7 @@ CLASS QStringMatcher
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStringMatcher
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

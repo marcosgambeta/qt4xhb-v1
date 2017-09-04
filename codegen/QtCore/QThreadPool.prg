@@ -29,11 +29,7 @@ CLASS QThreadPool INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QThreadPool
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

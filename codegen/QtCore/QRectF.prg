@@ -94,11 +94,7 @@ CLASS QRectF
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QRectF
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

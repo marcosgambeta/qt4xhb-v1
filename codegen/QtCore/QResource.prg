@@ -34,11 +34,7 @@ CLASS QResource
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QResource
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

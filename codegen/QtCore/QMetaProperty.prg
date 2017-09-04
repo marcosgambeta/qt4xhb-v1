@@ -53,11 +53,7 @@ CLASS QMetaProperty
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMetaProperty
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

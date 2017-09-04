@@ -37,11 +37,7 @@ CLASS QStateMachine INHERIT QState
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStateMachine
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

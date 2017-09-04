@@ -40,11 +40,7 @@ CLASS QBasicAtomicInt
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QBasicAtomicInt
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

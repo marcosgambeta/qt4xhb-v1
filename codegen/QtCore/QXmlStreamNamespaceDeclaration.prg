@@ -27,11 +27,7 @@ CLASS QXmlStreamNamespaceDeclaration
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlStreamNamespaceDeclaration
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

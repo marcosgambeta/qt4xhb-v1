@@ -25,11 +25,7 @@ CLASS QSemaphore
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSemaphore
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

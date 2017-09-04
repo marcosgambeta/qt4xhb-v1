@@ -58,11 +58,7 @@ CLASS QFutureInterfaceBase
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QFutureInterfaceBase
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

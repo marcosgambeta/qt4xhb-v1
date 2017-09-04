@@ -70,11 +70,7 @@ CLASS QProcess INHERIT QIODevice
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QProcess
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

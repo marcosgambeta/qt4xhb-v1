@@ -67,11 +67,7 @@ CLASS QXmlStreamWriter
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlStreamWriter
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

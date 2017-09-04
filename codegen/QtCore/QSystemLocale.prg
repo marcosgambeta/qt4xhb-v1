@@ -24,11 +24,7 @@ CLASS QSystemLocale
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSystemLocale
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
