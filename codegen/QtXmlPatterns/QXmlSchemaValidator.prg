@@ -41,11 +41,7 @@ CLASS QXmlSchemaValidator
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlSchemaValidator
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

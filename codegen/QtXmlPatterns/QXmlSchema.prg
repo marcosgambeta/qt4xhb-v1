@@ -41,11 +41,7 @@ CLASS QXmlSchema
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlSchema
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

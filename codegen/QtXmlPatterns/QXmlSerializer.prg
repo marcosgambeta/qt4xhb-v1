@@ -31,11 +31,7 @@ CLASS QXmlSerializer INHERIT QAbstractXmlReceiver
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlSerializer
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

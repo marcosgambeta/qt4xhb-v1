@@ -30,11 +30,7 @@ CLASS QAbstractXmlReceiver
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractXmlReceiver
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

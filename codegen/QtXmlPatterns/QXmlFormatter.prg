@@ -25,11 +25,7 @@ CLASS QXmlFormatter INHERIT QXmlSerializer
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlFormatter
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

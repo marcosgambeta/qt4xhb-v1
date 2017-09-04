@@ -21,11 +21,7 @@ CLASS QXmlNamePool
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlNamePool
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

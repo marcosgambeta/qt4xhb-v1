@@ -28,11 +28,7 @@ CLASS QXmlNodeModelIndex
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlNodeModelIndex
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 

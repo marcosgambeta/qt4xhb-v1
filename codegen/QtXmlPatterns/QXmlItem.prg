@@ -32,11 +32,7 @@ CLASS QXmlItem
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlItem
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
