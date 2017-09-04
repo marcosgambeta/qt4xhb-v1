@@ -32,11 +32,7 @@ CLASS QScriptEngineDebugger INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QScriptEngineDebugger
-   IF ::self_destruction
-      ::delete()
-   ENDIF
-RETURN
+$destructor
 
 #pragma BEGINDUMP
 
