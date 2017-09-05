@@ -122,6 +122,7 @@ HB_FUNC_STATIC( QXMLITEM_NEW )
 HB_FUNC_STATIC( QXMLITEM_DELETE )
 {
   QXmlItem * obj = (QXmlItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -131,6 +132,7 @@ HB_FUNC_STATIC( QXMLITEM_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
