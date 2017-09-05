@@ -98,6 +98,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_NEW )
 HB_FUNC_STATIC( QTESTEVENTLIST_DELETE )
 {
   QTestEventList * obj = (QTestEventList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -107,6 +108,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
