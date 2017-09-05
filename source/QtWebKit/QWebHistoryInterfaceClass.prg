@@ -42,6 +42,7 @@ RETURN
 HB_FUNC_STATIC( QWEBHISTORYINTERFACE_DELETE )
 {
   QWebHistoryInterface * obj = (QWebHistoryInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -51,6 +52,7 @@ HB_FUNC_STATIC( QWEBHISTORYINTERFACE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
