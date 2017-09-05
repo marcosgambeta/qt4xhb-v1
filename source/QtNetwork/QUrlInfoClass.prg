@@ -143,6 +143,7 @@ HB_FUNC_STATIC( QURLINFO_NEW )
 HB_FUNC_STATIC( QURLINFO_DELETE )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -152,6 +153,7 @@ HB_FUNC_STATIC( QURLINFO_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

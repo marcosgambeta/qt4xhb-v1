@@ -91,6 +91,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_NEW )
 HB_FUNC_STATIC( QABSTRACTSOCKET_DELETE )
 {
   QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -100,6 +101,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
