@@ -57,6 +57,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_NEW )
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_DELETE )
 {
   QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -66,6 +67,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

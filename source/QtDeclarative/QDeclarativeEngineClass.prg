@@ -81,6 +81,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_NEW )
 HB_FUNC_STATIC( QDECLARATIVEENGINE_DELETE )
 {
   QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -90,6 +91,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
