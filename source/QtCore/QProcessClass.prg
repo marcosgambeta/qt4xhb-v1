@@ -102,6 +102,7 @@ HB_FUNC_STATIC( QPROCESS_NEW )
 HB_FUNC_STATIC( QPROCESS_DELETE )
 {
   QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -111,6 +112,7 @@ HB_FUNC_STATIC( QPROCESS_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

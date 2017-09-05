@@ -82,6 +82,7 @@ HB_FUNC_STATIC( QEVENTTRANSITION_NEW )
 HB_FUNC_STATIC( QEVENTTRANSITION_DELETE )
 {
   QEventTransition * obj = (QEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -91,6 +92,7 @@ HB_FUNC_STATIC( QEVENTTRANSITION_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

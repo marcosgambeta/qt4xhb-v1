@@ -93,6 +93,7 @@ HB_FUNC_STATIC( QBUFFER_NEW )
 HB_FUNC_STATIC( QBUFFER_DELETE )
 {
   QBuffer * obj = (QBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -102,6 +103,7 @@ HB_FUNC_STATIC( QBUFFER_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
