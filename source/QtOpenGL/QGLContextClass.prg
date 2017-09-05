@@ -84,6 +84,7 @@ HB_FUNC_STATIC( QGLCONTEXT_NEW )
 HB_FUNC_STATIC( QGLCONTEXT_DELETE )
 {
   QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -93,6 +94,7 @@ HB_FUNC_STATIC( QGLCONTEXT_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
