@@ -70,6 +70,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_NEW )
 HB_FUNC_STATIC( QXMLATTRIBUTES_DELETE )
 {
   QXmlAttributes * obj = (QXmlAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -79,6 +80,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
