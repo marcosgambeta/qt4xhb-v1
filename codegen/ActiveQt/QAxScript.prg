@@ -59,22 +59,7 @@ HB_FUNC_STATIC( QAXSCRIPT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QAXSCRIPT_DELETE )
-{
-  QAxScript * obj = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$deleteMethod
 
 /*
 QVariant call ( const QString & function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
