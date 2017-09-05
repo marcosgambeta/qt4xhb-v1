@@ -159,6 +159,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_NEW )
 HB_FUNC_STATIC( QVIDEOFRAME_DELETE )
 {
   QVideoFrame * obj = (QVideoFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
     delete obj;
@@ -168,6 +169,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_DELETE )
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
