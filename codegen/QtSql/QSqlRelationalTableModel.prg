@@ -24,6 +24,7 @@ CLASS QSqlRelationalTableModel INHERIT QSqlTableModel
    METHOD setData
    METHOD setTable
    METHOD revertRow
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -41,153 +42,58 @@ $destructor
 /*
 QSqlRelationalTableModel ( QObject * parent = 0, QSqlDatabase db = QSqlDatabase() )
 */
-HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_NEW )
-{
-  QSqlDatabase par2 = ISNIL(2)? QSqlDatabase() : *(QSqlDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QSqlRelationalTableModel * o = new QSqlRelationalTableModel ( OPQOBJECT(1,0), par2 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QObject *=0,QSqlDatabase=QSqlDatabase()
 
 $deleteMethod
 
 /*
 QSqlRelation relation ( int column ) const
 */
-HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_RELATION )
-{
-  QSqlRelationalTableModel * obj = (QSqlRelationalTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSqlRelation * ptr = new QSqlRelation( obj->relation ( PINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QSQLRELATION", true );
-  }
-}
-
+$method=|QSqlRelation|relation|int
 
 /*
 virtual QSqlTableModel * relationModel ( int column ) const
 */
-HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_RELATIONMODEL )
-{
-  QSqlRelationalTableModel * obj = (QSqlRelationalTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSqlTableModel * ptr = obj->relationModel ( PINT(1) );
-    _qt4xhb_createReturnClass ( ptr, "QSQLTABLEMODEL" );
-  }
-}
-
+$virtualMethod=|QSqlTableModel *|relationModel|int
 
 /*
 virtual void setRelation ( int column, const QSqlRelation & relation )
 */
-HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SETRELATION )
-{
-  QSqlRelationalTableModel * obj = (QSqlRelationalTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setRelation ( PINT(1), *PQSQLRELATION(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|setRelation|int,const QSqlRelation &
 
 /*
 virtual void clear ()
 */
-HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_CLEAR )
-{
-  QSqlRelationalTableModel * obj = (QSqlRelationalTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clear ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|clear|
 
 /*
 virtual QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const
 */
-HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_DATA )
-{
-  QSqlRelationalTableModel * obj = (QSqlRelationalTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->data ( *PQMODELINDEX(1), OPINT(2,Qt::DisplayRole) ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
-
+$virtualMethod=|QVariant|data|const QModelIndex &,int=Qt::DisplayRole
 
 /*
 virtual bool removeColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
 */
-HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_REMOVECOLUMNS )
-{
-  QSqlRelationalTableModel * obj = (QSqlRelationalTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->removeColumns ( PINT(1), PINT(2), par3 ) );
-  }
-}
-
+$virtualMethod=|bool|removeColumns|int,int,const QModelIndex &=QModelIndex()
 
 /*
 virtual bool select ()
 */
-HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SELECT )
-{
-  QSqlRelationalTableModel * obj = (QSqlRelationalTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->select () );
-  }
-}
-
+$virtualMethod=|bool|select|
 
 /*
 virtual bool setData ( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
 */
-HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SETDATA )
-{
-  QSqlRelationalTableModel * obj = (QSqlRelationalTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->setData ( *PQMODELINDEX(1), *PQVARIANT(2), OPINT(3,Qt::EditRole) ) );
-  }
-}
-
+$virtualMethod=|bool|setData|const QModelIndex &,const QVariant &,int=Qt::EditRole
 
 /*
 virtual void setTable ( const QString & table )
 */
-HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SETTABLE )
-{
-  QSqlRelationalTableModel * obj = (QSqlRelationalTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setTable ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|setTable|const QString &
 
 /*
 virtual void revertRow ( int row )
 */
-HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_REVERTROW )
-{
-  QSqlRelationalTableModel * obj = (QSqlRelationalTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->revertRow ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
+$virtualMethod=|void|revertRow|int
 
 #pragma ENDDUMP

@@ -13,11 +13,13 @@ CLASS QSqlResult
 
    METHOD delete
    METHOD handle
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -37,15 +39,7 @@ $deleteMethod
 /*
 virtual QVariant handle () const
 */
-HB_FUNC_STATIC( QSQLRESULT_HANDLE )
-{
-  QSqlResult * obj = (QSqlResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->handle () );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
+$virtualMethod=|QVariant|handle|
 
 $extraMethods
 

@@ -13,6 +13,7 @@ CLASS QSqlDriverPlugin INHERIT QObject
    METHOD delete
    METHOD create
    METHOD keys
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -27,35 +28,18 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
+#include <QSqlDriver>
+
 $deleteMethod
 
 /*
 virtual QSqlDriver * create ( const QString & key ) = 0
 */
-HB_FUNC_STATIC( QSQLDRIVERPLUGIN_CREATE )
-{
-  QSqlDriverPlugin * obj = (QSqlDriverPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSqlDriver * ptr = obj->create ( PQSTRING(1) );
-    _qt4xhb_createReturnClass ( ptr, "QSQLDRIVER" );
-  }
-}
-
+$virtualMethod=|QSqlDriver *|create|const QString &
 
 /*
 virtual QStringList keys () const = 0
 */
-HB_FUNC_STATIC( QSQLDRIVERPLUGIN_KEYS )
-{
-  QSqlDriverPlugin * obj = (QSqlDriverPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->keys () );
-  }
-}
-
-
-
+$virtualMethod=|QStringList|keys|
 
 #pragma ENDDUMP

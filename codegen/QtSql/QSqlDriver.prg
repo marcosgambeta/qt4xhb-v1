@@ -39,7 +39,9 @@ CLASS QSqlDriver INHERIT QObject
    METHOD subscribedToNotifications
    METHOD tables
    METHOD unsubscribeFromNotification
+
    METHOD onNotification
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -64,323 +66,121 @@ $deleteMethod
 /*
 virtual bool beginTransaction ()
 */
-HB_FUNC_STATIC( QSQLDRIVER_BEGINTRANSACTION )
-{
-  QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->beginTransaction () );
-  }
-}
-
+$virtualMethod=|bool|beginTransaction|
 
 /*
 virtual void close () = 0
 */
-HB_FUNC_STATIC( QSQLDRIVER_CLOSE )
-{
-  QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->close ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|close|
 
 /*
 virtual bool commitTransaction ()
 */
-HB_FUNC_STATIC( QSQLDRIVER_COMMITTRANSACTION )
-{
-  QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->commitTransaction () );
-  }
-}
-
+$virtualMethod=|bool|commitTransaction|
 
 /*
 virtual QSqlResult * createResult () const = 0
 */
-HB_FUNC_STATIC( QSQLDRIVER_CREATERESULT )
-{
-  QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSqlResult * ptr = obj->createResult ();
-    _qt4xhb_createReturnClass ( ptr, "QSQLRESULT" );
-  }
-}
-
+$virtualMethod=|QSqlResult *|createResult|
 
 /*
 virtual QString escapeIdentifier ( const QString & identifier, IdentifierType type ) const
 */
-HB_FUNC_STATIC( QSQLDRIVER_ESCAPEIDENTIFIER )
-{
-  QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->escapeIdentifier ( PQSTRING(1), (QSqlDriver::IdentifierType) hb_parni(2) ) );
-  }
-}
-
+$virtualMethod=|QString|escapeIdentifier|const QString &,QSqlDriver::IdentifierType
 
 /*
 virtual QString formatValue ( const QSqlField & field, bool trimStrings = false ) const
 */
-HB_FUNC_STATIC( QSQLDRIVER_FORMATVALUE )
-{
-  QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->formatValue ( *PQSQLFIELD(1), OPBOOL(2,false) ) );
-  }
-}
-
+$virtualMethod=|QString|formatValue|const QSqlField &,bool=false
 
 /*
 virtual QVariant handle () const
 */
-HB_FUNC_STATIC( QSQLDRIVER_HANDLE )
-{
-  QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->handle () );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
-
+$virtualMethod=|QVariant|handle|
 
 /*
 virtual bool hasFeature ( DriverFeature feature ) const = 0
 */
-HB_FUNC_STATIC( QSQLDRIVER_HASFEATURE )
-{
-  QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasFeature ( (QSqlDriver::DriverFeature) hb_parni(1) ) );
-  }
-}
-
+$virtualMethod=|bool|hasFeature|QSqlDriver::DriverFeature
 
 /*
 bool isIdentifierEscaped ( const QString & identifier, IdentifierType type ) const
 */
-HB_FUNC_STATIC( QSQLDRIVER_ISIDENTIFIERESCAPED )
-{
-  QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isIdentifierEscaped ( PQSTRING(1), (QSqlDriver::IdentifierType) hb_parni(2) ) );
-  }
-}
-
+$method=|bool|isIdentifierEscaped|const QString &,QSqlDriver::IdentifierType
 
 /*
 virtual bool isOpen () const
 */
-HB_FUNC_STATIC( QSQLDRIVER_ISOPEN )
-{
-  QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isOpen () );
-  }
-}
-
+$virtualMethod=|bool|isOpen|
 
 /*
 bool isOpenError () const
 */
-HB_FUNC_STATIC( QSQLDRIVER_ISOPENERROR )
-{
-  QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isOpenError () );
-  }
-}
-
+$method=|bool|isOpenError|
 
 /*
 QSqlError lastError () const
 */
-HB_FUNC_STATIC( QSQLDRIVER_LASTERROR )
-{
-  QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSqlError * ptr = new QSqlError( obj->lastError () );
-    _qt4xhb_createReturnClass ( ptr, "QSQLERROR", true );
-  }
-}
-
+$method=|QSqlError|lastError|
 
 /*
 QSql::NumericalPrecisionPolicy numericalPrecisionPolicy () const
 */
-HB_FUNC_STATIC( QSQLDRIVER_NUMERICALPRECISIONPOLICY )
-{
-  QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( obj->numericalPrecisionPolicy () );
-  }
-}
-
+$method=|QSql::NumericalPrecisionPolicy|numericalPrecisionPolicy|
 
 /*
 virtual bool open ( const QString & db, const QString & user = QString(), const QString & password = QString(), const QString & host = QString(), int port = -1, const QString & options = QString() ) = 0
 */
-HB_FUNC_STATIC( QSQLDRIVER_OPEN )
-{
-  QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->open ( PQSTRING(1), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()), OPINT(5,-1), OPQSTRING(6,QString()) ) );
-  }
-}
-
+$virtualMethod=|bool|open|const QString &,const QString &=QString(),const QString &=QString(),const QString &=QString(),int=-1,const QString &=QString()
 
 /*
 virtual QSqlIndex primaryIndex ( const QString & tableName ) const
 */
-HB_FUNC_STATIC( QSQLDRIVER_PRIMARYINDEX )
-{
-  QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSqlIndex * ptr = new QSqlIndex( obj->primaryIndex ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QSQLINDEX", true );
-  }
-}
-
+$virtualMethod=|QSqlIndex|primaryIndex|const QString &
 
 /*
 virtual QSqlRecord record ( const QString & tableName ) const
 */
-HB_FUNC_STATIC( QSQLDRIVER_RECORD )
-{
-  QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSqlRecord * ptr = new QSqlRecord( obj->record ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QSQLRECORD", true );
-  }
-}
-
+$virtualMethod=|QSqlRecord|record|const QString &
 
 /*
 virtual bool rollbackTransaction ()
 */
-HB_FUNC_STATIC( QSQLDRIVER_ROLLBACKTRANSACTION )
-{
-  QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->rollbackTransaction () );
-  }
-}
-
+$virtualMethod=|bool|rollbackTransaction|
 
 /*
 void setNumericalPrecisionPolicy ( QSql::NumericalPrecisionPolicy precisionPolicy )
 */
-HB_FUNC_STATIC( QSQLDRIVER_SETNUMERICALPRECISIONPOLICY )
-{
-  QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setNumericalPrecisionPolicy ( (QSql::NumericalPrecisionPolicy) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setNumericalPrecisionPolicy|QSql::NumericalPrecisionPolicy
 
 /*
 virtual QString sqlStatement ( StatementType type, const QString & tableName, const QSqlRecord & rec, bool preparedStatement ) const
 */
-HB_FUNC_STATIC( QSQLDRIVER_SQLSTATEMENT )
-{
-  QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->sqlStatement ( (QSqlDriver::StatementType) hb_parni(1), PQSTRING(2), *PQSQLRECORD(3), PBOOL(4) ) );
-  }
-}
-
+$virtualMethod=|QString|sqlStatement|QSqlDriver::StatementType,const QString &,const QSqlRecord &,bool
 
 /*
 QString stripDelimiters ( const QString & identifier, IdentifierType type ) const
 */
-HB_FUNC_STATIC( QSQLDRIVER_STRIPDELIMITERS )
-{
-  QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->stripDelimiters ( PQSTRING(1), (QSqlDriver::IdentifierType) hb_parni(2) ) );
-  }
-}
-
+$method=|QString|stripDelimiters|const QString &,QSqlDriver::IdentifierType
 
 /*
 bool subscribeToNotification ( const QString & name )
 */
-HB_FUNC_STATIC( QSQLDRIVER_SUBSCRIBETONOTIFICATION )
-{
-  QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->subscribeToNotification ( PQSTRING(1) ) );
-  }
-}
-
+$method=|bool|subscribeToNotification|const QString &
 
 /*
 QStringList subscribedToNotifications () const
 */
-HB_FUNC_STATIC( QSQLDRIVER_SUBSCRIBEDTONOTIFICATIONS )
-{
-  QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->subscribedToNotifications () );
-  }
-}
-
+$method=|QStringList|subscribedToNotifications|
 
 /*
 virtual QStringList tables ( QSql::TableType tableType ) const
 */
-HB_FUNC_STATIC( QSQLDRIVER_TABLES )
-{
-  QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->tables ( (QSql::TableType) hb_parni(1) ) );
-  }
-}
-
+$virtualMethod=|QStringList|tables|QSql::TableType
 
 /*
 bool unsubscribeFromNotification ( const QString & name )
 */
-HB_FUNC_STATIC( QSQLDRIVER_UNSUBSCRIBEFROMNOTIFICATION )
-{
-  QSqlDriver * obj = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->unsubscribeFromNotification ( PQSTRING(1) ) );
-  }
-}
-
-
-
-
+$method=|bool|unsubscribeFromNotification|const QString &
 
 #pragma ENDDUMP

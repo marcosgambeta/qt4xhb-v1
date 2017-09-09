@@ -15,6 +15,7 @@ CLASS QSqlRelationalDelegate INHERIT QItemDelegate
    METHOD createEditor
    METHOD setEditorData
    METHOD setModelData
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -32,57 +33,23 @@ $destructor
 /*
 QSqlRelationalDelegate ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_NEW )
-{
-  QSqlRelationalDelegate * o = new QSqlRelationalDelegate ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
 /*
 virtual QWidget * createEditor ( QWidget * parent, const QStyleOptionViewItem & option, const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_CREATEEDITOR )
-{
-  QSqlRelationalDelegate * obj = (QSqlRelationalDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWidget * ptr = obj->createEditor ( PQWIDGET(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
-
+$virtualMethod=|QWidget *|createEditor|QWidget *,const QStyleOptionViewItem &,const QModelIndex &
 
 /*
 virtual void setEditorData ( QWidget * editor, const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_SETEDITORDATA )
-{
-  QSqlRelationalDelegate * obj = (QSqlRelationalDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setEditorData ( PQWIDGET(1), *PQMODELINDEX(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|setEditorData|QWidget *,const QModelIndex &
 
 /*
 virtual void setModelData ( QWidget * editor, QAbstractItemModel * model, const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_SETMODELDATA )
-{
-  QSqlRelationalDelegate * obj = (QSqlRelationalDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAbstractItemModel * par2 = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setModelData ( PQWIDGET(1), par2, *PQMODELINDEX(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
+$virtualMethod=|void|setModelData|QWidget *,QAbstractItemModel *,const QModelIndex &
 
 #pragma ENDDUMP
