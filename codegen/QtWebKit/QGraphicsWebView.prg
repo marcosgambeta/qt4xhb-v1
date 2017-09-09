@@ -346,19 +346,10 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETTINGS )
   }
 }
 
-
 /*
 QString title () const
 */
-HB_FUNC_STATIC( QGRAPHICSWEBVIEW_TITLE )
-{
-  QGraphicsWebView * obj = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->title () );
-  }
-}
-
+$method=|QString|title|
 
 /*
 void triggerPageAction ( QWebPage::WebAction action, bool checked = false )

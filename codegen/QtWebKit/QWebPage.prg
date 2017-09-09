@@ -376,19 +376,10 @@ HB_FUNC_STATIC( QWEBPAGE_PREFERREDCONTENTSSIZE )
   }
 }
 
-
 /*
 QString selectedText () const
 */
-HB_FUNC_STATIC( QWEBPAGE_SELECTEDTEXT )
-{
-  QWebPage * obj = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->selectedText () );
-  }
-}
-
+$method=|QString|selectedText|
 
 /*
 void setContentEditable ( bool editable )

@@ -226,19 +226,10 @@ HB_FUNC_STATIC( QWEBVIEW_RENDERHINTS )
   }
 }
 
-
 /*
 QString selectedText () const
 */
-HB_FUNC_STATIC( QWEBVIEW_SELECTEDTEXT )
-{
-  QWebView * obj = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->selectedText () );
-  }
-}
-
+$method=|QString|selectedText|
 
 /*
 void setContent ( const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl() )
@@ -383,19 +374,10 @@ HB_FUNC_STATIC( QWEBVIEW_TEXTSIZEMULTIPLIER )
   }
 }
 
-
 /*
 QString title () const
 */
-HB_FUNC_STATIC( QWEBVIEW_TITLE )
-{
-  QWebView * obj = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->title () );
-  }
-}
-
+$method=|QString|title|
 
 /*
 void triggerPageAction ( QWebPage::WebAction action, bool checked = false )

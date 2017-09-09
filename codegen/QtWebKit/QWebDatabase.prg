@@ -56,15 +56,7 @@ $deleteMethod
 /*
 QString displayName () const
 */
-HB_FUNC_STATIC( QWEBDATABASE_DISPLAYNAME )
-{
-  QWebDatabase * obj = (QWebDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->displayName () );
-  }
-}
-
+$method=|QString|displayName|
 
 /*
 qint64 expectedSize () const
@@ -78,32 +70,15 @@ HB_FUNC_STATIC( QWEBDATABASE_EXPECTEDSIZE )
   }
 }
 
-
 /*
 QString fileName () const
 */
-HB_FUNC_STATIC( QWEBDATABASE_FILENAME )
-{
-  QWebDatabase * obj = (QWebDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->fileName () );
-  }
-}
-
+$method=|QString|fileName|
 
 /*
 QString name () const
 */
-HB_FUNC_STATIC( QWEBDATABASE_NAME )
-{
-  QWebDatabase * obj = (QWebDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->name () );
-  }
-}
-
+$method=|QString|name|
 
 /*
 QWebSecurityOrigin origin () const

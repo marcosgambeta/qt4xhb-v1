@@ -124,19 +124,10 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_SETUSERDATA )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString title () const
 */
-HB_FUNC_STATIC( QWEBHISTORYITEM_TITLE )
-{
-  QWebHistoryItem * obj = (QWebHistoryItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->title () );
-  }
-}
-
+$method=|QString|title|
 
 /*
 QUrl url () const

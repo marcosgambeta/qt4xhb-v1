@@ -230,47 +230,20 @@ HB_FUNC_STATIC( QWEBFRAME_DOCUMENTELEMENT )
   }
 }
 
-
 /*
 QWebElementCollection findAllElements ( const QString & selectorQuery ) const
 */
-HB_FUNC_STATIC( QWEBFRAME_FINDALLELEMENTS )
-{
-  QWebFrame * obj = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWebElementCollection * ptr = new QWebElementCollection( obj->findAllElements ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QWEBELEMENTCOLLECTION", true );
-  }
-}
-
+$method=|QWebElementCollection|findAllElements|const QString &
 
 /*
 QWebElement findFirstElement ( const QString & selectorQuery ) const
 */
-HB_FUNC_STATIC( QWEBFRAME_FINDFIRSTELEMENT )
-{
-  QWebFrame * obj = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWebElement * ptr = new QWebElement( obj->findFirstElement ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
-  }
-}
-
+$method=|QWebElement|findFirstElement|const QString &
 
 /*
 QString frameName () const
 */
-HB_FUNC_STATIC( QWEBFRAME_FRAMENAME )
-{
-  QWebFrame * obj = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->frameName () );
-  }
-}
-
+$method=|QString|frameName|
 
 /*
 QRect geometry () const
@@ -482,15 +455,7 @@ HB_FUNC_STATIC( QWEBFRAME_RENDER )
 /*
 QString renderTreeDump () const
 */
-HB_FUNC_STATIC( QWEBFRAME_RENDERTREEDUMP )
-{
-  QWebFrame * obj = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->renderTreeDump () );
-  }
-}
-
+$method=|QString|renderTreeDump|
 
 /*
 QUrl requestedUrl () const
@@ -599,20 +564,10 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLPOSITION )
   }
 }
 
-
 /*
 void scrollToAnchor ( const QString & anchor )
 */
-HB_FUNC_STATIC( QWEBFRAME_SCROLLTOANCHOR )
-{
-  QWebFrame * obj = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->scrollToAnchor ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|scrollToAnchor|const QString &
 
 /*
 QWebSecurityOrigin securityOrigin () const
@@ -769,45 +724,20 @@ HB_FUNC_STATIC( QWEBFRAME_TEXTSIZEMULTIPLIER )
   }
 }
 
-
 /*
 QString title () const
 */
-HB_FUNC_STATIC( QWEBFRAME_TITLE )
-{
-  QWebFrame * obj = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->title () );
-  }
-}
-
+$method=|QString|title|
 
 /*
 QString toHtml () const
 */
-HB_FUNC_STATIC( QWEBFRAME_TOHTML )
-{
-  QWebFrame * obj = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->toHtml () );
-  }
-}
-
+$method=|QString|toHtml|
 
 /*
 QString toPlainText () const
 */
-HB_FUNC_STATIC( QWEBFRAME_TOPLAINTEXT )
-{
-  QWebFrame * obj = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->toPlainText () );
-  }
-}
-
+$method=|QString|toPlainText|
 
 /*
 QUrl url () const
@@ -835,20 +765,10 @@ HB_FUNC_STATIC( QWEBFRAME_ZOOMFACTOR )
   }
 }
 
-
 /*
 QVariant evaluateJavaScript ( const QString & scriptSource )
 */
-HB_FUNC_STATIC( QWEBFRAME_EVALUATEJAVASCRIPT )
-{
-  QWebFrame * obj = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->evaluateJavaScript ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
-
+$method=|QVariant|evaluateJavaScript|const QString &
 
 /*
 void print ( QPrinter * printer ) const

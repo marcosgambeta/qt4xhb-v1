@@ -102,15 +102,7 @@ $deleteMethod
 /*
 QString alternateText () const
 */
-HB_FUNC_STATIC( QWEBHITTESTRESULT_ALTERNATETEXT )
-{
-  QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->alternateText () );
-  }
-}
-
+$method=|QString|alternateText|
 
 /*
 QRect boundingRect () const
@@ -248,19 +240,10 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKTARGETFRAME )
   }
 }
 
-
 /*
 QString linkText () const
 */
-HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKTEXT )
-{
-  QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->linkText () );
-  }
-}
-
+$method=|QString|linkText|
 
 /*
 QUrl linkTitle () const
@@ -317,18 +300,10 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_POS )
   }
 }
 
-
 /*
 QString title () const
 */
-HB_FUNC_STATIC( QWEBHITTESTRESULT_TITLE )
-{
-  QWebHitTestResult * obj = (QWebHitTestResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->title () );
-  }
-}
+$method=|QString|title|
 
 $extraMethods
 

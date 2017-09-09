@@ -131,19 +131,10 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASES )
   }
 }
 
-
 /*
 QString host () const
 */
-HB_FUNC_STATIC( QWEBSECURITYORIGIN_HOST )
-{
-  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->host () );
-  }
-}
-
+$method=|QString|host|
 
 /*
 int port () const
@@ -157,19 +148,10 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_PORT )
   }
 }
 
-
 /*
 QString scheme () const
 */
-HB_FUNC_STATIC( QWEBSECURITYORIGIN_SCHEME )
-{
-  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->scheme () );
-  }
-}
-
+$method=|QString|scheme|
 
 /*
 void setDatabaseQuota ( qint64 quota )
@@ -184,17 +166,10 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_SETDATABASEQUOTA )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
-void addLocalScheme ( const QString & scheme )
+static void addLocalScheme ( const QString & scheme )
 */
-HB_FUNC_STATIC( QWEBSECURITYORIGIN_ADDLOCALSCHEME )
-{
-  QWebSecurityOrigin::addLocalScheme ( PQSTRING(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|void|addLocalScheme|const QString &
 
 /*
 QList<QWebSecurityOrigin> allOrigins ()
@@ -239,24 +214,15 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_ALLORIGINS )
   hb_itemReturnRelease(pArray);
 }
 
+/*
+static QStringList localSchemes ()
+*/
+$staticMethod=|QStringList|localSchemes|
 
 /*
-QStringList localSchemes ()
+static void removeLocalScheme ( const QString & scheme )
 */
-HB_FUNC_STATIC( QWEBSECURITYORIGIN_LOCALSCHEMES )
-{
-  RQSTRINGLIST( QWebSecurityOrigin::localSchemes () );
-}
-
-
-/*
-void removeLocalScheme ( const QString & scheme )
-*/
-HB_FUNC_STATIC( QWEBSECURITYORIGIN_REMOVELOCALSCHEME )
-{
-  QWebSecurityOrigin::removeLocalScheme ( PQSTRING(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$staticMethod=|void|removeLocalScheme|const QString &
 
 $extraMethods
 
