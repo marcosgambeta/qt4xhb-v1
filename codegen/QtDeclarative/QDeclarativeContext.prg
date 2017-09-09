@@ -112,20 +112,10 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_CONTEXTOBJECT )
   }
 }
 
-
 /*
 QVariant contextProperty ( const QString & name ) const
 */
-HB_FUNC_STATIC( QDECLARATIVECONTEXT_CONTEXTPROPERTY )
-{
-  QDeclarativeContext * obj = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->contextProperty ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
-
+$method=|QVariant|contextProperty|const QString &
 
 /*
 QDeclarativeEngine * engine () const

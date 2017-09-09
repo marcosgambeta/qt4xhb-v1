@@ -362,19 +362,10 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_METHOD )
   }
 }
 
-
 /*
 QString name () const
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NAME )
-{
-  QDeclarativeProperty * obj = (QDeclarativeProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->name () );
-  }
-}
-
+$method=|QString|name|
 
 /*
 bool needsNotifySignal () const

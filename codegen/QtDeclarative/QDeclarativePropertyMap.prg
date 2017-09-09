@@ -49,29 +49,12 @@ $deleteMethod
 /*
 void clear ( const QString & key )
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_CLEAR )
-{
-  QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clear ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|clear|const QString &
 
 /*
 bool contains ( const QString & key ) const
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_CONTAINS )
-{
-  QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->contains ( PQSTRING(1) ) );
-  }
-}
-
+$method=|bool|contains|const QString &
 
 /*
 int count () const
@@ -138,23 +121,9 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_SIZE )
   }
 }
 
-
 /*
 QVariant value ( const QString & key ) const
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_VALUE )
-{
-  QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->value ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
-
-
-
-
-
+$method=|QVariant|value|const QString &
 
 #pragma ENDDUMP

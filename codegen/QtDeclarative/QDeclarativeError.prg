@@ -97,19 +97,10 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_COLUMN )
   }
 }
 
-
 /*
 QString description () const
 */
-HB_FUNC_STATIC( QDECLARATIVEERROR_DESCRIPTION )
-{
-  QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->description () );
-  }
-}
-
+$method=|QString|description|
 
 /*
 bool isValid () const
@@ -150,20 +141,10 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_SETCOLUMN )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setDescription ( const QString & description )
 */
-HB_FUNC_STATIC( QDECLARATIVEERROR_SETDESCRIPTION )
-{
-  QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDescription ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setDescription|const QString &
 
 /*
 void setLine ( int line )
@@ -192,19 +173,10 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_SETURL )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString toString () const
 */
-HB_FUNC_STATIC( QDECLARATIVEERROR_TOSTRING )
-{
-  QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->toString () );
-  }
-}
-
+$method=|QString|toString|
 
 /*
 QUrl url () const

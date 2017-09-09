@@ -84,34 +84,15 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_ADDIMAGEPROVIDER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void addImportPath ( const QString & path )
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_ADDIMPORTPATH )
-{
-  QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->addImportPath ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|addImportPath|const QString &
 
 /*
 void addPluginPath ( const QString & path )
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_ADDPLUGINPATH )
-{
-  QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->addPluginPath ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|addPluginPath|const QString &
 
 /*
 QUrl baseUrl () const
@@ -209,19 +190,10 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_NETWORKACCESSMANAGERFACTORY )
   }
 }
 
-
 /*
 QString offlineStoragePath () const
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_OFFLINESTORAGEPATH )
-{
-  QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->offlineStoragePath () );
-  }
-}
-
+$method=|QString|offlineStoragePath|
 
 /*
 bool outputWarningsToStandardError () const
@@ -248,20 +220,10 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_PLUGINPATHLIST )
   }
 }
 
-
 /*
 void removeImageProvider ( const QString & providerId )
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_REMOVEIMAGEPROVIDER )
-{
-  QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->removeImageProvider ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|removeImageProvider|const QString &
 
 /*
 QDeclarativeContext * rootContext () const
@@ -319,20 +281,10 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETNETWORKACCESSMANAGERFACTORY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setOfflineStoragePath ( const QString & dir )
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_SETOFFLINESTORAGEPATH )
-{
-  QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setOfflineStoragePath ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setOfflineStoragePath|const QString &
 
 /*
 void setOutputWarningsToStandardError ( bool enabled )

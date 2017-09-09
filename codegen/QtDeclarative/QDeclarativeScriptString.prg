@@ -108,19 +108,10 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SCOPEOBJECT )
   }
 }
 
-
 /*
 QString script () const
 */
-HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SCRIPT )
-{
-  QDeclarativeScriptString * obj = (QDeclarativeScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->script () );
-  }
-}
-
+$method=|QString|script|
 
 /*
 void setContext ( QDeclarativeContext * context )
@@ -150,19 +141,10 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SETSCOPEOBJECT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setScript ( const QString & script )
 */
-HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SETSCRIPT )
-{
-  QDeclarativeScriptString * obj = (QDeclarativeScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setScript ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setScript|const QString &
 
 $extraMethods
 

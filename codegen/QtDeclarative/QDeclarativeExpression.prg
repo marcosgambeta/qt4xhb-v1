@@ -159,19 +159,10 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_EVALUATE )
   }
 }
 
-
 /*
 QString expression () const
 */
-HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_EXPRESSION )
-{
-  QDeclarativeExpression * obj = (QDeclarativeExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->expression () );
-  }
-}
-
+$method=|QString|expression|
 
 /*
 bool hasError () const
@@ -225,20 +216,10 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SCOPEOBJECT )
   }
 }
 
-
 /*
 void setExpression ( const QString & expression )
 */
-HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SETEXPRESSION )
-{
-  QDeclarativeExpression * obj = (QDeclarativeExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setExpression ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setExpression|const QString &
 
 /*
 void setNotifyOnValueChanged ( bool notifyOnChange )
@@ -267,22 +248,9 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SETSOURCELOCATION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString sourceFile () const
 */
-HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SOURCEFILE )
-{
-  QDeclarativeExpression * obj = (QDeclarativeExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->sourceFile () );
-  }
-}
-
-
-
-
-
+$method=|QString|sourceFile|
 
 #pragma ENDDUMP

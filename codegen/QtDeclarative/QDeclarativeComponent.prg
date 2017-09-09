@@ -344,20 +344,10 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_URL )
   }
 }
 
-
 /*
 Q_INVOKABLE QString errorString() const
 */
-HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ERRORSTRING )
-{
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->errorString () );
-  }
-}
-
-
+$method=|QString|errorString|
 
 /*
 static QDeclarativeComponentAttached *qmlAttachedProperties(QObject *)
