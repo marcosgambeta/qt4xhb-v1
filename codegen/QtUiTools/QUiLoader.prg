@@ -61,56 +61,22 @@ $deleteMethod
 /*
 void addPluginPath ( const QString & path )
 */
-HB_FUNC_STATIC( QUILOADER_ADDPLUGINPATH )
-{
-  QUiLoader * obj = (QUiLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->addPluginPath ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|addPluginPath|const QString &
 
 /*
 QStringList availableLayouts () const
 */
-HB_FUNC_STATIC( QUILOADER_AVAILABLELAYOUTS )
-{
-  QUiLoader * obj = (QUiLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->availableLayouts () );
-  }
-}
-
+$method=|QStringList|availableLayouts|
 
 /*
 QStringList availableWidgets () const
 */
-HB_FUNC_STATIC( QUILOADER_AVAILABLEWIDGETS )
-{
-  QUiLoader * obj = (QUiLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->availableWidgets () );
-  }
-}
-
+$method=|QStringList|availableWidgets|
 
 /*
 void clearPluginPaths ()
 */
-HB_FUNC_STATIC( QUILOADER_CLEARPLUGINPATHS )
-{
-  QUiLoader * obj = (QUiLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clearPluginPaths ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|clearPluginPaths|
 
 /*
 virtual QAction * createAction ( QObject * parent = 0, const QString & name = QString() )
