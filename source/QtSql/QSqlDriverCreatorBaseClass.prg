@@ -19,11 +19,13 @@ CLASS QSqlDriverCreatorBase
 
    METHOD delete
    METHOD createObject
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -41,6 +43,8 @@ RETURN
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
+
+#include <QSqlDriver>
 
 HB_FUNC_STATIC( QSQLDRIVERCREATORBASE_DELETE )
 {
@@ -65,10 +69,18 @@ virtual QSqlDriver * createObject () const = 0
 HB_FUNC_STATIC( QSQLDRIVERCREATORBASE_CREATEOBJECT )
 {
   QSqlDriverCreatorBase * obj = (QSqlDriverCreatorBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QSqlDriver * ptr = obj->createObject ();
-    _qt4xhb_createReturnClass ( ptr, "QSQLDRIVER" );
+    if( ISNUMPAR(0) )
+    {
+      QSqlDriver * ptr = obj->createObject ();
+      _qt4xhb_createReturnQObjectClass ( ptr, "QSQLDRIVER" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

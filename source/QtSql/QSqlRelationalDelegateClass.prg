@@ -21,6 +21,7 @@ CLASS QSqlRelationalDelegate INHERIT QItemDelegate
    METHOD createEditor
    METHOD setEditorData
    METHOD setModelData
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -44,8 +45,15 @@ QSqlRelationalDelegate ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_NEW )
 {
-  QSqlRelationalDelegate * o = new QSqlRelationalDelegate ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  {
+    QSqlRelationalDelegate * o = new QSqlRelationalDelegate ( OPQOBJECT(1,0) );
+    _qt4xhb_storePointerAndFlag( o, false );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_DELETE )
@@ -71,10 +79,18 @@ virtual QWidget * createEditor ( QWidget * parent, const QStyleOptionViewItem & 
 HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_CREATEEDITOR )
 {
   QSqlRelationalDelegate * obj = (QSqlRelationalDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QWidget * ptr = obj->createEditor ( PQWIDGET(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+    if( ISNUMPAR(3) && ISQWIDGET(1) && ISQSTYLEOPTIONVIEWITEM(2) && ISQMODELINDEX(3) )
+    {
+      QWidget * ptr = obj->createEditor ( PQWIDGET(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
+      _qt4xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -84,10 +100,19 @@ virtual void setEditorData ( QWidget * editor, const QModelIndex & index ) const
 HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_SETEDITORDATA )
 {
   QSqlRelationalDelegate * obj = (QSqlRelationalDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setEditorData ( PQWIDGET(1), *PQMODELINDEX(2) );
+    if( ISNUMPAR(2) && ISQWIDGET(1) && ISQMODELINDEX(2) )
+    {
+      obj->setEditorData ( PQWIDGET(1), *PQMODELINDEX(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -97,11 +122,19 @@ virtual void setModelData ( QWidget * editor, QAbstractItemModel * model, const 
 HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_SETMODELDATA )
 {
   QSqlRelationalDelegate * obj = (QSqlRelationalDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QAbstractItemModel * par2 = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setModelData ( PQWIDGET(1), par2, *PQMODELINDEX(3) );
+    if( ISNUMPAR(3) && ISQWIDGET(1) && ISQABSTRACTITEMMODEL(2) && ISQMODELINDEX(3) )
+    {
+      obj->setModelData ( PQWIDGET(1), PQABSTRACTITEMMODEL(2), *PQMODELINDEX(3) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

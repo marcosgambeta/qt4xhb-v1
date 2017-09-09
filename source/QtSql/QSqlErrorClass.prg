@@ -13,8 +13,6 @@ CLASS QSqlError
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD databaseText
@@ -27,11 +25,13 @@ CLASS QSqlError
    METHOD setType
    METHOD text
    METHOD type
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -53,19 +53,19 @@ RETURN
 /*
 QSqlError ( const QString & driverText = QString(), const QString & databaseText = QString(), ErrorType type = NoError, int number = -1 )
 */
-HB_FUNC_STATIC( QSQLERROR_NEW1 )
+void QSqlError_new1 ()
 {
-  QSqlError * o = new QSqlError ( OPQSTRING(1,QString()), OPQSTRING(2,QString()), ISNIL(3)? QSqlError::NoError : (QSqlError::ErrorType) hb_parni(3), OPINT(4,-1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  QSqlError * o = new QSqlError ( OPQSTRING(1,QString()), OPQSTRING(2,QString()), ISNIL(3)? (QSqlError::ErrorType) QSqlError::NoError : (QSqlError::ErrorType) hb_parni(3), OPINT(4,-1) );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
 QSqlError ( const QSqlError & other )
 */
-HB_FUNC_STATIC( QSQLERROR_NEW2 )
+void QSqlError_new2 ()
 {
   QSqlError * o = new QSqlError ( *PQSQLERROR(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 //[1]QSqlError ( const QString & driverText = QString(), const QString & databaseText = QString(), ErrorType type = NoError, int number = -1 )
@@ -75,11 +75,11 @@ HB_FUNC_STATIC( QSQLERROR_NEW )
 {
   if( ISBETWEEN(0,4) && (ISCHAR(1)||ISNIL(1)) && (ISCHAR(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QSQLERROR_NEW1 );
+    QSqlError_new1();
   }
   else if( ISNUMPAR(1) && ISQSQLERROR(1) )
   {
-    HB_FUNC_EXEC( QSQLERROR_NEW2 );
+    QSqlError_new2();
   }
   else
   {
@@ -110,9 +110,17 @@ QString databaseText () const
 HB_FUNC_STATIC( QSQLERROR_DATABASETEXT )
 {
   QSqlError * obj = (QSqlError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->databaseText () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->databaseText () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -122,9 +130,17 @@ QString driverText () const
 HB_FUNC_STATIC( QSQLERROR_DRIVERTEXT )
 {
   QSqlError * obj = (QSqlError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->driverText () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->driverText () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -134,9 +150,17 @@ bool isValid () const
 HB_FUNC_STATIC( QSQLERROR_ISVALID )
 {
   QSqlError * obj = (QSqlError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isValid () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isValid () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -146,9 +170,17 @@ int number () const
 HB_FUNC_STATIC( QSQLERROR_NUMBER )
 {
   QSqlError * obj = (QSqlError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RINT( obj->number () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->number () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -158,10 +190,19 @@ void setDatabaseText ( const QString & databaseText )
 HB_FUNC_STATIC( QSQLERROR_SETDATABASETEXT )
 {
   QSqlError * obj = (QSqlError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setDatabaseText ( PQSTRING(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      obj->setDatabaseText ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -171,10 +212,19 @@ void setDriverText ( const QString & driverText )
 HB_FUNC_STATIC( QSQLERROR_SETDRIVERTEXT )
 {
   QSqlError * obj = (QSqlError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setDriverText ( PQSTRING(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      obj->setDriverText ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -184,10 +234,19 @@ void setNumber ( int number )
 HB_FUNC_STATIC( QSQLERROR_SETNUMBER )
 {
   QSqlError * obj = (QSqlError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setNumber ( PINT(1) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      obj->setNumber ( PINT(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -197,10 +256,19 @@ void setType ( ErrorType type )
 HB_FUNC_STATIC( QSQLERROR_SETTYPE )
 {
   QSqlError * obj = (QSqlError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setType ( (QSqlError::ErrorType) hb_parni(1) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      obj->setType ( (QSqlError::ErrorType) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -210,9 +278,17 @@ QString text () const
 HB_FUNC_STATIC( QSQLERROR_TEXT )
 {
   QSqlError * obj = (QSqlError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->text () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->text () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -222,9 +298,17 @@ ErrorType type () const
 HB_FUNC_STATIC( QSQLERROR_TYPE )
 {
   QSqlError * obj = (QSqlError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    hb_retni( (int) obj->type () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->type () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

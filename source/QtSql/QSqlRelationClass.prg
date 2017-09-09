@@ -13,18 +13,18 @@ CLASS QSqlRelation
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD displayColumn
    METHOD indexColumn
    METHOD isValid
    METHOD tableName
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -46,19 +46,19 @@ RETURN
 /*
 QSqlRelation ()
 */
-HB_FUNC_STATIC( QSQLRELATION_NEW1 )
+void QSqlRelation_new1 ()
 {
   QSqlRelation * o = new QSqlRelation ();
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
 QSqlRelation ( const QString & tableName, const QString & indexColumn, const QString & displayColumn )
 */
-HB_FUNC_STATIC( QSQLRELATION_NEW2 )
+void QSqlRelation_new2 ()
 {
   QSqlRelation * o = new QSqlRelation ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 //[1]QSqlRelation ()
@@ -68,11 +68,11 @@ HB_FUNC_STATIC( QSQLRELATION_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QSQLRELATION_NEW1 );
+    QSqlRelation_new1();
   }
   else if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) )
   {
-    HB_FUNC_EXEC( QSQLRELATION_NEW2 );
+    QSqlRelation_new2();
   }
   else
   {
@@ -86,9 +86,17 @@ QString displayColumn () const
 HB_FUNC_STATIC( QSQLRELATION_DISPLAYCOLUMN )
 {
   QSqlRelation * obj = (QSqlRelation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->displayColumn () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->displayColumn () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -98,9 +106,17 @@ QString indexColumn () const
 HB_FUNC_STATIC( QSQLRELATION_INDEXCOLUMN )
 {
   QSqlRelation * obj = (QSqlRelation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->indexColumn () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->indexColumn () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -110,9 +126,17 @@ bool isValid () const
 HB_FUNC_STATIC( QSQLRELATION_ISVALID )
 {
   QSqlRelation * obj = (QSqlRelation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isValid () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isValid () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -122,9 +146,17 @@ QString tableName () const
 HB_FUNC_STATIC( QSQLRELATION_TABLENAME )
 {
   QSqlRelation * obj = (QSqlRelation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->tableName () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->tableName () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

@@ -19,6 +19,7 @@ CLASS QSqlDriverPlugin INHERIT QObject
    METHOD delete
    METHOD create
    METHOD keys
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -36,6 +37,8 @@ RETURN
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
+
+#include <QSqlDriver>
 
 HB_FUNC_STATIC( QSQLDRIVERPLUGIN_DELETE )
 {
@@ -60,10 +63,18 @@ virtual QSqlDriver * create ( const QString & key ) = 0
 HB_FUNC_STATIC( QSQLDRIVERPLUGIN_CREATE )
 {
   QSqlDriverPlugin * obj = (QSqlDriverPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QSqlDriver * ptr = obj->create ( PQSTRING(1) );
-    _qt4xhb_createReturnClass ( ptr, "QSQLDRIVER" );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      QSqlDriver * ptr = obj->create ( PQSTRING(1) );
+      _qt4xhb_createReturnQObjectClass ( ptr, "QSQLDRIVER" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -73,9 +84,17 @@ virtual QStringList keys () const = 0
 HB_FUNC_STATIC( QSQLDRIVERPLUGIN_KEYS )
 {
   QSqlDriverPlugin * obj = (QSqlDriverPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRINGLIST( obj->keys () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRINGLIST( obj->keys () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
