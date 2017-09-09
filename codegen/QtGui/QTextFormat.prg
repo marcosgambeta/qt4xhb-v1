@@ -642,14 +642,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_SETPROPERTY )
 /*
 QString stringProperty ( int propertyId ) const
 */
-HB_FUNC_STATIC( QTEXTFORMAT_STRINGPROPERTY )
-{
-  QTextFormat * obj = (QTextFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->stringProperty ( PINT(1) ) );
-  }
-}
+$method=|QString|stringProperty|int
 
 /*
 QTextBlockFormat toBlockFormat () const

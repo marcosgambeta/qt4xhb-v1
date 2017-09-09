@@ -78,14 +78,7 @@ $deleteMethod
 /*
 QString file () const
 */
-HB_FUNC_STATIC( QFILEOPENEVENT_FILE )
-{
-  QFileOpenEvent * obj = (QFileOpenEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->file () );
-  }
-}
+$method=|QString|file|
 
 /*
 bool openFile ( QFile & file, QIODevice::OpenMode flags ) const

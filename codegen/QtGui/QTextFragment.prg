@@ -203,14 +203,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_POSITION )
 /*
 QString text () const
 */
-HB_FUNC_STATIC( QTEXTFRAGMENT_TEXT )
-{
-  QTextFragment * obj = (QTextFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->text () );
-  }
-}
+$method=|QString|text|
 
 $extraMethods
 

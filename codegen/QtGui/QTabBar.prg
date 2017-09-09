@@ -104,14 +104,7 @@ $deleteMethod
 /*
 int addTab ( const QString & text )
 */
-HB_FUNC_STATIC( QTABBAR_ADDTAB1 )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->addTab ( PQSTRING(1) ) );
-  }
-}
+$method=|int|addTab,addTab1|const QString &
 
 /*
 int addTab ( const QIcon & icon, const QString & text )
@@ -648,14 +641,7 @@ HB_FUNC_STATIC( QTABBAR_TABRECT )
 /*
 QString tabText ( int index ) const
 */
-HB_FUNC_STATIC( QTABBAR_TABTEXT )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->tabText ( PINT(1) ) );
-  }
-}
+$method=|QString|tabText|int
 
 /*
 QColor tabTextColor ( int index ) const
@@ -673,26 +659,12 @@ HB_FUNC_STATIC( QTABBAR_TABTEXTCOLOR )
 /*
 QString tabToolTip ( int index ) const
 */
-HB_FUNC_STATIC( QTABBAR_TABTOOLTIP )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->tabToolTip ( PINT(1) ) );
-  }
-}
+$method=|QString|tabToolTip|int
 
 /*
 QString tabWhatsThis ( int index ) const
 */
-HB_FUNC_STATIC( QTABBAR_TABWHATSTHIS )
-{
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->tabWhatsThis ( PINT(1) ) );
-  }
-}
+$method=|QString|tabWhatsThis|int
 
 /*
 bool tabsClosable () const

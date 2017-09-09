@@ -228,14 +228,7 @@ HB_FUNC_STATIC( QCLIPBOARD_SUPPORTSSELECTION )
 /*
 QString text ( Mode mode = Clipboard ) const
 */
-HB_FUNC_STATIC( QCLIPBOARD_TEXT1 )
-{
-  QClipboard * obj = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->text ( (QClipboard::Mode) hb_parni(1) ) );
-  }
-}
+$method=|QString|text,text1|QClipboard::Mode=QClipboard::Clipboard
 
 /*
 QString text ( QString & subtype, Mode mode = Clipboard ) const

@@ -280,14 +280,7 @@ HB_FUNC_STATIC( QICON_ISNULL )
 /*
 QString name () const
 */
-HB_FUNC_STATIC( QICON_NAME )
-{
-  QIcon * obj = (QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->name () );
-  }
-}
+$method=|QString|name|
 
 /*
 void paint ( QPainter * painter, const QRect & rect, Qt::Alignment alignment = Qt::AlignCenter, Mode mode = Normal, State state = Off ) const
@@ -416,46 +409,29 @@ HB_FUNC_STATIC( QICON_FROMTHEME )
 }
 
 /*
-bool hasThemeIcon ( const QString & name )
+static bool hasThemeIcon ( const QString & name )
 */
-HB_FUNC_STATIC( QICON_HASTHEMEICON )
-{
-  RBOOL( QIcon::hasThemeIcon ( PQSTRING(1) ) );
-}
+$staticMethod=|bool|hasThemeIcon|const QString &
 
 /*
-void setThemeName ( const QString & name )
+static void setThemeName ( const QString & name )
 */
-HB_FUNC_STATIC( QICON_SETTHEMENAME )
-{
-  QIcon::setThemeName ( PQSTRING(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$staticMethod=|void|setThemeName|const QString &
 
 /*
-void setThemeSearchPaths ( const QStringList & paths )
+static void setThemeSearchPaths ( const QStringList & paths )
 */
-HB_FUNC_STATIC( QICON_SETTHEMESEARCHPATHS )
-{
-  QIcon::setThemeSearchPaths ( PQSTRINGLIST(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$staticMethod=|void|setThemeSearchPaths|const QStringList &
 
 /*
-QString themeName ()
+static QString themeName ()
 */
-HB_FUNC_STATIC( QICON_THEMENAME )
-{
-  RQSTRING( QIcon::themeName () );
-}
+$staticMethod=|QString|themeName|
 
 /*
-QStringList themeSearchPaths ()
+static QStringList themeSearchPaths ()
 */
-HB_FUNC_STATIC( QICON_THEMESEARCHPATHS )
-{
-  RQSTRINGLIST( QIcon::themeSearchPaths () );
-}
+$staticMethod=|QStringList|themeSearchPaths|
 
 $extraMethods
 

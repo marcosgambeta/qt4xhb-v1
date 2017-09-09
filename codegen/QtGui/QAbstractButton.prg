@@ -424,24 +424,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETSHORTCUT )
 /*
 void setText ( const QString & text )
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_SETTEXT )
-{
-  QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(1) && ISCHAR(1) )
-    {
-      obj->setText ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setText|const QString &
 
 /*
 QKeySequence shortcut () const
@@ -460,22 +443,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SHORTCUT )
 /*
 QString text () const
 */
-HB_FUNC_STATIC( QABSTRACTBUTTON_TEXT )
-{
-  QAbstractButton * obj = (QAbstractButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RQSTRING( obj->text () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QString|text|
 
 /*
 void animateClick ( int msec = 100 )

@@ -215,26 +215,11 @@ HB_FUNC_STATIC( QSHORTCUT_SETKEY )
 /*
 void setWhatsThis(const QString & text)
 */
-HB_FUNC_STATIC( QSHORTCUT_SETWHATSTHIS )
-{
-  QShortcut * obj = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setWhatsThis ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWhatsThis|const QString &
 
 /*
 QString whatsThis() const
 */
-HB_FUNC_STATIC( QSHORTCUT_WHATSTHIS )
-{
-  QShortcut * obj = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->whatsThis () );
-  }
-}
+$method=|QString|whatsThis|
 
 #pragma ENDDUMP

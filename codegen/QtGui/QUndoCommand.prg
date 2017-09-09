@@ -151,27 +151,12 @@ HB_FUNC_STATIC( QUNDOCOMMAND_REDO )
 /*
 void setText ( const QString & text )
 */
-HB_FUNC_STATIC( QUNDOCOMMAND_SETTEXT )
-{
-  QUndoCommand * obj = (QUndoCommand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setText ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setText|const QString &
 
 /*
 QString text () const
 */
-HB_FUNC_STATIC( QUNDOCOMMAND_TEXT )
-{
-  QUndoCommand * obj = (QUndoCommand *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->text () );
-  }
-}
+$method=|QString|text|
 
 /*
 virtual void undo ()

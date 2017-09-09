@@ -517,26 +517,12 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SIZEHINT )
 /*
 QString statusTip () const
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_STATUSTIP )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->statusTip () );
-  }
-}
+$method=|QString|statusTip|
 
 /*
 QString text () const
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_TEXT )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->text () );
-  }
-}
+$method=|QString|text|
 
 /*
 int textAlignment () const
@@ -553,14 +539,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_TEXTALIGNMENT )
 /*
 QString toolTip () const
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_TOOLTIP )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->toolTip () );
-  }
-}
+$method=|QString|toolTip|
 
 /*
 int type () const
@@ -577,14 +556,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_TYPE )
 /*
 QString whatsThis () const
 */
-HB_FUNC_STATIC( QLISTWIDGETITEM_WHATSTHIS )
-{
-  QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->whatsThis () );
-  }
-}
+$method=|QString|whatsThis|
 
 /*
 virtual void write ( QDataStream & out ) const

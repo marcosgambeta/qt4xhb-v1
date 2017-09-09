@@ -210,16 +210,9 @@ HB_FUNC_STATIC( QMOVIE_DEVICE )
 }
 
 /*
-QString  fileName () const
+QString fileName () const
 */
-HB_FUNC_STATIC( QMOVIE_FILENAME )
-{
-  QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->fileName () );
-  }
-}
+$method=|QString|fileName|
 
 /*
 QByteArray  format () const
@@ -364,15 +357,7 @@ HB_FUNC_STATIC( QMOVIE_SETDEVICE )
 /*
 void  setFileName ( const QString & fileName )
 */
-HB_FUNC_STATIC( QMOVIE_SETFILENAME )
-{
-  QMovie * obj = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFileName ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFileName|const QString &
 
 /*
 void  setFormat ( const QByteArray & format )

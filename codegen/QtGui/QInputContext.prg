@@ -132,14 +132,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_FONT )
 /*
 virtual QString identifierName () = 0
 */
-HB_FUNC_STATIC( QINPUTCONTEXT_IDENTIFIERNAME )
-{
-  QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->identifierName () );
-  }
-}
+$virtualMethod=|QString|identifierName|
 
 /*
 virtual bool isComposing () const = 0
@@ -156,14 +149,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_ISCOMPOSING )
 /*
 virtual QString language () = 0
 */
-HB_FUNC_STATIC( QINPUTCONTEXT_LANGUAGE )
-{
-  QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->language () );
-  }
-}
+$virtualMethod=|QString|language|
 
 /*
 virtual void mouseHandler ( int x, QMouseEvent * event )

@@ -192,14 +192,7 @@ HB_FUNC_STATIC( QFONT_CAPITALIZATION )
 /*
 QString defaultFamily () const
 */
-HB_FUNC_STATIC( QFONT_DEFAULTFAMILY )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->defaultFamily () );
-  }
-}
+$method=|QString|defaultFamily|
 
 /*
 bool exactMatch () const
@@ -216,14 +209,7 @@ HB_FUNC_STATIC( QFONT_EXACTMATCH )
 /*
 QString family () const
 */
-HB_FUNC_STATIC( QFONT_FAMILY )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->family () );
-  }
-}
+$method=|QString|family|
 
 /*
 bool fixedPitch () const
@@ -240,14 +226,7 @@ HB_FUNC_STATIC( QFONT_FIXEDPITCH )
 /*
 bool fromString ( const QString & descrip )
 */
-HB_FUNC_STATIC( QFONT_FROMSTRING )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->fromString ( PQSTRING(1) ) );
-  }
-}
+$method=|bool|fromString|const QString &
 
 /*
 bool isCopyOf ( const QFont & f ) const
@@ -288,38 +267,17 @@ HB_FUNC_STATIC( QFONT_KERNING )
 /*
 QString key () const
 */
-HB_FUNC_STATIC( QFONT_KEY )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->key () );
-  }
-}
+$method=|QString|key|
 
 /*
 QString lastResortFamily () const
 */
-HB_FUNC_STATIC( QFONT_LASTRESORTFAMILY )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->lastResortFamily () );
-  }
-}
+$method=|QString|lastResortFamily|
 
 /*
 QString lastResortFont () const
 */
-HB_FUNC_STATIC( QFONT_LASTRESORTFONT )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->lastResortFont () );
-  }
-}
+$method=|QString|lastResortFont|
 
 /*
 qreal letterSpacing () const
@@ -408,14 +366,7 @@ HB_FUNC_STATIC( QFONT_RAWMODE )
 /*
 QString rawName () const
 */
-HB_FUNC_STATIC( QFONT_RAWNAME )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->rawName () );
-  }
-}
+$method=|QString|rawName|
 
 /*
 QFont resolve ( const QFont & other ) const
@@ -460,15 +411,7 @@ HB_FUNC_STATIC( QFONT_SETCAPITALIZATION )
 /*
 void setFamily ( const QString & family )
 */
-HB_FUNC_STATIC( QFONT_SETFAMILY )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFamily ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFamily|const QString &
 
 /*
 void setFixedPitch ( bool enable )
@@ -591,15 +534,7 @@ HB_FUNC_STATIC( QFONT_SETRAWMODE )
 /*
 void setRawName ( const QString & name )
 */
-HB_FUNC_STATIC( QFONT_SETRAWNAME )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setRawName ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRawName|const QString &
 
 /*
 void setStretch ( int factor )
@@ -772,14 +707,7 @@ HB_FUNC_STATIC( QFONT_STYLESTRATEGY )
 /*
 QString toString () const
 */
-HB_FUNC_STATIC( QFONT_TOSTRING )
-{
-  QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->toString () );
-  }
-}
+$method=|QString|toString|
 
 /*
 bool underline () const
@@ -818,55 +746,34 @@ HB_FUNC_STATIC( QFONT_WORDSPACING )
 }
 
 /*
-void insertSubstitution ( const QString & familyName, const QString & substituteName )
+static void insertSubstitution ( const QString & familyName, const QString & substituteName )
 */
-HB_FUNC_STATIC( QFONT_INSERTSUBSTITUTION )
-{
-  QFont::insertSubstitution ( PQSTRING(1), PQSTRING(2) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$staticMethod=|void|insertSubstitution|const QString &,const QString &
 
 /*
-void insertSubstitutions ( const QString & familyName, const QStringList & substituteNames )
+static void insertSubstitutions ( const QString & familyName, const QStringList & substituteNames )
 */
-HB_FUNC_STATIC( QFONT_INSERTSUBSTITUTIONS )
-{
-  QFont::insertSubstitutions ( PQSTRING(1), PQSTRINGLIST(2) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$staticMethod=|void|insertSubstitutions|const QString &,const QStringList &
 
 /*
-void removeSubstitution ( const QString & familyName )
+static void removeSubstitution ( const QString & familyName )
 */
-HB_FUNC_STATIC( QFONT_REMOVESUBSTITUTION )
-{
-  QFont::removeSubstitution ( PQSTRING(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$staticMethod=|void|removeSubstitution|const QString &
 
 /*
-QString substitute ( const QString & familyName )
+static QString substitute ( const QString & familyName )
 */
-HB_FUNC_STATIC( QFONT_SUBSTITUTE )
-{
-  RQSTRING( QFont::substitute ( PQSTRING(1) ) );
-}
+$staticMethod=|QString|substitute|const QString &
 
 /*
-QStringList substitutes ( const QString & familyName )
+static QStringList substitutes ( const QString & familyName )
 */
-HB_FUNC_STATIC( QFONT_SUBSTITUTES )
-{
-  RQSTRINGLIST( QFont::substitutes ( PQSTRING(1) ) );
-}
+$staticMethod=|QStringList|substitutes|const QString &
 
 /*
-QStringList substitutions ()
+static QStringList substitutions ()
 */
-HB_FUNC_STATIC( QFONT_SUBSTITUTIONS )
-{
-  RQSTRINGLIST( QFont::substitutions () );
-}
+$staticMethod=|QStringList|substitutions|
 
 $extraMethods
 

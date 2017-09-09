@@ -52,14 +52,7 @@ $deleteMethod
 /*
 virtual QString displayText ( const QVariant & value, const QLocale & locale ) const
 */
-HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_DISPLAYTEXT )
-{
-  QStyledItemDelegate * obj = (QStyledItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->displayText ( *PQVARIANT(1), *PQLOCALE(2) ) );
-  }
-}
+$virtualMethod=|QString|displayText|const QVariant &,const QLocale &
 
 /*
 QItemEditorFactory * itemEditorFactory () const

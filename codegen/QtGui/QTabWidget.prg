@@ -545,38 +545,17 @@ HB_FUNC_STATIC( QTABWIDGET_TABSHAPE )
 /*
 QString tabText ( int index ) const
 */
-HB_FUNC_STATIC( QTABWIDGET_TABTEXT )
-{
-  QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->tabText ( PINT(1) ) );
-  }
-}
+$method=|QString|tabText|int
 
 /*
 QString tabToolTip ( int index ) const
 */
-HB_FUNC_STATIC( QTABWIDGET_TABTOOLTIP )
-{
-  QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->tabToolTip ( PINT(1) ) );
-  }
-}
+$method=|QString|tabToolTip|int
 
 /*
 QString tabWhatsThis ( int index ) const
 */
-HB_FUNC_STATIC( QTABWIDGET_TABWHATSTHIS )
-{
-  QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->tabWhatsThis ( PINT(1) ) );
-  }
-}
+$method=|QString|tabWhatsThis|int
 
 /*
 bool tabsClosable () const

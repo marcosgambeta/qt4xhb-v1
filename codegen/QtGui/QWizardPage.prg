@@ -57,14 +57,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_NEW )
 /*
 QString buttonText ( QWizard::WizardButton which ) const
 */
-HB_FUNC_STATIC( QWIZARDPAGE_BUTTONTEXT )
-{
-  QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->buttonText ( (QWizard::WizardButton) hb_parni(1) ) );
-  }
-}
+$method=|QString|buttonText|QWizard::WizardButton
 
 /*
 virtual void cleanupPage ()
@@ -211,52 +204,22 @@ HB_FUNC_STATIC( QWIZARDPAGE_SETPIXMAP )
 /*
 void setSubTitle ( const QString & subTitle )
 */
-HB_FUNC_STATIC( QWIZARDPAGE_SETSUBTITLE )
-{
-  QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSubTitle ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSubTitle|const QString &
 
 /*
 void setTitle ( const QString & title )
 */
-HB_FUNC_STATIC( QWIZARDPAGE_SETTITLE )
-{
-  QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setTitle ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTitle|const QString &
 
 /*
 QString subTitle () const
 */
-HB_FUNC_STATIC( QWIZARDPAGE_SUBTITLE )
-{
-  QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->subTitle () );
-  }
-}
+$method=|QString|subTitle|
 
 /*
 QString title () const
 */
-HB_FUNC_STATIC( QWIZARDPAGE_TITLE )
-{
-  QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->title () );
-  }
-}
+$method=|QString|title|
 
 /*
 virtual bool validatePage ()

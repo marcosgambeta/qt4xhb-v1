@@ -81,15 +81,7 @@ HB_FUNC_STATIC( QMENUBAR_ACTIVEACTION )
 /*
 QAction * addAction ( const QString & text )
 */
-HB_FUNC_STATIC( QMENUBAR_ADDACTION1 )
-{
-  QMenuBar * obj = (QMenuBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->addAction ( PQSTRING(1) );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|addAction,addAction1|const QString &
 
 /*
 QAction * addAction ( const QString & text, const QObject * receiver, const char * member )
@@ -154,15 +146,7 @@ HB_FUNC_STATIC( QMENUBAR_ADDMENU1 )
 /*
 QMenu * addMenu ( const QString & title )
 */
-HB_FUNC_STATIC( QMENUBAR_ADDMENU2 )
-{
-  QMenuBar * obj = (QMenuBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QMenu * ptr = obj->addMenu ( PQSTRING(1) );
-    _qt4xhb_createReturnClass ( ptr, "QMENU" );
-  }
-}
+$method=|QMenu *|addMenu,addMenu2|const QString &
 
 /*
 QMenu * addMenu ( const QIcon & icon, const QString & title )

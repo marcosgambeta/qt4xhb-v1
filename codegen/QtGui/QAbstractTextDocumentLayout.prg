@@ -48,14 +48,7 @@ $destructor
 /*
 QString anchorAt ( const QPointF & position ) const
 */
-HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ANCHORAT )
-{
-  QAbstractTextDocumentLayout * obj = (QAbstractTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->anchorAt ( *PQPOINTF(1) ) );
-  }
-}
+$method=|QString|anchorAt|const QPointF &
 
 /*
 virtual QRectF blockBoundingRect ( const QTextBlock & block ) const = 0

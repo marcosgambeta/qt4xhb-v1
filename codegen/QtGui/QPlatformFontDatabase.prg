@@ -57,14 +57,7 @@ HB_FUNC_STATIC( QPLATFORMFONTDATABASE_ADDAPPLICATIONFONT )
 /*
 virtual QString fontDir () const
 */
-HB_FUNC_STATIC( QPLATFORMFONTDATABASE_FONTDIR )
-{
-  QPlatformFontDatabase * obj = (QPlatformFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->fontDir () );
-  }
-}
+$virtualMethod=|QString|fontDir|
 
 /*
 virtual QFontEngine * fontEngine ( const QByteArray & fontData, qreal pixelSize, QFont::HintingPreference hintingPreference )

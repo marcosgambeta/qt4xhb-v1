@@ -152,26 +152,12 @@ HB_FUNC_STATIC( QSESSIONMANAGER_RESTARTHINT )
 /*
 QString sessionId () const
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_SESSIONID )
-{
-  QSessionManager * obj = (QSessionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->sessionId () );
-  }
-}
+$method=|QString|sessionId|
 
 /*
 QString sessionKey () const
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_SESSIONKEY )
-{
-  QSessionManager * obj = (QSessionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->sessionKey () );
-  }
-}
+$method=|QString|sessionKey|
 
 /*
 void setDiscardCommand ( const QStringList & list )

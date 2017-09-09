@@ -221,26 +221,12 @@ HB_FUNC_STATIC( QTOOLBOX_ITEMICON )
 /*
 QString itemText ( int index ) const
 */
-HB_FUNC_STATIC( QTOOLBOX_ITEMTEXT )
-{
-  QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->itemText ( PINT(1) ) );
-  }
-}
+$method=|QString|itemText|int
 
 /*
 QString itemToolTip ( int index ) const
 */
-HB_FUNC_STATIC( QTOOLBOX_ITEMTOOLTIP )
-{
-  QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->itemToolTip ( PINT(1) ) );
-  }
-}
+$method=|QString|itemToolTip|int
 
 /*
 void removeItem ( int index )

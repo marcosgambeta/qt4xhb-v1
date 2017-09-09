@@ -111,14 +111,7 @@ HB_FUNC_STATIC( QFONTINFO_EXACTMATCH )
 /*
 QString family () const
 */
-HB_FUNC_STATIC( QFONTINFO_FAMILY )
-{
-  QFontInfo * obj = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->family () );
-  }
-}
+$method=|QString|family|
 
 /*
 bool fixedPitch () const
@@ -219,14 +212,7 @@ HB_FUNC_STATIC( QFONTINFO_STYLEHINT )
 /*
 QString styleName () const
 */
-HB_FUNC_STATIC( QFONTINFO_STYLENAME )
-{
-  QFontInfo * obj = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->styleName () );
-  }
-}
+$method=|QString|styleName|
 
 /*
 int weight () const

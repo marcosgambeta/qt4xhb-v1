@@ -78,14 +78,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_ALIGNMENT )
 /*
 QString format () const
 */
-HB_FUNC_STATIC( QPROGRESSBAR_FORMAT )
-{
-  QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->format () );
-  }
-}
+$method=|QString|format|
 
 /*
 bool invertedAppearance ()
@@ -164,15 +157,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETALIGNMENT )
 /*
 void setFormat ( const QString & format )
 */
-HB_FUNC_STATIC( QPROGRESSBAR_SETFORMAT )
-{
-  QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFormat ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFormat|const QString &
 
 /*
 void setInvertedAppearance ( bool invert )
@@ -217,14 +202,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETTEXTVISIBLE )
 /*
 virtual QString text () const
 */
-HB_FUNC_STATIC( QPROGRESSBAR_TEXT )
-{
-  QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->text () );
-  }
-}
+$virtualMethod=|QString|text|
 
 /*
 QProgressBar::Direction textDirection ()

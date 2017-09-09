@@ -136,14 +136,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_DEVICE )
 /*
 QString fileName () const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_FILENAME )
-{
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->fileName () );
-  }
-}
+$method=|QString|fileName|
 
 /*
 QByteArray format () const
@@ -187,15 +180,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETDEVICE )
 /*
 void setFileName ( const QString & fileName )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETFILENAME )
-{
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFileName ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFileName|const QString &
 
 /*
 void setFormat ( const QByteArray & format )

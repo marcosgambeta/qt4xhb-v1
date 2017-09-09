@@ -161,15 +161,7 @@ HB_FUNC_STATIC( QFONTMETRICS_BOUNDINGRECT1 )
 /*
 QRect boundingRect ( const QString & text ) const
 */
-HB_FUNC_STATIC( QFONTMETRICS_BOUNDINGRECT2 )
-{
-  QFontMetrics * obj = (QFontMetrics *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->boundingRect ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
+$method=|QRect|boundingRect,boundingRect2|const QString &
 
 /*
 QRect boundingRect ( int x, int y, int width, int height, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
@@ -239,14 +231,7 @@ HB_FUNC_STATIC( QFONTMETRICS_DESCENT )
 /*
 QString elidedText ( const QString & text, Qt::TextElideMode mode, int width, int flags = 0 ) const
 */
-HB_FUNC_STATIC( QFONTMETRICS_ELIDEDTEXT )
-{
-  QFontMetrics * obj = (QFontMetrics *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->elidedText ( PQSTRING(1), (Qt::TextElideMode) hb_parni(2), PINT(3), OPINT(4,0) ) );
-  }
-}
+$method=|QString|elidedText|const QString &,Qt::TextElideMode,int,int=0
 
 /*
 int height () const
@@ -424,15 +409,7 @@ HB_FUNC_STATIC( QFONTMETRICS_STRIKEOUTPOS )
 /*
 QRect tightBoundingRect ( const QString & text ) const
 */
-HB_FUNC_STATIC( QFONTMETRICS_TIGHTBOUNDINGRECT )
-{
-  QFontMetrics * obj = (QFontMetrics *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->tightBoundingRect ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
+$method=|QRect|tightBoundingRect|const QString &
 
 /*
 int underlinePos () const

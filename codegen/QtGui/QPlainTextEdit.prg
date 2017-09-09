@@ -145,14 +145,7 @@ $deleteMethod
 /*
 QString anchorAt ( const QPoint & pos ) const
 */
-HB_FUNC_STATIC( QPLAINTEXTEDIT_ANCHORAT )
-{
-  QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->anchorAt ( *PQPOINT(1) ) );
-  }
-}
+$method=|QString|anchorAt|const QPoint &
 
 /*
 bool backgroundVisible () const
@@ -310,14 +303,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_DOCUMENT )
 /*
 QString documentTitle () const
 */
-HB_FUNC_STATIC( QPLAINTEXTEDIT_DOCUMENTTITLE )
-{
-  QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->documentTitle () );
-  }
-}
+$method=|QString|documentTitle|
 
 /*
 void ensureCursorVisible ()
@@ -529,15 +515,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETDOCUMENT )
 /*
 void setDocumentTitle ( const QString & title )
 */
-HB_FUNC_STATIC( QPLAINTEXTEDIT_SETDOCUMENTTITLE )
-{
-  QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDocumentTitle ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDocumentTitle|const QString &
 
 /*
 void setLineWrapMode ( LineWrapMode mode )
@@ -724,14 +702,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_TEXTINTERACTIONFLAGS )
 /*
 QString toPlainText () const
 */
-HB_FUNC_STATIC( QPLAINTEXTEDIT_TOPLAINTEXT )
-{
-  QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->toPlainText () );
-  }
-}
+$method=|QString|toPlainText|
 
 /*
 QTextOption::WrapMode wordWrapMode () const
@@ -748,28 +719,12 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_WORDWRAPMODE )
 /*
 void appendHtml ( const QString & html )
 */
-HB_FUNC_STATIC( QPLAINTEXTEDIT_APPENDHTML )
-{
-  QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->appendHtml ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|appendHtml|const QString &
 
 /*
 void appendPlainText ( const QString & text )
 */
-HB_FUNC_STATIC( QPLAINTEXTEDIT_APPENDPLAINTEXT )
-{
-  QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->appendPlainText ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|appendPlainText|const QString &
 
 /*
 void centerCursor ()
@@ -826,15 +781,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_CUT )
 /*
 void insertPlainText ( const QString & text )
 */
-HB_FUNC_STATIC( QPLAINTEXTEDIT_INSERTPLAINTEXT )
-{
-  QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->insertPlainText ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|insertPlainText|const QString &
 
 /*
 void paste ()
@@ -878,15 +825,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SELECTALL )
 /*
 void setPlainText ( const QString & text )
 */
-HB_FUNC_STATIC( QPLAINTEXTEDIT_SETPLAINTEXT )
-{
-  QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPlainText ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPlainText|const QString &
 
 /*
 void undo ()

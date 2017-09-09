@@ -33,26 +33,11 @@ $deleteMethod
 /*
 virtual QAccessibleBridge * create ( const QString & key ) = 0
 */
-HB_FUNC_STATIC( QACCESSIBLEBRIDGEPLUGIN_CREATE )
-{
-  QAccessibleBridgePlugin * obj = (QAccessibleBridgePlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAccessibleBridge * ptr = obj->create ( PQSTRING(1) );
-    _qt4xhb_createReturnClass ( ptr, "QACCESSIBLEBRIDGE" );
-  }
-}
+$virtualMethod=|QAccessibleBridge *|create|const QString &
 
 /*
 virtual QStringList keys () const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLEBRIDGEPLUGIN_KEYS )
-{
-  QAccessibleBridgePlugin * obj = (QAccessibleBridgePlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->keys () );
-  }
-}
+$virtualMethod=|QStringList|keys|
 
 #pragma ENDDUMP

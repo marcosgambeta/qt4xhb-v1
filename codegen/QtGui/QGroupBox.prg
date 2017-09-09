@@ -169,27 +169,12 @@ HB_FUNC_STATIC( QGROUPBOX_SETFLAT )
 /*
 void setTitle ( const QString & title )
 */
-HB_FUNC_STATIC( QGROUPBOX_SETTITLE )
-{
-  QGroupBox * obj = (QGroupBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setTitle ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTitle|const QString &
 
 /*
 QString title () const
 */
-HB_FUNC_STATIC( QGROUPBOX_TITLE )
-{
-  QGroupBox * obj = (QGroupBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->title () );
-  }
-}
+$method=|QString|title|
 
 /*
 virtual QSize minimumSizeHint () const

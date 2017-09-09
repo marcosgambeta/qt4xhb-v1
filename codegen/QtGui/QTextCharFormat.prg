@@ -92,14 +92,7 @@ $deleteMethod
 /*
 QString anchorHref () const
 */
-HB_FUNC_STATIC( QTEXTCHARFORMAT_ANCHORHREF )
-{
-  QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->anchorHref () );
-  }
-}
+$method=|QString|anchorHref|
 
 /*
 QStringList anchorNames () const
@@ -141,14 +134,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTCAPITALIZATION )
 /*
 QString fontFamily () const
 */
-HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTFAMILY )
-{
-  QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->fontFamily () );
-  }
-}
+$method=|QString|fontFamily|
 
 /*
 bool fontFixedPitch () const
@@ -666,14 +652,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_TEXTOUTLINE )
 /*
 QString toolTip () const
 */
-HB_FUNC_STATIC( QTEXTCHARFORMAT_TOOLTIP )
-{
-  QTextCharFormat * obj = (QTextCharFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->toolTip () );
-  }
-}
+$method=|QString|toolTip|
 
 /*
 QColor underlineColor () const

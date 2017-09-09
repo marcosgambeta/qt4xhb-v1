@@ -101,26 +101,12 @@ HB_FUNC_STATIC( QICONENGINEV2_CLONE )
 /*
 QString iconName ()
 */
-HB_FUNC_STATIC( QICONENGINEV2_ICONNAME )
-{
-  QIconEngineV2 * obj = (QIconEngineV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->iconName () );
-  }
-}
+$method=|QString|iconName|
 
 /*
 virtual QString key () const
 */
-HB_FUNC_STATIC( QICONENGINEV2_KEY )
-{
-  QIconEngineV2 * obj = (QIconEngineV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->key () );
-  }
-}
+$virtualMethod=|QString|key|
 
 /*
 virtual bool read ( QDataStream & in )

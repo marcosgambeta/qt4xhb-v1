@@ -2565,15 +2565,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETSELECTED )
 /*
 void setToolTip ( const QString & toolTip )
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_SETTOOLTIP )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setToolTip ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setToolTip|const QString &
 
 /*
 void setTransform ( const QTransform & matrix, bool combine = false )
@@ -2778,14 +2770,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_TOGRAPHICSOBJECT )
 /*
 QString toolTip () const
 */
-HB_FUNC_STATIC( QGRAPHICSITEM_TOOLTIP )
-{
-  QGraphicsItem * obj = (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->toolTip () );
-  }
-}
+$method=|QString|toolTip|
 
 /*
 QGraphicsItem * topLevelItem () const

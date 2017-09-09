@@ -57,14 +57,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_NEW )
 /*
 QString cleanText () const
 */
-HB_FUNC_STATIC( QDOUBLESPINBOX_CLEANTEXT )
-{
-  QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->cleanText () );
-  }
-}
+$method=|QString|cleanText|
 
 /*
 int decimals () const
@@ -105,14 +98,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_MINIMUM )
 /*
 QString prefix () const
 */
-HB_FUNC_STATIC( QDOUBLESPINBOX_PREFIX )
-{
-  QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->prefix () );
-  }
-}
+$method=|QString|prefix|
 
 /*
 void setDecimals ( int prec )
@@ -156,15 +142,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETMINIMUM )
 /*
 void setPrefix ( const QString & prefix )
 */
-HB_FUNC_STATIC( QDOUBLESPINBOX_SETPREFIX )
-{
-  QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPrefix ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPrefix|const QString &
 
 /*
 void setRange ( double minimum, double maximum )
@@ -195,15 +173,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETSINGLESTEP )
 /*
 void setSuffix ( const QString & suffix )
 */
-HB_FUNC_STATIC( QDOUBLESPINBOX_SETSUFFIX )
-{
-  QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSuffix ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSuffix|const QString &
 
 /*
 double singleStep () const
@@ -220,26 +190,12 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SINGLESTEP )
 /*
 QString suffix () const
 */
-HB_FUNC_STATIC( QDOUBLESPINBOX_SUFFIX )
-{
-  QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->suffix () );
-  }
-}
+$method=|QString|suffix|
 
 /*
 virtual QString textFromValue ( double value ) const
 */
-HB_FUNC_STATIC( QDOUBLESPINBOX_TEXTFROMVALUE )
-{
-  QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->textFromValue ( PDOUBLE(1) ) );
-  }
-}
+$virtualMethod=|QString|textFromValue|double
 
 /*
 double value () const
@@ -256,14 +212,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_VALUE )
 /*
 virtual double valueFromText ( const QString & text ) const
 */
-HB_FUNC_STATIC( QDOUBLESPINBOX_VALUEFROMTEXT )
-{
-  QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RDOUBLE( obj->valueFromText ( PQSTRING(1) ) );
-  }
-}
+$virtualMethod=|double|valueFromText|const QString &
 
 /*
 virtual void fixup ( QString & input ) const

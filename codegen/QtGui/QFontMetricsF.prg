@@ -161,15 +161,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_AVERAGECHARWIDTH )
 /*
 QRectF boundingRect ( const QString & text ) const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_BOUNDINGRECT1 )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->boundingRect ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
+$method=|QRectF|boundingRect,boundingRect1|const QString &
 
 /*
 QRectF boundingRect ( QChar ch ) const
@@ -236,14 +228,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_DESCENT )
 /*
 QString elidedText ( const QString & text, Qt::TextElideMode mode, qreal width, int flags = 0 ) const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_ELIDEDTEXT )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->elidedText ( PQSTRING(1), (Qt::TextElideMode) hb_parni(2), PQREAL(3), OPINT(4,0) ) );
-  }
-}
+$method=|QString|elidedText|const QString &,Qt::TextElideMode,qreal,int=0
 
 /*
 qreal height () const
@@ -422,15 +407,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_STRIKEOUTPOS )
 /*
 QRectF tightBoundingRect ( const QString & text ) const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_TIGHTBOUNDINGRECT )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->tightBoundingRect ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
+$method=|QRectF|tightBoundingRect|const QString &
 
 /*
 qreal underlinePos () const
@@ -447,27 +424,12 @@ HB_FUNC_STATIC( QFONTMETRICSF_UNDERLINEPOS )
 /*
 qreal width ( const QString & text ) const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_WIDTH1 )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->width ( PQSTRING(1) ) );
-  }
-}
+$method=|qreal|width,width1|const QString &
 
 /*
 qreal width ( QChar ch ) const
 */
-HB_FUNC_STATIC( QFONTMETRICSF_WIDTH2 )
-{
-  QFontMetricsF * obj = (QFontMetricsF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QChar * par1 = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RQREAL( obj->width ( *par1 ) );
-  }
-}
+$method=|qreal|width,width2|QChar
 
 //[1]qreal width ( const QString & text ) const
 //[2]qreal width ( QChar ch ) const

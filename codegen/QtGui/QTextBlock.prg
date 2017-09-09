@@ -371,14 +371,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_SETVISIBLE )
 /*
 QString text () const
 */
-HB_FUNC_STATIC( QTEXTBLOCK_TEXT )
-{
-  QTextBlock * obj = (QTextBlock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->text () );
-  }
-}
+$method=|QString|text|
 
 /*
 Qt::LayoutDirection textDirection () const

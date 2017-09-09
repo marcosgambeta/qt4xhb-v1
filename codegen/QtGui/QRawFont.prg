@@ -256,14 +256,7 @@ HB_FUNC_STATIC( QRAWFONT_DESCENT )
 /*
 QString familyName () const
 */
-HB_FUNC_STATIC( QRAWFONT_FAMILYNAME )
-{
-  QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->familyName () );
-  }
-}
+$method=|QString|familyName|
 
 /*
 QByteArray fontTable ( const char * tagName ) const
@@ -429,14 +422,7 @@ HB_FUNC_STATIC( QRAWFONT_STYLE )
 /*
 QString styleName () const
 */
-HB_FUNC_STATIC( QRAWFONT_STYLENAME )
-{
-  QRawFont * obj = (QRawFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->styleName () );
-  }
-}
+$method=|QString|styleName|
 
 /*
 QList<QFontDatabase::WritingSystem> supportedWritingSystems () const

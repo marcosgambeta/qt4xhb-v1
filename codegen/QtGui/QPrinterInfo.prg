@@ -123,14 +123,7 @@ HB_FUNC_STATIC( QPRINTERINFO_ISNULL )
 /*
 QString printerName () const
 */
-HB_FUNC_STATIC( QPRINTERINFO_PRINTERNAME )
-{
-  QPrinterInfo * obj = (QPrinterInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->printerName () );
-  }
-}
+$method=|QString|printerName|
 
 /*
 QList<QPrinter::PaperSize> supportedPaperSizes () const

@@ -33,12 +33,9 @@ $destructor
 $deleteMethod
 
 /*
-int registerMimeType ( const QString & mime )
+static int registerMimeType ( const QString & mime )
 */
-HB_FUNC_STATIC( QWINDOWSMIME_REGISTERMIMETYPE )
-{
-  RINT( QWindowsMime::registerMimeType ( PQSTRING(1) ) );
-}
+$staticMethod=|int|registerMimeType|const QString &
 
 $extraMethods
 

@@ -190,26 +190,12 @@ HB_FUNC_STATIC( QPRINTER_COPYCOUNT )
 /*
 QString creator () const
 */
-HB_FUNC_STATIC( QPRINTER_CREATOR )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->creator () );
-  }
-}
+$method=|QString|creator|
 
 /*
 QString docName () const
 */
-HB_FUNC_STATIC( QPRINTER_DOCNAME )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->docName () );
-  }
-}
+$method=|QString|docName|
 
 /*
 bool doubleSidedPrinting () const
@@ -310,14 +296,7 @@ HB_FUNC_STATIC( QPRINTER_ORIENTATION )
 /*
 QString outputFileName () const
 */
-HB_FUNC_STATIC( QPRINTER_OUTPUTFILENAME )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->outputFileName () );
-  }
-}
+$method=|QString|outputFileName|
 
 /*
 OutputFormat outputFormat () const
@@ -496,14 +475,7 @@ HB_FUNC_STATIC( QPRINTER_PRINTENGINE )
 /*
 QString printProgram () const
 */
-HB_FUNC_STATIC( QPRINTER_PRINTPROGRAM )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->printProgram () );
-  }
-}
+$method=|QString|printProgram|
 
 /*
 PrintRange printRange () const
@@ -520,14 +492,7 @@ HB_FUNC_STATIC( QPRINTER_PRINTRANGE )
 /*
 QString printerName () const
 */
-HB_FUNC_STATIC( QPRINTER_PRINTERNAME )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->printerName () );
-  }
-}
+$method=|QString|printerName|
 
 /*
 PrinterState printerState () const
@@ -596,28 +561,12 @@ HB_FUNC_STATIC( QPRINTER_SETCOPYCOUNT )
 /*
 void setCreator ( const QString & creator )
 */
-HB_FUNC_STATIC( QPRINTER_SETCREATOR )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCreator ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCreator|const QString &
 
 /*
 void setDocName ( const QString & name )
 */
-HB_FUNC_STATIC( QPRINTER_SETDOCNAME )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDocName ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDocName|const QString &
 
 /*
 void setDoubleSidedPrinting ( bool doubleSided )
@@ -702,15 +651,7 @@ HB_FUNC_STATIC( QPRINTER_SETORIENTATION )
 /*
 void setOutputFileName ( const QString & fileName )
 */
-HB_FUNC_STATIC( QPRINTER_SETOUTPUTFILENAME )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setOutputFileName ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOutputFileName|const QString &
 
 /*
 void setOutputFormat ( OutputFormat format )
@@ -814,15 +755,7 @@ HB_FUNC_STATIC( QPRINTER_SETPAPERSOURCE )
 /*
 void setPrintProgram ( const QString & printProg )
 */
-HB_FUNC_STATIC( QPRINTER_SETPRINTPROGRAM )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPrintProgram ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPrintProgram|const QString &
 
 /*
 void setPrintRange ( PrintRange range )
@@ -841,15 +774,7 @@ HB_FUNC_STATIC( QPRINTER_SETPRINTRANGE )
 /*
 void setPrinterName ( const QString & name )
 */
-HB_FUNC_STATIC( QPRINTER_SETPRINTERNAME )
-{
-  QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPrinterName ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPrinterName|const QString &
 
 /*
 void setResolution ( int dpi )

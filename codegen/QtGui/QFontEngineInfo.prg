@@ -99,14 +99,7 @@ $deleteMethod
 /*
 QString family () const
 */
-HB_FUNC_STATIC( QFONTENGINEINFO_FAMILY )
-{
-  QFontEngineInfo * obj = (QFontEngineInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->family () );
-  }
-}
+$method=|QString|family|
 
 /*
 qreal pixelSize () const
@@ -123,15 +116,7 @@ HB_FUNC_STATIC( QFONTENGINEINFO_PIXELSIZE )
 /*
 void setFamily ( const QString & name )
 */
-HB_FUNC_STATIC( QFONTENGINEINFO_SETFAMILY )
-{
-  QFontEngineInfo * obj = (QFontEngineInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFamily ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFamily|const QString &
 
 /*
 void setPixelSize ( qreal size )

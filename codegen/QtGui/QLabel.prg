@@ -116,100 +116,42 @@ $deleteMethod
 /*
 Qt::Alignment alignment () const
 */
-HB_FUNC_STATIC( QLABEL_ALIGNMENT )
-{
-  QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->alignment () );
-  }
-}
+$method=|Qt::Alignment|alignment|
 
 /*
 QWidget * buddy () const
 */
-HB_FUNC_STATIC( QLABEL_BUDDY )
-{
-  QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWidget * ptr = obj->buddy ();
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$method=|QWidget *|buddy|
 
 /*
 bool hasScaledContents () const
 */
-HB_FUNC_STATIC( QLABEL_HASSCALEDCONTENTS )
-{
-  QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasScaledContents () );
-  }
-}
+$method=|bool|hasScaledContents|
 
 /*
 bool hasSelectedText () const
 */
-HB_FUNC_STATIC( QLABEL_HASSELECTEDTEXT )
-{
-  QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasSelectedText () );
-  }
-}
+$method=|bool|hasSelectedText|
 
 /*
 int indent () const
 */
-HB_FUNC_STATIC( QLABEL_INDENT )
-{
-  QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->indent () );
-  }
-}
+$method=|int|indent|
 
 /*
 int margin () const
 */
-HB_FUNC_STATIC( QLABEL_MARGIN )
-{
-  QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->margin () );
-  }
-}
+$method=|int|margin|
 
 /*
 QMovie * movie () const
 */
-HB_FUNC_STATIC( QLABEL_MOVIE )
-{
-  QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QMovie * ptr = obj->movie ();
-    _qt4xhb_createReturnClass ( ptr, "QMOVIE" );
-  }
-}
+$method=|QMovie *|movie|
 
 /*
 bool openExternalLinks () const
 */
-HB_FUNC_STATIC( QLABEL_OPENEXTERNALLINKS )
-{
-  QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->openExternalLinks () );
-  }
-}
+$method=|bool|openExternalLinks|
 
 /*
 const QPicture * picture () const
@@ -240,259 +182,102 @@ HB_FUNC_STATIC( QLABEL_PIXMAP )
 /*
 QString selectedText () const
 */
-HB_FUNC_STATIC( QLABEL_SELECTEDTEXT )
-{
-  QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->selectedText () );
-  }
-}
+$method=|QString|selectedText|
 
 /*
 void setAlignment ( Qt::Alignment )
 */
-HB_FUNC_STATIC( QLABEL_SETALIGNMENT )
-{
-  QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAlignment ( (Qt::Alignment) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAlignment|Qt::Alignment
 
 /*
 void setBuddy ( QWidget * buddy )
 */
-HB_FUNC_STATIC( QLABEL_SETBUDDY )
-{
-  QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setBuddy ( PQWIDGET(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setBuddy|QWidget *
 
 /*
 void setIndent ( int )
 */
-HB_FUNC_STATIC( QLABEL_SETINDENT )
-{
-  QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setIndent ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setIndent|int
 
 /*
 void setMargin ( int )
 */
-HB_FUNC_STATIC( QLABEL_SETMARGIN )
-{
-  QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setMargin ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setMargin|int
 
 /*
 void setOpenExternalLinks ( bool open )
 */
-HB_FUNC_STATIC( QLABEL_SETOPENEXTERNALLINKS )
-{
-  QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setOpenExternalLinks ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOpenExternalLinks|bool
 
 /*
 void setScaledContents ( bool )
 */
-HB_FUNC_STATIC( QLABEL_SETSCALEDCONTENTS )
-{
-  QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setScaledContents ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setScaledContents|bool
 
 /*
 void setSelection ( int start, int length )
 */
-HB_FUNC_STATIC( QLABEL_SETSELECTION )
-{
-  QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSelection ( PINT(1), PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSelection|int,int
 
 /*
 void setTextFormat ( Qt::TextFormat )
 */
-HB_FUNC_STATIC( QLABEL_SETTEXTFORMAT )
-{
-  QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setTextFormat ( (Qt::TextFormat) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTextFormat|Qt::TextFormat
 
 /*
 void setTextInteractionFlags ( Qt::TextInteractionFlags flags )
 */
-HB_FUNC_STATIC( QLABEL_SETTEXTINTERACTIONFLAGS )
-{
-  QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setTextInteractionFlags ( (Qt::TextInteractionFlags) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTextInteractionFlags|Qt::TextInteractionFlags
 
 /*
 void setWordWrap ( bool on )
 */
-HB_FUNC_STATIC( QLABEL_SETWORDWRAP )
-{
-  QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setWordWrap ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWordWrap|bool
 
 /*
 QString text () const
 */
-HB_FUNC_STATIC( QLABEL_TEXT )
-{
-  QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->text () );
-  }
-}
+$method=|QString|text|
 
 /*
 Qt::TextFormat textFormat () const
 */
-HB_FUNC_STATIC( QLABEL_TEXTFORMAT )
-{
-  QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->textFormat () );
-  }
-}
+$method=|Qt::TextFormat|textFormat|
 
 /*
 Qt::TextInteractionFlags textInteractionFlags () const
 */
-HB_FUNC_STATIC( QLABEL_TEXTINTERACTIONFLAGS )
-{
-  QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->textInteractionFlags () );
-  }
-}
+$method=|Qt::TextInteractionFlags|textInteractionFlags|
 
 /*
 bool wordWrap () const
 */
-HB_FUNC_STATIC( QLABEL_WORDWRAP )
-{
-  QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->wordWrap () );
-  }
-}
+$method=|bool|wordWrap|
 
 /*
 virtual int heightForWidth ( int w ) const
 */
-HB_FUNC_STATIC( QLABEL_HEIGHTFORWIDTH )
-{
-  QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->heightForWidth ( PINT(1) ) );
-  }
-}
+$virtualMethod=|int|heightForWidth|int
 
 /*
 virtual QSize minimumSizeHint () const
 */
-HB_FUNC_STATIC( QLABEL_MINIMUMSIZEHINT )
-{
-  QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->minimumSizeHint () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$virtualMethod=|QSize|minimumSizeHint|
 
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC_STATIC( QLABEL_SIZEHINT )
-{
-  QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$virtualMethod=|QSize|sizeHint|
 
 /*
 void clear ()
 */
-HB_FUNC_STATIC( QLABEL_CLEAR )
-{
-  QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clear ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clear|
 
 /*
 void setMovie ( QMovie * movie )
 */
-HB_FUNC_STATIC( QLABEL_SETMOVIE )
-{
-  QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QMovie * par1 = (QMovie *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setMovie ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setMovie|QMovie *
 
 /*
 void setNum ( int num )
@@ -535,40 +320,16 @@ HB_FUNC_STATIC( QLABEL_SETNUM )
 /*
 void setPicture ( const QPicture & picture )
 */
-HB_FUNC_STATIC( QLABEL_SETPICTURE )
-{
-  QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPicture ( *PQPICTURE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPicture|const QPicture &
 
 /*
 void setPixmap ( const QPixmap & )
 */
-HB_FUNC_STATIC( QLABEL_SETPIXMAP )
-{
-  QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPixmap ( *PQPIXMAP(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPixmap|const QPixmap &
 
 /*
 void setText ( const QString & )
 */
-HB_FUNC_STATIC( QLABEL_SETTEXT )
-{
-  QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setText ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setText|const QString
 
 #pragma ENDDUMP

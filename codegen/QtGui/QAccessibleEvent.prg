@@ -49,26 +49,11 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_CHILD )
 /*
 void setValue ( const QString & text )
 */
-HB_FUNC_STATIC( QACCESSIBLEEVENT_SETVALUE )
-{
-  QAccessibleEvent * obj = (QAccessibleEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setValue ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setValue|const QString &
 
 /*
 QString value () const
 */
-HB_FUNC_STATIC( QACCESSIBLEEVENT_VALUE )
-{
-  QAccessibleEvent * obj = (QAccessibleEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->value () );
-  }
-}
+$method=|QString|value|
 
 #pragma ENDDUMP

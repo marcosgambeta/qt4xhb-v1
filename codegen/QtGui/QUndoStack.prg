@@ -73,15 +73,7 @@ $deleteMethod
 /*
 void beginMacro ( const QString & text )
 */
-HB_FUNC_STATIC( QUNDOSTACK_BEGINMACRO )
-{
-  QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->beginMacro ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|beginMacro|const QString &
 
 /*
 bool canRedo () const
@@ -249,14 +241,7 @@ HB_FUNC_STATIC( QUNDOSTACK_PUSH )
 /*
 QString redoText () const
 */
-HB_FUNC_STATIC( QUNDOSTACK_REDOTEXT )
-{
-  QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->redoText () );
-  }
-}
+$method=|QString|redoText|
 
 /*
 void setUndoLimit ( int limit )
@@ -274,14 +259,7 @@ HB_FUNC_STATIC( QUNDOSTACK_SETUNDOLIMIT )
 /*
 QString text ( int idx ) const
 */
-HB_FUNC_STATIC( QUNDOSTACK_TEXT )
-{
-  QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->text ( PINT(1) ) );
-  }
-}
+$method=|QString|text|int
 
 /*
 int undoLimit () const
@@ -298,14 +276,7 @@ HB_FUNC_STATIC( QUNDOSTACK_UNDOLIMIT )
 /*
 QString undoText () const
 */
-HB_FUNC_STATIC( QUNDOSTACK_UNDOTEXT )
-{
-  QUndoStack * obj = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->undoText () );
-  }
-}
+$method=|QString|undoText|
 
 /*
 void redo ()

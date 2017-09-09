@@ -80,44 +80,12 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_NEW )
 /*
 QString description () const
 */
-HB_FUNC_STATIC( QCOMMANDLINKBUTTON_DESCRIPTION )
-{
-  QCommandLinkButton * obj = (QCommandLinkButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RQSTRING( obj->description () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QString|description|
 
 /*
 void setDescription ( const QString & description )
 */
-HB_FUNC_STATIC( QCOMMANDLINKBUTTON_SETDESCRIPTION )
-{
-  QCommandLinkButton * obj = (QCommandLinkButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISNUMPAR(1) && ISCHAR(1) )
-    {
-      obj->setDescription ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDescription|const QString &
 
 /*
 bool isFlat () const

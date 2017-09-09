@@ -101,28 +101,12 @@ HB_FUNC_STATIC( QACTIONGROUP_ACTIONS )
 /*
 QAction * addAction ( QAction * action )
 */
-HB_FUNC_STATIC( QACTIONGROUP_ADDACTION1 )
-{
-  QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->addAction ( PQACTION(1) );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|addAction,addAction1|QAction *
 
 /*
 QAction * addAction ( const QString & text )
 */
-HB_FUNC_STATIC( QACTIONGROUP_ADDACTION2 )
-{
-  QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->addAction ( PQSTRING(1) );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|addAction,addAction2|const QString &
 
 /*
 QAction * addAction ( const QIcon & icon, const QString & text )

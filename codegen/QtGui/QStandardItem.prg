@@ -225,14 +225,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETDATA )
 /*
 QString text() const
 */
-HB_FUNC_STATIC( QSTANDARDITEM_TEXT )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->text () );
-  }
-}
+$method=|QString|text|
 
 /*
 void setText(const QString &text)
@@ -277,14 +270,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETICON )
 /*
 QString toolTip() const
 */
-HB_FUNC_STATIC( QSTANDARDITEM_TOOLTIP )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->toolTip () );
-  }
-}
+$method=|QString|toolTip|
 
 /*
 void setToolTip(const QString &toolTip)
@@ -302,14 +288,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETTOOLTIP )
 /*
 QString statusTip() const
 */
-HB_FUNC_STATIC( QSTANDARDITEM_STATUSTIP )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->statusTip () );
-  }
-}
+$method=|QString|statusTip|
 
 /*
 void setStatusTip(const QString &statusTip)
@@ -327,14 +306,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETSTATUSTIP )
 /*
 QString whatsThis() const
 */
-HB_FUNC_STATIC( QSTANDARDITEM_WHATSTHIS )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->whatsThis () );
-  }
-}
+$method=|QString|whatsThis|
 
 /*
 void setWhatsThis(const QString &whatsThis)
@@ -508,14 +480,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETCHECKSTATE )
 /*
 QString accessibleText() const
 */
-HB_FUNC_STATIC( QSTANDARDITEM_ACCESSIBLETEXT )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->accessibleText () );
-  }
-}
+$method=|QString|accessibleText|
 
 /*
 void setAccessibleText(const QString &accessibleText)
@@ -533,14 +498,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETACCESSIBLETEXT )
 /*
 QString accessibleDescription() const
 */
-HB_FUNC_STATIC( QSTANDARDITEM_ACCESSIBLEDESCRIPTION )
-{
-  QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->accessibleDescription () );
-  }
-}
+$method=|QString|accessibleDescription|
 
 /*
 void setAccessibleDescription(const QString &accessibleDescription)

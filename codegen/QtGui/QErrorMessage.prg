@@ -45,28 +45,12 @@ $deleteMethod
 /*
 void showMessage ( const QString & message )
 */
-HB_FUNC_STATIC( QERRORMESSAGE_SHOWMESSAGE1 )
-{
-  QErrorMessage * obj = (QErrorMessage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->showMessage ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|showMessage,showMessage1|const QString &
 
 /*
 void showMessage ( const QString & message, const QString & type )
 */
-HB_FUNC_STATIC( QERRORMESSAGE_SHOWMESSAGE2 )
-{
-  QErrorMessage * obj = (QErrorMessage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->showMessage ( PQSTRING(1), PQSTRING(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|showMessage,showMessage2|const QString &,const QString &
 
 //[1]void showMessage ( const QString & message )
 //[2]void showMessage ( const QString & message, const QString & type )

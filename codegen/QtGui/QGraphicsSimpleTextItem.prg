@@ -112,27 +112,12 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_SETFONT )
 /*
 void setText ( const QString & text )
 */
-HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_SETTEXT )
-{
-  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setText ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setText|const QString &
 
 /*
 QString text () const
 */
-HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_TEXT )
-{
-  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->text () );
-  }
-}
+$method=|QString|text|
 
 /*
 virtual QRectF boundingRect () const

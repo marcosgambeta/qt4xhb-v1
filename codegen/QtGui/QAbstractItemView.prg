@@ -352,15 +352,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATEFORROW )
 /*
 virtual void keyboardSearch ( const QString & search )
 */
-HB_FUNC_STATIC( QABSTRACTITEMVIEW_KEYBOARDSEARCH )
-{
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->keyboardSearch ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|keyboardSearch|const QString &
 
 /*
 QAbstractItemModel * model () const

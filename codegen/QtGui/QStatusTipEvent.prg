@@ -38,13 +38,6 @@ $deleteMethod
 /*
 QString tip() const
 */
-HB_FUNC_STATIC( QSTATUSTIPEVENT_TIP )
-{
-  QStatusTipEvent * obj = (QStatusTipEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->tip () );
-  }
-}
+$method=|QString|tip|
 
 #pragma ENDDUMP

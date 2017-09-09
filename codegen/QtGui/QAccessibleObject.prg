@@ -36,14 +36,7 @@ $destructor
 /*
 virtual QString actionText ( int action, Text t, int child ) const
 */
-HB_FUNC_STATIC( QACCESSIBLEOBJECT_ACTIONTEXT )
-{
-  QAccessibleObject * obj = (QAccessibleObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->actionText ( PINT(1), (QAccessibleObject::Text) hb_parni(2), PINT(3) ) );
-  }
-}
+$virtualMethod=|QString|actionText|int,QAccessibleObject::Text,int
 
 /*
 virtual bool doAction ( int action, int child, const QVariantList & params )

@@ -149,14 +149,7 @@ HB_FUNC_STATIC( QKEYEVENT_NATIVEVIRTUALKEY )
 /*
 QString text () const
 */
-HB_FUNC_STATIC( QKEYEVENT_TEXT )
-{
-  QKeyEvent * obj = (QKeyEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->text () );
-  }
-}
+$method=|QString|text|
 
 /*
 static QKeyEvent *createExtendedKeyEvent(Type type, int key, Qt::KeyboardModifiers modifiers, quint32 nativeScanCode, quint32 nativeVirtualKey,quint32 nativeModifiers,const QString& text = QString(), bool autorep = false,ushort count = 1)

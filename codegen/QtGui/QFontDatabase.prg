@@ -217,26 +217,12 @@ HB_FUNC_STATIC( QFONTDATABASE_SMOOTHSIZES )
 /*
 QString styleString ( const QFont & font )
 */
-HB_FUNC_STATIC( QFONTDATABASE_STYLESTRING1 )
-{
-  QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->styleString ( *PQFONT(1) ) );
-  }
-}
+$method=|QString|styleString,styleString1|const QFont &
 
 /*
 QString styleString ( const QFontInfo & fontInfo )
 */
-HB_FUNC_STATIC( QFONTDATABASE_STYLESTRING2 )
-{
-  QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->styleString ( *PQFONTINFO(1) ) );
-  }
-}
+$method=|QString|styleString,styleString2|const QFontInfo &
 
 //[1]QString styleString ( const QFont & font )
 //[2]QString styleString ( const QFontInfo & fontInfo )
@@ -256,26 +242,12 @@ HB_FUNC_STATIC( QFONTDATABASE_STYLESTRING )
 /*
 QStringList styles ( const QString & family ) const
 */
-HB_FUNC_STATIC( QFONTDATABASE_STYLES )
-{
-  QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->styles ( PQSTRING(1) ) );
-  }
-}
+$method=|QStringList|styles|const QString &
 
 /*
 int weight ( const QString & family, const QString & style ) const
 */
-HB_FUNC_STATIC( QFONTDATABASE_WEIGHT )
-{
-  QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->weight ( PQSTRING(1), PQSTRING(2) ) );
-  }
-}
+$method=|int|weight|const QString &,const QString &
 
 /*
 QList<WritingSystem> writingSystems () const
@@ -337,47 +309,32 @@ HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMS )
 }
 
 /*
-int addApplicationFont ( const QString & fileName )
+static int addApplicationFont ( const QString & fileName )
 */
-HB_FUNC_STATIC( QFONTDATABASE_ADDAPPLICATIONFONT )
-{
-  RINT( QFontDatabase::addApplicationFont ( PQSTRING(1) ) );
-}
+$staticMethod=|int|addApplicationFont|const QString &
 
 /*
-int addApplicationFontFromData ( const QByteArray & fontData )
+static int addApplicationFontFromData ( const QByteArray & fontData )
 */
-HB_FUNC_STATIC( QFONTDATABASE_ADDAPPLICATIONFONTFROMDATA )
-{
-  RINT( QFontDatabase::addApplicationFontFromData ( *PQBYTEARRAY(1) ) );
-}
+$staticMethod=|int|addApplicationFontFromData|const QByteArray &
 
 /*
-QStringList applicationFontFamilies ( int id )
+static QStringList applicationFontFamilies ( int id )
 */
-HB_FUNC_STATIC( QFONTDATABASE_APPLICATIONFONTFAMILIES )
-{
-  RQSTRINGLIST( QFontDatabase::applicationFontFamilies ( PINT(1) ) );
-}
+$staticMethod=|QStringList|applicationFontFamilies|int
 
 /*
-bool removeAllApplicationFonts ()
+static bool removeAllApplicationFonts ()
 */
-HB_FUNC_STATIC( QFONTDATABASE_REMOVEALLAPPLICATIONFONTS )
-{
-  RBOOL( QFontDatabase::removeAllApplicationFonts () );
-}
+$staticMethod=|bool|removeAllApplicationFonts|
 
 /*
-bool removeApplicationFont ( int id )
+static bool removeApplicationFont ( int id )
 */
-HB_FUNC_STATIC( QFONTDATABASE_REMOVEAPPLICATIONFONT )
-{
-  RBOOL( QFontDatabase::removeApplicationFont ( PINT(1) ) );
-}
+$staticMethod=|bool|removeApplicationFont|int
 
 /*
-QList<int> standardSizes ()
+static QList<int> standardSizes ()
 */
 HB_FUNC_STATIC( QFONTDATABASE_STANDARDSIZES )
 {
@@ -395,28 +352,19 @@ HB_FUNC_STATIC( QFONTDATABASE_STANDARDSIZES )
 }
 
 /*
-bool supportsThreadedFontRendering ()
+static bool supportsThreadedFontRendering ()
 */
-HB_FUNC_STATIC( QFONTDATABASE_SUPPORTSTHREADEDFONTRENDERING )
-{
-  RBOOL( QFontDatabase::supportsThreadedFontRendering () );
-}
+$staticMethod=|bool|supportsThreadedFontRendering|
 
 /*
-QString writingSystemName ( WritingSystem writingSystem )
+static QString writingSystemName ( WritingSystem writingSystem )
 */
-HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMNAME )
-{
-  RQSTRING( QFontDatabase::writingSystemName ( (QFontDatabase::WritingSystem) hb_parni(1) ) );
-}
+$staticMethod=|QString|writingSystemName|QFontDatabase::WritingSystem
 
 /*
-QString writingSystemSample ( WritingSystem writingSystem )
+static QString writingSystemSample ( WritingSystem writingSystem )
 */
-HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMSAMPLE )
-{
-  RQSTRING( QFontDatabase::writingSystemSample ( (QFontDatabase::WritingSystem) hb_parni(1) ) );
-}
+$staticMethod=|QString|writingSystemSample|QFontDatabase::WritingSystem
 
 $extraMethods
 

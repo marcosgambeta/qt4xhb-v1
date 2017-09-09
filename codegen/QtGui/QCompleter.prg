@@ -188,14 +188,7 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONMODEL )
 /*
 QString completionPrefix () const
 */
-HB_FUNC_STATIC( QCOMPLETER_COMPLETIONPREFIX )
-{
-  QCompleter * obj = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->completionPrefix () );
-  }
-}
+$method=|QString|completionPrefix|
 
 /*
 int completionRole () const
@@ -212,14 +205,7 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONROLE )
 /*
 QString currentCompletion () const
 */
-HB_FUNC_STATIC( QCOMPLETER_CURRENTCOMPLETION )
-{
-  QCompleter * obj = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->currentCompletion () );
-  }
-}
+$method=|QString|currentCompletion|
 
 /*
 QModelIndex currentIndex () const
@@ -286,14 +272,7 @@ HB_FUNC_STATIC( QCOMPLETER_MODELSORTING )
 /*
 virtual QString pathFromIndex ( const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QCOMPLETER_PATHFROMINDEX )
-{
-  QCompleter * obj = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->pathFromIndex ( *PQMODELINDEX(1) ) );
-  }
-}
+$virtualMethod=|QString|pathFromIndex|const QModelIndex &
 
 /*
 QAbstractItemView * popup () const
@@ -445,14 +424,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETWIDGET )
 /*
 virtual QStringList splitPath ( const QString & path ) const
 */
-HB_FUNC_STATIC( QCOMPLETER_SPLITPATH )
-{
-  QCompleter * obj = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->splitPath ( PQSTRING(1) ) );
-  }
-}
+$virtualMethod=|QStringList|splitPath|const QString &
 
 /*
 QWidget * widget () const
@@ -496,15 +468,7 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETE )
 /*
 void setCompletionPrefix ( const QString & prefix )
 */
-HB_FUNC_STATIC( QCOMPLETER_SETCOMPLETIONPREFIX )
-{
-  QCompleter * obj = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCompletionPrefix ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCompletionPrefix|const QString &
 
 /*
 void setWrapAround ( bool wrap )

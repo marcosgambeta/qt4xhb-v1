@@ -70,26 +70,12 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_ISVALID )
 /*
 QString numberPrefix () const
 */
-HB_FUNC_STATIC( QTEXTLISTFORMAT_NUMBERPREFIX )
-{
-  QTextListFormat * obj = (QTextListFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->numberPrefix () );
-  }
-}
+$method=|QString|numberPrefix|
 
 /*
 QString numberSuffix () const
 */
-HB_FUNC_STATIC( QTEXTLISTFORMAT_NUMBERSUFFIX )
-{
-  QTextListFormat * obj = (QTextListFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->numberSuffix () );
-  }
-}
+$method=|QString|numberSuffix|
 
 /*
 void setIndent ( int indentation )
@@ -107,28 +93,12 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_SETINDENT )
 /*
 void setNumberPrefix ( const QString & numberPrefix )
 */
-HB_FUNC_STATIC( QTEXTLISTFORMAT_SETNUMBERPREFIX )
-{
-  QTextListFormat * obj = (QTextListFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setNumberPrefix ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setNumberPrefix|const QString &
 
 /*
 void setNumberSuffix ( const QString & numberSuffix )
 */
-HB_FUNC_STATIC( QTEXTLISTFORMAT_SETNUMBERSUFFIX )
-{
-  QTextListFormat * obj = (QTextListFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setNumberSuffix ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setNumberSuffix|const QString &
 
 /*
 void setStyle ( Style style )

@@ -104,14 +104,7 @@ HB_FUNC_STATIC( QTEXTLIST_ITEMNUMBER )
 /*
 QString itemText ( const QTextBlock & block ) const
 */
-HB_FUNC_STATIC( QTEXTLIST_ITEMTEXT )
-{
-  QTextList * obj = (QTextList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->itemText ( *PQTEXTBLOCK(1) ) );
-  }
-}
+$method=|QString|itemText|const QTextBlock &
 
 /*
 void remove ( const QTextBlock & block )

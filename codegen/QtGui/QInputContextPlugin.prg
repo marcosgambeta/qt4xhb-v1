@@ -36,62 +36,26 @@ $deleteMethod
 /*
 virtual QInputContext * create ( const QString & key ) = 0
 */
-HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_CREATE )
-{
-  QInputContextPlugin * obj = (QInputContextPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QInputContext * ptr = obj->create ( PQSTRING(1) );
-    _qt4xhb_createReturnClass ( ptr, "QINPUTCONTEXT" );
-  }
-}
+$virtualMethod=|QInputContext *|create|const QString &
 
 /*
 virtual QString description ( const QString & key ) = 0
 */
-HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_DESCRIPTION )
-{
-  QInputContextPlugin * obj = (QInputContextPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->description ( PQSTRING(1) ) );
-  }
-}
+$virtualMethod=|QString|description|const QString &
 
 /*
 virtual QString displayName ( const QString & key ) = 0
 */
-HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_DISPLAYNAME )
-{
-  QInputContextPlugin * obj = (QInputContextPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->displayName ( PQSTRING(1) ) );
-  }
-}
+$virtualMethod=|QString|displayName|const QString &
 
 /*
 virtual QStringList keys () const = 0
 */
-HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_KEYS )
-{
-  QInputContextPlugin * obj = (QInputContextPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->keys () );
-  }
-}
+$virtualMethod=|QStringList|keys|
 
 /*
 virtual QStringList languages ( const QString & key ) = 0
 */
-HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_LANGUAGES )
-{
-  QInputContextPlugin * obj = (QInputContextPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->languages ( PQSTRING(1) ) );
-  }
-}
+$virtualMethod=|QStringList|languages|const QString &
 
 #pragma ENDDUMP

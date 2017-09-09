@@ -75,14 +75,7 @@ HB_FUNC_STATIC( QSTATUSBAR_ADDWIDGET )
 /*
 QString currentMessage () const
 */
-HB_FUNC_STATIC( QSTATUSBAR_CURRENTMESSAGE )
-{
-  QStatusBar * obj = (QStatusBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->currentMessage () );
-  }
-}
+$method=|QString|currentMessage|
 
 /*
 int insertPermanentWidget ( int index, QWidget * widget, int stretch = 0 )

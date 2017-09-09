@@ -54,14 +54,7 @@ $deleteMethod
 /*
 QString cleanText () const
 */
-HB_FUNC_STATIC( QSPINBOX_CLEANTEXT )
-{
-  QSpinBox * obj = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->cleanText () );
-  }
-}
+$method=|QString|cleanText|
 
 /*
 int maximum () const
@@ -90,14 +83,7 @@ HB_FUNC_STATIC( QSPINBOX_MINIMUM )
 /*
 QString prefix () const
 */
-HB_FUNC_STATIC( QSPINBOX_PREFIX )
-{
-  QSpinBox * obj = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->prefix () );
-  }
-}
+$method=|QString|prefix|
 
 /*
 void setMaximum ( int max )
@@ -192,14 +178,7 @@ HB_FUNC_STATIC( QSPINBOX_SINGLESTEP )
 /*
 QString suffix () const
 */
-HB_FUNC_STATIC( QSPINBOX_SUFFIX )
-{
-  QSpinBox * obj = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->suffix () );
-  }
-}
+$method=|QString|suffix|
 
 /*
 int value () const

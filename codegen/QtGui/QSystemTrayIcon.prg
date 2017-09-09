@@ -168,15 +168,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SETICON )
 /*
 void setToolTip ( const QString & tip )
 */
-HB_FUNC_STATIC( QSYSTEMTRAYICON_SETTOOLTIP )
-{
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setToolTip ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setToolTip|const QString &
 
 /*
 void showMessage ( const QString & title, const QString & message, MessageIcon icon = Information, int millisecondsTimeoutHint = 10000 )
@@ -195,14 +187,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SHOWMESSAGE )
 /*
 QString toolTip () const
 */
-HB_FUNC_STATIC( QSYSTEMTRAYICON_TOOLTIP )
-{
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->toolTip () );
-  }
-}
+$method=|QString|toolTip|
 
 /*
 void hide ()

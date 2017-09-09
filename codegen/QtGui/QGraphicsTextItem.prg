@@ -215,15 +215,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETFONT )
 /*
 void setHtml ( const QString & text )
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETHTML )
-{
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setHtml ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setHtml|const QString &
 
 /*
 void setOpenExternalLinks ( bool open )
@@ -241,15 +233,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETOPENEXTERNALLINKS )
 /*
 void setPlainText ( const QString & text )
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETPLAINTEXT )
-{
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPlainText ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPlainText|const QString &
 
 /*
 void setTabChangesFocus ( bool b )
@@ -356,26 +340,12 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTWIDTH )
 /*
 QString toHtml () const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TOHTML )
-{
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->toHtml () );
-  }
-}
+$method=|QString|toHtml|
 
 /*
 QString toPlainText () const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TOPLAINTEXT )
-{
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->toPlainText () );
-  }
-}
+$method=|QString|toPlainText|
 
 /*
 virtual QRectF boundingRect () const

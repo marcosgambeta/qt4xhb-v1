@@ -753,14 +753,7 @@ HB_FUNC_STATIC( QCOLOR_MAGENTAF )
 /*
 QString name () const
 */
-HB_FUNC_STATIC( QCOLOR_NAME )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->name () );
-  }
-}
+$method=|QString|name|
 
 /*
 int red () const
@@ -995,15 +988,7 @@ HB_FUNC_STATIC( QCOLOR_SETHSVF )
 /*
 void setNamedColor ( const QString & name )
 */
-HB_FUNC_STATIC( QCOLOR_SETNAMEDCOLOR )
-{
-  QColor * obj = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setNamedColor ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setNamedColor|const QString &
 
 /*
 void setRed ( int red )
@@ -1317,12 +1302,9 @@ HB_FUNC_STATIC( QCOLOR_FROMRGBA )
 }
 
 /*
-bool isValidColor ( const QString & name )
+static bool isValidColor ( const QString & name )
 */
-HB_FUNC_STATIC( QCOLOR_ISVALIDCOLOR )
-{
-  RBOOL( QColor::isValidColor ( PQSTRING(1) ) );
-}
+$staticMethod=|bool|isValidColor|const QString &
 
 /*
 int qAlpha ( QRgb rgba )

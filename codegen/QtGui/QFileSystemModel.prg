@@ -126,26 +126,12 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEINFO )
 /*
 QString fileName ( const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_FILENAME )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->fileName ( *PQMODELINDEX(1) ) );
-  }
-}
+$method=|QString|fileName|const QModelIndex &
 
 /*
 QString filePath ( const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEPATH )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->filePath ( *PQMODELINDEX(1) ) );
-  }
-}
+$method=|QString|filePath|const QModelIndex &
 
 /*
 QDir::Filters filter () const
@@ -336,14 +322,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ROOTDIRECTORY )
 /*
 QString rootPath () const
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_ROOTPATH )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->rootPath () );
-  }
-}
+$method=|QString|rootPath|
 
 /*
 void setFilter ( QDir::Filters filters )
@@ -428,15 +407,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETRESOLVESYMLINKS )
 /*
 QModelIndex setRootPath ( const QString & newPath )
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_SETROOTPATH )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QModelIndex * ptr = new QModelIndex( obj->setRootPath ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-  }
-}
+$method=|QModelIndex|setRootPath|const QString &
 
 /*
 qint64 size ( const QModelIndex & index ) const
@@ -453,14 +424,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SIZE )
 /*
 QString type ( const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QFILESYSTEMMODEL_TYPE )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->type ( *PQMODELINDEX(1) ) );
-  }
-}
+$method=|QString|type|const QModelIndex &
 
 /*
 virtual bool canFetchMore ( const QModelIndex & parent ) const

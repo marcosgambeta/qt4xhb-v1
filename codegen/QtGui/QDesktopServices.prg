@@ -34,15 +34,12 @@ $destructor
 #include "qt4xhb_utils.h"
 
 /*
-QString displayName ( StandardLocation type )
+static QString displayName ( StandardLocation type )
 */
-HB_FUNC_STATIC( QDESKTOPSERVICES_DISPLAYNAME )
-{
-  RQSTRING( QDesktopServices::displayName ( (QDesktopServices::StandardLocation) hb_parni(1) ) );
-}
+$staticMethod=|QString|displayName|QDesktopServices::StandardLocation
 
 /*
-bool openUrl ( const QUrl & url )
+static bool openUrl ( const QUrl & url )
 */
 HB_FUNC_STATIC( QDESKTOPSERVICES_OPENURL )
 {
@@ -50,7 +47,7 @@ HB_FUNC_STATIC( QDESKTOPSERVICES_OPENURL )
 }
 
 /*
-void setUrlHandler ( const QString & scheme, QObject * receiver, const char * method )
+static void setUrlHandler ( const QString & scheme, QObject * receiver, const char * method )
 */
 HB_FUNC_STATIC( QDESKTOPSERVICES_SETURLHANDLER )
 {
@@ -59,21 +56,14 @@ HB_FUNC_STATIC( QDESKTOPSERVICES_SETURLHANDLER )
 }
 
 /*
-QString storageLocation ( StandardLocation type )
+static QString storageLocation ( StandardLocation type )
 */
-HB_FUNC_STATIC( QDESKTOPSERVICES_STORAGELOCATION )
-{
-  RQSTRING( QDesktopServices::storageLocation ( (QDesktopServices::StandardLocation) hb_parni(1) ) );
-}
+$staticMethod=|QString|storageLocation|QDesktopServices::StandardLocation
 
 /*
-void unsetUrlHandler ( const QString & scheme )
+static void unsetUrlHandler ( const QString & scheme )
 */
-HB_FUNC_STATIC( QDESKTOPSERVICES_UNSETURLHANDLER )
-{
-  QDesktopServices::unsetUrlHandler ( PQSTRING(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$staticMethod=|void|unsetUrlHandler|const QString &
 
 $extraMethods
 

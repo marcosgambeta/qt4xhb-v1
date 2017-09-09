@@ -47,14 +47,7 @@ $deleteMethod
 /*
 QString fileName () const
 */
-HB_FUNC_STATIC( QSOUND_FILENAME )
-{
-  QSound * obj = (QSound *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->fileName () );
-  }
-}
+$method=|QString|fileName|
 
 /*
 bool isFinished () const
@@ -140,13 +133,9 @@ HB_FUNC_STATIC( QSOUND_ISAVAILABLE )
 }
 
 /*
-void play ( const QString & filename )
+static void play ( const QString & filename )
 */
-HB_FUNC_STATIC( QSOUND_PLAY2 )
-{
-  QSound::play ( PQSTRING(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$staticMethod=|void|play,play2|const QString &
 
 //[1]void play ()
 //[2]void play ( const QString & filename )

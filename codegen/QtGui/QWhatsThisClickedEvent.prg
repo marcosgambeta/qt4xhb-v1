@@ -38,13 +38,6 @@ $deleteMethod
 /*
 QString href() const
 */
-HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_HREF )
-{
-  QWhatsThisClickedEvent * obj = (QWhatsThisClickedEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->href () );
-  }
-}
+$method=|QString|href|
 
 #pragma ENDDUMP

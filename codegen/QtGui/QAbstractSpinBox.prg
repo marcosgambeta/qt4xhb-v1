@@ -293,15 +293,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETREADONLY )
 /*
 void setSpecialValueText ( const QString & txt )
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_SETSPECIALVALUETEXT )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSpecialValueText ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setSpecialValueText|const QString &
 
 /*
 void setWrapping ( bool w )
@@ -319,14 +311,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETWRAPPING )
 /*
 QString specialValueText () const
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_SPECIALVALUETEXT )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->specialValueText () );
-  }
-}
+$method=|QString|specialValueText|
 
 /*
 virtual void stepBy ( int steps )
@@ -344,14 +329,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_STEPBY )
 /*
 QString text () const
 */
-HB_FUNC_STATIC( QABSTRACTSPINBOX_TEXT )
-{
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->text () );
-  }
-}
+$method=|QString|text|
 
 /*
 virtual QValidator::State validate ( QString & input, int & pos ) const

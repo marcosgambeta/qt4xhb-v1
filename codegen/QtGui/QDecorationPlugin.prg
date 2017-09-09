@@ -33,26 +33,11 @@ $deleteMethod
 /*
 virtual QDecoration * create ( const QString & key ) = 0
 */
-HB_FUNC_STATIC( QDECORATIONPLUGIN_CREATE )
-{
-  QDecorationPlugin * obj = (QDecorationPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDecoration * ptr = obj->create ( PQSTRING(1) );
-    _qt4xhb_createReturnClass ( ptr, "QDECORATION" );
-  }
-}
+$virtualMethod=|QDecoration *|create|const QString &
 
 /*
 virtual QStringList keys () const = 0
 */
-HB_FUNC_STATIC( QDECORATIONPLUGIN_KEYS )
-{
-  QDecorationPlugin * obj = (QDecorationPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->keys () );
-  }
-}
+$virtualMethod=|QStringList|keys|
 
 #pragma ENDDUMP

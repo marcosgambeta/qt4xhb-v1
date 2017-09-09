@@ -104,14 +104,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_FORWARDHISTORYCOUNT )
 /*
 QString historyTitle ( int i ) const
 */
-HB_FUNC_STATIC( QTEXTBROWSER_HISTORYTITLE )
-{
-  QTextBrowser * obj = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->historyTitle ( PINT(1) ) );
-  }
-}
+$method=|QString|historyTitle|int
 
 /*
 QUrl historyUrl ( int i ) const

@@ -216,14 +216,7 @@ HB_FUNC_STATIC( QCOMBOBOX_CURRENTINDEX )
 /*
 QString currentText () const
 */
-HB_FUNC_STATIC( QCOMBOBOX_CURRENTTEXT )
-{
-  QComboBox * obj = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->currentText () );
-  }
-}
+$method=|QString|currentText|
 
 /*
 bool duplicatesEnabled () const
@@ -437,14 +430,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ITEMICON )
 /*
 QString itemText ( int index ) const
 */
-HB_FUNC_STATIC( QCOMBOBOX_ITEMTEXT )
-{
-  QComboBox * obj = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->itemText ( PINT(1) ) );
-  }
-}
+$method=|QString|itemText|int
 
 /*
 QLineEdit * lineEdit () const
@@ -946,14 +932,6 @@ HB_FUNC_STATIC( QCOMBOBOX_SETCURRENTINDEX )
 /*
 void setEditText ( const QString & text )
 */
-HB_FUNC_STATIC( QCOMBOBOX_SETEDITTEXT )
-{
-  QComboBox * obj = (QComboBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setEditText ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setEditText|const QString &
 
 #pragma ENDDUMP

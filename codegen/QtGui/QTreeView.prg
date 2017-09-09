@@ -619,15 +619,7 @@ HB_FUNC_STATIC( QTREEVIEW_INDEXAT )
 /*
 virtual void keyboardSearch ( const QString & search )
 */
-HB_FUNC_STATIC( QTREEVIEW_KEYBOARDSEARCH )
-{
-  QTreeView * obj = (QTreeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->keyboardSearch ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|keyboardSearch|const QString &
 
 /*
 virtual void reset ()

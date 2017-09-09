@@ -310,14 +310,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_DATETIME )
 /*
 QString displayFormat () const
 */
-HB_FUNC_STATIC( QDATETIMEEDIT_DISPLAYFORMAT )
-{
-  QDateTimeEdit * obj = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->displayFormat () );
-  }
-}
+$method=|QString|displayFormat|
 
 /*
 Sections displayedSections () const
@@ -436,14 +429,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SECTIONCOUNT )
 /*
 QString sectionText ( Section section ) const
 */
-HB_FUNC_STATIC( QDATETIMEEDIT_SECTIONTEXT )
-{
-  QDateTimeEdit * obj = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->sectionText ( (QDateTimeEdit::Section) hb_parni(1) ) );
-  }
-}
+$method=|QString|sectionText|QDateTimeEdit::Section
 
 /*
 void setCalendarPopup ( bool enable )
@@ -528,15 +514,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETDATETIMERANGE )
 /*
 void setDisplayFormat ( const QString & format )
 */
-HB_FUNC_STATIC( QDATETIMEEDIT_SETDISPLAYFORMAT )
-{
-  QDateTimeEdit * obj = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDisplayFormat ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDisplayFormat|const QString &
 
 /*
 void setMaximumDate ( const QDate & max )

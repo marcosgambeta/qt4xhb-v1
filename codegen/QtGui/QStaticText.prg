@@ -213,14 +213,7 @@ HB_FUNC_STATIC( QSTATICTEXT_SIZE )
 /*
 QString text () const
 */
-HB_FUNC_STATIC( QSTATICTEXT_TEXT )
-{
-  QStaticText * obj = (QStaticText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->text () );
-  }
-}
+$method=|QString|text|
 
 /*
 Qt::TextFormat textFormat () const

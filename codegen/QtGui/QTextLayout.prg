@@ -460,14 +460,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_PREEDITAREAPOSITION )
 /*
 QString preeditAreaText () const
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_PREEDITAREATEXT )
-{
-  QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->preeditAreaText () );
-  }
-}
+$method=|QString|preeditAreaText|
 
 /*
 int previousCursorPosition ( int oldPos, CursorMode mode = SkipCharacters ) const
@@ -563,15 +556,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_SETPREEDITAREA )
 /*
 void setText ( const QString & string )
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_SETTEXT )
-{
-  QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setText ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setText|const QString &
 
 /*
 void setTextOption ( const QTextOption & option )
@@ -589,14 +574,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_SETTEXTOPTION )
 /*
 QString text () const
 */
-HB_FUNC_STATIC( QTEXTLAYOUT_TEXT )
-{
-  QTextLayout * obj = (QTextLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->text () );
-  }
-}
+$method=|QString|text|
 
 /*
 QTextOption textOption () const

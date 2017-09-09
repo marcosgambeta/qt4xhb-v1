@@ -92,15 +92,7 @@ $deleteMethod
 /*
 void addItem ( const QString & label )
 */
-HB_FUNC_STATIC( QLISTWIDGET_ADDITEM1 )
-{
-  QListWidget * obj = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->addItem ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addItem,addItem1|const QString &
 
 /*
 void addItem ( QListWidgetItem * item )

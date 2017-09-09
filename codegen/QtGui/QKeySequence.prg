@@ -190,15 +190,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_MATCHES )
 /*
 QString toString ( SequenceFormat format = PortableText ) const
 */
-HB_FUNC_STATIC( QKEYSEQUENCE_TOSTRING )
-{
-  QKeySequence * obj = (QKeySequence *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = ISNIL(1)? (int) QKeySequence::PortableText : hb_parni(1);
-    RQSTRING( obj->toString ( (QKeySequence::SequenceFormat) par1 ) );
-  }
-}
+$method=|QString|toString|QKeySequence::SequenceFormat=QKeySequence::PortableText
 
 /*
 QKeySequence fromString ( const QString & str, SequenceFormat format = PortableText )
@@ -255,13 +247,9 @@ HB_FUNC_STATIC( QKEYSEQUENCE_KEYBINDINGS )
 }
 
 /*
-QKeySequence mnemonic ( const QString & text )
+static QKeySequence mnemonic ( const QString & text )
 */
-HB_FUNC_STATIC( QKEYSEQUENCE_MNEMONIC )
-{
-  QKeySequence * ptr = new QKeySequence( QKeySequence::mnemonic ( PQSTRING(1) ) );
-  _qt4xhb_createReturnClass ( ptr, "QKEYSEQUENCE", true );
-}
+$staticMethod=|QKeySequence|mnemonic|const QString &
 
 $extraMethods
 

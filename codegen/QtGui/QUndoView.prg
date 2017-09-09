@@ -109,14 +109,7 @@ HB_FUNC_STATIC( QUNDOVIEW_CLEANICON )
 /*
 QString emptyLabel () const
 */
-HB_FUNC_STATIC( QUNDOVIEW_EMPTYLABEL )
-{
-  QUndoView * obj = (QUndoView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->emptyLabel () );
-  }
-}
+$method=|QString|emptyLabel|
 
 /*
 QUndoGroup * group () const
@@ -148,15 +141,7 @@ HB_FUNC_STATIC( QUNDOVIEW_SETCLEANICON )
 /*
 void setEmptyLabel ( const QString & label )
 */
-HB_FUNC_STATIC( QUNDOVIEW_SETEMPTYLABEL )
-{
-  QUndoView * obj = (QUndoView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setEmptyLabel ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setEmptyLabel|const QString &
 
 /*
 QUndoStack * stack () const

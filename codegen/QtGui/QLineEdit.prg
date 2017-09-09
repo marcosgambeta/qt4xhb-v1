@@ -299,14 +299,7 @@ HB_FUNC_STATIC( QLINEEDIT_DESELECT )
 /*
 QString displayText () const
 */
-HB_FUNC_STATIC( QLINEEDIT_DISPLAYTEXT )
-{
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->displayText () );
-  }
-}
+$method=|QString|displayText|
 
 /*
 bool dragEnabled () const
@@ -418,27 +411,12 @@ HB_FUNC_STATIC( QLINEEDIT_HOME )
 /*
 QString inputMask () const
 */
-HB_FUNC_STATIC( QLINEEDIT_INPUTMASK )
-{
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->inputMask () );
-  }
-}
+$method=|QString|inputMask|
 
 /*
 void insert ( const QString & newText )
 */
-HB_FUNC_STATIC( QLINEEDIT_INSERT )
-{
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->insert ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|insert|const QString &
 
 /*
 bool isModified () const
@@ -503,14 +481,7 @@ HB_FUNC_STATIC( QLINEEDIT_MAXLENGTH )
 /*
 QString placeholderText () const
 */
-HB_FUNC_STATIC( QLINEEDIT_PLACEHOLDERTEXT )
-{
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->placeholderText () );
-  }
-}
+$method=|QString|placeholderText|
 
 /*
 virtual QSize minimumSizeHint () const
@@ -528,14 +499,7 @@ HB_FUNC_STATIC( QLINEEDIT_MINIMUMSIZEHINT )
 /*
 QString selectedText () const
 */
-HB_FUNC_STATIC( QLINEEDIT_SELECTEDTEXT )
-{
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->selectedText () );
-  }
-}
+$method=|QString|selectedText|
 
 /*
 int selectionStart () const
@@ -633,15 +597,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETFRAME )
 /*
 void setInputMask ( const QString & inputMask )
 */
-HB_FUNC_STATIC( QLINEEDIT_SETINPUTMASK )
-{
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setInputMask ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setInputMask|const QString &
 
 /*
 void setMaxLength ( int )
@@ -672,15 +628,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETMODIFIED )
 /*
 void setPlaceholderText ( const QString & )
 */
-HB_FUNC_STATIC( QLINEEDIT_SETPLACEHOLDERTEXT )
-{
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPlaceholderText ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPlaceholderText|const QString &
 
 /*
 void setReadOnly ( bool )
@@ -779,14 +727,7 @@ HB_FUNC_STATIC( QLINEEDIT_SIZEHINT )
 /*
 QString text () const
 */
-HB_FUNC_STATIC( QLINEEDIT_TEXT )
-{
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->text () );
-  }
-}
+$method=|QString|text|
 
 /*
 QMargins textMargins () const
@@ -908,15 +849,7 @@ HB_FUNC_STATIC( QLINEEDIT_SELECTALL )
 /*
 void setText ( const QString & )
 */
-HB_FUNC_STATIC( QLINEEDIT_SETTEXT )
-{
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setText ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setText|const QString &
 
 /*
 void undo ()

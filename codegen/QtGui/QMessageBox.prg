@@ -279,14 +279,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_DEFAULTBUTTON )
 /*
 QString detailedText () const
 */
-HB_FUNC_STATIC( QMESSAGEBOX_DETAILEDTEXT )
-{
-  QMessageBox * obj = (QMessageBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->detailedText () );
-  }
-}
+$method=|QString|detailedText|
 
 /*
 QAbstractButton * escapeButton () const
@@ -329,14 +322,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_ICONPIXMAP )
 /*
 QString informativeText () const
 */
-HB_FUNC_STATIC( QMESSAGEBOX_INFORMATIVETEXT )
-{
-  QMessageBox * obj = (QMessageBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->informativeText () );
-  }
-}
+$method=|QString|informativeText|
 
 /*
 void open ( QObject * receiver, const char * member )
@@ -411,15 +397,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETDEFAULTBUTTON )
 /*
 void setDetailedText ( const QString & text )
 */
-HB_FUNC_STATIC( QMESSAGEBOX_SETDETAILEDTEXT )
-{
-  QMessageBox * obj = (QMessageBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDetailedText ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDetailedText|const QString &
 
 /*
 void setEscapeButton ( QAbstractButton * button )
@@ -494,15 +472,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETICONPIXMAP )
 /*
 void setInformativeText ( const QString & text )
 */
-HB_FUNC_STATIC( QMESSAGEBOX_SETINFORMATIVETEXT )
-{
-  QMessageBox * obj = (QMessageBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setInformativeText ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setInformativeText|const QString &
 
 /*
 void setStandardButtons ( StandardButtons buttons )
@@ -521,15 +491,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETSTANDARDBUTTONS )
 /*
 void setText ( const QString & text )
 */
-HB_FUNC_STATIC( QMESSAGEBOX_SETTEXT )
-{
-  QMessageBox * obj = (QMessageBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setText ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setText|const QString &
 
 /*
 void setTextFormat ( Qt::TextFormat format )
@@ -562,15 +524,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETWINDOWMODALITY )
 /*
 void setWindowTitle ( const QString & title )
 */
-HB_FUNC_STATIC( QMESSAGEBOX_SETWINDOWTITLE )
-{
-  QMessageBox * obj = (QMessageBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setWindowTitle ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWindowTitle|const QString &
 
 /*
 StandardButton standardButton ( QAbstractButton * button ) const
@@ -600,14 +554,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_STANDARDBUTTONS )
 /*
 QString text () const
 */
-HB_FUNC_STATIC( QMESSAGEBOX_TEXT )
-{
-  QMessageBox * obj = (QMessageBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->text () );
-  }
-}
+$method=|QString|text|
 
 /*
 Qt::TextFormat textFormat () const

@@ -158,15 +158,7 @@ HB_FUNC_STATIC( QMENU_ACTIVEACTION )
 /*
 QAction * addAction ( const QString & text )
 */
-HB_FUNC_STATIC( QMENU_ADDACTION1 )
-{
-  QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->addAction ( PQSTRING(1) );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|addAction,addAction1|const QString &
 
 /*
 QAction * addAction ( const QIcon & icon, const QString & text )
@@ -272,15 +264,7 @@ HB_FUNC_STATIC( QMENU_ADDMENU1 )
 /*
 QMenu * addMenu ( const QString & title )
 */
-HB_FUNC_STATIC( QMENU_ADDMENU2 )
-{
-  QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QMenu * ptr = obj->addMenu ( PQSTRING(1) );
-    _qt4xhb_createReturnClass ( ptr, "QMENU" );
-  }
-}
+$method=|QMenu *|addMenu,addMenu2|const QString &
 
 /*
 QMenu * addMenu ( const QIcon & icon, const QString & title )
@@ -578,27 +562,12 @@ HB_FUNC_STATIC( QMENU_SETTEAROFFENABLED )
 /*
 void setTitle ( const QString & title )
 */
-HB_FUNC_STATIC( QMENU_SETTITLE )
-{
-  QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setTitle ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTitle|const QString &
 
 /*
 QString title () const
 */
-HB_FUNC_STATIC( QMENU_TITLE )
-{
-  QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->title () );
-  }
-}
+$method=|QString|title|
 
 /*
 virtual QSize sizeHint () const

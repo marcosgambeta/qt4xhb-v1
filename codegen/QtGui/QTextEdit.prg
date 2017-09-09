@@ -193,14 +193,7 @@ HB_FUNC_STATIC( QTEXTEDIT_ALIGNMENT )
 /*
 QString anchorAt ( const QPoint & pos ) const
 */
-HB_FUNC_STATIC( QTEXTEDIT_ANCHORAT )
-{
-  QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->anchorAt ( *PQPOINT(1) ) );
-  }
-}
+$method=|QString|anchorAt|const QPoint &
 
 /*
 AutoFormatting autoFormatting () const
@@ -375,14 +368,7 @@ HB_FUNC_STATIC( QTEXTEDIT_DOCUMENT )
 /*
 QString documentTitle () const
 */
-HB_FUNC_STATIC( QTEXTEDIT_DOCUMENTTITLE )
-{
-  QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->documentTitle () );
-  }
-}
+$method=|QString|documentTitle|
 
 /*
 void ensureCursorVisible ()
@@ -413,14 +399,7 @@ HB_FUNC_STATIC( QTEXTEDIT_FIND )
 /*
 QString fontFamily () const
 */
-HB_FUNC_STATIC( QTEXTEDIT_FONTFAMILY )
-{
-  QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->fontFamily () );
-  }
-}
+$method=|QString|fontFamily|
 
 /*
 bool fontItalic () const
@@ -655,15 +634,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETDOCUMENT )
 /*
 void setDocumentTitle ( const QString & title )
 */
-HB_FUNC_STATIC( QTEXTEDIT_SETDOCUMENTTITLE )
-{
-  QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDocumentTitle ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDocumentTitle|const QString &
 
 /*
 void setLineWrapColumnOrWidth ( int w )
@@ -876,26 +847,12 @@ HB_FUNC_STATIC( QTEXTEDIT_TEXTINTERACTIONFLAGS )
 /*
 QString toHtml () const
 */
-HB_FUNC_STATIC( QTEXTEDIT_TOHTML )
-{
-  QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->toHtml () );
-  }
-}
+$method=|QString|toHtml|
 
 /*
 QString toPlainText () const
 */
-HB_FUNC_STATIC( QTEXTEDIT_TOPLAINTEXT )
-{
-  QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->toPlainText () );
-  }
-}
+$method=|QString|toPlainText|
 
 /*
 QTextOption::WrapMode wordWrapMode () const
@@ -912,15 +869,7 @@ HB_FUNC_STATIC( QTEXTEDIT_WORDWRAPMODE )
 /*
 void append ( const QString & text )
 */
-HB_FUNC_STATIC( QTEXTEDIT_APPEND )
-{
-  QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->append ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|append|const QString &
 
 /*
 void clear ()
@@ -964,28 +913,12 @@ HB_FUNC_STATIC( QTEXTEDIT_CUT )
 /*
 void insertHtml ( const QString & text )
 */
-HB_FUNC_STATIC( QTEXTEDIT_INSERTHTML )
-{
-  QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->insertHtml ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|insertHtml|const QString &
 
 /*
 void insertPlainText ( const QString & text )
 */
-HB_FUNC_STATIC( QTEXTEDIT_INSERTPLAINTEXT )
-{
-  QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->insertPlainText ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|insertPlainText|const QString &
 
 /*
 void paste ()
@@ -1016,15 +949,7 @@ HB_FUNC_STATIC( QTEXTEDIT_REDO )
 /*
 void scrollToAnchor ( const QString & name )
 */
-HB_FUNC_STATIC( QTEXTEDIT_SCROLLTOANCHOR )
-{
-  QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->scrollToAnchor ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|scrollToAnchor|const QString &
 
 /*
 void selectAll ()
@@ -1069,15 +994,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETCURRENTFONT )
 /*
 void setFontFamily ( const QString & fontFamily )
 */
-HB_FUNC_STATIC( QTEXTEDIT_SETFONTFAMILY )
-{
-  QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFontFamily ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFontFamily|const QString &
 
 /*
 void setFontItalic ( bool italic )
@@ -1134,41 +1051,17 @@ HB_FUNC_STATIC( QTEXTEDIT_SETFONTWEIGHT )
 /*
 void setHtml ( const QString & text )
 */
-HB_FUNC_STATIC( QTEXTEDIT_SETHTML )
-{
-  QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setHtml ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setHtml|const QString &
 
 /*
 void setPlainText ( const QString & text )
 */
-HB_FUNC_STATIC( QTEXTEDIT_SETPLAINTEXT )
-{
-  QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPlainText ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPlainText|const QString &
 
 /*
 void setText ( const QString & text )
 */
-HB_FUNC_STATIC( QTEXTEDIT_SETTEXT )
-{
-  QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setText ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setText|const QString &
 
 /*
 void setTextBackgroundColor ( const QColor & c )

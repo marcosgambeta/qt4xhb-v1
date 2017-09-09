@@ -608,15 +608,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTFRAME )
 /*
 void insertHtml ( const QString & html )
 */
-HB_FUNC_STATIC( QTEXTCURSOR_INSERTHTML )
-{
-  QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->insertHtml ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|insertHtml|const QString &
 
 /*
 void insertImage ( const QTextImageFormat & format )
@@ -647,15 +639,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTIMAGE2 )
 /*
 void insertImage ( const QString & name )
 */
-HB_FUNC_STATIC( QTEXTCURSOR_INSERTIMAGE3 )
-{
-  QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->insertImage ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|insertImage,insertImage3|const QString &
 
 /*
 void insertImage ( const QImage & image, const QString & name = QString() )
@@ -781,28 +765,12 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTTABLE )
 /*
 void insertText ( const QString & text )
 */
-HB_FUNC_STATIC( QTEXTCURSOR_INSERTTEXT1 )
-{
-  QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->insertText ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|insertText,insertText1|const QString &
 
 /*
 void insertText ( const QString & text, const QTextCharFormat & format )
 */
-HB_FUNC_STATIC( QTEXTCURSOR_INSERTTEXT2 )
-{
-  QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->insertText ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|insertText,insertText2|const QString &,const QTextCharFormat &
 
 //[1]void insertText ( const QString & text )
 //[2]void insertText ( const QString & text, const QTextCharFormat & format )
@@ -996,14 +964,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_SELECTEDTABLECELLS )
 /*
 QString selectedText () const
 */
-HB_FUNC_STATIC( QTEXTCURSOR_SELECTEDTEXT )
-{
-  QTextCursor * obj = (QTextCursor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->selectedText () );
-  }
-}
+$method=|QString|selectedText|
 
 /*
 QTextDocumentFragment selection () const

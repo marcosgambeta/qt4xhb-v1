@@ -130,26 +130,12 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_ISEMPTY )
 /*
 QString toHtml ( const QByteArray & encoding ) const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_TOHTML1 )
-{
-  QTextDocumentFragment * obj = (QTextDocumentFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->toHtml ( *PQBYTEARRAY(1) ) );
-  }
-}
+$method=|QString|toHtml,toHtml1|const QByteArray &
 
 /*
 QString toHtml () const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_TOHTML2 )
-{
-  QTextDocumentFragment * obj = (QTextDocumentFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->toHtml () );
-  }
-}
+$method=|QString|toHtml,toHtml2|
 
 //[1]QString toHtml ( const QByteArray & encoding ) const
 //[2]QString toHtml () const
@@ -169,26 +155,15 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_TOHTML )
 /*
 QString toPlainText () const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_TOPLAINTEXT )
-{
-  QTextDocumentFragment * obj = (QTextDocumentFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->toPlainText () );
-  }
-}
+$method=|QString|toPlainText|
 
 /*
-QTextDocumentFragment fromHtml ( const QString & text )
+static QTextDocumentFragment fromHtml ( const QString & text )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_FROMHTML1 )
-{
-  QTextDocumentFragment * ptr = new QTextDocumentFragment( QTextDocumentFragment::fromHtml ( PQSTRING(1) ) );
-  _qt4xhb_createReturnClass ( ptr, "QTEXTDOCUMENTFRAGMENT", true );
-}
+$staticMethod=|QTextDocumentFragment|fromHtml,fromHtml1|const QString &
 
 /*
-QTextDocumentFragment fromHtml ( const QString & text, const QTextDocument * resourceProvider )
+static QTextDocumentFragment fromHtml ( const QString & text, const QTextDocument * resourceProvider )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_FROMHTML2 )
 {
@@ -213,13 +188,9 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_FROMHTML )
 }
 
 /*
-QTextDocumentFragment fromPlainText ( const QString & plainText )
+static QTextDocumentFragment fromPlainText ( const QString & plainText )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_FROMPLAINTEXT )
-{
-  QTextDocumentFragment * ptr = new QTextDocumentFragment( QTextDocumentFragment::fromPlainText ( PQSTRING(1) ) );
-  _qt4xhb_createReturnClass ( ptr, "QTEXTDOCUMENTFRAGMENT", true );
-}
+$staticMethod=|QTextDocumentFragment|fromPlainText|const QString &
 
 $extraMethods
 

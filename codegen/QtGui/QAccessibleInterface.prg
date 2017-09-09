@@ -48,14 +48,7 @@ $deleteMethod
 /*
 virtual QString actionText ( int action, Text t, int child ) const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLEINTERFACE_ACTIONTEXT )
-{
-  QAccessibleInterface * obj = (QAccessibleInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->actionText ( PINT(1), (QAccessibleInterface::Text) hb_parni(2), PINT(3) ) );
-  }
-}
+$virtualMethod=|QString|actionText|int,QAccessibleInterface::Text,int
 
 /*
 virtual int childAt ( int x, int y ) const = 0
@@ -227,14 +220,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_STATE )
 /*
 virtual QString text ( Text t, int child ) const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLEINTERFACE_TEXT )
-{
-  QAccessibleInterface * obj = (QAccessibleInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->text ( (QAccessibleInterface::Text) hb_parni(1), PINT(2) ) );
-  }
-}
+$virtualMethod=|QString|text|QAccessibleInterface::Text,int
 
 /*
 virtual int userActionCount ( int child ) const = 0

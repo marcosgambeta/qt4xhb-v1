@@ -257,15 +257,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SIZEHINT )
 /*
 void display ( const QString & s )
 */
-HB_FUNC_STATIC( QLCDNUMBER_DISPLAY1 )
-{
-  QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->display ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|display,display1|const QString &
 
 /*
 void display ( double num )

@@ -320,14 +320,7 @@ HB_FUNC_STATIC( QACTION_ICON )
 /*
 QString iconText () const
 */
-HB_FUNC_STATIC( QACTION_ICONTEXT )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->iconText () );
-  }
-}
+$method=|QString|iconText|
 
 /*
 bool isCheckable () const
@@ -534,15 +527,7 @@ HB_FUNC_STATIC( QACTION_SETICON )
 /*
 void setIconText ( const QString & text )
 */
-HB_FUNC_STATIC( QACTION_SETICONTEXT )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setIconText ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setIconText|const QString &
 
 /*
 void setIconVisibleInMenu ( bool visible )
@@ -705,54 +690,22 @@ HB_FUNC_STATIC( QACTION_SETSOFTKEYROLE )
 /*
 void setStatusTip ( const QString & statusTip )
 */
-HB_FUNC_STATIC( QACTION_SETSTATUSTIP )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setStatusTip ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setStatusTip|const QString &
 
 /*
 void setText ( const QString & text )
 */
-HB_FUNC_STATIC( QACTION_SETTEXT )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setText ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setText|const QString &
 
 /*
 void setToolTip ( const QString & tip )
 */
-HB_FUNC_STATIC( QACTION_SETTOOLTIP )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setToolTip ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setToolTip|const QString &
 
 /*
 void setWhatsThis ( const QString & what )
 */
-HB_FUNC_STATIC( QACTION_SETWHATSTHIS )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setWhatsThis ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWhatsThis|const QString &
 
 /*
 QKeySequence shortcut () const
@@ -853,50 +806,22 @@ HB_FUNC_STATIC( QACTION_SOFTKEYROLE )
 /*
 QString statusTip () const
 */
-HB_FUNC_STATIC( QACTION_STATUSTIP )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->statusTip () );
-  }
-}
+$method=|QString|statusTip|
 
 /*
 QString text () const
 */
-HB_FUNC_STATIC( QACTION_TEXT )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->text () );
-  }
-}
+$method=|QString|text|
 
 /*
 QString toolTip () const
 */
-HB_FUNC_STATIC( QACTION_TOOLTIP )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->toolTip () );
-  }
-}
+$method=|QString|toolTip|
 
 /*
 QString whatsThis () const
 */
-HB_FUNC_STATIC( QACTION_WHATSTHIS )
-{
-  QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->whatsThis () );
-  }
-}
+$method=|QString|whatsThis|
 
 /*
 void hover ()

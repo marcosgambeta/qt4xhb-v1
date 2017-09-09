@@ -168,15 +168,7 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION1 )
 /*
 QAction * addAction ( const QString & text )
 */
-HB_FUNC_STATIC( QTOOLBAR_ADDACTION2 )
-{
-  QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->addAction ( PQSTRING(1) );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
+$method=|QAction *|addAction,addAction2|const QString &
 
 /*
 QAction * addAction ( const QIcon & icon, const QString & text )

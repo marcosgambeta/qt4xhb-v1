@@ -68,14 +68,7 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_ISVALID )
 /*
 QString name () const
 */
-HB_FUNC_STATIC( QTEXTIMAGEFORMAT_NAME )
-{
-  QTextImageFormat * obj = (QTextImageFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->name () );
-  }
-}
+$method=|QString|name|
 
 /*
 void setHeight ( qreal height )
@@ -93,15 +86,7 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETHEIGHT )
 /*
 void setName ( const QString & name )
 */
-HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETNAME )
-{
-  QTextImageFormat * obj = (QTextImageFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setName ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setName|const QString &
 
 /*
 void setWidth ( qreal width )

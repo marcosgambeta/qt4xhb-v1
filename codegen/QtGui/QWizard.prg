@@ -122,14 +122,7 @@ HB_FUNC_STATIC( QWIZARD_BUTTON )
 /*
 QString buttonText ( WizardButton which ) const
 */
-HB_FUNC_STATIC( QWIZARD_BUTTONTEXT )
-{
-  QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->buttonText ( (QWizard::WizardButton) hb_parni(1) ) );
-  }
-}
+$method=|QString|buttonText|QWizard::WizardButton
 
 /*
 int currentId () const
@@ -159,15 +152,7 @@ HB_FUNC_STATIC( QWIZARD_CURRENTPAGE )
 /*
 QVariant field ( const QString & name ) const
 */
-HB_FUNC_STATIC( QWIZARD_FIELD )
-{
-  QWizard * obj = (QWizard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->field ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
+$method=|QVariant|field|const QString &
 
 /*
 bool hasVisitedPage ( int id ) const

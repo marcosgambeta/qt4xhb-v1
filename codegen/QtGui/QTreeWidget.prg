@@ -575,15 +575,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SETHEADERITEM )
 /*
 void setHeaderLabel ( const QString & label )
 */
-HB_FUNC_STATIC( QTREEWIDGET_SETHEADERLABEL )
-{
-  QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setHeaderLabel ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setHeaderLabel|const QString &
 
 /*
 void setHeaderLabels ( const QStringList & labels )

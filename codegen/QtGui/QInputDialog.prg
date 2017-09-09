@@ -96,14 +96,7 @@ $deleteMethod
 /*
 QString cancelButtonText () const
 */
-HB_FUNC_STATIC( QINPUTDIALOG_CANCELBUTTONTEXT )
-{
-  QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->cancelButtonText () );
-  }
-}
+$method=|QString|cancelButtonText|
 
 /*
 QStringList comboBoxItems () const
@@ -240,26 +233,12 @@ HB_FUNC_STATIC( QINPUTDIALOG_ISCOMBOBOXEDITABLE )
 /*
 QString labelText () const
 */
-HB_FUNC_STATIC( QINPUTDIALOG_LABELTEXT )
-{
-  QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->labelText () );
-  }
-}
+$method=|QString|labelText|
 
 /*
 QString okButtonText () const
 */
-HB_FUNC_STATIC( QINPUTDIALOG_OKBUTTONTEXT )
-{
-  QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->okButtonText () );
-  }
-}
+$method=|QString|okButtonText|
 
 /*
 void open ( QObject * receiver, const char * member )
@@ -289,15 +268,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_OPTIONS )
 /*
 void setCancelButtonText ( const QString & text )
 */
-HB_FUNC_STATIC( QINPUTDIALOG_SETCANCELBUTTONTEXT )
-{
-  QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCancelButtonText ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCancelButtonText|const QString &
 
 /*
 void setComboBoxEditable ( bool editable )
@@ -472,28 +443,12 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETINTVALUE )
 /*
 void setLabelText ( const QString & text )
 */
-HB_FUNC_STATIC( QINPUTDIALOG_SETLABELTEXT )
-{
-  QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setLabelText ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setLabelText|const QString &
 
 /*
 void setOkButtonText ( const QString & text )
 */
-HB_FUNC_STATIC( QINPUTDIALOG_SETOKBUTTONTEXT )
-{
-  QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setOkButtonText ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOkButtonText|const QString &
 
 /*
 void setOption ( InputDialogOption option, bool on = true )
@@ -540,15 +495,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETTEXTECHOMODE )
 /*
 void setTextValue ( const QString & text )
 */
-HB_FUNC_STATIC( QINPUTDIALOG_SETTEXTVALUE )
-{
-  QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setTextValue ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setTextValue|const QString &
 
 /*
 bool testOption ( InputDialogOption option ) const
@@ -578,14 +525,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_TEXTECHOMODE )
 /*
 QString textValue () const
 */
-HB_FUNC_STATIC( QINPUTDIALOG_TEXTVALUE )
-{
-  QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->textValue () );
-  }
-}
+$method=|QString|textValue|
 
 /*
 virtual void done ( int result )

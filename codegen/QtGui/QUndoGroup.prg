@@ -153,14 +153,7 @@ HB_FUNC_STATIC( QUNDOGROUP_ISCLEAN )
 /*
 QString redoText () const
 */
-HB_FUNC_STATIC( QUNDOGROUP_REDOTEXT )
-{
-  QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->redoText () );
-  }
-}
+$method=|QString|redoText|
 
 /*
 void removeStack ( QUndoStack * stack )
@@ -222,14 +215,7 @@ HB_FUNC_STATIC( QUNDOGROUP_STACKS )
 /*
 QString undoText () const
 */
-HB_FUNC_STATIC( QUNDOGROUP_UNDOTEXT )
-{
-  QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->undoText () );
-  }
-}
+$method=|QString|undoText|
 
 /*
 void redo ()

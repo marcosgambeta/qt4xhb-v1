@@ -35,21 +35,14 @@ $destructor
 #include "qt4xhb_utils.h"
 
 /*
-QDecoration * create ( const QString & key )
+static QDecoration * create ( const QString & key )
 */
-HB_FUNC_STATIC( QDECORATIONFACTORY_CREATE )
-{
-  QDecoration * ptr = QDecorationFactory::create ( PQSTRING(1) );
-  _qt4xhb_createReturnClass ( ptr, "QDECORATION" );
-}
+$staticMethod=|QDecoration *|create|const QString &
 
 /*
-QStringList keys ()
+static QStringList keys ()
 */
-HB_FUNC_STATIC( QDECORATIONFACTORY_KEYS )
-{
-  RQSTRINGLIST( QDecorationFactory::keys () );
-}
+$staticMethod=|QStringList|keys|
 
 $extraMethods
 

@@ -647,15 +647,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETWINDOWFRAMEMARGINS )
 /*
 void setWindowTitle ( const QString & title )
 */
-HB_FUNC_STATIC( QGRAPHICSWIDGET_SETWINDOWTITLE )
-{
-  QGraphicsWidget * obj = (QGraphicsWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setWindowTitle ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setWindowTitle|const QString &
 
 /*
 QSizeF size () const
@@ -763,14 +755,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_WINDOWFRAMERECT )
 /*
 QString windowTitle () const
 */
-HB_FUNC_STATIC( QGRAPHICSWIDGET_WINDOWTITLE )
-{
-  QGraphicsWidget * obj = (QGraphicsWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->windowTitle () );
-  }
-}
+$method=|QString|windowTitle|
 
 /*
 Qt::WindowType windowType () const

@@ -163,26 +163,12 @@ HB_FUNC_STATIC( QIMAGEWRITER_ERROR )
 /*
 QString errorString () const
 */
-HB_FUNC_STATIC( QIMAGEWRITER_ERRORSTRING )
-{
-  QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->errorString () );
-  }
-}
+$method=|QString|errorString|
 
 /*
 QString fileName () const
 */
-HB_FUNC_STATIC( QIMAGEWRITER_FILENAME )
-{
-  QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->fileName () );
-  }
-}
+$method=|QString|fileName|
 
 /*
 QByteArray format () const
@@ -250,28 +236,12 @@ HB_FUNC_STATIC( QIMAGEWRITER_SETDEVICE )
 /*
 void setFileName ( const QString & fileName )
 */
-HB_FUNC_STATIC( QIMAGEWRITER_SETFILENAME )
-{
-  QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFileName ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFileName|const QString &
 
 /*
 void setFormat ( const QByteArray & format )
 */
-HB_FUNC_STATIC( QIMAGEWRITER_SETFORMAT )
-{
-  QImageWriter * obj = (QImageWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFormat ( *PQBYTEARRAY(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setFormat|const QByteArray &
 
 /*
 void setGamma ( float gamma )

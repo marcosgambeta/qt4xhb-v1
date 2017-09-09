@@ -50,14 +50,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_NEW )
 /*
 virtual QString actionText ( int action, Text t, int child ) const
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_ACTIONTEXT )
-{
-  QAccessibleWidget * obj = (QAccessibleWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->actionText ( PINT(1), (QAccessible::Text) hb_parni(2), PINT(3) ) );
-  }
-}
+$virtualMethod=|QString|actionText|int,QAccessible::Text,int
 
 /*
 virtual int childAt ( int x, int y ) const
@@ -169,14 +162,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_STATE )
 /*
 virtual QString text ( Text t, int child ) const
 */
-HB_FUNC_STATIC( QACCESSIBLEWIDGET_TEXT )
-{
-  QAccessibleWidget * obj = (QAccessibleWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->text ( (QAccessible::Text) hb_parni(1), PINT(2) ) );
-  }
-}
+$virtualMethod=|QString|text|QAccessible::Text,int
 
 /*
 virtual int userActionCount ( int child ) const

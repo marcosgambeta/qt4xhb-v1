@@ -123,14 +123,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_AUTORESET )
 /*
 QString labelText () const
 */
-HB_FUNC_STATIC( QPROGRESSDIALOG_LABELTEXT )
-{
-  QProgressDialog * obj = (QProgressDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->labelText () );
-  }
-}
+$method=|QString|labelText|
 
 /*
 int maximum () const
@@ -315,28 +308,12 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_RESET )
 /*
 void setCancelButtonText ( const QString & cancelButtonText )
 */
-HB_FUNC_STATIC( QPROGRESSDIALOG_SETCANCELBUTTONTEXT )
-{
-  QProgressDialog * obj = (QProgressDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCancelButtonText ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setCancelButtonText|const QString &
 
 /*
 void setLabelText ( const QString & text )
 */
-HB_FUNC_STATIC( QPROGRESSDIALOG_SETLABELTEXT )
-{
-  QProgressDialog * obj = (QProgressDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setLabelText ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setLabelText|const QString &
 
 /*
 void setMaximum ( int maximum )

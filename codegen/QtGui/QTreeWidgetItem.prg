@@ -854,14 +854,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SORTCHILDREN )
 /*
 QString statusTip ( int column ) const
 */
-HB_FUNC_STATIC( QTREEWIDGETITEM_STATUSTIP )
-{
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->statusTip ( PINT(1) ) );
-  }
-}
+$method=|QString|statusTip|int
 
 /*
 QTreeWidgetItem * takeChild ( int index )
@@ -922,14 +915,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_TAKECHILDREN )
 /*
 QString text ( int column ) const
 */
-HB_FUNC_STATIC( QTREEWIDGETITEM_TEXT )
-{
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->text ( PINT(1) ) );
-  }
-}
+$method=|QString|text|int
 
 /*
 int textAlignment ( int column ) const
@@ -946,14 +932,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_TEXTALIGNMENT )
 /*
 QString toolTip ( int column ) const
 */
-HB_FUNC_STATIC( QTREEWIDGETITEM_TOOLTIP )
-{
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->toolTip ( PINT(1) ) );
-  }
-}
+$method=|QString|toolTip|int
 
 /*
 QTreeWidget * treeWidget () const
@@ -983,14 +962,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_TYPE )
 /*
 QString whatsThis ( int column ) const
 */
-HB_FUNC_STATIC( QTREEWIDGETITEM_WHATSTHIS )
-{
-  QTreeWidgetItem * obj = (QTreeWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->whatsThis ( PINT(1) ) );
-  }
-}
+$method=|QString|whatsThis|int
 
 /*
 virtual void write ( QDataStream & out ) const

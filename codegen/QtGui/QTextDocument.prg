@@ -381,14 +381,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DEFAULTFONT )
 /*
 QString defaultStyleSheet () const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_DEFAULTSTYLESHEET )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->defaultStyleSheet () );
-  }
-}
+$method=|QString|defaultStyleSheet|
 
 /*
 QTextOption defaultTextOption () const
@@ -725,14 +718,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_MAXIMUMBLOCKCOUNT )
 /*
 QString metaInformation ( MetaInformation info ) const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_METAINFORMATION )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->metaInformation ( (QTextDocument::MetaInformation) hb_parni(1) ) );
-  }
-}
+$method=|QString|metaInformation|QTextDocument::MetaInformation
 
 /*
 QTextObject * object ( int objectIndex ) const
@@ -881,15 +867,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETDEFAULTFONT )
 /*
 void setDefaultStyleSheet ( const QString & sheet )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_SETDEFAULTSTYLESHEET )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDefaultStyleSheet ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDefaultStyleSheet|const QString &
 
 /*
 void setDefaultTextOption ( const QTextOption & option )
@@ -933,15 +911,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETDOCUMENTMARGIN )
 /*
 void setHtml ( const QString & html )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_SETHTML )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setHtml ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setHtml|const QString &
 
 /*
 void setIndentWidth ( qreal width )
@@ -998,15 +968,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETPAGESIZE )
 /*
 void setPlainText ( const QString & text )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_SETPLAINTEXT )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPlainText ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPlainText|const QString &
 
 /*
 void setTextWidth ( qreal width )
@@ -1088,14 +1050,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_TOHTML )
 /*
 QString toPlainText () const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_TOPLAINTEXT )
-{
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->toPlainText () );
-  }
-}
+$method=|QString|toPlainText|
 
 /*
 void undo ( QTextCursor * cursor )
