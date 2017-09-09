@@ -411,3 +411,19 @@ void _qt4xhb_convert_qstringlist_to_array ( const QStringList list )
   }
   hb_itemReturnRelease(pArray);
 }
+
+/*
+  obtém e retorna o valor da propriedade POINTER de um objeto [x]Harbour (tipo O)
+*/
+void * _qt4xhb_itemGetPtr( int numpar )
+{
+  return ( (void *) hb_itemGetPtr( hb_objSendMsg( hb_param( numpar, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+}
+
+/*
+  obtém e retorna o valor da propriedade POINTER do objeto hb_stackSelfItem()
+*/
+void * _qt4xhb_itemGetPtrStackSelfItem ()
+{
+  return ( (void *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) ) );
+}

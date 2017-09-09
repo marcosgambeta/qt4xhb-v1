@@ -23,3 +23,5 @@ bool _qt4xhb_isObjectDerivedFrom ( int numpar, const QString className );
 QStringList _qt4xhb_convert_array_parameter_to_qstringlist ( int numpar );
 void _qt4xhb_storePointerAndFlag (void * pointer, bool flag);
 void _qt4xhb_convert_qstringlist_to_array ( const QStringList list );
+void * _qt4xhb_itemGetPtr( int numpar );
+void * _qt4xhb_itemGetPtrStackSelfItem ();
