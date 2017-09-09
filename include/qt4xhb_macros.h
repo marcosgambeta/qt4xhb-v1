@@ -1387,6 +1387,7 @@
 #define PGLENUM(n)                                          (GLenum) hb_parni(n)
 #define PGLBITFIELD(n)                                      (GLbitfield) hb_parni(n)
 #define PGLSIZEI(n)                                         (GLsizei) hb_parni(n)
+#define PCONSTCHAR(n)                                       (const char *) hb_parc(n)
 
 // macros for optional parameters
 #define OPBOOL(n,v)                                         (bool) ISNIL(n)? v : hb_parl(n)
