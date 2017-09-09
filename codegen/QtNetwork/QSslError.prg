@@ -136,18 +136,10 @@ HB_FUNC_STATIC( QSSLERROR_ERROR )
   }
 }
 
-
 /*
 QString errorString () const
 */
-HB_FUNC_STATIC( QSSLERROR_ERRORSTRING )
-{
-  QSslError * obj = (QSslError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->errorString () );
-  }
-}
+$method=|QString|errorString|
 
 $extraMethods
 

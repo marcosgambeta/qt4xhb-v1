@@ -129,19 +129,10 @@ HB_FUNC_STATIC( QNETWORKSESSION_ERROR )
   }
 }
 
-
 /*
 QString errorString () const
 */
-HB_FUNC_STATIC( QNETWORKSESSION_ERRORSTRING )
-{
-  QNetworkSession * obj = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->errorString () );
-  }
-}
-
+$method=|QString|errorString|
 
 /*
 QNetworkInterface interface () const
@@ -169,20 +160,10 @@ HB_FUNC_STATIC( QNETWORKSESSION_ISOPEN )
   }
 }
 
-
 /*
 QVariant sessionProperty ( const QString & key ) const
 */
-HB_FUNC_STATIC( QNETWORKSESSION_SESSIONPROPERTY )
-{
-  QNetworkSession * obj = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->sessionProperty ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
-
+$method=|QVariant|sessionProperty|const QString &
 
 /*
 void setSessionProperty ( const QString & key, const QVariant & value )

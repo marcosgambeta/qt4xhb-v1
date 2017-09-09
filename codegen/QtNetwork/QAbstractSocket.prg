@@ -217,19 +217,10 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_PEERADDRESS )
   }
 }
 
-
 /*
 QString peerName () const
 */
-HB_FUNC_STATIC( QABSTRACTSOCKET_PEERNAME )
-{
-  QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->peerName () );
-  }
-}
-
+$method=|QString|peerName|
 
 /*
 quint16 peerPort () const

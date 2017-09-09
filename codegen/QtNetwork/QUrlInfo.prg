@@ -139,15 +139,7 @@ $deleteMethod
 /*
 QString group () const
 */
-HB_FUNC_STATIC( QURLINFO_GROUP )
-{
-  QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->group () );
-  }
-}
-
+$method=|QString|group|
 
 /*
 bool isDir () const
@@ -267,32 +259,15 @@ HB_FUNC_STATIC( QURLINFO_LASTREAD )
   }
 }
 
-
 /*
 QString name () const
 */
-HB_FUNC_STATIC( QURLINFO_NAME )
-{
-  QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->name () );
-  }
-}
-
+$method=|QString|name|
 
 /*
 QString owner () const
 */
-HB_FUNC_STATIC( QURLINFO_OWNER )
-{
-  QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->owner () );
-  }
-}
-
+$method=|QString|owner|
 
 /*
 int permissions () const
@@ -334,20 +309,10 @@ HB_FUNC_STATIC( QURLINFO_SETFILE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void setGroup ( const QString & s )
 */
-HB_FUNC_STATIC( QURLINFO_SETGROUP )
-{
-  QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setGroup ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|setGroup|const QString &
 
 /*
 virtual void setLastModified ( const QDateTime & dt )
@@ -376,34 +341,15 @@ HB_FUNC_STATIC( QURLINFO_SETLASTREAD )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void setName ( const QString & name )
 */
-HB_FUNC_STATIC( QURLINFO_SETNAME )
-{
-  QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setName ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|setName|const QString &
 
 /*
 virtual void setOwner ( const QString & s )
 */
-HB_FUNC_STATIC( QURLINFO_SETOWNER )
-{
-  QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setOwner ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|setOwner|const QString &
 
 /*
 virtual void setPermissions ( int p )

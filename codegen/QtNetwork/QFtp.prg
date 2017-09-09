@@ -86,19 +86,10 @@ HB_FUNC_STATIC( QFTP_BYTESAVAILABLE )
   }
 }
 
-
 /*
 int cd ( const QString & dir )
 */
-HB_FUNC_STATIC( QFTP_CD )
-{
-  QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->cd ( PQSTRING(1) ) );
-  }
-}
-
+$method=|int|cd|const QString &
 
 /*
 void clearPendingCommands ()
@@ -192,19 +183,10 @@ HB_FUNC_STATIC( QFTP_ERROR )
   }
 }
 
-
 /*
 QString errorString () const
 */
-HB_FUNC_STATIC( QFTP_ERRORSTRING )
-{
-  QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->errorString () );
-  }
-}
-
+$method=|QString|errorString|
 
 /*
 int get ( const QString & file, QIODevice * dev = 0, TransferType type = Binary )
@@ -259,19 +241,10 @@ HB_FUNC_STATIC( QFTP_LOGIN )
   }
 }
 
-
 /*
 int mkdir ( const QString & dir )
 */
-HB_FUNC_STATIC( QFTP_MKDIR )
-{
-  QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->mkdir ( PQSTRING(1) ) );
-  }
-}
-
+$method=|int|mkdir|const QString &
 
 /*
 int put ( QIODevice * dev, const QString & file, TransferType type = Binary )
@@ -319,15 +292,7 @@ HB_FUNC_STATIC( QFTP_PUT )
 /*
 int rawCommand ( const QString & command )
 */
-HB_FUNC_STATIC( QFTP_RAWCOMMAND )
-{
-  QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->rawCommand ( PQSTRING(1) ) );
-  }
-}
-
+$method=|int|rawCommand|const QString &
 
 /*
 qint64 read ( char * data, qint64 maxlen )
@@ -356,58 +321,25 @@ HB_FUNC_STATIC( QFTP_READALL )
   }
 }
 
-
 /*
 int remove ( const QString & file )
 */
-HB_FUNC_STATIC( QFTP_REMOVE )
-{
-  QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->remove ( PQSTRING(1) ) );
-  }
-}
-
+$method=|int|remove|const QString &
 
 /*
 int rename ( const QString & oldname, const QString & newname )
 */
-HB_FUNC_STATIC( QFTP_RENAME )
-{
-  QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->rename ( PQSTRING(1), PQSTRING(2) ) );
-  }
-}
-
+$method=|int|rename|const QString &,const QString &
 
 /*
 int rmdir ( const QString & dir )
 */
-HB_FUNC_STATIC( QFTP_RMDIR )
-{
-  QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->rmdir ( PQSTRING(1) ) );
-  }
-}
-
+$method=|int|rmdir|const QString &
 
 /*
 int setProxy ( const QString & host, quint16 port )
 */
-HB_FUNC_STATIC( QFTP_SETPROXY )
-{
-  QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->setProxy ( PQSTRING(1), PQUINT16(2) ) );
-  }
-}
-
+$method=|int|setProxy|const QString &,quint16
 
 /*
 int setTransferMode ( TransferMode mode )

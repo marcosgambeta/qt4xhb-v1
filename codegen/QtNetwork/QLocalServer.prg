@@ -64,32 +64,15 @@ HB_FUNC_STATIC( QLOCALSERVER_CLOSE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString errorString () const
 */
-HB_FUNC_STATIC( QLOCALSERVER_ERRORSTRING )
-{
-  QLocalServer * obj = (QLocalServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->errorString () );
-  }
-}
-
+$method=|QString|errorString|
 
 /*
 QString fullServerName () const
 */
-HB_FUNC_STATIC( QLOCALSERVER_FULLSERVERNAME )
-{
-  QLocalServer * obj = (QLocalServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->fullServerName () );
-  }
-}
-
+$method=|QString|fullServerName|
 
 /*
 virtual bool hasPendingConnections () const
@@ -116,19 +99,10 @@ HB_FUNC_STATIC( QLOCALSERVER_ISLISTENING )
   }
 }
 
-
 /*
 bool listen ( const QString & name )
 */
-HB_FUNC_STATIC( QLOCALSERVER_LISTEN )
-{
-  QLocalServer * obj = (QLocalServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->listen ( PQSTRING(1) ) );
-  }
-}
-
+$method=|bool|listen|const QString &
 
 /*
 int maxPendingConnections () const
@@ -169,19 +143,10 @@ HB_FUNC_STATIC( QLOCALSERVER_SERVERERROR )
   }
 }
 
-
 /*
 QString serverName () const
 */
-HB_FUNC_STATIC( QLOCALSERVER_SERVERNAME )
-{
-  QLocalServer * obj = (QLocalServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->serverName () );
-  }
-}
-
+$method=|QString|serverName|
 
 /*
 void setMaxPendingConnections ( int numConnections )
@@ -211,18 +176,9 @@ HB_FUNC_STATIC( QLOCALSERVER_WAITFORNEWCONNECTION )
   }
 }
 
-
-
 /*
-bool removeServer ( const QString & name )
+static bool removeServer ( const QString & name )
 */
-HB_FUNC_STATIC( QLOCALSERVER_REMOVESERVER )
-{
-  RBOOL( QLocalServer::removeServer ( PQSTRING(1) ) );
-}
-
-
-
-
+$staticMethod=|bool|removeServer|const QString &
 
 #pragma ENDDUMP

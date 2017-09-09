@@ -54,29 +54,12 @@ $deleteMethod
 /*
 QString cacheDirectory () const
 */
-HB_FUNC_STATIC( QNETWORKDISKCACHE_CACHEDIRECTORY )
-{
-  QNetworkDiskCache * obj = (QNetworkDiskCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->cacheDirectory () );
-  }
-}
-
+$method=|QString|cacheDirectory|
 
 /*
 QNetworkCacheMetaData fileMetaData ( const QString & fileName ) const
 */
-HB_FUNC_STATIC( QNETWORKDISKCACHE_FILEMETADATA )
-{
-  QNetworkDiskCache * obj = (QNetworkDiskCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QNetworkCacheMetaData * ptr = new QNetworkCacheMetaData( obj->fileMetaData ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QNETWORKCACHEMETADATA", true );
-  }
-}
-
+$method=|QNetworkCacheMetaData|fileMetaData|const QString &
 
 /*
 qint64 maximumCacheSize () const
@@ -94,16 +77,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_MAXIMUMCACHESIZE )
 /*
 void setCacheDirectory ( const QString & cacheDir )
 */
-HB_FUNC_STATIC( QNETWORKDISKCACHE_SETCACHEDIRECTORY )
-{
-  QNetworkDiskCache * obj = (QNetworkDiskCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCacheDirectory ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setCacheDirectory|const QString &
 
 /*
 void setMaximumCacheSize ( qint64 size )

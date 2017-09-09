@@ -643,20 +643,10 @@ par1 << *(QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setCiphers ( const QString & ciphers )
 */
-HB_FUNC_STATIC( QSSLSOCKET_SETCIPHERS2 )
-{
-  QSslSocket * obj = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCiphers ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setCiphers,setCiphers2|const QString &
 
 //[1]void setCiphers ( const QList<QSslCipher> & ciphers )
 //[2]void setCiphers ( const QString & ciphers )

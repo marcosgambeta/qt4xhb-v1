@@ -89,15 +89,7 @@ $deleteMethod
 /*
 QString bearerName () const (deprecated)
 */
-HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERNAME )
-{
-  QNetworkConfiguration * obj = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->bearerName () );
-  }
-}
-
+$method=|QString|bearerName|
 
 /*
 BearerType bearerType () const
@@ -111,19 +103,10 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERTYPE )
   }
 }
 
-
 /*
 QString bearerTypeName () const
 */
-HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERTYPENAME )
-{
-  QNetworkConfiguration * obj = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->bearerTypeName () );
-  }
-}
-
+$method=|QString|bearerTypeName|
 
 /*
 QList<QNetworkConfiguration> children () const
@@ -172,19 +155,10 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_CHILDREN )
   }
 }
 
-
 /*
 QString identifier () const
 */
-HB_FUNC_STATIC( QNETWORKCONFIGURATION_IDENTIFIER )
-{
-  QNetworkConfiguration * obj = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->identifier () );
-  }
-}
-
+$method=|QString|identifier|
 
 /*
 bool isRoamingAvailable () const
@@ -211,19 +185,10 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_ISVALID )
   }
 }
 
-
 /*
 QString name () const
 */
-HB_FUNC_STATIC( QNETWORKCONFIGURATION_NAME )
-{
-  QNetworkConfiguration * obj = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->name () );
-  }
-}
-
+$method=|QString|name|
 
 /*
 Purpose purpose () const

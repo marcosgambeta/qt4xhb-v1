@@ -203,19 +203,10 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_LOCALPORT )
   }
 }
 
-
 /*
 QString peerHostName () const
 */
-HB_FUNC_STATIC( QNETWORKPROXYQUERY_PEERHOSTNAME )
-{
-  QNetworkProxyQuery * obj = (QNetworkProxyQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->peerHostName () );
-  }
-}
-
+$method=|QString|peerHostName|
 
 /*
 int peerPort () const
@@ -229,19 +220,10 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_PEERPORT )
   }
 }
 
-
 /*
 QString protocolTag () const
 */
-HB_FUNC_STATIC( QNETWORKPROXYQUERY_PROTOCOLTAG )
-{
-  QNetworkProxyQuery * obj = (QNetworkProxyQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->protocolTag () );
-  }
-}
-
+$method=|QString|protocolTag|
 
 /*
 QueryType queryType () const
@@ -269,20 +251,10 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETLOCALPORT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPeerHostName ( const QString & hostname )
 */
-HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETPEERHOSTNAME )
-{
-  QNetworkProxyQuery * obj = (QNetworkProxyQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPeerHostName ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPeerHostName|const QString &
 
 /*
 void setPeerPort ( int port )
@@ -297,20 +269,10 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETPEERPORT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setProtocolTag ( const QString & protocolTag )
 */
-HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETPROTOCOLTAG )
-{
-  QNetworkProxyQuery * obj = (QNetworkProxyQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setProtocolTag ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setProtocolTag|const QString &
 
 /*
 void setQueryType ( QueryType type )

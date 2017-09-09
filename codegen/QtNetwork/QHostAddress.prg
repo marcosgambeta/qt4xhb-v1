@@ -213,19 +213,10 @@ HB_FUNC_STATIC( QHOSTADDRESS_PROTOCOL )
   }
 }
 
-
 /*
 QString scopeId () const
 */
-HB_FUNC_STATIC( QHOSTADDRESS_SCOPEID )
-{
-  QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->scopeId () );
-  }
-}
-
+$method=|QString|scopeId|
 
 /*
 void setAddress ( quint32 ip4Addr )
@@ -255,20 +246,10 @@ HB_FUNC_STATIC( QHOSTADDRESS_SETADDRESS2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
 bool setAddress ( const QString & address )
 */
-HB_FUNC_STATIC( QHOSTADDRESS_SETADDRESS4 )
-{
-  QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->setAddress ( PQSTRING(1) ) );
-  }
-}
-
+$method=|bool|setAddress,setAddress4|const QString &
 
 /*
 void setAddress ( const sockaddr * sockaddr )
@@ -307,16 +288,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_SETADDRESS )
 /*
 void setScopeId ( const QString & id )
 */
-HB_FUNC_STATIC( QHOSTADDRESS_SETSCOPEID )
-{
-  QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setScopeId ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setScopeId|const QString &
 
 /*
 quint32 toIPv4Address () const
@@ -344,18 +316,10 @@ HB_FUNC_STATIC( QHOSTADDRESS_TOIPV6ADDRESS )
   }
 }
 
-
 /*
 QString toString () const
 */
-HB_FUNC_STATIC( QHOSTADDRESS_TOSTRING )
-{
-  QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->toString () );
-  }
-}
+$method=|QString|toString|
 
 $extraMethods
 

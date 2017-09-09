@@ -201,32 +201,15 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISVALID )
   }
 }
 
-
 /*
 QString issuerInfo ( SubjectInfo subject ) const
 */
-HB_FUNC_STATIC( QSSLCERTIFICATE_ISSUERINFO1 )
-{
-  QSslCertificate * obj = (QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->issuerInfo ( (QSslCertificate::SubjectInfo) hb_parni(1) ) );
-  }
-}
-
+$method=|QString|issuerInfo,issuerInfo1|QSslCertificate::SubjectInfo
 
 /*
 QString issuerInfo ( const QByteArray & tag ) const
 */
-HB_FUNC_STATIC( QSSLCERTIFICATE_ISSUERINFO2 )
-{
-  QSslCertificate * obj = (QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->issuerInfo ( *PQBYTEARRAY(1) ) );
-  }
-}
-
+$method=|QString|issuerInfo,issuerInfo2|const QByteArray &
 
 /*
 QSslKey publicKey () const
@@ -255,32 +238,15 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_SERIALNUMBER )
   }
 }
 
-
 /*
 QString subjectInfo ( SubjectInfo subject ) const
 */
-HB_FUNC_STATIC( QSSLCERTIFICATE_SUBJECTINFO1 )
-{
-  QSslCertificate * obj = (QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->subjectInfo ( (QSslCertificate::SubjectInfo) hb_parni(1) ) );
-  }
-}
-
+$method=|QString|subjectInfo,subjectInfo1|QSslCertificate::SubjectInfo
 
 /*
 QString subjectInfo ( const QByteArray & tag ) const
 */
-HB_FUNC_STATIC( QSSLCERTIFICATE_SUBJECTINFO2 )
-{
-  QSslCertificate * obj = (QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->subjectInfo ( *PQBYTEARRAY(1) ) );
-  }
-}
-
+$method=|QString|subjectInfo,subjectInfo2|const QByteArray &
 
 /*
 QByteArray toDer () const

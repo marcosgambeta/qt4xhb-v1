@@ -126,19 +126,10 @@ HB_FUNC_STATIC( QLOCALSOCKET_FLUSH )
   }
 }
 
-
 /*
 QString fullServerName () const
 */
-HB_FUNC_STATIC( QLOCALSOCKET_FULLSERVERNAME )
-{
-  QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->fullServerName () );
-  }
-}
-
+$method=|QString|fullServerName|
 
 /*
 bool isValid () const
@@ -165,19 +156,10 @@ HB_FUNC_STATIC( QLOCALSOCKET_READBUFFERSIZE )
   }
 }
 
-
 /*
 QString serverName () const
 */
-HB_FUNC_STATIC( QLOCALSOCKET_SERVERNAME )
-{
-  QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->serverName () );
-  }
-}
-
+$method=|QString|serverName|
 
 /*
 void setReadBufferSize ( qint64 size )

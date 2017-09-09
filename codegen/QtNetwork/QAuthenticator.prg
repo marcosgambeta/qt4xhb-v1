@@ -97,20 +97,10 @@ HB_FUNC_STATIC( QAUTHENTICATOR_ISNULL )
   }
 }
 
-
 /*
 QVariant option ( const QString & opt ) const
 */
-HB_FUNC_STATIC( QAUTHENTICATOR_OPTION )
-{
-  QAuthenticator * obj = (QAuthenticator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->option ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
-
+$method=|QVariant|option|const QString &
 
 /*
 QVariantHash options () const
@@ -125,32 +115,15 @@ HB_FUNC_STATIC( QAUTHENTICATOR_OPTIONS )
   }
 }
 
-
 /*
 QString password () const
 */
-HB_FUNC_STATIC( QAUTHENTICATOR_PASSWORD )
-{
-  QAuthenticator * obj = (QAuthenticator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->password () );
-  }
-}
-
+$method=|QString|password|
 
 /*
 QString realm () const
 */
-HB_FUNC_STATIC( QAUTHENTICATOR_REALM )
-{
-  QAuthenticator * obj = (QAuthenticator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->realm () );
-  }
-}
-
+$method=|QString|realm|
 
 /*
 void setOption ( const QString & opt, const QVariant & value )
@@ -165,46 +138,20 @@ HB_FUNC_STATIC( QAUTHENTICATOR_SETOPTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPassword ( const QString & password )
 */
-HB_FUNC_STATIC( QAUTHENTICATOR_SETPASSWORD )
-{
-  QAuthenticator * obj = (QAuthenticator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPassword ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPassword|const QString &
 
 /*
 void setUser ( const QString & user )
 */
-HB_FUNC_STATIC( QAUTHENTICATOR_SETUSER )
-{
-  QAuthenticator * obj = (QAuthenticator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setUser ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setUser|const QString &
 
 /*
 QString user () const
 */
-HB_FUNC_STATIC( QAUTHENTICATOR_USER )
-{
-  QAuthenticator * obj = (QAuthenticator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->user () );
-  }
-}
+$method=|QString|user|
 
 $extraMethods
 

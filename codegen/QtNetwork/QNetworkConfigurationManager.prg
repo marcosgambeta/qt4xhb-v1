@@ -109,20 +109,10 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_CAPABILITIES )
   }
 }
 
-
 /*
 QNetworkConfiguration configurationFromIdentifier ( const QString & identifier ) const
 */
-HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_CONFIGURATIONFROMIDENTIFIER )
-{
-  QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->configurationFromIdentifier ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QNETWORKCONFIGURATION", true );
-  }
-}
-
+$method=|QNetworkConfiguration|configurationFromIdentifier|const QString &
 
 /*
 QNetworkConfiguration defaultConfiguration () const

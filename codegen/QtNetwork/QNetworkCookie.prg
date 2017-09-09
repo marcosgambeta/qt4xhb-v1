@@ -101,15 +101,7 @@ $deleteMethod
 /*
 QString domain () const
 */
-HB_FUNC_STATIC( QNETWORKCOOKIE_DOMAIN )
-{
-  QNetworkCookie * obj = (QNetworkCookie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->domain () );
-  }
-}
-
+$method=|QString|domain|
 
 /*
 QDateTime expirationDate () const
@@ -177,33 +169,15 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_NAME )
   }
 }
 
-
 /*
 QString path () const
 */
-HB_FUNC_STATIC( QNETWORKCOOKIE_PATH )
-{
-  QNetworkCookie * obj = (QNetworkCookie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->path () );
-  }
-}
-
+$method=|QString|path|
 
 /*
 void setDomain ( const QString & domain )
 */
-HB_FUNC_STATIC( QNETWORKCOOKIE_SETDOMAIN )
-{
-  QNetworkCookie * obj = (QNetworkCookie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDomain ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setDomain|const QString &
 
 /*
 void setExpirationDate ( const QDateTime & date )
@@ -246,20 +220,10 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_SETNAME )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPath ( const QString & path )
 */
-HB_FUNC_STATIC( QNETWORKCOOKIE_SETPATH )
-{
-  QNetworkCookie * obj = (QNetworkCookie *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPath ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPath|const QString &
 
 /*
 void setSecure ( bool enable )

@@ -148,32 +148,15 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_FLAGS )
   }
 }
 
-
 /*
 QString hardwareAddress () const
 */
-HB_FUNC_STATIC( QNETWORKINTERFACE_HARDWAREADDRESS )
-{
-  QNetworkInterface * obj = (QNetworkInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->hardwareAddress () );
-  }
-}
-
+$method=|QString|hardwareAddress|
 
 /*
 QString humanReadableName () const
 */
-HB_FUNC_STATIC( QNETWORKINTERFACE_HUMANREADABLENAME )
-{
-  QNetworkInterface * obj = (QNetworkInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->humanReadableName () );
-  }
-}
-
+$method=|QString|humanReadableName|
 
 /*
 int index () const
@@ -200,20 +183,10 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ISVALID )
   }
 }
 
-
 /*
 QString name () const
 */
-HB_FUNC_STATIC( QNETWORKINTERFACE_NAME )
-{
-  QNetworkInterface * obj = (QNetworkInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->name () );
-  }
-}
-
-
+$method=|QString|name|
 
 /*
 QList<QHostAddress> allAddresses ()
@@ -312,15 +285,10 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_INTERFACEFROMINDEX )
   _qt4xhb_createReturnClass ( ptr, "QNETWORKINTERFACE", true );
 }
 
-
 /*
-QNetworkInterface interfaceFromName ( const QString & name )
+static QNetworkInterface interfaceFromName ( const QString & name )
 */
-HB_FUNC_STATIC( QNETWORKINTERFACE_INTERFACEFROMNAME )
-{
-  QNetworkInterface * ptr = new QNetworkInterface( QNetworkInterface::interfaceFromName ( PQSTRING(1) ) );
-  _qt4xhb_createReturnClass ( ptr, "QNETWORKINTERFACE", true );
-}
+$staticMethod=|QNetworkInterface|interfaceFromName|const QString &
 
 $extraMethods
 

@@ -100,28 +100,12 @@ $deleteMethod
 /*
 QString authenticationMethod () const
 */
-HB_FUNC_STATIC( QSSLCIPHER_AUTHENTICATIONMETHOD )
-{
-  QSslCipher * obj = (QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->authenticationMethod () );
-  }
-}
-
+$method=|QString|authenticationMethod|
 
 /*
 QString encryptionMethod () const
 */
-HB_FUNC_STATIC( QSSLCIPHER_ENCRYPTIONMETHOD )
-{
-  QSslCipher * obj = (QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->encryptionMethod () );
-  }
-}
-
+$method=|QString|encryptionMethod|
 
 /*
 bool isNull () const
@@ -135,32 +119,15 @@ HB_FUNC_STATIC( QSSLCIPHER_ISNULL )
   }
 }
 
-
 /*
 QString keyExchangeMethod () const
 */
-HB_FUNC_STATIC( QSSLCIPHER_KEYEXCHANGEMETHOD )
-{
-  QSslCipher * obj = (QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->keyExchangeMethod () );
-  }
-}
-
+$method=|QString|keyExchangeMethod|
 
 /*
 QString name () const
 */
-HB_FUNC_STATIC( QSSLCIPHER_NAME )
-{
-  QSslCipher * obj = (QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->name () );
-  }
-}
-
+$method=|QString|name|
 
 /*
 QSsl::SslProtocol protocol () const
@@ -174,19 +141,10 @@ HB_FUNC_STATIC( QSSLCIPHER_PROTOCOL )
   }
 }
 
-
 /*
 QString protocolString () const
 */
-HB_FUNC_STATIC( QSSLCIPHER_PROTOCOLSTRING )
-{
-  QSslCipher * obj = (QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->protocolString () );
-  }
-}
-
+$method=|QString|protocolString|
 
 /*
 int supportedBits () const
