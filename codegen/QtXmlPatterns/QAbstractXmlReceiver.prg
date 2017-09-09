@@ -85,62 +85,25 @@ HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_CHARACTERS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void comment ( const QString & value ) = 0
 */
-HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_COMMENT )
-{
-  QAbstractXmlReceiver * obj = (QAbstractXmlReceiver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->comment ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|comment|const QString &
 
 /*
 virtual void endDocument () = 0
 */
-HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_ENDDOCUMENT )
-{
-  QAbstractXmlReceiver * obj = (QAbstractXmlReceiver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->endDocument ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|endDocument|
 
 /*
 virtual void endElement () = 0
 */
-HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_ENDELEMENT )
-{
-  QAbstractXmlReceiver * obj = (QAbstractXmlReceiver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->endElement ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|endElement|
 
 /*
 virtual void endOfSequence () = 0
 */
-HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_ENDOFSEQUENCE )
-{
-  QAbstractXmlReceiver * obj = (QAbstractXmlReceiver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->endOfSequence ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|endOfSequence|
 
 /*
 virtual void namespaceBinding ( const QXmlName & name ) = 0

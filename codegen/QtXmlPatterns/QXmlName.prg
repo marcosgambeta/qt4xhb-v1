@@ -95,77 +95,35 @@ HB_FUNC_STATIC( QXMLNAME_ISNULL )
   }
 }
 
-
 /*
 QString localName ( const QXmlNamePool & namePool ) const
 */
-HB_FUNC_STATIC( QXMLNAME_LOCALNAME )
-{
-  QXmlName * obj = (QXmlName *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->localName ( *PQXMLNAMEPOOL(1) ) );
-  }
-}
-
+$method=|QString|localName|const QXmlNamePool &
 
 /*
 QString namespaceUri ( const QXmlNamePool & namePool ) const
 */
-HB_FUNC_STATIC( QXMLNAME_NAMESPACEURI )
-{
-  QXmlName * obj = (QXmlName *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->namespaceUri ( *PQXMLNAMEPOOL(1) ) );
-  }
-}
-
+$method=|QString|namespaceUri|const QXmlNamePool &
 
 /*
 QString prefix ( const QXmlNamePool & namePool ) const
 */
-HB_FUNC_STATIC( QXMLNAME_PREFIX )
-{
-  QXmlName * obj = (QXmlName *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->prefix ( *PQXMLNAMEPOOL(1) ) );
-  }
-}
-
+$method=|QString|prefix|const QXmlNamePool &
 
 /*
 QString toClarkName ( const QXmlNamePool & namePool ) const
 */
-HB_FUNC_STATIC( QXMLNAME_TOCLARKNAME )
-{
-  QXmlName * obj = (QXmlName *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->toClarkName ( *PQXMLNAMEPOOL(1) ) );
-  }
-}
-
-
+$method=|QString|toClarkName|const QXmlNamePool &
 
 /*
-QXmlName fromClarkName ( const QString & clarkName, const QXmlNamePool & namePool )
+static QXmlName fromClarkName ( const QString & clarkName, const QXmlNamePool & namePool )
 */
-HB_FUNC_STATIC( QXMLNAME_FROMCLARKNAME )
-{
-  QXmlName * ptr = new QXmlName( QXmlName::fromClarkName ( PQSTRING(1), *PQXMLNAMEPOOL(2) ) );
-  _qt4xhb_createReturnClass ( ptr, "QXMLNAME", true );
-}
-
+$staticMethod=|QXmlName|fromClarkName|const QString &,const QXmlNamePool &
 
 /*
-bool isNCName ( const QString & candidate )
+static bool isNCName ( const QString & candidate )
 */
-HB_FUNC_STATIC( QXMLNAME_ISNCNAME )
-{
-  RBOOL( QXmlName::isNCName ( PQSTRING(1) ) );
-}
+$staticMethod=|bool|isNCName|const QString &
 
 $extraMethods
 

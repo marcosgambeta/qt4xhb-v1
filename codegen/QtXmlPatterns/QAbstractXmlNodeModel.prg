@@ -245,19 +245,10 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_SOURCELOCATION )
   }
 }
 
-
 /*
 virtual QString stringValue ( const QXmlNodeModelIndex & n ) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_STRINGVALUE )
-{
-  QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->stringValue ( *PQXMLNODEMODELINDEX(1) ) );
-  }
-}
-
+$virtualMethod=|QString|stringValue|const QXmlNodeModelIndex &
 
 /*
 virtual QVariant typedValue ( const QXmlNodeModelIndex & node ) const = 0

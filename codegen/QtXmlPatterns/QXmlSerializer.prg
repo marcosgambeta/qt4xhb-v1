@@ -138,134 +138,49 @@ HB_FUNC_STATIC( QXMLSERIALIZER_CHARACTERS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void comment ( const QString & value )
 */
-HB_FUNC_STATIC( QXMLSERIALIZER_COMMENT )
-{
-  QXmlSerializer * obj = (QXmlSerializer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->comment ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|comment|const QString &
 
 /*
 virtual void endDocument ()
 */
-HB_FUNC_STATIC( QXMLSERIALIZER_ENDDOCUMENT )
-{
-  QXmlSerializer * obj = (QXmlSerializer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->endDocument ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|endDocument|
 
 /*
 virtual void endElement ()
 */
-HB_FUNC_STATIC( QXMLSERIALIZER_ENDELEMENT )
-{
-  QXmlSerializer * obj = (QXmlSerializer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->endElement ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|endElement|
 
 /*
 virtual void endOfSequence ()
 */
-HB_FUNC_STATIC( QXMLSERIALIZER_ENDOFSEQUENCE )
-{
-  QXmlSerializer * obj = (QXmlSerializer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->endOfSequence ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|endOfSequence|
 
 /*
 virtual void namespaceBinding ( const QXmlName & nb )
 */
-HB_FUNC_STATIC( QXMLSERIALIZER_NAMESPACEBINDING )
-{
-  QXmlSerializer * obj = (QXmlSerializer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->namespaceBinding ( *PQXMLNAME(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|namespaceBinding|const QXmlName &
 
 /*
 virtual void processingInstruction ( const QXmlName & name, const QString & value )
 */
-HB_FUNC_STATIC( QXMLSERIALIZER_PROCESSINGINSTRUCTION )
-{
-  QXmlSerializer * obj = (QXmlSerializer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->processingInstruction ( *PQXMLNAME(1), PQSTRING(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|processingInstruction|const QXmlName &,const QString &
 
 /*
 virtual void startDocument ()
 */
-HB_FUNC_STATIC( QXMLSERIALIZER_STARTDOCUMENT )
-{
-  QXmlSerializer * obj = (QXmlSerializer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->startDocument ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|startDocument|
 
 /*
 virtual void startElement ( const QXmlName & name )
 */
-HB_FUNC_STATIC( QXMLSERIALIZER_STARTELEMENT )
-{
-  QXmlSerializer * obj = (QXmlSerializer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->startElement ( *PQXMLNAME(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|startElement|const QXmlName &
 
 /*
 virtual void startOfSequence ()
 */
-HB_FUNC_STATIC( QXMLSERIALIZER_STARTOFSEQUENCE )
-{
-  QXmlSerializer * obj = (QXmlSerializer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->startOfSequence ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
-
+$virtualMethod=|void|startOfSequence|
 
 #pragma ENDDUMP

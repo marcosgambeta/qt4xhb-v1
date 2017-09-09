@@ -473,19 +473,10 @@ HB_FUNC_STATIC( QXMLQUERY_SETFOCUS3 )
   }
 }
 
-
 /*
 bool setFocus ( const QString & focus )
 */
-HB_FUNC_STATIC( QXMLQUERY_SETFOCUS4 )
-{
-  QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->setFocus ( PQSTRING(1) ) );
-  }
-}
-
+$method=|bool|setFocus,setFocus4|const QString &
 
 //[1]void setFocus ( const QXmlItem & item )
 //[2]bool setFocus ( const QUrl & documentURI )
@@ -525,20 +516,10 @@ HB_FUNC_STATIC( QXMLQUERY_SETINITIALTEMPLATENAME1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setInitialTemplateName ( const QString & localName )
 */
-HB_FUNC_STATIC( QXMLQUERY_SETINITIALTEMPLATENAME2 )
-{
-  QXmlQuery * obj = (QXmlQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setInitialTemplateName ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setInitialTemplateName,setInitialTemplateName2|const QString &
 
 //[1]void setInitialTemplateName ( const QXmlName & name )
 //[2]void setInitialTemplateName ( const QString & localName )

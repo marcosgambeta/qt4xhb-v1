@@ -117,20 +117,10 @@ HB_FUNC_STATIC( QXMLFORMATTER_CHARACTERS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void comment ( const QString & value )
 */
-HB_FUNC_STATIC( QXMLFORMATTER_COMMENT )
-{
-  QXmlFormatter * obj = (QXmlFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->comment ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|comment|const QString &
 
 /*
 virtual void endDocument ()

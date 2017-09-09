@@ -167,21 +167,9 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NODESBYIDREF )
   }
 }
 
-
 /*
 virtual QString stringValue ( const QXmlNodeModelIndex & node ) const
 */
-HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_STRINGVALUE )
-{
-  QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->stringValue ( *PQXMLNODEMODELINDEX(1) ) );
-  }
-}
-
-
-
-
+$virtualMethod=|QString|stringValue|const QXmlNodeModelIndex &
 
 #pragma ENDDUMP
