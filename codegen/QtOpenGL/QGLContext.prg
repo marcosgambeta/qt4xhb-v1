@@ -86,19 +86,10 @@ HB_FUNC_STATIC( QGLCONTEXT_BINDTEXTURE1 )
   }
 }
 
-
 /*
 GLuint bindTexture ( const QString & fileName )
 */
-HB_FUNC_STATIC( QGLCONTEXT_BINDTEXTURE2 )
-{
-  QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RGLUINT( obj->bindTexture ( PQSTRING(1) ) );
-  }
-}
-
+$method=|GLuint|bindTexture,bindTexture2|const QString &
 
 /*
 GLuint bindTexture ( const QImage & image, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
@@ -282,20 +273,10 @@ HB_FUNC_STATIC( QGLCONTEXT_FORMAT )
   }
 }
 
-
 /*
 void * getProcAddress ( const QString & proc ) const
 */
-HB_FUNC_STATIC( QGLCONTEXT_GETPROCADDRESS )
-{
-  QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    void * retptr = obj->getProcAddress ( PQSTRING(1) );
-    hb_retptr( (void *) retptr );
-  }
-}
-
+$method=|void *|getProcAddress|const QString &
 
 /*
 bool isSharing () const

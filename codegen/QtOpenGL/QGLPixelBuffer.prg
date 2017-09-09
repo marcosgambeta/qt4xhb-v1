@@ -121,19 +121,10 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_BINDTEXTURE2 )
   }
 }
 
-
 /*
 GLuint bindTexture ( const QString & fileName )
 */
-HB_FUNC_STATIC( QGLPIXELBUFFER_BINDTEXTURE3 )
-{
-  QGLPixelBuffer * obj = (QGLPixelBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RGLUINT( obj->bindTexture ( PQSTRING(1) ) );
-  }
-}
-
+$method=|GLuint|bindTexture,bindTexture3|const QString &
 
 //[1]GLuint bindTexture ( const QImage & image, GLenum target = GL_TEXTURE_2D )
 //[2]GLuint bindTexture ( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D )

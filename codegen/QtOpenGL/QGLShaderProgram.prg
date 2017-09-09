@@ -266,19 +266,10 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_ATTRIBUTELOCATION2 )
   }
 }
 
-
 /*
 int attributeLocation ( const QString & name ) const
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_ATTRIBUTELOCATION3 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->attributeLocation ( PQSTRING(1) ) );
-  }
-}
-
+$method=|int|attributeLocation,attributeLocation3|const QString &
 
 //[1]int attributeLocation ( const char * name ) const
 //[2]int attributeLocation ( const QByteArray & name ) const
@@ -527,19 +518,10 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_LINK )
   }
 }
 
-
 /*
 QString log () const
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_LOG )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->log () );
-  }
-}
-
+$method=|QString|log|
 
 /*
 int maxGeometryOutputVertices () const
@@ -1509,19 +1491,10 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_UNIFORMLOCATION2 )
   }
 }
 
-
 /*
 int uniformLocation ( const QString & name ) const
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_UNIFORMLOCATION3 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->uniformLocation ( PQSTRING(1) ) );
-  }
-}
-
+$method=|int|uniformLocation,uniformLocation3|const QString &
 
 //[1]int uniformLocation ( const char * name ) const
 //[2]int uniformLocation ( const QByteArray & name ) const

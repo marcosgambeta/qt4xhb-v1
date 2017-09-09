@@ -106,19 +106,10 @@ HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE2 )
   }
 }
 
-
 /*
 bool compileSourceCode ( const QString & source )
 */
-HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE3 )
-{
-  QGLShader * obj = (QGLShader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->compileSourceCode ( PQSTRING(1) ) );
-  }
-}
-
+$method=|bool|compileSourceCode,compileSourceCode3|const QString &
 
 //[1]bool compileSourceCode ( const char * source )
 //[2]bool compileSourceCode ( const QByteArray & source )
@@ -143,82 +134,32 @@ HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE )
 /*
 bool compileSourceFile ( const QString & fileName )
 */
-HB_FUNC_STATIC( QGLSHADER_COMPILESOURCEFILE )
-{
-  QGLShader * obj = (QGLShader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->compileSourceFile ( PQSTRING(1) ) );
-  }
-}
-
+$method=|bool|compileSourceFile|const QString &
 
 /*
 bool isCompiled () const
 */
-HB_FUNC_STATIC( QGLSHADER_ISCOMPILED )
-{
-  QGLShader * obj = (QGLShader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isCompiled () );
-  }
-}
-
+$method=|bool|isCompiled|
 
 /*
 QString log () const
 */
-HB_FUNC_STATIC( QGLSHADER_LOG )
-{
-  QGLShader * obj = (QGLShader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->log () );
-  }
-}
-
+$method=|QString|log|
 
 /*
 GLuint shaderId () const
 */
-HB_FUNC_STATIC( QGLSHADER_SHADERID )
-{
-  QGLShader * obj = (QGLShader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RGLUINT( obj->shaderId () );
-  }
-}
-
+$method=|GLuint|shaderId|
 
 /*
 QGLShader::ShaderType shaderType () const
 */
-HB_FUNC_STATIC( QGLSHADER_SHADERTYPE )
-{
-  QGLShader * obj = (QGLShader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->shaderType () );
-  }
-}
-
+$method=|QGLShader::ShaderType|shaderType|
 
 /*
 QByteArray sourceCode () const
 */
-HB_FUNC_STATIC( QGLSHADER_SOURCECODE )
-{
-  QGLShader * obj = (QGLShader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->sourceCode () );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
-
+$method=|QByteArray|sourceCode|
 
 /*
 bool hasOpenGLShaders ( ShaderType type, const QGLContext * context = 0 )

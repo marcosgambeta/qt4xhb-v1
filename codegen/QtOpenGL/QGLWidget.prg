@@ -182,19 +182,10 @@ HB_FUNC_STATIC( QGLWIDGET_BINDTEXTURE4 )
   }
 }
 
-
 /*
 GLuint bindTexture ( const QString & fileName )
 */
-HB_FUNC_STATIC( QGLWIDGET_BINDTEXTURE5 )
-{
-  QGLWidget * obj = (QGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RGLUINT( obj->bindTexture ( PQSTRING(1) ) );
-  }
-}
-
+$method=|GLuint|bindTexture,bindTexture5|const QString &
 
 //[1]GLuint bindTexture ( const QImage & image, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
 //[2]GLuint bindTexture ( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
