@@ -137,58 +137,22 @@ $deleteMethod
 /*
 QDomAttr createAttribute ( const QString & name )
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_CREATEATTRIBUTE )
-{
-  QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDomAttr * ptr = new QDomAttr( obj->createAttribute ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMATTR", true );
-  }
-}
-
+$method=|QDomAttr|createAttribute|const QString &
 
 /*
 QDomAttr createAttributeNS ( const QString & nsURI, const QString & qName )
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_CREATEATTRIBUTENS )
-{
-  QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDomAttr * ptr = new QDomAttr( obj->createAttributeNS ( PQSTRING(1), PQSTRING(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMATTR", true );
-  }
-}
-
+$method=|QDomAttr|createAttributeNS|const QString &,const QString &
 
 /*
 QDomCDATASection createCDATASection ( const QString & value )
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_CREATECDATASECTION )
-{
-  QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDomCDATASection * ptr = new QDomCDATASection( obj->createCDATASection ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMCDATASECTION", true );
-  }
-}
-
+$method=|QDomCDATASection|createCDATASection|const QString &
 
 /*
 QDomComment createComment ( const QString & value )
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_CREATECOMMENT )
-{
-  QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDomComment * ptr = new QDomComment( obj->createComment ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMCOMMENT", true );
-  }
-}
-
+$method=|QDomComment|createComment|const QString &
 
 /*
 QDomDocumentFragment createDocumentFragment ()
@@ -203,195 +167,70 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEDOCUMENTFRAGMENT )
   }
 }
 
-
 /*
 QDomElement createElement ( const QString & tagName )
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_CREATEELEMENT )
-{
-  QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDomElement * ptr = new QDomElement( obj->createElement ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
-  }
-}
-
+$method=|QDomElement|createElement|const QString &
 
 /*
 QDomElement createElementNS ( const QString & nsURI, const QString & qName )
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_CREATEELEMENTNS )
-{
-  QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDomElement * ptr = new QDomElement( obj->createElementNS ( PQSTRING(1), PQSTRING(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
-  }
-}
-
+$method=|QDomElement|createElementNS|const QString &,const QString &
 
 /*
 QDomEntityReference createEntityReference ( const QString & name )
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_CREATEENTITYREFERENCE )
-{
-  QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDomEntityReference * ptr = new QDomEntityReference( obj->createEntityReference ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMENTITYREFERENCE", true );
-  }
-}
-
+$method=|QDomEntityReference|createEntityReference|const QString &
 
 /*
 QDomProcessingInstruction createProcessingInstruction ( const QString & target, const QString & data )
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_CREATEPROCESSINGINSTRUCTION )
-{
-  QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDomProcessingInstruction * ptr = new QDomProcessingInstruction( obj->createProcessingInstruction ( PQSTRING(1), PQSTRING(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMPROCESSINGINSTRUCTION", true );
-  }
-}
-
+$method=|QDomProcessingInstruction|createProcessingInstruction|const QString &,const QString &
 
 /*
 QDomText createTextNode ( const QString & value )
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_CREATETEXTNODE )
-{
-  QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDomText * ptr = new QDomText( obj->createTextNode ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMTEXT", true );
-  }
-}
-
+$method=|QDomText|createTextNode|const QString &
 
 /*
 QDomDocumentType doctype () const
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_DOCTYPE )
-{
-  QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDomDocumentType * ptr = new QDomDocumentType( obj->doctype () );
-    _qt4xhb_createReturnClass ( ptr, "QDOMDOCUMENTTYPE", true );
-  }
-}
-
+$method=|QDomDocumentType|doctype|
 
 /*
 QDomElement documentElement () const
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_DOCUMENTELEMENT )
-{
-  QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDomElement * ptr = new QDomElement( obj->documentElement () );
-    _qt4xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
-  }
-}
-
+$method=|QDomElement|documentElement|
 
 /*
 QDomElement elementById ( const QString & elementId )
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_ELEMENTBYID )
-{
-  QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDomElement * ptr = new QDomElement( obj->elementById ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
-  }
-}
-
+$method=|QDomElement|elementById|const QString &
 
 /*
 QDomNodeList elementsByTagName ( const QString & tagname ) const
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_ELEMENTSBYTAGNAME )
-{
-  QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDomNodeList * ptr = new QDomNodeList( obj->elementsByTagName ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMNODELIST", true );
-  }
-}
-
+$method=|QDomNodeList|elementsByTagName|const QString &
 
 /*
 QDomNodeList elementsByTagNameNS ( const QString & nsURI, const QString & localName )
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_ELEMENTSBYTAGNAMENS )
-{
-  QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDomNodeList * ptr = new QDomNodeList( obj->elementsByTagNameNS ( PQSTRING(1), PQSTRING(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMNODELIST", true );
-  }
-}
-
+$method=|QDomNodeList|elementsByTagNameNS|const QString &,const QString &
 
 /*
 QDomImplementation implementation () const
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_IMPLEMENTATION )
-{
-  QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDomImplementation * ptr = new QDomImplementation( obj->implementation () );
-    _qt4xhb_createReturnClass ( ptr, "QDOMIMPLEMENTATION", true );
-  }
-}
-
+$method=|QDomImplementation|implementation|
 
 /*
 QDomNode importNode ( const QDomNode & importedNode, bool deep )
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_IMPORTNODE )
-{
-  QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDomNode * ptr = new QDomNode( obj->importNode ( *PQDOMNODE(1), PBOOL(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
-  }
-}
-
+$method=|QDomNode|importNode|const QDomNode &,bool
 
 /*
 QDomNode::NodeType nodeType () const
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_NODETYPE )
-{
-  QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->nodeType () );
-  }
-}
-
-
-
-
-
-
-
-
-
+$method=|QDomNode::NodeType|nodeType|
 
 //[1]bool setContent ( const QByteArray & data, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
 //[2]bool setContent ( const QString & text, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
@@ -420,20 +259,9 @@ HB_FUNC_STATIC( QDOMDOCUMENT_TOBYTEARRAY )
   }
 }
 
-
 /*
 QString toString ( int indent = 1 ) const
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_TOSTRING )
-{
-  QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->toString ( OPINT(1,1) ) );
-  }
-}
-
-
-
+$method=|QString|toString|int=1
 
 #pragma ENDDUMP

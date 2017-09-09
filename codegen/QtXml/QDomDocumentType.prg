@@ -88,32 +88,15 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_ENTITIES )
   }
 }
 
-
 /*
 QString internalSubset () const
 */
-HB_FUNC_STATIC( QDOMDOCUMENTTYPE_INTERNALSUBSET )
-{
-  QDomDocumentType * obj = (QDomDocumentType *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->internalSubset () );
-  }
-}
-
+$method=|QString|internalSubset|
 
 /*
 QString name () const
 */
-HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NAME )
-{
-  QDomDocumentType * obj = (QDomDocumentType *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->name () );
-  }
-}
-
+$method=|QString|name|
 
 /*
 QDomNode::NodeType nodeType () const
@@ -141,33 +124,14 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NOTATIONS )
   }
 }
 
-
 /*
 QString publicId () const
 */
-HB_FUNC_STATIC( QDOMDOCUMENTTYPE_PUBLICID )
-{
-  QDomDocumentType * obj = (QDomDocumentType *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->publicId () );
-  }
-}
-
+$method=|QString|publicId|
 
 /*
 QString systemId () const
 */
-HB_FUNC_STATIC( QDOMDOCUMENTTYPE_SYSTEMID )
-{
-  QDomDocumentType * obj = (QDomDocumentType *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->systemId () );
-  }
-}
-
-
-
+$method=|QString|systemId|
 
 #pragma ENDDUMP

@@ -80,33 +80,14 @@ HB_FUNC_STATIC( QDOMNOTATION_NODETYPE )
   }
 }
 
-
 /*
 QString publicId () const
 */
-HB_FUNC_STATIC( QDOMNOTATION_PUBLICID )
-{
-  QDomNotation * obj = (QDomNotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->publicId () );
-  }
-}
-
+$method=|QString|publicId|
 
 /*
 QString systemId () const
 */
-HB_FUNC_STATIC( QDOMNOTATION_SYSTEMID )
-{
-  QDomNotation * obj = (QDomNotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->systemId () );
-  }
-}
-
-
-
+$method=|QString|systemId|
 
 #pragma ENDDUMP

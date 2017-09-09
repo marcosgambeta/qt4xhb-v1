@@ -554,46 +554,20 @@ HB_FUNC_STATIC( QDOMNODE_LINENUMBER )
   }
 }
 
-
 /*
 QString localName () const
 */
-HB_FUNC_STATIC( QDOMNODE_LOCALNAME )
-{
-  QDomNode * obj = (QDomNode *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->localName () );
-  }
-}
-
+$method=|QString|localName|
 
 /*
 QDomNode namedItem ( const QString & name ) const
 */
-HB_FUNC_STATIC( QDOMNODE_NAMEDITEM )
-{
-  QDomNode * obj = (QDomNode *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDomNode * ptr = new QDomNode( obj->namedItem ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
-  }
-}
-
+$method=|QDomNode|namedItem|const QString &
 
 /*
 QString namespaceURI () const
 */
-HB_FUNC_STATIC( QDOMNODE_NAMESPACEURI )
-{
-  QDomNode * obj = (QDomNode *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->namespaceURI () );
-  }
-}
-
+$method=|QString|namespaceURI|
 
 /*
 QDomNode nextSibling () const
@@ -622,19 +596,10 @@ HB_FUNC_STATIC( QDOMNODE_NEXTSIBLINGELEMENT )
   }
 }
 
-
 /*
 QString nodeName () const
 */
-HB_FUNC_STATIC( QDOMNODE_NODENAME )
-{
-  QDomNode * obj = (QDomNode *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->nodeName () );
-  }
-}
-
+$method=|QString|nodeName|
 
 /*
 NodeType nodeType () const
@@ -648,19 +613,10 @@ HB_FUNC_STATIC( QDOMNODE_NODETYPE )
   }
 }
 
-
 /*
 QString nodeValue () const
 */
-HB_FUNC_STATIC( QDOMNODE_NODEVALUE )
-{
-  QDomNode * obj = (QDomNode *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->nodeValue () );
-  }
-}
-
+$method=|QString|nodeValue|
 
 /*
 void normalize ()
@@ -703,19 +659,10 @@ HB_FUNC_STATIC( QDOMNODE_PARENTNODE )
   }
 }
 
-
 /*
 QString prefix () const
 */
-HB_FUNC_STATIC( QDOMNODE_PREFIX )
-{
-  QDomNode * obj = (QDomNode *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->prefix () );
-  }
-}
-
+$method=|QString|prefix|
 
 /*
 QDomNode previousSibling () const
@@ -821,30 +768,12 @@ HB_FUNC_STATIC( QDOMNODE_SAVE )
 /*
 void setNodeValue ( const QString & v )
 */
-HB_FUNC_STATIC( QDOMNODE_SETNODEVALUE )
-{
-  QDomNode * obj = (QDomNode *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setNodeValue ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setNodeValue|const QString &
 
 /*
 void setPrefix ( const QString & pre )
 */
-HB_FUNC_STATIC( QDOMNODE_SETPREFIX )
-{
-  QDomNode * obj = (QDomNode *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPrefix ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPrefix|const QString &
 
 /*
 QDomAttr toAttr () const

@@ -141,32 +141,15 @@ HB_FUNC_STATIC( QXMLREADER_FEATURE )
   }
 }
 
-
 /*
 virtual bool hasFeature ( const QString & name ) const = 0
 */
-HB_FUNC_STATIC( QXMLREADER_HASFEATURE )
-{
-  QXmlReader * obj = (QXmlReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasFeature ( PQSTRING(1) ) );
-  }
-}
-
+$virtualMethod=|bool|hasFeature|const QString &
 
 /*
 virtual bool hasProperty ( const QString & name ) const = 0
 */
-HB_FUNC_STATIC( QXMLREADER_HASPROPERTY )
-{
-  QXmlReader * obj = (QXmlReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasProperty ( PQSTRING(1) ) );
-  }
-}
-
+$virtualMethod=|bool|hasProperty|const QString &
 
 /*
 virtual QXmlLexicalHandler * lexicalHandler () const = 0

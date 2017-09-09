@@ -64,45 +64,20 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_POPCONTEXT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString prefix ( const QString & uri ) const
 */
-HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIX )
-{
-  QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->prefix ( PQSTRING(1) ) );
-  }
-}
-
+$method=|QString|prefix|const QString &
 
 /*
 QStringList prefixes () const
 */
-HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIXES1 )
-{
-  QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->prefixes () );
-  }
-}
-
+$method=|QStringList|prefixes,prefixes1|
 
 /*
 QStringList prefixes ( const QString & uri ) const
 */
-HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIXES2 )
-{
-  QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->prefixes ( PQSTRING(1) ) );
-  }
-}
-
+$method=|QStringList|prefixes,prefixes2|const QString &
 
 //[1]QStringList prefixes () const
 //[2]QStringList prefixes ( const QString & uri ) const
@@ -192,18 +167,10 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_SPLITNAME )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString uri ( const QString & prefix ) const
 */
-HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_URI )
-{
-  QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->uri ( PQSTRING(1) ) );
-  }
-}
+$method=|QString|uri|const QString &
 
 $extraMethods
 

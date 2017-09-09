@@ -45,93 +45,37 @@ $deleteMethod
 /*
 virtual bool characters ( const QString & ch ) = 0
 */
-HB_FUNC_STATIC( QXMLCONTENTHANDLER_CHARACTERS )
-{
-  QXmlContentHandler * obj = (QXmlContentHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->characters ( PQSTRING(1) ) );
-  }
-}
-
+$virtualMethod=|bool|characters|const QString &
 
 /*
 virtual bool endDocument () = 0
 */
-HB_FUNC_STATIC( QXMLCONTENTHANDLER_ENDDOCUMENT )
-{
-  QXmlContentHandler * obj = (QXmlContentHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->endDocument () );
-  }
-}
-
+$virtualMethod=|bool|endDocument|
 
 /*
 virtual bool endElement ( const QString & namespaceURI, const QString & localName, const QString & qName ) = 0
 */
-HB_FUNC_STATIC( QXMLCONTENTHANDLER_ENDELEMENT )
-{
-  QXmlContentHandler * obj = (QXmlContentHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->endElement ( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
-  }
-}
-
+$virtualMethod=|bool|endElement|const QString &,const QString &,const QString &
 
 /*
 virtual bool endPrefixMapping ( const QString & prefix ) = 0
 */
-HB_FUNC_STATIC( QXMLCONTENTHANDLER_ENDPREFIXMAPPING )
-{
-  QXmlContentHandler * obj = (QXmlContentHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->endPrefixMapping ( PQSTRING(1) ) );
-  }
-}
-
+$virtualMethod=|bool|endPrefixMapping|const QString &
 
 /*
 virtual QString errorString () const = 0
 */
-HB_FUNC_STATIC( QXMLCONTENTHANDLER_ERRORSTRING )
-{
-  QXmlContentHandler * obj = (QXmlContentHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->errorString () );
-  }
-}
-
+$virtualMethod=|QString|errorString|
 
 /*
 virtual bool ignorableWhitespace ( const QString & ch ) = 0
 */
-HB_FUNC_STATIC( QXMLCONTENTHANDLER_IGNORABLEWHITESPACE )
-{
-  QXmlContentHandler * obj = (QXmlContentHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->ignorableWhitespace ( PQSTRING(1) ) );
-  }
-}
-
+$virtualMethod=|bool|ignorableWhitespace|const QString &
 
 /*
 virtual bool processingInstruction ( const QString & target, const QString & data ) = 0
 */
-HB_FUNC_STATIC( QXMLCONTENTHANDLER_PROCESSINGINSTRUCTION )
-{
-  QXmlContentHandler * obj = (QXmlContentHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->processingInstruction ( PQSTRING(1), PQSTRING(2) ) );
-  }
-}
-
+$virtualMethod=|bool|processingInstruction|const QString &,const QString &
 
 /*
 virtual void setDocumentLocator ( QXmlLocator * locator ) = 0
@@ -147,19 +91,10 @@ HB_FUNC_STATIC( QXMLCONTENTHANDLER_SETDOCUMENTLOCATOR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual bool skippedEntity ( const QString & name ) = 0
 */
-HB_FUNC_STATIC( QXMLCONTENTHANDLER_SKIPPEDENTITY )
-{
-  QXmlContentHandler * obj = (QXmlContentHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->skippedEntity ( PQSTRING(1) ) );
-  }
-}
-
+$virtualMethod=|bool|skippedEntity|const QString &
 
 /*
 virtual bool startDocument () = 0

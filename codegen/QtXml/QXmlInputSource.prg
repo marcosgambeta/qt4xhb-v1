@@ -85,15 +85,7 @@ $deleteMethod
 /*
 virtual QString data () const
 */
-HB_FUNC_STATIC( QXMLINPUTSOURCE_DATA )
-{
-  QXmlInputSource * obj = (QXmlInputSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->data () );
-  }
-}
-
+$virtualMethod=|QString|data|
 
 /*
 virtual void fetchData ()
@@ -136,34 +128,15 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_RESET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual void setData ( const QString & dat )
 */
-HB_FUNC_STATIC( QXMLINPUTSOURCE_SETDATA1 )
-{
-  QXmlInputSource * obj = (QXmlInputSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setData ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|setData,setData1|const QString &
 
 /*
 virtual void setData ( const QByteArray & dat )
 */
-HB_FUNC_STATIC( QXMLINPUTSOURCE_SETDATA2 )
-{
-  QXmlInputSource * obj = (QXmlInputSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setData ( *PQBYTEARRAY(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|setData,setData2|const QByteArray &
 
 //[1]virtual void setData ( const QString & dat )
 //[2]virtual void setData ( const QByteArray & dat )

@@ -102,44 +102,20 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_LINENUMBER )
   }
 }
 
-
 /*
 QString message () const
 */
-HB_FUNC_STATIC( QXMLPARSEEXCEPTION_MESSAGE )
-{
-  QXmlParseException * obj = (QXmlParseException *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->message () );
-  }
-}
-
+$method=|QString|message|
 
 /*
 QString publicId () const
 */
-HB_FUNC_STATIC( QXMLPARSEEXCEPTION_PUBLICID )
-{
-  QXmlParseException * obj = (QXmlParseException *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->publicId () );
-  }
-}
-
+$method=|QString|publicId|
 
 /*
 QString systemId () const
 */
-HB_FUNC_STATIC( QXMLPARSEEXCEPTION_SYSTEMID )
-{
-  QXmlParseException * obj = (QXmlParseException *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->systemId () );
-  }
-}
+$method=|QString|systemId|
 
 $extraMethods
 

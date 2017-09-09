@@ -36,15 +36,7 @@ $deleteMethod
 /*
 virtual QString errorString () const = 0
 */
-HB_FUNC_STATIC( QXMLDTDHANDLER_ERRORSTRING )
-{
-  QXmlDTDHandler * obj = (QXmlDTDHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->errorString () );
-  }
-}
-
+$virtualMethod=|QString|errorString|
 
 /*
 virtual bool notationDecl ( const QString & name, const QString & publicId, const QString & systemId ) = 0

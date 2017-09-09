@@ -90,15 +90,7 @@ $deleteMethod
 /*
 bool contains ( const QString & name ) const
 */
-HB_FUNC_STATIC( QDOMNAMEDNODEMAP_CONTAINS )
-{
-  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->contains ( PQSTRING(1) ) );
-  }
-}
-
+$method=|bool|contains|const QString &
 
 /*
 int count () const
@@ -152,102 +144,40 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_LENGTH )
   }
 }
 
-
 /*
 QDomNode namedItem ( const QString & name ) const
 */
-HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NAMEDITEM )
-{
-  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDomNode * ptr = new QDomNode( obj->namedItem ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
-  }
-}
-
+$method=|QDomNode|namedItem|const QString &
 
 /*
 QDomNode namedItemNS ( const QString & nsURI, const QString & localName ) const
 */
-HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NAMEDITEMNS )
-{
-  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDomNode * ptr = new QDomNode( obj->namedItemNS ( PQSTRING(1), PQSTRING(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
-  }
-}
-
+$method=|QDomNode|namedItemNS|const QString &,const QString &
 
 /*
 QDomNode removeNamedItem ( const QString & name )
 */
-HB_FUNC_STATIC( QDOMNAMEDNODEMAP_REMOVENAMEDITEM )
-{
-  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDomNode * ptr = new QDomNode( obj->removeNamedItem ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
-  }
-}
-
+$method=|QDomNode|removeNamedItem|const QString &
 
 /*
 QDomNode removeNamedItemNS ( const QString & nsURI, const QString & localName )
 */
-HB_FUNC_STATIC( QDOMNAMEDNODEMAP_REMOVENAMEDITEMNS )
-{
-  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDomNode * ptr = new QDomNode( obj->removeNamedItemNS ( PQSTRING(1), PQSTRING(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
-  }
-}
-
+$method=|QDomNode|removeNamedItemNS|const QString &,const QString &
 
 /*
 QDomNode setNamedItem ( const QDomNode & newNode )
 */
-HB_FUNC_STATIC( QDOMNAMEDNODEMAP_SETNAMEDITEM )
-{
-  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDomNode * ptr = new QDomNode( obj->setNamedItem ( *PQDOMNODE(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
-  }
-}
-
+$method=|QDomNode|setNamedItem|const QDomNode &
 
 /*
 QDomNode setNamedItemNS ( const QDomNode & newNode )
 */
-HB_FUNC_STATIC( QDOMNAMEDNODEMAP_SETNAMEDITEMNS )
-{
-  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDomNode * ptr = new QDomNode( obj->setNamedItemNS ( *PQDOMNODE(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
-  }
-}
-
+$method=|QDomNode|setNamedItemNS|const QDomNode &
 
 /*
 int size () const
 */
-HB_FUNC_STATIC( QDOMNAMEDNODEMAP_SIZE )
-{
-  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->size () );
-  }
-}
+$method=|int|size|
 
 $extraMethods
 

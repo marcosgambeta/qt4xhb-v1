@@ -67,20 +67,10 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW )
   }
 }
 
-
-
 /*
 QString data () const
 */
-HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_DATA )
-{
-  QDomProcessingInstruction * obj = (QDomProcessingInstruction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->data () );
-  }
-}
-
+$method=|QString|data|
 
 /*
 QDomNode::NodeType nodeType () const
@@ -94,34 +84,14 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NODETYPE )
   }
 }
 
-
 /*
 void setData ( const QString & d )
 */
-HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_SETDATA )
-{
-  QDomProcessingInstruction * obj = (QDomProcessingInstruction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setData ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setData|const QString &
 
 /*
 QString target () const
 */
-HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_TARGET )
-{
-  QDomProcessingInstruction * obj = (QDomProcessingInstruction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->target () );
-  }
-}
-
-
-
+$method=|QString|target|
 
 #pragma ENDDUMP

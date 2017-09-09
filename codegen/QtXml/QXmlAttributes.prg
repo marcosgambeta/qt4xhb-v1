@@ -100,46 +100,20 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_COUNT )
   }
 }
 
-
 /*
 int index ( const QString & qName ) const
 */
-HB_FUNC_STATIC( QXMLATTRIBUTES_INDEX1 )
-{
-  QXmlAttributes * obj = (QXmlAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->index ( PQSTRING(1) ) );
-  }
-}
-
+$method=|int|index,index1|const QString &
 
 /*
 int index ( const QLatin1String & qName ) const
 */
-HB_FUNC_STATIC( QXMLATTRIBUTES_INDEX2 )
-{
-  QXmlAttributes * obj = (QXmlAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QLatin1String * par1 = (QLatin1String *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RINT( obj->index ( *par1 ) );
-  }
-}
-
+$method=|int|index,index2|const QLatin1String &
 
 /*
 int index ( const QString & uri, const QString & localPart ) const
 */
-HB_FUNC_STATIC( QXMLATTRIBUTES_INDEX3 )
-{
-  QXmlAttributes * obj = (QXmlAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->index ( PQSTRING(1), PQSTRING(2) ) );
-  }
-}
-
+$method=|int|index,index3|const QString &,const QString &
 
 //[1]int index ( const QString & qName ) const
 //[2]int index ( const QLatin1String & qName ) const
@@ -164,80 +138,32 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_INDEX )
 /*
 int length () const
 */
-HB_FUNC_STATIC( QXMLATTRIBUTES_LENGTH )
-{
-  QXmlAttributes * obj = (QXmlAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->length () );
-  }
-}
-
+$method=|int|length|
 
 /*
 QString localName ( int index ) const
 */
-HB_FUNC_STATIC( QXMLATTRIBUTES_LOCALNAME )
-{
-  QXmlAttributes * obj = (QXmlAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->localName ( PINT(1) ) );
-  }
-}
-
+$method=|QString|localName|int
 
 /*
 QString qName ( int index ) const
 */
-HB_FUNC_STATIC( QXMLATTRIBUTES_QNAME )
-{
-  QXmlAttributes * obj = (QXmlAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->qName ( PINT(1) ) );
-  }
-}
-
+$method=|QString|qName|int
 
 /*
 QString type ( int index ) const
 */
-HB_FUNC_STATIC( QXMLATTRIBUTES_TYPE1 )
-{
-  QXmlAttributes * obj = (QXmlAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->type ( PINT(1) ) );
-  }
-}
-
+$method=|QString|type,type1|int
 
 /*
 QString type ( const QString & qName ) const
 */
-HB_FUNC_STATIC( QXMLATTRIBUTES_TYPE2 )
-{
-  QXmlAttributes * obj = (QXmlAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->type ( PQSTRING(1) ) );
-  }
-}
-
+$method=|QString|type,type2|const QString &
 
 /*
 QString type ( const QString & uri, const QString & localName ) const
 */
-HB_FUNC_STATIC( QXMLATTRIBUTES_TYPE3 )
-{
-  QXmlAttributes * obj = (QXmlAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->type ( PQSTRING(1), PQSTRING(2) ) );
-  }
-}
-
+$method=|QString|type,type3|const QString &,const QString &
 
 //[1]QString type ( int index ) const
 //[2]QString type ( const QString & qName ) const
@@ -262,68 +188,27 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_TYPE )
 /*
 QString uri ( int index ) const
 */
-HB_FUNC_STATIC( QXMLATTRIBUTES_URI )
-{
-  QXmlAttributes * obj = (QXmlAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->uri ( PINT(1) ) );
-  }
-}
-
+$method=|QString|uri|int
 
 /*
 QString value ( int index ) const
 */
-HB_FUNC_STATIC( QXMLATTRIBUTES_VALUE1 )
-{
-  QXmlAttributes * obj = (QXmlAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->value ( PINT(1) ) );
-  }
-}
-
+$method=|QString|value,value1|int
 
 /*
 QString value ( const QString & qName ) const
 */
-HB_FUNC_STATIC( QXMLATTRIBUTES_VALUE2 )
-{
-  QXmlAttributes * obj = (QXmlAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->value ( PQSTRING(1) ) );
-  }
-}
-
+$method=|QString|value,value2|const QString &
 
 /*
 QString value ( const QLatin1String & qName ) const
 */
-HB_FUNC_STATIC( QXMLATTRIBUTES_VALUE3 )
-{
-  QXmlAttributes * obj = (QXmlAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QLatin1String * par1 = (QLatin1String *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RQSTRING( obj->value ( *par1 ) );
-  }
-}
-
+$method=|QString|value,value3|const QLatin1String &
 
 /*
 QString value ( const QString & uri, const QString & localName ) const
 */
-HB_FUNC_STATIC( QXMLATTRIBUTES_VALUE4 )
-{
-  QXmlAttributes * obj = (QXmlAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->value ( PQSTRING(1), PQSTRING(2) ) );
-  }
-}
-
+$method=|QString|value,value4|const QString &,const QString &
 
 //[1]QString value ( int index ) const
 //[2]QString value ( const QString & qName ) const
