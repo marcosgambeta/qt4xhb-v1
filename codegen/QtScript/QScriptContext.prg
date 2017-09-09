@@ -246,20 +246,10 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_THROWERROR1 )
   }
 }
 
-
 /*
 QScriptValue throwError ( const QString & text )
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXT_THROWERROR2 )
-{
-  QScriptContext * obj = (QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->throwError ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
-  }
-}
-
+$method=|QScriptValue|throwError,throwError2|const QString &
 
 //[1]QScriptValue throwError ( Error error, const QString & text )
 //[2]QScriptValue throwError ( const QString & text )
@@ -289,18 +279,10 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_THROWVALUE )
   }
 }
 
-
 /*
 QString toString () const
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXT_TOSTRING )
-{
-  QScriptContext * obj = (QScriptContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->toString () );
-  }
-}
+$method=|QString|toString|
 
 $extraMethods
 

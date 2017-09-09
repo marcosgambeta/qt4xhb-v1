@@ -102,15 +102,7 @@ $deleteMethod
 /*
 QString fileName () const
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FILENAME )
-{
-  QScriptContextInfo * obj = (QScriptContextInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->fileName () );
-  }
-}
-
+$method=|QString|fileName|
 
 /*
 int functionEndLineNumber () const
@@ -137,19 +129,10 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONMETAINDEX )
   }
 }
 
-
 /*
 QString functionName () const
 */
-HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONNAME )
-{
-  QScriptContextInfo * obj = (QScriptContextInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->functionName () );
-  }
-}
-
+$method=|QString|functionName|
 
 /*
 QStringList functionParameterNames () const

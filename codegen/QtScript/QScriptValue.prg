@@ -786,19 +786,10 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOREGEXP )
   }
 }
 
-
 /*
 QString toString () const
 */
-HB_FUNC_STATIC( QSCRIPTVALUE_TOSTRING )
-{
-  QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->toString () );
-  }
-}
-
+$method=|QString|toString|
 
 /*
 quint16 toUInt16 () const

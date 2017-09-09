@@ -283,33 +283,15 @@ HB_FUNC_STATIC( QSCRIPTENGINE_HASUNCAUGHTEXCEPTION )
   }
 }
 
-
 /*
 QScriptValue importExtension ( const QString & extension )
 */
-HB_FUNC_STATIC( QSCRIPTENGINE_IMPORTEXTENSION )
-{
-  QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->importExtension ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
-  }
-}
-
+$method=|QScriptValue|importExtension|const QString &
 
 /*
 QStringList importedExtensions () const
 */
-HB_FUNC_STATIC( QSCRIPTENGINE_IMPORTEDEXTENSIONS )
-{
-  QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->importedExtensions () );
-  }
-}
-
+$method=|QStringList|importedExtensions|
 
 /*
 void installTranslatorFunctions ( const QScriptValue & object = QScriptValue() )
@@ -588,88 +570,34 @@ HB_FUNC_STATIC( QSCRIPTENGINE_TOOBJECT )
   }
 }
 
-
-
 /*
 QScriptString toStringHandle ( const QString & str )
 */
-HB_FUNC_STATIC( QSCRIPTENGINE_TOSTRINGHANDLE )
-{
-  QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QScriptString * ptr = new QScriptString( obj->toStringHandle ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTSTRING" );
-  }
-}
-
+$method=|QScriptString|toStringHandle|const QString &
 
 /*
 QScriptValue uncaughtException () const
 */
-HB_FUNC_STATIC( QSCRIPTENGINE_UNCAUGHTEXCEPTION )
-{
-  QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->uncaughtException () );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
-  }
-}
-
+$method=|QScriptValue|uncaughtException|
 
 /*
 QStringList uncaughtExceptionBacktrace () const
 */
-HB_FUNC_STATIC( QSCRIPTENGINE_UNCAUGHTEXCEPTIONBACKTRACE )
-{
-  QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->uncaughtExceptionBacktrace () );
-  }
-}
-
+$method=|QStringList|uncaughtExceptionBacktrace|
 
 /*
 int uncaughtExceptionLineNumber () const
 */
-HB_FUNC_STATIC( QSCRIPTENGINE_UNCAUGHTEXCEPTIONLINENUMBER )
-{
-  QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->uncaughtExceptionLineNumber () );
-  }
-}
-
+$method=|int|uncaughtExceptionLineNumber|
 
 /*
 QScriptValue undefinedValue ()
 */
-HB_FUNC_STATIC( QSCRIPTENGINE_UNDEFINEDVALUE )
-{
-  QScriptEngine * obj = (QScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->undefinedValue () );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
-  }
-}
-
-
+$method=|QScriptValue|undefinedValue|
 
 /*
-QScriptSyntaxCheckResult checkSyntax ( const QString & program )
+static QScriptSyntaxCheckResult checkSyntax ( const QString & program )
 */
-HB_FUNC_STATIC( QSCRIPTENGINE_CHECKSYNTAX )
-{
-  QScriptSyntaxCheckResult * ptr = new QScriptSyntaxCheckResult( QScriptEngine::checkSyntax ( PQSTRING(1) ) );
-  _qt4xhb_createReturnClass ( ptr, "QSCRIPTSYNTAXCHECKRESULT" );
-}
-
-
-
-
+$staticMethod=|QScriptSyntaxCheckResult|checkSyntax|const QString &
 
 #pragma ENDDUMP

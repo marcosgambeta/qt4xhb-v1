@@ -86,19 +86,10 @@ HB_FUNC_STATIC( QSCRIPTSTRING_ISVALID )
   }
 }
 
-
-
 /*
 QString toString () const
 */
-HB_FUNC_STATIC( QSCRIPTSTRING_TOSTRING )
-{
-  QScriptString * obj = (QScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->toString () );
-  }
-}
+$method=|QString|toString|
 
 $extraMethods
 

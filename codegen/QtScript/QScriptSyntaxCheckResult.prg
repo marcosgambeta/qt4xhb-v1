@@ -69,19 +69,10 @@ HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_ERRORLINENUMBER )
   }
 }
 
-
 /*
 QString errorMessage () const
 */
-HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_ERRORMESSAGE )
-{
-  QScriptSyntaxCheckResult * obj = (QScriptSyntaxCheckResult *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->errorMessage () );
-  }
-}
-
+$method=|QString|errorMessage|
 
 /*
 State state () const

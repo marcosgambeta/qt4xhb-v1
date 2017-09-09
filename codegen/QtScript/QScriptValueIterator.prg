@@ -96,19 +96,10 @@ HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_HASPREVIOUS )
   }
 }
 
-
 /*
 QString name () const
 */
-HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_NAME )
-{
-  QScriptValueIterator * obj = (QScriptValueIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->name () );
-  }
-}
-
+$method=|QString|name|
 
 /*
 void next ()

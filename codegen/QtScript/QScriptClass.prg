@@ -84,19 +84,10 @@ HB_FUNC_STATIC( QSCRIPTCLASS_EXTENSION )
   }
 }
 
-
 /*
 virtual QString name () const
 */
-HB_FUNC_STATIC( QSCRIPTCLASS_NAME )
-{
-  QScriptClass * obj = (QScriptClass *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->name () );
-  }
-}
-
+$virtualMethod=|QString|name|
 
 /*
 virtual QScriptClassPropertyIterator * newIterator ( const QScriptValue & object )

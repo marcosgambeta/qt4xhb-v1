@@ -95,15 +95,7 @@ $deleteMethod
 /*
 QString fileName () const
 */
-HB_FUNC_STATIC( QSCRIPTPROGRAM_FILENAME )
-{
-  QScriptProgram * obj = (QScriptProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->fileName () );
-  }
-}
-
+$method=|QString|fileName|
 
 /*
 int firstLineNumber () const
@@ -130,18 +122,10 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_ISNULL )
   }
 }
 
-
 /*
 QString sourceCode () const
 */
-HB_FUNC_STATIC( QSCRIPTPROGRAM_SOURCECODE )
-{
-  QScriptProgram * obj = (QScriptProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->sourceCode () );
-  }
-}
+$method=|QString|sourceCode|
 
 $extraMethods
 
