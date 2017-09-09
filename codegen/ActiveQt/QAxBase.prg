@@ -88,15 +88,7 @@ HB_FUNC_STATIC( QAXBASE_CLEAR )
 /*
 QString control () const
 */
-HB_FUNC_STATIC( QAXBASE_CONTROL )
-{
-  QAxBase * obj = (QAxBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-     RQSTRING( obj->control () );
-  }
-}
+$method=|QString|control|
 
 /*
 void disableClassInfo ()
@@ -209,48 +201,17 @@ HB_FUNC_STATIC( QAXBASE_DYNAMICCALL )
 /*
 QString generateDocumentation ()
 */
-HB_FUNC_STATIC( QAXBASE_GENERATEDOCUMENTATION )
-{
-  QAxBase * obj = (QAxBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    RQSTRING( obj->generateDocumentation () );
-  }
-}
+$method=|QString|generateDocumentation|
 
 /*
 bool isNull () const
 */
-HB_FUNC_STATIC( QAXBASE_ISNULL )
-{
-  QAxBase * obj = (QAxBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
+$method=|bool|isNull|
 
 /*
 virtual bool propertyWritable ( const char * prop ) const
 */
-HB_FUNC_STATIC( QAXBASE_PROPERTYWRITABLE )
-{
-  QAxBase * obj = (QAxBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      RBOOL( obj->propertyWritable ( (const char *) hb_parc(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$virtualMethod=|bool|propertyWritable|const char *
 
 /*
 QAxObject * querySubObject ( const char * name, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
@@ -319,22 +280,7 @@ HB_FUNC_STATIC( QAXBASE_QUERYSUBOBJECT )
 /*
 bool setControl ( const QString & )
 */
-HB_FUNC_STATIC( QAXBASE_SETCONTROL )
-{
-  QAxBase * obj = (QAxBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      RBOOL( obj->setControl ( PQSTRING(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|setControl|const QString &
 
 /*
 virtual void setPropertyWritable ( const char * prop, bool ok )

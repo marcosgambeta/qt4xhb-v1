@@ -147,35 +147,12 @@ HB_FUNC_STATIC( QAXSCRIPT_FUNCTIONS )
 /*
 bool load ( const QString & code, const QString & language = QString() )
 */
-HB_FUNC_STATIC( QAXSCRIPT_LOAD )
-{
-  QAxScript * obj = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) )
-    {
-      RBOOL( obj->load ( PQSTRING(1), OPQSTRING(2,QString()) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|bool|load|const QString &,const QString &=QString()
 
 /*
 QString scriptCode () const
 */
-HB_FUNC_STATIC( QAXSCRIPT_SCRIPTCODE )
-{
-  QAxScript * obj = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    RQSTRING( obj->scriptCode () );
-  }
-}
+$method=|QString|scriptCode|
 
 /*
 QAxScriptEngine * scriptEngine () const
@@ -194,14 +171,6 @@ HB_FUNC_STATIC( QAXSCRIPT_SCRIPTENGINE )
 /*
 QString scriptName () const
 */
-HB_FUNC_STATIC( QAXSCRIPT_SCRIPTNAME )
-{
-  QAxScript * obj = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    RQSTRING( obj->scriptName () );
-  }
-}
+$method=|QString|scriptName|
 
 #pragma ENDDUMP

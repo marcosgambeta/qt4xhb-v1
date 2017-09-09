@@ -242,23 +242,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_LOAD )
 /*
 QAxScript * script ( const QString & name ) const
 */
-HB_FUNC_STATIC( QAXSCRIPTMANAGER_SCRIPT )
-{
-  QAxScriptManager * obj = (QAxScriptManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      QAxScript * ptr = obj->script ( PQSTRING(1) );
-      _qt4xhb_createReturnClass ( ptr, "QAXSCRIPT" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QAxScript *|script|const QString &
 
 /*
 QStringList scriptNames () const
@@ -274,26 +258,13 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_SCRIPTNAMES )
 }
 
 /*
-bool registerEngine ( const QString & name, const QString & extension, const QString & code = QString() )
+static bool registerEngine ( const QString & name, const QString & extension, const QString & code = QString() )
 */
-HB_FUNC_STATIC( QAXSCRIPTMANAGER_REGISTERENGINE )
-{
-  if( ISCHAR(1) && ISCHAR(2) && (ISCHAR(3)||ISNIL(3)) )
-  {
-    RBOOL( QAxScriptManager::registerEngine ( PQSTRING(1), PQSTRING(2), OPQSTRING(3,QString()) ) );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|bool|registerEngine|const QString &,const QString &,const QString &=QString()
 
 /*
-QString scriptFileFilter ()
+static QString scriptFileFilter ()
 */
-HB_FUNC_STATIC( QAXSCRIPTMANAGER_SCRIPTFILEFILTER )
-{
-  RQSTRING( QAxScriptManager::scriptFileFilter () );
-}
+$staticMethod=|QString|scriptFileFilter|
 
 #pragma ENDDUMP

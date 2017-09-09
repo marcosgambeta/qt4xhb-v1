@@ -50,63 +50,22 @@ $deleteMethod
 /*
 void addItem ( const QString & name )
 */
-HB_FUNC_STATIC( QAXSCRIPTENGINE_ADDITEM )
-{
-  QAxScriptEngine * obj = (QAxScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      obj->addItem ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addItem|const QString &
 
 /*
 bool hasIntrospection () const
 */
-HB_FUNC_STATIC( QAXSCRIPTENGINE_HASINTROSPECTION )
-{
-  QAxScriptEngine * obj = (QAxScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    RBOOL( obj->hasIntrospection () );
-  }
-}
+$method=|bool|hasIntrospection|
 
 /*
 bool isValid () const
 */
-HB_FUNC_STATIC( QAXSCRIPTENGINE_ISVALID )
-{
-  QAxScriptEngine * obj = (QAxScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
+$method=|bool|isValid|
 
 /*
 QString scriptLanguage () const
 */
-HB_FUNC_STATIC( QAXSCRIPTENGINE_SCRIPTLANGUAGE )
-{
-  QAxScriptEngine * obj = (QAxScriptEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    RQSTRING( obj->scriptLanguage () );
-  }
-}
+$method=|QString|scriptLanguage|
 
 /*
 void setState ( State st )

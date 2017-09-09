@@ -66,22 +66,7 @@ HB_FUNC_STATIC( QAXBINDABLE_CREATEAGGREGATE )
 /*
 virtual bool readData ( QIODevice * source, const QString & format )
 */
-HB_FUNC_STATIC( QAXBINDABLE_READDATA )
-{
-  QAxBindable * obj = (QAxBindable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISQIODEVICE(1) && ISCHAR(2) )
-    {
-      RBOOL( obj->readData ( PQIODEVICE(1), PQSTRING(2) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$virtualMethod=|bool|readData|QIODevice *,const QString &
 
 /*
 void reportError ( int code, const QString & src, const QString & desc, const QString & context = QString() )
@@ -108,22 +93,7 @@ HB_FUNC_STATIC( QAXBINDABLE_REPORTERROR )
 /*
 virtual bool writeData ( QIODevice * sink )
 */
-HB_FUNC_STATIC( QAXBINDABLE_WRITEDATA )
-{
-  QAxBindable * obj = (QAxBindable *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISQIODEVICE(1) )
-    {
-      RBOOL( obj->writeData ( PQIODEVICE(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$virtualMethod=|bool|writeData|QIODevice *
 
 $extraMethods
 
