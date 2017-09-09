@@ -236,33 +236,15 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SAMPLESIZE )
   }
 }
 
-
 /*
 void setCodec ( const QString & codec )
 */
-HB_FUNC_STATIC( QAUDIOFORMAT_SETCODEC )
-{
-  QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCodec ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setCodec|const QString &
 
 /*
 QString codec () const
 */
-HB_FUNC_STATIC( QAUDIOFORMAT_CODEC )
-{
-  QAudioFormat * obj = (QAudioFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->codec () );
-  }
-}
-
+$method=|QString|codec|
 
 /*
 void setByteOrder ( QAudioFormat::Endian byteOrder )

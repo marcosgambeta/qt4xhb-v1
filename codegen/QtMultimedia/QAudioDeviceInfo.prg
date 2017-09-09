@@ -95,15 +95,7 @@ $deleteMethod
 /*
 QString deviceName () const
 */
-HB_FUNC_STATIC( QAUDIODEVICEINFO_DEVICENAME )
-{
-  QAudioDeviceInfo * obj = (QAudioDeviceInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->deviceName () );
-  }
-}
-
+$method=|QString|deviceName|
 
 /*
 bool isFormatSupported ( const QAudioFormat & settings ) const
