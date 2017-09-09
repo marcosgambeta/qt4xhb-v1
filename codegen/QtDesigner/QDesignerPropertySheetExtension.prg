@@ -141,32 +141,15 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_PROPERTY )
   }
 }
 
-
 /*
 virtual QString propertyGroup ( int index ) const = 0
 */
-HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_PROPERTYGROUP )
-{
-  QDesignerPropertySheetExtension * obj = (QDesignerPropertySheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->propertyGroup ( PINT(1) ) );
-  }
-}
-
+$virtualMethod=|QString|propertyGroup|int
 
 /*
 virtual QString propertyName ( int index ) const = 0
 */
-HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_PROPERTYNAME )
-{
-  QDesignerPropertySheetExtension * obj = (QDesignerPropertySheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->propertyName ( PINT(1) ) );
-  }
-}
-
+$virtualMethod=|QString|propertyName|int
 
 /*
 virtual bool reset ( int index ) = 0

@@ -31,15 +31,7 @@ $deleteMethod
 /*
 virtual QString fileName () const = 0
 */
-HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_FILENAME )
-{
-  QDesignerWidgetBoxInterface * obj = (QDesignerWidgetBoxInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->fileName () );
-  }
-}
-
+$virtualMethod=|QString|fileName|
 
 /*
 virtual bool load () = 0

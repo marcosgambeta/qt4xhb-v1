@@ -49,15 +49,7 @@ $deleteMethod
 /*
 virtual QString codeTemplate () const
 */
-HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_CODETEMPLATE )
-{
-  QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->codeTemplate () );
-  }
-}
-
+$virtualMethod=|QString|codeTemplate|
 
 /*
 virtual QWidget * createWidget ( QWidget * parent ) = 0
@@ -72,32 +64,15 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_CREATEWIDGET )
   }
 }
 
-
 /*
 virtual QString domXml () const
 */
-HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_DOMXML )
-{
-  QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->domXml () );
-  }
-}
-
+$virtualMethod=|QString|domXml|
 
 /*
 virtual QString group () const = 0
 */
-HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_GROUP )
-{
-  QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->group () );
-  }
-}
-
+$virtualMethod=|QString|group|
 
 /*
 virtual QIcon icon () const = 0
@@ -112,19 +87,10 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_ICON )
   }
 }
 
-
 /*
 virtual QString includeFile () const = 0
 */
-HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_INCLUDEFILE )
-{
-  QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->includeFile () );
-  }
-}
-
+$virtualMethod=|QString|includeFile|
 
 /*
 virtual void initialize ( QDesignerFormEditorInterface * formEditor )
@@ -166,44 +132,20 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_ISINITIALIZED )
   }
 }
 
-
 /*
 virtual QString name () const = 0
 */
-HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_NAME )
-{
-  QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->name () );
-  }
-}
-
+$virtualMethod=|QString|name|
 
 /*
 virtual QString toolTip () const = 0
 */
-HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_TOOLTIP )
-{
-  QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->toolTip () );
-  }
-}
-
+$virtualMethod=|QString|toolTip|
 
 /*
 virtual QString whatsThis () const = 0
 */
-HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_WHATSTHIS )
-{
-  QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->whatsThis () );
-  }
-}
+$virtualMethod=|QString|whatsThis|
 
 $extraMethods
 

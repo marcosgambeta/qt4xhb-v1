@@ -38,66 +38,27 @@ $deleteMethod
 /*
 virtual int addDynamicProperty ( const QString & propertyName, const QVariant & value ) = 0
 */
-HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_ADDDYNAMICPROPERTY )
-{
-  QDesignerDynamicPropertySheetExtension * obj = (QDesignerDynamicPropertySheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->addDynamicProperty ( PQSTRING(1), *PQVARIANT(2) ) );
-  }
-}
-
+$virtualMethod=|int|addDynamicProperty|const QString &,const QVariant &
 
 /*
 virtual bool canAddDynamicProperty ( const QString & propertyName ) const = 0
 */
-HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_CANADDDYNAMICPROPERTY )
-{
-  QDesignerDynamicPropertySheetExtension * obj = (QDesignerDynamicPropertySheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->canAddDynamicProperty ( PQSTRING(1) ) );
-  }
-}
-
+$virtualMethod=|bool|canAddDynamicProperty|const QString &
 
 /*
 virtual bool dynamicPropertiesAllowed () const = 0
 */
-HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_DYNAMICPROPERTIESALLOWED )
-{
-  QDesignerDynamicPropertySheetExtension * obj = (QDesignerDynamicPropertySheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->dynamicPropertiesAllowed () );
-  }
-}
-
+$virtualMethod=|bool|dynamicPropertiesAllowed|
 
 /*
 virtual bool isDynamicProperty ( int index ) const = 0
 */
-HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_ISDYNAMICPROPERTY )
-{
-  QDesignerDynamicPropertySheetExtension * obj = (QDesignerDynamicPropertySheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isDynamicProperty ( PINT(1) ) );
-  }
-}
-
+$virtualMethod=|bool|isDynamicProperty|int
 
 /*
 virtual bool removeDynamicProperty ( int index ) = 0
 */
-HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_REMOVEDYNAMICPROPERTY )
-{
-  QDesignerDynamicPropertySheetExtension * obj = (QDesignerDynamicPropertySheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->removeDynamicProperty ( PINT(1) ) );
-  }
-}
+$virtualMethod=|bool|removeDynamicProperty|int
 
 $extraMethods
 

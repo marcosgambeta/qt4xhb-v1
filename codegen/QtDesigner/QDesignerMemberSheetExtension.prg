@@ -59,19 +59,10 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_COUNT )
   }
 }
 
-
 /*
 virtual QString declaredInClass ( int index ) const = 0
 */
-HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_DECLAREDINCLASS )
-{
-  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->declaredInClass ( PINT(1) ) );
-  }
-}
-
+$virtualMethod=|QString|declaredInClass|int
 
 /*
 virtual int indexOf ( const QString & name ) const = 0
@@ -137,32 +128,15 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_ISVISIBLE )
   }
 }
 
-
 /*
 virtual QString memberGroup ( int index ) const = 0
 */
-HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_MEMBERGROUP )
-{
-  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->memberGroup ( PINT(1) ) );
-  }
-}
-
+$virtualMethod=|QString|memberGroup|int
 
 /*
 virtual QString memberName ( int index ) const = 0
 */
-HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_MEMBERNAME )
-{
-  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->memberName ( PINT(1) ) );
-  }
-}
-
+$virtualMethod=|QString|memberName|int
 
 /*
 virtual QList<QByteArray> parameterNames ( int index ) const = 0
@@ -279,18 +253,10 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_SETVISIBLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual QString signature ( int index ) const = 0
 */
-HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_SIGNATURE )
-{
-  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->signature ( PINT(1) ) );
-  }
-}
+$virtualMethod=|QString|signature|int
 
 $extraMethods
 

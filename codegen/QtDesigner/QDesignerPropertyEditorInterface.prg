@@ -49,19 +49,10 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_CORE )
   }
 }
 
-
 /*
 virtual QString currentPropertyName () const = 0
 */
-HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_CURRENTPROPERTYNAME )
-{
-  QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->currentPropertyName () );
-  }
-}
-
+$virtualMethod=|QString|currentPropertyName|
 
 /*
 virtual bool isReadOnly () const = 0
