@@ -97,58 +97,25 @@ HB_FUNC_STATIC( QHELPENGINECORE_AUTOSAVEFILTER )
   }
 }
 
-
 /*
 QString collectionFile () const
 */
-HB_FUNC_STATIC( QHELPENGINECORE_COLLECTIONFILE )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->collectionFile () );
-  }
-}
-
+$method=|QString|collectionFile|
 
 /*
 bool copyCollectionFile ( const QString & fileName )
 */
-HB_FUNC_STATIC( QHELPENGINECORE_COPYCOLLECTIONFILE )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->copyCollectionFile ( PQSTRING(1) ) );
-  }
-}
-
+$method=|bool|copyCollectionFile|const QString &
 
 /*
 QString currentFilter () const
 */
-HB_FUNC_STATIC( QHELPENGINECORE_CURRENTFILTER )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->currentFilter () );
-  }
-}
-
+$method=|QString|currentFilter|
 
 /*
 QStringList customFilters () const
 */
-HB_FUNC_STATIC( QHELPENGINECORE_CUSTOMFILTERS )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->customFilters () );
-  }
-}
-
+$method=|QStringList|customFilters|
 
 /*
 QVariant customValue ( const QString & key, const QVariant & defaultValue = QVariant() ) const
@@ -164,32 +131,15 @@ HB_FUNC_STATIC( QHELPENGINECORE_CUSTOMVALUE )
   }
 }
 
-
 /*
 QString documentationFileName ( const QString & namespaceName )
 */
-HB_FUNC_STATIC( QHELPENGINECORE_DOCUMENTATIONFILENAME )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->documentationFileName ( PQSTRING(1) ) );
-  }
-}
-
+$method=|QString|documentationFileName|const QString &
 
 /*
 QString error () const
 */
-HB_FUNC_STATIC( QHELPENGINECORE_ERROR )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->error () );
-  }
-}
-
+$method=|QString|error|
 
 /*
 QByteArray fileData ( const QUrl & url ) const
@@ -252,33 +202,15 @@ HB_FUNC_STATIC( QHELPENGINECORE_FILES )
   }
 }
 
-
-
 /*
 QStringList filterAttributes () const
 */
-HB_FUNC_STATIC( QHELPENGINECORE_FILTERATTRIBUTES1 )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->filterAttributes () );
-  }
-}
-
+$method=|QStringList|filterAttributes,filterAttributes1|
 
 /*
 QStringList filterAttributes ( const QString & filterName ) const
 */
-HB_FUNC_STATIC( QHELPENGINECORE_FILTERATTRIBUTES2 )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->filterAttributes ( PQSTRING(1) ) );
-  }
-}
-
+$method=|QStringList|filterAttributes,filterAttributes2|const QString &
 
 //[1]QStringList filterAttributes () const
 //[2]QStringList filterAttributes ( const QString & filterName ) const
@@ -308,20 +240,10 @@ HB_FUNC_STATIC( QHELPENGINECORE_FINDFILE )
   }
 }
 
-
-
 /*
 bool registerDocumentation ( const QString & documentationFileName )
 */
-HB_FUNC_STATIC( QHELPENGINECORE_REGISTERDOCUMENTATION )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->registerDocumentation ( PQSTRING(1) ) );
-  }
-}
-
+$method=|bool|registerDocumentation|const QString &
 
 /*
 QStringList registeredDocumentations () const
@@ -335,32 +257,15 @@ HB_FUNC_STATIC( QHELPENGINECORE_REGISTEREDDOCUMENTATIONS )
   }
 }
 
-
 /*
 bool removeCustomFilter ( const QString & filterName )
 */
-HB_FUNC_STATIC( QHELPENGINECORE_REMOVECUSTOMFILTER )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->removeCustomFilter ( PQSTRING(1) ) );
-  }
-}
-
+$method=|bool|removeCustomFilter|const QString &
 
 /*
 bool removeCustomValue ( const QString & key )
 */
-HB_FUNC_STATIC( QHELPENGINECORE_REMOVECUSTOMVALUE )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->removeCustomValue ( PQSTRING(1) ) );
-  }
-}
-
+$method=|bool|removeCustomValue|const QString &
 
 /*
 void setAutoSaveFilter ( bool save )
@@ -375,95 +280,39 @@ HB_FUNC_STATIC( QHELPENGINECORE_SETAUTOSAVEFILTER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setCollectionFile ( const QString & fileName )
 */
-HB_FUNC_STATIC( QHELPENGINECORE_SETCOLLECTIONFILE )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCollectionFile ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setCollectionFile|const QString &
 
 /*
 void setCurrentFilter ( const QString & filterName )
 */
-HB_FUNC_STATIC( QHELPENGINECORE_SETCURRENTFILTER )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCurrentFilter ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setCurrentFilter|const QString &
 
 /*
 bool setCustomValue ( const QString & key, const QVariant & value )
 */
-HB_FUNC_STATIC( QHELPENGINECORE_SETCUSTOMVALUE )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->setCustomValue ( PQSTRING(1), *PQVARIANT(2) ) );
-  }
-}
-
+$method=|bool|setCustomValue|const QString &,const QVariant &
 
 /*
 bool setupData ()
 */
-HB_FUNC_STATIC( QHELPENGINECORE_SETUPDATA )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->setupData () );
-  }
-}
-
+$method=|bool|setupData|
 
 /*
 bool unregisterDocumentation ( const QString & namespaceName )
 */
-HB_FUNC_STATIC( QHELPENGINECORE_UNREGISTERDOCUMENTATION )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->unregisterDocumentation ( PQSTRING(1) ) );
-  }
-}
-
-
+$method=|bool|unregisterDocumentation|const QString &
 
 /*
-QVariant metaData ( const QString & documentationFileName, const QString & name )
+static QVariant metaData ( const QString & documentationFileName, const QString & name )
 */
-HB_FUNC_STATIC( QHELPENGINECORE_METADATA )
-{
-  QVariant * ptr = new QVariant( QHelpEngineCore::metaData ( PQSTRING(1), PQSTRING(2) ) );
-  _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-}
-
+$staticMethod=|QVariant|metaData|const QString &,const QString &
 
 /*
-QString namespaceName ( const QString & documentationFileName )
+static QString namespaceName ( const QString & documentationFileName )
 */
-HB_FUNC_STATIC( QHELPENGINECORE_NAMESPACENAME )
-{
-  RQSTRING( QHelpEngineCore::namespaceName ( PQSTRING(1) ) );
-}
-
-
-
-
+$staticMethod=|QString|namespaceName|const QString &
 
 #pragma ENDDUMP

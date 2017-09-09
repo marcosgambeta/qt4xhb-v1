@@ -52,20 +52,10 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_CONTENTITEMAT )
   }
 }
 
-
 /*
 void createContents ( const QString & customFilterName )
 */
-HB_FUNC_STATIC( QHELPCONTENTMODEL_CREATECONTENTS )
-{
-  QHelpContentModel * obj = (QHelpContentModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->createContents ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|createContents|const QString &
 
 /*
 bool isCreatingContents () const

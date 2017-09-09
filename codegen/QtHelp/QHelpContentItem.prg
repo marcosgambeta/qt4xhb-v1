@@ -110,19 +110,10 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_ROW )
   }
 }
 
-
 /*
 QString title () const
 */
-HB_FUNC_STATIC( QHELPCONTENTITEM_TITLE )
-{
-  QHelpContentItem * obj = (QHelpContentItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->title () );
-  }
-}
-
+$method=|QString|title|
 
 /*
 QUrl url () const
