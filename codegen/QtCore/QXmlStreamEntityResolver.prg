@@ -34,14 +34,7 @@ $deleteMethod
 /*
 virtual QString resolveUndeclaredEntity(const QString & name)
 */
-HB_FUNC_STATIC( QXMLSTREAMENTITYRESOLVER_RESOLVEUNDECLAREDENTITY )
-{
-  QXmlStreamEntityResolver * obj = (QXmlStreamEntityResolver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->resolveUndeclaredEntity ( PQSTRING(1) ) );
-  }
-}
+$virtualMethod=|QString|resolveUndeclaredEntity|const QString &
 
 $extraMethods
 

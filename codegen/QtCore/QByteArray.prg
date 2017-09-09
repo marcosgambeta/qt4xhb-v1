@@ -265,7 +265,6 @@ HB_FUNC_STATIC( QBYTEARRAY_APPEND1 )
   }
 }
 
-
 /*
 QByteArray & append ( const QString & str )
 */

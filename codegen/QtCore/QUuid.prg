@@ -142,15 +142,7 @@ $deleteMethod
 /*
 QString toString() const;
 */
-HB_FUNC_STATIC( QUUID_TOSTRING )
-{
-  QUuid * obj = (QUuid *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->toString () );
-  }
-}
-
+$method=|QString|toString|
 
 /*
 QByteArray toByteArray() const

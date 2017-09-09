@@ -35,35 +35,20 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
-
-
 /*
 static QString licensee()
 */
-HB_FUNC_STATIC( QLIBRARYINFO_LICENSEE )
-{
-  RQSTRING( QLibraryInfo::licensee () );
-}
-
+$staticMethod=|QString|licensee|
 
 /*
 static QString licensedProducts()
 */
-HB_FUNC_STATIC( QLIBRARYINFO_LICENSEDPRODUCTS )
-{
-  RQSTRING( QLibraryInfo::licensedProducts () );
-}
-
+$staticMethod=|QString|licensedProducts|
 
 /*
 static QString buildKey()
 */
-HB_FUNC_STATIC( QLIBRARYINFO_BUILDKEY )
-{
-  RQSTRING( QLibraryInfo::buildKey () );
-}
-
+$staticMethod=|QString|buildKey|
 
 /*
 static QDate buildDate()
@@ -74,14 +59,10 @@ HB_FUNC_STATIC( QLIBRARYINFO_BUILDDATE )
   _qt4xhb_createReturnClass ( ptr, "QDATE", true );
 }
 
-
 /*
 static QString location(LibraryLocation)
 */
-HB_FUNC_STATIC( QLIBRARYINFO_LOCATION )
-{
-  RQSTRING( QLibraryInfo::location ( (QLibraryInfo::LibraryLocation) hb_parni(1) ) );
-}
+$staticMethod=|QString|location|QLibraryInfo::LibraryLocation
 
 $extraMethods
 

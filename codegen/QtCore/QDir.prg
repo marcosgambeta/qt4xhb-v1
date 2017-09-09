@@ -158,93 +158,37 @@ $deleteMethod
 /*
 QString absoluteFilePath(const QString & fileName) const
 */
-HB_FUNC_STATIC( QDIR_ABSOLUTEFILEPATH )
-{
-  QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->absoluteFilePath ( PQSTRING(1) ) );
-  }
-}
-
+$method=|QString|absoluteFilePath|const QString &
 
 /*
 QString absolutePath() const
 */
-HB_FUNC_STATIC( QDIR_ABSOLUTEPATH )
-{
-  QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->absolutePath () );
-  }
-}
-
+$method=|QString|absolutePath|
 
 /*
 QString canonicalPath() const
 */
-HB_FUNC_STATIC( QDIR_CANONICALPATH )
-{
-  QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->canonicalPath () );
-  }
-}
-
+$method=|QString|canonicalPath|
 
 /*
 bool cd(const QString & dirName)
 */
-HB_FUNC_STATIC( QDIR_CD )
-{
-  QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->cd ( PQSTRING(1) ) );
-  }
-}
-
+$method=|bool|cd|const QString &
 
 /*
 bool cdUp()
 */
-HB_FUNC_STATIC( QDIR_CDUP )
-{
-  QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->cdUp () );
-  }
-}
-
+$method=|bool|cdUp|
 
 /*
 uint count() const
 */
-HB_FUNC_STATIC( QDIR_COUNT )
-{
-  QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (uint) obj->count () );
-  }
-}
-
+$method=|uint|count|
 
 /*
 QString dirName() const
 */
-HB_FUNC_STATIC( QDIR_DIRNAME )
-{
-  QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->dirName () );
-  }
-}
-
+$method=|QString|dirName|
 
 /*
 QFileInfoList entryInfoList(const QStringList & nameFilters, Filters filters = NoFilter, SortFlags sort = NoSort) const
@@ -291,7 +235,6 @@ HB_FUNC_STATIC( QDIR_ENTRYINFOLIST1 )
   }
 }
 
-
 /*
 QFileInfoList entryInfoList(Filters filters = NoFilter, SortFlags sort = NoSort) const
 */
@@ -335,7 +278,6 @@ HB_FUNC_STATIC( QDIR_ENTRYINFOLIST2 )
   }
 }
 
-
 //[1]QFileInfoList entryInfoList(const QStringList & nameFilters, Filters filters = NoFilter, SortFlags sort = NoSort) const
 //[2]QFileInfoList entryInfoList(Filters filters = NoFilter, SortFlags sort = NoSort) const
 
@@ -354,30 +296,12 @@ HB_FUNC_STATIC( QDIR_ENTRYINFOLIST )
 /*
 QStringList entryList(const QStringList & nameFilters, Filters filters = NoFilter, SortFlags sort = NoSort) const
 */
-HB_FUNC_STATIC( QDIR_ENTRYLIST1 )
-{
-  QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  int par3 = ISNIL(3)? (int) QDir::NoSort : hb_parni(3);
-  if( obj )
-  {
-    RQSTRINGLIST( obj->entryList ( PQSTRINGLIST(1), ISNIL(2)? QDir::NoFilter : (QDir::Filters) hb_parni(2), (QDir::SortFlags) par3 ) );
-  }
-}
-
+$method=|QStringList|entryList,entryList1|const QStringList &,QDir::Filters=QDir::NoFilter,QDir::SortFlags=QDir::NoSort
 
 /*
 QStringList entryList(Filters filters = NoFilter, SortFlags sort = NoSort) const
 */
-HB_FUNC_STATIC( QDIR_ENTRYLIST2 )
-{
-  QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  int par2 = ISNIL(2)? (int) QDir::NoSort : hb_parni(2);
-  if( obj )
-  {
-    RQSTRINGLIST( obj->entryList ( ISNIL(1)? QDir::NoFilter : (QDir::Filters) hb_parni(1), (QDir::SortFlags) par2 ) );
-  }
-}
-
+$method=|QStringList|entryList,entryList2|QDir::Filters=QDir::NoFilter,QDir::SortFlags=QDir::NoSort
 
 //[1]QStringList entryList(const QStringList & nameFilters, Filters filters = NoFilter, SortFlags sort = NoSort) const
 //[2]QStringList entryList(Filters filters = NoFilter, SortFlags sort = NoSort) const
@@ -397,28 +321,12 @@ HB_FUNC_STATIC( QDIR_ENTRYLIST )
 /*
 bool exists(const QString & name) const
 */
-HB_FUNC_STATIC( QDIR_EXISTS1 )
-{
-  QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->exists ( PQSTRING(1) ) );
-  }
-}
-
+$method=|bool|exists,exists1|const QString &
 
 /*
 bool exists() const
 */
-HB_FUNC_STATIC( QDIR_EXISTS2 )
-{
-  QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->exists () );
-  }
-}
-
+$method=|bool|exists,exists2|
 
 //[1]bool exists(const QString & name) const
 //[2]bool exists() const
@@ -438,15 +346,7 @@ HB_FUNC_STATIC( QDIR_EXISTS )
 /*
 QString filePath(const QString & fileName) const
 */
-HB_FUNC_STATIC( QDIR_FILEPATH )
-{
-  QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->filePath ( PQSTRING(1) ) );
-  }
-}
-
+$method=|QString|filePath|const QString &
 
 /*
 Filters filter() const
@@ -460,259 +360,100 @@ HB_FUNC_STATIC( QDIR_FILTER )
   }
 }
 
-
 /*
 bool isAbsolute() const
 */
-HB_FUNC_STATIC( QDIR_ISABSOLUTE )
-{
-  QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isAbsolute () );
-  }
-}
-
+$method=|bool|isAbsolute|
 
 /*
 bool isReadable() const
 */
-HB_FUNC_STATIC( QDIR_ISREADABLE )
-{
-  QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isReadable () );
-  }
-}
-
+$method=|bool|isReadable|
 
 /*
 bool isRelative() const
 */
-HB_FUNC_STATIC( QDIR_ISRELATIVE )
-{
-  QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isRelative () );
-  }
-}
-
+$method=|bool|isRelative|
 
 /*
 bool isRoot() const
 */
-HB_FUNC_STATIC( QDIR_ISROOT )
-{
-  QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isRoot () );
-  }
-}
-
+$method=|bool|isRoot|
 
 /*
 bool makeAbsolute()
 */
-HB_FUNC_STATIC( QDIR_MAKEABSOLUTE )
-{
-  QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->makeAbsolute () );
-  }
-}
-
+$method=|bool|makeAbsolute|
 
 /*
 bool mkdir(const QString & dirName) const
 */
-HB_FUNC_STATIC( QDIR_MKDIR )
-{
-  QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->mkdir ( PQSTRING(1) ) );
-  }
-}
-
+$method=|bool|mkdir|const QString &
 
 /*
 bool mkpath(const QString & dirPath) const
 */
-HB_FUNC_STATIC( QDIR_MKPATH )
-{
-  QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->mkpath ( PQSTRING(1) ) );
-  }
-}
-
+$method=|bool|mkpath|const QString &
 
 /*
 QStringList nameFilters() const
 */
-HB_FUNC_STATIC( QDIR_NAMEFILTERS )
-{
-  QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->nameFilters () );
-  }
-}
-
+$method=|QStringList|nameFilters|
 
 /*
 QString path() const
 */
-HB_FUNC_STATIC( QDIR_PATH )
-{
-  QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->path () );
-  }
-}
-
+$method=|QString|path|
 
 /*
 void refresh() const
 */
-HB_FUNC_STATIC( QDIR_REFRESH )
-{
-  QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->refresh ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|refresh|
 
 /*
 QString relativeFilePath(const QString & fileName) const
 */
-HB_FUNC_STATIC( QDIR_RELATIVEFILEPATH )
-{
-  QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->relativeFilePath ( PQSTRING(1) ) );
-  }
-}
-
+$method=|QString|relativeFilePath|const QString &
 
 /*
 bool remove(const QString & fileName)
 */
-HB_FUNC_STATIC( QDIR_REMOVE )
-{
-  QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->remove ( PQSTRING(1) ) );
-  }
-}
-
-
+$method=|bool|remove|const QString &
 
 /*
 bool rename(const QString & oldName, const QString & newName)
 */
-HB_FUNC_STATIC( QDIR_RENAME )
-{
-  QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->rename ( PQSTRING(1), PQSTRING(2) ) );
-  }
-}
-
+$method=|bool|rename|const QString &,const QString &
 
 /*
 bool rmdir(const QString & dirName) const
 */
-HB_FUNC_STATIC( QDIR_RMDIR )
-{
-  QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->rmdir ( PQSTRING(1) ) );
-  }
-}
-
+$method=|bool|rmdir|const QString &
 
 /*
 bool rmpath(const QString & dirPath) const
 */
-HB_FUNC_STATIC( QDIR_RMPATH )
-{
-  QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->rmpath ( PQSTRING(1) ) );
-  }
-}
-
+$method=|bool|rmpath|const QString &
 
 /*
 void setFilter(Filters filters)
 */
-HB_FUNC_STATIC( QDIR_SETFILTER )
-{
-  QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFilter ( (QDir::Filters) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setFilter|QDir::Filters
 
 /*
 void setNameFilters(const QStringList & nameFilters)
 */
-HB_FUNC_STATIC( QDIR_SETNAMEFILTERS )
-{
-  QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setNameFilters ( PQSTRINGLIST(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setNameFilters|const QStringList &
 
 /*
 void setPath(const QString & path)
 */
-HB_FUNC_STATIC( QDIR_SETPATH )
-{
-  QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPath ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPath|const QString &
 
 /*
 void setSorting(SortFlags sort)
 */
-HB_FUNC_STATIC( QDIR_SETSORTING )
-{
-  QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSorting ( (QDir::SortFlags) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setSorting|QDir::SortFlags
 
 /*
 SortFlags sorting() const
@@ -726,46 +467,25 @@ HB_FUNC_STATIC( QDIR_SORTING )
   }
 }
 
-
-
+/*
+static void addSearchPath(const QString & prefix, const QString & path)
+*/
+$staticMethod=|void|addSearchPath|const QString &,const QString &
 
 /*
-void addSearchPath(const QString & prefix, const QString & path)
+static QString cleanPath(const QString & path)
 */
-HB_FUNC_STATIC( QDIR_ADDSEARCHPATH )
-{
-  QDir::addSearchPath ( PQSTRING(1), PQSTRING(2) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|QString|cleanPath|const QString &
 
 /*
-QString cleanPath(const QString & path)
+static QDir current()
 */
-HB_FUNC_STATIC( QDIR_CLEANPATH )
-{
-  RQSTRING( QDir::cleanPath ( PQSTRING(1) ) );
-}
-
+$staticMethod=|QDir|current|
 
 /*
-QDir current()
+static QString currentPath()
 */
-HB_FUNC_STATIC( QDIR_CURRENT )
-{
-  QDir * ptr = new QDir( QDir::current () );
-  _qt4xhb_createReturnClass ( ptr, "QDIR", true );
-}
-
-
-/*
-QString currentPath()
-*/
-HB_FUNC_STATIC( QDIR_CURRENTPATH )
-{
-  RQSTRING( QDir::currentPath () );
-}
-
+$staticMethod=|QString|currentPath|
 
 /*
 QFileInfoList drives()
@@ -806,70 +526,40 @@ HB_FUNC_STATIC( QDIR_DRIVES )
   hb_itemReturnRelease(pArray);
 }
 
+/*
+static QString fromNativeSeparators(const QString & pathName)
+*/
+$staticMethod=|QString|fromNativeSeparators|const QString &
 
 /*
-QString fromNativeSeparators(const QString & pathName)
+static QDir home()
 */
-HB_FUNC_STATIC( QDIR_FROMNATIVESEPARATORS )
-{
-  RQSTRING( QDir::fromNativeSeparators ( PQSTRING(1) ) );
-}
-
+$staticMethod=|QDir|home|
 
 /*
-QDir home()
+static QString homePath()
 */
-HB_FUNC_STATIC( QDIR_HOME )
-{
-  QDir * ptr = new QDir( QDir::home () );
-  _qt4xhb_createReturnClass ( ptr, "QDIR", true );
-}
-
+$staticMethod=|QString|homePath|
 
 /*
-QString homePath()
+static bool isAbsolutePath(const QString & path)
 */
-HB_FUNC_STATIC( QDIR_HOMEPATH )
-{
-  RQSTRING( QDir::homePath () );
-}
-
+$staticMethod=|bool|isAbsolutePath|const QString &
 
 /*
-bool isAbsolutePath(const QString & path)
+static bool isRelativePath(const QString & path)
 */
-HB_FUNC_STATIC( QDIR_ISABSOLUTEPATH )
-{
-  RBOOL( QDir::isAbsolutePath ( PQSTRING(1) ) );
-}
-
+$staticMethod=|bool|isRelativePath|const QString &
 
 /*
-bool isRelativePath(const QString & path)
+static bool match(const QString & filter, const QString & fileName)
 */
-HB_FUNC_STATIC( QDIR_ISRELATIVEPATH )
-{
-  RBOOL( QDir::isRelativePath ( PQSTRING(1) ) );
-}
-
+$staticMethod=|bool|match,match1|const QString &,const QString &
 
 /*
-bool match(const QString & filter, const QString & fileName)
+static bool match(const QStringList & filters, const QString & fileName)
 */
-HB_FUNC_STATIC( QDIR_MATCH1 )
-{
-  RBOOL( QDir::match ( PQSTRING(1), PQSTRING(2) ) );
-}
-
-
-/*
-bool match(const QStringList & filters, const QString & fileName)
-*/
-HB_FUNC_STATIC( QDIR_MATCH2 )
-{
-  RBOOL( QDir::match ( PQSTRINGLIST(1), PQSTRING(2) ) );
-}
-
+$staticMethod=|bool|match,match2|const QStringList &,const QString &
 
 //[1]bool match(const QString & filter, const QString & fileName)
 //[2]bool match(const QStringList & filters, const QString & fileName)
@@ -887,88 +577,49 @@ HB_FUNC_STATIC( QDIR_MATCH )
 }
 
 /*
-QDir root()
+static QDir root()
 */
-HB_FUNC_STATIC( QDIR_ROOT )
-{
-  QDir * ptr = new QDir( QDir::root () );
-  _qt4xhb_createReturnClass ( ptr, "QDIR", true );
-}
-
+$staticMethod=|QDir|root|
 
 /*
-QString rootPath()
+static QString rootPath()
 */
-HB_FUNC_STATIC( QDIR_ROOTPATH )
-{
-  RQSTRING( QDir::rootPath () );
-}
-
+$staticMethod=|QString|rootPath|
 
 /*
-QStringList searchPaths(const QString & prefix)
+static QStringList searchPaths(const QString & prefix)
 */
-HB_FUNC_STATIC( QDIR_SEARCHPATHS )
-{
-  RQSTRINGLIST( QDir::searchPaths ( PQSTRING(1) ) );
-}
-
+$staticMethod=|QStringList|searchPaths|const QString &
 
 /*
-QChar separator()
+static QChar separator()
 */
-HB_FUNC_STATIC( QDIR_SEPARATOR )
-{
-  QChar * ptr = new QChar( QDir::separator () );
-  _qt4xhb_createReturnClass ( ptr, "QCHAR" );
-}
-
+$staticMethod=|QChar|separator|
 
 /*
-bool setCurrent(const QString & path)
+static bool setCurrent(const QString & path)
 */
-HB_FUNC_STATIC( QDIR_SETCURRENT )
-{
-  RBOOL( QDir::setCurrent ( PQSTRING(1) ) );
-}
-
+$staticMethod=|bool|setCurrent|const QString &
 
 /*
-void setSearchPaths(const QString & prefix, const QStringList & searchPaths)
+static void setSearchPaths(const QString & prefix, const QStringList & searchPaths)
 */
-HB_FUNC_STATIC( QDIR_SETSEARCHPATHS )
-{
-  QDir::setSearchPaths ( PQSTRING(1), PQSTRINGLIST(2) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|void|setSearchPaths|const QString &,const QStringList &
 
 /*
-QDir temp()
+static QDir temp()
 */
-HB_FUNC_STATIC( QDIR_TEMP )
-{
-  QDir * ptr = new QDir( QDir::temp () );
-  _qt4xhb_createReturnClass ( ptr, "QDIR", true );
-}
-
+$staticMethod=|QDir|temp|
 
 /*
-QString tempPath()
+static QString tempPath()
 */
-HB_FUNC_STATIC( QDIR_TEMPPATH )
-{
-  RQSTRING( QDir::tempPath () );
-}
-
+$staticMethod=|QString|tempPath|
 
 /*
-QString toNativeSeparators(const QString & pathName)
+static QString toNativeSeparators(const QString & pathName)
 */
-HB_FUNC_STATIC( QDIR_TONATIVESEPARATORS )
-{
-  RQSTRING( QDir::toNativeSeparators ( PQSTRING(1) ) );
-}
+$staticMethod=|QString|toNativeSeparators|const QString &
 
 $extraMethods
 

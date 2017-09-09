@@ -288,19 +288,10 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETPROGRESSVALUEANDTEXT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString progressText() const
 */
-HB_FUNC_STATIC( QFUTUREINTERFACEBASE_PROGRESSTEXT )
-{
-  QFutureInterfaceBase * obj = (QFutureInterfaceBase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->progressText () );
-  }
-}
-
+$method=|QString|progressText|
 
 /*
 void setExpectedResultCount(int resultCount)

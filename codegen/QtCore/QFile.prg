@@ -32,7 +32,6 @@ CLASS QFile INHERIT QIODevice
    METHOD resize1
    METHOD setFileName
    METHOD setPermissions1
-   METHOD symLinkTarget1
    METHOD unmap
    METHOD unsetError
    METHOD atEnd
@@ -63,6 +62,7 @@ CLASS QFile INHERIT QIODevice
    METHOD resize
    METHOD setPermissions2
    METHOD setPermissions
+   METHOD symLinkTarget1
    METHOD symLinkTarget2
    METHOD symLinkTarget
    DESTRUCTOR destroyObject
@@ -138,15 +138,7 @@ $deleteMethod
 /*
 bool copy ( const QString & newName )
 */
-HB_FUNC_STATIC( QFILE_COPY1 )
-{
-  QFile * obj = (QFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->copy ( PQSTRING(1) ) );
-  }
-}
-
+$method=|bool|copy,copy1|const QString &
 
 /*
 FileError error () const
@@ -173,19 +165,10 @@ HB_FUNC_STATIC( QFILE_EXISTS1 )
   }
 }
 
-
 /*
 QString fileName () const
 */
-HB_FUNC_STATIC( QFILE_FILENAME )
-{
-  QFile * obj = (QFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->fileName () );
-  }
-}
-
+$method=|QString|fileName|
 
 /*
 bool flush ()
@@ -212,20 +195,10 @@ HB_FUNC_STATIC( QFILE_HANDLE )
   }
 }
 
-
 /*
 bool link ( const QString & linkName )
 */
-HB_FUNC_STATIC( QFILE_LINK1 )
-{
-  QFile * obj = (QFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->link ( PQSTRING(1) ) );
-  }
-}
-
-
+$method=|bool|link,link1|const QString &
 
 /*
 bool open ( FILE * fh, OpenMode mode )
@@ -307,19 +280,10 @@ HB_FUNC_STATIC( QFILE_REMOVE1 )
   }
 }
 
-
 /*
 bool rename ( const QString & newName )
 */
-HB_FUNC_STATIC( QFILE_RENAME1 )
-{
-  QFile * obj = (QFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->rename ( PQSTRING(1) ) );
-  }
-}
-
+$method=|bool|rename,rename1|const QString &
 
 /*
 bool resize ( qint64 sz )
@@ -333,20 +297,10 @@ HB_FUNC_STATIC( QFILE_RESIZE1 )
   }
 }
 
-
 /*
 void setFileName ( const QString & name )
 */
-HB_FUNC_STATIC( QFILE_SETFILENAME )
-{
-  QFile * obj = (QFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFileName ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setFileName|const QString &
 
 /*
 bool setPermissions ( Permissions permissions )
@@ -359,20 +313,6 @@ HB_FUNC_STATIC( QFILE_SETPERMISSIONS1 )
     RBOOL( obj->setPermissions ( (QFile::Permissions) hb_parni(1) ) );
   }
 }
-
-
-/*
-QString symLinkTarget () const
-*/
-HB_FUNC_STATIC( QFILE_SYMLINKTARGET1 )
-{
-  QFile * obj = (QFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->symLinkTarget () );
-  }
-}
-
 
 /*
 bool unmap ( uchar * address )
@@ -512,7 +452,7 @@ HB_FUNC_STATIC( QFILE_SIZE )
 // Static Public Members
 
 /*
-bool copy ( const QString & fileName, const QString & newName )
+static bool copy ( const QString & fileName, const QString & newName )
 */
 HB_FUNC_STATIC( QFILE_COPY2 )
 {
@@ -536,22 +476,14 @@ HB_FUNC_STATIC( QFILE_COPY )
 }
 
 /*
-QString decodeName ( const QByteArray & localFileName )
+static QString decodeName ( const QByteArray & localFileName )
 */
-HB_FUNC_STATIC( QFILE_DECODENAME1 )
-{
-  RQSTRING( QFile::decodeName ( *PQBYTEARRAY(1) ) );
-}
-
+$staticMethod=|QString|decodeName,decodeName1|const QByteArray &
 
 /*
-QString decodeName ( const char * localFileName )
+static QString decodeName ( const char * localFileName )
 */
-HB_FUNC_STATIC( QFILE_DECODENAME2 )
-{
-  RQSTRING( QFile::decodeName ( (const char *) hb_parc(1) ) );
-}
-
+$staticMethod=|QString|decodeName,decodeName2|const char *
 
 //[1]QString decodeName ( const QByteArray & localFileName )
 //[2]QString decodeName ( const char * localFileName )
@@ -569,23 +501,14 @@ HB_FUNC_STATIC( QFILE_DECODENAME )
 }
 
 /*
-QByteArray encodeName ( const QString & fileName )
+static QByteArray encodeName ( const QString & fileName )
 */
-HB_FUNC_STATIC( QFILE_ENCODENAME )
-{
-  QByteArray * ptr = new QByteArray( QFile::encodeName ( PQSTRING(1) ) );
-  _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-}
-
+$staticMethod=|QByteArray|encodeName|const QString &
 
 /*
-bool exists ( const QString & fileName )
+static bool exists ( const QString & fileName )
 */
-HB_FUNC_STATIC( QFILE_EXISTS2 )
-{
-  RBOOL( QFile::exists ( PQSTRING(1) ) );
-}
-
+$staticMethod=|bool|exists,exists2|const QString &
 
 //[1]bool exists () const
 //[2]bool exists ( const QString & fileName )
@@ -603,13 +526,9 @@ HB_FUNC_STATIC( QFILE_EXISTS )
 }
 
 /*
-bool link ( const QString & fileName, const QString & linkName )
+static bool link ( const QString & fileName, const QString & linkName )
 */
-HB_FUNC_STATIC( QFILE_LINK2 )
-{
-  RBOOL( QFile::link ( PQSTRING(1), PQSTRING(2) ) );
-}
-
+$staticMethod=|bool|link,link2|const QString &,const QString &
 
 //[1]bool link ( const QString & linkName )
 //[2]bool link ( const QString & fileName, const QString & linkName )
@@ -627,7 +546,7 @@ HB_FUNC_STATIC( QFILE_LINK )
 }
 
 /*
-Permissions permissions ( const QString & fileName )
+static Permissions permissions ( const QString & fileName )
 */
 HB_FUNC_STATIC( QFILE_PERMISSIONS2 )
 {
@@ -651,13 +570,9 @@ HB_FUNC_STATIC( QFILE_PERMISSIONS )
 }
 
 /*
-bool remove ( const QString & fileName )
+static bool remove ( const QString & fileName )
 */
-HB_FUNC_STATIC( QFILE_REMOVE2 )
-{
-  RBOOL( QFile::remove ( PQSTRING(1) ) );
-}
-
+$staticMethod=|bool|remove,remove2|const QString &
 
 //[1]bool remove ()
 //[2]bool remove ( const QString & fileName )
@@ -675,13 +590,9 @@ HB_FUNC_STATIC( QFILE_REMOVE )
 }
 
 /*
-bool rename ( const QString & oldName, const QString & newName )
+static bool rename ( const QString & oldName, const QString & newName )
 */
-HB_FUNC_STATIC( QFILE_RENAME2 )
-{
-  RBOOL( QFile::rename ( PQSTRING(1), PQSTRING(2) ) );
-}
-
+$staticMethod=|bool|rename,rename2|const QString &,const QString &
 
 //[1]bool rename ( const QString & newName )
 //[2]bool rename ( const QString & oldName, const QString & newName )
@@ -699,13 +610,9 @@ HB_FUNC_STATIC( QFILE_RENAME )
 }
 
 /*
-bool resize ( const QString & fileName, qint64 sz )
+static bool resize ( const QString & fileName, qint64 sz )
 */
-HB_FUNC_STATIC( QFILE_RESIZE2 )
-{
-  RBOOL( QFile::resize ( PQSTRING(1), PQINT64(2) ) );
-}
-
+$staticMethod=|bool|resize,resize2|const QString &,qint64
 
 //[1]bool resize ( qint64 sz )
 //[2]bool resize ( const QString & fileName, qint64 sz )
@@ -722,16 +629,10 @@ HB_FUNC_STATIC( QFILE_RESIZE )
   }
 }
 
-
-
 /*
-bool setPermissions ( const QString & fileName, Permissions permissions )
+static bool setPermissions ( const QString & fileName, Permissions permissions )
 */
-HB_FUNC_STATIC( QFILE_SETPERMISSIONS2 )
-{
-  RBOOL( QFile::setPermissions ( PQSTRING(1), (QFile::Permissions) hb_parni(2) ) );
-}
-
+$staticMethod=|bool|setPermissions|const QString &,QFile::Permissions
 
 //[1]bool setPermissions ( Permissions permissions )
 //[2]bool setPermissions ( const QString & fileName, Permissions permissions )
@@ -749,13 +650,14 @@ HB_FUNC_STATIC( QFILE_SETPERMISSIONS )
 }
 
 /*
-QString symLinkTarget ( const QString & fileName )
+QString symLinkTarget () const
 */
-HB_FUNC_STATIC( QFILE_SYMLINKTARGET2 )
-{
-  RQSTRING( QFile::symLinkTarget ( PQSTRING(1) ) );
-}
+$method=|QString|symLinkTarget,symLinkTarget1|
 
+/*
+static QString symLinkTarget ( const QString & fileName )
+*/
+$staticMethod=|QString|symLinkTarget,symLinkTarget2|const QString &
 
 //[1]QString symLinkTarget () const
 //[2]QString symLinkTarget ( const QString & fileName )
@@ -771,9 +673,5 @@ HB_FUNC_STATIC( QFILE_SYMLINKTARGET )
     HB_FUNC_EXEC( QFILE_SYMLINKTARGET2 );
   }
 }
-
-//Signals
-
-
 
 #pragma ENDDUMP

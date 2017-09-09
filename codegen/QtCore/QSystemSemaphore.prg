@@ -72,32 +72,15 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_ERROR )
   }
 }
 
-
 /*
 QString errorString () const
 */
-HB_FUNC_STATIC( QSYSTEMSEMAPHORE_ERRORSTRING )
-{
-  QSystemSemaphore * obj = (QSystemSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->errorString () );
-  }
-}
-
+$method=|QString|errorString|
 
 /*
 QString key () const
 */
-HB_FUNC_STATIC( QSYSTEMSEMAPHORE_KEY )
-{
-  QSystemSemaphore * obj = (QSystemSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->key () );
-  }
-}
-
+$method=|QString|key|
 
 /*
 bool release ( int n = 1 )

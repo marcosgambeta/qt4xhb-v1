@@ -84,16 +84,7 @@ $deleteMethod
 /*
 QByteArray fromUnicode(const QString & str)
 */
-HB_FUNC_STATIC( QTEXTENCODER_FROMUNICODE1 )
-{
-  QTextEncoder * obj = (QTextEncoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->fromUnicode ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray|fromUnicode,fromUnicode1|const QString &
 
 /*
 QByteArray fromUnicode(const QChar * uc, int len)

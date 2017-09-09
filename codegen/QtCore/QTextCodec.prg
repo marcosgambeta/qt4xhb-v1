@@ -84,19 +84,10 @@ HB_FUNC_STATIC( QTEXTCODEC_CANENCODE1 )
   }
 }
 
-
 /*
 bool canEncode(const QString&) const
 */
-HB_FUNC_STATIC( QTEXTCODEC_CANENCODE2 )
-{
-  QTextCodec * obj = (QTextCodec *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->canEncode ( PQSTRING(1) ) );
-  }
-}
-
+$method=|bool|canEncode,canEncode2|const QString &
 
 //[1]bool canEncode(QChar) const
 //[2]bool canEncode(const QString&) const
@@ -159,17 +150,7 @@ HB_FUNC_STATIC( QTEXTCODEC_TOUNICODE )
 /*
 QByteArray fromUnicode(const QString& uc) const
 */
-HB_FUNC_STATIC( QTEXTCODEC_FROMUNICODE1 )
-{
-  QTextCodec * obj = (QTextCodec *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->fromUnicode ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
-
+$method=|QByteArray|fromUnicode,fromUnicode1|const QString &
 
 //[1]QByteArray fromUnicode(const QString& uc) const
 //[2]QByteArray fromUnicode(const QChar *in, int length, ConverterState *state = 0) const

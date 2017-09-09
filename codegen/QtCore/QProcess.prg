@@ -170,20 +170,10 @@ HB_FUNC_STATIC( QPROCESS_EXITSTATUS )
   }
 }
 
-
 /*
 QString nativeArguments () const
 */
-HB_FUNC_STATIC( QPROCESS_NATIVEARGUMENTS )
-{
-  QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->nativeArguments () );
-  }
-}
-
-
+$method=|QString|nativeArguments|
 
 /*
 ProcessChannelMode processChannelMode () const
@@ -266,20 +256,10 @@ HB_FUNC_STATIC( QPROCESS_SETENVIRONMENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setNativeArguments ( const QString & arguments )
 */
-HB_FUNC_STATIC( QPROCESS_SETNATIVEARGUMENTS )
-{
-  QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setNativeArguments ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setNativeArguments|const QString &
 
 /*
 void setProcessChannelMode ( ProcessChannelMode mode )
@@ -336,20 +316,10 @@ HB_FUNC_STATIC( QPROCESS_SETSTANDARDERRORFILE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setStandardInputFile ( const QString & fileName )
 */
-HB_FUNC_STATIC( QPROCESS_SETSTANDARDINPUTFILE )
-{
-  QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setStandardInputFile ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setStandardInputFile|const QString &
 
 /*
 void setStandardOutputFile ( const QString & fileName, OpenMode mode = Truncate )
@@ -379,20 +349,10 @@ HB_FUNC_STATIC( QPROCESS_SETSTANDARDOUTPUTPROCESS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setWorkingDirectory ( const QString & dir )
 */
-HB_FUNC_STATIC( QPROCESS_SETWORKINGDIRECTORY )
-{
-  QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setWorkingDirectory ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setWorkingDirectory|const QString &
 
 /*
 void start ( const QString & program, const QStringList & arguments, OpenMode mode = ReadWrite )
@@ -476,19 +436,10 @@ HB_FUNC_STATIC( QPROCESS_WAITFORSTARTED )
   }
 }
 
-
 /*
 QString workingDirectory () const
 */
-HB_FUNC_STATIC( QPROCESS_WORKINGDIRECTORY )
-{
-  QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->workingDirectory () );
-  }
-}
-
+$method=|QString|workingDirectory|
 
 /*
 virtual bool atEnd () const
@@ -612,35 +563,17 @@ HB_FUNC_STATIC( QPROCESS_KILL )
 /*
 void terminate ()
 */
-HB_FUNC_STATIC( QPROCESS_TERMINATE )
-{
-  QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->terminate ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|terminate|
 
 /*
-int execute ( const QString & program, const QStringList & arguments )
+static int execute ( const QString & program, const QStringList & arguments )
 */
-HB_FUNC_STATIC( QPROCESS_EXECUTE1 )
-{
-  RINT( QProcess::execute ( PQSTRING(1), PQSTRINGLIST(2) ) );
-}
-
+$staticMethod=|int|execute,execute1|const QString &,const QStringList &
 
 /*
-int execute ( const QString & program )
+static int execute ( const QString & program )
 */
-HB_FUNC_STATIC( QPROCESS_EXECUTE2 )
-{
-  RINT( QProcess::execute ( PQSTRING(1) ) );
-}
-
+$staticMethod=|int|execute,execute2|const QString &
 
 //[1]int execute ( const QString & program, const QStringList & arguments )
 //[2]int execute ( const QString & program )
@@ -667,7 +600,6 @@ HB_FUNC_STATIC( QPROCESS_STARTDETACHED1 )
   hb_stornll( par4, 4 );
 }
 
-
 /*
 bool startDetached ( const QString & program, const QStringList & arguments )
 */
@@ -676,7 +608,6 @@ HB_FUNC_STATIC( QPROCESS_STARTDETACHED2 )
   RBOOL( QProcess::startDetached ( PQSTRING(1), PQSTRINGLIST(2) ) );
 }
 
-
 /*
 bool startDetached ( const QString & program )
 */
@@ -684,7 +615,6 @@ HB_FUNC_STATIC( QPROCESS_STARTDETACHED3 )
 {
   RBOOL( QProcess::startDetached ( PQSTRING(1) ) );
 }
-
 
 //[1]bool startDetached ( const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid = 0 )
 //[2]bool startDetached ( const QString & program, const QStringList & arguments )
@@ -707,15 +637,8 @@ HB_FUNC_STATIC( QPROCESS_STARTDETACHED )
 }
 
 /*
-QStringList systemEnvironment ()
+static QStringList systemEnvironment ()
 */
-HB_FUNC_STATIC( QPROCESS_SYSTEMENVIRONMENT )
-{
-  RQSTRINGLIST( QProcess::systemEnvironment () );
-}
-
-
-
-
+$staticMethod=|QStringList|systemEnvironment|
 
 #pragma ENDDUMP

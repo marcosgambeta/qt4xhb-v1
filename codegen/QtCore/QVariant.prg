@@ -1026,19 +1026,10 @@ HB_FUNC_STATIC( QVARIANT_TOSIZEF )
   }
 }
 
-
 /*
 QString toString () const
 */
-HB_FUNC_STATIC( QVARIANT_TOSTRING )
-{
-  QVariant * obj = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->toString () );
-  }
-}
-
+$method=|QString|toString|
 
 /*
 QStringList toStringList () const

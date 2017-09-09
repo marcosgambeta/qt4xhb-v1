@@ -506,19 +506,10 @@ HB_FUNC_STATIC( QTEXTSTREAM_READLINE )
   }
 }
 
-
 /*
 QString readAll()
 */
-HB_FUNC_STATIC( QTEXTSTREAM_READALL )
-{
-  QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->readAll () );
-  }
-}
-
+$method=|QString|readAll|
 
 /*
 QString read(qint64 maxlen)

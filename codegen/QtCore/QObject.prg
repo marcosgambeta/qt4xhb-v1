@@ -1819,19 +1819,10 @@ HB_FUNC_STATIC( QOBJECT_MOVETOTHREAD )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString objectName () const
 */
-HB_FUNC_STATIC( QOBJECT_OBJECTNAME )
-{
-  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->objectName () );
-  }
-}
-
+$method=|QString|objectName|
 
 /*
 QObject * parent () const

@@ -37,15 +37,7 @@ $deleteMethod
 /*
 virtual QAbstractFileEngine * create ( const QString & fileName ) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTFILEENGINEHANDLER_CREATE )
-{
-  QAbstractFileEngineHandler * obj = (QAbstractFileEngineHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAbstractFileEngine * ptr = obj->create ( PQSTRING(1) );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTFILEENGINE" );
-  }
-}
+$virtualMethod=|QAbstractFileEngine *|create|const QString &
 
 $extraMethods
 

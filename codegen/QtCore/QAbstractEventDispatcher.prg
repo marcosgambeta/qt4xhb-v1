@@ -46,16 +46,7 @@ $deleteMethod
 /*
 bool filterEvent ( void * message )
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_FILTEREVENT )
-{
-  QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    void * par1 = (void *) hb_parptr(1);
-    RBOOL( obj->filterEvent ( par1 ) );
-  }
-}
-
+$method=|bool|filterEvent|void *
 
 /*
 virtual void flush () = 0
@@ -70,19 +61,10 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_FLUSH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual bool hasPendingEvents () = 0
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_HASPENDINGEVENTS )
-{
-  QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasPendingEvents () );
-  }
-}
-
+$virtualMethod=|bool|hasPendingEvents|
 
 /*
 virtual void interrupt () = 0
@@ -97,19 +79,10 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_INTERRUPT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual bool processEvents ( QEventLoop::ProcessEventsFlags flags ) = 0
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_PROCESSEVENTS )
-{
-  QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->processEvents ( (QEventLoop::ProcessEventsFlags) hb_parni(1) ) );
-  }
-}
-
+$virtualMethod=|bool|processEvents|QEventLoop::ProcessEventsFlags
 
 /*
 virtual void registerSocketNotifier ( QSocketNotifier * notifier ) = 0
@@ -184,32 +157,15 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERSOCKETNOTIFIER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual bool unregisterTimer ( int timerId ) = 0
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERTIMER )
-{
-  QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->unregisterTimer ( PINT(1) ) );
-  }
-}
-
+$virtualMethod=|bool|unregisterTimer|int
 
 /*
 virtual bool unregisterTimers ( QObject * object ) = 0
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERTIMERS )
-{
-  QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->unregisterTimers ( PQOBJECT(1) ) );
-  }
-}
-
+$virtualMethod=|bool|unregisterTimers|QObject *
 
 /*
 virtual void wakeUp () = 0

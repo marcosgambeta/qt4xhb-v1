@@ -294,32 +294,15 @@ HB_FUNC_STATIC( QTIME_START )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString toString(const QString & format) const
 */
-HB_FUNC_STATIC( QTIME_TOSTRING1 )
-{
-  QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->toString ( PQSTRING(1) ) );
-  }
-}
-
+$method=|QString|toString,toString1|const QString &
 
 /*
 QString toString(Qt::DateFormat format = Qt::TextDate) const
 */
-HB_FUNC_STATIC( QTIME_TOSTRING2 )
-{
-  QTime * obj = (QTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->toString ( ISNIL(1)? Qt::TextDate : (Qt::DateFormat) hb_parni(1) ) );
-  }
-}
-
+$method=|QString|toString,toString2|Qt::DateFormat=Qt::TextDate
 
 //[1]QString toString(const QString & format) const
 //[2]QString toString(Qt::DateFormat format = Qt::TextDate) const

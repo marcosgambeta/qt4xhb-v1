@@ -243,19 +243,10 @@ HB_FUNC_STATIC( QFSFILEENGINE_FILEFLAGS )
   }
 }
 
-
 /*
 virtual QString fileName ( FileName file ) const
 */
-HB_FUNC_STATIC( QFSFILEENGINE_FILENAME )
-{
-  QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->fileName ( (QAbstractFileEngine::FileName) hb_parni(1) ) );
-  }
-}
-
+$virtualMethod=|QString|fileName|QAbstractFileEngine::FileName
 
 /*
 virtual QDateTime fileTime ( FileTime time ) const
@@ -348,20 +339,10 @@ HB_FUNC_STATIC( QFSFILEENGINE_MKDIR )
   }
 }
 
-
-
 /*
 virtual QString owner ( FileOwner own ) const
 */
-HB_FUNC_STATIC( QFSFILEENGINE_OWNER )
-{
-  QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->owner ( (QAbstractFileEngine::FileOwner) hb_parni(1) ) );
-  }
-}
-
+$virtualMethod=|QString|owner|QAbstractFileEngine::FileOwner
 
 /*
 virtual uint ownerId ( FileOwner own ) const
@@ -547,10 +528,8 @@ HB_FUNC_STATIC( QFSFILEENGINE_WRITE )
   }
 }
 
-
-
 /*
-QString currentPath ( const QString & fileName = QString() )
+static QString currentPath ( const QString & fileName = QString() )
 */
 HB_FUNC_STATIC( QFSFILEENGINE_CURRENTPATH )
 {
@@ -597,24 +576,15 @@ HB_FUNC_STATIC( QFSFILEENGINE_DRIVES )
   hb_itemReturnRelease(pArray);
 }
 
+/*
+static QString homePath ()
+*/
+$staticMethod=|QString|homePath|
 
 /*
-QString homePath ()
+static QString rootPath ()
 */
-HB_FUNC_STATIC( QFSFILEENGINE_HOMEPATH )
-{
-  RQSTRING( QFSFileEngine::homePath () );
-}
-
-
-/*
-QString rootPath ()
-*/
-HB_FUNC_STATIC( QFSFILEENGINE_ROOTPATH )
-{
-  RQSTRING( QFSFileEngine::rootPath () );
-}
-
+$staticMethod=|QString|rootPath|
 
 /*
 bool setCurrentPath ( const QString & path )
@@ -624,16 +594,9 @@ HB_FUNC_STATIC( QFSFILEENGINE_SETCURRENTPATH )
   RBOOL( QFSFileEngine::setCurrentPath ( PQSTRING(1) ) );
 }
 
-
 /*
-QString tempPath ()
+static QString tempPath ()
 */
-HB_FUNC_STATIC( QFSFILEENGINE_TEMPPATH )
-{
-  RQSTRING( QFSFileEngine::tempPath () );
-}
-
-
-
+$staticMethod=|QString|tempPath|
 
 #pragma ENDDUMP

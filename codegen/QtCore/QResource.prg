@@ -59,15 +59,7 @@ $deleteMethod
 /*
 QString absoluteFilePath () const
 */
-HB_FUNC_STATIC( QRESOURCE_ABSOLUTEFILEPATH )
-{
-  QResource * obj = (QResource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->absoluteFilePath () );
-  }
-}
-
+$method=|QString|absoluteFilePath|
 
 /*
 const uchar * data () const
@@ -82,19 +74,10 @@ HB_FUNC_STATIC( QRESOURCE_DATA )
   }
 }
 
-
 /*
 QString fileName () const
 */
-HB_FUNC_STATIC( QRESOURCE_FILENAME )
-{
-  QResource * obj = (QResource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->fileName () );
-  }
-}
-
+$method=|QString|fileName|
 
 /*
 bool isCompressed () const
@@ -135,20 +118,10 @@ HB_FUNC_STATIC( QRESOURCE_LOCALE )
   }
 }
 
-
 /*
 void setFileName ( const QString & file )
 */
-HB_FUNC_STATIC( QRESOURCE_SETFILENAME )
-{
-  QResource * obj = (QResource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFileName ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setFileName|const QString &
 
 /*
 void setLocale ( const QLocale & locale )

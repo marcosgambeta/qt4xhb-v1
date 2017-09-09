@@ -319,32 +319,15 @@ HB_FUNC_STATIC( QDATE_TOJULIANDAY )
   }
 }
 
-
 /*
 QString toString ( const QString & format ) const
 */
-HB_FUNC_STATIC( QDATE_TOSTRING1 )
-{
-  QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->toString ( PQSTRING(1) ) );
-  }
-}
-
+$method=|QString|toString,toString1|const QString &
 
 /*
 QString toString ( Qt::DateFormat format = Qt::TextDate ) const
 */
-HB_FUNC_STATIC( QDATE_TOSTRING2 )
-{
-  QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->toString ( ISNIL(1)? Qt::TextDate : (Qt::DateFormat) hb_parni(1) ) );
-  }
-}
-
+$method=|QString|toString,toString2|Qt::DateFormat=Qt::TextDate
 
 //[1]QString toString ( const QString & format ) const
 //[2]QString toString ( Qt::DateFormat format = Qt::TextDate ) const
@@ -479,22 +462,14 @@ HB_FUNC_STATIC( QDATE_ISVALID )
 }
 
 /*
-QString longDayName ( int weekday )
+static QString longDayName ( int weekday )
 */
-HB_FUNC_STATIC( QDATE_LONGDAYNAME1 )
-{
-  RQSTRING( QDate::longDayName ( PINT(1) ) );
-}
-
+$staticMethod=|QString|longDayName,longDayName1|int
 
 /*
-QString longDayName ( int weekday, MonthNameType type )
+static QString longDayName ( int weekday, MonthNameType type )
 */
-HB_FUNC_STATIC( QDATE_LONGDAYNAME2 )
-{
-  RQSTRING( QDate::longDayName ( PINT(1), (QDate::MonthNameType) hb_parni(2) ) );
-}
-
+$staticMethod=|QString|longDayName,longDayName2|int,QDate::MonthNameType
 
 //[1]QString longDayName ( int weekday )
 //[2]QString longDayName ( int weekday, MonthNameType type )
@@ -512,22 +487,14 @@ HB_FUNC_STATIC( QDATE_LONGDAYNAME )
 }
 
 /*
-QString longMonthName ( int month )
+static QString longMonthName ( int month )
 */
-HB_FUNC_STATIC( QDATE_LONGMONTHNAME1 )
-{
-  RQSTRING( QDate::longMonthName ( PINT(1) ) );
-}
-
+$staticMethod=|QString|longMonthName,longMonthName1|int
 
 /*
-QString longMonthName ( int month, MonthNameType type )
+static QString longMonthName ( int month, MonthNameType type )
 */
-HB_FUNC_STATIC( QDATE_LONGMONTHNAME2 )
-{
-  RQSTRING( QDate::longMonthName ( PINT(1), (QDate::MonthNameType) hb_parni(2) ) );
-}
-
+$staticMethod=|QString|longMonthName,longMonthName2|int,QDate::MonthNameType
 
 //[1]QString longMonthName ( int month )
 //[2]QString longMonthName ( int month, MonthNameType type )
@@ -545,22 +512,14 @@ HB_FUNC_STATIC( QDATE_LONGMONTHNAME )
 }
 
 /*
-QString shortDayName ( int weekday )
+static QString shortDayName ( int weekday )
 */
-HB_FUNC_STATIC( QDATE_SHORTDAYNAME1 )
-{
-  RQSTRING( QDate::shortDayName ( PINT(1) ) );
-}
-
+$staticMethod=|QString|shortDayName,shortDayName1|int
 
 /*
-QString shortDayName ( int weekday, MonthNameType type )
+static QString shortDayName ( int weekday, MonthNameType type )
 */
-HB_FUNC_STATIC( QDATE_SHORTDAYNAME2 )
-{
-  RQSTRING( QDate::shortDayName ( PINT(1), (QDate::MonthNameType) hb_parni(2) ) );
-}
-
+$staticMethod=|QString|shortDayName,shortDayName2|int,QDate::MonthNameType
 
 //[1]QString shortDayName ( int weekday )
 //[2]QString shortDayName ( int weekday, MonthNameType type )
@@ -578,22 +537,14 @@ HB_FUNC_STATIC( QDATE_SHORTDAYNAME )
 }
 
 /*
-QString shortMonthName ( int month )
+static QString shortMonthName ( int month )
 */
-HB_FUNC_STATIC( QDATE_SHORTMONTHNAME1 )
-{
-  RQSTRING( QDate::shortMonthName ( PINT(1) ) );
-}
-
+$staticMethod=|QString|shortMonthName,shortMonthName1|int
 
 /*
-QString shortMonthName ( int month, MonthNameType type )
+static QString shortMonthName ( int month, MonthNameType type )
 */
-HB_FUNC_STATIC( QDATE_SHORTMONTHNAME2 )
-{
-  RQSTRING( QDate::shortMonthName ( PINT(1), (QDate::MonthNameType) hb_parni(2) ) );
-}
-
+$staticMethod=|QString|shortMonthName,shortMonthName2|int,QDate::MonthNameType
 
 //[1]QString shortMonthName ( int month )
 //[2]QString shortMonthName ( int month, MonthNameType type )

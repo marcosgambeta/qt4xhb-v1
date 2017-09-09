@@ -54,32 +54,15 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_CURRENTFILEINFO )
   }
 }
 
-
 /*
 virtual QString currentFileName () const = 0
 */
-HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_CURRENTFILENAME )
-{
-  QAbstractFileEngineIterator * obj = (QAbstractFileEngineIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->currentFileName () );
-  }
-}
-
+$virtualMethod=|QString|currentFileName|
 
 /*
 QString currentFilePath () const
 */
-HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_CURRENTFILEPATH )
-{
-  QAbstractFileEngineIterator * obj = (QAbstractFileEngineIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->currentFilePath () );
-  }
-}
-
+$method=|QString|currentFilePath|
 
 /*
 QDir::Filters filters () const
@@ -93,19 +76,10 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_FILTERS )
   }
 }
 
-
 /*
 virtual bool hasNext () const = 0
 */
-HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_HASNEXT )
-{
-  QAbstractFileEngineIterator * obj = (QAbstractFileEngineIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasNext () );
-  }
-}
-
+$virtualMethod=|bool|hasNext|
 
 /*
 QStringList nameFilters () const
@@ -119,31 +93,15 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_NAMEFILTERS )
   }
 }
 
-
 /*
 virtual QString next () = 0
 */
-HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_NEXT )
-{
-  QAbstractFileEngineIterator * obj = (QAbstractFileEngineIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->next () );
-  }
-}
-
+$virtualMethod=|QString|next|
 
 /*
 QString path () const
 */
-HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_PATH )
-{
-  QAbstractFileEngineIterator * obj = (QAbstractFileEngineIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->path () );
-  }
-}
+$method=|QString|path|
 
 $extraMethods
 

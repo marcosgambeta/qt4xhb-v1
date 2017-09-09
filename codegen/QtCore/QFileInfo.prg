@@ -185,58 +185,25 @@ HB_FUNC_STATIC( QFILEINFO_ABSOLUTEDIR )
   }
 }
 
-
 /*
 QString absoluteFilePath() const
 */
-HB_FUNC_STATIC( QFILEINFO_ABSOLUTEFILEPATH )
-{
-  QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->absoluteFilePath () );
-  }
-}
-
+$method=|QString|absoluteFilePath|
 
 /*
 QString absolutePath() const
 */
-HB_FUNC_STATIC( QFILEINFO_ABSOLUTEPATH )
-{
-  QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->absolutePath () );
-  }
-}
-
+$method=|QString|absolutePath|
 
 /*
 QString baseName() const
 */
-HB_FUNC_STATIC( QFILEINFO_BASENAME )
-{
-  QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->baseName () );
-  }
-}
-
+$method=|QString|baseName|
 
 /*
 QString bundleName() const
 */
-HB_FUNC_STATIC( QFILEINFO_BUNDLENAME )
-{
-  QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->bundleName () );
-  }
-}
-
+$method=|QString|bundleName|
 
 /*
 bool caching() const
@@ -250,58 +217,25 @@ HB_FUNC_STATIC( QFILEINFO_CACHING )
   }
 }
 
-
 /*
 QString canonicalFilePath() const
 */
-HB_FUNC_STATIC( QFILEINFO_CANONICALFILEPATH )
-{
-  QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->canonicalFilePath () );
-  }
-}
-
+$method=|QString|canonicalFilePath|
 
 /*
 QString canonicalPath() const
 */
-HB_FUNC_STATIC( QFILEINFO_CANONICALPATH )
-{
-  QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->canonicalPath () );
-  }
-}
-
+$method=|QString|canonicalPath|
 
 /*
 QString completeBaseName() const
 */
-HB_FUNC_STATIC( QFILEINFO_COMPLETEBASENAME )
-{
-  QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->completeBaseName () );
-  }
-}
-
+$method=|QString|completeBaseName|
 
 /*
 QString completeSuffix() const
 */
-HB_FUNC_STATIC( QFILEINFO_COMPLETESUFFIX )
-{
-  QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->completeSuffix () );
-  }
-}
-
+$method=|QString|completeSuffix|
 
 /*
 QDateTime created() const
@@ -343,45 +277,20 @@ HB_FUNC_STATIC( QFILEINFO_EXISTS )
   }
 }
 
-
 /*
 QString fileName() const
 */
-HB_FUNC_STATIC( QFILEINFO_FILENAME )
-{
-  QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->fileName () );
-  }
-}
-
+$method=|QString|fileName|
 
 /*
 QString filePath() const
 */
-HB_FUNC_STATIC( QFILEINFO_FILEPATH )
-{
-  QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->filePath () );
-  }
-}
-
+$method=|QString|filePath|
 
 /*
 QString group() const
 */
-HB_FUNC_STATIC( QFILEINFO_GROUP )
-{
-  QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->group () );
-  }
-}
-
+$method=|QString|group|
 
 /*
 uint groupId() const
@@ -580,19 +489,10 @@ HB_FUNC_STATIC( QFILEINFO_MAKEABSOLUTE )
   }
 }
 
-
 /*
 QString owner() const
 */
-HB_FUNC_STATIC( QFILEINFO_OWNER )
-{
-  QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->owner () );
-  }
-}
-
+$method=|QString|owner|
 
 /*
 uint ownerId() const
@@ -606,19 +506,10 @@ HB_FUNC_STATIC( QFILEINFO_OWNERID )
   }
 }
 
-
 /*
 QString path() const
 */
-HB_FUNC_STATIC( QFILEINFO_PATH )
-{
-  QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->path () );
-  }
-}
-
+$method=|QString|path|
 
 /*
 bool permission(QFile::Permissions permissions) const
@@ -748,32 +639,15 @@ HB_FUNC_STATIC( QFILEINFO_SIZE )
   }
 }
 
-
 /*
 QString suffix() const
 */
-HB_FUNC_STATIC( QFILEINFO_SUFFIX )
-{
-  QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->suffix () );
-  }
-}
-
-
+$method=|QString|suffix|
 
 /*
 QString symLinkTarget() const
 */
-HB_FUNC_STATIC( QFILEINFO_SYMLINKTARGET )
-{
-  QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->symLinkTarget () );
-  }
-}
+$method=|QString|symLinkTarget|
 
 $extraMethods
 

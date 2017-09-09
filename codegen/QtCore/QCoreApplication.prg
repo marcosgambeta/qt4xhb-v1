@@ -106,215 +106,110 @@ HB_FUNC_STATIC( QCOREAPPLICATION_FILTEREVENT )
   }
 }
 
-
 /*
 virtual bool notify ( QObject * receiver, QEvent * event )
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_NOTIFY )
-{
-  QCoreApplication * obj = (QCoreApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->notify ( PQOBJECT(1), PQEVENT(2) ) );
-  }
-}
-
-
-
+$virtualMethod=|bool|notify|QObject *,QEvent *
 
 /*
 void quit ()
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_QUIT )
-{
-  QCoreApplication * obj = (QCoreApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->quit ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|quit|
 
 /*
-void addLibraryPath ( const QString & path )
+static void addLibraryPath ( const QString & path )
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_ADDLIBRARYPATH )
-{
-  QCoreApplication::addLibraryPath ( PQSTRING(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|void|addLibraryPath|const QString &
 
 /*
-QString applicationDirPath ()
+static QString applicationDirPath ()
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONDIRPATH )
-{
-  RQSTRING( QCoreApplication::applicationDirPath () );
-}
-
+$staticMethod=|QString|applicationDirPath|
 
 /*
-QString applicationFilePath ()
+static QString applicationFilePath ()
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONFILEPATH )
-{
-  RQSTRING( QCoreApplication::applicationFilePath () );
-}
-
+$staticMethod=|QString|applicationFilePath|
 
 /*
-QString applicationName ()
+static QString applicationName ()
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONNAME )
-{
-  RQSTRING( QCoreApplication::applicationName () );
-}
-
+$staticMethod=|QString|applicationName|
 
 /*
-qint64 applicationPid ()
+static qint64 applicationPid ()
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONPID )
-{
-  RQINT64( QCoreApplication::applicationPid () );
-}
-
+$staticMethod=|qint64|applicationPid|
 
 /*
-QString applicationVersion ()
+static QString applicationVersion ()
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONVERSION )
-{
-  RQSTRING( QCoreApplication::applicationVersion () );
-}
-
+$staticMethod=|QString|applicationVersion|
 
 /*
-QStringList arguments ()
+static QStringList arguments ()
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_ARGUMENTS )
-{
-  RQSTRINGLIST( QCoreApplication::arguments () );
-}
-
+$staticMethod=|QStringList|arguments|
 
 /*
-bool closingDown ()
+static bool closingDown ()
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_CLOSINGDOWN )
-{
-  RBOOL( QCoreApplication::closingDown () );
-}
-
+$staticMethod=|bool|closingDown|
 
 /*
-int exec ()
+static int exec ()
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_EXEC )
-{
-  RINT( QCoreApplication::exec () );
-}
-
+$staticMethod=|int|exec|
 
 /*
-void exit ( int returnCode = 0 )
+static void exit ( int returnCode = 0 )
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_EXIT )
-{
-  QCoreApplication::exit ( OPINT(1,0) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|void|exit|int=0
 
 /*
-void flush ()
+static void flush ()
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_FLUSH )
-{
-  QCoreApplication::flush ();
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|void|flush|
 
 /*
-bool hasPendingEvents ()
+static bool hasPendingEvents ()
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_HASPENDINGEVENTS )
-{
-  RBOOL( QCoreApplication::hasPendingEvents () );
-}
-
+$staticMethod=|bool|hasPendingEvents|
 
 /*
-void installTranslator ( QTranslator * translationFile )
+static void installTranslator ( QTranslator * translationFile )
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_INSTALLTRANSLATOR )
-{
-  QTranslator * par1 = (QTranslator *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QCoreApplication::installTranslator ( par1 );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|void|installTranslator|QTranslator *
 
 /*
-QCoreApplication * instance ()
+static QCoreApplication * instance ()
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_INSTANCE )
-{
-  QCoreApplication * ptr = QCoreApplication::instance ();
-  _qt4xhb_createReturnClass ( ptr, "QCOREAPPLICATION" );
-}
-
+$staticMethod=|QCoreApplication *|instance|
 
 /*
-QStringList libraryPaths ()
+static QStringList libraryPaths ()
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_LIBRARYPATHS )
-{
-  RQSTRINGLIST( QCoreApplication::libraryPaths () );
-}
-
+$staticMethod=|QStringList|libraryPaths|
 
 /*
-QString organizationDomain ()
+static QString organizationDomain ()
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_ORGANIZATIONDOMAIN )
-{
-  RQSTRING( QCoreApplication::organizationDomain () );
-}
-
+$staticMethod=|QString|organizationDomain|
 
 /*
-QString organizationName ()
+static QString organizationName ()
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_ORGANIZATIONNAME )
-{
-  RQSTRING( QCoreApplication::organizationName () );
-}
-
+$staticMethod=|QString|organizationName|
 
 /*
-void postEvent ( QObject * receiver, QEvent * event )
+static void postEvent ( QObject * receiver, QEvent * event )
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_POSTEVENT1 )
-{
-  QCoreApplication::postEvent ( PQOBJECT(1), PQEVENT(2) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|void|postEvent,postEvent1|QObject *,QEvent *
 
 /*
-void postEvent ( QObject * receiver, QEvent * event, int priority )
+static void postEvent ( QObject * receiver, QEvent * event, int priority )
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_POSTEVENT2 )
-{
-  QCoreApplication::postEvent ( PQOBJECT(1), PQEVENT(2), PINT(3) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|void|postEvent,postEvent2|QObject *,QEvent *,int
 
 //[1]void postEvent ( QObject * receiver, QEvent * event )
 //[2]void postEvent ( QObject * receiver, QEvent * event, int priority )
@@ -332,24 +227,14 @@ HB_FUNC_STATIC( QCOREAPPLICATION_POSTEVENT )
 }
 
 /*
-void processEvents ( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
+static void processEvents ( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_PROCESSEVENTS1 )
-{
-  QCoreApplication::processEvents ( ISNIL(1)? QEventLoop::AllEvents : (QEventLoop::ProcessEventsFlags) hb_parni(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|void|processEvents,processEvents1|QEventLoop::ProcessEventsFlags=QEventLoop::AllEvents
 
 /*
-void processEvents ( QEventLoop::ProcessEventsFlags flags, int maxtime )
+static void processEvents ( QEventLoop::ProcessEventsFlags flags, int maxtime )
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_PROCESSEVENTS2 )
-{
-  QCoreApplication::processEvents ( (QEventLoop::ProcessEventsFlags) hb_parni(1), PINT(2) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|void|processEvents,processEvents2|QEventLoop::ProcessEventsFlags,int
 
 //[1]void processEvents ( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
 //[2]void processEvents ( QEventLoop::ProcessEventsFlags flags, int maxtime )
@@ -367,34 +252,19 @@ HB_FUNC_STATIC( QCOREAPPLICATION_PROCESSEVENTS )
 }
 
 /*
-void removeLibraryPath ( const QString & path )
+static void removeLibraryPath ( const QString & path )
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_REMOVELIBRARYPATH )
-{
-  QCoreApplication::removeLibraryPath ( PQSTRING(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|void|removeLibraryPath|const QString &
 
 /*
-void removePostedEvents ( QObject * receiver )
+static void removePostedEvents ( QObject * receiver )
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_REMOVEPOSTEDEVENTS1 )
-{
-  QCoreApplication::removePostedEvents ( PQOBJECT(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|void|removePostedEvents,removePostedEvents1|QObject *
 
 /*
-void removePostedEvents ( QObject * receiver, int eventType )
+static void removePostedEvents ( QObject * receiver, int eventType )
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_REMOVEPOSTEDEVENTS2 )
-{
-  QCoreApplication::removePostedEvents ( PQOBJECT(1), PINT(2) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|void|removePostedEvents,removePostedEvents2|QObject *,int
 
 //[1]void removePostedEvents ( QObject * receiver )
 //[2]void removePostedEvents ( QObject * receiver, int eventType )
@@ -412,44 +282,24 @@ HB_FUNC_STATIC( QCOREAPPLICATION_REMOVEPOSTEDEVENTS )
 }
 
 /*
-void removeTranslator ( QTranslator * translationFile )
+static void removeTranslator ( QTranslator * translationFile )
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_REMOVETRANSLATOR )
-{
-  QTranslator * par1 = (QTranslator *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QCoreApplication::removeTranslator ( par1 );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|void|removeTranslator|QTranslator *
 
 /*
-bool sendEvent ( QObject * receiver, QEvent * event )
+static bool sendEvent ( QObject * receiver, QEvent * event )
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_SENDEVENT )
-{
-  RBOOL( QCoreApplication::sendEvent ( PQOBJECT(1), PQEVENT(2) ) );
-}
-
+$staticMethod=|bool|sendEvent|QObject *,QEvent *
 
 /*
-void sendPostedEvents ( QObject * receiver, int event_type )
+static void sendPostedEvents ( QObject * receiver, int event_type )
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_SENDPOSTEDEVENTS1 )
-{
-  QCoreApplication::sendPostedEvents ( PQOBJECT(1), PINT(2) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|void|sendPostedEvents,sendPostedEvents1|QObject *,int
 
 /*
-void sendPostedEvents ()
+static void sendPostedEvents ()
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_SENDPOSTEDEVENTS2 )
-{
-  QCoreApplication::sendPostedEvents ();
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|void|sendPostedEvents,sendPostedEvents2|
 
 //[1]void sendPostedEvents ( QObject * receiver, int event_type )
 //[2]void sendPostedEvents ()
@@ -467,100 +317,54 @@ HB_FUNC_STATIC( QCOREAPPLICATION_SENDPOSTEDEVENTS )
 }
 
 /*
-void setApplicationName ( const QString & application )
+static void setApplicationName ( const QString & application )
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_SETAPPLICATIONNAME )
-{
-  QCoreApplication::setApplicationName ( PQSTRING(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|void|setApplicationName|const QString &
 
 /*
-void setApplicationVersion ( const QString & version )
+static void setApplicationVersion ( const QString & version )
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_SETAPPLICATIONVERSION )
-{
-  QCoreApplication::setApplicationVersion ( PQSTRING(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|void|setApplicationVersion|const QString &
 
 /*
-void setAttribute ( Qt::ApplicationAttribute attribute, bool on = true )
+static void setAttribute ( Qt::ApplicationAttribute attribute, bool on = true )
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_SETATTRIBUTE )
-{
-  QCoreApplication::setAttribute ( (Qt::ApplicationAttribute) hb_parni(1), OPBOOL(2,true) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|void|setAttribute|Qt::ApplicationAttribute,bool=true
 
 /*
-void setLibraryPaths ( const QStringList & paths )
+static void setLibraryPaths ( const QStringList & paths )
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_SETLIBRARYPATHS )
-{
-  QCoreApplication::setLibraryPaths ( PQSTRINGLIST(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|void|setLibraryPaths|const QStringList &
 
 /*
-void setOrganizationDomain ( const QString & orgDomain )
+static void setOrganizationDomain ( const QString & orgDomain )
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_SETORGANIZATIONDOMAIN )
-{
-  QCoreApplication::setOrganizationDomain ( PQSTRING(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|void|setOrganizationDomain|const QString &
 
 /*
-void setOrganizationName ( const QString & orgName )
+static void setOrganizationName ( const QString & orgName )
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_SETORGANIZATIONNAME )
-{
-  QCoreApplication::setOrganizationName ( PQSTRING(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|void|setOrganizationName|const QString &
 
 /*
-bool startingUp ()
+static bool startingUp ()
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_STARTINGUP )
-{
-  RBOOL( QCoreApplication::startingUp () );
-}
-
+$staticMethod=|bool|startingUp|
 
 /*
-bool testAttribute ( Qt::ApplicationAttribute attribute )
+static bool testAttribute ( Qt::ApplicationAttribute attribute )
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_TESTATTRIBUTE )
-{
-  RBOOL( QCoreApplication::testAttribute ( (Qt::ApplicationAttribute) hb_parni(1) ) );
-}
-
+$staticMethod=|bool|testAttribute|Qt::ApplicationAttribute
 
 /*
-QString translate ( const char * context, const char * sourceText, const char * disambiguation, Encoding encoding, int n )
+static QString translate ( const char * context, const char * sourceText, const char * disambiguation, Encoding encoding, int n )
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE1 )
-{
-  RQSTRING( QCoreApplication::translate ( (const char *) hb_parc(1), (const char *) hb_parc(2), (const char *) hb_parc(3), (QCoreApplication::Encoding) hb_parni(4), PINT(5) ) );
-}
-
+$staticMethod=|QString|translate,translate1|const char *,const char *,const char *,QCoreApplication::Encoding,int
 
 /*
-QString translate ( const char * context, const char * sourceText, const char * disambiguation = 0, Encoding encoding = CodecForTr )
+static QString translate ( const char * context, const char * sourceText, const char * disambiguation = 0, Encoding encoding = CodecForTr )
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE2 )
-{
-  RQSTRING( QCoreApplication::translate ( (const char *) hb_parc(1), (const char *) hb_parc(2), (const char *) hb_parc(3), ISNIL(4)? QCoreApplication::CodecForTr : (QCoreApplication::Encoding) hb_parni(4) ) );
-}
-
+$staticMethod=|QString|translate,translate2|const char *,const char *,const char *=0,QCoreApplication::Encoding=QCoreApplication::CodecForTr
 
 //[1]QString translate ( const char * context, const char * sourceText, const char * disambiguation, Encoding encoding, int n )
 //[2]QString translate ( const char * context, const char * sourceText, const char * disambiguation = 0, Encoding encoding = CodecForTr )
@@ -576,8 +380,5 @@ HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE )
     HB_FUNC_EXEC( QCOREAPPLICATION_TRANSLATE2 );
   }
 }
-
-
-
 
 #pragma ENDDUMP

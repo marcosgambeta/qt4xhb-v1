@@ -152,125 +152,47 @@ $deleteMethod
 /*
 bool autoFormatting() const
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_AUTOFORMATTING )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->autoFormatting () );
-  }
-}
-
+$method=|bool|autoFormatting|
 
 /*
 int autoFormattingIndent() const
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_AUTOFORMATTINGINDENT )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->autoFormattingIndent () );
-  }
-}
-
+$method=|int|autoFormattingIndent|
 
 /*
 QTextCodec * codec() const
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_CODEC )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextCodec * ptr = obj->codec ();
-    _qt4xhb_createReturnClass ( ptr, "QTEXTCODEC" );
-  }
-}
-
+$method=|QTextCodec *|codec|
 
 /*
 QIODevice * device() const
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_DEVICE )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QIODevice * ptr = obj->device ();
-    _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );
-  }
-}
-
+$method=|QIODevice *|device|
 
 /*
 bool hasError() const
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_HASERROR )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasError () );
-  }
-}
-
+$method=|bool|hasError|
 
 /*
 void setAutoFormatting(bool enable)
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_SETAUTOFORMATTING )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAutoFormatting ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAutoFormatting|bool
 
 /*
 void setAutoFormattingIndent(int spacesOrTabs)
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_SETAUTOFORMATTINGINDENT )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAutoFormattingIndent ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAutoFormattingIndent|int
 
 /*
 void setCodec(QTextCodec * codec)
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_SETCODEC1 )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCodec ( PQTEXTCODEC(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setCodec,setCodec1|QTextCodec *
 
 /*
 void setCodec(const char * codecName)
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_SETCODEC2 )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCodec ( (const char *) hb_parc(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setCodec,setCodec2|const char *
 
 //[1]void setCodec(QTextCodec * codec)
 //[2]void setCodec(const char * codecName)
@@ -290,58 +212,22 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_SETCODEC )
 /*
 void setDevice(QIODevice * device)
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_SETDEVICE )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDevice ( PQIODEVICE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setDevice|QIODevice *
 
 /*
 void writeAttribute(const QString & namespaceUri, const QString & name, const QString & value)
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEATTRIBUTE1 )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->writeAttribute ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|writeAttribute,writeAttribute1|const QString &,const QString &,const QString &
 
 /*
 void writeAttribute(const QString & qualifiedName, const QString & value)
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEATTRIBUTE2 )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->writeAttribute ( PQSTRING(1), PQSTRING(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|writeAttribute,writeAttribute2|const QString &,const QString &
 
 /*
 void writeAttribute(const QXmlStreamAttribute & attribute)
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEATTRIBUTE3 )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->writeAttribute ( *PQXMLSTREAMATTRIBUTE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|writeAttribute,writeAttribute3|const QXmlStreamAttribute &
 
 //[1]void writeAttribute(const QString & namespaceUri, const QString & name, const QString & value)
 //[2]void writeAttribute(const QString & qualifiedName, const QString & value)
@@ -366,128 +252,47 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEATTRIBUTE )
 /*
 void writeAttributes(const QXmlStreamAttributes & attributes)
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEATTRIBUTES )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->writeAttributes ( *PQXMLSTREAMATTRIBUTES(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|writeAttributes|const QXmlStreamAttributes &
 
 /*
 void writeCDATA(const QString & text)
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITECDATA )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->writeCDATA ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|writeCDATA|const QString &
 
 /*
 void writeCharacters(const QString & text)
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITECHARACTERS )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->writeCharacters ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|writeCharacters|const QString &
 
 /*
 void writeComment(const QString & text)
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITECOMMENT )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->writeComment ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|writeComment|const QString &
 
 /*
 void writeCurrentToken(const QXmlStreamReader & reader)
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITECURRENTTOKEN )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->writeCurrentToken ( *PQXMLSTREAMREADER(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|writeCurrentToken|const QXmlStreamReader &
 
 /*
 void writeDTD(const QString & dtd)
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEDTD )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->writeDTD ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|writeDTD|const QString &
 
 /*
 void writeDefaultNamespace(const QString & namespaceUri)
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEDEFAULTNAMESPACE )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->writeDefaultNamespace ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|writeDefaultNamespace|const QString &
 
 /*
 void writeEmptyElement(const QString & namespaceUri, const QString & name)
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEEMPTYELEMENT1 )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->writeEmptyElement ( PQSTRING(1), PQSTRING(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|writeEmptyElement,writeEmptyElement1|const QString &,const QString &
 
 /*
 void writeEmptyElement(const QString & qualifiedName)
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEEMPTYELEMENT2 )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->writeEmptyElement ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|writeEmptyElement,writeEmptyElement2|const QString &
 
 //[1]void writeEmptyElement(const QString & namespaceUri, const QString & name)
 //[2]void writeEmptyElement(const QString & qualifiedName)
@@ -507,44 +312,17 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEEMPTYELEMENT )
 /*
 void writeEndDocument()
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEENDDOCUMENT )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->writeEndDocument ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|writeEndDocument|
 
 /*
 void writeEndElement()
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEENDELEMENT )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->writeEndElement ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|writeEndElement|
 
 /*
 void writeEntityReference(const QString & name)
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEENTITYREFERENCE )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->writeEntityReference ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|writeEntityReference|const QString &
 
 /*
 void writeNamespace(const QString & namespaceUri, const QString & prefix = QString())
@@ -559,7 +337,6 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITENAMESPACE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void writeProcessingInstruction(const QString & target, const QString & data = QString())
 */
@@ -573,48 +350,20 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEPROCESSINGINSTRUCTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void writeStartDocument(const QString & version)
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITESTARTDOCUMENT1 )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->writeStartDocument ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|writeStartDocument,writeStartDocument1|const QString &
 
 /*
 void writeStartDocument(const QString & version, bool standalone)
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITESTARTDOCUMENT2 )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->writeStartDocument ( PQSTRING(1), PBOOL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|writeStartDocument,writeStartDocument2|const QString &,bool
 
 /*
 void writeStartDocument()
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITESTARTDOCUMENT3 )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->writeStartDocument ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|writeStartDocument,writeStartDocument3|
 
 //[1]void writeStartDocument(const QString & version)
 //[2]void writeStartDocument(const QString & version, bool standalone)
@@ -639,30 +388,12 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITESTARTDOCUMENT )
 /*
 void writeStartElement(const QString & namespaceUri, const QString & name)
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITESTARTELEMENT1 )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->writeStartElement ( PQSTRING(1), PQSTRING(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|writeStartElement,writeStartElement1|const QString &,const QString &
 
 /*
 void writeStartElement(const QString & qualifiedName)
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITESTARTELEMENT2 )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->writeStartElement ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|writeStartElement,writeStartElement2|const QString &
 
 //[1]void writeStartElement(const QString & namespaceUri, const QString & name)
 //[2]void writeStartElement(const QString & qualifiedName)
@@ -682,30 +413,12 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITESTARTELEMENT )
 /*
 void writeTextElement(const QString & namespaceUri, const QString & name, const QString & text)
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITETEXTELEMENT1 )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->writeTextElement ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|writeTextElement,writeTextElement1|const QString &,const QString &,const QString &
 
 /*
 void writeTextElement(const QString & qualifiedName, const QString & text)
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITETEXTELEMENT2 )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->writeTextElement ( PQSTRING(1), PQSTRING(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|writeTextElement,writeTextElement2|const QString &,const QString &
 
 //[1]void writeTextElement(const QString & namespaceUri, const QString & name, const QString & text)
 //[2]void writeTextElement(const QString & qualifiedName, const QString & text)

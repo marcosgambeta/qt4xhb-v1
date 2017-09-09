@@ -195,19 +195,10 @@ HB_FUNC_STATIC( QMIMEDATA_HASURLS )
   }
 }
 
-
 /*
 QString html () const
 */
-HB_FUNC_STATIC( QMIMEDATA_HTML )
-{
-  QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->html () );
-  }
-}
-
+$method=|QString|html|
 
 /*
 QVariant imageData () const
@@ -328,19 +319,10 @@ par1 << *(QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString text () const
 */
-HB_FUNC_STATIC( QMIMEDATA_TEXT )
-{
-  QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->text () );
-  }
-}
-
+$method=|QString|text|
 
 /*
 QList<QUrl> urls () const

@@ -47,15 +47,7 @@ $deleteMethod
 /*
 bool isActive () const
 */
-HB_FUNC_STATIC( QBASICTIMER_ISACTIVE )
-{
-  QBasicTimer * obj = (QBasicTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isActive () );
-  }
-}
-
+$method=|bool|isActive|
 
 /*
 void start ( int msec, QObject * object )

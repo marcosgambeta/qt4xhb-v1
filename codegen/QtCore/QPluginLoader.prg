@@ -81,28 +81,12 @@ $deleteMethod
 /*
 QString errorString () const
 */
-HB_FUNC_STATIC( QPLUGINLOADER_ERRORSTRING )
-{
-  QPluginLoader * obj = (QPluginLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->errorString () );
-  }
-}
-
+$method=|QString|errorString|
 
 /*
 QString fileName () const
 */
-HB_FUNC_STATIC( QPLUGINLOADER_FILENAME )
-{
-  QPluginLoader * obj = (QPluginLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->fileName () );
-  }
-}
-
+$method=|QString|fileName|
 
 /*
 QObject * instance ()

@@ -142,19 +142,10 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TYPE )
   }
 }
 
-
 /*
 QString string() const
 */
-HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_STRING )
-{
-  QTextBoundaryFinder * obj = (QTextBoundaryFinder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->string () );
-  }
-}
-
+$method=|QString|string|
 
 /*
 void toStart()

@@ -83,56 +83,22 @@ $deleteMethod
 /*
 void setKey(const QString &key)
 */
-HB_FUNC_STATIC( QSHAREDMEMORY_SETKEY )
-{
-  QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setKey ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setKey|const QString &
 
 /*
 QString key() const
 */
-HB_FUNC_STATIC( QSHAREDMEMORY_KEY )
-{
-  QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->key () );
-  }
-}
-
+$method=|QString|key|
 
 /*
 void setNativeKey(const QString &key)
 */
-HB_FUNC_STATIC( QSHAREDMEMORY_SETNATIVEKEY )
-{
-  QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setNativeKey ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setNativeKey|const QString &
 
 /*
 QString nativeKey() const
 */
-HB_FUNC_STATIC( QSHAREDMEMORY_NATIVEKEY )
-{
-  QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->nativeKey () );
-  }
-}
-
+$method=|QString|nativeKey|
 
 /*
 bool create(int size, AccessMode mode = ReadWrite)
@@ -253,21 +219,9 @@ HB_FUNC_STATIC( QSHAREDMEMORY_ERROR )
   }
 }
 
-
 /*
 QString errorString() const
 */
-HB_FUNC_STATIC( QSHAREDMEMORY_ERRORSTRING )
-{
-  QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->errorString () );
-  }
-}
-
-
-
-
+$method=|QString|errorString|
 
 #pragma ENDDUMP

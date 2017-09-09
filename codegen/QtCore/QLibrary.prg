@@ -167,61 +167,25 @@ HB_FUNC_STATIC( QLIBRARY_ISLOADED )
   }
 }
 
-
 /*
 void setFileName(const QString &fileName)
 */
-HB_FUNC_STATIC( QLIBRARY_SETFILENAME )
-{
-  QLibrary * obj = (QLibrary *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFileName ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setFileName|const QString &
 
 /*
 QString fileName() const
 */
-HB_FUNC_STATIC( QLIBRARY_FILENAME )
-{
-  QLibrary * obj = (QLibrary *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->fileName () );
-  }
-}
-
+$method=|QString|fileName|
 
 /*
 void setFileNameAndVersion(const QString &fileName, int verNum)
 */
-HB_FUNC_STATIC( QLIBRARY_SETFILENAMEANDVERSION1 )
-{
-  QLibrary * obj = (QLibrary *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFileNameAndVersion ( PQSTRING(1), PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setFileNameAndVersion,setFileNameAndVersion1|const QString &,int
 
 /*
 void setFileNameAndVersion(const QString &fileName, const QString &version)
 */
-HB_FUNC_STATIC( QLIBRARY_SETFILENAMEANDVERSION2 )
-{
-  QLibrary * obj = (QLibrary *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFileNameAndVersion ( PQSTRING(1), PQSTRING(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setFileNameAndVersion,setFileNameAndVersion2|const QString &,const QString &
 
 //[1]void setFileNameAndVersion(const QString &fileName, int verNum)
 //[2]void setFileNameAndVersion(const QString &fileName, const QString &version)
@@ -241,15 +205,7 @@ HB_FUNC_STATIC( QLIBRARY_SETFILENAMEANDVERSION )
 /*
 QString errorString() const
 */
-HB_FUNC_STATIC( QLIBRARY_ERRORSTRING )
-{
-  QLibrary * obj = (QLibrary *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->errorString () );
-  }
-}
-
+$method=|QString|errorString|
 
 /*
 void setLoadHints(LoadHints hints)
@@ -337,12 +293,6 @@ HB_FUNC_STATIC( QLIBRARY_RESOLVE )
 /*
 static bool isLibrary(const QString &fileName)
 */
-HB_FUNC_STATIC( QLIBRARY_ISLIBRARY )
-{
-  RBOOL( QLibrary::isLibrary ( PQSTRING(1) ) );
-}
-
-
-
+$staticMethod=|bool|isLibrary|const QString &
 
 #pragma ENDDUMP

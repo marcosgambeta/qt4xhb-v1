@@ -116,16 +116,7 @@ $deleteMethod
 /*
 void setPattern(const QString &pattern)
 */
-HB_FUNC_STATIC( QSTRINGMATCHER_SETPATTERN )
-{
-  QStringMatcher * obj = (QStringMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPattern ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPattern|const QString &
 
 /*
 void setCaseSensitivity(Qt::CaseSensitivity cs)
@@ -167,19 +158,10 @@ HB_FUNC_STATIC( QSTRINGMATCHER_INDEXIN2 )
   }
 }
 
-
 /*
 QString pattern() const
 */
-HB_FUNC_STATIC( QSTRINGMATCHER_PATTERN )
-{
-  QStringMatcher * obj = (QStringMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->pattern () );
-  }
-}
-
+$method=|QString|pattern|
 
 /*
 Qt::CaseSensitivity caseSensitivity() const

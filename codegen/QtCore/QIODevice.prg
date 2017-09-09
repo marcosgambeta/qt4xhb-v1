@@ -154,19 +154,10 @@ HB_FUNC_STATIC( QIODEVICE_CLOSE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString errorString () const
 */
-HB_FUNC_STATIC( QIODEVICE_ERRORSTRING )
-{
-  QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->errorString () );
-  }
-}
-
+$method=|QString|errorString|
 
 /*
 bool getChar ( char * c )

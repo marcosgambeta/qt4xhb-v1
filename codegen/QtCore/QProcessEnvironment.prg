@@ -112,19 +112,10 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_CLEAR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool contains(const QString &name) const
 */
-HB_FUNC_STATIC( QPROCESSENVIRONMENT_CONTAINS )
-{
-  QProcessEnvironment * obj = (QProcessEnvironment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->contains ( PQSTRING(1) ) );
-  }
-}
-
+$method=|bool|contains|const QString &
 
 /*
 void insert(const QString &name, const QString &value)
@@ -139,20 +130,10 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_INSERT1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void remove(const QString &name)
 */
-HB_FUNC_STATIC( QPROCESSENVIRONMENT_REMOVE )
-{
-  QProcessEnvironment * obj = (QProcessEnvironment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->remove ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|remove|const QString &
 
 /*
 QString value(const QString &name, const QString &defaultValue = QString()) const

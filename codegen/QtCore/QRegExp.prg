@@ -113,15 +113,7 @@ $deleteMethod
 /*
 QString cap ( int nth = 0 ) const
 */
-HB_FUNC_STATIC( QREGEXP_CAP )
-{
-  QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->cap ( OPINT(1,0) ) );
-  }
-}
-
+$method=|QString|cap|int=0
 
 /*
 int captureCount () const
@@ -161,32 +153,15 @@ HB_FUNC_STATIC( QREGEXP_CASESENSITIVITY )
   }
 }
 
-
 /*
 QString errorString () const
 */
-HB_FUNC_STATIC( QREGEXP_ERRORSTRING )
-{
-  QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->errorString () );
-  }
-}
-
+$method=|QString|errorString|
 
 /*
 bool exactMatch ( const QString & str ) const
 */
-HB_FUNC_STATIC( QREGEXP_EXACTMATCH )
-{
-  QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->exactMatch ( PQSTRING(1) ) );
-  }
-}
-
+$method=|bool|exactMatch|const QString &
 
 /*
 int indexIn ( const QString & str, int offset = 0, CaretMode caretMode = CaretAtZero ) const
@@ -265,19 +240,10 @@ HB_FUNC_STATIC( QREGEXP_MATCHEDLENGTH )
   }
 }
 
-
 /*
 QString pattern () const
 */
-HB_FUNC_STATIC( QREGEXP_PATTERN )
-{
-  QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->pattern () );
-  }
-}
-
+$method=|QString|pattern|
 
 /*
 PatternSyntax patternSyntax () const
@@ -332,20 +298,10 @@ HB_FUNC_STATIC( QREGEXP_SETMINIMAL )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setPattern ( const QString & pattern )
 */
-HB_FUNC_STATIC( QREGEXP_SETPATTERN )
-{
-  QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPattern ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPattern|const QString &
 
 /*
 void setPatternSyntax ( PatternSyntax syntax )
@@ -360,15 +316,10 @@ HB_FUNC_STATIC( QREGEXP_SETPATTERNSYNTAX )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
-QString escape ( const QString & str )
+static QString escape ( const QString & str )
 */
-HB_FUNC_STATIC( QREGEXP_ESCAPE )
-{
-  RQSTRING( QRegExp::escape ( PQSTRING(1) ) );
-}
+$staticMethod=|QString|escape|const QString &
 
 $extraMethods
 

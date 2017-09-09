@@ -172,19 +172,10 @@ HB_FUNC_STATIC( QSTATEMACHINE_ERROR )
   }
 }
 
-
 /*
 QString errorString () const
 */
-HB_FUNC_STATIC( QSTATEMACHINE_ERRORSTRING )
-{
-  QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->errorString () );
-  }
-}
-
+$method=|QString|errorString|
 
 /*
 QStateMachine::RestorePolicy globalRestorePolicy () const

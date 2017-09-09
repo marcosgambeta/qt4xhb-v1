@@ -116,19 +116,10 @@ HB_FUNC_STATIC( QTEMPORARYFILE_AUTOREMOVE )
   }
 }
 
-
 /*
 QString fileTemplate() const
 */
-HB_FUNC_STATIC( QTEMPORARYFILE_FILETEMPLATE )
-{
-  QTemporaryFile * obj = (QTemporaryFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->fileTemplate () );
-  }
-}
-
+$method=|QString|fileTemplate|
 
 /*
 bool open()
@@ -156,35 +147,15 @@ HB_FUNC_STATIC( QTEMPORARYFILE_SETAUTOREMOVE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 void setFileTemplate(const QString & name)
 */
-HB_FUNC_STATIC( QTEMPORARYFILE_SETFILETEMPLATE )
-{
-  QTemporaryFile * obj = (QTemporaryFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFileTemplate ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setFileTemplate|const QString &
 
 /*
 virtual QString fileName() const
 */
-HB_FUNC_STATIC( QTEMPORARYFILE_FILENAME )
-{
-  QTemporaryFile * obj = (QTemporaryFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->fileName () );
-  }
-}
-
-
-
+$virtualMethod=|QString|fileName|
 
 
 //[1]QTemporaryFile * createNativeFile(QFile & file)

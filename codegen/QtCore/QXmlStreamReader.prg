@@ -107,7 +107,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NEW1 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QXmlStreamReader(QIODevice * device)
 */
@@ -116,7 +115,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NEW2 )
   QXmlStreamReader * o = new QXmlStreamReader ( PQIODEVICE(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 /*
 QXmlStreamReader(const QByteArray & data)
@@ -127,7 +125,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NEW3 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QXmlStreamReader(const QString & data)
 */
@@ -137,7 +134,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NEW4 )
   _qt4xhb_storePointerAndFlag ( o, true );
 }
 
-
 /*
 QXmlStreamReader(const char * data)
 */
@@ -146,7 +142,6 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NEW5 )
   QXmlStreamReader * o = new QXmlStreamReader ( (const char *) hb_parc(1) );
   _qt4xhb_storePointerAndFlag ( o, true );
 }
-
 
 //[1]QXmlStreamReader()
 //[2]QXmlStreamReader(QIODevice * device)
@@ -187,44 +182,17 @@ $deleteMethod
 /*
 void addData(const QByteArray & data)
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_ADDDATA1 )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->addData ( *PQBYTEARRAY(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|addData,addData1|const QByteArray &
 
 /*
 void addData(const QString & data)
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_ADDDATA2 )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->addData ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|addData,addData2|const QString &
 
 /*
 void addData(const char * data)
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_ADDDATA3 )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->addData ( (const char *) hb_parc(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|addData,addData3|const char *
 
 //[1]void addData(const QByteArray & data)
 //[2]void addData(const QString & data)
@@ -245,111 +213,42 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ADDDATA )
 /*
 void addExtraNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & extraNamespaceDeclaration)
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_ADDEXTRANAMESPACEDECLARATION )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->addExtraNamespaceDeclaration ( *PQXMLSTREAMNAMESPACEDECLARATION(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|addExtraNamespaceDeclaration|const QXmlStreamNamespaceDeclaration &
 
 /*
 void addExtraNamespaceDeclarations(const QXmlStreamNamespaceDeclarations & extraNamespaceDeclarations)
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_ADDEXTRANAMESPACEDECLARATIONS )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->addExtraNamespaceDeclarations ( *PQXMLSTREAMNAMESPACEDECLARATIONS(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|addExtraNamespaceDeclarations|const QXmlStreamNamespaceDeclarations &
 
 /*
 bool atEnd() const
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_ATEND )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->atEnd () );
-  }
-}
-
+$method=|bool|atEnd|
 
 /*
 QXmlStreamAttributes attributes() const
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_ATTRIBUTES )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QXmlStreamAttributes * ptr = new QXmlStreamAttributes( obj->attributes () );
-    _qt4xhb_createReturnClass ( ptr, "QXMLSTREAMATTRIBUTES", true );
-  }
-}
-
+$method=|QXmlStreamAttributes|attributes|
 
 /*
 qint64 characterOffset() const
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_CHARACTEROFFSET )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQINT64( obj->characterOffset () );
-  }
-}
-
+$method=|qint64|characterOffset|
 
 /*
 void clear()
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_CLEAR )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clear ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|clear|
 
 /*
 qint64 columnNumber() const
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_COLUMNNUMBER )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQINT64( obj->columnNumber () );
-  }
-}
-
+$method=|qint64|columnNumber|
 
 /*
 QIODevice * device() const
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_DEVICE )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QIODevice * ptr = obj->device ();
-    _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );
-  }
-}
-
+$method=|QIODevice *|device|
 
 /*
 QStringRef documentEncoding() const
@@ -461,19 +360,10 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ERROR )
   }
 }
 
-
 /*
 QString errorString() const
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_ERRORSTRING )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->errorString () );
-  }
-}
-
+$method=|QString|errorString|
 
 /*
 bool hasError() const
@@ -795,19 +685,10 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_RAISEERROR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString readElementText(ReadElementTextBehaviour behaviour = ErrorOnUnexpectedElement)
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_READELEMENTTEXT )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->readElementText ( ISNIL(1)? QXmlStreamReader::ErrorOnUnexpectedElement : (QXmlStreamReader::ReadElementTextBehaviour) hb_parni(1) ) );
-  }
-}
-
+$method=|QString|readElementText|QXmlStreamReader::ReadElementTextBehaviour=QXmlStreamReader::ErrorOnUnexpectedElement
 
 /*
 TokenType readNext()
@@ -905,19 +786,10 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_TEXT )
   }
 }
 
-
 /*
 QString tokenString() const
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_TOKENSTRING )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->tokenString () );
-  }
-}
-
+$method=|QString|tokenString|
 
 /*
 TokenType tokenType() const

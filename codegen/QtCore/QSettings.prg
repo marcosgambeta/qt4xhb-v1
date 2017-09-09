@@ -164,167 +164,65 @@ HB_FUNC_STATIC( QSETTINGS_ALLKEYS )
   }
 }
 
-
 /*
 QString applicationName () const
 */
-HB_FUNC_STATIC( QSETTINGS_APPLICATIONNAME )
-{
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->applicationName () );
-  }
-}
-
+$method=|QString|applicationName|
 
 /*
 void beginGroup ( const QString & prefix )
 */
-HB_FUNC_STATIC( QSETTINGS_BEGINGROUP )
-{
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->beginGroup ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|beginGroup|const QString &
 
 /*
 int beginReadArray ( const QString & prefix )
 */
-HB_FUNC_STATIC( QSETTINGS_BEGINREADARRAY )
-{
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->beginReadArray ( PQSTRING(1) ) );
-  }
-}
-
+$method=|int|beginReadArray|const QString &
 
 /*
 void beginWriteArray ( const QString & prefix, int size = -1 )
 */
-HB_FUNC_STATIC( QSETTINGS_BEGINWRITEARRAY )
-{
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->beginWriteArray ( PQSTRING(1), OPINT(2,-1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|beginWriteArray|const QString &,int=-1
 
 /*
 QStringList childGroups () const
 */
-HB_FUNC_STATIC( QSETTINGS_CHILDGROUPS )
-{
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->childGroups () );
-  }
-}
-
+$method=|QStringList|childGroups|
 
 /*
 QStringList childKeys () const
 */
-HB_FUNC_STATIC( QSETTINGS_CHILDKEYS )
-{
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->childKeys () );
-  }
-}
-
+$method=|QStringList|childKeys|
 
 /*
 void clear ()
 */
-HB_FUNC_STATIC( QSETTINGS_CLEAR )
-{
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clear ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|clear|
 
 /*
 bool contains ( const QString & key ) const
 */
-HB_FUNC_STATIC( QSETTINGS_CONTAINS )
-{
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->contains ( PQSTRING(1) ) );
-  }
-}
-
+$method=|bool|contains|const QString &
 
 /*
 void endArray ()
 */
-HB_FUNC_STATIC( QSETTINGS_ENDARRAY )
-{
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->endArray ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|endArray|
 
 /*
 void endGroup ()
 */
-HB_FUNC_STATIC( QSETTINGS_ENDGROUP )
-{
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->endGroup ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|endGroup|
 
 /*
 bool fallbacksEnabled () const
 */
-HB_FUNC_STATIC( QSETTINGS_FALLBACKSENABLED )
-{
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->fallbacksEnabled () );
-  }
-}
-
+$method=|bool|fallbacksEnabled|
 
 /*
 QString fileName () const
 */
-HB_FUNC_STATIC( QSETTINGS_FILENAME )
-{
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->fileName () );
-  }
-}
-
+$method=|QString|fileName|
 
 /*
 Format format () const
@@ -338,19 +236,10 @@ HB_FUNC_STATIC( QSETTINGS_FORMAT )
   }
 }
 
-
 /*
 QString group () const
 */
-HB_FUNC_STATIC( QSETTINGS_GROUP )
-{
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->group () );
-  }
-}
-
+$method=|QString|group|
 
 /*
 QTextCodec * iniCodec () const
@@ -378,33 +267,15 @@ HB_FUNC_STATIC( QSETTINGS_ISWRITABLE )
   }
 }
 
-
 /*
 QString organizationName () const
 */
-HB_FUNC_STATIC( QSETTINGS_ORGANIZATIONNAME )
-{
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->organizationName () );
-  }
-}
-
+$method=|QString|organizationName|
 
 /*
 void remove ( const QString & key )
 */
-HB_FUNC_STATIC( QSETTINGS_REMOVE )
-{
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->remove ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|remove|const QString &
 
 /*
 Scope scope () const

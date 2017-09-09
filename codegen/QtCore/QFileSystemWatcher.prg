@@ -79,16 +79,7 @@ $deleteMethod
 /*
 void addPath ( const QString & path )
 */
-HB_FUNC_STATIC( QFILESYSTEMWATCHER_ADDPATH )
-{
-  QFileSystemWatcher * obj = (QFileSystemWatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->addPath ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|addPath|const QString &
 
 /*
 void addPaths ( const QStringList & paths )
@@ -129,20 +120,10 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_FILES )
   }
 }
 
-
 /*
 void removePath ( const QString & path )
 */
-HB_FUNC_STATIC( QFILESYSTEMWATCHER_REMOVEPATH )
-{
-  QFileSystemWatcher * obj = (QFileSystemWatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->removePath ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|removePath|const QString &
 
 /*
 void removePaths ( const QStringList & paths )

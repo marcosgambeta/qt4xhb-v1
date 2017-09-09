@@ -215,33 +215,15 @@ HB_FUNC_STATIC( QLOCALE_NEW )
   }
 }
 
-
-
 /*
 QString amText () const
 */
-HB_FUNC_STATIC( QLOCALE_AMTEXT )
-{
-  QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->amText () );
-  }
-}
-
+$method=|QString|amText|
 
 /*
 QString bcp47Name () const
 */
-HB_FUNC_STATIC( QLOCALE_BCP47NAME )
-{
-  QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->bcp47Name () );
-  }
-}
-
+$method=|QString|bcp47Name|
 
 /*
 Country country () const
@@ -255,71 +237,30 @@ HB_FUNC_STATIC( QLOCALE_COUNTRY )
   }
 }
 
-
 /*
 QString createSeparatedList ( const QStringList & list ) const
 */
-HB_FUNC_STATIC( QLOCALE_CREATESEPARATEDLIST )
-{
-  QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->createSeparatedList ( PQSTRINGLIST(1) ) );
-  }
-}
-
+$method=|QString|createSeparatedList|const QStringList &
 
 /*
 QString currencySymbol ( CurrencySymbolFormat format = CurrencySymbol ) const
 */
-HB_FUNC_STATIC( QLOCALE_CURRENCYSYMBOL )
-{
-  QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->currencySymbol ( ISNIL(1)? QLocale::CurrencySymbol : (QLocale::CurrencySymbolFormat) hb_parni(1) ) );
-  }
-}
-
+$method=|QString|currencySymbol|QLocale::CurrencySymbolFormat=QLocale::CurrencySymbol
 
 /*
 QString dateFormat ( FormatType format = LongFormat ) const
 */
-HB_FUNC_STATIC( QLOCALE_DATEFORMAT )
-{
-  QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->dateFormat ( ISNIL(1)? QLocale::LongFormat : (QLocale::FormatType) hb_parni(1) ) );
-  }
-}
-
+$method=|QString|dateFormat|QLocale::FormatType=QLocale::LongFormat
 
 /*
 QString dateTimeFormat ( FormatType format = LongFormat ) const
 */
-HB_FUNC_STATIC( QLOCALE_DATETIMEFORMAT )
-{
-  QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->dateTimeFormat ( ISNIL(1)? QLocale::LongFormat : (QLocale::FormatType) hb_parni(1) ) );
-  }
-}
-
+$method=|QString|dateTimeFormat|QLocale::FormatType=QLocale::LongFormat
 
 /*
 QString dayName ( int day, FormatType type = LongFormat ) const
 */
-HB_FUNC_STATIC( QLOCALE_DAYNAME )
-{
-  QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->dayName ( PINT(1), ISNIL(2)? QLocale::LongFormat : (QLocale::FormatType) hb_parni(2) ) );
-  }
-}
-
+$method=|QString|dayName|int,QLocale::FormatType=QLocale::LongFormat
 
 /*
 QChar decimalPoint () const
@@ -401,58 +342,25 @@ HB_FUNC_STATIC( QLOCALE_MEASUREMENTSYSTEM )
   }
 }
 
-
 /*
 QString monthName ( int month, FormatType type = LongFormat ) const
 */
-HB_FUNC_STATIC( QLOCALE_MONTHNAME )
-{
-  QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->monthName ( PINT(1), ISNIL(2)? QLocale::LongFormat : (QLocale::FormatType) hb_parni(2) ) );
-  }
-}
-
+$method=|QString|monthName|int,QLocale::FormatType=QLocale::LongFormat
 
 /*
 QString name () const
 */
-HB_FUNC_STATIC( QLOCALE_NAME )
-{
-  QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->name () );
-  }
-}
-
+$method=|QString|name|
 
 /*
 QString nativeCountryName () const
 */
-HB_FUNC_STATIC( QLOCALE_NATIVECOUNTRYNAME )
-{
-  QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->nativeCountryName () );
-  }
-}
-
+$method=|QString|nativeCountryName|
 
 /*
 QString nativeLanguageName () const
 */
-HB_FUNC_STATIC( QLOCALE_NATIVELANGUAGENAME )
-{
-  QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->nativeLanguageName () );
-  }
-}
-
+$method=|QString|nativeLanguageName|
 
 /*
 QChar negativeSign () const
@@ -494,19 +402,10 @@ HB_FUNC_STATIC( QLOCALE_PERCENT )
   }
 }
 
-
 /*
 QString pmText () const
 */
-HB_FUNC_STATIC( QLOCALE_PMTEXT )
-{
-  QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->pmText () );
-  }
-}
-
+$method=|QString|pmText|
 
 /*
 QChar positiveSign () const
@@ -521,19 +420,10 @@ HB_FUNC_STATIC( QLOCALE_POSITIVESIGN )
   }
 }
 
-
 /*
 QString quoteString ( const QString & str, QuotationStyle style = StandardQuotation ) const
 */
-HB_FUNC_STATIC( QLOCALE_QUOTESTRING1 )
-{
-  QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->quoteString ( PQSTRING(1), ISNIL(2)? QLocale::StandardQuotation : (QLocale::QuotationStyle) hb_parni(2) ) );
-  }
-}
-
+$method=|QString|quoteString,quoteString1|const QString &,QLocale::QuotationStyle=QLocale::StandardQuotation
 
 /*
 QString quoteString ( const QStringRef & str, QuotationStyle style = StandardQuotation ) const
@@ -583,32 +473,15 @@ HB_FUNC_STATIC( QLOCALE_SETNUMBEROPTIONS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QString standaloneDayName ( int day, FormatType type = LongFormat ) const
 */
-HB_FUNC_STATIC( QLOCALE_STANDALONEDAYNAME )
-{
-  QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->standaloneDayName ( PINT(1), ISNIL(2)? QLocale::LongFormat : (QLocale::FormatType) hb_parni(2) ) );
-  }
-}
-
+$method=|QString|standaloneDayName|int,QLocale::FormatType=QLocale::LongFormat
 
 /*
 QString standaloneMonthName ( int month, FormatType type = LongFormat ) const
 */
-HB_FUNC_STATIC( QLOCALE_STANDALONEMONTHNAME )
-{
-  QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->standaloneMonthName ( PINT(1), ISNIL(2)? QLocale::LongFormat : (QLocale::FormatType) hb_parni(2) ) );
-  }
-}
-
+$method=|QString|standaloneMonthName|int,QLocale::FormatType=QLocale::LongFormat
 
 /*
 Qt::LayoutDirection textDirection () const
@@ -622,19 +495,10 @@ HB_FUNC_STATIC( QLOCALE_TEXTDIRECTION )
   }
 }
 
-
 /*
 QString timeFormat ( FormatType format = LongFormat ) const
 */
-HB_FUNC_STATIC( QLOCALE_TIMEFORMAT )
-{
-  QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->timeFormat ( ISNIL(1)? QLocale::LongFormat : (QLocale::FormatType) hb_parni(1) ) );
-  }
-}
-
+$method=|QString|timeFormat|QLocale::FormatType=QLocale::LongFormat
 
 /*
 QString toCurrencyString ( qlonglong value, const QString & symbol = QString() ) const
@@ -904,19 +768,10 @@ HB_FUNC_STATIC( QLOCALE_TOLONGLONG )
   }
 }
 
-
 /*
 QString toLower ( const QString & str ) const
 */
-HB_FUNC_STATIC( QLOCALE_TOLOWER )
-{
-  QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->toLower ( PQSTRING(1) ) );
-  }
-}
-
+$method=|QString|toLower|const QString &
 
 /*
 short toShort ( const QString & s, bool * ok = 0, int base = 0 ) const
@@ -931,7 +786,6 @@ HB_FUNC_STATIC( QLOCALE_TOSHORT )
     hb_storl( par2, 2 );
   }
 }
-
 
 /*
 QString toString ( qlonglong i ) const
@@ -1229,19 +1083,10 @@ HB_FUNC_STATIC( QLOCALE_TOUSHORT )
   }
 }
 
-
 /*
 QString toUpper ( const QString & str ) const
 */
-HB_FUNC_STATIC( QLOCALE_TOUPPER )
-{
-  QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->toUpper ( PQSTRING(1) ) );
-  }
-}
-
+$method=|QString|toUpper|const QString &
 
 /*
 QStringList uiLanguages () const
@@ -1292,22 +1137,14 @@ HB_FUNC_STATIC( QLOCALE_C )
 
 
 /*
-QString countryToString ( Country country )
+static QString countryToString ( Country country )
 */
-HB_FUNC_STATIC( QLOCALE_COUNTRYTOSTRING )
-{
-  RQSTRING( QLocale::countryToString ( (QLocale::Country) hb_parni(1) ) );
-}
-
+$staticMethod=|QString|countryToString|QLocale::Country
 
 /*
-QString languageToString ( Language language )
+static QString languageToString ( Language language )
 */
-HB_FUNC_STATIC( QLOCALE_LANGUAGETOSTRING )
-{
-  RQSTRING( QLocale::languageToString ( (QLocale::Language) hb_parni(1) ) );
-}
-
+$staticMethod=|QString|languageToString|QLocale::Language
 
 /*
 QList<QLocale> matchingLocales ( QLocale::Language language, QLocale::Script script, QLocale::Country country )
@@ -1348,15 +1185,10 @@ HB_FUNC_STATIC( QLOCALE_MATCHINGLOCALES )
   hb_itemReturnRelease(pArray);
 }
 
-
 /*
-QString scriptToString ( Script script )
+static QString scriptToString ( Script script )
 */
-HB_FUNC_STATIC( QLOCALE_SCRIPTTOSTRING )
-{
-  RQSTRING( QLocale::scriptToString ( (QLocale::Script) hb_parni(1) ) );
-}
-
+$staticMethod=|QString|scriptToString|QLocale::Script
 
 /*
 void setDefault ( const QLocale & locale )

@@ -132,32 +132,15 @@ HB_FUNC_STATIC( QDIRITERATOR_FILEINFO )
   }
 }
 
-
 /*
 QString fileName () const
 */
-HB_FUNC_STATIC( QDIRITERATOR_FILENAME )
-{
-  QDirIterator * obj = (QDirIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->fileName () );
-  }
-}
-
+$method=|QString|fileName|
 
 /*
 QString filePath () const
 */
-HB_FUNC_STATIC( QDIRITERATOR_FILEPATH )
-{
-  QDirIterator * obj = (QDirIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->filePath () );
-  }
-}
-
+$method=|QString|filePath|
 
 /*
 bool hasNext () const
@@ -171,31 +154,15 @@ HB_FUNC_STATIC( QDIRITERATOR_HASNEXT )
   }
 }
 
-
 /*
 QString next ()
 */
-HB_FUNC_STATIC( QDIRITERATOR_NEXT )
-{
-  QDirIterator * obj = (QDirIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->next () );
-  }
-}
-
+$method=|QString|next|
 
 /*
 QString path () const
 */
-HB_FUNC_STATIC( QDIRITERATOR_PATH )
-{
-  QDirIterator * obj = (QDirIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->path () );
-  }
-}
+$method=|QString|path|
 
 $extraMethods
 
