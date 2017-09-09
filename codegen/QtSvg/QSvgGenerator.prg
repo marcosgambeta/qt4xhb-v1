@@ -60,28 +60,12 @@ $deleteMethod
 /*
 QString description () const
 */
-HB_FUNC_STATIC( QSVGGENERATOR_DESCRIPTION )
-{
-  QSvgGenerator * obj = (QSvgGenerator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->description () );
-  }
-}
-
+$method=|QString|description|
 
 /*
 QString fileName () const
 */
-HB_FUNC_STATIC( QSVGGENERATOR_FILENAME )
-{
-  QSvgGenerator * obj = (QSvgGenerator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->fileName () );
-  }
-}
-
+$method=|QString|fileName|
 
 /*
 QIODevice * outputDevice () const
@@ -109,90 +93,35 @@ HB_FUNC_STATIC( QSVGGENERATOR_RESOLUTION )
   }
 }
 
-
 /*
 void setDescription ( const QString & description )
 */
-HB_FUNC_STATIC( QSVGGENERATOR_SETDESCRIPTION )
-{
-  QSvgGenerator * obj = (QSvgGenerator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDescription ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setDescription|const QString &
 
 /*
 void setFileName ( const QString & fileName )
 */
-HB_FUNC_STATIC( QSVGGENERATOR_SETFILENAME )
-{
-  QSvgGenerator * obj = (QSvgGenerator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFileName ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setFileName|const QString &
 
 /*
 void setOutputDevice ( QIODevice * outputDevice )
 */
-HB_FUNC_STATIC( QSVGGENERATOR_SETOUTPUTDEVICE )
-{
-  QSvgGenerator * obj = (QSvgGenerator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setOutputDevice ( PQIODEVICE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setOutputDevice|QIODevice *
 
 /*
 void setResolution ( int dpi )
 */
-HB_FUNC_STATIC( QSVGGENERATOR_SETRESOLUTION )
-{
-  QSvgGenerator * obj = (QSvgGenerator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setResolution ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setResolution|int
 
 /*
 void setSize ( const QSize & size )
 */
-HB_FUNC_STATIC( QSVGGENERATOR_SETSIZE )
-{
-  QSvgGenerator * obj = (QSvgGenerator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSize ( *PQSIZE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setSize|const QSize &
 
 /*
 void setTitle ( const QString & title )
 */
-HB_FUNC_STATIC( QSVGGENERATOR_SETTITLE )
-{
-  QSvgGenerator * obj = (QSvgGenerator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setTitle ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setTitle|const QString &
 
 /*
 void setViewBox ( const QRect & viewBox )
@@ -250,19 +179,10 @@ HB_FUNC_STATIC( QSVGGENERATOR_SIZE )
   }
 }
 
-
 /*
 QString title () const
 */
-HB_FUNC_STATIC( QSVGGENERATOR_TITLE )
-{
-  QSvgGenerator * obj = (QSvgGenerator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->title () );
-  }
-}
-
+$method=|QString|title|
 
 /*
 QRect viewBox () const

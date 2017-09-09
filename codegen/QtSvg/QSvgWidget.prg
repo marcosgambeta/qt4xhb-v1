@@ -102,34 +102,15 @@ HB_FUNC_STATIC( QSVGWIDGET_SIZEHINT )
   }
 }
 
-
 /*
 void load ( const QString & file )
 */
-HB_FUNC_STATIC( QSVGWIDGET_LOAD1 )
-{
-  QSvgWidget * obj = (QSvgWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->load ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|load,load1|const QString &
 
 /*
 void load ( const QByteArray & contents )
 */
-HB_FUNC_STATIC( QSVGWIDGET_LOAD2 )
-{
-  QSvgWidget * obj = (QSvgWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->load ( *PQBYTEARRAY(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|load,load2|const QByteArray &
 
 //[1]void load ( const QString & file )
 //[2]void load ( const QByteArray & contents )
@@ -145,7 +126,5 @@ HB_FUNC_STATIC( QSVGWIDGET_LOAD )
     HB_FUNC_EXEC( QSVGWIDGET_LOAD2 );
   }
 }
-
-
 
 #pragma ENDDUMP

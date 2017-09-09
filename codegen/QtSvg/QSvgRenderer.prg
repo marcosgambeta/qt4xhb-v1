@@ -138,20 +138,10 @@ HB_FUNC_STATIC( QSVGRENDERER_ANIMATED )
   }
 }
 
-
 /*
 QRectF boundsOnElement ( const QString & id ) const
 */
-HB_FUNC_STATIC( QSVGRENDERER_BOUNDSONELEMENT )
-{
-  QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->boundsOnElement ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
-
+$method=|QRectF|boundsOnElement|const QString &
 
 /*
 QSize defaultSize () const
@@ -166,19 +156,10 @@ HB_FUNC_STATIC( QSVGRENDERER_DEFAULTSIZE )
   }
 }
 
-
 /*
 bool elementExists ( const QString & id ) const
 */
-HB_FUNC_STATIC( QSVGRENDERER_ELEMENTEXISTS )
-{
-  QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->elementExists ( PQSTRING(1) ) );
-  }
-}
-
+$method=|bool|elementExists|const QString &
 
 /*
 int framesPerSecond () const
@@ -205,20 +186,10 @@ HB_FUNC_STATIC( QSVGRENDERER_ISVALID )
   }
 }
 
-
 /*
 QMatrix matrixForElement ( const QString & id ) const
 */
-HB_FUNC_STATIC( QSVGRENDERER_MATRIXFORELEMENT )
-{
-  QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QMatrix * ptr = new QMatrix( obj->matrixForElement ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QMATRIX" );
-  }
-}
-
+$method=|QMatrix|matrixForElement|const QString &
 
 /*
 void setFramesPerSecond ( int num )
@@ -304,46 +275,20 @@ HB_FUNC_STATIC( QSVGRENDERER_VIEWBOXF )
   }
 }
 
-
 /*
 bool load ( const QString & filename )
 */
-HB_FUNC_STATIC( QSVGRENDERER_LOAD1 )
-{
-  QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->load ( PQSTRING(1) ) );
-  }
-}
-
+$method=|bool|load,load1|const QString &
 
 /*
 bool load ( const QByteArray & contents )
 */
-HB_FUNC_STATIC( QSVGRENDERER_LOAD2 )
-{
-  QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->load ( *PQBYTEARRAY(1) ) );
-  }
-}
-
+$method=|bool|load,load2|const QByteArray &
 
 /*
 bool load ( QXmlStreamReader * contents )
 */
-HB_FUNC_STATIC( QSVGRENDERER_LOAD3 )
-{
-  QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QXmlStreamReader * par1 = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->load ( par1 ) );
-  }
-}
-
+$method=|bool|load,load3|QXmlStreamReader *
 
 //[1]bool load ( const QString & filename )
 //[2]bool load ( const QByteArray & contents )

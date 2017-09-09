@@ -77,19 +77,10 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_NEW )
   }
 }
 
-
 /*
 QString elementId () const
 */
-HB_FUNC_STATIC( QGRAPHICSSVGITEM_ELEMENTID )
-{
-  QGraphicsSvgItem * obj = (QGraphicsSvgItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->elementId () );
-  }
-}
-
+$method=|QString|elementId|
 
 /*
 QSize maximumCacheSize () const
@@ -118,63 +109,25 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_RENDERER )
   }
 }
 
-
 /*
 void setElementId ( const QString & id )
 */
-HB_FUNC_STATIC( QGRAPHICSSVGITEM_SETELEMENTID )
-{
-  QGraphicsSvgItem * obj = (QGraphicsSvgItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setElementId ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setElementId|const QString &
 
 /*
 void setMaximumCacheSize ( const QSize & size )
 */
-HB_FUNC_STATIC( QGRAPHICSSVGITEM_SETMAXIMUMCACHESIZE )
-{
-  QGraphicsSvgItem * obj = (QGraphicsSvgItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setMaximumCacheSize ( *PQSIZE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setMaximumCacheSize|const QSize &
 
 /*
 void setSharedRenderer ( QSvgRenderer * renderer )
 */
-HB_FUNC_STATIC( QGRAPHICSSVGITEM_SETSHAREDRENDERER )
-{
-  QGraphicsSvgItem * obj = (QGraphicsSvgItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSvgRenderer * par1 = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setSharedRenderer ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setSharedRenderer|QSvgRenderer *
 
 /*
 virtual QRectF boundingRect () const
 */
-HB_FUNC_STATIC( QGRAPHICSSVGITEM_BOUNDINGRECT )
-{
-  QGraphicsSvgItem * obj = (QGraphicsSvgItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->boundingRect () );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
-
+$virtualMethod=|QRectF|boundingRect|
 
 /*
 virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
@@ -190,20 +143,9 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_PAINT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 virtual int type () const
 */
-HB_FUNC_STATIC( QGRAPHICSSVGITEM_TYPE )
-{
-  QGraphicsSvgItem * obj = (QGraphicsSvgItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->type () );
-  }
-}
-
-
-
+$virtualMethod=|int|type|
 
 #pragma ENDDUMP
