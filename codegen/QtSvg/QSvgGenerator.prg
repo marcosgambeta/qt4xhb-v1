@@ -25,13 +25,12 @@ CLASS QSvgGenerator INHERIT QPaintDevice
    METHOD setResolution
    METHOD setSize
    METHOD setTitle
-   METHOD setViewBox1
-   METHOD setViewBox2
    METHOD setViewBox
    METHOD size
    METHOD title
    METHOD viewBox
    METHOD viewBoxF
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -49,11 +48,7 @@ $destructor
 /*
 QSvgGenerator ()
 */
-HB_FUNC_STATIC( QSVGGENERATOR_NEW )
-{
-  QSvgGenerator * o = new QSvgGenerator ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|
 
 $deleteMethod
 
@@ -70,28 +65,12 @@ $method=|QString|fileName|
 /*
 QIODevice * outputDevice () const
 */
-HB_FUNC_STATIC( QSVGGENERATOR_OUTPUTDEVICE )
-{
-  QSvgGenerator * obj = (QSvgGenerator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QIODevice * ptr = obj->outputDevice ();
-    _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );
-  }
-}
-
+$method=|QIODevice *|outputDevice|
 
 /*
 int resolution () const
 */
-HB_FUNC_STATIC( QSVGGENERATOR_RESOLUTION )
-{
-  QSvgGenerator * obj = (QSvgGenerator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->resolution () );
-  }
-}
+$method=|int|resolution|
 
 /*
 void setDescription ( const QString & description )
@@ -126,30 +105,12 @@ $method=|void|setTitle|const QString &
 /*
 void setViewBox ( const QRect & viewBox )
 */
-HB_FUNC_STATIC( QSVGGENERATOR_SETVIEWBOX1 )
-{
-  QSvgGenerator * obj = (QSvgGenerator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setViewBox ( *PQRECT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$internalMethod=|void|setViewBox,setViewBox1|const QRect &
 
 /*
 void setViewBox ( const QRectF & viewBox )
 */
-HB_FUNC_STATIC( QSVGGENERATOR_SETVIEWBOX2 )
-{
-  QSvgGenerator * obj = (QSvgGenerator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setViewBox ( *PQRECTF(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$internalMethod=|void|setViewBox,setViewBox2|const QRectF &
 
 //[1]void setViewBox ( const QRect & viewBox )
 //[2]void setViewBox ( const QRectF & viewBox )
@@ -158,26 +119,22 @@ HB_FUNC_STATIC( QSVGGENERATOR_SETVIEWBOX )
 {
   if( ISNUMPAR(1) && ISQRECT(1) )
   {
-    HB_FUNC_EXEC( QSVGGENERATOR_SETVIEWBOX1 );
+    QSvgGenerator_setViewBox1();
   }
   else if( ISNUMPAR(1) && ISQRECTF(1) )
   {
-    HB_FUNC_EXEC( QSVGGENERATOR_SETVIEWBOX2 );
+    QSvgGenerator_setViewBox2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
 /*
 QSize size () const
 */
-HB_FUNC_STATIC( QSVGGENERATOR_SIZE )
-{
-  QSvgGenerator * obj = (QSvgGenerator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->size () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$method=|QSize|size|
 
 /*
 QString title () const
@@ -187,31 +144,11 @@ $method=|QString|title|
 /*
 QRect viewBox () const
 */
-HB_FUNC_STATIC( QSVGGENERATOR_VIEWBOX )
-{
-  QSvgGenerator * obj = (QSvgGenerator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->viewBox () );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
-
+$method=|QRect|viewBox|
 
 /*
 QRectF viewBoxF () const
 */
-HB_FUNC_STATIC( QSVGGENERATOR_VIEWBOXF )
-{
-  QSvgGenerator * obj = (QSvgGenerator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->viewBoxF () );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
-
-
-
+$method=|QRectF|viewBoxF|
 
 #pragma ENDDUMP
