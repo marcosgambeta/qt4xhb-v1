@@ -28,11 +28,13 @@ CLASS QDomImplementation
    METHOD isNull
    METHOD invalidDataPolicy
    METHOD setInvalidDataPolicy
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -57,7 +59,7 @@ QDomImplementation ()
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_NEW1 )
 {
   QDomImplementation * o = new QDomImplementation ();
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -66,7 +68,7 @@ QDomImplementation ( const QDomImplementation & x )
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_NEW2 )
 {
   QDomImplementation * o = new QDomImplementation ( *PQDOMIMPLEMENTATION(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 //[1]QDomImplementation ()
@@ -111,10 +113,18 @@ QDomDocument createDocument ( const QString & nsURI, const QString & qName, cons
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_CREATEDOCUMENT )
 {
   QDomImplementation * obj = (QDomImplementation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QDomDocument * ptr = new QDomDocument( obj->createDocument ( PQSTRING(1), PQSTRING(2), *PQDOMDOCUMENTTYPE(3) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMDOCUMENT", true );
+    if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISQDOMDOCUMENTTYPE(3) )
+    {
+      QDomDocument * ptr = new QDomDocument( obj->createDocument ( PQSTRING(1), PQSTRING(2), *PQDOMDOCUMENTTYPE(3) ) );
+      _qt4xhb_createReturnClass ( ptr, "QDOMDOCUMENT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -124,10 +134,18 @@ QDomDocumentType createDocumentType ( const QString & qName, const QString & pub
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_CREATEDOCUMENTTYPE )
 {
   QDomImplementation * obj = (QDomImplementation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QDomDocumentType * ptr = new QDomDocumentType( obj->createDocumentType ( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMDOCUMENTTYPE", true );
+    if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) )
+    {
+      QDomDocumentType * ptr = new QDomDocumentType( obj->createDocumentType ( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
+      _qt4xhb_createReturnClass ( ptr, "QDOMDOCUMENTTYPE", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -137,9 +155,17 @@ bool hasFeature ( const QString & feature, const QString & version ) const
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_HASFEATURE )
 {
   QDomImplementation * obj = (QDomImplementation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->hasFeature ( PQSTRING(1), PQSTRING(2) ) );
+    if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+    {
+      RBOOL( obj->hasFeature ( PQSTRING(1), PQSTRING(2) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -149,27 +175,49 @@ bool isNull ()
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_ISNULL )
 {
   QDomImplementation * obj = (QDomImplementation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isNull () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isNull () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
 /*
-InvalidDataPolicy invalidDataPolicy ()
+static InvalidDataPolicy invalidDataPolicy ()
 */
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_INVALIDDATAPOLICY )
 {
-  hb_retni( (int) QDomImplementation::invalidDataPolicy () );
+    if( ISNUMPAR(0) )
+  {
+      RENUM( QDomImplementation::invalidDataPolicy () );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
-void setInvalidDataPolicy ( InvalidDataPolicy policy )
+static void setInvalidDataPolicy ( InvalidDataPolicy policy )
 */
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_SETINVALIDDATAPOLICY )
 {
-  int par1 = hb_parni(1);
-  QDomImplementation::setInvalidDataPolicy ( (QDomImplementation::InvalidDataPolicy) par1 );
+    if( ISNUMPAR(1) && ISNUM(1) )
+  {
+      QDomImplementation::setInvalidDataPolicy ( (QDomImplementation::InvalidDataPolicy) hb_parni(1) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

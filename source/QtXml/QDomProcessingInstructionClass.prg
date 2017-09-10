@@ -19,6 +19,7 @@ CLASS QDomProcessingInstruction INHERIT QDomNode
    METHOD nodeType
    METHOD setData
    METHOD target
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -43,7 +44,7 @@ QDomProcessingInstruction ()
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW1 )
 {
   QDomProcessingInstruction * o = new QDomProcessingInstruction ();
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -52,7 +53,7 @@ QDomProcessingInstruction ( const QDomProcessingInstruction & x )
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW2 )
 {
   QDomProcessingInstruction * o = new QDomProcessingInstruction ( *PQDOMPROCESSINGINSTRUCTION(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 //[1]QDomProcessingInstruction ()
@@ -80,9 +81,17 @@ QString data () const
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_DATA )
 {
   QDomProcessingInstruction * obj = (QDomProcessingInstruction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->data () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->data () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -92,9 +101,17 @@ QDomNode::NodeType nodeType () const
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NODETYPE )
 {
   QDomProcessingInstruction * obj = (QDomProcessingInstruction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    hb_retni( (int) obj->nodeType () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->nodeType () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -104,10 +121,19 @@ void setData ( const QString & d )
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_SETDATA )
 {
   QDomProcessingInstruction * obj = (QDomProcessingInstruction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setData ( PQSTRING(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      obj->setData ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -117,9 +143,17 @@ QString target () const
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_TARGET )
 {
   QDomProcessingInstruction * obj = (QDomProcessingInstruction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->target () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->target () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

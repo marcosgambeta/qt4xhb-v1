@@ -25,6 +25,7 @@ CLASS QDomAttr INHERIT QDomNode
    METHOD setValue
    METHOD specified
    METHOD value
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -49,7 +50,7 @@ QDomAttr ()
 HB_FUNC_STATIC( QDOMATTR_NEW1 )
 {
   QDomAttr * o = new QDomAttr ();
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -58,7 +59,7 @@ QDomAttr ( const QDomAttr & x )
 HB_FUNC_STATIC( QDOMATTR_NEW2 )
 {
   QDomAttr * o = new QDomAttr ( *PQDOMATTR(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 //[1]QDomAttr ()
@@ -86,9 +87,17 @@ QString name () const
 HB_FUNC_STATIC( QDOMATTR_NAME )
 {
   QDomAttr * obj = (QDomAttr *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->name () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->name () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -98,9 +107,17 @@ QDomNode::NodeType nodeType () const
 HB_FUNC_STATIC( QDOMATTR_NODETYPE )
 {
   QDomAttr * obj = (QDomAttr *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    hb_retni( (int) obj->nodeType () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->nodeType () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -110,10 +127,18 @@ QDomElement ownerElement () const
 HB_FUNC_STATIC( QDOMATTR_OWNERELEMENT )
 {
   QDomAttr * obj = (QDomAttr *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QDomElement * ptr = new QDomElement( obj->ownerElement () );
-    _qt4xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
+    if( ISNUMPAR(0) )
+    {
+      QDomElement * ptr = new QDomElement( obj->ownerElement () );
+      _qt4xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -123,10 +148,19 @@ void setValue ( const QString & v )
 HB_FUNC_STATIC( QDOMATTR_SETVALUE )
 {
   QDomAttr * obj = (QDomAttr *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setValue ( PQSTRING(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      obj->setValue ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -136,9 +170,17 @@ bool specified () const
 HB_FUNC_STATIC( QDOMATTR_SPECIFIED )
 {
   QDomAttr * obj = (QDomAttr *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->specified () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->specified () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -148,9 +190,17 @@ QString value () const
 HB_FUNC_STATIC( QDOMATTR_VALUE )
 {
   QDomAttr * obj = (QDomAttr *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->value () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->value () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

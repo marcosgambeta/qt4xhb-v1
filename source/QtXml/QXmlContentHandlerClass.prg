@@ -26,11 +26,13 @@ CLASS QXmlContentHandler
    METHOD startDocument
    METHOD startElement
    METHOD startPrefixMapping
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -72,9 +74,17 @@ virtual bool characters ( const QString & ch ) = 0
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_CHARACTERS )
 {
   QXmlContentHandler * obj = (QXmlContentHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->characters ( PQSTRING(1) ) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      RBOOL( obj->characters ( PQSTRING(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -84,9 +94,17 @@ virtual bool endDocument () = 0
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_ENDDOCUMENT )
 {
   QXmlContentHandler * obj = (QXmlContentHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->endDocument () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->endDocument () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -96,9 +114,17 @@ virtual bool endElement ( const QString & namespaceURI, const QString & localNam
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_ENDELEMENT )
 {
   QXmlContentHandler * obj = (QXmlContentHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->endElement ( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
+    if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) )
+    {
+      RBOOL( obj->endElement ( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -108,9 +134,17 @@ virtual bool endPrefixMapping ( const QString & prefix ) = 0
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_ENDPREFIXMAPPING )
 {
   QXmlContentHandler * obj = (QXmlContentHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->endPrefixMapping ( PQSTRING(1) ) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      RBOOL( obj->endPrefixMapping ( PQSTRING(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -120,9 +154,17 @@ virtual QString errorString () const = 0
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_ERRORSTRING )
 {
   QXmlContentHandler * obj = (QXmlContentHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->errorString () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->errorString () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -132,9 +174,17 @@ virtual bool ignorableWhitespace ( const QString & ch ) = 0
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_IGNORABLEWHITESPACE )
 {
   QXmlContentHandler * obj = (QXmlContentHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->ignorableWhitespace ( PQSTRING(1) ) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      RBOOL( obj->ignorableWhitespace ( PQSTRING(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -144,9 +194,17 @@ virtual bool processingInstruction ( const QString & target, const QString & dat
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_PROCESSINGINSTRUCTION )
 {
   QXmlContentHandler * obj = (QXmlContentHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->processingInstruction ( PQSTRING(1), PQSTRING(2) ) );
+    if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+    {
+      RBOOL( obj->processingInstruction ( PQSTRING(1), PQSTRING(2) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -156,11 +214,19 @@ virtual void setDocumentLocator ( QXmlLocator * locator ) = 0
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_SETDOCUMENTLOCATOR )
 {
   QXmlContentHandler * obj = (QXmlContentHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QXmlLocator * par1 = (QXmlLocator *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setDocumentLocator ( par1 );
+    if( ISNUMPAR(1) && ISQXMLLOCATOR(1) )
+    {
+      obj->setDocumentLocator ( PQXMLLOCATOR(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -170,9 +236,17 @@ virtual bool skippedEntity ( const QString & name ) = 0
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_SKIPPEDENTITY )
 {
   QXmlContentHandler * obj = (QXmlContentHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->skippedEntity ( PQSTRING(1) ) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      RBOOL( obj->skippedEntity ( PQSTRING(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -182,9 +256,17 @@ virtual bool startDocument () = 0
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_STARTDOCUMENT )
 {
   QXmlContentHandler * obj = (QXmlContentHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->startDocument () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->startDocument () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -194,9 +276,17 @@ virtual bool startElement ( const QString & namespaceURI, const QString & localN
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_STARTELEMENT )
 {
   QXmlContentHandler * obj = (QXmlContentHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->startElement ( PQSTRING(1), PQSTRING(2), PQSTRING(3), *PQXMLATTRIBUTES(4) ) );
+    if( ISNUMPAR(4) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) && ISQXMLATTRIBUTES(4) )
+    {
+      RBOOL( obj->startElement ( PQSTRING(1), PQSTRING(2), PQSTRING(3), *PQXMLATTRIBUTES(4) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -206,9 +296,17 @@ virtual bool startPrefixMapping ( const QString & prefix, const QString & uri ) 
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_STARTPREFIXMAPPING )
 {
   QXmlContentHandler * obj = (QXmlContentHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->startPrefixMapping ( PQSTRING(1), PQSTRING(2) ) );
+    if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+    {
+      RBOOL( obj->startPrefixMapping ( PQSTRING(1), PQSTRING(2) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

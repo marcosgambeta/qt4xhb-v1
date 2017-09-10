@@ -27,11 +27,13 @@ CLASS QDomNodeList
    METHOD item
    METHOD length
    METHOD size
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -56,7 +58,7 @@ QDomNodeList ()
 HB_FUNC_STATIC( QDOMNODELIST_NEW1 )
 {
   QDomNodeList * o = new QDomNodeList ();
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -65,7 +67,7 @@ QDomNodeList ( const QDomNodeList & n )
 HB_FUNC_STATIC( QDOMNODELIST_NEW2 )
 {
   QDomNodeList * o = new QDomNodeList ( *PQDOMNODELIST(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 //[1]QDomNodeList ()
@@ -110,10 +112,18 @@ QDomNode at ( int index ) const
 HB_FUNC_STATIC( QDOMNODELIST_AT )
 {
   QDomNodeList * obj = (QDomNodeList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QDomNode * ptr = new QDomNode( obj->at ( PINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      QDomNode * ptr = new QDomNode( obj->at ( PINT(1) ) );
+      _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -123,9 +133,17 @@ int count () const
 HB_FUNC_STATIC( QDOMNODELIST_COUNT )
 {
   QDomNodeList * obj = (QDomNodeList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RINT( obj->count () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->count () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -135,9 +153,17 @@ bool isEmpty () const
 HB_FUNC_STATIC( QDOMNODELIST_ISEMPTY )
 {
   QDomNodeList * obj = (QDomNodeList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isEmpty () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isEmpty () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -147,10 +173,18 @@ QDomNode item ( int index ) const
 HB_FUNC_STATIC( QDOMNODELIST_ITEM )
 {
   QDomNodeList * obj = (QDomNodeList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QDomNode * ptr = new QDomNode( obj->item ( PINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      QDomNode * ptr = new QDomNode( obj->item ( PINT(1) ) );
+      _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -160,9 +194,17 @@ uint length () const
 HB_FUNC_STATIC( QDOMNODELIST_LENGTH )
 {
   QDomNodeList * obj = (QDomNodeList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    hb_retni( (uint) obj->length () );
+    if( ISNUMPAR(0) )
+    {
+      RUINT( obj->length () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -172,9 +214,17 @@ int size () const
 HB_FUNC_STATIC( QDOMNODELIST_SIZE )
 {
   QDomNodeList * obj = (QDomNodeList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RINT( obj->size () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->size () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

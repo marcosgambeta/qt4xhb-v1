@@ -22,11 +22,13 @@ CLASS QXmlParseException
    METHOD message
    METHOD publicId
    METHOD systemId
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -51,7 +53,7 @@ QXmlParseException ( const QString & name = QString(), int c = -1, int l = -1, c
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEW1 )
 {
   QXmlParseException * o = new QXmlParseException ( OPQSTRING(1,QString()), OPINT(2,-1), OPINT(3,-1), OPQSTRING(4,QString()), OPQSTRING(5,QString()) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -60,7 +62,7 @@ QXmlParseException ( const QXmlParseException & other )
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEW2 )
 {
   QXmlParseException * o = new QXmlParseException ( *PQXMLPARSEEXCEPTION(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 //[1]QXmlParseException ( const QString & name = QString(), int c = -1, int l = -1, const QString & p = QString(), const QString & s = QString() )
@@ -105,9 +107,17 @@ int columnNumber () const
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_COLUMNNUMBER )
 {
   QXmlParseException * obj = (QXmlParseException *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RINT( obj->columnNumber () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->columnNumber () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -117,9 +127,17 @@ int lineNumber () const
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_LINENUMBER )
 {
   QXmlParseException * obj = (QXmlParseException *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RINT( obj->lineNumber () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->lineNumber () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -129,9 +147,17 @@ QString message () const
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_MESSAGE )
 {
   QXmlParseException * obj = (QXmlParseException *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->message () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->message () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -141,9 +167,17 @@ QString publicId () const
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_PUBLICID )
 {
   QXmlParseException * obj = (QXmlParseException *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->publicId () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->publicId () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -153,9 +187,17 @@ QString systemId () const
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_SYSTEMID )
 {
   QXmlParseException * obj = (QXmlParseException *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->systemId () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->systemId () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

@@ -28,11 +28,13 @@ CLASS QXmlInputSource
    METHOD setData1
    METHOD setData2
    METHOD setData
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -57,7 +59,7 @@ QXmlInputSource ()
 HB_FUNC_STATIC( QXMLINPUTSOURCE_NEW1 )
 {
   QXmlInputSource * o = new QXmlInputSource ();
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -66,7 +68,7 @@ QXmlInputSource ( QIODevice * dev )
 HB_FUNC_STATIC( QXMLINPUTSOURCE_NEW2 )
 {
   QXmlInputSource * o = new QXmlInputSource ( PQIODEVICE(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 //[1]QXmlInputSource ()
@@ -111,9 +113,17 @@ virtual QString data () const
 HB_FUNC_STATIC( QXMLINPUTSOURCE_DATA )
 {
   QXmlInputSource * obj = (QXmlInputSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->data () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->data () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -123,10 +133,19 @@ virtual void fetchData ()
 HB_FUNC_STATIC( QXMLINPUTSOURCE_FETCHDATA )
 {
   QXmlInputSource * obj = (QXmlInputSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->fetchData ();
+    if( ISNUMPAR(0) )
+    {
+      obj->fetchData ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -136,10 +155,18 @@ virtual QChar next ()
 HB_FUNC_STATIC( QXMLINPUTSOURCE_NEXT )
 {
   QXmlInputSource * obj = (QXmlInputSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QChar * ptr = new QChar( obj->next () );
-    _qt4xhb_createReturnClass ( ptr, "QCHAR" );
+    if( ISNUMPAR(0) )
+    {
+      QChar * ptr = new QChar( obj->next () );
+      _qt4xhb_createReturnClass ( ptr, "QCHAR", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -149,10 +176,19 @@ virtual void reset ()
 HB_FUNC_STATIC( QXMLINPUTSOURCE_RESET )
 {
   QXmlInputSource * obj = (QXmlInputSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->reset ();
+    if( ISNUMPAR(0) )
+    {
+      obj->reset ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -162,10 +198,19 @@ virtual void setData ( const QString & dat )
 HB_FUNC_STATIC( QXMLINPUTSOURCE_SETDATA1 )
 {
   QXmlInputSource * obj = (QXmlInputSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setData ( PQSTRING(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      obj->setData ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -175,10 +220,19 @@ virtual void setData ( const QByteArray & dat )
 HB_FUNC_STATIC( QXMLINPUTSOURCE_SETDATA2 )
 {
   QXmlInputSource * obj = (QXmlInputSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setData ( *PQBYTEARRAY(1) );
+    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+    {
+      obj->setData ( *PQBYTEARRAY(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

@@ -20,17 +20,19 @@ CLASS QXmlNamespaceSupport
    METHOD prefixes1
    METHOD prefixes2
    METHOD prefixes
-   METHOD processName
+   //METHOD processName
    METHOD pushContext
    METHOD reset
    METHOD setPrefix
-   METHOD splitName
+   //METHOD splitName
    METHOD uri
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -54,8 +56,15 @@ QXmlNamespaceSupport ()
 */
 HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_NEW )
 {
-  QXmlNamespaceSupport * o = new QXmlNamespaceSupport ();
-  _qt4xhb_storePointerAndFlag ( o, true );
+  if( ISNUMPAR(0) )
+  {
+    QXmlNamespaceSupport * o = new QXmlNamespaceSupport ();
+    _qt4xhb_storePointerAndFlag( o, true );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_DELETE )
@@ -81,10 +90,19 @@ void popContext ()
 HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_POPCONTEXT )
 {
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->popContext ();
+    if( ISNUMPAR(0) )
+    {
+      obj->popContext ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -94,9 +112,17 @@ QString prefix ( const QString & uri ) const
 HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIX )
 {
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->prefix ( PQSTRING(1) ) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      RQSTRING( obj->prefix ( PQSTRING(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -106,9 +132,17 @@ QStringList prefixes () const
 HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIXES1 )
 {
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRINGLIST( obj->prefixes () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRINGLIST( obj->prefixes () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -118,9 +152,17 @@ QStringList prefixes ( const QString & uri ) const
 HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIXES2 )
 {
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRINGLIST( obj->prefixes ( PQSTRING(1) ) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      RQSTRINGLIST( obj->prefixes ( PQSTRING(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -142,17 +184,6 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIXES )
 /*
 void processName ( const QString & qname, bool isAttribute, QString & nsuri, QString & localname ) const
 */
-HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PROCESSNAME )
-{
-  QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QString par3 = hb_parc(3);
-    QString par4 = hb_parc(4);
-    obj->processName ( PQSTRING(1), PBOOL(2), par3, par4 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
 
 /*
 void pushContext ()
@@ -160,10 +191,19 @@ void pushContext ()
 HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PUSHCONTEXT )
 {
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->pushContext ();
+    if( ISNUMPAR(0) )
+    {
+      obj->pushContext ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -173,10 +213,19 @@ void reset ()
 HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_RESET )
 {
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->reset ();
+    if( ISNUMPAR(0) )
+    {
+      obj->reset ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -186,27 +235,25 @@ void setPrefix ( const QString & pre, const QString & uri )
 HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_SETPREFIX )
 {
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setPrefix ( PQSTRING(1), PQSTRING(2) );
+    if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+    {
+      obj->setPrefix ( PQSTRING(1), PQSTRING(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
 void splitName ( const QString & qname, QString & prefix, QString & localname ) const
 */
-HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_SPLITNAME )
-{
-  QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QString par2 = hb_parc(2);
-    QString par3 = hb_parc(3);
-    obj->splitName ( PQSTRING(1), par2, par3 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
 
 /*
 QString uri ( const QString & prefix ) const
@@ -214,9 +261,17 @@ QString uri ( const QString & prefix ) const
 HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_URI )
 {
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->uri ( PQSTRING(1) ) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      RQSTRING( obj->uri ( PQSTRING(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

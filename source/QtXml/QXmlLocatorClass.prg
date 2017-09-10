@@ -16,11 +16,13 @@ CLASS QXmlLocator
    METHOD delete
    METHOD columnNumber
    METHOD lineNumber
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -62,9 +64,17 @@ virtual int columnNumber () const = 0
 HB_FUNC_STATIC( QXMLLOCATOR_COLUMNNUMBER )
 {
   QXmlLocator * obj = (QXmlLocator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RINT( obj->columnNumber () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->columnNumber () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -74,9 +84,17 @@ virtual int lineNumber () const = 0
 HB_FUNC_STATIC( QXMLLOCATOR_LINENUMBER )
 {
   QXmlLocator * obj = (QXmlLocator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RINT( obj->lineNumber () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->lineNumber () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

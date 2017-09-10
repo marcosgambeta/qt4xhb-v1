@@ -16,6 +16,7 @@ CLASS QXmlSimpleReader INHERIT QXmlReader
    METHOD delete
    METHOD parse
    METHOD parseContinue
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -39,8 +40,15 @@ QXmlSimpleReader ()
 */
 HB_FUNC_STATIC( QXMLSIMPLEREADER_NEW )
 {
-  QXmlSimpleReader * o = new QXmlSimpleReader ();
-  _qt4xhb_storePointerAndFlag ( o, true );
+  if( ISNUMPAR(0) )
+  {
+    QXmlSimpleReader * o = new QXmlSimpleReader ();
+    _qt4xhb_storePointerAndFlag( o, true );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QXMLSIMPLEREADER_DELETE )
@@ -66,10 +74,17 @@ virtual bool parse ( const QXmlInputSource * input, bool incremental )
 HB_FUNC_STATIC( QXMLSIMPLEREADER_PARSE )
 {
   QXmlSimpleReader * obj = (QXmlSimpleReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    const QXmlInputSource * par1 = (const QXmlInputSource *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->parse ( par1, PBOOL(2) ) );
+    if( ISNUMPAR(2) && ISQXMLINPUTSOURCE(1) && ISLOG(2) )
+    {
+      RBOOL( obj->parse ( PQXMLINPUTSOURCE(1), PBOOL(2) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -79,9 +94,17 @@ virtual bool parseContinue ()
 HB_FUNC_STATIC( QXMLSIMPLEREADER_PARSECONTINUE )
 {
   QXmlSimpleReader * obj = (QXmlSimpleReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->parseContinue () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->parseContinue () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

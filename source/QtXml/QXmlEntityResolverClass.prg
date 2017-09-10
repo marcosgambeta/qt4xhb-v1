@@ -15,11 +15,13 @@ CLASS QXmlEntityResolver
 
    METHOD delete
    METHOD errorString
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -61,9 +63,17 @@ virtual QString errorString () const = 0
 HB_FUNC_STATIC( QXMLENTITYRESOLVER_ERRORSTRING )
 {
   QXmlEntityResolver * obj = (QXmlEntityResolver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->errorString () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->errorString () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

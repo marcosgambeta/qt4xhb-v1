@@ -16,6 +16,7 @@ CLASS QDomCDATASection INHERIT QDomText
    METHOD new2
    METHOD new
    METHOD nodeType
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -40,7 +41,7 @@ QDomCDATASection ()
 HB_FUNC_STATIC( QDOMCDATASECTION_NEW1 )
 {
   QDomCDATASection * o = new QDomCDATASection ();
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -49,7 +50,7 @@ QDomCDATASection ( const QDomCDATASection & x )
 HB_FUNC_STATIC( QDOMCDATASECTION_NEW2 )
 {
   QDomCDATASection * o = new QDomCDATASection ( *PQDOMCDATASECTION(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 //[1]QDomCDATASection ()
@@ -77,9 +78,17 @@ QDomNode::NodeType nodeType () const
 HB_FUNC_STATIC( QDOMCDATASECTION_NODETYPE )
 {
   QDomCDATASection * obj = (QDomCDATASection *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    hb_retni( (int) obj->nodeType () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->nodeType () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

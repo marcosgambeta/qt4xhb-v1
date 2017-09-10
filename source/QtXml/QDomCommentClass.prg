@@ -16,6 +16,7 @@ CLASS QDomComment INHERIT QDomCharacterData
    METHOD new2
    METHOD new
    METHOD nodeType
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -40,7 +41,7 @@ QDomComment ()
 HB_FUNC_STATIC( QDOMCOMMENT_NEW1 )
 {
   QDomComment * o = new QDomComment ();
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -49,7 +50,7 @@ QDomComment ( const QDomComment & x )
 HB_FUNC_STATIC( QDOMCOMMENT_NEW2 )
 {
   QDomComment * o = new QDomComment ( *PQDOMCOMMENT(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 //[1]QDomComment ()
@@ -77,9 +78,17 @@ QDomNode::NodeType nodeType () cons
 HB_FUNC_STATIC( QDOMCOMMENT_NODETYPE )
 {
   QDomComment * obj = (QDomComment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    hb_retni( (int) obj->nodeType () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->nodeType () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

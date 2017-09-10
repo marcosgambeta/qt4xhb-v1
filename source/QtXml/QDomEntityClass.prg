@@ -19,6 +19,7 @@ CLASS QDomEntity INHERIT QDomNode
    METHOD notationName
    METHOD publicId
    METHOD systemId
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -43,7 +44,7 @@ QDomEntity ()
 HB_FUNC_STATIC( QDOMENTITY_NEW1 )
 {
   QDomEntity * o = new QDomEntity ();
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -52,7 +53,7 @@ QDomEntity ( const QDomEntity & x )
 HB_FUNC_STATIC( QDOMENTITY_NEW2 )
 {
   QDomEntity * o = new QDomEntity ( *PQDOMENTITY(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 //[1]QDomEntity ()
@@ -80,9 +81,17 @@ QDomNode::NodeType nodeType () const
 HB_FUNC_STATIC( QDOMENTITY_NODETYPE )
 {
   QDomEntity * obj = (QDomEntity *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    hb_retni( (int) obj->nodeType () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->nodeType () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -92,9 +101,17 @@ QString notationName () const
 HB_FUNC_STATIC( QDOMENTITY_NOTATIONNAME )
 {
   QDomEntity * obj = (QDomEntity *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->notationName () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->notationName () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -104,9 +121,17 @@ QString publicId () const
 HB_FUNC_STATIC( QDOMENTITY_PUBLICID )
 {
   QDomEntity * obj = (QDomEntity *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->publicId () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->publicId () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -116,9 +141,17 @@ QString systemId () const
 HB_FUNC_STATIC( QDOMENTITY_SYSTEMID )
 {
   QDomEntity * obj = (QDomEntity *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->systemId () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->systemId () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

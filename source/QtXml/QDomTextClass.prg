@@ -21,6 +21,7 @@ CLASS QDomText INHERIT QDomCharacterData
    METHOD new
    METHOD nodeType
    METHOD splitText
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -45,7 +46,7 @@ QDomText ()
 HB_FUNC_STATIC( QDOMTEXT_NEW1 )
 {
   QDomText * o = new QDomText ();
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -54,7 +55,7 @@ QDomText ( const QDomText & x )
 HB_FUNC_STATIC( QDOMTEXT_NEW2 )
 {
   QDomText * o = new QDomText ( *PQDOMTEXT(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 //[1]QDomText ()
@@ -82,9 +83,17 @@ QDomNode::NodeType nodeType () const
 HB_FUNC_STATIC( QDOMTEXT_NODETYPE )
 {
   QDomText * obj = (QDomText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    hb_retni( (int) obj->nodeType () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->nodeType () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -94,10 +103,18 @@ QDomText splitText ( int offset )
 HB_FUNC_STATIC( QDOMTEXT_SPLITTEXT )
 {
   QDomText * obj = (QDomText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QDomText * ptr = new QDomText( obj->splitText ( PINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMTEXT", true );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      QDomText * ptr = new QDomText( obj->splitText ( PINT(1) ) );
+      _qt4xhb_createReturnClass ( ptr, "QDOMTEXT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

@@ -33,11 +33,13 @@ CLASS QDomNamedNodeMap
    METHOD setNamedItem
    METHOD setNamedItemNS
    METHOD size
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -62,7 +64,7 @@ QDomNamedNodeMap ()
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NEW1 )
 {
   QDomNamedNodeMap * o = new QDomNamedNodeMap ();
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -71,7 +73,7 @@ QDomNamedNodeMap ( const QDomNamedNodeMap & n )
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NEW2 )
 {
   QDomNamedNodeMap * o = new QDomNamedNodeMap ( *PQDOMNAMEDNODEMAP(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 //[1]QDomNamedNodeMap ()
@@ -116,9 +118,17 @@ bool contains ( const QString & name ) const
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_CONTAINS )
 {
   QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->contains ( PQSTRING(1) ) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      RBOOL( obj->contains ( PQSTRING(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -128,9 +138,17 @@ int count () const
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_COUNT )
 {
   QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RINT( obj->count () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->count () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -140,9 +158,17 @@ bool isEmpty () const
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_ISEMPTY )
 {
   QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isEmpty () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isEmpty () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -152,10 +178,18 @@ QDomNode item ( int index ) const
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_ITEM )
 {
   QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QDomNode * ptr = new QDomNode( obj->item ( PINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      QDomNode * ptr = new QDomNode( obj->item ( PINT(1) ) );
+      _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -165,9 +199,17 @@ uint length () const
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_LENGTH )
 {
   QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    hb_retni( (uint) obj->length () );
+    if( ISNUMPAR(0) )
+    {
+      RUINT( obj->length () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -177,10 +219,18 @@ QDomNode namedItem ( const QString & name ) const
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NAMEDITEM )
 {
   QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QDomNode * ptr = new QDomNode( obj->namedItem ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      QDomNode * ptr = new QDomNode( obj->namedItem ( PQSTRING(1) ) );
+      _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -190,10 +240,18 @@ QDomNode namedItemNS ( const QString & nsURI, const QString & localName ) const
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NAMEDITEMNS )
 {
   QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QDomNode * ptr = new QDomNode( obj->namedItemNS ( PQSTRING(1), PQSTRING(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+    if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+    {
+      QDomNode * ptr = new QDomNode( obj->namedItemNS ( PQSTRING(1), PQSTRING(2) ) );
+      _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -203,10 +261,18 @@ QDomNode removeNamedItem ( const QString & name )
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_REMOVENAMEDITEM )
 {
   QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QDomNode * ptr = new QDomNode( obj->removeNamedItem ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      QDomNode * ptr = new QDomNode( obj->removeNamedItem ( PQSTRING(1) ) );
+      _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -216,10 +282,18 @@ QDomNode removeNamedItemNS ( const QString & nsURI, const QString & localName )
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_REMOVENAMEDITEMNS )
 {
   QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QDomNode * ptr = new QDomNode( obj->removeNamedItemNS ( PQSTRING(1), PQSTRING(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+    if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+    {
+      QDomNode * ptr = new QDomNode( obj->removeNamedItemNS ( PQSTRING(1), PQSTRING(2) ) );
+      _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -229,10 +303,18 @@ QDomNode setNamedItem ( const QDomNode & newNode )
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_SETNAMEDITEM )
 {
   QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QDomNode * ptr = new QDomNode( obj->setNamedItem ( *PQDOMNODE(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+    if( ISNUMPAR(1) && ISQDOMNODE(1) )
+    {
+      QDomNode * ptr = new QDomNode( obj->setNamedItem ( *PQDOMNODE(1) ) );
+      _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -242,10 +324,18 @@ QDomNode setNamedItemNS ( const QDomNode & newNode )
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_SETNAMEDITEMNS )
 {
   QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QDomNode * ptr = new QDomNode( obj->setNamedItemNS ( *PQDOMNODE(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+    if( ISNUMPAR(1) && ISQDOMNODE(1) )
+    {
+      QDomNode * ptr = new QDomNode( obj->setNamedItemNS ( *PQDOMNODE(1) ) );
+      _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -255,9 +345,17 @@ int size () const
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_SIZE )
 {
   QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RINT( obj->size () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->size () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

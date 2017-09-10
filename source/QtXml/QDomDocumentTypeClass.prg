@@ -26,6 +26,7 @@ CLASS QDomDocumentType INHERIT QDomNode
    METHOD notations
    METHOD publicId
    METHOD systemId
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -50,7 +51,7 @@ QDomDocumentType ()
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW1 )
 {
   QDomDocumentType * o = new QDomDocumentType ();
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -59,7 +60,7 @@ QDomDocumentType ( const QDomDocumentType & n )
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW2 )
 {
   QDomDocumentType * o = new QDomDocumentType ( *PQDOMDOCUMENTTYPE(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 //[1]QDomDocumentType ()
@@ -87,10 +88,18 @@ QDomNamedNodeMap entities () const
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_ENTITIES )
 {
   QDomDocumentType * obj = (QDomDocumentType *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QDomNamedNodeMap * ptr = new QDomNamedNodeMap( obj->entities () );
-    _qt4xhb_createReturnClass ( ptr, "QDOMNAMEDNODEMAP", true );
+    if( ISNUMPAR(0) )
+    {
+      QDomNamedNodeMap * ptr = new QDomNamedNodeMap( obj->entities () );
+      _qt4xhb_createReturnClass ( ptr, "QDOMNAMEDNODEMAP", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -100,9 +109,17 @@ QString internalSubset () const
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_INTERNALSUBSET )
 {
   QDomDocumentType * obj = (QDomDocumentType *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->internalSubset () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->internalSubset () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -112,9 +129,17 @@ QString name () const
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NAME )
 {
   QDomDocumentType * obj = (QDomDocumentType *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->name () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->name () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -124,9 +149,17 @@ QDomNode::NodeType nodeType () const
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NODETYPE )
 {
   QDomDocumentType * obj = (QDomDocumentType *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    hb_retni( (int) obj->nodeType () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->nodeType () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -136,10 +169,18 @@ QDomNamedNodeMap notations () const
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NOTATIONS )
 {
   QDomDocumentType * obj = (QDomDocumentType *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QDomNamedNodeMap * ptr = new QDomNamedNodeMap( obj->notations () );
-    _qt4xhb_createReturnClass ( ptr, "QDOMNAMEDNODEMAP", true );
+    if( ISNUMPAR(0) )
+    {
+      QDomNamedNodeMap * ptr = new QDomNamedNodeMap( obj->notations () );
+      _qt4xhb_createReturnClass ( ptr, "QDOMNAMEDNODEMAP", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -149,9 +190,17 @@ QString publicId () const
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_PUBLICID )
 {
   QDomDocumentType * obj = (QDomDocumentType *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->publicId () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->publicId () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -161,9 +210,17 @@ QString systemId () const
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_SYSTEMID )
 {
   QDomDocumentType * obj = (QDomDocumentType *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->systemId () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->systemId () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
