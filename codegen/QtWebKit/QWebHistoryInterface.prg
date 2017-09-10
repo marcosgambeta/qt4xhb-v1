@@ -15,6 +15,7 @@ CLASS QWebHistoryInterface INHERIT QObject
    METHOD historyContains
    METHOD defaultInterface
    METHOD setDefaultInterface
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -21,11 +21,13 @@ CLASS QWebDatabase
    METHOD size
    METHOD removeAllDatabases
    METHOD removeDatabase
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -45,11 +47,7 @@ $destructor
 /*
 QWebDatabase ( const QWebDatabase & other )
 */
-HB_FUNC_STATIC( QWEBDATABASE_NEW )
-{
-  QWebDatabase * o = new QWebDatabase ( *PQWEBDATABASE(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new|const QWebDatabase &
 
 $deleteMethod
 
@@ -61,14 +59,7 @@ $method=|QString|displayName|
 /*
 qint64 expectedSize () const
 */
-HB_FUNC_STATIC( QWEBDATABASE_EXPECTEDSIZE )
-{
-  QWebDatabase * obj = (QWebDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQINT64( obj->expectedSize () );
-  }
-}
+$method=|qint64|expectedSize|
 
 /*
 QString fileName () const
@@ -83,49 +74,22 @@ $method=|QString|name|
 /*
 QWebSecurityOrigin origin () const
 */
-HB_FUNC_STATIC( QWEBDATABASE_ORIGIN )
-{
-  QWebDatabase * obj = (QWebDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWebSecurityOrigin * ptr = new QWebSecurityOrigin( obj->origin () );
-    _qt4xhb_createReturnClass ( ptr, "QWEBSECURITYORIGIN", true );
-  }
-}
-
+$method=|QWebSecurityOrigin|origin|
 
 /*
 qint64 size () const
 */
-HB_FUNC_STATIC( QWEBDATABASE_SIZE )
-{
-  QWebDatabase * obj = (QWebDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQINT64( obj->size () );
-  }
-}
-
-
+$method=|qint64|size|
 
 /*
-void removeAllDatabases ()
+static void removeAllDatabases ()
 */
-HB_FUNC_STATIC( QWEBDATABASE_REMOVEALLDATABASES )
-{
-  QWebDatabase::removeAllDatabases ();
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|void|removeAllDatabases|
 
 /*
-void removeDatabase ( const QWebDatabase & db )
+static void removeDatabase ( const QWebDatabase & db )
 */
-HB_FUNC_STATIC( QWEBDATABASE_REMOVEDATABASE )
-{
-  QWebDatabase::removeDatabase ( *PQWEBDATABASE(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$staticMethod=|void|removeDatabase|const QWebDatabase &
 
 $extraMethods
 

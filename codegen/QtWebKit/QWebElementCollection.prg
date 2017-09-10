@@ -22,11 +22,13 @@ CLASS QWebElementCollection
    METHOD first
    METHOD last
    METHOD toList
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -44,32 +46,17 @@ $destructor
 /*
 QWebElementCollection ()
 */
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW1 )
-{
-  QWebElementCollection * o = new QWebElementCollection ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|
 
 /*
 QWebElementCollection ( const QWebElement & contextElement, const QString & query )
 */
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW2 )
-{
-  QWebElementCollection * o = new QWebElementCollection ( *PQWEBELEMENT(1), PQSTRING(2) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|const QWebElement &,const QString &
 
 /*
 QWebElementCollection ( const QWebElementCollection & other )
 */
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW3 )
-{
-  QWebElementCollection * o = new QWebElementCollection ( *PQWEBELEMENTCOLLECTION(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new3|const QWebElementCollection &
 
 //[1]QWebElementCollection ()
 //[2]QWebElementCollection ( const QWebElement & contextElement, const QString & query )
@@ -100,77 +87,27 @@ $deleteMethod
 /*
 void append ( const QWebElementCollection & other )
 */
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_APPEND )
-{
-  QWebElementCollection * obj = (QWebElementCollection *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->append ( *PQWEBELEMENTCOLLECTION(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|append|const QWebElementCollection &
 
 /*
 QWebElement at ( int i ) const
 */
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_AT )
-{
-  QWebElementCollection * obj = (QWebElementCollection *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWebElement * ptr = new QWebElement( obj->at ( PINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
-  }
-}
-
-
-
-
-
+$method=|QWebElement|at|int
 
 /*
 int count () const
 */
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_COUNT )
-{
-  QWebElementCollection * obj = (QWebElementCollection *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->count () );
-  }
-}
-
-
-
+$method=|int|count|
 
 /*
 QWebElement first () const
 */
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_FIRST )
-{
-  QWebElementCollection * obj = (QWebElementCollection *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWebElement * ptr = new QWebElement( obj->first () );
-    _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
-  }
-}
-
+$method=|QWebElement|first|
 
 /*
 QWebElement last () const
 */
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_LAST )
-{
-  QWebElementCollection * obj = (QWebElementCollection *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWebElement * ptr = new QWebElement( obj->last () );
-    _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
-  }
-}
-
+$method=|QWebElement|last|
 
 /*
 QList<QWebElement> toList () const

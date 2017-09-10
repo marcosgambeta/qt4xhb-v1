@@ -49,11 +49,13 @@ CLASS QWebSettings
    METHOD setOfflineWebApplicationCacheQuota
    METHOD setWebGraphic
    METHOD webGraphic
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -158,11 +160,7 @@ $staticMethod=|void|clearMemoryCaches|
 /*
 static void enablePersistentStorage ( const QString & path = QString() )
 */
-HB_FUNC_STATIC( QWEBSETTINGS_ENABLEPERSISTENTSTORAGE )
-{
-  QWebSettings::enablePersistentStorage ( OPQSTRING(1,QString()) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$staticMethod=|void|enablePersistentStorage|const QString &=QString()
 
 /*
 static QWebSettings * globalSettings ()

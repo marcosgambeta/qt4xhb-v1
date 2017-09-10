@@ -17,6 +17,7 @@ CLASS QWebInspector INHERIT QWidget
    METHOD setPage
    METHOD event
    METHOD sizeHint
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -34,70 +35,28 @@ $destructor
 /*
 QWebInspector ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QWEBINSPECTOR_NEW )
-{
-  QWebInspector * o = new QWebInspector ( OPQWIDGET(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QWidget *=0
 
 $deleteMethod
 
 /*
 QWebPage * page () const
 */
-HB_FUNC_STATIC( QWEBINSPECTOR_PAGE )
-{
-  QWebInspector * obj = (QWebInspector *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWebPage * ptr = obj->page ();
-    _qt4xhb_createReturnClass ( ptr, "QWEBPAGE" );
-  }
-}
-
+$method=|QWebPage *|page|
 
 /*
 void setPage ( QWebPage * page )
 */
-HB_FUNC_STATIC( QWEBINSPECTOR_SETPAGE )
-{
-  QWebInspector * obj = (QWebInspector *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWebPage * par1 = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setPage ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPage|QWebPage *
 
 /*
 virtual bool event ( QEvent * ev )
 */
-HB_FUNC_STATIC( QWEBINSPECTOR_EVENT )
-{
-  QWebInspector * obj = (QWebInspector *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->event ( PQEVENT(1) ) );
-  }
-}
-
+$virtualMethod=|bool|event|QEvent *
 
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC_STATIC( QWEBINSPECTOR_SIZEHINT )
-{
-  QWebInspector * obj = (QWebInspector *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
-
-
-
+$virtualMethod=|QSize|sizeHint|
 
 #pragma ENDDUMP

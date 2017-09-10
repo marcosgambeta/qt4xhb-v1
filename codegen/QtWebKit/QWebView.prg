@@ -47,6 +47,7 @@ CLASS QWebView INHERIT QWidget
    METHOD print
    METHOD reload
    METHOD stop
+
    METHOD onIconChanged
    METHOD onLinkClicked
    METHOD onLoadFinished
@@ -56,6 +57,7 @@ CLASS QWebView INHERIT QWidget
    METHOD onStatusBarMessage
    METHOD onTitleChanged
    METHOD onUrlChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -70,105 +72,46 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-
 #include <QWidget>
 #include <QUrl>
+#include <QAction>
 
 /*
 QWebView ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QWEBVIEW_NEW )
-{
-  QWebView * o = new QWebView ( OPQWIDGET(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QWidget *=0
 
 $deleteMethod
 
 /*
 bool findText ( const QString & subString, QWebPage::FindFlags options = 0 )
 */
-HB_FUNC_STATIC( QWEBVIEW_FINDTEXT )
-{
-  QWebView * obj = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = ISNIL(2)? (int) 0 : hb_parni(2);
-    RBOOL( obj->findText ( PQSTRING(1), (QWebPage::FindFlags) par2 ) );
-  }
-}
-
+$method=|bool|findText|const QString &,QWebPage::FindFlags=0
 
 /*
 QWebHistory * history () const
 */
-HB_FUNC_STATIC( QWEBVIEW_HISTORY )
-{
-  QWebView * obj = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWebHistory * ptr = obj->history ();
-    _qt4xhb_createReturnClass ( ptr, "QWEBHISTORY" );
-  }
-}
-
+$method=|QWebHistory *|history|
 
 /*
 QIcon icon () const
 */
-HB_FUNC_STATIC( QWEBVIEW_ICON )
-{
-  QWebView * obj = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QIcon * ptr = new QIcon( obj->icon () );
-    _qt4xhb_createReturnClass ( ptr, "QICON", true );
-  }
-}
-
+$method=|QIcon|icon|
 
 /*
 bool isModified () const
 */
-HB_FUNC_STATIC( QWEBVIEW_ISMODIFIED )
-{
-  QWebView * obj = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isModified () );
-  }
-}
-
+$method=|bool|isModified|
 
 /*
 void load ( const QUrl & url )
 */
-HB_FUNC_STATIC( QWEBVIEW_LOAD1 )
-{
-  QWebView * obj = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->load ( *PQURL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|load,load1|const QUrl &
 
 /*
 void load ( const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
 */
-HB_FUNC_STATIC( QWEBVIEW_LOAD2 )
-{
-  QWebView * obj = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = ISNIL(2)? (int) QNetworkAccessManager::GetOperation : hb_parni(2);
-    QByteArray par3 = ISNIL(3)? QByteArray() : *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->load ( *PQNETWORKREQUEST(1), (QNetworkAccessManager::Operation) par2, par3 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|load,load2|const QNetworkRequest &,QNetworkAccessManager::Operation=QNetworkAccessManager::GetOperation,const QByteArray &=QByteArray()
 
 //[1]void load ( const QUrl & url )
 //[2]void load ( const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
@@ -188,43 +131,17 @@ HB_FUNC_STATIC( QWEBVIEW_LOAD )
 /*
 QWebPage * page () const
 */
-HB_FUNC_STATIC( QWEBVIEW_PAGE )
-{
-  QWebView * obj = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWebPage * ptr = obj->page ();
-    _qt4xhb_createReturnClass ( ptr, "QWEBPAGE" );
-  }
-}
-
+$method=|QWebPage *|page|
 
 /*
 QAction * pageAction ( QWebPage::WebAction action ) const
 */
-HB_FUNC_STATIC( QWEBVIEW_PAGEACTION )
-{
-  QWebView * obj = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    QAction * ptr = obj->pageAction ( (QWebPage::WebAction) par1 );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
-
+$method=|QAction *|pageAction|QWebPage::WebAction
 
 /*
 QPainter::RenderHints renderHints () const
 */
-HB_FUNC_STATIC( QWEBVIEW_RENDERHINTS )
-{
-  QWebView * obj = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->renderHints () );
-  }
-}
+$method=|QPainter::RenderHints|renderHints|
 
 /*
 QString selectedText () const
@@ -234,145 +151,52 @@ $method=|QString|selectedText|
 /*
 void setContent ( const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl() )
 */
-HB_FUNC_STATIC( QWEBVIEW_SETCONTENT )
-{
-  QWebView * obj = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QUrl par3 = ISNIL(3)? QUrl() : *(QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setContent ( *PQBYTEARRAY(1), OPQSTRING(2,QString()), par3 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setContent|const QByteArray &,const QString &=QString(),const QUrl &=QUrl()
 
 /*
 void setHtml ( const QString & html, const QUrl & baseUrl = QUrl() )
 */
-HB_FUNC_STATIC( QWEBVIEW_SETHTML )
-{
-  QWebView * obj = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QUrl par2 = ISNIL(2)? QUrl() : *(QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setHtml ( PQSTRING(1), par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setHtml|const QString &,const QUrl &=QUrl()
 
 /*
 void setPage ( QWebPage * page )
 */
-HB_FUNC_STATIC( QWEBVIEW_SETPAGE )
-{
-  QWebView * obj = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWebPage * par1 = (QWebPage *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setPage ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPage|QWebPage *
 
 /*
 void setRenderHint ( QPainter::RenderHint hint, bool enabled = true )
 */
-HB_FUNC_STATIC( QWEBVIEW_SETRENDERHINT )
-{
-  QWebView * obj = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setRenderHint ( (QPainter::RenderHint) par1, OPBOOL(2,true) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setRenderHint|QPainter::RenderHint,bool=true
 
 /*
 void setRenderHints ( QPainter::RenderHints hints )
 */
-HB_FUNC_STATIC( QWEBVIEW_SETRENDERHINTS )
-{
-  QWebView * obj = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setRenderHints ( (QPainter::RenderHints) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setRenderHints|QPainter::RenderHints
 
 /*
 void setTextSizeMultiplier ( qreal factor )
 */
-HB_FUNC_STATIC( QWEBVIEW_SETTEXTSIZEMULTIPLIER )
-{
-  QWebView * obj = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setTextSizeMultiplier ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setTextSizeMultiplier|qreal
 
 /*
 void setUrl ( const QUrl & url )
 */
-HB_FUNC_STATIC( QWEBVIEW_SETURL )
-{
-  QWebView * obj = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setUrl ( *PQURL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setUrl|const QUrl &
 
 /*
 void setZoomFactor ( qreal factor )
 */
-HB_FUNC_STATIC( QWEBVIEW_SETZOOMFACTOR )
-{
-  QWebView * obj = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setZoomFactor ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setZoomFactor|qreal
 
 /*
 QWebSettings * settings () const
 */
-HB_FUNC_STATIC( QWEBVIEW_SETTINGS )
-{
-  QWebView * obj = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWebSettings * ptr = obj->settings ();
-    _qt4xhb_createReturnClass ( ptr, "QWEBSETTINGS" );
-  }
-}
-
+$method=|QWebSettings *|settings|
 
 /*
 qreal textSizeMultiplier () const
 */
-HB_FUNC_STATIC( QWEBVIEW_TEXTSIZEMULTIPLIER )
-{
-  QWebView * obj = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->textSizeMultiplier () );
-  }
-}
+$method=|qreal|textSizeMultiplier|
 
 /*
 QString title () const
@@ -382,127 +206,41 @@ $method=|QString|title|
 /*
 void triggerPageAction ( QWebPage::WebAction action, bool checked = false )
 */
-HB_FUNC_STATIC( QWEBVIEW_TRIGGERPAGEACTION )
-{
-  QWebView * obj = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->triggerPageAction ( (QWebPage::WebAction) hb_parni(1), OPBOOL(2,false) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|triggerPageAction|QWebPage::WebAction,bool=false
 
 /*
 QUrl url () const
 */
-HB_FUNC_STATIC( QWEBVIEW_URL )
-{
-  QWebView * obj = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QUrl * ptr = new QUrl( obj->url () );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
-  }
-}
-
+$method=|QUrl|url|
 
 /*
 qreal zoomFactor () const
 */
-HB_FUNC_STATIC( QWEBVIEW_ZOOMFACTOR )
-{
-  QWebView * obj = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->zoomFactor () );
-  }
-}
-
+$method=|qreal|zoomFactor|
 
 /*
 void back ()
 */
-HB_FUNC_STATIC( QWEBVIEW_BACK )
-{
-  QWebView * obj = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->back ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|back|
 
 /*
 void forward ()
 */
-HB_FUNC_STATIC( QWEBVIEW_FORWARD )
-{
-  QWebView * obj = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->forward ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|forward|
 
 /*
 void print ( QPrinter * printer ) const
 */
-HB_FUNC_STATIC( QWEBVIEW_PRINT )
-{
-  QWebView * obj = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPrinter * par1 = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->print ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|print|QPrinter *
 
 /*
 void reload ()
 */
-HB_FUNC_STATIC( QWEBVIEW_RELOAD )
-{
-  QWebView * obj = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->reload ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|reload|
 
 /*
 void stop ()
 */
-HB_FUNC_STATIC( QWEBVIEW_STOP )
-{
-  QWebView * obj = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->stop ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-//Signals
-//void iconChanged ()
-//void linkClicked ( const QUrl & url )
-//void loadFinished ( bool ok )
-//void loadProgress ( int progress )
-//void loadStarted ()
-//void selectionChanged ()
-//void statusBarMessage ( const QString & text )
-//void titleChanged ( const QString & title )
-//void urlChanged ( const QUrl & url )
-
-
-
+$method=|void|stop|
 
 #pragma ENDDUMP

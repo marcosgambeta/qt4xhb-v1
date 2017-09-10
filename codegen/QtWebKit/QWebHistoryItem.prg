@@ -24,11 +24,13 @@ CLASS QWebHistoryItem
    METHOD title
    METHOD url
    METHOD userData
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -48,81 +50,34 @@ $destructor
 /*
 QWebHistoryItem ( const QWebHistoryItem & other )
 */
-HB_FUNC_STATIC( QWEBHISTORYITEM_NEW )
-{
-  QWebHistoryItem * o = new QWebHistoryItem ( *PQWEBHISTORYITEM(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new|const QWebHistoryItem &
 
 $deleteMethod
 
 /*
 QIcon icon () const
 */
-HB_FUNC_STATIC( QWEBHISTORYITEM_ICON )
-{
-  QWebHistoryItem * obj = (QWebHistoryItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QIcon * ptr = new QIcon( obj->icon () );
-    _qt4xhb_createReturnClass ( ptr, "QICON", true );
-  }
-}
-
+$method=|QIcon|icon|
 
 /*
 bool isValid () const
 */
-HB_FUNC_STATIC( QWEBHISTORYITEM_ISVALID )
-{
-  QWebHistoryItem * obj = (QWebHistoryItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
-
+$method=|bool|isValid|
 
 /*
 QDateTime lastVisited () const
 */
-HB_FUNC_STATIC( QWEBHISTORYITEM_LASTVISITED )
-{
-  QWebHistoryItem * obj = (QWebHistoryItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDateTime * ptr = new QDateTime( obj->lastVisited () );
-    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
-  }
-}
-
+$method=|QDateTime|lastVisited|
 
 /*
 QUrl originalUrl () const
 */
-HB_FUNC_STATIC( QWEBHISTORYITEM_ORIGINALURL )
-{
-  QWebHistoryItem * obj = (QWebHistoryItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QUrl * ptr = new QUrl( obj->originalUrl () );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
-  }
-}
-
+$method=|QUrl|originalUrl|
 
 /*
 void setUserData ( const QVariant & userData )
 */
-HB_FUNC_STATIC( QWEBHISTORYITEM_SETUSERDATA )
-{
-  QWebHistoryItem * obj = (QWebHistoryItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setUserData ( *PQVARIANT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setUserData|const QVariant &
 
 /*
 QString title () const
@@ -132,29 +87,12 @@ $method=|QString|title|
 /*
 QUrl url () const
 */
-HB_FUNC_STATIC( QWEBHISTORYITEM_URL )
-{
-  QWebHistoryItem * obj = (QWebHistoryItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QUrl * ptr = new QUrl( obj->url () );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
-  }
-}
-
+$method=|QUrl|url|
 
 /*
 QVariant userData () const
 */
-HB_FUNC_STATIC( QWEBHISTORYITEM_USERDATA )
-{
-  QWebHistoryItem * obj = (QWebHistoryItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->userData () );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
+$method=|QVariant|userData|
 
 $extraMethods
 

@@ -25,11 +25,13 @@ CLASS QWebSecurityOrigin
    METHOD allOrigins
    METHOD localSchemes
    METHOD removeLocalScheme
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -50,39 +52,19 @@ $destructor
 /*
 QWebSecurityOrigin ( const QWebSecurityOrigin & other )
 */
-HB_FUNC_STATIC( QWEBSECURITYORIGIN_NEW )
-{
-  QWebSecurityOrigin * o = new QWebSecurityOrigin ( *PQWEBSECURITYORIGIN(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new|const QWebSecurityOrigin &
 
 $deleteMethod
 
 /*
 qint64 databaseQuota () const
 */
-HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASEQUOTA )
-{
-  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQINT64( obj->databaseQuota () );
-  }
-}
-
+$method=|qint64|databaseQuota|
 
 /*
 qint64 databaseUsage () const
 */
-HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASEUSAGE )
-{
-  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQINT64( obj->databaseUsage () );
-  }
-}
-
+$method=|qint64|databaseUsage|
 
 /*
 QList<QWebDatabase> databases () const
@@ -139,14 +121,7 @@ $method=|QString|host|
 /*
 int port () const
 */
-HB_FUNC_STATIC( QWEBSECURITYORIGIN_PORT )
-{
-  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->port () );
-  }
-}
+$method=|int|port|
 
 /*
 QString scheme () const
@@ -156,15 +131,7 @@ $method=|QString|scheme|
 /*
 void setDatabaseQuota ( qint64 quota )
 */
-HB_FUNC_STATIC( QWEBSECURITYORIGIN_SETDATABASEQUOTA )
-{
-  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDatabaseQuota ( PQINT64(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setDatabaseQuota|qint64
 
 /*
 static void addLocalScheme ( const QString & scheme )
