@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QDomComment INHERIT QDomCharacterData
 
    DATA self_destruction INIT .F.
@@ -11,6 +10,7 @@ CLASS QDomComment INHERIT QDomCharacterData
    METHOD new2
    METHOD new
    METHOD nodeType
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -28,22 +28,12 @@ $destructor
 /*
 QDomComment ()
 */
-HB_FUNC_STATIC( QDOMCOMMENT_NEW1 )
-{
-  QDomComment * o = new QDomComment ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|
 
 /*
 QDomComment ( const QDomComment & x )
 */
-HB_FUNC_STATIC( QDOMCOMMENT_NEW2 )
-{
-  QDomComment * o = new QDomComment ( *PQDOMCOMMENT(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|const QDomComment &
 
 //[1]QDomComment ()
 //[2]QDomComment ( const QDomComment & x )
@@ -64,21 +54,9 @@ HB_FUNC_STATIC( QDOMCOMMENT_NEW )
   }
 }
 
-
-
 /*
 QDomNode::NodeType nodeType () cons
 */
-HB_FUNC_STATIC( QDOMCOMMENT_NODETYPE )
-{
-  QDomComment * obj = (QDomComment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->nodeType () );
-  }
-}
-
-
-
+$method=|QDomNode::NodeType|nodeType|
 
 #pragma ENDDUMP

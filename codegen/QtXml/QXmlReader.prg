@@ -36,11 +36,13 @@ CLASS QXmlReader
    METHOD setFeature
    METHOD setLexicalHandler
    METHOD setProperty
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -60,86 +62,32 @@ $deleteMethod
 /*
 virtual QXmlDTDHandler * DTDHandler () const = 0
 */
-HB_FUNC_STATIC( QXMLREADER_DTDHANDLER )
-{
-  QXmlReader * obj = (QXmlReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QXmlDTDHandler * ptr = obj->DTDHandler ();
-    _qt4xhb_createReturnClass ( ptr, "QXMLDTDHANDLER" );
-  }
-}
-
+$virtualMethod=|QXmlDTDHandler *|DTDHandler|
 
 /*
 virtual QXmlContentHandler * contentHandler () const = 0
 */
-HB_FUNC_STATIC( QXMLREADER_CONTENTHANDLER )
-{
-  QXmlReader * obj = (QXmlReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QXmlContentHandler * ptr = obj->contentHandler ();
-    _qt4xhb_createReturnClass ( ptr, "QXMLCONTENTHANDLER" );
-  }
-}
-
+$virtualMethod=|QXmlContentHandler *|contentHandler|
 
 /*
 virtual QXmlDeclHandler * declHandler () const = 0
 */
-HB_FUNC_STATIC( QXMLREADER_DECLHANDLER )
-{
-  QXmlReader * obj = (QXmlReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QXmlDeclHandler * ptr = obj->declHandler ();
-    _qt4xhb_createReturnClass ( ptr, "QXMLDECLHANDLER" );
-  }
-}
-
+$virtualMethod=|QXmlDeclHandler *|declHandler|
 
 /*
 virtual QXmlEntityResolver * entityResolver () const = 0
 */
-HB_FUNC_STATIC( QXMLREADER_ENTITYRESOLVER )
-{
-  QXmlReader * obj = (QXmlReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QXmlEntityResolver * ptr = obj->entityResolver ();
-    _qt4xhb_createReturnClass ( ptr, "QXMLENTITYRESOLVER" );
-  }
-}
-
+$virtualMethod=|QXmlEntityResolver *|entityResolver|
 
 /*
 virtual QXmlErrorHandler * errorHandler () const = 0
 */
-HB_FUNC_STATIC( QXMLREADER_ERRORHANDLER )
-{
-  QXmlReader * obj = (QXmlReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QXmlErrorHandler * ptr = obj->errorHandler ();
-    _qt4xhb_createReturnClass ( ptr, "QXMLERRORHANDLER" );
-  }
-}
-
+$virtualMethod=|QXmlErrorHandler *|errorHandler|
 
 /*
 virtual bool feature ( const QString & name, bool * ok = 0 ) const = 0
 */
-HB_FUNC_STATIC( QXMLREADER_FEATURE )
-{
-  QXmlReader * obj = (QXmlReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    bool par2;
-    RBOOL( obj->feature ( PQSTRING(1), &par2 ) );
-    hb_storl( par2, 2 );
-  }
-}
+$virtualMethod=|bool|feature|const QString &,bool *=0
 
 /*
 virtual bool hasFeature ( const QString & name ) const = 0
@@ -154,164 +102,57 @@ $virtualMethod=|bool|hasProperty|const QString &
 /*
 virtual QXmlLexicalHandler * lexicalHandler () const = 0
 */
-HB_FUNC_STATIC( QXMLREADER_LEXICALHANDLER )
-{
-  QXmlReader * obj = (QXmlReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QXmlLexicalHandler * ptr = obj->lexicalHandler ();
-    _qt4xhb_createReturnClass ( ptr, "QXMLLEXICALHANDLER" );
-  }
-}
-
+$virtualMethod=|QXmlLexicalHandler *|lexicalHandler|
 
 /*
 virtual bool parse ( const QXmlInputSource * input ) = 0
 */
-HB_FUNC_STATIC( QXMLREADER_PARSE )
-{
-  QXmlReader * obj = (QXmlReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QXmlInputSource * par1 = (const QXmlInputSource *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->parse ( par1 ) );
-  }
-}
-
+$virtualMethod=|bool|parse|const QXmlInputSource *
 
 /*
 virtual void * property ( const QString & name, bool * ok = 0 ) const = 0
 */
-HB_FUNC_STATIC( QXMLREADER_PROPERTY )
-{
-  QXmlReader * obj = (QXmlReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    bool par2;
-    void * retptr = obj->property ( PQSTRING(1), &par2 );
-    hb_retptr( (void *) retptr );
-    hb_storl( par2, 2 );
-  }
-}
-
+$virtualMethod=|void *|property|const QString &,bool *=0
 
 /*
 virtual void setContentHandler ( QXmlContentHandler * handler ) = 0
 */
-HB_FUNC_STATIC( QXMLREADER_SETCONTENTHANDLER )
-{
-  QXmlReader * obj = (QXmlReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QXmlContentHandler * par1 = (QXmlContentHandler *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setContentHandler ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|setContentHandler|QXmlContentHandler *
 
 /*
 virtual void setDTDHandler ( QXmlDTDHandler * handler ) = 0
 */
-HB_FUNC_STATIC( QXMLREADER_SETDTDHANDLER )
-{
-  QXmlReader * obj = (QXmlReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QXmlDTDHandler * par1 = (QXmlDTDHandler *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setDTDHandler ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|setDTDHandler|QXmlDTDHandler *
 
 /*
 virtual void setDeclHandler ( QXmlDeclHandler * handler ) = 0
 */
-HB_FUNC_STATIC( QXMLREADER_SETDECLHANDLER )
-{
-  QXmlReader * obj = (QXmlReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QXmlDeclHandler * par1 = (QXmlDeclHandler *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setDeclHandler ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|setDeclHandler|QXmlDeclHandler *
 
 /*
 virtual void setEntityResolver ( QXmlEntityResolver * handler ) = 0
 */
-HB_FUNC_STATIC( QXMLREADER_SETENTITYRESOLVER )
-{
-  QXmlReader * obj = (QXmlReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QXmlEntityResolver * par1 = (QXmlEntityResolver *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setEntityResolver ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|setEntityResolver|QXmlEntityResolver *
 
 /*
 virtual void setErrorHandler ( QXmlErrorHandler * handler ) = 0
 */
-HB_FUNC_STATIC( QXMLREADER_SETERRORHANDLER )
-{
-  QXmlReader * obj = (QXmlReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QXmlErrorHandler * par1 = (QXmlErrorHandler *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setErrorHandler ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|setErrorHandler|QXmlErrorHandler *
 
 /*
 virtual void setFeature ( const QString & name, bool value ) = 0
 */
-HB_FUNC_STATIC( QXMLREADER_SETFEATURE )
-{
-  QXmlReader * obj = (QXmlReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFeature ( PQSTRING(1), PBOOL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|setFeature|const QString &,bool
 
 /*
 virtual void setLexicalHandler ( QXmlLexicalHandler * handler ) = 0
 */
-HB_FUNC_STATIC( QXMLREADER_SETLEXICALHANDLER )
-{
-  QXmlReader * obj = (QXmlReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QXmlLexicalHandler * par1 = (QXmlLexicalHandler *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setLexicalHandler ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|setLexicalHandler|QXmlLexicalHandler *
 
 /*
 virtual void setProperty ( const QString & name, void * value ) = 0
 */
-HB_FUNC_STATIC( QXMLREADER_SETPROPERTY )
-{
-  QXmlReader * obj = (QXmlReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    void * par2 = (void *) hb_parptr(2);
-    obj->setProperty ( PQSTRING(1), par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|setProperty|const QString &,void *
 
 $extraMethods
 

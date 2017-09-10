@@ -27,11 +27,13 @@ CLASS QDomNamedNodeMap
    METHOD setNamedItem
    METHOD setNamedItemNS
    METHOD size
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -49,22 +51,12 @@ $destructor
 /*
 QDomNamedNodeMap ()
 */
-HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NEW1 )
-{
-  QDomNamedNodeMap * o = new QDomNamedNodeMap ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|
 
 /*
 QDomNamedNodeMap ( const QDomNamedNodeMap & n )
 */
-HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NEW2 )
-{
-  QDomNamedNodeMap * o = new QDomNamedNodeMap ( *PQDOMNAMEDNODEMAP(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|const QDomNamedNodeMap &
 
 //[1]QDomNamedNodeMap ()
 //[2]QDomNamedNodeMap ( const QDomNamedNodeMap & n )
@@ -95,54 +87,22 @@ $method=|bool|contains|const QString &
 /*
 int count () const
 */
-HB_FUNC_STATIC( QDOMNAMEDNODEMAP_COUNT )
-{
-  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->count () );
-  }
-}
-
+$method=|int|count|
 
 /*
 bool isEmpty () const
 */
-HB_FUNC_STATIC( QDOMNAMEDNODEMAP_ISEMPTY )
-{
-  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isEmpty () );
-  }
-}
-
+$method=|bool|isEmpty|
 
 /*
 QDomNode item ( int index ) const
 */
-HB_FUNC_STATIC( QDOMNAMEDNODEMAP_ITEM )
-{
-  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDomNode * ptr = new QDomNode( obj->item ( PINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
-  }
-}
-
+$method=|QDomNode|item|int
 
 /*
 uint length () const
 */
-HB_FUNC_STATIC( QDOMNAMEDNODEMAP_LENGTH )
-{
-  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (uint) obj->length () );
-  }
-}
+$method=|uint|length|
 
 /*
 QDomNode namedItem ( const QString & name ) const

@@ -15,6 +15,7 @@ CLASS QDomText INHERIT QDomCharacterData
    METHOD new
    METHOD nodeType
    METHOD splitText
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -32,22 +33,12 @@ $destructor
 /*
 QDomText ()
 */
-HB_FUNC_STATIC( QDOMTEXT_NEW1 )
-{
-  QDomText * o = new QDomText ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|
 
 /*
 QDomText ( const QDomText & x )
 */
-HB_FUNC_STATIC( QDOMTEXT_NEW2 )
-{
-  QDomText * o = new QDomText ( *PQDOMTEXT(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|const QDomText &
 
 //[1]QDomText ()
 //[2]QDomText ( const QDomText & x )
@@ -68,35 +59,14 @@ HB_FUNC_STATIC( QDOMTEXT_NEW )
   }
 }
 
-
-
 /*
 QDomNode::NodeType nodeType () const
 */
-HB_FUNC_STATIC( QDOMTEXT_NODETYPE )
-{
-  QDomText * obj = (QDomText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->nodeType () );
-  }
-}
-
+$method=|QDomNode::NodeType|nodeType|
 
 /*
 QDomText splitText ( int offset )
 */
-HB_FUNC_STATIC( QDOMTEXT_SPLITTEXT )
-{
-  QDomText * obj = (QDomText *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDomText * ptr = new QDomText( obj->splitText ( PINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMTEXT", true );
-  }
-}
-
-
-
+$method=|QDomText|splitText|int
 
 #pragma ENDDUMP

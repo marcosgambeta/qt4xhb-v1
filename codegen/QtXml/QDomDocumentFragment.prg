@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QDomDocumentFragment INHERIT QDomNode
 
    DATA self_destruction INIT .F.
@@ -11,6 +10,7 @@ CLASS QDomDocumentFragment INHERIT QDomNode
    METHOD new2
    METHOD new
    METHOD nodeType
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -28,22 +28,12 @@ $destructor
 /*
 QDomDocumentFragment ()
 */
-HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NEW1 )
-{
-  QDomDocumentFragment * o = new QDomDocumentFragment ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|
 
 /*
 QDomDocumentFragment ( const QDomDocumentFragment & x )
 */
-HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NEW2 )
-{
-  QDomDocumentFragment * o = new QDomDocumentFragment ( *PQDOMDOCUMENTFRAGMENT(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|const QDomDocumentFragment &
 
 //[1]QDomDocumentFragment ()
 //[2]QDomDocumentFragment ( const QDomDocumentFragment & x )
@@ -64,21 +54,9 @@ HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NEW )
   }
 }
 
-
-
 /*
 QDomNode::NodeType nodeType () const
 */
-HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NODETYPE )
-{
-  QDomDocumentFragment * obj = (QDomDocumentFragment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->nodeType () );
-  }
-}
-
-
-
+$method=|QDomNode::NodeType|nodeType|
 
 #pragma ENDDUMP

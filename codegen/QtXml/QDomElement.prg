@@ -48,6 +48,7 @@ CLASS QDomElement INHERIT QDomNode
    METHOD setTagName
    METHOD tagName
    METHOD text
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -65,22 +66,12 @@ $destructor
 /*
 QDomElement ()
 */
-HB_FUNC_STATIC( QDOMELEMENT_NEW1 )
-{
-  QDomElement * o = new QDomElement ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|
 
 /*
 QDomElement ( const QDomElement & x )
 */
-HB_FUNC_STATIC( QDOMELEMENT_NEW2 )
-{
-  QDomElement * o = new QDomElement ( *PQDOMELEMENT(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|const QDomElement &
 
 //[1]QDomElement ()
 //[2]QDomElement ( const QDomElement & x )
@@ -101,32 +92,15 @@ HB_FUNC_STATIC( QDOMELEMENT_NEW )
   }
 }
 
-
-
 /*
 QString attribute ( const QString & name, const QString & defValue = QString() ) const
 */
-HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTE )
-{
-  QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->attribute ( PQSTRING(1), OPQSTRING(2,QString()) ) );
-  }
-}
-
+$method=|QString|attribute|const QString &,const QString &=QString()
 
 /*
 QString attributeNS ( const QString nsURI, const QString & localName, const QString & defValue = QString() ) const
 */
-HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTENS )
-{
-  QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->attributeNS ( PQSTRING(1), PQSTRING(2), OPQSTRING(3,QString()) ) );
-  }
-}
+$method=|QString|attributeNS|const QString,const QString &,const QString &=QString()
 
 /*
 QDomAttr attributeNode ( const QString & name )
@@ -226,7 +200,7 @@ $method=|void|setAttribute,setAttribute7|const QString &,double
 //[6]void setAttribute ( const QString & name, float value )
 //[7]void setAttribute ( const QString & name, double value )
 
-// TODO: implementar reconhecimento de int e double
+%% TODO: implementar reconhecimento de int e double
 HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
@@ -242,87 +216,32 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE )
 /*
 void setAttributeNS ( const QString nsURI, const QString & qName, const QString & value )
 */
-HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS1 )
-{
-  QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAttributeNS ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAttributeNS,setAttributeNS1|const QString,const QString &,const QString &
 
 /*
 void setAttributeNS ( const QString nsURI, const QString & qName, int value )
 */
-HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS2 )
-{
-  QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par3 = hb_parni(3);
-    obj->setAttributeNS ( PQSTRING(1), PQSTRING(2), par3 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAttributeNS,setAttributeNS2|const QString,const QString &,int
 
 /*
 void setAttributeNS ( const QString nsURI, const QString & qName, uint value )
 */
-HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS3 )
-{
-  QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAttributeNS ( PQSTRING(1), PQSTRING(2), PUINT(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAttributeNS,setAttributeNS3|const QString,const QString &,uint
 
 /*
 void setAttributeNS ( const QString nsURI, const QString & qName, qlonglong value )
 */
-HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS4 )
-{
-  QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAttributeNS ( PQSTRING(1), PQSTRING(2), PQLONGLONG(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAttributeNS,setAttributeNS4|const QString,const QString &,qlonglong
 
 /*
 void setAttributeNS ( const QString nsURI, const QString & qName, qulonglong value )
 */
-HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS5 )
-{
-  QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAttributeNS ( PQSTRING(1), PQSTRING(2), PQULONGLONG(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAttributeNS,setAttributeNS5|const QString,const QString &,qulonglong
 
 /*
 void setAttributeNS ( const QString nsURI, const QString & qName, double value )
 */
-HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS6 )
-{
-  QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAttributeNS ( PQSTRING(1), PQSTRING(2), PDOUBLE(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAttributeNS,setAttributeNS6|const QString,const QString &,double
 
 //[1]void setAttributeNS ( const QString nsURI, const QString & qName, const QString & value )
 //[2]void setAttributeNS ( const QString nsURI, const QString & qName, int value )
@@ -346,29 +265,12 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS )
 /*
 QDomAttr setAttributeNode ( const QDomAttr & newAttr )
 */
-HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENODE )
-{
-  QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDomAttr * ptr = new QDomAttr( obj->setAttributeNode ( *PQDOMATTR(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMATTR", true );
-  }
-}
-
+$method=|QDomAttr|setAttributeNode|const QDomAttr &
 
 /*
 QDomAttr setAttributeNodeNS ( const QDomAttr & newAttr )
 */
-HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENODENS )
-{
-  QDomElement * obj = (QDomElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDomAttr * ptr = new QDomAttr( obj->setAttributeNodeNS ( *PQDOMATTR(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMATTR", true );
-  }
-}
+$method=|QDomAttr|setAttributeNodeNS|const QDomAttr &
 
 /*
 void setTagName ( const QString & name )

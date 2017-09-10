@@ -22,11 +22,13 @@ CLASS QXmlInputSource
    METHOD setData1
    METHOD setData2
    METHOD setData
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -44,22 +46,12 @@ $destructor
 /*
 QXmlInputSource ()
 */
-HB_FUNC_STATIC( QXMLINPUTSOURCE_NEW1 )
-{
-  QXmlInputSource * o = new QXmlInputSource ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|
 
 /*
 QXmlInputSource ( QIODevice * dev )
 */
-HB_FUNC_STATIC( QXMLINPUTSOURCE_NEW2 )
-{
-  QXmlInputSource * o = new QXmlInputSource ( PQIODEVICE(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|QIODevice *
 
 //[1]QXmlInputSource ()
 //[2]QXmlInputSource ( QIODevice * dev )
@@ -90,43 +82,17 @@ $virtualMethod=|QString|data|
 /*
 virtual void fetchData ()
 */
-HB_FUNC_STATIC( QXMLINPUTSOURCE_FETCHDATA )
-{
-  QXmlInputSource * obj = (QXmlInputSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->fetchData ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|fetchData|
 
 /*
 virtual QChar next ()
 */
-HB_FUNC_STATIC( QXMLINPUTSOURCE_NEXT )
-{
-  QXmlInputSource * obj = (QXmlInputSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QChar * ptr = new QChar( obj->next () );
-    _qt4xhb_createReturnClass ( ptr, "QCHAR" );
-  }
-}
-
+$virtualMethod=|QChar|next|
 
 /*
 virtual void reset ()
 */
-HB_FUNC_STATIC( QXMLINPUTSOURCE_RESET )
-{
-  QXmlInputSource * obj = (QXmlInputSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->reset ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|reset|
 
 /*
 virtual void setData ( const QString & dat )

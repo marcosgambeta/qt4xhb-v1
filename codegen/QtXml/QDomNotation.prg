@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QDomNotation INHERIT QDomNode
 
    DATA self_destruction INIT .F.
@@ -13,6 +12,7 @@ CLASS QDomNotation INHERIT QDomNode
    METHOD nodeType
    METHOD publicId
    METHOD systemId
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -30,22 +30,12 @@ $destructor
 /*
 QDomNotation ()
 */
-HB_FUNC_STATIC( QDOMNOTATION_NEW1 )
-{
-  QDomNotation * o = new QDomNotation ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|
 
 /*
 QDomNotation ( const QDomNotation & x )
 */
-HB_FUNC_STATIC( QDOMNOTATION_NEW2 )
-{
-  QDomNotation * o = new QDomNotation ( *PQDOMNOTATION(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|const QDomNotation &
 
 //[1]QDomNotation ()
 //[2]QDomNotation ( const QDomNotation & x )
@@ -66,19 +56,10 @@ HB_FUNC_STATIC( QDOMNOTATION_NEW )
   }
 }
 
-
-
 /*
 QDomNode::NodeType nodeType () const
 */
-HB_FUNC_STATIC( QDOMNOTATION_NODETYPE )
-{
-  QDomNotation * obj = (QDomNotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->nodeType () );
-  }
-}
+$method=|QDomNode::NodeType|nodeType|
 
 /*
 QString publicId () const

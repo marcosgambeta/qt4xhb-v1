@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QXmlNamespaceSupport
 
    DATA pointer
@@ -15,17 +14,19 @@ CLASS QXmlNamespaceSupport
    METHOD prefixes1
    METHOD prefixes2
    METHOD prefixes
-   METHOD processName
+   //METHOD processName
    METHOD pushContext
    METHOD reset
    METHOD setPrefix
-   METHOD splitName
+   //METHOD splitName
    METHOD uri
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -43,26 +44,14 @@ $destructor
 /*
 QXmlNamespaceSupport ()
 */
-HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_NEW )
-{
-  QXmlNamespaceSupport * o = new QXmlNamespaceSupport ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new|
 
 $deleteMethod
 
 /*
 void popContext ()
 */
-HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_POPCONTEXT )
-{
-  QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->popContext ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|popContext|
 
 /*
 QString prefix ( const QString & uri ) const
@@ -97,75 +86,29 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIXES )
 /*
 void processName ( const QString & qname, bool isAttribute, QString & nsuri, QString & localname ) const
 */
-HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PROCESSNAME )
-{
-  QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QString par3 = hb_parc(3);
-    QString par4 = hb_parc(4);
-    obj->processName ( PQSTRING(1), PBOOL(2), par3, par4 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+%% TODO: implementar 'QString &'
+%% $method=|void|processName|const QString &,bool,QString &,QString &
 
 /*
 void pushContext ()
 */
-HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PUSHCONTEXT )
-{
-  QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->pushContext ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|pushContext|
 
 /*
 void reset ()
 */
-HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_RESET )
-{
-  QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->reset ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|reset|
 
 /*
 void setPrefix ( const QString & pre, const QString & uri )
 */
-HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_SETPREFIX )
-{
-  QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPrefix ( PQSTRING(1), PQSTRING(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPrefix|const QString &,const QString &
 
 /*
 void splitName ( const QString & qname, QString & prefix, QString & localname ) const
 */
-HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_SPLITNAME )
-{
-  QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QString par2 = hb_parc(2);
-    QString par3 = hb_parc(3);
-    obj->splitName ( PQSTRING(1), par2, par3 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+%% TODO: implementar 'QString &'
+%% $method=|void|splitName|const QString &,QString &,QString &
 
 /*
 QString uri ( const QString & prefix ) const

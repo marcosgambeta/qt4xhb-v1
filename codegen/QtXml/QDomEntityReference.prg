@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QDomEntityReference INHERIT QDomNode
 
    DATA self_destruction INIT .F.
@@ -11,6 +10,7 @@ CLASS QDomEntityReference INHERIT QDomNode
    METHOD new2
    METHOD new
    METHOD nodeType
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -28,22 +28,12 @@ $destructor
 /*
 QDomEntityReference ()
 */
-HB_FUNC_STATIC( QDOMENTITYREFERENCE_NEW1 )
-{
-  QDomEntityReference * o = new QDomEntityReference ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|
 
 /*
 QDomEntityReference ( const QDomEntityReference & x )
 */
-HB_FUNC_STATIC( QDOMENTITYREFERENCE_NEW2 )
-{
-  QDomEntityReference * o = new QDomEntityReference ( *PQDOMENTITYREFERENCE(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|const QDomEntityReference &
 
 //[1]QDomEntityReference ()
 //[2]QDomEntityReference ( const QDomEntityReference & x )
@@ -64,21 +54,9 @@ HB_FUNC_STATIC( QDOMENTITYREFERENCE_NEW )
   }
 }
 
-
-
 /*
 QDomNode::NodeType nodeType () const
 */
-HB_FUNC_STATIC( QDOMENTITYREFERENCE_NODETYPE )
-{
-  QDomEntityReference * obj = (QDomEntityReference *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->nodeType () );
-  }
-}
-
-
-
+$method=|QDomNode::NodeType|nodeType|
 
 #pragma ENDDUMP

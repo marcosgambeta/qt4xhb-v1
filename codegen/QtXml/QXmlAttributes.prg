@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QXmlAttributes
 
    DATA pointer
@@ -30,11 +29,13 @@ CLASS QXmlAttributes
    METHOD value3
    METHOD value4
    METHOD value
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -52,53 +53,24 @@ $destructor
 /*
 QXmlAttributes ()
 */
-HB_FUNC_STATIC( QXMLATTRIBUTES_NEW )
-{
-  QXmlAttributes * o = new QXmlAttributes ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new|
 
 $deleteMethod
 
 /*
 void append ( const QString & qName, const QString & uri, const QString & localPart, const QString & value )
 */
-HB_FUNC_STATIC( QXMLATTRIBUTES_APPEND )
-{
-  QXmlAttributes * obj = (QXmlAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->append ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|append|const QString &,const QString &,const QString &,const QString &
 
 /*
 void clear ()
 */
-HB_FUNC_STATIC( QXMLATTRIBUTES_CLEAR )
-{
-  QXmlAttributes * obj = (QXmlAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clear ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|clear|
 
 /*
 int count () const
 */
-HB_FUNC_STATIC( QXMLATTRIBUTES_COUNT )
-{
-  QXmlAttributes * obj = (QXmlAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->count () );
-  }
-}
+$method=|int|count|
 
 /*
 int index ( const QString & qName ) const

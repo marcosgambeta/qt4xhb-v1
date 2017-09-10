@@ -21,11 +21,13 @@ CLASS QDomNodeList
    METHOD item
    METHOD length
    METHOD size
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -43,22 +45,12 @@ $destructor
 /*
 QDomNodeList ()
 */
-HB_FUNC_STATIC( QDOMNODELIST_NEW1 )
-{
-  QDomNodeList * o = new QDomNodeList ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|
 
 /*
 QDomNodeList ( const QDomNodeList & n )
 */
-HB_FUNC_STATIC( QDOMNODELIST_NEW2 )
-{
-  QDomNodeList * o = new QDomNodeList ( *PQDOMNODELIST(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|const QDomNodeList &
 
 //[1]QDomNodeList ()
 //[2]QDomNodeList ( const QDomNodeList & n )
@@ -84,81 +76,32 @@ $deleteMethod
 /*
 QDomNode at ( int index ) const
 */
-HB_FUNC_STATIC( QDOMNODELIST_AT )
-{
-  QDomNodeList * obj = (QDomNodeList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDomNode * ptr = new QDomNode( obj->at ( PINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
-  }
-}
-
+$method=|QDomNode|at|int
 
 /*
 int count () const
 */
-HB_FUNC_STATIC( QDOMNODELIST_COUNT )
-{
-  QDomNodeList * obj = (QDomNodeList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->count () );
-  }
-}
-
+$method=|int|count|
 
 /*
 bool isEmpty () const
 */
-HB_FUNC_STATIC( QDOMNODELIST_ISEMPTY )
-{
-  QDomNodeList * obj = (QDomNodeList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isEmpty () );
-  }
-}
-
+$method=|bool|isEmpty|
 
 /*
 QDomNode item ( int index ) const
 */
-HB_FUNC_STATIC( QDOMNODELIST_ITEM )
-{
-  QDomNodeList * obj = (QDomNodeList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDomNode * ptr = new QDomNode( obj->item ( PINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDOMNODE", true );
-  }
-}
-
+$method=|QDomNode|item|int
 
 /*
 uint length () const
 */
-HB_FUNC_STATIC( QDOMNODELIST_LENGTH )
-{
-  QDomNodeList * obj = (QDomNodeList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (uint) obj->length () );
-  }
-}
-
+$method=|uint|length|
 
 /*
 int size () const
 */
-HB_FUNC_STATIC( QDOMNODELIST_SIZE )
-{
-  QDomNodeList * obj = (QDomNodeList *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->size () );
-  }
-}
+$method=|int|size|
 
 $extraMethods
 

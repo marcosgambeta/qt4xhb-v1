@@ -46,9 +46,18 @@ CLASS QDomDocument INHERIT QDomNode
    METHOD implementation
    METHOD importNode
    METHOD nodeType
-   METHOD setContent
+   //METHOD setContent1
+   //METHOD setContent2
+   //METHOD setContent3
+   //METHOD setContent4
+   //METHOD setContent5
+   //METHOD setContent6
+   //METHOD setContent7
+   //METHOD setContent8
+   //METHOD setContent
    METHOD toByteArray
    METHOD toString
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -66,42 +75,22 @@ $destructor
 /*
 QDomDocument ()
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_NEW1 )
-{
-  QDomDocument * o = new QDomDocument ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|
 
 /*
 QDomDocument ( const QString & name )
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_NEW2 )
-{
-  QDomDocument * o = new QDomDocument ( PQSTRING(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|const QString &
 
 /*
 QDomDocument ( const QDomDocumentType & doctype )
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_NEW3 )
-{
-  QDomDocument * o = new QDomDocument ( *PQDOMDOCUMENTTYPE(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new3|const QDomDocumentType &
 
 /*
 QDomDocument ( const QDomDocument & x )
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_NEW4 )
-{
-  QDomDocument * o = new QDomDocument ( *PQDOMDOCUMENT(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new4|const QDomDocument &
 
 //[1]QDomDocument ()
 //[2]QDomDocument ( const QString & name )
@@ -157,15 +146,7 @@ $method=|QDomComment|createComment|const QString &
 /*
 QDomDocumentFragment createDocumentFragment ()
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_CREATEDOCUMENTFRAGMENT )
-{
-  QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDomDocumentFragment * ptr = new QDomDocumentFragment( obj->createDocumentFragment () );
-    _qt4xhb_createReturnClass ( ptr, "QDOMDOCUMENTFRAGMENT", true );
-  }
-}
+$method=|QDomDocumentFragment|createDocumentFragment|
 
 /*
 QDomElement createElement ( const QString & tagName )
@@ -232,6 +213,48 @@ QDomNode::NodeType nodeType () const
 */
 $method=|QDomNode::NodeType|nodeType|
 
+%% TODO: implementar setContent (QString *=0)
+
+/*
+bool setContent ( const QByteArray & data, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+*/
+%% $method=|bool|setContent,setContent1|const QByteArray &,bool,QString *=0,int *=0,int *=0
+
+/*
+bool setContent ( const QString & text, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+*/
+%% $method=|bool|setContent,setContent2|const QString &,bool,QString *=0,int *=0,int *=0
+
+/*
+bool setContent ( QIODevice * dev, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+*/
+%% $method=|bool|setContent,setContent3|QIODevice *,bool,QString *=0,int *=0,int *=0
+
+/*
+bool setContent ( QXmlInputSource * source, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+*/
+%% $method=|bool|setContent,setContent4|QXmlInputSource *,bool,QString *=0,int *=0,int *=0
+
+/*
+bool setContent ( const QString & text, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+*/
+%% $method=|bool|setContent,setContent5|const QString &,QString *=0,int *=0,int *=0
+
+/*
+bool setContent ( const QByteArray & buffer, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+*/
+%% $method=|bool|setContent,setContent6|const QByteArray &,QString *=0,int *=0,int *=0
+
+/*
+bool setContent ( QIODevice * dev, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+*/
+%% $method=|bool|setContent,setContent7|QIODevice *,QString *=0,int *=0,int *=0
+
+/*
+bool setContent ( QXmlInputSource * source, QXmlReader * reader, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+*/
+%% $method=|bool|setContent,setContent8|QXmlInputSource *,QXmlReader *,QString *=0,int *=0,int *=0
+
 //[1]bool setContent ( const QByteArray & data, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
 //[2]bool setContent ( const QString & text, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
 //[3]bool setContent ( QIODevice * dev, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
@@ -241,23 +264,51 @@ $method=|QDomNode::NodeType|nodeType|
 //[7]bool setContent ( QIODevice * dev, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
 //[8]bool setContent ( QXmlInputSource * source, QXmlReader * reader, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
 
-// TODO: implementar função
-HB_FUNC_STATIC( QDOMDOCUMENT_SETCONTENT )
-{
-}
+%% HB_FUNC_STATIC( QDOMDOCUMENT_SETCONTENT )
+%% {
+%%   if( ISBETWEEN(2,5) && ISQBYTEARRAY(1) && ISLOG(2) && (ISCHAR(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) )
+%%   {
+%%     HB_FUNC_EXEC( QDOMDOCUMENT_SETCONTENT1 );
+%%   }
+%%   else if( ISBETWEEN(2,5) && ISCHAR(1) && ISLOG(2) && (ISCHAR(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) )
+%%   {
+%%     HB_FUNC_EXEC( QDOMDOCUMENT_SETCONTENT2 );
+%%   }
+%%   else if( ISBETWEEN(2,5) && ISQIODEVICE(1) && ISLOG(2) && (ISCHAR(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) )
+%%   {
+%%     HB_FUNC_EXEC( QDOMDOCUMENT_SETCONTENT3 );
+%%   }
+%%   else if( ISBETWEEN(2,5) && ISQXMLINPUTSOURCE(1) && ISLOG(2) && (ISCHAR(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) )
+%%   {
+%%     HB_FUNC_EXEC( QDOMDOCUMENT_SETCONTENT4 );
+%%   }
+%%   else if( ISBETWEEN(1,4) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
+%%   {
+%%     HB_FUNC_EXEC( QDOMDOCUMENT_SETCONTENT5 );
+%%   }
+%%   else if( ISBETWEEN(1,4) && ISQBYTEARRAY(1) && (ISCHAR(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
+%%   {
+%%     HB_FUNC_EXEC( QDOMDOCUMENT_SETCONTENT6 );
+%%   }
+%%   else if( ISBETWEEN(1,4) && ISQIODEVICE(1) && (ISCHAR(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
+%%   {
+%%     HB_FUNC_EXEC( QDOMDOCUMENT_SETCONTENT7 );
+%%   }
+%%   else if( ISBETWEEN(2,5) && ISQXMLINPUTSOURCE(1) && ISQXMLREADER(2) && (ISCHAR(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) )
+%%   {
+%%     HB_FUNC_EXEC( QDOMDOCUMENT_SETCONTENT8 );
+%%   }
+%%   else
+%%   {
+%%     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+%%   }
+%%
+%% }
 
 /*
 QByteArray toByteArray ( int indent = 1 ) const
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_TOBYTEARRAY )
-{
-  QDomDocument * obj = (QDomDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->toByteArray ( OPINT(1,1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
+$method=|QByteArray|toByteArray|int=1
 
 /*
 QString toString ( int indent = 1 ) const

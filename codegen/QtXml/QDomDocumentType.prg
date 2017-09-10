@@ -20,6 +20,7 @@ CLASS QDomDocumentType INHERIT QDomNode
    METHOD notations
    METHOD publicId
    METHOD systemId
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -37,22 +38,12 @@ $destructor
 /*
 QDomDocumentType ()
 */
-HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW1 )
-{
-  QDomDocumentType * o = new QDomDocumentType ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|
 
 /*
 QDomDocumentType ( const QDomDocumentType & n )
 */
-HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW2 )
-{
-  QDomDocumentType * o = new QDomDocumentType ( *PQDOMDOCUMENTTYPE(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|const QDomDocumentType &
 
 //[1]QDomDocumentType ()
 //[2]QDomDocumentType ( const QDomDocumentType & n )
@@ -73,20 +64,10 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW )
   }
 }
 
-
-
 /*
 QDomNamedNodeMap entities () const
 */
-HB_FUNC_STATIC( QDOMDOCUMENTTYPE_ENTITIES )
-{
-  QDomDocumentType * obj = (QDomDocumentType *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDomNamedNodeMap * ptr = new QDomNamedNodeMap( obj->entities () );
-    _qt4xhb_createReturnClass ( ptr, "QDOMNAMEDNODEMAP", true );
-  }
-}
+$method=|QDomNamedNodeMap|entities|
 
 /*
 QString internalSubset () const
@@ -101,28 +82,12 @@ $method=|QString|name|
 /*
 QDomNode::NodeType nodeType () const
 */
-HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NODETYPE )
-{
-  QDomDocumentType * obj = (QDomDocumentType *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->nodeType () );
-  }
-}
-
+$method=|QDomNode::NodeType|nodeType|
 
 /*
 QDomNamedNodeMap notations () const
 */
-HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NOTATIONS )
-{
-  QDomDocumentType * obj = (QDomDocumentType *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDomNamedNodeMap * ptr = new QDomNamedNodeMap( obj->notations () );
-    _qt4xhb_createReturnClass ( ptr, "QDOMNAMEDNODEMAP", true );
-  }
-}
+$method=|QDomNamedNodeMap|notations|
 
 /*
 QString publicId () const

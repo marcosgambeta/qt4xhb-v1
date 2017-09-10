@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QXmlParseException
 
    DATA pointer
@@ -17,11 +16,13 @@ CLASS QXmlParseException
    METHOD message
    METHOD publicId
    METHOD systemId
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -39,22 +40,12 @@ $destructor
 /*
 QXmlParseException ( const QString & name = QString(), int c = -1, int l = -1, const QString & p = QString(), const QString & s = QString() )
 */
-HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEW1 )
-{
-  QXmlParseException * o = new QXmlParseException ( OPQSTRING(1,QString()), OPINT(2,-1), OPINT(3,-1), OPQSTRING(4,QString()), OPQSTRING(5,QString()) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|const QString &=QString(),int=-1,int=-1,const QString &=QString(),const QString &=QString()
 
 /*
 QXmlParseException ( const QXmlParseException & other )
 */
-HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEW2 )
-{
-  QXmlParseException * o = new QXmlParseException ( *PQXMLPARSEEXCEPTION(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|const QXmlParseException &
 
 //[1]QXmlParseException ( const QString & name = QString(), int c = -1, int l = -1, const QString & p = QString(), const QString & s = QString() )
 //[2]QXmlParseException ( const QXmlParseException & other )
@@ -80,27 +71,12 @@ $deleteMethod
 /*
 int columnNumber () const
 */
-HB_FUNC_STATIC( QXMLPARSEEXCEPTION_COLUMNNUMBER )
-{
-  QXmlParseException * obj = (QXmlParseException *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->columnNumber () );
-  }
-}
-
+$method=|int|columnNumber|
 
 /*
 int lineNumber () const
 */
-HB_FUNC_STATIC( QXMLPARSEEXCEPTION_LINENUMBER )
-{
-  QXmlParseException * obj = (QXmlParseException *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->lineNumber () );
-  }
-}
+$method=|int|lineNumber|
 
 /*
 QString message () const

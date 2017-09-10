@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QDomCharacterData INHERIT QDomNode
 
    DATA self_destruction INIT .F.
@@ -19,6 +18,7 @@ CLASS QDomCharacterData INHERIT QDomNode
    METHOD replaceData
    METHOD setData
    METHOD substringData
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -36,22 +36,12 @@ $destructor
 /*
 QDomCharacterData ()
 */
-HB_FUNC_STATIC( QDOMCHARACTERDATA_NEW1 )
-{
-  QDomCharacterData * o = new QDomCharacterData ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|
 
 /*
 QDomCharacterData ( const QDomCharacterData & x )
 */
-HB_FUNC_STATIC( QDOMCHARACTERDATA_NEW2 )
-{
-  QDomCharacterData * o = new QDomCharacterData ( *PQDOMCHARACTERDATA(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|
 
 //[1]QDomCharacterData ()
 //[2]QDomCharacterData ( const QDomCharacterData & x )
@@ -85,74 +75,27 @@ $method=|QString|data|
 /*
 void deleteData ( unsigned long offset, unsigned long count )
 */
-HB_FUNC_STATIC( QDOMCHARACTERDATA_DELETEDATA )
-{
-  QDomCharacterData * obj = (QDomCharacterData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    unsigned long par1 = hb_parnl(1);
-    unsigned long par2 = hb_parnl(2);
-    obj->deleteData ( par1, par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|deleteData|unsigned long,unsigned long
 
 /*
 void insertData ( unsigned long offset, const QString & arg )
 */
-HB_FUNC_STATIC( QDOMCHARACTERDATA_INSERTDATA )
-{
-  QDomCharacterData * obj = (QDomCharacterData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    unsigned long par1 = hb_parnl(1);
-    obj->insertData ( par1, PQSTRING(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|insertData|unsigned long,const QString &
 
 /*
 uint length () const
 */
-HB_FUNC_STATIC( QDOMCHARACTERDATA_LENGTH )
-{
-  QDomCharacterData * obj = (QDomCharacterData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (uint) obj->length () );
-  }
-}
-
+$method=|uint|length|
 
 /*
 QDomNode::NodeType nodeType () const
 */
-HB_FUNC_STATIC( QDOMCHARACTERDATA_NODETYPE )
-{
-  QDomCharacterData * obj = (QDomCharacterData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->nodeType () );
-  }
-}
-
+$method=|QDomNode::NodeType|nodeType|
 
 /*
 void replaceData ( unsigned long offset, unsigned long count, const QString & arg )
 */
-HB_FUNC_STATIC( QDOMCHARACTERDATA_REPLACEDATA )
-{
-  QDomCharacterData * obj = (QDomCharacterData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    unsigned long par1 = hb_parnl(1);
-    unsigned long par2 = hb_parnl(2);
-    obj->replaceData ( par1, par2, PQSTRING(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|replaceData|unsigned long,unsigned long,const QString &
 
 /*
 void setData ( const QString & v )
@@ -162,18 +105,6 @@ $method=|void|setData|const QString &
 /*
 QString substringData ( unsigned long offset, unsigned long count )
 */
-HB_FUNC_STATIC( QDOMCHARACTERDATA_SUBSTRINGDATA )
-{
-  QDomCharacterData * obj = (QDomCharacterData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    unsigned long par1 = hb_parnl(1);
-    unsigned long par2 = hb_parnl(2);
-    RQSTRING( obj->substringData ( par1, par2 ) );
-  }
-}
-
-
-
+$method=|QString|substringData|unsigned long,unsigned long
 
 #pragma ENDDUMP

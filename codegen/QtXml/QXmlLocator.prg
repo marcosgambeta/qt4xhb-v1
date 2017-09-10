@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QXmlLocator
 
    DATA pointer
@@ -11,11 +10,13 @@ CLASS QXmlLocator
    METHOD delete
    METHOD columnNumber
    METHOD lineNumber
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -35,27 +36,12 @@ $deleteMethod
 /*
 virtual int columnNumber () const = 0
 */
-HB_FUNC_STATIC( QXMLLOCATOR_COLUMNNUMBER )
-{
-  QXmlLocator * obj = (QXmlLocator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->columnNumber () );
-  }
-}
-
+$virtualMethod=|int|columnNumber|
 
 /*
 virtual int lineNumber () const = 0
 */
-HB_FUNC_STATIC( QXMLLOCATOR_LINENUMBER )
-{
-  QXmlLocator * obj = (QXmlLocator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->lineNumber () );
-  }
-}
+$virtualMethod=|int|lineNumber|
 
 $extraMethods
 

@@ -19,6 +19,7 @@ CLASS QDomAttr INHERIT QDomNode
    METHOD setValue
    METHOD specified
    METHOD value
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -36,22 +37,12 @@ $destructor
 /*
 QDomAttr ()
 */
-HB_FUNC_STATIC( QDOMATTR_NEW1 )
-{
-  QDomAttr * o = new QDomAttr ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|
 
 /*
 QDomAttr ( const QDomAttr & x )
 */
-HB_FUNC_STATIC( QDOMATTR_NEW2 )
-{
-  QDomAttr * o = new QDomAttr ( *PQDOMATTR(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|const QDomAttr &
 
 //[1]QDomAttr ()
 //[2]QDomAttr ( const QDomAttr & x )
@@ -80,28 +71,12 @@ $method=|QString|name|
 /*
 QDomNode::NodeType nodeType () const
 */
-HB_FUNC_STATIC( QDOMATTR_NODETYPE )
-{
-  QDomAttr * obj = (QDomAttr *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->nodeType () );
-  }
-}
-
+$method=|QDomNode::NodeType|nodeType|
 
 /*
 QDomElement ownerElement () const
 */
-HB_FUNC_STATIC( QDOMATTR_OWNERELEMENT )
-{
-  QDomAttr * obj = (QDomAttr *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDomElement * ptr = new QDomElement( obj->ownerElement () );
-    _qt4xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
-  }
-}
+$method=|QDomElement|ownerElement|
 
 /*
 void setValue ( const QString & v )
@@ -111,14 +86,7 @@ $method=|void|setValue|const QString &
 /*
 bool specified () const
 */
-HB_FUNC_STATIC( QDOMATTR_SPECIFIED )
-{
-  QDomAttr * obj = (QDomAttr *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->specified () );
-  }
-}
+$method=|bool|specified|
 
 /*
 QString value () const

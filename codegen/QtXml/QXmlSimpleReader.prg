@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QXmlSimpleReader INHERIT QXmlReader
 
    DATA self_destruction INIT .F.
@@ -11,6 +10,7 @@ CLASS QXmlSimpleReader INHERIT QXmlReader
    METHOD delete
    METHOD parse
    METHOD parseContinue
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -28,41 +28,18 @@ $destructor
 /*
 QXmlSimpleReader ()
 */
-HB_FUNC_STATIC( QXMLSIMPLEREADER_NEW )
-{
-  QXmlSimpleReader * o = new QXmlSimpleReader ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new|
 
 $deleteMethod
 
 /*
 virtual bool parse ( const QXmlInputSource * input, bool incremental )
 */
-HB_FUNC_STATIC( QXMLSIMPLEREADER_PARSE )
-{
-  QXmlSimpleReader * obj = (QXmlSimpleReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QXmlInputSource * par1 = (const QXmlInputSource *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->parse ( par1, PBOOL(2) ) );
-  }
-}
-
+$virtualMethod=|bool|parse|const QXmlInputSource *,bool
 
 /*
 virtual bool parseContinue ()
 */
-HB_FUNC_STATIC( QXMLSIMPLEREADER_PARSECONTINUE )
-{
-  QXmlSimpleReader * obj = (QXmlSimpleReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->parseContinue () );
-  }
-}
-
-
-
+$virtualMethod=|bool|parseContinue|
 
 #pragma ENDDUMP

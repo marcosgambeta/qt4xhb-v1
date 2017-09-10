@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QXmlDefaultHandler INHERIT QXmlContentHandler,QXmlErrorHandler,QXmlDTDHandler,QXmlEntityResolver,QXmlLexicalHandler,QXmlDeclHandler
 
    DATA self_destruction INIT .F.
@@ -36,6 +35,7 @@ CLASS QXmlDefaultHandler INHERIT QXmlContentHandler,QXmlErrorHandler,QXmlDTDHand
    METHOD startPrefixMapping
    METHOD unparsedEntityDecl
    METHOD warning
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -53,11 +53,7 @@ $destructor
 /*
 QXmlDefaultHandler ()
 */
-HB_FUNC_STATIC( QXMLDEFAULTHANDLER_NEW )
-{
-  QXmlDefaultHandler * o = new QXmlDefaultHandler ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new|
 
 $deleteMethod
 
