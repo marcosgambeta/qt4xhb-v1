@@ -31,11 +31,13 @@ CLASS QWebSecurityOrigin
    METHOD allOrigins
    METHOD localSchemes
    METHOD removeLocalScheme
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -62,8 +64,15 @@ QWebSecurityOrigin ( const QWebSecurityOrigin & other )
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_NEW )
 {
-  QWebSecurityOrigin * o = new QWebSecurityOrigin ( *PQWEBSECURITYORIGIN(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  if( ISNUMPAR(1) && ISQWEBSECURITYORIGIN(1) )
+  {
+    QWebSecurityOrigin * o = new QWebSecurityOrigin ( *PQWEBSECURITYORIGIN(1) );
+    _qt4xhb_storePointerAndFlag( o, true );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_DELETE )
@@ -89,9 +98,17 @@ qint64 databaseQuota () const
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASEQUOTA )
 {
   QWebSecurityOrigin * obj = (QWebSecurityOrigin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQINT64( obj->databaseQuota () );
+    if( ISNUMPAR(0) )
+    {
+      RQINT64( obj->databaseQuota () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -101,9 +118,17 @@ qint64 databaseUsage () const
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASEUSAGE )
 {
   QWebSecurityOrigin * obj = (QWebSecurityOrigin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQINT64( obj->databaseUsage () );
+    if( ISNUMPAR(0) )
+    {
+      RQINT64( obj->databaseUsage () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -160,9 +185,17 @@ QString host () const
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_HOST )
 {
   QWebSecurityOrigin * obj = (QWebSecurityOrigin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->host () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->host () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -172,9 +205,17 @@ int port () const
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_PORT )
 {
   QWebSecurityOrigin * obj = (QWebSecurityOrigin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RINT( obj->port () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->port () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -184,9 +225,17 @@ QString scheme () const
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_SCHEME )
 {
   QWebSecurityOrigin * obj = (QWebSecurityOrigin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->scheme () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->scheme () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -196,19 +245,36 @@ void setDatabaseQuota ( qint64 quota )
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_SETDATABASEQUOTA )
 {
   QWebSecurityOrigin * obj = (QWebSecurityOrigin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setDatabaseQuota ( PQINT64(1) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      obj->setDatabaseQuota ( PQINT64(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
-void addLocalScheme ( const QString & scheme )
+static void addLocalScheme ( const QString & scheme )
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_ADDLOCALSCHEME )
 {
-  QWebSecurityOrigin::addLocalScheme ( PQSTRING(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+  {
+      QWebSecurityOrigin::addLocalScheme ( PQSTRING(1) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -256,19 +322,34 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_ALLORIGINS )
 }
 
 /*
-QStringList localSchemes ()
+static QStringList localSchemes ()
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_LOCALSCHEMES )
 {
-  RQSTRINGLIST( QWebSecurityOrigin::localSchemes () );
+    if( ISNUMPAR(0) )
+  {
+      RQSTRINGLIST( QWebSecurityOrigin::localSchemes () );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
-void removeLocalScheme ( const QString & scheme )
+static void removeLocalScheme ( const QString & scheme )
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_REMOVELOCALSCHEME )
 {
-  QWebSecurityOrigin::removeLocalScheme ( PQSTRING(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+  {
+      QWebSecurityOrigin::removeLocalScheme ( PQSTRING(1) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

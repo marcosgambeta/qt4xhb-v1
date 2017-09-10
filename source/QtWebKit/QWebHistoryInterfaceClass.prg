@@ -21,6 +21,7 @@ CLASS QWebHistoryInterface INHERIT QObject
    METHOD historyContains
    METHOD defaultInterface
    METHOD setDefaultInterface
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -62,10 +63,19 @@ virtual void addHistoryEntry ( const QString & url ) = 0
 HB_FUNC_STATIC( QWEBHISTORYINTERFACE_ADDHISTORYENTRY )
 {
   QWebHistoryInterface * obj = (QWebHistoryInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->addHistoryEntry ( PQSTRING(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      obj->addHistoryEntry ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -75,28 +85,50 @@ virtual bool historyContains ( const QString & url ) const = 0
 HB_FUNC_STATIC( QWEBHISTORYINTERFACE_HISTORYCONTAINS )
 {
   QWebHistoryInterface * obj = (QWebHistoryInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->historyContains ( PQSTRING(1) ) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      RBOOL( obj->historyContains ( PQSTRING(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
 /*
-QWebHistoryInterface * defaultInterface ()
+static QWebHistoryInterface * defaultInterface ()
 */
 HB_FUNC_STATIC( QWEBHISTORYINTERFACE_DEFAULTINTERFACE )
 {
-  QWebHistoryInterface * ptr = QWebHistoryInterface::defaultInterface ();
-  _qt4xhb_createReturnClass ( ptr, "QWEBHISTORYINTERFACE" );
+    if( ISNUMPAR(0) )
+  {
+      QWebHistoryInterface * ptr = QWebHistoryInterface::defaultInterface ();
+      _qt4xhb_createReturnQObjectClass ( ptr, "QWEBHISTORYINTERFACE" );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
-void setDefaultInterface ( QWebHistoryInterface * defaultInterface )
+static void setDefaultInterface ( QWebHistoryInterface * defaultInterface )
 */
 HB_FUNC_STATIC( QWEBHISTORYINTERFACE_SETDEFAULTINTERFACE )
 {
-  QWebHistoryInterface * par1 = (QWebHistoryInterface *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QWebHistoryInterface::setDefaultInterface ( par1 );
+    if( ISNUMPAR(1) && ISQWEBHISTORYINTERFACE(1) )
+  {
+      QWebHistoryInterface::setDefaultInterface ( PQWEBHISTORYINTERFACE(1) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

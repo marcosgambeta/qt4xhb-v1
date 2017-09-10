@@ -27,11 +27,13 @@ CLASS QWebDatabase
    METHOD size
    METHOD removeAllDatabases
    METHOD removeDatabase
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -57,8 +59,15 @@ QWebDatabase ( const QWebDatabase & other )
 */
 HB_FUNC_STATIC( QWEBDATABASE_NEW )
 {
-  QWebDatabase * o = new QWebDatabase ( *PQWEBDATABASE(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  if( ISNUMPAR(1) && ISQWEBDATABASE(1) )
+  {
+    QWebDatabase * o = new QWebDatabase ( *PQWEBDATABASE(1) );
+    _qt4xhb_storePointerAndFlag( o, true );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QWEBDATABASE_DELETE )
@@ -84,9 +93,17 @@ QString displayName () const
 HB_FUNC_STATIC( QWEBDATABASE_DISPLAYNAME )
 {
   QWebDatabase * obj = (QWebDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->displayName () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->displayName () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -96,9 +113,17 @@ qint64 expectedSize () const
 HB_FUNC_STATIC( QWEBDATABASE_EXPECTEDSIZE )
 {
   QWebDatabase * obj = (QWebDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQINT64( obj->expectedSize () );
+    if( ISNUMPAR(0) )
+    {
+      RQINT64( obj->expectedSize () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -108,9 +133,17 @@ QString fileName () const
 HB_FUNC_STATIC( QWEBDATABASE_FILENAME )
 {
   QWebDatabase * obj = (QWebDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->fileName () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->fileName () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -120,9 +153,17 @@ QString name () const
 HB_FUNC_STATIC( QWEBDATABASE_NAME )
 {
   QWebDatabase * obj = (QWebDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->name () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->name () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -132,10 +173,18 @@ QWebSecurityOrigin origin () const
 HB_FUNC_STATIC( QWEBDATABASE_ORIGIN )
 {
   QWebDatabase * obj = (QWebDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QWebSecurityOrigin * ptr = new QWebSecurityOrigin( obj->origin () );
-    _qt4xhb_createReturnClass ( ptr, "QWEBSECURITYORIGIN", true );
+    if( ISNUMPAR(0) )
+    {
+      QWebSecurityOrigin * ptr = new QWebSecurityOrigin( obj->origin () );
+      _qt4xhb_createReturnClass ( ptr, "QWEBSECURITYORIGIN", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -145,27 +194,51 @@ qint64 size () const
 HB_FUNC_STATIC( QWEBDATABASE_SIZE )
 {
   QWebDatabase * obj = (QWebDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQINT64( obj->size () );
+    if( ISNUMPAR(0) )
+    {
+      RQINT64( obj->size () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
 /*
-void removeAllDatabases ()
+static void removeAllDatabases ()
 */
 HB_FUNC_STATIC( QWEBDATABASE_REMOVEALLDATABASES )
 {
-  QWebDatabase::removeAllDatabases ();
+    if( ISNUMPAR(0) )
+  {
+      QWebDatabase::removeAllDatabases ();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
-void removeDatabase ( const QWebDatabase & db )
+static void removeDatabase ( const QWebDatabase & db )
 */
 HB_FUNC_STATIC( QWEBDATABASE_REMOVEDATABASE )
 {
-  QWebDatabase::removeDatabase ( *PQWEBDATABASE(1) );
+    if( ISNUMPAR(1) && ISQWEBDATABASE(1) )
+  {
+      QWebDatabase::removeDatabase ( *PQWEBDATABASE(1) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

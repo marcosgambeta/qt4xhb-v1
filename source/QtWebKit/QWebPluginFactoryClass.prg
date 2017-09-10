@@ -19,6 +19,7 @@ CLASS QWebPluginFactory INHERIT QObject
    METHOD delete
    METHOD create
    METHOD refreshPlugins
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -60,10 +61,18 @@ virtual QObject * create ( const QString & mimeType, const QUrl & url, const QSt
 HB_FUNC_STATIC( QWEBPLUGINFACTORY_CREATE )
 {
   QWebPluginFactory * obj = (QWebPluginFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QObject * ptr = obj->create ( PQSTRING(1), *PQURL(2), PQSTRINGLIST(3), PQSTRINGLIST(4) );
-    _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+    if( ISNUMPAR(4) && ISCHAR(1) && ISQURL(2) && ISARRAY(3) && ISARRAY(4) )
+    {
+      QObject * ptr = obj->create ( PQSTRING(1), *PQURL(2), PQSTRINGLIST(3), PQSTRINGLIST(4) );
+      _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -73,10 +82,19 @@ virtual void refreshPlugins ()
 HB_FUNC_STATIC( QWEBPLUGINFACTORY_REFRESHPLUGINS )
 {
   QWebPluginFactory * obj = (QWebPluginFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->refreshPlugins ();
+    if( ISNUMPAR(0) )
+    {
+      obj->refreshPlugins ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

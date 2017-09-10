@@ -94,11 +94,13 @@ CLASS QWebElement
    METHOD toPlainText
    METHOD toggleClass
    METHOD webFrame
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -117,13 +119,15 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
+#include <QWebFrame>
+
 /*
 QWebElement ()
 */
 HB_FUNC_STATIC( QWEBELEMENT_NEW1 )
 {
   QWebElement * o = new QWebElement ();
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -132,7 +136,7 @@ QWebElement ( const QWebElement & other )
 HB_FUNC_STATIC( QWEBELEMENT_NEW2 )
 {
   QWebElement * o = new QWebElement ( *PQWEBELEMENT(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 //[1]QWebElement ()
@@ -177,10 +181,19 @@ void addClass ( const QString & name )
 HB_FUNC_STATIC( QWEBELEMENT_ADDCLASS )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->addClass ( PQSTRING(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      obj->addClass ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -190,10 +203,19 @@ void appendInside ( const QString & markup )
 HB_FUNC_STATIC( QWEBELEMENT_APPENDINSIDE1 )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->appendInside ( PQSTRING(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      obj->appendInside ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -203,10 +225,19 @@ void appendInside ( const QWebElement & element )
 HB_FUNC_STATIC( QWEBELEMENT_APPENDINSIDE2 )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->appendInside ( *PQWEBELEMENT(1) );
+    if( ISNUMPAR(1) && ISQWEBELEMENT(1) )
+    {
+      obj->appendInside ( *PQWEBELEMENT(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -231,10 +262,19 @@ void appendOutside ( const QString & markup )
 HB_FUNC_STATIC( QWEBELEMENT_APPENDOUTSIDE1 )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->appendOutside ( PQSTRING(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      obj->appendOutside ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -244,10 +284,19 @@ void appendOutside ( const QWebElement & element )
 HB_FUNC_STATIC( QWEBELEMENT_APPENDOUTSIDE2 )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->appendOutside ( *PQWEBELEMENT(1) );
+    if( ISNUMPAR(1) && ISQWEBELEMENT(1) )
+    {
+      obj->appendOutside ( *PQWEBELEMENT(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -272,9 +321,17 @@ QString attribute ( const QString & name, const QString & defaultValue = QString
 HB_FUNC_STATIC( QWEBELEMENT_ATTRIBUTE )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->attribute ( PQSTRING(1), OPQSTRING(2,QString()) ) );
+    if( ISNUMPAR(2) && ISCHAR(1) && ISOPTCHAR(2) )
+    {
+      RQSTRING( obj->attribute ( PQSTRING(1), OPQSTRING(2,QString()) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -284,9 +341,17 @@ QString attributeNS ( const QString & namespaceUri, const QString & name, const 
 HB_FUNC_STATIC( QWEBELEMENT_ATTRIBUTENS )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->attributeNS ( PQSTRING(1), PQSTRING(2), OPQSTRING(3,QString()) ) );
+    if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISOPTCHAR(3) )
+    {
+      RQSTRING( obj->attributeNS ( PQSTRING(1), PQSTRING(2), OPQSTRING(3,QString()) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -296,9 +361,17 @@ QStringList attributeNames ( const QString & namespaceUri = QString() ) const
 HB_FUNC_STATIC( QWEBELEMENT_ATTRIBUTENAMES )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRINGLIST( obj->attributeNames ( OPQSTRING(1,QString()) ) );
+    if( ISNUMPAR(1) && ISOPTCHAR(1) )
+    {
+      RQSTRINGLIST( obj->attributeNames ( OPQSTRING(1,QString()) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -308,9 +381,17 @@ QStringList classes () const
 HB_FUNC_STATIC( QWEBELEMENT_CLASSES )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRINGLIST( obj->classes () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRINGLIST( obj->classes () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -320,10 +401,18 @@ QWebElement clone () const
 HB_FUNC_STATIC( QWEBELEMENT_CLONE )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QWebElement * ptr = new QWebElement( obj->clone () );
-    _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
+    if( ISNUMPAR(0) )
+    {
+      QWebElement * ptr = new QWebElement( obj->clone () );
+      _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -333,10 +422,18 @@ QWebElement document () const
 HB_FUNC_STATIC( QWEBELEMENT_DOCUMENT )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QWebElement * ptr = new QWebElement( obj->document () );
-    _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
+    if( ISNUMPAR(0) )
+    {
+      QWebElement * ptr = new QWebElement( obj->document () );
+      _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -346,10 +443,19 @@ void encloseContentsWith ( const QWebElement & element )
 HB_FUNC_STATIC( QWEBELEMENT_ENCLOSECONTENTSWITH1 )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->encloseContentsWith ( *PQWEBELEMENT(1) );
+    if( ISNUMPAR(1) && ISQWEBELEMENT(1) )
+    {
+      obj->encloseContentsWith ( *PQWEBELEMENT(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -359,10 +465,19 @@ void encloseContentsWith ( const QString & markup )
 HB_FUNC_STATIC( QWEBELEMENT_ENCLOSECONTENTSWITH2 )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->encloseContentsWith ( PQSTRING(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      obj->encloseContentsWith ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -387,10 +502,19 @@ void encloseWith ( const QString & markup )
 HB_FUNC_STATIC( QWEBELEMENT_ENCLOSEWITH1 )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->encloseWith ( PQSTRING(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      obj->encloseWith ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -400,10 +524,19 @@ void encloseWith ( const QWebElement & element )
 HB_FUNC_STATIC( QWEBELEMENT_ENCLOSEWITH2 )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->encloseWith ( *PQWEBELEMENT(1) );
+    if( ISNUMPAR(1) && ISQWEBELEMENT(1) )
+    {
+      obj->encloseWith ( *PQWEBELEMENT(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -428,10 +561,18 @@ QVariant evaluateJavaScript ( const QString & scriptSource )
 HB_FUNC_STATIC( QWEBELEMENT_EVALUATEJAVASCRIPT )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->evaluateJavaScript ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      QVariant * ptr = new QVariant( obj->evaluateJavaScript ( PQSTRING(1) ) );
+      _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -441,10 +582,18 @@ QWebElementCollection findAll ( const QString & selectorQuery ) const
 HB_FUNC_STATIC( QWEBELEMENT_FINDALL )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QWebElementCollection * ptr = new QWebElementCollection( obj->findAll ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QWEBELEMENTCOLLECTION", true );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      QWebElementCollection * ptr = new QWebElementCollection( obj->findAll ( PQSTRING(1) ) );
+      _qt4xhb_createReturnClass ( ptr, "QWEBELEMENTCOLLECTION", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -454,10 +603,18 @@ QWebElement findFirst ( const QString & selectorQuery ) const
 HB_FUNC_STATIC( QWEBELEMENT_FINDFIRST )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QWebElement * ptr = new QWebElement( obj->findFirst ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      QWebElement * ptr = new QWebElement( obj->findFirst ( PQSTRING(1) ) );
+      _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -467,10 +624,18 @@ QWebElement firstChild () const
 HB_FUNC_STATIC( QWEBELEMENT_FIRSTCHILD )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QWebElement * ptr = new QWebElement( obj->firstChild () );
-    _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
+    if( ISNUMPAR(0) )
+    {
+      QWebElement * ptr = new QWebElement( obj->firstChild () );
+      _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -480,10 +645,18 @@ QRect geometry () const
 HB_FUNC_STATIC( QWEBELEMENT_GEOMETRY )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QRect * ptr = new QRect( obj->geometry () );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    if( ISNUMPAR(0) )
+    {
+      QRect * ptr = new QRect( obj->geometry () );
+      _qt4xhb_createReturnClass ( ptr, "QRECT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -493,9 +666,17 @@ bool hasAttribute ( const QString & name ) const
 HB_FUNC_STATIC( QWEBELEMENT_HASATTRIBUTE )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->hasAttribute ( PQSTRING(1) ) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      RBOOL( obj->hasAttribute ( PQSTRING(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -505,9 +686,17 @@ bool hasAttributeNS ( const QString & namespaceUri, const QString & name ) const
 HB_FUNC_STATIC( QWEBELEMENT_HASATTRIBUTENS )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->hasAttributeNS ( PQSTRING(1), PQSTRING(2) ) );
+    if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+    {
+      RBOOL( obj->hasAttributeNS ( PQSTRING(1), PQSTRING(2) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -517,9 +706,17 @@ bool hasAttributes () const
 HB_FUNC_STATIC( QWEBELEMENT_HASATTRIBUTES )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->hasAttributes () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->hasAttributes () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -529,9 +726,17 @@ bool hasClass ( const QString & name ) const
 HB_FUNC_STATIC( QWEBELEMENT_HASCLASS )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->hasClass ( PQSTRING(1) ) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      RBOOL( obj->hasClass ( PQSTRING(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -541,9 +746,17 @@ bool hasFocus () const
 HB_FUNC_STATIC( QWEBELEMENT_HASFOCUS )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->hasFocus () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->hasFocus () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -553,9 +766,17 @@ bool isNull () const
 HB_FUNC_STATIC( QWEBELEMENT_ISNULL )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isNull () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isNull () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -565,10 +786,18 @@ QWebElement lastChild () const
 HB_FUNC_STATIC( QWEBELEMENT_LASTCHILD )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QWebElement * ptr = new QWebElement( obj->lastChild () );
-    _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
+    if( ISNUMPAR(0) )
+    {
+      QWebElement * ptr = new QWebElement( obj->lastChild () );
+      _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -578,9 +807,17 @@ QString localName () const
 HB_FUNC_STATIC( QWEBELEMENT_LOCALNAME )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->localName () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->localName () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -590,9 +827,17 @@ QString namespaceUri () const
 HB_FUNC_STATIC( QWEBELEMENT_NAMESPACEURI )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->namespaceUri () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->namespaceUri () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -602,10 +847,18 @@ QWebElement nextSibling () const
 HB_FUNC_STATIC( QWEBELEMENT_NEXTSIBLING )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QWebElement * ptr = new QWebElement( obj->nextSibling () );
-    _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
+    if( ISNUMPAR(0) )
+    {
+      QWebElement * ptr = new QWebElement( obj->nextSibling () );
+      _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -615,10 +868,18 @@ QWebElement parent () const
 HB_FUNC_STATIC( QWEBELEMENT_PARENT )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QWebElement * ptr = new QWebElement( obj->parent () );
-    _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
+    if( ISNUMPAR(0) )
+    {
+      QWebElement * ptr = new QWebElement( obj->parent () );
+      _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -628,9 +889,17 @@ QString prefix () const
 HB_FUNC_STATIC( QWEBELEMENT_PREFIX )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->prefix () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->prefix () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -640,10 +909,19 @@ void prependInside ( const QString & markup )
 HB_FUNC_STATIC( QWEBELEMENT_PREPENDINSIDE1 )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->prependInside ( PQSTRING(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      obj->prependInside ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -653,10 +931,19 @@ void prependInside ( const QWebElement & element )
 HB_FUNC_STATIC( QWEBELEMENT_PREPENDINSIDE2 )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->prependInside ( *PQWEBELEMENT(1) );
+    if( ISNUMPAR(1) && ISQWEBELEMENT(1) )
+    {
+      obj->prependInside ( *PQWEBELEMENT(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -681,10 +968,19 @@ void prependOutside ( const QString & markup )
 HB_FUNC_STATIC( QWEBELEMENT_PREPENDOUTSIDE1 )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->prependOutside ( PQSTRING(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      obj->prependOutside ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -694,10 +990,19 @@ void prependOutside ( const QWebElement & element )
 HB_FUNC_STATIC( QWEBELEMENT_PREPENDOUTSIDE2 )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->prependOutside ( *PQWEBELEMENT(1) );
+    if( ISNUMPAR(1) && ISQWEBELEMENT(1) )
+    {
+      obj->prependOutside ( *PQWEBELEMENT(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -722,10 +1027,18 @@ QWebElement previousSibling () const
 HB_FUNC_STATIC( QWEBELEMENT_PREVIOUSSIBLING )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QWebElement * ptr = new QWebElement( obj->previousSibling () );
-    _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
+    if( ISNUMPAR(0) )
+    {
+      QWebElement * ptr = new QWebElement( obj->previousSibling () );
+      _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -735,10 +1048,19 @@ void removeAllChildren ()
 HB_FUNC_STATIC( QWEBELEMENT_REMOVEALLCHILDREN )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->removeAllChildren ();
+    if( ISNUMPAR(0) )
+    {
+      obj->removeAllChildren ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -748,10 +1070,19 @@ void removeAttribute ( const QString & name )
 HB_FUNC_STATIC( QWEBELEMENT_REMOVEATTRIBUTE )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->removeAttribute ( PQSTRING(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      obj->removeAttribute ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -761,10 +1092,19 @@ void removeAttributeNS ( const QString & namespaceUri, const QString & name )
 HB_FUNC_STATIC( QWEBELEMENT_REMOVEATTRIBUTENS )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->removeAttributeNS ( PQSTRING(1), PQSTRING(2) );
+    if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+    {
+      obj->removeAttributeNS ( PQSTRING(1), PQSTRING(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -774,10 +1114,19 @@ void removeClass ( const QString & name )
 HB_FUNC_STATIC( QWEBELEMENT_REMOVECLASS )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->removeClass ( PQSTRING(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      obj->removeClass ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -787,10 +1136,19 @@ void removeFromDocument ()
 HB_FUNC_STATIC( QWEBELEMENT_REMOVEFROMDOCUMENT )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->removeFromDocument ();
+    if( ISNUMPAR(0) )
+    {
+      obj->removeFromDocument ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -800,10 +1158,19 @@ void render ( QPainter * painter )
 HB_FUNC_STATIC( QWEBELEMENT_RENDER1 )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->render ( PQPAINTER(1) );
+    if( ISNUMPAR(1) && ISQPAINTER(1) )
+    {
+      obj->render ( PQPAINTER(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -813,10 +1180,19 @@ void render ( QPainter * painter, const QRect & clip )
 HB_FUNC_STATIC( QWEBELEMENT_RENDER2 )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->render ( PQPAINTER(1), *PQRECT(2) );
+    if( ISNUMPAR(2) && ISQPAINTER(1) && ISQRECT(2) )
+    {
+      obj->render ( PQPAINTER(1), *PQRECT(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -841,10 +1217,19 @@ void replace ( const QString & markup )
 HB_FUNC_STATIC( QWEBELEMENT_REPLACE1 )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->replace ( PQSTRING(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      obj->replace ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -854,10 +1239,19 @@ void replace ( const QWebElement & element )
 HB_FUNC_STATIC( QWEBELEMENT_REPLACE2 )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->replace ( *PQWEBELEMENT(1) );
+    if( ISNUMPAR(1) && ISQWEBELEMENT(1) )
+    {
+      obj->replace ( *PQWEBELEMENT(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -882,10 +1276,19 @@ void setAttribute ( const QString & name, const QString & value )
 HB_FUNC_STATIC( QWEBELEMENT_SETATTRIBUTE )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setAttribute ( PQSTRING(1), PQSTRING(2) );
+    if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+    {
+      obj->setAttribute ( PQSTRING(1), PQSTRING(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -895,10 +1298,19 @@ void setAttributeNS ( const QString & namespaceUri, const QString & name, const 
 HB_FUNC_STATIC( QWEBELEMENT_SETATTRIBUTENS )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setAttributeNS ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
+    if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) )
+    {
+      obj->setAttributeNS ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -908,10 +1320,19 @@ void setFocus ()
 HB_FUNC_STATIC( QWEBELEMENT_SETFOCUS )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setFocus ();
+    if( ISNUMPAR(0) )
+    {
+      obj->setFocus ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -921,10 +1342,19 @@ void setInnerXml ( const QString & markup )
 HB_FUNC_STATIC( QWEBELEMENT_SETINNERXML )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setInnerXml ( PQSTRING(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      obj->setInnerXml ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -934,10 +1364,19 @@ void setOuterXml ( const QString & markup )
 HB_FUNC_STATIC( QWEBELEMENT_SETOUTERXML )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setOuterXml ( PQSTRING(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      obj->setOuterXml ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -947,10 +1386,19 @@ void setPlainText ( const QString & text )
 HB_FUNC_STATIC( QWEBELEMENT_SETPLAINTEXT )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setPlainText ( PQSTRING(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      obj->setPlainText ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -960,10 +1408,19 @@ void setStyleProperty ( const QString & name, const QString & value )
 HB_FUNC_STATIC( QWEBELEMENT_SETSTYLEPROPERTY )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setStyleProperty ( PQSTRING(1), PQSTRING(2) );
+    if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+    {
+      obj->setStyleProperty ( PQSTRING(1), PQSTRING(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -973,9 +1430,17 @@ QString styleProperty ( const QString & name, StyleResolveStrategy strategy ) co
 HB_FUNC_STATIC( QWEBELEMENT_STYLEPROPERTY )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->styleProperty ( PQSTRING(1), (QWebElement::StyleResolveStrategy) hb_parni(2) ) );
+    if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+    {
+      RQSTRING( obj->styleProperty ( PQSTRING(1), (QWebElement::StyleResolveStrategy) hb_parni(2) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -985,9 +1450,17 @@ QString tagName () const
 HB_FUNC_STATIC( QWEBELEMENT_TAGNAME )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->tagName () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->tagName () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -997,10 +1470,18 @@ QWebElement & takeFromDocument ()
 HB_FUNC_STATIC( QWEBELEMENT_TAKEFROMDOCUMENT )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QWebElement * ptr = &obj->takeFromDocument ();
-    _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT" );
+    if( ISNUMPAR(0) )
+    {
+      QWebElement * ptr = &obj->takeFromDocument ();
+      _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", false );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -1010,9 +1491,17 @@ QString toInnerXml () const
 HB_FUNC_STATIC( QWEBELEMENT_TOINNERXML )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->toInnerXml () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->toInnerXml () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -1022,9 +1511,17 @@ QString toOuterXml () const
 HB_FUNC_STATIC( QWEBELEMENT_TOOUTERXML )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->toOuterXml () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->toOuterXml () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -1034,9 +1531,17 @@ QString toPlainText () const
 HB_FUNC_STATIC( QWEBELEMENT_TOPLAINTEXT )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->toPlainText () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->toPlainText () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -1046,10 +1551,19 @@ void toggleClass ( const QString & name )
 HB_FUNC_STATIC( QWEBELEMENT_TOGGLECLASS )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->toggleClass ( PQSTRING(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      obj->toggleClass ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -1059,10 +1573,18 @@ QWebFrame * webFrame () const
 HB_FUNC_STATIC( QWEBELEMENT_WEBFRAME )
 {
   QWebElement * obj = (QWebElement *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QWebFrame * ptr = obj->webFrame ();
-    _qt4xhb_createReturnClass ( ptr, "QWEBFRAME" );
+    if( ISNUMPAR(0) )
+    {
+      QWebFrame * ptr = obj->webFrame ();
+      _qt4xhb_createReturnQObjectClass ( ptr, "QWEBFRAME" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

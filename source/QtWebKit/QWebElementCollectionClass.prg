@@ -28,11 +28,13 @@ CLASS QWebElementCollection
    METHOD first
    METHOD last
    METHOD toList
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -57,7 +59,7 @@ QWebElementCollection ()
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW1 )
 {
   QWebElementCollection * o = new QWebElementCollection ();
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -66,7 +68,7 @@ QWebElementCollection ( const QWebElement & contextElement, const QString & quer
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW2 )
 {
   QWebElementCollection * o = new QWebElementCollection ( *PQWEBELEMENT(1), PQSTRING(2) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -75,7 +77,7 @@ QWebElementCollection ( const QWebElementCollection & other )
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW3 )
 {
   QWebElementCollection * o = new QWebElementCollection ( *PQWEBELEMENTCOLLECTION(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 //[1]QWebElementCollection ()
@@ -125,10 +127,19 @@ void append ( const QWebElementCollection & other )
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_APPEND )
 {
   QWebElementCollection * obj = (QWebElementCollection *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->append ( *PQWEBELEMENTCOLLECTION(1) );
+    if( ISNUMPAR(1) && ISQWEBELEMENTCOLLECTION(1) )
+    {
+      obj->append ( *PQWEBELEMENTCOLLECTION(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -138,10 +149,18 @@ QWebElement at ( int i ) const
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_AT )
 {
   QWebElementCollection * obj = (QWebElementCollection *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QWebElement * ptr = new QWebElement( obj->at ( PINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      QWebElement * ptr = new QWebElement( obj->at ( PINT(1) ) );
+      _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -151,9 +170,17 @@ int count () const
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_COUNT )
 {
   QWebElementCollection * obj = (QWebElementCollection *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RINT( obj->count () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->count () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -163,10 +190,18 @@ QWebElement first () const
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_FIRST )
 {
   QWebElementCollection * obj = (QWebElementCollection *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QWebElement * ptr = new QWebElement( obj->first () );
-    _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
+    if( ISNUMPAR(0) )
+    {
+      QWebElement * ptr = new QWebElement( obj->first () );
+      _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -176,10 +211,18 @@ QWebElement last () const
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_LAST )
 {
   QWebElementCollection * obj = (QWebElementCollection *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QWebElement * ptr = new QWebElement( obj->last () );
-    _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
+    if( ISNUMPAR(0) )
+    {
+      QWebElement * ptr = new QWebElement( obj->last () );
+      _qt4xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
