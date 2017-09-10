@@ -16,8 +16,6 @@ CLASS QWebHitTestResult
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD alternateText
@@ -63,12 +61,12 @@ $destructor
 /*
 QWebHitTestResult ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QWebHitTestResult ( const QWebHitTestResult & other )
 */
-$constructor=|new2|const QWebHitTestResult &
+$internalConstructor=|new2|const QWebHitTestResult &
 
 //[1]QWebHitTestResult ()
 //[2]QWebHitTestResult ( const QWebHitTestResult & other )
@@ -77,11 +75,11 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QWEBHITTESTRESULT_NEW1 );
+    QWebHitTestResult_new1();
   }
   else if( ISNUMPAR(1) && ISQWEBHITTESTRESULT(1) )
   {
-    HB_FUNC_EXEC( QWEBHITTESTRESULT_NEW2 );
+    QWebHitTestResult_new2();
   }
   else
   {

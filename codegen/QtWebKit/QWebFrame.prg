@@ -21,8 +21,6 @@ CLASS QWebFrame INHERIT QObject
 
    DATA self_destruction INIT .F.
 
-   METHOD addToJavaScriptWindowObject1
-   METHOD addToJavaScriptWindowObject2
    METHOD addToJavaScriptWindowObject
    METHOD baseUrl
    METHOD childFrames
@@ -35,15 +33,10 @@ CLASS QWebFrame INHERIT QObject
    METHOD hasFocus
    METHOD hitTestContent
    METHOD icon
-   METHOD load1
-   METHOD load2
    METHOD load
    METHOD page
    METHOD parentFrame
    METHOD pos
-   METHOD render1
-   METHOD render2
-   METHOD render3
    METHOD render
    METHOD renderTreeDump
    METHOD requestedUrl
@@ -105,12 +98,12 @@ $destructor
 /*
 void addToJavaScriptWindowObject ( const QString & name, QObject * object )
 */
-$method=|void|addToJavaScriptWindowObject,addToJavaScriptWindowObject1|const QString &,QObject *
+$internalMethod=|void|addToJavaScriptWindowObject,addToJavaScriptWindowObject1|const QString &,QObject *
 
 /*
 void addToJavaScriptWindowObject ( const QString & name, QObject * object, QScriptEngine::ValueOwnership own )
 */
-$method=|void|addToJavaScriptWindowObject,addToJavaScriptWindowObject2|const QString &,QObject *,QScriptEngine::ValueOwnership
+$internalMethod=|void|addToJavaScriptWindowObject,addToJavaScriptWindowObject2|const QString &,QObject *,QScriptEngine::ValueOwnership
 
 //[1]void addToJavaScriptWindowObject ( const QString & name, QObject * object )
 //[2]void addToJavaScriptWindowObject ( const QString & name, QObject * object, QScriptEngine::ValueOwnership own )
@@ -119,11 +112,15 @@ HB_FUNC_STATIC( QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISQOBJECT(2) )
   {
-    HB_FUNC_EXEC( QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT1 );
+    QWebFrame_addToJavaScriptWindowObject1();
   }
   else if( ISNUMPAR(3) && ISCHAR(1) && ISQOBJECT(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT2 );
+    QWebFrame_addToJavaScriptWindowObject2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -223,12 +220,12 @@ $method=|QIcon|icon|
 /*
 void load ( const QUrl & url )
 */
-$method=|void|load,load1|const QUrl &
+$internalMethod=|void|load,load1|const QUrl &
 
 /*
 void load ( const QNetworkRequest & req, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
 */
-$method=|void|load,load2|const QNetworkRequest &,QNetworkAccessManager::Operation=QNetworkAccessManager::GetOperation,const QByteArray &=QByteArray()
+$internalMethod=|void|load,load2|const QNetworkRequest &,QNetworkAccessManager::Operation=QNetworkAccessManager::GetOperation,const QByteArray &=QByteArray()
 
 //[1]void load ( const QUrl & url )
 //[2]void load ( const QNetworkRequest & req, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
@@ -237,11 +234,15 @@ HB_FUNC_STATIC( QWEBFRAME_LOAD )
 {
   if( ISNUMPAR(1) && ISQURL(1) )
   {
-    HB_FUNC_EXEC( QWEBFRAME_LOAD1 );
+    QWebFrame_load1();
   }
   else if( ISBETWEEN(1,3) && ISQNETWORKREQUEST(1) && (ISNUM(2)||ISNIL(2)) && (ISQBYTEARRAY(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QWEBFRAME_LOAD2 );
+    QWebFrame_load2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -263,17 +264,17 @@ $method=|QPoint|pos|
 /*
 void render ( QPainter * painter )
 */
-$method=|void|render,render1|QPainter *
+$internalMethod=|void|render,render1|QPainter *
 
 /*
 void render ( QPainter * painter, const QRegion & clip )
 */
-$method=|void|render,render2|QPainter *,const QRegion &
+$internalMethod=|void|render,render2|QPainter *,const QRegion &
 
 /*
 void render ( QPainter * painter, RenderLayer layer, const QRegion & clip = QRegion() )
 */
-$method=|void|render,render3|QPainter *,QWebFrame::RenderLayer,const QRegion &=QRegion()
+$internalMethod=|void|render,render3|QPainter *,QWebFrame::RenderLayer,const QRegion &=QRegion()
 
 //[1]void render ( QPainter * painter )
 //[2]void render ( QPainter * painter, const QRegion & clip )
@@ -283,15 +284,19 @@ HB_FUNC_STATIC( QWEBFRAME_RENDER )
 {
   if( ISNUMPAR(1) && ISQPAINTER(1) )
   {
-    HB_FUNC_EXEC( QWEBFRAME_RENDER1 );
+    QWebFrame_render1();
   }
   else if( ISNUMPAR(2) && ISQPAINTER(1) && ISQREGION(2) )
   {
-    HB_FUNC_EXEC( QWEBFRAME_RENDER2 );
+    QWebFrame_render2();
   }
   else if( ISBETWEEN(2,3) && ISQPAINTER(1) && ISNUM(2) && (ISQREGION(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QWEBFRAME_RENDER3 );
+    QWebFrame_render3();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 

@@ -15,16 +15,10 @@ CLASS QWebElement
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD addClass
-   METHOD appendInside1
-   METHOD appendInside2
    METHOD appendInside
-   METHOD appendOutside1
-   METHOD appendOutside2
    METHOD appendOutside
    METHOD attribute
    METHOD attributeNS
@@ -32,11 +26,7 @@ CLASS QWebElement
    METHOD classes
    METHOD clone
    METHOD document
-   METHOD encloseContentsWith1
-   METHOD encloseContentsWith2
    METHOD encloseContentsWith
-   METHOD encloseWith1
-   METHOD encloseWith2
    METHOD encloseWith
    METHOD evaluateJavaScript
    METHOD findAll
@@ -55,11 +45,7 @@ CLASS QWebElement
    METHOD nextSibling
    METHOD parent
    METHOD prefix
-   METHOD prependInside1
-   METHOD prependInside2
    METHOD prependInside
-   METHOD prependOutside1
-   METHOD prependOutside2
    METHOD prependOutside
    METHOD previousSibling
    METHOD removeAllChildren
@@ -67,11 +53,7 @@ CLASS QWebElement
    METHOD removeAttributeNS
    METHOD removeClass
    METHOD removeFromDocument
-   METHOD render1
-   METHOD render2
    METHOD render
-   METHOD replace1
-   METHOD replace2
    METHOD replace
    METHOD setAttribute
    METHOD setAttributeNS
@@ -114,12 +96,12 @@ $destructor
 /*
 QWebElement ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QWebElement ( const QWebElement & other )
 */
-$constructor=|new2|const QWebElement &
+$internalConstructor=|new2|const QWebElement &
 
 //[1]QWebElement ()
 //[2]QWebElement ( const QWebElement & other )
@@ -128,11 +110,11 @@ HB_FUNC_STATIC( QWEBELEMENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QWEBELEMENT_NEW1 );
+    QWebElement_new1();
   }
   else if( ISNUMPAR(1) && ISQWEBELEMENT(1) )
   {
-    HB_FUNC_EXEC( QWEBELEMENT_NEW2 );
+    QWebElement_new2();
   }
   else
   {
@@ -150,12 +132,12 @@ $method=|void|addClass|const QString &
 /*
 void appendInside ( const QString & markup )
 */
-$method=|void|appendInside,appendInside1|const QString &
+$internalMethod=|void|appendInside,appendInside1|const QString &
 
 /*
 void appendInside ( const QWebElement & element )
 */
-$method=|void|appendInside,appendInside2|const QWebElement &
+$internalMethod=|void|appendInside,appendInside2|const QWebElement &
 
 //[1]void appendInside ( const QString & markup )
 //[2]void appendInside ( const QWebElement & element )
@@ -164,23 +146,27 @@ HB_FUNC_STATIC( QWEBELEMENT_APPENDINSIDE )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QWEBELEMENT_APPENDINSIDE1 );
+    QWebElement_appendInside1();
   }
   else if( ISNUMPAR(1) && ISQWEBELEMENT(1) )
   {
-    HB_FUNC_EXEC( QWEBELEMENT_APPENDINSIDE2 );
+    QWebElement_appendInside2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
 /*
 void appendOutside ( const QString & markup )
 */
-$method=|void|appendOutside,appendOutside1|const QString &
+$internalMethod=|void|appendOutside,appendOutside1|const QString &
 
 /*
 void appendOutside ( const QWebElement & element )
 */
-$method=|void|appendOutside,appendOutside2|const QWebElement &
+$internalMethod=|void|appendOutside,appendOutside2|const QWebElement &
 
 //[1]void appendOutside ( const QString & markup )
 //[2]void appendOutside ( const QWebElement & element )
@@ -189,11 +175,15 @@ HB_FUNC_STATIC( QWEBELEMENT_APPENDOUTSIDE )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QWEBELEMENT_APPENDOUTSIDE1 );
+    QWebElement_appendOutside1();
   }
   else if( ISNUMPAR(1) && ISQWEBELEMENT(1) )
   {
-    HB_FUNC_EXEC( QWEBELEMENT_APPENDOUTSIDE2 );
+    QWebElement_appendOutside2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -230,12 +220,12 @@ $method=|QWebElement|document|
 /*
 void encloseContentsWith ( const QWebElement & element )
 */
-$method=|void|encloseContentsWith,encloseContentsWith1|const QWebElement &
+$internalMethod=|void|encloseContentsWith,encloseContentsWith1|const QWebElement &
 
 /*
 void encloseContentsWith ( const QString & markup )
 */
-$method=|void|encloseContentsWith,encloseContentsWith2|const QString &
+$internalMethod=|void|encloseContentsWith,encloseContentsWith2|const QString &
 
 //[1]void encloseContentsWith ( const QWebElement & element )
 //[2]void encloseContentsWith ( const QString & markup )
@@ -244,23 +234,27 @@ HB_FUNC_STATIC( QWEBELEMENT_ENCLOSECONTENTSWITH )
 {
   if( ISNUMPAR(1) && ISQWEBELEMENT(1) )
   {
-    HB_FUNC_EXEC( QWEBELEMENT_ENCLOSECONTENTSWITH1 );
+    QWebElement_encloseContentsWith1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QWEBELEMENT_ENCLOSECONTENTSWITH2 );
+    QWebElement_encloseContentsWith2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
 /*
 void encloseWith ( const QString & markup )
 */
-$method=|void|encloseWith,encloseWith1|const QString &
+$internalMethod=|void|encloseWith,encloseWith1|const QString &
 
 /*
 void encloseWith ( const QWebElement & element )
 */
-$method=|void|encloseWith,encloseWith2|const QWebElement &
+$internalMethod=|void|encloseWith,encloseWith2|const QWebElement &
 
 //[1]void encloseWith ( const QString & markup )
 //[2]void encloseWith ( const QWebElement & element )
@@ -269,11 +263,15 @@ HB_FUNC_STATIC( QWEBELEMENT_ENCLOSEWITH )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QWEBELEMENT_ENCLOSEWITH1 );
+    QWebElement_encloseWith1();
   }
   else if( ISNUMPAR(1) && ISQWEBELEMENT(1) )
   {
-    HB_FUNC_EXEC( QWEBELEMENT_ENCLOSEWITH2 );
+    QWebElement_encloseWith2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -365,12 +363,12 @@ $method=|QString|prefix|
 /*
 void prependInside ( const QString & markup )
 */
-$method=|void|prependInside,prependInside1|const QString &
+$internalMethod=|void|prependInside,prependInside1|const QString &
 
 /*
 void prependInside ( const QWebElement & element )
 */
-$method=|void|prependInside,prependInside2|const QWebElement &
+$internalMethod=|void|prependInside,prependInside2|const QWebElement &
 
 //[1]void prependInside ( const QString & markup )
 //[2]void prependInside ( const QWebElement & element )
@@ -379,23 +377,27 @@ HB_FUNC_STATIC( QWEBELEMENT_PREPENDINSIDE )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QWEBELEMENT_PREPENDINSIDE1 );
+    QWebElement_prependInside1();
   }
   else if( ISNUMPAR(1) && ISQWEBELEMENT(1) )
   {
-    HB_FUNC_EXEC( QWEBELEMENT_PREPENDINSIDE2 );
+    QWebElement_prependInside2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
 /*
 void prependOutside ( const QString & markup )
 */
-$method=|void|prependOutside,prependOutside1|const QString &
+$internalMethod=|void|prependOutside,prependOutside1|const QString &
 
 /*
 void prependOutside ( const QWebElement & element )
 */
-$method=|void|prependOutside,prependOutside2|const QWebElement &
+$internalMethod=|void|prependOutside,prependOutside2|const QWebElement &
 
 //[1]void prependOutside ( const QString & markup )
 //[2]void prependOutside ( const QWebElement & element )
@@ -404,11 +406,15 @@ HB_FUNC_STATIC( QWEBELEMENT_PREPENDOUTSIDE )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QWEBELEMENT_PREPENDOUTSIDE1 );
+    QWebElement_prependOutside1();
   }
   else if( ISNUMPAR(1) && ISQWEBELEMENT(1) )
   {
-    HB_FUNC_EXEC( QWEBELEMENT_PREPENDOUTSIDE2 );
+    QWebElement_prependOutside2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -445,12 +451,12 @@ $method=|void|removeFromDocument|
 /*
 void render ( QPainter * painter )
 */
-$method=|void|render,render1|QPainter *
+$internalMethod=|void|render,render1|QPainter *
 
 /*
 void render ( QPainter * painter, const QRect & clip )
 */
-$method=|void|render,render2|QPainter *,const QRect &
+$internalMethod=|void|render,render2|QPainter *,const QRect &
 
 //[1]void render ( QPainter * painter )
 //[2]void render ( QPainter * painter, const QRect & clip )
@@ -459,23 +465,27 @@ HB_FUNC_STATIC( QWEBELEMENT_RENDER )
 {
   if( ISNUMPAR(1) && ISQPAINTER(1) )
   {
-    HB_FUNC_EXEC( QWEBELEMENT_RENDER1 );
+    QWebElement_render1();
   }
   else if( ISNUMPAR(2) && ISQPAINTER(1) && ISQRECT(2) )
   {
-    HB_FUNC_EXEC( QWEBELEMENT_RENDER2 );
+    QWebElement_render2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
 /*
 void replace ( const QString & markup )
 */
-$method=|void|replace,replace1|const QString &
+$internalMethod=|void|replace,replace1|const QString &
 
 /*
 void replace ( const QWebElement & element )
 */
-$method=|void|replace,replace2|const QWebElement &
+$internalMethod=|void|replace,replace2|const QWebElement &
 
 //[1]void replace ( const QString & markup )
 //[2]void replace ( const QWebElement & element )
@@ -484,11 +494,15 @@ HB_FUNC_STATIC( QWEBELEMENT_REPLACE )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QWEBELEMENT_REPLACE1 );
+    QWebElement_replace1();
   }
   else if( ISNUMPAR(1) && ISQWEBELEMENT(1) )
   {
-    HB_FUNC_EXEC( QWEBELEMENT_REPLACE2 );
+    QWebElement_replace2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 

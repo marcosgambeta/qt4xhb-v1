@@ -21,8 +21,6 @@ CLASS QWebView INHERIT QWidget
    METHOD history
    METHOD icon
    METHOD isModified
-   METHOD load1
-   METHOD load2
    METHOD load
    METHOD page
    METHOD pageAction
@@ -106,12 +104,12 @@ $method=|bool|isModified|
 /*
 void load ( const QUrl & url )
 */
-$method=|void|load,load1|const QUrl &
+$internalMethod=|void|load,load1|const QUrl &
 
 /*
 void load ( const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
 */
-$method=|void|load,load2|const QNetworkRequest &,QNetworkAccessManager::Operation=QNetworkAccessManager::GetOperation,const QByteArray &=QByteArray()
+$internalMethod=|void|load,load2|const QNetworkRequest &,QNetworkAccessManager::Operation=QNetworkAccessManager::GetOperation,const QByteArray &=QByteArray()
 
 //[1]void load ( const QUrl & url )
 //[2]void load ( const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
@@ -120,11 +118,15 @@ HB_FUNC_STATIC( QWEBVIEW_LOAD )
 {
   if( ISNUMPAR(1) && ISQURL(1) )
   {
-    HB_FUNC_EXEC( QWEBVIEW_LOAD1 );
+    QWebView_load1();
   }
   else if( ISBETWEEN(1,3) && ISQNETWORKREQUEST(1) && (ISNUM(2)||ISNIL(2)) && (ISQBYTEARRAY(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QWEBVIEW_LOAD2 );
+    QWebView_load2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 

@@ -11,9 +11,6 @@ CLASS QWebElementCollection
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD append
@@ -46,17 +43,17 @@ $destructor
 /*
 QWebElementCollection ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QWebElementCollection ( const QWebElement & contextElement, const QString & query )
 */
-$constructor=|new2|const QWebElement &,const QString &
+$internalConstructor=|new2|const QWebElement &,const QString &
 
 /*
 QWebElementCollection ( const QWebElementCollection & other )
 */
-$constructor=|new3|const QWebElementCollection &
+$internalConstructor=|new3|const QWebElementCollection &
 
 //[1]QWebElementCollection ()
 //[2]QWebElementCollection ( const QWebElement & contextElement, const QString & query )
@@ -66,15 +63,15 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QWEBELEMENTCOLLECTION_NEW1 );
+    QWebElementCollection_new1();
   }
   else if( ISNUMPAR(2) && ISQWEBELEMENT(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QWEBELEMENTCOLLECTION_NEW2 );
+    QWebElementCollection_new2();
   }
   else if( ISNUMPAR(1) && ISQWEBELEMENTCOLLECTION(1) )
   {
-    HB_FUNC_EXEC( QWEBELEMENTCOLLECTION_NEW3 );
+    QWebElementCollection_new3();
   }
   else
   {
