@@ -27,8 +27,6 @@ CLASS QWebFrame INHERIT QObject
 
    DATA self_destruction INIT .F.
 
-   METHOD addToJavaScriptWindowObject1
-   METHOD addToJavaScriptWindowObject2
    METHOD addToJavaScriptWindowObject
    METHOD baseUrl
    METHOD childFrames
@@ -41,15 +39,10 @@ CLASS QWebFrame INHERIT QObject
    METHOD hasFocus
    METHOD hitTestContent
    METHOD icon
-   METHOD load1
-   METHOD load2
    METHOD load
    METHOD page
    METHOD parentFrame
    METHOD pos
-   METHOD render1
-   METHOD render2
-   METHOD render3
    METHOD render
    METHOD renderTreeDump
    METHOD requestedUrl
@@ -115,20 +108,13 @@ RETURN
 /*
 void addToJavaScriptWindowObject ( const QString & name, QObject * object )
 */
-HB_FUNC_STATIC( QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT1 )
+void QWebFrame_addToJavaScriptWindowObject1 ()
 {
   QWebFrame * obj = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    if( ISNUMPAR(2) && ISCHAR(1) && ISQOBJECT(2) )
-    {
       obj->addToJavaScriptWindowObject ( PQSTRING(1), PQOBJECT(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -137,20 +123,13 @@ HB_FUNC_STATIC( QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT1 )
 /*
 void addToJavaScriptWindowObject ( const QString & name, QObject * object, QScriptEngine::ValueOwnership own )
 */
-HB_FUNC_STATIC( QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT2 )
+void QWebFrame_addToJavaScriptWindowObject2 ()
 {
   QWebFrame * obj = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    if( ISNUMPAR(3) && ISCHAR(1) && ISQOBJECT(2) && ISNUM(3) )
-    {
       obj->addToJavaScriptWindowObject ( PQSTRING(1), PQOBJECT(2), (QScriptEngine::ValueOwnership) hb_parni(3) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -163,11 +142,15 @@ HB_FUNC_STATIC( QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISQOBJECT(2) )
   {
-    HB_FUNC_EXEC( QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT1 );
+    QWebFrame_addToJavaScriptWindowObject1();
   }
   else if( ISNUMPAR(3) && ISCHAR(1) && ISQOBJECT(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT2 );
+    QWebFrame_addToJavaScriptWindowObject2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -425,20 +408,13 @@ HB_FUNC_STATIC( QWEBFRAME_ICON )
 /*
 void load ( const QUrl & url )
 */
-HB_FUNC_STATIC( QWEBFRAME_LOAD1 )
+void QWebFrame_load1 ()
 {
   QWebFrame * obj = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISQURL(1) )
-    {
       obj->load ( *PQURL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -447,20 +423,13 @@ HB_FUNC_STATIC( QWEBFRAME_LOAD1 )
 /*
 void load ( const QNetworkRequest & req, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
 */
-HB_FUNC_STATIC( QWEBFRAME_LOAD2 )
+void QWebFrame_load2 ()
 {
   QWebFrame * obj = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    if( ISBETWEEN(1,3) && ISQNETWORKREQUEST(1) && ISOPTNUM(2) && (ISQBYTEARRAY(3)||ISNIL(3)) )
-    {
       obj->load ( *PQNETWORKREQUEST(1), ISNIL(2)? (QNetworkAccessManager::Operation) QNetworkAccessManager::GetOperation : (QNetworkAccessManager::Operation) hb_parni(2), ISNIL(3)? QByteArray() : *(QByteArray *) _qt4xhb_itemGetPtr(3) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -473,11 +442,15 @@ HB_FUNC_STATIC( QWEBFRAME_LOAD )
 {
   if( ISNUMPAR(1) && ISQURL(1) )
   {
-    HB_FUNC_EXEC( QWEBFRAME_LOAD1 );
+    QWebFrame_load1();
   }
   else if( ISBETWEEN(1,3) && ISQNETWORKREQUEST(1) && (ISNUM(2)||ISNIL(2)) && (ISQBYTEARRAY(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QWEBFRAME_LOAD2 );
+    QWebFrame_load2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -547,20 +520,13 @@ HB_FUNC_STATIC( QWEBFRAME_POS )
 /*
 void render ( QPainter * painter )
 */
-HB_FUNC_STATIC( QWEBFRAME_RENDER1 )
+void QWebFrame_render1 ()
 {
   QWebFrame * obj = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISQPAINTER(1) )
-    {
       obj->render ( PQPAINTER(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -569,20 +535,13 @@ HB_FUNC_STATIC( QWEBFRAME_RENDER1 )
 /*
 void render ( QPainter * painter, const QRegion & clip )
 */
-HB_FUNC_STATIC( QWEBFRAME_RENDER2 )
+void QWebFrame_render2 ()
 {
   QWebFrame * obj = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    if( ISNUMPAR(2) && ISQPAINTER(1) && ISQREGION(2) )
-    {
       obj->render ( PQPAINTER(1), *PQREGION(2) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -591,20 +550,13 @@ HB_FUNC_STATIC( QWEBFRAME_RENDER2 )
 /*
 void render ( QPainter * painter, RenderLayer layer, const QRegion & clip = QRegion() )
 */
-HB_FUNC_STATIC( QWEBFRAME_RENDER3 )
+void QWebFrame_render3 ()
 {
   QWebFrame * obj = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    if( ISBETWEEN(2,3) && ISQPAINTER(1) && ISNUM(2) && (ISQREGION(3)||ISNIL(3)) )
-    {
       obj->render ( PQPAINTER(1), (QWebFrame::RenderLayer) hb_parni(2), ISNIL(3)? QRegion() : *(QRegion *) _qt4xhb_itemGetPtr(3) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -618,15 +570,19 @@ HB_FUNC_STATIC( QWEBFRAME_RENDER )
 {
   if( ISNUMPAR(1) && ISQPAINTER(1) )
   {
-    HB_FUNC_EXEC( QWEBFRAME_RENDER1 );
+    QWebFrame_render1();
   }
   else if( ISNUMPAR(2) && ISQPAINTER(1) && ISQREGION(2) )
   {
-    HB_FUNC_EXEC( QWEBFRAME_RENDER2 );
+    QWebFrame_render2();
   }
   else if( ISBETWEEN(2,3) && ISQPAINTER(1) && ISNUM(2) && (ISQREGION(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QWEBFRAME_RENDER3 );
+    QWebFrame_render3();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 

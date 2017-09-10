@@ -17,9 +17,6 @@ CLASS QWebElementCollection
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD append
@@ -56,7 +53,7 @@ RETURN
 /*
 QWebElementCollection ()
 */
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW1 )
+void QWebElementCollection_new1 ()
 {
   QWebElementCollection * o = new QWebElementCollection ();
   _qt4xhb_storePointerAndFlag( o, true );
@@ -65,7 +62,7 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW1 )
 /*
 QWebElementCollection ( const QWebElement & contextElement, const QString & query )
 */
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW2 )
+void QWebElementCollection_new2 ()
 {
   QWebElementCollection * o = new QWebElementCollection ( *PQWEBELEMENT(1), PQSTRING(2) );
   _qt4xhb_storePointerAndFlag( o, true );
@@ -74,7 +71,7 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW2 )
 /*
 QWebElementCollection ( const QWebElementCollection & other )
 */
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW3 )
+void QWebElementCollection_new3 ()
 {
   QWebElementCollection * o = new QWebElementCollection ( *PQWEBELEMENTCOLLECTION(1) );
   _qt4xhb_storePointerAndFlag( o, true );
@@ -88,15 +85,15 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QWEBELEMENTCOLLECTION_NEW1 );
+    QWebElementCollection_new1();
   }
   else if( ISNUMPAR(2) && ISQWEBELEMENT(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QWEBELEMENTCOLLECTION_NEW2 );
+    QWebElementCollection_new2();
   }
   else if( ISNUMPAR(1) && ISQWEBELEMENTCOLLECTION(1) )
   {
-    HB_FUNC_EXEC( QWEBELEMENTCOLLECTION_NEW3 );
+    QWebElementCollection_new3();
   }
   else
   {

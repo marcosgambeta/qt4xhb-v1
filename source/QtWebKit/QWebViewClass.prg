@@ -27,8 +27,6 @@ CLASS QWebView INHERIT QWidget
    METHOD history
    METHOD icon
    METHOD isModified
-   METHOD load1
-   METHOD load2
    METHOD load
    METHOD page
    METHOD pageAction
@@ -204,20 +202,13 @@ HB_FUNC_STATIC( QWEBVIEW_ISMODIFIED )
 /*
 void load ( const QUrl & url )
 */
-HB_FUNC_STATIC( QWEBVIEW_LOAD1 )
+void QWebView_load1 ()
 {
   QWebView * obj = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISQURL(1) )
-    {
       obj->load ( *PQURL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -226,20 +217,13 @@ HB_FUNC_STATIC( QWEBVIEW_LOAD1 )
 /*
 void load ( const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
 */
-HB_FUNC_STATIC( QWEBVIEW_LOAD2 )
+void QWebView_load2 ()
 {
   QWebView * obj = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    if( ISBETWEEN(1,3) && ISQNETWORKREQUEST(1) && ISOPTNUM(2) && (ISQBYTEARRAY(3)||ISNIL(3)) )
-    {
       obj->load ( *PQNETWORKREQUEST(1), ISNIL(2)? (QNetworkAccessManager::Operation) QNetworkAccessManager::GetOperation : (QNetworkAccessManager::Operation) hb_parni(2), ISNIL(3)? QByteArray() : *(QByteArray *) _qt4xhb_itemGetPtr(3) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -252,11 +236,15 @@ HB_FUNC_STATIC( QWEBVIEW_LOAD )
 {
   if( ISNUMPAR(1) && ISQURL(1) )
   {
-    HB_FUNC_EXEC( QWEBVIEW_LOAD1 );
+    QWebView_load1();
   }
   else if( ISBETWEEN(1,3) && ISQNETWORKREQUEST(1) && (ISNUM(2)||ISNIL(2)) && (ISQBYTEARRAY(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QWEBVIEW_LOAD2 );
+    QWebView_load2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
