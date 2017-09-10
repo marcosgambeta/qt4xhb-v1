@@ -30,6 +30,7 @@ CLASS QUiLoader INHERIT QObject
    METHOD setLanguageChangeEnabled
    METHOD setWorkingDirectory
    METHOD workingDirectory
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -46,15 +47,13 @@ $destructor
 
 #include <QStringList>
 #include <QDir>
+#include <QAction>
+#include <QLayout>
 
 /*
 QUiLoader ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QUILOADER_NEW )
-{
-  QUiLoader * o = new QUiLoader ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
@@ -81,141 +80,51 @@ $method=|void|clearPluginPaths|
 /*
 virtual QAction * createAction ( QObject * parent = 0, const QString & name = QString() )
 */
-HB_FUNC_STATIC( QUILOADER_CREATEACTION )
-{
-  QUiLoader * obj = (QUiLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->createAction ( OPQOBJECT(1,0), OPQSTRING(2,QString()) );
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
-
+$virtualMethod=|QAction *|createAction|QObject *=0,const QString &=QString()
 
 /*
 virtual QActionGroup * createActionGroup ( QObject * parent = 0, const QString & name = QString() )
 */
-HB_FUNC_STATIC( QUILOADER_CREATEACTIONGROUP )
-{
-  QUiLoader * obj = (QUiLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QActionGroup * ptr = obj->createActionGroup ( OPQOBJECT(1,0), OPQSTRING(2,QString()) );
-    _qt4xhb_createReturnClass ( ptr, "QACTIONGROUP" );
-  }
-}
-
+$virtualMethod=|QActionGroup *|createActionGroup|QObject *=0,const QString &=QString()
 
 /*
 virtual QLayout * createLayout ( const QString & className, QObject * parent = 0, const QString & name = QString() )
 */
-HB_FUNC_STATIC( QUILOADER_CREATELAYOUT )
-{
-  QUiLoader * obj = (QUiLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QLayout * ptr = obj->createLayout ( PQSTRING(1), OPQOBJECT(2,0), OPQSTRING(3,QString()) );
-    _qt4xhb_createReturnClass ( ptr, "QLAYOUT" );
-  }
-}
-
+$virtualMethod=|QLayout *|createLayout|const QString &,QObject *=0,const QString &=QString()
 
 /*
 virtual QWidget * createWidget ( const QString & className, QWidget * parent = 0, const QString & name = QString() )
 */
-HB_FUNC_STATIC( QUILOADER_CREATEWIDGET )
-{
-  QUiLoader * obj = (QUiLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWidget * ptr = obj->createWidget ( PQSTRING(1), OPQWIDGET(2,0), OPQSTRING(3,QString()) );
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
-
+$virtualMethod=|QWidget *|createWidget|const QString &,QWidget *=0,const QString &=QString()
 
 /*
 bool isLanguageChangeEnabled () const
 */
-HB_FUNC_STATIC( QUILOADER_ISLANGUAGECHANGEENABLED )
-{
-  QUiLoader * obj = (QUiLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isLanguageChangeEnabled () );
-  }
-}
-
+$method=|bool|isLanguageChangeEnabled|
 
 /*
 QWidget * load ( QIODevice * device, QWidget * parentWidget = 0 )
 */
-HB_FUNC_STATIC( QUILOADER_LOAD )
-{
-  QUiLoader * obj = (QUiLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWidget * ptr = obj->load ( PQIODEVICE(1), OPQWIDGET(2,0) );
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
-
+$method=|QWidget *|load|QIODevice *,QWidget *=0
 
 /*
 QStringList pluginPaths () const
 */
-HB_FUNC_STATIC( QUILOADER_PLUGINPATHS )
-{
-  QUiLoader * obj = (QUiLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->pluginPaths () );
-  }
-}
-
+$method=|QStringList|pluginPaths|
 
 /*
 void setLanguageChangeEnabled ( bool enabled )
 */
-HB_FUNC_STATIC( QUILOADER_SETLANGUAGECHANGEENABLED )
-{
-  QUiLoader * obj = (QUiLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setLanguageChangeEnabled ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setLanguageChangeEnabled|bool
 
 /*
 void setWorkingDirectory ( const QDir & dir )
 */
-HB_FUNC_STATIC( QUILOADER_SETWORKINGDIRECTORY )
-{
-  QUiLoader * obj = (QUiLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setWorkingDirectory ( *PQDIR(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setWorkingDirectory|const QDir &
 
 /*
 QDir workingDirectory () const
 */
-HB_FUNC_STATIC( QUILOADER_WORKINGDIRECTORY )
-{
-  QUiLoader * obj = (QUiLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDir * ptr = new QDir( obj->workingDirectory () );
-    _qt4xhb_createReturnClass ( ptr, "QDIR", true );
-  }
-}
-
-
-
+$method=|QDir|workingDirectory|
 
 #pragma ENDDUMP
