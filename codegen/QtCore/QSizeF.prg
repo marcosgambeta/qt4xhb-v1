@@ -31,11 +31,13 @@ CLASS QSizeF
    METHOD toSize
    METHOD transpose
    METHOD width
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

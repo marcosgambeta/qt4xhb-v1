@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QTimerEvent INHERIT QEvent
 
    DATA self_destruction INIT .F.
@@ -10,6 +9,7 @@ CLASS QTimerEvent INHERIT QEvent
    METHOD new
    METHOD delete
    METHOD timerId
+
    DESTRUCTOR destroyObject
 
 END CLASS

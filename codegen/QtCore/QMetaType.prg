@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QMetaType
 
    DATA pointer
@@ -17,11 +16,13 @@ CLASS QMetaType
    METHOD unregisterType
    METHOD save
    METHOD load
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

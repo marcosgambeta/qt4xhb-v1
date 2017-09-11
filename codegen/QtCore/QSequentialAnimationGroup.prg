@@ -17,7 +17,9 @@ CLASS QSequentialAnimationGroup INHERIT QAnimationGroup
    METHOD currentAnimation
    METHOD insertPause
    METHOD duration
+
    METHOD onCurrentAnimationChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

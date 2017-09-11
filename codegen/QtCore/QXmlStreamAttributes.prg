@@ -27,11 +27,13 @@ CLASS QXmlStreamAttributes
    METHOD value4
    METHOD value5
    METHOD value
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

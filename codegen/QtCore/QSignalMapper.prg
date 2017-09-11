@@ -26,10 +26,12 @@ CLASS QSignalMapper INHERIT QObject
    METHOD map1
    METHOD map2
    METHOD map
+
    METHOD onMapped1
    METHOD onMapped2
    METHOD onMapped3
    METHOD onMapped4
+
    DESTRUCTOR destroyObject
 
 END CLASS

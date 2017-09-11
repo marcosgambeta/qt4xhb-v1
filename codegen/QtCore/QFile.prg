@@ -65,6 +65,7 @@ CLASS QFile INHERIT QIODevice
    METHOD symLinkTarget1
    METHOD symLinkTarget2
    METHOD symLinkTarget
+
    DESTRUCTOR destroyObject
 
 END CLASS

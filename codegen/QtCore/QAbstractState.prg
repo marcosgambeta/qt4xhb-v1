@@ -14,8 +14,10 @@ CLASS QAbstractState INHERIT QObject
    METHOD delete
    METHOD machine
    METHOD parentState
+
    METHOD onEntered
    METHOD onExited
+
    DESTRUCTOR destroyObject
 
 END CLASS

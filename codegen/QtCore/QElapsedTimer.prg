@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QElapsedTimer
 
    DATA pointer
@@ -22,11 +21,13 @@ CLASS QElapsedTimer
    METHOD start
    METHOD clockType
    METHOD isMonotonic
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

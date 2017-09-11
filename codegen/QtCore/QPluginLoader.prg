@@ -23,6 +23,7 @@ CLASS QPluginLoader INHERIT QObject
    METHOD setFileName
    METHOD setLoadHints
    METHOD unload
+
    DESTRUCTOR destroyObject
 
 END CLASS

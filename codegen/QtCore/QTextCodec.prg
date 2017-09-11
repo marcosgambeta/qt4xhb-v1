@@ -49,11 +49,13 @@ CLASS QTextCodec
    METHOD codecForUtfText1
    METHOD codecForUtfText2
    METHOD codecForUtfText
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

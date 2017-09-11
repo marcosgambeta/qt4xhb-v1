@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QFutureWatcherBase INHERIT QObject
 
    DATA self_destruction INIT .F.
@@ -25,6 +24,7 @@ CLASS QFutureWatcherBase INHERIT QObject
    METHOD pause
    METHOD resume
    METHOD togglePaused
+
    METHOD onStarted
    METHOD onFinished
    METHOD onCanceled
@@ -35,6 +35,7 @@ CLASS QFutureWatcherBase INHERIT QObject
    METHOD onProgressRangeChanged
    METHOD onProgressValueChanged
    METHOD onProgressTextChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

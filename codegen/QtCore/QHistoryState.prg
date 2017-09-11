@@ -18,6 +18,7 @@ CLASS QHistoryState INHERIT QAbstractState
    METHOD setDefaultState
    METHOD historyType
    METHOD setHistoryType
+
    DESTRUCTOR destroyObject
 
 END CLASS

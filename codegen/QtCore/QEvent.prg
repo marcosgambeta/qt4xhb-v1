@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QEvent
 
    DATA pointer
@@ -17,11 +16,13 @@ CLASS QEvent
    METHOD spontaneous
    METHOD type
    METHOD registerEventType
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

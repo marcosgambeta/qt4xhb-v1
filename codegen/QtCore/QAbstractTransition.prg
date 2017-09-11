@@ -23,7 +23,9 @@ CLASS QAbstractTransition INHERIT QObject
    METHOD sourceState
    METHOD targetState
    METHOD targetStates
+
    METHOD onTriggered
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QBitArray
 
    DATA pointer
@@ -31,11 +30,13 @@ CLASS QBitArray
    METHOD testBit
    METHOD toggleBit
    METHOD truncate
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

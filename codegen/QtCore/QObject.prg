@@ -45,6 +45,7 @@ CLASS QObject
    METHOD startTimer
    METHOD thread
    METHOD deleteLater
+
    METHOD onCloseEvent
    METHOD onEnterEvent
    METHOD onFocusInEvent
@@ -183,12 +184,15 @@ CLASS QObject
    METHOD onWinIdChangeEvent
    METHOD onGestureEvent
    METHOD onGestureOverrideEvent
+
    METHOD onDestroyed
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

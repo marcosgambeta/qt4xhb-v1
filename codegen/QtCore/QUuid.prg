@@ -27,11 +27,13 @@ CLASS QUuid
    METHOD version
    METHOD fromRfc4122
    METHOD createUuid
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

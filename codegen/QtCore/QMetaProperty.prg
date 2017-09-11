@@ -44,11 +44,13 @@ CLASS QMetaProperty
    METHOD hasStdCppSet
    METHOD isValid
    METHOD enclosingMetaObject
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

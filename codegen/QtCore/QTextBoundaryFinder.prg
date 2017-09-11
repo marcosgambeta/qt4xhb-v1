@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QTextBoundaryFinder
 
    DATA pointer
@@ -25,11 +24,13 @@ CLASS QTextBoundaryFinder
    METHOD toPreviousBoundary
    METHOD isAtBoundary
    METHOD boundaryReasons
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -25,8 +25,10 @@ CLASS QAbstractEventDispatcher INHERIT QObject
    METHOD unregisterTimers
    METHOD wakeUp
    METHOD instance
+
    METHOD onAboutToBlock
    METHOD onAwake
+
    DESTRUCTOR destroyObject
 
 END CLASS

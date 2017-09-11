@@ -58,11 +58,13 @@ CLASS QXmlStreamWriter
    METHOD writeTextElement1
    METHOD writeTextElement2
    METHOD writeTextElement
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

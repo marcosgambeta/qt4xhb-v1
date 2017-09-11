@@ -50,6 +50,7 @@ CLASS QSettings INHERIT QObject
    METHOD defaultFormat
    METHOD setDefaultFormat
    METHOD setPath
+
    DESTRUCTOR destroyObject
 
 END CLASS

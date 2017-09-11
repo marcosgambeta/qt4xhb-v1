@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QStringMatcher
 
    DATA pointer
@@ -20,11 +19,13 @@ CLASS QStringMatcher
    METHOD indexIn2
    METHOD pattern
    METHOD caseSensitivity
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -16,6 +16,7 @@ CLASS QChildEvent INHERIT QEvent
    METHOD child
    METHOD polished
    METHOD removed
+
    DESTRUCTOR destroyObject
 
 END CLASS

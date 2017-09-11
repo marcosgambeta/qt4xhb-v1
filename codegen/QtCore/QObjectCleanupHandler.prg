@@ -16,6 +16,7 @@ CLASS QObjectCleanupHandler INHERIT QObject
    METHOD remove
    METHOD isEmpty
    METHOD clear
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -22,7 +22,9 @@ CLASS QVariantAnimation INHERIT QAbstractAnimation
    METHOD setKeyValueAt
    METHOD setStartValue
    METHOD startValue
+
    METHOD onValueChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

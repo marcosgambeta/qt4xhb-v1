@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QBasicAtomicInt
 
    DATA pointer
@@ -31,11 +30,13 @@ CLASS QBasicAtomicInt
    METHOD isFetchAndStoreWaitFree
    METHOD isFetchAndAddNative
    METHOD isFetchAndAddWaitFree
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -22,11 +22,13 @@ CLASS QByteArrayMatcher
    METHOD indexIn
    METHOD pattern
    METHOD setPattern
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

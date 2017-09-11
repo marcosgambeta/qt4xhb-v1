@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QBasicTimer
 
    DATA pointer
@@ -14,11 +13,13 @@ CLASS QBasicTimer
    METHOD start
    METHOD stop
    METHOD timerId
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

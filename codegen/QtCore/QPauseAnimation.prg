@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QPauseAnimation INHERIT QAbstractAnimation
 
    DATA self_destruction INIT .F.
@@ -13,6 +12,7 @@ CLASS QPauseAnimation INHERIT QAbstractAnimation
    METHOD delete
    METHOD setDuration
    METHOD duration
+
    DESTRUCTOR destroyObject
 
 END CLASS

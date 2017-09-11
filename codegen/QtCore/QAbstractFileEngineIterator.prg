@@ -20,11 +20,13 @@ CLASS QAbstractFileEngineIterator
    METHOD nameFilters
    METHOD next
    METHOD path
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

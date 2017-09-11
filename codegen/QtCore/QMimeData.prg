@@ -35,6 +35,7 @@ CLASS QMimeData INHERIT QObject
    METHOD setUrls
    METHOD text
    METHOD urls
+
    DESTRUCTOR destroyObject
 
 END CLASS

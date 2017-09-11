@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QTranslator INHERIT QObject
 
    DATA self_destruction INIT .F.
@@ -14,6 +13,7 @@ CLASS QTranslator INHERIT QObject
    METHOD load2
    METHOD load
    METHOD translate
+
    DESTRUCTOR destroyObject
 
 END CLASS

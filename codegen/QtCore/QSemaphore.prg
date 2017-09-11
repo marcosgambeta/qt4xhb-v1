@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QSemaphore
 
    DATA pointer
@@ -16,11 +15,13 @@ CLASS QSemaphore
    METHOD tryAcquire1
    METHOD tryAcquire2
    METHOD tryAcquire
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

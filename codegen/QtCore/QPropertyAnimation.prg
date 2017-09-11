@@ -19,6 +19,7 @@ CLASS QPropertyAnimation INHERIT QVariantAnimation
    METHOD setPropertyName
    METHOD setTargetObject
    METHOD targetObject
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -143,11 +143,13 @@ CLASS QByteArray
    METHOD number3
    METHOD number4
    METHOD number5
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

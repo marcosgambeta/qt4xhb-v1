@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QReadWriteLock
 
    DATA pointer
@@ -21,11 +20,13 @@ CLASS QReadWriteLock
    METHOD tryLockForWrite2
    METHOD tryLockForWrite
    METHOD unlock
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

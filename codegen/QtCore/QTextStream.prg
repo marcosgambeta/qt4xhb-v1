@@ -62,11 +62,13 @@ CLASS QTextStream
    METHOD realNumberNotation
    METHOD setRealNumberPrecision
    METHOD realNumberPrecision
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -16,11 +16,13 @@ CLASS QLibraryInfo
    METHOD buildKey
    METHOD buildDate
    METHOD location
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

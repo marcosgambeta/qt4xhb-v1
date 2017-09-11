@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QRunnable
 
    DATA pointer
@@ -12,11 +11,13 @@ CLASS QRunnable
    METHOD autoDelete
    METHOD run
    METHOD setAutoDelete
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

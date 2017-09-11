@@ -15,11 +15,13 @@ CLASS QSystemLocale
    METHOD new
    METHOD fallbackLocale
    METHOD query
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

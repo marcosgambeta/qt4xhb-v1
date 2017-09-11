@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QSharedData
 
    DATA pointer
@@ -12,11 +11,13 @@ CLASS QSharedData
    METHOD new2
    METHOD new
    METHOD delete
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -45,11 +45,13 @@ CLASS QAbstractFileEngine
    METHOD supportsExtension
    METHOD write
    METHOD create
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

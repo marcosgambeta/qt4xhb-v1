@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QWaitCondition
 
    DATA pointer
@@ -12,11 +11,13 @@ CLASS QWaitCondition
    METHOD delete
    METHOD wakeAll
    METHOD wakeOne
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

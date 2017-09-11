@@ -32,11 +32,13 @@ CLASS QDataStream
    METHOD status
    METHOD version
    METHOD writeRawData
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

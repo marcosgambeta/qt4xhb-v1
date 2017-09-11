@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QTimeLine INHERIT QObject
 
    DATA self_destruction INIT .F.
@@ -37,10 +36,12 @@ CLASS QTimeLine INHERIT QObject
    METHOD start
    METHOD stop
    METHOD toggleDirection
-   METHOD OnFinished
+
+   METHOD onFinished
    METHOD onFrameChanged
    METHOD onStateChanged
    METHOD onValueChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -49,11 +49,13 @@ CLASS QFutureInterfaceBase
    METHOD waitForResult
    METHOD waitForResume
    METHOD mutex
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

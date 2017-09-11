@@ -26,11 +26,13 @@ CLASS QMetaEnum
    METHOD valueToKeys
    METHOD enclosingMetaObject
    METHOD isValid
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

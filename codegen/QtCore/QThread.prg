@@ -26,8 +26,10 @@ CLASS QThread INHERIT QObject
    METHOD currentThread
    METHOD idealThreadCount
    METHOD yieldCurrentThread
+
    METHOD onFinished
    METHOD onStarted
+
    DESTRUCTOR destroyObject
 
 END CLASS

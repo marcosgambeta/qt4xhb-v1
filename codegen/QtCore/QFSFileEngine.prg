@@ -53,6 +53,7 @@ CLASS QFSFileEngine INHERIT QAbstractFileEngine
    METHOD rootPath
    METHOD setCurrentPath
    METHOD tempPath
+
    DESTRUCTOR destroyObject
 
 END CLASS

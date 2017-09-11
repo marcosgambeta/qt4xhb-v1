@@ -78,11 +78,13 @@ CLASS QDir
    METHOD temp
    METHOD tempPath
    METHOD toNativeSeparators
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

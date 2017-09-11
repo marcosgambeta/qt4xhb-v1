@@ -36,11 +36,13 @@ CLASS QLine
    METHOD translated1
    METHOD translated2
    METHOD translated
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

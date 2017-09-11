@@ -31,8 +31,10 @@ CLASS QStateMachine INHERIT QState
    METHOD eventFilter
    METHOD start
    METHOD stop
+
    METHOD onStarted
    METHOD onStopped
+
    DESTRUCTOR destroyObject
 
 END CLASS

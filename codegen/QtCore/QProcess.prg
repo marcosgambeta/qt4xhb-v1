@@ -60,12 +60,14 @@ CLASS QProcess INHERIT QIODevice
    METHOD startDetached3
    METHOD startDetached
    METHOD systemEnvironment
+
    METHOD onError
    METHOD onFinished
    METHOD onReadyReadStandardError
    METHOD onReadyReadStandardOutput
    METHOD onStarted
    METHOD onStateChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

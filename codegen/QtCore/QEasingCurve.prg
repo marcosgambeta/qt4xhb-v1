@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QEasingCurve
 
    DATA pointer
@@ -20,11 +19,13 @@ CLASS QEasingCurve
    METHOD setPeriod
    METHOD setType
    METHOD type
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

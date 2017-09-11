@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QMutex
 
    DATA pointer
@@ -15,11 +14,13 @@ CLASS QMutex
    METHOD tryLock2
    METHOD tryLock
    METHOD unlock
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

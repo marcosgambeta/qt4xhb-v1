@@ -95,11 +95,13 @@ CLASS QUrl
    METHOD setIdnWhitelist
    METHOD toAce
    METHOD toPercentEncoding
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

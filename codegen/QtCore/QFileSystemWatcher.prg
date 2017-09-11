@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QFileSystemWatcher INHERIT QObject
 
    DATA self_destruction INIT .F.
@@ -17,8 +16,10 @@ CLASS QFileSystemWatcher INHERIT QObject
    METHOD files
    METHOD removePath
    METHOD removePaths
+
    METHOD onDirectoryChanged
    METHOD onFileChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

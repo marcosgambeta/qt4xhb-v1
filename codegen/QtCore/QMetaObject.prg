@@ -52,11 +52,13 @@ CLASS QMetaObject
    METHOD invokeMethod
    METHOD normalizedSignature
    METHOD normalizedType
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

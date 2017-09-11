@@ -29,8 +29,10 @@ CLASS QState INHERIT QAbstractState
    METHOD setErrorState
    METHOD setInitialState
    METHOD transitions
+
    METHOD onFinished
    METHOD onPropertiesAssigned
+
    DESTRUCTOR destroyObject
 
 END CLASS

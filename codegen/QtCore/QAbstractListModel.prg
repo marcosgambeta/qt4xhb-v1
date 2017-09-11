@@ -13,6 +13,7 @@ CLASS QAbstractListModel INHERIT QAbstractItemModel
    METHOD delete
    METHOD dropMimeData
    METHOD index
+
    DESTRUCTOR destroyObject
 
 END CLASS

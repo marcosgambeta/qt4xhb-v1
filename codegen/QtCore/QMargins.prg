@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QMargins
 
    DATA pointer
@@ -21,11 +20,13 @@ CLASS QMargins
    METHOD setRight
    METHOD setTop
    METHOD top
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

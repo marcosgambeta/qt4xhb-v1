@@ -48,11 +48,13 @@ CLASS QLineF
    METHOD translated
    METHOD unitVector
    METHOD fromPolar
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

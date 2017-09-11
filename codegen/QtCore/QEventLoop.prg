@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QEventLoop INHERIT QObject
 
    DATA self_destruction INIT .F.
@@ -17,6 +16,7 @@ CLASS QEventLoop INHERIT QObject
    METHOD processEvents
    METHOD wakeUp
    METHOD quit
+
    DESTRUCTOR destroyObject
 
 END CLASS

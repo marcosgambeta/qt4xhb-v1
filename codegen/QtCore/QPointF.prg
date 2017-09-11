@@ -23,11 +23,13 @@ CLASS QPointF
    METHOD toPoint
    METHOD x
    METHOD y
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

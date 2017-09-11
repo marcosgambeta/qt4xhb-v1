@@ -48,6 +48,7 @@ CLASS QAbstractItemModel INHERIT QObject
    METHOD supportedDropActions
    METHOD revert
    METHOD submit
+
    METHOD onColumnsAboutToBeInserted
    METHOD onColumnsAboutToBeMoved
    METHOD onColumnsAboutToBeRemoved
@@ -66,6 +67,7 @@ CLASS QAbstractItemModel INHERIT QObject
    METHOD onRowsInserted
    METHOD onRowsMoved
    METHOD onRowsRemoved
+
    DESTRUCTOR destroyObject
 
 END CLASS

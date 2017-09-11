@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QTimer INHERIT QObject
 
    DATA self_destruction INIT .F.
@@ -20,7 +19,9 @@ CLASS QTimer INHERIT QObject
    METHOD start
    METHOD stop
    METHOD singleShot
+
    METHOD onTimeout
+
    DESTRUCTOR destroyObject
 
 END CLASS

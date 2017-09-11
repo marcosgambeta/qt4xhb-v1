@@ -29,6 +29,7 @@ CLASS QBuffer INHERIT QIODevice
    METHOD pos
    METHOD seek
    METHOD size
+
    DESTRUCTOR destroyObject
 
 END CLASS

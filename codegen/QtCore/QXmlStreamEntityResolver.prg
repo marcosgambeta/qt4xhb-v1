@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QXmlStreamEntityResolver
 
    DATA pointer
@@ -10,11 +9,13 @@ CLASS QXmlStreamEntityResolver
 
    METHOD delete
    METHOD resolveUndeclaredEntity
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

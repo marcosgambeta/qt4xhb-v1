@@ -18,6 +18,7 @@ CLASS QEventTransition INHERIT QAbstractTransition
    METHOD eventType
    METHOD setEventSource
    METHOD setEventType
+
    DESTRUCTOR destroyObject
 
 END CLASS

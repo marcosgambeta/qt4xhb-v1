@@ -28,10 +28,12 @@ CLASS QAbstractAnimation INHERIT QObject
    METHOD setPaused
    METHOD start
    METHOD stop
+
    METHOD onCurrentLoopChanged
    METHOD onDirectionChanged
    METHOD onFinished
    METHOD onStateChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

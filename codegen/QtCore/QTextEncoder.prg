@@ -18,11 +18,13 @@ CLASS QTextEncoder
    METHOD fromUnicode1
    METHOD fromUnicode2
    METHOD fromUnicode
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

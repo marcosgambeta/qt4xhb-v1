@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QPoint
 
    DATA pointer
@@ -18,11 +17,13 @@ CLASS QPoint
    METHOD setY
    METHOD x
    METHOD y
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

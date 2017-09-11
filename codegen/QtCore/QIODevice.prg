@@ -48,10 +48,12 @@ CLASS QIODevice INHERIT QObject
    METHOD write2
    METHOD write3
    METHOD write
+
    METHOD onAboutToClose
    METHOD onBytesWritten
    METHOD onReadChannelFinished
    METHOD onReadyRead
+
    DESTRUCTOR destroyObject
 
 END CLASS

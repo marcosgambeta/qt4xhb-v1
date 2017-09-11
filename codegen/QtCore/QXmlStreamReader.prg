@@ -79,11 +79,13 @@ CLASS QXmlStreamReader
    METHOD text
    METHOD tokenString
    METHOD tokenType
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

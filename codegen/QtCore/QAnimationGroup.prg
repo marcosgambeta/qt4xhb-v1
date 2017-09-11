@@ -19,6 +19,7 @@ CLASS QAnimationGroup INHERIT QAbstractAnimation
    METHOD insertAnimation
    METHOD removeAnimation
    METHOD takeAnimation
+
    DESTRUCTOR destroyObject
 
 END CLASS

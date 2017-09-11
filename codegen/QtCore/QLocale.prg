@@ -105,11 +105,13 @@ CLASS QLocale
    METHOD scriptToString
    METHOD setDefault
    METHOD system
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

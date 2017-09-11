@@ -53,11 +53,13 @@ CLASS QDateTime
    METHOD fromString2
    METHOD fromString
    METHOD fromTime_t
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

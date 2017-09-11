@@ -18,11 +18,13 @@ CLASS QXmlStreamNamespaceDeclaration
    METHOD delete
    METHOD namespaceUri
    METHOD prefix
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

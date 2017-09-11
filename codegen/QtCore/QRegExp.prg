@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QRegExp
 
    DATA pointer
@@ -33,11 +32,13 @@ CLASS QRegExp
    METHOD setPattern
    METHOD setPatternSyntax
    METHOD escape
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

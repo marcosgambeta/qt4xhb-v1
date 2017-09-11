@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QSocketNotifier INHERIT QObject
 
    DATA self_destruction INIT .F.
@@ -13,7 +12,9 @@ CLASS QSocketNotifier INHERIT QObject
    METHOD type
    METHOD isEnabled
    METHOD setEnabled
+
    METHOD onActivated
+
    DESTRUCTOR destroyObject
 
 END CLASS

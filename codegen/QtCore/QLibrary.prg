@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QLibrary INHERIT QObject
 
    DATA self_destruction INIT .F.
@@ -30,6 +29,7 @@ CLASS QLibrary INHERIT QObject
    METHOD resolve4
    METHOD resolve
    METHOD isLibrary
+
    DESTRUCTOR destroyObject
 
 END CLASS

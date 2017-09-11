@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QTemporaryFile INHERIT QFile
 
    DATA self_destruction INIT .F.
@@ -19,6 +18,7 @@ CLASS QTemporaryFile INHERIT QFile
    METHOD setAutoRemove
    METHOD setFileTemplate
    METHOD fileName
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -58,7 +58,9 @@ CLASS QCoreApplication INHERIT QObject
    METHOD translate1
    METHOD translate2
    METHOD translate
+
    METHOD onAboutToQuit
+
    DESTRUCTOR destroyObject
 
 END CLASS

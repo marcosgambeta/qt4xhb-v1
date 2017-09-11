@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QTextDecoder
 
    DATA pointer
@@ -16,11 +15,13 @@ CLASS QTextDecoder
    METHOD toUnicode2
    METHOD toUnicode3
    METHOD toUnicode
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

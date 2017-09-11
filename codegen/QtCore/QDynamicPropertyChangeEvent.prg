@@ -13,6 +13,7 @@ CLASS QDynamicPropertyChangeEvent INHERIT QEvent
    METHOD new
    METHOD delete
    METHOD propertyName
+
    DESTRUCTOR destroyObject
 
 END CLASS

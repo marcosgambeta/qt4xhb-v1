@@ -19,6 +19,7 @@ CLASS QSignalTransition INHERIT QAbstractTransition
    METHOD setSenderObject
    METHOD signal
    METHOD setSignal
+
    DESTRUCTOR destroyObject
 
 END CLASS

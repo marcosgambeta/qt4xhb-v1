@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QParallelAnimationGroup INHERIT QAnimationGroup
 
    DATA self_destruction INIT .F.
@@ -10,6 +9,7 @@ CLASS QParallelAnimationGroup INHERIT QAnimationGroup
    METHOD new
    METHOD delete
    METHOD duration
+
    DESTRUCTOR destroyObject
 
 END CLASS

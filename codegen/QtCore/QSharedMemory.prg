@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QSharedMemory INHERIT QObject
 
    DATA self_destruction INIT .F.
@@ -25,6 +24,7 @@ CLASS QSharedMemory INHERIT QObject
    METHOD unlock
    METHOD error
    METHOD errorString
+
    DESTRUCTOR destroyObject
 
 END CLASS

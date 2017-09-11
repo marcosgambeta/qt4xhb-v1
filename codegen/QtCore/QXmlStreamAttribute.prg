@@ -23,11 +23,13 @@ CLASS QXmlStreamAttribute
    METHOD prefix
    METHOD qualifiedName
    METHOD value
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

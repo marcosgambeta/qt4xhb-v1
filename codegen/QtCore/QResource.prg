@@ -25,11 +25,13 @@ CLASS QResource
    METHOD size
    METHOD registerResource
    METHOD unregisterResource
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

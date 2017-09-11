@@ -25,6 +25,7 @@ CLASS QThreadPool INHERIT QObject
    METHOD waitForDone2
    METHOD waitForDone
    METHOD globalInstance
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -50,11 +50,13 @@ CLASS QChar
    METHOD toTitleCase
    METHOD toUpper
    METHOD unicodeVersion
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

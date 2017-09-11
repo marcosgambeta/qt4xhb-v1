@@ -55,11 +55,13 @@ CLASS QDate
    METHOD shortMonthName1
    METHOD shortMonthName2
    METHOD shortMonthName
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
