@@ -27,6 +27,7 @@ CLASS QAbstractXmlNodeModel INHERIT QSharedData
    METHOD sourceLocation
    METHOD stringValue
    METHOD typedValue
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -51,84 +52,32 @@ $deleteMethod
 /*
 virtual QUrl baseUri ( const QXmlNodeModelIndex & n ) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_BASEURI )
-{
-  QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QUrl * ptr = new QUrl( obj->baseUri ( *PQXMLNODEMODELINDEX(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
-  }
-}
-
+$virtualMethod=|QUrl|baseUri|const QXmlNodeModelIndex &
 
 /*
 virtual QXmlNodeModelIndex::DocumentOrder compareOrder ( const QXmlNodeModelIndex & ni1, const QXmlNodeModelIndex & ni2 ) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_COMPAREORDER )
-{
-  QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->compareOrder ( *PQXMLNODEMODELINDEX(1), *PQXMLNODEMODELINDEX(2) ) );
-  }
-}
-
+$virtualMethod=|QXmlNodeModelIndex::DocumentOrder|compareOrder|const QXmlNodeModelIndex &,const QXmlNodeModelIndex &
 
 /*
 virtual QUrl documentUri ( const QXmlNodeModelIndex & n ) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_DOCUMENTURI )
-{
-  QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QUrl * ptr = new QUrl( obj->documentUri ( *PQXMLNODEMODELINDEX(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
-  }
-}
-
+$virtualMethod=|QUrl|documentUri|const QXmlNodeModelIndex &
 
 /*
 virtual QXmlNodeModelIndex elementById ( const QXmlName & id ) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_ELEMENTBYID )
-{
-  QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QXmlNodeModelIndex * ptr = new QXmlNodeModelIndex( obj->elementById ( *PQXMLNAME(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QXMLNODEMODELINDEX", true );
-  }
-}
-
+$virtualMethod=|QXmlNodeModelIndex|elementById|const QXmlName &
 
 /*
 virtual QXmlNodeModelIndex::NodeKind kind ( const QXmlNodeModelIndex & ni ) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_KIND )
-{
-  QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->kind ( *PQXMLNODEMODELINDEX(1) ) );
-  }
-}
-
+$virtualMethod=|QXmlNodeModelIndex::NodeKind|kind|const QXmlNodeModelIndex &
 
 /*
 virtual QXmlName name ( const QXmlNodeModelIndex & ni ) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_NAME )
-{
-  QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QXmlName * ptr = new QXmlName( obj->name ( *PQXMLNODEMODELINDEX(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QXMLNAME", true );
-  }
-}
-
+$virtualMethod=|QXmlName|name|const QXmlNodeModelIndex &
 
 /*
 virtual QVector<QXmlName> namespaceBindings ( const QXmlNodeModelIndex & n ) const = 0
@@ -173,7 +122,6 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_NAMESPACEBINDINGS )
   }
 }
 
-
 /*
 virtual QVector<QXmlNodeModelIndex> nodesByIdref ( const QXmlName & idref ) const = 0
 */
@@ -217,33 +165,15 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_NODESBYIDREF )
   }
 }
 
-
 /*
 virtual QXmlNodeModelIndex root ( const QXmlNodeModelIndex & n ) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_ROOT )
-{
-  QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QXmlNodeModelIndex * ptr = new QXmlNodeModelIndex( obj->root ( *PQXMLNODEMODELINDEX(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QXMLNODEMODELINDEX", true );
-  }
-}
-
+$virtualMethod=|QXmlNodeModelIndex|root|const QXmlNodeModelIndex &
 
 /*
 QSourceLocation sourceLocation ( const QXmlNodeModelIndex & index ) const
 */
-HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_SOURCELOCATION )
-{
-  QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSourceLocation * ptr = new QSourceLocation( obj->sourceLocation ( *PQXMLNODEMODELINDEX(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QSOURCELOCATION", true );
-  }
-}
+$method=|QSourceLocation|sourceLocation|const QXmlNodeModelIndex &
 
 /*
 virtual QString stringValue ( const QXmlNodeModelIndex & n ) const = 0
@@ -253,18 +183,6 @@ $virtualMethod=|QString|stringValue|const QXmlNodeModelIndex &
 /*
 virtual QVariant typedValue ( const QXmlNodeModelIndex & node ) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_TYPEDVALUE )
-{
-  QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->typedValue ( *PQXMLNODEMODELINDEX(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
-
-
-
-
+$virtualMethod=|QVariant|typedValue|const QXmlNodeModelIndex &
 
 #pragma ENDDUMP

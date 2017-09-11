@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QXmlNamePool
 
    DATA pointer
@@ -12,11 +11,13 @@ CLASS QXmlNamePool
    METHOD new2
    METHOD new
    METHOD delete
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -34,22 +35,12 @@ $destructor
 /*
 QXmlNamePool ()
 */
-HB_FUNC_STATIC( QXMLNAMEPOOL_NEW1 )
-{
-  QXmlNamePool * o = new QXmlNamePool ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|
 
 /*
 QXmlNamePool ( const QXmlNamePool & other )
 */
-HB_FUNC_STATIC( QXMLNAMEPOOL_NEW2 )
-{
-  QXmlNamePool * o = new QXmlNamePool ( *PQXMLNAMEPOOL(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|const QXmlNamePool &
 
 //[1]QXmlNamePool ()
 //[2]QXmlNamePool ( const QXmlNamePool & other )

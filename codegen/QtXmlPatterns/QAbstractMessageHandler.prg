@@ -2,13 +2,13 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QAbstractMessageHandler INHERIT QObject
 
    DATA self_destruction INIT .F.
 
    METHOD delete
    METHOD message
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -28,21 +28,6 @@ $deleteMethod
 /*
 void message ( QtMsgType type, const QString & description, const QUrl & identifier = QUrl(), const QSourceLocation & sourceLocation = QSourceLocation() )
 */
-HB_FUNC_STATIC( QABSTRACTMESSAGEHANDLER_MESSAGE )
-{
-  QAbstractMessageHandler * obj = (QAbstractMessageHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    QUrl par3 = ISNIL(3)? QUrl() : *(QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QSourceLocation par4 = ISNIL(4)? QSourceLocation() : *(QSourceLocation *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->message ( (QtMsgType) par1, PQSTRING(2), par3, par4 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
-
+$method=|void|message|QtMsgType,const QString &,const QUrl &=QUrl(),const QSourceLocation &=QSourceLocation()
 
 #pragma ENDDUMP

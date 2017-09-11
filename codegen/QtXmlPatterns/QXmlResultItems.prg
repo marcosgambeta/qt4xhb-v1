@@ -16,11 +16,13 @@ CLASS QXmlResultItems
    METHOD current
    METHOD hasError
    METHOD next
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -40,53 +42,24 @@ $destructor
 /*
 QXmlResultItems ()
 */
-HB_FUNC_STATIC( QXMLRESULTITEMS_NEW )
-{
-  QXmlResultItems * o = new QXmlResultItems ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new|
 
 $deleteMethod
 
 /*
 QXmlItem current () const
 */
-HB_FUNC_STATIC( QXMLRESULTITEMS_CURRENT )
-{
-  QXmlResultItems * obj = (QXmlResultItems *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QXmlItem * ptr = new QXmlItem( obj->current () );
-    _qt4xhb_createReturnClass ( ptr, "QXMLITEM", true );
-  }
-}
-
+$method=|QXmlItem|current|
 
 /*
 bool hasError () const
 */
-HB_FUNC_STATIC( QXMLRESULTITEMS_HASERROR )
-{
-  QXmlResultItems * obj = (QXmlResultItems *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasError () );
-  }
-}
-
+$method=|bool|hasError|
 
 /*
 QXmlItem next ()
 */
-HB_FUNC_STATIC( QXMLRESULTITEMS_NEXT )
-{
-  QXmlResultItems * obj = (QXmlResultItems *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QXmlItem * ptr = new QXmlItem( obj->next () );
-    _qt4xhb_createReturnClass ( ptr, "QXMLITEM", true );
-  }
-}
+$method=|QXmlItem|next|
 
 $extraMethods
 

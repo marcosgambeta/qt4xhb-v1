@@ -21,11 +21,13 @@ CLASS QXmlName
    METHOD toClarkName
    METHOD fromClarkName
    METHOD isNCName
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -45,22 +47,12 @@ $destructor
 /*
 QXmlName ()
 */
-HB_FUNC_STATIC( QXMLNAME_NEW1 )
-{
-  QXmlName * o = new QXmlName ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|
 
 /*
 QXmlName ( QXmlNamePool & namePool, const QString & localName, const QString & namespaceURI = QString(), const QString & prefix = QString() )
 */
-HB_FUNC_STATIC( QXMLNAME_NEW2 )
-{
-  QXmlName * o = new QXmlName ( *PQXMLNAMEPOOL(1), PQSTRING(2), OPQSTRING(3,QString()), OPQSTRING(4,QString()) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|QXmlNamePool &,const QString &,const QString &=QString(),const QString &=QString()
 
 //[1]QXmlName ()
 //[2]QXmlName ( QXmlNamePool & namePool, const QString & localName, const QString & namespaceURI = QString(), const QString & prefix = QString() )
@@ -81,19 +73,10 @@ HB_FUNC_STATIC( QXMLNAME_NEW )
   }
 }
 
-
-
 /*
 bool isNull () const
 */
-HB_FUNC_STATIC( QXMLNAME_ISNULL )
-{
-  QXmlName * obj = (QXmlName *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
+$method=|bool|isNull|
 
 /*
 QString localName ( const QXmlNamePool & namePool ) const

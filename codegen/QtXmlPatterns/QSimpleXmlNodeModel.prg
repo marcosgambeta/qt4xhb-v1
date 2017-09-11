@@ -20,6 +20,7 @@ CLASS QSimpleXmlNodeModel INHERIT QAbstractXmlNodeModel
    METHOD namespaceBindings
    METHOD nodesByIdref
    METHOD stringValue
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -41,44 +42,17 @@ $deleteMethod
 /*
 QXmlNamePool & namePool () const
 */
-HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NAMEPOOL )
-{
-  QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QXmlNamePool * ptr = &obj->namePool ();
-    _qt4xhb_createReturnClass ( ptr, "QXMLNAMEPOOL" );
-  }
-}
-
+$method=|QXmlNamePool &|namePool|
 
 /*
 virtual QUrl baseUri ( const QXmlNodeModelIndex & node ) const
 */
-HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_BASEURI )
-{
-  QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QUrl * ptr = new QUrl( obj->baseUri ( *PQXMLNODEMODELINDEX(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
-  }
-}
-
+$virtualMethod=|QUrl|baseUri|const QXmlNodeModelIndex &
 
 /*
 virtual QXmlNodeModelIndex elementById ( const QXmlName & id ) const
 */
-HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_ELEMENTBYID )
-{
-  QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QXmlNodeModelIndex * ptr = new QXmlNodeModelIndex( obj->elementById ( *PQXMLNAME(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QXMLNODEMODELINDEX", true );
-  }
-}
-
+$virtualMethod=|QXmlNodeModelIndex|elementById|const QXmlName &
 
 /*
 virtual QVector<QXmlName> namespaceBindings ( const QXmlNodeModelIndex & node ) const
@@ -122,7 +96,6 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NAMESPACEBINDINGS )
     hb_itemReturnRelease(pArray);
   }
 }
-
 
 /*
 virtual QVector<QXmlNodeModelIndex> nodesByIdref ( const QXmlName & idref ) const
