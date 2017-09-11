@@ -53,8 +53,15 @@ QAxBindable ()
 */
 HB_FUNC_STATIC( QAXBINDABLE_NEW )
 {
-  QAxBindable * o = new QAxBindable ();
-  _qt4xhb_storePointerAndFlag ( o, false );
+  if( ISNUMPAR(0) )
+  {
+    QAxBindable * o = new QAxBindable ();
+    _qt4xhb_storePointerAndFlag( o, false );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QAXBINDABLE_DELETE )
@@ -83,8 +90,15 @@ HB_FUNC_STATIC( QAXBINDABLE_CREATEAGGREGATE )
 
   if( obj )
   {
-    QAxAggregated * ptr = obj->createAggregate ();
-    _qt4xhb_createReturnClass ( ptr, "QAXAGGREGATED" );
+    if( ISNUMPAR(0) )
+    {
+      QAxAggregated * ptr = obj->createAggregate ();
+      _qt4xhb_createReturnClass ( ptr, "QAXAGGREGATED", false );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -97,7 +111,7 @@ HB_FUNC_STATIC( QAXBINDABLE_READDATA )
 
   if( obj )
   {
-    if( ISQIODEVICE(1) && ISCHAR(2) )
+    if( ISNUMPAR(2) && ISQIODEVICE(1) && ISCHAR(2) )
     {
       RBOOL( obj->readData ( PQIODEVICE(1), PQSTRING(2) ) );
     }
@@ -117,7 +131,7 @@ HB_FUNC_STATIC( QAXBINDABLE_REPORTERROR )
 
   if( obj )
   {
-    if( ISNUM(1) && ISCHAR(2) && ISCHAR(3) && (ISCHAR(4)||ISNIL(4)) )
+    if( ISNUMPAR(4) && ISNUM(1) && ISCHAR(2) && ISCHAR(3) && ISOPTCHAR(4) )
     {
       obj->reportError ( PINT(1), PQSTRING(2), PQSTRING(3), OPQSTRING(4,QString()) );
     }
@@ -139,7 +153,7 @@ HB_FUNC_STATIC( QAXBINDABLE_WRITEDATA )
 
   if( obj )
   {
-    if( ISQIODEVICE(1) )
+    if( ISNUMPAR(1) && ISQIODEVICE(1) )
     {
       RBOOL( obj->writeData ( PQIODEVICE(1) ) );
     }

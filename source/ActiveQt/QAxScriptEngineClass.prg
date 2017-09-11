@@ -47,7 +47,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_NEW )
   if( ISNUMPAR(2) && ISCHAR(1) && ISQAXSCRIPT(2) )
   {
     QAxScriptEngine * o = new QAxScriptEngine ( PQSTRING(1), PQAXSCRIPT(2) );
-    _qt4xhb_storePointerAndFlag ( o, false );
+    _qt4xhb_storePointerAndFlag( o, false );
   }
   else
   {
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_ADDITEM )
 
   if( obj )
   {
-    if( ISCHAR(1) )
+    if( ISNUMPAR(1) && ISCHAR(1) )
     {
       obj->addItem ( PQSTRING(1) );
     }
@@ -103,7 +103,14 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_HASINTROSPECTION )
 
   if( obj )
   {
-    RBOOL( obj->hasIntrospection () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->hasIntrospection () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -116,7 +123,14 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_ISVALID )
 
   if( obj )
   {
-    RBOOL( obj->isValid () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isValid () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -129,7 +143,14 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_SCRIPTLANGUAGE )
 
   if( obj )
   {
-    RQSTRING( obj->scriptLanguage () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->scriptLanguage () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -142,7 +163,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_SETSTATE )
 
   if( obj )
   {
-    if( ISNUM(1) )
+    if( ISNUMPAR(1) && ISNUM(1) )
     {
       obj->setState ( (QAxScriptEngine::State) hb_parni(1) );
     }
@@ -164,7 +185,14 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_STATE )
 
   if( obj )
   {
-    hb_retni( (int) obj->state () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->state () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
