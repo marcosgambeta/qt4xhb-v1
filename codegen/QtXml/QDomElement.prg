@@ -12,8 +12,6 @@ CLASS QDomElement INHERIT QDomNode
 
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD attribute
    METHOD attributeNS
@@ -66,12 +64,12 @@ $destructor
 /*
 QDomElement ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QDomElement ( const QDomElement & x )
 */
-$constructor=|new2|const QDomElement &
+$internalConstructor=|new2|const QDomElement &
 
 //[1]QDomElement ()
 //[2]QDomElement ( const QDomElement & x )
@@ -80,11 +78,11 @@ HB_FUNC_STATIC( QDOMELEMENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDOMELEMENT_NEW1 );
+    QDomElement_new1();
   }
   else if( ISNUMPAR(1) && ISQDOMELEMENT(1) )
   {
-    HB_FUNC_EXEC( QDOMELEMENT_NEW2 );
+    QDomElement_new2();
   }
   else
   {
@@ -211,6 +209,10 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE )
   {
     HB_FUNC_EXEC( QDOMELEMENT_SETATTRIBUTE2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -259,6 +261,10 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS )
   else if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISNUM(3) )
   {
     HB_FUNC_EXEC( QDOMELEMENT_SETATTRIBUTENS2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 

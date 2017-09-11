@@ -6,8 +6,6 @@ CLASS QDomCDATASection INHERIT QDomText
 
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD nodeType
 
@@ -28,12 +26,12 @@ $destructor
 /*
 QDomCDATASection ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QDomCDATASection ( const QDomCDATASection & x )
 */
-$constructor=|new2|const QDomCDATASection &
+$internalConstructor=|new2|const QDomCDATASection &
 
 //[1]QDomCDATASection ()
 //[2]QDomCDATASection ( const QDomCDATASection & x )
@@ -42,11 +40,11 @@ HB_FUNC_STATIC( QDOMCDATASECTION_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDOMCDATASECTION_NEW1 );
+    QDomCDATASection_new1();
   }
   else if( ISNUMPAR(1) && ISQDOMCDATASECTION(1) )
   {
-    HB_FUNC_EXEC( QDOMCDATASECTION_NEW2 );
+    QDomCDATASection_new2();
   }
   else
   {

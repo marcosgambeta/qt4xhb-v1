@@ -26,8 +26,6 @@ CLASS QDomNode
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD appendChild
@@ -118,12 +116,12 @@ $destructor
 /*
 QDomNode ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QDomNode ( const QDomNode & n )
 */
-$constructor=|new2|const QDomNode &
+$internalConstructor=|new2|const QDomNode &
 
 //[1]QDomNode ()
 //[2]QDomNode ( const QDomNode & n )
@@ -132,11 +130,11 @@ HB_FUNC_STATIC( QDOMNODE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDOMNODE_NEW1 );
+    QDomNode_new1();
   }
   else if( ISNUMPAR(1) && ISQDOMNODE(1) )
   {
-    HB_FUNC_EXEC( QDOMNODE_NEW2 );
+    QDomNode_new2();
   }
   else
   {
@@ -398,6 +396,10 @@ HB_FUNC_STATIC( QDOMNODE_SAVE )
   else if( ISNUMPAR(3) && ISCHAR(1) && ISNUM(2) && ISNUM(3) )
   {
     HB_FUNC_EXEC( QDOMNODE_SAVE2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 

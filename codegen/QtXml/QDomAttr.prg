@@ -10,8 +10,6 @@ CLASS QDomAttr INHERIT QDomNode
 
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD name
    METHOD nodeType
@@ -37,12 +35,12 @@ $destructor
 /*
 QDomAttr ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QDomAttr ( const QDomAttr & x )
 */
-$constructor=|new2|const QDomAttr &
+$internalConstructor=|new2|const QDomAttr &
 
 //[1]QDomAttr ()
 //[2]QDomAttr ( const QDomAttr & x )
@@ -51,11 +49,11 @@ HB_FUNC_STATIC( QDOMATTR_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDOMATTR_NEW1 );
+    QDomAttr_new1();
   }
   else if( ISNUMPAR(1) && ISQDOMATTR(1) )
   {
-    HB_FUNC_EXEC( QDOMATTR_NEW2 );
+    QDomAttr_new2();
   }
   else
   {

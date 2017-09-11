@@ -6,8 +6,6 @@ CLASS QDomComment INHERIT QDomCharacterData
 
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD nodeType
 
@@ -28,12 +26,12 @@ $destructor
 /*
 QDomComment ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QDomComment ( const QDomComment & x )
 */
-$constructor=|new2|const QDomComment &
+$internalConstructor=|new2|const QDomComment &
 
 //[1]QDomComment ()
 //[2]QDomComment ( const QDomComment & x )
@@ -42,11 +40,11 @@ HB_FUNC_STATIC( QDOMCOMMENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDOMCOMMENT_NEW1 );
+    QDomComment_new1();
   }
   else if( ISNUMPAR(1) && ISQDOMCOMMENT(1) )
   {
-    HB_FUNC_EXEC( QDOMCOMMENT_NEW2 );
+    QDomComment_new2();
   }
   else
   {

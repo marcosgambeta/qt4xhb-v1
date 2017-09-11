@@ -10,8 +10,6 @@ CLASS QDomDocumentType INHERIT QDomNode
 
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD entities
    METHOD internalSubset
@@ -38,12 +36,12 @@ $destructor
 /*
 QDomDocumentType ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QDomDocumentType ( const QDomDocumentType & n )
 */
-$constructor=|new2|const QDomDocumentType &
+$internalConstructor=|new2|const QDomDocumentType &
 
 //[1]QDomDocumentType ()
 //[2]QDomDocumentType ( const QDomDocumentType & n )
@@ -52,11 +50,11 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDOMDOCUMENTTYPE_NEW1 );
+    QDomDocumentType_new1();
   }
   else if( ISNUMPAR(1) && ISQDOMDOCUMENTTYPE(1) )
   {
-    HB_FUNC_EXEC( QDOMDOCUMENTTYPE_NEW2 );
+    QDomDocumentType_new2();
   }
   else
   {

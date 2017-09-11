@@ -12,8 +12,6 @@ CLASS QDomImplementation
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD createDocument
@@ -46,12 +44,12 @@ $destructor
 /*
 QDomImplementation ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QDomImplementation ( const QDomImplementation & x )
 */
-$constructor=|new2|const QDomImplementation &
+$internalConstructor=|new2|const QDomImplementation &
 
 //[1]QDomImplementation ()
 //[2]QDomImplementation ( const QDomImplementation & x )
@@ -60,11 +58,11 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDOMIMPLEMENTATION_NEW1 );
+    QDomImplementation_new1();
   }
   else if( ISNUMPAR(1) && ISQDOMIMPLEMENTATION(1) )
   {
-    HB_FUNC_EXEC( QDOMIMPLEMENTATION_NEW2 );
+    QDomImplementation_new2();
   }
   else
   {

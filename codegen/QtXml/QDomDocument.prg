@@ -22,10 +22,6 @@ CLASS QDomDocument INHERIT QDomNode
 
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
    METHOD new
    METHOD delete
    METHOD createAttribute
@@ -75,22 +71,22 @@ $destructor
 /*
 QDomDocument ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QDomDocument ( const QString & name )
 */
-$constructor=|new2|const QString &
+$internalConstructor=|new2|const QString &
 
 /*
 QDomDocument ( const QDomDocumentType & doctype )
 */
-$constructor=|new3|const QDomDocumentType &
+$internalConstructor=|new3|const QDomDocumentType &
 
 /*
 QDomDocument ( const QDomDocument & x )
 */
-$constructor=|new4|const QDomDocument &
+$internalConstructor=|new4|const QDomDocument &
 
 //[1]QDomDocument ()
 //[2]QDomDocument ( const QString & name )
@@ -101,19 +97,19 @@ HB_FUNC_STATIC( QDOMDOCUMENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDOMDOCUMENT_NEW1 );
+    QDomDocument_new1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QDOMDOCUMENT_NEW2 );
+    QDomDocument_new2();
   }
   else if( ISNUMPAR(1) && ISQDOMDOCUMENTTYPE(1) )
   {
-    HB_FUNC_EXEC( QDOMDOCUMENT_NEW3 );
+    QDomDocument_new3();
   }
   else if( ISNUMPAR(1) && ISQDOMDOCUMENT(1) )
   {
-    HB_FUNC_EXEC( QDOMDOCUMENT_NEW4 );
+    QDomDocument_new4();
   }
   else
   {

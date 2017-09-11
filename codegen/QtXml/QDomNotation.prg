@@ -6,8 +6,6 @@ CLASS QDomNotation INHERIT QDomNode
 
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD nodeType
    METHOD publicId
@@ -30,12 +28,12 @@ $destructor
 /*
 QDomNotation ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QDomNotation ( const QDomNotation & x )
 */
-$constructor=|new2|const QDomNotation &
+$internalConstructor=|new2|const QDomNotation &
 
 //[1]QDomNotation ()
 //[2]QDomNotation ( const QDomNotation & x )
@@ -44,11 +42,11 @@ HB_FUNC_STATIC( QDOMNOTATION_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDOMNOTATION_NEW1 );
+    QDomNotation_new1();
   }
   else if( ISNUMPAR(1) && ISQDOMNOTATION(1) )
   {
-    HB_FUNC_EXEC( QDOMNOTATION_NEW2 );
+    QDomNotation_new2();
   }
   else
   {

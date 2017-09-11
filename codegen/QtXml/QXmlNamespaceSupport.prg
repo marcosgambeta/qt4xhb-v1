@@ -11,8 +11,6 @@ CLASS QXmlNamespaceSupport
    METHOD delete
    METHOD popContext
    METHOD prefix
-   METHOD prefixes1
-   METHOD prefixes2
    METHOD prefixes
    //METHOD processName
    METHOD pushContext
@@ -61,12 +59,12 @@ $method=|QString|prefix|const QString &
 /*
 QStringList prefixes () const
 */
-$method=|QStringList|prefixes,prefixes1|
+$internalMethod=|QStringList|prefixes,prefixes1|
 
 /*
 QStringList prefixes ( const QString & uri ) const
 */
-$method=|QStringList|prefixes,prefixes2|const QString &
+$internalMethod=|QStringList|prefixes,prefixes2|const QString &
 
 //[1]QStringList prefixes () const
 //[2]QStringList prefixes ( const QString & uri ) const
@@ -75,11 +73,15 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIXES )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QXMLNAMESPACESUPPORT_PREFIXES1 );
+    QXmlNamespaceSupport_prefixes1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QXMLNAMESPACESUPPORT_PREFIXES2 );
+    QXmlNamespaceSupport_prefixes2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
