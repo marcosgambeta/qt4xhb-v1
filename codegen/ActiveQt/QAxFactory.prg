@@ -79,15 +79,7 @@ $virtualMethod=|QString|exposeToSuperClass|const QString &
 /*
 virtual QStringList featureList () const = 0
 */
-HB_FUNC_STATIC( QAXFACTORY_FEATURELIST )
-{
-  QAxFactory * obj = (QAxFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    RQSTRINGLIST( obj->featureList () );
-  }
-}
+$virtualMethod=|QStringList|featureList|
 
 /*
 virtual bool hasStockEvents ( const QString & key ) const
@@ -107,23 +99,7 @@ $virtualMethod=|bool|isService|
 /*
 virtual const QMetaObject * metaObject ( const QString & key ) const = 0
 */
-HB_FUNC_STATIC( QAXFACTORY_METAOBJECT )
-{
-  QAxFactory * obj = (QAxFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( ISCHAR(1) )
-    {
-      const QMetaObject * ptr = obj->metaObject ( PQSTRING(1) );
-      _qt4xhb_createReturnClass ( ptr, "QMETAOBJECT" );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$virtualMethod=|const QMetaObject *|metaObject|const QString &
 
 /*
 virtual void registerClass ( const QString & key, QSettings * settings ) const

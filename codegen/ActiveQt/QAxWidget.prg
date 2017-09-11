@@ -52,36 +52,22 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
+#include <QAxObject>
+
 /*
 QAxWidget ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
-void QAxWidget_new1 ()
-{
-  int par2 = ISNIL(2)? 0 : hb_parni(2);
-  QAxWidget * o = new QAxWidget ( OPQWIDGET(1,0), (Qt::WindowFlags) par2 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$internalConstructor=|new1|QWidget *=0,Qt::WindowFlags=0
 
 /*
 QAxWidget ( const QString & c, QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
-void QAxWidget_new2 ()
-{
-  int par3 = ISNIL(3)? 0 : hb_parni(3);
-  QAxWidget * o = new QAxWidget ( PQSTRING(1), OPQWIDGET(2,0), (Qt::WindowFlags) par3 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$internalConstructor=|new2|const QString &,QWidget *=0,Qt::WindowFlags=0
 
 /*
 QAxWidget ( IUnknown * iface, QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
-void QAxWidget_new3 ()
-{
-  IUnknown * par1 = (IUnknown *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  int par3 = ISNIL(3)? 0 : hb_parni(3);
-  QAxWidget * o = new QAxWidget ( par1, OPQWIDGET(2,0), (Qt::WindowFlags) par3 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$internalConstructor=|new3|IUnknown *,QWidget *=0,Qt::WindowFlags=0
 
 //[1]QAxWidget ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 //[2]QAxWidget ( const QString & c, QWidget * parent = 0, Qt::WindowFlags f = 0 )
@@ -114,16 +100,7 @@ $deleteMethod
 /*
 virtual QAxAggregated * createAggregate ()
 */
-HB_FUNC_STATIC( QAXWIDGET_CREATEAGGREGATE )
-{
-  QAxWidget * obj = (QAxWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QAxAggregated * ptr = obj->createAggregate ();
-    _qt4xhb_createReturnClass ( ptr, "QAXAGGREGATED" );
-  }
-}
+$virtualMethod=|QAxAggregated *|createAggregate|
 
 /*
 bool doVerb ( const QString & verb )
@@ -133,45 +110,17 @@ $method=|bool|doVerb|const QString &
 /*
 virtual void clear ()
 */
-HB_FUNC_STATIC( QAXWIDGET_CLEAR )
-{
-  QAxWidget * obj = (QAxWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    obj->clear ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|clear|
 
 /*
 virtual QSize minimumSizeHint () const
 */
-HB_FUNC_STATIC( QAXWIDGET_MINIMUMSIZEHINT )
-{
-  QAxWidget * obj = (QAxWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->minimumSizeHint () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$virtualMethod=|QSize|minimumSizeHint|
 
 /*
 virtual QSize sizeHint () const
 */
-HB_FUNC_STATIC( QAXWIDGET_SIZEHINT )
-{
-  QAxWidget * obj = (QAxWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->sizeHint () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
+$virtualMethod=|QSize|sizeHint|
 
 // métodos da classe QAxBase, colocados aqui por causa
 // de problemas com herança no [x]Harbour
@@ -179,16 +128,7 @@ HB_FUNC_STATIC( QAXWIDGET_SIZEHINT )
 /*
 QVariant asVariant () const
 */
-HB_FUNC_STATIC( QAXWIDGET_ASVARIANT )
-{
-  QAxWidget * obj = (QAxWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->asVariant () );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
+$method=|QVariant|asVariant|
 
 /*
 QString control () const
@@ -198,68 +138,22 @@ $method=|QString|control|
 /*
 void disableClassInfo ()
 */
-HB_FUNC_STATIC( QAXWIDGET_DISABLECLASSINFO )
-{
-  QAxWidget * obj = (QAxWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    obj->disableClassInfo ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|disableClassInfo|
 
 /*
 void disableEventSink ()
 */
-HB_FUNC_STATIC( QAXWIDGET_DISABLEEVENTSINK )
-{
-  QAxWidget * obj = (QAxWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    obj->disableEventSink ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|disableEventSink|
 
 /*
 void disableMetaObject ()
 */
-HB_FUNC_STATIC( QAXWIDGET_DISABLEMETAOBJECT )
-{
-  QAxWidget * obj = (QAxWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    obj->disableMetaObject ();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|disableMetaObject|
 
 /*
 QVariant dynamicCall ( const char * function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
 */
-void QAxWidget_dynamicCall1 ()
-{
-  QAxWidget * obj = (QAxWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QVariant par3 = ISNIL(3)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QVariant par4 = ISNIL(4)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QVariant par5 = ISNIL(5)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(5, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QVariant par6 = ISNIL(6)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(6, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QVariant par7 = ISNIL(7)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(7, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QVariant par8 = ISNIL(8)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(8, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QVariant par9 = ISNIL(9)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(9, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QVariant * ptr = new QVariant( obj->dynamicCall ( (const char *) hb_parc(1), par2, par3, par4, par5, par6, par7, par8, par9 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
+$internalMethod=|QVariant|dynamicCall,dynamicCall1|const char *,const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant()
 
 /*
 QVariant dynamicCall ( const char * function, QList<QVariant> & vars )
@@ -319,24 +213,7 @@ $virtualMethod=|bool|propertyWritable|const char *
 /*
 QAxObject * querySubObject ( const char * name, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
 */
-void QAxWidget_querySubObject1 ()
-{
-  QAxWidget * obj = (QAxWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QVariant par3 = ISNIL(3)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QVariant par4 = ISNIL(4)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QVariant par5 = ISNIL(5)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(5, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QVariant par6 = ISNIL(6)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(6, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QVariant par7 = ISNIL(7)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(7, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QVariant par8 = ISNIL(8)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(8, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QVariant par9 = ISNIL(9)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(9, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QAxObject * ptr = obj->querySubObject ( (const char *) hb_parc(1), par2, par3, par4, par5, par6, par7, par8, par9 );
-    _qt4xhb_createReturnClass ( ptr, "QAXOBJECT" );
-  }
-}
+$internalMethod=|QAxObject *|querySubObject,querySubObject1|const char *,const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant()
 
 /*
 QAxObject * querySubObject ( const char * name, QList<QVariant> & vars )
@@ -392,14 +269,6 @@ $virtualMethod=|void|setPropertyWritable|const char *,bool
 /*
 QStringList verbs () const
 */
-HB_FUNC_STATIC( QAXWIDGET_VERBS )
-{
-  QAxWidget * obj = (QAxWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    RQSTRINGLIST( obj->verbs () );
-  }
-}
+$method=|QStringList|verbs|
 
 #pragma ENDDUMP

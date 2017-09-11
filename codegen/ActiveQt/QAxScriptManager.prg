@@ -43,51 +43,19 @@ $destructor
 /*
 QAxScriptManager ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QAXSCRIPTMANAGER_NEW )
-{
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
-  {
-    QAxScriptManager * o = new QAxScriptManager ( OPQOBJECT(1,0) );
-    _qt4xhb_storePointerAndFlag ( o, false );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
 /*
 void addObject ( QAxBase * object )
 */
-void QAxScriptManager_addObject1 ()
-{
-  QAxScriptManager * obj = (QAxScriptManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QAxBase * par1 = (QAxBase *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->addObject ( par1 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|addObject,addObject1|QAxBase *
 
 /*
 void addObject ( QObject * object )
 */
-void QAxScriptManager_addObject2 ()
-{
-  QAxScriptManager * obj = (QAxScriptManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    obj->addObject ( PQOBJECT(1) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$internalMethod=|void|addObject,addObject2|QObject *
 
 //[1]void addObject ( QAxBase * object )
 //[2]void addObject ( QObject * object )
@@ -111,25 +79,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_ADDOBJECT )
 /*
 QVariant call ( const QString & function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
 */
-void QAxScriptManager_call1 ()
-{
-  QAxScriptManager * obj = (QAxScriptManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QVariant par3 = ISNIL(3)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QVariant par4 = ISNIL(4)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QVariant par5 = ISNIL(5)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(5, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QVariant par6 = ISNIL(6)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(6, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QVariant par7 = ISNIL(7)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(7, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QVariant par8 = ISNIL(8)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(8, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QVariant par9 = ISNIL(9)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(9, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QVariant * ptr = new QVariant( obj->call ( PQSTRING(1), par2, par3, par4, par5, par6, par7, par8, par9 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
-
+$internalMethod=|QVariant|call,call1|const QString &,const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant()
 
 /*
 QVariant call ( const QString & function, QList<QVariant> & arguments )
@@ -175,50 +125,17 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_CALL )
 /*
 QStringList functions ( QAxScript::FunctionFlags flags = QAxScript::FunctionNames ) const
 */
-HB_FUNC_STATIC( QAXSCRIPTMANAGER_FUNCTIONS )
-{
-  QAxScriptManager * obj = (QAxScriptManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    if( (ISNUM(1)||ISNIL(1)) )
-    {
-      RQSTRINGLIST( obj->functions ( ISNIL(1)? QAxScript::FunctionNames : (QAxScript::FunctionFlags) hb_parni(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
+$method=|QStringList|functions|QAxScript::FunctionFlags=QAxScript::FunctionNames
 
 /*
 QAxScript * load ( const QString & code, const QString & name, const QString & language )
 */
-void QAxScriptManager_load1 ()
-{
-  QAxScriptManager * obj = (QAxScriptManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QAxScript * ptr = obj->load ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
-    _qt4xhb_createReturnClass ( ptr, "QAXSCRIPT" );
-  }
-}
+$internalMethod=|QAxScript *|load,load1|const QString &,const QString &,const QString &
 
 /*
 QAxScript * load ( const QString & file, const QString & name )
 */
-void QAxScriptManager_load2 ()
-{
-  QAxScriptManager * obj = (QAxScriptManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QAxScript * ptr = obj->load ( PQSTRING(1), PQSTRING(2) );
-    _qt4xhb_createReturnClass ( ptr, "QAXSCRIPT" );
-  }
-}
+$internalMethod=|QAxScript *|load,load2|const QString &,const QString &
 
 //[1]QAxScript * load ( const QString & code, const QString & name, const QString & language )
 //[2]QAxScript * load ( const QString & file, const QString & name )
@@ -247,15 +164,7 @@ $method=|QAxScript *|script|const QString &
 /*
 QStringList scriptNames () const
 */
-HB_FUNC_STATIC( QAXSCRIPTMANAGER_SCRIPTNAMES )
-{
-  QAxScriptManager * obj = (QAxScriptManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    RQSTRINGLIST( obj->scriptNames () );
-  }
-}
+$method=|QStringList|scriptNames|
 
 /*
 static bool registerEngine ( const QString & name, const QString & extension, const QString & code = QString() )
