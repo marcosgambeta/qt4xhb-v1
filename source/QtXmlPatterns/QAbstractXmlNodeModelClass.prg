@@ -33,6 +33,7 @@ CLASS QAbstractXmlNodeModel INHERIT QSharedData
    METHOD sourceLocation
    METHOD stringValue
    METHOD typedValue
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -79,10 +80,18 @@ virtual QUrl baseUri ( const QXmlNodeModelIndex & n ) const = 0
 HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_BASEURI )
 {
   QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->baseUri ( *PQXMLNODEMODELINDEX(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    if( ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1) )
+    {
+      QUrl * ptr = new QUrl( obj->baseUri ( *PQXMLNODEMODELINDEX(1) ) );
+      _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -92,9 +101,17 @@ virtual QXmlNodeModelIndex::DocumentOrder compareOrder ( const QXmlNodeModelInde
 HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_COMPAREORDER )
 {
   QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    hb_retni( (int) obj->compareOrder ( *PQXMLNODEMODELINDEX(1), *PQXMLNODEMODELINDEX(2) ) );
+    if( ISNUMPAR(2) && ISQXMLNODEMODELINDEX(1) && ISQXMLNODEMODELINDEX(2) )
+    {
+      RENUM( obj->compareOrder ( *PQXMLNODEMODELINDEX(1), *PQXMLNODEMODELINDEX(2) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -104,10 +121,18 @@ virtual QUrl documentUri ( const QXmlNodeModelIndex & n ) const = 0
 HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_DOCUMENTURI )
 {
   QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->documentUri ( *PQXMLNODEMODELINDEX(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    if( ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1) )
+    {
+      QUrl * ptr = new QUrl( obj->documentUri ( *PQXMLNODEMODELINDEX(1) ) );
+      _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -117,10 +142,18 @@ virtual QXmlNodeModelIndex elementById ( const QXmlName & id ) const = 0
 HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_ELEMENTBYID )
 {
   QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QXmlNodeModelIndex * ptr = new QXmlNodeModelIndex( obj->elementById ( *PQXMLNAME(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QXMLNODEMODELINDEX", true );
+    if( ISNUMPAR(1) && ISQXMLNAME(1) )
+    {
+      QXmlNodeModelIndex * ptr = new QXmlNodeModelIndex( obj->elementById ( *PQXMLNAME(1) ) );
+      _qt4xhb_createReturnClass ( ptr, "QXMLNODEMODELINDEX", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -130,9 +163,17 @@ virtual QXmlNodeModelIndex::NodeKind kind ( const QXmlNodeModelIndex & ni ) cons
 HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_KIND )
 {
   QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    hb_retni( (int) obj->kind ( *PQXMLNODEMODELINDEX(1) ) );
+    if( ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1) )
+    {
+      RENUM( obj->kind ( *PQXMLNODEMODELINDEX(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -142,10 +183,18 @@ virtual QXmlName name ( const QXmlNodeModelIndex & ni ) const = 0
 HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_NAME )
 {
   QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QXmlName * ptr = new QXmlName( obj->name ( *PQXMLNODEMODELINDEX(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QXMLNAME", true );
+    if( ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1) )
+    {
+      QXmlName * ptr = new QXmlName( obj->name ( *PQXMLNODEMODELINDEX(1) ) );
+      _qt4xhb_createReturnClass ( ptr, "QXMLNAME", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -241,10 +290,18 @@ virtual QXmlNodeModelIndex root ( const QXmlNodeModelIndex & n ) const = 0
 HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_ROOT )
 {
   QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QXmlNodeModelIndex * ptr = new QXmlNodeModelIndex( obj->root ( *PQXMLNODEMODELINDEX(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QXMLNODEMODELINDEX", true );
+    if( ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1) )
+    {
+      QXmlNodeModelIndex * ptr = new QXmlNodeModelIndex( obj->root ( *PQXMLNODEMODELINDEX(1) ) );
+      _qt4xhb_createReturnClass ( ptr, "QXMLNODEMODELINDEX", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -254,10 +311,18 @@ QSourceLocation sourceLocation ( const QXmlNodeModelIndex & index ) const
 HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_SOURCELOCATION )
 {
   QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QSourceLocation * ptr = new QSourceLocation( obj->sourceLocation ( *PQXMLNODEMODELINDEX(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QSOURCELOCATION", true );
+    if( ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1) )
+    {
+      QSourceLocation * ptr = new QSourceLocation( obj->sourceLocation ( *PQXMLNODEMODELINDEX(1) ) );
+      _qt4xhb_createReturnClass ( ptr, "QSOURCELOCATION", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -267,9 +332,17 @@ virtual QString stringValue ( const QXmlNodeModelIndex & n ) const = 0
 HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_STRINGVALUE )
 {
   QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->stringValue ( *PQXMLNODEMODELINDEX(1) ) );
+    if( ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1) )
+    {
+      RQSTRING( obj->stringValue ( *PQXMLNODEMODELINDEX(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -279,10 +352,18 @@ virtual QVariant typedValue ( const QXmlNodeModelIndex & node ) const = 0
 HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_TYPEDVALUE )
 {
   QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->typedValue ( *PQXMLNODEMODELINDEX(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    if( ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1) )
+    {
+      QVariant * ptr = new QVariant( obj->typedValue ( *PQXMLNODEMODELINDEX(1) ) );
+      _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

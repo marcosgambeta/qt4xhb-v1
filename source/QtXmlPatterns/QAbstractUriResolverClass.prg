@@ -18,6 +18,7 @@ CLASS QAbstractUriResolver INHERIT QObject
 
    METHOD delete
    METHOD resolve
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -61,10 +62,18 @@ virtual QUrl resolve ( const QUrl & relative, const QUrl & baseURI ) const = 0
 HB_FUNC_STATIC( QABSTRACTURIRESOLVER_RESOLVE )
 {
   QAbstractUriResolver * obj = (QAbstractUriResolver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->resolve ( *PQURL(1), *PQURL(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    if( ISNUMPAR(2) && ISQURL(1) && ISQURL(2) )
+    {
+      QUrl * ptr = new QUrl( obj->resolve ( *PQURL(1), *PQURL(2) ) );
+      _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

@@ -27,11 +27,13 @@ CLASS QXmlName
    METHOD toClarkName
    METHOD fromClarkName
    METHOD isNCName
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -58,7 +60,7 @@ QXmlName ()
 HB_FUNC_STATIC( QXMLNAME_NEW1 )
 {
   QXmlName * o = new QXmlName ();
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -67,7 +69,7 @@ QXmlName ( QXmlNamePool & namePool, const QString & localName, const QString & n
 HB_FUNC_STATIC( QXMLNAME_NEW2 )
 {
   QXmlName * o = new QXmlName ( *PQXMLNAMEPOOL(1), PQSTRING(2), OPQSTRING(3,QString()), OPQSTRING(4,QString()) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 //[1]QXmlName ()
@@ -95,9 +97,17 @@ bool isNull () const
 HB_FUNC_STATIC( QXMLNAME_ISNULL )
 {
   QXmlName * obj = (QXmlName *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isNull () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isNull () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -107,9 +117,17 @@ QString localName ( const QXmlNamePool & namePool ) const
 HB_FUNC_STATIC( QXMLNAME_LOCALNAME )
 {
   QXmlName * obj = (QXmlName *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->localName ( *PQXMLNAMEPOOL(1) ) );
+    if( ISNUMPAR(1) && ISQXMLNAMEPOOL(1) )
+    {
+      RQSTRING( obj->localName ( *PQXMLNAMEPOOL(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -119,9 +137,17 @@ QString namespaceUri ( const QXmlNamePool & namePool ) const
 HB_FUNC_STATIC( QXMLNAME_NAMESPACEURI )
 {
   QXmlName * obj = (QXmlName *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->namespaceUri ( *PQXMLNAMEPOOL(1) ) );
+    if( ISNUMPAR(1) && ISQXMLNAMEPOOL(1) )
+    {
+      RQSTRING( obj->namespaceUri ( *PQXMLNAMEPOOL(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -131,9 +157,17 @@ QString prefix ( const QXmlNamePool & namePool ) const
 HB_FUNC_STATIC( QXMLNAME_PREFIX )
 {
   QXmlName * obj = (QXmlName *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->prefix ( *PQXMLNAMEPOOL(1) ) );
+    if( ISNUMPAR(1) && ISQXMLNAMEPOOL(1) )
+    {
+      RQSTRING( obj->prefix ( *PQXMLNAMEPOOL(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -143,27 +177,49 @@ QString toClarkName ( const QXmlNamePool & namePool ) const
 HB_FUNC_STATIC( QXMLNAME_TOCLARKNAME )
 {
   QXmlName * obj = (QXmlName *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->toClarkName ( *PQXMLNAMEPOOL(1) ) );
+    if( ISNUMPAR(1) && ISQXMLNAMEPOOL(1) )
+    {
+      RQSTRING( obj->toClarkName ( *PQXMLNAMEPOOL(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
 /*
-QXmlName fromClarkName ( const QString & clarkName, const QXmlNamePool & namePool )
+static QXmlName fromClarkName ( const QString & clarkName, const QXmlNamePool & namePool )
 */
 HB_FUNC_STATIC( QXMLNAME_FROMCLARKNAME )
 {
-  QXmlName * ptr = new QXmlName( QXmlName::fromClarkName ( PQSTRING(1), *PQXMLNAMEPOOL(2) ) );
-  _qt4xhb_createReturnClass ( ptr, "QXMLNAME", true );
+    if( ISNUMPAR(2) && ISCHAR(1) && ISQXMLNAMEPOOL(2) )
+  {
+      QXmlName * ptr = new QXmlName( QXmlName::fromClarkName ( PQSTRING(1), *PQXMLNAMEPOOL(2) ) );
+      _qt4xhb_createReturnClass ( ptr, "QXMLNAME", true );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
-bool isNCName ( const QString & candidate )
+static bool isNCName ( const QString & candidate )
 */
 HB_FUNC_STATIC( QXMLNAME_ISNCNAME )
 {
-  RBOOL( QXmlName::isNCName ( PQSTRING(1) ) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+  {
+      RBOOL( QXmlName::isNCName ( PQSTRING(1) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QXMLNAME_NEWFROM )

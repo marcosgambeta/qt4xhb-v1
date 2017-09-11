@@ -26,6 +26,7 @@ CLASS QSimpleXmlNodeModel INHERIT QAbstractXmlNodeModel
    METHOD namespaceBindings
    METHOD nodesByIdref
    METHOD stringValue
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -69,10 +70,18 @@ QXmlNamePool & namePool () const
 HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NAMEPOOL )
 {
   QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QXmlNamePool * ptr = &obj->namePool ();
-    _qt4xhb_createReturnClass ( ptr, "QXMLNAMEPOOL" );
+    if( ISNUMPAR(0) )
+    {
+      QXmlNamePool * ptr = &obj->namePool ();
+      _qt4xhb_createReturnClass ( ptr, "QXMLNAMEPOOL", false );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -82,10 +91,18 @@ virtual QUrl baseUri ( const QXmlNodeModelIndex & node ) const
 HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_BASEURI )
 {
   QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->baseUri ( *PQXMLNODEMODELINDEX(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    if( ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1) )
+    {
+      QUrl * ptr = new QUrl( obj->baseUri ( *PQXMLNODEMODELINDEX(1) ) );
+      _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -95,10 +112,18 @@ virtual QXmlNodeModelIndex elementById ( const QXmlName & id ) const
 HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_ELEMENTBYID )
 {
   QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QXmlNodeModelIndex * ptr = new QXmlNodeModelIndex( obj->elementById ( *PQXMLNAME(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QXMLNODEMODELINDEX", true );
+    if( ISNUMPAR(1) && ISQXMLNAME(1) )
+    {
+      QXmlNodeModelIndex * ptr = new QXmlNodeModelIndex( obj->elementById ( *PQXMLNAME(1) ) );
+      _qt4xhb_createReturnClass ( ptr, "QXMLNODEMODELINDEX", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -194,9 +219,17 @@ virtual QString stringValue ( const QXmlNodeModelIndex & node ) const
 HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_STRINGVALUE )
 {
   QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->stringValue ( *PQXMLNODEMODELINDEX(1) ) );
+    if( ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1) )
+    {
+      RQSTRING( obj->stringValue ( *PQXMLNODEMODELINDEX(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

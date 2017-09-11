@@ -29,11 +29,13 @@ CLASS QXmlItem
    METHOD isNull
    METHOD toAtomicValue
    METHOD toNodeModelIndex
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -60,7 +62,7 @@ QXmlItem ()
 HB_FUNC_STATIC( QXMLITEM_NEW1 )
 {
   QXmlItem * o = new QXmlItem ();
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -69,7 +71,7 @@ QXmlItem ( const QXmlItem & other )
 HB_FUNC_STATIC( QXMLITEM_NEW2 )
 {
   QXmlItem * o = new QXmlItem ( *PQXMLITEM(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -78,7 +80,7 @@ QXmlItem ( const QXmlNodeModelIndex & node )
 HB_FUNC_STATIC( QXMLITEM_NEW3 )
 {
   QXmlItem * o = new QXmlItem ( *PQXMLNODEMODELINDEX(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -87,7 +89,7 @@ QXmlItem ( const QVariant & atomicValue )
 HB_FUNC_STATIC( QXMLITEM_NEW4 )
 {
   QXmlItem * o = new QXmlItem ( *PQVARIANT(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 //[1]QXmlItem ()
@@ -142,9 +144,17 @@ bool isAtomicValue () const
 HB_FUNC_STATIC( QXMLITEM_ISATOMICVALUE )
 {
   QXmlItem * obj = (QXmlItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isAtomicValue () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isAtomicValue () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -154,9 +164,17 @@ bool isNode () const
 HB_FUNC_STATIC( QXMLITEM_ISNODE )
 {
   QXmlItem * obj = (QXmlItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isNode () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isNode () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -166,9 +184,17 @@ bool isNull () const
 HB_FUNC_STATIC( QXMLITEM_ISNULL )
 {
   QXmlItem * obj = (QXmlItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isNull () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isNull () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -178,10 +204,18 @@ QVariant toAtomicValue () const
 HB_FUNC_STATIC( QXMLITEM_TOATOMICVALUE )
 {
   QXmlItem * obj = (QXmlItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->toAtomicValue () );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    if( ISNUMPAR(0) )
+    {
+      QVariant * ptr = new QVariant( obj->toAtomicValue () );
+      _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -191,10 +225,18 @@ QXmlNodeModelIndex toNodeModelIndex () const
 HB_FUNC_STATIC( QXMLITEM_TONODEMODELINDEX )
 {
   QXmlItem * obj = (QXmlItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QXmlNodeModelIndex * ptr = new QXmlNodeModelIndex( obj->toNodeModelIndex () );
-    _qt4xhb_createReturnClass ( ptr, "QXMLNODEMODELINDEX", true );
+    if( ISNUMPAR(0) )
+    {
+      QXmlNodeModelIndex * ptr = new QXmlNodeModelIndex( obj->toNodeModelIndex () );
+      _qt4xhb_createReturnClass ( ptr, "QXMLNODEMODELINDEX", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

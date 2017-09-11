@@ -22,11 +22,13 @@ CLASS QXmlResultItems
    METHOD current
    METHOD hasError
    METHOD next
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -52,8 +54,15 @@ QXmlResultItems ()
 */
 HB_FUNC_STATIC( QXMLRESULTITEMS_NEW )
 {
-  QXmlResultItems * o = new QXmlResultItems ();
-  _qt4xhb_storePointerAndFlag ( o, true );
+  if( ISNUMPAR(0) )
+  {
+    QXmlResultItems * o = new QXmlResultItems ();
+    _qt4xhb_storePointerAndFlag( o, true );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QXMLRESULTITEMS_DELETE )
@@ -79,10 +88,18 @@ QXmlItem current () const
 HB_FUNC_STATIC( QXMLRESULTITEMS_CURRENT )
 {
   QXmlResultItems * obj = (QXmlResultItems *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QXmlItem * ptr = new QXmlItem( obj->current () );
-    _qt4xhb_createReturnClass ( ptr, "QXMLITEM", true );
+    if( ISNUMPAR(0) )
+    {
+      QXmlItem * ptr = new QXmlItem( obj->current () );
+      _qt4xhb_createReturnClass ( ptr, "QXMLITEM", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -92,9 +109,17 @@ bool hasError () const
 HB_FUNC_STATIC( QXMLRESULTITEMS_HASERROR )
 {
   QXmlResultItems * obj = (QXmlResultItems *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->hasError () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->hasError () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -104,10 +129,18 @@ QXmlItem next ()
 HB_FUNC_STATIC( QXMLRESULTITEMS_NEXT )
 {
   QXmlResultItems * obj = (QXmlResultItems *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QXmlItem * ptr = new QXmlItem( obj->next () );
-    _qt4xhb_createReturnClass ( ptr, "QXMLITEM", true );
+    if( ISNUMPAR(0) )
+    {
+      QXmlItem * ptr = new QXmlItem( obj->next () );
+      _qt4xhb_createReturnClass ( ptr, "QXMLITEM", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
