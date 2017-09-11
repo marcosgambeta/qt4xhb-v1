@@ -11,9 +11,6 @@ CLASS QSourceLocation
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD column
@@ -47,17 +44,17 @@ $destructor
 /*
 QSourceLocation ()
 */
-$constructor=|new1|
+$internalConstructor=|new1|
 
 /*
 QSourceLocation ( const QSourceLocation & other )
 */
-$constructor=|new2|const QSourceLocation &
+$internalConstructor=|new2|const QSourceLocation &
 
 /*
 QSourceLocation ( const QUrl & u, int l = -1, int c = -1 )
 */
-$constructor=|new3|const QUrl &,int=-1,int=-1
+$internalConstructor=|new3|const QUrl &,int=-1,int=-1
 
 //[1]QSourceLocation ()
 //[2]QSourceLocation ( const QSourceLocation & other )
@@ -67,15 +64,15 @@ HB_FUNC_STATIC( QSOURCELOCATION_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QSOURCELOCATION_NEW1 );
+    QSourceLocation_new1();
   }
   else if( ISNUMPAR(1) && ISQSOURCELOCATION(1) )
   {
-    HB_FUNC_EXEC( QSOURCELOCATION_NEW2 );
+    QSourceLocation_new2();
   }
   else if( ISBETWEEN(1,3) && ISQURL(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QSOURCELOCATION_NEW3 );
+    QSourceLocation_new3();
   }
   else
   {
