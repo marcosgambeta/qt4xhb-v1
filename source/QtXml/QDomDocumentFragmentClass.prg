@@ -12,8 +12,6 @@ CLASS QDomDocumentFragment INHERIT QDomNode
 
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD nodeType
 
@@ -38,7 +36,7 @@ RETURN
 /*
 QDomDocumentFragment ()
 */
-HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NEW1 )
+void QDomDocumentFragment_new1 ()
 {
   QDomDocumentFragment * o = new QDomDocumentFragment ();
   _qt4xhb_storePointerAndFlag( o, true );
@@ -47,7 +45,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NEW1 )
 /*
 QDomDocumentFragment ( const QDomDocumentFragment & x )
 */
-HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NEW2 )
+void QDomDocumentFragment_new2 ()
 {
   QDomDocumentFragment * o = new QDomDocumentFragment ( *PQDOMDOCUMENTFRAGMENT(1) );
   _qt4xhb_storePointerAndFlag( o, true );
@@ -60,11 +58,11 @@ HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDOMDOCUMENTFRAGMENT_NEW1 );
+    QDomDocumentFragment_new1();
   }
   else if( ISNUMPAR(1) && ISQDOMDOCUMENTFRAGMENT(1) )
   {
-    HB_FUNC_EXEC( QDOMDOCUMENTFRAGMENT_NEW2 );
+    QDomDocumentFragment_new2();
   }
   else
   {

@@ -16,8 +16,6 @@ CLASS QDomText INHERIT QDomCharacterData
 
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD nodeType
    METHOD splitText
@@ -43,7 +41,7 @@ RETURN
 /*
 QDomText ()
 */
-HB_FUNC_STATIC( QDOMTEXT_NEW1 )
+void QDomText_new1 ()
 {
   QDomText * o = new QDomText ();
   _qt4xhb_storePointerAndFlag( o, true );
@@ -52,7 +50,7 @@ HB_FUNC_STATIC( QDOMTEXT_NEW1 )
 /*
 QDomText ( const QDomText & x )
 */
-HB_FUNC_STATIC( QDOMTEXT_NEW2 )
+void QDomText_new2 ()
 {
   QDomText * o = new QDomText ( *PQDOMTEXT(1) );
   _qt4xhb_storePointerAndFlag( o, true );
@@ -65,11 +63,11 @@ HB_FUNC_STATIC( QDOMTEXT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDOMTEXT_NEW1 );
+    QDomText_new1();
   }
   else if( ISNUMPAR(1) && ISQDOMTEXT(1) )
   {
-    HB_FUNC_EXEC( QDOMTEXT_NEW2 );
+    QDomText_new2();
   }
   else
   {

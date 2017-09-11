@@ -25,9 +25,6 @@ CLASS QXmlAttributes
    METHOD length
    METHOD localName
    METHOD qName
-   METHOD type1
-   METHOD type2
-   METHOD type3
    METHOD type
    METHOD uri
    METHOD value1
@@ -235,6 +232,10 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_INDEX )
   {
     HB_FUNC_EXEC( QXMLATTRIBUTES_INDEX3 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -300,60 +301,39 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_QNAME )
 /*
 QString type ( int index ) const
 */
-HB_FUNC_STATIC( QXMLATTRIBUTES_TYPE1 )
+void QXmlAttributes_type1 ()
 {
   QXmlAttributes * obj = (QXmlAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
-    {
       RQSTRING( obj->type ( PINT(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 }
 
 /*
 QString type ( const QString & qName ) const
 */
-HB_FUNC_STATIC( QXMLATTRIBUTES_TYPE2 )
+void QXmlAttributes_type2 ()
 {
   QXmlAttributes * obj = (QXmlAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISCHAR(1) )
-    {
       RQSTRING( obj->type ( PQSTRING(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 }
 
 /*
 QString type ( const QString & uri, const QString & localName ) const
 */
-HB_FUNC_STATIC( QXMLATTRIBUTES_TYPE3 )
+void QXmlAttributes_type3 ()
 {
   QXmlAttributes * obj = (QXmlAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
-    {
       RQSTRING( obj->type ( PQSTRING(1), PQSTRING(2) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 }
 
@@ -365,15 +345,19 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_TYPE )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QXMLATTRIBUTES_TYPE1 );
+    QXmlAttributes_type1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QXMLATTRIBUTES_TYPE2 );
+    QXmlAttributes_type2();
   }
   else if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
   {
-    HB_FUNC_EXEC( QXMLATTRIBUTES_TYPE3 );
+    QXmlAttributes_type3();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -499,6 +483,10 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_VALUE )
   else if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
   {
     HB_FUNC_EXEC( QXMLATTRIBUTES_VALUE4 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 

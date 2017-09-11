@@ -18,8 +18,6 @@ CLASS QDomImplementation
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD createDocument
@@ -56,7 +54,7 @@ RETURN
 /*
 QDomImplementation ()
 */
-HB_FUNC_STATIC( QDOMIMPLEMENTATION_NEW1 )
+void QDomImplementation_new1 ()
 {
   QDomImplementation * o = new QDomImplementation ();
   _qt4xhb_storePointerAndFlag( o, true );
@@ -65,7 +63,7 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_NEW1 )
 /*
 QDomImplementation ( const QDomImplementation & x )
 */
-HB_FUNC_STATIC( QDOMIMPLEMENTATION_NEW2 )
+void QDomImplementation_new2 ()
 {
   QDomImplementation * o = new QDomImplementation ( *PQDOMIMPLEMENTATION(1) );
   _qt4xhb_storePointerAndFlag( o, true );
@@ -78,11 +76,11 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDOMIMPLEMENTATION_NEW1 );
+    QDomImplementation_new1();
   }
   else if( ISNUMPAR(1) && ISQDOMIMPLEMENTATION(1) )
   {
-    HB_FUNC_EXEC( QDOMIMPLEMENTATION_NEW2 );
+    QDomImplementation_new2();
   }
   else
   {

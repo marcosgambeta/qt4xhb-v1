@@ -12,8 +12,6 @@ CLASS QDomEntity INHERIT QDomNode
 
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD nodeType
    METHOD notationName
@@ -41,7 +39,7 @@ RETURN
 /*
 QDomEntity ()
 */
-HB_FUNC_STATIC( QDOMENTITY_NEW1 )
+void QDomEntity_new1 ()
 {
   QDomEntity * o = new QDomEntity ();
   _qt4xhb_storePointerAndFlag( o, true );
@@ -50,7 +48,7 @@ HB_FUNC_STATIC( QDOMENTITY_NEW1 )
 /*
 QDomEntity ( const QDomEntity & x )
 */
-HB_FUNC_STATIC( QDOMENTITY_NEW2 )
+void QDomEntity_new2 ()
 {
   QDomEntity * o = new QDomEntity ( *PQDOMENTITY(1) );
   _qt4xhb_storePointerAndFlag( o, true );
@@ -63,11 +61,11 @@ HB_FUNC_STATIC( QDOMENTITY_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDOMENTITY_NEW1 );
+    QDomEntity_new1();
   }
   else if( ISNUMPAR(1) && ISQDOMENTITY(1) )
   {
-    HB_FUNC_EXEC( QDOMENTITY_NEW2 );
+    QDomEntity_new2();
   }
   else
   {

@@ -12,8 +12,6 @@ CLASS QDomCharacterData INHERIT QDomNode
 
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD appendData
    METHOD data
@@ -46,7 +44,7 @@ RETURN
 /*
 QDomCharacterData ()
 */
-HB_FUNC_STATIC( QDOMCHARACTERDATA_NEW1 )
+void QDomCharacterData_new1 ()
 {
   QDomCharacterData * o = new QDomCharacterData ();
   _qt4xhb_storePointerAndFlag( o, true );
@@ -55,7 +53,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_NEW1 )
 /*
 QDomCharacterData ( const QDomCharacterData & x )
 */
-HB_FUNC_STATIC( QDOMCHARACTERDATA_NEW2 )
+void QDomCharacterData_new2 ()
 {
   QDomCharacterData * o = new QDomCharacterData ();
   _qt4xhb_storePointerAndFlag( o, true );
@@ -68,11 +66,11 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDOMCHARACTERDATA_NEW1 );
+    QDomCharacterData_new1();
   }
   else if( ISNUMPAR(1) && ISQDOMCHARACTERDATA(1) )
   {
-    HB_FUNC_EXEC( QDOMCHARACTERDATA_NEW2 );
+    QDomCharacterData_new2();
   }
   else
   {

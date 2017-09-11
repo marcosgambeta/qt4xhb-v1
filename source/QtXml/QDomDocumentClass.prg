@@ -28,10 +28,6 @@ CLASS QDomDocument INHERIT QDomNode
 
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
    METHOD new
    METHOD delete
    METHOD createAttribute
@@ -85,7 +81,7 @@ RETURN
 /*
 QDomDocument ()
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_NEW1 )
+void QDomDocument_new1 ()
 {
   QDomDocument * o = new QDomDocument ();
   _qt4xhb_storePointerAndFlag( o, true );
@@ -94,7 +90,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_NEW1 )
 /*
 QDomDocument ( const QString & name )
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_NEW2 )
+void QDomDocument_new2 ()
 {
   QDomDocument * o = new QDomDocument ( PQSTRING(1) );
   _qt4xhb_storePointerAndFlag( o, true );
@@ -103,7 +99,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_NEW2 )
 /*
 QDomDocument ( const QDomDocumentType & doctype )
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_NEW3 )
+void QDomDocument_new3 ()
 {
   QDomDocument * o = new QDomDocument ( *PQDOMDOCUMENTTYPE(1) );
   _qt4xhb_storePointerAndFlag( o, true );
@@ -112,7 +108,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_NEW3 )
 /*
 QDomDocument ( const QDomDocument & x )
 */
-HB_FUNC_STATIC( QDOMDOCUMENT_NEW4 )
+void QDomDocument_new4 ()
 {
   QDomDocument * o = new QDomDocument ( *PQDOMDOCUMENT(1) );
   _qt4xhb_storePointerAndFlag( o, true );
@@ -127,19 +123,19 @@ HB_FUNC_STATIC( QDOMDOCUMENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDOMDOCUMENT_NEW1 );
+    QDomDocument_new1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QDOMDOCUMENT_NEW2 );
+    QDomDocument_new2();
   }
   else if( ISNUMPAR(1) && ISQDOMDOCUMENTTYPE(1) )
   {
-    HB_FUNC_EXEC( QDOMDOCUMENT_NEW3 );
+    QDomDocument_new3();
   }
   else if( ISNUMPAR(1) && ISQDOMDOCUMENT(1) )
   {
-    HB_FUNC_EXEC( QDOMDOCUMENT_NEW4 );
+    QDomDocument_new4();
   }
   else
   {

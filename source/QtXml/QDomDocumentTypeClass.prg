@@ -16,8 +16,6 @@ CLASS QDomDocumentType INHERIT QDomNode
 
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD entities
    METHOD internalSubset
@@ -48,7 +46,7 @@ RETURN
 /*
 QDomDocumentType ()
 */
-HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW1 )
+void QDomDocumentType_new1 ()
 {
   QDomDocumentType * o = new QDomDocumentType ();
   _qt4xhb_storePointerAndFlag( o, true );
@@ -57,7 +55,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW1 )
 /*
 QDomDocumentType ( const QDomDocumentType & n )
 */
-HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW2 )
+void QDomDocumentType_new2 ()
 {
   QDomDocumentType * o = new QDomDocumentType ( *PQDOMDOCUMENTTYPE(1) );
   _qt4xhb_storePointerAndFlag( o, true );
@@ -70,11 +68,11 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDOMDOCUMENTTYPE_NEW1 );
+    QDomDocumentType_new1();
   }
   else if( ISNUMPAR(1) && ISQDOMDOCUMENTTYPE(1) )
   {
-    HB_FUNC_EXEC( QDOMDOCUMENTTYPE_NEW2 );
+    QDomDocumentType_new2();
   }
   else
   {

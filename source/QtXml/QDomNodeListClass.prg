@@ -17,8 +17,6 @@ CLASS QDomNodeList
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD at
@@ -55,7 +53,7 @@ RETURN
 /*
 QDomNodeList ()
 */
-HB_FUNC_STATIC( QDOMNODELIST_NEW1 )
+void QDomNodeList_new1 ()
 {
   QDomNodeList * o = new QDomNodeList ();
   _qt4xhb_storePointerAndFlag( o, true );
@@ -64,7 +62,7 @@ HB_FUNC_STATIC( QDOMNODELIST_NEW1 )
 /*
 QDomNodeList ( const QDomNodeList & n )
 */
-HB_FUNC_STATIC( QDOMNODELIST_NEW2 )
+void QDomNodeList_new2 ()
 {
   QDomNodeList * o = new QDomNodeList ( *PQDOMNODELIST(1) );
   _qt4xhb_storePointerAndFlag( o, true );
@@ -77,11 +75,11 @@ HB_FUNC_STATIC( QDOMNODELIST_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDOMNODELIST_NEW1 );
+    QDomNodeList_new1();
   }
   else if( ISNUMPAR(1) && ISQDOMNODELIST(1) )
   {
-    HB_FUNC_EXEC( QDOMNODELIST_NEW2 );
+    QDomNodeList_new2();
   }
   else
   {

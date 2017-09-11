@@ -12,8 +12,6 @@ CLASS QDomNotation INHERIT QDomNode
 
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD nodeType
    METHOD publicId
@@ -40,7 +38,7 @@ RETURN
 /*
 QDomNotation ()
 */
-HB_FUNC_STATIC( QDOMNOTATION_NEW1 )
+void QDomNotation_new1 ()
 {
   QDomNotation * o = new QDomNotation ();
   _qt4xhb_storePointerAndFlag( o, true );
@@ -49,7 +47,7 @@ HB_FUNC_STATIC( QDOMNOTATION_NEW1 )
 /*
 QDomNotation ( const QDomNotation & x )
 */
-HB_FUNC_STATIC( QDOMNOTATION_NEW2 )
+void QDomNotation_new2 ()
 {
   QDomNotation * o = new QDomNotation ( *PQDOMNOTATION(1) );
   _qt4xhb_storePointerAndFlag( o, true );
@@ -62,11 +60,11 @@ HB_FUNC_STATIC( QDOMNOTATION_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDOMNOTATION_NEW1 );
+    QDomNotation_new1();
   }
   else if( ISNUMPAR(1) && ISQDOMNOTATION(1) )
   {
-    HB_FUNC_EXEC( QDOMNOTATION_NEW2 );
+    QDomNotation_new2();
   }
   else
   {

@@ -12,8 +12,6 @@ CLASS QDomProcessingInstruction INHERIT QDomNode
 
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD data
    METHOD nodeType
@@ -41,7 +39,7 @@ RETURN
 /*
 QDomProcessingInstruction ()
 */
-HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW1 )
+void QDomProcessingInstruction_new1 ()
 {
   QDomProcessingInstruction * o = new QDomProcessingInstruction ();
   _qt4xhb_storePointerAndFlag( o, true );
@@ -50,7 +48,7 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW1 )
 /*
 QDomProcessingInstruction ( const QDomProcessingInstruction & x )
 */
-HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW2 )
+void QDomProcessingInstruction_new2 ()
 {
   QDomProcessingInstruction * o = new QDomProcessingInstruction ( *PQDOMPROCESSINGINSTRUCTION(1) );
   _qt4xhb_storePointerAndFlag( o, true );
@@ -63,11 +61,11 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDOMPROCESSINGINSTRUCTION_NEW1 );
+    QDomProcessingInstruction_new1();
   }
   else if( ISNUMPAR(1) && ISQDOMPROCESSINGINSTRUCTION(1) )
   {
-    HB_FUNC_EXEC( QDOMPROCESSINGINSTRUCTION_NEW2 );
+    QDomProcessingInstruction_new2();
   }
   else
   {

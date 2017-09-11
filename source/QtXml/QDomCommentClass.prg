@@ -12,8 +12,6 @@ CLASS QDomComment INHERIT QDomCharacterData
 
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD nodeType
 
@@ -38,7 +36,7 @@ RETURN
 /*
 QDomComment ()
 */
-HB_FUNC_STATIC( QDOMCOMMENT_NEW1 )
+void QDomComment_new1 ()
 {
   QDomComment * o = new QDomComment ();
   _qt4xhb_storePointerAndFlag( o, true );
@@ -47,7 +45,7 @@ HB_FUNC_STATIC( QDOMCOMMENT_NEW1 )
 /*
 QDomComment ( const QDomComment & x )
 */
-HB_FUNC_STATIC( QDOMCOMMENT_NEW2 )
+void QDomComment_new2 ()
 {
   QDomComment * o = new QDomComment ( *PQDOMCOMMENT(1) );
   _qt4xhb_storePointerAndFlag( o, true );
@@ -60,11 +58,11 @@ HB_FUNC_STATIC( QDOMCOMMENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDOMCOMMENT_NEW1 );
+    QDomComment_new1();
   }
   else if( ISNUMPAR(1) && ISQDOMCOMMENT(1) )
   {
-    HB_FUNC_EXEC( QDOMCOMMENT_NEW2 );
+    QDomComment_new2();
   }
   else
   {

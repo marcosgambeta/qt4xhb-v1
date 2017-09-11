@@ -17,8 +17,6 @@ CLASS QXmlNamespaceSupport
    METHOD delete
    METHOD popContext
    METHOD prefix
-   METHOD prefixes1
-   METHOD prefixes2
    METHOD prefixes
    //METHOD processName
    METHOD pushContext
@@ -129,40 +127,26 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIX )
 /*
 QStringList prefixes () const
 */
-HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIXES1 )
+void QXmlNamespaceSupport_prefixes1 ()
 {
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    if( ISNUMPAR(0) )
-    {
       RQSTRINGLIST( obj->prefixes () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 }
 
 /*
 QStringList prefixes ( const QString & uri ) const
 */
-HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIXES2 )
+void QXmlNamespaceSupport_prefixes2 ()
 {
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISCHAR(1) )
-    {
       RQSTRINGLIST( obj->prefixes ( PQSTRING(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 }
 
@@ -173,11 +157,15 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIXES )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QXMLNAMESPACESUPPORT_PREFIXES1 );
+    QXmlNamespaceSupport_prefixes1();
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QXMLNAMESPACESUPPORT_PREFIXES2 );
+    QXmlNamespaceSupport_prefixes2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 

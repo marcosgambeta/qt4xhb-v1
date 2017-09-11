@@ -12,8 +12,6 @@ CLASS QDomCDATASection INHERIT QDomText
 
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD nodeType
 
@@ -38,7 +36,7 @@ RETURN
 /*
 QDomCDATASection ()
 */
-HB_FUNC_STATIC( QDOMCDATASECTION_NEW1 )
+void QDomCDATASection_new1 ()
 {
   QDomCDATASection * o = new QDomCDATASection ();
   _qt4xhb_storePointerAndFlag( o, true );
@@ -47,7 +45,7 @@ HB_FUNC_STATIC( QDOMCDATASECTION_NEW1 )
 /*
 QDomCDATASection ( const QDomCDATASection & x )
 */
-HB_FUNC_STATIC( QDOMCDATASECTION_NEW2 )
+void QDomCDATASection_new2 ()
 {
   QDomCDATASection * o = new QDomCDATASection ( *PQDOMCDATASECTION(1) );
   _qt4xhb_storePointerAndFlag( o, true );
@@ -60,11 +58,11 @@ HB_FUNC_STATIC( QDOMCDATASECTION_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QDOMCDATASECTION_NEW1 );
+    QDomCDATASection_new1();
   }
   else if( ISNUMPAR(1) && ISQDOMCDATASECTION(1) )
   {
-    HB_FUNC_EXEC( QDOMCDATASECTION_NEW2 );
+    QDomCDATASection_new2();
   }
   else
   {

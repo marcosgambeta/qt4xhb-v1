@@ -17,16 +17,12 @@ CLASS QXmlInputSource
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD data
    METHOD fetchData
    METHOD next
    METHOD reset
-   METHOD setData1
-   METHOD setData2
    METHOD setData
 
    METHOD newFrom
@@ -56,7 +52,7 @@ RETURN
 /*
 QXmlInputSource ()
 */
-HB_FUNC_STATIC( QXMLINPUTSOURCE_NEW1 )
+void QXmlInputSource_new1 ()
 {
   QXmlInputSource * o = new QXmlInputSource ();
   _qt4xhb_storePointerAndFlag( o, true );
@@ -65,7 +61,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_NEW1 )
 /*
 QXmlInputSource ( QIODevice * dev )
 */
-HB_FUNC_STATIC( QXMLINPUTSOURCE_NEW2 )
+void QXmlInputSource_new2 ()
 {
   QXmlInputSource * o = new QXmlInputSource ( PQIODEVICE(1) );
   _qt4xhb_storePointerAndFlag( o, true );
@@ -78,11 +74,11 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QXMLINPUTSOURCE_NEW1 );
+    QXmlInputSource_new1();
   }
   else if( ISNUMPAR(1) && ISQIODEVICE(1) )
   {
-    HB_FUNC_EXEC( QXMLINPUTSOURCE_NEW2 );
+    QXmlInputSource_new2();
   }
   else
   {
@@ -195,20 +191,13 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_RESET )
 /*
 virtual void setData ( const QString & dat )
 */
-HB_FUNC_STATIC( QXMLINPUTSOURCE_SETDATA1 )
+void QXmlInputSource_setData1 ()
 {
   QXmlInputSource * obj = (QXmlInputSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISCHAR(1) )
-    {
       obj->setData ( PQSTRING(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -217,20 +206,13 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_SETDATA1 )
 /*
 virtual void setData ( const QByteArray & dat )
 */
-HB_FUNC_STATIC( QXMLINPUTSOURCE_SETDATA2 )
+void QXmlInputSource_setData2 ()
 {
   QXmlInputSource * obj = (QXmlInputSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
-    {
       obj->setData ( *PQBYTEARRAY(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -243,11 +225,15 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_SETDATA )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    HB_FUNC_EXEC( QXMLINPUTSOURCE_SETDATA1 );
+    QXmlInputSource_setData1();
   }
   else if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
-    HB_FUNC_EXEC( QXMLINPUTSOURCE_SETDATA2 );
+    QXmlInputSource_setData2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
