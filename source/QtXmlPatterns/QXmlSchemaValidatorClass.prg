@@ -21,8 +21,6 @@ CLASS QXmlSchemaValidator
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD messageHandler
@@ -34,9 +32,6 @@ CLASS QXmlSchemaValidator
    METHOD setSchema
    METHOD setUriResolver
    METHOD uriResolver
-   METHOD validate1
-   METHOD validate2
-   METHOD validate3
    METHOD validate
 
    METHOD newFrom
@@ -71,7 +66,7 @@ RETURN
 /*
 QXmlSchemaValidator ()
 */
-HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NEW1 )
+void QXmlSchemaValidator_new1 ()
 {
   QXmlSchemaValidator * o = new QXmlSchemaValidator ();
   _qt4xhb_storePointerAndFlag( o, true );
@@ -80,7 +75,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NEW1 )
 /*
 QXmlSchemaValidator ( const QXmlSchema & schema )
 */
-HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NEW2 )
+void QXmlSchemaValidator_new2 ()
 {
   QXmlSchemaValidator * o = new QXmlSchemaValidator ( *PQXMLSCHEMA(1) );
   _qt4xhb_storePointerAndFlag( o, true );
@@ -93,11 +88,11 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QXMLSCHEMAVALIDATOR_NEW1 );
+    QXmlSchemaValidator_new1();
   }
   else if( ISNUMPAR(1) && ISQXMLSCHEMA(1) )
   {
-    HB_FUNC_EXEC( QXMLSCHEMAVALIDATOR_NEW2 );
+    QXmlSchemaValidator_new2();
   }
   else
   {
@@ -318,60 +313,39 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_URIRESOLVER )
 /*
 bool validate ( const QUrl & source ) const
 */
-HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_VALIDATE1 )
+void QXmlSchemaValidator_validate1 ()
 {
   QXmlSchemaValidator * obj = (QXmlSchemaValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISQURL(1) )
-    {
       RBOOL( obj->validate ( *PQURL(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 }
 
 /*
 bool validate ( QIODevice * source, const QUrl & documentUri = QUrl() ) const
 */
-HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_VALIDATE2 )
+void QXmlSchemaValidator_validate2 ()
 {
   QXmlSchemaValidator * obj = (QXmlSchemaValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    if( ISBETWEEN(1,2) && ISQIODEVICE(1) && (ISQURL(2)||ISNIL(2)) )
-    {
       RBOOL( obj->validate ( PQIODEVICE(1), ISNIL(2)? QUrl() : *(QUrl *) _qt4xhb_itemGetPtr(2) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 }
 
 /*
 bool validate ( const QByteArray & data, const QUrl & documentUri = QUrl() ) const
 */
-HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_VALIDATE3 )
+void QXmlSchemaValidator_validate3 ()
 {
   QXmlSchemaValidator * obj = (QXmlSchemaValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISQURL(2)||ISNIL(2)) )
-    {
       RBOOL( obj->validate ( *PQBYTEARRAY(1), ISNIL(2)? QUrl() : *(QUrl *) _qt4xhb_itemGetPtr(2) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 }
 
@@ -383,15 +357,15 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_VALIDATE )
 {
   if( ISNUMPAR(1) && ISQURL(1) )
   {
-    HB_FUNC_EXEC( QXMLSCHEMAVALIDATOR_VALIDATE1 );
+    QXmlSchemaValidator_validate1();
   }
   else if( ISBETWEEN(1,2) && ISQIODEVICE(1) && (ISQURL(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QXMLSCHEMAVALIDATOR_VALIDATE2 );
+    QXmlSchemaValidator_validate2();
   }
   else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISQURL(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QXMLSCHEMAVALIDATOR_VALIDATE3 );
+    QXmlSchemaValidator_validate3();
   }
   else
   {

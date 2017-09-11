@@ -17,8 +17,6 @@ CLASS QXmlNodeModelIndex
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD additionalData
    METHOD data
@@ -53,7 +51,7 @@ RETURN
 /*
 QXmlNodeModelIndex ()
 */
-HB_FUNC_STATIC( QXMLNODEMODELINDEX_NEW1 )
+void QXmlNodeModelIndex_new1 ()
 {
   QXmlNodeModelIndex * o = new QXmlNodeModelIndex ();
   _qt4xhb_storePointerAndFlag( o, true );
@@ -62,7 +60,7 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_NEW1 )
 /*
 QXmlNodeModelIndex ( const QXmlNodeModelIndex & other )
 */
-HB_FUNC_STATIC( QXMLNODEMODELINDEX_NEW2 )
+void QXmlNodeModelIndex_new2 ()
 {
   QXmlNodeModelIndex * o = new QXmlNodeModelIndex ( *PQXMLNODEMODELINDEX(1) );
   _qt4xhb_storePointerAndFlag( o, true );
@@ -75,11 +73,11 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QXMLNODEMODELINDEX_NEW1 );
+    QXmlNodeModelIndex_new1();
   }
   else if( ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1) )
   {
-    HB_FUNC_EXEC( QXMLNODEMODELINDEX_NEW2 );
+    QXmlNodeModelIndex_new2();
   }
   else
   {

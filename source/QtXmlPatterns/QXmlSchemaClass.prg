@@ -21,15 +21,10 @@ CLASS QXmlSchema
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD documentUri
    METHOD isValid
-   METHOD load1
-   METHOD load2
-   METHOD load3
    METHOD load
    METHOD messageHandler
    METHOD namePool
@@ -70,7 +65,7 @@ RETURN
 /*
 QXmlSchema ()
 */
-HB_FUNC_STATIC( QXMLSCHEMA_NEW1 )
+void QXmlSchema_new1 ()
 {
   QXmlSchema * o = new QXmlSchema ();
   _qt4xhb_storePointerAndFlag( o, true );
@@ -79,7 +74,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_NEW1 )
 /*
 QXmlSchema ( const QXmlSchema & other )
 */
-HB_FUNC_STATIC( QXMLSCHEMA_NEW2 )
+void QXmlSchema_new2 ()
 {
   QXmlSchema * o = new QXmlSchema ( *PQXMLSCHEMA(1) );
   _qt4xhb_storePointerAndFlag( o, true );
@@ -92,11 +87,11 @@ HB_FUNC_STATIC( QXMLSCHEMA_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QXMLSCHEMA_NEW1 );
+    QXmlSchema_new1();
   }
   else if( ISNUMPAR(1) && ISQXMLSCHEMA(1) )
   {
-    HB_FUNC_EXEC( QXMLSCHEMA_NEW2 );
+    QXmlSchema_new2();
   }
   else
   {
@@ -165,60 +160,39 @@ HB_FUNC_STATIC( QXMLSCHEMA_ISVALID )
 /*
 bool load ( const QUrl & source )
 */
-HB_FUNC_STATIC( QXMLSCHEMA_LOAD1 )
+void QXmlSchema_load1 ()
 {
   QXmlSchema * obj = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISQURL(1) )
-    {
       RBOOL( obj->load ( *PQURL(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 }
 
 /*
 bool load ( QIODevice * source, const QUrl & documentUri = QUrl() )
 */
-HB_FUNC_STATIC( QXMLSCHEMA_LOAD2 )
+void QXmlSchema_load2 ()
 {
   QXmlSchema * obj = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    if( ISBETWEEN(1,2) && ISQIODEVICE(1) && (ISQURL(2)||ISNIL(2)) )
-    {
       RBOOL( obj->load ( PQIODEVICE(1), ISNIL(2)? QUrl() : *(QUrl *) _qt4xhb_itemGetPtr(2) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 }
 
 /*
 bool load ( const QByteArray & data, const QUrl & documentUri = QUrl() )
 */
-HB_FUNC_STATIC( QXMLSCHEMA_LOAD3 )
+void QXmlSchema_load3 ()
 {
   QXmlSchema * obj = (QXmlSchema *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISQURL(2)||ISNIL(2)) )
-    {
       RBOOL( obj->load ( *PQBYTEARRAY(1), ISNIL(2)? QUrl() : *(QUrl *) _qt4xhb_itemGetPtr(2) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 }
 
@@ -230,15 +204,15 @@ HB_FUNC_STATIC( QXMLSCHEMA_LOAD )
 {
   if( ISNUMPAR(1) && ISQURL(1) )
   {
-    HB_FUNC_EXEC( QXMLSCHEMA_LOAD1 );
+    QXmlSchema_load1();
   }
   else if( ISBETWEEN(1,2) && ISQIODEVICE(1) && (ISQURL(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QXMLSCHEMA_LOAD2 );
+    QXmlSchema_load2();
   }
   else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISQURL(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QXMLSCHEMA_LOAD3 );
+    QXmlSchema_load3();
   }
   else
   {

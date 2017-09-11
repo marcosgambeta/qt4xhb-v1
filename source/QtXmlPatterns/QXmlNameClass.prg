@@ -17,8 +17,6 @@ CLASS QXmlName
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD isNull
    METHOD localName
@@ -57,7 +55,7 @@ RETURN
 /*
 QXmlName ()
 */
-HB_FUNC_STATIC( QXMLNAME_NEW1 )
+void QXmlName_new1 ()
 {
   QXmlName * o = new QXmlName ();
   _qt4xhb_storePointerAndFlag( o, true );
@@ -66,7 +64,7 @@ HB_FUNC_STATIC( QXMLNAME_NEW1 )
 /*
 QXmlName ( QXmlNamePool & namePool, const QString & localName, const QString & namespaceURI = QString(), const QString & prefix = QString() )
 */
-HB_FUNC_STATIC( QXMLNAME_NEW2 )
+void QXmlName_new2 ()
 {
   QXmlName * o = new QXmlName ( *PQXMLNAMEPOOL(1), PQSTRING(2), OPQSTRING(3,QString()), OPQSTRING(4,QString()) );
   _qt4xhb_storePointerAndFlag( o, true );
@@ -79,11 +77,11 @@ HB_FUNC_STATIC( QXMLNAME_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QXMLNAME_NEW1 );
+    QXmlName_new1();
   }
   else if( ISBETWEEN(2,4) && ISQXMLNAMEPOOL(1) && ISCHAR(2) && (ISCHAR(3)||ISNIL(3)) && (ISCHAR(4)||ISNIL(4)) )
   {
-    HB_FUNC_EXEC( QXMLNAME_NEW2 );
+    QXmlName_new2();
   }
   else
   {

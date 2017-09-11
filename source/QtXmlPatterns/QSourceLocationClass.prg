@@ -17,9 +17,6 @@ CLASS QSourceLocation
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD column
@@ -57,7 +54,7 @@ RETURN
 /*
 QSourceLocation ()
 */
-HB_FUNC_STATIC( QSOURCELOCATION_NEW1 )
+void QSourceLocation_new1 ()
 {
   QSourceLocation * o = new QSourceLocation ();
   _qt4xhb_storePointerAndFlag( o, true );
@@ -66,7 +63,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_NEW1 )
 /*
 QSourceLocation ( const QSourceLocation & other )
 */
-HB_FUNC_STATIC( QSOURCELOCATION_NEW2 )
+void QSourceLocation_new2 ()
 {
   QSourceLocation * o = new QSourceLocation ( *PQSOURCELOCATION(1) );
   _qt4xhb_storePointerAndFlag( o, true );
@@ -75,7 +72,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_NEW2 )
 /*
 QSourceLocation ( const QUrl & u, int l = -1, int c = -1 )
 */
-HB_FUNC_STATIC( QSOURCELOCATION_NEW3 )
+void QSourceLocation_new3 ()
 {
   QSourceLocation * o = new QSourceLocation ( *PQURL(1), OPINT(2,-1), OPINT(3,-1) );
   _qt4xhb_storePointerAndFlag( o, true );
@@ -89,15 +86,15 @@ HB_FUNC_STATIC( QSOURCELOCATION_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QSOURCELOCATION_NEW1 );
+    QSourceLocation_new1();
   }
   else if( ISNUMPAR(1) && ISQSOURCELOCATION(1) )
   {
-    HB_FUNC_EXEC( QSOURCELOCATION_NEW2 );
+    QSourceLocation_new2();
   }
   else if( ISBETWEEN(1,3) && ISQURL(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
-    HB_FUNC_EXEC( QSOURCELOCATION_NEW3 );
+    QSourceLocation_new3();
   }
   else
   {

@@ -13,8 +13,6 @@ CLASS QXmlNamePool
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
 
@@ -45,7 +43,7 @@ RETURN
 /*
 QXmlNamePool ()
 */
-HB_FUNC_STATIC( QXMLNAMEPOOL_NEW1 )
+void QXmlNamePool_new1 ()
 {
   QXmlNamePool * o = new QXmlNamePool ();
   _qt4xhb_storePointerAndFlag( o, true );
@@ -54,7 +52,7 @@ HB_FUNC_STATIC( QXMLNAMEPOOL_NEW1 )
 /*
 QXmlNamePool ( const QXmlNamePool & other )
 */
-HB_FUNC_STATIC( QXMLNAMEPOOL_NEW2 )
+void QXmlNamePool_new2 ()
 {
   QXmlNamePool * o = new QXmlNamePool ( *PQXMLNAMEPOOL(1) );
   _qt4xhb_storePointerAndFlag( o, true );
@@ -67,11 +65,11 @@ HB_FUNC_STATIC( QXMLNAMEPOOL_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QXMLNAMEPOOL_NEW1 );
+    QXmlNamePool_new1();
   }
   else if( ISNUMPAR(1) && ISQXMLNAMEPOOL(1) )
   {
-    HB_FUNC_EXEC( QXMLNAMEPOOL_NEW2 );
+    QXmlNamePool_new2();
   }
   else
   {

@@ -18,10 +18,6 @@ CLASS QXmlItem
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
    METHOD new
    METHOD delete
    METHOD isAtomicValue
@@ -59,7 +55,7 @@ RETURN
 /*
 QXmlItem ()
 */
-HB_FUNC_STATIC( QXMLITEM_NEW1 )
+void QXmlItem_new1 ()
 {
   QXmlItem * o = new QXmlItem ();
   _qt4xhb_storePointerAndFlag( o, true );
@@ -68,7 +64,7 @@ HB_FUNC_STATIC( QXMLITEM_NEW1 )
 /*
 QXmlItem ( const QXmlItem & other )
 */
-HB_FUNC_STATIC( QXMLITEM_NEW2 )
+void QXmlItem_new2 ()
 {
   QXmlItem * o = new QXmlItem ( *PQXMLITEM(1) );
   _qt4xhb_storePointerAndFlag( o, true );
@@ -77,7 +73,7 @@ HB_FUNC_STATIC( QXMLITEM_NEW2 )
 /*
 QXmlItem ( const QXmlNodeModelIndex & node )
 */
-HB_FUNC_STATIC( QXMLITEM_NEW3 )
+void QXmlItem_new3 ()
 {
   QXmlItem * o = new QXmlItem ( *PQXMLNODEMODELINDEX(1) );
   _qt4xhb_storePointerAndFlag( o, true );
@@ -86,7 +82,7 @@ HB_FUNC_STATIC( QXMLITEM_NEW3 )
 /*
 QXmlItem ( const QVariant & atomicValue )
 */
-HB_FUNC_STATIC( QXMLITEM_NEW4 )
+void QXmlItem_new4 ()
 {
   QXmlItem * o = new QXmlItem ( *PQVARIANT(1) );
   _qt4xhb_storePointerAndFlag( o, true );
@@ -101,19 +97,19 @@ HB_FUNC_STATIC( QXMLITEM_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QXMLITEM_NEW1 );
+    QXmlItem_new1();
   }
   else if( ISNUMPAR(1) && ISQXMLITEM(1) )
   {
-    HB_FUNC_EXEC( QXMLITEM_NEW2 );
+    QXmlItem_new2();
   }
   else if( ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1) )
   {
-    HB_FUNC_EXEC( QXMLITEM_NEW3 );
+    QXmlItem_new3();
   }
   else if( ISNUMPAR(1) && ISQVARIANT(1) )
   {
-    HB_FUNC_EXEC( QXMLITEM_NEW4 );
+    QXmlItem_new4();
   }
   else
   {
