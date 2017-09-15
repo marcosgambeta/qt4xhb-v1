@@ -58,32 +58,17 @@ $destructor
 /*
 QRegExp ()
 */
-HB_FUNC_STATIC( QREGEXP_NEW1 )
-{
-  QRegExp * o = new QRegExp ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|
 
 /*
 QRegExp ( const QString & pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive, PatternSyntax syntax = RegExp )
 */
-HB_FUNC_STATIC( QREGEXP_NEW2 )
-{
-  QRegExp * o = new QRegExp ( PQSTRING(1), ISNIL(2)? Qt::CaseSensitive : (Qt::CaseSensitivity) hb_parni(2), ISNIL(3)? QRegExp::RegExp : (QRegExp::PatternSyntax) hb_parni(3) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|const QString &,Qt::CaseSensitivity=Qt::CaseSensitive,QRegExp::PatternSyntax=QRegExp::RegExp
 
 /*
 QRegExp ( const QRegExp & rx )
 */
-HB_FUNC_STATIC( QREGEXP_NEW3 )
-{
-  QRegExp * o = new QRegExp ( *PQREGEXP(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new3|const QRegExp &
 
 //[1]QRegExp ()
 //[2]QRegExp ( const QString & pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive, PatternSyntax syntax = RegExp )
@@ -119,40 +104,17 @@ $method=|QString|cap|int=0
 /*
 int captureCount () const
 */
-HB_FUNC_STATIC( QREGEXP_CAPTURECOUNT )
-{
-  QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->captureCount () );
-  }
-}
-
+$method=|int|captureCount|
 
 /*
 QStringList capturedTexts () const
 */
-HB_FUNC_STATIC( QREGEXP_CAPTUREDTEXTS )
-{
-  QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->capturedTexts () );
-  }
-}
-
+$method=|QStringList|capturedTexts|
 
 /*
 Qt::CaseSensitivity caseSensitivity () const
 */
-HB_FUNC_STATIC( QREGEXP_CASESENSITIVITY )
-{
-  QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->caseSensitivity () );
-  }
-}
+$method=|Qt::CaseSensitivity|caseSensitivity|
 
 /*
 QString errorString () const
@@ -167,79 +129,32 @@ $method=|bool|exactMatch|const QString &
 /*
 int indexIn ( const QString & str, int offset = 0, CaretMode caretMode = CaretAtZero ) const
 */
-HB_FUNC_STATIC( QREGEXP_INDEXIN )
-{
-  QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->indexIn ( PQSTRING(1), OPINT(2,0), ISNIL(3)? QRegExp::CaretAtZero : (QRegExp::CaretMode) hb_parni(3) ) );
-  }
-}
-
+$method=|int|indexIn|const QString &,int=0,QRegExp::CaretMode=QRegExp::CaretAtZero
 
 /*
 bool isEmpty () const
 */
-HB_FUNC_STATIC( QREGEXP_ISEMPTY )
-{
-  QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isEmpty () );
-  }
-}
-
+$method=|bool|isEmpty|
 
 /*
 bool isMinimal () const
 */
-HB_FUNC_STATIC( QREGEXP_ISMINIMAL )
-{
-  QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isMinimal () );
-  }
-}
-
+$method=|bool|isMinimal|
 
 /*
 bool isValid () const
 */
-HB_FUNC_STATIC( QREGEXP_ISVALID )
-{
-  QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
-
+$method=|bool|isValid|
 
 /*
 int lastIndexIn ( const QString & str, int offset = -1, CaretMode caretMode = CaretAtZero ) const
 */
-HB_FUNC_STATIC( QREGEXP_LASTINDEXIN )
-{
-  QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->lastIndexIn ( PQSTRING(1), OPINT(2,-1), ISNIL(3)? QRegExp::CaretAtZero : (QRegExp::CaretMode) hb_parni(3) ) );
-  }
-}
-
+$method=|int|lastIndexIn|const QString &,int=-1,QRegExp::CaretMode=QRegExp::CaretAtZero
 
 /*
 int matchedLength () const
 */
-HB_FUNC_STATIC( QREGEXP_MATCHEDLENGTH )
-{
-  QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->matchedLength () );
-  }
-}
+$method=|int|matchedLength|
 
 /*
 QString pattern () const
@@ -249,55 +164,22 @@ $method=|QString|pattern|
 /*
 PatternSyntax patternSyntax () const
 */
-HB_FUNC_STATIC( QREGEXP_PATTERNSYNTAX )
-{
-  QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->patternSyntax () );
-  }
-}
-
+$method=|QRegExp::PatternSyntax|patternSyntax|
 
 /*
 int pos ( int nth = 0 ) const
 */
-HB_FUNC_STATIC( QREGEXP_POS )
-{
-  QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->pos ( OPINT(1,0) ) );
-  }
-}
-
+$method=|int|pos|int=0
 
 /*
 void setCaseSensitivity ( Qt::CaseSensitivity cs )
 */
-HB_FUNC_STATIC( QREGEXP_SETCASESENSITIVITY )
-{
-  QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCaseSensitivity ( (Qt::CaseSensitivity) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setCaseSensitivity|Qt::CaseSensitivity
 
 /*
 void setMinimal ( bool minimal )
 */
-HB_FUNC_STATIC( QREGEXP_SETMINIMAL )
-{
-  QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setMinimal ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setMinimal|bool
 
 /*
 void setPattern ( const QString & pattern )
@@ -307,15 +189,7 @@ $method=|void|setPattern|const QString &
 /*
 void setPatternSyntax ( PatternSyntax syntax )
 */
-HB_FUNC_STATIC( QREGEXP_SETPATTERNSYNTAX )
-{
-  QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPatternSyntax ( (QRegExp::PatternSyntax) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPatternSyntax|QRegExp::PatternSyntax
 
 /*
 static QString escape ( const QString & str )

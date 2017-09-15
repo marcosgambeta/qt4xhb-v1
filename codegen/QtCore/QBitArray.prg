@@ -54,32 +54,17 @@ $destructor
 /*
 QBitArray ()
 */
-HB_FUNC_STATIC( QBITARRAY_NEW1 )
-{
-  QBitArray * o = new QBitArray ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new1|
 
 /*
 QBitArray ( int size, bool value = false )
 */
-HB_FUNC_STATIC( QBITARRAY_NEW2 )
-{
-  QBitArray * o = new QBitArray ( PINT(1), OPBOOL(2,false) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new2|int,bool=false
 
 /*
 QBitArray ( const QBitArray & other )
 */
-HB_FUNC_STATIC( QBITARRAY_NEW3 )
-{
-  QBitArray * o = new QBitArray ( *PQBITARRAY(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new3|const QBitArray &
 
 //[1]QBitArray ()
 //[2]QBitArray ( int size, bool value = false )
@@ -105,74 +90,30 @@ HB_FUNC_STATIC( QBITARRAY_NEW )
   }
 }
 
-
-
 /*
 bool at ( int i ) const
 */
-HB_FUNC_STATIC( QBITARRAY_AT )
-{
-  QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->at ( PINT(1) ) );
-  }
-}
-
+$method=|bool|at|int
 
 /*
 void clear ()
 */
-HB_FUNC_STATIC( QBITARRAY_CLEAR )
-{
-  QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clear ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|clear|
 
 /*
 void clearBit ( int i )
 */
-HB_FUNC_STATIC( QBITARRAY_CLEARBIT )
-{
-  QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clearBit ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|clearBit|int
 
 /*
 int count () const
 */
-HB_FUNC_STATIC( QBITARRAY_COUNT1 )
-{
-  QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->count () );
-  }
-}
-
+$method=|int|count,count1|
 
 /*
 int count ( bool on ) const
 */
-HB_FUNC_STATIC( QBITARRAY_COUNT2 )
-{
-  QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->count ( PBOOL(1) ) );
-  }
-}
-
+$method=|int|count,count2|bool
 
 //[1]int count () const
 //[2]int count ( bool on ) const
@@ -192,29 +133,12 @@ HB_FUNC_STATIC( QBITARRAY_COUNT )
 /*
 bool fill ( bool value, int size = -1 )
 */
-HB_FUNC_STATIC( QBITARRAY_FILL1 )
-{
-  QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->fill ( PBOOL(1), OPINT(2,-1) ) );
-  }
-}
-
+$method=|bool|fill,fill1|bool,int=-1
 
 /*
 void fill ( bool value, int begin, int end )
 */
-HB_FUNC_STATIC( QBITARRAY_FILL2 )
-{
-  QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->fill ( PBOOL(1), PINT(2), PINT(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|fill,fill2|bool,int,int
 
 //[1]bool fill ( bool value, int size = -1 )
 //[2]void fill ( bool value, int begin, int end )
@@ -234,70 +158,27 @@ HB_FUNC_STATIC( QBITARRAY_FILL )
 /*
 bool isEmpty () const
 */
-HB_FUNC_STATIC( QBITARRAY_ISEMPTY )
-{
-  QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isEmpty () );
-  }
-}
-
+$method=|bool|isEmpty|
 
 /*
 bool isNull () const
 */
-HB_FUNC_STATIC( QBITARRAY_ISNULL )
-{
-  QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
-
+$method=|bool|isNull|
 
 /*
 void resize ( int size )
 */
-HB_FUNC_STATIC( QBITARRAY_RESIZE )
-{
-  QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->resize ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|resize|int
 
 /*
 void setBit ( int i )
 */
-HB_FUNC_STATIC( QBITARRAY_SETBIT1 )
-{
-  QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setBit ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setBit,setBit1|int
 
 /*
 void setBit ( int i, bool value )
 */
-HB_FUNC_STATIC( QBITARRAY_SETBIT2 )
-{
-  QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setBit ( PINT(1), PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setBit,setBit2|int,bool
 
 //[1]void setBit ( int i )
 //[2]void setBit ( int i, bool value )
@@ -317,54 +198,22 @@ HB_FUNC_STATIC( QBITARRAY_SETBIT )
 /*
 int size () const
 */
-HB_FUNC_STATIC( QBITARRAY_SIZE )
-{
-  QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->size () );
-  }
-}
-
+$method=|int|size|
 
 /*
 bool testBit ( int i ) const
 */
-HB_FUNC_STATIC( QBITARRAY_TESTBIT )
-{
-  QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->testBit ( PINT(1) ) );
-  }
-}
-
+$method=|bool|testBit|int
 
 /*
 bool toggleBit ( int i )
 */
-HB_FUNC_STATIC( QBITARRAY_TOGGLEBIT )
-{
-  QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->toggleBit ( PINT(1) ) );
-  }
-}
-
+$method=|bool|toggleBit|int
 
 /*
 void truncate ( int pos )
 */
-HB_FUNC_STATIC( QBITARRAY_TRUNCATE )
-{
-  QBitArray * obj = (QBitArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->truncate ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|truncate|int
 
 $extraMethods
 

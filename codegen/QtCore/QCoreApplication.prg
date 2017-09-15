@@ -77,7 +77,6 @@ $destructor
 
 #include <QStringList>
 
-
 /*
 QCoreApplication ( int & argc, char ** argv )
 */
@@ -96,17 +95,7 @@ $deleteMethod
 /*
 bool filterEvent ( void * message, long * result )
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_FILTEREVENT )
-{
-  QCoreApplication * obj = (QCoreApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    void * par1 = (void *) hb_parptr(1);
-    long par2;
-    RBOOL( obj->filterEvent ( par1, &par2 ) );
-    hb_stornl( par2, 2 );
-  }
-}
+$method=|bool|filterEvent|void *,long *
 
 /*
 virtual bool notify ( QObject * receiver, QEvent * event )

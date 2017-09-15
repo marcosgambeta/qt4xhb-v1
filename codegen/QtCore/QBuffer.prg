@@ -47,22 +47,12 @@ $destructor
 /*
 QBuffer ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QBUFFER_NEW1 )
-{
-  QBuffer * o = new QBuffer ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new1|QObject *=0
 
 /*
 QBuffer ( QByteArray * byteArray, QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QBUFFER_NEW2 )
-{
-  QBuffer * o = new QBuffer ( PQBYTEARRAY(1), OPQOBJECT(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new2|QByteArray *,QObject *=0
 
 //[1]QBuffer ( QObject * parent = 0 )
 //[2]QBuffer ( QByteArray * byteArray, QObject * parent = 0 )
@@ -88,30 +78,12 @@ $deleteMethod
 /*
 QByteArray & buffer ()
 */
-HB_FUNC_STATIC( QBUFFER_BUFFER1 )
-{
-  QBuffer * obj = (QBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = &obj->buffer ();
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray &|buffer,buffer1|
 
 /*
 const QByteArray & buffer () const
 */
-HB_FUNC_STATIC( QBUFFER_BUFFER2 )
-{
-  QBuffer * obj = (QBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QByteArray * ptr = &obj->buffer ();
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|const QByteArray &|buffer,buffer2|
 
 //[1]QByteArray & buffer ()
 //[2]const QByteArray & buffer () const
@@ -124,58 +96,22 @@ HB_FUNC_STATIC( QBUFFER_BUFFER )
 /*
 const QByteArray & data () const
 */
-HB_FUNC_STATIC( QBUFFER_DATA )
-{
-  QBuffer * obj = (QBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QByteArray * ptr = &obj->data ();
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|const QByteArray &|data|
 
 /*
 void setBuffer ( QByteArray * byteArray )
 */
-HB_FUNC_STATIC( QBUFFER_SETBUFFER )
-{
-  QBuffer * obj = (QBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setBuffer ( PQBYTEARRAY(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setBuffer|QByteArray *
 
 /*
 void setData ( const QByteArray & data )
 */
-HB_FUNC_STATIC( QBUFFER_SETDATA1 )
-{
-  QBuffer * obj = (QBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setData ( *PQBYTEARRAY(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setData,setData1|const QByteArray &
 
 /*
 void setData ( const char * data, int size )
 */
-HB_FUNC_STATIC( QBUFFER_SETDATA2 )
-{
-  QBuffer * obj = (QBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setData ( (const char *) hb_parc(1), PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setData,setData2|const char *,int
 
 //[1]void setData ( const QByteArray & data )
 //[2]void setData ( const char * data, int size )
@@ -195,96 +131,36 @@ HB_FUNC_STATIC( QBUFFER_SETDATA )
 /*
 virtual bool atEnd () const
 */
-HB_FUNC_STATIC( QBUFFER_ATEND )
-{
-  QBuffer * obj = (QBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->atEnd () );
-  }
-}
-
+$virtualMethod=|bool|atEnd|
 
 /*
 virtual bool canReadLine () const
 */
-HB_FUNC_STATIC( QBUFFER_CANREADLINE )
-{
-  QBuffer * obj = (QBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->canReadLine () );
-  }
-}
-
+$virtualMethod=|bool|canReadLine|
 
 /*
 virtual void close ()
 */
-HB_FUNC_STATIC( QBUFFER_CLOSE )
-{
-  QBuffer * obj = (QBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->close ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|close|
 
 /*
 virtual bool open ( OpenMode flags )
 */
-HB_FUNC_STATIC( QBUFFER_OPEN )
-{
-  QBuffer * obj = (QBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->open ( (QBuffer::OpenMode) hb_parni(1) ) );
-  }
-}
-
+$virtualMethod=|bool|open|QBuffer::OpenMode
 
 /*
 virtual qint64 pos () const
 */
-HB_FUNC_STATIC( QBUFFER_POS )
-{
-  QBuffer * obj = (QBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQINT64( obj->pos () );
-  }
-}
-
+$virtualMethod=|qint64|pos|
 
 /*
 virtual bool seek ( qint64 pos )
 */
-HB_FUNC_STATIC( QBUFFER_SEEK )
-{
-  QBuffer * obj = (QBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->seek ( PQINT64(1) ) );
-  }
-}
-
+$virtualMethod=|bool|seek|qint64
 
 /*
 virtual qint64 size () const
 */
-HB_FUNC_STATIC( QBUFFER_SIZE )
-{
-  QBuffer * obj = (QBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQINT64( obj->size () );
-  }
-}
-
-
-
-
+$virtualMethod=|qint64|size|
 
 #pragma ENDDUMP

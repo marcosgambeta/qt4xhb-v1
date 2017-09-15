@@ -109,52 +109,27 @@ $destructor
 /*
 QRectF ()
 */
-HB_FUNC_STATIC( QRECTF_NEW1 )
-{
-  QRectF * o = new QRectF ();
-  _qt4xhb_storePointerAndFlag ( o, true);
-}
-
+$constructor=|new1|
 
 /*
 QRectF ( const QPointF & topLeft, const QSizeF & size )
 */
-HB_FUNC_STATIC( QRECTF_NEW2 )
-{
-  QRectF * o = new QRectF ( *PQPOINTF(1), *PQSIZEF(2) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|const QPointF &,const QSizeF &
 
 /*
 QRectF ( const QPointF & topLeft, const QPointF & bottomRight )
 */
-HB_FUNC_STATIC( QRECTF_NEW3 )
-{
-  QRectF * o = new QRectF ( *PQPOINTF(1), *PQPOINTF(2) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new3|const QPointF &,const QPointF &
 
 /*
 QRectF ( qreal x, qreal y, qreal width, qreal height )
 */
-HB_FUNC_STATIC( QRECTF_NEW4 )
-{
-  QRectF * o = new QRectF ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new4|qreal,qreal,qreal,qreal
 
 /*
 QRectF ( const QRect & rectangle )
 */
-HB_FUNC_STATIC( QRECTF_NEW5 )
-{
-  QRectF * o = new QRectF ( *PQRECT(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new5|const QRect &
 
 //[1]QRectF ()
 //[2]QRectF ( const QPointF & topLeft, const QSizeF & size )
@@ -195,124 +170,47 @@ $deleteMethod
 /*
 void adjust ( qreal dx1, qreal dy1, qreal dx2, qreal dy2 )
 */
-HB_FUNC_STATIC( QRECTF_ADJUST )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->adjust ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|adjust|qreal,qreal,qreal,qreal
 
 /*
 QRectF adjusted ( qreal dx1, qreal dy1, qreal dx2, qreal dy2 ) const
 */
-HB_FUNC_STATIC( QRECTF_ADJUSTED )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->adjusted ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
-
+$method=|QRectF|adjusted|qreal,qreal,qreal,qreal
 
 /*
 qreal bottom () const
 */
-HB_FUNC_STATIC( QRECTF_BOTTOM )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->bottom () );
-  }
-}
-
+$method=|qreal|bottom|
 
 /*
 QPointF bottomLeft () const
 */
-HB_FUNC_STATIC( QRECTF_BOTTOMLEFT )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->bottomLeft () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
-
+$method=|QPointF|bottomLeft|
 
 /*
 QPointF bottomRight () const
 */
-HB_FUNC_STATIC( QRECTF_BOTTOMRIGHT )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->bottomRight () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
-
+$method=|QPointF|bottomRight|
 
 /*
 QPointF center () const
 */
-HB_FUNC_STATIC( QRECTF_CENTER )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->center () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
-
+$method=|QPointF|center|
 
 /*
 bool contains ( const QPointF & point ) const
 */
-HB_FUNC_STATIC( QRECTF_CONTAINS1 )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->contains ( *PQPOINTF(1) ) );
-  }
-}
-
+$method=|bool|contains,contains1|const QPointF &
 
 /*
 bool contains ( qreal x, qreal y ) const
 */
-HB_FUNC_STATIC( QRECTF_CONTAINS2 )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->contains ( PQREAL(1), PQREAL(2) ) );
-  }
-}
-
+$method=|bool|contains,contains2|qreal,qreal
 
 /*
 bool contains ( const QRectF & rectangle ) const
 */
-HB_FUNC_STATIC( QRECTF_CONTAINS3 )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->contains ( *PQRECTF(1) ) );
-  }
-}
-
+$method=|bool|contains,contains3|const QRectF &
 
 //[1]bool contains ( const QPointF & point ) const
 //[2]bool contains ( qreal x, qreal y ) const
@@ -337,250 +235,87 @@ HB_FUNC_STATIC( QRECTF_CONTAINS )
 /*
 void getCoords ( qreal * x1, qreal * y1, qreal * x2, qreal * y2 ) const
 */
-HB_FUNC_STATIC( QRECTF_GETCOORDS )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    qreal par1;
-    qreal par2;
-    qreal par3;
-    qreal par4;
-    obj->getCoords ( &par1, &par2, &par3, &par4 );
-    hb_stornd( par1, 1 );
-    hb_stornd( par2, 2 );
-    hb_stornd( par3, 3 );
-    hb_stornd( par4, 4 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|getCoords|qreal *,qreal *,qreal *,qreal *
 
 /*
 void getRect ( qreal * x, qreal * y, qreal * width, qreal * height ) const
 */
-HB_FUNC_STATIC( QRECTF_GETRECT )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    qreal par1;
-    qreal par2;
-    qreal par3;
-    qreal par4;
-    obj->getRect ( &par1, &par2, &par3, &par4 );
-    hb_stornd( par1, 1 );
-    hb_stornd( par2, 2 );
-    hb_stornd( par3, 3 );
-    hb_stornd( par4, 4 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|getRect|qreal *,qreal *,qreal *,qreal *
 
 /*
 qreal height () const
 */
-HB_FUNC_STATIC( QRECTF_HEIGHT )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->height () );
-  }
-}
-
+$method=|qreal|height|
 
 /*
 QRectF intersected ( const QRectF & rectangle ) const
 */
-HB_FUNC_STATIC( QRECTF_INTERSECTED )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->intersected ( *PQRECTF(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
-
+$method=|QRectF|intersected|const QRectF &
 
 /*
 bool intersects ( const QRectF & rectangle ) const
 */
-HB_FUNC_STATIC( QRECTF_INTERSECTS )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->intersects ( *PQRECTF(1) ) );
-  }
-}
-
+$method=|bool|intersects|const QRectF &
 
 /*
 bool isEmpty () const
 */
-HB_FUNC_STATIC( QRECTF_ISEMPTY )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isEmpty () );
-  }
-}
-
+$method=|bool|isEmpty|
 
 /*
 bool isNull () const
 */
-HB_FUNC_STATIC( QRECTF_ISNULL )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
-
+$method=|bool|isNull|
 
 /*
 bool isValid () const
 */
-HB_FUNC_STATIC( QRECTF_ISVALID )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
-
+$method=|bool|isValid|
 
 /*
 qreal left () const
 */
-HB_FUNC_STATIC( QRECTF_LEFT )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->left () );
-  }
-}
-
+$method=|qreal|left|
 
 /*
 void moveBottom ( qreal y )
 */
-HB_FUNC_STATIC( QRECTF_MOVEBOTTOM )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->moveBottom ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|moveBottom|qreal
 
 /*
 void moveBottomLeft ( const QPointF & position )
 */
-HB_FUNC_STATIC( QRECTF_MOVEBOTTOMLEFT )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->moveBottomLeft ( *PQPOINTF(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|moveBottomLeft|const QPointF &
 
 /*
 void moveBottomRight ( const QPointF & position )
 */
-HB_FUNC_STATIC( QRECTF_MOVEBOTTOMRIGHT )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->moveBottomRight ( *PQPOINTF(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|moveBottomRight|const QPointF &
 
 /*
 void moveCenter ( const QPointF & position )
 */
-HB_FUNC_STATIC( QRECTF_MOVECENTER )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->moveCenter ( *PQPOINTF(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|moveCenter|const QPointF &
 
 /*
 void moveLeft ( qreal x )
 */
-HB_FUNC_STATIC( QRECTF_MOVELEFT )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->moveLeft ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|moveLeft|qreal
 
 /*
 void moveRight ( qreal x )
 */
-HB_FUNC_STATIC( QRECTF_MOVERIGHT )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->moveRight ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|moveRight|qreal
 
 /*
 void moveTo ( qreal x, qreal y )
 */
-HB_FUNC_STATIC( QRECTF_MOVETO1 )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->moveTo ( PQREAL(1), PQREAL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|moveTo,moveTo1|qreal,qreal
 
 /*
 void moveTo ( const QPointF & position )
 */
-HB_FUNC_STATIC( QRECTF_MOVETO2 )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->moveTo ( *PQPOINTF(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|moveTo,moveTo2|const QPointF &
 
 //[1]void moveTo ( qreal x, qreal y )
 //[2]void moveTo ( const QPointF & position )
@@ -600,392 +335,142 @@ HB_FUNC_STATIC( QRECTF_MOVETO )
 /*
 void moveTop ( qreal y )
 */
-HB_FUNC_STATIC( QRECTF_MOVETOP )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->moveTop ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|moveTop|qreal
 
 /*
 void moveTopLeft ( const QPointF & position )
 */
-HB_FUNC_STATIC( QRECTF_MOVETOPLEFT )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->moveTopLeft ( *PQPOINTF(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|moveTopLeft|const QPointF &
 
 /*
 void moveTopRight ( const QPointF & position )
 */
-HB_FUNC_STATIC( QRECTF_MOVETOPRIGHT )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->moveTopRight ( *PQPOINTF(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|moveTopRight|const QPointF &
 
 /*
 QRectF normalized () const
 */
-HB_FUNC_STATIC( QRECTF_NORMALIZED )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->normalized () );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
-
+$method=|QRectF|normalized|
 
 /*
 qreal right () const
 */
-HB_FUNC_STATIC( QRECTF_RIGHT )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->right () );
-  }
-}
-
+$method=|qreal|right|
 
 /*
 void setBottom ( qreal y )
 */
-HB_FUNC_STATIC( QRECTF_SETBOTTOM )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setBottom ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setBottom|qreal
 
 /*
 void setBottomLeft ( const QPointF & position )
 */
-HB_FUNC_STATIC( QRECTF_SETBOTTOMLEFT )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setBottomLeft ( *PQPOINTF(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setBottomLeft|const QPointF &
 
 /*
 void setBottomRight ( const QPointF & position )
 */
-HB_FUNC_STATIC( QRECTF_SETBOTTOMRIGHT )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setBottomRight ( *PQPOINTF(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setBottomRight|const QPointF &
 
 /*
 void setCoords ( qreal x1, qreal y1, qreal x2, qreal y2 )
 */
-HB_FUNC_STATIC( QRECTF_SETCOORDS )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCoords ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setCoords|qreal,qreal,qreal,qreal
 
 /*
 void setHeight ( qreal height )
 */
-HB_FUNC_STATIC( QRECTF_SETHEIGHT )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setHeight ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setHeight|qreal
 
 /*
 void setLeft ( qreal x )
 */
-HB_FUNC_STATIC( QRECTF_SETLEFT )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setLeft ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setLeft|qreal
 
 /*
 void setRect ( qreal x, qreal y, qreal width, qreal height )
 */
-HB_FUNC_STATIC( QRECTF_SETRECT )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setRect ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setRect|qreal,qreal,qreal,qreal
 
 /*
 void setRight ( qreal x )
 */
-HB_FUNC_STATIC( QRECTF_SETRIGHT )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setRight ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setRight|qreal
 
 /*
 void setSize ( const QSizeF & size )
 */
-HB_FUNC_STATIC( QRECTF_SETSIZE )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSize ( *PQSIZEF(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setSize|const QSizeF &
 
 /*
 void setTop ( qreal y )
 */
-HB_FUNC_STATIC( QRECTF_SETTOP )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setTop ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setTop|qreal
 
 /*
 void setTopLeft ( const QPointF & position )
 */
-HB_FUNC_STATIC( QRECTF_SETTOPLEFT )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setTopLeft ( *PQPOINTF(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setTopLeft|const QPointF &
 
 /*
 void setTopRight ( const QPointF & position )
 */
-HB_FUNC_STATIC( QRECTF_SETTOPRIGHT )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setTopRight ( *PQPOINTF(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setTopRight|const QPointF &
 
 /*
 void setWidth ( qreal width )
 */
-HB_FUNC_STATIC( QRECTF_SETWIDTH )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setWidth ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setWidth|qreal
 
 /*
 void setX ( qreal x )
 */
-HB_FUNC_STATIC( QRECTF_SETX )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setX ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setX|qreal
 
 /*
 void setY ( qreal y )
 */
-HB_FUNC_STATIC( QRECTF_SETY )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setY ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setY|qreal
 
 /*
 QSizeF size () const
 */
-HB_FUNC_STATIC( QRECTF_SIZE )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSizeF * ptr = new QSizeF( obj->size () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZEF", true );
-  }
-}
-
+$method=|QSizeF|size|
 
 /*
 QRect toAlignedRect () const
 */
-HB_FUNC_STATIC( QRECTF_TOALIGNEDRECT )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->toAlignedRect () );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
-
+$method=|QRect|toAlignedRect|
 
 /*
 QRect toRect () const
 */
-HB_FUNC_STATIC( QRECTF_TORECT )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->toRect () );
-    _qt4xhb_createReturnClass ( ptr, "QRECT", true );
-  }
-}
-
+$method=|QRect|toRect|
 
 /*
 qreal top () const
 */
-HB_FUNC_STATIC( QRECTF_TOP )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->top () );
-  }
-}
-
+$method=|qreal|top|
 
 /*
 QPointF topLeft () const
 */
-HB_FUNC_STATIC( QRECTF_TOPLEFT )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->topLeft () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
-
+$method=|QPointF|topLeft|
 
 /*
 QPointF topRight () const
 */
-HB_FUNC_STATIC( QRECTF_TOPRIGHT )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->topRight () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
-
+$method=|QPointF|topRight|
 
 /*
 void translate ( qreal dx, qreal dy )
 */
-HB_FUNC_STATIC( QRECTF_TRANSLATE1 )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->translate ( PQREAL(1), PQREAL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|translate,translate1|qreal,qreal
 
 /*
 void translate ( const QPointF & offset )
 */
-HB_FUNC_STATIC( QRECTF_TRANSLATE2 )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->translate ( *PQPOINTF(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|translate,translate2|const QPointF &
 
 //[1]void translate ( qreal dx, qreal dy )
 //[2]void translate ( const QPointF & offset )
@@ -1005,30 +490,12 @@ HB_FUNC_STATIC( QRECTF_TRANSLATE )
 /*
 QRectF translated ( qreal dx, qreal dy ) const
 */
-HB_FUNC_STATIC( QRECTF_TRANSLATED1 )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->translated ( PQREAL(1), PQREAL(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
-
+$method=|QRectF|translated,translated1|qreal,qreal
 
 /*
 QRectF translated ( const QPointF & offset ) const
 */
-HB_FUNC_STATIC( QRECTF_TRANSLATED2 )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->translated ( *PQPOINTF(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
-
+$method=|QRectF|translated,translated2|const QPointF &
 
 //[1]QRectF translated ( qreal dx, qreal dy ) const
 //[2]QRectF translated ( const QPointF & offset ) const
@@ -1048,54 +515,22 @@ HB_FUNC_STATIC( QRECTF_TRANSLATED )
 /*
 QRectF united ( const QRectF & rectangle ) const
 */
-HB_FUNC_STATIC( QRECTF_UNITED )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->united ( *PQRECTF(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
-
+$method=|QRectF|united|const QRectF &
 
 /*
 qreal width () const
 */
-HB_FUNC_STATIC( QRECTF_WIDTH )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->width () );
-  }
-}
-
+$method=|qreal|width|
 
 /*
 qreal x () const
 */
-HB_FUNC_STATIC( QRECTF_X )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->x () );
-  }
-}
-
+$method=|qreal|x|
 
 /*
 qreal y () const
 */
-HB_FUNC_STATIC( QRECTF_Y )
-{
-  QRectF * obj = (QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->y () );
-  }
-}
+$method=|qreal|y|
 
 $extraMethods
 

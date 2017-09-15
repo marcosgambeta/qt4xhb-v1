@@ -51,61 +51,33 @@ $destructor
 /*
 QUuid()
 */
-HB_FUNC_STATIC( QUUID_NEW1 )
-{
-  QUuid * o = new QUuid ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|
 
 /*
 QUuid(uint l, ushort w1, ushort w2, uchar b1, uchar b2, uchar b3, uchar b4, uchar b5, uchar b6, uchar b7, uchar b8)
 */
-HB_FUNC_STATIC( QUUID_NEW2 )
-{
-  uchar par4 = ISCHAR(4)? (uchar) hb_parc(4)[0] : (ISNUM(4)? hb_parni(4) : 0);
-  uchar par5 = ISCHAR(5)? (uchar) hb_parc(5)[0] : (ISNUM(5)? hb_parni(5) : 0);
-  uchar par6 = ISCHAR(6)? (uchar) hb_parc(6)[0] : (ISNUM(6)? hb_parni(6) : 0);
-  uchar par7 = ISCHAR(7)? (uchar) hb_parc(7)[0] : (ISNUM(7)? hb_parni(7) : 0);
-  uchar par8 = ISCHAR(8)? (uchar) hb_parc(8)[0] : (ISNUM(8)? hb_parni(8) : 0);
-  uchar par9 = ISCHAR(9)? (uchar) hb_parc(9)[0] : (ISNUM(9)? hb_parni(9) : 0);
-  uchar par10 = ISCHAR(10)? (uchar) hb_parc(10)[0] : (ISNUM(10)? hb_parni(10) : 0);
-  uchar par11 = ISCHAR(11)? (uchar) hb_parc(11)[0] : (ISNUM(11)? hb_parni(11) : 0);
-  QUuid * o = new QUuid ( PUINT(1), PUSHORT(2), PUSHORT(3), par4, par5, par6, par7, par8, par9, par10, par11 );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|uint,ushort,ushort,uchar,uchar,uchar,uchar,uchar,uchar,uchar,uchar
 
 /*
 QUuid(const QString &)
 */
-HB_FUNC_STATIC( QUUID_NEW3 )
-{
-  QUuid * o = new QUuid ( PQSTRING(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new3|const QString &
 
 /*
 QUuid(const char *)
 */
-HB_FUNC_STATIC( QUUID_NEW4 )
-{
-  QUuid * o = new QUuid ( (const char *) hb_parc(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new4|const char *
 
 /*
 QUuid(const QByteArray &)
 */
-HB_FUNC_STATIC( QUUID_NEW5 )
-{
-  QUuid * o = new QUuid ( *PQBYTEARRAY(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new5|const QByteArray &
 
-
+/*
+QUuid(const GUID &guid)
+*/
+%% TOOD: implementar
+%% $constructor=|new6|const GUID &
 
 //[1]QUuid()
 //[2]QUuid(uint l, ushort w1, ushort w2, uchar b1, uchar b2, uchar b3, uchar b4, uchar b5, uchar b6, uchar b7, uchar b8)
@@ -149,89 +121,37 @@ $method=|QString|toString|
 /*
 QByteArray toByteArray() const
 */
-HB_FUNC_STATIC( QUUID_TOBYTEARRAY )
-{
-  QUuid * obj = (QUuid *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->toByteArray () );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray|toByteArray|
 
 /*
 QByteArray toRfc4122() const
 */
-HB_FUNC_STATIC( QUUID_TORFC4122 )
-{
-  QUuid * obj = (QUuid *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->toRfc4122 () );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray|toRfc4122|
 
 /*
 bool isNull() const
 */
-HB_FUNC_STATIC( QUUID_ISNULL )
-{
-  QUuid * obj = (QUuid *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
-
+$method=|bool|isNull|
 
 /*
 QUuid::Variant variant() const
 */
-HB_FUNC_STATIC( QUUID_VARIANT )
-{
-  QUuid * obj = (QUuid *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->variant () );
-  }
-}
-
+$method=|QUuid::Variant|variant|
 
 /*
 QUuid::Version version() const
 */
-HB_FUNC_STATIC( QUUID_VERSION )
-{
-  QUuid * obj = (QUuid *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->version () );
-  }
-}
-
-
+$method=|QUuid::Version|version|
 
 /*
 static QUuid fromRfc4122(const QByteArray &)
 */
-HB_FUNC_STATIC( QUUID_FROMRFC4122 )
-{
-  QUuid * ptr = new QUuid( QUuid::fromRfc4122 ( *PQBYTEARRAY(1) ) );
-  _qt4xhb_createReturnClass ( ptr, "QUUID", true );
-}
-
+$staticMethod=|QUuid|fromRfc4122|const QByteArray &
 
 /*
 static QUuid createUuid()
 */
-HB_FUNC_STATIC( QUUID_CREATEUUID )
-{
-  QUuid * ptr = new QUuid( QUuid::createUuid () );
-  _qt4xhb_createReturnClass ( ptr, "QUUID", true );
-}
+$staticMethod=|QUuid|createUuid|
 
 $extraMethods
 

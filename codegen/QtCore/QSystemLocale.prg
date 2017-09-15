@@ -39,41 +39,17 @@ $destructor
 /*
 QSystemLocale ()
 */
-HB_FUNC_STATIC( QSYSTEMLOCALE_NEW )
-{
-  QSystemLocale * o = new QSystemLocale ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
-
+$constructor=|new|
 
 /*
 virtual QLocale fallbackLocale () const
 */
-HB_FUNC_STATIC( QSYSTEMLOCALE_FALLBACKLOCALE )
-{
-  QSystemLocale * obj = (QSystemLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QLocale * ptr = new QLocale( obj->fallbackLocale () );
-    _qt4xhb_createReturnClass ( ptr, "QLOCALE" );
-  }
-}
-
+$virtualMethod=|QLocale|fallbackLocale|
 
 /*
 virtual QVariant query ( QueryType type, QVariant in ) const
 */
-HB_FUNC_STATIC( QSYSTEMLOCALE_QUERY )
-{
-  QSystemLocale * obj = (QSystemLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVariant * par2 = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QVariant * ptr = new QVariant( obj->query ( (QSystemLocale::QueryType) hb_parni(1), *par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
+$virtualMethod=|QVariant|query|QSystemLocale::QueryType,QVariant
 
 $extraMethods
 

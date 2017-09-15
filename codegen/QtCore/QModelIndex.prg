@@ -52,22 +52,12 @@ $destructor
 /*
 QModelIndex ()
 */
-HB_FUNC_STATIC( QMODELINDEX_NEW1 )
-{
-  QModelIndex * o = new QModelIndex ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|
 
 /*
 QModelIndex ( const QModelIndex & other )
 */
-HB_FUNC_STATIC( QMODELINDEX_NEW2 )
-{
-  QModelIndex * o = new QModelIndex ( *PQMODELINDEX(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|const QModelIndex &
 
 //[1]QModelIndex ()
 //[2]QModelIndex ( const QModelIndex & other )
@@ -93,150 +83,57 @@ $deleteMethod
 /*
 QModelIndex child ( int row, int column ) const
 */
-HB_FUNC_STATIC( QMODELINDEX_CHILD )
-{
-  QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QModelIndex * ptr = new QModelIndex( obj->child ( PINT(1), PINT(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-  }
-}
-
+$method=|QModelIndex|child|int,int
 
 /*
 int column () const
 */
-HB_FUNC_STATIC( QMODELINDEX_COLUMN )
-{
-  QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->column () );
-  }
-}
-
+$method=|int|column|
 
 /*
 QVariant data ( int role = Qt::DisplayRole ) const
 */
-HB_FUNC_STATIC( QMODELINDEX_DATA )
-{
-  QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->data ( OPINT(1,Qt::DisplayRole) ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
-
+$method=|QVariant|data|int=Qt::DisplayRole
 
 /*
 Qt::ItemFlags flags () const
 */
-HB_FUNC_STATIC( QMODELINDEX_FLAGS )
-{
-  QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->flags () );
-  }
-}
-
+$method=|Qt::ItemFlags|flags|
 
 /*
 qint64 internalId () const
 */
-HB_FUNC_STATIC( QMODELINDEX_INTERNALID )
-{
-  QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQINT64( obj->internalId () );
-  }
-}
-
+$method=|qint64|internalId|
 
 /*
 void * internalPointer () const
 */
-HB_FUNC_STATIC( QMODELINDEX_INTERNALPOINTER )
-{
-  QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    void * retptr = obj->internalPointer ();
-  hb_retptr( (void *) retptr );
-  }
-}
-
+$method=|void *|internalPointer|
 
 /*
 bool isValid () const
 */
-HB_FUNC_STATIC( QMODELINDEX_ISVALID )
-{
-  QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
-
+$method=|bool|isValid|
 
 /*
 const QAbstractItemModel * model () const
 */
-HB_FUNC_STATIC( QMODELINDEX_MODEL )
-{
-  QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QAbstractItemModel * ptr = obj->model ();
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTITEMMODEL" );
-  }
-}
-
+$method=|const QAbstractItemModel *|model|
 
 /*
 QModelIndex parent () const
 */
-HB_FUNC_STATIC( QMODELINDEX_PARENT )
-{
-  QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QModelIndex * ptr = new QModelIndex( obj->parent () );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-  }
-}
-
+$method=|QModelIndex|parent|
 
 /*
 int row () const
 */
-HB_FUNC_STATIC( QMODELINDEX_ROW )
-{
-  QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->row () );
-  }
-}
-
+$method=|int|row|
 
 /*
 QModelIndex sibling ( int row, int column ) const
 */
-HB_FUNC_STATIC( QMODELINDEX_SIBLING )
-{
-  QModelIndex * obj = (QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QModelIndex * ptr = new QModelIndex( obj->sibling ( PINT(1), PINT(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-  }
-}
+$method=|QModelIndex|sibling|int,int
 
 $extraMethods
 

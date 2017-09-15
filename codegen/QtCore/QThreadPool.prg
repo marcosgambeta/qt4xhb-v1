@@ -43,164 +43,64 @@ $destructor
 /*
 QThreadPool ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QTHREADPOOL_NEW )
-{
-  QThreadPool * o = new QThreadPool ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
 /*
 int activeThreadCount () const
 */
-HB_FUNC_STATIC( QTHREADPOOL_ACTIVETHREADCOUNT )
-{
-  QThreadPool * obj = (QThreadPool *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->activeThreadCount () );
-  }
-}
-
+$method=|int|activeThreadCount|
 
 /*
 int expiryTimeout () const
 */
-HB_FUNC_STATIC( QTHREADPOOL_EXPIRYTIMEOUT )
-{
-  QThreadPool * obj = (QThreadPool *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->expiryTimeout () );
-  }
-}
-
+$method=|int|expiryTimeout|
 
 /*
 int maxThreadCount () const
 */
-HB_FUNC_STATIC( QTHREADPOOL_MAXTHREADCOUNT )
-{
-  QThreadPool * obj = (QThreadPool *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->maxThreadCount () );
-  }
-}
-
+$method=|int|maxThreadCount|
 
 /*
 void releaseThread ()
 */
-HB_FUNC_STATIC( QTHREADPOOL_RELEASETHREAD )
-{
-  QThreadPool * obj = (QThreadPool *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->releaseThread ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|releaseThread|
 
 /*
 void reserveThread ()
 */
-HB_FUNC_STATIC( QTHREADPOOL_RESERVETHREAD )
-{
-  QThreadPool * obj = (QThreadPool *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->reserveThread ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|reserveThread|
 
 /*
 void setExpiryTimeout ( int expiryTimeout )
 */
-HB_FUNC_STATIC( QTHREADPOOL_SETEXPIRYTIMEOUT )
-{
-  QThreadPool * obj = (QThreadPool *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setExpiryTimeout ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setExpiryTimeout|int
 
 /*
 void setMaxThreadCount ( int maxThreadCount )
 */
-HB_FUNC_STATIC( QTHREADPOOL_SETMAXTHREADCOUNT )
-{
-  QThreadPool * obj = (QThreadPool *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setMaxThreadCount ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setMaxThreadCount|int
 
 /*
 void start ( QRunnable * runnable, int priority = 0 )
 */
-HB_FUNC_STATIC( QTHREADPOOL_START )
-{
-  QThreadPool * obj = (QThreadPool *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRunnable * par1 = (QRunnable *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->start ( par1, OPINT(2,0) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|start|QRunnable *,int=0
 
 /*
 bool tryStart ( QRunnable * runnable )
 */
-HB_FUNC_STATIC( QTHREADPOOL_TRYSTART )
-{
-  QThreadPool * obj = (QThreadPool *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRunnable * par1 = (QRunnable *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->tryStart ( par1 ) );
-  }
-}
-
+$method=|bool|tryStart|QRunnable *
 
 /*
 void waitForDone ()
 */
-HB_FUNC_STATIC( QTHREADPOOL_WAITFORDONE1 )
-{
-  QThreadPool * obj = (QThreadPool *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->waitForDone ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|waitForDone,waitForDone1|
 
 /*
 bool waitForDone ( int msecs )
 */
-HB_FUNC_STATIC( QTHREADPOOL_WAITFORDONE2 )
-{
-  QThreadPool * obj = (QThreadPool *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->waitForDone ( PINT(1) ) );
-  }
-}
-
+$method=|bool|waitForDone,waitForDone2|int
 
 //[1]void waitForDone ()
 //[2]bool waitForDone ( int msecs )
@@ -217,17 +117,9 @@ HB_FUNC_STATIC( QTHREADPOOL_WAITFORDONE )
   }
 }
 
-
 /*
-QThreadPool * globalInstance ()
+static QThreadPool * globalInstance ()
 */
-HB_FUNC_STATIC( QTHREADPOOL_GLOBALINSTANCE )
-{
-  QThreadPool * ptr = QThreadPool::globalInstance ();
-  _qt4xhb_createReturnClass ( ptr, "QTHREADPOOL" );
-}
-
-
-
+$staticMethod=|QThreadPool *|globalInstance|
 
 #pragma ENDDUMP

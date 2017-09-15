@@ -42,25 +42,12 @@ $destructor
 /*
 QTextEncoder(const QTextCodec * codec)
 */
-HB_FUNC_STATIC( QTEXTENCODER_NEW1 )
-{
-  const QTextCodec * par1 = (const QTextCodec *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QTextEncoder * o = new QTextEncoder ( par1 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new1|const QTextCodec *
 
 /*
 QTextEncoder(const QTextCodec * codec, QTextCodec::ConversionFlags flags)
 */
-HB_FUNC_STATIC( QTEXTENCODER_NEW2 )
-{
-  const QTextCodec * par1 = (const QTextCodec *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  int par2 = hb_parni(2);
-  QTextEncoder * o = new QTextEncoder ( par1, (QTextCodec::ConversionFlags) par2 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new2|const QTextCodec *,QTextCodec::ConversionFlags
 
 //[1]QTextEncoder(const QTextCodec * codec)
 //[2]QTextEncoder(const QTextCodec * codec, QTextCodec::ConversionFlags flags)
@@ -91,18 +78,7 @@ $method=|QByteArray|fromUnicode,fromUnicode1|const QString &
 /*
 QByteArray fromUnicode(const QChar * uc, int len)
 */
-HB_FUNC_STATIC( QTEXTENCODER_FROMUNICODE2 )
-{
-  QTextEncoder * obj = (QTextEncoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QChar * par1 = (const QChar *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par2 = hb_parni(2);
-    QByteArray * ptr = new QByteArray( obj->fromUnicode ( par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray|fromUnicode,fromUnicode2|const QChar *,int
 
 //[1]QByteArray fromUnicode(const QString & str)
 //[2]QByteArray fromUnicode(const QChar * uc, int len)

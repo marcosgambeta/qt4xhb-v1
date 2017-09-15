@@ -39,80 +39,34 @@ $destructor
 /*
 QSemaphore ( int n = 0 )
 */
-HB_FUNC_STATIC( QSEMAPHORE_NEW )
-{
-  QSemaphore * o = new QSemaphore ( OPINT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new|int=0
 
 $deleteMethod
 
 /*
 void acquire ( int n = 1 )
 */
-HB_FUNC_STATIC( QSEMAPHORE_ACQUIRE )
-{
-  QSemaphore * obj = (QSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->acquire ( OPINT(1,1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|acquire|int=1
 
 /*
 int available () const
 */
-HB_FUNC_STATIC( QSEMAPHORE_AVAILABLE )
-{
-  QSemaphore * obj = (QSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->available () );
-  }
-}
-
+$method=|int|available|
 
 /*
 void release ( int n = 1 )
 */
-HB_FUNC_STATIC( QSEMAPHORE_RELEASE )
-{
-  QSemaphore * obj = (QSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->release ( OPINT(1,1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|release|int=1
 
 /*
 bool tryAcquire ( int n = 1 )
 */
-HB_FUNC_STATIC( QSEMAPHORE_TRYACQUIRE1 )
-{
-  QSemaphore * obj = (QSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->tryAcquire ( OPINT(1,1) ) );
-  }
-}
-
+$method=|bool|tryAcquire,tryAcquire1|int=1
 
 /*
 bool tryAcquire ( int n, int timeout )
 */
-HB_FUNC_STATIC( QSEMAPHORE_TRYACQUIRE2 )
-{
-  QSemaphore * obj = (QSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->tryAcquire ( PINT(1), PINT(2) ) );
-  }
-}
-
+$method=|bool|tryAcquire,tryAcquire2|int,int
 
 //[1]bool tryAcquire ( int n = 1 )
 //[2]bool tryAcquire ( int n, int timeout )

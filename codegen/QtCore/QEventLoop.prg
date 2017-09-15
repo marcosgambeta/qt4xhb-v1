@@ -34,80 +34,34 @@ $destructor
 /*
 QEventLoop ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QEVENTLOOP_NEW )
-{
-  QEventLoop * o = new QEventLoop ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
 /*
 int exec ( ProcessEventsFlags flags = AllEvents )
 */
-HB_FUNC_STATIC( QEVENTLOOP_EXEC )
-{
-  QEventLoop * obj = (QEventLoop *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->exec ( ISNIL(1)? QEventLoop::AllEvents : (QEventLoop::ProcessEventsFlags) hb_parni(1) ) );
-  }
-}
-
+$method=|int|exec|QEventLoop::ProcessEventsFlags=QEventLoop::AllEvents
 
 /*
 void exit ( int returnCode = 0 )
 */
-HB_FUNC_STATIC( QEVENTLOOP_EXIT )
-{
-  QEventLoop * obj = (QEventLoop *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->exit ( OPINT(1,0) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|exit|int=0
 
 /*
 bool isRunning () const
 */
-HB_FUNC_STATIC( QEVENTLOOP_ISRUNNING )
-{
-  QEventLoop * obj = (QEventLoop *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isRunning () );
-  }
-}
-
+$method=|bool|isRunning|
 
 /*
 bool processEvents ( ProcessEventsFlags flags = AllEvents )
 */
-HB_FUNC_STATIC( QEVENTLOOP_PROCESSEVENTS1 )
-{
-  QEventLoop * obj = (QEventLoop *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->processEvents ( ISNIL(1)? QEventLoop::AllEvents : (QEventLoop::ProcessEventsFlags) hb_parni(1) ) );
-  }
-}
-
+$method=|bool|processEvents,processEvents1|QEventLoop::ProcessEventsFlags=QEventLoop::AllEvents
 
 /*
 void processEvents ( ProcessEventsFlags flags, int maxTime )
 */
-HB_FUNC_STATIC( QEVENTLOOP_PROCESSEVENTS2 )
-{
-  QEventLoop * obj = (QEventLoop *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->processEvents ( (QEventLoop::ProcessEventsFlags) hb_parni(1), PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|processEvents,processEvents2|QEventLoop::ProcessEventsFlags,int
 
 //[1]bool processEvents ( ProcessEventsFlags flags = AllEvents )
 //[2]void processEvents ( ProcessEventsFlags flags, int maxTime )
@@ -127,31 +81,11 @@ HB_FUNC_STATIC( QEVENTLOOP_PROCESSEVENTS )
 /*
 void wakeUp ()
 */
-HB_FUNC_STATIC( QEVENTLOOP_WAKEUP )
-{
-  QEventLoop * obj = (QEventLoop *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->wakeUp ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|wakeUp|
 
 /*
 void quit ()
 */
-HB_FUNC_STATIC( QEVENTLOOP_QUIT )
-{
-  QEventLoop * obj = (QEventLoop *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->quit ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
+$method=|void|quit|
 
 #pragma ENDDUMP

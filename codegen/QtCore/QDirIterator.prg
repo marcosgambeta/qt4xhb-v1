@@ -47,53 +47,29 @@ $destructor
 /*
 QDirIterator ( const QDir & dir, IteratorFlags flags = NoIteratorFlags )
 */
-HB_FUNC_STATIC( QDIRITERATOR_NEW1 )
-{
-  int par2 = ISNIL(2)? (int) QDirIterator::NoIteratorFlags : hb_parni(2);
-  QDirIterator * o = new QDirIterator ( *PQDIR(1), (QDirIterator::IteratorFlags) par2 );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|const QDir &,QDirIterator::IteratorFlags=QDirIterator::NoIteratorFlags
 
 /*
 QDirIterator ( const QString & path, IteratorFlags flags = NoIteratorFlags )
 */
-HB_FUNC_STATIC( QDIRITERATOR_NEW2 )
-{
-  int par2 = ISNIL(2)? (int) QDirIterator::NoIteratorFlags : hb_parni(2);
-  QDirIterator * o = new QDirIterator ( PQSTRING(1), (QDirIterator::IteratorFlags) par2 );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|const QString &,QDirIterator::IteratorFlags=QDirIterator::NoIteratorFlags
 
 /*
 QDirIterator ( const QString & path, QDir::Filters filters, IteratorFlags flags = NoIteratorFlags )
 */
-HB_FUNC_STATIC( QDIRITERATOR_NEW3 )
-{
-  int par3 = ISNIL(3)? (int) QDirIterator::NoIteratorFlags : hb_parni(3);
-  QDirIterator * o = new QDirIterator ( PQSTRING(1), (QDir::Filters) hb_parni(2), (QDirIterator::IteratorFlags) par3 );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new3|const QString &,QDir::Filters,QDir::IteratorFlags=QDir::NoIteratorFlags
 
 /*
 QDirIterator ( const QString & path, const QStringList & nameFilters, QDir::Filters filters = QDir::NoFilter, IteratorFlags flags = NoIteratorFlags )
 */
-HB_FUNC_STATIC( QDIRITERATOR_NEW4 )
-{
-  int par4 = ISNIL(4)? (int) QDirIterator::NoIteratorFlags : hb_parni(4);
-  QDirIterator * o = new QDirIterator ( PQSTRING(1), PQSTRINGLIST(2), ISNIL(3)? QDir::NoFilter : (QDir::Filters) hb_parni(3), (QDirIterator::IteratorFlags) par4 );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new4|const QString &,const QStringList &,QDir::Filters=QDir::NoFilter,QDirIterator::IteratorFlags=QDirIterator::NoIteratorFlags
 
 //[1]QDirIterator ( const QDir & dir, IteratorFlags flags = NoIteratorFlags )
 //[2]QDirIterator ( const QString & path, IteratorFlags flags = NoIteratorFlags )
 //[3]QDirIterator ( const QString & path, QDir::Filters filters, IteratorFlags flags = NoIteratorFlags )
 //[4]QDirIterator ( const QString & path, const QStringList & nameFilters, QDir::Filters filters = QDir::NoFilter, IteratorFlags flags = NoIteratorFlags )
 
-// TODO: resolver conflito entre casos 2 e 3
+%% TODO: resolver conflito entre casos 2 e 3
 
 HB_FUNC_STATIC( QDIRITERATOR_NEW )
 {
@@ -124,15 +100,7 @@ $deleteMethod
 /*
 QFileInfo fileInfo () const
 */
-HB_FUNC_STATIC( QDIRITERATOR_FILEINFO )
-{
-  QDirIterator * obj = (QDirIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QFileInfo * ptr = new QFileInfo( obj->fileInfo () );
-    _qt4xhb_createReturnClass ( ptr, "QFILEINFO", true );
-  }
-}
+$method=|QFileInfo|fileInfo|
 
 /*
 QString fileName () const
@@ -147,14 +115,7 @@ $method=|QString|filePath|
 /*
 bool hasNext () const
 */
-HB_FUNC_STATIC( QDIRITERATOR_HASNEXT )
-{
-  QDirIterator * obj = (QDirIterator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasNext () );
-  }
-}
+$method=|bool|hasNext|
 
 /*
 QString next ()

@@ -39,39 +39,19 @@ $destructor
 /*
 QSystemSemaphore ( const QString & key, int initialValue = 0, AccessMode mode = Open )
 */
-HB_FUNC_STATIC( QSYSTEMSEMAPHORE_NEW )
-{
-  int par3 = ISNIL(3)? (int) QSystemSemaphore::Open : hb_parni(3);
-  QSystemSemaphore * o = new QSystemSemaphore ( PQSTRING(1), OPINT(2,0), (QSystemSemaphore::AccessMode) par3 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|const QString &,int=0,QSystemSemaphore::AccessMode=QSystemSemaphore::Open
 
 $deleteMethod
 
 /*
 bool acquire ()
 */
-HB_FUNC_STATIC( QSYSTEMSEMAPHORE_ACQUIRE )
-{
-  QSystemSemaphore * obj = (QSystemSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->acquire () );
-  }
-}
-
+$method=|bool|acquire|
 
 /*
 SystemSemaphoreError error () const
 */
-HB_FUNC_STATIC( QSYSTEMSEMAPHORE_ERROR )
-{
-  QSystemSemaphore * obj = (QSystemSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->error () );
-  }
-}
+$method=|QSystemSemaphore::SystemSemaphoreError|error|
 
 /*
 QString errorString () const
@@ -86,29 +66,12 @@ $method=|QString|key|
 /*
 bool release ( int n = 1 )
 */
-HB_FUNC_STATIC( QSYSTEMSEMAPHORE_RELEASE )
-{
-  QSystemSemaphore * obj = (QSystemSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->release ( OPINT(1,1) ) );
-  }
-}
-
+$method=|bool|release|int=1
 
 /*
 void setKey ( const QString & key, int initialValue = 0, AccessMode mode = Open )
 */
-HB_FUNC_STATIC( QSYSTEMSEMAPHORE_SETKEY )
-{
-  QSystemSemaphore * obj = (QSystemSemaphore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par3 = ISNIL(3)? (int) QSystemSemaphore::Open : hb_parni(3);
-    obj->setKey ( PQSTRING(1), OPINT(2,0), (QSystemSemaphore::AccessMode) par3 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setKey|const QString &,int=0,QSystemSemaphore::AccessMode=QSystemSemaphore::Open
 
 $extraMethods
 

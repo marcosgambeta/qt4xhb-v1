@@ -31,28 +31,13 @@ $destructor
 /*
 QDynamicPropertyChangeEvent ( const QByteArray & name )
 */
-HB_FUNC_STATIC( QDYNAMICPROPERTYCHANGEEVENT_NEW )
-{
-  QDynamicPropertyChangeEvent * o = new QDynamicPropertyChangeEvent ( *PQBYTEARRAY(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new1|const QByteArray &
 
 $deleteMethod
 
 /*
 QByteArray propertyName () const
 */
-HB_FUNC_STATIC( QDYNAMICPROPERTYCHANGEEVENT_PROPERTYNAME )
-{
-  QDynamicPropertyChangeEvent * obj = (QDynamicPropertyChangeEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->propertyName () );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
-
-
+$method=|QByteArray|propertyName|
 
 #pragma ENDDUMP

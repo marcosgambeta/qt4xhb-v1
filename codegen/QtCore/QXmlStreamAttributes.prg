@@ -51,55 +51,24 @@ $destructor
 /*
 QXmlStreamAttributes()
 */
-HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_NEW )
-{
-  QXmlStreamAttributes * o = new QXmlStreamAttributes ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new|
 
 $deleteMethod
 
 /*
 void append(const QString & namespaceUri, const QString & name, const QString & value)
 */
-HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_APPEND1 )
-{
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->append ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|append,append1|const QString &,const QString &,const QString &
 
 /*
 void append(const QXmlStreamAttribute & attribute)
 */
-HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_APPEND2 )
-{
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->append ( *PQXMLSTREAMATTRIBUTE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|append,append2|const QXmlStreamAttribute &
 
 /*
 void append(const QString & qualifiedName, const QString & value)
 */
-HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_APPEND3 )
-{
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->append ( PQSTRING(1), PQSTRING(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|append,append3|const QString &,const QString &
 
 //[1]void append(const QString & namespaceUri, const QString & name, const QString & value)
 //[2]void append(const QXmlStreamAttribute & attribute)
@@ -124,42 +93,17 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_APPEND )
 /*
 bool hasAttribute(const QString & qualifiedName) const
 */
-HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE1 )
-{
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasAttribute ( PQSTRING(1) ) );
-  }
-}
-
+$method=|bool|hasAttribute,hasAttribute1|const QString &
 
 /*
 bool hasAttribute(QLatin1String qualifiedName) const
 */
-HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE2 )
-{
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QLatin1String * par1 = (QLatin1String *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->hasAttribute ( *par1 ) );
-  }
-}
-
+$method=|bool|hasAttribute,hasAttribute2|QLatin1String
 
 /*
 bool hasAttribute(const QString & namespaceUri, const QString & name) const
 */
-HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE3 )
-{
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasAttribute ( PQSTRING(1), PQSTRING(2) ) );
-  }
-}
-
+$method=|bool|hasAttribute,hasAttribute3|const QString &,const QString &
 
 //[1]bool hasAttribute(const QString & qualifiedName) const
 //[2]bool hasAttribute(QLatin1String qualifiedName) const
@@ -184,76 +128,27 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE )
 /*
 QStringRef value(const QString & namespaceUri, const QString & name) const
 */
-HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE1 )
-{
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QStringRef * ptr = new QStringRef( obj->value ( PQSTRING(1), PQSTRING(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
-
+$method=|QStringRef|value,value1|const QString &,const QString &
 
 /*
 QStringRef value(const QString & namespaceUri, QLatin1String name) const
 */
-HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE2 )
-{
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QLatin1String * par2 = (QLatin1String *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QStringRef * ptr = new QStringRef( obj->value ( PQSTRING(1), *par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
-
+$method=|QStringRef|value,value2|const QString &,QLatin1String
 
 /*
 QStringRef value(QLatin1String namespaceUri, QLatin1String name) const
 */
-HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE3 )
-{
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QLatin1String * par1 = (QLatin1String *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QLatin1String * par2 = (QLatin1String *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QStringRef * ptr = new QStringRef( obj->value ( *par1, *par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
-
+$method=|QStringRef|value,value3|QLatin1String,QLatin1String
 
 /*
 QStringRef value(const QString & qualifiedName) const
 */
-HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE4 )
-{
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QStringRef * ptr = new QStringRef( obj->value ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
-
+$method=|QStringRef|value,value4|const QString &
 
 /*
 QStringRef value(QLatin1String qualifiedName) const
 */
-HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE5 )
-{
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QLatin1String * par1 = (QLatin1String *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QStringRef * ptr = new QStringRef( obj->value ( *par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
-
+$method=|QStringRef|value,value5|QLatin1String
 
 //[1]QStringRef value(const QString & namespaceUri, const QString & name) const
 //[2]QStringRef value(const QString & namespaceUri, QLatin1String name) const

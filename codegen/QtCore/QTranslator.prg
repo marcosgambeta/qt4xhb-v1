@@ -33,53 +33,29 @@ $destructor
 /*
 QTranslator(QObject * parent = 0)
 */
-HB_FUNC_STATIC( QTRANSLATOR_NEW )
-{
-  QTranslator * o = new QTranslator ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
 /*
 virtual bool isEmpty() const
 */
-HB_FUNC_STATIC( QTRANSLATOR_ISEMPTY )
-{
-  QTranslator * obj = (QTranslator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isEmpty () );
-  }
-}
-
+$virtualMethod=|bool|isEmpty|
 
 /*
 bool load(const QString & filename, const QString & directory = QString(), const QString & search_delimiters = QString(), const QString & suffix = QString())
 */
-HB_FUNC_STATIC( QTRANSLATOR_LOAD1 )
-{
-  QTranslator * obj = (QTranslator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->load ( PQSTRING(1), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()) ) );
-  }
-}
-
+$method=|bool|load,load1|const QString &,const QString &=QString(),const QString &=QString(),const QString &=QString()
 
 /*
 bool load(const QLocale & locale, const QString & filename, const QString & prefix = QString(), const QString & directory = QString(), const QString & suffix = QString())
 */
-HB_FUNC_STATIC( QTRANSLATOR_LOAD2 )
-{
-  QTranslator * obj = (QTranslator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->load ( *PQLOCALE(1), PQSTRING(2), OPQSTRING(3,QString()), OPQSTRING(4,QString()), OPQSTRING(5,QString()) ) );
-  }
-}
+$method=|bool|load,load2|const QLocale &,const QString &,const QString &=QString(),const QString &=QString(),const QString &=QString()
 
-
+/*
+bool load(const uchar * data, int len, const QString & directory = QString())
+*/
+$method=|bool|load,load3|const uchar *,int,const QString &=QString()
 
 //[1]bool load(const QString & filename, const QString & directory = QString(), const QString & search_delimiters = QString(), const QString & suffix = QString())
 //[2]bool load(const QLocale & locale, const QString & filename, const QString & prefix = QString(), const QString & directory = QString(), const QString & suffix = QString())
@@ -95,29 +71,15 @@ HB_FUNC_STATIC( QTRANSLATOR_LOAD )
   {
     HB_FUNC_EXEC( QTRANSLATOR_LOAD2 );
   }
-  //else if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
-  //{
-  //  HB_FUNC_EXEC( QTRANSLATOR_LOAD3 );
-  //}
-  //else if( ISNUMPAR(3) && ISCHAR(1) && ISNUM(2) && (ISCHAR(3)||ISNIL(3)) )
-  //{
-  //  HB_FUNC_EXEC( QTRANSLATOR_LOAD3 );
-  //}
+  else if( ISBETWEEN(2,3) && ISCHAR(1) && ISNUM(2) && (ISCHAR(3)||ISNIL(3)) )
+  {
+    HB_FUNC_EXEC( QTRANSLATOR_LOAD2 );
+  }
 }
 
 /*
 virtual QString translate(const char * context, const char * sourceText, const char * disambiguation = 0, int n = -1) const
 */
-HB_FUNC_STATIC( QTRANSLATOR_TRANSLATE )
-{
-  QTranslator * obj = (QTranslator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->translate ( (const char *) hb_parc(1), (const char *) hb_parc(2), (const char *) hb_parc(3), OPINT(4,-1) ) );
-  }
-}
-
-
-
+$virtualMethod=|QString|translate|const char *,const char *,const char *=0,int=-1
 
 #pragma ENDDUMP

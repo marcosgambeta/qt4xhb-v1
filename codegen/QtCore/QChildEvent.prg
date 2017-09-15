@@ -34,68 +34,28 @@ $destructor
 /*
 QChildEvent(Type type, QObject * child)
 */
-HB_FUNC_STATIC( QCHILDEVENT_NEW )
-{
-  QChildEvent * o = new QChildEvent ( (QEvent::Type) hb_parni(1), PQOBJECT(2) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QEvent::Type,QObject *
 
 $deleteMethod
 
 /*
 bool added() const
 */
-HB_FUNC_STATIC( QCHILDEVENT_ADDED )
-{
-  QChildEvent * obj = (QChildEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->added () );
-  }
-}
-
+$method=|bool|added|
 
 /*
 QObject * child() const
 */
-HB_FUNC_STATIC( QCHILDEVENT_CHILD )
-{
-  QChildEvent * obj = (QChildEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QObject * ptr = obj->child ();
-    _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
-
+$method=|QObject *|child|
 
 /*
 bool polished() const
 */
-HB_FUNC_STATIC( QCHILDEVENT_POLISHED )
-{
-  QChildEvent * obj = (QChildEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->polished () );
-  }
-}
-
+$method=|bool|polished|
 
 /*
 bool removed() const
 */
-HB_FUNC_STATIC( QCHILDEVENT_REMOVED )
-{
-  QChildEvent * obj = (QChildEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->removed () );
-  }
-}
-
-
-
-
+$method=|bool|removed|
 
 #pragma ENDDUMP

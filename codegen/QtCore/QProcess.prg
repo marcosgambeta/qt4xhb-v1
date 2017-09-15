@@ -85,92 +85,39 @@ $destructor
 /*
 QProcess ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QPROCESS_NEW )
-{
-  QProcess * o = new QProcess ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
 /*
 void closeReadChannel ( ProcessChannel channel )
 */
-HB_FUNC_STATIC( QPROCESS_CLOSEREADCHANNEL )
-{
-  QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->closeReadChannel ( (QProcess::ProcessChannel) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|closeReadChannel|QProcess::ProcessChannel
 
 /*
 void closeWriteChannel ()
 */
-HB_FUNC_STATIC( QPROCESS_CLOSEWRITECHANNEL )
-{
-  QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->closeWriteChannel ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|closeWriteChannel|
 
 /*
 QStringList environment () const (deprecated)
 */
-HB_FUNC_STATIC( QPROCESS_ENVIRONMENT )
-{
-  QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->environment () );
-  }
-}
-
+$method=|QStringList|environment|
 
 /*
 QProcess::ProcessError error () const
 */
-HB_FUNC_STATIC( QPROCESS_ERROR )
-{
-  QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->error () );
-  }
-}
-
+$method=|QProcess::ProcessError|error|
 
 /*
 int exitCode () const
 */
-HB_FUNC_STATIC( QPROCESS_EXITCODE )
-{
-  QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->exitCode () );
-  }
-}
-
+$method=|int|exitCode|
 
 /*
 QProcess::ExitStatus exitStatus () const
 */
-HB_FUNC_STATIC( QPROCESS_EXITSTATUS )
-{
-  QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->exitStatus () );
-  }
-}
+$method=|QProcess::ExitStatus|exitStatus|
 
 /*
 QString nativeArguments () const
@@ -180,83 +127,32 @@ $method=|QString|nativeArguments|
 /*
 ProcessChannelMode processChannelMode () const
 */
-HB_FUNC_STATIC( QPROCESS_PROCESSCHANNELMODE )
-{
-  QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->processChannelMode () );
-  }
-}
-
+$method=|QProcess::ProcessChannelMode|processChannelMode|
 
 /*
 QProcessEnvironment processEnvironment () const
 */
-HB_FUNC_STATIC( QPROCESS_PROCESSENVIRONMENT )
-{
-  QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QProcessEnvironment * ptr = new QProcessEnvironment( obj->processEnvironment () );
-    _qt4xhb_createReturnClass ( ptr, "QPROCESSENVIRONMENT", true );
-  }
-}
-
+$method=|QProcessEnvironment|processEnvironment|
 
 /*
 QByteArray readAllStandardError ()
 */
-HB_FUNC_STATIC( QPROCESS_READALLSTANDARDERROR )
-{
-  QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->readAllStandardError () );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray|readAllStandardError|
 
 /*
 QByteArray readAllStandardOutput ()
 */
-HB_FUNC_STATIC( QPROCESS_READALLSTANDARDOUTPUT )
-{
-  QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->readAllStandardOutput () );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray|readAllStandardOutput|
 
 /*
 ProcessChannel readChannel () const
 */
-HB_FUNC_STATIC( QPROCESS_READCHANNEL )
-{
-  QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->readChannel () );
-  }
-}
-
+$method=|QProcess::ProcessChannel|readChannel|
 
 /*
 void setEnvironment ( const QStringList & environment ) (deprecated)
 */
-HB_FUNC_STATIC( QPROCESS_SETENVIRONMENT )
-{
-  QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setEnvironment ( PQSTRINGLIST(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setEnvironment|const QStringList &
 
 /*
 void setNativeArguments ( const QString & arguments )
@@ -266,57 +162,22 @@ $method=|void|setNativeArguments|const QString &
 /*
 void setProcessChannelMode ( ProcessChannelMode mode )
 */
-HB_FUNC_STATIC( QPROCESS_SETPROCESSCHANNELMODE )
-{
-  QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setProcessChannelMode ( (QProcess::ProcessChannelMode) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setProcessChannelMode|QProcess::ProcessChannelMode
 
 /*
 void setProcessEnvironment ( const QProcessEnvironment & environment )
 */
-HB_FUNC_STATIC( QPROCESS_SETPROCESSENVIRONMENT )
-{
-  QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setProcessEnvironment ( *PQPROCESSENVIRONMENT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setProcessEnvironment|const QProcessEnvironment &
 
 /*
 void setReadChannel ( ProcessChannel channel )
 */
-HB_FUNC_STATIC( QPROCESS_SETREADCHANNEL )
-{
-  QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setReadChannel ( (QProcess::ProcessChannel) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setReadChannel|QProcess::ProcessChannel
 
 /*
 void setStandardErrorFile ( const QString & fileName, OpenMode mode = Truncate )
 */
-HB_FUNC_STATIC( QPROCESS_SETSTANDARDERRORFILE )
-{
-  QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setStandardErrorFile ( PQSTRING(1), ISNIL(2)? QIODevice::Truncate : (QIODevice::OpenMode) hb_parni(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setStandardErrorFile|const QString &,QIODevice::OpenMode=QIODevice::Truncate
 
 /*
 void setStandardInputFile ( const QString & fileName )
@@ -326,30 +187,12 @@ $method=|void|setStandardInputFile|const QString &
 /*
 void setStandardOutputFile ( const QString & fileName, OpenMode mode = Truncate )
 */
-HB_FUNC_STATIC( QPROCESS_SETSTANDARDOUTPUTFILE )
-{
-  QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setStandardOutputFile ( PQSTRING(1), ISNIL(2)? QIODevice::Truncate : (QIODevice::OpenMode) hb_parni(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setStandardOutputFile|const QString &,QIODevice::OpenMode=QIODevice::Truncate
 
 /*
 void setStandardOutputProcess ( QProcess * destination )
 */
-HB_FUNC_STATIC( QPROCESS_SETSTANDARDOUTPUTPROCESS )
-{
-  QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QProcess * par1 = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setStandardOutputProcess ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setStandardOutputProcess|QProcess *
 
 /*
 void setWorkingDirectory ( const QString & dir )
@@ -359,30 +202,12 @@ $method=|void|setWorkingDirectory|const QString &
 /*
 void start ( const QString & program, const QStringList & arguments, OpenMode mode = ReadWrite )
 */
-HB_FUNC_STATIC( QPROCESS_START1 )
-{
-  QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->start ( PQSTRING(1), PQSTRINGLIST(2), ISNIL(3)? QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|start,start1|const QString &,const QStringList &,QIODevice::OpenMode=QIODevice::ReadWrite
 
 /*
 void start ( const QString & program, OpenMode mode = ReadWrite )
 */
-HB_FUNC_STATIC( QPROCESS_START2 )
-{
-  QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->start ( PQSTRING(1), ISNIL(2)? QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|start,start2|const QString &,QIODevice::OpenMode=QIODevice::ReadWrite
 
 //[1]void start ( const QString & program, const QStringList & arguments, OpenMode mode = ReadWrite )
 //[2]void start ( const QString & program, OpenMode mode = ReadWrite )
@@ -399,44 +224,20 @@ HB_FUNC_STATIC( QPROCESS_START )
   }
 }
 
-
 /*
 QProcess::ProcessState state () const
 */
-HB_FUNC_STATIC( QPROCESS_STATE )
-{
-  QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->state () );
-  }
-}
-
+$method=|QProcess::ProcessState|state|
 
 /*
 bool waitForFinished ( int msecs = 30000 )
 */
-HB_FUNC_STATIC( QPROCESS_WAITFORFINISHED )
-{
-  QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->waitForFinished ( OPINT(1,30000) ) );
-  }
-}
-
+$method=|bool|waitForFinished|int=30000
 
 /*
 bool waitForStarted ( int msecs = 30000 )
 */
-HB_FUNC_STATIC( QPROCESS_WAITFORSTARTED )
-{
-  QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->waitForStarted ( OPINT(1,30000) ) );
-  }
-}
+$method=|bool|waitForStarted|int=30000
 
 /*
 QString workingDirectory () const
@@ -446,121 +247,47 @@ $method=|QString|workingDirectory|
 /*
 virtual bool atEnd () const
 */
-HB_FUNC_STATIC( QPROCESS_ATEND )
-{
-  QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->atEnd () );
-  }
-}
-
+$virtualMethod=|bool|atEnd|
 
 /*
 virtual qint64 bytesAvailable () const
 */
-HB_FUNC_STATIC( QPROCESS_BYTESAVAILABLE )
-{
-  QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQINT64( obj->bytesAvailable () );
-  }
-}
-
+$virtualMethod=|qint64|bytesAvailable|
 
 /*
 virtual qint64 bytesToWrite () const
 */
-HB_FUNC_STATIC( QPROCESS_BYTESTOWRITE )
-{
-  QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQINT64( obj->bytesToWrite () );
-  }
-}
-
+$virtualMethod=|qint64|bytesToWrite|
 
 /*
 virtual bool canReadLine () const
 */
-HB_FUNC_STATIC( QPROCESS_CANREADLINE )
-{
-  QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->canReadLine () );
-  }
-}
-
+$virtualMethod=|bool|canReadLine|
 
 /*
 virtual void close ()
 */
-HB_FUNC_STATIC( QPROCESS_CLOSE )
-{
-  QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->close ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|close|
 
 /*
 virtual bool isSequential () const
 */
-HB_FUNC_STATIC( QPROCESS_ISSEQUENTIAL )
-{
-  QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isSequential () );
-  }
-}
-
+$virtualMethod=|bool|isSequential|
 
 /*
 virtual bool waitForBytesWritten ( int msecs = 30000 )
 */
-HB_FUNC_STATIC( QPROCESS_WAITFORBYTESWRITTEN )
-{
-  QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->waitForBytesWritten ( OPINT(1,30000) ) );
-  }
-}
-
+$virtualMethod=|bool|waitForBytesWritten|int=30000
 
 /*
 virtual bool waitForReadyRead ( int msecs = 30000 )
 */
-HB_FUNC_STATIC( QPROCESS_WAITFORREADYREAD )
-{
-  QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->waitForReadyRead ( OPINT(1,30000) ) );
-  }
-}
-
+$virtualMethod=|bool|waitForReadyRead|int=30000
 
 /*
 void kill ()
 */
-HB_FUNC_STATIC( QPROCESS_KILL )
-{
-  QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->kill ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|kill|
 
 /*
 void terminate ()
@@ -593,30 +320,19 @@ HB_FUNC_STATIC( QPROCESS_EXECUTE )
 }
 
 /*
-bool startDetached ( const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid = 0 )
+static bool startDetached ( const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid = 0 )
 */
-HB_FUNC_STATIC( QPROCESS_STARTDETACHED1 )
-{
-  qint64 par4 = 0;
-  RBOOL( QProcess::startDetached ( PQSTRING(1), PQSTRINGLIST(2), PQSTRING(3), &par4 ) );
-  hb_stornll( par4, 4 );
-}
+$staticMethod=|bool|startDetached,startDetached1|const QString &,const QStringList &,const QString &,qint64 *=0
 
 /*
-bool startDetached ( const QString & program, const QStringList & arguments )
+static bool startDetached ( const QString & program, const QStringList & arguments )
 */
-HB_FUNC_STATIC( QPROCESS_STARTDETACHED2 )
-{
-  RBOOL( QProcess::startDetached ( PQSTRING(1), PQSTRINGLIST(2) ) );
-}
+$staticMethod=|bool|startDetached,startDetached2|const QString &,const QStringList &
 
 /*
-bool startDetached ( const QString & program )
+static bool startDetached ( const QString & program )
 */
-HB_FUNC_STATIC( QPROCESS_STARTDETACHED3 )
-{
-  RBOOL( QProcess::startDetached ( PQSTRING(1) ) );
-}
+$staticMethod=|bool|startDetached|const QString &
 
 //[1]bool startDetached ( const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid = 0 )
 //[2]bool startDetached ( const QString & program, const QStringList & arguments )

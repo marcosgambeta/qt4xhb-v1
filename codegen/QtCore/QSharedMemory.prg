@@ -42,22 +42,12 @@ $destructor
 /*
 QSharedMemory(QObject *parent = 0)
 */
-HB_FUNC_STATIC( QSHAREDMEMORY_NEW1 )
-{
-  QSharedMemory * o = new QSharedMemory ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new1|QObject *=0
 
 /*
 QSharedMemory(const QString &key, QObject *parent = 0)
 */
-HB_FUNC_STATIC( QSHAREDMEMORY_NEW2 )
-{
-  QSharedMemory * o = new QSharedMemory ( PQSTRING(1), OPQOBJECT(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new2|const QString &,QObject *=0
 
 //[1]QSharedMemory(QObject *parent = 0)
 //[2]QSharedMemory(const QString &key, QObject *parent = 0)
@@ -103,121 +93,47 @@ $method=|QString|nativeKey|
 /*
 bool create(int size, AccessMode mode = ReadWrite)
 */
-HB_FUNC_STATIC( QSHAREDMEMORY_CREATE )
-{
-  QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->create ( PINT(1), ISNIL(2)? QSharedMemory::ReadWrite : (QSharedMemory::AccessMode) hb_parni(2) ) );
-  }
-}
-
+$method=|bool|create|int,QSharedMemory::AccessMode=QSharedMemory::ReadWrite
 
 /*
 int size() const
 */
-HB_FUNC_STATIC( QSHAREDMEMORY_SIZE )
-{
-  QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->size () );
-  }
-}
-
+$method=|int|size|
 
 /*
 bool attach(AccessMode mode = ReadWrite)
 */
-HB_FUNC_STATIC( QSHAREDMEMORY_ATTACH )
-{
-  QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->attach ( ISNIL(1)? QSharedMemory::ReadWrite : (QSharedMemory::AccessMode) hb_parni(1) ) );
-  }
-}
-
+$method=|bool|attach|QSharedMemory::AccessMode=QSharedMemory::ReadWrite
 
 /*
 bool isAttached() const
 */
-HB_FUNC_STATIC( QSHAREDMEMORY_ISATTACHED )
-{
-  QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isAttached () );
-  }
-}
-
+$method=|bool|isAttached|
 
 /*
 bool detach()
 */
-HB_FUNC_STATIC( QSHAREDMEMORY_DETACH )
-{
-  QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->detach () );
-  }
-}
-
+$method=|bool|detach|
 
 /*
 void *data()
 */
-HB_FUNC_STATIC( QSHAREDMEMORY_DATA )
-{
-  QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    void * retptr = obj->data ();
-  hb_retptr( (void *) retptr );
-  }
-}
-
-
-
+$method=|void *|data|
 
 /*
 bool lock()
 */
-HB_FUNC_STATIC( QSHAREDMEMORY_LOCK )
-{
-  QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->lock () );
-  }
-}
-
+$method=|bool|lock|
 
 /*
 bool unlock()
 */
-HB_FUNC_STATIC( QSHAREDMEMORY_UNLOCK )
-{
-  QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->unlock () );
-  }
-}
-
+$method=|bool|unlock|
 
 /*
 SharedMemoryError error() const
 */
-HB_FUNC_STATIC( QSHAREDMEMORY_ERROR )
-{
-  QSharedMemory * obj = (QSharedMemory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->error () );
-  }
-}
+$method=|QSharedMemory::SharedMemoryError|error|
 
 /*
 QString errorString() const

@@ -82,43 +82,22 @@ $destructor
 /*
 QXmlStreamWriter()
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_NEW1 )
-{
-  QXmlStreamWriter * o = new QXmlStreamWriter ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|
 
 /*
 QXmlStreamWriter(QIODevice * device)
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_NEW2 )
-{
-  QXmlStreamWriter * o = new QXmlStreamWriter ( PQIODEVICE(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|QIODevice *
 
 /*
 QXmlStreamWriter(QByteArray * array)
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_NEW3 )
-{
-  QXmlStreamWriter * o = new QXmlStreamWriter ( PQBYTEARRAY(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new3|QByteArray *
 
 /*
 QXmlStreamWriter(QString * string)
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_NEW4 )
-{
-  QString * par1 = NULL;
-  QXmlStreamWriter * o = new QXmlStreamWriter ( par1 );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new4|QString *
 
 //[1]QXmlStreamWriter()
 //[2]QXmlStreamWriter(QIODevice * device)
@@ -329,28 +308,12 @@ $method=|void|writeEntityReference|const QString &
 /*
 void writeNamespace(const QString & namespaceUri, const QString & prefix = QString())
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITENAMESPACE )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->writeNamespace ( PQSTRING(1), OPQSTRING(2,QString()) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|writeNamespace|const QString &,const QString &=QString()
 
 /*
 void writeProcessingInstruction(const QString & target, const QString & data = QString())
 */
-HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEPROCESSINGINSTRUCTION )
-{
-  QXmlStreamWriter * obj = (QXmlStreamWriter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->writeProcessingInstruction ( PQSTRING(1), OPQSTRING(2,QString()) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|writeProcessingInstruction|const QString &,const QString &=QString()
 
 /*
 void writeStartDocument(const QString & version)

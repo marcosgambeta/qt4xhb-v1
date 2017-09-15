@@ -47,201 +47,78 @@ $destructor
 /*
 QThread(QObject * parent = 0)
 */
-HB_FUNC_STATIC( QTHREAD_NEW )
-{
-  QThread * o = new QThread ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
 /*
 void exit(int returnCode = 0)
 */
-HB_FUNC_STATIC( QTHREAD_EXIT )
-{
-  QThread * obj = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->exit ( OPINT(1,0) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|exit|int=0
 
 /*
 bool isFinished() const
 */
-HB_FUNC_STATIC( QTHREAD_ISFINISHED )
-{
-  QThread * obj = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isFinished () );
-  }
-}
-
+$method=|bool|isFinished|
 
 /*
 bool isRunning() const
 */
-HB_FUNC_STATIC( QTHREAD_ISRUNNING )
-{
-  QThread * obj = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isRunning () );
-  }
-}
-
+$method=|bool|isRunning|
 
 /*
 Priority priority() const
 */
-HB_FUNC_STATIC( QTHREAD_PRIORITY )
-{
-  QThread * obj = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->priority () );
-  }
-}
-
-
+$method=|QThread::Priority|priority|
 
 /*
 void setPriority(Priority priority)
 */
-HB_FUNC_STATIC( QTHREAD_SETPRIORITY )
-{
-  QThread * obj = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setPriority ( (QThread::Priority) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPriority|QThread::Priority
 
 /*
 void setStackSize(uint stackSize)
 */
-HB_FUNC_STATIC( QTHREAD_SETSTACKSIZE )
-{
-  QThread * obj = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setStackSize ( PUINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setStackSize|uint
 
 /*
 uint stackSize() const
 */
-HB_FUNC_STATIC( QTHREAD_STACKSIZE )
-{
-  QThread * obj = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (uint) obj->stackSize () );
-  }
-}
-
-
+$method=|uint|stackSize|
 
 /*
 virtual bool event(QEvent * event)
 */
-HB_FUNC_STATIC( QTHREAD_EVENT )
-{
-  QThread * obj = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->event ( PQEVENT(1) ) );
-  }
-}
-
+$virtualMethod=|bool|event|QEvent *
 
 /*
 void quit()
 */
-HB_FUNC_STATIC( QTHREAD_QUIT )
-{
-  QThread * obj = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->quit ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|quit|
 
 /*
 void start(Priority priority = InheritPriority)
 */
-HB_FUNC_STATIC( QTHREAD_START )
-{
-  QThread * obj = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->start ( ISNIL(1)? QThread::InheritPriority : (QThread::Priority) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|start|QThread::Priority=QThread::InheritPriority
 
 /*
 void terminate()
 */
-HB_FUNC_STATIC( QTHREAD_TERMINATE )
-{
-  QThread * obj = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->terminate ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|terminate|
 
 /*
-QThread * currentThread()
+static QThread * currentThread()
 */
-HB_FUNC_STATIC( QTHREAD_CURRENTTHREAD )
-{
-  QThread * ptr = QThread::currentThread ();
-  _qt4xhb_createReturnClass ( ptr, "QTHREAD" );
-}
-
-
+$staticMethod=|QThread *|currentThread|
 
 /*
-int idealThreadCount()
+static int idealThreadCount()
 */
-HB_FUNC_STATIC( QTHREAD_IDEALTHREADCOUNT )
-{
-  RINT( QThread::idealThreadCount () );
-}
-
-
-
-
+$staticMethod=|int|idealThreadCount|
 
 /*
 void yieldCurrentThread()
 */
-HB_FUNC_STATIC( QTHREAD_YIELDCURRENTTHREAD )
-{
-  QThread::yieldCurrentThread ();
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
-
+$method=|void|yieldCurrentThread|
 
 #pragma ENDDUMP

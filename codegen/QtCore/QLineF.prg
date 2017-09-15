@@ -72,42 +72,22 @@ $destructor
 /*
 QLineF()
 */
-HB_FUNC_STATIC( QLINEF_NEW1 )
-{
-  QLineF * o = new QLineF ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|
 
 /*
 QLineF(const QPointF & p1, const QPointF & p2)
 */
-HB_FUNC_STATIC( QLINEF_NEW2 )
-{
-  QLineF * o = new QLineF ( *PQPOINTF(1), *PQPOINTF(2) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|const QPointF &,const QPointF &
 
 /*
 QLineF(qreal x1, qreal y1, qreal x2, qreal y2)
 */
-HB_FUNC_STATIC( QLINEF_NEW3 )
-{
-  QLineF * o = new QLineF ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new3|qreal,qreal,qreal,qreal
 
 /*
 QLineF(const QLine & line)
 */
-HB_FUNC_STATIC( QLINEF_NEW4 )
-{
-  QLineF * o = new QLineF ( *PQLINE(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new4|const QLine &
 
 //[1]QLineF()
 //[2]QLineF(const QPointF & p1, const QPointF & p2)
@@ -143,315 +123,117 @@ $deleteMethod
 /*
 QPointF p1() const
 */
-HB_FUNC_STATIC( QLINEF_P1 )
-{
-  QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->p1 () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
-
+$method=|QPointF|p1|
 
 /*
 QPointF p2() const
 */
-HB_FUNC_STATIC( QLINEF_P2 )
-{
-  QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->p2 () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
-
+$method=|QPointF|p2|
 
 /*
 qreal x1() const
 */
-HB_FUNC_STATIC( QLINEF_X1 )
-{
-  QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->x1 () );
-  }
-}
-
+$method=|qreal|x1|
 
 /*
 qreal x2() const
 */
-HB_FUNC_STATIC( QLINEF_X2 )
-{
-  QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->x2 () );
-  }
-}
-
+$method=|qreal|x2|
 
 /*
 qreal y1() const
 */
-HB_FUNC_STATIC( QLINEF_Y1 )
-{
-  QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->y1 () );
-  }
-}
-
+$method=|qreal|y1|
 
 /*
 qreal y2() const
 */
-HB_FUNC_STATIC( QLINEF_Y2 )
-{
-  QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->y2 () );
-  }
-}
-
+$method=|qreal|y2|
 
 /*
 qreal angle() const
 */
-HB_FUNC_STATIC( QLINEF_ANGLE )
-{
-  QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->angle () );
-  }
-}
-
+$method=|qreal|angle|
 
 /*
 qreal angleTo(const QLineF & line) const
 */
-HB_FUNC_STATIC( QLINEF_ANGLETO )
-{
-  QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->angleTo ( *PQLINEF(1) ) );
-  }
-}
-
+$method=|qreal|angleTo|const QLineF &
 
 /*
 qreal dx() const
 */
-HB_FUNC_STATIC( QLINEF_DX )
-{
-  QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->dx () );
-  }
-}
-
+$method=|qreal|dx|
 
 /*
 qreal dy() const
 */
-HB_FUNC_STATIC( QLINEF_DY )
-{
-  QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->dy () );
-  }
-}
-
-
+$method=|qreal|dy|
 
 /*
 bool isNull() const
 */
-HB_FUNC_STATIC( QLINEF_ISNULL )
-{
-  QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
-
+$method=|bool|isNull|
 
 /*
 qreal length() const
 */
-HB_FUNC_STATIC( QLINEF_LENGTH )
-{
-  QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->length () );
-  }
-}
-
+$method=|qreal|length|
 
 /*
 QLineF normalVector() const
 */
-HB_FUNC_STATIC( QLINEF_NORMALVECTOR )
-{
-  QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QLineF * ptr = new QLineF( obj->normalVector () );
-    _qt4xhb_createReturnClass ( ptr, "QLINEF", true );
-  }
-}
-
+$method=|QLineF|normalVector|
 
 /*
 QPointF pointAt(qreal t) const
 */
-HB_FUNC_STATIC( QLINEF_POINTAT )
-{
-  QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->pointAt ( PQREAL(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QPOINTF", true );
-  }
-}
-
+$method=|QPointF|pointAt|qreal
 
 /*
 void setP1(const QPointF & p1)
 */
-HB_FUNC_STATIC( QLINEF_SETP1 )
-{
-  QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setP1 ( *PQPOINTF(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setP1|const QPointF &
 
 /*
 void setP2(const QPointF & p2)
 */
-HB_FUNC_STATIC( QLINEF_SETP2 )
-{
-  QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setP2 ( *PQPOINTF(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setP2|const QPointF &
 
 /*
 void setAngle(qreal angle)
 */
-HB_FUNC_STATIC( QLINEF_SETANGLE )
-{
-  QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAngle ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAngle|qreal
 
 /*
 void setLength(qreal length)
 */
-HB_FUNC_STATIC( QLINEF_SETLENGTH )
-{
-  QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setLength ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setLength|qreal
 
 /*
 void setLine(qreal x1, qreal y1, qreal x2, qreal y2)
 */
-HB_FUNC_STATIC( QLINEF_SETLINE )
-{
-  QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setLine ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setLine|qreal,qreal,qreal,qreal
 
 /*
 void setPoints(const QPointF & p1, const QPointF & p2)
 */
-HB_FUNC_STATIC( QLINEF_SETPOINTS )
-{
-  QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPoints ( *PQPOINTF(1), *PQPOINTF(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPoints|const QPointF &,const QPointF &
 
 /*
 QLine toLine() const
 */
-HB_FUNC_STATIC( QLINEF_TOLINE )
-{
-  QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QLine * ptr = new QLine( obj->toLine () );
-    _qt4xhb_createReturnClass ( ptr, "QLINE", true );
-  }
-}
-
+$method=|QLine|toLine|
 
 /*
 void translate(const QPointF & offset)
 */
-HB_FUNC_STATIC( QLINEF_TRANSLATE1 )
-{
-  QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->translate ( *PQPOINTF(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|translate,translate1|const QPointF &
 
 /*
 void translate(qreal dx, qreal dy)
 */
-HB_FUNC_STATIC( QLINEF_TRANSLATE2 )
-{
-  QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->translate ( PQREAL(1), PQREAL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|translate,translate2|qreal,qreal
 
 //[1]void translate(const QPointF & offset)
 //[2]void translate(qreal dx, qreal dy)
@@ -471,30 +253,12 @@ HB_FUNC_STATIC( QLINEF_TRANSLATE )
 /*
 QLineF translated(const QPointF & offset) const
 */
-HB_FUNC_STATIC( QLINEF_TRANSLATED1 )
-{
-  QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QLineF * ptr = new QLineF( obj->translated ( *PQPOINTF(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QLINEF", true );
-  }
-}
-
+$method=|QLineF|translated,translated2|const QPointF &
 
 /*
 QLineF translated(qreal dx, qreal dy) const
 */
-HB_FUNC_STATIC( QLINEF_TRANSLATED2 )
-{
-  QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QLineF * ptr = new QLineF( obj->translated ( PQREAL(1), PQREAL(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QLINEF", true );
-  }
-}
-
+$method=|QLineF|translated,translated2|qreal,qreal
 
 //[1]QLineF translated(const QPointF & offset) const
 //[2]QLineF translated(qreal dx, qreal dy) const
@@ -514,26 +278,12 @@ HB_FUNC_STATIC( QLINEF_TRANSLATED )
 /*
 QLineF unitVector() const
 */
-HB_FUNC_STATIC( QLINEF_UNITVECTOR )
-{
-  QLineF * obj = (QLineF *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QLineF * ptr = new QLineF( obj->unitVector () );
-    _qt4xhb_createReturnClass ( ptr, "QLINEF", true );
-  }
-}
-
-
+$method=|QLineF|unitVector|
 
 /*
-QLineF fromPolar(qreal length, qreal angle)
+static QLineF fromPolar(qreal length, qreal angle)
 */
-HB_FUNC_STATIC( QLINEF_FROMPOLAR )
-{
-  QLineF * ptr = new QLineF( QLineF::fromPolar ( PQREAL(1), PQREAL(2) ) );
-  _qt4xhb_createReturnClass ( ptr, "QLINEF", true );
-}
+$staticMethod=|QLineF|fromPolar|qreal,qreal
 
 $extraMethods
 

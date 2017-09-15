@@ -56,256 +56,112 @@ $deleteMethod
 /*
 bool ref()
 */
-HB_FUNC_STATIC( QBASICATOMICINT_REF )
-{
-  QBasicAtomicInt * obj = (QBasicAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->ref () );
-  }
-}
-
+$method=|bool|ref|
 
 /*
 bool deref()
 */
-HB_FUNC_STATIC( QBASICATOMICINT_DEREF )
-{
-  QBasicAtomicInt * obj = (QBasicAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->deref () );
-  }
-}
-
+$method=|bool|deref|
 
 /*
 bool testAndSetRelaxed(int expectedValue, int newValue)
 */
-HB_FUNC_STATIC( QBASICATOMICINT_TESTANDSETRELAXED )
-{
-  QBasicAtomicInt * obj = (QBasicAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->testAndSetRelaxed ( PINT(1), PINT(2) ) );
-  }
-}
-
+$method=|bool|testAndSetRelaxed|int,int
 
 /*
 bool testAndSetAcquire(int expectedValue, int newValue)
 */
-HB_FUNC_STATIC( QBASICATOMICINT_TESTANDSETACQUIRE )
-{
-  QBasicAtomicInt * obj = (QBasicAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->testAndSetAcquire ( PINT(1), PINT(2) ) );
-  }
-}
-
+$method=|bool|testAndSetAcquire|int,int
 
 /*
 bool testAndSetRelease(int expectedValue, int newValue)
 */
-HB_FUNC_STATIC( QBASICATOMICINT_TESTANDSETRELEASE )
-{
-  QBasicAtomicInt * obj = (QBasicAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->testAndSetRelease ( PINT(1), PINT(2) ) );
-  }
-}
-
+$method=|bool|testAndSetRelease|int,int
 
 /*
 bool testAndSetOrdered(int expectedValue, int newValue)
 */
-HB_FUNC_STATIC( QBASICATOMICINT_TESTANDSETORDERED )
-{
-  QBasicAtomicInt * obj = (QBasicAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->testAndSetOrdered ( PINT(1), PINT(2) ) );
-  }
-}
-
+$method=|bool|testAndSetOrdered|int,int
 
 /*
 int fetchAndStoreRelaxed(int newValue)
 */
-HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDSTORERELAXED )
-{
-  QBasicAtomicInt * obj = (QBasicAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->fetchAndStoreRelaxed ( PINT(1) ) );
-  }
-}
-
+$method=|int|fetchAndStoreRelaxed|int
 
 /*
 int fetchAndStoreAcquire(int newValue)
 */
-HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDSTOREACQUIRE )
-{
-  QBasicAtomicInt * obj = (QBasicAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->fetchAndStoreAcquire ( PINT(1) ) );
-  }
-}
-
+$method=|int|fetchAndStoreAcquire|int
 
 /*
 int fetchAndStoreRelease(int newValue)
 */
-HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDSTORERELEASE )
-{
-  QBasicAtomicInt * obj = (QBasicAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->fetchAndStoreRelease ( PINT(1) ) );
-  }
-}
-
+$method=|int|fetchAndStoreRelease|int
 
 /*
 int fetchAndStoreOrdered(int newValue)
 */
-HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDSTOREORDERED )
-{
-  QBasicAtomicInt * obj = (QBasicAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->fetchAndStoreOrdered ( PINT(1) ) );
-  }
-}
-
+$method=|int|fetchAndStoreOrdered|int
 
 /*
 int fetchAndAddRelaxed(int valueToAdd)
 */
-HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDADDRELAXED )
-{
-  QBasicAtomicInt * obj = (QBasicAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->fetchAndAddRelaxed ( PINT(1) ) );
-  }
-}
-
+$method=|int|fetchAndAddRelaxed|int
 
 /*
 int fetchAndAddAcquire(int valueToAdd)
 */
-HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDADDACQUIRE )
-{
-  QBasicAtomicInt * obj = (QBasicAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->fetchAndAddAcquire ( PINT(1) ) );
-  }
-}
-
+$method=|int|fetchAndAddAcquire|int
 
 /*
 int fetchAndAddRelease(int valueToAdd)
 */
-HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDADDRELEASE )
-{
-  QBasicAtomicInt * obj = (QBasicAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->fetchAndAddRelease ( PINT(1) ) );
-  }
-}
-
+$method=|int|fetchAndAddRelease|int
 
 /*
 int fetchAndAddOrdered(int valueToAdd)
 */
-HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDADDORDERED )
-{
-  QBasicAtomicInt * obj = (QBasicAtomicInt *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->fetchAndAddOrdered ( PINT(1) ) );
-  }
-}
-
-
+$method=|int|fetchAndAddOrdered|int
 
 /*
 static bool isReferenceCountingNative()
 */
-HB_FUNC_STATIC( QBASICATOMICINT_ISREFERENCECOUNTINGNATIVE )
-{
-  RBOOL( QBasicAtomicInt::isReferenceCountingNative () );
-}
-
+$staticMethod=|bool|isReferenceCountingNative|
 
 /*
 static bool isReferenceCountingWaitFree()
 */
-HB_FUNC_STATIC( QBASICATOMICINT_ISREFERENCECOUNTINGWAITFREE )
-{
-  RBOOL( QBasicAtomicInt::isReferenceCountingWaitFree () );
-}
-
+$staticMethod=|bool|isReferenceCountingWaitFree|
 
 /*
 static bool isTestAndSetNative()
 */
-HB_FUNC_STATIC( QBASICATOMICINT_ISTESTANDSETNATIVE )
-{
-  RBOOL( QBasicAtomicInt::isTestAndSetNative () );
-}
-
+$staticMethod=|bool|isTestAndSetNative|
 
 /*
 static bool isTestAndSetWaitFree()
 */
-HB_FUNC_STATIC( QBASICATOMICINT_ISTESTANDSETWAITFREE )
-{
-  RBOOL( QBasicAtomicInt::isTestAndSetWaitFree () );
-}
-
+$staticMethod=|bool|isTestAndSetWaitFree|
 
 /*
 static bool isFetchAndStoreNative()
 */
-HB_FUNC_STATIC( QBASICATOMICINT_ISFETCHANDSTORENATIVE )
-{
-  RBOOL( QBasicAtomicInt::isFetchAndStoreNative () );
-}
-
+$staticMethod=|bool|isFetchAndStoreNative|
 
 /*
 static bool isFetchAndStoreWaitFree()
 */
-HB_FUNC_STATIC( QBASICATOMICINT_ISFETCHANDSTOREWAITFREE )
-{
-  RBOOL( QBasicAtomicInt::isFetchAndStoreWaitFree () );
-}
-
+$staticMethod=|bool|isFetchAndStoreWaitFree|
 
 /*
 static bool isFetchAndAddNative()
 */
-HB_FUNC_STATIC( QBASICATOMICINT_ISFETCHANDADDNATIVE )
-{
-  RBOOL( QBasicAtomicInt::isFetchAndAddNative () );
-}
-
+$staticMethod=|bool|isFetchAndAddNative|
 
 /*
 static bool isFetchAndAddWaitFree()
 */
-HB_FUNC_STATIC( QBASICATOMICINT_ISFETCHANDADDWAITFREE )
-{
-  RBOOL( QBasicAtomicInt::isFetchAndAddWaitFree () );
-}
+$staticMethod=|bool|isFetchAndAddWaitFree|
 
 $extraMethods
 

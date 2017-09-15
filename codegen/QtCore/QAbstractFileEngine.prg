@@ -93,27 +93,12 @@ $virtualMethod=|bool|copy|const QString &
 /*
 virtual QStringList entryList ( QDir::Filters filters, const QStringList & filterNames ) const
 */
-HB_FUNC_STATIC( QABSTRACTFILEENGINE_ENTRYLIST )
-{
-  QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->entryList ( (QDir::Filters) hb_parni(1), PQSTRINGLIST(2) ) );
-  }
-}
-
+$virtualMethod=|QStringList|entryList|QDir::Filters,const QStringList &
 
 /*
 QFile::FileError error () const
 */
-HB_FUNC_STATIC( QABSTRACTFILEENGINE_ERROR )
-{
-  QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->error () );
-  }
-}
+$method=|QFile::FileError|error|
 
 /*
 QString errorString () const
@@ -123,14 +108,7 @@ $method=|QString|errorString|
 /*
 virtual FileFlags fileFlags ( FileFlags type = FileInfoAll ) const
 */
-HB_FUNC_STATIC( QABSTRACTFILEENGINE_FILEFLAGS )
-{
-  QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->fileFlags ( ISNIL(1)? QAbstractFileEngine::FileInfoAll : (QAbstractFileEngine::FileFlags) hb_parni(1) ) );
-  }
-}
+$virtualMethod=|QAbstractFileEngine::FileFlags|fileFlags|QAbstractFileEngine::FileFlags=QAbstractFileEngine::FileInfoAll
 
 /*
 virtual QString fileName ( FileName file = DefaultName ) const
@@ -140,15 +118,7 @@ $virtualMethod=|QString|fileName|QAbstractFileEngine::FileName=QAbstractFileEngi
 /*
 virtual QDateTime fileTime ( FileTime time ) const
 */
-HB_FUNC_STATIC( QABSTRACTFILEENGINE_FILETIME )
-{
-  QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDateTime * ptr = new QDateTime( obj->fileTime ( (QAbstractFileEngine::FileTime) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
-  }
-}
+$virtualMethod=|QDateTime|fileTime|QAbstractFileEngine::FileTime
 
 /*
 virtual bool flush ()
@@ -158,14 +128,7 @@ $virtualMethod=|bool|flush|
 /*
 virtual int handle () const
 */
-HB_FUNC_STATIC( QABSTRACTFILEENGINE_HANDLE )
-{
-  QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->handle () );
-  }
-}
+$virtualMethod=|int|handle|
 
 /*
 virtual bool isRelativePath () const
@@ -200,42 +163,17 @@ $virtualMethod=|QString|owner|QAbstractFileEngine::FileOwner
 /*
 virtual uint ownerId ( FileOwner owner ) const
 */
-HB_FUNC_STATIC( QABSTRACTFILEENGINE_OWNERID )
-{
-  QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (uint) obj->ownerId ( (QAbstractFileEngine::FileOwner) hb_parni(1) ) );
-  }
-}
-
+$virtualMethod=|uint|ownerId|QAbstractFileEngine::FileOwner
 
 /*
 virtual qint64 pos () const
 */
-HB_FUNC_STATIC( QABSTRACTFILEENGINE_POS )
-{
-  QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQINT64( obj->pos () );
-  }
-}
-
-
+$virtualMethod=|qint64|pos|
 
 /*
 virtual qint64 readLine ( char * data, qint64 maxlen )
 */
-HB_FUNC_STATIC( QABSTRACTFILEENGINE_READLINE )
-{
-  QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    char * par1 = (char *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RQINT64( obj->readLine ( par1, PQINT64(2) ) );
-  }
-}
+$virtualMethod=|qint64|readLine|char *,qint64
 
 /*
 virtual bool remove ()
@@ -285,23 +223,12 @@ $virtualMethod=|bool|supportsExtension|QAbstractFileEngine::Extension
 /*
 virtual qint64 write ( const char * data, qint64 len )
 */
-HB_FUNC_STATIC( QABSTRACTFILEENGINE_WRITE )
-{
-  QAbstractFileEngine * obj = (QAbstractFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQINT64( obj->write ( (const char *) hb_parc(1), PQINT64(2) ) );
-  }
-}
+$virtualMethod=|qint64|write|const char *,qint64
 
 /*
-QAbstractFileEngine * create ( const QString & fileName )
+static QAbstractFileEngine * create ( const QString & fileName )
 */
-HB_FUNC_STATIC( QABSTRACTFILEENGINE_CREATE )
-{
-  QAbstractFileEngine * ptr = QAbstractFileEngine::create ( PQSTRING(1) );
-  _qt4xhb_createReturnClass ( ptr, "QABSTRACTFILEENGINE" );
-}
+$staticMethod=|QAbstractFileEngine *|create|const QString &
 
 $extraMethods
 

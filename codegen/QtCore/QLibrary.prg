@@ -47,42 +47,22 @@ $destructor
 /*
 QLibrary(QObject *parent = 0)
 */
-HB_FUNC_STATIC( QLIBRARY_NEW1 )
-{
-  QLibrary * o = new QLibrary ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new1|QObject *=0
 
 /*
 QLibrary(const QString& fileName, QObject *parent = 0)
 */
-HB_FUNC_STATIC( QLIBRARY_NEW2 )
-{
-  QLibrary * o = new QLibrary ( PQSTRING(1), OPQOBJECT(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new2|const QString &,QObject *=0
 
 /*
 QLibrary(const QString& fileName, int verNum, QObject *parent = 0)
 */
-HB_FUNC_STATIC( QLIBRARY_NEW3 )
-{
-  QLibrary * o = new QLibrary ( PQSTRING(1), PINT(2), OPQOBJECT(3,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new3|const QString &,int,QObject *=0
 
 /*
 QLibrary(const QString& fileName, const QString &version, QObject *parent = 0)
 */
-HB_FUNC_STATIC( QLIBRARY_NEW4 )
-{
-  QLibrary * o = new QLibrary ( PQSTRING(1), PQSTRING(2), OPQOBJECT(3,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new4|const QString &,const QString &,QObject *=0
 
 //[1]QLibrary(QObject *parent = 0)
 //[2]QLibrary(const QString& fileName, QObject *parent = 0)
@@ -118,54 +98,22 @@ $deleteMethod
 /*
 void *resolve(const char *symbol)
 */
-HB_FUNC_STATIC( QLIBRARY_RESOLVE1 )
-{
-  QLibrary * obj = (QLibrary *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    void * retptr = obj->resolve ( (const char *) hb_parc(1) );
-    hb_retptr( (void *) retptr );
-  }
-}
-
+$method=|void *|resolve,resolve1|const char *
 
 /*
 bool load()
 */
-HB_FUNC_STATIC( QLIBRARY_LOAD )
-{
-  QLibrary * obj = (QLibrary *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->load () );
-  }
-}
-
+$method=|bool|load|
 
 /*
 bool unload()
 */
-HB_FUNC_STATIC( QLIBRARY_UNLOAD )
-{
-  QLibrary * obj = (QLibrary *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->unload () );
-  }
-}
-
+$method=|bool|unload|
 
 /*
 bool isLoaded() const
 */
-HB_FUNC_STATIC( QLIBRARY_ISLOADED )
-{
-  QLibrary * obj = (QLibrary *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isLoaded () );
-  }
-}
+$method=|bool|isLoaded|
 
 /*
 void setFileName(const QString &fileName)
@@ -210,60 +158,27 @@ $method=|QString|errorString|
 /*
 void setLoadHints(LoadHints hints)
 */
-HB_FUNC_STATIC( QLIBRARY_SETLOADHINTS )
-{
-  QLibrary * obj = (QLibrary *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setLoadHints ( (QLibrary::LoadHints) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setLoadHints|QLibrary::LoadHints
 
 /*
 LoadHints loadHints() const
 */
-HB_FUNC_STATIC( QLIBRARY_LOADHINTS )
-{
-  QLibrary * obj = (QLibrary *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->loadHints () );
-  }
-}
-
-
+$method=|QLibrary::LoadHints|loadHints|
 
 /*
 static void *resolve(const QString &fileName, const char *symbol)
 */
-HB_FUNC_STATIC( QLIBRARY_RESOLVE2 )
-{
-  void * retptr = QLibrary::resolve ( PQSTRING(1), (const char *) hb_parc(2) );
-  hb_retptr( (void *) retptr );
-}
-
+$staticMethod=|void *|resolve,resolve2|const QString &,const char *
 
 /*
 static void *resolve(const QString &fileName, int verNum, const char *symbol)
 */
-HB_FUNC_STATIC( QLIBRARY_RESOLVE3 )
-{
-  void * retptr = QLibrary::resolve ( PQSTRING(1), PINT(2), (const char *) hb_parc(3) );
-  hb_retptr( (void *) retptr );
-}
-
+$staticMethod=|void *|resolve,resolve3|const QString &,int,const char *
 
 /*
 static void *resolve(const QString &fileName, const QString &version, const char *symbol)
 */
-HB_FUNC_STATIC( QLIBRARY_RESOLVE4 )
-{
-  void * retptr = QLibrary::resolve ( PQSTRING(1), PQSTRING(2), (const char *) hb_parc(3) );
-  hb_retptr( (void *) retptr );
-}
-
+$staticMethod=|void *|resolve,resolve4|const QString &,const QString &,const char *
 
 //[1]void *resolve(const char *symbol)
 //[2]static void *resolve(const QString &fileName, const char *symbol)

@@ -59,397 +59,148 @@ $destructor
 /*
 QTimeLine ( int duration = 1000, QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QTIMELINE_NEW )
-{
-  QTimeLine * o = new QTimeLine ( OPINT(1,1000), OPQOBJECT(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|int=1000,QObject *=0
 
 $deleteMethod
 
 /*
 int currentFrame () const
 */
-HB_FUNC_STATIC( QTIMELINE_CURRENTFRAME )
-{
-  QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->currentFrame () );
-  }
-}
-
+$method=|int|currentFrame|
 
 /*
 int currentTime () const
 */
-HB_FUNC_STATIC( QTIMELINE_CURRENTTIME )
-{
-  QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->currentTime () );
-  }
-}
-
+$method=|int|currentTime|
 
 /*
 qreal currentValue () const
 */
-HB_FUNC_STATIC( QTIMELINE_CURRENTVALUE )
-{
-  QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->currentValue () );
-  }
-}
-
+$method=|qreal|currentValue|
 
 /*
 CurveShape curveShape () const
 */
-HB_FUNC_STATIC( QTIMELINE_CURVESHAPE )
-{
-  QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->curveShape () );
-  }
-}
-
+$method=|QTimeLine::CurveShape|curveShape|
 
 /*
 Direction direction () const
 */
-HB_FUNC_STATIC( QTIMELINE_DIRECTION )
-{
-  QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->direction () );
-  }
-}
-
+$method=|QTimeLine::Direction|direction|
 
 /*
 int duration () const
 */
-HB_FUNC_STATIC( QTIMELINE_DURATION )
-{
-  QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->duration () );
-  }
-}
-
-
+$method=|int|duration|
 
 /*
 int endFrame () const
 */
-HB_FUNC_STATIC( QTIMELINE_ENDFRAME )
-{
-  QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->endFrame () );
-  }
-}
-
+$method=|int|endFrame|
 
 /*
 int frameForTime ( int msec ) const
 */
-HB_FUNC_STATIC( QTIMELINE_FRAMEFORTIME )
-{
-  QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->frameForTime ( PINT(1) ) );
-  }
-}
-
+$method=|int|frameForTime|int
 
 /*
 int loopCount () const
 */
-HB_FUNC_STATIC( QTIMELINE_LOOPCOUNT )
-{
-  QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->loopCount () );
-  }
-}
-
+$method=|int|loopCount|
 
 /*
 void setCurveShape ( CurveShape shape )
 */
-HB_FUNC_STATIC( QTIMELINE_SETCURVESHAPE )
-{
-  QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setCurveShape ( (QTimeLine::CurveShape) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setCurveShape|QTimeLine::CurveShape
 
 /*
 void setDirection ( Direction direction )
 */
-HB_FUNC_STATIC( QTIMELINE_SETDIRECTION )
-{
-  QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setDirection ( (QTimeLine::Direction) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setDirection|QTimeLine::Direction
 
 /*
 void setDuration ( int duration )
 */
-HB_FUNC_STATIC( QTIMELINE_SETDURATION )
-{
-  QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDuration ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setDuration|int
 
 /*
 void setEasingCurve ( const QEasingCurve & curve )
 */
-HB_FUNC_STATIC( QTIMELINE_SETEASINGCURVE )
-{
-  QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setEasingCurve ( *PQEASINGCURVE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setEasingCurve|const QEasingCurve &
 
 /*
 void setEndFrame ( int frame )
 */
-HB_FUNC_STATIC( QTIMELINE_SETENDFRAME )
-{
-  QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setEndFrame ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setEndFrame|int
 
 /*
 void setFrameRange ( int startFrame, int endFrame )
 */
-HB_FUNC_STATIC( QTIMELINE_SETFRAMERANGE )
-{
-  QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFrameRange ( PINT(1), PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setFrameRange|int,int
 
 /*
 void setLoopCount ( int count )
 */
-HB_FUNC_STATIC( QTIMELINE_SETLOOPCOUNT )
-{
-  QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setLoopCount ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setLoopCount|int
 
 /*
 void setStartFrame ( int frame )
 */
-HB_FUNC_STATIC( QTIMELINE_SETSTARTFRAME )
-{
-  QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setStartFrame ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setStartFrame|int
 
 /*
 void setUpdateInterval ( int interval )
 */
-HB_FUNC_STATIC( QTIMELINE_SETUPDATEINTERVAL )
-{
-  QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setUpdateInterval ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setUpdateInterval|int
 
 /*
 int startFrame () const
 */
-HB_FUNC_STATIC( QTIMELINE_STARTFRAME )
-{
-  QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->startFrame () );
-  }
-}
-
+$method=|int|startFrame|
 
 /*
 State state () const
 */
-HB_FUNC_STATIC( QTIMELINE_STATE )
-{
-  QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->state () );
-  }
-}
-
+$method=|QTimeLine::State|state|
 
 /*
 int updateInterval () const
 */
-HB_FUNC_STATIC( QTIMELINE_UPDATEINTERVAL )
-{
-  QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->updateInterval () );
-  }
-}
-
+$method=|int|updateInterval|
 
 /*
 virtual qreal valueForTime ( int msec ) const
 */
-HB_FUNC_STATIC( QTIMELINE_VALUEFORTIME )
-{
-  QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->valueForTime ( PINT(1) ) );
-  }
-}
-
+$virtualMethod=|qreal|valueForTime|int
 
 /*
 void resume ()
 */
-HB_FUNC_STATIC( QTIMELINE_RESUME )
-{
-  QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->resume ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|resume|
 
 /*
 void setCurrentTime ( int msec )
 */
-HB_FUNC_STATIC( QTIMELINE_SETCURRENTTIME )
-{
-  QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCurrentTime ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setCurrentTime|int
 
 /*
 void setPaused ( bool paused )
 */
-HB_FUNC_STATIC( QTIMELINE_SETPAUSED )
-{
-  QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPaused ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPaused|bool
 
 /*
 void start ()
 */
-HB_FUNC_STATIC( QTIMELINE_START )
-{
-  QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->start ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|start|
 
 /*
 void stop ()
 */
-HB_FUNC_STATIC( QTIMELINE_STOP )
-{
-  QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->stop ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|stop|
 
 /*
 void toggleDirection ()
 */
-HB_FUNC_STATIC( QTIMELINE_TOGGLEDIRECTION )
-{
-  QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->toggleDirection ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
-
+$method=|void|toggleDirection|
 
 #pragma ENDDUMP

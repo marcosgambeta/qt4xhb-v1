@@ -47,42 +47,22 @@ $destructor
 /*
 QXmlStreamAttribute()
 */
-HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NEW1 )
-{
-  QXmlStreamAttribute * o = new QXmlStreamAttribute ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|
 
 /*
 QXmlStreamAttribute(const QString & qualifiedName, const QString & value)
 */
-HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NEW2 )
-{
-  QXmlStreamAttribute * o = new QXmlStreamAttribute ( PQSTRING(1), PQSTRING(2) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|const QString &,const QString &
 
 /*
 QXmlStreamAttribute(const QString & namespaceUri, const QString & name, const QString & value)
 */
-HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NEW3 )
-{
-  QXmlStreamAttribute * o = new QXmlStreamAttribute ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new3|const QString &,const QString &,const QString &
 
 /*
 QXmlStreamAttribute(const QXmlStreamAttribute & other)
 */
-HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NEW4 )
-{
-  QXmlStreamAttribute * o = new QXmlStreamAttribute ( *PQXMLSTREAMATTRIBUTE(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new4|const QXmlStreamAttribute &
 
 //[1]QXmlStreamAttribute()
 //[2]QXmlStreamAttribute(const QString & qualifiedName, const QString & value)
@@ -118,84 +98,32 @@ $deleteMethod
 /*
 bool isDefault() const
 */
-HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_ISDEFAULT )
-{
-  QXmlStreamAttribute * obj = (QXmlStreamAttribute *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isDefault () );
-  }
-}
-
+$method=|bool|isDefault|
 
 /*
 QStringRef name() const
 */
-HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NAME )
-{
-  QXmlStreamAttribute * obj = (QXmlStreamAttribute *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QStringRef * ptr = new QStringRef( obj->name () );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
-
+$method=|QStringRef|name|
 
 /*
 QStringRef namespaceUri() const
 */
-HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NAMESPACEURI )
-{
-  QXmlStreamAttribute * obj = (QXmlStreamAttribute *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QStringRef * ptr = new QStringRef( obj->namespaceUri () );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
-
+$method=|QStringRef|namespaceUri|
 
 /*
 QStringRef prefix() const
 */
-HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_PREFIX )
-{
-  QXmlStreamAttribute * obj = (QXmlStreamAttribute *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QStringRef * ptr = new QStringRef( obj->prefix () );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
-
+$method=|QStringRef|prefix|
 
 /*
 QStringRef qualifiedName() const
 */
-HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_QUALIFIEDNAME )
-{
-  QXmlStreamAttribute * obj = (QXmlStreamAttribute *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QStringRef * ptr = new QStringRef( obj->qualifiedName () );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
-
+$method=|QStringRef|qualifiedName|
 
 /*
 QStringRef value() const
 */
-HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_VALUE )
-{
-  QXmlStreamAttribute * obj = (QXmlStreamAttribute *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QStringRef * ptr = new QStringRef( obj->value () );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
+$method=|QStringRef|value|
 
 $extraMethods
 

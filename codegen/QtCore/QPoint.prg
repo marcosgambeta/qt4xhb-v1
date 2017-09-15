@@ -41,22 +41,12 @@ $destructor
 /*
 QPoint()
 */
-HB_FUNC_STATIC( QPOINT_NEW1 )
-{
-  QPoint * o = new QPoint ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|
 
 /*
 QPoint(int xpos, int ypos)
 */
-HB_FUNC_STATIC( QPOINT_NEW2 )
-{
-  QPoint * o = new QPoint ( PINT(1), PINT(2) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|int,int
 
 //[1]QPoint()
 //[2]QPoint(int xpos, int ypos)
@@ -82,83 +72,32 @@ $deleteMethod
 /*
 bool isNull() const
 */
-HB_FUNC_STATIC( QPOINT_ISNULL )
-{
-  QPoint * obj = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
-
+$method=|bool|isNull|
 
 /*
 int manhattanLength() const
 */
-HB_FUNC_STATIC( QPOINT_MANHATTANLENGTH )
-{
-  QPoint * obj = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->manhattanLength () );
-  }
-}
-
-
-
+$method=|int|manhattanLength|
 
 /*
 void setX(int x)
 */
-HB_FUNC_STATIC( QPOINT_SETX )
-{
-  QPoint * obj = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setX ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setX|int
 
 /*
 void setY(int y)
 */
-HB_FUNC_STATIC( QPOINT_SETY )
-{
-  QPoint * obj = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setY ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setY|int
 
 /*
 int x() const
 */
-HB_FUNC_STATIC( QPOINT_X )
-{
-  QPoint * obj = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->x () );
-  }
-}
-
+$method=|int|x|
 
 /*
 int y() const
 */
-HB_FUNC_STATIC( QPOINT_Y )
-{
-  QPoint * obj = (QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->y () );
-  }
-}
+$method=|int|y|
 
 $extraMethods
 

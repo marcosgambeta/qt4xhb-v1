@@ -40,54 +40,24 @@ $destructor
 /*
 QMutexLocker ( QMutex * mutex )
 */
-HB_FUNC_STATIC( QMUTEXLOCKER_NEW )
-{
-  QMutexLocker * o = new QMutexLocker ( PQMUTEX(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new|QMutex *
 
 $deleteMethod
 
 /*
 QMutex * mutex () const
 */
-HB_FUNC_STATIC( QMUTEXLOCKER_MUTEX )
-{
-  QMutexLocker * obj = (QMutexLocker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QMutex * ptr = obj->mutex ();
-    _qt4xhb_createReturnClass ( ptr, "QMUTEX" );
-  }
-}
-
+$method=|QMutex *|mutex|
 
 /*
 void relock ()
 */
-HB_FUNC_STATIC( QMUTEXLOCKER_RELOCK )
-{
-  QMutexLocker * obj = (QMutexLocker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->relock ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|relock|
 
 /*
 void unlock ()
 */
-HB_FUNC_STATIC( QMUTEXLOCKER_UNLOCK )
-{
-  QMutexLocker * obj = (QMutexLocker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->unlock ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|unlock|
 
 $extraMethods
 

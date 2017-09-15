@@ -46,42 +46,22 @@ $destructor
 /*
 QByteArrayMatcher ()
 */
-HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW1 )
-{
-  QByteArrayMatcher * o = new QByteArrayMatcher ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new1|
 
 /*
 QByteArrayMatcher ( const QByteArray & pattern )
 */
-HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW2 )
-{
-  QByteArrayMatcher * o = new QByteArrayMatcher ( *PQBYTEARRAY(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new2|const QByteArray &
 
 /*
 QByteArrayMatcher ( const char * pattern, int length )
 */
-HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW3 )
-{
-  QByteArrayMatcher * o = new QByteArrayMatcher ( (const char *) hb_parc(1), PINT(2) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new3|const char *,int
 
 /*
 QByteArrayMatcher ( const QByteArrayMatcher & other )
 */
-HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW4 )
-{
-  QByteArrayMatcher * o = new QByteArrayMatcher ( *PQBYTEARRAYMATCHER(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new4|const QByteArrayMatcher &
 
 //[1]QByteArrayMatcher ()
 //[2]QByteArrayMatcher ( const QByteArray & pattern )
@@ -117,28 +97,12 @@ $deleteMethod
 /*
 int indexIn ( const QByteArray & ba, int from = 0 ) const
 */
-HB_FUNC_STATIC( QBYTEARRAYMATCHER_INDEXIN1 )
-{
-  QByteArrayMatcher * obj = (QByteArrayMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->indexIn ( *PQBYTEARRAY(1), OPINT(2,0) ) );
-  }
-}
-
+$method=|int|indexIn,indexIn1|const QByteArray &,int=0
 
 /*
 int indexIn ( const char * str, int len, int from = 0 ) const
 */
-HB_FUNC_STATIC( QBYTEARRAYMATCHER_INDEXIN2 )
-{
-  QByteArrayMatcher * obj = (QByteArrayMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->indexIn ( (const char *) hb_parc(1), PINT(2), OPINT(3,0) ) );
-  }
-}
-
+$method=|int|indexIn,indexIn2|const char *,int,int=0
 
 //[1]int indexIn ( const QByteArray & ba, int from = 0 ) const
 //[2]int indexIn ( const char * str, int len, int from = 0 ) const
@@ -158,29 +122,12 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_INDEXIN )
 /*
 QByteArray pattern () const
 */
-HB_FUNC_STATIC( QBYTEARRAYMATCHER_PATTERN )
-{
-  QByteArrayMatcher * obj = (QByteArrayMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->pattern () );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray|pattern|
 
 /*
 void setPattern ( const QByteArray & pattern )
 */
-HB_FUNC_STATIC( QBYTEARRAYMATCHER_SETPATTERN )
-{
-  QByteArrayMatcher * obj = (QByteArrayMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPattern ( *PQBYTEARRAY(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setPattern|const QByteArray &
 
 $extraMethods
 

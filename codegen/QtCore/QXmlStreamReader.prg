@@ -103,47 +103,27 @@ $destructor
 /*
 QXmlStreamReader()
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_NEW1 )
-{
-  QXmlStreamReader * o = new QXmlStreamReader ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new1|
 
 /*
 QXmlStreamReader(QIODevice * device)
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_NEW2 )
-{
-  QXmlStreamReader * o = new QXmlStreamReader ( PQIODEVICE(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new2|QIODevice *
 
 /*
 QXmlStreamReader(const QByteArray & data)
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_NEW3 )
-{
-  QXmlStreamReader * o = new QXmlStreamReader ( *PQBYTEARRAY(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new3|const QByteArray &
 
 /*
 QXmlStreamReader(const QString & data)
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_NEW4 )
-{
-  QXmlStreamReader * o = new QXmlStreamReader ( PQSTRING(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new4|const QString &
 
 /*
 QXmlStreamReader(const char * data)
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_NEW5 )
-{
-  QXmlStreamReader * o = new QXmlStreamReader ( (const char *) hb_parc(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new5|const char *
 
 //[1]QXmlStreamReader()
 //[2]QXmlStreamReader(QIODevice * device)
@@ -169,10 +149,10 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_NEW )
   {
     HB_FUNC_EXEC( QXMLSTREAMREADER_NEW4 );
   }
-  //else if( ISNUMPAR(1) && ISCHAR(1) )
-  //{
-  //  HB_FUNC_EXEC( QXMLSTREAMREADER_NEW5 );
-  //}
+  else if( ISNUMPAR(1) && ISCHAR(1) )
+  {
+    HB_FUNC_EXEC( QXMLSTREAMREADER_NEW5 );
+  }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
@@ -255,112 +235,42 @@ $method=|QIODevice *|device|
 /*
 QStringRef documentEncoding() const
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_DOCUMENTENCODING )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QStringRef * ptr = new QStringRef( obj->documentEncoding () );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
-
+$method=|QStringRef|documentEncoding|
 
 /*
 QStringRef documentVersion() const
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_DOCUMENTVERSION )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QStringRef * ptr = new QStringRef( obj->documentVersion () );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
-
+$method=|QStringRef|documentVersion|
 
 /*
 QStringRef dtdName() const
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_DTDNAME )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QStringRef * ptr = new QStringRef( obj->dtdName () );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
-
+$method=|QStringRef|dtdName|
 
 /*
 QStringRef dtdPublicId() const
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_DTDPUBLICID )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QStringRef * ptr = new QStringRef( obj->dtdPublicId () );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
-
+$method=|QStringRef|dtdPublicId|
 
 /*
 QStringRef dtdSystemId() const
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_DTDSYSTEMID )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QStringRef * ptr = new QStringRef( obj->dtdSystemId () );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
-
+$method=|QStringRef|dtdSystemId|
 
 /*
 QXmlStreamEntityDeclarations entityDeclarations() const
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_ENTITYDECLARATIONS )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QXmlStreamEntityDeclarations * ptr = new QXmlStreamEntityDeclarations( obj->entityDeclarations () );
-    _qt4xhb_createReturnClass ( ptr, "QXMLSTREAMENTITYDECLARATIONS" );
-  }
-}
-
+$method=|QXmlStreamEntityDeclarations|entityDeclarations|
 
 /*
 QXmlStreamEntityResolver * entityResolver() const
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_ENTITYRESOLVER )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QXmlStreamEntityResolver * ptr = obj->entityResolver ();
-    _qt4xhb_createReturnClass ( ptr, "QXMLSTREAMENTITYRESOLVER" );
-  }
-}
-
+$method=|QXmlStreamEntityResolver *|entityResolver|
 
 /*
 Error error() const
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_ERROR )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->error () );
-  }
-}
+$method=|QXmlStreamReader::Error|error|
 
 /*
 QString errorString() const
@@ -370,322 +280,122 @@ $method=|QString|errorString|
 /*
 bool hasError() const
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_HASERROR )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasError () );
-  }
-}
-
+$method=|bool|hasError|
 
 /*
 bool isCDATA() const
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_ISCDATA )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isCDATA () );
-  }
-}
-
+$method=|bool|isCDATA|
 
 /*
 bool isCharacters() const
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_ISCHARACTERS )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isCharacters () );
-  }
-}
-
+$method=|bool|isCharacters|
 
 /*
 bool isComment() const
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_ISCOMMENT )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isComment () );
-  }
-}
-
+$method=|bool|isComment|
 
 /*
 bool isDTD() const
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_ISDTD )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isDTD () );
-  }
-}
-
+$method=|bool|isDTD|
 
 /*
 bool isEndDocument() const
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_ISENDDOCUMENT )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isEndDocument () );
-  }
-}
-
+$method=|bool|isEndDocument|
 
 /*
 bool isEndElement() const
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_ISENDELEMENT )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isEndElement () );
-  }
-}
-
+$method=|bool|isEndElement|
 
 /*
 bool isEntityReference() const
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_ISENTITYREFERENCE )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isEntityReference () );
-  }
-}
-
+$method=|bool|isEntityReference|
 
 /*
 bool isProcessingInstruction() const
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_ISPROCESSINGINSTRUCTION )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isProcessingInstruction () );
-  }
-}
-
+$method=|bool|isProcessingInstruction|
 
 /*
 bool isStandaloneDocument() const
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_ISSTANDALONEDOCUMENT )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isStandaloneDocument () );
-  }
-}
-
+$method=|bool|isStandaloneDocument|
 
 /*
 bool isStartDocument() const
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_ISSTARTDOCUMENT )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isStartDocument () );
-  }
-}
-
+$method=|bool|isStartDocument|
 
 /*
 bool isStartElement() const
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_ISSTARTELEMENT )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isStartElement () );
-  }
-}
-
+$method=|bool|isStartElement|
 
 /*
 bool isWhitespace() const
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_ISWHITESPACE )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isWhitespace () );
-  }
-}
-
+$method=|bool|isWhitespace|
 
 /*
 qint64 lineNumber() const
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_LINENUMBER )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQINT64( obj->lineNumber () );
-  }
-}
-
+$method=|qint64|lineNumber|
 
 /*
 QStringRef name() const
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_NAME )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QStringRef * ptr = new QStringRef( obj->name () );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
-
+$method=|QStringRef|name|
 
 /*
 QXmlStreamNamespaceDeclarations namespaceDeclarations() const
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_NAMESPACEDECLARATIONS )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QXmlStreamNamespaceDeclarations * ptr = new QXmlStreamNamespaceDeclarations( obj->namespaceDeclarations () );
-    _qt4xhb_createReturnClass ( ptr, "QXMLSTREAMNAMESPACEDECLARATIONS" );
-  }
-}
-
+$method=|QXmlStreamNamespaceDeclarations|namespaceDeclarations|
 
 /*
 bool namespaceProcessing() const
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_NAMESPACEPROCESSING )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->namespaceProcessing () );
-  }
-}
-
+$method=|bool|namespaceProcessing|
 
 /*
 QStringRef namespaceUri() const
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_NAMESPACEURI )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QStringRef * ptr = new QStringRef( obj->namespaceUri () );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
-
+$method=|QStringRef|namespaceUri|
 
 /*
 QXmlStreamNotationDeclarations notationDeclarations() const
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_NOTATIONDECLARATIONS )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QXmlStreamNotationDeclarations * ptr = new QXmlStreamNotationDeclarations( obj->notationDeclarations () );
-    _qt4xhb_createReturnClass ( ptr, "QXMLSTREAMNOTATIONDECLARATIONS" );
-  }
-}
-
+$method=|QXmlStreamNotationDeclarations|notationDeclarations|
 
 /*
 QStringRef prefix() const
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_PREFIX )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QStringRef * ptr = new QStringRef( obj->prefix () );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
-
+$method=|QStringRef|prefix|
 
 /*
 QStringRef processingInstructionData() const
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_PROCESSINGINSTRUCTIONDATA )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QStringRef * ptr = new QStringRef( obj->processingInstructionData () );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
-
+$method=|QStringRef|processingInstructionData|
 
 /*
 QStringRef processingInstructionTarget() const
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_PROCESSINGINSTRUCTIONTARGET )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QStringRef * ptr = new QStringRef( obj->processingInstructionTarget () );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
-
+$method=|QStringRef|processingInstructionTarget|
 
 /*
 QStringRef qualifiedName() const
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_QUALIFIEDNAME )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QStringRef * ptr = new QStringRef( obj->qualifiedName () );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
-
+$method=|QStringRef|qualifiedName|
 
 /*
 void raiseError(const QString & message = QString())
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_RAISEERROR )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->raiseError ( OPQSTRING(1,QString()) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|raiseError|const QString &=QString()
 
 /*
 QString readElementText(ReadElementTextBehaviour behaviour = ErrorOnUnexpectedElement)
@@ -695,98 +405,37 @@ $method=|QString|readElementText|QXmlStreamReader::ReadElementTextBehaviour=QXml
 /*
 TokenType readNext()
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_READNEXT )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->readNext () );
-  }
-}
-
+$method=|QXmlStreamReader::TokenType|readNext|
 
 /*
 bool readNextStartElement()
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_READNEXTSTARTELEMENT )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->readNextStartElement () );
-  }
-}
-
+$method=|bool|readNextStartElement|
 
 /*
 void setDevice(QIODevice * device)
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_SETDEVICE )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDevice ( PQIODEVICE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setDevice|QIODevice *
 
 /*
 void setEntityResolver(QXmlStreamEntityResolver * resolver)
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_SETENTITYRESOLVER )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QXmlStreamEntityResolver * par1 = (QXmlStreamEntityResolver *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setEntityResolver ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setEntityResolver|QXmlStreamEntityResolver *
 
 /*
 void setNamespaceProcessing(bool)
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_SETNAMESPACEPROCESSING )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setNamespaceProcessing ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$methdo=|void|setNamespaceProcessing|bool
 
 /*
 void skipCurrentElement()
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_SKIPCURRENTELEMENT )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->skipCurrentElement ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|skipCurrentElement|
 
 /*
 QStringRef text() const
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_TEXT )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QStringRef * ptr = new QStringRef( obj->text () );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
+$method=|QStringRef|text|
 
 /*
 QString tokenString() const
@@ -796,14 +445,7 @@ $method=|QString|tokenString|
 /*
 TokenType tokenType() const
 */
-HB_FUNC_STATIC( QXMLSTREAMREADER_TOKENTYPE )
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->tokenType () );
-  }
-}
+$method=|QXmlStreamReader::TokenType|tokenType|
 
 $extraMethods
 

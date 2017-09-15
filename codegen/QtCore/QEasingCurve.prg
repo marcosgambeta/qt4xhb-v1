@@ -43,22 +43,12 @@ $destructor
 /*
 QEasingCurve ( Type type = Linear )
 */
-HB_FUNC_STATIC( QEASINGCURVE_NEW1 )
-{
-  QEasingCurve * o = new QEasingCurve ( (QEasingCurve::Type) hb_parni(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new1|QEasingCurve::Type=QEasingCurve::Linear )
 
 /*
 QEasingCurve ( const QEasingCurve & other )
 */
-HB_FUNC_STATIC( QEASINGCURVE_NEW2 )
-{
-  QEasingCurve * o = new QEasingCurve ( *PQEASINGCURVE(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new2|const QEasingCurve &
 
 //[1]QEasingCurve(Type type = Linear)
 //[2]QEasingCurve(const QEasingCurve & other)
@@ -88,111 +78,42 @@ $deleteMethod
 /*
 qreal amplitude () const
 */
-HB_FUNC_STATIC( QEASINGCURVE_AMPLITUDE )
-{
-  QEasingCurve * obj = (QEasingCurve *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->amplitude () );
-  }
-}
-
-
+$method=|qreal|amplitude|
 
 /*
 qreal overshoot () const
 */
-HB_FUNC_STATIC( QEASINGCURVE_OVERSHOOT )
-{
-  QEasingCurve * obj = (QEasingCurve *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->overshoot () );
-  }
-}
-
+$method=|qreal|overshoot|
 
 /*
 qreal period () const
 */
-HB_FUNC_STATIC( QEASINGCURVE_PERIOD )
-{
-  QEasingCurve * obj = (QEasingCurve *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->period () );
-  }
-}
-
+$method=|qreal|period|
 
 /*
 void setAmplitude ( qreal amplitude )
 */
-HB_FUNC_STATIC( QEASINGCURVE_SETAMPLITUDE )
-{
-  QEasingCurve * obj = (QEasingCurve *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAmplitude ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|setAmplitude|qreal
 
 /*
 void setOvershoot ( qreal overshoot )
 */
-HB_FUNC_STATIC( QEASINGCURVE_SETOVERSHOOT )
-{
-  QEasingCurve * obj = (QEasingCurve *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setOvershoot ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setOvershoot|qreal
 
 /*
 void setPeriod ( qreal period )
 */
-HB_FUNC_STATIC( QEASINGCURVE_SETPERIOD )
-{
-  QEasingCurve * obj = (QEasingCurve *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPeriod ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPeriod|qreal
 
 /*
 void setType ( Type type )
 */
-HB_FUNC_STATIC( QEASINGCURVE_SETTYPE )
-{
-  QEasingCurve * obj = (QEasingCurve *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setType ( (QEasingCurve::Type) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setType|QEasingCurve::Type
 
 /*
 Type type () const
 */
-HB_FUNC_STATIC( QEASINGCURVE_TYPE )
-{
-  QEasingCurve * obj = (QEasingCurve *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->type () );
-  }
-}
+$method=|QEasingCurve::Type|type|
 
 $extraMethods
 

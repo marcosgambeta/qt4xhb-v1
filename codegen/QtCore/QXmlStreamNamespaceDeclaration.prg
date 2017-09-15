@@ -42,32 +42,17 @@ $destructor
 /*
 QXmlStreamNamespaceDeclaration()
 */
-HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NEW1 )
-{
-  QXmlStreamNamespaceDeclaration * o = new QXmlStreamNamespaceDeclaration ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|
 
 /*
 QXmlStreamNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & other)
 */
-HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NEW2 )
-{
-  QXmlStreamNamespaceDeclaration * o = new QXmlStreamNamespaceDeclaration ( *PQXMLSTREAMNAMESPACEDECLARATION(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|const QXmlStreamNamespaceDeclaration &
 
 /*
 QXmlStreamNamespaceDeclaration(const QString & prefix, const QString & namespaceUri)
 */
-HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NEW3 )
-{
-  QXmlStreamNamespaceDeclaration * o = new QXmlStreamNamespaceDeclaration ( PQSTRING(1), PQSTRING(2) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new3|const QString &,const QString &
 
 //[1]QXmlStreamNamespaceDeclaration()
 //[2]QXmlStreamNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & other)
@@ -98,29 +83,12 @@ $deleteMethod
 /*
 QStringRef namespaceUri() const
 */
-HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NAMESPACEURI )
-{
-  QXmlStreamNamespaceDeclaration * obj = (QXmlStreamNamespaceDeclaration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QStringRef * ptr = new QStringRef( obj->namespaceUri () );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
-
+$method=|QStringRef|namespaceUri|
 
 /*
 QStringRef prefix() const
 */
-HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_PREFIX )
-{
-  QXmlStreamNamespaceDeclaration * obj = (QXmlStreamNamespaceDeclaration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QStringRef * ptr = new QStringRef( obj->prefix () );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
+$method=|QStringRef|prefix|
 
 $extraMethods
 

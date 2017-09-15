@@ -37,22 +37,12 @@ $destructor
 /*
 QSignalTransition(QState *sourceState = 0)
 */
-HB_FUNC_STATIC( QSIGNALTRANSITION_NEW1 )
-{
-  QSignalTransition * o = new QSignalTransition ( OPQSTATE(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new1|QState *=0
 
 /*
 QSignalTransition(QObject *sender, const char *signal,QState *sourceState = 0)
 */
-HB_FUNC_STATIC( QSIGNALTRANSITION_NEW2 )
-{
-  QSignalTransition * o = new QSignalTransition ( PQOBJECT(1), (const char *) hb_parc(2), OPQSTATE(3,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new2|QObject *,const char *,QState *=0
 
 //[1]QSignalTransition(QState *sourceState = 0)
 //[2]QSignalTransition(QObject *sender, const char *signal,QState *sourceState = 0)
@@ -78,60 +68,21 @@ $deleteMethod
 /*
 QObject *senderObject() const
 */
-HB_FUNC_STATIC( QSIGNALTRANSITION_SENDEROBJECT )
-{
-  QSignalTransition * obj = (QSignalTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QObject * ptr = obj->senderObject ();
-    _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
-
+$method=|QObject *|senderObject|
 
 /*
 void setSenderObject(QObject *sender)
 */
-HB_FUNC_STATIC( QSIGNALTRANSITION_SETSENDEROBJECT )
-{
-  QSignalTransition * obj = (QSignalTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSenderObject ( PQOBJECT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setSenderObject|QObject *
 
 /*
 QByteArray signal() const
 */
-HB_FUNC_STATIC( QSIGNALTRANSITION_SIGNAL )
-{
-  QSignalTransition * obj = (QSignalTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->signal () );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray|signal|
 
 /*
 void setSignal(const QByteArray &signal)
 */
-HB_FUNC_STATIC( QSIGNALTRANSITION_SETSIGNAL )
-{
-  QSignalTransition * obj = (QSignalTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSignal ( *PQBYTEARRAY(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
-
+$method=|void|setSignal|const QByteArray &
 
 #pragma ENDDUMP

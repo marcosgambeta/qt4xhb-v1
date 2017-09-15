@@ -44,22 +44,12 @@ $destructor
 /*
 QMargins ()
 */
-HB_FUNC_STATIC( QMARGINS_NEW1 )
-{
-  QMargins * o = new QMargins ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|
 
 /*
 QMargins ( int left, int top, int right, int bottom )
 */
-HB_FUNC_STATIC( QMARGINS_NEW2 )
-{
-  QMargins * o = new QMargins ( PINT(1), PINT(2), PINT(3), PINT(4) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|int,int,int,int
 
 //[1]QMargins ()
 //[2]QMargins ( int left, int top, int right, int bottom )
@@ -85,122 +75,47 @@ $deleteMethod
 /*
 int bottom () const
 */
-HB_FUNC_STATIC( QMARGINS_BOTTOM )
-{
-  QMargins * obj = (QMargins *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->bottom () );
-  }
-}
-
+$method=|int|bottom|
 
 /*
 bool isNull () const
 */
-HB_FUNC_STATIC( QMARGINS_ISNULL )
-{
-  QMargins * obj = (QMargins *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
-
+$method=|bool|isNull|
 
 /*
 int left () const
 */
-HB_FUNC_STATIC( QMARGINS_LEFT )
-{
-  QMargins * obj = (QMargins *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->left () );
-  }
-}
-
+$method=|int|left|
 
 /*
 int right () const
 */
-HB_FUNC_STATIC( QMARGINS_RIGHT )
-{
-  QMargins * obj = (QMargins *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->right () );
-  }
-}
-
+$method=|int|right|
 
 /*
 void setBottom ( int bottom )
 */
-HB_FUNC_STATIC( QMARGINS_SETBOTTOM )
-{
-  QMargins * obj = (QMargins *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setBottom ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setBottom|int
 
 /*
 void setLeft ( int left )
 */
-HB_FUNC_STATIC( QMARGINS_SETLEFT )
-{
-  QMargins * obj = (QMargins *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setLeft ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setLeft|int
 
 /*
 void setRight ( int right )
 */
-HB_FUNC_STATIC( QMARGINS_SETRIGHT )
-{
-  QMargins * obj = (QMargins *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setRight ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setRight|int
 
 /*
 void setTop ( int Top )
 */
-HB_FUNC_STATIC( QMARGINS_SETTOP )
-{
-  QMargins * obj = (QMargins *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setTop ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setTop|int
 
 /*
 int top () const
 */
-HB_FUNC_STATIC( QMARGINS_TOP )
-{
-  QMargins * obj = (QMargins *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->top () );
-  }
-}
+$method=|int|top|
 
 $extraMethods
 

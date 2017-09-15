@@ -39,25 +39,12 @@ $destructor
 /*
 QTextDecoder(const QTextCodec * codec)
 */
-HB_FUNC_STATIC( QTEXTDECODER_NEW1 )
-{
-  const QTextCodec * par1 = (const QTextCodec *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QTextDecoder * o = new QTextDecoder ( par1 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new1|const QTextCodec *
 
 /*
 QTextDecoder(const QTextCodec * codec, QTextCodec::ConversionFlags flags)
 */
-HB_FUNC_STATIC( QTEXTDECODER_NEW2 )
-{
-  const QTextCodec * par1 = (const QTextCodec *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  int par2 = hb_parni(2);
-  QTextDecoder * o = new QTextDecoder ( par1, (QTextCodec::ConversionFlags) par2 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new2|const QTextCodec *,QTextCodec::ConversionFlags
 
 //[1]QTextDecoder(const QTextCodec * codec)
 //[2]QTextDecoder(const QTextCodec * codec, QTextCodec::ConversionFlags flags)
@@ -83,44 +70,17 @@ $deleteMethod
 /*
 QString toUnicode(const char * chars, int len)
 */
-HB_FUNC_STATIC( QTEXTDECODER_TOUNICODE1 )
-{
-  QTextDecoder * obj = (QTextDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->toUnicode ( (const char *) hb_parc(1), PINT(2) ) );
-  }
-}
-
+$method=|QString|toUnicode,toUnicode1|const char *,int
 
 /*
 void toUnicode(QString * target, const char * chars, int len)
 */
-HB_FUNC_STATIC( QTEXTDECODER_TOUNICODE2 )
-{
-  QTextDecoder * obj = (QTextDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QString * par1 = NULL;
-    int par3 = hb_parni(3);
-    obj->toUnicode ( par1, (const char *) hb_parc(2), par3 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|toUnicode,toUnicode2|QString *,const char *,int
 
 /*
 QString toUnicode(const QByteArray & ba)
 */
-HB_FUNC_STATIC( QTEXTDECODER_TOUNICODE3 )
-{
-  QTextDecoder * obj = (QTextDecoder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->toUnicode ( *PQBYTEARRAY(1) ) );
-  }
-}
-
+$method=|QString|toUnicode,toUnicode3|const QByteArray &
 
 //[1]QString toUnicode(const char * chars, int len)
 //[2]void toUnicode(QString * target, const char * chars, int len)

@@ -52,22 +52,12 @@ $destructor
 /*
 QState ( QState * parent = 0 )
 */
-HB_FUNC_STATIC( QSTATE_NEW1 )
-{
-  QState * o = new QState ( OPQSTATE(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new1|QState *=0
 
 /*
 QState ( ChildMode childMode, QState * parent = 0 )
 */
-HB_FUNC_STATIC( QSTATE_NEW2 )
-{
-  QState * o = new QState ( (QState::ChildMode) hb_parni(1), OPQSTATE(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new2|QState::ChildMode,QState *=0
 
 //[1]QState ( QState * parent = 0 )
 //[2]QState ( ChildMode childMode, QState * parent = 0 )
@@ -93,47 +83,17 @@ $deleteMethod
 /*
 void addTransition ( QAbstractTransition * transition )
 */
-HB_FUNC_STATIC( QSTATE_ADDTRANSITION1 )
-{
-  QState * obj = (QState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAbstractTransition * par1 = (QAbstractTransition *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->addTransition ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|addTransition,addTransition1|QAbstractTransition *
 
 /*
 QSignalTransition * addTransition ( QObject * sender, const char * signal, QAbstractState * target )
 */
-HB_FUNC_STATIC( QSTATE_ADDTRANSITION2 )
-{
-  QState * obj = (QState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAbstractState * par3 = (QAbstractState *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QSignalTransition * ptr = obj->addTransition ( PQOBJECT(1), (const char *) hb_parc(2), par3 );
-    _qt4xhb_createReturnClass ( ptr, "QSIGNALTRANSITION" );
-  }
-}
-
+$method=|QSignalTransition *|addTransition,addTransition2|QObject *,const char *,QAbstractState *
 
 /*
 QAbstractTransition * addTransition ( QAbstractState * target )
 */
-HB_FUNC_STATIC( QSTATE_ADDTRANSITION3 )
-{
-  QState * obj = (QState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAbstractState * par1 = (QAbstractState *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QAbstractTransition * ptr = obj->addTransition ( par1 );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTTRANSITION" );
-  }
-}
-
+$method=|QAbstractTransition *|addTransition,addTransition3|QAbstractState *
 
 //[1]void addTransition ( QAbstractTransition * transition )
 //[2]QSignalTransition * addTransition ( QObject * sender, const char * signal, QAbstractState * target )
@@ -158,116 +118,42 @@ HB_FUNC_STATIC( QSTATE_ADDTRANSITION )
 /*
 void assignProperty ( QObject * object, const char * name, const QVariant & value )
 */
-HB_FUNC_STATIC( QSTATE_ASSIGNPROPERTY )
-{
-  QState * obj = (QState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->assignProperty ( PQOBJECT(1), (const char *) hb_parc(2), *PQVARIANT(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|assignProperty|QObject *,const char *,const QVariant &
 
 /*
 ChildMode childMode () const
 */
-HB_FUNC_STATIC( QSTATE_CHILDMODE )
-{
-  QState * obj = (QState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->childMode () );
-  }
-}
-
+$method=|QState::ChildMode|childMode|
 
 /*
 QAbstractState * errorState () const
 */
-HB_FUNC_STATIC( QSTATE_ERRORSTATE )
-{
-  QState * obj = (QState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAbstractState * ptr = obj->errorState ();
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTSTATE" );
-  }
-}
-
+$method=|QAbstractState *|errorState|
 
 /*
 QAbstractState * initialState () const
 */
-HB_FUNC_STATIC( QSTATE_INITIALSTATE )
-{
-  QState * obj = (QState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAbstractState * ptr = obj->initialState ();
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTSTATE" );
-  }
-}
-
+$method=|QAbstractState *|initialState|
 
 /*
 void removeTransition ( QAbstractTransition * transition )
 */
-HB_FUNC_STATIC( QSTATE_REMOVETRANSITION )
-{
-  QState * obj = (QState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAbstractTransition * par1 = (QAbstractTransition *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->removeTransition ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|removeTransition|QAbstractTransition *
 
 /*
 void setChildMode ( ChildMode mode )
 */
-HB_FUNC_STATIC( QSTATE_SETCHILDMODE )
-{
-  QState * obj = (QState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setChildMode ( (QState::ChildMode) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setChildMode|QState::ChildMode
 
 /*
 void setErrorState ( QAbstractState * state )
 */
-HB_FUNC_STATIC( QSTATE_SETERRORSTATE )
-{
-  QState * obj = (QState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAbstractState * par1 = (QAbstractState *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setErrorState ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setErrorState|QAbstractState *
 
 /*
 void setInitialState ( QAbstractState * state )
 */
-HB_FUNC_STATIC( QSTATE_SETINITIALSTATE )
-{
-  QState * obj = (QState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAbstractState * par1 = (QAbstractState *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setInitialState ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setInitialState|QAbstractState *
 
 /*
 QList<QAbstractTransition *> transitions () const
@@ -311,10 +197,5 @@ HB_FUNC_STATIC( QSTATE_TRANSITIONS )
     hb_itemReturnRelease(pArray);
   }
 }
-
-
-
-
-
 
 #pragma ENDDUMP

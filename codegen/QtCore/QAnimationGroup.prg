@@ -39,117 +39,41 @@ $deleteMethod
 /*
 void addAnimation ( QAbstractAnimation * animation )
 */
-HB_FUNC_STATIC( QANIMATIONGROUP_ADDANIMATION )
-{
-  QAnimationGroup * obj = (QAnimationGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAbstractAnimation * par1 = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->addAnimation ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|addAnimation|QAbstractAnimation *
 
 /*
 QAbstractAnimation * animationAt ( int index ) const
 */
-HB_FUNC_STATIC( QANIMATIONGROUP_ANIMATIONAT )
-{
-  QAnimationGroup * obj = (QAnimationGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAbstractAnimation * ptr = obj->animationAt ( PINT(1) );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTANIMATION" );
-  }
-}
-
+$method=|QAbstractAnimation *|animationAt|int
 
 /*
 int animationCount () const
 */
-HB_FUNC_STATIC( QANIMATIONGROUP_ANIMATIONCOUNT )
-{
-  QAnimationGroup * obj = (QAnimationGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->animationCount () );
-  }
-}
-
+$method=|int|animationCount|
 
 /*
 void clear ()
 */
-HB_FUNC_STATIC( QANIMATIONGROUP_CLEAR )
-{
-  QAnimationGroup * obj = (QAnimationGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clear ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|clear|
 
 /*
 int indexOfAnimation ( QAbstractAnimation * animation ) const
 */
-HB_FUNC_STATIC( QANIMATIONGROUP_INDEXOFANIMATION )
-{
-  QAnimationGroup * obj = (QAnimationGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAbstractAnimation * par1 = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RINT( obj->indexOfAnimation ( par1 ) );
-  }
-}
-
+$method=|int|indexOfAnimation|QAbstractAnimation *
 
 /*
 void insertAnimation ( int index, QAbstractAnimation * animation )
 */
-HB_FUNC_STATIC( QANIMATIONGROUP_INSERTANIMATION )
-{
-  QAnimationGroup * obj = (QAnimationGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAbstractAnimation * par2 = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->insertAnimation ( PINT(1), par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|insertAnimation|int,QAbstractAnimation *
 
 /*
 void removeAnimation ( QAbstractAnimation * animation )
 */
-HB_FUNC_STATIC( QANIMATIONGROUP_REMOVEANIMATION )
-{
-  QAnimationGroup * obj = (QAnimationGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAbstractAnimation * par1 = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->removeAnimation ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|removeAnimation|QAbstractAnimation *
 
 /*
-QAbstractAnimation *	takeAnimation ( int index )
+QAbstractAnimation * takeAnimation ( int index )
 */
-HB_FUNC_STATIC( QANIMATIONGROUP_TAKEANIMATION )
-{
-  QAnimationGroup * obj = (QAnimationGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAbstractAnimation * ptr = obj->takeAnimation ( PINT(1) );
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTANIMATION" );
-  }
-}
-
-
-
+$method=|QAbstractAnimation *|takeAnimation|int
 
 #pragma ENDDUMP

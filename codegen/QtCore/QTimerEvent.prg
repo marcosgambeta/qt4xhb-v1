@@ -27,28 +27,13 @@ $destructor
 /*
 QTimerEvent(int timerId)
 */
-HB_FUNC_STATIC( QTIMEREVENT_NEW )
-{
-  QTimerEvent * o = new QTimerEvent ( PINT(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|int
 
 $deleteMethod
 
 /*
 int timerId() const
 */
-HB_FUNC_STATIC( QTIMEREVENT_TIMERID )
-{
-  QTimerEvent * obj = (QTimerEvent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->timerId () );
-  }
-}
-
-
-
-
+$method=|int|timerId|
 
 #pragma ENDDUMP

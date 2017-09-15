@@ -44,22 +44,12 @@ $destructor
 /*
 QXmlStreamEntityDeclaration()
 */
-HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NEW1 )
-{
-  QXmlStreamEntityDeclaration * o = new QXmlStreamEntityDeclaration ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|
 
 /*
 QXmlStreamEntityDeclaration(const QXmlStreamEntityDeclaration & other)
 */
-HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NEW2 )
-{
-  QXmlStreamEntityDeclaration * o = new QXmlStreamEntityDeclaration ( *PQXMLSTREAMENTITYDECLARATION(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|const QXmlStreamEntityDeclaration &
 
 //[1]QXmlStreamEntityDeclaration()
 //[2]QXmlStreamEntityDeclaration(const QXmlStreamEntityDeclaration & other)
@@ -85,71 +75,27 @@ $deleteMethod
 /*
 QStringRef name() const
 */
-HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NAME )
-{
-  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QStringRef * ptr = new QStringRef( obj->name () );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
-
+$method=|QStringRef|name|
 
 /*
 QStringRef notationName() const
 */
-HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NOTATIONNAME )
-{
-  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QStringRef * ptr = new QStringRef( obj->notationName () );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
-
+$method=|QStringRef|notationName|
 
 /*
 QStringRef publicId() const
 */
-HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_PUBLICID )
-{
-  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QStringRef * ptr = new QStringRef( obj->publicId () );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
-
+$method=|QStringRef|publicId|
 
 /*
 QStringRef systemId() const
 */
-HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_SYSTEMID )
-{
-  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QStringRef * ptr = new QStringRef( obj->systemId () );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
-
+$method=|QStringRef|systemId|
 
 /*
 QStringRef value() const
 */
-HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_VALUE )
-{
-  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QStringRef * ptr = new QStringRef( obj->value () );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
+$method=|QStringRef|value|
 
 $extraMethods
 

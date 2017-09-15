@@ -53,15 +53,7 @@ $method=|bool|filterEvent|void *
 /*
 virtual void flush () = 0
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_FLUSH )
-{
-  QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->flush ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|flush|
 
 /*
 virtual bool hasPendingEvents () = 0
@@ -71,15 +63,7 @@ $virtualMethod=|bool|hasPendingEvents|
 /*
 virtual void interrupt () = 0
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_INTERRUPT )
-{
-  QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->interrupt ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|interrupt|
 
 /*
 virtual bool processEvents ( QEventLoop::ProcessEventsFlags flags ) = 0
@@ -89,44 +73,17 @@ $virtualMethod=|bool|processEvents|QEventLoop::ProcessEventsFlags
 /*
 virtual void registerSocketNotifier ( QSocketNotifier * notifier ) = 0
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERSOCKETNOTIFIER )
-{
-  QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSocketNotifier * par1 = (QSocketNotifier *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->registerSocketNotifier ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|registerSocketNotifier|QSocketNotifier *
 
 /*
 int registerTimer ( int interval, QObject * object )
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERTIMER1 )
-{
-  QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->registerTimer ( PINT(1), PQOBJECT(2) ) );
-  }
-}
-
+$method=|int|registerTimer,registerTimer1|int,QObject *
 
 /*
 virtual void registerTimer ( int timerId, int interval, QObject * object ) = 0
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERTIMER2 )
-{
-  QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->registerTimer ( PINT(1), PINT(2), PQOBJECT(3) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|registerTimer,registerTimer2|int,int,QObject *
 
 //[1]int registerTimer ( int interval, QObject * object )
 //[2]virtual void registerTimer ( int timerId, int interval, QObject * object ) = 0
@@ -143,21 +100,10 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERTIMER )
   }
 }
 
-
-
 /*
 virtual void unregisterSocketNotifier ( QSocketNotifier * notifier ) = 0
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERSOCKETNOTIFIER )
-{
-  QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSocketNotifier * par1 = (QSocketNotifier *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->unregisterSocketNotifier ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|unregisterSocketNotifier|QSocketNotifier *
 
 /*
 virtual bool unregisterTimer ( int timerId ) = 0
@@ -172,30 +118,11 @@ $virtualMethod=|bool|unregisterTimers|QObject *
 /*
 virtual void wakeUp () = 0
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_WAKEUP )
-{
-  QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->wakeUp ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$virtualMethod=|void|wakeUp|
 
 /*
-QAbstractEventDispatcher * instance ( QThread * thread = 0 )
+static QAbstractEventDispatcher * instance ( QThread * thread = 0 )
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_INSTANCE )
-{
-  QThread * par1 = ISNIL(1)? 0 : (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QAbstractEventDispatcher * ptr = QAbstractEventDispatcher::instance ( par1 );
-  _qt4xhb_createReturnClass ( ptr, "QABSTRACTEVENTDISPATCHER" );
-}
-
-
-
-
+$static Method=|QAbstractEventDispatcher *|instance|QThread *=0
 
 #pragma ENDDUMP

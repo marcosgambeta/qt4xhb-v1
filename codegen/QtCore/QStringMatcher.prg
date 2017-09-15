@@ -43,45 +43,22 @@ $destructor
 /*
 QStringMatcher()
 */
-HB_FUNC_STATIC( QSTRINGMATCHER_NEW1 )
-{
-  QStringMatcher * o = new QStringMatcher ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|
 
 /*
 QStringMatcher(const QString &pattern,Qt::CaseSensitivity cs = Qt::CaseSensitive)
 */
-HB_FUNC_STATIC( QSTRINGMATCHER_NEW2 )
-{
-  int par2 = ISNIL(2)? (int) Qt::CaseSensitive : hb_parni(2);
-  QStringMatcher * o = new QStringMatcher ( PQSTRING(1), (Qt::CaseSensitivity) par2 );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|const QString &,Qt::CaseSensitivity=Qt::CaseSensitive
 
 /*
 QStringMatcher(const QChar *uc, int len,Qt::CaseSensitivity cs = Qt::CaseSensitive)
 */
-HB_FUNC_STATIC( QSTRINGMATCHER_NEW3 )
-{
-  const QChar * par1 = (const QChar *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  int par3 = ISNIL(3)? (int) Qt::CaseSensitive : hb_parni(3);
-  QStringMatcher * o = new QStringMatcher ( par1, PINT(2), (Qt::CaseSensitivity) par3 );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new3|const QChar *,int,Qt::CaseSensitivity=Qt::CaseSensitive
 
 /*
 QStringMatcher(const QStringMatcher &other)
 */
-HB_FUNC_STATIC( QSTRINGMATCHER_NEW4 )
-{
-  QStringMatcher * o = new QStringMatcher ( *PQSTRINGMATCHER(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new4|const QStringMatcher &
 
 //[1]QStringMatcher()
 //[2]QStringMatcher(const QString &pattern,Qt::CaseSensitivity cs = Qt::CaseSensitive)
@@ -122,42 +99,17 @@ $method=|void|setPattern|const QString &
 /*
 void setCaseSensitivity(Qt::CaseSensitivity cs)
 */
-HB_FUNC_STATIC( QSTRINGMATCHER_SETCASESENSITIVITY )
-{
-  QStringMatcher * obj = (QStringMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCaseSensitivity ( (Qt::CaseSensitivity) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setCaseSensitivity|Qt::CaseSensitivity
 
 /*
 int indexIn(const QString &str, int from = 0) const
 */
-HB_FUNC_STATIC( QSTRINGMATCHER_INDEXIN1 )
-{
-  QStringMatcher * obj = (QStringMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->indexIn ( PQSTRING(1), OPINT(2,0) ) );
-  }
-}
-
+$method=|int|indexIn,indexIn1|const QString &,int=0
 
 /*
 int indexIn(const QChar *str, int length, int from = 0) const
 */
-HB_FUNC_STATIC( QSTRINGMATCHER_INDEXIN2 )
-{
-  QStringMatcher * obj = (QStringMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QChar * par1 = (const QChar *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RINT( obj->indexIn ( par1, PINT(2), OPINT(3,0) ) );
-  }
-}
+$method=|int|indexIn,indexIn2|const QChar *,int,int=0
 
 /*
 QString pattern() const
@@ -167,14 +119,7 @@ $method=|QString|pattern|
 /*
 Qt::CaseSensitivity caseSensitivity() const
 */
-HB_FUNC_STATIC( QSTRINGMATCHER_CASESENSITIVITY )
-{
-  QStringMatcher * obj = (QStringMatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->caseSensitivity () );
-  }
-}
+$method=|Qt::CaseSensitivity|caseSensitivity|
 
 $extraMethods
 

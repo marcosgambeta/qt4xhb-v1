@@ -35,22 +35,12 @@ $destructor
 /*
 QSharedData ()
 */
-HB_FUNC_STATIC( QSHAREDDATA_NEW1 )
-{
-  QSharedData * o = new QSharedData ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|
 
 /*
 QSharedData ( const QSharedData & other )
 */
-HB_FUNC_STATIC( QSHAREDDATA_NEW2 )
-{
-  QSharedData * o = new QSharedData ( *PQSHAREDDATA(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|const QSharedData &
 
 //[1]QSharedData ()
 //[2]QSharedData ( const QSharedData & other )

@@ -39,22 +39,12 @@ $destructor
 /*
 QFileSystemWatcher(QObject * parent = 0)
 */
-HB_FUNC_STATIC( QFILESYSTEMWATCHER_NEW1 )
-{
-  QFileSystemWatcher * o = new QFileSystemWatcher ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new1|QObject *=0
 
 /*
 QFileSystemWatcher(const QStringList & paths, QObject * parent = 0)
 */
-HB_FUNC_STATIC( QFILESYSTEMWATCHER_NEW2 )
-{
-  QFileSystemWatcher * o = new QFileSystemWatcher ( PQSTRINGLIST(1), OPQOBJECT(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new2|const QStringList &,QObject *=0
 
 //[1]QFileSystemWatcher(QObject * parent = 0)
 //[2]QFileSystemWatcher(const QStringList & paths, QObject * parent = 0)
@@ -85,41 +75,17 @@ $method=|void|addPath|const QString &
 /*
 void addPaths ( const QStringList & paths )
 */
-HB_FUNC_STATIC( QFILESYSTEMWATCHER_ADDPATHS )
-{
-  QFileSystemWatcher * obj = (QFileSystemWatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->addPaths ( PQSTRINGLIST(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|addPaths|const QStringList &
 
 /*
 QStringList directories () const
 */
-HB_FUNC_STATIC( QFILESYSTEMWATCHER_DIRECTORIES )
-{
-  QFileSystemWatcher * obj = (QFileSystemWatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->directories () );
-  }
-}
-
+$method=|QStringList|directories|
 
 /*
 QStringList files () const
 */
-HB_FUNC_STATIC( QFILESYSTEMWATCHER_FILES )
-{
-  QFileSystemWatcher * obj = (QFileSystemWatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->files () );
-  }
-}
+$method=|QStringList|files|
 
 /*
 void removePath ( const QString & path )
@@ -129,18 +95,6 @@ $method=|void|removePath|const QString &
 /*
 void removePaths ( const QStringList & paths )
 */
-HB_FUNC_STATIC( QFILESYSTEMWATCHER_REMOVEPATHS )
-{
-  QFileSystemWatcher * obj = (QFileSystemWatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->removePaths ( PQSTRINGLIST(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
-
+$method=|void|removePaths|const QStringList &
 
 #pragma ENDDUMP

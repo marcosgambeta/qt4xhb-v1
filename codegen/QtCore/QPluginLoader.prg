@@ -41,22 +41,12 @@ $destructor
 /*
 QPluginLoader ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QPLUGINLOADER_NEW1 )
-{
-  QPluginLoader * o = new QPluginLoader ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new1|QObject *=0
 
 /*
 QPluginLoader ( const QString & fileName, QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QPLUGINLOADER_NEW2 )
-{
-  QPluginLoader * o = new QPluginLoader ( PQSTRING(1), OPQOBJECT(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new2|const QString &,QObject *=0
 
 //[1]QPluginLoader ( QObject * parent = 0 )
 //[2]QPluginLoader ( const QString & fileName, QObject * parent = 0 )
@@ -92,99 +82,36 @@ $method=|QString|fileName|
 /*
 QObject * instance ()
 */
-HB_FUNC_STATIC( QPLUGINLOADER_INSTANCE )
-{
-  QPluginLoader * obj = (QPluginLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QObject * ptr = obj->instance ();
-    _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
-
+$method=|QObject *|instance|
 
 /*
 bool isLoaded () const
 */
-HB_FUNC_STATIC( QPLUGINLOADER_ISLOADED )
-{
-  QPluginLoader * obj = (QPluginLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isLoaded () );
-  }
-}
-
+$method=|bool|isLoaded|
 
 /*
 bool load ()
 */
-HB_FUNC_STATIC( QPLUGINLOADER_LOAD )
-{
-  QPluginLoader * obj = (QPluginLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->load () );
-  }
-}
-
+$method=|bool|load|
 
 /*
 QLibrary::LoadHints loadHints () const
 */
-HB_FUNC_STATIC( QPLUGINLOADER_LOADHINTS )
-{
-  QPluginLoader * obj = (QPluginLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->loadHints () );
-  }
-}
-
+$method=|QLibrary::LoadHints|loadHints|
 
 /*
 void setFileName ( const QString & fileName )
 */
-HB_FUNC_STATIC( QPLUGINLOADER_SETFILENAME )
-{
-  QPluginLoader * obj = (QPluginLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFileName ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setFileName|const QString &
 
 /*
 void setLoadHints ( QLibrary::LoadHints loadHints )
 */
-HB_FUNC_STATIC( QPLUGINLOADER_SETLOADHINTS )
-{
-  QPluginLoader * obj = (QPluginLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setLoadHints ( (QLibrary::LoadHints) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setLoadHints|QLibrary::LoadHints
 
 /*
 bool unload ()
 */
-HB_FUNC_STATIC( QPLUGINLOADER_UNLOAD )
-{
-  QPluginLoader * obj = (QPluginLoader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->unload () );
-  }
-}
-
-
-
-
-
+$method=|bool|unload|
 
 #pragma ENDDUMP

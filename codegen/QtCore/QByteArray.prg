@@ -170,53 +170,27 @@ $destructor
 /*
 QByteArray ()
 */
-HB_FUNC_STATIC( QBYTEARRAY_NEW1 )
-{
-  QByteArray * o = new QByteArray ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new1|
 
 /*
 QByteArray ( const char * str )
 */
-HB_FUNC_STATIC( QBYTEARRAY_NEW2 )
-{
-  QByteArray * o = new QByteArray ( (const char *) hb_parc(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new2|const char *
 
 /*
 QByteArray ( const char * data, int size )
 */
-HB_FUNC_STATIC( QBYTEARRAY_NEW3 )
-{
-  QByteArray * o = new QByteArray ( (const char *) hb_parc(1), PINT(2) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new3|const char *,int
 
 /*
 QByteArray ( int size, char ch )
 */
-HB_FUNC_STATIC( QBYTEARRAY_NEW4 )
-{
-  char par2 = ISCHAR(2)? (char) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0);
-  QByteArray * o = new QByteArray ( PINT(1), par2 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new4|int,char
 
 /*
 QByteArray ( const QByteArray & other )
 */
-HB_FUNC_STATIC( QBYTEARRAY_NEW5 )
-{
-  QByteArray * o = new QByteArray ( *PQBYTEARRAY(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new5|const QByteArray &
 
 //[1]QByteArray ()
 //[2]QByteArray ( const char * str )
@@ -257,72 +231,27 @@ $deleteMethod
 /*
 QByteArray & append ( const QByteArray & ba )
 */
-HB_FUNC_STATIC( QBYTEARRAY_APPEND1 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->append ( *PQBYTEARRAY(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
+$method=|QByteArray &|append,append1|const QByteArray &
 
 /*
 QByteArray & append ( const QString & str )
 */
-HB_FUNC_STATIC( QBYTEARRAY_APPEND2 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->append ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray &|append,append2|const QString &
 
 /*
 QByteArray & append ( const char * str )
 */
-HB_FUNC_STATIC( QBYTEARRAY_APPEND3 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->append ( (const char *) hb_parc(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray &|append,append3|const char *
 
 /*
 QByteArray & append ( const char * str, int len )
 */
-HB_FUNC_STATIC( QBYTEARRAY_APPEND4 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->append ( (const char *) hb_parc(1), PINT(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray &|append,append4|const char *,int
 
 /*
 QByteArray & append ( char ch )
 */
-HB_FUNC_STATIC( QBYTEARRAY_APPEND5 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
-    QByteArray * ptr = new QByteArray( obj->append ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray &|append,append5|char
 
 //[1]QByteArray & append ( const QByteArray & ba )
 //[2]QByteArray & append ( const QString & str )
@@ -353,111 +282,42 @@ HB_FUNC_STATIC( QBYTEARRAY_APPEND )
 /*
 char at ( int i ) const
 */
-HB_FUNC_STATIC( QBYTEARRAY_AT )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    char i = obj->at ( PINT(1) );
-    hb_retni( i );
-  }
-}
-
+$method=|char|at|int
 
 /*
 int capacity () const
 */
-HB_FUNC_STATIC( QBYTEARRAY_CAPACITY )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->capacity () );
-  }
-}
-
+$method=|int|capacity|
 
 /*
 void chop ( int n )
 */
-HB_FUNC_STATIC( QBYTEARRAY_CHOP )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->chop ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|chop|int
 
 /*
 void clear ()
 */
-HB_FUNC_STATIC( QBYTEARRAY_CLEAR )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clear ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|clear|
 
 /*
 const char * constData () const
 */
-HB_FUNC_STATIC( QBYTEARRAY_CONSTDATA )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const char * str1 = obj->constData ();
-    hb_retc( str1 );
-  }
-}
-
+$method=|const char *|constData|
 
 /*
 bool contains ( const QByteArray & ba ) const
 */
-HB_FUNC_STATIC( QBYTEARRAY_CONTAINS1 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( (bool) obj->contains ( *PQBYTEARRAY(1) ) );
-  }
-}
-
+$method=|bool|contains,contains1|const QByteArray &
 
 /*
 bool contains ( const char * str ) const
 */
-HB_FUNC_STATIC( QBYTEARRAY_CONTAINS2 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( (bool) obj->contains ( (const char *) hb_parc(1) ) );
-  }
-}
-
+$method=|bool|contains,contains2|const char *
 
 /*
 bool contains ( char ch ) const
 */
-HB_FUNC_STATIC( QBYTEARRAY_CONTAINS3 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
-    RBOOL( (bool) obj->contains ( par1 ) );
-  }
-}
-
+$method=|bool|contains,contains3|char
 
 //[1]bool contains ( const QByteArray & ba ) const
 //[2]bool contains ( const char * str ) const
@@ -482,55 +342,22 @@ HB_FUNC_STATIC( QBYTEARRAY_CONTAINS )
 /*
 int count ( const QByteArray & ba ) const
 */
-HB_FUNC_STATIC( QBYTEARRAY_COUNT1 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->count ( *PQBYTEARRAY(1) ) );
-  }
-}
-
+$method=|int|count,count1|const QByteArray &
 
 /*
 int count ( const char * str ) const
 */
-HB_FUNC_STATIC( QBYTEARRAY_COUNT2 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->count ( (const char *) hb_parc(1) ) );
-  }
-}
-
+$method=|int|count,count2|const char *
 
 /*
 int count ( char ch ) const
 */
-HB_FUNC_STATIC( QBYTEARRAY_COUNT3 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
-    RINT( obj->count ( par1 ) );
-  }
-}
-
+$method=|int|count,count3|char
 
 /*
 int count () const
 */
-HB_FUNC_STATIC( QBYTEARRAY_COUNT4 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->count () );
-  }
-}
-
+$method=|int|count,count4|
 
 //[1]int count ( const QByteArray & ba ) const
 //[2]int count ( const char * str ) const
@@ -557,8 +384,6 @@ HB_FUNC_STATIC( QBYTEARRAY_COUNT )
   }
 }
 
-
-
 //[1]char * data ()
 //[2]const char * data () const
 
@@ -570,42 +395,17 @@ HB_FUNC_STATIC( QBYTEARRAY_COUNT )
 /*
 bool endsWith ( const QByteArray & ba ) const
 */
-HB_FUNC_STATIC( QBYTEARRAY_ENDSWITH1 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->endsWith ( *PQBYTEARRAY(1) ) );
-  }
-}
-
+$method=|bool|endsWith,endsWith1|const QByteArray &
 
 /*
 bool endsWith ( const char * str ) const
 */
-HB_FUNC_STATIC( QBYTEARRAY_ENDSWITH2 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->endsWith ( (const char *) hb_parc(1) ) );
-  }
-}
-
+$method=|bool|endsWith,endsWith2|const char *
 
 /*
 bool endsWith ( char ch ) const
 */
-HB_FUNC_STATIC( QBYTEARRAY_ENDSWITH3 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
-    RBOOL( obj->endsWith ( par1 ) );
-  }
-}
-
+$method=|bool|endsWith,endsWith3|char
 
 //[1]bool endsWith ( const QByteArray & ba ) const
 //[2]bool endsWith ( const char * str ) const
@@ -630,70 +430,27 @@ HB_FUNC_STATIC( QBYTEARRAY_ENDSWITH )
 /*
 QByteArray & fill ( char ch, int size = -1 )
 */
-HB_FUNC_STATIC( QBYTEARRAY_FILL )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
-    QByteArray * ptr = new QByteArray( obj->fill ( par1, OPINT(2,-1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray &|fill,fill1|char,int=-1
 
 /*
 int indexOf ( const QByteArray & ba, int from = 0 ) const
 */
-HB_FUNC_STATIC( QBYTEARRAY_INDEXOF1 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->indexOf ( *PQBYTEARRAY(1), OPINT(2,0) ) );
-  }
-}
-
+$method=|int|indexOf,indexOf1|const QByteArray &,int=0
 
 /*
 int indexOf ( const QString & str, int from = 0 ) const
 */
-HB_FUNC_STATIC( QBYTEARRAY_INDEXOF2 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->indexOf ( PQSTRING(1), OPINT(2,0) ) );
-  }
-}
-
+$method=|int|indexOf,indexOf2|const QString &,int=0
 
 /*
 int indexOf ( const char * str, int from = 0 ) const
 */
-HB_FUNC_STATIC( QBYTEARRAY_INDEXOF3 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->indexOf ( (const char *) hb_parc(1), OPINT(2,0) ) );
-  }
-}
-
+$method=|int|indexOf,indexOf3|const char *,int=0
 
 /*
 int indexOf ( char ch, int from = 0 ) const
 */
-HB_FUNC_STATIC( QBYTEARRAY_INDEXOF4 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
-    RINT( obj->indexOf ( par1, OPINT(2,0) ) );
-  }
-}
-
+$method=|int|indexOf,indexOf4|char,int=0
 
 //[1]int indexOf ( const QByteArray & ba, int from = 0 ) const
 //[2]int indexOf ( const QString & str, int from = 0 ) const
@@ -723,73 +480,27 @@ HB_FUNC_STATIC( QBYTEARRAY_INDEXOF )
 /*
 QByteArray & insert ( int i, const QByteArray & ba )
 */
-HB_FUNC_STATIC( QBYTEARRAY_INSERT1 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->insert ( PINT(1), *PQBYTEARRAY(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray &|insert,insert1|int,const QByteArray &
 
 /*
 QByteArray & insert ( int i, const QString & str )
 */
-HB_FUNC_STATIC( QBYTEARRAY_INSERT2 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->insert ( PINT(1), PQSTRING(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray &|insert,insert2|int,const QString &
 
 /*
 QByteArray & insert ( int i, const char * str )
 */
-HB_FUNC_STATIC( QBYTEARRAY_INSERT3 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->insert ( PINT(1), (const char *) hb_parc(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray &|insert,insert3|int,const char *
 
 /*
 QByteArray & insert ( int i, const char * str, int len )
 */
-HB_FUNC_STATIC( QBYTEARRAY_INSERT4 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->insert ( PINT(1), (const char *) hb_parc(2), PINT(3) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray &|insert,insert4|int,const char *,int
 
 /*
 QByteArray & insert ( int i, char ch )
 */
-HB_FUNC_STATIC( QBYTEARRAY_INSERT5 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    char par2 = ISCHAR(2)? (char) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0);
-    QByteArray * ptr = new QByteArray( obj->insert ( PINT(1), par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray &|insert,insert5|int,char
 
 //[1]QByteArray & insert ( int i, const QByteArray & ba )
 //[2]QByteArray & insert ( int i, const QString & str )
@@ -820,81 +531,32 @@ HB_FUNC_STATIC( QBYTEARRAY_INSERT )
 /*
 bool isEmpty () const
 */
-HB_FUNC_STATIC( QBYTEARRAY_ISEMPTY )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isEmpty () );
-  }
-}
-
+$method=|bool|isEmpty|
 
 /*
 bool isNull () const
 */
-HB_FUNC_STATIC( QBYTEARRAY_ISNULL )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
-
+$method=|bool|isNull|
 
 /*
 int lastIndexOf ( const QByteArray & ba, int from = -1 ) const
 */
-HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF1 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->lastIndexOf ( *PQBYTEARRAY(1), OPINT(2,-1) ) );
-  }
-}
-
+$method=|int|lastIndexOf,lastIndexOf1|const QByteArray &,int=-1
 
 /*
 int lastIndexOf ( const QString & str, int from = -1 ) const
 */
-HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF2 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->lastIndexOf ( PQSTRING(1), OPINT(2,-1) ) );
-  }
-}
-
+$method=|int|lastIndexOf,lastIndexOf2|const QString &,int=-1
 
 /*
 int lastIndexOf ( const char * str, int from = -1 ) const
 */
-HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF3 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->lastIndexOf ( (const char *) hb_parc(1), OPINT(2,-1) ) );
-  }
-}
-
+$method=|int|lastIndexOf,lastIndexOf3|const char *,int=-1
 
 /*
 int lastIndexOf ( char ch, int from = -1 ) const
 */
-HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF4 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
-    RINT( obj->lastIndexOf ( par1, OPINT(2,-1) ) );
-  }
-}
-
+$method=|int|lastIndexOf,lastIndexOf4|char,int=-1
 
 //[1]int lastIndexOf ( const QByteArray & ba, int from = -1 ) const
 //[2]int lastIndexOf ( const QString & str, int from = -1 ) const
@@ -924,115 +586,42 @@ HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF )
 /*
 QByteArray left ( int len ) const
 */
-HB_FUNC_STATIC( QBYTEARRAY_LEFT )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->left ( PINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray|left|int
 
 /*
 QByteArray leftJustified ( int width, char fill = ' ', bool truncate = false ) const
 */
-HB_FUNC_STATIC( QBYTEARRAY_LEFTJUSTIFIED )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    char par2 = ISNIL(2)? 32 : (ISCHAR(2)? (char) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0));
-    QByteArray * ptr = new QByteArray( obj->leftJustified ( PINT(1), par2, OPBOOL(3,false) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray|leftJustified|int,char=' ',bool=false
 
 /*
 int length () const
 */
-HB_FUNC_STATIC( QBYTEARRAY_LENGTH )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->length () );
-  }
-}
-
+$method=|int|length|
 
 /*
 QByteArray mid ( int pos, int len = -1 ) const
 */
-HB_FUNC_STATIC( QBYTEARRAY_MID )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->mid ( PINT(1), OPINT(2,-1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray|mid|int,int=-1
 
 /*
 QByteArray & prepend ( const QByteArray & ba )
 */
-HB_FUNC_STATIC( QBYTEARRAY_PREPEND1 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->prepend ( *PQBYTEARRAY(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray &|prepend,prepend1|const QByteArray &
 
 /*
 QByteArray & prepend ( const char * str )
 */
-HB_FUNC_STATIC( QBYTEARRAY_PREPEND2 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->prepend ( (const char *) hb_parc(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray &|prepend,prepend2|const char *
 
 /*
 QByteArray & prepend ( const char * str, int len )
 */
-HB_FUNC_STATIC( QBYTEARRAY_PREPEND3 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->prepend ( (const char *) hb_parc(1), PINT(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray &|prepend,prepend3|const char *,int
 
 /*
 QByteArray & prepend ( char ch )
 */
-HB_FUNC_STATIC( QBYTEARRAY_PREPEND4 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
-    QByteArray * ptr = new QByteArray( obj->prepend ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray &|prepend,prepend4|char
 
 //[1]QByteArray & prepend ( const QByteArray & ba )
 //[2]QByteArray & prepend ( const char * str )
@@ -1062,45 +651,17 @@ HB_FUNC_STATIC( QBYTEARRAY_PREPEND )
 /*
 void push_back ( const QByteArray & other )
 */
-HB_FUNC_STATIC( QBYTEARRAY_PUSH_BACK1 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->push_back ( *PQBYTEARRAY(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|push_back,push_back1|const QByteArray &
 
 /*
 void push_back ( const char * str )
 */
-HB_FUNC_STATIC( QBYTEARRAY_PUSH_BACK2 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->push_back ( (const char *) hb_parc(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|push_back,push_back2|const char *
 
 /*
 void push_back ( char ch )
 */
-HB_FUNC_STATIC( QBYTEARRAY_PUSH_BACK3 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
-    obj->push_back ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|push_back,push_back3|char
 
 //[1]void push_back ( const QByteArray & other )
 //[2]void push_back ( const char * str )
@@ -1125,45 +686,17 @@ HB_FUNC_STATIC( QBYTEARRAY_PUSH_BACK )
 /*
 void push_front ( const QByteArray & other )
 */
-HB_FUNC_STATIC( QBYTEARRAY_PUSH_FRONT1 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->push_front ( *PQBYTEARRAY(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|push_front,push_front1|const QByteArray &
 
 /*
 void push_front ( const char * str )
 */
-HB_FUNC_STATIC( QBYTEARRAY_PUSH_FRONT2 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->push_front ( (const char *) hb_parc(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|push_front,push_front2|const char *
 
 /*
 void push_front ( char ch )
 */
-HB_FUNC_STATIC( QBYTEARRAY_PUSH_FRONT3 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
-    obj->push_front ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|push_front,push_front3|char
 
 //[1]void push_front ( const QByteArray & other )
 //[2]void push_front ( const char * str )
@@ -1188,231 +721,82 @@ HB_FUNC_STATIC( QBYTEARRAY_PUSH_FRONT )
 /*
 QByteArray & remove ( int pos, int len )
 */
-HB_FUNC_STATIC( QBYTEARRAY_REMOVE )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->remove ( PINT(1), PINT(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray &|remove|int,int
 
 /*
 QByteArray repeated ( int times ) const
 */
-HB_FUNC_STATIC( QBYTEARRAY_REPEATED )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->repeated ( PINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray|repeated|int
 
 /*
 QByteArray & replace ( int pos, int len, const QByteArray & after )
 */
-HB_FUNC_STATIC( QBYTEARRAY_REPLACE1 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->replace ( PINT(1), PINT(2), *PQBYTEARRAY(3) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray &|replace,replace1|int,int,const QByteArray &
 
 /*
 QByteArray & replace ( int pos, int len, const char * after )
 */
-HB_FUNC_STATIC( QBYTEARRAY_REPLACE2 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->replace ( PINT(1), PINT(2), (const char *) hb_parc(3) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray &|replace,replace2|int,int,const char *
 
 /*
 QByteArray & replace ( int pos, int len, const char * after, int alen )
 */
-HB_FUNC_STATIC( QBYTEARRAY_REPLACE3 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->replace ( PINT(1), PINT(2), (const char *) hb_parc(3), PINT(4) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray &|replace,replace3|int,int,const char *,int
 
 /*
 QByteArray & replace ( const QByteArray & before, const QByteArray & after )
 */
-HB_FUNC_STATIC( QBYTEARRAY_REPLACE4 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->replace ( *PQBYTEARRAY(1), *PQBYTEARRAY(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray &|replace,replace4|const QByteArray &,const QByteArray &
 
 /*
 QByteArray & replace ( const char * before, const QByteArray & after )
 */
-HB_FUNC_STATIC( QBYTEARRAY_REPLACE5 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->replace ( (const char *) hb_parc(1), *PQBYTEARRAY(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray &|replace,replace5|const char *,const QByteArray &
 
 /*
 QByteArray & replace ( const char * before, int bsize, const char * after, int asize )
 */
-HB_FUNC_STATIC( QBYTEARRAY_REPLACE6 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->replace ( (const char *) hb_parc(1), PINT(2), (const char *) hb_parc(3), PINT(4) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray &|replace,replace6|const char *,int,const char *,int
 
 /*
 QByteArray & replace ( const QByteArray & before, const char * after )
 */
-HB_FUNC_STATIC( QBYTEARRAY_REPLACE7 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->replace ( *PQBYTEARRAY(1), (const char *) hb_parc(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray &|replace,replace7|const QByteArray &,const char *
 
 /*
 QByteArray & replace ( const QString & before, const QByteArray & after )
 */
-HB_FUNC_STATIC( QBYTEARRAY_REPLACE8 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->replace ( PQSTRING(1), *PQBYTEARRAY(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray &|replace,replace8|const QString &,const QByteArray &
 
 /*
 QByteArray & replace ( const QString & before, const char * after )
 */
-HB_FUNC_STATIC( QBYTEARRAY_REPLACE9 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->replace ( PQSTRING(1), (const char *) hb_parc(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray &|replace,replace9|const QString &,const char *
 
 /*
 QByteArray & replace ( const char * before, const char * after )
 */
-HB_FUNC_STATIC( QBYTEARRAY_REPLACE10 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->replace ( (const char *) hb_parc(1), (const char *) hb_parc(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray &|replace,replace10|const char *,const char *
 
 /*
 QByteArray & replace ( char before, const QByteArray & after )
 */
-HB_FUNC_STATIC( QBYTEARRAY_REPLACE11 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
-    QByteArray * ptr = new QByteArray( obj->replace ( par1, *PQBYTEARRAY(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray &|replace,replace11|char,const QByteArray &
 
 /*
 QByteArray & replace ( char before, const QString & after )
 */
-HB_FUNC_STATIC( QBYTEARRAY_REPLACE12 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
-    QByteArray * ptr = new QByteArray( obj->replace ( par1, PQSTRING(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray &|replace,replace12|char,const QString &
 
 /*
 QByteArray & replace ( char before, const char * after )
 */
-HB_FUNC_STATIC( QBYTEARRAY_REPLACE13 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
-    QByteArray * ptr = new QByteArray( obj->replace ( par1, (const char *) hb_parc(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray &|replace,replace13|char,const char *
 
 /*
 QByteArray & replace ( char before, char after )
 */
-HB_FUNC_STATIC( QBYTEARRAY_REPLACE14 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
-    char par2 = ISCHAR(2)? (char) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0);
-    QByteArray * ptr = new QByteArray( obj->replace ( par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray &|replace,replace14|char,char
 
 //[01]QByteArray & replace ( int pos, int len, const QByteArray & after )
 //[02]QByteArray & replace ( int pos, int len, const char * after )
@@ -1492,173 +876,62 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE )
 /*
 void reserve ( int size )
 */
-HB_FUNC_STATIC( QBYTEARRAY_RESERVE )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->reserve ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|reserve|int
 
 /*
 void resize ( int size )
 */
-HB_FUNC_STATIC( QBYTEARRAY_RESIZE )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->resize ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|resize|int
 
 /*
 QByteArray right ( int len ) const
 */
-HB_FUNC_STATIC( QBYTEARRAY_RIGHT )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->right ( PINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray|right|int
 
 /*
 QByteArray rightJustified ( int width, char fill = ' ', bool truncate = false ) const
 */
-HB_FUNC_STATIC( QBYTEARRAY_RIGHTJUSTIFIED )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    char par2 = ISNIL(2)? 32 : (ISCHAR(2)? (char) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0));
-    QByteArray * ptr = new QByteArray( obj->rightJustified ( PINT(1), par2, OPBOOL(3,false) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray|rightJustified|int,char=' ',bool=false
 
 /*
 QByteArray & setNum ( int n, int base = 10 )
 */
-HB_FUNC_STATIC( QBYTEARRAY_SETNUM1 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->setNum ( PINT(1), OPINT(2,10) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray &|setNum,setNum1|int,int=10
 
 /*
 QByteArray & setNum ( uint n, int base = 10 )
 */
-HB_FUNC_STATIC( QBYTEARRAY_SETNUM2 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->setNum ( PUINT(1), OPINT(2,10) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray &|setNum,setNum2|uint,int=10
 
 /*
 QByteArray & setNum ( short n, int base = 10 )
 */
-HB_FUNC_STATIC( QBYTEARRAY_SETNUM3 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->setNum ( PSHORT(1), OPINT(2,10) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray &|setNum,setNum3|short,int=10
 
 /*
 QByteArray & setNum ( ushort n, int base = 10 )
 */
-HB_FUNC_STATIC( QBYTEARRAY_SETNUM4 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->setNum ( PUSHORT(1), OPINT(2,10) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray &|setNum,setNum4|ushort,int=10
 
 /*
 QByteArray & setNum ( qlonglong n, int base = 10 )
 */
-HB_FUNC_STATIC( QBYTEARRAY_SETNUM5 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->setNum ( PQLONGLONG(1), OPINT(2,10) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray &|setNum,setNum5|qlonglong,int=10
 
 /*
 QByteArray & setNum ( qulonglong n, int base = 10 )
 */
-HB_FUNC_STATIC( QBYTEARRAY_SETNUM6 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->setNum ( PQULONGLONG(1), OPINT(2,10) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray &|setNum,setNum6|qulonglong,int=10
 
 /*
 QByteArray & setNum ( double n, char f = 'g', int prec = 6 )
 */
-HB_FUNC_STATIC( QBYTEARRAY_SETNUM7 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    char par2 = ISNIL(2)? 103 : (ISCHAR(2)? (char) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0));
-    QByteArray * ptr = &obj->setNum ( PDOUBLE(1), par2, OPINT(3,6) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray &|setNum,setNum7|double,char='g',int=6
 
 /*
 QByteArray & setNum ( float n, char f = 'g', int prec = 6 )
 */
-HB_FUNC_STATIC( QBYTEARRAY_SETNUM8 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    char par2 = ISNIL(2)? 103 : (ISCHAR(2)? (char) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0));
-    QByteArray * ptr = &obj->setNum ( PFLOAT(1), par2, OPINT(3,6) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray &|setNum,setNum8|float,char='g',int=6
 
 //[1]QByteArray & setNum ( int n, int base = 10 )
 //[2]QByteArray & setNum ( uint n, int base = 10 )
@@ -1710,43 +983,17 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM )
 /*
 QByteArray & setRawData ( const char * data, uint size )
 */
-HB_FUNC_STATIC( QBYTEARRAY_SETRAWDATA )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->setRawData ( (const char *) hb_parc(1), PUINT(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray &|setRawData|const char *,uint
 
 /*
 QByteArray simplified () const
 */
-HB_FUNC_STATIC( QBYTEARRAY_SIMPLIFIED )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->simplified () );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray|simplified|
 
 /*
 int size () const
 */
-HB_FUNC_STATIC( QBYTEARRAY_SIZE )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->size () );
-  }
-}
-
+$method=|int|size|
 
 /*
 QList<QByteArray> split ( char sep ) const
@@ -1792,60 +1039,25 @@ HB_FUNC_STATIC( QBYTEARRAY_SPLIT )
   }
 }
 
-
 /*
 void squeeze ()
 */
-HB_FUNC_STATIC( QBYTEARRAY_SQUEEZE )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->squeeze ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|squeeze|
 
 /*
 bool startsWith ( const QByteArray & ba ) const
 */
-HB_FUNC_STATIC( QBYTEARRAY_STARTSWITH1 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->startsWith ( *PQBYTEARRAY(1) ) );
-  }
-}
-
+$method=|bool|startsWithm,startsWith1|const QByteArray &
 
 /*
 bool startsWith ( const char * str ) const
 */
-HB_FUNC_STATIC( QBYTEARRAY_STARTSWITH2 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->startsWith ( (const char *) hb_parc(1) ) );
-  }
-}
-
+$method=|bool|startsWith,startsWith2|const char *
 
 /*
 bool startsWith ( char ch ) const
 */
-HB_FUNC_STATIC( QBYTEARRAY_STARTSWITH3 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
-    RBOOL( obj->startsWith ( par1 ) );
-  }
-}
-
+$method=|bool|startsWith,startsWith3|char
 
 //[1]bool startsWith ( const QByteArray & ba ) const
 //[2]bool startsWith ( const char * str ) const
@@ -1870,347 +1082,132 @@ HB_FUNC_STATIC( QBYTEARRAY_STARTSWITH )
 /*
 QByteArray toBase64 () const
 */
-HB_FUNC_STATIC( QBYTEARRAY_TOBASE64 )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->toBase64 () );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray|toBase64|
 
 /*
 double toDouble ( bool * ok = 0 ) const
 */
-HB_FUNC_STATIC( QBYTEARRAY_TODOUBLE )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    bool par1;
-    RDOUBLE( obj->toDouble ( &par1 ) );
-    hb_storl( par1, 1 );
-  }
-}
-
+$method=|double|toDouble|bool *=0
 
 /*
 float toFloat ( bool * ok = 0 ) const
 */
-HB_FUNC_STATIC( QBYTEARRAY_TOFLOAT )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    bool par1;
-    RFLOAT( obj->toFloat ( &par1 ) );
-    hb_storl( par1, 1 );
-  }
-}
-
+$method=|float|toFloat|bool *=0
 
 /*
 QByteArray toHex () const
 */
-HB_FUNC_STATIC( QBYTEARRAY_TOHEX )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->toHex () );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray|toHex|
 
 /*
 int toInt ( bool * ok = 0, int base = 10 ) const
 */
-HB_FUNC_STATIC( QBYTEARRAY_TOINT )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    bool par1;
-    RINT( obj->toInt ( &par1, OPINT(2,10) ) );
-    hb_storl( par1, 1 );
-  }
-}
-
+$method=|int|toInt|bool *=0,int=10
 
 /*
 long toLong ( bool * ok = 0, int base = 10 ) const
 */
-HB_FUNC_STATIC( QBYTEARRAY_TOLONG )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    bool par1;
-    long l = obj->toLong ( &par1, OPINT(2,10) );
-    hb_retnl( l );
-    hb_storl( par1, 1 );
-  }
-}
-
+$method=|long|toLong|bool *=0,int=10
 
 /*
 qlonglong toLongLong ( bool * ok = 0, int base = 10 ) const
 */
-HB_FUNC_STATIC( QBYTEARRAY_TOLONGLONG )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    bool par1;
-    RQLONGLONG( obj->toLongLong ( &par1, OPINT(2,10) ) );
-    hb_storl( par1, 1 );
-  }
-}
-
+$method=|qlonglong|toLongLong|bool *=0,int=10
 
 /*
 QByteArray toLower () const
 */
-HB_FUNC_STATIC( QBYTEARRAY_TOLOWER )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->toLower () );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray|toLower|
 
 /*
 QByteArray toPercentEncoding ( const QByteArray & exclude = QByteArray(), const QByteArray & include = QByteArray(), char percent = '%' ) const
 */
-HB_FUNC_STATIC( QBYTEARRAY_TOPERCENTENCODING )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray par1 = ISNIL(1)? QByteArray() : *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QByteArray par2 = ISNIL(2)? QByteArray() : *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    char par3 = ISNIL(3)? 37 : (ISCHAR(3)? (char) hb_parc(3)[0] : (ISNUM(3)? hb_parni(3) : 0));
-    QByteArray * ptr = new QByteArray( obj->toPercentEncoding ( par1, par2, par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray|toPercentEncoding|const QByteArray &=QByteArray(),const QByteArray &=QByteArray(),char='%'
 
 /*
 short toShort ( bool * ok = 0, int base = 10 ) const
 */
-HB_FUNC_STATIC( QBYTEARRAY_TOSHORT )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    bool par1;
-    RSHORT( obj->toShort ( &par1, OPINT(2,10) ) );
-    hb_storl( par1, 1 );
-  }
-}
-
+$method=|short|toShort|bool *=0,int=10
 
 /*
 uint toUInt ( bool * ok = 0, int base = 10 ) const
 */
-HB_FUNC_STATIC( QBYTEARRAY_TOUINT )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    bool par1;
-    hb_retni( (uint) obj->toUInt ( &par1, OPINT(2,10) ) );
-    hb_storl( par1, 1 );
-  }
-}
-
+$method=|uint|toUInt|bool *=0,int=10
 
 /*
 ulong toULong ( bool * ok = 0, int base = 10 ) const
 */
-HB_FUNC_STATIC( QBYTEARRAY_TOULONG )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    bool par1;
-    ulong l = obj->toULong ( &par1, OPINT(2,10) );
-    hb_retnl( l );
-    hb_storl( par1, 1 );
-  }
-}
-
+$method=|ulong|toULong|bool *=0,int=10
 
 /*
 qulonglong toULongLong ( bool * ok = 0, int base = 10 ) const
 */
-HB_FUNC_STATIC( QBYTEARRAY_TOULONGLONG )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    bool par1;
-    RQULONGLONG( obj->toULongLong ( &par1, OPINT(2,10) ) );
-    hb_storl( par1, 1 );
-  }
-}
-
+$method=|qulonglong|toULongLong|bool *=0,int=10
 
 /*
 ushort toUShort ( bool * ok = 0, int base = 10 ) const
 */
-HB_FUNC_STATIC( QBYTEARRAY_TOUSHORT )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    bool par1;
-    RUSHORT( obj->toUShort ( &par1, OPINT(2,10) ) );
-    hb_storl( par1, 1 );
-  }
-}
-
+$method=|ushort|toUShort|bool *=0,int=10
 
 /*
 QByteArray toUpper () const
 */
-HB_FUNC_STATIC( QBYTEARRAY_TOUPPER )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->toUpper () );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray|toUpper|
 
 /*
 QByteArray trimmed () const
 */
-HB_FUNC_STATIC( QBYTEARRAY_TRIMMED )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->trimmed () );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray|trimmed|
 
 /*
 void truncate ( int pos )
 */
-HB_FUNC_STATIC( QBYTEARRAY_TRUNCATE )
-{
-  QByteArray * obj = (QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->truncate ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|truncate|int
 
 /*
-QByteArray fromBase64 ( const QByteArray & base64 )
+static QByteArray fromBase64 ( const QByteArray & base64 )
 */
-HB_FUNC_STATIC( QBYTEARRAY_FROMBASE64 )
-{
-  QByteArray * ptr = new QByteArray( QByteArray::fromBase64 ( *PQBYTEARRAY(1) ) );
-  _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-}
-
+$staticMethod=|QByteArray|fromBase64|const QByteArray &
 
 /*
-QByteArray fromHex ( const QByteArray & hexEncoded )
+static QByteArray fromHex ( const QByteArray & hexEncoded )
 */
-HB_FUNC_STATIC( QBYTEARRAY_FROMHEX )
-{
-  QByteArray * ptr = new QByteArray( QByteArray::fromHex ( *PQBYTEARRAY(1) ) );
-  _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-}
-
+$staticMethod=|QByteArray|fromHex|const QByteArray &
 
 /*
-QByteArray fromPercentEncoding ( const QByteArray & input, char percent = '%' )
+static QByteArray fromPercentEncoding ( const QByteArray & input, char percent = '%' )
 */
-HB_FUNC_STATIC( QBYTEARRAY_FROMPERCENTENCODING )
-{
-  char par2 = ISNIL(2)? 37 : (ISCHAR(2)? (char) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0));
-  QByteArray * ptr = new QByteArray( QByteArray::fromPercentEncoding ( *PQBYTEARRAY(1), par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-}
-
+$staticMethod=|QByteArray|fromPercentEncoding|const QByteArray &,char='%'
 
 /*
-QByteArray fromRawData ( const char * data, int size )
+static QByteArray fromRawData ( const char * data, int size )
 */
-HB_FUNC_STATIC( QBYTEARRAY_FROMRAWDATA )
-{
-  QByteArray * ptr = new QByteArray( QByteArray::fromRawData ( (const char *) hb_parc(1), PINT(2) ) );
-  _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-}
-
+$staticMethod=|QByteArray|fromRawData|const char *,int
 
 /*
-QByteArray number ( int n, int base = 10 )
+static QByteArray number ( int n, int base = 10 )
 */
-HB_FUNC_STATIC( QBYTEARRAY_NUMBER1 )
-{
-  QByteArray * ptr = new QByteArray( QByteArray::number ( PINT(1), OPINT(2,10) ) );
-  _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-}
-
+$staticMethod=|QByteArray|number,number1|int,int=10
 
 /*
-QByteArray number ( uint n, int base = 10 )
+static QByteArray number ( uint n, int base = 10 )
 */
-HB_FUNC_STATIC( QBYTEARRAY_NUMBER2 )
-{
-  QByteArray * ptr = new QByteArray( QByteArray::number ( PUINT(1), OPINT(2,10) ) );
-  _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-}
-
+$staticMethod=|QByteArray|number,number2|uint,int=10
 
 /*
-QByteArray number ( qlonglong n, int base = 10 )
+static QByteArray number ( qlonglong n, int base = 10 )
 */
-HB_FUNC_STATIC( QBYTEARRAY_NUMBER3 )
-{
-  QByteArray * ptr = new QByteArray( QByteArray::number ( PQLONGLONG(1), OPINT(2,10) ) );
-  _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-}
-
+$staticMethod=|QByteArray|number.number3|qlonglong,int=10
 
 /*
-QByteArray number ( qulonglong n, int base = 10 )
+static QByteArray number ( qulonglong n, int base = 10 )
 */
-HB_FUNC_STATIC( QBYTEARRAY_NUMBER4 )
-{
-  QByteArray * ptr = new QByteArray( QByteArray::number ( PQULONGLONG(1), OPINT(2,10) ) );
-  _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-}
-
+$staticMethod=|QByteArray|number,number4|qulonglong,int=10
 
 /*
-QByteArray number ( double n, char f = 'g', int prec = 6 )
+static QByteArray number ( double n, char f = 'g', int prec = 6 )
 */
-HB_FUNC_STATIC( QBYTEARRAY_NUMBER5 )
-{
-  char par2 = ISNIL(2)? 103 : (ISCHAR(2)? (char) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0));
-  QByteArray * ptr = new QByteArray( QByteArray::number ( PDOUBLE(1), par2, OPINT(3,6) ) );
-  _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-}
+$staticMethod=|QByteArray|number,number5|double,char='g',int=6
 
 $extraMethods
 

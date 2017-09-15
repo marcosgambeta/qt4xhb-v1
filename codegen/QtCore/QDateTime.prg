@@ -77,42 +77,22 @@ $destructor
 /*
 QDateTime ()
 */
-HB_FUNC_STATIC( QDATETIME_NEW1 )
-{
-  QDateTime * o = new QDateTime ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|
 
 /*
 QDateTime ( const QDate & date )
 */
-HB_FUNC_STATIC( QDATETIME_NEW2 )
-{
-  QDateTime * o = new QDateTime ( *PQDATE(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|const QDate &
 
 /*
 QDateTime ( const QDate & date, const QTime & time, Qt::TimeSpec spec = Qt::LocalTime )
 */
-HB_FUNC_STATIC( QDATETIME_NEW3 )
-{
-  QDateTime * o = new QDateTime ( *PQDATE(1), *PQTIME(2), ISNIL(3)? Qt::LocalTime : (Qt::TimeSpec) hb_parni(3) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new3|const QDate &,const QTime &,Qt::TimeSpec=Qt::LocalTime
 
 /*
 QDateTime ( const QDateTime & other )
 */
-HB_FUNC_STATIC( QDATETIME_NEW4 )
-{
-  QDateTime * o = new QDateTime ( *PQDATETIME(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new4|const QDateTime &
 
 //[1]QDateTime ()
 //[2]QDateTime ( const QDate & date )
@@ -148,274 +128,102 @@ $deleteMethod
 /*
 QDateTime addDays ( int ndays ) const
 */
-HB_FUNC_STATIC( QDATETIME_ADDDAYS )
-{
-  QDateTime * obj = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDateTime * ptr = new QDateTime( obj->addDays ( PINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
-  }
-}
-
+$method=|QDateTime|addDays|int
 
 /*
 QDateTime addMSecs ( qint64 msecs ) const
 */
-HB_FUNC_STATIC( QDATETIME_ADDMSECS )
-{
-  QDateTime * obj = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDateTime * ptr = new QDateTime( obj->addMSecs ( PQINT64(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
-  }
-}
-
+$method=|QDateTime|addMSecs|qint64
 
 /*
 QDateTime addMonths ( int nmonths ) const
 */
-HB_FUNC_STATIC( QDATETIME_ADDMONTHS )
-{
-  QDateTime * obj = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDateTime * ptr = new QDateTime( obj->addMonths ( PINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
-  }
-}
-
+$method=|QDateTime|addMonths|int
 
 /*
 QDateTime addSecs ( int s ) const
 */
-HB_FUNC_STATIC( QDATETIME_ADDSECS )
-{
-  QDateTime * obj = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDateTime * ptr = new QDateTime( obj->addSecs ( PINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
-  }
-}
-
+$method=|QDateTime|addSecs|int
 
 /*
 QDateTime addYears ( int nyears ) const
 */
-HB_FUNC_STATIC( QDATETIME_ADDYEARS )
-{
-  QDateTime * obj = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDateTime * ptr = new QDateTime( obj->addYears ( PINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
-  }
-}
-
+$method=|QDateTime|addYears|int
 
 /*
 QDate date () const
 */
-HB_FUNC_STATIC( QDATETIME_DATE )
-{
-  QDateTime * obj = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDate * ptr = new QDate( obj->date () );
-    _qt4xhb_createReturnClass ( ptr, "QDATE", true );
-  }
-}
-
+$method=|QDate|date|
 
 /*
 int daysTo ( const QDateTime & other ) const
 */
-HB_FUNC_STATIC( QDATETIME_DAYSTO )
-{
-  QDateTime * obj = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->daysTo ( *PQDATETIME(1) ) );
-  }
-}
-
+$method=|int|daysTo|const QDateTime &
 
 /*
 bool isNull () const
 */
-HB_FUNC_STATIC( QDATETIME_ISNULL )
-{
-  QDateTime * obj = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
-
+$method=|bool|isNull|
 
 /*
 bool isValid () const
 */
-HB_FUNC_STATIC( QDATETIME_ISVALID )
-{
-  QDateTime * obj = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
-
+$method=|bool|isValid|
 
 /*
 qint64 msecsTo ( const QDateTime & other ) const
 */
-HB_FUNC_STATIC( QDATETIME_MSECSTO )
-{
-  QDateTime * obj = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQINT64( obj->msecsTo ( *PQDATETIME(1) ) );
-  }
-}
-
+$method=|qint64|msecsTo|const QDateTime &
 
 /*
 int secsTo ( const QDateTime & other ) const
 */
-HB_FUNC_STATIC( QDATETIME_SECSTO )
-{
-  QDateTime * obj = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->secsTo ( *PQDATETIME(1) ) );
-  }
-}
-
+$method=|int|secsTo|const QDateTime &
 
 /*
 void setDate ( const QDate & date )
 */
-HB_FUNC_STATIC( QDATETIME_SETDATE )
-{
-  QDateTime * obj = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDate ( *PQDATE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setDate|const QDate &
 
 /*
 void setMSecsSinceEpoch ( qint64 msecs )
 */
-HB_FUNC_STATIC( QDATETIME_SETMSECSSINCEEPOCH )
-{
-  QDateTime * obj = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setMSecsSinceEpoch ( PQINT64(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setMSecsSinceEpoch|qint64
 
 /*
 void setTime ( const QTime & time )
 */
-HB_FUNC_STATIC( QDATETIME_SETTIME )
-{
-  QDateTime * obj = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setTime ( *PQTIME(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setTime|const QTime &
 
 /*
 void setTimeSpec ( Qt::TimeSpec spec )
 */
-HB_FUNC_STATIC( QDATETIME_SETTIMESPEC )
-{
-  QDateTime * obj = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setTimeSpec ( (Qt::TimeSpec) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setTimeSpec|Qt::TimeSpec
 
 /*
 void setTime_t ( uint seconds )
 */
-HB_FUNC_STATIC( QDATETIME_SETTIME_T )
-{
-  QDateTime * obj = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setTime_t ( PUINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setTime_t|uint
 
 /*
 QTime time () const
 */
-HB_FUNC_STATIC( QDATETIME_TIME )
-{
-  QDateTime * obj = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTime * ptr = new QTime( obj->time () );
-    _qt4xhb_createReturnClass ( ptr, "QTIME", true );
-  }
-}
-
+$method=|QTime|time|
 
 /*
 Qt::TimeSpec timeSpec () const
 */
-HB_FUNC_STATIC( QDATETIME_TIMESPEC )
-{
-  QDateTime * obj = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->timeSpec () );
-  }
-}
-
+$method=|Qt::TimeSpec|timeSpec|
 
 /*
 QDateTime toLocalTime () const
 */
-HB_FUNC_STATIC( QDATETIME_TOLOCALTIME )
-{
-  QDateTime * obj = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDateTime * ptr = new QDateTime( obj->toLocalTime () );
-    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
-  }
-}
-
+$method=|QDateTime|toLocalTime|
 
 /*
 qint64 toMSecsSinceEpoch () const
 */
-HB_FUNC_STATIC( QDATETIME_TOMSECSSINCEEPOCH )
-{
-  QDateTime * obj = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQINT64( obj->toMSecsSinceEpoch () );
-  }
-}
+$method=|qint64|toMSecsSinceEpoch|
 
 /*
 QString toString ( const QString & format ) const
@@ -445,103 +253,47 @@ HB_FUNC_STATIC( QDATETIME_TOSTRING )
 /*
 QDateTime toTimeSpec ( Qt::TimeSpec specification ) const
 */
-HB_FUNC_STATIC( QDATETIME_TOTIMESPEC )
-{
-  QDateTime * obj = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDateTime * ptr = new QDateTime( obj->toTimeSpec ( (Qt::TimeSpec) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
-  }
-}
-
+$method=|QDateTime|toTimeSpec|Qt::TimeSpec
 
 /*
 uint toTime_t () const
 */
-HB_FUNC_STATIC( QDATETIME_TOTIME_T )
-{
-  QDateTime * obj = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (uint) obj->toTime_t () );
-  }
-}
-
+$method=|uint|toTime_t|
 
 /*
 QDateTime toUTC () const
 */
-HB_FUNC_STATIC( QDATETIME_TOUTC )
-{
-  QDateTime * obj = (QDateTime *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDateTime * ptr = new QDateTime( obj->toUTC () );
-    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
-  }
-}
-
-
+$method=|QDateTime|toUTC|
 
 /*
-QDateTime currentDateTime ()
+static QDateTime currentDateTime ()
 */
-HB_FUNC_STATIC( QDATETIME_CURRENTDATETIME )
-{
-  QDateTime * ptr = new QDateTime( QDateTime::currentDateTime () );
-  _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
-}
-
+$staticMethod=|QDateTime|currentDateTime|
 
 /*
-QDateTime currentDateTimeUtc ()
+static QDateTime currentDateTimeUtc ()
 */
-HB_FUNC_STATIC( QDATETIME_CURRENTDATETIMEUTC )
-{
-  QDateTime * ptr = new QDateTime( QDateTime::currentDateTimeUtc () );
-  _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
-}
-
+$staticMethod=|QDateTime|currentDateTimeUtc|
 
 /*
-qint64 currentMSecsSinceEpoch ()
+static qint64 currentMSecsSinceEpoch ()
 */
-HB_FUNC_STATIC( QDATETIME_CURRENTMSECSSINCEEPOCH )
-{
-  RQINT64( QDateTime::currentMSecsSinceEpoch () );
-}
-
+$staticMethod=|qint64|currentMSecsSinceEpoch|
 
 /*
-QDateTime fromMSecsSinceEpoch ( qint64 msecs )
+static QDateTime fromMSecsSinceEpoch ( qint64 msecs )
 */
-HB_FUNC_STATIC( QDATETIME_FROMMSECSSINCEEPOCH )
-{
-  QDateTime * ptr = new QDateTime( QDateTime::fromMSecsSinceEpoch ( PQINT64(1) ) );
-  _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
-}
-
+$staticMethod=|QDateTime|fromMSecsSinceEpoch|qint64
 
 /*
-QDateTime fromString ( const QString & string, Qt::DateFormat format = Qt::TextDate )
+static QDateTime fromString ( const QString & string, Qt::DateFormat format = Qt::TextDate )
 */
-HB_FUNC_STATIC( QDATETIME_FROMSTRING1 )
-{
-  QDateTime * ptr = new QDateTime( QDateTime::fromString ( PQSTRING(1), ISNIL(2)? Qt::TextDate : (Qt::DateFormat) hb_parni(2) ) );
-  _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
-}
-
+$staticMethod=|QDateTime|fromString,fromString1|const QString &,Qt::DateFormat=Qt::TextDate
 
 /*
-QDateTime fromString ( const QString & string, const QString & format )
+static QDateTime fromString ( const QString & string, const QString & format )
 */
-HB_FUNC_STATIC( QDATETIME_FROMSTRING2 )
-{
-  QDateTime * ptr = new QDateTime( QDateTime::fromString ( PQSTRING(1), PQSTRING(2) ) );
-  _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
-}
-
+$staticMethod=|QDateTime|fromString,fromString2|const QString &,const QString &
 
 //[1]QDateTime fromString ( const QString & string, Qt::DateFormat format = Qt::TextDate )
 //[2]QDateTime fromString ( const QString & string, const QString & format )
@@ -559,13 +311,9 @@ HB_FUNC_STATIC( QDATETIME_FROMSTRING )
 }
 
 /*
-QDateTime fromTime_t ( uint seconds )
+static QDateTime fromTime_t ( uint seconds )
 */
-HB_FUNC_STATIC( QDATETIME_FROMTIME_T )
-{
-  QDateTime * ptr = new QDateTime( QDateTime::fromTime_t ( PUINT(1) ) );
-  _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
-}
+$staticMethod=|QDateTime|fromTime_t|uint
 
 $extraMethods
 

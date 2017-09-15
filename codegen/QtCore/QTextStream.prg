@@ -86,58 +86,33 @@ $destructor
 /*
 QTextStream()
 */
-HB_FUNC_STATIC( QTEXTSTREAM_NEW1 )
-{
-  QTextStream * o = new QTextStream ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new1|
 
 /*
 QTextStream(QIODevice *device)
 */
-HB_FUNC_STATIC( QTEXTSTREAM_NEW2 )
-{
-  QTextStream * o = new QTextStream ( PQIODEVICE(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new2|QIODevice *
 
 /*
 QTextStream(FILE *fileHandle, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
 */
-HB_FUNC_STATIC( QTEXTSTREAM_NEW3 )
-{
-  FILE * par1 = (FILE *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  int par2 = ISNIL(2)? (int) QIODevice::ReadWrite : hb_parni(2);
-  QTextStream * o = new QTextStream ( par1, (QIODevice::OpenMode) par2 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new3|FILE *,QIODevice::OpenMode=QIODevice::ReadWrite
 
 /*
 QTextStream(QString *string, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
 */
-HB_FUNC_STATIC( QTEXTSTREAM_NEW4 )
-{
-  QString * par1 = NULL;
-  int par2 = ISNIL(2)? (int) QIODevice::ReadWrite : hb_parni(2);
-  QTextStream * o = new QTextStream ( par1, (QIODevice::OpenMode) par2 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new4|QString *,QIODevice::OpenMode=QIODevice::ReadWrite
 
-
+/*
+QTextStream(QByteArray *array, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
+*/
+%% TODO: conflito entre [5] e [6]
+%% $constructor=|new5|QByteArray *,QIODevice::OpenMode=QIODevice::ReadWrite
 
 /*
 QTextStream(const QByteArray &array, QIODevice::OpenMode openMode = QIODevice::ReadOnly)
 */
-HB_FUNC_STATIC( QTEXTSTREAM_NEW6 )
-{
-  int par2 = ISNIL(2)? (int) QIODevice::ReadOnly : hb_parni(2);
-  QTextStream * o = new QTextStream ( *PQBYTEARRAY(1), (QIODevice::OpenMode) par2 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new6|const QByteArray &,QIODevice::OpenMode=QIODevice::ReadOnly
 
 //[1]QTextStream()
 //[2]QTextStream(QIODevice *device)
@@ -179,30 +154,12 @@ $deleteMethod
 /*
 void setCodec(QTextCodec *codec)
 */
-HB_FUNC_STATIC( QTEXTSTREAM_SETCODEC1 )
-{
-  QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCodec ( PQTEXTCODEC(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setCodec,setCodec1|QTextCodec *
 
 /*
 void setCodec(const char *codecName)
 */
-HB_FUNC_STATIC( QTEXTSTREAM_SETCODEC2 )
-{
-  QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCodec ( (const char *) hb_parc(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setCodec,setCodec2|const char *
 
 //[1]void setCodec(QTextCodec *codec)
 //[2]void setCodec(const char *codecName)
@@ -222,291 +179,107 @@ HB_FUNC_STATIC( QTEXTSTREAM_SETCODEC )
 /*
 QTextCodec *codec() const
 */
-HB_FUNC_STATIC( QTEXTSTREAM_CODEC )
-{
-  QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextCodec * ptr = obj->codec ();
-    _qt4xhb_createReturnClass ( ptr, "QTEXTCODEC" );
-  }
-}
-
+$method=|QTextCodec *|codec|
 
 /*
 void setAutoDetectUnicode(bool enabled)
 */
-HB_FUNC_STATIC( QTEXTSTREAM_SETAUTODETECTUNICODE )
-{
-  QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAutoDetectUnicode ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAutoDetectUnicode|bool
 
 /*
 bool autoDetectUnicode() const
 */
-HB_FUNC_STATIC( QTEXTSTREAM_AUTODETECTUNICODE )
-{
-  QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->autoDetectUnicode () );
-  }
-}
-
+$method=|bool|autoDetectUnicode|
 
 /*
 void setGenerateByteOrderMark(bool generate)
 */
-HB_FUNC_STATIC( QTEXTSTREAM_SETGENERATEBYTEORDERMARK )
-{
-  QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setGenerateByteOrderMark ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setGenerateByteOrderMark|bool
 
 /*
 bool generateByteOrderMark() const
 */
-HB_FUNC_STATIC( QTEXTSTREAM_GENERATEBYTEORDERMARK )
-{
-  QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->generateByteOrderMark () );
-  }
-}
-
+$method=|bool|generateByteOrderMark|
 
 /*
 void setLocale(const QLocale &locale)
 */
-HB_FUNC_STATIC( QTEXTSTREAM_SETLOCALE )
-{
-  QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setLocale ( *PQLOCALE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setLocale|const QLocale &
 
 /*
 QLocale locale() const
 */
-HB_FUNC_STATIC( QTEXTSTREAM_LOCALE )
-{
-  QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QLocale * ptr = new QLocale( obj->locale () );
-    _qt4xhb_createReturnClass ( ptr, "QLOCALE" );
-  }
-}
-
+$method=|QLocale|locale|
 
 /*
 void setDevice(QIODevice *device)
 */
-HB_FUNC_STATIC( QTEXTSTREAM_SETDEVICE )
-{
-  QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDevice ( PQIODEVICE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setDevice|QIODevice *
 
 /*
 QIODevice *device() const
 */
-HB_FUNC_STATIC( QTEXTSTREAM_DEVICE )
-{
-  QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QIODevice * ptr = obj->device ();
-    _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );
-  }
-}
-
+$method=|QIODevice *|device|
 
 /*
 void setString(QString *string, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
 */
-HB_FUNC_STATIC( QTEXTSTREAM_SETSTRING )
-{
-  QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QString * par1 = NULL;
-    int par2 = ISNIL(2)? (int) QIODevice::ReadWrite : hb_parni(2);
-    obj->setString ( par1, (QIODevice::OpenMode) par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setString|QString *,QIODevice::OpenMode=QIODevice::ReadWrite
 
 /*
 QString *string() const
 */
-HB_FUNC_STATIC( QTEXTSTREAM_STRING )
-{
-  QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QString * ptr = obj->string ();
-    _qt4xhb_createReturnClass ( ptr, "QSTRING" );
-  }
-}
-
+$method=|QString *|string|
 
 /*
 Status status() const
 */
-HB_FUNC_STATIC( QTEXTSTREAM_STATUS )
-{
-  QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->status () );
-  }
-}
-
+$method=|QTextStream::Status|status|
 
 /*
 void setStatus(Status status)
 */
-HB_FUNC_STATIC( QTEXTSTREAM_SETSTATUS )
-{
-  QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setStatus ( (QTextStream::Status) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setStatus|QTextStream::Status
 
 /*
 void resetStatus()
 */
-HB_FUNC_STATIC( QTEXTSTREAM_RESETSTATUS )
-{
-  QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->resetStatus ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|resetStatus|
 
 /*
 bool atEnd() const
 */
-HB_FUNC_STATIC( QTEXTSTREAM_ATEND )
-{
-  QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->atEnd () );
-  }
-}
-
+$method=|bool|atEnd|
 
 /*
 void reset()
 */
-HB_FUNC_STATIC( QTEXTSTREAM_RESET )
-{
-  QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->reset ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|reset|
 
 /*
 void flush()
 */
-HB_FUNC_STATIC( QTEXTSTREAM_FLUSH )
-{
-  QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->flush ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|flush|
 
 /*
 bool seek(qint64 pos)
 */
-HB_FUNC_STATIC( QTEXTSTREAM_SEEK )
-{
-  QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->seek ( PQINT64(1) ) );
-  }
-}
-
+$method=|bool|seek|qint64
 
 /*
 qint64 pos() const
 */
-HB_FUNC_STATIC( QTEXTSTREAM_POS )
-{
-  QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQINT64( obj->pos () );
-  }
-}
-
+$method=|qint64|pos|
 
 /*
 void skipWhiteSpace()
 */
-HB_FUNC_STATIC( QTEXTSTREAM_SKIPWHITESPACE )
-{
-  QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->skipWhiteSpace ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|skipWhiteSpace|
 
 /*
 QString readLine(qint64 maxlen = 0)
 */
-HB_FUNC_STATIC( QTEXTSTREAM_READLINE )
-{
-  QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->readLine ( OPQINT64(1,0) ) );
-  }
-}
+$method=|QString|readLine|qint64=0
 
 /*
 QString readAll()
@@ -516,207 +289,77 @@ $method=|QString|readAll|
 /*
 QString read(qint64 maxlen)
 */
-HB_FUNC_STATIC( QTEXTSTREAM_READ )
-{
-  QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->read ( PQINT64(1) ) );
-  }
-}
-
+$method=|QString|read|qint64
 
 /*
 void setFieldAlignment(FieldAlignment alignment)
 */
-HB_FUNC_STATIC( QTEXTSTREAM_SETFIELDALIGNMENT )
-{
-  QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFieldAlignment ( (QTextStream::FieldAlignment) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setFieldAlignment|QTextStream::FieldAlignment
 
 /*
 FieldAlignment fieldAlignment() const
 */
-HB_FUNC_STATIC( QTEXTSTREAM_FIELDALIGNMENT )
-{
-  QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->fieldAlignment () );
-  }
-}
-
+$method=|QTextStream::FieldAlignment|fieldAlignment|
 
 /*
 void setPadChar(QChar ch)
 */
-HB_FUNC_STATIC( QTEXTSTREAM_SETPADCHAR )
-{
-  QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QChar * par1 = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setPadChar ( *par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPadChar|QChar
 
 /*
 QChar padChar() const
 */
-HB_FUNC_STATIC( QTEXTSTREAM_PADCHAR )
-{
-  QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QChar * ptr = new QChar( obj->padChar () );
-    _qt4xhb_createReturnClass ( ptr, "QCHAR" );
-  }
-}
-
+$method=|QChar|padChar|
 
 /*
 void setFieldWidth(int width)
 */
-HB_FUNC_STATIC( QTEXTSTREAM_SETFIELDWIDTH )
-{
-  QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFieldWidth ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setFieldWidth|int
 
 /*
 int fieldWidth() const
 */
-HB_FUNC_STATIC( QTEXTSTREAM_FIELDWIDTH )
-{
-  QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->fieldWidth () );
-  }
-}
-
+$method=|int|fieldWidth|
 
 /*
 void setNumberFlags(NumberFlags flags)
 */
-HB_FUNC_STATIC( QTEXTSTREAM_SETNUMBERFLAGS )
-{
-  QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setNumberFlags ( (QTextStream::NumberFlags) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setNumberFlags|QTextStream::NumberFlags
 
 /*
 NumberFlags numberFlags() const
 */
-HB_FUNC_STATIC( QTEXTSTREAM_NUMBERFLAGS )
-{
-  QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->numberFlags () );
-  }
-}
-
+$method=|QTextStream::NumberFlags|numberFlags|
 
 /*
 void setIntegerBase(int base)
 */
-HB_FUNC_STATIC( QTEXTSTREAM_SETINTEGERBASE )
-{
-  QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setIntegerBase ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setIntegerBase|int
 
 /*
 int integerBase() const
 */
-HB_FUNC_STATIC( QTEXTSTREAM_INTEGERBASE )
-{
-  QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->integerBase () );
-  }
-}
-
+$method=|int|integerBase|
 
 /*
 void setRealNumberNotation(RealNumberNotation notation)
 */
-HB_FUNC_STATIC( QTEXTSTREAM_SETREALNUMBERNOTATION )
-{
-  QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setRealNumberNotation ( (QTextStream::RealNumberNotation) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setRealNumberNotation|QTextStream::RealNumberNotation
 
 /*
 RealNumberNotation realNumberNotation() const
 */
-HB_FUNC_STATIC( QTEXTSTREAM_REALNUMBERNOTATION )
-{
-  QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->realNumberNotation () );
-  }
-}
-
+$method=|QTextStream::RealNumberNotation|realNumberNotation|
 
 /*
 void setRealNumberPrecision(int precision)
 */
-HB_FUNC_STATIC( QTEXTSTREAM_SETREALNUMBERPRECISION )
-{
-  QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setRealNumberPrecision ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setRealNumberPrecision|int
 
 /*
 int realNumberPrecision() const
 */
-HB_FUNC_STATIC( QTEXTSTREAM_REALNUMBERPRECISION )
-{
-  QTextStream * obj = (QTextStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->realNumberPrecision () );
-  }
-}
+$method=|int|realNumberPrecision|
 
 $extraMethods
 

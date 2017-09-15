@@ -30,22 +30,12 @@ $destructor
 /*
 QPauseAnimation ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QPAUSEANIMATION_NEW1 )
-{
-  QPauseAnimation * o = new QPauseAnimation ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new1|QObject *=0
 
 /*
 QPauseAnimation ( int msecs, QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QPAUSEANIMATION_NEW2 )
-{
-  QPauseAnimation * o = new QPauseAnimation ( PINT(1), OPQOBJECT(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new2|int,QObject *=0
 
 //[1]QPauseAnimation ( QObject * parent = 0 )
 //[2]QPauseAnimation ( int msecs, QObject * parent = 0 )
@@ -71,30 +61,11 @@ $deleteMethod
 /*
 void setDuration ( int msecs )
 */
-HB_FUNC_STATIC( QPAUSEANIMATION_SETDURATION )
-{
-  QPauseAnimation * obj = (QPauseAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDuration ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setDuration|int
 
 /*
 virtual int duration () const
 */
-HB_FUNC_STATIC( QPAUSEANIMATION_DURATION )
-{
-  QPauseAnimation * obj = (QPauseAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->duration () );
-  }
-}
-
-
-
+$virtualMethod=|int|duration|
 
 #pragma ENDDUMP

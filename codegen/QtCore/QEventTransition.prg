@@ -36,22 +36,12 @@ $destructor
 /*
 QEventTransition(QState * sourceState = 0)
 */
-HB_FUNC_STATIC( QEVENTTRANSITION_NEW1 )
-{
-  QEventTransition * o = new QEventTransition ( OPQSTATE(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new1|QState *=0
 
 /*
 QEventTransition(QObject * object, QEvent::Type type, QState * sourceState = 0)
 */
-HB_FUNC_STATIC( QEVENTTRANSITION_NEW2 )
-{
-  QEventTransition * o = new QEventTransition ( PQOBJECT(1), (QEvent::Type) hb_parni(2), OPQSTATE(3,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new2|QObject *,QEvent::Type,QState *=0
 
 //[1]QEventTransition(QState * sourceState = 0)
 //[2]QEventTransition(QObject * object, QEvent::Type type, QState * sourceState = 0)
@@ -77,58 +67,21 @@ $deleteMethod
 /*
 QObject * eventSource() const
 */
-HB_FUNC_STATIC( QEVENTTRANSITION_EVENTSOURCE )
-{
-  QEventTransition * obj = (QEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QObject * ptr = obj->eventSource ();
-    _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
-
+$method=|QObject *|eventSource|
 
 /*
 QEvent::Type eventType() const
 */
-HB_FUNC_STATIC( QEVENTTRANSITION_EVENTTYPE )
-{
-  QEventTransition * obj = (QEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->eventType () );
-  }
-}
-
+$method=|QEvent::Type|eventType|
 
 /*
 void setEventSource(QObject * object)
 */
-HB_FUNC_STATIC( QEVENTTRANSITION_SETEVENTSOURCE )
-{
-  QEventTransition * obj = (QEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setEventSource ( PQOBJECT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setEventSource|QObject *
 
 /*
 void setEventType(QEvent::Type type)
 */
-HB_FUNC_STATIC( QEVENTTRANSITION_SETEVENTTYPE )
-{
-  QEventTransition * obj = (QEventTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setEventType ( (QEvent::Type) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
+$method=|void|setEventType|QEvent::Type
 
 #pragma ENDDUMP

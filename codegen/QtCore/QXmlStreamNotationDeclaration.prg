@@ -42,22 +42,12 @@ $destructor
 /*
 QXmlStreamNotationDeclaration()
 */
-HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_NEW1 )
-{
-  QXmlStreamNotationDeclaration * o = new QXmlStreamNotationDeclaration ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|
 
 /*
 QXmlStreamNotationDeclaration(const QXmlStreamNotationDeclaration & other)
 */
-HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_NEW2 )
-{
-  QXmlStreamNotationDeclaration * o = new QXmlStreamNotationDeclaration ( *PQXMLSTREAMNOTATIONDECLARATION(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|const QXmlStreamNotationDeclaration &
 
 //[1]QXmlStreamNotationDeclaration()
 //[2]QXmlStreamNotationDeclaration(const QXmlStreamNotationDeclaration & other)
@@ -83,43 +73,17 @@ $deleteMethod
 /*
 QStringRef name() const
 */
-HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_NAME )
-{
-  QXmlStreamNotationDeclaration * obj = (QXmlStreamNotationDeclaration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QStringRef * ptr = new QStringRef( obj->name () );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
-
+$method=|QStringRef|name|
 
 /*
 QStringRef publicId() const
 */
-HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_PUBLICID )
-{
-  QXmlStreamNotationDeclaration * obj = (QXmlStreamNotationDeclaration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QStringRef * ptr = new QStringRef( obj->publicId () );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
-
+$method=|QStringRef|publicId|
 
 /*
 QStringRef systemId() const
 */
-HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_SYSTEMID )
-{
-  QXmlStreamNotationDeclaration * obj = (QXmlStreamNotationDeclaration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QStringRef * ptr = new QStringRef( obj->systemId () );
-    _qt4xhb_createReturnClass ( ptr, "QSTRINGREF" );
-  }
-}
+$method=|QStringRef|systemId|
 
 $extraMethods
 

@@ -38,53 +38,24 @@ $destructor
 /*
 QMutex ( RecursionMode mode = NonRecursive )
 */
-HB_FUNC_STATIC( QMUTEX_NEW )
-{
-  QMutex * o = new QMutex ( ISNIL(1)? QMutex::NonRecursive : (QMutex::RecursionMode) hb_parni(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new|QMutex::RecursionMode=QMutex::NonRecursive
 
 $deleteMethod
 
 /*
 void lock ()
 */
-HB_FUNC_STATIC( QMUTEX_LOCK )
-{
-  QMutex * obj = (QMutex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->lock ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|lock|
 
 /*
 bool tryLock ()
 */
-HB_FUNC_STATIC( QMUTEX_TRYLOCK1 )
-{
-  QMutex * obj = (QMutex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->tryLock () );
-  }
-}
-
+$method=|bool|tryLock,tryLock1|
 
 /*
 bool tryLock ( int timeout )
 */
-HB_FUNC_STATIC( QMUTEX_TRYLOCK2 )
-{
-  QMutex * obj = (QMutex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->tryLock ( PINT(1) ) );
-  }
-}
-
+$method=|bool|tryLock,tryLock2|int
 
 //[1]bool tryLock ()
 //[2]bool tryLock ( int timeout )
@@ -104,15 +75,7 @@ HB_FUNC_STATIC( QMUTEX_TRYLOCK )
 /*
 void unlock ()
 */
-HB_FUNC_STATIC( QMUTEX_UNLOCK )
-{
-  QMutex * obj = (QMutex *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->unlock ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|unlock|
 
 $extraMethods
 

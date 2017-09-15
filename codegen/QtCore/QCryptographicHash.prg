@@ -43,41 +43,19 @@ $destructor
 /*
 QCryptographicHash ( Algorithm method )
 */
-HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_NEW )
-{
-  QCryptographicHash * o = new QCryptographicHash ( (QCryptographicHash::Algorithm) hb_parni(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QCryptographicHash::Algorithm
 
 $deleteMethod
 
 /*
 void addData ( const char * data, int length )
 */
-HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_ADDDATA1 )
-{
-  QCryptographicHash * obj = (QCryptographicHash *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->addData ( (const char *) hb_parc(1), PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|addData,addData1|const char *,int
 
 /*
 void addData ( const QByteArray & data )
 */
-HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_ADDDATA2 )
-{
-  QCryptographicHash * obj = (QCryptographicHash *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->addData ( *PQBYTEARRAY(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|addData,addData2|const QByteArray &
 
 //[1]void addData ( const char * data, int length )
 //[2]void addData ( const QByteArray & data )
@@ -97,40 +75,17 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_ADDDATA )
 /*
 void reset ()
 */
-HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_RESET )
-{
-  QCryptographicHash * obj = (QCryptographicHash *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->reset ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|reset|
 
 /*
 QByteArray result () const
 */
-HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_RESULT )
-{
-  QCryptographicHash * obj = (QCryptographicHash *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->result () );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
-
+$method=|QByteArray|result|
 
 /*
-QByteArray hash ( const QByteArray & data, Algorithm method )
+static QByteArray hash ( const QByteArray & data, Algorithm method )
 */
-HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_HASH )
-{
-  QByteArray * ptr = new QByteArray( QCryptographicHash::hash ( *PQBYTEARRAY(1), (QCryptographicHash::Algorithm) hb_parni(2) ) );
-  _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-}
+$staticMethod=|QByteArray|hash|const QByteArray &,QCryptographicHash::Algorithm
 
 $extraMethods
 

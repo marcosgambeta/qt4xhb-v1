@@ -45,17 +45,7 @@ $deleteMethod
 /*
 void addAnimation ( QAbstractAnimation * animation )
 */
-HB_FUNC_STATIC( QABSTRACTTRANSITION_ADDANIMATION )
-{
-  QAbstractTransition * obj = (QAbstractTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAbstractAnimation * par1 = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->addAnimation ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|addAnimation|QAbstractAnimation *
 
 /*
 QList<QAbstractAnimation *> animations () const
@@ -100,50 +90,20 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_ANIMATIONS )
   }
 }
 
-
 /*
 QStateMachine * machine () const
 */
-HB_FUNC_STATIC( QABSTRACTTRANSITION_MACHINE )
-{
-  QAbstractTransition * obj = (QAbstractTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QStateMachine * ptr = obj->machine ();
-    _qt4xhb_createReturnClass ( ptr, "QSTATEMACHINE" );
-  }
-}
-
+$method=|QStateMachine *|machine|
 
 /*
 void removeAnimation ( QAbstractAnimation * animation )
 */
-HB_FUNC_STATIC( QABSTRACTTRANSITION_REMOVEANIMATION )
-{
-  QAbstractTransition * obj = (QAbstractTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAbstractAnimation * par1 = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->removeAnimation ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|removeAnimation|QAbstractAnimation *
 
 /*
 void setTargetState ( QAbstractState * target )
 */
-HB_FUNC_STATIC( QABSTRACTTRANSITION_SETTARGETSTATE )
-{
-  QAbstractTransition * obj = (QAbstractTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAbstractState * par1 = (QAbstractState *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setTargetState ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setTargetState|QAbstractState *
 
 /*
 void setTargetStates ( const QList<QAbstractState *> & targets )
@@ -165,34 +125,15 @@ par1 << (QAbstractState *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aLi
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 QState * sourceState () const
 */
-HB_FUNC_STATIC( QABSTRACTTRANSITION_SOURCESTATE )
-{
-  QAbstractTransition * obj = (QAbstractTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QState * ptr = obj->sourceState ();
-    _qt4xhb_createReturnClass ( ptr, "QSTATE" );
-  }
-}
-
+$method=|QState *|sourceState|
 
 /*
 QAbstractState * targetState () const
 */
-HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATE )
-{
-  QAbstractTransition * obj = (QAbstractTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAbstractState * ptr = obj->targetState ();
-    _qt4xhb_createReturnClass ( ptr, "QABSTRACTSTATE" );
-  }
-}
-
+$method=|QAbstractState *|targetState|
 
 /*
 QList<QAbstractState *> targetStates () const
@@ -236,9 +177,5 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATES )
     hb_itemReturnRelease(pArray);
   }
 }
-
-
-
-
 
 #pragma ENDDUMP

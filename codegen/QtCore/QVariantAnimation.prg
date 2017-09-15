@@ -44,146 +44,51 @@ $deleteMethod
 /*
 QVariant currentValue () const
 */
-HB_FUNC_STATIC( QVARIANTANIMATION_CURRENTVALUE )
-{
-  QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->currentValue () );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
-
+$method=|QVariant|currentValue|
 
 /*
 QEasingCurve easingCurve () const
 */
-HB_FUNC_STATIC( QVARIANTANIMATION_EASINGCURVE )
-{
-  QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QEasingCurve * ptr = new QEasingCurve( obj->easingCurve () );
-    _qt4xhb_createReturnClass ( ptr, "QEASINGCURVE" );
-  }
-}
-
+$method=|QEasingCurve|easingCurve|
 
 /*
 QVariant endValue () const
 */
-HB_FUNC_STATIC( QVARIANTANIMATION_ENDVALUE )
-{
-  QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->endValue () );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
-
+$method=|QVariant|endValue|
 
 /*
 QVariant keyValueAt ( qreal step ) const
 */
-HB_FUNC_STATIC( QVARIANTANIMATION_KEYVALUEAT )
-{
-  QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->keyValueAt ( PQREAL(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
-
-
+$method=|QVariant|keyValueAt|qreal
 
 /*
 void setDuration ( int msecs )
 */
-HB_FUNC_STATIC( QVARIANTANIMATION_SETDURATION )
-{
-  QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDuration ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setDuration|int
 
 /*
 void setEasingCurve ( const QEasingCurve & easing )
 */
-HB_FUNC_STATIC( QVARIANTANIMATION_SETEASINGCURVE )
-{
-  QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setEasingCurve ( *PQEASINGCURVE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setEasingCurve|const QEasingCurve &
 
 /*
 void setEndValue ( const QVariant & value )
 */
-HB_FUNC_STATIC( QVARIANTANIMATION_SETENDVALUE )
-{
-  QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setEndValue ( *PQVARIANT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setEndValue|const QVariant &
 
 /*
 void setKeyValueAt ( qreal step, const QVariant & value )
 */
-HB_FUNC_STATIC( QVARIANTANIMATION_SETKEYVALUEAT )
-{
-  QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setKeyValueAt ( PQREAL(1), *PQVARIANT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|setKeyValueAt|qreal,const QVariant &
 
 /*
 void setStartValue ( const QVariant & value )
 */
-HB_FUNC_STATIC( QVARIANTANIMATION_SETSTARTVALUE )
-{
-  QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setStartValue ( *PQVARIANT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setStartValue|const QVariant &
 
 /*
 QVariant startValue () const
 */
-HB_FUNC_STATIC( QVARIANTANIMATION_STARTVALUE )
-{
-  QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->startValue () );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
-
-
-
-
+$method=|QVariant|startValue|
 
 #pragma ENDDUMP

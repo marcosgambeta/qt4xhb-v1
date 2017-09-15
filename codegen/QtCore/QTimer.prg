@@ -39,123 +39,49 @@ $destructor
 /*
 QTimer ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QTIMER_NEW )
-{
-  QTimer * o = new QTimer ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
 /*
 int interval () const
 */
-HB_FUNC_STATIC( QTIMER_INTERVAL )
-{
-  QTimer * obj = (QTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->interval () );
-  }
-}
-
+$method=|int|interval|
 
 /*
 bool isActive () const
 */
-HB_FUNC_STATIC( QTIMER_ISACTIVE )
-{
-  QTimer * obj = (QTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isActive () );
-  }
-}
-
+$method=|bool|isActive|
 
 /*
 bool isSingleShot () const
 */
-HB_FUNC_STATIC( QTIMER_ISSINGLESHOT )
-{
-  QTimer * obj = (QTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isSingleShot () );
-  }
-}
-
+$method=|bool|isSingleShot|
 
 /*
 void setInterval ( int msec )
 */
-HB_FUNC_STATIC( QTIMER_SETINTERVAL )
-{
-  QTimer * obj = (QTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setInterval ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setInterval|int
 
 /*
 void setSingleShot ( bool singleShot )
 */
-HB_FUNC_STATIC( QTIMER_SETSINGLESHOT )
-{
-  QTimer * obj = (QTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSingleShot ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setSingleShot|bool
 
 /*
 int timerId () const
 */
-HB_FUNC_STATIC( QTIMER_TIMERID )
-{
-  QTimer * obj = (QTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->timerId () );
-  }
-}
-
-
-// Public Slots
+$method=|int|timerId|
 
 /*
 void start ( int msec )
 */
-HB_FUNC_STATIC( QTIMER_START1 )
-{
-  QTimer * obj = (QTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->start ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|start,start1|int
 
 /*
 void start ()
 */
-HB_FUNC_STATIC( QTIMER_START2 )
-{
-  QTimer * obj = (QTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->start ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|start,start2|
 
 //[1]void start ( int msec )
 //[2]void start ()
@@ -175,31 +101,11 @@ HB_FUNC_STATIC( QTIMER_START )
 /*
 void stop ()
 */
-HB_FUNC_STATIC( QTIMER_STOP )
-{
-  QTimer * obj = (QTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->stop ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
-// Static Public Members
+$method=|void|stop|
 
 /*
-void singleShot ( int msec, QObject * receiver, const char * member )
+static void singleShot ( int msec, QObject * receiver, const char * member )
 */
-HB_FUNC_STATIC( QTIMER_SINGLESHOT )
-{
-  QTimer::singleShot ( PINT(1), PQOBJECT(2), (const char *) hb_parc(3) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
-
+$staticMethod=|void|singleShot|int,QObject *,const char *
 
 #pragma ENDDUMP

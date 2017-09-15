@@ -50,22 +50,12 @@ $destructor
 /*
 QProcessEnvironment()
 */
-HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEW1 )
-{
-  QProcessEnvironment * o = new QProcessEnvironment ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|
 
 /*
 QProcessEnvironment(const QProcessEnvironment &other)
 */
-HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEW2 )
-{
-  QProcessEnvironment * o = new QProcessEnvironment ( *PQPROCESSENVIRONMENT(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|const QProcessEnvironment &
 
 //[1]QProcessEnvironment()
 //[2]QProcessEnvironment(const QProcessEnvironment &other)
@@ -91,28 +81,12 @@ $deleteMethod
 /*
 bool isEmpty() const
 */
-HB_FUNC_STATIC( QPROCESSENVIRONMENT_ISEMPTY )
-{
-  QProcessEnvironment * obj = (QProcessEnvironment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isEmpty () );
-  }
-}
-
+$method=|bool|isEmpty|
 
 /*
 void clear()
 */
-HB_FUNC_STATIC( QPROCESSENVIRONMENT_CLEAR )
-{
-  QProcessEnvironment * obj = (QProcessEnvironment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clear ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|clear|
 
 /*
 bool contains(const QString &name) const
@@ -122,15 +96,7 @@ $method=|bool|contains|const QString &
 /*
 void insert(const QString &name, const QString &value)
 */
-HB_FUNC_STATIC( QPROCESSENVIRONMENT_INSERT1 )
-{
-  QProcessEnvironment * obj = (QProcessEnvironment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->insert ( PQSTRING(1), PQSTRING(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|insert,insert1|const QString &,const QString &
 
 /*
 void remove(const QString &name)
@@ -140,55 +106,22 @@ $method=|void|remove|const QString &
 /*
 QString value(const QString &name, const QString &defaultValue = QString()) const
 */
-HB_FUNC_STATIC( QPROCESSENVIRONMENT_VALUE )
-{
-  QProcessEnvironment * obj = (QProcessEnvironment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->value ( PQSTRING(1), OPQSTRING(2,QString()) ) );
-  }
-}
-
+$method=|QString|value|const QString &,const QString &=QString()
 
 /*
 QStringList toStringList() const
 */
-HB_FUNC_STATIC( QPROCESSENVIRONMENT_TOSTRINGLIST )
-{
-  QProcessEnvironment * obj = (QProcessEnvironment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->toStringList () );
-  }
-}
-
+$method=|QStringList|toStringList|
 
 /*
 QStringList keys() const
 */
-HB_FUNC_STATIC( QPROCESSENVIRONMENT_KEYS )
-{
-  QProcessEnvironment * obj = (QProcessEnvironment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->keys () );
-  }
-}
-
+$method=|QStringList|keys|
 
 /*
 void insert(const QProcessEnvironment &e)
 */
-HB_FUNC_STATIC( QPROCESSENVIRONMENT_INSERT2 )
-{
-  QProcessEnvironment * obj = (QProcessEnvironment *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->insert ( *PQPROCESSENVIRONMENT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|insert,insert2|const QProcessEnvironment &
 
 //[1]void insert(const QString &name, const QString &value)
 //[2]void insert(const QProcessEnvironment &e)
@@ -205,15 +138,10 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_INSERT )
   }
 }
 
-
 /*
 static QProcessEnvironment systemEnvironment()
 */
-HB_FUNC_STATIC( QPROCESSENVIRONMENT_SYSTEMENVIRONMENT )
-{
-  QProcessEnvironment * ptr = new QProcessEnvironment( QProcessEnvironment::systemEnvironment () );
-  _qt4xhb_createReturnClass ( ptr, "QPROCESSENVIRONMENT", true );
-}
+$staticMethod=|QProcessEnvironment|systemEnvironment|
 
 $extraMethods
 

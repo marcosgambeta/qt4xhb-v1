@@ -70,52 +70,27 @@ $destructor
 /*
 QSettings ( const QString & organization, const QString & application = QString(), QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QSETTINGS_NEW1 )
-{
-  QSettings * o = new QSettings ( PQSTRING(1), OPQSTRING(2,QString()), OPQOBJECT(3,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new|const QString &,const QString &=QString(),QObject *=0
 
 /*
 QSettings ( Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QSETTINGS_NEW2 )
-{
-  QSettings * o = new QSettings ( (QSettings::Scope) hb_parni(1), PQSTRING(2), OPQSTRING(3,QString()), OPQOBJECT(4,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new|QSettings::Scope,const QString &,const QString &=QString(),QObject *=0
 
 /*
 QSettings ( Format format, Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QSETTINGS_NEW3 )
-{
-  QSettings * o = new QSettings ( (QSettings::Format) hb_parni(1), (QSettings::Scope) hb_parni(2), PQSTRING(3), OPQSTRING(4,QString()), OPQOBJECT(5,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new3|QSettings::Format,QSettings::Scope,const QString &,const QString &=QString(),QObject *=0
 
 /*
 QSettings ( const QString & fileName, Format format, QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QSETTINGS_NEW4 )
-{
-  QSettings * o = new QSettings ( PQSTRING(1), (QSettings::Format) hb_parni(2), OPQOBJECT(3,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new4|const QString &,QSettings::Format,QObject *=0
 
 /*
 QSettings ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QSETTINGS_NEW5 )
-{
-  QSettings * o = new QSettings ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new5|QObject *=0
 
 //[1]QSettings ( const QString & organization, const QString & application = QString(), QObject * parent = 0 )
 //[2]QSettings ( Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = 0 )
@@ -156,14 +131,7 @@ $deleteMethod
 /*
 QStringList allKeys () const
 */
-HB_FUNC_STATIC( QSETTINGS_ALLKEYS )
-{
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->allKeys () );
-  }
-}
+$method=|QStringList|allKeys|
 
 /*
 QString applicationName () const
@@ -228,14 +196,7 @@ $method=|QString|fileName|
 /*
 Format format () const
 */
-HB_FUNC_STATIC( QSETTINGS_FORMAT )
-{
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->format () );
-  }
-}
+$method=|QSettings::Format|format|
 
 /*
 QString group () const
@@ -245,28 +206,12 @@ $method=|QString|group|
 /*
 QTextCodec * iniCodec () const
 */
-HB_FUNC_STATIC( QSETTINGS_INICODEC )
-{
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTextCodec * ptr = obj->iniCodec ();
-    _qt4xhb_createReturnClass ( ptr, "QTEXTCODEC" );
-  }
-}
-
+$method=|QTextCodec *|iniCodec|
 
 /*
 bool isWritable () const
 */
-HB_FUNC_STATIC( QSETTINGS_ISWRITABLE )
-{
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isWritable () );
-  }
-}
+$method=|bool|isWritable|
 
 /*
 QString organizationName () const
@@ -281,71 +226,30 @@ $method=|void|remove|const QString &
 /*
 Scope scope () const
 */
-HB_FUNC_STATIC( QSETTINGS_SCOPE )
-{
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->scope () );
-  }
-}
-
+$method=|QSettings::Scope|scope|
 
 /*
 void setArrayIndex ( int i )
 */
-HB_FUNC_STATIC( QSETTINGS_SETARRAYINDEX )
-{
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setArrayIndex ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setArrayIndex|int
 
 /*
 void setFallbacksEnabled ( bool b )
 */
-HB_FUNC_STATIC( QSETTINGS_SETFALLBACKSENABLED )
-{
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFallbacksEnabled ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setFallbacksEnabled|bool
 
 /*
 void setIniCodec ( QTextCodec * codec )
 */
-HB_FUNC_STATIC( QSETTINGS_SETINICODEC1 )
-{
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setIniCodec ( PQTEXTCODEC(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setIniCodec,setIniCodec1|QTextCodec *
 
 /*
 void setIniCodec ( const char * codecName )
 */
-HB_FUNC_STATIC( QSETTINGS_SETINICODEC2 )
-{
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setIniCodec ( (const char *) hb_parc(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setIniCodec,setIniCodec2|const char *
 
+//[1]void setIniCodec ( QTextCodec * codec )
+//[2]void setIniCodec ( const char * codecName )
 
 HB_FUNC_STATIC( QSETTINGS_SETINICODEC )
 {
@@ -362,90 +266,36 @@ HB_FUNC_STATIC( QSETTINGS_SETINICODEC )
 /*
 void setValue ( const QString & key, const QVariant & value )
 */
-HB_FUNC_STATIC( QSETTINGS_SETVALUE )
-{
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setValue ( PQSTRING(1), *PQVARIANT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setValue|const QString &,const QVariant &
 
 /*
 Status status () const
 */
-HB_FUNC_STATIC( QSETTINGS_STATUS )
-{
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->status () );
-  }
-}
-
+$method=|QSettings::Status|status|
 
 /*
 void sync ()
 */
-HB_FUNC_STATIC( QSETTINGS_SYNC )
-{
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->sync ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|sync|
 
 /*
 QVariant value ( const QString & key, const QVariant & defaultValue = QVariant() ) const
 */
-HB_FUNC_STATIC( QSETTINGS_VALUE )
-{
-  QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QVariant * ptr = new QVariant( obj->value ( PQSTRING(1), par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
-
-
+$method=|QVariant|value|const QString &,const QVariant &=QVariant()
 
 /*
-Format defaultFormat ()
+static Format defaultFormat ()
 */
-HB_FUNC_STATIC( QSETTINGS_DEFAULTFORMAT )
-{
-  hb_retni( (int) QSettings::defaultFormat () );
-}
-
-
+$staticMethod=|QSettings::Format|defaultFormat|
 
 /*
-void setDefaultFormat ( Format format )
+static void setDefaultFormat ( Format format )
 */
-HB_FUNC_STATIC( QSETTINGS_SETDEFAULTFORMAT )
-{
-  QSettings::setDefaultFormat ( (QSettings::Format) hb_parni(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|void|setDefaultFormat|QSettings::Format
 
 /*
-void setPath ( Format format, Scope scope, const QString & path )
+static void setPath ( Format format, Scope scope, const QString & path )
 */
-HB_FUNC_STATIC( QSETTINGS_SETPATH )
-{
-  QSettings::setPath ( (QSettings::Format) hb_parni(1), (QSettings::Scope) hb_parni(2), PQSTRING(3) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
+$staticMethod=|void|setPath|QSettings::Format,QSettings::Scope,const QString &
 
 #pragma ENDDUMP

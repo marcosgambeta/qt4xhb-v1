@@ -68,93 +68,51 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
+%% //[1]QIODevice ()
+%% //[2]QIODevice ( QObject * parent )
 
-
-//[1]QIODevice ()
-//[2]QIODevice ( QObject * parent )
-
-//HB_FUNC_STATIC( QIODEVICE_NEW )
-//{
-//  if( ISNUMPAR(0) )
-//  {
-//    HB_FUNC_EXEC( QIODEVICE_NEW1 );
-//  }
-//  else if( ISNUMPAR(1) && ISQOBJECT(1) )
-//  {
-//    HB_FUNC_EXEC( QIODEVICE_NEW2 );
-//  }
-//  else
-//  {
-//    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-//  }
-//}
+%% //HB_FUNC_STATIC( QIODEVICE_NEW )
+%% //{
+%% //  if( ISNUMPAR(0) )
+%% //  {
+%% //    HB_FUNC_EXEC( QIODEVICE_NEW1 );
+%% //  }
+%% //  else if( ISNUMPAR(1) && ISQOBJECT(1) )
+%% //  {
+%% //    HB_FUNC_EXEC( QIODEVICE_NEW2 );
+%% //  }
+%% //  else
+%% //  {
+%% //    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+%% //  }
+%% //}
 
 $deleteMethod
 
 /*
 virtual bool atEnd () const
 */
-HB_FUNC_STATIC( QIODEVICE_ATEND )
-{
-  QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->atEnd () );
-  }
-}
-
+$virtualMethod=|bool|atEnd|
 
 /*
 virtual qint64 bytesAvailable () const
 */
-HB_FUNC_STATIC( QIODEVICE_BYTESAVAILABLE )
-{
-  QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQINT64( obj->bytesAvailable () );
-  }
-}
-
+$virtualMethod=|qint64|bytesAvailable|
 
 /*
 virtual qint64 bytesToWrite () const
 */
-HB_FUNC_STATIC( QIODEVICE_BYTESTOWRITE )
-{
-  QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQINT64( obj->bytesToWrite () );
-  }
-}
-
+$virtualMethod=|qint64|bytesToWrite|
 
 /*
 virtual bool canReadLine () const
 */
-HB_FUNC_STATIC( QIODEVICE_CANREADLINE )
-{
-  QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->canReadLine () );
-  }
-}
-
+$virtualMethod=|bool|canReadLine|
 
 /*
 virtual void close ()
 */
-HB_FUNC_STATIC( QIODEVICE_CLOSE )
-{
-  QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->close ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|close|
 
 /*
 QString errorString () const
@@ -164,135 +122,52 @@ $method=|QString|errorString|
 /*
 bool getChar ( char * c )
 */
-HB_FUNC_STATIC( QIODEVICE_GETCHAR )
-{
-  QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    char * par1 = (char *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->getChar ( par1 ) );
-  }
-}
-
+$method=|bool|getChar|char *
 
 /*
 bool isOpen () const
 */
-HB_FUNC_STATIC( QIODEVICE_ISOPEN )
-{
-  QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isOpen () );
-  }
-}
-
+$method=|bool|isOpen|
 
 /*
 bool isReadable () const
 */
-HB_FUNC_STATIC( QIODEVICE_ISREADABLE )
-{
-  QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isReadable () );
-  }
-}
-
+$method=|bool|isReadable|
 
 /*
 virtual bool isSequential () const
 */
-HB_FUNC_STATIC( QIODEVICE_ISSEQUENTIAL )
-{
-  QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isSequential () );
-  }
-}
-
+$virtualMethod=|bool|isSequential|
 
 /*
 bool isTextModeEnabled () const
 */
-HB_FUNC_STATIC( QIODEVICE_ISTEXTMODEENABLED )
-{
-  QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isTextModeEnabled () );
-  }
-}
-
+$method=|bool|isTextModeEnabled|
 
 /*
 bool isWritable () const
 */
-HB_FUNC_STATIC( QIODEVICE_ISWRITABLE )
-{
-  QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isWritable () );
-  }
-}
-
+$method=|bool|isWritable|
 
 /*
 virtual bool open ( OpenMode mode )
 */
-HB_FUNC_STATIC( QIODEVICE_OPEN )
-{
-  QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->open ( (QIODevice::OpenMode) hb_parni(1) ) );
-  }
-}
-
+$virtualMethod=|bool|open|QIODevice::OpenMode
 
 /*
 OpenMode openMode () const
 */
-HB_FUNC_STATIC( QIODEVICE_OPENMODE )
-{
-  QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->openMode () );
-  }
-}
-
+$method=|QIODevice::OpenMode|openMode|
 
 /*
 qint64 peek ( char * data, qint64 maxSize )
 */
-HB_FUNC_STATIC( QIODEVICE_PEEK1 )
-{
-  QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    char * par1 = (char *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RQINT64( obj->peek ( par1, PQINT64(2) ) );
-  }
-}
-
+$method=|qint64|peek,peek1|char *,qint64
 
 /*
 QByteArray peek ( qint64 maxSize )
 */
-HB_FUNC_STATIC( QIODEVICE_PEEK2 )
-{
-  QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->peek ( PQINT64(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray|peek,peek2|qint64
 
 //[1]qint64 peek ( char * data, qint64 maxSize )
 //[2]QByteArray peek ( qint64 maxSize )
@@ -312,57 +187,22 @@ HB_FUNC_STATIC( QIODEVICE_PEEK )
 /*
 virtual qint64 pos () const
 */
-HB_FUNC_STATIC( QIODEVICE_POS )
-{
-  QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQINT64( obj->pos () );
-  }
-}
-
+$virtualMethod=|qint64|pos|
 
 /*
 bool putChar ( char c )
 */
-HB_FUNC_STATIC( QIODEVICE_PUTCHAR )
-{
-  QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
-    RBOOL( obj->putChar ( par1 ) );
-  }
-}
-
+$method=|bool|putChar|char
 
 /*
 qint64 read ( char * data, qint64 maxSize )
 */
-HB_FUNC_STATIC( QIODEVICE_READ1 )
-{
-  QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    char * par1 = (char *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RQINT64( obj->read ( par1, PQINT64(2) ) );
-  }
-}
-
+$method=|qint64|read,read1|char *,qint64
 
 /*
 QByteArray read ( qint64 maxSize )
 */
-HB_FUNC_STATIC( QIODEVICE_READ2 )
-{
-  QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->read ( PQINT64(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray|read,read2|qint64
 
 //[1]qint64 read ( char * data, qint64 maxSize )
 //[2]QByteArray read ( qint64 maxSize )
@@ -382,44 +222,17 @@ HB_FUNC_STATIC( QIODEVICE_READ )
 /*
 QByteArray readAll ()
 */
-HB_FUNC_STATIC( QIODEVICE_READALL )
-{
-  QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->readAll () );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray|readAll|
 
 /*
 qint64 readLine ( char * data, qint64 maxSize )
 */
-HB_FUNC_STATIC( QIODEVICE_READLINE1 )
-{
-  QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    char * par1 = (char *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RQINT64( obj->readLine ( par1, PQINT64(2) ) );
-  }
-}
-
+$method=|qint64|readLine,readLine1|char *,qint64
 
 /*
 QByteArray readLine ( qint64 maxSize = 0 )
 */
-HB_FUNC_STATIC( QIODEVICE_READLINE2 )
-{
-  QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->readLine ( OPQINT64(1,0) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray|readLine,readLine2|qint64=0
 
 //[1]qint64 readLine ( char * data, qint64 maxSize )
 //[2]QByteArray readLine ( qint64 maxSize = 0 )
@@ -439,135 +252,52 @@ HB_FUNC_STATIC( QIODEVICE_READLINE )
 /*
 virtual bool reset ()
 */
-HB_FUNC_STATIC( QIODEVICE_RESET )
-{
-  QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->reset () );
-  }
-}
-
+$virtualMethod=|bool|reset|
 
 /*
 virtual bool seek ( qint64 pos )
 */
-HB_FUNC_STATIC( QIODEVICE_SEEK )
-{
-  QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->seek ( PQINT64(1) ) );
-  }
-}
-
+$virtualMethod=|bool|seek|qint64
 
 /*
 void setTextModeEnabled ( bool enabled )
 */
-HB_FUNC_STATIC( QIODEVICE_SETTEXTMODEENABLED )
-{
-  QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setTextModeEnabled ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setTextModeEnabled|bool
 
 /*
 virtual qint64 size () const
 */
-HB_FUNC_STATIC( QIODEVICE_SIZE )
-{
-  QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQINT64( obj->size () );
-  }
-}
-
+$virtualMethod=|qint64|size|
 
 /*
 void ungetChar ( char c )
 */
-HB_FUNC_STATIC( QIODEVICE_UNGETCHAR )
-{
-  QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
-    obj->ungetChar ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|ungetChar|char
 
 /*
 virtual bool waitForBytesWritten ( int msecs )
 */
-HB_FUNC_STATIC( QIODEVICE_WAITFORBYTESWRITTEN )
-{
-  QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->waitForBytesWritten ( PINT(1) ) );
-  }
-}
-
+$virtualMethod=|bool|waitForBytesWritten|int
 
 /*
 virtual bool waitForReadyRead ( int msecs )
 */
-HB_FUNC_STATIC( QIODEVICE_WAITFORREADYREAD )
-{
-  QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->waitForReadyRead ( PINT(1) ) );
-  }
-}
-
+$virtualMethod=|bool|waitForReadyRead|int
 
 /*
 qint64 write ( const char * data, qint64 maxSize )
 */
-HB_FUNC_STATIC( QIODEVICE_WRITE1 )
-{
-  QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQINT64( obj->write ( (const char *) hb_parc(1), PQINT64(2) ) );
-  }
-}
-
+$method=|qint64|write,write1|const char *,qint64
 
 /*
 qint64 write ( const char * data )
 */
-HB_FUNC_STATIC( QIODEVICE_WRITE2 )
-{
-  QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQINT64( obj->write ( (const char *) hb_parc(1) ) );
-  }
-}
-
+$method=|qint64|write,write2|const char *
 
 /*
 qint64 write ( const QByteArray & byteArray )
 */
-HB_FUNC_STATIC( QIODEVICE_WRITE3 )
-{
-  QIODevice * obj = (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQINT64( obj->write ( *PQBYTEARRAY(1) ) );
-  }
-}
-
+$method=|qint64|write,write3|const QByteArray &
 
 //[1]qint64 write ( const char * data, qint64 maxSize )
 //[2]qint64 write ( const char * data )
@@ -588,10 +318,5 @@ HB_FUNC_STATIC( QIODEVICE_WRITE )
     HB_FUNC_EXEC( QIODEVICE_WRITE3 );
   }
 }
-
-//Signals
-
-
-
 
 #pragma ENDDUMP

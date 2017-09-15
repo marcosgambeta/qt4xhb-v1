@@ -90,15 +90,7 @@ $deleteMethod
 /*
 virtual QModelIndex buddy ( const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_BUDDY )
-{
-  QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QModelIndex * ptr = new QModelIndex( obj->buddy ( *PQMODELINDEX(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-  }
-}
+$virtualMethod=|QModelIndex|buddy|const QModelIndex &
 
 /*
 virtual bool canFetchMore ( const QModelIndex & parent ) const
@@ -108,29 +100,12 @@ $virtualMethod=|bool|canFetchMore|const QModelIndex &
 /*
 virtual int columnCount ( const QModelIndex & parent = QModelIndex() ) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_COLUMNCOUNT )
-{
-  QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RINT( obj->columnCount ( par1 ) );
-  }
-}
-
+$virtualMethod=|int|columnCount|const QModelIndex &=QModelIndex()
 
 /*
 virtual QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_DATA )
-{
-  QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->data ( *PQMODELINDEX(1), OPINT(2,Qt::DisplayRole) ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
+$virtualMethod=|QVariant|data|const QModelIndex &,int=Qt::DisplayRole
 
 /*
 virtual bool dropMimeData ( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
@@ -140,28 +115,12 @@ $virtualMethod=|bool|dropMimeData|const QMimeData *,Qt::DropAction,int,int,const
 /*
 virtual void fetchMore ( const QModelIndex & parent )
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_FETCHMORE )
-{
-  QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->fetchMore ( *PQMODELINDEX(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|fetchMore|const QModelIndex &
 
 /*
 virtual Qt::ItemFlags flags ( const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_FLAGS )
-{
-  QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->flags ( *PQMODELINDEX(1) ) );
-  }
-}
+$virtualMethod=|Qt::ItemFlags|flags|const QModelIndex &
 
 /*
 virtual bool hasChildren ( const QModelIndex & parent = QModelIndex() ) const
@@ -176,30 +135,12 @@ $method=|bool|hasIndex|int,int,const QModelIndex &=QModelIndex()
 /*
 virtual QVariant headerData ( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_HEADERDATA )
-{
-  QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->headerData ( PINT(1), (Qt::Orientation) hb_parni(2), OPINT(3,Qt::DisplayRole) ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
-
+$virtualMethod=|QVariant|headerData|int,Qt::Orientation,int=Qt::DisplayRole
 
 /*
 virtual QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_INDEX )
-{
-  QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QModelIndex par3 = ISNIL(3)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QModelIndex * ptr = new QModelIndex( obj->index ( PINT(1), PINT(2), par3 ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-  }
-}
+$virtualMethod=|QModelIndex|index|int,int,const QModelIndex &=QModelIndex()
 
 /*
 bool insertColumn ( int column, const QModelIndex & parent = QModelIndex() )
@@ -264,47 +205,20 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_MATCH )
   }
 }
 
-
 /*
 virtual QMimeData * mimeData ( const QModelIndexList & indexes ) const
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_MIMEDATA )
-{
-  QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QModelIndexList * par1 = (QModelIndexList *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QMimeData * ptr = obj->mimeData ( *par1 );
-    _qt4xhb_createReturnClass ( ptr, "QMIMEDATA" );
-  }
-}
-
+$virtualMethod=|QMimeData *|mimeData|const QModelIndexList &
 
 /*
 virtual QStringList mimeTypes () const
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_MIMETYPES )
-{
-  QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->mimeTypes () );
-  }
-}
-
+$virtualMethod=|QStringList|mimeTypes|
 
 /*
 virtual QModelIndex parent ( const QModelIndex & index ) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_PARENT )
-{
-  QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QModelIndex * ptr = new QModelIndex( obj->parent ( *PQMODELINDEX(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-  }
-}
+$virtualMethod=|QModelIndex|parent|const QModelIndex &
 
 /*
 bool removeColumn ( int column, const QModelIndex & parent = QModelIndex() )
@@ -329,15 +243,7 @@ $virtualMethod=|bool|removeRows|int,int,const QModelIndex &=QModelIndex()
 /*
 virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_ROWCOUNT )
-{
-  QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QModelIndex par1 = ISNIL(1)? QModelIndex() : *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RINT( obj->rowCount ( par1 ) );
-  }
-}
+$virtualMethod=|int|rowCount|const QModelIndex &=QModelIndex()
 
 /*
 virtual bool setData ( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
@@ -352,29 +258,12 @@ $virtualMethod=|bool|setHeaderData|int,Qt::Orientation,const QVariant &,int=Qt::
 /*
 void setSupportedDragActions ( Qt::DropActions actions )
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_SETSUPPORTEDDRAGACTIONS )
-{
-  QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSupportedDragActions ( (Qt::DropActions) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setSupportedDragActions|Qt::DropActions
 
 /*
 QModelIndex sibling ( int row, int column, const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QABSTRACTITEMMODEL_SIBLING )
-{
-  QAbstractItemModel * obj = (QAbstractItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QModelIndex * ptr = new QModelIndex( obj->sibling ( PINT(1), PINT(2), *PQMODELINDEX(3) ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-  }
-}
+$method=|QModelIndex|sibling|int,int,const QModelIndex &
 
 /*
 virtual void sort ( int column, Qt::SortOrder order = Qt::AscendingOrder )

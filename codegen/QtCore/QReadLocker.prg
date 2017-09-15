@@ -40,54 +40,24 @@ $destructor
 /*
 QReadLocker ( QReadWriteLock * lock )
 */
-HB_FUNC_STATIC( QREADLOCKER_NEW )
-{
-  QReadLocker * o = new QReadLocker ( PQREADWRITELOCK(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new|QReadWriteLock *
 
 $deleteMethod
 
 /*
 QReadWriteLock * readWriteLock () const
 */
-HB_FUNC_STATIC( QREADLOCKER_READWRITELOCK )
-{
-  QReadLocker * obj = (QReadLocker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QReadWriteLock * ptr = obj->readWriteLock ();
-    _qt4xhb_createReturnClass ( ptr, "QREADWRITELOCK" );
-  }
-}
-
+$method=|QReadWriteLock *|readWriteLock|
 
 /*
 void relock ()
 */
-HB_FUNC_STATIC( QREADLOCKER_RELOCK )
-{
-  QReadLocker * obj = (QReadLocker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->relock ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|relock|
 
 /*
 void unlock ()
 */
-HB_FUNC_STATIC( QREADLOCKER_UNLOCK )
-{
-  QReadLocker * obj = (QReadLocker *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->unlock ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|unlock|
 
 $extraMethods
 

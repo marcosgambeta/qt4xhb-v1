@@ -36,42 +36,22 @@ $destructor
 /*
 QTemporaryFile()
 */
-HB_FUNC_STATIC( QTEMPORARYFILE_NEW1 )
-{
-  QTemporaryFile * o = new QTemporaryFile ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new1|
 
 /*
 QTemporaryFile(const QString & templateName)
 */
-HB_FUNC_STATIC( QTEMPORARYFILE_NEW2 )
-{
-  QTemporaryFile * o = new QTemporaryFile ( PQSTRING(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new2|const QString &
 
 /*
 QTemporaryFile(QObject * parent)
 */
-HB_FUNC_STATIC( QTEMPORARYFILE_NEW3 )
-{
-  QTemporaryFile * o = new QTemporaryFile ( PQOBJECT(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new3|QObject *
 
 /*
 QTemporaryFile(const QString & templateName, QObject * parent)
 */
-HB_FUNC_STATIC( QTEMPORARYFILE_NEW4 )
-{
-  QTemporaryFile * o = new QTemporaryFile ( PQSTRING(1), PQOBJECT(2) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new4|const QString &,QObject *
 
 //[1]QTemporaryFile()
 //[2]QTemporaryFile(const QString & templateName)
@@ -107,14 +87,7 @@ $deleteMethod
 /*
 bool autoRemove() const
 */
-HB_FUNC_STATIC( QTEMPORARYFILE_AUTOREMOVE )
-{
-  QTemporaryFile * obj = (QTemporaryFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->autoRemove () );
-  }
-}
+$method=|bool|autoRemove|
 
 /*
 QString fileTemplate() const
@@ -124,28 +97,12 @@ $method=|QString|fileTemplate|
 /*
 bool open()
 */
-HB_FUNC_STATIC( QTEMPORARYFILE_OPEN )
-{
-  QTemporaryFile * obj = (QTemporaryFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->open () );
-  }
-}
-
+$method=|bool|open|
 
 /*
 void setAutoRemove(bool b)
 */
-HB_FUNC_STATIC( QTEMPORARYFILE_SETAUTOREMOVE )
-{
-  QTemporaryFile * obj = (QTemporaryFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAutoRemove ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAutoRemove|bool
 
 /*
 void setFileTemplate(const QString & name)
@@ -157,22 +114,29 @@ virtual QString fileName() const
 */
 $virtualMethod=|QString|fileName|
 
+/*
+static QTemporaryFile * createNativeFile(QFile & file)
+*/
+$staticMethod=|QTemporaryFile *|createNativeFile,createNativeFile1|QFile &
+
+/*
+static QTemporaryFile * createNativeFile(const QString & fileName)
+*/
+$staticMethod=|QTemporaryFile *|createNativeFile,createNativeFile2|const QString &
 
 //[1]QTemporaryFile * createNativeFile(QFile & file)
 //[2]QTemporaryFile * createNativeFile(const QString & fileName)
 
-//HB_FUNC_STATIC( QTEMPORARYFILE_CREATENATIVEFILE )
-//{
-//  if( ISNUMPAR(1) && ISQFILE(1) )
-//  {
-//    HB_FUNC_EXEC( QTEMPORARYFILE_CREATENATIVEFILE1 );
-//  }
-//  else if( ISNUMPAR(1) && ISCHAR(1) )
-//  {
-//    HB_FUNC_EXEC( QTEMPORARYFILE_CREATENATIVEFILE2 );
-//  }
-//}
-
-
+HB_FUNC_STATIC( QTEMPORARYFILE_CREATENATIVEFILE )
+{
+  if( ISNUMPAR(1) && ISQFILE(1) )
+  {
+    HB_FUNC_EXEC( QTEMPORARYFILE_CREATENATIVEFILE1 );
+  }
+  else if( ISNUMPAR(1) && ISCHAR(1) )
+  {
+    HB_FUNC_EXEC( QTEMPORARYFILE_CREATENATIVEFILE2 );
+  }
+}
 
 #pragma ENDDUMP

@@ -37,22 +37,12 @@ $destructor
 /*
 QPropertyAnimation ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QPROPERTYANIMATION_NEW1 )
-{
-  QPropertyAnimation * o = new QPropertyAnimation ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new1|QObject *=0
 
 /*
 QPropertyAnimation ( QObject * target, const QByteArray & propertyName, QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QPROPERTYANIMATION_NEW2 )
-{
-  QPropertyAnimation * o = new QPropertyAnimation ( PQOBJECT(1), *PQBYTEARRAY(2), OPQOBJECT(3,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new2|QObject *,const QByteArray &,QObject *=0
 
 //[1]QPropertyAnimation ( QObject * parent = 0 )
 //[2]QPropertyAnimation ( QObject * target, const QByteArray & propertyName, QObject * parent = 0 )
@@ -78,59 +68,21 @@ $deleteMethod
 /*
 QByteArray propertyName () const
 */
-HB_FUNC_STATIC( QPROPERTYANIMATION_PROPERTYNAME )
-{
-  QPropertyAnimation * obj = (QPropertyAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->propertyName () );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray|propertyName|
 
 /*
 void setPropertyName ( const QByteArray & propertyName )
 */
-HB_FUNC_STATIC( QPROPERTYANIMATION_SETPROPERTYNAME )
-{
-  QPropertyAnimation * obj = (QPropertyAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPropertyName ( *PQBYTEARRAY(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPropertyName|const QByteArray &
 
 /*
 void setTargetObject ( QObject * target )
 */
-HB_FUNC_STATIC( QPROPERTYANIMATION_SETTARGETOBJECT )
-{
-  QPropertyAnimation * obj = (QPropertyAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setTargetObject ( PQOBJECT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setTargetObject|QObject *
 
 /*
 QObject * targetObject () const
 */
-HB_FUNC_STATIC( QPROPERTYANIMATION_TARGETOBJECT )
-{
-  QPropertyAnimation * obj = (QPropertyAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QObject * ptr = obj->targetObject ();
-    _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
-
-
-
+$method=|QObject *|targetObject|
 
 #pragma ENDDUMP

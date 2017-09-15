@@ -1457,26 +1457,14 @@ $destructor
 /*
 QObject ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QOBJECT_NEW )
-{
-  QObject * o = new QObject ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
 /*
 bool blockSignals ( bool block )
 */
-HB_FUNC_STATIC( QOBJECT_BLOCKSIGNALS )
-{
-  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->blockSignals ( PBOOL(1) ) );
-  }
-}
-
+$method=|bool|blockSignals|bool
 
 /*
 const QObjectList & children () const
@@ -1521,37 +1509,15 @@ HB_FUNC_STATIC( QOBJECT_CHILDREN )
   }
 }
 
-
-
-
-
 /*
 void dumpObjectInfo ()
 */
-HB_FUNC_STATIC( QOBJECT_DUMPOBJECTINFO )
-{
-  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->dumpObjectInfo ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|dumpObjectInfo|
 
 /*
 void dumpObjectTree ()
 */
-HB_FUNC_STATIC( QOBJECT_DUMPOBJECTTREE )
-{
-  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->dumpObjectTree ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|dumpObjectTree|
 
 /*
 QList<QByteArray> dynamicPropertyNames () const
@@ -1596,32 +1562,15 @@ HB_FUNC_STATIC( QOBJECT_DYNAMICPROPERTYNAMES )
   }
 }
 
-
 /*
 virtual bool event ( QEvent * e )
 */
-HB_FUNC_STATIC( QOBJECT_EVENT )
-{
-  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->event ( PQEVENT(1) ) );
-  }
-}
-
+$virtualMethod=|bool|event|QEvent *
 
 /*
 virtual bool eventFilter ( QObject * watched, QEvent * event )
 */
-HB_FUNC_STATIC( QOBJECT_EVENTFILTER )
-{
-  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->eventFilter ( PQOBJECT(1), PQEVENT(2) ) );
-  }
-}
-
+$virtualMethod=|bool|eventFilter|QObject *,QEvent *
 
 /*
 T findChild ( const QString & name = QString() ) const
@@ -1635,8 +1584,6 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILD )
     _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
-
-
 
 /*
 QList<T> findChildren ( const QString & name = QString() ) const
@@ -1681,7 +1628,6 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILDREN1 )
   }
 }
 
-
 /*
 QList<T> findChildren ( const QRegExp & regExp ) const
 */
@@ -1725,7 +1671,6 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILDREN2 )
   }
 }
 
-
 //[1]QList<T> findChildren ( const QString & name = QString() ) const
 //[2]QList<T> findChildren ( const QRegExp & regExp ) const
 
@@ -1744,84 +1689,32 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILDREN )
 /*
 bool inherits ( const char * className ) const
 */
-HB_FUNC_STATIC( QOBJECT_INHERITS )
-{
-  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->inherits ( (const char *) hb_parc(1) ) );
-  }
-}
-
+$method=|bool|inherits|const char *
 
 /*
 void installEventFilter ( QObject * filterObj )
 */
-HB_FUNC_STATIC( QOBJECT_INSTALLEVENTFILTER )
-{
-  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->installEventFilter ( PQOBJECT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|installEventFilter|QObject *
 
 /*
 bool isWidgetType () const
 */
-HB_FUNC_STATIC( QOBJECT_ISWIDGETTYPE )
-{
-  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isWidgetType () );
-  }
-}
-
+$method=|bool|isWidgetType|
 
 /*
 void killTimer ( int id )
 */
-HB_FUNC_STATIC( QOBJECT_KILLTIMER )
-{
-  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->killTimer ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|killTimer|int
 
 /*
 virtual const QMetaObject * metaObject () const
 */
-HB_FUNC_STATIC( QOBJECT_METAOBJECT )
-{
-  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QMetaObject * ptr = obj->metaObject ();
-    _qt4xhb_createReturnClass ( ptr, "QMETAOBJECT" );
-  }
-}
-
+$virtualMethod=|const QMetaObject *|metaObject|
 
 /*
 void moveToThread ( QThread * targetThread )
 */
-HB_FUNC_STATIC( QOBJECT_MOVETOTHREAD )
-{
-  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QThread * par1 = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->moveToThread ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|moveToThread|QThread *
 
 /*
 QString objectName () const
@@ -1831,138 +1724,52 @@ $method=|QString|objectName|
 /*
 QObject * parent () const
 */
-HB_FUNC_STATIC( QOBJECT_PARENT )
-{
-  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QObject * ptr = obj->parent ();
-    _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
-
+$method=|QObject *|parent|
 
 /*
 QVariant property ( const char * name ) const
 */
-HB_FUNC_STATIC( QOBJECT_PROPERTY )
-{
-  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->property ( (const char *) hb_parc(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
-
+$method=|QVariant|property|const char *
 
 /*
 void removeEventFilter ( QObject * obj )
 */
-HB_FUNC_STATIC( QOBJECT_REMOVEEVENTFILTER )
-{
-  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->removeEventFilter ( PQOBJECT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|removeEventFilter|QObject *
 
 /*
 void setObjectName ( const QString & name )
 */
-HB_FUNC_STATIC( QOBJECT_SETOBJECTNAME )
-{
-  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setObjectName ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setObjectName|const QString &
 
 /*
 void setParent ( QObject * parent )
 */
-HB_FUNC_STATIC( QOBJECT_SETPARENT )
-{
-  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setParent ( PQOBJECT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setParent|QObject *
 
 /*
 bool setProperty ( const char * name, const QVariant & value )
 */
-HB_FUNC_STATIC( QOBJECT_SETPROPERTY )
-{
-  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->setProperty ( (const char *) hb_parc(1), *PQVARIANT(2) ) );
-  }
-}
-
+$method=|bool|setProperty|const char *,const QVariant &
 
 /*
 bool signalsBlocked () const
 */
-HB_FUNC_STATIC( QOBJECT_SIGNALSBLOCKED )
-{
-  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->signalsBlocked () );
-  }
-}
-
+$method=|bool|signalsBlocked|
 
 /*
 int startTimer ( int interval )
 */
-HB_FUNC_STATIC( QOBJECT_STARTTIMER )
-{
-  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->startTimer ( PINT(1) ) );
-  }
-}
-
+$method=|int|startTimer|int
 
 /*
 QThread * thread () const
 */
-HB_FUNC_STATIC( QOBJECT_THREAD )
-{
-  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QThread * ptr = obj->thread ();
-    _qt4xhb_createReturnClass ( ptr, "QTHREAD" );
-  }
-}
-
+$method=|QThread *|thread|
 
 /*
 void deleteLater ()
 */
-HB_FUNC_STATIC( QOBJECT_DELETELATER )
-{
-  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->deleteLater ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|deleteLater|
 
 $extraMethods
 

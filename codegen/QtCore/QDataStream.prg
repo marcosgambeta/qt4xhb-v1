@@ -56,42 +56,22 @@ $destructor
 /*
 QDataStream ()
 */
-HB_FUNC_STATIC( QDATASTREAM_NEW1 )
-{
-  QDataStream * o = new QDataStream ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new1|
 
 /*
 QDataStream ( QIODevice * d )
 */
-HB_FUNC_STATIC( QDATASTREAM_NEW2 )
-{
-  QDataStream * o = new QDataStream ( PQIODEVICE(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new2|QIODevice *
 
 /*
 QDataStream ( QByteArray * a, QIODevice::OpenMode mode )
 */
-HB_FUNC_STATIC( QDATASTREAM_NEW3 )
-{
-  QDataStream * o = new QDataStream ( PQBYTEARRAY(1), (QIODevice::OpenMode) hb_parni(2) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new3|QByteArray *,QIODevice::OpenMode
 
 /*
 QDataStream ( const QByteArray & a )
 */
-HB_FUNC_STATIC( QDATASTREAM_NEW4 )
-{
-  QDataStream * o = new QDataStream ( *PQBYTEARRAY(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new4|const QByteArray &
 
 //[1]QDataStream ()
 //[2]QDataStream ( QIODevice * d )
@@ -127,206 +107,77 @@ $deleteMethod
 /*
 bool atEnd () const
 */
-HB_FUNC_STATIC( QDATASTREAM_ATEND )
-{
-  QDataStream * obj = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->atEnd () );
-  }
-}
-
+$method=|bool|atEnd|
 
 /*
 ByteOrder byteOrder () const
 */
-HB_FUNC_STATIC( QDATASTREAM_BYTEORDER )
-{
-  QDataStream * obj = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->byteOrder () );
-  }
-}
-
+$method=|QDataStream::ByteOrder|byteOrder|
 
 /*
 QIODevice * device () const
 */
-HB_FUNC_STATIC( QDATASTREAM_DEVICE )
-{
-  QDataStream * obj = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QIODevice * ptr = obj->device ();
-    _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );
-  }
-}
-
+$method=|QIODevice *|device|
 
 /*
 FloatingPointPrecision floatingPointPrecision () const
 */
-HB_FUNC_STATIC( QDATASTREAM_FLOATINGPOINTPRECISION )
-{
-  QDataStream * obj = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->floatingPointPrecision () );
-  }
-}
-
-
+$method=|QDataStream::FloatingPointPrecision|floatingPointPrecision|
 
 /*
 int readRawData ( char * s, int len )
 */
-HB_FUNC_STATIC( QDATASTREAM_READRAWDATA )
-{
-  QDataStream * obj = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    char * par1 = (char *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RINT( obj->readRawData ( par1, PINT(2) ) );
-  }
-}
-
+$method=|int|readRawData|char *,int
 
 /*
 void resetStatus ()
 */
-HB_FUNC_STATIC( QDATASTREAM_RESETSTATUS )
-{
-  QDataStream * obj = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->resetStatus ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|resetStatus|
 
 /*
 void setByteOrder ( ByteOrder bo )
 */
-HB_FUNC_STATIC( QDATASTREAM_SETBYTEORDER )
-{
-  QDataStream * obj = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setByteOrder ( (QDataStream::ByteOrder) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setByteOrder|QDataStream::ByteOrder
 
 /*
 void setDevice ( QIODevice * d )
 */
-HB_FUNC_STATIC( QDATASTREAM_SETDEVICE )
-{
-  QDataStream * obj = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDevice ( PQIODEVICE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setDevice|QIODevice *
 
 /*
 void setFloatingPointPrecision ( FloatingPointPrecision precision )
 */
-HB_FUNC_STATIC( QDATASTREAM_SETFLOATINGPOINTPRECISION )
-{
-  QDataStream * obj = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFloatingPointPrecision ( (QDataStream::FloatingPointPrecision) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setFloatingPointPrecision|QDataStream::FloatingPointPrecision
 
 /*
 void setStatus ( Status status )
 */
-HB_FUNC_STATIC( QDATASTREAM_SETSTATUS )
-{
-  QDataStream * obj = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setStatus ( (QDataStream::Status) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setStatus|QDataStream::Status
 
 /*
 void setVersion ( int v )
 */
-HB_FUNC_STATIC( QDATASTREAM_SETVERSION )
-{
-  QDataStream * obj = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setVersion ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setVersion|int
 
 /*
 int skipRawData ( int len )
 */
-HB_FUNC_STATIC( QDATASTREAM_SKIPRAWDATA )
-{
-  QDataStream * obj = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->skipRawData ( PINT(1) ) );
-  }
-}
-
+$method=|int|skipRawData|int
 
 /*
 Status status () const
 */
-HB_FUNC_STATIC( QDATASTREAM_STATUS )
-{
-  QDataStream * obj = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->status () );
-  }
-}
-
+$method=|QDataStream::Status|status|
 
 /*
 int version () const
 */
-HB_FUNC_STATIC( QDATASTREAM_VERSION )
-{
-  QDataStream * obj = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->version () );
-  }
-}
-
-
+$method=|int|version|
 
 /*
 int writeRawData ( const char * s, int len )
 */
-HB_FUNC_STATIC( QDATASTREAM_WRITERAWDATA )
-{
-  QDataStream * obj = (QDataStream *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->writeRawData ( (const char *) hb_parc(1), PINT(2) ) );
-  }
-}
+$method=|int|writeRawData|const char *,int
 
 $extraMethods
 

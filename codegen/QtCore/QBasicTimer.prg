@@ -37,11 +37,7 @@ $destructor
 /*
 QBasicTimer ()
 */
-HB_FUNC_STATIC( QBASICTIMER_NEW )
-{
-  QBasicTimer * o = new QBasicTimer ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|
 
 $deleteMethod
 
@@ -53,42 +49,17 @@ $method=|bool|isActive|
 /*
 void start ( int msec, QObject * object )
 */
-HB_FUNC_STATIC( QBASICTIMER_START )
-{
-  QBasicTimer * obj = (QBasicTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->start ( PINT(1), PQOBJECT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|start|int,QObject *
 
 /*
 void stop ()
 */
-HB_FUNC_STATIC( QBASICTIMER_STOP )
-{
-  QBasicTimer * obj = (QBasicTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->stop ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|stop|
 
 /*
 int timerId () const
 */
-HB_FUNC_STATIC( QBASICTIMER_TIMERID )
-{
-  QBasicTimer * obj = (QBasicTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->timerId () );
-  }
-}
+$method=|int|timerId|
 
 $extraMethods
 

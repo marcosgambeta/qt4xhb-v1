@@ -56,145 +56,59 @@ $destructor
 /*
 QMimeData ()
 */
-HB_FUNC_STATIC( QMIMEDATA_NEW )
-{
-  QMimeData * o = new QMimeData ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|
 
 $deleteMethod
 
 /*
 void clear ()
 */
-HB_FUNC_STATIC( QMIMEDATA_CLEAR )
-{
-  QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clear ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|clear|
 
 /*
 QVariant colorData () const
 */
-HB_FUNC_STATIC( QMIMEDATA_COLORDATA )
-{
-  QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->colorData () );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
-
+$method=|QVariant|colorData|
 
 /*
 QByteArray data ( const QString & mimeType ) const
 */
-HB_FUNC_STATIC( QMIMEDATA_DATA )
-{
-  QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->data ( PQSTRING(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray|data|const QString &
 
 /*
 virtual QStringList formats () const
 */
-HB_FUNC_STATIC( QMIMEDATA_FORMATS )
-{
-  QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->formats () );
-  }
-}
-
+$virtualMethod=|QStringList|formats|
 
 /*
 bool hasColor () const
 */
-HB_FUNC_STATIC( QMIMEDATA_HASCOLOR )
-{
-  QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasColor () );
-  }
-}
-
+$method=|bool|hasColor|
 
 /*
 virtual bool hasFormat ( const QString & mimeType ) const
 */
-HB_FUNC_STATIC( QMIMEDATA_HASFORMAT )
-{
-  QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasFormat ( PQSTRING(1) ) );
-  }
-}
-
+$virtualMethod=|bool|hasFormat|const QString &
 
 /*
 bool hasHtml () const
 */
-HB_FUNC_STATIC( QMIMEDATA_HASHTML )
-{
-  QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasHtml () );
-  }
-}
-
+$method=|bool|hasHtml|
 
 /*
 bool hasImage () const
 */
-HB_FUNC_STATIC( QMIMEDATA_HASIMAGE )
-{
-  QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasImage () );
-  }
-}
-
+$method=|bool|hasImage|
 
 /*
 bool hasText () const
 */
-HB_FUNC_STATIC( QMIMEDATA_HASTEXT )
-{
-  QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasText () );
-  }
-}
-
+$method=|bool|hasText|
 
 /*
 bool hasUrls () const
 */
-HB_FUNC_STATIC( QMIMEDATA_HASURLS )
-{
-  QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasUrls () );
-  }
-}
+$method=|bool|hasUrls|
 
 /*
 QString html () const
@@ -204,100 +118,37 @@ $method=|QString|html|
 /*
 QVariant imageData () const
 */
-HB_FUNC_STATIC( QMIMEDATA_IMAGEDATA )
-{
-  QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->imageData () );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
-
+$method=|QVariant|imageData|
 
 /*
 void removeFormat ( const QString & mimeType )
 */
-HB_FUNC_STATIC( QMIMEDATA_REMOVEFORMAT )
-{
-  QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->removeFormat ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|removeFormat|const QString &
 
 /*
 void setColorData ( const QVariant & color )
 */
-HB_FUNC_STATIC( QMIMEDATA_SETCOLORDATA )
-{
-  QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setColorData ( *PQVARIANT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setColorData|const QVariant &
 
 /*
 void setData ( const QString & mimeType, const QByteArray & data )
 */
-HB_FUNC_STATIC( QMIMEDATA_SETDATA )
-{
-  QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setData ( PQSTRING(1), *PQBYTEARRAY(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setData|const QString &,const QByteArray &
 
 /*
 void setHtml ( const QString & html )
 */
-HB_FUNC_STATIC( QMIMEDATA_SETHTML )
-{
-  QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setHtml ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setHtml|const QString &
 
 /*
 void setImageData ( const QVariant & image )
 */
-HB_FUNC_STATIC( QMIMEDATA_SETIMAGEDATA )
-{
-  QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setImageData ( *PQVARIANT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setImageData|const QVariant &
 
 /*
 void setText ( const QString & text )
 */
-HB_FUNC_STATIC( QMIMEDATA_SETTEXT )
-{
-  QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setText ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setText|const QString &
 
 /*
 void setUrls ( const QList<QUrl> & urls )
@@ -371,9 +222,5 @@ HB_FUNC_STATIC( QMIMEDATA_URLS )
     hb_itemReturnRelease(pArray);
   }
 }
-
-
-
-
 
 #pragma ENDDUMP

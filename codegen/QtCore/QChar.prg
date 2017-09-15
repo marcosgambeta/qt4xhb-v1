@@ -74,107 +74,52 @@ $destructor
 /*
 QChar ()
 */
-HB_FUNC_STATIC( QCHAR_NEW1 )
-{
-  QChar * o = new QChar ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new1|
 
 /*
 QChar ( char ch )
 */
-HB_FUNC_STATIC( QCHAR_NEW2 )
-{
-  char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
-  QChar * o = new QChar ( par1 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new2|char
 
 /*
 QChar ( uchar ch )
 */
-HB_FUNC_STATIC( QCHAR_NEW3 )
-{
-  uchar par1 = ISCHAR(1)? (uchar) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
-  QChar * o = new QChar ( par1 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new3|uchar
 
 /*
 QChar ( QLatin1Char ch )
 */
-HB_FUNC_STATIC( QCHAR_NEW4 )
-{
-  QLatin1Char * par1 = (QLatin1Char *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QChar * o = new QChar ( *par1 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new4|QLatin1Char
 
 /*
 QChar ( uchar cell, uchar row )
 */
-HB_FUNC_STATIC( QCHAR_NEW5 )
-{
-  uchar par1 = ISCHAR(1)? (uchar) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
-  uchar par2 = ISCHAR(2)? (uchar) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0);
-  QChar * o = new QChar ( par1, par2 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new5|uchar,uchar
 
 /*
 QChar ( ushort code )
 */
-HB_FUNC_STATIC( QCHAR_NEW6 )
-{
-  QChar * o = new QChar ( PUSHORT(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new6|ushort
 
 /*
 QChar ( short code )
 */
-HB_FUNC_STATIC( QCHAR_NEW7 )
-{
-  QChar * o = new QChar ( PSHORT(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new7|short
 
 /*
 QChar ( uint code )
 */
-HB_FUNC_STATIC( QCHAR_NEW8 )
-{
-  QChar * o = new QChar ( PUINT(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new8|uint
 
 /*
 QChar ( int code )
 */
-HB_FUNC_STATIC( QCHAR_NEW9 )
-{
-  QChar * o = new QChar ( PINT(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new9|int
 
 /*
 QChar ( SpecialCharacter ch )
 */
-HB_FUNC_STATIC( QCHAR_NEW10 )
-{
-  QChar * o = new QChar ( (QChar::SpecialCharacter) hb_parni(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new10|QChar::SpecialCharacter
 
 //[01]QChar ()
 //[02]QChar ( char ch )
@@ -197,367 +142,139 @@ $deleteMethod
 /*
 Category category () const
 */
-HB_FUNC_STATIC( QCHAR_CATEGORY )
-{
-  QChar * obj = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->category () );
-  }
-}
-
-
-
-
+$method=|QChar::Category|category|
 
 /*
 Decomposition decompositionTag () const
 */
-HB_FUNC_STATIC( QCHAR_DECOMPOSITIONTAG )
-{
-  QChar * obj = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->decompositionTag () );
-  }
-}
-
+$method=|QChar::Decomposition|decompositionTag|
 
 /*
 int digitValue () const
 */
-HB_FUNC_STATIC( QCHAR_DIGITVALUE )
-{
-  QChar * obj = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->digitValue () );
-  }
-}
-
+$method=|int|digitValue|
 
 /*
 Direction direction () const
 */
-HB_FUNC_STATIC( QCHAR_DIRECTION )
-{
-  QChar * obj = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->direction () );
-  }
-}
-
+$method=|QChar::Direction|direction|
 
 /*
 bool hasMirrored () const
 */
-HB_FUNC_STATIC( QCHAR_HASMIRRORED )
-{
-  QChar * obj = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasMirrored () );
-  }
-}
-
+$method=|bool|hasMirrored|
 
 /*
 bool isDigit () const
 */
-HB_FUNC_STATIC( QCHAR_ISDIGIT )
-{
-  QChar * obj = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isDigit () );
-  }
-}
-
+$method=|bool|isDigit|
 
 /*
 bool isHighSurrogate () const
 */
-HB_FUNC_STATIC( QCHAR_ISHIGHSURROGATE )
-{
-  QChar * obj = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isHighSurrogate () );
-  }
-}
-
+$method=|bool|isHighSurrogate|
 
 /*
 bool isLetter () const
 */
-HB_FUNC_STATIC( QCHAR_ISLETTER )
-{
-  QChar * obj = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isLetter () );
-  }
-}
-
+$method=|bool|isLetter|
 
 /*
 bool isLetterOrNumber () const
 */
-HB_FUNC_STATIC( QCHAR_ISLETTERORNUMBER )
-{
-  QChar * obj = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isLetterOrNumber () );
-  }
-}
-
+$method=|bool|isLetterOrNumber|
 
 /*
 bool isLowSurrogate () const
 */
-HB_FUNC_STATIC( QCHAR_ISLOWSURROGATE )
-{
-  QChar * obj = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isLowSurrogate () );
-  }
-}
-
+$method=|bool|isLowSurrogate|
 
 /*
 bool isLower () const
 */
-HB_FUNC_STATIC( QCHAR_ISLOWER )
-{
-  QChar * obj = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isLower () );
-  }
-}
-
+$method=|bool|isLower|
 
 /*
 bool isMark () const
 */
-HB_FUNC_STATIC( QCHAR_ISMARK )
-{
-  QChar * obj = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isMark () );
-  }
-}
-
+$method=|bool|isMark|
 
 /*
 bool isNull () const
 */
-HB_FUNC_STATIC( QCHAR_ISNULL )
-{
-  QChar * obj = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
-
+$method=|bool|isNull|
 
 /*
 bool isNumber () const
 */
-HB_FUNC_STATIC( QCHAR_ISNUMBER )
-{
-  QChar * obj = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isNumber () );
-  }
-}
-
+$method=|bool|isNumber|
 
 /*
 bool isPrint () const
 */
-HB_FUNC_STATIC( QCHAR_ISPRINT )
-{
-  QChar * obj = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isPrint () );
-  }
-}
-
+$method=|bool|isPrint|
 
 /*
 bool isPunct () const
 */
-HB_FUNC_STATIC( QCHAR_ISPUNCT )
-{
-  QChar * obj = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isPunct () );
-  }
-}
-
+$method=|bool|isPunct|
 
 /*
 bool isSpace () const
 */
-HB_FUNC_STATIC( QCHAR_ISSPACE )
-{
-  QChar * obj = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isSpace () );
-  }
-}
-
+$method=|bool|isSpace|
 
 /*
 bool isSymbol () const
 */
-HB_FUNC_STATIC( QCHAR_ISSYMBOL )
-{
-  QChar * obj = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isSymbol () );
-  }
-}
-
+$method=|bool|isSymbol|
 
 /*
 bool isTitleCase () const
 */
-HB_FUNC_STATIC( QCHAR_ISTITLECASE )
-{
-  QChar * obj = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isTitleCase () );
-  }
-}
-
+$method=|bool|isTitleCase|
 
 /*
 bool isUpper () const
 */
-HB_FUNC_STATIC( QCHAR_ISUPPER )
-{
-  QChar * obj = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isUpper () );
-  }
-}
-
+$method=|bool|isUpper|
 
 /*
 Joining joining () const
 */
-HB_FUNC_STATIC( QCHAR_JOINING )
-{
-  QChar * obj = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->joining () );
-  }
-}
-
+$method=|QChar::Joining|joining|
 
 /*
 QChar mirroredChar () const
 */
-HB_FUNC_STATIC( QCHAR_MIRROREDCHAR )
-{
-  QChar * obj = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QChar * ptr = new QChar( obj->mirroredChar () );
-    _qt4xhb_createReturnClass ( ptr, "QCHAR" );
-  }
-}
-
-
-
+$method=|QChar|mirroredChar|
 
 /*
 QChar toCaseFolded () const
 */
-HB_FUNC_STATIC( QCHAR_TOCASEFOLDED )
-{
-  QChar * obj = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QChar * ptr = new QChar( obj->toCaseFolded () );
-    _qt4xhb_createReturnClass ( ptr, "QCHAR" );
-  }
-}
-
-
+$method=|QChar|toCaseFolded|
 
 /*
 QChar toLower () const
 */
-HB_FUNC_STATIC( QCHAR_TOLOWER )
-{
-  QChar * obj = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QChar * ptr = new QChar( obj->toLower () );
-    _qt4xhb_createReturnClass ( ptr, "QCHAR" );
-  }
-}
-
+$method=|QChar|toLower|
 
 /*
 QChar toTitleCase () const
 */
-HB_FUNC_STATIC( QCHAR_TOTITLECASE )
-{
-  QChar * obj = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QChar * ptr = new QChar( obj->toTitleCase () );
-    _qt4xhb_createReturnClass ( ptr, "QCHAR" );
-  }
-}
-
+$method=|QChar|toTitleCase|
 
 /*
 QChar toUpper () const
 */
-HB_FUNC_STATIC( QCHAR_TOUPPER )
-{
-  QChar * obj = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QChar * ptr = new QChar( obj->toUpper () );
-    _qt4xhb_createReturnClass ( ptr, "QCHAR" );
-  }
-}
-
-
-
+$method=|QChar|toUpper|
 
 /*
 UnicodeVersion unicodeVersion () const
 */
-HB_FUNC_STATIC( QCHAR_UNICODEVERSION )
-{
-  QChar * obj = (QChar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->unicodeVersion () );
-  }
-}
+$method=|QChar::UnicodeVersion|unicodeVersion|
 
-// TODO: implementar metódos estáticos
+%% TODO: implementar metódos estáticos
 
 $extraMethods
 

@@ -44,43 +44,22 @@ $destructor
 /*
 QDebug ( QIODevice * device )
 */
-HB_FUNC_STATIC( QDEBUG_NEW1 )
-{
-  QDebug * o = new QDebug ( PQIODEVICE(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new1|QIODevice *
 
 /*
 QDebug ( QString * string )
 */
-HB_FUNC_STATIC( QDEBUG_NEW2 )
-{
-  QString * par1 = NULL;
-  QDebug * o = new QDebug ( par1 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new2|QString *
 
 /*
 QDebug ( QtMsgType type )
 */
-HB_FUNC_STATIC( QDEBUG_NEW3 )
-{
-  QDebug * o = new QDebug ( (QtMsgType) hb_parni(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new3|QtMsgType
 
 /*
 QDebug ( const QDebug & other )
 */
-HB_FUNC_STATIC( QDEBUG_NEW4 )
-{
-  QDebug * o = new QDebug ( *PQDEBUG(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new4|const QDebug &
 
 //[1]QDebug ( QIODevice * device )
 //[2]QDebug ( QString * string )
@@ -116,43 +95,17 @@ $deleteMethod
 /*
 QDebug & maybeSpace ()
 */
-HB_FUNC_STATIC( QDEBUG_MAYBESPACE )
-{
-  QDebug * obj = (QDebug *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDebug * ptr = &obj->maybeSpace ();
-    _qt4xhb_createReturnClass ( ptr, "QDEBUG" );
-  }
-}
-
+$method=|QDebug &|maybeSpace|
 
 /*
 QDebug & nospace ()
 */
-HB_FUNC_STATIC( QDEBUG_NOSPACE )
-{
-  QDebug * obj = (QDebug *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDebug * ptr = &obj->nospace ();
-    _qt4xhb_createReturnClass ( ptr, "QDEBUG" );
-  }
-}
-
+$method=|QDebug &|nospace|
 
 /*
 QDebug & space ()
 */
-HB_FUNC_STATIC( QDEBUG_SPACE )
-{
-  QDebug * obj = (QDebug *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDebug * ptr = &obj->space ();
-    _qt4xhb_createReturnClass ( ptr, "QDEBUG" );
-  }
-}
+$method=|QDebug &|space|
 
 $extraMethods
 

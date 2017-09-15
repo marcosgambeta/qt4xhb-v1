@@ -102,34 +102,17 @@ $destructor
 /*
 QDir(const QDir & dir)
 */
-HB_FUNC_STATIC( QDIR_NEW1 )
-{
-  QDir * o = new QDir ( *PQDIR(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|const QDir &
 
 /*
 QDir(const QString & path = QString())
 */
-HB_FUNC_STATIC( QDIR_NEW2 )
-{
-  QDir * o = new QDir ( OPQSTRING(1,QString()) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|const QString &=QString()
 
 /*
 QDir(const QString & path, const QString & nameFilter, SortFlags sort = SortFlags( Name | IgnoreCase ), Filters filters = AllEntries)
 */
-HB_FUNC_STATIC( QDIR_NEW3 )
-{
-  int par3 = ISNIL(3)? (int) QDir::Name | QDir::IgnoreCase : hb_parni(3);
-  int par4 = ISNIL(4)? (int) QDir::AllEntries : hb_parni(4);
-  QDir * o = new QDir ( PQSTRING(1), PQSTRING(2), (QDir::SortFlags) par3, (QDir::Filters) par4 );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new3|const QString &,const QString &,QDir::SortFlags=QDir::SortFlags( QDir::Name OR QDir::IgnoreCase ),QDir::Filters=QDir::AllEntries
 
 //[1]QDir(const QDir & dir)
 //[2]QDir(const QString & path = QString())
@@ -353,14 +336,7 @@ $method=|QString|filePath|const QString &
 /*
 Filters filter() const
 */
-HB_FUNC_STATIC( QDIR_FILTER )
-{
-  QDir * obj = (QDir *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->filter () );
-  }
-}
+$method=|QDir::Filters|filter|
 
 /*
 bool isAbsolute() const

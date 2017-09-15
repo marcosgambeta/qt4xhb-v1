@@ -40,54 +40,24 @@ $destructor
 /*
 QMetaClassInfo()
 */
-HB_FUNC_STATIC( QMETACLASSINFO_NEW )
-{
-  QMetaClassInfo * o = new QMetaClassInfo ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|
 
 $deleteMethod
 
 /*
 const char *name() const
 */
-HB_FUNC_STATIC( QMETACLASSINFO_NAME )
-{
-  QMetaClassInfo * obj = (QMetaClassInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const char * str1 = obj->name ();
-    hb_retc( str1 );
-  }
-}
-
+$method=|const char *|name|
 
 /*
 const char *value() const
 */
-HB_FUNC_STATIC( QMETACLASSINFO_VALUE )
-{
-  QMetaClassInfo * obj = (QMetaClassInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const char * str1 = obj->value ();
-    hb_retc( str1 );
-  }
-}
-
+$method=|const char *|value|
 
 /*
 const QMetaObject *enclosingMetaObject() const
 */
-HB_FUNC_STATIC( QMETACLASSINFO_ENCLOSINGMETAOBJECT )
-{
-  QMetaClassInfo * obj = (QMetaClassInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const QMetaObject * ptr = obj->enclosingMetaObject ();
-    _qt4xhb_createReturnClass ( ptr, "QMETAOBJECT" );
-  }
-}
+$method=|const QMetaObject *|enclosingMetaObject|
 
 $extraMethods
 

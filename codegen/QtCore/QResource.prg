@@ -49,12 +49,7 @@ $destructor
 /*
 QResource ( const QString & file = QString(), const QLocale & locale = QLocale() )
 */
-HB_FUNC_STATIC( QRESOURCE_NEW )
-{
-  QLocale par2 = ISNIL(2)? QLocale() : *(QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QResource * o = new QResource ( OPQSTRING(1,QString()), par2 );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new|const QString &=QString(),const QLocale &=QLocale()
 
 $deleteMethod
 
@@ -66,15 +61,7 @@ $method=|QString|absoluteFilePath|
 /*
 const uchar * data () const
 */
-HB_FUNC_STATIC( QRESOURCE_DATA )
-{
-  QResource * obj = (QResource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const uchar * ptr = obj->data ();
-    _qt4xhb_createReturnClass ( ptr, "UCHAR" );
-  }
-}
+$method=|const uchar *|data|
 
 /*
 QString fileName () const
@@ -84,41 +71,17 @@ $method=|QString|fileName|
 /*
 bool isCompressed () const
 */
-HB_FUNC_STATIC( QRESOURCE_ISCOMPRESSED )
-{
-  QResource * obj = (QResource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isCompressed () );
-  }
-}
-
+$method=|bool|isCompressed|
 
 /*
 bool isValid () const
 */
-HB_FUNC_STATIC( QRESOURCE_ISVALID )
-{
-  QResource * obj = (QResource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
-
+$method=|bool|isValid|
 
 /*
 QLocale locale () const
 */
-HB_FUNC_STATIC( QRESOURCE_LOCALE )
-{
-  QResource * obj = (QResource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QLocale * ptr = new QLocale( obj->locale () );
-    _qt4xhb_createReturnClass ( ptr, "QLOCALE" );
-  }
-}
+$method=|QLocale|locale|
 
 /*
 void setFileName ( const QString & file )
@@ -128,48 +91,22 @@ $method=|void|setFileName|const QString &
 /*
 void setLocale ( const QLocale & locale )
 */
-HB_FUNC_STATIC( QRESOURCE_SETLOCALE )
-{
-  QResource * obj = (QResource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setLocale ( *PQLOCALE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setLocale|const QLocale &
 
 /*
 qint64 size () const
 */
-HB_FUNC_STATIC( QRESOURCE_SIZE )
-{
-  QResource * obj = (QResource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQINT64( obj->size () );
-  }
-}
-
-
+$method=|qint64|size|
 
 /*
-bool registerResource ( const QString & rccFileName, const QString & mapRoot = QString() )
+static bool registerResource ( const QString & rccFileName, const QString & mapRoot = QString() )
 */
-HB_FUNC_STATIC( QRESOURCE_REGISTERRESOURCE )
-{
-  RBOOL( QResource::registerResource ( PQSTRING(1), OPQSTRING(2,QString()) ) );
-}
-
-
+$staticMethod=|bool|registerResource|const QString &,const QString &=QString()
 
 /*
-bool unregisterResource ( const QString & rccFileName, const QString & mapRoot = QString() )
+static bool unregisterResource ( const QString & rccFileName, const QString & mapRoot = QString() )
 */
-HB_FUNC_STATIC( QRESOURCE_UNREGISTERRESOURCE )
-{
-  RBOOL( QResource::unregisterResource ( PQSTRING(1), OPQSTRING(2,QString()) ) );
-}
+$staticMethod=|bool|unregisterResource|const QString &,const QString &=QString()
 
 $extraMethods
 

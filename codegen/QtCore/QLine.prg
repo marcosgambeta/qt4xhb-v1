@@ -60,32 +60,17 @@ $destructor
 /*
 QLine()
 */
-HB_FUNC_STATIC( QLINE_NEW1 )
-{
-  QLine * o = new QLine ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|
 
 /*
 QLine(const QPoint & p1, const QPoint & p2)
 */
-HB_FUNC_STATIC( QLINE_NEW2 )
-{
-  QLine * o = new QLine ( *PQPOINT(1), *PQPOINT(2) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|const QPoint &,const QPoint &
 
 /*
 QLine(int x1, int y1, int x2, int y2)
 */
-HB_FUNC_STATIC( QLINE_NEW3 )
-{
-  QLine * o = new QLine ( PINT(1), PINT(2), PINT(3), PINT(4) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new3|int,int,int,int
 
 //[1]QLine()
 //[2]QLine(const QPoint & p1, const QPoint & p2)
@@ -116,205 +101,77 @@ $deleteMethod
 /*
 QPoint p1() const
 */
-HB_FUNC_STATIC( QLINE_P1 )
-{
-  QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPoint * ptr = new QPoint( obj->p1 () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
-  }
-}
-
+$method=|QPoint|p1|
 
 /*
 QPoint p2() const
 */
-HB_FUNC_STATIC( QLINE_P2 )
-{
-  QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QPoint * ptr = new QPoint( obj->p2 () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
-  }
-}
-
+$method=|QPoint|p2|
 
 /*
 int x1() const
 */
-HB_FUNC_STATIC( QLINE_X1 )
-{
-  QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->x1 () );
-  }
-}
-
+$method=|int|x1|
 
 /*
 int x2() const
 */
-HB_FUNC_STATIC( QLINE_X2 )
-{
-  QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->x2 () );
-  }
-}
-
+$method=|int|x2|
 
 /*
 int y1() const
 */
-HB_FUNC_STATIC( QLINE_Y1 )
-{
-  QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->y1 () );
-  }
-}
-
+$method=|int|y1|
 
 /*
 int y2() const
 */
-HB_FUNC_STATIC( QLINE_Y2 )
-{
-  QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->y2 () );
-  }
-}
-
+$method=|int|y2|
 
 /*
 int dx() const
 */
-HB_FUNC_STATIC( QLINE_DX )
-{
-  QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->dx () );
-  }
-}
-
+$method=|int|dx|
 
 /*
 int dy() const
 */
-HB_FUNC_STATIC( QLINE_DY )
-{
-  QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->dy () );
-  }
-}
-
+$method=|int|dy|
 
 /*
 bool isNull() const
 */
-HB_FUNC_STATIC( QLINE_ISNULL )
-{
-  QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
-
+$method=|bool|isNull|
 
 /*
 void setP1(const QPoint & p1)
 */
-HB_FUNC_STATIC( QLINE_SETP1 )
-{
-  QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setP1 ( *PQPOINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setP1|const QPoint &
 
 /*
 void setP2(const QPoint & p2)
 */
-HB_FUNC_STATIC( QLINE_SETP2 )
-{
-  QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setP2 ( *PQPOINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setP2|const QPoint &
 
 /*
 void setLine(int x1, int y1, int x2, int y2)
 */
-HB_FUNC_STATIC( QLINE_SETLINE )
-{
-  QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setLine ( PINT(1), PINT(2), PINT(3), PINT(4) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setLine|int,int,int,int
 
 /*
 void setPoints(const QPoint & p1, const QPoint & p2)
 */
-HB_FUNC_STATIC( QLINE_SETPOINTS )
-{
-  QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPoints ( *PQPOINT(1), *PQPOINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPoints|const QPoint &,const QPoint &
 
 /*
 void translate(const QPoint & offset)
 */
-HB_FUNC_STATIC( QLINE_TRANSLATE1 )
-{
-  QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->translate ( *PQPOINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|translate,translate1|const QPoint &
 
 /*
 void translate(int dx, int dy)
 */
-HB_FUNC_STATIC( QLINE_TRANSLATE2 )
-{
-  QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->translate ( PINT(1), PINT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|translate,translate2|int,int
 
 //[1]void translate(const QPoint & offset)
 //[2]void translate(int dx, int dy)
@@ -334,30 +191,12 @@ HB_FUNC_STATIC( QLINE_TRANSLATE )
 /*
 QLine translated(const QPoint & offset) const
 */
-HB_FUNC_STATIC( QLINE_TRANSLATED1 )
-{
-  QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QLine * ptr = new QLine( obj->translated ( *PQPOINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QLINE", true );
-  }
-}
-
+$method=|QLine|translated,translated1|const QPoint &
 
 /*
 QLine translated(int dx, int dy) const
 */
-HB_FUNC_STATIC( QLINE_TRANSLATED2 )
-{
-  QLine * obj = (QLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QLine * ptr = new QLine( obj->translated ( PINT(1), PINT(2) ) );
-    _qt4xhb_createReturnClass ( ptr, "QLINE", true );
-  }
-}
-
+$method=|QLine|translated,translated2|int,int
 
 //[1]QLine translated(const QPoint & offset) const
 //[2]QLine translated(int dx, int dy) const

@@ -44,22 +44,12 @@ $destructor
 /*
 QReadWriteLock ()
 */
-HB_FUNC_STATIC( QREADWRITELOCK_NEW1 )
-{
-  QReadWriteLock * o = new QReadWriteLock ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|
 
 /*
 QReadWriteLock ( RecursionMode recursionMode )
 */
-HB_FUNC_STATIC( QREADWRITELOCK_NEW2 )
-{
-  QReadWriteLock * o = new QReadWriteLock ( (QReadWriteLock::RecursionMode) hb_parni(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|QReadWriteLock::RecursionMode
 
 //[1]QReadWriteLock ()
 //[2]QReadWriteLock ( RecursionMode recursionMode )
@@ -85,56 +75,22 @@ $deleteMethod
 /*
 void lockForRead ()
 */
-HB_FUNC_STATIC( QREADWRITELOCK_LOCKFORREAD )
-{
-  QReadWriteLock * obj = (QReadWriteLock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->lockForRead ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|lockForRead|
 
 /*
 void lockForWrite ()
 */
-HB_FUNC_STATIC( QREADWRITELOCK_LOCKFORWRITE )
-{
-  QReadWriteLock * obj = (QReadWriteLock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->lockForWrite ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|lockForWrite|
 
 /*
 bool tryLockForRead ()
 */
-HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORREAD1 )
-{
-  QReadWriteLock * obj = (QReadWriteLock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->tryLockForRead () );
-  }
-}
-
+$method=|bool|tryLockForRead,tryLockForRead1|
 
 /*
 bool tryLockForRead ( int timeout )
 */
-HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORREAD2 )
-{
-  QReadWriteLock * obj = (QReadWriteLock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->tryLockForRead ( PINT(1) ) );
-  }
-}
-
+$method=|bool|tryLockForRead,tryLockForRead2|int
 
 //[1]bool tryLockForRead ()
 //[2]bool tryLockForRead ( int timeout )
@@ -154,28 +110,12 @@ HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORREAD )
 /*
 bool tryLockForWrite ()
 */
-HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORWRITE1 )
-{
-  QReadWriteLock * obj = (QReadWriteLock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->tryLockForWrite () );
-  }
-}
-
+$method=|bool|tryLockForWrite,tryLockForWrite1|
 
 /*
 bool tryLockForWrite ( int timeout )
 */
-HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORWRITE2 )
-{
-  QReadWriteLock * obj = (QReadWriteLock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->tryLockForWrite ( PINT(1) ) );
-  }
-}
-
+$method=|bool|tryLockForWrite,tryLockForWrite2|int
 
 //[1]bool tryLockForWrite ()
 //[2]bool tryLockForWrite ( int timeout )
@@ -195,15 +135,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORWRITE )
 /*
 void unlock ()
 */
-HB_FUNC_STATIC( QREADWRITELOCK_UNLOCK )
-{
-  QReadWriteLock * obj = (QReadWriteLock *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->unlock ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|unlock|
 
 $extraMethods
 

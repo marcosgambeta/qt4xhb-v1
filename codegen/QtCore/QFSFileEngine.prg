@@ -73,22 +73,12 @@ $destructor
 /*
 QFSFileEngine ()
 */
-HB_FUNC_STATIC( QFSFILEENGINE_NEW1 )
-{
-  QFSFileEngine * o = new QFSFileEngine ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new1|
 
 /*
 QFSFileEngine ( const QString & file )
 */
-HB_FUNC_STATIC( QFSFILEENGINE_NEW2 )
-{
-  QFSFileEngine * o = new QFSFileEngine ( PQSTRING(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new2|const QString &
 
 //[1]QFSFileEngine ()
 //[2]QFSFileEngine ( const QString & file )
@@ -114,57 +104,27 @@ $deleteMethod
 /*
 bool open ( QIODevice::OpenMode openMode, FILE * fh )
 */
-HB_FUNC_STATIC( QFSFILEENGINE_OPEN1 )
-{
-  QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    FILE * par2 = (FILE *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->open ( (QIODevice::OpenMode) hb_parni(1), par2 ) );
-  }
-}
-
+$method=|bool|open,open1|QIODevice::OpenMode,FILE *
 
 /*
 bool open ( QIODevice::OpenMode openMode, int fd )
 */
-HB_FUNC_STATIC( QFSFILEENGINE_OPEN2 )
-{
-  QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->open ( (QIODevice::OpenMode) hb_parni(1), PINT(2) ) );
-  }
-}
-
+$method=|bool|open,open2|QIODevice::OpenMode,int
 
 /*
 bool open ( QIODevice::OpenMode openMode, int fd, QFile::FileHandleFlags handleFlags )
 */
-HB_FUNC_STATIC( QFSFILEENGINE_OPEN3 )
-{
-  QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->open ( (QIODevice::OpenMode) hb_parni(1), PINT(2), (QFile::FileHandleFlags) hb_parni(3) ) );
-  }
-}
-
+$method=|bool|open,open3|QIODevice::OpenMode,int,QFile::FileHandleFlags
 
 /*
 bool open ( QIODevice::OpenMode openMode, FILE * fh, QFile::FileHandleFlags handleFlags )
 */
-HB_FUNC_STATIC( QFSFILEENGINE_OPEN4 )
-{
-  QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    FILE * par2 = (FILE *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->open ( (QIODevice::OpenMode) hb_parni(1), par2, (QFile::FileHandleFlags) hb_parni(3) ) );
-  }
-}
+$method=|bool|open,open4|QIODevice::OpenMode,FILE *,QFile::FileHandleFlags
 
-
+/*
+bool open ( QIODevice::OpenMode openMode, const RFile & file, QFile::FileHandleFlags handleFlags )
+*/
+%% TODO: implementar (?)
 
 //[1]bool open ( QIODevice::OpenMode openMode, FILE * fh )
 //[2]bool open ( QIODevice::OpenMode openMode, int fd )
@@ -195,54 +155,22 @@ HB_FUNC_STATIC( QFSFILEENGINE_OPEN )
 /*
 virtual bool caseSensitive () const
 */
-HB_FUNC_STATIC( QFSFILEENGINE_CASESENSITIVE )
-{
-  QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->caseSensitive () );
-  }
-}
-
+$virtualMethod=|bool|caseSensitive|
 
 /*
 virtual bool close ()
 */
-HB_FUNC_STATIC( QFSFILEENGINE_CLOSE )
-{
-  QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->close () );
-  }
-}
-
+$virtualMethod=|bool|close|
 
 /*
 virtual bool copy ( const QString & copyName )
 */
-HB_FUNC_STATIC( QFSFILEENGINE_COPY )
-{
-  QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->copy ( PQSTRING(1) ) );
-  }
-}
-
-
+$virtualMethod=|bool|copy|const QString &
 
 /*
 virtual FileFlags fileFlags ( FileFlags type ) const
 */
-HB_FUNC_STATIC( QFSFILEENGINE_FILEFLAGS )
-{
-  QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->fileFlags ( (QAbstractFileEngine::FileFlags) hb_parni(1) ) );
-  }
-}
+$virtualMethod=|QAbstractFileEngine::FileFlags|fileFlags|QAbstractFileEngine::FileFlags
 
 /*
 virtual QString fileName ( FileName file ) const
@@ -252,93 +180,37 @@ $virtualMethod=|QString|fileName|QAbstractFileEngine::FileName
 /*
 virtual QDateTime fileTime ( FileTime time ) const
 */
-HB_FUNC_STATIC( QFSFILEENGINE_FILETIME )
-{
-  QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDateTime * ptr = new QDateTime( obj->fileTime ( (QAbstractFileEngine::FileTime) hb_parni(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
-  }
-}
-
+$virtualMethod=|QDateTime|fileTime|QAbstractFileEngine::FileTime
 
 /*
 virtual bool flush ()
 */
-HB_FUNC_STATIC( QFSFILEENGINE_FLUSH )
-{
-  QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->flush () );
-  }
-}
-
+$virtualMethod=|bool|flush|
 
 /*
 virtual int handle () const
 */
-HB_FUNC_STATIC( QFSFILEENGINE_HANDLE )
-{
-  QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->handle () );
-  }
-}
-
+$virtualMethod=|int|handle|
 
 /*
 virtual bool isRelativePath () const
 */
-HB_FUNC_STATIC( QFSFILEENGINE_ISRELATIVEPATH )
-{
-  QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isRelativePath () );
-  }
-}
-
+$virtualMethod=|bool|isRelativePath|
 
 /*
 virtual bool isSequential () const
 */
-HB_FUNC_STATIC( QFSFILEENGINE_ISSEQUENTIAL )
-{
-  QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isSequential () );
-  }
-}
-
+$virtualMethod=|bool|isSequential|
 
 /*
 virtual bool link ( const QString & newName )
 */
-HB_FUNC_STATIC( QFSFILEENGINE_LINK )
-{
-  QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->link ( PQSTRING(1) ) );
-  }
-}
-
+$virtualMethod=|bool|link|const QString &
 
 /*
 virtual bool mkdir ( const QString & name, bool createParentDirectories ) const
 */
-HB_FUNC_STATIC( QFSFILEENGINE_MKDIR )
-{
-  QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->mkdir ( PQSTRING(1), PBOOL(2) ) );
-  }
-}
+$virtualMethod=|bool|mkdir|const QString &,bool
 
 /*
 virtual QString owner ( FileOwner own ) const
@@ -348,195 +220,77 @@ $virtualMethod=|QString|owner|QAbstractFileEngine::FileOwner
 /*
 virtual uint ownerId ( FileOwner own ) const
 */
-HB_FUNC_STATIC( QFSFILEENGINE_OWNERID )
-{
-  QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (uint) obj->ownerId ( (QAbstractFileEngine::FileOwner) hb_parni(1) ) );
-  }
-}
-
+$virtualMethod=|uint|ownerId|QAbstractFileEngine::FileOwner
 
 /*
 virtual qint64 pos () const
 */
-HB_FUNC_STATIC( QFSFILEENGINE_POS )
-{
-  QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQINT64( obj->pos () );
-  }
-}
-
+$virtualMethod=|qint64|pos|
 
 /*
 virtual qint64 read ( char * data, qint64 maxlen )
 */
-HB_FUNC_STATIC( QFSFILEENGINE_READ )
-{
-  QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    char * par1 = (char *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RQINT64( obj->read ( par1, PQINT64(2) ) );
-  }
-}
-
+$virtualMethod=|qint64|read|char *,qint64
 
 /*
 virtual qint64 readLine ( char * data, qint64 maxlen )
 */
-HB_FUNC_STATIC( QFSFILEENGINE_READLINE )
-{
-  QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    char * par1 = (char *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RQINT64( obj->readLine ( par1, PQINT64(2) ) );
-  }
-}
-
+$virtualMethod=|qint64|readLine|char *,qint64
 
 /*
 virtual bool remove ()
 */
-HB_FUNC_STATIC( QFSFILEENGINE_REMOVE )
-{
-  QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->remove () );
-  }
-}
-
+$virtualMethod=|bool|remove|
 
 /*
 virtual bool rename ( const QString & newName )
 */
-HB_FUNC_STATIC( QFSFILEENGINE_RENAME )
-{
-  QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->rename ( PQSTRING(1) ) );
-  }
-}
-
+$virtualMethod=|bool|rename|const QString &
 
 /*
 virtual bool rmdir ( const QString & name, bool recurseParentDirectories ) const
 */
-HB_FUNC_STATIC( QFSFILEENGINE_RMDIR )
-{
-  QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->rmdir ( PQSTRING(1), PBOOL(2) ) );
-  }
-}
-
+$virtualMethod=|bool|rmdir|const QString &,bool
 
 /*
 virtual bool seek ( qint64 pos )
 */
-HB_FUNC_STATIC( QFSFILEENGINE_SEEK )
-{
-  QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->seek ( PQINT64(1) ) );
-  }
-}
-
+$virtualMethod=|bool|seek|qint64
 
 /*
 virtual void setFileName ( const QString & file )
 */
-HB_FUNC_STATIC( QFSFILEENGINE_SETFILENAME )
-{
-  QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFileName ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|setFileName|const QString &
 
 /*
 virtual bool setPermissions ( uint perms )
 */
-HB_FUNC_STATIC( QFSFILEENGINE_SETPERMISSIONS )
-{
-  QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->setPermissions ( PUINT(1) ) );
-  }
-}
-
+$virtualMethod=|bool|setPermissions|uint
 
 /*
 virtual bool setSize ( qint64 size )
 */
-HB_FUNC_STATIC( QFSFILEENGINE_SETSIZE )
-{
-  QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->setSize ( PQINT64(1) ) );
-  }
-}
-
+$virtualMethod=|bool|setSize|qint64
 
 /*
 virtual qint64 size () const
 */
-HB_FUNC_STATIC( QFSFILEENGINE_SIZE )
-{
-  QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQINT64( obj->size () );
-  }
-}
-
+$virtualMethod=|qint64|size|
 
 /*
 virtual bool supportsExtension ( Extension extension ) const
 */
-HB_FUNC_STATIC( QFSFILEENGINE_SUPPORTSEXTENSION )
-{
-  QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->supportsExtension ( (QAbstractFileEngine::Extension) hb_parni(1) ) );
-  }
-}
-
+$virtualMethod=|bool|supportsExtension|QAbstractFileEngine::Extension
 
 /*
 virtual qint64 write ( const char * data, qint64 len )
 */
-HB_FUNC_STATIC( QFSFILEENGINE_WRITE )
-{
-  QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQINT64( obj->write ( (const char *) hb_parc(1), PQINT64(2) ) );
-  }
-}
+$virtualMethod=|qint64|write|const char *,qint64
 
 /*
 static QString currentPath ( const QString & fileName = QString() )
 */
-HB_FUNC_STATIC( QFSFILEENGINE_CURRENTPATH )
-{
-  RQSTRING( QFSFileEngine::currentPath ( OPQSTRING(1,QString()) ) );
-}
-
+$staticMethod=|QString|currentPath|const QString &=QString()
 
 /*
 QFileInfoList drives ()
@@ -588,12 +342,9 @@ static QString rootPath ()
 $staticMethod=|QString|rootPath|
 
 /*
-bool setCurrentPath ( const QString & path )
+static bool setCurrentPath ( const QString & path )
 */
-HB_FUNC_STATIC( QFSFILEENGINE_SETCURRENTPATH )
-{
-  RBOOL( QFSFileEngine::setCurrentPath ( PQSTRING(1) ) );
-}
+$staticMethod=|bool|setCurrentPath|const QString &
 
 /*
 static QString tempPath ()

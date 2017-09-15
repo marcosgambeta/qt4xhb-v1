@@ -34,70 +34,28 @@ $destructor
 /*
 QObjectCleanupHandler()
 */
-HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_NEW )
-{
-  QObjectCleanupHandler * o = new QObjectCleanupHandler ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|
 
 $deleteMethod
 
 /*
 QObject* add(QObject* object)
 */
-HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_ADD )
-{
-  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QObject * ptr = obj->add ( PQOBJECT(1) );
-    _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
-
+$method=|QObject *|add|QObject *
 
 /*
 void remove(QObject *object)
 */
-HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_REMOVE )
-{
-  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->remove ( PQOBJECT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|remove|QObject *
 
 /*
 bool isEmpty() const
 */
-HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_ISEMPTY )
-{
-  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isEmpty () );
-  }
-}
-
+$method=|bool|isEmpty|
 
 /*
 void clear()
 */
-HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_CLEAR )
-{
-  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clear ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
-
+$method=|void|clear|
 
 #pragma ENDDUMP
