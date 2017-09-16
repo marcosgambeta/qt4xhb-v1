@@ -63,372 +63,131 @@ $deleteMethod
 /*
 virtual QAction * actionAdjustSize () const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONADJUSTSIZE )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->actionAdjustSize ();
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
-
+$virtualMethod=|QAction *|actionAdjustSize|
 
 /*
 virtual QAction * actionBreakLayout () const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONBREAKLAYOUT )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->actionBreakLayout ();
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
-
+$virtualMethod=|QAction *|actionBreakLayout|
 
 /*
 virtual QAction * actionCopy () const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONCOPY )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->actionCopy ();
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
-
+$virtualMethod=|QAction *|actionCopy|
 
 /*
 virtual QAction * actionCut () const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONCUT )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->actionCut ();
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
-
+$virtualMethod=|QAction *|actionCut|
 
 /*
 virtual QAction * actionDelete () const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONDELETE )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->actionDelete ();
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
-
+$virtualMethod=|QAction *|actionDelete|
 
 /*
 QAction * actionFormLayout () const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONFORMLAYOUT )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->actionFormLayout ();
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
-
+$method=|QAction *|actionFormLayout|
 
 /*
 virtual QAction * actionGridLayout () const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONGRIDLAYOUT )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->actionGridLayout ();
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
-
+$virtualMtehod=|QAction *|actionGridLayout|
 
 /*
 virtual QAction * actionHorizontalLayout () const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONHORIZONTALLAYOUT )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->actionHorizontalLayout ();
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
-
+$virtualMethod=|QAction *|actionHorizontalLayout|
 
 /*
 virtual QAction * actionLower () const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONLOWER )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->actionLower ();
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
-
+$virtualMethod=|QAction *|actionLower|
 
 /*
 virtual QAction * actionPaste () const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONPASTE )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->actionPaste ();
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
-
+$virtualMethod=|QAction *|actionPaste|
 
 /*
 virtual QAction * actionRaise () const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONRAISE )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->actionRaise ();
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
-
+$virtualMethod=|QAction *|actionRaise|
 
 /*
 virtual QAction * actionRedo () const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONREDO )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->actionRedo ();
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
-
+$virtualMethod=|QAction *|actionRedo|
 
 /*
 virtual QAction * actionSelectAll () const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSELECTALL )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->actionSelectAll ();
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
-
+$virtualMethod=|QAction *|actionSelectAll|
 
 /*
 QAction * actionSimplifyLayout () const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSIMPLIFYLAYOUT )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->actionSimplifyLayout ();
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
-
+$method=|QAction *|actionSimplifyLayout|
 
 /*
 virtual QAction * actionSplitHorizontal () const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSPLITHORIZONTAL )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->actionSplitHorizontal ();
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
-
+$virtualMethod=|QAction *|actionSplitHorizontal|
 
 /*
 virtual QAction * actionSplitVertical () const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSPLITVERTICAL )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->actionSplitVertical ();
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
-
+$virtualMethod=|QAction *|actionSplitVertical|
 
 /*
 virtual QAction * actionUndo () const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONUNDO )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->actionUndo ();
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
-
+$virtualMethod=|QAction *|actionUndo|
 
 /*
 virtual QAction * actionVerticalLayout () const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONVERTICALLAYOUT )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QAction * ptr = obj->actionVerticalLayout ();
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
-  }
-}
-
+$virtualMethod=|QAction *|actionVerticalLayout|
 
 /*
 virtual QDesignerFormWindowInterface * activeFormWindow () const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIVEFORMWINDOW )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDesignerFormWindowInterface * ptr = obj->activeFormWindow ();
-    _qt4xhb_createReturnClass ( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
-  }
-}
-
+$virtualMethod=|QDesignerFormWindowInterface *|activeFormWindow|
 
 /*
 virtual QDesignerFormEditorInterface * core () const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_CORE )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDesignerFormEditorInterface * ptr = obj->core ();
-    _qt4xhb_createReturnClass ( ptr, "QDESIGNERFORMEDITORINTERFACE" );
-  }
-}
-
+$virtualMethod=|QDesignerFormEditorInterface *|core|
 
 /*
 virtual QDesignerFormWindowInterface * createFormWindow ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_CREATEFORMWINDOW )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  int par2 = ISNIL(2)? 0 : hb_parni(2);
-  if( obj )
-  {
-    QDesignerFormWindowInterface * ptr = obj->createFormWindow ( OPQWIDGET(1,0), (Qt::WindowFlags) par2 );
-    _qt4xhb_createReturnClass ( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
-  }
-}
-
+$virtualMethod=|QDesignerFormWindowInterface *|createFormWindow|QWidget *=0,Qt::WindowFlags=0
 
 /*
 virtual QDesignerFormWindowInterface * formWindow ( int index ) const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_FORMWINDOW )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDesignerFormWindowInterface * ptr = obj->formWindow ( PINT(1) );
-    _qt4xhb_createReturnClass ( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
-  }
-}
-
+$virtualMethod=|QDesignerFormWindowInterface *|formWindow|int
 
 /*
 virtual int formWindowCount () const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_FORMWINDOWCOUNT )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->formWindowCount () );
-  }
-}
-
+$virtualMethod=|int|formWindowCount|
 
 /*
 virtual void addFormWindow ( QDesignerFormWindowInterface * formWindow )
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ADDFORMWINDOW )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDesignerFormWindowInterface * par1 = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->addFormWindow ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|addFormWindow|QDesignerFormWindowInterface *
 
 /*
 virtual void removeFormWindow ( QDesignerFormWindowInterface * formWindow )
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_REMOVEFORMWINDOW )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDesignerFormWindowInterface * par1 = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->removeFormWindow ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|removeFormWindow|QDesignerFormWindowInterface *
 
 /*
 virtual void setActiveFormWindow ( QDesignerFormWindowInterface * formWindow )
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_SETACTIVEFORMWINDOW )
-{
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDesignerFormWindowInterface * par1 = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setActiveFormWindow ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
-
-
+$virtualMethod=|void|setActiveFormWindow|QDesignerFormWindowInterface *
 
 #pragma ENDDUMP

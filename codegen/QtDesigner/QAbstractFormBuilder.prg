@@ -42,68 +42,29 @@ $destructor
 /*
 QAbstractFormBuilder ()
 */
-HB_FUNC_STATIC( QABSTRACTFORMBUILDER_NEW )
-{
-  QAbstractFormBuilder * o = new QAbstractFormBuilder ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|
 
 $deleteMethod
 
 /*
 virtual QWidget * load ( QIODevice * device, QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QABSTRACTFORMBUILDER_LOAD )
-{
-  QAbstractFormBuilder * obj = (QAbstractFormBuilder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWidget * ptr = obj->load ( PQIODEVICE(1), OPQWIDGET(2,0) );
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
-
+$virtualMethod=|QWidget *|load|QIODevice *,QWidget *=0
 
 /*
 virtual void save ( QIODevice * device, QWidget * widget )
 */
-HB_FUNC_STATIC( QABSTRACTFORMBUILDER_SAVE )
-{
-  QAbstractFormBuilder * obj = (QAbstractFormBuilder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->save ( PQIODEVICE(1), PQWIDGET(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|save|QIODevice *,QWidget *
 
 /*
 void setWorkingDirectory ( const QDir & directory )
 */
-HB_FUNC_STATIC( QABSTRACTFORMBUILDER_SETWORKINGDIRECTORY )
-{
-  QAbstractFormBuilder * obj = (QAbstractFormBuilder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setWorkingDirectory ( *PQDIR(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setWorkingDirectory|const QDir &
 
 /*
 QDir workingDirectory () const
 */
-HB_FUNC_STATIC( QABSTRACTFORMBUILDER_WORKINGDIRECTORY )
-{
-  QAbstractFormBuilder * obj = (QAbstractFormBuilder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDir * ptr = new QDir( obj->workingDirectory () );
-    _qt4xhb_createReturnClass ( ptr, "QDIR", true );
-  }
-}
+$method=|QDir|workingDirectory|
 
 $extraMethods
 

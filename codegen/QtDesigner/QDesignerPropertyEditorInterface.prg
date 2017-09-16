@@ -41,15 +41,7 @@ $deleteMethod
 /*
 virtual QDesignerFormEditorInterface * core () const
 */
-HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_CORE )
-{
-  QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDesignerFormEditorInterface * ptr = obj->core ();
-    _qt4xhb_createReturnClass ( ptr, "QDESIGNERFORMEDITORINTERFACE" );
-  }
-}
+$virtualMethod=|QDesignerFormEditorInterface *|core|
 
 /*
 virtual QString currentPropertyName () const = 0
@@ -59,74 +51,26 @@ $virtualMethod=|QString|currentPropertyName|
 /*
 virtual bool isReadOnly () const = 0
 */
-HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_ISREADONLY )
-{
-  QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isReadOnly () );
-  }
-}
-
+$virtualMethod=|bool|isReadOnly|
 
 /*
 virtual QObject * object () const = 0
 */
-HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_OBJECT )
-{
-  QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QObject * ptr = obj->object ();
-    _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
-
+$virtualMethod=|QObject *|object|
 
 /*
 virtual void setObject ( QObject * object ) = 0
 */
-HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETOBJECT )
-{
-  QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setObject ( PQOBJECT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|setObject|QObject *
 
 /*
 virtual void setPropertyValue ( const QString & name, const QVariant & value, bool changed = true ) = 0
 */
-HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETPROPERTYVALUE )
-{
-  QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPropertyValue ( PQSTRING(1), *PQVARIANT(2), OPBOOL(3,true) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|setPropertyValue|const QString &,const QVariant &,bool=true
 
 /*
 virtual void setReadOnly ( bool readOnly ) = 0
 */
-HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETREADONLY )
-{
-  QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setReadOnly ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
-
-
+$virtualMethod=|void|setReadOnly|bool
 
 #pragma ENDDUMP

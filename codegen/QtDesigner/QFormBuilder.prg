@@ -35,41 +35,19 @@ $destructor
 /*
 QFormBuilder ()
 */
-HB_FUNC_STATIC( QFORMBUILDER_NEW )
-{
-  QFormBuilder * o = new QFormBuilder ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|
 
 $deleteMethod
 
 /*
 void addPluginPath ( const QString & pluginPath )
 */
-HB_FUNC_STATIC( QFORMBUILDER_ADDPLUGINPATH )
-{
-  QFormBuilder * obj = (QFormBuilder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->addPluginPath ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|addPluginPath|const QString &
 
 /*
 void clearPluginPaths ()
 */
-HB_FUNC_STATIC( QFORMBUILDER_CLEARPLUGINPATHS )
-{
-  QFormBuilder * obj = (QFormBuilder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clearPluginPaths ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|clearPluginPaths|
 
 /*
 QList<QDesignerCustomWidgetInterface *> customWidgets () const
@@ -114,35 +92,14 @@ HB_FUNC_STATIC( QFORMBUILDER_CUSTOMWIDGETS )
   }
 }
 
-
 /*
 QStringList pluginPaths () const
 */
-HB_FUNC_STATIC( QFORMBUILDER_PLUGINPATHS )
-{
-  QFormBuilder * obj = (QFormBuilder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->pluginPaths () );
-  }
-}
-
+$method=|QStringList|pluginPaths|
 
 /*
 void setPluginPath ( const QStringList & pluginPaths )
 */
-HB_FUNC_STATIC( QFORMBUILDER_SETPLUGINPATH )
-{
-  QFormBuilder * obj = (QFormBuilder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPluginPath ( PQSTRINGLIST(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
-
+$method=|void|setPluginPath|const QStringList &
 
 #pragma ENDDUMP

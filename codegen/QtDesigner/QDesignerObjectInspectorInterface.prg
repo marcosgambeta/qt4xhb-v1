@@ -33,33 +33,11 @@ $deleteMethod
 /*
 virtual QDesignerFormEditorInterface * core () const
 */
-HB_FUNC_STATIC( QDESIGNEROBJECTINSPECTORINTERFACE_CORE )
-{
-  QDesignerObjectInspectorInterface * obj = (QDesignerObjectInspectorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDesignerFormEditorInterface * ptr = obj->core ();
-    _qt4xhb_createReturnClass ( ptr, "QDESIGNERFORMEDITORINTERFACE" );
-  }
-}
-
+$virtualMethod=|QDesignerFormEditorInterface *|core|
 
 /*
 virtual void setFormWindow ( QDesignerFormWindowInterface * formWindow ) = 0
 */
-HB_FUNC_STATIC( QDESIGNEROBJECTINSPECTORINTERFACE_SETFORMWINDOW )
-{
-  QDesignerObjectInspectorInterface * obj = (QDesignerObjectInspectorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDesignerFormWindowInterface * par1 = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setFormWindow ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
-
+$virtualMethod=|void|setFormWindow|QDesignerFormWindowInterface *
 
 #pragma ENDDUMP

@@ -138,14 +138,7 @@ $virtualMethod=|QString|exportMacro|
 /*
 virtual Feature features () const = 0
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_FEATURES )
-{
-  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->features () );
-  }
-}
+$virtualMethod=|QDesignerFormWindowInterface::Feature|features|
 
 /*
 virtual QString fileName () const = 0

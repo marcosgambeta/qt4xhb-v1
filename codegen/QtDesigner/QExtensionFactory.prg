@@ -33,44 +33,18 @@ $destructor
 /*
 QExtensionFactory ( QExtensionManager * parent = 0 )
 */
-HB_FUNC_STATIC( QEXTENSIONFACTORY_NEW )
-{
-  QExtensionManager * par1 = ISNIL(1)? 0 : (QExtensionManager *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QExtensionFactory * o = new QExtensionFactory ( par1 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QExtensionManager *=0
 
 $deleteMethod
 
 /*
 QExtensionManager * extensionManager () const
 */
-HB_FUNC_STATIC( QEXTENSIONFACTORY_EXTENSIONMANAGER )
-{
-  QExtensionFactory * obj = (QExtensionFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QExtensionManager * ptr = obj->extensionManager ();
-    _qt4xhb_createReturnClass ( ptr, "QEXTENSIONMANAGER" );
-  }
-}
-
+$method=|QExtensionManager *|extensionManager|
 
 /*
 virtual QObject * extension ( QObject * object, const QString & iid ) const
 */
-HB_FUNC_STATIC( QEXTENSIONFACTORY_EXTENSION )
-{
-  QExtensionFactory * obj = (QExtensionFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QObject * ptr = obj->extension ( PQOBJECT(1), PQSTRING(2) );
-    _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
-
-
-
-
+$virtualMethod=|QObject *|extension|QObject *,const QString &
 
 #pragma ENDDUMP

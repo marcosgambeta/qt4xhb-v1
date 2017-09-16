@@ -52,14 +52,7 @@ $deleteMethod
 /*
 virtual int count () const = 0
 */
-HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_COUNT )
-{
-  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->count () );
-  }
-}
+$virtualMethod=|int|count|
 
 /*
 virtual QString declaredInClass ( int index ) const = 0
@@ -69,66 +62,27 @@ $virtualMethod=|QString|declaredInClass|int
 /*
 virtual int indexOf ( const QString & name ) const = 0
 */
-HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_INDEXOF )
-{
-  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->indexOf ( PQSTRING(1) ) );
-  }
-}
-
+$virtualMethod=|int|indexOf|const QString &
 
 /*
 virtual bool inheritedFromWidget ( int index ) const = 0
 */
-HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_INHERITEDFROMWIDGET )
-{
-  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->inheritedFromWidget ( PINT(1) ) );
-  }
-}
-
+$virtualMethod=|bool|inheritedFromWidget|int
 
 /*
 virtual bool isSignal ( int index ) const = 0
 */
-HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_ISSIGNAL )
-{
-  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isSignal ( PINT(1) ) );
-  }
-}
-
+$virtualMethod=|bool|isSignal|int
 
 /*
 virtual bool isSlot ( int index ) const = 0
 */
-HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_ISSLOT )
-{
-  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isSlot ( PINT(1) ) );
-  }
-}
-
+$virtualMethod=|bool|isSlot|int
 
 /*
 virtual bool isVisible ( int index ) const = 0
 */
-HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_ISVISIBLE )
-{
-  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isVisible ( PINT(1) ) );
-  }
-}
+$virtualMethod=|bool|isVisible|int
 
 /*
 virtual QString memberGroup ( int index ) const = 0
@@ -183,7 +137,6 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_PARAMETERNAMES )
   }
 }
 
-
 /*
 virtual QList<QByteArray> parameterTypes ( int index ) const = 0
 */
@@ -227,33 +180,15 @@ HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_PARAMETERTYPES )
   }
 }
 
-
 /*
 virtual void setMemberGroup ( int index, const QString & group ) = 0
 */
-HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_SETMEMBERGROUP )
-{
-  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setMemberGroup ( PINT(1), PQSTRING(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|setMemberGroup|int,const QString &
 
 /*
 virtual void setVisible ( int index, bool visible ) = 0
 */
-HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_SETVISIBLE )
-{
-  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setVisible ( PINT(1), PBOOL(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|setVisible|int,bool
 
 /*
 virtual QString signature ( int index ) const = 0

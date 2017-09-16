@@ -39,15 +39,7 @@ $deleteMethod
 /*
 virtual QObject * extension ( QObject * object, const QString & iid ) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTEXTENSIONFACTORY_EXTENSION )
-{
-  QAbstractExtensionFactory * obj = (QAbstractExtensionFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QObject * ptr = obj->extension ( PQOBJECT(1), PQSTRING(2) );
-    _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
+$virtualMethod=|QObject *|extension|QObject *,const QString &
 
 $extraMethods
 

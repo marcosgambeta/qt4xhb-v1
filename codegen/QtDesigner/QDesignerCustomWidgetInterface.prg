@@ -56,15 +56,7 @@ $virtualMethod=|QString|codeTemplate|
 /*
 virtual QWidget * createWidget ( QWidget * parent ) = 0
 */
-HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_CREATEWIDGET )
-{
-  QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWidget * ptr = obj->createWidget ( PQWIDGET(1) );
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$virtualMethod=|QWidget *|createWidget|QWidget *
 
 /*
 virtual QString domXml () const
@@ -79,15 +71,7 @@ $virtualMethod=|QString|group|
 /*
 virtual QIcon icon () const = 0
 */
-HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_ICON )
-{
-  QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QIcon * ptr = new QIcon( obj->icon () );
-    _qt4xhb_createReturnClass ( ptr, "QICON", true );
-  }
-}
+$virtualMethod=|QIcon|icon|
 
 /*
 virtual QString includeFile () const = 0
@@ -97,42 +81,17 @@ $virtualMethod=|QString|includeFile|
 /*
 virtual void initialize ( QDesignerFormEditorInterface * formEditor )
 */
-HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_INITIALIZE )
-{
-  QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDesignerFormEditorInterface * par1 = (QDesignerFormEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->initialize ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|initialize|QDesignerFormEditorInterface *
 
 /*
 virtual bool isContainer () const = 0
 */
-HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_ISCONTAINER )
-{
-  QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isContainer () );
-  }
-}
-
+$virtualMethod=|bool|isContainer|
 
 /*
 virtual bool isInitialized () const
 */
-HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_ISINITIALIZED )
-{
-  QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isInitialized () );
-  }
-}
+$virtualMethod=|bool|isInitialized|
 
 /*
 virtual QString name () const = 0

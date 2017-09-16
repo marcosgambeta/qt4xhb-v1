@@ -45,97 +45,37 @@ $deleteMethod
 /*
 virtual void addWidget ( QWidget * page ) = 0
 */
-HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_ADDWIDGET )
-{
-  QDesignerContainerExtension * obj = (QDesignerContainerExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->addWidget ( PQWIDGET(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|addWidget|QWidget *
 
 /*
 virtual int count () const = 0
 */
-HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_COUNT )
-{
-  QDesignerContainerExtension * obj = (QDesignerContainerExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( (int) obj->count () );
-  }
-}
-
+$virtualMethod=|int|count|
 
 /*
 virtual int currentIndex () const = 0
 */
-HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_CURRENTINDEX )
-{
-  QDesignerContainerExtension * obj = (QDesignerContainerExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( (int) obj->currentIndex () );
-  }
-}
-
+$virtualMethod=|int|currentIndex|
 
 /*
 virtual void insertWidget ( int index, QWidget * page ) = 0
 */
-HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_INSERTWIDGET )
-{
-  QDesignerContainerExtension * obj = (QDesignerContainerExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->insertWidget ( PINT(1), PQWIDGET(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|insertWidget|int,QWidget *
 
 /*
 virtual void remove ( int index ) = 0
 */
-HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_REMOVE )
-{
-  QDesignerContainerExtension * obj = (QDesignerContainerExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->remove ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|remove|int
 
 /*
 virtual void setCurrentIndex ( int index ) = 0
 */
-HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_SETCURRENTINDEX )
-{
-  QDesignerContainerExtension * obj = (QDesignerContainerExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setCurrentIndex ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|setCurrentIndex|int
 
 /*
 virtual QWidget * widget ( int index ) const = 0
 */
-HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_WIDGET )
-{
-  QDesignerContainerExtension * obj = (QDesignerContainerExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QWidget * ptr = obj->widget ( PINT(1) );
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
-  }
-}
+$virtualMethod=|QWidget *|widget|int
 
 $extraMethods
 

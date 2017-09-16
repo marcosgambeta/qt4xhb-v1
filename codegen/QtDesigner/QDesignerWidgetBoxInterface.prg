@@ -36,44 +36,16 @@ $virtualMethod=|QString|fileName|
 /*
 virtual bool load () = 0
 */
-HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_LOAD )
-{
-  QDesignerWidgetBoxInterface * obj = (QDesignerWidgetBoxInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->load () );
-  }
-}
-
+$virtualMethod=|bool|load|
 
 /*
 virtual bool save () = 0
 */
-HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_SAVE )
-{
-  QDesignerWidgetBoxInterface * obj = (QDesignerWidgetBoxInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->save () );
-  }
-}
-
+$virtualMethod=|bool|save|
 
 /*
 virtual void setFileName ( const QString & fileName ) = 0
 */
-HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_SETFILENAME )
-{
-  QDesignerWidgetBoxInterface * obj = (QDesignerWidgetBoxInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFileName ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
-
+$virtualMethod=|void|setFileName|const QString &
 
 #pragma ENDDUMP
