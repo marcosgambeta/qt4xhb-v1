@@ -145,9 +145,17 @@ virtual QString author () const = 0
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_AUTHOR )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->author () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->author () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -157,9 +165,17 @@ virtual QString comment () const = 0
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_COMMENT )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->comment () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->comment () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -169,9 +185,17 @@ virtual QString contents () const = 0
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_CONTENTS )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->contents () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->contents () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -220,9 +244,17 @@ virtual QString exportMacro () const = 0
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_EXPORTMACRO )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->exportMacro () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->exportMacro () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -244,9 +276,17 @@ virtual QString fileName () const = 0
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_FILENAME )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->fileName () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->fileName () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -347,9 +387,17 @@ virtual QString pixmapFunction () const = 0
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_PIXMAPFUNCTION )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->pixmapFunction () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->pixmapFunction () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
