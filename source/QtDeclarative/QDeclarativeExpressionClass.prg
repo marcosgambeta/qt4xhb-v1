@@ -184,9 +184,17 @@ QString expression () const
 HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_EXPRESSION )
 {
   QDeclarativeExpression * obj = (QDeclarativeExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->expression () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->expression () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -284,9 +292,17 @@ QString sourceFile () const
 HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SOURCEFILE )
 {
   QDeclarativeExpression * obj = (QDeclarativeExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->sourceFile () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->sourceFile () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
