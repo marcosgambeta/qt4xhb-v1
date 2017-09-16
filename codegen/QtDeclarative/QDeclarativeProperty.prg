@@ -42,14 +42,14 @@ CLASS QDeclarativeProperty
    METHOD propertyType
    METHOD propertyTypeCategory
    METHOD propertyTypeName
-   METHOD read1
    METHOD reset
    METHOD type
-   METHOD write1
+   METHOD read1
    METHOD read2
    METHOD read3
    METHOD read4
    METHOD read
+   METHOD write1
    METHOD write2
    METHOD write3
    METHOD write4
@@ -274,11 +274,6 @@ const char * propertyTypeName () const
 $method=|const char *|propertyTypeName|
 
 /*
-QVariant read () const
-*/
-$method=|QVariant|read|
-
-/*
 bool reset () const
 */
 $method=|bool|reset|
@@ -289,9 +284,9 @@ Type type () const
 $method=|QDeclarativeProperty::Type|type|
 
 /*
-bool write ( const QVariant & value ) const
+QVariant read () const
 */
-$method=|bool|write,write1|const QVariant &
+$method=|QVariant|read,read1|
 
 /*
 static QVariant read ( QObject * object, const QString & name )
@@ -336,6 +331,11 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_READ )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+
+/*
+bool write ( const QVariant & value ) const
+*/
+$method=|bool|write,write1|const QVariant &
 
 /*
 static bool write ( QObject * object, const QString & name, const QVariant & value )

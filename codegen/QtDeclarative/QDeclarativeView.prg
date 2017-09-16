@@ -48,6 +48,9 @@ $destructor
 #include "qt4xhb_utils.h"
 
 #include <QDeclarativeError>
+#include <QDeclarativeEngine>
+#include <QDeclarativeContext>
+#include <QGraphicsObject>
 
 /*
 QDeclarativeView ( QWidget * parent = 0 )

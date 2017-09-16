@@ -34,6 +34,8 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
+#include <QNetworkAccessManager>
+
 $deleteMethod
 
 /*

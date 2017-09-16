@@ -60,6 +60,8 @@ $destructor
 #include "qt4xhb_utils.h"
 
 #include <QStringList>
+#include <QNetworkAccessManager>
+#include <QDeclarativeContext>
 
 /*
 QDeclarativeEngine ( QObject * parent = 0 )
