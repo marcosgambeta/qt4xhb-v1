@@ -20,6 +20,7 @@ CLASS QDesignerActionEditorInterface INHERIT QWidget
    METHOD core
    METHOD manageAction
    METHOD setFormWindow
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -37,6 +38,8 @@ RETURN
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
+
+#include <QDesignerFormEditorInterface>
 
 HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_DELETE )
 {
@@ -61,10 +64,18 @@ virtual QDesignerFormEditorInterface * core () const
 HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_CORE )
 {
   QDesignerActionEditorInterface * obj = (QDesignerActionEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QDesignerFormEditorInterface * ptr = obj->core ();
-    _qt4xhb_createReturnClass ( ptr, "QDESIGNERFORMEDITORINTERFACE" );
+    if( ISNUMPAR(0) )
+    {
+      QDesignerFormEditorInterface * ptr = obj->core ();
+      _qt4xhb_createReturnQObjectClass ( ptr, "QDESIGNERFORMEDITORINTERFACE" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -74,10 +85,19 @@ virtual void manageAction ( QAction * action ) = 0
 HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_MANAGEACTION )
 {
   QDesignerActionEditorInterface * obj = (QDesignerActionEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->manageAction ( PQACTION(1) );
+    if( ISNUMPAR(1) && ISQACTION(1) )
+    {
+      obj->manageAction ( PQACTION(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -87,11 +107,19 @@ virtual void setFormWindow ( QDesignerFormWindowInterface * formWindow ) = 0
 HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_SETFORMWINDOW )
 {
   QDesignerActionEditorInterface * obj = (QDesignerActionEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QDesignerFormWindowInterface * par1 = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setFormWindow ( par1 );
+    if( ISNUMPAR(1) && ISQDESIGNERFORMWINDOWINTERFACE(1) )
+    {
+      obj->setFormWindow ( PQDESIGNERFORMWINDOWINTERFACE(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

@@ -20,11 +20,13 @@ CLASS QDesignerTaskMenuExtension
    METHOD delete
    METHOD preferredEditAction
    METHOD taskActions
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -42,6 +44,8 @@ RETURN
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
+
+#include <QAction>
 
 HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_DELETE )
 {
@@ -66,10 +70,18 @@ virtual QAction * preferredEditAction () const
 HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_PREFERREDEDITACTION )
 {
   QDesignerTaskMenuExtension * obj = (QDesignerTaskMenuExtension *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QAction * ptr = obj->preferredEditAction ();
-    _qt4xhb_createReturnClass ( ptr, "QACTION" );
+    if( ISNUMPAR(0) )
+    {
+      QAction * ptr = obj->preferredEditAction ();
+      _qt4xhb_createReturnQObjectClass ( ptr, "QACTION" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

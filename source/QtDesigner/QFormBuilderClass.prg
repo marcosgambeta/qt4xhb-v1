@@ -23,6 +23,7 @@ CLASS QFormBuilder INHERIT QAbstractFormBuilder
    METHOD customWidgets
    METHOD pluginPaths
    METHOD setPluginPath
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -46,8 +47,15 @@ QFormBuilder ()
 */
 HB_FUNC_STATIC( QFORMBUILDER_NEW )
 {
-  QFormBuilder * o = new QFormBuilder ();
-  _qt4xhb_storePointerAndFlag ( o, false );
+  if( ISNUMPAR(0) )
+  {
+    QFormBuilder * o = new QFormBuilder ();
+    _qt4xhb_storePointerAndFlag( o, true );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QFORMBUILDER_DELETE )
@@ -73,10 +81,19 @@ void addPluginPath ( const QString & pluginPath )
 HB_FUNC_STATIC( QFORMBUILDER_ADDPLUGINPATH )
 {
   QFormBuilder * obj = (QFormBuilder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->addPluginPath ( PQSTRING(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      obj->addPluginPath ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -86,10 +103,19 @@ void clearPluginPaths ()
 HB_FUNC_STATIC( QFORMBUILDER_CLEARPLUGINPATHS )
 {
   QFormBuilder * obj = (QFormBuilder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->clearPluginPaths ();
+    if( ISNUMPAR(0) )
+    {
+      obj->clearPluginPaths ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -142,9 +168,17 @@ QStringList pluginPaths () const
 HB_FUNC_STATIC( QFORMBUILDER_PLUGINPATHS )
 {
   QFormBuilder * obj = (QFormBuilder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRINGLIST( obj->pluginPaths () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRINGLIST( obj->pluginPaths () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -154,10 +188,19 @@ void setPluginPath ( const QStringList & pluginPaths )
 HB_FUNC_STATIC( QFORMBUILDER_SETPLUGINPATH )
 {
   QFormBuilder * obj = (QFormBuilder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setPluginPath ( PQSTRINGLIST(1) );
+    if( ISNUMPAR(1) && ISARRAY(1) )
+    {
+      obj->setPluginPath ( PQSTRINGLIST(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

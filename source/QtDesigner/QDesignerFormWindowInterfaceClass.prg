@@ -45,7 +45,6 @@ CLASS QDesignerFormWindowInterface INHERIT QWidget
    METHOD resourceFiles
    METHOD setAuthor
    METHOD setComment
-   METHOD setContents1
    METHOD setExportMacro
    METHOD setIncludeHints
    METHOD setLayoutDefault
@@ -55,6 +54,7 @@ CLASS QDesignerFormWindowInterface INHERIT QWidget
    METHOD clearSelection
    METHOD manageWidget
    METHOD selectWidget
+   METHOD setContents1
    METHOD setContents2
    METHOD setContents
    METHOD setDirty
@@ -65,6 +65,7 @@ CLASS QDesignerFormWindowInterface INHERIT QWidget
    METHOD findFormWindow1
    METHOD findFormWindow2
    METHOD findFormWindow
+
    METHOD onSelectionChanged
    METHOD onActivated
    METHOD onChanged
@@ -76,6 +77,7 @@ CLASS QDesignerFormWindowInterface INHERIT QWidget
    METHOD onWidgetManaged
    METHOD onWidgetRemoved
    METHOD onWidgetUnmanaged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -95,6 +97,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 #include <QDir>
+#include <QDesignerFormEditorInterface>
 
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_DELETE )
 {
@@ -119,10 +122,18 @@ virtual QDir absoluteDir () const = 0
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_ABSOLUTEDIR )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QDir * ptr = new QDir( obj->absoluteDir () );
-    _qt4xhb_createReturnClass ( ptr, "QDIR", true );
+    if( ISNUMPAR(0) )
+    {
+      QDir * ptr = new QDir( obj->absoluteDir () );
+      _qt4xhb_createReturnClass ( ptr, "QDIR", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -132,10 +143,19 @@ virtual void addResourceFile ( const QString & path ) = 0
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_ADDRESOURCEFILE )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->addResourceFile ( PQSTRING(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      obj->addResourceFile ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -205,10 +225,18 @@ virtual QDesignerFormEditorInterface * core () const
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_CORE )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QDesignerFormEditorInterface * ptr = obj->core ();
-    _qt4xhb_createReturnClass ( ptr, "QDESIGNERFORMEDITORINTERFACE" );
+    if( ISNUMPAR(0) )
+    {
+      QDesignerFormEditorInterface * ptr = obj->core ();
+      _qt4xhb_createReturnQObjectClass ( ptr, "QDESIGNERFORMEDITORINTERFACE" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -218,10 +246,18 @@ virtual QDesignerFormWindowCursorInterface * cursor () const = 0
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_CURSOR )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QDesignerFormWindowCursorInterface * ptr = obj->cursor ();
-    _qt4xhb_createReturnClass ( ptr, "QDESIGNERFORMWINDOWCURSORINTERFACE" );
+    if( ISNUMPAR(0) )
+    {
+      QDesignerFormWindowCursorInterface * ptr = obj->cursor ();
+      _qt4xhb_createReturnClass ( ptr, "QDESIGNERFORMWINDOWCURSORINTERFACE", false );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -231,10 +267,19 @@ virtual void emitSelectionChanged () = 0
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_EMITSELECTIONCHANGED )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->emitSelectionChanged ();
+    if( ISNUMPAR(0) )
+    {
+      obj->emitSelectionChanged ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -264,9 +309,17 @@ virtual Feature features () const = 0
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_FEATURES )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    hb_retni( (int) obj->features () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->features () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -296,10 +349,18 @@ virtual QPoint grid () const = 0
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_GRID )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QPoint * ptr = new QPoint( obj->grid () );
-    _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+    if( ISNUMPAR(0) )
+    {
+      QPoint * ptr = new QPoint( obj->grid () );
+      _qt4xhb_createReturnClass ( ptr, "QPOINT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -309,9 +370,17 @@ virtual bool hasFeature ( Feature feature ) const = 0
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_HASFEATURE )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->hasFeature ( (QDesignerFormWindowInterface::Feature) hb_parni(1) ) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      RBOOL( obj->hasFeature ( (QDesignerFormWindowInterface::Feature) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -321,9 +390,17 @@ virtual QStringList includeHints () const = 0
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_INCLUDEHINTS )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRINGLIST( obj->includeHints () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRINGLIST( obj->includeHints () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -333,9 +410,17 @@ virtual bool isDirty () const = 0
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_ISDIRTY )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isDirty () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isDirty () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -345,9 +430,17 @@ virtual bool isManaged ( QWidget * widget ) const = 0
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_ISMANAGED )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isManaged ( PQWIDGET(1) ) );
+    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    {
+      RBOOL( obj->isManaged ( PQWIDGET(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -357,14 +450,23 @@ virtual void layoutDefault ( int * margin, int * spacing ) = 0
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_LAYOUTDEFAULT )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    int par1;
-    int par2;
-    obj->layoutDefault ( &par1, &par2 );
-    hb_storni( par1, 1 );
-    hb_storni( par2, 2 );
+    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    {
+      int par1;
+int par2;
+      obj->layoutDefault ( &par1, &par2 );
+      hb_storni( par1, 1 );
+hb_storni( par2, 2 );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -374,10 +476,18 @@ virtual QWidget * mainContainer () const = 0
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_MAINCONTAINER )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QWidget * ptr = obj->mainContainer ();
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+    if( ISNUMPAR(0) )
+    {
+      QWidget * ptr = obj->mainContainer ();
+      _qt4xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -407,10 +517,19 @@ virtual void removeResourceFile ( const QString & path ) = 0
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_REMOVERESOURCEFILE )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->removeResourceFile ( PQSTRING(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      obj->removeResourceFile ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -420,9 +539,17 @@ virtual QStringList resourceFiles () const = 0
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_RESOURCEFILES )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRINGLIST( obj->resourceFiles () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRINGLIST( obj->resourceFiles () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -432,10 +559,19 @@ virtual void setAuthor ( const QString & author ) = 0
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETAUTHOR )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setAuthor ( PQSTRING(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      obj->setAuthor ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -445,23 +581,19 @@ virtual void setComment ( const QString & comment ) = 0
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETCOMMENT )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setComment ( PQSTRING(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
 
-/*
-virtual void setContents ( QIODevice * device ) = 0
-*/
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETCONTENTS1 )
-{
-  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-    obj->setContents ( PQIODEVICE(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      obj->setComment ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -471,10 +603,19 @@ virtual void setExportMacro ( const QString & exportMacro ) = 0
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETEXPORTMACRO )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setExportMacro ( PQSTRING(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      obj->setExportMacro ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -484,10 +625,19 @@ virtual void setIncludeHints ( const QStringList & includeHints ) = 0
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETINCLUDEHINTS )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setIncludeHints ( PQSTRINGLIST(1) );
+    if( ISNUMPAR(1) && ISARRAY(1) )
+    {
+      obj->setIncludeHints ( PQSTRINGLIST(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -497,10 +647,19 @@ virtual void setLayoutDefault ( int margin, int spacing ) = 0
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETLAYOUTDEFAULT )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setLayoutDefault ( PINT(1), PINT(2) );
+    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    {
+      obj->setLayoutDefault ( PINT(1), PINT(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -510,10 +669,19 @@ virtual void setLayoutFunction ( const QString & margin, const QString & spacing
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETLAYOUTFUNCTION )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setLayoutFunction ( PQSTRING(1), PQSTRING(2) );
+    if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+    {
+      obj->setLayoutFunction ( PQSTRING(1), PQSTRING(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -523,10 +691,19 @@ virtual void setMainContainer ( QWidget * mainContainer ) = 0
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETMAINCONTAINER )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setMainContainer ( PQWIDGET(1) );
+    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    {
+      obj->setMainContainer ( PQWIDGET(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -536,10 +713,19 @@ virtual void setPixmapFunction ( const QString & pixmapFunction ) = 0
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETPIXMAPFUNCTION )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setPixmapFunction ( PQSTRING(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      obj->setPixmapFunction ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -549,10 +735,19 @@ virtual void clearSelection ( bool update = true ) = 0
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_CLEARSELECTION )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->clearSelection ( OPBOOL(1,true) );
+    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    {
+      obj->clearSelection ( OPBOOL(1,true) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -562,10 +757,19 @@ virtual void manageWidget ( QWidget * widget ) = 0
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_MANAGEWIDGET )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->manageWidget ( PQWIDGET(1) );
+    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    {
+      obj->manageWidget ( PQWIDGET(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -575,10 +779,41 @@ virtual void selectWidget ( QWidget * widget, bool select = true ) = 0
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SELECTWIDGET )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->selectWidget ( PQWIDGET(1), OPBOOL(2,true) );
+    if( ISBETWEEN(1,2) && ISQWIDGET(1) && ISOPTLOG(2) )
+    {
+      obj->selectWidget ( PQWIDGET(1), OPBOOL(2,true) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+virtual void setContents ( QIODevice * device ) = 0
+*/
+HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETCONTENTS1 )
+{
+  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISQIODEVICE(1) )
+    {
+      obj->setContents ( PQIODEVICE(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -588,10 +823,19 @@ virtual void setContents ( const QString & contents ) = 0
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETCONTENTS2 )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setContents ( PQSTRING(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      obj->setContents ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -608,6 +852,10 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETCONTENTS )
   {
     HB_FUNC_EXEC( QDESIGNERFORMWINDOWINTERFACE_SETCONTENTS2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -616,10 +864,19 @@ virtual void setDirty ( bool dirty ) = 0
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETDIRTY )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setDirty ( PBOOL(1) );
+    if( ISNUMPAR(1) && ISLOG(1) )
+    {
+      obj->setDirty ( PBOOL(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -629,10 +886,19 @@ virtual void setFeatures ( Feature features ) = 0
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETFEATURES )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setFeatures ( (QDesignerFormWindowInterface::Feature) hb_parni(1) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      obj->setFeatures ( (QDesignerFormWindowInterface::Feature) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -642,10 +908,19 @@ virtual void setFileName ( const QString & fileName ) = 0
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETFILENAME )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setFileName ( PQSTRING(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      obj->setFileName ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -655,10 +930,19 @@ virtual void setGrid ( const QPoint & grid ) = 0
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETGRID )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setGrid ( *PQPOINT(1) );
+    if( ISNUMPAR(1) && ISQPOINT(1) )
+    {
+      obj->setGrid ( *PQPOINT(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -668,29 +952,52 @@ virtual void unmanageWidget ( QWidget * widget ) = 0
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_UNMANAGEWIDGET )
 {
   QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->unmanageWidget ( PQWIDGET(1) );
+    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    {
+      obj->unmanageWidget ( PQWIDGET(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
-QDesignerFormWindowInterface * findFormWindow ( QWidget * widget )
+static QDesignerFormWindowInterface * findFormWindow ( QWidget * widget )
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_FINDFORMWINDOW1 )
 {
-  QDesignerFormWindowInterface * ptr = QDesignerFormWindowInterface::findFormWindow ( PQWIDGET(1) );
-  _qt4xhb_createReturnClass ( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
+    if( ISNUMPAR(1) && ISQWIDGET(1) )
+  {
+      QDesignerFormWindowInterface * ptr = QDesignerFormWindowInterface::findFormWindow ( PQWIDGET(1) );
+      _qt4xhb_createReturnQObjectClass ( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
-QDesignerFormWindowInterface * findFormWindow ( QObject * object )
+static QDesignerFormWindowInterface * findFormWindow ( QObject * object )
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_FINDFORMWINDOW2 )
 {
-  QDesignerFormWindowInterface * ptr = QDesignerFormWindowInterface::findFormWindow ( PQOBJECT(1) );
-  _qt4xhb_createReturnClass ( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
+    if( ISNUMPAR(1) && ISQOBJECT(1) )
+  {
+      QDesignerFormWindowInterface * ptr = QDesignerFormWindowInterface::findFormWindow ( PQOBJECT(1) );
+      _qt4xhb_createReturnQObjectClass ( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 //[1]QDesignerFormWindowInterface * findFormWindow ( QWidget * widget )
@@ -705,6 +1012,10 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_FINDFORMWINDOW )
   else if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
     HB_FUNC_EXEC( QDESIGNERFORMWINDOWINTERFACE_FINDFORMWINDOW2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 

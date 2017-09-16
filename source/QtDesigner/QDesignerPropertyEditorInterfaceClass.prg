@@ -25,7 +25,9 @@ CLASS QDesignerPropertyEditorInterface INHERIT QWidget
    METHOD setObject
    METHOD setPropertyValue
    METHOD setReadOnly
+
    METHOD onPropertyChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -43,6 +45,8 @@ RETURN
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
+
+#include <QDesignerFormEditorInterface>
 
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_DELETE )
 {
@@ -67,10 +71,18 @@ virtual QDesignerFormEditorInterface * core () const
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_CORE )
 {
   QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QDesignerFormEditorInterface * ptr = obj->core ();
-    _qt4xhb_createReturnClass ( ptr, "QDESIGNERFORMEDITORINTERFACE" );
+    if( ISNUMPAR(0) )
+    {
+      QDesignerFormEditorInterface * ptr = obj->core ();
+      _qt4xhb_createReturnQObjectClass ( ptr, "QDESIGNERFORMEDITORINTERFACE" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -100,9 +112,17 @@ virtual bool isReadOnly () const = 0
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_ISREADONLY )
 {
   QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isReadOnly () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isReadOnly () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -112,10 +132,18 @@ virtual QObject * object () const = 0
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_OBJECT )
 {
   QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QObject * ptr = obj->object ();
-    _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+    if( ISNUMPAR(0) )
+    {
+      QObject * ptr = obj->object ();
+      _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -125,10 +153,19 @@ virtual void setObject ( QObject * object ) = 0
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETOBJECT )
 {
   QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setObject ( PQOBJECT(1) );
+    if( ISNUMPAR(1) && ISQOBJECT(1) )
+    {
+      obj->setObject ( PQOBJECT(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -138,10 +175,19 @@ virtual void setPropertyValue ( const QString & name, const QVariant & value, bo
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETPROPERTYVALUE )
 {
   QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setPropertyValue ( PQSTRING(1), *PQVARIANT(2), OPBOOL(3,true) );
+    if( ISBETWEEN(2,3) && ISCHAR(1) && ISQVARIANT(2) && ISOPTLOG(3) )
+    {
+      obj->setPropertyValue ( PQSTRING(1), *PQVARIANT(2), OPBOOL(3,true) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -151,10 +197,19 @@ virtual void setReadOnly ( bool readOnly ) = 0
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETREADONLY )
 {
   QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setReadOnly ( PBOOL(1) );
+    if( ISNUMPAR(1) && ISLOG(1) )
+    {
+      obj->setReadOnly ( PBOOL(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

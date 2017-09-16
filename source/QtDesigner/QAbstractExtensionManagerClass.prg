@@ -21,11 +21,13 @@ CLASS QAbstractExtensionManager
    METHOD extension
    METHOD registerExtensions
    METHOD unregisterExtensions
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -67,10 +69,18 @@ virtual QObject * extension ( QObject * object, const QString & iid ) const = 0
 HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_EXTENSION )
 {
   QAbstractExtensionManager * obj = (QAbstractExtensionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QObject * ptr = obj->extension ( PQOBJECT(1), PQSTRING(2) );
-    _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+    if( ISNUMPAR(2) && ISQOBJECT(1) && ISCHAR(2) )
+    {
+      QObject * ptr = obj->extension ( PQOBJECT(1), PQSTRING(2) );
+      _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -80,11 +90,19 @@ virtual void registerExtensions ( QAbstractExtensionFactory * factory, const QSt
 HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_REGISTEREXTENSIONS )
 {
   QAbstractExtensionManager * obj = (QAbstractExtensionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QAbstractExtensionFactory * par1 = (QAbstractExtensionFactory *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->registerExtensions ( par1, PQSTRING(2) );
+    if( ISNUMPAR(2) && ISQABSTRACTEXTENSIONFACTORY(1) && ISCHAR(2) )
+    {
+      obj->registerExtensions ( PQABSTRACTEXTENSIONFACTORY(1), PQSTRING(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -94,11 +112,19 @@ virtual void unregisterExtensions ( QAbstractExtensionFactory * factory, const Q
 HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_UNREGISTEREXTENSIONS )
 {
   QAbstractExtensionManager * obj = (QAbstractExtensionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QAbstractExtensionFactory * par1 = (QAbstractExtensionFactory *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->unregisterExtensions ( par1, PQSTRING(2) );
+    if( ISNUMPAR(2) && ISQABSTRACTEXTENSIONFACTORY(1) && ISCHAR(2) )
+    {
+      obj->unregisterExtensions ( PQABSTRACTEXTENSIONFACTORY(1), PQSTRING(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

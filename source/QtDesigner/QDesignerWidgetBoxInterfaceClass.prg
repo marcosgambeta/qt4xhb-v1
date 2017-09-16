@@ -17,6 +17,7 @@ CLASS QDesignerWidgetBoxInterface INHERIT QWidget
    METHOD load
    METHOD save
    METHOD setFileName
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -78,9 +79,17 @@ virtual bool load () = 0
 HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_LOAD )
 {
   QDesignerWidgetBoxInterface * obj = (QDesignerWidgetBoxInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->load () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->load () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -90,9 +99,17 @@ virtual bool save () = 0
 HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_SAVE )
 {
   QDesignerWidgetBoxInterface * obj = (QDesignerWidgetBoxInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->save () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->save () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -102,10 +119,19 @@ virtual void setFileName ( const QString & fileName ) = 0
 HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_SETFILENAME )
 {
   QDesignerWidgetBoxInterface * obj = (QDesignerWidgetBoxInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setFileName ( PQSTRING(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      obj->setFileName ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

@@ -24,11 +24,13 @@ CLASS QAbstractFormBuilder
    METHOD save
    METHOD setWorkingDirectory
    METHOD workingDirectory
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -52,8 +54,15 @@ QAbstractFormBuilder ()
 */
 HB_FUNC_STATIC( QABSTRACTFORMBUILDER_NEW )
 {
-  QAbstractFormBuilder * o = new QAbstractFormBuilder ();
-  _qt4xhb_storePointerAndFlag ( o, false );
+  if( ISNUMPAR(0) )
+  {
+    QAbstractFormBuilder * o = new QAbstractFormBuilder ();
+    _qt4xhb_storePointerAndFlag( o, true );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QABSTRACTFORMBUILDER_DELETE )
@@ -79,10 +88,18 @@ virtual QWidget * load ( QIODevice * device, QWidget * parent = 0 )
 HB_FUNC_STATIC( QABSTRACTFORMBUILDER_LOAD )
 {
   QAbstractFormBuilder * obj = (QAbstractFormBuilder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QWidget * ptr = obj->load ( PQIODEVICE(1), OPQWIDGET(2,0) );
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+    if( ISBETWEEN(1,2) && ISQIODEVICE(1) && (ISQWIDGET(2)||ISNIL(2)) )
+    {
+      QWidget * ptr = obj->load ( PQIODEVICE(1), OPQWIDGET(2,0) );
+      _qt4xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -92,10 +109,19 @@ virtual void save ( QIODevice * device, QWidget * widget )
 HB_FUNC_STATIC( QABSTRACTFORMBUILDER_SAVE )
 {
   QAbstractFormBuilder * obj = (QAbstractFormBuilder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->save ( PQIODEVICE(1), PQWIDGET(2) );
+    if( ISNUMPAR(2) && ISQIODEVICE(1) && ISQWIDGET(2) )
+    {
+      obj->save ( PQIODEVICE(1), PQWIDGET(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -105,10 +131,19 @@ void setWorkingDirectory ( const QDir & directory )
 HB_FUNC_STATIC( QABSTRACTFORMBUILDER_SETWORKINGDIRECTORY )
 {
   QAbstractFormBuilder * obj = (QAbstractFormBuilder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setWorkingDirectory ( *PQDIR(1) );
+    if( ISNUMPAR(1) && ISQDIR(1) )
+    {
+      obj->setWorkingDirectory ( *PQDIR(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -118,10 +153,18 @@ QDir workingDirectory () const
 HB_FUNC_STATIC( QABSTRACTFORMBUILDER_WORKINGDIRECTORY )
 {
   QAbstractFormBuilder * obj = (QAbstractFormBuilder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QDir * ptr = new QDir( obj->workingDirectory () );
-    _qt4xhb_createReturnClass ( ptr, "QDIR", true );
+    if( ISNUMPAR(0) )
+    {
+      QDir * ptr = new QDir( obj->workingDirectory () );
+      _qt4xhb_createReturnClass ( ptr, "QDIR", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

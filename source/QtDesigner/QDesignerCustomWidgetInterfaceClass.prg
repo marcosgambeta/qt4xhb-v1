@@ -31,11 +31,13 @@ CLASS QDesignerCustomWidgetInterface
    METHOD name
    METHOD toolTip
    METHOD whatsThis
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -97,10 +99,18 @@ virtual QWidget * createWidget ( QWidget * parent ) = 0
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_CREATEWIDGET )
 {
   QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QWidget * ptr = obj->createWidget ( PQWIDGET(1) );
-    _qt4xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    {
+      QWidget * ptr = obj->createWidget ( PQWIDGET(1) );
+      _qt4xhb_createReturnQWidgetClass ( (QWidget *) ptr, "QWIDGET" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -150,10 +160,18 @@ virtual QIcon icon () const = 0
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_ICON )
 {
   QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QIcon * ptr = new QIcon( obj->icon () );
-    _qt4xhb_createReturnClass ( ptr, "QICON", true );
+    if( ISNUMPAR(0) )
+    {
+      QIcon * ptr = new QIcon( obj->icon () );
+      _qt4xhb_createReturnClass ( ptr, "QICON", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -183,11 +201,19 @@ virtual void initialize ( QDesignerFormEditorInterface * formEditor )
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_INITIALIZE )
 {
   QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QDesignerFormEditorInterface * par1 = (QDesignerFormEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->initialize ( par1 );
+    if( ISNUMPAR(1) && ISQDESIGNERFORMEDITORINTERFACE(1) )
+    {
+      obj->initialize ( PQDESIGNERFORMEDITORINTERFACE(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -197,9 +223,17 @@ virtual bool isContainer () const = 0
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_ISCONTAINER )
 {
   QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isContainer () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isContainer () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -209,9 +243,17 @@ virtual bool isInitialized () const
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_ISINITIALIZED )
 {
   QDesignerCustomWidgetInterface * obj = (QDesignerCustomWidgetInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isInitialized () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isInitialized () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
