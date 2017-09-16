@@ -33,6 +33,7 @@ CLASS QDeclarativeItem INHERIT QGraphicsObject,QDeclarativeParserStatus
    METHOD setTransformOrigin
    METHOD smooth
    METHOD transformOrigin
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -50,276 +51,103 @@ $destructor
 /*
 QDeclarativeItem ( QDeclarativeItem * parent = 0 )
 */
-HB_FUNC_STATIC( QDECLARATIVEITEM_NEW )
-{
-  QDeclarativeItem * par1 = (QDeclarativeItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QDeclarativeItem * o = new QDeclarativeItem ( par1 );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QDeclarativeItem *=0
 
 $deleteMethod
 
 /*
 qreal baselineOffset () const
 */
-HB_FUNC_STATIC( QDECLARATIVEITEM_BASELINEOFFSET )
-{
-  QDeclarativeItem * obj = (QDeclarativeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->baselineOffset () );
-  }
-}
-
+$method=|qreal|baselineOffset|
 
 /*
 QDeclarativeItem * childAt ( qreal x, qreal y ) const
 */
-HB_FUNC_STATIC( QDECLARATIVEITEM_CHILDAT )
-{
-  QDeclarativeItem * obj = (QDeclarativeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDeclarativeItem * ptr = obj->childAt ( PQREAL(1), PQREAL(2) );
-    _qt4xhb_createReturnClass ( ptr, "QDECLARATIVEITEM" );
-  }
-}
-
+$method=|QDeclarativeItem *|childAt|qreal,qreal
 
 /*
 QRectF childrenRect ()
 */
-HB_FUNC_STATIC( QDECLARATIVEITEM_CHILDRENRECT )
-{
-  QDeclarativeItem * obj = (QDeclarativeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->childrenRect () );
-    _qt4xhb_createReturnClass ( ptr, "QRECTF", true );
-  }
-}
-
+$method=|QRectF|childrenRect|
 
 /*
 bool clip () const
 */
-HB_FUNC_STATIC( QDECLARATIVEITEM_CLIP )
-{
-  QDeclarativeItem * obj = (QDeclarativeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->clip () );
-  }
-}
-
+$method=|bool|clip|
 
 /*
 void forceActiveFocus ()
 */
-HB_FUNC_STATIC( QDECLARATIVEITEM_FORCEACTIVEFOCUS )
-{
-  QDeclarativeItem * obj = (QDeclarativeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->forceActiveFocus ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|forceActiveFocus|
 
 /*
 qreal implicitHeight () const
 */
-HB_FUNC_STATIC( QDECLARATIVEITEM_IMPLICITHEIGHT )
-{
-  QDeclarativeItem * obj = (QDeclarativeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->implicitHeight () );
-  }
-}
-
+$method=|qreal|implicitHeight|
 
 /*
 qreal implicitWidth () const
 */
-HB_FUNC_STATIC( QDECLARATIVEITEM_IMPLICITWIDTH )
-{
-  QDeclarativeItem * obj = (QDeclarativeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQREAL( obj->implicitWidth () );
-  }
-}
-
+$method=|qreal|implicitWidth|
 
 /*
 bool keepMouseGrab () const
 */
-HB_FUNC_STATIC( QDECLARATIVEITEM_KEEPMOUSEGRAB )
-{
-  QDeclarativeItem * obj = (QDeclarativeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->keepMouseGrab () );
-  }
-}
-
+$method=|bool|keepMouseGrab|
 
 /*
 QScriptValue mapFromItem ( const QScriptValue & item, qreal x, qreal y ) const
 */
-HB_FUNC_STATIC( QDECLARATIVEITEM_MAPFROMITEM )
-{
-  QDeclarativeItem * obj = (QDeclarativeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->mapFromItem ( *PQSCRIPTVALUE(1), PQREAL(2), PQREAL(3) ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
-  }
-}
-
+$method=|QScriptValue|mapFromItem|const QScriptValue &,qreal,qreal
 
 /*
 QScriptValue mapToItem ( const QScriptValue & item, qreal x, qreal y ) const
 */
-HB_FUNC_STATIC( QDECLARATIVEITEM_MAPTOITEM )
-{
-  QDeclarativeItem * obj = (QDeclarativeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->mapToItem ( *PQSCRIPTVALUE(1), PQREAL(2), PQREAL(3) ) );
-    _qt4xhb_createReturnClass ( ptr, "QSCRIPTVALUE" );
-  }
-}
-
+$method=|QScriptValue|mapToItem|const QScriptValue &,qreal,qreal
 
 /*
 QDeclarativeItem * parentItem () const
 */
-HB_FUNC_STATIC( QDECLARATIVEITEM_PARENTITEM )
-{
-  QDeclarativeItem * obj = (QDeclarativeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDeclarativeItem * ptr = obj->parentItem ();
-    _qt4xhb_createReturnClass ( ptr, "QDECLARATIVEITEM" );
-  }
-}
-
+$method=|QDeclarativeItem *|parentItem|
 
 /*
 void setBaselineOffset ( qreal )
 */
-HB_FUNC_STATIC( QDECLARATIVEITEM_SETBASELINEOFFSET )
-{
-  QDeclarativeItem * obj = (QDeclarativeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setBaselineOffset ( PQREAL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setBaselineOffset|qreal
 
 /*
 void setClip ( bool )
 */
-HB_FUNC_STATIC( QDECLARATIVEITEM_SETCLIP )
-{
-  QDeclarativeItem * obj = (QDeclarativeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setClip ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setClip|bool
 
 /*
 void setKeepMouseGrab ( bool keep )
 */
-HB_FUNC_STATIC( QDECLARATIVEITEM_SETKEEPMOUSEGRAB )
-{
-  QDeclarativeItem * obj = (QDeclarativeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setKeepMouseGrab ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setKeepMouseGrab|bool
 
 /*
 void setParentItem ( QDeclarativeItem * parent )
 */
-HB_FUNC_STATIC( QDECLARATIVEITEM_SETPARENTITEM )
-{
-  QDeclarativeItem * obj = (QDeclarativeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDeclarativeItem * par1 = (QDeclarativeItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setParentItem ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setParentItem|QDeclarativeItem *
 
 /*
 void setSmooth ( bool smooth )
 */
-HB_FUNC_STATIC( QDECLARATIVEITEM_SETSMOOTH )
-{
-  QDeclarativeItem * obj = (QDeclarativeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSmooth ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setSmooth|bool
 
 /*
 void setTransformOrigin ( TransformOrigin origin )
 */
-HB_FUNC_STATIC( QDECLARATIVEITEM_SETTRANSFORMORIGIN )
-{
-  QDeclarativeItem * obj = (QDeclarativeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setTransformOrigin ( (QDeclarativeItem::TransformOrigin) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setTransformOrigin|QDeclarativeItem::TransformOrigin
 
 /*
 bool smooth () const
 */
-HB_FUNC_STATIC( QDECLARATIVEITEM_SMOOTH )
-{
-  QDeclarativeItem * obj = (QDeclarativeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->smooth () );
-  }
-}
-
+$method=|bool|smooth|
 
 /*
 TransformOrigin transformOrigin () const
 */
-HB_FUNC_STATIC( QDECLARATIVEITEM_TRANSFORMORIGIN )
-{
-  QDeclarativeItem * obj = (QDeclarativeItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->transformOrigin () );
-  }
-}
-
-
-
-
+$method=|QDeclarativeItem::TransformOrigin|transformOrigin|
 
 #pragma ENDDUMP

@@ -25,11 +25,13 @@ CLASS QDeclarativeError
    METHOD setUrl
    METHOD toString
    METHOD url
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -47,22 +49,12 @@ $destructor
 /*
 QDeclarativeError ()
 */
-HB_FUNC_STATIC( QDECLARATIVEERROR_NEW1 )
-{
-  QDeclarativeError * o = new QDeclarativeError ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new1|
 
 /*
 QDeclarativeError ( const QDeclarativeError & other )
 */
-HB_FUNC_STATIC( QDECLARATIVEERROR_NEW2 )
-{
-  QDeclarativeError * o = new QDeclarativeError ( *PQDECLARATIVEERROR(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new2|const QDeclarativeError &
 
 //[1]QDeclarativeError ()
 //[2]QDeclarativeError ( const QDeclarativeError & other )
@@ -88,14 +80,7 @@ $deleteMethod
 /*
 int column () const
 */
-HB_FUNC_STATIC( QDECLARATIVEERROR_COLUMN )
-{
-  QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->column () );
-  }
-}
+$method=|int|column|
 
 /*
 QString description () const
@@ -105,41 +90,17 @@ $method=|QString|description|
 /*
 bool isValid () const
 */
-HB_FUNC_STATIC( QDECLARATIVEERROR_ISVALID )
-{
-  QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
-
+$method=|bool|isValid|
 
 /*
 int line () const
 */
-HB_FUNC_STATIC( QDECLARATIVEERROR_LINE )
-{
-  QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->line () );
-  }
-}
-
+$method=|int|line|
 
 /*
 void setColumn ( int column )
 */
-HB_FUNC_STATIC( QDECLARATIVEERROR_SETCOLUMN )
-{
-  QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setColumn ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setColumn|int
 
 /*
 void setDescription ( const QString & description )
@@ -149,29 +110,12 @@ $method=|void|setDescription|const QString &
 /*
 void setLine ( int line )
 */
-HB_FUNC_STATIC( QDECLARATIVEERROR_SETLINE )
-{
-  QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setLine ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setLine|int
 
 /*
 void setUrl ( const QUrl & url )
 */
-HB_FUNC_STATIC( QDECLARATIVEERROR_SETURL )
-{
-  QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setUrl ( *PQURL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setUrl|const QUrl &
 
 /*
 QString toString () const
@@ -181,15 +125,7 @@ $method=|QString|toString|
 /*
 QUrl url () const
 */
-HB_FUNC_STATIC( QDECLARATIVEERROR_URL )
-{
-  QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QUrl * ptr = new QUrl( obj->url () );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
-  }
-}
+$method=|QUrl|url|
 
 $extraMethods
 

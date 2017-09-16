@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QDeclarativePropertyValueSource
 
    DATA pointer
@@ -10,11 +9,13 @@ CLASS QDeclarativePropertyValueSource
 
    METHOD delete
    METHOD setTarget
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -34,15 +35,7 @@ $deleteMethod
 /*
 virtual void setTarget ( const QDeclarativeProperty & property ) = 0
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTYVALUESOURCE_SETTARGET )
-{
-  QDeclarativePropertyValueSource * obj = (QDeclarativePropertyValueSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setTarget ( *PQDECLARATIVEPROPERTY(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|setTarget|const QDeclarativeProperty &
 
 $extraMethods
 

@@ -41,8 +41,10 @@ CLASS QDeclarativeEngine INHERIT QObject
    METHOD objectOwnership
    METHOD setContextForObject
    METHOD setObjectOwnership
+
    METHOD onQuit
    METHOD onWarnings
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -62,27 +64,14 @@ $destructor
 /*
 QDeclarativeEngine ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_NEW )
-{
-  QDeclarativeEngine * o = new QDeclarativeEngine ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
 /*
 void addImageProvider ( const QString & providerId, QDeclarativeImageProvider * provider )
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_ADDIMAGEPROVIDER )
-{
-  QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDeclarativeImageProvider * par2 = (QDeclarativeImageProvider *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->addImageProvider ( PQSTRING(1), par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|addImageProvider|const QString &,QDeclarativeImageProvider *
 
 /*
 void addImportPath ( const QString & path )
@@ -97,98 +86,37 @@ $method=|void|addPluginPath|const QString &
 /*
 QUrl baseUrl () const
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_BASEURL )
-{
-  QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QUrl * ptr = new QUrl( obj->baseUrl () );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
-  }
-}
-
+$method=|QUrl|baseUrl|
 
 /*
 void clearComponentCache ()
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_CLEARCOMPONENTCACHE )
-{
-  QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clearComponentCache ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|clearComponentCache|
 
 /*
 QDeclarativeImageProvider * imageProvider ( const QString & providerId ) const
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_IMAGEPROVIDER )
-{
-  QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDeclarativeImageProvider * ptr = obj->imageProvider ( PQSTRING(1) );
-    _qt4xhb_createReturnClass ( ptr, "QDECLARATIVEIMAGEPROVIDER" );
-  }
-}
-
+$method=|QDeclarativeImageProvider *|imageProvider|const QString &
 
 /*
 QStringList importPathList () const
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_IMPORTPATHLIST )
-{
-  QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->importPathList () );
-  }
-}
-
+$method=|QStringList|importPathList|
 
 /*
 bool importPlugin ( const QString & filePath, const QString & uri, QString * errorString )
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_IMPORTPLUGIN )
-{
-  QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QString * par3 = NULL;
-    RBOOL( obj->importPlugin ( PQSTRING(1), PQSTRING(2), par3 ) );
-  }
-}
-
+$method=|bool|importPlugin|const QString &,const QString &,QString *
 
 /*
 QNetworkAccessManager * networkAccessManager () const
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_NETWORKACCESSMANAGER )
-{
-  QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QNetworkAccessManager * ptr = obj->networkAccessManager ();
-    _qt4xhb_createReturnClass ( ptr, "QNETWORKACCESSMANAGER" );
-  }
-}
-
+$method=|QNetworkAccessManager *|networkAccessManager|
 
 /*
 QDeclarativeNetworkAccessManagerFactory * networkAccessManagerFactory () const
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_NETWORKACCESSMANAGERFACTORY )
-{
-  QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDeclarativeNetworkAccessManagerFactory * ptr = obj->networkAccessManagerFactory ();
-    _qt4xhb_createReturnClass ( ptr, "QDECLARATIVENETWORKACCESSMANAGERFACTORY" );
-  }
-}
+$method=|QDeclarativeNetworkAccessManagerFactory *|networkAccessManagerFactory|
 
 /*
 QString offlineStoragePath () const
@@ -198,27 +126,12 @@ $method=|QString|offlineStoragePath|
 /*
 bool outputWarningsToStandardError () const
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_OUTPUTWARNINGSTOSTANDARDERROR )
-{
-  QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->outputWarningsToStandardError () );
-  }
-}
-
+$method=|bool|outputWarningsToStandardError|
 
 /*
 QStringList pluginPathList () const
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_PLUGINPATHLIST )
-{
-  QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->pluginPathList () );
-  }
-}
+$method=|QStringList|pluginPathList|
 
 /*
 void removeImageProvider ( const QString & providerId )
@@ -228,58 +141,22 @@ $method=|void|removeImageProvider|const QString &
 /*
 QDeclarativeContext * rootContext () const
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_ROOTCONTEXT )
-{
-  QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDeclarativeContext * ptr = obj->rootContext ();
-    _qt4xhb_createReturnClass ( ptr, "QDECLARATIVECONTEXT" );
-  }
-}
-
+$method=|QDeclarativeContext *|rootContext|
 
 /*
 void setBaseUrl ( const QUrl & url )
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_SETBASEURL )
-{
-  QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setBaseUrl ( *PQURL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setBaseUrl|const QUrl &
 
 /*
 void setImportPathList ( const QStringList & paths )
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_SETIMPORTPATHLIST )
-{
-  QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setImportPathList ( PQSTRINGLIST(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setImportPathList|const QStringList &
 
 /*
 void setNetworkAccessManagerFactory ( QDeclarativeNetworkAccessManagerFactory * factory )
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_SETNETWORKACCESSMANAGERFACTORY )
-{
-  QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDeclarativeNetworkAccessManagerFactory * par1 = (QDeclarativeNetworkAccessManagerFactory *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setNetworkAccessManagerFactory ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setNetworkAccessManagerFactory|QDeclarativeNetworkAccessManagerFactory *
 
 /*
 void setOfflineStoragePath ( const QString & dir )
@@ -289,74 +166,31 @@ $method=|void|setOfflineStoragePath|const QString &
 /*
 void setOutputWarningsToStandardError ( bool enabled )
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_SETOUTPUTWARNINGSTOSTANDARDERROR )
-{
-  QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setOutputWarningsToStandardError ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setOutputWarningsToStandardError|bool
 
 /*
 void setPluginPathList ( const QStringList & paths )
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_SETPLUGINPATHLIST )
-{
-  QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPluginPathList ( PQSTRINGLIST(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|setPluginPathList|const QStringList &
 
 /*
-QDeclarativeContext * contextForObject ( const QObject * object )
+static QDeclarativeContext * contextForObject ( const QObject * object )
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_CONTEXTFOROBJECT )
-{
-  const QObject * par1 = (const QObject *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QDeclarativeContext * ptr = QDeclarativeEngine::contextForObject ( par1 );
-  _qt4xhb_createReturnClass ( ptr, "QDECLARATIVECONTEXT" );
-}
-
+$staticMethod=|QDeclarativeContext *|contextForObject|const QObject *
 
 /*
-ObjectOwnership objectOwnership ( QObject * object )
+static ObjectOwnership objectOwnership ( QObject * object )
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_OBJECTOWNERSHIP )
-{
-  hb_retni( (int) QDeclarativeEngine::objectOwnership ( PQOBJECT(1) ) );
-}
-
+$staticMethod=|QDeclarativeEngine::ObjectOwnership|objectOwnership|QObject *
 
 /*
-void setContextForObject ( QObject * object, QDeclarativeContext * context )
+static void setContextForObject ( QObject * object, QDeclarativeContext * context )
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_SETCONTEXTFOROBJECT )
-{
-  QDeclarativeContext * par2 = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QDeclarativeEngine::setContextForObject ( PQOBJECT(1), par2 );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|void|setContextForObject|QObject *,QDeclarativeContext *
 
 /*
-void setObjectOwnership ( QObject * object, ObjectOwnership ownership )
+static void setObjectOwnership ( QObject * object, ObjectOwnership ownership )
 */
-HB_FUNC_STATIC( QDECLARATIVEENGINE_SETOBJECTOWNERSHIP )
-{
-  QDeclarativeEngine::setObjectOwnership ( PQOBJECT(1), (QDeclarativeEngine::ObjectOwnership) hb_parni(2) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
-
+$staticMethod=|void|setObjectOwnership|QObject *,QDeclarativeEngine::ObjectOwnership
 
 #pragma ENDDUMP

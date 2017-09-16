@@ -21,11 +21,13 @@ CLASS QDeclarativeScriptString
    METHOD setContext
    METHOD setScopeObject
    METHOD setScript
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -43,22 +45,12 @@ $destructor
 /*
 QDeclarativeScriptString ()
 */
-HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEW1 )
-{
-  QDeclarativeScriptString * o = new QDeclarativeScriptString ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new1|
 
 /*
 QDeclarativeScriptString ( const QDeclarativeScriptString & other )
 */
-HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEW2 )
-{
-  QDeclarativeScriptString * o = new QDeclarativeScriptString ( *PQDECLARATIVESCRIPTSTRING(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new2|const QDeclarativeScriptString &
 
 //[1]QDeclarativeScriptString ()
 //[2]QDeclarativeScriptString ( const QDeclarativeScriptString & other )
@@ -79,34 +71,15 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEW )
   }
 }
 
-
-
 /*
 QDeclarativeContext * context () const
 */
-HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_CONTEXT )
-{
-  QDeclarativeScriptString * obj = (QDeclarativeScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDeclarativeContext * ptr = obj->context ();
-    _qt4xhb_createReturnClass ( ptr, "QDECLARATIVECONTEXT" );
-  }
-}
-
+$method=|QDeclarativeContext *|context|
 
 /*
 QObject * scopeObject () const
 */
-HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SCOPEOBJECT )
-{
-  QDeclarativeScriptString * obj = (QDeclarativeScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QObject * ptr = obj->scopeObject ();
-    _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
+$method=|QObject *|scopeObject|
 
 /*
 QString script () const
@@ -116,30 +89,12 @@ $method=|QString|script|
 /*
 void setContext ( QDeclarativeContext * context )
 */
-HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SETCONTEXT )
-{
-  QDeclarativeScriptString * obj = (QDeclarativeScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDeclarativeContext * par1 = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setContext ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setContext|QDeclarativeContext *
 
 /*
 void setScopeObject ( QObject * object )
 */
-HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SETSCOPEOBJECT )
-{
-  QDeclarativeScriptString * obj = (QDeclarativeScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setScopeObject ( PQOBJECT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setScopeObject|QObject *
 
 /*
 void setScript ( const QString & script )

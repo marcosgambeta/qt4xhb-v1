@@ -17,11 +17,13 @@ CLASS QDeclarativeImageProvider
    METHOD imageType
    METHOD requestImage
    METHOD requestPixmap
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -39,55 +41,24 @@ $destructor
 /*
 QDeclarativeImageProvider ( ImageType type )
 */
-HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_NEW )
-{
-  QDeclarativeImageProvider * o = new QDeclarativeImageProvider ( (QDeclarativeImageProvider::ImageType) hb_parni(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QDeclarativeImageProvider::ImageType
 
 $deleteMethod
 
 /*
 ImageType imageType () const
 */
-HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_IMAGETYPE )
-{
-  QDeclarativeImageProvider * obj = (QDeclarativeImageProvider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->imageType () );
-  }
-}
-
+$method=|QDeclarativeImageProvider::ImageType|imageType|
 
 /*
 virtual QImage requestImage ( const QString & id, QSize * size, const QSize & requestedSize )
 */
-HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_REQUESTIMAGE )
-{
-  QDeclarativeImageProvider * obj = (QDeclarativeImageProvider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * par2 = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QImage * ptr = new QImage( obj->requestImage ( PQSTRING(1), par2, *PQSIZE(3) ) );
-    _qt4xhb_createReturnClass ( ptr, "QIMAGE", true );
-  }
-}
-
+$virtualMethod=|QImage|requestImage|const QString &,QSize *,const QSize &
 
 /*
 virtual QPixmap requestPixmap ( const QString & id, QSize * size, const QSize & requestedSize )
 */
-HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_REQUESTPIXMAP )
-{
-  QDeclarativeImageProvider * obj = (QDeclarativeImageProvider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * par2 = (QSize *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QPixmap * ptr = new QPixmap( obj->requestPixmap ( PQSTRING(1), par2, *PQSIZE(3) ) );
-    _qt4xhb_createReturnClass ( ptr, "QPIXMAP", true );
-  }
-}
+$virtualMethod=|QPixmap|requestPixmap|const QString &,QSize *,const QSize &
 
 $extraMethods
 

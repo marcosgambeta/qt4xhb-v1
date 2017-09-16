@@ -29,8 +29,10 @@ CLASS QDeclarativeView INHERIT QGraphicsView
    METHOD setSource
    METHOD source
    METHOD status
+
    METHOD onSceneResized
    METHOD onStatusChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -50,22 +52,12 @@ $destructor
 /*
 QDeclarativeView ( QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW1 )
-{
-  QDeclarativeView * o = new QDeclarativeView ( OPQWIDGET(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new1|QWidget *=0
 
 /*
 QDeclarativeView ( const QUrl & source, QWidget * parent = 0 )
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW2 )
-{
-  QDeclarativeView * o = new QDeclarativeView ( *PQURL(1), OPQWIDGET(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new2|const QUrl &,QWidget *=0
 
 //[1]QDeclarativeView ( QWidget * parent = 0 )
 //[2]QDeclarativeView ( const QUrl & source, QWidget * parent = 0 )
@@ -91,16 +83,7 @@ $deleteMethod
 /*
 QDeclarativeEngine * engine () const
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_ENGINE )
-{
-  QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDeclarativeEngine * ptr = obj->engine ();
-    _qt4xhb_createReturnClass ( ptr, "QDECLARATIVEENGINE" );
-  }
-}
-
+$method=|QDeclarativeEngine *|engine|
 
 /*
 QList<QDeclarativeError> errors () const
@@ -145,118 +128,44 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ERRORS )
   }
 }
 
-
 /*
 QSize initialSize () const
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_INITIALSIZE )
-{
-  QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSize * ptr = new QSize( obj->initialSize () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
-  }
-}
-
+$method=|QSize|initialSize|
 
 /*
 ResizeMode resizeMode () const
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_RESIZEMODE )
-{
-  QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->resizeMode () );
-  }
-}
-
+$method=|QDeclarativeView::ResizeMode|resizeMode|
 
 /*
 QDeclarativeContext * rootContext () const
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTCONTEXT )
-{
-  QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDeclarativeContext * ptr = obj->rootContext ();
-    _qt4xhb_createReturnClass ( ptr, "QDECLARATIVECONTEXT" );
-  }
-}
-
+$method=|QDeclarativeContext *|rootContext|
 
 /*
 QGraphicsObject * rootObject () const
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTOBJECT )
-{
-  QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QGraphicsObject * ptr = obj->rootObject ();
-    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSOBJECT" );
-  }
-}
-
+$method=|QGraphicsObject *|rootObject|
 
 /*
 void setResizeMode ( ResizeMode )
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_SETRESIZEMODE )
-{
-  QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setResizeMode ( (QDeclarativeView::ResizeMode) hb_parni(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setResizeMode|QDeclarativeView::ResizeMode
 
 /*
 void setSource ( const QUrl & url )
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_SETSOURCE )
-{
-  QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSource ( *PQURL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setSource|const QUrl &
 
 /*
 QUrl source () const
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_SOURCE )
-{
-  QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QUrl * ptr = new QUrl( obj->source () );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
-  }
-}
-
+$method=|QUrl|source|
 
 /*
 Status status () const
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_STATUS )
-{
-  QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->status () );
-  }
-}
-
-
-
-
+$method=|QDeclarativeView::Status|status|
 
 #pragma ENDDUMP

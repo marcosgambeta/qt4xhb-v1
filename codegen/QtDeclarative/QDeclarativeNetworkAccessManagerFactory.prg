@@ -13,11 +13,13 @@ CLASS QDeclarativeNetworkAccessManagerFactory
 
    METHOD delete
    METHOD create
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -37,15 +39,7 @@ $deleteMethod
 /*
 virtual QNetworkAccessManager * create ( QObject * parent ) = 0
 */
-HB_FUNC_STATIC( QDECLARATIVENETWORKACCESSMANAGERFACTORY_CREATE )
-{
-  QDeclarativeNetworkAccessManagerFactory * obj = (QDeclarativeNetworkAccessManagerFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QNetworkAccessManager * ptr = obj->create ( PQOBJECT(1) );
-    _qt4xhb_createReturnClass ( ptr, "QNETWORKACCESSMANAGER" );
-  }
-}
+$virtualMethod=|QNetworkAccessManager *|create|QObject *
 
 $extraMethods
 

@@ -54,11 +54,13 @@ CLASS QDeclarativeProperty
    METHOD write3
    METHOD write4
    METHOD write
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -76,82 +78,42 @@ $destructor
 /*
 QDeclarativeProperty ()
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW1 )
-{
-  QDeclarativeProperty * o = new QDeclarativeProperty ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new1|
 
 /*
 QDeclarativeProperty ( QObject * obj )
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW2 )
-{
-  QDeclarativeProperty * o = new QDeclarativeProperty ( PQOBJECT(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new2|QObject *
 
 /*
 QDeclarativeProperty ( QObject * obj, QDeclarativeContext * ctxt )
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW3 )
-{
-  QDeclarativeProperty * o = new QDeclarativeProperty ( PQOBJECT(1), PQDECLARATIVECONTEXT(2) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new3|QObject *,QDeclarativeContext *
 
 /*
 QDeclarativeProperty ( QObject * obj, QDeclarativeEngine * engine )
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW4 )
-{
-  QDeclarativeProperty * o = new QDeclarativeProperty ( PQOBJECT(1), PQDECLARATIVEENGINE(2) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new4|QObject *,QDeclarativeEngine *
 
 /*
 QDeclarativeProperty ( QObject * obj, const QString & name )
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW5 )
-{
-  QDeclarativeProperty * o = new QDeclarativeProperty ( PQOBJECT(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new5|QObject *,const QString &
 
 /*
 QDeclarativeProperty ( QObject * obj, const QString & name, QDeclarativeContext * ctxt )
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW6 )
-{
-  QDeclarativeProperty * o = new QDeclarativeProperty ( PQOBJECT(1), PQSTRING(2), PQDECLARATIVECONTEXT(3) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new6|QObject *,const QString &,QDeclarativeContext *
 
 /*
 QDeclarativeProperty ( QObject * obj, const QString & name, QDeclarativeEngine * engine )
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW7 )
-{
-  QDeclarativeProperty * o = new QDeclarativeProperty ( PQOBJECT(1), PQSTRING(2), PQDECLARATIVEENGINE(3) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new7|QObject *,const QString &,QDeclarativeEngine *
 
 /*
 QDeclarativeProperty ( const QDeclarativeProperty & other )
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW8 )
-{
-  QDeclarativeProperty * o = new QDeclarativeProperty ( *PQDECLARATIVEPROPERTY(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new8|const QDeclarativeProperty &
 
 //[1]QDeclarativeProperty ()
 //[2]QDeclarativeProperty ( QObject * obj )
@@ -202,33 +164,15 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW )
   }
 }
 
-
-
 /*
 bool connectNotifySignal ( QObject * dest, const char * slot ) const
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTY_CONNECTNOTIFYSIGNAL1 )
-{
-  QDeclarativeProperty * obj = (QDeclarativeProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->connectNotifySignal ( PQOBJECT(1), (const char *) hb_parc(2) ) );
-  }
-}
-
+$method=|bool|connectNotifySignal,connectNotifySignal1|QObject *,const char *
 
 /*
 bool connectNotifySignal ( QObject * dest, int method ) const
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTY_CONNECTNOTIFYSIGNAL2 )
-{
-  QDeclarativeProperty * obj = (QDeclarativeProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->connectNotifySignal ( PQOBJECT(1), PINT(2) ) );
-  }
-}
-
+$method=|bool|connectNotifySignal,connectNotifySignal2|QObject *,int
 
 //[1]bool connectNotifySignal ( QObject * dest, const char * slot ) const
 //[2]bool connectNotifySignal ( QObject * dest, int method ) const
@@ -243,124 +187,56 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_CONNECTNOTIFYSIGNAL )
   {
     HB_FUNC_EXEC( QDECLARATIVEPROPERTY_CONNECTNOTIFYSIGNAL2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
 bool hasNotifySignal () const
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTY_HASNOTIFYSIGNAL )
-{
-  QDeclarativeProperty * obj = (QDeclarativeProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasNotifySignal () );
-  }
-}
-
+$method=|bool|hasNotifySignal|
 
 /*
 int index () const
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTY_INDEX )
-{
-  QDeclarativeProperty * obj = (QDeclarativeProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->index () );
-  }
-}
-
+$method=|int|index|
 
 /*
 bool isDesignable () const
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTY_ISDESIGNABLE )
-{
-  QDeclarativeProperty * obj = (QDeclarativeProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isDesignable () );
-  }
-}
-
+$method=|bool|isDesignable|
 
 /*
 bool isProperty () const
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTY_ISPROPERTY )
-{
-  QDeclarativeProperty * obj = (QDeclarativeProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isProperty () );
-  }
-}
-
+$method=|bool|isProperty|
 
 /*
 bool isResettable () const
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTY_ISRESETTABLE )
-{
-  QDeclarativeProperty * obj = (QDeclarativeProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isResettable () );
-  }
-}
-
+$method=|bool|isResettable|
 
 /*
 bool isSignalProperty () const
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTY_ISSIGNALPROPERTY )
-{
-  QDeclarativeProperty * obj = (QDeclarativeProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isSignalProperty () );
-  }
-}
-
+$method=|bool|isSignalProperty|
 
 /*
 bool isValid () const
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTY_ISVALID )
-{
-  QDeclarativeProperty * obj = (QDeclarativeProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
-
+$method=|bool|isValid|
 
 /*
 bool isWritable () const
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTY_ISWRITABLE )
-{
-  QDeclarativeProperty * obj = (QDeclarativeProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isWritable () );
-  }
-}
-
+$method=|bool|isWritable|
 
 /*
 QMetaMethod method () const
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTY_METHOD )
-{
-  QDeclarativeProperty * obj = (QDeclarativeProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QMetaMethod * ptr = new QMetaMethod( obj->method () );
-    _qt4xhb_createReturnClass ( ptr, "QMETAMETHOD" );
-  }
-}
+$method=|QMetaMethod|method|
 
 /*
 QString name () const
@@ -370,169 +246,67 @@ $method=|QString|name|
 /*
 bool needsNotifySignal () const
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEEDSNOTIFYSIGNAL )
-{
-  QDeclarativeProperty * obj = (QDeclarativeProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->needsNotifySignal () );
-  }
-}
-
+$method=|bool|needsNotifySignal|
 
 /*
 QObject * object () const
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTY_OBJECT )
-{
-  QDeclarativeProperty * obj = (QDeclarativeProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QObject * ptr = obj->object ();
-    _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
-
+$method=|QObject *|object|
 
 /*
 QMetaProperty property () const
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTY_PROPERTY )
-{
-  QDeclarativeProperty * obj = (QDeclarativeProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QMetaProperty * ptr = new QMetaProperty( obj->property () );
-    _qt4xhb_createReturnClass ( ptr, "QMETAPROPERTY" );
-  }
-}
-
+$method=|QMetaProperty|property|
 
 /*
 int propertyType () const
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTY_PROPERTYTYPE )
-{
-  QDeclarativeProperty * obj = (QDeclarativeProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->propertyType () );
-  }
-}
-
+$method=|int|propertyType|
 
 /*
 PropertyTypeCategory propertyTypeCategory () const
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTY_PROPERTYTYPECATEGORY )
-{
-  QDeclarativeProperty * obj = (QDeclarativeProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->propertyTypeCategory () );
-  }
-}
-
+$method=|QDeclarativeProperty::PropertyTypeCategory|propertyTypeCategory|
 
 /*
 const char * propertyTypeName () const
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTY_PROPERTYTYPENAME )
-{
-  QDeclarativeProperty * obj = (QDeclarativeProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    const char * str1 = obj->propertyTypeName ();
-    hb_retc( str1 );
-  }
-}
-
+$method=|const char *|propertyTypeName|
 
 /*
 QVariant read () const
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTY_READ1 )
-{
-  QDeclarativeProperty * obj = (QDeclarativeProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->read () );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
-
+$method=|QVariant|read|
 
 /*
 bool reset () const
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTY_RESET )
-{
-  QDeclarativeProperty * obj = (QDeclarativeProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->reset () );
-  }
-}
-
+$method=|bool|reset|
 
 /*
 Type type () const
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTY_TYPE )
-{
-  QDeclarativeProperty * obj = (QDeclarativeProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->type () );
-  }
-}
-
+$method=|QDeclarativeProperty::Type|type|
 
 /*
 bool write ( const QVariant & value ) const
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTY_WRITE1 )
-{
-  QDeclarativeProperty * obj = (QDeclarativeProperty *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->write ( *PQVARIANT(1) ) );
-  }
-}
-
-
+$method=|bool|write,write1|const QVariant &
 
 /*
-QVariant read ( QObject * object, const QString & name )
+static QVariant read ( QObject * object, const QString & name )
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTY_READ2 )
-{
-  QVariant * ptr = new QVariant( QDeclarativeProperty::read ( PQOBJECT(1), PQSTRING(2) ) );
-  _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-}
-
+$staticMethod=|QVariant|read,read2|QObject *,const QString &
 
 /*
-QVariant read ( QObject * object, const QString & name, QDeclarativeContext * ctxt )
+static QVariant read ( QObject * object, const QString & name, QDeclarativeContext * ctxt )
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTY_READ3 )
-{
-  QDeclarativeContext * par3 = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QVariant * ptr = new QVariant( QDeclarativeProperty::read ( PQOBJECT(1), PQSTRING(2), par3 ) );
-  _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-}
-
+$staticMethod=|QVariant|read,read3|QObject *,const QString &,QDeclarativeContext *
 
 /*
-QVariant read ( QObject * object, const QString & name, QDeclarativeEngine * engine )
+static QVariant read ( QObject * object, const QString & name, QDeclarativeEngine * engine )
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTY_READ4 )
-{
-  QDeclarativeEngine * par3 = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_param(3, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QVariant * ptr = new QVariant( QDeclarativeProperty::read ( PQOBJECT(1), PQSTRING(2), par3 ) );
-  _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-}
-
+$staticMethod=|QVariant|read,read4|QObject *,const QString &,QDeclarativeEngine *
 
 //[1]QVariant read () const
 //[2]QVariant read ( QObject * object, const QString & name )
@@ -557,36 +331,26 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_READ )
   {
     HB_FUNC_EXEC( QDECLARATIVEPROPERTY_READ4 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
-bool write ( QObject * object, const QString & name, const QVariant & value )
+static bool write ( QObject * object, const QString & name, const QVariant & value )
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTY_WRITE2 )
-{
-  RBOOL( QDeclarativeProperty::write ( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3) ) );
-}
-
+$staticMethod=|bool|write,write2|QObject *,const QString &,const QVariant &
 
 /*
-bool write ( QObject * object, const QString & name, const QVariant & value, QDeclarativeContext * ctxt )
+static bool write ( QObject * object, const QString & name, const QVariant & value, QDeclarativeContext * ctxt )
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTY_WRITE3 )
-{
-  QDeclarativeContext * par4 = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-  RBOOL( QDeclarativeProperty::write ( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3), par4 ) );
-}
-
+$staticMethod=|bool|write,write3|QObject *,const QString &,const QVariant &,QDeclarativeContext *
 
 /*
-bool write ( QObject * object, const QString & name, const QVariant & value, QDeclarativeEngine * engine )
+static bool write ( QObject * object, const QString & name, const QVariant & value, QDeclarativeEngine * engine )
 */
-HB_FUNC_STATIC( QDECLARATIVEPROPERTY_WRITE4 )
-{
-  QDeclarativeEngine * par4 = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_param(4, HB_IT_OBJECT ), "POINTER", 0 ) );
-  RBOOL( QDeclarativeProperty::write ( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3), par4 ) );
-}
-
+$staticMethod=|bool|write,write4|QObject *,const QString &,const QVariant &,QDeclarativeEngine *
 
 //[1]bool write ( const QVariant & value ) const
 //[2]bool write ( QObject * object, const QString & name, const QVariant & value )
@@ -610,6 +374,10 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_WRITE )
   else if( ISNUMPAR(4) && ISQOBJECT(1) && ISCHAR(2) && ISQVARIANT(3) && ISQDECLARATIVEENGINE(4) )
   {
     HB_FUNC_EXEC( QDECLARATIVEPROPERTY_WRITE4 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
