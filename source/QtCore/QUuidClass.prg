@@ -164,9 +164,17 @@ QString toString() const;
 HB_FUNC_STATIC( QUUID_TOSTRING )
 {
   QUuid * obj = (QUuid *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->toString () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->toString () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

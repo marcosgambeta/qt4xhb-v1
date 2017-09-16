@@ -137,9 +137,17 @@ QString cap ( int nth = 0 ) const
 HB_FUNC_STATIC( QREGEXP_CAP )
 {
   QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->cap ( OPINT(1,0) ) );
+    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    {
+      RQSTRING( obj->cap ( OPINT(1,0) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -185,9 +193,17 @@ QString errorString () const
 HB_FUNC_STATIC( QREGEXP_ERRORSTRING )
 {
   QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->errorString () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->errorString () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -281,9 +297,17 @@ QString pattern () const
 HB_FUNC_STATIC( QREGEXP_PATTERN )
 {
   QRegExp * obj = (QRegExp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->pattern () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->pattern () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -364,11 +388,18 @@ HB_FUNC_STATIC( QREGEXP_SETPATTERNSYNTAX )
 }
 
 /*
-QString escape ( const QString & str )
+static QString escape ( const QString & str )
 */
 HB_FUNC_STATIC( QREGEXP_ESCAPE )
 {
-  RQSTRING( QRegExp::escape ( PQSTRING(1) ) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+  {
+      RQSTRING( QRegExp::escape ( PQSTRING(1) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QREGEXP_NEWFROM )

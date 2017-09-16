@@ -50,7 +50,14 @@ static QString licensee()
 */
 HB_FUNC_STATIC( QLIBRARYINFO_LICENSEE )
 {
-  RQSTRING( QLibraryInfo::licensee () );
+    if( ISNUMPAR(0) )
+  {
+      RQSTRING( QLibraryInfo::licensee () );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -58,7 +65,14 @@ static QString licensedProducts()
 */
 HB_FUNC_STATIC( QLIBRARYINFO_LICENSEDPRODUCTS )
 {
-  RQSTRING( QLibraryInfo::licensedProducts () );
+    if( ISNUMPAR(0) )
+  {
+      RQSTRING( QLibraryInfo::licensedProducts () );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -66,7 +80,14 @@ static QString buildKey()
 */
 HB_FUNC_STATIC( QLIBRARYINFO_BUILDKEY )
 {
-  RQSTRING( QLibraryInfo::buildKey () );
+    if( ISNUMPAR(0) )
+  {
+      RQSTRING( QLibraryInfo::buildKey () );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -83,7 +104,14 @@ static QString location(LibraryLocation)
 */
 HB_FUNC_STATIC( QLIBRARYINFO_LOCATION )
 {
-  RQSTRING( QLibraryInfo::location ( (QLibraryInfo::LibraryLocation) hb_parni(1) ) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+  {
+      RQSTRING( QLibraryInfo::location ( (QLibraryInfo::LibraryLocation) hb_parni(1) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QLIBRARYINFO_NEWFROM )

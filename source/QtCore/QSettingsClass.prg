@@ -190,9 +190,17 @@ QString applicationName () const
 HB_FUNC_STATIC( QSETTINGS_APPLICATIONNAME )
 {
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->applicationName () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->applicationName () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -327,9 +335,17 @@ QString fileName () const
 HB_FUNC_STATIC( QSETTINGS_FILENAME )
 {
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->fileName () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->fileName () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -351,9 +367,17 @@ QString group () const
 HB_FUNC_STATIC( QSETTINGS_GROUP )
 {
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->group () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->group () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -388,9 +412,17 @@ QString organizationName () const
 HB_FUNC_STATIC( QSETTINGS_ORGANIZATIONNAME )
 {
   QSettings * obj = (QSettings *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->organizationName () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->organizationName () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

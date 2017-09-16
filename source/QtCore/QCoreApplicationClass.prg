@@ -165,27 +165,48 @@ HB_FUNC_STATIC( QCOREAPPLICATION_ADDLIBRARYPATH )
 }
 
 /*
-QString applicationDirPath ()
+static QString applicationDirPath ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONDIRPATH )
 {
-  RQSTRING( QCoreApplication::applicationDirPath () );
+    if( ISNUMPAR(0) )
+  {
+      RQSTRING( QCoreApplication::applicationDirPath () );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
-QString applicationFilePath ()
+static QString applicationFilePath ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONFILEPATH )
 {
-  RQSTRING( QCoreApplication::applicationFilePath () );
+    if( ISNUMPAR(0) )
+  {
+      RQSTRING( QCoreApplication::applicationFilePath () );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
-QString applicationName ()
+static QString applicationName ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONNAME )
 {
-  RQSTRING( QCoreApplication::applicationName () );
+    if( ISNUMPAR(0) )
+  {
+      RQSTRING( QCoreApplication::applicationName () );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -197,11 +218,18 @@ HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONPID )
 }
 
 /*
-QString applicationVersion ()
+static QString applicationVersion ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_APPLICATIONVERSION )
 {
-  RQSTRING( QCoreApplication::applicationVersion () );
+    if( ISNUMPAR(0) )
+  {
+      RQSTRING( QCoreApplication::applicationVersion () );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -282,19 +310,33 @@ HB_FUNC_STATIC( QCOREAPPLICATION_LIBRARYPATHS )
 }
 
 /*
-QString organizationDomain ()
+static QString organizationDomain ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_ORGANIZATIONDOMAIN )
 {
-  RQSTRING( QCoreApplication::organizationDomain () );
+    if( ISNUMPAR(0) )
+  {
+      RQSTRING( QCoreApplication::organizationDomain () );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
-QString organizationName ()
+static QString organizationName ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_ORGANIZATIONNAME )
 {
-  RQSTRING( QCoreApplication::organizationName () );
+    if( ISNUMPAR(0) )
+  {
+      RQSTRING( QCoreApplication::organizationName () );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -527,7 +569,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_TESTATTRIBUTE )
 }
 
 /*
-QString translate ( const char * context, const char * sourceText, const char * disambiguation, Encoding encoding, int n )
+static QString translate ( const char * context, const char * sourceText, const char * disambiguation, Encoding encoding, int n )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE1 )
 {
@@ -535,7 +577,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE1 )
 }
 
 /*
-QString translate ( const char * context, const char * sourceText, const char * disambiguation = 0, Encoding encoding = CodecForTr )
+static QString translate ( const char * context, const char * sourceText, const char * disambiguation = 0, Encoding encoding = CodecForTr )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE2 )
 {

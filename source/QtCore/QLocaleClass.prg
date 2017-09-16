@@ -226,9 +226,17 @@ QString amText () const
 HB_FUNC_STATIC( QLOCALE_AMTEXT )
 {
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->amText () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->amText () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -238,9 +246,17 @@ QString bcp47Name () const
 HB_FUNC_STATIC( QLOCALE_BCP47NAME )
 {
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->bcp47Name () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->bcp47Name () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -262,9 +278,17 @@ QString createSeparatedList ( const QStringList & list ) const
 HB_FUNC_STATIC( QLOCALE_CREATESEPARATEDLIST )
 {
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->createSeparatedList ( PQSTRINGLIST(1) ) );
+    if( ISNUMPAR(1) && ISARRAY(1) )
+    {
+      RQSTRING( obj->createSeparatedList ( PQSTRINGLIST(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -274,9 +298,17 @@ QString currencySymbol ( CurrencySymbolFormat format = CurrencySymbol ) const
 HB_FUNC_STATIC( QLOCALE_CURRENCYSYMBOL )
 {
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->currencySymbol ( ISNIL(1)? QLocale::CurrencySymbol : (QLocale::CurrencySymbolFormat) hb_parni(1) ) );
+    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    {
+      RQSTRING( obj->currencySymbol ( ISNIL(1)? (QLocale::CurrencySymbolFormat) QLocale::CurrencySymbol : (QLocale::CurrencySymbolFormat) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -286,9 +318,17 @@ QString dateFormat ( FormatType format = LongFormat ) const
 HB_FUNC_STATIC( QLOCALE_DATEFORMAT )
 {
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->dateFormat ( ISNIL(1)? QLocale::LongFormat : (QLocale::FormatType) hb_parni(1) ) );
+    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    {
+      RQSTRING( obj->dateFormat ( ISNIL(1)? (QLocale::FormatType) QLocale::LongFormat : (QLocale::FormatType) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -298,9 +338,17 @@ QString dateTimeFormat ( FormatType format = LongFormat ) const
 HB_FUNC_STATIC( QLOCALE_DATETIMEFORMAT )
 {
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->dateTimeFormat ( ISNIL(1)? QLocale::LongFormat : (QLocale::FormatType) hb_parni(1) ) );
+    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    {
+      RQSTRING( obj->dateTimeFormat ( ISNIL(1)? (QLocale::FormatType) QLocale::LongFormat : (QLocale::FormatType) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -310,9 +358,17 @@ QString dayName ( int day, FormatType type = LongFormat ) const
 HB_FUNC_STATIC( QLOCALE_DAYNAME )
 {
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->dayName ( PINT(1), ISNIL(2)? QLocale::LongFormat : (QLocale::FormatType) hb_parni(2) ) );
+    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    {
+      RQSTRING( obj->dayName ( PINT(1), ISNIL(2)? (QLocale::FormatType) QLocale::LongFormat : (QLocale::FormatType) hb_parni(2) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -397,9 +453,17 @@ QString monthName ( int month, FormatType type = LongFormat ) const
 HB_FUNC_STATIC( QLOCALE_MONTHNAME )
 {
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->monthName ( PINT(1), ISNIL(2)? QLocale::LongFormat : (QLocale::FormatType) hb_parni(2) ) );
+    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    {
+      RQSTRING( obj->monthName ( PINT(1), ISNIL(2)? (QLocale::FormatType) QLocale::LongFormat : (QLocale::FormatType) hb_parni(2) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -409,9 +473,17 @@ QString name () const
 HB_FUNC_STATIC( QLOCALE_NAME )
 {
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->name () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->name () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -421,9 +493,17 @@ QString nativeCountryName () const
 HB_FUNC_STATIC( QLOCALE_NATIVECOUNTRYNAME )
 {
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->nativeCountryName () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->nativeCountryName () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -433,9 +513,17 @@ QString nativeLanguageName () const
 HB_FUNC_STATIC( QLOCALE_NATIVELANGUAGENAME )
 {
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->nativeLanguageName () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->nativeLanguageName () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -483,9 +571,17 @@ QString pmText () const
 HB_FUNC_STATIC( QLOCALE_PMTEXT )
 {
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->pmText () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->pmText () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -508,9 +604,17 @@ QString quoteString ( const QString & str, QuotationStyle style = StandardQuotat
 HB_FUNC_STATIC( QLOCALE_QUOTESTRING1 )
 {
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->quoteString ( PQSTRING(1), ISNIL(2)? QLocale::StandardQuotation : (QLocale::QuotationStyle) hb_parni(2) ) );
+    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+    {
+      RQSTRING( obj->quoteString ( PQSTRING(1), ISNIL(2)? (QLocale::QuotationStyle) QLocale::StandardQuotation : (QLocale::QuotationStyle) hb_parni(2) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -566,9 +670,17 @@ QString standaloneDayName ( int day, FormatType type = LongFormat ) const
 HB_FUNC_STATIC( QLOCALE_STANDALONEDAYNAME )
 {
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->standaloneDayName ( PINT(1), ISNIL(2)? QLocale::LongFormat : (QLocale::FormatType) hb_parni(2) ) );
+    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    {
+      RQSTRING( obj->standaloneDayName ( PINT(1), ISNIL(2)? (QLocale::FormatType) QLocale::LongFormat : (QLocale::FormatType) hb_parni(2) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -578,9 +690,17 @@ QString standaloneMonthName ( int month, FormatType type = LongFormat ) const
 HB_FUNC_STATIC( QLOCALE_STANDALONEMONTHNAME )
 {
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->standaloneMonthName ( PINT(1), ISNIL(2)? QLocale::LongFormat : (QLocale::FormatType) hb_parni(2) ) );
+    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    {
+      RQSTRING( obj->standaloneMonthName ( PINT(1), ISNIL(2)? (QLocale::FormatType) QLocale::LongFormat : (QLocale::FormatType) hb_parni(2) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -602,9 +722,17 @@ QString timeFormat ( FormatType format = LongFormat ) const
 HB_FUNC_STATIC( QLOCALE_TIMEFORMAT )
 {
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->timeFormat ( ISNIL(1)? QLocale::LongFormat : (QLocale::FormatType) hb_parni(1) ) );
+    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    {
+      RQSTRING( obj->timeFormat ( ISNIL(1)? (QLocale::FormatType) QLocale::LongFormat : (QLocale::FormatType) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -867,9 +995,17 @@ QString toLower ( const QString & str ) const
 HB_FUNC_STATIC( QLOCALE_TOLOWER )
 {
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->toLower ( PQSTRING(1) ) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      RQSTRING( obj->toLower ( PQSTRING(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -1171,9 +1307,17 @@ QString toUpper ( const QString & str ) const
 HB_FUNC_STATIC( QLOCALE_TOUPPER )
 {
   QLocale * obj = (QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->toUpper ( PQSTRING(1) ) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      RQSTRING( obj->toUpper ( PQSTRING(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -1221,19 +1365,33 @@ HB_FUNC_STATIC( QLOCALE_C )
 }
 
 /*
-QString countryToString ( Country country )
+static QString countryToString ( Country country )
 */
 HB_FUNC_STATIC( QLOCALE_COUNTRYTOSTRING )
 {
-  RQSTRING( QLocale::countryToString ( (QLocale::Country) hb_parni(1) ) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+  {
+      RQSTRING( QLocale::countryToString ( (QLocale::Country) hb_parni(1) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
-QString languageToString ( Language language )
+static QString languageToString ( Language language )
 */
 HB_FUNC_STATIC( QLOCALE_LANGUAGETOSTRING )
 {
-  RQSTRING( QLocale::languageToString ( (QLocale::Language) hb_parni(1) ) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+  {
+      RQSTRING( QLocale::languageToString ( (QLocale::Language) hb_parni(1) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -1276,11 +1434,18 @@ HB_FUNC_STATIC( QLOCALE_MATCHINGLOCALES )
 }
 
 /*
-QString scriptToString ( Script script )
+static QString scriptToString ( Script script )
 */
 HB_FUNC_STATIC( QLOCALE_SCRIPTTOSTRING )
 {
-  RQSTRING( QLocale::scriptToString ( (QLocale::Script) hb_parni(1) ) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+  {
+      RQSTRING( QLocale::scriptToString ( (QLocale::Script) hb_parni(1) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*

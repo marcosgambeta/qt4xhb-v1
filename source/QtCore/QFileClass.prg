@@ -38,7 +38,6 @@ CLASS QFile INHERIT QIODevice
    METHOD resize1
    METHOD setFileName
    METHOD setPermissions1
-   METHOD symLinkTarget1
    METHOD unmap
    METHOD unsetError
    METHOD atEnd
@@ -69,6 +68,7 @@ CLASS QFile INHERIT QIODevice
    METHOD resize
    METHOD setPermissions2
    METHOD setPermissions
+   METHOD symLinkTarget1
    METHOD symLinkTarget2
    METHOD symLinkTarget
    DESTRUCTOR destroyObject
@@ -199,9 +199,17 @@ QString fileName () const
 HB_FUNC_STATIC( QFILE_FILENAME )
 {
   QFile * obj = (QFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->fileName () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->fileName () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -365,18 +373,6 @@ HB_FUNC_STATIC( QFILE_SETPERMISSIONS1 )
 }
 
 /*
-QString symLinkTarget () const
-*/
-HB_FUNC_STATIC( QFILE_SYMLINKTARGET1 )
-{
-  QFile * obj = (QFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRING( obj->symLinkTarget () );
-  }
-}
-
-/*
 bool unmap ( uchar * address )
 */
 HB_FUNC_STATIC( QFILE_UNMAP )
@@ -527,19 +523,33 @@ HB_FUNC_STATIC( QFILE_COPY )
 }
 
 /*
-QString decodeName ( const QByteArray & localFileName )
+static QString decodeName ( const QByteArray & localFileName )
 */
 HB_FUNC_STATIC( QFILE_DECODENAME1 )
 {
-  RQSTRING( QFile::decodeName ( *PQBYTEARRAY(1) ) );
+    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+  {
+      RQSTRING( QFile::decodeName ( *PQBYTEARRAY(1) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
-QString decodeName ( const char * localFileName )
+static QString decodeName ( const char * localFileName )
 */
 HB_FUNC_STATIC( QFILE_DECODENAME2 )
 {
-  RQSTRING( QFile::decodeName ( (const char *) hb_parc(1) ) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+  {
+      RQSTRING( QFile::decodeName ( PCONSTCHAR(1) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 //[1]QString decodeName ( const QByteArray & localFileName )
@@ -728,11 +738,38 @@ HB_FUNC_STATIC( QFILE_SETPERMISSIONS )
 }
 
 /*
-QString symLinkTarget ( const QString & fileName )
+QString symLinkTarget () const
+*/
+HB_FUNC_STATIC( QFILE_SYMLINKTARGET1 )
+{
+  QFile * obj = (QFile *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->symLinkTarget () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+static QString symLinkTarget ( const QString & fileName )
 */
 HB_FUNC_STATIC( QFILE_SYMLINKTARGET2 )
 {
-  RQSTRING( QFile::symLinkTarget ( PQSTRING(1) ) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+  {
+      RQSTRING( QFile::symLinkTarget ( PQSTRING(1) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 //[1]QString symLinkTarget () const

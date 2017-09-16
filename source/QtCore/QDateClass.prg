@@ -334,9 +334,17 @@ QString toString ( const QString & format ) const
 HB_FUNC_STATIC( QDATE_TOSTRING1 )
 {
   QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->toString ( PQSTRING(1) ) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      RQSTRING( obj->toString ( PQSTRING(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -346,9 +354,17 @@ QString toString ( Qt::DateFormat format = Qt::TextDate ) const
 HB_FUNC_STATIC( QDATE_TOSTRING2 )
 {
   QDate * obj = (QDate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->toString ( ISNIL(1)? Qt::TextDate : (Qt::DateFormat) hb_parni(1) ) );
+    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    {
+      RQSTRING( obj->toString ( ISNIL(1)? (Qt::DateFormat) Qt::TextDate : (Qt::DateFormat) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -476,19 +492,33 @@ HB_FUNC_STATIC( QDATE_ISVALID )
 }
 
 /*
-QString longDayName ( int weekday )
+static QString longDayName ( int weekday )
 */
 HB_FUNC_STATIC( QDATE_LONGDAYNAME1 )
 {
-  RQSTRING( QDate::longDayName ( PINT(1) ) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+  {
+      RQSTRING( QDate::longDayName ( PINT(1) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
-QString longDayName ( int weekday, MonthNameType type )
+static QString longDayName ( int weekday, MonthNameType type )
 */
 HB_FUNC_STATIC( QDATE_LONGDAYNAME2 )
 {
-  RQSTRING( QDate::longDayName ( PINT(1), (QDate::MonthNameType) hb_parni(2) ) );
+    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  {
+      RQSTRING( QDate::longDayName ( PINT(1), (QDate::MonthNameType) hb_parni(2) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 //[1]QString longDayName ( int weekday )
@@ -507,19 +537,33 @@ HB_FUNC_STATIC( QDATE_LONGDAYNAME )
 }
 
 /*
-QString longMonthName ( int month )
+static QString longMonthName ( int month )
 */
 HB_FUNC_STATIC( QDATE_LONGMONTHNAME1 )
 {
-  RQSTRING( QDate::longMonthName ( PINT(1) ) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+  {
+      RQSTRING( QDate::longMonthName ( PINT(1) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
-QString longMonthName ( int month, MonthNameType type )
+static QString longMonthName ( int month, MonthNameType type )
 */
 HB_FUNC_STATIC( QDATE_LONGMONTHNAME2 )
 {
-  RQSTRING( QDate::longMonthName ( PINT(1), (QDate::MonthNameType) hb_parni(2) ) );
+    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  {
+      RQSTRING( QDate::longMonthName ( PINT(1), (QDate::MonthNameType) hb_parni(2) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 //[1]QString longMonthName ( int month )
@@ -538,19 +582,33 @@ HB_FUNC_STATIC( QDATE_LONGMONTHNAME )
 }
 
 /*
-QString shortDayName ( int weekday )
+static QString shortDayName ( int weekday )
 */
 HB_FUNC_STATIC( QDATE_SHORTDAYNAME1 )
 {
-  RQSTRING( QDate::shortDayName ( PINT(1) ) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+  {
+      RQSTRING( QDate::shortDayName ( PINT(1) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
-QString shortDayName ( int weekday, MonthNameType type )
+static QString shortDayName ( int weekday, MonthNameType type )
 */
 HB_FUNC_STATIC( QDATE_SHORTDAYNAME2 )
 {
-  RQSTRING( QDate::shortDayName ( PINT(1), (QDate::MonthNameType) hb_parni(2) ) );
+    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  {
+      RQSTRING( QDate::shortDayName ( PINT(1), (QDate::MonthNameType) hb_parni(2) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 //[1]QString shortDayName ( int weekday )
@@ -569,19 +627,33 @@ HB_FUNC_STATIC( QDATE_SHORTDAYNAME )
 }
 
 /*
-QString shortMonthName ( int month )
+static QString shortMonthName ( int month )
 */
 HB_FUNC_STATIC( QDATE_SHORTMONTHNAME1 )
 {
-  RQSTRING( QDate::shortMonthName ( PINT(1) ) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+  {
+      RQSTRING( QDate::shortMonthName ( PINT(1) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
-QString shortMonthName ( int month, MonthNameType type )
+static QString shortMonthName ( int month, MonthNameType type )
 */
 HB_FUNC_STATIC( QDATE_SHORTMONTHNAME2 )
 {
-  RQSTRING( QDate::shortMonthName ( PINT(1), (QDate::MonthNameType) hb_parni(2) ) );
+    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  {
+      RQSTRING( QDate::shortMonthName ( PINT(1), (QDate::MonthNameType) hb_parni(2) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 //[1]QString shortMonthName ( int month )

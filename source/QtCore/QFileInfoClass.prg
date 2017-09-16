@@ -211,9 +211,17 @@ QString absoluteFilePath() const
 HB_FUNC_STATIC( QFILEINFO_ABSOLUTEFILEPATH )
 {
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->absoluteFilePath () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->absoluteFilePath () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -223,9 +231,17 @@ QString absolutePath() const
 HB_FUNC_STATIC( QFILEINFO_ABSOLUTEPATH )
 {
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->absolutePath () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->absolutePath () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -235,9 +251,17 @@ QString baseName() const
 HB_FUNC_STATIC( QFILEINFO_BASENAME )
 {
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->baseName () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->baseName () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -247,9 +271,17 @@ QString bundleName() const
 HB_FUNC_STATIC( QFILEINFO_BUNDLENAME )
 {
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->bundleName () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->bundleName () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -271,9 +303,17 @@ QString canonicalFilePath() const
 HB_FUNC_STATIC( QFILEINFO_CANONICALFILEPATH )
 {
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->canonicalFilePath () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->canonicalFilePath () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -283,9 +323,17 @@ QString canonicalPath() const
 HB_FUNC_STATIC( QFILEINFO_CANONICALPATH )
 {
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->canonicalPath () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->canonicalPath () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -295,9 +343,17 @@ QString completeBaseName() const
 HB_FUNC_STATIC( QFILEINFO_COMPLETEBASENAME )
 {
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->completeBaseName () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->completeBaseName () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -307,9 +363,17 @@ QString completeSuffix() const
 HB_FUNC_STATIC( QFILEINFO_COMPLETESUFFIX )
 {
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->completeSuffix () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->completeSuffix () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -357,9 +421,17 @@ QString fileName() const
 HB_FUNC_STATIC( QFILEINFO_FILENAME )
 {
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->fileName () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->fileName () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -369,9 +441,17 @@ QString filePath() const
 HB_FUNC_STATIC( QFILEINFO_FILEPATH )
 {
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->filePath () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->filePath () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -381,9 +461,17 @@ QString group() const
 HB_FUNC_STATIC( QFILEINFO_GROUP )
 {
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->group () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->group () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -575,9 +663,17 @@ QString owner() const
 HB_FUNC_STATIC( QFILEINFO_OWNER )
 {
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->owner () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->owner () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -599,9 +695,17 @@ QString path() const
 HB_FUNC_STATIC( QFILEINFO_PATH )
 {
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->path () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->path () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -732,9 +836,17 @@ QString suffix() const
 HB_FUNC_STATIC( QFILEINFO_SUFFIX )
 {
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->suffix () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->suffix () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -744,9 +856,17 @@ QString symLinkTarget() const
 HB_FUNC_STATIC( QFILEINFO_SYMLINKTARGET )
 {
   QFileInfo * obj = (QFileInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->symLinkTarget () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->symLinkTarget () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

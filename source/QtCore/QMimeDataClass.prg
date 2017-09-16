@@ -217,9 +217,17 @@ QString html () const
 HB_FUNC_STATIC( QMIMEDATA_HTML )
 {
   QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->html () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->html () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -341,9 +349,17 @@ QString text () const
 HB_FUNC_STATIC( QMIMEDATA_TEXT )
 {
   QMimeData * obj = (QMimeData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->text () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->text () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

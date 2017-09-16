@@ -295,9 +295,17 @@ QString authority () const
 HB_FUNC_STATIC( QURL_AUTHORITY )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->authority () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->authority () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -411,9 +419,17 @@ QString errorString () const
 HB_FUNC_STATIC( QURL_ERRORSTRING )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->errorString () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->errorString () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -423,9 +439,17 @@ QString fragment () const
 HB_FUNC_STATIC( QURL_FRAGMENT )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->fragment () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->fragment () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -483,9 +507,17 @@ QString host () const
 HB_FUNC_STATIC( QURL_HOST )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->host () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->host () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -555,9 +587,17 @@ QString password () const
 HB_FUNC_STATIC( QURL_PASSWORD )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->password () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->password () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -567,9 +607,17 @@ QString path () const
 HB_FUNC_STATIC( QURL_PATH )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->path () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->path () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -618,9 +666,17 @@ QString queryItemValue ( const QString & key ) const
 HB_FUNC_STATIC( QURL_QUERYITEMVALUE )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->queryItemValue ( PQSTRING(1) ) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      RQSTRING( obj->queryItemValue ( PQSTRING(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -695,9 +751,17 @@ QString scheme () const
 HB_FUNC_STATIC( QURL_SCHEME )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->scheme () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->scheme () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -1028,9 +1092,17 @@ QString toLocalFile () const
 HB_FUNC_STATIC( QURL_TOLOCALFILE )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->toLocalFile () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->toLocalFile () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -1040,9 +1112,17 @@ QString toString ( FormattingOptions options = None ) const
 HB_FUNC_STATIC( QURL_TOSTRING )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->toString ( ISNIL(1)? QUrl::None : (QUrl::FormattingOptions) hb_parni(1) ) );
+    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    {
+      RQSTRING( obj->toString ( ISNIL(1)? (QUrl::FormattingOptions) QUrl::None : (QUrl::FormattingOptions) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -1052,9 +1132,17 @@ QString topLevelDomain () const
 HB_FUNC_STATIC( QURL_TOPLEVELDOMAIN )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->topLevelDomain () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->topLevelDomain () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -1064,9 +1152,17 @@ QString userInfo () const
 HB_FUNC_STATIC( QURL_USERINFO )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->userInfo () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->userInfo () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -1076,37 +1172,65 @@ QString userName () const
 HB_FUNC_STATIC( QURL_USERNAME )
 {
   QUrl * obj = (QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->userName () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->userName () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
 /*
-QString fromAce ( const QByteArray & domain )
+static QString fromAce ( const QByteArray & domain )
 */
 HB_FUNC_STATIC( QURL_FROMACE )
 {
-  RQSTRING( QUrl::fromAce ( *PQBYTEARRAY(1) ) );
+    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+  {
+      RQSTRING( QUrl::fromAce ( *PQBYTEARRAY(1) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
-QUrl fromEncoded ( const QByteArray & input )
+static QUrl fromEncoded ( const QByteArray & input )
 */
 HB_FUNC_STATIC( QURL_FROMENCODED1 )
 {
-  QUrl * ptr = new QUrl( QUrl::fromEncoded ( *PQBYTEARRAY(1) ) );
-  _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+  {
+      QUrl * ptr = new QUrl( QUrl::fromEncoded ( *PQBYTEARRAY(1) ) );
+      _qt4xhb_createReturnClass ( ptr, "QURL", true );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
-QUrl fromEncoded ( const QByteArray & input, ParsingMode parsingMode )
+static QUrl fromEncoded ( const QByteArray & input, ParsingMode parsingMode )
 */
 HB_FUNC_STATIC( QURL_FROMENCODED2 )
 {
-  int par2 = hb_parni(2);
-  QUrl * ptr = new QUrl( QUrl::fromEncoded ( *PQBYTEARRAY(1), (QUrl::ParsingMode) par2 ) );
-  _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISNUM(2) )
+  {
+      QUrl * ptr = new QUrl( QUrl::fromEncoded ( *PQBYTEARRAY(1), (QUrl::ParsingMode) hb_parni(2) ) );
+      _qt4xhb_createReturnClass ( ptr, "QURL", true );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 //[1]QUrl fromEncoded ( const QByteArray & input )
@@ -1125,7 +1249,7 @@ HB_FUNC_STATIC( QURL_FROMENCODED )
 }
 
 /*
-QUrl fromLocalFile ( const QString & localFile )
+static QUrl fromLocalFile ( const QString & localFile )
 */
 HB_FUNC_STATIC( QURL_FROMLOCALFILE )
 {
@@ -1134,15 +1258,22 @@ HB_FUNC_STATIC( QURL_FROMLOCALFILE )
 }
 
 /*
-QString fromPercentEncoding ( const QByteArray & input )
+static QString fromPercentEncoding ( const QByteArray & input )
 */
 HB_FUNC_STATIC( QURL_FROMPERCENTENCODING )
 {
-  RQSTRING( QUrl::fromPercentEncoding ( *PQBYTEARRAY(1) ) );
+    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+  {
+      RQSTRING( QUrl::fromPercentEncoding ( *PQBYTEARRAY(1) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
-QUrl fromUserInput ( const QString & userInput )
+static QUrl fromUserInput ( const QString & userInput )
 */
 HB_FUNC_STATIC( QURL_FROMUSERINPUT )
 {
@@ -1151,7 +1282,7 @@ HB_FUNC_STATIC( QURL_FROMUSERINPUT )
 }
 
 /*
-QStringList idnWhitelist ()
+static QStringList idnWhitelist ()
 */
 HB_FUNC_STATIC( QURL_IDNWHITELIST )
 {
@@ -1159,7 +1290,7 @@ HB_FUNC_STATIC( QURL_IDNWHITELIST )
 }
 
 /*
-void setIdnWhitelist ( const QStringList & list )
+static void setIdnWhitelist ( const QStringList & list )
 */
 HB_FUNC_STATIC( QURL_SETIDNWHITELIST )
 {
@@ -1168,7 +1299,7 @@ HB_FUNC_STATIC( QURL_SETIDNWHITELIST )
 }
 
 /*
-QByteArray toAce ( const QString & domain )
+static QByteArray toAce ( const QString & domain )
 */
 HB_FUNC_STATIC( QURL_TOACE )
 {
@@ -1177,7 +1308,7 @@ HB_FUNC_STATIC( QURL_TOACE )
 }
 
 /*
-QByteArray toPercentEncoding ( const QString & input, const QByteArray & exclude = QByteArray(), const QByteArray & include = QByteArray() )
+static QByteArray toPercentEncoding ( const QString & input, const QByteArray & exclude = QByteArray(), const QByteArray & include = QByteArray() )
 */
 HB_FUNC_STATIC( QURL_TOPERCENTENCODING )
 {

@@ -263,9 +263,17 @@ virtual QString fileName ( FileName file ) const
 HB_FUNC_STATIC( QFSFILEENGINE_FILENAME )
 {
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->fileName ( (QAbstractFileEngine::FileName) hb_parni(1) ) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      RQSTRING( obj->fileName ( (QAbstractFileEngine::FileName) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -360,9 +368,17 @@ virtual QString owner ( FileOwner own ) const
 HB_FUNC_STATIC( QFSFILEENGINE_OWNER )
 {
   QFSFileEngine * obj = (QFSFileEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->owner ( (QAbstractFileEngine::FileOwner) hb_parni(1) ) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      RQSTRING( obj->owner ( (QAbstractFileEngine::FileOwner) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -538,7 +554,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_WRITE )
 }
 
 /*
-QString currentPath ( const QString & fileName = QString() )
+static QString currentPath ( const QString & fileName = QString() )
 */
 HB_FUNC_STATIC( QFSFILEENGINE_CURRENTPATH )
 {
@@ -585,19 +601,33 @@ HB_FUNC_STATIC( QFSFILEENGINE_DRIVES )
 }
 
 /*
-QString homePath ()
+static QString homePath ()
 */
 HB_FUNC_STATIC( QFSFILEENGINE_HOMEPATH )
 {
-  RQSTRING( QFSFileEngine::homePath () );
+    if( ISNUMPAR(0) )
+  {
+      RQSTRING( QFSFileEngine::homePath () );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
-QString rootPath ()
+static QString rootPath ()
 */
 HB_FUNC_STATIC( QFSFILEENGINE_ROOTPATH )
 {
-  RQSTRING( QFSFileEngine::rootPath () );
+    if( ISNUMPAR(0) )
+  {
+      RQSTRING( QFSFileEngine::rootPath () );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -609,11 +639,18 @@ HB_FUNC_STATIC( QFSFILEENGINE_SETCURRENTPATH )
 }
 
 /*
-QString tempPath ()
+static QString tempPath ()
 */
 HB_FUNC_STATIC( QFSFILEENGINE_TEMPPATH )
 {
-  RQSTRING( QFSFileEngine::tempPath () );
+    if( ISNUMPAR(0) )
+  {
+      RQSTRING( QFSFileEngine::tempPath () );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 #pragma ENDDUMP
