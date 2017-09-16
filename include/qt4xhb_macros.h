@@ -1360,6 +1360,7 @@
 #define OPQSTATE(n,v)                                       ISNIL(n)? v : (QState *) hb_itemGetPtr( hb_objSendMsg( hb_param(n, HB_IT_OBJECT ), "POINTER", 0 ) )
 #define OPQDECLARATIVEITEM(n,v)                             ISNIL(n)? v : (QDeclarativeItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(n, HB_IT_OBJECT ), "POINTER", 0 ) )
 #define OPQDECLARATIVEENGINE(n,v)                           ISNIL(n)? v : (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_param(n, HB_IT_OBJECT ), "POINTER", 0 ) )
+#define OPQEXTENSIONMANAGER(n,v)                            ISNIL(n)? v : (QExtensionManager *) hb_itemGetPtr( hb_objSendMsg( hb_param(n, HB_IT_OBJECT ), "POINTER", 0 ) )
 
 // macros for parameters
 #define PBOOL(n)                                            (bool) hb_parl(n)
