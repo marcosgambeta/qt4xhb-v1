@@ -18,11 +18,13 @@ CLASS QAbstractFormBuilder
    METHOD save
    METHOD setWorkingDirectory
    METHOD workingDirectory
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

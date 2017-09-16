@@ -14,6 +14,7 @@ CLASS QDesignerActionEditorInterface INHERIT QWidget
    METHOD core
    METHOD manageAction
    METHOD setFormWindow
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -25,11 +25,13 @@ CLASS QDesignerCustomWidgetInterface
    METHOD name
    METHOD toolTip
    METHOD whatsThis
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

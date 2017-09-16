@@ -29,6 +29,7 @@ CLASS QDesignerFormEditorInterface INHERIT QObject
    METHOD setWidgetBox
    METHOD topLevel
    METHOD widgetBox
+
    DESTRUCTOR destroyObject
 
 END CLASS

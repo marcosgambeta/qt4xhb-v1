@@ -15,6 +15,7 @@ CLASS QExtensionManager INHERIT QObject,QAbstractExtensionManager
    METHOD extension
    METHOD registerExtensions
    METHOD unregisterExtensions
+
    DESTRUCTOR destroyObject
 
 END CLASS

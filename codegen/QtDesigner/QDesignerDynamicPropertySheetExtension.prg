@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QDesignerDynamicPropertySheetExtension
 
    DATA pointer
@@ -14,11 +13,13 @@ CLASS QDesignerDynamicPropertySheetExtension
    METHOD dynamicPropertiesAllowed
    METHOD isDynamicProperty
    METHOD removeDynamicProperty
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

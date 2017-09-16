@@ -59,6 +59,7 @@ CLASS QDesignerFormWindowInterface INHERIT QWidget
    METHOD findFormWindow1
    METHOD findFormWindow2
    METHOD findFormWindow
+
    METHOD onSelectionChanged
    METHOD onActivated
    METHOD onChanged
@@ -70,6 +71,7 @@ CLASS QDesignerFormWindowInterface INHERIT QWidget
    METHOD onWidgetManaged
    METHOD onWidgetRemoved
    METHOD onWidgetUnmanaged
+
    DESTRUCTOR destroyObject
 
 END CLASS

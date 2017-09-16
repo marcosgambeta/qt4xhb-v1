@@ -26,11 +26,13 @@ CLASS QDesignerMemberSheetExtension
    METHOD setMemberGroup
    METHOD setVisible
    METHOD signature
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

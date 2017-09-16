@@ -24,11 +24,13 @@ CLASS QDesignerFormWindowCursorInterface
    METHOD setPosition
    METHOD widget
    METHOD widgetCount
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

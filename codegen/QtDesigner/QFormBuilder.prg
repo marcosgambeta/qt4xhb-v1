@@ -17,6 +17,7 @@ CLASS QFormBuilder INHERIT QAbstractFormBuilder
    METHOD customWidgets
    METHOD pluginPaths
    METHOD setPluginPath
+
    DESTRUCTOR destroyObject
 
 END CLASS

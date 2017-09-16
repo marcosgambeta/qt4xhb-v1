@@ -27,11 +27,13 @@ CLASS QDesignerPropertySheetExtension
    METHOD setProperty
    METHOD setPropertyGroup
    METHOD setVisible
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

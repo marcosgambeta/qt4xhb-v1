@@ -19,7 +19,9 @@ CLASS QDesignerPropertyEditorInterface INHERIT QWidget
    METHOD setObject
    METHOD setPropertyValue
    METHOD setReadOnly
+
    METHOD onPropertyChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

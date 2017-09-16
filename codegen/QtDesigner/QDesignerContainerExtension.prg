@@ -19,11 +19,13 @@ CLASS QDesignerContainerExtension
    METHOD remove
    METHOD setCurrentIndex
    METHOD widget
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

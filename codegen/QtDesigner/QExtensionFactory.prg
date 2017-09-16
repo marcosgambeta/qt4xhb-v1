@@ -15,6 +15,7 @@ CLASS QExtensionFactory INHERIT QObject,QAbstractExtensionFactory
    METHOD delete
    METHOD extensionManager
    METHOD extension
+
    DESTRUCTOR destroyObject
 
 END CLASS

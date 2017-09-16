@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QDesignerWidgetBoxInterface INHERIT QWidget
 
    DATA self_destruction INIT .F.
@@ -12,6 +11,7 @@ CLASS QDesignerWidgetBoxInterface INHERIT QWidget
    METHOD load
    METHOD save
    METHOD setFileName
+
    DESTRUCTOR destroyObject
 
 END CLASS

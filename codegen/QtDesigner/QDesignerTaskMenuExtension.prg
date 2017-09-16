@@ -14,11 +14,13 @@ CLASS QDesignerTaskMenuExtension
    METHOD delete
    METHOD preferredEditAction
    METHOD taskActions
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

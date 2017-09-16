@@ -13,6 +13,7 @@ CLASS QDesignerObjectInspectorInterface INHERIT QWidget
    METHOD delete
    METHOD core
    METHOD setFormWindow
+
    DESTRUCTOR destroyObject
 
 END CLASS
