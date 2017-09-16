@@ -218,10 +218,17 @@ QString toString ( SequenceFormat format = PortableText ) const
 HB_FUNC_STATIC( QKEYSEQUENCE_TOSTRING )
 {
   QKeySequence * obj = (QKeySequence *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    int par1 = ISNIL(1)? (int) QKeySequence::PortableText : hb_parni(1);
-    RQSTRING( obj->toString ( (QKeySequence::SequenceFormat) par1 ) );
+    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    {
+      RQSTRING( obj->toString ( ISNIL(1)? (QKeySequence::SequenceFormat) QKeySequence::PortableText : (QKeySequence::SequenceFormat) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

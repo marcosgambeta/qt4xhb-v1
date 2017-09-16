@@ -307,9 +307,17 @@ QString detailedText () const
 HB_FUNC_STATIC( QMESSAGEBOX_DETAILEDTEXT )
 {
   QMessageBox * obj = (QMessageBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->detailedText () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->detailedText () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -357,9 +365,17 @@ QString informativeText () const
 HB_FUNC_STATIC( QMESSAGEBOX_INFORMATIVETEXT )
 {
   QMessageBox * obj = (QMessageBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->informativeText () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->informativeText () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -628,9 +644,17 @@ QString text () const
 HB_FUNC_STATIC( QMESSAGEBOX_TEXT )
 {
   QMessageBox * obj = (QMessageBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->text () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->text () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

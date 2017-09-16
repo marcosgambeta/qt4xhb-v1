@@ -190,9 +190,17 @@ QString defaultSuffix () const
 HB_FUNC_STATIC( QFILEDIALOG_DEFAULTSUFFIX )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->defaultSuffix () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->defaultSuffix () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -301,9 +309,17 @@ QString labelText ( DialogLabel label ) const
 HB_FUNC_STATIC( QFILEDIALOG_LABELTEXT )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->labelText ( (QFileDialog::DialogLabel) hb_parni(1) ) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      RQSTRING( obj->labelText ( (QFileDialog::DialogLabel) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -438,9 +454,17 @@ QString selectedNameFilter () const
 HB_FUNC_STATIC( QFILEDIALOG_SELECTEDNAMEFILTER )
 {
   QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->selectedNameFilter () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->selectedNameFilter () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

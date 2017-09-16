@@ -218,9 +218,17 @@ QString creator () const
 HB_FUNC_STATIC( QPRINTER_CREATOR )
 {
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->creator () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->creator () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -230,9 +238,17 @@ QString docName () const
 HB_FUNC_STATIC( QPRINTER_DOCNAME )
 {
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->docName () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->docName () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -338,9 +354,17 @@ QString outputFileName () const
 HB_FUNC_STATIC( QPRINTER_OUTPUTFILENAME )
 {
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->outputFileName () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->outputFileName () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -524,9 +548,17 @@ QString printProgram () const
 HB_FUNC_STATIC( QPRINTER_PRINTPROGRAM )
 {
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->printProgram () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->printProgram () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -548,9 +580,17 @@ QString printerName () const
 HB_FUNC_STATIC( QPRINTER_PRINTERNAME )
 {
   QPrinter * obj = (QPrinter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->printerName () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->printerName () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

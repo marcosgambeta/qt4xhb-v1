@@ -230,9 +230,17 @@ QString styleString ( const QFont & font )
 HB_FUNC_STATIC( QFONTDATABASE_STYLESTRING1 )
 {
   QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->styleString ( *PQFONT(1) ) );
+    if( ISNUMPAR(1) && ISQFONT(1) )
+    {
+      RQSTRING( obj->styleString ( *PQFONT(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -242,9 +250,17 @@ QString styleString ( const QFontInfo & fontInfo )
 HB_FUNC_STATIC( QFONTDATABASE_STYLESTRING2 )
 {
   QFontDatabase * obj = (QFontDatabase *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->styleString ( *PQFONTINFO(1) ) );
+    if( ISNUMPAR(1) && ISQFONTINFO(1) )
+    {
+      RQSTRING( obj->styleString ( *PQFONTINFO(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -413,19 +429,33 @@ HB_FUNC_STATIC( QFONTDATABASE_SUPPORTSTHREADEDFONTRENDERING )
 }
 
 /*
-QString writingSystemName ( WritingSystem writingSystem )
+static QString writingSystemName ( WritingSystem writingSystem )
 */
 HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMNAME )
 {
-  RQSTRING( QFontDatabase::writingSystemName ( (QFontDatabase::WritingSystem) hb_parni(1) ) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+  {
+      RQSTRING( QFontDatabase::writingSystemName ( (QFontDatabase::WritingSystem) hb_parni(1) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
-QString writingSystemSample ( WritingSystem writingSystem )
+static QString writingSystemSample ( WritingSystem writingSystem )
 */
 HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMSAMPLE )
 {
-  RQSTRING( QFontDatabase::writingSystemSample ( (QFontDatabase::WritingSystem) hb_parni(1) ) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+  {
+      RQSTRING( QFontDatabase::writingSystemSample ( (QFontDatabase::WritingSystem) hb_parni(1) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QFONTDATABASE_NEWFROM )

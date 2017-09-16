@@ -160,9 +160,17 @@ virtual QString identifierName () = 0
 HB_FUNC_STATIC( QINPUTCONTEXT_IDENTIFIERNAME )
 {
   QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->identifierName () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->identifierName () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -184,9 +192,17 @@ virtual QString language () = 0
 HB_FUNC_STATIC( QINPUTCONTEXT_LANGUAGE )
 {
   QInputContext * obj = (QInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->language () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->language () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

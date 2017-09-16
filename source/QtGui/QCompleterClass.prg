@@ -216,9 +216,17 @@ QString completionPrefix () const
 HB_FUNC_STATIC( QCOMPLETER_COMPLETIONPREFIX )
 {
   QCompleter * obj = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->completionPrefix () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->completionPrefix () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -240,9 +248,17 @@ QString currentCompletion () const
 HB_FUNC_STATIC( QCOMPLETER_CURRENTCOMPLETION )
 {
   QCompleter * obj = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->currentCompletion () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->currentCompletion () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -314,9 +330,17 @@ virtual QString pathFromIndex ( const QModelIndex & index ) const
 HB_FUNC_STATIC( QCOMPLETER_PATHFROMINDEX )
 {
   QCompleter * obj = (QCompleter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->pathFromIndex ( *PQMODELINDEX(1) ) );
+    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    {
+      RQSTRING( obj->pathFromIndex ( *PQMODELINDEX(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

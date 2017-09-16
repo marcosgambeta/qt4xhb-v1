@@ -154,9 +154,17 @@ QString fileName ( const QModelIndex & index ) const
 HB_FUNC_STATIC( QFILESYSTEMMODEL_FILENAME )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->fileName ( *PQMODELINDEX(1) ) );
+    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    {
+      RQSTRING( obj->fileName ( *PQMODELINDEX(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -166,9 +174,17 @@ QString filePath ( const QModelIndex & index ) const
 HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEPATH )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->filePath ( *PQMODELINDEX(1) ) );
+    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    {
+      RQSTRING( obj->filePath ( *PQMODELINDEX(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -364,9 +380,17 @@ QString rootPath () const
 HB_FUNC_STATIC( QFILESYSTEMMODEL_ROOTPATH )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->rootPath () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->rootPath () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -481,9 +505,17 @@ QString type ( const QModelIndex & index ) const
 HB_FUNC_STATIC( QFILESYSTEMMODEL_TYPE )
 {
   QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->type ( *PQMODELINDEX(1) ) );
+    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    {
+      RQSTRING( obj->type ( *PQMODELINDEX(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

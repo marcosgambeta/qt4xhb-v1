@@ -122,9 +122,17 @@ virtual QString type(const QFileInfo & info) const
 HB_FUNC_STATIC( QFILEICONPROVIDER_TYPE )
 {
   QFileIconProvider * obj = (QFileIconProvider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->type ( *PQFILEINFO(1) ) );
+    if( ISNUMPAR(1) && ISQFILEINFO(1) )
+    {
+      RQSTRING( obj->type ( *PQFILEINFO(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

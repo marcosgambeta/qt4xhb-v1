@@ -308,9 +308,17 @@ QString name () const
 HB_FUNC_STATIC( QICON_NAME )
 {
   QIcon * obj = (QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->name () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->name () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -467,11 +475,18 @@ HB_FUNC_STATIC( QICON_SETTHEMESEARCHPATHS )
 }
 
 /*
-QString themeName ()
+static QString themeName ()
 */
 HB_FUNC_STATIC( QICON_THEMENAME )
 {
-  RQSTRING( QIcon::themeName () );
+    if( ISNUMPAR(0) )
+  {
+      RQSTRING( QIcon::themeName () );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*

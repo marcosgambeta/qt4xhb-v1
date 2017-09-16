@@ -124,9 +124,17 @@ QString cancelButtonText () const
 HB_FUNC_STATIC( QINPUTDIALOG_CANCELBUTTONTEXT )
 {
   QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->cancelButtonText () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->cancelButtonText () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -268,9 +276,17 @@ QString labelText () const
 HB_FUNC_STATIC( QINPUTDIALOG_LABELTEXT )
 {
   QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->labelText () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->labelText () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -280,9 +296,17 @@ QString okButtonText () const
 HB_FUNC_STATIC( QINPUTDIALOG_OKBUTTONTEXT )
 {
   QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->okButtonText () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->okButtonText () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -606,9 +630,17 @@ QString textValue () const
 HB_FUNC_STATIC( QINPUTDIALOG_TEXTVALUE )
 {
   QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->textValue () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->textValue () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

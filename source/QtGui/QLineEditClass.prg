@@ -327,9 +327,17 @@ QString displayText () const
 HB_FUNC_STATIC( QLINEEDIT_DISPLAYTEXT )
 {
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->displayText () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->displayText () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -446,9 +454,17 @@ QString inputMask () const
 HB_FUNC_STATIC( QLINEEDIT_INPUTMASK )
 {
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->inputMask () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->inputMask () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -531,9 +547,17 @@ QString placeholderText () const
 HB_FUNC_STATIC( QLINEEDIT_PLACEHOLDERTEXT )
 {
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->placeholderText () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->placeholderText () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -556,9 +580,17 @@ QString selectedText () const
 HB_FUNC_STATIC( QLINEEDIT_SELECTEDTEXT )
 {
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->selectedText () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->selectedText () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -807,9 +839,17 @@ QString text () const
 HB_FUNC_STATIC( QLINEEDIT_TEXT )
 {
   QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->text () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->text () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

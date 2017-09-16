@@ -181,9 +181,17 @@ QString redoText () const
 HB_FUNC_STATIC( QUNDOGROUP_REDOTEXT )
 {
   QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->redoText () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->redoText () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -250,9 +258,17 @@ QString undoText () const
 HB_FUNC_STATIC( QUNDOGROUP_UNDOTEXT )
 {
   QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->undoText () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->undoText () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

@@ -129,9 +129,17 @@ QString iconName ()
 HB_FUNC_STATIC( QICONENGINEV2_ICONNAME )
 {
   QIconEngineV2 * obj = (QIconEngineV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->iconName () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->iconName () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -141,9 +149,17 @@ virtual QString key () const
 HB_FUNC_STATIC( QICONENGINEV2_KEY )
 {
   QIconEngineV2 * obj = (QIconEngineV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->key () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->key () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

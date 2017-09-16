@@ -98,9 +98,17 @@ QString numberPrefix () const
 HB_FUNC_STATIC( QTEXTLISTFORMAT_NUMBERPREFIX )
 {
   QTextListFormat * obj = (QTextListFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->numberPrefix () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->numberPrefix () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -110,9 +118,17 @@ QString numberSuffix () const
 HB_FUNC_STATIC( QTEXTLISTFORMAT_NUMBERSUFFIX )
 {
   QTextListFormat * obj = (QTextListFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->numberSuffix () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->numberSuffix () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

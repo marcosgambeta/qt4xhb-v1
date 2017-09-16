@@ -80,9 +80,17 @@ virtual QString displayText ( const QVariant & value, const QLocale & locale ) c
 HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_DISPLAYTEXT )
 {
   QStyledItemDelegate * obj = (QStyledItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->displayText ( *PQVARIANT(1), *PQLOCALE(2) ) );
+    if( ISNUMPAR(2) && ISQVARIANT(1) && ISQLOCALE(2) )
+    {
+      RQSTRING( obj->displayText ( *PQVARIANT(1), *PQLOCALE(2) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

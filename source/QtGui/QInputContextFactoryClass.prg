@@ -75,19 +75,33 @@ HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_CREATE )
 }
 
 /*
-QString description ( const QString & key )
+static QString description ( const QString & key )
 */
 HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_DESCRIPTION )
 {
-  RQSTRING( QInputContextFactory::description ( PQSTRING(1) ) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+  {
+      RQSTRING( QInputContextFactory::description ( PQSTRING(1) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
-QString displayName ( const QString & key )
+static QString displayName ( const QString & key )
 */
 HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_DISPLAYNAME )
 {
-  RQSTRING( QInputContextFactory::displayName ( PQSTRING(1) ) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+  {
+      RQSTRING( QInputContextFactory::displayName ( PQSTRING(1) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*

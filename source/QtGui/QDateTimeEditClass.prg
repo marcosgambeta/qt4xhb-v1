@@ -338,9 +338,17 @@ QString displayFormat () const
 HB_FUNC_STATIC( QDATETIMEEDIT_DISPLAYFORMAT )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->displayFormat () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->displayFormat () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -464,9 +472,17 @@ QString sectionText ( Section section ) const
 HB_FUNC_STATIC( QDATETIMEEDIT_SECTIONTEXT )
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->sectionText ( (QDateTimeEdit::Section) hb_parni(1) ) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      RQSTRING( obj->sectionText ( (QDateTimeEdit::Section) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

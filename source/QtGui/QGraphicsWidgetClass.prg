@@ -791,9 +791,17 @@ QString windowTitle () const
 HB_FUNC_STATIC( QGRAPHICSWIDGET_WINDOWTITLE )
 {
   QGraphicsWidget * obj = (QGraphicsWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->windowTitle () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->windowTitle () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

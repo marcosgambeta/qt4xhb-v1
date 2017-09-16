@@ -253,9 +253,17 @@ QString text() const
 HB_FUNC_STATIC( QSTANDARDITEM_TEXT )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->text () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->text () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -305,9 +313,17 @@ QString toolTip() const
 HB_FUNC_STATIC( QSTANDARDITEM_TOOLTIP )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->toolTip () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->toolTip () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -330,9 +346,17 @@ QString statusTip() const
 HB_FUNC_STATIC( QSTANDARDITEM_STATUSTIP )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->statusTip () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->statusTip () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -355,9 +379,17 @@ QString whatsThis() const
 HB_FUNC_STATIC( QSTANDARDITEM_WHATSTHIS )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->whatsThis () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->whatsThis () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -536,9 +568,17 @@ QString accessibleText() const
 HB_FUNC_STATIC( QSTANDARDITEM_ACCESSIBLETEXT )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->accessibleText () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->accessibleText () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -561,9 +601,17 @@ QString accessibleDescription() const
 HB_FUNC_STATIC( QSTANDARDITEM_ACCESSIBLEDESCRIPTION )
 {
   QStandardItem * obj = (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->accessibleDescription () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->accessibleDescription () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

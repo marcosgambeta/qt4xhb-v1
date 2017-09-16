@@ -70,9 +70,17 @@ QString buttonText ( QWizard::WizardButton which ) const
 HB_FUNC_STATIC( QWIZARDPAGE_BUTTONTEXT )
 {
   QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->buttonText ( (QWizard::WizardButton) hb_parni(1) ) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      RQSTRING( obj->buttonText ( (QWizard::WizardButton) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -250,9 +258,17 @@ QString subTitle () const
 HB_FUNC_STATIC( QWIZARDPAGE_SUBTITLE )
 {
   QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->subTitle () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->subTitle () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -262,9 +278,17 @@ QString title () const
 HB_FUNC_STATIC( QWIZARDPAGE_TITLE )
 {
   QWizardPage * obj = (QWizardPage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->title () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->title () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

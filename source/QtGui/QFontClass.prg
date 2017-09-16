@@ -220,9 +220,17 @@ QString defaultFamily () const
 HB_FUNC_STATIC( QFONT_DEFAULTFAMILY )
 {
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->defaultFamily () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->defaultFamily () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -244,9 +252,17 @@ QString family () const
 HB_FUNC_STATIC( QFONT_FAMILY )
 {
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->family () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->family () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -316,9 +332,17 @@ QString key () const
 HB_FUNC_STATIC( QFONT_KEY )
 {
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->key () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->key () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -328,9 +352,17 @@ QString lastResortFamily () const
 HB_FUNC_STATIC( QFONT_LASTRESORTFAMILY )
 {
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->lastResortFamily () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->lastResortFamily () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -340,9 +372,17 @@ QString lastResortFont () const
 HB_FUNC_STATIC( QFONT_LASTRESORTFONT )
 {
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->lastResortFont () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->lastResortFont () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -436,9 +476,17 @@ QString rawName () const
 HB_FUNC_STATIC( QFONT_RAWNAME )
 {
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->rawName () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->rawName () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -800,9 +848,17 @@ QString toString () const
 HB_FUNC_STATIC( QFONT_TOSTRING )
 {
   QFont * obj = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->toString () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->toString () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -870,11 +926,18 @@ HB_FUNC_STATIC( QFONT_REMOVESUBSTITUTION )
 }
 
 /*
-QString substitute ( const QString & familyName )
+static QString substitute ( const QString & familyName )
 */
 HB_FUNC_STATIC( QFONT_SUBSTITUTE )
 {
-  RQSTRING( QFont::substitute ( PQSTRING(1) ) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+  {
+      RQSTRING( QFont::substitute ( PQSTRING(1) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*

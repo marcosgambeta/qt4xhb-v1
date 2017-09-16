@@ -545,9 +545,17 @@ QString statusTip () const
 HB_FUNC_STATIC( QLISTWIDGETITEM_STATUSTIP )
 {
   QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->statusTip () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->statusTip () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -557,9 +565,17 @@ QString text () const
 HB_FUNC_STATIC( QLISTWIDGETITEM_TEXT )
 {
   QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->text () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->text () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -581,9 +597,17 @@ QString toolTip () const
 HB_FUNC_STATIC( QLISTWIDGETITEM_TOOLTIP )
 {
   QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->toolTip () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->toolTip () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -605,9 +629,17 @@ QString whatsThis () const
 HB_FUNC_STATIC( QLISTWIDGETITEM_WHATSTHIS )
 {
   QListWidgetItem * obj = (QListWidgetItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->whatsThis () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->whatsThis () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

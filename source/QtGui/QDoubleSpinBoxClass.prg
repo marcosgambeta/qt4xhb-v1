@@ -70,9 +70,17 @@ QString cleanText () const
 HB_FUNC_STATIC( QDOUBLESPINBOX_CLEANTEXT )
 {
   QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->cleanText () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->cleanText () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -118,9 +126,17 @@ QString prefix () const
 HB_FUNC_STATIC( QDOUBLESPINBOX_PREFIX )
 {
   QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->prefix () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->prefix () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -233,9 +249,17 @@ QString suffix () const
 HB_FUNC_STATIC( QDOUBLESPINBOX_SUFFIX )
 {
   QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->suffix () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->suffix () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -245,9 +269,17 @@ virtual QString textFromValue ( double value ) const
 HB_FUNC_STATIC( QDOUBLESPINBOX_TEXTFROMVALUE )
 {
   QDoubleSpinBox * obj = (QDoubleSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->textFromValue ( PDOUBLE(1) ) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      RQSTRING( obj->textFromValue ( PDOUBLE(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

@@ -165,9 +165,17 @@ QString sessionId () const
 HB_FUNC_STATIC( QSESSIONMANAGER_SESSIONID )
 {
   QSessionManager * obj = (QSessionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->sessionId () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->sessionId () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -177,9 +185,17 @@ QString sessionKey () const
 HB_FUNC_STATIC( QSESSIONMANAGER_SESSIONKEY )
 {
   QSessionManager * obj = (QSessionManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->sessionKey () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->sessionKey () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

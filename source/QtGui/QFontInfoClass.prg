@@ -139,9 +139,17 @@ QString family () const
 HB_FUNC_STATIC( QFONTINFO_FAMILY )
 {
   QFontInfo * obj = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->family () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->family () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -247,9 +255,17 @@ QString styleName () const
 HB_FUNC_STATIC( QFONTINFO_STYLENAME )
 {
   QFontInfo * obj = (QFontInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->styleName () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->styleName () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

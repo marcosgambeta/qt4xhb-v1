@@ -173,9 +173,17 @@ QString anchorAt ( const QPoint & pos ) const
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ANCHORAT )
 {
   QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->anchorAt ( *PQPOINT(1) ) );
+    if( ISNUMPAR(1) && ISQPOINT(1) )
+    {
+      RQSTRING( obj->anchorAt ( *PQPOINT(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -338,9 +346,17 @@ QString documentTitle () const
 HB_FUNC_STATIC( QPLAINTEXTEDIT_DOCUMENTTITLE )
 {
   QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->documentTitle () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->documentTitle () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -752,9 +768,17 @@ QString toPlainText () const
 HB_FUNC_STATIC( QPLAINTEXTEDIT_TOPLAINTEXT )
 {
   QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->toPlainText () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->toPlainText () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
