@@ -226,9 +226,17 @@ QString peerHostName () const
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_PEERHOSTNAME )
 {
   QNetworkProxyQuery * obj = (QNetworkProxyQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->peerHostName () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->peerHostName () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -250,9 +258,17 @@ QString protocolTag () const
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_PROTOCOLTAG )
 {
   QNetworkProxyQuery * obj = (QNetworkProxyQuery *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->protocolTag () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->protocolTag () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

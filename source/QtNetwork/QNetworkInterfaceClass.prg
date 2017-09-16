@@ -176,9 +176,17 @@ QString hardwareAddress () const
 HB_FUNC_STATIC( QNETWORKINTERFACE_HARDWAREADDRESS )
 {
   QNetworkInterface * obj = (QNetworkInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->hardwareAddress () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->hardwareAddress () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -188,9 +196,17 @@ QString humanReadableName () const
 HB_FUNC_STATIC( QNETWORKINTERFACE_HUMANREADABLENAME )
 {
   QNetworkInterface * obj = (QNetworkInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->humanReadableName () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->humanReadableName () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -224,9 +240,17 @@ QString name () const
 HB_FUNC_STATIC( QNETWORKINTERFACE_NAME )
 {
   QNetworkInterface * obj = (QNetworkInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->name () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->name () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

@@ -152,9 +152,17 @@ QString password () const
 HB_FUNC_STATIC( QAUTHENTICATOR_PASSWORD )
 {
   QAuthenticator * obj = (QAuthenticator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->password () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->password () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -164,9 +172,17 @@ QString realm () const
 HB_FUNC_STATIC( QAUTHENTICATOR_REALM )
 {
   QAuthenticator * obj = (QAuthenticator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->realm () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->realm () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -215,9 +231,17 @@ QString user () const
 HB_FUNC_STATIC( QAUTHENTICATOR_USER )
 {
   QAuthenticator * obj = (QAuthenticator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->user () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->user () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

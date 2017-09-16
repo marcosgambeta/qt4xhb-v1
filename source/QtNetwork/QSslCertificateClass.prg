@@ -223,9 +223,17 @@ QString issuerInfo ( SubjectInfo subject ) const
 HB_FUNC_STATIC( QSSLCERTIFICATE_ISSUERINFO1 )
 {
   QSslCertificate * obj = (QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->issuerInfo ( (QSslCertificate::SubjectInfo) hb_parni(1) ) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      RQSTRING( obj->issuerInfo ( (QSslCertificate::SubjectInfo) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -235,9 +243,17 @@ QString issuerInfo ( const QByteArray & tag ) const
 HB_FUNC_STATIC( QSSLCERTIFICATE_ISSUERINFO2 )
 {
   QSslCertificate * obj = (QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->issuerInfo ( *PQBYTEARRAY(1) ) );
+    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+    {
+      RQSTRING( obj->issuerInfo ( *PQBYTEARRAY(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -273,9 +289,17 @@ QString subjectInfo ( SubjectInfo subject ) const
 HB_FUNC_STATIC( QSSLCERTIFICATE_SUBJECTINFO1 )
 {
   QSslCertificate * obj = (QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->subjectInfo ( (QSslCertificate::SubjectInfo) hb_parni(1) ) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      RQSTRING( obj->subjectInfo ( (QSslCertificate::SubjectInfo) hb_parni(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -285,9 +309,17 @@ QString subjectInfo ( const QByteArray & tag ) const
 HB_FUNC_STATIC( QSSLCERTIFICATE_SUBJECTINFO2 )
 {
   QSslCertificate * obj = (QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->subjectInfo ( *PQBYTEARRAY(1) ) );
+    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+    {
+      RQSTRING( obj->subjectInfo ( *PQBYTEARRAY(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

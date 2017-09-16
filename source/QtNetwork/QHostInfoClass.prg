@@ -183,9 +183,17 @@ QString errorString () const
 HB_FUNC_STATIC( QHOSTINFO_ERRORSTRING )
 {
   QHostInfo * obj = (QHostInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->errorString () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->errorString () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -195,9 +203,17 @@ QString hostName () const
 HB_FUNC_STATIC( QHOSTINFO_HOSTNAME )
 {
   QHostInfo * obj = (QHostInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->hostName () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->hostName () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -306,23 +322,37 @@ HB_FUNC_STATIC( QHOSTINFO_FROMNAME )
 }
 
 /*
-QString localDomainName ()
+static QString localDomainName ()
 */
 HB_FUNC_STATIC( QHOSTINFO_LOCALDOMAINNAME )
 {
-  RQSTRING( QHostInfo::localDomainName () );
+    if( ISNUMPAR(0) )
+  {
+      RQSTRING( QHostInfo::localDomainName () );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
-QString localHostName ()
+static QString localHostName ()
 */
 HB_FUNC_STATIC( QHOSTINFO_LOCALHOSTNAME )
 {
-  RQSTRING( QHostInfo::localHostName () );
+    if( ISNUMPAR(0) )
+  {
+      RQSTRING( QHostInfo::localHostName () );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
-int lookupHost ( const QString & name, QObject * receiver, const char * member )
+static int lookupHost ( const QString & name, QObject * receiver, const char * member )
 */
 HB_FUNC_STATIC( QHOSTINFO_LOOKUPHOST )
 {

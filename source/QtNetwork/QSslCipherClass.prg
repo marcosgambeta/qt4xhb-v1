@@ -124,9 +124,17 @@ QString authenticationMethod () const
 HB_FUNC_STATIC( QSSLCIPHER_AUTHENTICATIONMETHOD )
 {
   QSslCipher * obj = (QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->authenticationMethod () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->authenticationMethod () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -136,9 +144,17 @@ QString encryptionMethod () const
 HB_FUNC_STATIC( QSSLCIPHER_ENCRYPTIONMETHOD )
 {
   QSslCipher * obj = (QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->encryptionMethod () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->encryptionMethod () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -160,9 +176,17 @@ QString keyExchangeMethod () const
 HB_FUNC_STATIC( QSSLCIPHER_KEYEXCHANGEMETHOD )
 {
   QSslCipher * obj = (QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->keyExchangeMethod () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->keyExchangeMethod () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -172,9 +196,17 @@ QString name () const
 HB_FUNC_STATIC( QSSLCIPHER_NAME )
 {
   QSslCipher * obj = (QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->name () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->name () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -196,9 +228,17 @@ QString protocolString () const
 HB_FUNC_STATIC( QSSLCIPHER_PROTOCOLSTRING )
 {
   QSslCipher * obj = (QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->protocolString () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->protocolString () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

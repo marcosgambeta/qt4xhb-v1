@@ -163,9 +163,17 @@ QString group () const
 HB_FUNC_STATIC( QURLINFO_GROUP )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->group () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->group () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -285,9 +293,17 @@ QString name () const
 HB_FUNC_STATIC( QURLINFO_NAME )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->name () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->name () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -297,9 +313,17 @@ QString owner () const
 HB_FUNC_STATIC( QURLINFO_OWNER )
 {
   QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->owner () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->owner () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

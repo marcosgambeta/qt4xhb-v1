@@ -115,9 +115,17 @@ QString bearerName () const (deprecated)
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERNAME )
 {
   QNetworkConfiguration * obj = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->bearerName () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->bearerName () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -139,9 +147,17 @@ QString bearerTypeName () const
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERTYPENAME )
 {
   QNetworkConfiguration * obj = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->bearerTypeName () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->bearerTypeName () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -198,9 +214,17 @@ QString identifier () const
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_IDENTIFIER )
 {
   QNetworkConfiguration * obj = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->identifier () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->identifier () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -234,9 +258,17 @@ QString name () const
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_NAME )
 {
   QNetworkConfiguration * obj = (QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRING( obj->name () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->name () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
