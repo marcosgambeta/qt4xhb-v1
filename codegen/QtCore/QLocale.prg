@@ -322,7 +322,14 @@ $method=|QString|quoteString,quoteString2|const QStringRef &,QLocale::QuotationS
 
 HB_FUNC_STATIC( QLOCALE_QUOTESTRING )
 {
-  HB_FUNC_EXEC( QLOCALE_QUOTESTRING1 );
+  if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
+  {
+    HB_FUNC_EXEC( QLOCALE_QUOTESTRING1 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -433,6 +440,10 @@ HB_FUNC_STATIC( QLOCALE_TODATE )
   {
     HB_FUNC_EXEC( QLOCALE_TODATE2 );
   }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -461,6 +472,10 @@ HB_FUNC_STATIC( QLOCALE_TODATETIME )
   else if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
   {
     HB_FUNC_EXEC( QLOCALE_TODATETIME2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -611,6 +626,10 @@ HB_FUNC_STATIC( QLOCALE_TOTIME )
   else if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
   {
     HB_FUNC_EXEC( QLOCALE_TOTIME2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 

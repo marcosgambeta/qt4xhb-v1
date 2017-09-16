@@ -90,7 +90,15 @@ $method=|const QByteArray &|buffer,buffer2|
 
 HB_FUNC_STATIC( QBUFFER_BUFFER )
 {
-  HB_FUNC_EXEC( QBUFFER_BUFFER1 );
+  if( ISNUMPAR(0) )
+  {
+    HB_FUNC_EXEC( QBUFFER_BUFFER1 );
+  }  
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+
 }
 
 /*
@@ -125,6 +133,10 @@ HB_FUNC_STATIC( QBUFFER_SETDATA )
   else if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
   {
     HB_FUNC_EXEC( QBUFFER_SETDATA2 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
