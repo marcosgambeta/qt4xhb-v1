@@ -44,6 +44,13 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
+#include <QDesignerActionEditorInterface>
+#include <QExtensionManager>
+#include <QDesignerFormWindowManagerInterface>
+#include <QDesignerObjectInspectorInterface>
+#include <QDesignerPropertyEditorInterface>
+#include <QDesignerWidgetBoxInterface>
+
 /*
 QDesignerFormEditorInterface ( QObject * parent = 0 )
 */
