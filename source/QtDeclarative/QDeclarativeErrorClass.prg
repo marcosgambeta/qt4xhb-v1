@@ -31,11 +31,13 @@ CLASS QDeclarativeError
    METHOD setUrl
    METHOD toString
    METHOD url
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -60,7 +62,7 @@ QDeclarativeError ()
 HB_FUNC_STATIC( QDECLARATIVEERROR_NEW1 )
 {
   QDeclarativeError * o = new QDeclarativeError ();
-  _qt4xhb_storePointerAndFlag ( o, false );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -69,7 +71,7 @@ QDeclarativeError ( const QDeclarativeError & other )
 HB_FUNC_STATIC( QDECLARATIVEERROR_NEW2 )
 {
   QDeclarativeError * o = new QDeclarativeError ( *PQDECLARATIVEERROR(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 //[1]QDeclarativeError ()
@@ -114,9 +116,17 @@ int column () const
 HB_FUNC_STATIC( QDECLARATIVEERROR_COLUMN )
 {
   QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RINT( obj->column () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->column () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -146,9 +156,17 @@ bool isValid () const
 HB_FUNC_STATIC( QDECLARATIVEERROR_ISVALID )
 {
   QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isValid () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isValid () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -158,9 +176,17 @@ int line () const
 HB_FUNC_STATIC( QDECLARATIVEERROR_LINE )
 {
   QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RINT( obj->line () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->line () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -170,10 +196,19 @@ void setColumn ( int column )
 HB_FUNC_STATIC( QDECLARATIVEERROR_SETCOLUMN )
 {
   QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setColumn ( PINT(1) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      obj->setColumn ( PINT(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -183,10 +218,19 @@ void setDescription ( const QString & description )
 HB_FUNC_STATIC( QDECLARATIVEERROR_SETDESCRIPTION )
 {
   QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setDescription ( PQSTRING(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      obj->setDescription ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -196,10 +240,19 @@ void setLine ( int line )
 HB_FUNC_STATIC( QDECLARATIVEERROR_SETLINE )
 {
   QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setLine ( PINT(1) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      obj->setLine ( PINT(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -209,10 +262,19 @@ void setUrl ( const QUrl & url )
 HB_FUNC_STATIC( QDECLARATIVEERROR_SETURL )
 {
   QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setUrl ( *PQURL(1) );
+    if( ISNUMPAR(1) && ISQURL(1) )
+    {
+      obj->setUrl ( *PQURL(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -242,10 +304,18 @@ QUrl url () const
 HB_FUNC_STATIC( QDECLARATIVEERROR_URL )
 {
   QDeclarativeError * obj = (QDeclarativeError *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->url () );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    if( ISNUMPAR(0) )
+    {
+      QUrl * ptr = new QUrl( obj->url () );
+      _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

@@ -19,11 +19,13 @@ CLASS QDeclarativeNetworkAccessManagerFactory
 
    METHOD delete
    METHOD create
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -41,6 +43,8 @@ RETURN
 #include "qt4xhb_common.h"
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
+
+#include <QNetworkAccessManager>
 
 HB_FUNC_STATIC( QDECLARATIVENETWORKACCESSMANAGERFACTORY_DELETE )
 {
@@ -65,10 +69,18 @@ virtual QNetworkAccessManager * create ( QObject * parent ) = 0
 HB_FUNC_STATIC( QDECLARATIVENETWORKACCESSMANAGERFACTORY_CREATE )
 {
   QDeclarativeNetworkAccessManagerFactory * obj = (QDeclarativeNetworkAccessManagerFactory *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QNetworkAccessManager * ptr = obj->create ( PQOBJECT(1) );
-    _qt4xhb_createReturnClass ( ptr, "QNETWORKACCESSMANAGER" );
+    if( ISNUMPAR(1) && ISQOBJECT(1) )
+    {
+      QNetworkAccessManager * ptr = obj->create ( PQOBJECT(1) );
+      _qt4xhb_createReturnQObjectClass ( ptr, "QNETWORKACCESSMANAGER" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

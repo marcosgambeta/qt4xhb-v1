@@ -35,8 +35,10 @@ CLASS QDeclarativeView INHERIT QGraphicsView
    METHOD setSource
    METHOD source
    METHOD status
+
    METHOD onSceneResized
    METHOD onStatusChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -56,6 +58,9 @@ RETURN
 #include "qt4xhb_utils.h"
 
 #include <QDeclarativeError>
+#include <QDeclarativeEngine>
+#include <QDeclarativeContext>
+#include <QGraphicsObject>
 
 /*
 QDeclarativeView ( QWidget * parent = 0 )
@@ -63,7 +68,7 @@ QDeclarativeView ( QWidget * parent = 0 )
 HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW1 )
 {
   QDeclarativeView * o = new QDeclarativeView ( OPQWIDGET(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
+  _qt4xhb_storePointerAndFlag( o, false );
 }
 
 /*
@@ -72,7 +77,7 @@ QDeclarativeView ( const QUrl & source, QWidget * parent = 0 )
 HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW2 )
 {
   QDeclarativeView * o = new QDeclarativeView ( *PQURL(1), OPQWIDGET(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
+  _qt4xhb_storePointerAndFlag( o, false );
 }
 
 //[1]QDeclarativeView ( QWidget * parent = 0 )
@@ -117,10 +122,18 @@ QDeclarativeEngine * engine () const
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ENGINE )
 {
   QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QDeclarativeEngine * ptr = obj->engine ();
-    _qt4xhb_createReturnClass ( ptr, "QDECLARATIVEENGINE" );
+    if( ISNUMPAR(0) )
+    {
+      QDeclarativeEngine * ptr = obj->engine ();
+      _qt4xhb_createReturnQObjectClass ( ptr, "QDECLARATIVEENGINE" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -173,10 +186,18 @@ QSize initialSize () const
 HB_FUNC_STATIC( QDECLARATIVEVIEW_INITIALSIZE )
 {
   QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QSize * ptr = new QSize( obj->initialSize () );
-    _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    if( ISNUMPAR(0) )
+    {
+      QSize * ptr = new QSize( obj->initialSize () );
+      _qt4xhb_createReturnClass ( ptr, "QSIZE", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -186,9 +207,17 @@ ResizeMode resizeMode () const
 HB_FUNC_STATIC( QDECLARATIVEVIEW_RESIZEMODE )
 {
   QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    hb_retni( (int) obj->resizeMode () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->resizeMode () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -198,10 +227,18 @@ QDeclarativeContext * rootContext () const
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTCONTEXT )
 {
   QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QDeclarativeContext * ptr = obj->rootContext ();
-    _qt4xhb_createReturnClass ( ptr, "QDECLARATIVECONTEXT" );
+    if( ISNUMPAR(0) )
+    {
+      QDeclarativeContext * ptr = obj->rootContext ();
+      _qt4xhb_createReturnQObjectClass ( ptr, "QDECLARATIVECONTEXT" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -211,10 +248,18 @@ QGraphicsObject * rootObject () const
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTOBJECT )
 {
   QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QGraphicsObject * ptr = obj->rootObject ();
-    _qt4xhb_createReturnClass ( ptr, "QGRAPHICSOBJECT" );
+    if( ISNUMPAR(0) )
+    {
+      QGraphicsObject * ptr = obj->rootObject ();
+      _qt4xhb_createReturnQObjectClass ( ptr, "QGRAPHICSOBJECT" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -224,10 +269,19 @@ void setResizeMode ( ResizeMode )
 HB_FUNC_STATIC( QDECLARATIVEVIEW_SETRESIZEMODE )
 {
   QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setResizeMode ( (QDeclarativeView::ResizeMode) hb_parni(1) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      obj->setResizeMode ( (QDeclarativeView::ResizeMode) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -237,10 +291,19 @@ void setSource ( const QUrl & url )
 HB_FUNC_STATIC( QDECLARATIVEVIEW_SETSOURCE )
 {
   QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setSource ( *PQURL(1) );
+    if( ISNUMPAR(1) && ISQURL(1) )
+    {
+      obj->setSource ( *PQURL(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -250,10 +313,18 @@ QUrl source () const
 HB_FUNC_STATIC( QDECLARATIVEVIEW_SOURCE )
 {
   QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->source () );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    if( ISNUMPAR(0) )
+    {
+      QUrl * ptr = new QUrl( obj->source () );
+      _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -263,9 +334,17 @@ Status status () const
 HB_FUNC_STATIC( QDECLARATIVEVIEW_STATUS )
 {
   QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    hb_retni( (int) obj->status () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->status () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

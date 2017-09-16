@@ -15,11 +15,13 @@ CLASS QDeclarativePropertyValueSource
 
    METHOD delete
    METHOD setTarget
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -61,10 +63,19 @@ virtual void setTarget ( const QDeclarativeProperty & property ) = 0
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYVALUESOURCE_SETTARGET )
 {
   QDeclarativePropertyValueSource * obj = (QDeclarativePropertyValueSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setTarget ( *PQDECLARATIVEPROPERTY(1) );
+    if( ISNUMPAR(1) && ISQDECLARATIVEPROPERTY(1) )
+    {
+      obj->setTarget ( *PQDECLARATIVEPROPERTY(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

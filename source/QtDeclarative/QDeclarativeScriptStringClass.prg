@@ -27,11 +27,13 @@ CLASS QDeclarativeScriptString
    METHOD setContext
    METHOD setScopeObject
    METHOD setScript
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -50,13 +52,15 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
+#include <QDeclarativeContext>
+
 /*
 QDeclarativeScriptString ()
 */
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEW1 )
 {
   QDeclarativeScriptString * o = new QDeclarativeScriptString ();
-  _qt4xhb_storePointerAndFlag ( o, false );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -65,7 +69,7 @@ QDeclarativeScriptString ( const QDeclarativeScriptString & other )
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEW2 )
 {
   QDeclarativeScriptString * o = new QDeclarativeScriptString ( *PQDECLARATIVESCRIPTSTRING(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 //[1]QDeclarativeScriptString ()
@@ -93,10 +97,18 @@ QDeclarativeContext * context () const
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_CONTEXT )
 {
   QDeclarativeScriptString * obj = (QDeclarativeScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QDeclarativeContext * ptr = obj->context ();
-    _qt4xhb_createReturnClass ( ptr, "QDECLARATIVECONTEXT" );
+    if( ISNUMPAR(0) )
+    {
+      QDeclarativeContext * ptr = obj->context ();
+      _qt4xhb_createReturnQObjectClass ( ptr, "QDECLARATIVECONTEXT" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -106,10 +118,18 @@ QObject * scopeObject () const
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SCOPEOBJECT )
 {
   QDeclarativeScriptString * obj = (QDeclarativeScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QObject * ptr = obj->scopeObject ();
-    _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+    if( ISNUMPAR(0) )
+    {
+      QObject * ptr = obj->scopeObject ();
+      _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -139,11 +159,19 @@ void setContext ( QDeclarativeContext * context )
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SETCONTEXT )
 {
   QDeclarativeScriptString * obj = (QDeclarativeScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QDeclarativeContext * par1 = (QDeclarativeContext *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setContext ( par1 );
+    if( ISNUMPAR(1) && ISQDECLARATIVECONTEXT(1) )
+    {
+      obj->setContext ( PQDECLARATIVECONTEXT(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -153,10 +181,19 @@ void setScopeObject ( QObject * object )
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SETSCOPEOBJECT )
 {
   QDeclarativeScriptString * obj = (QDeclarativeScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setScopeObject ( PQOBJECT(1) );
+    if( ISNUMPAR(1) && ISQOBJECT(1) )
+    {
+      obj->setScopeObject ( PQOBJECT(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -166,10 +203,19 @@ void setScript ( const QString & script )
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SETSCRIPT )
 {
   QDeclarativeScriptString * obj = (QDeclarativeScriptString *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->setScript ( PQSTRING(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      obj->setScript ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

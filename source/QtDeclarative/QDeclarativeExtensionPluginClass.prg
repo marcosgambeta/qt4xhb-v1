@@ -14,6 +14,7 @@ CLASS QDeclarativeExtensionPlugin INHERIT QObject
 
    METHOD initializeEngine
    METHOD registerTypes
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -38,11 +39,19 @@ virtual void initializeEngine ( QDeclarativeEngine * engine, const char * uri )
 HB_FUNC_STATIC( QDECLARATIVEEXTENSIONPLUGIN_INITIALIZEENGINE )
 {
   QDeclarativeExtensionPlugin * obj = (QDeclarativeExtensionPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QDeclarativeEngine * par1 = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->initializeEngine ( par1, (const char *) hb_parc(2) );
+    if( ISNUMPAR(2) && ISQDECLARATIVEENGINE(1) && ISCHAR(2) )
+    {
+      obj->initializeEngine ( PQDECLARATIVEENGINE(1), PCONSTCHAR(2) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -52,10 +61,19 @@ virtual void registerTypes ( const char * uri ) = 0
 HB_FUNC_STATIC( QDECLARATIVEEXTENSIONPLUGIN_REGISTERTYPES )
 {
   QDeclarativeExtensionPlugin * obj = (QDeclarativeExtensionPlugin *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->registerTypes ( (const char *) hb_parc(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      obj->registerTypes ( PCONSTCHAR(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
