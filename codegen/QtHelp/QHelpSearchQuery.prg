@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QHelpSearchQuery
 
    DATA pointer
@@ -11,11 +10,13 @@ CLASS QHelpSearchQuery
    METHOD new1
    METHOD new2
    METHOD new
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

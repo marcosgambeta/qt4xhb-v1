@@ -13,7 +13,9 @@ CLASS QHelpSearchQueryWidget INHERIT QWidget
    METHOD new
    METHOD delete
    METHOD query
+
    METHOD onSearch
+
    DESTRUCTOR destroyObject
 
 END CLASS

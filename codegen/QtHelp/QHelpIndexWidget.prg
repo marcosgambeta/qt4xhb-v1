@@ -2,14 +2,15 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QHelpIndexWidget INHERIT QListView
 
    DATA self_destruction INIT .F.
 
    METHOD activateCurrentItem
    METHOD filterIndices
+
    METHOD onLinkActivated
+
    DESTRUCTOR destroyObject
 
 END CLASS

@@ -21,8 +21,10 @@ CLASS QHelpContentModel INHERIT QAbstractItemModel
    METHOD index
    METHOD parent
    METHOD rowCount
+
    METHOD onContentsCreated
    METHOD onContentsCreationStarted
+
    DESTRUCTOR destroyObject
 
 END CLASS

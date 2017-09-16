@@ -11,7 +11,9 @@ CLASS QHelpContentWidget INHERIT QTreeView
    DATA self_destruction INIT .F.
 
    METHOD indexOf
+
    METHOD onLinkActivated
+
    DESTRUCTOR destroyObject
 
 END CLASS

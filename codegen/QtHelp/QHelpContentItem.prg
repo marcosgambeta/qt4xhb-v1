@@ -20,11 +20,13 @@ CLASS QHelpContentItem
    METHOD row
    METHOD title
    METHOD url
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

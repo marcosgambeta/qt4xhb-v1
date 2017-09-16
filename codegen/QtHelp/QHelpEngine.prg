@@ -21,6 +21,7 @@ CLASS QHelpEngine INHERIT QHelpEngineCore
    METHOD indexModel
    METHOD indexWidget
    METHOD searchEngine
+
    DESTRUCTOR destroyObject
 
 END CLASS

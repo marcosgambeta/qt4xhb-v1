@@ -22,10 +22,12 @@ CLASS QHelpSearchEngine INHERIT QObject
    METHOD cancelSearching
    METHOD reindexDocumentation
    METHOD search
+
    METHOD onIndexingFinished
    METHOD onIndexingStarted
    METHOD onSearchingFinished
    METHOD onSearchingStarted
+
    DESTRUCTOR destroyObject
 
 END CLASS
