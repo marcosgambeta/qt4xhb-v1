@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QSslCipher
 
    DATA pointer
@@ -22,11 +21,13 @@ CLASS QSslCipher
    METHOD protocolString
    METHOD supportedBits
    METHOD usedBits
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

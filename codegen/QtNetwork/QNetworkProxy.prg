@@ -32,11 +32,13 @@ CLASS QNetworkProxy
    METHOD user
    METHOD applicationProxy
    METHOD setApplicationProxy
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

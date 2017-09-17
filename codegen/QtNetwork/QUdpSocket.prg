@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QUdpSocket INHERIT QAbstractSocket
 
    DATA self_destruction INIT .F.
@@ -20,6 +19,7 @@ CLASS QUdpSocket INHERIT QAbstractSocket
    METHOD writeDatagram1
    METHOD writeDatagram2
    METHOD writeDatagram
+
    DESTRUCTOR destroyObject
 
 END CLASS

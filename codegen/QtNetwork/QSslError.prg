@@ -20,11 +20,13 @@ CLASS QSslError
    METHOD certificate
    METHOD error
    METHOD errorString
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

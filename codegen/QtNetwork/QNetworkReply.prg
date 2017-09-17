@@ -37,12 +37,14 @@ CLASS QNetworkReply INHERIT QIODevice
    METHOD sslConfiguration
    METHOD url
    METHOD close
+
    METHOD onDownloadProgress
    METHOD onError
    METHOD onFinished
    METHOD onMetaDataChanged
    METHOD onSslErrors
    METHOD onUploadProgress
+
    DESTRUCTOR destroyObject
 
 END CLASS

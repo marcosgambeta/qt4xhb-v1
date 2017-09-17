@@ -20,6 +20,7 @@ CLASS QAbstractNetworkCache INHERIT QObject
    METHOD remove
    METHOD updateMetaData
    METHOD clear
+
    DESTRUCTOR destroyObject
 
 END CLASS

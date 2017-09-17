@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QLocalSocket INHERIT QIODevice
 
    DATA self_destruction INIT .F.
@@ -29,10 +28,12 @@ CLASS QLocalSocket INHERIT QIODevice
    METHOD isSequential
    METHOD waitForBytesWritten
    METHOD waitForReadyRead
+
    METHOD onConnected
    METHOD onDisconnected
    METHOD onError
    METHOD onStateChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

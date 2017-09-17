@@ -26,6 +26,7 @@ CLASS QNetworkDiskCache INHERIT QAbstractNetworkCache
    METHOD remove
    METHOD updateMetaData
    METHOD clear
+
    DESTRUCTOR destroyObject
 
 END CLASS

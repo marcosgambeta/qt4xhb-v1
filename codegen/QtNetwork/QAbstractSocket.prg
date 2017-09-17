@@ -46,12 +46,14 @@ CLASS QAbstractSocket INHERIT QIODevice
    METHOD isSequential
    METHOD waitForBytesWritten
    METHOD waitForReadyRead
+
    METHOD onConnected
    METHOD onDisconnected
    METHOD onError
    METHOD onHostFound
    METHOD onProxyAuthenticationRequired
    METHOD onStateChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

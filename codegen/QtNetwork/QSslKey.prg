@@ -24,11 +24,13 @@ CLASS QSslKey
    METHOD toDer
    METHOD toPem
    METHOD type
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

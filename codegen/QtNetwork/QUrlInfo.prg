@@ -46,11 +46,13 @@ CLASS QUrlInfo
    METHOD equal
    METHOD greaterThan
    METHOD lessThan
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

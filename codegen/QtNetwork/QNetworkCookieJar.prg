@@ -14,6 +14,7 @@ CLASS QNetworkCookieJar INHERIT QObject
    METHOD delete
    METHOD cookiesForUrl
    METHOD setCookiesFromUrl
+
    DESTRUCTOR destroyObject
 
 END CLASS

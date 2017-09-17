@@ -41,6 +41,7 @@ CLASS QFtp INHERIT QObject
    METHOD setTransferMode
    METHOD state
    METHOD abort
+
    METHOD onCommandFinished
    METHOD onCommandStarted
    METHOD onDataTransferProgress
@@ -49,6 +50,7 @@ CLASS QFtp INHERIT QObject
    METHOD onRawCommandReply
    METHOD onReadyRead
    METHOD onStateChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS

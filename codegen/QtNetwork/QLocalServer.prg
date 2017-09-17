@@ -25,7 +25,9 @@ CLASS QLocalServer INHERIT QObject
    METHOD setMaxPendingConnections
    METHOD waitForNewConnection
    METHOD removeServer
+
    METHOD onNewConnection
+
    DESTRUCTOR destroyObject
 
 END CLASS
