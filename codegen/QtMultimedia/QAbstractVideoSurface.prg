@@ -46,95 +46,37 @@ $deleteMethod
 /*
 Error error () const
 */
-HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ERROR )
-{
-  QAbstractVideoSurface * obj = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->error () );
-  }
-}
-
+$method=|QAbstractVideoSurface::Error|error|
 
 /*
 bool isActive () const
 */
-HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ISACTIVE )
-{
-  QAbstractVideoSurface * obj = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isActive () );
-  }
-}
-
+$method=|bool|isActive|
 
 /*
 virtual bool isFormatSupported ( const QVideoSurfaceFormat & format ) const
 */
-HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ISFORMATSUPPORTED )
-{
-  QAbstractVideoSurface * obj = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isFormatSupported ( *PQVIDEOSURFACEFORMAT(1) ) );
-  }
-}
-
+$virtualMethod=|bool|isFormatSupported|const QVideoSurfaceFormat &
 
 /*
 virtual QVideoSurfaceFormat nearestFormat ( const QVideoSurfaceFormat & format ) const
 */
-HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_NEARESTFORMAT )
-{
-  QAbstractVideoSurface * obj = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVideoSurfaceFormat * ptr = new QVideoSurfaceFormat( obj->nearestFormat ( *PQVIDEOSURFACEFORMAT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QVIDEOSURFACEFORMAT", true );
-  }
-}
-
+$virtualMethod=|QVideoSurfaceFormat|nearestFormat|const QVideoSurfaceFormat &
 
 /*
 virtual bool present ( const QVideoFrame & frame ) = 0
 */
-HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_PRESENT )
-{
-  QAbstractVideoSurface * obj = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->present ( *PQVIDEOFRAME(1) ) );
-  }
-}
-
+$virtualMethod=|bool|present|const QVideoFrame &
 
 /*
 virtual bool start ( const QVideoSurfaceFormat & format )
 */
-HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_START )
-{
-  QAbstractVideoSurface * obj = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->start ( *PQVIDEOSURFACEFORMAT(1) ) );
-  }
-}
-
+$virtualMethod=|bool|start|const QVideoSurfaceFormat &
 
 /*
 virtual void stop ()
 */
-HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_STOP )
-{
-  QAbstractVideoSurface * obj = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->stop ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|stop|
 
 /*
 virtual QList<QVideoFrame::PixelFormat> supportedPixelFormats ( QAbstractVideoBuffer::HandleType type = QAbstractVideoBuffer::NoHandle ) const = 0
@@ -158,23 +100,9 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_SUPPORTEDPIXELFORMATS )
   }
 }
 
-
 /*
 QVideoSurfaceFormat surfaceFormat () const
 */
-HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_SURFACEFORMAT )
-{
-  QAbstractVideoSurface * obj = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVideoSurfaceFormat * ptr = new QVideoSurfaceFormat( obj->surfaceFormat () );
-    _qt4xhb_createReturnClass ( ptr, "QVIDEOSURFACEFORMAT", true );
-  }
-}
-
-
-
-
-
+$method=|QVideoSurfaceFormat|surfaceFormat|
 
 #pragma ENDDUMP
