@@ -14,7 +14,9 @@ CLASS QHelpIndexWidget INHERIT QListView
 
    METHOD activateCurrentItem
    METHOD filterIndices
+
    METHOD onLinkActivated
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -39,10 +41,19 @@ void activateCurrentItem ()
 HB_FUNC_STATIC( QHELPINDEXWIDGET_ACTIVATECURRENTITEM )
 {
   QHelpIndexWidget * obj = (QHelpIndexWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->activateCurrentItem ();
+    if( ISNUMPAR(0) )
+    {
+      obj->activateCurrentItem ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -52,10 +63,19 @@ void filterIndices ( const QString & filter, const QString & wildcard = QString(
 HB_FUNC_STATIC( QHELPINDEXWIDGET_FILTERINDICES )
 {
   QHelpIndexWidget * obj = (QHelpIndexWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->filterIndices ( PQSTRING(1), OPQSTRING(2,QString()) );
+    if( ISNUMPAR(2) && ISCHAR(1) && ISOPTCHAR(2) )
+    {
+      obj->filterIndices ( PQSTRING(1), OPQSTRING(2,QString()) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

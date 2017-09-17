@@ -26,11 +26,13 @@ CLASS QHelpContentItem
    METHOD row
    METHOD title
    METHOD url
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -74,10 +76,18 @@ QHelpContentItem * child ( int row ) const
 HB_FUNC_STATIC( QHELPCONTENTITEM_CHILD )
 {
   QHelpContentItem * obj = (QHelpContentItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QHelpContentItem * ptr = obj->child ( PINT(1) );
-    _qt4xhb_createReturnClass ( ptr, "QHELPCONTENTITEM" );
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      QHelpContentItem * ptr = obj->child ( PINT(1) );
+      _qt4xhb_createReturnClass ( ptr, "QHELPCONTENTITEM", false );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -87,9 +97,17 @@ int childCount () const
 HB_FUNC_STATIC( QHELPCONTENTITEM_CHILDCOUNT )
 {
   QHelpContentItem * obj = (QHelpContentItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RINT( obj->childCount () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->childCount () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -99,10 +117,17 @@ int childPosition ( QHelpContentItem * child ) const
 HB_FUNC_STATIC( QHELPCONTENTITEM_CHILDPOSITION )
 {
   QHelpContentItem * obj = (QHelpContentItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QHelpContentItem * par1 = (QHelpContentItem *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RINT( obj->childPosition ( par1 ) );
+    if( ISNUMPAR(1) && ISQHELPCONTENTITEM(1) )
+    {
+      RINT( obj->childPosition ( PQHELPCONTENTITEM(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -112,10 +137,18 @@ QHelpContentItem * parent () const
 HB_FUNC_STATIC( QHELPCONTENTITEM_PARENT )
 {
   QHelpContentItem * obj = (QHelpContentItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QHelpContentItem * ptr = obj->parent ();
-    _qt4xhb_createReturnClass ( ptr, "QHELPCONTENTITEM" );
+    if( ISNUMPAR(0) )
+    {
+      QHelpContentItem * ptr = obj->parent ();
+      _qt4xhb_createReturnClass ( ptr, "QHELPCONTENTITEM", false );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -125,9 +158,17 @@ int row () const
 HB_FUNC_STATIC( QHELPCONTENTITEM_ROW )
 {
   QHelpContentItem * obj = (QHelpContentItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RINT( obj->row () );
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->row () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -157,10 +198,18 @@ QUrl url () const
 HB_FUNC_STATIC( QHELPCONTENTITEM_URL )
 {
   QHelpContentItem * obj = (QHelpContentItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->url () );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    if( ISNUMPAR(0) )
+    {
+      QUrl * ptr = new QUrl( obj->url () );
+      _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

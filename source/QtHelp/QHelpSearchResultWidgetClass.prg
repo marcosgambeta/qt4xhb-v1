@@ -18,7 +18,9 @@ CLASS QHelpSearchResultWidget INHERIT QWidget
 
    METHOD delete
    METHOD linkAt
+
    METHOD onRequestShowLink
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -60,10 +62,18 @@ QUrl linkAt ( const QPoint & point )
 HB_FUNC_STATIC( QHELPSEARCHRESULTWIDGET_LINKAT )
 {
   QHelpSearchResultWidget * obj = (QHelpSearchResultWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->linkAt ( *PQPOINT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    if( ISNUMPAR(1) && ISQPOINT(1) )
+    {
+      QUrl * ptr = new QUrl( obj->linkAt ( *PQPOINT(1) ) );
+      _qt4xhb_createReturnClass ( ptr, "QURL", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

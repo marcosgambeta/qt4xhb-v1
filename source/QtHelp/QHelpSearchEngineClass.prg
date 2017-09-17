@@ -28,10 +28,12 @@ CLASS QHelpSearchEngine INHERIT QObject
    METHOD cancelSearching
    METHOD reindexDocumentation
    METHOD search
+
    METHOD onIndexingFinished
    METHOD onIndexingStarted
    METHOD onSearchingFinished
    METHOD onSearchingStarted
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -50,13 +52,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
+#include <QHelpSearchQueryWidget>
+#include <QHelpSearchResultWidget>
+
 /*
 QHelpSearchEngine ( QHelpEngineCore * helpEngine, QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_NEW )
 {
-  QHelpSearchEngine * o = new QHelpSearchEngine ( PQHELPENGINECORE(1), OPQOBJECT(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
+  if( ISBETWEEN(1,2) && ISQHELPENGINECORE(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  {
+    QHelpSearchEngine * o = new QHelpSearchEngine ( PQHELPENGINECORE(1), OPQOBJECT(2,0) );
+    _qt4xhb_storePointerAndFlag( o, false );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QHELPSEARCHENGINE_DELETE )
@@ -79,14 +91,6 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_DELETE )
 /*
 int hitCount () const
 */
-HB_FUNC_STATIC( QHELPSEARCHENGINE_HITCOUNT )
-{
-  QHelpSearchEngine * obj = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->hitCount () );
-  }
-}
 
 /*
 QList<QHelpSearchQuery> query () const
@@ -137,10 +141,18 @@ QHelpSearchQueryWidget * queryWidget ()
 HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERYWIDGET )
 {
   QHelpSearchEngine * obj = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QHelpSearchQueryWidget * ptr = obj->queryWidget ();
-    _qt4xhb_createReturnClass ( ptr, "QHELPSEARCHQUERYWIDGET" );
+    if( ISNUMPAR(0) )
+    {
+      QHelpSearchQueryWidget * ptr = obj->queryWidget ();
+      _qt4xhb_createReturnQObjectClass ( ptr, "QHELPSEARCHQUERYWIDGET" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -150,10 +162,18 @@ QHelpSearchResultWidget * resultWidget ()
 HB_FUNC_STATIC( QHELPSEARCHENGINE_RESULTWIDGET )
 {
   QHelpSearchEngine * obj = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QHelpSearchResultWidget * ptr = obj->resultWidget ();
-    _qt4xhb_createReturnClass ( ptr, "QHELPSEARCHRESULTWIDGET" );
+    if( ISNUMPAR(0) )
+    {
+      QHelpSearchResultWidget * ptr = obj->resultWidget ();
+      _qt4xhb_createReturnQObjectClass ( ptr, "QHELPSEARCHRESULTWIDGET" );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -163,10 +183,19 @@ void cancelIndexing ()
 HB_FUNC_STATIC( QHELPSEARCHENGINE_CANCELINDEXING )
 {
   QHelpSearchEngine * obj = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->cancelIndexing ();
+    if( ISNUMPAR(0) )
+    {
+      obj->cancelIndexing ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -176,10 +205,19 @@ void cancelSearching ()
 HB_FUNC_STATIC( QHELPSEARCHENGINE_CANCELSEARCHING )
 {
   QHelpSearchEngine * obj = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->cancelSearching ();
+    if( ISNUMPAR(0) )
+    {
+      obj->cancelSearching ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -189,10 +227,19 @@ void reindexDocumentation ()
 HB_FUNC_STATIC( QHELPSEARCHENGINE_REINDEXDOCUMENTATION )
 {
   QHelpSearchEngine * obj = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->reindexDocumentation ();
+    if( ISNUMPAR(0) )
+    {
+      obj->reindexDocumentation ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 

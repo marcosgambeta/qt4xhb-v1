@@ -19,8 +19,10 @@ CLASS QHelpIndexModel INHERIT QStringListModel
    METHOD createIndex
    METHOD filter
    METHOD isCreatingIndex
+
    METHOD onIndexCreated
    METHOD onIndexCreationStarted
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -45,10 +47,19 @@ void createIndex ( const QString & customFilterName )
 HB_FUNC_STATIC( QHELPINDEXMODEL_CREATEINDEX )
 {
   QHelpIndexModel * obj = (QHelpIndexModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->createIndex ( PQSTRING(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+      obj->createIndex ( PQSTRING(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -58,10 +69,18 @@ QModelIndex filter ( const QString & filter, const QString & wildcard = QString(
 HB_FUNC_STATIC( QHELPINDEXMODEL_FILTER )
 {
   QHelpIndexModel * obj = (QHelpIndexModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QModelIndex * ptr = new QModelIndex( obj->filter ( PQSTRING(1), OPQSTRING(2,QString()) ) );
-    _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    if( ISNUMPAR(2) && ISCHAR(1) && ISOPTCHAR(2) )
+    {
+      QModelIndex * ptr = new QModelIndex( obj->filter ( PQSTRING(1), OPQSTRING(2,QString()) ) );
+      _qt4xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -71,9 +90,17 @@ bool isCreatingIndex () const
 HB_FUNC_STATIC( QHELPINDEXMODEL_ISCREATINGINDEX )
 {
   QHelpIndexModel * obj = (QHelpIndexModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isCreatingIndex () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isCreatingIndex () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
