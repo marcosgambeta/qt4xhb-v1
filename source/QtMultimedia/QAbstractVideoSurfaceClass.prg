@@ -26,9 +26,11 @@ CLASS QAbstractVideoSurface INHERIT QObject
    METHOD stop
    METHOD supportedPixelFormats
    METHOD surfaceFormat
+
    METHOD onActiveChanged
    METHOD onSurfaceFormatChanged
    METHOD onSupportedFormatsChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -72,9 +74,17 @@ Error error () const
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ERROR )
 {
   QAbstractVideoSurface * obj = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    hb_retni( (int) obj->error () );
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->error () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -84,9 +94,17 @@ bool isActive () const
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ISACTIVE )
 {
   QAbstractVideoSurface * obj = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isActive () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isActive () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -96,9 +114,17 @@ virtual bool isFormatSupported ( const QVideoSurfaceFormat & format ) const
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ISFORMATSUPPORTED )
 {
   QAbstractVideoSurface * obj = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isFormatSupported ( *PQVIDEOSURFACEFORMAT(1) ) );
+    if( ISNUMPAR(1) && ISQVIDEOSURFACEFORMAT(1) )
+    {
+      RBOOL( obj->isFormatSupported ( *PQVIDEOSURFACEFORMAT(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -108,10 +134,18 @@ virtual QVideoSurfaceFormat nearestFormat ( const QVideoSurfaceFormat & format )
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_NEARESTFORMAT )
 {
   QAbstractVideoSurface * obj = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QVideoSurfaceFormat * ptr = new QVideoSurfaceFormat( obj->nearestFormat ( *PQVIDEOSURFACEFORMAT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QVIDEOSURFACEFORMAT", true );
+    if( ISNUMPAR(1) && ISQVIDEOSURFACEFORMAT(1) )
+    {
+      QVideoSurfaceFormat * ptr = new QVideoSurfaceFormat( obj->nearestFormat ( *PQVIDEOSURFACEFORMAT(1) ) );
+      _qt4xhb_createReturnClass ( ptr, "QVIDEOSURFACEFORMAT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -121,9 +155,17 @@ virtual bool present ( const QVideoFrame & frame ) = 0
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_PRESENT )
 {
   QAbstractVideoSurface * obj = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->present ( *PQVIDEOFRAME(1) ) );
+    if( ISNUMPAR(1) && ISQVIDEOFRAME(1) )
+    {
+      RBOOL( obj->present ( *PQVIDEOFRAME(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -133,9 +175,17 @@ virtual bool start ( const QVideoSurfaceFormat & format )
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_START )
 {
   QAbstractVideoSurface * obj = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->start ( *PQVIDEOSURFACEFORMAT(1) ) );
+    if( ISNUMPAR(1) && ISQVIDEOSURFACEFORMAT(1) )
+    {
+      RBOOL( obj->start ( *PQVIDEOSURFACEFORMAT(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -145,10 +195,19 @@ virtual void stop ()
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_STOP )
 {
   QAbstractVideoSurface * obj = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    obj->stop ();
+    if( ISNUMPAR(0) )
+    {
+      obj->stop ();
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -180,10 +239,18 @@ QVideoSurfaceFormat surfaceFormat () const
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_SURFACEFORMAT )
 {
   QAbstractVideoSurface * obj = (QAbstractVideoSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QVideoSurfaceFormat * ptr = new QVideoSurfaceFormat( obj->surfaceFormat () );
-    _qt4xhb_createReturnClass ( ptr, "QVIDEOSURFACEFORMAT", true );
+    if( ISNUMPAR(0) )
+    {
+      QVideoSurfaceFormat * ptr = new QVideoSurfaceFormat( obj->surfaceFormat () );
+      _qt4xhb_createReturnClass ( ptr, "QVIDEOSURFACEFORMAT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 

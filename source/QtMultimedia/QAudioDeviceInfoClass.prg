@@ -38,11 +38,13 @@ CLASS QAudioDeviceInfo
    METHOD availableDevices
    METHOD defaultInputDevice
    METHOD defaultOutputDevice
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -67,7 +69,7 @@ QAudioDeviceInfo ()
 HB_FUNC_STATIC( QAUDIODEVICEINFO_NEW1 )
 {
   QAudioDeviceInfo * o = new QAudioDeviceInfo ();
-  _qt4xhb_storePointerAndFlag ( o, false );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 /*
@@ -76,7 +78,7 @@ QAudioDeviceInfo ( const QAudioDeviceInfo & other )
 HB_FUNC_STATIC( QAUDIODEVICEINFO_NEW2 )
 {
   QAudioDeviceInfo * o = new QAudioDeviceInfo ( *PQAUDIODEVICEINFO(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
+  _qt4xhb_storePointerAndFlag( o, true );
 }
 
 //[1]QAudioDeviceInfo ()
@@ -141,9 +143,17 @@ bool isFormatSupported ( const QAudioFormat & settings ) const
 HB_FUNC_STATIC( QAUDIODEVICEINFO_ISFORMATSUPPORTED )
 {
   QAudioDeviceInfo * obj = (QAudioDeviceInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isFormatSupported ( *PQAUDIOFORMAT(1) ) );
+    if( ISNUMPAR(1) && ISQAUDIOFORMAT(1) )
+    {
+      RBOOL( obj->isFormatSupported ( *PQAUDIOFORMAT(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -153,9 +163,17 @@ bool isNull () const
 HB_FUNC_STATIC( QAUDIODEVICEINFO_ISNULL )
 {
   QAudioDeviceInfo * obj = (QAudioDeviceInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RBOOL( obj->isNull () );
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isNull () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -165,10 +183,18 @@ QAudioFormat nearestFormat ( const QAudioFormat & settings ) const
 HB_FUNC_STATIC( QAUDIODEVICEINFO_NEARESTFORMAT )
 {
   QAudioDeviceInfo * obj = (QAudioDeviceInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QAudioFormat * ptr = new QAudioFormat( obj->nearestFormat ( *PQAUDIOFORMAT(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QAUDIOFORMAT" );
+    if( ISNUMPAR(1) && ISQAUDIOFORMAT(1) )
+    {
+      QAudioFormat * ptr = new QAudioFormat( obj->nearestFormat ( *PQAUDIOFORMAT(1) ) );
+      _qt4xhb_createReturnClass ( ptr, "QAUDIOFORMAT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -178,10 +204,18 @@ QAudioFormat preferredFormat () const
 HB_FUNC_STATIC( QAUDIODEVICEINFO_PREFERREDFORMAT )
 {
   QAudioDeviceInfo * obj = (QAudioDeviceInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    QAudioFormat * ptr = new QAudioFormat( obj->preferredFormat () );
-    _qt4xhb_createReturnClass ( ptr, "QAUDIOFORMAT" );
+    if( ISNUMPAR(0) )
+    {
+      QAudioFormat * ptr = new QAudioFormat( obj->preferredFormat () );
+      _qt4xhb_createReturnClass ( ptr, "QAUDIOFORMAT", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
@@ -345,14 +379,22 @@ QStringList supportedCodecs () const
 HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDCODECS )
 {
   QAudioDeviceInfo * obj = (QAudioDeviceInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+
   if( obj )
   {
-    RQSTRINGLIST( obj->supportedCodecs () );
+    if( ISNUMPAR(0) )
+    {
+      RQSTRINGLIST( obj->supportedCodecs () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
   }
 }
 
 /*
-QList<QAudioDeviceInfo> availableDevices ( QAudio::Mode mode )
+static QList<QAudioDeviceInfo> availableDevices ( QAudio::Mode mode )
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_AVAILABLEDEVICES )
 {
@@ -391,21 +433,35 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_AVAILABLEDEVICES )
 }
 
 /*
-QAudioDeviceInfo defaultInputDevice ()
+static QAudioDeviceInfo defaultInputDevice ()
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_DEFAULTINPUTDEVICE )
 {
-  QAudioDeviceInfo * ptr = new QAudioDeviceInfo( QAudioDeviceInfo::defaultInputDevice () );
-  _qt4xhb_createReturnClass ( ptr, "QAUDIODEVICEINFO" );
+    if( ISNUMPAR(0) )
+  {
+      QAudioDeviceInfo * ptr = new QAudioDeviceInfo( QAudioDeviceInfo::defaultInputDevice () );
+      _qt4xhb_createReturnClass ( ptr, "QAUDIODEVICEINFO", true );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
-QAudioDeviceInfo defaultOutputDevice ()
+static QAudioDeviceInfo defaultOutputDevice ()
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_DEFAULTOUTPUTDEVICE )
 {
-  QAudioDeviceInfo * ptr = new QAudioDeviceInfo( QAudioDeviceInfo::defaultOutputDevice () );
-  _qt4xhb_createReturnClass ( ptr, "QAUDIODEVICEINFO" );
+    if( ISNUMPAR(0) )
+  {
+      QAudioDeviceInfo * ptr = new QAudioDeviceInfo( QAudioDeviceInfo::defaultOutputDevice () );
+      _qt4xhb_createReturnClass ( ptr, "QAUDIODEVICEINFO", true );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QAUDIODEVICEINFO_NEWFROM )

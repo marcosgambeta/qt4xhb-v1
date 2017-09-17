@@ -24,11 +24,13 @@ CLASS QAbstractVideoBuffer
    METHOD map
    METHOD mapMode
    METHOD unmap
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
