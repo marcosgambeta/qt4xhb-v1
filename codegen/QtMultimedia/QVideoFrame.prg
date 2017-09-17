@@ -3,7 +3,8 @@ $header
 #include "hbclass.ch"
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST UCHAR
+%% TODO: corrigir
+%% REQUEST UCHAR
 REQUEST QVARIANT
 REQUEST QSIZE
 #endif
@@ -46,11 +47,13 @@ CLASS QVideoFrame
    METHOD width
    METHOD imageFormatFromPixelFormat
    METHOD pixelFormatFromImageFormat
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

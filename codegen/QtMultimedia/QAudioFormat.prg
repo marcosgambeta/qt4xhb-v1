@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QAudioFormat
 
    DATA pointer
@@ -29,11 +28,13 @@ CLASS QAudioFormat
    METHOD byteOrder
    METHOD sampleType
    METHOD setSampleType
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS

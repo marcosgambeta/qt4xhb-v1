@@ -33,8 +33,10 @@ CLASS QAudioInput INHERIT QObject
    METHOD state
    METHOD stop
    METHOD suspend
+
    METHOD onStateChanged
    METHOD onNotify
+
    DESTRUCTOR destroyObject
 
 END CLASS
