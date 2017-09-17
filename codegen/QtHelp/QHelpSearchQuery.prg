@@ -34,22 +34,12 @@ $destructor
 /*
 QHelpSearchQuery ()
 */
-HB_FUNC_STATIC( QHELPSEARCHQUERY_NEW1 )
-{
-  QHelpSearchQuery * o = new QHelpSearchQuery ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new1|
 
 /*
 QHelpSearchQuery ( FieldName field, const QStringList & wordList )
 */
-HB_FUNC_STATIC( QHELPSEARCHQUERY_NEW2 )
-{
-  QHelpSearchQuery * o = new QHelpSearchQuery ( (QHelpSearchQuery::FieldName) hb_parni(1), PQSTRINGLIST(2) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new2|QHelpSearchQuery::FieldName,const QStringList &
 
 //[1]QHelpSearchQuery ()
 //[2]QHelpSearchQuery ( FieldName field, const QStringList & wordList )

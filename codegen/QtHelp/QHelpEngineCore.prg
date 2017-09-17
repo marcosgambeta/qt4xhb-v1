@@ -66,38 +66,19 @@ $destructor
 /*
 QHelpEngineCore ( const QString & collectionFile, QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QHELPENGINECORE_NEW )
-{
-  QHelpEngineCore * o = new QHelpEngineCore ( PQSTRING(1), OPQOBJECT(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|const QString &,QObject *=0
 
 $deleteMethod
 
 /*
 bool addCustomFilter ( const QString & filterName, const QStringList & attributes )
 */
-HB_FUNC_STATIC( QHELPENGINECORE_ADDCUSTOMFILTER )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->addCustomFilter ( PQSTRING(1), PQSTRINGLIST(2) ) );
-  }
-}
-
+$method=|bool|addCustomFilter|const QString &,const QStringList &
 
 /*
 bool autoSaveFilter () const
 */
-HB_FUNC_STATIC( QHELPENGINECORE_AUTOSAVEFILTER )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->autoSaveFilter () );
-  }
-}
+$method=|bool|autoSaveFilter|
 
 /*
 QString collectionFile () const
@@ -122,16 +103,7 @@ $method=|QStringList|customFilters|
 /*
 QVariant customValue ( const QString & key, const QVariant & defaultValue = QVariant() ) const
 */
-HB_FUNC_STATIC( QHELPENGINECORE_CUSTOMVALUE )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QVariant * ptr = new QVariant( obj->customValue ( PQSTRING(1), par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
+$method=|QVariant|customValue|const QString &,const QVariant &=QVariant()
 
 /*
 QString documentationFileName ( const QString & namespaceName )
@@ -146,16 +118,7 @@ $method=|QString|error|
 /*
 QByteArray fileData ( const QUrl & url ) const
 */
-HB_FUNC_STATIC( QHELPENGINECORE_FILEDATA )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->fileData ( *PQURL(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray|fileData|const QUrl &
 
 /*
 QList<QUrl> files ( const QString namespaceName, const QStringList & filterAttributes, const QString & extensionFilter = QString() )
@@ -232,15 +195,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_FILTERATTRIBUTES )
 /*
 QUrl findFile ( const QUrl & url ) const
 */
-HB_FUNC_STATIC( QHELPENGINECORE_FINDFILE )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QUrl * ptr = new QUrl( obj->findFile ( *PQURL(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
-  }
-}
+$method=|QUrl|findFile|const QUrl &
 
 /*
 bool registerDocumentation ( const QString & documentationFileName )
@@ -250,14 +205,7 @@ $method=|bool|registerDocumentation|const QString &
 /*
 QStringList registeredDocumentations () const
 */
-HB_FUNC_STATIC( QHELPENGINECORE_REGISTEREDDOCUMENTATIONS )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQSTRINGLIST( obj->registeredDocumentations () );
-  }
-}
+$method=|QStringList|registeredDocumentations|
 
 /*
 bool removeCustomFilter ( const QString & filterName )
@@ -272,15 +220,7 @@ $method=|bool|removeCustomValue|const QString &
 /*
 void setAutoSaveFilter ( bool save )
 */
-HB_FUNC_STATIC( QHELPENGINECORE_SETAUTOSAVEFILTER )
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAutoSaveFilter ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setAutoSaveFilter|bool
 
 /*
 void setCollectionFile ( const QString & fileName )

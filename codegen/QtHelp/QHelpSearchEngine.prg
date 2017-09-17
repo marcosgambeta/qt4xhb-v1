@@ -42,30 +42,20 @@ $destructor
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
+#include <QHelpSearchQueryWidget>
+#include <QHelpSearchResultWidget>
+
 /*
 QHelpSearchEngine ( QHelpEngineCore * helpEngine, QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QHELPSEARCHENGINE_NEW )
-{
-  QHelpSearchEngine * o = new QHelpSearchEngine ( PQHELPENGINECORE(1), OPQOBJECT(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QHelpEngineCore *,QObject *=0
 
 $deleteMethod
 
 /*
 int hitCount () const
 */
-HB_FUNC_STATIC( QHELPSEARCHENGINE_HITCOUNT )
-{
-  QHelpSearchEngine * obj = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->hitCount () );
-  }
-}
-
-
+$metjod=|int|hitCount|
 
 /*
 QList<QHelpSearchQuery> query () const
@@ -110,76 +100,30 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERY )
   }
 }
 
-
 /*
 QHelpSearchQueryWidget * queryWidget ()
 */
-HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERYWIDGET )
-{
-  QHelpSearchEngine * obj = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QHelpSearchQueryWidget * ptr = obj->queryWidget ();
-    _qt4xhb_createReturnClass ( ptr, "QHELPSEARCHQUERYWIDGET" );
-  }
-}
-
+$method=|QHelpSearchQueryWidget *|queryWidget|
 
 /*
 QHelpSearchResultWidget * resultWidget ()
 */
-HB_FUNC_STATIC( QHELPSEARCHENGINE_RESULTWIDGET )
-{
-  QHelpSearchEngine * obj = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QHelpSearchResultWidget * ptr = obj->resultWidget ();
-    _qt4xhb_createReturnClass ( ptr, "QHELPSEARCHRESULTWIDGET" );
-  }
-}
-
+$method=|QHelpSearchResultWidget *|resultWidget|
 
 /*
 void cancelIndexing ()
 */
-HB_FUNC_STATIC( QHELPSEARCHENGINE_CANCELINDEXING )
-{
-  QHelpSearchEngine * obj = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->cancelIndexing ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|cancelIndexing|
 
 /*
 void cancelSearching ()
 */
-HB_FUNC_STATIC( QHELPSEARCHENGINE_CANCELSEARCHING )
-{
-  QHelpSearchEngine * obj = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->cancelSearching ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|cancelSearching|
 
 /*
 void reindexDocumentation ()
 */
-HB_FUNC_STATIC( QHELPSEARCHENGINE_REINDEXDOCUMENTATION )
-{
-  QHelpSearchEngine * obj = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->reindexDocumentation ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|reindexDocumentation|
 
 /*
 void search ( const QList<QHelpSearchQuery> & queryList )
@@ -201,9 +145,5 @@ par1 << *(QHelpSearchQuery *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( 
   }
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-
-
-
 
 #pragma ENDDUMP
