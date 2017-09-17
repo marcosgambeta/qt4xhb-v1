@@ -146,7 +146,14 @@ $method=|const uchar *|bits,bits2|
 
 HB_FUNC_STATIC( QVIDEOFRAME_BITS )
 {
-  HB_FUNC_EXEC( QVIDEOFRAME_BITS1 );
+  if( ISNUMPAR(0) )
+  {
+    HB_FUNC_EXEC( QVIDEOFRAME_BITS1 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
