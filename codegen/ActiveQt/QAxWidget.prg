@@ -11,8 +11,6 @@ REQUEST QAXOBJECT
 
 CLASS QAxWidget INHERIT QWidget,QAxBase
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD createAggregate
