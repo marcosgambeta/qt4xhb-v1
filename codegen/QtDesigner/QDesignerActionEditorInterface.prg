@@ -8,8 +8,6 @@ REQUEST QDESIGNERFORMEDITORINTERFACE
 
 CLASS QDesignerActionEditorInterface INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD core
    METHOD manageAction

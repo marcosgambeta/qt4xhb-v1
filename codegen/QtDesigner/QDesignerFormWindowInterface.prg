@@ -13,8 +13,6 @@ REQUEST QDESIGNERFORMWINDOWINTERFACE
 
 CLASS QDesignerFormWindowInterface INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD absoluteDir
    METHOD addResourceFile

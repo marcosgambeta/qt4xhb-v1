@@ -8,8 +8,6 @@ REQUEST QDESIGNERCUSTOMWIDGETINTERFACE
 
 CLASS QFormBuilder INHERIT QAbstractFormBuilder
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD addPluginPath
