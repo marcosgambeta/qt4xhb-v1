@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QGLFunctions
 
    DATA pointer
@@ -70,11 +69,13 @@ CLASS QGLFunctions
    METHOD hasOpenGLFeature
    METHOD initializeGLFunctions
    METHOD openGLFeatures
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -508,49 +509,15 @@ HB_FUNC_STATIC( QGLFUNCTIONS_GLGENERATEMIPMAP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
-
-
 /*
 int glGetAttribLocation ( GLuint program, const char * name )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLGETATTRIBLOCATION )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->glGetAttribLocation ( PGLUINT(1), (const char *) hb_parc(2) ) );
-  }
-}
-
-
-
-
-
-
-
-
-
-
+$method=|int|glGetAttribLocation|GLuint,const char *
 
 /*
 int glGetUniformLocation ( GLuint program, const char * name )
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_GLGETUNIFORMLOCATION )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->glGetUniformLocation ( PGLUINT(1), (const char *) hb_parc(2) ) );
-  }
-}
-
-
-
-
-
-
+$method=|int|glGetUniformLocation|GLuint,const char *
 
 /*
 GLboolean glIsBuffer ( GLuint buffer )
@@ -942,19 +909,10 @@ HB_FUNC_STATIC( QGLFUNCTIONS_GLVERTEXATTRIBPOINTER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool hasOpenGLFeature ( QGLFunctions::OpenGLFeature feature ) const
 */
-HB_FUNC_STATIC( QGLFUNCTIONS_HASOPENGLFEATURE )
-{
-  QGLFunctions * obj = (QGLFunctions *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasOpenGLFeature ( (QGLFunctions::OpenGLFeature) hb_parni(1) ) );
-  }
-}
-
+$method=|bool|hasOpenGLFeature|QGLFunctions::OpenGLFeature
 
 /*
 void initializeGLFunctions ( const QGLContext * context = 0 )

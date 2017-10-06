@@ -12,8 +12,6 @@ REQUEST QPIXMAP
 
 CLASS QGLWidget INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new3
@@ -52,6 +50,7 @@ CLASS QGLWidget INHERIT QWidget
    METHOD updateGL
    METHOD updateOverlayGL
    METHOD convertToGLFormat
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -272,19 +271,10 @@ HB_FUNC_STATIC( QGLWIDGET_DONECURRENT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool doubleBuffer () const
 */
-HB_FUNC_STATIC( QGLWIDGET_DOUBLEBUFFER )
-{
-  QGLWidget * obj = (QGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->doubleBuffer () );
-  }
-}
-
+$method=|bool|doubleBuffer|
 
 /*
 void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
@@ -356,60 +346,25 @@ HB_FUNC_STATIC( QGLWIDGET_GRABFRAMEBUFFER )
   }
 }
 
-
 /*
 bool isSharing () const
 */
-HB_FUNC_STATIC( QGLWIDGET_ISSHARING )
-{
-  QGLWidget * obj = (QGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isSharing () );
-  }
-}
-
+$method=|bool|isSharing|
 
 /*
 bool isValid () const
 */
-HB_FUNC_STATIC( QGLWIDGET_ISVALID )
-{
-  QGLWidget * obj = (QGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
-
+$method=|bool|isValid|
 
 /*
 void makeCurrent ()
 */
-HB_FUNC_STATIC( QGLWIDGET_MAKECURRENT )
-{
-  QGLWidget * obj = (QGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->makeCurrent ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|makeCurrent|
 
 /*
 void makeOverlayCurrent ()
 */
-HB_FUNC_STATIC( QGLWIDGET_MAKEOVERLAYCURRENT )
-{
-  QGLWidget * obj = (QGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->makeOverlayCurrent ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|makeOverlayCurrent|
 
 /*
 const QGLContext * overlayContext () const

@@ -43,11 +43,13 @@ CLASS QGLContext
    METHOD currentContext
    METHOD setTextureCacheLimit
    METHOD textureCacheLimit
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -164,16 +166,7 @@ HB_FUNC_STATIC( QGLCONTEXT_BINDTEXTURE )
 /*
 virtual bool create ( const QGLContext * shareContext = 0 )
 */
-HB_FUNC_STATIC( QGLCONTEXT_CREATE )
-{
-  QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QGLContext * par1 = ISNIL(1)? 0 : (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->create ( par1 ) );
-  }
-}
-
+$virtualMethod=|bool|create|const QGLContext *=0
 
 /*
 void deleteTexture ( GLuint id )
@@ -281,28 +274,12 @@ $method=|void *|getProcAddress|const QString &
 /*
 bool isSharing () const
 */
-HB_FUNC_STATIC( QGLCONTEXT_ISSHARING )
-{
-  QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isSharing () );
-  }
-}
-
+$method=|bool|isSharing|
 
 /*
 bool isValid () const
 */
-HB_FUNC_STATIC( QGLCONTEXT_ISVALID )
-{
-  QGLContext * obj = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
-
+$method=|bool|isValid|
 
 /*
 virtual void makeCurrent ()
@@ -387,18 +364,10 @@ HB_FUNC_STATIC( QGLCONTEXT_SWAPBUFFERS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
-
 /*
-bool areSharing ( const QGLContext * context1, const QGLContext * context2 )
+static bool areSharing ( const QGLContext * context1, const QGLContext * context2 )
 */
-HB_FUNC_STATIC( QGLCONTEXT_ARESHARING )
-{
-  QGLContext * par1 = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QGLContext * par2 = (QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  RBOOL( QGLContext::areSharing ( par1, par2 ) );
-}
-
+$staticMethod=|bool|areSharing|const QGLContext *,const QGLContext *
 
 /*
 const QGLContext * currentContext ()
@@ -419,14 +388,10 @@ HB_FUNC_STATIC( QGLCONTEXT_SETTEXTURECACHELIMIT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
-int textureCacheLimit ()
+static int textureCacheLimit ()
 */
-HB_FUNC_STATIC( QGLCONTEXT_TEXTURECACHELIMIT )
-{
-  RINT( QGLContext::textureCacheLimit () );
-}
+$staticMethod=|int|textureCacheLimit|
 
 $extraMethods
 

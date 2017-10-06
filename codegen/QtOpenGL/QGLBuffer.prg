@@ -2,7 +2,6 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QGLBuffer
 
    DATA pointer
@@ -31,11 +30,13 @@ CLASS QGLBuffer
    METHOD usagePattern
    METHOD release2
    METHOD release
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -154,15 +155,7 @@ HB_FUNC_STATIC( QGLBUFFER_ALLOCATE )
 /*
 bool bind ()
 */
-HB_FUNC_STATIC( QGLBUFFER_BIND )
-{
-  QGLBuffer * obj = (QGLBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->bind () );
-  }
-}
-
+$method=|bool|bind|
 
 /*
 GLuint bufferId () const
@@ -176,19 +169,10 @@ HB_FUNC_STATIC( QGLBUFFER_BUFFERID )
   }
 }
 
-
 /*
 bool create ()
 */
-HB_FUNC_STATIC( QGLBUFFER_CREATE )
-{
-  QGLBuffer * obj = (QGLBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->create () );
-  }
-}
-
+$method=|bool|create|
 
 /*
 void destroy ()
@@ -203,19 +187,10 @@ HB_FUNC_STATIC( QGLBUFFER_DESTROY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool isCreated () const
 */
-HB_FUNC_STATIC( QGLBUFFER_ISCREATED )
-{
-  QGLBuffer * obj = (QGLBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isCreated () );
-  }
-}
-
+$method=|bool|isCreated|
 
 /*
 void * map ( QGLBuffer::Access access )
@@ -231,20 +206,10 @@ HB_FUNC_STATIC( QGLBUFFER_MAP )
   }
 }
 
-
 /*
 bool read ( int offset, void * data, int count )
 */
-HB_FUNC_STATIC( QGLBUFFER_READ )
-{
-  QGLBuffer * obj = (QGLBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    void * par2 = (void *) hb_parptr(2);
-    RBOOL( obj->read ( PINT(1), par2, PINT(3) ) );
-  }
-}
-
+$method=|bool|read|int,void *,int
 
 /*
 void release ()
@@ -274,19 +239,10 @@ HB_FUNC_STATIC( QGLBUFFER_SETUSAGEPATTERN )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 int size () const
 */
-HB_FUNC_STATIC( QGLBUFFER_SIZE )
-{
-  QGLBuffer * obj = (QGLBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->size () );
-  }
-}
-
+$method=|int|size|
 
 /*
 QGLBuffer::Type type () const
@@ -300,19 +256,10 @@ HB_FUNC_STATIC( QGLBUFFER_TYPE )
   }
 }
 
-
 /*
 bool unmap ()
 */
-HB_FUNC_STATIC( QGLBUFFER_UNMAP )
-{
-  QGLBuffer * obj = (QGLBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->unmap () );
-  }
-}
-
+$method=|bool|unmap|
 
 /*
 QGLBuffer::UsagePattern usagePattern () const

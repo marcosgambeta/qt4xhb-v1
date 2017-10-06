@@ -38,6 +38,7 @@ CLASS QGLFramebufferObject INHERIT QPaintDevice
    METHOD blitFramebuffer
    METHOD hasOpenGLFramebufferBlit
    METHOD hasOpenGLFramebufferObjects
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -137,19 +138,10 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_ATTACHMENT )
   }
 }
 
-
 /*
 bool bind ()
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_BIND )
-{
-  QGLFramebufferObject * obj = (QGLFramebufferObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->bind () );
-  }
-}
-
+$method=|bool|bind|
 
 /*
 void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
@@ -220,45 +212,20 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_HANDLE )
   }
 }
 
-
 /*
 bool isBound () const
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_ISBOUND )
-{
-  QGLFramebufferObject * obj = (QGLFramebufferObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isBound () );
-  }
-}
-
+$method=|bool|isBound|
 
 /*
 bool isValid () const
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_ISVALID )
-{
-  QGLFramebufferObject * obj = (QGLFramebufferObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
-
+$method=|bool|isValid|
 
 /*
 bool release ()
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_RELEASE )
-{
-  QGLFramebufferObject * obj = (QGLFramebufferObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->release () );
-  }
-}
-
+$method=|bool|release|
 
 /*
 QSize size () const
@@ -327,23 +294,13 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_BLITFRAMEBUFFER )
 
 
 /*
-bool hasOpenGLFramebufferBlit ()
+static bool hasOpenGLFramebufferBlit ()
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_HASOPENGLFRAMEBUFFERBLIT )
-{
-  RBOOL( QGLFramebufferObject::hasOpenGLFramebufferBlit () );
-}
-
+$staticMethod=|bool|hasOpenGLFramebufferBlit|
 
 /*
-bool hasOpenGLFramebufferObjects ()
+static bool hasOpenGLFramebufferObjects ()
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_HASOPENGLFRAMEBUFFEROBJECTS )
-{
-  RBOOL( QGLFramebufferObject::hasOpenGLFramebufferObjects () );
-}
-
-
-
+$staticMethod=|bool|hasOpenGLFramebufferObjects|
 
 #pragma ENDDUMP

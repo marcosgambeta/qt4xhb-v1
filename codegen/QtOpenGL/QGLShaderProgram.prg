@@ -8,8 +8,6 @@ REQUEST QGLSHADER
 
 CLASS QGLShaderProgram INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new
@@ -96,6 +94,7 @@ CLASS QGLShaderProgram INHERIT QObject
    METHOD uniformLocation3
    METHOD uniformLocation
    METHOD hasOpenGLShaderPrograms
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -155,57 +154,22 @@ $deleteMethod
 /*
 bool addShader ( QGLShader * shader )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_ADDSHADER )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QGLShader * par1 = (QGLShader *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->addShader ( par1 ) );
-  }
-}
-
+$method=|bool|addShader|QGLShader *
 
 /*
 bool addShaderFromSourceCode ( QGLShader::ShaderType type, const char * source )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE1 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    RBOOL( obj->addShaderFromSourceCode ( (QGLShader::ShaderType) par1, (const char *) hb_parc(2) ) );
-  }
-}
-
+$method=|bool|addShaderFromSourceCode,addShaderFromSourceCode1|QGLShader::ShaderType,const char *
 
 /*
 bool addShaderFromSourceCode ( QGLShader::ShaderType type, const QByteArray & source )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE2 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->addShaderFromSourceCode ( (QGLShader::ShaderType) hb_parni(1), *PQBYTEARRAY(2) ) );
-  }
-}
-
+$method=|bool|addShaderFromSourceCode,addShaderFromSourceCode2|QGLShader::ShaderType,const QByteArray &
 
 /*
 bool addShaderFromSourceCode ( QGLShader::ShaderType type, const QString & source )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE3 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    RBOOL( obj->addShaderFromSourceCode ( (QGLShader::ShaderType) par1, PQSTRING(2) ) );
-  }
-}
-
+$method=|bool|addShaderFromSourceCode,addShaderFromSourceCode3|QGLShader::ShaderType,const QString &
 
 //[1]bool addShaderFromSourceCode ( QGLShader::ShaderType type, const char * source )
 //[2]bool addShaderFromSourceCode ( QGLShader::ShaderType type, const QByteArray & source )
@@ -230,41 +194,17 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE )
 /*
 bool addShaderFromSourceFile ( QGLShader::ShaderType type, const QString & fileName )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_ADDSHADERFROMSOURCEFILE )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    RBOOL( obj->addShaderFromSourceFile ( (QGLShader::ShaderType) par1, PQSTRING(2) ) );
-  }
-}
-
+$method=|bool|addShaderFromSourceFile|QGLShader::ShaderType,const QString &
 
 /*
 int attributeLocation ( const char * name ) const
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_ATTRIBUTELOCATION1 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->attributeLocation ( (const char *) hb_parc(1) ) );
-  }
-}
-
+$method=|int|attributeLocation,attributeLocation1|const char *
 
 /*
 int attributeLocation ( const QByteArray & name ) const
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_ATTRIBUTELOCATION2 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->attributeLocation ( *PQBYTEARRAY(1) ) );
-  }
-}
+$method=|int|attributeLocation,attributeLocation2|const QByteArray &
 
 /*
 int attributeLocation ( const QString & name ) const
@@ -294,15 +234,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_ATTRIBUTELOCATION )
 /*
 bool bind ()
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_BIND )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->bind () );
-  }
-}
-
+$method=|bool|bind|
 
 /*
 void bindAttributeLocation ( const char * name, int location )
@@ -479,44 +411,20 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_GEOMETRYOUTPUTTYPE )
   }
 }
 
-
 /*
 int geometryOutputVertexCount () const
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_GEOMETRYOUTPUTVERTEXCOUNT )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->geometryOutputVertexCount () );
-  }
-}
-
+$method=|int|geometryOutputVertexCount|
 
 /*
 bool isLinked () const
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_ISLINKED )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isLinked () );
-  }
-}
-
+$method=|bool|isLinked|
 
 /*
 virtual bool link ()
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_LINK )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->link () );
-  }
-}
+$virtualMethod=|bool|link|
 
 /*
 QString log () const
@@ -526,15 +434,7 @@ $method=|QString|log|
 /*
 int maxGeometryOutputVertices () const
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_MAXGEOMETRYOUTPUTVERTICES )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->maxGeometryOutputVertices () );
-  }
-}
-
+$method=|int|maxGeometryOutputVertices|
 
 /*
 GLuint programId () const
@@ -1465,31 +1365,15 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SHADERS )
   }
 }
 
-
 /*
 int uniformLocation ( const char * name ) const
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_UNIFORMLOCATION1 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->uniformLocation ( (const char *) hb_parc(1) ) );
-  }
-}
-
+$method=|int|uniformLocation,uniformLocation1|const char *
 
 /*
 int uniformLocation ( const QByteArray & name ) const
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_UNIFORMLOCATION2 )
-{
-  QGLShaderProgram * obj = (QGLShaderProgram *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->uniformLocation ( *PQBYTEARRAY(1) ) );
-  }
-}
+$method=|int|uniformLocation,uniformLocation2|const QByteArray &
 
 /*
 int uniformLocation ( const QString & name ) const
@@ -1518,15 +1402,8 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_UNIFORMLOCATION )
 
 
 /*
-bool hasOpenGLShaderPrograms ( const QGLContext * context = 0 )
+static bool hasOpenGLShaderPrograms ( const QGLContext * context = 0 )
 */
-HB_FUNC_STATIC( QGLSHADERPROGRAM_HASOPENGLSHADERPROGRAMS )
-{
-  const QGLContext * par1 = ISNIL(1)? 0 : (const QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  RBOOL( QGLShaderProgram::hasOpenGLShaderPrograms ( par1 ) );
-}
-
-
-
+$staticMethod=|bool|hasOpenGLShaderPrograms|const QGLContext *=0
 
 #pragma ENDDUMP

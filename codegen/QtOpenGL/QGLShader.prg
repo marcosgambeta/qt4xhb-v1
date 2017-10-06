@@ -8,8 +8,6 @@ REQUEST QBYTEARRAY
 
 CLASS QGLShader INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new
@@ -25,6 +23,7 @@ CLASS QGLShader INHERIT QObject
    METHOD shaderType
    METHOD sourceCode
    METHOD hasOpenGLShaders
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -84,27 +83,12 @@ $deleteMethod
 /*
 bool compileSourceCode ( const char * source )
 */
-HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE1 )
-{
-  QGLShader * obj = (QGLShader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->compileSourceCode ( (const char *) hb_parc(1) ) );
-  }
-}
-
+$method=|bool|compileSourceCode,compileSourceCode1|const char *
 
 /*
 bool compileSourceCode ( const QByteArray & source )
 */
-HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE2 )
-{
-  QGLShader * obj = (QGLShader *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->compileSourceCode ( *PQBYTEARRAY(1) ) );
-  }
-}
+$method=|bool|compileSourceCode,compileSourceCode2|const QByteArray &
 
 /*
 bool compileSourceCode ( const QString & source )
@@ -162,16 +146,8 @@ QByteArray sourceCode () const
 $method=|QByteArray|sourceCode|
 
 /*
-bool hasOpenGLShaders ( ShaderType type, const QGLContext * context = 0 )
+static bool hasOpenGLShaders ( ShaderType type, const QGLContext * context = 0 )
 */
-HB_FUNC_STATIC( QGLSHADER_HASOPENGLSHADERS )
-{
-  int par1 = hb_parni(1);
-  const QGLContext * par2 = ISNIL(2)? 0 : (const QGLContext *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-  RBOOL( QGLShader::hasOpenGLShaders ( (QGLShader::ShaderType) par1, par2 ) );
-}
-
-
-
+$staticMethod=|bool|hasOpenGLShaders|QGLShader::ShaderType,const QGLContext *=0
 
 #pragma ENDDUMP

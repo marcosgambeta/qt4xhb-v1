@@ -24,11 +24,13 @@ CLASS QGLColormap
    METHOD setEntry2
    METHOD setEntry
    METHOD size
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
    METHOD selfDestruction
    METHOD setSelfDestruction
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -111,48 +113,20 @@ HB_FUNC_STATIC( QGLCOLORMAP_ENTRYRGB )
   }
 }
 
-
 /*
 int find ( QRgb color ) const
 */
-HB_FUNC_STATIC( QGLCOLORMAP_FIND )
-{
-  QGLColormap * obj = (QGLColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRgb par1 = hb_parni(1);
-    RINT( (int) obj->find ( par1 ) );
-  }
-}
-
+$method=|int|find|QRgb
 
 /*
 int findNearest ( QRgb color ) const
 */
-HB_FUNC_STATIC( QGLCOLORMAP_FINDNEAREST )
-{
-  QGLColormap * obj = (QGLColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QRgb par1 = hb_parni(1);
-    RINT( (int) obj->findNearest ( par1 ) );
-  }
-}
-
+$method=|int|findNearest|QRgb
 
 /*
 bool isEmpty () const
 */
-HB_FUNC_STATIC( QGLCOLORMAP_ISEMPTY )
-{
-  QGLColormap * obj = (QGLColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isEmpty () );
-  }
-}
-
-
+$method=|bool|isEmpty|
 
 /*
 void setEntry ( int idx, QRgb color )
@@ -202,14 +176,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_SETENTRY )
 /*
 int size () const
 */
-HB_FUNC_STATIC( QGLCOLORMAP_SIZE )
-{
-  QGLColormap * obj = (QGLColormap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->size () );
-  }
-}
+$method=|int|size|
 
 $extraMethods
 

@@ -2,10 +2,7 @@ $header
 
 #include "hbclass.ch"
 
-
 CLASS QGLFramebufferObjectFormat INHERIT QWidget
-
-   DATA self_destruction INIT .F.
 
    METHOD new1
    METHOD new2
@@ -19,6 +16,7 @@ CLASS QGLFramebufferObjectFormat INHERIT QWidget
    METHOD setSamples
    METHOD setTextureTarget
    METHOD textureTarget
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -99,19 +97,10 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_INTERNALTEXTUREFORMAT )
   }
 }
 
-
 /*
 int samples () const
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_SAMPLES )
-{
-  QGLFramebufferObjectFormat * obj = (QGLFramebufferObjectFormat *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->samples () );
-  }
-}
-
+$method=|int|samples|
 
 /*
 void setAttachment ( QGLFramebufferObject::Attachment attachment )

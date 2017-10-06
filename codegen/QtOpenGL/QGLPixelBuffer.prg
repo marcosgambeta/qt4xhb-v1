@@ -37,6 +37,7 @@ CLASS QGLPixelBuffer INHERIT QPaintDevice
    METHOD updateDynamicTexture
    METHOD paintEngine
    METHOD hasOpenGLPbuffers
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -137,15 +138,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_BINDTEXTURE )
 /*
 bool bindToDynamicTexture ( GLuint texture_id )
 */
-HB_FUNC_STATIC( QGLPIXELBUFFER_BINDTODYNAMICTEXTURE )
-{
-  QGLPixelBuffer * obj = (QGLPixelBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->bindToDynamicTexture ( PGLUINT(1) ) );
-  }
-}
-
+$method=|bool|bindToDynamicTexture|GLuint
 
 /*
 void deleteTexture ( GLuint texture_id )
@@ -160,19 +153,10 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_DELETETEXTURE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-
 /*
 bool doneCurrent ()
 */
-HB_FUNC_STATIC( QGLPIXELBUFFER_DONECURRENT )
-{
-  QGLPixelBuffer * obj = (QGLPixelBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->doneCurrent () );
-  }
-}
-
+$method=|bool|doneCurrent|
 
 /*
 void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
@@ -235,33 +219,15 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_GENERATEDYNAMICTEXTURE )
   }
 }
 
-
-
 /*
 bool isValid () const
 */
-HB_FUNC_STATIC( QGLPIXELBUFFER_ISVALID )
-{
-  QGLPixelBuffer * obj = (QGLPixelBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
-
+$method=|bool|isValid|
 
 /*
 bool makeCurrent ()
 */
-HB_FUNC_STATIC( QGLPIXELBUFFER_MAKECURRENT )
-{
-  QGLPixelBuffer * obj = (QGLPixelBuffer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->makeCurrent () );
-  }
-}
-
+$method=|bool|makeCurrent|
 
 /*
 void releaseFromDynamicTexture ()
@@ -332,17 +298,9 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_PAINTENGINE )
   }
 }
 
-
-
 /*
-bool hasOpenGLPbuffers ()
+static bool hasOpenGLPbuffers ()
 */
-HB_FUNC_STATIC( QGLPIXELBUFFER_HASOPENGLPBUFFERS )
-{
-  RBOOL( QGLPixelBuffer::hasOpenGLPbuffers () );
-}
-
-
-
+$staticMethod=|bool|hasOpenGLPbuffers|
 
 #pragma ENDDUMP
