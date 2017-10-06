@@ -8,8 +8,6 @@ REQUEST QBYTEARRAY
 
 CLASS QHttpMultiPart INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new1
    METHOD new2
    METHOD new
@@ -36,22 +34,12 @@ $destructor
 /*
 QHttpMultiPart ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QHTTPMULTIPART_NEW1 )
-{
-  QHttpMultiPart * o = new QHttpMultiPart ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new1|QObject *=0
 
 /*
 QHttpMultiPart ( ContentType contentType, QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QHTTPMULTIPART_NEW2 )
-{
-  QHttpMultiPart * o = new QHttpMultiPart ( (QHttpMultiPart::ContentType) hb_parni(1), OPQOBJECT(2,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new2|QHttpMultiPart::ContentType,QObject *=0
 
 //[1]QHttpMultiPart ( QObject * parent = 0 )
 //[2]QHttpMultiPart ( ContentType contentType, QObject * parent = 0 )
@@ -77,61 +65,21 @@ $deleteMethod
 /*
 void append ( const QHttpPart & httpPart )
 */
-HB_FUNC_STATIC( QHTTPMULTIPART_APPEND )
-{
-  QHttpMultiPart * obj = (QHttpMultiPart *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->append ( *PQHTTPPART(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|append|const QHttpPart &
 
 /*
 QByteArray boundary () const
 */
-HB_FUNC_STATIC( QHTTPMULTIPART_BOUNDARY )
-{
-  QHttpMultiPart * obj = (QHttpMultiPart *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->boundary () );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray|boundary|
 
 /*
 void setBoundary ( const QByteArray & boundary )
 */
-HB_FUNC_STATIC( QHTTPMULTIPART_SETBOUNDARY )
-{
-  QHttpMultiPart * obj = (QHttpMultiPart *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setBoundary ( *PQBYTEARRAY(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setBoundary|const QByteArray &
 
 /*
 void setContentType ( ContentType contentType )
 */
-HB_FUNC_STATIC( QHTTPMULTIPART_SETCONTENTTYPE )
-{
-  QHttpMultiPart * obj = (QHttpMultiPart *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setContentType ( (QHttpMultiPart::ContentType) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
-
+$method=|void|setContentType|QHttpMultiPart::ContentType
 
 #pragma ENDDUMP

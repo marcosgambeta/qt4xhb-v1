@@ -10,8 +10,6 @@ REQUEST QVARIANT
 
 CLASS QAbstractSocket INHERIT QIODevice
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD abort
@@ -74,150 +72,59 @@ $destructor
 /*
 QAbstractSocket ( SocketType socketType, QObject * parent )
 */
-HB_FUNC_STATIC( QABSTRACTSOCKET_NEW )
-{
-  QAbstractSocket * o = new QAbstractSocket ( (QAbstractSocket::SocketType) hb_parni(1), PQOBJECT(2) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QAbstractSocket::SocketType,QObject *
 
 $deleteMethod
 
 /*
 void abort ()
 */
-HB_FUNC_STATIC( QABSTRACTSOCKET_ABORT )
-{
-  QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->abort ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|abort|
 
 /*
 void connectToHost ( const QString & hostName, quint16 port, OpenMode openMode = ReadWrite )
 */
-HB_FUNC_STATIC( QABSTRACTSOCKET_CONNECTTOHOST1 )
-{
-  QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par3 = ISNIL(3)? (int) QAbstractSocket::ReadWrite : hb_parni(3);
-    obj->connectToHost ( PQSTRING(1), PQUINT16(2), (QAbstractSocket::OpenMode) par3 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|connectToHost,connectToHost1|const QString &,quint16,QIODevice::OpenMode=QIODevice::ReadWrite
 
 /*
 void connectToHost ( const QHostAddress & address, quint16 port, OpenMode openMode = ReadWrite )
 */
-HB_FUNC_STATIC( QABSTRACTSOCKET_CONNECTTOHOST2 )
-{
-  QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par3 = ISNIL(3)? (int) QAbstractSocket::ReadWrite : hb_parni(3);
-    obj->connectToHost ( *PQHOSTADDRESS(1), PQUINT16(2), (QAbstractSocket::OpenMode) par3 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|connectToHost,connectToHost2|const QHostAddress &,quint16,QIODevice::OpenMode=QIODevice::ReadWrite
 
 /*
 void disconnectFromHost ()
 */
-HB_FUNC_STATIC( QABSTRACTSOCKET_DISCONNECTFROMHOST )
-{
-  QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->disconnectFromHost ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|disconnectFromHost|
 
 /*
 SocketError error () const
 */
-HB_FUNC_STATIC( QABSTRACTSOCKET_ERROR )
-{
-  QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->error () );
-  }
-}
-
+$method=|QAbstractSocket::SocketError|error|
 
 /*
 bool flush ()
 */
-HB_FUNC_STATIC( QABSTRACTSOCKET_FLUSH )
-{
-  QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->flush () );
-  }
-}
-
+$method=|bool|flush|
 
 /*
 bool isValid () const
 */
-HB_FUNC_STATIC( QABSTRACTSOCKET_ISVALID )
-{
-  QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
-
+$method=|bool|isValid|
 
 /*
 QHostAddress localAddress () const
 */
-HB_FUNC_STATIC( QABSTRACTSOCKET_LOCALADDRESS )
-{
-  QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QHostAddress * ptr = new QHostAddress( obj->localAddress () );
-    _qt4xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
-  }
-}
-
+$method=|QHostAddress|localAddress|
 
 /*
 quint16 localPort () const
 */
-HB_FUNC_STATIC( QABSTRACTSOCKET_LOCALPORT )
-{
-  QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQUINT16( obj->localPort () );
-  }
-}
-
+$method=|quint16|localPort|
 
 /*
 QHostAddress peerAddress () const
 */
-HB_FUNC_STATIC( QABSTRACTSOCKET_PEERADDRESS )
-{
-  QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QHostAddress * ptr = new QHostAddress( obj->peerAddress () );
-    _qt4xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
-  }
-}
+$method=|QHostAddress|peerAddress|
 
 /*
 QString peerName () const
@@ -227,288 +134,106 @@ $method=|QString|peerName|
 /*
 quint16 peerPort () const
 */
-HB_FUNC_STATIC( QABSTRACTSOCKET_PEERPORT )
-{
-  QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQUINT16( obj->peerPort () );
-  }
-}
-
+$method=|quint16|peerPort|
 
 /*
 QNetworkProxy proxy () const
 */
-HB_FUNC_STATIC( QABSTRACTSOCKET_PROXY )
-{
-  QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QNetworkProxy * ptr = new QNetworkProxy( obj->proxy () );
-    _qt4xhb_createReturnClass ( ptr, "QNETWORKPROXY", true );
-  }
-}
-
+$method=|QNetworkProxy|proxy|
 
 /*
 qint64 readBufferSize () const
 */
-HB_FUNC_STATIC( QABSTRACTSOCKET_READBUFFERSIZE )
-{
-  QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQINT64( obj->readBufferSize () );
-  }
-}
-
+$method=|qint64|readBufferSize|
 
 /*
 void setProxy ( const QNetworkProxy & networkProxy )
 */
-HB_FUNC_STATIC( QABSTRACTSOCKET_SETPROXY )
-{
-  QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setProxy ( *PQNETWORKPROXY(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setProxy|const QNetworkProxy &
 
 /*
 void setReadBufferSize ( qint64 size )
 */
-HB_FUNC_STATIC( QABSTRACTSOCKET_SETREADBUFFERSIZE )
-{
-  QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setReadBufferSize ( PQINT64(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setReadBufferSize|qint64
 
 /*
 bool setSocketDescriptor ( int socketDescriptor, SocketState socketState = ConnectedState, OpenMode openMode = ReadWrite )
 */
-HB_FUNC_STATIC( QABSTRACTSOCKET_SETSOCKETDESCRIPTOR )
-{
-  QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = hb_parni(2);
-    int par3 = ISNIL(3)? (int) QAbstractSocket::ReadWrite : hb_parni(3);
-    RBOOL( obj->setSocketDescriptor ( PINT(1), (QAbstractSocket::SocketState) par2, (QAbstractSocket::OpenMode) par3 ) );
-  }
-}
-
+$method=|bool|setSocketDescriptor|int,QAbstractSocket::SocketState=QAbstractSocket::ConnectedState,QIODevice::OpenMode=QIODevice::ReadWrite
 
 /*
 void setSocketOption ( QAbstractSocket::SocketOption option, const QVariant & value )
 */
-HB_FUNC_STATIC( QABSTRACTSOCKET_SETSOCKETOPTION )
-{
-  QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setSocketOption ( (QAbstractSocket::SocketOption) par1, *PQVARIANT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setSocketOption|QAbstractSocket::SocketOption,const QVariant &
 
 /*
 int socketDescriptor () const
 */
-HB_FUNC_STATIC( QABSTRACTSOCKET_SOCKETDESCRIPTOR )
-{
-  QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->socketDescriptor () );
-  }
-}
-
+$method=|int|socketDescriptor|
 
 /*
 QVariant socketOption ( QAbstractSocket::SocketOption option )
 */
-HB_FUNC_STATIC( QABSTRACTSOCKET_SOCKETOPTION )
-{
-  QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    QVariant * ptr = new QVariant( obj->socketOption ( (QAbstractSocket::SocketOption) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
-
+$method=|QVariant|socketOption|QAbstractSocket::SocketOption
 
 /*
 SocketType socketType () const
 */
-HB_FUNC_STATIC( QABSTRACTSOCKET_SOCKETTYPE )
-{
-  QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->socketType () );
-  }
-}
-
+$method=|QAbstractSocket::SocketType|socketType|
 
 /*
 SocketState state () const
 */
-HB_FUNC_STATIC( QABSTRACTSOCKET_STATE )
-{
-  QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->state () );
-  }
-}
-
+$method=|QAbstractSocket::SocketState|state|
 
 /*
 bool waitForConnected ( int msecs = 30000 )
 */
-HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORCONNECTED )
-{
-  QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->waitForConnected ( OPINT(1,30000) ) );
-  }
-}
-
+$method=|bool|waitForConnected|int=30000
 
 /*
 bool waitForDisconnected ( int msecs = 30000 )
 */
-HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORDISCONNECTED )
-{
-  QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->waitForDisconnected ( OPINT(1,30000) ) );
-  }
-}
-
+$method=|bool|waitForDisconnected|int=30000
 
 /*
 virtual bool atEnd () const
 */
-HB_FUNC_STATIC( QABSTRACTSOCKET_ATEND )
-{
-  QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->atEnd () );
-  }
-}
-
+$virtualMethod=|bool|atEnd|
 
 /*
 virtual qint64 bytesAvailable () const
 */
-HB_FUNC_STATIC( QABSTRACTSOCKET_BYTESAVAILABLE )
-{
-  QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQINT64( obj->bytesAvailable () );
-  }
-}
-
+$virtualMethod=|qint64|bytesAvailable|
 
 /*
 virtual qint64 bytesToWrite () const
 */
-HB_FUNC_STATIC( QABSTRACTSOCKET_BYTESTOWRITE )
-{
-  QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQINT64( obj->bytesToWrite () );
-  }
-}
-
+$virtualMethod=|qint64|bytesToWrite|
 
 /*
 virtual bool canReadLine () const
 */
-HB_FUNC_STATIC( QABSTRACTSOCKET_CANREADLINE )
-{
-  QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->canReadLine () );
-  }
-}
-
+$virtualMethod=|bool|canReadLine|
 
 /*
 virtual void close ()
 */
-HB_FUNC_STATIC( QABSTRACTSOCKET_CLOSE )
-{
-  QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->close ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|close|
 
 /*
 virtual bool isSequential () const
 */
-HB_FUNC_STATIC( QABSTRACTSOCKET_ISSEQUENTIAL )
-{
-  QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isSequential () );
-  }
-}
-
+$virtualMethod=|bool|isSequential|
 
 /*
 virtual bool waitForBytesWritten ( int msecs = 30000 )
 */
-HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORBYTESWRITTEN )
-{
-  QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->waitForBytesWritten ( OPINT(1,30000) ) );
-  }
-}
-
+$virtualMethod=|bool|waitForBytesWritten|int=30000
 
 /*
 virtual bool waitForReadyRead ( int msecs = 30000 )
 */
-HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORREADYREAD )
-{
-  QAbstractSocket * obj = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->waitForReadyRead ( OPINT(1,30000) ) );
-  }
-}
-
-
-
-
-
+$virtualMethod=|bool|waitForReadyRead|int=30000
 
 #pragma ENDDUMP

@@ -51,22 +51,12 @@ $destructor
 /*
 QNetworkCacheMetaData ()
 */
-HB_FUNC_STATIC( QNETWORKCACHEMETADATA_NEW1 )
-{
-  QNetworkCacheMetaData * o = new QNetworkCacheMetaData ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|
 
 /*
 QNetworkCacheMetaData ( const QNetworkCacheMetaData & other )
 */
-HB_FUNC_STATIC( QNETWORKCACHEMETADATA_NEW2 )
-{
-  QNetworkCacheMetaData * o = new QNetworkCacheMetaData ( *PQNETWORKCACHEMETADATA(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|const QNetworkCacheMetaData &
 
 //[1]QNetworkCacheMetaData ()
 //[2]QNetworkCacheMetaData ( const QNetworkCacheMetaData & other )
@@ -92,128 +82,47 @@ $deleteMethod
 /*
 QDateTime expirationDate () const
 */
-HB_FUNC_STATIC( QNETWORKCACHEMETADATA_EXPIRATIONDATE )
-{
-  QNetworkCacheMetaData * obj = (QNetworkCacheMetaData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDateTime * ptr = new QDateTime( obj->expirationDate () );
-    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
-  }
-}
-
+$method=|QDateTime|expirationDate|
 
 /*
 bool isValid () const
 */
-HB_FUNC_STATIC( QNETWORKCACHEMETADATA_ISVALID )
-{
-  QNetworkCacheMetaData * obj = (QNetworkCacheMetaData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
-
+$method=|bool|isValid|
 
 /*
 QDateTime lastModified () const
 */
-HB_FUNC_STATIC( QNETWORKCACHEMETADATA_LASTMODIFIED )
-{
-  QNetworkCacheMetaData * obj = (QNetworkCacheMetaData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDateTime * ptr = new QDateTime( obj->lastModified () );
-    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
-  }
-}
-
-
+$method=|QDateTime|lastModified|
 
 /*
 bool saveToDisk () const
 */
-HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SAVETODISK )
-{
-  QNetworkCacheMetaData * obj = (QNetworkCacheMetaData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->saveToDisk () );
-  }
-}
-
-
+$method=|bool|saveToDisk|
 
 /*
 void setExpirationDate ( const QDateTime & dateTime )
 */
-HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SETEXPIRATIONDATE )
-{
-  QNetworkCacheMetaData * obj = (QNetworkCacheMetaData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setExpirationDate ( *PQDATETIME(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setExpirationDate|const QDateTime &
 
 /*
 void setLastModified ( const QDateTime & dateTime )
 */
-HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SETLASTMODIFIED )
-{
-  QNetworkCacheMetaData * obj = (QNetworkCacheMetaData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setLastModified ( *PQDATETIME(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|setLastModified|const QDateTime &
 
 /*
 void setSaveToDisk ( bool allow )
 */
-HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SETSAVETODISK )
-{
-  QNetworkCacheMetaData * obj = (QNetworkCacheMetaData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSaveToDisk ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setSaveToDisk|bool
 
 /*
 void setUrl ( const QUrl & url )
 */
-HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SETURL )
-{
-  QNetworkCacheMetaData * obj = (QNetworkCacheMetaData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setUrl ( *PQURL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setUrl|const QUrl &
 
 /*
 QUrl url () const
 */
-HB_FUNC_STATIC( QNETWORKCACHEMETADATA_URL )
-{
-  QNetworkCacheMetaData * obj = (QNetworkCacheMetaData *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QUrl * ptr = new QUrl( obj->url () );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
-  }
-}
+$method=|QUrl|url|
 
 $extraMethods
 

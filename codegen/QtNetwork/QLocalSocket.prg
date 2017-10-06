@@ -4,8 +4,6 @@ $header
 
 CLASS QLocalSocket INHERIT QIODevice
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD abort
@@ -51,81 +49,34 @@ $destructor
 /*
 QLocalSocket ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QLOCALSOCKET_NEW )
-{
-  QLocalSocket * o = new QLocalSocket ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
 /*
 void abort ()
 */
-HB_FUNC_STATIC( QLOCALSOCKET_ABORT )
-{
-  QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->abort ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|abort|
 
 /*
 void connectToServer ( const QString & name, OpenMode openMode = ReadWrite )
 */
-HB_FUNC_STATIC( QLOCALSOCKET_CONNECTTOSERVER )
-{
-  QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par2 = ISNIL(2)? (int) QLocalSocket::ReadWrite : hb_parni(2);
-    obj->connectToServer ( PQSTRING(1), (QLocalSocket::OpenMode) par2 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|connectToServer|const QString &,QIODevice::OpenMode=QIODevice::ReadWrite
 
 /*
 void disconnectFromServer ()
 */
-HB_FUNC_STATIC( QLOCALSOCKET_DISCONNECTFROMSERVER )
-{
-  QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->disconnectFromServer ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|disconnectFromServer|
 
 /*
 LocalSocketError error () const
 */
-HB_FUNC_STATIC( QLOCALSOCKET_ERROR )
-{
-  QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->error () );
-  }
-}
-
+$method=|QLocalSocket::LocalSocketError|error|
 
 /*
 bool flush ()
 */
-HB_FUNC_STATIC( QLOCALSOCKET_FLUSH )
-{
-  QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->flush () );
-  }
-}
+$method=|bool|flush|
 
 /*
 QString fullServerName () const
@@ -135,27 +86,12 @@ $method=|QString|fullServerName|
 /*
 bool isValid () const
 */
-HB_FUNC_STATIC( QLOCALSOCKET_ISVALID )
-{
-  QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
-
+$method=|bool|isValid|
 
 /*
 qint64 readBufferSize () const
 */
-HB_FUNC_STATIC( QLOCALSOCKET_READBUFFERSIZE )
-{
-  QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQINT64( obj->readBufferSize () );
-  }
-}
+$method=|qint64|readBufferSize|
 
 /*
 QString serverName () const
@@ -165,152 +101,56 @@ $method=|QString|serverName|
 /*
 void setReadBufferSize ( qint64 size )
 */
-HB_FUNC_STATIC( QLOCALSOCKET_SETREADBUFFERSIZE )
-{
-  QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setReadBufferSize ( PQINT64(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
+$method=|void|setReadBufferSize|qint64
 
 /*
 LocalSocketState state () const
 */
-HB_FUNC_STATIC( QLOCALSOCKET_STATE )
-{
-  QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->state () );
-  }
-}
-
+$method=|QLocalSocket::LocalSocketState|state|
 
 /*
 bool waitForConnected ( int msecs = 30000 )
 */
-HB_FUNC_STATIC( QLOCALSOCKET_WAITFORCONNECTED )
-{
-  QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->waitForConnected ( OPINT(1,30000) ) );
-  }
-}
-
+$method=|bool|waitForConnected|int=30000
 
 /*
 bool waitForDisconnected ( int msecs = 30000 )
 */
-HB_FUNC_STATIC( QLOCALSOCKET_WAITFORDISCONNECTED )
-{
-  QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->waitForDisconnected ( OPINT(1,30000) ) );
-  }
-}
-
+$method=|bool|waitForDisconnected|int=30000
 
 /*
 virtual qint64 bytesAvailable () const
 */
-HB_FUNC_STATIC( QLOCALSOCKET_BYTESAVAILABLE )
-{
-  QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQINT64( obj->bytesAvailable () );
-  }
-}
-
+$virtualMethod=|qint64|bytesAvailable|
 
 /*
 virtual qint64 bytesToWrite () const
 */
-HB_FUNC_STATIC( QLOCALSOCKET_BYTESTOWRITE )
-{
-  QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQINT64( obj->bytesToWrite () );
-  }
-}
-
+$virtualMethod=|qint64|bytesToWrite|
 
 /*
 virtual bool canReadLine () const
 */
-HB_FUNC_STATIC( QLOCALSOCKET_CANREADLINE )
-{
-  QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->canReadLine () );
-  }
-}
-
+$virtualMethod=|bool|canReadLine|
 
 /*
 virtual void close ()
 */
-HB_FUNC_STATIC( QLOCALSOCKET_CLOSE )
-{
-  QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->close ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|close|
 
 /*
 virtual bool isSequential () const
 */
-HB_FUNC_STATIC( QLOCALSOCKET_ISSEQUENTIAL )
-{
-  QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isSequential () );
-  }
-}
-
+$virtualMethod=|bool|isSequential|
 
 /*
 virtual bool waitForBytesWritten ( int msecs = 30000 )
 */
-HB_FUNC_STATIC( QLOCALSOCKET_WAITFORBYTESWRITTEN )
-{
-  QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->waitForBytesWritten ( OPINT(1,30000) ) );
-  }
-}
-
+$virtualMethod=|bool|waitForBytesWritten|int=30000
 
 /*
 virtual bool waitForReadyRead ( int msecs = 30000 )
 */
-HB_FUNC_STATIC( QLOCALSOCKET_WAITFORREADYREAD )
-{
-  QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->waitForReadyRead ( OPINT(1,30000) ) );
-  }
-}
-
-
-
-
-
+$virtualMethod=|bool|waitForReadyRead|int=30000
 
 #pragma ENDDUMP

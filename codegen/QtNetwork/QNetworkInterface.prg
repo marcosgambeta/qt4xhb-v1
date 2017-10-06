@@ -52,22 +52,12 @@ $destructor
 /*
 QNetworkInterface ()
 */
-HB_FUNC_STATIC( QNETWORKINTERFACE_NEW1 )
-{
-  QNetworkInterface * o = new QNetworkInterface ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|
 
 /*
 QNetworkInterface ( const QNetworkInterface & other )
 */
-HB_FUNC_STATIC( QNETWORKINTERFACE_NEW2 )
-{
-  QNetworkInterface * o = new QNetworkInterface ( *PQNETWORKINTERFACE(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|const QNetworkInterface &
 
 //[1]QNetworkInterface ()
 //[2]QNetworkInterface ( const QNetworkInterface & other )
@@ -137,18 +127,10 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ADDRESSENTRIES )
   }
 }
 
-
 /*
 InterfaceFlags flags () const
 */
-HB_FUNC_STATIC( QNETWORKINTERFACE_FLAGS )
-{
-  QNetworkInterface * obj = (QNetworkInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->flags () );
-  }
-}
+$method=|QNetworkInterface::InterfaceFlags|flags|
 
 /*
 QString hardwareAddress () const
@@ -163,27 +145,12 @@ $method=|QString|humanReadableName|
 /*
 int index () const
 */
-HB_FUNC_STATIC( QNETWORKINTERFACE_INDEX )
-{
-  QNetworkInterface * obj = (QNetworkInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->index () );
-  }
-}
-
+$method=|int|index|
 
 /*
 bool isValid () const
 */
-HB_FUNC_STATIC( QNETWORKINTERFACE_ISVALID )
-{
-  QNetworkInterface * obj = (QNetworkInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
+$method=|bool|isValid|
 
 /*
 QString name () const
@@ -233,7 +200,6 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ALLADDRESSES )
   hb_itemReturnRelease(pArray);
 }
 
-
 /*
 QList<QNetworkInterface> allInterfaces ()
 */
@@ -277,15 +243,10 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ALLINTERFACES )
   hb_itemReturnRelease(pArray);
 }
 
-
 /*
-QNetworkInterface interfaceFromIndex ( int index )
+static QNetworkInterface interfaceFromIndex ( int index )
 */
-HB_FUNC_STATIC( QNETWORKINTERFACE_INTERFACEFROMINDEX )
-{
-  QNetworkInterface * ptr = new QNetworkInterface( QNetworkInterface::interfaceFromIndex ( PINT(1) ) );
-  _qt4xhb_createReturnClass ( ptr, "QNETWORKINTERFACE", true );
-}
+$staticMethod=|QNetworkInterface|interfaceFromIndex|int
 
 /*
 static QNetworkInterface interfaceFromName ( const QString & name )

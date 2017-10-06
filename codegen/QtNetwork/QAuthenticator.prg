@@ -49,22 +49,12 @@ $destructor
 /*
 QAuthenticator ()
 */
-HB_FUNC_STATIC( QAUTHENTICATOR_NEW1 )
-{
-  QAuthenticator * o = new QAuthenticator ();
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new1|
 
 /*
 QAuthenticator ( const QAuthenticator & other )
 */
-HB_FUNC_STATIC( QAUTHENTICATOR_NEW2 )
-{
-  QAuthenticator * o = new QAuthenticator ( *PQAUTHENTICATOR(1) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
-
+$constructor=|new2|const QAuthenticator &
 
 //[1]QAuthenticator ()
 //[2]QAuthenticator ( const QAuthenticator & other )
@@ -90,14 +80,7 @@ $deleteMethod
 /*
 bool isNull () const
 */
-HB_FUNC_STATIC( QAUTHENTICATOR_ISNULL )
-{
-  QAuthenticator * obj = (QAuthenticator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
+$method=|bool|isNull|
 
 /*
 QVariant option ( const QString & opt ) const
@@ -107,15 +90,7 @@ $method=|QVariant|option|const QString &
 /*
 QVariantHash options () const
 */
-HB_FUNC_STATIC( QAUTHENTICATOR_OPTIONS )
-{
-  QAuthenticator * obj = (QAuthenticator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QVariantHash * ptr = new QVariantHash( obj->options () );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANTHASH" );
-  }
-}
+$method=|QVariantHash|options|
 
 /*
 QString password () const
@@ -130,15 +105,7 @@ $method=|QString|realm|
 /*
 void setOption ( const QString & opt, const QVariant & value )
 */
-HB_FUNC_STATIC( QAUTHENTICATOR_SETOPTION )
-{
-  QAuthenticator * obj = (QAuthenticator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setOption ( PQSTRING(1), *PQVARIANT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setOption|const QString &,const QVariant &
 
 /*
 void setPassword ( const QString & password )

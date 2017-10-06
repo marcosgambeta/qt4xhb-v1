@@ -55,22 +55,12 @@ $destructor
 /*
 QHostInfo ( int id = -1 )
 */
-HB_FUNC_STATIC( QHOSTINFO_NEW1 )
-{
-  QHostInfo * o = new QHostInfo ( OPINT(1,-1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|int=-1
 
 /*
 QHostInfo ( const QHostInfo & other )
 */
-HB_FUNC_STATIC( QHOSTINFO_NEW2 )
-{
-  QHostInfo * o = new QHostInfo ( *PQHOSTINFO(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|const QHostInfo &
 
 //[1]QHostInfo ( int id = -1 )
 //[2]QHostInfo ( const QHostInfo & other )
@@ -144,18 +134,10 @@ HB_FUNC_STATIC( QHOSTINFO_ADDRESSES )
   }
 }
 
-
 /*
 HostInfoError error () const
 */
-HB_FUNC_STATIC( QHOSTINFO_ERROR )
-{
-  QHostInfo * obj = (QHostInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->error () );
-  }
-}
+$method=|QHostInfo::HostInfoError|error|
 
 /*
 QString errorString () const

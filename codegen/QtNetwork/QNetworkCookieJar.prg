@@ -8,8 +8,6 @@ REQUEST QNETWORKCOOKIE
 
 CLASS QNetworkCookieJar INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD cookiesForUrl
@@ -32,11 +30,7 @@ $destructor
 /*
 QNetworkCookieJar ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QNETWORKCOOKIEJAR_NEW )
-{
-  QNetworkCookieJar * o = new QNetworkCookieJar ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
@@ -87,7 +81,6 @@ HB_FUNC_STATIC( QNETWORKCOOKIEJAR_COOKIESFORURL )
   }
 }
 
-
 /*
 virtual bool setCookiesFromUrl ( const QList<QNetworkCookie> & cookieList, const QUrl & url )
 */
@@ -96,20 +89,16 @@ HB_FUNC_STATIC( QNETWORKCOOKIEJAR_SETCOOKIESFROMURL )
   QNetworkCookieJar * obj = (QNetworkCookieJar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
   if( obj )
   {
-QList<QNetworkCookie> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-par1 << *(QNetworkCookie *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
+    QList<QNetworkCookie> par1;
+    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aList1);
+    for (i1=0;i1<nLen1;i1++)
+    {
+      par1 << *(QNetworkCookie *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+    }
     RBOOL( obj->setCookiesFromUrl ( par1, *PQURL(2) ) );
   }
 }
-
-
-
-
 
 #pragma ENDDUMP

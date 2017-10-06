@@ -10,8 +10,6 @@ REQUEST QHOSTADDRESS
 
 CLASS QTcpServer INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD close
@@ -52,26 +50,14 @@ $destructor
 /*
 QTcpServer ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QTCPSERVER_NEW )
-{
-  QTcpServer * o = new QTcpServer ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
 /*
 void close ()
 */
-HB_FUNC_STATIC( QTCPSERVER_CLOSE )
-{
-  QTcpServer * obj = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->close ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|close|
 
 /*
 QString errorString () const
@@ -81,195 +67,71 @@ $method=|QString|errorString|
 /*
 virtual bool hasPendingConnections () const
 */
-HB_FUNC_STATIC( QTCPSERVER_HASPENDINGCONNECTIONS )
-{
-  QTcpServer * obj = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasPendingConnections () );
-  }
-}
-
+$virtualMethod=|bool|hasPendingConnections|
 
 /*
 bool isListening () const
 */
-HB_FUNC_STATIC( QTCPSERVER_ISLISTENING )
-{
-  QTcpServer * obj = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isListening () );
-  }
-}
-
+$method=|bool|isListening|
 
 /*
 bool listen ( const QHostAddress & address = QHostAddress::Any, quint16 port = 0 )
 */
-HB_FUNC_STATIC( QTCPSERVER_LISTEN )
-{
-  QTcpServer * obj = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QHostAddress par1 = ISNIL(1)? QHostAddress::Any : *(QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RBOOL( obj->listen ( par1, OPQUINT16(2,0) ) );
-  }
-}
-
+$method=|bool|listen|const QHostAddress &=QHostAddress::Any,quint16=0
 
 /*
 int maxPendingConnections () const
 */
-HB_FUNC_STATIC( QTCPSERVER_MAXPENDINGCONNECTIONS )
-{
-  QTcpServer * obj = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->maxPendingConnections () );
-  }
-}
-
+$method=|int|maxPendingConnections|
 
 /*
 virtual QTcpSocket * nextPendingConnection ()
 */
-HB_FUNC_STATIC( QTCPSERVER_NEXTPENDINGCONNECTION )
-{
-  QTcpServer * obj = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QTcpSocket * ptr = obj->nextPendingConnection ();
-    _qt4xhb_createReturnClass ( ptr, "QTCPSOCKET" );
-  }
-}
-
+$virtualMethod=|QTcpSocket *|nextPendingConnection|
 
 /*
 QNetworkProxy proxy () const
 */
-HB_FUNC_STATIC( QTCPSERVER_PROXY )
-{
-  QTcpServer * obj = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QNetworkProxy * ptr = new QNetworkProxy( obj->proxy () );
-    _qt4xhb_createReturnClass ( ptr, "QNETWORKPROXY", true );
-  }
-}
-
+$method=|QNetworkProxy|proxy|
 
 /*
 QHostAddress serverAddress () const
 */
-HB_FUNC_STATIC( QTCPSERVER_SERVERADDRESS )
-{
-  QTcpServer * obj = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QHostAddress * ptr = new QHostAddress( obj->serverAddress () );
-    _qt4xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
-  }
-}
-
+$method=|QHostAddress|serverAddress|
 
 /*
 QAbstractSocket::SocketError serverError () const
 */
-HB_FUNC_STATIC( QTCPSERVER_SERVERERROR )
-{
-  QTcpServer * obj = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->serverError () );
-  }
-}
-
+$method=|QAbstractSocket::SocketError|serverError|
 
 /*
 quint16 serverPort () const
 */
-HB_FUNC_STATIC( QTCPSERVER_SERVERPORT )
-{
-  QTcpServer * obj = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQUINT16( obj->serverPort () );
-  }
-}
-
+$method=|quint16|serverPort|
 
 /*
 void setMaxPendingConnections ( int numConnections )
 */
-HB_FUNC_STATIC( QTCPSERVER_SETMAXPENDINGCONNECTIONS )
-{
-  QTcpServer * obj = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setMaxPendingConnections ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setMaxPendingConnections|int
 
 /*
 void setProxy ( const QNetworkProxy & networkProxy )
 */
-HB_FUNC_STATIC( QTCPSERVER_SETPROXY )
-{
-  QTcpServer * obj = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setProxy ( *PQNETWORKPROXY(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setProxy|const QNetworkProxy &
 
 /*
 bool setSocketDescriptor ( int socketDescriptor )
 */
-HB_FUNC_STATIC( QTCPSERVER_SETSOCKETDESCRIPTOR )
-{
-  QTcpServer * obj = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->setSocketDescriptor ( PINT(1) ) );
-  }
-}
-
+$method=|bool|setSocketDescriptor|int
 
 /*
 int socketDescriptor () const
 */
-HB_FUNC_STATIC( QTCPSERVER_SOCKETDESCRIPTOR )
-{
-  QTcpServer * obj = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->socketDescriptor () );
-  }
-}
-
+$method=|int|socketDescriptor|
 
 /*
 bool waitForNewConnection ( int msec = 0, bool * timedOut = 0 )
 */
-HB_FUNC_STATIC( QTCPSERVER_WAITFORNEWCONNECTION )
-{
-  QTcpServer * obj = (QTcpServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    bool par2;
-    RBOOL( obj->waitForNewConnection ( OPINT(1,0), &par2 ) );
-    hb_storl( par2, 2 );
-  }
-}
-
-
-
-
-
+$method=|bool|waitForNewConnection|int=0,bool *=0
 
 #pragma ENDDUMP

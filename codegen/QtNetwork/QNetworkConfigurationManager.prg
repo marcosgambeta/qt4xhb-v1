@@ -8,8 +8,6 @@ REQUEST QNETWORKCONFIGURATION
 
 CLASS QNetworkConfigurationManager INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD allConfigurations
@@ -42,11 +40,7 @@ $destructor
 /*
 QNetworkConfigurationManager ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_NEW )
-{
-  QNetworkConfigurationManager * o = new QNetworkConfigurationManager ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
@@ -98,18 +92,10 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ALLCONFIGURATIONS )
   }
 }
 
-
 /*
 QNetworkConfigurationManager::Capabilities capabilities () const
 */
-HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_CAPABILITIES )
-{
-  QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->capabilities () );
-  }
-}
+$method=|QNetworkConfigurationManager::Capabilities|capabilities|
 
 /*
 QNetworkConfiguration configurationFromIdentifier ( const QString & identifier ) const
@@ -119,45 +105,16 @@ $method=|QNetworkConfiguration|configurationFromIdentifier|const QString &
 /*
 QNetworkConfiguration defaultConfiguration () const
 */
-HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_DEFAULTCONFIGURATION )
-{
-  QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->defaultConfiguration () );
-    _qt4xhb_createReturnClass ( ptr, "QNETWORKCONFIGURATION", true );
-  }
-}
-
+$method=|QNetworkConfiguration|defaultConfiguration|
 
 /*
 bool isOnline () const
 */
-HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ISONLINE )
-{
-  QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isOnline () );
-  }
-}
-
+$method=|bool|isOnline|
 
 /*
 void updateConfigurations ()
 */
-HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_UPDATECONFIGURATIONS )
-{
-  QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->updateConfigurations ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
-
+$method=|void|updateConfigurations|
 
 #pragma ENDDUMP

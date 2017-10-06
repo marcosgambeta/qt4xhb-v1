@@ -9,8 +9,6 @@ REQUEST QIODEVICE
 
 CLASS QNetworkDiskCache INHERIT QAbstractNetworkCache
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD cacheDirectory
@@ -44,11 +42,7 @@ $destructor
 /*
 QNetworkDiskCache ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QNETWORKDISKCACHE_NEW )
-{
-  QNetworkDiskCache * o = new QNetworkDiskCache ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
@@ -65,15 +59,7 @@ $method=|QNetworkCacheMetaData|fileMetaData|const QString &
 /*
 qint64 maximumCacheSize () const
 */
-HB_FUNC_STATIC( QNETWORKDISKCACHE_MAXIMUMCACHESIZE )
-{
-  QNetworkDiskCache * obj = (QNetworkDiskCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQINT64( obj->maximumCacheSize () );
-  }
-}
-
+$method=|qint64|maximumCacheSize|
 
 /*
 void setCacheDirectory ( const QString & cacheDir )
@@ -83,128 +69,46 @@ $method=|void|setCacheDirectory|const QString &
 /*
 void setMaximumCacheSize ( qint64 size )
 */
-HB_FUNC_STATIC( QNETWORKDISKCACHE_SETMAXIMUMCACHESIZE )
-{
-  QNetworkDiskCache * obj = (QNetworkDiskCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setMaximumCacheSize ( PQINT64(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setMaximumCacheSize|qint64
 
 /*
 virtual qint64 cacheSize () const
 */
-HB_FUNC_STATIC( QNETWORKDISKCACHE_CACHESIZE )
-{
-  QNetworkDiskCache * obj = (QNetworkDiskCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQINT64( obj->cacheSize () );
-  }
-}
-
+$virtualMethod=|qint64|cacheSize|
 
 /*
 virtual QIODevice * data ( const QUrl & url )
 */
-HB_FUNC_STATIC( QNETWORKDISKCACHE_DATA )
-{
-  QNetworkDiskCache * obj = (QNetworkDiskCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QIODevice * ptr = obj->data ( *PQURL(1) );
-    _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );
-  }
-}
-
+$virtualMethod=|QIODevice *|data|const QUrl &
 
 /*
 virtual void insert ( QIODevice * device )
 */
-HB_FUNC_STATIC( QNETWORKDISKCACHE_INSERT )
-{
-  QNetworkDiskCache * obj = (QNetworkDiskCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->insert ( PQIODEVICE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|insert|QIODevice *
 
 /*
 virtual QNetworkCacheMetaData metaData ( const QUrl & url )
 */
-HB_FUNC_STATIC( QNETWORKDISKCACHE_METADATA )
-{
-  QNetworkDiskCache * obj = (QNetworkDiskCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QNetworkCacheMetaData * ptr = new QNetworkCacheMetaData( obj->metaData ( *PQURL(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QNETWORKCACHEMETADATA", true );
-  }
-}
-
+$virtualMethod=|QNetworkCacheMetaData|metaData|const QUrl &
 
 /*
 virtual QIODevice * prepare ( const QNetworkCacheMetaData & metaData )
 */
-HB_FUNC_STATIC( QNETWORKDISKCACHE_PREPARE )
-{
-  QNetworkDiskCache * obj = (QNetworkDiskCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QIODevice * ptr = obj->prepare ( *PQNETWORKCACHEMETADATA(1) );
-    _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );
-  }
-}
-
+$virtualMethod=|QIODevice *|prepare|const QNetworkCacheMetaData &
 
 /*
 virtual bool remove ( const QUrl & url )
 */
-HB_FUNC_STATIC( QNETWORKDISKCACHE_REMOVE )
-{
-  QNetworkDiskCache * obj = (QNetworkDiskCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->remove ( *PQURL(1) ) );
-  }
-}
-
+$virtualMethod=|bool|remove|const QUrl &
 
 /*
 virtual void updateMetaData ( const QNetworkCacheMetaData & metaData )
 */
-HB_FUNC_STATIC( QNETWORKDISKCACHE_UPDATEMETADATA )
-{
-  QNetworkDiskCache * obj = (QNetworkDiskCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->updateMetaData ( *PQNETWORKCACHEMETADATA(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|updateMetaData|const QNetworkCacheMetaData &
 
 /*
 virtual void clear ()
 */
-HB_FUNC_STATIC( QNETWORKDISKCACHE_CLEAR )
-{
-  QNetworkDiskCache * obj = (QNetworkDiskCache *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clear ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
-
+$virtualMethod=|void|clear|
 
 #pragma ENDDUMP

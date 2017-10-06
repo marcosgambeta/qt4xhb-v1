@@ -88,8 +88,6 @@ HB_FUNC_STATIC( QNETWORKPROXYFACTORY_QUERYPROXY )
   }
 }
 
-
-
 /*
 QList<QNetworkProxy> proxyForQuery ( const QNetworkProxyQuery & query )
 */
@@ -133,29 +131,18 @@ HB_FUNC_STATIC( QNETWORKPROXYFACTORY_PROXYFORQUERY )
   hb_itemReturnRelease(pArray);
 }
 
-
 /*
-void setApplicationProxyFactory ( QNetworkProxyFactory * factory )
+static void setApplicationProxyFactory ( QNetworkProxyFactory * factory )
 */
-HB_FUNC_STATIC( QNETWORKPROXYFACTORY_SETAPPLICATIONPROXYFACTORY )
-{
-  QNetworkProxyFactory::setApplicationProxyFactory ( PQNETWORKPROXYFACTORY(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|void|setApplicationProxyFactory|QNetworkProxyFactory *
 
 /*
-void setUseSystemConfiguration ( bool enable )
+static void setUseSystemConfiguration ( bool enable )
 */
-HB_FUNC_STATIC( QNETWORKPROXYFACTORY_SETUSESYSTEMCONFIGURATION )
-{
-  QNetworkProxyFactory::setUseSystemConfiguration ( PBOOL(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$staticMethod=|void|setUseSystemConfiguration|bool
 
 /*
-QList<QNetworkProxy> systemProxyForQuery ( const QNetworkProxyQuery & query = QNetworkProxyQuery() )
+static QList<QNetworkProxy> systemProxyForQuery ( const QNetworkProxyQuery & query = QNetworkProxyQuery() )
 */
 HB_FUNC_STATIC( QNETWORKPROXYFACTORY_SYSTEMPROXYFORQUERY )
 {

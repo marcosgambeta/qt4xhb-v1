@@ -45,32 +45,17 @@ $destructor
 /*
 QSslCipher ()
 */
-HB_FUNC_STATIC( QSSLCIPHER_NEW1 )
-{
-  QSslCipher * o = new QSslCipher ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|
 
 /*
 QSslCipher ( const QString & name, QSsl::SslProtocol protocol )
 */
-HB_FUNC_STATIC( QSSLCIPHER_NEW2 )
-{
-  QSslCipher * o = new QSslCipher ( PQSTRING(1), (QSsl::SslProtocol) hb_parni(2) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|const QString &,QSsl::SslProtocol
 
 /*
 QSslCipher ( const QSslCipher & other )
 */
-HB_FUNC_STATIC( QSSLCIPHER_NEW3 )
-{
-  QSslCipher * o = new QSslCipher ( *PQSSLCIPHER(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new3|const QSslCipher &
 
 //[1]QSslCipher ()
 //[2]QSslCipher ( const QString & name, QSsl::SslProtocol protocol )
@@ -111,14 +96,7 @@ $method=|QString|encryptionMethod|
 /*
 bool isNull () const
 */
-HB_FUNC_STATIC( QSSLCIPHER_ISNULL )
-{
-  QSslCipher * obj = (QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
+$method=|bool|isNull|
 
 /*
 QString keyExchangeMethod () const
@@ -133,14 +111,7 @@ $method=|QString|name|
 /*
 QSsl::SslProtocol protocol () const
 */
-HB_FUNC_STATIC( QSSLCIPHER_PROTOCOL )
-{
-  QSslCipher * obj = (QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->protocol () );
-  }
-}
+$method=|QSsl::SslProtocol|protocol|
 
 /*
 QString protocolString () const
@@ -150,27 +121,12 @@ $method=|QString|protocolString|
 /*
 int supportedBits () const
 */
-HB_FUNC_STATIC( QSSLCIPHER_SUPPORTEDBITS )
-{
-  QSslCipher * obj = (QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->supportedBits () );
-  }
-}
-
+$method=|int|supportedBits|
 
 /*
 int usedBits () const
 */
-HB_FUNC_STATIC( QSSLCIPHER_USEDBITS )
-{
-  QSslCipher * obj = (QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->usedBits () );
-  }
-}
+$method=|int|usedBits|
 
 $extraMethods
 

@@ -9,8 +9,6 @@ REQUEST QBYTEARRAY
 
 CLASS QFtp INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD bytesAvailable
@@ -68,25 +66,14 @@ $destructor
 /*
 QFtp ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QFTP_NEW )
-{
-  QFtp * o = new QFtp ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
 /*
 qint64 bytesAvailable () const
 */
-HB_FUNC_STATIC( QFTP_BYTESAVAILABLE )
-{
-  QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQINT64( obj->bytesAvailable () );
-  }
-}
+$method=|qint64|bytesAvailable|
 
 /*
 int cd ( const QString & dir )
@@ -96,94 +83,37 @@ $method=|int|cd|const QString &
 /*
 void clearPendingCommands ()
 */
-HB_FUNC_STATIC( QFTP_CLEARPENDINGCOMMANDS )
-{
-  QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clearPendingCommands ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|clearPendingCommands|
 
 /*
 int close ()
 */
-HB_FUNC_STATIC( QFTP_CLOSE )
-{
-  QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->close () );
-  }
-}
-
+$method=|int|close|
 
 /*
 int connectToHost ( const QString & host, quint16 port = 21 )
 */
-HB_FUNC_STATIC( QFTP_CONNECTTOHOST )
-{
-  QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->connectToHost ( PQSTRING(1), OPQUINT16(2,21) ) );
-  }
-}
-
+$method=|int|connectToHost|const QString &,quint16=21
 
 /*
 Command currentCommand () const
 */
-HB_FUNC_STATIC( QFTP_CURRENTCOMMAND )
-{
-  QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->currentCommand () );
-  }
-}
-
+$method=|QFtp::Command|currentCommand|
 
 /*
 QIODevice * currentDevice () const
 */
-HB_FUNC_STATIC( QFTP_CURRENTDEVICE )
-{
-  QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QIODevice * ptr = obj->currentDevice ();
-    _qt4xhb_createReturnClass ( ptr, "QIODEVICE" );
-  }
-}
-
+$method=|QIODevice *|currentDevice|
 
 /*
 int currentId () const
 */
-HB_FUNC_STATIC( QFTP_CURRENTID )
-{
-  QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->currentId () );
-  }
-}
-
+$method=|int|currentId|
 
 /*
 Error error () const
 */
-HB_FUNC_STATIC( QFTP_ERROR )
-{
-  QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->error () );
-  }
-}
+$method=|QFtp::Error|error|
 
 /*
 QString errorString () const
@@ -193,55 +123,22 @@ $method=|QString|errorString|
 /*
 int get ( const QString & file, QIODevice * dev = 0, TransferType type = Binary )
 */
-HB_FUNC_STATIC( QFTP_GET )
-{
-  QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QIODevice * par2 = ISNIL(2)? 0 : (QIODevice *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    int par3 = ISNIL(3)? (int) QFtp::Binary : hb_parni(3);
-    RINT( obj->get ( PQSTRING(1), par2, (QFtp::TransferType) par3 ) );
-  }
-}
-
+$method=|int|get|const QString &,QIODevice *=0,QFtp::TransferType=QFtp::Binary
 
 /*
 bool hasPendingCommands () const
 */
-HB_FUNC_STATIC( QFTP_HASPENDINGCOMMANDS )
-{
-  QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasPendingCommands () );
-  }
-}
-
+$method=|bool|hasPendingCommands|
 
 /*
 int list ( const QString & dir = QString() )
 */
-HB_FUNC_STATIC( QFTP_LIST )
-{
-  QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->list ( OPQSTRING(1,QString()) ) );
-  }
-}
-
+$method=|int|list|const QString &=QString()
 
 /*
 int login ( const QString & user = QString(), const QString & password = QString() )
 */
-HB_FUNC_STATIC( QFTP_LOGIN )
-{
-  QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->login ( OPQSTRING(1,QString()), OPQSTRING(2,QString()) ) );
-  }
-}
+$method=|int|login|const QString &=QString(),const QString &=QString()
 
 /*
 int mkdir ( const QString & dir )
@@ -251,30 +148,12 @@ $method=|int|mkdir|const QString &
 /*
 int put ( QIODevice * dev, const QString & file, TransferType type = Binary )
 */
-HB_FUNC_STATIC( QFTP_PUT1 )
-{
-  QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par3 = ISNIL(3)? (int) QFtp::Binary : hb_parni(3);
-    RINT( obj->put ( PQIODEVICE(1), PQSTRING(2), (QFtp::TransferType) par3 ) );
-  }
-}
-
+$method=|int|put,put1|QIODevice *,const QString &,QFtp::TransferType=QFtp::Binary
 
 /*
 int put ( const QByteArray & data, const QString & file, TransferType type = Binary )
 */
-HB_FUNC_STATIC( QFTP_PUT2 )
-{
-  QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par3 = ISNIL(3)? (int) QFtp::Binary : hb_parni(3);
-    RINT( obj->put ( *PQBYTEARRAY(1), PQSTRING(2), (QFtp::TransferType) par3 ) );
-  }
-}
-
+$method=|int|put,put2|const QByteArray &,const QString &,QFtp::TransferType=QFtp::Binary
 
 //[1]int put ( QIODevice * dev, const QString & file, TransferType type = Binary )
 //[2]int put ( const QByteArray & data, const QString & file, TransferType type = Binary )
@@ -299,29 +178,12 @@ $method=|int|rawCommand|const QString &
 /*
 qint64 read ( char * data, qint64 maxlen )
 */
-HB_FUNC_STATIC( QFTP_READ )
-{
-  QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    char * par1 = (char *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    RQINT64( obj->read ( par1, PQINT64(2) ) );
-  }
-}
-
+$method=|qint64|read|char *,qint64
 
 /*
 QByteArray readAll ()
 */
-HB_FUNC_STATIC( QFTP_READALL )
-{
-  QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->readAll () );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
+$method=|QByteArray|readAll|
 
 /*
 int remove ( const QString & file )
@@ -346,45 +208,16 @@ $method=|int|setProxy|const QString &,quint16
 /*
 int setTransferMode ( TransferMode mode )
 */
-HB_FUNC_STATIC( QFTP_SETTRANSFERMODE )
-{
-  QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->setTransferMode ( (QFtp::TransferMode) hb_parni(1) ) );
-  }
-}
-
+$method=|int|setTransferMode|QFtp::TransferMode
 
 /*
 State state () const
 */
-HB_FUNC_STATIC( QFTP_STATE )
-{
-  QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->state () );
-  }
-}
-
+$method=|QFtp::State|state|
 
 /*
 void abort ()
 */
-HB_FUNC_STATIC( QFTP_ABORT )
-{
-  QFtp * obj = (QFtp *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->abort ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
-
-
-
+$method=|void|abort|
 
 #pragma ENDDUMP

@@ -70,42 +70,22 @@ $destructor
 /*
 QUrlInfo ()
 */
-HB_FUNC_STATIC( QURLINFO_NEW1 )
-{
-  QUrlInfo * o = new QUrlInfo ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|
 
 /*
 QUrlInfo ( const QUrlInfo & ui )
 */
-HB_FUNC_STATIC( QURLINFO_NEW2 )
-{
-  QUrlInfo * o = new QUrlInfo ( *PQURLINFO(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|const QUrlInfo &
 
 /*
 QUrlInfo ( const QString & name, int permissions, const QString & owner, const QString & group, qint64 size, const QDateTime & lastModified, const QDateTime & lastRead, bool isDir, bool isFile, bool isSymLink, bool isWritable, bool isReadable, bool isExecutable )
 */
-HB_FUNC_STATIC( QURLINFO_NEW3 )
-{
-  QUrlInfo * o = new QUrlInfo ( PQSTRING(1), PINT(2), PQSTRING(3), PQSTRING(4), PQINT64(5), *PQDATETIME(6), *PQDATETIME(7), PBOOL(8), PBOOL(9), PBOOL(10), PBOOL(11), PBOOL(12), PBOOL(13) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new3|const QString &,int,const QString &,const QString &,qint64,const QDateTime &,const QDateTime &,bool,bool,bool,bool,bool,bool
 
 /*
 QUrlInfo ( const QUrl & url, int permissions, const QString & owner, const QString & group, qint64 size, const QDateTime & lastModified, const QDateTime & lastRead, bool isDir, bool isFile, bool isSymLink, bool isWritable, bool isReadable, bool isExecutable )
 */
-HB_FUNC_STATIC( QURLINFO_NEW4 )
-{
-  QUrlInfo * o = new QUrlInfo ( *PQURL(1), PINT(2), PQSTRING(3), PQSTRING(4), PQINT64(5), *PQDATETIME(6), *PQDATETIME(7), PBOOL(8), PBOOL(9), PBOOL(10), PBOOL(11), PBOOL(12), PBOOL(13) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new4|const QUrl &,int,const QString &,const QString &,qint64,const QDateTime &,const QDateTime &,bool,bool,bool,bool,bool,bool
 
 //[1]QUrlInfo ()
 //[2]QUrlInfo ( const QUrlInfo & ui )
@@ -146,120 +126,47 @@ $method=|QString|group|
 /*
 bool isDir () const
 */
-HB_FUNC_STATIC( QURLINFO_ISDIR )
-{
-  QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isDir () );
-  }
-}
-
+$method=|bool|isDir|
 
 /*
 bool isExecutable () const
 */
-HB_FUNC_STATIC( QURLINFO_ISEXECUTABLE )
-{
-  QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isExecutable () );
-  }
-}
-
+$method=|bool|isExecutable|
 
 /*
 bool isFile () const
 */
-HB_FUNC_STATIC( QURLINFO_ISFILE )
-{
-  QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isFile () );
-  }
-}
-
+$method=|bool|isFile|
 
 /*
 bool isReadable () const
 */
-HB_FUNC_STATIC( QURLINFO_ISREADABLE )
-{
-  QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isReadable () );
-  }
-}
-
+$method=|bool|isReadable|
 
 /*
 bool isSymLink () const
 */
-HB_FUNC_STATIC( QURLINFO_ISSYMLINK )
-{
-  QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isSymLink () );
-  }
-}
-
+$method=|bool|isSymLink|
 
 /*
 bool isValid () const
 */
-HB_FUNC_STATIC( QURLINFO_ISVALID )
-{
-  QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isValid () );
-  }
-}
-
+$method=|bool|isValid|
 
 /*
 bool isWritable () const
 */
-HB_FUNC_STATIC( QURLINFO_ISWRITABLE )
-{
-  QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isWritable () );
-  }
-}
-
+$method=|bool|isWritable|
 
 /*
 QDateTime lastModified () const
 */
-HB_FUNC_STATIC( QURLINFO_LASTMODIFIED )
-{
-  QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDateTime * ptr = new QDateTime( obj->lastModified () );
-    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
-  }
-}
-
+$method=|QDateTime|lastModified|
 
 /*
 QDateTime lastRead () const
 */
-HB_FUNC_STATIC( QURLINFO_LASTREAD )
-{
-  QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QDateTime * ptr = new QDateTime( obj->lastRead () );
-    _qt4xhb_createReturnClass ( ptr, "QDATETIME", true );
-  }
-}
+$method=|QDateTime|lastRead|
 
 /*
 QString name () const
@@ -274,42 +181,17 @@ $method=|QString|owner|
 /*
 int permissions () const
 */
-HB_FUNC_STATIC( QURLINFO_PERMISSIONS )
-{
-  QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->permissions () );
-  }
-}
-
+$method=|int|permissions|
 
 /*
 virtual void setDir ( bool b )
 */
-HB_FUNC_STATIC( QURLINFO_SETDIR )
-{
-  QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setDir ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|setDir|bool
 
 /*
 virtual void setFile ( bool b )
 */
-HB_FUNC_STATIC( QURLINFO_SETFILE )
-{
-  QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setFile ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$virtualMethod=|void|setFile|bool
 
 /*
 virtual void setGroup ( const QString & s )
@@ -319,29 +201,12 @@ $virtualMethod=|void|setGroup|const QString &
 /*
 virtual void setLastModified ( const QDateTime & dt )
 */
-HB_FUNC_STATIC( QURLINFO_SETLASTMODIFIED )
-{
-  QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setLastModified ( *PQDATETIME(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|setLastModified|const QDateTime &
 
 /*
 void setLastRead ( const QDateTime & dt )
 */
-HB_FUNC_STATIC( QURLINFO_SETLASTREAD )
-{
-  QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setLastRead ( *PQDATETIME(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setLastRead|const QDateTime &
 
 /*
 virtual void setName ( const QString & name )
@@ -356,112 +221,47 @@ $virtualMethod=|void|setOwner|const QString &
 /*
 virtual void setPermissions ( int p )
 */
-HB_FUNC_STATIC( QURLINFO_SETPERMISSIONS )
-{
-  QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setPermissions ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|setPermissions|int
 
 /*
 virtual void setReadable ( bool b )
 */
-HB_FUNC_STATIC( QURLINFO_SETREADABLE )
-{
-  QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setReadable ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|setReadable|bool
 
 /*
 virtual void setSize ( qint64 size )
 */
-HB_FUNC_STATIC( QURLINFO_SETSIZE )
-{
-  QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSize ( PQINT64(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|setSize|qint64
 
 /*
 virtual void setSymLink ( bool b )
 */
-HB_FUNC_STATIC( QURLINFO_SETSYMLINK )
-{
-  QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSymLink ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|setSymLink|bool
 
 /*
 virtual void setWritable ( bool b )
 */
-HB_FUNC_STATIC( QURLINFO_SETWRITABLE )
-{
-  QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setWritable ( PBOOL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$virtualMethod=|void|setWritable|bool
 
 /*
 qint64 size () const
 */
-HB_FUNC_STATIC( QURLINFO_SIZE )
-{
-  QUrlInfo * obj = (QUrlInfo *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQINT64( obj->size () );
-  }
-}
-
-
+$method=|qint64|size|
 
 /*
-bool equal ( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
+static bool equal ( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
 */
-HB_FUNC_STATIC( QURLINFO_EQUAL )
-{
-  RBOOL( QUrlInfo::equal ( *PQURLINFO(1), *PQURLINFO(2), PINT(3) ) );
-}
-
+$staticMethod=|bool|equal|const QUrlInfo &,const QUrlInfo &,int
 
 /*
-bool greaterThan ( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
+static bool greaterThan ( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
 */
-HB_FUNC_STATIC( QURLINFO_GREATERTHAN )
-{
-  RBOOL( QUrlInfo::greaterThan ( *PQURLINFO(1), *PQURLINFO(2), PINT(3) ) );
-}
-
+$staticMethod=|bool|greaterThan|const QUrlInfo &,const QUrlInfo &,int
 
 /*
-bool lessThan ( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
+static bool lessThan ( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
 */
-HB_FUNC_STATIC( QURLINFO_LESSTHAN )
-{
-  RBOOL( QUrlInfo::lessThan ( *PQURLINFO(1), *PQURLINFO(2), PINT(3) ) );
-}
+$staticMethod=|bool|lessThan|const QUrlInfo &,const QUrlInfo &,int
 
 $extraMethods
 

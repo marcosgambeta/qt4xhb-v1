@@ -61,23 +61,12 @@ $destructor
 /*
 QNetworkRequest ( const QUrl & url = QUrl() )
 */
-HB_FUNC_STATIC( QNETWORKREQUEST_NEW1 )
-{
-  QUrl par1 = ISNIL(1)? QUrl() : *(QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QNetworkRequest * o = new QNetworkRequest ( par1 );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|const QUrl &=QUrl()
 
 /*
 QNetworkRequest ( const QNetworkRequest & other )
 */
-HB_FUNC_STATIC( QNETWORKREQUEST_NEW2 )
-{
-  QNetworkRequest * o = new QNetworkRequest ( *PQNETWORKREQUEST(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|const QNetworkRequest &
 
 //[1]QNetworkRequest ( const QUrl & url = QUrl() )
 //[2]QNetworkRequest ( const QNetworkRequest & other )
@@ -103,87 +92,32 @@ $deleteMethod
 /*
 QVariant attribute ( Attribute code, const QVariant & defaultValue = QVariant() ) const
 */
-HB_FUNC_STATIC( QNETWORKREQUEST_ATTRIBUTE )
-{
-  QNetworkRequest * obj = (QNetworkRequest *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    QVariant par2 = ISNIL(2)? QVariant() : *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param(2, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QVariant * ptr = new QVariant( obj->attribute ( (QNetworkRequest::Attribute) par1, par2 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
-
+$method=|QVariant|attribute|QNetworkRequest::Attribute,const QVariant &=QVariant()
 
 /*
 bool hasRawHeader ( const QByteArray & headerName ) const
 */
-HB_FUNC_STATIC( QNETWORKREQUEST_HASRAWHEADER )
-{
-  QNetworkRequest * obj = (QNetworkRequest *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasRawHeader ( *PQBYTEARRAY(1) ) );
-  }
-}
-
+$method=|bool|hasRawHeader|const QByteArray &
 
 /*
 QVariant header ( KnownHeaders header ) const
 */
-HB_FUNC_STATIC( QNETWORKREQUEST_HEADER )
-{
-  QNetworkRequest * obj = (QNetworkRequest *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    QVariant * ptr = new QVariant( obj->header ( (QNetworkRequest::KnownHeaders) par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QVARIANT", true );
-  }
-}
-
+$method=|QVariant|header|QNetworkRequest::KnownHeaders
 
 /*
 QObject * originatingObject () const
 */
-HB_FUNC_STATIC( QNETWORKREQUEST_ORIGINATINGOBJECT )
-{
-  QNetworkRequest * obj = (QNetworkRequest *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QObject * ptr = obj->originatingObject ();
-    _qt4xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
-  }
-}
-
+$method=|QObject *|originatingObject|
 
 /*
 Priority priority () const
 */
-HB_FUNC_STATIC( QNETWORKREQUEST_PRIORITY )
-{
-  QNetworkRequest * obj = (QNetworkRequest *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->priority () );
-  }
-}
-
+$method=|QNetworkRequest::Priority|priority|
 
 /*
 QByteArray rawHeader ( const QByteArray & headerName ) const
 */
-HB_FUNC_STATIC( QNETWORKREQUEST_RAWHEADER )
-{
-  QNetworkRequest * obj = (QNetworkRequest *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->rawHeader ( *PQBYTEARRAY(1) ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray|rawHeader|const QByteArray &
 
 /*
 QList<QByteArray> rawHeaderList () const
@@ -228,134 +162,50 @@ HB_FUNC_STATIC( QNETWORKREQUEST_RAWHEADERLIST )
   }
 }
 
-
 /*
 void setAttribute ( Attribute code, const QVariant & value )
 */
-HB_FUNC_STATIC( QNETWORKREQUEST_SETATTRIBUTE )
-{
-  QNetworkRequest * obj = (QNetworkRequest *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setAttribute ( (QNetworkRequest::Attribute) par1, *PQVARIANT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAttribute|QNetworkRequest::Attribute,const QVariant &
 
 /*
 void setHeader ( KnownHeaders header, const QVariant & value )
 */
-HB_FUNC_STATIC( QNETWORKREQUEST_SETHEADER )
-{
-  QNetworkRequest * obj = (QNetworkRequest *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setHeader ( (QNetworkRequest::KnownHeaders) par1, *PQVARIANT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setHeader|QNetworkRequest::KnownHeaders,const QVariant &
 
 /*
 void setOriginatingObject ( QObject * object )
 */
-HB_FUNC_STATIC( QNETWORKREQUEST_SETORIGINATINGOBJECT )
-{
-  QNetworkRequest * obj = (QNetworkRequest *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setOriginatingObject ( PQOBJECT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setOriginatingObject|QObject *
 
 /*
 void setPriority ( Priority priority )
 */
-HB_FUNC_STATIC( QNETWORKREQUEST_SETPRIORITY )
-{
-  QNetworkRequest * obj = (QNetworkRequest *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setPriority ( (QNetworkRequest::Priority) par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setPriority|QNetworkRequest::Priority
 
 /*
 void setRawHeader ( const QByteArray & headerName, const QByteArray & headerValue )
 */
-HB_FUNC_STATIC( QNETWORKREQUEST_SETRAWHEADER )
-{
-  QNetworkRequest * obj = (QNetworkRequest *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setRawHeader ( *PQBYTEARRAY(1), *PQBYTEARRAY(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setRawHeader|const QByteArray &,const QByteArray &
 
 /*
 void setSslConfiguration ( const QSslConfiguration & config )
 */
-HB_FUNC_STATIC( QNETWORKREQUEST_SETSSLCONFIGURATION )
-{
-  QNetworkRequest * obj = (QNetworkRequest *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setSslConfiguration ( *PQSSLCONFIGURATION(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setSslConfiguration|const QSslConfiguration &
 
 /*
 void setUrl ( const QUrl & url )
 */
-HB_FUNC_STATIC( QNETWORKREQUEST_SETURL )
-{
-  QNetworkRequest * obj = (QNetworkRequest *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setUrl ( *PQURL(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setUrl|const QUrl &
 
 /*
 QSslConfiguration sslConfiguration () const
 */
-HB_FUNC_STATIC( QNETWORKREQUEST_SSLCONFIGURATION )
-{
-  QNetworkRequest * obj = (QNetworkRequest *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QSslConfiguration * ptr = new QSslConfiguration( obj->sslConfiguration () );
-    _qt4xhb_createReturnClass ( ptr, "QSSLCONFIGURATION", true );
-  }
-}
-
+$method=|QSslConfiguration|sslConfiguration|
 
 /*
 QUrl url () const
 */
-HB_FUNC_STATIC( QNETWORKREQUEST_URL )
-{
-  QNetworkRequest * obj = (QNetworkRequest *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QUrl * ptr = new QUrl( obj->url () );
-    _qt4xhb_createReturnClass ( ptr, "QURL", true );
-  }
-}
+$method=|QUrl|url|
 
 $extraMethods
 

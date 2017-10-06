@@ -8,8 +8,6 @@ REQUEST QLOCALSOCKET
 
 CLASS QLocalServer INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD close
@@ -45,26 +43,14 @@ $destructor
 /*
 QLocalServer ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QLOCALSERVER_NEW )
-{
-  QLocalServer * o = new QLocalServer ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 
 /*
 void close ()
 */
-HB_FUNC_STATIC( QLOCALSERVER_CLOSE )
-{
-  QLocalServer * obj = (QLocalServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->close ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|close|
 
 /*
 QString errorString () const
@@ -79,27 +65,12 @@ $method=|QString|fullServerName|
 /*
 virtual bool hasPendingConnections () const
 */
-HB_FUNC_STATIC( QLOCALSERVER_HASPENDINGCONNECTIONS )
-{
-  QLocalServer * obj = (QLocalServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->hasPendingConnections () );
-  }
-}
-
+$virtualMethod=|bool|hasPendingConnections|
 
 /*
 bool isListening () const
 */
-HB_FUNC_STATIC( QLOCALSERVER_ISLISTENING )
-{
-  QLocalServer * obj = (QLocalServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isListening () );
-  }
-}
+$method=|bool|isListening|
 
 /*
 bool listen ( const QString & name )
@@ -109,41 +80,17 @@ $method=|bool|listen|const QString &
 /*
 int maxPendingConnections () const
 */
-HB_FUNC_STATIC( QLOCALSERVER_MAXPENDINGCONNECTIONS )
-{
-  QLocalServer * obj = (QLocalServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->maxPendingConnections () );
-  }
-}
-
+$method=|int|maxPendingConnections|
 
 /*
 virtual QLocalSocket * nextPendingConnection ()
 */
-HB_FUNC_STATIC( QLOCALSERVER_NEXTPENDINGCONNECTION )
-{
-  QLocalServer * obj = (QLocalServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QLocalSocket * ptr = obj->nextPendingConnection ();
-    _qt4xhb_createReturnClass ( ptr, "QLOCALSOCKET" );
-  }
-}
-
+$virtualMethod=|QLocalSocket *|nextPendingConnection|
 
 /*
 QAbstractSocket::SocketError serverError () const
 */
-HB_FUNC_STATIC( QLOCALSERVER_SERVERERROR )
-{
-  QLocalServer * obj = (QLocalServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->serverError () );
-  }
-}
+$method=|QAbstractSocket::SocketError|serverError|
 
 /*
 QString serverName () const
@@ -153,30 +100,12 @@ $method=|QString|serverName|
 /*
 void setMaxPendingConnections ( int numConnections )
 */
-HB_FUNC_STATIC( QLOCALSERVER_SETMAXPENDINGCONNECTIONS )
-{
-  QLocalServer * obj = (QLocalServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setMaxPendingConnections ( PINT(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setMaxPendingConnections|int
 
 /*
 bool waitForNewConnection ( int msec = 0, bool * timedOut = 0 )
 */
-HB_FUNC_STATIC( QLOCALSERVER_WAITFORNEWCONNECTION )
-{
-  QLocalServer * obj = (QLocalServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    bool par2;
-    RBOOL( obj->waitForNewConnection ( OPINT(1,0), &par2 ) );
-    hb_storl( par2, 2 );
-  }
-}
+$method=|bool|waitForNewConnection|int=0,bool *=0
 
 /*
 static bool removeServer ( const QString & name )

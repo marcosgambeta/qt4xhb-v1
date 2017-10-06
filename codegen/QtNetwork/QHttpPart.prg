@@ -39,22 +39,12 @@ $destructor
 /*
 QHttpPart ()
 */
-HB_FUNC_STATIC( QHTTPPART_NEW1 )
-{
-  QHttpPart * o = new QHttpPart ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|
 
 /*
 QHttpPart ( const QHttpPart & other )
 */
-HB_FUNC_STATIC( QHTTPPART_NEW2 )
-{
-  QHttpPart * o = new QHttpPart ( *PQHTTPPART(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|const QHttpPart &
 
 //[1]QHttpPart ()
 //[2]QHttpPart ( const QHttpPart & other )
@@ -80,58 +70,22 @@ $deleteMethod
 /*
 void setBody ( const QByteArray & body )
 */
-HB_FUNC_STATIC( QHTTPPART_SETBODY )
-{
-  QHttpPart * obj = (QHttpPart *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setBody ( *PQBYTEARRAY(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setBody|const QByteArray &
 
 /*
 void setBodyDevice ( QIODevice * device )
 */
-HB_FUNC_STATIC( QHTTPPART_SETBODYDEVICE )
-{
-  QHttpPart * obj = (QHttpPart *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setBodyDevice ( PQIODEVICE(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setBodyDevice|QIODevice *
 
 /*
 void setHeader ( QNetworkRequest::KnownHeaders header, const QVariant & value )
 */
-HB_FUNC_STATIC( QHTTPPART_SETHEADER )
-{
-  QHttpPart * obj = (QHttpPart *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    int par1 = hb_parni(1);
-    obj->setHeader ( (QNetworkRequest::KnownHeaders) par1, *PQVARIANT(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setHeader|QNetworkRequest::KnownHeaders,const QVariant &
 
 /*
 void setRawHeader ( const QByteArray & headerName, const QByteArray & headerValue )
 */
-HB_FUNC_STATIC( QHTTPPART_SETRAWHEADER )
-{
-  QHttpPart * obj = (QHttpPart *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setRawHeader ( *PQBYTEARRAY(1), *PQBYTEARRAY(2) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$method=|void|setRawHeader|const QByteArray &,const QByteArray &
 
 $extraMethods
 

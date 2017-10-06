@@ -48,48 +48,22 @@ $destructor
 /*
 QSslKey ()
 */
-HB_FUNC_STATIC( QSSLKEY_NEW1 )
-{
-  QSslKey * o = new QSslKey ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|
 
 /*
 QSslKey ( const QByteArray & encoded, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem, QSsl::KeyType type = QSsl::PrivateKey, const QByteArray & passPhrase = QByteArray() )
 */
-HB_FUNC_STATIC( QSSLKEY_NEW2 )
-{
-  int par3 = ISNIL(3)? (int) QSsl::Pem : hb_parni(3);
-  int par4 = ISNIL(4)? (int) QSsl::PrivateKey : hb_parni(4);
-  QByteArray par5 = ISNIL(5)? QByteArray() : *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(5, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QSslKey * o = new QSslKey ( *PQBYTEARRAY(1), (QSsl::KeyAlgorithm) hb_parni(2), (QSsl::EncodingFormat) par3, (QSsl::KeyType) par4, par5 );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new2|const QByteArray &,QSsl::KeyAlgorithm,QSsl::EncodingFormat=QSsl::Pem,QSsl::KeyType=QSsl::PrivateKey,const QByteArray &=QByteArray()
 
 /*
 QSslKey ( QIODevice * device, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem, QSsl::KeyType type = QSsl::PrivateKey, const QByteArray & passPhrase = QByteArray() )
 */
-HB_FUNC_STATIC( QSSLKEY_NEW3 )
-{
-  int par3 = ISNIL(3)? (int) QSsl::Pem : hb_parni(3);
-  int par4 = ISNIL(4)? (int) QSsl::PrivateKey : hb_parni(4);
-  QByteArray par5 = ISNIL(5)? QByteArray() : *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(5, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QSslKey * o = new QSslKey ( PQIODEVICE(1), (QSsl::KeyAlgorithm) hb_parni(2), (QSsl::EncodingFormat) par3, (QSsl::KeyType) par4, par5 );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new3|QIODevice *,QSsl::KeyAlgorithm,QSsl::EncodingFormat=QSsl::Pem,QSsl::KeyType=QSsl::PrivateKey,const QByteArray &=QByteArray()
 
 /*
 QSslKey ( const QSslKey & other )
 */
-HB_FUNC_STATIC( QSSLKEY_NEW4 )
-{
-  QSslKey * o = new QSslKey ( *PQSSLKEY(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new4|const QSslKey &
 
 //[1]QSslKey ()
 //[2]QSslKey ( const QByteArray & encoded, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem, QSsl::KeyType type = QSsl::PrivateKey, const QByteArray & passPhrase = QByteArray() )
@@ -125,98 +99,37 @@ $deleteMethod
 /*
 QSsl::KeyAlgorithm algorithm () const
 */
-HB_FUNC_STATIC( QSSLKEY_ALGORITHM )
-{
-  QSslKey * obj = (QSslKey *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->algorithm () );
-  }
-}
-
+$method=|QSsl::KeyAlgorithm|algorithm|
 
 /*
 void clear ()
 */
-HB_FUNC_STATIC( QSSLKEY_CLEAR )
-{
-  QSslKey * obj = (QSslKey *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clear ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-
+$method=|void|clear|
 
 /*
 bool isNull () const
 */
-HB_FUNC_STATIC( QSSLKEY_ISNULL )
-{
-  QSslKey * obj = (QSslKey *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
-
+$method=|bool|isNull|
 
 /*
 int length () const
 */
-HB_FUNC_STATIC( QSSLKEY_LENGTH )
-{
-  QSslKey * obj = (QSslKey *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RINT( obj->length () );
-  }
-}
-
+$method=|int|length|
 
 /*
 QByteArray toDer ( const QByteArray & passPhrase = QByteArray() ) const
 */
-HB_FUNC_STATIC( QSSLKEY_TODER )
-{
-  QSslKey * obj = (QSslKey *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray par1 = ISNIL(1)? QByteArray() : *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QByteArray * ptr = new QByteArray( obj->toDer ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray|toDer|const QByteArray &=QByteArray()
 
 /*
 QByteArray toPem ( const QByteArray & passPhrase = QByteArray() ) const
 */
-HB_FUNC_STATIC( QSSLKEY_TOPEM )
-{
-  QSslKey * obj = (QSslKey *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    QByteArray par1 = ISNIL(1)? QByteArray() : *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QByteArray * ptr = new QByteArray( obj->toPem ( par1 ) );
-    _qt4xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-}
-
+$method=|QByteArray|toPem|const QByteArray &=QByteArray()
 
 /*
 QSsl::KeyType type () const
 */
-HB_FUNC_STATIC( QSSLKEY_TYPE )
-{
-  QSslKey * obj = (QSslKey *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->type () );
-  }
-}
+$method=|QSsl::KeyType|type|
 
 $extraMethods
 

@@ -4,8 +4,6 @@ $header
 
 CLASS QTcpSocket INHERIT QAbstractSocket
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
 
@@ -26,11 +24,7 @@ $destructor
 /*
 QTcpSocket ( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QTCPSOCKET_NEW )
-{
-  QTcpSocket * o = new QTcpSocket ( OPQOBJECT(1,0) );
-  _qt4xhb_storePointerAndFlag ( o, false );
-}
+$constructor=|new|QObject *=0
 
 $deleteMethod
 

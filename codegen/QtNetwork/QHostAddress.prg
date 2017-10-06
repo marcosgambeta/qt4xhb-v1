@@ -2,9 +2,9 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT4XHB_NO_REQUESTS
-REQUEST Q_IPV6ADDR
-#endif
+%% #ifndef QT4XHB_NO_REQUESTS
+%% REQUEST Q_IPV6ADDR TODO: implementar
+%% #endif
 
 CLASS QHostAddress
 
@@ -13,6 +13,9 @@ CLASS QHostAddress
 
    METHOD new1
    METHOD new2
+   METHOD new3
+   METHOD new4
+   METHOD new5
    METHOD new6
    METHOD new7
    METHOD new8
@@ -20,12 +23,14 @@ CLASS QHostAddress
    METHOD delete
    METHOD clear
    METHOD isInSubnet1
+   METHOD isInSubnet2
    METHOD isInSubnet
    METHOD isNull
    METHOD protocol
    METHOD scopeId
    METHOD setAddress1
    METHOD setAddress2
+   METHOD setAddress3
    METHOD setAddress4
    METHOD setAddress5
    METHOD setAddress
@@ -57,55 +62,42 @@ $destructor
 /*
 QHostAddress ()
 */
-HB_FUNC_STATIC( QHOSTADDRESS_NEW1 )
-{
-  QHostAddress * o = new QHostAddress ();
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new1|
 
 /*
 QHostAddress ( quint32 ip4Addr )
 */
-HB_FUNC_STATIC( QHOSTADDRESS_NEW2 )
-{
-  QHostAddress * o = new QHostAddress ( PQUINT32(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
+$constructor=|new2|quint32
 
+/*
+QHostAddress ( quint8 * ip6Addr )
+*/
+$constructor=|new3|quint8 *
 
+/*
+QHostAddress ( const Q_IPV6ADDR & ip6Addr )
+*/
+$constructor=|new4|const Q_IPV6ADDR &
 
-
+/*
+QHostAddress ( const sockaddr * sockaddr )
+*/
+$constructor=|new5|const sockaddr *
 
 /*
 QHostAddress ( const QString & address )
 */
-HB_FUNC_STATIC( QHOSTADDRESS_NEW6 )
-{
-  QHostAddress * o = new QHostAddress ( PQSTRING(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new6|const QString &
 
 /*
 QHostAddress ( const QHostAddress & address )
 */
-HB_FUNC_STATIC( QHOSTADDRESS_NEW7 )
-{
-  QHostAddress * o = new QHostAddress ( *PQHOSTADDRESS(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new7|const QHostAddress &
 
 /*
 QHostAddress ( SpecialAddress address )
 */
-HB_FUNC_STATIC( QHOSTADDRESS_NEW8 )
-{
-  QHostAddress * o = new QHostAddress ( (QHostAddress::SpecialAddress) hb_parni(1) );
-  _qt4xhb_storePointerAndFlag ( o, true );
-}
-
+$constructor=|new8|QHostAddress::SpecialAddress
 
 //[1]QHostAddress ()
 //[2]QHostAddress ( quint32 ip4Addr )
@@ -149,31 +141,18 @@ $deleteMethod
 /*
 void clear ()
 */
-HB_FUNC_STATIC( QHOSTADDRESS_CLEAR )
-{
-  QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->clear ();
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|clear|
 
 /*
 bool isInSubnet ( const QHostAddress & subnet, int netmask ) const
 */
-HB_FUNC_STATIC( QHOSTADDRESS_ISINSUBNET1 )
-{
-  QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isInSubnet ( *PQHOSTADDRESS(1), PINT(2) ) );
-  }
-}
+$method=|bool|isInSubnet,isInSubnet1|const QHostAddress &,int
 
-
-
+/*
+bool isInSubnet ( const QPair<QHostAddress, int> & subnet ) const
+*/
+%% TODO: implementar
+%% $method=|bool|isInSubnet,isInSubnet2|const QPair<QHostAddress, int> &
 
 //[1]bool isInSubnet ( const QHostAddress & subnet, int netmask ) const
 //[2]bool isInSubnet ( const QPair<QHostAddress, int> & subnet ) const
@@ -193,27 +172,12 @@ HB_FUNC_STATIC( QHOSTADDRESS_ISINSUBNET )
 /*
 bool isNull () const
 */
-HB_FUNC_STATIC( QHOSTADDRESS_ISNULL )
-{
-  QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RBOOL( obj->isNull () );
-  }
-}
-
+$method=|bool|isNull|
 
 /*
 QAbstractSocket::NetworkLayerProtocol protocol () const
 */
-HB_FUNC_STATIC( QHOSTADDRESS_PROTOCOL )
-{
-  QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    hb_retni( (int) obj->protocol () );
-  }
-}
+$method=|QAbstractSocket::NetworkLayerProtocol|protocol|
 
 /*
 QString scopeId () const
@@ -223,30 +187,18 @@ $method=|QString|scopeId|
 /*
 void setAddress ( quint32 ip4Addr )
 */
-HB_FUNC_STATIC( QHOSTADDRESS_SETADDRESS1 )
-{
-  QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    obj->setAddress ( PQUINT32(1) );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAddress,setAddress1|quint32
 
 /*
 void setAddress ( quint8 * ip6Addr )
 */
-HB_FUNC_STATIC( QHOSTADDRESS_SETADDRESS2 )
-{
-  QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    quint8 * par1 = (quint8 *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setAddress ( par1 ); // TODO: par1 deve ser uma array
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
+%% TODO: parametro deve ser array
+$method=|void|setAddress,setAddress2|quint8 *
+
+/*
+void setAddress ( const Q_IPV6ADDR & ip6Addr )
+*/
+$method=|void|setAddress,setAddress3|const Q_IPV6ADDR &
 
 /*
 bool setAddress ( const QString & address )
@@ -256,17 +208,7 @@ $method=|bool|setAddress,setAddress4|const QString &
 /*
 void setAddress ( const sockaddr * sockaddr )
 */
-HB_FUNC_STATIC( QHOSTADDRESS_SETADDRESS5 )
-{
-  QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    sockaddr * par1 = (sockaddr *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    obj->setAddress ( par1 );
-  }
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
+$method=|void|setAddress,setAddress5|const sockaddr *
 
 //[1]void setAddress ( quint32 ip4Addr )
 //[2]void setAddress ( quint8 * ip6Addr )
@@ -274,7 +216,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_SETADDRESS5 )
 //[4]bool setAddress ( const QString & address )
 //[5]void setAddress ( const sockaddr * sockaddr )
 
-// TODO: completar implementação
+%% TODO: completar implementação
 HB_FUNC_STATIC( QHOSTADDRESS_SETADDRESS )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
@@ -295,28 +237,12 @@ $method=|void|setScopeId|const QString &
 /*
 quint32 toIPv4Address () const
 */
-HB_FUNC_STATIC( QHOSTADDRESS_TOIPV4ADDRESS )
-{
-  QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    RQUINT32( obj->toIPv4Address () );
-  }
-}
-
+$method=|quint32|toIPv4Address|
 
 /*
 Q_IPV6ADDR toIPv6Address () const
 */
-HB_FUNC_STATIC( QHOSTADDRESS_TOIPV6ADDRESS )
-{
-  QHostAddress * obj = (QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-  if( obj )
-  {
-    Q_IPV6ADDR * ptr = new Q_IPV6ADDR( obj->toIPv6Address () );
-    _qt4xhb_createReturnClass ( ptr, "Q_IPV6ADDR" );
-  }
-}
+$method=|Q_IPV6ADDR|toIPv6Address|
 
 /*
 QString toString () const
