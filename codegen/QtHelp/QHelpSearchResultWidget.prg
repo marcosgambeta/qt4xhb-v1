@@ -8,8 +8,6 @@ REQUEST QURL
 
 CLASS QHelpSearchResultWidget INHERIT QWidget
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD linkAt
 
