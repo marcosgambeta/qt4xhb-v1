@@ -8,8 +8,6 @@ REQUEST QTHREADPOOL
 
 CLASS QThreadPool INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD new
    METHOD delete
    METHOD activeThreadCount

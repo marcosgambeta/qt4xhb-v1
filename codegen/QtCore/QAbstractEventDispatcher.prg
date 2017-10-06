@@ -8,8 +8,6 @@ REQUEST QABSTRACTEVENTDISPATCHER
 
 CLASS QAbstractEventDispatcher INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD filterEvent
    METHOD flush

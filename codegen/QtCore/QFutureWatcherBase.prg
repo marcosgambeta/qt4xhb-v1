@@ -4,8 +4,6 @@ $header
 
 CLASS QFutureWatcherBase INHERIT QObject
 
-   DATA self_destruction INIT .F.
-
    METHOD delete
    METHOD progressValue
    METHOD progressMinimum
